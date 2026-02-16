@@ -6,12 +6,12 @@ uid: KI_gRPC_connected_Cube_stuck_when_using_Automation
 
 ## Affected versions
 
-- Main Release versions from DataMiner 10.4.0 [CU16] to [CU18] and 10.5.0 [CU4] to [CU6]. In earlier Main Release versions, starting from DataMiner 10.3.0, the issue can also occur, but only if a recent version of Cube is used (i.e. 10.5.2521.130 or higher).
-- Feature Release versions from DataMiner 10.3.2 to 10.5.5, but only if a recent version of Cube is used (i.e. 10.5.2521.130 or higher).
+- Main Release versions from DataMiner 10.4.0 [CU16] to [CU18] and 10.5.0 [CU4] to [CU6]. In earlier Main Release versions, starting from DataMiner 10.3.0, the issue can also occur, but only if a recent version of Cube is used (i.e., 10.5.2521.130 or higher).
+- Feature Release versions from DataMiner 10.3.2 to 10.5.5, but only if a recent version of Cube is used (i.e., 10.5.2521.130 or higher).
 
 ## Cause
 
-When Automation scripts are opened, it can occur that Cube sends a message to the server that is not supported, resulting in deserialization exceptions in SLNet. If gRPC is used, these exceptions are not handled correctly, resulting in the client waiting for a response that will never arrive, until the timeout time of 15 minutes has elapsed.
+When automation scripts are opened, it can occur that Cube sends a message to the server that is not supported, resulting in deserialization exceptions in SLNet. If gRPC is used, these exceptions are not handled correctly, resulting in the client waiting for a response that will never arrive, until the timeout time of 15 minutes has elapsed.
 
 ## Workaround
 
@@ -27,6 +27,6 @@ No fix is available yet. <!--RN 43756-->
 
 When scripts are opened in the Automation module in DataMiner Cube, after a short time, the user interface stops responding.
 
-To check whether you are using a recent version of Cube that may cause you to run into this issue (i.e. 10.5.2521.130 or higher), open the user menu, select *About*, and then check the *versions* tab.
+To check whether you are using a recent version of Cube that may cause you to run into this issue (i.e., 10.5.2521.130 or higher), open the user menu, select *About*, and then check the *versions* tab.
 
 To check whether the Cube connection uses gRPC, open the user menu, select *About*, and then check the *connection* tab. If the *Attributes* line contains the *GrpcConnection* item, the connection uses gRPC.

@@ -96,7 +96,7 @@ To have a connection property displayed on top of every connection that contains
     > [!NOTE]
     > If you use this option, property shapes will only be placed on interfaces of which the protocol of the parent element matches the protocol you specified in the shape data field.
 
-1. If you want a calculated value to be displayed instead of the property itself, add a semicolon, followed by the calculation that has to be made. This can be "Sum", "Min", "Max", "Concat" or "Avg". Note that when you use "Concat", the result will no longer be a numeric value but a string value (e.g. \<value1>, \<value2>).
+1. If you want a calculated value to be displayed instead of the property itself, add a semicolon, followed by the calculation that has to be made. This can be "Sum", "Min", "Max", "Concat" or "Avg". Note that when you use "Concat", the result will no longer be a numeric value but a string value (e.g., \<value1>, \<value2>).
 
     | Shape data field | Value                                           |
     | ---------------- | ----------------------------------------------- |
@@ -122,7 +122,7 @@ If the highlighting option "ActivePathHighlighting" is not used, this pop-up box
 
 To have a pop-up box displayed with connection property information:
 
-- In a hidden connectivity shape (i.e. the shape in which you have added a shape data field of type **Connection** set to "Connectivity"), add a shape data field of type **Options** set to "EnableConnectionOverview".
+- In a hidden connectivity shape (i.e., the shape in which you have added a shape data field of type **Connection** set to "Connectivity"), add a shape data field of type **Options** set to "EnableConnectionOverview".
 
 | Shape data field | Value                    |
 | ---------------- | ------------------------ |
@@ -144,8 +144,8 @@ It is possible to activate "follow mode", so that connection lines will automati
 - To make the connections inherit the alarm color of the elements they connect, add a shape data field of type **Options** to the page and set its value to "FollowPathColor".
 
     > [!NOTE]
-    > Connections linking an output shape of one element to an input shape of another element (i.e. external connections) will adopt the alarm color of the output shape if the alarm status of the output shape is higher.
-    > Connections linking an input shape and an output shape of the same element (i.e. internal connections) will adopt the alarm color of the input shape, except when the element has a higher alarm state. In that case, they will adopt the alarm color of the element.
+    > Connections linking an output shape of one element to an input shape of another element (i.e., external connections) will adopt the alarm color of the output shape if the alarm status of the output shape is higher.
+    > Connections linking an input shape and an output shape of the same element (i.e., internal connections) will adopt the alarm color of the input shape, except when the element has a higher alarm state. In that case, they will adopt the alarm color of the element.
 
 - To make connections inherit the alarm color of the interfaces, add a shape data field of type **Options** to the page and set its value to "FollowInterfacePathColor".
 

@@ -100,7 +100,7 @@ uid: ReservedIDsSLA
 |400|406|Offline Windows (ALARM_OFFLINE_TABLE)|
 |450|468|ALARM_FILTER_TABLE|
 |470||Button add entry in violation table|
-|500||Outage Details (for Automation scripts)|
+|500||Outage Details (for automation scripts)|
 |550|556|ROOT_ALARM_LIST|
 |600|610|Generate ticket|
 |750|768|HISTORY_TABLE|

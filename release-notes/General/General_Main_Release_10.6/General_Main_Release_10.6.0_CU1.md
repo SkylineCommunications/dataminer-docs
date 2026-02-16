@@ -7,6 +7,15 @@ uid: General_Main_Release_10.6.0_CU1
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
+> [!IMPORTANT]
+>
+> Before you upgrade to this DataMiner version:
+>
+> - Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+>   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+>   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.6.0 CU1](xref:Cube_Main_Release_10.6.0_CU1).
@@ -49,7 +58,7 @@ Also, write parameters will no longer be saved as this would cause unnecessary l
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-When a DMA receives an SNMPv3 trap that it cannot process (e.g. because the SNMPv3 user is unknown), and trap distribution is enabled, from now on, the trap will be distributed to the other DMAs in the cluster in an attempt to have it processed by one of those other DMAs.
+When a DMA receives an SNMPv3 trap that it cannot process (e.g., because the SNMPv3 user is unknown), and trap distribution is enabled, from now on, the trap will be distributed to the other DMAs in the cluster in an attempt to have it processed by one of those other DMAs.
 
 Also, in some cases, traps could be forwarded to the wrong elements because the SNMPv3 USM ID was not validated correctly.
 
@@ -92,3 +101,54 @@ When you connected to a DataMiner Agent, up to now, it would not be possible to 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 When an NT_READ_SAVED_PARAMETER_VALUE call was sent to retrieve data from an element without a connector while that data was still present in SLDataGateway, up to now, SLDataMiner could stop working.
+
+#### Alarm properties passed along by Correlation or SLAnalytics could get lost when an alarm was created [ID 44669]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, alarm properties passed along by Correlation or SLAnalytics could get lost when an alarm was created.
+
+#### API Gateway would incorrectly add multiple routes with the same basePath when multiple registration requests were received for the same route [ID 44676]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When multiple registration requests were received for the same route, in some cases, instead of updating the route, API Gateway would incorrectly add multiple routes with the same basePath. As a result, the proxy would not be able to route the HTTP request.
+
+#### Failover: Two Agents in a Failover pair could get stuck during startup [ID 44680]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, the two Agents in a Failover pair could get stuck during startup.
+
+#### Scheduler: Windows task will no longer be recreated when only the actions of a scheduled task were changed [ID 44691]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a scheduled task was updated close to its execution time, in some cases, the task would incorrectly not be executed. It would miss its execution window because, during the update, the Windows task would be deleted and recreated again.
+
+From now on, when only the task actions are changed during an update of a scheduled task, the Windows task will no longer be recreated. The latter will only be recreated when the status, name, description, or timing of the scheduled task are changed.
+
+#### Problem with SLNet when rolling over log files [ID 44711]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, SLNet could stop working when rolling over from one log file to another (e.g., from *SLNet.txt* to *SLNet0.txt*).
+
+From now on, when an issue occurs when rolling over log files, an error will be logged in the Windows Event Viewer.
+
+> [!NOTE]
+> Some logging may get lost because of this fix.
+
+#### BrokerGateway installation could fail when the nsc.exe file was locked by an antivirus application [ID 44721]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, a BrokerGateway installation could fail when the *nsc.exe* file was locked by an antivirus application.
+
+From now on, a locked *nsc.exe* file will no longer cause a BrokerGateway installation to fail.
+
+#### Problem with SLAnalytics when trying to process an invalid database record [ID 44748]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, SLAnalytics would stop working when trying to process an invalid database record after having serialized it.

@@ -20,7 +20,7 @@ Multiple items are present in this menu:
 
 - *Save Trapconfig*:
 
-  - Use this to save your configuration, i.e. the entire current state of the application. This way you can load this state again at a later time.
+  - Use this to save your configuration, i.e., the entire current state of the application. This way you can load this state again at a later time.
 
 - *Load Trapconfig*:
 

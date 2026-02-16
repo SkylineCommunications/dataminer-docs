@@ -22,7 +22,7 @@ DELETE FROM elementdata_[DMAID] WHERE iEID = [Element ID, NOT preceded by the DM
 ```
 
 > [!NOTE]
-> If, for a particular element, you only want to delete values of specific parameters, add a parameter restriction (e.g. “AND iPID = 102” or “AND iPID \>= 100”) to the WHERE clause.
+> If, for a particular element, you only want to delete values of specific parameters, add a parameter restriction (e.g., “AND iPID = 102” or “AND iPID \>= 100”) to the WHERE clause.
 
 ## For all elements on a DMA
 
@@ -40,7 +40,7 @@ DELETE FROM elementdata_[DMAID] WHERE iEID = [Element ID, NOT preceded by the DM
 
     1. Right-click elementdata, and choose *Alter Table*.
 
-    1. In the elementdata dialog box, enter another table name (e.g. elementdata_old) in the *Name* box and click *Apply*.
+    1. In the elementdata dialog box, enter another table name (e.g., elementdata_old) in the *Name* box and click *Apply*.
 
 1. Restart the DataMiner Agent.
 

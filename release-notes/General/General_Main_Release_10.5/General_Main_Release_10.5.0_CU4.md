@@ -135,7 +135,7 @@ In some cases, the SLNet process could leak memory when the *progress.log* file 
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
-When, in e.g. DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
+When, in e.g., DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
 
 #### LDAP users added as part of an LDAP user group would incorrectly appear as local users instead of domain users [ID 42743]
 
@@ -200,17 +200,17 @@ Up to now, when a DMA was added to a DMS that contains one or more Failover pair
 
 When a main DVE element was started or restarted, up to now, an attempt would incorrectly be made to delete child DVE elements that had already been deleted, causing unnecessary information events like "Deleting element-connections for source..." to be generated.
 
-#### Automation: Associated TXF files would not be removed when an Automation script was deleted [ID 42943]
+#### Automation: Associated TXF files would not be removed when an automation script was deleted [ID 42943]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
-When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an Automation script was deleted, the associated TXF files would incorrectly not be removed.
+When you create an automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an automation script was deleted, the associated TXF files would incorrectly not be removed.
 
 #### Failover: Database status in 'Failover status' window would incorrectly always be displayed as OK on a system using STaaS [ID 42944]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
-When, in e.g. DataMiner Cube, you opened the *Failover status* window when connected to a system using STaaS, up to now, the database status would always be displayed as OK, even when STaaS was degraded.
+When, in e.g., DataMiner Cube, you opened the *Failover status* window when connected to a system using STaaS, up to now, the database status would always be displayed as OK, even when STaaS was degraded.
 
 #### DataMiner upgrade: VerifyClusterPorts prerequisite check could fail when SLXML was still running [ID 42947]
 

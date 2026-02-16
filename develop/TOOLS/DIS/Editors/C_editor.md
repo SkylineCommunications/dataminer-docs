@@ -4,12 +4,12 @@ uid: C_editor
 
 # C# editor
 
-If, in a file tab containing a protocol XML file or an Automation script XML file, you click an *Edit C#* button in front of a QAction or an Exe code block, a temporary C# project will be created, containing the code of that QAction or Exe code block. Also, the code of the QAction or Exe code block will appear in a new, customized file tab.
+If, in a file tab containing a protocol XML file or an automation script XML file, you click an *Edit C#* button in front of a QAction or an Exe code block, a temporary C# project will be created, containing the code of that QAction or Exe code block. Also, the code of the QAction or Exe code block will appear in a new, customized file tab.
 
 ![C# editor](~/develop/images/DIS_CSharpEditor.png)
 
 > [!NOTE]
-> DIS defines a default set of analysis rules for QAction projects. These rules can then be used by Visual Studio extensions like e.g. SonarLint or StyleCop to analyze the code.
+> DIS defines a default set of analysis rules for QAction projects. These rules can then be used by Visual Studio extensions like e.g., SonarLint or StyleCop to analyze the code.
 >
 > - When, in Visual Studio, your solution is in release mode, analysis is disabled for performance reasons.
 > - Analysis is always disabled for the QAction_Helper and QAction_ClassLibrary projects.
@@ -18,8 +18,8 @@ If, in a file tab containing a protocol XML file or an Automation script XML fil
 
 In the header of a file tab containing the C# code of a QAction or Exe code block, you can find two links:
 
-- A link to return to the file tab containing the associated protocol XML file or Automation script XML file at the location where the cursor was positioned when you last viewed the file.
-- A link to return to the associated protocol XML file or Automation script XML file at the location where the QAction or Exe code block is found.
+- A link to return to the file tab containing the associated protocol XML file or automation script XML file at the location where the cursor was positioned when you last viewed the file.
+- A link to return to the associated protocol XML file or automation script XML file at the location where the QAction or Exe code block is found.
 
 ## Inside the file tab
 
@@ -35,7 +35,7 @@ If you right-click anywhere in the editor and select the *Copy Protocol to Clipb
 
 If you right-click anywhere in the editor and select the *Copy Code to Clipboard* command, the entire content of the file will be copied to the Windows Clipboard.
 
-When you use this menu option while working with a protocol solution or an Automation script solution, you will not only copy the current file to the Windows clipboard, but all files of the entire project combined in a way that is similar to the way they are combined when the solution is compiled.
+When you use this menu option while working with a protocol solution or an automation script solution, you will not only copy the current file to the Windows clipboard, but all files of the entire project combined in a way that is similar to the way they are combined when the solution is compiled.
 
 ### Repeating selected text
 
@@ -45,7 +45,7 @@ The right-click menu option *Repeat Selected Text* allows you to select a partic
 1. In the *DIS Repeater* window, if necessary, go to the *Template* box, and edit the text you want to have repeated.
 1. If you want to insert a variable (or a formula including a variable) in the text to be repeated, then do the following:
     - Place your cursor where you want the variable or formula to be inserted, and click *Insert placeholder*.
-    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value "x" delimited by "$" characters. You could change it to e.g. "$x+5$".
+    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value "x" delimited by "$" characters. You could change it to, for example, "$x+5$".
 1. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
 1. Click *OK* to have the text in the *Preview* box pasted in the editor.
 

@@ -4,7 +4,7 @@ uid: Configuring_an_analyzer
 
 # Configuring an analyzer
 
-To configure a Correlation analyzer:
+To configure a correlation analyzer:
 
 1. In the *Analyzers* tab of the *Correlation* module, make sure the analyzer is selected in the tree view.
 
@@ -33,8 +33,7 @@ To configure a Correlation analyzer:
         1. Specify whether the parameter should or should not match a regular expression or wildcard expression, and specify the expression in question.
 
             > [!NOTE]
-            > - For more information on wildcards, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters).
-            > - For more information on using regular expressions in filters, see [Alarm filters using regular expressions](xref:ApplyingAlarmFiltersInTheAlarmConsole#alarm-filters-using-regular-expressions).
+            > For more information on using wildcards and regular expressions in filters, see [Using wildcards or regular expressions in alarm filters](xref:UsingWildcardsOrRegularExpressionsInAlarmFilters).
 
         1. If you want to add another condition to the filter, click *Add a Filter* and go back to step 4b.
 

@@ -22,4 +22,4 @@ Increased CPU load and performance degradation. The following symptoms have for 
 
 - Increased CPU usage by SLNet.
 - Spikes in CPU usage by SLNet.
-- Slower system performance because of server resource shortages, e.g. slower booking creation.
+- Slower system performance because of server resource shortages, e.g., slower booking creation.

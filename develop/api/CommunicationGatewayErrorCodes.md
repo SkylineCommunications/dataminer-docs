@@ -8,7 +8,7 @@ Errors can be returned by the DataMiner CommunicationGateway extension module. I
 
 ## gRPC error codes
 
-These are the error codes that can be returned when the CommunicationGateway is communicating with a gRPC service. These are usually the errors that are returned by the gRPC service, i.e. the data source that is communicated with.
+These are the error codes that can be returned when the CommunicationGateway is communicating with a gRPC service. These are usually the errors that are returned by the gRPC service, i.e., the data source that is communicated with.
 
 |Name|Friendly Name|Code|Message|
 |--- |--- |--- |--- |
@@ -17,8 +17,8 @@ These are the error codes that can be returned when the CommunicationGateway is 
 |Unknown|Unknown|2|Unknown error. The API did not return enough error information to be converted into a specific error.|
 |InvalidArgument|Invalid argument|3|The client specified an invalid argument. Note that this is different from FailedPrecondition. InvalidArgument indicates arguments that are problematic regardless of the system state.|
 |DeadlineExceeded|Deadline exceeded|4|The deadline expired before the operation could complete. Note that this error may be returned even if the operation has completed successfully. E.g. a successful response could have been delayed long.|
-|NotFound|Not found|5|Requested entity (e.g. file) was not found.|
-|AlreadyExists|Already exists|6|Attempted to create an entity (e.g. file) that already exists.|
+|NotFound|Not found|5|Requested entity (e.g., file) was not found.|
+|AlreadyExists|Already exists|6|Attempted to create an entity (e.g., file) that already exists.|
 |PermissionDenied|Permission denied|7|The caller does not have permission to execute the specified operation.|
 |ResourceExhausted|Resources exhausted|8|Some resource has been exhausted. This could be a per-user quota, or the entire file system could be out of space.|
 |FailedPrecondition|Failed precondition|9|The operation was rejected because the system is not in a state required for the operation's execution. E.g. the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc.|

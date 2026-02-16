@@ -5,7 +5,7 @@ using System.Text;
 namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// This class allows you to create an up-down control to select a date and time in an interactive Automation script.
+	/// This class allows you to create an up-down control to select a date and time in an interactive automation script.
 	/// </summary>
 	/// <example>
 	/// <code>

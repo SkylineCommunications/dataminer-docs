@@ -128,7 +128,7 @@ Here is an example of such a configuration file:
 
 In this example, three collectors have been defined, each of a different type:
 
-- Collector1 is a collector of [type "File"](#collectors-of-type-file) and will order SLLogCollector to **retrieve a set of files** (e.g. log files).
+- Collector1 is a collector of [type "File"](#collectors-of-type-file) and will order SLLogCollector to **retrieve a set of files** (e.g., log files).
 
 - Collector2 is a collector of [type "Http"](#collectors-of-type-http) and will order SLLogCollector to **send an HTTP request** to a server and to store the response.
 
@@ -195,7 +195,7 @@ In some cases, SLLogCollector can seem to get stuck when collecting files. This 
 
 ### Large number of files
 
-**Issue**: When certain folders, e.g. the SRM debug location or the Logging\FormatterExceptions folder, contain a large number of files, it can take a long time before SLLogCollector has managed to copy these over.
+**Issue**: When certain folders, e.g., the SRM debug location or the Logging\FormatterExceptions folder, contain a large number of files, it can take a long time before SLLogCollector has managed to copy these over.
 
 **Symptoms**: One core of the CPU shows high usage. Under `C:\ProgramData\Skyline\DataMiner\SL_LogCollector\Temp_<guid>`, Files are slowly being added to the `\Logs\Skyline DataMiner\Logging\FormatterExceptions` or `\Logs\Skyline DataMiner\SRM...` folder.
 
@@ -211,7 +211,7 @@ In some cases, SLLogCollector can seem to get stuck when collecting files. This 
 
 **Workaround**: Remove the corresponding HTTP collector from the SLLogCollector default config:
 
-1. Open the file `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs\default.xml` in a code editor (e.g. Notepad++).
+1. Open the file `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs\default.xml` in a code editor (e.g., Notepad++).
 
 1. Search for the `<Http name="ElasticApi">` tag.
 

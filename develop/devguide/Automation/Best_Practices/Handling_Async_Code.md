@@ -4,7 +4,7 @@ uid: Handling_Async_Code
 
 # Handling async code
 
-In Automation scripts, async methods **should not be used**, and all code should execute on the same thread. If an external library contains async methods, they must be executed synchronously to maintain script stability.
+In automation scripts, async methods **should not be used**, and all code should execute on the same thread. If an external library contains async methods, they must be executed synchronously to maintain script stability.
 
 To properly call an async method from an external library, use the following approach:
 

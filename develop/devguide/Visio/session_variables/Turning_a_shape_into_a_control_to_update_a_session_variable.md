@@ -55,7 +55,7 @@ Add a shape data field of type **SetVar** to the shape or the page, and set its 
   *\[Sep::X\]* allows you to specify the separator that is used in the parameter assignment to separate the variable name from its new value(s), and to separate the values found in the parameter you refer to:
 
   - The default separator is mentioned first: colon (":").
-  - X is the separator used in the parameter, e.g. semicolon (";").
+  - X is the separator used in the parameter, e.g., semicolon (";").
 
   Example: If the parameter you refer to contains the value "one;two;three", then you have to specify that the separator is ";" instead of ":". So, in the shape data field of type **SetVar**, you will enter "\[Sep::;\]VariableName;\[Param:...\]".
 

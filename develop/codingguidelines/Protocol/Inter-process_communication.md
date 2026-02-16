@@ -6,11 +6,11 @@ uid: Inter-process_communication
 
 The number of interactions between SLScripting, the process executing the QAction, and other processes should be considered wisely, as these consume a considerable amount of resources. The number of interactions per second should also be limited.
 
-It can occur that a QAction needs to perform an operation that requires some time to complete (e.g. a DMS call). In case another call is needed to determine if the operation has finished, you must avoid continuously repeating the call that checks the operation status without leaving time between the calls (for example, by including a Thread.Sleep call in the loop).
+It can occur that a QAction needs to perform an operation that requires some time to complete (e.g., a DMS call). In case another call is needed to determine if the operation has finished, you must avoid continuously repeating the call that checks the operation status without leaving time between the calls (for example, by including a Thread.Sleep call in the loop).
 
 Typically, QActions mainly interact with the SLProtocol process using an instance of the SLProtocol (or SLProtocolExt) class. As each protocol object call results in inter-process communication between the SLScripting and SLProtocol processes, consider the following:
 
-- Use bulk method calls (e.g. GetParameters, SetParameters, GetColumns, FillArray, etc) instead of many specific method calls (e.g. GetParameter, SetParameter, GetRow, GetParameterIndexByKey, etc) to get and set multiple parameters, respectively. This is not so much about reducing the number of calls to the absolute minimum but more about finding the right balance between readability/maintainability on the one side and performance on the other side, and about keeping things scalable. Examples:
+- Use bulk method calls (e.g., GetParameters, SetParameters, GetColumns, FillArray, etc) instead of many specific method calls (e.g., GetParameter, SetParameter, GetRow, GetParameterIndexByKey, etc) to get and set multiple parameters, respectively. This is not so much about reducing the number of calls to the absolute minimum but more about finding the right balance between readability/maintainability on the one side and performance on the other side, and about keeping things scalable. Examples:
 
   - Splitting the retrieval of several standalone parameters into 2 or 3 method calls for readability/maintainability reasons is absolutely fine. The number of method calls is still kept under control and will not grow as the data source scales up.
 

@@ -6,7 +6,7 @@ uid: Creating_a_rotating_button_control
 
 In a Visio file, you can draw a rotating button that visualizes and controls a certain parameter.
 
-To create a rotating button (e.g. a volume control), create a circular shape, and link it to the element containing the parameter you want to control, and to the parameter itself.
+To create a rotating button (e.g., a volume control), create a circular shape, and link it to the element containing the parameter you want to control, and to the parameter itself.
 
 In the shape data item of type **Parameter**, specify the *Rotate* action, and set it to "Range". Also specify the angle range within which the button can be rotated.
 

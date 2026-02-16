@@ -196,7 +196,7 @@ When IDP is installed it comes with an example script on how to retrieve the con
 
    This will open a wizard.
 
-1. Select a type (e.g. *Running*), click *Next*, and then click *Finish*.
+1. Select a type (e.g., *Running*), click *Next*, and then click *Finish*.
 
    ![Confirmation pop-up script](~/dataminer/images/IDP_Tutorial_TakeConfigurationBackup_ConfirmationPopup.png)
 

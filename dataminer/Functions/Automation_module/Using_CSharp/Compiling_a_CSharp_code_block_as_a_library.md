@@ -4,7 +4,7 @@ uid: Compiling_a_CSharp_code_block_as_a_library
 
 # Compiling a C# code block as a library
 
-It is possible to have a C# code block in an Automation script in Cube compiled as a separate library.
+It is possible to have a C# code block in an automation script in Cube compiled as a separate library.
 
 ## Compiling the library
 
@@ -14,7 +14,7 @@ It is possible to have a C# code block in an Automation script in Cube compiled 
 
    - A library name must not contain a period (".").
 
-   - Within the same Automation script, each library name must be unique.
+   - Within the same automation script, each library name must be unique.
 
 1. Open the *Advanced* section below the code block.
 
@@ -22,9 +22,9 @@ It is possible to have a C# code block in an Automation script in Cube compiled 
 
 1. Save the script. The library will now be compiled.
 
-## Importing the library into an Automation script
+## Importing the library into an automation script
 
-Once you have compiled a C# code block as a library, you can then import that library into other Automation scripts. To do so:
+Once you have compiled a C# code block as a library, you can then import that library into other automation scripts. To do so:
 
 1. In the Automation module, open the *Advanced* section below the C# code block in the script you want to import the library into.
 
@@ -41,7 +41,7 @@ Once you have compiled a C# code block as a library, you can then import that li
 
 ## Using the library in a DataMiner Automation Script Solution
 
-1. In Visual Studio, create a solution with the library script, and add all other Automation scripts in which you want to use the library to this solution.
+1. In Visual Studio, create a solution with the library script, and add all other automation scripts in which you want to use the library to this solution.
 
 1. In the XML of the library script, make sure the *preCompile* and *libraryName* parameters are filled in. For example:
 
@@ -85,6 +85,6 @@ Once you have compiled a C# code block as a library, you can then import that li
 
 - When a library is compiled, any scripts and libraries using this library will be recompiled.
 
-- When the Automation script containing a library is deleted, all files of the library will be deleted too, which will make it impossible to recompile scripts that depend on this library until a library with the same reference is added again.
+- When the automation script containing a library is deleted, all files of the library will be deleted too, which will make it impossible to recompile scripts that depend on this library until a library with the same reference is added again.
 
-- From DataMiner 10.1.1 onwards, if any new Automation scripts containing libraries that need to be compiled are detected during DataMiner startup, these will be compiled automatically.
+- From DataMiner 10.1.1 onwards, if any new automation scripts containing libraries that need to be compiled are detected during DataMiner startup, these will be compiled automatically.

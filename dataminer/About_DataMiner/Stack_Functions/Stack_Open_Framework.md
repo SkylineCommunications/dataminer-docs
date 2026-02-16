@@ -10,7 +10,7 @@ uid: Stack_Open_Framework
 
 Create RESTful APIs on the fly, tailored to your use case.
 
-Select or create an Automation script, and with only a few clicks, you can publish that script as a RESTful API. DataMiner provides an API endpoint and manages the tokens to authenticate with any third-party system in a secure and easy manner.
+Select or create an automation script, and with only a few clicks, you can publish that script as a RESTful API. DataMiner provides an API endpoint and manages the tokens to authenticate with any third-party system in a secure and easy manner.
 
 > [!TIP]
 > For more information:

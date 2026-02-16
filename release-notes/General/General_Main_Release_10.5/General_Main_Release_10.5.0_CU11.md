@@ -8,7 +8,13 @@ uid: General_Main_Release_10.5.0_CU11
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
-> Before you upgrade to this DataMiner version, make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](xref:General_Main_Release_10.5.0_CU10#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
+> Before you upgrade to this DataMiner version:
+>
+> - Make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](xref:General_Main_Release_10.5.0_CU10#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
+> - Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+>   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+>   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 > [!TIP]
 >
@@ -131,7 +137,7 @@ In client applications like DataMiner Cube, up to now, elements hosted on a DMA 
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-After you had uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g. a new protocol with version 1.0.0.1 versus an existing protocol with version 1.0.0.1_DEV), up to now, elements using the existing protocol (e.g. with version 1.0.0.1_DEV) would incorrectly no longer be able to execute QActions.
+After you had uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g., a new protocol with version 1.0.0.1 versus an existing protocol with version 1.0.0.1_DEV), up to now, elements using the existing protocol (e.g., with version 1.0.0.1_DEV) would incorrectly no longer be able to execute QActions.
 
 #### Problem with SLElement when loading elements that included matrix parameters [ID 44188]
 
@@ -263,6 +269,6 @@ Up to now, in some cases, when the element was being stopped and was flushing it
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU1] -->
 
-When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
+When 10 simultaneous calls between a client application (e.g., DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
 
-From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.
+From now on, even when 10 simultaneous calls between a client application (e.g., DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.

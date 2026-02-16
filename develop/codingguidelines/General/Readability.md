@@ -40,7 +40,7 @@ uid: Readability
 
 - Use String.Empty for empty strings ([SA1122](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1122)).
 
-- The use of C# type aliases should be favored over the use of the predefined types in the System namespace (e.g. use string *sUserName* instead of String *sUserName*), except when calling static members (e.g. use *String.IsNullOrEmpty(sResponse)* instead of *string.IsNullOrEmpty(sResponse)*) ([SA1121](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1121)).
+- The use of C# type aliases should be favored over the use of the predefined types in the System namespace (e.g., use string *sUserName* instead of String *sUserName*), except when calling static members (e.g., use *String.IsNullOrEmpty(sResponse)* instead of *string.IsNullOrEmpty(sResponse)*) ([SA1121](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1121)).
 
     > [!NOTE]
     > As StyleCop rule SA1121 also expects to use C# type aliases for static members, this rule has not been enabled in the StyleCop configuration file.

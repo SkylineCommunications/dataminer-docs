@@ -19,7 +19,7 @@ From a functional and operational perspective, the DataMiner usage-based service
 This includes:
 
 - All available DataMiner functions, including dataminer.services functions.
-- The freedom to deploy as many DataMiner nodes as required, i.e. to scale capacity up or down on demand, or to architect the overall solution in the most optimal way (e.g. considering zoning, geographical locations, continuity, etc.).
+- The freedom to deploy as many DataMiner nodes as required, i.e., to scale capacity up or down on demand, or to architect the overall solution in the most optimal way (e.g., considering zoning, geographical locations, continuity, etc.).
 - Using any of the existing 7000+ connectors to interface DataMiner with third-party products from over 700 different vendors, on a flexible per need basis.
 - Requesting new integrations with third-party products, at no additional cost with [Continuity or Evolve plans](https://community.dataminer.services/support-plans/).
 - Continuously benefitting from all DataMiner evolutions available, with regard to the DataMiner functions as well as with regard to the connectors to interface with third-party products.
@@ -63,11 +63,11 @@ An "organization" is the billing entity and the highest level in the hierarchy i
 
 ### Metering requirements
 
-Metering and billing require an active connection to dataminer.services to ensure accurate usage reporting. In the event of a short-term connection loss (e.g. a few days), usage data is not lost.
+Metering and billing require an active connection to dataminer.services to ensure accurate usage reporting. In the event of a short-term connection loss (e.g., a few days), usage data is not lost.
 
 For offline or air-gapped environments, local usage logging is supported through the following options:
 
-- Monthly manual export: Usage data is logged locally and must be securely exported by the end user within 5 calendar days following the end of each month (e.g. via file transfer, physical media, or email relay).
+- Monthly manual export: Usage data is logged locally and must be securely exported by the end user within 5 calendar days following the end of each month (e.g., via file transfer, physical media, or email relay).
 
 - Quarterly auditing (exceptional cases): A scheduled audit session (remote or on-site) to verify usage directly on the system. Please contact your Account Manager to discuss eligibility and setup.
 
@@ -80,7 +80,7 @@ For offline or air-gapped environments, local usage logging is supported through
 | *Duration* | An organization can select a 12-month, 24-month, or 36-month subscription. |
 | *Renewal Date* | Subscription date + duration.<br>At the Renewal Date, subscriptions renew automatically for 12 months at the then current credit rates, unless agreed otherwise. |
 | *MUA* | Monthly Utilization Allowance.<br>The fixed number of credits available per month under the subscription for each service.<br>The organization MUA is the sum of credits subscribed per service. |
-| *Credit Rate* | The credit rate depends on the region and is protected for the duration of the contract, i.e. 24-month or 36-month subscriptions protect against potential yearly price adjustments. |
+| *Credit Rate* | The credit rate depends on the region and is protected for the duration of the contract, i.e., 24-month or 36-month subscriptions protect against potential yearly price adjustments. |
 
 ### Invoicing
 
@@ -104,7 +104,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | Data Plane   | *Light Managed Object*          | Endpoints with less than 200 metrics. |
 | Data Plane   | *Unmanaged Object*              | Unmanaged Object Instances available in the system (see [DataMiner Object Models](xref:DOM)). |
 | Data Sources | *Connector Services*            | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [Catalog](https://catalog.dataminer.services/).<br>Connectors developed by the user or another third party are not counted. |
-| Automation   | *Automation Actions*            | - [**Automation scripts**](xref:Running_Automation_scripts), e.g. Lifecycle Service Orchestration (LSO) scripts and Profile-Load Scripts (PLS). <br> - **New Unmanaged Object Instances** added to the [DataMiner Object Models](xref:DOM), e.g. a new tickets, work order, asset, or contract record. |
+| Automation   | *Automation Actions*            | - [**Automation scripts**](xref:Running_Automation_scripts), e.g., Lifecycle Service Orchestration (LSO) scripts and Profile-Load Scripts (PLS). <br> - **New Unmanaged Object Instances** added to the [DataMiner Object Models](xref:DOM), e.g., a new tickets, work order, asset, or contract record. |
 | Collaboration Services | *Dashboard Sharing*   | Sharing dashboards with real-time data and controls with both internal and external organization users. |
 | Storage as a Service (STaaS) | *Alarm Updates* | New alarm updates written to the storage service. |
 | Storage as a Service (STaaS) | *Information Events*| New information events written to the storage service.|
@@ -124,7 +124,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Light Managed Object*        | Sum of metrics on Managed Objects with less than 200 metrics.                         | 2 for 1K metrics         | A Managed Object with 150 metrics, the metered value is 150. |
 | *Unmanaged Object*            | Sum of instances from all Unmanaged Objects.  | 4 per 100K instances. | A system with 5K tickets and 25K assets, the metered value is 30k x 4 / 100k = 1.2. |
 | *Connector Services*          | Sum of connectors delivered by Skyline, concurrently used.                            | 8 | Using 20 connectors a month, but with a maximum of 5 at any given time, the metered value is 5. |
-| *Automation Actions*          | Sum of Automation script runs (1x per run) and new Unmanaged Object instances (5x new instance)    | Starting at 5 for 1K actions.<br> Decreases with volume. | For an object "Ticket", when creating 100 new tickets, the metered value equals 500 |
+| *Automation Actions*          | Sum of automation script runs (1x per run) and new Unmanaged Object instances (5x new instance)    | Starting at 5 for 1K actions.<br> Decreases with volume. | For an object "Ticket", when creating 100 new tickets, the metered value equals 500 |
 | *Dashboard Sharing*           | Sum of number of unique shares.                                                       | 0.5 | Sharing 2 dashboards with 5 email recipients for a full month, the metered value is 2 dashboards x 5 recipients = 10. |
 | *Alarm Updates*               | Sum of alarm update writes.       | 0.9 per 100K alarm updates. | |
 | *Information Events*          | Sum of information event writes.  | 0.3 per 100K information events. | |
@@ -137,7 +137,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 > Instead of a fixed number of 5 actions, some objects defined in Skyline's [Standard Data Model](xref:SOL_About#standard-data-model) may trigger a different number of Automation Actions when new unmanaged object instances are created.
 
 > [!TIP]
-> While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g. specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 1.7 credits for 100 Managed Objects per month, considering a typical usage scenario of 180 alarm updates, 240 information events, 400,000 stored data points and 100,000 element data updates per Managed Object on average per month.
+> While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g., specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 1.7 credits for 100 Managed Objects per month, considering a typical usage scenario of 180 alarm updates, 240 information events, 400,000 stored data points and 100,000 element data updates per Managed Object on average per month.
 
 > [!IMPORTANT]
 > The calculation of Service Usage may result in fractional amounts. However, for billing purposes, the total is rounded up to the nearest whole number of credits.
@@ -173,8 +173,8 @@ Initial MUA: 200 credits<br>Start Date: November 1, 2022<br>Renewal Date: Novemb
 
 MUA increased to 250 credits on August 1, 2023
 
-- Billing on August 1, 2023: 50 credits x original credit rate x 12 months (i.e. paid until August 1, 2024)
-- Billing on November 1, 2023 (i.e. Renewal Date): 200 credits x current credit rate x 12 months  +  50 credits x current credit rate x 3 months
+- Billing on August 1, 2023: 50 credits x original credit rate x 12 months (i.e., paid until August 1, 2024)
+- Billing on November 1, 2023 (i.e., Renewal Date): 200 credits x current credit rate x 12 months  +  50 credits x current credit rate x 3 months
 
 ### Overage
 

@@ -4,7 +4,7 @@ uid: SRM_find_reference_of_object
 
 # Finding the reference of an SRM object
 
-To configure custom Automation scripts so that they can manipulate SRM objects such as service definitions, resources, profiles, etc., you need to know their object reference.
+To configure custom automation scripts so that they can manipulate SRM objects such as service definitions, resources, profiles, etc., you need to know their object reference.
 
 You can find this using the SLNetClientTest tool.
 

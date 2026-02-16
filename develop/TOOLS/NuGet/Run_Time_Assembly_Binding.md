@@ -30,7 +30,7 @@ In case the `dllImport` mentions multiple entries, a hint path entry is added fo
 
 Note that because by default there is a single SLScripting process, the hint path list will contain all distinct directories of all the values encountered in the `dllImport` attribute of each QAction in all the protocols.
 
-For Automation scripts (which get executed by the SLAutomation process), the following folders will be searched:
+For automation scripts (which get executed by the SLAutomation process), the following folders will be searched:
 
 1. `C:\Skyline DataMiner\ProtocolScripts\DllImport`
 
@@ -38,13 +38,13 @@ For Automation scripts (which get executed by the SLAutomation process), the fol
 
 1. `C:\Skyline DataMiner\ProtocolScripts`
 
-1. The directory of an assembly mentioned in the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tags of the Automation scripts.
+1. The directory of an assembly mentioned in the [Param type="ref"](xref:DMSScript.Script.Exe.Param-type) tags of the automation scripts.
 
 As mentioned under [Compilation-time assembly binding](xref:Compilation_Time_Assembly_Binding), the manifest of a compiled assembly denotes the name and version of any assemblies it has a direct dependency on. At runtime, when the .NET runtime is about to execute code from such a referenced assembly, the runtime will try to find and load that assembly.
 
 ## Multiple versions of the same assembly
 
-When developing, you can run into a situation where you reference different versions of the same assembly. For example, suppose you use NuGet A which depends on NuGet X version 1.0.1 (which contains assembly X version 1.0.1.0). Now suppose you also use another NuGet B which also references NuGet X but version 1.0.2 (which contains assembly X with version 1.0.2.0). Now when you compile the program in e.g. Visual Studio, the `bin` folder will only contain one version of NuGet X (e.g. assembly X with version 1.0.2.0). The runtime, on the other hand, will search for the specific version that is mentioned in the assembly manifest, so at some point it could look for version 1.0.1.0 (because assembly A that executes was compiled against that version), which it will not be able to find as only the 1.0.2.0 version is present in the `bin` folder.
+When developing, you can run into a situation where you reference different versions of the same assembly. For example, suppose you use NuGet A which depends on NuGet X version 1.0.1 (which contains assembly X version 1.0.1.0). Now suppose you also use another NuGet B which also references NuGet X but version 1.0.2 (which contains assembly X with version 1.0.2.0). Now when you compile the program in e.g., Visual Studio, the `bin` folder will only contain one version of NuGet X (e.g., assembly X with version 1.0.2.0). The runtime, on the other hand, will search for the specific version that is mentioned in the assembly manifest, so at some point it could look for version 1.0.1.0 (because assembly A that executes was compiled against that version), which it will not be able to find as only the 1.0.2.0 version is present in the `bin` folder.
 
 ```mermaid
 flowchart TB
@@ -66,7 +66,7 @@ Because of this, no unification is performed. Instead of providing a single vers
 - You installed a NuGet package "A" that has a dependency on another NuGet package "B".
 - You also installed NuGet package "B".
 - NuGet package "A" exposes types from NuGet package "B".
-- You use types from package "B" through package "A" (e.g. calling a method defined in package "A" that has as argument a type from package "B", or using a method from package "A" that returns a type of package "B").
+- You use types from package "B" through package "A" (e.g., calling a method defined in package "A" that has as argument a type from package "B", or using a method from package "A" that returns a type of package "B").
 
 If you do not follow this rule, you can experience runtime issues as explained in more detail below.
 
@@ -136,4 +136,4 @@ System.InvalidCastException: [A]<namespace>.<type> cannot be cast to [B]<namespa
    at QAction.Run(SLProtocol protocol)
 ```
 
-It is important to be aware of this when developing e.g. APIs, as otherwise the exceptions above could occur at runtime.
+It is important to be aware of this when developing e.g., APIs, as otherwise the exceptions above could occur at runtime.

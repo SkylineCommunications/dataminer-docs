@@ -2,7 +2,7 @@
 uid: Adding_CSharp_code_to_an_Automation_script
 ---
 
-# Adding C# code to an Automation script
+# Adding C# code to an automation script
 
 ## Adding C# code to a script in Cube
 
@@ -21,7 +21,7 @@ To add C# code to a script:
    - *Namespace references*: Allows you to provide namespace references.
 
      > [!NOTE]
-     > - This is only applicable in case the script block only contains the lines of code to execute (i.e. it does not make use of classes/methods). In case the C# block does make use of classes/methods, the using statement can be provided in the C# block itself.
+     > - This is only applicable in case the script block only contains the lines of code to execute (i.e., it does not make use of classes/methods). In case the C# block does make use of classes/methods, the using statement can be provided in the C# block itself.
      > - The following using statements are added by default:
      >   - using System
      >   - using System.IO
@@ -31,7 +31,7 @@ To add C# code to a script:
      >   - using Skyline.DataMiner.Net.Messages
      >   - using Skyline.DataMiner.Net.AutomationUI
 
-   - *DLL references*: Allows you to reference DLLs that are required by the Automation script.
+   - *DLL references*: Allows you to reference DLLs that are required by the automation script.
 
      > [!NOTE]
      > The following DLLs are referenced by default:
@@ -46,7 +46,7 @@ To add C# code to a script:
      > - SLLoggerUtil.dll
      > - SLAnalyticsTypes.dll (from DataMiner 10.1.11 onwards)
      >
-     > To reference additional DLLs, e.g. a custom DLL placed in the `C:\Skyline DataMiner\ProtocolScripts` folder, you need to specify an absolute path.
+     > To reference additional DLLs, e.g., a custom DLL placed in the `C:\Skyline DataMiner\ProtocolScripts` folder, you need to specify an absolute path.
 
    - *Script references*: Allows you to refer to other C# blocks. See [Compiling a C# code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library).
 
@@ -59,7 +59,7 @@ You can interact with the Automation Engine by interacting with an instance of t
 
 When you type `engine.` in the code editor, you will be presented with a dropdown list of all statements available in the Automation Engine.
 
-By default, C# code used in an Automation script throws an exception when it encounters an undefined or an empty parameter. However, if you add the following line in an Automation script action of type *C# code*, null will be returned instead.
+By default, C# code used in an automation script throws an exception when it encounters an undefined or an empty parameter. However, if you add the following line in an automation script action of type *C# code*, null will be returned instead.
 
 Example:
 
@@ -75,7 +75,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 
 ## Script class
 
-- For small Automation scripts, you can enter the logic to be executed without wrapping your code in a class and method.
+- For small automation scripts, you can enter the logic to be executed without wrapping your code in a class and method.
 
     Example:
 
@@ -141,11 +141,11 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
     > - Custom entry points are possible. See [Custom entry points](#custom-entry-points).
 
     > [!IMPORTANT]
-    > Be careful how you handle async code in an Automation script. See [Handling async code](xref:Handling_Async_Code).
+    > Be careful how you handle async code in an automation script. See [Handling async code](xref:Handling_Async_Code).
 
 ## Preprocessor directives
 
-DataMiner compiles C# blocks of Automation scripts with the following preprocessor directives:
+DataMiner compiles C# blocks of automation scripts with the following preprocessor directives:
 
 - DCFv1
 
@@ -165,7 +165,7 @@ engine.Timeout = TimeSpan.FromMinutes(30);
 
 ## Custom entry points
 
-It is possible to define custom entry points for an Automation script. To do so, provide the method you want to use as entry point with the attribute *AutomationEntryPointAttribute* and specify the type of the entry point. For a regular Automation script entry point, specify *AutomationEntryPointType.Types.Default*:
+It is possible to define custom entry points for an automation script. To do so, provide the method you want to use as entry point with the attribute *AutomationEntryPointAttribute* and specify the type of the entry point. For a regular automation script entry point, specify *AutomationEntryPointType.Types.Default*:
 
 ```cs
 [AutomationEntryPoint(AutomationEntryPointType.Types.Default)]
@@ -201,11 +201,11 @@ public delegate void AutomationEntryPointTest(IEngine engine, string testMessage
 >
 > - The entry points must be public. They may be static or non-static.
 > - The method names and parameter names can be chosen at will.
-> - Cube does not support custom entry points. As such, to execute an Automation script from Cube, you need a Script class with a Run method. Custom entry points can be used when executing an Automation script using the *ExecuteScriptMessage* class.
+> - Cube does not support custom entry points. As such, to execute an automation script from Cube, you need a Script class with a Run method. Custom entry points can be used when executing an automation script using the *ExecuteScriptMessage* class.
 
 Restrictions:
 
-- An Automation script using custom entry points can have only one executable action, which must be a C# code block.
+- An automation script using custom entry points can have only one executable action, which must be a C# code block.
 
 - If, in a C# code block, you have defined multiple entry points, you must make sure they are of different types. Multiple entry points of the same type are not allowed.
 
@@ -214,10 +214,10 @@ Restrictions:
 - The script must contain the string "class Script" as otherwise DataMiner will wrap the code. See [Script class](#script-class).
 
 > [!IMPORTANT]
-> Be careful how you handle async code in an Automation script. See [Handling async code](xref:Handling_Async_Code).
+> Be careful how you handle async code in an automation script. See [Handling async code](xref:Handling_Async_Code).
 
 > [!NOTE]
-> From DataMiner 10.5.7/10.6.0 <!-- RN 42969 --> onwards, the [OnRequestScriptInfo](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types.OnRequestScriptInfo) entry point allows other Automation scripts (or any other code) to request information about the script in question. Information about implementing that entry point and executing it is available in [this how-to](xref:Implementing_OnRequestScriptInfo_Entry_Point).
+> From DataMiner 10.5.7/10.6.0 <!-- RN 42969 --> onwards, the [OnRequestScriptInfo](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types.OnRequestScriptInfo) entry point allows other automation scripts (or any other code) to request information about the script in question. Information about implementing that entry point and executing it is available in [this how-to](xref:Implementing_OnRequestScriptInfo_Entry_Point).
 
 ## Online help and user assistance
 
@@ -228,7 +228,7 @@ Restrictions:
 
 When you right-click in the code editor, a shortcut menu will appear. From the *Sample Snippets* submenu, you can select a number of C# sample snippets.
 
-These snippets will prove helpful when learning how to use C# code in DataMiner Automation scripts, and will also provide a way to quickly add frequently used code.
+These snippets will prove helpful when learning how to use C# code in DataMiner automation scripts, and will also provide a way to quickly add frequently used code.
 
 ### Syntax check
 

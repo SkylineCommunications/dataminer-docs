@@ -19,7 +19,7 @@ For example, this *SoftLaunchOptions.xml* configuration activates the "BookingSw
 > [!NOTE]
 >
 > - All XML tags in *SoftLaunchOptions.xml* are case-sensitive.
-> - All soft-launch flags (e.g. `<BookingSwarming>`) must be placed within the `<SLNet>` parent tag.
+> - All soft-launch flags (e.g., `<BookingSwarming>`) must be placed within the `<SLNet>` parent tag.
 
 After you have modified this configuration file, you must **restart your DataMiner Agent** to activate the changes. If you have a cluster of DataMiner Agents, every DataMiner Agent in the cluster will need to be restarted. Many of the soft-launch options also require an **IIS restart** when they are activated.
 

@@ -33,7 +33,7 @@ When resources are added, picked, or swapped, the capability and capacity filter
 
 When a MediaOps upgrade package is installed, a number of predefined existing scripts and DOM definitions created by older versions of MediaOps will now first be cleaned up.
 
-For each major version, this predefined list will be reset. Consequently, when you upgrade across major versions (e.g. from 1.x.x to 2.x.x), we recommend upgrading to the latest version of the current major version first before moving to the next major version, to ensure that these cleanup actions have taken place at least once.
+For each major version, this predefined list will be reset. Consequently, when you upgrade across major versions (e.g., from 1.x.x to 2.x.x), we recommend upgrading to the latest version of the current major version first before moving to the next major version, to ensure that these cleanup actions have taken place at least once.
 
 #### Scheduling: Scheduling_CRUD_Extension script now triggered on job configuration updates [ID 43615]
 

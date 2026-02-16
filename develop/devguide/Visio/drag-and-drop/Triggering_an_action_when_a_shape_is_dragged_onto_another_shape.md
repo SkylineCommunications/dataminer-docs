@@ -6,7 +6,7 @@ uid: Triggering_an_action_when_a_shape_is_dragged_onto_another_shape
 
 A shape can be set to perform a particular action when another shape is dropped onto it.
 
-This "drop" behavior will often be implemented to visualize element properties or to pass parameters like element or service names to Automation scripts.
+This "drop" behavior will often be implemented to visualize element properties or to pass parameters like element or service names to automation scripts.
 
 > [!NOTE]
 >
@@ -28,7 +28,7 @@ Add the following shape data fields to the shape:
 
   - A field of type **Execute**.
 
-    See [Example of a 'drop target' that executes an Automation script](#example-of-a-drop-target-that-executes-an-automation-script).
+    See [Example of a 'drop target' that executes an automation script](#example-of-a-drop-target-that-executes-an-automation-script).
 
   - A field of type **Parameter**.
 
@@ -52,7 +52,7 @@ Add the following shape data fields to the shape:
 
 ## Example of a 'drop target' that visualizes the element name
 
-First, we turn a shape into a "drop target" (i.e. a shape onto which we will drop other shapes) by adding to it the following shape data fields:
+First, we turn a shape into a "drop target" (i.e., a shape onto which we will drop other shapes) by adding to it the following shape data fields:
 
 - **DropTarget**: TRUE
 - **Element**: \<empty>
@@ -69,9 +69,9 @@ Then, we make sure that the shapes we intend to drop onto the "drop target" cont
 
 When we now drop a shape with a valid element ID onto our newly created "drop target", the text inside the "drop target" will display the name of the element referred to by the element ID specified in the shape data of the shape we dropped onto the "drop target".
 
-## Example of a 'drop target' that executes an Automation script
+## Example of a 'drop target' that executes an automation script
 
-First, we turn a shape into a "drop target" (i.e. a shape onto which we will drop other shapes) by adding the following shape data fields to it:
+First, we turn a shape into a "drop target" (i.e., a shape onto which we will drop other shapes) by adding the following shape data fields to it:
 
 - **DropTarget**: TRUE
 - **Execute**: Script:...
@@ -79,7 +79,7 @@ First, we turn a shape into a "drop target" (i.e. a shape onto which we will dro
   Example: `Script:SendServiceReport||||Send Service report|NoConfirmation`
 
   > [!NOTE]
-  > Make sure a service ID is passed to the Automation script specified in the shape data field of type **Execute**.
+  > Make sure a service ID is passed to the automation script specified in the shape data field of type **Execute**.
 
 Then, we make sure that the shapes we intend to drop onto the "drop target" contain valid shape data. In this example, all shapes to be dropped should contain a valid service ID:
 
@@ -87,27 +87,27 @@ Then, we make sure that the shapes we intend to drop onto the "drop target" cont
 
   Example: `111/312`
 
-When we now drop a shape with a valid service ID onto our newly created "drop target", the service ID specified in the shape data of the shape we dropped onto the "drop target" will be passed to the Automation script, which will then be executed.
+When we now drop a shape with a valid service ID onto our newly created "drop target", the service ID specified in the shape data of the shape we dropped onto the "drop target" will be passed to the automation script, which will then be executed.
 
 ## Example of a drag-and-drop action that passes on a table filter
 
 Create the following four shapes:
 
-- Shape1 (source shape, i.e. shape that will be dropped onto shape3 or shape4)
+- Shape1 (source shape, i.e., shape that will be dropped onto shape3 or shape4)
 
   | Shape data field | Value           |
   | ---------------- | --------------- |
   | Element          | DmaID/ElementID |
   | Parameter        | pidPrimKey:\* 1 |
 
-- Shape2 (source shape, i.e. shape that will be dropped onto shape3 or shape4)
+- Shape2 (source shape, i.e., shape that will be dropped onto shape3 or shape4)
 
   | Shape data field | Value           |
   | ---------------- | --------------- |
   | Element          | DmaID/ElementID |
   | Parameter        | pidPrimKey:\* 2 |
 
-- Shape3 (target shape, i.e. shape onto which shape1 or shape2 will be dropped)
+- Shape3 (target shape, i.e., shape onto which shape1 or shape2 will be dropped)
 
   | Shape data field | Value                         |
   | ---------------- | ----------------------------- |
@@ -115,7 +115,7 @@ Create the following four shapes:
   | Parameter        | ColumnID:\[tableindexFilter\] |
   | DropTarget       | True                          |
 
-- Shape4 (target shape, i.e. shape onto which shape1 or shape2 will be dropped)
+- Shape4 (target shape, i.e., shape onto which shape1 or shape2 will be dropped)
 
   | Shape data field | Value                         |
   | ---------------- | ----------------------------- |
@@ -137,12 +137,12 @@ When child shapes have been generated for every row in a table, it is also possi
 
 To do so:
 
-1. Create a target shape linked to an Automation script or parameter, or a shape turned into a parameter control.
+1. Create a target shape linked to an automation script or parameter, or a shape turned into a parameter control.
 
    > [!TIP]
    > See also:
    >
-   > - [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
+   > - [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script)
    > - [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter)
    > - [Turning a shape into a parameter control](xref:Turning_a_shape_into_a_parameter_control)
 

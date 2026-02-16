@@ -4,7 +4,7 @@ uid: Manually_executing_a_script
 
 # Manually executing a script
 
-If you want to manually execute an Automation script, do the following:
+If you want to manually execute an automation script, do the following:
 
 1. In DataMiner Cube, go to *Apps* > *Automation.*
 

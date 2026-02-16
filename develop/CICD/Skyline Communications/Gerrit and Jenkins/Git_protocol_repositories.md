@@ -9,7 +9,7 @@ uid: Git_protocol_repositories
 
 ## Range branches and tags
 
-Each protocol is stored in a dedicated Git repository on Gerrit. Different branches exist for each version range branch (e.g. 1.0.0.X, 1.0.1.X, 2.0.0.X, etc.) and each released version will result in a tag in the Git repository. Consider the following image representing the branches and tags for an example protocol Git repository:
+Each protocol is stored in a dedicated Git repository on Gerrit. Different branches exist for each version range branch (e.g., 1.0.0.X, 1.0.1.X, 2.0.0.X, etc.) and each released version will result in a tag in the Git repository. Consider the following image representing the branches and tags for an example protocol Git repository:
 
 ```mermaid
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': true, 'showCommitLabel':true,'mainBranchName': '1.0.0.X'}} }%%
@@ -31,7 +31,7 @@ Each protocol is stored in a dedicated Git repository on Gerrit. Different branc
 
 This protocol has two range branches: 1.0.0.X and 2.0.0.X. The 1.0.0.X branch has tags for versions 1.0.0.1 up to and including 1.0.0.8. In the image, you can also see that a new branch has been created for the 2.0.0.X range and that version 2.0.0.1 has been created based on version 1.0.0.7.
 
-Whenever you need to create a new version range, e.g. 1.0.1.X, you will do this by creating a new branch.
+Whenever you need to create a new version range, e.g., 1.0.1.X, you will do this by creating a new branch.
 
 ## Git vs SVN
 

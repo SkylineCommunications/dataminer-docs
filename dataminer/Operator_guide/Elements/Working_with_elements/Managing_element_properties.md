@@ -21,7 +21,7 @@ To add a custom property to a DataMiner element, service, or view:
 
 1. Specify the following options:
 
-   - **Make this property available for alarm filtering**: Select this checkbox if you want the property to be used in the Alarm Console, in filters and in Correlation rules.
+   - **Make this property available for alarm filtering**: Select this checkbox if you want the property to be used in the Alarm Console, in filters and in correlation rules.
 
      > [!NOTE]
      > This option is not available for alarm properties, as these are always available for alarm filtering.

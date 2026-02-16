@@ -10,9 +10,7 @@ To deploy or upgrade the DataMiner PTP app:
 
 ### [From DataMiner PTP 1.1.4 onwards](#tab/tabid-1)
 
-Contact your Skyline representative to receive the PTP package. Skyline employees can get the [DataMiner PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the Catalog.
-
-When you have received the package, deploy it as described under [Installing an app package](xref:Installing_an_app_package).
+Deploy the [DataMiner PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the Catalog.
 
 ### [Prior to DataMiner PTP 1.1.4](#tab/tabid-2)
 
@@ -47,13 +45,13 @@ To set up and configure the DataMiner PTP app:
 
 1. On the following page, select the pages that the PTP app should display, and click *Next*.
 
-   If, for example, your system does not include PTP analyzer, then do not select the *Analyzers* page.
+   If, for example, your system does not include a PTP analyzer, then do not select the *Analyzers* page.
 
 1. On the following page, select the elements to include in the PTP topology, and click *Next*.
 
    - The list on the left shows the elements that have not (yet) been included.
 
-     If necessary, this list can be filtered to show only the supported devices. If you add an unsupported device to the PTP topology, it will not be mediated. Manual configuration of that element (i.e. indicating which parameters are PTP-related) will then be required.
+     If necessary, this list can be filtered to show only the supported devices. If you add an unsupported device to the PTP topology, it will not be mediated. Manual configuration of that element (i.e., indicating which parameters are PTP-related) will then be required.
 
    - The list of the right shows the elements that have been included.
 

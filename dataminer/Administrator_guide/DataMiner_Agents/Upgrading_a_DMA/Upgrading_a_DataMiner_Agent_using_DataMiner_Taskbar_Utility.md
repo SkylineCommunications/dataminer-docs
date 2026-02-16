@@ -10,7 +10,7 @@ description: Right-click the DataMiner Taskbar Utility icon and click 'Upgrade'.
 
 ## Before upgrading your DataMiner System
 
-If you intend to upgrade your entire DataMiner System (i.e. all DMAs in the cluster), first log on to the DataMiner System with administrative privileges:
+If you intend to upgrade your entire DataMiner System (i.e., all DMAs in the cluster), first log on to the DataMiner System with administrative privileges:
 
 1. On one of the DMAs, right-click the DataMiner Taskbar Utility icon in the system tray and select *Options*.
 

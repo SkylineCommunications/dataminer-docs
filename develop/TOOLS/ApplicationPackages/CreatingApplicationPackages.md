@@ -13,7 +13,7 @@ There are multiple ways to create application packages:
 - [Using the Low-Code App Editor](#low-code-app-editor)
 
 > [!TIP]
-> [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) supports creating application packages for Automation scripts solutions.
+> [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) supports creating application packages for automation scripts solutions.
 
 ## Infrastructure as Code (IaC)
 
@@ -37,7 +37,7 @@ If you are interested in combining this with automatic registration in the Catal
 
 ## DataMiner Package Composer
 
-The DataMiner Package Composer is an experimental low-code application aimed at providing a simple, code-free solution for moving DataMiner objects (such as low-code apps, dashboards, Automation scripts, and DOM modules) between DataMiner Agents (DMAs). This tool prioritizes ease of use and requires no coding, making it accessible for users looking to streamline DataMiner operations without technical complexities.
+The DataMiner Package Composer is an experimental low-code application aimed at providing a simple, code-free solution for moving DataMiner objects (such as low-code apps, dashboards, automation scripts, and DOM modules) between DataMiner Agents (DMAs). This tool prioritizes ease of use and requires no coding, making it accessible for users looking to streamline DataMiner operations without technical complexities.
 
 Key highlights:
 
@@ -55,7 +55,7 @@ For the API documentation, refer to [Skyline.AppInstaller.AppPackage](xref:Skyli
 
 ## Packager .NET tool
 
-The Packager .NET tool is a tool that can be used to create application packages. Refer to [Skyline.DataMiner.CICD.Tools.Packager](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) for more information on the supported types and how to install and use this tool. It is typically used to create e.g. an application package from an Automation script solution folder (e.g. as a step in a CI/CD pipeline.) It currently supports creating application packages for Automation script solutions, Visio repositories (both protocol Visio files and other) and dashboard repositories.
+The Packager .NET tool is a tool that can be used to create application packages. Refer to [Skyline.DataMiner.CICD.Tools.Packager](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) for more information on the supported types and how to install and use this tool. It is typically used to create e.g., an application package from an automation script solution folder (e.g., as a step in a CI/CD pipeline.) It currently supports creating application packages for automation script solutions, Visio repositories (both protocol Visio files and other) and dashboard repositories.
 
 The packager tool also allows the creation of a protocol package (.dmprotocol) for protocol solutions.
 
@@ -67,6 +67,6 @@ See also: [Low-code app deployment behavior](xref:Deploying_a_catalog_item#low-c
 
 ## Low-Code App Editor
 
-The *Low Code App Extensions* script or "Low-Code App Editor" is an interactive Automation script that allows, among other things, the exporting of low-code apps (optionally including DOM instances) from a DataMiner System.
+The *Low Code App Extensions* script or "Low-Code App Editor" is an interactive automation script that allows, among other things, the exporting of low-code apps (optionally including DOM instances) from a DataMiner System.
 
 For more information on how to install and use this script, refer to [Low Code App Extensions](https://github.com/SkylineCommunications/Low-Code-App-Extensions).

@@ -24,7 +24,7 @@ Also, in the *Tables* list on the left, warning icons will now appear next to ta
 From v2.16 onwards, DIS will be using Microsoft .NET Framework 4.6 to be able to support debugging (DIS Inject) as from DataMiner 9.6.4.
 
 > [!NOTE]
-> In DataMiner 9.6.4, Automation scripts require Microsoft .NET Framework 4.6 while QActions still require Microsoft .NET Framework 4.5.
+> In DataMiner 9.6.4, automation scripts require Microsoft .NET Framework 4.6 while QActions still require Microsoft .NET Framework 4.5.
 
 ### Validator
 

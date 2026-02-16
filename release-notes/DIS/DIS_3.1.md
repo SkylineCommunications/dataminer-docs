@@ -129,10 +129,10 @@ If the *Automatically update solution files* option is enabled, DIS will automat
 
 `<PlatformTarget>x86</PlatformTarget>`
 
-However, when you create e.g. a NuGet package that could be used in e.g. connectors, Automation scripts and GQI queries, you do not want the *Directory.Build.props* file to have its platform target fixed on x86. As a result, the `<PlatformTarget>x86</PlatformTarget>` entry has now been removed.
+However, when you create e.g., a NuGet package that could be used in e.g., connectors, automation scripts and GQI queries, you do not want the *Directory.Build.props* file to have its platform target fixed on x86. As a result, the `<PlatformTarget>x86</PlatformTarget>` entry has now been removed.
 
 > [!NOTE]
-> Developers should now set this entry in the csproj file when needed. For example, when you create unit tests for a regular Automation script, it might be required to set the target platform to x86. Otherwise, a `BadImageFormatException` could be thrown when executing the test.
+> Developers should now set this entry in the csproj file when needed. For example, when you create unit tests for a regular automation script, it might be required to set the target platform to x86. Otherwise, a `BadImageFormatException` could be thrown when executing the test.
 
 ##### Updated DIS dependencies
 
@@ -151,9 +151,9 @@ DIS now uses:
 
 #### IDE
 
-##### no-restore option will now be passed to the process that will create an Automation script application package [ID 44007]
+##### no-restore option will now be passed to the process that will create an automation script application package [ID 44007]
 
-From now on, the `no-restore` option will be added as an additional argument when spawning the process that will create an Automation script application package (dmapp) via the dotnet build operation.
+From now on, the `no-restore` option will be added as an additional argument when spawning the process that will create an automation script application package (dmapp) via the dotnet build operation.
 
 ## DIS 3.1.13
 
@@ -161,9 +161,9 @@ From now on, the `no-restore` option will be added as an additional argument whe
 
 #### IDE
 
-##### Problem when publishing an Automation script [ID 43997]
+##### Problem when publishing an automation script [ID 43997]
 
-In some cases, a `MissingMethodException` could be thrown while publishing an Automation script that uses the DataMiner SDK.
+In some cases, a `MissingMethodException` could be thrown while publishing an automation script that uses the DataMiner SDK.
 
 From now on, the application package (dmapp) creation will be performed in a dedicated process to avoid any interference with NuGet packages already loaded in by Visual Studio.
 
@@ -247,21 +247,21 @@ Up to now, selecting a NuGet reference in Visual Studio's Solution Explorer (wit
 
 With the introduction of the Skyline.DataMiner.Sdk projects, Script style projects would incorrectly not allow multiple [Exe](xref:DMSScript.Script.Exe) blocks, regardless of their [type](xref:DMSScript.Script.Exe-type).
 
-From now on, Skyline.DataMiner.Sdk Script projects will not allow multiple Exe blocks of type 'csharp'. This will allow users to have e.g. an Exe block of type 'csharp' and an Exe block of type 'report'.
+From now on, Skyline.DataMiner.Sdk Script projects will not allow multiple Exe blocks of type 'csharp'. This will allow users to have e.g., an Exe block of type 'csharp' and an Exe block of type 'report'.
 
 ##### ProcessAutomation.dll would be referenced incorrectly after building a dmapp [ID 43899]
 
-Up to now, when you had created or deployed an Automation script that referenced the *ProcessAutomation.dll* file, that assembly would be resolved incorrectly. The system would attempt to locate it in the `ProtocolScripts/DllImport` folder, whereas the correct location was `ProtocolScripts`.
+Up to now, when you had created or deployed an automation script that referenced the *ProcessAutomation.dll* file, that assembly would be resolved incorrectly. The system would attempt to locate it in the `ProtocolScripts/DllImport` folder, whereas the correct location was `ProtocolScripts`.
 
 From now on, when the *ProcessAutomation.dll* file is referenced, the resulting path in the XML file will point to the `ProtocolScripts` folder.
 
-##### Problem with Automation script interactivity check [ID 42881]
+##### Problem with automation script interactivity check [ID 42881]
 
-In DIS, when you published an Automation script, an attempt would be made to detect whether the script used any interactive methods (e.g. ShowUI). If that was the case, flags would be set in the script options to mark the script as interactive.
+In DIS, when you published an automation script, an attempt would be made to detect whether the script used any interactive methods (e.g., ShowUI). If that was the case, flags would be set in the script options to mark the script as interactive.
 
-As DIS now checks the placeholder instead of the C# code, this mechanism no longer worked. As a result, it was also no longer possible to manually set the flags in the XML file of an Automation script project.
+As DIS now checks the placeholder instead of the C# code, this mechanism no longer worked. As a result, it was also no longer possible to manually set the flags in the XML file of an automation script project.
 
-The above-mentioned mechanism has now been removed. Whether a script requires interactivity should now be specified using the [Interactivity](xref:DMSScript.Interactivity) tag. Also, it is now possible again to manually set the flags in the XML file of an Automation script project.
+The above-mentioned mechanism has now been removed. Whether a script requires interactivity should now be specified using the [Interactivity](xref:DMSScript.Interactivity) tag. Also, it is now possible again to manually set the flags in the XML file of an automation script project.
 
 ## DIS 3.1.11
 
@@ -291,7 +291,7 @@ DIS now uses:
 
 When an XML file was being closed while a *.cs* file was still open, DIS would try to re-open the XML file, causing the text editor of the XML file to open empty.
 
-Also, the check that determines whether the opened file belongs to a DataMiner-specific solution (e.g. an Automation script solution, a connector solution, etc.) has been updated. From now on, as soon as DIS detects that the project is using the `Skyline.DataMiner.Sdk` SDK, it will consider this a DataMiner-specific solution.
+Also, the check that determines whether the opened file belongs to a DataMiner-specific solution (e.g., an automation script solution, a connector solution, etc.) has been updated. From now on, as soon as DIS detects that the project is using the `Skyline.DataMiner.Sdk` SDK, it will consider this a DataMiner-specific solution.
 
 ##### Problem when switching branches [ID 43234]
 
@@ -411,11 +411,11 @@ After you select one of the parameters of the connector, the *Confirmed Update L
 For example:
 
 - If the pane lists an Action, this means that the Action will perform a set on the parameter when executed.
-- If the pane lists a QAction, this means that the QAction invokes e.g. a method that will cause the parameter to get updated. The line on which you will find that invocation within the QAction will be mentioned in the result window.
+- If the pane lists a QAction, this means that the QAction invokes e.g., a method that will cause the parameter to get updated. The line on which you will find that invocation within the QAction will be mentioned in the result window.
 
 In the *Possible Update Locations* pane, you will find an overview of possible locations where this parameter might get updated.
 
-- For example, if a QAction contains a `protocol.SetParameter()` call, but it could not be determined which parameter gets updated (e.g. because the parameter ID is calculated at runtime), then that QAction will be listed in the *Possible Update Locations* pane.
+- For example, if a QAction contains a `protocol.SetParameter()` call, but it could not be determined which parameter gets updated (e.g., because the parameter ID is calculated at runtime), then that QAction will be listed in the *Possible Update Locations* pane.
 
 - Also, the *Confirmed Update Locations* will mark incorrect update locations in red. For example, if the connector calls a method that should be executed on a table parameter is incorrectly executed on a standalone parameter.
 
@@ -451,7 +451,7 @@ DIS will now indicate that DataMiner version 10.3 is the minimum supported versi
 
 ##### Secure Coding Analyzers NuGet will now be installed by default [ID 41904]
 
-When a new QAction project is created in a protocol solution, or when a project for a C# exe block is created in an Automation script, from now on, the newly-created project will by default contain a reference to the [Skyline.DataMiner.Utils.SecureCoding.Analyzers](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SecureCoding.Analyzers) NuGet package.
+When a new QAction project is created in a protocol solution, or when a project for a C# exe block is created in an automation script, from now on, the newly-created project will by default contain a reference to the [Skyline.DataMiner.Utils.SecureCoding.Analyzers](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SecureCoding.Analyzers) NuGet package.
 
 Also, a new info bar has been introduced, which will show up when you open a solution that contains projects that either do not have the *Skyline.DataMiner.Utils.SecureCoding.Analyzers* package installed or have an outdated version installed. Pressing the fix button on the info bar will then ensure that the NuGet package is installed on all applicable projects.
 
@@ -480,13 +480,13 @@ The protocol snippet now has the [unicode](xref:Protocol.Type-options) option se
 
 ##### Satellite assemblies are now excluded in packages [ID 41997]
 
-When assembling a protocol or an Automation script, DIS will now use a new version of the [Skyline.DataMiner.CICD.Assemblers](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Common) NuGet package (1.0.18), which will now exclude satellite assemblies that are part of NuGet packages.
+When assembling a protocol or an automation script, DIS will now use a new version of the [Skyline.DataMiner.CICD.Assemblers](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Common) NuGet package (1.0.18), which will now exclude satellite assemblies that are part of NuGet packages.
 
 Up to now, in some cases, a satellite assembly would get added to the package while the primary assembly (with the same name) would already have been added to it as a reference. In DIS, this would then result in a message stating that the protocol or script could not be created as a reference with the same name was already added.
 
 ##### Info bar checks will only be triggered after 30 seconds and will no longer throw an exception [ID 41840]
 
-When you open a solution, the info bar checks will now only execute after a delay of 30 seconds instead of 3 seconds. This will give the solution more time to load (e.g. when switching branches).
+When you open a solution, the info bar checks will now only execute after a delay of 30 seconds instead of 3 seconds. This will give the solution more time to load (e.g., when switching branches).
 
 Up to now, if the solution was not yet loaded when the info bar checks were started, in some cases, an exception would be thrown. From now on, DIS will no longer throw an exception. Instead, it will silently skip the check (until it is retriggered when the solution changes).
 
@@ -514,7 +514,7 @@ DIS now uses
 
 ##### Unobserved task exception event in SLDisDmaComm will no longer cause the exception to be thrown [ID 41198]
 
-Up to now, when an unobserved task exception event occurred in SLDisDmaComm, the event handler code would log the event and throw an exception so the process would end. As this event could occur when e.g. publishing to a DaaS system, from now on, the unobserved exception will be logged, but no exception will be thrown anymore.
+Up to now, when an unobserved task exception event occurred in SLDisDmaComm, the event handler code would log the event and throw an exception so the process would end. As this event could occur when e.g., publishing to a DaaS system, from now on, the unobserved exception will be logged, but no exception will be thrown anymore.
 
 #### Fixes
 
@@ -578,4 +578,4 @@ When you edited a macro, references to PresentationFramework and PresentationCor
 
 In code and files generated by DIS, in some cases, the indentation would not be correct.
 
-From now on, in all code and files it generates, DIS will use tab indentation, which is the default indentation that is set in the editor settings of all connector and Automation script solutions.
+From now on, in all code and files it generates, DIS will use tab indentation, which is the default indentation that is set in the editor settings of all connector and automation script solutions.

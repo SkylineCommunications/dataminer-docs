@@ -14,9 +14,9 @@ uid: General_Feature_Release_10.1.12
 
 ### DMS core functionality
 
-#### Redundancy groups: Additional information in information events and Automation scripts \[ID 31358\]
+#### Redundancy groups: Additional information in information events and automation scripts \[ID 31358\]
 
-When switching elements within a redundancy group, from now on, additional information will be added both to the information events and the Automation scripts that are executed.
+When switching elements within a redundancy group, from now on, additional information will be added both to the information events and the automation scripts that are executed.
 
 ##### Information events
 
@@ -35,11 +35,11 @@ The following information will be added to the information events.
 
 - When a switch is performed, an additional information event with parameter description “Redundancy switch” will now be generated to indicate the cause of the switch. In case of a manual switch, the information event will mention the user and in case of an automatic switch, it will mention the trigger ID.
 
-- When DataMiner intervenes in the switching process, an information event with parameter description “Linked to” is generated. From now on, this event will also mention the element from which the switch occurred. It will now contain e.g. “RDG1, Unlinked from RDG3” instead of just “RDG1”.
+- When DataMiner intervenes in the switching process, an information event with parameter description “Linked to” is generated. From now on, this event will also mention the element from which the switch occurred. It will now contain e.g., “RDG1, Unlinked from RDG3” instead of just “RDG1”.
 
 ##### Automation scripts
 
-When an Automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the Automation script using the GetScriptParam(\<id>) method on the engine object.
+When an automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the automation script using the GetScriptParam(\<id>) method on the engine object.
 
 | ID | Name | Description |
 |--|--|--|
@@ -184,7 +184,7 @@ Examples:
 
 #### DataMiner Cube - Visual Overview: Service connectivity chains now support 'lite contributing' resources \[ID 31196\]
 
-In Visual Overview, it is possible to have the connectivity chain of a service instance (from the Service & Resource Management module) drawn automatically in Visual Overview. Now, this feature supports so-called “lite” contributing resources, i.e. resources for which no enhanced elements have to be created.
+In Visual Overview, it is possible to have the connectivity chain of a service instance (from the Service & Resource Management module) drawn automatically in Visual Overview. Now, this feature supports so-called “lite” contributing resources, i.e., resources for which no enhanced elements have to be created.
 
 #### Sidebar: Click '+' to pin sidebar items \[ID 31207\]
 
@@ -284,7 +284,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 >
 > - If access to a dashboard is limited to some users only, it will not be possible to share this dashboard.
 > - You can stop sharing a dashboard by clicking the “...” button again and selecting *Manage share*. This will open a pop-up box where you can delete the share or update the message.
-> - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), queries using feeds and visualizations based on query feeds (e.g. node edge graph, table), trend components with subscription filters and pivot table components. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
+> - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), queries using feeds and visualizations based on query feeds (e.g., node edge graph, table), trend components with subscription filters and pivot table components. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 
 ##### Accessing the Sharing module that lists the dashboards that others have shared with you
 
@@ -316,7 +316,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 #### Automation scripts launched from web apps will now take into account the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector \[ID 31212\]
 
-In Automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileName-Extensions properties of UIBlockDefinitions of type FileSelector will now also be taken into account.
+In automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileName-Extensions properties of UIBlockDefinitions of type FileSelector will now also be taken into account.
 
 An error will now be thrown when you try to add a file that is larger than the allowed file size or does not have an allowed file name extension. Also, the “Choose file” popup window will now only list files with an allowed extension and dragging an item other than a file or a folder onto the script’s drop zone will no longer be possible.
 
@@ -324,7 +324,7 @@ An error will now be thrown when you try to add a file that is larger than the a
 
 #### DataMiner landing page: Browser title changed to 'DataMiner' \[ID 31373\]
 
-The browser title of the DataMiner landing page (e.g. `https://<MyDMA>/root/`) has been changed from “DataMiner Services” to “DataMiner”.
+The browser title of the DataMiner landing page (e.g., `https://<MyDMA>/root/`) has been changed from “DataMiner Services” to “DataMiner”.
 
 Also, the error message shown when you try to log in to a web application with a user account that has not been granted the “DataMiner Web Apps” user permission has now been changed to “You have no access to the DataMiner Web Apps”.
 
@@ -434,7 +434,7 @@ A number of enhancements have been made with regard to updating resource, bookin
 
 #### Minor enhancements to several DataMiner processes \[ID 31155\]
 
-A number of minor enhancements have been made to a number of DataMiner processes (e.g. SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
+A number of minor enhancements have been made to a number of DataMiner processes (e.g., SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
 
 #### Cassandra cluster: Unnecessary scheduled maintenance tasks will automatically be deleted \[ID 31180\]
 
@@ -449,7 +449,7 @@ A number of enhancements have been made with regard to error handling and the re
 
 #### SLAnalytics: Enhanced creation and clearance of notice events \[ID 31199\]
 
-Notice events will now be generated to inform users in case of reduced accuracy of an SLAnalytics feature due to e.g. a high CPU, database or memory load. Those events will then automatically be cleared as soon as the CPU, database or memory load drops to a normal level.
+Notice events will now be generated to inform users in case of reduced accuracy of an SLAnalytics feature due to, for example, a high CPU, database or memory load. Those events will then automatically be cleared as soon as the CPU, database or memory load drops to a normal level.
 
 Other changes:
 
@@ -496,9 +496,9 @@ When creating the user-defined types failed during a migration from MySQL to Cas
 The migration has failed.DBGatewayException(SLCassandraClassLibrary.DBGateway.Cassandra.StorageManagers.SingleNode.CassandraConnection,,UNKNOW SLDataGateway.Types.DBGatewayException: CassandraConnection CreateCustomType - no host available All hosts tried for query failed.
 ```
 
-#### Problem with SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
+#### Problem with SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
 
-In some cases, an error could occur in SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved.
+In some cases, an error could occur in SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved.
 
 #### Problem during DataMiner startup when retrieving alarms for multiple elements from an Elasticsearch database \[ID 31039\]
 
@@ -580,7 +580,7 @@ In some cases, the default profile parameter mediation snippet would fail to com
 
 #### DataMiner Cube - Automation: DateTime control incorrectly updated with the DateTimeKind property \[ID 31190\]
 
-When, in an interactive Automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
+When, in an interactive automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
 
 #### Dashboards app: Duplicate options in GQI queries \[ID 31206\]
 
@@ -614,7 +614,7 @@ In Visual Overview, in some cases, property values would not get updated correct
 
 In some cases, the “Auto RBW Factor” and “Auto VBW Factor” values would be stored in spectrum presets in an incorrect way. This would then lead to an incorrect auto RBW/VBW calculation.
 
-#### Interactive Automation scripts: Initial state of non-recursive tree view incorrect \[ID 31302\]
+#### Interactive automation scripts: Initial state of non-recursive tree view incorrect \[ID 31302\]
 
 The initial checked/unchecked state of a non-recursive tree item would be incorrect when
 
@@ -623,9 +623,9 @@ The initial checked/unchecked state of a non-recursive tree item would be incorr
 - the item had children, and
 - none of those children were checked.
 
-#### Interactive Automation scripts: Dialog items could incorrectly inherit the dimensions of a dialog item shown earlier \[ID 31311\]
+#### Interactive automation scripts: Dialog items could incorrectly inherit the dimensions of a dialog item shown earlier \[ID 31311\]
 
-When an interactive Automation script was launched from a web app, in some cases, a dialog item could incorrectly inherit the dimensions of a dialog item shown earlier.
+When an interactive automation script was launched from a web app, in some cases, a dialog item could incorrectly inherit the dimensions of a dialog item shown earlier.
 
 #### DataMiner Cube - Visual Overview: Table connections would disappear at certain zoom levels \[ID 32336\]
 
@@ -633,7 +633,7 @@ When using dynamic positioning in combination with dynamic zooming, shape groupi
 
 #### DataMiner Cube - System Center: Server setting updates would not be saved immediately \[ID 31339\]
 
-When you had updated server settings in System Center (e.g. the default browser plug-in), up to now, it could take up to 10 seconds for the changes to be applied. Also, when Cube was closed in the meantime, those latest changes would be lost. From now on, all changes made to system settings will be applied immediately.
+When you had updated server settings in System Center (e.g., the default browser plug-in), up to now, it could take up to 10 seconds for the changes to be applied. Also, when Cube was closed in the meantime, those latest changes would be lost. From now on, all changes made to system settings will be applied immediately.
 
 #### DataMiner Cube - Alarm Console: Problem after turning on the alarm focus feature \[ID 31343\]
 
@@ -653,7 +653,7 @@ When, in a GQI query, the “Use feed” option of a select node had been enable
 
 #### Web apps: Setvar controls in visual overviews would no longer be rendered correctly \[ID 31351\]
 
-In web apps (e.g. Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
+In web apps (e.g., Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
 
 #### ProfileManager module could get stuck during its initialization routine \[ID 31367\]
 
@@ -669,7 +669,7 @@ When, on a system with a MySQL database, you selected *Apply filter...* in a new
 
 #### DataMiner Cube - Visual Overview: Sorting of automatically generated shapes sorted by alarm severity would not get updated when the alarm level of any of the shapes was updated \[ID 31378\]
 
-When automatically generated shapes configured to be sorted by alarm severity had their sorting enabled e.g. by means of a session variable, the sorting would be correct but would not get updated when the alarm level of any of the shapes was updated.
+When automatically generated shapes configured to be sorted by alarm severity had their sorting enabled e.g., by means of a session variable, the sorting would be correct but would not get updated when the alarm level of any of the shapes was updated.
 
 #### Dashboards app: Problem when generating a PDF report of a dashboard that contained empty components \[ID 31388\]
 
@@ -704,7 +704,7 @@ Also, in some cases, a server query would not be translated correctly to a clien
 
 #### Failover: Status of newly installed Failover system would incorrectly not be set to 'No problems detected' \[ID 31604\]
 
-In some cases, the status of a newly installed Failover system would incorrectly not be set to “No problems detected” (i.e. green LED).
+In some cases, the status of a newly installed Failover system would incorrectly not be set to “No problems detected” (i.e., green LED).
 
 ## Addendum CU1
 
@@ -712,7 +712,7 @@ In some cases, the status of a newly installed Failover system would incorrectly
 
 #### Problem when using Class Library monitors in DataMiner Integration Studio \[ID 31685\]
 
-Critical errors could be thrown when using Class Library monitors in DataMiner Integration Studio in conjunction with DataMiner version 10.1.12. Also, in some cases, Automation scripts could fail at runtime.
+Critical errors could be thrown when using Class Library monitors in DataMiner Integration Studio in conjunction with DataMiner version 10.1.12. Also, in some cases, automation scripts could fail at runtime.
 
 ## Addendum CU2
 

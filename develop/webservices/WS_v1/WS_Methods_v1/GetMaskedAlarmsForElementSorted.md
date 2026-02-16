@@ -7,7 +7,7 @@ uid: GetMaskedAlarmsForElementSorted
 Use this method to retrieve a specific number of masked element alarms.
 
 > [!NOTE]
-> Using this method, you can e.g. request alarms in batches in order to minimize loading time.
+> Using this method, you can e.g., request alarms in batches in order to minimize loading time.
 
 ## Input
 

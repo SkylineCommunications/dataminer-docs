@@ -4,7 +4,7 @@ uid: AutomationActionSetElementState
 
 # Set element state
 
-Sets the state of a dummy in an Automation script.
+Sets the state of a dummy in an automation script.
 
 ```xml
 <Exe id="2" type="changestate">

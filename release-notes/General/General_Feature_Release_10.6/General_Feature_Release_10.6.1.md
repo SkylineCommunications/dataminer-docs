@@ -291,7 +291,7 @@ Also, in the resource manager, it is now possible to configure the number of sta
 | MaxAmountOfThreads       | The number of threads the resource manager will use to start bookings.<br>By default, 6 threads will be used. To restore this setting to the default value, set its value to null.<br>Note: The number of threads must at least be set to 2 in order for the scheduler to be able to start an action and keep a thread available for asynchronous continuations. |
 | MaxAmountOfParallelTasks | The number of parallel actions the resource manager will start on the threads.<br>By default, the number of parallel action is set to 7. To restore this setting to the default value, set its value to null. |
 
-The following example shows how you can configure this from an Automation script.
+The following example shows how you can configure this from an automation script.
 
 ```csharp
 private void UpdateResourceManagerConfigSettings()
@@ -331,7 +331,7 @@ See also: [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
-When a backup package was being created, up to now, the temporary file would be stored on the C drive. From now on, this temporary file will be stored on the target path (i.e. local path or network path).
+When a backup package was being created, up to now, the temporary file would be stored on the C drive. From now on, this temporary file will be stored on the target path (i.e., local path or network path).
 
 > [!NOTE]
 >

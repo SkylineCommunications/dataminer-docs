@@ -76,7 +76,7 @@ Also, please take into account that the following **exceptions** apply:
 
 - If you are on the Feature Release track and want to **switch to a DataMiner version on the Main Release track**, skip the Main Release version that matches your current feature release version. For example, if you have DataMiner 10.4.12 installed, you can upgrade directly to DataMiner 10.5.0, or you can upgrade from DataMiner 10.4.12 to any 10.5.x version and then to 10.6.0. See [DataMiner Main Release vs. Feature Release](xref:DataMiner_MR_vs_FR).
 - Upgrading to **DataMiner 10.6.0/10.6.1** or higher requires a [**BrokerGateway migration**](xref:BrokerGateway_Migration), which can only be done from 10.5.0 [CU2]/10.5.5 onwards. This means that an upgrade to 10.5.0 [CU2]/10.5.5 or higher cannot be skipped while upgrading to 10.6.0/10.6.1 or higher.
-- If you are upgrading **from a version prior to DataMiner 10.1.x** to 10.2.x or higher, **skip DataMiner 10.1** and proceed directly to the subsequent major version instead (i.e. DataMiner 10.2).
+- If you are upgrading **from a version prior to DataMiner 10.1.x** to 10.2.x or higher, **skip DataMiner 10.1** and proceed directly to the subsequent major version instead (i.e., DataMiner 10.2).
 - If you are upgrading **from DataMiner 9.6.0/9.6.x or a DataMiner 10.0.0 Main Release** version prior to DataMiner 10.0.0 [CU19], upgrade to [**DataMiner 10.0.0 [CU19]**](https://community.dataminer.services/download/dataminer-main-release-10-0-0-0-11025-cu19/) as the next major version.
 
 > [!TIP]
@@ -107,7 +107,8 @@ If you are about to upgrade across major versions, before proceeding with the up
 
   | DataMiner version | Microsoft VC++ |
   |--|--|
-  | DataMiner 10.5.0/10.5.2 and higher<!-- RN 41173+41609 --> | 14.40.33816 |
+  | DataMiner 10.5.0 [CU11]/10.6.0 [CU1]/10.6.3 and higher<!-- RN 44249 --> | 14.44.35211.0 |
+  | DataMiner 10.5.0 [CU0]/10.5.2 and higher<!-- RN 41173+41609 --> | 14.40.33816 |
 
 - Make sure the IP network **ports 9090, 4222, 6222, and 8222** (NATS monitoring only) are opened, as explained in [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
 
@@ -162,7 +163,7 @@ The following prerequisite checks are currently available:
 
 - [Verify No Annotations](xref:Verify_No_Annotations): Verifies whether the soft-launch option [LegacyAnnotations](xref:Overview_of_Soft_Launch_Options#legacyannotations) is enabled. As the legacy Annotations module is no longer supported from DataMiner 10.6.0/10.6.1 onwards, upgrading to those DataMiner versions or higher is not possible when this option is enabled.<!-- 44124 -->
 
-- [Verify No Legacy Correlation](xref:VerifyNoLegacyCorrelation): Scans the DataMiner System for any legacy Correlation rules. From DataMiner 10.5.1/10.6.0 onwards<!--RN 40834-->, this prerequisite is available by default and runs automatically when you upgrade.
+- [Verify No Legacy Correlation](xref:VerifyNoLegacyCorrelation): Scans the DataMiner System for any legacy correlation rules. From DataMiner 10.5.1/10.6.0 onwards<!--RN 40834-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards): Scans the DataMiner System for any legacy reports and legacy dashboards. From DataMiner 10.4.0/10.4.1 onwards<!--RN 37922-->, this prerequisite is available by default and runs automatically when you upgrade.
 

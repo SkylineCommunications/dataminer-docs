@@ -4,7 +4,7 @@ uid: UD_APIs_Using_existing_scripts
 
 # Using existing scripts
 
-There are two possible ways to create an API from an existing Automation script, which may or may not use script parameters.
+There are two possible ways to create an API from an existing automation script, which may or may not use script parameters.
 
 - The recommended way is to [use the OnApiTrigger entry point](#using-the-script-with-the-onapitrigger-entry-point).
 - Alternatively, you can also [use an existing script without the OnApiTrigger entry point](#using-the-script-without-the-onapitrigger-entry-point). However, while this has the advantage that you do not need to make changes to the script, this also has some major disadvantages.
@@ -57,7 +57,7 @@ For detailed info, refer to [Defining a new API](xref:UD_APIs_Define_New_API).
 > [!NOTE]
 >
 > - If there are missing script parameters, the *MissingScriptParameters* error will not be returned. You will need to make sure the script verifies the parameters.
-> - You can keep the existing script parameters of your script, as these will be ignored when the Automation script is executed as an API through the `OnApiTrigger` entry point method.
+> - You can keep the existing script parameters of your script, as these will be ignored when the automation script is executed as an API through the `OnApiTrigger` entry point method.
 > - If the `Run` method stays in the script, it will still be possible to trigger the script via Cube or any other supported DataMiner module (Scheduler, Correlation, etc.).
 
 To prepare the [example script](#example-script) so it can be used to handle API triggers, the following changes are needed:
@@ -145,7 +145,7 @@ namespace UserDefinableApiScripts.Examples.ExistingWithEntryPoint
 
 ## Using the script without the OnApiTrigger entry point
 
-It is possible to use a script such as the [example script](#example-script) as an API without making any changes to it. API triggers will be executed through the `Run` method as if you were executing the script from e.g. Cube.
+It is possible to use a script such as the [example script](#example-script) as an API without making any changes to it. API triggers will be executed through the `Run` method as if you were executing the script from e.g., Cube.
 
 To do this, define your API exactly as explained under [Creating an API and tokens](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-dataminer-automation), but next to *Method to be executed*, select *Run method*.
 
@@ -178,7 +178,7 @@ When the API is triggered with input data that does not represent a number, the 
 
 As there is no way of returning an `ApiTriggerOutput` instance with this approach, the error will be vague.
 
-The input value conversion logic will return a clear error if an API configured with this option is triggered, but the input JSON does not contain a value for all Automation script parameters. The JSON error response will look like this:
+The input value conversion logic will return a clear error if an API configured with this option is triggered, but the input JSON does not contain a value for all automation script parameters. The JSON error response will look like this:
 
 ```json
 {

@@ -58,7 +58,7 @@ This tab of the Booking Manager app displays information about current, past and
 
   - **Resources** / **Bookings**: This button is displayed in the bottom-left corner of the tab, and allows you to switch between the bookings and resources timeline.
 
-  - **Rescue**: Displayed at the bottom of the tab. This button can be used in case a booking was interrupted for some reason, e.g. because DataMiner became unavailable. It takes the booking out of the interrupted state so that it can start like a normal booking. For this purpose, the start date is adjusted when necessary.
+  - **Rescue**: Displayed at the bottom of the tab. This button can be used in case a booking was interrupted for some reason, e.g., because DataMiner became unavailable. It takes the booking out of the interrupted state so that it can start like a normal booking. For this purpose, the start date is adjusted when necessary.
 
     > [!NOTE]
     > Prior to SRM 1.2.23, instead of a *Rescue* button, a *Leave Interrupted* button is available, which has the same functionality. <!-- RN 28472 -->
@@ -87,9 +87,9 @@ This tab of the Booking Manager app displays information about current, past and
 
   - **On-Hold**: Allows you to temporarily set the booking to *On Hold* status, so that it will not be activated.
 
-  The following buttons are displayed both for confirmed bookings that have not started yet and partial bookings (i.e. bookings that have not yet been fully configured):
+  The following buttons are displayed both for confirmed bookings that have not started yet and partial bookings (i.e., bookings that have not yet been fully configured):
 
-  - **Edit**: Allows you to make changes to the booking, e.g. selecting different resources.
+  - **Edit**: Allows you to make changes to the booking, e.g., selecting different resources.
 
   - **Adjust time**: Allows you to change the start and/or end time of the booking.
 

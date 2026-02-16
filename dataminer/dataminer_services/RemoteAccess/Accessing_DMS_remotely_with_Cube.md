@@ -25,7 +25,7 @@ To access the DMS remotely via Cube, use the [remote access URL](xref:Cloud_Remo
 
 You can start the Cube session in different ways:
 
-- **Via the desktop app on a client PC**: [Open the Cube desktop app](xref:Connecting_to_a_DMA_with_Cube) and add a new DMS. In the *host* field, fill in the remote access URL of your system, without the protocol prefix, e.g. `ziine-skyline.on.dataminer.services`. In the *alias* field, you can fill in a more user-friendly name to make it easy to identify the system.
+- **Via the desktop app on a client PC**: [Open the Cube desktop app](xref:Connecting_to_a_DMA_with_Cube) and add a new DMS. In the *host* field, fill in the remote access URL of your system, without the protocol prefix, e.g., `ziine-skyline.on.dataminer.services`. In the *alias* field, you can fill in a more user-friendly name to make it easy to identify the system.
 
   ![Remote Cube in the launcher](~/dataminer/images/RemoteCubeLauncher.png)
 

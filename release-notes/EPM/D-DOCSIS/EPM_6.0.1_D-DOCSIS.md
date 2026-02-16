@@ -22,7 +22,7 @@ The WM receives requests from the CBR8 platform asking for specific topic data. 
 
 In the WM element, a new *Topics* page has been added, where you can find the *Topics Consumption Buffer* table. A new *Topic Settings* page is also available, where you can check and configure topic settings.
 
-The necessary Automation Scripts and Correlation Rules have also been created to support the topic data handling workflow.
+The necessary automation scripts and correlation rules have also been created to support the topic data handling workflow.
 
 #### New MAC State Not Online filter option \[ID 31454\]
 
@@ -44,7 +44,7 @@ In addition, these links will now also allow you to navigate to the RPD associat
 
 #### Improved table filters \[ID 31457\]
 
-Table filters will now be applied server side whenever possible to ensure that all retrieved data is filtered correctly. Any filters that are still applied client side are marked with the "\[Client\]" label to make this clear to the user. Client-side filters are only applied on partial views (i.e. the first 100 rows) of a table, or on each page of the paginated search result.
+Table filters will now be applied server side whenever possible to ensure that all retrieved data is filtered correctly. Any filters that are still applied client side are marked with the "\[Client\]" label to make this clear to the user. Client-side filters are only applied on partial views (i.e., the first 100 rows) of a table, or on each page of the paginated search result.
 
 For the most accurate results, we recommend to first apply server-side filters, and then to refine those results with client-side filters.
 

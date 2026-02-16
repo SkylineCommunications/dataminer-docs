@@ -20,7 +20,13 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No new features have been added yet.*
+#### System Center - Analytics config: New 'Suggestion limit' setting added to 'Behavioral Anomaly Detection' section [ID 44709]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+On the *Analytics config* page, located in the *System settings* section of *System Center*, a new *Suggestion limit* setting has been added to the *Behavioral Anomaly Detection* section.
+
+This setting will allow administrators to cap the number of active suggestion events per behavioral change type.
 
 ## Changes
 
@@ -34,6 +40,20 @@ Certain search boxes in used in the ListView component as well as the Automation
 
 From now on, the search boxes in the above-mentioned modules will act in a way that is similar to other search boxes in DataMiner Cube. The list with suggestions will be displayed first, and the filtered list will be displayed a second after you stopped typing in the search box.
 
+#### Sidebar: Labels of 'Catalog', 'Cloud Admin', and 'Data Sources' modules will now also be translated [ID 44733]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+If you view the Cube UI in one of the supported languages other than English, in the sidebar, the labels of the following modules will now also be translated to the selected language:
+
+- Catalog
+- Cloud Admin
+- Data Sources
+
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem with icons of apps pinned to the sidebar [ID 44693]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, when an app was pinned to the sidebar, two instances of that app's icon would incorrectly be displayed one on top of the other.

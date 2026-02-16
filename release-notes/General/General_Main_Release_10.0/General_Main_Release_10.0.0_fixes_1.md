@@ -62,7 +62,7 @@ In some cases, an error could occur in SLSNMPAgent when an element was added, de
 
 #### Enhanced services did not receive currently active alarms after being restarted \[ID 20328\]
 
-When an enhanced service was restarted (e.g. by editing the protocol), in some cases, it would not receive the currently active alarms when *Monitor Active Alarms* was enabled.
+When an enhanced service was restarted (e.g., by editing the protocol), in some cases, it would not receive the currently active alarms when *Monitor Active Alarms* was enabled.
 
 #### DataMiner Connectivity Framework: Problem deleting a connectivity chain throughout a DataMiner System \[ID 20343\]
 
@@ -208,7 +208,7 @@ When, in the *Logging* section of System Center (or the *Logging* window opene
 
 #### DataMiner Cube - Reports: Problem with 'top X' reports \[ID 21778\]
 
-In some cases, in DataMiner Cube, the “top X” reports, which you find e.g. in a view card under *Reports \> More \> Top*, would incorrectly list the “bottom X” items instead of the “top X” items.
+In some cases, in DataMiner Cube, the “top X” reports, which you find e.g., in a view card under *Reports \> More \> Top*, would incorrectly list the “bottom X” items instead of the “top X” items.
 
 #### SNMP polling with V3 HMAC-MD5 or HMAC-SHA authentication algorithms caused memory leak in SLSNMPManager \[ID 21788\]
 
@@ -327,7 +327,7 @@ When taking a backup containing Elastic data, in some cases, a problem could occ
 
 As changes to element files like Description.xml and Port.xml can impact parameters, elements are notified when one of their parameters is impacted by such a file change.
 
-However, up to now, child elements (e.g. DVE elements or virtual functions) would not receive any such file change notification. From now on, child elements will also receive file change notifications when they export parameters that are impacted by a particular file change.
+However, up to now, child elements (e.g., DVE elements or virtual functions) would not receive any such file change notification. From now on, child elements will also receive file change notifications when they export parameters that are impacted by a particular file change.
 
 #### Problem after stopping an element that stored data into an Indexing database and restarting the DataMiner Agent \[ID 22656\]
 
@@ -359,7 +359,7 @@ In some cases, an exception could be thrown when you closed a Visual Overview.
 
 #### Service & Resource Management: Problem when trying to open a functions.xml file \[ID 22744\]
 
-Due to a problem with file access rights, in some cases, it would not be possible to manually open a functions.xml file for e.g. debugging purposes.
+Due to a problem with file access rights, in some cases, it would not be possible to manually open a functions.xml file for e.g., debugging purposes.
 
 #### ProfileManagerHelper.GetProfileInstance with empty GUID returned random profile \[ID 22768\]
 
@@ -472,9 +472,9 @@ In addition, on a view card, it could occur that the list of elements was not up
 
 When a parameter was masked for a limited period of time, it could occur that the end time of the mask operation was not applied correctly.
 
-#### DataMiner Cube - Automation: Window appearing when an Automation script fails had an incorrect caption on a Cube with custom branding \[ID 23171\]
+#### DataMiner Cube - Automation: Window appearing when an automation script fails had an incorrect caption on a Cube with custom branding \[ID 23171\]
 
-When using a DataMiner Cube with custom branding, up to now, the window that appeared when an Automation script failed would incorrectly have the default “Skyline DataMiner” caption. From now on, on a DataMiner Cube with custom branding, the caption of that window will show the custom product name.
+When using a DataMiner Cube with custom branding, up to now, the window that appeared when an automation script failed would incorrectly have the default “Skyline DataMiner” caption. From now on, on a DataMiner Cube with custom branding, the caption of that window will show the custom product name.
 
 #### DataMiner Cube: Alarm storm prevention incorrectly enabled while being disabled in enforced group settings \[ID 23181\]
 
@@ -524,6 +524,6 @@ In the HTML5 apps (Dashboards, Jobs, etc.), in some cases, the Scheduler compone
 
 When you move the mouse pointer away from the Scheduler component and back, from now on, the action will either continue when the mouse button is being pressed or be canceled when the mouse button is no longer being pressed.
 
-#### Incorrect column spans in interactive Automation script in HTML5 applications \[ID 23325\]
+#### Incorrect column spans in interactive automation script in HTML5 applications \[ID 23325\]
 
-If an interactive Automation script was run using a HTML5 DataMiner application, it could occur that the column spans in the script were not correctly applied.
+If an interactive automation script was run using a HTML5 DataMiner application, it could occur that the column spans in the script were not correctly applied.

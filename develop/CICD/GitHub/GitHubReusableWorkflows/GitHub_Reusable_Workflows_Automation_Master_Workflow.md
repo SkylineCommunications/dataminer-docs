@@ -7,11 +7,11 @@ uid: github_reusable_workflows_automation_master_workflow
 > [!IMPORTANT]
 > For **Skyline.DataMiner.SDK** projects, refer to the [DataMiner App Package Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow).
 
-The Automation Master Workflow should run on repositories containing an [Automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
+The Automation Master Workflow should run on repositories containing an [automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
 
 It was migrated from a workflow using an [internal Jenkins pipeline](xref:Pipeline_stages_for_Automation_scripts) to handle automation and quality assurance within Skyline Communications.
 
-This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to your private storage in the catalog if it passes the Skyline quality gate job.
+This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your automation script solution to your private storage in the catalog if it passes the Skyline quality gate job.
 
 The following actions will be performed:
 
@@ -23,7 +23,7 @@ The following actions will be performed:
 
 In parallel, the [Artifact Creation](#artifact-creation) and [Auto-Generating Catalog from GitHub](#auto-generating-catalog-from-github) jobs will be executed.
 
-Only when the actions above and the "Artifact Creation" job have been successful, will the "Artifact Registration and Upload" job be executed. This job will upload an artifact (.dmapp) based on the Automation script solution, with the following steps:
+Only when the actions above and the "Artifact Creation" job have been successful, will the "Artifact Registration and Upload" job be executed. This job will upload an artifact (.dmapp) based on the automation script solution, with the following steps:
 
 - [Upload artifact package](#upload-artifact-package)
 - [Set artifact ID](#set-artifact-id)
@@ -38,7 +38,7 @@ Only when the actions above and the "Artifact Creation" job have been successful
 
 - Either the repository’s name or a GitHub topic must be used to infer the Catalog item type.
 
-  Automation script solutions (and therefore this workflow) can be used to create more than an Automation script. They can contain ad hoc data sources, GQI queries, ChatOps extensions, etc. This reusable workflow requires that GitHub has information that defines the Catalog item type.
+  Automation script solutions (and therefore this workflow) can be used to create more than an automation script. They can contain ad hoc data sources, GQI queries, ChatOps extensions, etc. This reusable workflow requires that GitHub has information that defines the Catalog item type.
 
 - Part of our quality control involves static code analysis through SonarCloud as a mandatory step. If you want to use this reusable workflow, you will need to have a SonarCloud organization setup, linked to your GitHub organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
 
@@ -112,7 +112,7 @@ This job runs in parallel and will create the .dmapp package. This will be provi
 
 ### NuGet restore solution
 
-This step makes sure creation of an application package (.dmapp) includes all assemblies used within NuGet packages in your Automation script solution.
+This step makes sure creation of an application package (.dmapp) includes all assemblies used within NuGet packages in your automation script solution.
 
 ### Create .dmapp package
 

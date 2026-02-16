@@ -76,7 +76,7 @@ In some cases, the SLNet process could leak memory when the *progress.log* file 
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
-When, in e.g. DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
+When, in e.g., DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
 
 #### LDAP users added as part of an LDAP user group would incorrectly appear as local users instead of domain users [ID 42743]
 
@@ -129,11 +129,11 @@ When, during a Failover switch, the online agent went offline, up to now, it wou
 
 When a main DVE element was started or restarted, up to now, an attempt would incorrectly be made to delete child DVE elements that had already been deleted, causing unnecessary information events like "Deleting element-connections for source..." to be generated.
 
-#### Automation: Associated TXF files would not be removed when an Automation script was deleted [ID 42943]
+#### Automation: Associated TXF files would not be removed when an automation script was deleted [ID 42943]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
-When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an Automation script was deleted, the associated TXF files would incorrectly not be removed.
+When you create an automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an automation script was deleted, the associated TXF files would incorrectly not be removed.
 
 #### Changes to LDAP users or LDAP groups would incorrectly not get synchronized among the DMAs in the cluster [ID 42950]
 

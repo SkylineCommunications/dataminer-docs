@@ -56,7 +56,7 @@ New macro folder:
 
 #### Class Library QAction will now be skipped when performing a code analysis \[ID 23528\]
 
-DIS defines a default set of analysis rules for QAction projects. These rules, which can be used by Visual Studio extensions like e.g. SonarLint or StyleCop to analyze the code, have now been adapted so that the code in the automatically generated Class Library QAction (ID 63000) will be skipped when performing a code analysis.
+DIS defines a default set of analysis rules for QAction projects. These rules, which can be used by Visual Studio extensions like e.g., SonarLint or StyleCop to analyze the code, have now been adapted so that the code in the automatically generated Class Library QAction (ID 63000) will be skipped when performing a code analysis.
 
 ### Fixes
 

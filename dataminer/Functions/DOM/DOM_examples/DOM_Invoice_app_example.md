@@ -245,7 +245,7 @@ retrievedDomDefinition = domHelper.DomDefinitions.Read(idFilter).FirstOrDefault(
 > [!NOTE]
 >
 > - Use "Equal", not "Equals". This requires the using `Skyline.DataMiner.Net.Messages.SLDataGateway` using directive.
-> - Every object type has an exposers class. The name of this class is always "object type name" + "Exposers" (e.g. "SectionDefinitionExposers"). This exposers class can be used to create filters as shown above. Further below, you will find an example of how `DomInstanceExposers` is used to retrieve `DomInstances`.
+> - Every object type has an exposers class. The name of this class is always "object type name" + "Exposers" (e.g., "SectionDefinitionExposers"). This exposers class can be used to create filters as shown above. Further below, you will find an example of how `DomInstanceExposers` is used to retrieve `DomInstances`.
 
 ## Creating DOM instances
 

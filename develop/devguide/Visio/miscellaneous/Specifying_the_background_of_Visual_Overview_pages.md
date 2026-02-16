@@ -34,7 +34,7 @@ In Visio drawings, two page-level shape data fields can be used to specify the b
 
 Add a shape data field of type **InnerBackground** or **OuterBackground** to the page, and set its value to a valid ARGB value.
 
-The alpha value, which indicates the opacity (i.e. level of transparency) of the color, is optional.
+The alpha value, which indicates the opacity (i.e., level of transparency) of the color, is optional.
 
 ### Examples
 

@@ -20,8 +20,8 @@ The following improvements have been implemented to average trending:
 
 - Because of improved performance and throughput, you will now be able to activate average trending for a larger number of parameters.
 - Previously, average trending was discouraged in case there were a lot of different instances of a specific parameter. This is no longer the case. You can now use average trending even if millions of instances of the parameter are polled.
-- Unexpected gaps in trend graphs, e.g. because an element is started or stopped, or because a parameter is cleared, will now be prevented.
-- Issues with history sets not being averaged, e.g. when an element had been recently restarted, will now be prevent.
+- Unexpected gaps in trend graphs, e.g., because an element is started or stopped, or because a parameter is cleared, will now be prevented.
+- Issues with history sets not being averaged, e.g., when an element had been recently restarted, will now be prevent.
 - Average data will be available more quickly. When parameter changes are averaged from 00:00:00 to 00:05:00, the average point is now guaranteed to become available in the database between 00:06:00 and 00:07:00, while previously this could take up to 5 minutes or longer. However, note that this does not apply if the parameter changes were pushed as a history set.
 
 However, note that this results in a number of breaking changes:
@@ -50,7 +50,7 @@ The last column indicates the changes that have been made to these status points
 | -4 | Element is going into a timeout state. | OK |
 | -5 | Element is coming out of a timeout state. | OK |
 | -6 | Element is being stopped. | OK |
-| -7 | A state and a display value (e.g. “No signal”) was received (separated by a semicolon). | OK |
+| -7 | A state and a display value (e.g., “No signal”) was received (separated by a semicolon). | OK |
 | -8 | A normal value was received following a “-7”. | OK |
 | -9 | Trending was started for the specified parameter. | UNKNOWN |
 | -10 | Trending was stopped for the specified parameter. | OK |
@@ -79,7 +79,7 @@ With the improved average trending, enabling short average trend data does not g
 
 Before the changes introduced with this release note, the intervals between two average trend points are practically always constant.
 
-This means that now, in cases where trend exports are generated and a fixed interval is expected, e.g. when exporting the 5-minute average trending points, this could be an issue. However, to handle such cases where fixed intervals are required, a [legacy trend data exporter tool](xref:Legacy_Trend_Data_Exporter) is available.
+This means that now, in cases where trend exports are generated and a fixed interval is expected, e.g., when exporting the 5-minute average trending points, this could be an issue. However, to handle such cases where fixed intervals are required, a [legacy trend data exporter tool](xref:Legacy_Trend_Data_Exporter) is available.
 
 ##### Protocol-defined exception values
 
@@ -134,7 +134,7 @@ From now on, the following special types of field descriptors are available:
 |--|--|
 | AutoIncrementFieldDescriptor | Defines a field of which the value will automatically be incremented when saved. |
 | DomInstanceFieldDescriptor | Defines a field that should contain the ID of a DomInstance. This descriptor also contains a ModuleId property, which defines where the instance can be found, and a DomDefinitionIds list property, which can be used to define whether DomInstances should be linked to the defined definitions. Note that the validity and existence of these properties is not checked. FieldValues are of type “Guid”. |
-| ElementFieldDescriptor | Defines a field that should contain the ID of an element. The ID must be saved as a string using the “\[DMA ID\]/\[ELEMENT ID\]” format (e.g. “868/65874”). The descriptor contains a ViewIds list property, which can be used to specify the views in which the element is located. FieldValues are of type “string”. |
+| ElementFieldDescriptor | Defines a field that should contain the ID of an element. The ID must be saved as a string using the “\[DMA ID\]/\[ELEMENT ID\]” format (e.g., “868/65874”). The descriptor contains a ViewIds list property, which can be used to specify the views in which the element is located. FieldValues are of type “string”. |
 | GenericEnumFieldDescriptor | Defines a field that has a list of possible preset values. |
 | ResourceFieldDescriptor | Defines a field that should contain the ID of a Resource. The descriptor contains a ResourcePoolIds property, which can be used to define the ResourcePools from which users can select a Resource. |
 | ServiceDefinitionFieldDescriptor | Defines a field that should contain the ID of a ServiceDefinition. The descriptor contains a ServiceDefinitionFilter property, which has a FilterElement that can be used to determine the ServiceDefinitions that will be presented to the user. |
@@ -215,7 +215,7 @@ A number of options can also be added to the *HistoryMode* shape, again using a 
 
 > [!NOTE]
 >
-> - You can override history mode on shape level. In case there are shapes within shapes, the lowest level will be checked first. However, the full shape data of this lowest level is used, so you must make sure that the shape data is fully configured even if you only want to change one option (e.g. NoDataValue).
+> - You can override history mode on shape level. In case there are shapes within shapes, the lowest level will be checked first. However, the full shape data of this lowest level is used, so you must make sure that the shape data is fully configured even if you only want to change one option (e.g., NoDataValue).
 > - At present, for history values no unit is displayed. In addition, only updating the element or parameter shape data will not update the history mode result.
 
 If you are using a datetime control to set the date and time, use the *SetVarOptions* shape data and set the value to *Control= DateTime*. Optionally, you can also add *DateTimeCulture=* followed by *Current* or *Invariant*. The latter is the default value.
@@ -240,7 +240,7 @@ Aggregation rule conditions can now be specified in the form of a regular expres
 1. Set the condition type to “regular expression”.
 1. Choose “by value” or “by reference”.
 
-    - If you chose “by value” (i.e. the default setting), then enter a regular expression.
+    - If you chose “by value” (i.e., the default setting), then enter a regular expression.
     - If you chose “by reference”, then select a single-value parameter of type “string” containing a regular expression.
 
 #### DataMiner Cube will now take into account ResourceManagerEventMessages sent when ReservationInstance properties were updated \[ID 30668\]
@@ -300,7 +300,7 @@ The new \[ServiceDefinition:\] placeholder allows you to retrieve one of the fol
 | Property | Description |
 |--|--|
 | Name | The name of the service definition. |
-| Actions | The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into e.g. a setvar shape. |
+| Actions | The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into, for example, a setvar shape. |
 | Property=\<propertyName> | The value of any of the custom properties of the service definition. |
 
 Full syntax: \[ServiceDefinition:\<ServiceDefinitionID>,\<Property>\]
@@ -313,9 +313,9 @@ Full syntax: \[Reservation:\<Service ID or Booking ID>,ServiceDefinitionID\]
 
 ### DMS Automation
 
-#### Interactive Automation scripts: New 'TreeViewItemCheckingBehavior' property of TreeViewItem \[ID 29993\]\[ID 30603\]
+#### Interactive automation scripts: New 'TreeViewItemCheckingBehavior' property of TreeViewItem \[ID 29993\]\[ID 30603\]
 
-You can now configure what happens when you select a tree view item in an interactive Automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
+You can now configure what happens when you select a tree view item in an interactive automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
 
 This property can have the following values:
 
@@ -365,9 +365,9 @@ UIBuilder uib = new UIBuilder();
    _treeResults = _engine.ShowUI(uib);
 ```
 
-#### Interactive Automation scripts: Input components now have a 'WantsOnFocusLost' property & other input component enhancements \[ID 30638\]
+#### Interactive automation scripts: Input components now have a 'WantsOnFocusLost' property & other input component enhancements \[ID 30638\]
 
-In an interactive Automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
+In an interactive automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
 
 - Calendar
 - Checkbox
@@ -385,9 +385,9 @@ Other enhancements:
 - In a Checkbox, a CheckboxList or a RadioButtonList component, users can now select or clear options using the space bar.
 - In a CheckboxList or a RadioButtonList component, users can now go from one checkbox or radio button to another using the TAB keys.
 
-#### Interactive Automation scripts: File selector component can now be configured to only allow a script to continue after a file has been uploaded \[ID 30728\]
+#### Interactive automation scripts: File selector component can now be configured to only allow a script to continue after a file has been uploaded \[ID 30728\]
 
-In an interactive Automation script that is used in Dashboards, you can now configure a file selector component to only allow a script to continue after a file has been uploaded. To do so, set the property *IsRequired* to true.
+In an interactive automation script that is used in Dashboards, you can now configure a file selector component to only allow a script to continue after a file has been uploaded. To do so, set the property *IsRequired* to true.
 
 For example:
 
@@ -480,7 +480,7 @@ A number of enhancements have been implemented to improve performance when proce
 
 #### Improved logging in case encrypted password in DB.xml cannot be retrieved \[ID 30614\]
 
-If a password is encrypted in DB.xml but for some reason (e.g. syncing issue) DataMiner is unable to retrieve it, this will now be indicated more clearly in the logging.
+If a password is encrypted in DB.xml but for some reason (e.g., syncing issue) DataMiner is unable to retrieve it, this will now be indicated more clearly in the logging.
 
 #### Ticket migration from Cassandra to Elasticsearch: Notice generated when unsupported characters are found in TicketFieldDescriptors \[ID 30624\]
 
@@ -555,7 +555,7 @@ When a profile parameter with a mediation snippet was loaded initially, it would
 
 #### Problem with conditional monitoring after alarm template update \[ID 30531\]
 
-When an alarm template was refreshed in the SLElement process, e.g. because the alarm template was modified or the baseline changed, it could occur that conditional monitoring was ignored for standalone parameters. Because of this, if a parameter was not monitored because the condition for this was met, it was shown as monitored regardless.
+When an alarm template was refreshed in the SLElement process, e.g., because the alarm template was modified or the baseline changed, it could occur that conditional monitoring was ignored for standalone parameters. Because of this, if a parameter was not monitored because the condition for this was met, it was shown as monitored regardless.
 
 #### Profiles module: Discrete capability parameter showed actual values instead of display values \[ID 30533\]
 
@@ -575,7 +575,7 @@ When an exception was thrown because invalid characters were used in dictionary 
 
 #### Automation: CheckboxList and RadiobuttonList not decoding "\\" correctly \[ID 30605\]
 
-In an interactive Automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
+In an interactive automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
 
 #### Automation: Problems with datetime filters in scripts \[ID 30611\]
 
@@ -655,7 +655,7 @@ From now on, when you select the *Display query name* option in the *Layout* tab
 
 #### Deadlock in SLDataGateway could cause data to not get written to the database \[ID 30717\]
 
-In some cases, a deadlock in the SLDataGateway process could cause e.g. correlation rule data to not get written to the database and remain in memory indefinitely.
+In some cases, a deadlock in the SLDataGateway process could cause e.g., correlation rule data to not get written to the database and remain in memory indefinitely.
 
 #### Problem with Protocol.ShowInformationMessage() method \[ID 30722\]
 
@@ -699,4 +699,4 @@ When, in DataMiner Cube, you opened the Bookings app while being connected to a 
 
 #### DataMiner Cube - Settings: Boolean settings were either not saved or incorrectly saved \[ID 30952\]
 
-When, in the Settings window, you changed the value of a boolean setting (i.e. a setting that can be set to true or false), in some cases, the new value would either not be saved or saved incorrectly.
+When, in the Settings window, you changed the value of a boolean setting (i.e., a setting that can be set to true or false), in some cases, the new value would either not be saved or saved incorrectly.

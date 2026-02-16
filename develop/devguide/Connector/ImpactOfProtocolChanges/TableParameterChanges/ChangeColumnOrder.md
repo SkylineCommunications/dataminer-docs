@@ -4,7 +4,7 @@ uid: ChangeColumnOrder
 
 # Change column order
 
-Changing the order (IDX) of the columns in a table is considered a major change only when the table information can be requested externally (other elements, web API, Automation scripts, etc).
+Changing the order (IDX) of the columns in a table is considered a major change only when the table information can be requested externally (other elements, web API, automation scripts, etc).
 
 If the table is hidden (*RTDisplay* = false), it is not considered a major change.
 

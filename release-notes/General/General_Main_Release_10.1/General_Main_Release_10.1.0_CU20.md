@@ -139,7 +139,7 @@ When a JSON string containing an overridden parameter description was deserializ
 
 When you opened a trend graph, the Y-axis values would incorrectly not take into account the number of decimals configured in the *protocol.xml* file for the parameters in question.
 
-#### Interactive Automation scripts: Problem when entering an invalid value in a numeric component [ID 34310]
+#### Interactive automation scripts: Problem when entering an invalid value in a numeric component [ID 34310]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
@@ -223,7 +223,7 @@ In some rare cases, an error could occur in SLDMS while a connection with anothe
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-When, in the URL of a web app (e.g. Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
+When, in the URL of a web app (e.g., Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
 
 Example of a dashboard URL containing a `subheader=true` option:
 
@@ -257,7 +257,7 @@ In some cases, the service impact of an alarm would be incorrect
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-When the range of a slider control did not have a span (i.e. when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.  
+When the range of a slider control did not have a span (i.e., when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.  
 
 Also, when the range of a slider control had values outside of the minimum/maximum range, the start and end values would both be set to Infinity. From now on, the minimum and maximum values will be adapted to the actual start and end values.
 

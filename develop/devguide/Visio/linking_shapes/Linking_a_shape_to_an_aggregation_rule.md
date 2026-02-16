@@ -18,7 +18,7 @@ To do so:
 
         You can find this DMA ID/element ID [using SLNetClientTest tool](xref:SLNetClientTest_retrieving_element_info). Alternatively, if [Swarming](xref:Swarming) is not enabled in your system, you can find it in the *Element.xml* file for this hidden element in the *Elements* folder on the DMA.
 
-     1. The fixed parameter ID of the aggregator element, i.e. 4005.
+     1. The fixed parameter ID of the aggregator element, i.e., 4005.
 
      1. The relevant aggregation index.
 

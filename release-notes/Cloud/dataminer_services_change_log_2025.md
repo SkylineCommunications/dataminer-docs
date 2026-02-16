@@ -341,7 +341,7 @@ Note that in case the button is displayed as enabled while a user is not logged 
 
 ### 11 March 2025 - Enhancement - Catalog - Ranges displayed for all items [ID 42426]
 
-The Catalog now displays version ranges for all item types. Previously, ranges were only displayed for connectors. A range is created when a version ID follows a semantic format (e.g. x.x.x.x or x.x.x). Other versions are grouped under *other*.
+The Catalog now displays version ranges for all item types. Previously, ranges were only displayed for connectors. A range is created when a version ID follows a semantic format (e.g., x.x.x.x or x.x.x). Other versions are grouped under *other*.
 
 ### 11 March 2025 - Fix - Catalog API - Different recommended versions shown depending on API used [ID 42464]
 

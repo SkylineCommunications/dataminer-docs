@@ -35,13 +35,13 @@ Perform the following steps to release a connector version:
 
 1. Tag the commit:
 
-   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g. 1.0.0.X.
+   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g., 1.0.0.X.
 
    1. Right-click the branch and select *View History*.
 
    1. Right-click the commit you want to release and select *New Tag*.
 
-   1. Fill in a tag name matching the branch. Connectors use four numbers for versioning, e.g. `1.0.0.3`.
+   1. Fill in a tag name matching the branch. Connectors use four numbers for versioning, e.g., `1.0.0.3`.
 
    1. Fill in a comment.
 
@@ -61,7 +61,7 @@ You can monitor the release pipeline:
 
 ## Publishing DataMiner install packages
 
-DataMiner install packages, i.e. .dmapp files, can contain any other artifacts, including other install packages and companion files. The source code of these packages is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the Catalog.
+DataMiner install packages, i.e., .dmapp files, can contain any other artifacts, including other install packages and companion files. The source code of these packages is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the Catalog.
 
 1. Make sure the following prerequisites are available:
 
@@ -89,20 +89,20 @@ DataMiner install packages, i.e. .dmapp files, can contain any other artifacts, 
       > [!TIP]
       > If you open this in Visual Studio, you will get Intellisense.
 
-   1. You can now add XML tags to add artifacts like connectors, Automation scripts, etc.
+   1. You can now add XML tags to add artifacts like connectors, automation scripts, etc.
 
    > [!TIP]
    > For more information, refer to [Creating a repository for an install package](xref:Creating_a_repository_for_an_install_package).
 
 1. Tag the commit:
 
-   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g. 1.0.0.X.
+   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g., 1.0.0.X.
 
    1. Right-click the branch and select *View History*.
 
    1. Right-click the commit you want to release and select *New Tag*.
 
-   1. Fill in a tag name matching the branch. Packages use three numbers with a "-CUx" suffix for versioning, e.g. `1.0.1-CU0`.
+   1. Fill in a tag name matching the branch. Packages use three numbers with a "-CUx" suffix for versioning, e.g., `1.0.1-CU0`.
 
    1. Fill in a comment.
 
@@ -120,9 +120,9 @@ You can monitor the release pipeline:
 
 - If it goes red, the release failed. You will need to either re-run the pipeline or remove the tag, fix the reported problems, and tag the commit again to trigger a new release.
 
-## Publishing Automation scripts
+## Publishing automation scripts
 
-Automation scripts are XML files and assemblies that are packaged into .dmapp files. The source code of these is currently available both through the internal SLC SE RepoManager and on GitHub. All **new Automation scripts should be created on GitHub**.
+Automation scripts are XML files and assemblies that are packaged into .dmapp files. The source code of these is currently available both through the internal SLC SE RepoManager and on GitHub. All **new automation scripts should be created on GitHub**.
 
 If you use **SLC SE RepoManager**, Jenkins will be used to automatically publish scripts to the Catalog when tagging. For this, you should [follow the same steps as described for connectors](#publishing-connectors) above.
 

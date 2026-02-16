@@ -73,7 +73,7 @@ When the test fails to execute for unexpected reasons and cannot provide a concl
 
 `Could not execute test (*[message]*)`
 
-In the message above, the exception message is included (e.g. `Access Denied`). The test result details contain the full exception text, if available.
+In the message above, the exception message is included (e.g., `Access Denied`). The test result details contain the full exception text, if available.
 
 ## Limitations
 

@@ -72,7 +72,7 @@ Possible values:
   - Simple
   - Advanced - HTML. The advancedLayout option should be used to further configure a button of this type.
   - Rotate
-- **panelSelection**: Specifies the different selected panels. The contents of the referred parameter should be a semicolon-separated list of DMAID/ElementID/ParameterID (e.g. "346/532084/100;346/114/157").
+- **panelSelection**: Specifies the different selected panels. The contents of the referred parameter should be a semicolon-separated list of DMAID/ElementID/ParameterID (e.g., "346/532084/100;346/114/157").
 - **width**: Determines the width of the button (in percent).
 - **xpos**: Determines the position of the button on the X-axis (in percent).
 - **ypos**: Determines the position of the button on the Y-axis (in percent).

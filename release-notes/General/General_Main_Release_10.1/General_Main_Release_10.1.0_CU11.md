@@ -26,7 +26,7 @@ A number of small enhancements have been made to DataMiner Cube and the DataMine
 
 #### SLLogCollector: Resources to be collected can now be specified in configuration files \[ID 31674\]
 
-SLLogCollector will now check the C:\\Skyline DataMiner\\Tools\\SLLogCollector\\LogConfigs folder for configuration files in which you can specify the resources (i.e. objects) to be collected.
+SLLogCollector will now check the C:\\Skyline DataMiner\\Tools\\SLLogCollector\\LogConfigs folder for configuration files in which you can specify the resources (i.e., objects) to be collected.
 
 By default, the above-mentioned folder will contain a Default.xml file, listing a default list of resources to be collected. If necessary, additional XML files can be created and stored in this folder.
 
@@ -50,7 +50,7 @@ Example of a configuration file:
 
 In the example above, three collectors have been defined:
 
-- Collector1 is a collector of type “File”, and will order SLLogCollector to retrieve a set of files (e.g. log files).
+- Collector1 is a collector of type “File”, and will order SLLogCollector to retrieve a set of files (e.g., log files).
 - Collector2 is a collector of type “Http”, and will order SLLogCollector to send an HTTP request to a server and to store the response.
 - Collector3 is a collector of type “Exe”, and will order SLLogCollector to run an executable file and to store the output.
 
@@ -210,7 +210,7 @@ Also, SLElement could leak memory when services were configured with a delayed t
 
 #### Deadlock in SLDataGateway could cause data to not get written to the database \[ID 30717\]
 
-In some cases, a deadlock in the SLDataGateway process could cause e.g. Correlation rule data to not get written to the database and remain in memory indefinitely.
+In some cases, a deadlock in the SLDataGateway process could cause e.g., correlation rule data to not get written to the database and remain in memory indefinitely.
 
 #### Problem with SLElement after restarting an element with a subscription that had a 'resolve' or 'filter' option configured \[ID 31741\]
 
@@ -224,7 +224,7 @@ From now on, if a payload contains only a trailer, the socket buffer will be rea
 
 #### SLA: Problem when an update of an SLA setting coincided with a window change \[ID 31750\]
 
-When an update of an SLA setting (e.g. Base timestamp, Monitor span, Window size, Window Unit, Window type, Validity start or Validity end) coincided with a window change, in some rare cases, the next window would incorrectly be taken instead of the window that triggered the change. This would cause calculations to incorrectly use a timestamp in the future.
+When an update of an SLA setting (e.g., Base timestamp, Monitor span, Window size, Window Unit, Window type, Validity start or Validity end) coincided with a window change, in some rare cases, the next window would incorrectly be taken instead of the window that triggered the change. This would cause calculations to incorrectly use a timestamp in the future.
 
 #### Failover: Redundancy groups containing DVE elements would not get loaded after a Failover switch or a restart of the Failover system \[ID 31765\]
 
@@ -278,11 +278,11 @@ Also, the same process could leak memory when a table parameter was cleaned up a
 
 #### SLPhotoManager would incorrectly log 'PrincipalServerDown' exceptions in SLErrors.txt when trying to retrieve pictures of local users \[ID 31865\]
 
-Up to now, when SLPhotoManager was unable to retrieve pictures of local (i.e. non-LDAP) users, it would incorrectly log “PrincipalServerDown” exceptions in the SLErrors.txt log file. From now on, it will log those exceptions in the SLPhotoManager.txt log file when the debug level is set to 5.
+Up to now, when SLPhotoManager was unable to retrieve pictures of local (i.e., non-LDAP) users, it would incorrectly log “PrincipalServerDown” exceptions in the SLErrors.txt log file. From now on, it will log those exceptions in the SLPhotoManager.txt log file when the debug level is set to 5.
 
 #### Web apps - Visual Overview: Native controls inside clickable child shapes would incorrectly not be displayed \[ID 31871\]
 
-When, in a web app, a visual overview had interactive parent shapes with clickable child shapes that contained a native control (e.g. view shapes containing an embedded browser control), that control would incorrectly not be displayed.
+When, in a web app, a visual overview had interactive parent shapes with clickable child shapes that contained a native control (e.g., view shapes containing an embedded browser control), that control would incorrectly not be displayed.
 
 #### Scheduled tasks configured to take a DataMiner backup, optimize the database or perform an LDAP resynchronization would incorrectly not get executed \[ID 31877\]
 
@@ -379,7 +379,7 @@ In the DataMiner.xml file, you can configure to have separate SLScripting proces
 
 #### Failover: Certain system files would incorrectly not get synchronized to the offline agent during the initial sync \[ID 32034\]
 
-When a Failover system was set up, certain system files (e.g. PropertyConfiguration.xml) would incorrectly not get synchronized to the offline agent during the initial sync.
+When a Failover system was set up, certain system files (e.g., PropertyConfiguration.xml) would incorrectly not get synchronized to the offline agent during the initial sync.
 
 #### DataMiner Cube: Information templates could no longer be edited when connected to a DataMiner Agent installed on Windows Server 2016 \[ID 32035\]
 

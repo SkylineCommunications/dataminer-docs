@@ -40,7 +40,7 @@ To set up a connection with the endpoint, you will need to create a [GnmiClient]
 A friendly name can be passed along in the `elementName`, which is used as context for logging purposes.
 
 > [!NOTE]
-> There are scenarios where you do not have an element (e.g. a DataMiner Automation script). It is fine to pass along a different context as well. This is meant to identify you and for logging purposes, so it is sufficient if the consumer knows what it represents. It does not have to be unique. The middleware will make it unique for you by appending a `GUID`.
+> There are scenarios where you do not have an element (e.g., a DataMiner automation script). It is fine to pass along a different context as well. This is meant to identify you and for logging purposes, so it is sufficient if the consumer knows what it represents. It does not have to be unique. The middleware will make it unique for you by appending a `GUID`.
 
 ##### Endpoint details
 
@@ -423,7 +423,7 @@ public static object ConvertEpochTimeUtcTicksToOleAutomationTime(DataMinerConnec
 
 ##### Complex value
 
-When values are not a basic type, e.g. a string array, this will be passed as JSON string by the DataMapper. This way, the OnRawValueChange can be used to fully custom process this JSON value and set the parameter as desired. When this method is not implemented, the parameter will be set as JSON string.
+When values are not a basic type, e.g., a string array, this will be passed as JSON string by the DataMapper. This way, the OnRawValueChange can be used to fully custom process this JSON value and set the parameter as desired. When this method is not implemented, the parameter will be set as JSON string.
 
 ##### Boolean value
 

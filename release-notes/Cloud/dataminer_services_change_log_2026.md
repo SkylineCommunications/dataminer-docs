@@ -9,6 +9,27 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 16 February 2026 - Fix - Home - Account linking with a SAML DMS
+
+On the dataminer.services home page, trying to link a dataminer.services account with your DMS using SAML could sometimes load infinitely. This behavior is now fixed.
+
+### 16 February 2026 - Fix - Home - Organization creation error
+
+On the dataminer.services home page, when the creation of a new organization failed, the error box showed an [Object Object] error instead of the actual error. This has been fixed.
+
+### 9 February 2025 - New feature - Admin - Organization deletion
+
+Organization owners can now delete an organization via the settings page in the Admin app.
+
+> [!NOTE]
+> Before an organization can be deleted, all DataMiner Systems for the organization have to be removed; otherwise, the delete option is disabled.
+
+### 5 February 2025 - Enhancement - Admin - Billing page update
+
+In the Admin app, the Billing page now shows the current cost for an organization.
+
+In addition, opening a subscription panel will now update the URL so it can be shared with other users.
+
 ### 2 February 2026 - New feature - Admin - Billing page
 
 In the Admin app, a new *Billing* page is now available, which will serve as a dedicated space for organization owners and admins to monitor and manage their organization’s spending. The page provides access to credit history, monthly bills, and subscription management, including any available discounts.

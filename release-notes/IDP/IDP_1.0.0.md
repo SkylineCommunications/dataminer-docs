@@ -32,7 +32,7 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   - Cookie: The access token (required).
   - Id: The ID of the view (required).
   - Name: The name of the view (required).
-  - Elements: Array of string in the format DMA ID/Element ID (e.g. 515/124).
+  - Elements: Array of string in the format DMA ID/Element ID (e.g., 515/124).
   - VisioFile: E.g. Visio.vsdx.
   - ParentViewId.
   - Properties: Array consisting of Name and Value pairs.
@@ -52,7 +52,7 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   - ViewName (required)
   - ParentViewId
   - ParentViewName
-  - Elements: Array of string in the format DMA ID/Element ID (e.g. 515/124).
+  - Elements: Array of string in the format DMA ID/Element ID (e.g., 515/124).
   - Properties: Array consisting of Name and Value pairs.
   - VisioFileName
 
@@ -61,15 +61,15 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   Parameters:
 
   - Cookie: The access token (required).
-  - Dmaeid: List of DMA element IDs, e.g. 515/102;505/141 (required).
+  - Dmaeid: List of DMA element IDs, e.g., 515/102;505/141 (required).
 
 - **DeleteView**: Removes the specified views from the DMA.
 
   Parameters:
 
   - Cookie: The access token (required).
-  - ViewIds: The IDs of the views that should be deleted, e.g. 12;23 (required).
-  - ViewNames: The names of the views that should be deleted, e.g. View 1;View 2 (required).
+  - ViewIds: The IDs of the views that should be deleted, e.g., 12;23 (required).
+  - ViewNames: The names of the views that should be deleted, e.g., View 1;View 2 (required).
 
 - **GetElementConfiguration**: Returns the configuration of the element.
 
@@ -84,7 +84,7 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
 
   - Cookie: The access token (required).
   - ProtocolName: The protocol for which element information should be returned.
-  - Dmaeid: List of DMA element IDs, e.g. 515/102;505/141.
+  - Dmaeid: List of DMA element IDs, e.g., 515/102;505/141.
 
 - **GetStructure**: Returns information on the view structure on the DMA.
 
@@ -113,7 +113,7 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   - Password (required)
   - Username (required)
   
-  Returns: AccessToken (i.e. a token to be used for other requests)
+  Returns: AccessToken (i.e., a token to be used for other requests)
 
 - **Pause**: Pauses the solution platform manager element.
 
@@ -135,8 +135,8 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   Parameters:
 
   - Cookie: The access token (required).
-  - ViewIds: The IDs of the views for which the Visio file will be set, e.g. 12;23 (required).
-  - VisioFileName: The complete file name of the Visio file, e.g. Visio.vsdx (required).
+  - ViewIds: The IDs of the views for which the Visio file will be set, e.g., 12;23 (required).
+  - VisioFileName: The complete file name of the Visio file, e.g., Visio.vsdx (required).
 
 - **Start**: Starts the Solution platform manager element.
 
@@ -208,7 +208,7 @@ Finally, if you select an unassigned device in the table, an additional "-" butt
 
 #### IDP solution setup wizard \[ID 20923\]\[ID 20942\]
 
-A new interactive Automation script, *IDP_SetupWizard*, is now available, which allows you to perform the initial setup after the IDP package has been deployed in a new system.
+A new interactive automation script, *IDP_SetupWizard*, is now available, which allows you to perform the initial setup after the IDP package has been deployed in a new system.
 
 The script will take you through the following steps to configure the system:
 

@@ -4,7 +4,7 @@ uid: Partner_Program
 
 # DataMiner Partner Program
 
-The world around us is changing fast. The **shift towards transformational technology**, i.e. the virtualized, cloudified, ALL-IP ecosystems, is affecting everything you can think of: the way platforms are designed and deployed, the way companies are organized and operate, the way projects are managed, as well as the entire technology vendor and user landscape and dynamic.
+The world around us is changing fast. The **shift towards transformational technology**, i.e., the virtualized, cloudified, ALL-IP ecosystems, is affecting everything you can think of: the way platforms are designed and deployed, the way companies are organized and operate, the way projects are managed, as well as the entire technology vendor and user landscape and dynamic.
 
 Today, companies want modular technology solutions that can be leveraged and used easily and efficiently. They need to build and design ecosystems that enable them to run their operation but simultaneously **evolve continuously** as well. In other words, they need to establish an agile data-driven operation that empowers their people, enables them to create digital relationships with third parties, allows them to optimize continuously, and allows them to leverage the latest and greatest that technology has to offer to innovate their services.
 
@@ -51,7 +51,7 @@ By working together, we can ensure that we are not just keeping pace with indust
 
 - **General consultancy & guidance**:
 
-  The transition to transformational technology is affecting anything imaginable related to an operation and organization, e.g. the way systems are architected, deployed, operated, and evolved.
+  The transition to transformational technology is affecting anything imaginable related to an operation and organization, e.g., the way systems are architected, deployed, operated, and evolved.
 
   It also affects the way companies and teams are organized, how they need to collaborate with you and other actors (such as technology and product vendors), how services are delivered, which business models are used, and so forth.
 
@@ -63,7 +63,7 @@ By working together, we can ensure that we are not just keeping pace with indust
 
   Today, the objective is two-fold:
 
-  1. Building and designing an ecosystem to support a specific type of business or operation (i.e. the core infrastructure).
+  1. Building and designing an ecosystem to support a specific type of business or operation (i.e., the core infrastructure).
 
   1. Building and designing an ecosystem so that it is also an agile, data-driven platform that can evolve easily and continuously: a solution that is driven by open-architecture coding tools, code repositories, a CI/CD infrastructure that enables low-effort and secure continuous evolution, powerful data collection, automation, orchestration, process automation tooling, and much more.
 

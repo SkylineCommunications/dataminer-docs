@@ -26,7 +26,7 @@ Depending on the focus score, an alarm can be considered unexpected. In that cas
 
 Please note:
 
-- Likelihood scores are based on **UTC time**. As a result, when daylight saving time goes into or out of effect, patterns following local time might be off for approximately one week. In addition, currently no focus score is assigned to the following types of alarms: Correlation alarms, external alarms, and information events.
+- Likelihood scores are based on **UTC time**. As a result, when daylight saving time goes into or out of effect, patterns following local time might be off for approximately one week. In addition, currently no focus score is assigned to the following types of alarms: correlation alarms, external alarms, and information events.
 
 - If an **alarm template changes**, all alarms of the parameters for which a change was implemented in the alarm template will be treated as unexpected.
 

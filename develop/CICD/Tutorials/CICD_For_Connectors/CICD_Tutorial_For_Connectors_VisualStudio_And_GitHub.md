@@ -61,7 +61,7 @@ Follow the instructions specified in the [SonarCloud documentation](https://docs
 
 ### Step 3: Set up starter workflows for your organization
 
-1. Optionally, create a GitHub user specifically for bot activities, e.g. *CICDOrganization*.
+1. Optionally, create a GitHub user specifically for bot activities, e.g., *CICDOrganization*.
 
    - Use a shared mailbox from your organization if possible. If this is not possible, for example because of 2FA, you can use a personal GitHub account with rights to create repositories.
 
@@ -206,7 +206,7 @@ You should now see your CI jobs complete successfully, ensuring that quality sta
 
 1. Click *Choose a tag* and enter the version, for example `1.0.0.1-beta1`.
 
-   You can use any version you want. For a pre-release, usually a suffix is added, which can contain any text, e.g. "-beta1" in the example above.
+   You can use any version you want. For a pre-release, usually a suffix is added, which can contain any text, e.g., "-beta1" in the example above.
 
 1. Enter a description of your release.
 

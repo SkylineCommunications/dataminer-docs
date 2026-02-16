@@ -23,7 +23,7 @@ integer
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
 | [client](xref:MaintenanceSettings.AlarmSettings.AlarmsPerParameter-client) | integer |  | Specifies how many alarms in an alarm tree are saved in the Cube cache. This determines how many alarms are shown in Cube when you view the alarm tree in a new tab, when you reconnect to Cube, or when you restart the element. |
-| [recurring](xref:MaintenanceSettings.AlarmSettings.AlarmsPerParameter-recurring) | string |  | Configures whether and when a notice will be generated if the number of alarms in an alarm tree exceeds the AlarmsPerParameter setting. |
+| [recurring](xref:MaintenanceSettings.AlarmSettings.AlarmsPerParameter-recurring) | string |  | Obsolete. No longer used as of DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4.<!-- 44565 --> In earlier DataMiner versions, this determines whether and when a notice will be generated if the number of alarms in an alarm tree exceeds the AlarmsPerParameter setting. From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards, these notices are longer generated. |
 
 ## Remarks
 

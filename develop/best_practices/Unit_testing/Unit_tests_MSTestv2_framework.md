@@ -90,7 +90,7 @@ public void Rewrite_PathWithItemsToAbbreviate_ReturnsAbbreviatedPath()
 
 The `Assert` class defines multiple methods such as `AreEqual`, `IsFalse`, `IsTrue`, etc. that can be used to make assertions. For more information on the `Assert` class, see [Assert Class](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert?view=mstest-net-1.3.2).
 
-Now you are ready to execute the test. This can be done in the *Test Explorer*, by e.g. clicking *Run All*. After a successful execution, everything should be green.
+Now you are ready to execute the test. This can be done in the *Test Explorer*, by e.g., clicking *Run All*. After a successful execution, everything should be green.
 
 ![unittesting5.png](~/develop/images/unittesting5.png)
 

@@ -76,7 +76,7 @@ In this structure:
 
 - The keywords are optional and used to tweak the element that is created:
 
-  - Several normal keywords can be specified (e.g. *IPAddress*). If the CI type mentions such a keyword within square brackets (e.g. *\[IPAddress\]*), it will be replaced by the "KeywordReplacement" specified in the structure.
+  - Several normal keywords can be specified (e.g., *IPAddress*). If the CI type mentions such a keyword within square brackets (e.g., *\[IPAddress\]*), it will be replaced by the "KeywordReplacement" specified in the structure.
 
   - There are also keywords that can be used to override fields in the CI Type. The syntax for these is similar to the syntax to select a token in Json.NET. For example, to refer to the description in the example below, the keyword *$.Provisioning.Configuration.Description* can be used. If a match is found, the field will be overridden with the specified “KeywordReplacement”:
 
@@ -97,7 +97,7 @@ In this structure:
 
 #### Automation script summary window no longer displayed \[ID 21964\]
 
-When an Automation script is launched from the IDP Solution, the summary window of the script will no longer be displayed.
+When an automation script is launched from the IDP Solution, the summary window of the script will no longer be displayed.
 
 #### IDP app refreshes information based on messages sent by IDP Discovery element \[ID 21980\]
 

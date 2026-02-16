@@ -4,19 +4,19 @@ uid: GQI_Extensions_Caching
 
 # Caching within GQI extensions
 
-When working with **ad hoc data sources** and/or **custom operators**, each query creates a new instance of the data source, and for each row the HandleRow method gets called. If constructing the data or handling the data is resource-intensive (e.g. multiple API calls, heavy calculations), scalability becomes critical. Multiple users may query the same data concurrently, so optimizing performance is key.
+When working with **ad hoc data sources** and/or **custom operators**, each query creates a new instance of the data source, and for each row the HandleRow method gets called. If constructing the data or handling the data is resource-intensive (e.g., multiple API calls, heavy calculations), scalability becomes critical. Multiple users may query the same data concurrently, so optimizing performance is key.
 
 ## When to use caching
 
 Caching is recommended when:
 
-- The data source/operator is expensive to build or query (e.g. multiple API calls, heavy computation).
-- The data does not need real-time freshness (e.g. acceptable to be seconds or minutes old).
+- The data source/operator is expensive to build or query (e.g., multiple API calls, heavy computation).
+- The data does not need real-time freshness (e.g., acceptable to be seconds or minutes old).
 - The same data is requested repeatedly by multiple users or queries.
 
 Avoid caching when:
 
-- Accuracy must always be real-time (e.g. live status, alarms).
+- Accuracy must always be real-time (e.g., live status, alarms).
 - The dataset is very small and fast to compute (caching adds unnecessary complexity).
 
 ## Adding caching
@@ -53,7 +53,7 @@ Caching in GQI extensions is **not natively supported** by the framework, meanin
 
 When implementing caching, it is essential to ensure that users only see the data they are allowed to access. The caching strategy you choose must align with your access control requirements to prevent data leaks or exposure of sensitive information.
 
-For DataMiner data, caching per security group is the most common and efficient way to respect access control. It allows users within the same group to share cached results while ensuring data is isolated from other groups. However, depending on the use case, you may not need group-level caching at all (e.g. when data is already public) or you might need an even finer-grained approach (e.g. per user).
+For DataMiner data, caching per security group is the most common and efficient way to respect access control. It allows users within the same group to share cached results while ensuring data is isolated from other groups. However, depending on the use case, you may not need group-level caching at all (e.g., when data is already public) or you might need an even finer-grained approach (e.g., per user).
 
 Benefits of caching per security group:
 
@@ -69,8 +69,8 @@ A common example is caching per security group rather than per individual user. 
 To prevent excessive memory growth:
 
 - **Set limits** on the maximum number of groups cached at once.
-- **Implement eviction policies** (e.g. least recently used) to remove inactive groups.
-- **Use smaller data representations** (e.g. compress data or store only essential fields).
+- **Implement eviction policies** (e.g., least recently used) to remove inactive groups.
+- **Use smaller data representations** (e.g., compress data or store only essential fields).
 - **Monitor memory usage** and adjust cache size or timeout values accordingly.
 
 ### Cache invalidation
@@ -79,7 +79,7 @@ Cache invalidation ensures that users do not see outdated or incorrect data. In 
 
 There are several strategies you can use:
 
-- **Time-based expiration**: Automatically refresh data after a fixed interval (e.g. 30 seconds). This is relatively simple to implement and works well when data updates are predictable.
+- **Time-based expiration**: Automatically refresh data after a fixed interval (e.g., 30 seconds). This is relatively simple to implement and works well when data updates are predictable.
 - **Manual reset (cache breaker)**: Use a file, flag, or external signal to clear or refresh the cache on demand. This is useful for administrative control when data changes are event-driven.
 - **Hybrid approach**: Combine timeouts with manual reset to balance predictable refresh with flexibility.
 - **Invalidate per security group**: If only certain groups are affected, clear cache entries selectively rather than globally.
@@ -93,7 +93,7 @@ In multi-user or multithreaded environments, cache methods may be called concurr
 To handle concurrency safely:
 
 - Use thread-safe collections such as `ConcurrentDictionary` for shared caches.
-- Protect critical sections (e.g. cache initialization or updates) with locks (`lock` statement or other synchronization primitives).
+- Protect critical sections (e.g., cache initialization or updates) with locks (`lock` statement or other synchronization primitives).
 - Use double-checked locking to ensure that initialization/updating occurs only once per cache cycle, minimizing duplicate work.
 - Be mindful to keep locks as short as possible to reduce contention and avoid deadlocks.
 

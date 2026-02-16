@@ -10,9 +10,9 @@ namespace Skyline.DataMiner.Net.Profiles
     public class ScriptEntry: IEquatable<ScriptEntry>
     {
 		/// <summary>
-		/// Gets or sets the name of the Automation script.
+		/// Gets or sets the name of the automation script.
 		/// </summary>
-		/// <value>The name of the Automation script.</value>
+		/// <value>The name of the automation script.</value>
 		//[DataMember(Name = "Name")]
         public string Name { get; set; }
 

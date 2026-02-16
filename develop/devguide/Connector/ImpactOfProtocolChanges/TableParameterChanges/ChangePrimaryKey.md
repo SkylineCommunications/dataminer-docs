@@ -16,14 +16,14 @@ Changing the primary key of a table has a large impact, as all saved data refere
 
 This includes:
 
-- Element data, i.e. all columns that have been saved.
+- Element data, i.e., all columns that have been saved.
 - Alarm/trend data: all these records have a reference to the primary key.
 
 ### Broken functionality
 
 Any components that rely on a specific primary key will be broken.
 
-This could be any component in DataMiner (dashboards, Automation scripts, Visual Overview, etc.).
+This could be any component in DataMiner (dashboards, automation scripts, Visual Overview, etc.).
 
 ## Workarounds
 

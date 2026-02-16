@@ -30,15 +30,15 @@ You can either open the element log in DataMiner Cube or open it directly in the
 
 By changing the log settings, you can have more or fewer details included in the log file for three different types of logging:
 
-- **Info**: More detailed information for debugging purposes, e.g. start or end of a procedure, the changing of a parameter, etc.
-- **Debug**: More detailed information, typically describing the normal way of working, e.g. QAction was triggered, initializing of the element during startup, etc.
+- **Info**: More detailed information for debugging purposes, e.g., start or end of a procedure, the changing of a parameter, etc.
+- **Debug**: More detailed information, typically describing the normal way of working, e.g., QAction was triggered, initializing of the element during startup, etc.
 - **Error**: Any errors or exceptions that occur. These can also be found in *SLErrors.txt*.
 
 The protocol developer decides which of these types a specific log line will use.
 
 ![](~/develop/images/Element-Log-Settings.png)
 
-When a specific level is selected, e.g. level 3, this will show all the log lines linked to this level and lower. For example, a log line using info of logging level 3 can look like this:
+When a specific level is selected, e.g., level 3, this will show all the log lines linked to this level and lower. For example, a log line using info of logging level 3 can look like this:
 
 ```txt
 [DATE]|[TIME]|SLProtocol - 15968 - DMA01 |9228|CQAction::Run|INF|2|QAction [100] triggered by ... 
@@ -118,14 +118,14 @@ public static void Run(SLProtocol protocol)
 
 As you should always reduce the amount of logging to a minimum to reduce the load and increase readability of the log file, it can become difficult to investigate a problem, especially in case the problem no longer occurs after an element restart.
 
-To help prepare for these kinds of situations, you can add extra logic in the connector that will start writing extra logging on request, e.g. the different steps of a complex flow. To do so:
+To help prepare for these kinds of situations, you can add extra logic in the connector that will start writing extra logging on request, e.g., the different steps of a complex flow. To do so:
 
 1. Create a configurable (read and write) parameter *Debug Mode* with the values Disabled (0) and Enabled (1).
 1. Make sure that the *Debug Mode* parameter is by default set to Disabled.
-1. Create a new method to write debug log lines that will help investigations. e.g. the different steps in a flow.
+1. Create a new method to write debug log lines that will help investigations. e.g., the different steps in a flow.
 1. This new method will only write to the log when *Debug Mode* is set to Enabled.
 
-To get the extra logging to investigate e.g. the steps in a complex flow, you only need to enable the *Debug Mode* parameter, and extra logging will be added without the need to change the protocol and restart the element. This method is commonly used when the protocol contains complex or very specific workflows, as it provides an easy means to know what is currently going on.
+To get the extra logging to investigate e.g., the steps in a complex flow, you only need to enable the *Debug Mode* parameter, and extra logging will be added without the need to change the protocol and restart the element. This method is commonly used when the protocol contains complex or very specific workflows, as it provides an easy means to know what is currently going on.
 
 > [!CAUTION]
 > Writing too much logging in a short time will affect the system load. So do not forget to turn off the extra logging after your investigation, so the requests to write the logs are stopped and the log file size will stop growing.

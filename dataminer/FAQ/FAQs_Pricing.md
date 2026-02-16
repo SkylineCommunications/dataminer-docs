@@ -52,7 +52,7 @@ No.
 
 ## Professional Service credits
 
-### What is the difference between buying specific product codes (e.g. DataMiner Fundamentals Training) and credits?
+### What is the difference between buying specific product codes (e.g., DataMiner Fundamentals Training) and credits?
 
 There is no difference in pricing: whether you buy a specific product or an equivalent number of credits, the cost is the same. The difference is **flexibility**:
 

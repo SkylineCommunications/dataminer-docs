@@ -27,7 +27,7 @@ In the configuration pane, you can configure a selected profile definition as fo
 
 - To add profile parameters to the definition, in the *Parameters* section of the configuration pane, click *Add*. Then select the parameters in the pop-up window, using the *Ctrl* key if you want to select more than one parameter at a time, and click *OK*. Once a parameter has been added, you can indicate whether it is optional with the *Optional* checkbox, and (from DataMiner 10.2.0/10.1.6 onwards) indicate whether it should be shown in scripts with the *Hide from script* checkbox.
 
-- To add or edit an Automation script in the definition:
+- To add or edit an automation script in the definition:
 
   1. In the *Scripts* section, either click *Add* to add a script, or select an existing script and click *Edit*.
 
@@ -35,7 +35,7 @@ In the configuration pane, you can configure a selected profile definition as fo
 
   1. Next to *Remarks*, optionally add additional information about the script.
 
-  1. Next to *Script*, select the script from the dropdown list with existing Automation scripts.
+  1. Next to *Script*, select the script from the dropdown list with existing automation scripts.
 
   1. Click *OK*.
 

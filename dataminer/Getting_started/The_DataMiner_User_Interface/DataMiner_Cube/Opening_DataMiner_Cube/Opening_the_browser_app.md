@@ -17,7 +17,7 @@ https://[DMA]/dataminercube
 > [!NOTE]
 >
 > - In the above-mentioned address, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
-> - From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41844-->, the above-mentioned addresses will trigger the installation of the *DataMinerCube.exe* file (i.e. the Cube desktop application) instead of the browser app.
+> - From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41844-->, the above-mentioned addresses will trigger the installation of the *DataMinerCube.exe* file (i.e., the Cube desktop application) instead of the browser app.
 > - If DataMiner Cube has been set as the default client, it is not necessary to add “*/dataminercube*” in the URL.
 > - Each time you connect to a DataMiner Agent, the software version will be checked. If you connect to a DMA with a higher DataMiner version than your current version of Cube, Cube will automatically be updated.
 > - DataMiner Cube will automatically disconnect when the DMA to which you are connected goes offline.

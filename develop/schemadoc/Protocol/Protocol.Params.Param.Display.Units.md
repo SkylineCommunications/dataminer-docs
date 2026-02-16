@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Display.Units
 
 # Units element
 
-Specifies a unit for a parameter value displayed in the user interface (e.g. in a report, in the Alarm Console, etc.).
+Specifies a unit for a parameter value displayed in the user interface (e.g., in a report, in the Alarm Console, etc.).
 
 ## Type
 

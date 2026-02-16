@@ -38,11 +38,11 @@ Up to now, a table cell hyperlink would by default be the URL of the DataMiner A
 
 ### Fixes
 
-#### Dashboards app & Low-Code Apps: Interactive Automation scripts launched from a node edge graph or a context menu action would not inherit the theme of the dashboard or low-code app [ID 39664]
+#### Dashboards app & Low-Code Apps: Interactive automation scripts launched from a node edge graph or a context menu action would not inherit the theme of the dashboard or low-code app [ID 39664]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-When an interactive Automation script was launched from a node edge graph or a context menu action, the script would incorrectly not inherit the theme of the dashboard or low-code app.
+When an interactive automation script was launched from a node edge graph or a context menu action, the script would incorrectly not inherit the theme of the dashboard or low-code app.
 
 #### Dashboards app & Low-Code Apps: Problems with feed links after migrating a dashboard or app [ID 39744]
 
@@ -100,7 +100,7 @@ When you updated the name of a dashboard folder while a dashboard was open, in s
 
 In a dashboard, in some cases, components showing the result of a query filtered by feeds would not get updated when the feed values changed.
 
-Also, in some cases, a query could keep on updating when it was linked to a time range feed that exposed a sliding window (e.g. "last 5 minutes").
+Also, in some cases, a query could keep on updating when it was linked to a time range feed that exposed a sliding window (e.g., "last 5 minutes").
 
 #### Dashboards app & Low-Code Apps - Pie & donut chart component: Pie chart would not re-appear after an error message had disappeared [ID 39879]
 

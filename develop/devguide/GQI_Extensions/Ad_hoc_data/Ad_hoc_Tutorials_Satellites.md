@@ -40,7 +40,7 @@ Expected duration: 15 minutes.
 
 1. Select *Satellites - GQIDS* and click *Import*.
 
-1. Go to the C# code of the imported Automation script by clicking the C# icon.
+1. Go to the C# code of the imported automation script by clicking the C# icon.
 
    ![C# icon](~/dataminer/images/GQI_code.png)
 

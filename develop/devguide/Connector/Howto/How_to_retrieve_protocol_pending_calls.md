@@ -22,7 +22,7 @@ Pending calls indicate the currently running logic of the connector linked to th
 
 1. Open SLNetClientTest tool from the DataMiner Taskbar Utility by selecting *Launch > Tools > Client Test*.
 1. Connect to the DataMiner Agent hosting the element by selecting *Connection > Connect*.
-1. Request the pending calls by selecting *Diagnostics > DMA > Protocol Pendingcalls* and entering the DMA ID/Element ID (e.g. 101/2) of the element you want to investigate.
+1. Request the pending calls by selecting *Diagnostics > DMA > Protocol Pendingcalls* and entering the DMA ID/Element ID (e.g., 101/2) of the element you want to investigate.
 
 > [!NOTE]
 >

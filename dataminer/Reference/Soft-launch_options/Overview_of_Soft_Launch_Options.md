@@ -182,7 +182,7 @@ Enables or disables the legacy Reports and Dashboards modules.
 
 ### ReportsAndDashboardsAutomationScript
 
-Enables the Automation script component in the Dashboards app, which is visualized as a button. This component can be used to execute scripts. It requires no data but can have elements or parameters as filters. If the *ReportsAndDashboardsButton* option is also enabled, one button component will be available that can be used with an Automation script or with a button parameter.
+Enables the automation script component in the Dashboards app, which is visualized as a button. This component can be used to execute scripts. It requires no data but can have elements or parameters as filters. If the *ReportsAndDashboardsButton* option is also enabled, one button component will be available that can be used with an automation script or with a button parameter.
 
 - **Minimum version**: 9.6.8
 - **Estimated release version**: To be determined
@@ -191,7 +191,7 @@ Enables the Automation script component in the Dashboards app, which is visualiz
 
 Enables the parameter button component in the Dashboards app. This component requires button parameters as data and can be used to trigger button parameters.
 
-If the *ReportsAndDashboardsAutomationScript* option is also enabled, the button acts as an Automation script component instead unless a button parameter is added.
+If the *ReportsAndDashboardsAutomationScript* option is also enabled, the button acts as an automation script component instead unless a button parameter is added.
 
 - **Minimum version**: 10.0.3
 - **Estimated release version**: To be determined
@@ -214,7 +214,7 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 
 ### ReportsAndDashboardsExport
 
-Enables the export to PDF button within the Dashboards app itself. Creating PDFs of dashboards is possible outside the app (e.g. via DataMiner Scheduler) without this soft-launch option.
+Enables the export to PDF button within the Dashboards app itself. Creating PDFs of dashboards is possible outside the app (e.g., via DataMiner Scheduler) without this soft-launch option.
 
 - **Minimum version**: 9.6.4
 - **Release version**: 10.2.12/10.3.0 ([RN 34634](xref:General_Feature_Release_10.2.12#dashboards-app-jobs-and-dashboards-app-now-support-pdf-module-id-34634))
@@ -294,7 +294,7 @@ Enables [Swarming](xref:Swarming) support for eligible systems.
 
 ### UseWebIAS
 
-Uses an embedded web browser for Automation script execution instead of the native Cube pop-up window.
+Uses an embedded web browser for automation script execution instead of the native Cube pop-up window.
 
 - **Minimum version**: 10.1.4
 

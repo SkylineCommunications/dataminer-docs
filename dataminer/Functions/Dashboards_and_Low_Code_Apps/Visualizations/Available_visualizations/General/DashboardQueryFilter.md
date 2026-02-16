@@ -20,7 +20,7 @@ From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41799-->, you can use a [trigg
 1. Apply the necessary data. See [Adding data to a component](xref:Adding_data_to_component).
 
    > [!NOTE]
-   > The assigned data name will be visible in the lower-right corner of the query filter component (e.g. Query filter 1).
+   > The assigned data name will be visible in the lower-right corner of the query filter component (e.g., Query filter 1).
 
 1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Customize_Component_Layout).
 

@@ -4,9 +4,9 @@ uid: Automation_scripts_triggered_from_redundancy_groups
 
 # Automation scripts triggered from redundancy groups
 
-From DataMiner 10.1.12 onwards, when an Automation script is triggered as part of a redundancy group action, the script will have the additional parameters listed in the table below.
+From DataMiner 10.1.12 onwards, when an automation script is triggered as part of a redundancy group action, the script will have the additional parameters listed in the table below.
 
-You can request these from within the Automation script using the *GetScriptParam(\<ID>)* method on the *Engine* object.
+You can request these from within the automation script using the *GetScriptParam(\<ID>)* method on the *Engine* object.
 
 | ID | Name | Description |
 |----|------|-------------|

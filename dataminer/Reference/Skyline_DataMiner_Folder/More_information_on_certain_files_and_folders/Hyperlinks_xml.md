@@ -6,7 +6,7 @@ uid: Hyperlinks_xml
 
 In the file *Hyperlinks.xml*, you can [define custom commands](xref:Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu) that will be displayed in the shortcut menu of the Alarm Console.
 
-DataMiner administrators will often create custom commands that open a web page, start an executable file or execute an Automation script.
+DataMiner administrators will often create custom commands that open a web page, start an executable file or execute an automation script.
 
 > [!NOTE]
 > When you make changes to *Hyperlinks.xml*, you should also force a synchronization of the file and reopen DataMiner Cube. For more details, see [Adding a custom command to the Alarm Console shortcut menu](xref:Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu).
@@ -48,7 +48,7 @@ See the following example:
 ```
 
 > [!NOTE]
-> When you specify an Automation script in a hyperlink, you only need to use the "Script:" prefix in legacy hyperlinks. In second-generation hyperlinks, this prefix has no function, as the [type](xref:HyperLinks.HyperLink-type) attribute clearly specifies that it concerns a reference to an Automation script.
+> When you specify an automation script in a hyperlink, you only need to use the "Script:" prefix in legacy hyperlinks. In second-generation hyperlinks, this prefix has no function, as the [type](xref:HyperLinks.HyperLink-type) attribute clearly specifies that it concerns a reference to an automation script.
 
 ### [Second-generation hyperlink syntax](#tab/secondgenerationsyntax)
 
@@ -205,13 +205,13 @@ The view levels do not need to be specified in any particular order. For example
 
 Special placeholders allow you to use (parts) of the value of the alarm or information event in the command name that is displayed in the shortcut menu.
 
-The example below shows four legacy hyperlink definitions. In the first definition, the name of the Automation script, indicated by the placeholder "\[1\]" in the *valueParsing* attribute, will appear at the end of the command name displayed in the shortcut menu. As such, if you right-click an alarm or an information event of which the value starts with e.g. "Set by Automation script MyScript to", the shortcut menu will contain a custom command named "ExecuteScript.exe –n MyScript".
+The example below shows four legacy hyperlink definitions. In the first definition, the name of the automation script, indicated by the placeholder "\[1\]" in the *valueParsing* attribute, will appear at the end of the command name displayed in the shortcut menu. As such, if you right-click an alarm or an information event of which the value starts with e.g., "Set by automation script MyScript to", the shortcut menu will contain a custom command named "ExecuteScript.exe –n MyScript".
 
 Example:
 
 ```xml
 <HyperLinks>
-  <HyperLink id="1" valueParsing="Set by Automation-script [1] to *">ExecuteScript.exe -n [1]</HyperLink>
+  <HyperLink id="1" valueParsing="Set by automation script [1] to *">ExecuteScript.exe -n [1]</HyperLink>
   <HyperLink id="2">http://www.skyline.be</HyperLink>
   <HyperLink id="3">http://intranet/troubleticket.aspx?ID=[ALARMID]</HyperLink>
   <HyperLink id="4">Script:MyScript|ph1=1/2;ph2=1/2|Parameter1=12;Parameter2=15|Mem1=memoryfile1;Mem2=memoryFile2</HyperLink>
@@ -219,4 +219,4 @@ Example:
 ```
 
 > [!TIP]
-> See also: [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
+> See also: [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script)
