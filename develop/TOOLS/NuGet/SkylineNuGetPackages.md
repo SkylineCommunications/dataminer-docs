@@ -11,7 +11,7 @@ The following table provides more information about some of the NuGet packages c
 |NuGet package ID|Description  |
 |---------|---------|
 |Skyline.DataMiner.Dev.*     |These NuGet packages are the so-called *DataMiner Dev Packs*. Refer to [DataMiner Dev Packs](xref:TOODataMinerDevPackages#dataminer-dev-packs)  for more information.       |
-|Skyline.DataMiner.Dev.Utils.*     |These NuGet packages are the so-called *Solution Dev Packs*. Refer to [Solution Dev Packs](xref:TOODataMinerDevPackages#solution-dev-packs)  for more information.       |
+|Skyline.DataMiner.Dev.Utils.*     |These NuGet packages are the so-called *Custom Dev Packs*. Refer to [Custom Dev Packs](xref:TOODataMinerDevPackages#custom-dev-packs) for more information.       |
 |Skyline.DataMiner.Files.*     |These NuGet packages contain DataMiner assemblies and are referred to by the *DataMiner Development Packages*. Refer to [DataMiner Dev Packs](xref:TOODataMinerDevPackages)  for more information.         |
 |Skyline.DataMiner.Core.DataMinerSystem.*     |These NuGet packages form the class library to interact with a DataMiner System from a connector or an automation script. Refer to [About the class library](xref:ClassLibraryIntroduction) for more information.       |
 |[Skyline.DataMiner.DcpChatIntegrationHelper](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper)     |This NuGet package allows easy integration with business communication platforms from a DataMiner automation script. It can be used to create [ChatOps custom commands](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).         |

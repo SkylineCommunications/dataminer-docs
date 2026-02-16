@@ -54,14 +54,40 @@ Revisions can be released to:
 > [!NOTE]
 > We recommend that you always use the latest revision of a version.
 
-## Solution Dev Packs
+## Custom Dev Packs
 
-In addition to the fully generic DataMiner Dev Packs, it is also possible to make Solution Dev Packs.
+In addition to the fully generic DataMiner Dev Packs, it is also possible to make **Custom Dev Packs**.
 
 For example, imagine you are working on a standard solution like MediaOps, and multiple optional modules consume assemblies exposed by this standard solution. If such an optional module were to consume a normal NuGet from the standard solution, it would lead to related assemblies being installed when the optional module is installed, which in turn could lead to mismatching versions between the assemblies installed by the optional module and the ones installed by the actual standard solution. This could then lead to assembly loading issues.
 
-If the optional module consumes standard Solution Dev Packs instead, the assembly will not be installed by the optional module. Instead, the optional module will have a dependency on the standard solution and rely on the already pre-installed standard solution, which includes those assemblies.
+If the optional module consumes Custom Dev Packs instead, the assembly will not be installed by the optional module. Instead, the optional module will have a dependency on the standard solution and rely on the already **pre-installed standard solution**, which includes those assemblies.
+
+> [!IMPORTANT]
+> When relevant and generic, Custom Dev Packs should be added to the list in **[Skyline NuGet packages](xref:SkylineNuGetPackages)** to ensure proper documentation and discoverability. This is especially important for Solution Dev Packs that are intended for broader reuse.
 
 ### Naming conventions
 
-For the optional module to consider a NuGet package as a Dev Pack, the package name needs to start with "`Skyline.DataMiner.Dev.Utils.`". This will make sure the compiled deliverable will not include the assemblies themselves but will instead include the proper reference to the location where those can be found, assuming the standard solution was installed.
+For optimal organization and maintainability, it is recommended that the NuGet package name matches the repository name.
+
+For the optional module to consider a NuGet package as a **Custom Dev Pack**, the package name needs to start with "`Skyline.DataMiner.Dev.Utils.`". The following naming conventions should be applied consistently across all components (where square brackets indicate optional segments):
+
+- **Repository name**: `Skyline.DataMiner.Dev.Utils.[Category.]Name`
+- **NuGet package name**: Must match the repository name
+- **Namespace (Usings)**: `Skyline.DataMiner.[Category.]Name`
+
+> [!NOTE]
+> The namespace intentionally omits the "Dev.Utils" segment to provide cleaner, more readable code references in consuming projects.
+
+### Solution Dev Packs
+
+**Solution Dev Packs** are a specific flavor of Custom Dev Packs introduced for all **Standard Solutions** delivered and provided by Skyline Communications.
+
+This showcases the power and flexibility of Standard Solutions: any solution can consume these Dev Packs and leverage the backbone of the Standard Solution without duplicating assemblies. This promotes reusability and ensures that custom implementations can build upon the solid foundation provided by Standard Solutions.
+
+All Solution Dev Packs follow the naming convention `Skyline.DataMiner.Dev.Utils.Solutions.*`, making them easily identifiable as packages originating from Standard Solutions. 
+
+For Solution Dev Packs, apply the following naming conventions:
+
+- **Repository name**: `Skyline.DataMiner.Dev.Utils.Solutions.[Name]`
+- **NuGet package name**: Must match the repository name
+- **Namespace (Usings)**: `Skyline.DataMiner.Solutions.[Name]`

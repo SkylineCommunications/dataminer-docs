@@ -7643,6 +7643,8 @@ items:
         topicUid: Best_Practices_When_Documenting_Catalog_Items
       - name: Naming conventions for Catalog item components
         topicUid: Naming_Conventions_For_Catalog_Item_Components
+    - name: NuGet package recommendations
+      topicUid: NuGet_Recommendations
     - name: Unit testing
       topicUid: Unit_testing
       items:

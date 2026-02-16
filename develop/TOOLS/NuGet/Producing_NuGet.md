@@ -124,7 +124,9 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
 - *Skyline.DataMiner.Dev.Utils.XXX*
 
-  - Holds all the [Solution Dev Packs](xref:TOODataMinerDevPackages#solution-dev-packs).
+  - Holds all the [Custom Dev Packs](xref:TOODataMinerDevPackages#custom-dev-packs).
+
+  - *Skyline.DataMiner.Dev.Utils.Solutions.XXX* is a specific naming convention for [Solution Dev Packs](xref:TOODataMinerDevPackages#solution-dev-packs), which are Custom Dev Packs for Standard Solutions delivered by Skyline Communications.
 
     E.g. MediaOps library, etc.
 

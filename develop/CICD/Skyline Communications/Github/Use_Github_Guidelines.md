@@ -78,6 +78,17 @@ If the repository is private, the name should look like this (using "-" as separ
 
 - It is up to the repository creator to choose the **item name**; however, make sure this name clearly indicates the purpose of the repository.
 
+## Working with NuGet repositories
+
+When creating a repository that produces NuGet packages, refer to the following documentation for comprehensive guidance:
+
+- [NuGet package recommendations](xref:NuGet_Recommendations): General recommendations on when and how to provide NuGet packages for your solution
+- [Producing NuGet packages](xref:Producing_NuGet): Detailed technical guidance on naming conventions, versioning, metadata, and package creation
+- [DataMiner Dev Packs](xref:TOODataMinerDevPackages): Information about Custom Dev Packs and Solution Dev Packs
+
+> [!TIP]
+> For NuGet repositories, ensure you use the **dataminer-nuget** topic and follow the naming conventions outlined in the documentation. Remember that the NuGet package name should match the repository name.
+
 ## Adding a README file
 
 It is important to add a *README.md* file to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
