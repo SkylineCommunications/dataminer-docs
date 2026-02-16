@@ -1450,14 +1450,23 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		string UserLoginName { get; }
 
-		/// <summary>
-		/// Gets the user cookie.
-		/// </summary>
-		/// <value>The user cookie.</value>
-		/// <remarks>
-		/// <para>Feature introduced in DataMiner 10.0.5 (RN 24475).</para>
-		/// </remarks>
-		string UserCookie { get; }
+        /// <summary>
+        /// Gets the info the client has provided when executing the script.
+        /// </summary>
+        /// <value>The info provide by the client.</value>
+        /// <remarks>
+        /// <note type="note">Available from DataMiner 10.6.4 onwards.</note> <!-- RN 44742 -->
+        /// </remarks>
+        IClientInfo ClientInfo { get; }
+
+        /// <summary>
+        /// Gets the user cookie.
+        /// </summary>
+        /// <value>The user cookie.</value>
+        /// <remarks>
+        /// <para>Feature introduced in DataMiner 10.0.5 (RN 24475).</para>
+        /// </remarks>
+        string UserCookie { get; }
 
 		/// <summary>
 		/// Gets the displayed name of the user who is executing the script.

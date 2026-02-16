@@ -28,6 +28,8 @@ From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards, this requires the user
 | scriptOptions.WaitWhenLocked | Boolean | Determines whether the script will wait for an element to become unlocked in case the element is locked by another process (e.g., another automation script). |
 | scriptOptions.IsInUse | Boolean | Determines whether dummy elements are marked as “In Use” for active scheduled tasks. |
 | scriptOptions.AskForConfirmation | Boolean | Determines whether the user will need to provide confirmation before the script starts running. |
+| scriptOptions.GenerateStartedInfoEvent | Boolean | Determines whether the a information event should be generated when the script starts running. Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards. <!-- RN 33666 / RN 43245 --> |
+| scriptOptions.ClientTimeZone | [DMAAutomationScriptOptionClientTimeZone](xref:DMAAutomationScriptOptionClientTimeZone) | Provides information about the time zone the client is in. Available in the executed script via [engine.ClientInfo.TimeZone](xref:Skyline.DataMiner.Automation.IClientInfo.TimeZone). Available from DataMiner 10.6.4 onwards. <!-- RN 44742 / RN 44788 --> |
 
 ## Output
 
