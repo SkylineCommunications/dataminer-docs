@@ -331,7 +331,7 @@ See also: [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
-When a backup package was being created, up to now, the temporary file would be stored on the C drive. From now on, this temporary file will be stored on the target path (i.e. local path or network path).
+When a backup package was being created, up to now, the temporary file would be stored on the C drive. From now on, this temporary file will be stored on the target path (i.e., local path or network path).
 
 > [!NOTE]
 >

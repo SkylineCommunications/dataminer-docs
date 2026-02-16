@@ -85,7 +85,7 @@ After a dependency has been uploaded, all scripts using that dependency will be 
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-The `ClientRequestMessage` class has been extended with a new `TraceInfo` class, which has one `TraceId` property of type string. In a later phase, this property will be used to track requests across multiple modules (e.g. queries coming from ad hoc data sources).
+The `ClientRequestMessage` class has been extended with a new `TraceInfo` class, which has one `TraceId` property of type string. In a later phase, this property will be used to track requests across multiple modules (e.g., queries coming from ad hoc data sources).
 
 CrudLoggerProxy logging will also support trace IDs for CRUD operations by the following managers:
 
@@ -129,7 +129,7 @@ Also, the trace ID will be logged for the following messages:
   2025-07-02 15:05:04.329|277|Facade.HandleMessage|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Incoming (RTManagerGUI.exe (FirstName LastName @ GTC-USERNAME)): Skyline.DataMiner.Net.Messages.ManagerStoreCreateRequest`1[Skyline.DataMiner.Net.Apps.DataMinerObjectModel.DomDefinition]
   ```
 
-The logging of a DOM manager will now also contain a line indicating the start of status transitions. This will be logged on information level 3, i.e. the same type and level as regular CRUD actions:
+The logging of a DOM manager will now also contain a line indicating the start of status transitions. This will be logged on information level 3, i.e., the same type and level as regular CRUD actions:
 
 ```txt
 2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
@@ -395,7 +395,7 @@ Also, a number of smaller changes have been made:
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-The decision when to trigger a proactive detection suggestion event for a future data range breach (e.g. predicted 100% between ... and ...) has been fine-tuned. This will prevent suggestion events from being generated for parameters with values near or on the data range that should not be considered problematic.
+The decision when to trigger a proactive detection suggestion event for a future data range breach (e.g., predicted 100% between ... and ...) has been fine-tuned. This will prevent suggestion events from being generated for parameters with values near or on the data range that should not be considered problematic.
 
 #### DataMiner upgrade: BPA tests 'Check Agent Presence Test In NATS' and 'Verify NATS is Running' replaced by 'Verify NATS Cluster' [ID 43359]
 
@@ -447,7 +447,7 @@ https://myDMA/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/vi
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-From now on, trend predictions with prediction intervals spanning the full data range (i.e. based on `RangeLow` and `RangeHigh`) will no longer be shown.
+From now on, trend predictions with prediction intervals spanning the full data range (i.e., based on `RangeLow` and `RangeHigh`) will no longer be shown.
 
 Such intervals indicate highly unpredictable data behavior, offering little to no meaningful forecasting value.
 
@@ -528,7 +528,7 @@ When an element was restarted multiple times in rapid succession, in some cases,
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When you stopped an element or performed a Failover switch when another action was being executed (e.g. a parameter set being performed by a QAction), in some cases, a deadlock could occur.
+When you stopped an element or performed a Failover switch when another action was being executed (e.g., a parameter set being performed by a QAction), in some cases, a deadlock could occur.
 
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
 
@@ -648,7 +648,7 @@ In some cases, a runtime error could be thrown when a DVE child element was dele
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
+When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g., DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
 #### Swarming: An element being swarmed would briefly run on the old DMA as well as on the new DMA [ID 43345]
 

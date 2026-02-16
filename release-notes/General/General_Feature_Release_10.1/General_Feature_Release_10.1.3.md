@@ -28,7 +28,7 @@ When a Failover agent claims or releases a virtual IP address, the following Pow
 
 #### Elasticsearch: Multicluster offload \[ID 28295\]\[ID 28384\]\[ID 28473\]
 
-It is now possible to have data offloaded to multiple Elasticsearch clusters, i.e. a main cluster and a number of replicated clusters.
+It is now possible to have data offloaded to multiple Elasticsearch clusters, i.e., a main cluster and a number of replicated clusters.
 
 Read actions are sent to the main cluster only, while write, delete and other modifying actions are sent to the main cluster as well as to all replicated clusters.
 
@@ -47,7 +47,7 @@ At DataMiner startup, when the DBConfiguration.xml file exists and an Elasticsea
 
 #### Message throttling configuration in MaintenanceSettings.xml \[ID 28335\]
 
-It is now possible to fine-tune message throttling, i.e. a mechanism that avoids an excessive number of parameter update messages getting sent to a client at the same time, using the following settings in *MaintenanceSettings.xml*:
+It is now possible to fine-tune message throttling, i.e., a mechanism that avoids an excessive number of parameter update messages getting sent to a client at the same time, using the following settings in *MaintenanceSettings.xml*:
 
 - *MessageThrottlingThreshold*: Time interval in ms. The default and minimum value is 250. If two updates for the same parameter are received within this interval, message throttling is activated. The first of the parameter updates is sent immediately, but messages for the same parameter that come after this are throttled until no more parameter updates have been received for this same time interval. Once the throttling has stopped, the last update is also sent after at most this time interval.
 
@@ -70,7 +70,7 @@ Example:
 
 #### Failover: Connecting to the online agent using a DNS record with 2 IP addresses \[ID 28634\]
 
-It is now possible to connect to the online agent in a Failover setup when that setup only has a single DNS record containing 2 IP addresses (i.e. one for the online agent and one for the offline agent).
+It is now possible to connect to the online agent in a Failover setup when that setup only has a single DNS record containing 2 IP addresses (i.e., one for the online agent and one for the offline agent).
 
 #### DataMiner Object Model: Event messages \[ID 28635\]
 
@@ -451,7 +451,7 @@ Also, by clicking the up and down arrows while holding the Ctrl key, you can mak
 > [!NOTE]
 >
 > - Columns marked as a datasource’s default columns will be selected by default.
-> - When a column selector node with values is reloaded (e.g. when an existing query is opened), the selected columns will be displayed before the unselected ones.
+> - When a column selector node with values is reloaded (e.g., when an existing query is opened), the selected columns will be displayed before the unselected ones.
 
 #### SLAnalytics will now keep track of configuration changes \[ID 28223\]
 
@@ -598,7 +598,7 @@ A number of enhancements have been made to the default Cassandra Cluster table c
 
 #### DataMiner Cube - Alarm Console: Problem with 'unread alarms' counter \[ID 28063\]
 
-In some cases, the number of unread alarms displayed in the header of an alarm tab would be incorrect, especially on history tabs, on filtered tabs or when e.g. masking an alarm immediately after it was set to read.
+In some cases, the number of unread alarms displayed in the header of an alarm tab would be incorrect, especially on history tabs, on filtered tabs or when e.g., masking an alarm immediately after it was set to read.
 
 #### DataMiner Cube: Problem when connecting to a large system with alarm storm prevention enabled \[ID 28127\]
 
@@ -776,7 +776,7 @@ When you started the DataMiner Cube desktop app with the “/Hostname=xyz” com
 
 #### Dashboards app: Feeds section of edit pane’s Data tab would incorrectly list feeds using the component names \[ID 28779\]
 
-When you added a feed component to a dashboard (e.g. a dropdown feed) and gave it a title, in the Feeds section of the edit pane’s Data tab, the feed would incorrectly have the name you gave to the component instead of the actual name of the feed.
+When you added a feed component to a dashboard (e.g., a dropdown feed) and gave it a title, in the Feeds section of the edit pane’s Data tab, the feed would incorrectly have the name you gave to the component instead of the actual name of the feed.
 
 #### DataMiner Cube - Alarm Console: Alarms in alarm tab of type 'Active alarms linked to cards' would be filtered incorrectly when opening an EPM card \[ID 28780\]
 

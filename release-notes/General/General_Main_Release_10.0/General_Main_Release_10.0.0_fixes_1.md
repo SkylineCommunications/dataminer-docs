@@ -62,7 +62,7 @@ In some cases, an error could occur in SLSNMPAgent when an element was added, de
 
 #### Enhanced services did not receive currently active alarms after being restarted \[ID 20328\]
 
-When an enhanced service was restarted (e.g. by editing the protocol), in some cases, it would not receive the currently active alarms when *Monitor Active Alarms* was enabled.
+When an enhanced service was restarted (e.g., by editing the protocol), in some cases, it would not receive the currently active alarms when *Monitor Active Alarms* was enabled.
 
 #### DataMiner Connectivity Framework: Problem deleting a connectivity chain throughout a DataMiner System \[ID 20343\]
 
@@ -208,7 +208,7 @@ When, in the *Logging* section of System Center (or the *Logging* window opene
 
 #### DataMiner Cube - Reports: Problem with 'top X' reports \[ID 21778\]
 
-In some cases, in DataMiner Cube, the “top X” reports, which you find e.g. in a view card under *Reports \> More \> Top*, would incorrectly list the “bottom X” items instead of the “top X” items.
+In some cases, in DataMiner Cube, the “top X” reports, which you find e.g., in a view card under *Reports \> More \> Top*, would incorrectly list the “bottom X” items instead of the “top X” items.
 
 #### SNMP polling with V3 HMAC-MD5 or HMAC-SHA authentication algorithms caused memory leak in SLSNMPManager \[ID 21788\]
 
@@ -327,7 +327,7 @@ When taking a backup containing Elastic data, in some cases, a problem could occ
 
 As changes to element files like Description.xml and Port.xml can impact parameters, elements are notified when one of their parameters is impacted by such a file change.
 
-However, up to now, child elements (e.g. DVE elements or virtual functions) would not receive any such file change notification. From now on, child elements will also receive file change notifications when they export parameters that are impacted by a particular file change.
+However, up to now, child elements (e.g., DVE elements or virtual functions) would not receive any such file change notification. From now on, child elements will also receive file change notifications when they export parameters that are impacted by a particular file change.
 
 #### Problem after stopping an element that stored data into an Indexing database and restarting the DataMiner Agent \[ID 22656\]
 
@@ -359,7 +359,7 @@ In some cases, an exception could be thrown when you closed a Visual Overview.
 
 #### Service & Resource Management: Problem when trying to open a functions.xml file \[ID 22744\]
 
-Due to a problem with file access rights, in some cases, it would not be possible to manually open a functions.xml file for e.g. debugging purposes.
+Due to a problem with file access rights, in some cases, it would not be possible to manually open a functions.xml file for e.g., debugging purposes.
 
 #### ProfileManagerHelper.GetProfileInstance with empty GUID returned random profile \[ID 22768\]
 

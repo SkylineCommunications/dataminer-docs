@@ -19,7 +19,7 @@ uid: Cube_Feature_Release_10.3.3
 <!-- MR 10.3.0 - FR 10.3.3 -->
 <!-- See General RNs for other change from this RN -->
 
-If a DataMiner System is configured to use a Cassandra Cluster setup (i.e. a setup where one Cassandra cluster is used for the entire DMS), in the *Database* section of System Center, you can now also configure the settings for the Elasticsearch or OpenSearch database:
+If a DataMiner System is configured to use a Cassandra Cluster setup (i.e., a setup where one Cassandra cluster is used for the entire DMS), in the *Database* section of System Center, you can now also configure the settings for the Elasticsearch or OpenSearch database:
 
 - Database: *Elasticsearch* or *Elasticsearch/OpenSearch*.
 - Database prefix: The name all indices will be prefixed with.

@@ -42,7 +42,7 @@ To do:
 
 1. If you are still logged in to DataMiner Cube, log out and log in again to see the change.
 
-1. If the alarm is still showing in a DataMiner web app (e.g. Dashboards or Monitoring), restart IIS on the DMA you are connected to, to clear the alarm from the cache.
+1. If the alarm is still showing in a DataMiner web app (e.g., Dashboards or Monitoring), restart IIS on the DMA you are connected to, to clear the alarm from the cache.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

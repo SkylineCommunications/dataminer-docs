@@ -150,7 +150,7 @@ Example:
 columns=1005,1006,1022
 ```
 
-To include additional columns that retrieve data from a table that is linked via relations (i.e. left join), add a "$" prefix to the parameter IDs of the external columns. For example:
+To include additional columns that retrieve data from a table that is linked via relations (i.e., left join), add a "$" prefix to the parameter IDs of the external columns. For example:
 
 ```txt
 columns=123,456,$567

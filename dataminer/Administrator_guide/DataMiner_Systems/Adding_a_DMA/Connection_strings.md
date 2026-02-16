@@ -37,7 +37,7 @@ In some existing setups, connection strings are also used in the cases below. Ho
   For example: Network Address Translation, a proxy, a gateway, etc. blocks access to the primary IP address.
 
   > [!IMPORTANT]
-  > Configuring the connection strings to translate an unreachable internal IP address to a reachable external one prevents the DataMiner upgrade client from upgrading the entire DMS at once. Any DMA on which this is configured will need to be upgraded separately. Tweaks to the default NATS configuration will also be needed. We therefore recommend ensuring that the primary IP address of each DMA is reachable instead (e.g. by setting up a virtual network).
+  > Configuring the connection strings to translate an unreachable internal IP address to a reachable external one prevents the DataMiner upgrade client from upgrading the entire DMS at once. Any DMA on which this is configured will need to be upgraded separately. Tweaks to the default NATS configuration will also be needed. We therefore recommend ensuring that the primary IP address of each DMA is reachable instead (e.g., by setting up a virtual network).
 
 ## How can you configure connection strings?
 
@@ -72,4 +72,4 @@ The legacy use cases below are only to be used as a reference for existing setup
 | <div style="width:250px">Purpose of the connection string</div> | Redirect to | Via |  User | Password |
 |--|--|--|--|--|
 | To ensure Agents listen on non-standard port. Only applicable for .NET remoting connections. | 148.0.10.68 | In the following syntax, replace the custom port with the one you set up: `http://148.0.10.68:8004/SLNetService` | / | / |
-| To reach DMAs that cannot be reached directly on their primary IP address.<br>**Not recommended** (see [When should you use connection strings?](#when-should-you-use-connection-strings)) | 148.0.10.68 | IP address of proxy/NAT/etc. via HTTP, e.g. `http://172.10.10.56`|/|/|
+| To reach DMAs that cannot be reached directly on their primary IP address.<br>**Not recommended** (see [When should you use connection strings?](#when-should-you-use-connection-strings)) | 148.0.10.68 | IP address of proxy/NAT/etc. via HTTP, e.g., `http://172.10.10.56`|/|/|

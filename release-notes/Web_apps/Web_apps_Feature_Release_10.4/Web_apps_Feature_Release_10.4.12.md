@@ -194,7 +194,7 @@ In the color themes used by the web apps, the gray colors have been updated.
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Up to now, when you added, updated or deleted an application on the root page (e.g. `https://myDma/root/`), the entire list of applications would always be refreshed. From now on, only the information that has changed will be refreshed.
+Up to now, when you added, updated or deleted an application on the root page (e.g., `https://myDma/root/`), the entire list of applications would always be refreshed. From now on, only the information that has changed will be refreshed.
 
 #### Dashboards/Low-Code Apps: Term 'Feed' replaced by 'Components' and 'URL' [ID 41141]
 
@@ -266,7 +266,7 @@ When parameter data was loaded into a *State* component, the dashboard could get
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-When, on a system that was not using automatic Windows authentication, you were logged in to one of the other web apps (e.g. Monitoring, Dashboards, etc.), you would no longer automatically be logged in to the legacy *Reports & Dashboards* app.
+When, on a system that was not using automatic Windows authentication, you were logged in to one of the other web apps (e.g., Monitoring, Dashboards, etc.), you would no longer automatically be logged in to the legacy *Reports & Dashboards* app.
 
 #### Dashboards app - Generic map component: Problem when rendering maps with AppVersion set to 1 [ID 41035]
 
@@ -371,7 +371,7 @@ During the migration of a low-code app that was created before the introduction 
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-While all GQI components (i.e. *Table*, *Grid*, *Maps*, *State*, *Column & bar chart*, *Pie & donut chart*, *Line & area chart*, *Node edge graph*)allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
+While all GQI components (i.e., *Table*, *Grid*, *Maps*, *State*, *Column & bar chart*, *Pie & donut chart*, *Line & area chart*, *Node edge graph*)allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
 
 In many cases, a component would not be able to properly visualize the table. Also, users would not be able to properly configure the component settings.
 
@@ -411,7 +411,7 @@ When a GQI query was run multiple times in quick succession, in some cases, a `S
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
-When the value of a parameter selected in another component (e.g. a *Gauge* or a *Ring* component) was fed to a *Line & area chart* component that was linked to a *Time range* component, in some cases, the *Line & area chart* component would not show any data.
+When the value of a parameter selected in another component (e.g., a *Gauge* or a *Ring* component) was fed to a *Line & area chart* component that was linked to a *Time range* component, in some cases, the *Line & area chart* component would not show any data.
 
 #### Monitoring/Dashboards/Low-Code Apps - Line & area chart component: Changes would not always be detected and processed properly [ID 41470]
 

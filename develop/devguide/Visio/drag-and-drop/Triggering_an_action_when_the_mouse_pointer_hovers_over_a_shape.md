@@ -28,7 +28,7 @@ This "hover" behavior will often be implemented to take a quick peek at element 
 
 ## Example of a 'hover target' that visualizes the element name
 
-First, turn a shape into a "hover target" (i.e. a shape that will visualize data linked to shapes over which the mouse pointer will hover) by adding the following shape data items to it:
+First, turn a shape into a "hover target" (i.e., a shape that will visualize data linked to shapes over which the mouse pointer will hover) by adding the following shape data items to it:
 
 - **Element**: \<empty>
 - **HoverTarget**: TRUE

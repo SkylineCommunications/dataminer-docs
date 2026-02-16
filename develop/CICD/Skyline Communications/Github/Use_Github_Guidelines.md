@@ -170,17 +170,17 @@ Here is a list of topics you should use (this list is to be extended):
 - dataminer-chatops
 - dataminer-nuget
 
-If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
+If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g., `Skyline-Communications`. Always use a hyphen ("-") as a separator.
 
 > [!NOTE]
-> For regression tests, use *T* as the item type in the repository name, and use topics to identify the type of test, e.g. *dataminer-regression-test*.
+> For regression tests, use *T* as the item type in the repository name, and use topics to identify the type of test, e.g., *dataminer-regression-test*.
 
 > [!TIP]
 > Refer to the [guidelines about adding topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) and [Searching for repositories](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories) on docs.github.com.
 
 ## Collaborating with external users on code
 
-In case private repositories have been created for a customer's project, external users (i.e. that customer's employees) can be invited to collaborate on the code.
+In case private repositories have been created for a customer's project, external users (i.e., that customer's employees) can be invited to collaborate on the code.
 
 An invite can then be sent to external users as "outside collaborators".
 

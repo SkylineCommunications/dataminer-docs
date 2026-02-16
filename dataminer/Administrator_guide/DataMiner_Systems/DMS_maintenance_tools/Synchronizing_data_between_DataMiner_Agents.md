@@ -58,7 +58,7 @@ When a file has been changed on a particular DMA, you can force the synchronizat
 
 1. In the dropdown list next to *Type*, select *File*.
 
-1. In the *File* box enter the path of the file in question, e.g. `C:\Skyline DataMiner\Views.xml`.
+1. In the *File* box enter the path of the file in question, e.g., `C:\Skyline DataMiner\Views.xml`.
 
 1. Click the *Sync now* button at the bottom of the card.
 

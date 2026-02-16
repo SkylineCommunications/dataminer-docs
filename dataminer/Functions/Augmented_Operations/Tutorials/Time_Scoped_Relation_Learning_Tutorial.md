@@ -67,7 +67,7 @@ The tutorial consists of the following steps:
 
    Under each of the behavioral changes, a gray block is displayed. These blocks indicate a detected change in behavior, or **change point**.
 
-1. Hover the mouse pointer over a change point to see more detail about the type of change point (e.g. a level shift). If necessary, zoom in to see all details, such as the begin and end values of the change.
+1. Hover the mouse pointer over a change point to see more detail about the type of change point (e.g., a level shift). If necessary, zoom in to see all details, such as the begin and end values of the change.
 
    > [!TIP]
    > For more information on the possible types of change points, see [Behavioral anomaly detection](xref:Behavioral_anomaly_detection#types-of-change-points).
@@ -167,7 +167,7 @@ The *Available Physical Memory* parameter exhibits a temporary drop in memory (1
 Which process was responsible for this? Find the culprit and earn at least 75 DevOps Points.
 
 > [!IMPORTANT]
-> We want to keep improving our relation learning features, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us examples of problems solved withe relation learning and/or situations where relation learning can be improved (e.g. the feature did not perform as well as you had hoped).
+> We want to keep improving our relation learning features, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us examples of problems solved withe relation learning and/or situations where relation learning can be improved (e.g., the feature did not perform as well as you had hoped).
 >
 > Use the following email format to send us your examples:
 >

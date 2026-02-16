@@ -55,7 +55,7 @@ For the API documentation, refer to [Skyline.AppInstaller.AppPackage](xref:Skyli
 
 ## Packager .NET tool
 
-The Packager .NET tool is a tool that can be used to create application packages. Refer to [Skyline.DataMiner.CICD.Tools.Packager](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) for more information on the supported types and how to install and use this tool. It is typically used to create e.g. an application package from an automation script solution folder (e.g. as a step in a CI/CD pipeline.) It currently supports creating application packages for automation script solutions, Visio repositories (both protocol Visio files and other) and dashboard repositories.
+The Packager .NET tool is a tool that can be used to create application packages. Refer to [Skyline.DataMiner.CICD.Tools.Packager](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.Packager#readme-body-tab) for more information on the supported types and how to install and use this tool. It is typically used to create e.g., an application package from an automation script solution folder (e.g., as a step in a CI/CD pipeline.) It currently supports creating application packages for automation script solutions, Visio repositories (both protocol Visio files and other) and dashboard repositories.
 
 The packager tool also allows the creation of a protocol package (.dmprotocol) for protocol solutions.
 

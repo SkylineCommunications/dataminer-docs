@@ -139,7 +139,7 @@ In the Monitoring & Control app, you can now view the list of users who are curr
 
 To open the contacts list, click the user icon in the top-right corner of the screen and select *Contacts*.
 
-For each user, the list displays the name of the user, the name of the computer, and the amount of active connections. Clicking a user in the list will open a details pane showing more information about that user (e.g. “\[APP\] online since \[Connect time\]”).
+For each user, the list displays the name of the user, the name of the computer, and the amount of active connections. Clicking a user in the list will open a details pane showing more information about that user (e.g., “\[APP\] online since \[Connect time\]”).
 
 > [!NOTE]
 >
@@ -200,7 +200,7 @@ The header and login screen of the Jobs app have now been adapted to the new Dat
 
 When you open a browser window and enter the IP address or host name of a DataMiner Agent, you are now directed to a new DataMiner landing page (“/root”).
 
-After signing in, you will be presented with a list of apps (e.g. Monitoring, Dashboards, etc.), and a dropdown menu on the right will allow you to install the DataMiner Cube desktop application using either a click-once web installer or an MSI installer.
+After signing in, you will be presented with a list of apps (e.g., Monitoring, Dashboards, etc.), and a dropdown menu on the right will allow you to install the DataMiner Cube desktop application using either a click-once web installer or an MSI installer.
 
 Clicking the user menu in the upper-right corner will allow you to open the Tools page, the About page and DataMiner Help.
 
@@ -575,7 +575,7 @@ In the *Apps* tab of the Cube navigation pane, all Service & Resource Managemen
 
 #### Bookings can now have 'pre-events' \[ID 21751\]
 
-It is now possible to add so-called “pre-events” to a booking, i.e. events that will take place before the start of the booking.
+It is now possible to add so-called “pre-events” to a booking, i.e., events that will take place before the start of the booking.
 
 > [!NOTE]
 >
@@ -652,7 +652,7 @@ If the long capacity value of one of the above-mentioned objects is updated, the
 
 #### Quarantine check when changing a profile instance \[ID 22274\]
 
-DataMiner will now also do a booking quarantine check when you update a profile instance. When conflicts are found after a profile instance update, a dialog box will appear, asking you whether the bookings should be quarantined (i.e. set to a pending state).
+DataMiner will now also do a booking quarantine check when you update a profile instance. When conflicts are found after a profile instance update, a dialog box will appear, asking you whether the bookings should be quarantined (i.e., set to a pending state).
 
 #### Checks added when regenerating contributing service protocol \[ID 22605\]
 

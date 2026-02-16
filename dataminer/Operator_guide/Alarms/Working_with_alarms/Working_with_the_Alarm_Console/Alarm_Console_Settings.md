@@ -46,7 +46,7 @@ Select this option to hide raw alarms of a correlated alarm. To show the raw ala
 > [!NOTE]
 > In case a filter is applied in the alarm tab, the behavior of this feature is different depending on the type of filter:
 >
-> - If a filtered alarm tab is created (e.g. by dragging an item onto the Alarm Console or by selecting *Apply filter* in a new tab):
+> - If a filtered alarm tab is created (e.g., by dragging an item onto the Alarm Console or by selecting *Apply filter* in a new tab):
 >   - If only the base alarm matches the filter, only that alarm is displayed.
 >   - If only the correlated alarm matches the filter, only that alarm is displayed.
 >   - If both base and correlated alarm match the filter, only the correlated alarm is displayed.
@@ -125,7 +125,7 @@ E.g. if you set the refresh rate to 30 seconds at 11:48:00, the Alarm Console wi
 
 This setting is only available if [History tracking](#history-tracking) is enabled and [Automatically remove cleared alarms](#automatically-remove-cleared-alarms) and [Freeze](#freeze) are disabled in the alarm tab.
 
-When these settings are used, by default, when an alarm is cleared and then reappears, this results in a separate alarm tree. Activating *Merge alarm trees* combines these alarm trees, which can result in a better overview, e.g. in a sliding window tab.
+When these settings are used, by default, when an alarm is cleared and then reappears, this results in a separate alarm tree. Activating *Merge alarm trees* combines these alarm trees, which can result in a better overview, e.g., in a sliding window tab.
 
 ![Merge alarm trees](~/dataminer/images/Merge_Alarm_Trees.png)<br>*Merged alarm trees in DataMiner 10.4.5*
 
@@ -133,7 +133,7 @@ When you activate this option, you can also select an additional option to only 
 
 ## Default alarm list
 
-Select this option to make the currently selected tab the default tab, i.e. the tab that will be shown when you open DataMiner Cube. If the selected tab is already the default tab, this option will be unavailable.
+Select this option to make the currently selected tab the default tab, i.e., the tab that will be shown when you open DataMiner Cube. If the selected tab is already the default tab, this option will be unavailable.
 
 > [!NOTE]
 > To display Alarm Console group statistics, to display a horizontal scrollbar in the alarm list, or to configure the Alarm Console, refer to the general settings in Cube instead. See [User settings](xref:User_settings).

@@ -71,7 +71,7 @@ Keeping the alarm tree size under control starts with the alarm template configu
 
 However, other factors may also influence whether you will get excessively large alarm trees:
 
-- Avoid large numbers of alarm **metadata changes** (e.g. properties or comments) leading to large alarm trees. These can for example be caused by automation scripts or apps triggering a large number of property changes. The impact of these changes can be partially reduced by enabling [alarm squashing](xref:MaintenanceSettings.AlarmSettings.MustSquashAlarms) in *MaintenanceSettings.xml*, as this will combine such updates in one record in the DataMiner client software, as long as there has not been a severity update in between them.
+- Avoid large numbers of alarm **metadata changes** (e.g., properties or comments) leading to large alarm trees. These can for example be caused by automation scripts or apps triggering a large number of property changes. The impact of these changes can be partially reduced by enabling [alarm squashing](xref:MaintenanceSettings.AlarmSettings.MustSquashAlarms) in *MaintenanceSettings.xml*, as this will combine such updates in one record in the DataMiner client software, as long as there has not been a severity update in between them.
 
 - When [masking alarms](xref:Masking_and_unmasking_alarms), avoid using the option "**Mask until unmasking**" if possible, as this could hide situations where many alarm updates occur, causing you to remain unaware of this. Instead, either mask for a limited time, or if this is not possible, make sure to review your masked alarms from time to time.
 

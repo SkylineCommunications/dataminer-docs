@@ -33,7 +33,7 @@ You can **create virtual functions using DataMiner Integration Studio** (version
 
 1. In the *Edit Function* window:
 
-   - Specify the name of the function (e.g. decoding).
+   - Specify the name of the function (e.g., decoding).
 
    - In the *Profile* box, select the profile definition that should be linked to the function.
 

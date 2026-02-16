@@ -6,7 +6,7 @@ uid: Script_condition_functions
 
 Below, you find a list of functions you can use in a Correlation script condition.
 
-These functions can also be used as placeholders, for instance in parameters used in correlation rules. In that case they should be placed between brackets, e.g. \[field(elementname)\].
+These functions can also be used as placeholders, for instance in parameters used in correlation rules. In that case they should be placed between brackets, e.g., \[field(elementname)\].
 
 ## field
 

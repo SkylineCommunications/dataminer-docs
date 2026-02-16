@@ -31,7 +31,7 @@ From now on, the “Index” part of a parameter section can also contain a subs
 Filter=<subscriptionFilter>
 ```
 
-This subscription filter can be any filter that can be passed to a parameter change subscription (e.g. “VALUE=\<pid> == \<value>”, “fullFilter=(...)”, etc.).
+This subscription filter can be any filter that can be passed to a parameter change subscription (e.g., “VALUE=\<pid> == \<value>”, “fullFilter=(...)”, etc.).
 
 > [!NOTE]
 > Up to now, when the index part of a parameter section contained a wildcard, no results would be returned whenever cells were set to “not initialized”. From now on, cells set to “not initialized” will be skipped.
@@ -40,7 +40,7 @@ This subscription filter can be any filter that can be passed to a parameter cha
 
 <!-- MR 10.3.0 - FR 10.2.2 -->
 
-When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g. 5 minutes) are ignored.
+When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g., 5 minutes) are ignored.
 
 > [!NOTE]
 >
@@ -65,7 +65,7 @@ The following changes have been made with regard to session variables that can b
 
 When you select a time range, that range will be stored in the SelectedTimeRange variable.
 
-The value can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
+The value can be set in serialized form (e.g., “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g., “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
 
 This variable will be cleared whenever you select another time range in the timeline.
 
@@ -147,7 +147,7 @@ If you specify a filter context like the one above, the shape will be linked to 
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
-Up to now, when configuring a parameter shape, it was possible to enable to use of dynamic units (i.e. units that can be converted to other units according to rules configured in the protocol) by adding “DynamicUnits=true” in an Options data field. From now on, when you do not specify this option in a parameter shape, whether or not that shape will use dynamic unit will depend on the value of the DynamicUnits soft-launch option.
+Up to now, when configuring a parameter shape, it was possible to enable to use of dynamic units (i.e., units that can be converted to other units according to rules configured in the protocol) by adding “DynamicUnits=true” in an Options data field. From now on, when you do not specify this option in a parameter shape, whether or not that shape will use dynamic unit will depend on the value of the DynamicUnits soft-launch option.
 
 > [!NOTE]
 > The DynamicUnits=true/false option can now be used to override the value of the DynamicUnits soft-launch option. For example, if the DynamicUnits soft-launch option is set to true, you can configure a parameter shape to not use dynamic units by adding "DynamicUnits=False" to its Options data field.
@@ -391,7 +391,7 @@ To do so, add a FunctionTypes option to the ComponentOptions shape data field.
 | Shape data field | Value |
 |--|--|
 | Component | ServiceManager |
-| ComponentOptions | FunctionTypes=\[comma-separated list of values\]<br> Possible values:<br> - Undefined (i.e. NULL value)<br> - UserTask<br> -  ScriptTask<br> - ResourceTask<br> - Gateway<br> - NoneStartEvent<br> - TimeStartEvent<br> - EndEvent |
+| ComponentOptions | FunctionTypes=\[comma-separated list of values\]<br> Possible values:<br> - Undefined (i.e., NULL value)<br> - UserTask<br> -  ScriptTask<br> - ResourceTask<br> - Gateway<br> - NoneStartEvent<br> - TimeStartEvent<br> - EndEvent |
 
 > [!NOTE]
 >
@@ -424,7 +424,7 @@ This change in behavior will now allow you to trigger a script by clicking an ac
 1. Select a time range.
 1. Click an action button.
 
-The SelectedTimeRange variable will now be cleared when the time selection is cleared (i.e. when it is no longer visible/available). Up to now, this variable would only be cleared when the selection was changed.
+The SelectedTimeRange variable will now be cleared when the time selection is cleared (i.e., when it is no longer visible/available). Up to now, this variable would only be cleared when the selection was changed.
 
 #### System Center - Agents: BPA Details window now has a Copy button that copies the list of errors to the Windows clipboard [ID 33638]
 
@@ -438,7 +438,7 @@ At the bottom of this *Details* window, you can now find a *Copy* button that al
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
-In shape data or shape text of shapes linked to a booking (e.g. dynamically generated shapes that represent bookings), you can now use a \[this reservationID\] placeholder to retrieve the GUID of the booking.
+In shape data or shape text of shapes linked to a booking (e.g., dynamically generated shapes that represent bookings), you can now use a \[this reservationID\] placeholder to retrieve the GUID of the booking.
 
 See the following examples:
 
@@ -574,7 +574,7 @@ From now on, you can override a Visio page name by specifying an "OverridePageNa
 
 > [!NOTE]
 >
-> - Always use the actual page name when referring to a particular page in options like e.g. *VdxPage*, *NavigatePage*, *InlineVdx*, etc. Using a page override when referring to a page will not work.
+> - Always use the actual page name when referring to a particular page in options like e.g., *VdxPage*, *NavigatePage*, *InlineVdx*, etc. Using a page override when referring to a page will not work.
 > - This feature allows you to define duplicate page names. When you do so, take into account that components that display Visio page names may then also display those duplicate page names.
 > - Visio files used in web apps do not support the OverridePageName option.
 
@@ -647,8 +647,8 @@ The pencil icon used in the Alarm Console is now identical to that used in Data 
 
 From now on, the “Add to incident” menu option will no longer be available when you right-click an alarm that cannot be added to an incident:
 
-- Active alarms with severity “normal” (i.e. clearable alarms that have not been cleared yet)
-- Alarms with a source other “DataMiner System” (e.g. correlation alarms)
+- Active alarms with severity “normal” (i.e., clearable alarms that have not been cleared yet)
+- Alarms with a source other “DataMiner System” (e.g., correlation alarms)
 - Alarms associated with DataMiner itself
 - Notices, errors, information events and suggestion events
 
@@ -879,7 +879,7 @@ When you open the *Resources* app, a warning will be shown in the footer when er
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
-When a session variable (e.g. YAxisResources) was updated in an embedded Resource Manager component, in some cases, that same session variable would also incorrectly be updated in the *Occupancy* tab of the Resources app.
+When a session variable (e.g., YAxisResources) was updated in an embedded Resource Manager component, in some cases, that same session variable would also incorrectly be updated in the *Occupancy* tab of the Resources app.
 
 #### Problem with validation of properties and actions in service definitions [ID 34023]
 
@@ -949,7 +949,7 @@ When, in the *Navigation* panel of the *Bookings* app, you selected another time
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
-When you edited the properties of a tag (e.g. name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.
+When you edited the properties of a tag (e.g., name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.
 
 #### Trending: Problem when exporting a trend graph containing average trend data [ID 35290]
 

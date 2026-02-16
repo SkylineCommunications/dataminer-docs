@@ -98,7 +98,7 @@ The OpenConfig library will now make use of the generated middleware NuGet. This
 
 When a request was sent out to a gRPC service, Communication Gateway would keep waiting indefinitely for a response. However, for various reasons, it could occur that the gRPC service never sent a response.
 
-A timeout time of five seconds has now been introduced as a protection against such scenarios. When the timeout time elapses, a response with status code `DEADLINE_EXCEEDED` will be returned to the middleware. That response can be used to trigger whatever is necessary (e.g. set element into timeout, reconnect, etc.).
+A timeout time of five seconds has now been introduced as a protection against such scenarios. When the timeout time elapses, a response with status code `DEADLINE_EXCEEDED` will be returned to the middleware. That response can be used to trigger whatever is necessary (e.g., set element into timeout, reconnect, etc.).
 
 #### 5 January 2024 - Fix - CommunicationGateway 2.0.2 - Insufficient exception handling for outgoing gRPC service calls [ID 38071]
 

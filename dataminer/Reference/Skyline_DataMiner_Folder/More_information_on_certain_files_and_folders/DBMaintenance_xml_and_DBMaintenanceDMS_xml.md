@@ -38,7 +38,7 @@ Example of TTL settings in *DBMaintenanceDMS.xml*:
 
 Each TTL tag has the following attributes:
 
-- **type**: The type of database record for which the TTL applies. e.g. *Alarm*, *RealTimeTrending*, *FiveMinTrending*, *OneHourTrending*, *OneDayTrending*, etc. This can also be set to a particular data type or to the name of a logger table.
+- **type**: The type of database record for which the TTL applies. e.g., *Alarm*, *RealTimeTrending*, *FiveMinTrending*, *OneHourTrending*, *OneDayTrending*, etc. This can also be set to a particular data type or to the name of a logger table.
 
   > [!NOTE]
   >
@@ -92,7 +92,7 @@ Examples:
 > [!IMPORTANT]
 > We recommend configuring these settings directly in DataMiner Cube. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
-TTL overrides for the trending of a specific protocol are specified with an additional *\<TimeToLive>* tag, with the *protocol* attribute set to the name of the protocol. Optionally, the version can also be added, e.g. protocol="Microsoft Platform/2.1.0.66".
+TTL overrides for the trending of a specific protocol are specified with an additional *\<TimeToLive>* tag, with the *protocol* attribute set to the name of the protocol. Optionally, the version can also be added, e.g., protocol="Microsoft Platform/2.1.0.66".
 
 Example of a *DBMaintenanceDMS.xml* file with protocol override:
 

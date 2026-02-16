@@ -351,8 +351,8 @@ Also, the Interface class in SLManagedAutomation and the ConnectivityInterface c
 
 In an element protocol, it is now possible to make a distinction between
 
-- internal DCF interfaces (i.e. virtual interfaces used within the protocol), and
-- external DCF interfaces (i.e. physical interfaces that will appear in interface lists in the UI).
+- internal DCF interfaces (i.e., virtual interfaces used within the protocol), and
+- external DCF interfaces (i.e., physical interfaces that will appear in interface lists in the UI).
 
 By default, all DCF interfaces are considered external. Interfaces that should be considered internal, have to be explicitly marked as internal. See the following example.
 
@@ -470,12 +470,12 @@ Example:
 
 #### View table columns with options like 'view=:x:y:z' or 'view=a:b:c:z' can now be filtered by means of a 'VALUE=' filter \[ID 30237\] \[ID 30809\]
 
-View tables containing a column with view options like "view=:x:y:z" or "view=a:b:c:z" now allow that column to be filtered by means of a "VALUE=" filter (e.g. VALUE=5 == abc).
+View tables containing a column with view options like "view=:x:y:z" or "view=a:b:c:z" now allow that column to be filtered by means of a "VALUE=" filter (e.g., VALUE=5 == abc).
 
 > [!NOTE]
 >
 > - These filters will also work when filtering on a column of a view table that refers to a column of another view table.
-> - When a directview table links to a view table with remote columns (i.e. view=:x:y:z), it is not yet possible to filter on those columns.
+> - When a directview table links to a view table with remote columns (i.e., view=:x:y:z), it is not yet possible to filter on those columns.
 > - Combining filters with AND or OR is not supported.
 
 #### New polling scheme polls SNMP tables by row \[ID 30780\]

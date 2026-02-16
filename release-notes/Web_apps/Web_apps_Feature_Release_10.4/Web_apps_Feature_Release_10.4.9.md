@@ -91,7 +91,7 @@ When one user makes a change to a low-code app, all other users who are editing 
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-In the header bar of a low-code app, all app options (e.g. *Versions*, *Settings*, *Duplicate app*, etc.) have been moved from the user menu to a separate menu.
+In the header bar of a low-code app, all app options (e.g., *Versions*, *Settings*, *Duplicate app*, etc.) have been moved from the user menu to a separate menu.
 
 In published and previewed apps, the *Edit* button will now always be displayed directly in the header bar. It will no longer be in a separate menu.
 
@@ -167,7 +167,7 @@ When, in the *Parameters* dataset, you filtered by protocol, the parameters list
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-When positioning items, the *Timeline* component would incorrectly not take into account the regional settings (e.g. time zone) specified in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
+When positioning items, the *Timeline* component would incorrectly not take into account the regional settings (e.g., time zone) specified in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
 
 #### Dashboards app & Low-Code Apps - Table component: Problem when grouping an empty table by a column [ID 40012]
 

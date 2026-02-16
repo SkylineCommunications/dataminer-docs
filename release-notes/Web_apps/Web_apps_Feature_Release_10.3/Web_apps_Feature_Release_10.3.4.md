@@ -55,7 +55,7 @@ A line & area chart component now has a number of time range buttons that allow 
 In a low-code app, you can now configure a new type of action: *Open monitoring card*. When triggered, this action will open the card of a specific element, service or view in the *Monitoring* app.
 
 > [!NOTE]
-> When a low-code app is embedded in Cube (e.g. in a visual overview), an *Open monitoring card* action will open the specified card in Cube.
+> When a low-code app is embedded in Cube (e.g., in a visual overview), an *Open monitoring card* action will open the specified card in Cube.
 
 #### GQI - Ad hoc data source: Sending and receiving DMS messages [ID 35701]
 

@@ -6,7 +6,7 @@ uid: Creating_a_link_between_DataMiner_elements_and_the_EPM_element
 
 In DataMiner, two different kinds of links can exist between a regular DataMiner element and an EPM element:
 
-- From an EPM element to a DataMiner element. This is the case when an EPM diagram item and a DataMiner element share the same name. The EPM diagram item will then automatically contain a link to the DataMiner element (i.e. a triangle in the top-right corner).
+- From an EPM element to a DataMiner element. This is the case when an EPM diagram item and a DataMiner element share the same name. The EPM diagram item will then automatically contain a link to the DataMiner element (i.e., a triangle in the top-right corner).
 
 - From a DataMiner element to an EPM element.
 

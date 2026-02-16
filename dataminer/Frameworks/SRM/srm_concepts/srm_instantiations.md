@@ -20,7 +20,7 @@ While a virtual function is a definition, a virtual function resource is the cor
 
 Both the terms "virtual function resource" and "virtual function instance" are used in the SRM framework, but these mean exactly the same thing. In the example above, the 4 encoding virtual function instances exposed by the platform are represented as 4 different resources, each based on the same virtual function. These resources are managed by DataMiner Resource Manager.
 
-The technique used by the SRM framework is very similar to the technique used to generate [Dynamic Virtual Elements](xref:Dynamic_virtual_elements) (DVEs). A virtual function is created based on a main element and only visualizes a selection of metrics of that main element, i.e. the metrics that are relevant for that particular virtual function. Consequently, it is sometimes also called a "virtual function element". The main difference with DVEs is that the definition for virtual functions is not coded into the connector itself but defined in a separate [functions.xml](xref:srm_definitions#functions-xml-files) file.
+The technique used by the SRM framework is very similar to the technique used to generate [Dynamic Virtual Elements](xref:Dynamic_virtual_elements) (DVEs). A virtual function is created based on a main element and only visualizes a selection of metrics of that main element, i.e., the metrics that are relevant for that particular virtual function. Consequently, it is sometimes also called a "virtual function element". The main difference with DVEs is that the definition for virtual functions is not coded into the connector itself but defined in a separate [functions.xml](xref:srm_definitions#functions-xml-files) file.
 
 As a resource represents a specific virtual function, and the virtual function links to a profile definition grouping multiple profile parameters, resources can expose **capacities and capabilities** listed in that linked profile definition. For example, if an encoding instance is only capable of providing SD encoding, when a resource with HD capability is requested, this encoding instance will not be a candidate.
 
@@ -48,7 +48,7 @@ Profile instances are used in the context of Service Orchestration, Resource Aut
 
 ### State profile instance
 
-A state profile instance is a specific kind of profile instance that can be defined to make sure that a specific profile will be **applied when a booking is in the corresponding state** (e.g. "Start" or "Stop"). You can create such a profile instance in the [Profiles module](xref:The_Profiles_module) by specifying the name of the base profile and adding the suffix "_[state]" (e.g. "Encoding_Start").
+A state profile instance is a specific kind of profile instance that can be defined to make sure that a specific profile will be **applied when a booking is in the corresponding state** (e.g., "Start" or "Stop"). You can create such a profile instance in the [Profiles module](xref:The_Profiles_module) by specifying the name of the base profile and adding the suffix "_[state]" (e.g., "Encoding_Start").
 
 ## Service profile instance
 
@@ -71,7 +71,7 @@ Also known as a "booking instance" or "reservation instance". The definition of 
 
 In the context of Service Orchestration, a booking is an **object linked to a service definition that has a specific time aspect**. For each of the virtual functions listed in the service definition, a corresponding resource is assigned and managed.
 
-When users create a booking, they need to select the timing as well as a service definition. For the timing, it is possible that a start and a stop time are selected (e.g. in case of an occasional-use event), or that only a start time is selected (for a permanent event).
+When users create a booking, they need to select the timing as well as a service definition. For the timing, it is possible that a start and a stop time are selected (e.g., in case of an occasional-use event), or that only a start time is selected (for a permanent event).
 
 Based on the selected service definition, profile instances for each of the included virtual functions will filter out resources that do not have the requested capacities and/or capabilities. The resources selected by the user to be included in the booking will be considered "booked" for the full duration of the booking.
 
@@ -85,7 +85,7 @@ In summary, a booking mainly contains the following information:
 The booking duration consists of:
 
 - The **pre-roll** time: This is the period before the service goes on air. It ensures that there is a margin of time to configure resources and make sure everything is set up.
-- The time when the **service is active**, i.e. the on-air time.
+- The time when the **service is active**, i.e., the on-air time.
 - The **post-roll** time: This is the period right after the service has stopped being on air. It ensures that there is a margin of time to tear down services and reconfigure devices to their base profile. It also provides a margin in case there is an overrun, as the resources remain booked during this time.
 
 The following types of bookings are supported:

@@ -4,7 +4,7 @@ uid: CTB_Reviewing_Contribution
 
 # Reviewing a contribution from someone else
 
-Most contributions to the documentation are added in the form of "pull requests", i.e. requests to pull specific changes into the repository. The pull requests are listed under <https://github.com/SkylineCommunications/dataminer-docs/pulls>.
+Most contributions to the documentation are added in the form of "pull requests", i.e., requests to pull specific changes into the repository. The pull requests are listed under <https://github.com/SkylineCommunications/dataminer-docs/pulls>.
 
 Until a pull request is merged, everyone can review it and add comments of their own. To do so:
 

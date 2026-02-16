@@ -144,7 +144,7 @@ The CoreGateway DxM must now be installed on the same DMA as CloudGateway to ens
 
 #### 1 September 2022 - Fix - CoreGateway 2.11.4 - CoreGateway of offline DMA tried to respond to requests from dataminer.services [ID 33973]
 
-When a DMA was offline (e.g. stopped, upgrading, restarting, or offline in a Failover pair), it could occur that the DataMiner CoreGateway tried to respond to requests from dataminer.services, while this should not happen.
+When a DMA was offline (e.g., stopped, upgrading, restarting, or offline in a Failover pair), it could occur that the DataMiner CoreGateway tried to respond to requests from dataminer.services, while this should not happen.
 
 With CoreGateway 2.11.4 (included in Cloud Pack version 2.8.2), this will no longer occur.
 

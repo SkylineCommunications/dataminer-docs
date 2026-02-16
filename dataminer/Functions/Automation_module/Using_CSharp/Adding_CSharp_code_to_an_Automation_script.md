@@ -21,7 +21,7 @@ To add C# code to a script:
    - *Namespace references*: Allows you to provide namespace references.
 
      > [!NOTE]
-     > - This is only applicable in case the script block only contains the lines of code to execute (i.e. it does not make use of classes/methods). In case the C# block does make use of classes/methods, the using statement can be provided in the C# block itself.
+     > - This is only applicable in case the script block only contains the lines of code to execute (i.e., it does not make use of classes/methods). In case the C# block does make use of classes/methods, the using statement can be provided in the C# block itself.
      > - The following using statements are added by default:
      >   - using System
      >   - using System.IO
@@ -46,7 +46,7 @@ To add C# code to a script:
      > - SLLoggerUtil.dll
      > - SLAnalyticsTypes.dll (from DataMiner 10.1.11 onwards)
      >
-     > To reference additional DLLs, e.g. a custom DLL placed in the `C:\Skyline DataMiner\ProtocolScripts` folder, you need to specify an absolute path.
+     > To reference additional DLLs, e.g., a custom DLL placed in the `C:\Skyline DataMiner\ProtocolScripts` folder, you need to specify an absolute path.
 
    - *Script references*: Allows you to refer to other C# blocks. See [Compiling a C# code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library).
 

@@ -31,7 +31,7 @@ To configure these job sections:
 
      - *Icon*: An optional icon for the section.
 
-     - *Type*: Determines the type of section, i.e. *Fields* or *Booking*. Further configuration will depend on the selected type.
+     - *Type*: Determines the type of section, i.e., *Fields* or *Booking*. Further configuration will depend on the selected type.
 
      - *Booking manager*: Available for a booking section. Determines which Booking Manager element is used. Once jobs have been created with the selected booking manager element, you will no longer be able to modify this selection.
 

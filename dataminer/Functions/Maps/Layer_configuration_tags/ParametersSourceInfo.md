@@ -15,7 +15,7 @@ In the `<ParametersSourceInfo>` tag, specify the parameters from which to retrie
   > [!TIP]
   > See also: [elementDataVar](#elementdatavar)
 
-- If the *style* attribute is set to "markers" (i.e. the default setting), the layer will display markers, each positioned at a location specified by one pair of latitude/longitude values.
+- If the *style* attribute is set to "markers" (i.e., the default setting), the layer will display markers, each positioned at a location specified by one pair of latitude/longitude values.
 
 - If the *style* attribute is set to "lines", the layer will display lines, each connecting two pairs of latitude/longitude values. Each line will be displayed as a geodesic, a segment of a "great circle" representing the shortest distance between two points on the surface of the Earth.
 
@@ -95,7 +95,7 @@ Result:
 
   - the alarm color
 
-  - the MarkerSelectionPID (i.e. the parameter containing the marker image ID)
+  - the MarkerSelectionPID (i.e., the parameter containing the marker image ID)
 
 - The parameter filter will be applied on the "data element".
 

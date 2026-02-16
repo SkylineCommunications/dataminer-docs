@@ -174,7 +174,7 @@ In some cases, ticket fields without alarm properties would incorrectly no longe
 
 #### DataMiner Cube - Visual Overview: Problem when linking a shape to a matrix output \[ID 23980\]
 
-When you linked a shape to a matrix output by using a shape data field of type *Output* or *OutputLabel* set to a number representing the index of the output (e.g. “1”), in some cases, that shape would be linked to an incorrect output.
+When you linked a shape to a matrix output by using a shape data field of type *Output* or *OutputLabel* set to a number representing the index of the output (e.g., “1”), in some cases, that shape would be linked to an incorrect output.
 
 #### DataMiner Cube - Trending: Problem when adding a parameter to a stopped element \[ID 24045\]
 
@@ -329,7 +329,7 @@ The view state returned by the following methods would incorrectly not take into
 - GetViewsForParent
 
 > [!NOTE]
-> The above-mentioned methods are also used by the DataMiner web applications (e.g. Monitoring & Control, Dashboards, Ticketing, etc.), and the view states are also used in DataMiner Maps.
+> The above-mentioned methods are also used by the DataMiner web applications (e.g., Monitoring & Control, Dashboards, Ticketing, etc.), and the view states are also used in DataMiner Maps.
 
 #### Element connections saved incorrectly \[ID 24348\]
 
@@ -365,7 +365,7 @@ In some rare cases, it could occur that the column configuration of a *ListView*
 
 #### DataMiner Cube: Editing an SNMPv3 element created prior to DataMiner 9.6.12 would cause the authentication type to be reset to the default type \[ID 24423\]
 
-When you edited an SNMPv3 element that was created prior to DataMiner 9.6.12, in some cases, the authentication type would incorrectly be reset to the default type (i.e. SHA512).
+When you edited an SNMPv3 element that was created prior to DataMiner 9.6.12, in some cases, the authentication type would incorrectly be reset to the default type (i.e., SHA512).
 
 #### Dashboards: Problem with duplicate trend graphs in line chart component \[ID 24427\]
 
@@ -403,7 +403,7 @@ From now on, it will no longer be possible to start a backup operation while the
 
 #### Problem with SLDataMiner \[ID 24511\]
 
-In some rare cases, an error in SLDataMiner would cause other problems to occur (e.g. element timeouts).
+In some rare cases, an error in SLDataMiner would cause other problems to occur (e.g., element timeouts).
 
 #### Service & Resource Management: Editing a service in the services list would incorrectly clear the IDOfSelection session variable \[ID 24519\]
 

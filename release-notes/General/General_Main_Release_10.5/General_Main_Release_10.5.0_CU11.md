@@ -137,7 +137,7 @@ In client applications like DataMiner Cube, up to now, elements hosted on a DMA 
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-After you had uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g. a new protocol with version 1.0.0.1 versus an existing protocol with version 1.0.0.1_DEV), up to now, elements using the existing protocol (e.g. with version 1.0.0.1_DEV) would incorrectly no longer be able to execute QActions.
+After you had uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g., a new protocol with version 1.0.0.1 versus an existing protocol with version 1.0.0.1_DEV), up to now, elements using the existing protocol (e.g., with version 1.0.0.1_DEV) would incorrectly no longer be able to execute QActions.
 
 #### Problem with SLElement when loading elements that included matrix parameters [ID 44188]
 
@@ -269,6 +269,6 @@ Up to now, in some cases, when the element was being stopped and was flushing it
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU1] -->
 
-When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
+When 10 simultaneous calls between a client application (e.g., DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
 
-From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.
+From now on, even when 10 simultaneous calls between a client application (e.g., DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.

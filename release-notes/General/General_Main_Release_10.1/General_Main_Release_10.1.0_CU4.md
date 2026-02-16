@@ -150,7 +150,7 @@ In some cases, DataMiner could become unresponsive when you opened a visual over
 
 #### Mobile apps: Selection box values would be ellipsed even when there was ample space to fully display them \[ID 29850\]
 
-In the mobile apps (e.g. Jobs, Ticketing, etc.), in some cases, selection box values would be ellipsed even when there was ample space to fully display them.
+In the mobile apps (e.g., Jobs, Ticketing, etc.), in some cases, selection box values would be ellipsed even when there was ample space to fully display them.
 
 #### DataMiner Cube - Trending: 'Exclude gaps' option would not work when exporting average trend data \[ID 29870\]
 

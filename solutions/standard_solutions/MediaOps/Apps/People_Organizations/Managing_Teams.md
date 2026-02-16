@@ -135,7 +135,7 @@ To create a new role:
 
 1. Select *+ New role*.
 
-1. Enter a name for the new role, e.g. `Consultant`.
+1. Enter a name for the new role, e.g., `Consultant`.
 
 1. Select *Save* in the top-right corner.
 

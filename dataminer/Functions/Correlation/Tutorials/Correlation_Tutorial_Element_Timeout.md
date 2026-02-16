@@ -46,7 +46,7 @@ In this step, you will create a correlation rule that will trigger based on alar
 
 1. In the lower-left corner, click *Add rule* to add a new correlation rule.
 
-1. In the *Name* box on the right, specify a name of your choice, e.g. `Correlation tutorial`.
+1. In the *Name* box on the right, specify a name of your choice, e.g., `Correlation tutorial`.
 
 1. Under *ALARM FILTER*, configure a filter so that the correlation rule will only be applied for alarms from the element *Correlation KATA Switch Timeout - Network Switch*:
 
@@ -117,7 +117,7 @@ In this step, you will create a correlation rule that will trigger based on alar
 
 1. In the Surveyor, select the element *Correlation KATA Switch Timeout - Network Switch*.
 
-1. Click the *Create Timeout* button and wait 30 seconds (i.e. the default duration DataMiner waits when an element does not respond before generating a timeout alarm).
+1. Click the *Create Timeout* button and wait 30 seconds (i.e., the default duration DataMiner waits when an element does not respond before generating a timeout alarm).
 
    A timeout alarm will then be generated.
 

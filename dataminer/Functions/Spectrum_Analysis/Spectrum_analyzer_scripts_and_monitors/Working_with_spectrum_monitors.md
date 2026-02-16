@@ -98,7 +98,7 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
 
 1. In the *Monitoring and trending* section, add parameters:
 
-   1. If you want the parameter configuration to be applied for all measurement points at once, make sure the option *Group parameters* is selected. If you wish to configure parameters separately for each measurement point, e.g. to configure different alarm thresholds, clear the selection box next to this option.
+   1. If you want the parameter configuration to be applied for all measurement points at once, make sure the option *Group parameters* is selected. If you wish to configure parameters separately for each measurement point, e.g., to configure different alarm thresholds, clear the selection box next to this option.
 
    1. Click *Add* and select a script variable to add as a parameter.
 
@@ -176,7 +176,7 @@ To do so:
 
 1. In the message box, click *OK*.
 
-   The active monitor execution will then stop as soon as possible, i.e. after the script run on the current measurement point is completed.
+   The active monitor execution will then stop as soon as possible, i.e., after the script run on the current measurement point is completed.
    In the top-right corner of the spectrum graph, a notice will indicate that you are in prioritized mode.
 
 To go back to normal mode, in the *monitors* tab, click *Take Priority Over Monitors* again. The prioritized mode also ends automatically as soon as you enter standby mode.

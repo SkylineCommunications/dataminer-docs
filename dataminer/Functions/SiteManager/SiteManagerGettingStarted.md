@@ -36,7 +36,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
    > - The minimum OS version required by the script is Windows 10 or Windows Server 2019 build 17134.
    > - You must run the script as administrator.
    > - The machine where you install this script must be able to access the data sources you want to expose. It does not have to be the machine where the data sources are running.
-   > - In case PowerShell's execution policy prevents the execution, specify an execution policy (e.g. `-ExecutionPolicy Bypass`). For more information regarding PowerShell's execution policy, refer to [About execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
+   > - In case PowerShell's execution policy prevents the execution, specify an execution policy (e.g., `-ExecutionPolicy Bypass`). For more information regarding PowerShell's execution policy, refer to [About execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
    > - Updating a site name is not straightforward. To update a site name, you will need to uninstall (as mentioned below) and then run the script again. Also, if data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
 
    To uninstall, you can use the following command:
@@ -162,7 +162,7 @@ Alternatively, you can also obtain an overview in the browser by navigating to t
 zrok agent version
 ```
 
-In addition to the version, the output will also show the endpoint of the web frontend, e.g. `127.0.0.1:8888`.
+In addition to the version, the output will also show the endpoint of the web frontend, e.g., `127.0.0.1:8888`.
 Navigating to this endpoint in the browser should show a similar overview as the status command.
 
 ![Overview](~/dataminer/images/zrok_agent_webui.png)<br>*zrok Agent web UI*
@@ -171,7 +171,7 @@ Navigating to this endpoint in the browser should show a similar overview as the
 
 In case you no longer want to expose a specific endpoint:
 
-1. Execute the following command, replacing `<shareToken>` with the share token for this specific endpoint (e.g. `02x31uu2yacbh`):
+1. Execute the following command, replacing `<shareToken>` with the share token for this specific endpoint (e.g., `02x31uu2yacbh`):
 
    ```powershell
    zrok release <shareToken>

@@ -38,7 +38,7 @@ object result = protocol.NotifyDataMiner(216 /* NT_GET_REMOTE_TREND */, elementD
 ## Return Value
 
 - object[] result:
-  - result[0]: string array, denoting the meaning of the cells (e.g. `["chValue","dtFirst","iStatus","dtLast"]`).
+  - result[0]: string array, denoting the meaning of the cells (e.g., `["chValue","dtFirst","iStatus","dtLast"]`).
   - result[1]: string array containing the trend data.
 
     string[] data = (string[]) result[1];

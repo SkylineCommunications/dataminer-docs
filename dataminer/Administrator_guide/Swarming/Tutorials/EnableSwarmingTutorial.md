@@ -53,7 +53,7 @@ To deploy the package:
 
 In this tutorial, you will swarm an element. To avoid impacting ongoing operations, start by adding a new test element.
 
-You can either [create a new basic test element](xref:Adding_elements) yourself or import a demo element, e.g. by deploying the [Satellite Earth Station Uplink](https://catalog.dataminer.services/details/c8adec4a-e7be-47a4-b7a4-e574e0381fe6) package.
+You can either [create a new basic test element](xref:Adding_elements) yourself or import a demo element, e.g., by deploying the [Satellite Earth Station Uplink](https://catalog.dataminer.services/details/c8adec4a-e7be-47a4-b7a4-e574e0381fe6) package.
 
 If you choose to create a new element yourself, you can select any protocol of your choice for it, except for a spectrum protocol or a DVE protocol, as these would not result in a swarmable element.
 
@@ -98,13 +98,13 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
    ![Alarm ID usage](~/dataminer/images/Swarming_Tutorial_Enable_AlarmID_Usage.png)
 
    > [!NOTE]
-   > It is not possible to scan dependencies (e.g. NuGets) with this script, so these may still contain outdated references. However, if this should be the case, running these scripts on a system where Swarming is enabled will throw a clear error message.
+   > It is not possible to scan dependencies (e.g., NuGets) with this script, so these may still contain outdated references. However, if this should be the case, running these scripts on a system where Swarming is enabled will throw a clear error message.
 
 1. Take a look at the results of the analysis.
 
    ![Alarm ID usage problem](~/dataminer/images/Swarming_Tutorial_Enable_AlarmID_Usage_Problem.png)
 
-   The *Mask Critical Alarms* script will be displayed as one of the problems that have been found. This script takes as input a reference to an element and will mask all critical alarms of this element. It does so by using a *SetAlarmStateMessage* and includes an identifier reference to the alarm it should mask, but this identifier still uses the old style of referring to an alarm, i.e. a **DataMiner ID/alarm ID** integer combination. This is must be changed to a **tree ID** instead.
+   The *Mask Critical Alarms* script will be displayed as one of the problems that have been found. This script takes as input a reference to an element and will mask all critical alarms of this element. It does so by using a *SetAlarmStateMessage* and includes an identifier reference to the alarm it should mask, but this identifier still uses the old style of referring to an alarm, i.e., a **DataMiner ID/alarm ID** integer combination. This is must be changed to a **tree ID** instead.
 
 1. Open the *Mask Critical Alarms* script in the Automation app, scroll down, and click *Validate* to check for errors and warnings.
 

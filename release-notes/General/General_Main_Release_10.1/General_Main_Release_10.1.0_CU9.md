@@ -41,7 +41,7 @@ A number of enhancements have been made with regard to updating resource, bookin
 
 #### Minor enhancements to several DataMiner processes \[ID 31155\]
 
-A number of minor enhancements have been made to a number of DataMiner processes (e.g. SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
+A number of minor enhancements have been made to a number of DataMiner processes (e.g., SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
 
 #### NATS upgraded to version 2.2.6 + new NATS SLNet settings \[ID 30156\]
 
@@ -241,7 +241,7 @@ In the Jobs app, in some cases, date values saved in UTC format would be parsed 
 
 #### Web apps: Setvar controls in visual overviews would no longer be rendered correctly \[ID 31351\]
 
-In web apps (e.g. Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
+In web apps (e.g., Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
 
 #### STARTTLS/SSL options for SMTP would not get applied when sending generic emails \[ID 31592\]
 

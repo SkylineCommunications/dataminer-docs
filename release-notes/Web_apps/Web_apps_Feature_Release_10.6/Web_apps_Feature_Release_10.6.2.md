@@ -56,7 +56,7 @@ The sidebar now also supports keyboard navigation and automatically adapts to th
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-Ready-made preset templates are now available for all template-supported components (i.e. grids, maps, timelines, and tables), directly in the *Browse templates* window. These presets let you take full advantage of template customization options while saving time and reducing repetitive work when configuring components.
+Ready-made preset templates are now available for all template-supported components (i.e., grids, maps, timelines, and tables), directly in the *Browse templates* window. These presets let you take full advantage of template customization options while saving time and reducing repetitive work when configuring components.
 
 ![Templates](~/release-notes/images/Templates.png)
 
@@ -86,7 +86,7 @@ On systems running DataMiner main server version 10.6.0 or higher as well as on 
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-Because of a number of enhancements, performance has increased when rendering a large number of template previews in e.g. the *Browse templates* window.
+Because of a number of enhancements, performance has increased when rendering a large number of template previews in e.g., the *Browse templates* window.
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Label enhancements [ID 44218]
 
@@ -185,7 +185,7 @@ Possible types for the `IGQIFilterOperator.Filter` property:
 - `IGQIValueFilter`
 - `IGQIAndFilter` (for future use)
 
-Possible types for the `IGQIValueFilter.Value` property (i.e. the types for which a GQI extension can create a column):
+Possible types for the `IGQIValueFilter.Value` property (i.e., the types for which a GQI extension can create a column):
 
 - bool
 - DateTime
@@ -234,7 +234,7 @@ From now on, the grid will try to grow or shrink vertically in order to avoid a 
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-In order to enhance overall performance of the GQI join operator, a so-called "partition join strategy" (i.e. a page-by-page join strategy) will now be used.
+In order to enhance overall performance of the GQI join operator, a so-called "partition join strategy" (i.e., a page-by-page join strategy) will now be used.
 
 ##### Conditions that need to be met
 
@@ -351,7 +351,7 @@ When you had generated a PDF report of a dashboard that contained a *Time range*
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When you imported a web app, e.g. from the DataMiner Catalog onto the DataMiner landing page, in some cases, not all associated files would get synchronization across the DataMiner System.
+When you imported a web app, e.g., from the DataMiner Catalog onto the DataMiner landing page, in some cases, not all associated files would get synchronization across the DataMiner System.
 
 #### Data Aggregator would not be able to execute a converted GQI query that contained a regular expression [ID 44258]
 
@@ -370,7 +370,7 @@ Parameter name: value
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When you entered a decimal value that started with a decimal point (e.g. ".05"), up to now, the decimal point would incorrectly be removed. For example, ".05" would incorrectly be changed to "05".
+When you entered a decimal value that started with a decimal point (e.g., ".05"), up to now, the decimal point would incorrectly be removed. For example, ".05" would incorrectly be changed to "05".
 
 > [!NOTE]
 > In some cases, this issue can still occur when entering a decimal value in a dialog box of an interactive automation script that uses legacy UI components.
@@ -379,9 +379,9 @@ When you entered a decimal value that started with a decimal point (e.g. ".05"),
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When a Timeline component and a Time range component were linked in both directions, up to now, the Timeline component would not be able to properly perform viewport actions (e.g. zooming or panning).
+When a Timeline component and a Time range component were linked in both directions, up to now, the Timeline component would not be able to properly perform viewport actions (e.g., zooming or panning).
 
-From now on, a Timeline component will no longer adapt its viewport when instructed to do so by incoming events (from e.g. a Time range component) while a user is zooming or panning.
+From now on, a Timeline component will no longer adapt its viewport when instructed to do so by incoming events (from e.g., a Time range component) while a user is zooming or panning.
 
 Note that the following actions will only affect the viewport after the user interaction has finished:
 

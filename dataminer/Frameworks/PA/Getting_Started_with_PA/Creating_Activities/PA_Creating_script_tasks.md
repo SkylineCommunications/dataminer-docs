@@ -15,7 +15,7 @@ uid: PA_Creating_script_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the parameter, e.g. "Ping - IP Address".
+      - **Name**: The name of the parameter, e.g., "Ping - IP Address".
 
       - **Type**: Set to *Text*.
 
@@ -31,7 +31,7 @@ uid: PA_Creating_script_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the parameter, e.g. "Ping - Result".
+      - **Name**: The name of the parameter, e.g., "Ping - Result".
 
       - **Type**: Depends on the parameter. For example:
 
@@ -71,7 +71,7 @@ uid: PA_Creating_script_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the profile definition, e.g. "PING IP"
+      - **Name**: The name of the profile definition, e.g., "PING IP"
 
       - **Parameters**: Add your previously created input and output parameters.
 

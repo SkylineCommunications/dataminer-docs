@@ -30,7 +30,7 @@ To use a trigger component to **refresh the data in another component**:
 
 1. Add a trigger component to your dashboard or app.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page name]* > *Trigger* > *Last trigger* > *Triggers* in the *Data* pane, and drag this component data onto a compatible component (e.g. a table or grid component).
+1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page name]* > *Trigger* > *Last trigger* > *Triggers* in the *Data* pane, and drag this component data onto a compatible component (e.g., a table or grid component).
 
    Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 

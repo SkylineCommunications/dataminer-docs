@@ -67,7 +67,7 @@ In the template editor, you can now add layers of type *HTML*. Adding a layer of
 Because of a number of enhancements, overall performance of the *Timeline* component has increased, especially when the timeline in question contains a large number of groups.
 
 > [!IMPORTANT]
-> In some cases, this change will break existing setups. A *Timeline* component will now only load up to 10000 items, timeline groups will now be sorted, and real-time updates will no longer be applied when using e.g. a DOM instances data source.
+> In some cases, this change will break existing setups. A *Timeline* component will now only load up to 10000 items, timeline groups will now be sorted, and real-time updates will no longer be applied when using e.g., a DOM instances data source.
 
 ### Enhancements
 
@@ -231,7 +231,7 @@ When no connection was established yet, the query parameters would not get saved
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-Up to now, it would not be possible to export a low-code app of which the name contained illegal characters (e.g. question marks).
+Up to now, it would not be possible to export a low-code app of which the name contained illegal characters (e.g., question marks).
 
 #### Dashboards/Low-Code Apps - Timeline component: Not possible to edit the template [ID 42449]
 
@@ -251,7 +251,7 @@ The second section named *General* has now been renamed to *Advanced*.
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-In e.g. a *Maps* component or a *Web* component, the `onLoad` event would incorrectly be triggered multiple times. From now on, this event will only be triggered once.
+In e.g., a *Maps* component or a *Web* component, the `onLoad` event would incorrectly be triggered multiple times. From now on, this event will only be triggered once.
 
 #### Dashboards app: Maps component would incorrectly not reapply its previous selection when the dashboard was refreshed [ID 42496]
 
@@ -281,13 +281,13 @@ When a connection inside a node edge graph had been removed because of a real-ti
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-When you added an action (e.g. *Open monitoring card*), up to now, you had to incorrectly press the TAB key twice to set the focus to the *Link to data* button, and when you then pressed the ENTER key, the picker would not load correctly.
+When you added an action (e.g., *Open monitoring card*), up to now, you had to incorrectly press the TAB key twice to set the focus to the *Link to data* button, and when you then pressed the ENTER key, the picker would not load correctly.
 
 #### Dashboards/Low-Code Apps: Pickers would not be reset when closed [ID 42556]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-When a picker in e.g. a *Time range* component was closed, up to now, it would incorrectly not be reset.
+When a picker in e.g., a *Time range* component was closed, up to now, it would incorrectly not be reset.
 
 #### Dashboards/Low-Code Apps - Grid component: Grid items would incorrectly get resized when a trigger went off [ID 42560]
 
@@ -305,7 +305,7 @@ When, in the action editor, you tried to select a recently added component using
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-In several components (e.g. the *Time range* component), information elements consisting of an icon and a text box are being used to convey messages to the user. Up to now, when the color of such an information element was changed, only the color of the text would be updated. The color of the icon would incorrectly not be updated.
+In several components (e.g., the *Time range* component), information elements consisting of an icon and a text box are being used to convey messages to the user. Up to now, when the color of such an information element was changed, only the color of the text would be updated. The color of the icon would incorrectly not be updated.
 
 #### Dashboards/Low-Code Apps - Maps component: 'Fetch the data' action could not be executed when no layers were visible or selected [ID 42579]
 
@@ -317,7 +317,7 @@ When no layers were visible or selected in a *Maps* component, it would incorrec
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-In some cases, empty query nodes (i.e. nodes that did not contain any value) would incorrectly not be marked as null.
+In some cases, empty query nodes (i.e., nodes that did not contain any value) would incorrectly not be marked as null.
 
 #### Low-Code Apps: 'Fetch the data' action would not always be triggered [ID 42601]
 

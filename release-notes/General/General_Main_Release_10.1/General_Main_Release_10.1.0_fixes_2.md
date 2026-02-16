@@ -90,7 +90,7 @@ When you switched between dashboards in the new Dashboards app, it could occur t
 
 #### Dashboards app: No error message shown when opening a non-existing dashboard \[ID 26997\]
 
-When you tried to open a non-existing dashboard (e.g. by using an incorrect URL), no error message would appear. Instead, an empty dashboard would be opened.
+When you tried to open a non-existing dashboard (e.g., by using an incorrect URL), no error message would appear. Instead, an empty dashboard would be opened.
 
 #### DataMiner Cube: Issues occurring during DELT import operations \[ID 27004\]
 
@@ -138,7 +138,7 @@ If a dashboard contained a State component, in some cases double scrollbars coul
 
 #### DataMiner Cube - Trending: Problem when calculating trend predictions \[ID 27292\]
 
-When calculating trend predictions on a more general level (e.g. daily), in some cases, the algorithm would not take into account missing values. Hence, it would incorrectly assume that a repeating pattern found on the more general level was also found on the more detailed level.
+When calculating trend predictions on a more general level (e.g., daily), in some cases, the algorithm would not take into account missing values. Hence, it would incorrectly assume that a repeating pattern found on the more general level was also found on the more detailed level.
 
 #### Dashboards app: Dashboard grid not resized \[ID 27293\]
 
@@ -176,7 +176,7 @@ When, in the *Profiles* app, you saved a profile definition, a profile instance
 
 #### Dashboards: Problem when changing the theme \[ID 27398\]
 
-When, in the Dashboards app, you changed the theme, the colors of certain components (e.g. analog clock, digital clock,...) would not be changed accordingly.
+When, in the Dashboards app, you changed the theme, the colors of certain components (e.g., analog clock, digital clock,...) would not be changed accordingly.
 
 #### Problem when a QAction launched an automation script immediately after the element had been started \[ID 27431\]
 
@@ -184,7 +184,7 @@ When a QAction launched an automation script immediately after the element had b
 
 #### DataMiner Cube: Not possible to filter tables on display value \[ID 27490\]
 
-In the quick filter boxes for tables in DataMiner Cube, previously it was only possible to filter on the raw value of the cells, i.e. the value used by the protocol, which is not necessarily the same as the displayed value. Now filtering on the displayed value is also possible.
+In the quick filter boxes for tables in DataMiner Cube, previously it was only possible to filter on the raw value of the cells, i.e., the value used by the protocol, which is not necessarily the same as the displayed value. Now filtering on the displayed value is also possible.
 
 #### Problem when renaming DVE elements \[ID 27494\]
 
@@ -324,7 +324,7 @@ On a system using pattern matching, in some cases, an error could occur in SLAna
 
 #### Dashboards app - Line chart component: Problems when retrieving trend data \[ID 27853\]
 
-In some cases, a trend graph legend would show an error when a trend data request was interrupted, e.g. by scrolling to another page before the current page was fully loaded.
+In some cases, a trend graph legend would show an error when a trend data request was interrupted, e.g., by scrolling to another page before the current page was fully loaded.
 
 Also, when multiple trend requests were required, in some cases, those requests would be ignored when a trend data request was already in progress.
 
@@ -354,7 +354,7 @@ When, in a DataMiner System with multiple agents, information events were retrie
 
 #### DataMiner Cube - Correlation: Number of occurrences in 'Sliding window' section could incorrectly not be changed \[ID 27909\]
 
-When you tried to define that a correlation rule had to be triggered when a situation occurred a specific number of times in a specified period of time, in some cases, it would not be possible to change the default number of times (i.e. 1).
+When you tried to define that a correlation rule had to be triggered when a situation occurred a specific number of times in a specified period of time, in some cases, it would not be possible to change the default number of times (i.e., 1).
 
 #### DataMiner Cube would constantly try to reconnect due to a problem that occurred while serializing alarm metadata in proactive suggestion events \[ID 27927\]
 
@@ -362,7 +362,7 @@ Due to a problem that occurred while serializing alarm metadata in proactive sug
 
 #### Dashboards app - Time range component: Default range would be used even after being overwritten afterwards \[ID 27941\]
 
-If the default values of a time range component had been set to a custom range, in some cases, those values would incorrectly still be used after being overwritten afterwards (e.g. by means of URL arguments or another feed).
+If the default values of a time range component had been set to a custom range, in some cases, those values would incorrectly still be used after being overwritten afterwards (e.g., by means of URL arguments or another feed).
 
 #### Jobs app: Job section fields would not be displayed in the correct order \[ID 27943\]
 
@@ -382,7 +382,7 @@ In an embedded Service Manager component, in some cases, the Save button would n
 
 #### DataMiner Cube - Alarm Console: Problem with 'unread alarms' counter \[ID 28063\]
 
-In some cases, the number of unread alarms displayed in the header of an alarm tab would be incorrect, especially on history tabs, on filtered tabs or when e.g. masking an alarm immediately after it was set to read.
+In some cases, the number of unread alarms displayed in the header of an alarm tab would be incorrect, especially on history tabs, on filtered tabs or when e.g., masking an alarm immediately after it was set to read.
 
 #### DataMiner Cube - Profiles app: 'Based on' selection box would be empty \[ID 28089\]
 
@@ -412,7 +412,7 @@ In some cases, for example, rendering issues could occur when resizing table col
 
 When you selected a CPE filter, in some cases, the raw key would incorrectly be displayed for a short while.
 
-Also, when you selected a chain filter (e.g. Region) and a value (e.g. California), and then selected another chain filter and value, in some cases, nothing would be displayed and an error would occur.
+Also, when you selected a chain filter (e.g., Region) and a value (e.g., California), and then selected another chain filter and value, in some cases, nothing would be displayed and an error would occur.
 
 #### Ticketing app: Problem when creating a ticket \[ID 28167\]
 

@@ -21,7 +21,7 @@ string[] result = (string[]) protocol.NotifyDataMiner (226 /*NT_DIAG*/ , command
   - RESETQACTIONMETRICS_QACTION_[DMA ID]:[element ID]:[QAction ID]: Resets the QAction metrics of the specified QAction.<!-- RN 8345 -->
   - RESETQACTIONMETRICS_PROTOCOL_[protocol name]:[protocol version]: Resets the QAction metrics of elements running the specified version of the specified protocol.<!-- RN 8345 -->
 
-  e.g. QACTIONMETRICS_ELEMENT_101:510984" (101 = DMA ID, 510984 = Element ID)
+  e.g., QACTIONMETRICS_ELEMENT_101:510984" (101 = DMA ID, 510984 = Element ID)
 
   > [!NOTE]
   > By default, the QAction metrics are disabled. To enable monitoring, you have to enable the feature. Open the SLNetClientTest tool and select *Advanced* > *Options* > *SLNet Options*. There you can add features using a comma-separated list for *ExtraSupportedFeatureKeys*. For more information, see [SLNetClientTest tool](xref:SLNetClientTest_tool).

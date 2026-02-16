@@ -278,7 +278,7 @@ Some can only be used in templates for notification messages sent as a result of
 | paramname          | The parameter name. | X | X |
 | pollingip          | Polling IP address of the element. | | X |
 | prevkey            | ID of the previous alarm in the alarm tree. | X | X |
-| property:xxx       | The value of the property named "xxx".<br> "xxx" must be e.g. Element.MyProperty, Service.MyProperty or Alarm.MyProperty (the property name itself is case insensitive). | X | X |
+| property:xxx       | The value of the property named "xxx".<br> "xxx" must be e.g., Element.MyProperty, Service.MyProperty or Alarm.MyProperty (the property name itself is case insensitive). | X | X |
 | rca:element        | Element RCA level. | X | X |
 | rca:parameter      | Parameter RCA level. | X | X |
 | rca:service        | Service RCA level. | X | X |

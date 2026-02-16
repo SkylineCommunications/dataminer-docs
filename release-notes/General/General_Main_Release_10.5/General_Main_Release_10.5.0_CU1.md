@@ -168,7 +168,7 @@ From now on, you can view the logging of the GQI DxM in DataMiner Cube.
 Also, no new log file will be started every day anymore. From now on, a new log file will only be started as soon as the size of the existing file reaches 5 MB.
 
 > [!NOTE]
-> Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e. the logging of the ad hoc data sources and the operators).
+> Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e., the logging of the ad hoc data sources and the operators).
 
 #### GQI DxM: Separate log file per extension library in Extensions folder [ID 42355]
 

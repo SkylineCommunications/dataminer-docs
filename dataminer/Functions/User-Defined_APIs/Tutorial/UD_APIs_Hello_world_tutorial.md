@@ -223,7 +223,7 @@ To access the API, you will need an [API token](xref:UD_APIs_Objects_ApiToken).
 
    ![Create API Token](~/dataminer/images/UDAPIS_Tutorials_HelloWorld_Create_Token_Name.jpg)
 
-1. Copy the generated secret to a safe location (e.g. a password manager).
+1. Copy the generated secret to a safe location (e.g., a password manager).
 
    ![Create API secret](~/dataminer/images/UDAPIS_Tutorials_HelloWorld_Create_Token_Secret.jpg)
 

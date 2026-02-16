@@ -210,7 +210,7 @@ The *DMSScript.Script.Exe.Param@type* attribute can now be set to the following 
 |-------------|--------------------------|
 | libraryName | The name of the library. |
 | precompile  | Whether this C# action must be compiled as a library. Default: “false”. |
-| scriptRef   | A reference to another library.<br> Format: The name of the automation script, followed by a colon and the name of the library (e.g. ScriptName:LibraryName).<br> To refer to a library in the current automation script, you can replace the name of the automation script by the \[AutomationScriptName\] placeholder (e.g. “\[AutomationScriptName\]:MyCSharpAction”). |
+| scriptRef   | A reference to another library.<br> Format: The name of the automation script, followed by a colon and the name of the library (e.g., ScriptName:LibraryName).<br> To refer to a library in the current automation script, you can replace the name of the automation script by the \[AutomationScriptName\] placeholder (e.g., “\[AutomationScriptName\]:MyCSharpAction”). |
 
 #### Automation Schema: List of possible bit flags added to documentation tag of the DMSScript.Exe.Param@options attribute \[ID 23953\]
 
@@ -268,7 +268,7 @@ A new *Rates* namespace has been added. This namespace contains classes and meth
 
 A number of enhancements have been made to the function editor:
 
-- When you create a new function file by selecting *File \> New \> File \> General \> DataMiner \> DataMiner Function Template*, you now have to first specify the function file version (e.g. 1.0.0.1) and select the associated protocol XML file.
+- When you create a new function file by selecting *File \> New \> File \> General \> DataMiner \> DataMiner Function Template*, you now have to first specify the function file version (e.g., 1.0.0.1) and select the associated protocol XML file.
 - When you add a function to a function file, or you edit an existing function, you can now select a profile and an entry point, and configure the interfaces.
 - When you add a table to a page, you can now select which columns to include.
 

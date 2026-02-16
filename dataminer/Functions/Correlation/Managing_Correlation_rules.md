@@ -13,7 +13,7 @@ When you open the Correlation module in Cube (via apps \> *Correlation*), a card
   > [!NOTE]
   > The rule details can also be viewed in a separate card. To do so, right-click the rule and select *Open in new card* or *Open in new undocked card*.
 
-Managing correlation rules, e.g. adding and deleting rules or organizing them in folders, is done in the pane on the left:
+Managing correlation rules, e.g., adding and deleting rules or organizing them in folders, is done in the pane on the left:
 
 - [Collapsing and expanding folders](xref:Collapsing_and_expanding_folders)
 

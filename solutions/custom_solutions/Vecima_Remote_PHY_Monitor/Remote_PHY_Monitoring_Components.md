@@ -25,4 +25,4 @@ The Remote PHY Monitoring Solution includes the following low-code apps:
 - **R-PHY Analog & RF:** This low-code app monitors the analog and RF KPIs for all the Remote PHY nodes in the system. This allows on-site technicians to have remote visibility on how the Vecima R-PHY nodes are performing during on-site installation or troubleshooting.
 
 > [!NOTE]
-> All elements related to the low-code apps (i.e. the Vecima RPM elements) must use the **Production** version of the connector.
+> All elements related to the low-code apps (i.e., the Vecima RPM elements) must use the **Production** version of the connector.

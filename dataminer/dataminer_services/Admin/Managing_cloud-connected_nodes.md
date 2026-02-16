@@ -23,7 +23,7 @@ Some DxMs are not included in the DataMiner Cloud Pack and must be deployed sepa
 
    This page lists the different nodes in the DMS, with all possible DxMs that can be deployed on each node.
 
-1. Next to a DxM, e.g. *ModelHost*, click *Deploy* to start the automatic installation process.
+1. Next to a DxM, e.g., *ModelHost*, click *Deploy* to start the automatic installation process.
 
 ## Upgrading nodes to the latest DxM versions
 

@@ -20,7 +20,7 @@ uid: Cube_Feature_Release_10.3.12
 
 Up to now, the behavioral anomaly detection feature only allowed users to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly. From now on, when configuring an alarm template, users will have more options to specify what should happen when behavioral anomalies are detected.
 
-For example, it is now possible to make a distinction between upward and downward behavioral changes (e.g. an upward spike or a downward spike). For example, you can request to have alarms only for upward level shifts and not for downward level shifts. However, in that case, it would still be possible to have suggestions for downward level shifts. Also, you can now fine-tune and decide to have an upward level shift alarm only when the level shift rises more than 10 (i.e. an absolute threshold of 10) or more than 10 percent of the current value (i.e. a relative threshold of 10).
+For example, it is now possible to make a distinction between upward and downward behavioral changes (e.g., an upward spike or a downward spike). For example, you can request to have alarms only for upward level shifts and not for downward level shifts. However, in that case, it would still be possible to have suggestions for downward level shifts. Also, you can now fine-tune and decide to have an upward level shift alarm only when the level shift rises more than 10 (i.e., an absolute threshold of 10) or more than 10 percent of the current value (i.e., a relative threshold of 10).
 
 To configure the behavioral anomaly detection for a particular (numeric) parameter, do the following:
 
@@ -28,8 +28,8 @@ To configure the behavioral anomaly detection for a particular (numeric) paramet
 1. In the right-most column of the parameter in question, click the *Anomalies* button to open the *Anomaly alarm settings* window.
 1. In the *Anomaly alarm settings* window, optionally open the *Select preset* selection box, and select one of the following options:
 
-   - "All disabled" (i.e. no anomaly alarms)
-   - "All smart" (i.e. anomaly monitoring as it existed up to now)
+   - "All disabled" (i.e., no anomaly alarms)
+   - "All smart" (i.e., anomaly monitoring as it existed up to now)
 
 1. Below the selection box, if necessary, you can fine-tune the configuration by specifying how anomaly monitoring should react to anomalies of type level shift, outlier, variance change, trend change and/or flatline.
 
@@ -43,13 +43,13 @@ To configure the behavioral anomaly detection for a particular (numeric) paramet
    > [!NOTE]
    > The *Anomalies* button in the right-most column of the parameter in question will indicate the level of anomaly monitoring that has been configured:
    >
-   > - "Disabled" (i.e. no anomaly alarms)
-   > - "Customized" (i.e. the new customized anomaly monitoring)
-   > - "Smart" (i.e. anomaly monitoring as it existed up to now).
+   > - "Disabled" (i.e., no anomaly alarms)
+   > - "Customized" (i.e., the new customized anomaly monitoring)
+   > - "Smart" (i.e., anomaly monitoring as it existed up to now).
 
 > [!NOTE]
 >
-> - It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
+> - It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g., downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
 > - Any settings configured in the *Anomaly alarm settings* window will only affect parameters that are being trended.
 
 ## Changes
@@ -125,7 +125,7 @@ Up to now, these could be modified by means of a dropdown box. From now on, they
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
-In the *View* tab of a spectrum card, up to now, each marker listed in the *Markers* section had two buttons next to it: an *Edit* button (i.e. a pencil icon) and a *Delete* button (i.e. a cross icon). A *Center to marker frequency* button has now been added. Clicking this button will set the center frequency to the frequency of the marker in question.
+In the *View* tab of a spectrum card, up to now, each marker listed in the *Markers* section had two buttons next to it: an *Edit* button (i.e., a pencil icon) and a *Delete* button (i.e., a cross icon). A *Center to marker frequency* button has now been added. Clicking this button will set the center frequency to the frequency of the marker in question.
 
 Also, the three buttons will now show a tooltip when you hover over them.
 
@@ -160,7 +160,7 @@ When the main correlation alarm got cleared, the base alarm would no longer be s
 
 When Cube tried to display a broadcast message it had received from the DataMiner Agent while being used as a service by SLHelper, an error could occur in the latter.
 
-From now on, Cube will disregard broadcast messages while being used as a service (e.g. when displaying a visual overview on a mobile device).
+From now on, Cube will disregard broadcast messages while being used as a service (e.g., when displaying a visual overview on a mobile device).
 
 #### Spectrum Analysis: Problem when making changes to a spectrum monitor [ID 37542]
 

@@ -93,7 +93,7 @@ It is the default strategy when the following conditions are met:
 This strategy designates one query as the source query and the other as the target query. It then fetches rows page by page from the source query as long as more query results are needed. Based on the values in the source query rows, partition filters are constructed to apply on the target query. The goal is to fetch results from the target query in distinct partitions.
 
 > [!TIP]
-> This strategy works best when the join operation is highly selective, i.e. the rows from the source query match relatively few rows from the total target query. If this is not the case, consider using the [prefetch strategy](#prefetch-strategy) instead.
+> This strategy works best when the join operation is highly selective, i.e., the rows from the source query match relatively few rows from the total target query. If this is not the case, consider using the [prefetch strategy](#prefetch-strategy) instead.
 
 #### Partitioning support
 
@@ -126,7 +126,7 @@ It works by fetching **all** rows from the target query into memory immediately.
 > Join conditions for the prefetch strategy are evaluated on the **display value** of the cells.
 
 > [!TIP]
-> This strategy is only recommended when dealing with **small data sets** or when the join operation has **low selectivity**, i.e. when nearly all rows from the target query must be retrieved for a single page from the source query. If this is not the case, consider using the [partition strategy](#partition-strategy) instead.
+> This strategy is only recommended when dealing with **small data sets** or when the join operation has **low selectivity**, i.e., when nearly all rows from the target query must be retrieved for a single page from the source query. If this is not the case, consider using the [partition strategy](#partition-strategy) instead.
 
 ### Row by row strategy
 

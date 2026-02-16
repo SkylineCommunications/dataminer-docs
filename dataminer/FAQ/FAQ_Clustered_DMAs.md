@@ -14,7 +14,7 @@ When you have a non-clustered system, that means you have one or more separate D
 
 - An end-to-end view on all services will improve service monitoring.
 
-- End-to-end Correlation Engine and Automation Engine functionality (i.e. cross-system Automation and Correlation).
+- End-to-end Correlation Engine and Automation Engine functionality (i.e., cross-system Automation and Correlation).
 
 - Reports containing data from multiple Agents.
 
@@ -22,11 +22,11 @@ When you have a non-clustered system, that means you have one or more separate D
 
 - One-time setup of all your email notification filters.
 
-- Administrative tasks only need to be performed once (e.g. setting up automated backups).
+- Administrative tasks only need to be performed once (e.g., setting up automated backups).
 
 - Unified alarm templates and several admin level settings.
 
-- Cross-system advanced analytics (e.g. cross-system behavioral analysis).
+- Cross-system advanced analytics (e.g., cross-system behavioral analysis).
 
 - Unified Mobile Gateway integration.
 

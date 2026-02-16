@@ -17,7 +17,7 @@ To select a map configuration, use the selectConfig(name, vars) method:
 | Parameter | Description                                                                                                                        |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|
 | name      | The name of the configuration.                                                                                                     |
-| vars      | An array of {Name: XXX, Value: YYY} pairs to be used for input in case the configuration has dynamic elements (i.e. placeholders). |
+| vars      | An array of {Name: XXX, Value: YYY} pairs to be used for input in case the configuration has dynamic elements (i.e., placeholders). |
 
 If the parent page contains the following script ...
 

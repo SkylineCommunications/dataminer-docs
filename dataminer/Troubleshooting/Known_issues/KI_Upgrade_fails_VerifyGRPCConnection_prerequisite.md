@@ -39,8 +39,8 @@ ConnectionSettings.txt was changed, only default config is allowed without Maint
 
 This will occur if one of the following changes have been made in *ConnectionSettings.txt*:
 
-- Polling was configured (e.g. `polling=1000`)
-- A server port other than 8004 was configured (e.g. `serverport=1234`)
+- Polling was configured (e.g., `polling=1000`)
+- A server port other than 8004 was configured (e.g., `serverport=1234`)
 - Different settings for different IP ranges have been configured.
 
 **Fix**: Modify [ConnectionSettings.txt](xref:ConnectionSettings_txt#connectionsettingstxt-options) to use *GRPCConnection* for all clients and evaluate if Cube connections work as expected:
@@ -57,7 +57,7 @@ Error message:
 SLNet.exe.config .NET Remoting port should be 8004 but was {port}
 ```
 
-This will occur if a server port other than 8004 was configured in `C:\Skyline DataMiner\Files\SLNet.exe.config` (e.g. `<channel ref="http" name="SLNetRemoting" port="1234" timeout="300000" clientConnectionLimit="200">`)
+This will occur if a server port other than 8004 was configured in `C:\Skyline DataMiner\Files\SLNet.exe.config` (e.g., `<channel ref="http" name="SLNetRemoting" port="1234" timeout="300000" clientConnectionLimit="200">`)
 
 **Fix**:
 

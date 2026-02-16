@@ -34,7 +34,7 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
 1. In DataMiner Cube, go to *System Center \>* *Database \> Offload*.
 
-1. To set a custom offload interval, at the top of the *Offloads* section, specify a different interval between 1 and 1440 minutes (i.e. 1 day).
+1. To set a custom offload interval, at the top of the *Offloads* section, specify a different interval between 1 and 1440 minutes (i.e., 1 day).
 
    This is the offload rate at which the data will actually be sent to the offload database. The default interval is 5 minutes.
 
@@ -53,9 +53,9 @@ The offload rate for trend data and alarm data can be configured in System Cente
      >
      > ![Example trend graph](~/dataminer/images/Trending_offload_example.png)
 
-   - The **interval** at which these offloads are generated: A number of minutes between 1 and 1440 (i.e. 1 day).
+   - The **interval** at which these offloads are generated: A number of minutes between 1 and 1440 (i.e., 1 day).
 
-   - The offload **start time**, i.e. the time when the offload to the database first begins, in the format hh:mm:ss. This setting is only implemented at startup, so if you change the setting while the DMA is running, the DMA will need to be restarted for the change to take effect.
+   - The offload **start time**, i.e., the time when the offload to the database first begins, in the format hh:mm:ss. This setting is only implemented at startup, so if you change the setting while the DMA is running, the DMA will need to be restarted for the change to take effect.
 
    - **Remote table name**: Allows you to customize the name of the table containing this data in the offload database. The default name is *Data*.
 
@@ -70,7 +70,7 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
    - **Remote table name**: Allows you to customize the name of the table containing this data in the offload database. The default name is *DataAvg*.
 
-1. To offload **snapshots** (i.e. parameter information for parameters for which the snapshot option has been set in the protocol), select *Parameter value* and *Enable snapshot offload*. The snapshot offloads can then be further fine-tuned as follows:
+1. To offload **snapshots** (i.e., parameter information for parameters for which the snapshot option has been set in the protocol), select *Parameter value* and *Enable snapshot offload*. The snapshot offloads can then be further fine-tuned as follows:
 
    - Select to offload *All parameter values* or only *All changed parameter values*.
 

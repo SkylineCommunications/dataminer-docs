@@ -483,7 +483,7 @@ Permission to delete bookings.
 
 #### Modules \> Bookings \> Execute
 
-Permission to execute automation scripts or parameter sets linked to bookings, e.g. scripts that are linked to booking events, or custom context menu items for bookings.
+Permission to execute automation scripts or parameter sets linked to bookings, e.g., scripts that are linked to booking events, or custom context menu items for bookings.
 
 ### Modules \> Correlation
 

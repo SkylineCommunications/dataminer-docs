@@ -34,7 +34,7 @@ These are the supported download properties:
   Examples:
 
   - Example of an absolute path: To download the latest Cube version from DataMiner Services, set *Url* to `https://dataminer.services/install/DataMinerCube.exe`.
-  - Example of a relative path: To download the file hosted on URL `http(s)://yourDma/Documents/MyElement/MyDocument.txt` (i.e. the file *MyDocument.txt* located in the folder `C:\Skyline DataMiner\Documents\MyElement\` of the DMA), set *Url* to `/Documents/MyElement/MyDocument.txt`.
+  - Example of a relative path: To download the file hosted on URL `http(s)://yourDma/Documents/MyElement/MyDocument.txt` (i.e., the file *MyDocument.txt* located in the folder `C:\Skyline DataMiner\Documents\MyElement\` of the DMA), set *Url* to `/Documents/MyElement/MyDocument.txt`.
 
 - **FileNameToSave**: The name that will be given to the file once it has been downloaded. By default, this name is identical to that of the file at the remote location.
 
@@ -67,8 +67,8 @@ When you add a query to a *Column & bar chart* component or a *Pie & donut chart
 
 To do so, the system will proceed as follows:
 
-1. Search for a column that contains label values (i.e. a column with heading "label", "name", etc.).
-1. Search for a column that contains segment size or bar size values (i.e. a column with heading "amount", "value", "quantity", etc.).
+1. Search for a column that contains label values (i.e., a column with heading "label", "name", etc.).
+1. Search for a column that contains segment size or bar size values (i.e., a column with heading "amount", "value", "quantity", etc.).
 1. If nothing could be found in steps 1 and 2, take the first string value as label and the first numeric value as segment size or bar size value.
 
 > [!NOTE]

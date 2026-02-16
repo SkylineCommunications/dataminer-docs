@@ -177,7 +177,7 @@ Now the URLs will instead redirect to the proper current URL format, which can b
 
 #### 11 November 2024 - Enhancement - Catalog - All version formats supported for new item versions [ID 41243]
 
-When an item version is registered, the Catalog API will now allow all version formats. If a version does not start with "x.x.x.x" or "x.x.x", it will be put in an "other" range. Versions with suffixes (e.g. -alpha, -beta, -CUxxx, etc.) will be added to their respective ranges.
+When an item version is registered, the Catalog API will now allow all version formats. If a version does not start with "x.x.x.x" or "x.x.x", it will be put in an "other" range. Versions with suffixes (e.g., -alpha, -beta, -CUxxx, etc.) will be added to their respective ranges.
 
 #### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 
@@ -201,7 +201,7 @@ Previously, when you enabled the expiration date for a share and then set a date
 
 #### 7 November 2024 - Enhancement - Admin app - Audit export rephrased [ID 41234]
 
-From now on, the audit export entry will have a better title, e.g. "Usage export by ...".
+From now on, the audit export entry will have a better title, e.g., "Usage export by ...".
 
 #### 7 November 2024 - Fix - Catalog API - Missing search results [ID 41226]
 
@@ -352,7 +352,7 @@ Improved the message when no usage data is available yet for a given organizatio
 
 #### 17 September 2024 - Fix - Remote Access (automatic) login not working with special characters in DataMiner account configuration [ID 40788]
 
-If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access to the web apps (e.g. the Monitoring app via dataminer.services), it was not possible to log in or make use of the automatic login with a linked account. This has now been fixed.
+If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access to the web apps (e.g., the Monitoring app via dataminer.services), it was not possible to log in or make use of the automatic login with a linked account. This has now been fixed.
 
 #### 17 September 2024 - New feature - Admin - STaaS region registration and configuration tile [ID 40786]
 
@@ -505,7 +505,7 @@ Up to now, when you had set filters in the browse page and then went to a detail
 
 #### 1 August 2024 - Fix - Cloud apps - White page was displayed when using an old browser [ID 40347]
 
-When you were using an old browser (e.g. Microsoft Internet Explorer), a white page would be displayed due to JavaScript not loading correctly.
+When you were using an old browser (e.g., Microsoft Internet Explorer), a white page would be displayed due to JavaScript not loading correctly.
 
 From now on, a notice will appear, saying that your browser is no longer supported and that you should use a newer one.
 

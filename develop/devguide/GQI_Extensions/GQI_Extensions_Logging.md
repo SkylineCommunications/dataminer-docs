@@ -142,7 +142,7 @@ The minimum log level is the highest level of the following two:
   The default level is `Information`.
 
 > [!TIP]
-> To get log entries at the `Debug` level, set both the global and instance-specific minimum log level to `Debug` or lower. If either is higher (e.g. `Information`), you will only get log entries for that level and above. For an overview of the log levels, refer to [Minimum log level](xref:GQI_Logging#minimum-log-level).
+> To get log entries at the `Debug` level, set both the global and instance-specific minimum log level to `Debug` or lower. If either is higher (e.g., `Information`), you will only get log entries for that level and above. For an overview of the log levels, refer to [Minimum log level](xref:GQI_Logging#minimum-log-level).
 
 ### [GQI in SLHelper](#tab/gqi-slhelper)
 

@@ -22,7 +22,7 @@ To configure this:
 
       ![App endpoints](~/dataminer/images/SAML_B2C_endpoints.png)
 
-   1. Select the Azure AD B2C SAML metadata endpoint, e.g. `https://dataminerservices.b2clogin.com/dataminerservices.onmicrosoft.com/<policy-name>/Samlp/metadata`, and replace \<policy-name> with the name of the policy you created earlier.
+   1. Select the Azure AD B2C SAML metadata endpoint, e.g., `https://dataminerservices.b2clogin.com/dataminerservices.onmicrosoft.com/<policy-name>/Samlp/metadata`, and replace \<policy-name> with the name of the policy you created earlier.
 
 1. Configure DataMiner to use external authentication. You can do this in the same way as for [Entra ID](xref:SAML_using_Entra_ID#configuring-dataminerxml-to-use-external-authentication).
 

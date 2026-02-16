@@ -40,7 +40,7 @@ As creating additional SLProtocol processes has an impact on the resource usage 
 
 From those 50 SLProtocol processes, 10 processes will be reserved for elements that are not running in isolation mode. This means, that only 40 elements will be able to run in isolation mode at any given time. However, the notice that will appear each time an attempt is made to start an additional element in isolation mode will mention the 50-element limit.
 
-Reducing the number of SLProtocol processes in the *DataMiner.xml* file will reduce the number of reserved processes. However, increasing the number of SLProtocol processes to above 50 will keep the reserved number of SLProtocol processes to 50 (i.e. the maximum number of SLProtocol processes).
+Reducing the number of SLProtocol processes in the *DataMiner.xml* file will reduce the number of reserved processes. However, increasing the number of SLProtocol processes to above 50 will keep the reserved number of SLProtocol processes to 50 (i.e., the maximum number of SLProtocol processes).
 
 For example, if 15 SLProtocol processes are configured in the *DataMiner.xml* file, and 45 elements are configured to run in isolation mode, then:
 
@@ -247,7 +247,7 @@ A number of enhancements have been made to the ProtocolFunctionManager with rega
 
 When Relational anomaly detection (RAD) detects that a group of parameters deviates from its normal behavior, it will create a suggestion event for each of the parameters in that group. These suggestion events will now be grouped into a single incident so that it is shown on a single line in the Alarm Console.
 
-When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
+When you clear such an incident, all its base alarms (i.e., the suggestion events created by Relational anomaly detection) will also be cleared.
 
 #### NATS: NatsCustodianResetNatsRequest will now be blocked when the NATSForceManualConfig option is enabled [ID 42074]
 
@@ -288,7 +288,7 @@ Because of a number of enhancements, overall performance has increased when exec
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-When you migrate data of data type *CustomData* from either Cassandra Single or Cassandra Cluster to STaaS (using e.g. the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02)), you can now indicate exactly which data you want to have migrated.
+When you migrate data of data type *CustomData* from either Cassandra Single or Cassandra Cluster to STaaS (using e.g., the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02)), you can now indicate exactly which data you want to have migrated.
 
 For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* data type as well as the *Analytics* data type.
 
@@ -333,7 +333,7 @@ From now on, you can view the logging of the GQI DxM in DataMiner Cube.
 Also, no new log file will be started every day anymore. From now on, a new log file will only be started as soon as the size of the existing file reaches 5 MB.
 
 > [!NOTE]
-> Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e. the logging of the ad hoc data sources and the operators).
+> Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e., the logging of the ad hoc data sources and the operators).
 
 #### GQI DxM: Separate log file per extension library in Extensions folder [ID 42355]
 
@@ -541,10 +541,10 @@ The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packa
 <!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
 <!-- Not added to MR 10.6.0 -->
 
-When an element had been migrated from one DataMiner Agent to another, in some rare cases, certain actions involving that migrated element (e.g. a deletion of the element) would fail until the DataMiner Agent was restarted.
+When an element had been migrated from one DataMiner Agent to another, in some rare cases, certain actions involving that migrated element (e.g., a deletion of the element) would fail until the DataMiner Agent was restarted.
 
 #### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
 
 <!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
 
-In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g. when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.
+In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g., when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.

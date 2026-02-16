@@ -49,6 +49,6 @@ To do so:
 
    > [!NOTE]
    >
-   > - Make sure both tasks recur at the same interval, e.g. both daily or both weekly, but not one daily and the other weekly.
+   > - Make sure both tasks recur at the same interval, e.g., both daily or both weekly, but not one daily and the other weekly.
    > - Make sure their recurrence does not make the tasks overlap.
    > - Once an event has been made recurrent, it will no longer be possible to edit the event directly in the timeline. Further editing will only be possible in the *list* tab.

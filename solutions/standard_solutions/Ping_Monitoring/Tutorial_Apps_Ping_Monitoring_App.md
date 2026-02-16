@@ -107,8 +107,8 @@ When you have configured the destinations, the application will update to displa
 
 1. In the *Destinations* table, take a look at the values in the following columns:
 
-   - *Ping Result*: The amount of time passed from the moment DataMiner sent the command to the moment it received the reply from each destination, e.g. *4 ms*.
-   - *Cycle packet loss*: The percentage of lost packets during the last ping cycle, e.g. *0.00 %*. By default, the application sends 4 packets in every cycle, configurable for each destination.
+   - *Ping Result*: The amount of time passed from the moment DataMiner sent the command to the moment it received the reply from each destination, e.g., *4 ms*.
+   - *Cycle packet loss*: The percentage of lost packets during the last ping cycle, e.g., *0.00 %*. By default, the application sends 4 packets in every cycle, configurable for each destination.
 
    These values can help you monitor network congestion and detect outages.
 

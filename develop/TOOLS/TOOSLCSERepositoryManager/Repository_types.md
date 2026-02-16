@@ -27,7 +27,7 @@ Changes made to a Visio repository trigger the corresponding [Visio CI/CD pipeli
 
 ## Custom solutions
 
-This tab lists repositories that contain a Visual Studio solution. These are typically class library solutions that are in turn used by e.g. protocols or automation scripts.
+This tab lists repositories that contain a Visual Studio solution. These are typically class library solutions that are in turn used by e.g., protocols or automation scripts.
 
 Changes made to a custom solution repository trigger the corresponding [custom solution CI/CD pipeline](xref:Pipeline_stages_for_custom_solutions).
 

@@ -15,8 +15,8 @@ Configures an Agent.
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
 | [id](xref:SNMP.Configuration.Agent-id) | unsignedInt |  | Specifies the ID. |
-| [type](xref:SNMP.Configuration.Agent-type) | string |  | Specifies the type (e.g. IPv4). |
-| [value](xref:SNMP.Configuration.Agent-value) | string |  | Specifies the value (e.g. the IPv4 address). |
+| [type](xref:SNMP.Configuration.Agent-type) | string |  | Specifies the type (e.g., IPv4). |
+| [value](xref:SNMP.Configuration.Agent-value) | string |  | Specifies the value (e.g., the IPv4 address). |
 
 ## Children
 

@@ -278,7 +278,7 @@ Because of a number of enhancements, the accuracy of the time-scoped relation le
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
 
-When a native process (e.g. SLDataMiner) is stopping, it will by default wait for 30 seconds before it closes the MessageBroker connection.
+When a native process (e.g., SLDataMiner) is stopping, it will by default wait for 30 seconds before it closes the MessageBroker connection.
 
 However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
 
@@ -366,7 +366,7 @@ From now on, by default, the *SLNet.txt* log file will no longer contain any log
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the `C:\Skyline DataMiner\Files\ResetConfig.txt` file, assuming that it would always be executed from the `C:\Skyline DataMiner\Files` folder. As a result, when it was executed from another folder (e.g. from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
+Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the `C:\Skyline DataMiner\Files\ResetConfig.txt` file, assuming that it would always be executed from the `C:\Skyline DataMiner\Files` folder. As a result, when it was executed from another folder (e.g., from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
 
 From now on, *SLReset.exe* will always use the absolute path `C:\Skyline DataMiner\Files\ResetConfig.txt` when locating *ResetConfig.txt*.
 
@@ -512,7 +512,7 @@ When SLDataGateway retrieved data from the database page by page, in some cases,
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
-Events generated after DOM objects were created, updated or deleted would incorrectly be of type `DomCrudEvent<T>` instead of e.g. `DomInstancesChangedEventMessage`.
+Events generated after DOM objects were created, updated or deleted would incorrectly be of type `DomCrudEvent<T>` instead of e.g., `DomInstancesChangedEventMessage`.
 
 #### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID 39756]
 
@@ -572,7 +572,7 @@ At startup, in some cases, the CloudEndpointManager in SLNet could throw an exce
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
+When a DMA did not respond during the midnight synchronization (e.g., because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
 
 #### Sending a GetCCAGatewayGlobalStateRequest would incorrectly require the 'Connect to cloud/DCP' user permission [ID 40051]
 

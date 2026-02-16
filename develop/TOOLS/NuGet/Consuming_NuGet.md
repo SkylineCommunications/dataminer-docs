@@ -15,7 +15,7 @@ When DIS compiles the automation script or protocol, it will extract the require
 >
 > - **Do not manually put assemblies used by a protocol in the folder** `C:\Skyline DataMiner\ProtocolScripts\DllImport`. Instead, install the protocol via a .dmprotocol or .dmapp package (if you publish from [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio), a package is created in the background, and that package is installed by DIS). When installation happens via a .dmprotocol or .dmapp package, DataMiner will know about these assemblies and make sure these are synchronized.
 > - DIS currently **only processes the *lib* folder** of NuGet packages. Other folders such as *ref* or *runtimes* are currently not supported.
-> - In a protocol or automation script solution, you **cannot use NuGet packages that generate code** (e.g. the [Grpc.Tools](https://www.nuget.org/packages/Grpc.Tools) NuGet package). This is because when DataMiner compiles a protocol or automation script, it only considers the C# code that is included in the XML file of the protocol or automation script. Therefore, if you want to make use of this NuGet package, you need to include the generated code in the protocol or automation script solution.
+> - In a protocol or automation script solution, you **cannot use NuGet packages that generate code** (e.g., the [Grpc.Tools](https://www.nuget.org/packages/Grpc.Tools) NuGet package). This is because when DataMiner compiles a protocol or automation script, it only considers the C# code that is included in the XML file of the protocol or automation script. Therefore, if you want to make use of this NuGet package, you need to include the generated code in the protocol or automation script solution.
 > - When consuming different versions of the same NuGet package, make sure you are aware of the **potential pitfalls** when doing so as explained in [Runtime assembly binding](xref:Run_Time_Assembly_Binding).
 
 At Skyline, an [internal NuGet store](https://dev.azure.com/skyline-cloud/Private_NuGets/_artifacts/feed/skyline-private-nugets) is available where Skyline employees can produce and consume private libraries. As a Skyline employee, you will need to [add this store in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) in order to use it.
@@ -24,7 +24,7 @@ At Skyline, an [internal NuGet store](https://dev.azure.com/skyline-cloud/Privat
 
 NuGet libraries from [nuget.org](https://nuget.org) are considered third-party libraries, so make sure licensing is OK.
 
-Consult the Stop/Go/Caution list on [SharePoint](https://skylinebe.sharepoint.com/sites/LegalPortal/SitePages/Stop-Go-Caution-List.aspx). If your license does not appear on the list, or if the use you intend (i.e. internal vs. distribution) is not listed for that license, the use will be considered a "Stop".
+Consult the Stop/Go/Caution list on [SharePoint](https://skylinebe.sharepoint.com/sites/LegalPortal/SitePages/Stop-Go-Caution-List.aspx). If your license does not appear on the list, or if the use you intend (i.e., internal vs. distribution) is not listed for that license, the use will be considered a "Stop".
 
 If you are unsure as to the identification of the license, please contact the [OSS team](mailto:oss@skyline.be).
 
@@ -34,7 +34,7 @@ Try to avoid using NuGet packages that perform direct external communication (un
 
 A NuGet package with direct communication will circumvent the use of DataMiner processes. This will cause the following issues:
 
-- It will not be possible to edit some communication settings (e.g. retries, timeouts) via the element settings.
+- It will not be possible to edit some communication settings (e.g., retries, timeouts) via the element settings.
 - Communication will be hidden from the Stream Viewer.
 - Unless this is taken into account during development, there will be no element timeouts when communication is lost.
 

@@ -44,7 +44,7 @@ The *Settings* page of the *Regression Test Results* element contains all email-
 - **Report Recipients**: Comma-separated list of email addresses that should receive the report.
 - **Start Time**: Time of day when the daily execution should occur.
 - **Last Execution Time**: Timestamp of the most recent execution.
-- **Email Report Execution Status**: The status of the last execution (e.g. *Succeeded*, *Failed*).
+- **Email Report Execution Status**: The status of the last execution (e.g., *Succeeded*, *Failed*).
 
 You can manually trigger the test run and email report by clicking the *Execute Tests* button at the bottom of the *Settings* page.
 

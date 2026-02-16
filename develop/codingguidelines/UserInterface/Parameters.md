@@ -24,7 +24,7 @@ See also [Options for measurement type *number*](xref:Protocol.Params.Param.Meas
 
 ## Exceptional states
 
-In case a device can return exceptional states (e.g. "N/A", "Unknown", etc.), these should be implemented as [Exception](xref:Protocol.Params.Param.Interprete.Exceptions.Exception) or [Other](xref:Protocol.Params.Param.Interprete.Others.Other) and have the disabled state.
+In case a device can return exceptional states (e.g., "N/A", "Unknown", etc.), these should be implemented as [Exception](xref:Protocol.Params.Param.Interprete.Exceptions.Exception) or [Other](xref:Protocol.Params.Param.Interprete.Others.Other) and have the disabled state.
 
 ## Tooltips
 

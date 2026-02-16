@@ -7,7 +7,7 @@ uid: chat
 In DataMiner Cube, it is possible to exchange chat messages with other users of your DataMiner System.
 
 > [!NOTE]
-> All chat messages exchanged by DataMiner users are logged as information events. This means that they can be used to trigger e.g. correlation rules.
+> All chat messages exchanged by DataMiner users are logged as information events. This means that they can be used to trigger e.g., correlation rules.
 
 ## Starting a chat session with a DataMiner user
 

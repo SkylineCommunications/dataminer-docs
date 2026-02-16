@@ -10,7 +10,7 @@ Dev Packs are very similar to standard NuGet package except that they will not b
 
 DataMiner Dev Packs (or DataMiner Development Packages) are NuGet packages available in the [official NuGet store](https://www.nuget.org/) that contain the necessary assemblies for the development of DataMiner connectors or automation scripts.
 
-They allow access to the SLProtocol interface and IEngine interface respectively within your Visual Studio projects without the need to have DataMiner installed. This also makes it possible to let e.g. the CI/CD pipeline build the solution, as the required DataMiner dependencies are provided in the NuGet package.
+They allow access to the SLProtocol interface and IEngine interface respectively within your Visual Studio projects without the need to have DataMiner installed. This also makes it possible to let e.g., the CI/CD pipeline build the solution, as the required DataMiner dependencies are provided in the NuGet package.
 
 The following packages are available:
 
@@ -22,7 +22,7 @@ The Automation and Protocol NuGet packages both have a dependency on the Common 
 
 The Automation, Protocol, and Common NuGet packages are so-called meta-packages. This means that they only contain references to other NuGet packages. These packages reference NuGet packages with IDs starting with "Skyline DataMiner.Files.". Every *Skyline DataMiner.Files.\** NuGet package contains a single assembly from the "Skyline DataMiner/Files" folder of DataMiner.
 
-Typically, you will only need to install the meta-package. However, in some cases, it is possible you will need to also install a *Skyline DataMiner.Files.\** Nuget package. For example, in a development requiring IMediator or unit conversion, e.g. to work with SRM profile parameters, you need to install the following package: [Skyline.DataMiner.Files.SLMediationSnippets](https://www.nuget.org/packages/Skyline.DataMiner.Files.SLMediationSnippets).
+Typically, you will only need to install the meta-package. However, in some cases, it is possible you will need to also install a *Skyline DataMiner.Files.\** Nuget package. For example, in a development requiring IMediator or unit conversion, e.g., to work with SRM profile parameters, you need to install the following package: [Skyline.DataMiner.Files.SLMediationSnippets](https://www.nuget.org/packages/Skyline.DataMiner.Files.SLMediationSnippets).
 
 ### Requirements
 
@@ -43,7 +43,7 @@ Versioning scheme:
 
 A.B.C.D
 
-- "A.B.C" matches the DataMiner version (e.g. 10.2.0).
+- "A.B.C" matches the DataMiner version (e.g., 10.2.0).
 - "D" is a revision number.
 
 Revisions can be released to:

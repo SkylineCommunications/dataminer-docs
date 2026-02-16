@@ -100,9 +100,9 @@ Next, you will create an element that allows you to monitor a website of your ch
 
 1. Specify the following information:
 
-   - *General* > *Name*: Enter a name for your element, e.g. `My corporate website`.
+   - *General* > *Name*: Enter a name for your element, e.g., `My corporate website`.
 
-   - *General* > *Description*: Enter a description for your element, e.g. `Element to monitor a website's responsiveness`.
+   - *General* > *Description*: Enter a description for your element, e.g., `Element to monitor a website's responsiveness`.
 
    - *Device details* > *Protocol*: `Generic HTTP Query`.
 
@@ -117,7 +117,7 @@ Next, you will create an element that allows you to monitor a website of your ch
 
 1. Provide the following information:
 
-   - **URI (HTTP Queries)**: Enter the hostname of your chosen website. Use this format: `http(s)://[address]`, e.g. `https://www.skyline.be`.
+   - **URI (HTTP Queries)**: Enter the hostname of your chosen website. Use this format: `http(s)://[address]`, e.g., `https://www.skyline.be`.
 
    - **Interval (HTTP Queries)**: 10 s.
 
@@ -127,7 +127,7 @@ Next, you will create an element that allows you to monitor a website of your ch
 
      The system will wait 900 seconds for a response from the remote server after an HTTP query is sent. If the server does not respond within this time frame, the query is considered failed.
 
-   - **Name (HTTP Queries)**: Enter a name for your entry, e.g. `Skyline`.
+   - **Name (HTTP Queries)**: Enter a name for your entry, e.g., `Skyline`.
 
 1. Select *OK* in the lower-right corner.
 

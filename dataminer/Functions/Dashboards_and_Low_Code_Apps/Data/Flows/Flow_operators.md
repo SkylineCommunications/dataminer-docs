@@ -18,11 +18,11 @@ Delays the emission of a value until a specified time has passed without receivi
 ![Debouncing an input value](~/dataminer/images/Flow_OperatorDebounce.gif)<br>
 *Debouncing an input value in DataMiner 10.4.12*
 
-This could for example be used to apply a buffer to rapidly changing data (e.g. a [textbox](xref:DashboardTextInput)) that is used in a query (e.g. like in step 4 of the [*Using controls to create a dynamic GQI query* tutorial](xref:Tutorial_Dashboards_Controls_Query#step-4-link-the-text-input-to-the-gqi-query-to-enable-dynamic-filtering)).
+This could for example be used to apply a buffer to rapidly changing data (e.g., a [textbox](xref:DashboardTextInput)) that is used in a query (e.g., like in step 4 of the [*Using controls to create a dynamic GQI query* tutorial](xref:Tutorial_Dashboards_Controls_Query#step-4-link-the-text-input-to-the-gqi-query-to-enable-dynamic-filtering)).
 
 ### Settings
 
-For this operator, one setting is available, i.e. *Duration*, which defines the duration of the debounce. The duration is expressed in milliseconds and should be between 1 millisecond and 1 day.
+For this operator, one setting is available, i.e., *Duration*, which defines the duration of the debounce. The duration is expressed in milliseconds and should be between 1 millisecond and 1 day.
 
 ## Merge
 

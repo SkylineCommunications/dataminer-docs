@@ -18,4 +18,4 @@ Upgrade to DataMiner 10.2.0 [CU8] or 10.2.11.
 
 ## Issue description
 
-In DataMiner Systems using a Cassandra cluster as the general database for the entire DMS (i.e. a "Cassandra Cluster setup"), the SLDataGateway process could use a continually increasing amount of memory without a clear reason.
+In DataMiner Systems using a Cassandra cluster as the general database for the entire DMS (i.e., a "Cassandra Cluster setup"), the SLDataGateway process could use a continually increasing amount of memory without a clear reason.

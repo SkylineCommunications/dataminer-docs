@@ -206,7 +206,7 @@ The *Element ID* and *Parameter ID* columns in the table contain the IDs of the 
 
    1. Select the columns *Parameter ID* and *Parameter Name*.
 
-   1. Using the placeholders {0} and {1}, in the *Format* box, indicate how the concatenated data should be displayed, e.g. `{1} ({0})`.
+   1. Using the placeholders {0} and {1}, in the *Format* box, indicate how the concatenated data should be displayed, e.g., `{1} ({0})`.
 
    1. In the *New column name* box, specify `Parameter`.
 
@@ -222,7 +222,7 @@ The *Element ID* and *Parameter ID* columns in the table contain the IDs of the 
 
 > [!NOTE]
 > The custom operators mentioned above are included in the package you installed in step 1. You can also find them on GitHub: [Parameter KeyToName](https://github.com/SkylineCommunications/SLC-GQIO-Parameter-KeyToName), [ParameterKeyToSeparateColumns](https://github.com/SkylineCommunications/SLC-GQIO-ParameterKeyToSeparateColumns), and [RenameColumn](https://catalog.dataminer.services/details/9707180b-6a73-480d-a2bb-81d9f8f59498). Note that the *Parameter KeyToName* operator can make a dashboard load significantly more slowly.\
-> Key in the *Parameter KeyToName* operator are [IGQIOnInit](xref:GQI_IGQIOnInit) and its [GQIDMS](xref:GQI_GQIDMS#iconnection-getconnection) interface, which provides access to protocol and parameter information via the element or protocol. The operator has a very basic protocol cache in place. Specifying the *Protocol* and *ProtocolVersion* in the *Parameter KeyToName* operator is optional, but will result in better performance because the operator will be able to reuse protocol information for the elements of the same protocol and version. Overridden parameter names (e.g. information template) will then go back to the name from the protocol.\
+> Key in the *Parameter KeyToName* operator are [IGQIOnInit](xref:GQI_IGQIOnInit) and its [GQIDMS](xref:GQI_GQIDMS#iconnection-getconnection) interface, which provides access to protocol and parameter information via the element or protocol. The operator has a very basic protocol cache in place. Specifying the *Protocol* and *ProtocolVersion* in the *Parameter KeyToName* operator is optional, but will result in better performance because the operator will be able to reuse protocol information for the elements of the same protocol and version. Overridden parameter names (e.g., information template) will then go back to the name from the protocol.\
 > Key in the *ParameterKeyToSeparateColumns* operator is the *ParamID* Object (slnettypes.dll).
 
 ## Step 5: Add a trending component and timeline view to visualize the anomalies

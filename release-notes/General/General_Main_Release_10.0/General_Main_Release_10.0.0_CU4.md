@@ -68,7 +68,7 @@ In some cases, it could occur that hotfixes were not properly validated during i
 
 #### When adding or editing an element, some fields would not correctly be saved into the element.xml file \[ID 25994\]
 
-When adding or editing an element, in some cases, the contents of a number of fields (e.g. GetCommunity, SetCommunity, etc.) would not correctly be saved into the element.xml file.
+When adding or editing an element, in some cases, the contents of a number of fields (e.g., GetCommunity, SetCommunity, etc.) would not correctly be saved into the element.xml file.
 
 #### DataMiner Cube - Alarm Console: Alarm duration indicator was missing \[ID 26044\]
 
@@ -85,7 +85,7 @@ When, in an automation script, you specified a parameter containing a double quo
 
 #### DataMiner Cube - Trending: Zoom buttons in top-right corner of a trend graph window would incorrectly not be displayed \[ID 26068\]
 
-When you opened a trend graph, e.g. by clicking the trend graph icon next to a parameter shown on an element card, in some cases, the zoom buttons (Last 24 hours, Week to date and Month to date) in the top-right corner would incorrectly not be displayed.
+When you opened a trend graph, e.g., by clicking the trend graph icon next to a parameter shown on an element card, in some cases, the zoom buttons (Last 24 hours, Week to date and Month to date) in the top-right corner would incorrectly not be displayed.
 
 #### Deadlock between SLNet and SLDataGateway during a DataMiner startup or a Failover switch \[ID 26074\]
 
@@ -97,7 +97,7 @@ In some cases, an exception could be thrown while initializing a Visio page cont
 
 #### DataMiner Cube - Visual Overview: No tool tip shown when SetVar shape was configured using legacy syntax \[ID 26087\]
 
-In some cases, no tool tip would be shown when you had used legacy syntax to configure a tool tip on a shape (e.g. SetVar set to "varA:X:Y" and SetVarOptions set to "Control=Shape").
+In some cases, no tool tip would be shown when you had used legacy syntax to configure a tool tip on a shape (e.g., SetVar set to "varA:X:Y" and SetVarOptions set to "Control=Shape").
 
 #### DataMiner Cube - Element Connections: Problem when swapping connections \[ID 26098\]
 
@@ -165,7 +165,7 @@ When you are about to change the protocol version of an element, a popup message
 
 #### An SNMP table configured to retrieve data via a bulk operation would not get filled in when one of the responses contained an error \[ID 26333\]
 
-When an SNMP table was configured to retrieve data via a bulk operation (e.g. multiple get), up to now, the table would only get filled in when all requests had received a correct response. One response containing an error would cause the entire table to not get filled in.
+When an SNMP table was configured to retrieve data via a bulk operation (e.g., multiple get), up to now, the table would only get filled in when all requests had received a correct response. One response containing an error would cause the entire table to not get filled in.
 
 From now on, each time a correct response is received, the data in that response will be returned to SLProtocol for processing.
 
@@ -187,7 +187,7 @@ A number of minor issues have been fixes in the Alarm Console:
 
 - When the alarms in a particular tab page were grouped by Time, in some cases, the sorting would be reversed each time you changed the Automatically grouped according to arrangement setting.
 
-- In some cases, similar alarms would have different parameter descriptions. One alarm would e.g. show “Temperature” while another alarm would show “Temperature A”.
+- In some cases, similar alarms would have different parameter descriptions. One alarm would e.g., show “Temperature” while another alarm would show “Temperature A”.
 
 #### DataMiner Cube: Module names in side bar not translated when UI language was set to a language other than English \[ID 26402\]
 

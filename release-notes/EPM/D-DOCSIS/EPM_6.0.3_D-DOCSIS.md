@@ -57,7 +57,7 @@ To add more contextuality, the RPD Relations page now shows RPD relation connect
 
 #### Data Sources document updated with additional information \[ID 32044\]
 
-The Data Sources document (i.e. EPM_D-DOCSIS_Data_Sources_v7.xlsx) has been updated with additional information about KPIs such as OIDs, details about calculation performance, etc.
+The Data Sources document (i.e., EPM_D-DOCSIS_Data_Sources_v7.xlsx) has been updated with additional information about KPIs such as OIDs, details about calculation performance, etc.
 
 #### Improved processing of DCF requests \[ID 32046\]
 

@@ -19,7 +19,7 @@ It is possible to retrieve multiple variables in a single get request. In order 
 ```
 
 > [!NOTE]
-> According to the SNMPv1 specification (RFC1157), as soon as one object in the variable bindings field of a get request is not available in the MIB view, the value of the error status field of the corresponding response will be set to "noSuchName". Consequently, none of the requested variables will be shown in DataMiner. In SNMPv2 (and SNMPv3), this behavior has changed (RFC3416), and this no longer results in a "noSuchName" error. Therefore, for SNMPv2 and SNMPv3, the other requested variables (i.e. the ones that are available) will be shown in DataMiner.
+> According to the SNMPv1 specification (RFC1157), as soon as one object in the variable bindings field of a get request is not available in the MIB view, the value of the error status field of the corresponding response will be set to "noSuchName". Consequently, none of the requested variables will be shown in DataMiner. In SNMPv2 (and SNMPv3), this behavior has changed (RFC3416), and this no longer results in a "noSuchName" error. Therefore, for SNMPv2 and SNMPv3, the other requested variables (i.e., the ones that are available) will be shown in DataMiner.
 
 ## See also
 

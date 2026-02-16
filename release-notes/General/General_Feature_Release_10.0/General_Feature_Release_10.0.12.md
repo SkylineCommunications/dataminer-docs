@@ -95,7 +95,7 @@ When you open an alarm card that shows an alarm tree containing consolidated eve
 
 #### Profiles app: Converters \[ID 27264\]
 
-In the *Profiles* app, it is now possible to configure a converter (i.e. a mediation snippet) for a parameter linked to a profile parameter.
+In the *Profiles* app, it is now possible to configure a converter (i.e., a mediation snippet) for a parameter linked to a profile parameter.
 
 To configure a converter, do the following:
 
@@ -123,7 +123,7 @@ Up to now, when a DataMiner Agent disconnected from the DataMiner System, the el
 > - The cache is not persistent.
 >   - When the disconnected DMA restarts, its elements will no longer be available to the other DMAs in the DMS.
 >   - When another DMA joins the DMS, the elements of the disconnected DMA will not be available to the new DMA.
-> - Any messages sent to the disconnected DMA (e.g. to retrieve or update information) will result in an exception being thrown.
+> - Any messages sent to the disconnected DMA (e.g., to retrieve or update information) will result in an exception being thrown.
 
 #### DataMiner Cube will now always connect to a DataMiner Agent via .NET Remoting \[ID 27354\]
 
@@ -156,7 +156,7 @@ It is now possible to visualize a percentile line on a trend graph in DataMiner 
 
 If the range of the graph is adapted, the percentile is not automatically updated, so that you can compare the percentile for a certain range with the data for a larger or smaller time frame. The percentile line will be displayed as a full line over the range for which it was originally displayed, and as a dashed line over the rest of the graph.
 
-When you click the percentile line, a refresh option is displayed that allows you to refresh the percentile to the currently displayed data. Clicking the line also displays the option to adjust the percentile, so that you can e.g. display the 90th percentile instead.
+When you click the percentile line, a refresh option is displayed that allows you to refresh the percentile to the currently displayed data. Clicking the line also displays the option to adjust the percentile, so that you can e.g., display the 90th percentile instead.
 
 Finally, in the *Trending* tab of the Cube user settings, a new *Show percentile* setting is now available, which can be used to have the percentile line displayed by default whenever a trend graph is opened. If this option is selected, you can also select which percentile should be calculated by default.
 
@@ -216,7 +216,7 @@ When you use a table column parameter as input for a State component in the Dash
 
 #### Ordering of data entries used in a dashboard component \[ID 27486\]
 
-For dashboard components that can display multiple data entries and for which it makes sense to modify the order in which these entries are displayed (e.g. State components, Parameter table components, etc.), in the *Data* pane, a new *Data used in component* section is available. This section lists the different data entries used by the selected component, with arrow icons on the right that can be used to change the order in which the entries are displayed.
+For dashboard components that can display multiple data entries and for which it makes sense to modify the order in which these entries are displayed (e.g., State components, Parameter table components, etc.), in the *Data* pane, a new *Data used in component* section is available. This section lists the different data entries used by the selected component, with arrow icons on the right that can be used to change the order in which the entries are displayed.
 
 #### Dashboards app: Support for quick filters of tables in visual overview components \[ID 27517\]
 
@@ -266,7 +266,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 Requirements:
 
 - At least one web server (running Windows Server)
-- A valid SSL certificate signed by a public certificate authority for the FQDN of the Dashboard Gateway (e.g. “gateway.mycompany.com”)
+- A valid SSL certificate signed by a public certificate authority for the FQDN of the Dashboard Gateway (e.g., “gateway.mycompany.com”)
 - A DataMiner user account with
 
   - access to all views, elements and alarms,
@@ -287,7 +287,7 @@ Configuration:
 
 1. From a DataMiner Agent, copy the C:\\Skyline DataMiner\\Webpages\\API folder to the web root folder of the Dashboard Gateway web server (default: C:\\inetpub\\wwwroot) and, in IIS Manager, convert the API into an application.
 
-1. From a DataMiner Agent, copy over the web application(s) (e.g. C:\\Skyline DataMiner\\Webpages\\Dashboard, C:\\Skyline DataMiner\\Webpages\\Monitoring, C:\\Skyline DataMiner\\Webpages\\Jobs, C:\\Skyline DataMiner\\Webpages\\Ticketing, etc.) to the web root folder of the Dashboard Gateway web server.
+1. From a DataMiner Agent, copy over the web application(s) (e.g., C:\\Skyline DataMiner\\Webpages\\Dashboard, C:\\Skyline DataMiner\\Webpages\\Monitoring, C:\\Skyline DataMiner\\Webpages\\Jobs, C:\\Skyline DataMiner\\Webpages\\Ticketing, etc.) to the web root folder of the Dashboard Gateway web server.
 
 1. On the Dashboard Gateway web server, edit the web.config in the API folder, and specify the following settings:
 
@@ -344,7 +344,7 @@ Similar to DataMiner Cube, the Monitoring app now also allows you to visualize v
 
 #### Loading screen of embedded apps will now show a loading indicator instead of the app icon \[ID 27594\]
 
-The loading screen of all mobile apps (Monitoring, Dashboards, Jobs, etc.) will now show a loading indicator instead of the app icon when opened in embedded mode (i.e. using a URL that contains either the embed=true or embedded=true argument).
+The loading screen of all mobile apps (Monitoring, Dashboards, Jobs, etc.) will now show a loading indicator instead of the app icon when opened in embedded mode (i.e., using a URL that contains either the embed=true or embedded=true argument).
 
 ### DMS Service & Resource Management
 
@@ -399,7 +399,7 @@ SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to i
 |----------|---------------------------------------------------------------------|
 | -y       | Skip any prompts that ask you whether to run online/offline actions |
 
-##### Online actions (i.e. actions that are only run when the DMA being reset is running)
+##### Online actions (i.e., actions that are only run when the DMA being reset is running)
 
 - ResetFailoverOnline
 
@@ -409,7 +409,7 @@ SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to i
 
   Removes the DMA from the DMS if it is part of one.
 
-##### Offline actions (i.e. actions that are always run whether or not the DMA being reset is running)
+##### Offline actions (i.e., actions that are always run whether or not the DMA being reset is running)
 
 - StopTaskbarUtility
 - StopDataMiner
@@ -460,9 +460,9 @@ This tool, when run with the factory-reset argument, resets the currently active
 
 - `-t` or `--database-type <type>`: Mandatory. The type of database:
 
-  - SQL (i.e. MySQL)
+  - SQL (i.e., MySQL)
   - Cassandra
-  - Elastic (i.e. ElasticSearch)
+  - Elastic (i.e., ElasticSearch)
 
 - `-i` or `--ip <ip>`: Mandatory. The IP address of the database host.
 
@@ -790,7 +790,7 @@ When multiple RTEs occurred in the same process, it could occur that this was no
 
 #### Dashboards: Problem when changing the theme \[ID 27398\]
 
-When, in the Dashboards app, you changed the theme, the colors of certain components (e.g. analog clock, digital clock,...) would not be changed accordingly.
+When, in the Dashboards app, you changed the theme, the colors of certain components (e.g., analog clock, digital clock,...) would not be changed accordingly.
 
 #### DataMiner upgrade: SNMP service would incorrectly always be stopped \[ID 27400\]
 
@@ -847,7 +847,7 @@ When a daylight saving time change occurred while a booking was active, in some 
 
 Up to now, when you tried to deactivate or delete a function file used by ReservationInstances, ReservationDefinitions, ServiceDefinitions or ServiceProfileDefinitions, the returned error would contain an incorrect file name.
 
-From now on, the error will contain the correct file name, i.e. the name of the file that cannot be deactivated or deleted because it is in use.
+From now on, the error will contain the correct file name, i.e., the name of the file that cannot be deactivated or deleted because it is in use.
 
 #### DataMiner Cube - Bookings app: Bookings list would not get updated when a booking was deleted \[ID 27482\]
 
@@ -859,7 +859,7 @@ On a system with a large amount of alarm properties, in some cases, an error cou
 
 #### DataMiner Cube: Not possible to filter tables on display value \[ID 27490\]
 
-In the quick filter boxes for tables in DataMiner Cube, previously it was only possible to filter on the raw value of the cells, i.e. the value used by the protocol, which is not necessarily the same as the displayed value. Now filtering on the displayed value is also possible.
+In the quick filter boxes for tables in DataMiner Cube, previously it was only possible to filter on the raw value of the cells, i.e., the value used by the protocol, which is not necessarily the same as the displayed value. Now filtering on the displayed value is also possible.
 
 #### Jobs app: When applying a template, job section fields of type 'User' would incorrectly not be overwritten \[ID 27495\]
 
@@ -887,7 +887,7 @@ If you deactivated or deleted a functions file in the Protocols & Templates app,
 
 #### Mobile apps: Date picker controls would show an incorrect month when the day was greater than or equal to 30 (or 29 in case of a leap year) \[ID 27522\]
 
-In mobile apps (e.g. Jobs), in some cases, date picker controls would show an incorrect month when the day was 30 or 31 (or 29, 30 or 31 in case of a leap year).
+In mobile apps (e.g., Jobs), in some cases, date picker controls would show an incorrect month when the day was 30 or 31 (or 29, 30 or 31 in case of a leap year).
 
 #### Dashboards app: Problem with line chart component displaying resource capacity information \[ID 27526\]
 
@@ -925,7 +925,7 @@ In systems with a MySQL local database, it could occur that alarms for numeric o
 
 #### Services containing remote elements would no longer get recalculated when the agent hosting the remote elements was disconnected \[ID 27589\]
 
-In some cases, locally hosted services containing elements hosted on another DataMiner Agent (i.e. remote elements) would no longer get recalculated when the connection with the that other agent was lost.
+In some cases, locally hosted services containing elements hosted on another DataMiner Agent (i.e., remote elements) would no longer get recalculated when the connection with the that other agent was lost.
 
 #### Not possible to delete ticketing resolver \[ID 27603\]
 
@@ -1036,4 +1036,4 @@ In some cases, an embedded alarm timeline component would not show its summary t
 
 #### DataMiner Cube - Correlation: Number of occurrences in 'Sliding window' section could incorrectly not be changed \[ID 27909\]
 
-When you tried to define that a correlation rule had to be triggered when a situation occurred a specific number of times in a specified period of time, in some cases, it would not be possible to change the default number of times (i.e. 1).
+When you tried to define that a correlation rule had to be triggered when a situation occurred a specific number of times in a specified period of time, in some cases, it would not be possible to change the default number of times (i.e., 1).

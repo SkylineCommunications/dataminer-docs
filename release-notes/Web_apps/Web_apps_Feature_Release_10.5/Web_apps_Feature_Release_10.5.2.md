@@ -102,7 +102,7 @@ Overall performance has increased when fetching history alarms. From now on, his
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
+In all web apps (e.g., Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
 
 #### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'Button' [ID 41495]
 
@@ -203,7 +203,7 @@ When you duplicated a published app, and then previewed the newly created duplic
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-When, in the settings of a *Visual overview* component, you changed the page to be displayed to the first page of the Visio file (i.e. page 0), up to now, the component would incorrectly continue to display the page that was selected before.
+When, in the settings of a *Visual overview* component, you changed the page to be displayed to the first page of the Visio file (i.e., page 0), up to now, the component would incorrectly continue to display the page that was selected before.
 
 #### Low-Code Apps - Timeline component: Custom time zone would not be taken into account by the 'Set viewport' action [ID 41632]
 
