@@ -6,6 +6,8 @@ uid: Protocol.Params.Param.Alarm
 
 Specifies the default parameter alarming configuration.
 
+Filling in the default parameters does not cause the parameter to be alarmed by default when creating a new alarm template. However, when the information default value is filled in, the generation of information events will be enabled by default when creating a new alarm template.
+
 ## Parent
 
 [Param](xref:Protocol.Params.Param)
