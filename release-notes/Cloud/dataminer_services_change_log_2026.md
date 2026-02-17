@@ -9,6 +9,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 17 February 2026 - Enhancement - Admin - Confirmation email for ticket creation
+
+When creating a support ticket via the Admin app, a confirmation email is now sent to the user.  
+A sharepoint folder is also created for the ticket when possible.
+
 ### 16 February 2026 - Fix - Home - Account linking with a SAML DMS
 
 On the dataminer.services home page, trying to link a dataminer.services account with your DMS using SAML could sometimes load infinitely. This behavior is now fixed.
