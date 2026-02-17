@@ -40,8 +40,8 @@ Executing the following PowerShell script will generate a new client secret and 
 
 ```powershell
 $clientname = "external client" # The name of client secret to generate
-$adminKey = "..." # The administrator API key for the BrokerGateway of $uri.
 $uri = "..." # change to FQDN of the agent
+$adminKey = "..." # The administrator API key for the BrokerGateway of $uri.
 
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("BrokerGateway-Api-Key", $adminKey)
@@ -62,8 +62,8 @@ Executing the following PowerShell script will remove a chosen client secret. Th
 
 ```powershell
 $clientname = "external client" # The name of client secret to remove
-$adminKey = "..." # The administrator API key for the BrokerGateway of $uri.
 $uri = "..." # change to FQDN of the agent
+$adminKey = "..." # The administrator API key for the BrokerGateway of $uri.
 
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("BrokerGateway-Api-Key", $adminKey)
@@ -76,8 +76,8 @@ Invoke-RestMethod "https://$uri/BrokerGateway/api/clientsecret/deleteclientsecre
 This API call lists up all generated client secrets. The keys are redacted for security reasons. Only the first four characters will be visible.
 
 ```powershell
-$adminKey = "..." # The administrator API key for the BrokerGateway of $uri.
 $uri = "..." # change to FQDN of the agent
+$adminKey = "..." # The administrator API key for the BrokerGateway of $uri.
 
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("BrokerGateway-Api-Key", $adminKey)
