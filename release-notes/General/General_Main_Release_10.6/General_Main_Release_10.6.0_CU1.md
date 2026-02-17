@@ -32,6 +32,18 @@ Since DataMiner version 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!-- RN 43690 -->, SLMa
 
 These log entries will include both the requested version and the actual version of the assembly.
 
+#### BPA test 'Large Alarm Trees' will now run on a daily basis [ID 44565]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+From now on, the *Large Alarm Trees* BPA test will run on a daily basis, and will now generate an error or a warning in the following cases:
+
+- It will generate an error when there is at least one alarm tree that consists of 5000 or more alarms. Only the alarm trees that have reached this size will be returned in the detailed result.
+
+- It will generate a warning when there is at least one alarm tree that consists of 1000 or more alarms, but all alarm trees have less than 5000 alarms. Only the alarm trees that have reached this size will be returned in the detailed result.
+
+Also, no notice will be generated anymore when alarm trees are getting large. As a result, in the `AlarmSettings` section of the *MaintenanceSettings.xml* file, the `recurring` attribute of the `AlarmsPerParameter` element is now obsolete.
+
 #### Security enhancements [ID 44579]
 
 <!-- 44579: MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
