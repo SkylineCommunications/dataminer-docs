@@ -12,7 +12,7 @@ namespace Skyline.DataMiner.Automation
     public interface IClientInfo
     {
         /// <summary>
-        /// Get the time zone of the client.
+        /// Gets the time zone of the client.
         /// If the client did not provide this information, <see langword="null"/> will be returned.
         /// </summary>
         /// <remarks>
