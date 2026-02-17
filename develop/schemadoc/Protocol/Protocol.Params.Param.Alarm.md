@@ -6,7 +6,7 @@ uid: Protocol.Params.Param.Alarm
 
 Specifies the default parameter alarming configuration.
 
-Filling in the default parameters does not cause the parameter to be alarmed by default when creating a new alarm template. However, when the information default value is filled in, the generation of information events will be enabled by default when creating a new alarm template.
+Note that filling in the default parameters does not enable alarm monitoring for these parameters by default in a new alarm template. However, when the information default value is filled in, the generation of information events will be enabled by default in a new alarm template.
 
 ## Parent
 
@@ -17,7 +17,7 @@ Filling in the default parameters does not cause the parameter to be alarmed by 
 |Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[activeTime](xref:Protocol.Params.Param.Alarm-activeTime)|unsignedInt||In case of a constant alarm: the time (in milliseconds) before the alarm is cleared.|
-|[options](xref:Protocol.Params.Param.Alarm-options)|string||Specifies a number of options, separated by semicolons (”;”). These options can only be used if the table is linked to another table.|
+|[options](xref:Protocol.Params.Param.Alarm-options)|string||Specifies a number of options, separated by semicolons (";"). These options can only be used if the table is linked to another table.|
 |[type](xref:Protocol.Params.Param.Alarm-type)|string||When the polled device is able to send a nominal value for the parameter, this attribute can be added to the Protocol.Params.Param.Alarm tag.|
 
 ## Children
@@ -33,7 +33,7 @@ Filling in the default parameters does not cause the parameter to be alarmed by 
 |&nbsp;&nbsp;[MiH](xref:Protocol.Params.Param.Alarm.MiH)|[0, 1]|Defines the default value in the alarm template that this parameter must equal or exceed in order for DataMiner to create a new "minor high" alarm.|
 |&nbsp;&nbsp;[MiL](xref:Protocol.Params.Param.Alarm.MiL)|[0, 1]|Defines the default value in the alarm template that this parameter must equal or exceed in order for DataMiner to create a new "minor low" alarm.|
 |&nbsp;&nbsp;[Monitored](xref:Protocol.Params.Param.Alarm.Monitored)|[0, 1]|Allows enabling or disabling the /Protocol/Params/Param/Alarm element assigned to the parameter.|
-|&nbsp;&nbsp;[Normal](xref:Protocol.Params.Param.Alarm.Normal)|[0, 1]|When the parameter value equals this value or does not exceed the specified warning limits, DataMiner will not generate an alarm. If an alarm was generated earlier, its type will be set to “dropped”.|
+|&nbsp;&nbsp;[Normal](xref:Protocol.Params.Param.Alarm.Normal)|[0, 1]|When the parameter value equals this value or does not exceed the specified warning limits, DataMiner will not generate an alarm. If an alarm was generated earlier, its type will be set to "dropped".|
 |&nbsp;&nbsp;[WaH](xref:Protocol.Params.Param.Alarm.WaH)|[0, 1]|Defines the default value in the alarm template that this parameter must equal or exceed in order for DataMiner to create a new "warning high" alarm.|
 |&nbsp;&nbsp;[WaL](xref:Protocol.Params.Param.Alarm.WaL)|[0, 1]|Defines the default value in the alarm template that this parameter must equal or exceed in order for DataMiner to create a new "warning low" alarm.|
 
