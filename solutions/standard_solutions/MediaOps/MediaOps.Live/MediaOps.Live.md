@@ -17,9 +17,9 @@ These are the out-of-the-box DataMiner applications that are currently included 
   <div class="column">
   <a href="/solutions/standard_solutions/MediaOps/MediaOps.Live/Apps/MO_Control_Surface.html" title="Control Surface" target="_self"><img src="~/solutions/images/mo_ControlSurface.svg" style="width:100%"></a>
   </div>
-  <!--<div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/MediaOps.Live/Apps/MO_Orchestration_Events.html" title="Orchestration Events" target="_self"><img src="~/solutions/images/mo_WorkflowDesigner.svg" style="width:100%"></a>
-  </div>-->
+  <div class="column">
+  <a href="/solutions/standard_solutions/MediaOps/MediaOps.Live/Apps/MO_Orchestration_Events.html" title="Orchestration Events" target="_self"><img src="~/solutions/images/mo_OrchestrationEvents.svg" style="width:100%"></a>
+  </div>
 </div>
 
 ## Installing MediaOps.Live
