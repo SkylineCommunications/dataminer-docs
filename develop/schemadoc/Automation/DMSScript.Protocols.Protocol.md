@@ -24,7 +24,7 @@ Defines a dummy script variable.
 |&nbsp;&nbsp;[Description](xref:DMSScript.Protocols.Protocol.Description)||Specifies the name of the dummy variable.|
 |&nbsp;&nbsp;[Name](xref:DMSScript.Protocols.Protocol.Name)||Specifies the name of the protocol.|
 |&nbsp;&nbsp;[Version](xref:DMSScript.Protocols.Protocol.Version)||Specifies the version of the protocol.|
-|&nbsp;&nbsp;[DefaultElement](xref:DMSScript.Protocols.Protocol.DefaultElement)||Specifies the default element. Format: "Agent ID/Element ID" (E.g.: 200/160).|
+|&nbsp;&nbsp;[DefaultElement](xref:DMSScript.Protocols.Protocol.DefaultElement)||Specifies the default element. Format: "Agent ID/Element ID" (e.g., 200/160).|
 
 ## Remarks
 

@@ -34,7 +34,7 @@ Authentication and encryption are enabled on all databases.
 
 - Authentication is not configured.
 - TLS encryption is not configured.
-- The database user is a default superuser, e.g. *root*.
+- The database user is a default superuser, e.g., *root*.
 
 ### Error
 

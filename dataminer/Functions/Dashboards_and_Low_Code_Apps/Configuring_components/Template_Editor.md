@@ -22,14 +22,21 @@ The Template Editor is currently supported for the following components:
 
 The way you can access the Template Editor depends on the type of component:
 
-### [Grid and timeline](#tab/grid-timeline)
+### [Grid](#tab/grid)
 
-1. Select the component and go to the *Layout* pane on the right.
+1. Select the grid component and go to the *Layout* pane on the right.
 
 1. In the *Item templates* section, click *Edit* ![Edit](~/dataminer/images/Edit_Template.png).
 
-   > [!NOTE]
-   > A preview of the template currently used for this component is displayed in the *Item templates* section.
+### [Timeline](#tab/timeline)
+
+1. Select the timeline component and go to the *Layout* pane on the right.
+
+1. Depending on what you want to customize, open the Template Editor in one of the following ways:
+
+   - To customize **the appearance of individual timeline items**, click *Edit* ![Edit](~/dataminer/images/Edit_Template.png) in the *Item templates* section.
+
+   - To customize **the appearance of timeline groups**, click *Edit* ![Edit](~/dataminer/images/Edit_Template.png) in the *Groups* > *Template* section. This option is available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44557-->, when grouping is applied.
 
 ### [Table](#tab/table)
 
@@ -181,9 +188,9 @@ In the *Dimensions* section of the *Settings* pane, you can resize and position 
 
 To change the unit used for the dimension values, click the unit itself. For instance, clicking *px* will switch to *%*.
 
-You can secure one or multiple dimension settings of a layer by clicking the ![Lock](~/dataminer/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
+You can secure one or multiple dimension settings of a layer by clicking the ![Lock](~/dataminer/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g., changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
 
-From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43740 -->, it is also possible to lock a dimension setting of a shape to the virtual bounds of a component instead of the visual bounds. To do so, keep the CTRL button pressed while clicking the lock icon. The icon will then take the accent color (blue) to indicate that virtual bound locking is enabled. Functionally, this ensures that when virtualization is supported (e.g. in the timeline), shapes will align to the virtual boundary rather than the visible shape boundary, allowing them to extend outside the visible area (i.e. viewport). This way, time-based elements such as pre-roll and post-roll bars that extend beyond the viewport can be visualized.
+From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43740 -->, it is also possible to lock a dimension setting of a shape to the virtual bounds of a component instead of the visual bounds. To do so, keep the CTRL button pressed while clicking the lock icon. The icon will then take the accent color (blue) to indicate that virtual bound locking is enabled. Functionally, this ensures that when virtualization is supported (e.g., in the timeline), shapes will align to the virtual boundary rather than the visible shape boundary, allowing them to extend outside the visible area (i.e., viewport). This way, time-based elements such as pre-roll and post-roll bars that extend beyond the viewport can be visualized.
 
 > [!NOTE]
 >
@@ -209,7 +216,7 @@ Layer-specific properties:
 | Icon | Property | Description | Layer type(s) |
 |--|--|--|--|
 | N/A | Icon | Select any of the available icons from the dropdown list. You can search for a specific icon using the filter box. | Icon |
-| N/A | Text box | Enter custom text. You can enter a column name surrounded by curly brackets (e.g. `{my column}`) to insert the corresponding cell value inside your text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.4<!--RN 42519-->, HTML text formatting is supported. Text layers containing HTML content created before these versions will still be rendered as HTML. | Text |
+| N/A | Text box | Enter custom text. You can enter a column name surrounded by curly brackets (e.g., `{my column}`) to insert the corresponding cell value inside your text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.4<!--RN 42519-->, HTML text formatting is supported. Text layers containing HTML content created before these versions will still be rendered as HTML. | Text |
 | ![Font size](~/dataminer/images/Text_Font_Size.png) | Font size | Specify the size (in pixels) of the text. | Text |
 | ![Color](~/dataminer/images/Text_Color.png) | Text Color | Specify a custom text color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box. The most recently used template colors and the theme colors are always displayed<!--RN 34876-->. From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards<!--RN 43113-->, you can also manually type `currentColor` into the color box. This will automatically apply the font color of the component. | Text |
 | ![Border radius](~/dataminer/images/Text_Roundness.png) | Border radius | Specify the roundness (in pixels) of a shape. The higher the number, the rounder the corners. | Text, Rectangle |
@@ -235,7 +242,7 @@ Each case includes:
 
 - Conditions: Criteria that determine when the case applies.
 
-- Actions: What happens when the conditions are met (e.g. show or hide the layer, change styling, trigger events).
+- Actions: What happens when the conditions are met (e.g., show or hide the layer, change styling, trigger events).
 
 To configure a conditional case:
 
@@ -312,11 +319,24 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
 1. Access the overview of available templates:
 
-   - For the **grid and timeline** components:
+   - For the **grid** component:
 
-     1. Select the component and go the *Layout* pane on the right.
+     1. Select the grid component and go to the *Layout* pane on the right.
 
      1. Under *Item templates*, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png).
+
+   - For the **timeline** component:
+
+     1. Select the timeline component and go to the *Layout* pane on the right.
+
+     1. Depending on what you want to customize, open the template browser in one of the following ways:
+
+        - To browse templates for **individual timeline items**, click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon in the *Item templates* section.
+
+        - To browse templates for **timeline groups**, click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon in the *Groups* > *Template* section. Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44557-->, when grouping is applied.
+
+          > [!NOTE]
+          > While you can access the template browser for timeline groups, no preset templates are available specifically for timeline groups yet.
 
    - For the **table** component:
 
@@ -342,7 +362,7 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
    - (3): Filter the overview by visualization type using the options in the sidebar on the left.
 
-   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Templates overview in DataMiner 10.6.2*
+   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.2*
 
    > [!TIP]
    > You can tell a preset template from a custom template by the *Preset* label in the top-right corner of a template tile.
@@ -359,11 +379,21 @@ If you have already configured at least one other template for a component in th
 
 1. Access the overview of available templates:
 
-   - For the **grid and timeline** components:
+   - For the **grid** component:
 
-     1. Select the component and go the *Layout* pane on the right.
+     1. Select the grid component and go the *Layout* pane on the right.
 
      1. Under *Item templates*, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png).
+
+   - For the **timeline** component:
+
+     1. Select the timeline component and go to the *Layout* pane on the right.
+
+     1. Depending on what you want to customize, open the template browser in one of the following ways:
+
+        - To browse templates for **individual timeline items**, click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon in the *Item templates* section.
+
+        - To browse templates for **timeline groups**, click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon in the *Groups* > *Template* section. Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44557-->, when grouping is applied.
 
    - For the **table** component:
 
@@ -389,7 +419,7 @@ If you have already configured at least one other template for a component in th
 
    - (3): Filter the overview by visualization type using the options in the sidebar on the left.
 
-   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Templates overview in DataMiner 10.6.2*
+   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.2*
 
 1. Click *Apply* in the lower-right corner of the window.
 
@@ -409,6 +439,6 @@ If you have already configured a template for a component of the same type in th
 
 ***
 
-Keep in mind that when you reuse templates, you may need to **manually update column references**: In a text layer of a template, you can enter a column name surrounded by curly brackets (e.g. {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
+Keep in mind that when you reuse templates, you may need to **manually update column references**: In a text layer of a template, you can enter a column name surrounded by curly brackets (e.g., {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
 
 ![Update template](~/dataminer/images/CustomerName.gif)<br>*Template Editor in DataMiner 10.5.4*

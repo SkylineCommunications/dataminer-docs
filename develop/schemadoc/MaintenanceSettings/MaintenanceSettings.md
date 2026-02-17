@@ -14,7 +14,6 @@ Configures general system settings.
 | &#160;&#160;[Aggregation](xref:MaintenanceSettings.Aggregation) | [0, 1] | Configures aggregation-related settings. |
 | &#160;&#160;[AlarmSettings](xref:MaintenanceSettings.AlarmSettings) | [0, 1] | Configures how timeout alarms are visualized in Microsoft Visio shapes. |
 | &#160;&#160;[AutoElementLock](xref:MaintenanceSettings.AutoElementLock) | [0, 1] | When this is set to "true", an element will automatically be locked when a parameter set is performed on it by a user who is allowed to lock and unlock elements. |
-| &#160;&#160;[BrokerGateway](xref:MaintenanceSettings.BrokerGateway) | [0, 1] | Specifies whether the BrokerGateway-managed NATS solution (nats-server service) is used instead of the SLNet-managed NATS solution (NAS and NATS services). |
 | &#160;&#160;[Correlation](xref:MaintenanceSettings.Correlation) | [0, 1] | Configures Correlation-related settings. |
 | &#160;&#160;[DeltCache](xref:MaintenanceSettings.DeltCache) | [0, 1] | Configures the cleanup instructions for the `C:\Skyline DataMiner\System Cache\DELT\` folder. Every time a .dmimport package is exported from or imported onto a DataMiner Agent, it is stored in this folder. By default, the 20 most recent packages are kept. |
 | &#160;&#160;[DELTUpgrades](xref:MaintenanceSettings.DELTUpgrades) | [0, 1] | Configures the automatic cleanup of DELT-related packages in the folder `C:\Skyline DataMiner\Upgrades\`. |

@@ -14,7 +14,7 @@ When you added a number of additional fields to the default job section and then
 
 #### Email report based on dashboard from new app was blank \[ID 26811\]
 
-In some cases, it could occur that if an Automation script sent an email report based on a dashboard from the new Dashboards app, the PDF attached to this email was blank.
+In some cases, it could occur that if an automation script sent an email report based on a dashboard from the new Dashboards app, the PDF attached to this email was blank.
 
 #### Dashboards app: Configuration of Group component not saved \[ID 26828\]
 
@@ -90,7 +90,7 @@ When you switched between dashboards in the new Dashboards app, it could occur t
 
 #### Dashboards app: No error message shown when opening a non-existing dashboard \[ID 26997\]
 
-When you tried to open a non-existing dashboard (e.g. by using an incorrect URL), no error message would appear. Instead, an empty dashboard would be opened.
+When you tried to open a non-existing dashboard (e.g., by using an incorrect URL), no error message would appear. Instead, an empty dashboard would be opened.
 
 #### DataMiner Cube: Issues occurring during DELT import operations \[ID 27004\]
 
@@ -134,11 +134,11 @@ When, in the *Profiles* app, you duplicated a profile parameter of type “disc
 
 #### Dashboards app: Double scroll bars in dashboard with State component \[ID 27272\]
 
-If a dashboard contained a State component, in some cases double scroll bars could be displayed.
+If a dashboard contained a State component, in some cases double scrollbars could be displayed.
 
 #### DataMiner Cube - Trending: Problem when calculating trend predictions \[ID 27292\]
 
-When calculating trend predictions on a more general level (e.g. daily), in some cases, the algorithm would not take into account missing values. Hence, it would incorrectly assume that a repeating pattern found on the more general level was also found on the more detailed level.
+When calculating trend predictions on a more general level (e.g., daily), in some cases, the algorithm would not take into account missing values. Hence, it would incorrectly assume that a repeating pattern found on the more general level was also found on the more detailed level.
 
 #### Dashboards app: Dashboard grid not resized \[ID 27293\]
 
@@ -148,7 +148,7 @@ In some cases, it could occur that the dashboard grid was not resized when neces
 
 When a dashboard contained a Group component, it could occur that two *Delete component* buttons were displayed when the dashboard was in edit mode.
 
-#### Interactive Automation scripts: Problems with the UIBlockDefinition.IsEnabled and UIBlockDefinition.InitialValue properties \[ID 27326\]
+#### Interactive automation scripts: Problems with the UIBlockDefinition.IsEnabled and UIBlockDefinition.InitialValue properties \[ID 27326\]
 
 Up to now, UIBlockDefinition.IsEnabled was not applied for blocks of type “checkbox”. From now on, a block of type “checkbox” will be disabled when the UIBlockDefinition.IsEnabled property is set to False.
 
@@ -176,15 +176,15 @@ When, in the *Profiles* app, you saved a profile definition, a profile instance
 
 #### Dashboards: Problem when changing the theme \[ID 27398\]
 
-When, in the Dashboards app, you changed the theme, the colors of certain components (e.g. analog clock, digital clock,...) would not be changed accordingly.
+When, in the Dashboards app, you changed the theme, the colors of certain components (e.g., analog clock, digital clock,...) would not be changed accordingly.
 
-#### Problem when a QAction launched an Automation script immediately after the element had been started \[ID 27431\]
+#### Problem when a QAction launched an automation script immediately after the element had been started \[ID 27431\]
 
-When a QAction launched an Automation script immediately after the element had been started, in some cases, an exception could be thrown.
+When a QAction launched an automation script immediately after the element had been started, in some cases, an exception could be thrown.
 
 #### DataMiner Cube: Not possible to filter tables on display value \[ID 27490\]
 
-In the quick filter boxes for tables in DataMiner Cube, previously it was only possible to filter on the raw value of the cells, i.e. the value used by the protocol, which is not necessarily the same as the displayed value. Now filtering on the displayed value is also possible.
+In the quick filter boxes for tables in DataMiner Cube, previously it was only possible to filter on the raw value of the cells, i.e., the value used by the protocol, which is not necessarily the same as the displayed value. Now filtering on the displayed value is also possible.
 
 #### Problem when renaming DVE elements \[ID 27494\]
 
@@ -247,7 +247,7 @@ When no domains had been configured, in some cases, the jobs list would incorrec
 
 In some cases, FileInfoManager would handle production protocols incorrectly.
 
-Also, Automation script IDs will now be case insensitive.
+Also, automation script IDs will now be case insensitive.
 
 #### SLAnalytics: Problem when updating behavioral anomaly detection suggestion events \[ID 27646\]
 
@@ -257,9 +257,9 @@ In some cases, updates to behavioral anomaly detection suggestion events would c
 
 When, in configuration mode, you selected the job domain that was already selected, in some cases, the loading indicator would remain visible indefinitely.
 
-#### Interactive Automation scripts: Problem when a text box had its wantOnChange setting set to true and its value set to an empty string \[ID 27666\]
+#### Interactive automation scripts: Problem when a text box had its wantOnChange setting set to true and its value set to an empty string \[ID 27666\]
 
-When a text box in an interactive Automation script had its wantOnChange setting set to true and its value set to an empty string, in some cases, an exception could be thrown.
+When a text box in an interactive automation script had its wantOnChange setting set to true and its value set to an empty string, in some cases, an exception could be thrown.
 
 #### Mobile apps: Problem with time range quick pick buttons \[ID 27676\]
 
@@ -298,7 +298,7 @@ Error trapped: 'Skyline.DataMiner.Web.Common.IPersistentConnectionContainerEx' d
 
 When a VirtualFunctionResource was unbound, in some cases, it would still be processing parameter sets from its bound element. This would cause the parameters of the unbound element to no longer be in an “uninitialized” state. Instead, they would incorrectly stay set to the last received value from the bound element.
 
-#### Interactive Automation scripts: MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly \[ID 27736\]
+#### Interactive automation scripts: MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly \[ID 27736\]
 
 In some cases, the MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly.
 
@@ -324,7 +324,7 @@ On a system using pattern matching, in some cases, an error could occur in SLAna
 
 #### Dashboards app - Line chart component: Problems when retrieving trend data \[ID 27853\]
 
-In some cases, a trend graph legend would show an error when a trend data request was interrupted, e.g. by scrolling to another page before the current page was fully loaded.
+In some cases, a trend graph legend would show an error when a trend data request was interrupted, e.g., by scrolling to another page before the current page was fully loaded.
 
 Also, when multiple trend requests were required, in some cases, those requests would be ignored when a trend data request was already in progress.
 
@@ -350,11 +350,11 @@ Also, a selection box problem could occur when multiple conditions were configur
 
 #### Automation: Problem when retrieving information events from all DMAs \[ID 27903\]
 
-When, in a DataMiner System with multiple agents, information events were retrieved by an Automation script, in some cases, not all information events would be retrieved.
+When, in a DataMiner System with multiple agents, information events were retrieved by an automation script, in some cases, not all information events would be retrieved.
 
 #### DataMiner Cube - Correlation: Number of occurrences in 'Sliding window' section could incorrectly not be changed \[ID 27909\]
 
-When you tried to define that a correlation rule had to be triggered when a situation occurred a specific number of times in a specified period of time, in some cases, it would not be possible to change the default number of times (i.e. 1).
+When you tried to define that a correlation rule had to be triggered when a situation occurred a specific number of times in a specified period of time, in some cases, it would not be possible to change the default number of times (i.e., 1).
 
 #### DataMiner Cube would constantly try to reconnect due to a problem that occurred while serializing alarm metadata in proactive suggestion events \[ID 27927\]
 
@@ -362,7 +362,7 @@ Due to a problem that occurred while serializing alarm metadata in proactive sug
 
 #### Dashboards app - Time range component: Default range would be used even after being overwritten afterwards \[ID 27941\]
 
-If the default values of a time range component had been set to a custom range, in some cases, those values would incorrectly still be used after being overwritten afterwards (e.g. by means of URL arguments or another feed).
+If the default values of a time range component had been set to a custom range, in some cases, those values would incorrectly still be used after being overwritten afterwards (e.g., by means of URL arguments or another feed).
 
 #### Jobs app: Job section fields would not be displayed in the correct order \[ID 27943\]
 
@@ -382,7 +382,7 @@ In an embedded Service Manager component, in some cases, the Save button would n
 
 #### DataMiner Cube - Alarm Console: Problem with 'unread alarms' counter \[ID 28063\]
 
-In some cases, the number of unread alarms displayed in the header of an alarm tab would be incorrect, especially on history tabs, on filtered tabs or when e.g. masking an alarm immediately after it was set to read.
+In some cases, the number of unread alarms displayed in the header of an alarm tab would be incorrect, especially on history tabs, on filtered tabs or when e.g., masking an alarm immediately after it was set to read.
 
 #### DataMiner Cube - Profiles app: 'Based on' selection box would be empty \[ID 28089\]
 
@@ -412,7 +412,7 @@ In some cases, for example, rendering issues could occur when resizing table col
 
 When you selected a CPE filter, in some cases, the raw key would incorrectly be displayed for a short while.
 
-Also, when you selected a chain filter (e.g. Region) and a value (e.g. California), and then selected another chain filter and value, in some cases, nothing would be displayed and an error would occur.
+Also, when you selected a chain filter (e.g., Region) and a value (e.g., California), and then selected another chain filter and value, in some cases, nothing would be displayed and an error would occur.
 
 #### Ticketing app: Problem when creating a ticket \[ID 28167\]
 
@@ -450,7 +450,7 @@ Due to a serialization error, in some cases, the following Web Services API v0 m
 
 - GetActiveAlarmsFromElement
 
-#### Interactive Automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
+#### Interactive automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
 
 In some cases, equals signs ("=") could not be used in UI block values.
 

@@ -10,7 +10,7 @@ Each of the [DataMiner SRM use cases](xref:srm_use_cases) relies on a combinatio
 
 ## Scheduling Engine
 
-The Scheduling Engine **executes scheduled actions precisely, reliably, and on time**. The engine can trigger a variety of DataMiner actions, including any and all Automation script executions needed by DataMiner SRM. The Scheduling Engine is the actor behind any orchestration, whether this is loading a profile on a resource in the [Resource Orchestration](xref:srm_resource_orchestration) use case or executing a service lifecycle state change.
+The Scheduling Engine **executes scheduled actions precisely, reliably, and on time**. The engine can trigger a variety of DataMiner actions, including any and all automation script executions needed by DataMiner SRM. The Scheduling Engine is the actor behind any orchestration, whether this is loading a profile on a resource in the [Resource Orchestration](xref:srm_resource_orchestration) use case or executing a service lifecycle state change.
 
 The Scheduler timeline can be visualized [in Visual Overview](xref:Embedding_a_Resource_Manager_component) or [in dashboards and low-code apps](xref:DashboardTimeline). The timeline components not only support rich schedule visualization options but also facilitate control surface user actions, such as selecting a time range in one click. A built-in bookings timeline is also available in the [Bookings module](xref:The_Bookings_module) in DataMiner Cube.
 
@@ -29,7 +29,7 @@ The scheduling engine supports a wide range of possibilities. Bookings can be sc
 
 ## Resource Manager
 
-Resources in DataMiner can represent any entity with limited **availability**, **capacity**, or **capabilities**, including for example physical inventory, network ports, staff, rooms, desks, and even non-tangible assets like IP addresses or software licenses. Each resource can be defined with a customized set of capabilities (e.g. SD, HD, or UHD) and various capacity constraints (e.g. a network interface may only be booked up to 90% of its bandwidth).
+Resources in DataMiner can represent any entity with limited **availability**, **capacity**, or **capabilities**, including for example physical inventory, network ports, staff, rooms, desks, and even non-tangible assets like IP addresses or software licenses. Each resource can be defined with a customized set of capabilities (e.g., SD, HD, or UHD) and various capacity constraints (e.g., a network interface may only be booked up to 90% of its bandwidth).
 
 A resource can be booked only partially or in its entirety, and it may even be booked multiple times during a given timeframe. Resource behavior can be fully customized to the needs of the operator and the managed infrastructure. To get a complete overview of all resources in the system and to easily add or manage resources, you can use the [Resources module](xref:The_Resources_module) in DataMiner Cube.
 
@@ -43,7 +43,7 @@ The DataMiner Automation engine performs all automation tasks in the ecosystem. 
 
 Once created, scripts can be triggered in a variety of ways, ranging from manual operator initiation to event-based, change-based, or scheduled execution (through integration with the [Scheduling Engine](#scheduling-engine)).
 
-Even if tasks are automated, the operator always remains in control. Not only is there a full audit trail of the executed tasks, but operators can also opt to **interact with the Automation engine at runtime**. DataMiner interactive Automation scripts can be set up to prompt for operator input, which is then used to automate further actions.
+Even if tasks are automated, the operator always remains in control. Not only is there a full audit trail of the executed tasks, but operators can also opt to **interact with the Automation engine at runtime**. DataMiner interactive automation scripts can be set up to prompt for operator input, which is then used to automate further actions.
 
 Automation scripts can be **developed, tested, and deployed at runtime**. Using built-in version control and quality checks during deployment (with DIS and CI/CD using our [dedicated workflows](xref:github_reusable_workflows_automation_master_workflow)), operators can easily use DevOps practices to respond to the rapid changes in today's networks, data centers, and service offerings.
 
@@ -70,11 +70,11 @@ Network Function Virtualization (NFV) is becoming a commodity in modern network 
 
 DataMiner SRM has adapted this approach and extended it to traditional software appliances and hardware products. Appliances and hardware products typically combine many elementary "virtual functions" in a single product. For example, a media transcoder has an IP input function, a video transcoder function, a number of audio transcoder functions, and an IP streaming output function. Packaging all functions together in a single product makes it hard for the operators to use bits and pieces of that product according to the needs of the moment, let alone when they need to schedule the resource up front.
 
-With DataMiner virtual functions, the **elementary functional capabilities of a complex product are exposed as individual, elementary resources that can be monitored, configured, and used in DataMiner SRM**. Moreover, as different technologies can expose the same kinds of functions (i.e. the same profiles can be applied to them), DataMiner virtual functions truly make service workflows independent of the underlying infrastructure vendor or model.
+With DataMiner virtual functions, the **elementary functional capabilities of a complex product are exposed as individual, elementary resources that can be monitored, configured, and used in DataMiner SRM**. Moreover, as different technologies can expose the same kinds of functions (i.e., the same profiles can be applied to them), DataMiner virtual functions truly make service workflows independent of the underlying infrastructure vendor or model.
 
 ## Network Manager
 
-The DataMiner Network Manager **calculates paths across any network**, independently from the technology (IP, SDI, L-band, etc.) or vendor used for that network. Path calculation even runs across multiple technologies (hybrid). The calculation itself is cost-based (Dijkstra). The definition of "cost" is completely customizable and can be very broad. In DataMiner, segments can have a real cost value, but the cost can also be a representation of the operator preferences (e.g. interfaces to a PoP that is only used for emergency situations may be configured with a high cost).
+The DataMiner Network Manager **calculates paths across any network**, independently from the technology (IP, SDI, L-band, etc.) or vendor used for that network. Path calculation even runs across multiple technologies (hybrid). The calculation itself is cost-based (Dijkstra). The definition of "cost" is completely customizable and can be very broad. In DataMiner, segments can have a real cost value, but the cost can also be a representation of the operator preferences (e.g., interfaces to a PoP that is only used for emergency situations may be configured with a high cost).
 
 In addition, path calculation in DataMiner can **account for additional monitored status info and KPIs**. For example, interfaces can be dynamically excluded from path calculations in case they have the Admin State "down", if they have alarms, or if they already have a heavy traffic load. Many other features can be configured, such as diverse path routing for red and blue connections, manual node selections, and much more.
 
@@ -90,7 +90,7 @@ DataMiner Service Manager offers a full-fledged **service layer on top of the in
 
 ![Service definition example](~/dataminer/images/Service_definition_example.png)<br>*Service definition in the Services module in DataMiner Cube 10.5.5*
 
-In the out-of-the-box **Booking Manager app** that comes with DataMiner SRM, an operator who wants to instantiate a new service can then pick the right service definition, select the required resources and profiles, and set the time schedule. Only the resources that match the selected service type will be available for selection, and only if they have the capability and sufficient capacity to run the requested profiles, preventing any possible operational errors. Moreover, if the default Booking Manager app does not perfectly match your needs, you can create a custom booking wizard tailored to your specific workflows (e.g. simplified to the essentials).
+In the out-of-the-box **Booking Manager app** that comes with DataMiner SRM, an operator who wants to instantiate a new service can then pick the right service definition, select the required resources and profiles, and set the time schedule. Only the resources that match the selected service type will be available for selection, and only if they have the capability and sufficient capacity to run the requested profiles, preventing any possible operational errors. Moreover, if the default Booking Manager app does not perfectly match your needs, you can create a custom booking wizard tailored to your specific workflows (e.g., simplified to the essentials).
 
 Service definitions can be extended with [DTR (Data Transfer Rules)](xref:srm_scripting#data-transfer-rules-dtr) scripts, which define a rule set for automatic resource selection and profile parameter inheritance during service setup. For example, if an HD input signal is selected for transport across an IP network, then the source encoder can automatically select HD-capable encoder and decoder edge gateways. This way, operators save even more time during service setup, and they also avoid inconsistencies in the configuration.
 

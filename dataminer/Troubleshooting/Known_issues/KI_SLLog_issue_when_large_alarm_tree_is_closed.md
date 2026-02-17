@@ -11,7 +11,7 @@ uid: KI_SLLog_issue_when_large_alarm_tree_is_closed
 
 ## Cause
 
-When an alarm tree is closed and DataMiner tries to move it from the *activealarms* Elasticsearch index to the *alarms* index, a tree gets inserted in one bulk request. For trees that are very large (e.g. lengthy history, or a lot of properties or base alarms), the query could become too big and get refused by Elastic. The query was then logged via SLLog, which triggered a problem in that process because of the size of the log statement.
+When an alarm tree is closed and DataMiner tries to move it from the *activealarms* Elasticsearch index to the *alarms* index, a tree gets inserted in one bulk request. For trees that are very large (e.g., lengthy history, or a lot of properties or base alarms), the query could become too big and get refused by Elastic. The query was then logged via SLLog, which triggered a problem in that process because of the size of the log statement.
 
 ## Fix
 

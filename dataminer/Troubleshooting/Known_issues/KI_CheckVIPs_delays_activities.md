@@ -11,7 +11,7 @@ uid: KI_CheckVIPs_delays_activities
 
 ## Cause
 
-The CheckVIPs thread, which is responsible for checking whether a DMA holds the correct IP addresses every minute, claims multiple locks to verify the current state of the IPs. This can cause a delay for other calls in the system. This is specifically the case for Automation scripts and other activities that require the generation of an information event, as the information event cannot be generated as long as the locks of the CheckVIPs thread are in place.
+The CheckVIPs thread, which is responsible for checking whether a DMA holds the correct IP addresses every minute, claims multiple locks to verify the current state of the IPs. This can cause a delay for other calls in the system. This is specifically the case for automation scripts and other activities that require the generation of an information event, as the information event cannot be generated as long as the locks of the CheckVIPs thread are in place.
 
 ## Fix
 
@@ -19,4 +19,4 @@ Install DataMiner 10.2.0 [CU16], 10.3.0 [CU4], or 10.3.7.
 
 ## Issue description
 
-At specific intervals, Automation scripts and other activities that occur in DataMiner seem to experience a delay.
+At specific intervals, automation scripts and other activities that occur in DataMiner seem to experience a delay.

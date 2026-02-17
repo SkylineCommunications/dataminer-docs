@@ -63,7 +63,7 @@ According to the ASN.1 specification, a comment in a MIB starts with a pair of a
 
 However, some MIBs create comments that contain a pair of hyphens in a line of comment. In other words, they overlook the fact that a second occurrence of a pair of adjacent hyphens in a line denotes the end of a comment.
 
-DIS will try to load a MIB module as is. When it fails to do so, it will first correct the lines that contain "--" and then try again to parse the MIB. If this second attempt also fails, this means that there is another syntax issue. In that case, the original errors will be shown (i.e. the errors thrown when parsing the original, unaltered MIB).
+DIS will try to load a MIB module as is. When it fails to do so, it will first correct the lines that contain "--" and then try again to parse the MIB. If this second attempt also fails, this means that there is another syntax issue. In that case, the original errors will be shown (i.e., the errors thrown when parsing the original, unaltered MIB).
 
 #### DVE validation results will be indicated clearer [ID 38582]
 

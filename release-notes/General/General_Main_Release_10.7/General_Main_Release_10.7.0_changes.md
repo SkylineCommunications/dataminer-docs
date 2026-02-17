@@ -20,7 +20,23 @@ Up to now, one SLScripting process was used by default. From now on, by default,
 Note that is possible to configure the number of simultaneously running SLScripting processes. See [Setting the number of simultaneously running SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes).
 
 > [!IMPORTANT]
-> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActions#sharing-and-persisting-data).
+> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
+
+#### SNMP trap binding values will now only display plain ASCII characters [ID 44527]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+When the system receives a trap binding value of type OctetString, that value will either be automatically converted into characters (e.g., 0x41 will become "A") or remain in a hexadecimal string format (e.g., when the value contains a byte that is not printable like 0x02, which is an STX control character).
+
+Up to now, hexadecimal values above the ASCII range (i.e., values >= 0x7F) were considered printable characters, and were not converted into a hexadecimal string. This would cause issues with, for example, the Unicode control character 0x8C, which would be displayed as a question mark. In such cases, complex QAction code would then be required to have it converted back into a hexadecimal value.
+
+Also, DataMiner is not aware of whether a binding value actually contains text (e.g., a MAC address consisting of octets) or, if the value contains text, how that text was encoded (e.g., Windows code page 1252, UTF-8, UTF-16, etc.).
+
+From now on, hexadecimal values outside of the ASCII range will be considered non-printable characters, and will remain in hexadecimal string format.
+
+This is a breaking change.
+
+Up to now, text containing characters that were encoded in extended ASCII (i.e., Windows code page 1252) were converted from raw octets into string text. For example, the French word "hélicoptère" would be received correctly. From now on, that same word will be received as hexadecimal string "68e96c69636f7074e87265", and a QAction will need to convert it back into a string using the correct encoding.
 
 ### Enhancements
 
@@ -64,7 +80,7 @@ Multiple handlers can be added. They will run synchronously, and if one handler 
 
 <!-- MR 10.7.0 - FR 10.6.3 -->
 
-Two new parameter caches are now available for client apps (e.g. DataMiner Cube):
+Two new parameter caches are now available for client apps (e.g., DataMiner Cube):
 
 - ProtocolParameters (linked to GetProtocolParameter on the client connection)
 - ElementProtocolParameters (linked to GetElementProtocolParameter on the client connection)
@@ -90,7 +106,7 @@ Also, in the resource manager, it is now possible to configure the number of sta
 | MaxAmountOfThreads       | The number of threads the resource manager will use to start bookings.<br>By default, 6 threads will be used. To restore this setting to the default value, set its value to null.<br>Note: The number of threads must at least be set to 2 in order for the scheduler to be able to start an action and keep a thread available for asynchronous continuations. |
 | MaxAmountOfParallelTasks | The number of parallel actions the resource manager will start on the threads.<br>By default, the number of parallel action is set to 7. To restore this setting to the default value, set its value to null. |
 
-The following example shows how you can configure this from an Automation script.
+The following example shows how you can configure this from an automation script.
 
 ```csharp
 private void UpdateResourceManagerConfigSettings()
@@ -132,7 +148,7 @@ Visibility on SLNet connection issues has been enhanced:
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-When, in DataMiner client applications (e.g. DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
+When, in DataMiner client applications (e.g., DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
 
 | Mode | Description |
 |------|-------------|
@@ -156,17 +172,17 @@ This means, that any DataMiner Agent on which you want to perform a web-only upg
 From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
 
 - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
-- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
+- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e., they are not part of the same cloud-connected system.
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.
 
-#### Scheduler will now be able to start more than 10 synchronously running Automation scripts [ID 44200]
+#### Scheduler will now be able to start more than 10 synchronously running automation scripts [ID 44200]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-Up to now, using Scheduler, it would only be possible to start a maximum of 10 synchronously running Automation scripts.
+Up to now, using Scheduler, it would only be possible to start a maximum of 10 synchronously running automation scripts.
 
-From now on, it will be possible to start more than 10 synchronously running Automation scripts.
+From now on, it will be possible to start more than 10 synchronously running automation scripts.
 
 #### Relational anomaly detection: GetRADParameterGroupInfoResponseMessage now also includes the ID of the RAD parameter group [ID 44237]
 
@@ -197,7 +213,7 @@ See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in th
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-The entry added to the *SLAutomation.txt* log file when an Automation script has finished will now contain the entrypoint ID.
+The entry added to the *SLAutomation.txt* log file when an automation script has finished will now contain the entrypoint ID.
 
 In the following example, the entrypoint ID can be found at the end of the entry between brackets (11):
 
@@ -209,14 +225,6 @@ In the following example, the entrypoint ID can be found at the end of the entry
 
 As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway Configuration* has now been removed from the list of backup options.
 
-#### SLManagedScripting will again add a log entry each time it has loaded or failed to load an assembly [ID 44522]
-
-<!-- MR 10.7.0 - FR 10.6.3 -->
-
-Since DataMiner version 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!-- RN 43690 -->, SLManagedScripting no longer added an entry in the *SLManagedScripting.txt* log file each time it had loaded or failed to load an assembly. From now on, it will again do so.
-
-These log entries will include both the requested version and the actual version of the assembly.
-
 #### DataMiner backup: Scheduler configuration will now be included in full and configuration backups [ID 44584]
 
 <!-- MR 10.7.0 - FR 10.6.3 -->
@@ -227,6 +235,27 @@ From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Schedule
 - Configuration backup (without database)
 
 If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
+
+#### SLDataGateway: Job queue updates will now be logged in SLJobQueues.txt [ID 44661]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, log entries regarding SLDataGateway job queue updates would be logged in the `C:\Skyline DataMiner\Logging\SLDbConnection.txt` file.
+
+From now on, these log entries will be logged in the `C:\Skyline DataMiner\Logging\SLDataGateway\SLJobQueues.txt` file instead.
+
+#### SLLogCollector: Separate log file per instance [ID 44668]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, all SLLogCollector logging of all SLLogCollector instances would end up in the following files, stored in the `C:\ProgramData\Skyline\DataMiner\SL_LogCollector\Log` folder:
+
+- `SL_LogCollector_fulllog.log`
+- `SL_LogCollector_log.log`
+
+From now on, each SLLogCollector instance will have its own dedicated log file named `log-[creation timestamp].txt`, stored in the `C:\ProgramData\Skyline Communications\SLLogCollector` folder.
+
+Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
 
 ### Fixes
 

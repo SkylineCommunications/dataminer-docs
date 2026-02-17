@@ -8,7 +8,7 @@ Conditions are used to enable conditional item execution. A condition is defined
 
 > [!NOTE]
 >
-> - A condition can be enclosed in a CDATA tag, e.g. when you want to define a condition that uses the < operator.
+> - A condition can be enclosed in a CDATA tag, e.g., when you want to define a condition that uses the < operator.
 > - An example protocol "SLC SDF Conditions" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
 ## Operators
@@ -23,7 +23,7 @@ The following tables provide an overview of the supported operators in condition
 |x - y     |Subtraction         |
 
 > [!NOTE]
-> The addition operator can be used with doubles or strings. In case of double values, it will add the values. In case of strings, it will concatenate these. The subtraction operator only works with double values. The operands must have the same type, i.e. they must both be a double or both be a string. In case the operand refers to a parameter (using the id:\<paramId\> placeholder) the Interprete type of the parameter must be "string" when the other operand is a string or either "double" or "high nibble" when the other operand is a double.
+> The addition operator can be used with doubles or strings. In case of double values, it will add the values. In case of strings, it will concatenate these. The subtraction operator only works with double values. The operands must have the same type, i.e., they must both be a double or both be a string. In case the operand refers to a parameter (using the id:\<paramId\> placeholder) the Interprete type of the parameter must be "string" when the other operand is a string or either "double" or "high nibble" when the other operand is a double.
 >
 > For example: id:10 + 10 > 20: The parameter with ID 10 must have an Interprete type equal to "double" or "high nibble".
 
@@ -83,8 +83,8 @@ The following table shows an overview of the operands that can be used.
 
 |Operand  |Description  |
 |---------|---------|
-|id:     |Refers to a protocol parameter (E.g. id:100). Note that the ID of the parameter must follow immediately after the colon (e.g. id:10) No space is allowed between id: and the parameter ID.         |
-|"{value}"     |When enclosed by double quotes, the operand represents a string literal (E.g. "ALARM").         |
+|id:     |Refers to a protocol parameter (e.g., id:100). Note that the ID of the parameter must follow immediately after the colon (e.g., id:10) No space is allowed between id: and the parameter ID.         |
+|"{value}"     |When enclosed by double quotes, the operand represents a string literal (e.g., "ALARM").         |
 |empty     |Indicates an empty parameter ("Not Initialized").         |
 |emptystring     |Indicates an empty string or an empty parameter ("Not Initialized").         |
 
@@ -116,7 +116,7 @@ Condition:
 ```
 
 > [!IMPORTANT]
-> Do not use the '#' or '$' characters in a condition, unless they are part of a string literal (i.e. when enclosed by double quotes)
+> Do not use the '#' or '$' characters in a condition, unless they are part of a string literal (i.e., when enclosed by double quotes)
 
 ## Defining a condition
 

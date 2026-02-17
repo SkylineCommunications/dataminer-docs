@@ -8,13 +8,13 @@ From DataMiner 10.5.3/10.6.0 onwards, you can use relational anomaly detection (
 
 The RAD functionality works in three different steps:
 
-1. First you need to [configure one or more groups of parameters](#configuring-relational-anomaly-groups) that should be monitored together, e.g. a main bit rate and backup bit rate.
+1. First you need to [configure one or more groups of parameters](#configuring-relational-anomaly-groups) that should be monitored together, e.g., a main bit rate and backup bit rate.
 
-1. The algorithm will then **learn the relations** between the parameters, e.g. learn that main and backup are typically equal. This is done automatically by the system, but you can manually specify a training range.
+1. The algorithm will then **learn the relations** between the parameters, e.g., learn that main and backup are typically equal. This is done automatically by the system, but you can manually specify a training range.
 
-1. Whenever a detected relation is broken, e.g. the main is no longer equal to the backup, RAD will generate [suggestion events in the Alarm Console](#relational-anomalies-in-the-alarm-console).
+1. Whenever a detected relation is broken, e.g., the main is no longer equal to the backup, RAD will generate [suggestion events in the Alarm Console](#relational-anomalies-in-the-alarm-console).
 
-![The three steps of the RAD algorithm](~/dataminer/images/tutorial_RAD_Overview_Algorithm.jpg)
+![The three steps of the RAD algorithm](~/dataminer/images/RAD_Overview_Algorithm.png)
 
 Every five minutes, RAD calculates an anomaly score for each configured relational anomaly group. This score is based on the average value of each parameter in that group over the last five minutes. A high anomaly score indicates that the relationships between the parameters are broken, whereas a low anomaly score means the relationships remain intact. Historical anomaly scores can be visualized in the [RAD Manager](xref:RAD_manager) app.
 
@@ -54,7 +54,7 @@ For each relational anomaly group, several configuration options are available. 
 | <div style="width:200px">Name in RAD Manager app</div> | Name in API and XML | Description |
 |--|--|--|
 | Group name | `name` | The name of the relational anomaly group. This name is used when generating a suggestion event or displaying all groups in the *RAD Manager*. |
-| Update model on new data? | `updateModel` | Indicates whether RAD should update its internal model of the relationships between the parameters in the group when new trend data is available. If this is not selected, the model will only be trained immediately after creation and when [manually specifying a training range](xref:RAD_manager#configuring-model-training).<br>Enabling this can be useful when monitoring parameters that you would like to see changing over time; the model can then adapt to the new behavior, and only more pronounced breaks in relations will be detected. If the parameter relationship is static (e.g. two parameters that should remain equal forever), it is better not to enable this option.|
+| Update model on new data? | `updateModel` | Indicates whether RAD should update its internal model of the relationships between the parameters in the group when new trend data is available. If this is not selected, the model will only be trained immediately after creation and when [manually specifying a training range](xref:RAD_manager#configuring-model-training).<br>Enabling this can be useful when monitoring parameters that you would like to see changing over time; the model can then adapt to the new behavior, and only more pronounced breaks in relations will be detected. If the parameter relationship is static (e.g., two parameters that should remain equal forever), it is better not to enable this option.|
 | Anomaly threshold | `anomalyThreshold` in API, `anomalyScore` in XML | The threshold used for suggestion event generation. Suggestion events are generated when RAD detects a region with an anomaly score higher than this threshold. A higher threshold results in fewer suggestion events, while a lower threshold results in more. Default: 6 (or 3 prior to DataMiner 10.5.9/10.6.0<!-- RN 43400 -->).|
 | Minimum anomaly duration | `minimumAnomalyDuration` | Supported from DataMiner 10.5.4/10.6.0 onwards. <!-- RN 42283 --> This option specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly, similar to [alarm hysteresis](xref:Alarm_hysteresis). This value must be 5 minutes or higher. If this is set to a value greater than 5 minutes, the deviating behavior must persist longer before an anomaly event is triggered. You can configure this to filter out noise events due to a single, short, harmless outlier, for instance caused by a planned maintenance or a device restart. Default: 15 minutes (or 5 minutes prior to DataMiner 10.5.9<!-- RN 43400 -->). |
 

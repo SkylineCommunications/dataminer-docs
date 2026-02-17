@@ -18,7 +18,7 @@ To implement DVE functionality, the following steps must be performed:
 
     Exporting columns of the DVE table to the corresponding DVE protocol will result in standalone parameters. It is also possible to export referenced tables. Note that in this case the table must be linked to the DVE table (See [Foreign keys](xref:UIComponentsTableForeignKeys) and [Relations](xref:UIComponentsTableRelations)).
 
-For example, suppose a protocol contains a table (ID: 1000) that will generate DVEs (i.e. the protocol defines that table 1000 generates DVEs). In the DVE table, the columns "X", "Y" and "Z" are exported and the column "DVE ID" has the option "element". In addition, the protocol contains another table (ID: 2000) that is linked to the DVE table. This table is also exported.
+For example, suppose a protocol contains a table (ID: 1000) that will generate DVEs (i.e., the protocol defines that table 1000 generates DVEs). In the DVE table, the columns "X", "Y" and "Z" are exported and the column "DVE ID" has the option "element". In addition, the protocol contains another table (ID: 2000) that is linked to the DVE table. This table is also exported.
 
 ![A table linked to a DVE table](~/develop/images/Advanced_Topics_-_DVE_concept.svg)
 

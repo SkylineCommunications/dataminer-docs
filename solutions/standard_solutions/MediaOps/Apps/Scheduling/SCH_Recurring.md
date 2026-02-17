@@ -48,7 +48,7 @@ To cancel a recurring job:
 
 ## Deleting a recurring job
 
-If a recurring job is *Completed* (i.e. all recurring instances of the job are in the past) or *Canceled*, it is possible to delete the recurring job and optionally all of its instances.
+If a recurring job is *Completed* (i.e., all recurring instances of the job are in the past) or *Canceled*, it is possible to delete the recurring job and optionally all of its instances.
 
 To do so:
 

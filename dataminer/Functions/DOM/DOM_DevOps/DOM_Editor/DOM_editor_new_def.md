@@ -12,7 +12,7 @@ uid: DOM_editor_new_def
 
    ![DOM Editor starting window](~/dataminer/images/DOM_Editor_new.png)
 
-1. In the *Module ID* box, specify the name of the module you want to add. The name must be in lower case only.
+1. In the *Module ID* box, specify the name of the module you want to add. The name must be in lowercase only.
 
    ![DOM Editor: new module window](~/dataminer/images/DOM_Editor_new2.png)
 

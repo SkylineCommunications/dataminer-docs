@@ -44,7 +44,7 @@ It is now possible to import and export the settings of a Booking Manager elemen
 
 - To **import** the settings, on the *General* data page of the element, click *Import*, and then select the file to import in the pop-up window. As the import feature is intended to be used to **pass settings from one DMS to another**, it does not import the parameter *DMA IDs to Store Reservations*.
 
-- To **restore** settings, i.e. **import export files from the same DMS**, on the *General* data page of the element, click *Restore*, and then select the file to import in the pop-up window. In this case, the parameter *DMA IDs to Store Reservations* will be included in the import.
+- To **restore** settings, i.e., **import export files from the same DMS**, on the *General* data page of the element, click *Restore*, and then select the file to import in the pop-up window. In this case, the parameter *DMA IDs to Store Reservations* will be included in the import.
 
 #### New ExcludeNodeExceptFirstAndLast option for transport path \[ID 31615\]
 

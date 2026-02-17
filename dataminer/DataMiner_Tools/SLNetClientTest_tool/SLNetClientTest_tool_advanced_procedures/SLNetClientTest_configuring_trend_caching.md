@@ -4,7 +4,7 @@ uid: SLNetClientTest_configuring_trend_caching
 
 # Configuring trend caching
 
-Data for trend data queries is cached in the SLNet process after it has been received from SLDataGateway, and before it is processed further. This speeds up e.g. switching a trend graph's range from last day to last week, closing a trending card and opening it again shortly afterwards, opening the same trend graph on multiple clients, etc. In the SLNetClientTest tool, several options are available related to the trend cache.
+Data for trend data queries is cached in the SLNet process after it has been received from SLDataGateway, and before it is processed further. This speeds up e.g., switching a trend graph's range from last day to last week, closing a trending card and opening it again shortly afterwards, opening the same trend graph on multiple clients, etc. In the SLNetClientTest tool, several options are available related to the trend cache.
 
 Most of the trend cache options can be configured as follows:
 

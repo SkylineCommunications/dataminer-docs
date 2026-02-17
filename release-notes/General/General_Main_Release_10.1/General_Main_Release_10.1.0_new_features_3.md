@@ -25,9 +25,9 @@ uid: General_Main_Release_10.1.0_new_features_3
 
 In Visual Overview, three-digit number groups in numeric parameter values displayed on shapes with an *Element* and/or *Parameter* data field and a “\*” in the shape text will now by default be separated by a thin space. This will make large numbers more legible.
 
-Also, a new *DynamicUnits* option will now allow you to enable the use of dynamic units, i.e. units that can be converted to other units according to rules configured in the protocol. You may decide to enable this feature if you want to have large values converted to more legible values (e.g. to convert 1000 Mb to 1 Gb, 1000 m to 1 km, etc.).
+Also, a new *DynamicUnits* option will now allow you to enable the use of dynamic units, i.e., units that can be converted to other units according to rules configured in the protocol. You may decide to enable this feature if you want to have large values converted to more legible values (e.g., to convert 1000 Mb to 1 Gb, 1000 m to 1 km, etc.).
 
-To enable this feature, add an *Options* data field and set its value to “DynamicUnits=true”. By default, this option is disabled (i.e. false). See the following example:
+To enable this feature, add an *Options* data field and set its value to “DynamicUnits=true”. By default, this option is disabled (i.e., false). See the following example:
 
 | Shape data field | Value             |
 |------------------|-------------------|
@@ -77,7 +77,7 @@ Then, in the protocol, add the following configuration:
 </Display>
 ```
 
-It is also possible to factor in decimals defined in the dynamic units of a protocol parameter when using the *DynamicUnits* option. With a configuration like the following, a value of 0.15 m will be shown as 15.0 cm (i.e. with 1 decimal).
+It is also possible to factor in decimals defined in the dynamic units of a protocol parameter when using the *DynamicUnits* option. With a configuration like the following, a value of 0.15 m will be shown as 15.0 cm (i.e., with 1 decimal).
 
 ```xml
 <Display>
@@ -186,7 +186,7 @@ Example:
 
 Up to now, it was only possible to display a page of a Visio file associated with an object linked to a shape. To have a page named “Details” of a Visio file associated with an element named “MyElement” displayed in a separate window, for example, you had to add two data items to a shape: one of type *Element* set to “MyElement”, and one of type *VdxPage* set to “Details\|Window”.
 
-From now on, it is also possible to display a page from the current Visio file by only adding a single data item of type *VdxPage* to a shape, without any reference to an element, view or service. This will allow you to also display Visio pages when a shape is linked to e.g. an alarm. See the following example:
+From now on, it is also possible to display a page from the current Visio file by only adding a single data item of type *VdxPage* to a shape, without any reference to an element, view or service. This will allow you to also display Visio pages when a shape is linked to, for example, an alarm. See the following example:
 
 | Shape data field | Value           |
 |------------------|-----------------|
@@ -291,9 +291,9 @@ From now on, if you set the *Source* shape data field to “Elements” or “S
   | Element.AlarmState | The alarm state of the element. For the difference with the alarm level, see "Element.AlarmLevel". |
   | Element.AlarmCount | The number of alarms of the element. |
   | Element.Type | The type of element as defined in the protocol. |
-  | Element.DisplayType | The display type of the element as defined in the protocol, e.g. *spectrum analyzer*, *element manager*. |
+  | Element.DisplayType | The display type of the element as defined in the protocol, e.g., *spectrum analyzer*, *element manager*. |
   | Element.IP | The IP of the element. |
-  | Element.State | The current state of the element, e.g. Paused, Stopped. |
+  | Element.State | The current state of the element, e.g., Paused, Stopped. |
   | Element.Protocol | The protocol used by the element. |
   | Element.ProtocolVersion | The protocol version used by the element. |
   | Element.ProtocolType | The protocol type used by the element. |
@@ -362,16 +362,16 @@ It is now possible to automatically generate booking shapes. To implement this f
 
 2. Create a shape group containing the shape you made in step 1, add a *Children* data field to the shape group, and set its value to “Booking”.
 
-By default, all bookings in the Cube cache will be shown. If that cache does not contain any bookings, then a default set of bookings will be retrieved (i.e. from 1 day in the past to 2 days in the future).
+By default, all bookings in the Cube cache will be shown. If that cache does not contain any bookings, then a default set of bookings will be retrieved (i.e., from 1 day in the past to 2 days in the future).
 
-- If you want to retrieve all bookings within a specific time range from the server, then add a *ChildrenSource* data field to the shape group and set its value to a specific time range (e.g. “StartTime=\<dateTime>; EndTime=\<dateTime>”).
+- If you want to retrieve all bookings within a specific time range from the server, then add a *ChildrenSource* data field to the shape group and set its value to a specific time range (e.g., “StartTime=\<dateTime>; EndTime=\<dateTime>”).
 
     > [!NOTE]
     > If you retrieve a specific set of bookings by using a *ChildrenSource* data field set to a specific time range, the retrieved bookings will be added to the ones already present in the cache. If, by specifying a time range, you only want to filter the bookings currently in the cache, then use a *ChildrenFilter* data field instead.
 
 - If you want to filter the bookings, then add a *ChildrenFilter* data field to the shape group and set its value to a booking filter, using the same filter format that is used when specifying a ListView filter.
 
-- If you want to sort the bookings, then add a *ChildrenSort* data field to the shape group and set its value to “Name” (i.e. the default setting), “Property\|Start time” or “Property\|End time”, optionally followed by “,asc” (i.e. the default order) or “,desc”.
+- If you want to sort the bookings, then add a *ChildrenSort* data field to the shape group and set its value to “Name” (i.e., the default setting), “Property\|Start time” or “Property\|End time”, optionally followed by “,asc” (i.e., the default order) or “,desc”.
 
 > [!NOTE]
 > Dynamically generated booking shapes are functionally identical to shapes linked to bookings using a *Reservation* data field. For example, they support the same placeholders.
@@ -388,7 +388,7 @@ Minimum interval: 1 second
 
 #### Visual Overview: Element-level Visio files \[ID 26648\]\[ID 27376\]
 
-Up to now, when you assigned a Visio file to an element, it was assigned on protocol-level, i.e. to all elements sharing the same protocol. Now, it is also possible to assign a Visio file to one particular element. If you do so, the element-level Visio file will override the element’s protocol-level Visio file.
+Up to now, when you assigned a Visio file to an element, it was assigned on protocol-level, i.e., to all elements sharing the same protocol. Now, it is also possible to assign a Visio file to one particular element. If you do so, the element-level Visio file will override the element’s protocol-level Visio file.
 
 In the header bar menu of an element card, you will now have two “set as active Visio file” commands:
 
@@ -416,7 +416,7 @@ If you pick the element Visio file option, the following options are available:
 
 Using the syntax “\[Reservation:\<id>,\<fieldName>\]”, it is possible to resolve a booking field based on the ID and the name of that field.
 
-The Status field has now been added to the list of possible fields. This field indicates the current status of the booking (e.g. “Ended”, “Pending”, “Ongoing”, etc.).
+The Status field has now been added to the list of possible fields. This field indicates the current status of the booking (e.g., “Ended”, “Pending”, “Ongoing”, etc.).
 
 #### Visual Overview: New AllowInheritance option to keep child shape from automatically inheriting parent shape data \[ID 27084\]
 
@@ -511,7 +511,7 @@ All icon names are now in capital case.
 
 #### Visual Overview: Linking the view range of a trend graph component to session variables & specifying a custom view range \[ID 27779\]
 
-A Visio shape showing a trend graph component can now be made to update session variables with its view range (i.e. start time and end time). To do so, add a shape data field of type SetVar, and set its value to “RangeStart:\<VariableA>\|RangeEnd:\<VariableB>”
+A Visio shape showing a trend graph component can now be made to update session variables with its view range (i.e., start time and end time). To do so, add a shape data field of type SetVar, and set its value to “RangeStart:\<VariableA>\|RangeEnd:\<VariableB>”
 
 Example:
 
@@ -545,11 +545,11 @@ Example: \[var:\[NAME\]\]
 
 #### Visual Overview: Automation script session variables & OnClosing shape data field \[ID 27895\]
 
-In Visual Overview, it is now possible to pass Automation script output to session variables. Also, you can now use the page-level shape data field OnClosing to configure whether a Visual Overview window should automatically be closed or not.
+In Visual Overview, it is now possible to pass automation script output to session variables. Also, you can now use the page-level shape data field OnClosing to configure whether a Visual Overview window should automatically be closed or not.
 
-##### Passing Automation script output to session variables
+##### Passing automation script output to session variables
 
-When an Automation script executed in Visual Overview finishes successfully, it is now possible to pass the output values of that script to session variables in Visual Overview using the new CreateKey(string variablename) method (namespace: Skyline.DataMiner.Automation, class name: UIVariables.VisualOverview).
+When an automation script executed in Visual Overview finishes successfully, it is now possible to pass the output values of that script to session variables in Visual Overview using the new CreateKey(string variablename) method (namespace: Skyline.DataMiner.Automation, class name: UIVariables.VisualOverview).
 
 In the following example, a session variable named “MyOutput” will be created and will receive the value “MyValue”.
 
@@ -557,9 +557,9 @@ In the following example, a session variable named “MyOutput” will be create
 engine.AddScriptOutput(UIVariables.VisualOverview.CreateKey("MyOutput"), "MyValue");
 ```
 
-- If you execute the same Automation script on different pages, then you can use the SessionVariablePrefix option to make sure the output is saved in separate session variables.
+- If you execute the same automation script on different pages, then you can use the SessionVariablePrefix option to make sure the output is saved in separate session variables.
 
-    If, for example, you use prefix “One\_” on one page and prefix “Two\_” on another page, and the Automation scripts pass their output to a session variable named “MyPage”, then the output will end up in two separate session variables named “One_MyPage” and “Two_MyPage” respectively.
+    If, for example, you use prefix “One\_” on one page and prefix “Two\_” on another page, and the automation scripts pass their output to a session variable named “MyPage”, then the output will end up in two separate session variables named “One_MyPage” and “Two_MyPage” respectively.
 
 - When you set the SetVarOnFail option to true (either on page level or shape level), then the session variables in question will always be created, regardless of whether the script finishes successfully or not.
 

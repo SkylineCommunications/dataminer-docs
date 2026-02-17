@@ -184,7 +184,7 @@ To ensure an aesthetically pleasing app, start with an appealing theme, which de
 
 1. In the list of themes, click the *Duplicate* button next to your new theme to create a copy of the theme.
 
-1. Click the pencil icon next to it, and change the name of your theme so that it ends in "- Panel", e.g. "Tutorial theme - Panel".
+1. Click the pencil icon next to it, and change the name of your theme so that it ends in "- Panel", e.g., "Tutorial theme - Panel".
 
    This is the theme you will use for the app panels.
 
@@ -236,7 +236,7 @@ Now that you have created a theme, you can apply it to your low-code app.
 
 ### Set the page to 'fit to view'
 
-To ensure the page adapts to different screen sizes and avoids scroll bars, set it to *Fit to view*:
+To ensure the page adapts to different screen sizes and avoids scrollbars, set it to *Fit to view*:
 
 1. Click the user icon in the top-right corner, click *Edit*, and click the pencil icon in the pane to the left.
 
@@ -256,7 +256,7 @@ Rearrange and resize components on the page, following these guidelines:
 
 - Align components both vertically and horizontally, ensuring consistent height.
 
-- Adjust component widths; if multiple components share a row and are equally important, keep their widths identical (e.g. a chart and grid component each occupy 1/3rd of the width).
+- Adjust component widths; if multiple components share a row and are equally important, keep their widths identical (e.g., a chart and grid component each occupy 1/3rd of the width).
 
 Here is an example of a rearrangement for a visually appealing result:
 
@@ -454,7 +454,7 @@ You can improve the appearance of each column by editing the template applied to
    > [!TIP]
    > For more information about adding an icon, see [Adding new layers](xref:Template_Editor#adding-a-new-layer).
 
-1. In the *Properties* section of the *Settings* pane, click *Icon* and choose a fitting new icon, e.g. an icon depicting a person.
+1. In the *Properties* section of the *Settings* pane, click *Icon* and choose a fitting new icon, e.g., an icon depicting a person.
 
    ![Person icon](~/dataminer/images/Person_Icon.png)
 

@@ -4,7 +4,7 @@ uid: SRM_migrating_service_definitions
 
 # Migrating service definitions
 
-To export and import a service definition, you can use the *SRM_ServiceDefinitionImportExport* Automation script.
+To export and import a service definition, you can use the *SRM_ServiceDefinitionImportExport* automation script.
 
 ## Exporting a service definition
 

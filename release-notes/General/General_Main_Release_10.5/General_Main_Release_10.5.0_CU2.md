@@ -16,7 +16,7 @@ uid: General_Main_Release_10.5.0_CU2
 ### Highlights
 
 - [New option to prevent an SNMP manager from resending SNMP inform messages [ID 41884]](#snmp-forwarding-new-option-to-prevent-an-snmp-manager-from-resending-snmp-inform-messages-id-41884)
-- [GQI DxM will now look for missing dependencies in the Automation script libraries folder [ID 42468]](#gqi-dxm-will-now-look-for-missing-dependencies-in-the-automation-script-libraries-folder-id-42468)
+- [GQI DxM will now look for missing dependencies in the automation script libraries folder [ID 42468]](#gqi-dxm-will-now-look-for-missing-dependencies-in-the-automation-script-libraries-folder-id-42468)
 - [GQI DxM: New lifecycle method allows ad hoc data sources to optimize sort operators [ID 42528]](#gqi-dxm-new-lifecycle-method-allows-ad-hoc-data-sources-to-optimize-sort-operators-id-42528)
 - [Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)
 
@@ -32,7 +32,7 @@ In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
 
-In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:Disabling_automatic_NATS_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:Disabling_automatic_NATS_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e., ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
 
 #### Factory reset tool: New ResetBrokerGatewayNATS action [ID 40759]
 
@@ -71,7 +71,7 @@ A repair tool, *NATSRepair.exe*, will now be included in the `C:\Skyline DataMin
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to e.g. aggregation or merge actions.
+When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to, for example, aggregation or merge actions.
 
 #### STaaS: An alarm will now be generated when a data type is being throttled [ID 42387]
 
@@ -113,16 +113,16 @@ The output will be stored in the following file:
 
 *\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
 
-#### GQI DxM will now look for missing dependencies in the Automation script libraries folder [ID 42468]
+#### GQI DxM will now look for missing dependencies in the automation script libraries folder [ID 42468]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
 GQI extensions use the Automation engine to create DLL libraries that are then loaded by GQI to add ad hoc data sources, custom operators, etc.
 
-GQI will now look for missing dependencies in the `C:\Skyline DataMiner\Scripts\Libraries` folder. This will allow GQI extension scripts to find the Automation script library at runtime.
+GQI will now look for missing dependencies in the `C:\Skyline DataMiner\Scripts\Libraries` folder. This will allow GQI extension scripts to find the automation script library at runtime.
 
 > [!IMPORTANT]
-> If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
+> If the referenced automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
 
 #### GQI recording removed from GQI DxM [ID 42470]
 
@@ -171,7 +171,7 @@ IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOper
 
 This method should return the query node that represents the result of applying the next operator to the current ad hoc data source node. Similar to the custom operator implementation, the ad hoc data source implementation can decide to do the following:
 
-- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this lifecycle method is not implemented).
+- Append the `nextOperator` to the `currentNode` (i.e., the default behavior when this lifecycle method is not implemented).
 - Remove/ignore the `nextOperator`, usually taking responsibility of the operation internally.
 - Modify/add operators.
 

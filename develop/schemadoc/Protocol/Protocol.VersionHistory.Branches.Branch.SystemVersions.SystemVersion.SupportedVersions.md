@@ -18,7 +18,7 @@ Specifies the system version support.
 
 ## Remarks
 
-This will contain all relevant version support information of systems this protocol interacts with (e.g. firmware information).
+This will contain all relevant version support information of systems this protocol interacts with (e.g., firmware information).
 
 
 

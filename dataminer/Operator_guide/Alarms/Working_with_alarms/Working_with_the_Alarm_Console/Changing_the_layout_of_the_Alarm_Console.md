@@ -79,7 +79,7 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
    - **Apply filters** or **Apply filter and window size**: Shows alarms filtered by a custom filter.
 
         > [!NOTE]
-        > For more information on filtering alarms, see [Manually applying an alarm filter in an Alarm Console tab](xref:ApplyingAlarmFiltersInTheAlarmConsole#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
+        > For more information on filtering alarms, see [Manually applying an alarm filter in an Alarm Console tab](xref:ManuallyApplyingAnAlarmFilter).
 
 ### Changing the name of a tab
 

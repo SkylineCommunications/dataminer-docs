@@ -65,7 +65,7 @@ As parameters at CM level in the Generic DOCSIS CM Collector should not be monit
 
 #### Directory path adjustments \[ID 31463\]
 
-All directory paths used in the Skyline EPM Platform element will now point to the parent folder containing the relevant subfolder (e.g. DOCSIS, GPON, etc.), instead of directly to the subfolder.
+All directory paths used in the Skyline EPM Platform element will now point to the parent folder containing the relevant subfolder (e.g., DOCSIS, GPON, etc.), instead of directly to the subfolder.
 
 ### Fixes
 

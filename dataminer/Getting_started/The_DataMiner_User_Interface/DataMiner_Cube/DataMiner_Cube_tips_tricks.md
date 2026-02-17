@@ -10,7 +10,7 @@ This section lists tips and tricks on how to use DataMiner Cube.
 
 - Too many alarms in your Alarm Console? Adding conditions in the alarm template can help you reduce unnecessary alarms. See [Using conditions in an alarm template](xref:Using_conditions_in_an_alarm_template).
 
-- You can drag and drop an element, service or view to the Alarm Console to instantly create an alarm tab linked to it. See [Applying an alarm filter by dragging an item onto the Alarm Console](xref:ApplyingAlarmFiltersInTheAlarmConsole#applying-an-alarm-filter-by-dragging-an-item-onto-the-alarm-console).
+- You can drag and drop an element, service or view to the Alarm Console to instantly create an alarm tab linked to it. See [Applying an alarm filter by dragging an item onto the Alarm Console](xref:ApplyingAnAlarmFilterByDragging).
 
 - Would you like to get a list of alarms in Word or Excel? Just drag them from the Alarm Console and drop them onto your Word or Excel document.
 

@@ -11,16 +11,8 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 > [!TIP]
 >
-> - For release notes related to the general DataMiner release, see [General Feature Release 10.6.2](xref:General_Feature_Release_10.6.2).
-> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.2](xref:Web_apps_Feature_Release_10.6.2).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No new features have been added yet.*
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.6.3](xref:General_Feature_Release_10.6.3).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.3](xref:Web_apps_Feature_Release_10.6.3).
 
 ## Changes
 
@@ -52,9 +44,9 @@ Because of a number of enhancements, especially to the way in which script infor
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-When, in System Center, you viewed Automation script logging, up to now, all scripts would be listed. This could cause users to try to view non-existing logs. For example, Automation scripts that only contain library blocks do not have a dedicated log file.
+When, in System Center, you viewed automation script logging, up to now, all scripts would be listed. This could cause users to try to view non-existing logs. For example, automation scripts that only contain library blocks do not have a dedicated log file.
 
-From now on, when Cube is connected to a DataMiner Agent running DataMiner main release 10.7.0 or feature release 10.6.2 (or above), only Automation scripts that contain at least one executable C# block will allow user to view their log file.
+From now on, when Cube is connected to a DataMiner Agent running DataMiner main release 10.7.0 or feature release 10.6.2 (or above), only automation scripts that contain at least one executable C# block will allow user to view their log file.
 
 This change applies to the following ways to access a log file:
 
@@ -74,7 +66,7 @@ Up to now, this log file list contained a *Scripting* entry. However, as no *SLS
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-When Cube connects to a DMA that is connected to dataminer.services (i.e. a DMA of which the hostname ends with ".dataminer.services"), the connection will always be of type gRPC, whatever the connection type that is specified in the Cube settings.
+When Cube connects to a DMA that is connected to dataminer.services (i.e., a DMA of which the hostname ends with ".dataminer.services"), the connection will always be of type gRPC, whatever the connection type that is specified in the Cube settings.
 
 #### Initialization exceptions thrown by the Microsoft Edge browser engine will now be added to the Cube logging [ID 44549]
 
@@ -88,7 +80,7 @@ From now on, all initialization exceptions thrown by the Microsoft Edge (WebView
 
 From now on, it will no longer be possible to migrate booking data from a Cassandra database per DMA to an indexing database.
 
-Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
+Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e., from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
 
 #### Microsoft Edge (WebView2) browser engine can now also be installed on a per user basis [ID 44580]
 
@@ -96,7 +88,7 @@ Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, fou
 
 On systems running the Windows Server OS, the Microsoft Edge (WebView2) browser engine is not installed by default. On these systems, it has to be installed manually. Up to now, it would only be possible to install it system wide. From now on, it will also be possible to install it on a per user basis. However, a system-wide installation is recommended.
 
-- A warning will now be added to the Cube logging when Cube has detected that the Microsoft Edge browser engine was installed on a per user basis rather than system wide. The message will indicate that is system-wide installation is strongly recommended.
+- A warning will now be added to the Cube logging when Cube has detected that the Microsoft Edge browser engine was installed on a per user basis rather than system wide. The message will indicate that system-wide installation is strongly recommended.
 
 - An SPI log entry named *WebView2Source* will now be added to provide more information on how the Microsoft Edge browser engine was installed.
 
@@ -105,7 +97,7 @@ On systems running the Windows Server OS, the Microsoft Edge (WebView2) browser 
   - IsInstalled (*True* or *False*)
   - Installation type (*Undefined*, *System wide*, *Per user*, or *Fixed version*)
   - Version number
-  - Location (i.e. the local path to the browser engine folder)
+  - Location (i.e., the local path to the browser engine folder)
 
 - The NuGet package *Microsoft.Web.WebView2* has been upgraded to version 1.0.3650.58.
 
@@ -113,15 +105,35 @@ On systems running the Windows Server OS, the Microsoft Edge (WebView2) browser 
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-Up to now, when you linked shapes to inputs and output of a table-based matrix, these inputs and outputs would not be displayed correctly.
+Up to now, when you linked shapes to inputs and outputs of a table-based matrix, these inputs and outputs would not be displayed correctly.
 
-From now on, it will be possible to link shapes to inputs and outputs of a table-based matrices. The inputs and outputs will be displayed correctly, and it will be possible to alter the connections via the context menu. In the context menu, the outputs and inputs will be shown in the same order as the rows in the table.
+From now on, it will be possible to link shapes to inputs and outputs of table-based matrices. The inputs and outputs will be displayed correctly, and it will be possible to alter the connections via the context menu. In the context menu, the outputs and inputs will be shown in the same order as the rows in the table.
 
 Also, the alarm colors shown in visual overviews will be identical to those in table-based matrices displayed in Data Display. The connection between an input and an output will have the alarm color of the corresponding output row.
 
 > [!NOTE]
 > In visual overviews used in web apps, as from version 10.6.0/10.6.3, the connections and alarm colors of table-based matrices will also be displayed correctly, but it will not be possible to alter connections using the context menu.
 > Visual overviews used in web apps will not support table-based matrices in version 10.5.0 CU12.
+
+#### Spectrum analysis: Enhancements with regard to selecting arguments in spectrum monitor scripts [ID 44650]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
+
+A number of enhancements have been made with regard to selecting arguments in spectrum monitor scripts:
+
+- The default range of number values has increased from 11 billion to 1 quadrillion.
+
+  This will make it possible to configure values greater than 100 MHz.
+
+- The sleep value (in milliseconds) can no longer be negative, and is limited to 10 seconds.
+
+- A unit has now been added to the *Create frequency reference*, *Create amplitude reference*, and *Sleep* labels.
+  
+  | Label | Unit |
+  |-------|------|
+  | Create frequency reference | Hz |
+  | Create amplitude reference | dB |
+  | Sleep | ms |
 
 ### Fixes
 
@@ -151,7 +163,7 @@ As the severity of an incident alarm is the highest severity found among its sou
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-When an *AlarmSummary* shape was linked to an object (e.g. an element, a service, or a view), and that object contained a correlated alarm, up to now, that correlated alarm would not be removed from the summary when the element associated with the correlated alarm had its status set to "Paused", "Stopped", or "Deleted".
+When an *AlarmSummary* shape was linked to an object (e.g., an element, a service, or a view), and that object contained a correlated alarm, up to now, that correlated alarm would not be removed from the summary when the element associated with the correlated alarm had its status set to "Paused", "Stopped", or "Deleted".
 
 From now on, correlated alarms will be removed from the summary when the status of the elements associated with those correlated alarms changes.
 

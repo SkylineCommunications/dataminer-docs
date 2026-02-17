@@ -4,7 +4,7 @@ uid: Managing_analyzers
 
 # Managing analyzers
 
-Like the main Correlation module, the *Analyzers* tab consists of a tree structure on the left, and a detailed view on the right. The way the different available analyzers are managed is very similar to the management of Correlation rules in the *Correlation* tab.
+Like the main Correlation module, the *Analyzers* tab consists of a tree structure on the left, and a detailed view on the right. The way the different available analyzers are managed is very similar to the management of correlation rules in the *Correlation* tab.
 
 - To add or delete folders and analyzers, use the buttons at the bottom of the tree view pane .
 

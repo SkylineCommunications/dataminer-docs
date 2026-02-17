@@ -82,8 +82,8 @@ In the *Layout* tab, you can find the following settings to configure this:
 
   Tooltip settings:
 
-  - *Include X labels*: Include/exclude the X-axis labels (i.e. the X-axis names).
-  - *Include Y labels*: Include/exclude the Y-axis labels (i.e. the name of the column containing the Y values).
+  - *Include X labels*: Include/exclude the X-axis labels (i.e., the X-axis names).
+  - *Include Y labels*: Include/exclude the Y-axis labels (i.e., the name of the column containing the Y values).
   - *Include color*: Show a small indicator in front of the tooltip that indicates the color of the line.
 
 It is now also possible to pan and zoom inside a *Line & area chart* component:
@@ -151,11 +151,11 @@ Up to now, when a dashboard did not contain any components that used data, the *
 
 From now on, when empty, the *DATA USED IN DASHBOARD* section will no longer be displayed.
 
-#### Web app - Interactive Automation scripts: Options of a UI control would incorrectly overlap other dialog box items [ID 39289]
+#### Web app - Interactive automation scripts: Options of a UI control would incorrectly overlap other dialog box items [ID 39289]
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When, in a dialog box of an interactive Automation script, a UI control had a large number of options, in some cases, those options would overlap other items on the dialog box.
+When, in a dialog box of an interactive automation script, a UI control had a large number of options, in some cases, those options would overlap other items on the dialog box.
 
 From now on, UI controls options will be listed in a scrollable region. As a result, they will no longer overlap other dialog box items.
 
@@ -225,7 +225,7 @@ From now on, both panels will be updated correctly, and will only show settings 
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-When, in the time picker, you clicked the *Now* button, in some cases, the time value would be rounded off incorrectly. When the current time was e.g. 10:58, the time would be rounded off to 10:00 instead of 11:00.
+When, in the time picker, you clicked the *Now* button, in some cases, the time value would be rounded off incorrectly. When the current time was e.g., 10:58, the time would be rounded off to 10:00 instead of 11:00.
 
 #### Low-Code Apps: 'View published app' button would no longer be displayed when editing an app that had been published previously [ID 39339]
 
@@ -277,7 +277,7 @@ When you clicked a *Grid*, a *Service definition* or a *Node edge graph* compone
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-In some cases, an error could occur when you shared a dashboard in which e.g. a *Get Parameters for element where* query node had been linked to a feed.
+In some cases, an error could occur when you shared a dashboard in which e.g., a *Get Parameters for element where* query node had been linked to a feed.
 
 #### Dashboards app & Low-Code Apps: GUIDs would incorrectly be visible in the query builder [ID 39467]
 

@@ -15,7 +15,7 @@ When a DataMiner Agent is connected to dataminer.services, the following data is
 - **Information related to shared dashboards**: When a dashboard is shared, no data of the dashboard itself is stored in the cloud. However, the information on who shared the dashboard and whom they shared it with is shared in the cloud, as well as information on when a shared dashboard is opened and by whom.
 - **Information related to the Teams bot**: No operational data from a DMS is stored in the cloud. However, we do store the state of the conversations with the bot.
 - **Information related to the catalog**: Information is stored on which user deployed which catalog item to a DMS.
-- **Information about installed DxMs**: Information is stored about the installed DxM versions, i.e. which versions are installed on specific nodes in a DMS.
+- **Information about installed DxMs**: Information is stored about the installed DxM versions, i.e., which versions are installed on specific nodes in a DMS.
 - **Security information**: Information is stored on which users belong to which organization and which users have access to each DMS of the organization.
 
 ## Data storage location

@@ -12,7 +12,7 @@ Each component in a dashboard or low-code app has a number of default options. B
 
    - *Title*: Enter a custom title that appears in the top-left corner of the component.
 
-   - *Name*: Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43453, originally "Configuration name", but changed to "Name" by 43760-->. Enter a custom name for the component. Using a custom name can make it easier to identify components when configuring a dashboard or low-code app. When you leave this setting empty, the default name consists of the type of visualization followed by a sequence number (e.g. `Table 3`).
+   - *Name*: Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43453, originally "Configuration name", but changed to "Name" by 43760-->. Enter a custom name for the component. Using a custom name can make it easier to identify components when configuring a dashboard or low-code app. When you leave this setting empty, the default name consists of the type of visualization followed by a sequence number (e.g., `Table 3`).
 
 1. In the ***Styles*** section, you can then change the component theme in different ways:
 
@@ -32,9 +32,9 @@ Each component in a dashboard or low-code app has a number of default options. B
 
      - In the *Colors* section, specify a custom background color and/or font color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
 
-       Under *Colors* > *Accent color* (available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41859-->), you can specify an accent color. If a component supports an accent color (e.g. the [toggle component](xref:Toggle)), it will inherit the selected color. By default, this is set to *Default*, meaning the accent color will match the theme of the dashboard or low-code app.
+       Under *Colors* > *Accent color* (available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41859-->), you can specify an accent color. If a component supports an accent color (e.g., the [toggle component](xref:Toggle)), it will inherit the selected color. By default, this is set to *Default*, meaning the accent color will match the theme of the dashboard or low-code app.
 
-       Under *Colors* > *Data colors* or *Colors* > *Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->), you can customize additional component colors, e.g. for the lines in a line chart.
+       Under *Colors* > *Data colors* or *Colors* > *Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->), you can customize additional component colors, e.g., for the lines in a line chart.
 
        From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->, under *Colors* > *Data colors*, you can specify conditional colors. If a display label of the data matches the specified text, that data will inherit the conditional color. These conditional colors override the normal data colors.
 

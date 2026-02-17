@@ -23,10 +23,10 @@ You can optimize the visibility of your Catalog item by making sure the [**Manif
   - Do not use the name of your Catalog item as a tag.
   - Do not use the type of your Catalog item as a tag.
   - Tags should be user-centric or market-centric.
-  - Do not use general DataMiner terms (e.g. "dataminer").
+  - Do not use general DataMiner terms (e.g., "dataminer").
   - Avoid uncommon abbreviations.
   - Use at most 5 tags for one Catalog item.
-  - Avoid using plurals when not necessary (e.g. use "Source" instead of "Sources").
+  - Avoid using plurals when not necessary (e.g., use "Source" instead of "Sources").
   - Use [title case](xref:Title_case).
   - Use at most three words per tag.
 
@@ -51,7 +51,7 @@ When you release a version of a Catalog item, make sure to **adhere to [semantic
 **Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
 
 > [!NOTE]
-> The "CUx" suffix (e.g. 1.2.3-CU2) should only be used exceptionally, in case a critical issue is discovered after a release deployment. In such cases, the released version should be unlisted and a new cumulative update should be released.
+> The "CUx" suffix (e.g., 1.2.3-CU2) should only be used exceptionally, in case a critical issue is discovered after a release deployment. In such cases, the released version should be unlisted and a new cumulative update should be released.
 
 ### Use clear version descriptions
 

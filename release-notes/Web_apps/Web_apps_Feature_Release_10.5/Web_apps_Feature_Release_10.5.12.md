@@ -28,7 +28,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 When in edit mode, it is now possible to directly export a GQI query to a JSON file. To do so, click the ellipsis button ("...") next to the query in the *Data* pane and select *Export*.
 
-Up to now, when you wanted to export a GQI query to a JSON file (e.g. to have it executed by the *Data Aggregator* module), you had to open the developer tools of your browser, copy the query from the request payload, and convert the query using the *ConvertQueryToProtoJson* web method.
+Up to now, when you wanted to export a GQI query to a JSON file (e.g., to have it executed by the *Data Aggregator* module), you had to open the developer tools of your browser, copy the query from the request payload, and convert the query using the *ConvertQueryToProtoJson* web method.
 
 #### Web apps: New 'User settings' window allows users to change their password [ID 43803]
 
@@ -51,11 +51,11 @@ In the Generic Query Interface, a new *Get relational anomalies* data source is 
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.6.0/10.5.12 or newer.
 
-#### Interactive Automation scripts executed in a web app: UI version can now be set in the script [ID 43964]
+#### Interactive automation scripts executed in a web app: UI version can now be set in the script [ID 43964]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, when you wanted an interactive Automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
+Up to now, when you wanted an interactive automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
 
 From now on, it is also possible to indicate the UI version in the script itself. To do so, set the `engine.WebUIVersion` property to one of the following values:
 
@@ -73,12 +73,12 @@ engine.WebUIVersion = WebUIVersion.V2
 
 The URL parameter `useNewIASInputComponents` has priority over the UI version set in the script.
 
-- If you use `useNewIASInputComponents=true`, the script will use the new UI version (i.e. V2), even when V1 was set in the script.
-- If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e. V1), even when V2 was set in the script.
+- If you use `useNewIASInputComponents=true`, the script will use the new UI version (i.e., V2), even when V1 was set in the script.
+- If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e., V1), even when V2 was set in the script.
 
 > [!IMPORTANT]
 >
-> - This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+> - This feature is only supported for interactive automation scripts executed in web apps. It is not supported for interactive automation scripts executed in DataMiner Cube.
 > - This feature will only work in conjunction with DataMiner server version 10.6.0/10.5.12 or newer.
 
 ## Changes
@@ -92,7 +92,7 @@ The URL parameter `useNewIASInputComponents` has priority over the UI version se
 Up to now, when a *Form* component was displayed in read-only mode, all content written in HTML code would be interpreted as such. However, this had a number of unwanted side effects:
 
 - All HTML code that had to be displayed as code had to be escaped to prevent it from being interpreted.
-- Text between chevrons (e.g. `<a piece of text between chevrons>`) was not displayed as it could potentially contain unsafe content.
+- Text between chevrons (e.g., `<a piece of text between chevrons>`) was not displayed as it could potentially contain unsafe content.
 - etc.
 
 From now on, when set to read-only, a *Form* component will display all HTML code as code. For example, a value like `<b>Text</b>` will now always be displayed as "\<b\>Text\</b\>" instead of "**Text**".
@@ -122,7 +122,7 @@ When you configure a PDF report, you can now select the *Landscape* setting to i
 The header of the DataMiner Comparison tool has been redesigned.
 
 - When you click the DataMiner logo, you will be redirected to the DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`).
-- When you click the app title (i.e. "Comparison"), the app's URL will be cleared of any settings that were added to it.
+- When you click the app title (i.e., "Comparison"), the app's URL will be cleared of any settings that were added to it.
 
 #### Dashboards app: Email reports can now also be sent to recipients who are not contacts and who are only specified in the CC and/or BCC fields [ID 43848]
 
@@ -194,7 +194,7 @@ On the DataMiner landing page (by default accessible via `https://<DMA IP or hos
 
 <!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
 
-When an extension worker process had stopped unexpectedly, e.g. because someone had manually killed it, up to now, the process would automatically restart when a new query was executed, and existing query sessions would be allowed to use it as if nothing had happened.
+When an extension worker process had stopped unexpectedly, e.g., because someone had manually killed it, up to now, the process would automatically restart when a new query was executed, and existing query sessions would be allowed to use it as if nothing had happened.
 
 However, when the extension worker restarted, the state of the existing query sessions would no longer be valid, causing the core GQI process to no longer be able to communicate correctly with the extension worker process.
 
@@ -236,13 +236,13 @@ When a *Search input* component had its *Emit value on* option set to "Value cha
 
 <!-- MR 10.5.0 [CU9] - FR 10.5.12 -->
 
-When, in e.g. a Table component, a specific time range was applied when listing behavioral changes or pattern occurrences using the *Get behavioral change events* or *Get pattern occurrence events* data sources, in some cases, an error message could appear, saying that the time range was not in UTC format. Also, the time range would not be displayed correctly.
+When, in e.g., a Table component, a specific time range was applied when listing behavioral changes or pattern occurrences using the *Get behavioral change events* or *Get pattern occurrence events* data sources, in some cases, an error message could appear, saying that the time range was not in UTC format. Also, the time range would not be displayed correctly.
 
 #### Dashboards/Low-Code Apps - Time range component: Problem when scheduling the PDF generation of dashboard reports using a relative timespan [ID 43828]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-When the *Time range* component had been used to schedule the PDF generation of dashboard reports, the reports would not be generated at the correct time when a relative timespan (e.g. "Today so far") had been specified. Instead of the relative timespan, the system would incorrectly use a fixed timespan based on the moment at which the time range had been configured.
+When the *Time range* component had been used to schedule the PDF generation of dashboard reports, the reports would not be generated at the correct time when a relative timespan (e.g., "Today so far") had been specified. Instead of the relative timespan, the system would incorrectly use a fixed timespan based on the moment at which the time range had been configured.
 
 #### Low-Code Apps: Problem when importing and exporting low-code apps [ID 43833]
 
@@ -299,7 +299,7 @@ Up to now, in a *Table* component, the *Is selected* template override would onl
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-When, in a dashboard or a low-code app, a *Time range* component had a relative time span set (e.g. "Today so far") and was linked to a *Trigger* component, up to now, the *Time range* component would incorrectly no longer update its relative time span when the *Trigger* component ordered it to do so after a reload of the dashboard or a page switch in the low-code app.
+When, in a dashboard or a low-code app, a *Time range* component had a relative time span set (e.g., "Today so far") and was linked to a *Trigger* component, up to now, the *Time range* component would incorrectly no longer update its relative time span when the *Trigger* component ordered it to do so after a reload of the dashboard or a page switch in the low-code app.
 
 #### Problem with embedded VLC player [ID 43973]
 

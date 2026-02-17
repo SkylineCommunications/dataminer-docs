@@ -55,8 +55,8 @@ SLNetTypes now exposes two new request-response operations that will allow you t
 
 | Type of file to be retrieved | Request | Response |
 |---|---|---|
-| ASCII text files (e.g. log files) | `GetLogTextFileStringContentRequestMessage` | `GetLogTextFileStringContentResponseMessage` |
-| Binary files (e.g. zip files)     | `GetLogTextFileBinaryContentRequestMessage` | `GetLogTextFileBinaryContentResponseMessage` |
+| ASCII text files (e.g., log files) | `GetLogTextFileStringContentRequestMessage` | `GetLogTextFileStringContentResponseMessage` |
+| Binary files (e.g., zip files)     | `GetLogTextFileBinaryContentRequestMessage` | `GetLogTextFileBinaryContentResponseMessage` |
 
 Both requests have the following arguments:
 
@@ -66,8 +66,8 @@ Both requests have the following arguments:
 Restrictions:
 
 - The user must have administrative privileges or must be granted the *SDLogging* permission.
-- The requests must sent from a managed DataMiner module, i.e. not directly from a client application.
-- The requests must be sent via a scripted, wrapped connection (e.g. a QAction of a protocol)
+- The requests must sent from a managed DataMiner module, i.e., not directly from a client application.
+- The requests must be sent via a scripted, wrapped connection (e.g., a QAction of a protocol)
 - The file name passed in the requests must be the name of an existing file.
 - The file path passed in the requests must be a valid, existing path.
 
@@ -107,8 +107,8 @@ GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI\
 
 - Duration of the individual GQI requests:
 
-  - Request type (e.g. GenIfOpenSessionRequest)
-  - User ID (e.g. SKYLINE2\FirstName)
+  - Request type (e.g., GenIfOpenSessionRequest)
+  - User ID (e.g., SKYLINE2\FirstName)
   - Duration (in ms)
 
 - Duration of the first page of a session (when `SessionOptions.OptimizeType` is "NextPage"):
@@ -127,7 +127,7 @@ GQI will now log the following metrics in the `C:\Skyline DataMiner\Logging\GQI\
   - User ID
   - Total number of rows fetched across all pages
   - Number of pages
-  - Total duration (in ms), i.e. the accumulated time of the individual pages
+  - Total duration (in ms), i.e., the accumulated time of the individual pages
 
   > [!NOTE]
   > For queries that retrieve all data at once.
@@ -239,9 +239,9 @@ This service now allows you to enable kernel response buffering, which should im
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, Automation scripts would always be checked whether they were Cassandra ready, regardless of the type of database used by the DataMiner System.
+Up to now, automation scripts would always be checked whether they were Cassandra ready, regardless of the type of database used by the DataMiner System.
 
-From now on, this Cassandra ready check will only be performed on DataMiner Systems using a MySQL database. When the DataMiner System is using a type of database other than MySQL, Automation scripts will always be considered Cassandra ready.
+From now on, this Cassandra ready check will only be performed on DataMiner Systems using a MySQL database. When the DataMiner System is using a type of database other than MySQL, automation scripts will always be considered Cassandra ready.
 
 #### Enhanced performance when starting up a DataMiner Agent with a large number of virtual elements [ID 38780]
 
@@ -465,7 +465,7 @@ From now on, if an error occurs when the function manager was not able to read t
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
-When GQI extensions (i.e. ad hoc data sources or custom operators) were being loaded, in some cases, an exception could be thrown when inspecting the assembly of an extension that prevented subsequent extensions from being loaded.
+When GQI extensions (i.e., ad hoc data sources or custom operators) were being loaded, in some cases, an exception could be thrown when inspecting the assembly of an extension that prevented subsequent extensions from being loaded.
 
 This type of exceptions will be now be properly caught and logged as warnings so that other extensions will no longer be prevented from being loaded.
 
@@ -502,7 +502,7 @@ When you opened a visual overview in a web app, in some cases, a `Connection cou
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, an error would occur when a DataMiner module (e.g. Automation, Scheduler, etc.) tried to send an email while *SLASPConnection* was still initializing. From now on, all DataMiner modules will be able to send emails, even when *SLASPConnection* is still initializing.
+Up to now, an error would occur when a DataMiner module (e.g., Automation, Scheduler, etc.) tried to send an email while *SLASPConnection* was still initializing. From now on, all DataMiner modules will be able to send emails, even when *SLASPConnection* is still initializing.
 
 #### SNMP: Timeout time of commands would incorrectly be doubled when using SNMP++ [ID 39164]
 

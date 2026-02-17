@@ -145,7 +145,7 @@ Also, dropdown fields defined as `ResourceFieldDescriptor` or `ServiceDefinition
 
 > [!NOTE]
 >
-> - If a resource is found in multiple resource pools, it will appear in a dropdown field multiple times (i.e. once for every pool it is found in).
+> - If a resource is found in multiple resource pools, it will appear in a dropdown field multiple times (i.e., once for every pool it is found in).
 > - If a dropdown field defined as `ResourceFieldDescriptor` or `ServiceDefinitionFieldDescriptor` contains more than 100 items, it is advised to adapt the filter in order to reduce the number of items in the dropdown field.
 
 #### Dashboards app: Folders of which the name contained a slash ('/') or a backslash ('\\') character would stay hidden [ID 40532]
@@ -216,7 +216,7 @@ In some cases, components using feeds would not be rendered correctly.
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When a parameter state had an index, but that index was not visible (e.g. a dropped process in Task Manager), up to now, the state itself would not be displayed. From now on, if a state is empty, the text "Not initialized" will be shown instead.
+When a parameter state had an index, but that index was not visible (e.g., a dropped process in Task Manager), up to now, the state itself would not be displayed. From now on, if a state is empty, the text "Not initialized" will be shown instead.
 
 #### Dashboards app: URL would incorrectly not be updated when a selection was made in one of its components [ID 40673]
 
@@ -300,7 +300,7 @@ When you imported a dashboard into a dashboard subfolder, the Dashboards app wou
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When a large amount of feed data was requested at the same time (e.g. when you clicked Ctrl+A in a node edge graph component), in some cases, the Dashboards app could slow down and eventually stop working.
+When a large amount of feed data was requested at the same time (e.g., when you clicked Ctrl+A in a node edge graph component), in some cases, the Dashboards app could slow down and eventually stop working.
 
 #### Low-Code Apps - GQI: Problem with persistent client subscriptions [ID 40852]
 

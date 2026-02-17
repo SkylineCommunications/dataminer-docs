@@ -27,11 +27,11 @@ alarm.dma_id.element_id.pid.row_key
 Example: alarm.162.951.102.AMP33_SLC
 
 > [!NOTE]
-> Currently, the alarm only contains the IDs of the views containing the parent object of the alarm (e.g. element, service, etc.). It does not yet contain the IDs of the views containing all the parents of that parent object.
+> Currently, the alarm only contains the IDs of the views containing the parent object of the alarm (e.g., element, service, etc.). It does not yet contain the IDs of the views containing all the parents of that parent object.
 
 #### External alarms can now also have general alarm properties \[ID 29231\]
 
-External alarms (e.g. anomaly detection alarms, etc.) can now also have general alarm properties such as “System Name” or “System Type”.
+External alarms (e.g., anomaly detection alarms, etc.) can now also have general alarm properties such as “System Name” or “System Type”.
 
 > [!NOTE]
 > DataMiner automatically evaluates and populates the “System Name” and “System Type” alarm properties. If you want external alarms to overwrite the values in those properties, make sure new property values are passed along with those external alarms.
@@ -211,17 +211,17 @@ When a query filter using a feed is configured to filter using a regular express
 
 #### Dashboards app: Node-edge graph component \[ID 29425\]
 
-The new node-edge graph component allows you to visualize any type of objects (i.e. “nodes”) and the connections between them (i.e. “edges”). Moreover, by linking parameters and properties to those nodes and edges, you can turn a node-edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data using dynamic coloring.
+The new node-edge graph component allows you to visualize any type of objects (i.e., “nodes”) and the connections between them (i.e., “edges”). Moreover, by linking parameters and properties to those nodes and edges, you can turn a node-edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data using dynamic coloring.
 
-The data necessary to create a node-edge graph can to be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects).
+The data necessary to create a node-edge graph can to be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e., objects), whereas edge queries provide data that will be visualized as edges (i.e., connections between objects).
 
 For more detailed information, see [Node edge graph](xref:DashboardNodeEdgeGraph).
 
 ### DMS Automation
 
-#### Interactive Automation scripts: Lazy loading of tree view items \[ID 29295\]
+#### Interactive automation scripts: Lazy loading of tree view items \[ID 29295\]
 
-It is possible to configure that a tree view item in interactive Automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
+It is possible to configure that a tree view item in interactive automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
 
 You can now use the GetExpanded method of the UIResults class to retrieve the keys of all expanded tree view items that have the SupportsLazyLoading property set to true.
 
@@ -249,7 +249,7 @@ In the Jobs app, the time filter in the sidebar has been improved. You can now i
 
 #### Mobile apps will now display a warning when you do not use an HTTPS connection \[ID 29389\]
 
-From now on, when you access a mobile app (e.g. Monitoring, Dashboards, Jobs, Ticketing, etc.), a warning will now be displayed when you do not use an HTTPS connection.
+From now on, when you access a mobile app (e.g., Monitoring, Dashboards, Jobs, Ticketing, etc.), a warning will now be displayed when you do not use an HTTPS connection.
 
 ### DMS Service & Resource Management
 
@@ -298,7 +298,7 @@ All these log entries will have log level 5.
 
 #### New caching mechanism when retrieving ReservationInstances from Elasticsearch \[ID 29289\]
 
-A caching mechanism involving three separate caches will now be used when retrieving ReservationInstances from an Elasticsearch database, especially when the already saved ReservationInstances have to be checked, e.g. when saving a new ReservationInstance or when requesting the availability of resources in a certain time frame.
+A caching mechanism involving three separate caches will now be used when retrieving ReservationInstances from an Elasticsearch database, especially when the already saved ReservationInstances have to be checked, e.g., when saving a new ReservationInstance or when requesting the availability of resources in a certain time frame.
 
 ##### Overview of the caches
 
@@ -480,7 +480,7 @@ When you generated a PDF report with the options “No grouping” and “Includ
 
 #### DataMiner Cube - Automation: Discarding a newly created script would not delete it \[ID 29032\]
 
-When you discarded a newly created Automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
+When you discarded a newly created automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
 
 #### No trigger keys listed when debugging a QAction due to a compatibility issue between DataMiner and DataMiner Integration Studio \[ID 29049\]
 
@@ -510,9 +510,9 @@ DmaConnections|Unexpected filter type: SubscriptionFilter\`2
 Unexpected filter type: Skyline.DataMiner.Net.SubscriptionFilters.SubscriptionFilter\`2[XXXX,XXXXXX]
 ```
 
-#### Interactive Automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
+#### Interactive automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
 
-When, in an interactive Automation script, a calendar control was used to select a date (i.e. a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
+When, in an interactive automation script, a calendar control was used to select a date (i.e., a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
 
 #### SLAnalytics: Problem when calculating a trend prediction for a parameter with missing trend data \[ID 29163\]
 
@@ -536,7 +536,7 @@ In DataMiner Cube, in some cases, table columns of which the width was set to 0 
 
 #### Dashboards app - GQI: Aggregated values would incorrectly be displayed in raw format \[ID 29200\]
 
-In GQI query results, aggregated values would incorrectly be displayed in raw format. From now on, they will be formatted according to the display properties (e.g. units, decimals, etc.) defined in the protocol.
+In GQI query results, aggregated values would incorrectly be displayed in raw format. From now on, they will be formatted according to the display properties (e.g., units, decimals, etc.) defined in the protocol.
 
 #### SLAnalytics: Problem when a connection was lost while handling a previous connection loss \[ID 29210\]
 
@@ -548,9 +548,9 @@ When an EPM object is masked, you can try to unmask it via its alarms in the Ala
 
 In some cases, it would no longer be possible to unmask such an EPM object due to a casing issue in those “System Name” and “System Type” properties.
 
-#### Dashboards app: Multiple pop-up windows would be displayed when an Automation script could not be opened \[ID 29218\]
+#### Dashboards app: Multiple pop-up windows would be displayed when an automation script could not be opened \[ID 29218\]
 
-When the Dashboards app tried to open an Automation script that had been renamed or removed in DataMiner Cube, in some cases, a series of pop-up windows would be displayed. From now on, when the Dashboards app cannot open an Automation script, a single pop-up window will be displayed.
+When the Dashboards app tried to open an automation script that had been renamed or removed in DataMiner Cube, in some cases, a series of pop-up windows would be displayed. From now on, when the Dashboards app cannot open an automation script, a single pop-up window will be displayed.
 
 #### DataMiner Cube - EPM: No longer possible to manually unmask items in a topology diagram \[ID 29228\]
 
@@ -685,7 +685,7 @@ In some cases, it would not be possible to bind a VirtualFunctionResource when a
 
 #### Automation: Subscripts would return an incorrect output \[ID 29405\]
 
-When, in an Automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
+When, in an automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
 
 #### SLAnalytics: Problem with automatic incident tracking when a parent of a particular view could not be found \[ID 29419\]
 

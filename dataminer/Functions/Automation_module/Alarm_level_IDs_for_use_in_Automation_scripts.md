@@ -2,7 +2,7 @@
 uid: Alarm_level_IDs_for_use_in_Automation_scripts
 ---
 
-# Alarm level IDs for use in Automation scripts
+# Alarm level IDs for use in automation scripts
 
 In DataMiner Automation, it can sometimes be necessary to refer to an alarm level by using its ID. The following table lists the IDs for all alarm levels.
 

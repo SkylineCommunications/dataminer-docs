@@ -101,7 +101,7 @@ On some systems, the `C:\Skyline DataMiner\System Cache\SLNet` folder can contai
 
    Example: *ReplicationBuffer_slc-h32-g06_10.11.6.32_223_4_6992437*
 
-1. If you want to flush the data in the ReplicationBuffer files to the agents that are hosting the replicated elements (i.e. in order to fill some gaps in their trend data), you can try to do the following:
+1. If you want to flush the data in the ReplicationBuffer files to the agents that are hosting the replicated elements (i.e., in order to fill some gaps in their trend data), you can try to do the following:
 
    1. Connect to the DMA using the SLNetClientTest tool.
    1. Go to the *Build Message* tab of the main window.
@@ -216,7 +216,7 @@ From now on, one thread will read the raw data from the UDP buffer and add it to
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
-When a booking needs to start, SLNet will first try to activate the necessary function DVEs for that booking. If the booking is created a while before it needs to start, the DVEs will be activated at a set time before the start time (i.e. 10 minutes by default, but configurable using the [FunctionHysteresis](xref:Function_resource_settings) setting). For example, when you create a booking at 13:00 that needs to start at 15:00, the DVEs will be activated at 14:50.
+When a booking needs to start, SLNet will first try to activate the necessary function DVEs for that booking. If the booking is created a while before it needs to start, the DVEs will be activated at a set time before the start time (i.e., 10 minutes by default, but configurable using the [FunctionHysteresis](xref:Function_resource_settings) setting). For example, when you create a booking at 13:00 that needs to start at 15:00, the DVEs will be activated at 14:50.
 
 When you create a booking that needs to start immediately, SLNet will enable the DVEs and wait for up to 1 minute until they are active before trying to start the booking. If the DVEs take more than 1 minute to activate, the booking will fail to start since the DVEs need to be activated before the booking can be started.
 
@@ -299,15 +299,15 @@ Also, when a group contained single parameters in combination with a partial tab
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.7 -->
 
-In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g. DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
+In some cases, an `InvalidOperationException` could be thrown when a .NET Framework host application (e.g., DataMiner Automation) disposed an ISession with multiple subscriptions without having disposed the subscriptions first.
 
-#### Interactive Automation script was not able to continue once a lost connection was re-established [ID 39487]
+#### Interactive automation script was not able to continue once a lost connection was re-established [ID 39487]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
-When a client application lost connection while an interactive Automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
+When a client application lost connection while an interactive automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
 
-From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
+From now on, when a client application loses connection while an interactive automation script is being run, the script will continue once the connection is re-established.
 
 #### API Gateway: Problem when processing a large number of parallel calls [ID 39550]
 

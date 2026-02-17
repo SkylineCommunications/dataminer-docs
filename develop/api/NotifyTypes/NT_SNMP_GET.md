@@ -190,7 +190,7 @@ string sysLocationOidValue = Convert.ToString(result[2]);
 
 (Deprecated, use tablev2 instead.)
 
-To retrieve a table via the TABLE method, the entry in oidInfo should be a semicolon-separated list of OIDs where the first entry specifies the OID of the table and the subsequent OIDs specify the OIDs of the columns that should be retrieved (e.g. `1.3.6.1.2.1.2.2.1;1.3.6.1.2.1.2.2.1.2;1.3.6.1.2.1.2.2.1.3:TABLE`).
+To retrieve a table via the TABLE method, the entry in oidInfo should be a semicolon-separated list of OIDs where the first entry specifies the OID of the table and the subsequent OIDs specify the OIDs of the columns that should be retrieved (e.g., `1.3.6.1.2.1.2.2.1;1.3.6.1.2.1.2.2.1.2;1.3.6.1.2.1.2.2.1.3:TABLE`).
 
 This will result in GetNextRequest PDUs being sent out (to retrieve the instance values) followed by multiple GetRequest PDUs containing multiple variable bindings (to retrieve the column values). The result object is a table that has as its first column the instance values. The remaining columns are the values of the columns specified in the request.
 
@@ -230,7 +230,7 @@ for(int i=0; i<table.Length; i++)
 
 ### TABLEV2
 
-To retrieve a table via the TABLEV2 method, the entry in oidInfo should be a semicolon-separated list of OIDs of the columns that should be retrieved (e.g. `1.3.6.1.2.1.2.2.1.2;1.3.6.1.2.1.2.2.1.3:TABLEV2`).
+To retrieve a table via the TABLEV2 method, the entry in oidInfo should be a semicolon-separated list of OIDs of the columns that should be retrieved (e.g., `1.3.6.1.2.1.2.2.1.2;1.3.6.1.2.1.2.2.1.3:TABLEV2`).
 
 This will result in GetBulkRequest PDUs being sent out. The number of maxRepetitions to use in the GetBulkRequest can be specified in the elementInfo object. The default value is 6.
 The result object is a table that has as its first column the instance values. The remaining columns are the values of the columns specified in the request.
@@ -332,7 +332,7 @@ string sysNameOidValue = Convert.ToString(result[0]);
 ```
 
 > [!NOTE]
-> A returned value of 130 could indicate "endOfMibView". This value is returned if the specified OID does not lexicographically precede any variable accessible by this request (i.e. there is no lexicographic successor).
+> A returned value of 130 could indicate "endOfMibView". This value is returned if the specified OID does not lexicographically precede any variable accessible by this request (i.e., there is no lexicographic successor).
 
 ## Remarks
 

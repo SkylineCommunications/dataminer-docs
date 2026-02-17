@@ -196,7 +196,7 @@ Before executing a query, the system will send a GenIfOpenSessionRequest message
 
 #### Dashboards app - GQI: Linking columns with values of type double or datetime to feeds in query filters \[ID 29902\]
 
-In GQI query filters, from now on, columns containing values of type datetime or double can be linked to feeds. This will allows you to e.g. filter a bookings list by linking the *End* column to a time range feed.
+In GQI query filters, from now on, columns containing values of type datetime or double can be linked to feeds. This will allows you to, for example, filter a bookings list by linking the *End* column to a time range feed.
 
 ### DMS Mobile apps
 
@@ -270,7 +270,7 @@ Note that no retries will occur and that no messages will be queued.
 
 - ResourceManagerEventMessage
 
-    When a ResourceManagerEventMessage contains multiple types of objects, it will be split up into multiple proto events. When the ResourceManager sends out one ResourceManagerEvent containing e.g. 2 ReservationInstances and 3 Resources, the forwarder logic will publish one ReservationInstanceEvent (with the 2 objects) and one ResourceEvent (with the 3 objects).
+    When a ResourceManagerEventMessage contains multiple types of objects, it will be split up into multiple proto events. When the ResourceManager sends out one ResourceManagerEvent containing e.g., 2 ReservationInstances and 3 Resources, the forwarder logic will publish one ReservationInstanceEvent (with the 2 objects) and one ResourceEvent (with the 3 objects).
 
 ##### ReservationInstance object
 
@@ -325,7 +325,7 @@ A number of security enhancements have been made.
 
 #### Trending: Trend values will now be rounded after being retrieved from the database \[ID 28840\] \[29758\]
 
-Up to now, trend data values were rounded before being stored in the database. From now on, those values will only be rounded after being retrieved from the database, i.e. before being returned to the client.
+Up to now, trend data values were rounded before being stored in the database. From now on, those values will only be rounded after being retrieved from the database, i.e., before being returned to the client.
 
 #### Dashboards app: Enhanced overflow detection when generating PDF reports \[ID 28985\]
 
@@ -407,7 +407,7 @@ The following information will be logged
 
 #### SLManagedAutomation: Locking mechanism will now prevent exceptions from being thrown when reading or writing items in the dummies collection \[ID 29930\]
 
-In an Automation script, every Engine object contains a collection of “dummies”. Each of these dummies represents an element and can be used to interact with that element. When an Automation script wants to interact with an element that is not yet available in the dummies collection, a new dummy is created.
+In an automation script, every Engine object contains a collection of “dummies”. Each of these dummies represents an element and can be used to interact with that element. When an automation script wants to interact with an element that is not yet available in the dummies collection, a new dummy is created.
 
 Up to now, exceptions could be thrown when multiple threads were trying to read or write items in the dummies collection. Now, a locking mechanism has been added to prevent multiple threads from interfering with each other while accessing the dummies collection.
 
@@ -463,9 +463,9 @@ When the Surveyor setting “Collapse DVE elements beneath their main element”
 
 When you opened a trend group with several graphs, in some rare cases, color icons would be missing from the trend graph legend.
 
-#### Interactive Automation scripts: Problem when entering double-digit numbers in input controls \[ID 29736\]
+#### Interactive automation scripts: Problem when entering double-digit numbers in input controls \[ID 29736\]
 
-In some cases, due to a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g. a number of minutes) in an input control. The interactive Automation script would incorrectly already continue after you entered the first digit.
+In some cases, due to a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g., a number of minutes) in an input control. The interactive automation script would incorrectly already continue after you entered the first digit.
 
 #### Manually clearing a clearable alarm on a single-value parameter would incorrectly set the alarm state of the parameter to 'undefined' instead of 'normal' \[ID 29745\]
 
@@ -499,7 +499,7 @@ When you pressed the Back button while logging on, in some cases, an error could
 
 #### Problem when an interactive Automaton script was detached on closure \[ID 29815\]
 
-In some cases, when an interactive Automation script detached on closure, an exception could be thrown in SLAutomation. From now on, interactive Automation scripts will only detach when they are aborted by a user either closing the pop-up window or clicking the *Abort* button.
+In some cases, when an interactive automation script detached on closure, an exception could be thrown in SLAutomation. From now on, interactive automation scripts will only detach when they are aborted by a user either closing the pop-up window or clicking the *Abort* button.
 
 #### Monitoring app: Service child pop-up pages without parent page could not be opened \[ID 29816\]
 
@@ -527,7 +527,7 @@ In some cases, DataMiner could become unresponsive when you opened a visual over
 
 #### Mobile apps: Selection box values would be ellipsed even when there was ample space to fully display them \[ID 29850\]
 
-In the mobile apps (e.g. Jobs, Ticketing, etc.), in some cases, selection box values would be ellipsed even when there was ample space to fully display them.
+In the mobile apps (e.g., Jobs, Ticketing, etc.), in some cases, selection box values would be ellipsed even when there was ample space to fully display them.
 
 #### SLAnalytics - Automatic incident tracking: IDP location updates would not be taken into account \[ID 29852\]
 
@@ -551,7 +551,7 @@ In some cases, opening the Services app could take a long time due to a problem 
 
 #### Dashboards - Table component: Problem with scroll bars when using Firefox \[ID 29892\]
 
-When using Mozilla Firefox, the table component would should scroll bars even in situations where it was not necessary.
+When using Mozilla Firefox, the table component would should scrollbars even in situations where it was not necessary.
 
 Also, in some cases, columns would not resize correctly.
 
@@ -638,6 +638,6 @@ During a DataMiner upgrade, in some rare cases, a problem could occur in the cle
 
 In the Resources and Services modules, it could occur that functions were loaded even though they were not marked as active, which could cause several functions with the same GUID to be loaded.
 
-#### DataMiner Cube - Automation: No longer possible to attach an Automation script to a user session \[ID 30125\]
+#### DataMiner Cube - Automation: No longer possible to attach an automation script to a user session \[ID 30125\]
 
-In some cases, it would no longer be possible to attach an Automation script to a user session.
+In some cases, it would no longer be possible to attach an automation script to a user session.

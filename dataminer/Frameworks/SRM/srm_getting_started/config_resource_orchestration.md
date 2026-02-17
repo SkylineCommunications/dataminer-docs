@@ -15,11 +15,11 @@ Before you can start using Resource Orchestration, you need to configure the Boo
 
 ## Default wizard included in the SRM framework
 
-When you install the SRM framework, an Automation script is included that can be used as the default wizard to orchestrate a resource.
+When you install the SRM framework, an automation script is included that can be used as the default wizard to orchestrate a resource.
 
 ### Required input parameters
 
-The wizard is an interactive Automation script called *SRM_ResourceManagement*. As of SRM version 1.2.27, the input parameters accept the following fields in JSON format:
+The wizard is an interactive automation script called *SRM_ResourceManagement*. As of SRM version 1.2.27, the input parameters accept the following fields in JSON format:
 
 - *ResourceIds*: The GUID of the resources, separated by commas.
 - *BookingManagerElement*: The name of a Booking Manager element. This is used to generate log files in the directory specified in that element.

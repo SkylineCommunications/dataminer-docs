@@ -47,7 +47,7 @@ In addition, other settings found on the *Layout* tab have been rearranged. The 
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-A new *Stepper* component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
+A new *Stepper* component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e., a DOM instance or DOM definition that contains states) as data input.
 
 For more information on how to configure this component, see [Stepper](xref:DashboardStepper).
 
@@ -65,7 +65,7 @@ The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is 
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
+In all web apps (e.g., Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
 #### Security enhancements [ID 37047] [ID 37051] [ID 37068] [ID 37086]
 
@@ -168,7 +168,7 @@ In some cases, it could occur that the *Copy embed URL* right-click option of a 
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
-In the Monitoring app, it could occur that Visual Overview parameter control shapes configured to show a filtered combo box control (i.e. with *SetVarOptions* set to *Control=FilterComboBox*) were not displayed correctly.
+In the Monitoring app, it could occur that Visual Overview parameter control shapes configured to show a filtered combo box control (i.e., with *SetVarOptions* set to *Control=FilterComboBox*) were not displayed correctly.
 
 #### GQI: Missing column statistics for discrete options of numeric columns [ID 37111]
 
@@ -213,11 +213,11 @@ When you enabled the *Show seconds* option of multiple clock components on the s
 
 Up to now, when you edited a published app that had a draft, a new draft would incorrectly be created. From now on, when you edit an app that has a draft, that existing draft will be opened.
 
-#### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID 37199]
+#### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lowercase [ID 37199]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-The label of the *Icon* setting of an *Icon* component would incorrectly be in lower case. It is now in upper case.
+The label of the *Icon* setting of an *Icon* component would incorrectly be in lowercase. It is now in uppercase.
 
 #### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID 37206]
 

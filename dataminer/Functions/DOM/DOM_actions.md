@@ -8,7 +8,7 @@ From DataMiner 10.1.11/10.2.0 onwards, it is possible to define actions on a [Do
 
 You can also define buttons to be shown in the UI that will execute one of these actions when clicked. A button definition also has a condition to determine when the button is shown. This way you can hide buttons when they are not applicable.
 
-An action is always executed in a specific context, i.e. for a context object. Currently only DOM instances are supported.
+An action is always executed in a specific context, i.e., for a context object. Currently only DOM instances are supported.
 
 ## Defining an action
 
@@ -20,7 +20,7 @@ This action can be used to execute a specified script. This has the following pr
 
 | Name | Type | Description |
 |--|--|--|
-| Id | string | The ID of the action, which contains lowercase characters only (e.g. "trigger_ingest_action"). |
+| Id | string | The ID of the action, which contains lowercase characters only (e.g., "trigger_ingest_action"). |
 | Condition | IDomCondition | The condition that should be met before the action is allowed to be executed. |
 | Script | string | The name of the script that can be executed. |
 | Async | bool | Determines whether the script will be run synchronously or asynchronously. When this is set to true, no errors or info data from the script will be returned. |
@@ -29,12 +29,12 @@ This action can be used to execute a specified script. This has the following pr
 
 > [!NOTE]
 >
-> - The *ScriptOptions* property can contain the option strings you would put in the *Options* property of an [ExecuteScriptMessage](xref:Skyline.DataMiner.Net.Messages.ExecuteScriptMessage). This can be used to for example pass along a parameter (e.g. "PARAMETER:1:SomeValue"). Note that you should not add the "DEFER" option as this will be added automatically depending on the value of the *Async* property.
+> - The *ScriptOptions* property can contain the option strings you would put in the *Options* property of an [ExecuteScriptMessage](xref:Skyline.DataMiner.Net.Messages.ExecuteScriptMessage). This can be used to for example pass along a parameter (e.g., "PARAMETER:1:SomeValue"). Note that you should not add the "DEFER" option as this will be added automatically depending on the value of the *Async* property.
 > - If no condition is defined (null), the action can always be executed.
 > - Prior to DataMiner versions 10.5.0/10.5.2<!-- RN 41536 -->, a "Script started" information event is generated when the configured script is launched. To reduce the load on the database, this no longer happens from those DataMiner versions onwards.
 
 > [!CAUTION]
-> To prevent deadlock situations in the SLAutomation module, avoid triggering DOM actions of this kind from other Automation scripts. A deadlock can occur in the following scenario:
+> To prevent deadlock situations in the SLAutomation module, avoid triggering DOM actions of this kind from other automation scripts. A deadlock can occur in the following scenario:
 >
 > - A DOM action script is configured to run synchronously (`Async` property set to `false`).
 > - That DOM action script needs to interact with the SLNet API (this is the case when using most helpers, sending SLNet messages, etc.).
@@ -110,7 +110,7 @@ if (info != null && info.InfoType == DomActionInfo.Type.ScriptOutput)
 
 ### Interactive script
 
-From DataMiner 10.2.8/10.3.0 onwards, it is possible to execute an interactive Automation script (IAS) using the DOM actions. When a client triggers a DOM action, it can then interact with the script.
+From DataMiner 10.2.8/10.3.0 onwards, it is possible to execute an interactive automation script (IAS) using the DOM actions. When a client triggers a DOM action, it can then interact with the script.
 
 Flow:
 
@@ -183,7 +183,7 @@ The `DomInstanceButtonDefinition` has the following properties:
 
 | Name | Type | Description |
 |--|--|--|
-| Id | string | The ID of the button. This must be unique to this `DomBehaviorDefinition` and must be lower case. |
+| Id | string | The ID of the button. This must be unique to this `DomBehaviorDefinition` and must be lowercase. |
 | Layout | DomButtonDefinitionLayout | Contains extra properties to define how the button will be displayed (see properties table below). |
 | VisibilityCondition | IDomInstanceCondition | Condition that defines when the button will be shown. |
 | ActionDefinitionIds | List\<string> | Contains the ID of the action that should be executed. Can contain multiple, but currently, only one is allowed. |

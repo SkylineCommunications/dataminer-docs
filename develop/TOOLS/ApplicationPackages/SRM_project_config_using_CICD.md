@@ -85,7 +85,7 @@ To create the repositories:
 
    In the example above, you are adding the *Ziine SatUplink* Companion Files repository for the *Ziine* customer.
 
-1. In the "Install" Automation script of the "Package" repository, add the necessary steps to import the SRM configuration:
+1. In the "Install" automation script of the "Package" repository, add the necessary steps to import the SRM configuration:
 
    1. Add the [Skyline.DataMiner.Core.AppPackageInstaller.SRM](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageInstaller.SRM) NuGet package (available on <nuget.org> ) to the "Install" project.
 

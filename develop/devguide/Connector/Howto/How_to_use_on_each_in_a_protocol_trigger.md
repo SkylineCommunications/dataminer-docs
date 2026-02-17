@@ -17,8 +17,8 @@ A protocol trigger is used to start a flow when a certain condition is met. This
 
 The definition of a trigger will commonly contain an indication of when it should run. This is done by combining `On` and `Time`.
 
-- **On**: The root of the trigger, e.g. a parameter.
-- **Time**: The condition the root must have to activate the trigger, e.g. a change.
+- **On**: The root of the trigger, e.g., a parameter.
+- **Time**: The condition the root must have to activate the trigger, e.g., a change.
 
 For example, when the reconnect button (parameter ID 13) is clicked, a flow needs to run (action ID 50):
 
@@ -49,7 +49,7 @@ Definition of the action that will initiate the flow in the group with ID 50:
 
 ## What is the 'on each' feature?
 
-With the *on each* feature, the trigger will run as soon as any of the root sources (e.g. a parameter) meet the trigger requirements (e.g. a change) **and** there is **no other trigger** defined for this root source with the same requirements.
+With the *on each* feature, the trigger will run as soon as any of the root sources (e.g., a parameter) meet the trigger requirements (e.g., a change) **and** there is **no other trigger** defined for this root source with the same requirements.
 
 This means it will act like an *IF NOT – THEN* statement. If there is no trigger with *On id = x + Parameter change*, the *on each* trigger will run. Otherwise, it will be skipped and the dedicated trigger for that parameter will run.
 
@@ -63,7 +63,7 @@ For more information on triggers, see [Protocol.Triggers](xref:Protocol.Triggers
 
 ## How to
 
-The example below shows an integration that needs to run a **common** flow after receiving a supported "allowed" serial response, and an **exception** flow after receiving a supported "bad" response, e.g. when a data source returns the message "Unknown command" or "Bad format".
+The example below shows an integration that needs to run a **common** flow after receiving a supported "allowed" serial response, and an **exception** flow after receiving a supported "bad" response, e.g., when a data source returns the message "Unknown command" or "Bad format".
 
 Trigger ID 1000 will run for all the responses except the responses with ID 1 and 2:
 

@@ -18,6 +18,7 @@ Thread problem in x: y [+ z pending]
 The following error messages are possible:
 
 - Thread problem in SLDataMiner: ActionThread
+- [Thread problem in SLDataMiner: ActionPoolThread](#thread-problem-in-sldataminer-actionpoolthread)
 - Thread problem in SLDataMiner: AddressChangeThread
 - Thread problem in SLDataMiner: AlarmLevelRegistration
 - Thread problem in SLDataMiner: AlarmLevelUpdates
@@ -38,6 +39,23 @@ The following error messages are possible:
 - [Thread problem in SLDataMiner: ServiceReplicationThread](#thread-problem-in-sldataminer-servicereplicationthread)
 - Thread problem in SLDataMiner: SetTriggers
 
+## Thread problem in SLDataMiner: ActionPoolThread
+
+An *ActionPoolThread* is created to take care of the start/stop/pause actions of an element.
+
+### Symptom
+
+An element takes a long time or even fails to start, stop, or pause.
+
+### Possible cause
+
+- A long startup action, such as retrieving the database data of the element.
+- Element startup is stuck.
+
+### Resolution
+
+- At the RTE root time, check *SLDataMiner.txt* and the element log. It should show which step exactly is stuck.
+
 ## Thread problem in SLDataMiner: AlarmStackThread
 
 The *AlarmStackThread* processes alarm or information requests originating from different modules, and it forwards them to *SLElement*, which then creates the actual alarms. These are not alarms generated based on the settings in one of the alarm templates.
@@ -57,7 +75,7 @@ Restart DataMiner.
 
 ## Thread problem in SLDataMiner: DBCleaning
 
-The *DBCleaning* thread removes data that is no longer needed from the local database, e.g. old trending and alarm data.
+The *DBCleaning* thread removes data that is no longer needed from the local database, e.g., old trending and alarm data.
 
 ### Symptom
 

@@ -85,7 +85,7 @@ To make gRPC the default communication method, do the following on every DataMin
 > [!NOTE]
 >
 > - *.NET Remoting* remains the default communication method for both client-server and server-server communication.
-> - Certain connectors and Automation scripts still rely on having the *.NET Remoting* port 8004 open.
+> - Certain connectors and automation scripts still rely on having the *.NET Remoting* port 8004 open.
 
 #### SLAnalytics: Trend data predictions displayed in trend graphs will be more accurate [ID 36038]
 
@@ -285,6 +285,6 @@ When an element that had more than 10,000 alarm events stored on a Cassandra clu
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
 
-Since DataMiner versions 10.3.0/10.3.3, if a logger table that had `Indexing` set to true contained column names with uppercase characters, *SLDataGateway* would incorrectly change these column names to lower case. This lead to the data getting stored in a different field than expected and therefore not being retrieved when requested.
+Since DataMiner versions 10.3.0/10.3.3, if a logger table that had `Indexing` set to true contained column names with uppercase characters, *SLDataGateway* would incorrectly change these column names to lowercase. This lead to the data getting stored in a different field than expected and therefore not being retrieved when requested.
 
 For more information on this issue, see [Inaccessible logger table data in Elasticsearch because of incorrect casing](xref:KI_Inaccessible_data_Elasticsearch_casing)

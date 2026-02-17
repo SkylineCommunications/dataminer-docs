@@ -127,7 +127,7 @@ When you opened the card of a service that contained only part of a table of an 
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When you dragged an element onto the Alarm Console and requested the information events of e.g. the last hour, up to now, Cube would send two requests to the server: one to return the alarms and another to return the information events. Unfortunately, the request to return the alarms would always fail, causing the request to return the information events to not get executed. As a result, no information events would appear in the Alarm Console.
+When you dragged an element onto the Alarm Console and requested the information events of e.g., the last hour, up to now, Cube would send two requests to the server: one to return the alarms and another to return the information events. Unfortunately, the request to return the alarms would always fail, causing the request to return the information events to not get executed. As a result, no information events would appear in the Alarm Console.
 
 From now on, in the above-mentioned situation, only a request to return the information events will be sent to the server.
 
@@ -149,7 +149,7 @@ When, in an embedded Spectrum Analysis component, you used an inline preset with
 
 When you make changes to Router Control configurations, those changes are sent to the DataMiner Agent in the form of an XML file.
 
-Up to now, the XML declaration in that file did incorrectly not correspond to the encoding that was used (i.e. UTF-8). From now on, Router Control XML files sent from Cube to the DMA will be encoded in UTF-8 and will also have an XML declaration in which the encoding attribute is set to UTF-8.
+Up to now, the XML declaration in that file did incorrectly not correspond to the encoding that was used (i.e., UTF-8). From now on, Router Control XML files sent from Cube to the DMA will be encoded in UTF-8 and will also have an XML declaration in which the encoding attribute is set to UTF-8.
 
 #### Cube could leak memory each time you opened the 'Reports' page of a card [ID 40744]
 
@@ -173,7 +173,7 @@ On Cube's home page, in some cases, multiple unnecessary lines would show up in 
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When an information template parameter was duplicated, a number of properties (e.g. *Hide parameter*, *Part of snapshot*) would incorrectly not be copied to the newly created duplicate.
+When an information template parameter was duplicated, a number of properties (e.g., *Hide parameter*, *Part of snapshot*) would incorrectly not be copied to the newly created duplicate.
 
 #### Trending: Problem when exporting trend data to a CSV file [ID 40844]
 

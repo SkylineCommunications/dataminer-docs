@@ -31,7 +31,7 @@ At start-up, the DataMiner Cube desktop app will now show a splash screen when t
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When you are editing an element, you can now indicate that it should run in isolation mode, i.e. in its own SLProtocol and SLScripting process.
+When you are editing an element, you can now indicate that it should run in isolation mode, i.e., in its own SLProtocol and SLScripting process.
 
 To do so, go to *Advanced element settings*, and select the *Run in isolation mode* option.
 
@@ -39,13 +39,13 @@ When, in either the *protocol.xml* file or the *DataMiner.xml* file, the element
 
 For more information about running elements in isolation mode, see [Elements can now be configured to run in isolation mode [ID 41757]](xref:General_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757).
 
-#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the Cube session [ID 42110]
+#### Interactive automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the Cube session [ID 42110]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run within DataMiner Cube, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
+When UI components of type *Calendar* or *Time* are used in interactive automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive automation script is being run within DataMiner Cube, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
 
-For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
+For more information, see [Interactive automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
 
 ## Changes
 
@@ -58,7 +58,7 @@ For more information, see [Interactive Automation scripts: UI components 'Calend
 The legacy *InterClient* feature has now been removed from DataMiner Cube.
 
 > [!IMPORTANT]
-> Existing Automation scripts or connectors that are currently still using InterClient calls will no longer work. They should be updated as soon as possible.
+> Existing automation scripts or connectors that are currently still using InterClient calls will no longer work. They should be updated as soon as possible.
 
 ### Enhancements
 
@@ -69,7 +69,7 @@ The legacy *InterClient* feature has now been removed from DataMiner Cube.
 
 Up to now, the credentials library would only be aware of a subset of all SNMPv3 authentication and encryption algorithms. Because of a number of enhancements, it will now be fully aware of all supported algorithms.
 
-Throughout the Cube UI, in selection boxes listing these SNMPv3 authentication and encryption algorithms, the algorithms will now be sorted by strength (ascending). Also, wherever a *Security level and protocol* setting has to specified for an SNMPv3 connection (e.g. when configuring an SNMPv3 element), that setting will now by default be set to "AuthPriv".
+Throughout the Cube UI, in selection boxes listing these SNMPv3 authentication and encryption algorithms, the algorithms will now be sorted by strength (ascending). Also, wherever a *Security level and protocol* setting has to specified for an SNMPv3 connection (e.g., when configuring an SNMPv3 element), that setting will now by default be set to "AuthPriv".
 
 #### System Center: Not possible to configure offloads when swarming is enabled [ID 41953]
 
@@ -200,7 +200,7 @@ When DataMiner Cube received a `CorrelationDetailsEventMessage` without ever rec
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When the right-click menu of a table in e.g. an element card displayed values of dependency parameters, in some cases, parameter values containing curly braces (e.g. "{test one}") would incorrectly not be displayed.
+When the right-click menu of a table in e.g., an element card displayed values of dependency parameters, in some cases, parameter values containing curly braces (e.g., "{test one}") would incorrectly not be displayed.
 
 Example of how a right-click menu displaying dependency parameters can be configured in a *protocol.xml* file:
 
@@ -218,7 +218,7 @@ When, in a trend graph showing trend data of two parameters, the value of the fi
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-Up to now, when placeholders (e.g. `[thisusername]`) were used in alarm filters made up of different segments enclosed in brackets (e.g. [...] OR [...]), the placeholders in the first segment would not get resolved.
+Up to now, when placeholders (e.g., `[thisusername]`) were used in alarm filters made up of different segments enclosed in brackets (e.g., [...] OR [...]), the placeholders in the first segment would not get resolved.
 
 #### DataMiner Cube desktop app: Problem when using both the '/Modify' and the '/Silent 'command-line arguments [ID 42267]
 

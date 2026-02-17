@@ -32,7 +32,7 @@ Also, it is now possible to override the path associated with a DLL import. To d
 
 #### DIS diagram: Third direction option "Both" [ID 34584]
 
-In the *DIS diagram* window, up to now, after selecting the required depth (i.e. the number of items you want to have displayed starting from or ending with the item you selected), you could select *Forward* or *Reverse* as direction. From now on, you can also select a third option: *Both*.
+In the *DIS diagram* window, up to now, after selecting the required depth (i.e., the number of items you want to have displayed starting from or ending with the item you selected), you could select *Forward* or *Reverse* as direction. From now on, you can also select a third option: *Both*.
 
 | Direction | Description |
 |-----------|-------------|
@@ -97,7 +97,7 @@ The executables included in the DIS VSIX extension package are now signed.
 
 #### Automation script template: Namespace added and input argument updated [ID 36033]
 
-The Automation script template will now put a namespace around the `Script` class.
+The automation script template will now put a namespace around the `Script` class.
 
 Also, the `Engine` argument in the *Run* methods has been changed to `IEngine`.
 

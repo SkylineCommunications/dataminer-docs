@@ -37,7 +37,7 @@ Due to a number of enhancements, overall performance of DataMiner Cube has incre
 
 #### Minor enhancements to several DataMiner processes \[ID 31155\]
 
-A number of minor enhancements have been made to a number of DataMiner processes (e.g. SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
+A number of minor enhancements have been made to a number of DataMiner processes (e.g., SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
 
 #### DataMiner Cube - Update Center: Enhanced error handling \[ID 31191\]
 
@@ -91,9 +91,9 @@ When creating the user-defined types failed during a migration from MySQL to Cas
 The migration has failed.DBGatewayException(SLCassandraClassLibrary.DBGateway.Cassandra.StorageManagers.SingleNode.CassandraConnection,,UNKNOW SLDataGateway.Types.DBGatewayException: CassandraConnection CreateCustomType - no host available All hosts tried for query failed.
 ```
 
-#### Problem with SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
+#### Problem with SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
 
-In some cases, an error could occur in SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved.
+In some cases, an error could occur in SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved.
 
 #### Problem during DataMiner startup when retrieving alarms for multiple elements from an Elasticsearch database \[ID 31039\]
 
@@ -143,7 +143,7 @@ Due to a deserializing/serializing issue, in some cases, datetime values could b
 
 #### DataMiner Cube - Automation: DateTime control incorrectly updated with the DateTimeKind property \[ID 31190\]
 
-When, in an interactive Automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
+When, in an interactive automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
 
 #### DataMiner Cube - Router Control: 'park source' feature would incorrectly not work on matrices with IO table structures \[ID 31239\]
 
@@ -179,7 +179,7 @@ When you right-clicked a Service Definition diagram and selected *Configure grou
 
 #### Web apps: Setvar controls in visual overviews would no longer be rendered correctly \[ID 31351\]
 
-In web apps (e.g. Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
+In web apps (e.g., Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
 
 #### STARTTLS/SSL options for SMTP would not get applied when sending generic emails \[ID 31592\]
 

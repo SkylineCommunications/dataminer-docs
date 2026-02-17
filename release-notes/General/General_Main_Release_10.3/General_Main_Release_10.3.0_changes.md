@@ -118,11 +118,11 @@ The Connect() and Publish() methods of SLMessageBroker now have a default connec
 
 Also, the interval at which another reconnect is attempted has been increased from 1 second to 10 seconds.
 
-#### Enhancements with regard to Automation scripts [ID 33129] [ID 33226]
+#### Enhancements with regard to automation scripts [ID 33129] [ID 33226]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
-A number of enhancements have been made with regard to Automation scripts.
+A number of enhancements have been made with regard to automation scripts.
 
 - When a script is launched, from now on, only the parameters/dummies with missing values will be shown. Automatically filled in values will no longer be shown.
 - When script input is filled in with feed data, users will no longer be asked to change that input manually.
@@ -135,7 +135,7 @@ A number of enhancements have been made with regard to Automation scripts.
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
-Up to now, when the SRM log files were set to “No logging”, no information would be logged if e.g. a Reservation event had failed. All ResourceManager, ResourceManagerAutomation and FunctionManager logging has now been re-evaluated, and the log settings have been optimized. All critical issues occurring in those modules will now be logged.
+Up to now, when the SRM log files were set to “No logging”, no information would be logged if e.g., a Reservation event had failed. All ResourceManager, ResourceManagerAutomation and FunctionManager logging has now been re-evaluated, and the log settings have been optimized. All critical issues occurring in those modules will now be logged.
 
 #### Profile instance list for PA service definition node now also contains child instances [ID 33187]
 
@@ -249,7 +249,7 @@ Because of a number of enhancements, overall performance of the Skyline Device S
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
-The maximum value for the element setting "*The element goes into timeout state when it is not responding for (sec)*" has now been increased from 120 seconds to 24 hours (i.e. 86400 seconds).
+The maximum value for the element setting "*The element goes into timeout state when it is not responding for (sec)*" has now been increased from 120 seconds to 24 hours (i.e., 86400 seconds).
 
 #### DataMiner Analytics: Improved handling of clearable alarms [ID 33910]
 
@@ -465,13 +465,13 @@ When, in the MessageBroker, RequestResponse(Async) was used when NATS was not ye
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
-In some cases, TTL settings defined in an Elasticsearch database would not be applied correctly. As a result, certain data (e.g. profile instance data) would not get properly cleaned up.
+In some cases, TTL settings defined in an Elasticsearch database would not be applied correctly. As a result, certain data (e.g., profile instance data) would not get properly cleaned up.
 
 #### SLPort would incorrectly split WebSocket messages larger than 65kB [ID 33182]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
-Up to now, when SLPort received a WebSocket message larger than the WebSocket buffer (i.e. 65 kB), it would incorrectly split that message in multiple chunks before passing it to the protocol.
+Up to now, when SLPort received a WebSocket message larger than the WebSocket buffer (i.e., 65 kB), it would incorrectly split that message in multiple chunks before passing it to the protocol.
 
 #### SLAnalytics - Automatic incident tracking: Incorrect error message would be generated [ID 33305]
 

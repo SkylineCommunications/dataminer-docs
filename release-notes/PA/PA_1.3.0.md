@@ -203,11 +203,11 @@ To support generic script tasks, the Process Automation Framework has been exten
 
 #### New script to create activation windows [ID 32674]
 
-A new script, *PA_CreateActivationWindow*, is now available, which can be used in the *Create Booking Script* parameter of the Booking Manager to help create activation windows (i.e. Process Automation "bookings").
+A new script, *PA_CreateActivationWindow*, is now available, which can be used in the *Create Booking Script* parameter of the Booking Manager to help create activation windows (i.e., Process Automation "bookings").
 
 #### New PA_ProcessDefinitionConfiguration script [ID 32774]
 
-A new *PA_ProcessDefinitionConfiguration* script is now available, which can be used as a wizard to configure all nodes of a process definition. The script has the input argument *Input Data*, which requires the process definition ID, e.g. `{"ServiceDefinitionId":"9fe4d5ea-eb02-4a93-9e31-f01e66f1c9e3"}`.
+A new *PA_ProcessDefinitionConfiguration* script is now available, which can be used as a wizard to configure all nodes of a process definition. The script has the input argument *Input Data*, which requires the process definition ID, e.g., `{"ServiceDefinitionId":"9fe4d5ea-eb02-4a93-9e31-f01e66f1c9e3"}`.
 
 #### PaProfileLoadDomHelper now logs actions related to token [ID 32809]
 
@@ -254,7 +254,7 @@ In case you want to use the default user DOM definition *PA Default Definition*,
 
 In case you want to add more field descriptors to the user DOM instance that will be created:
 
-- Create a section definition with the desired field descriptors. Note that these field descriptors need to have a default value (e.g. string.Empty).
+- Create a section definition with the desired field descriptors. Note that these field descriptors need to have a default value (e.g., string.Empty).
 - Create a DOM behavior definition inheriting from *PA User Task Behavior Definition*, adding two entries to *StatusSectionDefinitionLinks* (one for open_status and the other for closed_status) referencing the created SectionDefinition and the new field descriptors.
 - Create a DOM definition making use of the created DOM behavior definition adding the created section definition and the *Process DOM Instance Section*.
 - Create a profile instance referencing the created DOM definition in the *PA User DOM Definition* parameter.

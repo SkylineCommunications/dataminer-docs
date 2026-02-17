@@ -87,7 +87,7 @@ To get to a good starting point for the rest of this tutorial, you will first ne
 
    Because you duplicated the page, it already contains the default title and header KPIs available for the selected user terminal (as shown above), keeping the app layout uniform.
 
-1. Remove the other components (i.e. the line & area chart and gauge components) from the page, as these will not be needed.
+1. Remove the other components (i.e., the line & area chart and gauge components) from the page, as these will not be needed.
 
 1. Add a *Time range* component onto your page.
 
@@ -129,7 +129,7 @@ In this step, you will configure the GQI query that will fetch the trended data 
 
 1. In the *Data* tab on the right, expand the *QUERIES* section and click the + button to add a new query.
 
-1. Specify a name for your query, e.g. *Location History AVG 5M*.
+1. Specify a name for your query, e.g., *Location History AVG 5M*.
 
 1. Select the data source *Get ad hoc data* and select the filter *Starlink - Get History GEO Locations - AVG.5M*.
 
@@ -213,7 +213,7 @@ In this final step, you will now visualize the data points on the maps component
 
    1. Go to the *Tools* tab on the left, select *Icon*, and then drag and drop in the central pane to draw the area where the icon should be displayed.
 
-   1. In the pane on the right, select the icon you want to display, e.g. a spiral.
+   1. In the pane on the right, select the icon you want to display, e.g., a spiral.
 
    1. Under *Conditional cases*, click *+ Add case*.
 
@@ -221,7 +221,7 @@ In this final step, you will now visualize the data points on the maps component
 
       - Criteria:  *When Is selected*
       - Value: *Yes*
-      - Result: Show icon, with a custom color (e.g. purple).
+      - Result: Show icon, with a custom color (e.g., purple).
 
 1. Display a notification showing the timestamp when a point is selected:
 

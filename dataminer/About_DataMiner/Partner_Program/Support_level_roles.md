@@ -27,7 +27,7 @@ Key responsibilities:
 ### Level 1 - Identification
 
 - Determine the impact and severity of the issue.
-- Determine (as much as possible) whether the issue is not the result of a configuration change, an infrastructure issue or an external issue (e.g. network connection, external data source no longer sending expected data, etc.).
+- Determine (as much as possible) whether the issue is not the result of a configuration change, an infrastructure issue or an external issue (e.g., network connection, external data source no longer sending expected data, etc.).
 - Determine the general health of the setup. Is there enough disk space? Is there something that is consuming the processing time? Etc.
 - Determine (as much as possible) when the problem occurred. What actions were taken? At what frequency does the problem occur? Have any changes been made recently? Etc.
 - Define (as much as possible) how the issue can be reproduced.
@@ -62,7 +62,7 @@ Key responsibilities:
 - When required, and when a support contract exists, report what has already been investigated and hand over the investigation to Skyline.
 
   - A good and effective communication flow is expected between the different parties in order to get to a solution as fast as possible.
-  - When applicable, provide documentation on the usage and architecture (i.e. inner workings) of the custom solution.
+  - When applicable, provide documentation on the usage and architecture (i.e., inner workings) of the custom solution.
 
 #### Minimum required skills and knowledge for Level 2
 

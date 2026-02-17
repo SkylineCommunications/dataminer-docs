@@ -7,7 +7,7 @@ uid: GetActiveAlarmsForViewCached
 Use this method to retrieve only active view alarms added or changed since a particular point in time.
 
 > [!NOTE]
-> Using this method, you can e.g. request alarms in batches in order to minimize loading time.
+> Using this method, you can e.g., request alarms in batches in order to minimize loading time.
 
 ## Input
 

@@ -30,8 +30,8 @@ To remove an item
 
 In the references list at the bottom of the tab, it is possible to add two types of references.
 
-- Task references, i.e. references to DataMiner Collaboration tasks, and
-- Generic references, i.e. references to other information (e.g. a ticket in a third-party ticketing system).
+- Task references, i.e., references to DataMiner Collaboration tasks, and
+- Generic references, i.e., references to other information (e.g., a ticket in a third-party ticketing system).
 
 To add a reference to a DataMiner Collaboration task, do the following:
 

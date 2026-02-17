@@ -58,7 +58,7 @@ If there is a dependency on multiple DataMiner DLLs that are by default included
 
 If possible, try to target .NET Standard 2.0, as this will give the most flexibility for use somewhere else. For more information and guidelines, refer to [Cross-platform targeting](https://learn.microsoft.com/en-us/dotnet/standard/library-guidance/cross-platform-targeting).
 
-If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you will need to target .NET Framework as well.
+If you have a dependency on .NET Framework (e.g., Skyline.DataMiner.Dev.*), you will need to target .NET Framework as well.
 
 > [!IMPORTANT]
 > Prior to DataMiner 10.1.11 (RN 30755), when a .NET Standard 2.0 NuGet is used in a QAction or EXE, you need to manually add a reference to .NET Standard to the project file of the project consuming the package.
@@ -88,7 +88,7 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
   Optionally, at the end you could have '.Protocol', '.Automation', '.Common', etc. to specify where it can be used (usage of SLManagedScripting, SLManagedAutomation, etc.):
 
-  - `Skyline.DataMiner.<Categories>.<Name>.Common`: Shared code that can run either in an Automation script or in a protocol. Communicates with DataMiner via SLNet or [DataMinerSystem](https://www.nuget.org/packages?q=Skyline.DataMiner.Core.DataMinerSystem).
+  - `Skyline.DataMiner.<Categories>.<Name>.Common`: Shared code that can run either in an automation script or in a protocol. Communicates with DataMiner via SLNet or [DataMinerSystem](https://www.nuget.org/packages?q=Skyline.DataMiner.Core.DataMinerSystem).
 
   - `Skyline.DataMiner.<Categories>.<Name>.Automation`: Acts as entry point for Automation (methods for IEngine) or has a dependency on classes from *SLManagedAutomation*.
 
@@ -120,22 +120,24 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
   - Holds all the utilities like helpers, parsers, etc.
 
-    E.g. SNMP trap parsing, rate calculations, table context menu, etc.
+  - For example: SNMP trap parsing, rate calculations, table context menu, etc.
 
 - *Skyline.DataMiner.Dev.Utils.XXX*
 
-  - Holds all the [Solution Dev Packs](xref:TOODataMinerDevPackages#solution-dev-packs).
+  - Holds all the [Custom Dev Packs](xref:TOODataMinerDevPackages#custom-dev-packs).
 
-    E.g. MediaOps library, etc.
+  - *Skyline.DataMiner.Dev.Utils.Solutions.XXX* is a specific naming convention for [Solution Dev Packs](xref:TOODataMinerDevPackages#solution-dev-packs), which are Custom Dev Packs for Standard Solutions delivered by Skyline Communications.
+
+  - For example: MediaOps library, etc.
 
 - *Skyline.DataMiner.ConnectorAPI.XXX*
 
-  - Holds InterAppCall messages that are specific to a connector, giving a given DataMiner connector some functions that can be called/triggered/consumed by other DataMiner components (other connectors, Automation scripts, etc.).
+  - Holds InterAppCall messages that are specific to a connector, giving a given DataMiner connector some functions that can be called/triggered/consumed by other DataMiner components (other connectors, automation scripts, etc.).
 
 - *Skyline.DataMiner.DataSources.XXX*
 
   - Holds the packages that can communicate with external data sources. This also includes packages like OpenConfig.Gnmi that rely on the CommunicationGateway DxM.
- 
+
 - *Skyline.DataMiner.ProjectAPI.XXX*
 
   - Holds project-specific packages. There is no real use for these packages outside of the project scope.

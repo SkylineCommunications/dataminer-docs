@@ -250,7 +250,7 @@ Possible options for measurement type "string":
 
 |Option|Description|
 |--- |--- |
-|hscroll|Adds a horizontal scroll bar to the string (mostly used in case of a list).|
+|hscroll|Adds a horizontal scrollbar to the string (mostly used in case of a list).|
 |tab|The tab distance (the starting position of the text in the box).|
 |fixedfont|Sets the font type of the string to a fixed font.|
 |number|If set to true, the string can only contain numbers.|
@@ -270,7 +270,7 @@ With this option, you can set the properties of the table (separated by commas).
 - **columns**: The order of the column parameters.
 - **lines**: The number of lines.
 - **width**: The width of each column (in pixels).
-- **sort**: The way in which columns are interpreted for sorting. You can add a sort order and a priority.
+- **sort**: The way columns are interpreted for sorting. You can add a sort order and a priority.
 
   Example:
 

@@ -4,7 +4,7 @@ uid: SRM_extend_timing_booking_silently
 
 # Silently extending the timing of a booking
 
-The example below shows how the timing of a booking can be extended without user interaction by means of an Automation script.<!-- RN 26212 -->
+The example below shows how the timing of a booking can be extended without user interaction by means of an automation script.<!-- RN 26212 -->
 
 ```csharp
 using System;

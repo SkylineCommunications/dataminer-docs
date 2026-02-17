@@ -4,7 +4,7 @@ uid: Exit
 
 # Exit
 
-Use this action to terminate an Automation script without delay:
+Use this action to terminate an automation script without delay:
 
 1. Next to *Exit script with*, choose *Success* or *Failure* in the dropdown list:
 

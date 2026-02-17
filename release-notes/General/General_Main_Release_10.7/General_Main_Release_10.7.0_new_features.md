@@ -60,11 +60,11 @@ By default, a Content-Type header of type `application/octet-stream` will be ret
 > - `TriggerUserDefinableApiRequestMessage` is now also capable of returning bytes.
 > - When a user-defined API being tested in the SLNetClientTest tool returns bytes, the following message will appear: "Response body is in bytes and cannot be displayed".
 
-#### Automation: New message to retrieve information about the available Automation scripts [ID 44209]
+#### Automation: New message to retrieve information about the available automation scripts [ID 44209]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each Automation script available in the DataMiner System:
+A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each automation script available in the DataMiner System:
 
 - The folder containing the script's XML file.
 - Whether or not the script supports a dedicated log file.
@@ -97,7 +97,7 @@ To activate SLNet subscription event logging, do the following:
 
 ##### Event type and cache key filtering
 
-The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g. *ParameterChangeEventMessage*) and/or cache key (e.g. DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
+The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g., *ParameterChangeEventMessage*) and/or cache key (e.g., DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
 
 Options for filtering by event type:
 
@@ -124,6 +124,14 @@ These filtering options are saved in the `<SLNet>` section of the *MaintenanceSe
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### New BPA test: Detect unsupported connector versions [ID 44607]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+From now on, a new BPA test named *Detect unsupported connector versions* will run every day to check for elements that are using connector versions that have been removed from the Catalog.
+
+When a connector version is removed from the Catalog, this means that it is no longer supported by Skyline Communications. Using unsupported connector versions can lead to compatibility issues, lack of support, and potential security vulnerabilities. It is important to regularly check for unsupported connector versions and update them to supported versions to ensure optimal performance and security of the system.
 
 #### Swarming scheduled tasks [ID 44620]
 
@@ -172,7 +180,7 @@ If a *MigrationStatus* is stuck in the *InProgress* state, you will need to canc
 
 ##### Configuring a script to swarm scheduled tasks
 
-If scheduled tasks are stored in the database, you can use an Automation script to initiate the swarming process.
+If scheduled tasks are stored in the database, you can use an automation script to initiate the swarming process.
 
 In this script, create a SwarmingHelper using the new hosting Agent ID along with the scheduled task IDs. See the following example.
 

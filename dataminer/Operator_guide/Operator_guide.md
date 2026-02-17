@@ -34,14 +34,8 @@ description: To work with DataMiner, you need to know how to use elements, param
     <a href="/dataminer/Operator_guide/Protocols_and_templates/Protocols_and_templates.html" title="Protocols & Templates" target="_self"><img src="~/dataminer/images/Protocols_Templates.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer/Operator_guide/Visio/visio.html" title="Visio drawings" target="_self"><img src="~/dataminer/images/Visio_Drawings.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
     <a href="/dataminer/Operator_guide/Redundancy_Groups/RedundancyGroups.html" title="Redundancy Groups" target="_self"><img src="~/dataminer/images/Redundancy_Groups.svg" style="width:100%"></a>
   </div>
-</div>
-
-<div class="row"> 
   <div class="column">
     <a href="/dataminer/Operator_guide/Documents/About_the_Documents_module.html" title="Documents" target="_self"><img src="~/dataminer/images/Documents.svg" style="width:100%"></a>
   </div>

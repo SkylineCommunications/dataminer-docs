@@ -46,14 +46,14 @@ Use the steps below to restore tables in a MySQL DataMiner database after a data
 
 1. Check the log information.
 
-   - You can find the MySQL error log in a file with the name of the DMA and the extension *.err* in the MySQL ProgramData folder, e.g. `C:\ProgramData\MySQL\MySQL Server 5.5`.
+   - You can find the MySQL error log in a file with the name of the DMA and the extension *.err* in the MySQL ProgramData folder, e.g., `C:\ProgramData\MySQL\MySQL Server 5.5`.
    - DataMiner logging can be found in the *SLDatagateway*, *SLDBconnection* and *SLDatabase* log files in the folder `C:\Skyline DataMiner\Logging`.
 
 1. Open MySQL Workbench to verify the integrity of the SLDMADB tables. If you need to provide credentials, use `-user root -password (empty)`.
 1. Check if the MySQL service is running. If it is not, enforce forced recovery mode by configuring the MySQL configuration file as follows:
 
    1. Make sure you have a backup copy of your database in case it needs to be recreated.
-   1. Go to the MySQL installation folder, e.g. C:\Program Files\MySQL\MySQL Server 5.5.
+   1. Go to the MySQL installation folder, e.g., C:\Program Files\MySQL\MySQL Server 5.5.
    1. Open the file my.ini, using an application like Notepad, and add the following recovery options:
 
       ```txt
@@ -92,7 +92,7 @@ Use the steps below to restore tables in a MySQL DataMiner database after a data
 
      ![Table context menu in MySQL Workbench](~/dataminer/images/MOPMySQLRestore4.png)
 
-   - In a Failover setup, another possible alternative is to dump the table and export it from the other Agent. Make sure the corrupt table is deleted (i.e. dropped). Then use MySQL tools to export the table, copy the export file to the other DMA and import it via MySQL workbench). Finally, load the imported table and compare the location in the workbench with the actual location of the database in the file system.
+   - In a Failover setup, another possible alternative is to dump the table and export it from the other Agent. Make sure the corrupt table is deleted (i.e., dropped). Then use MySQL tools to export the table, copy the export file to the other DMA and import it via MySQL workbench). Finally, load the imported table and compare the location in the workbench with the actual location of the database in the file system.
 
 ### Alternative 2: Take an ".sql" backup
 
@@ -116,7 +116,7 @@ Use the steps below to take a self-contained backup file that can be used to res
 
 ### Alternative 3: Restore an ".sql" backup
 
-Use the steps below to restore lost data (i.e. a single table or an entire schema) using a self-contained backup file.
+Use the steps below to restore lost data (i.e., a single table or an entire schema) using a self-contained backup file.
 
 #### Prerequisites
 
@@ -133,7 +133,7 @@ Use the steps below to restore lost data (i.e. a single table or an entire schem
 1. Drop the corrupt tables or schema using the drop command.
 
    - If this operation times out, it is likely to still be ongoing in the background.
-   - If this operation fails (i.e. after a long time, no space has been cleared on the disk), use the *MySQL* command line utility to do the operation manually.
+   - If this operation fails (i.e., after a long time, no space has been cleared on the disk), use the *MySQL* command line utility to do the operation manually.
 
 1. Navigate back to the MySQL Workbench home tab (via the home icon in the lower-left corner), go to the *Server Administration* column on the right and double-click *Local MySQL*. If you do not see this option, click *New Server Instance* to create a new default server instance, then connect to localhost and complete the wizard.
 1. In the menu on the left, select *Data Import/Restore*.

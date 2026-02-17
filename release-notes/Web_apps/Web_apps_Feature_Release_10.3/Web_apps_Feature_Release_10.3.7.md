@@ -14,13 +14,13 @@ uid: Web_apps_Feature_Release_10.3.7
 
 ## New features
 
-#### Interactive Automation scripts: New DownloadButton component [ID 35869]
+#### Interactive automation scripts: New DownloadButton component [ID 35869]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
-In an interactive Automation script launched from a dashboard or a low-code app, you can now use *DownloadButton* components. These components allow you to add download buttons that will enable users to download a specified file from the server.
+In an interactive automation script launched from a dashboard or a low-code app, you can now use *DownloadButton* components. These components allow you to add download buttons that will enable users to download a specified file from the server.
 
-To add a *DownloadButton* component to an interactive Automation script, create a *UIBlockDefinition* and set its *Type* property to "UIBlockType.DownloadButton". The button can be configured and styled in same way as a regular button component. For example, you can set the *Style* property to "Style.Button.CallToAction" and the *Text* property to "Download".
+To add a *DownloadButton* component to an interactive automation script, create a *UIBlockDefinition* and set its *Type* property to "UIBlockType.DownloadButton". The button can be configured and styled in same way as a regular button component. For example, you can set the *Style* property to "Style.Button.CallToAction" and the *Text* property to "Download".
 
 To configure the download properties, assign `AutomationDownloadButtonOptions` to the *ConfigOptions* property of the *UIBlockDefinition*.
 
@@ -34,7 +34,7 @@ These are the supported download properties:
   Examples:
 
   - Example of an absolute path: To download the latest Cube version from DataMiner Services, set *Url* to `https://dataminer.services/install/DataMinerCube.exe`.
-  - Example of a relative path: To download the file hosted on URL `http(s)://yourDma/Documents/MyElement/MyDocument.txt` (i.e. the file *MyDocument.txt* located in the folder `C:\Skyline DataMiner\Documents\MyElement\` of the DMA), set *Url* to `/Documents/MyElement/MyDocument.txt`.
+  - Example of a relative path: To download the file hosted on URL `http(s)://yourDma/Documents/MyElement/MyDocument.txt` (i.e., the file *MyDocument.txt* located in the folder `C:\Skyline DataMiner\Documents\MyElement\` of the DMA), set *Url* to `/Documents/MyElement/MyDocument.txt`.
 
 - **FileNameToSave**: The name that will be given to the file once it has been downloaded. By default, this name is identical to that of the file at the remote location.
 
@@ -67,8 +67,8 @@ When you add a query to a *Column & bar chart* component or a *Pie & donut chart
 
 To do so, the system will proceed as follows:
 
-1. Search for a column that contains label values (i.e. a column with heading "label", "name", etc.).
-1. Search for a column that contains segment size or bar size values (i.e. a column with heading "amount", "value", "quantity", etc.).
+1. Search for a column that contains label values (i.e., a column with heading "label", "name", etc.).
+1. Search for a column that contains segment size or bar size values (i.e., a column with heading "amount", "value", "quantity", etc.).
 1. If nothing could be found in steps 1 and 2, take the first string value as label and the first numeric value as segment size or bar size value.
 
 > [!NOTE]

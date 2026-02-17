@@ -21,7 +21,7 @@ If you use Visual Studio 2022, the new templates will also be available for you 
 
 These new templates are supported in DIS from v2.42 onwards. It automatically installs the templates package when you open Visual Studio. As soon as more recent versions become available, they will also automatically get installed.
 
-You can also make your own customized templates based on the templates we have introduced. If you fork our [GitHub repository](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates), you will be able to customize the template exactly the way you want it (e.g. add your own copyright, add default values such as the provider in the connector template, etc.). Then create a NuGet package for your customized templates and install that NuGet package instead of the one we provide.
+You can also make your own customized templates based on the templates we have introduced. If you fork our [GitHub repository](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates), you will be able to customize the template exactly the way you want it (e.g., add your own copyright, add default values such as the provider in the connector template, etc.). Then create a NuGet package for your customized templates and install that NuGet package instead of the one we provide.
 
 In DIS, you can then also make sure your own customized templates are used by specifying the NuGet package ID in the settings window.
 
@@ -33,7 +33,7 @@ You can also use the *dotnet new* command to manage the templates. To install th
 dotnet new install Skyline.DataMiner.VisualStudioTemplates
 ```
 
-This will install the NuGet package. When that is done, you can create a connector or Automation script solution via the dotnet CLI. For example, to create a new Automation script solution, you can use the following command:
+This will install the NuGet package. When that is done, you can create a connector or automation script solution via the dotnet CLI. For example, to create a new automation script solution, you can use the following command:
 
 ```dotnetcli
 dotnet new dataminer-automation-solution -name "ExampleScript" -auth "Joe"

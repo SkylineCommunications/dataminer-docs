@@ -10,4 +10,4 @@ For every alarm in the list, the *Status* column shows you whether or not the al
 
 On this tab, you also find the following button:
 
-- **Cancel Pending Alarms**: Click this button in case of a so-called alarm storm (i.e. when huge amounts of alarms are coming in all at once).
+- **Cancel Pending Alarms**: Click this button in case of a so-called alarm storm (i.e., when huge amounts of alarms are coming in all at once).

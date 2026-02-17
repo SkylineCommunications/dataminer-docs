@@ -14,7 +14,7 @@ uid: GVAMPP_Manager_Installing
 
   This must be installed on the DataMiner Agent where you will deploy the app. If you are running DataMiner 10.4.10 or higher, this should already be installed, as this is also a requirement for recent DataMiner versions.
 
-- A connection to an **AMPP tenancy** via its URL (e.g. `https://mytenancy.gvampp.com`)
+- A connection to an **AMPP tenancy** via its URL (e.g., `https://mytenancy.gvampp.com`)
 
 - An **API key** generated using the AMPP Identity Manager.
 
@@ -35,7 +35,7 @@ The *Grass Valley AMPP Manager Application* package includes:
 
 - The **GV AMPP Manager** low-code app
 
-- The **AMPP** Automation script folder, which includes scripts used in the app to gather data and perform workload and snapshot control operations
+- The **AMPP** automation script folder, which includes scripts used in the app to gather data and perform workload and snapshot control operations
 
 - The **SignalR Forwarder application**, which is a .NET Core ASP API application that utilizes Microsoft SignalR libraries for communication with AMPP. It forwards notifications to a listener in a DataMiner element via the GV AMPP Manager connector. Typically, this application is installed on the same DataMiner Agent as the GVAMPP Manager element. It is usually hosted in IIS.
 
@@ -43,7 +43,7 @@ The *Grass Valley AMPP Manager Application* package includes:
 
 The Grass Valley AMPP Manager app relies on an external component to communicate with the designated AMPP tenancy. This component must be installed and configured on each DataMiner Agent where an AMPP Manager element will be created.
 
-An Automation script included in the package helps with both the installation of this component and the creation of the AMPP Manager element. To run the script:
+An automation script included in the package helps with both the installation of this component and the creation of the AMPP Manager element. To run the script:
 
 1. Go to the DataMiner landing page (`https://[DMA]/root/`).
 
@@ -59,7 +59,7 @@ An Automation script included in the package helps with both the installation of
 
 1. In the *Dialog* window, provide the following information:
 
-   - **GVAMPP Endpoint**: The URL of the target AMPP tenancy, e.g. `https://mytenancy.gvampp.com`.
+   - **GVAMPP Endpoint**: The URL of the target AMPP tenancy, e.g., `https://mytenancy.gvampp.com`.
 
    - **API Key**: The key generated using the Identity Manager.
 

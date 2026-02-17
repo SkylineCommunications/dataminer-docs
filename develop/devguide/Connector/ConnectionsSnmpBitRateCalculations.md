@@ -121,7 +121,7 @@ We recommend using the [Skyline.DataMiner.Utils.SNMP](https://www.nuget.org/pack
   - (current counter value - previous counter value) / delta
   - To define whether a conversion for bps needs to happen, define the DataConversionType in the RateCalculator constructor.
 - The rate at which values are updated/calculated depends entirely on the polling strategy used in the connector and defined via timers. An SNMP group can be retrieved every 5 seconds, 5 minutes or every 1 hour, etc.
-- The delta used in the rate calculation should be the time between group executions and e.g. not obtained manually in a QAction using DateTime.
+- The delta used in the rate calculation should be the time between group executions and e.g., not obtained manually in a QAction using DateTime.
   - The *GetSnmpGroupExecutionDelta* method is available to obtain the delta between executions of a SNMP Poll Group.
   - The delta retrieval between groups by default does not take into account if a timeout happened on a group and therefore could not update its values.
   - The *TimeoutOrError* method should be used to make sure delta values are buffered in event of a timeout, to guarantee a correct delta will be used once data retrieval is successful again.
@@ -134,7 +134,7 @@ We recommend using the [Skyline.DataMiner.Utils.SNMP](https://www.nuget.org/pack
     - \>20Mbps => Counter64 (when available)
     - <20Mbps => Counter32
 
-    e.g. Selection of IF table or IFX table in MiB2.
+    e.g., Selection of IF table or IFX table in MiB2.
 
   - Counters may wrap around, and a correct rate value will still be calculated.
   - It is important to make sure the method is triggered in event no change occurred on the counters in order to obtain a rate value of zero.

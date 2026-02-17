@@ -28,7 +28,7 @@ If you mark a parameter as a history set parameter, its last set value will not 
 >
 > - Using history sets in combination with [alarm hysteresis](xref:Configuring_alarm_hysteresis) on the same parameter can cause unexpected behavior in alarm timestamps, as both features modify the parameter and alarm times. For this reason, we do not recommend combining them.
 > - The [smart baseline option](xref:Configuring_dynamic_alarm_thresholds) is incompatible with history sets. If a parameter has history sets enabled, enabling smart baselines will have no effect. From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42326-->, you will receive a warning message when attempting to enable smart baselines for a parameter with history sets enabled.
-> - When *historySet* is enabled, DataMiner determines the time of the relevant alarms based on when the parameter value is updated, rather than when the alarms themselves are updated (e.g. when alarm properties change, the view impact changes, the alarm is acknowledged, etc.).
+> - When *historySet* is enabled, DataMiner determines the time of the relevant alarms based on when the parameter value is updated, rather than when the alarms themselves are updated (e.g., when alarm properties change, the view impact changes, the alarm is acknowledged, etc.).
 
 ## Examples
 

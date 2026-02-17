@@ -39,7 +39,7 @@ When SLProtocol wants to connect to a smart-serial port in SLPort, it will first
 
     > [!NOTE]
     >
-    > - If you use a smart-serial connection in combination with other connections that make use of headers/trailers (e.g. serial), make sure to always use the connection attribute to denote to which connection this header/trailer belongs.
+    > - If you use a smart-serial connection in combination with other connections that make use of headers/trailers (e.g., serial), make sure to always use the connection attribute to denote to which connection this header/trailer belongs.
     > - For a smart-serial connection, SLPort only knows about the relevant headers and trailers (and which header and trailer belong together) but it has no information about which/if any command/response it is used in. Therefore, for a smart-serial connection, a header/trailer that is not used in any command or response in a protocol can still influence the behavior in SLPort. Therefore, do not define header or trailer parameters that are not used in the protocol.
 
     ```xml

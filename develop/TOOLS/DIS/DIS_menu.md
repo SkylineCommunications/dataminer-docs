@@ -48,13 +48,13 @@ In the *DMA* submenu, you can find the following commands:
 
 - **Import Automation script**
 
-  If you click *Import Automation script*, the *Import Automation Script* dialog box will allow you to import a copy of an existing Automation script XML file found on the DMA to which DIS is connected.
+  If you click *Import Automation script*, the *Import Automation Script* dialog box will allow you to import a copy of an existing automation script XML file found on the DMA to which DIS is connected.
 
-  You can import multiple Automation scripts at once. Select the scripts you want to import, and click *Import*. Each script will be opened in a separate tab.
+  You can import multiple automation scripts at once. Select the scripts you want to import, and click *Import*. Each script will be opened in a separate tab.
 
   > [!NOTE]
   >
-  > - Use the filter box in the top-right corner to filter the list of Automation scripts.
+  > - Use the filter box in the top-right corner to filter the list of automation scripts.
   > - When DIS connects to a DataMiner Agent, it always uses polling.
   > - If this *Import Automation script* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect. See [DMA](xref:DIS_settings#dma)
 
@@ -77,9 +77,9 @@ In the *DMA* submenu, you can find the following commands:
 
 > [!NOTE]
 >
-> - When, in the DIS menu, you select *DMA > Import Automation Script* while a protocol solution is open, a pop-up window will appear, saying that it is impossible to import an Automation script while a protocol solution is open.
-> - When, in the DIS menu, you select *DMA > Import Automation Script* while an Automation script solution is open, a pop-up window will appear, asking you whether you want the script to be imported into the open Automation script solution.
-> - When, in the DIS menu, you select *DMA > Import Protocol* while an Automation script solution is open, a pop-up window will appear, saying that it is impossible to import a protocol while an Automation script solution is open.
+> - When, in the DIS menu, you select *DMA > Import Automation Script* while a protocol solution is open, a pop-up window will appear, saying that it is impossible to import an automation script while a protocol solution is open.
+> - When, in the DIS menu, you select *DMA > Import Automation Script* while an automation script solution is open, a pop-up window will appear, asking you whether you want the script to be imported into the open automation script solution.
+> - When, in the DIS menu, you select *DMA > Import Protocol* while an automation script solution is open, a pop-up window will appear, saying that it is impossible to import a protocol while an automation script solution is open.
 
 ## Administration \> Open Driver Help
 

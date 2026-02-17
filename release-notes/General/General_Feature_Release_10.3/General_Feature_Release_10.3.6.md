@@ -37,7 +37,7 @@ This settings file also contains other customizable settings, such as the maximu
 
 ##### Defining an API
 
-To define an API, you will first need to **create an Automation script** containing the logic of the API. This Automation script should contain the OnApiTrigger entry point method, which will be executed when the API is triggered. Alternatively, you can also **use an existing script** and trigger the API through the *Run* method. However, the latter approach has some disadvantages: you will not have access to the *ApiTriggerInput* object and *ApiTriggerOutput* object in the script, and it will therefore not be possible to check the route or the request method, or to output anything back to the API caller.
+To define an API, you will first need to **create an automation script** containing the logic of the API. This automation script should contain the OnApiTrigger entry point method, which will be executed when the API is triggered. Alternatively, you can also **use an existing script** and trigger the API through the *Run* method. However, the latter approach has some disadvantages: you will not have access to the *ApiTriggerInput* object and *ApiTriggerOutput* object in the script, and it will therefore not be possible to check the route or the request method, or to output anything back to the API caller.
 
 When the script is ready, you will then need to **create an API and tokens**. This can be done in the Automation module or in System Center. If you use DataMiner Automation, open the script and click *Configure API* at the bottom of the window. This will open a window where you can specify the following information:
 
@@ -162,7 +162,7 @@ To make gRPC the default communication method, do the following on every DataMin
 > [!NOTE]
 >
 > - *.NET Remoting* remains the default communication method for both client-server and server-server communication.
-> - Certain connectors and Automation scripts still rely on having the *.NET Remoting* port 8004 open.
+> - Certain connectors and automation scripts still rely on having the *.NET Remoting* port 8004 open.
 
 #### SLAnalytics: Trend data predictions displayed in trend graphs will be more accurate [ID 36038]
 
@@ -390,6 +390,6 @@ In some cases, whitespace characters would incorrectly be removed from signature
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
 
-Since DataMiner versions 10.3.0/10.3.3, if a logger table that had `Indexing` set to true contained column names with uppercase characters, *SLDataGateway* would incorrectly change these column names to lower case. This lead to the data getting stored in a different field than expected and therefore not being retrieved when requested.
+Since DataMiner versions 10.3.0/10.3.3, if a logger table that had `Indexing` set to true contained column names with uppercase characters, *SLDataGateway* would incorrectly change these column names to lowercase. This lead to the data getting stored in a different field than expected and therefore not being retrieved when requested.
 
 For more information on this issue, see [Inaccessible logger table data in Elasticsearch because of incorrect casing](xref:KI_Inaccessible_data_Elasticsearch_casing)

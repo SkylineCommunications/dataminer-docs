@@ -4,7 +4,7 @@ uid: SRM_migrating_profile_instances
 
 # Migrating profile instances
 
-To export and import profile instances, you can use the *PFM_ProfileInstancesImportExport* Automation script.
+To export and import profile instances, you can use the *PFM_ProfileInstancesImportExport* automation script.
 
 > [!IMPORTANT]
 > The *PFM_ProfileInstancesImportExport* script needs to be able to generate an .xlsx file. For this reason, before you use the script, you need to make sure the 32-bit (x86) version of *AccessDatabaseEngine.exe* is installed in the DMS. You can download this from [microsoft.com](https://www.microsoft.com/en-in/download/details.aspx?id=54920).

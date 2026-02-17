@@ -11,7 +11,7 @@ In a notice of this type:
 
 ## Symptom
 
-Outdated events (e.g. alarm events or element states) might be displayed for the specified Agent when viewed through the DataMiner Agent on which the notice was created.
+Outdated events (e.g., alarm events or element states) might be displayed for the specified Agent when viewed through the DataMiner Agent on which the notice was created.
 
 ## Possible cause
 

@@ -64,7 +64,7 @@ The BpaExecuteContext object, which BPA tests receive as input, has been extende
 
 #### Cube launcher tool: Downgrade support \[ID 27380\]
 
-When you downgraded a DataMiner Agent that came with the Cube launcher tool (i.e. DMS version10.0.9 or newer) to an earlier version without Cube launcher tool (i.e. DMS version 10.0.8 or older), up to now, the Cube launcher tool would incorrectly try to connect to the downgraded agent using the newer Cube version. From now on, after an agent is downgraded, the Cube launcher tool will by default connect to the agent using the matching Cube version.
+When you downgraded a DataMiner Agent that came with the Cube launcher tool (i.e., DMS version10.0.9 or newer) to an earlier version without Cube launcher tool (i.e., DMS version 10.0.8 or older), up to now, the Cube launcher tool would incorrectly try to connect to the downgraded agent using the newer Cube version. From now on, after an agent is downgraded, the Cube launcher tool will by default connect to the agent using the matching Cube version.
 
 ### Fixes
 
@@ -139,7 +139,7 @@ Previously, if a condition was defined for the inclusion of an element in a serv
 
 #### DataMiner Cube - Visual Overview: Children of element shapes with an Info placeholder in their shape text would not be displayed \[ID 27095\]
 
-In some cases, child shapes of Element shapes with an Info placeholder (e.g. \[NAME\]) in their shape text would incorrectly not be displayed.
+In some cases, child shapes of Element shapes with an Info placeholder (e.g., \[NAME\]) in their shape text would incorrectly not be displayed.
 
 #### DataMiner Cube - Alarm Console: Audible alert would incorrectly be played again after you restarted an element \[ID 27098\]
 
@@ -167,7 +167,7 @@ After a DMA was restarted, it could occur that LinkerTableEntries were missing i
 
 #### DataMiner Cube: No longer possible to click below or above a scrollbar thumb \[ID 27149\]
 
-In some cases, it would no longer be possible to click inside a scrollbar track (i.e. below or above the scrollbar thumb).
+In some cases, it would no longer be possible to click inside a scrollbar track (i.e., below or above the scrollbar thumb).
 
 #### DataMiner Cube - Visual Overview: Memory leak in SLHelper \[ID 27162\]
 
@@ -183,7 +183,7 @@ If cells of a table row were displayed in a Children shape in Visual Overview, i
 
 #### DataMiner Cube: Custom icon visualization not working for list view components \[ID 27173\]
 
-In list view components, for example in the Bookings app, in the Services app or in ListView shapes in Visual Overview, it was no longer possible to visualize the content of a column as a custom icon. This is now again possible for booking, service and element columns as well as for booking, service and element property columns. Note that this functionality relies on Automation scripts to provide the icon library and column value/icon mapping.
+In list view components, for example in the Bookings app, in the Services app or in ListView shapes in Visual Overview, it was no longer possible to visualize the content of a column as a custom icon. This is now again possible for booking, service and element columns as well as for booking, service and element property columns. Note that this functionality relies on automation scripts to provide the icon library and column value/icon mapping.
 
 #### DataMiner Cube - Scheduler app: Problem with drag-and-drop in timeline tab \[ID 27174\]
 
@@ -191,7 +191,7 @@ In the *Timeline \> Events* tab, in some cases, it would no longer be possible 
 
 #### Problem with SLAutomation when a ThreadAbortException was thrown in a script while the thread was not actually aborted \[ID 27187\]
 
-When a ThreadAbortException was thrown in an Automation script while the thread running the script was not actually aborted, in some cases, an error could occur in SLAutomation.
+When a ThreadAbortException was thrown in an automation script while the thread running the script was not actually aborted, in some cases, an error could occur in SLAutomation.
 
 #### Data in DVE child element not updated correctly \[ID 27189\]
 

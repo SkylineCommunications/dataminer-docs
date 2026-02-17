@@ -48,7 +48,7 @@ The databases or credentials could not be read from *DB.xml*.
 ## Mitigation
 
 Make sure that the database has authentication enabled. Preferably a **custom** database user is created.
-Do not use the default superuser, e.g. 'root' or 'cassandra'.
+Do not use the default superuser, e.g., 'root' or 'cassandra'.
 
 Use a Password Manager to generate a strong, secure password (preferably longer than 14 characters). Change the database passwords and update them in DataMiner.
 

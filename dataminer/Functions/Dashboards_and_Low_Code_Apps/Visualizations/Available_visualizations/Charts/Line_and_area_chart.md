@@ -49,7 +49,7 @@ To configure the component:
 
    - *Trend points*: Available from DataMiner 10.2.0/10.2.3 onwards. Determines which type of trend data points are added to the graph: *Average (changes only)*, *Average (fixed interval)*, or *Real-time*. By default, *Average (changes only)* is selected. This setting will also be taken into account when you export the chart to CSV.
 
-   - *Trend points interval*: Available from DataMiner 10.3.5/10.4.0 onwards, but only if *Trend points* is set to an average type. Determines how much time there is between each trend point that is being tracked or analyzed. This interval is also used when exporting the data. You can set this to *Auto* (i.e. an interval relative to the specified trend span), *Five minutes*, *One hour*, or *One day*.
+   - *Trend points interval*: Available from DataMiner 10.3.5/10.4.0 onwards, but only if *Trend points* is set to an average type. Determines how much time there is between each trend point that is being tracked or analyzed. This interval is also used when exporting the data. You can set this to *Auto* (i.e., an interval relative to the specified trend span), *Five minutes*, *One hour*, or *One day*.
 
    - *Show real-time trend data*: If real-time trending is available, this box allows you to set the chart to display real-time trending instead of average trending.
 
@@ -131,7 +131,7 @@ To configure the component:
 
    - *Additional lines* > *Show boundary lines*: Allows you to display one or more boundary lines. You can configure where a line should be displayed by adding a Y-axis value in the *Boundary value* box. The color of a boundary line can be customized in the *Boundary line color* box. The *Add boundary line* option below this allows you to add additional boundary lines. To remove a boundary line, click the x to the right of the line name.
 
-   - *Advanced* \> *Empty Result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
+   - *Advanced* \> *Empty Result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!-- RN 44472 -->, this setting can be left empty, in which case no message is displayed and the component remains empty.
 
      > [!TIP]
      > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).
@@ -179,9 +179,9 @@ Query results are supported as data for this component from DataMiner 10.2.9/10.
 
      If the *Tooltip* setting is enabled, you can configure what the tooltip will display:
 
-     - *Tooltip* > *Include x labels* (1): Allows you to include the X-axis labels (i.e. the X-axis names).
+     - *Tooltip* > *Include x labels* (1): Allows you to include the X-axis labels (i.e., the X-axis names).
 
-     - *Tooltip* > *Include y labels* (2): Allows you to include the Y-axis labels (i.e. the name of the column containing the Y values).
+     - *Tooltip* > *Include y labels* (2): Allows you to include the Y-axis labels (i.e., the name of the column containing the Y values).
 
      - *Tooltip* > *Include colors* (3): Allows you to include a small indicator in front of the tooltip that indicates the color of the line.
 

@@ -10,7 +10,7 @@ This article dives deeper into different use cases where protocol thread runtime
 
 ### Protocol threads
 
-Protocol threads are the main threads of an SLProtocol process and are used to execute groups with requests towards an external destination (e.g. a device). Each thread can run 1 group at a time, maintaining a priority queue of the other groups to execute. Each group can be composed of triggers, actions, polling parameters and/or QActions.
+Protocol threads are the main threads of an SLProtocol process and are used to execute groups with requests towards an external destination (e.g., a device). Each thread can run 1 group at a time, maintaining a priority queue of the other groups to execute. Each group can be composed of triggers, actions, polling parameters and/or QActions.
 
 By default, there is one protocol thread in an SLProtocol process and there are five SLProtocol processes on a DataMiner Agent, with multiple DataMiner elements running in the same protocol process. To find out which element is running in which process, you can check the [Element In Protocol](xref:Element_in_Protocol_logging) log.
 
@@ -30,7 +30,7 @@ To see the RTEs in the Alarm Console, in DataMiner Cube, click the alarm bar at 
 
 ### SLNetClientTest tool
 
-In order to gather more information on an RTE (e.g. to find out which group caused the issue or how long it took), you can use the SLNetClientTest tool. For information on this tool, see [SLNetClientTest tool](xref:SLNetClientTest_tool). Note that you should always be very careful when you use this tool, as it allows actions that can have far-reaching consequences for a DataMiner System.
+In order to gather more information on an RTE (e.g., to find out which group caused the issue or how long it took), you can use the SLNetClientTest tool. For information on this tool, see [SLNetClientTest tool](xref:SLNetClientTest_tool). Note that you should always be very careful when you use this tool, as it allows actions that can have far-reaching consequences for a DataMiner System.
 
 For more information on how to use this tool to retrieve protocol pending calls, see [How to retrieve protocol pending calls](xref:How_to_retrieve_protocol_pending_calls)?
 
@@ -50,7 +50,7 @@ By default, when a group takes longer than 7 minutes and 30 seconds and less tha
 
 When the group takes longer than 15 minutes to finish, it enters an open RTE state. It sends a message to the Watchdog log specifying the affected thread and element and also displays an alarm in the Alarm Console with a summary of the information it sent to the Watchdog log. For example, the screenshot below shows a protocol thread open RTE in the Alarm Console, caused by the element “RTEExample” taking too long (15 minutes). The delay was caused by a QAction triggered by a button that also had an RTE (SetParameterThread RTE).
 
-![Protocol thread run time errors use cases](~/develop/images/Protocol_thread_run_time_errors_use_cases.png)
+![Protocol thread runtime errors use cases](~/develop/images/Protocol_thread_run_time_errors_use_cases.png)
 
 For this example, this is what the RTE looks like in the SLWatchdog2 log file:
 
@@ -81,7 +81,7 @@ The following message indicates an open RTE becoming cleared:
 
 For more information on the basic steps of how to investigate a protocol thread RTE, see [Investigating a protocol thread RTE](xref:Investigating_a_protocol_thread_RTE).
 
-A group is considered finished when the content of the group is fully executed (e.g. all data has been acquired), and all linked logic is fully executed (e.g. all necessary calculations have been done based on the acquired data).
+A group is considered finished when the content of the group is fully executed (e.g., all data has been acquired), and all linked logic is fully executed (e.g., all necessary calculations have been done based on the acquired data).
 
 A simple solution in cases where a single group takes too long to process is to divide the group into smaller groups focusing on certain parts of the logic.
 
@@ -91,7 +91,7 @@ In some cases, it can occur that an RTE is not completely caused by one group on
 
 This can originate from a group that is waiting for other flows to finish before executing.
 
-![Protocol thread run time errors use cases 1](~/develop/images/Protocol_thread_run_time_errors_use_cases1.png)
+![Protocol thread runtime errors use cases 1](~/develop/images/Protocol_thread_run_time_errors_use_cases1.png)
 
 The example above depicts a situation where an open protocol thread RTE (15 min) is caused by a group in a timer in flow 1 with a QAction that takes 7 minutes to operate. This is caused by the flow 2 QAction triggered by the button pressed by the user. Only one QAction can run at one point per element. Because of this, the group in flow 1 waits for QAction 2 to finish before executing its QAction. The accumulated time of having to wait and process its own QAction would be approximately 17 minutes, causing the RTE.
 
@@ -113,13 +113,13 @@ In situations where an RTE happens because of other QActions triggered by a butt
 
 Multiple sets on the same element are handled sequentially. There can be more than one set influencing the timer group flow.
 
-The sets can be caused by other external sources than the client, like an Automation script, Visual Overview, data distribution, traps, element connections, etc.
+The sets can be caused by other external sources than the client, like an automation script, Visual Overview, data distribution, traps, element connections, etc.
 
 #### Alternative case
 
 Below is a similar case caused not by external influence but by a parameter change trigger.
 
-![Protocol thread run time errors use cases 2](~/develop/images/Protocol_thread_run_time_errors_use_cases2.png)
+![Protocol thread runtime errors use cases 2](~/develop/images/Protocol_thread_run_time_errors_use_cases2.png)
 
 This is caused by the SetParam present in the QAction of flow 1. It changes a parameter, triggering the execution of the QAction in flow 2 and pausing the current QAction. The accumulated time of the QAction in flow 1 (7 min) and the QAction in flow 2 (10 min) causes the open RTE.
 
@@ -127,7 +127,7 @@ This is caused by the SetParam present in the QAction of flow 1. It changes a pa
 
 This case originates when a new flow starts while the polling flow is waiting for requested data to be received.
 
-![Protocol thread run time errors use cases 3](~/develop/images/Protocol_thread_run_time_errors_use_cases3.png)
+![Protocol thread runtime errors use cases 3](~/develop/images/Protocol_thread_run_time_errors_use_cases3.png)
 
 In the example above, a time group in flow 1 requests external data and processes it using a QAction in less than 7 minutes; however, it still has an open protocol thread RTE (15 min). This is caused by flow 2 in combination with the polling logic.
 
@@ -139,7 +139,7 @@ Finishing one request is not the same as completing the end goal. If the flow un
 
 #### Solution
 
-If the flow takes too long, it is best to split it up into smaller steps (e.g. polling 10 items one by one instead of all at once). This way, the access point to the process is unlocked in between each step. It is also possible to include the possibility to cancel the flow.
+If the flow takes too long, it is best to split it up into smaller steps (e.g., polling 10 items one by one instead of all at once). This way, the access point to the process is unlocked in between each step. It is also possible to include the possibility to cancel the flow.
 
 #### Note
 
@@ -149,7 +149,7 @@ Case 2 can cause case 1 and can be influenced by case 3.
 
 There can be a situation when polling a large or slow SNMP table is required. This polling can lead to false positive protocol thread RTEs (RTEs caused by groups that are not irreversibly stuck but take a long time to complete) that affect both the poll group and all the groups in the queue.
 
-![Protocol thread run time errors use cases 4](~/develop/images/Protocol_thread_run_time_errors_use_cases4.png)
+![Protocol thread runtime errors use cases 4](~/develop/images/Protocol_thread_run_time_errors_use_cases4.png)
 
 The examples above can originate from multiple cases:
 
@@ -175,11 +175,11 @@ Use the *partialSNMP* feature if the polling content is too large or data retrie
 
 Case 3 can affect case 2.
 
-### Case 4: A flow requires the processing of a variable number of items (e.g. files from an FTP server) after a few years in use (large items or many files)
+### Case 4: A flow requires the processing of a variable number of items (e.g., files from an FTP server) after a few years in use (large items or many files)
 
 The processing logic is done in a QAction. The information received influences the processing time.
 
-![Protocol thread run time errors use cases 5](~/develop/images/Protocol_thread_run_time_errors_use_cases5.png)
+![Protocol thread runtime errors use cases 5](~/develop/images/Protocol_thread_run_time_errors_use_cases5.png)
 
 In the example above, a group is configured to request Y files to process from an FTP server. It takes 1 minute to process each received file. The Y file count is influenced by the configuration and the total number of files on the server. If a large number of files are requested (15 or more in this case), this will cause an open protocol thread RTE (15 min).
 

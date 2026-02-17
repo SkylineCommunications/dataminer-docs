@@ -31,7 +31,7 @@ The following pages are available in the app:
 
 - ![About](~/solutions/images/Resource_Studio_About.png) **About**: Provides information on the **version** of the MediaOps package.
 
-<!-- TODO: Add more subpages below this page explaining how to use the different features of this app. Links to those pages with more extensive info should then be added here. At present, the info for this app is too high-level, and a lot is missing, e.g. how to import resource pools, how to configure concurrency, how to manage capabilities & capacities, what is configuration management all about and how does it work, etc. -->
+<!-- TODO: Add more subpages below this page explaining how to use the different features of this app. Links to those pages with more extensive info should then be added here. At present, the info for this app is too high-level, and a lot is missing, e.g., how to import resource pools, how to configure concurrency, how to manage capabilities & capacities, what is configuration management all about and how does it work, etc. -->
 
 ## Resources
 

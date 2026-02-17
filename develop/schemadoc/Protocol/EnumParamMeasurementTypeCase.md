@@ -11,5 +11,5 @@ Specifies the casing type.
 |Item|Facet value|Description|
 |--- |--- |--- |
 |***string restriction***|||
-|&nbsp;&nbsp;Enumeration|lower|Lower case|
-|&nbsp;&nbsp;Enumeration|upper|Upper case|
+|&nbsp;&nbsp;Enumeration|lower|Lowercase|
+|&nbsp;&nbsp;Enumeration|upper|Uppercase|

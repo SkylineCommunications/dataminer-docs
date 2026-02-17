@@ -25,21 +25,21 @@ To create component references inside textual settings, use the following syntax
 
 - **COMPONENT**: A fixed keyword to indicate that the variable represents a component link.
 
-- **Source name**: The name of the low-code app page or panel, e.g. "Page 1".
+- **Source name**: The name of the low-code app page or panel, e.g., "Page 1".
 
   > [!NOTE]
   > When you link to a [web](xref:DashboardWeb) or [text](xref:DashboardText) component in a dashboard, omit the source name.<!--RN 38993-->
 
-- **Component name**: The name of the component, e.g. "Table 3".
+- **Component name**: The name of the component, e.g., "Table 3".
 
-- **Category name**: The part of the component that will contain the data, e.g. "Selected rows".
+- **Category name**: The part of the component that will contain the data, e.g., "Selected rows".
 
-- **Data type**: The type of data, e.g. "Elements" or "Tables".
+- **Data type**: The type of data, e.g., "Elements" or "Tables".
 
   > [!NOTE]
   > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075-->, the data types "Texts" and "Tables" are called "Strings" and "Query rows" instead.
 
-- **Property name**: The property of the data that should be used, e.g. "Protocol Name".
+- **Property name**: The property of the data that should be used, e.g., "Protocol Name".
 
 > [!TIP]
 > You can find the name of each part in the *Components* data source of the edit panel's *Data* pane.
@@ -68,26 +68,42 @@ Examples:
 
 #### URLs
 
-In the URL section, you have the ability to either select [query parameters](#query-parameters) or the [static value `DMAIP`](#dmaip).
+In the URL section, you have the ability to either select [URL data](#url-data), previously known as query parameters, or the [static value `DMAIP`](#dmaip).
 
-##### Query parameters
+##### URL data
 
-To create references to the URL query parameters inside textual settings, use the following syntax:
+To create references to URL data inside textual settings, use the following syntax:
 
-```txt
-{URL."Category name".type.Value}
-```
+- From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->:
 
-- **URL**: A fixed keyword to indicate that the variable represents a URL .
+  ```txt
+  {URL.Data.type.Value}
+  ```
 
-- **Category name**: The part of the URL where the data will be embedded, e.g. "Query parameters".
+  - **URL**: A fixed keyword to indicate that the variable represents a URL.
 
-- **Type**: The type of data, e.g. "Numbers" or "Texts".
+  - **Data**: Indicates that the data originates from the URL data section.
 
-  > [!NOTE]
-  > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075-->, the data types "Texts" and "Tables" are called "Strings" and "Query rows" instead.
+  - **Type**: The type of data, e.g., "Numbers" or "Texts".
 
-- **Value**: The property of the data that should be used in the URL.
+  - **Value**: The property of the data that should be used in the URL.
+
+- Prior to DataMiner 10.5.0 [CU12]/10.6.3:
+
+  ```txt
+  {URL."Query parameters".type.Value}
+  ```
+
+  - **URL**: A fixed keyword to indicate that the variable represents a URL.
+
+  - **"Query parameters"**: Indicates that the data originates from the URL query parameters section.
+
+  - **Type**: The type of data, e.g., "Numbers" or "Texts".
+
+    > [!NOTE]
+    > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075-->, the data types "Texts" and "Tables" are called "Strings" and "Query rows" instead.
+
+  - **Value**: The property of the data that should be used in the URL.
 
 > [!NOTE]
 >
@@ -98,7 +114,7 @@ To create references to the URL query parameters inside textual settings, use th
 Example: If you want to pass a number as a query parameter to a URL, you could use the following syntax:
 
 ```txt
-{URL."Query parameters".Numbers.Value}
+{URL.Data.Numbers.Value}
 ```
 
 ##### DMAIP
@@ -126,7 +142,7 @@ To create a flow reference inside textual settings, use the following syntax:
 
 - **Flow name**: The name of the flow you want to reference.
 
-- **Property name**: The property of the provided data that should be used, e.g. "Protocol Name".
+- **Property name**: The property of the provided data that should be used, e.g., "Protocol Name".
 
 > [!NOTE]
 >
@@ -149,18 +165,18 @@ To create feed references inside textual settings, use the following syntax:
 
 - **FEED**: A fixed keyword to indicate that the variable represents a feed link.
 
-- **Source name**: The name of the low-code app page or panel, e.g. "Page 1".
+- **Source name**: The name of the low-code app page or panel, e.g., "Page 1".
 
   > [!NOTE]
   > When you link a feed to a [Web](xref:DashboardWeb) or [Text](xref:DashboardText) component in a dashboard, omit the source name.<!--RN 38993-->
 
-- **Feed name**: The name of the feed, e.g. "Table 3".
+- **Feed name**: The name of the feed, e.g., "Table 3".
 
-- **Category name**: The part of the feed that will contain the data, e.g. "Selected rows".
+- **Category name**: The part of the feed that will contain the data, e.g., "Selected rows".
 
-- **Data type**: The type of data, e.g. "Elements".
+- **Data type**: The type of data, e.g., "Elements".
 
-- **Property name**: The property of the fed data that should be used, e.g. "Protocol Name".
+- **Property name**: The property of the fed data that should be used, e.g., "Protocol Name".
 
 > [!TIP]
 > You can find the name of each part in the *FEEDS* data source of the edit panel's *Data* pane.

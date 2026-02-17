@@ -81,17 +81,17 @@ To deploy the xPON branch of the EPM Solution:
      > [!TIP]
      > Large deployments could greatly benefit from the use of [DataMiner IDP](xref:SolIDP), as it can automate the discovery process for large numbers of devices in a network.
 
-1. In the Automation module in DataMiner Cube, **import the Automation scripts** from the EPM package. See [Importing and exporting Automation scripts](xref:Managing_Automation_scripts#importing-and-exporting-automation-scripts).
+1. In the Automation module in DataMiner Cube, **import the automation scripts** from the EPM package. See [Importing and exporting automation scripts](xref:Managing_Automation_scripts#importing-and-exporting-automation-scripts).
 
 1. If the EPM package contains any **dashboards**, add these to the DMS. To do so, copy the dashboards to the folder `C:\Skyline DataMiner\Dashboards` on the target DMA.
 
 1. If the EPM package contains Visio drawings (in the *Visuals* folder), **add the Visio drawings** to the DMS. To do so:
 
-   - For a Visio drawing linked to a specific connector (e.g. EPM Platform), see [Assigning a custom Visio file to a protocol](xref:Managing_Visio_files_linked_to_protocols#assigning-a-custom-visio-file-to-a-protocol).
+   - For a Visio drawing linked to a specific connector (e.g., EPM Platform), see [Assigning a custom Visio file to a protocol](xref:Managing_Visio_files_linked_to_protocols#assigning-a-custom-visio-file-to-a-protocol).
 
-   - For a Visio drawing linked to a view, upload the drawing to the view. See [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
+   - For a Visio drawing linked to a view, upload the drawing to the view. See [Setting the active Visio file for an element, service, or view](xref:Set_as_active_Visio_file).
 
-1. **Add the Correlation rules** from the EPM package to the DMS. To do so, copy the Correlation rules to the folder `C:\Skyline DataMiner\Correlation` of the target DMA and **restart** the DMA.
+1. **Add the correlation rules** from the EPM package to the DMS. To do so, copy the correlation rules to the folder `C:\Skyline DataMiner\Correlation` of the target DMA and **restart** the DMA.
 
    > [!IMPORTANT]
-   > As these Correlation rules require specific connectors and Automation scripts to function properly, make sure these have all been loaded properly before you add the Correlation rules. If you are deploying the EPM Solution for the first time, the necessary elements need to be created first before the Correlation rules can be deployed. We also recommend that you review the Correlation rules when you initially deploy them and after each upgrade.
+   > As these correlation rules require specific connectors and automation scripts to function properly, make sure these have all been loaded properly before you add the correlation rules. If you are deploying the EPM Solution for the first time, the necessary elements need to be created first before the correlation rules can be deployed. We also recommend that you review the correlation rules when you initially deploy them and after each upgrade.

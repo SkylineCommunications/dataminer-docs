@@ -11,7 +11,7 @@ uid: General_Feature_Release_10.6.2
 >
 > Before you upgrade to this DataMiner version:
 >
-> - Make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+> - Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
 >
 >   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 >   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
@@ -28,11 +28,11 @@ uid: General_Feature_Release_10.6.2
 
 ## New features
 
-#### Automation: New message to retrieve information about the available Automation scripts [ID 44209]
+#### Automation: New message to retrieve information about the available automation scripts [ID 44209]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each Automation script available in the DataMiner System:
+A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each automation script available in the DataMiner System:
 
 - The folder containing the script's XML file.
 - Whether or not the script supports a dedicated log file.
@@ -82,7 +82,7 @@ Note that, from now on, if not all nodes of the OpenSearch cluster are listed in
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-When, in DataMiner client applications (e.g. DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
+When, in DataMiner client applications (e.g., DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
 
 | Mode | Description |
 |------|-------------|
@@ -98,7 +98,7 @@ See also: [Alarm templates: New flatline detection modes in Augmented Operations
 From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
 
 - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
-- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
+- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e., they are not part of the same cloud-connected system.
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.
 
@@ -106,17 +106,17 @@ If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fa
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large data sets.
+When, on a system with a Cassandra Cluster database, history alarms are filtered on service ID or service name, up to now, that filter would not be translated correctly to Elasticsearch or OpenSearch. From now on, that filter will be translated correctly. As a result, overall performance will increase when applying the filter in question to large datasets.
 
 Also, filtering on alarm properties or interfaces using wildcards or regular expression has now been made case insensitive.
 
-#### Scheduler will now be able to start more than 10 synchronously running Automation scripts [ID 44200]
+#### Scheduler will now be able to start more than 10 synchronously running automation scripts [ID 44200]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-Up to now, using Scheduler, it would only be possible to start a maximum of 10 synchronously running Automation scripts.
+Up to now, using Scheduler, it would only be possible to start a maximum of 10 synchronously running automation scripts.
 
-From now on, it will be possible to start more than 10 synchronously running Automation scripts.
+From now on, it will be possible to start more than 10 synchronously running automation scripts.
 
 #### Enhanced performance when upgrading DxMs [ID 44210] [ID 44211]
 
@@ -205,7 +205,7 @@ Because of a number of enhancements, overall performance of the SNMP++ library h
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-The entry added to the *SLAutomation.txt* log file when an Automation script has finished will now contain the entrypoint ID.
+The entry added to the *SLAutomation.txt* log file when an automation script has finished will now contain the entrypoint ID.
 
 In the following example, the entrypoint ID can be found at the end of the entry between brackets (11):
 
@@ -248,7 +248,7 @@ In client applications like DataMiner Cube, up to now, elements hosted on a DMA 
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-After you had uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g. a new protocol with version 1.0.0.1 versus an existing protocol with version 1.0.0.1_DEV), up to now, elements using the existing protocol (e.g. with version 1.0.0.1_DEV) would incorrectly no longer be able to execute QActions.
+After you had uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g., a new protocol with version 1.0.0.1 versus an existing protocol with version 1.0.0.1_DEV), up to now, elements using the existing protocol (e.g., with version 1.0.0.1_DEV) would incorrectly no longer be able to execute QActions.
 
 #### Problem with SLElement when loading elements that included matrix parameters [ID 44188]
 
@@ -337,7 +337,7 @@ Up to now, whenever an IP address listed in BrokerGateway's `appsettings.runtime
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a run-time error.
+When a QAction called NotifyDataMiner `NT_ELEMENT_STARTUP_COMPLETE` for its own element while that element was being renamed, up to now, a deadlock would occur, causing a runtime error.
 
 #### Problem with SLDataMiner when a version of a DVE connector was set to production version [ID 44308]
 

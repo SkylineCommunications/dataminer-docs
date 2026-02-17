@@ -15,9 +15,9 @@ A `<Group>` tag can have the following two attributes:
 - **height**: The height of the dropdown list (in pixels).
 
   - If you do not specify a height, the dropdown list will be automatically adjusted to the number of items in the list.
-  - If you do specify a height, a scroll bar will automatically be added if the dropdown list is too small to list all items.
+  - If you do specify a height, a scrollbar will automatically be added if the dropdown list is too small to list all items.
 
-After you have defined all necessary layer groups, add a *toggleGroup* attribute to the `<Layer>` tag of every layer that you want to put in those groups. If you want to put a layer into a group called e.g. "MyGroup", then add a *toggleGroup* attribute to the `<Layer>` tag of that layer and set its value to "MyGroup".
+After you have defined all necessary layer groups, add a *toggleGroup* attribute to the `<Layer>` tag of every layer that you want to put in those groups. If you want to put a layer into a group called e.g., "MyGroup", then add a *toggleGroup* attribute to the `<Layer>` tag of that layer and set its value to "MyGroup".
 
 The following code sample shows how to define a layer group called "My Layer Group" and how to add a layer called "My Layer" to that group:
 

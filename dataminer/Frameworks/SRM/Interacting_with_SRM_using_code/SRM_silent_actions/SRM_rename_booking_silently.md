@@ -4,7 +4,7 @@ uid: SRM_rename_booking_silently
 
 # Silently renaming a booking
 
-The example below shows how a booking and the associated DataMiner service can be renamed without user interaction by means of an Automation script.
+The example below shows how a booking and the associated DataMiner service can be renamed without user interaction by means of an automation script.
 
 ```csharp
 using System;

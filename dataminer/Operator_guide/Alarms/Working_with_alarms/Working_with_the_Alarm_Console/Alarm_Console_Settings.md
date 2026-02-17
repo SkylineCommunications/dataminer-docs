@@ -33,7 +33,7 @@ In the active alarms tab, history tracking is enabled by default. In a history a
 
 > [!TIP]
 >
-> - For more information on creating filtered tabs, see [Manually applying an alarm filter in an Alarm Console tab](xref:ApplyingAlarmFiltersInTheAlarmConsole#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
+> - For more information on creating filtered tabs, see [Manually applying an alarm filter in an Alarm Console tab](xref:ManuallyApplyingAnAlarmFilter).
 > - For information on how alarm records are combined in an alarm tree, see [Alarm trees](xref:Alarm_trees).
 
 > [!NOTE]
@@ -46,7 +46,7 @@ Select this option to hide raw alarms of a correlated alarm. To show the raw ala
 > [!NOTE]
 > In case a filter is applied in the alarm tab, the behavior of this feature is different depending on the type of filter:
 >
-> - If a filtered alarm tab is created (e.g. by dragging an item onto the Alarm Console or by selecting *Apply filter* in a new tab):
+> - If a filtered alarm tab is created (e.g., by dragging an item onto the Alarm Console or by selecting *Apply filter* in a new tab):
 >   - If only the base alarm matches the filter, only that alarm is displayed.
 >   - If only the correlated alarm matches the filter, only that alarm is displayed.
 >   - If both base and correlated alarm match the filter, only the correlated alarm is displayed.
@@ -113,19 +113,19 @@ Select this option to specify a custom alert sound that should be used when a ne
 
 Select this option to specify a delay between the creation of a new alarm and its appearance in the selected alarm tab.
 
-E.g. if you set the delay to 30 seconds, when an alarm enters the Alarm Console, it will only be added to the list 30 seconds later. If in this interval the alarm has already been cleared, it will not be added to the list at all.
+For example, if you set the delay to 30 seconds, when an alarm enters the Alarm Console, it will only be added to the list 30 seconds later. If in this interval the alarm has already been cleared, it will not be added to the list at all.
 
 ## Refresh rate
 
 Select this option to specify how frequently the selected tab will be refreshed. This rate will be applied from the moment this setting is set.
 
-E.g. if you set the refresh rate to 30 seconds at 11:48:00, the Alarm Console will be updated every 30 seconds with all the alarms that entered during those 30 seconds. The first refresh will take place at 11:48:30, the next at 11:49:00, etc.
+For example, if you set the refresh rate to 30 seconds at 11:48:00, the Alarm Console will be updated every 30 seconds with all the alarms that entered during those 30 seconds. The first refresh will take place at 11:48:30, the next at 11:49:00, etc.
 
 ## Merge alarm trees
 
 This setting is only available if [History tracking](#history-tracking) is enabled and [Automatically remove cleared alarms](#automatically-remove-cleared-alarms) and [Freeze](#freeze) are disabled in the alarm tab.
 
-When these settings are used, by default, when an alarm is cleared and then reappears, this results in a separate alarm tree. Activating *Merge alarm trees* combines these alarm trees, which can result in a better overview, e.g. in a sliding window tab.
+When these settings are used, by default, when an alarm is cleared and then reappears, this results in a separate alarm tree. Activating *Merge alarm trees* combines these alarm trees, which can result in a better overview, e.g., in a sliding window tab.
 
 ![Merge alarm trees](~/dataminer/images/Merge_Alarm_Trees.png)<br>*Merged alarm trees in DataMiner 10.4.5*
 
@@ -133,7 +133,7 @@ When you activate this option, you can also select an additional option to only 
 
 ## Default alarm list
 
-Select this option to make the currently selected tab the default tab, i.e. the tab that will be shown when you open DataMiner Cube. If the selected tab is already the default tab, this option will be unavailable.
+Select this option to make the currently selected tab the default tab, i.e., the tab that will be shown when you open DataMiner Cube. If the selected tab is already the default tab, this option will be unavailable.
 
 > [!NOTE]
 > To display Alarm Console group statistics, to display a horizontal scrollbar in the alarm list, or to configure the Alarm Console, refer to the general settings in Cube instead. See [User settings](xref:User_settings).

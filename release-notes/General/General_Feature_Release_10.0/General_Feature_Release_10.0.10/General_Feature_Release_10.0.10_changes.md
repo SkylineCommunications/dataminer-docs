@@ -55,7 +55,7 @@ When adding or updating an element, it is now allowed to enter pipe characters (
 
 #### Mobile Gateway: Text messages can now contain special characters like '&' \[ID 26449\]
 
-When DataMiner is configured to use an IP-based cell phone modem (e.g. SMSEagle), it communicates with the device via HTTP GET requests, passing values as ampersand-delimited parameters in the URL.
+When DataMiner is configured to use an IP-based cell phone modem (e.g., SMSEagle), it communicates with the device via HTTP GET requests, passing values as ampersand-delimited parameters in the URL.
 
 Up to now, when DataMiner sent a text message containing an ampersand character (“&”), the message would be cut off because the ampersand was incorrectly interpreted as a delimiter. From now on, all text messages will be URL encoded.
 
@@ -111,7 +111,7 @@ In the Jobs app, a number of minor enhancements have been made:
 
 #### Security checks for local connections between an SLxxx module and SLNet \[ID 26544\]
 
-For local connections between an SLxxx module (e.g. SLDMS) and SLNet, security checks have been established. A security token will be generated and verified for each of the messages that are sent.
+For local connections between an SLxxx module (e.g., SLDMS) and SLNet, security checks have been established. A security token will be generated and verified for each of the messages that are sent.
 
 #### Dashboards app - Line chart component: Loading indicator next to button to expand or collapse the trend graph legend \[ID 26557\]
 
@@ -119,7 +119,7 @@ Up to now, when data was being loaded into a line chart component, a loading ind
 
 #### Automation: DataMiner will now check whether a parameter’s set range has not been changed dynamically \[ID 26574\]
 
-When a parameter is set, from now on, DataMiner will check whether the set range of the parameter in question has not been changed dynamically (e.g. by an Automation script).
+When a parameter is set, from now on, DataMiner will check whether the set range of the parameter in question has not been changed dynamically (e.g., by an automation script).
 
 #### General security enhancements \[ID 26620\]
 
@@ -137,11 +137,11 @@ Throughout DataMiner Cube, a number of error messages related to Service & Resou
 
 In the database, trend values are stored as text strings.
 
-Up to now, all values of type Double with a length of more than 6 characters were converted to a scientific notation string (e.g. “1e07”). From now on, only values of type Double with a length of more than 12 characters will be converted to a scientific notation string.
+Up to now, all values of type Double with a length of more than 6 characters were converted to a scientific notation string (e.g., “1e07”). From now on, only values of type Double with a length of more than 12 characters will be converted to a scientific notation string.
 
 #### DataMiner Cube - Automation: All parameters will now be aligned vertically \[ID 26665\]
 
-When creating or updating an Automation script in the Automation app, the parameters will now all be aligned vertically.
+When creating or updating an automation script in the Automation app, the parameters will now all be aligned vertically.
 
 #### Improved logging in case client is disconnected \[ID 26667\]
 
@@ -193,7 +193,7 @@ When you add a new DataMiner Agent or DataMiner System to Cube Launcher, the hos
 
 #### Cube Launcher application will appear under the name 'DataMiner Cube' \[ID 26788\]
 
-When you start the Cube Launcher tool, the application will be shown as “DataMiner Cube” in e.g. the Windows Task Manager.
+When you start the Cube Launcher tool, the application will be shown as “DataMiner Cube” in e.g., the Windows Task Manager.
 
 #### Problem with logging of SLManagedScripting \[ID 26796\]
 
@@ -261,7 +261,7 @@ In the list of *ProtocolLinks* of a *VirtualFunctionDefinition*, an asterisk ('"
 
 #### DataMiner mobile apps updated to Angular 9 \[ID 26975\]
 
-The DataMiner mobile apps that use Angular, e.g. the Monitoring, Dashboards and Jobs app, now use Angular 9 instead of Angular 8.
+The DataMiner mobile apps that use Angular, e.g., the Monitoring, Dashboards and Jobs app, now use Angular 9 instead of Angular 8.
 
 #### Opening Cube launcher via system tray icon can now restore existing minimized window \[ID 27006\]
 
@@ -281,7 +281,7 @@ In the Jobs app itself, when a user tries to delete a section definition, a dial
 
 #### DataMiner Cube: Embedded DataMiner apps now always use Chromium browser \[ID 27052\]
 
-All DataMiner apps displayed within an embedded web browser in DataMiner Cube (e.g. Ticketing, Dashboards, Reports, Annotations, etc.) will now always use the Chromium browser engine, regardless of which default browser engine is configured.
+All DataMiner apps displayed within an embedded web browser in DataMiner Cube (e.g., Ticketing, Dashboards, Reports, Annotations, etc.) will now always use the Chromium browser engine, regardless of which default browser engine is configured.
 
 #### Alarm when Cassandra or Elasticsearch database go offline \[ID 27061\]
 
@@ -295,7 +295,7 @@ After restarting a DMA, in some cases, spectrum session presets could revert to 
 
 #### After a hotfix installation, the version number in VersionHistory.txt would be updated incorrectly \[ID 26067\]
 
-After a hotfix installation, in some cases, the version number in the VersionHistory.txt file would incorrectly be updated with the word “Hotfix” instead of the hotfix version string containing the detailed version information (e.g. “HF_10.0.7.0(CU0)\_20200520-135714”).
+After a hotfix installation, in some cases, the version number in the VersionHistory.txt file would incorrectly be updated with the word “Hotfix” instead of the hotfix version string containing the detailed version information (e.g., “HF_10.0.7.0(CU0)\_20200520-135714”).
 
 #### Exceptions related to correlation data flushing would be logged during a DMA startup or Failover switch \[ID 26177\]
 
@@ -309,9 +309,9 @@ When, in the Alarm Console, you sorted and grouped alarms by Time/descending, th
 
 When you restored a DataMiner backup package (.dmbackup) containing a database file that took more than 30 minutes to restore, in some cases, the restore of the DataMiner backup package would incorrectly continue before the restore of the database file had finished.
 
-#### Problem when using the IsMatrixCrosspointConnected method in an Automation script \[ID 26276\]
+#### Problem when using the IsMatrixCrosspointConnected method in an automation script \[ID 26276\]
 
-When, in an Automation script, the *IsMatrixCrosspointConnected* method was used before a matrix point had been connected, in some cases, an exception could be thrown.
+When, in an automation script, the *IsMatrixCrosspointConnected* method was used before a matrix point had been connected, in some cases, an exception could be thrown.
 
 #### DataMiner Cube - Visual Overview: Shapes with a ParameterControl shape data field would incorrectly not take into account the NoAutoScale option \[ID 26283\]
 
@@ -327,7 +327,7 @@ When you created a new DataMiner System, in some cases, certain existing files w
 
 #### Problem with SLAutomation when saving a script containing a long line \[ID 26367\]
 
-When you saved an Automation script that contained a long line, in some cases, an error could occur in all SLAutomation processes in the DataMiner System.
+When you saved an automation script that contained a long line, in some cases, an error could occur in all SLAutomation processes in the DataMiner System.
 
 #### Source OID of forwarded aggregation alarm would not contain 'Aggregation' \[ID 26369\]
 
@@ -385,7 +385,7 @@ In some cases, an agent configured to only be switched over manually would incor
 
 #### Automation: Engine#FindElement(null) call would incorrectly return a random element \[ID 26499\]
 
-When using an Engine#FindElement(null) call in an Automation script, in some cases, a random Element object would incorrectly be returned. From now on, NULL will be returned instead.
+When using an Engine#FindElement(null) call in an automation script, in some cases, a random Element object would incorrectly be returned. From now on, NULL will be returned instead.
 
 #### DataMiner Cube - Documents app: Problem when trying to delete a file after saving it locally \[ID 26500\]
 
@@ -477,7 +477,7 @@ When, in the *SNMP forwarding* section of *System Center*, you configured an SNM
 
 #### DataMiner Cube - Multiple set: List of table indices would not be populated when there was no associated read parameter \[ID 26593\]
 
-When you performed a multiple set (i.e. an update of multiple parameter values in one go), up to now, the dropdown box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g. write parameters linked to buttons displayed in table cells).
+When you performed a multiple set (i.e., an update of multiple parameter values in one go), up to now, the dropdown box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g., write parameters linked to buttons displayed in table cells).
 
 #### DataMiner Cube - EPM: KPI list would incorrectly display long column names that included the table name \[ID 26599\]
 
@@ -501,7 +501,7 @@ In some cases, the “CPEOnly” protocol option would not be applied correctly 
 
 #### DataMiner Cube - Visual Overview: Breadcrumbs header showing after Visio page is maximized \[ID 26631\]
 
-When you maximized a Visio page and then navigated to e.g. another view inside that page, in some cases, the breadcrumbs header would incorrectly be displayed at the top of the screen.
+When you maximized a Visio page and then navigated to, for example, another view inside that page, in some cases, the breadcrumbs header would incorrectly be displayed at the top of the screen.
 
 #### DataMiner Cube: Loading issue when returning to a parent node when navigating through a tree control \[ID 26634\]
 
@@ -516,11 +516,11 @@ When you closed a dashboard containing feeds, and then opened another dashboard,
 When you exported a Data Display table to a CSV file after moving or (un)hiding some of its columns, in some cases, the column order in the CSV file would be incorrect.
 
 > [!NOTE]
-> When hidden columns are exported, they are positioned where they would appear when not hidden, i.e. on the right of the closest non-hidden column as defined in the protocol.
+> When hidden columns are exported, they are positioned where they would appear when not hidden, i.e., on the right of the closest non-hidden column as defined in the protocol.
 
 #### DataMiner Cube - Visual Overview: Problem when using a placeholder inside another placeholder of the same type in Element shape data fields \[ID 26653\]
 
-When, in an Element shape data field, you used a placeholder inside another placeholder of the same type (e.g. a \[Param:\] placeholder inside another \[Param:\] placeholder), in some cases, those placeholders would not get resolved correctly, causing the shape to not get displayed.
+When, in an Element shape data field, you used a placeholder inside another placeholder of the same type (e.g., a \[Param:\] placeholder inside another \[Param:\] placeholder), in some cases, those placeholders would not get resolved correctly, causing the shape to not get displayed.
 
 #### DataMiner Taskbar Utility: Problem at the end of a DataMiner upgrade operation \[ID 26660\]
 
@@ -616,7 +616,7 @@ When you masked a table row and then restarted the element, in some cases, the r
 
 #### Protocols: Hex string parameters would not contain enough leading zeros \[ID 26777\]
 
-When a parameter value of type “double” was converted to a value of type “hex string” (e.g. a CRC parameter), in some cases, it would not contain enough leading zeros when put into a data stream.
+When a parameter value of type “double” was converted to a value of type “hex string” (e.g., a CRC parameter), in some cases, it would not contain enough leading zeros when put into a data stream.
 
 The problem would typically occur when the parameter was configured as follows:
 
@@ -680,7 +680,7 @@ When a line chart component was configured to display columns from different tab
 
 #### Email report based on dashboard from new app was blank \[ID 26811\]
 
-In some cases, it could occur that if an Automation script sent an email report based on a dashboard from the new Dashboards app, the PDF attached to this email was blank.
+In some cases, it could occur that if an automation script sent an email report based on a dashboard from the new Dashboards app, the PDF attached to this email was blank.
 
 #### DataMiner Cube: Not possible to reuse alarm template condition based on non-linked table \[ID 26812\]
 
@@ -772,7 +772,7 @@ When a new Failover pair was configured, it could occur that the existing dashbo
 
 #### DataMiner Cube: Automation script executed from Visual Overview still displayed as "Executing" when finished \[ID 26925\]
 
-When an Automation script was executed from a shape in Visual Overview, it could occur that it continued to be displayed as being executed even when the script was finished.
+When an automation script was executed from a shape in Visual Overview, it could occur that it continued to be displayed as being executed even when the script was finished.
 
 #### DataMiner state saved in connection and in event cache not in sync \[ID 26928\]
 

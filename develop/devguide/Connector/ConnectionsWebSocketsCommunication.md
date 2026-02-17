@@ -4,7 +4,7 @@ uid: ConnectionsWebSocketsCommunication
 
 # Communication
 
-Once the WebSocket has been set up, data can be sent and received. Commands are implemented using *Command* constructs, and Responses can be implemented using *Response* constructs. This is identical to the way in which serial connections work.
+Once the WebSocket has been set up, data can be sent and received. Commands are implemented using *Command* constructs, and Responses can be implemented using *Response* constructs. This is identical to the way serial connections work.
 
 For traditional request/response communication, a command and response can be combined in a pair. Similar to HTTP, when a response is not received, the connection will time out.
 

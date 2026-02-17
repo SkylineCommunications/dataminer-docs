@@ -27,7 +27,7 @@ A few key things to keep in mind:
 
 - Classes in API should not contain any methods and logic. They should only contain the data you want to transfer. For information on how to parse the message, see [Creating an executor](xref:InterAppCalls_GettingStarted_CreatingExecutor).
 - Do not pass along SLProtocol. The SLProtocol object should always be taken from the Run method of the QAction that your code is working in.
-- Do not pass along the Engine instance from an Automation script.
+- Do not pass along the Engine instance from an automation script.
 - You are free to choose how you organize your API, but we recommend adding a comment with versioning at the top of the API.
 
 When you have created an API, the next thing to do is to [create an executor](xref:InterAppCalls_GettingStarted_CreatingExecutor).

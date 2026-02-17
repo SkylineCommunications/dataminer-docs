@@ -120,10 +120,10 @@ To have separate SLScripting processes created for every protocol being used, do
 
 From DataMiner 10.6.3/10.7.0<!--RN 44420--> onwards, by default a separate SLScripting process is used for each SLProtocol process. If the *scriptingProcesses* attribute mentioned below is empty, the system will automatically create the same number of SLScripting processes as SLProtocol processes.
 
-Earlier DataMiner versions by default use only one SLScripting process. In this case, if the load for one particular protocol has to be spread over several processes, because otherwise too much memory would be needed for one process, you can use the procedure below to have a dedicated SLScripting process created for each SLProtocol process.
+Earlier DataMiner versions by default use only one SLScripting process. In this case, if the load for one particular protocol has to be spread over several processes because otherwise too much memory would be needed for one process, you can use the procedure below to have a dedicated SLScripting process created for each SLProtocol process.
 
 > [!IMPORTANT]
-> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. See [Sharing and persisting data](xref:LogicQActions#sharing-and-persisting-data).
+> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. See [Sharing and persisting data](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
 
 1. Stop the DataMiner software.
 
@@ -214,7 +214,7 @@ From DataMiner 10.2.7/10.3.0 onwards, the number of simultaneously running SLScr
 Note that from DataMiner 10.6.3/10.7.0<!--RN 44420--> onwards, the default behavior is to have as many SLScripting processes as SLProtocol processes. In earlier DataMiner versions, one SLScripting process is used by default.
 
 > [!IMPORTANT]
-> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActions#sharing-and-persisting-data).
+> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
 
 1. Stop the DataMiner software.
 
@@ -233,7 +233,7 @@ Note that from DataMiner 10.6.3/10.7.0<!--RN 44420--> onwards, the default behav
 1. Restart the DataMiner software.
 
 > [!NOTE]
-> The SLProtocol processes will be assigned one of the available SLScripting processes in a round-robin way. For example, if protocolProcesses is set to 5 (i.e. the default value), and scriptingProcesses is set to 3:
+> The SLProtocol processes will be assigned one of the available SLScripting processes in a round-robin way. For example, if protocolProcesses is set to 5 (i.e., the default value), and scriptingProcesses is set to 3:
 >
 > - SLScripting 1 will host SLProtocol #1 and #4
 > - SLScripting 2 will host SLProtocol #2 and #5
@@ -623,7 +623,7 @@ Example:
 
 In the `ClusterTransitionStateTimeout` element, you can specify a cluster transition state timeout (in seconds).
 
-DataMiner Agents leaving the DataMiner System (i.e. cluster) will leave the transition state after the specified timeout delay, starting from the last received notification from any of the DataMiner processes.
+DataMiner Agents leaving the DataMiner System (i.e., cluster) will leave the transition state after the specified timeout delay, starting from the last received notification from any of the DataMiner processes.
 
 Example:
 
@@ -675,7 +675,7 @@ Example:
 
 ### Fine-tuning message throttling
 
-From DataMiner 10.2.0/10.1.2 onwards, message throttling is enabled on connections from web applications (e.g. Monitoring app, Dashboards app, Web APIs, etc.) to SLNet. This is a mechanism that avoids an excessive number of parameter update messages being sent at the same time.
+From DataMiner 10.2.0/10.1.2 onwards, message throttling is enabled on connections from web applications (e.g., Monitoring app, Dashboards app, Web APIs, etc.) to SLNet. This is a mechanism that avoids an excessive number of parameter update messages being sent at the same time.
 
 From DataMiner 10.1.3 onwards, the following settings can be fine-tuned for this in *MaintenanceSettings.xml:*
 
@@ -700,7 +700,7 @@ Example:
 
 ### Customizing how long a connection ticket remains valid
 
-When establishing a new connection (e.g. using the DataMiner Web Services), SLNet makes use of a ticket for authentication. The *AuthenticationTicketExpirationTime* setting in *MaintenanceSettings.xml* determines how long this ticket remains valid. If a request for a new connection is made after the specified time has elapsed, the system will consider the request invalid.
+When establishing a new connection (e.g., using the DataMiner Web Services), SLNet makes use of a ticket for authentication. The *AuthenticationTicketExpirationTime* setting in *MaintenanceSettings.xml* determines how long this ticket remains valid. If a request for a new connection is made after the specified time has elapsed, the system will consider the request invalid.
 
 By default, this is set to 30 seconds.
 
@@ -785,11 +785,11 @@ Example:
 </MaintenanceSettings>
 ```
 
-### Enabling information events when scripts are started by Correlation rules or scheduled tasks
+### Enabling information events when scripts are started by correlation rules or scheduled tasks
 
-From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, by default no information events are generated when Automation scripts are triggered by the Correlation engine. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41970-->, this also applies to Automation scripts triggered by the Scheduler module.
+From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, by default no information events are generated when automation scripts are triggered by the Correlation engine. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41970-->, this also applies to automation scripts triggered by the Scheduler module.
 
-If you do want information events to be generated when scripts are triggered by Correlation rules or scheduled tasks, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to `false`:
+If you do want information events to be generated when scripts are triggered by correlation rules or scheduled tasks, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to `false`:
 
 ``` xml
 <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
@@ -809,7 +809,7 @@ On a DMA, you can specify the port to be used for .NET Remoting.
 
 1. Go to the `C:\Skyline DataMiner\Files` directory of the DMA.
 
-1. In a text editor (e.g. Microsoft Notepad), open *SLNet.exe.config*.
+1. In a text editor (e.g., Microsoft Notepad), open *SLNet.exe.config*.
 
 1. In the Channels section, go to the channel tag named *SLNetRemoting*, and set its "port" attribute to the port number to be used for .NET Remoting. By default, this will be port 8004:
 

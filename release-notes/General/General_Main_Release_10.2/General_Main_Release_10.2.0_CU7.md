@@ -130,7 +130,7 @@ In the user settings (*user icon > Settings*), from now on, you will only be abl
 
 A number of small enhancements have been made to the header bar of Low-Code Apps:
 
-- Button text now supports both upper case and lower case.
+- Button text now supports both uppercase and lowercase.
 - Buttons no longer have lines between them.
 
 #### Enhanced performance when starting up elements on systems using a MySQL or Microsoft SQL Server database [ID 34265]
@@ -173,7 +173,7 @@ When, after receiving a message that it was not possible to save a job because o
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.9 -->
 
-If a visual overview was viewed in the web apps (e.g. the Monitoring or Dashboards app), it could occur that trend graphs in that visual overview were not displayed.
+If a visual overview was viewed in the web apps (e.g., the Monitoring or Dashboards app), it could occur that trend graphs in that visual overview were not displayed.
 In addition, the coloring of the trend lines could be incorrect. Instead of the colors defined in the themes, the lines were shown in black.
 
 #### Service & Resource Management: Files in C:\Skyline DataMiner\ResourceManager would not be locked properly when being read or updated during a midnight synchronization [ID 34104]
@@ -234,7 +234,7 @@ When, in the hamburger button in the top-left corner of the Alarm Console, the *
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-When the system time changed because of e.g. a clock resynchronization or a switch to or from daylight-saving time, up to now, the start time and end time of scheduled alarm templates would incorrectly not get updated.
+When the system time changed because of e.g., a clock resynchronization or a switch to or from daylight-saving time, up to now, the start time and end time of scheduled alarm templates would incorrectly not get updated.
 
 #### GQI: 'Bookings' data source incorrectly contained two 'Last modified at' columns [ID 34170]
 
@@ -254,7 +254,7 @@ When a parameter entry was updated in a profile instance, it would no longer be 
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-In web apps (e.g. Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
+In web apps (e.g., Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
 
 #### Failover: Certain correlation rules would no longer work after a Failover switch [ID 34204]
 

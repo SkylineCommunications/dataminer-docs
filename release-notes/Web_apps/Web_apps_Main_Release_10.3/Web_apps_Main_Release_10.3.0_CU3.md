@@ -46,11 +46,11 @@ When a PDF report was generated via Automation or Scheduler, in some cases, its 
 
 Also, in some cases, the left and right padding of PDF reports generated via Automation, Scheduler and the Dashboards app itself would be missing.
 
-#### Interactive Automation scripts: Problems with datetime component [ID 35682]
+#### Interactive automation scripts: Problems with datetime component [ID 35682]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-When an interactive Automation script was launched from a web app, the following issues could occur. These were all related to the datetime web component (*UIBlockType.Time*):
+When an interactive automation script was launched from a web app, the following issues could occur. These were all related to the datetime web component (*UIBlockType.Time*):
 
 - When you clicked a date in the datetime picker, a changed value would already be returned to the script. From now on, the selected datetime value will not be returned to the script until you close the picker (either by double-clicking or by clicking *Done*).
 
@@ -156,7 +156,7 @@ When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA*
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
-In some cases, the popup panel showing the PDF preview of a dashboard would incorrectly have a scroll bar.
+In some cases, the popup panel showing the PDF preview of a dashboard would incorrectly have a scrollbar.
 
 From now on, a popup panel showing a PDF preview will take the full screen height and will only allow its contents to scroll.
 

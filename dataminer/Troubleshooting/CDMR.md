@@ -6,7 +6,7 @@ uid: CDMR
 
 CDMR, or "Customer DataMiner Reporting", is a fully automated management and reporting platform, operated by the Skyline IOC (Integrated Operations Center), designed to ingest and process status and performance data from live DataMiner Systems around the world. The platform enables IOC staff at Skyline to keep track of the health status and performance of these DataMiner Systems in a proactive manner, and is part of Skyline’s DataMiner Maintenance & Support Service offering.
 
-The data forwarded by a DataMiner System to CDMR is limited to general system configuration details, system performance data, and any anomalies (e.g. CPU load, HDD free space, disk busy time, database size, performance of DataMiner software processes, software error reporting, etc.).
+The data forwarded by a DataMiner System to CDMR is limited to general system configuration details, system performance data, and any anomalies (e.g., CPU load, HDD free space, disk busy time, database size, performance of DataMiner software processes, software error reporting, etc.).
 
 In order to facilitate the exchange of data between a production DataMiner System and Skyline's IOC CDMR platform, reporting of the data is based on a standard email exchange. Therefore, the only requirement for CDMR is that sending emails is enabled for the production DataMiner System (which is typically already the case for the purpose of email notifications and email reporting).
 
@@ -68,9 +68,9 @@ You can configure this directly in *DataMiner.xml* file or via the SLNetClientTe
 - If you configure SMTP via the SLNetClientTest tool, use the following settings:
 
   - *DataMinerID*: -1 for a local DMA or the actual DMA ID for a remote DMA.
-  - *Host*: The SMTP host, e.g. `mail.skyline.be`.
-  - *LoginMethod*: The login method, e.g. *NoLogin*.
-  - *Port*: The SMTP port, e.g. 25.
+  - *Host*: The SMTP host, e.g., `mail.skyline.be`.
+  - *LoginMethod*: The login method, e.g., *NoLogin*.
+  - *Port*: The SMTP port, e.g., 25.
 
   For detailed information, see [Configuring SMTP](xref:SLNetClientTest_configuring_SMTP).
 

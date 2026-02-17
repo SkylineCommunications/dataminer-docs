@@ -12,7 +12,7 @@ When navigating to service groups in the DOCSIS Service topology, users will now
 
 If there are several cable modems in the same location, these are clustered under one marker. Clicking this marker will show each individual cable modem. For each cable modem, a tooltip can display information such as the MAC address, the group delay status, and more. There are also links available that will display the topology focused on the cable modem.
 
-You can also select to view other layers, such as the Group Delay and Reflection layer. Multiple layers can be viewed at the same time. The markers for different layers have different colors, so that you can clearly see the difference between e.g. a cable modem with and without group delay.
+You can also select to view other layers, such as the Group Delay and Reflection layer. Multiple layers can be viewed at the same time. The markers for different layers have different colors, so that you can clearly see the difference between e.g., a cable modem with and without group delay.
 
 #### Improved channel data \[ID 30775\]\[ID 30776\]\[ID 30778\]\[ID 30791\]
 
