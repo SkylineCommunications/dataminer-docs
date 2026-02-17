@@ -87,6 +87,14 @@ If, in the selected component, a data entry is used in multiple ways, then this 
 
 The data in this section will be sorted by type (data, filter, group) and then by name. Users will be allowed to reorder the data entries, but only within their type.
 
+#### GQI DxM: Any type of number will now be accepted as filter value for numeric columns [ID 44712]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, when filtering on a column containing numbers of type int, double, etc., the filter values all had to be of the same type. However, in some cases, this would cause issues when those values were combined with component data from the client.
+
+From now on, GQI will accept any type of number (int, double, and long) as filter value for columns of type int, double, long, and decimal.
+
 #### User authentication enhancements [ID 44734]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
