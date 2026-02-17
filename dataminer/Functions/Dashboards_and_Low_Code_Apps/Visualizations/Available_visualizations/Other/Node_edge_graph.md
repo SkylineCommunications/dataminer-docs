@@ -27,7 +27,7 @@ You can interact with the node edge graph in several ways:
 
 - **Selecting an item**: Click an item to select it. You can select multiple items at the same time by keeping the Ctrl key pressed while clicking nodes. You can select all items at once, by pressing Ctrl + A.
 
-  When you select one or multiple items in the node edge graph, the selected data becomes available under *All available data* > *Components* > *[Page name]* > *Node edge graph* > *Tables*.
+  When you select one or multiple items in the node edge graph, the selected data becomes available under *All available data* > *Components* > *[Page/Panel name]* > *Node edge graph* > *Tables*.
 
   Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e., a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
 
@@ -90,7 +90,7 @@ To highlight items with a query filter:
 
 1. Apply the same query data to the query filter that is used by the node edge graph.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your node edge graph component.
+1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page/Panel name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your node edge graph component.
 
    Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 

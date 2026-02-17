@@ -64,7 +64,7 @@ After configuring the query filter component:
    > [!NOTE]
    > In this example, we are using a table component. However, any component capable of receiving a query can be linked to the query filter.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, go to *All available data* > *Components* > *[Page name]* > *Query filter* > *Filters* > *Queries* in the *Data* pane and drag it onto the table component.
+1. Go to *All available data* > *Components* > *[Page/Panel name]* > *Query filter* > *Filters* > *Queries* in the *Data* pane and drag it onto the table component.
 
    Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
@@ -81,7 +81,7 @@ After configuring the query filter component:
 
 1. In the *Data* pane, go to *All available data > Queries*. Drag the query you created earlier onto the table component.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, go to *All available data* > *Components* > *[Page name]* > *Query filter* > *Filters* in the *Data* pane and drag *Query columns* onto the yellow filter drop area of the table component.
+1. Go to *All available data* > *Components* > *[Page/Panel name]* > *Query filter* > *Filters* in the *Data* pane and drag *Query columns* onto the yellow filter drop area of the table component.
 
    Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 

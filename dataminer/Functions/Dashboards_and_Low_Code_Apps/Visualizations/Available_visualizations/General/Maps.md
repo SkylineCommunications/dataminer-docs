@@ -119,7 +119,7 @@ To provide additional context or details on a map without cluttering the base vi
 
 You can use a maps component as a dynamic selector, i.e., a component whose selection **determines behavior or data elsewhere in your dashboard or app**. A common use case is to display more information about a marker or line on the map when it is selected.
 
-When you select a marker or line on the map, the selected data (e.g., *All available data* > *Components* > *[Page name]* > *Map* > *Selected markers* / *Selected lines* > *Tables*) becomes automatically available for use in other components.
+When you select a marker or line on the map, the selected data (e.g., *All available data* > *Components* > *[Page/Panel name]* > *Map* > *Selected markers* / *Selected lines* > *Tables*) becomes automatically available for use in other components.
 
 > [!NOTE]
 > In versions prior to DataMiner 10.5.0 [CU12]/10.6.3<!--RN 44015-->, the path to the selected data may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
@@ -226,7 +226,7 @@ To **visually distinguish markers and lines that match your filter criteria from
 
 1. Apply the same query data to the query filter that is used by the maps component.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards, navigate to *All available data* > *Components* > *[Page name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your maps component.
+1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards, navigate to *All available data* > *Components* > *[Page/Panel name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your maps component.
 
    Note that depending on your setup, the exact path may differ. For example, in versions prior to DataMiner 10.5.0 [CU12]/10.6.3<!--RN 44015-->, component data is not organized by page.
 
@@ -260,7 +260,7 @@ By default, the template of a maps component includes the following **pre-config
 
 This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->) ensures that a marker is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
 
-This can for instance be useful when the map's component data (e.g., *Components* > *[Page name]* > *Maps* > *Selected markers* > *Tables*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
+This can for instance be useful when the map's component data (e.g., *Components* > *[Page/Panel name]* > *Maps* > *Selected markers* > *Tables*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
 
 ### Maps settings
 

@@ -263,7 +263,7 @@ To highlight items with a query filter:
 
 1. Apply the same query data to the query filter that is used by the timeline component.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your timeline component.
+1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page/Panel name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your timeline component.
 
    Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
@@ -371,7 +371,7 @@ These default templates ensure that both timeline items and groups are highlight
 
 ![Selecting a timeline item](~/dataminer/images/Selecting_Timeline_Item.gif)<br>*Timeline component in DataMiner 10.5.9*
 
-This can, for instance, be useful when the timeline's [component data](xref:Component_Data) (e.g., *Components* > *[Page name]* > *Timeline* > *Selected groups* / *Selected time ranges*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
+This can, for instance, be useful when the timeline's [component data](xref:Component_Data) (e.g., *Components* > *[Page/Panel name]* > *Timeline* > *Selected groups* / *Selected time ranges*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
 
 ### Timeline settings
 
