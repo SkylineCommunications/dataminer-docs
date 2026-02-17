@@ -178,7 +178,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to edit th
 
 1. Next to the *Event* definition name, click *Edit* to open the details of the DOM definition.
 
-1. In the *Behavior* dropdown box, select the behavior you created above, i.e. *event behavior*.
+1. In the *Behavior* dropdown box, select the behavior you created above, i.e., *event behavior*.
 
 1. Click *Apply*, *OK*, and *Back* to go back to module level.
 
@@ -218,7 +218,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to edit th
 
    1. In the *Script* box, enter `Event Button`.
 
-      This is the Automation script that will be called when this action is triggered.
+      This is the automation script that will be called when this action is triggered.
 
    ![Dom Editor add action](~/dataminer/images/DOM_Making_DOM_Stateful_add_action.png)
 

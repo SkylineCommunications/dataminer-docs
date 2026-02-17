@@ -188,7 +188,7 @@ From now on, when a client connects to the DataMiner System, an attempt will fir
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
-From now on, in Automation scripts, it is possible to retrieve resources page by page.
+From now on, in automation scripts, it is possible to retrieve resources page by page.
 
 See the following example, which shows how to implement this.
 
@@ -278,7 +278,7 @@ Because of a number of enhancements, the accuracy of the time-scoped relation le
 
 <!-- MR 10.4.0 [CU7] - FR 10.4.9 -->
 
-When a native process (e.g. SLDataMiner) is stopping, it will by default wait for 30 seconds before it closes the MessageBroker connection.
+When a native process (e.g., SLDataMiner) is stopping, it will by default wait for 30 seconds before it closes the MessageBroker connection.
 
 However, in some rare cases, there is no need to wait for 30 seconds. In those cases, the MessageBroker connection will be closed immediately.
 
@@ -300,11 +300,11 @@ When a booking was started or stopped, up to now, the system would always verify
 
 In the configuration file of the Resource Manager (`C:\Skyline DataMiner\ResourceManager\config.xml`), you can now specify a new *SkipServiceHandling* option, which will allow you to indicate whether or not an `SRMServiceInfo` object check has to be performed when a booking is started or stopped.
 
-#### SLAutomation: Enhanced compilation of Automation scripts [ID 39965]
+#### SLAutomation: Enhanced compilation of automation scripts [ID 39965]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
-A number of enhancements have been made with regard to the compilation of Automation scripts.
+A number of enhancements have been made with regard to the compilation of automation scripts.
 
 #### SLAnalytics - Alarm focus & Automatic incident tracking: Alarms generated for child DVE elements using a parameter ID from the main DVE element will now also be taken into account [ID 39988]
 
@@ -366,7 +366,7 @@ From now on, by default, the *SLNet.txt* log file will no longer contain any log
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the `C:\Skyline DataMiner\Files\ResetConfig.txt` file, assuming that it would always be executed from the `C:\Skyline DataMiner\Files` folder. As a result, when it was executed from another folder (e.g. from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
+Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the `C:\Skyline DataMiner\Files\ResetConfig.txt` file, assuming that it would always be executed from the `C:\Skyline DataMiner\Files` folder. As a result, when it was executed from another folder (e.g., from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
 
 From now on, *SLReset.exe* will always use the absolute path `C:\Skyline DataMiner\Files\ResetConfig.txt` when locating *ResetConfig.txt*.
 
@@ -376,11 +376,11 @@ From now on, *SLReset.exe* will always use the absolute path `C:\Skyline DataMin
 
 Because a number of database operations have been optimized, overall performance has increased when creating and initializing reservations.
 
-#### Automation: Using the Engine.Sleep method in an Automation script could affect other scripts [ID 40104]
+#### Automation: Using the Engine.Sleep method in an automation script could affect other scripts [ID 40104]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, using the *Engine.Sleep* method in an Automation script could cause issues that would affect other scripts. This has now been resolved.
+Up to now, using the *Engine.Sleep* method in an automation script could cause issues that would affect other scripts. This has now been resolved.
 
 #### SLLogCollector: Enhanced CPU usage when 'Include memory dump' is selected [ID 40109]
 
@@ -512,7 +512,7 @@ When SLDataGateway retrieved data from the database page by page, in some cases,
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
-Events generated after DOM objects were created, updated or deleted would incorrectly be of type `DomCrudEvent<T>` instead of e.g. `DomInstancesChangedEventMessage`.
+Events generated after DOM objects were created, updated or deleted would incorrectly be of type `DomCrudEvent<T>` instead of e.g., `DomInstancesChangedEventMessage`.
 
 #### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID 39756]
 
@@ -572,7 +572,7 @@ At startup, in some cases, the CloudEndpointManager in SLNet could throw an exce
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
+When a DMA did not respond during the midnight synchronization (e.g., because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
 
 #### Sending a GetCCAGatewayGlobalStateRequest would incorrectly require the 'Connect to cloud/DCP' user permission [ID 40051]
 
@@ -595,7 +595,7 @@ Whenever the MessageBroker client loses its connection to the NATS server, it wi
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, an Automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
+Up to now, an automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
 
 #### SLProtocol would leak memory when performing an SNMP Set [ID 40112]
 

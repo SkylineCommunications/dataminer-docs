@@ -1,10 +1,10 @@
 ---
-uid: Overview_of_the_DataMiner_PTP_app_UI
+uid: Overview_of_the_PTP_app_in_Cube_UI
 ---
 
-# Overview of the DataMiner PTP app UI
+# The PTP app in DataMiner Cube
 
-In DataMiner Cube’s navigation pane, the DataMiner PTP app is available in the *Applications* section of the *Apps* tab.
+In DataMiner Cube's navigation pane, the DataMiner PTP app is available in the *Applications* section of the *Apps* tab.
 
 From PTP version 1.1.0 onwards, the app consists of the following tabs:
 
@@ -40,7 +40,7 @@ The information in this tab is displayed in several separate blocks.
 
   - *Unknown*: The Node is synchronized with a node that is not known by the PTP application.
 
-  - From left to right, the total number of grandmaster, boundary clock, transparent clock, and slave devices in the configured PTP domain, or in the entire system if no domain is configured. For each of these, a summary icon displays the alarm color of the most severe PTP-related alarm on these devices. Clicking this icon opens a filtered alarm tab with the relevant alarms.
+  - From left to right, the total number of grandmaster, boundary clock, transparent clock, and slave clocks in the configured PTP domain, or in the entire system if no domain is configured. For each of these, a summary icon displays the alarm color of the most severe PTP-related alarm on these devices. Clicking this icon opens a filtered alarm tab with the relevant alarms.
 
   - On the right, the currently active probe. This is the probe in charge of identifying the current active grandmaster clock in the PTP topology. A cogwheel icon next to the probe allows you to select a different probe.
 
@@ -52,7 +52,7 @@ The information in this tab is displayed in several separate blocks.
 
   - On the left, a block with general information about the grandmaster:
 
-    - The name of the current grandmaster clock (i.e. the grandmaster clock reported by the PTP probe). A toggle button next to the name allows you to switch between the element name in DataMiner or the alias.
+    - The name of the current grandmaster clock (i.e., the grandmaster clock reported by the PTP probe). A toggle button next to the name allows you to switch between the element name in DataMiner or the alias.
 
     - The ID of the current grandmaster clock.
 
@@ -70,7 +70,7 @@ The information in this tab is displayed in several separate blocks.
 
   - In the top-right corner, the name of the current grandmaster interface is displayed. Click the cogwheel button next to this name to select a different interface.
 
-- The **performance** block at the bottom of the tab allows you to track the overall PTP performance by monitoring PTP metrics that have trending activated (e.g. *Offset From Master* and *Mean Path Delay*). Below the trend graph, you can select any trended PTP parameter from any PTP node. If you want to display the trend graph in full-screen mode, click the full-screen icon in the top-right corner of this block.
+- The **performance** block at the bottom of the tab allows you to track the overall PTP performance by monitoring PTP metrics that have trending activated (e.g., *Offset From Master* and *Mean Path Delay*). Below the trend graph, you can select any trended PTP parameter from any PTP node. If you want to display the trend graph in full-screen mode, click the full-screen icon in the top-right corner of this block.
 
 ### Special PTP parameters in the Summary tab
 
@@ -100,21 +100,21 @@ This parameter can have the following values:
 
 This parameter can have the following values:
 
-- **6**: Indicates a clock that is synchronized to a primary reference time source. The timescale distributed is PTP. A class-6 clock can never be a slave to another clock in the domain.
+- **6**: Indicates a clock that is synchronized to a primary reference time source. The timescale distributed is PTP. A class-6 clock can never be a slave clock to another clock in the domain.
 
-- **7**: Indicates a clock that has previously been designated as a class-6 clock but that has lost the ability to synchronize to a primary reference time source and is in holdover mode and within holdover specifications. The timescale distributed is PTP. A class-7 clock can never be a slave to another clock in the domain.
+- **7**: Indicates a clock that has previously been designated as a class-6 clock but that has lost the ability to synchronize to a primary reference time source and is in holdover mode and within holdover specifications. The timescale distributed is PTP. A class-7 clock can never be a slave clock to another clock in the domain.
 
-- **13**: Indicates a clock that is synchronized to an application-specific source of time. The timescale distributed is ARB\*1. A class-13 clock can never be a slave to another clock in the domain.
+- **13**: Indicates a clock that is synchronized to an application-specific source of time. The timescale distributed is ARB\*1. A class-13 clock can never be a slave clock to another clock in the domain.
 
-- **14**: Indicates a clock that has previously been designated as a class-13 clock but that has lost the ability to synchronize to an application-specific source of time and is in holdover mode and within holdover specifications. The timescale distributed is ARB \*1. A class-14 clock can never be a slave to another clock in the domain.
+- **14**: Indicates a clock that has previously been designated as a class-13 clock but that has lost the ability to synchronize to an application-specific source of time and is in holdover mode and within holdover specifications. The timescale distributed is ARB \*1. A class-14 clock can never be a slave clock to another clock in the domain.
 
-- **52**: Degradation alternative A for a class-7 clock that is not within holdover specifications. A class-52 clock can never be a slave to another clock in the domain.
+- **52**: Degradation alternative A for a class-7 clock that is not within holdover specifications. A class-52 clock can never be a slave clock to another clock in the domain.
 
-- **58**: Degradation alternative A for a class-14 clock that is not within holdover specifications. A class-58 clock can never be a slave to another clock in the domain.
+- **58**: Degradation alternative A for a class-14 clock that is not within holdover specifications. A class-58 clock can never be a slave clock to another clock in the domain.
 
-- **187**: Degradation alternative B for a class-7 clock that is not within holdover specifications. A class-187 clock can be a slave to another clock in the domain.
+- **187**: Degradation alternative B for a class-7 clock that is not within holdover specifications. A class-187 clock can be a slave clock to another clock in the domain.
 
-- **193**: Degradation alternative B for a class-14 clock that is not within holdover specifications. A class-193 clock can be a slave to another clock in the domain.
+- **193**: Degradation alternative B for a class-14 clock that is not within holdover specifications. A class-193 clock can be a slave clock to another clock in the domain.
 
 - **248**: Default. This clock class is used if none of the other clock class definitions apply.
 
@@ -196,7 +196,7 @@ This tab consists of the following subtabs:
 
 - **Slave clocks**: Lists all slave clocks in the PTP topology, each with a number of PTP-related parameters.
 
-- **Analyzers**: Allows you to compare a number of parameters of two PTP analyzers, i.e. slave devices that have been specially assigned to monitor and analyze the PTP signal they retrieve from a clock.
+- **Analyzers**: Allows you to compare a number of parameters of two PTP analyzers, i.e., slave clocks that have been specially assigned to monitor and analyze the PTP signal they retrieve from a clock.
 
   Above the element name of each displayed PTP analyzer, two icons are available:
 
@@ -218,7 +218,7 @@ Alarm states are indicated as follows:
 
 - The color of the icon marking the type of node indicates the PTP alarm state of that node (taking into account only the PTP-related parameters of the node).
 
-- If a line connecting two nodes has an alarm color, this means that there is an alarm on the interface table (e.g. interface not connected).
+- If a line connecting two nodes has an alarm color, this means that there is an alarm on the interface table (e.g., interface not connected).
 
 > [!NOTE]
 > New PTP nodes are automatically displayed in the top-left corner of the topology page.

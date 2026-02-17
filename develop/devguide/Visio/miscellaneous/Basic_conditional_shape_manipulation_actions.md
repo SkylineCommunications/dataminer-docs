@@ -9,7 +9,7 @@ In some shape data fields, especially fields that display the current value of a
 
 > [!NOTE]
 >
-> - To also apply conditional shape manipulation actions on other linked shapes, e.g. shapes linked to Automation scripts, or to combine multiple conditions, see [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions).
+> - To also apply conditional shape manipulation actions on other linked shapes, e.g., shapes linked to automation scripts, or to combine multiple conditions, see [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions).
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[misc > MANIPULATION]* page.
 
 ## Action overview

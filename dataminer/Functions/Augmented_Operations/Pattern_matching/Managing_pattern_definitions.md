@@ -12,7 +12,7 @@ If you select a pattern definition in the list on the left, you can then modify 
 
 - Change the **name**.
 - Change the **description**.
-- Select whether patterns should be **continuously detected in the background**. If this is selected, the patterns will also become available in other DataMiner functionality, e.g. to [generate suggestion events](xref:Monitoring_of_trend_patterns) or in the Generic Query Interface in dashboards or low-code apps.
+- Select whether patterns should be **continuously detected in the background**. If this is selected, the patterns will also become available in other DataMiner functionality, e.g., to [generate suggestion events](xref:Monitoring_of_trend_patterns) or in the Generic Query Interface in dashboards or low-code apps.
 - Select whether the pattern should be detected for a **specific element**, or for **all elements using that same protocol**.
 - For a table parameter, select whether the pattern should be detected for a **specific row** only, or for **all rows in the table**.
 

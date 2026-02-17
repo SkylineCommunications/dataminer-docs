@@ -2,10 +2,19 @@
 uid: General_Main_Release_10.5.0_CU12
 ---
 
-# General Main Release 10.5.0 CU12 - Preview
+# General Main Release 10.5.0 CU12
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> Before you upgrade to this DataMiner version:
+>
+> - Make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](xref:General_Main_Release_10.5.0_CU10#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
+> - Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+>   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+>   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 > [!TIP]
 >
@@ -95,7 +104,7 @@ This BPA test will identify client machines and DataMiner Agents without interne
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
+Up to now, for a GQI extension (i.e., an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
 
@@ -146,13 +155,13 @@ For more information, see [Exceptions element](xref:Protocol.Params.Param.Interp
 
 #### MessageBroker: Problem with hostnames and FQDNs containing a certain combination of dashes and characters [ID 44433]
 
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.3 -->
 
 Up to now, hostnames and FQDNs in the *MessageBrokerConfig.json* file would incorrectly be considered invalid when they contained a certain combination of dashes and characters.
 
 Examples of hostnames that were incorrectly considered invalid:
 
-- Hostnames that start with one letter or number, followed by a dash. E.g. `a-agent`, `h-hostname`, etc.
+- Hostnames that start with one letter or number, followed by a dash. For example, `a-agent`, `h-hostname`, etc.
 - Full IPv6 addresses like `[2001:0db8:85a3:0000:0000:8a2e:0370:7334]`
 - Shortened IPv6 addresses like `[::1]`
 

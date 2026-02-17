@@ -52,7 +52,7 @@ When adding a DataMiner configuration to a DMA, you can select
    The current contents of the `C:\Skyline DataMiner` folder and all its subfolders will now be copied to the specified configurations folder.
 
    > [!NOTE]
-   > DataMiner Taskbar Utility will stop the running DataMiner software to make sure that none of the files in `C:\Skyline DataMiner` are locked. In certain rare cases, however, files can be locked by third-party processes (e.g. anti-virus or even NATS). If this is the case, you will have to kill those processes manually and retry step 7.
+   > DataMiner Taskbar Utility will stop the running DataMiner software to make sure that none of the files in `C:\Skyline DataMiner` are locked. In certain rare cases, however, files can be locked by third-party processes (e.g., anti-virus or even NATS). If this is the case, you will have to kill those processes manually and retry step 7.
 
 ## Adding DataMiner configurations to a DMA
 

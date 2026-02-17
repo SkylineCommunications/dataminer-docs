@@ -42,7 +42,7 @@ The [Cell](xref:Protocol.Topologies.Topology.Cell) tag is used to define the lev
 | `name`    | Defines the name of the level.                                                          |
 | `table`   | Defines the table linked to the level. The tables should be the respective view tables. |
 
-The [Link](xref:Protocol.Topologies.Topology.Cell.Link) tag is used to define the connections of each cell (i.e. topology level).
+The [Link](xref:Protocol.Topologies.Topology.Cell.Link) tag is used to define the connections of each cell (i.e., topology level).
 
 | Attribute | Description                                                                      |
 |-----------|----------------------------------------------------------------------------------|

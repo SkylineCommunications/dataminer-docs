@@ -57,8 +57,23 @@ The parameter has a variable length, which depends on the last instance of the n
 
 If the expected response will contain a number with a length up to 5 digits (which can have a decimal point), followed by a fixed point, then you can define two parameters:
 
-- A first one with a LengthType equal to “last next param” to catch the number containing the decimal point (“last next param” will make sure the number is not broken off at the first point), and
-- A second one with a LengthType equal to “fixed” to catch the point.
+- A first one with a LengthType equal to "last next param" to catch the number containing the decimal point ("last next param" will make sure the number is not broken off at the first point), and
+- A second one with a LengthType equal to "fixed" to catch the point.
+
+> [!IMPORTANT]
+> Do not use this `LengthType` if the next parameter is the trailer, and the trailer is not unique within the response sequence.
+>
+> In this situation, the raw data reader stops at the **first occurrence** of the trailer. All data received up to that point is immediately forwarded for parameter processing, including any bytes that had already been received as part of the same chunk, even if they logically belong **after** the first trailer occurrence.
+>
+> Because incoming data may arrive in arbitrary chunks, this can lead to inconsistent and unpredictable results. For example, if the expected response is `abc$def$`, and `$` is defined as the trailer, the parameter logic might receive this from the raw bytes reader:
+>
+> - `abc$`
+> - `abc$d`
+> - `abc$de`
+> - `abc$def`
+> - `$abc$def$`
+>
+> This could cause the current `last next param` to be filled in with the value `abc$` or `abc$def$`, which is unexpected. To avoid incomplete or incorrectly parsed values, ensure that the trailer is **unique within the entire response sequence**.
 
 #### Example
 
@@ -68,27 +83,35 @@ For example, assuming the following:
 
 - The **current parameter** has `LengthType = last next param`.
 - The **following parameter** is a fixed parameter with the value `$`.
-- This is the incoming data:
+- The last parameter is a **trailer** parameter with the fixed value `#`.
 
-  ```
-  abc$def$ghi$
-  ```
+This is the incoming data:
+
+```
+abc$def$ghi$#
+```
 
 In this case:
 
-- The parser searches for the **last occurrence** of `$`.
+- The logic receiving the raw bytes will wait and search until it finds the trailer, after which it forwards all the data it received to the parameter parser.
+- The parameter parser searches for the **last occurrence** of `$` in the string it received from the raw bytes receiver (`abc$def$ghi$#`).
 - Everything **before** that last `$` is assigned to the current parameter.
+- The parameter parser matches the last `$` to the fixed parameter with value `$`.
+- The parameter parser matches the `#` to the trailer parameter.
 
 Result:
 
 - Current parameter value: `abc$def$ghi`.
 - Following (fixed) parameter value: `$`.
+- The trailer parameter value: `#` and a complete, successful, match.
 
 This behavior differs from the `next param` LengthType. If `next param` were used instead, the parser would stop at the **first** occurrence of `$`, and the current parameter would receive only the following data:
 
 ```
 abc
 ```
+
+After that, the parameter match would fail, as the first `$` is not followed by the trailer (`#`).
 
 In summary, `last next param` ensures that the current parameter includes all content up to the **final occurrence** of the following parameter, making it useful when the data itself may contain the same delimiter multiple times.
 
@@ -98,8 +121,8 @@ The parameter has a variable length, which depends on the next (fixed-length) pa
 
 If the expected response will contain a number with a length up to 5 digits, followed by a point, you can define two parameters:
 
-- A first one with a LengthType equal to “next param” to catch the number, and
-- A second one with a LengthType equal to “fixed” to catch the point.
+- A first one with a LengthType equal to "next param" to catch the number, and
+- A second one with a LengthType equal to "fixed" to catch the point.
 
 ### other param
 

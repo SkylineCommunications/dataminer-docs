@@ -64,7 +64,7 @@ It is possible to customize the landing page so that certain applications are no
 
 When a user selects the *Install DataMiner Cube* option from the landing page, a setup program will first check whether Microsoft .NET Framework 4 is installed. If this is not the case, the user will be redirected to `http://dmaip/Tools/InstallNet4.asp`, where the Microsoft .NET Framework 4.6 installer can be downloaded.
 
-By default, the online installer will be downloaded from the Microsoft website. However, if users do not have public internet access, you can allow them to download the offline installer from an internal server (e.g. the DataMiner Agent) instead.
+By default, the online installer will be downloaded from the Microsoft website. However, if users do not have public internet access, you can allow them to download the offline installer from an internal server (e.g., the DataMiner Agent) instead.
 
 To make users download the installer from an internal server:
 

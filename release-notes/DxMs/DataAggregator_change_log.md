@@ -169,7 +169,7 @@ A new Data Aggregator module is now available as a DxM (DataMiner Extension Modu
 
 1. Configure the necessary settings. See [Settings](#settings).
 
-1. Restart the *DataMiner DataAggregator* service (e.g. using Windows Task Manager).
+1. Restart the *DataMiner DataAggregator* service (e.g., using Windows Task Manager).
 
 ##### Settings
 
@@ -193,7 +193,7 @@ For example:
 > [!NOTE]
 >
 > - Once the Data Aggregator setup is complete, if you browse to the configured URL and port, a web UI is displayed where you can start the queries manually, cancel ongoing queries, and check information such as the time it takes to finish a query, the total number of rows, and the number of rows received per second.
-> - Using the REST API, you can also do certain actions like getting the status of the jobs or manually triggering a specific job. More information is available via the URL `[Your configured URL]/swagger/index.html`, e.g. `http://127.0.0.1:5000/swagger/index.html`.
+> - Using the REST API, you can also do certain actions like getting the status of the jobs or manually triggering a specific job. More information is available via the URL `[Your configured URL]/swagger/index.html`, e.g., `http://127.0.0.1:5000/swagger/index.html`.
 > - Keep in mind that **if there is no firewall in place, anyone can use the web UI and the REST API**, as no authentication is required to use Data Aggregator.
 
 **Multi-DMS connection**
@@ -359,7 +359,7 @@ For example:
 
 - Every 12 hours: `"0 0 */12 * * ?"`
 
-- Every 5 minutes at 10 seconds after the minute (i.e. 10:00:10 AM, 10:05:10 AM, etc.): `"10 0/5 * * * ?"`
+- Every 5 minutes at 10 seconds after the minute (i.e., 10:00:10 AM, 10:05:10 AM, etc.): `"10 0/5 * * * ?"`
 
 - At 10:30, 11:30, 12:30, and 13:30, on every Wednesday and Friday: `"0 30 10-13 ? * WED,FRI"`
 
@@ -368,7 +368,7 @@ For example:
   Note that in this case the trigger will NOT fire at 10:00 AM, just at 8:00, 8:30, 9:00, and 9:30.
 
 > [!NOTE]
-> Some scheduling requirements are too complicated to express with a single trigger, e.g. "every 5 minutes between 9:00 AM and 10:00 AM, and every 20 minutes between 1:00 Pm and 10:00 PM". That is why in *appsettings.custom.json*, *CronTriggers* is an array, allowing you to specify multiple triggers.
+> Some scheduling requirements are too complicated to express with a single trigger, e.g., "every 5 minutes between 9:00 AM and 10:00 AM, and every 20 minutes between 1:00 Pm and 10:00 PM". That is why in *appsettings.custom.json*, *CronTriggers* is an array, allowing you to specify multiple triggers.
 
 > [!TIP]
 > For more information about the syntax, visit the [Quartz.NET website](https://www.quartz-scheduler.net/documentation/quartz-3.x/how-tos/crontrigger.html).

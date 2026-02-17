@@ -69,7 +69,7 @@ The Data Aggregator Migrator should be used **after** upgrading the Data Aggrega
    | Option | Description |
    |--|--|
    | -i | File location of `appsettings.custom.json` (typically `C:\Program Files\Skyline Communications\DataMiner DataAggregator\appsettings.custom.json`) |
-   | -o | Use when another URL is configured in `appsettings.custom.json` (e.g. `https://10.10.15.32:22345`) |
+   | -o | Use when another URL is configured in `appsettings.custom.json` (e.g., `https://10.10.15.32:22345`) |
 
    - If there is no specific URL configured in the *appsettings.custom.json* file, execute this command to perform the one-time migration:
 

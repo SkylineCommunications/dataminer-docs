@@ -93,9 +93,9 @@ items:
     items:
       - name: About DataMiner Automation
         topicUid: automation
-      - name: Managing Automation scripts
+      - name: Managing automation scripts
         topicUid: Managing_Automation_scripts
-      - name: Designing Automation scripts
+      - name: Designing automation scripts
         topicUid: Designing_Automation_scripts
         items:
           - name: General script configuration
@@ -149,40 +149,40 @@ items:
             topicUid: Upload_report_to_shared_folder
           - name: User interaction
             topicUid: User_interaction
-      - name: Running Automation scripts
+      - name: Running automation scripts
         topicUid: Running_Automation_scripts
         items:
           - name: Manually executing a script
             topicUid: Manually_executing_a_script
           - name: Script execution options
             topicUid: Script_execution_options
-      - name: Using C# code in Automation scripts
+      - name: Using C# code in automation scripts
         topicUid: Using_CSharp_code_in_Automation_scripts
         items:
-          - name: Adding C# code to an Automation script
+          - name: Adding C# code to an automation script
             topicUid: Adding_CSharp_code_to_an_Automation_script
           - name: Debugging C# scripts
             topicUid: Debugging_CSharp_scripts
-          - name: Building interactive Automation scripts with C#
+          - name: Building interactive automation scripts with C#
             topicUid: Building_interactive_Automation_scripts_with_CSharp
           - name: Compiling a C# code block as a library
             topicUid: Compiling_a_CSharp_code_block_as_a_library
-      - name: Special parameters available in Automation scripts
+      - name: Special parameters available in automation scripts
         topicUid: Special_parameters_available_in_DMS_Automation_scripts
-      - name: Alarm level IDs for use in Automation scripts
+      - name: Alarm level IDs for use in automation scripts
         topicUid: Alarm_level_IDs_for_use_in_Automation_scripts
       - name: Automation scripts triggered from redundancy groups
         topicUid: Automation_scripts_triggered_from_redundancy_groups
       - name: Frequently asked questions about DataMiner Automation
         topicUid: Frequently_asked_questions_about_DMS_Automation
         items:
-          - name: How can I execute an Automation Script on an element in timeout?
+          - name: How can I execute an automation Script on an element in timeout?
             topicUid: How_can_I_execute_an_Automation_Script_on_an_element_in_timeout
-          - name: How do I abort a running Automation script?
+          - name: How do I abort a running automation script?
             topicUid: How_do_I_abort_a_running_Automation_script
           - name: How do I retrieve the current value of a script parameter?
             topicUid: How_do_I_retrieve_the_current_value_of_a_script_parameter
-          - name: How do I connect to a CMDB from an Automation script?
+          - name: How do I connect to a CMDB from an automation script?
             topicUid: How_do_I_connect_to_a_CMDB_from_an_Automation_script
           - name: How do I parse Correlation Alarm Info data?
             topicUid: How_do_I_parse_Correlation_Alarm_Info_data
@@ -261,7 +261,7 @@ items:
     items:
       - name: About DataMiner Correlation
         topicUid: About_DMS_Correlation
-      - name: Managing Correlation rules
+      - name: Managing correlation rules
         topicUid: Managing_Correlation_rules
         items:
           - name: Collapsing and expanding folders
@@ -274,24 +274,24 @@ items:
             topicUid: Deleting_a_rule_or_folder
           - name: Renaming a folder
             topicUid: Renaming_a_folder
-          - name: Adding a new Correlation rule
+          - name: Adding a new correlation rule
             topicUid: Adding_a_new_Correlation_rule
-          - name: Testing a Correlation rule
+          - name: Testing a correlation rule
             topicUid: Testing_a_Correlation_rule
-      - name: General configuration of Correlation rules
+      - name: General configuration of correlation rules
         topicUid: General_configuration_of_Correlation_rules
-      - name: Filtering and grouping base alarms for Correlation rules
+      - name: Filtering and grouping base alarms for correlation rules
         topicUid: Filtering_and_grouping_base_alarms_for_Correlation_rules
         items:
-          - name: Adding alarm filters to Correlation rules
+          - name: Adding alarm filters to correlation rules
             topicUid: Adding_alarm_filters_to_Correlation_rules
           - name: Limiting the base alarms
             topicUid: Limiting_the_base_alarms
-          - name: Grouping alarms in Correlation rules
+          - name: Grouping alarms in correlation rules
             topicUid: Grouping_alarms_in_Correlation_rules
-      - name: Adding rule conditions in Correlation rules
+      - name: Adding rule conditions in correlation rules
         topicUid: Adding_rule_conditions_in_Correlation_rules
-      - name: Adding rule actions in Correlation rules
+      - name: Adding rule actions in correlation rules
         topicUid: Adding_rule_actions_in_Correlation_rules
         items:
           - name: Acknowledging a base alarm
@@ -302,7 +302,7 @@ items:
             topicUid: Escalating_an_event
           - name: Triggering a correlated alarm
             topicUid: Triggering_a_correlated_alarm
-          - name: Running an Automation script from a Correlation rule
+          - name: Running an automation script from a correlation rule
             topicUid: Running_an_Automation_script_from_a_Correlation_rule
           - name: Sending an email
             topicUid: Sending_an_email
@@ -325,7 +325,7 @@ items:
             topicUid: Script_condition_functions
           - name: Examples of script conditions
             topicUid: Examples_of_script_conditions
-      - name: Using Correlation analyzers
+      - name: Using correlation analyzers
         topicUid: Using_Correlation_analyzers
         items:
           - name: Creating an analyzer
@@ -575,7 +575,7 @@ items:
                 topicUid: DashboardEPMPicker
               - name: Grid
                 topicUid: DashboardGrid
-              - name: Interactive Automation script
+              - name: Interactive automation script
                 topicUid: InteractiveAutomationScript
               - name: Node edge graph
                 topicUid: DashboardNodeEdgeGraph

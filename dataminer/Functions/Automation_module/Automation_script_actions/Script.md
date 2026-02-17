@@ -4,7 +4,7 @@ uid: Script
 
 # Script
 
-Use this action to run another Automation script from within the current script.
+Use this action to run another automation script from within the current script.
 
 1. Select one of the available scripts in the dropdown box.
 

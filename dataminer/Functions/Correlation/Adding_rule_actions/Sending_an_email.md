@@ -4,7 +4,7 @@ uid: Sending_an_email
 
 # Sending an email
 
-Use this action to make a Correlation rule send an email to one or more recipients, optionally with an email report attached.
+Use this action to make a correlation rule send an email to one or more recipients, optionally with an email report attached.
 
 In the *Actions* section of the details pane:
 
@@ -38,7 +38,7 @@ In the *Actions* section of the details pane:
 
    > [!NOTE]
    >
-   > - In the *Elements and services in view selection* section, you can select the "Dynamic" option to indicate that the elements that triggered the Correlation rule have to be included.
+   > - In the *Elements and services in view selection* section, you can select the "Dynamic" option to indicate that the elements that triggered the correlation rule have to be included.
    > - If you want to specify multiple indices for one table parameter, use a semicolon ";" as separator.
    > - If you want to specify multiple parameters for one element, service, or protocol version, assign them all within a single line.
    > - The icon in front of each item in the dropdown list shows whether the item is a dashboard or a report.

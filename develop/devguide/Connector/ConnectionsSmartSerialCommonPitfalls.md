@@ -8,7 +8,7 @@ This section describes common pitfalls when using smart-serial connections.
 
 ## Serial in combination with smart serial
 
-Serial and smart-serial connections should never be combined to connect to **the same port of a device** (i.e. using the same IP address and port). If you do combine these, the device will not know that the unsolicited messages should be sent via the smart-serial connection.
+Serial and smart-serial connections should never be combined to connect to **the same port of a device** (i.e., using the same IP address and port). If you do combine these, the device will not know that the unsolicited messages should be sent via the smart-serial connection.
 
 To be able to combine handling unsolicited messages and command-response pairs, only a smart-serial connection should be set up that handles both types of messages.
 

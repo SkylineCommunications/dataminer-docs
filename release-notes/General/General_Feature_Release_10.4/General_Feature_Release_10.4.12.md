@@ -46,11 +46,11 @@ In the *SLElementInProtocol.txt* log file, the following fields have been added:
 > - The process ID of the new SLProtocol process can be found in the *elementName.txt* log file, while the process ID of the old SLProtocol process can be found in the *elementName_BAK.txt* log file.
 > - There will be a delay of one minute between the disappearance of an SLProtocol process and the creation of a new SLProtocol process.
 
-#### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]
+#### Interactive automation scripts: New option to skip the confirmation window when aborting [ID 40683]
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-`UIBuilder` now has a new `SkipAbortConfirmation` property. When set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
+`UIBuilder` now has a new `SkipAbortConfirmation` property. When set to true, the confirmation window will not be displayed when the interactive automation script is aborted. By default, this property will be set to false.
 
 Example:
 
@@ -60,7 +60,7 @@ uib.SkipAbortConfirmation = true;
 ```
 
 > [!TIP]
-> See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
+> See also: [Interactive automation scripts: New option to skip the confirmation window when aborting [ID 40720]](xref:Cube_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40720)
 
 #### Trending - Proactive cap detection: Generating an alarm when a parameter is expected to cross a particular alarm threshold or be outside a set range [ID 41017]
 
@@ -94,7 +94,7 @@ To see the current hint paths per SLScripting process, do the following:
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
+If you have created an automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
 
 Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
 
@@ -319,7 +319,7 @@ Up to now, SLLogCollector would by default be configured to collect the log file
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
+For visual overviews in web apps (e.g., Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
 
 #### DataMiner installer: A progress bar will now be shown during the installation of WSL [ID 41032]
 
@@ -443,7 +443,7 @@ When a DVE element or virtual function element was deleted while a subscription 
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
-When a DataMiner Agent reconnected to the DataMiner System of which it was a member (e.g. after having been restarted), in some rare cases, *CorrelationDetailsEvent* messages could be incomplete.
+When a DataMiner Agent reconnected to the DataMiner System of which it was a member (e.g., after having been restarted), in some rare cases, *CorrelationDetailsEvent* messages could be incomplete.
 
 #### SLAnalytics - Behavioral anomaly detection: Alarm template of DVE parent element would incorrectly be used when monitoring was disabled in the alarm template of the DVE child template [ID 40963]
 
@@ -461,7 +461,7 @@ When a GQI query was executed on a DataMiner System with storage per DMA, and th
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
 
-When an object is updated immediately after being created, in some cases, both the create and the update operation will have the same internal timestamp (i.e. the value stored in the `LastModified` field of the `ITrackLastModified` interface). Due to a caching issue, up to now, this could lead to client applications not getting the updated information.
+When an object is updated immediately after being created, in some cases, both the create and the update operation will have the same internal timestamp (i.e., the value stored in the `LastModified` field of the `ITrackLastModified` interface). Due to a caching issue, up to now, this could lead to client applications not getting the updated information.
 
 #### MySQL database optimization task would incorrectly be run on systems with a database other than MySQL [ID 40985]
 

@@ -29,6 +29,6 @@ For example, you will be able to ask which alarms require immediate attention, a
 
 In the *Documentation* tab, the Assistant will focus on conceptual and procedural questions. It will have direct access to DataMiner Docs, allowing it to provide accurate and up-to-date information directly from the source.
 
-You will be able to ask questions such as which low-code app visualization type is best for large data sets, how to configure an alarm template, or how DataMiner user permissions work. The Assistant will then retrieve the relevant information for you, allowing you to find documentation content quickly without needing to browse through the DataMiner documentation manually.
+You will be able to ask questions such as which low-code app visualization type is best for large datasets, how to configure an alarm template, or how DataMiner user permissions work. The Assistant will then retrieve the relevant information for you, allowing you to find documentation content quickly without needing to browse through the DataMiner documentation manually.
 
 ![Documentation tab](~/dataminer/images/Assistant_Documentation_tab.png)

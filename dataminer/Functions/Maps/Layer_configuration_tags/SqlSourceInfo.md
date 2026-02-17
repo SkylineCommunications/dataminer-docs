@@ -6,7 +6,7 @@ uid: SqlSourceInfo
 
 In the `<SqlSourceInfo>` tag, you have to specify the SQL SELECT statement that has to retrieve the necessary data in order to draw the layer’s objects, which can be either markers or lines.
 
-- If the style attribute is set to "markers" (i.e. the default setting), the layer will display markers, each positioned at a location specified by one pair of latitude/longitude values retrieved from the database.
+- If the style attribute is set to "markers" (i.e., the default setting), the layer will display markers, each positioned at a location specified by one pair of latitude/longitude values retrieved from the database.
 
 - If the style attribute is set to "lines", the layer will display lines, each connecting two pairs of latitude/longitude values retrieved from the database. Each line will be displayed as a geodesic, a segment of a "great circle" representing the shortest distance between two points on the surface of the Earth.
 
@@ -86,7 +86,7 @@ The name of the database table as well as the names of the table fields can be c
 | Latitude2 | varchar | If the map has to display lines instead of markers, this is the second of the two sets of coordinates that defines the line to be displayed. |
 | Longitude2 | varchar | See Latitude2. |
 | Title | varchar | The text of the tooltip that has to appear when you hover your mouse over the marker. |
-| AlarmLevel | varchar | Alarm severity level that will determine the color of the marker or line, e.g. critical, major, minor, warning, normal, etc. |
+| AlarmLevel | varchar | Alarm severity level that will determine the color of the marker or line, e.g., critical, major, minor, warning, normal, etc. |
 | Marker | varchar | The ID of the marker image as defined in the `<MarkerImages>` tag. |
 
 > [!NOTE]

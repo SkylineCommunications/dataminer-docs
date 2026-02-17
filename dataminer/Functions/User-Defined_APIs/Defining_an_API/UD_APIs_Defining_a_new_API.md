@@ -6,16 +6,16 @@ uid: UD_APIs_Define_New_API
 
 To create a new API, follow these steps as detailed below:
 
-1. [Create the API Automation script](#creating-the-api-automation-script)
+1. [Create the API automation script](#creating-the-api-automation-script)
 1. [Create the API definition(s) and token(s)](#creating-an-api-and-tokens-in-dataminer-automation)
 1. [Configure the UserDefinableApiEndpoint extension module](#configuring-the-userdefinableapiendpoint-extension-module)
 
 > [!NOTE]
 > This is the recommended workflow when creating new APIs using new scripts. If you want to use an existing script for the API, see [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
 
-## Creating the API Automation script
+## Creating the API automation script
 
-To define an API, you will need an Automation script that contains the logic of the API. This Automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
+To define an API, you will need an automation script that contains the logic of the API. This automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
 
 ```csharp
 using Skyline.DataMiner.Automation;
@@ -174,10 +174,10 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 | Created | 201 | The request succeeded, and a new resource was created as a result. |
 | Accepted | 202 | The request was received, but not executed yet. Could be used for long-running async actions. |
 | NoContent | 204 | There is no content to return for the request, but the request did succeed. |
-| BadRequest | 400 | There was a client error, e.g. wrong parameters. |
+| BadRequest | 400 | There was a client error, e.g., wrong parameters. |
 | NotFound | 404 | The requested document was not found. |
 | MethodNotAllowed | 405 | The HTTP method is not valid for this request. For example `DELETE` is used while `GET` was expected. |
-| InternalServerError | 500 | Return this if something went wrong in your Automation script, e.g. you try to write to a file, but the file is in use by another application. |
+| InternalServerError | 500 | Return this if something went wrong in your automation script, e.g., you try to write to a file, but the file is in use by another application. |
 
 > [!TIP]
 > For more insight into which HTTP status codes to use in which circumstances, see [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
@@ -243,7 +243,7 @@ The headers listed below are **blocked** and will result in an error if you try 
    > You will only be able to see the button *Configure API*  in the UI if the following conditions are met:
    >
    > - You are using DataMiner 10.3.6 or higher.
-   > - The DataMiner System has an active Indexing Engine (e.g. Elasticsearch).
+   > - The DataMiner System has an active Indexing Engine (e.g., Elasticsearch).
    > - You have the permission to read API definitions.
 
 1. Add a description (optional).

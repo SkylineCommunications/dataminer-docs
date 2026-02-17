@@ -4,7 +4,7 @@ uid: GQI_Aggregate
 
 # Aggregate
 
-The *Aggregate* query operator allows you to aggregate data from the data source. After you have selected this option, first select the aggregation column, and the method that should be used. Depending on the type of data available in the selected column, different methods can be available, i.e. Average, Count, Distinct Count, Maximum, Median, Minimum, Percentile 90/95/98, Standard deviation, or Sum.
+The *Aggregate* query operator allows you to aggregate data from the data source. After you have selected this option, first select the aggregation column, and the method that should be used. Depending on the type of data available in the selected column, different methods can be available, i.e., Average, Count, Distinct Count, Maximum, Median, Minimum, Percentile 90/95/98, Standard deviation, or Sum.
 
 You can then further filter the result by applying another operator. An additional *Group by* operator is available for this, which will display the result of the aggregation operation for each different item in the column selected in the *Group by column* box.
 

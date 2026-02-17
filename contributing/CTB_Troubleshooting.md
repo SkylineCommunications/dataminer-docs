@@ -24,7 +24,7 @@ uid: CTB_Troubleshooting
 
   To resolve the merge conflict(s):
 
-  1. Decide whether to keep your branch's changes (i.e. the current changes), the main branch's changes (i.e. the incoming changes), or combine both. The bracket on the left indicates the beginning and end of the current and incoming changes.
+  1. Decide whether to keep your branch's changes (i.e., the current changes), the main branch's changes (i.e., the incoming changes), or combine both. The bracket on the left indicates the beginning and end of the current and incoming changes.
 
      ![Web editor](~/images/Web_Editor.png)
 
@@ -81,13 +81,13 @@ You encounter one of the following situations:
 
    If there are several files with merge conflicts, this button is available for each file. Use the button for one of the files. When you have resolved the conflicts in that file as detailed below, you can then continue with the next one.
 
-1. In Visual Studio Code, decide whether you want to keep your branch's changes (i.e. the current changes), the main branch's changes (i.e. the incoming changes), or if you want to combine the two.
+1. In Visual Studio Code, decide whether you want to keep your branch's changes (i.e., the current changes), the main branch's changes (i.e., the incoming changes), or if you want to combine the two.
 
    Color indicators represent the beginning and end of the current and incoming changes.
 
    ![Merge conflicts](~/images/VSC_Merge_Conflicts.png)
 
-1. Either select a preset option, e.g. *Accept Incoming Change*, or resolve the conflict manually and delete the conflict markers `<<<<<<<`, `=======`, and `>>>>>>>`.
+1. Either select a preset option, e.g., *Accept Incoming Change*, or resolve the conflict manually and delete the conflict markers `<<<<<<<`, `=======`, and `>>>>>>>`.
 
 1. If multiple merge conflicts exist in the file, scroll down to the next set of conflict markers, and repeat the two previous steps to resolve your merge conflict.
 
@@ -142,7 +142,7 @@ You encounter one of the following situations:
 1. Enter a title and description for your changes and click *Create pull request*.
 
    > [!NOTE]
-   > Make sure the option *Allow edits by maintainers* is selected when you create the pull request, so that the documentation team will be able to correct any small issues (e.g. typos) directly.
+   > Make sure the option *Allow edits by maintainers* is selected when you create the pull request, so that the documentation team will be able to correct any small issues (e.g., typos) directly.
 
 ## There is a duplicate item in the TOC even though it only occurs once in the toc.yml
 
@@ -204,7 +204,7 @@ fatal: empty ident name (for <>) not allowed
 
 - Cause: The branch you have used to create the pull request is protected.
 
-  Resolution: On the page for your fork on GitHub (i.e. `https://github.com/[Your GitHub handle]/dataminer-docs/`), go to *Settings* > *Branches*, and check if you have enabled protection for the branch. If you have, disable this protection.
+  Resolution: On the page for your fork on GitHub (i.e., `https://github.com/[Your GitHub handle]/dataminer-docs/`), go to *Settings* > *Branches*, and check if you have enabled protection for the branch. If you have, disable this protection.
 
 ## Issues when creating a test build
 
@@ -252,7 +252,7 @@ warning UidNotFound: 3 invalid cross reference(s) "Skyline.DataMiner.DataSources
 "Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.ILogger".
 ```
 
-Additionally, when generating metadata (e.g. using the `docfx metadata` command or the *BuildDocs* script), you get several warnings and errors, including:
+Additionally, when generating metadata (e.g., using the `docfx metadata` command or the *BuildDocs* script), you get several warnings and errors, including:
 
 ```txt
 No .NET API detected for .

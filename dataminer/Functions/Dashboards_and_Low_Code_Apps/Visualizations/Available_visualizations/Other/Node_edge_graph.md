@@ -4,13 +4,13 @@ uid: DashboardNodeEdgeGraph
 
 # Node edge graph
 
-The node edge graph component allows you to **visualize any type of objects (i.e. "nodes") and the connections between them (i.e. "edges")**. By linking parameters and properties to those nodes and edges, you can turn the graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
+The node edge graph component allows you to **visualize any type of objects (i.e., "nodes") and the connections between them (i.e., "edges")**. By linking parameters and properties to those nodes and edges, you can turn the graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
 
 ![Node edge graph](~/dataminer/images/Node_Edge_Graph.gif)<br>*Node edge graph component in DataMiner 10.4.9*
 
 ## Supported data types
 
-The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects).
+The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e., objects), whereas edge queries provide data that will be visualized as edges (i.e., connections between objects).
 
 The component should therefore **always be configured with [query data input](xref:Query_Data)**.
 
@@ -29,7 +29,7 @@ You can interact with the node edge graph in several ways:
 
   When you select one or multiple items in the node edge graph, the selected data becomes available under *All available data* > *Components* > *[Page name]* > *Node edge graph* > *Tables*.
 
-  Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e. a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
+  Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e., a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
 
   > [!NOTE]
   > Prior to DataMiner 10.5.0 [CU12]/10.6.3<!--RN 44015-->, the exact path to the exposed data may differ. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
@@ -46,7 +46,7 @@ You can interact with the node edge graph in several ways:
 
       - When *Advanced* > *Node positions* is set to *Layered* in the *Layout* pane, node positions are stored automatically when the user has editor permissions<!--RN 44154-->. See [Configuring security for a dashboard](xref:Configuring_dashboard_security) and [Configuring app security](xref:LowCodeApps_security_config).
 
-      - When *Advanced* > *Node positions* is set to *Linked to data*, node positions are only stored if a node-move event is configured that triggers a *Launch a script* action. This Automation script should update the original data objects with the modified ones exposed by the event. For more information, see [Configuring node movement events](#configuring-node-movement-events).
+      - When *Advanced* > *Node positions* is set to *Linked to data*, node positions are only stored if a node-move event is configured that triggers a *Launch a script* action. This automation script should update the original data objects with the modified ones exposed by the event. For more information, see [Configuring node movement events](#configuring-node-movement-events).
 
   - Up to DataMiner 10.5.0 [CU9]/10.5.12:
 
@@ -90,7 +90,7 @@ To highlight items with a query filter:
 
 1. Apply the same query data to the query filter that is used by the node edge graph.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your node edge graph component.
+1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your node edge graph component.
 
    Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 

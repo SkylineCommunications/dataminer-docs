@@ -7,7 +7,7 @@ keywords: CICD, SonarQube, SonarCloud, Quality Gate, Quality
 
 With a CI/CD pipeline, deployment can be automatically blocked if it does not meet certain quality standards. These standards are configured per organization and are sometimes tweaked for specific departments or outputs. They supplement manual efforts in quality control, such as code reviews and manual testing procedures.
 
-Within Skyline Communications' GitHub organization, we strive to reuse the same quality gate for all our coding artifacts (connectors, Automation scripts, libraries, tooling, etc.).
+Within Skyline Communications' GitHub organization, we strive to reuse the same quality gate for all our coding artifacts (connectors, automation scripts, libraries, tooling, etc.).
 
 ## Valid compilation
 
@@ -71,7 +71,7 @@ The following are the conditions of the quality gate we use. This was balanced t
 
 ### SonarCloud rule tweaks
 
-Some specific rules by SonarCloud have been disabled or tweaked to account for legacy code and specifics to connector and Automation script developments. We have also disabled some rules after finding their ROI to be lacking for our developments.
+Some specific rules by SonarCloud have been disabled or tweaked to account for legacy code and specifics to connector and automation script developments. We have also disabled some rules after finding their ROI to be lacking for our developments.
 
 Currently, our quality profile for C# has 79 rules disabled and 1 overridden rule:
 
@@ -470,7 +470,7 @@ Currently, our quality profile for C# has 79 rules disabled and 1 overridden rul
   - **Category:** Maintainability
   - **Type:** Code Smell
   - **Tags:** logging, Activate
-  - **Reason:** Extensive logging is necessary for debugging Automation scripts.
+  - **Reason:** Extensive logging is necessary for debugging automation scripts.
 
 - **The collection should be filtered before sorting by using "Where" before "OrderBy"**
   - **Category:** Maintainability

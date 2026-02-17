@@ -57,7 +57,7 @@ It is possible to make a modification to the SLA protocol, in order to make the 
    </Param>
    ```
 
-1. Have an Automation script enable parameter 2060. If necessary, you can also update this parameter using the SLNetClientTest tool. To restore normal SLA functionality, disable parameter 2060.
+1. Have an automation script enable parameter 2060. If necessary, you can also update this parameter using the SLNetClientTest tool. To restore normal SLA functionality, disable parameter 2060.
 
    > [!WARNING]
    > The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe).

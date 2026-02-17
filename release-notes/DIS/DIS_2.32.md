@@ -14,9 +14,9 @@ In the *Current version* tab and after selecting a minor version in the *All ver
 
 You can add two types of references:
 
-- Task references, i.e. references to DataMiner Collaboration tasks, and
+- Task references, i.e., references to DataMiner Collaboration tasks, and
 
-- Generic references, i.e. references to other information (e.g. a ticket in a third-party ticketing system).
+- Generic references, i.e., references to other information (e.g., a ticket in a third-party ticketing system).
 
 To add a reference to a DataMiner Collaboration task, do the following:
 
@@ -56,7 +56,7 @@ To remove a reference, do the following:
 
 The right-click menu option *Copy File Content to Clipboard* has been renamed to *Copy Code to Clipboard*.
 
-Also, from now on, when you use this menu option while working with a protocol solution or an Automation script solution, you will not only copy the current file to the Windows Clipboard, but all files of the entire project combined in a way that is similar to the way in which they are combined when the solution is compiled.
+Also, from now on, when you use this menu option while working with a protocol solution or an automation script solution, you will not only copy the current file to the Windows Clipboard, but all files of the entire project combined in a way that is similar to the way in which they are combined when the solution is compiled.
 
 #### Microsoft Azure B2C authentication \[ID 28959\]
 
@@ -76,18 +76,18 @@ In the *DIS Settings* window, the *DCP* tab has been replaced by the following t
 
   - If you select the *Check for plug-in updates* option, DIS will check once every hour whether a more recent version of the DataMinerIntegrationStudio.vsix extension file is available. If so, an update banner will appear at the top of the editor window.
 
-  - If you select the *Get insider builds* option, DIS will not only check for main updates, but also for “insider” updates, i.e. pre-release versions for testing purposes.
+  - If you select the *Get insider builds* option, DIS will not only check for main updates, but also for “insider” updates, i.e., pre-release versions for testing purposes.
 
 > [!NOTE]
 > Users who upgrade to DIS version 2.32 will be asked to log in with their dataminer.services account.
 
-#### Debugging of precompiled Automation script EXE blocks \[ID 29030\]
+#### Debugging of precompiled automation script EXE blocks \[ID 29030\]
 
-When DIS is connected to a DataMiner Agent running DataMiner version 10.1.3 or higher, it is now also possible to debug precompiled Automation script EXE blocks.
+When DIS is connected to a DataMiner Agent running DataMiner version 10.1.3 or higher, it is now also possible to debug precompiled automation script EXE blocks.
 
 #### Automation script solutions: DataMiner DLL Path property \[ID 29031\]
 
-DLL files in an Automation script solution now have a “DataMiner DLL Path” property. This property can be used to override/specify the location (i.e. full path) of the DLL file on the DataMiner Agent.
+DLL files in an automation script solution now have a “DataMiner DLL Path” property. This property can be used to override/specify the location (i.e., full path) of the DLL file on the DataMiner Agent.
 
 > [!NOTE]
 > If you leave this property empty, the DLL file will be placed in the default folder (C:\\Skyline DataMiner\\ProtocolScripts).
@@ -275,7 +275,7 @@ While validating a Protocol.Display@pageOrder attribute in a protocol that gener
 
 #### IDE: Problem caused by removing header options of view table columns \[ID 28724\]
 
-When a table column is not monitored, by default, DIS automatically removes all header options specified for that column (e.g. histogram, heatmap, average, sum, etc.). However, in some cases, this could cause problems, especially in case of view table columns.
+When a table column is not monitored, by default, DIS automatically removes all header options specified for that column (e.g., histogram, heatmap, average, sum, etc.). However, in some cases, this could cause problems, especially in case of view table columns.
 
 From now on, DIS will no longer automatically remove header options specified for view table columns.
 

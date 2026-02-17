@@ -4,6 +4,10 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 13 February 2026 - Enhancement - CoreGateway 2.14.15 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 28 August 2025 - Fix - CoreGateway 2.14.14 - Race condition blocking Catalog deployments
 
 A race condition has been resolved that could lead to the Catalog displaying the following error while there were actually no issues. 
@@ -140,7 +144,7 @@ The CoreGateway DxM must now be installed on the same DMA as CloudGateway to ens
 
 #### 1 September 2022 - Fix - CoreGateway 2.11.4 - CoreGateway of offline DMA tried to respond to requests from dataminer.services [ID 33973]
 
-When a DMA was offline (e.g. stopped, upgrading, restarting, or offline in a Failover pair), it could occur that the DataMiner CoreGateway tried to respond to requests from dataminer.services, while this should not happen.
+When a DMA was offline (e.g., stopped, upgrading, restarting, or offline in a Failover pair), it could occur that the DataMiner CoreGateway tried to respond to requests from dataminer.services, while this should not happen.
 
 With CoreGateway 2.11.4 (included in Cloud Pack version 2.8.2), this will no longer occur.
 

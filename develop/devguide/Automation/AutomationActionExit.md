@@ -4,7 +4,7 @@ uid: AutomationActionExit
 
 # Exit
 
-Terminates the Automation script without delay.
+Terminates the automation script without delay.
 
 ```xml
 <Exe id="2" type="exit">

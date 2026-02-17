@@ -3,7 +3,7 @@ uid: Tutorial_Apps_Script_Upon_Page_Load
 ---
 # Running a script when a page opens
 
-This tutorial explains how you can run an Automation script every time a user opens a page.
+This tutorial explains how you can run an automation script every time a user opens a page.
 
 Expected duration: 10 minutes
 
@@ -21,7 +21,7 @@ Expected duration: 10 minutes
 
 1. [Create a new folder](xref:Managing_Automation_scripts#adding-a-new-automation-script-folder) with the name "Utility".
 
-1. Within this folder, [add a new Automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script) with the name "Generate Information Event".
+1. Within this folder, [add a new automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script) with the name "Generate Information Event".
 
 1. Add a script parameter named "Message".
 
@@ -55,7 +55,7 @@ Expected duration: 10 minutes
 
    ![On page load event](~/dataminer/images/OnPageLoad.png)
 
-1. Configure the action to run the Automation script:
+1. Configure the action to run the automation script:
 
    1. Select the action *Launch a script*.
 

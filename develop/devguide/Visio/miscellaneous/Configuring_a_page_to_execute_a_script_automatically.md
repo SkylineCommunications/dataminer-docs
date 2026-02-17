@@ -17,9 +17,9 @@ Script:ScriptName|DummyName=ElementName or DmaID/ElementID;...| ParameterName1=[
 > [!NOTE]
 > Instead of `Trigger=ValueChanged`, you can also specify `SetTrigger=ValueChanged`.
 
-For more information about this syntax, see [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
+For more information about this syntax, see [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script)
 
-If a value changes that affects any of the input specified in this syntax (e.g. a dummy or parameter), the script will be triggered.
+If a value changes that affects any of the input specified in this syntax (e.g., a dummy or parameter), the script will be triggered.
 
 ## Configuring a page to execute a script when an event occurs on the page
 
@@ -32,9 +32,9 @@ Script:ScriptName|DummyName=ElementName or DmaID/ElementID;...| ParameterName1=[
 > [!NOTE]
 > Instead of `Trigger=Event`, you can also specify `SetTrigger=Event`.
 
-For more information about this syntax, see [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
+For more information about this syntax, see [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script)
 
-For example, with the configuration below, double-clicking a node in an embedded service definition will trigger an Automation script that takes the node ID as a parameter.
+For example, with the configuration below, double-clicking a node in an embedded service definition will trigger an automation script that takes the node ID as a parameter.
 
 | Shape data field | Value                                                                                                            |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------- |

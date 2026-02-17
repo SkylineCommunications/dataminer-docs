@@ -123,7 +123,7 @@ To add support for V2 functions, the following functionality has been added in t
 
 #### Filtering of resources in Service Profiles Wizard \[ID 28642\]
 
-In the wizard to create a booking based on a service profile the same filtering will now be applied for resources as in the regular Booking Wizard, i.e. by function, by interface capability and by resource pool. If this is enabled, resources will now also be shown with a first and second priority.
+In the wizard to create a booking based on a service profile the same filtering will now be applied for resources as in the regular Booking Wizard, i.e., by function, by interface capability and by resource pool. If this is enabled, resources will now also be shown with a first and second priority.
 
 ### Fixes
 

@@ -9,11 +9,11 @@ reviewer: Alexander Verkest
 
 ### Customers and DataMiner Strategic Partners
 
-If you are a customer or a DataMiner Strategic Partner, you will need to authenticate yourself with your corporate email address when you access dataminer.services. This way, your dataminer.services account can be linked to your organization, so that you can access information that is exclusively available to authorized members of your organization (e.g. information related to your projects in the Collaboration app).
+If you are a customer or a DataMiner Strategic Partner, you will need to authenticate yourself with your corporate email address when you access dataminer.services. This way, your dataminer.services account can be linked to your organization, so that you can access information that is exclusively available to authorized members of your organization (e.g., information related to your projects in the Collaboration app).
 
 ### Guests
 
-It is also possible to access dataminer.services as a guest, i.e. someone who is neither a customer nor a DataMiner Strategic Partner. Guests can access a number of dataminer.services apps, such as the Dojo Community. While you can use any email address as a guest, we strongly encourage you to register with your corporate email address. Among others, this will allow you to keep your existing dataminer.services account should you ever become a customer or DataMiner Strategic Partner.
+It is also possible to access dataminer.services as a guest, i.e., someone who is neither a customer nor a DataMiner Strategic Partner. Guests can access a number of dataminer.services apps, such as the Dojo Community. While you can use any email address as a guest, we strongly encourage you to register with your corporate email address. Among others, this will allow you to keep your existing dataminer.services account should you ever become a customer or DataMiner Strategic Partner.
 
 ### Logging on
 

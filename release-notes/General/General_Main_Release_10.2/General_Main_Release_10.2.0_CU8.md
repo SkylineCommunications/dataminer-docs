@@ -58,11 +58,11 @@ When you move one or more resources from a pool to the *(uncategorized)* pool, a
 
 When a shape was linked to an element that was not part of a service, up to now, an attempt would be made to determine the service context even when no service context had been specified. From now on, the service context will only be determined when the service context has been specified in the shape.
 
-#### Web apps - Interactive Automation scripts: Enhanced performance [ID 34348]
+#### Web apps - Interactive automation scripts: Enhanced performance [ID 34348]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
-Because of a number of enhancements to the buffering mechanism, overall performance has improved when executing interactive Automation scripts in web apps.
+Because of a number of enhancements to the buffering mechanism, overall performance has improved when executing interactive automation scripts in web apps.
 
 #### DataMiner Cube - Visual Overview: Enhanced performance when sorting dynamically positioned shapes [ID 34351]
 
@@ -193,7 +193,7 @@ When a JSON string containing an overridden parameter description was deserializ
 
 When you opened a trend graph, the Y-axis values would incorrectly not take into account the number of decimals configured in the *protocol.xml* file for the parameters in question.
 
-#### Interactive Automation scripts: Problem when entering an invalid value in a numeric component [ID 34310]
+#### Interactive automation scripts: Problem when entering an invalid value in a numeric component [ID 34310]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
@@ -287,7 +287,7 @@ In some cases, an error could occur in SLLog when closing a log file.
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
-When active alarms were retrieved via an Automation script, an incorrect result set could get returned when no element filter had been applied.
+When active alarms were retrieved via an automation script, an incorrect result set could get returned when no element filter had been applied.
 
 Example of C# code that would return an incorrect result set:
 
@@ -322,7 +322,7 @@ From now on, in HTTP setups, the dashboard sharing menu will no longer contain t
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
-When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
+When a CSV file exported via a dashboard component or attached to an email report was opened in e.g., Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
 
 #### Legacy Reporter app: Users without 'Modules > Documents > UI available' permission would incorrectly be able to view documents [ID 34402]
 
@@ -336,7 +336,7 @@ From now on, an error message will be displayed when users without the above-men
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
-In some cases, an error could occur when invalid parameters were passed to a dashboard in the URL (e.g. invalid time spans).
+In some cases, an error could occur when invalid parameters were passed to a dashboard in the URL (e.g., invalid time spans).
 
 #### Dashboards app: Not possible to access the query column selection box of a newly created query [ID 34410]
 
@@ -390,7 +390,7 @@ In some rare cases, an error could occur in SLDMS while a connection with anothe
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-When, in the URL of a web app (e.g. Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
+When, in the URL of a web app (e.g., Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
 
 Example of a dashboard URL containing a `subheader=true` option:
 
@@ -430,7 +430,7 @@ In some cases, the service impact of an alarm would be incorrect
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
-When the range of a slider control did not have a span (i.e. when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.  
+When the range of a slider control did not have a span (i.e., when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.  
 
 Also, when the range of a slider control had values outside of the minimum/maximum range, the start and end values would both be set to Infinity. From now on, the minimum and maximum values will be adapted to the actual start and end values.
 

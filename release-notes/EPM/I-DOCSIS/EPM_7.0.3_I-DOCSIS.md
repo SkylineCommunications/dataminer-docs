@@ -20,7 +20,7 @@ Up to now, to update the PNM threshold settings for all collectors, the Multiple
 
 The following PNM parameters are available: Velocity Factor (VF) for Coax Cable, Non-Main-Tap Energy Ratio (NMTER) Threshold, Post-Main-Tap to Total Energy Ratio (Post-MTTER) Threshold, and Pre-Main-Tap to Total Energy Ratio (Pre-MTTER) Threshold.
 
-To complete setting a parameter, click the *Apply* button. This will execute an Automation script that will set the values to all CM collectors.
+To complete setting a parameter, click the *Apply* button. This will execute an automation script that will set the values to all CM collectors.
 
 ## Changes
 

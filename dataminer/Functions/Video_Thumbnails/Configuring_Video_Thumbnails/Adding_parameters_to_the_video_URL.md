@@ -35,10 +35,10 @@ All supported video server types and their associated parameters are defined in 
 
     - The following image formats are supported: .png, .jpg, and .bmp.
 
-    - If you want to display an image located on a DMA, place the image in the DMA's `C:\Skyline DataMiner\Webpages\Public\` folder (or one of its subfolders, e.g. `C:\Skyline DataMiner\Webpages\Public\MyImages\`).
+    - If you want to display an image located on a DMA, place the image in the DMA's `C:\Skyline DataMiner\Webpages\Public\` folder (or one of its subfolders, e.g., `C:\Skyline DataMiner\Webpages\Public\MyImages\`).
 
       > [!TIP]
-      > If you get an "Invalid path" error, open the file `C:\Skyline DataMiner\Webpages\VideoThumbnails\Web.config`, and check whether the image folder (e.g. */Public/MyImages/*) has been added to the *ExtraAllowedPaths* key.
+      > If you get an "Invalid path" error, open the file `C:\Skyline DataMiner\Webpages\VideoThumbnails\Web.config`, and check whether the image folder (e.g., */Public/MyImages/*) has been added to the *ExtraAllowedPaths* key.
       >
       > See also: [Allowed paths in case of connection via DataMiner proxy](xref:Allowed_paths_connection_DataMiner_proxy).
 
@@ -76,7 +76,7 @@ All supported video server types and their associated parameters are defined in 
   > - In Visio, you can use the *EscapeDataString* placeholder when you add parameters, properties, or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: `https://<DMAIP>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=[EscapeDataString:[param:*,10014]]`
   > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
 
-- `volume=` (All video types): Available from DataMiner 10.2.0 [CU1]/10.2.4 onwards. Specify the volume for the video player in the URL. The volume should be specified as a percentage, ranging from 0 (i.e. muted) to 100.
+- `volume=` (All video types): Available from DataMiner 10.2.0 [CU1]/10.2.4 onwards. Specify the volume for the video player in the URL. The volume should be specified as a percentage, ranging from 0 (i.e., muted) to 100.
 
   Example: `#https://<DMAIP>/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50`
 

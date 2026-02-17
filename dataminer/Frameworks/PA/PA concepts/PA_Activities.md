@@ -12,11 +12,11 @@ However, the different activities can exchange data using a DataMiner Object Mod
 
 Process Automation supports the following types of activities:
 
-- **Script tasks**: A script task is an Automation script with a specific signature. It can be used to perform any custom action. The custom logic is fully part of the script and can interface with any DataMiner feature/object. See [Creating script tasks](xref:PA_Creating_script_tasks).
+- **Script tasks**: A script task is an automation script with a specific signature. It can be used to perform any custom action. The custom logic is fully part of the script and can interface with any DataMiner feature/object. See [Creating script tasks](xref:PA_Creating_script_tasks).
 
 - **User tasks**: A user task is an activity that will wait for a user action before completing the task. This way, the token attached to that task can be completed and the next token can be generated. Typically, a user task app will be made available in the *Low-Code Apps* module so that the end user can access these user tasks and complete them. See [Creating user tasks](xref:PA_Creating_user_tasks).
 
-- **Resource tasks**: A resource task is a combination of a C# Automation script and a function resource. It includes resource management, which ensures that the same resource will not be used by different processes at the same time. See [Creating resource tasks](xref:PA_Creating_resource_tasks).
+- **Resource tasks**: A resource task is a combination of a C# automation script and a function resource. It includes resource management, which ensures that the same resource will not be used by different processes at the same time. See [Creating resource tasks](xref:PA_Creating_resource_tasks).
 
 > [!IMPORTANT]
 > In case resource management is not required, we **strongly recommend that you use script tasks instead of resource tasks**, as the overhead to create resource tasks is high.

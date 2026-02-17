@@ -11,7 +11,7 @@ uid: General_Feature_Release_10.6.2_CU1
 >
 > Before you upgrade to this DataMiner version:
 >
-> - Make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+> - Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
 >
 >   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 >   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
@@ -40,15 +40,15 @@ During DataMiner startup, in some rare cases, a fatal error could occur in the G
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU1] -->
 
-When 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
+When 10 simultaneous calls between a client application (e.g., DataMiner Cube) and a DataMiner Agent were being processed, up to now, any additional call would be blocked, including calls that check whether the connection between client and DMA was still alive. As a result, the client application would disconnect.
 
-From now on, even when 10 simultaneous calls between a client application (e.g. DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.
+From now on, even when 10 simultaneous calls between a client application (e.g., DataMiner Cube) and a DataMiner Agent are being processed, calls that check whether the connection between client and DMA is still alive will never be blocked.
 
 #### SLDataGateway issue caused by OpenSearch health monitoring [ID 44647]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 [CU1] -->
 
-After an upgrade to DataMiner 10.6.2 [CU0], it could occur that SLSearchHealth.txt reported issues with the health monitor, and SLDataGateway could crash at startup. The changes that introduced this issue, i.e. [OpenSearch: Enhanced health monitoring [ID 43951]](xref:General_Feature_Release_10.6.2#opensearch-enhanced-health-monitoring-id-43951), have been reverted.
+After an upgrade to DataMiner 10.6.2 [CU0], it could occur that SLSearchHealth.txt reported issues with the health monitor, and SLDataGateway could crash at startup. The changes that introduced this issue, i.e., [OpenSearch: Enhanced health monitoring [ID 43951]](xref:General_Feature_Release_10.6.2#opensearch-enhanced-health-monitoring-id-43951), have been reverted.
 
 #### Service & Resource Management: Problem when calculating resource availability [ID 44649]
 

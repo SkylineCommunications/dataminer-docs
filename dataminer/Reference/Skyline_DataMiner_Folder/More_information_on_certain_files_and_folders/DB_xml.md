@@ -109,7 +109,7 @@ In the *Database* tag, you can use the **slowquery** attribute to configure slow
 
 - Each log entry has the following syntax: *Date Time \| ThreadId \| DatabaseName \| QueryTime \| Query*
 
-- The default value of the slowquery attribute is 600 (i.e. 10 minutes).
+- The default value of the slowquery attribute is 600 (i.e., 10 minutes).
 
 Example:
 
@@ -127,7 +127,7 @@ In a Cassandra general database, the timetrace table among others contains "snap
 
     > [!NOTE]
     >
-    > - In some cases, e.g. when DataMiner or Cassandra restarts, snapshots can be saved outside the default interval specified in the \<SnapshotInterval> setting.
+    > - In some cases, e.g., when DataMiner or Cassandra restarts, snapshots can be saved outside the default interval specified in the \<SnapshotInterval> setting.
     > - This can only be configured for a regular Cassandra database, not for a Cassandra cluster used by the entire DMS (type=CassandraCluster).
 
 ### Skipping commit log writing of a Cassandra database
@@ -202,11 +202,11 @@ To do so:
 
 ### Configuring the consistency level of Cassandra in a Cassandra Cluster database
 
-If your DMS uses the Cassandra Cluster database type (i.e. one Cassandra cluster for the entire DMS) , you can configure the **consistency level** of the Cassandra database. This is done by means of the **consistencyLevel** attribute. For detailed information, see [Consistency level](xref:replication_and_consistency_configuration#consistency-level).
+If your DMS uses the Cassandra Cluster database type (i.e., one Cassandra cluster for the entire DMS) , you can configure the **consistency level** of the Cassandra database. This is done by means of the **consistencyLevel** attribute. For detailed information, see [Consistency level](xref:replication_and_consistency_configuration#consistency-level).
 
 ### Example of a general database configuration
 
-The following example illustrates the configuration of a general database of type "CassandraCluster" (i.e. one Cassandra cluster for the entire DMS, see [Dedicated clustered storage](xref:Dedicated_clustered_storage)). As this also requires an OpenSearch or Elasticsearch database (see [Indexing database settings](#indexing-database-settings)), the configuration for this database is included in the example:
+The following example illustrates the configuration of a general database of type "CassandraCluster" (i.e., one Cassandra cluster for the entire DMS, see [Dedicated clustered storage](xref:Dedicated_clustered_storage)). As this also requires an OpenSearch or Elasticsearch database (see [Indexing database settings](#indexing-database-settings)), the configuration for this database is included in the example:
 
 ```xml
 <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
@@ -343,7 +343,7 @@ In the following example, “1;TRUE” means that the real-time trend data recor
 > [!NOTE]
 >
 > - If you specify an offload rate, then the real-time trend data records with a negative iStatus value other than -9, -10, -15 and -16 will not be offloaded. Also, since the periodic offloads are not triggered by a user, the *chOwner* field of the offloaded records will be empty.
-> - If you specify an offload interval larger than 24 hours, DataMiner will set the offload interval to the maximum value, i.e. 24 hours.
+> - If you specify an offload interval larger than 24 hours, DataMiner will set the offload interval to the maximum value, i.e., 24 hours.
 
 ### Configuring the collation for an MSSQL database
 
@@ -586,14 +586,14 @@ To do so:
 > [!NOTE]
 > Prior to DataMiner 10.4.0/10.4.2<!-- RN 37446 -->, this functionality is configured in [DBConfiguration.xml](xref:DBConfiguration_xml) instead.
 
-It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters. From DataMiner 10.4.0/10.4.2 onwards, this is configured in *DB.xml*. For detailed information, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
+It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e., one main cluster and several replicated clusters. From DataMiner 10.4.0/10.4.2 onwards, this is configured in *DB.xml*. For detailed information, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
 ## CMDB settings
 
 If you have a CMDB (Configuration Management Database) that you want to manage by means of the DataMiner Inventory & Asset Management module, then you can specify the configuration data for that CMDB in an additional *\<Database>* tag.
 
 > [!NOTE]
-> The *\<Database>* tag containing the configuration data for the CMDB must not have a *local* attribute. However, it must have a *name* attribute of which the value (i.e. the name of the database configuration) must be identical to the value specified in the *\<DatabaseConfig>* tag of the Inventory & Asset Management configuration file.
+> The *\<Database>* tag containing the configuration data for the CMDB must not have a *local* attribute. However, it must have a *name* attribute of which the value (i.e., the name of the database configuration) must be identical to the value specified in the *\<DatabaseConfig>* tag of the Inventory & Asset Management configuration file.
 
 > [!TIP]
 > See also: [Configuring DataMiner Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management)

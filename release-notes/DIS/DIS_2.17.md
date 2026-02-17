@@ -74,7 +74,7 @@ The Protocol XML schema now supports the following elements and/or element attri
 
 #### IDE - XML editor: Automatic code indentation \[ID 20675\]
 
-Up to now, it was recommended to customize the tab settings in Visual Studio. From now on, DIS will automatically apply the following tab settings when it detects that you have opened a protocol or an Automation script:
+Up to now, it was recommended to customize the tab settings in Visual Studio. From now on, DIS will automatically apply the following tab settings when it detects that you have opened a protocol or an automation script:
 
 - Tab size: 4
 - Indent size: 4
@@ -84,4 +84,4 @@ Up to now, it was recommended to customize the tab settings in Visual Studio. Fr
 
 #### IDE - XML editor: Problem when trying to view the changes made in a file revision \[ID 21721\]
 
-When, while viewing the history of a file under source control (e.g. SVN or GIT), you right-clicked a revision and clicked *Show Changes*, in some cases, an exception could be thrown.
+When, while viewing the history of a file under source control (e.g., SVN or GIT), you right-clicked a revision and clicked *Show Changes*, in some cases, an exception could be thrown.

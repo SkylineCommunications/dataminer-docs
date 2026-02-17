@@ -56,4 +56,4 @@ Client:
 | -- | ------------- | ----- | ------ | ------- | ------------- |
 | 1 | Loading history alarm states of shapes linked to an element/parameter | DMA | 2 s | Tested with 210 shapes that were all linked to an element/parameter. ||
 | 2 | Sort 3,000 child shapes | DataMiner Cube | 7.16 s | No filtering was active. ||
-| 3 | Children shape: Loading of child shapes | DataMiner Cube | 3,000 shapes in 14 s |  | 3,000 service children in a view, with no dynamic parts in any of the shape data except ChildrenSort (e.g. ChildrenFilter). |
+| 3 | Children shape: Loading of child shapes | DataMiner Cube | 3,000 shapes in 14 s |  | 3,000 service children in a view, with no dynamic parts in any of the shape data except ChildrenSort (e.g., ChildrenFilter). |

@@ -4,7 +4,7 @@ uid: Linking_a_Visio_page_to_an_EPM_filter_section_field
 
 # Linking a Visio page to an EPM filter section field
 
-If you have linked a page of a Visio drawing to a chain (i.e. tab page) of an EPM element (formerly known as CPE Manager) using a shape data field of type **Chain**, you can use a shape data field of type **Field** to link that page to one specific filter section field of that chain (e.g. "Headends", "Customer", "STB", etc.). That way, the page in question will only appear when you select a value for that specific filter section field.
+If you have linked a page of a Visio drawing to a chain (i.e., tab page) of an EPM element (formerly known as CPE Manager) using a shape data field of type **Chain**, you can use a shape data field of type **Field** to link that page to one specific filter section field of that chain (e.g., "Headends", "Customer", "STB", etc.). That way, the page in question will only appear when you select a value for that specific filter section field.
 
 If, for example, you set **Field** to "*Headends*", the page will appear when you select a headend in the *Filter* section of the EPM interface.
 

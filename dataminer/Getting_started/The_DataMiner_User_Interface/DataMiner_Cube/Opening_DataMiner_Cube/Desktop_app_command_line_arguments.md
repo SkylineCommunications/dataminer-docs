@@ -7,7 +7,7 @@ keywords: launcher
 
 When you start the DataMiner Cube desktop application, the latest Cube binary files are downloaded to your client PC (`%localappdata%\Skyline\DataMiner\DataMinerCube\`) and executed.
 
-Several command line arguments can be specified when starting the application. For a list, see below. In normal circumstances, none of these are required. They will be added automatically where applicable. However, in a number of special cases, it might be necessary to use them, either once or permanently (e.g. in a shortcut).
+Several command line arguments can be specified when starting the application. For a list, see below. In normal circumstances, none of these are required. They will be added automatically where applicable. However, in a number of special cases, it might be necessary to use them, either once or permanently (e.g., in a shortcut).
 
 > [!NOTE]
 > All arguments and options are case-insensitive.

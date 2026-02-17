@@ -1,5 +1,6 @@
 ---
 uid: Overview_DataMiner_Solutions
+description: DataMiner Solutions are pre-configured implementations built on the DataMiner stack, ready to use or customize.
 ---
 
 # DataMiner Solutions

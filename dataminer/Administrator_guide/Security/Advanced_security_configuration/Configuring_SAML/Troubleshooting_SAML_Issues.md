@@ -109,7 +109,7 @@ When using SAML with a proxy, use the following configuration to avoid authentic
 
 ### Missing or incorrect claims and attribute statements
 
-The SAML attribute names, also known as **claims**; must be exactly the **same** for the identity provider and the service provider, i.e. in the *DataMiner.xml* file. This applies for **any identity provider**, be it Entra ID, Azure B2C, or Okta.
+The SAML attribute names, also known as **claims**; must be exactly the **same** for the identity provider and the service provider, i.e., in the *DataMiner.xml* file. This applies for **any identity provider**, be it Entra ID, Azure B2C, or Okta.
 
 To check whether the claims and attributes match:
 
@@ -154,7 +154,7 @@ To collect the SAML response, use the SAML-tracer extension:
 
 XML, and therefore also SAML, is case-sensitive. This goes for all XML elements and attributes configured for the service provider as well as all fields configured for the identity provider. If capitalization is incorrect, you can expect errors in the [log files](#logs-to-check) mentioning that a specific item could not be found.
 
-For example, when you are matching claim names in *DataMiner.xml* to your setup in the identity provider (see [Configuring SAML with Okta as the identity provider](xref:SAML_using_Okta)), ensure that both names have the same casing, e.g. *EMailAddress* does not equal *emailAddress*.
+For example, when you are matching claim names in *DataMiner.xml* to your setup in the identity provider (see [Configuring SAML with Okta as the identity provider](xref:SAML_using_Okta)), ensure that both names have the same casing, e.g., *EMailAddress* does not equal *emailAddress*.
 
 ### Other frequent issues
 

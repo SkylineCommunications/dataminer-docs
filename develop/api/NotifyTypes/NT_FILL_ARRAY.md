@@ -22,7 +22,7 @@ protocol.NotifyProtocol(193/*NT_FILL_ARRAY*/ , tableID, tableContent);
 
 ## Return Value
 
-- bool: true or a null reference in case an error occurred (e.g. in case invalid data was provided).
+- bool: true or a null reference in case an error occurred (e.g., in case invalid data was provided).
 
 ## Remarks
 
@@ -30,7 +30,7 @@ protocol.NotifyProtocol(193/*NT_FILL_ARRAY*/ , tableID, tableContent);
 
 - In case the column data contains null references, the corresponding cells will be cleared.
 
-- When NT_FILL_ARRAY is used, the column type must be set to "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.
+- When NT_FILL_ARRAY is used, the column type must be set to "retrieved". In case other column types are present between the specified columns (e.g., columns of type "custom"), these other columns will be skipped.
 
 - The primary key should always be a string value. Even if it is an integer, you should still cast it to a string before calling FillArray.
 

@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.0.3
 
 In the *MaintenanceSettings.xml* file, you can now specify a cluster transition state timeout (in seconds).
 
-If you do so, DataMiner Agents leaving the DataMiner System (i.e. cluster) will leave the transition state after the above-mentioned timeout delay, starting from the last received notification from any of the DataMiner processes. This will prevent DataMiner Agents from getting stuck in the transition state.
+If you do so, DataMiner Agents leaving the DataMiner System (i.e., cluster) will leave the transition state after the above-mentioned timeout delay, starting from the last received notification from any of the DataMiner processes. This will prevent DataMiner Agents from getting stuck in the transition state.
 
 ```xml
 <SLNet>
@@ -49,7 +49,7 @@ From now on, when serial clients receive a response with a variable length (spec
 
 - The response has to contain a trailer that is set before the data parameter. It does not have to contain a header.
 - A length parameter should be located before the data parameter. It should be of length type “next param” and raw type “numeric text”.
-- The length parameter has to be located either between two fixed parameters (e.g. “header before” and “trailer after”) or at the beginning of the response.
+- The length parameter has to be located either between two fixed parameters (e.g., “header before” and “trailer after”) or at the beginning of the response.
 
 Up to now, when a response like the one in the example below was received, the data at the end would only be read after the command had timed out.
 
@@ -101,7 +101,7 @@ If you want such an element to use SSL/TLS encryption, then do the following:
 1. In the *Edit* tab, go to the *Serial connection* section containing the settings of the port in question, and select the *SSL/TLS* checkbox.
 
 > [!NOTE]
-> DataMiner currently supports all TLS versions up to TLS 1.3 (i.e. all TLS versions supported by OpenSSL 1.1.1).
+> DataMiner currently supports all TLS versions up to TLS 1.3 (i.e., all TLS versions supported by OpenSSL 1.1.1).
 >
 > Elements acting as SSL/TLS client will negotiate the highest supported SSL/TLS version with the server. If the server supports TLS up to version 1.2, the element will use version 1.2.
 
@@ -220,7 +220,7 @@ var managedFilter = new ManagedFilter<DMAObjectRefTree,IDMAObjectRef> (DMAObject
 
 **GetMaskedDMAObjectRefTrees(managedFilter);**
 
-This method returns mask operations stored in the transaction store (i.e. masking of topology data or views).
+This method returns mask operations stored in the transaction store (i.e., masking of topology data or views).
 
 #### DataMiner Cube: Masking of CPE objects and views related to CPE objects \[ID 22185\]
 
@@ -428,7 +428,7 @@ The view state returned by the following methods would incorrectly not take into
 - GetViewsForParent
 
 > [!NOTE]
-> The above-mentioned methods are also used by the DataMiner web applications (e.g. Monitoring & Control, Dashboards, Ticketing, etc.), and the view states are also used in DataMiner Maps.
+> The above-mentioned methods are also used by the DataMiner web applications (e.g., Monitoring & Control, Dashboards, Ticketing, etc.), and the view states are also used in DataMiner Maps.
 
 #### DataMiner Cube - Automation/Scheduler: Problem when adding multiple recipients with an identical 'full name' in the To field of an Email action \[ID 24373\]
 
@@ -467,7 +467,7 @@ In some cases, a problem could occur when SLProtocol retrieved data from a logge
 
 #### DataMiner Cube - Automation: IF action's 'Wait for positive result for at most' values not readable in entry box \[ID 24497\]
 
-When configuring an IF action in an Automation script, it is possible to select the *Wait for positive result for at most* option and enter a time span, in order to make the script wait during the specified period before evaluating the If condition. Due to a font color issue, the values in that entry box would not be readable.
+When configuring an IF action in an automation script, it is possible to select the *Wait for positive result for at most* option and enter a time span, in order to make the script wait during the specified period before evaluating the If condition. Due to a font color issue, the values in that entry box would not be readable.
 
 #### Memory leak in SLXML due to a parsing issue in SLDataMiner \[ID 24503\]
 
@@ -481,7 +481,7 @@ From now on, it will no longer be possible to start a backup operation while the
 
 #### Problem with SLDataMiner \[ID 24511\]
 
-In some rare cases, an error in SLDataMiner would cause other problems to occur (e.g. element timeouts).
+In some rare cases, an error in SLDataMiner would cause other problems to occur (e.g., element timeouts).
 
 #### Service & Resource Management: Editing a service in the services list would incorrectly clear the IDOfSelection session variable \[ID 24519\]
 
@@ -555,7 +555,7 @@ In the list of services in the Bookings and Services apps, it could occur that t
 
 #### Service & Resource Management: Incorrect result when comparing service definitions \[ID 24662\]
 
-If an Automation script compared two service definitions with at least one interface configuration or edge in the diagram, it could occur that the *Equals* method returned false incorrectly.
+If an automation script compared two service definitions with at least one interface configuration or edge in the diagram, it could occur that the *Equals* method returned false incorrectly.
 
 #### DataMiner Cube - Views: Split view icons would incorrectly display the alarm color of first-level child items as Undefined \[ID 24665\]
 
@@ -571,7 +571,7 @@ When you used the TAB key to navigate from one control to another, navigation wo
 
 #### DataMiner Cube - Visual Overview: Cards opened from within a Visio page would not open undocked or in new card \[ID 24675\]
 
-When you opened a card by right-clicking a Visio shape linked to e.g. an element or a view and choosing either *Open ... undocked* or *Open ... in a new card*, in some cases, the card would not open undocked or in a new card.
+When you opened a card by right-clicking a Visio shape linked to, for example, an element or a view and choosing either *Open ... undocked* or *Open ... in a new card*, in some cases, the card would not open undocked or in a new card.
 
 #### DataMiner Cube - Data Display: DPI settings not always taken into account when rendering selection boxes and tool tips \[ID 24685\]
 
@@ -587,7 +587,7 @@ In some cases, it would no longer be possible to save group settings or to assig
 
 #### Jobs app: Action buttons no longer displayed after executing an action \[ID 24710\]
 
-In some cases, after a job action was executed (i.e. creation, editing or deletion of a job), it could occur that the action buttons in the header bar of the panel were no longer displayed.
+In some cases, after a job action was executed (i.e., creation, editing or deletion of a job), it could occur that the action buttons in the header bar of the panel were no longer displayed.
 
 #### DataMiner Cube: Problem with index/display key column mapping for dynamic column tables \[ID 24722\]
 
@@ -615,9 +615,9 @@ Also, in case of commands that did not require a response, in some cases, the se
 
 In some cases, it would no longer be possible to mask cells or rows in view tables or direct views.
 
-#### DataMiner Cube - Automation: Problem when an Automation script tried to send an e-mail containing a report \[ID 24775\]
+#### DataMiner Cube - Automation: Problem when an automation script tried to send an e-mail containing a report \[ID 24775\]
 
-In some cases, an error could occur when an Automation script tried to send an e-email containing a report.
+In some cases, an error could occur when an automation script tried to send an e-email containing a report.
 
 #### Problem with SLPort when parsing SSH responses \[ID 24776\]
 

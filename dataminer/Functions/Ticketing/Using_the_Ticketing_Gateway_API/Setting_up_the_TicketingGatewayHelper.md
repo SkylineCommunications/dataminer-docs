@@ -4,9 +4,8 @@ uid: Setting_up_the_TicketingGatewayHelper
 
 # Setting up the TicketingGatewayHelper
 
-<!-- > [!IMPORTANT]
-> The Ticketing Gateway API is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.6.0/10.6.2 onwards. 
-RN 44417-->
+> [!IMPORTANT]
+> The Ticketing Gateway API is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.6.0/10.6.3 onwards<!--RN 44417-->.
 
 The TicketingGatewayHelper class allows you to communicate with the Ticketing Gateway running on a DataMiner Agent.
 
@@ -19,7 +18,7 @@ class Script
     Connection conn;
     Script()
     {
-        // Connect to SLNet. Not needed for protocols and Automation scripts
+        // Connect to SLNet. Not needed for protocols and automation scripts
         conn = ConnectionSettings.GetConnection("localhost");
         conn.Authenticate();
         //Construct TicketingGatewayHelper

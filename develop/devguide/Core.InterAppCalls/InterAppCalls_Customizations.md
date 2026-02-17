@@ -16,7 +16,7 @@ This interface requires one method to serialize and one method to deserialize. Y
 
 Where the API describes the different messages and their content, the executor will define how an incoming message should be handled.
 
-The executor is never shared between connectors or Automation scripts. You create it at the destination of a message, and it is unique to that connector. It will hold all the methods that can access the content of the message and do something with it.
+The executor is never shared between connectors or automation scripts. You create it at the destination of a message, and it is unique to that connector. It will hold all the methods that can access the content of the message and do something with it.
 
 You create it by making a new class that inherits from the `SimpleMessageExecutor<T>`, where T is a class from your messages defined in the API.
 

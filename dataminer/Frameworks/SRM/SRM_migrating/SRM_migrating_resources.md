@@ -4,7 +4,7 @@ uid: SRM_migrating_resources
 
 # Migrating resources
 
-To migrate the complete resource configuration, you can use the *SRM_DiscoverResources* Automation script, which is included in the SRM framework. When you export the resource configuration with this script, an Excel file will be generated that includes all resources defined in the system as well as the resources that could potentially be created. You can then import this file to adjust the configuration of resources that are already present in the system and to create new resources.<!-- RN 23632 -->
+To migrate the complete resource configuration, you can use the *SRM_DiscoverResources* automation script, which is included in the SRM framework. When you export the resource configuration with this script, an Excel file will be generated that includes all resources defined in the system as well as the resources that could potentially be created. You can then import this file to adjust the configuration of resources that are already present in the system and to create new resources.<!-- RN 23632 -->
 
 ## Exporting the resource configuration
 
@@ -61,7 +61,7 @@ The script will create an Excel file containing one tab per function and listing
 
      Two input data options are available, which can optionally be used. By default, these are both set to false.
 
-     - *IsSilent*: Allows you to run the script in "silent" mode (i.e. without user interaction). In that case, it will not update resources that could cause bookings to go into quarantine state, unless *ForceUpdate* is enabled.
+     - *IsSilent*: Allows you to run the script in "silent" mode (i.e., without user interaction). In that case, it will not update resources that could cause bookings to go into quarantine state, unless *ForceUpdate* is enabled.
      - *ForceUpdate*: Forces resources updates, which may cause some bookings to go into quarantine in case the updated resources can no longer support all bookings.
 
      For example: `{"ForceUpdate":"false", "IsSilent":"true"}`

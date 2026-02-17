@@ -27,7 +27,7 @@ Using the IndexOf method is the most basic way to obtain data from an HTML strin
 
 #### Recommendation
 
-- Only use this approach when either one of the other approaches is not feasible, or in very simple scenarios (e.g. to fetch a single piece of information from an HTML document that is very static in nature).
+- Only use this approach when either one of the other approaches is not feasible, or in very simple scenarios (e.g., to fetch a single piece of information from an HTML document that is very static in nature).
 
 ### Regular expressions
 
@@ -46,7 +46,7 @@ Another possible approach to obtain information from an HTML document is via reg
 
 #### Recommendation
 
-- Can be used when performance is important and the query is very simple or straightforward (e.g. to fetch a single piece of data from a whole HTML document that is static in nature, with rather static text).
+- Can be used when performance is important and the query is very simple or straightforward (e.g., to fetch a single piece of data from a whole HTML document that is static in nature, with rather static text).
 
 ## JavaScriptSerializer
 

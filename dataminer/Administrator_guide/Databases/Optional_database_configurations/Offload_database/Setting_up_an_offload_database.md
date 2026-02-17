@@ -59,7 +59,7 @@ Depending on the type of database, the procedure is slightly different.
    >   - INSERT
    > - Make sure the user account has access to the database server from the DMA, so that it can reach the offload database.
 
-1. Create a database (e.g. named "sldmsdb") and tables:
+1. Create a database (e.g., named "sldmsdb") and tables:
 
    - In MySQL:
 
@@ -88,7 +88,7 @@ Depending on the type of database, the procedure is slightly different.
 
    - For an Oracle database, run the following table creation script found in the `C:\Skyline DataMiner\Tools` directory: *CentralTabledefOracle.sql*.
 
-1. For an Oracle Database, create a shared folder on the database server and give it an appropriate name (e.g. "DataMinerOffload").
+1. For an Oracle Database, create a shared folder on the database server and give it an appropriate name (e.g., "DataMinerOffload").
 
    Also grant the following permission to the database user:
 
@@ -181,13 +181,13 @@ The final step is the configuration of the DMS.
 
    1. Fill in the following fields:
 
-      - **DB**: The name of the database you created, i.e. SLDMSDB.
+      - **DB**: The name of the database you created, i.e., SLDMSDB.
 
       - **DB server**: The network location of the offload database.
 
-        - For an MSSQL database, this can be an IP address and a port, separated by a comma, e.g. "10.10.18.1,1433".
+        - For an MSSQL database, this can be an IP address and a port, separated by a comma, e.g., "10.10.18.1,1433".
 
-        - For a MySQL database, only fill in the IP address. If a port needs to be specified, do so in the *Connection string* field (e.g. *PORT=3306*).
+        - For a MySQL database, only fill in the IP address. If a port needs to be specified, do so in the *Connection string* field (e.g., *PORT=3306*).
 
       - **DSN**: "SkySQL"
 
@@ -198,7 +198,7 @@ The final step is the configuration of the DMS.
       - **Password**: The password corresponding with the user account.
 
       > [!NOTE]
-      > For Oracle, check the file *tnsnames.ora* to see the configuration of XE. If the file has an XE description, in the *DB Server* field, fill in *XE*, otherwise fill in the information from the ora file, e.g. *(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = XX.XX.XX.X)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE)))*. Aside from that, you only need to fill in the *User* and *Password* fields with the Oracle database username and password. Alternatively, you can also use a connection string, e.g. *Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=hostaddress)(PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=XE)));User Id=user;Password= password*.
+      > For Oracle, check the file *tnsnames.ora* to see the configuration of XE. If the file has an XE description, in the *DB Server* field, fill in *XE*, otherwise fill in the information from the ora file, e.g., *(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = XX.XX.XX.X)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE)))*. Aside from that, you only need to fill in the *User* and *Password* fields with the Oracle database username and password. Alternatively, you can also use a connection string, e.g., *Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=hostaddress)(PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=XE)));User Id=user;Password= password*.
 
    1. In the *Offloads* section, select the tables you want to offload, and specify the remote table name.
 

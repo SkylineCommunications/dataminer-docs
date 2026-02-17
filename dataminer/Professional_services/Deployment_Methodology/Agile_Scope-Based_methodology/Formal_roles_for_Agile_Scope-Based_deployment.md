@@ -27,11 +27,11 @@ The roles detailed below are instrumental for the efficient and correct executio
 
 - Ensures team cohesion, coordination, and operation in line with the methodology.
 
-- Facilitates all formal process activities (e.g. Sprint Planning, Retrospect, Solution Backlog Refinement and Balancing, etc.).
+- Facilitates all formal process activities (e.g., Sprint Planning, Retrospect, Solution Backlog Refinement and Balancing, etc.).
 
 - Performs continuous Solution Backlog refinement and balancing.
 
-- Accountable for all administrative duties (e.g. Solution Backlog updates).
+- Accountable for all administrative duties (e.g., Solution Backlog updates).
 
 - Ensures clear and fully transparent communication between all Project Squad members.
 
@@ -62,7 +62,7 @@ Accountabilities that the Agile Coach takes over from the Project Squad Product 
 
 - Ensures team cohesion, coordination, and operation in line with the methodology.
 
-- Facilitates all formal process activities (e.g. Sprint Planning, Review, Retrospect, Solution Backlog Refinement and Balancing, etc.).
+- Facilitates all formal process activities (e.g., Sprint Planning, Review, Retrospect, Solution Backlog Refinement and Balancing, etc.).
 
 - Ensures clear and fully transparent communication between all Project Squad members.
 
@@ -79,7 +79,7 @@ Accountabilities that the Agile Coach takes over from the Project Squad Product 
 
 A variety of engineering members, covering the various skills and expertise required for software installation and deployment, system configuration and setup, development of interface connectors, development of workflows and processes, graphical UI design, quality assurance, technical writing, training, etc.
 
-Not all Development Members are necessarily assigned to the Project Squad for the entire duration of the project, and some flexibility on the staffing is possible, provided that it can be planned for. Staffing of the Project Squad is the responsibility of and at the sole discretion of the Project Squad Product Owner. Any references to allocated human resources for the overall project in the Deployment Plan are in generic and average terms for the purpose of planning and tracking the deployment, and hence only indicate the overall average staffing level (i.e. the Deployment Plan does not reference individuals as such).
+Not all Development Members are necessarily assigned to the Project Squad for the entire duration of the project, and some flexibility on the staffing is possible, provided that it can be planned for. Staffing of the Project Squad is the responsibility of and at the sole discretion of the Project Squad Product Owner. Any references to allocated human resources for the overall project in the Deployment Plan are in generic and average terms for the purpose of planning and tracking the deployment, and hence only indicate the overall average staffing level (i.e., the Deployment Plan does not reference individuals as such).
 
 ## Stakeholders Representatives (user staff)
 
@@ -91,9 +91,9 @@ Strong stakeholder representation is key to success in the rollout of Agile proj
 
     - Ensure that all end users, who very likely will have varying opinions, desires, habits and preferences, are all aligned and agree on a single well-defined unambiguous specification that is locked in firmly in a timely fashion.
 
-    - Ensure that there is a clear and accurate understanding of the actual business value of all requirements (i.e. what is cosmetic and what is of true value and impactful towards the actual goal of the project), to ensure that the Project Squad will be able to focus on delivering maximum value continuously, and this taking into account the unavoidable reality that not all possible desires, ambitions and dreams of all users can be implemented in an unlimited fashion within the considered time frame and budget.
+    - Ensure that there is a clear and accurate understanding of the actual business value of all requirements (i.e., what is cosmetic and what is of true value and impactful towards the actual goal of the project), to ensure that the Project Squad will be able to focus on delivering maximum value continuously, and this taking into account the unavoidable reality that not all possible desires, ambitions and dreams of all users can be implemented in an unlimited fashion within the considered time frame and budget.
 
-    - Ensure that all relevant end users at any point in time are continuously very closely involved in the planning, execution, and result reviews of the project (e.g. involving end users in refining the backlog, finding a consensus on the priorities among the end users, involving end users in recurring reviews organized by the Project Squad to get their feedback, having them interact with the developers directly, etc.).
+    - Ensure that all relevant end users at any point in time are continuously very closely involved in the planning, execution, and result reviews of the project (e.g., involving end users in refining the backlog, finding a consensus on the priorities among the end users, involving end users in recurring reviews organized by the Project Squad to get their feedback, having them interact with the developers directly, etc.).
 
 - **Management Stakeholder Representative** (Skyline and user staff - recommended): For any project it is also desirable to identify Management Stakeholder Representatives, both from a user and Skyline perspective, and plan for Executive Review Meetings ahead of anticipated critical milestones of the project, to ensure full alignment of the organizations and full backing of the involved leadership.
 
@@ -106,7 +106,7 @@ While not all end users can always be involved in every single step of the proje
 
 Therefore, for starters, those user groups need to be very clearly identified and described. Their role in the project must be explained to them, and it must be clear what will be expected from them, that this is endorsed by their respective leadership, and that they must ensure that they are properly prepared for this.
 
-The end users’ involvement in the project applies both from an input perspective (to ensure that the most optimal solution is designed and deployed with the end user in mind, and that this is done as efficiently as possible), and from an output perspective (i.e. from a change management perspective, where the user base needs to be managed and prepared to embrace the change that inevitably comes with the introduction of new technology).
+The end users’ involvement in the project applies both from an input perspective (to ensure that the most optimal solution is designed and deployed with the end user in mind, and that this is done as efficiently as possible), and from an output perspective (i.e., from a change management perspective, where the user base needs to be managed and prepared to embrace the change that inevitably comes with the introduction of new technology).
 
 The following roles are essential to enable the Project Squad to efficiently interact with the user base:
 
@@ -116,7 +116,7 @@ The following roles are essential to enable the Project Squad to efficiently int
 
 ## Change Management Manager (user staff)
 
-A Change Management Manager is vital to the success of any Digital Transformation project. The introduction of new technology always comes with new paradigms, goals and objectives, as well as new workflows and ways of doing things. The impact of this typically touches upon all possible aspects of the organization, including but not limited to the role of individuals in the organization, the methods, the workflows, practical arrangements, habits that have to change, and much more. If all of these are not thoroughly considered and taken care of in a timely and proactive fashion, i.e. from the very inception of the project and throughout its execution, then this can represent a considerable liability and risk for the success of the entire project.
+A Change Management Manager is vital to the success of any Digital Transformation project. The introduction of new technology always comes with new paradigms, goals and objectives, as well as new workflows and ways of doing things. The impact of this typically touches upon all possible aspects of the organization, including but not limited to the role of individuals in the organization, the methods, the workflows, practical arrangements, habits that have to change, and much more. If all of these are not thoroughly considered and taken care of in a timely and proactive fashion, i.e., from the very inception of the project and throughout its execution, then this can represent a considerable liability and risk for the success of the entire project.
 
 While Change Management is not part of the scope of the project deliverables, it is mandatory to have a formally appointed Change Management Manager in the user organization, who will run a formal and well-documented Change Management Program and who will interface with the Project Squad to ensure proper alignment from a Change Management perspective. This is necessary since, because of the nature of the project, success can be heavily compromised if there is no formal, structured, and continuous Change Management in place.
 

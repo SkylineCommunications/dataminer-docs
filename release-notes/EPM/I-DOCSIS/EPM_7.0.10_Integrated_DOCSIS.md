@@ -11,7 +11,7 @@ uid: EPM_7.0.10_Integrated_DOCSIS
 
 #### New dashboard to monitor whether KPI exceeds threshold for specific period [ID 42406]
 
-A new dashboard is now available with the name *US FN Breach Report (OFDMA)* and *US FN Breach Report (SC-QAM)*. It allows you to monitor whether a KPI is higher than a specific threshold for a specific period of time. It makes use a of new ad hoc data source (*EPM_I_DOCSIS_GQI_GET_BREACH_DATA*) that reports the fiber nodes that breached a threshold for a specific number of months in a row. This is checked in weekly increments. This means that if for example a month is selected, the dashboard will check whether for that period of time (i.e. a month), the threshold was breached at least once every week.
+A new dashboard is now available with the name *US FN Breach Report (OFDMA)* and *US FN Breach Report (SC-QAM)*. It allows you to monitor whether a KPI is higher than a specific threshold for a specific period of time. It makes use a of new ad hoc data source (*EPM_I_DOCSIS_GQI_GET_BREACH_DATA*) that reports the fiber nodes that breached a threshold for a specific number of months in a row. This is checked in weekly increments. This means that if for example a month is selected, the dashboard will check whether for that period of time (i.e., a month), the threshold was breached at least once every week.
 
 #### New SLC-AS-EPM_I_DOCSIS_Cbr8CcapSpectrumConfig script [ID 43805]
 

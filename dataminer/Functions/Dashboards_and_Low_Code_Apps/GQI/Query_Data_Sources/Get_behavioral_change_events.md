@@ -11,7 +11,7 @@ By default, the data contains the following columns:
 - **Parameter ID**: The ID of the parameter for which the change point was detected.
 - **Anomalous**: Whether the change point was marked as an anomaly.
 - **Change type**: The type of change point that was detected.
-- **Increase**: Whether the detected change point represents an increase (e.g. a level shift up) or a decrease (e.g. a level shift down).
+- **Increase**: Whether the detected change point represents an increase (e.g., a level shift up) or a decrease (e.g., a level shift down).
 - **Start time**: The detected start time of the change point.
 - **End time**: The detected end time of the change point.
 

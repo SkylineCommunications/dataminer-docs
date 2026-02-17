@@ -40,7 +40,7 @@ To configure the shapes:
    DmaID:ElementID:ParameterID:TableRowFilter|...|...
    ```
 
-   For example, to display a chart showing the CPU load percentages of all processes of which the name starts with "sl" (i.e. all DataMiner processes) from "Microsoft Platform" element 20838 on DMA ID 17, specify the following:
+   For example, to display a chart showing the CPU load percentages of all processes of which the name starts with "sl" (i.e., all DataMiner processes) from "Microsoft Platform" element 20838 on DMA ID 17, specify the following:
 
    ```txt
    17:20838:107:SL*
@@ -50,9 +50,9 @@ To configure the shapes:
 
    > [!NOTE]
    >
-   > - In the value of the shape data field, you can use placeholders to refer to e.g. session variables. For example: "219:341:114:\[Var:MyVariable\]\|219:341:114:\[Var:MyOtherVariable\]".
+   > - In the value of the shape data field, you can use placeholders to refer to, for example, session variables. For example: "219:341:114:\[Var:MyVariable\]\|219:341:114:\[Var:MyOtherVariable\]".
    > - Strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
-   > - Instead of the element ID, you can also use the element name or a \[this element\] placeholder. Keys containing forward slashes (e.g. dmaID/elementID) are also supported.
+   > - Instead of the element ID, you can also use the element name or a \[this element\] placeholder. Keys containing forward slashes (e.g., dmaID/elementID) are also supported.
 
 1. If there is only one shape, add a shape data field of type **ParametersOptions** to it.
 

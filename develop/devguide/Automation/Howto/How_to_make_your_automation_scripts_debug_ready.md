@@ -2,11 +2,11 @@
 uid: How_to_make_your_automation_scripts_debug_ready
 ---
 
-# Making your Automation scripts debug-ready
+# Making your automation scripts debug-ready
 
-While you are working on Automation scripts, exceptions can be thrown because of all kinds of valid reasons: executing actions on a variable that is not initialized, methods that are not yet fully implemented, etc.
+While you are working on automation scripts, exceptions can be thrown because of all kinds of valid reasons: executing actions on a variable that is not initialized, methods that are not yet fully implemented, etc.
 
-By default, Automation scripts do not show the stack trace you may expect when an exception occurs. To help you save precious time when debugging, below we will explain how you can make sure that exceptions are handled correctly from the very start.
+By default, automation scripts do not show the stack trace you may expect when an exception occurs. To help you save precious time when debugging, below we will explain how you can make sure that exceptions are handled correctly from the very start.
 
 ## Example of default behavior
 

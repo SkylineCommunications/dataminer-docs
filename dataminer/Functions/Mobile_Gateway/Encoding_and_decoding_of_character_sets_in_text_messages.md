@@ -14,7 +14,7 @@ When sending a text message, Mobile Gateway uses the following 7-bit encoding by
 
 #### UCS-2 16-bit encoding
 
-The moment Mobile Gateway finds a character that is not present in the GSM 7-bit table (e.g. the lowercase c with cedilla “ç”), it re-encodes the entire message using the UCS-2 16-bit encoding (which represents most Latin and Eastern characters). In that case, the maximum message length is reduced from 160 code units to 70 code units.
+The moment Mobile Gateway finds a character that is not present in the GSM 7-bit table (e.g., the lowercase c with cedilla “ç”), it re-encodes the entire message using the UCS-2 16-bit encoding (which represents most Latin and Eastern characters). In that case, the maximum message length is reduced from 160 code units to 70 code units.
 
 ### Decoding
 

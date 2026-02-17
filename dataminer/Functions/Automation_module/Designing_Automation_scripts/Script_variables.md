@@ -8,7 +8,7 @@ For most script actions, variables are required. There are three kinds of variab
 
 - Dummies: required for every different element in the script. When the script is run, an actual element will be linked to each dummy.
 
-- Parameters: typically used to get input from the outside world, e.g. from an operator.
+- Parameters: typically used to get input from the outside world, e.g., from an operator.
 
 - Memory files: containers of values, typically provided by the script itself.
 

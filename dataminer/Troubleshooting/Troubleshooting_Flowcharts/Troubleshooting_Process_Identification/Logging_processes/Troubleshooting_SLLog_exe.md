@@ -56,4 +56,4 @@ SLLog is the process responsible for all DataMiner logging with the exception of
 
 SLNet uses its own logging mechanism. One of the reasons for this is that at DataMiner startup, SLNet starts earlier than SLLog.
 
-In case of high load, e.g. when development logging is enabled, SLLog will use more CPU, but the memory usage should not rise. When a lot of data is being written to files, "Cleaned Stack!" messages may be found in various log files. These are notifications from SLLog that it has finished writing to a file.
+In case of high load, e.g., when development logging is enabled, SLLog will use more CPU, but the memory usage should not rise. When a lot of data is being written to files, "Cleaned Stack!" messages may be found in various log files. These are notifications from SLLog that it has finished writing to a file.

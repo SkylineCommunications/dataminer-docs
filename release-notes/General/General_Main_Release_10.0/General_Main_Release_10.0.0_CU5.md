@@ -35,7 +35,7 @@ When adding or updating an element, it is now allowed to enter pipe characters (
 
 #### Mobile Gateway: Text messages can now contain special characters like '&' \[ID 26449\]
 
-When DataMiner is configured to use an IP-based cell phone modem (e.g. SMSEagle), it communicates with the device via HTTP GET requests, passing values as ampersand-delimited parameters in the URL.
+When DataMiner is configured to use an IP-based cell phone modem (e.g., SMSEagle), it communicates with the device via HTTP GET requests, passing values as ampersand-delimited parameters in the URL.
 
 Up to now, when DataMiner sent a text message containing an ampersand character (“&”), the message would be cut off because the ampersand was incorrectly interpreted as a delimiter. From now on, all text messages will be URL encoded.
 
@@ -49,15 +49,15 @@ Since DataMiner 10.0.0, service definitions and service profiles can only be use
 
 #### Security checks for local connections between an SLxxx module and SLNet \[ID 26544\]
 
-For local connections between an SLxxx module (e.g. SLDMS) and SLNet, security checks have been established. A security token will be generated and verified for each of the messages that are sent.
+For local connections between an SLxxx module (e.g., SLDMS) and SLNet, security checks have been established. A security token will be generated and verified for each of the messages that are sent.
 
 #### Automation: DataMiner will now check whether a parameter’s set range has not been changed dynamically \[ID 26574\]
 
-When a parameter is set, from now on, DataMiner will check whether the set range of the parameter in question has not been changed dynamically (e.g. by an Automation script).
+When a parameter is set, from now on, DataMiner will check whether the set range of the parameter in question has not been changed dynamically (e.g., by an automation script).
 
 #### DataMiner Cube - Automation: All parameters will now be aligned vertically \[ID 26665\]
 
-When creating or updating an Automation script in the Automation app, the parameters will now all be aligned vertically.
+When creating or updating an automation script in the Automation app, the parameters will now all be aligned vertically.
 
 #### Enhanced performance when notifying SLElement of service updates \[ID 26674\]
 
@@ -117,7 +117,7 @@ After restarting a DMA, in some cases, spectrum session presets could revert to 
 
 #### After a hotfix installation, the version number in VersionHistory.txt would be updated incorrectly \[ID 26067\]
 
-After a hotfix installation, in some cases, the version number in the VersionHistory.txt file would incorrectly be updated with the word “Hotfix” instead of the hotfix version string containing the detailed version information (e.g. “HF_10.0.7.0(CU0)\_20200520-135714”).
+After a hotfix installation, in some cases, the version number in the VersionHistory.txt file would incorrectly be updated with the word “Hotfix” instead of the hotfix version string containing the detailed version information (e.g., “HF_10.0.7.0(CU0)\_20200520-135714”).
 
 #### MySQL: Problem with delete queries trying to delete trend records for elements that were not being trended \[ID 26085\]
 
@@ -131,9 +131,9 @@ When, in the Alarm Console, you sorted and grouped alarms by Time/descending, th
 
 When you restored a DataMiner backup package (.dmbackup) containing a database file that took more than 30 minutes to restore, in some cases, the restore of the DataMiner backup package would incorrectly continue before the restore of the database file had finished.
 
-#### Problem when using the IsMatrixCrosspointConnected method in an Automation script \[ID 26276\]
+#### Problem when using the IsMatrixCrosspointConnected method in an automation script \[ID 26276\]
 
-When, in an Automation script, the *IsMatrixCrosspointConnected* method was used before a matrix point had been connected, in some cases, an exception could be thrown.
+When, in an automation script, the *IsMatrixCrosspointConnected* method was used before a matrix point had been connected, in some cases, an exception could be thrown.
 
 #### DataMiner Cube - Visual Overview: Shapes with a ParameterControl shape data field would incorrectly not take into account the NoAutoScale option \[ID 26283\]
 
@@ -149,7 +149,7 @@ When you created a new DataMiner System, in some cases, certain existing files w
 
 #### Problem with SLAutomation when saving a script containing a long line \[ID 26367\]
 
-When you saved an Automation script that contained a long line, in some cases, an error could occur in all SLAutomation processes in the DataMiner System.
+When you saved an automation script that contained a long line, in some cases, an error could occur in all SLAutomation processes in the DataMiner System.
 
 #### Source OID of forwarded aggregation alarm would not contain 'Aggregation' \[ID 26369\]
 
@@ -199,7 +199,7 @@ When too many alarms are generated for the same parameter, an alarm storm preven
 
 #### Automation: Engine#FindElement(null) call would incorrectly return a random element \[ID 26499\]
 
-When using an Engine#FindElement(null) call in an Automation script, in some cases, a random Element object would incorrectly be returned. From now on, NULL will be returned instead.
+When using an Engine#FindElement(null) call in an automation script, in some cases, a random Element object would incorrectly be returned. From now on, NULL will be returned instead.
 
 #### DataMiner Cube - Documents app: Problem when trying to delete a file after saving it locally \[ID 26500\]
 
@@ -235,7 +235,7 @@ When you opened the Services app, in some rare cases, the services list would no
 
 #### Automation scripts could fail with a 'No CodeBuilder found for cookie xxx' error \[ID 26546\]
 
-In some cases, Automation scripts could fail with a “No CodeBuilder found for cookie xxx” error.
+In some cases, automation scripts could fail with a “No CodeBuilder found for cookie xxx” error.
 
 #### Parts of a table polled via SNMP could be set to 'not initialized' when errors had occurred during polling \[ID 26551\]
 
@@ -247,7 +247,7 @@ In some cases, the TicketFieldResolver instances on the different agents in a Da
 
 #### HTML5 apps: Problem when logging in \[ID 26559\]
 
-When you tried to log in to an HTML5 app (e.g. Monitoring, Dashboards, etc.), in some cases, the login page could become unresponsive when the login attempt failed.
+When you tried to log in to an HTML5 app (e.g., Monitoring, Dashboards, etc.), in some cases, the login page could become unresponsive when the login attempt failed.
 
 #### DataMiner Cube: Visual page of a newly opened card would not get loaded when the new card replaced the contents of an existing card \[ID 26561\]
 
@@ -283,7 +283,7 @@ When, in the *SNMP forwarding* section of *System Center*, you configured an SN
 
 #### DataMiner Cube - Multiple set: List of table indices would not be populated when there was no associated read parameter \[ID 26593\]
 
-When you performed a multiple set (i.e. an update of multiple parameter values in one go), up to now, the dropdown box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g. write parameters linked to buttons displayed in table cells).
+When you performed a multiple set (i.e., an update of multiple parameter values in one go), up to now, the dropdown box listing the table indices would incorrectly not be populated when there was no associated read parameter (e.g., write parameters linked to buttons displayed in table cells).
 
 #### DataMiner Cube - EPM: KPI list would incorrectly display long column names that included the table name \[ID 26599\]
 
@@ -303,7 +303,7 @@ In some cases, the “CPEOnly” protocol option would not be applied correctly 
 
 #### DataMiner Cube - Visual Overview: Breadcrumbs header showing after Visio page is maximized \[ID 26631\]
 
-When you maximized a Visio page and then navigated to e.g. another view inside that page, in some cases, the breadcrumbs header would incorrectly be displayed at the top of the screen.
+When you maximized a Visio page and then navigated to, for example, another view inside that page, in some cases, the breadcrumbs header would incorrectly be displayed at the top of the screen.
 
 #### DataMiner Cube: Loading issue when returning to a parent node when navigating through a tree control \[ID 26634\]
 
@@ -314,11 +314,11 @@ When navigating through a tree control showing table data, in some cases, a load
 When you exported a Data Display table to a CSV file after moving or (un)hiding some of its columns, in some cases, the column order in the CSV file would be incorrect.
 
 > [!NOTE]
-> When hidden columns are exported, they are positioned where they would appear when not hidden, i.e. on the right of the closest non-hidden column as defined in the protocol.
+> When hidden columns are exported, they are positioned where they would appear when not hidden, i.e., on the right of the closest non-hidden column as defined in the protocol.
 
 #### DataMiner Cube - Visual Overview: Problem when using a placeholder inside another placeholder of the same type in Element shape data fields \[ID 26653\]
 
-When, in an Element shape data field, you used a placeholder inside another placeholder of the same type (e.g. a \[Param:\] placeholder inside another \[Param:\] placeholder), in some cases, those placeholders would not get resolved correctly, causing the shape to not get displayed.
+When, in an Element shape data field, you used a placeholder inside another placeholder of the same type (e.g., a \[Param:\] placeholder inside another \[Param:\] placeholder), in some cases, those placeholders would not get resolved correctly, causing the shape to not get displayed.
 
 #### DataMiner Taskbar Utility: Problem at the end of a DataMiner upgrade operation \[ID 26660\]
 
@@ -464,7 +464,7 @@ When a new Failover pair was configured, it could occur that the existing dashbo
 
 #### DataMiner Cube: Automation script executed from Visual Overview still displayed as 'Executing' when finished \[ID 26925\]
 
-When an Automation script was executed from a shape in Visual Overview, it could occur that it continued to be displayed as being executed even when the script was finished.
+When an automation script was executed from a shape in Visual Overview, it could occur that it continued to be displayed as being executed even when the script was finished.
 
 #### Precompiled QActions loaded in memory multiple times \[ID 26952\]
 

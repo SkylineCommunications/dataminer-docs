@@ -48,7 +48,7 @@ Data Aggregator does not necessarily have to be installed on a server running a 
 
 1. Configure the necessary settings. See [Data Aggregator settings](xref:Data_Aggregator_settings).
 
-1. Restart the *DataMiner DataAggregator* service (e.g. using Windows Task Manager).
+1. Restart the *DataMiner DataAggregator* service (e.g., using Windows Task Manager).
 
 > [!NOTE]
 > By default, a log file for Data Aggregator is stored in `C:\ProgramData\Skyline Communications\DataMiner DataAggregator\Logs`. In case the *DataAggregator* service does not start, the log file will contain more information.

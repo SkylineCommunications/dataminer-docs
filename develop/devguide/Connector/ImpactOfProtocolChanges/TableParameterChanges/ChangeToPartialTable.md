@@ -10,7 +10,7 @@ Changing a table to a [partial table](xref:Protocol.Params.Param.ArrayOptions-pa
 
 Existing custom reports may no longer work.
 
-*GetTable* via Automation scripts will only be able to retrieve the displayed content.
+*GetTable* via automation scripts will only be able to retrieve the displayed content.
 
 *DIS MCC*
 

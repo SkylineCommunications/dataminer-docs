@@ -36,14 +36,14 @@ The previous requirements are met.
 
 1. Check the log information.
 
-   - You can find the MySQL error log in a file with the name of the DMA and the extension *.err* in the MySQL installation folder, e.g. `C:\ProgramData\MySQL\MySQL Server 5.5`.
+   - You can find the MySQL error log in a file with the name of the DMA and the extension *.err* in the MySQL installation folder, e.g., `C:\ProgramData\MySQL\MySQL Server 5.5`.
    - DataMiner logging can be found in the *SLDatagateway*, *SLDBconnection* and *SLDatabase* log files in the folder `C:\Skyline DataMiner\Logging`.
 
 1. Open MySQL Workbench to verify the integrity of the SLDMADB tables. If you need to provide credentials, use `-user root -password (empty)`.
 1. Check if the MySQL service is running. If it is not, enforce forced recovery mode by configuring the MySQL configuration file as follows:
 
    1. Make sure you have a backup copy of your database in case it needs to be recreated.
-   1. Go to the MySQL installation folder, e.g. `C:\ProgramData\MySQL\MySQL Server 5.5`.
+   1. Go to the MySQL installation folder, e.g., `C:\ProgramData\MySQL\MySQL Server 5.5`.
    1. Open the file *my.ini*, using an application like Notepad, and add the following recovery options:
 
       ```txt
@@ -82,7 +82,7 @@ The previous requirements are met.
 
      ![Table context menu in MySQL Workbench](~/dataminer/images/MOPMySQLRestore4.png)
 
-   - In a Failover setup, another possible alternative is to dump the table and export it from the other Agent. Make sure the corrupt table is deleted (i.e. dropped). Then use MySQL tools to export the table, copy the export file to the other DMA and import it via MySQL workbench). Finally, load the imported table and compare the location in the workbench with the actual location of the database in the file system.
+   - In a Failover setup, another possible alternative is to dump the table and export it from the other Agent. Make sure the corrupt table is deleted (i.e., dropped). Then use MySQL tools to export the table, copy the export file to the other DMA and import it via MySQL workbench). Finally, load the imported table and compare the location in the workbench with the actual location of the database in the file system.
 
 ## Time estimate
 

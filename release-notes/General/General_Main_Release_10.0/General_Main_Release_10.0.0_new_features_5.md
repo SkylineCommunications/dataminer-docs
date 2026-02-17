@@ -139,7 +139,7 @@ In the Monitoring & Control app, you can now view the list of users who are curr
 
 To open the contacts list, click the user icon in the top-right corner of the screen and select *Contacts*.
 
-For each user, the list displays the name of the user, the name of the computer, and the amount of active connections. Clicking a user in the list will open a details pane showing more information about that user (e.g. “\[APP\] online since \[Connect time\]”).
+For each user, the list displays the name of the user, the name of the computer, and the amount of active connections. Clicking a user in the list will open a details pane showing more information about that user (e.g., “\[APP\] online since \[Connect time\]”).
 
 > [!NOTE]
 >
@@ -200,7 +200,7 @@ The header and login screen of the Jobs app have now been adapted to the new Dat
 
 When you open a browser window and enter the IP address or host name of a DataMiner Agent, you are now directed to a new DataMiner landing page (“/root”).
 
-After signing in, you will be presented with a list of apps (e.g. Monitoring, Dashboards, etc.), and a dropdown menu on the right will allow you to install the DataMiner Cube desktop application using either a click-once web installer or an MSI installer.
+After signing in, you will be presented with a list of apps (e.g., Monitoring, Dashboards, etc.), and a dropdown menu on the right will allow you to install the DataMiner Cube desktop application using either a click-once web installer or an MSI installer.
 
 Clicking the user menu in the upper-right corner will allow you to open the Tools page, the About page and DataMiner Help.
 
@@ -246,7 +246,7 @@ When you have successfully migrated all booking data, the button to start the wi
 
 > [!NOTE]
 >
-> - After migrating the booking data to the Indexing database, make sure to check your Automation scripts and Visio files and adjust the booking property names where necessary.
+> - After migrating the booking data to the Indexing database, make sure to check your automation scripts and Visio files and adjust the booking property names where necessary.
 > - When configuring backup settings in the *Backup* section of *System Center*, a new *Include SRM in backup* option is now available under the *Create a backup of the database* option. Select this option if you want the booking data in the Indexing database to be included in the backup package.
 > - An Indexing database takes about twice as much disk space to store booking data compared to a Cassandra database.
 > - A number of methods in the *ServiceManagerHelper* and *ResourceManagerHelper* classes have been adapted to allow them to manage booking data stored in an Indexing database.
@@ -309,7 +309,7 @@ In the *Apps* tab of the DataMiner Cube navigation pane, you can now find the f
 
 #### Service & Resource Management: Filter API Profile Manager objects updated \[ID 20761\]
 
-In Automation scripts, Profile Manager objects (parameters, profile instances and profile definitions) now allow the same filter style as Resource Manager objects.
+In automation scripts, Profile Manager objects (parameters, profile instances and profile definitions) now allow the same filter style as Resource Manager objects.
 
 #### Service & Resource Management/Automation: Profile parameter capabilities and resource capabilities \[ID 20891\]\[ID 20926\]\[ID 20958\]\[ID 21093\]\[ID 21178\]
 
@@ -575,7 +575,7 @@ In the *Apps* tab of the Cube navigation pane, all Service & Resource Managemen
 
 #### Bookings can now have 'pre-events' \[ID 21751\]
 
-It is now possible to add so-called “pre-events” to a booking, i.e. events that will take place before the start of the booking.
+It is now possible to add so-called “pre-events” to a booking, i.e., events that will take place before the start of the booking.
 
 > [!NOTE]
 >
@@ -652,7 +652,7 @@ If the long capacity value of one of the above-mentioned objects is updated, the
 
 #### Quarantine check when changing a profile instance \[ID 22274\]
 
-DataMiner will now also do a booking quarantine check when you update a profile instance. When conflicts are found after a profile instance update, a dialog box will appear, asking you whether the bookings should be quarantined (i.e. set to a pending state).
+DataMiner will now also do a booking quarantine check when you update a profile instance. When conflicts are found after a profile instance update, a dialog box will appear, asking you whether the bookings should be quarantined (i.e., set to a pending state).
 
 #### Checks added when regenerating contributing service protocol \[ID 22605\]
 
@@ -791,7 +791,7 @@ In the *QueryTable* window (which you can open via *Advanced \> Dynamic Table Q
 
 - Apart from exporting and importing the list of queries, you can re-run queries and calculate average timings.
 
-- For a specific query, it is possible to generate C# Automation script code that executes the query and provides access to the results.
+- For a specific query, it is possible to generate C# automation script code that executes the query and provides access to the results.
 
 #### SLNetClientTest: Viewing the connection timeout states of an element \[ID 23573\]
 

@@ -123,7 +123,7 @@ When an inter-element query failed to retrieve a parameter value of a specific e
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
+In all web apps (e.g., Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
 #### Dashboards app - GQI: Clearer error message will now appear when ModelHost is not running [ID 36155]
 
@@ -143,18 +143,18 @@ Example: `<a href="http://www.skyline.be" target="_blank">Skyline Communications
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-Up to now, in e.g. low-code apps, multivalue DOM fields would only show a summary of the values they contained. From now on, they will list all values instead.
+Up to now, in e.g., low-code apps, multivalue DOM fields would only show a summary of the values they contained. From now on, they will list all values instead.
 
 > [!NOTE]
 > When a multivalue DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
 
 ### Fixes
 
-#### Interactive Automation scripts: Problems with datetime component [ID 35682]
+#### Interactive automation scripts: Problems with datetime component [ID 35682]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-When an interactive Automation script was launched from a web app, the following issues could occur. These were all related to the datetime web component (*UIBlockType.Time*):
+When an interactive automation script was launched from a web app, the following issues could occur. These were all related to the datetime web component (*UIBlockType.Time*):
 
 - When you clicked a date in the datetime picker, a changed value would already be returned to the script. From now on, the selected datetime value will not be returned to the script until you close the picker (either by double-clicking or by clicking *Done*).
 

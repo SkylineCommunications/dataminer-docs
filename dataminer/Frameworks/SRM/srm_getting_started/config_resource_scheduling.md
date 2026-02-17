@@ -15,11 +15,11 @@ Before you can start using Resource Scheduling, you need to configure the Bookin
 
 ## Default wizard to schedule a resource
 
-When you install the SRM framework, an Automation script is included that can be used as the default wizard to schedule a resource.
+When you install the SRM framework, an automation script is included that can be used as the default wizard to schedule a resource.
 
 ### Required input parameters
 
-The wizard is an interactive Automation script called *SRM_BookResourcesQuickly*. As of SRM version 1.2.27, the input parameters accept the following fields in JSON format:
+The wizard is an interactive automation script called *SRM_BookResourcesQuickly*. As of SRM version 1.2.27, the input parameters accept the following fields in JSON format:
 
 - *BookingManagerElement*: The name of a Booking Manager element. This is used to generate log files in the directory specified in that element.
 - *ResourceIds*: The GUIDs of the resources that need to be added to the booking, separated by commas.
@@ -90,7 +90,7 @@ The SRM framework also includes other front-end scripts that can be used to exec
 
 <!-- RN 31474 -->
 
-The *SRM_AddResourceFromPoolToBooking* Automation script can be used as the default wizard to extend an existing booking with a resource from a predefined pool. The input argument of the script is a JSON string containing the following attributes:
+The *SRM_AddResourceFromPoolToBooking* automation script can be used as the default wizard to extend an existing booking with a resource from a predefined pool. The input argument of the script is a JSON string containing the following attributes:
 
 - *ReservationId*: The GUID of the booking to which the resource should be added.
 - *PoolId*: The ID of the resource pool to be selected. This has priority over *PoolName*, so if both are specified, only *PoolId* is read.
@@ -100,7 +100,7 @@ The *SRM_AddResourceFromPoolToBooking* Automation script can be used as the defa
 
 <!-- RN 32229 -->
 
-The *SRM_UnassignResourceFromBooking* Automation script can be used as the default wizard to remove a resource from a booking. The input argument of the script is a JSON string containing the following attributes:
+The *SRM_UnassignResourceFromBooking* automation script can be used as the default wizard to remove a resource from a booking. The input argument of the script is a JSON string containing the following attributes:
 
 - *ReservationId*: The GUID of the booking from which the resource will be removed.
 - *ResourceId*: The GUID of the resource that should be removed.

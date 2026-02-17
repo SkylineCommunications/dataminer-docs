@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.6.3
 ---
 
-# DataMiner web apps Feature Release 10.6.3 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.3
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.5.0 [CU12].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -22,7 +22,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 With the DOM security UI, you can now not only configure security settings on DOM definition level, but also on DOM instance level. This means that you can now allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
 
-For example, with the configuration illustrated below, the user group *London office* will only be able to read the "Jobs" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
+For example, with the configuration illustrated below, the user group *London office* will only be able to read the "Jobs" instances where the *Assigned office* field (i.e., a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
 
 ![Example: London office](~/dataminer/images/LondonOffice.png)
 
@@ -33,19 +33,22 @@ For more information on the server-side changes behind this feature, see [DataMi
 
 ## New features
 
-#### Dashboards app: New Add button in navigation pane [ID 44432]
+#### Dashboards app: Improved Add button in navigation pane [ID 44432]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 In the navigation pane, a new *Add* button is now available to users with permission to add dashboards.
 
 - Clicking *Add* will create a new dashboard.
+
 - Clicking the down arrow on the right will open a menu with the following commands:
 
-  - Create dashboard
-  - Create folder
-  - Import dashboard
-  - Import from catalog
+  - Dashboard
+  - Folder
+  - From import
+  - From catalog
+
+![Add button](~/dataminer/images/Add_new_dashboard.png)
 
 #### GQI DxM: New internal data source 'Get active sessions' & additional internal metrics [ID 44447]
 
@@ -67,7 +70,7 @@ Default columns:
 | Displayed name | Internal name | Type | Description |
 | -------------- | ------------- | ---- | ----------- |
 | Session ID | sessionId | Guid | ID of the query session. |
-| Query Name | queryName | string | Query name/tag, i.e. a custom identifier that can be provided by the client when executing a query. |
+| Query Name | queryName | string | Query name/tag, i.e., a custom identifier that can be provided by the client when executing a query. |
 | User | user | string | Username of the user who opened the session. |
 | Created | created | DateTime | Time at which the session was opened. |
 
@@ -83,13 +86,15 @@ Other columns:
 | Rows Fetched | rowsFetched | int | The total number of rows that have been fetched from the session. |
 | Pages Fetched | pagesFetched | int | The total number of pages that have been fetched from the session. |
 
-#### Dashboards app: Breadcrumbs in navigation pane [ID 44481]
+#### Dashboards app: Breadcrumbs in details pane [ID 44481]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Breadcrumbs have now been added to the navigation pane.
+Breadcrumbs have now been added to the details pane.
 
 By clicking the first breadcrumb, which is named *Overview*, you will navigate back to the root view.
+
+![Breadcrumbs](~/dataminer/images/Dashboards_Breadcrumbs.gif)
 
 #### Dashboards/Low-Code Apps - Timeline component: Zooming vertically while keeping the ALT key pressed [ID 44524]
 
@@ -100,6 +105,8 @@ In a *Timeline* component, it is now possible to vertically zoom in or out.
 To have all data on a timeline grow or shrink in height, rotate the mouse wheel while keeping the ALT key pressed.
 
 Note that items cannot shrink below 1/10th of their initial height or grow above 10 times their initial height.
+
+![Vertical zooming](~/dataminer/images/VerticalZoom.gif)
 
 #### Dashboards/Low-Code Apps - Timeline component: Group templates [ID 44557]
 
@@ -127,7 +134,7 @@ To do so, go to *App settings*. There you can add, update, and delete such a fil
 
 When a *Timeline* component has grouping applied, from now on, under *Layout > Groups > Height*, the height of those groups can be set to either "Fixed" or "Grow".
 
-- When set to "Fixed" (i.e. the default setting), the items within a group will shrink depending on the number of items in that group. That way, the height of the group will stay the same.
+- When set to "Fixed" (i.e., the default setting), the items within a group will shrink depending on the number of items in that group. That way, the height of the group will stay the same.
 
 - When set to "Grow", all items within a group will have the same height, and the height of the group will grow accordingly.
 
@@ -142,7 +149,7 @@ When a *Timeline* component has grouping applied, from now on, under *Layout > G
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Many components in dashboards and low-code apps can be configured to be linked to component data, i.e. data that is made available by other components in the dashboard or app. This mechanism has now been reworked in order to enhance overall performance, scalability, reliability and robustness.
+Many components in dashboards and low-code apps can be configured to be linked to component data, i.e., data that is made available by other components in the dashboard or app. This mechanism has now been reworked in order to enhance overall performance, scalability, reliability and robustness.
 
 #### Dashboards/Low-Code Apps: Enhanced theme logic [ID 44336]
 
@@ -181,7 +188,7 @@ From now on, it will be possible to clear this setting's value. If you do so, no
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When, in the sidebar, you right-clicked in any of the panes, up to now, the same context menu would appear, i.e. a menu allowing you to add a dashboard, add a folder, or open the *Dashboards settings* window.
+When, in the sidebar, you right-clicked in any of the panes, up to now, the same context menu would appear, i.e., a menu allowing you to add a dashboard, add a folder, or open the *Dashboards settings* window.
 
 From now on, you will only be able to open this context menu when right-clicking the navigation pane. You will no longer be able to open this context menu when right-clicking in the *Recent items*, *Private dashboards*, or *Shared dashboards* pane.
 
@@ -201,7 +208,7 @@ This message has now been changed to make it clearer.
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
+Up to now, for a GQI extension (i.e., an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
 
@@ -220,11 +227,11 @@ The icons and favicons of the DataMiner landing page and the following DataMiner
 
 Also, the app titles have been standardized to ensure consistency across all apps.
 
-#### Interactive Automation scripts: UI components Time and Calendar can now all display seconds [ID 44521]
+#### Interactive automation scripts: UI components Time and Calendar can now all display seconds [ID 44521]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, in interactive Automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
+Up to now, in interactive automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
 
 - `UIBlockType.Time` with `AutomationDateTimePickerOptions`
 - `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`
@@ -246,6 +253,17 @@ In web apps, the popup windows that appear in visual overviews have now been red
 
 When you export or import a dashboard or a low-code app, from now on, the theme will now automatically be included in the export or import package.
 
+#### Interactive Automation scripts in web apps: New UsePreviousCollapsedState property will allow tree nodes to restore their IsCollapsed state when the UI is updated [ID 44541]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 [CU0] -->
+
+When, in an interactive Automation script, a TreeView control was used with the `SupportsLazyLoading` option set to false, up to now, each time the UI was updated, all tree nodes would revert their expanded state back to the `IsCollapsed` setting.
+
+Tree nodes now have a new `UsePreviousCollapsedState` property. By default, this property will be set to false. When set to true, each time the UI is updated, the previous state of the tree node in question will be restored. If no previous state is available, the current `IsCollapsed` state will be applied.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.6.0/10.6.3 or newer.
+
 #### GQI DxM: 'Get parameters for elements where' data source can now query indexed logger tables [ID 44553]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
@@ -259,7 +277,7 @@ From now on, it will be possible to use the GQI data source *Get parameters for 
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-When you try to log in to a certain web app (e.g. Dashboards, Monitoring, etc.), the title of the login screen mentions the name of the app you want to access: `Sign in to <System name> to access <App name>`.
+When you try to log in to a certain web app (e.g., Dashboards, Monitoring, etc.), the title of the login screen mentions the name of the app you want to access: `Sign in to <System name> to access <App name>`.
 
 In that title, the app name will now be displayed in bold to make it stand out more.
 
@@ -267,7 +285,7 @@ In that title, the app name will now be displayed in bold to make it stand out m
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, it was not possible to add an `equals` filter on e.g. an elementID column. It was only possible to add a `contains` filter.
+Up to now, it was not possible to add an `equals` filter on e.g., an elementID column. It was only possible to add a `contains` filter.
 
 From now on, it will be possible to add an `equals` filter on all columns containing the following object references:
 
@@ -377,7 +395,7 @@ Up to now, re-applying the selection in a *Maps* component would incorrectly sel
 
 When the alarms in an *Alarm table* component are grouped by time, they are grouped under group names such as "Today", "Yesterday", and "Last Week".
 
-Up to now, when a certain group name had been removed (e.g. by means of an Automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.
+Up to now, when a certain group name had been removed (e.g., by means of an automation script), and an alarm under that group name returned to its normal state, an error would occur when the *Alarm table* component attempted to remove the alarm.
 
 #### GQI DxM: Aggregations performed on columns of type integer would incorrectly produce a column of type double [ID 44492]
 
@@ -421,7 +439,7 @@ In some cases, a low-code app using a default theme could throw a console error.
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, in some cases, the DataMiner GQI Extension Worker SLNet process could leak memory. This process is responsible for maintaining shared SLNet connections for GQI extensions (i.e. ad hoc data sources and custom operators).
+Up to now, in some cases, the DataMiner GQI Extension Worker SLNet process could leak memory. This process is responsible for maintaining shared SLNet connections for GQI extensions (i.e., ad hoc data sources and custom operators).
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Problem when moving nodes [ID 44571]
 
@@ -475,7 +493,7 @@ From now on, all zones will be cleared whenever the query changes, and the marke
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, when a *Node edge graph* component with real-time updates enabled had a column filter applied, only the value of that column would be updated when an update was received. As a result, when e.g. a node had been moved, in some cases, that node would keep its former position.
+Up to now, when a *Node edge graph* component with real-time updates enabled had a column filter applied, only the value of that column would be updated when an update was received. As a result, when e.g., a node had been moved, in some cases, that node would keep its former position.
 
 From now on, all values will be updated, even those that are not associated with a column filter.
 
@@ -483,9 +501,9 @@ From now on, all values will be updated, even those that are not associated with
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, falsy values (e.g. 0, null, false, empty string, etc.) would incorrectly not be passed to script input parameters.
+Up to now, falsy values (e.g., 0, null, false, empty string, etc.) would incorrectly not be passed to script input parameters.
 
-For example, when a numeric input box passed the value 0 to an input parameter of a script, that script would incorrectly receive '[]' (i.e. an empty JSON array). From now on, the script will receive '["0"]' instead.
+For example, when a numeric input box passed the value 0 to an input parameter of a script, that script would incorrectly receive '[]' (i.e., an empty JSON array). From now on, the script will receive '["0"]' instead.
 
 #### Dashboards/Low-Code Apps: Pivot table component would remain empty until you interacted with the dashboard or low-code app [ID 44634]
 

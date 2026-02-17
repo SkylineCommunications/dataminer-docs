@@ -51,9 +51,9 @@ int result = (int) protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, e
     |7|Port type*: None, IP, UDP or Serial|
     |8|Port number*|
     |9|Port baud rate*|
-    |10|Port parity* (In case of an SNMPv3 connection, this field denotes the authentication algorithm, e.g. "HMAC-SHA".)|
+    |10|Port parity* (In case of an SNMPv3 connection, this field denotes the authentication algorithm, e.g., "HMAC-SHA".)|
     |11|Port data bits* (In case of an SNMPv3 connection, this field denotes the user name.)|
-    |12|Port stop bits* (In case of an SNMPv3 connection, this field denotes whether authentication and privacy is enabled, e.g. "authPriv".)|
+    |12|Port stop bits* (In case of an SNMPv3 connection, this field denotes whether authentication and privacy is enabled, e.g., "authPriv".)|
     |13|Port flow control* (In case of an SNMPv3 connection, this field denotes the privacy algorithm.)|
     |14|Port bus*|
     |15|Retries*|
@@ -113,7 +113,7 @@ int result = (int) protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, e
   - 13: Smart-serial single
   - 16: WebSocket
 
-  E.g. creating an element with two HTTP connections will require a protocol type field value of "10\t10".
+  Example: creating an element with two HTTP connections will require a protocol type field value of "10\t10".
 
   The following example creates an element running an SNMPv3 protocol:
 

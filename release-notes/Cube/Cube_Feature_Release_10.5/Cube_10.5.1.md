@@ -20,7 +20,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
 
-Up to now, when Cube was used as a service (i.e. running inside SLHelper) to e.g. show visual overviews on mobile devices, it would always subscribe to all alarms. However, in many cases, no alarm information is needed when showing these visual overviews.
+Up to now, when Cube was used as a service (i.e., running inside SLHelper) to, for example, show visual overviews on mobile devices, it would always subscribe to all alarms. However, in many cases, no alarm information is needed when showing these visual overviews.
 
 From now on, in the *SLHelper.exe.config* file, it is possible to indicate that you want alarm subscriptions to be skipped by setting the `helper:load-alarms` option to false. See the example below.
 
@@ -158,13 +158,13 @@ A number of enhancements have been made with regard to the configuration of redu
 
 When the alarm template editor receives a baseline update for a table cell, Cube checks whether average trending is enabled for the table cell in question. It will now also check whether the table cell is empty or not.
 
-#### Correlation app: No longer possible to add or load Correlation rules that use the deprecated System Display Correlation engine [ID 41363]
+#### Correlation app: No longer possible to add or load correlation rules that use the deprecated System Display Correlation engine [ID 41363]
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
 
-Up to now, in the *Correlation* app, it was possible to add Correlation rules that used the deprecated System Display Correlation engine. To do so, you had to right-click a folder in the tree view pane (or click the *More...* button at the bottom of the pane) and select *Advanced > Old engine > Add rule*.
+Up to now, in the *Correlation* app, it was possible to add correlation rules that used the deprecated System Display Correlation engine. To do so, you had to right-click a folder in the tree view pane (or click the *More...* button at the bottom of the pane) and select *Advanced > Old engine > Add rule*.
 
-From now on, when Cube is connected to a DataMiner Agent running version 10.5.1 or newer, this will no longer be possible, and existing Correlation rules using the deprecated System Display Correlation engine will no longer be loaded.
+From now on, when Cube is connected to a DataMiner Agent running version 10.5.1 or newer, this will no longer be possible, and existing correlation rules using the deprecated System Display Correlation engine will no longer be loaded.
 
 Also, when you open the *dataminer* tab in the *Logging* section of *System Center* when connected to a DataMiner Agent running version 10.5.1 or newer, the *Correlation (SD)* log file will be removed from the log file list.
 
@@ -180,7 +180,7 @@ When, in the *Correlation* app or the *Scheduler* app, you open an existing *Sen
 
 In the *Search & Indexing* section of *System Center*, you can indicate whether search indexing has to be enabled on the client.
 
-From now on, when Cube is used as a service (i.e. running inside SLHelper), the *Enable search indexing on the client* setting will be disregarded.
+From now on, when Cube is used as a service (i.e., running inside SLHelper), the *Enable search indexing on the client* setting will be disregarded.
 
 #### Visual Overview - Resource Manager component: Session variable 'ResourcesInSelectedReservation' will be updated automatically when the list of resources assigned to the selected booking changes [ID 41432]
 

@@ -1,5 +1,6 @@
 ---
 uid: Core_Values
+description: Core values of the DevOps Creative Collective include cultivating creativity, promoting collaboration, maximizing value, and maintaining openness.
 ---
 
 # Core values

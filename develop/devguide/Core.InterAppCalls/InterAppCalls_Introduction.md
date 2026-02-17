@@ -8,7 +8,7 @@ keywords: InterAppCalls, InterApp
 The InterApp framework, available through the NuGet package [Skyline.DataMiner.Core.InterAppCalls.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.InterAppCalls.Common), provides a C# message and response architecture that can be used in several ways:
 
 - From element to element and back.
-- From Automation script to element and back.
+- From automation script to element and back.
 - From application on the same server to element and back.
 
 Using InterApp calls provides you with:
@@ -38,7 +38,7 @@ Note that using DataMiner **10.3.12 or higher is highly recommended**, as this v
 
 ### Connector requirements
 
-Two parameters have been reserved to be used in every protocol that wants to communicate with the InterApp classes. However, you can add additional different custom parameters within a project if you have control over every protocol and Automation script used in it. This can be efficient in situations where there are many external sources requiring responses from a single element. A few extra receiver-return parameters can reduce traffic in the DataMiner System.
+Two parameters have been reserved to be used in every protocol that wants to communicate with the InterApp classes. However, you can add additional different custom parameters within a project if you have control over every protocol and automation script used in it. This can be efficient in situations where there are many external sources requiring responses from a single element. A few extra receiver-return parameters can reduce traffic in the DataMiner System.
 
 The following two parameters must always be added and processed:
 

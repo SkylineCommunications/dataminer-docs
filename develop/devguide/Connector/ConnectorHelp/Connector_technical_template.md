@@ -47,11 +47,11 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-  - **Baudrate**: [Baudrate specified in the manual of the device, e.g. *9600*.]
-  - **Databits**: [Databits specified in the manual of the device, e.g. *7*.]
-  - **Stopbits**: [Stopbits specified in the manual of the device, e.g. *1*.]
-  - **Parity**: [Parity specified in the manual of the device, e.g. *No*.]
-  - **FlowControl**: [FlowControl specified in the manual of the device, e.g. *No*.]
+  - **Baudrate**: [Baudrate specified in the manual of the device, e.g., *9600*.]
+  - **Databits**: [Databits specified in the manual of the device, e.g., *7*.]
+  - **Stopbits**: [Stopbits specified in the manual of the device, e.g., *1*.]
+  - **Parity**: [Parity specified in the manual of the device, e.g., *No*.]
+  - **FlowControl**: [FlowControl specified in the manual of the device, e.g., *No*.]
 
 - Interface connection:
 
@@ -89,11 +89,11 @@ The web interface is only accessible when the client machine has network access 
 
 ### Automation Scripts
 
-[If any Automation scripts need to be configured, indicate this in this section. Otherwise, this section can be removed.]
+[If any automation scripts need to be configured, indicate this in this section. Otherwise, this section can be removed.]
 
 ### Correlation rules
 
-[If any Correlation rules need to be configured, indicate this in this section. Otherwise, this section can be removed.]
+[If any correlation rules need to be configured, indicate this in this section. Otherwise, this section can be removed.]
 
 ### Visio Files
 
@@ -115,7 +115,7 @@ The web interface is only accessible when the client machine has network access 
 
 The [x.x.x.x] range of the [connector name] connector supports the usage of DCF.
 
-DCF can also be implemented through the DataMiner DCF user interface and through third-party DataMiner connectors (e.g. a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through third-party DataMiner connectors (e.g., a manager).
 
 [REMOVE IF NOT RELEVANT:] Connectivity for this connector is managed by the parent connector [connector name].
 

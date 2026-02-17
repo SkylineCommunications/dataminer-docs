@@ -54,7 +54,7 @@ From now on, OPC communication should no longer be used in DataMiner connectors.
 
 From now on, the `Engine` class exposes the public property `ScriptName`.
 
-This means that, in an Automation script, it will now be possible to retrieve the name of that script.
+This means that, in an automation script, it will now be possible to retrieve the name of that script.
 
 #### PDF reports configured in the Dashboards app can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
 
@@ -134,7 +134,7 @@ From now on, when BrokerGateway is uninstalled, the entire `C:\ProgramData\Skyli
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-After a DataMiner connection had been re-established (due to e.g. a network issue, a failover switch, etc.), in some rare cases, an issue could occur that would cause parameter or DCF information to be unavailable to remotely hosted elements.
+After a DataMiner connection had been re-established (due to, for example, a network issue, a failover switch, etc.), in some rare cases, an issue could occur that would cause parameter or DCF information to be unavailable to remotely hosted elements.
 
 #### MessageBroker client could get stuck while trying to fetch information from BrokerGateway [ID 43832]
 
@@ -191,4 +191,4 @@ These notices will now be generated again.
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, Automation script matrix actions associated with those elements could fail.
+Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, automation script matrix actions associated with those elements could fail.

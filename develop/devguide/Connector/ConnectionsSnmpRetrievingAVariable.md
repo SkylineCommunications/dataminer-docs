@@ -80,4 +80,4 @@ When a protocol issues an SNMP request (a Get request in this case), the SLProto
 
 After all other requests that preceded this request in the queue have been handled, the SLSNMPManager process will send the SNMP request to the SNMP agent running on the device.
 
-It is important to note that this queue is a priority queue. An SNMP Set request will always receive a higher priority than SNMP Get requests (e.g. get request, get next request). Therefore, SNMP Get requests will only be processed by the SLSNMPManager once no SNMP Set requests are present on the queue.
+It is important to note that this queue is a priority queue. An SNMP Set request will always receive a higher priority than SNMP Get requests (e.g., get request, get next request). Therefore, SNMP Get requests will only be processed by the SLSNMPManager once no SNMP Set requests are present on the queue.

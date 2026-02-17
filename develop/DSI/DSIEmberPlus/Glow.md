@@ -6,7 +6,7 @@ uid: Glow
 
 The Glow DTD (Design Type Document) specification defines object types required for a device to represent its structure.
 
-The number of types defined in Glow is limited and the most used ones are "Node" and "Parameter". A node represents a device and its elements (e.g. modules, cards, etc.). A parameter contains the properties of a control (e.g. name, read-write access, range, etc.).
+The number of types defined in Glow is limited and the most used ones are "Node" and "Parameter". A node represents a device and its elements (e.g., modules, cards, etc.). A parameter contains the properties of a control (e.g., name, read-write access, range, etc.).
 
 #### Data types
 

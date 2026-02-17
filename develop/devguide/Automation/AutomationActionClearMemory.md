@@ -4,7 +4,7 @@ uid: AutomationActionClearMemory
 
 # Clear memory
 
-Clears the content of the specified Automation script memory file.
+Clears the content of the specified automation script memory file.
 
 ```xml
 <Exe id="2" type="clearmemory">

@@ -51,7 +51,7 @@ When *ResourceManager* and *SRMServiceStateManager* fail to get initialized at D
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-If, upon detection of a new trend, the trend returns to the old trend (i.e. the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
+If, upon detection of a new trend, the trend returns to the old trend (i.e., the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
 
 #### SLAnalytics: Lost session with SLDataGateway will now automatically be restored [ID 37614]
 
@@ -126,7 +126,7 @@ When the Cassandra health monitor reconnected to a remote Cassandra or Cassandra
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking* at the same time (e.g. via *System Center > System settings > analytics config* in DataMiner Cube), only *Alarm Focus* would actually be stopped. *Automatic Incident Tracking* would still be active, but in an incorrect state.
+Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking* at the same time (e.g., via *System Center > System settings > analytics config* in DataMiner Cube), only *Alarm Focus* would actually be stopped. *Automatic Incident Tracking* would still be active, but in an incorrect state.
 
 #### Service & Resource Management: Problem with resource capability exposers [ID 37503]
 

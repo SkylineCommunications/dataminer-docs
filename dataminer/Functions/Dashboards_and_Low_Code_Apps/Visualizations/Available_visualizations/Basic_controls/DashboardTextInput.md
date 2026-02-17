@@ -49,7 +49,7 @@ There are two ways to configure this:
 
 1. Select the column you want to filter.
 
-1. Choose the filter method, e.g. `contains`.
+1. Choose the filter method, e.g., `contains`.
 
 1. Under *Value*, click the ![Link to](~/dataminer/images/Link_to_Data.png) icon.
 

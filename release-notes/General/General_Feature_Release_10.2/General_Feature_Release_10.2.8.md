@@ -14,15 +14,15 @@ uid: General_Feature_Release_10.2.8
 
 ### DMS core functionality
 
-#### DataMiner Object Model: Defining a script execution action that will execute an interactive Automation script \[ID 33513\]
+#### DataMiner Object Model: Defining a script execution action that will execute an interactive automation script \[ID 33513\]
 
-It is now possible to define a script execution action that will execute an interactive Automation script.
+It is now possible to define a script execution action that will execute an interactive automation script.
 
 Process:
 
-1. A client requests the execution of a DOM action in which the execution of an interactive Automation script has been defined via the domHelper.DomInstances.ExecuteAction() method.
+1. A client requests the execution of a DOM action in which the execution of an interactive automation script has been defined via the domHelper.DomInstances.ExecuteAction() method.
 
-   To indicate that the Automation script is an interactive Automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
+   To indicate that the automation script is an interactive automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
 
 1. The domHelper.DomInstances.ExecuteAction() method replies immediately.
 
@@ -128,7 +128,7 @@ This change in behavior will now allow you to trigger a script by clicking an ac
 2. Select a time range.
 3. Click an action button.
 
-The SelectedTimeRange variable will now be cleared when the time selection is cleared (i.e. when it is no longer visible/available). Up to now, this variable would only be cleared when the selection was changed.
+The SelectedTimeRange variable will now be cleared when the time selection is cleared (i.e., when it is no longer visible/available). Up to now, this variable would only be cleared when the selection was changed.
 
 #### System Center - Agents: BPA Details window now has a Copy button that copies the list of errors to the Windows clipboard \[ID 33638\]
 
@@ -138,7 +138,7 @@ At the bottom of this *Details* window, you can now find a *Copy* button that 
 
 #### Visual Overview: \[this reservationID\] placeholder \[ID 33669\]
 
-In shape data or shape text of shapes linked to a booking (e.g. dynamically generated shapes that represent bookings), you can now use a \[this reservationID\] placeholder to retrieve the GUID of the booking.
+In shape data or shape text of shapes linked to a booking (e.g., dynamically generated shapes that represent bookings), you can now use a \[this reservationID\] placeholder to retrieve the GUID of the booking.
 
 See the following examples:
 
@@ -272,8 +272,8 @@ This functionality has now been extended. A booking will now also be set to “i
 
 From now on, the “Add to incident” menu option will no longer be available when you right-click an alarm that cannot be added to an incident:
 
-- Active alarms with severity “normal” (i.e. clearable alarms that have not been cleared yet)
-- Alarms with a source other “DataMiner System” (e.g. correlation alarms)
+- Active alarms with severity “normal” (i.e., clearable alarms that have not been cleared yet)
+- Alarms with a source other “DataMiner System” (e.g., correlation alarms)
 - Alarms associated with DataMiner itself
 - Notices, errors, information events and suggestion events
 
@@ -429,7 +429,7 @@ On standalone DataMiner Agents, changes to resource pools would incorrectly not 
 
 #### No alarm would be generated when an element that exported data failed to start \[ID 33744\]
 
-When an error occurred during the startup of an element that exported data (e.g. a DVE or function element), in some cases, no alarm would be generated.
+When an error occurred during the startup of an element that exported data (e.g., a DVE or function element), in some cases, no alarm would be generated.
 
 #### Web services API: High CPU usage when executing web methods \[ID 33746\]
 
@@ -457,7 +457,7 @@ When SLElement was processing a history set, an error could occur when the times
 
 The following problems with the Failover option *AlwaysBruteForceOffline* have now been fixed:
 
-- When configured via an UpdateFailoverConfigMessage in an Automation script, the option would not be applied in the DMS.xml file.
+- When configured via an UpdateFailoverConfigMessage in an automation script, the option would not be applied in the DMS.xml file.
 - When configured by manually updating the DMS.xml file, the option would be overwritten.
 - When applied, the option would cause the DMA to restart without also restarting SLNet.
 
@@ -474,7 +474,7 @@ When connected to a particular DataMiner System, users with *Manage client versi
 
 #### Dashboards app: Options displayed in component headers would not be readable when a dark theme was applied \[ID 33805\]
 
-When a dark theme was applied, options displayed in the header of certain dashboard components (e.g. “Export to CSV”) would not be readable.
+When a dark theme was applied, options displayed in the header of certain dashboard components (e.g., “Export to CSV”) would not be readable.
 
 #### Cassandra Cluster Migrator tool: Problem when migrating a large amount of data \[ID 33821\]
 
@@ -517,7 +517,7 @@ In the following example, the second connection would incorrectly be ignored.
 ```
 
 > [!NOTE]
-> Specifying a type with \`\<Type>\` for one connection and specifying a type with e.g. \`\<Http>\` for another connection is not supported.
+> Specifying a type with \`\<Type>\` for one connection and specifying a type with e.g., \`\<Http>\` for another connection is not supported.
 
 ## Addendum CU1
 

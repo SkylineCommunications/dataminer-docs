@@ -20,7 +20,7 @@ This attribute is required for all values of On except for "communication" and "
 
 This attribute contains either a number or the value "each".
 
-In case a number is defined, this specifies the ID of the item (the type of item is specified in On, e.g. "parameter") that makes this trigger go off.
+In case a number is defined, this specifies the ID of the item (the type of item is specified in On, e.g., "parameter") that makes this trigger go off.
 
 Example:
 
@@ -38,7 +38,7 @@ The following example specifies that this trigger will go off on a change of par
 </Trigger>
 ```
 
-When "each" is defined as the attribute value, the trigger will act as a default trigger, i.e. this trigger will be used unless there is another trigger defined that triggers on that specific item.
+When "each" is defined as the attribute value, the trigger will act as a default trigger, i.e., this trigger will be used unless there is another trigger defined that triggers on that specific item.
 
 Example:
 
@@ -55,7 +55,7 @@ Example:
 </Trigger>
 ```
 
-This trigger will be used for each parameter except for parameters that have a trigger that explicitly triggers on those parameters. E.g. the trigger above will not be used for parameter 200 in case the trigger below is also defined in the protocol:
+This trigger will be used for each parameter except for parameters that have a trigger that explicitly triggers on those parameters. For example, the trigger above will not be used for parameter 200 in case the trigger below is also defined in the protocol:
 
 ```xml
 <Trigger id="200">

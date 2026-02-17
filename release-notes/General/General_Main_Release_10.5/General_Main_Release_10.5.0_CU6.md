@@ -82,9 +82,9 @@ For detailed information about the changes included in the above-mentioned versi
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When, in the *Automation* module, you imported an Automation script, up to now, you would not receive any feedback about whether or not the import operation had been successful. Only after checking the Cube logs would you be able to find out that an import operation had failed.
+When, in the *Automation* module, you imported an automation script, up to now, you would not receive any feedback about whether or not the import operation had been successful. Only after checking the Cube logs would you be able to find out that an import operation had failed.
 
-From now on, the following error message will appear whenever an exception is thrown while an Automation script is being imported:
+From now on, the following error message will appear whenever an exception is thrown while an automation script is being imported:
 
 `Something went wrong. Please check the Cube and Automation logging for more information.`
 
@@ -166,7 +166,7 @@ When an element was restarted multiple times in rapid succession, in some cases,
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When you stopped an element or performed a Failover switch when another action was being executed (e.g. a parameter set being performed by a QAction), in some cases, a deadlock could occur.
+When you stopped an element or performed a Failover switch when another action was being executed (e.g., a parameter set being performed by a QAction), in some cases, a deadlock could occur.
 
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
 
@@ -279,7 +279,7 @@ In some cases, a runtime error could be thrown when a DVE child element was dele
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
+When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g., DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
 #### StorageModule DcM would fail to read an element XML file [ID 43350]
 

@@ -26,7 +26,7 @@ To deploy the Availability branch of the EPM Solution:
 
    - If you are using a DataMiner Cube version prior to DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 -->, make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled so you can use the Topology app.
 
-1. In DataMiner Cube, go to *Apps* > *Automation* and run the *EPMSetupWizard* Automation script (in the *EPM TOOLS* folder).
+1. In DataMiner Cube, go to *Apps* > *Automation* and run the *EPMSetupWizard* automation script (in the *EPM TOOLS* folder).
 
    > [!TIP]
    > See [Manually executing a script](xref:Manually_executing_a_script)
@@ -40,7 +40,7 @@ To deploy the Availability branch of the EPM Solution:
       > [!NOTE]
       > The collectors can support more endpoints. This setting is used as a baseline. This means that as more endpoints are added, there is nothing else that needs to be done, and the system will work without intervention. You will only need to add more collectors in case there is a large increase of the number of endpoints.
 
-   - *File Configuration*: This section contains all the required fields for distributing the endpoints to all elements. If a cluster is used, provide the remote directory with the hostname, e.g. `\\HostName\DataMiner EPM\Availability`, and the username and password of a user that has read/write access to this directory.
+   - *File Configuration*: This section contains all the required fields for distributing the endpoints to all elements. If a cluster is used, provide the remote directory with the hostname, e.g., `\\HostName\DataMiner EPM\Availability`, and the username and password of a user that has read/write access to this directory.
 
 1. Click the *Create* button.
 

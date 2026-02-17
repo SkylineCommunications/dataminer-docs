@@ -4,7 +4,7 @@ uid: BPA_Check_Deprecated_DLL_Usage
 
 # Check Deprecated DLL Usage
 
-This BPA test checks for the use of deprecated or outdated DLLs in QActions and Automation scripts. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab).
+This BPA test checks for the use of deprecated or outdated DLLs in QActions and automation scripts. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab).
 
 It is available from DataMiner 10.4.6/10.5.0 onwards, but prior to DataMiner 10.5.5/10.6.0 it is known as *Check Deprecated MySQL DLL* instead.
 
@@ -24,7 +24,7 @@ If a [deprecated DLL file is detected](#warning) on your DMA, the file version i
 ## Metadata
 
 - Name: Check Deprecated DLL Usage
-- Description: Checks if any protocols and Automation scripts use deprecated DLLs (MySql.Data.dll or SLDatabase.dll)
+- Description: Checks if any protocols and automation scripts use deprecated DLLs (MySql.Data.dll or SLDatabase.dll)
 - Author: Skyline Communications
 - Default schedule: Every 7 days
 
@@ -49,11 +49,11 @@ An outdated DLL file was detected.
   1. Remove the *X.dll* file from the *Y* folder.
 
      > [!IMPORTANT]
-     > When you remove the mentioned DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an Automation script is executed.
+     > When you remove the mentioned DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
 
   1. Start the DataMiner Agent.
 
-One or multiple protocols and/or Automation scripts still use an outdated DLL file.
+One or multiple protocols and/or automation scripts still use an outdated DLL file.
 
 - Result message: `Outdated X.dll (version x.x.x.x) detected, along with the use of the deprecated Y.dll`
 
@@ -61,9 +61,9 @@ One or multiple protocols and/or Automation scripts still use an outdated DLL fi
 
 - Corrective action:
 
-  1. Click the ellipsis button ("...") next to the error message to access an overview of all protocols and Automation scripts that still use the deprecated DLL file.
+  1. Click the ellipsis button ("...") next to the error message to access an overview of all protocols and automation scripts that still use the deprecated DLL file.
 
-     This overview contains the names and versions of the protocols that use the file, including the IDs and QActions in which this file is referenced, as well as the names of the Automation scripts that use the file.
+     This overview contains the names and versions of the protocols that use the file, including the IDs and QActions in which this file is referenced, as well as the names of the automation scripts that use the file.
 
      Example:
 
@@ -125,7 +125,7 @@ One or multiple protocols and/or Automation scripts still use an outdated DLL fi
   1. Remove the outdated DLL file(s) from their folder(s) (mentioned in the result message).
 
      > [!IMPORTANT]
-     > When you remove a DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an Automation script is executed.
+     > When you remove a DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
 
   1. Start the DataMiner Agent.
 
@@ -144,11 +144,11 @@ A deprecated DLL file was detected in the ProtocolScripts folder.
   1. Remove the *X.dll* file from the `C:\Skyline DataMiner\ProtocolScripts` folder.
 
      > [!IMPORTANT]
-     > When you remove the DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an Automation script is executed.
+     > When you remove the DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
 
   1. Start the DataMiner Agent.
 
-One or multiple protocols and/or Automation scripts still use a deprecated DLL file.
+One or multiple protocols and/or automation scripts still use a deprecated DLL file.
 
 - Result message: `Deprecated X.dll used.`
 
@@ -156,9 +156,9 @@ One or multiple protocols and/or Automation scripts still use a deprecated DLL f
 
 - Corrective action:
 
-  1. Click the ellipsis button ("...") next to the error message to access an overview of all protocols and Automation scripts that still use the deprecated DLL file.
+  1. Click the ellipsis button ("...") next to the error message to access an overview of all protocols and automation scripts that still use the deprecated DLL file.
 
-     This overview contains the names and versions of the protocols that use the file, including the IDs and QActions in which this file is referenced, as well as the names of the Automation scripts that use the file.
+     This overview contains the names and versions of the protocols that use the file, including the IDs and QActions in which this file is referenced, as well as the names of the automation scripts that use the file.
 
      Example:
 
@@ -235,7 +235,7 @@ You can replace *MySql.Data.dll* with the [MySql.Data Nuget](https://www.nuget.o
 
 Depending on the database that SLDatabase was used to communicate with, a different NuGet package is necessary.
 
-The QAction or Automation script will need to be adapted, as each NuGet exposes different functions and ways to interact with a database.
+The QAction or automation script will need to be adapted, as each NuGet exposes different functions and ways to interact with a database.
 
 The following list of NuGet packages can be a good start for replacing the SLDatabase.dll:
 

@@ -33,7 +33,7 @@ To send an ad hoc text message:
     > [!NOTE]
     > This button is only available when the Mobile Gateway has been initialized.
 
-To execute an ad hoc command (e.g. for test purposes):
+To execute an ad hoc command (e.g., for test purposes):
 
 - In the *commands* tab, select a command in the list on the left, and click *Execute*.
 
@@ -59,7 +59,7 @@ To check the list of text messages waiting to be sent:
     |------------|------------------------------|
     | Message    | The content of the message   |
     | IP Address | The number of the cell phone |
-    | Type       | SMS (i.e. text message)      |
+    | Type       | SMS (i.e., text message)      |
 
 To remove a text message that has not yet been sent:
 

@@ -32,7 +32,7 @@ The ID(s) of the commands on which to perform stuffing.
 
 #### Type@value
 
-The stuffing byte sequence. This can also be a hex string (e.g. 0xFF).
+The stuffing byte sequence. This can also be a hex string (e.g., 0xFF).
 
 ## On response
 
@@ -58,7 +58,7 @@ The ID(s) of the response(s) on which to perform stuffing.
 
 #### Type@value
 
-The stuffing byte sequence. This can also be a hex string (e.g. 0xFF).
+The stuffing byte sequence. This can also be a hex string (e.g., 0xFF).
 
 ## Examples
 

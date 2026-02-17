@@ -22,4 +22,4 @@ To help with debugging, it can be useful to know more about how assemblies are l
 
 Remember that even when compilation succeeds, issues could still occur at runtime.
 
-Note also that the [behavior in Automation scripts](xref:AssemblyResolvingAutomationScripts) is different from the [behavior in connectors](xref:AssemblyResolvingConnectors).
+Note also that the [behavior in automation scripts](xref:AssemblyResolvingAutomationScripts) is different from the [behavior in connectors](xref:AssemblyResolvingConnectors).

@@ -22,7 +22,7 @@ Open Windows Task Manager, go to the ***Performance tab***, and check if ***CPU*
 
    The following processes are used by or related to DataMiner:
 
-   - *SL\*.exe*: The processes starting with SL (e.g. SLProtocol, SLElement) are the core DataMiner services.
+   - *SL\*.exe*: The processes starting with SL (e.g., SLProtocol, SLElement) are the core DataMiner services.
 
    - *DataMinerCube.exe*: The DataMiner Cube desktop application.
 
@@ -36,7 +36,7 @@ Open Windows Task Manager, go to the ***Performance tab***, and check if ***CPU*
 
    - *w3wp.exe*: Windows Web Server, also known as IIS.
 
-1. If the processes consuming the most resources are **not related to DataMiner** (e.g. antivirus, Windows updates, or a third-party application), **resolve the issues** outside of DataMiner before proceeding further.
+1. If the processes consuming the most resources are **not related to DataMiner** (e.g., antivirus, Windows updates, or a third-party application), **resolve the issues** outside of DataMiner before proceeding further.
 
 ### Check if key DataMiner processes are running
 
@@ -48,7 +48,7 @@ Check if the following processes are running:
 
 ### Check if there is enough disk space
 
-If there is insufficient disk space on the system drive (i.e. C:) or on the drive used for the database, this can result in unintended behavior of the DataMiner Agent.
+If there is insufficient disk space on the system drive (i.e., C:) or on the drive used for the database, this can result in unintended behavior of the DataMiner Agent.
 
 For normal operation, **at least 15 GB of free space is required on the system and the database drive.**
 
@@ -100,7 +100,7 @@ Look for the following lines:
 
 - `Process with PID <process ID> (<process name>) stopped.`
 
-  This line indicates an unexpected disappearance of a DataMiner process (i.e. a process crash).
+  This line indicates an unexpected disappearance of a DataMiner process (i.e., a process crash).
 
 Follow these steps to **identify the initial problem in *SLWatchdog2.txt*** based on these lines:
 

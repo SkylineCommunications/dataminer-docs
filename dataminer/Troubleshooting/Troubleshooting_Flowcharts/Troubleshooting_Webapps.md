@@ -32,7 +32,7 @@ LoadingIssues[[In the console logs, can you see loading issues or a Service Unav
 IISRunning[[Is the IIS web <br>server running?]]
 CheckCloudConnection[[Check the connection <br>to dataminer.services]]
 RestartIIS[[Restart IIS]]
-FailingCalls[[Are any network calls failing, e.g. GetVisioForElement?]]
+FailingCalls[[Are any network calls failing, e.g., GetVisioForElement?]]
 CheckErrorMessage[[Check the error message and try to determine the source, which could be <br>the web APIs or the core software]]
 CheckConsoleErrors[[Check if there are console errors that indicate an issue in the client web app, and contact <a href="mailto:support.data-exploration@skyline.be">support.data-exploration@skyline.be</a> <br>to report the issue]]
 %% Connect blocks %%

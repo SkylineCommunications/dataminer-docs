@@ -136,7 +136,7 @@ The page size must be set to a value between 10 and 500. When a page size value 
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
-In e.g. DataMiner Cube, a light bulb icon will be displayed when you select a time range on the trend graph of a parameter. If you want to know which other parameters are related to this parameter, based purely on the behavior during the selected time range, then you can click this icon to add or view related parameters. Even if multiple curves are displayed on the same trend graph, the light bulb always shows relations with one specific parameter, whose name is mentioned in the light bulb tooltip.
+In e.g., DataMiner Cube, a light bulb icon will be displayed when you select a time range on the trend graph of a parameter. If you want to know which other parameters are related to this parameter, based purely on the behavior during the selected time range, then you can click this icon to add or view related parameters. Even if multiple curves are displayed on the same trend graph, the light bulb always shows relations with one specific parameter, whose name is mentioned in the light bulb tooltip.
 
 Up to now, this feature only proposed parameters from the same DataMiner element. From now on, it will also propose parameters from other elements within the same service.
 
@@ -150,7 +150,7 @@ Up to now, SLNet would cache all information about all entries in a correlation 
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
-A number of enhancements have been made to the locking behavior in the SLAutomation process in order to prevent unnecessary holdups when interacting with the `Engine` and related `Element` objects in Automation scripts.
+A number of enhancements have been made to the locking behavior in the SLAutomation process in order to prevent unnecessary holdups when interacting with the `Engine` and related `Element` objects in automation scripts.
 
 The following calls have been improved:
 
@@ -205,9 +205,9 @@ From now on, the maximum number of parameter changes processed by SLAnalytics wi
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
-Up to now, smart-serial connections would support IPv6 loopback addresses only if they were abbreviated (e.g. `::1`).
+Up to now, smart-serial connections would support IPv6 loopback addresses only if they were abbreviated (e.g., `::1`).
 
-From now on, smart-serial connections will also support non-abbreviated IPv6 loopback addresses (e.g. `0:0:0:0:0:0:0:1` or similar).
+From now on, smart-serial connections will also support non-abbreviated IPv6 loopback addresses (e.g., `0:0:0:0:0:0:0:1` or similar).
 
 #### Enhanced performance when loading newly created elements into SLDataMiner [ID 40762]
 
@@ -239,7 +239,7 @@ From now on, the *nats-server.config* file, located in the `C:\Skyline DataMiner
 The tool used by SLLogCollector to archive the files it collects is deprecated and has now been replaced.
 
 > [!IMPORTANT]
-> The archives produced by the new tool can no longer be opened by the built-in Windows file archiver. To open these archives, users will now have to use third-party tools like e.g. 7-Zip.
+> The archives produced by the new tool can no longer be opened by the built-in Windows file archiver. To open these archives, users will now have to use third-party tools like e.g., 7-Zip.
 
 ### Fixes
 
@@ -253,7 +253,7 @@ When the *ReIndexElasticSearchIndexes* tool was run, the existing mappings (whic
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
-When SLDataGateway detected a database problem, up to now, it would incorrectly send a message mentioning a Cassandra error to the client (e.g. DataMiner Cube) whatever the type of database that was being used. From now on, the message sent to the client will mention the database that is actually being used.
+When SLDataGateway detected a database problem, up to now, it would incorrectly send a message mentioning a Cassandra error to the client (e.g., DataMiner Cube) whatever the type of database that was being used. From now on, the message sent to the client will mention the database that is actually being used.
 
 Also, on systems using a Cassandra Cluster database, when the indexing engine could not be reached, up to now, DataMiner would keep on restarting. From now on, as soon as a required database cannot be reached, DataMiner will stop without trying to restart.
 
@@ -300,7 +300,7 @@ Also, when you collapse the filter pane, the looking glass icon will now blink b
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
-When, in e.g. Cube's Scheduler app, an action would send an email with in attachment a dashboard that no longer existed, the email would not be sent, but no error would be shown.
+When, in e.g., Cube's Scheduler app, an action would send an email with in attachment a dashboard that no longer existed, the email would not be sent, but no error would be shown.
 
 From now on, when an action tries to send an email with a non-existing dashboard in attachment, the task will fail and an exception will be thrown.
 
@@ -346,4 +346,4 @@ Since DataMiner feature version 10.4.10, *GetAlarmDetailsMessage* could no longe
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.11 [CU0] -->
 
-On DaaS systems, in some cases, the online license check could fail, causing client apps (e.g. DataMiner Cube) to incorrectly show a "This DataMiner Agent is not licensed" message.
+On DaaS systems, in some cases, the online license check could fail, causing client apps (e.g., DataMiner Cube) to incorrectly show a "This DataMiner Agent is not licensed" message.

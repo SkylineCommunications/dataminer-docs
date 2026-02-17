@@ -262,7 +262,7 @@ In this step, you will add another panel that will open when an event in the tab
 
 1. Add a [form component](xref:DashboardForm) to the panel.
 
-1. In the *Data* pane on the right, expand *Components* > *Event table* > *Table X* (e.g. *Table 3*) > *Selected rows*, and drag *Object manager instances* onto the form.
+1. In the *Data* pane on the right, expand *Components* > *Event table* > *Table X* (e.g., *Table 3*) > *Selected rows*, and drag *Object manager instances* onto the form.
 
    In the form, you should now see the details of the event you have selected.
 
@@ -383,7 +383,7 @@ In this step, you will add a title, a time range component, and a timeline compo
 
    1. In the *Link to* box, select the time range component, and click *Link*.
 
-   1. In the *Data* pane, expand *Components* > *Timeline X* (e.g. *Timeline 3*) > *Viewport*, and drag the *Timespans* item below this onto the time range component
+   1. In the *Data* pane, expand *Components* > *Timeline X* (e.g., *Timeline 3*) > *Viewport*, and drag the *Timespans* item below this onto the time range component
 
 ## Step 8: Configure actions on the timeline
 

@@ -181,7 +181,7 @@ In some cases, automatic incident tracking would not start up when an alarm was 
 
 #### SLAnalytics: Problem with alarm grouping when alarms were generated while automatic incident tracking was starting up \[ID 32410\]
 
-When alarms were generated while automatic incident tracking was starting up, in some cases, an alarm could internally be duplicated, leading to incorrect alarm groups (e.g. groups containing only a single alarm).
+When alarms were generated while automatic incident tracking was starting up, in some cases, an alarm could internally be duplicated, leading to incorrect alarm groups (e.g., groups containing only a single alarm).
 
 #### DataMiner Cube - Alarm Console: Problem with 'new alarms' counter when alarms were grouped by service \[ID 32427\]
 
@@ -197,7 +197,7 @@ When elements were stopped, in some cases, a large number of CRequest::Request e
 
 #### Not possible to create element with invalid XML character in name \[ID 32455\]
 
-In some cases, it was no longer possible to create elements with an invalid XML character in the element name, even if that character was supported in Cube (e.g. “&”).
+In some cases, it was no longer possible to create elements with an invalid XML character in the element name, even if that character was supported in Cube (e.g., “&”).
 
 #### DataMiner Cube: Problem when accessing an information template, a trend template or an alarm template from within the Alarm Console \[ID 32457\]
 

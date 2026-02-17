@@ -29,7 +29,7 @@ See below for more information on the different components of the Path string.
 - **link**: The name or the ID of the element or service to jump to when the shape is clicked. When you right-click the shape, you will see the default shortcut menu of that element or service.
 
 > [!NOTE]
-> From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40094-->, the WPF Path markup parsing is culture-invariant, accepting both "." and "," as decimal separator, e.g. when providing the coordinates of the lower-left and top-right corner of the shape. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, the decimal separator has to match the one that is set on the client computer.
+> From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40094-->, the WPF Path markup parsing is culture-invariant, accepting both "." and "," as decimal separator, e.g., when providing the coordinates of the lower-left and top-right corner of the shape. Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, the decimal separator has to match the one that is set on the client computer.
 
 ### Example of a Path string
 

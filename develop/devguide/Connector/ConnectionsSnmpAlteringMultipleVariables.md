@@ -4,7 +4,7 @@ uid: ConnectionsSnmpAlteringMultipleVariables
 
 # Altering multiple variables
 
-The SNMP protocol allows a set to be performed with multiple variable bindings, i.e. to set multiple variables in one request.
+The SNMP protocol allows a set to be performed with multiple variable bindings, i.e., to set multiple variables in one request.
 
 In a protocol, this is enabled by using an action of type "set" on a group. The referenced group (200 in the example below) then contains the write parameters to be set. This will result in a set request being sent with multiple variable bindings.
 

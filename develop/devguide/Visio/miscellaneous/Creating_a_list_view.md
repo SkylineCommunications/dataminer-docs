@@ -14,7 +14,7 @@ To create a list view, add a shape on the Visio page with the following shape da
 
 - **ComponentOptions**: List of options, separated by pipe characters. For an overview of all possible component options, see [Component options](#component-options).
 
-- **Columns**: The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g. *MyColumnconfig*. If you do not specify this shape data field or leave it empty, all columns will be displayed.
+- **Columns**: The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g., *MyColumnconfig*. If you do not specify this shape data field or leave it empty, all columns will be displayed.
   
   Saving a column configuration is possible via the right-click menu of the list header in DataMiner Cube. This right-click menu also allows you to load a column configuration.
 
@@ -59,7 +59,7 @@ The following options can be specified in the *ComponentOptions* shape data fiel
 
 - **SessionVariablePrefix=\[prefix\]**: When you specify this option, a unique prefix is assigned to the session variable names. This option allows you to avoid having multiple *ListView* components using the exact same session variables.
 
-- **SingleSelectionMode**: Available from DataMiner 10.3.4/10.4.0 onwards. By default, multiple rows can be selected in a list view (e.g. using the Ctrl or Shift key). With this option, you can set the selection mode of the list view to single instead, so that only one row can be selected at a time. <!-- RN 35320 -->
+- **SingleSelectionMode**: Available from DataMiner 10.3.4/10.4.0 onwards. By default, multiple rows can be selected in a list view (e.g., using the Ctrl or Shift key). With this option, you can set the selection mode of the list view to single instead, so that only one row can be selected at a time. <!-- RN 35320 -->
 
 - **StartTime=** and **EndTime=**: If the list view is configured to list bookings, you can use these shape data to specify a time range, using an invariant format, for example: MM/DD/YYYY HH:MM:SS. These date/time values will always be **interpreted as UTC date/time values**. If these shape data are not specified, the following values are used by default:
 
@@ -198,9 +198,9 @@ If you set the *Source* shape data field to "Elements" or "Services", the *Filte
     | Element.AlarmState | The alarm state of the element. For the difference with the alarm level, see "Element.AlarmLevel". |
     | Element.AlarmCount | The number of alarms of the element. |
     | Element.Type | The type of element as defined in the protocol. |
-    | Element.DisplayType | The display type of the element as defined in the protocol, e.g. *spectrum analyzer*, *element manager*. |
+    | Element.DisplayType | The display type of the element as defined in the protocol, e.g., *spectrum analyzer*, *element manager*. |
     | Element.IP | The IP of the element. |
-    | Element.State | The current state of the element, e.g. Paused, Stopped. |
+    | Element.State | The current state of the element, e.g., Paused, Stopped. |
     | Element.Protocol | The protocol used by the element. |
     | Element.ProtocolVersion | The protocol version used by the element. |
     | Element.ProtocolType | The protocol type used by the element. |
@@ -388,7 +388,7 @@ When you manage the column configuration, you can select different column types.
 
 - **Alarm icon**: Use this type for a column indicating an ID of a service, element, or view. It will show the alarm icon for the relevant service, element, or view.
 
-- **Custom icon**: Displays a custom icon. This relies on Automation scripts providing an icon library: a script that maps the custom icons, and a script that maps the column values to specific icon names. At present, this column type cannot be used.
+- **Custom icon**: Displays a custom icon. This relies on automation scripts providing an icon library: a script that maps the custom icons, and a script that maps the column values to specific icon names. At present, this column type cannot be used.
 
 - **Color**: Shows the color defined in the cell value. This can for example be used to show the color from the *VisualBackground* property of bookings.
 

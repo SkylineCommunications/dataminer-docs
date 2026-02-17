@@ -41,12 +41,12 @@ In order to make sure the sets are correctly stored and linked with the provided
 
 > [!NOTE]
 >
-> - When this attribute is not present, it is possible that the data is not stored correctly, and an incorrect result can be shown when the historical data is accessed, e.g. via a trend graph.
+> - When this attribute is not present, it is possible that the data is not stored correctly, and an incorrect result can be shown when the historical data is accessed, e.g., via a trend graph.
 > - If you set `historySet` to "true" for a parameter that uses the [smart baseline option](xref:Configuring_dynamic_alarm_thresholds), the smart baseline option will no longer have effect.
 
 ### Sort the incoming data based on the timestamp
 
-When average trending is enabled in DataMiner, multiple parameter values in a fixed time slot (e.g. 5 minutes) are averaged. If the values were to be set in a random order, the average calculation and update of the database would have to be done every time a new data point is added. To reduce the load on the system and database, a safety mechanism is in place: values can only be set in chronological order. Once we set a value with timestamp x, we can no longer set a parameter value with a timestamp older than x.
+When average trending is enabled in DataMiner, multiple parameter values in a fixed time slot (e.g., 5 minutes) are averaged. If the values were to be set in a random order, the average calculation and update of the database would have to be done every time a new data point is added. To reduce the load on the system and database, a safety mechanism is in place: values can only be set in chronological order. Once we set a value with timestamp x, we can no longer set a parameter value with a timestamp older than x.
 
 Because of this, it is important to sort the incoming data, so that the history sets can be performed (via QActions) in chronological order.
 

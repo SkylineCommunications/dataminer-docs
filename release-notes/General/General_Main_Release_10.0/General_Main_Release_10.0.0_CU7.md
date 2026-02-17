@@ -260,7 +260,7 @@ When a daylight saving time change occurred while a booking was active, in some 
 
 Up to now, when you tried to deactivate or delete a function file used by ReservationInstances, ReservationDefinitions, ServiceDefinitions or ServiceProfileDefinitions, the returned error would contain an incorrect file name.
 
-From now on, the error will contain the correct file name, i.e. the name of the file that cannot be deactivated or deleted because it is in use.
+From now on, the error will contain the correct file name, i.e., the name of the file that cannot be deactivated or deleted because it is in use.
 
 #### DataMiner Cube - Bookings app: Bookings list would not get updated when a booking was deleted \[ID 27482\]
 
@@ -280,7 +280,7 @@ If you deactivated or deleted a functions file in the Protocols & Templates app,
 
 #### Mobile apps: Date picker controls would show an incorrect month when the day was greater than or equal to 30 (or 29 in case of a leap year) \[ID 27522\]
 
-In mobile apps (e.g. Jobs), in some cases, date picker controls would show an incorrect month when the day was 30 or 31 (or 29, 30 or 31 in case of a leap year).
+In mobile apps (e.g., Jobs), in some cases, date picker controls would show an incorrect month when the day was 30 or 31 (or 29, 30 or 31 in case of a leap year).
 
 #### DataMiner Cube - Alarm templates: Problem when editing alarm levels of a matrix parameter from the Alarm Console \[ID 27535\]
 
@@ -302,7 +302,7 @@ In systems with a MySQL local database, it could occur that alarms for numeric o
 
 #### Services containing remote elements would no longer get recalculated when the agent hosting the remote elements was disconnected \[ID 27589\]
 
-In some cases, locally hosted services containing elements hosted on another DataMiner Agent (i.e. remote elements) would no longer get recalculated when the connection with the that other agent was lost.
+In some cases, locally hosted services containing elements hosted on another DataMiner Agent (i.e., remote elements) would no longer get recalculated when the connection with the that other agent was lost.
 
 #### Not possible to delete ticketing resolver \[ID 27603\]
 
@@ -324,7 +324,7 @@ The following minor issues could occur in the BPA framework:
 
 #### DataMiner Cube - Alarm Console: Problem with alarm hyperlinks when the first character of the parameter name is hash character \[ID 27641\]
 
-When you right-clicked an alarm associated with a parameter of which the name started with a “#” character and then clicked an alarm hyperlink that ran an Automation script that used that parameter name as input, in some cases, an error could occur.
+When you right-clicked an alarm associated with a parameter of which the name started with a “#” character and then clicked an alarm hyperlink that ran an automation script that used that parameter name as input, in some cases, an error could occur.
 
 #### DataMiner Cube: Clicking a pinned or recently opened custom element app would incorrectly cause another app to open \[ID 27642\]
 

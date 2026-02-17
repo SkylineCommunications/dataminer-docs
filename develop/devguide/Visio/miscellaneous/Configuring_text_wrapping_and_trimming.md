@@ -32,5 +32,5 @@ For example:
 
 > [!NOTE]
 >
-> - When TextWrapping is set to its default value (i.e. “WrapWithOverflow”), the text will always be fully displayed, so setting TextTrimming to “CharacterEllipsis” or “WordEllipsis” will have no effect.
+> - When TextWrapping is set to its default value (i.e., “WrapWithOverflow”), the text will always be fully displayed, so setting TextTrimming to “CharacterEllipsis” or “WordEllipsis” will have no effect.
 > - From DataMiner 10.2.4/10.3.0, in case text is trimmed, users can hover over the shape to see the full text in a tooltip. However, this is not the case if the shape can be clicked to execute an action, as in that case the tooltip will show information about that action.

@@ -11,7 +11,7 @@ In setups with self-hosted storage, DataMiner uses Cassandra as its NoSQL ("Not 
 
 ## Cassandra architecture
 
-The Cassandra architecture consists of a cluster of nodes that form a masterless ring. This means that all nodes in the ring are equal, i.e. there is no concept of a master node or slave nodes. Because of this architecture and data replication, there is no single point of failure. Additional nodes can easily be added for increased performance (allowing linear scale performance).
+The Cassandra architecture consists of a cluster of nodes that form a masterless ring. This means that all nodes in the ring are equal, i.e., there is no concept of a master node or slave nodes. Because of this architecture and data replication, there is no single point of failure. Additional nodes can easily be added for increased performance (allowing linear scale performance).
 
 ![Cassandra architecture](~/develop/images/cassandra_structure.png)
 
@@ -23,7 +23,7 @@ Cassandra automatically distributes data across the nodes of the cluster. This i
 
 Data is typically replicated on multiple nodes allowing high availability and reliability. Cassandra performs data replication automatically according to the configured replication factor and strategy. For example, when a replication factor of three is defined, three copies of the data will exist in three different nodes in the cluster.
 
-The replication factor is a setting that is configured at keyspace level (See [Keyspace](#keyspace)). Next to the replication factor, the replication strategy can be defined for a keyspace. The replication strategy determines the selection of the replica nodes, i.e. the nodes other than the one that owns the row.
+The replication factor is a setting that is configured at keyspace level (See [Keyspace](#keyspace)). Next to the replication factor, the replication strategy can be defined for a keyspace. The replication strategy determines the selection of the replica nodes, i.e., the nodes other than the one that owns the row.
 
 ## Data model
 
@@ -65,7 +65,7 @@ A keyspace can be considered the equivalent of a database in a regular RDBMS. A 
 
 ### Data model repercussions
 
-The Cassandra data model has some important differences with the regular RDBMS data model. For example, a join cannot be performed in Cassandra. Therefore, when data will need to be joined, you typically create a denormalized table holding the joined data. This is a major difference with the data model of a regular RDBMS, where normalization is considered important (although denormalization also sometimes occurs in a RDBMS data model, e.g. to improve performance).
+The Cassandra data model has some important differences with the regular RDBMS data model. For example, a join cannot be performed in Cassandra. Therefore, when data will need to be joined, you typically create a denormalized table holding the joined data. This is a major difference with the data model of a regular RDBMS, where normalization is considered important (although denormalization also sometimes occurs in a RDBMS data model, e.g., to improve performance).
 
 In RDBMS database design, you typically introduce different tables for the different entities in the domain you want to model. Additionally, join tables are introduced for modeling many-to-many relationships. Once the tables have been defined and populated, queries are performed to obtain the data.
 
@@ -90,7 +90,7 @@ There are a number of WHERE clause restrictions for SELECT statements in Cassand
 
 In addition, queries require data to be retrieved sequentially. This relates to the clustering columns, which define the order in which the rows are stored. For example, if you define two clustering columns, you can perform a query that includes the first clustering column and optionally the second clustering column. However, you cannot perform a query including the second clustering column without including the first clustering column.
 
-There is one approach to avoid having to specify the partition key when performing a SELECT query, i.e. by using secondary indexes. In DataMiner, a secondary index is created for foreign key columns. However, this will have an impact on performance, as in this case all nodes need to be searched.
+There is one approach to avoid having to specify the partition key when performing a SELECT query, i.e., by using secondary indexes. In DataMiner, a secondary index is created for foreign key columns. However, this will have an impact on performance, as in this case all nodes need to be searched.
 
 For more in-depth information, refer to https://www.datastax.com/dev/blog/a-deep-look-to-the-cql-where-clause.
 
@@ -402,7 +402,7 @@ The partitioning key (i) has the following structure:
 - DataminerAgentID_ServiceID_-1_-1: all alarms of a specific service
 - -1_-1_-1_-1: all alarms
 
-An alarm will therefore appear at least three times in this table (one entry using partitioning key for a specific alarm, one for specific element, one for all alarms) with additional occurrences per service it is associated with (e.g. in case an element is associated with 2 services, the table will have 5 entries for that alarm.). This allows it to be queried in different situations.
+An alarm will therefore appear at least three times in this table (one entry using partitioning key for a specific alarm, one for specific element, one for all alarms) with additional occurrences per service it is associated with (e.g., in case an element is associated with 2 services, the table will have 5 entries for that alarm.). This allows it to be queried in different situations.
 
 |Name|Type|Primary Key|Description|
 |--- |--- |--- |--- |
@@ -503,7 +503,7 @@ Status:
 - -4: Element is going into a timeout state.
 - -5: Element is coming out of a timeout state.
 - -6: Element is being stopped.
-- -7: A state and a display value (e.g. "No signal") was received (separated by a semicolon).
+- -7: A state and a display value (e.g., "No signal") was received (separated by a semicolon).
 - -8: A normal value was received following a "-7".
 - -9: Trending was started for the specified parameter.
 - -10: Trending was stopped for the specified parameter
@@ -570,10 +570,10 @@ Stores the link between DataMinerID objects and tickets. This table is defined a
 
 |Name|Type|Primary Key|Description|
 |--- |--- |--- |--- |
-|c|text|Yes (Partitioning)|Type (e.g. "Skyline.DataMiner.Net.ElementID")|
-|k|text|Yes (Clustering)|Key (e.g. "{ \"DataMinerID\": 337, \"EID\": 5 }")|
-|d|int|Yes (Clustering)|DataMiner Agent ID (e.g. 337).|
-|t|int|Yes (Clustering)|Ticket ID (e.g. 10).|
+|c|text|Yes (Partitioning)|Type (e.g., "Skyline.DataMiner.Net.ElementID")|
+|k|text|Yes (Clustering)|Key (e.g., "{ \"DataMinerID\": 337, \"EID\": 5 }")|
+|d|int|Yes (Clustering)|DataMiner Agent ID (e.g., 337).|
+|t|int|Yes (Clustering)|Ticket ID (e.g., 10).|
 
 #### maxticketid
 
@@ -583,8 +583,8 @@ This table is defined as follows:
 
 |Name|Type|Primary Key|Description|
 |--- |--- |--- |--- |
-|d|int|Yes (Partitioning)|DataMiner Agent ID (e.g. 337).|
-|c|counter|No|Counter (e.g. 1234).|
+|d|int|Yes (Partitioning)|DataMiner Agent ID (e.g., 337).|
+|c|counter|No|Counter (e.g., 1234).|
 
 #### tickets
 
@@ -592,8 +592,8 @@ This table is defined as follows:
 
 |Name|Type|Primary Key|Description|
 |--- |--- |--- |--- |
-|d|int|Yes (Partitioning)|DataMiner Agent ID (e.g. 337).|
-|t|int|Yes (Clustering)|Ticket ID (e.g. 10).|
+|d|int|Yes (Partitioning)|DataMiner Agent ID (e.g., 337).|
+|t|int|Yes (Clustering)|Ticket ID (e.g., 10).|
 |v|text|No|Ticket (JSON).|
 
 #### ticketstates
@@ -606,8 +606,8 @@ This table is defined as follows:
 |--- |--- |--- |--- |
 |s|int|Yes (Partitioning)|State (0: Open, 1: Closed).|
 |c|timestamp|Yes (Clustering)|Timestamp|
-|d|int|Yes (Partitioning)|DataMiner Agent ID (e.g. 337).|
-|t|int|Yes (Clustering)|Ticket ID (e.g. 10).|
+|d|int|Yes (Partitioning)|DataMiner Agent ID (e.g., 337).|
+|t|int|Yes (Clustering)|Ticket ID (e.g., 10).|
 
 ### Analytics data
 
@@ -623,7 +623,7 @@ The DataMiner Analytics features store and maintain model data and extracted ins
 
 #### ai_alarmfocus
 
-This table stores one model for [alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus) for each monitored parameter or monitored table cell that has had an alarm in the past two weeks. The amount of data in the table should be more or less stable after two weeks.
+This table stores one model for [alarm focus](xref:Alarm_focus) for each monitored parameter or monitored table cell that has had an alarm in the past two weeks. The amount of data in the table should be more or less stable after two weeks.
 
 The table is defined as follows:
 

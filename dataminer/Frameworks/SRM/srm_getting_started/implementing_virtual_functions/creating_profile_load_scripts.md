@@ -90,7 +90,7 @@ foreach (var config in parametersConfiguration)
 
 ### Function DVE configuration
 
-Using the script dummy ("FunctionDve"), you can start configuring parameters on the function DVE (i.e. the virtual function resource):
+Using the script dummy ("FunctionDve"), you can start configuring parameters on the function DVE (i.e., the virtual function resource):
 
 ```csharp
 var dummyDve = engine.GetDummy("FunctionDve");

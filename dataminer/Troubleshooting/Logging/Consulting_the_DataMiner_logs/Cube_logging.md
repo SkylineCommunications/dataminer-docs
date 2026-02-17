@@ -39,7 +39,7 @@ The log information in DataMiner Cube is displayed in a list with the following 
 
 | Column | Description |
 |---|---|
-| Type | The type of log message, e.g. Debug, Info. |
+| Type | The type of log message, e.g., Debug, Info. |
 | Count  | If certain conditions are met, log items can be grouped. This column shows how many log items are grouped under this entry. |
 | Time | The time when the message was logged, displayed in the format MM/DD/YYYY HH:MM:SS. |
 | Text | The log message itself. |
@@ -70,15 +70,15 @@ DataMiner Cube logging uses different log types to allow users to easily filter 
 
 | Icon | Log type | Description |
 |---|---|---|
-| ![Debug](~/dataminer/images/Debug.png) | Debug | Consists of debug information for developers, e.g. log information about the deserialization of a Visio drawing. |
-| ![Info](~/dataminer/images/Info.png) | Info | Consists of items that are logged by way of information, e.g. the connection URL, the save location of the saved users file, etc. |
-| ![Connection](~/dataminer/images/Connection.png) | Connection | Consists of connection-related information, e.g. connection times in DataMiner Cube. |
-| ![ClientSystem](~/dataminer/images/Connection.png) | ClientSystem | Consists of information related to the client system, e.g. the processor, RAM, Windows version, .NET version, etc. |
-| ![Freeze](~/dataminer/images/Connection.png) | Freeze | Consists of information related to issues that cause the DataMiner Cube user interface to become unresponsive. These are detected by the *Freeze Detection* feature. E.g. a stack trace was logged because the dispatcher thread was suspended for longer than 10 seconds. |
-| ![AgentInfo](~/dataminer/images/Connection.png) | AgentInfo | Consists of information about the DMAs within the cluster that DataMiner Cube is connected to, e.g. in case the state of an Agent in the cluster changed to *Running*. |
-| ![SPI](~/dataminer/images/Connection.png) | SPI | Consists of SPI information for developers, e.g. to enhance visibility and ensure proactive support. |
+| ![Debug](~/dataminer/images/Debug.png) | Debug | Consists of debug information for developers, e.g., log information about the deserialization of a Visio drawing. |
+| ![Info](~/dataminer/images/Info.png) | Info | Consists of items that are logged by way of information, e.g., the connection URL, the save location of the saved users file, etc. |
+| ![Connection](~/dataminer/images/Connection.png) | Connection | Consists of connection-related information, e.g., connection times in DataMiner Cube. |
+| ![ClientSystem](~/dataminer/images/Connection.png) | ClientSystem | Consists of information related to the client system, e.g., the processor, RAM, Windows version, .NET version, etc. |
+| ![Freeze](~/dataminer/images/Connection.png) | Freeze | Consists of information related to issues that cause the DataMiner Cube user interface to become unresponsive. These are detected by the *Freeze Detection* feature. For example, a stack trace could be logged because the dispatcher thread was suspended for longer than 10 seconds. |
+| ![AgentInfo](~/dataminer/images/Connection.png) | AgentInfo | Consists of information about the DMAs within the cluster that DataMiner Cube is connected to, for example, in case the state of an Agent in the cluster changed to *Running*. |
+| ![SPI](~/dataminer/images/Connection.png) | SPI | Consists of SPI information for developers, e.g., to enhance visibility and ensure proactive support. |
 | ![Warning](~/dataminer/images/Warning.png) | Warning | Consists of information about issues that do not interfere with the functionality of Cube. Typically, this is used for input validation. It can for example mention if Cube is unable to validate a driver, or if something went wrong while reading/writing files or settings. |
-| ![Error](~/dataminer/images/Error.png) | Error | Consists of information about issues in DataMiner Cube that interfere with normal functionality. In most cases, this is related to exceptions that cannot be properly handled, e.g. in case no appropriate settings could be discovered while connecting. |
+| ![Error](~/dataminer/images/Error.png) | Error | Consists of information about issues in DataMiner Cube that interfere with normal functionality. In most cases, this is related to exceptions that cannot be properly handled, e.g., in case no appropriate settings could be discovered while connecting. |
 | ![Exception](~/dataminer/images/Error.png) | Exception | Consists of information about unhandled exceptions in Cube. There will always be a stack trace for this type of logging. |
 
 > [!NOTE]

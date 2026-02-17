@@ -171,7 +171,7 @@ C:\Users>Administrator>echo %errorlevel%
 650
 ```
 
-If something goes wrong during the configuration, e.g. the connection with one of the servers is lost or a DMA is not correctly configured, configuration changes will be reverted, and the installation process will install a standalone Agent. Information on the issue can be found in the log file. See [Unattended installation logging](#unattended-installation-logging).
+If something goes wrong during the configuration, e.g., the connection with one of the servers is lost or a DMA is not correctly configured, configuration changes will be reverted, and the installation process will install a standalone Agent. Information on the issue can be found in the log file. See [Unattended installation logging](#unattended-installation-logging).
 
 ### Unattended installation configuration file
 
@@ -206,7 +206,7 @@ The main *DMS* tag has the following possible subtags:
 
 - **CentralDatabase**
 
-  Optional. Indicates the central database type to use (*MySQL*, *MSSQL* or *Oracle*) using the *type* attribute. This tag must contain the following subtags, detailing the configuration for the *Db.xml* file: *DB*, *DBServer*, *ConnectString*, *UID* (user), *PWD* (password) and *Offload*. It is possible to leave some of these tags empty, in which case the default configuration will be applied. In addition, any other tags that can be configured in *Db.xml* can also be specified here, e.g. in the *Offload* tag.
+  Optional. Indicates the central database type to use (*MySQL*, *MSSQL* or *Oracle*) using the *type* attribute. This tag must contain the following subtags, detailing the configuration for the *Db.xml* file: *DB*, *DBServer*, *ConnectString*, *UID* (user), *PWD* (password) and *Offload*. It is possible to leave some of these tags empty, in which case the default configuration will be applied. In addition, any other tags that can be configured in *Db.xml* can also be specified here, e.g., in the *Offload* tag.
 
 - **Package**
 
@@ -264,7 +264,7 @@ The *DMA* tag has the following possible subtags:
 
 - **Database**
 
-  Indicates the database type to use (*Cassandra*, *CassandraCluster*, or *MySQL*) using the *type* attribute. This tag must contain the following subtags, detailing the configuration for the *Db.xml* file: *DB*, *DBServer*, *DBDrive*, *ConnectString*, *UID* (user), *PWD* (password) and *Maintenance*. It is possible to leave some of these tags empty, in which case the default configuration will be applied. In addition, any other tags that can be configured in *Db.xml* can also be specified here, e.g. in the *Maintenance* tag.
+  Indicates the database type to use (*Cassandra*, *CassandraCluster*, or *MySQL*) using the *type* attribute. This tag must contain the following subtags, detailing the configuration for the *Db.xml* file: *DB*, *DBServer*, *DBDrive*, *ConnectString*, *UID* (user), *PWD* (password) and *Maintenance*. It is possible to leave some of these tags empty, in which case the default configuration will be applied. In addition, any other tags that can be configured in *Db.xml* can also be specified here, e.g., in the *Maintenance* tag.
 
   Note that for a non-Cassandra database, the drive specified in *DBDrive* must be C.
 
@@ -798,8 +798,8 @@ The following error codes can be returned after the installation:
 | ERROR_CUSTOMIZE_XMLMISSING | 310 | The XML file is missing. |
 | ERROR_INSTALLING | 400 | Something went wrong during installation, but no more details are available. |
 | ERROR_INSTALLING_DISKSPACE | 401 | Installation could not continue because there is not enough disk space. |
-| ERROR_INSTALLING_COPYRESOURCE | 402 | Installation failed when copying a resource (e.g. VC++, .NET, or DataMiner package). |
-| ERROR_INSTALLING_PREREQ | 410 |  Installation of a certain prerequisite failed (e.g. VC++ or .NET) |
+| ERROR_INSTALLING_COPYRESOURCE | 402 | Installation failed when copying a resource (e.g., VC++, .NET, or DataMiner package). |
+| ERROR_INSTALLING_PREREQ | 410 |  Installation of a certain prerequisite failed (e.g., VC++ or .NET) |
 | ERROR_INSTALLING_DATABASE | 420 |  Installation of the database failed (Cassandra or MySQL). |
 | ERROR_INSTALLING_DATAMINER | 430 | Installation of DataMiner failed. Refer to the log file for more details. |
 | ERROR_CONFIGURATION | 500 | Something went wrong during the DMS configuration, but no more details are available. |

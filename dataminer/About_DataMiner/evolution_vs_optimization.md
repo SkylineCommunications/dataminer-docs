@@ -56,7 +56,7 @@ DataMiner supports businesses by enabling seamless evolution into new technologi
 - **Evolution** — The [DataMiner xOps Platform](xref:Overview_About_DataMiner#dataminer-xops-platform) allows you to easily adapt to change and future growth:
 
   - **End-to-end orchestration & automation**: Facilitates the transition to IP-based, cloud, and virtualized environments while integrating legacy and new technologies seamlessly.
-  - **Flexible & scalable architecture**: Enables organizations to scale operations, add new services, and adopt new technologies (e.g. 5G, cloud-based playout, AI-driven analytics).
+  - **Flexible & scalable architecture**: Enables organizations to scale operations, add new services, and adopt new technologies (e.g., 5G, cloud-based playout, AI-driven analytics).
   - **Vendor-agnostic integration**: Supports evolving infrastructure by integrating with any technology stack (hardware, software, on-prem, cloud, hybrid).
   - **AI & machine learning insights**: Predicts trends, automates decision-making, and ensures proactive system evolution rather than reactive troubleshooting.
   - **DevOps & continuous innovation**: Enables agile workflows through low-code/no-code automation, facilitating fast deployments and adjustments.
@@ -66,5 +66,5 @@ DataMiner supports businesses by enabling seamless evolution into new technologi
   - **Real-time monitoring & proactive fault management**: Provides 24/7 monitoring of multivendor networks, automatically detecting and resolving issues to prevent downtime.
   - **Operational intelligence & data analytics**: Uses AI-driven insights for trend analysis, capacity planning, and predictive maintenance.
   - **Resource optimization & cost reduction**: Automates workflows, optimizes bandwidth, and ensures efficient use of cloud/on-prem resources, leading to cost savings.
-  - **Security & compliance**: Ensures systems adhere to security standards (e.g. ISO, SOC) and regulatory requirements while minimizing vulnerabilities.
+  - **Security & compliance**: Ensures systems adhere to security standards (e.g., ISO, SOC) and regulatory requirements while minimizing vulnerabilities.
   - **Workflow automation & process efficiency**: Eliminates manual interventions through self-healing mechanisms, API-driven automation, and workflow orchestration.

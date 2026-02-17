@@ -8,7 +8,7 @@ The overview below lists the different properties you can use for service defini
 
 For each property, the scope indicates where the property should be specified. For example, if the scope is "Service definition node", you should specify the property on a node of a service definition.
 
-The overview also indicates the type of value that is expected for each property, e.g. string or integer, and whether the property is mandatory or not.
+The overview also indicates the type of value that is expected for each property, e.g., string or integer, and whether the property is mandatory or not.
 
 - [Allowed Resource Type](#allowed-resource-type)
 
@@ -146,7 +146,7 @@ Set the value to a JSON code block as illustrated below. In this code, the order
 
 This property determines the order in which resources should be assigned to nodes in the Booking Wizard.
 
-Set the value to an integer indicating the position of the resource for this node in the order, e.g. 2.
+Set the value to an integer indicating the position of the resource for this node in the order, e.g., 2.
 
 > [!TIP]
 > See also: [Defining the resource selection sequence](xref:Service_Orchestration_resources_advanced#defining-the-resource-selection-sequence)
@@ -165,7 +165,7 @@ The JSON value of this property can contain the following fields:
 
 - *CandidateResources*: Optional. The resources that should be used per node. You can specify a list of resources for each node. In case no resources are specified or none of the specified resources are available, the system will select the first available resource from the global list of resources.
 
-- *Concurrency*: Integer defining the maximum concurrency for the contributing resource (i.e. the number of overlapping bookings allowed to make use of the resource).
+- *Concurrency*: Integer defining the maximum concurrency for the contributing resource (i.e., the number of overlapping bookings allowed to make use of the resource).
 
 - *ConvertToContributing*:  Determines whether the *Convert to Contributing* checkbox is selected by default (*true*) or not (*false*).<!-- RN 28069 -->
 
@@ -193,7 +193,7 @@ The JSON value of this property can contain the following fields:
 
 - *ResourcePool*: The name of the resource pool in which the contributing resource should be included.
 
-- *Script*: Optional. Defines a custom Automation script that can be triggered after creating the contributing booking. It is typically used to assign capabilities/capacities to the associated contributing resource. Configured in the format "*Script:Script Name\|\|Parameter Name 1=Parameter 1;Parameter Name 2=Parameter 2;...*". The *\[RESERVATIONID\]* and *\[RESOURCEID\]* placeholders can be used, representing the resulting contributing booking ID and resource ID, respectively.<!-- RN 28243 & 28961 -->
+- *Script*: Optional. Defines a custom automation script that can be triggered after creating the contributing booking. It is typically used to assign capabilities/capacities to the associated contributing resource. Configured in the format "*Script:Script Name\|\|Parameter Name 1=Parameter 1;Parameter Name 2=Parameter 2;...*". The *\[RESERVATIONID\]* and *\[RESOURCEID\]* placeholders can be used, representing the resulting contributing booking ID and resource ID, respectively.<!-- RN 28243 & 28961 -->
 
 - *VisioFileName*: The Visio drawing that should be used for the contributing booking. While in other cases the Visio file configured in the service definition is used when a contributing booking is generated, when it is generated based on a *Path* parameter, the Visio file must be explicitly mentioned with this option.
 
@@ -225,7 +225,7 @@ The JSON value of this property can contain the following fields:
 
 **Mandatory**: No
 
-This property defines the Automation script that should be executed when a booking is confirmed.
+This property defines the automation script that should be executed when a booking is confirmed.
 
 The value of this property should be configured in JSON format. It can contain script parameters, but script dummies are not supported. You can also use the *\[RESERVATIONID\]* placeholder to represent the GUID of the booking.
 
@@ -332,7 +332,7 @@ This property is used when a booking is converted to a contributing booking, to 
 
 While this mapping is not mandatory, if it is not configured, some parameters or interfaces may not be available in the generated function protocol. Note also that if two interfaces are configured with the same *ExposedParentID* property value, the conversion will not be possible.
 
-Set this property to an integer value corresponding with the parent system function interface ID, e.g. 1.
+Set this property to an integer value corresponding with the parent system function interface ID, e.g., 1.
 
 ### FilterProfileInstance
 
@@ -450,7 +450,7 @@ This property can be set to a list of several options, separated by pipe (â€œ\|â
 
 This property allows you to define a priority for the resource, which is used to sort resources that are displayed for resource selection in the Booking Wizard.
 
-Set this property to an integer representing the priority of the resource, e.g. 5.
+Set this property to an integer representing the priority of the resource, e.g., 5.
 
 > [!TIP]
 > See also: [Resource sorting configuration](xref:Service_Orchestration_resources_advanced#resource-sorting-configuration)
@@ -532,7 +532,7 @@ For example, if you set this property to *Satellites*, and the virtual platform 
 
 This property is used to sort resources for a specific node in the Booking Wizard based on available capacity.
 
-To configure this, on the *Config* > *Wizard* tab of the Booking Manager, set *Resources Ordering Rule* to *Capacity*. Then set the *Resource Sorting Capacity* property to the name of the capacity that should be used for sorting, e.g. *Bandwidth*.
+To configure this, on the *Config* > *Wizard* tab of the Booking Manager, set *Resources Ordering Rule* to *Capacity*. Then set the *Resource Sorting Capacity* property to the name of the capacity that should be used for sorting, e.g., *Bandwidth*.
 
 > [!NOTE]
 > If *Resources Ordering Rule* is set to *Capacity* but this property is not defined, the first available capacity will be used for sorting.

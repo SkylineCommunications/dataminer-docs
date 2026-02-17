@@ -86,9 +86,9 @@ This service now allows you to enable kernel response buffering, which should im
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, Automation scripts would always be checked whether they were Cassandra ready, regardless of the type of database used by the DataMiner System.
+Up to now, automation scripts would always be checked whether they were Cassandra ready, regardless of the type of database used by the DataMiner System.
 
-From now on, this Cassandra ready check will only be performed on DataMiner Systems using a MySQL database. When the DataMiner System is using a type of database other than MySQL, Automation scripts will always be considered Cassandra ready.
+From now on, this Cassandra ready check will only be performed on DataMiner Systems using a MySQL database. When the DataMiner System is using a type of database other than MySQL, automation scripts will always be considered Cassandra ready.
 
 #### Enhanced performance when starting up a DataMiner Agent with a large number of virtual elements [ID 38780]
 
@@ -267,7 +267,7 @@ When being migrated to STaaS, SLAnalytics data, DOM data or SRM data would incor
 
 Up to now, when you opened a new alarm tab, and did a search using the *Search for alarms* box, the alarms matching the search criterion would incorrectly show timestamps according to the local time zone of the client computer.
 
-From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e. the local time zone of the DataMiner Agent to which the Cube client is connected.
+From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e., the local time zone of the DataMiner Agent to which the Cube client is connected.
 
 #### Not possible to delete a service created via an SRM booking when it had been assigned a name that was already being used [ID 38914]
 
@@ -307,7 +307,7 @@ When you opened a visual overview in a web app, in some cases, a `Connection cou
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, an error would occur when a DataMiner module (e.g. Automation, Scheduler, etc.) tried to send an email while *SLASPConnection* was still initializing. From now on, all DataMiner modules will be able to send emails, even when *SLASPConnection* is still initializing.
+Up to now, an error would occur when a DataMiner module (e.g., Automation, Scheduler, etc.) tried to send an email while *SLASPConnection* was still initializing. From now on, all DataMiner modules will be able to send emails, even when *SLASPConnection* is still initializing.
 
 #### SNMP: Timeout time of commands would incorrectly be doubled when using SNMP++ [ID 39164]
 

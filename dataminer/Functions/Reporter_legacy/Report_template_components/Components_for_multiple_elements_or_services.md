@@ -38,7 +38,7 @@ Overview of an element’s active alarms or history alarms for a selected time s
 
 - In order to only include certain parameters, you can filter on parameter name.
 
-  Use a semicolon to combine several parameters in the filter, e.g. “Audio Output Level;CPU:SLelement.0”. For more information on using filters, see [Using quick filters](xref:Using_quick_filters).
+  Use a semicolon to combine several parameters in the filter, e.g., “Audio Output Level;CPU:SLelement.0”. For more information on using filters, see [Using quick filters](xref:Using_quick_filters).
 
 - You can choose to sort the list either by element name or by alarm time.
 
