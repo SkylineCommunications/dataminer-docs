@@ -73,7 +73,7 @@ Once a node is available in the workflow, you can select it and this will enable
 
 ### Swapping a node to another pool/resource
 
-It is possible to swap a node to a different pool or resource. This to avoid losing all customizations done already on the node (e.g. configuration, properties, etc.). Select the node and click on *Swap To Pool* or *Swap to Resource* depending if you want to swap it to another pool or resource.
+It is possible to swap a node to a different pool or resource. This to avoid losing all customizations done already on the node (e.g., configuration, properties, etc.). Select the node and click on *Swap To Pool* or *Swap to Resource* depending if you want to swap it to another pool or resource.
 
 ![Swap node](~/solutions/images/Workflow_Designer_Swap_Node.png)
 
