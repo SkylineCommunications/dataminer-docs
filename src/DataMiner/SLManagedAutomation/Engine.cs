@@ -187,29 +187,29 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		public string UserLoginName { get; }
 
-        /// <summary>
-        /// Gets the info the client has provided when executing the script.
-        /// </summary>
-        /// <value>The info provide by the client.</value>
-        /// <remarks>
-        /// <note type="note">Available from DataMiner 10.6.4 onwards.</note> <!-- RN 44742 -->
-        /// </remarks>
-        public IClientInfo ClientInfo { get; }
+		/// <summary>
+		/// Gets the info the client has provided when executing the script.
+		/// </summary>
+		/// <value>The info provide by the client.</value>
+		/// <remarks>
+		/// <note type="note">Available from DataMiner 10.6.4 onwards.</note> <!-- RN 44742 -->
+		/// </remarks>
+		public IClientInfo ClientInfo { get; }
 
-        /// <summary>
-        /// Gets or sets the web interactive automation script UI version.
-        /// </summary>
-        /// <value>The version of the web interactive automation script UI.</value>
-        /// <remarks>
-        /// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43875/43964).</para>
-        /// <para>The WebUIVersion is set to 'Default' by default. As from DataMiner 10.5.0 [CU10]/10.6.1 (RN 44059), this means that the V2 UI is used. You can instead set this to 'V1' to revert to the old UI or to 'V2' to make sure the new UI will continue to be used even if the default behavior changes. Check <see href="xref:UIBlockTypesOverview#ui-versions">UI Versions</see> for more details about the differences between these versions.</para>
-        /// </remarks>
-        /// <example>
-        /// <code>
-        /// engine.WebUIVersion= WebUIVersion.V1;
-        /// </code>
-        /// </example>
-        public WebUIVersion WebUIVersion { get; set; }
+		/// <summary>
+		/// Gets or sets the web interactive automation script UI version.
+		/// </summary>
+		/// <value>The version of the web interactive automation script UI.</value>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 (RN 43875/43964).</para>
+		/// <para>The WebUIVersion is set to 'Default' by default. As from DataMiner 10.5.0 [CU10]/10.6.1 (RN 44059), this means that the V2 UI is used. You can instead set this to 'V1' to revert to the old UI or to 'V2' to make sure the new UI will continue to be used even if the default behavior changes. Check <see href="xref:UIBlockTypesOverview#ui-versions">UI Versions</see> for more details about the differences between these versions.</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// engine.WebUIVersion= WebUIVersion.V1;
+		/// </code>
+		/// </example>
+		public WebUIVersion WebUIVersion { get; set; }
 
 		/// <summary>
 		/// Acknowledges the specified alarm tree using the provided comment message.
