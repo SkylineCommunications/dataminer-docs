@@ -9,7 +9,7 @@ This tutorial showcases DataMiner's [relational anomaly detection (RAD)](xref:Re
 Estimated duration: 35 minutes.
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created with DataMiner 10.6.1 and RAD Manager version 2.0.1.
+> The content and screenshots for this tutorial have been created with DataMiner 10.6.1 and RAD Manager version 4.0.0.
 
 ## Prerequisites
 
