@@ -4,6 +4,10 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 16 February 2026 - Enhancement - SupportAssistant 1.9.0 - Proxy setup support for file uploads
+
+File uploads in SupportAssistant previously attempted transfers only through the CloudGateway endpoint or directly. With this update, if the CloudGateway upload endpoint is unavailable, the DxM will now automatically fall back to using its configured proxy settings (when present).
+
 #### 3 December 2025 - Enhancement - SupportAssistant 1.8.0 - Added possibility to locally trigger remote log collector
 
 SupportAssistant now supports new requests that allow the local triggering of remote log collectors. This functionality will be leveraged by an upcoming LogCollector change.
