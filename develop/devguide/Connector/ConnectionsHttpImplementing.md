@@ -37,7 +37,7 @@ The following example shows an implementation of an HTTP request:
 </Request>
 ```
 
-Using the *verb* attribute, the request defines which HTTP method (or verb) is to be used, e.g. "GET", "POST", "PUT", etc.
+Using the *verb* attribute, the request defines which HTTP method (or verb) is to be used, e.g., "GET", "POST", "PUT", etc.
 
 The *url* attribute defines the path, optionally including a query string and/or fragment string.
 
@@ -54,16 +54,16 @@ The *url* attribute defines the path, optionally including a query string and/or
 >   - The parameter referred to in the *pid* attribute must be of type `string`.
 >   - In case both the *url* and *pid* attributes are specified, the *pid* attribute will be ignored. Typically, only one of these attributes is specified.
 >
-> - It is also possible to specify an absolute URL (e.g. `http://google.com`), which possibly specifies another host (or IP address/port) than the one specified in the corresponding element connection.
+> - It is also possible to specify an absolute URL (e.g., `http://google.com`), which possibly specifies another host (or IP address/port) than the one specified in the corresponding element connection.
 
 However, this should be used only when there is no other option, because when the specified host becomes unavailable, the element will go into timeout, giving the impression that the host specified in the element wizard is no longer available.
 
-Including a request header (e.g. "Accept", "Content-Type", "Content-Length", etc.) is possible by defining a header. See [Protocol.HTTP.Session.Connection.Request.Headers.Header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header).
+Including a request header (e.g., "Accept", "Content-Type", "Content-Length", etc.) is possible by defining a header. See [Protocol.HTTP.Session.Connection.Request.Headers.Header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header).
 
 By using either Data or Parameters, you can send data along with the HTTP request. See [Protocol.HTTP.Session.Connection.Request.Data](xref:Protocol.HTTP.Session.Connection.Request.Data) and [Protocol.HTTP.Session.Connection.Request.Parameters](xref:Protocol.HTTP.Session.Connection.Request.Parameters).
 
 > [!IMPORTANT]
-> DataMiner does not perform any encoding on the provided data. Therefore, if you are, for example, building a URL for a GET request with a query string or the body of a POST request with content type "application/x-www-form-urlencoded", you must ensure that the data is using [percent-encoding](https://datatracker.ietf.org/doc/html/rfc3986#section-2.1) (also known as URL encoding) to avoid misinterpretation of the provided data. Otherwise, the provided data might be misinterpreted by the server in case the data contains characters from the [reserved character set](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2) (e.g. '&amp;').
+> DataMiner does not perform any encoding on the provided data. Therefore, if you are, for example, building a URL for a GET request with a query string or the body of a POST request with content type "application/x-www-form-urlencoded", you must ensure that the data is using [percent-encoding](https://datatracker.ietf.org/doc/html/rfc3986#section-2.1) (also known as URL encoding) to avoid misinterpretation of the provided data. Otherwise, the provided data might be misinterpreted by the server in case the data contains characters from the [reserved character set](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2) (e.g., '&amp;').
 
 > [!NOTE]
 > Either *Parameters* or *Data* should be used, not both. If both are used together, only the content of *Parameters* will be included in the request.
@@ -150,7 +150,7 @@ The following example gives an overview of how to capture the different parts of
 </Response>
 ```
 
-Using the statusCode attribute, you can specify the ID of the parameter in which the status line (e.g. "HTTP/1.1 200 OK") should be put.
+Using the statusCode attribute, you can specify the ID of the parameter in which the status line (e.g., "HTTP/1.1 200 OK") should be put.
 
 > [!NOTE]
 >
@@ -162,7 +162,7 @@ Using the statusCode attribute, you can specify the ID of the parameter in which
 >   - 5xx (Server error): The element will go into timeout.
 >
 > - HTTP communication logging can be enabled by setting information logging to level 3 (RN 14439).
-> - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e. upon reception of the WINHTTP_ERROR_TIMEOUT error) and when the SLPort process is unable to connect to the web server (i.e. upon reception of the ERROR_WINHTTP_CANNOT_CONNECT error).<!-- RN 13111 -->
+> - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e., upon reception of the WINHTTP_ERROR_TIMEOUT error) and when the SLPort process is unable to connect to the web server (i.e., upon reception of the ERROR_WINHTTP_CANNOT_CONNECT error).<!-- RN 13111 -->
 
 > [!TIP]
 > See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)

@@ -15,9 +15,7 @@ For now, to create an organization, you will need to partially follow the [proce
 
 1. Click *DataMiner as a Service*.
 
-1. Under *Organization*, click *Create new*.
-
-   ![Add a new organization](~/dataminer/images/Add_new_organization.png)
+1. Click *Create a new organization*.
 
 1. Specify the name and the URL for the organization.
 

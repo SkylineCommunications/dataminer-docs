@@ -4,7 +4,7 @@ uid: DOM_ModuleSettings
 
 # DOM module settings
 
-The `ModuleSettings` object contains information on how a DOM manager should behave. It contains sub-settings objects that are passed on to the various proxies, i.e. the parts of the manager that determine the behavior of each create, read, update, or delete (CRUD) action.
+The `ModuleSettings` object contains information on how a DOM manager should behave. It contains sub-settings objects that are passed on to the various proxies, i.e., the parts of the manager that determine the behavior of each create, read, update, or delete (CRUD) action.
 
 To create the `ModuleSettings` object, use the `ModuleSettingsHelper`. For example:
 

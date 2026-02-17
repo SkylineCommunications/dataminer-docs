@@ -60,7 +60,7 @@ This tutorial consists of the following steps:
 
      ![Spectrum Simulation element](~/dataminer/images/Tutorial_Spectrum_Champions_League_img00.png)
 
-   - Open the Automation module in DataMiner Cube and check if the Automation script *SPCTRM_AS_SkylineSpectrumSimulation* has been added.
+   - Open the Automation module in DataMiner Cube and check if the automation script *SPCTRM_AS_SkylineSpectrumSimulation* has been added.
 
    - On the home page of your DataMiner System, check whether the low-code app "Skyline Spectrum Simulation" has been added.
 
@@ -85,7 +85,7 @@ This tutorial consists of the following steps:
 
    1. Click *New* and specify the necessary data:
 
-      - Add a name, e.g. `myPreset`.
+      - Add a name, e.g., `myPreset`.
 
       - Optionally, add a description.
 
@@ -150,7 +150,7 @@ This tutorial consists of the following steps:
 
    1. In the ribbon at the top of the card, select *monitors* and click *New script*.
 
-   1. Specify a name for the script, e.g. `myScript`.
+   1. Specify a name for the script, e.g., `myScript`.
 
    1. Configure the script contents as illustrated below:
 
@@ -171,7 +171,7 @@ In this step, you will add a rain fade monitor that generates a major alarm when
 
 1. If this is the first monitor that gets added to the system, in the new monitor window, click *Add monitor*.
 
-1. Specify a name for the monitor, e.g. `rainFadeMonitor`.
+1. Specify a name for the monitor, e.g., `rainFadeMonitor`.
 
 1. Expand *Show details*, and set *Interval* to 5 seconds (instead of the default value of 5 minutes).
 
@@ -179,7 +179,7 @@ In this step, you will add a rain fade monitor that generates a major alarm when
 
    This will make sure that the monitor is triggered every 5 seconds, causing a quick reaction when the rain fade kicks in.
 
-1. Make sure your script (e.g. "myScript") is selected in the *script* dropdown box.
+1. Make sure your script (e.g., "myScript") is selected in the *script* dropdown box.
 
 1. Under *Monitoring and trending*, click *Add* and select *Script variable rainFadeDetected* to add this as a parameter.
 
@@ -241,11 +241,11 @@ In this step, you will add a second, separate monitor that will generate a criti
 
 1. In the ribbon at the top of the card, select *monitors* and click *New monitor*.
 
-1. Specify a name for the monitor, e.g. `shiftedCarrierMonitor`.
+1. Specify a name for the monitor, e.g., `shiftedCarrierMonitor`.
 
 1. Expand *Show details*, and set *Interval* to 5 seconds.
 
-1. Make sure your script (e.g. "myScript") is selected in the *script* dropdown box.
+1. Make sure your script (e.g., "myScript") is selected in the *script* dropdown box.
 
 1. Under *Monitoring and trending*, click *Add* and select *Script variable shiftedCarrierDetected* to add this as a parameter.
 

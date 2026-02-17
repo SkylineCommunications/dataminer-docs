@@ -41,7 +41,7 @@ A network protocol that allows the equipment to discover neighboring network equ
 If the equipment runs such a network protocol, the connector will have or will need to be extended with the information above. The custom script can then provide IDP with the following information regarding neighbors of the equipment:
 
 - The DataMiner and element ID of the element.
-- The unique identifier (i.e. the Local Chassis ID) of the equipment.
+- The unique identifier (i.e., the Local Chassis ID) of the equipment.
 - For each neighbor of the equipment:
 
   - The DCF interface ID on which the neighbor is detected.
@@ -84,7 +84,7 @@ When DCF connections are provisioned, IDP will also provision these DCF interfac
 Additionally, IDP automatically provisions the following DCF interface properties:
 
 - **DataMiner IDP Port ID** : The local port ID, as supplied by the script.
-- **DataMiner IDP Interface Type**: The type of the interface e.g. Ethernet. This also supplied by the script.
+- **DataMiner IDP Interface Type**: The type of the interface e.g., Ethernet. This also supplied by the script.
 
 ## Provisioning DCF connections
 

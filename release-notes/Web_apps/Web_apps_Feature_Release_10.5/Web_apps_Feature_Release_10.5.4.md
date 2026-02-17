@@ -23,21 +23,21 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the web session [ID 42097]
+#### Interactive automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the web session [ID 42097]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, entered date and time would be formatted depending on the platform and the configured settings. In case of a web app, the entered date and time would always be returned in UTC. From now on, when an interactive Automation script is being run within a web app, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
+When UI components of type *Calendar* or *Time* are used in interactive automation scripts, up to now, entered date and time would be formatted depending on the platform and the configured settings. In case of a web app, the entered date and time would always be returned in UTC. From now on, when an interactive automation script is being run within a web app, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
 
 When a default time zone is defined for DataMiner web apps, that default time zone will be used instead of the time zone of the client. See also [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps).
 
-For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
+For more information, see [Interactive automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
 
 #### Dashboards/Low-Code Apps - Query builder: Dragging and dropping operators [ID 42127]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When you want to rearrange the operators in a query, you can now do so by dragging and dropping operators from one location in the query to another, making this much easier than before. This will only be possible within the same level, not from e.g. a joined query to the parent query or vice versa.
+When you want to rearrange the operators in a query, you can now do so by dragging and dropping operators from one location in the query to another, making this much easier than before. This will only be possible within the same level, not from e.g., a joined query to the parent query or vice versa.
 
 If an operator shows a red error state after you have dragged it to a new location, this means that the operator in question cannot be used at that location and that the query has become invalid as a result.
 
@@ -62,7 +62,7 @@ For all information about this component, see [Maps](xref:DashboardMaps).
 
 ### Enhancements
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Dropdown' [ID 41838]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'Dropdown' [ID 41838]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -72,7 +72,7 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'CheckBox' [ID 41891]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'CheckBox' [ID 41891]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -82,7 +82,7 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'PasswordBox' [ID 42007]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'PasswordBox' [ID 42007]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -92,7 +92,7 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
-#### Low-Code Apps - Interactive Automation scripts: Read-only and/or disabled legacy UI components will be disabled when using URL argument '?useNewIASInputComponents=true' [ID 42009]
+#### Low-Code Apps - Interactive automation scripts: Read-only and/or disabled legacy UI components will be disabled when using URL argument '?useNewIASInputComponents=true' [ID 42009]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -111,7 +111,7 @@ For more information regarding the above-mentioned JSON syntax and legacy syntax
 > [!NOTE]
 > Contrary to dashboards, low-code apps will not push data to the URL. In other words, the URL will not change when data is selected in a component.
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'RadioButtonList' [ID 42032]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI component 'RadioButtonList' [ID 42032]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -144,7 +144,7 @@ In a *Select* operator of a GQI query, you can now reorder the columns by draggi
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-From now on, the *Grid* component will allow you to use browser menu commands. It will now be possible to e.g. select text in a *Grid* component and copy it to another application by means of the *Copy* command of your browser.
+From now on, the *Grid* component will allow you to use browser menu commands. It will now be possible to, for example, select text in a *Grid* component and copy it to another application by means of the *Copy* command of your browser.
 
 #### Dashboards/Low-Code Apps - Time range component: Enhanced readability of Apply button [ID 42155]
 
@@ -216,9 +216,9 @@ The *Maps* component now has a redesigned icon.
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-The default data colors have been updated. These are the colors that are used for e.g. the lines in a line & area chart, the bars in a column & bar chart, the slices in a pie & donut chart, etc.
+The default data colors have been updated. These are the colors that are used for e.g., the lines in a line & area chart, the bars in a column & bar chart, the slices in a pie & donut chart, etc.
 
-These updated colors will automatically be applied to all existing dashboards and low-code apps that use one of the default Skyline themes (i.e. Skyline Light - White, Skyline Light - Gray, and Skyline Dark).
+These updated colors will automatically be applied to all existing dashboards and low-code apps that use one of the default Skyline themes (i.e., Skyline Light - White, Skyline Light - Gray, and Skyline Dark).
 
 Also, the icon of the *Column & bar chart* component has been redesigned.
 
@@ -256,7 +256,7 @@ In some cases, when new data from a partial table was being loaded into a *Table
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-In some cases, scroll bars would appear on a *Grid* component, even though there was sufficient screen real estate to display all items.
+In some cases, scrollbars would appear on a *Grid* component, even though there was sufficient screen real estate to display all items.
 
 #### Low-Code Apps - Form component: Problem when saving a form due to boolean fields not having a default value [ID 42111]
 
@@ -270,13 +270,13 @@ From now on, all boolean fields will have a default value (either true or false)
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When, while configuring a component, you opened the *Components* dataset on the *Data* pane, all portions of letters that extended below the font's baseline (i.e. the descenders of letters like e.g. g, j, q, p, and y) would incorrectly be cut off.
+When, while configuring a component, you opened the *Components* dataset on the *Data* pane, all portions of letters that extended below the font's baseline (i.e., the descenders of letters like e.g., g, j, q, p, and y) would incorrectly be cut off.
 
 #### Dashboards/Low-Code Apps - Parameter table component: Clicking the info icon of the 'Parameter table filters' section would not open the correct help page [ID 42123]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When, while configuring a *Parameter table* component, you opened the *Parameter table filters*\* section on the *Data* pane and clicked the information icon on the right, the main page of [docs.dataminer.services](xref:docs_dataminer_services) would incorrectly be opened. From now on, the correct page, i.e. [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax), will be opened instead.
+When, while configuring a *Parameter table* component, you opened the *Parameter table filters*\* section on the *Data* pane and clicked the information icon on the right, the main page of [docs.dataminer.services](xref:docs_dataminer_services) would incorrectly be opened. From now on, the correct page, i.e., [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax), will be opened instead.
 
 \**The *Parameter table filters* section is only available if you add the `showAdvancedSettings=true` option to the URL of the dashboard or the low-code app.*
 
@@ -308,7 +308,7 @@ The *About* box of the DataMiner web apps would incorrectly no longer show any O
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When a component had tried to fetch a number of non-existing objects (e.g. elements, parameter, etc.), in some cases, it would stop responding.
+When a component had tried to fetch a number of non-existing objects (e.g., elements, parameter, etc.), in some cases, it would stop responding.
 
 #### Dashboards app: 'Link to data' popup would not contain any data when the query had a filter node linked to a variable or a flow [ID 42201]
 
@@ -346,13 +346,13 @@ When you saved a low-code app with an empty name, an exception could be thrown.
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-When you created a new low-code app, the icon of that app would incorrectly only be visible on the root page (i.e. `https://myDMA/root/`) after you had refreshed that page.
+When you created a new low-code app, the icon of that app would incorrectly only be visible on the root page (i.e., `https://myDMA/root/`) after you had refreshed that page.
 
 #### Low-Code Apps: No tooltip showing the full name would appear when hovering over an ellipsed name of a low-code app [ID 42269]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-If, on the root page (i.e. `https://myDMA/root/`), a low-code app has a long name, that name will by default be ellipsed (i.e. only the first part of the name will be displayed, followed by "..."), and hovering over the name should make a tooltip appear, showing the full name. However, up to now, no tooltip showing the full name would appear when you hovered over an ellipsed name.
+If, on the root page (i.e., `https://myDMA/root/`), a low-code app has a long name, that name will by default be ellipsed (i.e., only the first part of the name will be displayed, followed by "..."), and hovering over the name should make a tooltip appear, showing the full name. However, up to now, no tooltip showing the full name would appear when you hovered over an ellipsed name.
 
 From now on, a tooltip showing the full name will appear when you hover either over the name of the app or the icon of the app.
 

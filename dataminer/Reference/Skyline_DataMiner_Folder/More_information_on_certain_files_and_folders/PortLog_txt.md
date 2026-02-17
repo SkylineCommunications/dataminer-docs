@@ -39,5 +39,5 @@ Example:
 > [!NOTE]
 >
 > - Although the local DataMiner port is optional, each line must contain three colons (":").
-> - Logging is started when the port in question is initialized, i.e. when the element is restarted or when the IP address or the IP port of the element is changed.
+> - Logging is started when the port in question is initialized, i.e., when the element is restarted or when the IP address or the IP port of the element is changed.
 > - The IP addresses provided in the PortLog.txt file must match **exactly** with those provided in the element editor. For example, using `localhost` and `127.0.0.1` in combination with each other will not work.

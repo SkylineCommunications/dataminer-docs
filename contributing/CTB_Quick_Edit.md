@@ -19,7 +19,7 @@ On every page of the documentation on docs.dataminer.services, an *Improve this 
 
    ![Pencil button](~/images/Contrib_PencilButton.png)
 
-   This will create a "fork" of the documentation, i.e. a copy where you can freely make changes.
+   This will create a "fork" of the documentation, i.e., a copy where you can freely make changes.
 
 1. Make your changes using the web editor.
 
@@ -45,7 +45,7 @@ On every page of the documentation on docs.dataminer.services, an *Improve this 
 
 1. Double-check the title and description for the pull request, and modify them if necessary.
 
-   We recommend that you keep the option *Allow edits by maintainers* selected, so that the documentation team will be able to correct any small issues (e.g. typos) directly.
+   We recommend that you keep the option *Allow edits by maintainers* selected, so that the documentation team will be able to correct any small issues (e.g., typos) directly.
 
    ![Create a pull request for your changes](~/images/Contrib_CreatePullRequestForChanges.png)
 

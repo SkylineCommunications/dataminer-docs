@@ -43,16 +43,16 @@ In the header bar of the job edit panel, a button is now available that allows y
 
 To improve performance and keep the size of log collector packages under control, the maximum size of the MediaOps log files has now been reduced from 100 MB to 10 MB.
 
-#### Resource Studio: Resource (pool) creation now happens via interactive Automation scripts [ID 43033]
+#### Resource Studio: Resource (pool) creation now happens via interactive automation scripts [ID 43033]
 
-Creating and editing resources and resource pools in the MediaOps apps will now be done with interactive Automation scripts instead of form components. This way, validation can be performed directly in the UI before the resources or resource pools are created or updated, and resources and resource pools can now be created directly in the complete state.
+Creating and editing resources and resource pools in the MediaOps apps will now be done with interactive automation scripts instead of form components. This way, validation can be performed directly in the UI before the resources or resource pools are created or updated, and resources and resource pools can now be created directly in the complete state.
 
 #### Performance improvements [ID 43037]
 
 The following performance improvements have been implemented:
 
 - When the job edit panel was opened, whenever there was an update to any existing job, the job details were retrieved for the job in the panel. This could cause performance issues in systems with many job updates. Now only changes to the job in the panel will cause the job details to be retrieved again.
-- When certain fields (e.g. the organization) were not filled in, it could occur that requests were sent to the database with an empty field, which would fail. To make sure such unnecessary requests are no longer sent, the ID will now be validated before a request is sent.
+- When certain fields (e.g., the organization) were not filled in, it could occur that requests were sent to the database with an empty field, which would fail. To make sure such unnecessary requests are no longer sent, the ID will now be validated before a request is sent.
 
 #### Compatibility with SRM framework [ID 43038]
 
@@ -68,11 +68,11 @@ To improve performance, the MediaOps Solution now requires the use of the [GQI D
 
 #### Scheduling: Action icons temporarily disabled while action is being executed [ID 43045]
 
-While actions are being executed in the Scheduling app, the icons that execute those actions (e.g. the pencil icon to open the edit job panel and the icons in the edit job panel) will now temporarily be disabled. This will prevent users from clicking action items multiple times while actions are still ongoing.
+While actions are being executed in the Scheduling app, the icons that execute those actions (e.g., the pencil icon to open the edit job panel and the icons in the edit job panel) will now temporarily be disabled. This will prevent users from clicking action items multiple times while actions are still ongoing.
 
 #### Fit to view option now enabled for optimal screen usage [ID 43259]
 
-On all main pages of the MediaOps apps, the *Fit to view* option has now been enabled, ensuring optimal usage of the available space on the screen. This way, tables and timeline components will be able to take up more space on screens with larger resolutions (e.g. 4K).
+On all main pages of the MediaOps apps, the *Fit to view* option has now been enabled, ensuring optimal usage of the available space on the screen. This way, tables and timeline components will be able to take up more space on screens with larger resolutions (e.g., 4K).
 
 #### Resource Studio: Resource property values limited to 150 characters [ID 43269]
 

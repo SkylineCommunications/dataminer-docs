@@ -77,7 +77,7 @@ Result:
 
   - the alarm color
 
-  - the MarkerSelectionPID (i.e. the parameter containing the marker image ID)
+  - the MarkerSelectionPID (i.e., the parameter containing the marker image ID)
 
 - The properties filter will be applied on the "data element".
 

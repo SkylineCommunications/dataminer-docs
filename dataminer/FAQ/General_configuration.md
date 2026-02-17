@@ -24,16 +24,14 @@ You can find these on the [DataMiner Metrics](xref:dataminer_metrics) page.
 
 A DataMiner Agent must be restarted in the following cases:
 
-- After a manual change has been made to a DataMiner XML file.
+- After a **manual change** has been made to a DataMiner **XML** file, for example, when you have added a custom command to the Alarm Console shortcut menu in *Hyperlinks.xml*.
 
-  E.g. when you have added a custom command to the Alarm Console shortcut menu in *Hyperlinks.xml*.
+- After the **IP address** of the server hosting the DataMiner Agent has been **changed**.
 
-- After the IP address of the server hosting the DataMiner Agent has been changed.
-
-- After the time zone on the DataMiner Agent has been changed.
+- After the **time zone** on the DataMiner Agent has been **changed**.
 
 > [!NOTE]
-> After an upgrade, the DMA will automatically be restarted.
+> After an **upgrade**, the DMA will automatically be restarted.
 
 > [!TIP]
 > See also: [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube)

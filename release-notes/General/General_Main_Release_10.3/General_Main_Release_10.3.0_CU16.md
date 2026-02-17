@@ -56,7 +56,7 @@ On some systems, the `C:\Skyline DataMiner\System Cache\SLNet` folder can contai
 
    Example: *ReplicationBuffer_slc-h32-g06_10.11.6.32_223_4_6992437*
 
-1. If you want to flush the data in the ReplicationBuffer files to the agents that are hosting the replicated elements (i.e. in order to fill some gaps in their trend data), you can try to do the following:
+1. If you want to flush the data in the ReplicationBuffer files to the agents that are hosting the replicated elements (i.e., in order to fill some gaps in their trend data), you can try to do the following:
 
    1. Connect to the DMA using the SLNetClientTest tool.
    1. Go to the *Build Message* tab of the main window.
@@ -157,13 +157,13 @@ Also, when a group contained single parameters in combination with a partial tab
 > [!NOTE]
 > When a `next` attribute is defined on a partial SNMP table parameter inside a parameter group, then the delay will also be applied between the batches of rows that are requested.
 
-#### Interactive Automation script was not able to continue once a lost connection was re-established [ID 39487]
+#### Interactive automation script was not able to continue once a lost connection was re-established [ID 39487]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
-When a client application lost connection while an interactive Automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
+When a client application lost connection while an interactive automation script was being run, up to now, the script would stop as it was not able to continue once the connection was re-established.
 
-From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
+From now on, when a client application loses connection while an interactive automation script is being run, the script will continue once the connection is re-established.
 
 #### Service & Resource Management: Service Manager would initialize twice on Failover systems [ID 39598]
 

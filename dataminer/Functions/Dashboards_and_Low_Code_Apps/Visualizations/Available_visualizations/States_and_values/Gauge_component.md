@@ -20,7 +20,7 @@ To configure the component:
    - In case parameter data included a parameter based on a protocol, a filter can be used to filter on a specific element.
 
    > [!NOTE]
-   > From DataMiner 10.2.0/10.1.6 onwards, once this component has been configured with data input, the component is available in the *Components* section of the *Data* pane so that it can be used as data for other components. This way, if the input for this component changes, it will also change for all other components using this component as their data. However, note that this is only supported for query data input from DataMiner 10.1.7 onwards.
+   > Once this component has been configured with data input, the exposed data will appear as [component data](xref:Component_Data) in the *Data* pane and can be used by other components. This way, if the input for this component changes, the exposed data will update automatically for all components that use it as their data input.
 
 1. Optionally, customize the following component options:
 

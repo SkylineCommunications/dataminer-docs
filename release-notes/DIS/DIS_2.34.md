@@ -25,7 +25,7 @@ To select a previous version of a protocol you already opened in the DIS Compare
 
 The following enhancements will make using the class library in a serialization/deserialization context more convenient:
 
-- Interfaces, base classes and their implementations will now all be copied together into the generated QAction or Automation script.
+- Interfaces, base classes and their implementations will now all be copied together into the generated QAction or automation script.
 
   If the generator detects that an interface is being used while the class that implements it is not, then the latter will now be copied along into the generated code. Also, if a class is being used while the interface is not, then both will now be copied into the generated code.
 
@@ -202,4 +202,4 @@ When the DIS Comparer finds a page button caption that does not end with an elli
 Typically, the DIS Comparer will consider parameter description updates as major changes. However, in the following exceptional cases, updating the parameter description is allowed. Up to now, the DIS Comparer would incorrectly also consider these updates as major changes:
 
 - Adding a description to a parameter that either had no description or an empty description.
-- Removing the description of a parameter that does not require one and that will never be retrieved or updated by an Automation script.
+- Removing the description of a parameter that does not require one and that will never be retrieved or updated by an automation script.

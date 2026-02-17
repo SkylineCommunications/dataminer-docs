@@ -9,7 +9,7 @@ You can [download a virtual hard disk](https://community.dataminer.services/data
 
 When you configure this setup, you will be able to choose between different data storage setups:
 
-- [STaaS](xref:STaaS), i.e. the recommended setup.
+- [STaaS](xref:STaaS), i.e., the recommended setup.
 
 - [Self-managed dedicated clustered storage](xref:Configuring_dedicated_clustered_storage): A setup where you host and manage the Cassandra and OpenSearch clusters required by DataMiner yourself on dedicated servers (not recommended). If you choose this setup, you will need to make sure these database clusters are fully installed before you run the procedures below, so that DataMiner will be able to connect to them.
 
@@ -82,7 +82,7 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 > [!IMPORTANT]
 > At this point, the DataMiner core software is fully installed. If you continue with the steps below, the Installer will also automatically take care of the license and data storage configuration. However, if you **do not want a default installation**, you may not want to use this automatic configuration:
 >
-> - If you intend to **restore a backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps under [Restoring a backup onto the new installed DataMiner Agent](xref:Restoring_backup_on_newly_installed_DMA).
+> - If you intend to **restore a backup** coming from another machine because of e.g., a hardware migration or during disaster recovery, skip the configuration below and follow the steps under [Restoring a backup onto the new installed DataMiner Agent](xref:Restoring_backup_on_newly_installed_DMA).
 > - If you are installing a **Failover** Agent, skip the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](xref:Configuring_a_new_DMA_in_Failover_pair). These steps are the same as for an installation using the DataMiner Installer.
 
 > [!NOTE]
@@ -154,7 +154,7 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 >   - For the license, see [Permanent license](xref:Permanent_license).
 >   - For the data storage configuration, please refer to [Configuring dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
 > - The procedure below will deploy DataMiner in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. To immediately install DataMiner with a **perpetual license**, you will need to configure the license and data storage manually, similar to an offline installation. To switch to a [perpetual license](xref:Pricing_Perpetual_Use_Licensing) after the initial installation, see [Switching from subscription mode to perpetual license](xref:Switching_from_subscription_mode_to_perpetual_license). To switch to an offline demo license, see [Switching from subscription mode to an offline demo license](xref:Switching_from_subscription_mode_to_offline_demo).
-> - If you intend to restore a **backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip** the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](xref:Restoring_backup_on_newly_installed_DMA).
+> - If you intend to restore a **backup** coming from another machine because of e.g., a hardware migration or during disaster recovery, **skip** the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](xref:Restoring_backup_on_newly_installed_DMA).
 > - If you are installing a **Failover** Agent, **skip** the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](xref:Configuring_a_new_DMA_in_Failover_pair). These steps are the same as for an installation using the DataMiner Installer.
 
 > [!NOTE]

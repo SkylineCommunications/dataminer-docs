@@ -9,9 +9,9 @@ uid: SRM_1.2.30
 
 ## New features
 
-#### New Automation script to detect and clean up corrupted profile instances [ID 35326]
+#### New automation script to detect and clean up corrupted profile instances [ID 35326]
 
-A new interactive Automation script, *SRM_IAS_CorruptProfileInstances*, has been added, which can be used to detect and clean up corrupted profile instances, i.e. profile instances that still include deleted parameters. The script will list all the corrupted profile instances it has detected, and you can then click *Cleanup* to remove the deleted parameters from the profile instances.
+A new interactive automation script, *SRM_IAS_CorruptProfileInstances*, has been added, which can be used to detect and clean up corrupted profile instances, i.e., profile instances that still include deleted parameters. The script will list all the corrupted profile instances it has detected, and you can then click *Cleanup* to remove the deleted parameters from the profile instances.
 
 #### Support for bulk creation of non-function resources [ID 35458]
 
@@ -112,7 +112,7 @@ Failed to execute reservation action ChangeNameAction due to:
 
 In some cases, it was not possible to change the pre-roll time of a booking during its pre-roll phase. The wizard instead tried to change the start time of the booking.
 
-Now changing the pre-roll time during the pre-roll phase will be possible as long as it is not set to be in the past and it does not exceed the end time of the booking (i.e. the start of the post-roll phase).
+Now changing the pre-roll time during the pre-roll phase will be possible as long as it is not set to be in the past and it does not exceed the end time of the booking (i.e., the start of the post-roll phase).
 
 #### Booking did not end when finished with Shrink Post-Roll enabled [ID 35746]
 

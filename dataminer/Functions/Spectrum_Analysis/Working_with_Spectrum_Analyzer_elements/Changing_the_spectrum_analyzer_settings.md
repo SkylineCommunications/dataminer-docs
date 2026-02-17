@@ -12,7 +12,7 @@ In the *Settings* pane, in the tab *Manual* > *Settings*, you can modify the set
 
 In most spectrum elements, the following settings are available, though this depends on the protocol:
 
-- **Reference level**: The amplitude reference level. Different units can be selected for the value you enter, e.g. dBm, dBmV, mV.
+- **Reference level**: The amplitude reference level. Different units can be selected for the value you enter, e.g., dBm, dBmV, mV.
 
   From DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards<!--RN 37821-->, you can also change the reference level using the pencil next to the reference level Y-axis label in the real-time display section of the spectrum analyzer card.
 
@@ -22,15 +22,15 @@ In most spectrum elements, the following settings are available, though this dep
 
   From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42597-->, you can auto-adjust the amplitude scale (together with the reference level) using the ![auto-scale](~/dataminer/images/Auto-scale.png) button next to the reference level Y-axis label in the real-time display section of the spectrum analyzer card.
 
-- **Start frequency**: The start frequency of the displayed frequency span. Different units can be selected for the value you enter, e.g. kHz, GHz.
+- **Start frequency**: The start frequency of the displayed frequency span. Different units can be selected for the value you enter, e.g., kHz, GHz.
 
-- **Stop frequency**: The stop frequency of the displayed frequency span. Different units can be selected for the value you enter, e.g. kHz, GHz.
+- **Stop frequency**: The stop frequency of the displayed frequency span. Different units can be selected for the value you enter, e.g., kHz, GHz.
 
 - **Frequency span**: The range between the start and stop frequencies.
 
   From DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards<!-- RN 37946 -->, you can set the frequency span to 0 to enter zero-span mode. The X-axis will then change to a time axis instead of a frequency axis, using the sweeptime as its time indicator. All other frequency-related features will be disabled.
 
-- **Center frequency**: The frequency in the middle of the display’s frequency axis. Different units can be selected for the value you enter, e.g. kHz, GHz.
+- **Center frequency**: The frequency in the middle of the display’s frequency axis. Different units can be selected for the value you enter, e.g., kHz, GHz.
 
   From DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards<!--RN 37821-->, you can also change the center frequency using the pencil next to the center frequency X-axis label in the real-time display section of the spectrum analyzer card.
 

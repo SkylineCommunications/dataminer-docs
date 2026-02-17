@@ -35,7 +35,7 @@ The number of old values specified must match the number of new values specified
 >
 > `CAction::ReplaceData|DBG|5|After replace`
 
-The old and new value must be a hex string, optionally prefixed with "0x" or "0X" (e.g. 0x0F0E).
+The old and new value must be a hex string, optionally prefixed with "0x" or "0X" (e.g., 0x0F0E).
 
 #### Type@startoffset
 
@@ -72,7 +72,7 @@ The number of old values specified must match the number of new values specified
 >
 > `CAction::ReplaceData|DBG|5|After replace`
 
-The old and new value must be a hex string, optionally prefixed with "0x" or "0X" (e.g. 0x0F0E).
+The old and new value must be a hex string, optionally prefixed with "0x" or "0X" (e.g., 0x0F0E).
 
 #### Type@startoffset
 
@@ -109,7 +109,7 @@ The number of old values specified must match the number of new values specified
 >
 > `CAction::ReplaceData|DBG|5|After replace`
 
-The old and new value must be a hex string, optionally prefixed with "0x" or "0X" (e.g. 0x0F0E).
+The old and new value must be a hex string, optionally prefixed with "0x" or "0X" (e.g., 0x0F0E).
 
 #### Type@startoffset
 

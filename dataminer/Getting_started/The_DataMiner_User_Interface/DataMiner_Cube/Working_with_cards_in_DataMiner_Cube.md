@@ -108,7 +108,7 @@ The pane consists of a tree view with several fixed nodes:
   > [!NOTE]
   > The Annotations module is no longer available from DataMiner 10.6.0/10.6.1 onwards<!-- RN 44124+44136 -->. Prior to this, starting from DataMiner 10.4.0/10.4.1<!-- RN 37786 -->, it is disabled by default, but it can be enabled with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). In even older DataMiner versions, this feature is enabled by default, but you can optionally disable it with the soft-launch option.
 
-Depending on the type of cards, more nodes may be available, e.g. *AGGREGATION* on view cards.
+Depending on the type of cards, more nodes may be available, e.g., *AGGREGATION* on view cards.
 
 > [!NOTE]
 >
@@ -134,7 +134,7 @@ When you click the hamburger button in the top-left corner of a card, a shortcut
 
 - **Device discovery**: Only available on view cards. See [Locating devices in your system to add to your DMS](xref:Locating_devices_in_your_system_to_add_to_your_DMS).
 
-- **Visual overview**: Allows you to set different Visio files for the card’s Visual Overview pages. See [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files).
+- **Visual overview**: Allows you to set different Visio files for the card's Visual Overview pages. See [Setting the active Visio file for an element, service, or view](xref:Set_as_active_Visio_file).
 
 - **Close other cards**: Closes all cards except the one you have clicked.
 

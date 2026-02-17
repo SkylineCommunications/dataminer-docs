@@ -1,7 +1,7 @@
 ﻿namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// Specifies the of a dialog box item in an interactive Automation script.
+	/// Specifies the of a dialog box item in an interactive automation script.
 	/// </summary>
 	/// <remarks>
 	/// <para>Refer to <see href="xref:UIBlockTypesOverview">UIBlockType overview</see>.</para>

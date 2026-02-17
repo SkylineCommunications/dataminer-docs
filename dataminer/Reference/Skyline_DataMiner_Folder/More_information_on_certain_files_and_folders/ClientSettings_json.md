@@ -4,7 +4,7 @@ uid: ClientSettings_json
 
 # ClientSettings.json
 
-Within the subfolder `C:\Skyline DataMiner\Users`, there is a file *ClientSettings.json*, which contains client settings that apply for all users. Some of these settings, e.g. *MaxNumberOfSimultaneousNewAlarmsBeforeDelayingSort*, can only be configured directly within this file. You can find more information about these below.
+Within the subfolder `C:\Skyline DataMiner\Users`, there is a file *ClientSettings.json*, which contains client settings that apply for all users. Some of these settings, e.g., *MaxNumberOfSimultaneousNewAlarmsBeforeDelayingSort*, can only be configured directly within this file. You can find more information about these below.
 
 The folder also contains a subfolder for each user, which in turn contains a user-specific *ClientSettings.json* file. However, all settings in that file can be configured via the Cube UI.
 
@@ -244,7 +244,7 @@ In the shared client settings file, it is possible to enable or disable this add
 
 ## Setting the default time zone for DataMiner web apps
 
-The time displayed in the DataMiner web apps (e.g. the Dashboards app) is based on a time zone setting in the file `C:\Skyline DataMiner\users\ClientSettings.json`. If this setting is not configured, the time zone of the client browser is used instead.
+The time displayed in the DataMiner web apps (e.g., the Dashboards app) is based on a time zone setting in the file `C:\Skyline DataMiner\users\ClientSettings.json`. If this setting is not configured, the time zone of the client browser is used instead.
 
 To configure this setting:
 

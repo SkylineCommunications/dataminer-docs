@@ -79,7 +79,7 @@ Format of the request: requestInfo (object[]):
 - requestSettings[1]: Comma-separated list of response IDs.
 - requestInfo[2] (string[]): The commands to send.
 
-In this QAction, typically you will also set the state of the corresponding row to e.g. "Sending".
+In this QAction, typically you will also set the state of the corresponding row to, for example, "Sending".
 
 > [!NOTE]
 > The Run method of the QAction now has a return type of object[].
@@ -104,8 +104,8 @@ Format of the result data:
 Each response contains two entries:
 
 - response[0] (Int32): The ID of the matching response or -1 in case no match is found.
-- response[1] (byte[] or String): If there was a match, this entry contains the response data as a byte array. If there was no match, this entry contains a string message (e.g. "TIMEOUT").
-- response[2] (byte[]): Only present if result[0] is -1 (i.e. no response matches). This makes it possible to inspect the received response that does not match any of the specified expected responses.<!-- RN 13052 -->
+- response[1] (byte[] or String): If there was a match, this entry contains the response data as a byte array. If there was no match, this entry contains a string message (e.g., "TIMEOUT").
+- response[2] (byte[]): Only present if result[0] is -1 (i.e., no response matches). This makes it possible to inspect the received response that does not match any of the specified expected responses.<!-- RN 13052 -->
 
 Suppose parameters 1023 and 33 are defined as follows:
 
@@ -155,7 +155,7 @@ public class QAction
                                 }
                                 else
                                 {
-                                    string responseData = (string)response[1]; // E.g. "TIMEOUT".
+                                    string responseData = (string)response[1]; // For example, "TIMEOUT".
             
                                     // Process feedback...
                                     if (response.Length > 2)

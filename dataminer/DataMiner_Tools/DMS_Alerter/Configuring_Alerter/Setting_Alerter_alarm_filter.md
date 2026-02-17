@@ -25,7 +25,7 @@ To configure Alerter filters:
    - **Hide cleared alarms**: If you select this option, when Alerter receives an alarm that is cleared, that alarm will still be added to the *Alarms* list, but no alert will be generated, even if the alarm matches the client-side filters.
 
    > [!NOTE]
-   > The alarm filters that you can select with the *Use server-side filter* and *Use client-side filter* options can be configured in DataMiner Cube. See [Working with saved alarm filters](xref:ApplyingAlarmFiltersInTheAlarmConsole#working-with-saved-alarm-filters).
+   > The alarm filters that you can select with the *Use server-side filter* and *Use client-side filter* options can be configured in DataMiner Cube. See [Working with saved alarm filters](xref:WorkingWithSavedAlarmFilters).
 
 1. Click *OK*.
 

@@ -4,7 +4,7 @@ uid: Updating_gitignore_and_Jenkins_file
 
 # Updating .gitignore and Jenkins file
 
-When a repository is selected, the folder icon in the bottom right could start showing arrows going up. This indicates that some files that were automatically added when the repository got created (e.g. the Jenkins file, .gitignore) should be updated.
+When a repository is selected, the folder icon in the bottom right could start showing arrows going up. This indicates that some files that were automatically added when the repository got created (e.g., the Jenkins file, .gitignore) should be updated.
 
 Note that this upgrade does not touch your code and does not commit or push to Git.
 

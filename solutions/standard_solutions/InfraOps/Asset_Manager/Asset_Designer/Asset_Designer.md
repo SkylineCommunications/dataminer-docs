@@ -30,7 +30,7 @@ To start importing asset classes, click *Import/Export Asset Classes* in the top
 
    - **Asset Class Name**: A unique descriptive identifier for the asset class.
 
-   - **Device Type**: The device type. This is intended to provide a higher-level classification (e.g. encoder, video router) and to determine how the asset class and its associated assets behave within the system. For info on how to manage these device types, see [Configuring device types](xref:AM_Configuring_device_types).
+   - **Device Type**: The device type. This is intended to provide a higher-level classification (e.g., encoder, video router) and to determine how the asset class and its associated assets behave within the system. For info on how to manage these device types, see [Configuring device types](xref:AM_Configuring_device_types).
 
    - **Manufacturer**: Allows you to select a manufacturer. You can select any of the organizations configured in the [People and Organization](xref:People_Organizations) app.
 
@@ -52,7 +52,7 @@ In this pane, you can configure the following details:
   - The corresponding **device type**.
   - The **description**.
   - The **manufacturer**.
-  - The **height**, which determines how many rack units are consumed when an asset with this asset class is assigned to a rack. The specified value will be converted to "U" (i.e. rack units, with 1 U being equal to 4.445 cm) and displayed as such in the details section.
+  - The **height**, which determines how many rack units are consumed when an asset with this asset class is assigned to a rack. The specified value will be converted to "U" (i.e., rack units, with 1 U being equal to 4.445 cm) and displayed as such in the details section.
   - The **width** and **depth**. This optional information is only meant to inform the user and does not affect the asset assignment.
   - The **max power consumption**, which will determine how much power (in percent) an asset assigned to the rack will consume compared to the available power consumption assigned to the rack.
   - The **typical power consumption**. This optional information is only meant to inform the user and does not affect the asset assignment.
@@ -62,8 +62,8 @@ In this pane, you can configure the following details:
 
 - The **lifecycle** of the asset class:
 
-  - The **End of Life (EOL) date** for the asset class, i.e. when the manufacturer stops selling this equipment.
-  - The **End of Service (EOS) date** for the asset class, i.e. when the vendor no longer provides support for this equipment.
+  - The **End of Life (EOL) date** for the asset class, i.e., when the manufacturer stops selling this equipment.
+  - The **End of Service (EOS) date** for the asset class, i.e., when the vendor no longer provides support for this equipment.
   - The **nominal lifetime** of the asset class (in days), which will be used along with the installation date of the asset to calculate the expected End-of-Life date of the asset.
 
   ![Asset class lifecycle wizard](~/solutions/images/Asset_Manager_Asset_Class_Lifecycle_Wizard.png)

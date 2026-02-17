@@ -6,7 +6,7 @@ uid: SLNetClientTest_tool_advanced_procedures
 
 The procedures below can be applied to troubleshoot issues. However, be very careful when you apply them as they can strongly influence the functionality of your DataMiner System.
 
-- [Aborting a running Automation script](xref:SLNetClientTest_aborting_running_script)
+- [Aborting a running automation script](xref:SLNetClientTest_aborting_running_script)
 - [Accessing script execution metrics](xref:SLNetClientTest_accessing_script_execution_metrics)
 - [Changing the grace period for the SLNetCom Notification thread](xref:SLNetClientTest_grace_period_SLNetCom_notification)
 - [Changing the number of records in the protocol cache](xref:SLNetClientTest_changing_number_records_protocol_cache)

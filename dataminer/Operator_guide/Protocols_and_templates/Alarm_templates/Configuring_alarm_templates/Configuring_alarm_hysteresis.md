@@ -15,6 +15,6 @@ Two types of [hysteresis](xref:Alarm_hysteresis) are available, clear hysteresis
 > [!NOTE]
 >
 > - For most parameters, the hysteresis interval has to be higher than the polling interval. For example, if a parameter is only polled every 10 seconds, you should not configure a hysteresis interval of 5 seconds. However, an exception to this are parameters updated via traps or via a smart-serial connection.
-> - For parameters of type string, hysteresis should only be applied to "high" severity levels (e.g. Warning High, Major High), not to "low" severity levels. From DataMiner 10.1.9/10.2.0 onwards, applying hysteresis to "low" severity levels is no longer possible for string parameters.
+> - For parameters of type string, hysteresis should only be applied to "high" severity levels (e.g., Warning High, Major High), not to "low" severity levels. From DataMiner 10.1.9/10.2.0 onwards, applying hysteresis to "low" severity levels is no longer possible for string parameters.
 > - Using hysteresis in combination with conditions on the same parameter is not supported.
 > - Using hysteresis in combination with [history sets](xref:Protocol.Params.Param-historySet) on the same parameter can cause unexpected behavior in alarm timestamps, as both features modify the parameter and alarm times. For this reason, we do not recommend combining them.

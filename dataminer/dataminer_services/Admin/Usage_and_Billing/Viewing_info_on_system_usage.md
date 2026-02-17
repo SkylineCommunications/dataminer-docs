@@ -8,7 +8,7 @@ reviewer: Alexander Verkest
 
 In the Admin app, you can view information about the usage of certain DataMiner features in your organization and the number of DataMiner credits that correspond with this usage. This does not take into account any subscriptions or other benefits you may have.
 
-Currently, only usage data for Storage as a Service (STaaS) are displayed, i.e. the number of ingest operations per data type. In the future, more information will become available here.
+Currently, only usage data for Storage as a Service (STaaS) are displayed, i.e., the number of ingest operations per data type. In the future, more information will become available here.
 
 > [!TIP]
 > For more information about the metering and conversion rates, see [Metering](xref:Pricing_Usage_based_service#metering-units).

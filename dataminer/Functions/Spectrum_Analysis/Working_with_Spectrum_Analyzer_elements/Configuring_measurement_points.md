@@ -4,7 +4,7 @@ uid: Configuring_measurement_points
 
 # Configuring measurement points
 
-A measurement point is a series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g. to set a switch to the correct position. This way, multiple signals can be measured with one single spectrum analyzer.
+A measurement point is a series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g., to set a switch to the correct position. This way, multiple signals can be measured with one single spectrum analyzer.
 
 ## The measurement point configuration window
 
@@ -41,18 +41,18 @@ To configure a new or existing measurement point:
 
 1. At the top of the details pane, next to *Name*, specify a name for the measurement point.
 
-1. In the *Setup* section, select either to set up the measurement point via a parameter set, or via an Automation script, and then select the parameter set or the script in question.
+1. In the *Setup* section, select either to set up the measurement point via a parameter set, or via an automation script, and then select the parameter set or the script in question.
 
    > [!NOTE]
    >
    > - To configure a parameter set of a matrix parameter, when you have selected the parameter, click the value field. A pop-up box will then appear in which you can select the input and output and indicate whether these should be connected.
-   > - For more information on configuring a measurement point to execute an Automation script, see [Making a measurement point execute a script before taking a trace](xref:Making_a_measurement_point_execute_a_script_before_taking_a_trace).
+   > - For more information on configuring a measurement point to execute an automation script, see [Making a measurement point execute a script before taking a trace](xref:Making_a_measurement_point_execute_a_script_before_taking_a_trace).
 
 1. Optionally, in the *Advanced* section:
 
-   - Specify a *Delay for Parameter Set Verification*, i.e. set a number of ms that DataMiner should wait before taking a spectrum sweep after setting the measurement point.
+   - Specify a *Delay for Parameter Set Verification*, i.e., set a number of ms that DataMiner should wait before taking a spectrum sweep after setting the measurement point.
 
-   - Specify a *Frequency offset*, i.e. shift the trace in frequency.
+   - Specify a *Frequency offset*, i.e., shift the trace in frequency.
 
    - Select the checkbox next to *Invert spectrum* in order to flip the trace around the center frequency.
 

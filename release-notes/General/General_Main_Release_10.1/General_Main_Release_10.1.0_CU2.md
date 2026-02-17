@@ -56,7 +56,7 @@ Also, offline Failover agents will now be prevented from becoming the primary NA
 
 #### Schedule configuration of BPA tests \[ID 29000\]
 
-On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
+On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g., daily or every 12 hours.
 
 #### Cache for SNMP inform messages \[ID 29034\]
 
@@ -207,7 +207,7 @@ Also, when you searched for an app using the search box in the Cube header, righ
 
 #### Cassandra: Problem with file offload \[ID 28951\]
 
-Due to a file offload problem, in some rare cases, data operations (e.g. parameter updates) executed during a Cassandra outage would not get pushed to the database after the outage.
+Due to a file offload problem, in some rare cases, data operations (e.g., parameter updates) executed during a Cassandra outage would not get pushed to the database after the outage.
 
 #### Dashboards app: Multiple parameter feeds in PDF reports would incorrectly also show all selected parameter indices \[ID 28978\]
 
@@ -215,7 +215,7 @@ When you generated a PDF report with the options “No grouping” and “Includ
 
 #### DataMiner Cube - Automation: Discarding a newly created script would not delete it \[ID 29032\]
 
-When you discarded a newly created Automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
+When you discarded a newly created automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
 
 #### No trigger keys listed when debugging a QAction due to a compatibility issue between DataMiner and DataMiner Integration Studio \[ID 29049\]
 
@@ -241,9 +241,9 @@ DmaConnections|Unexpected filter type: SubscriptionFilter\`2
 Unexpected filter type: Skyline.DataMiner.Net.SubscriptionFilters.SubscriptionFilter\`2[XXXX,XXXXXX]
 ```
 
-#### Interactive Automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
+#### Interactive automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
 
-When, in an interactive Automation script, a calendar control was used to select a date (i.e. a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
+When, in an interactive automation script, a calendar control was used to select a date (i.e., a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
 
 #### UDP smart-serial server would receive an empty package each time a new client started sending data to it \[ID 29166\]
 
@@ -263,7 +263,7 @@ In DataMiner Cube, in some cases, table columns of which the width was set to 0 
 
 #### Dashboards app - GQI: Aggregated values would incorrectly be displayed in raw format \[ID 29200\]
 
-In GQI query results, aggregated values would incorrectly be displayed in raw format. From now on, they will be formatted according to the display properties (e.g. units, decimals, etc.) defined in the protocol.
+In GQI query results, aggregated values would incorrectly be displayed in raw format. From now on, they will be formatted according to the display properties (e.g., units, decimals, etc.) defined in the protocol.
 
 #### DataMiner Cube - Alarm Console: Problem when trying to unmask an EPM object \[ID 29213\]
 
@@ -383,7 +383,7 @@ When you selected a number of jobs in the list, clicked *Delete*, and then click
 
 #### Automation: Subscripts would return an incorrect output \[ID 29405\]
 
-When, in an Automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
+When, in an automation script, a subscript that returned its output was run twice, in some cases, when it cleared its output during its second run, it would incorrectly return the same output it had returned at the end of its first run.
 
 #### Legacy Reporter: Status query would no longer show alarm colors \[ID 29516\]
 

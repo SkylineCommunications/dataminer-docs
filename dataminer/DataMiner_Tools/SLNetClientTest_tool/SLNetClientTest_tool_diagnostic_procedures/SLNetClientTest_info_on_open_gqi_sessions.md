@@ -4,7 +4,7 @@ uid: SLNetClientTest_info_on_open_gqi_sessions
 
 # Retrieving information on open GQI sessions
 
-From DataMiner 10.2.0/10.1.7 onwards, you can retrieve information on how many GQI (i.e. generic queries interface, the interface used for queries in the Dashboards app) sessions are currently open.
+From DataMiner 10.2.0/10.1.7 onwards, you can retrieve information on how many GQI (i.e., generic queries interface, the interface used for queries in the Dashboards app) sessions are currently open.
 
 To do so:
 

@@ -4,7 +4,7 @@ uid: Trap_receiver
 
 # Trap receiver
 
-This functionality allows you to visualize traps and inform messages for all applicable SNMP versions, i.e. traps for SNMPv1/v2/v3 and inform messages for SNMPv2/v3. In addition, when the tool receives an inform message, it will reply with an acknowledgment.
+This functionality allows you to visualize traps and inform messages for all applicable SNMP versions, i.e., traps for SNMPv1/v2/v3 and inform messages for SNMPv2/v3. In addition, when the tool receives an inform message, it will reply with an acknowledgment.
 
 You can access the trap sender functionality of the tool by selecting *Tools* > *Trap and Inform Monitor* in the menu bar. The following window then opens:
 

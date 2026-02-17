@@ -81,7 +81,7 @@ To create a redundancy group:
 
       - With the last field of a condition, you can indicate whether the condition has to persist for a certain time or not before its result is triggered.
 
-      - Next to *by executing*, you can configure what should happen during a switch: a parameter set or an Automation script execution.
+      - Next to *by executing*, you can configure what should happen during a switch: a parameter set or an automation script execution.
 
 1. In the *Switching Detection* section, specify when a switchover or switchback operation will be considered finished:
 

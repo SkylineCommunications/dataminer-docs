@@ -29,7 +29,7 @@ There are currently two types of script, which each have their own unique entry 
 
 ### ID Only type
 
-When the "ID Only" type (`IdOnly` enum value) is selected, the Automation script needs to contain an entry point method that has the `AutomationEntryPoint` attribute with argument `AutomationEntryPointType.Types.OnDomInstanceCrud`. When the CRUD action is executed, this method will be called with the following arguments:
+When the "ID Only" type (`IdOnly` enum value) is selected, the automation script needs to contain an entry point method that has the `AutomationEntryPoint` attribute with argument `AutomationEntryPointType.Types.OnDomInstanceCrud`. When the CRUD action is executed, this method will be called with the following arguments:
 
 |Argument |Type     |Description |
 |---------|---------|------------|
@@ -54,7 +54,7 @@ public class Script
 
 ### Full CRUD meta type
 
-When the "Full CRUD meta" type (`FullCrudMeta` enum value) is selected, the Automation script needs to contain an entry point method that has the `AutomationEntryPoint` attribute with argument `AutomationEntryPointType.Types.OnDomInstanceCrudWithFullMeta`. When the CRUD action is executed, this method will be called with the following arguments:
+When the "Full CRUD meta" type (`FullCrudMeta` enum value) is selected, the automation script needs to contain an entry point method that has the `AutomationEntryPoint` attribute with argument `AutomationEntryPointType.Types.OnDomInstanceCrudWithFullMeta`. When the CRUD action is executed, this method will be called with the following arguments:
 
 |Argument |Type                |Description |
 |---------|--------------------|------------|

@@ -159,7 +159,7 @@ Also, the edit panel will now allow users to select a specific protocol version.
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 13 instead of Angular 12.
+The DataMiner mobile apps that use Angular (e.g., Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 13 instead of Angular 12.
 
 #### Azure Active Directory: Secret expiry notices/errors [ID 33916]
 
@@ -185,7 +185,7 @@ Also, more detailed entries will now be added to the logs when setup errors have
 
 The SLProtocol(Ext) object in QActions will now retain all of its data members outside of the run scope. This means that, while Notifies were already available out of scope earlier, members such as the QActionID will now also remain available when a QAction run ends. In addition, the SLNet connection can now be set up at any time.
 
-If the QAction class is not static and implements the IDisposable interface, the Dispose() function will be called when the QAction instance is released (i.e. when the element is stopped). The same goes for any other class the entrypoint may be in. This coincides with the IsActive property of the SLProtocol object being set to false, which prevents further function calls to the object from being executed.
+If the QAction class is not static and implements the IDisposable interface, the Dispose() function will be called when the QAction instance is released (i.e., when the element is stopped). The same goes for any other class the entrypoint may be in. This coincides with the IsActive property of the SLProtocol object being set to false, which prevents further function calls to the object from being executed.
 
 The Dispose is called by a separate thread than the one stopping the element. Its purpose is to release lingering resources and connections when the element is stopped.
 
@@ -239,7 +239,7 @@ On Failover systems, because of a number of enhancements, overall performance of
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-The maximum value for the element setting "*The element goes into timeout state when it is not responding for (sec)*" has now been increased from 120 seconds to 24 hours (i.e. 86400 seconds).
+The maximum value for the element setting "*The element goes into timeout state when it is not responding for (sec)*" has now been increased from 120 seconds to 24 hours (i.e., 86400 seconds).
 
 #### DataMiner Analytics: Improved handling of clearable alarms [ID 33910]
 
@@ -348,7 +348,7 @@ The following functionality is now available for nested tables:
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
 
-During an upgrade of a two-node setup (e.g. 2 single DMAs or one Failover pair), from now on, the *VerifyClusterPorts* prerequisite will only check the ports of the NATS node that is being used by DataMiner.
+During an upgrade of a two-node setup (e.g., 2 single DMAs or one Failover pair), from now on, the *VerifyClusterPorts* prerequisite will only check the ports of the NATS node that is being used by DataMiner.
 
 ### Fixes
 
@@ -357,7 +357,7 @@ During an upgrade of a two-node setup (e.g. 2 single DMAs or one Failover pair),
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 <!-- Not added to 10.3.0 -->
 
-When you hover over a data table component (e.g. a GQI table), a search box will appear in the bottom-right corner. In some cases, the filter specified in that search box would incorrectly not be re-applied after a data refresh.
+When you hover over a data table component (e.g., a GQI table), a search box will appear in the bottom-right corner. In some cases, the filter specified in that search box would incorrectly not be re-applied after a data refresh.
 
 #### SLLogCollector would become unresponsive when the name of the process or the path where the files had to be stored contained spaces [ID 33493]
 
@@ -405,7 +405,7 @@ When a table contained multiple foreign keys, invalid foreign key values referri
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-In some rare cases, Visio files would not get rendered correctly in web apps (e.g. Dashboards).
+In some rare cases, Visio files would not get rendered correctly in web apps (e.g., Dashboards).
 
 #### SLAnalytics: Error messages could get added to the log file due to a problem with the automatic incident tracking algorithm [ID 33820]
 
@@ -427,7 +427,7 @@ When the element debug log level was equal to or higher than 1, an error could o
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-On the REPORTS page of an element card, masking and unmasking (i.e. state changes to "masked" and "unmasked") would not be shown correctly in the different graphs.
+On the REPORTS page of an element card, masking and unmasking (i.e., state changes to "masked" and "unmasked") would not be shown correctly in the different graphs.
 
 #### Dashboards app - Service definition component: Function nodes not displaying number of Process Automation tokens in queue or in progress [ID 33848]
 
@@ -468,7 +468,7 @@ In some cases, the SLProtocol process could leak memory when the NT_UPDATE_PORTS
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-When an alarm of one the following types was generated, in some cases, that alarm could affect and degrade an SLA or be added to the list of active alarms for that SLA (i.e. enhanced service):
+When an alarm of one the following types was generated, in some cases, that alarm could affect and degrade an SLA or be added to the list of active alarms for that SLA (i.e., enhanced service):
 
 - Information Event
 - Suggestion Event
@@ -578,7 +578,7 @@ In some cases, it would no longer be possible to build a GQI query that filtered
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-Since DataMiner 10.1.8 (RN [30044](xref:General_Feature_Release_10.1.8#instancealarmlevel-would-not-fall-back-to-cellactualalarmlevel-when-there-was-bubble-up-information-but-no-instance-information-id-30044)), it could occur that the instance alarm level for a table row did not bubble up correctly, causing alarms for view tables to be displayed incorrectly (e.g. in an EPM environment). This could also occur for tables with an alarm where no saved data was present.
+Since DataMiner 10.1.8 (RN [30044](xref:General_Feature_Release_10.1.8#instancealarmlevel-would-not-fall-back-to-cellactualalarmlevel-when-there-was-bubble-up-information-but-no-instance-information-id-30044)), it could occur that the instance alarm level for a table row did not bubble up correctly, causing alarms for view tables to be displayed incorrectly (e.g., in an EPM environment). This could also occur for tables with an alarm where no saved data was present.
 
 #### Potential minor memory leak in SLProtocol if fixed parameter had length of zero [ID 34064]
 
@@ -636,7 +636,7 @@ When a visual overview was embedded in a dashboard or low-code app, it could occ
 
 <!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.9 -->
 
-If a visual overview was viewed in the web apps (e.g. the Monitoring or Dashboards app), it could occur that trend graphs in that visual overview were not displayed.
+If a visual overview was viewed in the web apps (e.g., the Monitoring or Dashboards app), it could occur that trend graphs in that visual overview were not displayed.
 In addition, the coloring of the trend lines could be incorrect. Instead of the colors defined in the themes, the lines were shown in black.
 
 #### GQI queries: Problem in web APIs when opening session for query with node requiring soft-launch feature [ID 34109]

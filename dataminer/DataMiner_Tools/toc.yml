@@ -238,7 +238,7 @@ items:
             topicUid: SLNetClientTest_retrieving_dcf_debug_info
           - name: Retrieving general information about elements
             topicUid: SLNetClientTest_retrieving_element_info
-          - name: Retrieving information on the available Automation scripts
+          - name: Retrieving information on the available automation scripts
             topicUid: SLNetClientTest_info_on_available_automation_scripts
           - name: Retrieving information on open GQI sessions
             topicUid: SLNetClientTest_info_on_open_gqi_sessions
@@ -257,7 +257,7 @@ items:
       - name: SLNetClientTest tool advanced procedures
         topicUid: SLNetClientTest_tool_advanced_procedures
         items:
-          - name: Aborting a running Automation script
+          - name: Aborting a running automation script
             topicUid: SLNetClientTest_aborting_running_script
           - name: Accessing script execution metrics
             topicUid: SLNetClientTest_accessing_script_execution_metrics

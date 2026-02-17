@@ -4,9 +4,8 @@ uid: Creating_tickets_with_the_Ticketing_Gateway_API
 
 # Creating tickets with the Ticketing Gateway API
 
-<!-- > [!IMPORTANT]
-> The Ticketing Gateway API is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.6.0/10.6.2 onwards. 
-RN 44417-->
+> [!IMPORTANT]
+> The Ticketing Gateway API is obsolete. It is not supported with [STaaS](xref:STaaS) and is no longer available from DataMiner 10.6.0/10.6.3 onwards<!--RN 44417-->.
 
 Before tickets can be created, there has to be at least one ticket field resolver, which will translate the third-party ticket fields into DataMiner ticket fields. The first time the Ticket Gateway starts up, a default resolver is automatically created. This default resolver contains a number of predefined fields. You can, however, also create a custom resolver.
 
@@ -61,7 +60,7 @@ private TicketFieldResolver CreateCustomResolver()
     DmaState.DynamicAdd("Closed", 4);
 
     //We now link our custom ticket states to a DataMiner TicketState
-    //I.e.: "Created" has value 0 and gets linked to TicketState.Open.
+    //I.e., "Created" has value 0 and gets linked to TicketState.Open.
     resolver.StateResolver.Add(0, TicketState.Open); //Created
     resolver.StateResolver.Add(1, TicketState.Open); //Started
     resolver.StateResolver.Add(2, TicketState.Open); //Paused

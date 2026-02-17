@@ -16,7 +16,7 @@ Element "x" is not active.
 
 ## Possible cause
 
-Element "x", a "derived element" (i.e. a virtual element in a redundancy group), could not be started.
+Element "x", a "derived element" (i.e., a virtual element in a redundancy group), could not be started.
 
 ## Resolution
 

@@ -11,7 +11,7 @@ uid: General_Feature_Release_10.6.3
 >
 > Before you upgrade to this DataMiner version:
 >
-> - Make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+> - Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
 >
 >   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
 >   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
@@ -31,6 +31,7 @@ uid: General_Feature_Release_10.6.3
 - [DataMiner Object Models: Fine-grained security on instance level [ID 44233]](#dataminer-object-models-fine-grained-security-on-instance-level-id-44233)
 - [Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]](#protocols-elements-will-now-restart-automatically-when-an-slscripting-process-has-disappeared-id-42306)
 - [Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]](#protocols-as-many-slscripting-processes-as-slprotocol-processes-by-default-id-44420)
+- [Swarming scheduled tasks [ID 44620]](#swarming-scheduled-tasks-id-44620)
 
 ## New features
 
@@ -40,7 +41,7 @@ uid: General_Feature_Release_10.6.3
 
 On top of [DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]](xref:General_Feature_Release_10.5.10#dataminer-object-models-definition-level-security-id-43380-id-43589), which allows you to grant user groups access to all DOM instances of a DOM definition, it is now also possible to allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
 
-For example, the user group *London employees* will only be able to read the "Job" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
+For example, the user group *London employees* will only be able to read the "Job" instances where the *Assigned office* field (i.e., a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
 
 ##### Limitations
 
@@ -94,7 +95,7 @@ When `FieldValueReference` values are saved in the `ModuleSettings`, the followi
 - Check if the list of values is not empty. If the list is empty, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasNoValues`.
 - Check if the list of values does not contain more than 10 items. If the list contains more than 10 items, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasTooManyValues`.
 
-In all errors listed above, the `ErrorData` properties `GroupName` and `DomDefinitionId` can be used to find out which references are invalid. The third error also contains a `Limit` property that contains the max number of values (i.e. 10).
+In all errors listed above, the `ErrorData` properties `GroupName` and `DomDefinitionId` can be used to find out which references are invalid. The third error also contains a `Limit` property that contains the max number of values (i.e., 10).
 
 #### SLNet subscription logging [ID 44361]
 
@@ -118,7 +119,7 @@ To activate SLNet subscription event logging, do the following:
 
 ##### Event type and cache key filtering
 
-The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g. *ParameterChangeEventMessage*) and/or cache key (e.g. DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
+The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g., *ParameterChangeEventMessage*) and/or cache key (e.g., DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
 
 Options for filtering by event type:
 
@@ -193,7 +194,7 @@ If a *MigrationStatus* is stuck in the *InProgress* state, you will need to canc
 
 ##### Configuring a script to swarm scheduled tasks
 
-If scheduled tasks are stored in the database, you can use an Automation script to initiate the swarming process.
+If scheduled tasks are stored in the database, you can use an automation script to initiate the swarming process.
 
 In this script, create a SwarmingHelper using the new hosting Agent ID along with the scheduled task IDs. See the following example.
 
@@ -268,7 +269,7 @@ Up to now, one SLScripting process was used by default. From now on, by default,
 Note that is possible to configure the number of simultaneously running SLScripting processes. See [Setting the number of simultaneously running SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes).
 
 > [!IMPORTANT]
-> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActions#sharing-and-persisting-data).
+> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
 
 ### Enhancements
 
@@ -301,7 +302,7 @@ If SLProtocol requests an SLScripting process that is no longer valid, the syste
 
 <!-- MR 10.7.0 - FR 10.6.3 -->
 
-Two new parameter caches are now available for client apps (e.g. DataMiner Cube):
+Two new parameter caches are now available for client apps (e.g., DataMiner Cube):
 
 - ProtocolParameters (linked to GetProtocolParameter on the client connection)
 - ElementProtocolParameters (linked to GetElementProtocolParameter on the client connection)
@@ -356,7 +357,7 @@ As the Ticketing app is End of Life as of DataMiner 10.6.x, *Ticketing Gateway C
 
 #### Ticketing app End of Life [ID 44417]
 
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+<!-- MR 10.5.0 [CU12] (adjusted to 10.6.0 as Ticketing is still available in 10.5.0) - FR 10.6.3 -->
 
 DataMiner Ticketing has been declared End of Life. As a result, all server code related to Ticketing has been removed.
 
@@ -406,11 +407,11 @@ Because of a number of enhancements, overall performance of the the *Cube CRL Fr
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
-#### Interactive Automation scripts launched from web apps: UI components Time and Calendar can now all display seconds [ID 44487]
+#### Interactive automation scripts launched from web apps: UI components Time and Calendar can now all display seconds [ID 44487]
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 
-Up to now, in interactive Automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
+Up to now, in interactive automation scripts launched from web apps, only the `UIBlockType.Time` component with `AutomationTimeUpDownOptions` had the ability to show seconds. From now on, all the following `UIBlockType.Time` components, as well as the `UIBlockType.Calendar` component, will also have that ability. Their option classes will now all have a `ShowSeconds` property, which will be set to false by default.
 
 - `UIBlockType.Time` with `AutomationDateTimePickerOptions`
 - `UIBlockType.Time` with `AutomationDateTimeUpDownOptions`
@@ -421,13 +422,21 @@ Up to now, in interactive Automation scripts launched from web apps, only the `U
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
+Up to now, for a GQI extension (i.e., an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
 
+#### Interactive automation scripts in web apps: New UsePreviousCollapsedState property will allow tree nodes to restore their IsCollapsed state when the UI is updated [ID 44515]
+
+<!-- MR 10.6.0 - FR 10.6.3 -->
+
+When, in an interactive automation script, a TreeView control was used with the `SupportsLazyLoading` option set to false, up to now, each time the UI was updated, all tree nodes would revert their expanded state back to the `IsCollapsed` setting.
+
+Tree nodes now have a new `UsePreviousCollapsedState` property. By default, this property will be set to false. When set to true, each time the UI is updated, the previous state of the tree node in question will be restored. If no previous state is available, the current `IsCollapsed` state will be applied.
+
 #### SLManagedScripting will again add a log entry each time it has loaded or failed to load an assembly [ID 44522]
 
-<!-- MR 10.7.0 - FR 10.6.3 -->
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.3 -->
 
 Since DataMiner version 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!-- RN 43690 -->, SLManagedScripting no longer added an entry in the *SLManagedScripting.txt* log file each time it had loaded or failed to load an assembly. From now on, it will again do so.
 
@@ -437,7 +446,7 @@ These log entries will include both the requested version and the actual version
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 
-The following SLNet messages, which can be used to retrieve information about elements, services, and redundancy groups, now also support filtering by HostingAgentID. This allows you to e.g. retrieve a list of all elements that are being hosted on a particular DataMiner Agent.
+The following SLNet messages, which can be used to retrieve information about elements, services, and redundancy groups, now also support filtering by HostingAgentID. This allows you to, for example, retrieve a list of all elements that are being hosted on a particular DataMiner Agent.
 
 - GetLiteElementInfo
 - GetLiteRedundancyGroupInfo
@@ -450,7 +459,7 @@ The following SLNet messages, which can be used to retrieve information about el
 
 From now on, it will no longer be possible to migrate booking data from a Cassandra database per DMA to an indexing database.
 
-Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
+Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e., from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
 
 #### DataMiner backup: Scheduler configuration will now be included in full and configuration backups [ID 44584]
 
@@ -496,13 +505,13 @@ For more information, see [Exceptions element](xref:Protocol.Params.Param.Interp
 
 #### MessageBroker: Problem with hostnames and FQDNs containing a certain combination of dashes and characters [ID 44433]
 
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.3 -->
 
 Up to now, hostnames and FQDNs in the *MessageBrokerConfig.json* file would incorrectly be considered invalid when they contained a certain combination of dashes and characters.
 
 Examples of hostnames that were incorrectly considered invalid:
 
-- Hostnames that start with one letter or number, followed by a dash. E.g. `a-agent`, `h-hostname`, etc.
+- Hostnames that start with one letter or number, followed by a dash. For example, `a-agent`, `h-hostname`, etc.
 - Full IPv6 addresses like `[2001:0db8:85a3:0000:0000:8a2e:0370:7334]`
 - Shortened IPv6 addresses like `[::1]`
 

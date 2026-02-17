@@ -51,7 +51,7 @@ The previous requirements are met.
 
 1. To change the Cassandra password in DataMiner, in DataMiner Cube, go to *System Center > Database*, change the Cassandra database password, and click *Save*.
 
-1. Repeat these steps for each DMA with its own dedicated Cassandra cluster. For example, if 2 DMAs are in Failover, these actions only need to be done from one of the DMAs. If the changes are done from the primary DMA, they will automatically be implemented on the backup DMA. Similarly, if the [Cassandra cluster feature](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) is used for the DMS (i.e. one Cassandra cluster for the complete DMS), the steps only need to be done for one DMA.
+1. Repeat these steps for each DMA with its own dedicated Cassandra cluster. For example, if 2 DMAs are in Failover, these actions only need to be done from one of the DMAs. If the changes are done from the primary DMA, they will automatically be implemented on the backup DMA. Similarly, if the [Cassandra cluster feature](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) is used for the DMS (i.e., one Cassandra cluster for the complete DMS), the steps only need to be done for one DMA.
 
 ### Test the database connection
 

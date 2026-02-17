@@ -4,7 +4,7 @@ uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorV
 
 # Reference element
 
-Provides a reference to e.g. a registration system.
+Provides a reference to, for example, a registration system.
 
 ## Type
 

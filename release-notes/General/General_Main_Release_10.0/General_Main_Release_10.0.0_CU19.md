@@ -121,7 +121,7 @@ When MultipleGetBulk was used to poll a table that contained only a single row a
 
 #### DataMiner Cube - Visual Overview: Child shapes representing alarms would incorrectly appear on a white background \[ID 30820\]
 
-When generating child shapes that represent alarms, up to now, those child shapes would always appear on a white background, even when the Cube theme was set to e.g. Skyline Black.
+When generating child shapes that represent alarms, up to now, those child shapes would always appear on a white background, even when the Cube theme was set to, for example, Skyline Black.
 
 From now on, generated child shapes that represent alarms will appear on a transparent background instead.
 
@@ -145,9 +145,9 @@ In some cases, a ParameterThread error could occur in SLElement.
 
 In Visual Overview, it was no longer possible to display aggregated parameter values in shapes by specifying either the DMA and element ID of an aggregation element or an \[AggregationRule:...\] placeholder in a shape data field of type Aggregation.
 
-#### Interactive Automation scripts: Value returned by the client would incorrectly be considered as an invalid file path selected in a file selector block \[ID 30879\]
+#### Interactive automation scripts: Value returned by the client would incorrectly be considered as an invalid file path selected in a file selector block \[ID 30879\]
 
-When, in an interactive Automation script, a file selector block was defined after another type of input block (e.g. a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
+When, in an interactive automation script, a file selector block was defined after another type of input block (e.g., a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
 
 #### DataMiner Cube - Alarm Console: Incorrect notices like '!! Unknown \<Type> R!AD for parameter xxx' \[ID 30884\]
 

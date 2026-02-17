@@ -20,7 +20,7 @@ If the DataMiner [support application](xref:User_operations_support) detects a c
 
 In case the flow cannot determine the main customer stakeholder of the linked Maintenance & Support contract, the notification is forwarded to Skyline Tech Support to make sure the following is done or delegated:
 
-1. Identify the customer stakeholder on collaboration (e.g. confirm with the Product Owner).
+1. Identify the customer stakeholder on collaboration (e.g., confirm with the Product Owner).
 
 1. Configure the main customer stakeholder in the Maintenance & Support contract and/or parent project.
 

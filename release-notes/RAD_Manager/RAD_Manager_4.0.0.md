@@ -15,7 +15,7 @@ A *Historical Anomalies* button is now available in the upper right corner of th
 
 #### Shared model groups [ID 44091]
 
-RAD Manager now supports shared model groups, i.e. groups that include multiple subgroups that share the same detection model. These are ideal when monitoring many similar entities or when some subgroups suffer from insufficient healthy training data.
+RAD Manager now supports shared model groups, i.e., groups that include multiple subgroups that share the same detection model. These are ideal when monitoring many similar entities or when some subgroups suffer from insufficient healthy training data.
 
 You can add a shared model group in the RAD Manager app using the *Add Shared Model Group* button. Adding a single group remains possible with the *Add Single Group* button.
 
@@ -33,7 +33,7 @@ If one of the subgroups of a shared model group behaves significantly differentl
 
 The training configuration for relational anomaly groups has now been integrated in the dialog used to add or edit groups (both shared model and single groups). In this dialog, you can now specify from which time range and from which subgroups data will be used to (re-)train the model of a group.
 
-If this is not specified in the dialog to add a group, the default configuration will be used (i.e. data from all subgroups and from the last two months). If it is not specified in the dialog to edit a group, the model will remain unchanged, provided that the number of parameters in the group does not change.
+If this is not specified in the dialog to add a group, the default configuration will be used (i.e., data from all subgroups and from the last two months). If it is not specified in the dialog to edit a group, the model will remain unchanged, provided that the number of parameters in the group does not change.
 
 #### Anomaly scores no longer cached when DataMiner supports caching [ID 44182]
 

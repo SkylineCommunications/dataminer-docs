@@ -41,7 +41,7 @@ A number of enhancements have been made with regard to updating resource, bookin
 
 #### Minor enhancements to several DataMiner processes \[ID 31155\]
 
-A number of minor enhancements have been made to a number of DataMiner processes (e.g. SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
+A number of minor enhancements have been made to a number of DataMiner processes (e.g., SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
 
 #### NATS upgraded to version 2.2.6 + new NATS SLNet settings \[ID 30156\]
 
@@ -133,9 +133,9 @@ In Visual Overview, it was no longer possible to display aggregated parameter va
 
 During a Failover switch, in some cases, the Resources.xml file would constantly be updated.
 
-#### Problem with SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
+#### Problem with SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved \[ID 31030\]
 
-In some cases, an error could occur in SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved.
+In some cases, an error could occur in SLAutomation when trying to run automation scripts on elements for which no protocol information could be retrieved.
 
 #### Problem during DataMiner startup when retrieving alarms for multiple elements from an Elasticsearch database \[ID 31039\]
 
@@ -201,7 +201,7 @@ Up to now, in some cases, the following methods would return an empty array, eve
 
 #### DataMiner Cube - Automation: DateTime control incorrectly updated with the DateTimeKind property \[ID 31190\]
 
-When, in an interactive Automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
+When, in an interactive automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
 
 #### DataMiner Cube - Router Control: 'park source' feature would incorrectly not work on matrices with IO table structures \[ID 31239\]
 
@@ -241,7 +241,7 @@ In the Jobs app, in some cases, date values saved in UTC format would be parsed 
 
 #### Web apps: Setvar controls in visual overviews would no longer be rendered correctly \[ID 31351\]
 
-In web apps (e.g. Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
+In web apps (e.g., Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
 
 #### STARTTLS/SSL options for SMTP would not get applied when sending generic emails \[ID 31592\]
 

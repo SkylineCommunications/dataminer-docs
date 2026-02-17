@@ -86,7 +86,7 @@ The actual content of a protocol package differs from that of the other packages
 
 ## Import package (.dmimport)
 
-Depending on what was exported into the package, this package may contain elements, services, views, properties, protocols, Automation scripts, etc.
+Depending on what was exported into the package, this package may contain elements, services, views, properties, protocols, automation scripts, etc.
 
 - This file is created through an export from the Surveyor in DataMiner Cube.
 

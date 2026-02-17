@@ -151,7 +151,7 @@ In that case, a "callback timeout (waited 30 s)" type error is generated. This m
 
 Possible reasons for such callback timeouts could be:
 
-- An unreachable destination (e.g. client was stopped or firewall intervened).
+- An unreachable destination (e.g., client was stopped or firewall intervened).
 
 - The packet of forwarded data is too large.
 

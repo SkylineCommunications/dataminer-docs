@@ -20,11 +20,11 @@ When restoring a Cassandra database backup has failed, from now on, the user wil
 
 When, in Visual Overview, you right-click an alarm timeline with an alarm filter and select Show alarms in a new tab page, the alarms matching the filter will be loaded.
 
-Up to now, it was only possible to filter on alarm properties. Now, you can also filter on severity (e.g. Severity:Critical), element (e.g. Element:49/1), etc.
+Up to now, it was only possible to filter on alarm properties. Now, you can also filter on severity (e.g., Severity:Critical), element (e.g., Element:49/1), etc.
 
 #### DataMiner Cube: Enhanced performance when opening the Reports page of a view card \[ID 27937\]
 
-Due to a number of enhancements, overall performance has increased when opening the Reports page of a view card, especially when that page shows a large amount of elements with heatlines (e.g. the root view).
+Due to a number of enhancements, overall performance has increased when opening the Reports page of a view card, especially when that page shows a large amount of elements with heatlines (e.g., the root view).
 
 #### Web Service API v1: New GetDataMinerClusterName method \[ID 27951\]
 
@@ -83,7 +83,7 @@ When you are uploading a protocol in the *Protocols & Templates* app, a message
 
 #### SLAutomation will now automatically compile new libraries at startup \[ID 28218\]
 
-When, on startup, SLAutomation detects any new Automation scripts that contain libraries that need to be compiled, from now on, it will automatically compile them.
+When, on startup, SLAutomation detects any new automation scripts that contain libraries that need to be compiled, from now on, it will automatically compile them.
 
 #### SRM: Additional logging added to SLDBConnection.txt when retrieving service definitions from the servicedeftrace table \[ID 28245\]
 
@@ -129,7 +129,7 @@ When retrieving composite instances using the SNMP polling option “partialSNMP
 
 #### Visual Overview: SetVar shape with tooltip would not work on a mobile device \[ID 28129\]
 
-When a SetVar shape had its SetVarOptions data field set to “Control=Shape” and contained a legacy tooltip configuration (e.g. ‘\<MyVar>:\<MyValue>:\<MyToolTip>’), in some cases, the variable would not be updated when you clicked the control on a mobile device.
+When a SetVar shape had its SetVarOptions data field set to “Control=Shape” and contained a legacy tooltip configuration (e.g., ‘\<MyVar>:\<MyValue>:\<MyToolTip>’), in some cases, the variable would not be updated when you clicked the control on a mobile device.
 
 #### DataMiner Cube - Element connections app: Problem with 'Include element state' checkbox \[ID 28188\]
 

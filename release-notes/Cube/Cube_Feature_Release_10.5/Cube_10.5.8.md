@@ -48,7 +48,7 @@ Because of a number of enhancements, overall performance has increased when load
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-When you right-click an element or a service, and select *Properties*, the *General* tab of the *Properties* window will now also display the current host, i.e. the DataMiner Agent that is currently hosting that element or service.
+When you right-click an element or a service, and select *Properties*, the *General* tab of the *Properties* window will now also display the current host, i.e., the DataMiner Agent that is currently hosting that element or service.
 
 #### Scheduler: Support for memory files in scheduler templates [ID 42904]
 
@@ -56,7 +56,7 @@ When you right-click an element or a service, and select *Properties*, the *Gene
 
 When you add an event to the Scheduler timeline, from now on, you will be able to configure memory files.
 
-If a scheduler template includes a preset comment (e.g. `Preset="MyProfile"`) that defines a memory file entry named "Memory1" using the format `Memory1="MemoryFileName"`, from now on, the corresponding memory file name (`MemoryFileName`) will be correctly assigned when the event is created in the Scheduler.
+If a scheduler template includes a preset comment (e.g., `Preset="MyProfile"`) that defines a memory file entry named "Memory1" using the format `Memory1="MemoryFileName"`, from now on, the corresponding memory file name (`MemoryFileName`) will be correctly assigned when the event is created in the Scheduler.
 
 Example:
 
@@ -89,13 +89,13 @@ As most of these placeholders can only be inserted when configuring an *Email* a
 > - [dummyX]: This will be replaced with the name of the specific element you want to display. X is the dummy ID.
 > - [user]: This will be replaced with the name of the user executing the automation script.
 
-#### Automation: An error message will now be displayed when an error occurs while importing an Automation script [ID 43069]
+#### Automation: An error message will now be displayed when an error occurs while importing an automation script [ID 43069]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-When, in the Automation module, you imported an Automation script by clicking *More > Import* or by right-clicking and selecting *Import*, errors that occurred during the import operation would not be displayed in the UI.
+When, in the Automation module, you imported an automation script by clicking *More > Import* or by right-clicking and selecting *Import*, errors that occurred during the import operation would not be displayed in the UI.
 
-From now on, whenever an error occurs while importing an Automation script, a pop-up window will appear, displaying the associated error message.
+From now on, whenever an error occurs while importing an automation script, a pop-up window will appear, displaying the associated error message.
 
 #### Services: Enhanced performance when editing services [ID 43122]
 
@@ -137,7 +137,7 @@ In trend graphs showing gaps in the trend data, in some rare cases, the data bet
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-In some cases, Cube would incorrectly try to display certain message boxes when running as a service (e.g. within SLHelper).
+In some cases, Cube would incorrectly try to display certain message boxes when running as a service (e.g., within SLHelper).
 
 #### Problem when trying to open a view card in an EPM environment [ID 43049]
 

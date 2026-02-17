@@ -157,7 +157,7 @@ For this purpose, the [IGQIUpdateable](xref:GQI_IGQIUpdateable) interface must b
 From now on, the generation of anomaly suggestion events will be limited to 50 events per hour per type of anomaly (level shift, trend change, flatline or variance change).
 
 > [!NOTE]
-> The generation of anomaly alarm events (i.e. on parameters that have anomaly monitoring configured in the alarm template) will remain unlimited.
+> The generation of anomaly alarm events (i.e., on parameters that have anomaly monitoring configured in the alarm template) will remain unlimited.
 
 #### GQI: Clearer error message will now be thrown when an ad hoc data source or custom operator cannot be instantiated [ID 38686]
 
@@ -290,7 +290,7 @@ When the main database is offline, file offloads are used to store write/delete 
 
 When an element with an SNMP connection that was configured with a hostname instead of an IP address went into timeout, and during the timeout the hostname could not be resolved, the element would remain in timeout and would no longer try to resolve the hostname until it was restarted.
 
-Also, in StreamViewer, the error messages that indicate that the hostname could not be resolved have now been made clearer. For example, in case of SNMPv3, a generic `DISCOVERY FAILED` error would appear when something went wrong while setting up a connection. From now on, the error will indicate what exactly went wrong (e.g. the engine ID could not be discovered, the user credentials were not valid, etc.).
+Also, in StreamViewer, the error messages that indicate that the hostname could not be resolved have now been made clearer. For example, in case of SNMPv3, a generic `DISCOVERY FAILED` error would appear when something went wrong while setting up a connection. From now on, the error will indicate what exactly went wrong (e.g., the engine ID could not be discovered, the user credentials were not valid, etc.).
 
 #### Problem with SLProtocol when calculating the length of a serial response [ID 38591]
 
@@ -403,7 +403,7 @@ In some cases, during startup, SLProtocol would stop working when it was not abl
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-When an Automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
+When an automation script sent an email to a user or a user group using an *Email* action, in some cases, an error could be thrown.
 
 #### Problem with SLProtocol when it took longer than 15 minutes to execute a poll group [ID 38858]
 
@@ -454,7 +454,7 @@ From now on, only the final retry will be logged as error. All prior retries wil
 
 Up to now, when you opened a new alarm tab, and did a search using the *Search for alarms* box, the alarms matching the search criterion would incorrectly show timestamps according to the local time zone of the client computer.
 
-From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e. the local time zone of the DataMiner Agent to which the Cube client is connected.
+From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e., the local time zone of the DataMiner Agent to which the Cube client is connected.
 
 #### Problem with SLLog when stopping or restarting DataMiner [ID 38902]
 

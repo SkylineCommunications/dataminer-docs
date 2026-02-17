@@ -66,14 +66,14 @@ moduleSettings.DomManagerSettings.ScriptSettings.OnUpdateTriggerConditions = new
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
-For each resource, you can now define an availability window, i.e. a period during which the resource is available.
+For each resource, you can now define an availability window, i.e., a period during which the resource is available.
 
 An availability window has the following (optional) properties:
 
 | Property | Description |
 |----------|-------------|
-| AvailableFrom  | The start time of the availability window. Default value: `DateTimeOffset.MinValue` (i.e. no start time). |
-| AvailableUntil | The end time of the availability window. Default value: `DateTimeOffset.MaxValue` (i.e. no end time). |
+| AvailableFrom  | The start time of the availability window. Default value: `DateTimeOffset.MinValue` (i.e., no start time). |
+| AvailableUntil | The end time of the availability window. Default value: `DateTimeOffset.MaxValue` (i.e., no end time). |
 | RollingWindowConfiguration | The size of the availability window relative to the current time.<br>For example, if you set this property to 30 days, the resource will be available for booking until 30 days from now.<br>If both a fixed end time and a rolling window are set, the earlier time of the two will be used. For example, if the fixed end time is 15 days from now, but the rolling window is 30 days, the resource will no longer be available after the 15-day mark, even though the rolling window would extend to 30 days. |
 
 When you use the *GetEligibleResources* API call to retrieve resources available during a specific time range, resources that are not available for the entire requested range will not be returned.
@@ -127,7 +127,7 @@ foreach (var range in availableRanges)
 }
 ```
 
-The `AvailabilityContext` parameter has a property `Now`, which can be used to override the "now" timestamp in order to calculate e.g. the current end of a rolling window. For regular use cases, there is no need to override this. This is mainly used for testing purposes and to ensure a consistent timestamp when performing internal checks.
+The `AvailabilityContext` parameter has a property `Now`, which can be used to override the "now" timestamp in order to calculate e.g., the current end of a rolling window. For regular use cases, there is no need to override this. This is mainly used for testing purposes and to ensure a consistent timestamp when performing internal checks.
 
 #### Relational anomaly detection [ID 42034]
 
@@ -287,12 +287,12 @@ SLLogCollector packages now also include the *ClusterEndpoints.json* file.
 
 Because of a number of enhancements, overall performance of SLPort has increased. The process will now also use less memory and CPU.
 
-#### Swarming prerequisites: Entries will now be added to SLNet.txt while checking alarm ID usage in Automation scripts and protocol QActions [ID 41930]
+#### Swarming prerequisites: Entries will now be added to SLNet.txt while checking alarm ID usage in automation scripts and protocol QActions [ID 41930]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 <!-- Not added to MR 10.6.0 -->
 
-While checking the Swarming prerequisites, DataMiner checks alarm ID usage in Automation scripts and protocol QActions. As this step can take up to several minutes, log entries will now be added to the *SLNet.txt* log file while alarm ID usage is being checked.
+While checking the Swarming prerequisites, DataMiner checks alarm ID usage in automation scripts and protocol QActions. As this step can take up to several minutes, log entries will now be added to the *SLNet.txt* log file while alarm ID usage is being checked.
 
 #### Swarming: Elements polling the local IP address no longer blocked from being swarmed [ID 41957]
 
@@ -420,7 +420,7 @@ When an element was deleted, a runtime error could occur in SLProtocol when a pa
 <!-- MR 10.5.0 - FR 10.5.3 -->
 <!-- Not added to MR 10.5.0 - Introduced by RN 39193 -->
 
-When an alarm had been generated for a general information parameter (i.e. a parameter with an ID within the range 64502 to 64999), it would incorrectly not be possible to clear or update that alarm.
+When an alarm had been generated for a general information parameter (i.e., a parameter with an ID within the range 64502 to 64999), it would incorrectly not be possible to clear or update that alarm.
 
 #### SNMP managers would incorrectly receive some or all active alarms at DMA startup [ID 41878]
 
@@ -445,7 +445,7 @@ When elements were swarmed between two DataMiner Agents, in some rare cases, a p
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-In some cases, alarm groups containing alarms without a focus value (e.g. notices or errors) would not be correctly removed from the group when the element associated with the alarm was deleted, stopped or paused.
+In some cases, alarm groups containing alarms without a focus value (e.g., notices or errors) would not be correctly removed from the group when the element associated with the alarm was deleted, stopped or paused.
 
 #### Problem with SLDataMiner when creating a dmimport package [ID 41963]
 
@@ -453,7 +453,7 @@ In some cases, alarm groups containing alarms without a focus value (e.g. notice
 
 Up to now, in some cases, SLDataMiner could stop working while creating a dmimport package.
 
-A number of enhancements have now been made with regard to error handling during the creation of dmimport packages. From now on, when an issue occurs while a dmimport package is being created, an error message will be shown in the client (e.g. DataMiner Cube).
+A number of enhancements have now been made with regard to error handling during the creation of dmimport packages. From now on, when an issue occurs while a dmimport package is being created, an error message will be shown in the client (e.g., DataMiner Cube).
 
 #### Problem with SLProtocol when using a condition to check whether a table is empty [ID 41968]
 

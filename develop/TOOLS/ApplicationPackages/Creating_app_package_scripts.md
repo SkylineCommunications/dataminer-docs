@@ -69,7 +69,7 @@ Note that DIS will always include the latest version of the `SLAppPackageInstall
 ```
 
 > [!NOTE]
-> While for regular Automation scripts you need to provide a full path to any referenced assemblies, this is not the case for references in an install script. This is because when the package is installed, the referenced assemblies will be available in the `C:\Skyline DataMiner\AppPackages\Installed\<PackageName>.<PackageVersion>\Scripts\InstallDependencies` directory, and DataMiner will automatically update the references to point to the corresponding assemblies in this directory.
+> While for regular automation scripts you need to provide a full path to any referenced assemblies, this is not the case for references in an install script. This is because when the package is installed, the referenced assemblies will be available in the `C:\Skyline DataMiner\AppPackages\Installed\<PackageName>.<PackageVersion>\Scripts\InstallDependencies` directory, and DataMiner will automatically update the references to point to the corresponding assemblies in this directory.
 
 #### SetupContent
 

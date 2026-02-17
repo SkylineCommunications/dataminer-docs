@@ -46,7 +46,7 @@ To add data or change the data of a component:
    - Some components allow you to specify **multiple data entries**. For example, for a state component and a line chart component, multiple parameters can be dragged onto the component.
 
      > [!NOTE]
-     > For some visualizations that use multiple data entries (e.g. parameter table, state), you can modify the order in which these data entries are displayed. To do so, in the *Data used in component* section of the *Data* pane, click the arrow icons next to the data entries to place them higher or lower in the order.
+     > For some visualizations that use multiple data entries (e.g., parameter table, state), you can modify the order in which these data entries are displayed. To do so, in the *Data used in component* section of the *Data* pane, click the arrow icons next to the data entries to place them higher or lower in the order.
 
    - If you try to add data that is **not compatible** with the component, a red icon will be displayed on the component when you try to drag the data onto it.
 

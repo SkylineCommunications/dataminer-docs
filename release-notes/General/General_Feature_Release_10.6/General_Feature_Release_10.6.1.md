@@ -291,7 +291,7 @@ Also, in the resource manager, it is now possible to configure the number of sta
 | MaxAmountOfThreads       | The number of threads the resource manager will use to start bookings.<br>By default, 6 threads will be used. To restore this setting to the default value, set its value to null.<br>Note: The number of threads must at least be set to 2 in order for the scheduler to be able to start an action and keep a thread available for asynchronous continuations. |
 | MaxAmountOfParallelTasks | The number of parallel actions the resource manager will start on the threads.<br>By default, the number of parallel action is set to 7. To restore this setting to the default value, set its value to null. |
 
-The following example shows how you can configure this from an Automation script.
+The following example shows how you can configure this from an automation script.
 
 ```csharp
 private void UpdateResourceManagerConfigSettings()
@@ -331,7 +331,7 @@ See also: [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
-When a backup package was being created, up to now, the temporary file would be stored on the C drive. From now on, this temporary file will be stored on the target path (i.e. local path or network path).
+When a backup package was being created, up to now, the temporary file would be stored on the C drive. From now on, this temporary file will be stored on the target path (i.e., local path or network path).
 
 > [!NOTE]
 >
@@ -435,11 +435,11 @@ Up to now, when DVE elements were deleted while multiple DVE elements were havin
 
 When a QAction triggered an information message with regard to a particular element, SLNet would incorrectly only forward that message to the DataMiner Agent that hosted that element. As a result, that information message would not appear in client applications connected to any of the other DataMiner Agents in the system.
 
-#### Correlation alarms triggered by a correlation rule with the 'Auto clear' option set would not be cleared automatically [ID 43974]
+#### Correlation alarms triggered by a correlation rule with the 'Autoclear' option set would not be cleared automatically [ID 43974]
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
-When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Auto clear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
+When, in a correlation rule, a *New alarm* or an *Escalate event* action was configured with the *Autoclear* option set, in some cases, the new correlated alarms triggered by that correlation rule would incorrectly not be automatically cleared.
 
 #### Element and parameter state timelines could show incorrect data [ID 43982]
 

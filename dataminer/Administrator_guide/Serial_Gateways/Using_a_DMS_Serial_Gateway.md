@@ -12,7 +12,7 @@ If you want to add elements to a DMA that are connected via a Serial Gateway, yo
 
 - Connect the devices to the Serial Gateway using the proper cabling. Write down the ports to which you connect the devices.
 
-- Check the serial communication settings of all connected devices (e.g. baud rate, data bits, stop bits, parity, flow control and bus address).
+- Check the serial communication settings of all connected devices (e.g., baud rate, data bits, stop bits, parity, flow control and bus address).
 
 - Check the IP address assigned to the Serial Gateway.
 

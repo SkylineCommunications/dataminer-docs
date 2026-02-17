@@ -22,13 +22,13 @@ uid: AlarmEventMessage
 | ElementName | String | The name of the element on which the alarm occurred. |
 | ElementType | String | The type of the element on which the alarm occurred. |
 | ParameterName | String | The name of the parameter on which the alarm occurred. |
-| DisplayValue | String | The textual representation of the alarm value. This representation includes units and has transformations (e.g. discreet mappings) applied. See *Value* above. |
+| DisplayValue | String | The textual representation of the alarm value. This representation includes units and has transformations (e.g., discreet mappings) applied. See *Value* above. |
 | RootTime | DateTime | The timestamp of the first alarm in the tree to which this alarm record belongs. |
 | Services | Array of string | The list of DmaId/ElementId pairs referring to the services in which the alarm is included. |
 | ParentServices | Array of AlarmServiceInfo | Information about the services in which this alarm is included. Each AlarmServiceInfo object contains a service name a DmaId/ServiceId pair. |
 | Interfaces | Array of string | The list of DmaId/InterfaceId pairs referring to the interfaces in which the alarm is included. |
 | ParentInterfaces | Array of AlarmInterfaceInfo | Information about the interfaces in which the alarm is included. Each AlarmInterfaceInfo object contains a custom interface name and a DmaId/InterfaceID pair. |
-| CorrelationReferences | Array of CorrelationReference | Array of references to Correlation alarms on the alarm. |
+| CorrelationReferences | Array of CorrelationReference | Array of references to correlation alarms on the alarm. |
 | BaseAlarms | Array of string | In case of a correlated alarm: The list of DmaId/AlarmId pairs referring to the raw alarms on which the correlated alarm is based. |
 | IsNew | Boolean | Whether or not the alarm is new. |
 | IsLastHistory | Boolean | Indicates whether an alarm is the most recent one in the history tree. |

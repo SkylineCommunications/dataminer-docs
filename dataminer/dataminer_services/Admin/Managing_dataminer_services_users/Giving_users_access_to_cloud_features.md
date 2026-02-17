@@ -6,7 +6,7 @@ reviewer: Alexander Verkest
 
 # Controlling user access to dataminer.services features
 
-If users have a dataminer.services account (i.e. they are registered on <https://dataminer.services>), you can control whether they have access to dataminer.services features. This includes remote access to a DataMiner System via web apps such as the DataMiner Monitoring app, the use of the [Teams bot](xref:DataMiner_Teams_bot), etc. For this purpose, you must add their dataminer.services account to your organization and to the DataMiner System.
+If users have a dataminer.services account (i.e., they are registered on <https://dataminer.services>), you can control whether they have access to dataminer.services features. This includes remote access to a DataMiner System via web apps such as the DataMiner Monitoring app, the use of the [Teams bot](xref:DataMiner_Teams_bot), etc. For this purpose, you must add their dataminer.services account to your organization and to the DataMiner System.
 
 ## Giving a user access to dataminer.services features
 

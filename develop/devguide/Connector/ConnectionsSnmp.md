@@ -6,7 +6,7 @@ uid: ConnectionsSnmp
 
 The Simple Network Management Protocol (SNMP) is a widely used application layer protocol for managing network elements.
 
-The SNMP architectural model consists of network elements (e.g. routers, hosts, servers, etc.) and network management stations (NMS), e.g. a DataMiner Agent, that monitor and control the network elements. The SNMP protocol is used to communicate between the management stations and the network elements. The SNMP protocol is part of the Internet Standard Management Framework (which is also sometimes referred to as SNMP).
+The SNMP architectural model consists of network elements (e.g., routers, hosts, servers, etc.) and network management stations (NMS), e.g., a DataMiner Agent, that monitor and control the network elements. The SNMP protocol is used to communicate between the management stations and the network elements. The SNMP protocol is part of the Internet Standard Management Framework (which is also sometimes referred to as SNMP).
 
 The Internet Standard Management Framework consists of the following components:
 
@@ -44,7 +44,7 @@ flowchart LR
 
 Typically, a protocol with an SNMP connection contains logic to:
 
-- Poll the device (i.e. inspect managed objects exposed by the MIB) by sending SNMP Get messages (e.g. GetNext, GetBulk).
+- Poll the device (i.e., inspect managed objects exposed by the MIB) by sending SNMP Get messages (e.g., GetNext, GetBulk).
 - Change parameter values on the device by sending SNMP Set messages.
 - Receive unsolicited SNMP traps from the device.
 

@@ -33,7 +33,7 @@ None
 | Name | The text of the label. |
 | TextAlignment | The alignment of the text: Left, Right, Center, or Justify. |
 | TextWrapping  | Whether or not text will wrap when it reaches the edge of the label box:<br> -  Wrap: Text will always wrap when it reaches the edge of the label box.<br> -  WrapWithOverflow: Text will always wrap when it reaches the edge of the label box, except in case of long words.<br> -  NoWrap: No line wrapping is performed.              |
-| TextTrimming  | The way in which text is trimmed when it overflows the edge of the label box.<br> -  None: Text is not trimmed.<br> -  CharacterEllipsis: Text is trimmed after a character. An ellipsis (”...”) will replace the remaining text.<br> -  WordEllipsis: Text is trimmed after a word. An ellipsis (”...”) will replace the remaining text. |
+| TextTrimming  | The way text is trimmed when it overflows the edge of the label box.<br> -  None: Text is not trimmed.<br> -  CharacterEllipsis: Text is trimmed after a character. An ellipsis (”...”) will replace the remaining text.<br> -  WordEllipsis: Text is trimmed after a word. An ellipsis (”...”) will replace the remaining text. |
 | FontFamily | The text font. |
 | FontSize | The text font size (in points). |
 | FontWeight | The font weight: Normal, Bold, or Light |
@@ -90,8 +90,8 @@ Consists of TabPage components. These have one customizable property, the tab pa
 | Property | Description |
 |--|--|
 | Description | The text displayed in the input/output box. |
-| Input | The matrix input linked with this box. Choose -1 to turn the input into the “park input”, i.e. the input to which an output will automatically be connected when it is disconnected from its earlier input. |
-| Include port number in description | Determines whether the port number is included in the description or not (e.g. “input 5” or “output 3”). |
+| Input | The matrix input linked with this box. Choose -1 to turn the input into the “park input”, i.e., the input to which an output will automatically be connected when it is disconnected from its earlier input. |
+| Include port number in description | Determines whether the port number is included in the description or not (e.g., “input 5” or “output 3”). |
 | Output | The matrix output linked with this box. |
 
 > [!NOTE]
@@ -119,7 +119,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 | Property | Description |
 |--|--|
 | Type | The type of information panel: Selected Input, Selected Output, Routed Outputs. |
-| Options | If Type is “Routed Outputs”, then in the Options property you can specify the connections that you do not want users to see.<br> Example: One of the inputs is not connected to a real video source. Instead, it has a terminator pin attached to it, and shows a black screen. If an output is connected to this input, it is in fact not in use (i.e. blacked out). Although it is a matrix crosspoint, it does not represent a routed video signal and should therefore not be displayed.<br> Syntax: Inputs and outputs must be specified with their numeric index, and can be separated by either commas or semicolons.<br> - ignore-input:1,2,3<br> - ignore-output:11,12,13 |
+| Options | If Type is “Routed Outputs”, then in the Options property you can specify the connections that you do not want users to see.<br> Example: One of the inputs is not connected to a real video source. Instead, it has a terminator pin attached to it, and shows a black screen. If an output is connected to this input, it is in fact not in use (i.e., blacked out). Although it is a matrix crosspoint, it does not represent a routed video signal and should therefore not be displayed.<br> Syntax: Inputs and outputs must be specified with their numeric index, and can be separated by either commas or semicolons.<br> - ignore-input:1,2,3<br> - ignore-output:11,12,13 |
 
 > [!TIP]
 > See also: [Extra grid properties](#extra-grid-properties)

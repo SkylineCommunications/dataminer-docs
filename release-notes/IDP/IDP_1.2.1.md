@@ -28,7 +28,7 @@ To prevent this issue, the *IPAddress* metadata is now added to the token.
 
 #### Username casing mismatch caused exception when searching for backup configuration files [ID 35567]
 
-If the casing of a username in DataMiner was different from the casing in Windows (e.g. the DataMiner username was *user* while the Windows username was *User* or *USER*), this could cause an exception when searching for backup configuration files. More specifically, the *IDP_ApplySearchCriteria* script would throw an exception stating that it could not find an active session for the current user.
+If the casing of a username in DataMiner was different from the casing in Windows (e.g., the DataMiner username was *user* while the Windows username was *User* or *USER*), this could cause an exception when searching for backup configuration files. More specifically, the *IDP_ApplySearchCriteria* script would throw an exception stating that it could not find an active session for the current user.
 
 #### Exception thrown when updating a device [ID 35666]
 

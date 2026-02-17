@@ -78,7 +78,7 @@ The package will deploy the following components:
 
   - *list_connection_bidirectional.json*: List of connection between devices (double connection).
 
-    This file contains two connections per physical connection, i.e. one connection from source to destination and another connection from destination to source.
+    This file contains two connections per physical connection, i.e., one connection from source to destination and another connection from destination to source.
 
   - *list_interface.json*: List of interfaces exposed by each device.
 

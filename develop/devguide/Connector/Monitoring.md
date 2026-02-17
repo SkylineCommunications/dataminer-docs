@@ -4,7 +4,7 @@ uid: Monitoring
 
 # Monitoring
 
-Monitoring parameters in DataMiner includes triggering alarms based on the parameter values (i.e. [alarming](xref:MonitoringAlarming)) and keeping the trend information of parameter values over time (i.e. [trending](xref:MonitoringTrending)).
+Monitoring parameters in DataMiner includes triggering alarms based on the parameter values (i.e., [alarming](xref:MonitoringAlarming)) and keeping the trend information of parameter values over time (i.e., [trending](xref:MonitoringTrending)).
 
 ## See also
 

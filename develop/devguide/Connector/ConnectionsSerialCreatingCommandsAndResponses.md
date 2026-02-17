@@ -7,7 +7,7 @@ description: A serial communication protocol specification implemented by a devi
 
 A serial communication protocol specification implemented by a device typically defines a number of commands and responses. A DataMiner protocol will implement these commands and responses according to the specification.
 
-The first step is to implement all the needed parameters that will be used in the command and response definitions. Some of the parameters will have a fixed length (i.e. LengthType is set to "fixed"), while others will hold data of variable length (LengthType is set to "next param"). In case a command has a variable length field, this is typically surrounded by fixed length parameters.
+The first step is to implement all the needed parameters that will be used in the command and response definitions. Some of the parameters will have a fixed length (i.e., LengthType is set to "fixed"), while others will hold data of variable length (LengthType is set to "next param"). In case a command has a variable length field, this is typically surrounded by fixed length parameters.
 
 For example, consider the following implementation of a GET request as defined in the Hypertext Transfer Protocol (HTTP).
 
@@ -53,7 +53,7 @@ For (4), (5), (7) and (8) in the example command, the hex value 0x0D0x0A is a fi
 
 Read or write parameters in a command or a response are typically parameters that are read from or written to a device or that are specific to a device, like an IP address, a host name, a parameter value, etc.
 
-A read or write parameter can be filled in via the UI, can be set by a QAction or can enter by a response of the device. E.g. (3) and (6) in the example command.
+A read or write parameter can be filled in via the UI, can be set by a QAction or can enter by a response of the device. For example, (3) and (6) in the example command.
 
 ## Composing commands
 
@@ -93,7 +93,7 @@ When the timer goes off, group 1 will be added to the group execution queue. Now
 
 ![Insertion of a timer group in the group execution queue](~/develop/images/Protocol_Explained_-_Insertion_of_a_timer_group.svg)
 
-The group travels through the queue until it reaches the front and is processed. At this point, the command that will be sent to the SLPort process is composed based on the current values of the parameters that make up the command. At this point in time, it is possible that the value of parameter 2 has changed already (e.g. the content of parameter 2 is now 'B'). In this case, the command "Get B" will be sent to SLPort instead of "Get A". This could be undesired.
+The group travels through the queue until it reaches the front and is processed. At this point, the command that will be sent to the SLPort process is composed based on the current values of the parameters that make up the command. At this point in time, it is possible that the value of parameter 2 has changed already (e.g., the content of parameter 2 is now 'B'). In this case, the command "Get B" will be sent to SLPort instead of "Get A". This could be undesired.
 
 ![Default command construction](~/develop/images/Protocol_Explained_-_Default_command_construction.svg)
 
@@ -180,7 +180,7 @@ A response will wait until the timeout time (defined in the element wizard) has 
 
 - A header and trailer are defined.
 - Every parameter has a fixed length defined.
-- The response contains a length indication at an identifiable position, i.e. the length parameter is located after e.g. a parameter of type fixed and consists of a fixed set of bytes.
+- The response contains a length indication at an identifiable position, i.e., the length parameter is located after e.g., a parameter of type fixed and consists of a fixed set of bytes.
 
 #### Practical example
 
@@ -270,7 +270,7 @@ A length field in a response can be used to:
 - Read in the response before timeout time.
 - Validate the size of the "variable length data bytes" in your response in order to make sure you will not continue working with invalid data (less or more bytes received than expected).
 
-A requirement is that the length field needs to be in an identifiable position (e.g. after a parameter of type fixed or a header) and that the size of the length field is fixed.
+A requirement is that the length field needs to be in an identifiable position (e.g., after a parameter of type fixed or a header) and that the size of the length field is fixed.
 
 Fixed Length | Next Param | **Fixed** | **Length** | data
 
@@ -556,7 +556,7 @@ DataMiner Protocol Markup Language:
 
 ## Read bit
 
-It is possible that a device returns a byte (or multiple bytes) where certain bits represent a certain variable (e.g. a device can return a byte where each bit represents a flag). Therefore, a protocol needs to be able to read out certain bits or a group of bits from a byte. This can be achieved using parameters of type "read bit".
+It is possible that a device returns a byte (or multiple bytes) where certain bits represent a certain variable (e.g., a device can return a byte where each bit represents a flag). Therefore, a protocol needs to be able to read out certain bits or a group of bits from a byte. This can be achieved using parameters of type "read bit".
 
 The byte or bytes in question need to be stored in a parameter of type "group" where the length is set to the number of bytes. (This parameter has a fixed length).
 
@@ -709,7 +709,7 @@ When the write bit is then changed by the user, the specified bit will be change
 
 In case a response parameter contains data that can be considered to consist of multiple fields, this can be modeled in a response linked to a parameter of type "response".
 
-For example, consider a response from a device (i.e. a response that is used in a pair) that looks like this:
+For example, consider a response from a device (i.e., a response that is used in a pair) that looks like this:
 
 ```xml
 <Response id="50">

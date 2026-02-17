@@ -45,7 +45,7 @@ In a protocol editing window, "jump to linked item" buttons (also known as paper
 The Validator will now issue
 
 - a warning when DefaultValue is defined on a column parameter of type "read", and
-- an error when DefaultValue is defined on a parameter that is not of type "read" (e.g. write, fixed, etc.).
+- an error when DefaultValue is defined on a parameter that is not of type "read" (e.g., write, fixed, etc.).
 
 | Result code | Class       | Description                                                                                   |
 |-------------|-------------|-----------------------------------------------------------------------------------------------|
@@ -90,7 +90,7 @@ In some cases, the display editor would reset the default page when that page di
 
 #### IDE - Table editor: Column options no longer converted to lowercase \[ID 17313\]
 
-In some cases, dynamic items defined in \<ColumnOption> tags would incorrectly be converted to lower case when you applied changes made in the table editor. An options attribute like `;save;SelectionSetVar:VariableName` would, for example, get converted to `;save;SelectionSetVar:variablename`. This problem has now been fixed.
+In some cases, dynamic items defined in \<ColumnOption> tags would incorrectly be converted to lowercase when you applied changes made in the table editor. An options attribute like `;save;SelectionSetVar:VariableName` would, for example, get converted to `;save;SelectionSetVar:variablename`. This problem has now been fixed.
 
 #### Validator: Problem when a column parameter could not be found \[ID 17394\]
 

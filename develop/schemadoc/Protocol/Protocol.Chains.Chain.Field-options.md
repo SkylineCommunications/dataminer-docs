@@ -228,17 +228,17 @@ fixedPosition=2
 
 The position starts at 0 (for example, 0=Region, 1=Headend, 2=Packet and Cable).
 
-In the example above, if fixedPosition is not used and "Cable" is selected in the filter, the "Packet" field is disabled, and the child filter lists only items linked to "Cable". If fixedPosition is used and "Cable" is selected in the filter, the "Packet" field remains enabled, and the child filter lists all items linked to selected items (i.e. selected Packet and selected Cable).
+In the example above, if fixedPosition is not used and "Cable" is selected in the filter, the "Packet" field is disabled, and the child filter lists only items linked to "Cable". If fixedPosition is used and "Cable" is selected in the filter, the "Packet" field remains enabled, and the child filter lists all items linked to selected items (i.e., selected Packet and selected Cable).
 
 ### ignoreEmptyFilterValues
 
-It is possible that the column where the filter values are stored has rows with empty values (e.g. because the row was removed while aggregation was still going on, so that the row was created again). With this option, empty values are not included in the filter dropdown list.
+It is possible that the column where the filter values are stored has rows with empty values (e.g., because the row was removed while aggregation was still going on, so that the row was created again). With this option, empty values are not included in the filter dropdown list.
 
 ### KPIsInDiagram
 
 This option is **obsolete** and should no longer be used. Instead, use the dedicated [DiagramPids](xref:Protocol.Chains.Chain.Field.DiagramPids) tag.<!-- RN 14468 -->
 
-Displays KPIs (i.e. parameter values) inside a diagram box.<!-- RN 13739 -->
+Displays KPIs (i.e., parameter values) inside a diagram box.<!-- RN 13739 -->
 
 Syntax:
 
@@ -247,7 +247,7 @@ Syntax:
 Remarks:
 
 - After "KPIsInDiagram:", any text is allowed except reserved characters such as ";".
-- Table column values can be inserted with {pid:PID} placeholders (e.g. {pid:1005}). These values will be updated in the diagram each time they change.
+- Table column values can be inserted with {pid:PID} placeholders (e.g., {pid:1005}). These values will be updated in the diagram each time they change.
 - If you use "\", "{" or "}" characters in the text, make sure to place a "\" character in front of them.
 - The following special characters can be used: "\n" (new line) and "\t" (tab).
 - Leading and trailing whitespace is removed.
@@ -362,7 +362,7 @@ Example:
 
 <!-- RN 5977 -->
 
-On an EPM interface, apart from displaying the alarm state of the object (e.g. a CMTS) or the alarm state of all the objects below (e.g. all the amplifiers connected to a CMTS), it is possible to have two alarm indications on every object:
+On an EPM interface, apart from displaying the alarm state of the object (e.g., a CMTS) or the alarm state of all the objects below (e.g., all the amplifiers connected to a CMTS), it is possible to have two alarm indications on every object:
 
 - The alarm state of the object
 - The alarm state of all the objects below
@@ -432,7 +432,7 @@ Example:
 ```
 
 > [!NOTE]
-> If you configure the filter of a field to not be displayed (i.e. you leave out the "displayInFilter" option), the "showTree" option is required, as otherwise the diagram would immediately stop at the level corresponding to this field. In that case, depending on whether the "skipInDiagram" option is specified, the diagram will either be shown as if the filter was displayed, or shown without this particular level.
+> If you configure the filter of a field to not be displayed (i.e., you leave out the "displayInFilter" option), the "showTree" option is required, as otherwise the diagram would immediately stop at the level corresponding to this field. In that case, depending on whether the "skipInDiagram" option is specified, the diagram will either be shown as if the filter was displayed, or shown without this particular level.
 
 ### statusTabs
 
@@ -446,10 +446,10 @@ statusTabs:CPEs-25800|25900|26000-STB|CM|eMTA-MAC|Status|SAP|Street|Nr|Node
 
 The configuration consists of four sections, separated by dashes:
 
-1. The title: the name of the link as displayed in DataMiner (e.g. "CPEs" in the example above).
-1. Subtables: tables that contain the data to be displayed (e.g. "25800|25900|26000" in the example above).
-1. Types: a type field (which will be displayed as an extra column) corresponding to the subtables. (e.g. in the example above: "STB|CM|eMTA", where STB corresponds to table 25800, CM to table 25900 and eMTA to table 26000).
-1. Column names (e.g. "MAC|Status|SAP|Street|Nr|Node" in the example above). The first X columns will be displayed (e.g. 6 columns in the example above, as 6 column names have been specified). Note that the tables must all have the same columns. Also, as the PK usually should not be displayed in the statusTabs, it is best to place it at the end of the view table.
+1. The title: the name of the link as displayed in DataMiner (e.g., "CPEs" in the example above).
+1. Subtables: tables that contain the data to be displayed (e.g., "25800|25900|26000" in the example above).
+1. Types: a type field (which will be displayed as an extra column) corresponding to the subtables. (e.g., in the example above: "STB|CM|eMTA", where STB corresponds to table 25800, CM to table 25900 and eMTA to table 26000).
+1. Column names (e.g., "MAC|Status|SAP|Street|Nr|Node" in the example above). The first X columns will be displayed (e.g., 6 columns in the example above, as 6 column names have been specified). Note that the tables must all have the same columns. Also, as the PK usually should not be displayed in the statusTabs, it is best to place it at the end of the view table.
 
 ### tabOrder
 
@@ -527,7 +527,7 @@ TopologyChains:LogicalView-Broadcast branch,Int/tel branch,VoD branch
 
 The configuration of the field consists of two sections, separated by a dash:
 
-1. The name of the tab, e.g. "LogicalView" in the example above.
+1. The name of the tab, e.g., "LogicalView" in the example above.
 1. A list of the existing chains that will be combined, separated by commas. For example, "Broadcast branch,Int/tel branch,VoD branch" in the example above.
 
 More tab pages can be specified, separated with colons (`:`), for example:

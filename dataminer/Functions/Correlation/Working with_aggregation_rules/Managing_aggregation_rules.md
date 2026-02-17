@@ -50,7 +50,7 @@ To configure an aggregation rule, select it in the tree view on the left. In the
 
       - If *Manually*: to calculate the aggregated data, the user will need to click the *Refresh* button in View mode.
 
-      - If *Automatically*: indicate the time span when the data need to be calculated. This can be any time span less than a day, e.g. “30 seconds”, “15 minutes”, “2 hours”. Optionally, use the slider to increase or decrease the time span.
+      - If *Automatically*: indicate the time span when the data need to be calculated. This can be any time span less than a day, e.g., “30 seconds”, “15 minutes”, “2 hours”. Optionally, use the slider to increase or decrease the time span.
 
    1. In the second line, pick the type of aggregation:
 

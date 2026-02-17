@@ -7,9 +7,7 @@ uid: Using_quick_filters
 You will often find filter boxes in DataMiner Cube that you can use to filter the displayed data. This can for instance be at the top of a card side panel, above a table or in the Alarm Console.
 
 > [!TIP]
-> See also:
->
-> - [Using the Alarm Console quick filter box](xref:ApplyingAlarmFiltersInTheAlarmConsole#using-the-alarm-console-quick-filter-box)
+> See also: [Using the Alarm Console quick filter box](xref:UsingTheQuickFilterBox)
 
 ## Tips on the use of quick filters
 

@@ -12,11 +12,11 @@ The following kinds of change points can be detected:
 
 - **Flatline**: A fluctuating value suddenly remains constant. This type of change point can be detected from DataMiner 10.2.5/10.3.0 onwards.
 
-- **Level shift**: A value shifts upwards or downwards and then stays at that level, e.g. a value fluctuating around 0 that starts to fluctuate around 10.
+- **Level shift**: A value shifts upwards or downwards and then stays at that level, e.g., a value fluctuating around 0 that starts to fluctuate around 10.
 
 - **Outlier**: A value suddenly spikes upwards or downwards, but returns to its previous, normal behavior after a few points.
 
-- **Trend change**: A value suddenly starts to increase or decrease at an unusual rate. For example, a value fluctuating around 10 (i.e. a trend slope of 0) that suddenly starts to increase by 1 unit per second (i.e. a trend slope of 1).
+- **Trend change**: A value suddenly starts to increase or decrease at an unusual rate. For example, a value fluctuating around 10 (i.e., a trend slope of 0) that suddenly starts to increase by 1 unit per second (i.e., a trend slope of 1).
 
   Note that from DataMiner 10.3.0 [CU9]/10.3.12 onwards<!--RN 37571-->, a change in trend must maintain its altered state for at least an hour before it is labeled as a trend change.
 
@@ -44,7 +44,7 @@ You can interpret this bar as follows:
 
 When you hover the mouse pointer over a change point bar, a semi-transparent ribbon will be displayed over the entire height of the trend graph, showing more information about the change point.
 
-Note that labels of change points of type "trend change" will indicate the level of increase or decrease in seconds, minutes, hours or days depending on the value. If, for example, the value increases by 0.01 per second (i.e. 0.6 per minute, 36 per hour or 864 per day), the label will show an increase of 36 per hour as it is the smallest amount greater than 1.
+Note that labels of change points of type "trend change" will indicate the level of increase or decrease in seconds, minutes, hours or days depending on the value. If, for example, the value increases by 0.01 per second (i.e., 0.6 per minute, 36 per hour or 864 per day), the label will show an increase of 36 per hour as it is the smallest amount greater than 1.
 
 ## Behavioral anomaly detection in the Alarm Console
 
@@ -91,7 +91,7 @@ Depending on the DataMiner version, different limitations are in place as to how
 
 - From DataMiner 10.4.0 [CU2]/10.4.5 onwards<!-- RN 39256 -->, at most 500 suggestion events related to behavioral anomaly detection can be shown in the active suggestion events tab of the Alarm Console.
 
-- From DataMiner 10.4.0 [CU1]/10.4.4 onwards<!-- RN 38674 -->, at most 50 new suggestion events per hour per type of anomaly (i.e. level shift, trend change, flatline, or variance change) can be generated per DataMiner Agent. There is no limit to the maximum number of anomaly alarm events, i.e. alarm events for parameters that have explicit [anomaly alarm monitoring configured in the alarm template](xref:Configuring_anomaly_detection_alarms).
+- From DataMiner 10.4.0 [CU1]/10.4.4 onwards<!-- RN 38674 -->, at most 50 new suggestion events per hour per type of anomaly (i.e., level shift, trend change, flatline, or variance change) can be generated per DataMiner Agent. There is no limit to the maximum number of anomaly alarm events, i.e., alarm events for parameters that have explicit [anomaly alarm monitoring configured in the alarm template](xref:Configuring_anomaly_detection_alarms).
 
 - From DataMiner 10.2.11/10.3.0 onwards, suggestion events are only created for the most significant changes, and per hosting DataMiner Agent there can be at most 500 open suggestion events related to behavioral anomaly detection. Prior to DataMiner 10.2.11/10.3.0, suggestion events are created for all anomalous behavioral changes that do not have alarm monitoring enabled.
 

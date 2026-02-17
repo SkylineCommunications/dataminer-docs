@@ -54,7 +54,7 @@ The following presets are available by default:
 
 - **No rights**: Deselects all rights.
 
-- **Operators**: Provides access to basic DataMiner functionality, without any permission to edit or delete elements, services, Automation scripts, documents, etc.
+- **Operators**: Provides access to basic DataMiner functionality, without any permission to edit or delete elements, services, automation scripts, documents, etc.
 
 - **Power users**: Provides full access to the DMS, without any permission to change the DMS configuration.
 

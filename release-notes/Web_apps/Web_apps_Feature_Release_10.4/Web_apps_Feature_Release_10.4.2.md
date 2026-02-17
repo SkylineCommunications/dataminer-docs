@@ -161,13 +161,13 @@ When you changed the visualization of a component showing data fetched by a GQI 
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-When an Automation script action using dummies was linked to a node of a node edge component, up to now, the dummies incorrectly would not get filled in automatically. From now on, they will be filled in automatically when the node matches the dummy type.
+When an automation script action using dummies was linked to a node of a node edge component, up to now, the dummies incorrectly would not get filled in automatically. From now on, they will be filled in automatically when the node matches the dummy type.
 
-#### Low-Code Apps: Problem with input validation when using interactive Automation scripts [ID 38111]
+#### Low-Code Apps: Problem with input validation when using interactive automation scripts [ID 38111]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-When an interactive Automation script was used in a low-code app, input validation would not work correctly. When a validation failed, the border of the input field would turn red, but the corresponding error text would not be displayed.
+When an interactive automation script was used in a low-code app, input validation would not work correctly. When a validation failed, the border of the input field would turn red, but the corresponding error text would not be displayed.
 
 #### Dashboards app & Low-Code Apps: Timeline component would apply incorrect colors [ID 38130]
 
@@ -269,6 +269,6 @@ In the mobile versions of the web apps, the bottom tab control would incorrectly
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
-In some cases, page content would not fit the screen and no scroll bars would appear. As a result, components could be cut off at the bottom of the screen.
+In some cases, page content would not fit the screen and no scrollbars would appear. As a result, components could be cut off at the bottom of the screen.
 
 Also, the header bar of a page or panel in edit mode would not be aligned with the height of the side panel header.

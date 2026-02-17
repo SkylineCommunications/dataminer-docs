@@ -4,7 +4,7 @@ uid: AutomationDevGuideIndex
 
 # Automation script development guide
 
-- [Getting started with Automation script development](xref:GettingStartedWithAutomationScriptDevelopment)
+- [Getting started with automation script development](xref:GettingStartedWithAutomationScriptDevelopment)
 - [Automation script actions](xref:AutomationActions)
 - [UIBlockType overview](xref:UIBlockTypesOverview)
 - [Best practices](xref:Automation_best_practices_information_events)

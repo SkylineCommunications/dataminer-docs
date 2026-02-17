@@ -4,7 +4,7 @@ uid: LogicTriggers
 
 # Triggers
 
-Triggers are another important concept in protocols. A trigger defines what happens when it is activated, and how it is activated (e.g. on a parameter value change). Defining when a trigger is activated is optional, as a trigger can also be forced to execute, e.g. from a Quick Action (using the CheckTrigger method of the SLProtocol interface), by another trigger, or because it is part of a group being executed.
+Triggers are another important concept in protocols. A trigger defines what happens when it is activated, and how it is activated (e.g., on a parameter value change). Defining when a trigger is activated is optional, as a trigger can also be forced to execute, e.g., from a Quick Action (using the CheckTrigger method of the SLProtocol interface), by another trigger, or because it is part of a group being executed.
 
 For an overview of what can activate a trigger, see [Protocol.Triggers.Trigger.Time](xref:Protocol.Triggers.Trigger.Time).
 

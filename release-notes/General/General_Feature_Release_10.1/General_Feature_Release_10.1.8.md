@@ -223,7 +223,7 @@ For example:
 
 #### Visual Overview: New Collapse shape data field \[ID 30149\]
 
-In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions). While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e. its visibility is collapsed.
+In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions). While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e., its visibility is collapsed.
 
 This makes it a convenient alternative to the *ChildrenFilter* shape data, as it will keep all shapes in memory instead of removing and recreating them. This will allow better performance, though it will lead to slightly increased memory usage.
 
@@ -284,9 +284,9 @@ public class Script
 > - At present, bulk operations are not yet supported.
 > - Both PaProcess and PaToken now have a new LastModifiedAt property, filled in by SLNet. It will be used to compare cached versions with versions retrieved from the database.
 
-#### Interactive Automation scripts: File selector allowing multiple selections + file selector enhancements \[ID 30196\]
+#### Interactive automation scripts: File selector allowing multiple selections + file selector enhancements \[ID 30196\]
 
-In an interactive Automation script that is used in the DataMiner web apps, you can now configure a file selector component that allows the user to upload multiple files. To do so, set the property *AllowMultipleFiles* to true.
+In an interactive automation script that is used in the DataMiner web apps, you can now configure a file selector component that allows the user to upload multiple files. To do so, set the property *AllowMultipleFiles* to true.
 
 For example:
 
@@ -518,7 +518,7 @@ When, in Visual Overview, a table control had the SelectionSetVar option specifi
 
 #### DataMiner Cube - Resources app: No scroll bars would appear when a pane was not able to show all content \[ID 29836\]
 
-When, in the Resources app, you selected a resource with e.g. a large number of capacity and/or capability parameters, no scroll bars would appear, even when the pane was not able to show all content.
+When, in the Resources app, you selected a resource with e.g., a large number of capacity and/or capability parameters, no scrollbars would appear, even when the pane was not able to show all content.
 
 #### HTML5 apps: Incorrect overlay could appear when a timespan field got the focus \[ID 29849\]
 
@@ -559,9 +559,9 @@ When a client disconnected while the DMA was starting up, in some rare cases, pa
 - When a client cannot be re-registered during the SLNet initialization, an entry will be added to the logs, but the initialization will no longer fail.
 - Any exception thrown during the SLNet initialization will now also show up in the Alarm Console as “Unexpected Exception \[Initialize DMA\]: xxxxxx”
 
-#### Interactive Automation scripts: Only the value added in the last text box would be saved \[ID 29995\]
+#### Interactive automation scripts: Only the value added in the last text box would be saved \[ID 29995\]
 
-When, in interactive Automation scripts, you rapidly entered values in multiple text boxes, in some rare cases, only the value entered in the last text box would be saved.
+When, in interactive automation scripts, you rapidly entered values in multiple text boxes, in some rare cases, only the value entered in the last text box would be saved.
 
 #### Stopping an SLA would cause a 'window change' event that would lead to outages being closed when history set alarms were received \[ID 29998\]
 
@@ -569,9 +569,9 @@ When an SLA is stopped while it has an open outage, the open outage will be clos
 
 However, this event would be logged as a “window change”, causing the SLA to close and reevaluate the current alarms at the time the SLA was stopped whenever a history set alarm was received with a timestamp earlier than the time at which the SLA was stopped. This would then cause extra non-intended outages.
 
-#### Interactive Automation scripts: Values shown in datetime controls would be out of sync with the values sent to the server \[ID 30015\]
+#### Interactive automation scripts: Values shown in datetime controls would be out of sync with the values sent to the server \[ID 30015\]
 
-In interactive Automation scripts, in some rare cases, the value shown in a datetime control would be out of sync with the value sent to the server. Also, in some cases, datetime controls could trigger updates even when their WantsOnChange property was set to false.
+In interactive automation scripts, in some rare cases, the value shown in a datetime control would be out of sync with the value sent to the server. Also, in some cases, datetime controls could trigger updates even when their WantsOnChange property was set to false.
 
 #### Synchronization of a cleared DMS.xml file would incorrectly cause all agents to remove themselves from the DataMiner System \[ID 30023\] \[ID 30163\]
 
@@ -683,9 +683,9 @@ Up to now, a filter on a protocol-based inter-element query would incorrectly on
 
 When SLLogCollector updated its list of processes, it would incorrectly try to update it again when the update took longer than 1 second.
 
-#### Interactive Automation scripts: Lazy-loaded tree controls could no longer be expanded \[ID 30204\]
+#### Interactive automation scripts: Lazy-loaded tree controls could no longer be expanded \[ID 30204\]
 
-In interactive Automation scripts, in some cases, it would no longer be possible to expand lazy-loaded tree controls.
+In interactive automation scripts, in some cases, it would no longer be possible to expand lazy-loaded tree controls.
 
 #### DataMiner Cube: Not possible to unmask a masked EPM object \[ID 30208\]
 

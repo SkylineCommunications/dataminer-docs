@@ -53,7 +53,7 @@ Navigate to <https://admin.dataminer.services/> and deploy the latest version of
 
    ![Create New](~/dataminer/images/Data_Sources_Tutorials_GettingStarted_3.png)
 
-1. Configure the *Data source name* field with an identifiable name (e.g. AMS) and ensure the *Type* is set to **Python**.
+1. Configure the *Data source name* field with an identifiable name (e.g., AMS) and ensure the *Type* is set to **Python**.
 
    ![Basic Settings](~/dataminer/images/Data_Sources_Tutorials_GettingStarted_3_1.png)
 

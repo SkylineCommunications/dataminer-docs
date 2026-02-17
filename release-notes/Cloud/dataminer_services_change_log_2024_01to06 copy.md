@@ -15,7 +15,7 @@ Up to now, if a user searched for a public Catalog item without versions, it cou
 
 #### 19 June 2024 - Fix - Remote Access and Live Sharing connection failing when DMA went offline [ID 39983]
 
-Up to now, if the connected DMA that was used to serve the web API requests for Remote Access or Live Sharing went offline, e.g. when switching in a Failover setup, the connection did not switch to another online DMA in the DMS. Instead it kept trying to connect to the initial DMA even though it was offline, causing Remote Access or Live Sharing not to work until the browser cookies were cleared. This issue has now been resolved. Automatic login issues caused by this same issue have also been resolved.
+Up to now, if the connected DMA that was used to serve the web API requests for Remote Access or Live Sharing went offline, e.g., when switching in a Failover setup, the connection did not switch to another online DMA in the DMS. Instead it kept trying to connect to the initial DMA even though it was offline, causing Remote Access or Live Sharing not to work until the browser cookies were cleared. This issue has now been resolved. Automatic login issues caused by this same issue have also been resolved.
 
 #### 19 June 2024 - Fix - Remote access automatic login showed error page when failing [ID 39982]
 
@@ -40,7 +40,7 @@ The button to open the form in order to register a catalog item has been moved f
 
 #### 19 June 2024 - Enhancement - Catalog - Documentation link shown after Catalog item is registered [ID 39904]
 
-​After registering an item, users will now get a link to the documentation guiding them to the next step, i.e. uploading a version.
+​After registering an item, users will now get a link to the documentation guiding them to the next step, i.e., uploading a version.
 
 #### 11 June 2024 - Enhancement - Enable access to more web app folders via Remote Access [ID 39881]
 
@@ -130,7 +130,7 @@ The audit filter "Subject Type" will now correctly show options.
 
 From now on, it is possible to skip the confirmation message when running a custom command with the DataMiner Teams bot.
 
-You can do so by adding `--skipconfirmation`, or in short `--sc`, at the end of your command. For example, for a custom command Automation script named "toggle switch", you could use the command `run toggle switch --sc`.
+You can do so by adding `--skipconfirmation`, or in short `--sc`, at the end of your command. For example, for a custom command automation script named "toggle switch", you could use the command `run toggle switch --sc`.
 
 A new version of (1.2.3) [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) has also been released, which allows you to skip the confirmation on custom buttons in Adaptive Cards.
 
@@ -201,7 +201,7 @@ The dataminer.services settings, configurable from the Admin app, have been enha
 - Settings now have a hierarchical structure. Disabled parent settings override their child settings.
 - Settings can now also be configured on organization level. If a setting is disabled on organization level, this overrides this same setting for all the DataMiner Systems of this organization, as well as its child settings.
 - Settings are now displayed and managed from a separate page for the organization and for each DMS.
-- A new setting has been added for Live Sharing (i.e. dashboard sharing).
+- A new setting has been added for Live Sharing (i.e., dashboard sharing).
 - In addition to one global Remote Access setting, there are now separate child settings for remote access to Cube, the User-Defined APIs, and the web apps.
 
 #### 25 April 2024 - Enhancement - Catalog API - CanDeploy call now uses DxM health information [ID 39125]
@@ -304,7 +304,7 @@ The [Catalog](https://catalog.dataminer.services) search has been enhanced to yi
 
 It is now possible to know the executor of a custom command executed with the DataMiner bot in Microsoft Teams.
 
-To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
+To add a command to your DMS, create an automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
 For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
@@ -345,9 +345,9 @@ Available buttons:
 - Get alarms of a view
 - Prompt to change the active DMS of the conversation
 
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.1 to easily interact with Microsoft Teams.
+In an automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.1 to easily interact with Microsoft Teams.
 
-To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
+To get started, you can find several example automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
 
 After you have made sure that the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
 
@@ -364,15 +364,15 @@ Available buttons:
 - Get alarms of a view
 - Prompt to change the active DMS of the conversation
 
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.1 to easily interact with Microsoft Teams.
+In an automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.1 to easily interact with Microsoft Teams.
 
-To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
+To add a command to your DMS, create an automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
 For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
 #### 23 January 2024 - Fix - Unknown error when accessing the web apps remotely [ID 38549]
 
-While remote access was used to go to the web apps via dataminer.services (e.g. the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
+While remote access was used to go to the web apps via dataminer.services (e.g., the Monitoring app), the following message could appear: `An unknown error occurred (status: 200).` The app would also stop working until the page was refreshed. This issue has been resolved.
 
 #### 12 January 2024 - Fix - The given username was not applied when deploying a DaaS system
 
@@ -380,14 +380,14 @@ When a custom username was given when deploying a new DaaS system, the default u
 
 #### 12 January 2024 - New feature - Remote access for custom files/webpages [ID 38426]
 
-It is now possible to provide remote access via dataminer.services to files or webpages. To do so, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on your DMA. To access such files, users can use the remote access URL followed by `/public/` (e.g. the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
+It is now possible to provide remote access via dataminer.services to files or webpages. To do so, add them in the folder `C:\Skyline DataMiner\Webpages\public\` on your DMA. To access such files, users can use the remote access URL followed by `/public/` (e.g., the file *image.png* via `https://ziine-skyline.on.dataminer.services/public/image.png`).
 
 #### 4 January 2024 - New feature - Chat Integration with Microsoft Teams now includes sending notification using Adaptive Cards [ID 38339]
 
 It is now possible to send notifications using Adaptive Cards to chats or channels with Chat Integration.
 
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.0 to easily interact with Microsoft Teams.
+In an automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) 1.2.0 to easily interact with Microsoft Teams.
 
-To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
+To get started, you can find several example automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
 
 After you have made sure that the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.

@@ -52,4 +52,4 @@ These are the updated OIDs:
 
 #### Cisco CBR-8 CCAP Platform: Incorrect 'Status Last Change' and 'Uptime' in Modules table [ID 40842]
 
-In the *Modules* table of the Cisco CBR-8 CCAP Platform connector, it could occur that the *Status Last Change* and *Uptime* columns showed incorrect values. They could indicate excessively large time ranges (e.g. 12 years of uptime) that did not match the values retrieved from the CLI. A fix has now been implemented to align these values with the actual expected data from the device.
+In the *Modules* table of the Cisco CBR-8 CCAP Platform connector, it could occur that the *Status Last Change* and *Uptime* columns showed incorrect values. They could indicate excessively large time ranges (e.g., 12 years of uptime) that did not match the values retrieved from the CLI. A fix has now been implemented to align these values with the actual expected data from the device.

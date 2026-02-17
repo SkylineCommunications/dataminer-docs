@@ -148,7 +148,7 @@ The DMS Reporter process.
 The DataMiner Automation process.
 
 > [!NOTE]
-> C# code in Automation scripts is processed by SLAutomation, whereas C# code in protocol QActions is processed by SLScripting.
+> C# code in automation scripts is processed by SLAutomation, whereas C# code in protocol QActions is processed by SLScripting.
 
 > [!TIP]
 > See also: [DataMiner Automation](xref:automation)
@@ -164,7 +164,7 @@ The DataMiner Automation process.
 
 The DataMiner Mobile Gateway process.
 
-Sends and receives SMS messages (i.e. text messages).
+Sends and receives SMS messages (i.e., text messages).
 
 > [!TIP]
 > See also: [DataMiner Mobile Gateway](xref:MobileGateway)
@@ -173,15 +173,15 @@ Sends and receives SMS messages (i.e. text messages).
 
 A helper process that is called upon by other processes to perform actions such as
 
-- converting a Microsoft Visio drawing to an image file (e.g. to allow Visio drawings to be rendered in web apps),
+- converting a Microsoft Visio drawing to an image file (e.g., to allow Visio drawings to be rendered in web apps),
 
-- converting documents (e.g. reports) to PDF format,
+- converting documents (e.g., reports) to PDF format,
 
 - etc.
 
 ### SLNetComService
 
-Translates so-called managed code (as used by e.g. SLNet) to native code (as used by e.g. SLDataMiner) and vice versa.
+Translates so-called managed code (as used by e.g., SLNet) to native code (as used by e.g., SLDataMiner) and vice versa.
 
 ### SLScheduler
 
@@ -192,11 +192,11 @@ A helper process that is called upon when the Windows Task Scheduler orders that
 Processes QActions when asked to by SLProtocol.
 
 > [!NOTE]
-> C# code in Automation scripts is processed by SLAutomation, whereas C# code in protocol QActions is processed by SLScripting.
+> C# code in automation scripts is processed by SLAutomation, whereas C# code in protocol QActions is processed by SLScripting.
 
 ### SLSNMPAgent
 
-Communicates with third-party applications acting as SNMP managers (e.g. HP OpenView, IBM NetCool, etc.).
+Communicates with third-party applications acting as SNMP managers (e.g., HP OpenView, IBM NetCool, etc.).
 
 Also sends all outgoing email notifications.
 

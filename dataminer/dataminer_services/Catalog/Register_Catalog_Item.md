@@ -45,7 +45,7 @@ This page also provides a quick way to execute the call: Expand the "catalog/reg
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the register call directly on the Catalog.
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
@@ -85,9 +85,9 @@ This file will contain all the necessary information to register a Catalog item 
 ```yml
 # [Required]
 # Possible values for the Catalog item that can be deployed on a DataMiner System:
-#   - Automation: If the Catalog item is a general-purpose DataMiner Automation script.
-#   - Ad Hoc Data Source: If the Catalog item is a DataMiner Automation script designed for an ad hoc data source integration.
-#   - ChatOps Extension: If the Catalog item is a DataMiner Automation script designed as a ChatOps extension.
+#   - Automation: If the Catalog item is a general-purpose DataMiner automation script.
+#   - Ad Hoc Data Source: If the Catalog item is a DataMiner automation script designed for an ad hoc data source integration.
+#   - ChatOps Extension: If the Catalog item is a DataMiner automation script designed as a ChatOps extension.
 #   - Connector: If the Catalog item is a DataMiner XML connector.
 #   - Custom Solution: If the Catalog item is a DataMiner Solution.
 #   - Data Transformer: Includes a data transformer that enables you to modify data using a GQI data query before making it available to users in low-code apps or dashboards.
@@ -98,7 +98,7 @@ This file will contain all the necessary information to register a Catalog item 
 #   - Scripted Connector: If the Catalog item is a DataMiner scripted connector.
 #   - Standard Solution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific use case or application.
 #   - System Health: If the Catalog item is intended to monitor the health of a system.
-#   - User-Defined API: If the Catalog item is a DataMiner Automation script designed as a user-defined API.
+#   - User-Defined API: If the Catalog item is a DataMiner automation script designed as a user-defined API.
 #   - Visual Overview: If the Catalog item is a Microsoft Visio design.
 type: '<fill in type here>'
 
@@ -198,7 +198,7 @@ This page also provides a quick way to execute the call: Expand the "catalog/{ca
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the register call on the production Catalog.
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 

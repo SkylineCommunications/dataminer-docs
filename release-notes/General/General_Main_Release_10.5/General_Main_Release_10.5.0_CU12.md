@@ -45,12 +45,6 @@ One of the actions performed by this tool when resetting a DMA is stopping and s
 
 Also, if an exception would be thrown during a stop action, a kill command will be executed instead.
 
-#### Ticketing app End of Life [ID 44417]
-
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
-
-DataMiner Ticketing has been declared End of Life. As a result, all server code related to Ticketing has been removed.
-
 #### Security Advisory BPA test: Enhancements [ID 44444] [ID 44477] [ID 44566]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
@@ -101,9 +95,17 @@ This BPA test will identify client machines and DataMiner Agents without interne
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
+Up to now, for a GQI extension (i.e., an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
+
+#### SLManagedScripting will again add a log entry each time it has loaded or failed to load an assembly [ID 44522]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.3 -->
+
+Since DataMiner version 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9<!-- RN 43690 -->, SLManagedScripting no longer added an entry in the *SLManagedScripting.txt* log file each time it had loaded or failed to load an assembly. From now on, it will again do so.
+
+These log entries will include both the requested version and the actual version of the assembly.
 
 #### Scheduler: Enhanced logging when a Windows task cannot be found and needs to be recreated [ID 44587]
 
@@ -124,6 +126,12 @@ Failed to get MS task for Scheduler task 321/2 [Task 1]: (Task 'Skyline DataMine
 Task 321/2 [Task 1] successfully added to MS Task Scheduler
 ```
 
+#### User-Defined APIs: UserDefinableApiEndpoint DxM has been updated [ID 44718]
+
+<!-- MR 10.5.0 [CU12] - FR TBD -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to version 3.3.1 in order to prevent a potential issue that caused the process to keep using more memory and CPU resources.
+
 ### Fixes
 
 #### Numeric cell would incorrectly not be cleared when its exception value was set to 0 [ID 44356]
@@ -138,13 +146,13 @@ For more information, see [Exceptions element](xref:Protocol.Params.Param.Interp
 
 #### MessageBroker: Problem with hostnames and FQDNs containing a certain combination of dashes and characters [ID 44433]
 
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.3 -->
 
 Up to now, hostnames and FQDNs in the *MessageBrokerConfig.json* file would incorrectly be considered invalid when they contained a certain combination of dashes and characters.
 
 Examples of hostnames that were incorrectly considered invalid:
 
-- Hostnames that start with one letter or number, followed by a dash. E.g. `a-agent`, `h-hostname`, etc.
+- Hostnames that start with one letter or number, followed by a dash. For example, `a-agent`, `h-hostname`, etc.
 - Full IPv6 addresses like `[2001:0db8:85a3:0000:0000:8a2e:0370:7334]`
 - Shortened IPv6 addresses like `[::1]`
 
@@ -179,3 +187,9 @@ When an element was restarted, and that element had alarms with service impact t
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 If, while adding or editing an element based on a connector that had an additional thread specified, you clicked *Test connection*, in some cases, SLProtocol could stop working.
+
+#### Problem with SLDataMiner after sending an NT_READ_SAVED_PARAMETER_VALUE call [ID 44597]
+
+<!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When an NT_READ_SAVED_PARAMETER_VALUE call was sent to retrieve data from an element without a connector while that data was still present in SLDataGateway, up to now, SLDataMiner could stop working.

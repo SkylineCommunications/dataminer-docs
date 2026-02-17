@@ -12,7 +12,7 @@ To deploy and upgrade the D-DOCSIS branch of the EPM Solution in an automated fa
 
 1. Place the latest EPM D-DOCSIS upgrade installation package on the server.
 
-1. Run the installation package. This will automatically upgrade all protocols, templates, Automation scripts, assemblies, and dashboards.
+1. Run the installation package. This will automatically upgrade all protocols, templates, automation scripts, assemblies, and dashboards.
 
    > [!NOTE]
    > Visio drawings are currently not yet supported in the upgrade package, so you will need to update these manually.
@@ -28,7 +28,7 @@ To deploy the D-DOCSIS branch of the EPM Solution:
 1. In DataMiner Cube, go to the Protocols & Templates module and **upload the necessary connectors** (called "protocols" in Cube) from the EPM package. See [Uploading a Protocol.xml file](xref:Adding_a_protocol_or_protocol_version_to_your_DataMiner_System#uploading-a-protocolxml-file).
 
    > [!NOTE]
-   > Depending on the technology you are using, some connectors may not be needed (e.g. Cisco vs. Casa CCAP).
+   > Depending on the technology you are using, some connectors may not be needed (e.g., Cisco vs. Casa CCAP).
 
 1. Set the latest version of the installed connectors to the **Production version**. See [Promoting a protocol version to production version](xref:Promoting_a_protocol_version_to_production_version).
 
@@ -65,11 +65,11 @@ To deploy the D-DOCSIS branch of the EPM Solution:
    - A **front-end EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
    - **System elements**, as necessary in the *System* view. You can name these elements as you see fit. If you add any MS/LX Platform elements, add these in a *DMS* subview of the *System* view.
 
-1. In the Automation module in DataMiner Cube, **import the Automation scripts** from the EPM package. See [Importing and exporting Automation scripts](xref:Managing_Automation_scripts#importing-and-exporting-automation-scripts).
+1. In the Automation module in DataMiner Cube, **import the automation scripts** from the EPM package. See [Importing and exporting automation scripts](xref:Managing_Automation_scripts#importing-and-exporting-automation-scripts).
 
 1. If the EPM package contains any **dashboards**, add these to the DMS. To do so, copy the dashboards to the folder `C:\Skyline DataMiner\Dashboards` on the target DMA.
 
 1. If the EPM package contains Visio drawings (in the *Visuals* folder), **add the Visio drawings** to the DMS. To do so:
 
-   - For a Visio drawing linked to a specific connector (e.g. EPM Platform), see [Assigning a custom Visio file to a protocol](xref:Managing_Visio_files_linked_to_protocols#assigning-a-custom-visio-file-to-a-protocol).
-   - For a Visio drawings linked to a view, upload the drawing to the view. See [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
+   - For a Visio drawing linked to a specific connector (e.g., EPM Platform), see [Assigning a custom Visio file to a protocol](xref:Managing_Visio_files_linked_to_protocols#assigning-a-custom-visio-file-to-a-protocol).
+   - For a Visio drawings linked to a view, upload the drawing to the view. See [Setting the active Visio file for an element, service, or view](xref:Set_as_active_Visio_file).

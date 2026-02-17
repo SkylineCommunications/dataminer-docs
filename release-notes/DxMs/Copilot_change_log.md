@@ -41,7 +41,7 @@ From now on, all datetime values will be formatted according to the ISO 8601 sta
 
 #### 27 August 2025 - Fix - Copilot 1.4.8 - Natural language to GQI: Columns could get removed from the cache when repeatedly requesting queries against the same data source [ID 43616]
 
-When you repeatedly requested GQI queries with aggregations like e.g. "group by" against the same data source, in some cases, certain columns could incorrectly get removed from the data sources cache.
+When you repeatedly requested GQI queries with aggregations like e.g., "group by" against the same data source, in some cases, certain columns could incorrectly get removed from the data sources cache.
 
 #### 7 July 2025 - Fix - Copilot 1.4.0 - Automatically generated query name would not be a meaningful term [ID 43255]
 
@@ -53,7 +53,7 @@ The new Copilot DxM extends DataMiner with conversational AI. In this first rele
 
 Copilot is currently not included in DataMiner upgrade packages and [needs to be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). It requires a DataMiner System connected to dataminer.services. To be able to create GQI queries, it also requires that the [GQI DxM](xref:GQI_DxM) is installed.
 
-At present, the feature supports the *Aggregate*, *Filter*, *Join*, *Select*, *Sort by*, and *Top X* GQI operators. It can detect all GQI data sources in the system, including ad hoc data sources and object manager instances. However, data sources requiring the selection of a parameter are not supported (e.g. *Get parameter table by ID*).
+At present, the feature supports the *Aggregate*, *Filter*, *Join*, *Select*, *Sort by*, and *Top X* GQI operators. It can detect all GQI data sources in the system, including ad hoc data sources and object manager instances. However, data sources requiring the selection of a parameter are not supported (e.g., *Get parameter table by ID*).
 
 In the Dashboards app and Low-Code Apps, from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards, when you create a query, you will be able to enter your query in natural language in a text box and then click a button to automatically create the corresponding GQI query.
 

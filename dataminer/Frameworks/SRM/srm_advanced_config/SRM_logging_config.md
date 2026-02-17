@@ -33,7 +33,7 @@ uid: SRM_logging_config
 
 1. Optionally, you can also configure the following settings in the *Logging Settings*  window:
 
-   - *Booking Logging Date Time Format*: The datetime format for the booking logging. This must be a valid format, e.g. *dd/MM/yyyy HH:mm:ss.ffff*.
+   - *Booking Logging Date Time Format*: The datetime format for the booking logging. This must be a valid format, e.g., *dd/MM/yyyy HH:mm:ss.ffff*.
 
    - *Booking Logging Max File Size*: The maximum size of booking log files. Minimum: 1 MB. Maximum: 100 MB.<!-- RN 31984 -->
 

@@ -170,6 +170,8 @@ items:
             topicUid: BPA_Database_Security
           - name: DataMiner Agent Minimum Requirements
             topicUid: BPA_Minimum_Requirements_Check
+          - name: Detect unsupported connector versions
+            topicUid: BPA_Detect_Unsupported_Connector_Versions
           - name: Firewall Configuration
             topicUid: BPA_Firewall_Configuration
           - name: Health Metrics

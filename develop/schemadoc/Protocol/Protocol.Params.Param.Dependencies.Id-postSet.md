@@ -18,7 +18,7 @@ Specifies whether the dependency parameter acts as a preset or a post-set.
 
 Default value: false.
 
-When set to "false", the dependency parameter acts as a preset, meaning that the dependency parameter needs to be configured first (i.e. it cannot be "Not initialized"). After the user confirms by clicking the "OK" button in the pop-up window, the set of this write parameter is initiated.
+When set to "false", the dependency parameter acts as a preset, meaning that the dependency parameter needs to be configured first (i.e., it cannot be "Not initialized"). After the user confirms by clicking the "OK" button in the pop-up window, the set of this write parameter is initiated.
 
 When set to "true", the dependency parameter acts as a post-set, meaning that the dependency parameter should be verified. However, the set of this write parameter will not wait for configuration and confirmation but will already be initiated. (In this case, the user could decide to close the pop-up window without setting any of the dependency parameters.)
 

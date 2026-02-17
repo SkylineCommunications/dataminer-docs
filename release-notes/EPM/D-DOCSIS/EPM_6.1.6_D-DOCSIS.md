@@ -33,4 +33,4 @@ For the Inventory Table, the solution did not take into account that some device
 
 Up to now, the Exposer option was used excessively in the EPM connectors in order to display the Node/Core Leaf information, which could cause issues such as the DMA going into the "Refused" state.
 
-To resolve this, all Exposer options involving tables that are not actively monitored were removed. Previously exposed tables that were used for navigation purposes (e.g. Sensors) have been moved to the top navigation menu in Visual Overview. In every case where a link in the visual overview resulted in navigation to a data page, this will now navigate to a visual overview page instead.
+To resolve this, all Exposer options involving tables that are not actively monitored were removed. Previously exposed tables that were used for navigation purposes (e.g., Sensors) have been moved to the top navigation menu in Visual Overview. In every case where a link in the visual overview resulted in navigation to a data page, this will now navigate to a visual overview page instead.

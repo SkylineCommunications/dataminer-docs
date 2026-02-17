@@ -201,7 +201,7 @@ This section contains options specific to this DxM module:
   > [!NOTE]
   > From DataMiner 10.3.7 onwards, NatsSubject is an optional setting.
 
-- **MessageBrokerTimeOutSeconds**: The time the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out. By default, this is set to 90 seconds (i.e. 1.5 minutes). If you increase the timeout value, you will also need to [increase the timeout in IIS](#changing-the-timeout).
+- **MessageBrokerTimeOutSeconds**: The time the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out. By default, this is set to 90 seconds (i.e., 1.5 minutes). If you increase the timeout value, you will also need to [increase the timeout in IIS](#changing-the-timeout).
 - **SessionConfigPath**: Optional. The path to the NATS config file. The default configuration will be used when this is not filled in.
 - **CredentialsConfigPath**: Optional. The path to the credentials file (.creds) used to connect to the NATS message bus. The default credentials will be used when this is not filled in.
 

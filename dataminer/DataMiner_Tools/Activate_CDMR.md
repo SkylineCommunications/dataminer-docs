@@ -27,4 +27,4 @@ To activate CDMR on all DMAs in a cluster in one go, two scripts are available. 
 1. Run the Execute Cluster Script, provide the script name *Activate CDMR* and click *Execute*.
 
    > [!TIP]
-   > For more information on running Automation scripts, see [Running Automation scripts](xref:Running_Automation_scripts).
+   > For more information on running automation scripts, see [Running automation scripts](xref:Running_Automation_scripts).

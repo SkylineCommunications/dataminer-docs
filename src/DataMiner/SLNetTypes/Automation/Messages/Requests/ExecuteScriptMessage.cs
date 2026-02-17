@@ -5,7 +5,7 @@ using Skyline.DataMiner.Net.Automation;
 namespace Skyline.DataMiner.Net.Messages
 {
 	/// <summary>
-	/// Represents a message for executing an Automation script.
+	/// Represents a message for executing an automation script.
 	/// </summary>
 	/// <example>
 	/// <code>
@@ -43,9 +43,9 @@ namespace Skyline.DataMiner.Net.Messages
 		public ExecuteScriptMessage() {}
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="ExecuteScriptMessage"/> class using the Automation script name.
+		/// Initializes a new instance of the <see cref="ExecuteScriptMessage"/> class using the automation script name.
 		/// </summary>
-		/// <param name="scriptName">Name of the Automation script to run.</param>
+		/// <param name="scriptName">Name of the automation script to run.</param>
 		public ExecuteScriptMessage(string scriptName)
 			: this(-1, scriptName)
 		{
@@ -164,9 +164,9 @@ namespace Skyline.DataMiner.Net.Messages
 		public SA Options;
 
 		/// <summary>
-		/// Gets or sets a custom entry point of the Automation script.
+		/// Gets or sets a custom entry point of the automation script.
 		/// </summary>
-		/// <value>The custom entry point of the Automation script.</value>
+		/// <value>The custom entry point of the automation script.</value>
 		public AutomationEntryPoint CustomEntryPoint { get; set; }
 
 		//[Obsolete("Obsolete as of v7.0.3. This method will be removed in a future version.", true)]

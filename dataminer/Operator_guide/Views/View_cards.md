@@ -32,7 +32,7 @@ The navigation pane on the left side of a view card contains a tree view with th
 Under the *VISUAL* node, one or more pages are displayed that contain a graphic representation of the view. These can be completely customized in Visio.
 
 > [!NOTE]
-> For more information on how to change the Visio file linked to a particular view, see [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files).
+> For more information on how to change the Visio file linked to a particular view, see [Setting the active Visio file for an element, service, or view](xref:Set_as_active_Visio_file).
 
 ### BELOW THIS VIEW
 
@@ -97,9 +97,9 @@ The list consists of the following columns:
 
 - *Trend template*: Relevant for elements and SLAs only. The name of the trend template used for trending of the element or SLA.
 
-- *Protocol type*: Relevant for elements and SLAs only. Type of the protocol, e.g. *serial*, *snmp*, *virtual*, *sla*, etc.
+- *Protocol type*: Relevant for elements and SLAs only. Type of the protocol, e.g., *serial*, *snmp*, *virtual*, *sla*, etc.
 
-- *Communication protocols*: Relevant for elements only. The communication protocols used by the element, e.g. *Serial*. Displayed from DataMiner 10.2.0/10.2.1 onwards.
+- *Communication protocols*: Relevant for elements only. The communication protocols used by the element, e.g., *Serial*. Displayed from DataMiner 10.2.0/10.2.1 onwards.
 
 - *ID*: The unique ID of the item, which consists of the ID of the DMA where the item was created and the ID of the item itself, separated by a forward slash.
 
@@ -107,9 +107,9 @@ The list consists of the following columns:
 
 - *DataMiner*: The name of the DMA hosting the item.
 
-- *Type*: Relevant for elements and SLAs only. Type of item as defined in the protocol, e.g. *Matrix*, *IRD*, *Service Level Agreement*, etc.
+- *Type*: Relevant for elements and SLAs only. Type of item as defined in the protocol, e.g., *Matrix*, *IRD*, *Service Level Agreement*, etc.
 
-- *Display type*: Relevant for elements only. The display type as defined in the protocol, i.e. *spectrum analyzer* for spectrum analyzer elements or *element manager* for EPM elements.
+- *Display type*: Relevant for elements only. The display type as defined in the protocol, i.e., *spectrum analyzer* for spectrum analyzer elements or *element manager* for EPM elements.
 
 - *IP*: The virtual IP of the element in DataMiner, if any.
 
