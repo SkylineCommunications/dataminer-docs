@@ -221,7 +221,7 @@ To **visually distinguish items that match your filter criteria from others**, y
 
 1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your grid component.
 
-   Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
+   Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
    In read mode, you can now use the query filter component to filter and refine the data displayed in the grid component. Items that do not meet the specified criteria will be shown with lowered opacity.
 

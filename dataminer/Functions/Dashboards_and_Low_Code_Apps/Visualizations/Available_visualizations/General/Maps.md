@@ -228,7 +228,7 @@ To **visually distinguish markers and lines that match your filter criteria from
 
 1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards, navigate to *All available data* > *Components* > *[Page name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your maps component.
 
-   Note that in older DataMiner versions, the exact path may differ. For example, in versions prior to DataMiner 10.5.0 [CU12]/10.6.3<!--RN 44015-->, component data is not organized by page.
+   Note that depending on your setup, the exact path may differ. For example, in versions prior to DataMiner 10.5.0 [CU12]/10.6.3<!--RN 44015-->, component data is not organized by page.
 
    In read mode, you can now use the query filter component to filter and refine the data displayed in the maps component. Items that do not meet the specified criteria will be shown with lowered opacity.
 

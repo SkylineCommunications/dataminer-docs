@@ -66,7 +66,7 @@ After configuring the query filter component:
 
 1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, go to *All available data* > *Components* > *[Page name]* > *Query filter* > *Filters* > *Queries* in the *Data* pane and drag it onto the table component.
 
-   Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
+   Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
    Each time you change the query filter, a new query is passed to the table, displaying only rows that match the filter settings.
 
@@ -83,7 +83,7 @@ After configuring the query filter component:
 
 1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, go to *All available data* > *Components* > *[Page name]* > *Query filter* > *Filters* in the *Data* pane and drag *Query columns* onto the yellow filter drop area of the table component.
 
-   Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
+   Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
    Each time you change the query filter, the data inside the table is filtered according to the filter settings in the query filter. No new query is passed to the table. The latter keeps displaying all rows, but those that do not match the filter will turn gray.
 
