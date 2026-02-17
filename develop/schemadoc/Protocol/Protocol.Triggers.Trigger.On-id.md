@@ -55,7 +55,7 @@ Example:
 </Trigger>
 ```
 
-This trigger will be used for each parameter except for parameters that have a trigger that explicitly triggers on those parameters. E.g. the trigger above will not be used for parameter 200 in case the trigger below is also defined in the protocol:
+This trigger will be used for each parameter except for parameters that have a trigger that explicitly triggers on those parameters. For example, the trigger above will not be used for parameter 200 in case the trigger below is also defined in the protocol:
 
 ```xml
 <Trigger id="200">

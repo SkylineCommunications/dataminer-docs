@@ -191,11 +191,11 @@ For advanced searches, a number of special search options are available:
 
 - To do a negative search, i.e., to look for items that do not match a particular search term, put an exclamation mark in front of the search term.
 
-  E.g. *!redundancy*
+  Example: `!redundancy`
 
 - To look for an exact phrase of several words, surround the phrase by double quotes.
 
-  E.g. *“MS Server”*
+  Example: `"MS Server"`
 
 - The following special keywords can be used in conjunction with a search term, separated from the term with a space.
 

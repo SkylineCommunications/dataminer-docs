@@ -53,7 +53,7 @@ For (4), (5), (7) and (8) in the example command, the hex value 0x0D0x0A is a fi
 
 Read or write parameters in a command or a response are typically parameters that are read from or written to a device or that are specific to a device, like an IP address, a host name, a parameter value, etc.
 
-A read or write parameter can be filled in via the UI, can be set by a QAction or can enter by a response of the device. E.g. (3) and (6) in the example command.
+A read or write parameter can be filled in via the UI, can be set by a QAction or can enter by a response of the device. For example, (3) and (6) in the example command.
 
 ## Composing commands
 

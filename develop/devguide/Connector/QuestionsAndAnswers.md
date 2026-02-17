@@ -43,9 +43,7 @@ uid: QuestionsAndAnswers
 
 1. *What is the best way to search data spread over multiple tables? From the tables below, I need all elementary streams related to transport stream "TS02".*
 
-
-
-1. *Which steps would you perform to investigate an SNMP communication issue with a device? I.e. the device is not responding to the requests you send.*
+1. *Which steps would you perform to investigate an SNMP communication issue with a device? I.e., the device is not responding to the requests you send.*
 
     1. Perform a ping to the device.
     1. Use another tool (e.g., MibBrowser) to test the connection.

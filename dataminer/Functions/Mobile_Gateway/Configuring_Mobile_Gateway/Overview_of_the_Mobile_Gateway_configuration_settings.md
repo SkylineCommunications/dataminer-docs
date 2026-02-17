@@ -176,4 +176,4 @@ Default: 10000 (seconds)
 
 In the *start* and *end* attributes of this tag, you can specify the prefix and/or the suffix to be cut off from any incoming text message.
 
-E.g. `<TrimmingOptions start="SLC" end=""/>`
+For example: `<TrimmingOptions start="SLC" end=""/>`

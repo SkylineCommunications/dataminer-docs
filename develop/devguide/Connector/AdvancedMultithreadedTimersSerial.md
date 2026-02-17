@@ -155,7 +155,7 @@ public class QAction
                                 }
                                 else
                                 {
-                                    string responseData = (string)response[1]; // E.g. "TIMEOUT".
+                                    string responseData = (string)response[1]; // For example, "TIMEOUT".
             
                                     // Process feedback...
                                     if (response.Length > 2)

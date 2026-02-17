@@ -113,13 +113,13 @@ Select this option to specify a custom alert sound that should be used when a ne
 
 Select this option to specify a delay between the creation of a new alarm and its appearance in the selected alarm tab.
 
-E.g. if you set the delay to 30 seconds, when an alarm enters the Alarm Console, it will only be added to the list 30 seconds later. If in this interval the alarm has already been cleared, it will not be added to the list at all.
+For example, if you set the delay to 30 seconds, when an alarm enters the Alarm Console, it will only be added to the list 30 seconds later. If in this interval the alarm has already been cleared, it will not be added to the list at all.
 
 ## Refresh rate
 
 Select this option to specify how frequently the selected tab will be refreshed. This rate will be applied from the moment this setting is set.
 
-E.g. if you set the refresh rate to 30 seconds at 11:48:00, the Alarm Console will be updated every 30 seconds with all the alarms that entered during those 30 seconds. The first refresh will take place at 11:48:30, the next at 11:49:00, etc.
+For example, if you set the refresh rate to 30 seconds at 11:48:00, the Alarm Console will be updated every 30 seconds with all the alarms that entered during those 30 seconds. The first refresh will take place at 11:48:30, the next at 11:49:00, etc.
 
 ## Merge alarm trees
 

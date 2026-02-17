@@ -33,7 +33,7 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   - Id: The ID of the view (required).
   - Name: The name of the view (required).
   - Elements: Array of string in the format DMA ID/Element ID (e.g., 515/124).
-  - VisioFile: E.g. Visio.vsdx.
+  - VisioFile: For example, Visio.vsdx.
   - ParentViewId.
   - Properties: Array consisting of Name and Value pairs.
 

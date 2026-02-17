@@ -89,7 +89,7 @@ public void Install(IDms dms);
 
 Now the *Install* method has an argument of type *IDms*, which is defined in the Class Library package version 1.3.0.1. In other words, the API exposes a type used from the Class Library v1.3.0.1.
 
-When this API is used from a protocol QAction that uses Class Library NuGet version 1.3.0.1, everything will work fine. I.e. the created *dms* object is of type ClassLibrary v1.3.0.1, which is the type that is expected by the *Install* method of the API.
+When this API is used from a protocol QAction that uses Class Library NuGet version 1.3.0.1, everything will work fine. I.e., the created *dms* object is of type ClassLibrary v1.3.0.1, which is the type that is expected by the *Install* method of the API.
 
 ```csharp
 IDms dms = protocol.GetDms();
