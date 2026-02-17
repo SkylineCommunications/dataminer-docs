@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 28 August 2025 - Enhancement - ArtifactDeployer 1.8.7 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 27 August 2025 - Enhancement - ArtifactDeployer 1.8.6 - General improvements
 
 General improvements have been made to the way ArtifactDeployer handles tasks, making the DxM more robust and also improving its shutdown procedure.
