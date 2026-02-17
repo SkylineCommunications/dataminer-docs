@@ -16,7 +16,7 @@ namespace Skyline.DataMiner.Automation
         /// If the client did not provide this information, <see langword="null"/> will be returned.
         /// </summary>
         /// <remarks>
-        /// <note type="note">Available from DataMiner 10.6.4 onwards, for scripts executed in Web.</note> <!-- RN 44742 / RN 44788 -->
+        /// <note type="note">Available from DataMiner 10.6.4 onwards, for scripts executed in web apps.</note> <!-- RN 44742 / RN 44788 -->
         /// </remarks>
         TimeZoneInfo TimeZone { get; }
     }
