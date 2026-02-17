@@ -12,33 +12,6 @@ While dataminer.MediaOps encompasses the entire media operation, it allows each 
 
 ![MediaOps for planned, live, and file-based operations](~/dataminer/images/mediaops_plan_live_file.png)
 
-## MediaOps applications
-
-dataminer.MediaOps is available in the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
-
-These are the out-of-the-box DataMiner applications that are currently included in the dataminer.MediaOps installation package:
-
-<div class="row">
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/People_Organizations.html" title="People & Organizations" target="_self"><img src="~/solutions/images/mo_PeopleOrganizations.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Resource_Studio.html" title="Resource Studio" target="_self"><img src="~/solutions/images/mo_ResourceStudio.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Workflow_Designer.html" title="Workflow Designer" target="_self"><img src="~/solutions/images/mo_WorkflowDesigner.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-  <a href="/solutions/standard_solutions/MediaOps/Apps/MO_Scheduling.html" title="Scheduling" target="_self"><img src="~/solutions/images/mo_Scheduling.svg" style="width:100%"></a>
-  </div>
-</div>
-
-> [!TIP]
->
-> - Before you deploy the MediaOps package, take a look at our [installation instructions](xref:MO_Installation).
-> - For details about the changes introduced in each MediaOps version, refer to the [release notes](xref:MediaOps_RNs_index).
-> - Check out the [MediaOps course](https://community.dataminer.services/courses/mediaops/) to learn more about MediaOps. If you are part of the [DevOps Professional Program](xref:DataMiner_Devops_Professionals), you will score some DevOps Points too.
-
 ## Who can benefit from dataminer.MediaOps?
 
 Many users rely on dataminer.MediaOps for their specific needs:
@@ -56,7 +29,7 @@ In essence, dataminer.MediaOps revolutionizes media operations by combining mode
 
 ## What can you do with dataminer.MediaOps?
 
-dataminer.MediaOps simplifies and automates your media supply chain. It comes with a [set of ready-made applications](#mediaops-applications), which can be extended with your own customized applications to tailor the UEx (User Experience) to the user's role. It can also be extended with workflows, automation, and even user-defined APIs to integrate with your existing systems.
+dataminer.MediaOps simplifies and automates your media supply chain. It comes with a set of out-of-the-box applications, which can be extended with your own customized applications to tailor the UEx (User Experience) to the user's role. It can also be extended with workflows, automation, and even user-defined APIs to integrate with your existing systems.
 
 The use cases offered by dataminer.MediaOps are listed below. <!-- The solution's focus spans from inventory management to planning and reservation, to live operations, up to finishing events and managing costs and billing.  -->This list will continue to grow over time as new releases become available for dataminer.MediaOps. As a user, you can pick and choose the functions of interest to you at any given moment. A MediaOps solution can be highly focused on a single use case, but it can also address multiple use cases, delivering value to multiple teams and tenants. The choice is yours. Over time, more functions will be added to the solution roadmap, and more use cases will be supported.
 
