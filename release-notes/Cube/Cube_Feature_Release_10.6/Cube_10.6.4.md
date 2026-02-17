@@ -28,6 +28,15 @@ On the *Analytics config* page, located in the *System settings* section of *Sys
 
 This setting will allow administrators to cap the number of active suggestion events per behavioral change type.
 
+#### New URL argument 'EnableAlarmSubscriptions' [ID 44779]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When you start DataMiner Cube, you can now enable or disable alarm subscriptions by passing one of the following URL arguments to the DMS to which you connect:
+
+- Add `EnableAlarmSubscriptions=true` to enable alarm subscriptions.
+- Add `EnableAlarmSubscriptions=false` to disable alarm subscriptions.
+
 ## Changes
 
 ### Enhancements
