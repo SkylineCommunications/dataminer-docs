@@ -32,6 +32,12 @@ This setting will allow administrators to cap the number of active suggestion ev
 
 ### Enhancements
 
+#### Enhanced performance when loading aggregation trending [ID 44589]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, overall performance has increased when loading aggregation trending.
+
 #### Enhanced search box consistency throughout DataMiner Cube [ID 44658]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
