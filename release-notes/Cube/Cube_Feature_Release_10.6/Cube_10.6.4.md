@@ -56,6 +56,12 @@ If you view the Cube UI in one of the supported languages other than English, in
 - Cloud Admin
 - Data Sources
 
+#### System Center - Agents: 'Element Migration' window will now also filter out elements that are part of a redundancy group [ID 44773]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When, in the *Agents* section of *System Center*, you clicked *Migrate*, up to now, the *Element Migration* window would incorrectly not check whether an element was part of a redundancy group. From now on, all elements that are part of a redundancy group as either a primary element, backup element, or state element will automatically be filtered out.
+
 ### Fixes
 
 #### Problem with icons of apps pinned to the sidebar [ID 44693]
