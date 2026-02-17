@@ -146,3 +146,9 @@ In order to prevent this from happening, the minimum width of a *State* componen
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 When flows or variables were used in certain components, up to now, the available component actions would not correctly reflect the actions that would have been available if the data of the same output type had been applied directly. Some valid actions would be missing or incorrect.
+
+#### Dashboards app: Problem when quickly switching from one tab to another in the navigation pane [ID 44750]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When you quickly switched from one tab to another in the navigation pane while viewing the Dashboards app on a mobile device, in some cases, an error could be thrown.
