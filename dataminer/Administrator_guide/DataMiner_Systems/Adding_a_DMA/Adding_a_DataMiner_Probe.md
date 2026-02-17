@@ -6,7 +6,7 @@ uid: Adding_a_DataMiner_Probe
 
 ## Prerequisites
 
-- Verify the prerequisites listed on [Adding a DataMiner Agent to a DataMiner System](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System).
+Verify the prerequisites listed on [Adding a DataMiner Agent to a DataMiner System](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System).
 
 ## Procedure
 

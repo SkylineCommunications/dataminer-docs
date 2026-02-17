@@ -8,7 +8,7 @@ uid: Adding_a_regular_DataMiner_Agent
 
 ### General
 
-- Verify the prerequisites listed on [Adding a DataMiner Agent to a DataMiner System](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System).
+Verify the prerequisites listed on [Adding a DataMiner Agent to a DataMiner System](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System).
 
 ### Database
 
@@ -25,8 +25,6 @@ uid: Adding_a_regular_DataMiner_Agent
 - If the DataMiner System uses [Swarming](xref:Swarming), make sure Swarming is enabled on the new DMA before you add it to the cluster.
 
 ## Procedure
-
-
 
 1. On a DMA that is currently already in the cluster, go to the *System Center* module and select the *Agents* page.
 
