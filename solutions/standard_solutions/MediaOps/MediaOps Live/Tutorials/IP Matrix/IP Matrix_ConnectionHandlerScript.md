@@ -47,16 +47,16 @@ There are some important requirements to make sure the script is recognized as a
 
 Add the following NuGet packages to your project:
 
-- `Skyline.DataMiner.MediaOps.Live`
-- `Skyline.DataMiner.MediaOps.Live.Automation`
+- `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live`
+- `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation`
 - `Skyline.DataMiner.Dev.Automation`
 - `Skyline.DataMiner.Core.DataMinerSystem.Automation`
 
 Now you can add the following using statements to your script:
 
 ```csharp
-using Skyline.DataMiner.MediaOps.Live.API;
-using Skyline.DataMiner.MediaOps.Live.Automation;
+using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.API;
+using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation;
 ```
 
 ## Step 3: Inherit from the ConnectionHandlerScript base class
@@ -66,7 +66,7 @@ The `Run` method is not needed anymore, as the base class already implements it,
 The base class will call the appropriate methods that you will implement in the next steps.
 
 ```csharp
-using Skyline.DataMiner.MediaOps.Live.Automation.Mediation.ConnectionHandlers;
+using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation.Mediation.ConnectionHandlers;
 
 public class Script : ConnectionHandlerScript
 {
@@ -78,7 +78,7 @@ Alternatively, you can also keep the `Script` class, and create a new class that
 In some situations this could be more flexible, for example when you dynamically want to call different connection handlers based on the input data.
 
 ```csharp
-using Skyline.DataMiner.MediaOps.Live.Automation.Mediation.ConnectionHandlers;
+using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation.Mediation.ConnectionHandlers;
 
 public class Script
 {

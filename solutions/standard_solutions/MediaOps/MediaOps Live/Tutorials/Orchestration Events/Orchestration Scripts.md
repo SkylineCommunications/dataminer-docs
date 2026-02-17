@@ -43,8 +43,8 @@ For this tutorial, we will use the name `Tutorial-OrchestrationEvents-DummyOrche
 
 Add the following NuGet packages to your project:
 
-- `Skyline.DataMiner.MediaOps.Live`
-- `Skyline.DataMiner.MediaOps.Live.Automation`
+- `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live`
+- `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation`
 - `Skyline.DataMiner.Dev.Automation`
 - `Skyline.DataMiner.Core.DataMinerSystem.Automation`
 
@@ -53,9 +53,9 @@ Now you can add the following using statements to your script:
 ```csharp
 using System.Collections.Generic;
 using Skyline.DataMiner.Automation;
-using Skyline.DataMiner.MediaOps.Live.API.Objects.Orchestration;
-using Skyline.DataMiner.MediaOps.Live.Automation.Orchestration.Script;
-using Skyline.DataMiner.MediaOps.Live.Automation.Orchestration.Script.Objects;
+using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.API.Objects.Orchestration;
+using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation.Orchestration.Script;
+using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation.Orchestration.Script.Objects;
 ```
 
 ## Step 3: Inherit from the OrchestrationScript base class

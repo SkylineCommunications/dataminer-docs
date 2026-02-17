@@ -48,16 +48,16 @@ For the name of the script, we will use `Tutorial-OrchestrationEvents`.
 
 Add the following NuGet packages to your project:
 
-- `Skyline.DataMiner.MediaOps.Live`
-- `Skyline.DataMiner.MediaOps.Live.Automation`
+- `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live`
+- `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation`
 - `Skyline.DataMiner.Dev.Automation`
 - `Skyline.DataMiner.Core.DataMinerSystem.Automation`
 
 Now you can add the following using statements to your script:
 
 ```csharp
-using Skyline.DataMiner.MediaOps.Live.API;
-using Skyline.DataMiner.MediaOps.Live.Automation;
+using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.API;
+using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation;
 ```
 
 First, you need to get an instance of the MediaOps Live API in your script.
