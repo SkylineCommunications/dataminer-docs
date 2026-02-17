@@ -4,7 +4,7 @@ uid: MO_Orchestration_Events
 
 # Orchestration Events app
 
-The Orchestration Events app allows to inspect the orchestration events on the system.
+The Orchestration Events app provides visibility on the orchestration events defined in the system.
 
 ## App overview
 
@@ -20,15 +20,14 @@ Both pages allow to access the full details of each event by clicking the 'Info'
 
 Orchestration events allow to execute automation scripts at a defined datetime in the future. These events support executing regular automation scripts, but also allow to link specific orchestration scripts, which allow to more easily test them manually.
 
-Orchestration events can be created using an API, but are also integrated in [MediaOps Plan](xref:MediaOps.Plan) and can be used to support the orchestration of [Jobs](xref:MO_Scheduling).
+Orchestration events can be created using the API of MediaOps Live. [MediaOps Plan](xref:MediaOps.Plan) also uses this API to create and update the orchestration events linked to [Jobs](xref:MO_Scheduling).
 
 > [!TIP]
 > Follow along with the [Orchestration Event tutorial](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents) to understand in more detail what can be achieved with orchestration events.
 
 ## Orchestration Scripts
 
-Orchestration scripts are regular automation scripts using a dedicated helper allowing to have typed input arguments, and a preset feature to fill in all input arguments at once.
-These scripts can still use regular script dummies and params, and can also be associated with a Profile Definition allowing for extra typed input arguments.
+Any automation script added to the MediaOps/OrchestrationScripts folder is considered to as an Orchestration script. Next to the regular script dummies and params, profile parameters and definitions can be used as input arguments by implementing the OrchestrationScript class.
 
 When executing an orchestration script manually, and after having filled in all script dummies and script params, a UI will prompt the user for the typed parameters. The UI will also have a control allowing to select a Profile Instance instead of providing each parameter value individually.
 
