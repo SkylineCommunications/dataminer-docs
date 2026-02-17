@@ -124,6 +124,12 @@ Up to now, a BrokerGateway installation could fail when the *nsc.exe* file was l
 
 From now on, a locked *nsc.exe* file will no longer cause a BrokerGateway installation to fail.
 
+#### Problem with SLAnalytics during the storage initialization routine [ID 44745]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some rare cases, the SLAnalytics process could stop working during the storage initialization routine.
+
 #### Problem with SLAnalytics when trying to process an invalid database record [ID 44748]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
