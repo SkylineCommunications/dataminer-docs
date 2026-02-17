@@ -71,8 +71,11 @@ If [BrokerGateway](xref:BrokerGateway_Migration) is enabled, specify the followi
 
 - **CredsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
 
-- **APIKeyPath**: The file path to the *appsettings.runtime.json* file containing the private key. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
-From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 on, [BrokerGateway client secrets](xref:Generating_BrokerGateway_client_secrets) should be used. APIKeyPath should then point to the [client secret file](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets) instead.
+- **APIKeyPath**: A [BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) should be used. APIKeyPath should point to the [client secret file](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets).
+
+  > [!NOTE]
+  > Prior to DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4, the `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` file has to be copied from the DMA to the local server. 
+  > The new path of that file needs to be set in APIKeyPath.
 
   > [!NOTE]
   >
