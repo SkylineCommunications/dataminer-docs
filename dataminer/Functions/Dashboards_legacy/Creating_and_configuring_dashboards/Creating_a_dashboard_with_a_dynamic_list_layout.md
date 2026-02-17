@@ -21,7 +21,7 @@ To create a dashboard with dynamic list layout:
 
     - Specify a *Minimal Alarm Level* to include only items that have at least the specified alarm state.
 
-    - Use the *Mask* field to specify a mask to filter the displayed items. E.g. only elements that start with *MAIN\_\**
+    - Use the *Mask* field to specify a mask to filter the displayed items. For example, only elements that start with *MAIN\_\**
 
         > [!NOTE]
         > You can also use regular expressions in the mask field, if the mask starts with #.

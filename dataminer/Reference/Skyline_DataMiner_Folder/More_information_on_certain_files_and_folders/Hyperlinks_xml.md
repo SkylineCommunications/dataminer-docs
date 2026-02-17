@@ -158,13 +158,13 @@ However, for second-generation hyperlinks, it is possible to specify custom form
 [ROOTTIME:yyyy-MM-dd HH:mm:ss]
 ```
 
-- E.g. 2017-12-06 14:04:00
+Example: `2017-12-06 14:04:00`
 
 ```txt
 [TIME:yyyy-MM-dd]
 ```
 
-- E.g. 2017-12-06
+Example: `2017-12-06`
 
 For more information on the supported formatting, refer to the following articles:
 

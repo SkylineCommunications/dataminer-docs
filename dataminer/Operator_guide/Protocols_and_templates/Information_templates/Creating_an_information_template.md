@@ -36,11 +36,11 @@ To create an information template:
 
      To visualize this information in the user interface, add the *Category* column to the Alarm Console.
 
-   - **Key point**: The exact location in the signal chain where the error has occurred. E.g. "Encoding", "Decoding", "Reception", etc.
+   - **Key point**: The exact location in the signal chain where the error has occurred, e.g., "Encoding", "Decoding", "Reception", etc.
 
      This is used in DataMiner Business Intelligence.
 
-   - **Component info**: More information about the nature of the alarm. E.g. "Audio", "Video", etc.
+   - **Component info**: More information about the nature of the alarm, e.g., "Audio", "Video", etc.
 
      This is used in DataMiner Business Intelligence.
 

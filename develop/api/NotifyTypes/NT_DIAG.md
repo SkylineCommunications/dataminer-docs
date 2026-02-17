@@ -28,7 +28,7 @@ string[] result = (string[]) protocol.NotifyDataMiner (226 /*NT_DIAG*/ , command
 
 ## Return Value
 
-- Depends on the command that has been sent. (E.g. for the response value of QACTIONMETRICS_ELEMENT_[DMA ID]:[element ID], refer to QAction metrics.)
+- Depends on the command that has been sent. (e.g., for the response value of QACTIONMETRICS_ELEMENT_[DMA ID]:[element ID], refer to QAction metrics.)
 
 ## Remarks
 

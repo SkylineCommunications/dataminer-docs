@@ -113,7 +113,7 @@ int result = (int) protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, e
   - 13: Smart-serial single
   - 16: WebSocket
 
-  E.g. creating an element with two HTTP connections will require a protocol type field value of "10\t10".
+  Example: creating an element with two HTTP connections will require a protocol type field value of "10\t10".
 
   The following example creates an element running an SNMPv3 protocol:
 

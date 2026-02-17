@@ -83,8 +83,8 @@ The following table shows an overview of the operands that can be used.
 
 |Operand  |Description  |
 |---------|---------|
-|id:     |Refers to a protocol parameter (E.g. id:100). Note that the ID of the parameter must follow immediately after the colon (e.g., id:10) No space is allowed between id: and the parameter ID.         |
-|"{value}"     |When enclosed by double quotes, the operand represents a string literal (E.g. "ALARM").         |
+|id:     |Refers to a protocol parameter (e.g., id:100). Note that the ID of the parameter must follow immediately after the colon (e.g., id:10) No space is allowed between id: and the parameter ID.         |
+|"{value}"     |When enclosed by double quotes, the operand represents a string literal (e.g., "ALARM").         |
 |empty     |Indicates an empty parameter ("Not Initialized").         |
 |emptystring     |Indicates an empty string or an empty parameter ("Not Initialized").         |
 

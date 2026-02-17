@@ -32,7 +32,7 @@ These are the possible values that can be displayed in the *Isolation mode* colu
 
 | Value | Description |
 |-------|-------------|
-| None               | Not applicable. E.g. When viewing the *All* page of a service. |
+| None               | Not applicable. E.g., when viewing the *All* page of a service. |
 | Disabled           | The element is not running in isolation mode. |
 | Enabled (protocol) | The element is running in isolation mode because of a setting configured in the *protocol.xml* file, which applies to all elements that are using this protocol version. |
 | Enabled (element)  | The element is running in isolation mode because of a setting configured in the element itself. |

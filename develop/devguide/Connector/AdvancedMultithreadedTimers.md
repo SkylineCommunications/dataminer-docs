@@ -172,7 +172,7 @@ The following figure illustrates the general concept for serial and HTTP:
 
 Please note the following:
 
-- The requests performed by the multithreaded timer (e.g., SNMP requests or ping) have no impact on the element state. I.e. if a request times out this will not have an impact on the state of the element.
+- The requests performed by the multithreaded timer (e.g., SNMP requests or ping) have no impact on the element state. I.e., if a request times out this will not have an impact on the state of the element.
 - The group mentioned in the multithreaded timer serves to detect the connection to use. This group does not actually get executed as is the case with conventional timers. Therefore, conditions on a group do not work with multithreaded timers. (Conditions on QActions, however, do work with multithreaded timers.) Similarly, "before group" triggers are also not supported with multithreaded timers.
 - When the timer goes off, first the defined "before timer" triggers are executed. For example, for the following trigger, this means that trigger 1 will go off every 2 seconds.
 

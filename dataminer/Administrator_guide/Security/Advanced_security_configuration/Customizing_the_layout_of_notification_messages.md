@@ -291,7 +291,7 @@ Some can only be used in templates for notification messages sent as a result of
 | severity           | Legacy Correlation message placeholder \[Severity\].<br> Examples: Critical, Major, Normal, Timeout. | X<br>(Most recent base alarm) | X |
 | severityid         | Severity ID. | X | X |
 | severitylevel      | Severity level.<br> Examples: High, Low, Normal. | X | X |
-| severitytext       | Severity + severity level.<br> Examples: Critical High, Major Low.<br> Note: If level is "Normal", it will be omitted. E.g. "Warning Normal" will be "Warning". | X | X |
+| severitytext       | Severity + severity level.<br> Examples: Critical High, Major Low.<br> Note: If level is "Normal", it will be omitted, for example, "Warning Normal" will be "Warning". | X | X |
 | source             | Examples: DataMiner System, Correlation Engine, External. | X | X |
 | sourceid           | Source ID. | X | X |
 | state              | Alarm state.<br> Examples: Open, Mask, Cleared, Clearable. | X | X |

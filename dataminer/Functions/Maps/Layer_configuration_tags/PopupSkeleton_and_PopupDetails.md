@@ -261,7 +261,7 @@ To determine the detail source, the following items are checked (in this order):
 > [!NOTE]
 > It is not possible to use a URL parameter like *myElement* or *myService* as a detail placeholder in the *detailVars* attribute.
 >
-> To use URL parameters, specify an *elementVar* or *serviceVar* attribute, or add a `<ViewFilter>` subtag within the `<Details>` tag, and add the parameter using the *idVar* attribute in the subtag. E.g.: `<ViewFilter includeSubViews="true" idVar="myView" />`. A similar `<ViewFilter>` subtag can be used in the `<PropertiesSourceInfo>` tag. For more information, see [idVar](xref:PropertiesSourceInfo#idvar).
+> To use URL parameters, specify an *elementVar* or *serviceVar* attribute, or add a `<ViewFilter>` subtag within the `<Details>` tag, and add the parameter using the *idVar* attribute in the subtag. For example: `<ViewFilter includeSubViews="true" idVar="myView" />`. A similar `<ViewFilter>` subtag can be used in the `<PropertiesSourceInfo>` tag. For more information, see [idVar](xref:PropertiesSourceInfo#idvar).
 
 ## Examples of PopupSkeleton and PopupDetails configuration
 

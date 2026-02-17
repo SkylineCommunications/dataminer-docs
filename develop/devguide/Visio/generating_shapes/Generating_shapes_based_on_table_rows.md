@@ -93,7 +93,7 @@ The following shape data fields can be added to the group containing the table r
   | Name | Sort by child item name. |
   | Property\|PropertyName | Sort by the specified child item property. |
   | Severity | Sort by alarm severity. |
-  | TableColumn\|\<ParamID> | Sort based on the values in a specific column of the table for which shapes are generated. Multiple table columns can be specified, separated by pipe characters. Optionally, you can also add the sorting direction for each table column, separated from the table column by a comma. If no sorting direction is specified, by default, the shapes will be sorted in ascending order. E.g. "TableColumn\|101\|102,desc\|103" |
+  | TableColumn\|\<ParamID> | Sort based on the values in a specific column of the table for which shapes are generated. Multiple table columns can be specified, separated by pipe characters. Optionally, you can also add the sorting direction for each table column, separated from the table column by a comma. If no sorting direction is specified, by default, the shapes will be sorted in ascending order. Example: "TableColumn\|101\|102,desc\|103" |
 
   > [!NOTE]
   >

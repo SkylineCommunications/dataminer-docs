@@ -276,7 +276,7 @@ At present, the following actions can be configured:
 | Open a panel | Open a panel on the current page. Panels can appear on the left side of a page, on the right side of the page or as a popup. |
 | Close a panel | Close a panel that was open on the current page. |
 | Open an app | Navigate to another application. |
-| Execute component action | Execute a component action. E.g. select an item in a table, create a new instance, etc. |
+| Execute component action | Execute a component action. For example, select an item in a table, create a new instance, etc. |
 
 By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e., only when the preceding action was executed successfully.
 

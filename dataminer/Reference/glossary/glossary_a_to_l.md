@@ -275,7 +275,7 @@ uid: glossary_a_to_l
 
 | Term | Description |
 |------|-------------|
-| Key point | The exact location in a signal chain where an error has occurred. E.g. "Encoding", "Decoding", "Reception", etc. See [Creating an information template](xref:Creating_an_information_template) and [Adding a violation filter](xref:Configuring_the_alarm_settings_for_an_SLA#adding-a-violation-filter). |
+| Key point | The exact location in a signal chain where an error has occurred, for example, "Encoding", "Decoding", "Reception", etc. See [Creating an information template](xref:Creating_an_information_template) and [Adding a violation filter](xref:Configuring_the_alarm_settings_for_an_SLA#adding-a-violation-filter). |
 | KML | Keyhole Markup Language. XML notation used in map browsers such as Google Maps. |
 | KPI | Key Performance Indicator. Performance measurement that indicates how well something is performing. |
 | KQI | Key Quality Indicator. Measurement that indicates how well something meets quality criteria. |

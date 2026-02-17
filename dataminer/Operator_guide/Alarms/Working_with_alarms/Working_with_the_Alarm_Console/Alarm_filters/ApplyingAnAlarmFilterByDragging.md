@@ -19,7 +19,7 @@ Instead of manually applying a filter in an Alarm Console tab, you can drag an i
 
 1. In the next column, select the items to filter on.
 
-   The options in this step differ depending on the type of item you dragged onto the Alarm Console. E.g. for a parameter, you may be able to click *Load more elements*, so that you can select several elements that have this parameter.
+   The options in this step differ depending on the type of item you dragged onto the Alarm Console. For example, for a parameter, you may be able to click *Load more elements*, so that you can select several elements that have this parameter.
 
 1. Click *Show alarms*.
 

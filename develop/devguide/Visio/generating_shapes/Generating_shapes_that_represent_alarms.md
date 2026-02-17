@@ -126,4 +126,4 @@ The following shape data fields can be added to the group containing the alarm s
 
 - **View**: In this optional shape data field, you can specify the name or the ID of a view. If you do so, a shape will be generated for every alarm associated with that specific view.
 
-  If you do not add a shape data field of type **View**, then a shape will be generated for every alarm associated with the object to which the Visio drawing is linked. E.g. If the Visio file is linked to an element, a shape will be generated for every alarm associated with that particular element.
+  If you do not add a shape data field of type **View**, then a shape will be generated for every alarm associated with the object to which the Visio drawing is linked. For example, If the Visio file is linked to an element, a shape will be generated for every alarm associated with that particular element.

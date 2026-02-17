@@ -83,7 +83,7 @@ public void Rewrite_PathWithItemsToAbbreviate_ReturnsAbbreviatedPath()
 }
 ```
 
-In this example, the object implementing the `SLProtocol` interface is used as a stub. I.e. it just acts as a replacement for the dependency we had. This is all it takes to create an *SLProtocol* fake.
+In this example, the object implementing the `SLProtocol` interface is used as a stub, i.e., it just acts as a replacement for the dependency we had. This is all it takes to create an *SLProtocol* fake.
 
 In some tests, you may want to verify or assert something on the fake object (e.g., whether a specific method was called). Whenever this is the case, your fake is referred to as a mock.
 

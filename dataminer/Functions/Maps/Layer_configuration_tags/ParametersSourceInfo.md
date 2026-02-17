@@ -8,7 +8,7 @@ In the `<ParametersSourceInfo>` tag, specify the parameters from which to retrie
 
 - In the *type* attribute, specify the type of DataMiner items from which to retrieve the parameter values: elements or services.
 
-- If the type attribute is set to "services", also specify an *alias* attribute or *elementDataVar* attribute, setting it to the element in the service that has the location data. E.g. `<ParametersSourceInfo type="services" alias="locationelement">`.
+- If the type attribute is set to "services", also specify an *alias* attribute or *elementDataVar* attribute, setting it to the element in the service that has the location data. For example: `<ParametersSourceInfo type="services" alias="locationelement">`.
 
   The location coordinates of the specified element are used to display the service on the map.
 
