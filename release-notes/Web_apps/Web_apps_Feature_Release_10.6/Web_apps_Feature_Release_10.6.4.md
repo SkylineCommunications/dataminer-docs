@@ -87,6 +87,12 @@ If, in the selected component, a data entry is used in multiple ways, then this 
 
 The data in this section will be sorted by type (data, filter, group) and then by name. Users will be allowed to reorder the data entries, but only within their type.
 
+#### User authentication enhancements [ID 44734]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+A number of enhancements have been made with regard to user authentication when accessing, for example, video thumbnails.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Alarm table component: Problems when scrolling [ID 44662]
