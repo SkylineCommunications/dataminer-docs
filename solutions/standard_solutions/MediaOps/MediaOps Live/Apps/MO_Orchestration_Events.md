@@ -40,13 +40,16 @@ When executing an orchestration script manually, and after having filled in all 
 
 ### Global Orchestration Script
 
-An orchestration can be defined with a Global (Orchestration) script, and associated values for all arguments. At Event time the script will be launched with the provided arguments.
+An orchestration event can be defined with a Global (Orchestration) script, and associated values for all arguments. At Event time the script will be launched with the provided arguments.
+
+> [!IMPORTANT]
+> When a global orchestration script is defined, the global orchestration script is responsible for triggering the execution of the configured node orchestration scripts.
 
 ### Node Orchestration Script
 
-For an architecture where a job would require to configure different nodes with different automation scripts, node orchestration scripts can be defined for each node of the job, replacing or in addition to the global orchestration script.
+When nodes part of a job need to be configured by specific scripts, then a node orchestration script can be configured for each node of the job, replacing or in addition to the global orchestration script. When no global orchestration script is defined, Live will execute all node orchestration scripts automatically.
 
-When no global orchestration script is defined, Live will execute all node orchestration scripts. When a global orchestration script is defined, the global orchestration script will have to trigger the execution of the node orchestration scripts.
+When a global orchestration script is defined, the global orchestration script will have to trigger the execution of the node orchestration scripts.
 
 ## Connectivity
 
@@ -59,3 +62,6 @@ Metadata can be defined on an orchestration event, allowing easy access to extra
 ## Service Monitoring
 
 When the orchestration event(s) are related to a job, there is an option to trigger the creation of a DMA Service at execution of the very first Event, and to delete it at the execution of the very last event.
+
+> [!TIP]
+> How this can be done is described in the [Orchestration Events tutorial](xref:Tutorial_MediaOpsLive_CreateOrchestrationScripts#step-9-generate-a-service-from-the-orchestration-script).

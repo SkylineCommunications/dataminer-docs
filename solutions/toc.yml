@@ -104,7 +104,7 @@ items:
           - name: IP Matrix
             items:
             - name: Provisioning endpoints and virtual signal groups manually
-              topicUid: Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript
+              topicUid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
             - name: Implementing the connection handler script
               topicUid: Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript
           - name: Orchestration Events

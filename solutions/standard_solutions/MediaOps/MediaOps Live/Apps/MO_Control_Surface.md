@@ -4,7 +4,7 @@ uid: MO_Control_Surface
 
 # Control Surface app
 
-The Control Surface app is a fully software-defined button panel that allows to connect or disconnect sources and destinations defined in the [Virtual Signal Groups app](xref:MO_Virtual_Signal_Groups). It allows operators to manage connections in the network without having to worry about the specifics of the underlying technology and/or devices. The control surface is synced with all scheduled connections created by [Jobs](xref:MO_Scheduling), avoiding operators to unknowingly overwrite scheduled connections, while keeping them in control to change scheduled connections ad-hoc if they really need to.
+The Control Surface app is a software-defined button panel that allows to connect or disconnect sources and destinations defined in the [Virtual Signal Groups app](xref:MO_Virtual_Signal_Groups). It allows operators to manage connections in the network without having to worry about the specifics of the underlying technology and/or devices. Scheduled connections created by [Jobs](xref:MO_Scheduling) are also reflected in the Control Surface app, avoiding operators to unknowingly overwrite scheduled connections, while keeping them in control to change scheduled connections ad-hoc if they really need to.
 
 The app shows two main panels, one on the left with all sources defined in the system, and one on the right with the destinations. Once the user has correctly configured sources and destinations in the [Virtual Signal Groups app](xref:MO_Virtual_Signal_Groups), and set up the [Mediation Layer](xref:MediaOps.Live.Mediation) for the DataMiner elements associated with these sources and destinations, the Control Surface app provides the following functionality:
 
@@ -20,9 +20,9 @@ Connections can be created between a source and 1 or multiple destinations by se
 > [!TIP]
 > Selecting or unselecting 1 or multiple buttons can be done by using CTRL + Click.
 
-When the 'Connect' button is clicked, the [mediation layer](xref:MediaOps.Live.Mediation) is triggered to connect the selected source to each selected destination. When the connection is successfully made, then the destination button will reflect the connect source. An additional icon will be visible on the button in case multiple sources are connected or when certain levels are shuffled.
+When the 'Connect' button is clicked, the [mediation layer](xref:MediaOps.Live.Mediation) is triggered to connect the selected source to each selected destination. When the connection is successfully made, then the destination button will reflect the connected source. An additional icon will be visible on the button in case multiple sources are connected or when certain levels are shuffled.
 
-It's also possible to only connect a subset of a source to a destination by selecting the individual levels at the bottom of the app and clicking the 'Connect Level' button.
+It's also possible to connect specific levels of a source to a destination by selecting the individual levels at the bottom of the app and clicking the 'Connect Level' button.
 
 > [!NOTE]
 > Connecting a subset of a source can only be done to a single destination, and also allows to shuffle a specific level.
@@ -32,11 +32,11 @@ It's also possible to only connect a subset of a source to a destination by sele
 Disconnecting 1 or multiple destinations is done by selecting the relevant destinations and clicking the 'Disconnect' button. For disconnections, no source needs to be selected and the selected source (if any) is irrelevant.
 Same as when creating connections, when the 'Disconnect' button is clicked, the [mediation layer](xref:MediaOps.Live.Mediation) is triggered to handle the disconnect.
 
-It's also possible to only disconnect 1 or multiple specific levels of a destination by selecting the levels of the selected destination and clicking the 'Disconnect Level' button.
+It's also possible to disconnect specific levels of a destination by selecting the levels for the selected destination and clicking the 'Disconnect Level' button.
 
 ## Locking and unlocking of destinations
 
-Users can lock a destination to prevent anyone from overwriting the destination's connection state. This is possible both with destinations that have an active connection and destinations that don’t. When locking a destination, the user can (optionally) provide a reason for the lock. The Control Surface app allows selecting multiple destinations and locking them all at once (with a single reason).
+Users can lock a destination to prevent anyone from overwriting the destination's connection state. This is possible both with destinations that have an active connection and destinations that don’t. When locking a destination, the user can provide a reason for the lock. The Control Surface app allows selecting multiple destinations and locking them all at once (with a single reason).
 
 When a user tries to change the connection state of a locked destination, they get a pop-up message warning them that the destination is locked, who locked the destination and the reason they provided. However, anyone can unlock a locked destination, not only the user who locked it, and then proceed to change the connection state of that destination.
 

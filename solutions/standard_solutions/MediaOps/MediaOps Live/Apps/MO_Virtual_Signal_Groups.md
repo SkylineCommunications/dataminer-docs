@@ -16,6 +16,9 @@ The following pages are available in the app:
 
 - **Levels**: Allows you to **create**, **edit**, and **delete** [levels](#levels). Additionally, this page also allows to manage the [transport types](#transport-types) available in your network, and allows to configure the transport type for each given level.
 
+> [!TIP]
+> Follow [one of the manual provisioning tutorials](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual) to learn how to use the Virtual Signal Groups app to provision these different objects.
+
 ## Endpoints
 
 Endpoints are the lowest level data object managed by the Virtual Signal Groups app, as these objects allow users to describe source and destinations of a single (media) flow. Each endpoint should have a name, must be assigned a transport type and can optionally be linked to a DataMiner element.

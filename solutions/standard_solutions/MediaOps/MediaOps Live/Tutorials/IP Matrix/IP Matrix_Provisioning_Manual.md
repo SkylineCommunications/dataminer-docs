@@ -64,12 +64,13 @@ To do this, follow these steps:
 1. Open the `Virtual Signal Groups` low-code app in your web browser and log in with your credentials.
 1. Navigate to the `Levels` tab, and press the `Transport Types` button in the header bar.
 1. If the `TSoIP` transport type does not exist, create it by clicking the `New` button.
-
     - Name: `TSoIP`
-
+1. Add the following fields to the `TSoIP` transport type:
+    - Source IP
+    - Multicast IP
+    - Port
 1. Go back to the `Levels` tab.
 1. Check if a level named `Video` already exists. If it does not exist, create it by clicking the `New` button.
-
     - Name: `Video`
     - Number: `0` (or the next available number)
     - Transport Type: `TSoIP`
