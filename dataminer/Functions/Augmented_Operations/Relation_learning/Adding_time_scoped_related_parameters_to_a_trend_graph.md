@@ -8,7 +8,7 @@ From DataMiner 10.3.8/10.4.0 onwards<!--RN 36434 -->, a light bulb icon will be 
 
 The feature proposes parameters from the same DataMiner service as well as the top parameters that are globally related. Prior to DataMiner 10.4.11/10.5.0<!-- RN 40904 -->, only parameters from the same DataMiner element are proposed. In DataMiner 10.4.11, parameters from other elements within the same service are also taken into account.
 
-You can for instance use this in case a parameter (e.g. the total available memory of a server) behaves oddly during a particular time range (e.g. a downward spike), in order to find out if other parameters also showed unusual behavior during the same time range.
+You can for instance use this in case a parameter (e.g., the total available memory of a server) behaves oddly during a particular time range (e.g., a downward spike), in order to find out if other parameters also showed unusual behavior during the same time range.
 
 ## Prerequisites
 

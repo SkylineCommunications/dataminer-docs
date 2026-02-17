@@ -21,7 +21,7 @@ Also, by clicking the up and down arrows while holding the Ctrl key, you can mak
 > [!NOTE]
 >
 > - Columns marked as a datasource’s default columns will be selected by default.
-> - When a column selector node with values is reloaded (e.g. when an existing query is opened), the selected columns will be displayed before the unselected ones.
+> - When a column selector node with values is reloaded (e.g., when an existing query is opened), the selected columns will be displayed before the unselected ones.
 
 #### SLReset will now reset the backup agent to its factory settings when it is taken out of a  Failover configuration \[ID 28456\]
 
@@ -292,7 +292,7 @@ In some cases, it was not possible to delete GQI queries.
 
 #### DataMiner landing page: Clicking the waffle icon did not open the sidebar \[ID 29050\]
 
-When you clicked the waffle icon in the top-left corner of a DataMiner landing page (i.e. `https://<DmaAddress>/root/`), in some cases, the sidebar listing the available apps would not open.
+When you clicked the waffle icon in the top-left corner of a DataMiner landing page (i.e., `https://<DmaAddress>/root/`), in some cases, the sidebar listing the available apps would not open.
 
 #### Updating an element via a CSV export/import would not work properly when that element had an empty port type value \[ID 29052\]
 

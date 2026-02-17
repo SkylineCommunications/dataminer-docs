@@ -118,7 +118,7 @@ DataMiner now supports the encryption methods detailed below (in order of prefer
 
 #### Protocols: Allow for different remote element sources in view table columns \[ID 32579\]
 
-When setting up remote columns, up to now, all columns had to refer to the same parameter containing a list of remote elements (e.g. “view=:x:y:z”, where x is the ID of the parameter containing the remote element IDs). From now on, it is possible to have two sets of elements referenced by different columns within the same view table.
+When setting up remote columns, up to now, all columns had to refer to the same parameter containing a list of remote elements (e.g., “view=:x:y:z”, where x is the ID of the parameter containing the remote element IDs). From now on, it is possible to have two sets of elements referenced by different columns within the same view table.
 
 In the following example, parameters 201 and 301 each contain a list of remote elements, and both can be used within the same view table (in different ColumnOption tags).
 
@@ -399,7 +399,7 @@ A custom data source is represented as a class that implements predefined interf
     |----------------|--------------------------|---------------------------|-------------------------------------------------|
     | OnPrepareFetch | OnPrepareFetchInputArgs | OnPrepareFetchOutputArgs | Indicated that the GQI has processed the query. |
 
-- **IGQIOnDestroy**: This interface is called when the instance object is destroyed, which happens when the session is closed, e.g. in case of inactivity or when all the necessary data has been retrieved. It can for instance be used to end the connection with a database. This interface has one method:
+- **IGQIOnDestroy**: This interface is called when the instance object is destroyed, which happens when the session is closed, e.g., in case of inactivity or when all the necessary data has been retrieved. It can for instance be used to end the connection with a database. This interface has one method:
 
     | Method  | Input arguments     | Output arguments     | Description                                    |
     |-----------|---------------------|----------------------|------------------------------------------------|
@@ -628,7 +628,7 @@ A ResourceUsageDefinition now has the property *ConcurrencyUsageType*, which can
 
 Resource usage can only overlap with a ResourceUsageDefinition with *ConcurrencyUsageType.All* if it is set to *ConcurrencyUsageType.None*. This limitation is also in place for a single booking: if a booking has a resource with complete concurrency and another resource with 1 concurrency, the booking will be quarantined because it requests more concurrency than is available. If a complete concurrency usage is quarantined to resolve a concurrency conflict (as determined by the priority defined on booking level), it will be moved in its entirety – there is no option to only move part of the concurrency to quarantine.
 
-The actual concurrency of a ResourceUsageDefinition with *ConcurrencyUsageType.All* is determined at runtime, as the *MaxConcurrency* value of the resource at the moment when it is needed, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
+The actual concurrency of a ResourceUsageDefinition with *ConcurrencyUsageType.All* is determined at runtime, as the *MaxConcurrency* value of the resource at the moment when it is needed, e.g., when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
 
 Code example:
 
@@ -653,7 +653,7 @@ It is now possible to book all the capacities of a resource for their complete v
 
 No other usage can overlap in case complete capacity is used. This limitation is also in place for a single booking: if a booking has a resource with complete capacity and another resource with 100 capacity, the booking will be quarantined because it requests more capacity than is available. If a complete capacity usage is quarantined to resolve a conflict (as determined by the priority defined on booking level), it will be moved in its entirety.
 
-The actual capacity in case *UsesCompleteCapacity* is true is determined at runtime, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
+The actual capacity in case *UsesCompleteCapacity* is true is determined at runtime, e.g., when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
 
 Code example:
 
@@ -790,7 +790,7 @@ The HTML5 video player will now by default mute videos when played automatically
 
 ##### VLC player
 
-When playing videos using the VLC player, it is now possible to specify the volume in the URL. See the following example. The volume has to be specified as a percentage (0 to 100). Default: 0 (i.e. muted).
+When playing videos using the VLC player, it is now possible to specify the volume in the URL. See the following example. The volume has to be specified as a percentage (0 to 100). Default: 0 (i.e., muted).
 
 ```txt
 https://dma.local/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50
@@ -852,7 +852,7 @@ When you deleted an SNMP manager of type SNMPv3 and then immediately created an 
 
 #### Dashboards: No longer possible to switch between visualizations when a component did not require data \[ID 32413\]
 
-When you hovered over a component that did not require data (e.g. text, clock, image, etc.), it would no longer be possible to select another visualization.
+When you hovered over a component that did not require data (e.g., text, clock, image, etc.), it would no longer be possible to select another visualization.
 
 #### DataMiner Cube - Services app: Expand/collapse button in front of a service profile definition would disappear when you expanded or collapsed the service profile definition node \[ID 32439\]
 
@@ -951,7 +951,7 @@ When migrating single Cassandra nodes to a Cassandra cluster, in some cases, the
 
 #### Serial protocols: Length check would incorrectly take into account the data before the header \[ID 32669\]
 
-Up to now, when a payload with data before the header was received (e.g. aaaa\<header>payloadwithfixedlength), the data before the header would correctly be stripped off before forwarding the payload to the protocol, but the length check would incorrectly take that data into account.
+Up to now, when a payload with data before the header was received (e.g., aaaa\<header>payloadwithfixedlength), the data before the header would correctly be stripped off before forwarding the payload to the protocol, but the length check would incorrectly take that data into account.
 
 #### Problem when migrating a Failover system to a Cassandra cluster \[ID 32672\]
 

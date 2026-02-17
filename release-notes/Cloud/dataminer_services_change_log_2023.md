@@ -92,7 +92,7 @@ When a DMS is connected to dataminer.services, an improved login system will now
 
 #### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID 37438]
 
-If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access (e.g. the Monitoring app via dataminer.services), it was not possible to log in. Now you can log in automatically with your linked DataMiner account.
+If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access (e.g., the Monitoring app via dataminer.services), it was not possible to log in. Now you can log in automatically with your linked DataMiner account.
 
 > [!NOTE]
 > If you log in manually, you will still encounter this issue: This will not work when you have one or more special characters configured in your DataMiner account. To resolve this, [link your DataMiner account to your dataminer.services account](https://aka.dataminer.services/account-linking). The automatic login will allow you to use Remote Access without requiring any further actions.
@@ -123,7 +123,7 @@ This is now no longer the case. All email input for all Chat Integration feature
 
 #### 30 May 2023 - Enhancement - Catalog - Notification when deploying from the catalog [ID 36543]
 
-When you deploy something (e.g. a connector) from the catalog to a DMA, a notification will now indicate if the deployment has started properly. The notification also contains a link to the Admin page, where you can view the status of the deployment.
+When you deploy something (e.g., a connector) from the catalog to a DMA, a notification will now indicate if the deployment has started properly. The notification also contains a link to the Admin page, where you can view the status of the deployment.
 
 #### 11 May 2023 - Enhancement - Easier sharing of deployment records [ID 36398]
 

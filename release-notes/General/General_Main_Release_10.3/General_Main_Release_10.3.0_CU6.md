@@ -140,7 +140,7 @@ SLDataGateway would leak memory when migrating average trend data from MySQL to 
 
 When, in a protocol, an SNMP connection was assigned to a separate thread, in most cases, the polling would get stuck because the main protocol thread would get notified of the response rather than the thread that was assigned to the SNMP connection.
 
-From now on, a poll group will default to connection 0 rather than -1. As a result, when a separate thread is created for the main connection (i.e. the connection with ID 0), the groups for that connection will no longer need to have `connection="0"` specified.
+From now on, a poll group will default to connection 0 rather than -1. As a result, when a separate thread is created for the main connection (i.e., the connection with ID 0), the groups for that connection will no longer need to have `connection="0"` specified.
 
 Also, the following issues have been fixed:
 
@@ -159,7 +159,7 @@ When the backup agent was active, certain BPA tests would incorrectly return the
 
 `This BPA does not apply for this Agent: cannot run on Offline Failover Agents`
 
-Also, certain managers in SLNet (e.g. BPA Manager) would not properly initialize if the following Failover settings were configured in the *SLDMS.xml* file:
+Also, certain managers in SLNet (e.g., BPA Manager) would not properly initialize if the following Failover settings were configured in the *SLDMS.xml* file:
 
 - `State="Offline"`
 - `StateBeforeShutDown="Online"`
@@ -212,7 +212,7 @@ When an SNMP table was polled with *MultipleGetNext* and the response was not pr
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
-When you imported elements from a CSV file, new elements would only be created on the local agent, not on any of the remote agents, i.e. the agents other than the one the Cube client was connected to. Existing elements would be updated correctly on the local agents as well as on all remote agents.
+When you imported elements from a CSV file, new elements would only be created on the local agent, not on any of the remote agents, i.e., the agents other than the one the Cube client was connected to. Existing elements would be updated correctly on the local agents as well as on all remote agents.
 
 #### Incorrect error message was thrown when NATS credentials could not be retrieved from a remote DMA [ID 36906]
 

@@ -319,7 +319,7 @@ Up to now, SLLogCollector would by default be configured to collect the log file
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
+For visual overviews in web apps (e.g., Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
 
 #### DataMiner installer: A progress bar will now be shown during the installation of WSL [ID 41032]
 
@@ -443,7 +443,7 @@ When a DVE element or virtual function element was deleted while a subscription 
 
 <!-- MR 10.3.0 [CU21]/10.4.0 [CU9] - FR 10.4.12 -->
 
-When a DataMiner Agent reconnected to the DataMiner System of which it was a member (e.g. after having been restarted), in some rare cases, *CorrelationDetailsEvent* messages could be incomplete.
+When a DataMiner Agent reconnected to the DataMiner System of which it was a member (e.g., after having been restarted), in some rare cases, *CorrelationDetailsEvent* messages could be incomplete.
 
 #### SLAnalytics - Behavioral anomaly detection: Alarm template of DVE parent element would incorrectly be used when monitoring was disabled in the alarm template of the DVE child template [ID 40963]
 
@@ -461,7 +461,7 @@ When a GQI query was executed on a DataMiner System with storage per DMA, and th
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
 
-When an object is updated immediately after being created, in some cases, both the create and the update operation will have the same internal timestamp (i.e. the value stored in the `LastModified` field of the `ITrackLastModified` interface). Due to a caching issue, up to now, this could lead to client applications not getting the updated information.
+When an object is updated immediately after being created, in some cases, both the create and the update operation will have the same internal timestamp (i.e., the value stored in the `LastModified` field of the `ITrackLastModified` interface). Due to a caching issue, up to now, this could lead to client applications not getting the updated information.
 
 #### MySQL database optimization task would incorrectly be run on systems with a database other than MySQL [ID 40985]
 

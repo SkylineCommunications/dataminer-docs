@@ -21,7 +21,7 @@ uid: QuestionsAndAnswers
 
     Capture observation: getNext requests are performed to obtain the number of rows using the instance, starting with the OID of the Entry (1.3.6.1.2.1.2.2.1). Once this is known, one SNMP Get request is performed to obtain all the rows of the table. By default, 50 cells can be retrieved at a time; it can be overridden with the bulk: option.
 
-    A problem that can occur is that when a row disappears during the retrieval, the result can be mixed up because the data is retrieved block by block, e.g. first block still has data of 5 rows, while for the next block it is 4 rows. A second problem is that when a column is "Not Available", a shift of data will occur in DataMiner. The content of columns will be shifted, the "Not Available" column will contain the data of the next column, and so on.
+    A problem that can occur is that when a row disappears during the retrieval, the result can be mixed up because the data is retrieved block by block, e.g., first block still has data of 5 rows, while for the next block it is 4 rows. A second problem is that when a column is "Not Available", a shift of data will occur in DataMiner. The content of columns will be shifted, the "Not Available" column will contain the data of the next column, and so on.
 
     **MultipleGetNext**
 
@@ -43,12 +43,10 @@ uid: QuestionsAndAnswers
 
 1. *What is the best way to search data spread over multiple tables? From the tables below, I need all elementary streams related to transport stream "TS02".*
 
-
-
-1. *Which steps would you perform to investigate an SNMP communication issue with a device? I.e. the device is not responding to the requests you send.*
+1. *Which steps would you perform to investigate an SNMP communication issue with a device? I.e., the device is not responding to the requests you send.*
 
     1. Perform a ping to the device.
-    1. Use another tool (e.g. MibBrowser) to test the connection.
+    1. Use another tool (e.g., MibBrowser) to test the connection.
     1. Check the community strings.
 
 1. *What is the meaning of the actions "Execute", "Execute Next", "Execute One", "Add to Execute" and "Force Execute" on a group?*
@@ -190,7 +188,7 @@ uid: QuestionsAndAnswers
 
 1. *What is the difference between starting a Trigger -> Action with a SetParameter and a CheckTrigger?*
 
-    A protocol.CheckTrigger makes sure that the action is not started from the protocol thread but from a new thread created by the QAction. It is therefore not possible to start e.g. "Set with wait" from a QAction unless you put a group in the queue where the "Set with wait" is.
+    A protocol.CheckTrigger makes sure that the action is not started from the protocol thread but from a new thread created by the QAction. It is therefore not possible to start e.g., "Set with wait" from a QAction unless you put a group in the queue where the "Set with wait" is.
 
 1. *When the protocol has a table on which settings will be done from an automation script, what do you need to look out for and how can it be solved?*
 
@@ -269,7 +267,7 @@ uid: QuestionsAndAnswers
 
 1. *A connector contains two different trap receiver parameters. Someone complains that alarms coming from these two parameters are linked to each other while in fact they should not be. The meaning of the traps is different; they also have different OIDs. What do you think is the reason and what can be done to fix it?*
 
-    By default, trap parameters will be linked together if they have similar linking conditions. In order to overwrite this, you should specify a group ID number before the linking, e.g. |Link:-1,2,5.
+    By default, trap parameters will be linked together if they have similar linking conditions. In order to overwrite this, you should specify a group ID number before the linking, e.g., |Link:-1,2,5.
 
 1. *Is it possible to use different severities on trap alarms with the exact same protocol? If so, how can this be achieved?*
 
@@ -332,7 +330,7 @@ uid: QuestionsAndAnswers
     </Timer>
     ```
 
-    The intention is that group 1 will be executed every three seconds and perform a copy. However, this will fail because it is a poll group (this is the default type) and not an "action" or "poll action" group (i.e. the following line should be added to the group: `<Type>poll action</Type>)`.
+    The intention is that group 1 will be executed every three seconds and perform a copy. However, this will fail because it is a poll group (this is the default type) and not an "action" or "poll action" group (i.e., the following line should be added to the group: `<Type>poll action</Type>)`.
 
 1. *Under which circumstances can `row=true` work and when not?*
 

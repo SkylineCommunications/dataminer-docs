@@ -11,9 +11,9 @@ When you open up the Catalog, a search box is displayed.
 
 1. In the search box, you can enter:
 
-   - (Part of) the name of the item you are looking for (e.g. a connector, a package, etc.).
+   - (Part of) the name of the item you are looking for (e.g., a connector, a package, etc.).
 
-   - (Part of) a tag given to the item you are looking for (e.g. Master Clock System, Element Manager, etc.)<!--RN 40259-->.
+   - (Part of) a tag given to the item you are looking for (e.g., Master Clock System, Element Manager, etc.)<!--RN 40259-->.
 
    As you type, a list with the top 5 results will be displayed under the search box.
 
@@ -58,7 +58,7 @@ This page also provides a quick way to execute the call: Expand the "/api/key-ca
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the call on the production Catalog.
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
@@ -91,7 +91,7 @@ This page also provides a quick way to execute the call: Expand the "/api/key-ca
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the call on the production Catalog.
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 

@@ -352,7 +352,7 @@ When, in the *Automation* app, you made an invalid change in a script, closed th
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-When the system time changed because of e.g. a clock resynchronization or a switch to or from daylight-saving time, up to now, the start time and end time of scheduled alarm templates would incorrectly not get updated.
+When the system time changed because of e.g., a clock resynchronization or a switch to or from daylight-saving time, up to now, the start time and end time of scheduled alarm templates would incorrectly not get updated.
 
 #### GQI: 'Bookings' data source incorrectly contained two 'Last modified at' columns [ID 34170]
 
@@ -366,7 +366,7 @@ Also, the *Created at* and *Last modified at* columns will no longer be selected
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-In web apps (e.g. Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
+In web apps (e.g., Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
 
 #### Failover: Certain correlation rules would no longer work after a Failover switch [ID 34204]
 

@@ -17,7 +17,7 @@ A parameter requires that RTDisplay is set to true in the following cases:
   > [!NOTE]
   > Parameters with alarm or trending support should be displayed on a page.
 
-- The parameter is a column parameter displayed in a table (i.e. included in the [Measurement](xref:Protocol.Params.Param.Measurement) tag of the table).
+- The parameter is a column parameter displayed in a table (i.e., included in the [Measurement](xref:Protocol.Params.Param.Measurement) tag of the table).
 
 - The parameter is a table parameter used in a tree control.
 
@@ -73,7 +73,7 @@ The SLElement process processes the column values in the order it receives them 
 
 Always keep the column processing order in mind when implementing tables. The following list provides an overview of situations where the column processing order may or may not be of concern:
 
-- Custom tables (i.e. non-SNMP tables):
+- Custom tables (i.e., non-SNMP tables):
 
   - If you add/set the entire row at once: No problem can occur, not even if the columns that are part of the display key are defined after the columns that have monitoring support in the table.
   - If you add/set row data in multiple steps: In this case, you need to ensure that all the columns holding FKs and the columns that are part of the display key are set before setting any alarmed/trended column.

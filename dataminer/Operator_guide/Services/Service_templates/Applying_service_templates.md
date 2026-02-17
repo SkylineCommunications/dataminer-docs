@@ -29,7 +29,7 @@ uid: Applying_service_templates
 
   - byname:*name1*\|*name2*
 
-  If you specify the views by name, placeholders are supported, e.g. to refer to a parameter or to input data. For example:
+  If you specify the views by name, placeholders are supported, e.g., to refer to a parameter or to input data. For example:
 
   - *byname:Channel \[data:channelname\]\|Location \[data:locationname\]*
 

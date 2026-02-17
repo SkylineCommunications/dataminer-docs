@@ -27,11 +27,11 @@ alarm.dma_id.element_id.pid.row_key
 Example: alarm.162.951.102.AMP33_SLC
 
 > [!NOTE]
-> Currently, the alarm only contains the IDs of the views containing the parent object of the alarm (e.g. element, service, etc.). It does not yet contain the IDs of the views containing all the parents of that parent object.
+> Currently, the alarm only contains the IDs of the views containing the parent object of the alarm (e.g., element, service, etc.). It does not yet contain the IDs of the views containing all the parents of that parent object.
 
 #### External alarms can now also have general alarm properties \[ID 29231\]
 
-External alarms (e.g. anomaly detection alarms, etc.) can now also have general alarm properties such as “System Name” or “System Type”.
+External alarms (e.g., anomaly detection alarms, etc.) can now also have general alarm properties such as “System Name” or “System Type”.
 
 > [!NOTE]
 > DataMiner automatically evaluates and populates the “System Name” and “System Type” alarm properties. If you want external alarms to overwrite the values in those properties, make sure new property values are passed along with those external alarms.
@@ -211,9 +211,9 @@ When a query filter using a feed is configured to filter using a regular express
 
 #### Dashboards app: Node-edge graph component \[ID 29425\]
 
-The new node-edge graph component allows you to visualize any type of objects (i.e. “nodes”) and the connections between them (i.e. “edges”). Moreover, by linking parameters and properties to those nodes and edges, you can turn a node-edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data using dynamic coloring.
+The new node-edge graph component allows you to visualize any type of objects (i.e., “nodes”) and the connections between them (i.e., “edges”). Moreover, by linking parameters and properties to those nodes and edges, you can turn a node-edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data using dynamic coloring.
 
-The data necessary to create a node-edge graph can to be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects).
+The data necessary to create a node-edge graph can to be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e., objects), whereas edge queries provide data that will be visualized as edges (i.e., connections between objects).
 
 For more detailed information, see [Node edge graph](xref:DashboardNodeEdgeGraph).
 
@@ -249,7 +249,7 @@ In the Jobs app, the time filter in the sidebar has been improved. You can now i
 
 #### Mobile apps will now display a warning when you do not use an HTTPS connection \[ID 29389\]
 
-From now on, when you access a mobile app (e.g. Monitoring, Dashboards, Jobs, Ticketing, etc.), a warning will now be displayed when you do not use an HTTPS connection.
+From now on, when you access a mobile app (e.g., Monitoring, Dashboards, Jobs, Ticketing, etc.), a warning will now be displayed when you do not use an HTTPS connection.
 
 ### DMS Service & Resource Management
 
@@ -298,7 +298,7 @@ All these log entries will have log level 5.
 
 #### New caching mechanism when retrieving ReservationInstances from Elasticsearch \[ID 29289\]
 
-A caching mechanism involving three separate caches will now be used when retrieving ReservationInstances from an Elasticsearch database, especially when the already saved ReservationInstances have to be checked, e.g. when saving a new ReservationInstance or when requesting the availability of resources in a certain time frame.
+A caching mechanism involving three separate caches will now be used when retrieving ReservationInstances from an Elasticsearch database, especially when the already saved ReservationInstances have to be checked, e.g., when saving a new ReservationInstance or when requesting the availability of resources in a certain time frame.
 
 ##### Overview of the caches
 
@@ -512,7 +512,7 @@ Unexpected filter type: Skyline.DataMiner.Net.SubscriptionFilters.SubscriptionFi
 
 #### Interactive automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
 
-When, in an interactive automation script, a calendar control was used to select a date (i.e. a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
+When, in an interactive automation script, a calendar control was used to select a date (i.e., a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
 
 #### SLAnalytics: Problem when calculating a trend prediction for a parameter with missing trend data \[ID 29163\]
 
@@ -536,7 +536,7 @@ In DataMiner Cube, in some cases, table columns of which the width was set to 0 
 
 #### Dashboards app - GQI: Aggregated values would incorrectly be displayed in raw format \[ID 29200\]
 
-In GQI query results, aggregated values would incorrectly be displayed in raw format. From now on, they will be formatted according to the display properties (e.g. units, decimals, etc.) defined in the protocol.
+In GQI query results, aggregated values would incorrectly be displayed in raw format. From now on, they will be formatted according to the display properties (e.g., units, decimals, etc.) defined in the protocol.
 
 #### SLAnalytics: Problem when a connection was lost while handling a previous connection loss \[ID 29210\]
 

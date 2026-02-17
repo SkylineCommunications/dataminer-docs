@@ -4746,8 +4746,6 @@ items:
         items:
         - name: '@time'
           topicUid: MaintenanceSettings.AutoElementLock-time
-      - name: BrokerGateway
-        topicUid: MaintenanceSettings.BrokerGateway
       - name: Correlation
         topicUid: MaintenanceSettings.Correlation
         items:
@@ -4890,6 +4888,8 @@ items:
           topicUid: MaintenanceSettings.SLNet.AvailableDashboardsServiceUrl
         - name: BackgroundTasksMaxList
           topicUid: MaintenanceSettings.SLNet.BackgroundTasksMaxList
+        - name: BrokerGateway
+          topicUid: MaintenanceSettings.SLNet.BrokerGateway
         - name: CallbackTimeout
           topicUid: MaintenanceSettings.SLNet.CallbackTimeout
         - name: ClearedAlarmStoreTime
@@ -7394,6 +7394,8 @@ items:
               topicUid: DIS_Troubleshooting_CompilationFailure
             - name: Publishing problems
               topicUid: DIS_Troubleshooting_UploadFailure
+            - name: Importing problems
+              topicUid: DIS_Troubleshooting_ImportFailure
         - name: DIS reference
           items:
             - name: DIS settings
@@ -7643,6 +7645,8 @@ items:
         topicUid: Best_Practices_When_Documenting_Catalog_Items
       - name: Naming conventions for Catalog item components
         topicUid: Naming_Conventions_For_Catalog_Item_Components
+    - name: NuGet package recommendations
+      topicUid: NuGet_Recommendations
     - name: Unit testing
       topicUid: Unit_testing
       items:

@@ -34,7 +34,7 @@ On the *Configuration* page of the Booking Manager, you can now deactivate the B
 
 #### Problem with SRM_DiscoverResources script [ID 38769]
 
-When a resource had at least one capacity and it had two properties of which the name was the same except for spaces (e.g. *Connected Input* and *ConnectedInput*), the *SRM_DiscoverResources* script could throw the following exception:
+When a resource had at least one capacity and it had two properties of which the name was the same except for spaces (e.g., *Connected Input* and *ConnectedInput*), the *SRM_DiscoverResources* script could throw the following exception:
 
 `System.Data.OleDb.OleDbException (0x80040E07): Data type mismatch in criteria expression.`
 

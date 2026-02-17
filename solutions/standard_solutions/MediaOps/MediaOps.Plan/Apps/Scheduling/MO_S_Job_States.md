@@ -7,7 +7,7 @@ uid: MO_S_Job_States
 A job can have one of the following states:
 
 | State | Description |
-|--|--|
+| -- | -- |
 | <div style="background-color:#9140D9;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Draft</div> | Unless a job is created based on a specific resource, it starts off in the draft state. This allows you to create a provisionary job without actually booking any of the resources. |
 | <div style="background-color:#F7EC15;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Tentative</div> | When a job moves into the tentative state, the resources assigned to the job will be reserved to prevent other jobs from selecting the same resources. |
 | <div style="background-color:#348D42;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Confirmed</div> | When a job is fully configured and ready to be executed, it should be set to confirmed. |

@@ -4,7 +4,7 @@ uid: Connecting_to_an_element_using_telnet
 
 # Connecting to an element using telnet
 
-1. In Windows, open the *Run* window (e.g. by pressing Windows key + R).
+1. In Windows, open the *Run* window (e.g., by pressing Windows key + R).
 
 1. Enter *telnet*, followed by a space and then the virtual IP address of the element.
 

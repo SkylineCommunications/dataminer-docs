@@ -4,7 +4,7 @@ uid: ConnectionsRedundantPolling
 
 # Redundant polling
 
-It is possible to create an element that is configured with a redundant connection. When the primary connection is no longer responding (i.e. a timeout occurs on this connection), DataMiner will automatically switch to the secondary connection (and vice versa).
+It is possible to create an element that is configured with a redundant connection. When the primary connection is no longer responding (i.e., a timeout occurs on this connection), DataMiner will automatically switch to the secondary connection (and vice versa).
 
 In the protocol, you need to define the 2 connections and specify that redundant polling has to be used:
 

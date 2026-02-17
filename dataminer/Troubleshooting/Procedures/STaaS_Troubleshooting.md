@@ -59,7 +59,7 @@ There are two ways to verify if you are using a STaaS setup:
      ![System Center - Database set to STaaS](~/dataminer/images/SystemCenter_STaaS.png)
 
      > [!NOTE]
-     > The type of database (i.e. *Database per cluster* or *Database per Agent*) is not relevant, as all data from the cluster will be stored the same way.
+     > The type of database (i.e., *Database per cluster* or *Database per Agent*) is not relevant, as all data from the cluster will be stored the same way.
      >
      > For example:
      >
@@ -108,7 +108,7 @@ To install the *CloudGateway* module:
 
 1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *DxMs* page.
 
-1. Locate the relevant node (i.e. the DMA).
+1. Locate the relevant node (i.e., the DMA).
 
 1. Next to the *CloudGateway* module, click *Deploy* to start the automatic installation process.
 
@@ -116,7 +116,7 @@ If the *CloudGateway* module is installed on your DMA already, **verify that it 
 
 - **Using the Admin app**:
 
-  1. On the *DxMs* page, locate the relevant node (i.e. the DMA).
+  1. On the *DxMs* page, locate the relevant node (i.e., the DMA).
 
   1. Verify that the current version of the *CloudGateway* DxM is 2.8.0 or higher.
 
@@ -138,7 +138,7 @@ If the *CloudGateway* module is installed on your DMA already, **verify that it 
 
   1. Locate your DMS and click the eye icon next to it.
 
-  1. Select the node (i.e. the DMA) on which the *CloudGateway* module is installed to expand the overview of deployed DxMs. This includes details such as DxM version, DxM data timestamp, and extra data.
+  1. Select the node (i.e., the DMA) on which the *CloudGateway* module is installed to expand the overview of deployed DxMs. This includes details such as DxM version, DxM data timestamp, and extra data.
 
   1. Find the *DataMiner CloudGateway* DxM in the overview and verify that its version is 2.8.0 or higher.
 

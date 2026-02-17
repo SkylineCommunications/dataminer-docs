@@ -112,7 +112,7 @@ SLLogCollector packages will now also include the following additional files con
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When you opened the *Automation* app in DataMiner Cube and selected an unmodified script, the latest updates made to that script by another Cube client or another program (e.g. DataMiner Integration Studio) would not be shown. From now on, when you open a script in the Automation app that has not yet been changed in that same app, the latest version of that script will now automatically be retrieved from the server.
+When you opened the *Automation* app in DataMiner Cube and selected an unmodified script, the latest updates made to that script by another Cube client or another program (e.g., DataMiner Integration Studio) would not be shown. From now on, when you open a script in the Automation app that has not yet been changed in that same app, the latest version of that script will now automatically be retrieved from the server.
 
 #### Problem with Elasticsearch health monitoring [ID 34744]
 
@@ -182,7 +182,7 @@ In some cases, an error could occur in SLDataMiner when loading an alarm templat
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU11] - FR 10.3.2 -->
 
-When, in *Scheduler*, *Automation* or *Correlation*, you opened scheduled tasks, automation scripts or correlation rules containing actions that include PDF reports, in some rare cases, the data linked to those reports (i.e. the elements and services in view selection) could not be loaded. This data will now be loaded correctly. Also, a "Loading" indicator will now be displayed and the actions will remain disabled while the data is being loaded. When an error occurs while loading the protocols associated with said data, a clear warning entry will also be added to the Cube logging.
+When, in *Scheduler*, *Automation* or *Correlation*, you opened scheduled tasks, automation scripts or correlation rules containing actions that include PDF reports, in some rare cases, the data linked to those reports (i.e., the elements and services in view selection) could not be loaded. This data will now be loaded correctly. Also, a "Loading" indicator will now be displayed and the actions will remain disabled while the data is being loaded. When an error occurs while loading the protocols associated with said data, a clear warning entry will also be added to the Cube logging.
 
 > [!NOTE]
 > From now on, in the *Elements and services in view selection* list, it will also be possible to select parameters of enhanced services.
@@ -221,7 +221,7 @@ When you opened the trend graph of a parameter that contained discrete values or
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When you ran SLLogCollector via the command line and specified multiple processes for which dumps had to be taken (e.g. `SL_LogCollector.exe -c -d=46436,61652`), it would incorrectly only take a dump of the first process.
+When you ran SLLogCollector via the command line and specified multiple processes for which dumps had to be taken (e.g., `SL_LogCollector.exe -c -d=46436,61652`), it would incorrectly only take a dump of the first process.
 
 #### Problem with the generation of TaskCancellationExceptions [ID 35079]
 
@@ -268,11 +268,11 @@ Also, a problem with the detection of infinite loops for SNMPv3 when receiving e
 One-day average trend records would incorrectly only be written into the database if
 
 - a TTL was specified, and
-- the *MaintenanceSettings.xml* file contained an entry specifying the window size (e.g. `<TimeSpan1DayRecords windows="120" />`).
+- the *MaintenanceSettings.xml* file contained an entry specifying the window size (e.g., `<TimeSpan1DayRecords windows="120" />`).
 
 From now on, one-day average trend records will be written into the database as soon as a TTL setting has been configured for *Day records*.
 
-Also, the default window size for the records has been restored to 120 minutes (i.e. 2 hours).
+Also, the default window size for the records has been restored to 120 minutes (i.e., 2 hours).
 
 > [!TIP]
 > See [Missing 1-day average trending records](xref:KI_missing_avg_trending).
@@ -386,7 +386,7 @@ When creating or editing a query, you can select the query columns from a select
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When data (e.g. a query) was deleted while it was selected, in some cases, it would incorrectly not be removed from the selection.
+When data (e.g., a query) was deleted while it was selected, in some cases, it would incorrectly not be removed from the selection.
 
 #### Dashboards app: Two context menus could incorrectly be displayed simultaneously in the side bar [ID 35255]
 
@@ -420,7 +420,7 @@ Up to now, when email addresses and hyperlinks to web pages were retrieved from 
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e. eventing and polling) would incorrectly be used simultaneously.
+When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e., eventing and polling) would incorrectly be used simultaneously.
 
 #### Low-Code Apps: Keyboard shortcuts would not work in the dashboard editor [ID 35274]
 

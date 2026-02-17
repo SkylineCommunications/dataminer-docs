@@ -13,7 +13,7 @@ To define a page button:
 1. Specify the width of the page button (the value must at least be 110).
 
 > [!NOTE]
-> To distinguish a page button from an ordinary button, always add an ellipsis (i.e. three dots) to the value displayed on the button (without a space between the value and the ellipsis).
+> To distinguish a page button from an ordinary button, always add an ellipsis (i.e., three dots) to the value displayed on the button (without a space between the value and the ellipsis).
 
 ```xml
 <Param id="220">

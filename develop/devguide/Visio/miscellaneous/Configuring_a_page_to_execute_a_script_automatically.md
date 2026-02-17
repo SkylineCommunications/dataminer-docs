@@ -19,7 +19,7 @@ Script:ScriptName|DummyName=ElementName or DmaID/ElementID;...| ParameterName1=[
 
 For more information about this syntax, see [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script)
 
-If a value changes that affects any of the input specified in this syntax (e.g. a dummy or parameter), the script will be triggered.
+If a value changes that affects any of the input specified in this syntax (e.g., a dummy or parameter), the script will be triggered.
 
 ## Configuring a page to execute a script when an event occurs on the page
 

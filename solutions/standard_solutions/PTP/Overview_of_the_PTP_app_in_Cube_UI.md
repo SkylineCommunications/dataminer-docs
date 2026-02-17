@@ -52,7 +52,7 @@ The information in this tab is displayed in several separate blocks.
 
   - On the left, a block with general information about the grandmaster:
 
-    - The name of the current grandmaster clock (i.e. the grandmaster clock reported by the PTP probe). A toggle button next to the name allows you to switch between the element name in DataMiner or the alias.
+    - The name of the current grandmaster clock (i.e., the grandmaster clock reported by the PTP probe). A toggle button next to the name allows you to switch between the element name in DataMiner or the alias.
 
     - The ID of the current grandmaster clock.
 
@@ -70,7 +70,7 @@ The information in this tab is displayed in several separate blocks.
 
   - In the top-right corner, the name of the current grandmaster interface is displayed. Click the cogwheel button next to this name to select a different interface.
 
-- The **performance** block at the bottom of the tab allows you to track the overall PTP performance by monitoring PTP metrics that have trending activated (e.g. *Offset From Master* and *Mean Path Delay*). Below the trend graph, you can select any trended PTP parameter from any PTP node. If you want to display the trend graph in full-screen mode, click the full-screen icon in the top-right corner of this block.
+- The **performance** block at the bottom of the tab allows you to track the overall PTP performance by monitoring PTP metrics that have trending activated (e.g., *Offset From Master* and *Mean Path Delay*). Below the trend graph, you can select any trended PTP parameter from any PTP node. If you want to display the trend graph in full-screen mode, click the full-screen icon in the top-right corner of this block.
 
 ### Special PTP parameters in the Summary tab
 
@@ -196,7 +196,7 @@ This tab consists of the following subtabs:
 
 - **Slave clocks**: Lists all slave clocks in the PTP topology, each with a number of PTP-related parameters.
 
-- **Analyzers**: Allows you to compare a number of parameters of two PTP analyzers, i.e. slave clocks that have been specially assigned to monitor and analyze the PTP signal they retrieve from a clock.
+- **Analyzers**: Allows you to compare a number of parameters of two PTP analyzers, i.e., slave clocks that have been specially assigned to monitor and analyze the PTP signal they retrieve from a clock.
 
   Above the element name of each displayed PTP analyzer, two icons are available:
 
@@ -218,7 +218,7 @@ Alarm states are indicated as follows:
 
 - The color of the icon marking the type of node indicates the PTP alarm state of that node (taking into account only the PTP-related parameters of the node).
 
-- If a line connecting two nodes has an alarm color, this means that there is an alarm on the interface table (e.g. interface not connected).
+- If a line connecting two nodes has an alarm color, this means that there is an alarm on the interface table (e.g., interface not connected).
 
 > [!NOTE]
 > New PTP nodes are automatically displayed in the top-left corner of the topology page.

@@ -4,7 +4,7 @@ uid: Configuring_LDAP_settings
 
 # Configuring LDAP settings
 
-DataMiner supports any LDAP-compatible directory (e.g. OpenLDAP) as an alternative to Active Directory for importing users and groups into a DMA.
+DataMiner supports any LDAP-compatible directory (e.g., OpenLDAP) as an alternative to Active Directory for importing users and groups into a DMA.
 
 > [!TIP]
 > See also: [Lightweight Directory Access Protocol](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ldap/lightweight-directory-access-protocol-ldap-api)
@@ -130,7 +130,7 @@ The following example shows how Global Telecom Company ("GTC") has configured th
 ```
 
 > [!NOTE]
-> Normally, when using Active Directory, you do not have to add an \<LDAP> tag. However, if you have to specify non-default settings (e.g. when you want to link to a secondary domain controller), add an \<LDAP> tag and specify all necessary settings.
+> Normally, when using Active Directory, you do not have to add an \<LDAP> tag. However, if you have to specify non-default settings (e.g., when you want to link to a secondary domain controller), add an \<LDAP> tag and specify all necessary settings.
 
 ## Remarks regarding LDAP settings
 
@@ -156,7 +156,7 @@ The following example shows how Global Telecom Company ("GTC") has configured th
 
 - The *\<Classname>* tags indicate the object class(es) that identify groups and users. Multiple values can be separated with pipe characters ("\|").
 
-- If you set the *useForFullName* attribute to "true" (i.e. the default setting), the full usernames will be retrieved by means of LDAP. If you set this attribute to "false", full usernames will be retrieved by means of NetAPI instead. This attribute corresponds to the *Use fully qualified domain name (FQDN)* setting in Cube.
+- If you set the *useForFullName* attribute to "true" (i.e., the default setting), the full usernames will be retrieved by means of LDAP. If you set this attribute to "false", full usernames will be retrieved by means of NetAPI instead. This attribute corresponds to the *Use fully qualified domain name (FQDN)* setting in Cube.
 
 - DataMiner can only connect to one LDAP server, so only one LDAP tag can be specified.
 

@@ -7,7 +7,7 @@ uid: GetActiveAlarmsForViewSorted
 Use this method to retrieve a specific number of active view alarms.
 
 > [!NOTE]
-> Using this method, you can e.g. request alarms in batches in order to minimize loading time.
+> Using this method, you can e.g., request alarms in batches in order to minimize loading time.
 
 ## Input
 
@@ -15,7 +15,7 @@ Use this method to retrieve a specific number of active view alarms.
 |--|--|--|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | viewID | Integer | The view ID. |
-| groupOn | String | The field by which to group the alarms. This can be a severity (e.g. “critical”, “major”, etc.) or a relative time string (e.g. “yesterday”, “last week”, etc.) |
+| groupOn | String | The field by which to group the alarms. This can be a severity (e.g., “critical”, “major”, etc.) or a relative time string (e.g., “yesterday”, “last week”, etc.) |
 | index | Integer | The point from which to start returning alarms. |
 | count | Integer | The number of alarms to be returned. |
 | orderBy | String | The Alarm Console column(s) by which to order the alarms (separated by semicolons). |

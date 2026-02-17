@@ -50,7 +50,7 @@ In the *Logging* section of *System Center*, it is now possible to set log level
 > - If you want to set the same non-default log levels for multiple log files, then note that you can select more than one file in step 1. To select more than one file, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the Shift key.
 > - In the left-hand pane, the current log levels for each of the DataMiner log files are displayed next to the name of the file.
 >   - If a file inherits the system-wide log levels, the log levels displayed next to the file will appear in gray.
->   - If a file has specific log levels defined (i.e. if the system-wide levels are overridden), the log levels displayed next to the file will appear in black.
+>   - If a file has specific log levels defined (i.e., if the system-wide levels are overridden), the log levels displayed next to the file will appear in black.
 > - If you clear the *Override log levels* option for a particular log file, that file will again inherit the system-wide log levels.
 
 ##### Setting the system-wide log levels
@@ -260,7 +260,7 @@ A number of enhancements have been made to the ListView component, which is used
 
 #### HTML5 apps: Enhanced installation \[ID 24745\]
 
-A number of enhancements have been made to the DataMiner HTML5 apps (e.g. Jobs, Dashboards, etc.). Users will now be able to install these apps much like they install other mobile apps.
+A number of enhancements have been made to the DataMiner HTML5 apps (e.g., Jobs, Dashboards, etc.). Users will now be able to install these apps much like they install other mobile apps.
 
 #### DataMiner Analytics - Alarm focus: AlarmFocusEvents associated with alarms of elements that are paused or stopped will no longer be cleared \[ID 24750\]
 
@@ -309,7 +309,7 @@ Because client computers running a Microsoft Windows version prior to Windows 10
 
 #### SLDMS: SLElement/SLDMS throttle removed \[ID 24862\]
 
-Previously, the amount of simultaneous calls that native SLElement and SLDMS modules could make to the local SLNet process was limited to 1 and 5 respectively. This limit has now been removed. Both now use the same limit as other processes, i.e. 10 simultaneous calls.
+Previously, the amount of simultaneous calls that native SLElement and SLDMS modules could make to the local SLNet process was limited to 1 and 5 respectively. This limit has now been removed. Both now use the same limit as other processes, i.e., 10 simultaneous calls.
 
 If you prefer to keep the call limits as they were, you can specify the following option in the *\<appSettings>* section of the `C:\Skyline DataMiner\Files\SLNetCOM.dll.config` file:
 
@@ -401,11 +401,11 @@ Also, when an element with bubble-up alarms in a recursive table was restarted, 
 
 #### DataMiner Cube - Trending: Problem when exporting trend data to CSV while trend logging was disabled \[ID 24699\]
 
-When you exported a trend graph to a CSV file after selecting the *Everything* option, in some cases, none or only part of the trend data would get exported when trend logging was disabled. Also, afterwards, data could be missing from the trend graph when selecting e.g. “Previous month”.
+When you exported a trend graph to a CSV file after selecting the *Everything* option, in some cases, none or only part of the trend data would get exported when trend logging was disabled. Also, afterwards, data could be missing from the trend graph when selecting e.g., “Previous month”.
 
 #### DataMiner Cube - Bookings app: Problem when zooming to last/next month in the bookings timeline \[ID 24704\]
 
-When, in the bookings timeline, you zoomed to last/next month, in some cases, the timeline would zoom to an incorrect time range (e.g. one day).
+When, in the bookings timeline, you zoomed to last/next month, in some cases, the timeline would zoom to an incorrect time range (e.g., one day).
 
 #### DataMiner Cube - Services app: Problem with service definition diagram updates \[ID 24707\]
 
@@ -421,7 +421,7 @@ In some cases, lite dropdown controls would not contain the correct values, espe
 
 #### Problem when writing multiple datasets to a database \[ID 24748\]
 
-When multiple datasets were written to a database in one go, e.g. when inserting data temporarily stored in offload files, in some cases, the following exception could be thrown:
+When multiple datasets were written to a database in one go, e.g., when inserting data temporarily stored in offload files, in some cases, the following exception could be thrown:
 
 ```txt
 System.InvalidOperationException: Collection was modified after the enumerator was instantiated.
@@ -429,7 +429,7 @@ System.InvalidOperationException: Collection was modified after the enumerator w
 
 #### DataMiner Cube - Advanced search: Problem when matches could only be found for one of the state filter options \[ID 24758\]
 
-When, in the advanced search, you filter by item type (e.g. “Element”), an additional state filter appears. When you selected that state filter, in some cases, Cube would stop working when matches could only be found for one of the state filter options.
+When, in the advanced search, you filter by item type (e.g., “Element”), an additional state filter appears. When you selected that state filter, in some cases, Cube would stop working when matches could only be found for one of the state filter options.
 
 #### DataMiner Installer: Problem when installing a DataMiner Agent with a Cassandra database \[ID 24762\]
 
@@ -519,7 +519,7 @@ L::GetLocalMAC|ERR|-1|Address length of 0
 
 #### DataMiner Cube: Problem when entering special characters in header search box \[ID 24869\]
 
-When, in the header search box, you searched for special characters (e.g. “++”), no results would be returned, even when results were available.
+When, in the header search box, you searched for special characters (e.g., “++”), no results would be returned, even when results were available.
 
 #### DataMiner Maps: Problem retrieving the alarm level for a marker from a column different from the primary key \[ID 24870\]
 
@@ -535,7 +535,7 @@ In some cases, collapsing the sidebar would cause it to go into an invalid state
 
 #### Jobs app: Save button could no longer be clicked after trying to save a job that contained errors \[ID 24881\]
 
-After trying to save a job that contained errors (e.g. missing fields), in some cases, it would no longer be possible to click the *Save* button again after correcting the errors.
+After trying to save a job that contained errors (e.g., missing fields), in some cases, it would no longer be possible to click the *Save* button again after correcting the errors.
 
 #### Problem when calling GetParameter on the virtual element of a redundancy group \[ID 24892\]
 
@@ -581,7 +581,7 @@ When you created a new service, in some rare cases, the name of that service wou
 
 #### CPE Management: Problem when resolving recursively linked keys \[ID 25023\]
 
-In some cases, recursively linked keys would be resolved incorrectly. This would especially affect the retrieval of CPE data (e.g. alarm properties).
+In some cases, recursively linked keys would be resolved incorrectly. This would especially affect the retrieval of CPE data (e.g., alarm properties).
 
 #### Jobs app: No headers were displayed at the top of the jobs list \[ID 25042\]
 

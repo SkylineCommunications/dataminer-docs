@@ -18,7 +18,7 @@ By default, a parameter will not support alarming (and therefore will not be sho
 
 > [!NOTE]
 >
-> - A parameter that supports alarming should be visualized to the user (i.e. have a position on a page).
+> - A parameter that supports alarming should be visualized to the user (i.e., have a position on a page).
 > - Monitoring must never be applied on parameters of type "write".
 
 In an alarm template, a user can specify values for different alarm severity levels. In order to avoid users having to spend too much time specifying these values, default values can be provided in a protocol (which can then be overridden by a user in DataMiner if desired).
@@ -68,7 +68,7 @@ For parameters holding discrete values, the discrete value can be used for setti
 > [!NOTE]
 >
 > - In DataMiner, the corresponding display value (as indicated in the Display tag) will be displayed in the alarm template.
-> - For parameters with measurement type set to discreet or string, the low severity levels are not applicable (i.e. only the tags Normal, WaH, MiH, MaH and CH can be used in this case).
+> - For parameters with measurement type set to discreet or string, the low severity levels are not applicable (i.e., only the tags Normal, WaH, MiH, MaH and CH can be used in this case).
 
 ```xml
 <Param id="10" trending="true">

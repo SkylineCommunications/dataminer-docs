@@ -4,7 +4,7 @@ uid: AdvancedCustomProperties
 
 # Custom properties
 
-Elements, services, views and alarms contain properties that provide more details, e.g. when and by whom the alarm template has been changed. It is also possible to create custom properties. Creating custom properties can be done in a protocol.
+Elements, services, views and alarms contain properties that provide more details, e.g., when and by whom the alarm template has been changed. It is also possible to create custom properties. Creating custom properties can be done in a protocol.
 
 - <xref:AdvancedCustomPropertiesCustomElementProperties>
 - <xref:AdvancedCustomPropertiesEditingCustomProperties>

@@ -34,7 +34,7 @@ Expected duration: 15 minutes
 
    ![New workflow button](~/solutions/images/Workflow_Designer_New_Workflow.png)
 
-1. Specify a name of your choice in the **Workflow name** box, e.g. *SDI/IP Base Workflow*.
+1. Specify a name of your choice in the **Workflow name** box, e.g., *SDI/IP Base Workflow*.
 
 1. If you want the workflow to show up at the top of the list of workflows, select the **Favorite** box.
 
@@ -110,7 +110,7 @@ In order to be able to use this workflow in the Scheduling app, the workflow's s
 
 1. In the **Start Time** and **End Time** boxes, customize the timing for the job so that it does not start executing right away.
 
-1. In the **Workflow** box, select the workflow you created earlier, e.g. *SDI/IP Base Workflow*.
+1. In the **Workflow** box, select the workflow you created earlier, e.g., *SDI/IP Base Workflow*.
 
 1. Click the **Create Job** button.
 

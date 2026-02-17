@@ -6,7 +6,7 @@ uid: General_Main_Release_10.2.0_fixes
 
 #### Problem when deleting an element that had data stored in Elasticsearch \[ID 27663\]
 
-When you deleted an element that had data stored in an Elasticsearch database (e.g. a logger table), in some cases, this would cause errors in other elements that shared data with the element you deleted.
+When you deleted an element that had data stored in an Elasticsearch database (e.g., a logger table), in some cases, this would cause errors in other elements that shared data with the element you deleted.
 
 #### Incorrect error message when uploading a protocol with a minimum required version \[ID 27868\]
 
@@ -100,7 +100,7 @@ When you refreshed a line chart component that had the “Expand legend initiall
 
 #### Dashboards app: Components not displayed when embedded \[ID 28492\]
 
-In some cases, dashboards components would not be displayed when embedded in e.g. Visual Overview.
+In some cases, dashboards components would not be displayed when embedded in e.g., Visual Overview.
 
 #### Dashboards app: Dummy EPM columns displayed \[ID 28495\]
 
@@ -154,7 +154,7 @@ When you started the DataMiner Cube desktop app with the “/Hostname=xyz” com
 
 #### Dashboards app: Feeds section of edit pane’s Data tab incorrectly listed feeds using the component names \[ID 28779\]
 
-When you added a feed component to a dashboard (e.g. a dropdown feed) and gave it a title, in the Feeds section of the edit pane’s Data tab, the feed would incorrectly have the name you gave to the component instead of the actual name of the feed.
+When you added a feed component to a dashboard (e.g., a dropdown feed) and gave it a title, in the Feeds section of the edit pane’s Data tab, the feed would incorrectly have the name you gave to the component instead of the actual name of the feed.
 
 #### DataMiner Cube: Desktop app could no longer be installed from the landing page \[ID 28802\]
 
@@ -323,7 +323,7 @@ When you tried to export the average trend data of a trend graph with multiple l
 
 #### Dashboards app - GQI: Filters unnecessarily sent along with SLNet calls \[ID 29583\]
 
-When a GQI query contains a filter to be applied to e.g. a parameter table, then that filter will be sent along with the SLNet call to allow SLElement to apply the filter for performance reasons. However, in some cases, a filter would also be sent along with the SLNet call when this was not applicable (e.g. when there was a join or aggregation operation between the filter and the data source).
+When a GQI query contains a filter to be applied to, for example, a parameter table, then that filter will be sent along with the SLNet call to allow SLElement to apply the filter for performance reasons. However, in some cases, a filter would also be sent along with the SLNet call when this was not applicable (e.g., when there was a join or aggregation operation between the filter and the data source).
 
 #### Elasticsearch: Problem with postfilters \[ID 29602\]
 
@@ -356,7 +356,7 @@ When a SetDataMinerInfoMessage was used to delete a service using the service na
 
 #### Interactive automation scripts: Problem when entering double-digit numbers in input controls \[ID 29736\]
 
-In some cases, because of a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g. a number of minutes) in an input control. The interactive automation script would incorrectly already continue after you entered the first digit.
+In some cases, because of a problem with the WantsOnChange functionality, it would not be possible to enter a double-digit number (e.g., a number of minutes) in an input control. The interactive automation script would incorrectly already continue after you entered the first digit.
 
 #### Problem when an interactive Automaton script was detached on closure \[ID 29815\]
 
@@ -530,7 +530,7 @@ In some rare cases, overall memory usage of the SLAnalytics process would tempor
 
 #### Enabled soft-launch options could incorrectly be disabled \[ID 31033\]
 
-When no *SoftLaunchOptions.xml* file was found in the `C:\Skyline DataMiner\` root directory, soft-launch options that were enabled by default (e.g. the new average trending feature) would incorrectly be disabled.
+When no *SoftLaunchOptions.xml* file was found in the `C:\Skyline DataMiner\` root directory, soft-launch options that were enabled by default (e.g., the new average trending feature) would incorrectly be disabled.
 
 #### Interactive automation scripts: Problem with file upload components \[ID 31064\]
 
@@ -597,7 +597,7 @@ When an interactive automation script was launched from a web app, in some cases
 
 #### DataMiner Cube - System Center: Server setting updates not saved immediately \[ID 31339\]
 
-When you updated server settings in System Center (e.g. the default browser plug-in), up to now, it could take up to 10 seconds for the changes to be applied. Also, when Cube was closed in the meantime, those latest changes would be lost. From now on, all changes made to system settings will be applied immediately.
+When you updated server settings in System Center (e.g., the default browser plug-in), up to now, it could take up to 10 seconds for the changes to be applied. Also, when Cube was closed in the meantime, those latest changes would be lost. From now on, all changes made to system settings will be applied immediately.
 
 #### DataMiner Cube - Alarm Console: Problem after turning on the alarm focus feature \[ID 31343\]
 
@@ -635,7 +635,7 @@ In some cases, a parameter feed could incorrectly continue to feed data even tho
 
 #### Dashboards Sharing: Incorrect login screen when the shared dashboard you were viewing was unshared \[ID 31503\]
 
-When a shared dashboard was unshared while you were viewing it, up to now, you would incorrectly be redirected to the login screen of the Dashboards app. From now on, you will be redirected to the DataMiner Cloud login screen (i.e. <https://shares.dataminer.services>) instead.
+When a shared dashboard was unshared while you were viewing it, up to now, you would incorrectly be redirected to the login screen of the Dashboards app. From now on, you will be redirected to the DataMiner Cloud login screen (i.e., <https://shares.dataminer.services>) instead.
 
 #### Dashboards app: Value for EPM components with only one chain filter not displayed in PDF report \[ID 31563\]
 
@@ -643,7 +643,7 @@ In a PDF report, in some cases, EPM components that only had one active chain fi
 
 #### Failover: Status of newly installed Failover system not set to 'No problems detected' \[ID 31604\]
 
-In some cases, the status of a newly installed Failover system would incorrectly not be set to “No problems detected” (i.e. green LED).
+In some cases, the status of a newly installed Failover system would incorrectly not be set to “No problems detected” (i.e., green LED).
 
 #### Automation: Possible to add multiple files in file selector of interactive script despite AllowMultipleFiles being set to false \[ID 31614\]
 
@@ -667,7 +667,7 @@ In some cases, an exception could be thrown when you opened a histogram.
 
 #### Web apps: 'Refresh now' instead of 'Reconnecting...' message after communication was interrupted \[ID 31753\]
 
-Up now on, when a web app (e.g. Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the web page.
+Up now on, when a web app (e.g., Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the web page.
 
 #### Failover: DataMiner modules would incorrectly consider the local IP address of the online agent as the primary IP address of the Failover setup \[ID 31756\]
 
@@ -695,7 +695,7 @@ Due to a number of enhancements, overall performance of the parameter feed has i
 
 #### Problem with filtered table subscriptions on DVE elements \[ID 31845\]
 
-When a subscription on a table of a DVE element had been created with a filter (e.g. a primary key filter), the client would receive the initial data but no updates.
+When a subscription on a table of a DVE element had been created with a filter (e.g., a primary key filter), the client would receive the initial data but no updates.
 
 #### Failover: Problem when setting up a Failover system with a Cassandra database \[ID 31854\]
 
@@ -803,4 +803,4 @@ In some cases, pattern matching would no longer work due to a problem while retr
 
 #### Web apps: 'Refresh now' message would incorrectly appear when opening a web app that did not have an active websocket connection \[ID 32585\]
 
-When your opened a web app (e.g. Dashboards, Monitoring, Ticketing, etc.) that did not have an active websocket connection, a “Refresh now” message would incorrectly appear. From now on, this message will only appear when an active websocket connection was broken.
+When your opened a web app (e.g., Dashboards, Monitoring, Ticketing, etc.) that did not have an active websocket connection, a “Refresh now” message would incorrectly appear. From now on, this message will only appear when an active websocket connection was broken.

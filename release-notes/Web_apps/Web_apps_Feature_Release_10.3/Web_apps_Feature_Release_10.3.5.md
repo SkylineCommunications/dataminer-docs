@@ -55,7 +55,7 @@ In the *Monitoring* app, histograms now have a number of time range buttons that
 
 When configuring a line & area chart component, you can now use the *Interval* option to set the interval between the average trend data points shown in a trend graph to one of the following values:
 
-- Auto (i.e. an interval relative to the specified trend span)
+- Auto (i.e., an interval relative to the specified trend span)
 - Five minutes
 - One hour
 - One day
@@ -79,7 +79,7 @@ Up to now, all sorting had to be configured by means of *Sort* nodes. For exampl
 
 or
 
-1. Query X (i.e. Data Source, sorted by B)
+1. Query X (i.e., Data Source, sorted by B)
 1. Sort by A
 
 From now on, you can create a query in a much more intuitive way. For example, if you want to first sort by column A and then by column B, you can now create a query in the following way:
@@ -95,7 +95,7 @@ Note that, from now on, every *Sort by* node will nullify any preceding *Sort by
 1. Sort by A
 
 > [!NOTE]
-> The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
+> The behavior of existing queries (using e.g., *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
 > For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
 
 #### Dashboards app & Low-Code Apps: New 'Text input' feed [ID 35902]
@@ -269,7 +269,7 @@ The following enhancements have been made with regard to the Web Services API:
 
 - It is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open WebSocket connections using the same connection ID.
 
-- Up to now, when the *remember me* auto-login cookie could not be generated (e.g. because the user entered an unusually long user name), an error would be thrown. From now on, no error will be thrown anymore. The cookie will not be generated and the user will have to manually log back in again when starting a new session.
+- Up to now, when the *remember me* auto-login cookie could not be generated (e.g., because the user entered an unusually long user name), an error would be thrown. From now on, no error will be thrown anymore. The cookie will not be generated and the user will have to manually log back in again when starting a new session.
 
 > [!IMPORTANT]
 > BREAKING CHANGE: Due to the changes made with respect to WebSocket communication, it will no longer be possible to use the following web methods:
@@ -328,7 +328,7 @@ A number of security enhancements have been made.
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-In some cases, it would not be possible to log in to a web app (e.g. Dashboards, Monitoring, Jobs, etc.) using external authentication.
+In some cases, it would not be possible to log in to a web app (e.g., Dashboards, Monitoring, Jobs, etc.) using external authentication.
 
 #### GQI: GetArgumentValue method would throw an exception when used to access the value of an optional argument [ID 35783]
 
@@ -408,7 +408,7 @@ When a dashboard with a state, ring or gauge component was shared, in some cases
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
-When, in the *Layout* tab, a text box (e.g. the box containing the title of the selected component) had the focus, and you selected another component, the text box in the *Layout* tab would incorrectly still contain the value of the previously selected component.
+When, in the *Layout* tab, a text box (e.g., the box containing the title of the selected component) had the focus, and you selected another component, the text box in the *Layout* tab would incorrectly still contain the value of the previously selected component.
 
 #### Dashboards app & Low-Code Apps - Table component: A collapsed group would incorrectly expand when new data was loaded into the table [ID 35856]
 

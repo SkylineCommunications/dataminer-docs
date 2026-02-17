@@ -27,7 +27,7 @@ In the *Logging* section of *System Center*, it is now possible to set log level
 > - If you want to set the same non-default log levels for multiple log files, then note that you can select more than one file in step 1. To select more than one file, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the Shift key.
 > - In the left-hand pane, the current log levels for each of the DataMiner log files are displayed next to the name of the file.
 >   - If a file inherits the system-wide log levels, the log levels displayed next to the file will appear in gray.
->   - If a file has specific log levels defined (i.e. if the system-wide levels are overridden), the log levels displayed next to the file will appear in black.
+>   - If a file has specific log levels defined (i.e., if the system-wide levels are overridden), the log levels displayed next to the file will appear in black.
 > - If you clear the *Override log levels* option for a particular log file, that file will again inherit the system-wide log levels.
 
 ##### Setting the system-wide log levels
@@ -151,7 +151,7 @@ Because client computers running a Microsoft Windows version prior to Windows 10
 
 #### SLDMS: SLElement/SLDMS throttle removed \[ID 24862\]
 
-Previously, the amount of simultaneous calls that native SLElement and SLDMS modules could make to the local SLNet process was limited to 1 and 5 respectively. This limit has now been removed. Both now use the same limit as other processes, i.e. 10 simultaneous calls.
+Previously, the amount of simultaneous calls that native SLElement and SLDMS modules could make to the local SLNet process was limited to 1 and 5 respectively. This limit has now been removed. Both now use the same limit as other processes, i.e., 10 simultaneous calls.
 
 If you prefer to keep the call limits as they were, you can specify the following option in the *\<appSettings>* section of the `C:\Skyline DataMiner\Files\SLNetCOM.dll.config` file:
 
@@ -213,7 +213,7 @@ Up to now, when the value of an element property was updated using the *SetPrope
 
 #### Service & Resource Management: Enhanced performance when retrieving available resources \[ID 25061\]
 
-Due to a number of enhancements, overall performance has increased when retrieving available resources (e.g. by means of the GetAvailableResource method).
+Due to a number of enhancements, overall performance has increased when retrieving available resources (e.g., by means of the GetAvailableResource method).
 
 #### DataMiner Cube - Visual Overview: ListView component will not show a set of default columns when no columns are configured in its shape data \[ID 25098\]
 
@@ -243,7 +243,7 @@ However, note that this logging will only be enabled for a particular element if
 
 From now on, LDAP queries will, by default, time out after 5 minutes.
 
-This setting can be configured in the *DataMiner.xml* file. Enter a value in seconds. If the LDAP.QueryTimeout tag is not present, a default value of 300 seconds (i.e. 5 minutes) will be taken. See the example below.
+This setting can be configured in the *DataMiner.xml* file. Enter a value in seconds. If the LDAP.QueryTimeout tag is not present, a default value of 300 seconds (i.e., 5 minutes) will be taken. See the example below.
 
 ```xml
 <DataMiner>
@@ -359,7 +359,7 @@ When a Failover setup with the *AlwaysBruteForceOffline* option enabled had to g
 
 #### DataMiner Cube - Visual Overview: Problem when loading a trend group in a trend component \[ID 24590\]
 
-When you embed a trend component on a Visio page, you can have it load a trend group by setting the *Parameters* shape data field to “TrendGroup=\<username>/sharedusersettings:\<groupName>”. When this entry contained a dynamic part (e.g. \[var:xxx\]), in some cases, updates would not get processed correctly and the trend graph would be cleared.
+When you embed a trend component on a Visio page, you can have it load a trend group by setting the *Parameters* shape data field to “TrendGroup=\<username>/sharedusersettings:\<groupName>”. When this entry contained a dynamic part (e.g., \[var:xxx\]), in some cases, updates would not get processed correctly and the trend graph would be cleared.
 
 #### Problem with file synchronization cache \[ID 24620\]
 
@@ -389,11 +389,11 @@ When profile manager data (profile parameters, profile instances or profile defi
 
 #### DataMiner Cube - Trending: Problem when exporting trend data to CSV while trend logging was disabled \[ID 24699\]
 
-When you exported a trend graph to a CSV file after selecting the *Everything* option, in some cases, none or only part of the trend data would get exported when trend logging was disabled. Also, afterwards, data could be missing from the trend graph when selecting e.g. “Previous month”.
+When you exported a trend graph to a CSV file after selecting the *Everything* option, in some cases, none or only part of the trend data would get exported when trend logging was disabled. Also, afterwards, data could be missing from the trend graph when selecting e.g., “Previous month”.
 
 #### DataMiner Cube - Bookings app: Problem when zooming to last/next month in the bookings timeline \[ID 24704\]
 
-When, in the bookings timeline, you zoomed to last/next month, in some cases, the timeliine would zoom to an incorrect time range (e.g. one day).
+When, in the bookings timeline, you zoomed to last/next month, in some cases, the timeliine would zoom to an incorrect time range (e.g., one day).
 
 #### DataMiner Cube - Services app: Problem with service definition diagram updates \[ID 24707\]
 
@@ -412,7 +412,7 @@ In some cases, lite dropdown controls would not contain the correct values, espe
 
 #### DataMiner Cube - Advanced search: Problem when matches could only be found for one of the state filter options \[ID 24758\]
 
-When, in the advanced search, you filter by item type (e.g. “Element”), an additional state filter appears. When you selected that state filter, in some cases, Cube would stop working when matches could only be found for one of the state filter options.
+When, in the advanced search, you filter by item type (e.g., “Element”), an additional state filter appears. When you selected that state filter, in some cases, Cube would stop working when matches could only be found for one of the state filter options.
 
 #### Problem when creating virtual function based on entry point tables that were part of the same relation \[ID 24770\]
 
@@ -486,7 +486,7 @@ L::GetLocalMAC|ERR|-1|Address length of 0
 
 #### DataMiner Cube: Problem when entering special characters in header search box \[ID 24869\]
 
-When, in the header search box, you searched for special characters (e.g. “++”), no results would be returned, even when results were available.
+When, in the header search box, you searched for special characters (e.g., “++”), no results would be returned, even when results were available.
 
 #### DataMiner Maps: Problem retrieving the alarm level for a marker from a column different from the primary key \[ID 24870\]
 
@@ -595,7 +595,7 @@ In some cases, an exception could be thrown when retrieve CPE-related element da
 
 #### CPE Management: Problem when resolving recursively linked keys \[ID 25023\]
 
-In some cases, recursively linked keys would be resolved incorrectly. This would especially affect the retrieval of CPE data (e.g. alarm properties).
+In some cases, recursively linked keys would be resolved incorrectly. This would especially affect the retrieval of CPE data (e.g., alarm properties).
 
 #### DataMiner Cube: Minor issues with the new DataMiner X UI layout \[ID 25026\]
 
@@ -715,7 +715,7 @@ When SLGSMGateway updated its cache after an element had been added, updated or 
 
 #### Problem when the view column of a table containing DVE child elements to be created contained single view IDs \[ID 25255\]
 
-A table containing DVE child elements to be created can have a column that contains the view(s) the child element has to be created in (i.e. a column with option="view"). In the cells of this column, you can enter a single view ID, a single view name, a list of view IDs separated by semicolons, a list of view names separated by semicolons or a mixed list of view IDs and view names separated by semicolons.
+A table containing DVE child elements to be created can have a column that contains the view(s) the child element has to be created in (i.e., a column with option="view"). In the cells of this column, you can enter a single view ID, a single view name, a list of view IDs separated by semicolons, a list of view names separated by semicolons or a mixed list of view IDs and view names separated by semicolons.
 
 In some cases, a problem could occur when single view IDs had been entered in this column.
 
@@ -841,7 +841,7 @@ In some rare cases, the *FollowPathColor* option would not get applied, especial
 
 Up to now, in some cases, user initials in DataMiner Cube would be inconsistent. Now, user initials will always be the first letters of the full name.
 
-Note that, by design, the user selector at the bottom of the login screen will still display only one letter (i.e. the first letter of the full name).
+Note that, by design, the user selector at the bottom of the login screen will still display only one letter (i.e., the first letter of the full name).
 
 #### DataMiner Cube - Services app: Items in diagram would still appear to be selected after switching from one tab to another \[ID 25468\]
 

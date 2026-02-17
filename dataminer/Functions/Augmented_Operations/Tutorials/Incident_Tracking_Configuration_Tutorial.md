@@ -63,7 +63,7 @@ Automatic alarm grouping groups alarms according to a set of rules, which are li
 1. Take a backup of the current *configuration.xml* file so that you can revert to this version of the file when you finish this tutorial.
 
 > [!NOTE]
-> If you are unable to access this file (e.g. because you are using [DaaS](xref:Creating_a_DMS_in_the_cloud)), you can use the automation scripts that were included in the package instead in order to follow this tutorial. To get an idea of what the *configuration.xml* file looks like, we recommend taking a look at the file on a system that you have access to.
+> If you are unable to access this file (e.g., because you are using [DaaS](xref:Creating_a_DMS_in_the_cloud)), you can use the automation scripts that were included in the package instead in order to follow this tutorial. To get an idea of what the *configuration.xml* file looks like, we recommend taking a look at the file on a system that you have access to.
 
 ## Step 3: Explore the default alarm grouping rules
 
@@ -191,11 +191,11 @@ The package was configured so that an alarm on any of the amplifiers will have a
 
       ![Grouping on custom property with pasted snippet](~/dataminer/images/customPropertyGrouping2.png)
 
-   1. In the *name* tag of the pasted snippet, fill in the property name on which you want to group, i.e. *ParentNode*.
+   1. In the *name* tag of the pasted snippet, fill in the property name on which you want to group, i.e., *ParentNode*.
 
    1. Save the file.
 
-   1. Restart *SLAnalytics.exe* (e.g. through the task manager).
+   1. Restart *SLAnalytics.exe* (e.g., through the task manager).
 
    > [!NOTE]
    > If you do not have access to the *configuration.xml* file, instead run the automation script *Incident Tracking Tutorial Scripts - Script 2 Enable Custom Alarm Property Grouping* to apply the same configuration.
@@ -258,13 +258,13 @@ It is not possible to use the *ParentNode* alarm property from the previous step
 
       ![Grouping on custom element property with pasted snippet](~/dataminer/images/customPropertyGrouping3.png)
 
-   1. In the *name* tag of the pasted snippet, fill in the property name on which you want to group, i.e. *ElementParentNode*.
+   1. In the *name* tag of the pasted snippet, fill in the property name on which you want to group, i.e., *ElementParentNode*.
 
    1. In the *threshold* tag, fill in the value *0.75*, referring to the fact that you only want to group alarms if at least 75% of the amplifiers under a given node are in alarm.
 
    1. Save the file.
 
-   1. Restart *SLAnalytics.exe* (e.g. through the task manager).
+   1. Restart *SLAnalytics.exe* (e.g., through the task manager).
 
    > [!TIP]
    > For more detailed information about adding custom rules, see [Defining custom properties for grouping](xref:Customizing_alarm_grouping_rules#defining-custom-properties-for-grouping).

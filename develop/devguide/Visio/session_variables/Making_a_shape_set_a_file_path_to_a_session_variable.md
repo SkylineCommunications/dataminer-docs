@@ -13,7 +13,7 @@ To configure this, specify the following shape data on the shape:
 - **SetVarOptions**: This shape data field allows you to specify the following options, using a pipe character ("\|") as separator:
 
   - By default, the shape will be displayed as a button. However, if you want it to be displayed the same way in Visual Overview as in Visio, set this shape data field to *Control=Shape*.
-  - To resolve a mapped network drive to the correct network location (e.g. to resolve *T:\\MyLocation* to *\\\\NetworkLocation\\User\\MyLocation*), specify the option *ResolveToUNC*.
+  - To resolve a mapped network drive to the correct network location (e.g., to resolve *T:\\MyLocation* to *\\\\NetworkLocation\\User\\MyLocation*), specify the option *ResolveToUNC*.
 
 For example, to create a button that opens a dialog box to populate the “Path” variable with the selected file path, specify the following shape data:
 

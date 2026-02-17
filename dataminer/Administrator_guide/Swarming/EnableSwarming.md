@@ -57,7 +57,7 @@ To run a prerequisites check using SLNetClientTest tool:
 
 1. In the *Properties* tab, make sure the top message is selected, and check the summary in the pane on the right.
 
-   For each prerequisite, the tool will indicate whether the prerequisite is met (*True*) or not (*False*). If you hover over the *Summary* item, you will get a detailed overview of which items cause prerequisites not to be met (e.g. specific scripts, enhanced service connectors, connectors using the obsolete alarm ID format, etc.).
+   For each prerequisite, the tool will indicate whether the prerequisite is met (*True*) or not (*False*). If you hover over the *Summary* item, you will get a detailed overview of which items cause prerequisites not to be met (e.g., specific scripts, enhanced service connectors, connectors using the obsolete alarm ID format, etc.).
 
 > [!NOTE]
 > Obsolete Engine methods are only included in the prerequisites check from DataMiner 10.5.3 onwards<!--RN 42073-->. If you are using DataMiner 10.5.1 or 10.5.2, these obsolete methods may still be present even if the prerequisite check does not report any issues. For detailed info, refer to [Preparing scripts and connectors for Swarming](xref:SwarmingPrepare#obsolete-engine-methods).
@@ -104,7 +104,7 @@ To enable Swarming using SLNetClientTest tool:
    Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded to version 10.5.1/10.6.0 or higher.
 
 > [!IMPORTANT]
-> The migrated element files will be **temporarily** backed up in the *Recycle Bin* (e.g. *2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip*). We recommend that you store these files somewhere safe if you ever want to access these again later or if you want to be able to [partially roll back Swarming](wref:SwarmingRollback).
+> The migrated element files will be **temporarily** backed up in the *Recycle Bin* (e.g., *2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip*). We recommend that you store these files somewhere safe if you ever want to access these again later or if you want to be able to [partially roll back Swarming](wref:SwarmingRollback).
 
 ## Verifying whether Swarming has been activated
 

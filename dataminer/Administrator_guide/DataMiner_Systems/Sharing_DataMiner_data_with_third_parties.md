@@ -49,7 +49,7 @@ The Sharing app allows you to share live data via dataminer.services. For more i
 
 - Use the DataMiner NBIs to query DataMiner for the information that you want to share with the third party.
 
-- Create the client application (e.g. web page, mobile phone app, etc.) with which you want to share the information with the third party.
+- Create the client application (e.g., web page, mobile phone app, etc.) with which you want to share the information with the third party.
 
 - Not all DataMiner NBIs are available by default. Optional licenses may be required.
 

@@ -26,14 +26,14 @@ When, in Visual Overview, you create a shape that should display the Resource Ma
 From now on, both variables can be processed immediately upon opening a visual overview with a Resource Manager timeline.
 
 - Setting the Navigate variable using a page-level InitVar will make the timeline navigate immediately to the chosen time slot and clear the Navigate variable.
-- The Viewport variable will always be read upon opening the Resource Manager timeline. In other words, if a session variable already exists in the scope in question (e.g. when the time line was opened while using the global variable scope), the timeline will automatically zoom to the last-known view port.
+- The Viewport variable will always be read upon opening the Resource Manager timeline. In other words, if a session variable already exists in the scope in question (e.g., when the time line was opened while using the global variable scope), the timeline will automatically zoom to the last-known view port.
 
 > [!NOTE]
 > The Navigate variable will be processed after the Viewport variable.
 
 #### Mobile apps - Visual Overview: Linking shapes to webpages \[ID 29444\]
 
-When you link a shape to a webpage using a shape data field of type *Link*, that page will be opened each time a user clicks that shape. This feature will now also work on visual overviews in mobile apps (e.g. Dashboards, Monitoring, etc.).
+When you link a shape to a webpage using a shape data field of type *Link*, that page will be opened each time a user clicks that shape. This feature will now also work on visual overviews in mobile apps (e.g., Dashboards, Monitoring, etc.).
 
 #### Enhancements made to the method that decides which subscriptions to forward to other agents in the DMS \[ID 29490\]
 
@@ -147,7 +147,7 @@ In some cases, SLLogCollector would incorrectly not take a dump when the temp fo
 
 #### DMA that was incorrectly cleaned after having been removed from a DMS would skip its initial synchronization when added to another DMS later on \[ID 29523\]
 
-When a DataMiner Agent had been removed from the DataMiner System and was cleaned up incorrectly afterwards (e.g. by manually updating the DMS.xml file), in some cases, it would skip its initial synchronization when it was added to another DataMiner System later on.
+When a DataMiner Agent had been removed from the DataMiner System and was cleaned up incorrectly afterwards (e.g., by manually updating the DMS.xml file), in some cases, it would skip its initial synchronization when it was added to another DataMiner System later on.
 
 #### Problem with SLASPConnection when processing the results of a GetAlarmHistory call \[ID 29525\]
 

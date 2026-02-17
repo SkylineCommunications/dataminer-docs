@@ -12,7 +12,7 @@ Finally, you will also need to **indicate which capabilities the resource will e
 
 Follow the steps below:
 
-1. Create the necessary resource pools, using the correct virtual platform and virtual function name (e.g. "VPA.Decoder").
+1. Create the necessary resource pools, using the correct virtual platform and virtual function name (e.g., "VPA.Decoder").
 
 1. Create the virtual function resources and add them to one or more resource pools.
 

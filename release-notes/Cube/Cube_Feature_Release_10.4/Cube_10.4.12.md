@@ -99,7 +99,7 @@ This label is used in the *Agent alarms* section of the *System Center > Agents 
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-In the Router Control module, it is possible to add a matrix represented by two table parameters, i.e. an input and an output table, instead of a matrix parameter. To do so, in the *Add matrix* dialog box, a specific filter syntax needs to be used in the *Advanced configuration* section. In that section, you can now find a link to the [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax) page in dataminer.docs.
+In the Router Control module, it is possible to add a matrix represented by two table parameters, i.e., an input and an output table, instead of a matrix parameter. To do so, in the *Add matrix* dialog box, a specific filter syntax needs to be used in the *Advanced configuration* section. In that section, you can now find a link to the [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax) page in dataminer.docs.
 
 #### System Center - Users/Groups: Read-only names of domain groups and cloud groups will no longer be validated [ID 40987]
 

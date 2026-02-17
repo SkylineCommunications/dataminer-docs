@@ -13,7 +13,7 @@ uid: KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails
 
 Elasticsearch does not support certain characters that are supported in Cassandra:
 
-- An underscore (`_`) at the beginning of a field name (e.g. _testField)
+- An underscore (`_`) at the beginning of a field name (e.g., _testField)
 - Any of the following characters, regardless of where they occur in a field name: `.`, `#`, `*`, `,`, double quotation mark (`"`) or single quotation mark (`'`).
 
 ## Issue description
@@ -56,7 +56,7 @@ To do so:
 1. Downgrade your DataMiner System to a version prior to DataMiner 10.1.0 (Main Release) or 10.0.13 (Feature Release).
 1. Open the Ticketing app.
 1. Click the cogwheel button to access the domain and field configuration.
-1. Find the invalid fields in the lists, and create corresponding new fields with the same settings, but a valid name (E.g. "FirstName" instead of "First.Name").
+1. Find the invalid fields in the lists, and create corresponding new fields with the same settings, but a valid name (e.g., "FirstName" instead of "First.Name").
 1. When you have created all new fields, copy the ticketing data to these fields. To do so, open each ticket and transfer the value of the invalid fields to the valid ones. Leave the invalid fields empty.
 1. After you have transferred the values for all fields, go back to the configuration page and delete all invalid ticket fields.
 1. Upgrade the DMS to the new DataMiner version. The migration should now be executed successfully on each DMA during the first startup.

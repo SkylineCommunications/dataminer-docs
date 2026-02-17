@@ -88,7 +88,7 @@ When certificate validation is skipped, in case an HTTP connector polls an HTTPS
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-From now on, if an issue occurs for any of the `DomInstances` that are getting created, updated, or deleted in bulk (e.g. validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Examples#checking-issues).
+From now on, if an issue occurs for any of the `DomInstances` that are getting created, updated, or deleted in bulk (e.g., validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Examples#checking-issues).
 
 As an alternative, the `TryCreateOrUpdate` or `TryDelete` methods can be used. When the operation fails for one of the `DomInstances`, those calls will return false. The `result` output parameter will contain:
 

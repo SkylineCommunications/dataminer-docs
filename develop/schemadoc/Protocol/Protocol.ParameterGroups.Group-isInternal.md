@@ -22,8 +22,8 @@ Default: false.
 
 Specifies whether the interface is internal. Allows a distinction between:
 
-- internal DCF interfaces (i.e. virtual interfaces used within the protocol), and
-- external DCF interfaces (i.e. physical interfaces that will appear in interface lists in the UI).
+- internal DCF interfaces (i.e., virtual interfaces used within the protocol), and
+- external DCF interfaces (i.e., physical interfaces that will appear in interface lists in the UI).
 
 By default, all DCF interfaces are considered external. Interfaces that should be considered internal have to be explicitly marked as internal.
 

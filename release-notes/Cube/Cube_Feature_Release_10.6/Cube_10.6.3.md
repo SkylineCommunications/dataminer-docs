@@ -66,7 +66,7 @@ Up to now, this log file list contained a *Scripting* entry. However, as no *SLS
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-When Cube connects to a DMA that is connected to dataminer.services (i.e. a DMA of which the hostname ends with ".dataminer.services"), the connection will always be of type gRPC, whatever the connection type that is specified in the Cube settings.
+When Cube connects to a DMA that is connected to dataminer.services (i.e., a DMA of which the hostname ends with ".dataminer.services"), the connection will always be of type gRPC, whatever the connection type that is specified in the Cube settings.
 
 #### Initialization exceptions thrown by the Microsoft Edge browser engine will now be added to the Cube logging [ID 44549]
 
@@ -80,7 +80,7 @@ From now on, all initialization exceptions thrown by the Microsoft Edge (WebView
 
 From now on, it will no longer be possible to migrate booking data from a Cassandra database per DMA to an indexing database.
 
-Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
+Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e., from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
 
 #### Microsoft Edge (WebView2) browser engine can now also be installed on a per user basis [ID 44580]
 
@@ -97,7 +97,7 @@ On systems running the Windows Server OS, the Microsoft Edge (WebView2) browser 
   - IsInstalled (*True* or *False*)
   - Installation type (*Undefined*, *System wide*, *Per user*, or *Fixed version*)
   - Version number
-  - Location (i.e. the local path to the browser engine folder)
+  - Location (i.e., the local path to the browser engine folder)
 
 - The NuGet package *Microsoft.Web.WebView2* has been upgraded to version 1.0.3650.58.
 
@@ -163,7 +163,7 @@ As the severity of an incident alarm is the highest severity found among its sou
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-When an *AlarmSummary* shape was linked to an object (e.g. an element, a service, or a view), and that object contained a correlated alarm, up to now, that correlated alarm would not be removed from the summary when the element associated with the correlated alarm had its status set to "Paused", "Stopped", or "Deleted".
+When an *AlarmSummary* shape was linked to an object (e.g., an element, a service, or a view), and that object contained a correlated alarm, up to now, that correlated alarm would not be removed from the summary when the element associated with the correlated alarm had its status set to "Paused", "Stopped", or "Deleted".
 
 From now on, correlated alarms will be removed from the summary when the status of the elements associated with those correlated alarms changes.
 

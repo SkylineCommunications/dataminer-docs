@@ -25,7 +25,7 @@ When, in the scope of behavioral anomaly detection, proactive cap detection or p
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
 
-From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an automation script:
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g., an automation script:
 
 `SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
 
@@ -57,7 +57,7 @@ When booking objects are added to, updated in or deleted from the cache, from no
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the `C:\Skyline DataMiner\Files\ResetConfig.txt` file, assuming that it would always be executed from the `C:\Skyline DataMiner\Files` folder. As a result, when it was executed from another folder (e.g. from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
+Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the `C:\Skyline DataMiner\Files\ResetConfig.txt` file, assuming that it would always be executed from the `C:\Skyline DataMiner\Files` folder. As a result, when it was executed from another folder (e.g., from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
 
 From now on, *SLReset.exe* will always use the absolute path `C:\Skyline DataMiner\Files\ResetConfig.txt` when locating *ResetConfig.txt*.
 
@@ -176,7 +176,7 @@ At startup, in some cases, the CloudEndpointManager in SLNet could throw an exce
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
+When a DMA did not respond during the midnight synchronization (e.g., because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
 
 #### Automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID 40084]
 

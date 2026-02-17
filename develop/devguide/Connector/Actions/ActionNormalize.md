@@ -18,7 +18,7 @@ Specifies the parameter(s) to normalize.
 
 ### Type@id
 
-(optional): The value of the parameter referred to by this attribute is used as the parameter's normal value. Otherwise, the last received value of the parameter itself (i.e. the parameter specified in On@id) is used as the parameter's normal value.
+(optional): The value of the parameter referred to by this attribute is used as the parameter's normal value. Otherwise, the last received value of the parameter itself (i.e., the parameter specified in On@id) is used as the parameter's normal value.
 
 ## Examples
 

@@ -4,7 +4,7 @@ uid: SNMP.SnmpManagers.SnmpManager.IP
 
 # IP element
 
-Specifies the IP address of the SNMP manager, i.e. the address to which the SNMP notifications will be sent.
+Specifies the IP address of the SNMP manager, i.e., the address to which the SNMP notifications will be sent.
 
 ## Type
 

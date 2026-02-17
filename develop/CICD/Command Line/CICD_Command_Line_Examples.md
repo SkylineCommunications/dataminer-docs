@@ -20,7 +20,7 @@ For this example, you need a Visual Studio solution containing projects that are
 You will also need to configure your DataMiner organization key, which you can find on the organization's *Keys* page in the [Admin app](xref:About_the_Admin_app). For more information, see [Organization keys](xref:Managing_dataminer_services_keys#organization-keys).
 
 > [!NOTE]
-> The examples below use explicit parameter names (e.g. `-p:CatalogPublishKeyName="DATAMINER_TOKEN"`), which allows you to use any environment variable name. When you omit these parameters, the SDK uses the default key name configured in your project's .csproj file.
+> The examples below use explicit parameter names (e.g., `-p:CatalogPublishKeyName="DATAMINER_TOKEN"`), which allows you to use any environment variable name. When you omit these parameters, the SDK uses the default key name configured in your project's .csproj file.
 
 ### Windows PowerShell
 

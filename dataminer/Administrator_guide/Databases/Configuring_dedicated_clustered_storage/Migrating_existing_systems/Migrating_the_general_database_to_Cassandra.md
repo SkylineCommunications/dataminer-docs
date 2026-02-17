@@ -33,7 +33,7 @@ The migration procedure has the following prerequisites:
 
 Before you start the Cassandra migration wizard, we recommend that you check the following things:
 
-- Make sure that the following Trending tags in the file *MaintenanceSettings.xml* are all set to a large interval (e.g. 10 years). If the following tags are set to small intervals or if they are set to 0, you risk losing trend data during the migration: *TimeSpan1DayRecords*, *TimeSpan1HourRecords*, *TimeSpan5MinRecords*. See also: [MaintenanceSettings XML Schema](xref:SchemaMaintenanceSettings).
+- Make sure that the following Trending tags in the file *MaintenanceSettings.xml* are all set to a large interval (e.g., 10 years). If the following tags are set to small intervals or if they are set to 0, you risk losing trend data during the migration: *TimeSpan1DayRecords*, *TimeSpan1HourRecords*, *TimeSpan5MinRecords*. See also: [MaintenanceSettings XML Schema](xref:SchemaMaintenanceSettings).
 
 - Make sure you have the DataMiner permissions *System configuration* > *Database* > *Configure local DB* or *Configure general DB* (depending on your DataMiner version), and *System configuration* > *Agents* > *Upgrade / restore*, as otherwise you will not be able to run the wizard.
 
@@ -83,8 +83,8 @@ Before the migration to Cassandra can begin, the migration wizard has to check i
       > [!NOTE]
       >
       > - The version number specified in the [MinimumRequiredVersion](xref:Protocol.Compliancies.MinimumRequiredVersion) element must have the following syntax:
-      >   - major.minor.month.week, e.g. *10.3.3.7*, or
-      >   - major.minor.month.week-xxxx (in which xxxx is the four-digit build number), e.g. *10.3.3.7-5687*.
+      >   - major.minor.month.week, e.g., *10.3.3.7*, or
+      >   - major.minor.month.week-xxxx (in which xxxx is the four-digit build number), e.g., *10.3.3.7-5687*.
       > - To have incompatible protocols that are managed by Skyline upgraded for use with Cassandra, contact your Technical Account Manager.
 
 1. Under *Automation Script System Requirements*, check if any automation scripts are indicated. If there are, the scripts may need to be updated to be compatible with Cassandra.
@@ -113,7 +113,7 @@ Before the migration to Cassandra can begin, the migration wizard has to check i
    - *Migrate options*: By default, the existing data in the legacy database is not deleted, but with *Remove migrated data from \[legacy database\]*, you can select to remove it once the migration is done.
 
      > [!NOTE]
-     > Regardless of which option you select, the legacy database does keep running once the migration is complete, because it may still be used for some applications, e.g. Asset Manager or third-party applications. If you no longer need the legacy database after the migration, shut it down manually (see [After the migration](#after-the-migration)).
+     > Regardless of which option you select, the legacy database does keep running once the migration is complete, because it may still be used for some applications, e.g., Asset Manager or third-party applications. If you no longer need the legacy database after the migration, shut it down manually (see [After the migration](#after-the-migration)).
 
    - *Online*/*Offline*: By default, the migration happens while the DMA is online, which means that for example monitoring will not be affected by the ongoing migration. However, if you select *Offline*, the DMA will be stopped in order to carry out the migration.
 
@@ -133,7 +133,7 @@ Before the migration to Cassandra can begin, the migration wizard has to check i
 After you have followed the procedure above and system requirements are met, you can carry out the migration to Cassandra as described below.
 
 > [!NOTE]
-> Before you start the migration process, we strongly recommend that you first restart all DataMiner Agents in the DMS. Once this is done, make sure there are no further changes to the system (e.g. added elements) before the migration is started. This will ensure that all data is written to the database before the migration starts, so that any cached data is not lost. In a Failover setup, this can also prevent issues with the migration of the backup DMA.
+> Before you start the migration process, we strongly recommend that you first restart all DataMiner Agents in the DMS. Once this is done, make sure there are no further changes to the system (e.g., added elements) before the migration is started. This will ensure that all data is written to the database before the migration starts, so that any cached data is not lost. In a Failover setup, this can also prevent issues with the migration of the backup DMA.
 
 1. In the Cassandra wizard, click *Next* to go to the migration process itself.
 
@@ -182,7 +182,7 @@ After you have followed the procedure above and system requirements are met, you
 > [!NOTE]
 >
 > - To improve efficiency and scalability using Cassandra, after the migration, all trend data is stored in one table, instead of in a table per element.
-> - If an element with a logger table (e.g. an SLA) is stopped at the moment when the migration takes place, the data of that element will not be migrated.
+> - If an element with a logger table (e.g., an SLA) is stopped at the moment when the migration takes place, the data of that element will not be migrated.
 > - To ensure optimal performance, the Cassandra database should be installed on a different drive than DataMiner. If you migrated to a Cassandra database on the same drive as DataMiner, you can move the database afterwards. See [Moving the Cassandra database to a different disk drive](xref:Moving_the_Cassandra_database_to_a_different_disk_drive).
 > - When your system has a high load, it is strongly recommended to move the Cassandra database towards an external (Windows or Linux) machine. This way, DataMiner and Cassandra do not affect each other during heavy operations. The best way to do so is by adding one or more external nodes to the Cassandra cluster and then decommissioning the original node on the DataMiner machine. See [Adding and removing nodes in a Cassandra cluster database](xref:Scale_Cassandra_Database).
 
@@ -212,7 +212,7 @@ After you have followed the procedure above and system requirements are met, you
 
    1. Right-click *Options* and select *Modify*.
 
-   1. Add or update the entries containing **Xms** and **Xmx** with the heap size in megabyte, e.g. **-Xms8192M** and **-Xmx8192M** for 8 GB.
+   1. Add or update the entries containing **Xms** and **Xmx** with the heap size in megabyte, e.g., **-Xms8192M** and **-Xmx8192M** for 8 GB.
 
    1. Make these same changes in `C:\Program Files\Cassandra\conf\jvm.options`.
 
@@ -233,7 +233,7 @@ After you have followed the procedure above and system requirements are met, you
 
    1. Click *OK*.
 
-1. Once you are sure you no longer need the old database data as a backup (e.g. a few months after the migration), remove the old database data folder (e.g. for MySQL: `C:\ProgramData\MySQL\MySQL Server 5.5\data\sldmadb`).
+1. Once you are sure you no longer need the old database data as a backup (e.g., a few months after the migration), remove the old database data folder (e.g., for MySQL: `C:\ProgramData\MySQL\MySQL Server 5.5\data\sldmadb`).
 
 > [!NOTE]
 > When this initial migration to Cassandra is complete, to have access to the latest DataMiner features, you will also need to [migrate to dedicated clustered storage](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster).

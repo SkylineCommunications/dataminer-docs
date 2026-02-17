@@ -40,7 +40,7 @@ The CatalogReferences file looks like this:
 
 ## Identifier
 
-The identifier, the **id** attribute, is the GUID that represents a Catalog item. This can be retrieved from the URL, e.g. [https://catalog.dataminer.services/details/4abcf220-c001-4ffd-bab8-559dee47088f](https://catalog.dataminer.services/details/4abcf220-c001-4ffd-bab8-559dee47088f) (Microsoft Platform).
+The identifier, the **id** attribute, is the GUID that represents a Catalog item. This can be retrieved from the URL, e.g., [https://catalog.dataminer.services/details/4abcf220-c001-4ffd-bab8-559dee47088f](https://catalog.dataminer.services/details/4abcf220-c001-4ffd-bab8-559dee47088f) (Microsoft Platform).
 
 ## Name
 

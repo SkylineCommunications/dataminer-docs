@@ -44,7 +44,7 @@ As mentioned under [Compilation-time assembly binding](xref:Compilation_Time_Ass
 
 ## Multiple versions of the same assembly
 
-When developing, you can run into a situation where you reference different versions of the same assembly. For example, suppose you use NuGet A which depends on NuGet X version 1.0.1 (which contains assembly X version 1.0.1.0). Now suppose you also use another NuGet B which also references NuGet X but version 1.0.2 (which contains assembly X with version 1.0.2.0). Now when you compile the program in e.g. Visual Studio, the `bin` folder will only contain one version of NuGet X (e.g. assembly X with version 1.0.2.0). The runtime, on the other hand, will search for the specific version that is mentioned in the assembly manifest, so at some point it could look for version 1.0.1.0 (because assembly A that executes was compiled against that version), which it will not be able to find as only the 1.0.2.0 version is present in the `bin` folder.
+When developing, you can run into a situation where you reference different versions of the same assembly. For example, suppose you use NuGet A which depends on NuGet X version 1.0.1 (which contains assembly X version 1.0.1.0). Now suppose you also use another NuGet B which also references NuGet X but version 1.0.2 (which contains assembly X with version 1.0.2.0). Now when you compile the program in e.g., Visual Studio, the `bin` folder will only contain one version of NuGet X (e.g., assembly X with version 1.0.2.0). The runtime, on the other hand, will search for the specific version that is mentioned in the assembly manifest, so at some point it could look for version 1.0.1.0 (because assembly A that executes was compiled against that version), which it will not be able to find as only the 1.0.2.0 version is present in the `bin` folder.
 
 ```mermaid
 flowchart TB
@@ -66,7 +66,7 @@ Because of this, no unification is performed. Instead of providing a single vers
 - You installed a NuGet package "A" that has a dependency on another NuGet package "B".
 - You also installed NuGet package "B".
 - NuGet package "A" exposes types from NuGet package "B".
-- You use types from package "B" through package "A" (e.g. calling a method defined in package "A" that has as argument a type from package "B", or using a method from package "A" that returns a type of package "B").
+- You use types from package "B" through package "A" (e.g., calling a method defined in package "A" that has as argument a type from package "B", or using a method from package "A" that returns a type of package "B").
 
 If you do not follow this rule, you can experience runtime issues as explained in more detail below.
 
@@ -89,7 +89,7 @@ public void Install(IDms dms);
 
 Now the *Install* method has an argument of type *IDms*, which is defined in the Class Library package version 1.3.0.1. In other words, the API exposes a type used from the Class Library v1.3.0.1.
 
-When this API is used from a protocol QAction that uses Class Library NuGet version 1.3.0.1, everything will work fine. I.e. the created *dms* object is of type ClassLibrary v1.3.0.1, which is the type that is expected by the *Install* method of the API.
+When this API is used from a protocol QAction that uses Class Library NuGet version 1.3.0.1, everything will work fine. I.e., the created *dms* object is of type ClassLibrary v1.3.0.1, which is the type that is expected by the *Install* method of the API.
 
 ```csharp
 IDms dms = protocol.GetDms();
@@ -136,4 +136,4 @@ System.InvalidCastException: [A]<namespace>.<type> cannot be cast to [B]<namespa
    at QAction.Run(SLProtocol protocol)
 ```
 
-It is important to be aware of this when developing e.g. APIs, as otherwise the exceptions above could occur at runtime.
+It is important to be aware of this when developing e.g., APIs, as otherwise the exceptions above could occur at runtime.

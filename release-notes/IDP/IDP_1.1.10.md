@@ -66,7 +66,7 @@ In case the new keyword cannot be resolved, it will not be replaced and the elem
 
 An extra method is now available to have IDP store a device configuration in the configuration archive. Previously, only the *StoreResult* method could be used, but now you can also use the *StoreResultAndChangeDetection* method, which will pass the comparison version and the change detection data along with the configuration backup.
 
-The “version” makes it possible to control different structures of configurations that may arise when different data needs to be compared. For example, it could occur that you initially only want to perform change detection on the uplink interface configuration, but eventually you also want to compare other parts of the configuration such as specific downlink interfaces. In that case, if you include the new parts, e.g. the downlink interface configuration, this increases the version number to 2. This way, with the different version number, the subject of the change detection changes.
+The “version” makes it possible to control different structures of configurations that may arise when different data needs to be compared. For example, it could occur that you initially only want to perform change detection on the uplink interface configuration, but eventually you also want to compare other parts of the configuration such as specific downlink interfaces. In that case, if you include the new parts, e.g., the downlink interface configuration, this increases the version number to 2. This way, with the different version number, the subject of the change detection changes.
 
 The “separate data” from the full backup can be used to exclude sections of the original that do not contain important information for the comparison.
 

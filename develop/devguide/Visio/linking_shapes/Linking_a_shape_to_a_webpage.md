@@ -58,7 +58,7 @@ By default, webpages displayed inside a shape do not have a Back and Forward but
 By default, webpages displayed inside a shape do not display a refresh button. If you want to add a refresh button to an embedded browser, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "RefreshButtonVisibility=true".
 
 > [!NOTE]
-> To force refresh the page (i.e. clear the cache), click the refresh button while pressing Ctrl.
+> To force refresh the page (i.e., clear the cache), click the refresh button while pressing Ctrl.
 
 ### SingleSignOn
 
@@ -84,18 +84,18 @@ From DataMiner 10.1.11/10.2.0 onwards, you can use Microsoft Edge (WebView2) to 
 >
 > - The WebView2 Runtime is automatically installed with Office 365 Apps and/or Windows 11. It is not included in DataMiner upgrade packages.
 > - This browser engine has the advantage that web content is rendered directly to the graphics card and proprietary codecs such as H.264 and AAC are supported. In addition, the browser engine automatically receives updates via Windows Update, regardless of the DataMiner or Cube version.
-> - From DataMiner 10.3.4/10.4.0 onwards, interactions between DataMiner web apps and Cube (e.g. a web app opening an element card in Cube) now also work when those web apps are embedded in Microsoft Edge (WebView2). Prior to DataMiner 10.3.4/10.4.0, this functionality is already supported when [Chromium](#usechrome) is used to display web apps. <!-- RN 35655 -->
+> - From DataMiner 10.3.4/10.4.0 onwards, interactions between DataMiner web apps and Cube (e.g., a web app opening an element card in Cube) now also work when those web apps are embedded in Microsoft Edge (WebView2). Prior to DataMiner 10.3.4/10.4.0, this functionality is already supported when [Chromium](#usechrome) is used to display web apps. <!-- RN 35655 -->
 
 ### UseLoginCredentials
 
 If you want to pass on the user credentials of the current user to a webpage displayed inside a shape, then add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseLoginCredentials".
 
 > [!NOTE]
-> This feature only works when you have logged on to DataMiner Cube explicitly using Basic Authentication (i.e. with a username and a password). It will not work when you have logged on with your Windows user credentials.
+> This feature only works when you have logged on to DataMiner Cube explicitly using Basic Authentication (i.e., with a username and a password). It will not work when you have logged on with your Windows user credentials.
 
 ## Allowing pop-ups
 
-In DataMiner Cube, embedded browser windows suppress pop-ups by default. If, for any reason, you want an embedded browser window to allow pop-ups (e.g. when it has to show an authentication dialog), then you can use the following URL suffix (in uppercase):
+In DataMiner Cube, embedded browser windows suppress pop-ups by default. If, for any reason, you want an embedded browser window to allow pop-ups (e.g., when it has to show an authentication dialog), then you can use the following URL suffix (in uppercase):
 
 ```txt
 #SL_ALLOW_POPUPS#
@@ -123,7 +123,7 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 > [!NOTE]
 >
 > - \<ElementID>, \<ElementIP> and \<ElementName> are only to be used if the shape is also linked to an element.
-> - These placeholders can also be used inside another placeholder in the URL, e.g. `#http://www.skyline.be?MyParam=[param:<elementname>,1]`
+> - These placeholders can also be used inside another placeholder in the URL, e.g., `#http://www.skyline.be?MyParam=[param:<elementname>,1]`
 > - Prior to DataMiner 10.3.6/10.4.0, adding a URL fragment to a linked webpage causes the connection info to be automatically added after the fragment, rendering the URL invalid and requiring a reload of the page, which means the user may need to log in again. From DataMiner 10.3.6/10.4.0 onwards, Visual Overview can recognize if a URL fragment is added or changed and update only the necessary parts of the page, avoiding the need to recreate the browser instance. <!-- RN 36044 + 36104 -->
 
 > [!TIP]

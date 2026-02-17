@@ -10,7 +10,7 @@ With alarm threshold hysteresis, you can fine-tune the sensitivity of your alarm
 
 DataMiner supports two types of hysteresis:
 
-- **Clear hysteresis**: Delaying the moment when an alarm is cleared, i.e. the moment when the severity of an alarm decreases.
+- **Clear hysteresis**: Delaying the moment when an alarm is cleared, i.e., the moment when the severity of an alarm decreases.
 
 - **Alarm hysteresis**: Delaying the moment when the severity of an alarm increases.
 

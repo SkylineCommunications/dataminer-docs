@@ -7,7 +7,7 @@ uid: GetMaskedAlarmsForServiceCached
 Use this method to retrieve only masked service alarms added or changed since a particular point in time.
 
 > [!NOTE]
-> Using this method, you can e.g. request masked service alarms in batches in order to minimize loading time.
+> Using this method, you can e.g., request masked service alarms in batches in order to minimize loading time.
 
 ## Input
 

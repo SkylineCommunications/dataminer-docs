@@ -18,7 +18,7 @@ A number of security enhancements have been made.
 
 #### Dashboards app - Time range component: Selecting a preset timespan will now cause the name of that timespan to be added to the URL of the dashboard \[ID 27963\]
 
-Up to now, when you selected a preset timespan (e.g. today, yesterday, etc.) in a time range component, the start time and end time of that timespan was added to the URL of the dashboard. From now on, when you select a preset timespan, the actual name of that timespan (e.g. today, yesterday, etc.) will be added to the URL instead.
+Up to now, when you selected a preset timespan (e.g., today, yesterday, etc.) in a time range component, the start time and end time of that timespan was added to the URL of the dashboard. From now on, when you select a preset timespan, the actual name of that timespan (e.g., today, yesterday, etc.) will be added to the URL instead.
 
 #### DataMiner Cube - Trending: Enhanced input and validation of trend graph Y axis settings \[ID 30176\]
 
@@ -199,11 +199,11 @@ When drawing connections between nodes in a service definition diagram, in some 
 
 #### Web apps: Problems with DefaultTimeZone setting \[ID 30301\]
 
-The time displayed in the DataMiner web apps (e.g. Jobs, Dashboards, etc.) is based on the DefaultTimeZone setting in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
+The time displayed in the DataMiner web apps (e.g., Jobs, Dashboards, etc.) is based on the DefaultTimeZone setting in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
 
 Up to now, the following problems could occur with regard to this setting:
 
-- When DefaultTimeZone was set to a time zone without offset (e.g. UTC), in some cases, an error message could appear.
+- When DefaultTimeZone was set to a time zone without offset (e.g., UTC), in some cases, an error message could appear.
 
 - In the Dashboards app and the Monitoring app, the configured time zone would not always be applied correctly.
 
@@ -284,7 +284,7 @@ In some cases, a problem could occur when adding a domain user or a domain group
 
 #### Dashboards app - GQI: Queries could cease to function when items used in those queries were renamed \[ID 30436\]
 
-Up to now, in some cases, a GQI query could cease to function when items used in that query (e.g. parameters, profile definitions, etc.) were renamed.
+Up to now, in some cases, a GQI query could cease to function when items used in that query (e.g., parameters, profile definitions, etc.) were renamed.
 
 #### Dashboards app - State timeline: Problem with state change highlighting in Mozilla Firefox \[ID 30446\]
 
@@ -302,9 +302,9 @@ When you install a DataMiner upgrade package, a number of checks are performed b
 
 When the shape text of an “Info” shape contained more than just an asterisk (“\*”), in some cases, the asterisk would not be replaced with the information specified in the Info shape data field.
 
-#### DataMiner Cube - Tab layout: Clicking e.g. an element multiple times would incorrectly each time open a new instance of the card in question \[ID 30541\]
+#### DataMiner Cube - Tab layout: Clicking e.g., an element multiple times would incorrectly each time open a new instance of the card in question \[ID 30541\]
 
-When in tab layout, clicking e.g. an element multiple times would incorrectly each time open a new instance of the card in question.
+When in tab layout, clicking e.g., an element multiple times would incorrectly each time open a new instance of the card in question.
 
 > [!NOTE]
 > When, on a visual overview, you click a button to navigate to another card and then click the *Back* button, in some cases, clicking the button to navigate to another card a second time may no longer open that other card.

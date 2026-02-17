@@ -19,7 +19,7 @@ uid: General_Feature_Release_10.2.1
 From now on, Automatic Incident Tracking will be enabled by default
 
 - on newly installed systems, and
-- on systems that upgrade from a version on which Automatic Incident Tracking was not yet available (i.e. versions older than version 10.0.11).
+- on systems that upgrade from a version on which Automatic Incident Tracking was not yet available (i.e., versions older than version 10.0.11).
 
 > [!NOTE]
 > On systems on which Automatic Incident Tracking has explicitly been disabled, the feature will remain disabled.
@@ -106,7 +106,7 @@ From now on, the “Index” part of a parameter section can also contain a subs
 Filter=<subscriptionFilter>
 ```
 
-This subscription filter can be any filter that can be passed to a parameter change subscription (e.g. “VALUE=\<pid> == \<value>”, “fullFilter=(...)”, etc.).
+This subscription filter can be any filter that can be passed to a parameter change subscription (e.g., “VALUE=\<pid> == \<value>”, “fullFilter=(...)”, etc.).
 
 > [!NOTE]
 > Up to now, when the index part of a parameter section contained a wildcard, no results would be returned whenever cells were set to “not initialized”. From now on, cells set to “not initialized” will be skipped.
@@ -129,7 +129,7 @@ The following changes have been made with regard to session variables that can b
 
 When you select a time range, that range will be stored in the SelectedTimeRange variable.
 
-The value can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
+The value can be set in serialized form (e.g., “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g., “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
 
 This variable will be cleared whenever you select another item in the component.
 
@@ -329,7 +329,7 @@ From now on, the getResourcesMessage, the getResourcePoolsMessage and the getRes
 
 #### Protocols: Export rules would fail to parse values containing escaped XML characters \[ID 31362\]
 
-When, in a protocol, values contained escaped XML characters (e.g. \<Description>Measurements \> 5\</Description>), the export rules would fail to parse those values and the generated DVE or Virtual Function protocol would only have some or none of the export rules applied.
+When, in a protocol, values contained escaped XML characters (e.g., \<Description>Measurements \> 5\</Description>), the export rules would fail to parse those values and the generated DVE or Virtual Function protocol would only have some or none of the export rules applied.
 
 #### Dashboards app: Parameter feed could incorrectly continue to feed data when the parameter in question was no longer selected \[ID 31403\]
 
@@ -359,7 +359,7 @@ When the discreet values and the display values of a certain parameter overlappe
 
 #### Dashboards Sharing: Incorrect login screen would appear when the shared dashboard you were viewing was unshared \[ID 31503\]
 
-When a shared dashboard was unshared while you were viewing it, up to now, you would incorrectly be redirected to the login screen of the Dashboards app. From now on, you will be redirected to the DataMiner Cloud login screen (i.e. <https://shares.dataminer.services>) instead.
+When a shared dashboard was unshared while you were viewing it, up to now, you would incorrectly be redirected to the login screen of the Dashboards app. From now on, you will be redirected to the DataMiner Cloud login screen (i.e., <https://shares.dataminer.services>) instead.
 
 #### Web Services API v1: Problem when using GetTableForParameterFiltered or GetTableForParameterSorted to retrieve part of a parameter table \[ID 31504\]
 
@@ -592,4 +592,4 @@ From DataMiner 10.2.1 onwards, the following release note also applies:
 
 #### DataMiner web apps: Filter issue when using arrow keys in dropdown box \[ID 31472\]
 
-In the DataMiner web apps (e.g. the Dashboards app), when you opened a dropdown box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.
+In the DataMiner web apps (e.g., the Dashboards app), when you opened a dropdown box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.

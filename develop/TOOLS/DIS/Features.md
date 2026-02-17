@@ -22,7 +22,7 @@ Additionally, the following tool windows are available:
 - [DIS Parameter Update Locations](xref:DisParameterUpdateLocationsToolWindow): This tool window allows you to check from which locations parameters get updated.
 - [Validator](xref:DisValidatorToolWindow): This window lists the results of the latest connector validation in a tree structure, grouped by severity and category.
 - [Comparer](xref:DisComparerToolWindow):This tool window allows you to compare two connector versions.
-- [Macros](xref:DisMacrosToolWindow): This tool window allows you to create C# scripts that can be used to make changes to e.g. a protocol XML file.
+- [Macros](xref:DisMacrosToolWindow): This tool window allows you to create C# scripts that can be used to make changes to, for example, a protocol XML file.
 - [Inject](xref:DisInjectToolWindow): This tool window allows you to make the necessary preparations before debugging the connector QAction(s) or automation script C# Exe block(s) you are editing.
 - [MIB Browser](xref:DisMibBrowserToolWindow): This tool window allows you to build [Param](xref:Protocol.Params.Param) tags in a connector based on OID data in MIB files.
 

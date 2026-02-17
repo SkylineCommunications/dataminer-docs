@@ -30,7 +30,7 @@ Password boxes in Cube will now indicate the password strength (common, very wea
 These new password boxes can be found in the following locations:
 
 - Cube login screen (peek only)
-- Data Display: parameters of type password (e.g. the password box of a Microsoft Platform element)
+- Data Display: parameters of type password (e.g., the password box of a Microsoft Platform element)
 - Edit port settings of an SNMPv3 element
 - System Center > Agents > Add
 - System Center > Database
@@ -151,7 +151,7 @@ The discreet value can contain the SystemType and SystemName of the object, or a
 
 If you know the type of the EPM object, you can add a type prefix (epm or view), followed by an equal sign and (a reference to) the identifier, and if you want to specify the page to be selected by default, you can add a suffix to the identifier in the `<Value>` tag containing the root page name and the page name, separated by a colon.
 
-If the SystemName contains colons (e.g. a MAC address), you can replace the default separator (i.e. colon) by another one (e.g. a pipe character) by placing a `[sep:XY]` prefix in front of the system name. See the following example:
+If the SystemName contains colons (e.g., a MAC address), you can replace the default separator (i.e., colon) by another one (e.g., a pipe character) by placing a `[sep:XY]` prefix in front of the system name. See the following example:
 
 ```xml
 <Value type="open">{EPM=[sep::|]CPE/00:01:08:01:08:01|DATA|CPE Frequencies}</Value>
@@ -254,7 +254,7 @@ When you selected two or more alarm groups, and selected *Clear alarm*, *Take ow
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-When a session variable (e.g. YAxisResources) was updated in an embedded Resource Manager component, in some cases, that same session variable would also incorrectly be updated in the *Occupancy* tab of the Resources app.
+When a session variable (e.g., YAxisResources) was updated in an embedded Resource Manager component, in some cases, that same session variable would also incorrectly be updated in the *Occupancy* tab of the Resources app.
 
 #### Alarm Console would incorrectly keep loading while the tickets linked to the alarms were being loaded [ID 33847]
 
@@ -339,7 +339,7 @@ When you right-clicked a column header in an alarm tab and hovered over the *Add
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-When an element card was open on the DATA page, and a parameter on that page had its unit changed (e.g. via an automation script), that change would incorrectly not be reflected in the UI. To see the new unit, you had to close the element card and re-open it.
+When an element card was open on the DATA page, and a parameter on that page had its unit changed (e.g., via an automation script), that change would incorrectly not be reflected in the UI. To see the new unit, you had to close the element card and re-open it.
 
 #### Problem when the Cube starter window software tried to download a DataMiner Cube for a DataMiner Agent v10.0.0 [ID 34009]
 

@@ -322,7 +322,7 @@ From now on, in HTTP setups, the dashboard sharing menu will no longer contain t
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
-When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
+When a CSV file exported via a dashboard component or attached to an email report was opened in e.g., Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
 
 #### Legacy Reporter app: Users without 'Modules > Documents > UI available' permission would incorrectly be able to view documents [ID 34402]
 
@@ -336,7 +336,7 @@ From now on, an error message will be displayed when users without the above-men
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
-In some cases, an error could occur when invalid parameters were passed to a dashboard in the URL (e.g. invalid time spans).
+In some cases, an error could occur when invalid parameters were passed to a dashboard in the URL (e.g., invalid time spans).
 
 #### Dashboards app: Not possible to access the query column selection box of a newly created query [ID 34410]
 
@@ -390,7 +390,7 @@ In some rare cases, an error could occur in SLDMS while a connection with anothe
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-When, in the URL of a web app (e.g. Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
+When, in the URL of a web app (e.g., Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
 
 Example of a dashboard URL containing a `subheader=true` option:
 
@@ -430,7 +430,7 @@ In some cases, the service impact of an alarm would be incorrect
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
-When the range of a slider control did not have a span (i.e. when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.  
+When the range of a slider control did not have a span (i.e., when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.  
 
 Also, when the range of a slider control had values outside of the minimum/maximum range, the start and end values would both be set to Infinity. From now on, the minimum and maximum values will be adapted to the actual start and end values.
 

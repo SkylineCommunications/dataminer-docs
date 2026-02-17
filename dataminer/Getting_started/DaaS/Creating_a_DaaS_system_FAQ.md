@@ -96,7 +96,7 @@ To request a change, contact <daas@dataminer.services>.
 
 All costs related to Azure VPN Gateway are included in your DaaS subscription. When other options are used, your providers may charge additional fees. In that case, note that Skyline will not act as a broker.
 
-Additional query costs may be due when using e.g. Azure ExpressRoute or Amazon CloudWatch to retrieve data from other cloud providers. The costs for retrieving data from Amazon Web Services are usually negligible.
+Additional query costs may be due when using e.g., Azure ExpressRoute or Amazon CloudWatch to retrieve data from other cloud providers. The costs for retrieving data from Amazon Web Services are usually negligible.
 
 ### How are user accounts managed? Where are the passwords stored?
 

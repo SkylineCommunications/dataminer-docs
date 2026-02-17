@@ -6,14 +6,14 @@ uid: AdvancedViewTablesOtherElement
 
 Direct view tables can be used to aggregate data from different source elements in an aggregator element.
 
-To implement a direct view table, create a custom table that contains a column holding the DMA ID/Element IDs of the source elements for which a direct view should be created. Each row in this column represents a source element. Next, define a table that will hold the aggregated data (i.e. the direct view). Some possible implementations of direct views are described next.
+To implement a direct view table, create a custom table that contains a column holding the DMA ID/Element IDs of the source elements for which a direct view should be created. Each row in this column represents a source element. Next, define a table that will hold the aggregated data (i.e., the direct view). Some possible implementations of direct views are described next.
 
 1. Creating a view table containing only data from the source element(s).
 
    In the options attribute of the ArrayOptions tag, specify for "view" the ID of the table from which data should be obtained. Note that in case this table contains foreign keys to another table, data from this linked table can also be obtained. (In case the linked table also refers to another table using foreign keys, data from that other table can also be obtained.) For "directView", the ID of the column parameter (not the table ID) containing the element IDs of the source elements.
 
    > [!NOTE]
-   > By default, it is assumed that the source elements and the aggregator element run the same protocol; however, they can also use a different protocol, in which case this must be indicated with the remoteId option (e.g. view=1000,remoteId;).
+   > By default, it is assumed that the source elements and the aggregator element run the same protocol; however, they can also use a different protocol, in which case this must be indicated with the remoteId option (e.g., view=1000,remoteId;).
 
    To add parameters of the referred table, use the "view" option in the options attribute of the ColumnOption tag. For example:
 
@@ -25,7 +25,7 @@ To implement a direct view table, create a custom table that contains a column h
 
    This example looks at the DMA ID/element IDs specified in the column with parameter ID 2802 and then builds a view from table 1000 of the source elements and displays columns of the source element with parameter ID 1001 and 1031.
 
-   Direct view tables are used to aggregate data from different source elements. In large setups, however, this can result in very large amounts of data in the direct view to be displayed, which has a big impact on the SLElement process (e.g. when opening the card, this results in requesting the entire direct view). For this reason, the "onlyFilteredDirectView" option was introduced, indicating that data from this direct view can only be retrieved through the use of filters. Consequently, when the "onlyFilteredDirectView" option is specified, the displayed directView table will be empty when opening the data page. However, when filters are used (e.g. EPM element, Visio, tree control children), the table displays the filtered result.
+   Direct view tables are used to aggregate data from different source elements. In large setups, however, this can result in very large amounts of data in the direct view to be displayed, which has a big impact on the SLElement process (e.g., when opening the card, this results in requesting the entire direct view). For this reason, the "onlyFilteredDirectView" option was introduced, indicating that data from this direct view can only be retrieved through the use of filters. Consequently, when the "onlyFilteredDirectView" option is specified, the displayed directView table will be empty when opening the data page. However, when filters are used (e.g., EPM element, Visio, tree control children), the table displays the filtered result.
 
 1. Create a view using data and keys from the aggregator element and data from the source elements.
 
@@ -71,7 +71,7 @@ To implement a direct view table, create a custom table that contains a column h
 
      The element ID of the aggregator element can also be in the table with the element IDs, this way it is possible to build a system consisting of equal peers without having one vulnerable master element.
 
-     In the second scenario where the data is based on foreign key relations, the aggregator element needs to know the primary keys of the child element and the foreign key link to be able to build the view and use this relation in e.g. a tree view, EPM interface, etc.
+     In the second scenario where the data is based on foreign key relations, the aggregator element needs to know the primary keys of the child element and the foreign key link to be able to build the view and use this relation in e.g., a tree view, EPM interface, etc.
 
      It is not possible to have a column in the table of the child element that refers to a table in the aggregator element without the aggregator element being aware of primary keys and foreign keys.
 
@@ -79,7 +79,7 @@ To implement a direct view table, create a custom table that contains a column h
 
 > [!NOTE]
 >
-> - In case the tables of the source elements can have conflicting primary keys (i.e. it is possible that at least two source elements each have a row with the same primary key), use a column of type [viewTableKey](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#viewtablekey). This will prefix the primary key with [DMA ID]\_[Element ID]_.
+> - In case the tables of the source elements can have conflicting primary keys (i.e., it is possible that at least two source elements each have a row with the same primary key), use a column of type [viewTableKey](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#viewtablekey). This will prefix the primary key with [DMA ID]\_[Element ID]_.
 > - For direct view tables, it is not possible to include a column without the preceding columns being included.
 > - In recent DataMiner versions, direct view tables are automatically refreshed in Cube.<!-- RN 16999 --> When the update mechanism is used, this will be indicated below the table, together with the time when the table was last updated and a button that allows you to update the table manually.
 
@@ -121,7 +121,7 @@ DirectView updates are supported in the following scenarios:<!-- RN 27547 -->
     ```directView=6505 => FILTER: value=6501 == REMOTE-DATA-1```
 
 > [!NOTE]
-> Updates are also sent to subscribers for direct views when cell alarm levels in the source data tables change because of updates that do not change the cell value (e.g. when a cell in a source table gets masked).<!-- RN 27785 --> However, note that this functionality does not work yet for foreign key linked tables where certain columns are also exported.
+> Updates are also sent to subscribers for direct views when cell alarm levels in the source data tables change because of updates that do not change the cell value (e.g., when a cell in a source table gets masked).<!-- RN 27785 --> However, note that this functionality does not work yet for foreign key linked tables where certain columns are also exported.
 
 ## Allowing different remote element sources in view table columns
 

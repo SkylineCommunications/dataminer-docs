@@ -37,9 +37,9 @@ The DataMiner landing page (by default accessible via `https://<DMA IP or hostna
 
 - Optionally, you can enable the possibility to select a different theme for the landing page. If you add the argument `?showAdvancedSettings=true` to the URL of the page, a theme selector will become available that allows you to select one of the following themes:
 
-- Light (i.e. the default theme)
+- Light (i.e., the default theme)
 - Dark
-- System (i.e. the theme set in the browser)
+- System (i.e., the theme set in the browser)
 
 #### Low-Code Apps: Using script output in the post actions of a 'Launch a script' action [ID 43222]
 
@@ -111,7 +111,7 @@ After an upgrade to DataMiner 10.5.9 build 16208, in some cases, existing maps c
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-In time components like e.g. `DateTimePicker` and `TimePicker`, input can be limited by means of the `Minimum` and `Maximum` properties.
+In time components like e.g., `DateTimePicker` and `TimePicker`, input can be limited by means of the `Minimum` and `Maximum` properties.
 
 Up to now, when the client machine and the server were located in different timezones, the datetime values in those two properties would not always be consistent. From now on, the values in the `Minimum` and `Maximum` properties will be considered to be either local time or UTC time according to the [DateTimeKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetimekind?view=netframework-4.8), specified using [SpecifyKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetime.specifykind?view=netframework-4.8).
 
@@ -150,7 +150,7 @@ Also, when a timeout occurs, the error added to the web logs will now include th
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
-When a client (e.g. the Web Services API) sent a `HeartbeatRequest` or a `CloseSessionRequest` with invalid session IDs to the GQI DxM, up to now, the GQI DxM would return an error.
+When a client (e.g., the Web Services API) sent a `HeartbeatRequest` or a `CloseSessionRequest` with invalid session IDs to the GQI DxM, up to now, the GQI DxM would return an error.
 
 From now on, instead of returning an error, the GQI DxM will return a `HeartbeatResponse` or `CloseSessionResponse` that contains the invalid session IDs. This will allows the client to react accordingly without having to parse any error message.
 
@@ -176,7 +176,7 @@ From now on, the connection worker process has references to all assemblies that
 
 Because of a number of enhancements, overall performance has increased when starting a web app.
 
-For example, information that does not frequently change (e.g. alarm colors) will now be cached in the web API. It will no longer be fetched each time a web app is opened.
+For example, information that does not frequently change (e.g., alarm colors) will now be cached in the web API. It will no longer be fetched each time a web app is opened.
 
 #### Web API will no longer send any heartbeats to the GQI DxM to keep invalid GQI sessions alive [ID 43374]
 
@@ -258,7 +258,7 @@ In some cases, an NullReference exception could be thrown when you shared a dash
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When, in a dashboard or a low-code app, a component was linked to Visual Overview component (e.g. a dropdown box containing references to visual overviews), in some cases, the Visual Overview component would incorrectly show a page other than the default page when another reference was selected in the linked component.
+When, in a dashboard or a low-code app, a component was linked to Visual Overview component (e.g., a dropdown box containing references to visual overviews), in some cases, the Visual Overview component would incorrectly show a page other than the default page when another reference was selected in the linked component.
 
 Also, in some cases, the page selector of a Visual Overview component could keep on loading when the visual overview reference was fed by another component.
 

@@ -25,9 +25,9 @@ If either of these conditions is breached, the system will continue to clean up 
 
 Examples:
 
-- In a system with a limit of maximum 1000 files, there are 1010 files, so the file limit is exceeded, but the folder size is still within the limit. In this case, The system will clean up until only 80% of the maximum allowed number of files remain (i.e. 80% of 1000 = 800 files). Since 210 files are deleted, the folder size will automatically decrease as well.
+- In a system with a limit of maximum 1000 files, there are 1010 files, so the file limit is exceeded, but the folder size is still within the limit. In this case, The system will clean up until only 80% of the maximum allowed number of files remain (i.e., 80% of 1000 = 800 files). Since 210 files are deleted, the folder size will automatically decrease as well.
 
-- In a system with a limit of maximum 1000 files, there are 600 files, but a large file has caused the folder size to exceed the limit (i.e. 105 MB while the limit is 100 MB). In this case, the system will clean up until only 80% of the current number of files remain (i.e. 80% of 600 = 480 files). If necessary, the system will continue the cleanup process until the folder size is within the configured size limit of 100 MB.
+- In a system with a limit of maximum 1000 files, there are 600 files, but a large file has caused the folder size to exceed the limit (i.e., 105 MB while the limit is 100 MB). In this case, the system will clean up until only 80% of the current number of files remain (i.e., 80% of 600 = 480 files). If necessary, the system will continue the cleanup process until the folder size is within the configured size limit of 100 MB.
 
 This cleanup occurs for the first time two minutes after DataMiner startup. Prior to DataMiner 10.5.5/10.6.0, the recycle bin is cleaned to the maximum size and number of files every hour.
 

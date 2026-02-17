@@ -11,7 +11,7 @@ uid: SRM_1.2.31
 
 #### Support for parameters, capacities, and capabilities for regular resources [ID 35956]
 
-Support has been added for parameters, capacities, and capabilities for regular resources, i.e. resources that are not (virtual) function resources. As these do not link to a profile definition, they will have a different logic from (virtual) function resources:
+Support has been added for parameters, capacities, and capabilities for regular resources, i.e., resources that are not (virtual) function resources. As these do not link to a profile definition, they will have a different logic from (virtual) function resources:
 
 - Profile instances are not supported. Consequently, the *By reference* option in the Booking Wizard is also not supported.
 - Interfaces are not supported.

@@ -18,7 +18,7 @@ The following limitations apply:
 
     *Pattern matching memory high, adding more patterns or parameters might reduce matching accuracy.*
 
-    This notice will appear at most every 2 weeks or after a DataMiner restart. In order to reduce memory usage, you can either remove patterns for which monitoring has been activated or restrict the number of parameters for which it has been activated (e.g. by specifying a display key in case of table parameters).
+    This notice will appear at most every 2 weeks or after a DataMiner restart. In order to reduce memory usage, you can either remove patterns for which monitoring has been activated or restrict the number of parameters for which it has been activated (e.g., by specifying a display key in case of table parameters).
 
   - As soon as DataMiner uses more than the maximum allowed internal memory for this feature, the following notice will be displayed in the Alarm Console:
 

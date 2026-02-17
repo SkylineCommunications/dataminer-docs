@@ -290,7 +290,7 @@ Because of a number of enhancements, behavioral changes of the type "level shift
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
-Up to now, a loading skeleton would be displayed each time data was being loaded into a GQI component (e.g. a node edge graph). From now on, only when the component was empty will a loading skeleton be displayed. When existing data in the component is being refreshed, a loader bar will now be displayed instead.
+Up to now, a loading skeleton would be displayed each time data was being loaded into a GQI component (e.g., a node edge graph). From now on, only when the component was empty will a loading skeleton be displayed. When existing data in the component is being refreshed, a loader bar will now be displayed instead.
 
 #### Web apps: Enhanced performance when retrieving a list of users [ID 35150]
 
@@ -298,7 +298,7 @@ Up to now, a loading skeleton would be displayed each time data was being loaded
 
 When a web app requests a list of users, the Web Services API will now cache the result set it receives from the server. This will increase overall performance, especially in situations where, up to now, the same list of users had to be retrieved frequently.
 
-This user cache will be cleared each time a change occurs that has security implications (e.g. new users added, user permissions updated, etc.).
+This user cache will be cleared each time a change occurs that has security implications (e.g., new users added, user permissions updated, etc.).
 
 #### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID 35156]
 
@@ -477,7 +477,7 @@ When alarm events were retrieved from an Elasticsearch database, any hosting age
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When you ran SLLogCollector via the command line and specified multiple processes for which dumps had to be taken (e.g. `SL_LogCollector.exe -c -d=46436,61652`), it would incorrectly only take a dump of the first process.
+When you ran SLLogCollector via the command line and specified multiple processes for which dumps had to be taken (e.g., `SL_LogCollector.exe -c -d=46436,61652`), it would incorrectly only take a dump of the first process.
 
 #### Problem with the generation of TaskCancellationExceptions [ID 35079]
 
@@ -536,11 +536,11 @@ Also, a problem with the detection of infinite loops for SNMPv3 when receiving e
 One-day average trend records would incorrectly only be written into the database if
 
 - a TTL was specified, and
-- the *MaintenanceSettings.xml* file contained an entry specifying the window size (e.g. `<TimeSpan1DayRecords windows="120" />`).
+- the *MaintenanceSettings.xml* file contained an entry specifying the window size (e.g., `<TimeSpan1DayRecords windows="120" />`).
 
 From now on, one-day average trend records will be written into the database as soon as a TTL setting has been configured for *Day records*.
 
-Also, the default window size for the records has been restored to 120 minutes (i.e. 2 hours).
+Also, the default window size for the records has been restored to 120 minutes (i.e., 2 hours).
 
 > [!TIP]
 > See [Missing 1-day average trending records](xref:KI_missing_avg_trending).
@@ -615,7 +615,7 @@ When creating or editing a query, you can select the query columns from a select
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When data (e.g. a query) was deleted while it was selected, in some cases, it would incorrectly not be removed from the selection.
+When data (e.g., a query) was deleted while it was selected, in some cases, it would incorrectly not be removed from the selection.
 
 #### Dashboards app: Two context menus could incorrectly be displayed simultaneously in the side bar [ID 35255]
 
@@ -656,7 +656,7 @@ Up to now, when email addresses and hyperlinks to web pages were retrieved from 
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e. eventing and polling) would incorrectly be used simultaneously.
+When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e., eventing and polling) would incorrectly be used simultaneously.
 
 #### Low-Code Apps: Keyboard shortcuts would not work in the dashboard editor [ID 35274]
 

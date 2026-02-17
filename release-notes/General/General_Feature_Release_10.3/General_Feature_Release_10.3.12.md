@@ -26,7 +26,7 @@ The DataMiner software now supports a more extensive configuration of behavioral
 
 From now on, you will be able to choose between the following types of anomaly monitoring:
 
-- Smart anomaly monitoring (i.e. anomaly monitoring as it existed before)
+- Smart anomaly monitoring (i.e., anomaly monitoring as it existed before)
 - Customized anomaly monitoring
 
 Customized anomaly monitoring will enable you to do the following:
@@ -52,9 +52,9 @@ Summary of server-side changes:
 
   When you update an existing alarm template or creating a new one, a new `<AnomalyConfig>` element will be added into the body of the `<Alarm>` element if, and only if, behavioral anomaly monitoring is enabled and an extended anomaly configuration has been set via the *AnomalyConfiguration* field of the *GetAlarmTemplateResponse* or the template parameters.
 
-  The existing attributes of the `<Monitored>` element (i.e. *varianceMonitor*, *trendMonitor*, *levelShiftMonitor* and *flatLineMonitor*) have not been changed or removed to ensure compatibility of the new alarm template XML files with older DataMiner versions.
+  The existing attributes of the `<Monitored>` element (i.e., *varianceMonitor*, *trendMonitor*, *levelShiftMonitor* and *flatLineMonitor*) have not been changed or removed to ensure compatibility of the new alarm template XML files with older DataMiner versions.
 
-- When you set up a customized behavioral anomaly monitoring containing relative or absolute thresholds, this setup will be lost when you downgrade to an older server version that does not support this extended anomaly configuration (i.e. DataMiner version 10.3.11 or older). A fallback to the legacy "smart anomaly monitoring" will happen for all the change point types that had some kind of anomaly monitoring enabled.
+- When you set up a customized behavioral anomaly monitoring containing relative or absolute thresholds, this setup will be lost when you downgrade to an older server version that does not support this extended anomaly configuration (i.e., DataMiner version 10.3.11 or older). A fallback to the legacy "smart anomaly monitoring" will happen for all the change point types that had some kind of anomaly monitoring enabled.
 
 - The internal SLAnalytics alarm template monitoring mechanism now also takes into account alarm template group information. As a result, SLAnalytics modules making use of this mechanism will get notified about changes to group entries and can react to these changes.
 
@@ -163,11 +163,11 @@ A number of security enhancements have been made.
 
 Previously, when you added a sort node to a GQI query against the DOM data source, all DOM instances matching any filter node needed to be retrieved before the sorting could occur. Sorting a dataset with a large amount of DOM instances was practically impossible.
 
-From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the dataset includes a large amount of items.
+From now on, the sort nodes (e.g., By X, Then By Y, etc.) will be forwarded to the database. This will considerably increase overall performance when sorting DOM instances, especially when the dataset includes a large amount of items.
 
 > [!NOTE]
 >
-> - Fields that have multiple values (i.e. list fields) cannot be sorted.
+> - Fields that have multiple values (i.e., list fields) cannot be sorted.
 > - All string sorting occurs in a non-natural way.
 > - TimeSpan fields are evaluated as strings. As a result, similar to strings, they will also be ordered in a non-natural way.
 > - Multiple sorts are supported using the `Sort by, Then sort by, etc.` node concatenation. If a new *Sort by* node is added to the query, the previous will be ignored.
@@ -184,7 +184,7 @@ A number of enhancements have been made with regard to error handling.
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-If, upon detection of a new trend, the trend returns to the old trend (i.e. the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
+If, upon detection of a new trend, the trend returns to the old trend (i.e., the trend before the behavioral change) within the hour, the behavioral change will be labeled a level shift rather than a trend change.
 
 #### New downgrade action that adapts the SLAnalytics configuration file when downgrading to version 10.3.0 or older [ID 37582]
 
@@ -315,7 +315,7 @@ When the Cassandra health monitor reconnected to a remote Cassandra or Cassandra
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking* at the same time (e.g. via *System Center > System settings > analytics config* in DataMiner Cube), only *Alarm Focus* would actually be stopped. *Automatic Incident Tracking* would still be active, but in an incorrect state.
+Up to now, when you stopped both *Alarm Focus* and *Automatic Incident Tracking* at the same time (e.g., via *System Center > System settings > analytics config* in DataMiner Cube), only *Alarm Focus* would actually be stopped. *Automatic Incident Tracking* would still be active, but in an incorrect state.
 
 #### Service & Resource Management: Problem with resource capability exposers [ID 37503]
 

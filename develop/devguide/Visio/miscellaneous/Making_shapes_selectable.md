@@ -54,7 +54,7 @@ If you want the text in a "Selectable" shape to be copied to a session variable 
    ```
 
 > [!NOTE]
-> When shapes are automatically generated, you can define a *SelectionVar* on group level, i.e. on the shape (or the shape group) where you specified a shape data field of type **Children**.
+> When shapes are automatically generated, you can define a *SelectionVar* on group level, i.e., on the shape (or the shape group) where you specified a shape data field of type **Children**.
 
 ### Having the Selectable shape copied to multiple session variables
 

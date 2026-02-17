@@ -188,7 +188,7 @@ When, in the *Protocols & Templates* app, you activated a functions file, the ac
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
-When the placeholder `[Elapsed Time]` was used inside another placeholder (e.g. `[Subtract:[Elapsed Time],[PreRoll]]`), the entire placeholder (e.g. `[Subtract:[Elapsed Time],[PreRoll]]`) would not be updated when the elapsed time had changed.
+When the placeholder `[Elapsed Time]` was used inside another placeholder (e.g., `[Subtract:[Elapsed Time],[PreRoll]]`), the entire placeholder (e.g., `[Subtract:[Elapsed Time],[PreRoll]]`) would not be updated when the elapsed time had changed.
 
 #### Pattern matching: Memory leak [ID 37771]
 

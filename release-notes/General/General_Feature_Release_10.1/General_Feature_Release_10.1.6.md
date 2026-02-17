@@ -73,8 +73,8 @@ A protection has been added to avoid reduced performance of the system when an a
 
 In an element protocol, it is now possible to make a distinction between
 
-- internal DCF interfaces (i.e. virtual interfaces used within the protocol), and
-- external DCF interfaces (i.e. physical interfaces that will appear in interface lists in the UI).
+- internal DCF interfaces (i.e., virtual interfaces used within the protocol), and
+- external DCF interfaces (i.e., physical interfaces that will appear in interface lists in the UI).
 
 By default, all DCF interfaces are considered external. Interfaces that should be considered internal, have to be explicitly marked as internal. See the following example.
 
@@ -160,7 +160,7 @@ In the *ParametersOptions* shape data field for a parameter chart showing real-t
 
 When a ProfileInstance is updated while it is being used by one or more bookings, the following additional errors can now be returned.
 
-When a ProfileInstance is updated without quarantine being forced (i.e. with forceQuarantine set to false):
+When a ProfileInstance is updated without quarantine being forced (i.e., with forceQuarantine set to false):
 
 - If no instances need to be quarantined, the update will be applied and the following warning will be returned:
 
@@ -171,7 +171,7 @@ When a ProfileInstance is updated without quarantine being forced (i.e. with for
   - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
   - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
 
-When a ProfileInstance is updated with quarantine being forced (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
+When a ProfileInstance is updated with quarantine being forced (i.e., with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
 
 - A warning of type ReservationInstancesMovedToQuarantine, listing the reservations and the usages that were quarantined.
 - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the reservations that were reconfigured because of the update.
@@ -264,7 +264,7 @@ In the Generic Query Interface, a new “DCF connections” data source is now a
 
 > [!NOTE]
 >
-> - The “Is Internal” column indicates whether a connection has been marked internal (i.e. virtual) or external (i.e. physical).
+> - The “Is Internal” column indicates whether a connection has been marked internal (i.e., virtual) or external (i.e., physical).
 > - External connections are configured both on the source element and the destination element. Hence, each external connection will be listed twice.
 > - Connections of which both the source element and the destination element are stopped will not be listed.
 > - Connections of which only the destination element is stopped will be listed once.
@@ -304,8 +304,8 @@ Root
 
 From now on...
 
-- the counter of the views data source will show “(1)”, i.e. the root, and
-- the counter of the root view data source will show “(2)”, i.e. child view 1 and 2.
+- the counter of the views data source will show “(1)”, i.e., the root, and
+- the counter of the root view data source will show “(2)”, i.e., child view 1 and 2.
 
 > [!NOTE]
 > The counter of the parameters data source will show the total amount of parameters.
@@ -545,7 +545,7 @@ From now on, the DMS.xml file also supports using hostnames instead of IP addres
 
 #### DataMiner Cube - Services app: Validation of service profile definition names and service profile instance names is now consistent with the name validation routines used in the other SRM apps \[ID 29155\]
 
-In the Services app, the validation of service profile definition names and service profile instance names has now been made consistent with the name validation routines used in the other SRM apps (e.g. Profiles, Resources, Functions, etc.).
+In the Services app, the validation of service profile definition names and service profile instance names has now been made consistent with the name validation routines used in the other SRM apps (e.g., Profiles, Resources, Functions, etc.).
 
 #### DataMiner Cube - Visual Overview: Viewport and Navigate variables of a Resource Manager timeline will now be read and applied upon opening \[ID 29299\]
 
@@ -557,7 +557,7 @@ When, in Visual Overview, you create a shape that should display the Resource Ma
 From now on, both variables can be processed immediately upon opening a visual overview with a Resource Manager timeline.
 
 - Setting the Navigate variable using a page-level InitVar will make the timeline navigate immediately to the chosen time slot and clear the Navigate variable.
-- The Viewport variable will always be read upon opening the Resource Manager timeline. In other words, if a session variable already exists in the scope in question (e.g. when the time line was opened while using the global variable scope), the timeline will automatically zoom to the last-known view port.
+- The Viewport variable will always be read upon opening the Resource Manager timeline. In other words, if a session variable already exists in the scope in question (e.g., when the time line was opened while using the global variable scope), the timeline will automatically zoom to the last-known view port.
 
 > [!NOTE]
 > The Navigate variable will be processed after the Viewport variable.
@@ -578,7 +578,7 @@ Up to now, when a data overflow was detected while generating a PDF report, a wa
 
 #### Mobile apps: All timespan controls now support timespan grouping \[ID 29441\]
 
-All timespan controls of all mobile apps (e.g. Monitoring, Jobs, Ticketing, Dashboards, etc.) now support timespan grouping.
+All timespan controls of all mobile apps (e.g., Monitoring, Jobs, Ticketing, Dashboards, etc.) now support timespan grouping.
 
 #### Jobs app: Tool tips added to section definition settings \[ID 29443\]
 
@@ -586,7 +586,7 @@ The job section definition settings “Color”, “Icon” and “Allow Multipl
 
 #### Mobile apps - Visual Overview: Linking shapes to webpages \[ID 29444\]
 
-When you link a shape to a webpage using a shape data field of type *Link*, that page will be opened each time a user clicks that shape. This feature will now also work on visual overviews in mobile apps (e.g. Dashboards, Monitoring, etc.).
+When you link a shape to a webpage using a shape data field of type *Link*, that page will be opened each time a user clicks that shape. This feature will now also work on visual overviews in mobile apps (e.g., Dashboards, Monitoring, etc.).
 
 #### DataMiner Cube - Visual Overview: Enhanced performance when loading and sorting children shapes \[ID 29448\]
 
@@ -616,7 +616,7 @@ DataMiner Cube automatically scales each window based on the monitor it is displ
 Sizing:
 
 - When a window is undocked via a drag operation, it will take the same size as the docked window.
-- When a window is undocking via SHIFT-Click or via the Undock context menu action, it will take a size based on the type of window. If no specific size is provided (e.g. in case of an element card), the default size will be used (i.e. 80% of the screen size).
+- When a window is undocking via SHIFT-Click or via the Undock context menu action, it will take a size based on the type of window. If no specific size is provided (e.g., in case of an element card), the default size will be used (i.e., 80% of the screen size).
 - Window size range: From 600x400 (minimum) to 80% of the screen (maximum)
 
 Positioning:
@@ -647,7 +647,7 @@ DataMiner now supports the use of NotRegex filters in Elasticsearch.
 
 #### DataMiner Cube - Visual Overview: Service child shapes will now be updated instead of recreated when a dynamic part changes \[ID 29568\]
 
-When a series of service child shapes contained a dynamic part (e.g. ChildrenFilter, ChildrenSource, etc.), up to now, all those child shapes would be recreated each time one of those dynamic parts changed. From now on, when a dynamic part changes, the child shapes will be updated instead of being recreated.
+When a series of service child shapes contained a dynamic part (e.g., ChildrenFilter, ChildrenSource, etc.), up to now, all those child shapes would be recreated each time one of those dynamic parts changed. From now on, when a dynamic part changes, the child shapes will be updated instead of being recreated.
 
 #### DVE elements notifications no longer added to SLNetCOM Notification Stack \[ID 29601\]
 
@@ -787,7 +787,7 @@ In the legacy Dashboards app, the “Custom low range” and “Custom high rang
 
 #### Dashboards app: Data item dragged onto a component would not appear in the component’s edit panel \[ID 29481\]
 
-When you dragged a data item (e.g. the entire Elements dataset) onto a component, in some rare cases, that item would not appear in the component’s edit panel.
+When you dragged a data item (e.g., the entire Elements dataset) onto a component, in some rare cases, that item would not appear in the component’s edit panel.
 
 #### Dashboards app: Index feed would remain in status 'Loading' when an error occurred while fetching the indices \[ID 29487\]
 
@@ -829,7 +829,7 @@ When the DataMiner landing page listed 6 apps and you were redirected to an erro
 
 #### DMA that was incorrectly cleaned after having been removed from a DMS would skip its initial synchronization when added to another DMS later on \[ID 29523\]
 
-When a DataMiner Agent had been removed from the DataMiner System and was cleaned up incorrectly afterwards (e.g. by manually updating the DMS.xml file), in some cases, it would skip its initial synchronization when it was added to another DataMiner System later on.
+When a DataMiner Agent had been removed from the DataMiner System and was cleaned up incorrectly afterwards (e.g., by manually updating the DMS.xml file), in some cases, it would skip its initial synchronization when it was added to another DataMiner System later on.
 
 #### Monitoring app: Alarms page of element card would not show any alarms \[ID 29524\]
 
@@ -877,7 +877,7 @@ When you tried to export the average trend data of a trend graph with multiple l
 
 #### Dashboards app - GQI: Filters would unnecessarily be sent along with SLNet calls \[ID 29583\]
 
-When a GQI query contains a filter to be applied to e.g. a parameter table, then that filter will be sent along with the SLNet call to allow SLElement to apply the filter for performance reasons. However, in some cases, a filter would also be sent along with the SLNet call when this was not applicable (e.g. when there was a join or aggregation operation between the filter and the data source).
+When a GQI query contains a filter to be applied to, for example, a parameter table, then that filter will be sent along with the SLNet call to allow SLElement to apply the filter for performance reasons. However, in some cases, a filter would also be sent along with the SLNet call when this was not applicable (e.g., when there was a join or aggregation operation between the filter and the data source).
 
 #### DataMiner Cube - Embedded Chromium web browser engine: Problems with scaling \[ID 29596\]
 

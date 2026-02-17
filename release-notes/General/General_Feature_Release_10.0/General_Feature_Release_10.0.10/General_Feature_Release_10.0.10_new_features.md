@@ -87,7 +87,7 @@ By default, the DLL files in the package will be copied to the C:\\Skyline DataM
 - If you want a DLL file to be placed in a subfolder of the dllImport folder, then add a subfolder in the .dmprotocol package. In that case, also specify that subfolder in the dllImport attribute of the QAction. For example, the C:\\Skyline DataMiner\\ProtocolScripts\\ dllImport\\subfolder\\example.dll file will only be found if the QAction references it using the following syntax: \<Qaction id="1" dllImport="subfolder\\example.dll" encoding="csharp" triggers="1">
 
     > [!NOTE]
-    > When a DLL file is referenced using the dllImport attribute of a QAction (e.g. \<QAction id="5" dllImport="somedll.dll" encoding="csharp" triggers="1">), then the dllImport folder will be checked first. If the DLL file cannot be found in that folder, then the ProtocolScripts folder will be checked.
+    > When a DLL file is referenced using the dllImport attribute of a QAction (e.g., \<QAction id="5" dllImport="somedll.dll" encoding="csharp" triggers="1">), then the dllImport folder will be checked first. If the DLL file cannot be found in that folder, then the ProtocolScripts folder will be checked.
 
 > [!NOTE]
 >
@@ -156,9 +156,9 @@ If you want a parameter control to also show the name of the table, then specify
 
 #### Visual Overview: Factoring in decimals when using the DynamicUnits option \[ID 26697\]
 
-The *DynamicUnits* option allows you to enable the use of dynamic units, i.e. units that can be converted to other units according to rules configured in the protocol. You may decide to enable this feature if you want to have large values converted to more legible values (e.g. to convert 1000 Mb to 1 Gb, 1000 m to 1 km, etc.).
+The *DynamicUnits* option allows you to enable the use of dynamic units, i.e., units that can be converted to other units according to rules configured in the protocol. You may decide to enable this feature if you want to have large values converted to more legible values (e.g., to convert 1000 Mb to 1 Gb, 1000 m to 1 km, etc.).
 
-From now on, when using the *DynamicUnits* option, it is also possible to factor in decimals defined in the dynamic units of a protocol parameter. With a configuration like the following, a value of 0.15 m will be shown as 15.0 cm (i.e. with 1 decimal).
+From now on, when using the *DynamicUnits* option, it is also possible to factor in decimals defined in the dynamic units of a protocol parameter. With a configuration like the following, a value of 0.15 m will be shown as 15.0 cm (i.e., with 1 decimal).
 
 ```xml
 <Display>
@@ -189,7 +189,7 @@ The scheduled task is checked each time you start Cube Launcher, and is removed 
 
 Using the syntax “\[Reservation:\<id>,\<fieldName>\]”, it is possible to resolve a booking field based on the ID and the name of that field.
 
-The Status field has now been added to the list of possible fields. This field indicates the current status of the booking (e.g. “Ended”, “Pending”, “Ongoing”, etc.).
+The Status field has now been added to the list of possible fields. This field indicates the current status of the booking (e.g., “Ended”, “Pending”, “Ongoing”, etc.).
 
 ### DMS Reports & Dashboards
 
@@ -272,7 +272,7 @@ For the *Ring* and *Gauge* component, if parameter feeds are used, additional op
 
 #### Dashboards app: Dashboards created by users will now be included in DataMiner backup packages \[ID 26836\]
 
-When, in DataMiner Cube, you take a backup, all dashboards created by users (i.e. all files stored in C:\\Skyline DataMiner\\Dashboards) will now be included in the backup package if you selected either “full backup” or “full backup without database”.
+When, in DataMiner Cube, you take a backup, all dashboards created by users (i.e., all files stored in C:\\Skyline DataMiner\\Dashboards) will now be included in the backup package if you selected either “full backup” or “full backup without database”.
 
 ### DMS Automation
 
@@ -633,7 +633,7 @@ var query =HistoryChangeExposers.SubjectID.Equal(someResourceID.ToFileFriendlySt
 
 #### Possibility to add attachments to booking instances \[ID 26784\]
 
-To support adding attachments to booking instances (i.e. ReservationInstance objects), a new ReservationInstanceAttachments property is now available in the ResourceManagerHelper. This property allows you to manage booking attachments using the following methods:
+To support adding attachments to booking instances (i.e., ReservationInstance objects), a new ReservationInstanceAttachments property is now available in the ResourceManagerHelper. This property allows you to manage booking attachments using the following methods:
 
 | Method                                                                                | Function                                                                         |
 |---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|

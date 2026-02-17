@@ -13,7 +13,7 @@ uid: netinsight-nimbra-vision-install
 
   - **Service Provisioning**: To provision services from Nimbra Vision.
   - **Northbound Provisioning**: For access to the REST APIs.
-  - **Scheduling**: To schedule and book resources needed by the services, e.g. ports and trunk.
+  - **Scheduling**: To schedule and book resources needed by the services, e.g., ports and trunk.
 capacity.
   - **Autoroute**: To automatically create the path based on time, and to book available resources.
 

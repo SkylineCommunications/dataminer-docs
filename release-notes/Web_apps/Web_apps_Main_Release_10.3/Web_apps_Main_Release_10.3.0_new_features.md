@@ -95,7 +95,7 @@ An ad hoc data source is represented as a class that implements predefined inter
   |--|--|--|--|
   | OnPrepareFetch | OnPrepareFetchInputArgs | OnPrepareFetchOutputArgs | Indicated that the GQI has processed the query. |
 
-- **IGQIOnDestroy**: This interface is called when the instance object is destroyed, which happens when the session is closed, e.g. in case of inactivity or when all the necessary data has been retrieved. It can for instance be used to end the connection with a database. This interface has one method:
+- **IGQIOnDestroy**: This interface is called when the instance object is destroyed, which happens when the session is closed, e.g., in case of inactivity or when all the necessary data has been retrieved. It can for instance be used to end the connection with a database. This interface has one method:
 
   | Method | Input arguments | Output arguments | Description |
   |--|--|--|--|
@@ -270,23 +270,23 @@ At present, the following actions can be configured:
 
 | Action | Description |
 |--|--|
-| Launch a script | Launch an automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g. the Query Row feed). |
+| Launch a script | Launch an automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g., the Query Row feed). |
 | Navigate to a URL | Navigate to a specific URL (in a new tab). |
 | Open a page | Open a (hidden) page in the same application. |
 | Open a panel | Open a panel on the current page. Panels can appear on the left side of a page, on the right side of the page or as a popup. |
 | Close a panel | Close a panel that was open on the current page. |
 | Open an app | Navigate to another application. |
-| Execute component action | Execute a component action. E.g. select an item in a table, create a new instance, etc. |
+| Execute component action | Execute a component action. For example, select an item in a table, create a new instance, etc. |
 
-By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e. only when the preceding action was executed successfully.
+By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e., only when the preceding action was executed successfully.
 
-Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to e.g. a header bar button.
+Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to, for example, a header bar button.
 
 ##### Versioning
 
 The DataMiner Low-Code Apps include a versioning system that allows different versions of the same application to exist simultaneously. These different versions can be accessed via the versions panel of the application, which also allows the versions to be edited.
 
-When you create a new application, a first draft version of that application is created. That version can then be published, i.e. made accessible to end users. Each time the published version of an application is edited, a new draft version will be created. Draft versions are meant to be used as prototypes for testing purposes.
+When you create a new application, a first draft version of that application is created. That version can then be published, i.e., made accessible to end users. Each time the published version of an application is edited, a new draft version will be created. Draft versions are meant to be used as prototypes for testing purposes.
 
 Per application, there can be up to 15 versions: 14 draft versions and one published version. When a 16th version is created, the oldest draft version will automatically be deleted. The published version will never be deleted. As there can be only one published version, whenever you publish a version, the previously published version will automatically be demoted to draft version.
 
@@ -314,7 +314,7 @@ Access to a specific application can be configured in the application itself. Pe
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-Low-code apps can now be provided with data (e.g. element data, parameter data, view data, etc.) via URL query parameters.
+Low-code apps can now be provided with data (e.g., element data, parameter data, view data, etc.) via URL query parameters.
 
 To do so, add a URL query parameter with key *data*. The value should be a URL-encoded JSON object with the following structure:
 
@@ -470,7 +470,7 @@ The token counters will be updated every 10 seconds.
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
-When you hover over a data table component (e.g. a GQI table), a search box will now appear in the bottom-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
+When you hover over a data table component (e.g., a GQI table), a search box will now appear in the bottom-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
 
 #### Web apps: Dashboards, app pages and app panels now all have a 'Fit to view' setting [ID 33401]
 
@@ -482,9 +482,9 @@ In the Dashboards app and the Low-Code Apps, dashboards, app pages, and app pane
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
-When you right-click a column header of a data table component (e.g. a GQI table), you will now be presented with a number of sorting, grouping and filtering options.
+When you right-click a column header of a data table component (e.g., a GQI table), you will now be presented with a number of sorting, grouping and filtering options.
 
-- To sort by the column in question, select a sort order (e.g. A \> Z, Z \> A, etc.).
+- To sort by the column in question, select a sort order (e.g., A \> Z, Z \> A, etc.).
 
 - To group by the column in question, select *Group*.
 
@@ -506,7 +506,7 @@ When you right-click a column header of a data table component (e.g. a GQI table
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
-When you right-click a non-empty cell in a data table component (e.g. a GQI table), you can now choose to copy the cell value, the entire row, the entire column or the entire table.
+When you right-click a non-empty cell in a data table component (e.g., a GQI table), you can now choose to copy the cell value, the entire row, the entire column or the entire table.
 
 If you choose to copy the entire row or the entire table, the data will be copied in CSV format.
 
@@ -535,7 +535,7 @@ Up to now, when a Service Definition component displayed a service definition of
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
-The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 13 instead of Angular 12.
+The DataMiner mobile apps that use Angular (e.g., Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 13 instead of Angular 12.
 
 #### GQI: Improved performance when retrieving data [ID 33873] [ID 33890] [ID 33935]
 
@@ -689,7 +689,7 @@ This eye icon will make you aware that the table is no longer identical to the o
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 14 instead of Angular 13.
+The DataMiner mobile apps that use Angular (e.g., Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 14 instead of Angular 13.
 
 #### Dashboards app / Low-Code Apps: Enhanced filtering by protocol [ID 34453]
 
@@ -739,7 +739,7 @@ Missing information in dashboards is no longer indicated by means of a visual re
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-The PDF module is now available in the Jobs and Dashboards app. From now on, you can e.g. export dashboards to PDF.
+The PDF module is now available in the Jobs and Dashboards app. From now on, you can e.g., export dashboards to PDF.
 
 #### Dashboards app: PDF and share button will now be hidden in edit mode [ID 34653]
 

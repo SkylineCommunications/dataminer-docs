@@ -15,7 +15,7 @@ Defines a function for the protocol.
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
 |[id](xref:Functions.Function-id)|[guid](xref:Functions-TypeGuid)|Yes|Specifies the unique GUID of the function.|
-|[name](xref:Functions.Function-name)|[TypeNonEmptyString](xref:Functions-TypeNonEmptyString)|Yes|The name of the protocol function (e.g. encoder, decoder). The name of VFs created with this element will consist of the main protocol name followed by this name: "mainProtocolName.Name".|
+|[name](xref:Functions.Function-name)|[TypeNonEmptyString](xref:Functions-TypeNonEmptyString)|Yes|The name of the protocol function (e.g., encoder, decoder). The name of VFs created with this element will consist of the main protocol name followed by this name: "mainProtocolName.Name".|
 |[maxInstances](xref:Functions.Function-maxInstances)|integer||Determines the maximum number of instances of this function that can be active at the same time.|
 |[profile](xref:Functions.Function-profile)|[guid](xref:Functions-TypeGuid)||The GUID of the profile corresponding to the function.|
 

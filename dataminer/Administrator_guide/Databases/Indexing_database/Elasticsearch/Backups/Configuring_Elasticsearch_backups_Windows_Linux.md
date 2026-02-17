@@ -37,7 +37,7 @@ Examples:
 
 - Kibana: [Kibana](https://www.elastic.co/guide/en/kibana/6.8/deb.html#deb-repo) is often used together with Elasticsearch. If you are using Ubuntu or Debian as your operating system, this is the preferred client application.
 
-- CURL: [Curl](https://curl.se/) is a simple command line utility that allows messages with payload (e.g. POST and PUT messages) and is useful for scripting.
+- CURL: [Curl](https://curl.se/) is a simple command line utility that allows messages with payload (e.g., POST and PUT messages) and is useful for scripting.
 
 - [Elasticvue](https://elasticvue.com/)
 
@@ -99,7 +99,7 @@ Examples:
    > For more information, see [Shared File System Repository](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html#_shared_file_system_repository).
 
    > [!NOTE]
-   > You can also use ElasticVue to create your repository: Go to *Snapshots* > *Snapshot Repositories*, and click the *New repository* button. Then fill in the name and the repository location, and leave the default settings untouched (i.e. *Compress* should be enabled, and *Readonly* should be disabled).
+   > You can also use ElasticVue to create your repository: Go to *Snapshots* > *Snapshot Repositories*, and click the *New repository* button. Then fill in the name and the repository location, and leave the default settings untouched (i.e., *Compress* should be enabled, and *Readonly* should be disabled).
 
 1. Search the Elasticsearch logging for exceptions.
 
@@ -262,11 +262,11 @@ You have now finished configuring an Elasticsearch backup. If you do not want to
 
 ## Preparing the target machine
 
-1. Copy the files generated in the backup location of the source (i.e. the location where the snapshot was generated) to the target Elasticsearch backup location.
+1. Copy the files generated in the backup location of the source (i.e., the location where the snapshot was generated) to the target Elasticsearch backup location.
 
    You can do this by:
 
-   - using an SFTP client, e.g. WinSCP,
+   - using an SFTP client, e.g., WinSCP,
 
    - setting up an FTP server on the destination Linux,
 
@@ -330,7 +330,7 @@ Whether you are triggering the backup via DataMiner or using an Elasticsearch RE
   1. Download [PSTools](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec).
   1. Open a command prompt as administrator and navigate to the folder containing the *psexec* tool.
   1. Execute `psexec -i -s cmd.exe`. This way you will run the command prompt as the SYSTEM user instead of Administrator.
-  1. Execute the `net use` command, e.g. `net use \\DataMiner-01\ElasticBackup`.
+  1. Execute the `net use` command, e.g., `net use \\DataMiner-01\ElasticBackup`.
   1. When prompted, enter the credentials to access the shared folder.
   1. Restart the Elasticsearch service.
   1. Verify whether the service indeed starts.

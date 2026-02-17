@@ -78,7 +78,7 @@ In the case of the latter, if a `FieldValue` contains data for a `GenericEnumFie
 From now on, the generation of anomaly suggestion events will be limited to 50 events per hour per type of anomaly (level shift, trend change, flatline or variance change).
 
 > [!NOTE]
-> The generation of anomaly alarm events (i.e. on parameters that have anomaly monitoring configured in the alarm template) will remain unlimited.
+> The generation of anomaly alarm events (i.e., on parameters that have anomaly monitoring configured in the alarm template) will remain unlimited.
 
 #### GQI: Clearer error message will now be thrown when an ad hoc data source or custom operator cannot be instantiated [ID 38686]
 
@@ -200,7 +200,7 @@ When the main database is offline, file offloads are used to store write/delete 
 
 When an element with an SNMP connection that was configured with a hostname instead of an IP address went into timeout, and during the timeout the hostname could not be resolved, the element would remain in timeout and would no longer try to resolve the hostname until it was restarted.
 
-Also, in StreamViewer, the error messages that indicate that the hostname could not be resolved have now been made clearer. For example, in case of SNMPv3, a generic `DISCOVERY FAILED` error would appear when something went wrong while setting up a connection. From now on, the error will indicate what exactly went wrong (e.g. the engine ID could not be discovered, the user credentials were not valid, etc.).
+Also, in StreamViewer, the error messages that indicate that the hostname could not be resolved have now been made clearer. For example, in case of SNMPv3, a generic `DISCOVERY FAILED` error would appear when something went wrong while setting up a connection. From now on, the error will indicate what exactly went wrong (e.g., the engine ID could not be discovered, the user credentials were not valid, etc.).
 
 #### SLAnalytics - Pattern matching: A match of one subpattern would incorrectly be considered a match of the entire multivariate pattern [ID 38587]
 

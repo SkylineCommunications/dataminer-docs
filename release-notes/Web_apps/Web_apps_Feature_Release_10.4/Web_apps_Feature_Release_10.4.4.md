@@ -57,7 +57,7 @@ This indicator will show the current status of the client's WebSocket connection
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-When an interactive automation script was launched from a web app, up to now, the windows and popups of the script would always have the default background and foreground colors (i.e. white background and black foreground).
+When an interactive automation script was launched from a web app, up to now, the windows and popups of the script would always have the default background and foreground colors (i.e., white background and black foreground).
 
 From now on, when an interactive automation script is launched in any of the following ways, the windows and popups of that script will inherit the foreground color and the default component background color of the page, panel or dashboard from which the script was launched:
 
@@ -106,7 +106,7 @@ The persistent connection between the Web API and SLNet is used to cache active 
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
+In all web apps (e.g., Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
 
 #### Dashboards app & Low-Code Apps: Dropdown, List & Tree components now support queries as data source [ID 38811]
 
@@ -121,7 +121,7 @@ The *Dropdown*, *List* and *Tree* components will now behave as follows when lin
 - When linked to one query, they will now list the resulting rows from that query instead of the query itself. Making a selection will then
 
   - feed the selected row(s), and
-  - feed any data that is linked to the selected row(s) as metadata (e.g. parameters, elements, indices).
+  - feed any data that is linked to the selected row(s) as metadata (e.g., parameters, elements, indices).
 
 Two new settings have also been added:
 
@@ -179,7 +179,7 @@ When, in a dashboard or a low-code app, you launched an interactive automation s
 
 When you perform a DataMiner upgrade (either a full upgrade or a web-only upgrade), a backup of all existing dashboards and low-code apps on the system is made. During the upgrade procedure, the backup tool will create a temporary folder, place a copy of all dashboard and low-code app files in that folder, compress those files, and then delete the temporary folder.
 
-Up to now, a DataMiner upgrade could fail due to the backup tool being unable to perform that last step, i.e. delete the temporarily folder.
+Up to now, a DataMiner upgrade could fail due to the backup tool being unable to perform that last step, i.e., delete the temporarily folder.
 
 From now on, when that temporary folder cannot be deleted, the upgrade will no longer fail. A new attempt to delete the folder will be made the next time a DataMiner upgrade is performed.
 
@@ -201,7 +201,7 @@ This will no longer be the case. The value of a regex node will now have the for
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-When you opened the icon picker in e.g. *Configure Context menu*, up to now, the icons would not entirely fill the box, causing a white bar to appear on the right-hand size. From now on, the rows will again contain 10 icons instead of 9.
+When you opened the icon picker in e.g., *Configure Context menu*, up to now, the icons would not entirely fill the box, causing a white bar to appear on the right-hand size. From now on, the rows will again contain 10 icons instead of 9.
 
 #### Low-Code Apps: Selection boxes in the header bar would appear behind the component that had the focus [ID 38677]
 

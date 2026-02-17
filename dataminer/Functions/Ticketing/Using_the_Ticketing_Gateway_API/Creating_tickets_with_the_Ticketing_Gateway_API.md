@@ -60,7 +60,7 @@ private TicketFieldResolver CreateCustomResolver()
     DmaState.DynamicAdd("Closed", 4);
 
     //We now link our custom ticket states to a DataMiner TicketState
-    //I.e.: "Created" has value 0 and gets linked to TicketState.Open.
+    //I.e., "Created" has value 0 and gets linked to TicketState.Open.
     resolver.StateResolver.Add(0, TicketState.Open); //Created
     resolver.StateResolver.Add(1, TicketState.Open); //Started
     resolver.StateResolver.Add(2, TicketState.Open); //Paused

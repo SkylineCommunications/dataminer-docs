@@ -63,9 +63,9 @@ If, in the *shape* attribute below, you have defined a clickable area on top of 
 
 - circle,
 
-- poly (i.e. polygon), or
+- poly (i.e., polygon), or
 
-- rect (i.e. rectangle)
+- rect (i.e., rectangle)
 
 By default, no shape is defined.
 

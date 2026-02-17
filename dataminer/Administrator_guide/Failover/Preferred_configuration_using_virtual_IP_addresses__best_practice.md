@@ -31,8 +31,8 @@ You should configure four different heartbeats.
 |-----------|--------------------|-------|--------------------------------------------|
 | 1         | Normal heartbeat   | DMA 1 | DMA 2                                      |
 | 2         | Normal heartbeat   | DMA 2 | DMA 1                                      |
-| 3         | Inverted heartbeat | DMA 1 | e.g. a Domain Controller or a local switch |
-| 4         | Inverted heartbeat | DMA 2 | e.g. a Domain Controller or a local switch |
+| 3         | Inverted heartbeat | DMA 1 | e.g., a Domain Controller or a local switch |
+| 4         | Inverted heartbeat | DMA 2 | e.g., a Domain Controller or a local switch |
 
 > [!NOTE]
 > For more information about normal and inverted heartbeats, see [Advanced Failover options](xref:Advanced_Failover_options#heartbeats).

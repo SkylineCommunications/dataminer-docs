@@ -114,7 +114,7 @@ You can now use dataminer.services keys. At present, these can be used with the 
 
 In the Admin app, you can manage the dataminer.services keys on the *Keys* page for each DataMiner System connected to dataminer.services. Each set of keys consists of a (user-defined) label, a primary key, and a secondary key. Inline buttons are available that allow you to view or copy a key. Simply clicking a key entry in the list will open a side panel with detailed information, including when the keys were created and by whom.
 
-For each set of keys, the *...* button on the right opens a menu where you can regenerate the primary key, regenerate the secondary key, or revoke (i.e. delete) the key. With the *New Key* option at the top of the page, you can add more keys.
+For each set of keys, the *...* button on the right opens a menu where you can regenerate the primary key, regenerate the secondary key, or revoke (i.e., delete) the key. With the *New Key* option at the top of the page, you can add more keys.
 
 #### 3 June 2022 - New feature - Admin app sidebar redesigned [ID 33599]
 

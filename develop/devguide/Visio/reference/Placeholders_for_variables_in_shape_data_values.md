@@ -133,7 +133,7 @@ If ServiceA has the following two properties:
 
 ### \[Avg:X,Y,Z\]
 
-Average of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
+Average of a list of entries, e.g., X, Y, Z (which will be parsed to numbers).
 
 ### \[cardvar:VariableName\]
 
@@ -253,7 +253,7 @@ This placeholder can only be used inside another placeholder, or in a URL for a 
 - The primary IP address
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.2.3 onwards, the URI scheme of the DMA (i.e. HTTP or HTTPS) is automatically applied when this placeholder is resolved, unless the placeholder does not represent the URI host (e.g. when it is used as a query argument).
+> From DataMiner 10.2.0/10.2.3 onwards, the URI scheme of the DMA (i.e., HTTP or HTTPS) is automatically applied when this placeholder is resolved, unless the placeholder does not represent the URI host (e.g., when it is used as a query argument).
 
 > [!TIP]
 > See also: [Special placeholders that can be used inside a URL](xref:Linking_a_shape_to_a_webpage#special-placeholders-that-can-be-used-within-a-url)
@@ -360,15 +360,15 @@ By default, this time will be displayed in the regional date/time format. If you
 
 ### \[Max:X,Y,Z\]
 
-Maximum of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
+Maximum of a list of entries, e.g., X, Y, Z (which will be parsed to numbers).
 
 ### \[Min:X,Y,Z\]
 
-Minimum of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
+Minimum of a list of entries, e.g., X, Y, Z (which will be parsed to numbers).
 
 ### \[Name\]
 
-Reference to the DataMiner object (e.g. element, service, view, etc.) to which the Visio drawing is linked.
+Reference to the DataMiner object (e.g., element, service, view, etc.) to which the Visio drawing is linked.
 
 > [!NOTE]
 > From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41769-->, if a \[Name\] placeholder is used to reference a service or view, the name of that service or view will update automatically when it changes.
@@ -461,7 +461,7 @@ If you want to override the above-mentioned general rule, you can add to the sha
 
 Available from DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards.<!-- RN 39763 -->
 
-This placeholder takes a regular expression and input, and it returns the parts of the input matching the regular expression. For example, `[RegexMatch: [a-z], aBc]` will return all the lowercase letters in the input, i.e. "ac".
+This placeholder takes a regular expression and input, and it returns the parts of the input matching the regular expression. For example, `[RegexMatch: [a-z], aBc]` will return all the lowercase letters in the input, i.e., "ac".
 
 When multiple matches are found within the input, by default, all matches will be concatenated and returned as one single string, without any separators. You can specify options to customize this behavior:
 
@@ -492,7 +492,7 @@ In this placeholder, specify three items, separated by commas:
 | Item | Description                                       |
 |------|---------------------------------------------------|
 | x    | The regular expression.                           |
-| y    | The input (e.g. a session variable).              |
+| y    | The input (e.g., a session variable).              |
 | z    | The string that will replace each of the matches. |
 
 > [!NOTE]
@@ -581,7 +581,7 @@ This placeholder can be used to retrieve a property of a booking (which can be a
   [reservation:[this service],ID]
   ```
 
-- To retrieve the **status** of a booking (e.g. "Ended", "Pending", "Ongoing", etc.), using a similar syntax:
+- To retrieve the **status** of a booking (e.g., "Ended", "Pending", "Ongoing", etc.), using a similar syntax:
 
   ```txt
   [reservation:<bookingID or service name or service ID or placeholder referring to a service>,Status]
@@ -624,11 +624,11 @@ This syntax consists of the following components:
 
 - The property to be retrieved, which can be specified as follows:
 
-  - **FullElementID**: The ID of the resource element (i.e. the DVE representing the resource) in the format DmaID/ElementID. This can for instance be used to link to an actual element in *Element* shape data.
+  - **FullElementID**: The ID of the resource element (i.e., the DVE representing the resource) in the format DmaID/ElementID. This can for instance be used to link to an actual element in *Element* shape data.
 
   - **Name**: The name of the resource.
 
-  - **Property=*\<propName>***: The value of a custom property of the resource. The name of that custom property must be specified in \<propName>, e.g. *Property=State*.
+  - **Property=*\<propName>***: The value of a custom property of the resource. The name of that custom property must be specified in \<propName>, e.g., *Property=State*.
 
   - **InUse**: From DataMiner 10.3.0/10.2.3 onwards, you can specify *InUse* to make the placeholder indicate whether a resource is being used in any bookings (with the result "true" or "false"). From DataMiner 10.3.0/10.2.6 onwards, this placeholder can also be used for a shape linked to an element, to indicate whether the element is being used in a resource, is a DVE parent of a function resource, or represents the physical device corresponding with a virtual function resource. However, note that the [UseResource=true](xref:Linking_a_shape_to_a_resource) option must be specified on the element shape for this to work.
 
@@ -653,7 +653,7 @@ The following properties are supported:
 
 - **Name**: The name of the service definition.
 
-- **Actions**: The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (":"). This will allow them to be inserted directly into e.g. a SetVar shape.
+- **Actions**: The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (":"). This will allow them to be inserted directly into, for example, a SetVar shape.
 
 - **Property=*\<propertyName>***: The value of a custom property of the service definition.
 
@@ -719,7 +719,7 @@ Used when embedding an alarm timeline component, in order to select a single par
 
 Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display service definition properties, separated by line breaks. Each property will be displayed as "\<Property name>: \<Property value>".
 
-- For a top-level element shape (i.e. not an interface shape), all properties of the node specified in the service definition will be shown.
+- For a top-level element shape (i.e., not an interface shape), all properties of the node specified in the service definition will be shown.
 
 - For an interface shape, all interface properties of the service definition will be shown.
 
@@ -732,7 +732,7 @@ Use this placeholder in a shape data item of type **Tooltip** or in shape text. 
 
 Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display the property value of the specified service definition property.
 
-- For a top-level element shape (i.e. not an interface shape), the property has to be one of the properties of the node specified in the service definition.
+- For a top-level element shape (i.e., not an interface shape), the property has to be one of the properties of the node specified in the service definition.
 
 - For an interface shape, the property has to be one of the interface properties of the service definition.
 
@@ -823,7 +823,7 @@ From DataMiner 10.3.8/10.4.0 onwards, the subtract placeholder also supports num
 
 ### \[Sum:X,Y,Z\]
 
-Sum of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
+Sum of a list of entries, e.g., X, Y, Z (which will be parsed to numbers).
 
 This placeholder also supports datetime and time span values.
 
@@ -911,7 +911,7 @@ In a drawing linked to an enhanced service, you can refer to this service with t
 
 ### \[this reservationID\]
 
-From DataMiner 10.2.8/10.3.0 onwards, you can use this placeholder in shape data or shape text of shapes linked to a booking (e.g. dynamically generated shapes that represent bookings) to retrieve the GUID of the booking. The placeholder can also be nested, for example to retrieve booking properties or resources.
+From DataMiner 10.2.8/10.3.0 onwards, you can use this placeholder in shape data or shape text of shapes linked to a booking (e.g., dynamically generated shapes that represent bookings) to retrieve the GUID of the booking. The placeholder can also be nested, for example to retrieve booking properties or resources.
 
 For example:
 
@@ -967,7 +967,7 @@ As parameters of which the value is an empty string are considered initialized, 
 
 ### \[xpos\]
 
-In child shapes of a shape that is dynamically linked to an element (i.e. shape data field of type **Element** set to \*), you can use `[xpos]` and `[ypos]` placeholders.
+In child shapes of a shape that is dynamically linked to an element (i.e., shape data field of type **Element** set to \*), you can use `[xpos]` and `[ypos]` placeholders.
 
 In references to table parameters, for example, you can specify the tableIndex using `[xpos]` and `[ypos]` placeholders.
 

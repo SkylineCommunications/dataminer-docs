@@ -229,7 +229,7 @@ When the access level of a user was changed, up to now, that change would not im
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
-When, in the settings of a *Clock* component, you had specified that it had to display the current DataMiner time (i.e. the time of the DataMiner server to which you are connected), the component would incorrectly display the local time (i.e. the DataMiner client time), and vice versa.
+When, in the settings of a *Clock* component, you had specified that it had to display the current DataMiner time (i.e., the time of the DataMiner server to which you are connected), the component would incorrectly display the local time (i.e., the DataMiner client time), and vice versa.
 
 #### Dashboards app & Low-Code Apps: Problems with certain component settings [ID 37829]
 

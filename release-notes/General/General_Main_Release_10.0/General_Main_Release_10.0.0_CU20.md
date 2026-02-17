@@ -37,7 +37,7 @@ Due to a number of enhancements, overall performance of DataMiner Cube has incre
 
 #### Minor enhancements to several DataMiner processes \[ID 31155\]
 
-A number of minor enhancements have been made to a number of DataMiner processes (e.g. SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
+A number of minor enhancements have been made to a number of DataMiner processes (e.g., SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
 
 #### DataMiner Cube - Update Center: Enhanced error handling \[ID 31191\]
 
@@ -179,7 +179,7 @@ When you right-clicked a Service Definition diagram and selected *Configure grou
 
 #### Web apps: Setvar controls in visual overviews would no longer be rendered correctly \[ID 31351\]
 
-In web apps (e.g. Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
+In web apps (e.g., Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
 
 #### STARTTLS/SSL options for SMTP would not get applied when sending generic emails \[ID 31592\]
 

@@ -33,7 +33,7 @@ It may also be useful to understand the [algorithms used by DataMiner to configu
 
 These log files are only available on DataMiner versions prior to 10.4.3/10.4.0[CU0].<!-- RN 38193 -->
 
-In the `C:\Skyline DataMiner\Logging` folder, look for the file **SLMessageBroker.Crash.txt**. This file is generated whenever a process fails to create an ISLMessageBroker (i.e. an instance of the wrapper for the NATS interface). Unless the problem lies with NATS itself, this file can immediately point you in the right direction to solve the problem.
+In the `C:\Skyline DataMiner\Logging` folder, look for the file **SLMessageBroker.Crash.txt**. This file is generated whenever a process fails to create an ISLMessageBroker (i.e., an instance of the wrapper for the NATS interface). Unless the problem lies with NATS itself, this file can immediately point you in the right direction to solve the problem.
 
 These are some of the most frequently occurring errors logged in this file:
 
@@ -43,7 +43,7 @@ These are some of the most frequently occurring errors logged in this file:
 
 - **Invalid SLCloud.xml (missing attribute)**: When NATS is installed, attributes should be filled in automatically. If attributes are missing, most likely something went wrong during NATS installation so that it is not correctly installed.
 
-In the same DMA folder, also look for the file **SLMessageBroker.txt**. This file logs information whenever a NATS or STAN connection is established (when an ISLMessageBroker is created or recovers from a disconnect). If **successful reconnects** are logged after the last error in the .Crash file, it is possible that there was only a temporary disconnect that is already resolved. If this happens, a **restart of the service or DMA** will likely solve the problem. If the problem is indeed gone after a restart, you may want to investigate if the app causing the problem can be made more resilient (e.g. by installing the latest updates).
+In the same DMA folder, also look for the file **SLMessageBroker.txt**. This file logs information whenever a NATS or STAN connection is established (when an ISLMessageBroker is created or recovers from a disconnect). If **successful reconnects** are logged after the last error in the .Crash file, it is possible that there was only a temporary disconnect that is already resolved. If this happens, a **restart of the service or DMA** will likely solve the problem. If the problem is indeed gone after a restart, you may want to investigate if the app causing the problem can be made more resilient (e.g., by installing the latest updates).
 
 ## Check if the installation and clustering were successful
 
@@ -70,7 +70,7 @@ For error information, check the logging in `C:\Skyline DataMiner\Logging`.
 
 ## Check the configuration in SLCloud.xml
 
-Even if NATS is configured correctly, you will still encounter issues if *SLCloud.xml* does not contain the right NATS servers. This file should contain all servers that ISLMessageBroker can connect to. Note that this does not necessarily include the local NATS service (e.g. in a cluster of 2 Agents).
+Even if NATS is configured correctly, you will still encounter issues if *SLCloud.xml* does not contain the right NATS servers. This file should contain all servers that ISLMessageBroker can connect to. Note that this does not necessarily include the local NATS service (e.g., in a cluster of 2 Agents).
 
 Example of *SLCloud.xml* on a standalone DMA:
 
@@ -581,17 +581,17 @@ Check whether Keysight Agilent IO Libraries or a different third-party software 
 
 1. Run the following command in a command prompt window: `netstat -aon | findstr 9090`.
 
-1. If you identify a process using port 9090, open Windows Task Manager to find the process PID, e.g. *kdi-controller.exe*.
+1. If you identify a process using port 9090, open Windows Task Manager to find the process PID, e.g., *kdi-controller.exe*.
 
 #### Manually configuring a custom port for NAS
 
-To resolve this issue, manually configure a custom port for NATS that is not yet in use, e.g. port 9091.
+To resolve this issue, manually configure a custom port for NATS that is not yet in use, e.g., port 9091.
 
 1. Stop DataMiner and the NAS and NATS services.
 
 1. Make sure SLWatchdog is stopped.
 
-1. Open `C:\Skyline DataMiner\NATS\nats-account-server\nas.config` and change the port from 9090 to your chosen custom port, e.g. 9091.
+1. Open `C:\Skyline DataMiner\NATS\nats-account-server\nas.config` and change the port from 9090 to your chosen custom port, e.g., 9091.
 
 1. Open a command prompt as Administrator and navigate to the location of the NATS account server:
 

@@ -84,4 +84,4 @@ Up to now, it was recommended to customize the tab settings in Visual Studio. Fr
 
 #### IDE - XML editor: Problem when trying to view the changes made in a file revision \[ID 21721\]
 
-When, while viewing the history of a file under source control (e.g. SVN or GIT), you right-clicked a revision and clicked *Show Changes*, in some cases, an exception could be thrown.
+When, while viewing the history of a file under source control (e.g., SVN or GIT), you right-clicked a revision and clicked *Show Changes*, in some cases, an exception could be thrown.

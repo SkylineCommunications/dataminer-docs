@@ -24,7 +24,7 @@ This type of user will mostly be used in situations where the DMAs have not been
 
 ## Manually added domain users
 
-These are domain users of which the username and the password are managed by the domain, while all other properties (e.g. telephone number, email address, etc.) are managed by DataMiner.
+These are domain users of which the username and the password are managed by the domain, while all other properties (e.g., telephone number, email address, etc.) are managed by DataMiner.
 
 This type of user will mostly be used in situations where the DMAs have been added to a domain on which the DataMiner administrators do not have permission to change domain group memberships or update domain user properties (phone numbers, email addresses, etc.).
 

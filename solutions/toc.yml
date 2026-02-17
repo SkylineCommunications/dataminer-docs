@@ -33,6 +33,10 @@ items:
           items:
             - name: Creating workflows
               topicUid: WFD_Creating_Workflows
+            - name: Editing workflows
+              topicUid: WFD_Edit_Workflow
+            - name: Workflow states
+              topicUid: WFD_Workflow_States
         - name: Scheduling
           topicUid: MO_Scheduling
           items:
@@ -50,6 +54,8 @@ items:
               topicUid: MO_S_App_Configuration
             - name: Validation of upcoming jobs
               topicUid: Overview_MediaOps_Validation
+            - name: Filter pools by category
+              topicUid: SCH_Filter_Pools
         - name: Tutorials
           items: 
           - name: Configuring resources and resource pools

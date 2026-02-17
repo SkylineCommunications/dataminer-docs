@@ -21,12 +21,12 @@ From now on, the HTML5 app fully supports spectrum components and spectrum thumb
 From now on, in DataMiner Cube, table column parameters will be referred to by either their long display name or their short display name:
 
 - Long display name (default name, consisting of both the table name and the column name)
-- Short display name (shorthand name used e.g. inside tables and in table side panels)
+- Short display name (shorthand name used e.g., inside tables and in table side panels)
 
 The long display name of a table column parameter can be formatted in two ways:
 
-- \[TableName\]:\[ColumnName\] (default format, e.g. “MyTable: MyTableColumn01”)
-- \[ColumnName\] (\[TableName\]) (e.g. “MyTableColumn01 (MyTable)”)
+- \[TableName\]:\[ColumnName\] (default format, e.g., “MyTable: MyTableColumn01”)
+- \[ColumnName\] (\[TableName\]) (e.g., “MyTableColumn01 (MyTable)”)
 
 #### Names of existing properties can no longer be changed \[ID 18930\]
 
@@ -76,7 +76,7 @@ The description of the SLSNMPAgent service has been changed from “Skyware SNMP
 
 #### Possibility to copy property value of alarm to other alarm field or property \[ID 19421\]
 
-It is now possible to have the value of a property that is available for an alarm copied to a predefined field of the alarm (i.e. the *Owner*, *Comment*, *Element Name* or *Parameter Name* field) or to another property.
+It is now possible to have the value of a property that is available for an alarm copied to a predefined field of the alarm (i.e., the *Owner*, *Comment*, *Element Name* or *Parameter Name* field) or to another property.
 
 To do so, in the *PropertyConfiguration.xml* file, add the *copyToAlarmField* attribute to the *Property* tag of the property that needs to be copied, and set it to the correct keyword:
 
@@ -108,8 +108,8 @@ Up to now, if you specified a table parameter in a shape data item of type *Para
 Examples:
 
 - To refer to all rows that start with “SL”, you can specify “101/201:500:SL\*\|”.
-- To refer to a column, specify the column parameter, e.g. “101/201:501”.
-- To refer to an entire table, specify the table parameter, e.g. “101/201:500”.
+- To refer to a column, specify the column parameter, e.g., “101/201:501”.
+- To refer to an entire table, specify the table parameter, e.g., “101/201:500”.
 
 #### Database: Improved handling of large batches for Cassandra database \[ID 19586\]
 
@@ -546,7 +546,7 @@ The way the Monitoring & Control app is initially loaded has been improved, resu
 
 #### Administrative updates of history set alarms will now inherit the alarm time of the last parameter value change \[ID 22919\]
 
-From now on, administrative updates (i.e. alarms of type “Properties Changed”, “Service impact changed”, “View impact changed” and “Name Changed”) of history set alarms will inherit the alarm time of the alarm where the value of the parameter in question was last changed.
+From now on, administrative updates (i.e., alarms of type “Properties Changed”, “Service impact changed”, “View impact changed” and “Name Changed”) of history set alarms will inherit the alarm time of the alarm where the value of the parameter in question was last changed.
 
 #### DataMiner Cube - Scheduler: CPE reports now based on view tables instead of base tables \[ID 22958\]
 

@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Display.Range.High
 
 # High element
 
-Specifies the upper limit of the range, i.e. the maximum value of the parameter.
+Specifies the upper limit of the range, i.e., the maximum value of the parameter.
 
 ## Type
 

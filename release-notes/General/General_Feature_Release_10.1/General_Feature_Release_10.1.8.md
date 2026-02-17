@@ -223,7 +223,7 @@ For example:
 
 #### Visual Overview: New Collapse shape data field \[ID 30149\]
 
-In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions). While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e. its visibility is collapsed.
+In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions). While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e., its visibility is collapsed.
 
 This makes it a convenient alternative to the *ChildrenFilter* shape data, as it will keep all shapes in memory instead of removing and recreating them. This will allow better performance, though it will lead to slightly increased memory usage.
 
@@ -518,7 +518,7 @@ When, in Visual Overview, a table control had the SelectionSetVar option specifi
 
 #### DataMiner Cube - Resources app: No scroll bars would appear when a pane was not able to show all content \[ID 29836\]
 
-When, in the Resources app, you selected a resource with e.g. a large number of capacity and/or capability parameters, no scrollbars would appear, even when the pane was not able to show all content.
+When, in the Resources app, you selected a resource with e.g., a large number of capacity and/or capability parameters, no scrollbars would appear, even when the pane was not able to show all content.
 
 #### HTML5 apps: Incorrect overlay could appear when a timespan field got the focus \[ID 29849\]
 

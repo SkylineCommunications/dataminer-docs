@@ -43,12 +43,12 @@ In the working directories list, you can specify a working directory on the netw
 
 For each working directory in the DMS, the following settings need to be configured:
 
-- **Share Location**: The network path that identifies how other servers can access the working directory, e.g. *\\\ZIINE-H66-G02\\workingDir*. This must always be configured.
-- **Local Directory**: The path of the working directory on the hosting DMA, e.g. `C:\data\working_directory`. This must always be configured.
+- **Share Location**: The network path that identifies how other servers can access the working directory, e.g., *\\\ZIINE-H66-G02\\workingDir*. This must always be configured.
+- **Local Directory**: The path of the working directory on the hosting DMA, e.g., `C:\data\working_directory`. This must always be configured.
 
 In the list of working directories, aside from the settings configured above, the following information is also displayed for each working directory:
 
-- **Agent Name**: The name of the hosting DMA e.g. *ZIINE-H66-G02*.
+- **Agent Name**: The name of the hosting DMA e.g., *ZIINE-H66-G02*.
 - **Directory Status**: This status is *Available* when the working directory is accessible via the specified share location and the specified file transfer credentials are valid. Otherwise, it is *Not Available*.
 
 ## Purge Settings

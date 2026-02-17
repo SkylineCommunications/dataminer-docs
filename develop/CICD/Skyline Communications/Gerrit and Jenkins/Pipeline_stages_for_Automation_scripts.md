@@ -123,7 +123,7 @@ This stage executes the integration test projects. For solutions that consist of
 This stage performs SonarQube C# code analysis on the code provided in the Exe blocks.
 
 > [!TIP]
-> It is possible to exclude some items from analysis (e.g. auto-generated code). For more information on how to exclude items from analysis, refer to <xref:SonarQube>.
+> It is possible to exclude some items from analysis (e.g., auto-generated code). For more information on how to exclude items from analysis, refer to <xref:SonarQube>.
 
 ## Quality gate
 
@@ -152,7 +152,7 @@ This quality gate verifies whether the automation script does not exceed any of 
 - Duplicated Blocks: 200
 
 > [!NOTE]
-> The quality gate will currently only verify SonarQube analysis results for initial developments (i.e. automation scripts tagged as version 1.0.0.1).
+> The quality gate will currently only verify SonarQube analysis results for initial developments (i.e., automation scripts tagged as version 1.0.0.1).
 
 ## (Development) Catalog registration
 

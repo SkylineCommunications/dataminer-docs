@@ -14,7 +14,7 @@ At the top of the tool window, you can find the following buttons:
 |--|--|
 | Validate | Launches  a new protocol validation.<br>When you open a main DVE protocol and click *Validate*, DIS will not only validate the main protocol but also all its exported child DVE protocols. |
 | Export | Exports the results of the latest validation to a CSV file. |
-| ![Show/hide suppressed results](~/develop/images/DisValidatorToolWindowToggleResultsIcon.png) | Switches between showing only the active items or all items (i.e. active, suppressed, and postponed items). |
+| ![Show/hide suppressed results](~/develop/images/DisValidatorToolWindowToggleResultsIcon.png) | Switches between showing only the active items or all items (i.e., active, suppressed, and postponed items). |
 
 The validator results are listed in a tree grid that groups the validation results by their severity. The tree grid has the following columns:
 
@@ -26,7 +26,7 @@ The validator results are listed in a tree grid that groups the validation resul
 | State | Shows the state of this validation result (*Active*, *Postponed*, or *Suppressed*). |
 | Certainty | Specifies whether the validator is certain or uncertain about the validity of the detected issue. If a result is uncertain, we recommend that you check the result and either fix the issue or [suppress the result](#suppressing-or-postponing-a-validation-result). |
 | Fix Impact | Indicates whether fixing the issues results in a breaking change. |
-| Category | Displays the category of the check (e.g. *Param* or *Protocol*). |
+| Category | Displays the category of the check (e.g., *Param* or *Protocol*). |
 | Line | Specifies the line number where the issue was detected. |
 | Column | Specifies the column number where the issue was detected. |
 | DVE | Displays the name of the DVE protocol in case this validation result belongs to a DVE protocol. |

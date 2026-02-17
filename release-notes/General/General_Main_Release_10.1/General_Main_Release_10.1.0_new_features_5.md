@@ -173,7 +173,7 @@ The server will send back a *GetAutomationDllOverviewResponseMessage* containin
 
 ##### To eject a DLL
 
-If you eject a previously injected DLL from an automation script, this will cause the script to behave as it did before the injection. To do so, send an *EjectAutomationDllRequestMessage* containing the name of the script and the Exe ID (i.e. the ID of the script action).
+If you eject a previously injected DLL from an automation script, this will cause the script to behave as it did before the injection. To do so, send an *EjectAutomationDllRequestMessage* containing the name of the script and the Exe ID (i.e., the ID of the script action).
 
 The server will send back a EjectAutomationDllResponseMessage. If any errors would have occurred, they will be included as errors of type *AutomationErrorData* in the message’s *TraceData* object. Possible errors include:
 
@@ -225,7 +225,7 @@ The following properties have been added to the UIBlockDefinition class:
 | Property | Description |
 |--|--|
 | IsRequired | Indicates whether the input control requires a value.<br> Possible value:<br> - true<br> - false<br> If “true”, the control will be marked “Invalid” when empty. |
-| PlaceholderText | Text that will be displayed as long as the control is empty.<br> (e.g. “In this box, enter...”) |
+| PlaceholderText | Text that will be displayed as long as the control is empty.<br> (e.g., “In this box, enter...”) |
 | ValidationState | Indicates whether the value was validated and whether that value is valid.<br> Possible values:<br> - NotValidated<br> - Valid<br> - Invalid<br> Note: This property can be used to indicate to users that they entered an invalid value. |
 | ValidationText | Text that will be displayed when ValidationState is “Invalid”. |
 

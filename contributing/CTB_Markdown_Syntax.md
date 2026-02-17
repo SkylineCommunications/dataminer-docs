@@ -144,7 +144,7 @@ You can display content in tabs, which is useful when you want to show different
 
 Tabs are created using hash symbols similar to headings. Use one more hash than the parent heading level. For example, tabs under the page title (heading level 1) use `##`, while tabs under a level 2 heading use `###`, and so on.
 
-The hash should then be followed by a Markdown link `[]()`. The text of the link will become the text of the tab header. In order for the header to be recognized as a tab, the link itself must start with #tab/ and be followed by a unique ID (e.g. `#tab/Linux` or `#tab/Windows`). Always end the tab section with three asterisks (`***`).
+The hash should then be followed by a Markdown link `[]()`. The text of the link will become the text of the tab header. In order for the header to be recognized as a tab, the link itself must start with #tab/ and be followed by a unique ID (e.g., `#tab/Linux` or `#tab/Windows`). Always end the tab section with three asterisks (`***`).
 
 For example:
 
@@ -203,7 +203,7 @@ Also note that you can align table columns by using colons. See the following ex
 
 ## Code blocks
 
-To display code examples in separate code blocks, place three backquotes (```) above and below those blocks. In addition, next to the three backquotes above the blocks, specify the type of code, e.g. *csharp*, *md*, *xml*, etc.
+To display code examples in separate code blocks, place three backquotes (```) above and below those blocks. In addition, next to the three backquotes above the blocks, specify the type of code, e.g., *csharp*, *md*, *xml*, etc.
 
 To display inline code within a paragraph, add a backquote before and after the code.
 
@@ -215,7 +215,7 @@ To add a link, place the link text that should be displayed in square brackets, 
 For more detailed info about DFM syntax, see [Docs Markdown reference](https://docs.microsoft.com/en-us/contribute/markdown-reference).
 ```
 
-To add a cross-reference, i.e. a link to another page in the documentation, use the same format, but specify the link in the format "xref:uid". For example:
+To add a cross-reference, i.e., a link to another page in the documentation, use the same format, but specify the link in the format "xref:uid". For example:
 
 ```md
 See [Basic concepts](xref:BasicConcepts).
