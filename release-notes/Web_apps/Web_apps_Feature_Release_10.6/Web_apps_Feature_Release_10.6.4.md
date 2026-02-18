@@ -210,3 +210,12 @@ If, in a *Web* component, you specified the URL of a DataMiner web app, it would
 As a result, when a URL of a DataMiner web app did not end with a forward slash, it would get sandboxed.
 
 From now on, URLs of DataMiner web apps will always be registered as trusted, whether they end with a forward slash or not.
+
+#### Dashboards/Low-Code Apps - Time range & Query filter components: Problems when dashboard or low-code app was embedded [ID 44802]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When the dashboard or low-code app was embedded by means of the URL argument `embed=true` or when the dashboard was shared, up to now,
+
+- in a *Time range* component, it would incorrectly not be possible to pin quick picks, and
+- in a *Query filter* component, it would incorrectly not be possible to enable the *Alarm color mode* setting.
