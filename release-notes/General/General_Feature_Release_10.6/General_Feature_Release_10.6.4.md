@@ -216,8 +216,8 @@ In some rare cases, the SLAnalytics process could stop working during the storag
 
 In some cases, SLAnalytics would stop working when trying to process an invalid database record after having serialized it.
 
-#### Problem with SLProtocol when the timeout state of multiple element connections changed simultaneously [ID 44752]
+#### Problem with SLProtocol when multiple connections of the same element went into a timeout state simultaneously [ID 44752]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-In some rare cases, SLProtocol could stop working when the timeout state of multiple element connections changed simultaneously.
+In some rare cases, SLProtocol could stop working when multiple connections of the same element went into a timeout state simultaneously.
