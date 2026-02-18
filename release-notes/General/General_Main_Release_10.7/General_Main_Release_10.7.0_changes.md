@@ -278,9 +278,3 @@ From now on, when a capability is booked, it will no longer be possible to set i
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
-
-#### Data would not show up in DVE child elements due to a problem with foreign key linking to logger tables [ID 44651]
-
-<!-- MR 10.7.0 - FR 10.6.4 -->
-
-In some cases, a problem with foreign key linking to logger tables would cause data to not show up in DVE child elements.
