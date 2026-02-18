@@ -168,3 +168,11 @@ When flows or variables were used in certain components, up to now, the availabl
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 When you quickly switched from one tab to another in the navigation pane while viewing the Dashboards app on a mobile device, in some cases, an error could be thrown.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Node actions inherited from the base type would no longer be displayed when the base type was overridden [ID 44770]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a node changed from its base type to an override due to a real-time update, up to now, the actions inherited from the base type would incorrectly no longer displayed in the tooltip.
+
+From now on, a node will correctly update its actions by combining the actions from the override with those from the base type, ensuring all applicable actions remain visible.
