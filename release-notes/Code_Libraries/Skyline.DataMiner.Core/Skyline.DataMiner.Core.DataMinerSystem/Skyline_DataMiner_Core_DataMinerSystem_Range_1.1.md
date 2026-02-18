@@ -23,12 +23,57 @@ A **new table column monitor** has been added.
 > [!IMPORTANT]
 > This new monitor can only be used from **DataMiner 10.5** onwards.
 
+Example usage:
+```csharp
+IDmsElement element = dms.GetElement("MyElement");
+
+const int InterfaceTableId = 100;
+const int OperationalStatusId = 102;
+
+var table = element.GetTable(InterfaceTableId);
+var column = table.GetColumn<int>(OperationalStatusId);
+
+void OnChange(ColumnValueChange<int> change)
+{
+    foreach (KeyValuePair<string, int> cellUpdate in change.ColumnUpdates)
+    {
+        Log($"Interface {cellUpdate.Key} went {(cellUpdate.Value == 1 ? "up" : "down")}.");
+    }
+}
+
+column.StartValueMonitor(protocol, OnChange);
+```
+
 #### New feature - Service alarm level and state monitors usable outside of protocols
 
 Service monitors can now be used **outside of protocol contexts** (e.g. in Automation scripts or other external integrations), allowing you to subscribe to changes without relying on *SLProtocol*.
 
 > [!IMPORTANT]
 > These monitors create **stateful SLNet subscriptions** in the background. Subscriptions **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system and continue to consume resources.
+
+Example usage:
+```csharp
+IDmsService service = dms.GetService("MyService");
+
+var sourceId = Guid.NewGuid().ToString();
+
+void OnChange(ServiceAlarmLevelChange change)
+{
+    Log($"Service {service.Name} switched to state {change.State}.");
+}
+
+service.StartAlarmLevelMonitor(sourceId, OnChange);
+
+try
+{
+    // ... other logic while the monitor is running ...
+}
+finally
+{
+    // Important: stop it when you’re done.
+    service.StopAlarmLevelMonitor(sourceId);
+}
+```
 
 ### 1.1.3.7
 
