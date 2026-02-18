@@ -15,6 +15,11 @@ Starting from 10.6.4, provided the `info` and `alarm` tables have an compatible 
 
 To enable swarming, the `info` and `alarm` tables in the offload database need to have a primary key definition that is compatible with Swarming. Enabling Swarming will be blocked if the primary key is not compatible.
 
+If the offload database has been set up in 10.6.4 or later, these primary key definitions were  automatically created when the database was created, and no further action is needed.
+
+> [!NOTE]
+> If you are unsure whether your offload database is compatible with Swarming, you can run a [Swarming prerequisites check](xref:EnableSwarming#running-a-prerequisites-check) to verify this.
+
 To update the primary key definition of the `info` and `alarm` tables, you can run the following queries on the offload database. Choose the queries that match your database type.
 
 > [!NOTE]
