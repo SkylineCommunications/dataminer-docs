@@ -227,3 +227,9 @@ In some cases, SLAnalytics would stop working when trying to process an invalid 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 In some rare cases, SLProtocol could stop working when multiple connections of the same element went into a timeout state simultaneously.
+
+#### Problem when an element was updated immediately after having been swarmed [ID 44783]
+
+<!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
+
+When an element was updated immediately after having been swarmed from one host to another, in some cases, it would incorrectly re-appear on its former host.
