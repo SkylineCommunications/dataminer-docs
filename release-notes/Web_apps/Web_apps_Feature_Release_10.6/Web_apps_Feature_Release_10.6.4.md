@@ -109,6 +109,16 @@ From now on, GQI will accept any type of number (int, double, and long) as filte
 
 A number of enhancements have been made with regard to user authentication when accessing, for example, video thumbnails.
 
+#### Dashboards/Low-Code Apps - Node edge graph component: Viewport will no longer be reset with every update [ID 44786]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, each time a *Node edge graph* component with the *Filtering & Highlighting > Highlight* option disabled received a real-time update, its viewport would be reset.
+
+From now on, the viewport of a *Node edge graph* component will mostly be reset when you have made changes to its settings, although it can still be reset in certain other scenarios. For example, when the node edge graph is not linked to data, a reset will occur when the entire topology has changed after an update.
+
+Also, when the node positions are linked to data, from now on, a *Node edge graph* component will allow you to zoom out beyond the initial viewport.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Alarm table component: Problems when scrolling [ID 44662]
