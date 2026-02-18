@@ -4,9 +4,9 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
-#### 17 February 2026 - Enhancement - Orchestrator 1.8.1 - General Dependency updates
+#### 17 February 2026 - Enhancement - Orchestrator 1.8.1 - General dependency updates
 
-Internal dependancies have been updated to ensure the latests patches and security fixes are applied.
+Internal dependencies have been updated to ensure the latests patches and security fixes are applied.
 
 #### 16 October 2025 - Enhancement - Orchestrator 1.8.0 - Improved service recovery after reboot [ID 43824]
 
