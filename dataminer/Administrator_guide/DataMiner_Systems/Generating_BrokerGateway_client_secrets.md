@@ -7,16 +7,16 @@ uid: Generating_BrokerGateway_client_secrets
 > [!NOTE]
 > This feature is available from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onward.
 
-## Overviews
+## Overview
 
 BrokerGateway client secrets are designed for DxMs or other clients connecting to the DataMiner NATS bus from a server without a local DataMiner installation. These secrets enable secure authentication with BrokerGateway, which then provides the necessary connection details for the NATS bus.
 
-Using internal BrokerGateway Administrator keys for these connections is discouraged, as these keys may be refreshed during cluster maintenance or other actions. In contrast, user-generated client secrets persist throughout the cluster's lifecycle and are immediately distributed to all BrokerGateway instances for cluster-wide usability.
+Using internal BrokerGateway Administrator keys for these connections is discouraged, as these keys may be refreshed during cluster maintenance or other actions. In contrast, user-generated client secrets persist throughout the cluster's lifecycle and are immediately distributed to all BrokerGateway instances for cluster-wide availability.
 
 Common examples of clients requiring this setup include the [Data Aggregator DxM](xref:Data_Aggregator_DxM) and [Dashboard Gateway](xref:Dashboard_Gateway_installation).
 
 > [!IMPORTANT]
-> Using client secrets prevents the root certificate authority from being cycled during DataMiner agent removals or NATSRepair calls. This is done to ensure that external clients maintain stable connectivity with the same trusted root certificates.
+> Using client secrets prevents the root certificate authority from being cycled during DataMiner agent removals or NATSRepair calls. This is done to ensure that external clients maintain stable connectivity with the cluster, without having to change credentials or trusted root certificates.
 
 ## API calls
 
@@ -46,7 +46,7 @@ $adminKey = "..." # The administrator API key for the BrokerGateway of $uri.
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("BrokerGateway-Api-Key", $adminKey)
 
-$response = Invoke-RestMethod "https://$uri/BrokerGateway/api/clientsecret/generateclientsecret?clientName=$clientName" -Method 'POST' -Headers $headers -ContentType 'text/plain'
+$response = Invoke-RestMethod "https://$uri/BrokerGateway/api/clientSecret/generate?clientName=$clientName" -Method 'POST' -Headers $headers -ContentType 'text/plain'
 $response
 ```
 
@@ -68,7 +68,7 @@ $adminKey = "..." # The administrator API key for the BrokerGateway of $uri.
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("BrokerGateway-Api-Key", $adminKey)
 
-Invoke-RestMethod "https://$uri/BrokerGateway/api/clientsecret/deleteclientsecret?clientName=$clientName" -Method 'DELETE' -Headers $headers
+Invoke-RestMethod "https://$uri/BrokerGateway/api/clientSecret/delete?clientName=$clientName" -Method 'DELETE' -Headers $headers
 ```
 
 ### Listing all generated client secrets
@@ -82,7 +82,7 @@ $adminKey = "..." # The administrator API key for the BrokerGateway of $uri.
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("BrokerGateway-Api-Key", $adminKey)
 
-$response = Invoke-RestMethod "https://$uri/BrokerGateway/api/clientsecret/listclientsecrets" -Method 'GET' -Headers $headers
+$response = Invoke-RestMethod "https://$uri/BrokerGateway/api/clientSecret/list" -Method 'GET' -Headers $headers
 $response
 ```
 
@@ -90,7 +90,7 @@ $response
 
 Some steps need to be taken on the server where no DataMiner agent is installed:
 
-- Copy the `C:\ProgramData\Skyline Communications\DataMiner Security\ca.pem` file from any DataMiner agent to the server where the client application is.
+- Copy the `C:\ProgramData\Skyline Communications\DataMiner Security\ca.pem` file from any DataMiner agent to the server where the client application is. Put the file in a temporary folder.
 - Rename ca.pem to ca.crt and open the file by double-clicking it.
 Install the certificate on the Local machine. All other options can be left default. This is the root certificate authority that needs to be trusted by the server for SSL/TLS communication to BrokerGateway.
 After the certificate installation, the ca.crt file can be removed again.
@@ -115,14 +115,14 @@ After the certificate installation, the ca.crt file can be removed again.
     {
         "BrokerGatewayConfig": {
             "CredentialsUrl": "https://<FQDN where DataMiner is installed>/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
-            "APIKeyPath": "<chosen path for client secret file>"
+            "APIKeyPath": "<chosen full file path for client secret file>"
         }
     }
     ```
 
 From this point on, any client on this server can communicate with the DataMiner cluster over NATS.
 
-If this DataMiner agent is removed from the cluster, the clients on the server will no longer be able to communicate over NATS. Replace the FQDN to an agent that is still in the cluster to resolve this.
+If the targeted DataMiner agent is removed from the cluster, the clients on the server will no longer be able to communicate over NATS. In such scenarios, replace the FQDN in `MessageBrokerConfig.json` to point to another agent that is still in the cluster to resolve this.
 When another agent is removed from the cluster, the clients will keep on functioning as normal and no extra action needs to be taken.
 
 > [!NOTE]
