@@ -190,3 +190,13 @@ Also, the `DMAIP` data object would not be usable when added to a flow created i
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 When, in a web app, you opened a visual overview that contained a trend component, in some cases, an error message would incorrectly appear, stating that the start time was invalid.
+
+#### Dashboards/Low-Code Apps - Web component: URLs of DataMiner web apps would only be registered as trusted when they ended with a trailing slash [ID 44796]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+If, in a *Web* component, you specified the URL of a DataMiner web app, it would incorrectly only be registered as trusted when it ended with a forward slash (`/`). For example, `<dmaURL>/dashboards/` would be registered as trusted, but `<dmaURL>/dashboards` would not.
+
+As a result, when a URL of a DataMiner web app did not end with a forward slash, it would get sandboxed.
+
+From now on, URLs of DataMiner web apps will always be registered as trusted, whether they end with a forward slash or not.

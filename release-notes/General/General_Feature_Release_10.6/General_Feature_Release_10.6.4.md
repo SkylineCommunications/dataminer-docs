@@ -161,7 +161,7 @@ When an NT_READ_SAVED_PARAMETER_VALUE call was sent to retrieve data from an ele
 
 #### Data would not show up in DVE child elements due to a problem with foreign key linking to logger tables [ID 44651]
 
-<!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 In some cases, a problem with foreign key linking to logger tables would cause data to not show up in DVE child elements.
 

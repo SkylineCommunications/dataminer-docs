@@ -79,6 +79,12 @@ When you connected to a DataMiner Agent, up to now, it would not be possible to 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Data would not show up in DVE child elements due to a problem with foreign key linking to logger tables [ID 44651]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, a problem with foreign key linking to logger tables would cause data to not show up in DVE child elements.
+
 #### Alarm properties passed along by Correlation or SLAnalytics could get lost when an alarm was created [ID 44669]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
