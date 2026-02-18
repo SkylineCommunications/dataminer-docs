@@ -9,6 +9,8 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 18 February 2026 - PLACEHOLDER
+
 ### 17 February 2026 - Enhancement - Admin - Confirmation email for ticket creation
 
 When you create a support ticket via the Admin app, you will now receive a confirmation email. A sharepoint folder is also created for the ticket when possible.
