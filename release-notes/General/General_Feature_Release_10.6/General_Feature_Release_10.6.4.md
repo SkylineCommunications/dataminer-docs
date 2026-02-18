@@ -125,6 +125,12 @@ From now on, each SLLogCollector instance will have its own dedicated log file n
 
 Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
 
+#### Enhanced performance when activating DaaS systems [ID 44737]
+
+<!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, overall performance has increased when activating DaaS systems.
+
 ### Fixes
 
 #### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]

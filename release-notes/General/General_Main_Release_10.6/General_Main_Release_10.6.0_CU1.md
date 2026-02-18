@@ -74,6 +74,12 @@ When a DMA receives an SNMPv3 trap that it cannot process (e.g., because the SNM
 
 Also, in some cases, traps could be forwarded to the wrong elements because the SNMPv3 USM ID was not validated correctly.
 
+#### Enhanced performance when activating DaaS systems [ID 44737]
+
+<!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, overall performance has increased when activating DaaS systems.
+
 ### Fixes
 
 #### MessageBroker: Problem with hostnames and FQDNs containing a certain combination of dashes and characters [ID 44433]
