@@ -1,19 +1,21 @@
 items:
-  - name: MediaOps 1.5.0 - preview
-    topicUid: MediaOps_1.5.0
-  - name: MediaOps 1.4.4 - preview
-    topicUid: MediaOps_1.4.4
-  - name: MediaOps 1.4.3
-    topicUid: MediaOps_1.4.3
-  - name: MediaOps 1.4.2
-    topicUid: MediaOps_1.4.2
-  - name: MediaOps 1.4.1
-    topicUid: MediaOps_1.4.1
-  - name: MediaOps 1.4.0
-    topicUid: MediaOps_1.4.0
-  - name: MediaOps 1.3.3
-    topicUid: MediaOps_1.3.3
-  - name: MediaOps 1.3.2
-    topicUid: MediaOps_1.3.2
-  - name: MediaOps 1.3.1
-    topicUid: MediaOps_1.3.1
+  - name: Plan
+    items:
+    - name: MediaOps Plan 1.5.0 - preview
+      topicUid: MediaOps_Plan_1.5.0
+    - name: MediaOps Plan 1.4.4 - preview
+      topicUid: MediaOps_Plan_1.4.4
+    - name: MediaOps Plan 1.4.3
+      topicUid: MediaOps_Plan_1.4.3
+    - name: MediaOps Plan 1.4.2
+      topicUid: MediaOps_Plan_1.4.2
+    - name: MediaOps Plan 1.4.1
+      topicUid: MediaOps_Plan_1.4.1
+    - name: MediaOps Plan 1.4.0
+      topicUid: MediaOps_Plan_1.4.0
+    - name: MediaOps Plan 1.3.3
+      topicUid: MediaOps_Plan_1.3.3
+    - name: MediaOps Plan 1.3.2
+      topicUid: MediaOps_Plan_1.3.2
+    - name: MediaOps Plan 1.3.1
+      topicUid: MediaOps_Plan_1.3.1

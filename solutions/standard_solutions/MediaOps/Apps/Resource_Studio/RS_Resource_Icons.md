@@ -36,6 +36,7 @@ The following icons are currently available:
 | Gallery | <img src="~/solutions/images/RS_Gallery.svg" alt="Gallery" style="width:70px;"/> |
 | IP Address | <img src="~/solutions/images/RS_IP_Address.svg" alt="IP Address" style="width:70px;"/> |
 | IRD | <img src="~/solutions/images/RS_IRD.svg" alt="IRD" style="width:70px;"/> |
+| LNB | <img src="~/solutions/images/RS_LNB.svg" alt="LNB" style="width:70px;"/> |
 | Fiber Lines | <img src="~/solutions/images/RS_Fiber_Lines.svg" alt="Fiber Lines" style="width:70px;"/> |
 | Modulator | <img src="~/solutions/images/RS_Modulator.svg" alt="Modulator" style="width:70px;"/> |
 | Multiviewer | <img src="~/solutions/images/RS_Multiviewer.svg" alt="Multiviewer" style="width:70px;"/> |
@@ -48,6 +49,8 @@ The following icons are currently available:
 | Satellite | <img src="~/solutions/images/RS_Satellite.svg" alt="Satellite" style="width:70px;"/> |
 | Satellite Antenna | <img src="~/solutions/images/RS_Satellite_Antenna.svg" alt="Satellite Antenna" style="width:70px;"/> |
 | SNG Van | <img src="~/solutions/images/RS_SNG_Van.svg" alt="SNG Van" style="width:70px;"/> |
+| SSPA | <img src="~/solutions/images/RS_SSPA.svg" alt="SSPA" style="width:70px;"/> |
+| Transponder | <img src="~/solutions/images/RS_Transponder.svg" alt="Transponder" style="width:70px;"/> |
 | Virtual Gallery | <img src="~/solutions/images/RS_Virtual_Gallery.svg" alt="Virtual Gallery" style="width:70px;"/> |
 | Vision Mixer | <img src="~/solutions/images/RS_Vision_Mixer.svg" alt="Vision Mixer" style="width:70px;"/> |
 | Voice Over Booth | <img src="~/solutions/images/RS_Voice_Over_Booth.svg" alt="Voice Over Booth" style="width:70px;"/> |
