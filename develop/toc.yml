@@ -1146,7 +1146,6 @@ items:
           - name: DataMiner Visio templates
             topicUid: DataMiner_Visio_templates
       - name: Linking shapes to DataMiner items
-        topicUid: Linking_shapes_to_DataMiner_items
         items:
           - name: Linking a shape to an element, a service or a redundancy group
             topicUid: Linking_a_shape_to_an_element_a_service_or_a_redundancy_group

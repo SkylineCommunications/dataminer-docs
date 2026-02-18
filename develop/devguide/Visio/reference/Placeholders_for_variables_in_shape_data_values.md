@@ -5,6 +5,8 @@ description: In shape data values in Visio, you can use different placeholders. 
 
 # Placeholders for variables in shape data values
 
+In shape data values in Visio, you can use different placeholders. This includes [Info keywords](#info-keywords) and a multitude of [other placeholders](#other-placeholders).
+
 > [!TIP]
 > For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *Placeholders* page.
 
@@ -28,12 +30,12 @@ For an overview of the different keywords, see [Making a shape display informati
 
 ## Other placeholders
 
-> [!NOTE]
->
-> - Placeholders are case-insensitive. In other words, you can use `[this service]`, `[This Service]`, etc.
-> - In the `[param: ...]` placeholders mentioned below, *ParameterID* can be replaced by another `[param: ...]` placeholder. In other words, parameter references can be nested. When you use other placeholders within placeholders, be careful not to create loops.
-> - You can use placeholders directly in the text of a shape.
-> - Many of the advanced features described below apply to DataMiner Cube only.
+Keep the following in mind when using placeholders:
+
+- Placeholders are case-insensitive. In other words, you can use `[this service]`, `[This Service]`, etc.
+- In the `[param: ...]` placeholders mentioned below, *ParameterID* can be replaced by another `[param: ...]` placeholder. In other words, parameter references can be nested. When you use other placeholders within placeholders, be careful not to create loops.
+- You can use placeholders directly in the text of a shape.
+- Many of the advanced features described below apply to DataMiner Cube only.
 
 ### \[AggregationRule:...\]
 
