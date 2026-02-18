@@ -65,6 +65,14 @@ When, in the Browse templates window, you selected the default template of e.g.,
 
 From now on, the default template text will get replaced correctly.
 
+#### Low-Code Apps: 'HTTP 404' visual will now appear when you navigate to a non-existing app or an app you are not allowed to open [ID 44681]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+From now on, when you navigate to a non-existing app or an app you are not allowed to open, an "HTTP 404" visual will now appear.
+
+Clicking the *Go to home* button in that visual will redirect you to the root page.
+
 #### Dashboards/Low-Code Apps: Updated side panel sections [ID 44687]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
