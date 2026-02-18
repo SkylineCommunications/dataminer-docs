@@ -7,6 +7,10 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 13 February 2026 - Fix - DataAPI 1.4.5 - Leader selection could cause a thread leak [ID 44727]
+
+In multi-DataAPI deployments, a thread leak could occur when the leader was selected.
+
 ### 3 February 2026 - Fix - DataAPI 1.4.4 - Config endpoint not working in multi-DataAPI setup [ID 44544]
 
 In multi-DataAPI deployments, configuration requests could fail when routed to a follower node. This was caused by the follower being unable to determine whether the leader had a copy of an auto-generated connector. This issue has been resolved.
