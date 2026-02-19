@@ -11,19 +11,20 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 #### Enhancement - Improved scaling for parameter and table cell monitors [ID 41602]
 
-When used with **DataMiner 10.5** or higher, parameter, table cell, and table column monitors now have enhanced scaling, allowing **more monitors to be active simultaneously**.
+When used with **DataMiner 10.5.0/10.5.1** or higher, parameter, table cell, and table column monitors now have enhanced scaling, allowing **more monitors to be active simultaneously**.
 
 > [!IMPORTANT]
-> This enhancement is only available when the library is used with **DataMiner 10.5** onwards.
+> This enhancement is only available when the library is used with DataMiner 10.5.0/10.5.1 or higher.<!-- RN 41256 -->
 
 #### New feature - New table column monitor added [ID 44034]
 
-A **new table column monitor** has been added.
+A new table column monitor has been added.
 
 > [!IMPORTANT]
-> This new monitor can only be used from **DataMiner 10.5** onwards.
+> This new monitor can only be used from DataMiner 10.5.0/10.5.1 onwards.<!-- RN 41256 -->
 
 Example usage:
+
 ```csharp
 IDmsElement element = dms.GetElement("MyElement");
 
@@ -46,12 +47,13 @@ column.StartValueMonitor(protocol, OnChange);
 
 #### New feature - Service alarm level and state monitors usable outside of protocols
 
-Service monitors can now be used **outside of protocol contexts** (e.g. in Automation scripts or other external integrations), allowing you to subscribe to changes without relying on *SLProtocol*.
+Service monitors can now be used **outside of protocol contexts** (e.g., in Automation scripts or other external integrations), allowing you to subscribe to changes without relying on *SLProtocol*.
 
 > [!IMPORTANT]
 > These monitors create **stateful SLNet subscriptions** in the background. Subscriptions **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system and continue to consume resources.
 
 Example usage:
+
 ```csharp
 IDmsService service = dms.GetService("MyService");
 
