@@ -241,4 +241,6 @@ During BrokerGateway setup, a root ca.pem file is generated in `C:\ProgramData\S
 
 If this certificate is not trusted on OS level, Windows will reject the TLS connection. The issue can be resolved by importing the generated root certificate into the Trusted Root Certification Authorities store on each DMA via the Microsoft Management Console (MMC).
 
+See also [resolved issues](xref:KI_DataMinerMessageBroker_TLS)
+
 
