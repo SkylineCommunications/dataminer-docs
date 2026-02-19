@@ -225,3 +225,26 @@ With the [automatic migration](#automatic-migration-using-dmupgrade-package-reco
 If you encounter any issues with your NATS cluster related to credentials or misconfigured nodes and you have migrated to BrokerGateway, you can run the *NATSRepair.exe* tool from the `C:\Skyline DataMiner\Tools\` folder.
 
 This tool needs to be run on just one Agent of the cluster. It will perform a repair on the cluster.<!-- RN 42328 -->
+
+### TLS-related errors
+
+After a DataMiner System has been migrated to BrokerGateway, DMAs may generate the following alarm:
+
+```txt
+Could not connect to the local NATS endpoint on '<IP>'. Please make sure that the nats service is running without issues.
+```
+
+This coincides with errors in the `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\nats-server.log` files similar to the following error:
+
+```txt
+TLS handshake error: remote error: tls: bad certificate
+```
+
+This TLS handshake failure occurs because the root certificate authority (CA) used to sign the NATS server certificate is not present in the Trusted Root Certification Authorities store of the local machine.
+
+During BrokerGateway setup, a root ca.pem file is generated in `C:\ProgramData\Skyline Communications\DataMiner Security`. If this certificate is not trusted on OS level, Windows will reject the TLS connection.
+
+To resolve this issue, import the generated root certificate into the Trusted Root Certification Authorities store on each DMA via the Microsoft Management Console (MMC).
+
+> [!TIP]
+> See also: [Resolved issues — TLS authentication issues when MessageBroker is connecting to the NATS bus](xref:KI_DataMinerMessageBroker_TLS)
