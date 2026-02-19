@@ -4,18 +4,14 @@ using Skyline.DataMiner.Net.Messages;
 namespace Skyline.DataMiner.Net.NodeRecovery.Requests
 {
     /// <summary>
-    /// Requests the local cluster state from the viewpoint of node recovery on a specific DataMiner agent
+    /// Requests the local cluster state from the viewpoint of NodeRecovery on a specific DataMiner agent
     /// </summary>
     [Serializable]
     public class LocalClusterStateRequest : ClientRequestMessage
     {
         /// <summary>
-        /// The id of the DataMiner agent where an instance of Node Recovery is running
+        /// The ID of the DataMiner agent where an instance of NodeRecovery is running. If not specified, the local agent is used.
         /// </summary>
-        /// <remarks>
-        /// Not using the DataMinerId from <see cref="TargetedClientRequestMessage"/> so the routing goes over nats and not via SLNet.
-        /// This also has the benefit that we can reach the remote Node Recovery instance even when the DataMiner agent is down.
-        /// </remarks>
         public int TargetDataMinerId { get; set; }
     }
 }

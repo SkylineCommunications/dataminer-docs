@@ -16,7 +16,6 @@ namespace Skyline.DataMiner.Net.NodeRecovery
 
         /// <summary>
         /// Whether or not the node is in maintenance mode.
-        /// Changes in this maintenance state get triggered through user actions only. (<see cref="SetMaintenanceRequest"/>)
         /// </summary>
         public bool InMaintenance { get; set; }
 

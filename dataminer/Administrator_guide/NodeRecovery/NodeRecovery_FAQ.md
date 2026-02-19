@@ -42,3 +42,7 @@ See [NodeRecovery Troubleshooting](xref:NodeRecovery_Troubleshooting).
 ## How many DataMiner agents are required to use NodeRecovery?
 
 NodeRecovery requires a cluster of at least 2 DataMiner Agents to monitor each other for outages and launch local state change scripts. However, global state change detection requires at least 3 DataMiner Agents.
+
+## Is there a change log available for NodeRecovery?
+
+See [NodeRecovery change log](xref:NodeRecovery_change_log) for a detailed list of changes per version.

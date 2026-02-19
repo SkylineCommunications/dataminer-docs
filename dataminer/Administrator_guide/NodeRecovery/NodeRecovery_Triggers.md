@@ -11,11 +11,13 @@ On node changes, DataMiner NodeRecovery can launch an automation script. The scr
 The local state change script executes whenever the local node detects one or more state changes for nodes in the cluster.
 
 > [!NOTE]
-> This *Local State Change* script will execute on any of the nodes that have an updated state view of the cluster or when any of the nodes change [maintenance state](xref:NodeRecovery_States#maintenance). If one node goes down, each other agent in the cluster will have the script executed. Your script should be able to deal with this. Also see [pitfalls](#pitfalls-for-local-state-changes).
+> This *Local State Change* script will execute on any of the nodes that have an updated state view of the cluster or when any of the nodes change [maintenance state](xref:NodeRecovery_States#maintenance). If one node goes down, each other agent in the cluster will have the script executed. Your script should be able to deal with this. Also see [pitfalls](#pitfalls-for-local-state-changes) and [global state changes](xref:NodeRecovery_Triggers#global-state-change).
 
 To enable, create a script called "NodeRecovery - Local State Change" (name can be changed in [Settings](xref:NodeRecovery_Settings#localclusterstatechangescriptname)).
 
-The scripts that will be executed require a custom entry point of type `OnNodeRecoveryLocalStateChange`. This entry point method should have the `IEngine` object as its first argument, a `LocalStateChangeInput` object as its second argument, and an instance of `LocalStateChangeOutput` as output.
+The scripts that will be executed require a custom entry point of type [OnNodeRecoveryLocalStateChange](xref:Skyline.DataMiner.Net.Automation.AutomationEntryPoint.Types.OnNodeRecoveryLocalStateChange). This entry point method should have the `IEngine` object as its first argument, a [LocalStateChangeInput](xref:Skyline.DataMiner.Net.NodeRecovery.LocalStateChangeInput) object as its second argument, and an instance of [LocalStateChangeOutput](xref:Skyline.DataMiner.Net.NodeRecovery.LocalStateChangeOutput) as output.
+
+The input provided to the script contains information on the current node as well as the observed states for all nodes in the cluster. It also contains details on what actually changed compared to before.
 
 A script with this entry point can look like this:
 
@@ -40,14 +42,6 @@ namespace NodeRecovery_Local_Action_Example
 }
 ```
 
-The input provided to the script contains information on the current node as well as the observed states for all nodes in the cluster. It also contains details on what actually changed compared to before.
-
-See [Skyline.DataMiner.Net.NodeRecovery.LocalStateChangeInput](xref:Skyline.DataMiner.Net.NodeRecovery.LocalStateChangeInput)
-
-The output is expected to be an instance of the `LocalStateChangeOutput` class.
-
-See [Skyline.DataMiner.Net.NodeRecovery.LocalStateChangeOutput](xref:Skyline.DataMiner.Net.NodeRecovery.LocalStateChangeOutput)
-
 ### Pitfalls for local state changes
 
 It is important to have your script logic aware of the following:
@@ -69,7 +63,9 @@ The global state change script executes whenever the global cluster state change
 
 To enable, create a script called "NodeRecovery - Global State Change" (name can be changed in [Settings](xref:NodeRecovery_Settings#globalclusterstatechangescriptname)).
 
-The scripts that will be executed require a custom entry point of type `OnNodeRecoveryGlobalStateChange`. This entry point method should have the `IEngine` object as its first argument, a `GlobalStateChangeInput` object as its second argument, and an instance of `GlobalStateChangeOutput` as output.
+The scripts that will be executed require a custom entry point of type [OnNodeRecoveryGlobalStateChange](xref:Skyline.DataMiner.Net.Automation.AutomationEntryPoint.Types.OnNodeRecoveryGlobalStateChange). This entry point method should have the `IEngine` object as its first argument, a [GlobalStateChangeInput](xref:Skyline.DataMiner.Net.NodeRecovery.GlobalStateChangeInput) object as its second argument, and an instance of [GlobalStateChangeOutput](xref:Skyline.DataMiner.Net.NodeRecovery.GlobalStateChangeOutput) as output.
+
+The input provided to the script contains information about the global cluster state as calculated by the leader node. It includes the consensus view of all node states across the cluster.
 
 A script with this entry point can look like this:
 
@@ -93,14 +89,6 @@ namespace NodeRecovery_Global_Action_Example
     }
 }
 ```
-
-The input provided to the script contains information about the global cluster state as calculated by the leader node. It includes the consensus view of all node states across the cluster.
-
-See [Skyline.DataMiner.Net.NodeRecovery.GlobalStateChangeInput](xref:Skyline.DataMiner.Net.NodeRecovery.GlobalStateChangeInput)
-
-The output is expected to be an instance of the `GlobalStateChangeOutput` class.
-
-See [Skyline.DataMiner.Net.NodeRecovery.GlobalStateChangeOutput](xref:Skyline.DataMiner.Net.NodeRecovery.GlobalStateChangeOutput)
 
 ### Pitfalls for global state changes
 

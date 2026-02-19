@@ -4,9 +4,6 @@ uid: NodeRecovery_Troubleshooting
 
 # NodeRecovery Troubleshooting
 
-> [!IMPORTANT]
-> This is preliminary documentation. Eventually these docs will be moved to the official docs.
-
 To troubleshoot NodeRecovery issues, consider the following steps:
 
 ## Log files
@@ -36,7 +33,7 @@ Ensure that the `DataMiner NodeRecovery` service is running.
 
 ## Network connectivity
 
-NodeRecovery relies on NATS for communication between nodes. Ensure that the NATS cluster is up and running and that there are no network issues preventing nodes from communicating with each other.
+NodeRecovery relies on NATS for communication between nodes. Ensure that the NATS cluster is up and running and that there are no network issues preventing nodes from communicating with each other. If needed, see [Investigating NATS issues](xref:Investigating_NATS_Issues) for more information on how to troubleshoot NATS connectivity.
 
 ## SLNet connectivity
 

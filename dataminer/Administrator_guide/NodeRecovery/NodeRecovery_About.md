@@ -10,7 +10,7 @@ DataMiner NodeRecovery offers a way to monitor and act upon node outages in the 
 - When a certain node hosting an important device goes down, a backup node can take over this element.
 
 > [!IMPORTANT]
-> The NodeRecovery functionality requires Swarming to be enabled on the cluster.
+> The NodeRecovery functionality requires [Swarming](xref:Swarming) to be enabled on the cluster.
 
 More information is available on a number of topics:
 
@@ -22,10 +22,3 @@ More information is available on a number of topics:
 - [API](xref:NodeRecovery_API)
 - [Troubleshooting](xref:NodeRecovery_Troubleshooting)
 - [Frequently asked questions](xref:NodeRecovery_FAQ)
-
-## Upcoming features
-
-We are working to add the following functionality soon:
-
-- A default rebalance action when nodes go down
-- Detection of other forms of outages (e.g., DataMiner software not running while server is still up)

@@ -6,13 +6,14 @@ uid: NodeRecovery_Detection
 
 ## Types of outages supported
 
-NodeRecovery can detect full server outages, where machines cannot reach each other over the network. These scenarios include power or network cuts.
+NodeRecovery can detect **full server outages**, where machines cannot reach each other over the network. These scenarios include power or network cuts.
 
-In the future, NodeRecovery will also be able to detect scenarios where a server is still running but the DataMiner software is either not running, blocked, or unable to start up.
+> [!NOTE]
+> In its current version, NodeRecovery will not trigger/detect scenarios where a server is still running but the DataMiner software is either not running, blocked, or unable to start up.
 
 ## Outage detection
 
-On every node in the DataMiner cluster, a DataMiner NodeRecovery module keeps an eye on the other nodes. It does this by exchanging heartbeats over NATS. If a node has not seen heartbeats from a certain node for a period of time, that observing node will mark the other node as being in outage.
+On every node in the DataMiner cluster, a DataMiner NodeRecovery module keeps an eye on the other nodes. It does this by exchanging heartbeats over the NATS communication bus. If a node has not seen heartbeats from a certain node for a period of time, that observing node will mark the other node as being in outage.
 
 See [Node States](xref:NodeRecovery_States) for an overview of available node states (Healthy, Outage, Unknown).
 
