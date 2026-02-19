@@ -4,7 +4,10 @@ uid: SLCloud_xml
 
 # SLCloud.xml
 
-This XML file determines how DataMiner connects with the NATS cluster (from DataMiner 10.1.0/10.1.1 onwards, DataMiner uses NATS for inter-process communication). It is automatically added in the folder `C:\Skyline DataMiner`.
+This XML file determines how DataMiner connects with the NATS cluster if the SLNet-managed NATS solution is used. It is automatically added in the folder `C:\Skyline DataMiner`.
+
+> [!NOTE]
+> This file is not used in DataMiner Systems that use the [BrokerGateway-managed NATS solution](xref:BrokerGateway_Migration).
 
 ## Increasing the timeout for the NATS connection
 
