@@ -27,6 +27,7 @@ To update the primary key definition of the `info` and `alarm` tables, you can r
 > - Before running these scripts, ensure you have a backup of your database.
 > - These operations may lock the tables temporarily during execution.
 > - These actions might take a long time to complete, especially if the tables contain a large amount of data.
+> - If you have external applications or scripts that interact with the offload database and rely on the primary key structure, make sure to update them to accommodate the new primary key structure after running these scripts. Examples include querying by dmaId and id, which might now return multiple results instead of max one.
 
 ## MySQL
 
