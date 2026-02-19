@@ -113,7 +113,7 @@ Some steps need to be taken on the server where no DataMiner Agent is installed:
 
 1. Create a file `MessageBrokerConfig.json` in the folder `C:\ProgramData\Skyline Communications\DataMiner\`, using the content illustrated below.
 
-   Make sure to replace the placeholders noted with "<...>" with values from your own setup:
+   Make sure to replace the placeholders indicated with "<...>" with values from your own setup:
 
    ```json
    {
