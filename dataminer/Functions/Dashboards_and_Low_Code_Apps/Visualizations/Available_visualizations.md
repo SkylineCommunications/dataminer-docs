@@ -6,7 +6,7 @@ uid: Available_visualizations
 
 Many visualizations are available in the Dashboards app and Low-Code Apps, in the categories listed below.
 
-### General
+## General
 
 | Visualization | Description |
 |:--:|--|
@@ -27,7 +27,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![Trigger](~/dataminer/images/Trigger.svg)](xref:DashboardTrigger) | A [trigger](xref:DashboardTrigger) allows users to manually or automatically refresh other components. |
 | [![Web](~/dataminer/images/Web.svg)](xref:DashboardWeb) | A [web](xref:DashboardWeb) component displays a webpage or a block of static HTML. It can also be used to display a video thumbnail. |
 
-### States and values
+## States and values
 
 | Visualization | Description |
 |:--:|--|
@@ -37,7 +37,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![Ring](~/dataminer/images/Ring.svg)](xref:DashboardRing) | A [ring](xref:DashboardRing) displays the name and, if applicable, the value of an object within a colored ring matching the state of the object. |
 | [![State timeline](~/dataminer/images/State_Timeline.svg)](xref:DashboardStateTimeline) | A [state timeline](xref:DashboardStateTimeline) visualizes alarm state changes over time. |
 
-### Tables
+## Tables
 
 | Visualization | Description |
 |:--:|--|
@@ -46,7 +46,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![Pivot table](~/dataminer/images/Pivot_Table.svg)](xref:DashboardPivotTable) | A [pivot table](xref:DashboardPivotTable) (obsolete) displays a status report for a number of parameters of the elements using the selected protocol and protocol version. |
 | [![Table](~/dataminer/images/Table.svg)](xref:DashboardTable) | A [table](xref:DashboardTable) displays the results of a query in a structured, row-column format, similar to a spreadsheet. |
 
-### Charts
+## Charts
 
 | Visualization | Description |
 |:--:|--|
@@ -54,7 +54,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![Line & Area chart](~/dataminer/images/Line_Area_Chart.svg)](xref:LineAndAreaChart) | A [line & area chart](xref:LineAndAreaChart) displays a graph that can for example be based on DataMiner trending or on a GQI query. |
 | [![Pie & Donut chart](~/dataminer/images/Pie_Donut_Chart.svg)](xref:PieAndDonutChart) | A [pie & donut chart](xref:PieAndDonutChart) displays information in a chart shaped like a pie or donut. |
 
-### Other
+## Other
 
 | Visualization | Description |
 |:--:|--|
@@ -72,7 +72,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![Parameter picker](~/dataminer/images/Parameter_Picker.svg)](xref:DashboardParameterPicker) | A [parameter picker](xref:DashboardParameterPicker) allows users to select multiple parameters from a predefined list. |
 | [![Trend statistics](~/dataminer/images/Trend_Statistics.svg)](xref:DashboardTrendStatistics) | A [trend statistics](xref:DashboardTrendStatistics) component displays the minimum, average, and maximum value of one or more trended parameters. |
 
-### Basic controls
+## Basic controls
 
 | Visualization | Description |
 |:--:|--|
