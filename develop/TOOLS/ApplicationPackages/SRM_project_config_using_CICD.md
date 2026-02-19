@@ -8,6 +8,14 @@ When you implement [an SRM project](xref:About_SRM), we highly recommend that yo
 
 This section describes the features that are available with relation to this today and how you can make use of them.
 
+> [!IMPORTANT]
+> This documentation applies to deploying an SRM project using:
+>
+> - The Main Release track
+> - The Feature Release track (up to SRM version 1.2.x)
+>
+> The Feature Release track using the Dev Pack (from SRM version 2.0.1 onwards) is not yet supported.
+
 ## Components
 
 The SRM framework eases the extraction and the deployment of the components listed below associated with a given Booking Manager element. All remaining components must be deployed using custom code.
@@ -44,54 +52,23 @@ In case the project is already deployed on a DMA, it is possible to trigger an e
 
 1. In the *Full Configuration Settings* section, click *Export*.
 
-## Creating the repositories
+## Creating the *Package* repository
 
-Two repositories should be used:
+The **Package** repository, should include the the files that are included in the export and optionally contains extra items such as protocols.
 
-- A **Companion Files** repository, which stores all custom SRM components. It can also include extra components; however, deploying those extra items will require custom code in the deployment script.
+To create the repository:
 
-- A **Package** repository, which points to the companion file repository and optionally contains extra items such as protocols.
+1. Create a "Package" repository and clone it.
 
-To create the repositories:
+2. In the repository, inside the "SetupContent" folder add an "SRM" folder and include the files from the extracted archive (see [Configuration extraction](#configuration-extraction)).
 
-1. Create a "Companion Files" repository and clone it.
+3. In the "Install" automation script of the "Package" repository, add the necessary steps to import the SRM configuration:
 
-1. In the repository, add an "SRM" folder (inside a "Content" folder) and include the files from the extracted archive (see [Configuration extraction](#configuration-extraction)).
+   1. Add the [Skyline.DataMiner.Core.AppPackageInstaller.SRM](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageInstaller.SRM) NuGet package (available on <nuget.org>) to the "Install" project. Be sure to select version 3.4.0 or higher.
 
-1. Commit and push the repository.
+   2. In the code of the "Install" script, reference the *Skyline.DataMiner.Srm.AppPackageInstaller* namespace.
 
-1. Create a "Package" repository.
-
-1. In the manifest file of the repository, add the reference to the Companion Files repository.
-
-   For example:
-
-   ```xml
-   <!-- ... -->
-   <Content>
-       <CompanionFiles>
-           <CompanionFile>
-           <RepoPath>CompanionFiles\Customers\Ziine\Ziine SatUplink</RepoPath>
-           <Version>
-               <Selection>
-               <Range rangeSelection="latestRelease">1.0.0.X</Range>
-               </Selection>
-           </Version>
-           </CompanionFile>
-       </CompanionFiles>
-   </Content>
-   <!-- ... -->
-   ```
-
-   In the example above, you are adding the *Ziine SatUplink* Companion Files repository for the *Ziine* customer.
-
-1. In the "Install" automation script of the "Package" repository, add the necessary steps to import the SRM configuration:
-
-   1. Add the [Skyline.DataMiner.Core.AppPackageInstaller.SRM](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageInstaller.SRM) NuGet package (available on <nuget.org> ) to the "Install" project.
-
-   1. In the code of the "Install" script, reference the *Skyline.DataMiner.Srm.AppPackageInstaller* namespace.
-
-   1. In the "Install" method, add the following lines:
+   3. In the "Install" method, add the following lines:
 
       ```csharp
       var srmInstaller = new SrmInstaller(engine, context);
