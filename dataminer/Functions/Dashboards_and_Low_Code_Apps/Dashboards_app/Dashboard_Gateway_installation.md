@@ -85,7 +85,11 @@ There are two main reasons to consider a Dashboard Gateway setup:
    - If the system uses **[BrokerGateway](xref:BrokerGateway_Migration)**:
 
      - *nats:credsUrl*: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
-     - *nats:apiKeyPath*: The file path to the *appsettings.runtime.json* file containing the private key, for example: `C:\webgateway\brokergateway\appsettings.runtime.json`. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+     - *nats:apiKeyPath*:
+
+       - From 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards, a [BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) should be used. *apiKeyPath* should point to the [client secret file](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets).
+       - In earlier DataMiner versions, the file `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` has to be copied from the DMA to the local server, and the new path of that file needs to be set in *apiKeyPath*.
 
    - If the system does not use BrokerGateway yet (only possible on 10.5.x systems):
 
