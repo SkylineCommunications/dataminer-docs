@@ -40,6 +40,27 @@ From now on, a new BPA test named *Detect unsupported connector versions* will r
 
 When a connector version is removed from the Catalog, this means that it is no longer supported by Skyline Communications. Using unsupported connector versions can lead to compatibility issues, lack of support, and potential security vulnerabilities. It is important to regularly check for unsupported connector versions and update them to supported versions to ensure optimal performance and security of the system.
 
+#### Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+When an automation script is executed, it is now possible to pass the time zone of the client to that script.
+
+In the `ExecuteScriptMessage`, you can add the time zone information to the string parameter array in the following format:
+
+`CLIENT_TIME_ZONE:<Serialized TimeZone String>`
+
+Example: `CLIENT_TIME_ZONE:Tokyo Standard Time;540;(UTC+09:00) Osaka, Sapporo, Tokyo;Tokyo Standard Time;Tokyo Summer Time;;`
+
+In the automation script, the time zone will be available on the `IEngine` input argument:
+
+`engine.ClientInfo.TimeZone`
+
+> [!NOTE]
+>
+> - If the script was executed from a source other than a web app, or if the time zone information could not be parsed, the `TimeZone` property can be null.
+> - In case a subscript is executed, the `ClientInfo` of the parent script will also be available in the subscript.
+
 ## Changes
 
 ### Breaking changes
@@ -239,3 +260,11 @@ In some rare cases, SLProtocol could stop working when multiple connections of t
 <!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
 
 When an element was updated immediately after having been swarmed from one host to another, in some cases, it would incorrectly re-appear on its former host.
+
+#### STaaS: Retrieving the active alarms of an element would incorrectly be limited to 10,000 [ID 44793]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, if an element had more than 10,000 active alarms, on STaaS systems, only the first 10,000 would incorrectly be retrieved.
+
+From now on, all active alarms will be retrieved, even if the element in question has more than 10,000 active alarms.
