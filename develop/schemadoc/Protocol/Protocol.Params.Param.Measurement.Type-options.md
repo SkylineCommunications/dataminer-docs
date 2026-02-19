@@ -135,6 +135,10 @@ If, for example, you specify the following, the value "123.456" will be displaye
 > [!IMPORTANT]
 > For Cube to correctly display the tooltip and slider in the correct ranges, when a [range](xref:Protocol.Params.Param.Display.Range) is required, both the low and high intervals must be specified.
 
+
+> [!NOTE]
+> Protocol.Params.Param.Display.Units cannot be used in combination with this type.
+
 An extra "timeofday" option can be added to display the value as the time-of-day in local format:
 
 ```xml
