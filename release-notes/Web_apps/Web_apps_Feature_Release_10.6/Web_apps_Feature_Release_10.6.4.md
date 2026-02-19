@@ -219,3 +219,15 @@ When the dashboard or low-code app was embedded by means of the URL argument `em
 
 - in a *Time range* component, it would incorrectly not be possible to pin quick picks, and
 - in a *Query filter* component, it would incorrectly not be possible to enable the *Alarm color mode* setting.
+
+#### Low-Code Apps - Node edge graph component: Changing the interaction mode via an action would incorrectly change the default interaction mode [ID 44807]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When, in a low-code app, the interaction mode of a *Node edge graph* component was changed by an action, in some cases, the component's default interaction mode would incorrectly also be changed.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Edges could get drawn incorrectly when bidirectional configuration was enabled [ID 44814]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a Node edge graph component with bidirectional configuration enabled for the edges received a real-time update, in some cases, the edges could get drawn incorrectly. For example, multiple edges could get drawn on top of each other, or have their arrows rendered at an incorrect location.
