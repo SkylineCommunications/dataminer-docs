@@ -250,6 +250,25 @@ items:
             topicUid: Failover_FAQ_connection_issues
           - name: What if one of the Agents cannot be started or restarted?
             topicUid: Failover_FAQ_cannot_start
+  - name: NodeRecovery
+    topicUid: NodeRecovery_About
+    items:
+      - name: Installation and setup
+        topicUid: NodeRecovery_Installing
+      - name: Outage Detection
+        topicUid: NodeRecovery_Detection
+      - name: Node States
+        topicUid: NodeRecovery_States
+      - name: Triggering on state changes
+        topicUid: NodeRecovery_Triggers
+      - name: Settings
+        topicUid: NodeRecovery_Settings
+      - name: API
+        topicUid: NodeRecovery_API
+      - name: Troubleshooting
+        topicUid: NodeRecovery_Troubleshooting
+      - name: Frequently asked questions
+        topicUid: NodeRecovery_FAQ
   - name: Storage
     items:
       - name: About storage
