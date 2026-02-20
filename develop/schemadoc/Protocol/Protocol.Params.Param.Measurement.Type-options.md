@@ -189,6 +189,9 @@ The parameter will be displayed as a date. The value represents the total number
 > [!IMPORTANT]
 > The Interprete.Decimals and Display.Decimals tags of this parameter need to be set to 8 to avoid rounding errors.
 
+> [!NOTE]
+> A 'Param.Display.Units' tag cannot be used in combination with this type since DataMiner will fully take care of displaying the time in the most appropriate format, including the unit.
+
 Example:
 
 ```xml
@@ -208,6 +211,9 @@ The parameter will be displayed as a datetime. The value represents a decimal nu
 
 > [!IMPORTANT]
 > The Interprete/Decimals and Display/Decimals tags of this parameter need to be set to 8 to avoid rounding errors.
+
+> [!NOTE]
+> A 'Param.Display.Units' tag cannot be used in combination with this type since DataMiner will fully take care of displaying the time in the most appropriate format, including the unit.
 
 Example:
 
