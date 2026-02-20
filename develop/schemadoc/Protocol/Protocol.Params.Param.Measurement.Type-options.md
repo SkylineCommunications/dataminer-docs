@@ -137,7 +137,7 @@ If, for example, you specify the following, the value "123.456" will be displaye
 
 
 > [!NOTE]
-> Protocol.Params.Param.Display.Units cannot be used in combination with this type.
+> A 'Param.Display.Units' tag cannot be used in combination with this type since DataMiner will fully take care of displaying the time in the most appropriate format, including the unit.
 
 An extra "timeofday" option can be added to display the value as the time-of-day in local format:
 
