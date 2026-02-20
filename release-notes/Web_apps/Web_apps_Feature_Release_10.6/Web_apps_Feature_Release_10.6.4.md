@@ -134,6 +134,16 @@ From now on, GQI will accept any type of number (int, double, and long) as filte
 
 A number of enhancements have been made with regard to user authentication when accessing, for example, video thumbnails.
 
+#### Web apps: Going to the root page of the app by clicking the app name in the header [ID 44753]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In a web app, from now on, you can go to the root page of the app by clicking the name of the app in the header.
+
+- If you click the left mouse button, the root page will open in the same browser tab.
+- If you click the left mouse button while holding the CTRL key pressed, or if you click the middle mouse button, the root page will open in a new browser tab.
+- If you click the left mouse button while holding the SHIFT key pressed, the root page will open in a new browser window.
+
 #### Dashboards/Low-Code Apps - Node edge graph component: Viewport will no longer be reset with every update [ID 44786]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
