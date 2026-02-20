@@ -28,6 +28,31 @@ In the Dashboards app, a new type of anchor button will now be used in breadcrum
 
 These buttons will let you navigate to a fixed location when clicked. Also, clicking such a button while holding the CTRL key pressed will open a new tab, and hovering over such a button will reveal the link associated with that button.
 
+#### Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44788]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When an automation script is executed in a web app, it is now possible to pass the time zone of the client to that script.
+
+From now on, a `scriptOptions.ClientTimeZone` property can be passed to both the `ExecuteAutomationScript` and `ExecuteAutomationScriptWithOutput` web method.
+
+The `ClientTimeZone` (`DMAAutomationScriptOptionClientTimeZone`) data type has the following properties:
+
+- `Type` (`DMAAutomationScriptOptionClientTimeZoneType`):
+
+  | Value | Description |
+  |-------|-------------|
+  | Iana (1)    | If `Type` is set to 1, then an attempt will be made to pass the time zone information based on the IANA time zone identifier set in the `Info` property.<br>See also: [IANA time zone database](https://www.iana.org/time-zones) |
+  | Default (0) | If `Type` is set to 0, then the [default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) will be passed. |
+
+- `Info`: If `Type` is set to "Iana" (1), then `Info` should contain the identifier of an IANA time zone.
+
+> [!NOTE]
+> Currently, it is not yet possible to pass the time zone of the client to a script that is executed by clicking a DOM action button.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.4 or newer. See [Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]](xref:General_Feature_Release_10.6.4#automation-time-zone-of-the-client-can-now-be-passed-to-the-automation-script-that-is-executed-id-44742).
+
 ## Changes
 
 ### Enhancements
