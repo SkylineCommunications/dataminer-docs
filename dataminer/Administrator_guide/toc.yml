@@ -428,6 +428,8 @@ items:
             topicUid: Configuring_data_offloads
           - name: How DataMiner offloads data
             topicUid: How_DataMiner_offloads_data
+          - name: Offload database configuration with Swarming enabled
+            topicUid: Offload_Database_With_Swarming
   - name: Security
     items:
       - name: About security
