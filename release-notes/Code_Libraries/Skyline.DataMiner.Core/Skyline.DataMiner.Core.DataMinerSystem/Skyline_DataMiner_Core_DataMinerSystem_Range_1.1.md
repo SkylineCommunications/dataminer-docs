@@ -72,7 +72,7 @@ try
 }
 finally
 {
-    // Important: stop it when you’re done.
+    // Important: stop it when you are done.
     service.StopAlarmLevelMonitor(sourceId);
 }
 ```
