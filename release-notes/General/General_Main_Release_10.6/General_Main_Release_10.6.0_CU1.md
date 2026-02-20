@@ -74,6 +74,25 @@ When a DMA receives an SNMPv3 trap that it cannot process (e.g., because the SNM
 
 Also, in some cases, traps could be forwarded to the wrong elements because the SNMPv3 USM ID was not validated correctly.
 
+#### Enhanced performance when filtering history alarms using complex filters [ID 44664]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, overall performance has increased when filtering history alarms using complex filters.
+
+Performance has especially increased using filters that consist of multiple equality conditions involving the following types of objects:
+
+- Element
+- Function
+- Protocol
+- Service
+- View
+
+> [!NOTE]
+>
+> - Non-equality and wildcard/regex filtering has not been altered.
+> - If more than 1,000 elements are affected, filtering will revert to the legacy behavior.
+
 #### Enhanced performance when activating DaaS systems [ID 44737]
 
 <!-- MR 10.6.0 [CU1] - FR 10.6.4 -->

@@ -139,6 +139,25 @@ Up to now, log entries regarding SLDataGateway job queue updates would be logged
 
 From now on, these log entries will be logged in the `C:\Skyline DataMiner\Logging\SLDataGateway\SLJobQueues.txt` file instead.
 
+#### Enhanced performance when filtering history alarms using complex filters [ID 44664]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, overall performance has increased when filtering history alarms using complex filters.
+
+Performance has especially increased using filters that consist of multiple equality conditions involving the following types of objects:
+
+- Element
+- Function
+- Protocol
+- Service
+- View
+
+> [!NOTE]
+>
+> - Non-equality and wildcard/regex filtering has not been altered.
+> - If more than 1,000 elements are affected, filtering will revert to the legacy behavior.
+
 #### SLLogCollector: Separate log file per instance [ID 44668]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
