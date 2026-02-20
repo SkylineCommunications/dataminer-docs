@@ -256,3 +256,9 @@ When, in a low-code app, the interaction mode of a *Node edge graph* component w
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 When a Node edge graph component with bidirectional configuration enabled for the edges received a real-time update, in some cases, the edges could get drawn incorrectly. For example, multiple edges could get drawn on top of each other, or have their arrows rendered at an incorrect location.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: No tooltip would appear when hovering over an edge with a weight of 1 [ID 44818]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When positioning was set to "Linked to data", and the viewport was set to "Auto", up to now, no tooltip would appear when you hovered over edges with a weight of 1.
