@@ -52,7 +52,7 @@ The tutorial consists of the following steps:
    - RAD - Commtia LON 4
    - RAD - Commtia LON 5
 
-   Finally, it will create 29 additional elements, *Fleet-Outlier-Detection-Commtia 01*, *Fleet-Outlier-Detection-Commtia 02*, etc. up to *Fleet-Outlier-Detection-Commtia 29*, in the Cube Surveyor under *DataMiner Catalog* > *Using Relational Anomaly Detection* > *RAD Fleet Outlier*.
+   Finally, it will create 13 additional elements, *Fleet-Outlier-Detection-Commtia 01*, *Fleet-Outlier-Detection-Commtia 02*, etc. up to *Fleet-Outlier-Detection-Commtia 13*, in the Cube Surveyor under *DataMiner Catalog* > *Using Relational Anomaly Detection* > *RAD Fleet Outlier*.
 
 1. Go to the [RAD Manager](https://aka.dataminer.services/RAD-Manager-Catalog) package in the DataMiner Catalog and [deploy it](xref:Deploying_a_catalog_item).
 
@@ -62,12 +62,9 @@ The tutorial consists of the following steps:
 
 1. Open the *RAD Manager* app.
 
-   The RAD Manager provides an overview of all the RAD groups that are configured on your system.
+   The RAD Manager provides an overview of all the RAD groups that are configured on your system. If you have not configured any groups yet, this list will be empty. In the course of this tutorial, we will create and configure several RAD groups using this application.
 
    ![RAD Manager first glance](~/dataminer/images/tutorial_RAD_Manager_First_Glance.png)
-
-   > [!NOTE]
-   > When the package installation is finished, you will already see a RAD Group named *Fleet-Outlier-Group* in the RAD Manager. This will be used in [Step 8](#step-8-play-around-with-the-fleet-outlier-radar) of this tutorial, so for now you can just ignore it.
 
 ## Step 2: Check the DAB transmitter elements in Cube
 
@@ -338,7 +335,7 @@ If you are interested in using RAD on your system, these scripts can be a useful
 
 You can run the scripts as follows:
 
-1. In the RAD Manager, except for the *Fleet-Outlier-Group* group that was created by the catalog package, remove the groups you created during this tutorial using the garbage can icon next to each group name.
+1. In the RAD Manager, remove the groups you created during this tutorial using the garbage can icon next to each group name.
 
    ![Remove groups](~/dataminer/images/tutorial_RAD_Remove_Groups.png)
 
@@ -351,11 +348,11 @@ You can run the scripts as follows:
 
 ## Step 8: Play around with the Fleet Outlier Radar
 
-Shared model groups allow DataMiner to compare the subgroups with each other and detect if certain subgroups behave differently from the others. To illustrate this, a *Fleet-Outlier-Group* was deployed in [step 1](#step-1-install-the-necessary-packages-from-the-catalog) of this tutorial.
+Shared model groups allow DataMiner to compare subgroups with each other and identify when certain subgroups behave differently from the rest. To demonstrate this, we will use another script to create a shared model group containing a larger number of subgroups: *Add Fleet Outlier Detection Group*. Select this script from the *Automation Scripts > DataMiner Catalog > RAD Demonstrator* folder and execute it. This will create a new *Fleet-Outlier-Group* on your system.
 
-1. In the RAD Manager app, select the shared model group called *Fleet-Outlier-Group*.
+1. In the RAD Manager app, select this shared model group called *Fleet-Outlier-Group*. 
 
-   This group contains 29 subgroups (DAB transmitters) of actual data, collected in the field.
+   This group contains 13 subgroups (DAB transmitters) of actual data, collected in the field.
 
 1. Scroll through the list and see if you find devices with the *Outlier Group* label.
 
@@ -363,13 +360,13 @@ Shared model groups allow DataMiner to compare the subgroups with each other and
 
    To quickly find a group with this label, you can use the *Sorting & filtering* button and select to sort by *Is Outlier Group*.
 
-   If you do not see any groups just yet, the algorithm is probably still waiting for enough real-time data to identify outliers. The detection process relies on live data. As the output power parameters are polled every five minutes, it may take more time to process a sufficient number of data points. If you check back in an hour, the results should be visible.
+   After running the script, it may take a short while for the group to be created and for all analysis results to become available. If the group or its results are not immediately visible, wait a moment and refresh the view if necessary.
 
-1. Select one of the subgroups, for example, *Fleet-Outlier-Detection-14*.
+1. Select one of the subgroups. For example, in the outlier group shown below, notice how the *Output Power – PA1* differs from the other two PA output power values. This indicates that something may be wrong.
 
    ![Outlier group LON 14](~/dataminer/images/tutorial_RAD_OutlierGroup14.png)
 
-   Notice how the *Output Power - pa1* is not equal to the other 2 pa output powers. It indeed seems something is wrong here.
+   In another outlier group, the *Total Tx Amplifier Output Power* deviates more than usual from the sum of the output power values of the three individual power amplifiers.
 
 ## Step 9: Clean up your system
 
