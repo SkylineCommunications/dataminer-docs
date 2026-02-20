@@ -14,11 +14,17 @@ An issue can occur with DataMiner MessageBroker not being able to connect to the
 
 ## Workaround
 
+1. [Download BrokerGateway 1.9.5.23100](https://community.dataminer.services/download/dataminer-brokergateway-1-9-5-23100-msi/) and install this MSI on each server to update BrokerGateway.
+   
+1. Once the update is complete, run `C:\Skyline DataMiner\Tools\NATSRepair.exe` on each affected machine.
+
+Alternatively, this repair action can be done manually:
+   
 1. Copy `C:\ProgramData\Skyline Communications\DataMiner Security\ca.pem` and rename the copied file to `ca.crt`.
 
 1. Open the file and install the certificate, setting the install location to the local machine and keeping the default settings.
 
-Keep in mind that this workaround will break again when a DMA is removed from the DMS.
+Keep in mind that without the BrokerGateway update, this workaround may break again when a DMA is removed from the DMS.
 
 ## Fix
 
