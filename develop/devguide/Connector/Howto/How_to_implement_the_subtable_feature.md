@@ -181,6 +181,10 @@ With this in mind, your table definition should look something like this:
 
 As you can see, the column with "idx=1" is called *temp*. This is the column that we are using to store the duplicated instance value that is created when this feature is used. As this means that the column order changes when you implement this feature, make sure you start a new range of the connector. All the other columns follow the same definition as in a regular SNMP table.
 
+> [!NOTE]
+>
+> - The "temp" column created needs to specify an OID in order for the subtable filtering to work correctly. This OID can use any oid from the table.
+
 Another thing to consider is the SNMP definition of the table, which in our example contains "id=4682". This ID is the parameter ID of the SAP Table Filter that was either filled in manually or filled in via [step 1.3](#step-13).
 
 Keep in mind that only certain types of polling are allowed when you use this feature. For more information, see [Retrieving tables](xref:ConnectionsSnmpRetrievingTables).
