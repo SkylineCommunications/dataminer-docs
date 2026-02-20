@@ -161,7 +161,7 @@ OR
 
 #### BrokerGateway: Issues related to certificates [ID 44195]
 
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+<!-- MR 10.5.0 [CU11] - FR 10.5.12 [CU2] -->
 
 Up to now, in some cases, issues related to certificates could cause `TLS handshake error: remote error: tls: bad certificate` errors to be added to the NATS log file and `Could not connect to the local NATS endpoint on '<IP>'. Please make sure that the nats service is running without issues.` notice alarms to be generated.
 

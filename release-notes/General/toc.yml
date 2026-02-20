@@ -86,6 +86,8 @@ items:
                 topicUid: General_Feature_Release_10.5.12
               - name: General Feature Release 10.5.12 CU1
                 topicUid: General_Feature_Release_10.5.12_CU1
+              - name: General Feature Release 10.5.12 CU2
+                topicUid: General_Feature_Release_10.5.12_CU2
           - name: General Feature Release 10.5.11
             topicUid: General_Feature_Release_10.5.11
           - name: General Feature Release 10.5.10
