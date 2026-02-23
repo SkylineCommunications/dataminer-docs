@@ -62,7 +62,7 @@ The tutorial consists of the following steps:
 
 1. Open the *RAD Manager* app.
 
-   The RAD Manager provides an overview of all the RAD groups that are configured on your system. If you have not configured any groups yet, this list will be empty. In the course of this tutorial, we will create and configure several RAD groups using this application.
+   The RAD Manager provides an overview of all the RAD groups that are configured on your system. If you have not configured any groups yet, this list will be empty. In this tutorial, you will learn how to create and configure several RAD groups using this application.
 
    ![RAD Manager first glance](~/dataminer/images/tutorial_RAD_Manager_First_Glance.png)
 
@@ -335,7 +335,7 @@ If you are interested in using RAD on your system, these scripts can be a useful
 
 You can run the scripts as follows:
 
-1. In the RAD Manager, remove the groups you created during this tutorial using the garbage can icon next to each group name.
+1. In the RAD Manager app, remove the groups you created during this tutorial using the garbage can icon next to each group name.
 
    ![Remove groups](~/dataminer/images/tutorial_RAD_Remove_Groups.png)
 
@@ -348,11 +348,18 @@ You can run the scripts as follows:
 
 ## Step 8: Play around with the Fleet Outlier Radar
 
-Shared model groups allow DataMiner to compare subgroups with each other and identify when certain subgroups behave differently from the rest. To demonstrate this, we will use another script to create a shared model group containing a larger number of subgroups: *Add Fleet Outlier Detection Group*. Select this script from the *Automation Scripts > DataMiner Catalog > RAD Demonstrator* folder and execute it. This will create a new *Fleet-Outlier-Group* on your system.
+Shared model groups allow DataMiner to compare subgroups and identify when certain subgroups behave differently from the rest. To demonstrate this, use the *Add Fleet Outlier Detection Group* script to create a shared model group containing a larger number of subgroups.
 
-1. In the RAD Manager app, select this shared model group called *Fleet-Outlier-Group*. 
+1. In the *Automation* module, go to the *Automation Scripts* > *DataMiner Catalog* > *RAD Demonstrator* folder, select the *Add Fleet Outlier Detection Group* script, and execute it.
 
-   This group contains 13 subgroups (DAB transmitters) of actual data, collected in the field.
+   A new RAD group named *Fleet-Outlier-Group* is created on your system.
+
+   > [!NOTE]
+   > It may take a short while for the group to be created and for all analysis results to become available. If the group or its results are not immediately visible, wait a moment and refresh the view if necessary.
+
+1. In the RAD Manager app, select this new shared model group.
+
+   In the pane on the left, the group's subgroups (DAB transmitters) become visible. The group contains 13 subgroups with actual data collected in the field.
 
 1. Scroll through the list and see if you find devices with the *Outlier Group* label.
 
@@ -360,9 +367,7 @@ Shared model groups allow DataMiner to compare subgroups with each other and ide
 
    To quickly find a group with this label, you can use the *Sorting & filtering* button and select to sort by *Is Outlier Group*.
 
-   After running the script, it may take a short while for the group to be created and for all analysis results to become available. If the group or its results are not immediately visible, wait a moment and refresh the view if necessary.
-
-1. Select one of the subgroups. For example, in the outlier group shown below, notice how the *Output Power – PA1* differs from the other two PA output power values. This indicates that something may be wrong.
+1. Select one of the subgroups. For example, in the outlier group shown below, the *Output Power – PA1* differs from the other two PA output power values. This may indicate an issue.
 
    ![Outlier group LON 14](~/dataminer/images/tutorial_RAD_OutlierGroup14.png)
 
