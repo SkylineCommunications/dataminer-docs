@@ -8,6 +8,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated](xref:KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged) | From DataMiner 10.5.12/10.6.0 onwards | | February 24, 2026 |
 | [DataMiner Web and GQI crash briefly during startup](xref:KI_DataMiner_Web_and_GQI_crash_briefly_during_startup) | DataMiner 10.5.0 [CU11] and 10.6.2 | | January 28, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
@@ -32,6 +33,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated](xref:KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged) | From DataMiner 10.5.12/10.6.0 onwards | | February 24, 2026 |
 | [DataMiner Web and GQI crash briefly during startup](xref:KI_DataMiner_Web_and_GQI_crash_briefly_during_startup) | DataMiner 10.5.0 [CU11] and 10.6.2 | | January 28, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |

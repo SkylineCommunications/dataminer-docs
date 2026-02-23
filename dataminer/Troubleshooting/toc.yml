@@ -262,6 +262,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated
+            topicUid: KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged
           - name: DataMiner Web and GQI crash briefly during startup
             topicUid: KI_DataMiner_Web_and_GQI_crash_briefly_during_startup
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
