@@ -45,16 +45,16 @@ flowchart TD
     Which --- Trending
     Which --- WebApps
     %% Define hyperlinks %%
-    click CHECK1 "#examples-of-critical-issues" "examples of critical issues"
-    click critical "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview" "To critical issues flowchart"
-    click DMAStartupIssues "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues" "DMA Startup Issues" _self
-    click ProcessFlowcharts "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification" "Process identification" _self
-    click Module "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/ Troubleshooting_Identify_Per_Module/Troubleshooting_Identify_Per_Module" "Identify per module" _self
-    click Trending "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Trending" "Trending" _self
-    click WebApps "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Webapps" "Web apps" _self
-    click Services "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Services" "Services" _self
-    click Alarms "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Alarms" "Alarms" _self
-    click Investigate "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start" _self
+    click CHECK1 "#examples-of-critical-issues" _self
+    click critical "Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "To critical issues flowchart" _self
+    click DMAStartupIssues "Troubleshooting_Startup_Issues.html" "DMA Startup Issues" _self
+    click ProcessFlowcharts "Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html" "Process identification" _self
+    click Module "Troubleshooting_Identify_Per_Module/Troubleshooting_Identify_Per_Module.html" "Identify per module" _self
+    click Trending "Troubleshooting_Trending.html" "Trending" _self
+    click WebApps "Troubleshooting_Webapps.html" "Web apps" _self
+    click Services "Troubleshooting_Services.html" "Services" _self
+    click Alarms "Troubleshooting_Alarms.html" "Alarms" _self
+    click Investigate "Troubleshooting_Where_to_Start.html" _self
     %% Apply styles to blocks %%
     class START classTerminal;
     class Which,AlarmsServicesTrending,CheckStartup,CHECK1,identify classDecision;
