@@ -67,6 +67,12 @@ When an alias is defined on a job node, this will now be shown in the resource p
 
 In case no alias is defined, the previous format will continue to be applied.
 
+#### Scheduling: Object-specific properties now placed in 'Custom' section [ID 44840]
+
+When object-specific properties are defined (for example, when you edit the properties for a job), these properties will now be shown in a *Custom* section instead of a *General* section to prevent confusion.
+
+In addition, to make sure there is only one *Custom* section system-wide, it is no longer possible to define a system-wide section named *Custom*.
+
 ### Fixes
 
 #### Scheduling: Action buttons missing in Edit Job panel after reverting job status to Tentative [ID 43808]
