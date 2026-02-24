@@ -4,7 +4,7 @@ uid: Finding_a_Root_Cause
 
 # Finding a root cause
 
-```mermaid
+<div class="mermaid">
 flowchart TD
     %% Define styles %%
     linkStyle default stroke:#cccccc
@@ -59,7 +59,7 @@ flowchart TD
     class START classTerminal;
     class Which,AlarmsServicesTrending,CheckStartup,CHECK1,identify classDecision;
     class Investigate,Cassandra,Elasticsearch,DMAStartupIssues,critical,ProcessFlowcharts,Module,Alarms,Trending,WebApps,Services classExternalRef;
-```
+</div>
 
 ## Examples of critical issues
 
