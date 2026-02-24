@@ -222,6 +222,18 @@ Up to now, when SLLogCollector tried to trigger process dumps in parallel, in so
 
 From now on, in order to be able to include all dumps in the package, process dumps will no longer be triggered in parallel.
 
+#### Incorrect error message would appear when a configuration mismatch prevented DataMiner Agents from being clustered [ID 44781]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a configuration mismatch prevented DataMiner Agents from being clustered, up to now, the following incorrect error message would appear:
+
+`Cannot cluster Agents as remote Agent has an unsupported database type.`
+
+From now on, the following correct error message will appear instead:
+
+`Cannot cluster Agents as the agent configuration is incompatible. Please check SLNet logging for more information.`
+
 #### Problem when an element was updated immediately after having been swarmed [ID 44783]
 
 <!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
