@@ -33,7 +33,10 @@ To specify the default “From” address to be used in outgoing email messages,
 
 If a DataMiner Agent has to be able to send out email messages, then the *DataMiner.xml* file located in the `C:\Skyline DataMiner` directory of that DataMiner Agent has to have an *\<SMTP>* section containing the necessary email settings.
 
-You can either configure this directly in *DataMiner.xml* or use the SLNetClientTest tool. To configure it directly in *DataMiner.xml*, a DataMiner restart is required.
+You can either configure this directly in *DataMiner.xml*, via Cube or use the SLNetClientTest tool.
+To configure it directly in *DataMiner.xml*, a DataMiner restart is required.
+
+- For information on how to configure this using **Cube**, see [Configuration via DataMiner Cube](xref:Configuring_outgoing_email#configuration-via-dataminer-cube).
 
 - For information on how to configure this using the **SLNetClientTest tool**, see [Configuring SMTP](xref:SLNetClientTest_configuring_SMTP).
 
@@ -76,11 +79,13 @@ You can either configure this directly in *DataMiner.xml* or use the SLNetClient
 
   - **LoginPlainMethod**: Username and password will be sent to the server unencrypted.
 
-  - **CramMD5Method**: The user will be authenticated using CRAM MD5 (Challenge-Response Authentication Mechanism, see RFC 2195). The server generates a challenge, to which the user has to respond with a username and the MD5 HMAC (Hash-based Message Authentication Code) of the challenge (with the user password as the key).
-
   - **AuthLoginMethod**: Username and password will be sent to the server using simple base64 encoding.
 
+  - **CramMD5Method**: The user will be authenticated using CRAM MD5 (Challenge-Response Authentication Mechanism, see RFC 2195). The server generates a challenge, to which the user has to respond with a username and the MD5 HMAC (Hash-based Message Authentication Code) of the challenge (with the user password as the key).
+
   - **NTLM**: The user will be authenticated using the MS NTLM (NT LAN Manager) protocol.
+
+  - **XOAUTH2**: The user will be authenticated using OAuth 2.0. This requires interactive configuration through DataMiner Cube in order to acquire the necessary tokens.
 
   - **Auto**: The authentication protocol to be used will be auto-negotiated.
 
@@ -106,8 +111,9 @@ You can specify the following advanced settings. However, these are not mandator
 
 - **From**: A custom “From” address that will override the default “From” address specified in the DataMiner Agent interface.
 
-  Example: *\<From>address@example.com\</From>*
-  
+  Example: *\<From>address@example.com<\/From>*
+
+
 ## Example of SMTP server configuration
 
 The example below shows how the [SMTP](xref:DataMiner.SMTP) element in *DataMiner.xml* should be configured.
@@ -121,3 +127,48 @@ The example below shows how the [SMTP](xref:DataMiner.SMTP) element in *DataMine
   <Password>MyMailPassword</Password>
 </SMTP>
 ```
+
+## Configuration via DataMiner Cube
+
+Starting from DataMiner 10.6.4 onwards, it is possible to configure the SMTP settings via DataMiner Cube.
+This is the only way to configure OAuth 2.0 credentials as providers typically require an interactive (2FA) login with their authorization server to retrieve the tokens.
+
+> [!NOTE]
+> Cube will always update the configuration on all agents in the cluster.
+> - If not all agents are configured the same way, a warning will be displayed and you can compare the current configurations.
+> - If you need to configure one agent differently from the rest, you should use one of the other methods (manual DataMiner.xml editing or the [SLNetClientTest tool](xref:SLNetClientTest_configuring_SMTP)). Note that the two agents in a failover pair must always be configured the same way.
+
+In DataMiner Cube, go to System Center > System settings > SMTP.
+
+Presets are available for Microsoft Outlook / Office 365 and Google GMail OAuth providers. For any other type of configuration, choose the *Custom* preset.
+
+
+### Microsoft OAuth
+- Fill in the **Tenant ID**, e.g. *72f988bf-86f1-41af-91ab-2d7cd011db47*.
+- Fill in the **Application ID** of your application that has been registered on Azure Portal and has been granted the `SMTP.Send` permission.
+- The **username** should be the email address of the mailbox from where the emails will be sent.
+
+> [!NOTE]
+> Microsoft requires the *From* sender to match exactly with an email address that belongs to the user,
+> the configuration in DataMiner can not be left empty.
+
+### Google OAuth
+- Fill in the **Client ID**, e.g. *888888888888-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com*.
+- Fill in the **Client Secret**, e.g. *GOCSPX-xxxxxxxxxxxxxxxxxxxxxxxxxxxx*
+- The **username** should be the email address of the mailbox from where the emails will be sent.
+
+
+Click on the *Retrieve tokens...* button. The system webbrowser will be launched and navigate to the OAuth Account Endpoint where you need to interactively login and grant the permission to DataMiner to send emails.
+
+If all goes well, Cube will display *Tokens received successfully*. If not, you can inspect the error response that was received from the authorization server.
+
+You can now apply the settings and afterwards use the *Send test email...* dialog to confirm that every agent can correctly send emails.
+
+
+### Adding a DataMiner Agent to a DataMiner System
+
+In order to copy the existing configuration to a newly added DMA, perform the following steps:
+- On a DMA that was already in the cluster, go to System Center > System settings > SMTP.
+- For authentication type *XOAUTH2*: enter the *Client Secret* again and press *Retrieve tokens...*.
+- For authentication types other than *None*: enter the password again.
+- *Apply* the configuration.
