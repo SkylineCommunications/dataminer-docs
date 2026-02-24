@@ -42,6 +42,6 @@ Once the scan starts, Network Explorer will:
 
 If you want to refresh the connections between network devices without scanning for new devices, use the **Update Connections** button.
 
-The system will analyze the existing LLDP & CDP data from known devices and update the connection information where applicable.
+The system will analyze the existing LLDP and CDP data from known devices and update the connection information where applicable.
 
 By default, removed connections will not be automatically deleted. You can adjust this behavior in the [application settings](xref:IpNetworkExplorer_UI_overview#application-settings).
