@@ -135,9 +135,8 @@ If, for example, you specify the following, the value "123.456" will be displaye
 > [!IMPORTANT]
 > For Cube to correctly display the tooltip and slider in the correct ranges, when a [range](xref:Protocol.Params.Param.Display.Range) is required, both the low and high intervals must be specified.
 
-
 > [!NOTE]
-> A 'Param.Display.Units' tag cannot be used in combination with this type since DataMiner will fully take care of displaying the time in the most appropriate format, including the unit.
+> A `Param.Display.Units` tag cannot be used in combination with this type, as DataMiner will fully take care of displaying the time in the most appropriate format, including the unit.
 
 An extra "timeofday" option can be added to display the value as the time-of-day in local format:
 
@@ -190,7 +189,7 @@ The parameter will be displayed as a date. The value represents the total number
 > The Interprete.Decimals and Display.Decimals tags of this parameter need to be set to 8 to avoid rounding errors.
 
 > [!NOTE]
-> A 'Param.Display.Units' tag cannot be used in combination with this type since DataMiner will fully take care of displaying the time in the most appropriate format, including the unit.
+> A `Param.Display.Units` tag cannot be used in combination with this type, as DataMiner will fully take care of displaying the time in the most appropriate format, including the unit.
 
 Example:
 
@@ -213,7 +212,7 @@ The parameter will be displayed as a datetime. The value represents a decimal nu
 > The Interprete/Decimals and Display/Decimals tags of this parameter need to be set to 8 to avoid rounding errors.
 
 > [!NOTE]
-> A 'Param.Display.Units' tag cannot be used in combination with this type since DataMiner will fully take care of displaying the time in the most appropriate format, including the unit.
+> A `Param.Display.Units` tag cannot be used in combination with this type, as DataMiner will fully take care of displaying the time in the most appropriate format, including the unit.
 
 Example:
 
