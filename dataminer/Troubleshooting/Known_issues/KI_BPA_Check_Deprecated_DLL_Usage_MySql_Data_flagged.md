@@ -10,7 +10,7 @@ From DataMiner 10.5.12/10.6.0 onwards<!--RN 43779-->.
 
 ## Cause
 
-In DataMiner 10.5.12/<!--Add Main Release version-->, the code of the *Check Deprecated DLL Usage* BPA was modified. As part of this change, the check was expanded from only scanning `C:\Skyline Dataminer\ProtocolScripts\` to also scanning its subfolders.
+In DataMiner 10.5.12/10.6.0, the code of the *Check Deprecated DLL Usage* BPA was modified. As part of this change, the check was expanded from only scanning `C:\Skyline Dataminer\ProtocolScripts\` to also scanning its subfolders.
 
 As a result, the BPA now also evaluates DLLs located in `C:\Skyline Dataminer\ProtocolScripts\DllImport\` and its subfolders, and incorrectly flags the *MySql.Data* NuGet (*MySql.Data.dll*) as deprecated when it is located there.
 
