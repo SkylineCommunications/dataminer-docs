@@ -29,6 +29,9 @@ All functionality supported by a [DataMiner installation package (`.dmapp`)](sky
 
 When you run a test suite, QAOps first installs all packages in that suite. It then executes tests in the package execution order defined in the QAOps operator application.
 
+> [!IMPORTANT]
+> For information about how to send back Test Results to the QAOps System please see [QAOpsTestResult](QAOps_Test_Result).
+
 ## Set up TestPackageContent
 
 Use the `TestPackageContent` directory as the root for all test assets.
@@ -50,13 +53,20 @@ Required components:
 
 Optional components:
 
-- `Tests` and `Dependencies` for repository-committed test assets.
+- `Tests` and `Dependencies` for project-committed tests and their assets.
 
 - `qaops.config.xml` for custom configuration.
 
 ### TestHarvesting
 
-The `TestDiscovery.ps1` script automatically harvests tests from your Git repository during the build process.
+The `TestDiscovery.ps1` script automatically harvests tests from your whole Git repository during the build process.
+If all your tests, are already within the same Solution then this script may not be necessary, it's mostly meant for repositories that have more than one solution. You can use other features such as:
+
+- If you tests are done through DataMiner components as part of the same solution, then you can use default [DataMiner installation package](skyline_dataminer_sdk_dataminer_package_project) logic. To just let it install a connector, automationscript, ... with your tests and then use the [TestPackagePipeline](TestPackagePipeline) to trigger the tests and retrieve their results.
+
+- If your tests are part of the build output of projects in your solution, such as MSTest or NUnit assemblies. You could opt to use post-build actions on those projects to copy the output to the Tests directory and then use the [TestPackagePipeline](TestPackagePipeline) to trigger the tests and retrieve their results.
+
+- If you tests can be written directly in powershell scripts, then the simplest way is to write everything within the and then use the [TestPackagePipeline](TestPackagePipeline) to trigger the tests and forward their results to QAOps.
 
 If used, the harvesting process creates these directories:
 
@@ -122,7 +132,7 @@ TestHarvesting/
 
 ### TestPackagePipeline
 
-Create PowerShell scripts that define your test execution workflow. During a test run, the QAOps bridge executes these scripts sequentially.
+Create PowerShell scripts that define your test execution workflow (or the actual tests). During a test run, the QAOps bridge executes these scripts sequentially.
 
 These scripts can also contain the test logic.
 
@@ -165,6 +175,7 @@ TestPackagePipeline/
 
 #### Add helper code and utilities
 
+For information about how to send back Test Results to the QAOps System please see [QAOpsTestResult](QAOps_Test_Result).
 You can include additional code files next to the numbered PowerShell scripts to organize and reuse functionality. The QAOps bridge only executes numbered `.ps1` files as entry points. From those scripts, you can call other code files.
 
 Examples of helper files:
