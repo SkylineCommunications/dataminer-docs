@@ -213,3 +213,11 @@ In some rare cases, SLProtocol could stop working when multiple connections of t
 <!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
 
 When an element was updated immediately after having been swarmed from one host to another, in some cases, it would incorrectly re-appear on its former host.
+
+#### STaaS: Retrieving the active alarms of an element would incorrectly be limited to 10,000 [ID 44793]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, if an element had more than 10,000 active alarms, on STaaS systems, only the first 10,000 would incorrectly be retrieved.
+
+From now on, all active alarms will be retrieved, even if the element in question has more than 10,000 active alarms.

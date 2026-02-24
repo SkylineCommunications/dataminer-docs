@@ -284,11 +284,3 @@ From now on, when a capability is booked, it will no longer be possible to set i
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
-
-#### STaaS: Retrieving the active alarms of an element would incorrectly be limited to 10,000 [ID 44793]
-
-<!-- MR 10.7.0 - FR 10.6.4 -->
-
-Up to now, if an element had more than 10,000 active alarms, on STaaS systems, only the first 10,000 would incorrectly be retrieved.
-
-From now on, all active alarms will be retrieved, even if the element in question has more than 10,000 active alarms.
