@@ -65,4 +65,4 @@ By default, this checkbox is not selected for new and existing elements.
 
 If the checkbox is selected for an element and a user tries to swarm the element, this will result in the error message *Element is not allowed to swarm (blocked)*.
 
-If an element is not swarmable due to techincal restrictions (e.g. polling loopback address), the element will still not be swarmable, even if this setting is not checked and thus the element is not explicitly blocked from swarming by the user.
+If an element is not swarmable due to technical restrictions (e.g. polling loopback address), the element will still not be swarmable, even if this setting is not checked and thus the element is not explicitly blocked from swarming by the user.
