@@ -5,6 +5,10 @@ description: DataMiner is a standard, widely adopted and endorsed, modular, open
 
 # About DataMiner
 
+## The operating system for complex operational ecosystems
+
+The DataMiner platform is an essential strategic foundation for any organization running mission-critical live services on complex technology stacks. It is the base layer that supports everything built above it, and the entry point into the intelligence era.
+
 ## Your answer to today's unpredictable world
 
 The world is becoming more connected, data-driven, and unpredictable, with technology evolving at an ever-accelerating pace. Organizations sit on a wealth of data, yet struggle to fully capitalize on it because of fragmented technologies and inadequate solutions.
