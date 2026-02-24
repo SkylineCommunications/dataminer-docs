@@ -99,6 +99,12 @@ Performance has especially increased using filters that consist of multiple equa
 
 Because of a number of enhancements, overall performance has increased when activating DaaS systems.
 
+#### Enhanced performance when executing a full element update on STaaS systems with Swarming enabled [ID 44772]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, on STaaS systems with Swarming enabled, overall performance has increased when executing a full element update.
+
 ### Fixes
 
 #### MessageBroker: Problem with hostnames and FQDNs containing a certain combination of dashes and characters [ID 44433]

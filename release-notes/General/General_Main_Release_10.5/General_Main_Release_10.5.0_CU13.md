@@ -76,6 +76,12 @@ Performance has especially increased using filters that consist of multiple equa
 > - Non-equality and wildcard/regex filtering has not been altered.
 > - If more than 1,000 elements are affected, filtering will revert to the legacy behavior.
 
+#### Enhanced performance when executing a full element update on STaaS systems with Swarming enabled [ID 44772]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, on STaaS systems with Swarming enabled, overall performance has increased when executing a full element update.
+
 ### Fixes
 
 #### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]
