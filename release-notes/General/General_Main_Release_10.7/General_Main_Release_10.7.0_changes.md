@@ -236,6 +236,16 @@ From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Schedule
 
 If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
 
+#### DataMiner Objects Models: Selected subset of fields from DomInstance objects will now be read from the repository API [ID 44600]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Since DataMiner 10.6.0/10.6.1, it is possible to read only a selected subset of fields from `DomInstance` objects. In order to further enhance performance, from now on, it will be possible to read such subsets from the repository API.
+
+Currently, the repository API will still request the full objects from the database and extract the required values.
+
+By default, the value type will be the field type defined by the exposer that is requested. When a field value is requested, the type defined in the field descriptor will be used. In order to determine that type, field descriptor IDs should be unique across section definitions in a DOM module.
+
 #### NotifyMail.html has been updated in order to better support both classic Microsoft Outlook and new Microsoft Outlook [ID 44617]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->

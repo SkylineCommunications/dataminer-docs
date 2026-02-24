@@ -101,6 +101,16 @@ Also, no notice will be generated anymore when alarm trees are getting large. As
 
 A number of security enhancements have been made.
 
+#### DataMiner Objects Models: Selected subset of fields from DomInstance objects will now be read from the repository API [ID 44600]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Since DataMiner 10.6.0/10.6.1, it is possible to read only a selected subset of fields from `DomInstance` objects. In order to further enhance performance, from now on, it will be possible to read such subsets from the repository API.
+
+Currently, the repository API will still request the full objects from the database and extract the required values.
+
+By default, the value type will be the field type defined by the exposer that is requested. When a field value is requested, the type defined in the field descriptor will be used. In order to determine that type, field descriptor IDs should be unique across section definitions in a DOM module.
+
 #### SLDataGateway: StorageTypeNotFoundException will now always mention the StorageType that could not be found [ID 44603]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
