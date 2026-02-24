@@ -55,44 +55,6 @@ The `ClientTimeZone` (`DMAAutomationScriptOptionClientTimeZone`) data type has t
 
 ## Changes
 
-### Breaking changes
-
-#### Dashboards/Low-Code Apps - GQI: Enhanced filtering when using the GQI DxM [ID 44714]
-
-<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
-
-From now on, when dashboards or low-code app use the GQI DxM to process GQI queries, queries with regex filters that are linked to data will no longer combine multiple values inside a single regular expression to simulate OR filtering. Instead, whatever the filter method (contains, equals, regex, greater than, etc.), they will create a real OR filter with all the raw data values.
-
-As a result, when linking data to filter nodes, dashboards and low-codes using the GQI DxM to process GQI queries will now behave differently to dashboards and low-codes using SLHelper to process GQI queries.
-
-##### When using SLHelper: no functional changes
-
-- In regex filters, the different regex values are escaped and combined into a single regular expression.
-- When using any other filter method, only the first value are passed to the filter. All other values are ignored.
-
-Limitations:
-
-- As the regex values need to be escaped to support OR filtering, it is impossible to create a dynamic regular expression to filter with.
-- You cannot use an OR filter to filter values other than string values. Only string values allow regex filtering.
-
-##### When using the GQI DxM: functional change
-
-- In regex filters, the regex values will no longer be escaped.
-- When using any other filter method, all values will now be passed to the filter.
-
-Benefits:
-
-- No limitations similar to those when using SLHelper.
-- Filters can be optimized and forwarded to the server, instead of having to use a post filter.
-
-> [!IMPORTANT]
-> In some cases, no longer escaping regex values in regex filters could represent a breaking change:
->
-> - The query could become invalid if some of the regex values contain invalid regular expressions.
-> - Even when all regex values are valid regular expressions, in some cases, the filter may not yield the expected result because some of the values unintentionally contain regex syntax.
->
-> If a regex filter would yield unexpected results, it is safe to replace the regular expression by a contains or equals condition.
-
 ### Enhancements
 
 #### Dashboards app: 'HTTP 404' page replaced by an embedded visual [ID 44569]
@@ -165,6 +127,42 @@ The data in this section will be sorted by type (data, filter, group) and then b
 Up to now, when filtering on a column containing numbers of type int, double, etc., the filter values all had to be of the same type. However, in some cases, this would cause issues when those values were combined with component data from the client.
 
 From now on, GQI will accept any type of number (int, double, and long) as filter value for columns of type int, double, long, and decimal.
+
+#### Dashboards/Low-Code Apps - GQI: Enhanced filtering when using the GQI DxM [ID 44714]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+From now on, when dashboards or low-code app use the GQI DxM to process GQI queries, queries with regex filters that are linked to data will no longer combine multiple values inside a single regular expression to simulate OR filtering. Instead, whatever the filter method (contains, equals, regex, greater than, etc.), they will create a real OR filter with all the raw data values.
+
+As a result, when linking data to filter nodes, dashboards and low-code apps using the GQI DxM to process GQI queries will now behave differently to dashboards and low-code apps using SLHelper to process GQI queries.
+
+##### When using SLHelper: no functional changes
+
+- In regex filters, the different regex values are escaped and combined into a single regular expression.
+- When using any other filter method, only the first value is passed to the filter. All other values are ignored.
+
+Limitations:
+
+- As the regex values need to be escaped to support OR filtering, it is impossible to create a dynamic regular expression to filter with.
+- You cannot use an OR filter to filter values other than string values. Only string values allow regex filtering.
+
+##### When using the GQI DxM: functional change
+
+- In regex filters, the regex values will no longer be escaped.
+- When using any other filter method, all values will now be passed to the filter.
+
+Benefits:
+
+- No limitations similar to those when using SLHelper.
+- Filters can be optimized and forwarded to the server, instead of having to use a post filter.
+
+> [!IMPORTANT]
+> In some cases, no longer escaping regex values in regex filters could represent a breaking change:
+>
+> - The query could become invalid if some of the regex values contain invalid regular expressions.
+> - Even when all regex values are valid regular expressions, in some cases, the filter may not yield the expected result because some of the values unintentionally contain regex syntax.
+>
+> If a regex filter would yield unexpected results, it is safe to replace the regular expression by a contains or equals condition.
 
 #### User authentication enhancements [ID 44734]
 

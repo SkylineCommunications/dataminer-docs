@@ -8,7 +8,6 @@ The following breaking changes have been introduced in recent DataMiner releases
 
 | <div style="width:120px">Release note ID</div> | Release version(s) | Description |
 |--|--|--|
-| [44714](xref:Web_apps_Feature_Release_10.6.4#dashboardslow-code-apps---gqi-enhanced-filtering-when-using-the-gqi-dxm-id-44714)  | DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 | Enhanced filtering when using the GQI DxM |
 | [44527](xref:General_Feature_Release_10.6.4#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527) | DataMiner 10.7.0/10.6.4 | From now on, hexadecimal values outside of the ASCII range will be considered non-printable characters, and will remain in hexadecimal string format. |
 | [44420](xref:General_Feature_Release_10.6.3#protocols-as-many-slscripting-processes-as-slprotocol-processes-by-default-id-44420) | DataMiner 10.7.0/10.6.3 | Up to now, one SLScripting process was used by default. From now on, by default, there will be as many SLScripting processes as SLProtocol processes. |
 | [44136](xref:Web_apps_Feature_Release_10.6.1#annotations-are-now-end-of-life-id-44136) | DataMiner 10.6.0/10.6.1 | When connected to a DataMiner Agent running DataMiner 10.6.0/10.6.1 (or higher), annotations will no longer work in web apps, and the following Web Services API methods (v1) will return an error: GetAnnotationsLinkForElement, GetAnnotationsLinkForService, and GetAnnotationsLinkForView. |
