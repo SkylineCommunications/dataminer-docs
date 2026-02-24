@@ -501,6 +501,14 @@ From now on, DataMiner upgrade packages will no longer include the Puppeteer-Sha
 
 This backend browser, which was used by SLHelper to generate reports and to convert those reports to PDF format, is no longer needed as the new Web DcM will now generate all reports and convert them to PDF format.
 
+#### BPA test 'Check Deprecated DLL Usage' will now also check the DataMinerMessageBroker.API.dll file [ID 43779]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.12 -->
+
+The BPA test *Check Deprecated DLL Usage* will now also check whether the *DataMinerMessageBroker.API.dll* file is used by protocols or automation scripts, and if so, whether it is not outdated.
+
+If this file cannot be found, or if its version is not equal or higher than 3.0.0, the BPA test will fail.
+
 #### DataMiner Object Models: A ModuleSettings update will no longer automatically trigger a network credentials check [ID 43799]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
