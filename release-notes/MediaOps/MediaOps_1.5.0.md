@@ -87,6 +87,10 @@ When a locked job was duplicated, the user who had a lock on the original job al
 
 When recurring jobs were created, daylight saving time was not correctly applied.
 
+#### People & Organization: Exception when updating team skills after teams had been created without team email or description [ID 44299]
+
+When teams had been created through code with a null value for the "Team email" or "Team description", an exception was thrown when you tried to update the skills of a team in the People & Organization app.
+
 #### Scheduling: Errors on job copied in duplicated job [ID 44303]
 
 When a job that had errors (for example because it went into the quarantined state) was duplicated, the errors were copied over to the new job. This will no longer occur.
