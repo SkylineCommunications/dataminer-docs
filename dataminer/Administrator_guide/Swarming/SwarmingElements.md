@@ -23,6 +23,9 @@ To swarm elements in DataMiner Cube:
 
 1. On the left, select the element(s) you want to swarm.
 
+   > [!NOTE]
+   > Elements that are not swarmable or explicitly blocked from swarming, will not be displayed in this list.
+
 1. On the right, select the destination DMA.
 
    ![Swarming UI in Cube](~/dataminer/images/Swarming_Tutorial_Enable_Cube_Swarm.png)<br>*Swarming UI in DataMiner 10.5.3*
@@ -61,3 +64,5 @@ To do so, when you create or edit an element in DataMiner Cube, expand the *Adva
 By default, this checkbox is not selected for new and existing elements.
 
 If the checkbox is selected for an element and a user tries to swarm the element, this will result in the error message *Element is not allowed to swarm (blocked)*.
+
+If an element is not swarmable due to techincal restrictions (e.g. polling loopback address), the element will still not be swarmable, even if this setting is not checked and thus the element is not explicitly blocked from swarming by the user.
