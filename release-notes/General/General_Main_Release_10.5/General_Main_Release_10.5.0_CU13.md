@@ -173,6 +173,14 @@ When an alarm was updated while a hysteresis timer was scheduled, in some cases,
 
 In some rare cases, SLProtocol could stop working when multiple connections of the same element went into a timeout state simultaneously.
 
+#### SLLogCollector: Problem when process dumps were triggered in parallel [ID 44780]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, when SLLogCollector tried to trigger process dumps in parallel, in some cases, certain dumps would not be added to the package.
+
+From now on, in order to be able to include all dumps in the package, process dumps will no longer be triggered in parallel.
+
 #### STaaS: Retrieving the active alarms of an element would incorrectly be limited to 10,000 [ID 44793]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
