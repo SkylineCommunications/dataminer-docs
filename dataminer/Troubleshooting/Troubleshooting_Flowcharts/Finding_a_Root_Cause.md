@@ -4,7 +4,7 @@ uid: Finding_a_Root_Cause
 
 # Finding a root cause
 
-<div class="mermaid">
+```mermaid
 flowchart TD
     %% Define styles %%
     linkStyle default stroke:#cccccc
@@ -44,22 +44,11 @@ flowchart TD
     Which --- Services
     Which --- Trending
     Which --- WebApps
-    %% Define hyperlinks %%
-    click CHECK1 "#examples-of-critical-issues" "examples of critical issues"
-    click critical "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "To critical issues flowchart"
-    click DMAStartupIssues "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html" "DMA Startup Issues"
-    click ProcessFlowcharts "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html" "Process identification"
-    click Module "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Troubleshooting_Identify_Per_Module.html" "Identify per module"
-    click Trending "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Trending.html" "Trending"
-    click WebApps "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Webapps.html" "Web apps"
-    click Services "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Services.html" "Services"
-    click Alarms "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Alarms.html" "Alarms"
-    click Investigate "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
     %% Apply styles to blocks %%
     class START classTerminal;
     class Which,AlarmsServicesTrending,CheckStartup,CHECK1,identify classDecision;
     class Investigate,Cassandra,Elasticsearch,DMAStartupIssues,critical,ProcessFlowcharts,Module,Alarms,Trending,WebApps,Services classExternalRef;
-</div>
+```
 
 ## Examples of critical issues
 
