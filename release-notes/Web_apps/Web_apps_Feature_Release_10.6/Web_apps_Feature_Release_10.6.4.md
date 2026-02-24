@@ -62,6 +62,20 @@ The `ClientTimeZone` (`DMAAutomationScriptOptionClientTimeZone`) data type has t
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.4 or newer. See [Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]](xref:General_Feature_Release_10.6.4#automation-time-zone-of-the-client-can-now-be-passed-to-the-automation-script-that-is-executed-id-44742).
 
+#### Dashboards/Low-Code Apps - Node edge graph component: Node types [ID 44809]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When configuring a newly-added *Node edge graph* component, it is now possible to define three types of node:
+
+- Icon
+- Image
+- Template
+
+> [!NOTE]
+> Nodes of type *Template* do not support showing a tooltip or metric, as you can define that information in the template itself.
+> Also, nodes of type *Template* do not support configuring actions, as you can define actions on shapes in the template itself.
+
 ## Changes
 
 ### Enhancements
@@ -90,14 +104,6 @@ From now, when post filtering the *Get object manager instances* and *Get profil
 - ResourceID
 - ServiceDefinitionID
 - ServiceProfileInstanceID
-
-#### Dashboards/Low-Code Apps - Templates: Text in default template would not get replaced when the default template was selected [ID 44677]
-
-<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
-
-When, in the Browse templates window, you selected the default template of e.g., the Grid component, up to now, the text in that default template would incorrectly not get replaced by the text in the Grid component.
-
-From now on, the default template text will get replaced correctly.
 
 #### Low-Code Apps: 'HTTP 404' visual will now appear when you navigate to a non-existing app or an app you are not allowed to open [ID 44681]
 
@@ -236,6 +242,14 @@ From now on, when you change one of these settings, the other setting will no lo
 
 In both the template editor and the flow editor, the tabbed pane on the left would incorrectly shrink when the main editor area in the middle contained a large number of items.
 
+#### Dashboards/Low-Code Apps - Templates: Text in default template would not get replaced when the default template was selected [ID 44677]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When, in the Browse templates window, you selected the default template of e.g., the Grid component, up to now, the text in that default template would incorrectly not get replaced by the text in the Grid component.
+
+From now on, the default template text will get replaced correctly.
+
 #### Dashboards app: State components would be clipped in PDF reports when the 'Stack components' option was not selected [ID 44695]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
@@ -299,6 +313,12 @@ When the dashboard or low-code app was embedded by means of the URL argument `em
 
 - in a *Time range* component, it would incorrectly not be possible to pin quick picks, and
 - in a *Query filter* component, it would incorrectly not be possible to enable the *Alarm color mode* setting.
+
+#### Dashboards app: 'Shared dashboards' pane would incorrectly not be displayed in the sidebar [ID 44803]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some rare cases, the *Shared dashboards* pane would incorrectly not be displayed in the sidebar of the Dashboards app, even when dashboards had been shared.
 
 #### Low-Code Apps - Node edge graph component: Changing the interaction mode via an action would incorrectly change the default interaction mode [ID 44807]
 
