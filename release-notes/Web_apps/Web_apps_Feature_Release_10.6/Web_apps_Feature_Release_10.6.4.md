@@ -34,7 +34,16 @@ These buttons will let you navigate to a fixed location when clicked. Also, clic
 
 When an automation script is executed in a web app, it is now possible to pass the time zone of the client to that script.
 
-From now on, a `scriptOptions.ClientTimeZone` property can be passed to both the `ExecuteAutomationScript` and `ExecuteAutomationScriptWithOutput` web method.
+In the automation script, the time zone will be available on the `IEngine` input argument:
+
+`engine.ClientInfo.TimeZone`
+
+> [!NOTE]
+>
+> - If the script was executed from a source other than a web app, or if the time zone information could not be parsed, the `TimeZone` property can be null.
+> - In case a subscript is executed, the `ClientInfo` of the parent script will also be available in the subscript.
+
+Also, a `scriptOptions.ClientTimeZone` property can now be passed to both the `ExecuteAutomationScript` and `ExecuteAutomationScriptWithOutput` web methods.
 
 The `ClientTimeZone` (`DMAAutomationScriptOptionClientTimeZone`) data type has the following properties:
 
