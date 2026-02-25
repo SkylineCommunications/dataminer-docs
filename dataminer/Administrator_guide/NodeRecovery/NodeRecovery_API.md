@@ -26,6 +26,9 @@ When requested, the leader node will provide the global cluster state, which rep
 
 Send a [GlobalClusterStateRequest](xref:Skyline.DataMiner.Net.NodeRecovery.Requests.GlobalClusterStateRequest) message. The response will be a [GlobalClusterStateResponse](xref:Skyline.DataMiner.Net.NodeRecovery.Requests.GlobalClusterStateResponse) containing the global consensus view of all node states.
 
+> [!NOTE]
+> When the leader node is unreachable or when no leader is elected, this request will fail with an exception, as the global cluster state cannot be retrieved in these scenarios.
+
 ## Setting Maintenance Mode
 
 > [!NOTE]
