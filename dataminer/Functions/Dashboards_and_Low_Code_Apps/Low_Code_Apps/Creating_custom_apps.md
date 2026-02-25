@@ -14,6 +14,25 @@ To learn how to create a low-code app, you can follow the steps below or watch t
 
 *Watch first: [Creating your first dashboard](xref:Creating_a_completely_new_dashboard)*
 
+In this video, you will learn how to:
+
+- Create a new low-code app and define a custom name, icon, and color (see also: [Customizing the icon and color of an app](xref:LowCodeApps_Layout)).
+
+- Add multiple pages to your app and configure their name and icon to create a professional and intuitive layout (see also: [Configuring an app page](xref:LowCodeApps_page_config)).
+
+- Add and configure components, including a table, gauge, and line & area chart component (see also: [Configuring components](xref:Configuring_components)).
+
+In addition, the video also demonstrates more advanced capabilities, including how to:
+
+- Create a filtered query to retrieve a specific subset of data (see also: [Creating a GQI query](xref:Creating_GQI_query)).
+
+- Create a panel and define component actions so that the panel opens when an item in a table is double-clicked (see also: [Configuring app events](xref:LowCodeApps_event_config)).
+
+- Use component data to link components across pages, so that selecting or double-clicking an item in a table determines which data is shown in other components (see also: [Component data](xref:Component_Data)).
+
+> [!TIP]
+> If you are looking for a very beginner-friendly, step-by-step introduction that focuses purely on creating and publishing your first app, see [Tutorial: Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing).
+
 ## Prerequisites
 
 To view, add, edit, delete, or publish low-code applications, you need to have the following user permissions:
@@ -63,9 +82,6 @@ To view, add, edit, delete, or publish low-code applications, you need to have t
 
 > [!NOTE]
 > When you close a draft app you have been working on, it is saved automatically. As such, if you do not want to publish your app immediately, you can just close it to save it as a draft. However, draft apps are not shown by default on the landing page. To view them, enable the *Show drafts* toggle next to the search bar. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->,click the cogwheel button and activate *Show draft applications*.
-
-> [!TIP]
-> See also: [Tutorials - Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing)
 
 ## Duplicating an existing low-code app
 
