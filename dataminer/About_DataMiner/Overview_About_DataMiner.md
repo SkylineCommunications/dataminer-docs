@@ -7,7 +7,11 @@ description: DataMiner is a standard, widely adopted and endorsed, modular, open
 
 ## The operating system for complex operational ecosystems
 
-The DataMiner platform is an essential strategic foundation for any organization running mission-critical live services on complex technology stacks. It is the base layer that supports everything built above it, and the entry point into the intelligence era.
+The DataMiner platform is an **essential strategic foundation** for any organization with an intricate technology ecosystem. It is the base layer that supports everything built above it, and the entry point into the intelligence era.
+
+The DataMiner platform encompasses a comprehensive ecosystem, including on-premises components, the DataMiner cloud, our community resources, documentation, and tools such as [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio), among others.
+
+Summarized in as few words as possible, DataMiner is an [**xOps platform**](#dataminer-xops-platform). It is designed to convert a business into an Ops version of itself. Examples include [MediaOps](xref:MediaOps), [InfraOps](xref:InfraOps), etc.
 
 ## Your answer to today's unpredictable world
 
