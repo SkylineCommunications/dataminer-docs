@@ -332,6 +332,14 @@ When, in a low-code app, the interaction mode of a *Node edge graph* component w
 
 When a Node edge graph component with bidirectional configuration enabled for the edges received a real-time update, in some cases, the edges could get drawn incorrectly. For example, multiple edges could get drawn on top of each other, or have their arrows rendered at an incorrect location.
 
+#### Dashboards/Low-Code Apps - Maps component: The map would not update correctly when the query changed [ID 44817]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, a *Maps* component with two queries that were configured to be visible based on zoom level (i.e., when you zoomed in, query 1 would be hidden and query 2 would be shown), of which the first had a filter node that was linked to data fed by another component, would incorrectly show the filtered and unfiltered results of the first query when you zoomed in until the second query became visible, changed the filter, and zoomed out again.
+
+From now on, the component will only show the filtered results.
+
 #### Dashboards/Low-Code Apps - Node edge graph component: No tooltip would appear when hovering over an edge with a weight of 1 [ID 44818]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
