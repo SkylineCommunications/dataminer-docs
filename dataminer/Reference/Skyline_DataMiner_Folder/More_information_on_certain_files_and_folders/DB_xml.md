@@ -386,13 +386,13 @@ Example:
 
 If the offload database is an Oracle Database, then add a *RemoteFileShare* tag with the following attributes:
 
-- **path**: The UNC path to the shared folder (located on the database server) in which the DMAs will place the “offload” files.
+- **path**: The UNC path to the shared folder (located on the database server) in which the DMAs will place the “offload” files. Must end with a backslash.
 
 - **uid**: The username with which to connect to the shared folder on the database server.
 
 - **pwd**: The password with which to connect to the shared folder on the database server.
 
-- **localPath** The local path to the shared folder on the database server.
+- **localPath** The local path to the shared folder on the database server. Must end with a backslash.
 
 ### Offloading trend data even if no parameter values change
 
