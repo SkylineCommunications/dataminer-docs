@@ -63,7 +63,7 @@ The global state change script executes whenever the global cluster state change
 
 To enable, create a script called "NodeRecovery - Global State Change" (name can be changed in [Settings](xref:NodeRecovery_Settings#globalclusterstatechangescriptname)).
 
-The scripts that will be executed require a custom entry point of type [OnNodeRecoveryGlobalStateChange](xref:Skyline.DataMiner.Net.Automation.AutomationEntryPoint.Types.OnNodeRecoveryGlobalStateChange). This entry point method should have the `IEngine` object as its first argument, a [GlobalStateChangeInput](xref:Skyline.DataMiner.Net.NodeRecovery.GlobalStateChangeInput) object as its second argument, and an instance of [GlobalStateChangeOutput](xref:Skyline.DataMiner.Net.NodeRecovery.GlobalStateChangeOutput) as output.
+The scripts that will be executed require a custom entry point of type [OnNodeRecoveryGlobalStateChange](xref:Skyline.DataMiner.Net.Automation.AutomationEntryPoint.Types.OnNodeRecoveryGlobalStateChange). This entry point method should have the [IEngine](xref:Skyline.DataMiner.Automation.IEngine) object as its first argument, a [GlobalStateChangeInput](xref:Skyline.DataMiner.Net.NodeRecovery.GlobalStateChangeInput) object as its second argument, and an instance of [GlobalStateChangeOutput](xref:Skyline.DataMiner.Net.NodeRecovery.GlobalStateChangeOutput) as output.
 
 The input provided to the script contains information about the global cluster state as calculated by the leader node. It includes the consensus view of all node states across the cluster.
 
