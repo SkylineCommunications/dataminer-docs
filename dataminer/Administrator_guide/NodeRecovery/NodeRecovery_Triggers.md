@@ -11,7 +11,7 @@ On node changes, DataMiner NodeRecovery can launch an automation script. The scr
 The local state change script executes whenever the local node detects one or more state changes for nodes in the cluster.
 
 > [!NOTE]
-> This *Local State Change* script will execute on any of the nodes that have an updated state view of the cluster or when any of the nodes change [maintenance state](xref:NodeRecovery_States#maintenance). If one node goes down, each other agent in the cluster will have the script executed. Your script should be able to deal with this. Also see [pitfalls](#pitfalls-for-local-state-changes) and [global state changes](xref:NodeRecovery_Triggers#global-state-change).
+> This *Local State Change* script will execute on any of the nodes that have an updated state view of the cluster or when any of the nodes change [maintenance state](xref:NodeRecovery_States#maintenance). If one node goes down, each other agent in the cluster will have the script executed. Your script should be able to deal with this. Also see [pitfalls](#pitfalls-for-local-state-changes).
 
 To enable, create a script called "NodeRecovery - Local State Change" (name can be changed in [Settings](xref:NodeRecovery_Settings#localclusterstatechangescriptname)).
 

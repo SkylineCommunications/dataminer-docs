@@ -8,7 +8,7 @@ uid: NodeRecovery_Detection
 
 NodeRecovery can detect **full server outages**, where machines cannot reach each other over the network. These scenarios include power or network cuts.
 
-> [!NOTE]
+> [!IMPORTANT]
 > In its current version, NodeRecovery will not trigger/detect scenarios where a server is still running but the DataMiner software is either not running, blocked, or unable to start up.
 
 ## Outage detection
