@@ -111,5 +111,13 @@ namespace Skyline.DataMiner.Automation
         /// <param name="input">Information about the currently observed node states and on what changed</param>
         /// <returns>a <see cref="LocalStateChangeOutput"/> instance</returns>
         public delegate LocalStateChangeOutput OnNodeRecoveryLocalStateChange(IEngine engine, LocalStateChangeInput input);
+
+        /// <summary>
+        /// Node Recovery global state change delegate type.
+        /// </summary>
+        /// <param name="engine">The <see cref="IEngine"/> instance.</param>
+        /// <param name="input">Information about the currently observed global node states and on what changed</param>
+        /// <returns>a <see cref="GlobalStateChangeOutput"/> instance</returns>
+        public delegate GlobalStateChangeOutput OnNodeRecoveryGlobalStateChange(IEngine engine, GlobalStateChangeInput input);
 	}
 }
