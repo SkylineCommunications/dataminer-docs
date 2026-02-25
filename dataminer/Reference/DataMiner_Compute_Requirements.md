@@ -65,6 +65,7 @@ For all supported DataMiner versions, we support all Windows versions that Micro
 ### Time
 
 If there is more than one DataMiner Agent in your cluster, the time in the cluster must be synchronized (NTP).
+Additionally, all DataMiner Agents in the cluster should be configured to use the same timezone the same.
 
 ### Microsoft .NET
 
