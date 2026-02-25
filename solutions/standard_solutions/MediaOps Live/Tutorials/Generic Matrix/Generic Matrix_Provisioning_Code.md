@@ -90,13 +90,13 @@ This method should be called from the `Run` or `RunSafe` method of your script.
 
 ```csharp
 
-private void ProvisionSources(IEngine engine, Element element, MediaOpsLiveApi api)
+private void ProvisionSources(IEngine engine, Element element, IEngineMediaOpsLiveApi api)
 {
     var elementId = new DmsElementId(element.DmaId, element.ElementId);
 
     // Get the video level and SDI transport type. They will assigned to the endpoints and virtual signal groups.
-    var videoLevel = api.Levels.Read("Video");
-    var sdiTransportType = api.TransportTypes.Read("SDI");
+    var videoLevel = api.Levels.ReadSingle("Video");
+    var sdiTransportType = api.TransportTypes.ReadSingle("SDI");
 
     // Get existing endpoints and virtual signal groups for the element.
     var existingEndpoints = api.Endpoints.Query()
@@ -159,12 +159,12 @@ This method should be called from the `Run` or `RunSafe` method of your script.
 
 ```csharp
 
-private void ProvisionDestinations(IEngine engine, Element element, MediaOpsLiveApi api)
+private void ProvisionDestinations(IEngine engine, Element element, IEngineMediaOpsLiveApi api)
 {
     var elementId = new DmsElementId(element.DmaId, element.ElementId);
 
-    var videoLevel = api.Levels.Read("Video");
-    var sdiTransportType = api.TransportTypes.Read("SDI");
+    var videoLevel = api.Levels.ReadSingle("Video");
+    var sdiTransportType = api.TransportTypes.ReadSingle("SDI");
 
     var existingEndpoints = api.Endpoints.Query()
         .Where(x => x.Role == Role.Destination && x.Element == elementId)
