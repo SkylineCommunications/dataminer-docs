@@ -80,13 +80,16 @@ When configuring a newly-added *Node edge graph* component, it is now possible t
 
 ### Enhancements
 
-#### Dashboards app: 'HTTP 404' page replaced by an embedded visual [ID 44569]
+#### Dashboards app: 'HTTP 404' page replaced by an embedded visual [ID 44569] [ID 44808]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 From now on, when you try to open an invalid dashboard or dashboard folder, you wil no longer be redirected to a separate "HTTP 404" page. Instead, a visual will now appear inside the Dashboards app.
 
 Clicking the *Go to overview* button in that visual will redirect you to either the closest valid parent folder or the root folder.
+
+> [!NOTE]
+> In embedded dashboards, the *Go to overview* button will not be visible.
 
 #### GQI DxM: 'Get object manager instances' and 'Get profile instances' data sources now support post filtering on Guid columns [ID 44672]
 
@@ -105,13 +108,16 @@ From now, when post filtering the *Get object manager instances* and *Get profil
 - ServiceDefinitionID
 - ServiceProfileInstanceID
 
-#### Low-Code Apps: 'HTTP 404' visual will now appear when you navigate to a non-existing app or an app you are not allowed to open [ID 44681]
+#### Low-Code Apps: 'HTTP 404' visual will now appear when you navigate to a non-existing app or an app you are not allowed to open [ID 44681] [ID 44808]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 From now on, when you navigate to a non-existing app or an app you are not allowed to open, an "HTTP 404" visual will now appear.
 
 Clicking the *Go to home* button in that visual will redirect you to the root page.
+
+> [!NOTE]
+> In embedded low-code apps, the *Go to home* button will not be visible.
 
 #### Dashboards/Low-Code Apps: Updated side panel sections [ID 44687]
 
