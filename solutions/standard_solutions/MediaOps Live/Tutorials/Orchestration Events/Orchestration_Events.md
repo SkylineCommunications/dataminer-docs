@@ -56,8 +56,8 @@ Add the following NuGet packages to your project:
 Now you can add the following using statements to your script:
 
 ```csharp
-using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.API;
-using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation;
+using Skyline.DataMiner.Solutions.MediaOps.Live.API;
+using Skyline.DataMiner.Solutions.MediaOps.Live.Automation;
 ```
 
 First, you need to get an instance of the MediaOps Live API in your script.

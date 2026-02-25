@@ -53,9 +53,9 @@ Now you can add the following using statements to your script:
 ```csharp
 using System.Collections.Generic;
 using Skyline.DataMiner.Automation;
-using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.API.Objects.Orchestration;
-using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation.Orchestration.Script;
-using Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation.Orchestration.Script.Objects;
+using Skyline.DataMiner.Solutions.MediaOps.Live.API.Objects.Orchestration;
+using Skyline.DataMiner.Solutions.MediaOps.Live.Automation.Orchestration.Script;
+using Skyline.DataMiner.Solutions.MediaOps.Live.Automation.Orchestration.Script.Objects;
 ```
 
 ## Step 3: Inherit from the OrchestrationScript base class
