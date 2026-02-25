@@ -20,8 +20,8 @@ The tutorial consists of the following steps:
 
 - [Step 1: Create a staging DataMiner System in the cloud](#step-1-create-a-staging-dataminer-system-in-the-cloud)
 - [Step 2: Install the DataMiner Cube desktop application](#step-2-install-the-dataminer-cube-desktop-application)
-- [Step 3: Deploy the 'Generic HTTP Query' protocol from the Catalog](#step-3-deploy-the-generic-http-query-protocol-from-the-catalog)
-- [Step 4: Access your newly created DaaS system for the first time](#step-4-access-your-newly-created-daas-system-for-the-first-time)
+- [Step 3: Access your newly created DaaS system for the first time](#step-3-access-your-newly-created-daas-system-for-the-first-time)
+- [Step 4: Deploy the 'Generic HTTP Query' protocol from the Catalog](#step-4-deploy-the-generic-http-query-protocol-from-the-catalog)
 - [Step 5: Create an element to monitor a website of your choice](#step-5-create-an-element-to-monitor-a-website-of-your-choice)
 - [Step 6: Create an alarm template for your element](#step-6-create-an-alarm-template-for-your-element)
 - [Step 7: Hide the unnecessary table columns (optional)](#step-7-hide-the-unnecessary-table-columns-optional)
@@ -56,22 +56,7 @@ To access and interact with your new DataMiner System, install DataMiner Cube, t
 
 1. Click *Install*.
 
-## Step 3: Deploy the 'Generic HTTP Query' protocol from the Catalog
-
-Now that you have set up your staging DataMiner System and installed DataMiner Cube, add the *Generic HTTP Query* protocol (also known as connector), through which your element will communicate with your DMA.
-
-1. Look up the [*Generic HTTP Query* connector](https://catalog.dataminer.services/details/d29994e3-f2a6-4da4-972f-21cbb7b1cd62) in the Catalog.
-
-1. Click the *Deploy* button.
-
-1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
-
-   ![Deploy Generic HTTP Query connector](~/dataminer/images/Generic_HTTP_Query_Connector.png)
-
-   > [!TIP]
-   > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
-
-## Step 4: Access your newly created DaaS system for the first time
+## Step 3: Access your newly created DaaS system for the first time
 
 Access your new DaaS system.
 
@@ -87,6 +72,21 @@ Access your new DaaS system.
 
 > [!TIP]
 > See also: [Accessing a newly created DMS for the first time](xref:Accessing_a_new_DMS)
+
+## Step 4: Deploy the 'Generic HTTP Query' protocol from the Catalog
+
+Now that you have set up your staging DataMiner System and have connected to the system, let's deploy the *Generic HTTP Query* protocol (also known as connector), this will allow you to create an element to monitor a website of your choice.
+
+1. Look up the [*Generic HTTP Query* connector](https://catalog.dataminer.services/details/d29994e3-f2a6-4da4-972f-21cbb7b1cd62) in the Catalog.
+
+1. Click the *Deploy* button.
+
+1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
+
+   ![Deploy Generic HTTP Query connector](~/dataminer/images/Generic_HTTP_Query_Connector.png)
+
+   > [!TIP]
+   > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
 
 ## Step 5: Create an element to monitor a website of your choice
 
