@@ -34,6 +34,13 @@ Depending on the type of database, the procedure is slightly different.
 
 1. Create and configure the user account that will be used by the different DMAs to connect to the offload database:
 
+   > [!NOTE]
+   >
+   > - The user accounts should at least be granted the following rights:
+   >   - SELECT
+   >   - INSERT
+   > - Make sure the user account has access to the database server from the DMA, so that it can reach the offload database.
+
    - MySQL remote user:
 
      1. Open the user account manager.
@@ -50,10 +57,10 @@ Depending on the type of database, the procedure is slightly different.
 
      1. Configure the user in the *Login - New* window and click *OK*.
 
-   - Oracle: use the Oracle Apex web interface to create a user (e.g., `DATAMINER`) and set up a workspace.
+   - Oracle: use the Oracle Apex web interface or [Oracle SQL Developer](https://www.oracle.com/europe/database/sqldeveloper/) to create a user (e.g., `DATAMINER`) and set up a workspace.
 
      > [!NOTE]
-     > Make sure the oracle use has the following permissions:
+     > Make sure the Oracle uses has the following permissions:
      >
      > ```sql
      > -- Allow the user to connect
@@ -67,13 +74,6 @@ Depending on the type of database, the procedure is slightly different.
      > -- Allow the user to access the shares
      > GRANT CREATE ANY DIRECTORY TO DATAMINER;
      > ```
-
-   > [!NOTE]
-   >
-   > - The user accounts should at least be granted the following rights:
-   >   - SELECT
-   >   - INSERT
-   > - Make sure the user account has access to the database server from the DMA, so that it can reach the offload database.
 
 1. Create a database (e.g., named "sldmsdb") and tables:
 
