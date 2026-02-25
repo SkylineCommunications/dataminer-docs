@@ -4,8 +4,23 @@ uid: Creating_custom_apps
 
 # Creating apps
 
-> [!NOTE]
-> To view, add, edit, delete, or publish low-code applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission.
+To learn how to create a low-code app, you can follow the steps below or watch this short video:
+
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/dataminer/images/Creating_a_low-code_app.mp4" type="video/mp4">
+  </video>
+</div>
+
+*Watch first: [Creating your first dashboard](xref:Creating_a_completely_new_dashboard)*
+
+## Prerequisites
+
+To view, add, edit, delete, or publish low-code applications, you need to have the following user permissions:
+
+- [*Modules* > *User-definable apps*](xref:DataMiner_user_permissions#modules--user-definable-apps)
+
+- [*General* > *DataMiner web apps*](xref:DataMiner_user_permissions#general--dataminer-web-apps)
 
 ## Creating a new low-code app
 
