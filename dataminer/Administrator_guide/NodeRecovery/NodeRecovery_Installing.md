@@ -20,6 +20,8 @@ uid: NodeRecovery_Installing
 
 ## Further configuration
 
-On [Swarming](xref:Swarming)-enabled systems, the DxM will start monitoring the cluster for outages right away. No further actions will happen unless you configure a [trigger script](xref:NodeRecovery_Triggers).
+On [Swarming](xref:Swarming)-enabled systems, the DxM will start monitoring the cluster for outages right away.
 
-The [Catalog](https://catalog.dataminer.services/) contains an example script which can be used to rebalance swarmable elements to healthy nodes when an outage is detected. You can use this as a starting point for your own scripts or as inspiration for your own custom logic.
+No further actions will happen unless you configure a [trigger script](xref:NodeRecovery_Triggers).
+
+One such example Global State Change script is available here: [Catalog: NodeRecovery - Global State Change](https://catalog.dataminer.services/details/3de8405e-7156-4a0a-b8c5-80937de0f4ed). Once deployed, this script will execute a simple rebalancing algorithm whenever the global cluster state changes. Elements hosted on nodes that are in outage will be moved to healthy nodes, while trying to keep the load balanced across the cluster as much as possible. This script can be used as a starting point for your own scripts or can be used as is if it fits your needs.
