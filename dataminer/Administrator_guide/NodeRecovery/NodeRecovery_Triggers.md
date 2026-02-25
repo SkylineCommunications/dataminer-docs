@@ -15,7 +15,7 @@ The local state change script executes whenever the local node detects one or mo
 
 To enable, create a script called "NodeRecovery - Local State Change" (name can be changed in [Settings](xref:NodeRecovery_Settings#localclusterstatechangescriptname)).
 
-The scripts that will be executed require a custom entry point of type [OnNodeRecoveryLocalStateChange](xref:Skyline.DataMiner.Net.Automation.AutomationEntryPoint.Types.OnNodeRecoveryLocalStateChange). This entry point method should have the `IEngine` object as its first argument, a [LocalStateChangeInput](xref:Skyline.DataMiner.Net.NodeRecovery.LocalStateChangeInput) object as its second argument, and an instance of [LocalStateChangeOutput](xref:Skyline.DataMiner.Net.NodeRecovery.LocalStateChangeOutput) as output.
+The scripts that will be executed require a custom entry point of type [OnNodeRecoveryLocalStateChange](xref:Skyline.DataMiner.Net.Automation.AutomationEntryPoint.Types.OnNodeRecoveryLocalStateChange). This entry point method should have the [IEngine](xref:Skyline.DataMiner.Automation.IEngine) object as its first argument, a [LocalStateChangeInput](xref:Skyline.DataMiner.Net.NodeRecovery.LocalStateChangeInput) object as its second argument, and an instance of [LocalStateChangeOutput](xref:Skyline.DataMiner.Net.NodeRecovery.LocalStateChangeOutput) as output.
 
 The input provided to the script contains information on the current node as well as the observed states for all nodes in the cluster. It also contains details on what actually changed compared to before.
 
