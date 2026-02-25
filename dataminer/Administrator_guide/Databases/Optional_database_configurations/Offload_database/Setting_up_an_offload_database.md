@@ -50,7 +50,23 @@ Depending on the type of database, the procedure is slightly different.
 
      1. Configure the user in the *Login - New* window and click *OK*.
 
-   - Oracle: use the Oracle Apex web interface to create a user and set up a workspace.
+   - Oracle: use the Oracle Apex web interface to create a user (e.g., `DATAMINER`) and set up a workspace.
+
+     > [!NOTE]
+     > Make sure the oracle use has the following permissions:
+     >
+     > ```sql
+     > -- Allow the user to connect
+     > GRANT CREATE SESSION TO DATAMINER;
+     >
+     > -- Allow the user to create the tables
+     > GRANT CREATE TABLE TO DATAMINER;
+     > GRANT CREATE SEQUENCE TO DATAMINER;
+     > GRANT CREATE TRIGGER TO DATAMINER;
+     >
+     > -- Allow the user to access the shares
+     > GRANT CREATE ANY DIRECTORY TO DATAMINER;
+     > ```
 
    > [!NOTE]
    >
@@ -98,12 +114,6 @@ Depending on the type of database, the procedure is slightly different.
     1. On the database server, create a shared folder and give it an appropriate name (e.g., "DataMinerOffload").
 
     1. Grant the "DataMinerOffload" user from the step above read/write access to the shared folder and make sure that the Oracle service also has read access to this folder. To know which user Oracle runs under, check the "Log On As" column in the Windows Services application for the Oracle service. This is typically a user named "OracleServiceXE" or similar.
-
-    1. Also grant the following permission to the database user:
-
-   ```txt
-   GRANT CREATE ANY DIRECTORY TO [user]
-   ```
 
 ## Allowing ports on Windows Firewall
 
