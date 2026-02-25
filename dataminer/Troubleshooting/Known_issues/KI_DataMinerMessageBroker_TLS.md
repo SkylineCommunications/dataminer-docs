@@ -28,7 +28,7 @@ Keep in mind that without the BrokerGateway update, this workaround may break ag
 
 ## Fix
 
-Install DataMiner 10.5.0 [CU11]/10.6.0.<!--RN 44195-->
+Install DataMiner 10.5.0 [CU11]/10.5.12 [CU2]/10.6.0.<!--RN 44195-->
 
 ## Description
 
