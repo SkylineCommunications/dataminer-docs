@@ -7469,6 +7469,57 @@ items:
           topicUid: Viewing_test_results
     - name: Definition of Done (DoD) Platform
       topicUid: About_DoD
+    - name: QAOps
+      topicUid: QAOps
+      items:
+      - name: QAOps main UI
+        topicUid: QAOps_Main_UI
+      - name: QAOps configuration
+        topicUid: QAOps_Configuration
+      - name: QAOps test suite
+        topicUid: QAOps_Test_Suite
+      - name: QAOps test package
+        topicUid: QAOps_Test_Package
+      - name: QAOps test run
+        topicUid: QAOps_Test_Run
+      - name: QAOps test result
+        topicUid: QAOps_Test_Result
+      - name: QAOps tool
+        topicUid: QAOps_Tool
+      - name: QAOps tutorials
+        items:
+        - name: Operator tutorials
+          items:
+          - name: How to create a new configuration
+            topicUid: QAOps_Tutorials_Operator_Tutorials_Creating_Configurations
+          - name: How to create a new test suite
+            topicUid: QAOps_Tutorials_Operator_Tutorials_Creating_Test_Suites
+          - name: How to manage server provisioning
+            topicUid: QAOps_Tutorials_Operator_Tutorials_Managing_Provisioning
+          - name: How to avoid unnecessary costs as an operator
+            topicUid: QAOps_Tutorials_Operator_Tutorials_Avoiding_Unnecessary_Costs
+        - name: User tutorials
+          items:
+          - name: Basic
+            items:
+            - name: What is QAOps
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_What_Is_QAOps
+            - name: How to trigger a test run
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_How_To_Trigger_A_Test_Run
+            - name: How to view test results
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results
+            - name: How to avoid unnecessary costs as a user
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_Avoiding_Unnecessary_Costs
+          - name: Advanced
+            items:
+            - name: How to create a test package
+              topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
+            - name: How to start debugging a failed test
+              topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Debugging_Failed_Tests
+            - name: How to wait on test results in pipelines
+              topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Pipelines_Wait_On_Results
+            - name: How to trigger a test run with an unreleased package
+              topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Trigger_Test_Run_With_Unreleased_Test_Package
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:

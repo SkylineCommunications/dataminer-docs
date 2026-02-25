@@ -19,11 +19,15 @@ Creating a DataMiner test package is very similar to creating a [DataMiner insta
 
 The test package project type is included in the [Skyline DataMiner Software Development Kit (SDK)](skyline_dataminer_sdk). It is available as *DataMiner Test Package Project* in the Visual Studio templates that are installed with [DIS](Overall_concept_of_the_DataMiner_Integration_Studio).
 
+![Create a new QAOps test project in Visual Studio](../../../images/QAOps_Create_New_Test_Project.png)
+
 The project has the same basic behavior as an installation package project:
 
 - When you compile a C# DataMiner test package project, it produces a `.dmtest` file in the `bin` folder.
 
 - When you publish the project, it publishes the version configured in the `.csproj` file to the DataMiner Catalog.
+
+![Publish QAOps test package to the DataMiner Catalog from Visual Studio](../../../images/QAOps_VisualStudio_PublishPackageToCatalog.png)
 
 All functionality supported by a [DataMiner installation package (`.dmapp`)](skyline_dataminer_sdk_dataminer_package_project) is supported and extended with test-specific functionality in the `TestPackageContent` directory.
 
@@ -44,6 +48,8 @@ TestPackageContent/
 ├── Dependencies/             # Optional: static dependencies in repository
 └── qaops.config.xml          # Optional: configuration file
 ```
+
+![QAOps Visual Studio test project directory structure](../../../images/QAOps_VisualStudio_TestProject_DirectoryStructure.png)
 
 Required components:
 
@@ -157,6 +163,8 @@ param (
 # TODO: Add your test logic here
 # Use $PathToTestPackageContent to access test files and dependencies
 ```
+
+![QAOps test package pipeline PowerShell example](../../../images/QAOps_TestPackagePipelinePowershellExample.png)
 
 #### Example pipeline structure
 

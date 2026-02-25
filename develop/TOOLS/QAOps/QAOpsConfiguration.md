@@ -4,14 +4,12 @@ uid: QAOps_Configuration
 
 # QAOps configuration
 
----
-uid: QAOps_Configuration
----
-
 > [!IMPORTANT]
 > This section contains information intended only for Skyline employees.
 
 One or more QAOps configurations should be created for your project. Each configuration represents ownership of all testing activities for the project.
+
+![QAOps configuration](../../../images/QAOps_Configuration.png)
 
 A configuration can include multiple [test suites](QAOps_Test_Suite).
 
@@ -68,4 +66,5 @@ There are also several options for configuring provisioning, which determine how
 
 1. **Min total targets:** The total number of active servers a configuration with *Pre-deployed pool* provisioning will try to keep available. This setting is ignored for other provisioning types.
 
-
+> [!IMPORTANT]
+> In the Operator Low-Code App, remember to click the *Update* button in the table when you have finished making changes.
