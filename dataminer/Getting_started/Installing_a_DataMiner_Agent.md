@@ -5,21 +5,17 @@ description: Use the DataMiner Installer and then upgrade to the latest feature 
 
 # Installing a self-managed DataMiner Agent
 
-If you want to take care of hosting and managing your DataMiner System yourself, you can manually install the DataMiner Agents instead of [creating the DMS in the cloud](xref:Creating_a_DMS_in_the_cloud).
+If you want to take care of hosting and managing your DataMiner System yourself, there are two ways you can install the DataMiner Agents:
 
-> [!IMPORTANT]
->
-> - The server onto which you plan to install the DataMiner Agent software has to comply with the DataMiner system requirements. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
-> - Avoid using duplicates of existing VMs to install a new DataMiner machine. Using cloned VMs can cause certain configurations from the previous DataMiner machine to linger and cause conflicts in the system.
+- [Using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
+- [Deploying a virtual hard disk with DataMiner pre-installed](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk).
 
-To manually install a DataMiner Agent, you can either use the [DataMiner Installer](xref:Installing_DM_using_the_DM_installer) or use a [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk).
+The table below outlines the main differences between these installation methods.
 
-If you have experience with virtualization and would like to have DataMiner in a virtualized environment, use the virtual hard disk option. In case you want to install DataMiner on a server, use the DataMiner Installer.
+| [DataMiner Installer](xref:Installing_DM_using_the_DM_installer) | [Pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) |
+| -- | -- |
+| Allows installation on an existing machine. | Requires a new VM. |
+| Storage options:<br>- [StaaS](xref:STaaS) (recommended)<br>- Self-managed storage with [dedicated clustered storage setup](xref:Configuring_dedicated_clustered_storage) (requires expert knowledge) | Storage options:<br>- [StaaS](xref:STaaS) (recommended)<br>- Self-managed storage with [dedicated clustered storage setup](xref:Configuring_dedicated_clustered_storage) (requires expert knowledge)<br>- Self-managed storage deployed on the same Windows machine (for small-scale setups only) |
 
-<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
-  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-    <b>💡 TIPS TO TAKE FLIGHT</b><br>
-    Want to see the DataMiner Installer in action? Watch <a href="xref:Installing_DM_using_the_DM_installer" style="color: #657AB7;">this short video</a> on how to install a self-managed DataMiner System using the Installer.
-  </div>
-  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
-</div>
+> [!NOTE]
+> By default, a DataMiner System is deployed with a **Community Edition license**. For information on pricing and limitations for this license, see [DataMiner Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition).

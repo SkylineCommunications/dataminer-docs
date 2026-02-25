@@ -5,17 +5,11 @@ description: Download a virtual hard disk with DataMiner pre-installed and get s
 
 # Using a pre-installed DataMiner Virtual Hard Disk
 
-You can [download a virtual hard disk](https://community.dataminer.services/dataminer-virtual-hard-disk/) with DataMiner pre-installed to immediately get started. The virtual hard disk is available in **VHD**, **VHDX**, and **VMDK** format. The pre-installed DataMiner VM is [hardened](xref:DataMiner_hardening_guide) out of the box for improved security.
+You can [download a virtual hard disk](https://community.dataminer.services/dataminer-virtual-hard-disk/) with DataMiner pre-installed to immediately get started on a **new VM**. The virtual hard disk is available in **VHDX** and **VMDK** format. The pre-installed DataMiner VM is [hardened](xref:DataMiner_hardening_guide) out of the box for improved security.
 
-When you configure this setup, you will be able to choose between different data storage setups:
+Note that if you want a quick DataMiner installation for a small-scale setup (for example, for development, or for a minimal deployment where STaaS is not an option), the pre-installed DataMiner Virtual Hard Disk allows a third option for storage, aside from the recommended [STaaS](xref:STaaS) setup or [self-managed dedicated clustered storage](xref:Configuring_dedicated_clustered_storage), that is not available with the [regular installer](xref:Installing_DM_using_the_DM_installer): **self-hosted storage** where both Cassandra and OpenSearch run **locally** on Windows Subsystem for Linux (WSL).
 
-- [STaaS](xref:STaaS), i.e., the recommended setup.
-
-- [Self-managed dedicated clustered storage](xref:Configuring_dedicated_clustered_storage): A setup where you host and manage the Cassandra and OpenSearch clusters required by DataMiner yourself on dedicated servers (not recommended). If you choose this setup, you will need to make sure these database clusters are fully installed before you run the procedures below, so that DataMiner will be able to connect to them.
-
-- A **small-scale setup** where both Cassandra and OpenSearch run **locally** on Windows Subsystem for Linux (WSL). Such a setup should only be used for **single-Agent environments**, and this will also require additional resources on the local machine. These setups can be used for development or for minimal deployments where STaaS is not an option. To convert such a setup to a staging or production setup, you will need to either migrate to [Storage as a Service (STaaS)](xref:STaaS) or switch to using Cassandra and OpenSearch clusters on separate servers (not recommended), and then [decommission WSL](xref:Decommissioning_WSL).
-
-Once you have downloaded the [pre-installed virtual hard disk](https://community.dataminer.services/dataminer-virtual-hard-disk/) from DataMiner Dojo, you will need to follow the steps below to use it:
+To use the pre-installed DataMiner Virtual Hard Disk, you will need to follow the steps below:
 
 1. [Create the VM](#creating-the-vm).
 1. [Connect and start the VM](#connecting-and-starting-the-vm).
@@ -26,9 +20,14 @@ Once you have downloaded the [pre-installed virtual hard disk](https://community
 > - If you are not familiar with virtualization, we suggest [installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer) instead.
 > - The **VMDK** hard disk is compatible with desktop hypervisors such as VMWare Workstation. If you use the hard disk in a VMware vSphere ESXi environment, an error mentioning *Unsupported and/or invalid disk type* can be shown. For information on how to resolve this issue, refer to [A virtual machine fails to power on with the error: Unsupported and/or invalid disk type](https://knowledge.broadcom.com/external/article/310567/a-virtual-machine-fails-to-power-on-with.html).
 
+> [!IMPORTANT]
+> Avoid using duplicates of existing VMs to install a new DataMiner machine. Using cloned VMs can cause certain configurations from the previous DataMiner machine to linger and cause conflicts in the system.
+
 ## Creating the VM
 
 When you have downloaded the virtual hard disk, you can start to create a VM in your chosen virtualization environment. Below you can find the steps to follow in Hyper-V:
+
+1. Download the [virtual hard disk of your choice](https://community.dataminer.services/dataminer-virtual-hard-disk/) from DataMiner Dojo. In most cases, this will be the **VHDX** version.
 
 1. Start creating your VM by following [the official Hyper-V guide](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v).
 
@@ -104,7 +103,9 @@ Follow the steps below to configure your DataMiner Agent:
    - *Self-hosted - Local storage*: A clustered storage setup where both Cassandra and OpenSearch run locally on WSL. In this case, you will need to confirm that you have enabled nesting virtualization, as detailed above under [Creating the VM](#creating-the-vm).
 
      > [!IMPORTANT]
-     > This option should only be used for **small-scale setups**, for development or for minimal deployments where STaaS is not an option. If you choose this option, make sure the necessary resources will be available for the WSL storage container. See [Creating the VM](#creating-the-vm).
+     > This option should only be used for **small-scale setups**, for development, or for minimal deployments where STaaS is not an option. If you choose this option, make sure the necessary resources will be available for the WSL storage container. See [Creating the VM](#creating-the-vm).
+     >
+     > If at some point you want to convert this setup to a larger-scale setup, you will need to either migrate to [Storage as a Service (STaaS)](xref:STaaS) or switch to using Cassandra and OpenSearch clusters on separate servers (not recommended), and then [decommission WSL](xref:Decommissioning_WSL).
 
    ![Storage options](~/dataminer/images/Storage_options.png)
 
