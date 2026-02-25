@@ -16,7 +16,7 @@ uid: NodeRecovery_Installing
 - Install the *DataMiner NodeRecovery* DxM on all the agents in the cluster.
 
 > [!NOTE]
-> Do not configure [trigger scripts](xref:NodeRecovery_Triggers) before installing the DxM on all nodes. Outages will be detected right away for nodes that to not have the DxM installed yet, which can lead to unintended consequences if you have scripts that trigger on these detections.
+> Do not configure [trigger scripts](xref:NodeRecovery_Triggers) before installing the DxM on all nodes. If installing takes over 30 minutes in total, earlier installed nodes might start generating outages for nodes that do not have the DxM installed yet, which can lead to unintended consequences if you have scripts that trigger on these detections.
 
 ## Further configuration
 
