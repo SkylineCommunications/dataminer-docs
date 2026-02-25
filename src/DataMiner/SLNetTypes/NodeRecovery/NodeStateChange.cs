@@ -8,7 +8,14 @@ namespace Skyline.DataMiner.Net.NodeRecovery
     [Serializable]
     public class NodeStateChange
     {
+        /// <summary>
+        /// Previous known state for the node
+        /// </summary>
         public NodeState PreviousState { get; set; }
+
+        /// <summary>
+        /// New known state for the node
+        /// </summary>
         public NodeState CurrentState { get; set; }
     }
 }
