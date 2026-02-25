@@ -86,14 +86,20 @@ Depending on the type of database, the procedure is slightly different.
 
      1. From the `C:\Skyline DataMiner\Tools` directory, run the following script to create the tables: *CentralTableDefSQLServer.sql*.
 
-   - For an Oracle database, run the following table creation script found in the `C:\Skyline DataMiner\Tools` directory: *CentralTabledefOracle.sql*.
+   - For an Oracle database, log in as the database user and run the following table creation script found in the `C:\Skyline DataMiner\Tools` directory: *CentralTabledefOracle.sql*.
 
    > [!TIP]
    > See also: [Automatic creation and verification of the offload database](#automatic-creation-and-verification-of-the-offload-database)
 
-1. For an Oracle Database, create a shared folder on the database server and give it an appropriate name (e.g., "DataMinerOffload").
+1. For an Oracle Database:
 
-   Also grant the following permission to the database user:
+    1. On the database server, create a new local user to use when uploading offload files (e.g., "DataMinerOffload"). This can be done from *Computer Management \> Local Users and Groups \> Users*.
+
+    1. On the database server, create a shared folder and give it an appropriate name (e.g., "DataMinerOffload").
+
+    1. Grant the "DataMinerOffload" user from the step above read/write access to the shared folder and make sure that the Oracle service also has read access to this folder. To know which user Oracle runs under, check the "Log On As" column in the Windows Services application for the Oracle service. This is typically a user named "OracleServiceXE" or similar.
+
+    1. Also grant the following permission to the database user:
 
    ```txt
    GRANT CREATE ANY DIRECTORY TO [user]
@@ -201,7 +207,10 @@ The final step is the configuration of the DMS.
       - **Password**: The password corresponding with the user account.
 
       > [!NOTE]
-      > For Oracle, check the file *tnsnames.ora* to see the configuration of XE. If the file has an XE description, in the *DB Server* field, fill in *XE*, otherwise fill in the information from the ora file, e.g., *(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = XX.XX.XX.X)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE)))*. Aside from that, you only need to fill in the *User* and *Password* fields with the Oracle database username and password. Alternatively, you can also use a connection string, e.g., *Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=hostaddress)(PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=XE)));User Id=user;Password= password*.
+      > For Oracle, check the file *tnsnames.ora* on the database server to see the configuration of XE. You can locate the file by searching for it using `dir tnsnames.ora /s` from the root folder. Ignore sample files. Fill in the information from the ora file, e.g., `(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = XX.XX.XX.X)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE)))`. Aside from that, you only need to fill in the *User* and *Password* fields with the Oracle database username and password. Alternatively, you can also use a connection string, e.g., `Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=hostaddress)(PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=XE)));User Id=user;Password= password`.
+
+      > [!NOTE]
+      > For Oracle, you will further need to manually update db.xml to specify the `RemoteFileShare` tag with the information on how to reach the file share on the server. See [Configuring data offloads to an Oracle database](xref:DB_xml#configuring-data-offloads-to-an-oracle-database). Do this while the DataMiner agent is stopped.
 
    1. In the *Offloads* section, select the tables you want to offload, and specify the remote table name.
 

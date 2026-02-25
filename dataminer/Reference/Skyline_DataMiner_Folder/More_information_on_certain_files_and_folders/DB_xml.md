@@ -392,7 +392,7 @@ If the offload database is an Oracle Database, then add a *RemoteFileShare* tag 
 
 - **pwd**: The password with which to connect to the shared folder on the database server.
 
-- **localPath** The local path to the shared folder on the database server. Must end with a backslash.
+- **localPath**: The local path to the shared folder on the database server. Must end with a backslash.
 
 ### Offloading trend data even if no parameter values change
 
