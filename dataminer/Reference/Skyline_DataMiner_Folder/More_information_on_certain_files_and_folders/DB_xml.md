@@ -24,11 +24,11 @@ Before you make changes to this file, always **stop DataMiner**. Restart DataMin
 
 ## General database settings
 
-The configuration data for the general or “local” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “true”.
+The configuration data for the general or "local" database has to be specified in a `<Database>` tag of which the *local* attribute is set to "true".
 
 > [!NOTE]
 >
-> - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MSSQL, or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
+> - The *type* attribute of the `<Database>` tag indicates whether a MySQL, MSSQL, or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
 > - If a separate Cassandra cluster (consisting of one or more nodes) is used for each DMA, the *type* attribute for the database is set to *Cassandra*. If an entire DMS uses the same Cassandra cluster, the *type* attribute for the database is set to *CassandraCluster*.
 > - If the *CassandraCluster* type is used, *DB.xml* is synced completely throughout the cluster. With other types, the general database settings are not synced.
 
@@ -59,7 +59,7 @@ The following configuration is possible for the general database:
 
 When you perform an upgrade of the DataMiner Agent software, by default, all database tables are automatically checked and if necessary optimized and/or repaired.
 
-To keep a particular database table from being checked, you can add a *\<SkipTableUpdate>* instruction to *DB.xml*.
+To keep a particular database table from being checked, you can add a `<SkipTableUpdate>` instruction to *DB.xml*.
 
 In the example below, two tables will be kept from being checked:
 
@@ -79,7 +79,7 @@ In the example below, two tables will be kept from being checked:
 ```
 
 > [!NOTE]
-> Instead of adding a *\<SkipTableUpdate>* instruction to the file *DB.xml*, you can also add a comment to a database table in order to keep that table from being checked during a DataMiner software upgrade. For example, to add a 'DataMiner Customized' comment to a MySQL table, run the following SQL command (in which you replace “xxx” by the actual table name): `ALTER TABLE xxx COMMENT = 'DataMiner Customized'`
+> Instead of adding a `<SkipTableUpdate>` instruction to the file *DB.xml*, you can also add a comment to a database table in order to keep that table from being checked during a DataMiner software upgrade. For example, to add a 'DataMiner Customized' comment to a MySQL table, run the following SQL command (in which you replace "xxx" with the actual table name): `ALTER TABLE xxx COMMENT = 'DataMiner Customized'`
 >
 > However, note that this causes that entire table to be copied to a temporary table, which has a negative impact on query duration, so this is not recommended.
 
@@ -117,17 +117,17 @@ Example:
 <DataBase active="TRUE" local="true" slowquery="5"> ... </DataBase>
 ```
 
-In the above example, the slowquery attribute is set to “5”, so all database queries that take 5 seconds or longer to finish will be logged in the slow query log.
+In the above example, the slowquery attribute is set to "5", so all database queries that take 5 seconds or longer to finish will be logged in the slow query log.
 
 ### Configuring how alarm history slider data are kept in a Cassandra database
 
 In a Cassandra general database, the timetrace table among others contains "snapshots", which are used to visualize history alarm information in the DataMiner Cube history slider.
 
-- By default, timetrace snapshots are saved every 100 rows. To change this setting, set a different value in the *\<SnapshotInterval>* tag for the Cassandra database.
+- By default, timetrace snapshots are saved every 100 rows. To change this setting, set a different value in the `<SnapshotInterval>` tag for the Cassandra database.
 
     > [!NOTE]
     >
-    > - In some cases, e.g., when DataMiner or Cassandra restarts, snapshots can be saved outside the default interval specified in the \<SnapshotInterval> setting.
+    > - In some cases, for example when DataMiner or Cassandra restarts, snapshots can be saved outside the default interval specified in the \<SnapshotInterval> setting.
     > - This can only be configured for a regular Cassandra database, not for a Cassandra cluster used by the entire DMS (type=CassandraCluster).
 
 ### Skipping commit log writing of a Cassandra database
@@ -137,7 +137,7 @@ In order to optimize the writing speed to a Cassandra database, an option can be
 > [!CAUTION]
 > This option should only be used if performance of disk writes is an issue. It should never be used when two disks are in use or in a Failover setup. In general, we advise you not to use this option. We are not responsible for any data loss caused if you do.
 
-To add this option, In *DB.xml*, add a *\<SkipCommitLog>* tag to the currently active Cassandra database. For example:
+To add this option, In *DB.xml*, add a `<SkipCommitLog>` tag to the currently active Cassandra database. For example:
 
 ```xml
 <DataBases xmlns="http://www.skyline.be/config/db">
@@ -155,7 +155,7 @@ To add this option, In *DB.xml*, add a *\<SkipCommitLog>* tag to the currently a
 
 You can specify how many times the *SLDataGateway* process should try to connect to the Cassandra database at startup.
 
-To do so, specify the number of retries in the *\<ConnectionRetries>* tag. For example:
+To do so, specify the number of retries in the `<ConnectionRetries>` tag. For example:
 
 ```txt
 ...
@@ -176,8 +176,6 @@ If Cassandra still cannot be reached after SLDataGateway has tried to connect fo
 - From DataMiner 10.3.10/10.4.0 onwards(RN 36399 - reverted in RN 37322), you can configure this setting in Cube. See [Cassandra cluster database](xref:Configuring_the_database_settings_in_Cube#cassandra-cluster-database).
 
 - Prior to DataMiner 10.3.10/10.4.0:-->
-
-To do so:
 
   1. Enable TLS in the settings of the Cassandra database itself.
 
@@ -255,10 +253,10 @@ To configure this size limit:
 
 ## Offload database settings
 
-The configuration data for the offload or "central" database has to be specified in a *\<Database>* tag of which the *local* attribute is set to "false".
+The configuration data for the offload or "central" database has to be specified in a `<Database>` tag of which the *local* attribute is set to "false".
 
 > [!NOTE]
-> The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MSSQL or Oracle database is used. If no *type* attribute is specified, MySQL is used as type.
+> The *type* attribute of the `<Database>` tag indicates whether a MySQL, MSSQL or Oracle database is used. If no *type* attribute is specified, MySQL is used as type.
 
 The following configuration is possible for the offload database:
 
@@ -292,10 +290,10 @@ See [Keeping a separate log for slow database queries](#keeping-a-separate-log-f
 
 ### Specifying the tables to be offloaded
 
-In the *DataBases.Database.Offloads* tag, add an *\<Offload>* tag for every table of the general database that has to be offloaded. Do not forget to specify a *state="active"* attribute.
+In the *DataBases.Database.Offloads* tag, add an `<Offload>` tag for every table of the general database that has to be offloaded. Do not forget to specify a `state="active"` attribute.
 
 > [!NOTE]
-> If no tables are specified in the *\<Offloads>* tag, the alarm table will be the only table that will be offloaded.
+> If no tables are specified in the `<Offloads>` tag, the alarm table will be the only table that will be offloaded.
 
 ### Specifying which type of average trend data records to offload
 
@@ -326,7 +324,7 @@ In the DataBases.Database.Offloads.Offload tag, you can use the *rate* attribute
 
 - Whether the system has to offload only the values that have changed since the last offload (TRUE) or all values (FALSE). This is an optional setting. Default: FALSE.
 
-In the following example, “1;TRUE” means that the real-time trend data records will be offloaded every minute and that only the changed values will be offloaded:
+In the following example, "1;TRUE" means that the real-time trend data records will be offloaded every minute and that only the changed values will be offloaded:
 
 ```xml
 <DataBases>
@@ -347,7 +345,7 @@ In the following example, “1;TRUE” means that the real-time trend data recor
 
 ### Configuring the collation for an MSSQL database
 
-In the Database.Collation tag, you can specify the collation for an offload database of type Microsoft SQL Server. The default collation is "SQL_Latin1_General_CP1_CI_AS".
+In the Database.Collation tag, you can specify the collation for an offload database of type Microsoft SQL Server. The default collation is `SQL_Latin1_General_CP1_CI_AS`.
 
 Example:
 
@@ -386,13 +384,13 @@ Example:
 
 If the offload database is an Oracle Database, then add a *RemoteFileShare* tag with the following attributes:
 
-- **path**: The UNC path to the shared folder (located on the database server) in which the DMAs will place the “offload” files. Must end with a backslash.
+- **path**: The UNC path to the shared folder (located on the database server) in which the DMAs will place the "offload" files. This path must end with a backslash.
 
 - **uid**: The username with which to connect to the shared folder on the database server.
 
 - **pwd**: The password with which to connect to the shared folder on the database server.
 
-- **localPath**: The local path to the shared folder on the database server. Must end with a backslash.
+- **localPath**: The local path to the shared folder on the database server. This path must end with a backslash.
 
 ### Offloading trend data even if no parameter values change
 
@@ -404,7 +402,7 @@ To do so:
 
 1. Open the file *DB.xml* (in the folder `C:\Skyline DataMiner\`).
 
-1. In the offload database's *\<offload>* tag containing *local="dataavg"*, add the option *oldstyle="true"*.
+1. In the offload database's `<offload>` tag containing `local="dataavg"`, add the option `oldstyle="true"`.
 
    Example:
 
@@ -428,9 +426,9 @@ To support the offload of files to a file cache instead of to a MySQL, MSSQL, or
 
 1. Open the file *DB.xml* (in the folder `C:\Skyline DataMiner\`).
 
-1. If it is not yet present, add the *\<FileCache>* tag under the *\<Database>* tag for the offload database.
+1. If it is not yet present, add the `<FileCache>` tag under the `<Database>` tag for the offload database.
 
-1. Set the *enabled* attribute of the tag to *true* and specify the maximum size of the cache in the *\<MaxSizeKB>* subtag (default = 10 GB).
+1. Set the *enabled* attribute of the tag to *true* and specify the maximum size of the cache in the `<MaxSizeKB>` subtag (default = 10 GB).
 
    For example:
 
@@ -501,7 +499,7 @@ To support the offload of files to a file cache instead of to a MySQL, MSSQL, or
 
 In a self-managed storage setup with Cassandra, usually an indexing database is also installed, which can be OpenSearch or Elasticsearch. In a setup with storage per DMA, only Elasticsearch is supported, but this setup is not recommended. The indexing database will also be added to *DB.xml*.
 
-The *\<Database>* tag for an indexing database has the following attributes:
+The `<Database>` tag for an indexing database has the following attributes:
 
 - **active**: If set to true, the database is active.
 
@@ -527,7 +525,7 @@ To define a different port:
 
 1. Open the file *DB.xml* (in the folder `C:\Skyline DataMiner\`).
 
-1. In the \<DBServer> element for the indexing database, add a colon after the hostname or IP and specify the port.
+1. In the `<DBServer>` element for the indexing database, add a colon after the hostname or IP and specify the port.
 
    For example:
 
@@ -590,10 +588,10 @@ It is possible to have data offloaded to multiple OpenSearch or Elasticsearch cl
 
 ## CMDB settings
 
-If you have a CMDB (Configuration Management Database) that you want to manage by means of the DataMiner Inventory & Asset Management module, then you can specify the configuration data for that CMDB in an additional *\<Database>* tag.
+If you have a CMDB (Configuration Management Database) that you want to manage by means of the DataMiner Inventory & Asset Management module, then you can specify the configuration data for that CMDB in an additional `<Database>` tag.
 
 > [!NOTE]
-> The *\<Database>* tag containing the configuration data for the CMDB must not have a *local* attribute. However, it must have a *name* attribute of which the value (i.e., the name of the database configuration) must be identical to the value specified in the *\<DatabaseConfig>* tag of the Inventory & Asset Management configuration file.
+> The `<Database>` tag containing the configuration data for the CMDB must not have a *local* attribute. However, it must have a *name* attribute of which the value (i.e., the name of the database configuration) must be identical to the value specified in the `<DatabaseConfig>` tag of the Inventory & Asset Management configuration file.
 
 > [!TIP]
 > See also: [Configuring DataMiner Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management)

@@ -14,106 +14,122 @@ The first step in setting up an offload or "central" database is the configurati
 
 Depending on the type of database, the procedure is slightly different.
 
-1. Install the database software, which can be:
+### [For MySQL](#tab/tabid-1)
 
-   - MySQL Server
+1. Install the MySQL Server database software.
 
-     > [!NOTE]
-     >
-     > - MySQL versions up to 8.0 are supported (using connector version 6.9.12). However, to use MySQL 8.0, an additional change is needed within the database. You need to set the *local_infile* variable to 1. In previous versions, this was not a default version, but this has changed. To do this in the database, you can use the command `SET GLOBAL local_infile=1;`.
-     > - For MySQL, do not activate strict mode (STRICT_TRANS_TABLES) during installation. If you do so, the database offloads will fail.
+   - MySQL versions up to 8.0 are supported (using connector version 6.9.12). However, to use MySQL 8.0, an additional change is needed within the database. You need to set the *local_infile* variable to 1. In previous versions, this was not a default version, but this has changed. To do this in the database, you can use the command `SET GLOBAL local_infile=1;`.
+   - Do not activate strict mode (STRICT_TRANS_TABLES) during installation. If you do so, the database offloads will fail.
 
-   - MSSQL Server
+1. Create and configure the MySQL remote user account that will be used by the different DMAs to connect to the offload database:
 
-     > [!NOTE]
-     >
-     > - While setting up the installation of MSSQL Server, choose the authentication mode *Mixed Mode*.
-     > - To run Microsoft SQL Server 2019, Windows Server 2016 or higher is required.
+   1. Open the user account manager.
 
-   - Oracle Database.
+   1. Click *Add* and configure the remote user.
 
-1. Create and configure the user account that will be used by the different DMAs to connect to the offload database:
+   1. Click *Save*.
 
    > [!NOTE]
    >
-   > - The user accounts should at least be granted the following rights:
+   > - The user account should at least be granted the following rights:
    >   - SELECT
    >   - INSERT
    > - Make sure the user account has access to the database server from the DMA, so that it can reach the offload database.
 
-   - MySQL remote user:
-
-     1. Open the user account manager.
-
-     1. Click *Add* and configure the remote user.
-
-     1. Click *Save*.
-
-   - MSSQL remote user:
-
-     1. Open the Microsoft SQL Server Management Studio and connect to the server.
-
-     1. In the *Object Explorer*, right-click the *Login* folder and select *New Login*.
-
-     1. Configure the user in the *Login - New* window and click *OK*.
-
-   - Oracle: use the Oracle Apex web interface or [Oracle SQL Developer](https://www.oracle.com/europe/database/sqldeveloper/) to create a user (e.g., `DATAMINER`) and set up a workspace.
-
-     > [!NOTE]
-     > Make sure the Oracle uses has the following permissions:
-     >
-     > ```sql
-     > -- Allow the user to connect
-     > GRANT CREATE SESSION TO DATAMINER;
-     >
-     > -- Allow the user to create the tables
-     > GRANT CREATE TABLE TO DATAMINER;
-     > GRANT CREATE SEQUENCE TO DATAMINER;
-     > GRANT CREATE TRIGGER TO DATAMINER;
-     >
-     > -- Allow the user to access the shares
-     > GRANT CREATE ANY DIRECTORY TO DATAMINER;
-     > ```
-
 1. Create a database (e.g., named "sldmsdb") and tables:
 
-   - In MySQL:
+   1. Open MySQL and right-click the MySQL server to create a database
 
-     1. Open MySQL and right-click the MySQL server to create a database
+   1. In the right-click menu, select *Make new \> Database*.
 
-     1. In the right-click menu, select *Make new \> Database*.
+   1. Fill in "sldmsdb" as the database name, make sure *Collation* is set to *utf8 - default collation* and click *OK*.
 
-     1. Fill in "sldmsdb" as the database name, make sure *Collation* is set to *utf8 - default collation* and click *OK*.
-
-     1. From the `C:\Skyline DataMiner\Tools` directory, run the following script to create the tables: *CentralTabledef.txt*.
+   1. From the `C:\Skyline DataMiner\Tools` directory, run the following script to create the tables: *CentralTabledef.txt*.
 
    > [!NOTE]
    >
    > - Note that the script in *CentralTabledef.txt* will drop any tables in the selected database (causing these to be permanently deleted) and recreate the schema, so it must be used with caution.
    > - Alternatively, you can also use the program SLOffload.exe from the `C:\Skyline DataMiner\Tools` directory to do an offload to your new database. However, note that running this program involves a restart of the DMA.
 
-   - In MSSQL:
+   > [!TIP]
+   > See also: [Automatic creation and verification of the offload database](#automatic-creation-and-verification-of-the-offload-database)
 
-     1. Open Microsoft SQL Server Management Studio, and connect to the SQL server with the user account you created earlier.
+### [For MSSQL](#tab/tabid-2)
 
-     1. Right-click *Databases* and select *New Database*.
+1. Install the MSSQL Server database software.
 
-     1. Fill in "SLDMSDB" as *Database name*, and click *OK*.
+   - While setting up the installation, choose the authentication mode *Mixed Mode*.
+   - To run Microsoft SQL Server 2019, Windows Server 2016 or higher is required.
 
-     1. From the `C:\Skyline DataMiner\Tools` directory, run the following script to create the tables: *CentralTableDefSQLServer.sql*.
+1. Create and configure the MSSQL remote user account that will be used by the different DMAs to connect to the offload database:
 
-   - For an Oracle database, log in as the database user and run the following table creation script found in the `C:\Skyline DataMiner\Tools` directory: *CentralTabledefOracle.sql*.
+   1. Open the Microsoft SQL Server Management Studio and connect to the server.
+
+   1. In the *Object Explorer*, right-click the *Login* folder and select *New Login*.
+
+   1. Configure the user in the *Login - New* window and click *OK*.
+
+   > [!NOTE]
+   >
+   > - The user account should at least be granted the following rights:
+   >   - SELECT
+   >   - INSERT
+   > - Make sure the user account has access to the database server from the DMA, so that it can reach the offload database.
+
+1. Create a database (e.g., named "sldmsdb") and tables:
+
+   1. Open Microsoft SQL Server Management Studio, and connect to the SQL server with the user account you created earlier.
+
+   1. Right-click *Databases* and select *New Database*.
+
+   1. Fill in "SLDMSDB" as *Database name*, and click *OK*.
+
+   1. From the `C:\Skyline DataMiner\Tools` directory, run the following script to create the tables: *CentralTableDefSQLServer.sql*.
 
    > [!TIP]
    > See also: [Automatic creation and verification of the offload database](#automatic-creation-and-verification-of-the-offload-database)
 
-1. For an Oracle Database:
+### [For Oracle](#tab/tabid-3)
 
-    1. On the database server, create a new local user to use when uploading offload files (e.g., "DataMinerOffload"). This can be done from *Computer Management \> Local Users and Groups \> Users*.
+1. Install the Oracle database software.
 
-    1. On the database server, create a shared folder and give it an appropriate name (e.g., "DataMinerOffload").
+1. Use the Oracle Apex web interface or [Oracle SQL Developer](https://www.oracle.com/europe/database/sqldeveloper/) to create the user account that will be used by the different DMAs to connect to the offload database (e.g., `DATAMINER`) and set up a workspace.
 
-    1. Grant the "DataMinerOffload" user from the step above read/write access to the shared folder and make sure that the Oracle service also has read access to this folder. To know which user Oracle runs under, check the "Log On As" column in the Windows Services application for the Oracle service. This is typically a user named "OracleServiceXE" or similar.
+     Make sure the Oracle user has the following permissions:
+
+     ```sql
+     -- Allow the user to connect
+     GRANT CREATE SESSION TO DATAMINER;
+     
+     -- Allow the user to create the tables
+     GRANT CREATE TABLE TO DATAMINER;
+     GRANT CREATE SEQUENCE TO DATAMINER;
+     GRANT CREATE TRIGGER TO DATAMINER;
+     
+     -- Allow the user to access the shares
+     GRANT CREATE ANY DIRECTORY TO DATAMINER;
+     ```
+
+   > [!NOTE]
+   >
+   > - The user account should at least be granted the following rights:
+   >   - SELECT
+   >   - INSERT
+   > - Make sure the user account has access to the database server from the DMA, so that it can reach the offload database.
+
+1. To create a database (e.g., named "sldmsdb") and tables, log in as the database user and run the following table creation script found in the `C:\Skyline DataMiner\Tools` directory: *CentralTabledefOracle.sql*.
+
+1. On the database server, create a new local user to use when uploading offload files (e.g., "DataMinerOffload").
+
+   This can be done from *Computer Management \> Local Users and Groups \> Users*.
+
+1. On the database server, create a shared folder and give it an appropriate name (e.g., "DataMinerOffload").
+
+1. Grant the local user you have just created (e.g., "DataMinerOffload") read/write access to the shared folder and make sure that the Oracle service also has read access to this folder.
+
+   To know which user Oracle runs under, check the *Log On As* column in the Windows Services application for the Oracle service. This is typically a user named *OracleServiceXE* or similar.
+
+***
 
 ## Allowing ports on Windows Firewall
 
@@ -155,7 +171,37 @@ Once the server has been configured, the next step in setting up the offload dat
 
 The final step is the configuration of the DMS.
 
-1. For a MSSQL database only, on every DMA in the DMS, share the `C:\Skyline DataMiner\System Cache\Offload` folder:
+### [For MySQL](#tab/tabid-1)
+
+In Cube, configure the offload or "central" database settings for each DMA in the DMS:
+
+1. Go to *System Center \>* *Database \> Offload*.
+
+1. In the *Type* dropdown box, select *Database*.
+
+1. Set the type of database to *MySQL*.
+
+1. Fill in the following fields:
+
+   - **DB**: The name of the database you created, i.e., SLDMSDB.
+
+   - **DB server**: The IP address of the offload database.
+
+   - **DSN**: "SkySQL"
+
+   - **Connection string**: If a port needs to be specified, specify it here (e.g., *PORT=3306*).
+
+   - **User**: The user account you created to connect to the database.
+
+   - **Password**: The password corresponding with the user account.
+
+1. In the *Offloads* section, select the tables you want to offload, and specify the remote table name.
+
+1. Optionally, if you have selected *Trend data*, specify further details for the offload. For more information, see [Configuring data offloads](xref:Configuring_data_offloads).
+
+### [For MSSQL](#tab/tabid-2)
+
+1. On every DMA in the DMS, share the `C:\Skyline DataMiner\System Cache\Offload` folder:
 
    1. Go the folder `C:\Skyline DataMiner\System Cache` folder and open the properties of the *Offload* folder.
 
@@ -170,7 +216,7 @@ The final step is the configuration of the DMS.
    > [!NOTE]
    > It is important that "Everyone" has read/write permissions. Otherwise, the DMA will not be able to store data in the CSV files.
 
-1. For MSSQL only, activate TCP/IP:
+1. Activate TCP/IP:
 
    1. Open the SQL Server Configuration Manager and go to the SQL Server Network Configuration.
 
@@ -192,39 +238,56 @@ The final step is the configuration of the DMS.
 
    1. Go to *System Center \>* *Database \> Offload*.
 
-   1. Prior to DataMiner 10.1.1/10.2.0 only: Select the *Activate this database* checkbox to activate the offload database.
+   1. In the *Type* dropdown box, select *Database*.
 
-   1. From DataMiner 10.1.1/10.2.0 onwards, in the *Type* dropdown box, select *Database*.
-
-   1. Select the type of database: MySQL, MSSQL or Oracle.
+   1. Set the type of database to *MSSQL*.
 
    1. Fill in the following fields:
 
       - **DB**: The name of the database you created, i.e., SLDMSDB.
 
-      - **DB server**: The network location of the offload database.
-
-        - For an MSSQL database, this can be an IP address and a port, separated by a comma, e.g., "10.10.18.1,1433".
-
-        - For a MySQL database, only fill in the IP address. If a port needs to be specified, do so in the *Connection string* field (e.g., *PORT=3306*).
+      - **DB server**: The network location of the offload database. This can be an IP address and a port, separated by a comma, e.g., "10.10.18.1,1433".
 
       - **DSN**: "SkySQL"
-
-      - **Connection string**: Depending on the type of database, you can fill in this field to connect through a connection string instead. If this field is filled in, it will always take precedence over all other fields.
 
       - **User**: The user account you created to connect to the database.
 
       - **Password**: The password corresponding with the user account.
 
-      > [!NOTE]
-      > For Oracle, check the file *tnsnames.ora* on the database server to see the configuration of XE. You can locate the file by searching for it using `dir tnsnames.ora /s` from the root folder. Ignore sample files. Fill in the information from the ora file, e.g., `(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = XX.XX.XX.X)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE)))`. Aside from that, you only need to fill in the *User* and *Password* fields with the Oracle database username and password. Alternatively, you can also use a connection string, e.g., `Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=hostaddress)(PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=XE)));User Id=user;Password= password`.
-
-      > [!NOTE]
-      > For Oracle, you will further need to manually update db.xml to specify the `RemoteFileShare` tag with the information on how to reach the file share on the server. See [Configuring data offloads to an Oracle database](xref:DB_xml#configuring-data-offloads-to-an-oracle-database). Do this while the DataMiner agent is stopped.
-
    1. In the *Offloads* section, select the tables you want to offload, and specify the remote table name.
 
    1. Optionally, if you have selected *Trend data*, specify further details for the offload. For more information, see [Configuring data offloads](xref:Configuring_data_offloads).
+
+### [For Oracle](#tab/tabid-3)
+
+1. Check the file *tnsnames.ora* on the database server to see the configuration of XE.
+
+   You can locate the file by searching for it using `dir tnsnames.ora /s` from the root folder. Ignore sample files.
+
+1. In Cube, go to *System Center \>* *Database \> Offload*.
+
+1. In the *Type* dropdown box, select *Database*.
+
+1. Set the type of database to *Oracle*.
+
+1. Fill in the information from the ora file, e.g., `(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = XX.XX.XX.X)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE)))`.
+
+1. Fill in the *User* and *Password* fields with the Oracle database username and password.
+
+   > [!NOTE]
+   > Alternatively, you can also use a connection string, e.g., `Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=hostaddress)(PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=XE)));User Id=user;Password= password`.
+
+1. In the *Offloads* section, select the tables you want to offload, and specify the remote table name.
+
+1. Optionally, if you have selected *Trend data*, specify further details for the offload. For more information, see [Configuring data offloads](xref:Configuring_data_offloads).
+
+1. Stop DataMiner.
+
+1. Update **DB.xml** to specify the `RemoteFileShare` tag with the information on how to reach the file share on the server. See [Configuring data offloads to an Oracle database](xref:DB_xml#configuring-data-offloads-to-an-oracle-database).
+
+1. Restart DataMiner.
+
+***
 
 > [!NOTE]
 >
