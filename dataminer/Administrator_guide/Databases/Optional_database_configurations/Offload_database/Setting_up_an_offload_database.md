@@ -187,8 +187,6 @@ In Cube, configure the offload or "central" database settings for each DMA in th
 
    - **DB server**: The IP address of the offload database.
 
-   - **DSN**: "SkySQL"
-
    - **Connection string**: If a port needs to be specified, specify it here (e.g., *PORT=3306*).
 
    - **User**: The user account you created to connect to the database.
@@ -247,8 +245,6 @@ In Cube, configure the offload or "central" database settings for each DMA in th
       - **DB**: The name of the database you created, i.e., SLDMSDB.
 
       - **DB server**: The network location of the offload database. This can be an IP address and a port, separated by a comma, e.g., "10.10.18.1,1433".
-
-      - **DSN**: "SkySQL"
 
       - **User**: The user account you created to connect to the database.
 
