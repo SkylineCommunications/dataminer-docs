@@ -117,7 +117,7 @@ Depending on the type of database, the procedure is slightly different.
    >   - INSERT
    > - Make sure the user account has access to the database server from the DMA, so that it can reach the offload database.
 
-1. To create a database (e.g., named "sldmsdb") and tables, log in as the database user and run the following table creation script found in the `C:\Skyline DataMiner\Tools` directory: *CentralTabledefOracle.sql*.
+1. To create the tables, log in as the database user and run the following table creation script found in the `C:\Skyline DataMiner\Tools` directory: *CentralTabledefOracle.sql*.
 
 1. On the database server, create a new local user to use when uploading offload files (e.g., "DataMinerOffload").
 
