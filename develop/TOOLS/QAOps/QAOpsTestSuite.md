@@ -7,7 +7,7 @@ uid: QAOps_Test_Suite
 > [!IMPORTANT]
 > This section contains information intended only for Skyline employees.
 
-A QAOps test suite is a collection of one or more [DataMiner test packages](QAOps_Test_Package).
+A QAOps test suite is a collection of one or more [DataMiner test packages](xref:QAOps_Test_Package).
 
 You run regression tests by running a test suite on a configuration. Over time, you can update the list of test packages in that test suite.
 
@@ -17,7 +17,7 @@ All results from one test suite run are collected in a single results table.
 
 By default, when a test suite runs, QAOps retrieves the required test packages from the catalog and then executes them.
 
-With the [QAOps tool](QAOps_Tool), you can override one or more test packages by providing package versions directly in your call instead of retrieving them from the catalog.
+With the [QAOps tool](xref:QAOps_Tool), you can override one or more test packages by providing package versions directly in your call instead of retrieving them from the catalog.
 
 > [!IMPORTANT]
 > Adding a test suite to an existing configuration is an impactful operation that you cannot undo.

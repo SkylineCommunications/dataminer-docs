@@ -37,7 +37,7 @@ Active test runs are filtered based on the *Tags* attribute included when the te
 
 You can use this tag with the filter component at the top of the page to find your test run more easily and to see which configuration, test suite, and server are involved.
 
-![QAOps user overview](../../../images/QAOps_UI_User_Overview.png)
+![QAOps user overview](~/develop/images/QAOps_UI_User_Overview.png)
 
 ### QAOps user configurations
 
@@ -49,15 +49,15 @@ You can also see which server was used to run these tests, unless that server ha
 
 Server information allows you to use RDP to investigate failed tests directly on the machine where they were executed.
 
-![QAOps user test results by configuration and test suite](../../../images/QAOps_UI_User_TestResults_In_Configuration_And_TestSuite.png)
+![QAOps user test results by configuration and test suite](~/develop/images/QAOps_UI_User_TestResults_In_Configuration_And_TestSuite.png)
 
 ### QAOps user tokens
 
-This section allows you to create tokens that can be used to trigger test runs by using the [QAOps DotNet Tool](QAOps_Tool).
+This section allows you to create tokens that can be used to trigger test runs by using the [QAOps DotNet Tool](xref:QAOps_Tool).
 
 At the top left of the banner, select *Create Token* to create a new token.
 
-![Create token in QAOps User](../../../images/QAOps_User_CreateToken.png)
+![Create token in QAOps User](~/develop/images/QAOps_User_CreateToken.png)
 
 You must provide a name and expiration date.
 
@@ -98,7 +98,7 @@ To do this, click the dark blue button with an upward-facing arrow.
 
 You can click this button multiple times to start several deployments.
 
-![QAOps operator configurations](../../../images/QAOps_UI_Configurations.png)
+![QAOps operator configurations](~/develop/images/QAOps_UI_Configurations.png)
 
 > [!IMPORTANT]
 > It can take up to 10 seconds before deployments begin and become visible in the low-code app.
@@ -113,19 +113,19 @@ When you finish making changes, select *Update* in the *Actions* column.
 
 This pushes your changes through the QAOps system.
 
-For more information about available settings, see [QAOps configuration](QAOps_Configuration).
+For more information about available settings, see [QAOps configuration](xref:QAOps_Configuration).
 
 You can move between different pages without losing your changes.
 
 This is convenient when you need to find test suite IDs and then return to configuration edit mode to continue setup.
 
-![QAOps operator edit mode with Update button](../../../images/QAOps_UI_EditMode_Update_Button.png)
+![QAOps operator edit mode with Update button](~/develop/images/QAOps_UI_EditMode_Update_Button.png)
 
 ### QAOps operator test suites
 
 This section shows all known test suites.
 
-When you select a test suite, you also get an overview of all [test packages](QAOps_Test_Package) in that test suite.
+When you select a test suite, you also get an overview of all [test packages](xref:QAOps_Test_Package) in that test suite.
 
 Each package shows a number in the top-right corner that indicates the execution order when the test suite is activated.
 
@@ -133,9 +133,9 @@ Each package includes an *Open* button that opens the Catalog information for th
 
 On this page, you can also find the QAOps package identifiers, which are different from Catalog identifiers.
 
-The QAOps package identifier is used when [triggering a test run with an unreleased test package](QAOps_Tutorials_User_Tutorials_Advanced_Trigger_Test_Run_With_Unreleased_Test_Package).
+The QAOps package identifier is used when [triggering a test run with an unreleased test package](xref:QAOps_Tutorials_User_Tutorials_Advanced_Trigger_Test_Run_With_Unreleased_Test_Package).
 
-![QAOps operator test suites](../../../images/QAOps_UI_TestSuites.png)
+![QAOps operator test suites](~/develop/images/QAOps_UI_TestSuites.png)
 
 #### QAOps operator test suites edit mode
 
@@ -147,7 +147,7 @@ When you finish making changes, select *Update* in the *Actions* column.
 
 This pushes your changes through the QAOps system.
 
-For more information about available settings, see [QAOps test suites](QAOps_Test_Suite).
+For more information about available settings, see [QAOps test suites](xref:QAOps_Test_Suite).
 
 You can move between different pages without losing your changes.
 
@@ -171,7 +171,7 @@ It is mostly intended as an alternative to the *Overview* page in the *QAOps Use
 
 This section allows you to add or adjust known global categories.
 
-![QAOps global categories](../../../images/QAOps_UI_GlobalCategories.png)
+![QAOps global categories](~/develop/images/QAOps_UI_GlobalCategories.png)
 
 These categories appear as buttons in the top banner of the *QAOps User* and *QAOps Operator* applications and can reduce UI clutter by filtering specific configurations and test suites.
 
