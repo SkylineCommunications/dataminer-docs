@@ -53,3 +53,9 @@ Previously, when processing spectrum traces using the connectors Cisco CBR-8 CCA
 #### Cisco CBR-8 CCAP UTSC: Improved trace updates [ID 43387]
 
 To ensure that the spectrum trace is updated smoothly, traces are now buffered and then sequentially de-buffered to update the UI.
+
+### Fixes
+
+#### Generic DOCSIS CM Collector: Runtime exception caused by invalid downstream profile parsing [ID 42861]
+
+Because of an issue in the Generic DOCSIS CM Collector (v3.0.7.5), malformed or empty downstream profile values could cause a System.ArgumentOutOfRangeException during parsing. This occurred when `IndexOf('.')` returned -1 and was used in a Substring call. Validation was added to prevent invalid operations and ensure stable execution.

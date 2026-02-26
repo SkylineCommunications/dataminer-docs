@@ -453,6 +453,12 @@ When, in a *Node edge graph* component, node positioning was set to "Linked to d
 
 When, in a *Timeline* component, you zoomed out until the component switched to minimized view, certain shapes would not get rendered at the correct position.
 
+#### Dashboards/Low-Code Apps - Parameter table component: Strings containing decimal values would be sorted incorrectly [ID 44595]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some cases, strings containing decimal values would be sorted incorrectly.
+
 #### Dashboards/Low-Code Apps - Timeline component: Changes to certain settings would not get applied correctly [ID 44596]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->

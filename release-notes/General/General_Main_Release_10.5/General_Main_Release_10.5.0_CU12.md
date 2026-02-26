@@ -24,14 +24,6 @@ uid: General_Main_Release_10.5.0_CU12
 
 ### Enhancements
 
-#### SLNet will now take into account the log level before sending a log entry to SLLog [ID 44314]
-
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
-
-Up to now, SLNet would incorrectly send all log entries directly to SLLog, including entries of which the log level dictated that they should not be added to a log file.
-
-From now on, SLNet will only send a log entry to SLLog if the log level dictates that the entry should be logged. As a result, overall performance will increase when adding entries to log files.
-
 #### An error will now be logged if the response to an SNMP Get request cannot be mapped [ID 44329]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->

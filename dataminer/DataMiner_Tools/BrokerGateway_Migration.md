@@ -7,7 +7,9 @@ uid: BrokerGateway_Migration
 From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!-- RN 42573 -->, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the "NATSMigration" tool. Prior to this, starting from DataMiner 10.5.0/10.5.2, this feature is available in [soft launch](xref:SoftLaunchOptions).
 
 > [!IMPORTANT]
-> This migration is **mandatory to be able to upgrade to DataMiner 10.6.0/10.6.1** or higher. If you try to upgrade to such a DataMiner version when this migration has not yet been completed, the upgrade will be blocked. From DataMiner 10.6.0/10.6.1 onwards, the legacy SLNet‑managed NATS solution (NAS and NATS services) is no longer supported.<!-- RN 43861 -->
+>
+> - This migration is **mandatory to be able to upgrade to DataMiner 10.6.0/10.6.1** or higher. If you try to upgrade to such a DataMiner version when this migration has not yet been completed, the upgrade will be blocked. From DataMiner 10.6.0/10.6.1 onwards, the legacy SLNet‑managed NATS solution (NAS and NATS services) is no longer supported.<!-- RN 43861 -->
+> - We strongly recommend upgrading to 10.5.0 [CU11]/10.5.12 [CU2] or higher before starting the migration. If you do want to start the migration on an earlier version, we recommend first installing [BrokerGateway 1.9.5.23100](https://community.dataminer.services/download/dataminer-brokergateway-1-9-5-23100-msi/) on each server prior to initiating the migration.
 
 > [!NOTE]
 > To start the migration, the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft‑launch option must not be disabled on any DataMiner Agent in the cluster. In DataMiner 10.5.0 [CU5]/10.5.8<!-- RN 43370 --> this option can be disabled when no migration is planned.
@@ -225,3 +227,26 @@ With the [automatic migration](#automatic-migration-using-dmupgrade-package-reco
 If you encounter any issues with your NATS cluster related to credentials or misconfigured nodes and you have migrated to BrokerGateway, you can run the *NATSRepair.exe* tool from the `C:\Skyline DataMiner\Tools\` folder.
 
 This tool needs to be run on just one Agent of the cluster. It will perform a repair on the cluster.<!-- RN 42328 -->
+
+### TLS-related errors
+
+After a DataMiner System has been migrated to BrokerGateway, DMAs may generate the following alarm:
+
+```txt
+Could not connect to the local NATS endpoint on '<IP>'. Please make sure that the nats service is running without issues.
+```
+
+This coincides with errors in the `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\nats-server.log` files similar to the following error:
+
+```txt
+TLS handshake error: remote error: tls: bad certificate
+```
+
+This TLS handshake failure occurs because the root certificate authority (CA) used to sign the NATS server certificate is not present in the Trusted Root Certification Authorities store of the local machine.
+
+During BrokerGateway setup, a root ca.pem file is generated in `C:\ProgramData\Skyline Communications\DataMiner Security`. If this certificate is not trusted on OS level, Windows will reject the TLS connection.
+
+To resolve this issue, import the generated root certificate into the Trusted Root Certification Authorities store on each DMA via the Microsoft Management Console (MMC).
+
+> [!TIP]
+> See also: [Resolved issues — TLS authentication issues when MessageBroker is connecting to the NATS bus](xref:KI_DataMinerMessageBroker_TLS)

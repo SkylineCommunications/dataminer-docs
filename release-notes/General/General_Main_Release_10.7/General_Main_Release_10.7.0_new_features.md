@@ -241,3 +241,24 @@ public class Script
 >
 > - To swarm a scheduled task, the new hosting Agent must be up and running. In case the current hosting Agent is unreachable, swarming will still take place, but an error will be logged in the *SLScheduler* log file.
 > - To be able to trigger swarming for a scheduled task, you need the *Modules > Swarming* user permission.
+
+#### Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+When an automation script is executed, it is now possible to pass the time zone of the client to that script.
+
+In the `ExecuteScriptMessage`, you can add the time zone information to the string parameter array in the following format:
+
+`CLIENT_TIME_ZONE:<Serialized TimeZone String>`
+
+Example: `CLIENT_TIME_ZONE:Tokyo Standard Time;540;(UTC+09:00) Osaka, Sapporo, Tokyo;Tokyo Standard Time;Tokyo Summer Time;;`
+
+In the automation script, the time zone will be available on the `IEngine` input argument:
+
+`engine.ClientInfo.TimeZone`
+
+> [!NOTE]
+>
+> - If the script was executed from a source other than a web app, or if the time zone information could not be parsed, the `TimeZone` property can be null.
+> - In case a subscript is executed, the `ClientInfo` of the parent script will also be available in the subscript.

@@ -64,7 +64,7 @@ The following tables provide an overview of the supported operators in condition
 |Expression  |Description  |
 |---------|---------|
 |x & y     |Integer bitwise AND         |
-|x | y     |Integer bitwise OR         |
+|x \| y     |Integer bitwise OR         |
 |x ^ y     |Integer bitwise XOR         |
 |x AND y     |Boolean logical AND         |
 |x OR y     |Boolean logical OR         |

@@ -40,6 +40,27 @@ From now on, a new BPA test named *Detect unsupported connector versions* will r
 
 When a connector version is removed from the Catalog, this means that it is no longer supported by Skyline Communications. Using unsupported connector versions can lead to compatibility issues, lack of support, and potential security vulnerabilities. It is important to regularly check for unsupported connector versions and update them to supported versions to ensure optimal performance and security of the system.
 
+#### Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+When an automation script is executed, it is now possible to pass the time zone of the client to that script.
+
+In the `ExecuteScriptMessage`, you can add the time zone information to the string parameter array in the following format:
+
+`CLIENT_TIME_ZONE:<Serialized TimeZone String>`
+
+Example: `CLIENT_TIME_ZONE:Tokyo Standard Time;540;(UTC+09:00) Osaka, Sapporo, Tokyo;Tokyo Standard Time;Tokyo Summer Time;;`
+
+In the automation script, the time zone will be available on the `IEngine` input argument:
+
+`engine.ClientInfo.TimeZone`
+
+> [!NOTE]
+>
+> - If the script was executed from a source other than a web app, or if the time zone information could not be parsed, the `TimeZone` property can be null.
+> - In case a subscript is executed, the `ClientInfo` of the parent script will also be available in the subscript.
+
 ## Changes
 
 ### Breaking changes
@@ -74,11 +95,23 @@ From now on, the *Large Alarm Trees* BPA test will run on a daily basis, and wil
 
 Also, no notice will be generated anymore when alarm trees are getting large. As a result, in the `AlarmSettings` section of the *MaintenanceSettings.xml* file, the `recurring` attribute of the `AlarmsPerParameter` element is now obsolete.
 
-#### Security enhancements [ID 44579]
+#### Security enhancements [ID 44579] [ID 44821]
 
 <!-- 44579: MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+<!-- 44821: MR 10.6.0 [CU1] - FR 10.6.4 -->
 
 A number of security enhancements have been made.
+
+#### DataMiner Objects Models: Selected subset of fields from DomInstance objects will now be read from the repository API [ID 44600]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Since DataMiner 10.6.0/10.6.1, it is possible to read only a selected subset of fields from `DomInstance` objects. In order to further enhance performance, from now on, those subsets will be read from the repository API.
+
+Currently, the repository API will still request the full objects from the database and extract the required values.
+
+> [!NOTE]
+> When a field value is requested, the type defined in the field descriptor will be used. In order to determine that type, field descriptor IDs should be unique across section definitions in a DOM module.
 
 #### SLDataGateway: StorageTypeNotFoundException will now always mention the StorageType that could not be found [ID 44603]
 
@@ -96,6 +129,12 @@ From now on, when the new value is equal to the old value, the value will no lon
 
 Also, write parameters will no longer be saved as this would cause unnecessary load.
 
+#### NotifyMail.html has been updated in order to better support both classic Microsoft Outlook and new Microsoft Outlook [ID 44617]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+The `C:\Skyline DataMiner\NotifyMail.html` file, i.e., the email report template, has been updated to better support both classic Microsoft Outlook and new Microsoft Outlook.
+
 #### Enhanced distribution of SNMPv3 traps [ID 44626]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
@@ -111,6 +150,25 @@ Also, in some cases, traps could be forwarded to the wrong elements because the 
 Up to now, log entries regarding SLDataGateway job queue updates would be logged in the `C:\Skyline DataMiner\Logging\SLDbConnection.txt` file.
 
 From now on, these log entries will be logged in the `C:\Skyline DataMiner\Logging\SLDataGateway\SLJobQueues.txt` file instead.
+
+#### Enhanced performance when filtering history alarms using complex filters [ID 44664]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, overall performance has increased when filtering history alarms using complex filters.
+
+Performance has especially increased using filters that consist of multiple equality conditions involving the following types of objects:
+
+- Element
+- Function
+- Protocol
+- Service
+- View
+
+> [!NOTE]
+>
+> - Non-equality and wildcard/regex filtering has not been altered.
+> - If more than 1,000 elements are affected, filtering will revert to the legacy behavior.
 
 #### SLLogCollector: Separate log file per instance [ID 44668]
 
@@ -130,6 +188,12 @@ Up to 10 log files will be kept on disk, and the log file of the current instanc
 <!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
 
 Because of a number of enhancements, overall performance has increased when activating DaaS systems.
+
+#### Enhanced performance when executing a full element update on STaaS systems with Swarming enabled [ID 44772]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, on STaaS systems with Swarming enabled, overall performance has increased when executing a full element update.
 
 ### Fixes
 
@@ -191,6 +255,25 @@ When a scheduled task was updated close to its execution time, in some cases, th
 
 From now on, when only the task actions are changed during an update of a scheduled task, the Windows task will no longer be recreated. The latter will only be recreated when the status, name, description, or timing of the scheduled task are changed.
 
+#### History set trending would show gaps where no gaps were expected [ID 44705]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, history set trending would show gaps where no gaps were expected.
+
+From now on, trend records with the following *iStatus* values will no longer cause gaps in trend graphs:
+
+| Value | Description |
+|-------|-------------|
+| -1  | Element is starting up. |
+| -2  | Element is being paused. |
+| -3  | Element is being activated. |
+| -4  | Element is going into a timeout state. |
+| -5  | Element is coming out of a timeout state. |
+| -6  | Element is being stopped. |
+| -9  | Trending was started for the specified parameter. |
+| -10 | Trending was stopped for the specified parameter. |
+
 #### Problem with SLNet when rolling over log files [ID 44711]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
@@ -222,14 +305,48 @@ In some rare cases, the SLAnalytics process could stop working during the storag
 
 In some cases, SLAnalytics would stop working when trying to process an invalid database record after having serialized it.
 
+#### Problem when an alarm was updated while a hysteresis timer was scheduled [ID 44749]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When an alarm was updated while a hysteresis timer was scheduled, in some cases, the timestamp of the alarm update would be more recent than that of the alarm generated by the clear hysteresis. As a result, the state changes timeline would no longer be correct.
+
 #### Problem with SLProtocol when multiple connections of the same element went into a timeout state simultaneously [ID 44752]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 In some rare cases, SLProtocol could stop working when multiple connections of the same element went into a timeout state simultaneously.
 
+#### SLLogCollector: Problem when process dumps were triggered in parallel [ID 44780]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, when SLLogCollector tried to trigger process dumps in parallel, in some cases, certain dumps would not be added to the package.
+
+From now on, in order to be able to include all dumps in the package, process dumps will no longer be triggered in parallel.
+
+#### Incorrect error message would appear when a configuration mismatch prevented DataMiner Agents from being clustered [ID 44781]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a configuration mismatch prevented DataMiner Agents from being clustered, up to now, the following incorrect error message would appear:
+
+`Cannot cluster Agents as remote Agent has an unsupported database type.`
+
+From now on, the following correct error message will appear instead:
+
+`Cannot cluster Agents as the agent configuration is incompatible. Please check SLNet logging for more information.`
+
 #### Problem when an element was updated immediately after having been swarmed [ID 44783]
 
 <!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
 
 When an element was updated immediately after having been swarmed from one host to another, in some cases, it would incorrectly re-appear on its former host.
+
+#### STaaS: Retrieving the active alarms of an element would incorrectly be limited to 10,000 [ID 44793]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, if an element had more than 10,000 active alarms, on STaaS systems, only the first 10,000 would incorrectly be retrieved.
+
+From now on, all active alarms will be retrieved, even if the element in question has more than 10,000 active alarms.
