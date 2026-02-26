@@ -75,7 +75,7 @@ Access your new DaaS system.
 
 ## Step 4: Deploy the 'Generic HTTP Query' protocol from the Catalog
 
-Now that you have set up your staging DataMiner System and have connected to the system, let's deploy the *Generic HTTP Query* protocol (also known as connector), this will allow you to create an element to monitor a website of your choice.
+Now that you have set up your staging DataMiner System and have connected to the system, in this step you will deploy the *Generic HTTP Query* protocol (also known as connector). This will allow you to create an element to monitor a website of your choice.
 
 1. Look up the [*Generic HTTP Query* connector](https://catalog.dataminer.services/details/d29994e3-f2a6-4da4-972f-21cbb7b1cd62) in the Catalog.
 
