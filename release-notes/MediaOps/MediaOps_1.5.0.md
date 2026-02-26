@@ -73,6 +73,10 @@ When object-specific properties are defined (for example, when you edit the prop
 
 In addition, to make sure there is only one *Custom* section system-wide, it is no longer possible to define a system-wide section named *Custom*.
 
+#### Scheduling: Stopping early no longer possible during pre-roll [ID 44882]
+
+To prevent the post-roll start from being scheduled before the pre-roll stop action, it is now no longer possible to stop a job early during the pre-roll stage. This means that you can now only stop a job after the pre-roll stage has been completed.
+
 ### Fixes
 
 #### Scheduling: Action buttons missing in Edit Job panel after reverting job status to Tentative [ID 43808]
