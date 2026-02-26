@@ -16,7 +16,7 @@ An issue can occur with DataMiner MessageBroker not being able to connect to the
 
 1. [Download BrokerGateway 1.9.5.23100](https://community.dataminer.services/download/dataminer-brokergateway-1-9-5-23100-msi/) and install this MSI on each server to update BrokerGateway.
    
-1. Once the update is complete, run `C:\Skyline DataMiner\Tools\NATSRepair.exe` on each affected machine.
+1. Once the update is complete, run `C:\Skyline DataMiner\Tools\NATSRepair.exe`.
 
 Alternatively, this repair action can be done manually:
    
@@ -28,7 +28,7 @@ Keep in mind that without the BrokerGateway update, this workaround may break ag
 
 ## Fix
 
-Install DataMiner 10.5.0 [CU11]/10.6.0.<!--RN 44195-->
+Install DataMiner 10.5.0 [CU11]/10.5.12 [CU2]/10.6.0.<!--RN 44195-->
 
 ## Description
 
