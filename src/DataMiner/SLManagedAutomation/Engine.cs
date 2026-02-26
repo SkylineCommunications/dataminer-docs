@@ -192,7 +192,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The info provide by the client.</value>
 		/// <remarks>
-		/// <note type="note">Available from DataMiner 10.6.4 onwards.</note> <!-- RN 44742 -->
+		/// <note type="note">Available from DataMiner 10.6.4/10.7.0 onwards.</note> <!-- RN 44742 -->
 		/// </remarks>
 		public IClientInfo ClientInfo { get; }
 

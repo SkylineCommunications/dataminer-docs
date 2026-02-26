@@ -7,7 +7,7 @@ namespace Skyline.DataMiner.Automation
     /// Can be requested using the <see cref="IEngine.ClientInfo"/> property.
     /// </summary>
     /// <remarks>
-    /// <note type="note">Available from DataMiner 10.6.4 onwards.</note> <!-- RN 44742 -->
+    /// <note type="note">Available from DataMiner 10.6.4/10.7.0 onwards.</note> <!-- RN 44742 -->
     /// </remarks>
     public interface IClientInfo
     {
@@ -16,7 +16,7 @@ namespace Skyline.DataMiner.Automation
         /// If the client did not provide this information, <see langword="null"/> will be returned.
         /// </summary>
         /// <remarks>
-        /// <note type="note">Available from DataMiner 10.6.4 onwards, for scripts executed in web apps.</note> <!-- RN 44742 / RN 44788 -->
+        /// <note type="note">Available from DataMiner 10.6.4/10.7.0 onwards, for scripts executed in web apps.</note> <!-- RN 44742 / RN 44788 -->
         /// </remarks>
         TimeZoneInfo TimeZone { get; }
     }

@@ -4,7 +4,7 @@ uid: DMAAutomationScriptOptionClientTimeZone
 
 # DMAAutomationScriptOptionClientTimeZone
 
-Available from DataMiner 10.6.4 onwards. <!-- RN 44742 / RN 44788 -->
+Available from DataMiner 10.6.4/10.7.0 onwards. <!-- RN 44742 / RN 44788 -->
 
 | Item | Format | Description                                                          |
 |------|--------|----------------------------------------------------------------------|
@@ -13,7 +13,7 @@ Available from DataMiner 10.6.4 onwards. <!-- RN 44742 / RN 44788 -->
 
 ## DMAAutomationScriptOptionClientTimeZoneType
 
-Available from DataMiner 10.6.4 onwards. <!-- RN 44742 / RN 44788 -->
+Available from DataMiner 10.6.4/10.7.0 onwards. <!-- RN 44742 / RN 44788 -->
 
 | Option  | Description |
 |---------|-------------|
