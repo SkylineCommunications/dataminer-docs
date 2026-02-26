@@ -14,21 +14,16 @@ To learn how to create a low-code app, you can follow the steps below or watch t
 
 *Watch first: [Creating your first dashboard](xref:Creating_a_completely_new_dashboard)*
 
-In this video, you will learn how to:
+In this video, the following topics are covered:
 
-- Create a new low-code app and define a custom name, icon, and color (see also: [Customizing the icon and color of an app](xref:LowCodeApps_Layout)).
-
-- Add multiple pages to your app and configure their name and icon to create a professional and intuitive layout (see also: [Configuring an app page](xref:LowCodeApps_page_config)).
-
-- Add and configure components, including a table, gauge, and line & area chart component (see also: [Configuring components](xref:Configuring_components)).
-
-In addition, the video also demonstrates more advanced capabilities, including how to:
-
-- Create a filtered query to retrieve a specific subset of data (see also: [Creating a GQI query](xref:Creating_GQI_query)).
-
-- Create a panel and define component actions so that the panel opens when an item in a table is double-clicked (see also: [Configuring app events](xref:LowCodeApps_event_config)).
-
-- Use component data to link components across pages, so that selecting or double-clicking an item in a table determines which data is shown in other components (see also: [Component data](xref:Component_Data)).
+| Level | What you will learn | More information |
+| -- | -- | -- |
+| Basic | Create a new low-code app with a custom name, icon, and color. | [Customizing the icon and color of an app](xref:LowCodeApps_Layout) |
+| Basic | Add multiple pages with their own names and icons. | [Configuring an app page](xref:LowCodeApps_page_config) |
+| Basic | Add and configure several components (table, gauge, and line & area chart) | [Configuring components](xref:Configuring_components) |
+| Advanced | Create a filtered query and use it in a table component. | [Creating a GQI query](xref:Creating_GQI_query) |
+| Advanced | Create a panel and define component actions so it opens when an item in a table is double-clicked. | [Configuring an app panel](xref:LowCodeApps_panel_config)<br>[Configuring app events](xref:LowCodeApps_event_config) |
+| Advanced | Use component data to link components across pages, so that selecting or double-clicking an item in the table determines which data is shown in other components. | [Component data](xref:Component_Data) |
 
 > [!TIP]
 > If you are looking for a very beginner-friendly, step-by-step introduction that focuses purely on creating and publishing your first app, see [Tutorial: Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing).
