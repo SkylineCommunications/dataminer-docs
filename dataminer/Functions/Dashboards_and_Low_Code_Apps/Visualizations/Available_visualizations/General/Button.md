@@ -4,9 +4,9 @@ uid: DashboardButton
 
 # Button
 
-The button component is a customizable element used to trigger actions in a low-code app.
+The button component lets you **trigger actions with a single click**. In a low-code app, a button is typically used to launch events, such as running an automation script, navigating to another page, or updating data. In a dashboard, the button component (currently in preview) is used to execute a button parameter from an element.
 
-![Button](~/dataminer/images/Button.png)<br>*Button component in DataMiner 10.4.6*
+![Button](~/dataminer/images/button.gif)<br>*Button component in DataMiner 10.4.6*
 
 > [!TIP]
 > See also: [Using button components and header bars in Low-Code Apps](https://www.youtube.com/watch?v=7Qhitj3fQB4) ![Video](~/dataminer/images/video_Duo.png)
