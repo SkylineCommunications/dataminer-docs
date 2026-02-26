@@ -95,9 +95,10 @@ From now on, the *Large Alarm Trees* BPA test will run on a daily basis, and wil
 
 Also, no notice will be generated anymore when alarm trees are getting large. As a result, in the `AlarmSettings` section of the *MaintenanceSettings.xml* file, the `recurring` attribute of the `AlarmsPerParameter` element is now obsolete.
 
-#### Security enhancements [ID 44579]
+#### Security enhancements [ID 44579] [ID 44821]
 
 <!-- 44579: MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+<!-- 44821: MR 10.6.0 [CU1] - FR 10.6.4 -->
 
 A number of security enhancements have been made.
 
