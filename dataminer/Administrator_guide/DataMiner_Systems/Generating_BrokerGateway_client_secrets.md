@@ -132,8 +132,7 @@ If the targeted DataMiner Agent is removed from the cluster, the clients on the 
 > The DataMiner Agent specified in `MessageBrokerConfig.json` must stay reachable for the external clients to be able to communicate.
 
 > [!IMPORTANT]
-> BrokerGateway instances that are down at the moment ClientSecrets are altered will not be aware of the changes until they start up. If another BrokerGateway instance that already has the updated ClientSecrets is running, the restarting instance will pick up the changes.
-> However, if for some reason all BrokerGateway instances are stopped and the instance that was not aware of the ClientSecrets changes starts up first, then all instances will synchronize with the unaltered version of ClientSecrets, effectively reverting the changes across the entire cluster.
+> BrokerGateway instances that are down while client secrets are altered will not be aware of the changes until they start up. If another BrokerGateway instance that already has the updated client secrets is running, the restarting instance will pick up the changes. However, if for some reason all BrokerGateway instances are stopped, and the instance that was not aware of the changes to the client secrets starts up first, then all instances will synchronize with the unaltered version of the client secrets, effectively reverting the changes across the entire cluster.
 
 ## Behavioral changes when client secrets are configured
 
