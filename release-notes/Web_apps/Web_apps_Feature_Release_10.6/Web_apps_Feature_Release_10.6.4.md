@@ -211,6 +211,14 @@ From now on, the viewport of a *Node edge graph* component will mostly be reset 
 
 Also, when the node positions are linked to data, from now on, a *Node edge graph* component will allow you to zoom out beyond the initial viewport.
 
+#### GQI DxM: Loaded assembly files of GQI extensions will no longer be locked [ID 44806]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, Microsoft Windows would lock the assembly files of a GQI extension (i.e. an ad hoc data source or a custom operator) and those of its dependencies. As a result, when such a file needed to be replaced when, for example, a development pack was updated, replacing that file would fail when the extension in question was running.
+
+From now on, the GQI DxM will load an extension and its dependencies byte per byte into the `C:\Skyline DataMiner\Scripts\Libraries` and `C:\Skyline DataMiner\ProtocolScripts\DllImport` folders. This will ensure that these files will no longer be locked when the extension is running.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Alarm table component: Problems when scrolling [ID 44662]
