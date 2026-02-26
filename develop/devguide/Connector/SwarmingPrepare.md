@@ -47,7 +47,8 @@ The following Engine methods are obsolete and should not be used. Instead, use t
 | SetAlarmProperties(int, int, string[], string[]) | SetAlarmProperties(AlarmTreeID, string[], string[]) |
 | AcknowledgeAlarm(int, int, string) | AcknowledgeAlarm(AlarmTreeID, string) |
 
-* Note that by `AlarmID`, we here refer to the `AlarmID` type which includes both the Alarm tree ID and the Alarm ID.
+> [!NOTE]
+> (*) Note that by `AlarmID`, we here refer to the `AlarmID` type which includes both the AlarmTreeID and the Alarm ID.
 
 ## Obsolete properties in the AlarmEventMessage class
 
