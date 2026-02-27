@@ -31,15 +31,15 @@ For Skyline Communications, you can access the QAOps system at:
 
 - [QAOps staging](https://qaopsstaging-skyline.on.dataminer.services/root/)
 
-There are three ways to interact with QAOps:
+You can interact with QAOps in the following ways:
 
-1. Several Low-Code Apps handle most access. These are described in the [QAOps main UI](xref:QAOps_Main_UI).
+- [Several low-code apps](xref:QAOps_Main_UI) handle most access.
 
-1. The QAOps .NET tool is intended for command-line access. This is described in [QAOps tool](xref:QAOps_Tool).
+- The [QAOps .NET tool](xref:QAOps_Tool) is intended for command-line access.
 
-1. You can create test packages, intended to run on the QAOps system, using Visual Studio projects. This is described in [QAOps test package](xref:QAOps_Test_Package).
+- You can create [test packages](xref:QAOps_Test_Package), intended to run on the QAOps system, using Visual Studio projects.
 
-## Overview
+## QAOps system components
 
 The QAOps system consists of the following components:
 
@@ -49,10 +49,10 @@ The QAOps system consists of the following components:
 
 - [QAOps test packages](xref:QAOps_Test_Package), which contain collections of tests. Each test can send one or more test results.
 
-![QAOps overview](~/develop/images/QAOps_UI_User_Overview.png)
+<!-- ![QAOps overview](QAOpsUserOverview.drawio.png) -->
 
 ## Starting a test
 
 To start a test, select the test suite from the specific configuration you want to execute.
 
-QAOps receives the test run and waits for an available server for the selected configuration. Once a server is available, it begins running all test packages of the test suite on that server. Results will appear in the user Low-Code App of the QAOps setup.
+QAOps receives the test run and waits for an available server for the selected configuration. Once a server is available, it begins running all test packages of the test suite on that server. Results will appear in the user low-code ap of the QAOps setup.
