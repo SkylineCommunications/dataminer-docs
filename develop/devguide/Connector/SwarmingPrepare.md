@@ -48,7 +48,7 @@ The following Engine methods are obsolete and should not be used. Instead, use t
 | AcknowledgeAlarm(int, int, string) | AcknowledgeAlarm(AlarmTreeID, string) |
 
 > [!NOTE]
-> (*) Note that by `AlarmID`, we here refer to the `AlarmID` type which includes both the AlarmTreeID and the Alarm ID.
+> (*) Note that here `AlarmID` refers to the `AlarmID` type that includes both the AlarmTreeID and the Alarm ID.
 
 ## Obsolete properties in the AlarmEventMessage class
 
