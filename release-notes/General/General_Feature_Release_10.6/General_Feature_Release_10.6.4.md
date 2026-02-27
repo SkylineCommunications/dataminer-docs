@@ -317,6 +317,12 @@ When an alarm was updated while a hysteresis timer was scheduled, in some cases,
 
 In some rare cases, SLProtocol could stop working when multiple connections of the same element went into a timeout state simultaneously.
 
+#### BPA test 'Check Deprecated DLL Usage' would incorrectly flag the MySql.Data NuGet as deprecated [ID 44758]
+
+<!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
+
+Since DataMiner 10.5.12/10.6.0, the *Check Deprecated DLL Usage* BPA test would incorrectly flag the *MySql.Data* NuGet (*MySql.Data.dll*) as deprecated, especially when that file was located in `C:\Skyline Dataminer\ProtocolScripts\DllImport\` or one of its subfolders.
+
 #### SLLogCollector: Problem when process dumps were triggered in parallel [ID 44780]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
