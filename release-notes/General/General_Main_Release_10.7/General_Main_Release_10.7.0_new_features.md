@@ -262,3 +262,31 @@ In the automation script, the time zone will be available on the `IEngine` input
 >
 > - If the script was executed from a source other than a web app, or if the time zone information could not be parsed, the `TimeZone` property can be null.
 > - In case a subscript is executed, the `ClientInfo` of the parent script will also be available in the subscript.
+
+#### SLNet: Minimum number of worker threads and I/O threads is now configurable [ID 44843]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+In the *SLNet.exe.config* file, it is now possible to configure the minimum number of worker threads and I/O threads for the SLNet process.
+
+Configuring a specific minimum number of threads will especially be useful for systems that experience bursts of high message throughput, which can lead to thread starvation under default .NET ThreadPool behavior. Examples of such systems include SRM systems on which a large number of bookings start simultaneously.
+
+See the following example:
+
+```xml
+<configuration>
+   ...
+    <appSettings>
+        ...
+        <add key="ThreadPoolMinWorkerThreads" value="64" />
+        <add key="ThreadPoolMinIOThreads" value="64" />
+    </appSettings>
+    ...
+</configuration>
+```
+
+On startup, SLNet adds an entry mentioning the configured thread pool values in the SLNet.txt log file. See the following example:
+
+`2026-02-23 10:26:07.802|5|ConfigureMinThreadPoolThreads|Setting ThreadPool minimum worker threads to 64 and minimum IO threads to 64`
+
+If no value (or an invalid value) is configured, SLNet will fall back to the default behavior to avoid issues related to excessively high thread counts. By default, the minimum number of I/O and completion port threads will be set to at least 16 if the default chosen by .NET would be less than that.
