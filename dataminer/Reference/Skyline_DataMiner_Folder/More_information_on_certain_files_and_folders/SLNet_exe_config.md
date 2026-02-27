@@ -32,7 +32,7 @@ It contains among others the following settings:
     </appSettings>
     ```
 
-- The minimum number of threads the .NET threadpool creates on demand. Increasing this value can improve performance on systems that experience a high burst of incoming request messages. This is configured via the *ThreadPoolMinWorkerThreads* and *ThreadPoolMinIOThreads* keys in the *appSettings* section. Supported from DataMiner 10.6.4 onwards. See [ThreadPool.SetMinThreads](https://learn.microsoft.com/en-us/dotnet/api/system.threading.threadpool.setminthreads?view=netframework-4.7.1) for more information. For example:
+- The minimum number of threads the .NET threadpool creates on demand. Increasing these values can improve performance on systems that experience a high burst of incoming request messages. The correct setting is system‑dependent; using values that are too low or too high can negatively impact overall performance. This is configured via the *ThreadPoolMinWorkerThreads* and *ThreadPoolMinIOThreads* keys in the *appSettings* section. Supported from DataMiner 10.6.4 onwards. See [ThreadPool.SetMinThreads](https://learn.microsoft.com/en-us/dotnet/api/system.threading.threadpool.setminthreads?view=netframework-4.7.1#remarks) for more information. For example:
     ```xml
     <appSettings>
         ...
