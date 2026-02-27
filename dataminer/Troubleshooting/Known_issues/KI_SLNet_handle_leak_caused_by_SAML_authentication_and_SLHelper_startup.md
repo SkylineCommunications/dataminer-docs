@@ -6,9 +6,7 @@ uid: KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup
 
 ## Affected versions
 
-- Main Release versions from DataMiner 10.5.0 [CU12]/10.6.0 onwards.
-
-- Feature Release versions from DataMiner 10.6.3 onwards. <!--RN 44314-->
+DataMiner 10.5.0 [CU12], 10.6.0, and 10.6.3 [CU0]<!--RN 44314-->.
 
 ## Cause
 
@@ -16,7 +14,7 @@ Logger instances used in SAML authentication and SLHelper-related flows are not 
 
 ## Fix
 
-No fix is available yet. <!-- Task ID: 292260-->
+Install the latest, patched version of DataMiner 10.6.3 [CU1], 10.5.0 [CU12], or 10.6.0<!--RN 44868-->.
 
 ## Workaround
 
