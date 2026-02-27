@@ -470,8 +470,6 @@ items:
             topicUid: KI_RTEs_NATS_reconfiguration
           - name: Default NATS port is already in use
             topicUid: KI_NATS_port_9090
-          - name: RTEs caused by problem when updating alarm templates
-            topicUid: KI_RTEs_Alarm_Template_Issue
           - name: Inaccessible logger table data in Elasticsearch because of incorrect casing
             topicUid: KI_Inaccessible_data_Elasticsearch_casing
           - name: Activities and scripts delayed because of CheckVIPs thread
@@ -510,24 +508,10 @@ items:
             topicUid: KI_element_data_loss_after_migration_in_CC_setup
           - name: SLDataGateway memory leak during Cassandra Cluster migration
             topicUid: KI_SLDataGateway_leak_during_CC_migration
-          - name: SLProtocol memory leak when HTTP connectors are used
-            topicUid: KI_SLProtocol_memory_leak_HTTP
           - name: Data from Elasticsearch cluster with IPv6 addresses offloaded to files
             topicUid: KI_Elasticsearch_IPv6
           - name: Increased CPU load and degraded performance because of excessive number of SPI events
             topicUid: Excessive_SPI_events_causing_CPU_load
-          - name: SLDataGateway memory leak
-            topicUid: KI_SLDataGateway_memory_leak
-          - name: Taskbar Utility performance issue while agents are being upgraded
-            topicUid: KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded
-          - name: SLDMS Hosting Agent cache issue
-            topicUid: KI_SLDMS_hosting_agent_cache_issue
-          - name: Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database
-            topicUid: KI_Closed_alarms_migrated_too_slowly
-          - name: SNMP polling issues in case protocol contains wildcards in parameter OIDs
-            topicUid: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
-          - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
-            topicUid: KI_RTE_with_SLAnalytics_when_upgrading
           - name: Shapes in DataMiner stencils not found in Visio search
             topicUid: KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search
           - name: SLDataMiner addressChangeThread RTE after DMA startup
