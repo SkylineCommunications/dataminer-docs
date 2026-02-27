@@ -47,6 +47,12 @@ To create categories for resource pools, deploy the Categories app from the Data
 > [!NOTE]
 > This release also includes the enhancements and fixes of the 1.4.x releases.
 
+### Breaking changes
+
+#### Scheduling: Stopping early no longer possible during pre-roll [ID 44882]
+
+To prevent the post-roll start from being scheduled before the pre-roll stop action, it is now no longer possible to stop a job early during the pre-roll stage. This means that you can now only stop a job after the pre-roll stage has been completed.
+
 ### Enhancements
 
 #### Resource Studio: Improved feedback and visibility when deprecating or restoring multiple resources [ID 43804]
