@@ -54,6 +54,14 @@ ALTER TABLE [dbo].[info] DROP CONSTRAINT [PK_info_1];
 ALTER TABLE [dbo].[info] ADD CONSTRAINT [PK_info_1] PRIMARY KEY CLUSTERED ([id] ASC, [DmaId] ASC, [EId] ASC) WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY];
 ```
 
+> [!NOTE]
+> If you downgrade to a DataMiner version prior to 10.6.4 after running these scripts, the downgrade will report these two errors:
+>
+> - "Exception during unicode conversion for table alarm : Violation of PRIMARY KEY constraint 'PK_alarm_temp_1'. Cannot insert duplicate key in object 'dbo.alarm_temp'. The duplicate key value is (xxx, xxx)."
+> - "Exception during unicode conversion for table info : Violation of PRIMARY KEY constraint 'PK_info_temp_1'. Cannot insert duplicate key in object 'dbo.info_temp'. The duplicate key value is (xxx, xxx)."
+>
+> These errors are expected and can be ignored, as the primary key definitions will no longer be compatible with the older version. There will not be further impact.
+
 ## Oracle
 
 > [!NOTE]
