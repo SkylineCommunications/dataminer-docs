@@ -6,7 +6,7 @@ keywords: central database
 # Setting up an offload database
 
 > [!NOTE]
-> This feature is not available if [Swarming](xref:Swarming) is enabled.
+> When [Swarming](xref:Swarming) is enabled, some offload features are disabled. For more information, see [Offload database configuration with Swarming enabled](xref:Offload_Database_With_Swarming).
 
 ## Server configuration
 
@@ -299,3 +299,6 @@ Also, when you upgrade a DataMiner Agent using an upgrade package, the offload d
 
 > [!NOTE]
 > This only applies to databases of type "MySQL" and "Microsoft SQL Server". Oracle databases have to be created manually.
+
+> [!NOTE]
+> If an offload database was initially set up before 10.6.4, the updates required to support [offload databases with Swarming enabled](xref:Offload_Database_With_Swarming) are not automatically applied. In this scenario, manual queries need to be executed before enabling Swarming. The [Swarming prerequisites check](xref:EnableSwarming#running-a-prerequisites-check) will indicate if these queries need to be executed.
