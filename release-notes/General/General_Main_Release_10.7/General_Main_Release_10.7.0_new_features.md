@@ -125,6 +125,19 @@ These filtering options are saved in the `<SLNet>` section of the *MaintenanceSe
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+In order to allow SLNet to automatically update the OAuth token needed to access an SMTP mail server that requires authentication via XOAuth2, the following additional OAuth settings have now been added to the DataMiner.xml file. However, note that these settings can only be configured via DataMiner Cube.
+
+| Setting | Description |
+|---------|-------------|
+| OAuthClientID      | The client ID that has been requested for DataMiner. |
+| OAuthClientSecret  | The client secret corresponding to the client ID.<br>As this secret is treated as a password, it will not be visible in plain text here. |
+| OAuthTokenEndpoint | The URI of the OAuth token endpoint. |
+| OAuthConfigData    | Placeholder for additional settings that can be stored here by the client application (for example DataMiner Cube) |
+
 #### New BPA test: Detect unsupported connector versions [ID 44607]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
