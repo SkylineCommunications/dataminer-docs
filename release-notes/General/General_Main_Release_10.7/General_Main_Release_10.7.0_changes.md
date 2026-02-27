@@ -314,3 +314,11 @@ From now on, trend records with the following *iStatus* values will no longer ca
 | -6  | Element is being stopped. |
 | -9  | Trending was started for the specified parameter. |
 | -10 | Trending was stopped for the specified parameter. |
+
+#### Problem when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent [ID 44848]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent (for example because that Agent was unavailable), an error would be thrown inside the UI of that dashboard or low-code app.
+
+From now on, when a component in a dashboard or low-code app is not able to retrieve data from a remote DataMiner Agent, a "Nothing to show" message will appear in that component instead.

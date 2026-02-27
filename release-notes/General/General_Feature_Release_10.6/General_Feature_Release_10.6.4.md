@@ -384,3 +384,11 @@ When an element was updated immediately after having been swarmed from one host 
 Up to now, if an element had more than 10,000 active alarms, on STaaS systems, only the first 10,000 would incorrectly be retrieved.
 
 From now on, all active alarms will be retrieved, even if the element in question has more than 10,000 active alarms.
+
+#### Problem when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent [ID 44848]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent (for example because that Agent was unavailable), an error would be thrown inside the UI of that dashboard or low-code app.
+
+From now on, when a component in a dashboard or low-code app is not able to retrieve data from a remote DataMiner Agent, a "Nothing to show" message will appear in that component instead.
