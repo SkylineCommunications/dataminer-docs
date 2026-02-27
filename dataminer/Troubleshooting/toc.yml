@@ -262,8 +262,6 @@ items:
     items:
       - name: Current issues
         items:
-          - name: SLNet handle leak caused by SAML authentication and SLHelper startup
-            topicUid: KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup
           - name: Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated
             topicUid: KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged
           - name: DataMiner Web and GQI crash briefly during startup
@@ -310,6 +308,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: SLNet handle leak caused by SAML authentication and SLHelper startup
+            topicUid: KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup
           - name: Possible overbooking in SRM
             topicUid: KI_Possible_overbooking_in_SRM
           - name: SLDataGateway issue caused by OpenSearch health monitoring
