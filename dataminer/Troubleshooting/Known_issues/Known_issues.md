@@ -215,72 +215,6 @@ uid: Known_issues
 | [SLElement memory leak during Cassandra Cluster migration](xref:KI_SLElement_CPU_memory_leak_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0. | DataMiner 10.2.0 [CU10]/10.3.1 | October 28, 2022 |
 | [Data from Elasticsearch cluster with IPv6 addresses offloaded to files](xref:KI_Elasticsearch_IPv6) | Any version prior to DataMiner 10.2.0 [CU11]/10.3.2 with Elasticsearch cluster using IPv6 addresses | DataMiner 10.2.0 [CU11]/10.3.2 | October 21, 2022 |
 
-## 10.2.x
-
-| Issue | Affected versions | Resolved in | Date added |
-| -- | -- | -- | -- |
-| [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
-| [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
-| [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
-| [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
-| [Elasticsearch not initialized when DataMiner starts up](xref:KI_Elasticsearch_not_initialized_on_DMA_startup) | Any version using Elasticsearch | | April 20, 2023 |
-| [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
-| [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
-| [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From DataMiner 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
-| [Incorrect date sorting in Bookings app with custom column configurations](xref:KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations) | SRM setups with DataMiner version below 10.2.0 [CU10]/10.3.1 and SRM setups with custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1 | DataMiner 10.2.0 [CU10]/10.3.1 | January 5, 2026 |
-| [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
-| [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
-| [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
-| [Reuploaded DVE protocol version is incorrectly set as production version](xref:KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version) | DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 to DataMiner 10.4.0 [CU11]/10.5.2 | DataMiner 10.4.0 [CU12]/10.5.3 | December 18, 2024 |
-| [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.1.0 [CU17]/10.2.0 [CU5]/10.2.8 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
-| [nats-server.config file not included in DataMiner backups](xref:KI_nats-server_config_file_not_included_in_backups) | From DataMiner 10.2.0 [CU6]/10.2.8 onwards | DataMiner 10.4.11/10.5.0 | October 10, 2024 |
-| [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | August 13, 2024 |
-| [Timetrace data is no longer written during Cassandra Cluster migration](xref:KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration) | Cassandra Cluster setups | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | February 29, 2024 |
-| [Port exhaustion because of NATS reconnection attempts](xref:KI_port_exhaustion_because_of_NATS_reconnect_attempts) | Any DataMiner version | DataMiner 10.4.6/10.5.0 | February 2, 2024 |
-| [One or multiple Analytics features fail to start](xref:KI_Analytics_features_not_starting) | DataMiner 10.3.5 up to 10.4.2<br>10.2.0 Main Release from DataMiner 10.2.0 [CU13] onwards<br>DataMiner 10.3.0 [CU2] up to [CU11] | DataMiner 10.3.0 [CU12]/10.4.3 | January 29, 2024. |
-| [NATS configuration not updated after adding DMA to DMS](xref:KI_NATS_config_not_updated_after_adding_DMA) | All DataMiner versions | DataMiner 10.3.0 [CU12]/10.4.0 [CU0]/10.4.3 | January 24, 2024 |
-| [NATS services missing after reboot](xref:KI_missing_NATS_services) | Any version | [Requires configuration](xref:KI_missing_NATS_services) | January 10, 2024 |
-| [Cube freezes on 'Connected!' loading screen when no alarm tabs are displayed](xref:KI_Cube_connection_issue_alarm_tabs) | Any versions from DataMiner 10.2.0 onwards using automatic client updates | DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.11<br>Cube 10.3.11 | October 16, 2023 |
-| [Offload to MySQL offload database fails](xref:KI_offload_database_incorrect_integer_value) | Any version | [Requires configuration](xref:KI_offload_database_incorrect_integer_value) | October 4, 2023 |
-| [Default NATS port is already in use](xref:KI_NATS_port_9090) | From DataMiner 10.1.0/10.1.1 onwards | [Requires configuration](xref:KI_NATS_port_9090) | August 3, 2023 |
-| [Unable to connect to DMS when using .NET Remoting](xref:KI_Unable_to_Connect_Net_Remoting) | Any versions from DataMiner 10.2.0 onwards using automatic client updates | DataMiner 10.3.9/10.4.0 | August 1, 2023 |
-| [RTEs caused by problem when updating alarm templates](xref:KI_RTEs_Alarm_Template_Issue) | DataMiner 10.2.0 [CU15], [CU16], and [CU17] | DataMiner 10.2.0 [CU18] | July 31, 2023 |
-| [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters_resolved_issues) | Cassandra Cluster setups | DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9<br>DataMiner 10.3.0 [CU7]/10.3.10<br>DataMiner 10.3.0 [CU8]/10.3.11 | June 1, 2023 |
-| [Cassandra disconnects after loss of a single node](xref:KI_Cassandra_disconnects_after_loss_of_a_single_node) | Cassandra Cluster setups | DataMiner 10.3.0 [CU7]/10.3.10 | June 1, 2023 |
-| [Corrupted low-code app after concurrent editing actions](xref:KI_app_corruption_after_editing) | From DataMiner 10.2.5/10.3.0 onwards | DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 | May 26, 2023 |
-| [Cassandra cluster data not offloaded while database is unavailable](xref:KI_Cassandra_cluster_data_not_offloaded) | Cassandra Cluster setups | DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9 | May 22, 2023 |
-| [Activities and scripts delayed because of CheckVIPs thread](xref:KI_CheckVIPs_delays_activities) | DataMiner 10.2.0 up to 10.2.0 [CU15]/10.3.0 [CU4]<br>DataMiner 10.1.12 up to 10.3.6 | DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 | April 28, 2023 |
-| [GenIf folder takes up too much disk space](xref:KI_GenIf_Folder_Growing_In_Size) | From DataMiner 10.1.0/10.0.13 onwards | DataMiner 10.3.0 [CU5]/10.3.8 | March 15, 2023 |
-| [Problem with booking automation and function DVE deactivation](xref:KI_SRM_booking_events_issue) | SRM setups with DataMiner version below 10.3.0/10.3.2 | DataMiner 10.3.0/10.3.2 | March 10, 2023 |
-| [SLPort deadlock when element with serial connection is restarted](xref:KI_SLPort_deadlock_after_restart_serial_connection) | DataMiner 10.1.0 [CU17] up to 10.2.0 [CU11]/10.3.0.0 - 12752<br>DataMiner 10.2.8 up to 10.3.3 | DataMiner 10.2.0 [CU12]/10.3.0.0 - 12790/10.3.3 [CU1] | February 28, 2023 |
-| [Contents of state_changes table not migrated after Cassandra Cluster migration](xref:KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration) | Cassandra Cluster setups | DataMiner 10.3.0 [CU3]/10.2.0 [CU15]/10.3.4 | January 16, 2023 |
-| [Cassandra cluster node in unexpected state](xref:KI_Cassandra_cluster_node_unexpected_state) | Cassandra Cluster setups | [Requires configuration](xref:KI_Cassandra_cluster_node_unexpected_state) | January 10,2023 |
-| [Year 2038 problem for Cassandra](xref:Year_2038_Problem_for_Cassandra) | All DataMiner versions with a Cassandra setup<br>prior to DataMiner 10.2.0 [CU14]/10.3.0 [CU2]/10.3.4 | DataMiner 10.2.0 [CU14]/10.3.0 [CU2]/10.3.4 | January 10, 2023 |
-| [Null reference exceptions in SLDBConnection.txt and unhandled exception when retrieving Correlation details](xref:KI_NullReferenceException_SLDBConnection) | DataMiner 10.1.0 up to 10.2.0 [CU10]<br>DataMiner 10.1.2 up to 10.3.1 | DataMiner 10.2.0 [CU11]/10.3.0/10.3.2 | December 20,2022 |
-| [SLProtocol timer thread runtime error](xref:KI_SLProtocol_timer_thread_RTE) | DataMiner versions prior to 10.2.0 [CU10]/10.3.1 | DataMiner 10.2.0 [CU10]/10.3.1 | December 20, 2022 |
-| [Vertical text in Visual Overview not displayed correctly](xref:KI_Visual_Overview_Vertical_Text_no_longer_working) | DataMiner 10.2.0 [CU3]/10.2.3 up to 10.3.0 [CU4]/10.3.7 | DataMiner 10.3.0 [CU5]/10.3.8 | December 16, 2022 |
-| [SLNet deadlock on DMA startup](xref:KI_SLNet_deadlock_on_startup) | DataMiner 10.1.0 up to 10.2.0 [CU15]/10.3.0 [CU3]<br>DataMiner 10.1.2 up to 10.3.2 | DataMiner 10.2.0 [CU16]/10.3.0 [CU3]/10.3.3 | December 14, 2022 |
-| [Stable trend points not kept alive](xref:KI_stable_trend_points_not_kept_alive) | DataMiner 10.2.0 [CU8] up to 10.2.0 [CU10]<br>DataMiner 10.2.10 up to 10.3.1 | DataMiner 10.2.0 [CU11]/10.3.2 | December 9, 2022 |
-| [Missing 1-day average trending records](xref:KI_missing_avg_trending) | DataMiner 10.2.0 [CU0] up to 10.2.0 [CU10]<br>DataMiner 10.1.10 up to 10.3.1 | DataMiner 10.2.0 [CU11]/10.3.2 | December 9, 2022 |
-| [Memory leak in SLNet threads](xref:KI_SLNet_thread_leak) | DataMiner 10.2.12 [CU0] and [CU1] | DataMiner 10.2.12 [CU2]/10.3.1 | December 9, 2022 |
-| [SLAutomation memory leak when Engine.AddScriptOutput is used](xref:KI_SLAutomation_memory_leak_AddScriptOutput) | DataMiner 10.1.0 and 10.2.0 (up to [CU10])<br>From DataMiner 10.0.2 up to 10.3.1 | DataMiner 10.2.0 [CU11]/10.3.0/10.3.2 | December 8, 2022 |
-| [SLNet issues due to SPI obfuscation](xref:KI_SLNet_issue_SPI_obfuscation) | DataMiner 10.2.0 [CU3] up to 10.2.0 [CU5]<br>DataMiner 10.2.6 up to 10.2.8 | DataMiner 10.2.0 [CU6]/10.2.9 | December 7, 2022 |
-| [SLLog issue when large alarm tree is closed](xref:KI_SLLog_issue_when_large_alarm_tree_is_closed) | DataMiner 10.2.0 [CU8] and [CU9]<br>DataMiner 10.2.11 and 10.2.12 | DataMiner 10.2.0 [CU10]/10.3.1 | November 16, 2022 |
-| [Element data lost after migrating elements in Cassandra Cluster setup](xref:KI_element_data_loss_after_migration_in_CC_setup) | DataMiner 10.1.0 up to 10.2.0 [CU11]<br>DataMiner 10.0.11 up to 10.3.1 | DataMiner 10.2.0 [CU12]/10.3.2 | November 15, 2022 |
-| [Multiple issues when Failover based on hostnames is used](xref:KI_Failover_with_hostnames) | DataMiner 10.2.0/10.1.8 up to 10.3.0 [CU10]/10.4.1 | DataMiner 10.3.0 [CU11]/10.4.2 | November 15, 2022 |
-| [SLDataGateway memory leak during Cassandra Cluster migration](xref:KI_SLDataGateway_leak_during_CC_migration) | DataMiner 10.1.0 prior to [CU22]<br>DataMiner 10.2.0 prior to [CU10]<br>DataMiner 10.1.2 up to 10.2.12 | DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1 | November 3, 2022 |
-| [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0 | DataMiner 10.2.0 [CU10]/10.3.1 | October 28, 2022 |
-| [SLElement memory leak during Cassandra Cluster migration](xref:KI_SLElement_CPU_memory_leak_during_CC_migration) | DataMiner 10.1.0/10.1.2 up to 10.2.0 [CU9]/10.3.0 | DataMiner 10.2.0 [CU10]/10.3.1 | October 28, 2022 |
-| [SLProtocol memory leak when HTTP connectors are used](xref:KI_SLProtocol_memory_leak_HTTP) | DataMiner 10.1.0 [CU19], 10.2.0 <br>[CU7], and 10.2.8 up to 10.2.11 | DataMiner 10.1.0 [CU20]/10.2.0 [CU8]/10.2.11 [CU1] | October 26, 2022 |
-| [Data from Elasticsearch cluster with IPv6 addresses offloaded to files](xref:KI_Elasticsearch_IPv6) | Any version prior to DataMiner 10.2.0 [CU11]/10.3.2 with Elasticsearch cluster using IPv6 addresses | DataMiner 10.2.0 [CU11]/10.3.2 | October 21, 2022 |
-| [Increased CPU load and degraded performance because of excessive number of SPI events](xref:Excessive_SPI_events_causing_CPU_load) | 10.2 Main and Feature Release <br>versions prior to 10.2.0 [CU6]<br> and 10.2.9. | DataMiner 10.2.0 [CU6]/10.2.9 | October 19, 2022 |
-| [SLDataGateway memory leak](xref:KI_SLDataGateway_memory_leak) | Cassandra Cluster setups<br>prior to 10.2.0 [CU8]/10.2.11 | DataMiner 10.2.0 [CU8]/10.2.11 | October 10, 2022 |
-| [Taskbar Utility performance issue while agents are being upgraded](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded) | 10.1.0 [CU19] and 10.2.0 [CU7]<br>10.2.10 | DataMiner 10.1.0 [CU20]/10.2.0 [CU8]/10.2.11 | September 23, 2022 |
-| [SLDMS Hosting Agent cache issue](xref:KI_SLDMS_hosting_agent_cache_issue) | DataMiner 10.2 Main & Feature Release prior to 10.2.0 [CU7] and 10.2.10 | DataMiner 10.2.0 [CU7]/10.2.10 | September 15, 2022 |
-| [Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database](xref:KI_Closed_alarms_migrated_too_slowly) | Versions using Elasticsearch<br>for alarm indexing prior to<br>10.2.0 [CU8] and 10.2.11 | DataMiner 10.2.0 [CU8]/10.2.11 | September 14, 2022 |
-| [SNMP polling issues in case protocol contains wildcards in parameter OIDs](xref:KI_SNMP_polling_issues_with_wildcards_in_param_OIDs) | DataMiner 10.2.0 [CU6]/10.2.9 | DataMiner 10.2.0.0 - 12184 [CU6]/10.2.9 [CU1] | September 6, 2022 |
-| [SLAnalytics RTEs after upgrading DMS with Cassandra Cluster](xref:KI_RTE_with_SLAnalytics_when_upgrading) | DataMiner 10.2.8 [CU1] | DataMiner 10.2.8 [CU2] | August 8, 2022 |
-
 ## Other
 
 | Issue | Affected versions | Resolved in | Date added |
@@ -324,9 +258,6 @@ uid: Known_issues
 | [SLProtocol memory leak when HTTP connectors are used](xref:KI_SLProtocol_memory_leak_HTTP) | DataMiner 10.1.0 [CU19], 10.2.0 <br>[CU7], and 10.2.8 up to 10.2.11 | DataMiner 10.1.0 [CU20]/10.2.0 [CU8]/10.2.11 [CU1] | October 26, 2022 |
 | [Increased CPU load and degraded performance because of excessive number of SPI events](xref:Excessive_SPI_events_causing_CPU_load) | DataMiner 10.2 Main and Feature Release <br>versions prior to 10.2.0 [CU6]<br> and 10.2.9. | DataMiner 10.2.0 [CU6]/10.2.9 | October 19, 2022 |
 | [SLDataGateway memory leak](xref:KI_SLDataGateway_memory_leak) | Cassandra Cluster setups<br>prior to 10.2.0 [CU8]/10.2.11 | DataMiner 10.2.0 [CU8]/10.2.11 | October 10, 2022 |
-| [Taskbar Utility performance issue while agents are being upgraded](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded) | DataMiner 10.1.0 [CU19] and 10.2.0 [CU7]<br>10.2.10 | DataMiner 10.1.0 [CU20]/10.2.0 [CU8]/10.2.11 | September 23, 2022 |
-| [SLDMS Hosting Agent cache issue](xref:KI_SLDMS_hosting_agent_cache_issue) | DataMiner 10.2 Main & Feature Release<br>prior to 10.2.0 [CU7] and 10.2.10 | DataMiner 10.2.0 [CU7]/10.2.10 | September 15, 2022 |
-| [Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database](xref:KI_Closed_alarms_migrated_too_slowly) | Versions using Elasticsearch<br>for alarm indexing prior to<br>10.2.0 [CU8] and 10.2.11 | DataMiner 10.2.0 [CU8]/10.2.11 | September 14, 2022 |
 | [Shapes in DataMiner stencils not found in Visio search](xref:KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search) | N/A | [Requires configuration](xref:KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search) | - |
 | [SLDataMiner addressChangeThread RTE after DMA startup](xref:KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup) | N/A | [Requires configuration](xref:KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup) | - |
 | [SNMP SET returns a 'NO ACCESS' error](xref:KI_SNMP_SET_returns_a_NO_ACCESS_error) | N/A | [Requires configuration](xref:KI_SNMP_SET_returns_a_NO_ACCESS_error) | - |

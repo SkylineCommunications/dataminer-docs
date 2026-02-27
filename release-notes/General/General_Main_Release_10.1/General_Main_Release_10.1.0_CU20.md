@@ -273,8 +273,6 @@ When a trap binding of type "IP Address" came in while the SLSNMPManager SNMPv3 
 
 After you had launched an upgrade, in some cases, the upgrade process displayed in DataMiner Taskbar Utility would lag behind and DataMiner Taskbar Utility would use a considerable amount of memory.
 
-This fixes a [known issue](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded).
-
 #### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID 34775]
 
 <!-- MR 10.1.0 [CU20] / 10.2.0 [CU8] - FR 10.2.11 [CU1] -->
