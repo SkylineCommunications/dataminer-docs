@@ -260,3 +260,9 @@ When an element was updated immediately after having been swarmed from one host 
 Up to now, if an element had more than 10,000 active alarms, on STaaS systems, only the first 10,000 would incorrectly be retrieved.
 
 From now on, all active alarms will be retrieved, even if the element in question has more than 10,000 active alarms.
+
+#### Cassandra Cluster: Automation scripts would incorrectly not be able to request history alarms using a property value filter with wildcards or regular expressions [ID 44873]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, it would incorrectly not be possible for automation scripts to request history alarms from a Cassandra Cluster database using a property value filter with wildcards or regular expressions.
