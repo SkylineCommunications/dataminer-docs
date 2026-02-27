@@ -15,33 +15,33 @@ You can access the QAOps system at Skyline Communications by using the following
 
 Three applications are available, listed in order of increasing security level:
 
-- QAOps User (green app)
+- [QAOps User](#qaops-user-app) (green app)
 
-- QAOps Operator (blue app)
+- [QAOps Operator](#qaops-operator-app) (blue app)
 
 - QAOps Administrator (red app)
 
-## QAOps user
+## QAOps User app
 
 As a QAOps User, you use the *QAOps User* application.
 
-This application contains three main sections, which you can select from the left-side navigation.
+This application contains three main pages, which you can select in the navigation pane on the left: [Overview](#qaops-user-overview), [Configuration](#qaops-user-configurations), and [Tokens](#qaops-user-tokens).
 
 ### QAOps user overview
 
-This section provides a high-level overview of all known configurations, test suites, servers, and active test runs in the QAOps system.
+The *Overview* page provides a high-level overview of all known configurations, test suites, servers, and active test runs in the QAOps system.
 
 When you request a new test run, the *Overview* page is the first place where you can confirm that QAOps has received your request.
 
-Active test runs are filtered based on the *Tags* attribute included when the test run was requested.
+Active test runs are filtered based on the `Tags` attribute included when the test run was requested.
 
-You can use this tag with the filter component at the top of the page to find your test run more easily and to see which configuration, test suite, and server are involved.
+With the filter component at the top of the page, you can filter on these tags to find your test run more easily and to see which configuration, test suite, and server are involved.
 
 ![QAOps user overview](~/develop/images/QAOps_UI_User_Overview.png)
 
 ### QAOps user configurations
 
-This section displays test run results, organized by configuration and test suite.
+The *Configurations* page displays test run results, organized by configuration and test suite.
 
 By selecting your configuration and test suite, you can quickly filter and browse test runs to view both detailed test results and summary metrics in the top-right corner.
 
@@ -53,30 +53,31 @@ Server information allows you to use RDP to investigate failed tests directly on
 
 ### QAOps user tokens
 
-This section allows you to create tokens that can be used to trigger test runs by using the [QAOps DotNet Tool](xref:QAOps_Tool).
+The *Tokens* page allows you to create tokens that can be used to trigger test runs by using the [QAOps DotNet Tool](xref:QAOps_Tool).
 
-At the top left of the banner, select *Create Token* to create a new token.
+To create a new token:
 
-![Create token in QAOps User](~/develop/images/QAOps_User_CreateToken.png)
+1. Select *Create Token* in the top-left corner.
 
-You must provide a name and expiration date.
+1. Provide a name and expiration date for the token.
 
-Optionally, you can disable *Unlimited Token Usage* and enter a maximum number of token uses.
+1. Optionally, disable *Unlimited Token Usage* and enter a maximum number of token uses.
 
-Each token can be scoped to allow test runs only on specific configurations.
+1. Select one or more scopes for the token.
 
-> [!IMPORTANT]
-> You must select one or more scopes. Otherwise, the token cannot trigger test execution.
+   These scopes determine which configurations are used for the test runs. At least one must be selected, as otherwise the token cannot trigger test execution.
 
-After you create the token, wait a few seconds while QAOps prepares it.
+   ![Fields to fill in when creating a token in the QAOps User app](~/develop/images/QAOps_User_CreateToken.png)
 
-The token appears after a short delay.
+1. Click *Generate Token*.
 
-Copy and save the token value immediately, because this is the only time it is shown.
+1. Wait a few seconds while QAOps prepares the token.
 
-## QAOps operator
+1. When the token is displayed, **copy and save the token value immediately**, because this will be the only time it is shown.
 
-As a QAOps Operator, you manage configurations and test suites by using the *QAOps Operator* application.
+## QAOps Operator app
+
+As a QAOps operator, you manage configurations and test suites by using the *QAOps Operator* application.
 
 This application is intended to view, create, and edit all configurations, test suites, running tests, and global categories.
 
