@@ -16,7 +16,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## Highlights
 
-#### Cube UI and themes have been redesigned [ID 43843] [ID 43924] [ID 44618] [ID 44832]
+#### Cube UI and themes have been redesigned [ID 43843] [ID 43924] [ID 44618] [ID 44832] [ID 44881]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 

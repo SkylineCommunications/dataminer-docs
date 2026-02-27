@@ -359,3 +359,9 @@ From now on, the component will only show the filtered results.
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 When positioning was set to "Linked to data", and the viewport was set to "Auto", up to now, no tooltip would appear when you hovered over edges with a weight of 1.
+
+#### Dashboards/Low-Code Apps: HTML code starting with a \<style\> tag would be rendered incorrectly [ID 44858]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When you had entered HTML code in a Web component or in an HTML layer of a template, up to now, that HTML code would be rendered incorrectly when it started with a `<style>` tag.
