@@ -26,6 +26,7 @@ description: DataMiner namespaces for scripting, Automation, core functionality,
 |[Skyline.DataMiner.Utils.SNMP.Traps.Protocol](xref:Skyline.DataMiner.Utils.SNMP.Traps.Protocol)|This namespace provides functionality to easily parse traps in a connector.|
 |[Skyline.DataMiner.Utils.Table.ContextMenu](xref:Skyline.DataMiner.Utils.Table.ContextMenu)|This namespace provides functionality to easily create a custom context menu.|
 |[Skyline.DataMiner.Net](xref:Skyline.DataMiner.Net)|This namespace contains SLNet types.|
+|[Skyline.DataMiner.Net.NodeRecovery](xref:Skyline.DataMiner.Net.NodeRecovery)|This namespace contains types related to [NodeRecovery](xref:NodeRecovery_About).|
 |[Skyline.DataMiner.Net.Swarming](xref:Skyline.DataMiner.Net.Swarming)|This namespace contains types related to [Swarming](xref:Swarming).|
 |[Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api)|This namespace contains types to facilitate OpenConfig communication.<br> Available as an internal [NuGet package](xref:TOONuGet) with the name *Skyline.DataMiner.DataSources.OpenConfig.Gnmi*.<br> Minimum required DataMiner version: DataMiner 10.3.3.|
 |[Interop.SLDms](xref:Interop.SLDms)|***Deprecated*** This namespace contains types for interacting with a DataMiner System.|

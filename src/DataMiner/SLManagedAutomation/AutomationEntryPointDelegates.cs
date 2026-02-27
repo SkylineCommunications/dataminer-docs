@@ -7,6 +7,7 @@ using System;
 using Skyline.DataMiner.Net.History;
 using SLNetTypes.DataMiner.Net;
 using SLNetTypes.Apps.DataMinerObjectModel.Actions;
+using Skyline.DataMiner.Net.NodeRecovery;
 
 namespace Skyline.DataMiner.Automation
 {
@@ -102,5 +103,21 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="engine">The <see cref="IEngine"/> instance.</param>
 		/// <param name="context">The context</param>
 		public delegate void OnDomAction(IEngine engine, ExecuteScriptDomActionContext context);
+
+        /// <summary>
+        /// Node Recovery local state change delegate type.
+        /// </summary>
+        /// <param name="engine">The <see cref="IEngine"/> instance.</param>
+        /// <param name="input">Information about the currently observed node states and on what changed</param>
+        /// <returns>a <see cref="LocalStateChangeOutput"/> instance</returns>
+        public delegate LocalStateChangeOutput OnNodeRecoveryLocalStateChange(IEngine engine, LocalStateChangeInput input);
+
+        /// <summary>
+        /// Node Recovery global state change delegate type.
+        /// </summary>
+        /// <param name="engine">The <see cref="IEngine"/> instance.</param>
+        /// <param name="input">Information about the currently observed global node states and on what changed</param>
+        /// <returns>a <see cref="GlobalStateChangeOutput"/> instance</returns>
+        public delegate GlobalStateChangeOutput OnNodeRecoveryGlobalStateChange(IEngine engine, GlobalStateChangeInput input);
 	}
 }

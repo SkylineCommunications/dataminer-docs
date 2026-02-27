@@ -1575,6 +1575,8 @@ items:
       topicUid: Skyline.DataMiner.Analytics.Rad
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
+    - name: Skyline.DataMiner.Net.NodeRecovery
+      topicUid: Skyline.DataMiner.Net.NodeRecovery
     - name: Skyline.DataMiner.Net.Swarming
       topicUid: Skyline.DataMiner.Net.Swarming
     - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
