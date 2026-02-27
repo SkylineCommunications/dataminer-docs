@@ -225,7 +225,7 @@ In some rare cases, SLProtocol could stop working when multiple connections of t
 
 <!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
 
-Since DataMiner 10.5.12/10.6.0, the *Check Deprecated DLL Usage* BPA test would incorrectly flag the *MySql.Data* NuGet (*MySql.Data.dll*) as deprecated, especially when that file was located in `C:\Skyline Dataminer\ProtocolScripts\DllImport\` or one of its subfolders.
+Since DataMiner 10.5.12/10.6.0, the *Check Deprecated DLL Usage* BPA test would incorrectly flag the *MySql.Data* NuGet (*MySql.Data.dll*) as deprecated.
 
 #### SLLogCollector: Problem when process dumps were triggered in parallel [ID 44780]
 
