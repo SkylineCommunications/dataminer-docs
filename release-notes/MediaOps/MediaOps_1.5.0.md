@@ -47,6 +47,12 @@ To create categories for resource pools, deploy the Categories app from the Data
 > [!NOTE]
 > This release also includes the enhancements and fixes of the 1.4.x releases.
 
+### Breaking changes
+
+#### Scheduling: Stopping early no longer possible during pre-roll [ID 44882]
+
+To prevent the post-roll start from being scheduled before the pre-roll stop action, it is now no longer possible to stop a job early during the pre-roll stage. This means that you can now only stop a job after the pre-roll stage has been completed.
+
 ### Enhancements
 
 #### Resource Studio: Improved feedback and visibility when deprecating or restoring multiple resources [ID 43804]
@@ -72,10 +78,6 @@ In case no alias is defined, the previous format will continue to be applied.
 When object-specific properties are defined (for example, when you edit the properties for a job), these properties will now be shown in a *Custom* section instead of a *General* section to prevent confusion.
 
 In addition, to make sure there is only one *Custom* section system-wide, it is no longer possible to define a system-wide section named *Custom*.
-
-#### Scheduling: Stopping early no longer possible during pre-roll [ID 44882]
-
-To prevent the post-roll start from being scheduled before the pre-roll stop action, it is now no longer possible to stop a job early during the pre-roll stage. This means that you can now only stop a job after the pre-roll stage has been completed.
 
 ### Fixes
 
