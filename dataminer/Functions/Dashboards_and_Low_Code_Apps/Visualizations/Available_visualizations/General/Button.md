@@ -8,7 +8,7 @@ The button component lets you **trigger actions with a single click**. In a low-
 
 ![Button](~/dataminer/images/button.gif)<br>*Button component in DataMiner 10.6.4*
 
-The classic button (that is, the one in Low-Code Apps) is intentionally simple: it does not display data, but does something. It works independently of any data source. You configure what should happen when a user clicks it.
+The classic button (i.e., the one used in Low-Code Apps) is intentionally simple: it does not display data, but performs an action. It works independently of any data source, and you can [configure what should happen when a user clicks it](#configuring-what-happens-on-click).
 
 > [!TIP]
 > See also: [Using button components and header bars in Low-Code Apps](https://www.youtube.com/watch?v=7Qhitj3fQB4) ![Video](~/dataminer/images/video_Duo.png)
@@ -19,9 +19,9 @@ The classic button (that is, the one in Low-Code Apps) is intentionally simple: 
 
 1. In the *Settings* pane, select *Configure actions* next to *On click*.
 
-1. Add and configure one or more actions as detailed under [Configuring app events](xref:LowCodeApps_event_config).
+1. Add and configure one or more actions as described in [Configuring app events](xref:LowCodeApps_event_config).
 
-When the button is clicked, the configured actions are executed in the order they were added.
+When the button is clicked, the configured actions are executed in the order in which they were added.
 
 **Example**:
 
@@ -31,7 +31,7 @@ In the example below, the *Virtual - Zoom* button is configured to set the value
 
 ## Customizing the button appearance
 
-You can easily adapt the look of a button so users immediately understand what it does.
+You can adapt the look of a button so users immediately understand what it does.
 
 In the *Layout* pane, you can find the default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
@@ -51,7 +51,9 @@ Additionally, you can define a custom label and icon:
 
 The button component is **currently still in preview** in the Dashboards app, and requires the [soft-launch option *ReportsAndDashboardsButton*](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbutton) to be enabled.
 
-In a dashboard, a button is used to **execute the action of a button parameter**. Unlike in Low-Code Apps, it must always be configured with button parameter data. Multiple parameters can be added to the same element.
+In a dashboard, a button is used to **execute the action of a button parameter**. Unlike in low-code apps, where a button does not require data, a dashboard button must always be configured with parameter data.
+
+Each parameter added to the component appears as one or more buttons that trigger the same action as the corresponding button parameter in DataMiner Cube.
 
 ### Connecting the button to a parameter
 
@@ -59,75 +61,76 @@ In a dashboard, a button is used to **execute the action of a button parameter**
 
 1. In the *Data* pane, expand the *Parameters* section.
 
-1. Drag the compatible [parameter data](xref:Parameter_Data) onto the component.
-
-   - Each parameter you add will appear as one or multiple buttons.
+1. Drag compatible [parameter data](xref:Parameter_Data) onto the component.
 
    - You can add multiple parameters, even from different elements.
 
+   - Each parameter added to the component will appear as one or more buttons.
+
    - Clicking a button performs the same action as selecting the equivalent option in DataMiner Cube.
 
-1. (Optional) To customize the button label, go to *Layout* > *Advanced* > *Button text* and change the text displayed.
+1. In the *Settings* pane, configure how the buttons should be grouped:
 
-   By default, the button displays the same text as in Cube.
+   - By parameter
+
+   - By element
+
+   - By table index (if relevant)
+
+   - By all of the above
+
+1. (Optional) Customize the appearance of the buttons in the *Layout* pane:
+
+   - *Button text*: Change the button text to override the default label from Cube.
+
+   - *Simple button text size*: Select the size of the button text (small, medium, or large).
+
+   When multiple buttons are displayed, you can also configure how they are arranged:
+
+   - *Layout*: Display buttons next to each other or below each other.
+
+     On smaller screens, buttons are always displayed below each other.
+
+   - *Maximum rows per page*: Determine how many items can at most be displayed below each other on a single page.
+
+   - *Maximum columns per page*: Determine how many items can at most be displayed next to each other on a single page.
 
 **Example**:
 
-In the example below, the button is connected to parameter data that lets you:
+In the example below, the button component is connected to parameter data that lets you:
 
 - Enable or disable all ping targets at once.
 
 - Add a new ping target, which can then be further configured in the parameter table.
 
-The parameter table immediately reflects any changes made through the buttons.
+Any changes triggered by the buttons are immediately reflected in the parameter table.
 
 ![A button connected to parameter data: clicking the buttons enables or disables all ping targets or adds a new ping target, which updates the parameter table in real time.](~/dataminer/images/button_parameter_data.gif)
 
 ### Automation script behavior
 
-If the soft-launch option *ReportsAndDashboardsAutomationScript* is enabled, the component can function as an automation script component instead.
+If the soft-launch option *ReportsAndDashboardsAutomationScript* is enabled, the component can also function as an automation script component instead.
 
-You can link it directly to an automation script in the *Settings* pane.
-
-However, if you [add a button parameter to the component](#connecting-the-button-to-a-parameter), it will still act as a parameter button, even if this soft-launch option is enabled.
+In that case, you can link the button directly to an automation script in the *Settings* pane.
 
 > [!NOTE]
-> From DataMiner 10.2.5/10.3.0 onwards, the output of an (interactive) automation script can be used as data for other components, for example in a GQI query.
+> If you [add a button parameter to the component](#connecting-the-button-to-a-parameter), it will still act as a parameter button, even if this soft-launch option is enabled.
 
-### Dashboard button layout
+When the component runs an automation script, additional settings will also be available related to this script.
 
-In the *Layout* pane, you can find the default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
+- Depending on the script configuration, it may be possible to configure the parameters and/or dummies used in the script. For each of the parameters and dummies, a checkbox allows you to select whether these are required, i.e., whether the script can be executed only if these are filled in.
 
-Additionally, the following layout options are available. Some options only appear when the component displays multiple parameters:
+- The standard options for script execution can be configured. See [Script execution options](xref:Script_execution_options).
 
-| Section | Option | Description |
-|--|--|--|
-| Advanced | Layout | Determine whether the different items are displayed next to each other or below each other. However, note that when the items are viewed on a small screen, they will always be displayed below each other. |
-| Advanced | Maximum rows per page | Determine how many items can at most be displayed below each other on a single page. |
-| Advanced | Maximum columns per page | Determine how many items can at most be displayed next to each other on a single page. |
-| Advanced | Simple button text size | Select the size of the button text: small, medium, or large. |
+- The following additional options are available:
 
-### Dashboard button settings
+  - *Ask for confirmation*: Determines whether the user will be asked for confirmation before the script is executed.
 
-The following optional settings are available for the soft-launch button component:
+  - *Show success popup*: Determines whether a pop-up message is displayed when the script has been successfully executed. By default enabled.
 
-- In case the component displays more than one parameter, configure how the parameters should be grouped: by parameter, by element, by table index (if relevant) or by all the above together.
+  - *Custom success message*: Allows you to configure a custom message to be displayed when the script has been successfully executed.
 
-- In case the button triggers an automation script, additional settings will also be available related to this script.
-
-  - Depending on the script configuration, it may be possible to configure the parameters and/or dummies used in the script. For each of the parameters and dummies, a checkbox allows you to select whether these are required, i.e., whether the script can be executed only if these are filled in.
-
-    > [!NOTE]
-    > The input for an interactive automation script can be specified by the user or retrieved via linked data. In case both are possible for the same component, user input always takes precedence.
-    >
-    > In case several data is linked to the component, they are considered in the order they were added. For example, if 2 data sources are used and the data that was first added is applicable, the second data input will be ignored.
-
-  - The standard options for script execution can be configured. See [Script execution options](xref:Script_execution_options).
-
-  - The following additional options are available:
-
-    - *Ask for confirmation*: Determines whether the user will be asked for confirmation before the script is executed.
-
-    - *Show success popup*: Determines whether a pop-up message is displayed when the script has been successfully executed. By default enabled.
-
-    - *Custom success message*: Allows you to configure a custom message to be displayed when the script has been successfully executed.
+ > [!NOTE]
+ > The input for an interactive automation script can be specified by the user or retrieved via linked data. In case both are possible for the same component, user input always takes precedence.
+ >
+ > In case several data is linked to the component, they are considered in the order they were added. For example, if 2 data sources are used and the data that was first added is applicable, the second data input will be ignored.
