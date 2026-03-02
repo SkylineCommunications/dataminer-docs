@@ -10,7 +10,7 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 
 To enable this, a [default "From" address](#default-from-address) must be specified, and SMTP settings need to be configured. You can configure these settings in several different ways:
 
-- [Via DataMiner Cube](#configuration-via-dataminer-cube) (from DataMiner 10.6.4/10.7.0 onwards)<!-- RN 44594 -->
+- [Via DataMiner Cube](#configuration-via-dataminer-cube) (from DataMiner 10.6.4/10.7.0 onwards)<!-- RN 44478+44594 -->
 - [Directly in *DataMiner.xml*](#configuration-directly-in-dataminerxml). This requires a DataMiner restart.
 - [Using the SLNetClientTest tool](xref:SLNetClientTest_configuring_SMTP).
 
@@ -29,7 +29,7 @@ To specify the default "From" address to be used in outgoing email messages, do 
 
 1. In System Center, go to *Agents* > *system*.
 
-1. In the *Email* box, specify the default “From” address.
+1. In the *Email* box, specify the default "From" address.
 
 1. Click *Save*.
 
@@ -37,9 +37,17 @@ To specify the default "From" address to be used in outgoing email messages, do 
 
 ## Configuration via DataMiner Cube
 
-Starting from DataMiner 10.6.4/10.7.0, it is possible to configure the SMTP settings via DataMiner Cube.
+Starting from DataMiner 10.6.4/10.7.0, it is possible to configure the SMTP settings via DataMiner Cube. This is the **only way to configure OAuth 2.0 credentials**, as providers typically require an interactive (2FA) login with their authorization server to retrieve the tokens.
 
-This is the only way to configure OAuth 2.0 credentials, as providers typically require an interactive (2FA) login with their authorization server to retrieve the tokens.
+1. In DataMiner Cube, go to System Center > *System settings* > *SMTP*.
+
+1. Select the preset you want to use: **Microsoft OAuth 2.0**, **Google OAuth 2.0**, or a **custom** preset.
+
+1. Configure the settings as required for the preset.
+
+   For more details about the OAuth presets, refer to [Microsoft OAuth](#microsoft-oauth) and [Google OAuth](#google-oauth) below.
+
+   For details on the settings you can configure for a custom preset, refer to [SMTP server settings](#smtp-server-settings).
 
 > [!NOTE]
 > Cube will always update the configuration on all Agents in the cluster.
@@ -47,30 +55,34 @@ This is the only way to configure OAuth 2.0 credentials, as providers typically 
 > - If not all Agents are configured the same way, a warning will be displayed, and you can compare the current configurations.
 > - If you need to configure one Agent differently from the rest, you should use one of the other methods ([manual *DataMiner.xml* editing](#configuration-directly-in-dataminerxml) or the [SLNetClientTest tool](xref:SLNetClientTest_configuring_SMTP)). Note that the two Agents in a Failover pair must always be configured the same way.
 
-In DataMiner Cube, go to System Center > *System settings* > *SMTP*.
-
-Presets are available for Microsoft Outlook / Office 365 and Google GMail OAuth providers. For any other type of configuration, choose the *Custom* preset.
-
 ### Microsoft OAuth
 
 - Fill in the **Tenant ID**, for example, *72f988bf-86f1-41af-91ab-2d7cd011db47*.
+
 - Fill in the **Application ID** of your application that has been registered on Azure Portal and has been granted the `SMTP.Send` permission.
-- The **username** should be the email address of the mailbox from where the emails will be sent.
+
+- As the **username**, fill in the email address of the mailbox from where the emails will be sent.
 
 > [!NOTE]
 > Microsoft requires the *From* sender to match exactly with an email address that belongs to the user. The configuration in DataMiner cannot be left empty.
 
 ### Google OAuth
 
-- Fill in the **Client ID**, for example, *888888888888-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com*.
-- Fill in the **Client Secret**, for example, *GOCSPX-xxxxxxxxxxxxxxxxxxxxxxxxxxxx*
-- The **username** should be the email address of the mailbox from where the emails will be sent.
+1. As the **username**, fill in the email address of the mailbox from where the emails will be sent.
 
-Click *Retrieve tokens*. The system web browser will be launched and will navigate to the OAuth Account Endpoint, where you need to interactively log in and grant the permission to DataMiner to send emails.
+1. Fill in the **Client ID**, for example, *888888888888-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com*.
 
-If all goes well, Cube will display *Tokens received successfully*. If not, you can inspect the error response that was received from the authorization server.
+1. Fill in the **Client Secret**, for example, *GOCSPX-xxxxxxxxxxxxxxxxxxxxxxxxxxxx*
 
-You can now apply the settings and afterwards use the *Send test email* button to confirm that every Agent can correctly send emails.
+1. Click *Retrieve tokens*.
+
+   The system web browser will be launched and will navigate to the OAuth Account Endpoint.
+
+1. In the web browser, log in and grant the permission to DataMiner to send emails.
+
+   If all goes well, Cube will display *Tokens received successfully*. If not, you can inspect the error response that was received from the authorization server.
+
+1. Apply the settings and then use the *Send test email* button to confirm that every Agent can correctly send emails.
 
 ### Updating the configuration when a DMA has been added to the DMS
 
@@ -139,11 +151,11 @@ To configure SMTP settings directly in *DataMiner.xml*:
 
 - **User**: The username with which the DataMiner Agent will log on to the SMTP server.
 
-  If LoginMethod is set to “NoLoginMethod”, no username has to be specified.
+  If LoginMethod is set to "NoLoginMethod", no username has to be specified.
 
 - **Password**: The password with which the DataMiner Agent will log on to the SMTP server.
 
-  If LoginMethod is set to “NoLoginMethod”, no password has to be specified.
+  If LoginMethod is set to "NoLoginMethod", no password has to be specified.
 
 ### Advanced SMTP server settings
 
@@ -157,7 +169,7 @@ You can specify the following advanced settings. However, these are not mandator
 
   Example: `<MaxSubjectLength>78</MaxSubjectLength>`
 
-- **From**: A custom “From” address that will override the default “From” address specified in the DataMiner Agent interface.
+- **From**: A custom "From" address that will override the default "From" address specified in the DataMiner Agent interface.
 
   Example: `<From>address@example.com</From>`
 
@@ -174,3 +186,7 @@ The example below shows how the [SMTP](xref:DataMiner.SMTP) element in *DataMine
   <Password>MyMailPassword</Password>
 </SMTP>
 ```
+
+The screenshot below illustrates what this same configuration will look like in DataMiner Cube.
+
+![Example of SMTP server configuration in DataMiner Cube](~/dataminer/images/Cube_SMTP_config.png)<br>*SMTP configuration in DataMiner Cube 10.6.4*
