@@ -9,7 +9,31 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 3 March 2026 - PLACEHOLDER
+### 4 March 2026 - Enhancement - Admin - Version Overview dependency tags
+
+On the Version Overview page, tags now show the DMA and DMA Web version dependencies.
+
+### 4 March 2026 - Enhancement - Catalog - Empower page update
+
+In the Catalog app, the Empower page now has a new layout.
+
+Sessions are now searchable, and packages can be deployed directly from the page.
+
+### 4 March 2026 - Enhancement - dataminer.services - DaaS startup message update
+
+When DaaS startup takes longer than usual, the message shown after 15 minutes has been softened to indicate that startup may still be in progress.
+
+### 4 March 2026 - Enhancement - Admin - Support page fixes
+
+In the Admin app, ticket details can now be opened directly through URL support.
+
+In addition, an issue has been fixed where the table search toggle could open behind the table.
+
+### 4 March 2026 - Enhancement - Billing - Subscription page usability tweaks
+
+On the Billing pages, the renew tooltip has been improved and timestamp dates now use a medium-date format.
+
+When there are no active or expired subscriptions, a direct path to the subscription page is now available.
 
 ### 23 February 2026 - Enhancement - Admin - Deployment event chain error details
 
