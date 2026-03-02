@@ -9,7 +9,35 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 18 February 2026 - PLACEHOLDER
+### 23 February 2026 - Enhancement - Admin - Deployment event chain error details
+
+On the Deployments page of the Admin app, event chain errors now better highlight where an error occurred.
+
+In addition, metadata now detects and shows stack traces in a separate box, with an option to copy the stack trace text. Text wrapping has also been improved to avoid horizontal scroll bars.
+
+### 23 February 2026 - New feature - Admin - Delete DataMiner System from settings
+
+In the Admin app, organization owners can now delete a DataMiner System directly from the settings page.
+
+Deleting a DataMiner System from the Home app now opens a new tab to the Admin app.
+
+### 23 February 2026 - Enhancement - Home - Create organization popup integration
+
+The organization creation flow now uses a shared popup component across Home, Admin, and Catalog.
+
+You can now open this popup from the dataminer.services page and from the organization selector. When an organization is created successfully, it is automatically selected.
+
+### 23 February 2026 - Enhancement - Admin - Redirect after deleting last organization
+
+When a user deletes their last organization, they are now redirected to the dataminer.services Home app.
+
+### 23 February 2026 - Enhancement - Billing - Yearly credit history filter
+
+On the Billing credit history page, the date filter now uses a yearly format.
+
+You can retrieve credit history for the past five years, including the current year.
+
+URL parameters have also been updated to support both the monthly billing page range and the yearly credit history range.
 
 ### 17 February 2026 - Enhancement - Admin - Confirmation email for ticket creation
 
