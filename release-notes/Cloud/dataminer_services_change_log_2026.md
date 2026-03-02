@@ -9,6 +9,8 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 3 March 2026 - PLACEHOLDER
+
 ### 23 February 2026 - Enhancement - Admin - Deployment event chain error details
 
 On the Deployments page of the Admin app, event chain errors now better highlight where an error occurred.
