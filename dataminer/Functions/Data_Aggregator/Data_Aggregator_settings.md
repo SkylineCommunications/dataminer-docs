@@ -73,7 +73,7 @@ If [BrokerGateway](xref:BrokerGateway_Migration) is enabled, specify the followi
 
 - **APIKeyPath**:
 
-  - From 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards, a [BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) should be used. *APIKeyPath* should point to the [client secret file](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets).
+  - From 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!-- RN 44757 -->, a [BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) should be used. *APIKeyPath* should point to the [client secret file](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets).
   - In earlier DataMiner versions, the file `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` has to be copied from the DMA to the local server, and the new path of the file needs to be set in *APIKeyPath*.
 
   > [!NOTE]
