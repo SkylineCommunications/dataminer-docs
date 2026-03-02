@@ -6,7 +6,7 @@ uid: NodeRecovery_FAQ
 
 ## Can I mark a node as being in maintenance?
 
-Yes. See [Node states in NodeRecovery](xref:NodeRecovery_States#maintenance) for more information.
+Yes. See [Node states in NodeRecovery](xref:NodeRecovery_States#maintenance-mode) for more information.
 
 ## Can NodeRecovery detect DataMiner itself going down?
 

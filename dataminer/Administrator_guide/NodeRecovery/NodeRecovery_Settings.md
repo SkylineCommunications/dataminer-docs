@@ -2,7 +2,7 @@
 uid: NodeRecovery_Settings
 ---
 
-# DataMiner NodeRecovery settings
+# Node Recovery settings
 
 Below you can find an overview of the different settings you can configure in the file *appsettings.custom.json*:
 

@@ -2,7 +2,7 @@
 uid: NodeRecovery_API
 ---
 
-# NodeRecovery API
+# Node Recovery API
 
 NodeRecovery exposes certain information over an API. The API can be accessed over SLNet.
 

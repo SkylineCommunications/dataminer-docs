@@ -259,11 +259,11 @@ items:
         topicUid: NodeRecovery_Detection
       - name: Node states
         topicUid: NodeRecovery_States
-      - name: Triggering on state changes
+      - name: Triggering a script
         topicUid: NodeRecovery_Triggers
-      - name: Settings
+      - name: Node Recovery settings
         topicUid: NodeRecovery_Settings
-      - name: API
+      - name: Node Recovery API
         topicUid: NodeRecovery_API
       - name: Troubleshooting
         topicUid: NodeRecovery_Troubleshooting
