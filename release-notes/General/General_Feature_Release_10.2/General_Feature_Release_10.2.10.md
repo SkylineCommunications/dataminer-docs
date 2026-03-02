@@ -180,7 +180,7 @@ From now on, the factory reset tool *SLReset.exe* will no longer remove the foll
 
 <!-- MR 10.3.0 (not added) - FR 10.2.10 -->
 
-In DataMiner versions from 10.2.8 onwards, during a DataMiner upgrade, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail, unless the [workaround for this issue](xref:KI_RTE_with_SLAnalytics_when_upgrading) had been implemented. During the upgrade to the next DataMiner version, this upgrade action will explicitly be triggered to make sure all unused Cassandra tables get removed.
+In DataMiner versions from 10.2.8 onwards, during a DataMiner upgrade, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail, unless the workaround for this issue had been implemented. During the upgrade to the next DataMiner version, this upgrade action will explicitly be triggered to make sure all unused Cassandra tables get removed.
 
 #### Improved performance of Resources module [ID 34205]
 
