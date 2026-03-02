@@ -250,14 +250,14 @@ items:
             topicUid: Failover_FAQ_connection_issues
           - name: What if one of the Agents cannot be started or restarted?
             topicUid: Failover_FAQ_cannot_start
-  - name: NodeRecovery
+  - name: Node Recovery
     topicUid: NodeRecovery_About
     items:
-      - name: Installation and setup
+      - name: Installing Node Recovery
         topicUid: NodeRecovery_Installing
-      - name: Outage Detection
+      - name: Outage detection
         topicUid: NodeRecovery_Detection
-      - name: Node States
+      - name: Node states
         topicUid: NodeRecovery_States
       - name: Triggering on state changes
         topicUid: NodeRecovery_Triggers

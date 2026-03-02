@@ -2,23 +2,9 @@
 uid: NodeRecovery_About
 ---
 
-# NodeRecovery
+# Node Recovery
 
-DataMiner NodeRecovery offers a way to monitor and act upon node outages in the DataMiner System.
+DataMiner Node Recovery makes use of the [DataMiner Swarming](xref:Swarming) feature to offer a way to monitor and act upon node outages in the DataMiner System.
 
-- When one or more nodes go down, you might want to redistribute elements previously hosted on these agents.
+- When one or more nodes go down, you may want to redistribute elements previously hosted on these Agents.
 - When a certain node hosting an important device goes down, a backup node can take over this element.
-
-> [!IMPORTANT]
-> The NodeRecovery functionality requires [Swarming](xref:Swarming) to be enabled on the cluster.
-
-More information is available on a number of topics:
-
-- [Installing](xref:NodeRecovery_Installing)
-- [Outage detection](xref:NodeRecovery_Detection)
-- [Node states](xref:NodeRecovery_States)
-- [Settings](xref:NodeRecovery_Settings)
-- [Triggering on node state changes](xref:NodeRecovery_Triggers)
-- [API](xref:NodeRecovery_API)
-- [Troubleshooting](xref:NodeRecovery_Troubleshooting)
-- [Frequently asked questions](xref:NodeRecovery_FAQ)
