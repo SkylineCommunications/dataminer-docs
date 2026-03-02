@@ -386,7 +386,7 @@ If the offload database is an Oracle Database, then add a *RemoteFileShare* tag 
 
 - **path**: The UNC path to the shared folder (located on the database server) in which the DMAs will place the "offload" files. This path must end with a backslash.
 
-- **uid**: The username with which to connect to the shared folder on the database server.
+- **uid**: The username with which to connect to the shared folder on the database server, preferably prefixed with the server name (`servername\username`).
 
 - **pwd**: The password with which to connect to the shared folder on the database server.
 
