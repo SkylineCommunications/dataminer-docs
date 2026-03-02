@@ -400,7 +400,7 @@ From now on, all active alarms will be retrieved, even if the element in questio
 
 #### Problem when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent [ID 44848]
 
-<!-- MR 10.7.0 - FR 10.6.4 -->
+<!-- MR 10.5.0 [CU14]/10.6.0 [CU2] - FR 10.6.4 -->
 
 Up to now, when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent (for example because that Agent was unavailable), an error would be thrown inside the UI of that dashboard or low-code app.
 
