@@ -24,6 +24,19 @@ uid: General_Main_Release_10.6.0_CU1
 
 ### Enhancements
 
+#### New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]
+
+<!-- MR 10.6.0 [CU1] - FR 10.6.4 -->
+
+In order to allow SLNet to automatically update the OAuth token needed to access an SMTP mail server that requires authentication via XOAuth2, the following additional OAuth settings have now been added to the *DataMiner.xml* file. However, note that these settings can only be configured via DataMiner Cube.<!-- RN44594 -->
+
+| Setting | Description |
+|---------|-------------|
+| OAuthClientID      | The client ID that has been requested for DataMiner. |
+| OAuthClientSecret  | The client secret corresponding to the client ID.<br>As this secret is treated as a password, it will not be visible in plain text here. |
+| OAuthTokenEndpoint | The URI of the OAuth token endpoint. |
+| OAuthConfigData    | Placeholder for additional settings that can be stored here by the client application (for example, DataMiner Cube) |
+
 #### SLManagedScripting will again add a log entry each time it has loaded or failed to load an assembly [ID 44522]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU1] - FR 10.6.3 -->
