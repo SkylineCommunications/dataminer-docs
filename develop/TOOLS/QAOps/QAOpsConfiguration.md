@@ -9,9 +9,9 @@ uid: QAOps_Configuration
 
 One or more QAOps configurations should be created for your project. Each configuration represents ownership of all testing activities for the project.
 
-![QAOps configuration](../../../images/QAOps_Configuration.png)
+![QAOps configuration](~/develop/images/QAOps_Configuration.png)
 
-A configuration can include multiple [test suites](QAOps_Test_Suite).
+A configuration can include multiple [test suites](xref:QAOps_Test_Suite).
 
 A configuration can be individually tailored using several available settings within the QAOps Operator App:
 

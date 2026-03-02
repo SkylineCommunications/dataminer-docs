@@ -12,7 +12,9 @@ The IP Network Explorer supports all equipment that can be monitored using the f
 - Arista eOS Manager
 - Cisco Nexus
 - Cisco NxOS Manager
+- Cisco XrOS Manager
 - Cisco Manager
+- Huawei Manager
 
 ## Supported multicast routing protocols
 

@@ -8,7 +8,15 @@ uid: MediaOps_1.5.0
 > We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
 
 > [!NOTE]
-> This version requires DataMiner 10.5.11/10.6.0 or higher. In addition, the [GQI DxM](xref:GQI_DxM) must be installed.
+> This version requires:
+>
+> - DataMiner 10.5.11/10.6.0 or higher.
+> - The [GQI DxM](xref:GQI_DxM), which must be installed and enabled.
+> - [SDM Registration Storage Installer](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.0 or higher.
+> - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e) 1.1.0 or higher.
+
+> [!TIP]
+> Installing [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) alongside MediaOps Plan allows you to orchestrate jobs and workflows and fully automate the setup and teardown processes.
 
 ## New features
 
@@ -59,6 +67,12 @@ When an alias is defined on a job node, this will now be shown in the resource p
 
 In case no alias is defined, the previous format will continue to be applied.
 
+#### Scheduling: Object-specific properties now placed in 'Custom' section [ID 44840]
+
+When object-specific properties are defined (for example, when you edit the properties for a job), these properties will now be shown in a *Custom* section instead of a *General* section to prevent confusion.
+
+In addition, to make sure there is only one *Custom* section system-wide, it is no longer possible to define a system-wide section named *Custom*.
+
 ### Fixes
 
 #### Scheduling: Action buttons missing in Edit Job panel after reverting job status to Tentative [ID 43808]
@@ -72,6 +86,10 @@ When a locked job was duplicated, the user who had a lock on the original job al
 #### Scheduling: Recurring jobs not saved correctly with daylight saving time [ID 44109]
 
 When recurring jobs were created, daylight saving time was not correctly applied.
+
+#### People & Organization: Exception when updating team skills after teams had been created without team email or description [ID 44299]
+
+When teams had been created through code with a null value for the "Team email" or "Team description", an exception was thrown when you tried to update the skills of a team in the People & Organization app.
 
 #### Scheduling: Errors on job copied in duplicated job [ID 44303]
 

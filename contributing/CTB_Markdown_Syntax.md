@@ -243,9 +243,9 @@ See [System components](xref:BasicConcepts#system-components).
 
 ## Images
 
-To add an image, first place the image in the correct folder in the repository. For example, to add an image for the "DataMiner overview" section of the documentation, add the image in the folder "dataminer/images".
+To add an image, first place the image in the correct folder in the repository. This will always be an "images" folder under the first folder level. For example, to add an image for the "DataMiner overview" section of the documentation, add the image in the folder "dataminer/images", or to add an image for the "Solutions" section of the documentation, add it in the folder "solutions/images".
 
-To then display the image in the text, use the following syntax:
+To then display the image in the text, use the following syntax, where "~" represents the root folder:
 
 ```md
 ![Alt text](~/folder containing the images folder/images/ImageName.png)

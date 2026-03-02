@@ -262,6 +262,10 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SLNet handle leak caused by SAML authentication and SLHelper startup
+            topicUid: KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup
+          - name: Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated
+            topicUid: KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged
           - name: DataMiner Web and GQI crash briefly during startup
             topicUid: KI_DataMiner_Web_and_GQI_crash_briefly_during_startup
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version

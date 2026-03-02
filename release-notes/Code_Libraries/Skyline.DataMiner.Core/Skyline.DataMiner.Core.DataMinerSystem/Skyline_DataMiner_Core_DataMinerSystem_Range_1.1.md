@@ -7,6 +7,76 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.3.8
+
+#### Enhancement - Improved scaling for parameter and table cell monitors [ID 41602]
+
+When used with **DataMiner 10.5.0/10.5.1** or higher, parameter, table cell, and table column monitors now have enhanced scaling, allowing **more monitors to be active simultaneously**.
+
+> [!IMPORTANT]
+> This enhancement is only available when the library is used with DataMiner 10.5.0/10.5.1 or higher.<!-- RN 41256 -->
+
+#### New feature - New table column monitor added [ID 44034]
+
+A new table column monitor has been added.
+
+> [!IMPORTANT]
+> This new monitor can only be used from DataMiner 10.5.0/10.5.1 onwards.<!-- RN 41256 -->
+
+Example usage:
+
+```csharp
+IDmsElement element = dms.GetElement("MyElement");
+
+const int InterfaceTableId = 100;
+const int OperationalStatusId = 102;
+
+var table = element.GetTable(InterfaceTableId);
+var column = table.GetColumn<int>(OperationalStatusId);
+
+void OnChange(ColumnValueChange<int> change)
+{
+    foreach (KeyValuePair<string, int> cellUpdate in change.ColumnUpdates)
+    {
+        Log($"Interface {cellUpdate.Key} went {(cellUpdate.Value == 1 ? "up" : "down")}.");
+    }
+}
+
+column.StartValueMonitor(protocol, OnChange);
+```
+
+#### New feature - Service alarm level and state monitors usable outside of protocols
+
+Service monitors can now be used **outside of protocol contexts** (e.g., in Automation scripts or other external integrations), allowing you to subscribe to changes without relying on *SLProtocol*.
+
+> [!IMPORTANT]
+> These monitors create **stateful SLNet subscriptions** in the background. Subscriptions **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system and continue to consume resources.
+
+Example usage:
+
+```csharp
+IDmsService service = dms.GetService("MyService");
+
+var sourceId = Guid.NewGuid().ToString();
+
+void OnChange(ServiceAlarmLevelChange change)
+{
+    Log($"Service {service.Name} switched to state {change.State}.");
+}
+
+service.StartAlarmLevelMonitor(sourceId, OnChange);
+
+try
+{
+    // ... other logic while the monitor is running ...
+}
+finally
+{
+    // Important: stop it when you are done.
+    service.StopAlarmLevelMonitor(sourceId);
+}
+```
+
 ### 1.1.3.7
 
 #### New feature - Improved API for Scheduler [ID 44556]

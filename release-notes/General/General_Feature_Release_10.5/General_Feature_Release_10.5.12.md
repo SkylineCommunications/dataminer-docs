@@ -184,6 +184,14 @@ From now on, the *NATSMigration* tool will also check for outdated DLL files in 
 
 When an outdated DLL file is found, the migration will be aborted. For the migration to succeed, the user will have to remove the outdated DLL file and update the protocol in question.
 
+#### BPA test 'Check Deprecated DLL Usage' will now also check the DataMinerMessageBroker.API.dll file [ID 43779]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.12 -->
+
+The BPA test *Check Deprecated DLL Usage* will now also check whether the *DataMinerMessageBroker.API.dll* file is used by protocols or automation scripts, and if so, whether it is not outdated.
+
+If this file cannot be found, or if its version is not equal or higher than 3.0.0, the BPA test will fail.
+
 #### OPC communication is End of Life [ID 43785]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->

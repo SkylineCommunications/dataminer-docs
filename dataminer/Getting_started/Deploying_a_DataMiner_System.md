@@ -23,7 +23,7 @@ If you want to deploy a DataMiner System, you can choose between different appro
 
   - Alternatively, you can host and **manage the storage yourself**. This means you will need to take care of [configuring and maintaining the databases](xref:Configuring_dedicated_clustered_storage).
 
-  - If you want to **create a test setup**, you can install DataMiner by [deploying the pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) and choose to deploy the storage databases (Cassandra and OpenSearch) locally on Windows Subsystem for Linux (WSL). However, while this is easy to set up and allows you to get started immediately, it should only be used for **testing and staging environments**. Do not use this option for production systems. If you later decide to use such a system in production, you should switch the existing DataMiner System to one of the two setups above instead.
+  - If you want to **create a small-scale setup**, you can install DataMiner by [deploying the pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) and choose to deploy the storage databases (Cassandra and OpenSearch) locally on Windows Subsystem for Linux (WSL). However, while this is easy to set up and allows you to get started immediately, it should only be used for single-Agent environments. These setups can be used for development or for minimal deployments where STaaS is not an option, and this will also require additional resources on the local machine.
 
 > [!TIP]
 > For more information about these different approaches, refer to [DataMiner hosting and high availability](xref:Overview_hosting).

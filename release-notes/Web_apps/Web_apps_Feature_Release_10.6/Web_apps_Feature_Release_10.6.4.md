@@ -28,17 +28,68 @@ In the Dashboards app, a new type of anchor button will now be used in breadcrum
 
 These buttons will let you navigate to a fixed location when clicked. Also, clicking such a button while holding the CTRL key pressed will open a new tab, and hovering over such a button will reveal the link associated with that button.
 
+#### Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44788]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When an automation script is executed in a web app, it is now possible to pass the time zone of the client to that script.
+
+In the automation script, the time zone will be available on the `IEngine` input argument:
+
+`engine.ClientInfo.TimeZone`
+
+> [!NOTE]
+>
+> - If the script was executed from a source other than a web app, or if the time zone information could not be parsed, the `TimeZone` property can be null.
+> - In case a subscript is executed, the `ClientInfo` of the parent script will also be available in the subscript.
+
+Also, a `scriptOptions.ClientTimeZone` property can now be passed to both the `ExecuteAutomationScript` and `ExecuteAutomationScriptWithOutput` web methods.
+
+The `ClientTimeZone` (`DMAAutomationScriptOptionClientTimeZone`) data type has the following properties:
+
+- `Type` (`DMAAutomationScriptOptionClientTimeZoneType`):
+
+  | Value | Description |
+  |-------|-------------|
+  | Iana (1)    | If `Type` is set to 1, then an attempt will be made to pass the time zone information based on the IANA time zone identifier set in the `Info` property.<br>See also: [IANA time zone database](https://www.iana.org/time-zones) |
+  | Default (0) | If `Type` is set to 0, then the [default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) will be passed. |
+
+- `Info`: If `Type` is set to "Iana" (1), then `Info` should contain the identifier of an IANA time zone.
+
+> [!NOTE]
+> Currently, it is not yet possible to pass the time zone of the client to a script that is executed by clicking a DOM action button.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.4 or newer. See [Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]](xref:General_Feature_Release_10.6.4#automation-time-zone-of-the-client-can-now-be-passed-to-the-automation-script-that-is-executed-id-44742).
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Node types [ID 44809]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When configuring a newly-added *Node edge graph* component, it is now possible to define three types of node:
+
+- Icon
+- Image
+- Template
+
+> [!NOTE]
+> Nodes of type *Template* do not support showing a tooltip or metric, as you can define that information in the template itself.
+> Also, nodes of type *Template* do not support configuring actions, as you can define actions on shapes in the template itself.
+
 ## Changes
 
 ### Enhancements
 
-#### Dashboards app: 'HTTP 404' page replaced by an embedded visual [ID 44569]
+#### Dashboards app: 'HTTP 404' page replaced by an embedded visual [ID 44569] [ID 44808]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 From now on, when you try to open an invalid dashboard or dashboard folder, you wil no longer be redirected to a separate "HTTP 404" page. Instead, a visual will now appear inside the Dashboards app.
 
 Clicking the *Go to overview* button in that visual will redirect you to either the closest valid parent folder or the root folder.
+
+> [!NOTE]
+> In embedded dashboards, the *Go to overview* button will not be visible.
 
 #### GQI DxM: 'Get object manager instances' and 'Get profile instances' data sources now support post filtering on Guid columns [ID 44672]
 
@@ -57,21 +108,16 @@ From now, when post filtering the *Get object manager instances* and *Get profil
 - ServiceDefinitionID
 - ServiceProfileInstanceID
 
-#### Dashboards/Low-Code Apps - Templates: Text in default template would not get replaced when the default template was selected [ID 44677]
-
-<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
-
-When, in the Browse templates window, you selected the default template of e.g., the Grid component, up to now, the text in that default template would incorrectly not get replaced by the text in the Grid component.
-
-From now on, the default template text will get replaced correctly.
-
-#### Low-Code Apps: 'HTTP 404' visual will now appear when you navigate to a non-existing app or an app you are not allowed to open [ID 44681]
+#### Low-Code Apps: 'HTTP 404' visual will now appear when you navigate to a non-existing app or an app you are not allowed to open [ID 44681] [ID 44808]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 From now on, when you navigate to a non-existing app or an app you are not allowed to open, an "HTTP 404" visual will now appear.
 
 Clicking the *Go to home* button in that visual will redirect you to the root page.
+
+> [!NOTE]
+> In embedded low-code apps, the *Go to home* button will not be visible.
 
 #### Dashboards/Low-Code Apps: Updated side panel sections [ID 44687]
 
@@ -103,11 +149,57 @@ Up to now, when filtering on a column containing numbers of type int, double, et
 
 From now on, GQI will accept any type of number (int, double, and long) as filter value for columns of type int, double, long, and decimal.
 
+#### Dashboards/Low-Code Apps - GQI: Enhanced filtering when using the GQI DxM [ID 44714]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+From now on, when dashboards or low-code app use the GQI DxM to process GQI queries, queries with regex filters that are linked to data will no longer combine multiple values inside a single regular expression to simulate OR filtering. Instead, whatever the filter method (contains, equals, regex, greater than, etc.), they will create a real OR filter with all the raw data values.
+
+As a result, when linking data to filter nodes, dashboards and low-code apps using the GQI DxM to process GQI queries will now behave differently to dashboards and low-code apps using SLHelper to process GQI queries.
+
+##### When using SLHelper: no functional changes
+
+- In regex filters, the different regex values are escaped and combined into a single regular expression.
+- When using any other filter method, only the first value is passed to the filter. All other values are ignored.
+
+Limitations:
+
+- As the regex values need to be escaped to support OR filtering, it is impossible to create a dynamic regular expression to filter with.
+- You cannot use an OR filter to filter values other than string values. Only string values allow regex filtering.
+
+##### When using the GQI DxM: functional change
+
+- In regex filters, the regex values will no longer be escaped.
+- When using any other filter method, all values will now be passed to the filter.
+
+Benefits:
+
+- No limitations similar to those when using SLHelper.
+- Filters can be optimized and forwarded to the server, instead of having to use a post filter.
+
+> [!IMPORTANT]
+> In some cases, no longer escaping regex values in regex filters could represent a breaking change:
+>
+> - The query could become invalid if some of the regex values contain invalid regular expressions.
+> - Even when all regex values are valid regular expressions, in some cases, the filter may not yield the expected result because some of the values unintentionally contain regex syntax.
+>
+> If a regex filter would yield unexpected results, it is safe to replace the regular expression by a contains or equals condition.
+
 #### User authentication enhancements [ID 44734]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 A number of enhancements have been made with regard to user authentication when accessing, for example, video thumbnails.
+
+#### Web apps: Going to the root page of the app by clicking the app name in the header [ID 44753]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In a web app, from now on, you can go to the root page of the app by clicking the name of the app in the header.
+
+- If you click the left mouse button, the root page will open in the same browser tab.
+- If you click the left mouse button while holding the CTRL key pressed, or if you click the middle mouse button, the root page will open in a new browser tab.
+- If you click the left mouse button while holding the SHIFT key pressed, the root page will open in a new browser window.
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Viewport will no longer be reset with every update [ID 44786]
 
@@ -118,6 +210,14 @@ Up to now, each time a *Node edge graph* component with the *Filtering & Highlig
 From now on, the viewport of a *Node edge graph* component will mostly be reset when you have made changes to its settings, although it can still be reset in certain other scenarios. For example, when the node edge graph is not linked to data, a reset will occur when the entire topology has changed after an update.
 
 Also, when the node positions are linked to data, from now on, a *Node edge graph* component will allow you to zoom out beyond the initial viewport.
+
+#### GQI DxM: Loaded assembly files of GQI extensions will no longer be locked [ID 44806]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, Microsoft Windows would lock the assembly files of a GQI extension (i.e. an ad hoc data source or a custom operator) and those of its dependencies. As a result, when such a file needed to be replaced when, for example, a development pack was updated, replacing that file would fail when the extension in question was running.
+
+From now on, the GQI DxM will load an extension and its dependencies byte per byte into the `C:\Skyline DataMiner\Scripts\Libraries` and `C:\Skyline DataMiner\ProtocolScripts\DllImport` folders. This will ensure that these files will no longer be locked when the extension is running.
 
 ### Fixes
 
@@ -155,6 +255,14 @@ From now on, when you change one of these settings, the other setting will no lo
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 In both the template editor and the flow editor, the tabbed pane on the left would incorrectly shrink when the main editor area in the middle contained a large number of items.
+
+#### Dashboards/Low-Code Apps - Templates: Text in default template would not get replaced when the default template was selected [ID 44677]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When, in the Browse templates window, you selected the default template of e.g., the Grid component, up to now, the text in that default template would incorrectly not get replaced by the text in the Grid component.
+
+From now on, the default template text will get replaced correctly.
 
 #### Dashboards app: State components would be clipped in PDF reports when the 'Stack components' option was not selected [ID 44695]
 
@@ -210,3 +318,44 @@ If, in a *Web* component, you specified the URL of a DataMiner web app, it would
 As a result, when a URL of a DataMiner web app did not end with a forward slash, it would get sandboxed.
 
 From now on, URLs of DataMiner web apps will always be registered as trusted, whether they end with a forward slash or not.
+
+#### Dashboards/Low-Code Apps - Time range & Query filter components: Problems when dashboard or low-code app was embedded [ID 44802]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When the dashboard or low-code app was embedded by means of the URL argument `embed=true` or when the dashboard was shared, up to now,
+
+- in a *Time range* component, it would incorrectly not be possible to pin quick picks, and
+- in a *Query filter* component, it would incorrectly not be possible to enable the *Alarm color mode* setting.
+
+#### Dashboards app: 'Shared dashboards' pane would incorrectly not be displayed in the sidebar [ID 44803]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some rare cases, the *Shared dashboards* pane would incorrectly not be displayed in the sidebar of the Dashboards app, even when dashboards had been shared.
+
+#### Low-Code Apps - Node edge graph component: Changing the interaction mode via an action would incorrectly change the default interaction mode [ID 44807]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When, in a low-code app, the interaction mode of a *Node edge graph* component was changed by an action, in some cases, the component's default interaction mode would incorrectly also be changed.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Edges could get drawn incorrectly when bidirectional configuration was enabled [ID 44814]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a Node edge graph component with bidirectional configuration enabled for the edges received a real-time update, in some cases, the edges could get drawn incorrectly. For example, multiple edges could get drawn on top of each other, or have their arrows rendered at an incorrect location.
+
+#### Dashboards/Low-Code Apps - Maps component: The map would not update correctly when the query changed [ID 44817]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, a *Maps* component with two queries that were configured to be visible based on zoom level (i.e., when you zoomed in, query 1 would be hidden and query 2 would be shown), of which the first had a filter node that was linked to data fed by another component, would incorrectly show the filtered and unfiltered results of the first query when you zoomed in until the second query became visible, changed the filter, and zoomed out again.
+
+From now on, the component will only show the filtered results.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: No tooltip would appear when hovering over an edge with a weight of 1 [ID 44818]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When positioning was set to "Linked to data", and the viewport was set to "Auto", up to now, no tooltip would appear when you hovered over edges with a weight of 1.

@@ -16,7 +16,23 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## Highlights
 
-*No highlights have been selected yet.*
+#### Cube UI and themes have been redesigned [ID 43843] [ID 43924] [ID 44618] [ID 44832]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+To keep the look and feel of DataMiner Cube fresh and up to date, the entire Cube UI and UI themes have been redesigned.
+
+![New Cube layout](~/release-notes/images/New_Cube_Layout_10.6.4.png)
+
+Important UI changes include:
+
+- System Center has been reworked. The overview page has been removed, and all tiles have been redesigned.
+- Icons have been redesigned throughout the UI.
+
+Important theme changes include:
+
+- The *Operating system* theme is now the default theme. When this theme is selected, Cube will use the default color mode you have set in Windows (*Light* or *Dark*).
+- The *Skyline Mixed* theme has been removed.
 
 ## New features
 

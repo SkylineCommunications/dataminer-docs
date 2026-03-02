@@ -11,15 +11,15 @@ QAOps test packages (`.dmtest`) are stored in the DataMiner Catalog. Each packag
 
 Only a QAOps system can execute these packages. A package can contain installation logic, setup logic, test code, execution scripts, and result parsing logic.
 
-You can combine multiple test packages into a [QAOps test suite](QAOps_Test_Suite). This concept is specific to the QAOps platform.
+You can combine multiple test packages into a [QAOps test suite](xref:QAOps_Test_Suite). This concept is specific to the QAOps platform.
 
 ## Create a DataMiner test package
 
-Creating a DataMiner test package is very similar to creating a [DataMiner installation package](skyline_dataminer_sdk_dataminer_package_project).
+Creating a DataMiner test package is very similar to creating a [DataMiner installation package](xref:skyline_dataminer_sdk_dataminer_package_project).
 
-The test package project type is included in the [Skyline DataMiner Software Development Kit (SDK)](skyline_dataminer_sdk). It is available as *DataMiner Test Package Project* in the Visual Studio templates that are installed with [DIS](Overall_concept_of_the_DataMiner_Integration_Studio).
+The test package project type is included in the [Skyline DataMiner Software Development Kit (SDK)](xref:skyline_dataminer_sdk). It is available as *DataMiner Test Package Project* in the Visual Studio templates that are installed with [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio).
 
-![Create a new QAOps test project in Visual Studio](../../../images/QAOps_Create_New_Test_Project.png)
+![Create a new QAOps test project in Visual Studio](~/develop/images/QAOps_Create_New_Test_Project.png)
 
 The project has the same basic behavior as an installation package project:
 
@@ -27,14 +27,14 @@ The project has the same basic behavior as an installation package project:
 
 - When you publish the project, it publishes the version configured in the `.csproj` file to the DataMiner Catalog.
 
-![Publish QAOps test package to the DataMiner Catalog from Visual Studio](../../../images/QAOps_VisualStudio_PublishPackageToCatalog.png)
+![Publish QAOps test package to the DataMiner Catalog from Visual Studio](~/develop/images/QAOps_VisualStudio_PublishPackageToCatalog.png)
 
-All functionality supported by a [DataMiner installation package (`.dmapp`)](skyline_dataminer_sdk_dataminer_package_project) is supported and extended with test-specific functionality in the `TestPackageContent` directory.
+All functionality supported by a [DataMiner installation package (`.dmapp`)](xref:skyline_dataminer_sdk_dataminer_package_project) is supported and extended with test-specific functionality in the `TestPackageContent` directory.
 
 When you run a test suite, QAOps first installs all packages in that suite. It then executes tests in the package execution order defined in the QAOps operator application.
 
 > [!IMPORTANT]
-> For information about how to send back Test Results to the QAOps System please see [QAOpsTestResult](QAOps_Test_Result).
+> For information about how to send back Test Results to the QAOps System please see [QAOpsTestResult](xref:QAOps_Test_Result).
 
 ## Set up TestPackageContent
 
@@ -49,7 +49,7 @@ TestPackageContent/
 └── qaops.config.xml          # Optional: configuration file
 ```
 
-![QAOps Visual Studio test project directory structure](../../../images/QAOps_VisualStudio_TestProject_DirectoryStructure.png)
+![QAOps Visual Studio test project directory structure](~/develop/images/QAOps_VisualStudio_TestProject_DirectoryStructure.png)
 
 Required components:
 
@@ -68,11 +68,11 @@ Optional components:
 The `TestDiscovery.ps1` script automatically harvests tests from your whole Git repository during the build process.
 If all your tests, are already within the same Solution then this script may not be necessary, it's mostly meant for repositories that have more than one solution. You can use other features such as:
 
-- If you tests are done through DataMiner components as part of the same solution, then you can use default [DataMiner installation package](skyline_dataminer_sdk_dataminer_package_project) logic. To just let it install a connector, automationscript, ... with your tests and then use the [TestPackagePipeline](TestPackagePipeline) to trigger the tests and retrieve their results.
+- If you tests are done through DataMiner components as part of the same solution, then you can use default [DataMiner installation package](xref:skyline_dataminer_sdk_dataminer_package_project) logic. To just let it install a connector, automationscript, ... with your tests and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and retrieve their results.
 
-- If your tests are part of the build output of projects in your solution, such as MSTest or NUnit assemblies. You could opt to use post-build actions on those projects to copy the output to the Tests directory and then use the [TestPackagePipeline](TestPackagePipeline) to trigger the tests and retrieve their results.
+- If your tests are part of the build output of projects in your solution, such as MSTest or NUnit assemblies. You could opt to use post-build actions on those projects to copy the output to the Tests directory and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and retrieve their results.
 
-- If you tests can be written directly in powershell scripts, then the simplest way is to write everything within the and then use the [TestPackagePipeline](TestPackagePipeline) to trigger the tests and forward their results to QAOps.
+- If you tests can be written directly in powershell scripts, then the simplest way is to write everything within the and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and forward their results to QAOps.
 
 If used, the harvesting process creates these directories:
 
@@ -164,7 +164,7 @@ param (
 # Use $PathToTestPackageContent to access test files and dependencies
 ```
 
-![QAOps test package pipeline PowerShell example](../../../images/QAOps_TestPackagePipelinePowershellExample.png)
+![QAOps test package pipeline PowerShell example](~/develop/images/QAOps_TestPackagePipelinePowershellExample.png)
 
 #### Example pipeline structure
 
@@ -183,7 +183,7 @@ TestPackagePipeline/
 
 #### Add helper code and utilities
 
-For information about how to send back Test Results to the QAOps System please see [QAOpsTestResult](QAOps_Test_Result).
+For information about how to send back Test Results to the QAOps System please see [QAOpsTestResult](xref:QAOps_Test_Result).
 You can include additional code files next to the numbered PowerShell scripts to organize and reuse functionality. The QAOps bridge only executes numbered `.ps1` files as entry points. From those scripts, you can call other code files.
 
 Examples of helper files:

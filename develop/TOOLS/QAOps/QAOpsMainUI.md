@@ -15,33 +15,33 @@ You can access the QAOps system at Skyline Communications by using the following
 
 Three applications are available, listed in order of increasing security level:
 
-- QAOps User (green app)
+- [QAOps User](#qaops-user-app) (green app)
 
-- QAOps Operator (blue app)
+- [QAOps Operator](#qaops-operator-app) (blue app)
 
 - QAOps Administrator (red app)
 
-## QAOps user
+## QAOps User app
 
 As a QAOps User, you use the *QAOps User* application.
 
-This application contains three main sections, which you can select from the left-side navigation.
+This application contains three main pages, which you can select in the navigation pane on the left: [Overview](#qaops-user-overview), [Configuration](#qaops-user-configurations), and [Tokens](#qaops-user-tokens).
 
 ### QAOps user overview
 
-This section provides a high-level overview of all known configurations, test suites, servers, and active test runs in the QAOps system.
+The *Overview* page provides a high-level overview of all known configurations, test suites, servers, and active test runs in the QAOps system.
 
 When you request a new test run, the *Overview* page is the first place where you can confirm that QAOps has received your request.
 
-Active test runs are filtered based on the *Tags* attribute included when the test run was requested.
+Active test runs are filtered based on the `Tags` attribute included when the test run was requested.
 
-You can use this tag with the filter component at the top of the page to find your test run more easily and to see which configuration, test suite, and server are involved.
+With the filter component at the top of the page, you can filter on these tags to find your test run more easily and to see which configuration, test suite, and server are involved.
 
-![QAOps user overview](../../../images/QAOps_UI_User_Overview.png)
+![QAOps user overview](~/develop/images/QAOps_UI_User_Overview.png)
 
 ### QAOps user configurations
 
-This section displays test run results, organized by configuration and test suite.
+The *Configurations* page displays test run results, organized by configuration and test suite.
 
 By selecting your configuration and test suite, you can quickly filter and browse test runs to view both detailed test results and summary metrics in the top-right corner.
 
@@ -49,34 +49,35 @@ You can also see which server was used to run these tests, unless that server ha
 
 Server information allows you to use RDP to investigate failed tests directly on the machine where they were executed.
 
-![QAOps user test results by configuration and test suite](../../../images/QAOps_UI_User_TestResults_In_Configuration_And_TestSuite.png)
+![QAOps user test results by configuration and test suite](~/develop/images/QAOps_UI_User_TestResults_In_Configuration_And_TestSuite.png)
 
 ### QAOps user tokens
 
-This section allows you to create tokens that can be used to trigger test runs by using the [QAOps DotNet Tool](QAOps_Tool).
+The *Tokens* page allows you to create tokens that can be used to trigger test runs by using the [QAOps DotNet Tool](xref:QAOps_Tool).
 
-At the top left of the banner, select *Create Token* to create a new token.
+To create a new token:
 
-![Create token in QAOps User](../../../images/QAOps_User_CreateToken.png)
+1. Select *Create Token* in the top-left corner.
 
-You must provide a name and expiration date.
+1. Provide a name and expiration date for the token.
 
-Optionally, you can disable *Unlimited Token Usage* and enter a maximum number of token uses.
+1. Optionally, disable *Unlimited Token Usage* and enter a maximum number of token uses.
 
-Each token can be scoped to allow test runs only on specific configurations.
+1. Select one or more scopes for the token.
 
-> [!IMPORTANT]
-> You must select one or more scopes. Otherwise, the token cannot trigger test execution.
+   These scopes determine which configurations are used for the test runs. At least one must be selected, as otherwise the token cannot trigger test execution.
 
-After you create the token, wait a few seconds while QAOps prepares it.
+   ![Fields to fill in when creating a token in the QAOps User app](~/develop/images/QAOps_User_CreateToken.png)
 
-The token appears after a short delay.
+1. Click *Generate Token*.
 
-Copy and save the token value immediately, because this is the only time it is shown.
+1. Wait a few seconds while QAOps prepares the token.
 
-## QAOps operator
+1. When the token is displayed, **copy and save the token value immediately**, because this will be the only time it is shown.
 
-As a QAOps Operator, you manage configurations and test suites by using the *QAOps Operator* application.
+## QAOps Operator app
+
+As a QAOps operator, you manage configurations and test suites by using the *QAOps Operator* application.
 
 This application is intended to view, create, and edit all configurations, test suites, running tests, and global categories.
 
@@ -98,7 +99,7 @@ To do this, click the dark blue button with an upward-facing arrow.
 
 You can click this button multiple times to start several deployments.
 
-![QAOps operator configurations](../../../images/QAOps_UI_Configurations.png)
+![QAOps operator configurations](~/develop/images/QAOps_UI_Configurations.png)
 
 > [!IMPORTANT]
 > It can take up to 10 seconds before deployments begin and become visible in the low-code app.
@@ -113,19 +114,19 @@ When you finish making changes, select *Update* in the *Actions* column.
 
 This pushes your changes through the QAOps system.
 
-For more information about available settings, see [QAOps configuration](QAOps_Configuration).
+For more information about available settings, see [QAOps configuration](xref:QAOps_Configuration).
 
 You can move between different pages without losing your changes.
 
 This is convenient when you need to find test suite IDs and then return to configuration edit mode to continue setup.
 
-![QAOps operator edit mode with Update button](../../../images/QAOps_UI_EditMode_Update_Button.png)
+![QAOps operator edit mode with Update button](~/develop/images/QAOps_UI_EditMode_Update_Button.png)
 
 ### QAOps operator test suites
 
 This section shows all known test suites.
 
-When you select a test suite, you also get an overview of all [test packages](QAOps_Test_Package) in that test suite.
+When you select a test suite, you also get an overview of all [test packages](xref:QAOps_Test_Package) in that test suite.
 
 Each package shows a number in the top-right corner that indicates the execution order when the test suite is activated.
 
@@ -133,9 +134,9 @@ Each package includes an *Open* button that opens the Catalog information for th
 
 On this page, you can also find the QAOps package identifiers, which are different from Catalog identifiers.
 
-The QAOps package identifier is used when [triggering a test run with an unreleased test package](QAOps_Tutorials_User_Tutorials_Advanced_Trigger_Test_Run_With_Unreleased_Test_Package).
+The QAOps package identifier is used when [triggering a test run with an unreleased test package](xref:QAOps_Tutorials_User_Tutorials_Advanced_Trigger_Test_Run_With_Unreleased_Test_Package).
 
-![QAOps operator test suites](../../../images/QAOps_UI_TestSuites.png)
+![QAOps operator test suites](~/develop/images/QAOps_UI_TestSuites.png)
 
 #### QAOps operator test suites edit mode
 
@@ -147,7 +148,7 @@ When you finish making changes, select *Update* in the *Actions* column.
 
 This pushes your changes through the QAOps system.
 
-For more information about available settings, see [QAOps test suites](QAOps_Test_Suite).
+For more information about available settings, see [QAOps test suites](xref:QAOps_Test_Suite).
 
 You can move between different pages without losing your changes.
 
@@ -171,7 +172,7 @@ It is mostly intended as an alternative to the *Overview* page in the *QAOps Use
 
 This section allows you to add or adjust known global categories.
 
-![QAOps global categories](../../../images/QAOps_UI_GlobalCategories.png)
+![QAOps global categories](~/develop/images/QAOps_UI_GlobalCategories.png)
 
 These categories appear as buttons in the top banner of the *QAOps User* and *QAOps Operator* applications and can reduce UI clutter by filtering specific configurations and test suites.
 
