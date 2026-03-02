@@ -10,7 +10,7 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 
 To enable this, a [default "From" address](#default-from-address) must be specified, and SMTP settings need to be configured. You can configure these settings in several different ways:
 
-- [Via DataMiner Cube](#configuration-via-dataminer-cube) (from DataMiner 10.6.0 [CU1]/10.6.4 onwards)<!-- RN 44478+44594 -->
+- [Via DataMiner Cube](#configuration-via-dataminer-cube) (from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards)<!-- RN 44478+44594 -->
 - [Directly in *DataMiner.xml*](#configuration-directly-in-dataminerxml). This requires a DataMiner restart.
 - [Using the SLNetClientTest tool](xref:SLNetClientTest_configuring_SMTP).
 
@@ -37,7 +37,7 @@ To specify the default "From" address to be used in outgoing email messages, do 
 
 ## Configuration via DataMiner Cube
 
-Starting from DataMiner 10.6.0 [CU1]/10.6.4, it is possible to configure the SMTP settings via DataMiner Cube. This is the **only way to configure OAuth 2.0 credentials**, as providers typically require an interactive (2FA) login with their authorization server to retrieve the tokens.
+Starting from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4, it is possible to configure the SMTP settings via DataMiner Cube. This is the **only way to configure OAuth 2.0 credentials**, as providers typically require an interactive (2FA) login with their authorization server to retrieve the tokens.
 
 1. In DataMiner Cube, go to System Center > *System settings* > *SMTP*.
 
