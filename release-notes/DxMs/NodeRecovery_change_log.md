@@ -2,7 +2,7 @@
 uid: NodeRecovery_change_log
 ---
 
-# NodeRecovery change log
+# Node Recovery change log
 
 #### 20 february 2026 - Initial release - NodeRecovery 1.0.0 - Initial release of NodeRecovery
 

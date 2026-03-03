@@ -6,7 +6,7 @@ uid: NodeRecovery_Detection
 
 On every node in the DataMiner cluster, a DataMiner NodeRecovery module keeps an eye on the other nodes. It does this by exchanging heartbeats over the NATS communication bus. If a node has not seen heartbeats from a certain node for a period of time, that observing node will mark the other node as being in outage.
 
-Different [node states](xref:NodeRecovery_States) are possible based on this: Healthy, Outage, or Unknown.
+Different [node states](xref:NodeRecovery_States) are possible based on this: *Healthy*, *Outage*, or *Unknown*.
 
 Any detected state changes can trigger [outage scripts](xref:NodeRecovery_Triggers). These can perform actions such as rebalancing of functionality to healthy nodes. If multiple state changes are detected at the same time, a trigger script is only executed once.
 

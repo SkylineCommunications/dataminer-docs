@@ -19,7 +19,7 @@ items:
     topicUid: DataAPI_change_log
   - name: Model Host release notes
     topicUid: ModelHost_change_log
-  - name: NodeRecovery release notes
+  - name: Node Recovery release notes
     topicUid: NodeRecovery_change_log
   - name: Orchestrator release notes
     topicUid: orchestrator_change_log
