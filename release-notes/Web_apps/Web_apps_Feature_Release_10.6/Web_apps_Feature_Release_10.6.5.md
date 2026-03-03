@@ -34,6 +34,18 @@ Up to now, when a query was created, the version of that query would be linked t
 
 From now on, the query version will no longer be linked to the version of the GQI DxM. Queries will only be migrated when they were altered in such a way that it prevents them from being run in their current form.
 
+#### DataMiner web apps updated to Angular 20 [ID 44794]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+The DataMiner web apps that use Angular (e.g., Low-Code Apps, Dashboards, Monitoring, etc.) now use Angular 20.
+
+#### GQI DxM has been upgraded to Microsoft .NET 10 [ID 44800]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+The GQI DxM has been upgraded to Microsoft .NET 10. It no longer requires the .NET 8 runtime.
+
 ### Fixes
 
 *No fixes have been added yet.*
