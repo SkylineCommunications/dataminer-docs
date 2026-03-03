@@ -13,6 +13,6 @@ uid: SatOps_1.0.0
 
 With the new Satellite Scheduling app, you can now book specific slots of a transponder.
 
-#### Generating transponder slots from a transponder plan [ID 44880]
+#### Satellite Inventory: Generating transponder slots from a transponder plan [ID 44880]
 
-The SatOps Solution now allows you to generate transponder slots from a transponder plan containing the configuration of the supported slot sizes.
+With the new Satellite Inventory app, you can now generate transponder slots from a transponder plan containing the configuration of the supported slot sizes.
