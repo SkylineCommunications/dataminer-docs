@@ -32,19 +32,6 @@ uid: General_Feature_Release_10.6.4
 
 ## New features
 
-#### New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]
-
-<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
-
-In order to allow SLNet to automatically update the OAuth token needed to access an SMTP mail server that requires authentication via XOAuth2, the following additional OAuth settings have now been added to the *DataMiner.xml* file. However, note that these settings can only be configured via DataMiner Cube.<!-- RN44594 -->
-
-| Setting | Description |
-|---------|-------------|
-| OAuthClientID      | The client ID that has been requested for DataMiner. |
-| OAuthClientSecret  | The client secret corresponding to the client ID.<br>As this secret is treated as a password, it will not be visible in plain text here. |
-| OAuthTokenEndpoint | The URI of the OAuth token endpoint. |
-| OAuthConfigData    | Placeholder for additional settings that can be stored here by the client application (for example, DataMiner Cube) |
-
 #### New BPA test: Detect unsupported connector versions [ID 44607]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
@@ -123,6 +110,19 @@ This is a breaking change.
 Up to now, text containing characters that were encoded in extended ASCII (i.e., Windows code page 1252) were converted from raw octets into string text. For example, the French word "hélicoptère" would be received correctly. From now on, that same word will be received as hexadecimal string "68e96c69636f7074e87265", and a QAction will need to convert it back into a string using the correct encoding.
 
 ### Enhancements
+
+#### New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In order to allow SLNet to automatically update the OAuth token needed to access an SMTP mail server that requires authentication via XOAuth2, the following additional OAuth settings have now been added to the *DataMiner.xml* file. However, note that these settings can only be configured via DataMiner Cube.<!-- RN44594 -->
+
+| Setting | Description |
+|---------|-------------|
+| OAuthClientID      | The client ID that has been requested for DataMiner. |
+| OAuthClientSecret  | The client secret corresponding to the client ID.<br>As this secret is treated as a password, it will not be visible in plain text here. |
+| OAuthTokenEndpoint | The URI of the OAuth token endpoint. |
+| OAuthConfigData    | Placeholder for additional settings that can be stored here by the client application (for example, DataMiner Cube) |
 
 #### BPA test 'Large Alarm Trees' will now run on a daily basis [ID 44565]
 
@@ -402,7 +402,7 @@ From now on, all active alarms will be retrieved, even if the element in questio
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-Up to now, when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent (for example because that Agent was unavailable), an error would be thrown inside the UI of that dashboard or low-code app.
+On systems where each DMA has its own Cassandra database, up to now, when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent (for example because that Agent was unavailable), an error would be thrown inside the UI of that dashboard or low-code app.
 
 From now on, when a component in a dashboard or low-code app is not able to retrieve data from a remote DataMiner Agent, a "Nothing to show" message will appear in that component instead.
 
