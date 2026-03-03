@@ -46,6 +46,17 @@ The DataMiner web apps that use Angular (e.g., Low-Code Apps, Dashboards, Monito
 
 The GQI DxM has been upgraded to Microsoft .NET 10. It no longer requires the .NET 8 runtime.
 
+#### Low-Code Apps: Enhanced performance when entering text in a text box that supports highlighting [ID 44888]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Because of a number of enhancements, overall performance has increased when entering text in a text box that supports highlighting.
+
+Up to now, when you pasted a large piece of formatted text in such a text box, in some cases, the browser could freeze for a while.
+
+> [!NOTE]
+> When you set a *Web* component to "Custom HTML", the *HTML* box is limited to 100,000 characters. Up to now, HTML syntax highlighting would be disabled from 15,000 characters onwards. From now on, this 15,000-character limit will no longer apply.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Table component: Data fed to another component would not get updated during a refetch [ID 44871]
