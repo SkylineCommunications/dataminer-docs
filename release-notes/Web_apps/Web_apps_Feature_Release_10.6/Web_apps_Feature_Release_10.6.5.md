@@ -48,4 +48,10 @@ The GQI DxM has been upgraded to Microsoft .NET 10. It no longer requires the .N
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards/Low-Code Apps - Table component: Data fed to another component would not get updated during a refetch [ID 44871]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When the data in a *Table* component was fed to another component, up to now, the data in that other component would incorrectly not get updated while the data in the *Table* component was being refetched.
+
+Also, in the different GQI components (i.e., *Table*, *Grid*, *Node edge graph*, *Timeline*, and *Maps*), a number of inconsistencies have been fixed with regard to selection behavior during a refetch.

@@ -38,7 +38,11 @@ uid: General_Feature_Release_10.6.5
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Security enhancements [ID 44804]
+
+<!-- 44804: MR 10.7.0 - FR 10.6.5 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 

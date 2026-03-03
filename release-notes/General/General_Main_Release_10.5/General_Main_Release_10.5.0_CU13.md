@@ -19,14 +19,7 @@ uid: General_Main_Release_10.5.0_CU13
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-In order to allow SLNet to automatically update the OAuth token needed to access an SMTP mail server that requires authentication via XOAuth2, the following additional OAuth settings have now been added to the *DataMiner.xml* file. However, note that these settings can only be configured via DataMiner Cube.<!-- RN44594 -->
-
-| Setting | Description |
-|---------|-------------|
-| OAuthClientID      | The client ID that has been requested for DataMiner. |
-| OAuthClientSecret  | The client secret corresponding to the client ID.<br>As this secret is treated as a password, it will not be visible in plain text here. |
-| OAuthTokenEndpoint | The URI of the OAuth token endpoint. |
-| OAuthConfigData    | Placeholder for additional settings that can be stored here by the client application (for example, DataMiner Cube) |
+In order to allow SLNet to automatically update the OAuth token needed to access an SMTP mail server that requires authentication via XOAuth2, a number of OAuth settings have now been added to the *DataMiner.xml* file. However, these settings can only be configured via DataMiner Cube.<!-- RN44594 -->
 
 See also: [System Center: Configuring outgoing email [ID 44594]](xref:Cube_Feature_Release_10.6.4#system-center-configuring-outgoing-email-id-44594)
 

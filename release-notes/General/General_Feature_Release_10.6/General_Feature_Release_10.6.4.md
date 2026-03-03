@@ -115,7 +115,7 @@ Up to now, text containing characters that were encoded in extended ASCII (i.e.,
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-In order to allow SLNet to automatically update the OAuth token needed to access an SMTP mail server that requires authentication via XOAuth2, the following additional OAuth settings have now been added to the *DataMiner.xml* file. However, note that these settings can only be configured via DataMiner Cube.<!-- RN44594 -->
+In order to allow SLNet to automatically update the OAuth token needed to access an SMTP mail server that requires authentication via XOAuth2, a number of OAuth settings have now been added to the *DataMiner.xml* file. However, these settings can only be configured via DataMiner Cube.<!-- RN44594 -->
 
 | Setting | Description |
 |---------|-------------|
