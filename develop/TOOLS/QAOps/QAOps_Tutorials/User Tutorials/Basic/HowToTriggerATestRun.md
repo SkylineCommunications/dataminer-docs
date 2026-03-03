@@ -9,13 +9,13 @@ uid: QAOps_Tutorials_User_Tutorials_Basic_How_To_Trigger_A_Test_Run
 
 In this tutorial, you will learn how to trigger a [QAOps test run](xref:QAOps_Test_Run).
 
-For all tutorials, always use the "QAOps Sandbox Environment": [https://qaopssandbox-skyline.on.dataminer.services/root/](https://qaopssandbox-skyline.on.dataminer.services/root/).
+For all tutorials, always use the "QAOps Sandbox Environment": [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be).
 
 Expected duration: 15 minutes.
 
 ## Prerequisites
 
-- Access to [https://qaopssandbox-skyline.on.dataminer.services/root/](https://qaopssandbox-skyline.on.dataminer.services/root/).
+- Access to [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be).
 
 > [!IMPORTANT]
 > Please contact support.boost@skyline.be to receive a username and password for access to the Sandbox system.
@@ -54,7 +54,7 @@ The command output displays a description of the tool and the available commands
 
 ## Step 2: Find the unique test and configuration identifiers
 
-1. In the *User App*, go to *Configurations*: [https://qaopssandbox-skyline.on.dataminer.services/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations](https://qaopssandbox-skyline.on.dataminer.services/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations).
+1. In the *User App*, go to [Configurations](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations).
 
 1. Locate the configuration and test suite you want to execute.
 
@@ -66,7 +66,7 @@ The command output displays a description of the tool and the available commands
 
 ## Step 3: Create a token
 
-1. In the *User App*, go to *Tokens*: [https://qaopssandbox-skyline.on.dataminer.services/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens](https://qaopssandbox-skyline.on.dataminer.services/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens).
+1. In the *User App*, go to [Tokens](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens).
 
 1. Click *Create Token* in the top-left corner.
 
@@ -106,7 +106,7 @@ The command output displays a description of the tool and the available commands
 
 ## Step 5: Verify that the request was received
 
-1. In the *User App*, go to *Overview*: [https://qaopssandbox-skyline.on.dataminer.services/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview](https://qaopssandbox-skyline.on.dataminer.services/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview).
+1. In the *User App*, go to [Overview](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview).
 
 1. Locate your tag in the list.
 
