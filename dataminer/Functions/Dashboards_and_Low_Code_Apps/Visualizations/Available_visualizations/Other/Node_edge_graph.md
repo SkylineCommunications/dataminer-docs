@@ -185,12 +185,12 @@ The node edge graph component supports showing multiple layers. The following *I
 | Nodes | Base node | Node name | This name is not displayed in the component itself, and is only intended to clarify the configuration. |
 | Nodes | Base node | Label | Select the column to use as the label for the node. |
 | Nodes | Base node | Shape | Select a different shape in the dropdown box to customize the node shape. By default, no shape is used. You can also select *Custom* in the dropdown box in order to get additional options that allow you to create a fully customized shape instead of one of the available presets. Click the circle to the right of the dropdown box to select a custom color for the shape. |
-| Nodes | Base node | Visual | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Choose whether to show an icon or custom image within the node shape. |
+| Nodes | Base node | Visual | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Choose whether to show an icon, custom image, or use the Template Editor. See [Customizing nodes](#customizing-nodes). |
 | Nodes | Base node | Icon | Select a different icon from the dropdown box to customize the icon shown within the node shape. Click the circle to the right of the box to select a custom color. From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, this setting is only available if the *Visual* setting is set to *Icon*. |
 | Nodes | Base node | Image | Only available if the *Visual* setting is set to *Image*. Enter a custom image link. |
 | Nodes | Base node | Size | From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, use the slider to adjust the size of the node, with a minimum of 1 px and a maximum of 100 px (default: 48 px). Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, select whether the node should be small, medium-sized, or large. |
 | Nodes | Base node | Weight | A number indicating the relative importance of the node. The higher the number, the more important the node, which determines where it is displayed in the graph (depending on the layout settings). |
-| Nodes | Base node | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default. |
+| Nodes | Base node | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default. From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<--RN 44809-->, nodes using templates do not support this setting, as tooltip content is defined in the template. |
 | Nodes | Base node | Metric | Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->. Configure how the node label is displayed. You can hide the label, derive it from conditional coloring, or select a custom column to display as the label. See [Configuring node and edge labels](#configuring-node-and-edge-labels). |
 | Nodes | Base node | Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6<!--RN 39417--> up to DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44218-->, when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node. |
 | Nodes | Base node | Actions | Select *Add action* to configure an action that is executed when a node is clicked or double-clicked, or when an icon is clicked in the tooltip. See [Adding actions to a node edge graph](#adding-actions-to-a-node-edge-graph). |
@@ -228,6 +228,37 @@ For each node query and edge query, and for any configured node or edge override
 
   - If neither has conditional coloring, the default background color of the node edge graph component is used.
 
+### Customizing nodes
+
+You can **customize the appearance of nodes** in the graph to better represent your data.
+
+1. In the *Settings* pane, navigate to *Identifiers* > *Nodes* > *Base node* > *Visual*.
+
+   ![*Settings* pane displaying *Identifiers* section with *Nodes* subsection expanded, showing the *Base node* > *Visual* options](~/dataminer/images/Node_Edge_Graph_Visual.png)<br>*Node edge graph settings in DataMiner 10.6.4*
+
+1. Choose how you want the node to look:
+
+   - *Image*: Enter the URL of a custom image to display inside the node. Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards.
+
+   - *Icon*: Select an icon from the dropdown list to display inside the node shape (Default: `CircleRing`). Click the circle to the right of the box to select a custom color.
+
+   - *Template*:Use a prebuilt or custom design for more control over the node's appearance. Available from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44809-->.
+
+     - ![Edit](~/dataminer/images/Edit_Template.png): Open the Template Editor to edit the node design. See [Using the Template Editor](xref:Template_Editor).
+
+     - ![Browse templates](~/dataminer/images/Browse_Templates.png): Browse available [preset templates](xref:Template_Editor#using-a-preset-template) or [reuse a custom template](xref:Template_Editor#reusing-a-custom-template).
+
+     By default, node templates contain the following pre-configured layers:
+
+     | Layer | Type | Description |
+     | -- | -- | -- |
+     | ![Ellipse layer](~/dataminer/images/Nodes_Template_Layer1.png) | Ellipse | Acts as the background of each node, with conditional formatting for hover and selection. |
+     | ![Ellipse layer 2](~/dataminer/images/Nodes_Template_Layer2.png) | Ellipse | Acts as a visual border by being slightly larger than the background layer, with conditional formatting for hover and selection. |
+
+     This default template ensures that a node is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
+
+     This can for instance be useful when the node edge graph's component data (for example, *Components* > *[Page/Panel name]* > *Node edge graph* > *Selected items* > *Tables*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
+
 ## Adding actions to a node edge graph
 
 When you add a node edge graph to a low-code app, you can configure actions that are executed when a node or edge is clicked or double-clicked, or when an icon is selected in the tooltip that appears when you hover over the node or edge.
@@ -237,6 +268,9 @@ To configure actions:
 1. In the *Component* > *Settings* pane, under the nodes or edges you want to configure actions for, expand the *Actions* section.
 
 1. Click *Add action*.
+
+   > [!NOTE]
+   > If the [*Visual* setting](#customizing-nodes) is set to *Template*, the *Add action* button will not be available. In that case, actions must be defined on shapes within the template itself. See [Customizing layer appearance and behavior](xref:Template_Editor#customizing-layer-appearance-and-behavior).
 
 1. At the top of the action configuration section, specify how the action is triggered:
 
