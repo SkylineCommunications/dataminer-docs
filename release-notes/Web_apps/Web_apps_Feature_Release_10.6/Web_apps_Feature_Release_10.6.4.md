@@ -365,3 +365,19 @@ When positioning was set to "Linked to data", and the viewport was set to "Auto"
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 When you had entered HTML code in a Web component or in an HTML layer of a template, up to now, that HTML code would be rendered incorrectly when it started with a `<style>` tag.
+
+#### Dashboards/Low-Code Apps - Grid component: No text could be selected when 'Horizontal scroll' and 'Vertical scroll' settings were disabled [ID 44865]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, it would incorrectly not be possible to select text inside a *Grid* component when both the *Horizontal scroll* and *Vertical scroll* settings were disabled.
+
+#### Video thumbnails: Problem when playing HLS video thumbnails since Chrome version 142 [ID 44877]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Since Chrome version 142, issues could occur when playing HLS video thumbnails.
+
+In order to prevent any playback issues in Chrome 142 and above, from now on, when using `type=HTML5-HLS`, the MSE javascript implementation will take priority over the native HLS playback of the browser.
+
+If you prefer to use the native HLS playback of the browser rather than the MSE javascript implementation, you can use `type=HTML5` instead.
