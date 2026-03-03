@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 4 March 2026 - Enhancement - Admin - Version Overview dependency tags
+### 4 March 2026 - Enhancement - Catalog - Dependency tags shown in version overview
 
-On the Version Overview page, tags now show the DMA and DMA Web version dependencies.
+On the *Versions* tab for a Catalog item, tags can now show the DataMiner and DataMiner Web version dependencies.
 
 ### 4 March 2026 - Enhancement - Catalog - Empower page update
 
