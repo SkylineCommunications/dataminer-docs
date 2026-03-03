@@ -157,6 +157,18 @@ To configure SMTP settings directly in *DataMiner.xml*:
 
   If LoginMethod is set to "NoLoginMethod", no password has to be specified.
 
+### OAuth SMTP server settings
+
+The following additional settings are only used when LoginMethod is set to XOAUTH2.
+
+- **OAuthClientID**: The client ID that has been requested for DataMiner.
+
+- **OAuthClientSecret**: The client secret corresponding to the client ID.
+
+- **OAuthTokenEndpoint**: The URI of the OAuth token endpoint.
+
+- **OAuthConfigData**: Placeholder for additional settings that can be stored here by the client application (for example, DataMiner Cube)
+
 ### Advanced SMTP server settings
 
 You can specify the following advanced settings. However, these are not mandatory.
