@@ -7517,7 +7517,7 @@ items:
             - name: How to wait on test results in pipelines
               topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Pipelines_Wait_On_Results
             - name: How to trigger a test run with an unreleased package
-              topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Trigger_Test_Run_With_Unreleased_Test_Package
+              topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Trigger_Test_Run_With_Unreleased_Test_Package_Version
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:
