@@ -30,10 +30,4 @@ uid: General_Main_Release_10.6.0_CU2
 
 ### Fixes
 
-#### Problem when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent [ID 44848]
-
-<!-- MR 10.5.0 [CU14]/10.6.0 [CU2] - FR 10.6.4 -->
-
-Up to now, when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent (for example because that Agent was unavailable), an error would be thrown inside the UI of that dashboard or low-code app.
-
-From now on, when a component in a dashboard or low-code app is not able to retrieve data from a remote DataMiner Agent, a "Nothing to show" message will appear in that component instead.
+*No fixes have been added to this release yet.*
