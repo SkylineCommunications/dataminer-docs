@@ -28,6 +28,8 @@ In order to allow SLNet to automatically update the OAuth token needed to access
 | OAuthTokenEndpoint | The URI of the OAuth token endpoint. |
 | OAuthConfigData    | Placeholder for additional settings that can be stored here by the client application (for example, DataMiner Cube) |
 
+See also: [System Center: Configuring outgoing email [ID 44594]](xref:Cube_Feature_Release_10.6.4#system-center-configuring-outgoing-email-id-44594)
+
 #### BPA test 'Large Alarm Trees' will now run on a daily basis [ID 44565]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->

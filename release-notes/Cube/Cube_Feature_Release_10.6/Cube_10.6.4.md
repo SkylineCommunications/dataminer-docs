@@ -36,6 +36,16 @@ Important theme changes include:
 
 ## New features
 
+#### System Center: Configuring outgoing email [ID 44594]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, when you wanted a DMS to be able to send out email notifications and reports via an SMTP server, you had to configure the necessary SMTP settings in the *DataMiner.xml* file. From now on, it will be possible to configure this in System Center.
+
+Note that it is now also possible to configure the necessary settings for SMTP mail servers that require authentication via XOAuth2.
+
+See also: [New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]](xref:General_Feature_Release_10.6.4#new-smtp-settings-for-oauth-authentication-added-to-dataminerxml-id-44478)
+
 #### System Center - Analytics config: New 'Suggestion limit' setting added to 'Behavioral Anomaly Detection' section [ID 44709]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
