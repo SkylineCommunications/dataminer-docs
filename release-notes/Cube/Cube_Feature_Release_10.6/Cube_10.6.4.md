@@ -44,7 +44,8 @@ Up to now, when you wanted a DMS to be able to send out email notifications and 
 
 Note that it is now also possible to configure the necessary settings for SMTP mail servers that require authentication via XOAuth2.
 
-See also: [New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]](xref:General_Feature_Release_10.6.4#new-smtp-settings-for-oauth-authentication-added-to-dataminerxml-id-44478)
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.5.0 CU13/10.6.0 CU1/10.6.4 or newer. See [New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]](xref:General_Feature_Release_10.6.4#new-smtp-settings-for-oauth-authentication-added-to-dataminerxml-id-44478)
 
 #### System Center - Analytics config: New 'Suggestion limit' setting added to 'Behavioral Anomaly Detection' section [ID 44709]
 

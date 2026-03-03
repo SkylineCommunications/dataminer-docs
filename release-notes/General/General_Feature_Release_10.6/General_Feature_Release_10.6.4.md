@@ -232,6 +232,31 @@ Up to 10 log files will be kept on disk, and the log file of the current instanc
 
 Because of a number of enhancements, overall performance has increased when activating DaaS systems.
 
+#### Generating BrokerGateway client secrets [ID 44757] [ID 44778]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+From now on, it is possible to generate BrokerGateway client secrets. These are designed for DxMs or other clients connecting to the DataMiner NATS bus from a server without a local DataMiner installation. The secrets enable secure authentication with BrokerGateway, which then provides the necessary connection details for the NATS bus.
+
+Using internal BrokerGateway Administrator keys for these connections is discouraged, as these keys may be refreshed during cluster maintenance or because of other actions. By contrast, user-generated client secrets persist throughout the cluster's lifecycle and are immediately distributed to all BrokerGateway instances for cluster-wide availability.
+
+Common examples of clients requiring this setup include the Data Aggregator DxM and Dashboard Gateway.
+
+API calls are available to manage the BrokerGateway client secrets.
+
+| Method | Route | Description |
+|---|---|---|
+| `POST` | `/api/clientSecret/generate` | Generates a new random API key associated with a specific client name. The key is returned in the response body. |
+| `DELETE` | `/api/clientSecret/delete` | Deletes the client secret associated with the specified `clientName` argument. |
+| `GET` | `/api/clientSecret/list` | Retrieves a list of all existing client secrets with their respective names.<br>Note: The sensitive key values are redacted in the response (e.g., `abcd****************`) for security purposes. |
+
+In order to perform these API calls on a BrokerGateway instance, you will need the Administrator key. You can find this key in the file `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`. In the file, look for an entry in `APIKeys` with the name *Administrator*. The *key* property is the administrator key.
+
+You can execute the API calls by calling the REST API via PowerShell.
+
+> [!IMPORTANT]
+> Using client secrets prevents the root certificate authority from being cycled during DataMiner Agent removals or NATSRepair calls. This is done to ensure that external clients maintain stable connectivity with the cluster, without having to change credentials or trusted root certificates.
+
 #### Enhanced performance when executing a full element update on STaaS systems with Swarming enabled [ID 44772]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
