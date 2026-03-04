@@ -10,7 +10,7 @@ namespace Skyline.DataMiner.Net.NodeRecovery.Requests
     public class LocalClusterStateRequest : ClientRequestMessage
     {
         /// <summary>
-        /// The ID of the DataMiner Agent where an instance of the NodeRecovery DxM is running. If not specified, the local Agent is used.
+        /// The ID of the DataMiner Agent where an instance of the NodeRecovery DxM is running. If no ID is specified, the local Agent is used.
         /// </summary>
         public int TargetDataMinerId { get; set; }
     }
