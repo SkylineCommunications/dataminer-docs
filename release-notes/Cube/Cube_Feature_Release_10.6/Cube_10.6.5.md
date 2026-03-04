@@ -30,4 +30,10 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Automation: Problem when discarding changes made to dummy, parameter, or memory files [ID 44853]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When you modified a dummy, parameter, or memory file in an automation script, and then discarded the changes you made, up to now, the original script configuration would not get restored correctly. DataMiner Cube would incorrectly continue to display the updated dummy, parameter, or memory file after you had discarded the changes, even in other modules like Scheduler.
+
+For example, when you had discarded a change to a dummy, parameter, or memory file in an automation script, and then edited a scheduled task that used that same script, the configuration inputs would appear empty, even though the changes to the script had not been saved.
