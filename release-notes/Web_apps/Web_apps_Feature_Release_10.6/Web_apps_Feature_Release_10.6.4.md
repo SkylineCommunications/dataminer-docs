@@ -62,19 +62,20 @@ The `ClientTimeZone` (`DMAAutomationScriptOptionClientTimeZone`) data type has t
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.4 or newer. See [Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]](xref:General_Feature_Release_10.6.4#automation-time-zone-of-the-client-can-now-be-passed-to-the-automation-script-that-is-executed-id-44742).
 
-#### Dashboards/Low-Code Apps - Node edge graph component: Node types [ID 44809]
+#### Dashboards/Low-Code Apps - Node edge graph component: Customizing nodes using templates [ID 44809]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-When configuring a newly-added *Node edge graph* component, it is now possible to define three types of node:
+The *Node edge graph* component now supports node templates. This allows you to customize the appearance of nodes using the Template Editor or by applying preset templates as a starting point.
 
-- Icon
-- Image
-- Template
+![Node edge graph template example showing a network diagram with multiple nodes displaying status indicators, roles, and labels organized in a hierarchical structure](~/dataminer/images/NodeEdgeGraphTemplate.gif)
+
+In the *Settings* pane, navigate to *Identifiers* > *Nodes* > *Base node* > *Visual*. In this section, you can now select *Template*. From there, you can either click the *Edit* icon to open the Template Editor or the *Browse templates* icon to select a preset or custom template.
 
 > [!NOTE]
-> Nodes of type *Template* do not support showing a tooltip or metric, as you can define that information in the template itself.
-> Also, nodes of type *Template* do not support configuring actions, as you can define actions on shapes in the template itself.
+> When *Visual* is set to *Template*, nodes no longer support showing a tooltip or metric, as this information can be defined in the template itself.
+>
+> In addition, actions can no longer be configured via the *Actions* section in the *Settings* pane, as actions can instead be defined on shapes in the template itself.
 
 ## Changes
 

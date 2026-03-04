@@ -17,6 +17,7 @@ The Template Editor is currently supported for the following components:
 - [Timeline](xref:DashboardTimeline)
 - [Table](xref:DashboardTable)
 - [Maps](xref:DashboardMaps)
+- [Node edge graph](xref:DashboardNodeEdgeGraph) (from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44809-->)
 
 ## Accessing the Template Editor
 
@@ -55,6 +56,16 @@ The way you can access the Template Editor depends on the type of component:
 1. Under the *Layer settings* for a specific layer of the map, click *Edit* ![Edit](~/dataminer/images/Edit_Template.png) in the template section.
 
    These settings will only be available once a set of markers has been added to the component.
+
+### [Node edge graph](#tab/NodeEdgeGraph)
+
+1. Select the node edge graph component and go to the *Settings* pane on the right.
+
+1. In the *Identifiers* section for the nodes, expand the *Base node* subsection.
+
+1. Make sure the *Visual* option is set to *Template*.
+
+1. Click the *Edit* ![Edit](~/dataminer/images/Edit_Template.png) icon.
 
 ***
 
@@ -354,6 +365,16 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
      1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) in the *Template* section.
 
+   - For the **node edge graph** component:
+
+     1. Select the component and go to the *Settings* pane on the right.
+
+     1. In the *Identifiers* section for the nodes, expand the *Base node* subsection.
+
+     1. Make sure the *Visual* option is set to *Template*.
+
+     1. Click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon.
+
 1. Select a preset template from the overview. You can:
 
    - (1): Search for a template by name using the search box.
@@ -362,7 +383,7 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
    - (3): Filter the overview by visualization type using the options in the sidebar on the left.
 
-   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.2*
+   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.4*
 
    > [!TIP]
    > You can tell a preset template from a custom template by the *Preset* label in the top-right corner of a template tile.
@@ -411,6 +432,16 @@ If you have already configured at least one other template for a component in th
 
      1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) in the *Template* section.
 
+   - For the **node edge graph** component:
+
+     1. Select the component and go to the *Settings* pane on the right.
+
+     1. In the *Identifiers* section for the nodes, expand the *Base node* subsection.
+
+     1. Make sure the *Visual* option is set to *Template*.
+
+     1. Click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon.
+
 1. Select a custom template from the overview. From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44123-->, you can:
 
    - (1): Search for a template by name using the search box.
@@ -419,7 +450,7 @@ If you have already configured at least one other template for a component in th
 
    - (3): Filter the overview by visualization type using the options in the sidebar on the left.
 
-   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.2*
+   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.4*
 
 1. Click *Apply* in the lower-right corner of the window.
 
@@ -439,6 +470,6 @@ If you have already configured a template for a component of the same type in th
 
 ***
 
-Keep in mind that when you reuse templates, you may need to **manually update column references**: In a text layer of a template, you can enter a column name surrounded by curly brackets (e.g., {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
+Keep in mind that when you reuse templates, you may need to **manually update column references**: In a text layer of a template, you can enter a column name surrounded by curly brackets (for example, {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
 
-![Update template](~/dataminer/images/CustomerName.gif)<br>*Template Editor in DataMiner 10.5.4*
+![Update template](~/dataminer/images/CustomerName.gif)<br>*Template Editor in DataMiner 10.6.4*
