@@ -58,7 +58,7 @@ When you release a version of a Catalog item, make sure to **adhere to [semantic
 When you add a new version of a Catalog item, in the version description, clearly state what has changed and if there are bug fixes or new features. Use the following phrases as appropriate: "Change:", "Fix:", "New Feature:". Each phrase can be used multiple times.
 
 > [!NOTE]
-> For Standard Solutions, the version description contains a link to the Release Notes (e.g. [MediaOps Release Notes](xref:MediaOps_RNs_index)).
+> For Standard Solutions, the version description should contain a link to the Release Notes (e.g. [MediaOps Release Notes](xref:MediaOps_RNs_index)).
 
 ### Make sure ranges are tagged correctly
 
