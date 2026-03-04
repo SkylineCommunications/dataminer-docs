@@ -242,7 +242,13 @@ You can **customize the appearance of nodes** in the graph to better represent y
 
    - *Icon*: Select an icon from the dropdown list to display inside the node shape (Default: `CircleRing`). Click the circle to the right of the box to select a custom color.
 
-   - *Template*:Use a prebuilt or custom design for more control over the node's appearance. Available from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44809-->.
+   - *Template*: Use a prebuilt or custom design for more control over the node's appearance. Available from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44809-->.
+
+     ![Node edge graph template example showing a network diagram with multiple nodes displaying status indicators, roles, and labels organized in a hierarchical structure](~/dataminer/images/NodeEdgeGraphTemplate.gif)<br>*Node edge graph component in DataMiner 10.6.4*
+
+     In the example above, a custom template is used to display additional node information, such as status indicators, roles, and labels, directly within each node.
+
+     The following options are available when the *Template* option is enabled:
 
      - ![Edit](~/dataminer/images/Edit_Template.png): Open the Template Editor to edit the node design. See [Using the Template Editor](xref:Template_Editor).
 
@@ -257,7 +263,7 @@ You can **customize the appearance of nodes** in the graph to better represent y
 
      This default template ensures that a node is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
 
-     This can for instance be useful when the node edge graph's component data (for example, *Components* > *[Page/Panel name]* > *Node edge graph* > *Selected items* > *Tables*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
+     This can for instance be useful when the node edge graph component data (for example, *Components* > *[Page/Panel name]* > *Node edge graph* > *Selected items* > *Tables*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
 
 ## Adding actions to a node edge graph
 
