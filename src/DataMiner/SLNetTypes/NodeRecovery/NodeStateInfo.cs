@@ -4,13 +4,13 @@ using Skyline.DataMiner.Net.NodeRecovery.Requests;
 namespace Skyline.DataMiner.Net.NodeRecovery
 {
     /// <summary>
-    /// General info about the state of a node in the cluster
+    /// General info about the state of a node in the cluster.
     /// </summary>
     [Serializable]
     public class NodeStateInfo
     {
         /// <summary>
-        /// The state of the node, e.g. healthy
+        /// The state of the node, e.g., healthy.
         /// </summary>
         public NodeState State { get; set; }
 

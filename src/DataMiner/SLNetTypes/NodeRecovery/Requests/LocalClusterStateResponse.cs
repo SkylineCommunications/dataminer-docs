@@ -6,13 +6,13 @@ using Skyline.DataMiner.Net.Messages;
 namespace Skyline.DataMiner.Net.NodeRecovery.Requests
 {
     /// <summary>
-    /// Response for <see cref="LocalClusterStateRequest"/>
+    /// Response for <see cref="LocalClusterStateRequest"/>.
     /// </summary>
     [Serializable]
     public class LocalClusterStateResponse : ResponseMessage
     {
         /// <summary>
-        /// Overview of every node in the cluster as observed from the local node's perspective
+        /// Overview of every node in the cluster as observed from the local node's perspective.
         /// </summary>
         public Dictionary<int, NodeStateInfo> ClusterState { get; set; } = new Dictionary<int, NodeStateInfo>();
 

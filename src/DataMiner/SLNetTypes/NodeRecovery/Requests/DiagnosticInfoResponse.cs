@@ -5,13 +5,13 @@ using Skyline.DataMiner.Net.Messages;
 namespace Skyline.DataMiner.Net.NodeRecovery.Requests
 {
     /// <summary>
-    /// Response for <see cref="DiagnosticInfoRequest"/>
+    /// Response for <see cref="DiagnosticInfoRequest"/>.
     /// </summary>
     [Serializable]
     public class DiagnosticInfoResponse : ResponseMessage
     {
         /// <summary>
-        /// Local node identifier
+        /// Local node identifier.
         /// </summary>
         public int LocalNodeId { get; set; }
 
@@ -21,17 +21,17 @@ namespace Skyline.DataMiner.Net.NodeRecovery.Requests
         public int LeaderNodeId { get; set; }
 
         /// <summary>
-        /// Startup time of the NodeRecovery DxM
+        /// Startup time of the NodeRecovery DxM.
         /// </summary>
         public DateTimeOffset StartupTime { get; set; }
 
         /// <summary>
-        /// Version of the DxM
+        /// Version of the DxM.
         /// </summary>
         public string Version { get; set; }
 
         /// <summary>
-        /// Detailed diagnostic information for each node in the cluster
+        /// Detailed diagnostic information for each node in the cluster.
         /// </summary>
         public Dictionary<int, NodeDiagnosticInfo> NodeDiagnostics { get; set; } = new Dictionary<int, NodeDiagnosticInfo>();
 

@@ -6,18 +6,18 @@ using Skyline.DataMiner.Net.Messages;
 namespace Skyline.DataMiner.Net.NodeRecovery.Requests
 {
     /// <summary>
-    /// Response for <see cref="GlobalClusterStateRequest"/>
+    /// Response for <see cref="GlobalClusterStateRequest"/>.
     /// </summary>
     [Serializable]
     public class GlobalClusterStateResponse : ResponseMessage
     {
         /// <summary>
-        /// The ID of the leader node within the NodeRecovery cluster.
+        /// The ID of the leader node within the Node Recovery cluster.
         /// </summary>
         public int LeaderNodeId { get; set; }
 
         /// <summary>
-        /// Overview of every node in the cluster as observed by the NodeRecovery DxMs
+        /// Overview of every node in the cluster as observed by the NodeRecovery DxMs.
         /// </summary>
         public Dictionary<int, NodeStateInfo> ClusterState { get; set; } = new Dictionary<int, NodeStateInfo>();
 
