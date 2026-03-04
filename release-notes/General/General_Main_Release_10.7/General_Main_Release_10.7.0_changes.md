@@ -274,6 +274,12 @@ From now on, each SLLogCollector instance will have its own dedicated log file n
 
 Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
 
+#### Security enhancements [ID 44804]
+
+<!-- 44804: MR 10.7.0 - FR 10.6.5 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]

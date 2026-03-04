@@ -183,6 +183,15 @@ Collectors of type "Exe" can be used to run an executable file and store the out
 
 In some cases, SLLogCollector can seem to get stuck when collecting files. This usually has one of the root causes detailed below.
 
+Additionally, each SLLogCollector instance writes its own [internal log file](#sllogcollector-logs), which can help diagnose issues.
+
+### SLLogCollector logs
+
+Each SLLogCollector instance writes its own internal log file named `log-[creation timestamp].txt`. These log files are stored in `C:\ProgramData\Skyline Communications\SLLogCollector`.
+
+> [!NOTE]
+> Prior to DataMiner 10.6.4/10.7.0<!--RN 44668-->, all logging is stored in two files: `SL_LogCollector_fulllog.log` and `SL_LogCollector_Log.log`, located in `C:\ProgramData\Skyline\DataMiner\SL_LogCollector`.
+
 ### Nodetool missing JAVA_HOME
 
 **Issue**: When nodetool cannot resolve a *JAVA_HOME* variable (either in the session or system-wide), it goes into an error mode without exiting, which can block SLLogCollector.

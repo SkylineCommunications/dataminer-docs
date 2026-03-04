@@ -1,16 +1,14 @@
 ---
 uid: Pricing_Usage_based_service
-description: The DataMiner Usage-based Services model offers the option to leverage the DataMiner technology on a flexible basis with two deploy models.
+description: The usage-based services model provides high operational flexibility, allowing you to leverage any available DataMiner function
 ---
 
 # Usage-based services
 
-The DataMiner Usage-based Services model offers your organization the option to leverage the DataMiner technology on a flexible basis empowering your digital transformation. It is available in both deploy models:
+The DataMiner usage-based services model provides **high operational flexibility** in the utilization of DataMiner. It allows organizations to leverage any available DataMiner function as their operational and business needs evolve. It is available in both deployment models:
 
 - Self-managed deployments of DataMiner (on the ground, in a private/public cloud, or hybrid), and
 - Skyline-hosted solutions (DataMiner as a Service).
-
-This model provides **maximum operational flexibility** and maximum continuous flexibility in the utilization of DataMiner, at the required scale and leveraging any of the available DataMiner functions as deemed most valuable for the operation at any time, always perfectly aligned with any of the continuously evolving needs of both the operation and the business.
 
 ## What do you get?
 
@@ -27,37 +25,42 @@ This includes:
 
 ## Subscriptions
 
-By default, DataMiner credits are deducted monthly based on the metered usage (pay-per-use), allowing for variable usage patterns. However, you have the option to reserve a fixed number of units per month per service. This approach provides a more predictable budget, suitable for steady, predictable usage. In exchange for committing to this usage level (Monthly Utilization Allowances (MUA)), you can enjoy savings of **up to 60%**, depending on the quantities subscribed.
+By default, DataMiner credits are deducted monthly based on the metered usage (pay-per-use), allowing for variable consumption over time. As an alternative, organizations can **subscribe to a fixed number of service units per month**. This provides greater budget predictability and is best suited for steady or predictable usage patterns.
+
+Monthly Utilization Allowance (MUA) represents the total number of credits committed per month across all services. In exchange for this commitment, organizations can benefit from savings of **up to 60%**, depending on the subscribed quantities and services.
 
 |   | Subscription | Pay-per-Use |
 |---|:---:|:---:|
-| Roll-over credits | Unused credits do not roll to the next month. | Unused credits expire 12 months from the start date. |
+| Roll-over credits | Unused credits do not roll to the next month. | Unused credits do not expire. |
 | Minimum contract duration | 12 months | N/A |
 | Annual automatic renewal | Yes | N/A |
 | Annual subscription fee | Yes | N/A |
 | Support services | MUA < 200: Community Plan<br>MUA >= 200: Continuity/Evolve | Community Plan |
+| Use any existing connectors from the [Catalog](https://catalog.dataminer.services/) | Yes | Yes |
+| New connector development & changes to existing connectors | Included for MUA ≥ 200 <br>Professional Services credits for MUA < 200 | Charged as Professional Services credits |
 
-### New connector development and changes to existing connectors
+> [!IMPORTANT]
+> New connector development and changes to existing connectors are subject to a **fair use policy** and are intended to support normal platform usage and evolution.
 
-In general, a system running as a usage-based service can use any of the existing connectors available in the [Catalog](https://catalog.dataminer.services/) as is, regardless of whether they have active subscriptions or are just on PPU. This also includes new connector versions as they become available.
-
-Organizations with 200+ MUA can request changes to existing connectors as well as new connectors, with no additional costs, **subject to a fair use policy**. However, for organizations under 200 MUA, these services are charged as professional service credit.
-
-> [!TIP]
-> As an alternative to paying professional services for new connector development, organizations under 200 MUA can purchase a connector as a perpetual license. This has the benefit of locking the price of the new development, though regular usage fees still apply whenever the connector is used. Additionally, if the organization has other DataMiner Systems on a perpetual-use license, it also has the right to use this connector on those systems.
+> [!NOTE]
+> As an exception, organizations under 200 MUA may opt to purchase a connector as a **perpetual license** instead of paying professional services for new connector development. Regular usage fees still apply whenever the connector is used. If the organization also operates DataMiner Systems under a perpetual‑use license, the connector may also be used on those systems.
 
 ## Billing & metering
 
 ### Organization
 
-An "organization" is the billing entity and the highest level in the hierarchy in [dataminer.services](https://admin.dataminer.services/). Among other things, it is where a company manages its settings, subscription, and billing preferences.
+An "organization" is the billing entity and the highest level in the hierarchy in [dataminer.services](https://admin.dataminer.services/). It is where a company manages its settings, subscriptions, and billing preferences.
 
 - Multiple DataMiner Systems (DMS) can exist in the same organization, but a DMS can only be associated with one organization.
-- DMSs in separate organizations are isolated from each other.
-- Metering is done on organization level and is the sum of the usage across all of an organization's DMSs.
+- DMSs in separate organizations are fully isolated from each other.
+- Metering is done on organization level and is the sum of the usage across all DMSs within the organization.
+
+By default, subscriptions apply to the **aggregated usage of the organization**.
+
+Optionally, a subscription can be **scoped to a specific DataMiner System** to reserve the subscribed quantities for that system. This is typically used to control or guarantee system‑level budgets. When a subscription is scoped to a DMS, any **unused subscription capacity is not shared** with other systems in the organization and remains unconsumed, with one important **exception**: **connector usage** is shared across the organization and is not restricted by system‑assigned subscriptions.
 
 > [!NOTE]
-> Though we recommend having one organization per company, there is no limit to the number of organizations that can be created under the same company. This might be useful in the following scenarios: test or development accounts, managing multiple concurrent subscriptions on number of credits, or large companies with an Enterprise Agreement with multiple billing entities.
+> Though we recommend having one organization per company, there is no limit to the number of organizations that can be created under the same company. This might be useful to isolate test or development systems, or for large companies with an Enterprise Agreement with multiple billing entities.
 
 ![Business organization overview](~/dataminer/images/Business_organization_Overview.png)
 
@@ -111,6 +114,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | Storage as a Service (STaaS) | *Trend data points* | New data point updates from trended metrics written to the storage service. |
 | Storage as a Service (STaaS) | *Element data*| Metrics from Managed Objects written to the storage service. |
 | DataMiner as Service (DaaS)  | *Hosted Managed Objects* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
+| DataMiner as Service (DaaS)  | *Hosted nodes*  | Additional hosted DataMiner nodes provisioned to increase resiliency or availability beyond the default hosted setup. |
 | DataMiner Assistant | *Document Intelligence* | Document processing operations executed via the [Document Intelligence tool](xref:docintel) in DataMiner Automation. |
 
 > [!NOTE]
@@ -127,20 +131,31 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Automation Actions*          | Sum of automation script runs (1x per run) and new Unmanaged Object instances (5x new instance)    | Starting at 5 for 1K actions.<br> Decreases with volume. | For an object "Ticket", when creating 100 new tickets, the metered value equals 500 |
 | *Dashboard Sharing*           | Sum of number of unique shares.                                                       | 0.5 | Sharing 2 dashboards with 5 email recipients for a full month, the metered value is 2 dashboards x 5 recipients = 10. |
 | *Alarm Updates*               | Sum of alarm update writes.       | 0.9 per 100K alarm updates. | |
-| *Information Events*          | Sum of information event writes.  | 0.3 per 100K information events. | |
+| *Information Events*          | Sum of information event writes.  | 0.4 per 100K information events. | |
 | *Trend data points*           | Sum of trend data point writes.   | 0.3 per 10M trend data points. | |
-| *Element data*                | Sum of element data writes.       | 0.3 per 10M element data updates. | |
-| *Hosted Managed Objects*      | Sum of metrics of all Managed Objects hosted. | 0.1 for 10K metrics| A hosted system with 2 Managed Objects, one with 24K metrics and the other with 150 metrics. The metered value is 24,150 x 0.1 / 10K = 0.2415 |
+| *Element data*                | Sum of element data writes.       | 0.1 per 10M element data updates. | |
+| *Hosted Managed Objects*\* | Sum of metrics of all Managed Objects hosted. | 0.1 for 10K metrics | A hosted system with 2 Managed Objects, one with 24K metrics and the other with 150 metrics. The metered value is 24&thinsp;150 x 0.1 / 10K = 0.2415 |
+| *Hosted nodes* | Number of additional hosted nodes provisioned for additional resiliency. | 6 per node | |
 | *Document Intelligence*       | Sum of the processed document pages.  | 9 per 1K pages. | Processing 1.5K PDF documents with 2 pages each results in 3K processed pages, yielding a metered value of 3K x 9 / 1K = 27. |
+
+\* When the *Hosted Managed Objects* service is activated, a minimum charge equivalent to **1M metrics per month** applies.
 
 > [!NOTE]
 > Instead of a fixed number of 5 actions, some objects defined in Skyline's [Standard Data Model](xref:SOL_About#standard-data-model) may trigger a different number of Automation Actions when new unmanaged object instances are created.
 
-> [!TIP]
-> While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g., specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 1.7 credits for 100 Managed Objects per month, considering a typical usage scenario of 180 alarm updates, 240 information events, 400,000 stored data points and 100,000 element data updates per Managed Object on average per month.
+##### STaaS Billing
 
-> [!IMPORTANT]
-> The calculation of Service Usage may result in fractional amounts. However, for billing purposes, the total is rounded up to the nearest whole number of credits.
+The credit rates listed above for STaaS services (*Alarm Updates*, *Information Events*, *Trend data points*, and *Element data*) apply to **Zone‑redundant storage (ZRS)** deployments.
+
+For **Geo‑redundant storage (GRS)** deployments, the metered usage for these services is charged at **2× the listed credit rates**.
+
+>[!NOTE]
+> While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g., types of Managed Objects, system configuration, and user preferences), the above translates to an average charge of:
+>
+> - **1.7 credits per 100 Managed Objects per month (ZRS)**
+> - **3.4 credits per 100 Managed Objects per month (GRS)**
+>
+> For this, a typical usage pattern is assumed of 300 alarm updates, 300 information events, 400&thinsp;000 stored trend data points, and 100&thinsp;000 element data updates per Managed Object per month.
 
 ### Metering Period
 
@@ -178,14 +193,14 @@ MUA increased to 250 credits on August 1, 2023
 
 ### Overage
 
-**No Penalties**: Service overage usage is charged at the standard pay-per-use fees, using the current credit rate.
+**No penalties**: Service overage usage is charged at the standard pay-per-use fees, using the current credit rate.
 
-**No Throttling**: Your service performance will not be throttled or degraded because of overage.
+**No throttling**: Your service performance will not be throttled or degraded because of overage.
 
-**Monthly Billing**: Overage charges will be included in your bill at the end of the month. If you have pay-per-use credits available, they will be deducted to cover the overage at the end of the month. If you do not have sufficient credits, the additional costs will be invoiced at the end of the month.
+**Monthly billing**: Overage charges will be included in your bill at the end of the month. If you have pay-per-use credits available, they will be deducted to cover the overage at the end of the month. If you do not have sufficient credits, the additional costs will be invoiced at the end of the month.
 
-**Service Suspension**: If overage fees are not settled by the due date, service may be temporarily suspended until payment is received.
+**Service suspension**: If overage fees are not settled by the due date, service may be temporarily suspended until payment is received.
 
 **Notification**: You will receive alerts when you are approaching your usage limit and once you have exceeded it.
 
-**Avoid Overages**: Although you are not penalized, the cost of overage is at the service's pay-per-use credit rate, which may be higher than the subscription rate. To avoid future overage charges, consider upgrading to a higher-tier plan that better suits your usage needs.
+**Avoid overages**: Although you are not penalized, the cost of overage is at the service's pay-per-use credit rate, which may be higher than the subscription rate. If you expect this overage to be **continuous**, you may want to **review your subscriptions** to benefit from more favorable pricing.
