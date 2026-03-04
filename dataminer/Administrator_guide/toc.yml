@@ -188,8 +188,6 @@ items:
             topicUid: BPA_Password_Strength
           - name: Security Advisory
             topicUid: BPA_Security_Advisory
-          - name: Service Automatic Properties
-            topicUid: BPA_Service_Automatic_Properties
           - name: SLNet connections between the DataMiner Agents
             topicUid: BPA_Check_Cluster_SLNet_Connections
           - name: SRM Framework Configuration
