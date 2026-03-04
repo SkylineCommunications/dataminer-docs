@@ -47,7 +47,7 @@ dataminer-qaops test-run-and-wait \
 ```
 
 > [!TIP]
-> You can find your test suite and configuration IDs in the QAOps Operator application. Authentication tokens are created through the [QAOps User application](xref:QAOps_Main_UI#qaops-user-tokens).
+> You can find your test suite and configuration IDs in the QAOps Operator application. Authentication tokens are created through the [QAOps User application](xref:QAOps_Main_UI#qaops-user---tokens).
 
 ## Common examples
 
@@ -142,7 +142,7 @@ These options only apply to the `test-run-and-wait` command:
 
 ## Authentication
 
-Authentication tokens are created through the [QAOps User application](xref:QAOps_Main_UI#qaops-user-tokens). Once you have your token, provide it using either method:
+Authentication tokens are created through the [QAOps User application](xref:QAOps_Main_UI#qaops-user---tokens). Once you have your token, provide it using either method:
 
 ### Environment variable (recommended)
 
