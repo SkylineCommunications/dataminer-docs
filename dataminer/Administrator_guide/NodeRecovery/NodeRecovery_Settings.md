@@ -21,7 +21,7 @@ The default configuration should suffice for most scenarios. If you do need to c
    > [!IMPORTANT]
    > For correct and predictable cluster behavior, we strongly recommend keeping these settings identical on all nodes. If settings differ between nodes, this may lead to inconsistent or unexpected behavior, as each node will operate according to its own configuration.
 
-1. Restart the *DataMiner NodeRecovery* service on each of the cluster nodes (e.g., using Windows Task Manager).
+1. Unless only [logging settings](#logging-settings) were adjusted, restart the *DataMiner NodeRecovery* service on each of the cluster nodes (e.g., using Windows Task Manager).
 
 > [!NOTE]
 > By default, a log file for DataMiner NodeRecovery is stored in `C:\ProgramData\Skyline Communications\DataMiner NodeRecovery\Logs`. In case the *DataMiner NodeRecovery* service does not start up after a configuration change, the log file will contain more information.
