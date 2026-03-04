@@ -20,7 +20,7 @@ The parameter ID can be:
 
 - *DK* to filter on display keys
 
-A filtering string can contain multiple value filters. By default, multiple value filters on the same column will be combined as OR, whereas multiple value filters on different columns will be combined as AND. You can also the following operators:
+A filtering string can contain multiple value filters. By default, multiple value filters on the same column will be combined as OR, whereas multiple value filters on different columns will be combined as AND. You can also use the following operators:
 
 - For all parameter types: *==* and *!=*
 
