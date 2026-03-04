@@ -59,6 +59,14 @@ Up to now, when you pasted a large piece of formatted text in such a text box, i
 
 ### Fixes
 
+#### GQI DxM: 'Get profile instances' and 'Get trend data' data sources would incorrectly format parameters using invariant culture [ID 44857]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+Up to now, the *Get profile instances* and *Get trend data* data sources would format the display values of DataMiner parameters using invariant culture and would show inconsistent group separators.
+
+From now on, all data sources will format the display values for DataMiner parameters consistently using the culture of the user and will also use the group separator defined in that culture.
+
 #### Dashboards/Low-Code Apps - Table component: Data fed to another component would not get updated during a refetch [ID 44871]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
