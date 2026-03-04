@@ -68,6 +68,8 @@ The `ClientTimeZone` (`DMAAutomationScriptOptionClientTimeZone`) data type has t
 
 The *Node edge graph* component now supports node templates. This allows you to customize the appearance of nodes using the Template Editor or by applying preset templates as a starting point.
 
+![Node edge graph template example showing a network diagram with multiple nodes displaying status indicators, roles, and labels organized in a hierarchical structure](~/dataminer/images/NodeEdgeGraphTemplate.gif)
+
 In the *Settings* pane, navigate to *Identifiers* > *Nodes* > *Base node* > *Visual*. In this section, you can now select *Template*. From there, you can either click the *Edit* icon to open the Template Editor or the *Browse templates* icon to select a preset or custom template.
 
 > [!NOTE]
