@@ -27,7 +27,7 @@ To use the pre-installed DataMiner Virtual Hard Disk, you will need to follow th
 
 When you have downloaded the virtual hard disk, you can start to create a VM in your chosen virtualization environment. Below you can find the steps to follow in Hyper-V:
 
-1. Download the [virtual hard disk of your choice](https://community.dataminer.services/dataminer-virtual-hard-disk/) from DataMiner Dojo. In most cases, this will be the **VHDX** version.
+1. Download the [virtual hard disk of your choice](https://community.dataminer.services/dataminer-virtual-hard-disk/) from DataMiner Dojo. For Hyper-V, choose the **VHDX** version.
 
 1. Start creating your VM by following [the official Hyper-V guide](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v).
 
