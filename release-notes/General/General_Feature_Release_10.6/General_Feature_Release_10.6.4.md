@@ -61,6 +61,21 @@ In the automation script, the time zone will be available on the `IEngine` input
 > - If the script was executed from a source other than a web app, or if the time zone information could not be parsed, the `TimeZone` property can be null.
 > - In case a subscript is executed, the `ClientInfo` of the parent script will also be available in the subscript.
 
+#### Offloading data is now partially supported when Swarming is enabled [ID 44751]
+
+<!-- MR 10.7.0 - FR 10.6.4 [CU0] -->
+
+Up to now, it was not possible to offload data on systems with Swarming enabled. From now on, provided the `info` and `alarm` tables have a compatible primary key definition, offloading data will be supported when Swarming is enabled, except for the following tables:
+
+- `alarm_property`
+- `brainlink`
+- `interface_alarm`
+- `service_alarm`
+
+When Swarming is enabled, the `alarm` and `info` tables in the offload database will need an updated primary key that includes the *eid* column next to the *id* and *dmaid* columns. Swarming prerequisites will complain if the primary key is incorrect.
+
+The `CentralTable*.*` scripts in `C:\Skyline DataMiner\tools\` have been updated to initialize any new offload database with the expected primary keys right from the start.
+
 #### SLNet: Minimum number of worker threads and I/O threads is now configurable [ID 44843]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->

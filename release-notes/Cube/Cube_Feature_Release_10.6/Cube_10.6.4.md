@@ -55,6 +55,20 @@ On the *Analytics config* page, located in the *System settings* section of *Sys
 
 This setting will allow administrators to cap the number of active suggestion events per behavioral change type.
 
+#### Offloading data is now partially supported when Swarming is enabled [ID 44767]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, it was not possible to offload data on systems with Swarming enabled. From now on, DataMiner Cube will allow you to configure data offloading when Swarming is enabled, except for the following tables:
+
+- `alarm_property`
+- `brainlink`
+- `interface_alarm`
+- `service_alarm`
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.4 or newer. See [Offloading data is now partially supported when Swarming is enabled [ID 44751]](xref:General_Feature_Release_10.6.4#offloading-data-is-now-partially-supported-when-swarming-is-enabled-id-44751).
+
 #### New URL argument 'EnableAlarmSubscriptions' [ID 44779]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
