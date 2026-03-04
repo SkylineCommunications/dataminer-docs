@@ -13,7 +13,7 @@ This tutorial focuses on meaning and analysis, not only navigation.
 
 For all tutorials, always use the "QAOps Sandbox Environment": [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be).
 
-Expected duration: 10 minutes.
+Expected duration: 5 minutes.
 
 ## Prerequisites
 

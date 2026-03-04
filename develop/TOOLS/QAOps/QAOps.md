@@ -49,7 +49,7 @@ The QAOps system consists of the following components:
 
 - [QAOps test packages](xref:QAOps_Test_Package), which contain collections of tests. Each test can send one or more test results.
 
-<!-- ![QAOps overview](QAOpsUserOverview.drawio.png) -->
+![QAOps overview](~/develop/images/QAOps_UserOverview.png)
 
 ## Starting a test
 
