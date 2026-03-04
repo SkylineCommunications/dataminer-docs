@@ -44,9 +44,10 @@ uid: General_Feature_Release_10.6.5
 
 On systems where each DMA has its own Cassandra database, SLDataGateway will now log when the TTLs of all active alarms have been refreshed. This will allow you to better trace any job queue spikes caused by these refresh operations.
 
-#### Security enhancements [ID 44804]
+#### Security enhancements [ID 44804] [ID 44898]
 
 <!-- 44804: MR 10.7.0 - FR 10.6.5 -->
+<!-- 44898: MR 10.6.0 [CU2] - FR 10.6.5 -->
 
 A number of security enhancements have been made.
 
