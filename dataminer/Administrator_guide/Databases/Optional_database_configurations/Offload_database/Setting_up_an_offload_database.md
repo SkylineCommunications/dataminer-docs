@@ -220,7 +220,6 @@ When you install or upgrade a DataMiner Agent using an upgrade package, the offl
 Also, when you upgrade a DataMiner Agent using an upgrade package, the offload database is automatically verified (and altered if necessary).
 
 > [!NOTE]
-> This only applies to databases of type "MySQL" and "Microsoft SQL Server". Oracle databases have to be created manually.
-
-> [!NOTE]
-> If an offload database was initially set up before 10.6.4, the updates required to support [offload databases with Swarming enabled](xref:Offload_Database_With_Swarming) are not automatically applied. In this scenario, manual queries need to be executed before enabling Swarming. The [Swarming prerequisites check](xref:EnableSwarming#running-a-prerequisites-check) will indicate if these queries need to be executed.
+>
+> - This only applies to databases of type "MySQL" and "Microsoft SQL Server". Oracle databases have to be created manually.
+> - If an offload database is initially set up using a DataMiner version prior to 10.6.4/10.7.0, the updates required to support the [offload database with Swarming enabled](xref:Offload_Database_With_Swarming) are not automatically applied. In this scenario, you may need to execute manual queries before enabling Swarming. The [Swarming prerequisites check](xref:EnableSwarming#running-a-prerequisites-check) will indicate if this is necessary.
