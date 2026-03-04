@@ -159,7 +159,7 @@ To configure SMTP settings directly in *DataMiner.xml*:
 
 ### OAuth SMTP server settings
 
-The following additional settings are only used when LoginMethod is set to XOAUTH2.
+The following additional settings are only used when LoginMethod is set to XOAUTH2. Note that these cannot be configured directly in *DataMiner.xml*, they must be configured via DataMiner Cube.
 
 - **OAuthClientID**: The client ID that has been requested for DataMiner.
 
