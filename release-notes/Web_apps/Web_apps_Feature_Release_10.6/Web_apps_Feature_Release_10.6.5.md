@@ -80,3 +80,9 @@ Also, in the different GQI components (i.e., *Table*, *Grid*, *Node edge graph*,
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When, in the query builder, you inserted a node (for example a filter) before a *Join* operator, up to now, some of the node's options (such as column selection, filter method, and value) would incorrectly not appear. As a result, it would not be possible to completely configure the node.
+
+#### Dashboards/Low-Code Apps - Query filter component: Problem when opening the operator selection box [ID 44918]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When, in a *Query filter* component, you opened the operator selection box in order to select "equals", "contains", or "match regex", in some cases, part of that selection box would incorrectly not be displayed.
