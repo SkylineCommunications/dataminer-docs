@@ -62,6 +62,9 @@ On the *General* page, the following settings are available:
 
     - *Operating System* (default)
 
+      > [!NOTE]
+      > When *Operating System* is selected, the theme follows the Windows app mode (Light or Dark) configured in the Windows settings.
+
     - *Dark*
 
     - *Light*
