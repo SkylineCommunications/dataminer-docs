@@ -24,7 +24,7 @@ You can pin additional buttons to the sidebar using the "..." or "+" button. Thi
 
 To unpin a button again, right-click the button and select *Unpin*. This is not possible for the buttons that are displayed by default.
 
-![Unpin a button](~/dataminer/images/Unpin_Button.png)<br>*DataMiner Cube sidebar in DataMiner 10.4.5*
+![Unpin a button](~/dataminer/images/Unpin_Button.png)<br>*DataMiner Cube sidebar in DataMiner 10.6.4*
 
 > [!NOTE]
 >
@@ -166,7 +166,7 @@ The following actions are possible with this list:
 
 - Pin an item so that it is placed in the *Pinned* section at the top of the list: hover over the item with the mouse pointer until a pin icon appears to the right of it, then click the pin icon.
 
-  ![Pin an item](~/dataminer/images/Pin_Item.png)<br>*Activity pane in DataMiner 10.4.5*
+  ![Pin an item](~/dataminer/images/Pin_Item.png)<br>*Activity pane in DataMiner 10.6.4*
 
 > [!NOTE]
 >
