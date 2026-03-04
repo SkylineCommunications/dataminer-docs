@@ -5,7 +5,7 @@ uid: SLNetClientTest_info_on_open_gqi_sessions
 # Retrieving information on open GQI sessions
 
 > [!NOTE]
-> The SLNetClientTest tool can only retrieve GQI sessions that are running in SLHelper. From DataMiner 10.5.0 [CU12]/10.6.3 onwards, the [GQI Monitor](https://catalog.dataminer.services/details/faded63d-795f-422b-968a-89ae98ce0a2d) app from the catalog can be used to retrieve information for active GQI sessions running in the [GQI DxM](xref:GQI_DxM).
+> The SLNetClientTest tool can only retrieve GQI sessions that are running in SLHelper. To retrieve information for active GQI sessions running in the [GQI DxM](xref:GQI_DxM), from DataMiner 10.5.0 [CU12]/10.6.3 onwards, you can use the [GQI Monitor](https://catalog.dataminer.services/details/faded63d-795f-422b-968a-89ae98ce0a2d) app.
 
 From DataMiner 10.2.0/10.1.7 onwards, you can retrieve information on how many GQI (i.e., generic queries interface, the interface used for queries in the Dashboards app) sessions are currently open.
 
