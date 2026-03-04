@@ -18,10 +18,7 @@ If you intend to upgrade your entire DataMiner System (i.e., all DMAs in the clu
 
 ## Performing a DataMiner Upgrade
 
-Proceed as follows to upgrade your DataMiner Agent(s) to the latest version:
-
-> [!NOTE]
-> You can also double-click an upgrade package that has been saved in a temporary folder on one of your DataMiner Agents, and then proceed with the procedure from step 3.
+Proceed as follows to upgrade your DataMiner Agent(s) to the latest version. Note that you can also double-click an upgrade package that has been saved in a temporary folder on one of your DataMiner Agents, and then proceed with the procedure from step 3.
 
 1. In the Windows taskbar, right-click the DataMiner Taskbar Utility icon and click *Upgrade*.
 
@@ -34,10 +31,9 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the latest version:
 
 1. If you want to upgrade a different Agent than suggested next to *Agents to upgrade*, click *Change* and select the DataMiner Agents that have to be upgraded.
 
-   > [!NOTE]
-   >
-   > - To upgrade an entire cluster, click *Select all* in the *select Agents to upgrade* window.
-   > - To upgrade both Agents in a Failover setup, it suffices to select the entry that represents the setup.
+   To upgrade an entire cluster, click *Select all* in the *select Agents to upgrade* window.
+
+   To upgrade both Agents in a Failover setup, it suffices to select the entry that represents the setup.
 
    > [!WARNING]
    > To make sure the system functions correctly, **all DMAs** in a cluster must run the **same DataMiner version**.
@@ -68,7 +64,7 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the latest version:
 
     - *BackupFirstWithSwitchback*: Select this option if you want to upgrade the offline Agent, switch over, upgrade the online Agent, and switch back again.
 
-    > [!NOTE]
+    > [!TIP]
     > To specify the default Failover policy, in DataMiner Cube, go to *System Center* > *System Settings* > *upgrade* > *Failover options.* We highly recommend that you set this to *Upgrade main and backup Agent simultaneously*.
 
 1. Click *Upgrade* to start the upgrade procedure.
@@ -76,3 +72,6 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the latest version:
 1. Wait until the upgrade has finished. This can take several minutes, depending on the network properties, the type of upgrade, and the size and complexity of your DataMiner System.
 
 1. When all DataMiner Agents have successfully been upgraded, click *Finished*.
+
+> [!CAUTION]
+> If an upgrade is started using the DataMiner Taskbar Utility, a button allows you to abort the upgrade in progress. However, be very careful with this functionality, as aborting an upgrade can potentially cause a DMA to no longer start up.
