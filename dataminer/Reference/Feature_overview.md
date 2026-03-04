@@ -128,6 +128,7 @@ Below you can find an overview of the main features that have been added to Data
 | Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#adding-actions-to-a-timeline) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
 | Low-Code Apps: [Trigger component actions that let users control the trigger timer](xref:DashboardTrigger#letting-users-control-the-trigger-timer) | DataMiner web 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 <!-- [ID 43184]  --> |
 | Low-Code Apps: [On app open event](xref:Changing_low-code_app_settings#having-an-event-triggered-when-the-app-is-opened) | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10<!-- [ID 43350] --> |
+| [Node Recovery](xref:NodeRecovery_About) | DataMiner 10.6.0/10.6.2, with the NodeRecovery DxM |
 | Protocols: [Buttons in table cells to open DataMiner objects](xref:UIComponentsTableRowButtons) | DataMiner 10.1.9/10.2.0 <!-- [ID 30413] --> |
 | Protocols: [Buttons to open EPM objects](xref:AdvancedEPMLaunchEPMObjectsTableCellButtons)| DataMiner 10.2.3/10.3.0 <!-- [ID 32368] --> |
 | Protocols: [NT_CLEAR_PARAMETER (474)](xref:NT_CLEAR_PARAMETER) message | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 <!-- [ID 42368] --> |
