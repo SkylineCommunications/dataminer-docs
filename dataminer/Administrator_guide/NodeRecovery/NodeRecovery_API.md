@@ -14,15 +14,11 @@ To request this information, send a [LocalClusterStateRequest](xref:Skyline.Data
 
 Exceptions are thrown when the target DMA does not exist or is unreachable.
 
-This API call requires DataMiner version 10.6.0/10.6.2 or higher.
-
 ## Requesting the global cluster state
 
 When this is requested, the leader node will provide the global cluster state, which represents the cluster-wide consensus on node states. Unlike the local cluster state, which shows one node's view, the global cluster state aggregates information from all reachable nodes.
 
 To request this information, send a [GlobalClusterStateRequest](xref:Skyline.DataMiner.Net.NodeRecovery.Requests.GlobalClusterStateRequest) message. The response will be a [GlobalClusterStateResponse](xref:Skyline.DataMiner.Net.NodeRecovery.Requests.GlobalClusterStateResponse) containing the global consensus view of all node states.
-
-This API call requires DataMiner version 10.6.0/10.6.3 or higher.
 
 > [!NOTE]
 > When the leader node is unreachable or when no leader is elected, this request will fail with an exception, as the global cluster state cannot be retrieved in those scenarios.
@@ -34,8 +30,6 @@ From any node in the cluster, it is possible to set or unset maintenance mode fo
 To do so, send a [SetMaintenanceRequest](xref:Skyline.DataMiner.Net.NodeRecovery.Requests.SetMaintenanceRequest) message that specifies a node ID as well as whether to enable or disable maintenance mode for that node. The response will be a [SetMaintenanceResponse](xref:Skyline.DataMiner.Net.NodeRecovery.Requests.SetMaintenanceResponse).
 
 The request will be handled through the NodeRecovery module on the DMA to which the request was sent.
-
-This API call requires DataMiner version 10.6.0/10.6.2 or higher.
 
 ## Retrieving diagnostics from a node
 

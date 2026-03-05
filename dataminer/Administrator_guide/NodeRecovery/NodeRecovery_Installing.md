@@ -8,7 +8,7 @@ uid: NodeRecovery_Installing
 
 - The [Swarming](xref:Swarming) feature must be enabled in the system. If it is not enabled, the NodeRecovery process will run but will not take any actions.
 
-- This functionality requires DataMiner 10.6.0/10.6.2 or higher.
+- This functionality requires DataMiner 10.6.0/10.6.3 or higher.
 
 ## Installation
 
