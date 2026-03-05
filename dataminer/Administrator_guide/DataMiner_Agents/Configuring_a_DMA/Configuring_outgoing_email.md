@@ -131,7 +131,7 @@ To configure SMTP settings directly in *DataMiner.xml*:
 
   - If you explicitly do not want to use SSL, specify `465-nossl`.
 
-  - If you want to use STARTTLS, specify for example, `123-starttls`.
+  - If you want to use STARTTLS, specify, for example, `123-starttls`.
 
 - **LoginMethod**: The method that will be used to authenticate the DataMiner Agent when it logs on to the SMTP server. The following methods can be specified:
 
