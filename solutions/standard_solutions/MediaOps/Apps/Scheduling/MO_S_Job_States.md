@@ -21,7 +21,7 @@ A job can have one of the following states:
 <!--
 <div style="background-color:#36F0F3;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Ready for invoice</div>
 
-Ready for invoice means that all changes are final and therefor it is no longer allowed to make any changes to the job.
+Ready for invoice means that all changes are final and therefore it is no longer allowed to make any changes to the job.
 
 <div style="background-color:#529495;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Invoiced</div>
 

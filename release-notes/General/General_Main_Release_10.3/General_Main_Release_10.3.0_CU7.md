@@ -182,7 +182,7 @@ From now on, when a custom timeout is passed to a `HandleMessage` method on a GR
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
-In some cases, the length parameter in a response would not be set to the the correct value.
+In some cases, the length parameter in a response would not be set to the correct value.
 
 #### Service & Resource Management: Booking status would be set to 'Ended' too soon [ID 37176]
 
