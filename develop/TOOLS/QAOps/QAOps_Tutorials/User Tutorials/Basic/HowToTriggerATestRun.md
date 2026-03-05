@@ -89,8 +89,11 @@ The command output displays a description of the tool and the available commands
 1. Run the following command:
 
 	```bash
-	dataminer-qaops test-run --token TOKEN -t TESTSUITE -c CONFIGURATION -tags MYNAME -san saqaopssandbox
+	dataminer-qaops test-run --token "TOKEN" -t TESTSUITE -c CONFIGURATION -tags MYNAME -san saqaopssandbox
 	```
+
+> [!IMPORTANT]
+> For production systems, leave out the -san argument.
 
 1. Replace the placeholders with your values:
 
