@@ -13,25 +13,25 @@ A QAOps test result contains the outcome of one test case execution.
 
 Each test result must include the following fields:
 
-- `Name`: A short, human-readable name for the test case. Any non-empty string is allowed.
+- **Name**: A short, human-readable name for the test case. Any non-empty string is allowed.
 
-- `Outcome`: The final test result. Allowed values are case-insensitive: `Ok`, `Fail`, `NotExecuted`, `NotApplicable`.
+- **Outcome**: The final test result. Allowed values are case-insensitive: `Ok`, `Fail`, `NotExecuted`, and `NotApplicable`.
 
 ## Optional fields
 
 You can add the following fields to provide more context:
 
-- `Message`: Additional details, such as what was tested or how to investigate a failure.
+- **Message**: Additional details, such as what was tested or how to investigate a failure.
 
-- `Duration`: The execution time of the test case.
+- **Duration**: The execution time of the test case.
 
-- `Tags`: A semicolon-separated or comma-separated list of tags that can be used for filtering in the Low-Code App or for ownership and categorization metadata.
+- **Tags**: A semicolon-separated or comma-separated list of tags that can be used for filtering in the low-code app or for ownership and categorization metadata.
 
-- `TestAspect`: The result type. Allowed values are `Execution` and `Assertion`.
+- **TestAspect**: The result type. Allowed values are `Execution` and `Assertion`.
 
   - `Execution` indicates the health of the test framework or runner itself (for example, script setup failures).
 
-  - `Assertion` indicates the outcome of the actual product or solution behavior under test.
+  - `Assertion` indicates the outcome of the actual product or solution behavior that is being tested.
 
 ## Storage behavior
 
@@ -41,19 +41,19 @@ This storage model is intended for short-term retention, similar to keeping only
 
 Long-term retention through additional technology stacks is planned in 2026.
 
-The current design prioritizes speed and cost efficiency. The framework and Low-Code App load active data directly from memory for each active user.
+The current design prioritizes speed and cost efficiency. The framework and low-code apps load active data directly from memory for each active user.
 
 ## Sending results to QAOps
 
 You can send test results to QAOps in four ways:
 
-1. Use the PowerShell API with `Push-TestCaseResult` to send test results from your QAOps test package pipeline.
+- Use the [PowerShell API](#powershell-api-reference) with `Push-TestCaseResult` to send test results from your QAOps test package pipeline.
 
-1. Use HTTP Post calls to http://localhost:5200/QAOps/testcaseresult
+- Use HTTP POST calls to `http://localhost:5200/QAOps/testcaseresult`.
 
-1. For DataMiner source code tests (to support the current test pool), results sent through QAHelperLib are redirected to QAOps when they run on a QAOps system.
+- For DataMiner source code tests (to support the current test pool), results sent through QAHelperLib are redirected to QAOps when they run on a QAOps system.
 
-1. For legacy GitHub test projects that use QAPortalAPI, results are redirected to QAOps when they run on a QAOps system.
+- For legacy GitHub test projects that use QAPortalAPI, results are redirected to QAOps when they run on a QAOps system.
 
 ## PowerShell API reference
 
@@ -184,9 +184,9 @@ Push-TestCaseResult -Outcome Ok -Name "Nightly sanity"
 
 - Timeout: Default client timeout is approximately 30 seconds. Verify connectivity and server health.
 
-- Date parsing errors: Prefer ISO 8601 format, for example `2025-10-07T14:23:00Z`.
+- Date parsing errors: ISO 8601 format is preferred, for example, `2025-10-07T14:23:00Z`.
 
-- Duration parsing errors: Use standard `TimeSpan` formats, for example `hh:mm:ss`.
+- Duration parsing errors: Use standard `TimeSpan` formats, for example, `hh:mm:ss`.
 
 - Missing tags in output: Empty or whitespace-only `-Tags` values are omitted.
 
