@@ -20,7 +20,7 @@ Expected duration: 15 minutes.
 > [!IMPORTANT]
 > Please contact support.boost@skyline.be to receive a username and password for access to the Sandbox system.
 
-- [dotnet 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- You require [dotnet 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), even if you already have a higher SDK version installed.
 
 ## Overview
 
@@ -38,6 +38,23 @@ Expected duration: 15 minutes.
 
 1. Open a Command Prompt, Bash, or PowerShell window.
 
+1. Check if you have `nuget.org` as a known NuGet source:
+
+	```bash
+	dotnet nuget list source
+	```
+
+1. Verify that the output contains `nuget.org [Enabled]`.
+
+> [!NOTE]
+> The first time you run a `dotnet` command on a computer, you will see a welcome message. The output of your command is displayed below that message.
+
+1. If your sources do not contain `nuget.org`, add it with the following command. Otherwise, skip this step.
+
+	```bash
+	dotnet nuget add source https://api.nuget.org/v3/index.json -n "nuget.org"
+	```
+
 1. Install the QAOps tool:
 
 	```bash
@@ -54,7 +71,7 @@ The command output displays a description of the tool and the available commands
 
 ## Step 2: Find the unique test and configuration identifiers
 
-1. In the *User App*, go to [Configurations](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations).
+1. In the Green *QAOps* application, go to [Configurations](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations).
 
 1. Locate the configuration and test suite you want to execute.
 
@@ -66,7 +83,7 @@ The command output displays a description of the tool and the available commands
 
 ## Step 3: Create a token
 
-1. In the *User App*, go to [Tokens](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens).
+1. In the Green *QAOps* application, go to [Tokens](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens).
 
 1. Click *Create Token* in the top-left corner.
 
@@ -92,9 +109,9 @@ The command output displays a description of the tool and the available commands
 	dataminer-qaops test-run --token "TOKEN" -t TESTSUITE -c CONFIGURATION -tags MYNAME -san saqaopssandbox
 	```
 
-1. Replace the placeholders with your values:
+1. Replace the placeholders with your values, make sure to keep the double quotes around some values intact:
 
-	- `TOKEN`: the token value you copied earlier.
+	- `TOKEN`: the token value you copied earlier. Make sure this value is between double quotes!
 
 	- `TESTSUITE`: the test suite ID you copied earlier.
 
@@ -109,7 +126,7 @@ The command output displays a description of the tool and the available commands
 
 ## Step 5: Verify that the request was received
 
-1. In the *User App*, go to [Overview](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview).
+1. In the Green *QAOps*, go to [Overview](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview).
 
 1. Locate your tag in the list.
 

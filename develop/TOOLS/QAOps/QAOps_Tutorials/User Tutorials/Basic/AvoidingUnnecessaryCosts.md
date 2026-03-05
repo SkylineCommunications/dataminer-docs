@@ -22,7 +22,7 @@ Expected duration: 5 minutes.
 > [!IMPORTANT]
 > Please contact support.boost@skyline.be to receive a username and password for access to the Sandbox system.
 
-- [dotnet 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- You require [dotnet 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), even if you already have a higher SDK version installed.
 
 ## Overview
 
@@ -44,17 +44,34 @@ Expected duration: 5 minutes.
 
 1. Open a Command Prompt, Bash, or PowerShell window.
 
+1. Check if you have `nuget.org` as a known NuGet source:
+
+	```bash
+	dotnet nuget list source
+	```
+
+1. Verify that the output contains `nuget.org [Enabled]`.
+
+> [!NOTE]
+> The first time you run a `dotnet` command on a computer, you will see a welcome message. The output of your command is displayed below that message.
+
+1. If your sources do not contain `nuget.org`, add it with the following command. Otherwise, skip this step.
+
+	```bash
+	dotnet nuget add source https://api.nuget.org/v3/index.json -n "nuget.org"
+	```
+
 1. Install the QAOps tool:
 
-    ```bash
-    dotnet tool install skyline.dataminer.qaops --global
-    ```
+	```bash
+	dotnet tool install skyline.dataminer.qaops --global
+	```
 
 1. Verify that the tool is available:
 
-    ```bash
-    dataminer-qaops --help
-    ```
+	```bash
+	dataminer-qaops --help
+	```
 
 The command output displays a description of the tool and the available commands.
 
