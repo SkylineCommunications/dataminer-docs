@@ -117,7 +117,7 @@ If you want to add the Failover pair to a DataMiner System that uses STaaS, firs
 
 We **recommend against this setup** for Failover. With this setup, it is possible that if one node goes down, all data in the indexing database is unavailable.
 
-If you do go ahead with this, take into account that the the indexing database will automatically create a cluster of two nodes: one for the primary DMA and one for the backup DMA. To ensure this can happen, make sure that **ports 9200 and 9300** are open between primary and backup DMA so the databases can communicate. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
+If you do go ahead with this, take into account that the indexing database will automatically create a cluster of two nodes: one for the primary DMA and one for the backup DMA. To ensure this can happen, make sure that **ports 9200 and 9300** are open between primary and backup DMA so the databases can communicate. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
 
 For Cassandra, you will need to take the same steps as detailed below for a [separate Cassandra setup without indexing](xref:Preparing_the_two_DataMiner_Agents#separate-cassandra-setup-without-indexing).
 
@@ -177,4 +177,4 @@ If SAML authentication is used on the primary DMA, you will need to ensure that 
 1. Start the backup DMA.
 
 > [!IMPORTANT]
-> While you do this, also make sure that that the identity provider has a reference to the address representing the online DMA. If it refers to the DMS via an IP address, make sure that the identity provider refers to the **virtual IP address** (i.e., the IP address that represents the online DMA) instead of a DMA's private IP address.
+> While you do this, also make sure that the identity provider has a reference to the address representing the online DMA. If it refers to the DMS via an IP address, make sure that the identity provider refers to the **virtual IP address** (i.e., the IP address that represents the online DMA) instead of a DMA's private IP address.
