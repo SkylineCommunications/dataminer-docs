@@ -92,14 +92,11 @@ The command output displays a description of the tool and the available commands
 
 1. Open a Command Prompt, Bash, or PowerShell window.
 
-1. Run the following command:
+1. Run the following command, after replacing the placeholders:
 
     ```bash
     dataminer-qaops test-run --token "TOKEN" -t TESTSUITE -c CONFIGURATION -tags MYNAME -san saqaopssandbox
     ```
-
-> [!IMPORTANT]
-> For production systems, leave out the `-san` argument.
 
 1. Replace the placeholders with your values:
 
@@ -112,6 +109,9 @@ The command output displays a description of the tool and the available commands
     - `MYNAME`: your name, nickname, or another identifier that helps you find your request.
 
 1. Press Enter to submit the request.
+
+> [!IMPORTANT]
+> For production systems, leave out the `-san` argument.
 
 ## Step 5: Verify that the request was received
 
