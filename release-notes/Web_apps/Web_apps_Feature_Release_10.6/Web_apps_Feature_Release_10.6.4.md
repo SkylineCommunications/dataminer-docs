@@ -7,7 +7,7 @@ uid: Web_apps_Feature_Release_10.6.4
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
-This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.5.0 [CU13].
+This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU1].
 
 > [!TIP]
 >
@@ -62,19 +62,20 @@ The `ClientTimeZone` (`DMAAutomationScriptOptionClientTimeZone`) data type has t
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.4 or newer. See [Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]](xref:General_Feature_Release_10.6.4#automation-time-zone-of-the-client-can-now-be-passed-to-the-automation-script-that-is-executed-id-44742).
 
-#### Dashboards/Low-Code Apps - Node edge graph component: Node types [ID 44809]
+#### Dashboards/Low-Code Apps - Node edge graph component: Customizing nodes using templates [ID 44809]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-When configuring a newly-added *Node edge graph* component, it is now possible to define three types of node:
+The *Node edge graph* component now supports node templates. This allows you to customize the appearance of nodes using the Template Editor or by applying preset templates as a starting point.
 
-- Icon
-- Image
-- Template
+![Node edge graph template example showing a network diagram with multiple nodes displaying status indicators, roles, and labels organized in a hierarchical structure](~/dataminer/images/NodeEdgeGraphTemplate.gif)
+
+In the *Settings* pane, navigate to *Identifiers* > *Nodes* > *Base node* > *Visual*. In this section, you can now select *Template*. From there, you can either click the *Edit* icon to open the Template Editor or the *Browse templates* icon to select a preset or custom template.
 
 > [!NOTE]
-> Nodes of type *Template* do not support showing a tooltip or metric, as you can define that information in the template itself.
-> Also, nodes of type *Template* do not support configuring actions, as you can define actions on shapes in the template itself.
+> When *Visual* is set to *Template*, nodes no longer support showing a tooltip or metric, as this information can be defined in the template itself.
+>
+> In addition, actions can no longer be configured via the *Actions* section in the *Settings* pane, as actions can instead be defined on shapes in the template itself.
 
 ## Changes
 
@@ -191,13 +192,12 @@ Benefits:
 
 A number of enhancements have been made with regard to user authentication when accessing, for example, video thumbnails.
 
-#### Web apps: Going to the root page of the app by clicking the app name in the header [ID 44753]
+#### Web apps: Open Comparison and DOM Security apps in a new tab or window via the header bar [ID 44753]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-In a web app, from now on, you can go to the root page of the app by clicking the name of the app in the header.
+You can now open the root page of the Comparison app and DOM Security app in a new tab or window by clicking the app name in the header bar:
 
-- If you click the left mouse button, the root page will open in the same browser tab.
 - If you click the left mouse button while holding the CTRL key pressed, or if you click the middle mouse button, the root page will open in a new browser tab.
 - If you click the left mouse button while holding the SHIFT key pressed, the root page will open in a new browser window.
 
@@ -359,3 +359,25 @@ From now on, the component will only show the filtered results.
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
 When positioning was set to "Linked to data", and the viewport was set to "Auto", up to now, no tooltip would appear when you hovered over edges with a weight of 1.
+
+#### Dashboards/Low-Code Apps: HTML code starting with a \<style\> tag would be rendered incorrectly [ID 44858]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When you had entered HTML code in a Web component or in an HTML layer of a template, up to now, that HTML code would be rendered incorrectly when it started with a `<style>` tag.
+
+#### Dashboards/Low-Code Apps - Grid component: No text could be selected when 'Horizontal scroll' and 'Vertical scroll' settings were disabled [ID 44865]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, it would incorrectly not be possible to select text inside a *Grid* component when both the *Horizontal scroll* and *Vertical scroll* settings were disabled.
+
+#### Video thumbnails: Problem when playing HLS video thumbnails since Chrome version 142 [ID 44877]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Since Chrome version 142, issues could occur when playing HLS video thumbnails.
+
+In order to prevent any playback issues in Chrome 142 and above, from now on, when using `type=HTML5-HLS`, the MSE javascript implementation will take priority over the native HLS playback of the browser.
+
+If you prefer to use the native HLS playback of the browser rather than the MSE javascript implementation, you can use `type=HTML5` instead.

@@ -7,7 +7,7 @@ uid: Cube_Feature_Release_10.6.4
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
-This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.5.0 [CU13].
+This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU1].
 
 > [!TIP]
 >
@@ -16,7 +16,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## Highlights
 
-#### Cube UI and themes have been redesigned [ID 43843] [ID 43924] [ID 44618] [ID 44832]
+#### Cube UI and themes have been redesigned [ID 43843] [ID 43924] [ID 44618] [ID 44832] [ID 44881]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
@@ -36,6 +36,17 @@ Important theme changes include:
 
 ## New features
 
+#### System Center: Configuring outgoing email [ID 44594]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, when you wanted a DMS to be able to send out email notifications and reports via an SMTP server, you had to configure the necessary SMTP settings in the *DataMiner.xml* file. From now on, it will be possible to configure this in System Center.
+
+Note that it is now also possible to configure the necessary settings for SMTP mail servers that require authentication via XOAuth2.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.5.0 CU13/10.6.0 CU1/10.6.4 or newer. See [New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]](xref:General_Feature_Release_10.6.4#new-smtp-settings-for-oauth-authentication-added-to-dataminerxml-id-44478)
+
 #### System Center - Analytics config: New 'Suggestion limit' setting added to 'Behavioral Anomaly Detection' section [ID 44709]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
@@ -43,6 +54,20 @@ Important theme changes include:
 On the *Analytics config* page, located in the *System settings* section of *System Center*, a new *Suggestion limit* setting has been added to the *Behavioral Anomaly Detection* section.
 
 This setting will allow administrators to cap the number of active suggestion events per behavioral change type.
+
+#### Offloading data is now partially supported when Swarming is enabled [ID 44767]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, it was not possible to offload data on systems with Swarming enabled. From now on, DataMiner Cube will allow you to configure data offloading when Swarming is enabled, except for the following tables:
+
+- `alarm_property`
+- `brainlink`
+- `interface_alarm`
+- `service_alarm`
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.4 or newer. See [Offloading data is now partially supported when Swarming is enabled [ID 44751]](xref:General_Feature_Release_10.6.4#offloading-data-is-now-partially-supported-when-swarming-is-enabled-id-44751).
 
 #### New URL argument 'EnableAlarmSubscriptions' [ID 44779]
 

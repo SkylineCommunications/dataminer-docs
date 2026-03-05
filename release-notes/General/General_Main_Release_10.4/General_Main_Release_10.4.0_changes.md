@@ -547,7 +547,7 @@ Also, the `SectionDefinitionError` will have `SectionDefinitionID` set to the ID
 Other changes to a section definition that fail when the section is being used by any DOM instance will still fail with reason `SectionDefinitionInUseByDomInstances`. Up to now, all DOM instance IDs would be included in the error data. From now on, only the first 100 IDs will be included.
 
 > [!NOTE]
-> Currently, on systems using STaaS, the validation of DOM instances might not detect if a field descriptor is in use when there are more then 100 DOM instances. In that case, the removal of the field descriptor in question will be allowed.
+> Currently, on systems using STaaS, the validation of DOM instances might not detect if a field descriptor is in use when there are more than 100 DOM instances. In that case, the removal of the field descriptor in question will be allowed.
 
 #### SLAnalytics - Trend predictions: Flatline periods will no longer be included in the prediction model training data [ID 37432]
 

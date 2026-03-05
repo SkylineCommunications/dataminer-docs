@@ -13,7 +13,7 @@ Below, you can find more information about the different possibilities. In the t
 - The configuration of the child DVE template **will take precedence** in the following cases:
 
   - When the parameter is part of the DVE table in the main element's protocol as defined by the ";element" attribute.
-  - When the parameter is is subject to a relation with the DVE table in the main element's protocol.
+  - When the parameter is subject to a relation with the DVE table in the main element's protocol.
 
   However, note that **when the child element overrides its parent's alarm/trend template, both parent and child element are affected**. This is because all data for a DVE child element comes from the tables defining it in the main element. As such, this only happens for the DVE tables or tables that are linked with the DVE table by a foreign key. For example, one possible effect is that trending/monitoring stops on the main element for parameters exported as a DVE or linked to the DVE via a foreign key or relation. Alternatively, a table row in the main element may appear to be monitored/trended when you would not expect this, because the DVE child element's template overrides the template of the main element.
 

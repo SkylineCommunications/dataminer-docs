@@ -16,7 +16,7 @@ For xPON, these are the required EPM connectors:
 
 - [Skyline EPM Platform xPON](https://catalog.dataminer.services/details/2de7ee12-650b-442a-8c7e-c8ddf2b358f9)
 
-- [Skyline EPM Platform xPON WM](https://catalog.dataminer.services/details/ac349ec5-a7a6-4e5f-8732-6e43ed14b3ee)
+- [Skyline EPM Platform xPON WM](https://catalog.dataminer.services/details/ac349ec5-a7a6-4e5f-8732-6e43ed14b3ee) (link accessible for Skyline employees only)
 
 ### Data collection
 

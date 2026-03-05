@@ -124,7 +124,7 @@ For more info, see [Saving and restoring time zones](https://learn.microsoft.com
 
 ##### DateTimeOffset GetClientDateTime(string destVar)
 
-This method will return the date and time as it was entered in the UI block with the specified *destVar*, in the time zone of the client (taking into account the client's UTC offset). The `DateTime` property of the returned value will contain the the date and/or time in the user's time zone.
+This method will return the date and time as it was entered in the UI block with the specified *destVar*, in the time zone of the client (taking into account the client's UTC offset). The `DateTime` property of the returned value will contain the date and/or time in the user's time zone.
 
 The returned value will be `DateTimeOffset.MinValue` if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information.
 

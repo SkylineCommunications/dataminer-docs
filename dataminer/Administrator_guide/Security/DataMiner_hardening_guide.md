@@ -212,7 +212,7 @@ Some of the ports that are opened by default can potentially be closed depending
 - If DataMiner is not installed on the same machine as Cassandra/Elasticsearch, the respective ports can be closed.
 
 > [!NOTE]
-> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication with dataminer.services via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
+> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication with dataminer.services via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check whether this port is correctly configured.
 
 #### [Installer v10.0 (or older)](#tab/tabid-3)
 
@@ -275,7 +275,7 @@ Some ports that are displayed above are no longer opened by default during DataM
 - **ICMP** is only required when Failover heartbeats are active or the *pingCount* attribute in the *DMS* tag in *DMS.xml* is set to a value greater than 0. For more information, see [Attributes of the DMS tag](xref:DMS_xml#attributes-of-the-dms-tag). Allowing ICMP is also useful to debug connectivity issues.
 
 > [!NOTE]
-> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication with dataminer.services via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
+> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication with dataminer.services via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check whether this port is correctly configured.
 
 ***
 

@@ -417,7 +417,7 @@ Due to a problem with the automatic incident tracking algorithm, error messages 
 2022/06/08 23:54:36.684|SLAnalytics|Counter.h(61): containers::Counter<ServiceInfo>::decrease)|ERR|0|Decreasing counter for key that is not in the map
 ```
 
-#### Problem with SLElement when resolving foreign keys took a long time and the the element debug log level was equal to or higher than 1 [ID 33826]
+#### Problem with SLElement when resolving foreign keys took a long time and the element debug log level was equal to or higher than 1 [ID 33826]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 

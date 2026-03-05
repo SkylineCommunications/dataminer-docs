@@ -24,7 +24,7 @@ If you want to **remove obsolete APIs from your system**, follow the steps below
 
 1. To undeploy the API, click the button in the *Undeploy* column, and then click *Yes*.
 
-When finished, you should only have *Unused Tokens* left in your tree view. This process only needs to be done on one DataMiner Agent in the cluster. The changes will be be synchronized to the rest of the cluster.
+When finished, you should only have *Unused Tokens* left in your tree view. This process only needs to be done on one DataMiner Agent in the cluster. The changes will be synchronized to the rest of the cluster.
 
 ![No more Obsolete APIs in System Center in Cube on a 10.3.9 DataMiner](~/dataminer/images/UDAPIS_Migration_2.jpg)
 

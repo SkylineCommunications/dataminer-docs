@@ -52,7 +52,7 @@ To configure the component:
 
    - *Edit using*: Available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 42082-->. Determines how the time range can be modified:
 
-     - *Keyboard & calendar*: Allows you to enter a custom time range manually in the input box (format: `DD/MM/YYYY HH:MM`) or select one using the calender interface, which you can access by clicking the ![Calendar](~/dataminer/images/Calendar_Icon.png) icon.
+     - *Keyboard & calendar*: Allows you to enter a custom time range manually in the input box (format: `DD/MM/YYYY HH:MM`) or select one using the calendar interface, which you can access by clicking the ![Calendar](~/dataminer/images/Calendar_Icon.png) icon.
 
      - *Calendar*: Allows you to set a custom time range only by clicking the ![Calendar](~/dataminer/images/Calendar_Icon.png) icon and selecting the dates in the calendar interface.
 

@@ -4,7 +4,7 @@ uid: Alarm_filters
 
 # Alarm filters
 
-While it is possible to filter the Alarm Console on the fly, for example by [using the quick filter box](xref:UsingTheQuickFilterBox) or [the quick filter buttons](xref:UsingTheQuickFilterButtons), or by [dragging an item onto the Alarm Console](xref:ApplyingAnAlarmFilterByDragging), DataMiner also also allows the use of permanent, [saved alarm filters](xref:WorkingWithSavedAlarmFilters).
+While it is possible to filter the Alarm Console on the fly, for example by [using the quick filter box](xref:UsingTheQuickFilterBox) or [the quick filter buttons](xref:UsingTheQuickFilterButtons), or by [dragging an item onto the Alarm Console](xref:ApplyingAnAlarmFilterByDragging), DataMiner also allows the use of permanent, [saved alarm filters](xref:WorkingWithSavedAlarmFilters).
 
 Such alarm filters are stored in the DMS. They are always available, no matter which app you use to access the system. These filters can be used in several ways throughout the system:
 

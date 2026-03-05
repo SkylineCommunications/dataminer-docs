@@ -58,11 +58,21 @@ On the *General* page, the following settings are available:
 
 - **Background theme**: In the dropdown box, you can select the background theme for DataMiner Cube. The following themes are available:
 
-  - *Skyline Mixed*
+  - From DataMiner 10.5.0 [CU13]/10.6.0/10.6.3 onwards<!--RN 44832 + 44881-->:
 
-  - *Skyline Black*
+    - *Operating System* (default): Follows the Windows app mode (Light or Dark) configured in the Windows settings.
 
-  - *Skyline Light* (from DataMiner 10.2.9/10.3.0 onwards)
+    - *Dark*
+
+    - *Light*
+
+  - Previous versions:
+
+    - *Skyline Mixed*
+
+    - *Skyline Black*
+
+    - *Skyline Light*
 
   > [!NOTE]
   > When you have modified this setting, reconnect your DataMiner Cube session to make sure the change is applied throughout the UI.
