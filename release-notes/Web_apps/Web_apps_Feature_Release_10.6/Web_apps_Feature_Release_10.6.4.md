@@ -192,13 +192,12 @@ Benefits:
 
 A number of enhancements have been made with regard to user authentication when accessing, for example, video thumbnails.
 
-#### Web apps: Going to the root page of the app by clicking the app name in the header [ID 44753]
+#### Web apps: Open Comparison and DOM Security apps in a new tab or window via the header bar [ID 44753]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-In a web app, from now on, you can go to the root page of the app by clicking the name of the app in the header.
+You can now open the root page of the Comparison app and DOM Security app in a new tab or window by clicking the app name in the header bar:
 
-- If you click the left mouse button, the root page will open in the same browser tab.
 - If you click the left mouse button while holding the CTRL key pressed, or if you click the middle mouse button, the root page will open in a new browser tab.
 - If you click the left mouse button while holding the SHIFT key pressed, the root page will open in a new browser window.
 
