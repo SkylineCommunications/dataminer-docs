@@ -100,3 +100,4 @@ public class Script
 
 > [!NOTE]
 > When the *TargetNodeLabel* is empty or null, the resource added to the booking will not be mapped to any node in the service definition.<!-- RN 30150 --> Such an unmapped resource can only be present once per booking. To unassign a resource that is not mapped to any node in the service definition, use the method *UnassignResources* as illustrated above.
+> Since version 1.2.33 <!-- RN 37080 --> *AssignResourceRequest* supports capacity reference, for that the reference string should be passed in the *InputReference* property of the request.

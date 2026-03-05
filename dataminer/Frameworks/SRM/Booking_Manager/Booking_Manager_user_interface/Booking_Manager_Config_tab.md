@@ -140,7 +140,7 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 - **Event rescheduling delay**: Indicates the delay period before a booking ends or starts when its timing is adjusted. When the *Finish* button is pressed for an ongoing booking, the action to stop the booking will be executed after this delay time. When the *Start* button is pressed for a confirmed booking, the delay between the time the button is pressed and the new start time of the booking.
 
-- **Friendly booking reference**: Allows you to specify a user-friendly booking reference. This reference will be used in the Booking ID field in the Booking Wizard and will also be mentioned in the booking overview tables.
+- **Friendly booking reference**: Allows you to specify a user-friendly booking reference. This reference will be used in the Booking ID field in the Booking Wizard and will also be mentioned in the booking overview tables. From version 1.2.36 onwards, the friendly booking reference can be disabled by checking the *Disabled* check-box. <!-- RN 39199 --> If this is not necessary for a project, it should be disabled, as it has a performance impact on booking creation.
 
 ## Lifecycle colors subtab
 
