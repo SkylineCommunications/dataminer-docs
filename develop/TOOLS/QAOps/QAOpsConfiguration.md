@@ -2,10 +2,10 @@
 uid: QAOps_Configuration
 ---
 
-# QAOps configuration
+# QAOps configurations
 
 > [!IMPORTANT]
-> This section contains information intended only for Skyline employees.
+> This section contains information that is only applicable to Skyline employees.
 
 For each project, one or more QAOps configurations should be created. Each configuration represents ownership of all testing activities for the project.
 

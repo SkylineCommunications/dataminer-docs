@@ -7474,15 +7474,15 @@ items:
       items:
       - name: QAOps main UI
         topicUid: QAOps_Main_UI
-      - name: QAOps configuration
+      - name: QAOps configurations
         topicUid: QAOps_Configuration
-      - name: QAOps test suite
+      - name: QAOps test suites
         topicUid: QAOps_Test_Suite
-      - name: QAOps test package
+      - name: QAOps test packages
         topicUid: QAOps_Test_Package
-      - name: QAOps test run
+      - name: QAOps test runs
         topicUid: QAOps_Test_Run
-      - name: QAOps test result
+      - name: QAOps test results
         topicUid: QAOps_Test_Result
       - name: QAOps tool
         topicUid: QAOps_Tool

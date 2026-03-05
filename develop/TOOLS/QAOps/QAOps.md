@@ -5,7 +5,7 @@ uid: QAOps
 # QAOps
 
 > [!IMPORTANT]
-> This section contains information intended only for Skyline employees.
+> This section contains information that is only applicable to Skyline employees.
 
 ## What is QAOps
 

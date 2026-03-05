@@ -2,10 +2,10 @@
 uid: QAOps_Test_Package
 ---
 
-# QAOps test package
+# QAOps test packages
 
 > [!IMPORTANT]
-> This section includes information that is only applicable to Skyline employees.
+> This section contains information that is only applicable to Skyline employees.
 
 QAOps test packages (`.dmtest`) are stored in the DataMiner Catalog. Each package is self-contained and includes setup, teardown, and test execution logic.
 
@@ -13,7 +13,7 @@ Only a QAOps system can execute these packages. A package can contain installati
 
 You can combine multiple test packages into a [QAOps test suite](xref:QAOps_Test_Suite). This concept is specific to the QAOps platform.
 
-## Create a DataMiner test package
+## Creating a DataMiner test package
 
 Creating a DataMiner test package is very similar to creating a [DataMiner installation package](xref:skyline_dataminer_sdk_dataminer_package_project).
 
@@ -29,14 +29,14 @@ The project has the same basic behavior as an installation package project:
 
 ![Publish QAOps test package to the DataMiner Catalog from Visual Studio](~/develop/images/QAOps_VisualStudio_PublishPackageToCatalog.png)
 
-All functionality supported by a [DataMiner installation package (`.dmapp`)](xref:skyline_dataminer_sdk_dataminer_package_project) is supported and extended with test-specific functionality in the `TestPackageContent` directory.
+All functionality supported by a [DataMiner installation package (`.dmapp`)](xref:skyline_dataminer_sdk_dataminer_package_project) is supported, and it is extended with test-specific functionality in the `TestPackageContent` directory.
 
 When you run a test suite, QAOps first installs all packages in that suite. It then executes tests in the package execution order defined in the QAOps operator application.
 
-> [!IMPORTANT]
-> For information about how to send back Test Results to the QAOps System please see [QAOpsTestResult](xref:QAOps_Test_Result).
+> [!NOTE]
+> For information about how to send back test results to the QAOps System, refer to [QAOps test results](xref:QAOps_Test_Result).
 
-## Set up TestPackageContent
+## Setting up test package content
 
 Use the `TestPackageContent` directory as the root for all test assets.
 
@@ -53,26 +53,27 @@ TestPackageContent/
 
 Required components:
 
-- `TestHarvesting` with a `TestDiscovery.ps1` script.
+- [TestHarvesting](#testharvesting) with a `TestDiscovery.ps1` script.
 
-- `TestPackagePipeline` with at least one numbered PowerShell script.
+- [TestPackagePipeline](#testpackagepipeline) with at least one numbered PowerShell script.
 
 Optional components:
 
-- `Tests` and `Dependencies` for project-committed tests and their assets.
+- [Tests](#tests) and [Dependencies](#dependencies) for project-committed tests and their assets.
 
-- `qaops.config.xml` for custom configuration.
+- [qaops.config.xml](#qaopsconfigxml) for custom configuration.
 
 ### TestHarvesting
 
 The `TestDiscovery.ps1` script automatically harvests tests from your whole Git repository during the build process.
-If all your tests, are already within the same Solution then this script may not be necessary, it's mostly meant for repositories that have more than one solution. You can use other features such as:
 
-- If you tests are done through DataMiner components as part of the same solution, then you can use default [DataMiner installation package](xref:skyline_dataminer_sdk_dataminer_package_project) logic. To just let it install a connector, automationscript, ... with your tests and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and retrieve their results.
+If all your tests are already within the same solution, this script may not be necessary. It is mainly intended for repositories that have more than one solution. You can use other features such as:
 
-- If your tests are part of the build output of projects in your solution, such as MSTest or NUnit assemblies. You could opt to use post-build actions on those projects to copy the output to the Tests directory and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and retrieve their results.
+- If your tests are done through DataMiner components as part of the same solution, you can use default [DataMiner installation package](xref:skyline_dataminer_sdk_dataminer_package_project) logic, to just let it install a connector, automation script, etc. with your tests and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and retrieve their results.
 
-- If you tests can be written directly in powershell scripts, then the simplest way is to write everything within the and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and forward their results to QAOps.
+- If your tests are part of the build output of projects in your solution, such as MSTest or NUnit assemblies, you could opt to use post-build actions on those projects to copy the output to the *Tests* directory and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and retrieve their results.
+
+- If your tests can be written directly in PowerShell scripts, the simplest way is to write everything within the and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and forward their results to QAOps.
 
 If used, the harvesting process creates these directories:
 
@@ -80,11 +81,11 @@ If used, the harvesting process creates these directories:
 
 - `tests.generated`: Can contain any type of test files.
 
-- `xmlautomationtests.generated`: This is mostly for Legacy support within Platform. Must follow this structure:
+- `xmlautomationtests.generated`: This is mostly for legacy support within the Platform team. The following structure must be used:
 
   - One directory per test.
 
-  - Inside each test directory:
+  - Each test directory contains the following items:
 
     - A `script.xml` file.
 
@@ -92,9 +93,9 @@ If used, the harvesting process creates these directories:
 
 Scripts in `xmlautomationtests.generated` are added to the package and installed on DataMiner during the test run. For that reason, this directory is not present on the test system.
 
-#### Do not create generated directories
+#### Do not create generated directories manually
 
-The following directories are automatically created during build. Do not create or commit them manually:
+The following directories are automatically created during a build. Do not create or commit them manually:
 
 - `dependencies.generated/`
 
@@ -138,17 +139,15 @@ TestHarvesting/
 
 ### TestPackagePipeline
 
-Create PowerShell scripts that define your test execution workflow (or the actual tests). During a test run, the QAOps bridge executes these scripts sequentially.
+The *TestPackagePipeline* directory must contain PowerShell scripts that define your test execution workflow (or the actual tests). During a test run, the QAOps bridge will execute these scripts sequentially.
 
 These scripts can also contain the test logic.
 
 #### Script naming requirements
 
-Name scripts by using the following pattern: `{number}.{description}.ps1`.
+Make sure the names of your scripts follow this pattern: `{number}.{description}.ps1`.
 
-- The QAOps bridge sorts scripts numerically by the leading number.
-
-- Scripts execute in ascending order, for example `1.setup.ps1`, `2.execute-tests.ps1`, and `3.finalize.ps1`.
+The QAOps bridge will sort scripts numerically by the leading number, and scripts will be executed in ascending order, for example, `1.setup.ps1`, `2.execute-tests.ps1`, and `3.finalize.ps1`.
 
 #### Script template structure
 
@@ -181,9 +180,8 @@ TestPackagePipeline/
     └── shared-functions.ps1
 ```
 
-#### Add helper code and utilities
+#### Adding helper code and utilities
 
-For information about how to send back Test Results to the QAOps System please see [QAOpsTestResult](xref:QAOps_Test_Result).
 You can include additional code files next to the numbered PowerShell scripts to organize and reuse functionality. The QAOps bridge only executes numbered `.ps1` files as entry points. From those scripts, you can call other code files.
 
 Examples of helper files:
@@ -199,6 +197,9 @@ Examples of helper files:
 - Additional PowerShell scripts without numbers for utility functions.
 
 - Batch files (`.bat`) or shell scripts for system operations.
+
+> [!TIP]
+> For information about how to send back test results to the QAOps System, please refer to [QAOps test results](xref:QAOps_Test_Result).
 
 Usage pattern:
 
@@ -222,9 +223,11 @@ If you add a `Tests` directory, it contains static test files that are committed
 
 ### Dependencies
 
-If you add a `Dependencies` directory, it contains static dependency files that are committed to the repository and used by tests in the `Tests` directory.
+If you add a `Dependencies` directory, it should contain static dependency files that are committed to the repository and used by tests in the `Tests` directory.
 
 #### When to use the Dependencies directory
+
+You can use this directory for the following files:
 
 - Third-party libraries specific to your test package.
 
@@ -265,11 +268,13 @@ If you need to customize QAOps test execution behavior, use `qaops.config.xml` t
 
 #### Configuration options
 
-- Package installation: controls whether the `.dmtest` package is installed on DataMiner.
+At present, only one option can be configured:
 
-  - Set this value to `false` if your test only requires PowerShell script execution.
+- **PerformPackageInstallation**: Controls whether the `.dmtest` package is installed on DataMiner. Can be set to `true` or `false`.
 
-  - Scripts in `TestPackagePipeline` still execute regardless of this setting.
+  - Set this value to `false` for **lightweight tests** that only require PowerShell script execution. This will skip the package installation and run only PowerShell-based tests, allowing faster execution. Scripts in `TestPackagePipeline` still execute regardless of this setting.
+
+  - Set this value to `true` for **full DataMiner tests**. This will install the `.dmtest` package and run comprehensive automation tests.
 
 #### Example configuration
 
@@ -282,9 +287,3 @@ Create `qaops.config.xml` as follows:
   <PerformPackageInstallation>true</PerformPackageInstallation>
 </QAOpsConfig>
 ```
-
-This allows you to choose between the following test approaches:
-
-- Full DataMiner tests: keep `PerformPackageInstallation` set to `true` to install the `.dmtest` package and run comprehensive automation tests.
-
-- Lightweight tests: set `PerformPackageInstallation` to `false` to skip package installation and run only PowerShell-based tests for faster execution.

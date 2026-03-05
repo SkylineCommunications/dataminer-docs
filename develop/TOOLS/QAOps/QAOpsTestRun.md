@@ -2,10 +2,10 @@
 uid: QAOps_Test_Run
 ---
 
-# QAOps test run
+# QAOps test runs
 
 > [!IMPORTANT]
-> This page applies only to Skyline employees.
+> This section contains information that is only applicable to Skyline employees.
 
 A QAOps test run stores all [test results](xref:QAOps_Test_Result) produced when you execute a [test suite](xref:QAOps_Test_Suite) on a [test configuration](xref:QAOps_Configuration).
 

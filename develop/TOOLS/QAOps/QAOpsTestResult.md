@@ -2,7 +2,7 @@
 uid: QAOps_Test_Result
 ---
 
-# QAOps test result
+# QAOps test results
 
 > [!IMPORTANT]
 > This section contains information that is only applicable to Skyline employees.
