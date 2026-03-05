@@ -8,7 +8,7 @@ In this tutorial, you will learn how to create a basic Test Package and Trigger 
 
 For all tutorials, always use the "QAOps Sandbox Environment": [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be).
 
-Expected duration: 5 minutes.
+Expected duration: 15 minutes.
 
 ## Prerequisites
 
@@ -18,6 +18,11 @@ Expected duration: 5 minutes.
 > Please contact support.boost@skyline.be to receive a username and password for access to the Sandbox system.
 
 - You require [dotnet 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), even if you already have a higher SDK version installed.
+
+- [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
+
+- [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+    - Enable the ASP.NET and Web Development workload in Visual Studio. [Troubleshooting](xref:skyline_dataminer_sdk_troubleshooting#missing-manage-user-secrets-context-menu-in-visual-studio)
 
 ## Overview
 
@@ -35,4 +40,7 @@ Expected duration: 5 minutes.
 
 - [Step 7: Delete the server used for your test run](#step-7-delete-the-server-used-for-your-test-run)
 
-## Step 1: 
+## Step 1: Create a new DataMiner Test Package Project
+
+Open Visual Studio
+

@@ -7,7 +7,7 @@ uid: QAOps_Tutorials_User_Tutorials_Basic_Avoiding_Unnecessary_Costs
 > [!IMPORTANT]
 > This section includes information that is only applicable to Skyline employees.
 
-In this tutorial, you will learn how to avoid unnecessary costs when using the QAOps system.
+In this tutorial, you will learn how to avoid unnecessary costs when using the QAOps system by learning how to cleanup used DaaS servers.
 
 You will start a test run that is expected to fail and then remove the related server to limit resource usage.
 
