@@ -16,6 +16,9 @@ The following ad hoc data source exposes a table of elements contained within a 
 
 ### [From DataMiner 10.4.6/10.5.0 onwards](#tab/tabid-2)
 
+> [!NOTE]
+> The IDms types require the `Skyline.DataMiner.Core.DataMinerSystem.Common` NuGet package.
+
 :::code language="csharp" source="./SLC-GQIDS-ViewElements_10.4.6.cs":::
 
 ### [In earlier DataMiner versions](#tab/tabid-1)
