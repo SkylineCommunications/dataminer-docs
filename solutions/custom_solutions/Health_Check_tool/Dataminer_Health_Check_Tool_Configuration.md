@@ -39,6 +39,7 @@ Several default tests are available related to the state of the DataMiner System
    - *Element/DMA Filter*: Use this field to apply the test to a specific element. Enter the name of the element you want to target.
    - *Display Key Filter*: Apply this filter if you want the test to consider only certain entries for the test. This filter must be in the format of a regular expression.
    - *Status Checkbox*: Select this box if you want the text to be enabled as soon as it is created.
+   - *Severity*: Pick from 1 of 5 severities to determine the priority of that test if it fails.
 
    ![Test configuration](~/solutions/images/Health_Check_Configure_Test.png)
 
@@ -121,8 +122,22 @@ After you have created a subscription, you will still need to link it to a test:
    - *Element/DMA Filter*: Use this field to apply the test to a specific element. Enter the name of the element you want to target.
    - *Display Key Filter*: Use this field if the test should only consider specific entries. The filter must be in the format of a regular expression.
    - *Status Checkbox*: Select this box if you want the text to be enabled as soon as it is created.
+   - *Severity*: Pick from 1 of 5 severities to determine the priority of that test if it fails.
 
    ![Link Subscription to Test](~/solutions/images/Health_Check_Link_Subscription.png)
+
+#### Recommended Subscriptions
+
+##### Total Processor Load is Below 80%
+- Subscription Settings
+   ![Total Processor Load Subscription](~/solutions/images/Health_Check_Total_Processor_Load_Subscription.png)
+- Test Configuration Settings
+   ![CPU Load Test Configuration](~/solutions/images/Health_Check_Total_Processor_Load_Test_Configuration.png)
+##### Check if Memory Usage is Below 75%
+- Subscription Settings
+   ![Memory Usage Subscription](~/solutions/images/Health_Check_Memory_Usage_Subscription.png)
+- Test Configuration Settings
+   ![Memory Usage Test Configuration](~/solutions/images/Health_Check_Memory_Usage_Test_Configuration.png)
 
 ## Configuring email reports
 
