@@ -122,7 +122,7 @@ If it is unclear which DataMiner Agent is having a problem, these checks may hel
 
   ![RTE](~/dataminer/images/System_Center_Agents_RTE.png)
 
-  ![Disconnected](~/dataminer/images/System_Center_Agents_Disconnected.png)
+  ![Disconnected](~/dataminer/images/System_Center_Agents_Disconnected.png)<br>*System Center in DataMiner 10.6.4*
 
 - In the Alarm Console, add a filtered tab using the filter “Element type / Equal to / DataMiner Agent” to display DataMiner-related alarms.
 

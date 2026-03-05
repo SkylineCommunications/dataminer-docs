@@ -56,14 +56,14 @@ There are two ways to verify if you are using a STaaS setup:
 
   1. Check if "STaaS" is entered in the *Database* field.
 
-     ![System Center - Database set to STaaS](~/dataminer/images/SystemCenter_STaaS.png)
+     ![System Center - Database set to STaaS](~/dataminer/images/SystemCenter_STaaS.png)<br>*System Center in DataMiner 10.6.4*
 
      > [!NOTE]
      > The type of database (i.e., *Database per cluster* or *Database per Agent*) is not relevant, as all data from the cluster will be stored the same way.
      >
      > For example:
      >
-     > ![System Center - Database per cluster](~/dataminer/images/SystemCenter_DB_per_cluster.png)
+     > ![System Center - Database per cluster](~/dataminer/images/SystemCenter_DB_per_cluster.png)<br>*System Center in DataMiner 10.6.4*
 
 - **In the *DB.xml* file**:
 
