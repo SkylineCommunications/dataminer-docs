@@ -9,6 +9,64 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 4 March 2026 - Enhancement - Catalog - Dependency tags shown in version overview
+
+On the *Versions* tab for a Catalog item, tags can now show the DataMiner and DataMiner Web version dependencies.
+
+### 4 March 2026 - Enhancement - Catalog - Empower page update
+
+In the Catalog app, the Empower page now has a new layout.
+
+Users can now search for specific sessions and deploy packages directly from the page.
+
+### 4 March 2026 - Enhancement - dataminer.services - DaaS startup message update
+
+When DaaS startup takes longer than usual, the message shown after 15 minutes has been adjusted to indicate that startup may still be in progress.
+
+### 4 March 2026 - Enhancement - Admin - URL support for ticket details
+
+In the Admin app, ticket details can now be opened directly through URL support.
+
+### 4 March 2026 - Fix - Admin - Table search box opened behind table
+
+On the Support page of the Admin app, it could occur that the table search box opened behind the table.
+
+### 4 March 2026 - Enhancement - Admin - Billing and Subscription page improvements
+
+On the Billing pages in the Admin app, the renew tooltip has been improved and timestamp dates now use a medium date format.
+
+When there are no active or expired subscriptions, a direct path to the subscription page is now available.
+
+### 23 February 2026 - Enhancement - Admin - Deployment event chain error details
+
+On the Deployments page of the Admin app, event chain errors now better highlight where an error occurred.
+
+In addition, metadata now detects and shows stack traces in a separate box, with an option to copy the stack trace text. Text wrapping has also been improved to avoid horizontal scroll bars.
+
+### 23 February 2026 - New feature - Admin - Delete DataMiner System from settings
+
+In the Admin app, organization owners can now delete a DataMiner System directly from the settings page.
+
+Deleting a DataMiner System from the home page now opens the Admin app in a new tab.
+
+### 23 February 2026 - Enhancement - Home - Organization creation from home page, Admin app, or Catalog
+
+It is now possible to create an organization from the dataminer.services home page as well as from the Admin app and the Catalog, via the organization selector. The organization creation flow uses a shared pop-up component across these locations.
+
+When an organization is created successfully, it will automatically be selected.
+
+### 23 February 2026 - Enhancement - Admin - Redirect after deleting last organization
+
+When a user deletes their last organization, they are now redirected to the dataminer.services home page.
+
+### 23 February 2026 - Enhancement - Billing - Yearly credit history filter
+
+On the Billing credit history page, the date filter now uses a yearly format.
+
+You can retrieve the credit history for the past five years, including the current year.
+
+URL parameters have also been updated to support both the monthly billing page range and the yearly credit history range.
+
 ### 17 February 2026 - Enhancement - Admin - Confirmation email for ticket creation
 
 When you create a support ticket via the Admin app, you will now receive a confirmation email. A sharepoint folder is also created for the ticket when possible.
