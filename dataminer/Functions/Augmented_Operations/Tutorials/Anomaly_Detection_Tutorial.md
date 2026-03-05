@@ -95,7 +95,7 @@ The tutorial consists of the following steps:
 
    This icon lights up in blue to indicate that DataMiner Analytics found something interesting. For more detailed info, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
 
-1. Click the menu item *2 anomalies were found in your trend data* (this can also be a a higher number if your system has detected anomalies on other elements).
+1. Click the menu item *2 anomalies were found in your trend data* (this can also be a higher number if your system has detected anomalies on other elements).
 
    A new *Anomalies* tab will now be shown in the Alarm Console, listing the detected anomalies.
 

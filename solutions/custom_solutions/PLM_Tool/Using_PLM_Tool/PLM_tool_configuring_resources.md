@@ -33,7 +33,7 @@ To configure a new PLM resource subscriber:
 
 1. In the pop-up window, specify the following information:
 
-   - Select the **type of resource** you want to use. The list of of available resource types consists of the ones listed in the *Resource Types* table.
+   - Select the **type of resource** you want to use. The list of available resource types consists of the ones listed in the *Resource Types* table.
 
    - Enter a valid **protocol name**. Ensure that this name matches the case-sensitive protocol name in Cube exactly.
 

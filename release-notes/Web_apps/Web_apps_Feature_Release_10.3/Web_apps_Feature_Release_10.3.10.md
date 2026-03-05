@@ -107,7 +107,7 @@ This has been fixed. The display value will remain "NaN", but the raw value will
 
 In a low-code app, the form to create a new DOM instance would incorrectly display the sections that were not linked to the initial state.
 
-When a value was set for one of the fields in those sections, saving the new DOM instance would result in a error stating `Instance contains unknown fields for the current state`.
+When a value was set for one of the fields in those sections, saving the new DOM instance would result in an error stating `Instance contains unknown fields for the current state`.
 
 From now on, sections that are not linked to the initial state will no longer be displayed.
 

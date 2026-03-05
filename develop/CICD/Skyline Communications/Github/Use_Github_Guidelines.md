@@ -71,7 +71,7 @@ If the repository is private, the name should look like this (using "-" as separ
   | T | Tests: regression tests, integration tests, performance tests, etc. |
   | UDAPI | User-Defined APIs |
   | V | Visio files |
-  | EXT | External tools - softwares  |
+  | EXT | External tools - software  |
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.

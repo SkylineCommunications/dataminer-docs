@@ -113,7 +113,7 @@ The header bar of the DataMiner landing page (e.g., `https://myDMA/root/`) has b
 
 Up to now, certain component settings would automatically get saved in a dashboard or low-code app, even when you were not in edit mode.
 
-From now on, these automatically saved component settings will only get saved in a dashboard or low-code code when you are in edit mode.
+From now on, these automatically saved component settings will only get saved in a dashboard or low-code app when you are in edit mode.
 
 #### GQI DxM: Enhanced installation [ID 43063]
 

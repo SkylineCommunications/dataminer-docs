@@ -72,7 +72,7 @@ if (moduleSettings == null)
 
 ## Creating the section definitions
 
-Now that that the `ModuleSettings` have been created, you can start creating all the DOM objects using a `DomHelper`. You can create a `DomHelper` using an SLNet callback and the module ID.
+Now that the `ModuleSettings` have been created, you can start creating all the DOM objects using a `DomHelper`. You can create a `DomHelper` using an SLNet callback and the module ID.
 
 ```csharp
 var domHelper = new DomHelper(engine.SendSLNetMessages, "invoice_app");

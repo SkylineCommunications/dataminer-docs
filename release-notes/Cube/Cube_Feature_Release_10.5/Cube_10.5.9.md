@@ -193,7 +193,7 @@ In some rare cases, a trend graph of an EPM KPI would incorrectly not get loaded
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-Up to now, when a element, service or view was updated, in some cases, visual overviews embedded in the visual overview linked to the element, service or view would incorrectly be fully refreshed.
+Up to now, when an element, service or view was updated, in some cases, visual overviews embedded in the visual overview linked to the element, service or view would incorrectly be fully refreshed.
 
 From now on, embedded visual overviews will only be fully refreshed when the referenced object was changed.
 
