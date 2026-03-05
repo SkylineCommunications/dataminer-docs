@@ -60,10 +60,7 @@ On the *General* page, the following settings are available:
 
   - From DataMiner 10.5.0 [CU13]/10.6.0/10.6.3 onwards<!--RN 44832 + 44881-->:
 
-    - *Operating System* (default)
-
-      > [!NOTE]
-      > When *Operating System* is selected, the theme follows the Windows app mode (Light or Dark) configured in the Windows settings.
+    - *Operating System* (default): Follows the Windows app mode (Light or Dark) configured in the Windows settings.
 
     - *Dark*
 
