@@ -80,7 +80,7 @@ In some cases, a runtime error could occur when configuring a *Node edge graph* 
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-When, in edit mode, you removed a bar from a *Colum & bar chart* component, in some cases, the chart and the legend would show different colors.
+When, in edit mode, you removed a bar from a *Column & bar chart* component, in some cases, the chart and the legend would show different colors.
 
 #### Dashboards app & Low-Code Apps - Maps component: Problem when changing a layer setting [ID 39855]
 
