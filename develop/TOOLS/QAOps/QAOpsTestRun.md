@@ -9,11 +9,13 @@ uid: QAOps_Test_Run
 
 A QAOps test run stores all [test results](xref:QAOps_Test_Result) produced when you execute a [test suite](xref:QAOps_Test_Suite) on a [test configuration](xref:QAOps_Configuration).
 
-During its lifecycle, a test run can move through the following statuses:
+## Test run lifecycle
+
+During its lifecycle, a test run can move through the following stages:
 
 1. **Initializing... (0)**
 
-   During initialization, QAOps downloads all required test packages from the catalog or temporary storage and retrieves any provided ".dmupgrade" files.
+   During initialization, QAOps downloads all required test packages from the Catalog or temporary storage and retrieves any provided .dmupgrade files.
 
 1. **Initialization completed (1)**
 
@@ -21,15 +23,15 @@ During its lifecycle, a test run can move through the following statuses:
 
 1. **Upgrading DataMiner... (2)**
 
-   If a ".dmupgrade" file was provided, QAOps applies it to DataMiner.
+   If a .dmupgrade file was provided, QAOps applies it to DataMiner.
 
 1. **Upgrade DataMiner completed (3)**
 
-   If a ".dmupgrade" file was provided, the upgrade has completed.
+   If a .dmupgrade file was provided, the upgrade has been completed.
 
 1. **Installing dependencies... (4)**
 
-   QAOps installs all test packages in the same way as a [DataMiner Package (.dmapp)](xref:DataMiner_packages) file.
+   QAOps installs all test packages in the same way as a [DataMiner package (.dmapp)](xref:DataMiner_packages) file.
 
 1. **Install dependencies completed (5)**
 
@@ -41,11 +43,11 @@ During its lifecycle, a test run can move through the following statuses:
 
 1. **Completed (7)**
 
-   All testing has completed, and no failures were reported.
+   All testing has been completed, and no failures were reported.
 
 1. **Completed with failures (8)**
 
-   All testing has completed, but one or more failures were reported.
+   All testing has been completed, but one or more failures were reported.
 
 1. **Cancelling... (9)**
 
@@ -59,15 +61,15 @@ During its lifecycle, a test run can move through the following statuses:
 
    The test run failed as a whole.
 
-   Common scenarios include:
+   Common scenarios where this may occur include:
 
-   - Dependency installation of a ".dmapp" file failed. This usually indicates a problem with the ".dmtest" package or SLNet.
+   - Dependency installation of a .dmapp file failed. This usually indicates a problem with the .dmtest package or SLNet.
 
-   - Installation of a provided ".dmupgrade" file failed. This usually indicates a problem with that ".dmupgrade" file.
+   - Installation of a provided .dmupgrade file failed. This usually indicates a problem with that .dmupgrade file.
 
-For the Platform Development Team, this issue is most often caused by mismatched assemblies when you test new code. Rebase on the latest RC and run the test again. If the problem persists, check "C:\Skyline DataMiner\Logging\SLAppPackageInstaller.txt" for additional details.
+   For the Platform Development Team, this issue is most often caused by mismatched assemblies when you test new code. Rebase on the latest RC and run the test again. If the problem persists, check `C:\Skyline DataMiner\Logging\SLAppPackageInstaller.txt` for additional details.
 
-For other teams, this issue is most often caused by problems in the test package itself. For additional details, check "C:\Skyline DataMiner\Logging\SLAppPackageInstaller.txt". You can also rename the ".dmtest" file to ".dmapp" and install it manually to gather more information.
+   For other teams, this issue is most often caused by problems in the test package itself. For additional details, check `C:\Skyline DataMiner\Logging\SLAppPackageInstaller.txt`. You can also rename the .dmtest file to .dmapp and install it manually to gather more information.
 
 ## Maximum test runs to keep
 

@@ -28,10 +28,10 @@ You can add the following fields to provide more context:
 - `Tags`: A semicolon-separated or comma-separated list of tags that can be used for filtering in the Low-Code App or for ownership and categorization metadata.
 
 - `TestAspect`: The result type. Allowed values are `Execution` and `Assertion`.
-  
-    - `Execution` indicates the health of the test framework or runner itself (for example, script setup failures).
-  
-    - `Assertion` indicates the outcome of the actual product or solution behavior under test.
+
+  - `Execution` indicates the health of the test framework or runner itself (for example, script setup failures).
+
+  - `Assertion` indicates the outcome of the actual product or solution behavior under test.
 
 ## Storage behavior
 
@@ -86,18 +86,18 @@ The target endpoint is selected in this order:
 - `-Duration` (optional): Test duration as a PowerShell `TimeSpan`.
 
 - `-Tags` (optional): Tag string converted to a key-value dictionary.
-  
-    - Use `;` or `,` to separate items.
-  
-    - Use `key=value` or a bare key.
-  
-    - A bare key is stored as value `"true"`.
-  
-    - Only the first `=` splits key and value.
-  
-    - Duplicate keys are case-insensitive, and the last value wins.
-  
-    - If no valid tags are provided, the `tags` field is omitted.
+
+  - Use `;` or `,` to separate items.
+
+  - Use `key=value` or a bare key.
+
+  - A bare key is stored as value `"true"`.
+
+  - Only the first `=` splits key and value.
+
+  - Duplicate keys are case-insensitive, and the last value wins.
+
+  - If no valid tags are provided, the `tags` field is omitted.
 
 - `-TestAspect` (optional, default `Assertion`): `Assertion` or `Execution` (case-insensitive).
 

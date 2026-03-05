@@ -5,7 +5,7 @@ uid: QAOps_Tool
 # QAOps Tool
 
 > [!IMPORTANT]
-> This section includes information that is only applicable to Skyline employees.
+> This section contains information that is only applicable to Skyline employees.
 
 The QAOps .NET Tool allows you to run automated test suites against DataMiner configurations remotely. This command-line tool integrates with the QAOps testing platform to execute your test packages and retrieve results programmatically.
 
