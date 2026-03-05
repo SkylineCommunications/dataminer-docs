@@ -100,7 +100,7 @@ On this page, you can also manually attempt to deploy an extra DaaS for a config
 
 #### Editing configurations
 
-For security reasons, you will only be able to access editing functionality after you go to *Edit Mode* by clicking at the button in the lower-right corner. This will open a table view of all configurations with editable columns.
+For security reasons, you will only be able to access editing functionality after you go to *Edit Mode* by clicking the button in the lower-right corner. This will open a table view of all configurations with editable columns.
 
 When you finish making changes, select *Update* in the *Actions* column. This pushes your changes through the QAOps system.
 
@@ -126,7 +126,7 @@ The QAOps package identifier is used when [triggering a test run with an unrelea
 
 #### Editing test suites
 
-For security reasons, you will only be able to access editing functionality after you go to *Edit Mode* by clicking at the button in the lower-right corner. This will open a table view of all test suites with editable columns.
+For security reasons, you will only be able to access editing functionality after you go to *Edit Mode* by clicking the button in the lower-right corner. This will open a table view of all test suites with editable columns.
 
 When you finish making changes, select *Update* in the *Actions* column. This pushes your changes through the QAOps system.
 
@@ -134,27 +134,29 @@ For more information about available settings, see [QAOps test suites](xref:QAOp
 
 Note that you can go to different pages without losing your changes. This can for example be convenient when you need to find global category instances and then return to test suites edit mode to continue your setup.
 
-This page can also be used to add new test packages to a test suite.
+You can also add new test packages to a test suite here:
 
-Select the test suite in the top table.
+1. Select the test suite in the table at the top.
 
-This filters the lower table to show all known test packages included in that test suite.
+   This filters the lower table to show all known test packages included in that test suite.
 
-Enter a value in *Add Catalog ID to selected test suite*, and then click the erlenmeyer button.
+1. Specify the Catalog ID of the test package in the *Add Catalog ID to selected test suite* box.
+
+1. Click the ![erlenmeyer button](~/develop/images/QAOps_Erlenmeyer.png) button to add the package.
 
 ### QAOps Operator - Running Tests
 
-This section shows a table with all known test requests.
+The *Running Tests* page shows a table with all known test requests.
 
-It is mostly intended as an alternative to the *Overview* page in the *QAOps User* application.
+This page is intended as an alternative to the *Overview* page in the *QAOps User* application.
 
 ### QAOps Operator - Global Categories
 
-This section allows you to add or adjust known global categories.
+The *Global Categories* page allows you to add or adjust known global categories.
 
 ![QAOps global categories](~/develop/images/QAOps_UI_GlobalCategories.png)
 
-These categories appear as buttons in the top banner of the *QAOps User* and *QAOps Operator* applications and can reduce UI clutter by filtering specific configurations and test suites.
+These categories are shown as buttons in the header bar of the *QAOps User* and *QAOps Operator* applications and can reduce UI clutter by filtering specific configurations and test suites.
 
 This is currently the only section in the *QAOps Operator* application that allows deletion.
 
