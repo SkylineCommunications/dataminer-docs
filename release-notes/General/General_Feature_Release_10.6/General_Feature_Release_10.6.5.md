@@ -53,6 +53,16 @@ A number of security enhancements have been made.
 
 ### Fixes
 
+#### One protocol thread would incorrectly be able to add new rows to a table while another protocol thread was clearing that table [ID 44764]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, in some rare cases, while a table was being cleared by one protocol thread, another protocol thread could be adding rows to that same table. As a result, these newly added rows would immediately get cleared as well.
+
+From now on, it will no longer be possible for one protocol thread to add new rows to a table while another protocol thread is clearing that same table. Only when the clear operation has finished will it be possible to add new rows again.
+
+Also, up to now, a clear action would incorrectly be able to set the iRows field of the array to 0 without taking the write lock. As a result, SLProtocol would lose count of the number of rows that were stored in the table and would not be able to clear any of those rows without an element restart.
+
 #### Business intelligence: Active alarms table would not be updated when an alarm with 0% impact was cleared [ID 44892]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->

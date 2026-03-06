@@ -57,6 +57,12 @@ Up to now, when you pasted a large piece of formatted text in such a text box, i
 > [!NOTE]
 > When you set a *Web* component to "Custom HTML", the *HTML* box is limited to 100,000 characters. Up to now, HTML syntax highlighting would be disabled from 15,000 characters onwards. From now on, this 15,000-character limit will no longer apply.
 
+#### DataMiner Comparison tool: Enhanced performance when managing large files [ID 44897]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Because of a number of enhancements, the DataMiner Comparison tool will now be able to manage larger files.
+
 ### Fixes
 
 #### GQI DxM: 'Get profile instances' and 'Get trend data' data sources would incorrectly format parameters using invariant culture [ID 44857]
