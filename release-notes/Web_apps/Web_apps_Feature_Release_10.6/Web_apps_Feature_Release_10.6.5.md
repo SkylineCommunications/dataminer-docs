@@ -46,11 +46,11 @@ The DataMiner web apps that use Angular (e.g., Low-Code Apps, Dashboards, Monito
 
 The GQI DxM has been upgraded to Microsoft .NET 10. It no longer requires the .NET 8 runtime.
 
-#### GQI DxM: Percentage values for trend data will now be stored and displayed like all other percentage values [ID 44884]
+#### GQI DxM: Percentage values for trend data will now be passed and displayed like all other percentage values [ID 44884]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
-Up to now, percentage values for average trend data of discreet parameters were stored as a number between 0 to 100. In order to have percentage values stored consistently throughout all GQI data sources, from now on, those percentage values will be stored as a number between 0 to 1.
+Up to now, percentage values for average trend data of discreet parameters were passed as a number between 0 to 100. In order to have percentage values passed consistently throughout all GQI data sources, from now on, those percentage values will be passed as a number between 0 to 1.
 
 Also, in order to have all percentage values displayed consistently, percentage values for average trend data of discreet parameters will now be displayed in the culture of the user.
 
