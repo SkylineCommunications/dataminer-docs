@@ -4,7 +4,7 @@ uid: Generating_BrokerGateway_client_secrets
 
 # Generating BrokerGateway client secrets
 
-From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onward<!-- RN 44757 -->, it is possible to generate BrokerGateway client secrets. These are designed for DxMs or other clients connecting to the DataMiner NATS bus from a server without a local DataMiner installation. The secrets enable secure authentication with BrokerGateway, which then provides the necessary connection details for the NATS bus.
+From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onward<!-- RN 44757 + 44778 -->, it is possible to generate BrokerGateway client secrets. These are designed for DxMs or other clients connecting to the DataMiner NATS bus from a server without a local DataMiner installation. The secrets enable secure authentication with BrokerGateway, which then provides the necessary connection details for the NATS bus.
 
 Using internal BrokerGateway Administrator keys for these connections is discouraged, as these keys may be refreshed during cluster maintenance or because of other actions. By contrast, user-generated client secrets persist throughout the cluster's lifecycle and are immediately distributed to all BrokerGateway instances for cluster-wide availability.
 
