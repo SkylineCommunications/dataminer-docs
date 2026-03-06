@@ -7,21 +7,21 @@ uid: QAOps_Tool
 > [!IMPORTANT]
 > This section contains information that is only applicable to Skyline employees.
 
-The QAOps .NET Tool allows you to run automated test suites against DataMiner configurations remotely. This command-line tool integrates with the QAOps testing platform to execute your test packages and retrieve results programmatically.
+The QAOps .NET tool allows you to run automated test suites against DataMiner configurations remotely. This command-line tool integrates with the QAOps testing platform to execute your test packages and retrieve results programmatically.
 
-**Key capabilities:**
+Key capabilities:
 
-- Execute test suites in fire-and-forget mode or wait for completion
+- Execute test suites in fire-and-forget mode or wait for completion.
 
-- Override test packages with local `.dmtest` files
+- Override test packages with local .dmtest files.
 
-- Tag test runs for organization and filtering
+- Tag test runs for easy organization and filtering.
 
-- Retrieve detailed test results in JSON format
+- Retrieve detailed test results in JSON format.
 
-- Integrate with CI/CD pipelines for automated testing
+- Integrate with CI/CD pipelines for automated testing.
 
-This tool is available on our private NuGet store. More information can be found [here](https://internaldocs.skyline.be/DevDocs/Skyline%20Software%20Development%20Toolkit/Private%20NuGet%20Store.html).
+This tool is available on Skyline's private NuGet store. For more information, refer to the [internal Skyline documentation](https://internaldocs.skyline.be/DevDocs/Skyline%20Software%20Development%20Toolkit/Private%20NuGet%20Store.html) (link accessible for Skyline employees only).
 
 ## Installation
 
@@ -53,7 +53,7 @@ dataminer-qaops test-run-and-wait \
 
 ### Run and wait for test completion
 
-Most common use case - execute a test suite and wait for results:
+The most common use case is to execute a test suite and wait for results:
 
 ```bash
 dataminer-qaops test-run-and-wait \
@@ -66,7 +66,7 @@ dataminer-qaops test-run-and-wait \
 
 ### Fire-and-forget execution
 
-Start a test suite without waiting for completion (useful for long-running tests):
+You can start a test suite without waiting for completion (useful for long-running tests):
 
 ```bash
 dataminer-qaops test-run \
@@ -77,7 +77,7 @@ dataminer-qaops test-run \
 
 ### Override test packages with local files
 
-Replace test packages in a suite with your local `.dmtest` files:
+You can replace test packages in a suite with your local .dmtest files:
 
 ```bash
 dataminer-qaops test-run-and-wait \
@@ -90,113 +90,111 @@ dataminer-qaops test-run-and-wait \
 
 ## Commands reference
 
-### `dataminer-qaops test-run`
+- `dataminer-qaops test-run`
 
-Executes a test suite in fire-and-forget mode (does not wait for completion).
+  Executes a test suite in fire-and-forget mode (does not wait for completion).
 
-```bash
-dataminer-qaops test-run -t <testsuite-id> -c <configuration-id> [options]
-```
+  ```bash
+  dataminer-qaops test-run -t <testsuite-id> -c <configuration-id> [options]
+  ```
 
-### `dataminer-qaops test-run-and-wait`
+- `dataminer-qaops test-run-and-wait`
 
-Executes a test suite and waits for completion, with optional result output to file.
+  Executes a test suite and waits for completion, with optional result output to file.
 
-```bash
-dataminer-qaops test-run-and-wait -t <testsuite-id> -c <configuration-id> [options]
-```
+  ```bash
+  dataminer-qaops test-run-and-wait -t <testsuite-id> -c <configuration-id> [options]
+  ```
 
 ## Parameters reference
 
 ### Required parameters
 
-- **Test Suite ID** (`-t`, `--testsuite-id`): The unique ULID identifier of the QAOps Test Suite to run
+- **Test Suite ID** (`-t`, `--testsuite-id`): The unique ULID identifier of the QAOps test suite to run.
 
-- **Configuration ID** (`-c`, `--configuration-id`): The unique ULID identifier of the QAOps Configuration to run this Test Suite on
+- **Configuration ID** (`-c`, `--configuration-id`): The unique ULID identifier of the QAOps configuration to run this test suite on.
 
 ### Optional parameters
 
 #### Common options (both commands)
 
-- **Token** (`--token`): Authentication token (alternatively set via `QAOPS_TOKEN` environment variable)
+- **Token** (`--token`): Authentication token (alternatively set via the `QAOPS_TOKEN` environment variable).
 
-- **Tags** (`-tags`, `--tags`): Semi-colon separated list of tags for organizing and filtering test runs
+- **Tags** (`-tags`, `--tags`): Semi-colon separated list of tags for organizing and filtering test runs.
 
 - **Hotfix ID** (`-whi`, `--hotfix-id`): Identifier returned after uploading a DataMiner upgrade package.
 
-- **Override Test Packages** (`--override-test-packages`): Replace test packages in the suite with local `.dmtest` files. Specify as: `<package-id> <file-path>` pairs
+- **Override Test Packages** (`--override-test-packages`): Replaces test packages in the suite with local .dmtest files. Specify these as `<package-id> <file-path>` pairs.
 
 #### Wait-specific options
 
 These options only apply to the `test-run-and-wait` command:
 
-- **Result File Path** (`-rf`, `--result-filepath`): File path to store JSON test results (overwrites existing file)
+- **Result File Path** (`-rf`, `--result-filepath`): File path to store JSON test results (overwrites existing file).
 
-- **Timeout** (`-tim`, `--timeout-in-seconds`): Maximum time to wait for completion in seconds (default: 7200 seconds / 2 hours)
+- **Timeout** (`-tim`, `--timeout-in-seconds`): Maximum time to wait for completion in seconds (default: 7200 seconds/2 hours).
 
 #### Global options
 
-- **Debug** (`--debug`): Enable debug logging
+- **Debug** (`--debug`): Enables debug logging.
 
-- **Minimum Log Level** (`--minimum-log-level`): Set minimum log level (default: Information)
+- **Minimum Log Level** (`--minimum-log-level`): Sets the minimum log level (default: *Information*).
 
 ## Authentication
 
-Authentication tokens are created through the [QAOps User application](xref:QAOps_Main_UI#qaops-user---tokens). Once you have your token, provide it using either method:
+Authentication tokens are created through the [QAOps User application](xref:QAOps_Main_UI#qaops-user---tokens). Once you have your token, provide it using either of the following methods:
 
-### Environment variable (recommended)
+- **Environment variable** (recommended)
 
-```bash
-export QAOPS_TOKEN=<your-token>
-dataminer-qaops test-run -t <testsuite-id> -c <configuration-id>
-```
+  ```bash
+  export QAOPS_TOKEN=<your-token>
+  dataminer-qaops test-run -t <testsuite-id> -c <configuration-id>
+  ```
 
-### Command line parameter
+- **Command line parameter**
 
-```bash
-dataminer-qaops test-run --token <your-token> -t <testsuite-id> -c <configuration-id>
-```
+  ```bash
+  dataminer-qaops test-run --token <your-token> -t <testsuite-id> -c <configuration-id>
+  ```
 
 > [!NOTE]
 > Using the environment variable is recommended for security reasons, especially in CI/CD environments.
 
-## Advanced usage
+## Overriding test packages
 
-### Overriding test packages
+You can replace specific test packages in a test suite with your local .dmtest files. This is useful for testing modifications before uploading them to the Catalog.
 
-You can replace specific test packages in a test suite with your local `.dmtest` files. This is useful for testing modifications before uploading them to the Catalog.
+- **Single command with multiple overrides**:
 
-**Single command with multiple overrides:**
+  ```bash
+  dataminer-qaops test-run -t <testsuite-id> -c <config-id> \
+    --override-test-packages <package-id-1> path/to/test1.dmtest <package-id-2> path/to/test2.dmtest
+  ```
 
-```bash
-dataminer-qaops test-run -t <testsuite-id> -c <config-id> \
-  --override-test-packages <package-id-1> path/to/test1.dmtest <package-id-2> path/to/test2.dmtest
-```
+- **Separate override parameters**:
 
-**Separate override parameters:**
-
-```bash
-dataminer-qaops test-run -t <testsuite-id> -c <config-id> \
-  --override-test-packages <package-id-1> path/to/test1.dmtest \
-  --override-test-packages <package-id-2> path/to/test2.dmtest
-```
+  ```bash
+  dataminer-qaops test-run -t <testsuite-id> -c <config-id> \
+    --override-test-packages <package-id-1> path/to/test1.dmtest \
+    --override-test-packages <package-id-2> path/to/test2.dmtest
+  ```
 
 > [!IMPORTANT]
-> Each override requires exactly two values: the test package identifier (ULID) and the file path to a `.dmtest` file. You can find package IDs in the QAOps web interface.
+> Each override requires exactly two values: the test package identifier (ULID) and the file path to a .dmtest file. You can find the package IDs in the [QAOps Operator app](xref:QAOps_Main_UI#qaops-operator---test-suites).
 
 ## Exit codes
 
-The tool returns specific exit codes to indicate the outcome of the operation:
+The tool returns specific exit codes to indicate the outcome of an operation:
 
-- **0**: Success - Test suite completed successfully
+- **0**: Success. Test suite completed successfully.
 
-- **1**: Test failure - One or more tests failed
+- **1**: Test failure. One or more tests failed.
 
-- **2**: Timeout - Test suite did not complete within the specified timeout
+- **2**: Timeout. The test suite did not complete within the specified timeout.
 
-- **-1**: Unexpected exception - An error occurred during execution
+- **-1**: Unexpected exception. An error occurred during execution.
 
-- **-2**: Not implemented - Feature is not yet implemented
+- **-2**: Not implemented. Feature is not yet implemented.
 
 > [!TIP]
 > These exit codes are useful for integrating the tool into CI/CD pipelines where you need to determine the success or failure of test runs programmatically.
