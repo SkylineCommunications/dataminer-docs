@@ -237,6 +237,22 @@ element="My element|My other element"
 > [!NOTE]
 > To open an SLA element, also use the *element=* option.
 
+### EnableAlarmSubscriptions=
+
+Available from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44779-->. Use this option to enable or disable alarm subscriptions.
+
+- To enable alarm subscriptions:
+
+  ```txt
+  EnableAlarmSubscriptions=true
+  ```
+
+- To disable alarm subscriptions:
+
+  ```txt
+  EnableAlarmSubscriptions=false
+  ```
+
 ### host=
 
 Use this option to specify the IP address or hostname of the DMA to which you want to connect.
