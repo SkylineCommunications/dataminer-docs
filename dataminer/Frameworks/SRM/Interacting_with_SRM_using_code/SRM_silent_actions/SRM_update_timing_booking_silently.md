@@ -8,45 +8,43 @@ The example below shows how the timing of a booking can be changed without user 
 
 > [!NOTE]
 > The timing of events that have already been executed cannot be changed.
+> Dates should be passed on local time. The Booking Manager will take care of converting them to UTC.
 
 ```csharp
 using System;
-using Skyline.DataMiner.Library.Solutions.SRM;
-using Skyline.DataMiner.Library.Solutions.SRM.Model.ReservationAction;
 using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Core.SRM;
+using Skyline.DataMiner.Core.SRM.Extensions.Reservations;
+using Skyline.DataMiner.Core.SRM.Model.ReservationAction;
 
 public class Script
 {
- public static void Run(Engine engine)
- {
- // Replace with reservation guid
- var reservationId = Guid.NewGuid();
+	public static void Run(Engine engine)
+	{
+		// Replace with reservation guid
+		var reservationId = Guid.NewGuid();
 
- // Replace with Element Name of the Booking Manager
- string bookingManagerElementName = "Booking Manager";
+		// Replace with expected timing
+		var start = DateTime.Now.AddHours(2);
+		var end = start.AddHours(4);
+		var preRoll = TimeSpan.FromMinutes(5);
+		var postRoll = TimeSpan.FromMinutes(5);
 
- // Replace with expected timing
- DateTime start = DateTime.UtcNow.AddHours(2);
- DateTime end = start.AddHours(4);
- TimeSpan preRoll = TimeSpan.FromMinutes(5);
- TimeSpan postRoll = TimeSpan.FromMinutes(5);
+		var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationId);
 
- var reservationInstance = SrmManagers.ResourceManager.GetReservationInstance(reservationId);
+		var bookingManager = reservation.FindBookingManager();
 
- var bookingManager = new BookingManager(engine,
- engine.FindElement(bookingManagerElementName));
+		var newTiming = new ChangeTimeInputData
+		{
+			StartDate = start,
+			EndDate = end,
+			PreRoll = preRoll,
+			PostRoll = postRoll,
+			IsSilent = true,
+		};
 
- var newTiming = new ChangeTimeInputData
- {
- StartDate = start,
- EndDate = end,
- PreRoll = preRoll,
- PostRoll = postRoll,
- IsSilent = true
- };
-
- var result = bookingManager.TryChangeTime(engine, ref reservationInstance, newTiming);
- }
+		var result = bookingManager.TryChangeTime(engine, ref reservation, newTiming);
+	}
 }
 ```
 
