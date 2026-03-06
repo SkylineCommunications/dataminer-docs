@@ -2,10 +2,7 @@
 uid: MediaOps_Live_1.0.0
 ---
 
-# MediaOps Live 1.0.0 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Live 1.0.0
 
 ## New features
 

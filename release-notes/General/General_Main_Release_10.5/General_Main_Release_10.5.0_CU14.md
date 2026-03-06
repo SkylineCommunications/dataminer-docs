@@ -30,3 +30,9 @@ On systems where each DMA has its own Cassandra database, SLDataGateway will now
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 Up to now, the SLA cleaning thread would incorrectly remove history data for an active alarm that was not linked to an outage. As a result, when a replay happened, the active alarms table would no longer be updated when that alarm was cleared.
+
+#### Updating DVE properties could cause SLDMS to stop working [ID 44921]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When DVE properties were being updated, in some cases, the SLDMS process could stop working when it was not aware of the element.
