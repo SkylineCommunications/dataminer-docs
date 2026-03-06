@@ -69,6 +69,15 @@ Expected duration: 15 minutes.
 
 The command output displays a description of the tool and the available commands.
 
+> [!NOTE]
+> If you see the exception "Unable to load the service index for source ...", one of your configured NuGet sources may be unreachable or may have expired credentials.
+>
+> To continue this tutorial, you can temporarily remove the failing source and add it again later when needed:
+>
+> ```bash
+> dotnet nuget remove source "NameOfSource"
+> ```
+
 ## Step 2: Find the unique test and configuration identifiers
 
 1. In the Green *QAOps* application, go to [Configurations](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations).
