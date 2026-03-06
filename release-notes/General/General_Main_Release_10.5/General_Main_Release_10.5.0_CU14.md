@@ -25,7 +25,7 @@ On systems where each DMA has its own Cassandra database, SLDataGateway will now
 
 ### Fixes
 
-#### One protocol thread would incorrectly be able to add new rows to a table while another protocol thread was clearing that table [ID 44764]
+#### One protocol thread would incorrectly be able to add new rows to a table while another protocol thread was clearing that table [ID 44764] [ID 44833]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
