@@ -101,12 +101,6 @@ When, in the query builder, you inserted a node (for example a filter) before a 
 
 When, in a *Query filter* component, you opened the operator selection box in order to select "equals", "contains", or "match regex", in some cases, part of that selection box would incorrectly not be displayed.
 
-#### Low-Code Apps: 'On open' event would incorrectly not be able to consume data provided by the URL [ID 44923]
-
-<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
-
-In some cases, an *On open* event configured in a low-code app would incorrectly not be able to consume data provided by the URL.
-
 #### Dashboards/Low-Code Apps: Value received from a linked component would incorrectly not be visible in an input component [ID 44927]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
