@@ -46,6 +46,14 @@ The DataMiner web apps that use Angular (e.g., Low-Code Apps, Dashboards, Monito
 
 The GQI DxM has been upgraded to Microsoft .NET 10. It no longer requires the .NET 8 runtime.
 
+#### GQI DxM: Percentage values for trend data will now be stored and displayed like all other percentage values [ID 44884]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, percentage values for average trend data of discreet parameters were stored as a number between 0 to 100. In order to have percentage values stored consistently throughout all GQI data sources, from now on, those percentage values will be stored as a number between 0 to 1.
+
+Also, in order to have all percentage values displayed consistently, percentage values for average trend data of discreet parameters will now be displayed in the culture of the user.
+
 #### Low-Code Apps: Enhanced performance when entering text in a text box that supports highlighting [ID 44888]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
@@ -110,3 +118,16 @@ When an input component was fed data from another component, in some cases, the 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When, in a GQI component (e.g., *Grid*, *Table*, *Timeline*, etc.), a query was filtered by data from another component, in some cases, the filtering would not be reflected in the UI when the data from the other component changed rapidly.
+
+#### GQI DxM: Problem when a query applied a custom operator to a row with AlarmID metadata [ID 44948]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, a query handled by the GQI DxM would fail and throw the following error when it applied a custom operator to a row with AlarmID metadata.
+
+`Unsupported row metadata object ref type: Skyline.DataMiner.Net.Messages.SLDataGateway.AlarmID`
+
+That same error would also occur when an ad hoc data source or custom operator added AlarmID metadata to a row.
+
+> [!NOTE]
+> Currently, there is no reason for users to define AlarmID metadata via ad hoc data sources or custom operators. At present, the *Get alarms* data source is the only built-in data source that provides AlarmID metadata.
