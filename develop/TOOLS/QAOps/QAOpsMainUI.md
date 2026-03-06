@@ -122,7 +122,7 @@ Each package also shows its QAOps package identifier, which is different from it
 
 ![QAOps package identifier](~/develop/images/QAOps_TestSuites_package_identifier.png)
 
-The QAOps package identifier is used when [triggering a test run with an unreleased test package](xref:QAOps_Tutorials_User_Tutorials_Advanced_Trigger_Test_Run_With_Unreleased_Test_Package_Version).
+The QAOps package identifier is used when [triggering a test run with an unreleased test package](xref:QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages).
 
 #### Editing test suites
 
