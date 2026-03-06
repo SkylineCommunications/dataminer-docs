@@ -381,3 +381,11 @@ Since Chrome version 142, issues could occur when playing HLS video thumbnails.
 In order to prevent any playback issues in Chrome 142 and above, from now on, when using `type=HTML5-HLS`, the MSE javascript implementation will take priority over the native HLS playback of the browser.
 
 If you prefer to use the native HLS playback of the browser rather than the MSE javascript implementation, you can use `type=HTML5` instead.
+
+#### Dashboards/Low-Code Apps: Themes.json file was no longer present in the C:\\Skyline DataMiner\\dashboards folder [ID 44930]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+Since DataMiner version 10.5.0 CU12/10.6.3, the *themes.json* file was incorrectly no longer present in the `C:\Skyline DataMiner\dashboards` folder.
+
+This file has now been added again.
