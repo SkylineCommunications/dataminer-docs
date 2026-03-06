@@ -86,3 +86,15 @@ When, in the query builder, you inserted a node (for example a filter) before a 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When, in a *Query filter* component, you opened the operator selection box in order to select "equals", "contains", or "match regex", in some cases, part of that selection box would incorrectly not be displayed.
+
+#### Low-Code Apps: 'On open' event would incorrectly not be able to consume data provided by the URL [ID 44923]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In some cases, an *On open* event configured in a low-code app would incorrectly not be able to consume data provided by the URL.
+
+#### Dashboards/Low-Code Apps - GQI components: Problem when data from another component changed rapidly [ID 44934]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When, in a GQI component (e.g., *Grid*, *Table*, *Timeline*, etc.), a query was filtered by data from another component, in some cases, the filtering would not be reflected in the UI when the data from the other component changed rapidly.
