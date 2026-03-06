@@ -38,6 +38,14 @@ To add data or change the data of a component:
 
 After data or filters have been added, the *Data* pane shows which items are currently used:
 
-- *Data used in dashboard/page/panel*: Lists all data items used in the current dashboard or low-code app page or panel.
+- *Data used in dashboard/page/panel*: Lists all data items used in the current dashboard or low-code app page or panel, such as data sources, filters, and more.
 
-- *Data used in component*: Lists all data items used in the currently selected component.
+  From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44687-->, in the Low-Code Apps module, this section also indicates how the data is used (for example, as a data source or filter) by displaying corresponding icons. The items are sorted by type and then by name. If a data entry is used in multiple ways in the page or panel, multiple icons are displayed.
+
+  ![Example of the *Data used in page/panel* section](~/dataminer/images/Data_Used_In_Page_Panel.png)<br>*Low-Code Apps Data pane in DataMiner 10.6.4*
+
+- *Data used in component*: Lists all data items used in the currently selected component. Entries can be reordered within this section to control the order in which they are displayed in the visualization.
+
+  From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44687-->, in the Low-Code Apps module, this section also includes filters and groups. If a data entry is used in multiple ways within the component, it appears on separate lines. The items are sorted by type and then by name.
+
+  ![Example of the *Data used in component* section](~/dataminer/images/Data_Used_In_Component.png)<br>*Low-Code Apps Data pane in DataMiner 10.6.4*
