@@ -382,6 +382,12 @@ In order to prevent any playback issues in Chrome 142 and above, from now on, wh
 
 If you prefer to use the native HLS playback of the browser rather than the MSE javascript implementation, you can use `type=HTML5` instead.
 
+#### Low-Code Apps: 'On open' event would incorrectly not be able to consume data provided by the URL [ID 44923]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+In some cases, an *On open* event configured in a low-code app would incorrectly not be able to consume data provided by the URL.
+
 #### Dashboards/Low-Code Apps: Themes.json file was no longer present in the C:\\Skyline DataMiner\\dashboards folder [ID 44930]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
