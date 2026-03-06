@@ -99,6 +99,12 @@ When, in a *Query filter* component, you opened the operator selection box in or
 
 In some cases, an *On open* event configured in a low-code app would incorrectly not be able to consume data provided by the URL.
 
+#### Dashboards/Low-Code Apps: Value received from a linked component would incorrectly not be visible in an input component [ID 44927]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When an input component was fed data from another component, in some cases, the value received from the other component would incorrectly not be visible in that input component.
+
 #### Dashboards/Low-Code Apps - GQI components: Problem when data from another component changed rapidly [ID 44934]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
