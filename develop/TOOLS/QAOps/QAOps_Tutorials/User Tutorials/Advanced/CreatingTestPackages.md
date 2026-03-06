@@ -4,7 +4,7 @@ uid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
 
 # How To Create a Test Package
 
-In this tutorial, you will learn how to create a basic Test Package and Trigger a Test Run
+In this tutorial, you will learn how to create a basic Test Package and Trigger a Test Run with it.
 
 For all tutorials, always use the "QAOps Sandbox Environment": [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be).
 
@@ -42,5 +42,29 @@ Expected duration: 15 minutes.
 
 ## Step 1: Create a new DataMiner Test Package Project
 
-Open Visual Studio
+Open Visual Studio and select Create new project
+
+Select the DataMiner Test Package Project template and click Next
+
+Fill in a project name e.g. MyFirstTestPackage
+Choose a Location e.g. C:\DataMiner Testing
+Make sure the Place solution and project in same directory option remains UNCHECKED (always do this)
+
+Click Next
+
+Fill in your name or initials in the Author
+Verify that Create DataMiner Package options is CHECKED (always do this)
+
+Leave GitHub Workflows None for this tutorial. (You can use this on actual repositories if you intend to use GitHub as your SCM)
+
+Click Create
+
+Project should open and you should be seeing the Getting Started markdown file which contains useful information.
+
+## Step 2: Create the DataMiner environment to be tested
+
+Locate or Open the Solution Explorer window (shortcut CTRL + ALT + L may be used)
+Expand the Package Content folder
+Open the CatalogReferences.xml
+
 

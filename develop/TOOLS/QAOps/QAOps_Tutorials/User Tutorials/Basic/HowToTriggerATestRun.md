@@ -82,13 +82,13 @@ The command output displays a description of the tool and the available commands
 
 1. In the Green *QAOps* application, go to [Configurations](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations).
 
-1. Locate the configuration and test suite you want to execute.
-
-1. It is recommended to use the "Demo Configuration" and "Demo Test Suite", because these are configured to provide servers.
+1. Select the "Demo Configuration" and "Demo Test Suite"
 
 1. Copy the configuration ID and save it in a text file.
 
 1. Copy the test suite ID and save it in a text file.
+
+![QAOps Identifier Selections](~/develop/images/QAOps_SelectIdentifiers.png)
 
 ## Step 3: Create a token
 
@@ -99,8 +99,6 @@ The command output displays a description of the tool and the available commands
 1. Enter a name for the token.
 
 1. Select the scope that matches the ".execute" scope for your chosen configuration.
-
-1. If needed, use Shift+Click to select all scopes and allow full access. This is not recommended for production environments.
 
 1. Click *Generate Token*.
 
@@ -131,7 +129,7 @@ The command output displays a description of the tool and the available commands
 1. Press Enter to submit the request.
 
 > [!IMPORTANT]
-> For production systems, leave out the -san argument.
+> For production systems, leave out the -san argument. This is to indicate what QAOps System you wish to send commands to. In this case the QAOps Sandbox system. The default is the production QAOps system.
 
 ## Step 5: Verify that the request was received
 
@@ -142,3 +140,6 @@ The command output displays a description of the tool and the available commands
 1. Use the top filter to find your request more quickly.
 
 1. Track the [test run life cycle](xref:QAOps_Test_Run).
+
+To view and interpret the Test Results you can follow the [How To View Results](xref:QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results) tutorial.
+
