@@ -21,6 +21,8 @@ When you create a query, you can use one or more of the data sources listed belo
 
 - [Get behavioral change events](xref:Get_behavioral_change_events)
 
+- [Get bookings](xref:Get_bookings)
+
 - [Get DCF connections](xref:Get_DCF_connections)
 
 - [Get elements](xref:Get_elements)
@@ -38,6 +40,10 @@ When you create a query, you can use one or more of the data sources listed belo
 - [Get profile instances](xref:Get_profile_instances)
 
 - [Get relational anomalies](xref:Get_relational_anomalies)
+
+- [Get resource pools](xref:Get_resource_pools)
+
+- [Get resource usages](xref:Get_resource_usages)
 
 - [Get resources](xref:Get_resources)
 
