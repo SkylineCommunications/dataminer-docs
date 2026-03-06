@@ -25,4 +25,8 @@ On systems where each DMA has its own Cassandra database, SLDataGateway will now
 
 ### Fixes
 
-*No fixes have been added to this release yet.*
+#### Business intelligence: Active alarms table would not be updated when an alarm with 0% impact was cleared [ID 44892]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, the SLA cleaning thread would incorrectly remove history data for an active alarm that was not linked to an outage. As a result, when a replay happened, the active alarms table would no longer be updated when that alarm was cleared.
