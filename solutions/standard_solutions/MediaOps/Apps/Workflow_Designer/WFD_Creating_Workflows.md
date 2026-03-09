@@ -4,12 +4,14 @@ uid: WFD_Creating_Workflows
 
 # Creating workflows
 
-To create workflows, you can use the *New* button in the header bar of the Workflow Designer.
+To create a completely new workflow, use the *New* button in the header bar of the Workflow Designer app.
 
-![Workflow Designer header bar](~/solutions/images/Workflow_Designer_header_bar.png)
+![New button in the Workflow Designer header bar](~/solutions/images/Workflow_Designer_header_bar.png)
 
-Next to creating a workflow from scratch, there is also an option to start from an existing workflow by duplicating it from the context menu on the *Home* page.
+If you want to create a workflow based on an existing workflow, you can create a duplicate by clicking the ... button next to the original workflow on the *Home* page and selecting *Duplicate*.
 
-![Workflow Designer duplicate](~/solutions/images/Workflow_Designer_Duplicate_Workflow.png)
+![Duplicating a workflow using the context menu for a workflow in the Workflow Designer app](~/solutions/images/Workflow_Designer_Duplicate_Workflow.png)
 
-Once the workflow is created it will appear in the list of workflows on the *Home* page in the [Draft state](xref:WFD_Workflow_States). To update the workflow settings, **specify the resources** required, how they are linked to each other, as well as provide **default configuration** settings, you can use the pencil icon to open the [Edit workflow panel](xref:WFD_Edit_Workflow).
+Once a workflow has been created, it will appear in the list of workflows on the *Home* page in the [Draft state](xref:WFD_Workflow_States).
+
+You can then [edit the workflow](xref:WFD_Edit_Workflow) via the pencil icon to update the workflow settings, **specify the resources** required, specify how they are linked to each other, and provide **default configuration** settings.
