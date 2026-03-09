@@ -2,27 +2,25 @@
 uid: QAOps_Tutorials_User_Tutorials_Basic_Avoiding_Unnecessary_Costs
 ---
 
-# How to avoid unnecessary costs as a user
+# Preventing unnecessary costs as a user
 
 > [!IMPORTANT]
 > This section includes information that is only applicable to Skyline employees.
 
-In this tutorial, you will learn how to avoid unnecessary costs when using the QAOps system by learning how to cleanup used DaaS servers.
+In this tutorial, you will learn how to prevent unnecessary costs when using the QAOps system by learning how to clean up used DaaS servers.
 
 You will start a test run that is expected to fail and then remove the related server to limit resource usage.
-
-For all tutorials, always use the "QAOps Sandbox Environment": [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be).
 
 Expected duration: 5 minutes.
 
 ## Prerequisites
 
-- Access to [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be).
+- Access to [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be). This "QAOps Sandbox Environment" environment should be used for every QAOps tutorial.
 
-> [!IMPORTANT]
-> Please contact support.boost@skyline.be to receive a username and password for access to the Sandbox system.
+  > [!NOTE]
+  > Please contact <support.boost@skyline.be> to receive a username and password for access to the Sandbox system.
 
-- You require [dotnet 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), even if you already have a higher SDK version installed.
+- [dotnet 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) is required, even if a higher SDK version is already installed.
 
 ## Overview
 
@@ -42,38 +40,41 @@ Expected duration: 5 minutes.
 
 ## Step 1: Download, install, and verify the QAOps tool
 
+> [!NOTE]
+> If you have already downloaded the QAOps tool for an earlier tutorial, skip this step.
+
 1. Open a Command Prompt, Bash, or PowerShell window.
 
 1. Check if you have `nuget.org` as a known NuGet source:
 
-	```bash
-	dotnet nuget list source
-	```
+   ```bash
+   dotnet nuget list source
+   ```
 
 1. Verify that the output contains `nuget.org [Enabled]`.
 
-> [!NOTE]
-> The first time you run a `dotnet` command on a computer, you will see a welcome message. The output of your command is displayed below that message.
+   > [!NOTE]
+   > The first time you run a `dotnet` command on a computer, you will see a welcome message. The output of your command is displayed below that message.
 
 1. If your sources do not contain `nuget.org`, add it with the following command. Otherwise, skip this step.
 
-	```bash
-	dotnet nuget add source https://api.nuget.org/v3/index.json -n "nuget.org"
-	```
+   ```bash
+   dotnet nuget add source https://api.nuget.org/v3/index.json -n "nuget.org"
+   ```
 
 1. Install the QAOps tool:
 
-	```bash
-	dotnet tool install skyline.dataminer.qaops --global
-	```
+   ```bash
+   dotnet tool install skyline.dataminer.qaops --global
+   ```
 
 1. Verify that the tool is available:
 
-	```bash
-	dataminer-qaops --help
-	```
+   ```bash
+   dataminer-qaops --help
+   ```
 
-The command output displays a description of the tool and the available commands.
+   The command output will display a description of the tool and the available commands.
 
 > [!NOTE]
 > If you see the exception "Unable to load the service index for source ...", one of your configured NuGet sources may be unreachable or may have expired credentials.
@@ -86,11 +87,11 @@ The command output displays a description of the tool and the available commands
 
 ## Step 2: Find the unique test and configuration identifiers
 
-1. In the *User App*, go to [Configurations](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations).
+1. In the QAOps User app (i.e., the green *QAOps* app), go to the [Configurations](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations) page.
 
-1. Locate the configuration and test suite you want to execute.
+1. Select *Demo Configuration* and *Demo Test Suite - Failing Tests*.
 
-1. For this tutorial, use "Demo Configuration" and "Demo Test Suite - Failing Tests", because they are configured to produce a failing test.
+   This is a test suite that has been configured to produce a failing test.
 
 1. Copy the configuration ID and save it in a text file.
 

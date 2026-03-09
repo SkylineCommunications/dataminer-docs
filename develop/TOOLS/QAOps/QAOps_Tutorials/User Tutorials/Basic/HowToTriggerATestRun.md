@@ -2,25 +2,23 @@
 uid: QAOps_Tutorials_User_Tutorials_Basic_How_To_Trigger_A_Test_Run
 ---
 
-# How to trigger a test run
+# Triggering a test run
 
 > [!IMPORTANT]
 > This section includes information that is only applicable to Skyline employees.
 
 In this tutorial, you will learn how to trigger a [QAOps test run](xref:QAOps_Test_Run).
 
-For all tutorials, always use the "QAOps Sandbox Environment": [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be).
-
 Expected duration: 15 minutes.
 
 ## Prerequisites
 
-- Access to [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be).
+- Access to [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be). This "QAOps Sandbox Environment" environment should be used for every QAOps tutorial.
 
-> [!IMPORTANT]
-> Please contact support.boost@skyline.be to receive a username and password for access to the Sandbox system.
+  > [!NOTE]
+  > Please contact <support.boost@skyline.be> to receive a username and password for access to the Sandbox system.
 
-- You require [dotnet 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), even if you already have a higher SDK version installed.
+- [dotnet 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) is required, even if a higher SDK version is already installed.
 
 ## Overview
 
@@ -40,34 +38,34 @@ Expected duration: 15 minutes.
 
 1. Check if you have `nuget.org` as a known NuGet source:
 
-	```bash
-	dotnet nuget list source
-	```
+   ```bash
+   dotnet nuget list source
+   ```
 
 1. Verify that the output contains `nuget.org [Enabled]`.
 
-> [!NOTE]
-> The first time you run a `dotnet` command on a computer, you will see a welcome message. The output of your command is displayed below that message.
+   > [!NOTE]
+   > The first time you run a `dotnet` command on a computer, you will see a welcome message. The output of your command is displayed below that message.
 
 1. If your sources do not contain `nuget.org`, add it with the following command. Otherwise, skip this step.
 
-	```bash
-	dotnet nuget add source https://api.nuget.org/v3/index.json -n "nuget.org"
-	```
+   ```bash
+   dotnet nuget add source https://api.nuget.org/v3/index.json -n "nuget.org"
+   ```
 
 1. Install the QAOps tool:
 
-	```bash
-	dotnet tool install skyline.dataminer.qaops --global
-	```
+   ```bash
+   dotnet tool install skyline.dataminer.qaops --global
+   ```
 
 1. Verify that the tool is available:
 
-	```bash
-	dataminer-qaops --help
-	```
+   ```bash
+   dataminer-qaops --help
+   ```
 
-The command output displays a description of the tool and the available commands.
+   The command output will display a description of the tool and the available commands.
 
 > [!NOTE]
 > If you see the exception "Unable to load the service index for source ...", one of your configured NuGet sources may be unreachable or may have expired credentials.
@@ -80,9 +78,9 @@ The command output displays a description of the tool and the available commands
 
 ## Step 2: Find the unique test and configuration identifiers
 
-1. In the Green *QAOps* application, go to [Configurations](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations).
+1. In the QAOps User app (i.e., the green *QAOps* app), go to the [Configurations](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations) page.
 
-1. Select the "Demo Configuration" and "Demo Test Suite"
+1. Select *Demo Configuration* and *Demo Test Suite*.
 
 1. Copy the configuration ID and save it in a text file.
 
@@ -92,9 +90,9 @@ The command output displays a description of the tool and the available commands
 
 ## Step 3: Create a token
 
-1. In the Green *QAOps* application, go to [Tokens](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens).
+1. In the QAOps User app, go to the [Tokens](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens) page.
 
-1. Click *Create Token* in the top-left corner.
+1. In the top-left corner, click *Create Token* .
 
 1. Enter a name for the token.
 
@@ -104,36 +102,36 @@ The command output displays a description of the tool and the available commands
 
 1. Wait until the token value is shown.
 
-1. Copy the token value and save it in a text file. For production environments, use a key vault solution.
+1. Copy the token value and save it in a text file.
+
+   For production environments, use a key vault solution.
 
 ## Step 4: Trigger the test run
 
 1. Open a Command Prompt, Bash, or PowerShell window.
 
-1. Run the following command, after replacing the placeholders:
+1. Run the following command, after replacing the placeholders as indicated below, making sure to keep the double quotes around the TOKEN value:
 
-	```bash
-	dataminer-qaops test-run --token "TOKEN" -t TESTSUITE -c CONFIGURATION -tags MYNAME -san saqaopssandbox
-	```
+   ```bash
+   dataminer-qaops test-run --token "TOKEN" -t TESTSUITE -c CONFIGURATION -tags MYNAME -san saqaopssandbox
+   ```
 
-1. Replace the placeholders with your values, make sure to keep the double quotes around some values intact:
+   - `TOKEN`: The token value you copied earlier. Make sure this value is enclosed in double quotes.
 
-	- `TOKEN`: the token value you copied earlier. Make sure this value is between double quotes!
+   - `TESTSUITE`: the test suite ID you copied earlier.
 
-	- `TESTSUITE`: the test suite ID you copied earlier.
+   - `CONFIGURATION`: the configuration ID you copied earlier.
 
-	- `CONFIGURATION`: the configuration ID you copied earlier.
+   - `MYNAME`: your name, nickname, or another identifier that helps you find your request.
 
-	- `MYNAME`: your name, nickname, or another identifier that helps you find your request.
+   > [!NOTE]
+   > For production systems, leave out the -san argument. This argument indicates to which QAOps System you want to send commands, in this case the QAOps Sandbox system. The default is the production QAOps system.
 
 1. Press Enter to submit the request.
 
-> [!IMPORTANT]
-> For production systems, leave out the -san argument. This is to indicate what QAOps System you wish to send commands to. In this case the QAOps Sandbox system. The default is the production QAOps system.
-
 ## Step 5: Verify that the request was received
 
-1. In the Green *QAOps*, go to [Overview](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview).
+1. In the QAOps User app, go to the [Overview](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview) page.
 
 1. Locate your tag in the list.
 
@@ -141,5 +139,4 @@ The command output displays a description of the tool and the available commands
 
 1. Track the [test run life cycle](xref:QAOps_Test_Run).
 
-To view and interpret the Test Results you can follow the [How To View Results](xref:QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results) tutorial.
-
+To view and interpret the test results, follow the tutorial [Viewing test results](xref:QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results) tutorial.

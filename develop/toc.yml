@@ -7488,7 +7488,7 @@ items:
         topicUid: QAOps_Tool
       - name: QAOps tutorials
         items:
-        - name: Operator tutorials
+        - name: QAOps Operator app
           items:
           - name: How to create a new configuration
             topicUid: QAOps_Tutorials_Operator_Tutorials_Creating_Configurations
@@ -7498,17 +7498,17 @@ items:
             topicUid: QAOps_Tutorials_Operator_Tutorials_Managing_Provisioning
           - name: How to avoid unnecessary costs as an operator
             topicUid: QAOps_Tutorials_Operator_Tutorials_Avoiding_Unnecessary_Costs
-        - name: User tutorials
+        - name: QAOps User app
           items:
           - name: Basic
             items:
-            - name: What is QAOps
+            - name: Getting started with the QAOps User app
               topicUid: QAOps_Tutorials_User_Tutorials_Basic_What_Is_QAOps
-            - name: How to trigger a test run
+            - name: Triggering a test run
               topicUid: QAOps_Tutorials_User_Tutorials_Basic_How_To_Trigger_A_Test_Run
-            - name: How to view test results
+            - name: Viewing test results
               topicUid: QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results
-            - name: How to avoid unnecessary costs as a user
+            - name: Preventing unnecessary costs as a user
               topicUid: QAOps_Tutorials_User_Tutorials_Basic_Avoiding_Unnecessary_Costs
           - name: Advanced
             items:

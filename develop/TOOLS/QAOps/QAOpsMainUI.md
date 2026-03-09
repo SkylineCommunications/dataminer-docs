@@ -27,6 +27,9 @@ As a QAOps User, you use the **QAOps User** application.
 
 This application contains three main pages, which you can select in the navigation pane on the left: [Overview](#qaops-user---overview), [Configuration](#qaops-user---configurations), and [Tokens](#qaops-user---tokens).
 
+> [!TIP]
+> To get started with a first quick tour of the app, follow the tutorial [Getting started with the QAOps User app](xref:QAOps_Tutorials_User_Tutorials_Basic_What_Is_QAOps).
+
 ### QAOps User - Overview
 
 The *Overview* page provides a high-level overview of all known configurations, test suites, servers, and active test runs in the QAOps system.
