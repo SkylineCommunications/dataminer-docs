@@ -8,31 +8,17 @@ All functionality of MediaOps is available through code. Custom scripts, data so
 
 ## Automation scripts
 
-When creating a script that interacts with MediaOps, you will need to directly reference at least the following NuGet packages:
-
-- [Microsoft.Extensions.Logging.Abstractions](https://www.nuget.org/packages/Microsoft.Extensions.Logging.Abstractions)
-- [Skyline.DataMiner.ConnectorAPI.SkylineLockManager](https://www.nuget.org/packages/Skyline.DataMiner.ConnectorAPI.SkylineLockManager)
-- [Skyline.DataMiner.Core.DataMinerSystem.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Common)
-- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation)
-- [Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live)
-- [Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan)
-- [Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.Automation)
-- [Skyline.DataMiner.SDM.Abstractions]()
-- [Skyline.DataMiner.Utils.Categories.Automation]()
+When creating a script that interacts with MediaOps, you will need to reference [Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.Automation).
 
 ## Connectors
 
-When creating a connectors that interacts with MediaOps, you will need to directly reference at least the following NuGet packages:
-
-<!-- TODO: Add the list here as well for connectors -->
+When creating a connector that interacts with MediaOps, you will need to reference [Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.Protocol).
 
 ## Data sources
 
-When creating a data source that interacts with MediaOps, you will need to directly reference at least the following NuGet packages:
+When creating a [data source](xref:GQI_Ad_hoc_data_sources) that interacts with MediaOps, you will need to reference [Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.GQI](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.GQI).
 
-<!-- TODO: Add the list here as well for data sources -->
-
-## Code example
+## Automation script code example
 
 ```cs
 using Skyline.DataMiner.Automation;
