@@ -36,11 +36,13 @@ Below you can find an overview of the main features that have been added to Data
 | Client-server communication: gRPC connections between [Cube and DMAs](xref:ConnectionSettings_txt#connectionsettingstxt-options) and [between DMAs](xref:DMS_xml#redirects-subtag) | DataMiner 10.3.0/10.3.2 <!-- [ID 34797] [ID 34983] --> |
 | Cube: [BPA tests in System Center](xref:Running_BPA_tests) | DataMiner 10.1.2/10.2.0 <!-- [ID 28516] --> |
 | Cube: [Duplicating a resource](xref:Configuring_pools_of_resources#duplicating-a-resource-from-a-pool) | DataMiner Cube 10.3.7/10.4.0 <!-- [ID 36308] -->|
+| Cube: [*EnableAlarmSubscriptions* URL argument](xref:Options_for_opening_DataMiner_Cube#enablealarmsubscriptions) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 <!-- [ID 44779] --> |
 | Cube: [Health Metrics](xref:BPA_HealthMetrics) BPA test | DataMiner 10.5.0 [CU10]/10.6.1 <!-- [ID 43509]--> |
 | Cube: [Hiding the close button](xref:Working_with_cards_in_DataMiner_Cube#marking-cards-as-non-closable) and [Selecting a Master card](xref:Working_with_cards_in_DataMiner_Cube#selecting-a-master-card) | DataMiner Cube 10.3.9/10.4.0 <!-- [ID 36912] [ID 36956] --> |
 | Cube: [Large Alarm Trees](xref:BPA_LargeAlarmTrees) BPA test | DataMiner 10.5.9/10.6.0 <!-- [ID 42952] --> |
 | Cube: [Opening Cube from a session link](xref:Connecting_to_a_DMA_with_Cube#using-a-shared-session-link) | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 <!-- [ID 42389] --> |
-| Cube: [*UseInitialArgumentsAfterDisconnect* argument](xref:Options_for_opening_DataMiner_Cube#useinitialargumentsafterdisconnecttrue) | DataMiner Cube 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 <!-- [ID 37888] --> |
+| Cube: [Configuring SMTP settings](xref:Configuring_outgoing_email#configuration-via-dataminer-cube) | DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 <!-- [ID 44478] [ID 44594] --> |
+| Cube: [*UseInitialArgumentsAfterDisconnect* URL argument](xref:Options_for_opening_DataMiner_Cube#useinitialargumentsafterdisconnecttrue) | DataMiner Cube 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 <!-- [ID 37888] --> |
 | Dashboards: [*Alarm table* component](xref:DashboardAlarmTable) | DataMiner 10.1.5/10.2.0 |
 | Dashboards: [JSON input in URL parameters](xref:Specifying_data_input_in_a_URL) | DataMiner 10.2.0/10.2.2 <!-- [ID 31833] [ID 31885] -->|
 | Dashboards: [*Node edge graph* component](xref:DashboardNodeEdgeGraph) | DataMiner 10.1.5/10.2.0 <!-- [ID 29425] -->|
@@ -51,6 +53,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards/Low-Code Apps: [*Button panel* component](xref:DashboardButtonPanel) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.3 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbuttonpanel) <!-- [ID 36775] --> |
 | Dashboards/Low-Code Apps: [Configuring node and edge labels](xref:DashboardNodeEdgeGraph#configuring-node-and-edge-labels) for the node edge graph component | DataMiner 10.5.0 [CU11]/10.6.2  <!-- [ID 44218] --> |
 | Dashboards/Low-Code Apps: [Customizing timeline groups](xref:DashboardTimeline#customizing-timeline-groups) using the Template Editor | DataMiner web 10.5.0 [CU12]/10.6.3 <!-- [ID 44557] --> |
+| Dashboards/Low-Code Apps: [Customizing nodes](xref:DashboardNodeEdgeGraph#customizing-nodes) using the Template Editor | DataMiner web 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 <!-- [ID 44809] --> |
 | Dashboards/Low-Code Apps: [Dynamic references in text](xref:Dynamically_Referencing_Data_in_Text) | DataMiner 10.3.11/10.4.0<!-- [ID 37229] --> |
 | Dashboards/Low-Code Apps: [Exporting a GQI query](xref:Creating_GQI_query#exporting-a-query) | DataMiner web 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- [ID 43800] --> |
 | Dashboards/Low-Code Apps: [Flows](xref:Using_flows) | DataMiner web 10.4.0 [CU9]/10.4.12<!-- [ID 40974] --><br>Minimum server version: DataMiner 10.3.9/10.4.0 |
@@ -142,6 +145,7 @@ Below you can find an overview of the main features that have been added to Data
 | Security: [External user authentication using Okta](xref:SAML_using_Okta) | DataMiner 10.1.11/10.2.0 <!-- [ID 30749]-->|
 | Service & Resource Management: [Resource availability](xref:Resource_availability) | DataMiner 10.5.3/10.6.0<!-- [ID 41894] --> |
 | Spectrum Analysis: [Zooming and panning](xref:Viewing_spectrum_analyzer_traces#zooming-and-panning) | DataMiner Cube DataMiner 10.3.11/10.4.0 <!-- [ID 37284] [ID 37461] --> |
+| Storage: [Offload database configuration with Swarming enabled](xref:Offload_Database_With_Swarming) | DataMiner 10.6.4/10.7.0 <!-- [ID 44751] [ID 44767] --> |
 | [Storage as a Service (STaaS)](xref:STaaS) | DataMiner 10.4.0/10.4.1 |
 | [Swarming](xref:Swarming) | DataMiner 10.5.1/10.6.0<br>DataMiner 10.3.11 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#swarming) (Feature Release only)<!-- [ID 41490] --> |
 | Swarming: [Swarming scheduled tasks](xref:SwarmingScheduledTasks) | DataMiner 10.6.3/10.7.0 <!-- [ID 44620] --> |
@@ -162,3 +166,4 @@ Below you can find an overview of the main features that have been added to Data
 | Visual Overview: [Text wrapping and trimming](xref:Configuring_text_wrapping_and_trimming) | DataMiner 10.2.3/10.3.0 <!-- [ID 32440] --> |
 | Visual Overview (web): [Load balancing](xref:Investigating_Web_Issues#load-balancing) | DataMiner 10.5.2/10.6.0 <!-- [ID 41434] [ID 41728] --> |
 | [Web DcM](xref:DataMinerExtensionModules#web) | DataMiner 10.5.0 [CU8]/10.5.11 <!-- [ID 43439] --> |
+| Web Services: [DMAAutomationScriptOptionClientTimeZone](xref:DMAAutomationScriptOptionClientTimeZone) custom data type | DataMiner 10.6.4/10.7.0 <!-- [ID 44742] [ID 44788] --> |
