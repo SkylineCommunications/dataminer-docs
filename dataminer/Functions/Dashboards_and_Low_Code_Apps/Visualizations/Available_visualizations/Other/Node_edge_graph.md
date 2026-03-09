@@ -228,7 +228,7 @@ For each node query and edge query, and for any configured node or edge override
 
   - If neither has conditional coloring, the default background color of the node edge graph component is used.
 
-### Customizing nodes
+#### Customizing nodes
 
 You can **customize the appearance of nodes** in the graph to better represent your data.
 
