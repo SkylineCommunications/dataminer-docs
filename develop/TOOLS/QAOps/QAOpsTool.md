@@ -2,7 +2,7 @@
 uid: QAOps_Tool
 ---
 
-# QAOps Tool
+# QAOps tool
 
 > [!IMPORTANT]
 > This section contains information that is only applicable to Skyline employees.
