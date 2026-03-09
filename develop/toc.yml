@@ -6771,6 +6771,8 @@ items:
             topicUid: DMAAutomationScriptDummy
           - name: DMAAutomationScriptMemoryFile
             topicUid: DMAAutomationScriptMemoryFile
+          - name: DMAAutomationScriptOptionClientTimeZone
+            topicUid: DMAAutomationScriptOptionClientTimeZone
           - name: DMAAutomationScriptParameter
             topicUid: DMAAutomationScriptParameter
           - name: DMAAutomationVariableInfo
