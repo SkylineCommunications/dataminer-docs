@@ -34,9 +34,7 @@ Expected duration: 5 minutes.
 
 - [Step 5: Verify that the request was received](#step-5-verify-that-the-request-was-received)
 
-- [Step 6: Find the test run results](#step-6-find-the-test-run-results)
-
-- [Step 7: Delete the server used for your test run](#step-7-delete-the-server-used-for-your-test-run)
+- [Step 6: Find the test run results](#step-6-find-the-test-run-results-and-delete-the-server-used-for-the-test-run)
 
 ## Step 1: Download, install, and verify the QAOps tool
 
@@ -99,50 +97,46 @@ Expected duration: 5 minutes.
 
 ## Step 3: Create a token
 
-1. In the *User App*, go to [Tokens](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens).
+1. In the QAOps User app, go to the [Tokens](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens) page.
 
-1. Click *Create Token* in the top-left corner.
+1. In the top-left corner, click *Create Token* .
 
 1. Enter a name for the token.
 
-1. Select the scope that matches the ".execute" scope for the "Demo Configuration".
-
-1. If needed, use Shift+Click to select all scopes and allow full access. This is not recommended in production environments.
+1. Select the scope that matches the ".execute" scope for the *Demo Configuration*.
 
 1. Click *Generate Token*.
 
 1. Wait until the token value is shown.
 
-1. Copy the token value and save it in a text file. In production environments, use a key vault solution.
+1. Copy the token value and save it in a text file.
+
+   For production environments, use a key vault solution.
 
 ## Step 4: Trigger the test run
 
 1. Open a Command Prompt, Bash, or PowerShell window.
 
-1. Run the following command, after replacing the placeholders:
+1. Run the following command, after replacing the placeholders as indicated below, making sure to keep the double quotes around the TOKEN value:
 
-    ```bash
-    dataminer-qaops test-run --token "TOKEN" -t TESTSUITE -c CONFIGURATION -tags MYNAME -san saqaopssandbox
-    ```
+   ```bash
+   dataminer-qaops test-run --token "TOKEN" -t TESTSUITE -c CONFIGURATION -tags MYNAME -san saqaopssandbox
+   ```
 
-1. Replace the placeholders with your values:
+   - `TOKEN`: The token value you copied earlier. Make sure this value is enclosed in double quotes.
 
-    - `TOKEN`: the token value you copied earlier.
+   - `TESTSUITE`: the test suite ID you copied earlier.
 
-    - `TESTSUITE`: the test suite ID you copied earlier.
+   - `CONFIGURATION`: the configuration ID you copied earlier.
 
-    - `CONFIGURATION`: the configuration ID you copied earlier.
-
-    - `MYNAME`: your name, nickname, or another identifier that helps you find your request.
-
-1. Press Enter to submit the request.
+   - `MYNAME`: your name, nickname, or another identifier that helps you find your request.
 
 > [!IMPORTANT]
 > For production systems, leave out the `-san` argument.
 
 ## Step 5: Verify that the request was received
 
-1. In the *User App*, go to [Overview](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview).
+1. In the QAOps User app, go to the [Overview](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview) page.
 
 1. Locate your tag in the list.
 
@@ -150,24 +144,23 @@ Expected duration: 5 minutes.
 
 1. Wait until the test run is finished.
 
-## Step 6: Find the test run results
+## Step 6: Find the test run results and delete the server used for the test run
 
-1. In the *User App*, go to [Configurations](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations).
+1. In the QAOps User app, go to the [Configurations](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Configurations) page.
 
-1. Select "Demo Configuration".
-
-1. Select "Demo Test Suite - Failing Tests".
+1. Select *Demo Configuration* and *Demo Test Suite - Failing Tests*.
 
 1. Use your tags to find your test run, and then select it.
 
-## Step 7: Delete the server used for your test run
+1. Locate the server information in the top-right corner.
 
-1. Locate the server information in the top-right corner. This shows which server was used. It should indicate that the server is marked for deletion in four or more days.
+   This shows which server was used. It should indicate that the server is marked for deletion in four or more days.
 
-1. Manually click the delete icon for the server.
+1. Click the delete icon for the server.
 
 1. Verify that the "Marked For Deletion" timestamp changes to the current UTC time.
 
-1. After a few minutes the server information disappears. This indicates that the server was removed and costs were reduced.
+   After a few minutes, the server information will disappear, indicating that the server has been removed and you have successfully prevented unnecessary costs.
 
-In production, click the delete button after you have finished debugging and resolving the cause of the failing test.
+> [!TIP]
+> In production, only click the delete button after you have finished debugging and resolving the cause of the failing test.

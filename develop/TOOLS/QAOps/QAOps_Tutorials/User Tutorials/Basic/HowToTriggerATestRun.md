@@ -127,8 +127,6 @@ Expected duration: 15 minutes.
    > [!NOTE]
    > For production systems, leave out the -san argument. This argument indicates to which QAOps System you want to send commands, in this case the QAOps Sandbox system. The default is the production QAOps system.
 
-1. Press Enter to submit the request.
-
 ## Step 5: Verify that the request was received
 
 1. In the QAOps User app, go to the [Overview](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview) page.

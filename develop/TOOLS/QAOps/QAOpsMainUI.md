@@ -70,6 +70,8 @@ To create a new token:
 
    These scopes determine which configurations are used for the test runs. At least one must be selected, as otherwise the token cannot trigger test execution.
 
+   If needed, use Shift + Click to select all scopes and allow full access. However, note that this is not recommended in production environments.
+
    ![Fields to fill in when creating a token in the QAOps User app](~/develop/images/QAOps_User_CreateToken.png)
 
 1. Click *Generate Token*.
