@@ -113,6 +113,12 @@ items:
               topicUid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents
             - name: Creating orchestration scripts
               topicUid: Tutorial_MediaOpsLive_CreateOrchestrationScripts
+      - name: Development
+        items:
+        - name: Personalizing the MediaOps applications
+          topicUid: MO_Development_Personalizing_Apps
+        - name: Interacting with MediaOps using code
+          topicUid: MO_Development_Interacting_with_Code
     - name: dataminer.InfraOps
       topicUid: InfraOps
       items:

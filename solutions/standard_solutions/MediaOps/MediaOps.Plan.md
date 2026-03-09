@@ -34,8 +34,8 @@ To install MediaOps Plan:
 
 1. Look up the [MediaOps Plan package](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) in the DataMiner Catalog.
 
-    > [!TIP]
-    > For details about the changes introduced in each version, refer to the [release notes](xref:MediaOps_RNs_index).
+   > [!TIP]
+   > For details about the changes introduced in each version, refer to the [release notes](xref:MediaOps_RNs_index).
 
 1. Check the prerequisites mentioned in the [release notes](xref:MediaOps_RNs_index) matching the package version, and make sure your system meets these prerequisites.
 
