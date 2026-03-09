@@ -65,6 +65,15 @@ setBindings="1,250"
 >
 > - For a protocol to be able to capture traps, it is important that the SNMP connection that is set up during element creation is configured with the **polling IP address instead of a hostname**. Using a hostname is not supported for SNMP trap reception.
 
+### Trap binding OctetString type values
+
+When a trap binding value enters that is of type OctetString, it is automatically converted into text characters when all bytes of the value are considered as printable ASCII characters (e.g., 0x41 becomes 'A'). When the value contains a byte that is not printable (e.g., 0x02 is an STX control character), the binding value remains in a HEX string format.
+
+> [!NOTE]
+>
+> Prior to DataMiner 10.6.4 (RN 44527), HEX values above the ASCII range (i.e., >= 0x7F) were considered as printable characters and the encoding of the OS where DataMiner was running on was used to convert the bytes into characters. This caused issues as for example 0x8C is a control character in Unicode, and was displayed as a question mark. DataMiner is not aware if the binding value actually contains text (e.g., could represent a MAC address as octets), and if the binding value is text, how it is encoded by the data source. Because of these issues, bytes are only converted when they all are printable ASCII characters.
+> As a consequence of this RN there is a breaking change introduced. Prior to this RN, characters encoded in the extended ASCII (Windows code page 1252) where converted from octets into string text. E.g., the French word "hélicoptère" was displayed correct. As DataMiner is not aware of the used encoding of the data source (Windows code page 1252, UTF-8, UTF-16,...), the value "hélicoptère" is no longer displayed but remains in HEX format value "68e96c69636f7074e87265" for which a QAction is needed to convert it back into a readable string by using the applicable encoding.
+
 ### See also
 
 DataMiner Protocol Markup Language:
