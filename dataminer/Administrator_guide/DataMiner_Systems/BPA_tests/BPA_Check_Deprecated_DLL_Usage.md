@@ -121,7 +121,7 @@ One or multiple protocols and/or automation scripts still use an outdated DLL fi
       }
       ```
 
-  1. Replace every reference to outdated/deprecated DLL with a NuGet. See [Replacing Deprecated DLLs with NuGet Packages](#replacing-deprecated-dlls-with-nuget-packages).
+  1. Replace every reference to an outdated/deprecated DLL with a NuGet. See [Replacing Deprecated DLLs with NuGet Packages](#replacing-deprecated-dlls-with-nuget-packages).
 
   1. Stop the DataMiner Agent.
 
