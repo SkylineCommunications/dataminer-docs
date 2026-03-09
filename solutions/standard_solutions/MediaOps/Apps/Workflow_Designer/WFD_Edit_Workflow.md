@@ -4,17 +4,17 @@ uid: WFD_Edit_Workflow
 
 # Editing a workflow
 
-To edit a workflow, click the pencil icon for that workflow from the *Home* page. This will open the *Edit workflow* panel.
+To edit a workflow, click the pencil icon for that workflow on the *Home* page of the Workflow Designer app. This will open the *Edit workflow* panel.
 
 ![Edit Workflow](~/solutions/images/WFD_Open_Edit_Panel.png)
 
 This panel consists of two sections:
 
-1. [Workflow section](#workflow-section): where you can view and edit the workflow, **specify the resources** required, how they are linked to each other, as well as provide **default configuration** settings for resources.
-1. [Nodes section](#nodes-section): where all nodes used in the workflow are listed (incl. linked nodes).
+- [Workflow section](#workflow-section): Allows you to view and edit the workflow, **specify the resources** required, specify how they are linked to each other, and provide **default configuration** settings for resources.
+- [Nodes section](#nodes-section): Lists all the nodes used in the workflow (including linked nodes).
 
 > [!NOTE]
-> When you have finished configuring a workflow, you can make the workflow available in the [Scheduling app](xref:MO_Scheduling) through the *Mark as Complete* option from the *Home* page. As long as a workflow is still in the [draft state](xref:WFD_Workflow_States), it will not be available for scheduling.
+> When you have finished configuring a workflow, you can make the workflow available in the [Scheduling app](xref:MO_Scheduling) through the *Mark as Complete* option on the *Home* page. As long as a workflow is still in the [Draft state](xref:WFD_Workflow_States), it will not be available for scheduling.
 
 ## Workflow section
 
