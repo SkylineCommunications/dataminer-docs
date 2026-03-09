@@ -12,12 +12,11 @@ uid: DIS_3.1
 
 ##### Added support for importing dashboards and low code apps (LCAs) in test packages [ID 44957]
 
-Test package projects now have support for importing dashboards and low code apps via the DIS IDE.
-This is similar to the existing functionality for package projects.
+Test package projects now have support for importing dashboards and low code apps via the DIS IDE. This is similar to the existing functionality for package projects.
 
 ##### Updated minimum supported DataMiner version in snippet [ID 44912]
 
-The minimum supported DataMiner version in the protocol root snippet has been updated to 10.4.0.0 - 14003 corresponding the [DataMiner support lifecycle policy](xref:Software_support_life_cycles).
+The minimum supported DataMiner version in the protocol root snippet has been updated to 10.4.0.0 - 14003 corresponding to the [DataMiner support lifecycle policy](xref:Software_support_life_cycles).
 
 ##### Updated DIS dependencies
 
@@ -40,8 +39,9 @@ The minimum supported DataMiner version in the protocol root snippet has been up
 
 ##### DIS-specific directory for storing Edge data [ID 44805]
 
-DIS from now on uses its own directory for storing Edge data: `%LocalAppData%\Skyline\DataMiner\DataMinerIntegrationStudio\Edge\Data`.
-Previously, the same directory as the one used by Cube was used.
+From now on, DIS uses its own directory for storing Edge data: `%LocalAppData%\Skyline\DataMiner\DataMinerIntegrationStudio\Edge\Data`.
+
+Previously, it used the same directory as is used by Cube.
 
 ## DIS 3.1.19
 
