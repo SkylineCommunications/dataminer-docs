@@ -16,6 +16,13 @@ When you do so, the following things will happen when a script is executed:
 
     `C:\Skyline DataMiner\Scripts\Compiled`
 
+- Since DataMiner version 10.6.5/10.7.0,<!-- RN 44958 --> 'DEBUG' preprocessor directive will be defined, which can be used in the code to conditionally compile code for debugging purposes. For example:
+```csharp
+#if DEBUG
+    engine.Log("This code is only compiled in DEBUG mode.");
+#endif
+```
+
 If Microsoft Visual Studio (or another debugger) is installed on the DataMiner Agent, it is possible to attach to the SLAutomation process (debugging “Managed” code), and place breakpoints in the script’s source file. Note that you may need to run the script again.
 
 > [!NOTE]
