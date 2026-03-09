@@ -236,6 +236,23 @@ From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Schedule
 
 If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
 
+#### DataMiner Objects Models: Selected subset of fields from DomInstance objects will now be read from the repository API [ID 44600]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Since DataMiner 10.6.0/10.6.1, it is possible to read only a selected subset of fields from `DomInstance` objects. In order to further enhance performance, from now on, those subsets will be read from the repository API.
+
+Currently, the repository API will still request the full objects from the database and extract the required values.
+
+> [!NOTE]
+> When a field value is requested, the type defined in the field descriptor will be used. In order to determine that type, field descriptor IDs should be unique across section definitions in a DOM module.
+
+#### NotifyMail.html has been updated in order to better support both classic Microsoft Outlook and new Microsoft Outlook [ID 44617]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+The `C:\Skyline DataMiner\NotifyMail.html` file, i.e., the email report template, has been updated to better support both classic Microsoft Outlook and new Microsoft Outlook.
+
 #### SLDataGateway: Job queue updates will now be logged in SLJobQueues.txt [ID 44661]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
@@ -256,6 +273,12 @@ Up to now, all SLLogCollector logging of all SLLogCollector instances would end 
 From now on, each SLLogCollector instance will have its own dedicated log file named `log-[creation timestamp].txt`, stored in the `C:\ProgramData\Skyline Communications\SLLogCollector` folder.
 
 Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
+
+#### Security enhancements [ID 44804]
+
+<!-- 44804: MR 10.7.0 - FR 10.6.5 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -278,3 +301,22 @@ From now on, when a capability is booked, it will no longer be possible to set i
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
+
+#### History set trending would show gaps where no gaps were expected [ID 44705]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, history set trending would show gaps where no gaps were expected.
+
+From now on, trend records with the following *iStatus* values will no longer cause gaps in trend graphs:
+
+| Value | Description |
+|-------|-------------|
+| -1  | Element is starting up. |
+| -2  | Element is being paused. |
+| -3  | Element is being activated. |
+| -4  | Element is going into a timeout state. |
+| -5  | Element is coming out of a timeout state. |
+| -6  | Element is being stopped. |
+| -9  | Trending was started for the specified parameter. |
+| -10 | Trending was stopped for the specified parameter. |

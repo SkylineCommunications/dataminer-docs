@@ -89,7 +89,7 @@ uid: service_resource_management_benchmarks
 | 42 | Create 500 ServiceDefinitions | DMS | 5.29 s | The service definitions only have a name and an ID. | Clean DMA, no other data. |
 | 43 | Deleting 500 ServiceDefinitions | DMS | 15.48 s | The service definitions only have a name and an ID. | 500 ServiceDefinitions, no other data. |
 | 44 | Create 500 ServiceDefinitions | DMS | 9.24 s | The service definitions only have a name and an ID.<br>The reservation instances only have a name, an ID and a status, and are scheduled to start immediately after creation and take 1 day. | 250 ReservationInstances |
-| 45 | Deleting 500 ServiceDefinitions | DMS | 24.77 s | The service definitions only have a name and and ID.<br>The reservation instances only have a name, an ID and a status, and are scheduled to start immediately after creation and take 1 day. | 250 ReservationInstances and 500 ServiceDefinitions, no other data. |
+| 45 | Deleting 500 ServiceDefinitions | DMS | 24.77 s | The service definitions only have a name and ID.<br>The reservation instances only have a name, an ID and a status, and are scheduled to start immediately after creation and take 1 day. | 250 ReservationInstances and 500 ServiceDefinitions, no other data. |
 | 46 | Create 1,000 Resources | DMS | 1.14 s | The resources contain an ID, a name, a description and 1 capacity. | Clean DMA, no other data. |
 | 47 | Create 1,000 Resources | DMS | 1.22 s | The resources contain an ID, a name, a description and 1 capacity. | 1,000 existing resources, no other data. |
 | 48 | Delete 1,000 Resources | DMS | 16.07 s | The resources contain an ID, a name, a description and 1 capacity. | 2,000 existing resources, no other data. |

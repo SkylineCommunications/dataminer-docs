@@ -270,20 +270,6 @@ OR
 
 - Leave the production version untouched on the target agent, and update the imported element so that it no longer uses the production version but the referenced version instead.
 
-#### BrokerGateway: Issues related to certificates [ID 44195]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-Up to now, in some cases, issues related to certificates could cause `TLS handshake error: remote error: tls: bad certificate` errors to be added to the NATS log file and `Could not connect to the local NATS endpoint on '<IP>'. Please make sure that the nats service is running without issues.` notice alarms to be generated.
-
-From now on, in order to prevent any issues related to certificates, in the following cases, the certificate authority will be either added or updated in the certificate store:
-
-- When adding an agent to the cluster.
-- When removing an agent from the cluster.
-- When calling NATSRepair.
-- When migrating to BrokerGateway.
-- When no certificate authorities can be found during BrokerGateway startup.
-
 #### STaaS: Problem when migrating or importing elements with logger tables [ID 44196]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->

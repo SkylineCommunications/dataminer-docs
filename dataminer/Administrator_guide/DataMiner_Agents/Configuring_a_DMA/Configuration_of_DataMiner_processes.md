@@ -577,11 +577,11 @@ Example:
 
 ### Activating the NonElementProtocol option system-wide
 
-In a Visio drawing, a `NonElementProtocol` option can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *informations.xml*, or *port.xml*. This can enhance the overall performance of the corresponding visual overview.
+In a Visio drawing, a [NonElementProtocol option](xref:Overview_of_page_and_shape_options#nonelementprotocol) can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *informations.xml*, or *port.xml*. This can enhance the overall performance of the corresponding visual overview.
 
 It is also possible to apply this option system-wide, instead of limiting it to one shape or page.
 
-To do so, add a `NonElementProtocol` element in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
+To do so, add a [NonElementProtocol element](xref:MaintenanceSettings.SLNet.NonElementProtocol) in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
 
 Example:
 
@@ -596,9 +596,6 @@ Example:
   ...
 </MaintenanceSettings>
 ```
-
-> [!TIP]
-> See also: [NonElementProtocol](xref:Overview_of_page_and_shape_options)
 
 ### Generating information events when a connection fails to authenticate
 

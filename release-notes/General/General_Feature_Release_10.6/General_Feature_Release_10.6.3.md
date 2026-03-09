@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.3
 ---
 
-# General Feature Release 10.6.3 – Preview
+# General Feature Release 10.6.3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -327,6 +327,9 @@ Up to now, SLNet would incorrectly send all log entries directly to SLLog, inclu
 
 From now on, SLNet will only send a log entry to SLLog if the log level dictates that the entry should be logged. As a result, overall performance will increase when adding entries to log files.
 
+> [!IMPORTANT]
+> This change has been reverted in Main Release 10.5.0 CU12, Main Release 10.6.0, and Feature Release 10.6.3 CU1 as it caused SLNet to leak handles whenever a user authenticated using SAML and a new SLHelper process was started. See [SLNet will no longer take into account the log level before sending a log entry to SLLog [ID 44868]](xref:General_Feature_Release_10.6.3_CU1#slnet-will-no-longer-take-into-account-the-log-level-before-sending-a-log-entry-to-sllog-id-44868).
+
 #### An error will now be logged if the response to an SNMP Get request cannot be mapped [ID 44329]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
@@ -403,7 +406,7 @@ From now on, when an issue occurs during startup, in most cases, SLAnalytics wil
 <!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 <!-- RN 44616: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
+Because of a number of enhancements, overall performance of the *Cube CRL Freeze* BPA test has increased.
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 

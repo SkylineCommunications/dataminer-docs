@@ -65,6 +65,14 @@ setBindings="1,250"
 >
 > - For a protocol to be able to capture traps, it is important that the SNMP connection that is set up during element creation is configured with the **polling IP address instead of a hostname**. Using a hostname is not supported for SNMP trap reception.
 
+### Trap binding OctetString type values
+
+When a trap binding value enters that is of type OctetString, it is automatically converted into text characters when all bytes of the value are considered printable ASCII characters (e.g., 0x41 becomes "A"). When the value contains a byte that is not printable (e.g., 0x02 is an STX control character), the binding value remains in a HEX string format.
+
+Note that prior to DataMiner 10.6.4/10.7.0<!-- RN 44527 -->, HEX values above the ASCII range (i.e., >= 0x7F) are considered printable characters, and the encoding of the OS where DataMiner is running is used to convert the bytes into characters. This can cause issues, as for example 0x8C is a control character in Unicode and gets displayed as a question mark. DataMiner is not aware of whether the binding value actually contains text (e.g., could represent a MAC address as octets), and if the binding value is text, of how it is encoded by the data source. Because of these issues, **as of DataMiner 10.6.4/10.7.0, bytes are only converted when they are all printable ASCII characters**.
+
+This means that DataMiner 10.6.4/10.7.0 includes a breaking change, because in earlier DataMiner versions, characters encoded in the extended ASCII (Windows code page 1252) are converted from octets into string text. For example, the French word "hélicoptère" is displayed correctly in earlier DataMiner versions. However, as DataMiner is not aware of the used encoding of the data source (Windows code page 1252, UTF-8, UTF-16, etc.), the value "hélicoptère" is no longer displayed in later DataMiner versions but remains in HEX format, with the value "68e96c69636f7074e87265", and a QAction is needed to convert it back into a readable string using the applicable encoding.
+
 ### See also
 
 DataMiner Protocol Markup Language:

@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.6.3
 ---
 
-# DataMiner web apps Feature Release 10.6.3 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.3
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.5.0 [CU12].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -452,6 +452,12 @@ When, in a *Node edge graph* component, node positioning was set to "Linked to d
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
 When, in a *Timeline* component, you zoomed out until the component switched to minimized view, certain shapes would not get rendered at the correct position.
+
+#### Dashboards/Low-Code Apps - Parameter table component: Strings containing decimal values would be sorted incorrectly [ID 44595]
+
+<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
+
+In some cases, strings containing decimal values would be sorted incorrectly.
 
 #### Dashboards/Low-Code Apps - Timeline component: Changes to certain settings would not get applied correctly [ID 44596]
 

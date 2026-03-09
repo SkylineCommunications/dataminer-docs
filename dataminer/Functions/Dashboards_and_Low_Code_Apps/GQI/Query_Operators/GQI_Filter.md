@@ -35,4 +35,7 @@ When you select this option, follow the steps below:
 1. Optionally refine the results by applying another operator, such as an additional filter.
 
 > [!NOTE]
-> If the *regex* or *not regex* filter method is used and the data contains multiple values, these are combined with an "or" operator.
+> Prior to DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4<!--RN 44714-->, or when the SLHelper process is used for GQI operations instead of the GQI DxM, multiple filter values are not handled as a true "or" filter:
+>
+> - If the *regex* or *not regex* filter method is used and the data contains multiple values, these values are combined into a single regular expression using an "or" operator. This only works for string values.
+> - Other filter methods (for example *contains* or *equals*) only apply the first value. Any additional values are ignored.

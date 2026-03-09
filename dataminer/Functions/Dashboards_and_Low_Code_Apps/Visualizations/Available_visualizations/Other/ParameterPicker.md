@@ -71,7 +71,7 @@ This picker component allows the user to select multiple parameters from a prede
 >
 >    ![EPM Indices](~/dataminer/images/EPM_Indices.png)
 >
-> 1. In the *Data* pane, go to *All available data* > *Components* > *[Page name]* > *Parameter picker* > *Selected items* and drag *Indices* to the component of your choice.
+> 1. In the *Data* pane, go to *All available data* > *Components* > *[Page/Panel name]* > *Parameter picker* > *Selected items* and drag *Indices* to the component of your choice.
 >
 >    Note that in versions prior to DataMiner 10.5.0 [CU12]/10.6.3<!--RN 44015-->, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 

@@ -7,7 +7,7 @@ uid: Cube_Feature_Release_10.6.4
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
-This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.5.0 [CU13].
+This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU1].
 
 > [!TIP]
 >
@@ -16,9 +16,36 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## Highlights
 
-*No highlights have been selected yet.*
+#### Cube UI and themes have been redesigned [ID 43843] [ID 43924] [ID 44618] [ID 44832] [ID 44881]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+To keep the look and feel of DataMiner Cube fresh and up to date, the entire Cube UI and UI themes have been redesigned.
+
+![New Cube layout](~/release-notes/images/New_Cube_Layout_10.6.4.png)
+
+Important UI changes include:
+
+- System Center has been reworked. The overview page has been removed, and all tiles have been redesigned.
+- Icons have been redesigned throughout the UI.
+
+Important theme changes include:
+
+- The *Operating system* theme is now the default theme. When this theme is selected, Cube will use the default color mode you have set in Windows (*Light* or *Dark*).
+- The *Skyline Mixed* theme has been removed.
 
 ## New features
+
+#### System Center: Configuring outgoing email [ID 44594]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, when you wanted a DMS to be able to send out email notifications and reports via an SMTP server, you had to configure the necessary SMTP settings in the *DataMiner.xml* file. From now on, it will be possible to configure this in System Center.
+
+Note that it is now also possible to configure the necessary settings for SMTP mail servers that require authentication via XOAuth2.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.5.0 CU13/10.6.0 CU1/10.6.4 or newer. See [New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]](xref:General_Feature_Release_10.6.4#new-smtp-settings-for-oauth-authentication-added-to-dataminerxml-id-44478)
 
 #### System Center - Analytics config: New 'Suggestion limit' setting added to 'Behavioral Anomaly Detection' section [ID 44709]
 
@@ -28,9 +55,38 @@ On the *Analytics config* page, located in the *System settings* section of *Sys
 
 This setting will allow administrators to cap the number of active suggestion events per behavioral change type.
 
+#### Offloading data is now partially supported when Swarming is enabled [ID 44767]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, it was not possible to offload data on systems with Swarming enabled. From now on, DataMiner Cube will allow you to configure data offloading when Swarming is enabled, except for the following tables:
+
+- `alarm_property`
+- `brainlink`
+- `interface_alarm`
+- `service_alarm`
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.4 or newer. See [Offloading data is now partially supported when Swarming is enabled [ID 44751]](xref:General_Feature_Release_10.6.4#offloading-data-is-now-partially-supported-when-swarming-is-enabled-id-44751).
+
+#### New URL argument 'EnableAlarmSubscriptions' [ID 44779]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When you start DataMiner Cube, you can now enable or disable alarm subscriptions by passing one of the following URL arguments to the DMS to which you connect:
+
+- Add `EnableAlarmSubscriptions=true` to enable alarm subscriptions.
+- Add `EnableAlarmSubscriptions=false` to disable alarm subscriptions.
+
 ## Changes
 
 ### Enhancements
+
+#### Enhanced performance when loading aggregation trending [ID 44589]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, overall performance has increased when loading aggregation trending.
 
 #### Enhanced search box consistency throughout DataMiner Cube [ID 44658]
 
@@ -49,6 +105,12 @@ If you view the Cube UI in one of the supported languages other than English, in
 - Catalog
 - Cloud Admin
 - Data Sources
+
+#### System Center - Agents: 'Element Migration' window will now also filter out elements that are part of a redundancy group [ID 44773]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When, via *System Center* > *Agents* > *Status*, you click *Migrate*, the *Element Migration* window will now automatically filter out elements that are part of a redundancy group, whether they act as a primary element, backup element, or state element.
 
 ### Fixes
 

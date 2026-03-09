@@ -28,6 +28,10 @@ All supported video server types and their associated parameters are defined in 
 
     - If you access a video thumbnail player that is using HTTPS, the media must also be served over HTTPS.
 
+    - From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44877-->, to prevent playback issues in Chrome version 142 and above, the MSE JavaScript implementation is used by default for HLS streams instead of the native HLS playback of the browser.
+
+      If you prefer to use the native browser HLS playback, you can use `type=HTML5` instead.
+
     > [!TIP]
     > For more information on HLS, see <https://github.com/video-dev/hls.js/>
 

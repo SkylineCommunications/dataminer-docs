@@ -4,6 +4,10 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 16 February 2026 - Fix - CoreGateway 2.14.16 - Fixed version offloading
+
+In the Admin app, it could occur that the Overview page on DMS level displayed an error. To resolve this, a small change was done to ensure that the correct CoreGateway version is uploaded, as certain checks are done against this version in the app.
+
 #### 13 February 2026 - Enhancement - CoreGateway 2.14.15 - Dependencies updated
 
 Several dependencies have been updated.

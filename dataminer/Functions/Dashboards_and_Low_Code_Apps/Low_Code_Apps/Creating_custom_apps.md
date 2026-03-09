@@ -4,8 +4,37 @@ uid: Creating_custom_apps
 
 # Creating apps
 
-> [!NOTE]
-> To view, add, edit, delete, or publish low-code applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission.
+To learn how to create a low-code app, you can follow the steps below or watch this short video:
+
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/dataminer/images/Creating_a_low-code_app.mp4" type="video/mp4">
+  </video>
+</div>
+
+*Watch first: [Creating your first dashboard](xref:Creating_a_completely_new_dashboard)*
+
+In this video, the following topics are covered:
+
+| Level | What you will learn | More information |
+| -- | -- | -- |
+| Basic | Create a new low-code app with a custom name, icon, and color. | [Customizing the icon and color of an app](xref:LowCodeApps_Layout) |
+| Basic | Add multiple pages with their own names and icons. | [Configuring an app page](xref:LowCodeApps_page_config) |
+| Basic | Add and configure several components (table, gauge, and line & area chart) | [Configuring components](xref:Configuring_components) |
+| Advanced | Create a filtered query and use it in a table component. | [Creating a GQI query](xref:Creating_GQI_query) |
+| Advanced | Create a panel and define component actions so it opens when an item in a table is double-clicked. | [Configuring an app panel](xref:LowCodeApps_panel_config)<br>[Configuring app events](xref:LowCodeApps_event_config) |
+| Advanced | Use component data to link components across pages, so that selecting or double-clicking an item in the table determines which data is shown in other components. | [Component data](xref:Component_Data) |
+
+> [!TIP]
+> If you are looking for a very beginner-friendly, step-by-step introduction that focuses purely on creating and publishing your first app, see [Tutorial: Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing).
+
+## Prerequisites
+
+To view, add, edit, delete, or publish low-code applications, you need to have the following user permissions:
+
+- [*Modules* > *User-definable apps*](xref:DataMiner_user_permissions#modules--user-definable-apps)
+
+- [*General* > *DataMiner web apps*](xref:DataMiner_user_permissions#general--dataminer-web-apps)
 
 ## Creating a new low-code app
 
@@ -48,9 +77,6 @@ uid: Creating_custom_apps
 
 > [!NOTE]
 > When you close a draft app you have been working on, it is saved automatically. As such, if you do not want to publish your app immediately, you can just close it to save it as a draft. However, draft apps are not shown by default on the landing page. To view them, enable the *Show drafts* toggle next to the search bar. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->,click the cogwheel button and activate *Show draft applications*.
-
-> [!TIP]
-> See also: [Tutorials - Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing)
 
 ## Duplicating an existing low-code app
 

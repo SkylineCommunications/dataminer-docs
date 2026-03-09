@@ -2,10 +2,19 @@
 uid: General_Main_Release_10.5.0_CU12
 ---
 
-# General Main Release 10.5.0 CU12 - Preview
+# General Main Release 10.5.0 CU12
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> Before you upgrade to this DataMiner version:
+>
+> - Make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](xref:General_Main_Release_10.5.0_CU10#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
+> - Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+>   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+>   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 > [!TIP]
 >
@@ -14,14 +23,6 @@ uid: General_Main_Release_10.5.0_CU12
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
-
-#### SLNet will now take into account the log level before sending a log entry to SLLog [ID 44314]
-
-<!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
-
-Up to now, SLNet would incorrectly send all log entries directly to SLLog, including entries of which the log level dictated that they should not be added to a log file.
-
-From now on, SLNet will only send a log entry to SLLog if the log level dictates that the entry should be logged. As a result, overall performance will increase when adding entries to log files.
 
 #### An error will now be logged if the response to an SNMP Get request cannot be mapped [ID 44329]
 
@@ -87,7 +88,7 @@ From now on, when an issue occurs during startup, in most cases, SLAnalytics wil
 <!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 <!-- RN 44616: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
+Because of a number of enhancements, overall performance of the *Cube CRL Freeze* BPA test has increased.
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 

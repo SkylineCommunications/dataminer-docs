@@ -4,6 +4,45 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.20
+
+### New features
+
+#### IDE
+
+##### Added support for importing dashboards and low code apps (LCAs) in test packages [ID 44957]
+
+Test package projects now have support for importing dashboards and low code apps via the DIS IDE. This is similar to the existing functionality for package projects.
+
+##### Updated minimum supported DataMiner version in snippet [ID 44912]
+
+The minimum supported DataMiner version in the protocol root snippet has been updated to 10.4.0.0 - 14003 corresponding to the [DataMiner support lifecycle policy](xref:Software_support_life_cycles).
+
+##### Updated DIS dependencies
+
+- [Skyline.DataMiner.CICD.CSharpAnalysis.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.CSharpAnalysis.Protocol) version 2.1.1
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation) version 5.1.4
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 5.1.4
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 5.1.4
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 2.0.0
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 3.1.0
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 3.1.0
+- [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 3.3.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.3
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.3
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.3
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.6
+
+### Fixes
+
+#### IDE
+
+##### DIS-specific directory for storing Edge data [ID 44805]
+
+From now on, DIS uses its own directory for storing Edge data: `%LocalAppData%\Skyline\DataMiner\DataMinerIntegrationStudio\Edge\Data`.
+
+Previously, it used the same directory as is used by Cube.
+
 ## DIS 3.1.19
 
 ### New features

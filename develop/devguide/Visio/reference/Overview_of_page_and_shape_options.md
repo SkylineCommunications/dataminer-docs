@@ -750,7 +750,7 @@ See [Ignoring the highlight style](xref:Options_for_highlighting_DCF_connections
 
 Page- and shape-level option.
 
-When you are configuring a large number of shapes linked to different elements, but you do not need any element-specific formatting from files like *description.xml*, *informations.xml*, or *port.xml*, you can use the shape option “*NonElementProtocol*” to enhance the overall performance of the Visio drawing.
+When you are configuring a large number of shapes linked to different elements, but you do not need any element-specific formatting from files like *description.xml*, *informations.xml*, or *port.xml*, you can use the shape option *NonElementProtocol* to enhance the overall performance of the Visio drawing.
 
 This option can be used in shapes linked to elements, parameters, matrices, session variables, parameter summaries, and parameter controls. It can also be used on a page, so that it is applied to all shapes on that page.
 

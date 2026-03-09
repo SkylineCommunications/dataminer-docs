@@ -1,6 +1,7 @@
 ---
 uid: SoftLaunchOptions
 description: DataMiner soft-launch options activate features that are not yet available to the general public. They should only be used on staging platforms.
+keywords: softlaunch
 ---
 
 # Soft-launch options

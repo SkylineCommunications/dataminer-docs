@@ -682,6 +682,8 @@ items:
                 topicUid: Get_trend_data_pattern_events
               - name: Get behavioral change events
                 topicUid: Get_behavioral_change_events
+              - name: Get bookings
+                topicUid: Get_bookings
               - name: Get DCF connections
                 topicUid: Get_DCF_connections
               - name: Get elements
@@ -700,6 +702,10 @@ items:
                 topicUid: Get_profile_instances
               - name: Get relational anomalies
                 topicUid: Get_relational_anomalies
+              - name: Get resource pools
+                topicUid: Get_resource_pools
+              - name: Get resource usages
+                topicUid: Get_resource_usages
               - name: Get resources
                 topicUid: Get_resources
               - name: Get services

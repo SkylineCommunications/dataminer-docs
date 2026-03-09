@@ -8,12 +8,17 @@ With DataMiner Swarming, you can swarm elements from one DataMiner Agent to anot
 
 When you are swarming an element so it gets hosted on a different DataMiner Agent, a temporary transition occurs. The element will be stopped and then started again on a new host. While this happens, a message will be displayed to inform users that the element is currently swarming. The ability to open element cards or change the element configuration for the involved element will be temporarily suspended. Once the element migration is complete, it will become accessible again.
 
-At present, Swarming is not yet supported for certain specific types of elements. Refer to [Upcoming features](xref:Swarming#upcoming-features) for information on which types of elements are supported already and which will supported in the future.
+## Limitations
+
+At present, Swarming is not yet supported for certain specific types of elements. Refer to [Upcoming features](xref:Swarming#upcoming-features) for information on which types of elements are supported already and which will be supported in the future.
 
 Because of the way Swarming functions, it is not possible to swarm smart-serial elements in server mode, elements polling localhost, and elements receiving SNMP traps in a DMS with trap distribution disabled on at least one DMA.
 
-> [!NOTE]
-> To be able to trigger swarming for an element, you need the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission as well as config rights on the element. Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded from a version that does not support Swarming to a version that does support it.
+## Required user permissions
+
+To be able to trigger swarming for an element, you need the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission as well as config rights on the element.
+
+Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded from a version that does not support Swarming to a version that does support it.
 
 ## Swarming elements in DataMiner Cube
 
@@ -22,6 +27,8 @@ To swarm elements in DataMiner Cube:
 1. Go to *System Center* > *Agents* > *Status* and click the *Swarm* button in the lower-right corner.
 
 1. On the left, select the element(s) you want to swarm.
+
+   This list does not include elements that cannot be swarmed because of [technical restrictions](#limitations) or because they have been explicitly [blocked from swarming](#blocking-elements-from-being-swarmed).
 
 1. On the right, select the destination DMA.
 
@@ -61,3 +68,5 @@ To do so, when you create or edit an element in DataMiner Cube, expand the *Adva
 By default, this checkbox is not selected for new and existing elements.
 
 If the checkbox is selected for an element and a user tries to swarm the element, this will result in the error message *Element is not allowed to swarm (blocked)*.
+
+Note that it may not be possible to swarm some elements even if this checkbox is not selected, in case there are [technical restrictions](#limitations) that block these elements from being swarmed.

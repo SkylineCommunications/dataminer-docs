@@ -10,6 +10,7 @@ Currently, the supported methods provide the ability to monitor changes in the f
 
 - Standalone parameter value changes.
 - Table cell value changes.
+- Table column value changes.<!-- RN 44034 -->
 - Table value changes (full table).
 - Parameter alarm level changes.
 - Table cell alarm level changes.

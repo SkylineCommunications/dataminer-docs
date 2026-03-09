@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.6.0_changes
 ---
 
-# General Main Release 10.6.0 – Changes (preview)
+# General Main Release 10.6.0 – Changes
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 ## Changes
 
@@ -501,6 +501,14 @@ From now on, DataMiner upgrade packages will no longer include the Puppeteer-Sha
 
 This backend browser, which was used by SLHelper to generate reports and to convert those reports to PDF format, is no longer needed as the new Web DcM will now generate all reports and convert them to PDF format.
 
+#### BPA test 'Check Deprecated DLL Usage' will now also check the DataMinerMessageBroker.API.dll file [ID 43779]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.12 -->
+
+The BPA test *Check Deprecated DLL Usage* will now also check whether the *DataMinerMessageBroker.API.dll* file is used by protocols or automation scripts, and if so, whether it is not outdated.
+
+If this file cannot be found, or if its version is not equal or higher than 3.0.0, the BPA test will fail.
+
 #### DataMiner Object Models: A ModuleSettings update will no longer automatically trigger a network credentials check [ID 43799]
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
@@ -699,7 +707,7 @@ Also, the following issues have now been fixed:
 <!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 <!-- RN 44616: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
+Because of a number of enhancements, overall performance of the *Cube CRL Freeze* BPA test has increased.
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 

@@ -41,11 +41,14 @@ This means that code in automation scripts and connectors may need updates to ac
 The following Engine methods are obsolete and should not be used. Instead, use the corresponding new methods:
 
 | Obsolete method | New method |
-|--|--|
-| GetAlarmProperty(int, int, string) | GetAlarmProperty(AlarmID, string) |
+| -- | -- |
+| GetAlarmProperty(int, int, string) | GetAlarmProperty(AlarmID (*), string) |
 | SetAlarmProperty(int, int, string, string) | SetAlarmProperty(AlarmTreeID, string, string) |
 | SetAlarmProperties(int, int, string[], string[]) | SetAlarmProperties(AlarmTreeID, string[], string[]) |
 | AcknowledgeAlarm(int, int, string) | AcknowledgeAlarm(AlarmTreeID, string) |
+
+> [!NOTE]
+> (*) Note that here `AlarmID` refers to the `AlarmID` type that includes both the AlarmTreeID and the Alarm ID.
 
 ## Obsolete properties in the AlarmEventMessage class
 
