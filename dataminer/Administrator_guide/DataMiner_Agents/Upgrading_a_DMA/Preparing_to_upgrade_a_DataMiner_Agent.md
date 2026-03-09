@@ -147,7 +147,7 @@ The following prerequisite checks are currently available:
 
 - [Verify BrokerGateway Migration](xref:VerifyBrokerGatewayMigration): Verifies whether the DataMiner System has migrated from the SLNet-managed NATS solution to the BrokerGateway-managed NATS solution. From DataMiner 10.6.0/10.6.1 onwards<!--RN 43861 -->, this prerequisite is available by default and runs automatically when you upgrade.
 
-- [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version): Verifies whether the minimum required version is installed for all DxMs in the system. From DataMiner 10.2.0 [CU6]/10.2.8 onwards, this prerequisite is available by default and runs automatically when you upgrade.
+- [Verify Cloud DxM Version](xref:Verify_Cloud_DxM_Version): Verifies whether the minimum required version is installed for all DxMs in the system. From DataMiner 10.2.0 [CU6]/10.2.8 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
 - Verify Cluster Ports: Verifies whether the ports used by DataMiner can be reached in between DataMiner Agents. If this check fails, you will need to install the [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade) package. From DataMiner 10.2.0 [CU2]/10.2.5 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
@@ -173,7 +173,7 @@ The following prerequisite checks are currently available:
 
 - [Service Automatic Properties](xref:Service_Automatic_Properties): Verifies whether the installed SRM framework version is up to date. From DataMiner 10.2.3/10.3.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
-- [Validate Connectors](xref:BPA_Validate_Connectors): Scans the DataMiner System for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. From DataMiner 10.3.4/10.4.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
+- [Validate Connectors](xref:Validate_Connectors): Scans the DataMiner System for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. From DataMiner 10.3.4/10.4.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
 > [!NOTE]
 > Though this is not recommended, you can bypass these checks by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package. However, you should only do so if there is a clear reason to assume that the prerequisites do not work because of a bug in the software and they are consequently failing without a proper reason. If you bypass these checks in any other circumstances, and this results in a DataMiner issue, this is **not covered by support**.

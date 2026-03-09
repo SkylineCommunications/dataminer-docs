@@ -152,7 +152,7 @@ This new BPA test checks if the minimum required version is installed for all Dx
 
 It is available from DataMiner 10.2.8 and 10.2.0 [CU6] onwards. You can run it in System Center (on the *Agents > BPA* tab), and it also runs automatically when you upgrade to 10.2.0 [CU6]/10.2.8 or higher.
 
-For more information, see [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version).
+For more information, see [Verify Cloud DxM Version](xref:Verify_Cloud_DxM_Version).
 
 #### Enhanced error handling in case QActions fail due to a problem with SLScripting [ID 34010]
 
