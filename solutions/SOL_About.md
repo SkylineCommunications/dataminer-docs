@@ -70,4 +70,3 @@ This section serves as a centralized registry of well-known DOM modules that are
 | (slc)relationships           | [MediaOps](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75)      | Make links between different objects. |
 | (slc)resource_studio         | [MediaOps](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75)      | Define your resources.                |
 | (slc)workflow                | [MediaOps](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75)      | Manage your jobs and workflows.       |
-<!-- TODO: Should (slc)errors still be used? -->
