@@ -123,6 +123,8 @@ For example, copy "991d7084-cd0a-412b-bffe-0ea176fc5430" from:
 
 https://localhost/app/991d7084-cd0a-412b-bffe-0ea176fc5430/Page
 
+![Create a low-code app for the test package tutorial](~/develop/images/QAOps_CreateTest_LCA.png)
+
 
 ## Step 3: Create the DataMiner environment to be tested
 
@@ -137,6 +139,8 @@ https://localhost/app/991d7084-cd0a-412b-bffe-0ea176fc5430/Page
 1. Right-click *LowCodeApps*, select *Add*, and then click *Import DataMiner Low-Code-App*.
 
 1. Select the app you created in Step 2.
+
+![Import a low-code app into the test package project](~/develop/images/QAOps_TestPackage_ImportLCA.png)
 
 ## Step 4: Write a test
 
@@ -272,6 +276,8 @@ static async Task LoginLocally(IPage page)
 
 ```
 
+![Playwright test code in a QAOps test package project](~/develop/images/QAOps_CreatePackage_PlaywrightTest.png)
+
 1. Find this line:
 
     `const string Url = "https://localhost/app/991d7084-cd0a-412b-bffe-0ea176fc5430/Page";`
@@ -332,6 +338,8 @@ exit 0
 ```
 
 ## Step 6: Write the test execution PowerShell script
+
+![Test harvesting and execution files in the test package](~/develop/images/QAOps_TestPackage_HarvestAndExecution.png)
 
 1. Open *Solution Explorer* (shortcut: Ctrl+Alt+L).
 
