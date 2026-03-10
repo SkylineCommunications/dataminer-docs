@@ -46,6 +46,12 @@ The DataMiner web apps that use Angular (e.g., Low-Code Apps, Dashboards, Monito
 
 The GQI DxM has been upgraded to Microsoft .NET 10. It no longer requires the .NET 8 runtime.
 
+#### Web DcM has been upgraded to Microsoft .NET 10 [ID 44820]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+The Web DcM has been upgraded to Microsoft .NET 10.
+
 #### GQI DxM: Percentage values for trend data will now be passed and displayed like all other percentage values [ID 44884]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
