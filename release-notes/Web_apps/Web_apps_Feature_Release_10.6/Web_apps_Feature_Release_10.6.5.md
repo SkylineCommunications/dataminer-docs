@@ -167,3 +167,9 @@ That same error would also occur when an ad hoc data source or custom operator a
 
 > [!NOTE]
 > Currently, there is no reason for users to define AlarmID metadata via ad hoc data sources or custom operators. At present, the *Get alarms* data source is the only built-in data source that provides AlarmID metadata.
+
+#### Dashboards app: 'No dashboards found' icon would be hard to see on devices with small screens [ID 44967]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When you opened the Dashboards app on a device with a small screen, up to now, the *No dashboards found* icon would be hard to see. The image has now been adapted.
