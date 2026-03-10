@@ -72,7 +72,7 @@ var api = engine.GetMediaOpsLiveApi();
 By using the MediaOps Live API, you can now create orchestration events.
 
 First, orchestration event can only be defined in context of an orchestration job. An orchestration job is a group of events that have a shared context.
-This can be useful for e.g. grouping events that orchestrate the same element or are generated from the same source.
+This can be useful for, e.g., grouping events that orchestrate the same element or are generated from the same source.
 
 ```csharp
 string jobReference = Guid.NewGuid().ToString();

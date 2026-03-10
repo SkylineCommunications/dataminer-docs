@@ -13,15 +13,17 @@ To implement an orchestration script, it needs to inherit from the 'Orchestratio
 
 ## GetParameters()
 
-The `GetParameters` method allows the connection handler script to indicate which parameters are required for orchestration. These parameters are an alternative to using standard script parameters. By defining the parameters inside the script, it is easier to test the script manually, e.g. after development or to debug an issue.
+The `GetParameters` method allows the connection handler script to indicate which parameters are required for orchestration. These parameters are an alternative to using standard script parameters. By defining the parameters inside the script, it is easier to test the script manually, e.g., after development or to debug an issue.
 
 Currently, 2 type of parameters are supported:
 
 - A **Profile Definition** can be reference with the name of the profile definition in the DataMiner Profiles module.
-When a definition is added, the script will require a value for each parameter in the definition.
+
+  When a definition is added, the script will require a value for each parameter in the definition.
 
 - **Profile Parameters** can be added independently from a definition.
-This is also done by referencing the name of the parameter in the DataMiner Profiles module.
+
+  This is also done by referencing the name of the parameter in the DataMiner Profiles module.
 
 ```csharp
 public override IEnumerable<IOrchestrationParameters> GetParameters()

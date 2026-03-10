@@ -4,7 +4,7 @@ uid: MediaOpsLive_ConnectionHandlerScript
 
 # Connection Handler Script
 
-The connection handler script is a custom script that is responsible to manage the connections for one specific connector (e.g. broadcast controller). It interacts with the mediation layer to setup new connections and to update existing connections in the database.
+The connection handler script is a custom script that is responsible to manage the connections for one specific connector (e.g., broadcast controller). It interacts with the mediation layer to setup new connections and to update existing connections in the database.
 
 To implement a connection handler script, a new class needs to be created that derives from the 'ConnectionHandler' base class. This abstract base class provides a framework to manage connections for a specific protocol by defining the methods that must be implemented. The derived class should override these methods to handle connector specific logic.
 

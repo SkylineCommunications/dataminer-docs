@@ -38,7 +38,7 @@ You can follow the steps in the [DIS documentation](https://docs.dataminer.servi
 
 There are some important requirements to make sure the script is recognized as a connection handler script by the mediation layer:
 
-- The script name should end with `_ConnectionHandler`: e.g. `Generic_Matrix_ConnectionHandler`.
+- The script name should end with `_ConnectionHandler`: e.g., `Generic_Matrix_ConnectionHandler`.
 - Folder: 'MediaOps/ConnectionHandlerScripts'
 - Two input parameters:
   - `Action` (string)

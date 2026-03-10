@@ -78,7 +78,7 @@ The endpoints will be assigned to the VSG on the Video level, but this can be ad
 To do this, follow these steps:
 
 1. Navigate to the `Virtual Signal Groups` tab in the `Virtual Signal Groups` app.
-1. Click the `New` button to create a new VSG. A popup window will appear.
+1. Click the `New` button to create a new VSG. A pop-up window will appear.
 1. Fill in the following details:
     - Name: `Matrix Input 1` (needs to be unique)
     - Description: a meaningful description (optional)
@@ -89,7 +89,7 @@ Now you should see that the VSG has been created. Next, you need to assign an en
 
 1. Click on the edit endpoints icon on the row of the VSG you just created. A side panel will open.
 1. In the table at the top, select the `Video` level.
-1. In the table at the bottom, select the endpoint you created in the previous step (e.g. `Matrix Input 1`).
+1. In the table at the bottom, select the endpoint you created in the previous step (e.g., `Matrix Input 1`).
 1. Press the `Assign` button to assign the endpoint to the VSG.
 1. You should now see that the endpoint is assigned on the Video level.
 

@@ -20,7 +20,7 @@ When creating a [data source](xref:GQI_Ad_hoc_data_sources) that interacts with 
 
 ## Automation script code example
 
-More details and code examples as the one below can be found in the [documentation of the code repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan/tree/main/Documentation).
+More details and code examples like the one below can be found in the [documentation of the code repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan/tree/main/Documentation).
 
 ```cs
 using Skyline.DataMiner.Automation;

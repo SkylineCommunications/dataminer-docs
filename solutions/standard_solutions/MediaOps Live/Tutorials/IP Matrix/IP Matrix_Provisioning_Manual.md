@@ -147,7 +147,7 @@ Now you should see that the VSG has been created. Next, you need to assign an en
 
 1. Click on the edit endpoints icon on the row of the VSG you just created. A side panel will open.
 2. In the table at the top, select the `Video` level.
-3. In the table at the bottom, select the endpoint you created in the previous step (e.g. `Encoder 1`).
+3. In the table at the bottom, select the endpoint you created in the previous step (e.g., `Encoder 1`).
 4. Press the `Assign` button to assign the endpoint to the VSG.
 5. You should now see that the endpoint is assigned on the Video level.
 
