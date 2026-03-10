@@ -284,6 +284,10 @@ static async Task LoginLocally(IPage page)
 
 1. Replace the identifier in the URL with the identifier you saved in Step 2.
 
+
+> [!NOTE]
+> In this example, the test is written as a .NET 10 C# file-based app. You can also implement tests in another language or by using a different testing framework.
+
 ## Step 5: Harvest the test
 
 1. Open *Solution Explorer* (shortcut: Ctrl+Alt+L).
