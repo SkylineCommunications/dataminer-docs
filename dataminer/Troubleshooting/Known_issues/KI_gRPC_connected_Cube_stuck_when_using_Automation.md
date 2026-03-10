@@ -21,7 +21,7 @@ An alternative workaround for this issue is adjusting the configuration in [Conn
 
 ## Fix
 
-No fix is available yet. <!--RN 43756-->
+Install DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10<!--RN 43756-->.
 
 ## Description
 

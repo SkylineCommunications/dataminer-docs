@@ -264,12 +264,8 @@ items:
         items:
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
             topicUid: KI_profile_manager_fails_after_rollback
-          - name: gRPC-connected Cube not responding when Automation module is used
-            topicUid: KI_gRPC_connected_Cube_stuck_when_using_Automation
           - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
             topicUid: KI_Upgrade_fails_VerifyGRPCConnection_prerequisite
-          - name: DataMiner startup issue with one or more DcMs not running
-            topicUid: KI_Startup_issue_DcM_not_running
           - name: User locked out after single failed login attempt
             topicUid: KI_user_locked_out_after_single_failed_attempt
           - name: SLProtocol crash when restarting elements used by enhanced services
@@ -304,6 +300,10 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: gRPC-connected Cube not responding when Automation module is used
+            topicUid: KI_gRPC_connected_Cube_stuck_when_using_Automation
+          - name: DataMiner startup issue with one or more DcMs not running
+            topicUid: KI_Startup_issue_DcM_not_running
           - name: Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated
             topicUid: KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged
           - name: DataMiner Web and GQI crash briefly during startup
