@@ -14,7 +14,10 @@ Some [DataMiner Core Module (DcM)](xref:DataMinerExtensionModules#available-dcms
 
 ## Fix
 
-No fix is available yet. <!--Task IDs: 270375 & 268191-->
+Upgrade the Orchestrator DcM to version 1.8.0 or higher<!--RN 43824-->.
+
+> [!TIP]
+> See [Upgrading nodes to the latest DxM versions](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
 
 ## Workaround
 
