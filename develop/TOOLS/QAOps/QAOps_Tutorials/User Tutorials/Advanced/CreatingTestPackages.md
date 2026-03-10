@@ -14,9 +14,9 @@ Expected duration: 15 to 25 minutes.
 
 - Access to [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be).
 
-- [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/).
+- Latest Version of [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/).
 
-- [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/).
+- [Microsoft Visual Studio 2022 or higher](https://visualstudio.microsoft.com/downloads/).
 
     - Enable the ASP.NET and web development workload in Visual Studio. For details, see [Troubleshooting](xref:skyline_dataminer_sdk_troubleshooting#missing-manage-user-secrets-context-menu-in-visual-studio).
 
@@ -105,15 +105,15 @@ If you have access to a DataMiner system, create a low-code app for this test.
 
 1. Click *Create page*.
 
-1. Click the green bar with *+* to open the component selection panel.
+1. Click the colored bar with *+* to open the component selection panel.
 
 1. Drag *Text* from *General*.
 
 1. Drag *Text Input* from *Basic Controls*.
 
-1. Select the new *Text* component, go to *Settings*, and enter an expression like "Welcome {COMPONENT.Page.\"Text input 2\".Value.Texts.Value}".
+1. Select the new *Text* (General) component, go to *Settings*, and enter an expression like "Welcome {COMPONENT.Page.\"Text input 2\".Value.Texts.Value}".
 
-1. Select the new *Text Input* component, go to *Settings*, and enable *Value Change*.
+1. Select the new *Text Input* (Basic Controls) component, go to *Settings*, and enable *Value Change*.
 
 1. Publish the app and verify that text entered in the input box appears in the welcome text.
 
