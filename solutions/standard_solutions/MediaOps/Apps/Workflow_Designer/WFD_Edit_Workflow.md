@@ -11,47 +11,49 @@ To edit a workflow, click the pencil icon for that workflow on the *Home* page o
 This panel consists of two sections:
 
 - [Workflow section](#workflow-section): Allows you to view and edit the workflow, **specify the resources** required, specify how they are linked to each other, and provide **default configuration** settings for resources.
-- [Nodes section](#nodes-section): Lists all the nodes used in the workflow (including linked nodes).
+- [Nodes section](#nodes-section): Lists all the nodes used in the workflow (including linked nodes) and allows you to execute actions on the nodes.
 
 > [!NOTE]
-> When you have finished configuring a workflow, you can make the workflow available in the [Scheduling app](xref:MO_Scheduling) through the *Mark as Complete* option on the *Home* page. As long as a workflow is still in the [Draft state](xref:WFD_Workflow_States), it will not be available for scheduling.
+> When you have finished configuring a workflow, you can use the *Mark as Complete* option on the *Home* page to make the workflow available in the [Scheduling app](xref:MO_Scheduling). As long as a workflow is still in the [Draft state](xref:WFD_Workflow_States), it will not be available for scheduling.
 
 ## Workflow section
 
-In the workflow section you can execute the following actions. Depending on the the selected node(s) or connection(s) it might happen that different buttons will be enabled/disabled.
+In the Workflow section, you can execute the actions listed below. Depending on the selected nodes or connections, different buttons may be enabled.
 
-1. [Edit the general workflow settings](#edit-the-general-workflow-settings)
-1. [Configure the workflow orchestration settings](#configure-the-workflow-orchestration-settings)
-1. [Refresh/centralize the workflow in the node-edge component](#refreshcentralize-the-workflow-in-the-node-edge-component)
-1. [Adding nodes to a workflow](#adding-nodes-to-a-workflow)
-1. [Adding nodes after/before the selected node](#adding-nodes-afterbefore-the-selected-node)
-1. [Swapping a node to another pool/resource](#swapping-a-node-to-another-poolresource)
-1. [Configure the node orchestration settings](#configure-the-node-orchestration-settings)
-1. [Edit the general node settings](#edit-the-general-node-settings)
-1. [Remove node(s)](#remove-nodes)
-1. [Edit node properties](#edit-node-properties)
-1. [Add a connection between two nodes](#add-a-connection-between-two-nodes)
-1. [Remove connection(s)](#remove-connections)
-1. [Insert a node in the selected connection](#insert-a-node-in-the-selected-connection)
-1. [Edit the general connection settings](#edit-the-general-connection-settings)
+- [Edit the general workflow settings](#editing-the-general-workflow-settings)
+- [Configure the workflow orchestration settings](#configuring-the-workflow-orchestration-settings)
+- [Refresh/centralize the workflow in the node-edge component](#refreshingcentralizing-the-nodes-in-the-workflow)
+- [Adding nodes to a workflow](#adding-nodes-to-a-workflow)
+- [Adding nodes after/before the selected node](#adding-nodes-afterbefore-the-selected-node)
+- [Swapping a node to another pool/resource](#swapping-a-node-to-another-poolresource)
+- [Configure the node orchestration settings](#configuring-the-node-orchestration-settings)
+- [Edit the general node settings](#editing-the-general-node-settings)
+- [Remove node(s)](#removing-nodes)
+- [Edit node properties](#editing-node-properties)
+- [Add a connection between two nodes](#adding-a-connection-between-two-nodes)
+- [Remove connection(s)](#removing-connections)
+- [Insert a node in the selected connection](#inserting-a-node-in-the-selected-connection)
+- [Edit the general connection settings](#editing-the-general-connection-settings)
 
-### Edit the general workflow settings
+### Editing the general workflow settings
 
-To edit the general workflow settings click on the pencil icon next to the title of the workflow section.
+To edit the general workflow settings, click the pencil icon next to the title of the workflow section.
 
-![Edit General Workflow Settings](~/solutions/images/Workflow_Designer_Edit_Workflow.png)
+![The pencil icon to edit the general workflow settings](~/solutions/images/Workflow_Designer_Edit_Workflow.png)
 
-### Configure the workflow orchestration settings
+You will then be able to adjust the name and description of the workflow, configure its pre-roll and post-roll time, set its priority, and indicate whether it should be considered a favorite.
 
-To edit the workflow [orchestration settings]() click on the cogwheel next to the title of the workflow section.
+### Configuring the workflow orchestration settings
 
-![Edit Workflow Orchestration Settings](~/solutions/images/Workflow_Designer_Configure_Workflow.png)
+To edit the workflow [orchestration settings](), click the cogwheel next to the title of the workflow section.
 
-### Refresh/centralize the workflow in the node-edge component
+![The cogwheel icon to edit the workflow orchestration settings](~/solutions/images/Workflow_Designer_Configure_Workflow.png)
 
-It might happen that by zooming or navigating in the workflow you lose track of the nodes in the workflow section. The refresh button allows you to centralize again the nodes in the workflow section.
+### Refreshing/centralizing the nodes in the workflow
 
-![Refresh Workflow](~/solutions/images/Workflow_Designer_Refresh_Workflow.png)
+It might happen that by zooming or navigating in the workflow you lose track of the nodes in the workflow section. The refresh button allows you to centralize the nodes in the workflow section again.
+
+![The refresh button to centralize the nodes in the workflow section](~/solutions/images/Workflow_Designer_Refresh_Workflow.png)
 
 ### Adding nodes to a workflow
 
@@ -59,81 +61,84 @@ For a workflow to be useful, it must contain at least one **node**. Each node in
 
 To add a node, click the *Add Pool* or *Add Resource* button:
 
-- **Add pool**: Select this option if you don't know you need a resource of the pool, but not yet which resource instance in the pool should be used. The resource selection will then need to happen once a job is created from the workflow. As a job has a start and stop time, you can then pick a resource based on availability.
+- **Add Pool**: Select this option if it is not yet known which resource instance in the pool should be used. The resource selection will then need to happen once a job is created from the workflow. As a job has a start and stop time, you can then pick a resource based on availability.
 
-- **Add Resource**: Select this option if you know exactly which resource is required by the workflow. You must still define the pool, to indicate the context in which the resource will be used (resources can be part of multiple resource pools when they can be used for different functions). When a job is created using the workflow, the resource will automatically be added as node to the job.
+- **Add Resource**: Select this option if you know exactly which resource is required by the workflow. You must still define the pool, to indicate the context in which the resource will be used (resources can be part of multiple resource pools when they can be used for different functions). When a job is created using the workflow, the resource will automatically be added as a node to the job.
 
-![Add Node](~/solutions/images/Workflow_Designer_Add_Node.png)
+![Buttons to add a node representing a pool or resource](~/solutions/images/Workflow_Designer_Add_Node.png)
 
 ### Adding nodes after/before the selected node
 
-Once a node is available in the workflow, you can select it and this will enable the buttons to add other nodes before or after the selected node in the workflow.
+Once a node is available in the workflow, selecting the node will enable buttons to add other nodes before or after that node in the workflow.
 
-![Add node before/after](~/solutions/images/Workflow_Designer_Add_Node_After_Before.png)
+![Buttons to add a node representing a pool or resource before or after the selected node in the workflow](~/solutions/images/Workflow_Designer_Add_Node_After_Before.png)
 
 ### Swapping a node to another pool/resource
 
-It is possible to swap a node to a different pool or resource. This to avoid losing all customizations done already on the node (e.g., configuration, properties, etc.). Select the node and click on *Swap To Pool* or *Swap to Resource* depending if you want to swap it to another pool or resource.
+If you have already customized a node (e.g., configuration, properties, etc.), but now you need a different pool or resource to be assigned to the node, you can swap it out.
 
-![Swap node](~/solutions/images/Workflow_Designer_Swap_Node.png)
+To do so, select the node and click *Swap To Pool* or *Swap to Resource*, depending on whether you want to swap it to another pool or resource, and then select the pool or resource to swap to.
 
-### Configure the node orchestration settings
+![Buttons to swap the selected node to another pool or resource](~/solutions/images/Workflow_Designer_Swap_Node.png)
 
-To edit the node [orchestration settings](), select the node and click on the *Configure* button.
+### Configuring the node orchestration settings
 
-![Edit node orchestration settings](~/solutions/images/Workflow_Designer_Configure_Node.png)
+To edit the node [orchestration settings](), select the node and click the *Configure* button.
 
-### Edit the general node settings
+![Button to configure the orchestration settings of the selected node](~/solutions/images/Workflow_Designer_Configure_Node.png)
 
-To edit the general node settings, select the node and click on the *Edit* button.
+### Editing the general node settings
 
-![Edit node settings](~/solutions/images/Workflow_Designer_Edit_Node.png)
+To edit the general node settings, select the node and click the *Edit* button.
 
-### Remove node(s)
+![Button to edit the general settings of the selected nodes](~/solutions/images/Workflow_Designer_Edit_Node.png)
 
-To remove node(s) from the workflow, select the node(s) and click on the *Remove* button.
+### Removing nodes
 
-![Remove node(s)](~/solutions/images/Workflow_Designer_Remove_Nodes.png)
+To remove one or more nodes from the workflow, select the nodes (using Ctrl + click to select more than one node) and click the *Remove* button.
 
-### Edit node properties
+![Button to remove one or more selected nodes](~/solutions/images/Workflow_Designer_Remove_Nodes.png)
 
-To edit the properties of a node, select the node and click on the *Edit Properties* button.
+### Editing node properties
 
-![Edit node properties](~/solutions/images/Workflow_Designer_Edit_Node_Properties.png)
+To edit the properties of a node, select the node and click the *Edit Properties* button.
 
-### Add a connection between two nodes
+![Button to edit the properties of the selected node](~/solutions/images/Workflow_Designer_Edit_Node_Properties.png)
 
-To add a connection between two nodes, select two nodes (ctrl click) and click on the *Connect* button.
+### Adding a connection between two nodes
 
-![Connect nodes](~/solutions/images/Workflow_Designer_Connect_Nodes.png)
+To add a connection between two nodes, select the two nodes (using Ctrl + click) and click the *Connect* button.
 
-### Remove connection(s)
+![Button to add a connection between two selected nodes](~/solutions/images/Workflow_Designer_Connect_Nodes.png)
 
-To remove connections, select the connection(s) to remove and click on the *Disconnect* button.
+### Removing connections
 
-![Disconnect nodes](~/solutions/images/Workflow_Designer_Disconnect.png)
+To remove one or more connections, select the connections to remove (using Ctrl + click to select more than one connection) and click the *Disconnect* button.
 
-### Insert a node in the selected connection
+![Button to remove the selected connections](~/solutions/images/Workflow_Designer_Disconnect.png)
 
-To insert a node between two already connected nodes, select the connection and click on the *Insert Pool* or *Insert Resource* button.
+### Inserting a node in the selected connection
 
-![Insert node](~/solutions/images/Workflow_Designer_Insert_Node.png)
+To insert a node between two already connected nodes, select the connection and click the *Insert Pool* or *Insert Resource* button.
 
-### Edit the general connection settings
+![Buttons to insert a node representing a pool or resource between the two nodes connected by the selected connection](~/solutions/images/Workflow_Designer_Insert_Node.png)
 
-To edit the general connection settings, select the connection and click on the *Edit* button.
+### Editing the general connection settings
 
-![Edit connection settings](~/solutions/images/Workflow_Designer_Edit_Connection.png)
+To edit the general settings of a connection, select the connection and click the *Edit* button.
+
+![Button to edit the settings of the selected connection](~/solutions/images/Workflow_Designer_Edit_Connection.png)
 
 ## Nodes section
 
-From the nodes table (depending on your screen resolution, you might have to scroll down), you can execute the following actions on nodes.
+Below the Workflow section, the Nodes section displays a table listing the nodes in the workflow. With the buttons in this table, you can execute actions on the nodes.
 
-1. Configure the node orchestration settings
-2. Edit the general node settings
-3. Edit node properties
-4. Link a pool to the node
-5. Link a resource to the node
-6. Remove the node
+| Button | Action |
+|--|--|
+| ![Config status button](~/solutions/images/WFD_Config_status_button.png) | Configure the node orchestration settings. |
+| ![Edit button](~/solutions/images/WFD_Edit_button.png) | Edit the general node settings. |
+| ![Properties button](~/solutions/images/WFD_Properties_button.png) | Edit node properties. |
+| ![Link pool button](~/solutions/images/WFD_Link_button.png) | Link a pool or resource to the node, depending on the column. |
+| ![Garbage can button](~/solutions/images/WFD_Garbage_can_button.png) | Remove the node. |
 
 ![Actions from the nodes table](~/solutions/images/Workflow_Designer_Nodes_Table.png)
