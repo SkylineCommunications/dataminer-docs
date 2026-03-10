@@ -16,8 +16,9 @@ Depending on the DataMiner version, it checks for the following DLLs, in the spe
 | SLDatabase.dll                 | 10.5.5/10.6.0<!--RN 42057-->    | N/A                          | N/A (always deprecated) | `C:\Skyline DataMiner\ProtocolScripts` or `C:\Skyline DataMiner\Files` |
 | DataMinerMessageBroker.API.dll | 10.5.12/10.6.0<!--RN 43779-->   | 3.0.0                        | 3.0.0 (3.0.0 and later are allowed) | `C:\Skyline DataMiner\ProtocolScripts` |
 
-Any version lower than the specified minimum non-outdated version will be considered outdated, as older versions are known to pose security risks.
-Any version higher than or equal to the minimum non-outdated version, but lower than the minimum non-deprecated version are considered deprecated.
+Any version lower than the specified minimum non-outdated version will be considered **outdated**, as older versions are known to pose security risks.
+
+Any version higher than or equal to the minimum non-outdated version, but lower than the minimum non-deprecated version is considered **deprecated**.
 
 If an [outdated DLL file is detected](#error) on your DMA, this indicates the use of an old file version, which may pose a potential security risk. In this event, you should always remove the DLL file.
 
@@ -51,7 +52,8 @@ An outdated DLL file was detected.
   1. Remove the *X.dll* file from the *Y* folder.
 
      > [!IMPORTANT]
-     > - The DLL file must be removed from every agent in the cluster. Otherwise, synchronization between DataMiner Agents may restore the file.
+     >
+     > - The DLL file must be removed from every Agent in the cluster. Otherwise, synchronization between DataMiner Agents may restore the file.
      > - When you remove the mentioned DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
 
   1. Start the DataMiner Agent.
@@ -128,8 +130,10 @@ One or multiple protocols and/or automation scripts still use an outdated DLL fi
   1. Remove the outdated/deprecated DLL file(s) from their folder(s) (mentioned in the result message).
 
      > [!IMPORTANT]
-     > - Only remove the DLL files mentioned on the locations of *Q.dll* and/or *S.dll* in the placeholder message. DLLs only mentioned in the message at the placeholder *R.dll* should no longer be used, but are definitely **not** safe to delete.
-     > - The DLL file must be removed from every agent in the cluster. Otherwise, synchronization between DataMiner Agents may restore the file. When you remove a DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
+     >
+     > - Only remove the DLL files mentioned on the locations of **Q.dll** and/or **S.dll** in the placeholder message. DLLs only mentioned in the message at the placeholder **R.dll** should no longer be used but are definitely **not** safe to delete.
+     > - The DLL file must be removed from every Agent in the cluster. Otherwise, synchronization between DataMiner Agents may restore the file. 
+     > - When you remove a DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
 
   1. Start the DataMiner Agent.
 
@@ -148,7 +152,7 @@ A deprecated DLL file was detected in the ProtocolScripts folder.
   1. Remove the *X.dll* file from the `C:\Skyline DataMiner\ProtocolScripts` folder.
 
      > [!IMPORTANT]
-     > - The DLL file must be removed from every agent in the cluster. Otherwise, synchronization between DataMiner Agents may restore the file.
+     > - The DLL file must be removed from every Agent in the cluster. Otherwise, synchronization between DataMiner Agents may restore the file.
      > - When you remove the DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
 
   1. Start the DataMiner Agent.
@@ -225,8 +229,10 @@ One or multiple protocols and/or automation scripts still use a deprecated DLL f
   1. Remove the *Y.dll* file from the `C:\Skyline DataMiner\ProtocolScripts` folder.
 
      > [!IMPORTANT]
+     >
      > - Only delete the DLLs located at the location of placeholder *Y.dll*. The DLLs only mentioned at the placeholder *X.dll* are definitely **not** safe for deletion.
-     > - The DLL file must be removed from every agent in the cluster. Otherwise, synchronization between DataMiner Agents may restore the file. When you remove the DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
+     > - The DLL file must be removed from every Agent in the cluster. Otherwise, synchronization between DataMiner Agents may restore the file.
+     > - When you remove the DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an automation script is executed.
 
   1. Start the DataMiner Agent.
 
@@ -263,4 +269,5 @@ The following list of NuGet packages can be a good start for replacing the SLDat
 ### DataMinerMessageBroker.API.dll
 
 Update the DataMinerMessageBroker NuGet reference in your connector or automation script to at least the minimum non-deprecated version, and verify that all functionality continues to work.
+
 If any functionality is affected by changes in the NuGet package, update your code accordingly.
