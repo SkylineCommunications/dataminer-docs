@@ -111,7 +111,7 @@ public class Script
 >
 > - In case a null service definition is provided, SRM will use a dynamically generated blank service definition.<!-- RN 30324 -->
 > - To add a resource without linking it to a node in the service definition, do not provide the *Id* attribute of the *Function* object.<!-- RN 30324 -->
-> - Since version 1.2.34 it's possible to pass the security view Ids, for that fill the *SecurityViewIds* property of the *Booking* object with the list of security view Guids.<!-- RN 37774 -->
+> - Since version 1.2.34 it is, possible to pass the security view Ids. To do so, fill the *SecurityViewIds* property of the *Booking* object with the list of security view GUIDs.<!-- RN 37774 -->
 
 ## Handling bookings with a start date in the past
 

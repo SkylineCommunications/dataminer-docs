@@ -45,4 +45,4 @@ public class Script
 > - In case no label is provided, SRM will try to identify a free node based on function type.
 > - In case a free and compatible node is found, but it has a non-matching label, that node will be picked.
 > - In case no label is provided and a new service definition needs to be created, the function name will be used as the label.
-> - Since version 1.2.33 <!-- RN 36792 --> it is possible to pass the desired service definition as a parameter to the *AddResource* and *TryAddResource* methods. The user needs to make sure that the passed service definition is compatible with the booking and contains a node with the provided label, otherwise undesired behavior may occur <!-- RN 38346 -->.
+> - Since version 1.2.33 <!-- RN 36792 --> it is possible to pass the desired service definition as a parameter to the *AddResource* and *TryAddResource* methods. Since version 1.2.35<!-- RN 38346 -->, the user needs to make sure that the passed service definition is compatible with the booking and contains a node with the provided label, otherwise undesired behavior may occur.
