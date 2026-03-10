@@ -20,7 +20,13 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No features have been added yet.*
+#### Dashboards/Low-Code Apps - Node edge graph component: Node or edge labels can now be linked to data from another component [ID 44907]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Since DataMiner 10.5.0 CU11/10.6.2, you can select a specific field to be displayed as node or edge label.
+
+From now on, you can link a node or edge label to data from another component (e.g. a list of query columns displayed in a *Dropdown* component).
 
 ## Changes
 
