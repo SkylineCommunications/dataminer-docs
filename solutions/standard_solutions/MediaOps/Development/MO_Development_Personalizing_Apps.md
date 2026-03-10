@@ -20,6 +20,6 @@ There are a several ways you can personalize the MediaOps Solution to adjust it 
 
 ## Editing the Edit Job panel of the Scheduling application
 
-The scheduling application makes use of variables to know which job was selected when the [Edit job panel](xref:SCH_Edit_Job) is opened (which can happen from multiple pages).
+The Scheduling application makes use of variables to know which job was selected when the [Edit job panel](xref:SCH_Edit_Job) is opened (which can happen from multiple pages).
 
 As the actions that set the variable cannot be triggered when the application is being edited, you will need to select a job in edit mode as follows: First go to the *Ops Board* page and select an option that gives you jobs (e.g., upcoming), then go to the *Hidden Job Select* page and select a job from the table, which will set the job variable and allow you to edit the *Edit Job form* panel.
