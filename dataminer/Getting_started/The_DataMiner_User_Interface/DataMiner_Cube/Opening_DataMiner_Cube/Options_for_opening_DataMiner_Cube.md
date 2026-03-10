@@ -241,7 +241,9 @@ element="My element|My other element"
 
 Available from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44779-->. Use this option to enable or disable alarm subscriptions.
 
-- To enable alarm subscriptions:
+In extreme scenarios, a very large number of alarm events can flood the connection between DataMiner Cube and the DataMiner System, which may cause the connection to drop. Disabling alarm subscriptions allows DataMiner Cube to start without subscribing to alarm events, so that Cube remains usable (in a degraded state). This makes it possible to access the system and reconfigure the alarming setup to resolve the issue.
+
+- To enable alarm subscriptions (default behavior):
 
   ```txt
   EnableAlarmSubscriptions=true
@@ -252,6 +254,9 @@ Available from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44779--
   ```txt
   EnableAlarmSubscriptions=false
   ```
+
+> [!CAUTION]
+> This option is intended only for troubleshooting in exceptional situations. When alarm subscriptions are disabled, DataMiner Cube will not receive alarm updates, which significantly limits normal monitoring functionality.
 
 ### host=
 
