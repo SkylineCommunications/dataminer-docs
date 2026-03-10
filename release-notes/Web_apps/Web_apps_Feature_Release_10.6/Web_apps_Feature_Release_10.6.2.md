@@ -219,7 +219,7 @@ From now on, they will need the following permissions:
 
 In a dashboard, a low-code app, or another DataMiner web app, each time an error occurs when you try to delete a DOM instance, from now on, all exceptions will be logged, and a message will appear in the UI.
 
-#### Dashboards app - Grid component: Enhanced rendering on PDF reports in stacked mode [ID 44266]
+#### Dashboards app - Grid component: Enhanced rendering of PDF reports in stacked mode [ID 44266]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 

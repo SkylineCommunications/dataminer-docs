@@ -395,3 +395,15 @@ In some cases, an *On open* event configured in a low-code app would incorrectly
 Since DataMiner version 10.5.0 CU12/10.6.3, the *themes.json* file was incorrectly no longer present in the `C:\Skyline DataMiner\dashboards` folder.
 
 This file has now been added again.
+
+#### Dashboards app: Problem with GQI components when generating a PDF report in stacked mode [ID 44945]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+Up to now, when you generated a PDF report in stacked mode of a dashboard containing *Line & area chart*, *Column & bar chart*, *Maps*, *Node edge graph* or *Timeline* components, some of those components would incorrectly have their height set to 0 in the PDF file.
+
+#### Low-Code Apps - Timeline component: Problem when migrating timeline events [ID 44966]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+When a low-code app was migrated to a newer version, in some cases, timeline events would incorrectly not get fully migrated.

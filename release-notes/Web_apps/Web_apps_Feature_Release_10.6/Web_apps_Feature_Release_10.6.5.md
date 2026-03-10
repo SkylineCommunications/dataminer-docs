@@ -20,7 +20,13 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No features have been added yet.*
+#### Dashboards/Low-Code Apps - Node edge graph component: Node or edge labels can now be linked to data from another component [ID 44907]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Since DataMiner 10.5.0 CU11/10.6.2, you can select a specific field to be displayed as node or edge label.
+
+From now on, you can link a node or edge label to data from another component (e.g. a list of query columns displayed in a *Dropdown* component).
 
 ## Changes
 
@@ -45,6 +51,12 @@ The DataMiner web apps that use Angular (e.g., Low-Code Apps, Dashboards, Monito
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 The GQI DxM has been upgraded to Microsoft .NET 10. It no longer requires the .NET 8 runtime.
+
+#### Web DcM has been upgraded to Microsoft .NET 10 [ID 44820]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+The Web DcM has been upgraded to Microsoft .NET 10.
 
 #### GQI DxM: Percentage values for trend data will now be passed and displayed like all other percentage values [ID 44884]
 
@@ -95,6 +107,14 @@ Also, in the different GQI components (i.e., *Table*, *Grid*, *Node edge graph*,
 
 When, in the query builder, you inserted a node (for example a filter) before a *Join* operator, up to now, some of the node's options (such as column selection, filter method, and value) would incorrectly not appear. As a result, it would not be possible to completely configure the node.
 
+#### GQI DxM: Display values created for numeric values would incorrectly be formatted using invariant culture [ID 44903]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when display values were created for numeric values, they would always be formatted using invariant culture (unless the data source overrode this behavior). As a result, in some cases, numeric values would be displayed with a decimal separator users did not expect.
+
+From now on, when display values are created for numeric values, by default, they will always be formatted using the culture of the user.
+
 #### Dashboards/Low-Code Apps - Query filter component: Problem when opening the operator selection box [ID 44918]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
@@ -106,6 +126,12 @@ When, in a *Query filter* component, you opened the operator selection box in or
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When an input component was fed data from another component, in some cases, the value received from the other component would incorrectly not be visible in that input component.
+
+#### Dashboards/Low-Code Apps - Maps component: Map sessions could close unexpectedly [ID 44931]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In some rare cases, a map session could close unexpectedly, causing markers or lines to disappear from the map.
 
 #### Dashboards/Low-Code Apps - GQI components: Problem when data from another component changed rapidly [ID 44934]
 

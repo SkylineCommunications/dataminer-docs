@@ -14,7 +14,7 @@ Automatic creation and publishing of NuGet packages is supported via the Skyline
 - [Producing NuGet packages via GitHub](xref:Producing_NuGet_GitHub)
 
 > [!TIP]
-> To create a new solution or project that produces a NuGet package, make use of the Visual Studio templates available at [https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates).
+> To create a new solution or project that produces a NuGet package, make use of the Visual Studio templates available at [https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates.Internal](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates.Internal).
 
 ## General
 

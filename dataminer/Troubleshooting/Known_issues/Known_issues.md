@@ -8,11 +8,8 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated](xref:KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged) | From DataMiner 10.5.12/10.6.0 onwards | | February 24, 2026 |
-| [DataMiner Web and GQI crash briefly during startup](xref:KI_DataMiner_Web_and_GQI_crash_briefly_during_startup) | DataMiner 10.5.0 [CU11] and 10.6.2 | | January 28, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
-| [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
@@ -24,21 +21,21 @@ uid: Known_issues
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
 | [SLNet handle leak caused by SAML authentication and SLHelper startup](xref:KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup) | DataMiner 10.5.0 [CU12], 10.6.0, and 10.6.3 [CU0] | DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 [CU1] | February 25, 2026 |
+| [Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated](xref:KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged) | From DataMiner 10.5.12/10.6.0 onwards | DataMiner 10.6.0 [CU1]/10.6.4 | February 24, 2026 |
 | [Possible resource overbooking in SRM](xref:KI_Possible_overbooking_in_SRM) | SRM setups using DataMiner 10.5.12 or higher | DataMiner 10.6.2 [CU1] | January 29, 2026 |
 | [SLDataGateway issue caused by OpenSearch health monitoring](xref:KI_SLDataGateway_issue_OpenSearch_health_monitoring) | Dedicated clustered storage setups using DataMiner 10.5.0 [CU11]/10.6.2 | DataMiner 10.5.0 [CU11]/10.6.2 [CU1] | January 29, 2026 |
+| [DataMiner Web and GQI crash briefly during startup](xref:KI_DataMiner_Web_and_GQI_crash_briefly_during_startup) | DataMiner 10.5.0 [CU11] and 10.6.2 | DataMiner 10.6.2 [CU1] | January 28, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | DataMiner 10.5.0 [CU11]/10.6.2 | November 19, 2025 |
+| [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 | September 17, 2025 |
+| [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | Orchestrator 1.8.0 | July 15, 2025 |
 
 ## 10.5.x
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated](xref:KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged) | From DataMiner 10.5.12/10.6.0 onwards | | February 24, 2026 |
-| [DataMiner Web and GQI crash briefly during startup](xref:KI_DataMiner_Web_and_GQI_crash_briefly_during_startup) | DataMiner 10.5.0 [CU11] and 10.6.2 | | January 28, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
-| [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
-| [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
@@ -50,24 +47,28 @@ uid: Known_issues
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
 | [SLNet handle leak caused by SAML authentication and SLHelper startup](xref:KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup) | DataMiner 10.5.0 [CU12], 10.6.0, and 10.6.3 [CU0] | DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 [CU1] | February 25, 2026 |
+| [Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated](xref:KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged) | From DataMiner 10.5.12/10.6.0 onwards | DataMiner 10.6.0 [CU1]/10.6.4 | February 24, 2026 |
 | [Possible resource overbooking in SRM](xref:KI_Possible_overbooking_in_SRM) | SRM setups using DataMiner 10.5.12 or higher | DataMiner 10.6.2 [CU1] | January 29, 2026 |
 | [SLDataGateway issue caused by OpenSearch health monitoring](xref:KI_SLDataGateway_issue_OpenSearch_health_monitoring) | Dedicated clustered storage setups using DataMiner 10.5.0 [CU11]/10.6.2 | DataMiner 10.5.0 [CU11]/10.6.2 [CU1] | January 29, 2026 |
+| [DataMiner Web and GQI crash briefly during startup](xref:KI_DataMiner_Web_and_GQI_crash_briefly_during_startup) | DataMiner 10.5.0 [CU11] and 10.6.2 | DataMiner 10.6.2 [CU1] | January 28, 2026 |
 | [TLS authentication issues when MessageBroker is connecting to the NATS bus](xref:KI_DataMinerMessageBroker_TLS) | DataMiner with BrokerGateway-managed NATS | DataMiner 10.5.0 [CU11]/10.6.0 | January 27, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [Removing an invalid or unreachable IP address causes your own DMA to leave the DMS](xref:KI_Removing_an_invalid_or_unreachable_IP_address_causes_your_own_DMA_to_leave_the_DMS) | Feature Release versions from DataMiner 10.5.7 onwards | DataMiner 10.6.0/10.6.1 | November 28, 2025 |
 | [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | DataMiner 10.5.0 [CU11]/10.6.2 | November 19, 2025 |
 | [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | October 21, 2025 |
 | [Trend graph flatline when client and DMA use different time zones](xref:KI_Trend_flatline_different_time_zones) | From Dataminer 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.10 [CU1] | September 18, 2025 |
+| [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 | September 17, 2025 |
 | [Performance decrease when restarting elements that export large numbers of DVEs or VFs](xref:KI_Performance_decrease_restart_element) | DataMiner 10.5.9 | DataMiner 10.5.10 | September 15, 2025 |
 | [SLScripting issue with non-English system locale](xref:KI_SLScripting_issue_non_English_system) | From DataMiner 10.4.0 [CU18]/10.5 [CU6]/10.5.9 onwards | DataMiner 10.4.0 [CU18] build 16295/10.5 [CU6] build 16294/10.5.9 build 16293 | September 9, 2025 |
 | [SLNet memory leak caused by ClusterEndpoint.json sync](xref:KI_ClusterEndpoint_SLNet_leak) | DataMiner 10.5.0 [CU4] build 15943, 10.5.0 [CU5] build 16086, 10.5.7, and 10.5.8 | DataMiner 10.5.0 [CU4] build 16239, 10.5.0 [CU5] build 16243, 10.5.0 [CU6], 10.5.7 [CU1], 10.5.8 [CU1], and 10.5.9 | August 19, 2025 |
 | [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
-| [SRM scheduler unresponsive](xref:KI_SRM_scheduler_unresponsive) | DataMiner 10.5.6 and 10.5.7 | DataMiner 10.5.8/10.6.0 | July 4, 2025 |
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
+| [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | Orchestrator 1.8.0 | July 15, 2025 |
+| [SRM scheduler unresponsive](xref:KI_SRM_scheduler_unresponsive) | DataMiner 10.5.6 and 10.5.7 | DataMiner 10.5.8/10.6.0 | July 4, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3 | June 20, 2025 |
 | [SLProtocol RTE because of element stuck in slow poll mode](xref:KI_SLProtocol_RTE_after_slow_poll_timeout) | From DataMiner 10.4.0 [CU11] onwards | DataMiner 10.5.9/10.4.0 [CU18]/10.5.0 [CU6] | June 16, 2025 |
-| [Prerequisites fail when upgrading from 10.4.0-10.4.4 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | DataMiner 10.5.0 [CU5]/10.5.8 | June 2, 2025 |
 | [SLAutomation memory leak when automation script runs](xref:KI_Automation_Memory_leak_when_executing_scripts) | DataMiner 10.5.6 | DataMiner 10.5.7 | June 10, 2025 |
+| [Prerequisites fail when upgrading from 10.4.0-10.4.4 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | DataMiner 10.5.0 [CU5]/10.5.8 | June 2, 2025 |
 | [DCOMConfig flagged as virus causing upgrade issues](xref:KI_DCOMConfig_flagged_as_virus) | DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | May 19, 2025 |
 | [SLNet not starting correctly after change to default upgrade options](xref:KI_Default_upgrade_options_SLNet_issue) | From DataMiner 10.4.1/10.5.0 [CU0] onwards | DataMiner 10.5.0 [CU4]/10.5.7 | May 5, 2025 |
 | [Higher CPU usage and connection issues when using SAML with automatic groups](xref:KI_SAML_with_automatic_groups) | From DataMiner 10.4.0 [CU4]/10.4.7 onwards | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.5 | April 16, 2025 |
@@ -85,8 +86,6 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
-| [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
@@ -101,8 +100,10 @@ uid: Known_issues
 | [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | DataMiner 10.5.0 [CU11]/10.6.2 | November 19, 2025 |
 | [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | October 21, 2025 |
 | [Trend graph flatline when client and DMA use different time zones](xref:KI_Trend_flatline_different_time_zones) | From Dataminer 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.10 [CU1] | September 18, 2025 |
+| [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 | September 17, 2025 |
 | [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
+| [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | Orchestrator 1.8.0 | July 15, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3 | June 20, 2025 |
 | [SLProtocol RTE because of element stuck in slow poll mode](xref:KI_SLProtocol_RTE_after_slow_poll_timeout) | From DataMiner 10.4.0 [CU11] onwards | DataMiner 10.5.9/10.4.0 [CU18]/10.5.0 [CU6] | June 16, 2025 |
 | [Prerequisites fail when upgrading from 10.4.0-10.4.4 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | DataMiner 10.5.0 [CU5]/10.5.8 | June 2, 2025 |
@@ -147,8 +148,6 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | | September 17, 2025 |
-| [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | | July 15, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
@@ -158,8 +157,10 @@ uid: Known_issues
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | October 21, 2025 |
+| [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 | September 17, 2025 |
 | [Contents of Elements folder deleted from offline Agents in Failover cluster](xref:KI_Contents_Elements_folder_deleted_from_offline_Agents_in_Failover_cluster) | All Failover systems | DataMiner 10.5.0 [CU10]/10.6.1 | August 1, 2025 |
 | [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | July 16, 2025 |
+| [DataMiner startup issue with one or more DcMs not running](xref:KI_Startup_issue_DcM_not_running) | From DataMiner 10.3.7/10.4.0 onwards | Orchestrator 1.8.0 | July 15, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3 | June 20, 2025 |
 | [Cube displays incorrect offload configuration for real-time trending data](xref:KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data) | From DataMiner Cube 10.3.7/10.4.0 onwards | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | March 20, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | March 6, 2025 |
