@@ -73,7 +73,7 @@ If all your tests are already within the same solution, this script may not be n
 
 - If your tests are part of the build output of projects in your solution, such as MSTest or NUnit assemblies, you could opt to use post-build actions on those projects to copy the output to the *Tests* directory and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and retrieve their results.
 
-- If your tests can be written directly in PowerShell scripts, the simplest way is to write everything within the and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and forward their results to QAOps.
+- If your tests can be written directly in PowerShell scripts, the simplest way is to write everything within the scripts and then use the [TestPackagePipeline](#testpackagepipeline) to trigger the tests and forward their results to QAOps.
 
 If used, the harvesting process creates these directories:
 
