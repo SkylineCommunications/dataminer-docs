@@ -28,6 +28,16 @@ Since DataMiner 10.5.0 CU11/10.6.2, you can select a specific field to be displa
 
 From now on, you can link a node or edge label to data from another component (e.g. a list of query columns displayed in a *Dropdown* component).
 
+#### Dashboards/Low-Code Apps - Node edge graph component: 'Node move' events can now be cancelled by pressing ESC [ID 44938]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Per node query linked to a *Node edge graph* component, you can configure *node move* events that will be triggered when a node belonging to that query is moved.
+
+From now on, it will be possible to cancel a node movement by pressing the ESC key.
+
+When you do so, the move event will not be executed, and the node will automatically return to its original position.
+
 ## Changes
 
 ### Enhancements
@@ -82,6 +92,12 @@ Up to now, when you pasted a large piece of formatted text in such a text box, i
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 Because of a number of enhancements, the DataMiner Comparison tool will now be able to manage larger files.
+
+#### GQI DxM - Extensions: Display value of empty cells will no longer be discarded [ID 44947]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when a GQI extension (i.e., an ad hoc data source or a custom operator) returned a cell of which the value was set to null, its display value would be discarded. From now on, this display value will no longer be discarded. Instead, it will be displayed in the UI.
 
 ### Fixes
 
