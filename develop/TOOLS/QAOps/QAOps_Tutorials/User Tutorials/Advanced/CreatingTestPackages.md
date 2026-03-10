@@ -537,10 +537,10 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
 
 1. Open a Command Prompt, Bash, or PowerShell window.
 
-1. Run the following command, after replacing the placeholders as indicated below, making sure to keep the double quotes around the TOKEN value:
+1. Run the following command, after replacing the placeholders as indicated below, making sure to keep the double quotes around the TOKEN and TESTFILEPATH values:
 
    ```bash
-   dataminer-qaops test-run --token "TOKEN" -t TESTSUITE -c CONFIGURATION -tags MYNAME -san saqaopssandbox --test-packages TESTFILEPATH
+   dataminer-qaops test-run --token "TOKEN" -t TESTSUITE -c CONFIGURATION -tags MYNAME -san saqaopssandbox --test-packages "TESTFILEPATH"
    ```
 
     - `TOKEN`: The token value you copied earlier. Make sure this value is enclosed in double quotes.
@@ -551,7 +551,7 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
 
     - `MYNAME`: your name, nickname, or another identifier that helps you find your request.
 
-    - `TESTFILEPATH`: the test package filepath you copied earlier.
+    - `TESTFILEPATH`: the test package filepath you copied earlier. Make sure this value is enclosed in double quotes
 
     > [!NOTE]
     > For production systems, leave out the `-san` argument. This argument specifies which QAOps system receives the command. In this example, it targets the QAOps sandbox system. The default target is the production QAOps system.

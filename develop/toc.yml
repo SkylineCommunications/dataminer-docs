@@ -7488,17 +7488,7 @@ items:
         topicUid: QAOps_Tool
       - name: QAOps tutorials
         items:
-        - name: QAOps Operator app
-          items:
-          - name: How to create a new configuration
-            topicUid: QAOps_Tutorials_Operator_Tutorials_Creating_Configurations
-          - name: How to create a new test suite
-            topicUid: QAOps_Tutorials_Operator_Tutorials_Creating_Test_Suites
-          - name: How to manage server provisioning
-            topicUid: QAOps_Tutorials_Operator_Tutorials_Managing_Provisioning
-          - name: How to avoid unnecessary costs as an operator
-            topicUid: QAOps_Tutorials_Operator_Tutorials_Avoiding_Unnecessary_Costs
-        - name: QAOps User app
+        - name: QAOps User
           items:
           - name: Basic
             items:
@@ -7514,10 +7504,6 @@ items:
             items:
             - name: How to create a test package
               topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
-            - name: How to start debugging a failed test
-              topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Debugging_Failed_Tests
-            - name: How to wait on test results in pipelines
-              topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Pipelines_Wait_On_Results
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:
