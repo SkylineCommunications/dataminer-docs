@@ -63,6 +63,14 @@ From now on, it will no longer be possible for one protocol thread to add new ro
 
 Also, up to now, a clear action would incorrectly be able to set the iRows field of the array to 0 without taking the write lock. As a result, SLProtocol would lose count of the number of rows that were stored in the table and would not be able to clear any of those rows without an element restart.
 
+#### Service & Resource Management: Quarantine conflict error data would incorrectly include all quarantined usages of the affected bookings [ID 44869]
+
+<!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when a resource update triggered quarantine, in some cases, the conflict error data would incorrectly include all quarantined usages of the affected bookings, not just the ones caused by the current update.
+
+From now on, the conflict error data will only include the quarantined usages of the resource that was updated.
+
 #### Business intelligence: Active alarms table would not be updated when an alarm with 0% impact was cleared [ID 44892]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
