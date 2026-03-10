@@ -101,6 +101,14 @@ Also, in the different GQI components (i.e., *Table*, *Grid*, *Node edge graph*,
 
 When, in the query builder, you inserted a node (for example a filter) before a *Join* operator, up to now, some of the node's options (such as column selection, filter method, and value) would incorrectly not appear. As a result, it would not be possible to completely configure the node.
 
+#### GQI DxM: Display values created for numeric values would incorrectly be formatted using invariant culture [ID 44903]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when display values were created for numeric values, they would always be formatted using invariant culture (unless the data source overrode this behavior). As a result, in some cases, numeric values would be displayed with a decimal separator users did not expect.
+
+From now on, when display values are created for numeric values, by default, they will always be formatted using the culture of the user.
+
 #### Dashboards/Low-Code Apps - Query filter component: Problem when opening the operator selection box [ID 44918]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
