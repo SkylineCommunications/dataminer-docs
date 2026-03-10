@@ -127,6 +127,12 @@ When, in a *Query filter* component, you opened the operator selection box in or
 
 When an input component was fed data from another component, in some cases, the value received from the other component would incorrectly not be visible in that input component.
 
+#### Dashboards/Low-Code Apps - Maps component: Map sessions could close unexpectedly [ID 44931]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In some rare cases, a map session could close unexpectedly, causing markers or lines to disappear from the map.
+
 #### Dashboards/Low-Code Apps - GQI components: Problem when data from another component changed rapidly [ID 44934]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
