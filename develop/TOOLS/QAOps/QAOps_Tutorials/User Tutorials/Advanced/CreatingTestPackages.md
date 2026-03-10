@@ -286,7 +286,7 @@ static async Task LoginLocally(IPage page)
 
 
 > [!NOTE]
-> In this example, the test is written as a .NET 10 C# file-based app. You can also implement tests in another language or by using a different testing framework.
+> In this example, the test is written as a .NET 10 C# file-based app. You can also implement tests in another language or by using a different testing framework. C# file-based apps can be run directly from a CLI by using `dotnet run`.
 
 ## Step 5: Harvest the test
 
