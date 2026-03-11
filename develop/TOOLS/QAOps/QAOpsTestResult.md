@@ -190,7 +190,9 @@ Push-TestCaseResult -Outcome Ok -Name "Nightly sanity"
 
 - Missing tags in output: Empty or whitespace-only `-Tags` values are omitted.
 
-## See also
+## Additional resources
+
+You can use the following commands to get a detailed block of help directly in the CLI:
 
 - `Get-Help Push-TestCaseResult -Full`
 
