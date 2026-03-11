@@ -75,4 +75,4 @@ During its lifecycle, a test run can move through the following stages:
 
 A [QAOps configuration](xref:QAOps_Configuration) can keep only a limited amount of data in memory. You configure this by defining how many test suites and test runs the configuration retains.
 
-It is important to understand that QAOps is currently built to block releases when regressions are detected and to support regression testing of changes. Long-term data storage is not yet available, though it is planned for 2026. Do not use the system as long-term storage by setting an excessively high value for "Maximum test runs to keep".
+It is important to understand that QAOps is currently built to block releases when regressions are detected and to support regression testing of changes. Long-term data storage is not yet available, though it is planned for 2026. Do not use the system as long-term storage by setting an excessively high value for the *Test runs to keep* setting when you set up a QAOps configuration.
