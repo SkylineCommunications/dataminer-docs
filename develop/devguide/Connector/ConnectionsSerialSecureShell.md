@@ -366,6 +366,20 @@ DataMiner will propose the following hash-based message authentication algorithm
 
 ***
 
+### User authentication methods
+
+DataMiner supports the following user authentication methods:
+
+- publickey ([RFC 4252](https://www.rfc-editor.org/rfc/rfc4252.html))
+- password ([RFC 4252](https://www.rfc-editor.org/rfc/rfc4252.html))
+- keyboard-interactive ([RFC 4256](https://www.rfc-editor.org/rfc/rfc4256.html))
+
+When connecting to an SSH server, DataMiner first retrieves the supported user authentication methods from the server.
+If the server does not provide a list of supported methods, the methods mentioned above are assumed.
+
+DataMiner will try each authentication method listed above until the SSH server responds that user authentication succeeded.
+If the SSH server responds with partial successful authentication, DataMiner will continue with the remaining authentication methods, if any. In case none of the authentication methods resulted in successful user authentication, the connection attempt will fail.
+
 ## Selecting the key exchange algorithm
 
 To specify the key exchange algorithm to be used when connecting to an SSH server, define a serial connection that specifies the key exchange algorithm in the KexAlgorithms tag.<!-- RN 13897 -->
