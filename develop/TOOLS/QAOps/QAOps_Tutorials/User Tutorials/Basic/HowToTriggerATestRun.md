@@ -118,11 +118,11 @@ Expected duration: 15 minutes.
 
    - `TOKEN`: The token value you copied earlier. Make sure this value is enclosed in double quotes.
 
-   - `TESTSUITE`: the test suite ID you copied earlier.
+   - `TESTSUITE`: The test suite ID you copied earlier.
 
-   - `CONFIGURATION`: the configuration ID you copied earlier.
+   - `CONFIGURATION`: The configuration ID you copied earlier.
 
-   - `MYNAME`: your name, nickname, or another identifier that helps you find your request.
+   - `MYNAME`: Your name, nickname, or another identifier that helps you find your request.
 
    > [!NOTE]
    > For production systems, leave out the -san argument. This argument indicates to which QAOps System you want to send commands, in this case the QAOps Sandbox system. The default is the production QAOps system.
