@@ -4,14 +4,14 @@ uid: Ticketing_1.0.2
 
 # Ticketing 1.0.2
 
-> [!IMPORTANT]
-> This version of the Ticketing app is intended for use with DataMiner version 10.5.0 up to (and including) 10.5.8.
+> [!NOTE]
+> This version of the Ticketing app is only intended for use with DataMiner version 10.5.0 up to (and including) 10.5.8.
 
 ## New features
 
 #### Ticketing app: Initial functionality [ID 44970]
 
-The new Ticketing application provides a centralized way to create, manage, and track operational tickets, allowing users to handle incidents, manage the ticket lifecycle through state transitions, link tickets to elements, services and alarms and integrate with external ticketing systems.
+The new Ticketing app provides a centralized way to create, manage, and track operational tickets, allowing users to handle incidents, manage the ticket lifecycle through state transitions, link tickets to elements, services and alarms and integrate with external ticketing systems.
 
 With this initial release, you can:
 
