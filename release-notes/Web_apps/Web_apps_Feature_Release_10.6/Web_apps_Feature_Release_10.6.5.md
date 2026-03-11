@@ -20,6 +20,25 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
+#### Dashboards/Low-Code Apps - Node edge graph component: New advanced settings to optimize how concurrent edges are displayed between two nodes [ID 44791]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When configuring a *Node edge graph* component, you can now use the following advanced settings to optimize how concurrent edges are displayed between two nodes.
+
+| Setting | Description |
+|---------|-------------|
+| Max bundle size | When the number of edges exceeds this value, the edges will automatically be combined into a single line.<br>The color and style of that single line will be based either on the highest alarm severity (when in alarm mode) or the lowest color (when in analytical mode).<br>Clicking the line will expand all edges, revealing their actual values and colors.<br>Default value: 20 |
+| Spread offset   | The distance from the source/destination node where edges begin to spread.<br>Default value: 0% |
+| Spread length   | The portion of the path where edges spread apart from the connection point.<br>Default value: 25% |
+| Max spread size | The maximum distance occupied by bundled edges.<br>Default value: 80px |
+| Min gap         | The minimum distance between adjacent edges in a bundle.<br>Default value: 15px |
+
+> [!NOTE]
+>
+> - The *Min gap* setting has priority over the *Max spread size* setting. Having 10 edges with a *Min gap* of 5px will exceed a *Max spread size* of 40px.
+> - The above-mentioned settings will only be accessible when you added the `?showAdvancedSettings=true` argument to the URL of the dashboard or the low-code app.
+
 #### Dashboards/Low-Code Apps - Node edge graph component: Node or edge labels can now be linked to data from another component [ID 44907]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
@@ -36,7 +55,7 @@ Per node query linked to a *Node edge graph* component, you can configure *node 
 
 From now on, it will be possible to cancel a node movement by pressing the ESC key.
 
-When you do so, the move event will not be executed, and the node will automatically return to its original position.
+When you do so, the move event will not be executed, and the node will automatically return to its last know position.
 
 ## Changes
 
