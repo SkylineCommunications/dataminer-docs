@@ -65,7 +65,7 @@ Optional components:
 
 ### TestHarvesting
 
-The `TestDiscovery.ps1` script automatically harvests tests from your whole Git repository during the build process.
+The `TestDiscovery.ps1` script can be written to harvests tests from your whole Git repository during the build process.
 
 If all your tests are already within the same solution, this script may not be necessary. It is mainly intended for repositories that have more than one solution. You can use other features such as:
 
