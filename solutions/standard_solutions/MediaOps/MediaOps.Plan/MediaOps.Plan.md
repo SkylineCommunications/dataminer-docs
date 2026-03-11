@@ -2,7 +2,7 @@
 uid: MediaOps.Plan
 ---
 
-# Plan
+# MediaOps Plan
 
 ## Applications
 
