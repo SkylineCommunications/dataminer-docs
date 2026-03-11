@@ -26,4 +26,4 @@ A workflow defines which resources and resource pools are needed for an operatio
 
 Workflow Designer allows you to use resource pools in your workflows, enabling you to specify which types of resources you need in your workflows, without the need to specify the exact resources up front.
 
-See [Creating workflows](xref:WFD_Creating_Workflows) and [Edit workflow panel](xref:WFD_Edit_Workflow) for more information to manage the workflows.
+See [Creating workflows](xref:WFD_Creating_Workflows) and [Edit workflow panel](xref:WFD_Edit_Workflow) for more information on how to manage workflows.
