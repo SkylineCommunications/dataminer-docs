@@ -112,6 +112,12 @@ Up to now, when you pasted a large piece of formatted text in such a text box, i
 
 Because of a number of enhancements, the DataMiner Comparison tool will now be able to manage larger files.
 
+#### Web upgrade: Prerequisite check will now verify whether .NET 10 is installed [ID 44906]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+When you install a DataMiner web upgrade package, from now on, a prerequisite check will verify whether Microsoft .NET 10 is installed. If not, the installation will fail.
+
 #### GQI DxM - Extensions: Display value of empty cells will no longer be discarded [ID 44947]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
