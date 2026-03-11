@@ -6,7 +6,7 @@ uid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
 
 In this tutorial, you create a basic low-code app, prepare a DataMiner test package to test it, and trigger a QAOps test run.
 
-For all tutorials, use the "QAOps Sandbox Environment": [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be).
+For all tutorials, use the "QAOps Sandbox Environment": [https://qaops-sandbox.skyline.be](https://qaops-sandbox.skyline.be) for access to QAOps.
 
 Expected duration: 15 to 25 minutes.
 
@@ -97,7 +97,7 @@ After the project opens, you should see the "Getting Started" Markdown file.
 
 ## Step 2: Create a low-code app to be tested
 
-If you have access to a DataMiner system, create a low-code app for this test.
+Using a different DataMiner system then QAOps Sandbox, create a low-code app for this test on an agent you have the necessary rights for creating low-code apps.
 
 1. In a browser, go to your DataMiner system.
 
@@ -111,7 +111,7 @@ If you have access to a DataMiner system, create a low-code app for this test.
 
 1. Drag *Text Input* from *Basic Controls*.
 
-1. Select the new *Text* (General) component, go to *Settings*, and enter an expression like "Welcome {COMPONENT.Page.\"Text input 2\".Value.Texts.Value}".
+1. Select the new *Text* (General) component, go to *Settings*, and enter an expression like "Welcome {COMPONENT.\"Current view\".\"Text input 2\".Value.Texts.Value}". You can begin by writing an open brace after the Welcome and follow the provided intellisense.
 
 1. Select the new *Text Input* (Basic Controls) component, go to *Settings*, and enable *Value Change*.
 
@@ -300,9 +300,8 @@ static async Task LoginLocally(IPage page)
 
 $ErrorActionPreference = 'Stop'
 
-$scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Definition
 # Base path four levels up, cross-platform
-$pathToSolutionRoot = Resolve-Path (Join-Path $scriptRoot '..\..\..\')
+$pathToSolutionRoot = Resolve-Path (Join-Path $PSScriptRoot '..\..\..\')
 
 $pathToGeneratedTests = Join-Path $PSScriptRoot 'tests.generated'
 $pathToGeneratedDependencies = Join-Path $PSScriptRoot 'dependencies.generated'
@@ -537,7 +536,7 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
 
 1. In Visual Studio, open *Solution Explorer* (shortcut: Ctrl+Alt+L).
 
-1. Right-click the solution and select *Build Solution*.
+1. Right-click the solution and select *ReBuild Solution*.
 
 1. Right-click *Solution 'MyFirstTestPackage'* and select *Open Folder in File Explorer*.
 
