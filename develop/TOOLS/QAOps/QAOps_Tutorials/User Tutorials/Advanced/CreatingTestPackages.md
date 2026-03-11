@@ -367,7 +367,7 @@ $pathToGeneratedTests = Join-Path $pathToTestHarvesting 'tests.generated'
 $pathToGeneratedDependencies = Join-Path $pathToTestHarvesting 'dependencies.generated'
 $pathToTests = Join-Path $PathToTestPackageContent 'Tests'
 $pathToDependencies = Join-Path $PathToTestPackageContent 'Dependencies'
-$pathToPlaywrightUiTest = Join-Path $pathToGeneratedTests 'PlaywrightUITesting'
+$pathToPlaywrightUiTest = Join-Path $pathToGeneratedTests 'PlaywrightUITest'
 
 # Track script start time
 $scriptStart = Get-Date
@@ -430,7 +430,7 @@ try {
 
         Write-Host "Playwright UI test SUCCEEDED." -ForegroundColor Green
 
-        try { Push-TestCaseResult -Outcome 'OK' -Name 'pipeline_PlaywrightUITesting' -Duration ((Get-Date) - $scriptStart) -Message $playwrightMessage -TestAspect Assertion } catch {}
+        try { Push-TestCaseResult -Outcome 'OK' -Name 'pipeline_PlaywrightUITest' -Duration ((Get-Date) - $scriptStart) -Message $playwrightMessage -TestAspect Assertion } catch {}
     }
     else {
         if ([string]::IsNullOrWhiteSpace($playwrightMessage)) { 
@@ -439,7 +439,7 @@ try {
 
         Write-Host "Playwright UI test FAILED." -ForegroundColor Red
 
-        try { Push-TestCaseResult -Outcome 'Fail' -Name 'pipeline_PlaywrightUITesting' -Duration ((Get-Date) - $scriptStart) -Message $playwrightMessage -TestAspect Assertion } catch {}
+        try { Push-TestCaseResult -Outcome 'Fail' -Name 'pipeline_PlaywrightUITest' -Duration ((Get-Date) - $scriptStart) -Message $playwrightMessage -TestAspect Assertion } catch {}
 
         throw "Playwright UI test failed with exit code $playwrightExitCode."
     }
