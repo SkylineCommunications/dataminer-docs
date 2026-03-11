@@ -32,7 +32,17 @@ uid: General_Feature_Release_10.6.5
 
 ## New features
 
-*No features have been added yet.*
+#### Automation: DEBUG preprocessor directive will now be added to a C# code block when you select the 'Compile in DEBUG mode' option [ID 44958]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+From now on, when you select the *Compile in DEBUG mode* option in the *Advanced* section of a C# code block, a `DEBUG` preprocessor directive will automatically be added inside that code block. In that preprocessor directive, you can then add code that will only be compiled when in DEBUG mode.
+
+```csharp
+#if DEBUG
+    engine.Log("This code is only compiled in DEBUG mode.");
+#endif
+```
 
 ## Changes
 
