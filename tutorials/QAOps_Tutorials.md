@@ -7,7 +7,7 @@ uid: QAOps_Tutorials
 > [!IMPORTANT]
 > This section includes information that is only applicable to Skyline employees.
 
-## QAOps User app
+## QAOps User — Basic
 
 | Name | Description |
 |--|--|
@@ -16,8 +16,8 @@ uid: QAOps_Tutorials
 | [Viewing test results](xref:QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results) | Learn how to open a QAOps test run and interpret what each test result means. |
 | [Preventing unnecessary costs as a user](xref:QAOps_Tutorials_User_Tutorials_Basic_Avoiding_Unnecessary_Costs) | Learn how to clean up the DaaS servers used for QAOps test runs and thereby prevent unnecessary costs. |
 
-## QAOps Operator app
+## QAOps User — Advanced
 
 | Name | Description |
 |--|--|
-| | |
+| [Creating a test package](xref:QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages) | |

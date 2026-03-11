@@ -7502,7 +7502,7 @@ items:
               topicUid: QAOps_Tutorials_User_Tutorials_Basic_Avoiding_Unnecessary_Costs
           - name: Advanced
             items:
-            - name: How to create a test package
+            - name: Creating a test package
               topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
     - name: Third-party Tools
       topicUid: ThirdPartyTools
