@@ -300,9 +300,8 @@ static async Task LoginLocally(IPage page)
 
 $ErrorActionPreference = 'Stop'
 
-$scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Definition
 # Base path four levels up, cross-platform
-$pathToSolutionRoot = Resolve-Path (Join-Path $scriptRoot '..\..\..\')
+$pathToSolutionRoot = Resolve-Path (Join-Path $PSScriptRoot '..\..\..\')
 
 $pathToGeneratedTests = Join-Path $PSScriptRoot 'tests.generated'
 $pathToGeneratedDependencies = Join-Path $PSScriptRoot 'dependencies.generated'
