@@ -34,7 +34,7 @@ Expected duration: 5 minutes.
 
 - [Step 5: Verify that the request was received](#step-5-verify-that-the-request-was-received)
 
-- [Step 6: Find the test run results](#step-6-find-the-test-run-results-and-delete-the-server-used-for-the-test-run)
+- [Step 6: Find the test run results and delete the server used for the test run](#step-6-find-the-test-run-results-and-delete-the-server-used-for-the-test-run)
 
 ## Step 1: Download, install, and verify the QAOps tool
 
@@ -125,11 +125,11 @@ Expected duration: 5 minutes.
 
    - `TOKEN`: The token value you copied earlier. Make sure this value is enclosed in double quotes.
 
-   - `TESTSUITE`: the test suite ID you copied earlier.
+   - `TESTSUITE`: The test suite ID you copied earlier.
 
-   - `CONFIGURATION`: the configuration ID you copied earlier.
+   - `CONFIGURATION`: The configuration ID you copied earlier.
 
-   - `MYNAME`: your name, nickname, or another identifier that helps you find your request.
+   - `MYNAME`: Your name, nickname, or another identifier that helps you find your request.
 
 > [!IMPORTANT]
 > For production systems, leave out the `-san` argument.

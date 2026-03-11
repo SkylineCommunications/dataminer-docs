@@ -557,13 +557,13 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
 
     - `TOKEN`: The token value you copied earlier. Make sure this value is enclosed in double quotes.
 
-    - `TESTSUITE`: the test suite ID you copied earlier.
+    - `TESTSUITE`: The test suite ID you copied earlier.
 
-    - `CONFIGURATION`: the configuration ID you copied earlier.
+    - `CONFIGURATION`: The configuration ID you copied earlier.
 
-    - `MYNAME`: your name, nickname, or another identifier that helps you find your request.
+    - `MYNAME`: Your name, nickname, or another identifier that helps you find your request.
 
-    - `TESTFILEPATH`: the test package filepath you copied earlier. Make sure this value is enclosed in double quotes
+    - `TESTFILEPATH`: The test package filepath you copied earlier. Make sure this value is enclosed in double quotes
 
     > [!NOTE]
     > For production systems, leave out the `-san` argument. This argument specifies which QAOps system receives the command. In this example, it targets the QAOps sandbox system. The default target is the production QAOps system.
