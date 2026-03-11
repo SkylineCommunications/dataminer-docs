@@ -148,7 +148,7 @@ https://localhost/app/991d7084-cd0a-412b-bffe-0ea176fc5430/Page
 
 1. Right-click *Solution 'MyFirstTestPackage'*, select *Add*, and then select *New Item* (Ctrl+Shift+A).
 
-1. Select *C# Class* and name it "PlaywrightUITest.cs".
+1. Select *C# Class* and name it **"PlaywrightUITest.cs"**. (Double-check the name matches exactly, as this is important for this specific tutorial.)
 
 1. Confirm that the file is added under *Solution Items*.
 
