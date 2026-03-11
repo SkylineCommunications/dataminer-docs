@@ -30,6 +30,12 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Fixes
 
+#### Visual Overview: Child shapes of a Children shape would not be initialized correctly [ID 44816]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In some cases, child shapes of a Children shape would not be initialized correctly, causing it to be drawn inaccurately.
+
 #### Automation: Problem when discarding changes made to dummy, parameter, or memory files [ID 44853]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
