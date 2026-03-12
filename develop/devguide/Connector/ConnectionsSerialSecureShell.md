@@ -374,11 +374,9 @@ DataMiner supports the following user authentication methods:
 - password ([RFC 4252](https://www.rfc-editor.org/rfc/rfc4252.html))
 - keyboard-interactive ([RFC 4256](https://www.rfc-editor.org/rfc/rfc4256.html))
 
-When connecting to an SSH server, DataMiner first retrieves the supported user authentication methods from the server.
-If the server does not provide a list of supported methods, the methods mentioned above are assumed.
+When connecting to an SSH server, DataMiner first retrieves the supported user authentication methods from the server. If the server does not provide a list of supported methods, the methods mentioned above are assumed.
 
-DataMiner will try each authentication method listed above until the SSH server responds that user authentication succeeded.
-If the SSH server responds with partial successful authentication, DataMiner will continue with the remaining authentication methods, if any. In case none of the authentication methods resulted in successful user authentication, the connection attempt will fail.
+DataMiner will try each authentication method listed above until the SSH server responds that user authentication has succeeded. If the SSH server responds with partially successful authentication, DataMiner will continue with the remaining authentication methods, if any. In case none of the authentication methods results in successful user authentication, the connection attempt will fail.
 
 ## Selecting the key exchange algorithm
 
