@@ -35,7 +35,7 @@ To take a memory dump with ProcDump:
 1. Open a command prompt (*cmd.exe*) in the folder containing *procdump.exe*.
 1. Run `procdump -ma "DataMinerCube.exe"`
 
-In the command above, replace *DataMinerCube.exe* with the name or ID of the process you want to take a memory dump from. For example, to take a memory dump of the DataMiner Cube browser app (XBAP), specify *PresentationHost.exe* instead.
+In the command above, replace *DataMinerCube.exe* with the name or ID of the process you want to take a memory dump from. For example, to take a memory dump of the SLScripting process, specify *SLScripting.exe* instead.
 
 This tool has several interesting options, which are explained in the example section below.
 
@@ -54,7 +54,7 @@ To force garbage collection before the dump is created, you can add the option `
 
 In the examples below, unless we explicitly state otherwise, *ProcDump* is used.
 
-In all examples, a memory dump is taken of a process of the DataMiner Cube desktop application, of which only one instance is running on the client machine. In all cases, you can replace the name by *PresentationHost.exe* to make the example apply to the DataMiner Cube browser version (XBAP). Alternatively, you can replace the name by the process ID in case multiple instances with this name are running.
+In all examples, a memory dump is taken of a process of DataMiner Cube, of which only one instance is running on the client machine. If multiple instances are running, you can replace the process name with the corresponding process ID.
 
 ### Crash
 

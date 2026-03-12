@@ -19,7 +19,7 @@ Estimated duration: 30 minutes
 The tutorial consists of the following steps:
 
 - [Step 1: Create a staging DataMiner System in the cloud](#step-1-create-a-staging-dataminer-system-in-the-cloud)
-- [Step 2: Install the DataMiner Cube desktop application](#step-2-install-the-dataminer-cube-desktop-application)
+- [Step 2: Install DataMiner Cube](#step-2-install-dataminer-cube)
 - [Step 3: Access your newly created DaaS system for the first time](#step-3-access-your-newly-created-daas-system-for-the-first-time)
 - [Step 4: Deploy the 'Generic HTTP Query' protocol from the Catalog](#step-4-deploy-the-generic-http-query-protocol-from-the-catalog)
 - [Step 5: Create an element to monitor a website of your choice](#step-5-create-an-element-to-monitor-a-website-of-your-choice)
@@ -37,7 +37,7 @@ Deploy a [DataMiner Community Edition system as a service](xref:Pricing_Commerci
 
 1. Wait until your DaaS system has been initialized. This can take around 15 minutes.
 
-## Step 2: Install the DataMiner Cube desktop application
+## Step 2: Install DataMiner Cube
 
 To access and interact with your new DataMiner System, install DataMiner Cube, the main DataMiner client application.
 

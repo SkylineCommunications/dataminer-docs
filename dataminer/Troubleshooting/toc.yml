@@ -2,8 +2,6 @@ items:
   - name: Error messages
     topicUid: ErrorMessages
     items:
-      - name: An error occurred in the application you were using
-        topicUid: An_error_occurred_in_the_application_you_were_using
       - name: Could not load type Maps.DataMinerMap
         topicUid: Could_not_load_type_Maps_DataMinerMap
       - name: Could not load Visio file
@@ -58,8 +56,6 @@ items:
         topicUid: Thread_problem_in_x
       - name: Timed out while flushing events from x
         topicUid: Timed_out_while_flushing_events
-      - name: Unknown Error
-        topicUid: Unknown_Error
   - name: Logging
     items:
       - name: Monitoring real-time communication between a DMA and an element

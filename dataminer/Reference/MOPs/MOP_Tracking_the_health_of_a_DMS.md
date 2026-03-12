@@ -45,14 +45,14 @@ Follow the steps below for each DMA in the DataMiner System.
 
    - In the *Task Manager* section:
 
-     - *CPU DataMinerCube* or *CPU PresentationHost* (depending on whether the Cube desktop app or browser app is used)
+     - *CPU DataMinerCube*
      - *CPU SL\**
      - *CPU Prunsrv*, *CPU mysql*, *CPU mssqlserver* or *CPU elasticsearch* (depending on which database or databases are used by the DMA)
      - *CPU DataMiner\**
      - *CPU NATS*
      - *Handles SL\**
      - *Threads SL\**
-     - *VM Size DataMinerCube* or *VM Size PresentationHost* (depending on whether the Cube desktop app or browser app is used)
+     - *VM Size DataMinerCube*
      - *VM Size Prunsrv*, *VM Size mysql*, *VM Size mssqlserver* or *VM Size elasticsearch* (depending on which database or databases are used by the DMA)
      - *VM Size SL\**
      - *VM Size DataMiner\**

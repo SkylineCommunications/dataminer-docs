@@ -54,7 +54,7 @@ It is possible to customize the landing page so that certain applications are no
 
 1. Specify the applications that should not be displayed in the *disallowed* setting.
 
-   For example, in the following configuration, the landing page will not show the possibility to install the DataMiner Cube desktop app or to open the Monitoring app:
+   For example, in the following configuration, the landing page will not show the possibility to install DataMiner Cube or to open the Monitoring app:
 
    ```txt
    var disallowed = ["InstallCube","HTML5"];

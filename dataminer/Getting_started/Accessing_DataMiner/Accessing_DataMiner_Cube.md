@@ -1,6 +1,6 @@
 ---
 uid: Accessing_DataMiner_Cube
-description: To use the DataMiner Cube desktop application, browse to the IP or name of your DMA using a modern browser and download Cube from the landing page.
+description: To use DataMiner Cube, browse to the IP or name of your DMA using a modern browser and download Cube from the landing page.
 ---
 
 # Accessing DataMiner Cube
