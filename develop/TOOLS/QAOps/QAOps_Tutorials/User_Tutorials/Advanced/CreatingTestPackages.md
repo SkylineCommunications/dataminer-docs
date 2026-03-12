@@ -8,7 +8,7 @@ In this tutorial, you create a basic low-code app, prepare a DataMiner test pack
 
 Expected duration: 15 to 25 minutes.
 
-The content and screenshots for this tutorial were created using DataMiner 10.6.4.
+The content and screenshots for this tutorial were created using DataMiner 10.6.4 and DIS 3.1.20.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ The content and screenshots for this tutorial were created using DataMiner 10.6.
   > [!IMPORTANT]
   > Contact <support.boost@skyline.be> to receive a username and password for access to the sandbox system.
 
-- The latest version of [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/).
+- [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/) version 3.1.20 or higher.
 
 - [Microsoft Visual Studio 2022 or higher](https://visualstudio.microsoft.com/downloads/), with the ASP.NET and web development workload enabled (see [Troubleshooting](xref:skyline_dataminer_sdk_troubleshooting#missing-manage-user-secrets-context-menu-in-visual-studio)).
 
