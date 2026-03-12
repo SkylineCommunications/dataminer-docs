@@ -64,7 +64,7 @@ To create the repository:
 
 3. In the "Install" automation script of the "Package" repository, add the necessary steps to import the SRM configuration:
 
-   1. Add the [Skyline.DataMiner.Core.AppPackageInstaller.SRM](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageInstaller.SRM) NuGet package (available on <nuget.org>) to the "Install" project. Be sure to select version 3.4.0 or higher.
+   1. Add the [Skyline.DataMiner.Core.AppPackageInstaller.SRM](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageInstaller.SRM) NuGet package (available on <nuget.org>) to the "Install" project. Be sure to select version 4.0.0 or higher.
 
    2. In the code of the "Install" script, reference the *Skyline.DataMiner.Srm.AppPackageInstaller* namespace.
 
