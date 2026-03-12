@@ -90,7 +90,7 @@ items:
           items:
           - name: Orchestration Script
             topicUid: MediaOpsLive_OrchestrationScript
-        - name: Mediation Layer
+        - name: Mediation layer
           topicUid: MediaOps.Live.Mediation
           items:
           - name: Connection Handler Script
@@ -99,19 +99,19 @@ items:
           items:
           - name: Generic Matrix
             items:
-            - name: Provisioning endpoints and virtual signal groups manually
+            - name: Manually provisioning endpoints and virtual signal groups for a Generic Matrix element
               topicUid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
-            - name: Provisioning endpoints and virtual signal groups using code
+            - name: Provisioning endpoints and virtual signal groups for a Generic Matrix element using code
               topicUid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code
-            - name: Provisioning endpoints and virtual signal groups using import
+            - name: Provisioning endpoints and virtual signal groups for a Generic Matrix element using CSV import
               topicUid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import
-            - name: Implementing the connection handler script
+            - name: Creating a connection handler script for a Generic Matrix element
               topicUid: Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript
           - name: IP Matrix
             items:
-            - name: Provisioning endpoints and virtual signal groups manually
+            - name: Manually provisioning endpoints and virtual signal groups for an IP Matrix element
               topicUid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
-            - name: Implementing the connection handler script
+            - name: Creating a connection handler script for an IP Matrix element
               topicUid: Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript
           - name: Orchestration Events
             items:

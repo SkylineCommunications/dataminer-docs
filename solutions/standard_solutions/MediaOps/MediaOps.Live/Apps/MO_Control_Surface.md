@@ -4,47 +4,58 @@ uid: MO_Control_Surface
 
 # Control Surface app
 
-The Control Surface app is a software-defined button panel that allows to connect or disconnect sources and destinations defined in the [Virtual Signal Groups app](xref:MO_Virtual_Signal_Groups). It allows operators to manage connections in the network without having to worry about the specifics of the underlying technology and/or devices. Scheduled connections created by [Jobs](xref:MO_Scheduling) are also reflected in the Control Surface app, avoiding operators to unknowingly overwrite scheduled connections, while keeping them in control to change scheduled connections ad-hoc if they really need to.
+The Control Surface app is a software-defined button panel that allows you to connect or disconnect sources and destinations defined in the [Virtual Signal Groups app](xref:MO_Virtual_Signal_Groups). It allows operators to manage connections in the network without having to worry about the specifics of the underlying technology and/or devices.
 
-The app shows two main panels, one on the left with all sources defined in the system, and one on the right with the destinations. Once the user has correctly configured sources and destinations in the [Virtual Signal Groups app](xref:MO_Virtual_Signal_Groups), and set up the [Mediation Layer](xref:MediaOps.Live.Mediation) for the DataMiner elements associated with these sources and destinations, the Control Surface app provides the following functionality:
+Scheduled connections created by [jobs](xref:MO_Scheduling) are also reflected in the Control Surface app, so that operators will not unknowingly overwrite scheduled connections, and they can change scheduled connections ad hoc when needed.
 
-- [Connecting a source to 1 or multiple destinations](#connecting-a-source-to-1-or-multiple-destinations)
+The app shows two main panels, one on the left with all sources defined in the system, and one on the right with the destinations. Once sources and destinations have been correctly configured in the [Virtual Signal Groups app](xref:MO_Virtual_Signal_Groups) and the [mediation layer](xref:MediaOps.Live.Mediation) for the DataMiner elements associated with these sources and destinations has been set up, the Control Surface app provides the following functionality:
+
+- [Connecting a source to one or multiple destinations](#connecting-a-source-to-one-or-multiple-destinations)
 - [Disconnecting destinations](#disconnecting-destinations)
-- [Locking & unlocking of destinations](#locking-and-unlocking-of-destinations)
-- [Filtering sources & destinations](#filtering-sources-and-destinations)
+- [Locking and unlocking destinations](#locking-and-unlocking-destinations)
+- [Filtering sources and destinations](#filtering-sources-and-destinations)
 
-## Connecting a source to 1 or multiple destinations
+## Connecting a source to one or multiple destinations
 
-Connections can be created between a source and 1 or multiple destinations by selecting the source and destination(s) and clicking the 'Connect' button.
+To create connections between a source and one or more destinations, select the source and destination(s) and click the *Connect* button.
 
 > [!TIP]
-> Selecting or unselecting 1 or multiple buttons can be done by using CTRL + Click.
+> To select or clear the selection of more than one item at a time, use CTRL + click.
 
-When the 'Connect' button is clicked, the [mediation layer](xref:MediaOps.Live.Mediation) is triggered to connect the selected source to each selected destination. When the connection is successfully made, then the destination button will reflect the connected source. An additional icon will be visible on the button in case multiple sources are connected or when certain levels are shuffled.
+When the *Connect* button is clicked, the [mediation layer](xref:MediaOps.Live.Mediation) is triggered to connect the selected source to each selected destination.
 
-It's also possible to connect specific levels of a source to a destination by selecting the individual levels at the bottom of the app and clicking the 'Connect Level' button.
+When the connection is successfully made, the destination button will reflect the connected source. An additional icon will be visible on the button in case multiple sources are connected or when certain levels are shuffled.
+
+You can also connect specific levels of a source to a destination by selecting the individual levels at the bottom of the app and clicking the *Connect Level* button.
 
 > [!NOTE]
-> Connecting a subset of a source can only be done to a single destination, and also allows to shuffle a specific level.
+> Connecting a subset of a source can only be done to a single destination and also allows you to shuffle a specific level.
 
 ## Disconnecting destinations
 
-Disconnecting 1 or multiple destinations is done by selecting the relevant destinations and clicking the 'Disconnect' button. For disconnections, no source needs to be selected and the selected source (if any) is irrelevant.
-Same as when creating connections, when the 'Disconnect' button is clicked, the [mediation layer](xref:MediaOps.Live.Mediation) is triggered to handle the disconnect.
+To disconnect one or more destinations, select the relevant destination(s) and click the *Disconnect* button. There is no need to select a source, as any source selection is irrelevant for a disconnection.
 
-It's also possible to disconnect specific levels of a destination by selecting the levels for the selected destination and clicking the 'Disconnect Level' button.
+Similar to when connections are created, clicking the *Disconnect* button will trigger the [mediation layer](xref:MediaOps.Live.Mediation) to handle the disconnect.
 
-## Locking and unlocking of destinations
+You can also disconnect specific levels of a destination by selecting the levels for the selected destination and clicking the *Disconnect Level* button.
 
-Users can lock a destination to prevent anyone from overwriting the destination's connection state. This is possible both with destinations that have an active connection and destinations that don’t. When locking a destination, the user can provide a reason for the lock. The Control Surface app allows selecting multiple destinations and locking them all at once (with a single reason).
+## Locking and unlocking destinations
 
-When a user tries to change the connection state of a locked destination, they get a pop-up message warning them that the destination is locked, who locked the destination and the reason they provided. However, anyone can unlock a locked destination, not only the user who locked it, and then proceed to change the connection state of that destination.
+You can lock a destination to prevent anyone from overwriting the destination's connection state. This is possible regardless of whether the destination currently has an active connection.
+
+When locking a destination, you can provide a reason for the lock.
+
+The Control Surface app also allows you to select multiple destinations and locking them all at once (with a single reason).
+
+When a user tries to change the connection state of a locked destination, they will see a pop-up message mentioning that the destination is locked, who locked the destination, and the reason provided for the lock. However, **anyone can unlock** a locked destination, not only the user who locked it, and then proceed to change the connection state of that destination.
 
 > [!IMPORTANT]
-> Connections created from a [Job](xref:MO_Scheduling) will ignore (and overwrite) any lock present on the destination and add a reference to the job on the destination lock.
+> Connections created from a [job](xref:MO_Scheduling) will ignore (and overwrite) any lock present on a destination and add a reference to the job on the destination lock.
 
 ## Filtering sources and destinations
 
-The Control Surface app provides a filter control for both the sources and the destinations using [categories](xref:MO_Virtual_Signal_Groups#categories).
+The Control Surface app provides a filter control for both the sources and the destinations based on [categories](xref:MO_Virtual_Signal_Groups#categories).
 
-When opening the Control Surface app, the filter shows the top-level categories defined for the sources and the destinations. When clicking one of the categories, the buttons on the panel will be filtered to only show sources or destinations part of that category, or any of its child categories. The filter control will now display the child categories of the selected category, allowing the user to further refine the selection of sources or destinations they want to see. This can be used to navigate all the way down the categories tree structure. The filter control always shows the currently selected filter path. The user can at all times return to one of the higher-level categories by clicking it in the filter path. Clicking on ‘Root’ will reset the filter to its default state.
+The filter control at the top of the Control Surface app shows the top-level categories defined for the sources and the destinations. When you click one of the categories, the buttons on the panel will be filtered to only show sources or destinations part of that category or any of its child categories. The filter control will now display the child categories of the selected category, allowing you to further refine the selection of sources or destinations you want to see. This can be used to navigate all the way down the category tree structure.
+
+The filter control always shows the currently selected filter path. At any time, you can return to one of the higher-level categories by clicking it in the filter path. Clicking *Root* will reset the filter to its default state.

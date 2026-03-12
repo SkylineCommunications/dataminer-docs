@@ -2,7 +2,7 @@
 uid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
 ---
 
-# Provision endpoints and virtual signal groups for an IP matrix solution
+# Manually provisioning endpoints and virtual signal groups for an IP Matrix element
 
 In this tutorial, you will learn how to provision endpoints and virtual signal groups (VSGs) for an **IP Matrix** solution.
 These endpoints and VSGs will be used to visualize and manage the connections in the MediaOps.LIVE solution.
@@ -157,5 +157,4 @@ Use role `Source` for the encoders and role `Destination` for the decoders.
 ## Up next
 
 In this tutorial, you learned how to manually create endpoints and virtual signal groups for an IP matrix solution using the Virtual Signal Groups low-code app.
-You can now create a connection handler by following the steps in the [Create a connection handler script for IP Matrix](xref:Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript) tutorial.
-Once you have created the connection handler script, you can create connections between the encoders and decoders using the Control Surface low-code app.
+You can now create a connection handler by following the steps in the tutorial [Creating a connection handler script for an IP Matrix element](xref:Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript). Once you have created the connection handler script, you can create connections between the encoders and decoders using the Control Surface low-code app.

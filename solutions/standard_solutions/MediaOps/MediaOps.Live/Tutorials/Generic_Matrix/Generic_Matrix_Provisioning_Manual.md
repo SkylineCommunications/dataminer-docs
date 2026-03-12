@@ -2,7 +2,7 @@
 uid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
 ---
 
-# Provisioning endpoints and virtual signal groups for Generic Matrix manually
+# Manually provisioning endpoints and virtual signal groups for a Generic Matrix element
 
 In this tutorial, you will learn how to provision endpoints and virtual signal groups (VSGs) for the **Generic Matrix** connector.
 These endpoints and VSGs will be used to visualize and manage the connections in the MediaOps.LIVE solution.
@@ -13,9 +13,9 @@ Expected duration: 30 minutes
 
 There are three ways to create endpoints and VSGs:
 
-- [Manually, using the Virtual Signal Groups low-code app](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual). (This tutorial)
-- [Through an automation script, using the MediaOps.LIVE API](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code).
-- [Using the CSV import functionality in the Virtual Signal Groups app](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import).
+- Manually, using the Virtual Signal Groups low-code app (explained in the current tutorial)
+- [Through an automation script, using the MediaOps.LIVE API](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code)
+- [Using the CSV import functionality in the Virtual Signal Groups app](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import)
 
 ## Prerequisites
 
@@ -99,7 +99,7 @@ Use role `Source` for input VSGs and role `Destination` for output VSGs.
 ## Step 4: Create a test connection
 
 To be able to create a connection between a source and destination, you first need to create a connection handler script for Generic Matrix.
-To do this, follow the steps in the [Create a connection handler script for Generic Matrix](xref:Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript) tutorial.
+To do this, follow the steps in the tutorial [Creating a connection handler script for a Generic Matrix element](xref:Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript).
 
 Once you have created the connection handler script, you can create a test connection.
 
@@ -112,4 +112,4 @@ Once you have created the connection handler script, you can create a test conne
 
 You're now able to create endpoints and virtual signal groups one-by-one manually in the app, but in many cases there will be too many to do this manually.
 In the next tutorial, you will learn how to automate this process using an automation script.
-To continue, see [Provision endpoints and virtual signal groups for Generic Matrix using code](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code).
+To continue, see [Provisioning endpoints and virtual signal groups for a Generic Matrix element using code](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code).

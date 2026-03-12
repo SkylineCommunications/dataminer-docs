@@ -72,14 +72,14 @@ After a category structure is defined, sources and destination can be assigned t
 The Virtual Signal Groups app is primarily used as an engineering tool to manage and inspect individual endpoints and virtual signal groups. Bulk editing can be done by either [exporting and/or importing endpoints and/or virtual signal groups](#exporting-and-importing-endpoints-andor-virtual-signal-groups) or by [using the API](#using-the-api) in an automation script to create, update, or delete endpoints and virtual signal groups.
 
 > [!TIP]
-> To learn how to manually provision endpoints and virtual signal groups, follow the tutorial [Provisioning endpoints and virtual signal groups for Generic Matrix manually](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual).
+> To learn how to manually provision endpoints and virtual signal groups, follow the tutorial [Manually provisioning endpoints and virtual signal groups for a Generic Matrix element](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual).
 
 ### Exporting and importing endpoints and/or virtual signal groups
 
 The Virtual Signal Groups app allows you to export and import endpoints and virtual signal groups using CSV files, so that you can create and edit these objects in bulk.
 
 > [!TIP]
-> To learn how to provision endpoints and virtual signal groups using a CSV import, follow the tutorial [Provisioning endpoints and virtual signal groups using import](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import).
+> To learn how to provision endpoints and virtual signal groups using a CSV import, follow the tutorial [Provisioning endpoints and virtual signal groups for a Generic Matrix element using CSV import](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import).
 
 ### Using the API
 
@@ -89,4 +89,4 @@ MediaOps Live also exposes an API which allows you (amongst other things) to pro
 > Full API documentation is available on [GitHub](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live/tree/main/Documentation).
 
 > [!TIP]
-> To learn how to provision endpoints and virtual signal groups using code, follow the tutorial [Provisioning endpoints and virtual signal groups using code](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code).
+> To learn how to provision endpoints and virtual signal groups using code, follow the tutorial [Provisioning endpoints and virtual signal groups for a Generic Matrix element using code](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code).

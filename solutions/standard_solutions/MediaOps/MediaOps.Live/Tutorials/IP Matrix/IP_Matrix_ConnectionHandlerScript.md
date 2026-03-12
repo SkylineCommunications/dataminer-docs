@@ -2,7 +2,7 @@
 uid: Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript
 ---
 
-# Create a connection handler script for IP Matrix
+# Creating a connection handler script for an IP Matrix element
 
 A connection handler script is part of the MediaOps.LIVE mediation layer and is responsible for detecting and managing connections between endpoints for a specific connector (for example, a broadcast controller).
 
@@ -11,14 +11,14 @@ This tutorial walks you through the process of creating your own connection hand
 Expected duration: 60 minutes
 
 > [!TIP]
-> The following [documentation](xref:MediaOps.Live.Mediation#connection-handler) described in more detail what a connection handler is and how it is used in MediaOps Live.
+> For details about connection handler scripts and how they are used in MediaOps Live, refer to [Connection handler scripts](xref:MediaOps.Live.Mediation#connection-handler-scripts).
 
 ## Prerequisites
 
 - [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) installed on the DMA.
 - [Visual Studio](https://visualstudio.microsoft.com) installed on your machine.
 - [DIS](https://docs.dataminer.services/develop/TOOLS/DIS/Introduction.html) extension installed in Visual Studio.
-- The `Generic Dynamic Table` connector, elements, endpoints and VSGs that were provisioned in [this tutorial](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual).
+- The `Generic Dynamic Table` connector, elements, endpoints and VSGs provisioned in the tutorial [Manually provisioning endpoints and virtual signal groups for an IP Matrix element](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual).
 
 ## Overview
 
