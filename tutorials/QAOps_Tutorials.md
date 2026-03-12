@@ -20,4 +20,4 @@ uid: QAOps_Tutorials
 
 | Name | Description |
 |--|--|
-| [Creating a test package](xref:QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages) | |
+| [Creating a test package](xref:QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages) | Learn how to create a test package to test a basic low-code app. |
