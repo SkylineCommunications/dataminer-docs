@@ -132,7 +132,7 @@ You can follow the steps below or watch this short video, which shows you how to
 
      - **The element ... after**: This setting determines when the element will go into slow poll mode:
 
-       - after a fixed number of seconds (between 1 and 300), or
+       - after the element has been in timeout for a fixed number of seconds (between 1 and 300), or
        - after having been put in a timeout state for a specific number of times (between 1 and 500).
 
      - **Ping interval**: The interval (in seconds) between two ping commands. This must be between 1 and 300 seconds.
