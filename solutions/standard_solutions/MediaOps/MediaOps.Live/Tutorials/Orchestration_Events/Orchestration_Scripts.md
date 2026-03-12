@@ -2,11 +2,11 @@
 uid: Tutorial_MediaOpsLive_CreateOrchestrationScripts
 ---
 
-# Create orchestration scripts
+# Creating orchestration scripts
 
-In this tutorial, we follow up on the [create orchestration events tutorial](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents) by creating orchestration scripts that can be used by orchestration events.
-We learned that scripts can be attached to orchestration events to perform custom actions when the event is triggered.
-Orchestration scripts are a dedicated type of script supporting interaction with the event itself and provide easy access to event data and configuration parameters.
+As the sequel to the tutorial [Creating orchestration events](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents), this tutorial will show you how to create orchestration scripts that can be used by orchestration events to perform custom actions when the events are triggered.
+
+An orchestration script is a dedicated type of script supporting interaction with the event itself and providing easy access to event data and configuration parameters.
 
 Expected duration: 30 minutes
 
@@ -16,7 +16,7 @@ Expected duration: 30 minutes
 - [MediaOps Live Demo Package](https://catalog.dataminer.services/details/48d9d327-d21b-49b2-8958-989691cf2012) installed on the DMA.
 - [Visual Studio](https://visualstudio.microsoft.com) installed on your machine.
 - [DIS](https://docs.dataminer.services/develop/TOOLS/DIS/Introduction.html) extension installed in Visual Studio.
-- Completion of the [create orchestration events tutorial](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents) tutorial.
+- The tutorial [Creating orchestration events](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents) must have been completed.
 
 ## Overview
 

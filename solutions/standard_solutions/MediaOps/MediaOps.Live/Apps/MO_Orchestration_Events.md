@@ -10,57 +10,50 @@ The Orchestration Events app provides visibility on the orchestration events def
 
 The following pages are available in the app:
 
-- **Arrivals Board**: Shows the list of events that started up to 5 minutes in the past and are starting up to 8 hours in the future.
+- ![Arrivals Board page icon in navigation pane](~/solutions/images/MO_OE_Arrivals_Board_icon.png) **Arrivals Board**: Shows the list of events starting up to 5 minutes in the past and up to 8 hours in the future.
 
-- **Search Events**: Allows to search for specific events by name, time, type, state or orchestration type.
+- ![Search Events page icon in navigation pane](~/solutions/images/MO_OE_Search_Events_icon.png) **Search Events**: Allows you to search for specific events by name, time, type, state, or orchestration type.
 
-Both pages allow to access the full details of each event by clicking the 'Info' icon.
+On both pages, you can access the full details of each event by clicking the *Info* icon.
 
-## Orchestration Events
+## Orchestration events
 
-Orchestration events allow to execute automation scripts at a defined datetime in the future. These events support executing regular automation scripts, but also allow to link specific orchestration scripts, which allow to more easily test them manually.
+Orchestration events allow the execution of automation scripts at a defined date and time in the future. These events can execute regular automation scripts, but it is also possible to link to specific orchestration scripts, which allows easier manual testing.
 
-Orchestration events can be created using the API of MediaOps Live. [MediaOps Plan](xref:MediaOps.Plan) also uses this API to create and update the orchestration events linked to [Jobs](xref:MO_Scheduling).
-
-> [!TIP]
-> Follow along with the [Orchestration Event tutorial](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents) to understand in more detail what can be achieved with orchestration events.
-
-## Orchestration Scripts
-
-Any automation script added to the MediaOps/OrchestrationScripts folder is considered to as an Orchestration script. Next to the regular script dummies and params, profile parameters and definitions can be used as input arguments by implementing the OrchestrationScript class.
-
-When executing an orchestration script manually, and after having filled in all script dummies and script params, a UI will prompt the user for the typed parameters. The UI will also have a control allowing to select a Profile Instance instead of providing each parameter value individually.
+Orchestration events can be created using the MediaOps Live API. [MediaOps Plan](xref:MediaOps.Plan) also uses this API to create and update the orchestration events linked to [jobs](xref:MO_Scheduling).
 
 > [!TIP]
-> The [Orchestration Script page](xref:MediaOpsLive_OrchestrationScript) describes the implementation of an orchestration script in more details.
+> To understand in more detail what can be achieved with orchestration events, follow the tutorial [Creating orchestration events](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents) .
+
+## Orchestration scripts
+
+Any automation script added to the `MediaOps/OrchestrationScripts` folder is be an orchestration script. In addition to the regular script dummies and parameters, you can use profile parameters and definitions as input arguments in these scripts by implementing the `OrchestrationScript` class. For detailed information, refer to [Orchestration scripts](xref:MediaOpsLive_OrchestrationScript).
+
+When an orchestration script is executed manually, and all script dummies and parameters have been filled in, a UI will prompt the user for the typed parameters. The UI will also allow the user to select a profile instance instead of providing each parameter value individually.
 
 > [!TIP]
-> Follow along with the [Orchestration Script tutorial](xref:Tutorial_MediaOpsLive_CreateOrchestrationScripts) to understand in more detail how to implement orchestration scripts.
+> To understand in more detail how to implement orchestration scripts, follow the tutorial [Creating orchestration scripts](xref:Tutorial_MediaOpsLive_CreateOrchestrationScripts).
 
-### Global Orchestration Script
+### Global and node orchestration scripts
 
-An orchestration event can be defined with a Global (Orchestration) script, and associated values for all arguments. At Event time the script will be launched with the provided arguments.
+An orchestration event can be defined with a **global orchestration script** and associated values for all arguments. At event time, the script will be launched with the provided arguments.
+
+When nodes that are part of a job need to be configured by specific scripts, a **node orchestration script** can be configured for each node of the job, either as a replacement for or in addition to the global orchestration script. When no global orchestration script is defined, MediaOps Live will execute all node orchestration scripts automatically.
 
 > [!IMPORTANT]
-> When a global orchestration script is defined, the global orchestration script is responsible for triggering the execution of the configured node orchestration scripts.
-
-### Node Orchestration Script
-
-When nodes part of a job need to be configured by specific scripts, then a node orchestration script can be configured for each node of the job, replacing or in addition to the global orchestration script. When no global orchestration script is defined, Live will execute all node orchestration scripts automatically.
-
-When a global orchestration script is defined, the global orchestration script will have to trigger the execution of the node orchestration scripts.
+> When a global orchestration script is defined, this script is responsible for triggering the execution of the configured node orchestration scripts.
 
 ## Connectivity
 
-Orchestration events can also define expected connectivity between [virtual signal groups](xref:MO_Virtual_Signal_Groups#virtual-signal-groups). At event time, if a global orchestration script is not defined, Live will trigger the connection of relevant [endpoints](xref:MO_Virtual_Signal_Groups#endpoints). In case a global orchestration script is defined, it is up to that script to trigger the connection of endpoints.
+Orchestration events can also define expected connectivity between [virtual signal groups](xref:MO_Virtual_Signal_Groups#virtual-signal-groups). At event time, if a global orchestration script is not defined, MediaOps Live will trigger the connection of relevant [endpoints](xref:MO_Virtual_Signal_Groups#endpoints). In case a global orchestration script is defined, it is up to that script to trigger the connection of endpoints.
 
 ## Metadata
 
 Metadata can be defined on an orchestration event, allowing easy access to extra information required during execution of the orchestration scripts.
 
-## Service Monitoring
+## Service monitoring
 
-When the orchestration event(s) are related to a job, there is an option to trigger the creation of a DMA Service at execution of the very first Event, and to delete it at the execution of the very last event.
+When orchestration events are related to a job, it is possible to trigger the creation of a DataMiner service when the very first event is executed. This service can then be deleted when the very last event us executed.
 
 > [!TIP]
-> How this can be done is described in the [Orchestration Events tutorial](xref:Tutorial_MediaOpsLive_CreateOrchestrationScripts#step-9-generate-a-service-from-the-orchestration-script).
+> To find out how this is done, follow the tutorial [Creating orchestration events](xref:Tutorial_MediaOpsLive_CreateOrchestrationScripts#step-9-generate-a-service-from-the-orchestration-script).

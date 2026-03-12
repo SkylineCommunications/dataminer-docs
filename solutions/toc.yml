@@ -88,12 +88,12 @@ items:
         - name: Orchestration Events
           topicUid: MO_Orchestration_Events
           items:
-          - name: Orchestration Script
+          - name: Orchestration scripts
             topicUid: MediaOpsLive_OrchestrationScript
         - name: Mediation layer
           topicUid: MediaOps.Live.Mediation
           items:
-          - name: Connection Handler Script
+          - name: Connection handler scripts
             topicUid: MediaOpsLive_ConnectionHandlerScript
         - name: Tutorials
           items:

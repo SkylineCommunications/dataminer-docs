@@ -2,14 +2,14 @@
 uid: MediaOpsLive_ConnectionHandlerScript
 ---
 
-# Connection Handler Script
+# Connection handler scripts
 
-The connection handler script is a custom script that is responsible to manage the connections for one specific connector (e.g., broadcast controller). It interacts with the mediation layer to setup new connections and to update existing connections in the database.
+A connection handler script is a custom script responsible for managing the connections for one specific connector (e.g., broadcast controller). It interacts with the [mediation layer](xref:MediaOps.Live.Mediation) to set up new connections and to update existing connections in the database.
 
-To implement a connection handler script, a new class needs to be created that derives from the 'ConnectionHandler' base class. This abstract base class provides a framework to manage connections for a specific protocol by defining the methods that must be implemented. The derived class should override these methods to handle connector specific logic.
+To implement a connection handler script, you need to create a new class that derives from the `ConnectionHandler` base class. This abstract base class provides a framework to manage connections for a specific protocol by defining the methods that must be implemented. The derived class should override these methods to handle connector-specific logic.
 
 > [!NOTE]
-> The ConnectionHandler class is part of the Skyline.DataMiner.MediaOps.Live NuGet package.
+> The `ConnectionHandler` class is part of the *Skyline.DataMiner.MediaOps.Live* NuGet package.
 
 ```csharp
 public class Script

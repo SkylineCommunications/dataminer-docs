@@ -2,9 +2,10 @@
 uid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents
 ---
 
-# Create orchestration events
+# Creating orchestration events
 
 In this tutorial, you will learn how to create orchestration events in a MediaOps Live context.
+
 Orchestration events are used to trigger actions in an automated and scheduled manner.
 
 Expected duration: 30 minutes
