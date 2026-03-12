@@ -11,7 +11,6 @@ uid: FAQs
 - [Questions related to dataminer.services](xref:FAQ_dataminer_services)
 - [General configuration questions](xref:General_configuration)
 - [Questions about IDs of views, elements, services, redundancy groups, and parameters](xref:IDs_of_views_elements_services_redundancy_groups_and_parameters)
-- [Questions DataMiner client applications](xref:DataMiner_client_applications)
 - [Questions about Failover](xref:Failover_FAQ_what_if_DMA_stopped)
 - [Questions about Node Recovery](xref:NodeRecovery_FAQ)
 - [Questions about user group settings](xref:Frequently_asked_questions_about_user_group_settings)
