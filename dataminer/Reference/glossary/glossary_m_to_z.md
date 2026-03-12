@@ -338,5 +338,4 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Term | Description |
 |------|-------------|
 | XAML | eXtensible Application Markup Language. |
-| XBAP | XAML Browser Application. |
 | XML | eXtensible Markup Language. |

@@ -3,9 +3,9 @@ uid: Desktop_app_command_line_arguments
 keywords: launcher
 ---
 
-# Desktop application command-line arguments
+# Cube command-line arguments
 
-When you start the DataMiner Cube desktop application, the latest Cube binary files are downloaded to your client PC (`%localappdata%\Skyline\DataMiner\DataMinerCube\`) and executed.
+When you start DataMiner Cube, the latest Cube binary files are downloaded to your client PC (`%localappdata%\Skyline\DataMiner\DataMinerCube\`) and executed.
 
 Several command line arguments can be specified when starting the application. For a list, see below. In normal circumstances, none of these are required. They will be added automatically where applicable. However, in a number of special cases, it might be necessary to use them, either once or permanently (e.g., in a shortcut).
 
@@ -20,13 +20,11 @@ Displays a custom alias ("Xyz") instead of the cluster name in the Cube header. 
 
 ### /Autorun
 
-Starts the DataMiner Cube desktop application in the system tray. The application will only close when you close it explicitly via the context menu of the system tray icon.
+Starts DataMiner Cube in the system tray. The application will only close when you close it explicitly via the context menu of the system tray icon.
 
 ### /Bootstrap
 
 Combines the `/Install` and `/Silent` arguments and also copies a number of files, such as *DataMinerCube.exe.config* and *CubeLauncherConfig.json*.
-
-Available from DataMiner 10.2.0/10.1.9 onwards.
 
 ### /Display
 
@@ -100,23 +98,23 @@ PathToCubeExe.exe /Modify /Silent /ModifyOptions:ClearProtocolCache,ClearVisioCa
 
 ### /NoInstall
 
-Runs the DataMiner Cube desktop application without checking whether anything needs to be installed or upgraded.
+Runs DataMiner Cube without checking whether anything needs to be installed or upgraded.
 
 ### /NoSelfUpdate
 
-Runs the currently installed version of the DataMiner Cube desktop application. If a newer version exists, no automatic upgrade will be performed.
+Runs the currently installed version of DataMiner Cube. If a newer version exists, no automatic upgrade will be performed.
 
 ### /Position=x,y
 
-Opens the DataMiner Cube desktop application at position "x,y" of the current working area.
+Opens DataMiner Cube at position "x,y" of the current working area.
 
 ### /UnInstall
 
-Uninstalls the DataMiner Cube desktop application.
+Uninstalls DataMiner Cube.
 
 ### /UnInstall /Silent
 
-Uninstalls the DataMiner Cube desktop application in silent mode (without UI).
+Uninstalls DataMiner Cube in silent mode (without UI).
 
 ### /Update
 
@@ -128,7 +126,7 @@ Updates the Cube versions of all the DataMiner Systems to which you have connect
 
 ### /UpdateLauncher
 
-Checks for newer versions of the DataMiner Cube desktop application on the 10 DataMiner Systems to which you connected last. If a newer version is found, the application will be automatically upgraded.
+Checks for newer versions of DataMiner Cube on the 10 DataMiner Systems to which you connected last. If a newer version is found, the application will be automatically upgraded.
 
 > [!NOTE]
 > If there is internet access, <https://dataminer.services> will be checked as well.

@@ -54,7 +54,7 @@ All supported video server types and their associated parameters are defined in 
 
   - VLC: `type=Generic%20VLC`
 
-    - To display video thumbnails with the VLC plugin in the Cube desktop app, use the 64-bit version of VLC.
+    - To display video thumbnails with the VLC plugin in DataMiner Cube, use the 64-bit version of VLC.
 
 - `source=`: The URL of the video/image.
 

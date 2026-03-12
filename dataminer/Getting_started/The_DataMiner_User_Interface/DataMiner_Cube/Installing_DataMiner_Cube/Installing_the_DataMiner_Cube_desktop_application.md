@@ -31,7 +31,7 @@ You can follow the installation steps below or watch this short video, which wal
 
 > [!NOTE]
 >
-> - Once the desktop app has been installed, it will be updated automatically when you connect to other DataMiner versions.
+> - Once DataMiner Cube has been installed, it will be updated automatically when you connect to other DataMiner versions.
 > - Administrators can [enforce the use of a specific Cube version](xref:DMA_configuration_related_to_client_applications#managing-client-versions) when you connect to a DMA.
 
 ## DataMiner Taskbar Utility
@@ -51,7 +51,7 @@ From DataMiner 10.5.2/10.6.0 onwards<!--RN 41308-->, it is also possible to inst
 Once installed, DataMiner Cube will launch automatically and open a session connected to the local DMA.
 
 > [!NOTE]
-> If you attempt to install the *DataMinerCube.exe* file while DataMiner Cube is already installed, the existing Cube desktop app will open. Additionally, if a tile representing the local DMA does not already exist, it will be added automatically.
+> If you attempt to install the *DataMinerCube.exe* file while DataMiner Cube is already installed, the existing Cube app will open. Additionally, if a tile representing the local DMA does not already exist, it will be added automatically.
 
 ## MSI installation
 
