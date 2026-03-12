@@ -4,7 +4,7 @@ uid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
 
 # Creating a test package
 
-In this tutorial, you create a basic low-code app, prepare a DataMiner test package to test it, and trigger a QAOps test run.
+In this tutorial, you create a basic low-code app, prepare a DataMiner test package to test it, and trigger a [QAOps](xref:QAOps) test run.
 
 Expected duration: 15 to 25 minutes.
 
@@ -73,13 +73,13 @@ The content and screenshots for this tutorial were created using DataMiner 10.6.
 
 1. Click *Create*.
 
-After the project opens, you should see the "Getting Started" Markdown file.
+After the project opens, you should see the *Getting Started* Markdown file.
 
 ## Step 2: Create a low-code app to be tested
 
 Using a different DataMiner System than QAOps Sandbox where you have the necessary rights, create a low-code app for this test:
 
-1. In a browser, go to home page of your DataMiner system.
+1. In a browser, go to the home page of your DataMiner system.
 
 1. Click *+ Create app*.
 
@@ -95,7 +95,7 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 
 1. From the *Basic Controls* section of the panel, drag the *Text Input* visualization onto your page to create a component where users will be able to enter text.
 
-   ![Text visualization in the visualizations pane](~/develop/images/QAOps_Tutorial_Text_input_visualization.png)
+   ![Text input visualization in the visualizations pane](~/develop/images/QAOps_Tutorial_Text_input_visualization.png)
 
 1. Select your new *Text* component, go to *Settings*, and enter an expression similar to `Welcome {COMPONENT."Current view"."Text input 2".Value.Texts.Value}`.
 
@@ -105,13 +105,13 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 
 1. Select your new *Text Input* component, go to *Settings*, and enable *Value Change*.
 
-1. Publish the app and verify that text entered in the input box appears in the welcome text.
+1. Publish the app and verify that text entered in the input box appears in the "Welcome" text box.
 
    ![Example of the low-code app where someone has entered "NiceTutorial" in the text input field, and the text field displays "Welcome NiceTutorial"](~/develop/images/QAOps_CreateTest_LCA.png)
 
 1. Copy the app identifier from the URL and save it in a text file.
 
-   For example, copy "991d7084-cd0a-412b-bffe-0ea176fc5430" from `https://localhost/app/991d7084-cd0a-412b-bffe-0ea176fc5430/Page`
+   For example, copy "991d7084-cd0a-412b-bffe-0ea176fc5430" from `https://localhost/app/991d7084-cd0a-412b-bffe-0ea176fc5430/Page`.
 
 ## Step 3: Create the DataMiner environment to be tested
 
@@ -123,9 +123,9 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 
 1. Expand *Package Content*.
 
-1. Right-click *LowCodeApps*, select *Add*, and then click *Import DataMiner Low-Code-App*.
+1. Right-click *LowCodeApps*, select *Add*, and then click *Import DataMiner Low-Code App*.
 
-   ![Import a low-code app into the test package project](~/develop/images/QAOps_TestPackage_ImportLCA.png)
+   ![Menu selection to import a low-code app into the test package project](~/develop/images/QAOps_TestPackage_ImportLCA.png)
 
 1. Select the app you have created in [step 2](#step-2-create-a-low-code-app-to-be-tested).
 
@@ -135,7 +135,9 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 
 1. Right-click *Solution 'MyFirstTestPackage'*, select *Add*, and then select *New Item* (Ctrl+Shift+A).
 
-1. Select *C# Class* and name it **"PlaywrightUITest.cs"**. (Double-check the name matches exactly, as this is important for this specific tutorial.)
+1. Select *C# Class* and name it **"PlaywrightUITest.cs"**.
+
+   Double-check that the name matches exactly, as this is important for this specific tutorial.
 
 1. Confirm that the file is added under *Solution Items*.
 
@@ -279,7 +281,7 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 
 1. Open *Solution Explorer* (shortcut: Ctrl+Alt+L).
 
-1. Expand *TestPackageContent* > *TestHarvesting* and open "TestDiscovery.ps1".
+1. Expand *TestPackageContent* > *TestHarvesting* and open **TestDiscovery.ps1**.
 
 1. Replace the existing content with the following content:
 
@@ -329,7 +331,7 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 
 1. Open *Solution Explorer* (shortcut: Ctrl+Alt+L).
 
-1. Expand *TestPackageContent* > *TestPackagePipeline* and open "2.TestPackageExecution.ps1".
+1. Expand *TestPackageContent* > *TestPackagePipeline* and open **2.TestPackageExecution.ps1**.
 
    ![Test harvesting and execution files in the test package](~/develop/images/QAOps_TestPackage_HarvestAndExecution.png)
 
@@ -525,9 +527,9 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
 
 1. Right-click *Solution 'MyFirstTestPackage'* and select *Open Folder in File Explorer*.
 
-1. In File Explorer, go to the "bin\Debug\net48\DataMinerBuild" folder of your project.
+1. In File Explorer, go to the `bin\Debug\net48\DataMinerBuild` folder of your project.
 
-1. Copy the generated [QAOps test package](xref:QAOps_Test_Package) ".dmtest" file path and save it in a text file.
+1. Copy the generated [QAOps test package](xref:QAOps_Test_Package) .dmtest file path and save it in a text file.
 
 ## Step 11: Trigger the test run
 
@@ -547,7 +549,7 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
 
    - `MYNAME`: Your name, nickname, or another identifier that helps you find your request.
 
-   - `TESTFILEPATH`: The test package filepath you copied earlier. Make sure this value is enclosed in double quotes
+   - `TESTFILEPATH`: The test package filepath you copied earlier. Make sure this value is enclosed in double quotes.
 
    > [!NOTE]
    > For production systems, leave out the `-san` argument. This argument specifies which QAOps system receives the command. In this example, it targets the QAOps sandbox system. The default target is the production QAOps system.
@@ -562,22 +564,5 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
 
 1. Track the [test run life cycle](xref:QAOps_Test_Run).
 
-To view and interpret test results, see [Viewing test results](xref:QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results).
-
-## Related information
-
-- [QAOps](xref:QAOps)
-
-- [QAOps main UI](xref:QAOps_Main_UI)
-
-- [QAOps tool](xref:QAOps_Tool)
-
-- [QAOps test package](xref:QAOps_Test_Package)
-
-- [QAOps configuration](xref:QAOps_Configuration)
-
-- [QAOps test suite](xref:QAOps_Test_Suite)
-
-- [QAOps test run](xref:QAOps_Test_Run)
-
-- [QAOps test result](xref:QAOps_Test_Result)
+> [!TIP]
+> To view and interpret test results, see [Viewing test results](xref:QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results).
