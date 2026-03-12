@@ -130,6 +130,12 @@ Up to now, text containing characters that were encoded in extended ASCII (i.e.,
 
 ### Enhancements
 
+#### SLWatchdog will now report SLNet/SLDataGateway TPL ThreadPool and 'time dilation' issues as run-time errors [ID 44186]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+From now on, whenever the TPL ThreadPool of SLNet or SLDataGateway would get stuck or a "time dilation" would occur on your system (for example, when a freeze of a virtual machine would cause sleep actions to take longer than anticipated), SLWatchDog will report these issues as a run-time error.
+
 #### New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
