@@ -2,7 +2,7 @@
 uid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import
 ---
 
-# Import/Export endpoints and virtual signal groups using CSV file
+# Provisioning endpoints and virtual signal groups for Generic Matrix using import
 
 In this tutorial, you will learn how to use the CSV import functionality in the Virtual Signal Groups low-code app to provision endpoints and virtual signal groups (VSGs) for the **Generic Matrix** connector.
 These endpoints and VSGs will be used to visualize and manage the connections in the MediaOps.LIVE solution.

@@ -2,7 +2,7 @@
 uid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
 ---
 
-# Provision endpoints and virtual signal groups for Generic Matrix
+# Provisioning endpoints and virtual signal groups for Generic Matrix manually
 
 In this tutorial, you will learn how to provision endpoints and virtual signal groups (VSGs) for the **Generic Matrix** connector.
 These endpoints and VSGs will be used to visualize and manage the connections in the MediaOps.LIVE solution.
