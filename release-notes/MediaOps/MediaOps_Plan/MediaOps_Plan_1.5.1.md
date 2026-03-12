@@ -2,7 +2,7 @@
 uid: MediaOps_Plan_1.5.1
 ---
 
-# MediaOps 1.5.1
+# MediaOps Plan 1.5.1
 
 > [!NOTE]
 > This version requires:
