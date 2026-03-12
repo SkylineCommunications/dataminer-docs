@@ -26,6 +26,14 @@ uid: General_Main_Release_10.5.0_CU14
 
 ### Enhancements
 
+#### SLLogCollector packages will now include the most recent WER crash dumps [ID 40754]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Since DataMiner version 10.5.0 CU11/10.6.2, each time a DataMiner process crashes for whatever reason, a full WER crash dump is created in `C:\Skyline DataMiner\Logging\CrashDump\wer\<ExeName>\`.
+
+From now on, each time an SLLogCollector package is created, it will include the most recent WER crash dump of every process found in the `C:\Skyline DataMiner\Logging\CrashDump\wer\` folder.
+
 #### SLDataGateway will now log when the TTLs of all active alarms have been refreshed [ID 44771]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
