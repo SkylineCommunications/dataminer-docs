@@ -45,7 +45,9 @@ You will then be able to adjust the name and description of the workflow, config
 
 ### Configuring the workflow orchestration settings
 
-To edit the workflow [orchestration settings](), click the cogwheel next to the title of the workflow section.
+To edit the workflow orchestration settings, click the cogwheel next to the title of the workflow section.
+
+<!-- TODO: Add info on orchestration settings -->
 
 ![The cogwheel icon to edit the workflow orchestration settings](~/solutions/images/Workflow_Designer_Configure_Workflow.png)
 
@@ -83,7 +85,9 @@ To do so, select the node and click *Swap To Pool* or *Swap to Resource*, depend
 
 ### Configuring the node orchestration settings
 
-To edit the node [orchestration settings](), select the node and click the *Configure* button.
+To edit the node orchestration settings, select the node and click the *Configure* button.
+
+<!-- TODO: Add info on orchestration settings -->
 
 ![Button to configure the orchestration settings of the selected node](~/solutions/images/Workflow_Designer_Configure_Node.png)
 
