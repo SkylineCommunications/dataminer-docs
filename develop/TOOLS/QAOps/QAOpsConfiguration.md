@@ -7,7 +7,9 @@ uid: QAOps_Configuration
 > [!IMPORTANT]
 > This section contains information that is only applicable to Skyline employees.
 
-For each project, one or more QAOps configurations should be created. Each configuration represents ownership of all testing activities for the project.
+For each project, one or more QAOps configurations should be created.
+
+When you create a configuration, you take ownership of the testing activities included in it and the way they are configured. This means that you will be expected to maintain the configuration, and you are responsible for selecting who can use it and with which test suites.
 
 ![QAOps configuration](~/develop/images/QAOps_Configuration.png)
 

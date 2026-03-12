@@ -77,7 +77,7 @@ The target endpoint is selected in this order:
 
 - `-Name` (required): Short test case name.
 
-- `-TestCaseId` (optional): ULID string. If omitted or empty, a new ULID is generated client-side.
+- `-TestCaseId` (optional): ULID string. In most cases, this will be left empty, and a new ULID will be generated client-side. You can also generate a ULID yourself if this is preferred. In addition, in case you want to change the name later and make sure your test results still get set to the same test case, you can specify the ULID of your test case and change the name.
 
 - `-Message` (optional): Free-form details. Omitted from payload if empty.
 
