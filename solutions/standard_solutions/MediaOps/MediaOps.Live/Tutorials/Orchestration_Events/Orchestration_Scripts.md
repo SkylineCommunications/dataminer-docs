@@ -12,11 +12,7 @@ Expected duration: 30 minutes
 
 ## Prerequisites
 
-- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) installed on the DMA.
-- [MediaOps Live Demo Package](https://catalog.dataminer.services/details/48d9d327-d21b-49b2-8958-989691cf2012) installed on the DMA.
-- [Visual Studio](https://visualstudio.microsoft.com) installed on your machine.
-- [DIS](https://docs.dataminer.services/develop/TOOLS/DIS/Introduction.html) extension installed in Visual Studio.
-- The tutorial [Creating orchestration events](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents) must have been completed.
+To follow this tutorial, you first need to complete the tutorial [Creating orchestration events](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents). You will need to have the same prerequisites installed as for that tutorial.
 
 ## Overview
 
@@ -280,14 +276,9 @@ public override void TearDownService(IEngine engine)
 ```
 
 > [!NOTE]
-> Implementing the `TearDownService` method does not prevent the default logic that tries to check and/or delete the service afterwards.
-> This is to make sure the service is deleted.
-> However, the `TearDownService` method will always execute first to allow the user to refine the deletion process.
+> Implementing the `TearDownService` method does not prevent the default logic that tries to check and/or delete the service afterwards. This ensures that the service is deleted. However, the `TearDownService` method will always execute first to allow the user to refine the deletion process.
+>
+> This method is **automatically called** by the script for events with `Stop` or `PrerollStop` type (usually the last event of a chain of events). This means the method **should NOT be called separately** in the `Orchestrate` method.
 
-> [!IMPORTANT]
-> This method is automatically called by the script for events with `Stop` or `PrerollStop` type (usually the last event of a chain of events).
-> This means the method should NOT be called separately in the `Orchestrate` method.
-
-## Final script
-
-The following [repository on GitHub](https://github.com/SkylineCommunications/SLC-AS-MediaOps.LIVE-Tutorial-OrchestrationScripts) contains the complete script that you can use as a reference.
+> [!TIP]
+> In the [SLC-AS-MediaOps.LIVE-Tutorial-OrchestrationScripts](https://github.com/SkylineCommunications/SLC-AS-MediaOps.LIVE-Tutorial-OrchestrationScripts) repository on GitHub, you can find the complete script that you can use as a reference.

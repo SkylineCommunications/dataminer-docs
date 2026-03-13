@@ -4,9 +4,7 @@ uid: Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript
 
 # Creating a connection handler script for a Generic Matrix element
 
-A connection handler script is part of the MediaOps.LIVE mediation layer and is responsible for detecting and managing connections between endpoints for a specific connector (for example, a broadcast controller).
-
-This tutorial walks you through the process of creating your own connection handler.
+A connection handler script is part of the MediaOps Live [mediation layer](xref:MediaOps.Live.Mediation) and is responsible for detecting and managing connections between endpoints for a specific connector (for example, a broadcast controller). This tutorial walks you through the process of creating your own connection handler.
 
 Expected duration: 60 minutes
 
@@ -15,11 +13,11 @@ Expected duration: 60 minutes
 
 ## Prerequisites
 
-- [Generic Matrix](https://catalog.dataminer.services/details/920cf3a9-ab1b-4c4c-8d67-bbffa1ca396a) connector installed and an element exists on the DMA. The 1.0.1.X range is needed for this tutorial.
-- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) installed on the DMA.
-- [Visual Studio](https://visualstudio.microsoft.com) installed on your machine.
-- [DIS](https://docs.dataminer.services/develop/TOOLS/DIS/Introduction.html) extension installed in Visual Studio.
-- Some endpoints and virtual signal groups created in MediaOps. To create these, you can follow the tutorial [Manually provisioning endpoints and virtual signal groups for a Generic Matrix element](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual).
+- Range 1.0.1.x of the [Generic Matrix](https://catalog.dataminer.services/details/920cf3a9-ab1b-4c4c-8d67-bbffa1ca396a) connector is installed on the DMA, and an element has been created using this connector.
+- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) is installed on the DMA.
+- [Visual Studio](https://visualstudio.microsoft.com) is installed on your machine.
+- The [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) extension is installed in Visual Studio.
+- Some endpoints and virtual signal groups have been created in MediaOps, for example via the tutorial [Manually provisioning endpoints and virtual signal groups for a Generic Matrix element](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual).
 
 ## Overview
 

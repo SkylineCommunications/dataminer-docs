@@ -4,25 +4,22 @@ uid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSi
 
 # Provisioning endpoints and virtual signal groups for a Generic Matrix element using code
 
-In this tutorial you will learn how to use the MediaOps Live API to provision endpoints and virtual signal groups for the Generic Matrix connector.
-These endpoints are needed to visualize and manage the connections of the Generic Matrix connector in MediaOps Live.
-
-Expected duration: 60 minutes
-
-## Ways to create endpoints and VSGs
+In this tutorial, you will learn how to use the MediaOps Live API to provision endpoints and virtual signal groups for the Generic Matrix connector. These endpoints are needed to visualize and manage the connections of the Generic Matrix connector in MediaOps Live.
 
 There are three ways to create endpoints and VSGs:
 
-- [Manually, using the Virtual Signal Groups low-code app](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual)
-- Through an automation script, using the MediaOps.LIVE API (explained in the current tutorial)
-- [Using the CSV import functionality in the Virtual Signal Groups app](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import)
+- [Manually, using the Virtual Signal Groups low-code app](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual).
+- Through an automation script, using the MediaOps Live API, as explained in the current tutorial.
+- [Using the CSV import functionality in the Virtual Signal Groups app](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import).
+
+Expected duration: 60 minutes
 
 ## Prerequisites
 
-- [Generic Matrix](https://catalog.dataminer.services/details/920cf3a9-ab1b-4c4c-8d67-bbffa1ca396a) connector installed and an element exists on the DMA. The 1.0.1.X range is needed for this tutorial.
-- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) installed on the DMA.
-- [Visual Studio](https://visualstudio.microsoft.com) installed on your machine.
-- [DIS](https://docs.dataminer.services/develop/TOOLS/DIS/Introduction.html) extension installed in Visual Studio.
+- Range 1.0.1.x of the [Generic Matrix](https://catalog.dataminer.services/details/920cf3a9-ab1b-4c4c-8d67-bbffa1ca396a) connector is installed on the DMA, and an element has been created using this connector.
+- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) is installed on the DMA.
+- [Visual Studio](https://visualstudio.microsoft.com) is installed on your machine.
+- The [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) extension is installed in Visual Studio.
 
 ## Overview
 
@@ -84,9 +81,8 @@ Already existing endpoints and VSGs will be updated.
 
 This method should be called from the `Run` or `RunSafe` method of your script.
 
-> [!WARNING]
-> Endpoint and virtual signal group names must be unique across your entire MediaOps.LIVE system.
-> The script uses naming patterns like "Matrix Input {key}" and "Matrix Output {key}". If these names already exist from previous tutorials or other configurations, you should modify the naming logic in the script to ensure uniqueness.
+> [!IMPORTANT]
+> Endpoint and virtual signal group names must be unique across your entire MediaOps Live system. The script uses naming patterns like "Matrix Input {key}" and "Matrix Output {key}". If these names already exist from previous tutorials or other configurations, you should modify the naming logic in the script to ensure uniqueness.
 
 ```csharp
 

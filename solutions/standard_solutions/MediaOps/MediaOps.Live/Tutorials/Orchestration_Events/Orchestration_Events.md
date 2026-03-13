@@ -12,13 +12,16 @@ Expected duration: 30 minutes
 
 ## Prerequisites
 
-- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) installed on the DMA.
-- [MediaOps Live Demo Package](https://catalog.dataminer.services/details/48d9d327-d21b-49b2-8958-989691cf2012) installed on the DMA.
-- [Visual Studio](https://visualstudio.microsoft.com) installed on your machine.
-- [DIS](https://docs.dataminer.services/develop/TOOLS/DIS/Introduction.html) extension installed in Visual Studio.
+- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) is installed on the DMA.
 
-> [!NOTE]
-> Install the MediaOps package before installing the MediaOps Demo Package.
+- The [MediaOps Live Demo Package](https://catalog.dataminer.services/details/48d9d327-d21b-49b2-8958-989691cf2012) is installed on the DMA.
+  
+  > [!NOTE]
+  > Install the MediaOps package before installing the MediaOps Demo Package.
+
+- [Visual Studio](https://visualstudio.microsoft.com) is installed on your machine.
+
+- The [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) extension is installed in Visual Studio.
 
 > [!TIP]
 > Before starting the tutorial, confirm that the demo setup is working by going to the Control Surface app and checking if connections can be made between sources and destinations.
@@ -214,11 +217,11 @@ You should now see that after 10 seconds, the dummy script is executed once for 
 
 ## Step 10: Add connection configuration to the orchestration event
 
-Finally, we can add connection configurations to the orchestration event as well.
-This will automate the connections that can be done by the Control Surface app in the MediaOps.LIVE solution.
+Finally, you can add connection configurations to the orchestration event as well. This will automate the connections that can be done by the Control Surface app in the MediaOps Live solution.
 
-To define the connection, we need pass the VSG objects that we want to connect.
-Using the API, we can retrieve the VSGs by their names.
+To define the connection, you need pass the VSG objects that you want to connect.
+
+Using the API, you can retrieve the VSGs by their names.
 
 ```csharp
 VirtualSignalGroup source = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("SRC-000001")).FirstOrDefault();
@@ -234,22 +237,18 @@ orchestrationEvent.Configuration.Connections.Add(new Connection
 ```
 
 > [!NOTE]
-> If the VSG's are already connected, feel free to disconnect them in the Control Surface app, before running the script.
-> Do note that the connection made by the script will put a lock on the VSG, so you'll need to unlock it first if that is the case.
+> If the VSGs are already connected, feel free to disconnect them in the Control Surface app, before running the script. Do note that the connection made by the script will put a lock on the VSG, so you will need to unlock it first if that is the case.
 
 Publish the updated script to the DMA and run it again.
 You should now see that after 10 seconds, a connection will be created between the specified source and destination VSGs.
 
 ## Step 11: Add level configuration to the connection
 
-Instead of just creating a connection between two VSGs (which connects all signals between the source and destination VSG),
-we can also connect specific levels between the VSGs.
+Instead of just creating a connection between two VSGs (which connects all signals between the source and destination VSG), you can also connect specific levels between the VSGs.
 
-The Demo package comes with 4 installed levels:
-Video (0), Audio1 (1), Audio2 (2) and Data (3).
+The Demo package comes with 4 installed levels: Video (0), Audio1 (1), Audio2 (2) and Data (3).
 
-We can now update the connection definition to only connection video and audio levels.
-Additionally, we will shuffle the audio levels between Audio1 and Audio2.
+You can now update the connection definition to only connection video and audio levels. With the code below, you will also shuffle the audio levels between Audio1 and Audio2.
 
 ```csharp
 VirtualSignalGroup source = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("SRC-000001")).FirstOrDefault();
@@ -271,8 +270,8 @@ orchestrationEvent.Configuration.Connections.Add(new Connection
 ```
 
 Publish the updated script to the DMA and run it again.
-You should now see that after 10 seconds, a connection will be created between the specified source and destination VSGs.
-Notice how only the video and audio levels are connected, and how the audio levels are shuffled.
+
+You should now see that after 10 seconds, a connection will be created between the specified source and destination VSGs. Notice how only the video and audio levels are connected, and how the audio levels are shuffled.
 
 ## Step 12: Disconnect a connection
 
@@ -351,11 +350,9 @@ Publish the updated script to the DMA and run it again.
 You should now see that after 10 seconds, a connection will be created between the specified source and destination VSGs.
 After another 10 seconds, the connection will be disconnected and the destination VSG's will be unlinked.
 
-## Final script
-
-The following [repository on GitHub](https://github.com/SkylineCommunications/SLC-AS-MediaOps.LIVE-Tutorial-OrchestrationEvents) contains the complete script that you can use as a reference:
+> [!TIP]
+> In the [SLC-AS-MediaOps.LIVE-Tutorial-OrchestrationEvents](https://github.com/SkylineCommunications/SLC-AS-MediaOps.LIVE-Tutorial-OrchestrationEvents) repository on GitHub, you can find the complete script that you can use as a reference.
 
 ## Up next
 
-In this tutorial, you have learned how to create orchestration events in MediaOps.LIVE using the MediaOps Live API.
-You can now continue with the [Create Orchestration Scripts tutorial](xref:Tutorial_MediaOpsLive_CreateOrchestrationScripts) to learn how to create more advanced orchestration scripts that can be used in the orchestration events.
+In this tutorial, you have learned how to create orchestration events in MediaOps Live using the MediaOps Live API. You can now continue with the [Create Orchestration Scripts tutorial](xref:Tutorial_MediaOpsLive_CreateOrchestrationScripts) to learn how to create more advanced orchestration scripts that can be used in the orchestration events.

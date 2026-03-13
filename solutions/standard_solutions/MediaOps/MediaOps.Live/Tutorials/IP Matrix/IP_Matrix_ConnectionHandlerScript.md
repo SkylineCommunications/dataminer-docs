@@ -4,9 +4,7 @@ uid: Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript
 
 # Creating a connection handler script for an IP Matrix element
 
-A connection handler script is part of the MediaOps.LIVE mediation layer and is responsible for detecting and managing connections between endpoints for a specific connector (for example, a broadcast controller).
-
-This tutorial walks you through the process of creating your own connection handler.
+A connection handler script is part of the MediaOps Live [mediation layer](xref:MediaOps.Live.Mediation) and is responsible for detecting and managing connections between endpoints for a specific connector (for example, a broadcast controller). This tutorial walks you through the process of creating your own connection handler.
 
 Expected duration: 60 minutes
 
@@ -15,10 +13,10 @@ Expected duration: 60 minutes
 
 ## Prerequisites
 
-- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) installed on the DMA.
-- [Visual Studio](https://visualstudio.microsoft.com) installed on your machine.
-- [DIS](https://docs.dataminer.services/develop/TOOLS/DIS/Introduction.html) extension installed in Visual Studio.
-- The `Generic Dynamic Table` connector, elements, endpoints and VSGs provisioned in the tutorial [Manually provisioning endpoints and virtual signal groups for an IP Matrix element](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual).
+- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) is installed on the DMA.
+- [Visual Studio](https://visualstudio.microsoft.com) is installed on your machine.
+- The [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) extension is installed in Visual Studio.
+- The *Generic Dynamic Table* connector, elements, endpoints, and VSGs have been provisioned by means of the tutorial [Manually provisioning endpoints and virtual signal groups for an IP Matrix element](xref:Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual).
 
 ## Overview
 

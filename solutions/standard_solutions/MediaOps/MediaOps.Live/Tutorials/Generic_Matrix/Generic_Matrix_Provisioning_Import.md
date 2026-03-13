@@ -4,23 +4,25 @@ uid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSi
 
 # Provisioning endpoints and virtual signal groups for a Generic Matrix element using CSV import
 
-In this tutorial, you will learn how to use the CSV import functionality in the Virtual Signal Groups low-code app to provision endpoints and virtual signal groups (VSGs) for the **Generic Matrix** connector.
-These endpoints and VSGs will be used to visualize and manage the connections in the MediaOps.LIVE solution.
-
-Expected duration: 15 minutes
-
-## Ways to create endpoints and VSGs
+In this tutorial, you will learn how to use the CSV import functionality in the Virtual Signal Groups low-code app to provision endpoints and virtual signal groups (VSGs) for the **Generic Matrix** connector. These endpoints and VSGs will be used to visualize and manage the connections in the MediaOps Live solution.
 
 There are three ways to create endpoints and VSGs:
 
-- [Manually, using the Virtual Signal Groups low-code app](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual)
-- [Through an automation script, using the MediaOps.LIVE API](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code)
-- Using the CSV import functionality in the Virtual Signal Groups app (explained in the current tutorial)
+- [Manually, using the Virtual Signal Groups low-code app](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual).
+- [Through an automation script, using the MediaOps Live API](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code).
+- Using the CSV import functionality in the Virtual Signal Groups app, as explained in the current tutorial.
+
+Expected duration: 15 minutes
+
+> [!NOTE]
+> The content and screenshots of this tutorial were created using DataMiner 10.6.4 and MediaOps Live 1.0.0.
 
 ## Prerequisites
 
-- [Generic Matrix](https://catalog.dataminer.services/details/920cf3a9-ab1b-4c4c-8d67-bbffa1ca396a) connector installed and an element exists on the DMA. The 1.0.1.X range is needed for this tutorial.
-- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) installed on the DMA.
+The DataMiner System you use for this tutorial must meet the following prerequisites
+
+- Range 1.0.1.x of the [Generic Matrix](https://catalog.dataminer.services/details/920cf3a9-ab1b-4c4c-8d67-bbffa1ca396a) connector is installed, and an element has been created using this connector.
+- [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) is installed.
 
 ## Overview
 
@@ -32,21 +34,27 @@ There are three ways to create endpoints and VSGs:
 
 ## Step 1: Create level and transport type
 
-First, you need to create a level and transport type in MediaOps.LIVE.
-In this tutorial for the Generic Matrix connector, we will use the 'Video' level and 'SDI' transport type.
-You can skip this step if the level and transport type already exist.
+First, you need to create a level and transport type in MediaOps Live. In this tutorial, the *Video* level and *SDI* transport type will be used. If these already exist in your system, you can skip this step.
 
-To do this, follow these steps:
+1. Open the Virtual Signal Groups app.
 
-1. Open the `Virtual Signal Groups` low-code app in your web browser and log in with your credentials.
-1. Navigate to the `Levels` tab, and press the `Transport Types` button in the header bar.
-1. If the `SDI` transport type does not exist, create it by clicking the `New` button.
-    - Name: `SDI`
-1. Go back to the `Levels` tab.
-1. Check if a level named `Video` already exists. If it does not exist, create it by clicking the `New` button.
-    - Name: `Video`
-    - Number: `0` (or the next available number)
-    - Transport Type: `SDI`
+   ![The Virtual Signal Groups app on the DataMiner landing page](~/solutions/images/MO_Virtual_Signal_Groups_app_on_landing_page.png)
+
+1. Go to the *Levels* page, and click the *Transport Types* button in the header bar.
+
+   ![The Transport Types button in the Virtual Signal Groups app](~/solutions/images/MO_Transport_Types_button.png)
+
+1. If the `SDI` transport type does not exist yet, create it by clicking the *New* button and specifying this transport type name.
+
+   ![Pop-up window to create new transport type](~/solutions/images/MO_New_transport_type.png)
+
+1. Back on the *Levels* page, if the `Video` level does not exist yet, create it by clicking the *New* button and specifying the following information:
+
+   - Name: `Video`
+   - Number: `0` (or the next available number)
+   - Transport Type: `SDI`
+
+   ![Pop-up window to create new level](~/solutions/images/MO_New_level_SDI.png)
 
 ## Step 2: Export existing endpoints
 
