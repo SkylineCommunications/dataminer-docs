@@ -62,6 +62,12 @@ This file, located in `%SystemRoot%\System32\winevt\Logs\`, is the primary Windo
 
 A number of security enhancements have been made.
 
+#### SLWatchDog2.txt will now contain more detailed logging regarding run-time errors [ID 44904]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+From now on, the *SLWatchDog2.txt* log file will contain more detailed logging regarding run-time errors.
+
 ### Fixes
 
 #### One protocol thread would incorrectly be able to add new rows to a table while another protocol thread was clearing that table [ID 44764] [ID 44833]
