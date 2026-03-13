@@ -127,3 +127,9 @@ Up to now, when the configuration of an SNMP manager had been changed, in some c
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When DVE properties were being updated, in some cases, the SLDMS process could stop working when it was not aware of the element.
+
+#### Service & Resource Management: Certain bookings would incorrectly be quarantined when a range capacity was overbooked [ID 44940]
+
+<!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when a booking needed to be quarantined in order to solve a range capacity conflict, in some cases, certain usages that were not related to the conflict would incorrectly also be quarantined.
