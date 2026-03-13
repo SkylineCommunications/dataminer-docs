@@ -54,8 +54,7 @@ public class EVS_Cerebrum_ConnectionHandler : ConnectionHandler
 
 The `GetSupportedElements` method allows the connection handler script to indicate which elements it is designed to work with.
 
-The method receives the list of available elements from the mediation layer and should return only those that are applicable to the connection handler.
-This filtering can be based on protocol, version, element type, etc.
+The method receives the list of available elements from the mediation layer and should return only those that are applicable to the connection handler. This filtering can be based on protocol, version, element type, etc.
 
 ```csharp
     public override IEnumerable<ElementInfo> GetSupportedElements(IEngine engine, IEnumerable<ElementInfo> elements)
@@ -66,8 +65,7 @@ This filtering can be based on protocol, version, element type, etc.
 
 ## GetSubscriptionInfo() method
 
-The purpose of this method is to let the mediation layer know in which parameters (table or standalone), the connection handler script is interested in.
-The mediation layer will subscribe on these parameters and forward all changes.
+The purpose of this method is to let the mediation layer know which parameters (table or standalone), the connection handler script is interested in. The mediation layer will subscribe to these parameters and forward all changes.
 
 ```csharp
     public override IEnumerable<SubscriptionInfo> GetSubscriptionInfo(IEngine engine)
@@ -86,7 +84,7 @@ The mediation layer will subscribe on these parameters and forward all changes.
 
 The `ProcessParameterUpdate` method is triggered by the mediation layer whenever a parameter of a device element changes. Its purpose is to update the current connections (connect and disconnect) via the API.
 
-Based on the parameter changes, the method should try to find the corresponding source and destination endpoints that match the new data. Endpoints can be retrieved using the API object that can be found in the connectionEngine parameter.
+Based on the parameter changes, the method should try to find the corresponding source and destination endpoints that match the new data. Endpoints can be retrieved using the API object that can be found in the `connectionEngine` parameter.
 
 Example:
 
@@ -94,10 +92,10 @@ Example:
     var sourceEndpoints = connectionEngine.Api.Endpoints.GetByMulticasts(...);
 ```
 
-Once connections are detected, they should be registered using the connectionEngine provided as a parameter to the method. Also disconnects need to be registered. The endpoint objects that were retrieved using the above code, should be used to create ConnectionInfo objects. New connections overwrite existing connections, based on the destination endpoint. In most cases, there is no need to first retrieve the existing connections from the API.
+Once connections are detected, they should be registered using the `connectionEngine` provided as a parameter to the method. Disconnects also need to be registered. The endpoint objects retrieved using the code above should be used to create `ConnectionInfo` objects. New connections overwrite existing connections, based on the destination endpoint. In most cases, there is no need to first retrieve the existing connections from the API.
 
 > [!NOTE]
-> If a connection is detected but the corresponding source endpoint cannot be found, the connection must still be registered.
+> If a connection is detected but the corresponding source endpoint cannot be found, the connection still has to be registered.
 
 ```csharp
     public override void ProcessParameterUpdate(IEngine engine, IConnectionHandlerEngine connectionEngine, ParameterUpdate update)
@@ -128,7 +126,7 @@ Once connections are detected, they should be registered using the connectionEng
 
 ## Connect() method
 
-This method is being executed to setup a new connection on a device or controller. In this method it's the intention to set the necessary parameters and/or send an InterApp message to the element. Connection changes will eventually cause a parameter update, which will be handled by 'ProcessParameterUpdate' and update the connection.
+This method is executed to set up a new connection on a device or controller. It is intended to set the necessary parameters and/or send an InterApp message to the element. Connection changes will eventually cause a parameter update, which will be handled by `ProcessParameterUpdate` and will update the connection.
 
 ```csharp
     public override void Connect(IEngine engine, IConnectionHandlerEngine connectionEngine, CreateConnectionsRequest createConnectionsRequest)
@@ -148,7 +146,7 @@ This method is being executed to setup a new connection on a device or controlle
 
 ## Disconnect() method
 
-This method is being executed to disconnect a connection on a device or controller. In this method it's the intention to set the necessary parameters and/or send an InterApp message to the element.
+This method is executed to disconnect a connection on a device or controller. It is intended to set the necessary parameters and/or send an InterApp message to the element.
 
 ```csharp
     public override void Disconnect(IEngine engine, IConnectionHandlerEngine connectionEngine, DisconnectDestinationsRequest disconnectDestinationsRequest)
