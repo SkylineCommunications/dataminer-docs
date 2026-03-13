@@ -31,7 +31,7 @@ Orchestration events can be created using the MediaOps Live API. [MediaOps Plan]
 
 Any automation script added to the `MediaOps/OrchestrationScripts` folder is be an orchestration script. In addition to the regular script dummies and parameters, you can use profile parameters and definitions as input arguments in these scripts by implementing the `OrchestrationScript` class. For detailed information, refer to [Orchestration scripts](xref:MediaOpsLive_OrchestrationScript).
 
-When an orchestration script is executed manually, and all script dummies and parameters have been filled in, a UI will prompt the user for the typed parameters. The UI will also allow the user to select a profile instance instead of providing each parameter value individually.
+When an orchestration script is executed manually, and all script dummies and parameters have been filled in, a UI will prompt the user for the orchestration parameters. The UI will also allow the user to select a profile instance instead of providing each parameter value individually.
 
 > [!TIP]
 > To understand in more detail how to implement orchestration scripts, follow the tutorial [Creating orchestration scripts](xref:Tutorial_MediaOpsLive_CreateOrchestrationScripts).
