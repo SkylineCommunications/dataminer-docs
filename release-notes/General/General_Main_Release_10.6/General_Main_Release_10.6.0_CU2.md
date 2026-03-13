@@ -94,6 +94,15 @@ From now on, the conflict error data will only include the quarantined usages of
 
 Up to now, the SLA cleaning thread would incorrectly remove history data for an active alarm that was not linked to an outage. As a result, when a replay happened, the active alarms table would no longer be updated when that alarm was cleared.
 
+#### SNMP managers: Some configuration changes would not get properly synchronized across the Agents in the cluster [ID 44909]
+
+<!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when the configuration of an SNMP manager had been changed, in some cases, changes made to the following settings would not properly get synchronized across the Agents in the cluster:
+
+- *Enable tracking to avoid duplicate inform acknowledgments (ACKs)*
+- *Enable alarm storm prevention*
+
 #### Updating DVE properties could cause SLDMS to stop working [ID 44921]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
