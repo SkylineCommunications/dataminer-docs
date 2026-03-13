@@ -2,7 +2,10 @@
 uid: MediaOps_Plan_1.5.2
 ---
 
-# MediaOps Plan 1.5.2
+# MediaOps Plan 1.5.2 - Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
 
 > [!NOTE]
 > This version requires:
@@ -24,3 +27,11 @@ uid: MediaOps_Plan_1.5.2
 In the Scheduling app, the feed for the start and end time of the active job was incorrectly linked to the "swap resource" panel instead of the "link node" panel. Because of this, the displayed timeline did not reflect the resources in the selected job.
 
 This has been fixed, ensuring that the correct data will now be displayed on the "link node" panel.
+
+#### Resource Studio: Resource concurrency updates not saved [ID 44997]
+
+If changes were made to the concurrency of a resource in the Complete state, it could occur that these were not saved properly.
+
+#### People & Organization: Person added to bookable team became draft resource [ID 45008]
+
+When a new person was added to a bookable team in the People & Organization app, this person could incorrectly end up as a resource in Draft state in Resource Studio.
