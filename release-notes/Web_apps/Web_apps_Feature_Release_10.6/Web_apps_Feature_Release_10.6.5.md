@@ -199,6 +199,14 @@ That same error would also occur when an ad hoc data source or custom operator a
 > [!NOTE]
 > Currently, there is no reason for users to define AlarmID metadata via ad hoc data sources or custom operators. At present, the *Get alarms* data source is the only built-in data source that provides AlarmID metadata.
 
+#### Dashboards app: Side panel would incorrectly always scroll whenever a dashboard or a folder was selected [ID 44962]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, each time you selected a dashboard or a dashboard folder in the side panel, the side panel would scroll in order to get the selected item centered.
+
+From now on, the side panel will only scroll when the newly selected item would otherwise not be entirely visible.
+
 #### Comparison tool / DOM security app: Clicking the title button would no longer navigate to the DataMiner landing page [ID 44963]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
