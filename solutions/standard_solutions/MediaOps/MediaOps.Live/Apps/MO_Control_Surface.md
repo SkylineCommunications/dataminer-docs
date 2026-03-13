@@ -15,6 +15,8 @@ The app shows two main panels, one on the left with all sources defined in the s
 - [Locking and unlocking destinations](#locking-and-unlocking-destinations)
 - [Filtering sources and destinations](#filtering-sources-and-destinations)
 
+![Control Surface app](~/solutions/images/MO_CS_app.png)
+
 ## Connecting a source to one or multiple destinations
 
 To create connections between a source and one or more destinations, select the source and destination(s) and click the *Connect* button.
@@ -29,7 +31,7 @@ When the connection is successfully made, the destination button will reflect th
 You can also connect specific levels of a source to a destination by selecting the individual levels at the bottom of the app and clicking the *Connect Level* button.
 
 > [!NOTE]
-> Connecting a subset of a source can only be done to a single destination and also allows you to shuffle a specific level.
+> Connecting a subset of a source can only be done to a single destination and also allows you to shuffle a specific level (i.e., while usually the same level is connected, this allows you to connect different levels, such as Audio 1 > Audio 2).
 
 ## Disconnecting destinations
 

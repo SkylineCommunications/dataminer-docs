@@ -6,6 +6,8 @@ uid: MO_Orchestration_Events
 
 The Orchestration Events app provides visibility on the orchestration events defined in the system.
 
+![Orchestration Events app](~/solutions/images/MO_OE_app.png)
+
 ## App overview
 
 The following pages are available in the app:

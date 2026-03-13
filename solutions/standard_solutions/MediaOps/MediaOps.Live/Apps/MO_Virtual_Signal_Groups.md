@@ -10,6 +10,8 @@ It allows you to create source and destination endpoints for every individual si
 
 The virtual signal groups can be grouped into categories to allow operators to more easily navigate their control surfaces to find the relevant sources and destinations for their workflows.
 
+![Virtual Signal Groups app](~/solutions/images/MO_VSG_app.png)
+
 ## App overview
 
 The following pages are available in the app:
