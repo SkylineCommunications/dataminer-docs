@@ -126,6 +126,12 @@ Up to now, when a GQI extension (i.e., an ad hoc data source or a custom operato
 
 ### Fixes
 
+#### Low-Code Apps - Form component: Required lazy-loaded dropdown boxes would incorrectly be marked as invalid [ID 44815]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, in a *Form* component, in some cases, required dropdown boxes of which the values were lazy-loaded would incorrectly be marked as invalid.
+
 #### GQI DxM: 'Get profile instances' and 'Get trend data' data sources would incorrectly format parameters using invariant culture [ID 44857]
 
 <!-- MR 10.7.0 - FR 10.6.5 -->
