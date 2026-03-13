@@ -113,7 +113,7 @@ The minimum log level determines which log entries are included in the log files
 In GQI DxM, the minimum log level for extensions is determined by the global minimum log level and, optionally, an instance-specific minimum log level.
 
 > [!NOTE]
-> From DataMiner web 10.6.5 onwards, if an instance-specific minimum log level is configured, it overwrites the global minimum log level for that extension instance. Prior to DataMiner web 10.6.5, the effective minimum log level is the highest level of the global minimum log level and the instance-specific minimum log level. <--RN 44983-->
+> From DataMiner web 10.6.5 onwards, if an instance-specific minimum log level is configured, it overwrites the global minimum log level for that extension instance. Prior to DataMiner web 10.6.5, the effective minimum log level is the highest level of the global minimum log level and the instance-specific minimum log level. <!--RN 44983-->
 
 - The **global** minimum log level that applies to all GQI extensions by default. This can be configured in the [application settings](xref:GQI_DxM#configuration) using the `MinimumLogLevel` property. For example:
 
