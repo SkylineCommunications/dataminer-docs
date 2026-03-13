@@ -40,6 +40,14 @@ From now on, each time an SLLogCollector package is created, it will include the
 
 On systems where each DMA has its own Cassandra database, SLDataGateway will now log when the TTLs of all active alarms have been refreshed. This will allow you to better trace any job queue spikes caused by these refresh operations.
 
+#### SLLogCollector packages will now include the 'Security.evtx' file [ID 44845]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+From now on, each time an SLLogCollector package is created, it will include the *Security.evtx* file.
+
+This file, located in `%SystemRoot%\System32\winevt\Logs\`, is the primary Windows Event Log file recording security-related events, such as logon attempts, privilege usage, and object access.
+
 ### Fixes
 
 #### One protocol thread would incorrectly be able to add new rows to a table while another protocol thread was clearing that table [ID 44764] [ID 44833]
