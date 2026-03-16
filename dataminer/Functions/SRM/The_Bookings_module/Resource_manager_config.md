@@ -14,9 +14,6 @@ System administrators can modify this file to tune performance or adapt the reso
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <ResourceManagerConfig benchmark="false">
-    <ResourceSettings>
-        <ResourceStorageType>Elastic</ResourceStorageType>
-    </ResourceSettings>
     <CacheConfiguration>
         <IdCacheConfiguration>
             <MaxObjectsInCache>10000</MaxObjectsInCache>
