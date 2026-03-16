@@ -63,10 +63,9 @@ The overview below indicates the support levels for all operators.
 | [Filter](xref:GQI_Filter) | [Real-time events](#query-update-support) / [Notification events](#query-update-support) | When supported, this is mentioned in the relevant data source documentation. |
 | All other operators | [Notification events](#query-update-support) | |
 
-## Metadata
+## Row metadata
 
-Metadata is supported for real-time events that add new rows.
-Adding or updating metadata of rows via the [*UpdateRow* method](xref:GQI_IGQIUpdater) in an ad hoc data source is not supported.
+Row metadata is supported for real-time events, but only when adding new rows. Row metadata for existing rows cannot be modified via real-time events.
 
 > [!WARNING]
-> Prior to DataMiner web apps version 10.6.5, real-time add-row events passing through a Select operator that changed the column order did not retain row metadata. <!-- RN 44974 -->
+> Prior to DataMiner web apps version 10.6.5, real-time events passing through a `select` operator that altered the column order did not retain row metadata. <!-- RN 44974 -->
