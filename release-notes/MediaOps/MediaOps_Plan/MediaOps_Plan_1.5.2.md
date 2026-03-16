@@ -2,10 +2,7 @@
 uid: MediaOps_Plan_1.5.2
 ---
 
-# MediaOps Plan 1.5.2 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Plan 1.5.2
 
 > [!NOTE]
 > This version requires:
@@ -35,3 +32,11 @@ If changes were made to the concurrency of a resource in the Complete state, it 
 #### People & Organization: Person added to bookable team became draft resource [ID 45008]
 
 When a new person was added to a bookable team in the People & Organization app, this person could incorrectly end up as a resource in Draft state in Resource Studio.
+
+#### Workflow Designer: Exception when swapping pool node to resource node [ID 45010]
+
+When a pool node was swapped to a resource node in Workflow Designer, an exception could be thrown. This issue has been resolved.
+
+#### Workflow Designer/Scheduling: Missing camera icon [ID 45012]
+
+In the Workflow Designer and Scheduling apps, the camera icon was not displayed for pool and resource nodes in the workflow.
