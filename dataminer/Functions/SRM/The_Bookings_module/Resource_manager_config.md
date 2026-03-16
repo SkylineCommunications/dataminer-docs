@@ -4,7 +4,7 @@ uid: Resource_manager_config
 
 # Resource manager configuration
 
-The resource manager configuration allows the configuration caching, resource storage, and other runtime settings.
+The resource manager configuration allows the configuration of caching and other runtime settings.
 
 The configuration is stored in: 'C:\Skyline DataMiner\ResourceManager\Config.xml'.
 
@@ -47,7 +47,7 @@ System administrators can modify this file to tune performance or adapt the reso
 
 ## Retrieving or updating the configuration via API
 
-The resource manager configuration can be retrieved and updated via API using message ResourceManagerConfigInfoMessage.
+The resource manager configuration can be retrieved and updated via API using message `ResourceManagerConfigInfoMessage`.
 
 To retrieve the current configuration, send a `ResourceManagerConfigInfoMessage` of type `Get`:
 ```csharp
@@ -73,15 +73,15 @@ var request = new ResourceManagerConfigInfoMessage(ResourceManagerConfigInfoMess
     },
     HostedReservationInstanceCacheConfiguration = new HostedReservationInstanceCacheConfiguration()
     {
-        CheckInterval = TimeSpan.FromMinutes(10),
-        InitialLoadDays = TimeSpan.FromMinutes(10)
+        CheckInterval = TimeSpan.FromHours(6),
+        InitialLoadDays = TimeSpan.FromDays(1)
     }
 };
 var response = engine.SendSLNetSingleResponseMessage(request) as ResourceManagerConfigInfoResponseMessage;
 ```
 
 > [!NOTE]
-> - When the configuration is updated via API, the new configuration will be applied immediately. There is no need to restart the resource manager or DataMiner.
+> - When the configuration is updated via API, the new configuration will be applied immediately, except for **ResourceManagerAutomationSettings** that are only updated when resource manager or DataMiner restarts as it needs to setup internal thread settings.
 > - When the configuration is updated via API, only the fields that are included in the request will be updated. The other fields will keep their current value. For example, if the request only includes the `IdCacheConfiguration`, only this configuration will be updated, and the other configurations will keep their current settings.
 > - Only setting **AllowNotActiveElements** is synced across the cluster. All other settings are applied on the agent where the API request is sent.
 
@@ -175,3 +175,4 @@ In most cases, these settings can keep their default value, unless performance h
 
 > [!NOTE]
 > - Available from DataMiner 10.6.1/10.7.0 onwards<!-- RN 44056 -->. 
+> - Requires a restart of the resource manager or DataMiner to apply the new settings, as these settings are used to set up the internal thread pool of the resource manager.
