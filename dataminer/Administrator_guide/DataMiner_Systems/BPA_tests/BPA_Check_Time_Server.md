@@ -25,11 +25,31 @@ This test will check if the NTP server settings are configured correctly and all
 
 - In case the cluster only consists of one Agent (this always succeeds):
 
-  `All agents in the cluster use the same NTP server ([timeserver]).`
+  `All DataMiner agents in the cluster use the same NTP server ([timeserver]).`
 
 - If all DataMiner Agents are configured correctly and use the same NTP server:
 
-  `All DMAs use the same time server ([timeserver]).`
+  `All DataMiner Agents have the same NTP server configured ([timeserver]).`
+
+- Different NTP servers have been detected, but they are peers from one another:
+
+  `Different NTP servers have been detected, but they are peers from one another.`
+
+### Warning
+
+For all warnings:
+
+- The outcome is `Warning`
+
+The following warning are possible:
+
+- The NTP server could not be retrieved from all DataMiner Agents:
+
+  - Result message: `The NTP server could not be retrieved from all DataMiner Agents.`
+
+- Multiple different NTP servers detected that are not peers from one another:
+
+  - Result message: `Multiple different NTP servers detected that are not peers from one another.`
 
 ### Error
 
