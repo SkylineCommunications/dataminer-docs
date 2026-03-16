@@ -153,9 +153,8 @@ Once the server has been configured, the next step in setting up the offload dat
 
       - For Oracle: 1521
 
-      > **Tip**  
-      > For increased security, you can limit the rule scope so that only the database server can reach this port.  
-      > In the *Scope* tab, specify the database server’s IP address under *Remote IP address*.  
+      > [!TIP]
+      > For increased security, you can limit the rule scope so that only the database server can reach this port. To do so, in the *Scope* tab, specify the database server's IP address under *Remote IP address*.
 
    1. Select *Allow the connection* and click *Next*.
 
@@ -212,13 +211,13 @@ In Cube, configure the offload or "central" database settings for each DMA in th
    1. In the dropdown list, select *Everyone*. If this option is not listed, click *Find people* to add it.
 
       This is necessary because the folder has to be freely accessible, as no user credentials are passed in the query that retrieves the data.
-      > **Tip**  
-      > In *domain environments*, instead of selecting *Everyone*, you may also select the *DMA’s computer account* (e.g. *DMA-SERVER01$*). 
+
+      > [!NOTE]
+      >
+      > - In **domain environments**, instead of selecting *Everyone*, you can select the **computer account** of the DMA (e.g., `DMA-SERVER01$`).
+      > - Regardless of whether you use *Everyone* or a computer account, the selected identity must have read/write permissions on the share. Otherwise, the DMA will not be able to store data in the CSV files.
 
    1. Click the *Share* button.
-
-   > [!NOTE]
-   > Regardless of whether you use Everyone or a computer account, the selected identity must have read/write permissions on the share. Otherwise, the DMA will not be able to store data in the CSV files.
 
 1. Activate TCP/IP:
 
@@ -296,7 +295,7 @@ In Cube, configure the offload or "central" database settings for each DMA in th
 > - If an offload to the offload database fails, an alarm will be generated in DataMiner. As soon as offloading works again, the alarm is cleared.
 > - If the offload fails for a specific offload file, this file is moved to a failure folder and an error is logged.
 > - The offload database settings can also be found in the file *DB.xml*. For more information, see [DB.xml](xref:DB_xml#dbxml).
-> - To troubleshoot offload issues, check the log file at C:\Skyline DataMiner\Logging\SLDBConnection.txt.
+> - To troubleshoot offload issues, check the log file `C:\Skyline DataMiner\Logging\SLDBConnection.txt`.
 
 ## Automatic creation and verification of the offload database
 
