@@ -108,10 +108,10 @@ Up to now, the SLA cleaning thread would incorrectly remove history data for an 
 
 <!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
 
-Up to now, when the configuration of an SNMP manager had been changed, in some cases, changes made to the following settings would not properly get synchronized across the Agents in the cluster:
+Up to now, when an SNMP manager had been added, or its configuration had been changed, the following settings would not get properly synchronized across the Agents in the cluster. On the remote Agents, after synchronization, these two settings would incorrectly be set to their default value.
 
 - *Enable tracking to avoid duplicate inform acknowledgments (ACKs)*
-- *Enable alarm storm prevention*
+- *Group alarms with the same parameter name*
 
 #### Updating DVE properties could cause SLDMS to stop working [ID 44921]
 
