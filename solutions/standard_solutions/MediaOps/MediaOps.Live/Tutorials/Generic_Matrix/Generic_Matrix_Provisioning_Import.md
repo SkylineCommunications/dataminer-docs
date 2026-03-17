@@ -122,97 +122,104 @@ In this step, you will use the CSV file format to create new endpoints for the G
 
    The ID column is intentionally left empty, as it will be automatically assigned during the import. To update an existing endpoint, you would need to provide the ID of that endpoint.
 
-   The above line will create a new source endpoint named `Matrix Input 1`, linked to row key `1` of the inputs table of element `Matrix`, using `SDI` as transport type.
+   The above line will create a new source endpoint named `Matrix Input 1`, linked to row key `1` of the inputs table of element `Matrix`, using `SDI` as transport type. Note that endpoint and virtual signal group **names must be unique** across your entire MediaOps Live system, so if this endpoint name already exists, use a different one.
 
 1. Similarly, to create a new destination endpoint for output 1, add the following line to the CSV file.
 
-   This time we will use `Destination` as role and link it to row key `1` of the outputs table of the element.
+   ```csv
+   ;Matrix Output 1;Destination;Matrix;1;;;SDI;;;
+   ```
 
-    ```csv
-    ;Matrix Output 1;Destination;Matrix;1;;;SDI;;;
-    ```
+   This time `Destination` is used as the role; and the endpoint is linked to row key `1` of the outputs table of the element.
 
-    More lines can be added to create more endpoints as needed.
+1. Add more lines, similar to the lines above, to create more endpoints as needed.
 
-1. Save the CSV file after making the changes.
+1. Save the CSV file after making your changes.
 
-    The file should now look like this:
+   The file should now look like this:
 
-    ```csv
-    ID;Name;Role;Element;Identifier;Control Element;Control Identifier;Transport Type;TSoIP-Source IP;TSoIP-Multicast IP;TSoIP-Port
-    ;Matrix Input 1;Source;Matrix;1;;;SDI;;;
-    ;Matrix Output 1;Destination;Matrix;1;;;SDI;;;
-    ```
+   ```csv
+   ID;Name;Role;Element;Identifier;Control Element;Control Identifier;Transport Type;TSoIP-Source IP;TSoIP-Multicast IP;TSoIP-Port
+   ;Matrix Input 1;Source;Matrix;1;;;SDI;;;
+   ;Matrix Output 1;Destination;Matrix;1;;;SDI;;;
+   ```
 
-1. The file is now ready to be imported. To do so:
-    1. Go back to the `Endpoints` tab in the `Virtual Signal Groups` app.
-    1. Click the `Import` button in the header bar. A popup window will appear.
-    1. Upload the modified CSV file by clicking the `Upload` button and selecting the file from your computer.
-    1. Press the `Import` button to start the import process. The new endpoints should now appear in the list.
+1. Import the file again:
+
+   1. Go back to the *Endpoints* page in the Virtual Signal Groups app.
+
+   1. Click the *Import* button in the header bar.
+
+   1. In the pop-up window, upload the modified CSV file by clicking *Upload* button and selecting the file from your computer.
+
+   1. Click *Import* to start the import process.
+
+      The new endpoints should now appear in the list.
 
 > [!NOTE]
-> The CSV import can be used to create new endpoints as well as to update existing ones.
-> Deleting endpoints is currently not supported through the CSV import.
+> The CSV import can be used to create new endpoints as well as to update existing ones. Deleting endpoints is currently not supported through the CSV import.
 
 ## Step 5: Import new virtual signal groups
 
-After adding the endpoints, the next step is to define and import the virtual signal groups (VSGs).
-A VSG groups one or more endpoints together across different levels (e.g., video, audio, data), and is typically used to represent a logical signal flow in your system.
+After adding the endpoints, the next step is to define and import the virtual signal groups (VSGs). A VSG groups one or more endpoints together across different levels (e.g., video, audio, data) and is typically used to represent a logical signal flow in your system.
 
-In this tutorial we will create a VSG for each endpoint that we created in the previous step.
-The endpoints will be assigned on the `Video` level, but this can be adjusted based on your needs.
-Make sure to use the same level for sources and destinations.
+In this step, you will create a VSG for each endpoint created in the previous step. The endpoints will be assigned on the *Video* level, but you can adjust this based on your needs. Make sure to use the same level for sources and destinations.
 
 1. Open the `virtual_signal_groups_export.csv` file that you exported in [step 3](#step-3-export-existing-virtual-signal-groups).
+
 1. Delete all rows except the header row. The file should now look like this:
 
-    ```csv
-    ID;Name;Description;Role;Endpoint (Video);Endpoint (Audio1);Endpoint (Audio2);Endpoint (Data)
-    ```
+   ```csv
+   ID;Name;Description;Role;Endpoint (Video);Endpoint (Audio1);Endpoint (Audio2);Endpoint (Data)
+   ```
 
-1. We will now create a VSG for the source endpoint `Matrix Input 1` that we created in the previous step.
+1. To create a VSG for the source endpoint `Matrix Input 1` that you created in the previous step, add the following line to the CSV file:
 
-    To do this, add the following line to the CSV file:
+   ```csv
+   ;Matrix Input 1;;Source;Matrix Input 1;;;
+   ```
 
-    ```csv
-    ;Matrix Input 1;;Source;Matrix Input 1;;;
-    ```
+   The ID is again left empty to make sure a new VSG is created. To update an existing VSG, you would need to provide the ID of that VSG.
 
-    As you can see, the ID is again left empty because we want to create a new VSG. To update an existing VSG, you would need to provide the ID of that VSG.
-    Make sure the `Role` column has `Source` as value.
-    The endpoint is assigned on the Video level by placing the endpoint name in the corresponding column.
-    Levels that are not used can be left empty.
+   Make sure the `Role` column has `Source` as value.
+
+   The endpoint is assigned on the `Video` level by placing the endpoint name in the corresponding column. Levels that are not used can be left empty.
 
 1. In a similar way, to create a VSG for the destination endpoint `Matrix Output 1`, add the following line to the CSV file:
 
-    ```csv
-    ;Matrix Output 1;;Destination;Matrix Output 1;;;
-    ```
+   ```csv
+   ;Matrix Output 1;;Destination;Matrix Output 1;;;
+   ```
 
-    This time we use `Destination` as role and assign the endpoint again on the `Video` level.
-    More lines can be added to create more VSGs as needed.
+   This time, `Destination` is used as the role. The endpoint is again assigned on the `Video` level.
+
+1. Add more lines, similar to the lines above, to create more VSGs as needed.
 
 1. Save the CSV file after making the changes.
 
-    The file should now look like this:
+   The file should now look like this:
 
-    ```csv
-    ID;Name;Description;Role;Endpoint (Video);Endpoint (Audio1);Endpoint (Audio2);Endpoint (Data)
-    ;Matrix Input 1;;Source;Matrix Input 1;;;
-    ;Matrix Output 1;;Destination;Matrix Output 1;;;
-    ```
+   ```csv
+   ID;Name;Description;Role;Endpoint (Video);Endpoint (Audio1);Endpoint (Audio2);Endpoint (Data)
+   ;Matrix Input 1;;Source;Matrix Input 1;;;
+   ;Matrix Output 1;;Destination;Matrix Output 1;;;
+   ```
 
 1. The file is now ready to be imported. To do so:
-    1. Go back to the `Virtual Signal Groups` tab in the `Virtual Signal Groups` app.
-    1. Click the `Import` button in the header bar. A popup window will appear.
-    1. Upload the modified CSV file by clicking the `Upload` button and selecting the file from your computer.
-    1. Press the `Import` button to start the import process. The new virtual signal groups should appear in the list.
+
+   1. Go back to the *Endpoints* page in the Virtual Signal Groups app.
+
+   1. Click the *Import* button in the header bar.
+
+   1. In the pop-up window, upload the modified CSV file by clicking *Upload* button and selecting the file from your computer.
+
+   1. Click *Import* to start the import process.
+
+      The new virtual signal groups should appear in the list.
 
 > [!NOTE]
-> The CSV import can be used to create new virtual signal groups as well as to update existing ones.
-> Deleting virtual signal groups is currently not supported through the CSV import.
+> The CSV import can be used to create new virtual signal groups as well as to update existing ones. Deleting virtual signal groups is currently not supported through the CSV import.
 
 ## Up next
 
-When you have finished this tutorial, you can continue with creating a [connection handler script](xref:Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript).
-This script will use the endpoints and virtual signal groups that you created in this tutorial to visualize and manage connections.
+When you have finished this tutorial, you can continue with creating a [connection handler script](xref:Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript). This script will use the endpoints and virtual signal groups that you created in this tutorial to visualize and manage connections.
