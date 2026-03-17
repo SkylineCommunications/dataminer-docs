@@ -88,6 +88,8 @@ Up to now, the *Check Time Server* BPA test would only work correctly on systems
 
 Also, the time checking algorithm would be too restrictive.
 
+In addition, when multiple NTP servers are detected, the test will now verify whether those servers are peers of one another. If they are peers, the test will still succeed; if they are not peers, a warning will be generated.
+
 #### Service & Resource Management: Quarantine conflict error data would incorrectly include all quarantined usages of the affected bookings [ID 44869]
 
 <!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
