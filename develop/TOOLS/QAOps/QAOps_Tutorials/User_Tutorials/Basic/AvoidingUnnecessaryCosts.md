@@ -154,7 +154,7 @@ Expected duration: 5 minutes.
 
 1. Locate the server information in the top-right corner.
 
-   This shows which server was used. It should indicate that the server is marked for deletion in four or more days.
+   This shows which server was used. After one day, it should indicate that the server is marked for deletion.
 
 1. Click the delete icon for the server.
 
