@@ -140,6 +140,12 @@ Up to now, the *Get profile instances* and *Get trend data* data sources would f
 
 From now on, all data sources will format the display values for DataMiner parameters consistently using the culture of the user and will also use the group separator defined in that culture.
 
+#### Dashboards/Low-Code Apps - Timeline component: Timestamps would be converted incorrectly when the user's regional settings took a long time to load [ID 44870]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When the user's regional settings took a long time to load, in some cases, timestamps would be converted incorrectly.
+
 #### Dashboards/Low-Code Apps - Table component: Data fed to another component would not get updated during a refetch [ID 44871]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
