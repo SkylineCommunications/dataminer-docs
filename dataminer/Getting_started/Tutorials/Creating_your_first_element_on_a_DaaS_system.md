@@ -4,78 +4,30 @@ uid: Creating_your_first_element_on_a_DaaS_system
 
 # Creating your first element on a DaaS system
 
-This tutorial guides you through setting up a free DataMiner Community Edition system as a service and creating your first Skyline Generic HTTP Query element. With this element, you will be able to monitor a website of your choice.
+This tutorial guides you through creating your first Skyline Generic HTTP Query element. With this element, you will be able to monitor a website of your choice.
 
 The content and screenshots for this tutorial have been created in DataMiner version 10.4.6.
 
-Estimated duration: 30 minutes
+Estimated duration: 15 minutes
 
 ## Prerequisites
 
-- You must be a member of an [organization](xref:Pricing_Usage_based_service#organization).
+- You must have a [DaaS system](xref:Creating_a_DMS_on_dataminer_services).
+
+- You must have installed [DataMiner Cube](xref:Accessing_a_new_DMS).
 
 ## Overview
 
 The tutorial consists of the following steps:
 
-- [Step 1: Create a staging DataMiner System in the cloud](#step-1-create-a-staging-dataminer-system-in-the-cloud)
-- [Step 2: Install DataMiner Cube](#step-2-install-dataminer-cube)
-- [Step 3: Access your newly created DaaS system for the first time](#step-3-access-your-newly-created-daas-system-for-the-first-time)
-- [Step 4: Deploy the 'Generic HTTP Query' protocol from the Catalog](#step-4-deploy-the-generic-http-query-protocol-from-the-catalog)
-- [Step 5: Create an element to monitor a website of your choice](#step-5-create-an-element-to-monitor-a-website-of-your-choice)
-- [Step 6: Create an alarm template for your element](#step-6-create-an-alarm-template-for-your-element)
-- [Step 7: Hide the unnecessary table columns (optional)](#step-7-hide-the-unnecessary-table-columns-optional)
+- [Step 1: Deploy the 'Generic HTTP Query' protocol from the Catalog](#step-1-deploy-the-generic-http-query-protocol-from-the-catalog)
+- [Step 2: Create an element to monitor a website of your choice](#step-2-create-an-element-to-monitor-a-website-of-your-choice)
+- [Step 3: Create an alarm template for your element](#step-3-create-an-alarm-template-for-your-element)
+- [Step 4: Hide the unnecessary table columns (optional)](#step-4-hide-the-unnecessary-table-columns-optional)
 
-## Step 1: Create a staging DataMiner System in the cloud
+## Step 1: Deploy the 'Generic HTTP Query' protocol from the Catalog
 
-Deploy a [DataMiner Community Edition system as a service](xref:Pricing_Commercial_Models#dataminer-community-edition):
-
-> [!NOTE]
-> The first time you deploy a DaaS system for a specific organization, the system is free for the first 7 days. To keep using this DataMiner System after the initial 7 days, move to the standard [usage-based services](xref:Pricing_Commercial_Models#usage-based-services) by [purchasing DataMiner credits](xref:Order_DataMiner_credits). For subsequent DaaS deployments using the same organization, you will need to make sure the organization has sufficient DataMiner credits.
-
-1. Follow the procedure to [create a new DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services).
-
-1. Wait until your DaaS system has been initialized. This can take around 15 minutes.
-
-## Step 2: Install DataMiner Cube
-
-To access and interact with your new DataMiner System, install DataMiner Cube, the main DataMiner client application.
-
-> [!NOTE]
-> If DataMiner Cube is already installed, proceed to the next step.
-
-1. Go to [dataminer.services](https://dataminer.services).
-
-1. Select *Desktop installation* in the top-right corner of the dataminer.services home page and run the downloaded file.
-
-1. In the installation window, open the *Options* section:
-
-   - Add a shortcut to the desktop and start menu.
-
-   - Optionally, allow DataMiner Cube to start with Windows.
-
-1. Click *Install*.
-
-## Step 3: Access your newly created DaaS system for the first time
-
-Access your new DaaS system.
-
-1. Go to [dataminer.services](https://dataminer.services).
-
-1. Under *DataMiner Systems*, click *Open in desktop app*.
-
-1. If required, confirm by clicking *Open DataMiner Cube*.
-
-1. Click *Connect* in the lower-right corner of the *New DataMiner System* pop-up window.
-
-   ![New DataMiner System](~/dataminer/images/daas_access_003.png)
-
-> [!TIP]
-> See also: [Accessing a newly created DMS for the first time](xref:Accessing_a_new_DMS)
-
-## Step 4: Deploy the 'Generic HTTP Query' protocol from the Catalog
-
-Now that you have set up your staging DataMiner System and have connected to the system, in this step you will deploy the *Generic HTTP Query* protocol (also known as connector). This will allow you to create an element to monitor a website of your choice.
+In this step, you will deploy the *Generic HTTP Query* protocol (also known as connector). This will allow you to create an element to monitor a website of your choice.
 
 1. Look up the [*Generic HTTP Query* connector](https://catalog.dataminer.services/details/d29994e3-f2a6-4da4-972f-21cbb7b1cd62) in the Catalog.
 
@@ -88,7 +40,7 @@ Now that you have set up your staging DataMiner System and have connected to the
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
 
-## Step 5: Create an element to monitor a website of your choice
+## Step 2: Create an element to monitor a website of your choice
 
 Next, you will create an element that allows you to monitor a website of your choice, such as your corporate website. This element will use the *Generic HTTP Query* protocol you deployed earlier, which can be used to regularly send HTTP/HTTPS requests. This helps assess the website's availability.
 
@@ -137,7 +89,7 @@ Next, you will create an element that allows you to monitor a website of your ch
 
 You have now created an element to monitor the status of a website. By default, a HTTP/HTTPS request is sent out every 10 seconds.
 
-## Step 6: Create an alarm template for your element
+## Step 3: Create an alarm template for your element
 
 To monitor the website's availability effectively, you will focus on the HTTP response status code in the *Status Code* column. These codes are grouped into five categories based on their first digit, each representing a different class of response:
 
@@ -146,7 +98,7 @@ To monitor the website's availability effectively, you will focus on the HTTP re
 | 1xx | Informational | `102 Processing`: The server has received and is processing the request, but no response is available yet. |
 | 2xx | Success | `200 OK`: The request was successful. |
 | 3xx | Redirection | `301 Moved Permanently`: The requested resource has been permanently moved to a new URL. |
-| 4xx | Client errors | `404 Not Found `: The server cannot find the requested resource. |
+| 4xx | Client errors | `404 Not Found`: The server cannot find the requested resource. |
 | 5xx | Server errors | `502 Bad Gateway`: The server, while acting as a gateway or proxy, received an invalid response from the upstream server. |
 
 > [!TIP]
@@ -190,7 +142,7 @@ You are now monitoring the *Status Code* parameter. If a warning or alarm is tri
 > - [About alarm templates](xref:About_alarm_templates)
 > - [Configuring normal alarm thresholds](xref:Configuring_normal_alarm_thresholds)
 
-## Step 7: Hide the unnecessary table columns (optional)
+## Step 4: Hide the unnecessary table columns (optional)
 
 By default, the *HTTP Queries* table shows a lot of columns that are not useful for this tutorial. In this step, you will hide these to get a cleaner view on the data.
 
@@ -203,3 +155,10 @@ By default, the *HTTP Queries* table shows a lot of columns that are not useful 
    Only the *Name*, *Interval*, *Status Code*, *Avg Response Time*, *Execute*, and *Response Time* columns will be displayed now.
 
    ![Unnecessary columns](~/dataminer/images/Unnecessary_columns.png)
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 UP NEXT</b><br>If you just want to discover some of the things DataMiner can do, <a href="xref:DaaS_deploying_solution_demos">deploy some demo solutions</a>. If you want other users to be able to use your DaaS system, <a href="xref:Managing_users">add these users and configure their rights in System Center</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
