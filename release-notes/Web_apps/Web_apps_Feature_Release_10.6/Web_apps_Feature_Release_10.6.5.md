@@ -257,3 +257,9 @@ However, in some rare cases, when you tried to log in to the landing page of a D
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 In some cases, *On open* events configured on pages or panels would not take into account the correct selection when resolving event values.
+
+#### GQI DxM: Row metadata would be lost when a column selector that modified the order of the columns was applied to the query [ID 44974]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When a row with metadata was added via a real-time query update, up to now, the metadata would be lost when a column selector that modified the order of the columns was applied to the query.
