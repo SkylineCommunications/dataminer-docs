@@ -95,31 +95,38 @@ Next, virtual signal groups (VSGs) need to be created. These are logical groupin
 
    ![Pop-up window to create new VSG, with the necessary details filled in](~/solutions/images/MO_New_VSG_Matrix_Input_1.png)
 
-   In the table, a record will be added for the VSG. Next, an endpoint needs to be assigned to the VSG.
+   In the table, a record will be added for the VSG.
 
-1. Click the edit endpoints icon on the row of the VSG you just created. A side panel will open.
+1. Assign an endpoint to the VSG:
 
-1. In the table at the top, select the `Video` level.
+   1. Click the edit endpoints icon in the row of the VSG you have just created.
 
-1. In the table at the bottom, select the endpoint you created in the previous step (e.g., `Matrix Input 1`).
+      ![Icon to edit endpoints in the Virtual Signal Groups table](~/solutions/images/MO_Edit_endpoints_icon.png)
 
-1. Press the `Assign` button to assign the endpoint to the VSG.
+      A side panel will open.
 
-1. You should now see that the endpoint is assigned on the Video level.
+   1. In the table at the top, select the *Video* level.
 
-Repeat these steps to create more VSGs for inputs and outputs as needed.
-Use role `Source` for input VSGs and role `Destination` for output VSGs.
+   1. In the table at the bottom, select the endpoint you created in the previous step (e.g., *Matrix Input 1*).
+
+   1. Click *Assign* to assign the endpoint to the VSG.
+
+      ![Video level and Matrix Input 1 selected in side panel to assign endpoint](~/solutions/images/MO_Assign_endpoint_to_VSG.png)
+
+      The endpoint will now be assigned on the *Video* level.
+
+1. Repeat these steps to create more VSGs for inputs and outputs as needed, using the role *Source* for input VSGs and the role *Destination* for output VSGs.
 
 ## Step 4: Create a test connection
 
-To be able to create a connection between a source and destination, you first need to create a connection handler script for Generic Matrix.
-To do this, follow the steps in the tutorial [Creating a connection handler script for a Generic Matrix element](xref:Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript).
+> [!TIP]
+> To be able to create a connection between a source and destination, you need a connection handler script for the Generic Matrix connector. If this script is not yet available in your system, follow the tutorial [Creating a connection handler script for a Generic Matrix element](xref:Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript) to create it.
 
-Once you have created the connection handler script, you can create a test connection.
+If your system has the appropriate connection handler script, you can create a test connection:
 
-1. Navigate to the Control Surface app.
+1. Open the Control Surface app.
 
-1. Search the virtual signal groups you created in the previous steps (source and destination).
+1. Select a source and destination virtual signal groups you created in the previous steps.
 
 1. Click the *Connect* button.
 
@@ -127,4 +134,4 @@ Once you have created the connection handler script, you can create a test conne
 
 ## Up next
 
-You are now able to create endpoints and virtual signal groups one by one manually in the app, but in many cases there will be too many to do this manually. In the next tutorial, you will learn how to automate this process using an automation script: [Provisioning endpoints and virtual signal groups for a Generic Matrix element using code](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code).
+You are now able to create endpoints and virtual signal groups one by one manually in the app, but in many cases there will be too many to do this manually. In the next tutorial, [Provisioning endpoints and virtual signal groups for a Generic Matrix element using code](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code), you will learn how to automate this process using an automation script.

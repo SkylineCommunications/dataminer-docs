@@ -4,13 +4,13 @@ uid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSi
 
 # Provisioning endpoints and virtual signal groups for a Generic Matrix element using CSV import
 
-In this tutorial, you will learn how to use the CSV import functionality in the Virtual Signal Groups low-code app to provision endpoints and virtual signal groups (VSGs) for the **Generic Matrix** connector. These endpoints and VSGs will be used to visualize and manage the connections in the MediaOps Live solution.
+In this tutorial, you will learn how to use the CSV import functionality in the Virtual Signal Groups app to provision endpoints and virtual signal groups (VSGs) for the **Generic Matrix** connector. These endpoints and VSGs will be used to visualize and manage the connections in the MediaOps Live solution.
 
 There are three ways to create endpoints and VSGs:
 
+- Using the CSV import functionality in the Virtual Signal Groups app, as explained in the current tutorial.
 - [Manually, using the Virtual Signal Groups low-code app](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual).
 - [Through an automation script, using the MediaOps Live API](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code).
-- Using the CSV import functionality in the Virtual Signal Groups app, as explained in the current tutorial.
 
 Expected duration: 15 minutes
 
@@ -58,17 +58,15 @@ First, you need to create a level and transport type in MediaOps Live. In this t
 
 ## Step 2: Export existing endpoints
 
-Now we will export the existing endpoints to a CSV file.
-This will provide us with a template that we can use to create new endpoints.
-The exported file will contain all the necessary columns and formatting required for the import.
-The file can also be used to update existing endpoints.
+In this step, you will export the existing endpoints to a CSV file, so you can use this as a template to create new endpoints or use it to update existing endpoints. The exported file will contain all the necessary columns and formatting required for the import.
 
-To do this, follow these steps:
+1. In the Virtual Signal Groups app, go to the *Endpoints* page.
 
-1. Navigate to the `Endpoints` tab in the `Virtual Signal Groups` app.
-1. Click the `Export` button in the header bar. A popup window will appear.
-1. In the popup window, provide a name for the export file, e.g., `endpoints_export.csv`.
-1. Press the `Export` button to download the CSV file to your computer.
+1. Click the *Export* button in the header bar.
+
+1. In the pop-up window, provide a name for the export file, e.g., `endpoints_export.csv`.
+
+1. Click *Export* to download the CSV file to your computer.
 
 The exported CSV file will contain the following columns:
 
@@ -84,12 +82,15 @@ The exported CSV file will contain the following columns:
 
 ## Step 3: Export existing virtual signal groups
 
-Similar to the endpoints, we will now export the existing virtual signal groups to a CSV file.
+Similar to the previous step, you will now export the existing virtual signal groups to a CSV file.
 
-1. Navigate to the `Virtual Signal Groups` tab in the `Virtual Signal Groups` app.
-1. Click the `Export` button in the header bar. A popup window will appear.
-1. In the popup window, provide a name for the export file, e.g., `virtual_signal_groups_export.csv`.
-1. Press the `Export` button to download the CSV file to your computer.
+1. In the Virtual Signal Groups app, go to the *Virtual Signal Groups* page.
+
+1. Click the *Export* button in the header bar.
+
+1. In the pop-up window, provide a name for the export file, e.g., `virtual_signal_groups_export.csv`.
+
+1. Click *Export* to download the CSV file to your computer.
 
 The exported CSV file will contain the following columns:
 
@@ -101,29 +102,31 @@ The exported CSV file will contain the following columns:
 
 ## Step 4: Import new endpoints
 
-In this step, you will use the CSV file format to create new endpoints for the Generic Matrix element.  
-The CSV import allows you to quickly add multiple endpoints at once, rather than creating them manually.  
+In this step, you will use the CSV file format to create new endpoints for the Generic Matrix element. The CSV import allows you to quickly add multiple endpoints at once, rather than creating them manually.
 
 1. Open the `endpoints_export.csv` file that you exported in [step 2](#step-2-export-existing-endpoints).
-1. Delete all rows except the header row. The file should now look like this:
 
-    ```csv
-    ID;Name;Role;Element;Identifier;Control Element;Control Identifier;Transport Type;...
-    ```
+1. Delete all rows except the header row.
+
+   The file should now look like this:
+
+   ```csv
+   ID;Name;Role;Element;Identifier;Control Element;Control Identifier;Transport Type;...
+   ```
 
 1. To create a new source endpoint for input 1 of the Generic Matrix element, add the following line to the CSV file:
 
-    ```csv
-    ;Matrix Input 1;Source;Matrix;1;;;SDI;;;
-    ```
+   ```csv
+   ;Matrix Input 1;Source;Matrix;1;;;SDI;;;
+   ```
 
-    The ID column is intentionally left empty, as it will be automatically assigned during the import.
-    To update an existing endpoint, you would need to provide the ID of that endpoint.
+   The ID column is intentionally left empty, as it will be automatically assigned during the import. To update an existing endpoint, you would need to provide the ID of that endpoint.
 
-    The above line will create a new source endpoint named `Matrix Input 1`, linked to row key `1` of the inputs table of element `Matrix`, using `SDI` as transport type.
+   The above line will create a new source endpoint named `Matrix Input 1`, linked to row key `1` of the inputs table of element `Matrix`, using `SDI` as transport type.
 
 1. Similarly, to create a new destination endpoint for output 1, add the following line to the CSV file.
-This time we will use `Destination` as role and link it to row key `1` of the outputs table of the element.
+
+   This time we will use `Destination` as role and link it to row key `1` of the outputs table of the element.
 
     ```csv
     ;Matrix Output 1;Destination;Matrix;1;;;SDI;;;
