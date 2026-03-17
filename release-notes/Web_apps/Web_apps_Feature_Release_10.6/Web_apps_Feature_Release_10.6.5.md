@@ -69,6 +69,25 @@ Up to now, when a query was created, the version of that query would be linked t
 
 From now on, the query version will no longer be linked to the version of the GQI DxM. Queries will only be migrated when they were altered in such a way that it prevents them from being run in their current form.
 
+#### Dashboards/Low-Code Apps - Form component: Time spans will now be displayed in a more readable format [ID 44762]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In a *Form* component, up to now, time spans would be displayed in `dd.mm:hh:ss` format. In order to enhance the readability of those time spans, they will now be displayed in `dd days hh hrs mm mins ss secs` format instead.
+
+See the following examples:
+
+| Old format  | New format |
+|-------------|------------|
+| 10.11:00:00 | 10 days 11 hrs |
+| 10.11:00:30 | 10 days 11 hrs 00 mins 30 secs |
+| 0.02:03:00  | 2 hrs 03 mins |
+| 0.00:05:12  | 5 mins 12 secs |
+| 0.00:00:45  | 45 secs |
+| 1.00:00:00  | 1 day |
+| 1.00:05:00  | 1 day 00 hrs 05 mins |
+| -0.01:30:00 | - 1 hr 30 mins |
+
 #### DataMiner web apps updated to Angular 20 [ID 44794]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
@@ -232,3 +251,9 @@ When you opened the Dashboards app on a device with a small screen, up to now, t
 When you try to log in to a certain web app (e.g., Dashboards, Monitoring, etc.), the title of the login screen mentions the name of the app you want to access: `Sign in to <System name> to access <App name>`.
 
 However, in some rare cases, when you tried to log in to the landing page of a DataMiner Agent (e.g., `https://myDma/root/`), `<App name>` would incorrectly be replaced by `Home`.
+
+#### Low-Code Apps: 'On open' events would not take into account the correct selection when resolving event values [ID 44971]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In some cases, *On open* events configured on pages or panels would not take into account the correct selection when resolving event values.
