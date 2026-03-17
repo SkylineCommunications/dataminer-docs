@@ -87,6 +87,18 @@ This file, located in `%SystemRoot%\System32\winevt\Logs\`, is the primary Windo
 
 From now on, the *SLWatchDog2.txt* log file will contain more detailed logging regarding run-time errors.
 
+#### BrokerGateway DxM has been upgraded to Microsoft .NET 10 [ID 44979]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+The BrokerGateway DxM has been upgraded to Microsoft .NET 10.
+
+#### StorageModule DxM has been upgraded to Microsoft .NET 10 [ID 45006]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+The StorageModule DxM has been upgraded to Microsoft .NET 10.
+
 ### Fixes
 
 #### One protocol thread would incorrectly be able to add new rows to a table while another protocol thread was clearing that table [ID 44764] [ID 44833]
