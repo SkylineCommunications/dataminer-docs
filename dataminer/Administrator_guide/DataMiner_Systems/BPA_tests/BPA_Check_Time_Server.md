@@ -25,31 +25,31 @@ This test will check if the NTP server settings are configured correctly and all
 
 - In case the cluster only consists of one Agent (this always succeeds):
 
-  `All DataMiner agents in the cluster use the same NTP server ([timeserver]).`
+  `All DataMiner Agents in the cluster use the same NTP server ([timeserver]).`
 
 - If all DataMiner Agents are configured correctly and use the same NTP server:
 
   `All DataMiner Agents have the same NTP server configured ([timeserver]).`
 
-- Different NTP servers have been detected, but they are peers from one another:
+- From DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44837-->, if multiple NTP servers have been detected, but they are peers of one another:
 
-  `Different NTP servers have been detected, but they are peers from one another.`
+  `Multiple NTP servers have been detected, but they are peers of one another.`
 
 ### Warning
 
 For all warnings:
 
-- The outcome is `Warning`
+- The outcome is `Warning`.
 
-The following warning are possible:
+The following warnings are possible:
 
-- The NTP server could not be retrieved from all DataMiner Agents:
+- If the NTP server could not be retrieved from all DataMiner Agents:
 
   - Result message: `The NTP server could not be retrieved from all DataMiner Agents.`
 
-- Multiple different NTP servers detected that are not peers from one another:
+- From DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44837-->, if multiple NTP servers are detected and they are not peers of one another:
 
-  - Result message: `Multiple different NTP servers detected that are not peers from one another.`
+  - Result message: `Multiple NTP servers detected that are not peers of one another.`
 
 ### Error
 
@@ -79,7 +79,7 @@ The following errors are possible:
 
 - Not all NTP servers are reachable:
 
-  - Result message: `Not all NTP servers are reachable.`.
+  - Result message: `Not all NTP servers are reachable.`
   - Detailed results: `Agent {agentName} (id: {dma id}) uses NTP server '{NTP server name}'. The Stratum of this server is 0. Stratum 0 indicates the configured NTP server cannot distribute time.` (one line for each Agent)
 
 - No DMA has an NTP server configured.
