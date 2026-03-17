@@ -26,7 +26,11 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Enhancements made to the redesigned Cube UI and themes [ID 44977]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In version 10.6.4, the entire Cube UI and UI themes were redesigned. In this version, a number of additional enhancements have been made.
 
 ### Fixes
 
