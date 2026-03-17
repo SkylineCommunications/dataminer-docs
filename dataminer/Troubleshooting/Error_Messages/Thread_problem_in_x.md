@@ -28,6 +28,7 @@ The following error messages are possible:
 - [Thread problem in SLDataMiner: DBThread](#thread-problem-in-sldataminer-dbthread)
 - [Thread problem in SLDataMiner: ElementStackThread](#thread-problem-in-sldataminer-elementstackthread)
 - Thread problem in SLDataMiner: ExecuteThread
+- [Thread problem in SLDataMiner: ExportThread](#thread-problem-in-sldataminer-exportthread)
 - Thread problem in SLDataMiner: LDAPNotification thread
 - Thread problem in SLDataMiner: MergeThread
 - [Thread problem in SLDataMiner: MobileNotificationThread](#thread-problem-in-sldataminer-mobilenotificationthread)
@@ -141,6 +142,29 @@ These sets can originate from DataMiner clients, SLSNMPManager, other elements, 
 
 - Restart the element in question.
 - Stop the SLScripting process.
+
+## Thread problem in SLDataMiner: ExportThread
+
+When you perform a manual (DELT export or import)[xref:Exporting_and_importing_packages_on_a_DMA], or when you (migrate elements between agents)[xref:Migrating_elements_in_a_DataMiner_System], these operations are handled by the *ExportThread* in SLDataMiner.
+
+### Possible cause
+
+Exporting or importing involves many steps, and one of these steps may take longer than expected or, in the worst case, become stuck. Typical steps include (but are not limited to) gathering element files, protocol and template files, documents, Visios, isolating view information, and retrieving database data.
+
+### Resolution
+
+Check the following log files:  
+- `SLDELT.txt`
+- `SLDataminer.txt`
+- `SLNet.txt`
+- `SLErrors.txt`  
+First determine whether the thread is truly stuck or just taking longer than anticipated. If you find an error or exception related to the process in any of these log files, then the thread is likely stuck. If no errors are present, the operation is probably still in progress.
+
+Depending on the situation, it may also be useful to look at `C:/Skyline Dataminer/System Cache/DELT`, either on the source or destination agent. This location holds the data used to export or import the package.
+
+> [!NOTE]
+> Export and import speed depends on several factors such as hardware performance, system load, load on elements and services, network throughput, database performance and of course the overall package content. In some cases, the process can take several hours to complete.
+
 
 ## Thread problem in SLDataMiner: MobileNotificationThread
 
