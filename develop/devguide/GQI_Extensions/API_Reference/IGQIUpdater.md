@@ -51,7 +51,7 @@ Updates an existing row in the query result. If a row with the specified row key
 > The updated row must have as many cells as there are columns.
 
 > [!NOTE]
-> Row metadata provided with a row update will not be retained. It is not possible to update row metadata for existing rows.
+> It is not possible to update row metadata, so any row metadata provided on the updated row will be ignored.
 
 ### void UpdateCell(string, GQIColumn, GQICell)
 
