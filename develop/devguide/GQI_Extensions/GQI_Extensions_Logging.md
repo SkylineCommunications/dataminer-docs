@@ -134,7 +134,7 @@ The global minimum log level is applied to all GQI extension instances by defaul
 
   The default level is `Information`.
 
-#### The **instance-specific** minimum log level 
+#### The instance-specific minimum log level 
 
 The instance-specific minimum log level can be configured at runtime in the extension implementation using the [MinimumLogLevel](xref:GQI_IGQILogger#properties) property of the logger. For example:
 
