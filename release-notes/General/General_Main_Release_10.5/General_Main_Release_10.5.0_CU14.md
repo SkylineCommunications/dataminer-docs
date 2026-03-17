@@ -85,3 +85,9 @@ Up to now, the SLA cleaning thread would incorrectly remove history data for an 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When DVE properties were being updated, in some cases, the SLDMS process could stop working when it was not aware of the element.
+
+#### SLDataGateway: Problem with custom data table check [ID 44933]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When SLDataGateway checked whether a certain custom database table existed, up to now, that check would incorrectly return false when the table in question already existed before DataMiner was started.

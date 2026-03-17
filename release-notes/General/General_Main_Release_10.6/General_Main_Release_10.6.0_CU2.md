@@ -117,6 +117,12 @@ Up to now, when the configuration of an SNMP manager had been changed, in some c
 
 When DVE properties were being updated, in some cases, the SLDMS process could stop working when it was not aware of the element.
 
+#### SLDataGateway: Problem with custom data table check [ID 44933]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When SLDataGateway checked whether a certain custom database table existed, up to now, that check would incorrectly return false when the table in question already existed before DataMiner was started.
+
 #### Service & Resource Management: Certain bookings would incorrectly be quarantined when a range capacity was overbooked [ID 44940]
 
 <!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
