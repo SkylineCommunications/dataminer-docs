@@ -140,6 +140,12 @@ Up to now, the *Get profile instances* and *Get trend data* data sources would f
 
 From now on, all data sources will format the display values for DataMiner parameters consistently using the culture of the user and will also use the group separator defined in that culture.
 
+#### Dashboards/Low-Code Apps - Timeline component: Timestamps would be converted incorrectly when the user's regional settings took a long time to load [ID 44870]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When the user's regional settings took a long time to load, in some cases, timestamps would be converted incorrectly.
+
 #### Dashboards/Low-Code Apps - Table component: Data fed to another component would not get updated during a refetch [ID 44871]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
@@ -219,10 +225,10 @@ When, in the header bar of the Comparison tool and the DOM security app, you cli
 
 When you opened the Dashboards app on a device with a small screen, up to now, the *No dashboards found* icon would be hard to see. The image has now been adapted.
 
-#### Web apps: Title of login screen would incorrectly show 'Home' instead of the app name [ID 44968]
+#### Web apps: Title of login screen would incorrectly show 'Home' instead of the app name when logging in to a landing page [ID 44968]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When you try to log in to a certain web app (e.g., Dashboards, Monitoring, etc.), the title of the login screen mentions the name of the app you want to access: `Sign in to <System name> to access <App name>`.
 
-However, in some rare cases, `<App name>` would incorrectly be replaced by `Home`.
+However, in some rare cases, when you tried to log in to the landing page of a DataMiner Agent (e.g., `https://myDma/root/`), `<App name>` would incorrectly be replaced by `Home`.

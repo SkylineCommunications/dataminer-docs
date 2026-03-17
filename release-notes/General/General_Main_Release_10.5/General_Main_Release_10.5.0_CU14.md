@@ -66,6 +66,14 @@ From now on, it will no longer be possible for one protocol thread to add new ro
 
 Also, up to now, a clear action would incorrectly be able to set the iRows field of the array to 0 without taking the write lock. As a result, SLProtocol would lose count of the number of rows that were stored in the table and would not be able to clear any of those rows without an element restart.
 
+#### Check Time Server BPA test would only work correctly on systems on which the language was set to English [ID 44837]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, the *Check Time Server* BPA test would only work correctly on systems on which the language was set to English.
+
+Also, the time checking algorithm would be too restrictive.
+
 #### Business intelligence: Active alarms table would not be updated when an alarm with 0% impact was cleared [ID 44892]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
