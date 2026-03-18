@@ -68,6 +68,16 @@ A number of security enhancements have been made.
 
 From now on, the *SLWatchDog2.txt* log file will contain more detailed logging regarding run-time errors.
 
+#### 'Functions' and 'Helper' folders will no longer be checked when protocols are being loaded [ID 44946]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Before a DataMiner Agent starts loading protocol files during startup, it checks the protocol version folders to determine the location of all protocol files to be loaded. When a version folder does not contain any protocol files, it will log the following error: `Directory found for protocol xxx with version yyy but no protocol file found in path.`
+
+Up to now, apart from the protocol version folders, the DataMiner Agent would also incorrectly check the *Functions* and *Helper* folders. However, as these folders do not contain any protocol files, this would result in a large number of invalid errors being logged.
+
+From now on, when DataMiner starts up, it will no longer check for protocol files in the *Functions* and *Helper* folders.
+
 #### BrokerGateway DxM has been upgraded to Microsoft .NET 10 [ID 44979]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
