@@ -71,46 +71,47 @@ As the name of the script, use `Tutorial-OrchestrationEvents`.
 
 ## Step 3: Create an orchestration event
 
-By using the MediaOps Live API, you can now create orchestration events.
+By using the MediaOps Live API, you can now create orchestration events:
 
-First, orchestration events can only be defined in context of an orchestration job. An orchestration job is a group of events that have a shared context.
-This can be useful for, e.g., grouping events that orchestrate the same element or are generated from the same source.
+1. Define an orchestration job.
 
-```csharp
-string jobReference = Guid.NewGuid().ToString();
-OrchestrationJob orchestrationJob = api.Orchestration.GetOrCreateNewOrchestrationJob(jobReference);
-```
+   Orchestration events always have to be defined in the context of an orchestration job, i.e. a group of events that have a shared context. This for example allows you to group events that orchestrate the same element or that are generated from the same source.
 
-Next, we create a basic orchestration event that will be scheduled 10 seconds in the future.
+   ```csharp
+   string jobReference = Guid.NewGuid().ToString();
+   OrchestrationJob orchestrationJob = api.Orchestration.GetOrCreateNewOrchestrationJob(jobReference);
+   ```
 
-```csharp
-OrchestrationEvent orchestrationEvent = new OrchestrationEvent()
-{
-    EventState = EventState.Draft,
-    EventTime = DateTimeOffset.Now + TimeSpan.FromSeconds(10),
-    EventType = EventType.Other,
-    Name = "A basic event",
-};
-```
+1. Create a basic orchestration event that will be scheduled 10 seconds in the future.
 
-Finally, we add the orchestration event to the orchestration job and save it using the API.
+   ```csharp
+   OrchestrationEvent orchestrationEvent = new OrchestrationEvent()
+   {
+       EventState = EventState.Draft,
+       EventTime = DateTimeOffset.Now + TimeSpan.FromSeconds(10),
+       EventType = EventType.Other,
+       Name = "A basic event",
+   };
+   ```
 
-```csharp
-orchestrationJob.OrchestrationEvents.Add(orchestrationEvent);
-api.Orchestration.SaveOrchestrationJob(orchestrationJob);
-```
+1. Add the orchestration event to the orchestration job and save it using the API.
 
-We now created our first orchestration job, which contains a single event.
+   ```csharp
+   orchestrationJob.OrchestrationEvents.Add(orchestrationEvent);
+   api.Orchestration.SaveOrchestrationJob(orchestrationJob);
+   ```
+
+You have now created your first orchestration job, which contains a single event.
 
 ## Step 4: Publish and run the script
 
 Publish the script with DIS and run it on the DMA.
-Even though the event is correctly save, nothing will happen yet since the event is saved in draft state.
-This means the API will not schedule the event for execution.
+
+Even though the event is correctly saved, at this point nothing will happen yet because the event is saved in the draft state. This means that the API will not schedule the event for execution.
 
 ## Step 5: Schedule an orchestration event
 
-To schedule the orchestration event for execution, we need to change the event state from `Draft` to `Confirmed`.
+1. To schedule the orchestration event for execution, change the event state from `Draft` to `Confirmed`:
 
 ```csharp
 OrchestrationEvent orchestrationEvent = new OrchestrationEvent()
@@ -122,16 +123,19 @@ OrchestrationEvent orchestrationEvent = new OrchestrationEvent()
 };
 ```
 
-Publish the updated script to the DMA and run it again.
-The event should now be scheduled for execution in 10 seconds.
-This can be confirmed by taking a look on the DataMiner Scheduler module, where a new task should have appeared for the orchestration event.
-The creation of the task can also be seen in the information events on the DMA Alarm Console, where a 'Scheduled Task Created' log should be visible.
+1. Publish the updated script to the DMA and run it again.
+
+   The event should now be scheduled for execution in 10 seconds.
+
+1. To verify this, open the Scheduler module in DataMiner Cube and check if a new task is shown for the orchestration event.
+
+   Alternatively, you can also check the information events in the Alarm Console, where a *Scheduled Task Created* log should be visible.
 
 ## Step 6: Add more configuration to the orchestration event
 
-As you may have noticed, the orchestration event we created does not have any useful fields available to assign any execution logic.
-The `OrchestrationEvent` and `OrchestrationJob` are very useful to quickly read out the most important information about the event, or create a quick template for an event,
-but to create actual functional events, the `OrchestrationEventConfiguration` and `OrchestrationJobConfiguration` objects should be used.
+At this point, the orchestration event you have created does not yet have any useful fields available to assign execution logic.
+
+To quickly read out the most important information about the event or create a quick template for an event, the `OrchestrationEvent` and `OrchestrationJob` are very useful, but to create actual functional events, the `OrchestrationEventConfiguration` and `OrchestrationJobConfiguration` objects should be used.
 
 Update the script code to use these configuration objects instead:
 
@@ -154,91 +158,95 @@ api.Orchestration.SaveOrchestrationJobConfiguration(orchestrationJob);
 
 One type of action that can be performed by an orchestration event is the execution of an orchestration script.
 
-Start by creating a very basic orchestration script. Just like this tutorial, you can use DIS for this (by adding a second script project).
-Name the script `Tutorial-OrchestrationEvents-DummyScript` and let the script print a log message when executed, by adding the following line in the `RunSafe` method:
+1. Create a basic orchestration script.
 
-```csharp
-engine.GenerateInformation($"Dummy script executed.");
-```
+   Like for the first script you made in this tutorial, you can do so using DIS, by adding a second script project.
 
-Make sure to save the script on the DMA.
+   Name the script `Tutorial-OrchestrationEvents-DummyScript` and let the script print a log message when executed, by adding the following line in the `RunSafe` method:
+
+   ```csharp
+   engine.GenerateInformation($"Dummy script executed.");
+   ```
+
+1. Save the script on the DMA.
 
 ## Step 8: Add the script to the orchestration event
 
-Now, we can update the orchestration event to execute this script when the event is triggered.
+1. Update the orchestration event to execute this script when the event is triggered:
 
-```csharp
-OrchestrationEventConfiguration orchestrationEvent = new OrchestrationEventConfiguration()
-{
-    EventState = EventState.Confirmed,
-    EventTime = DateTimeOffset.Now + TimeSpan.FromSeconds(10),
-    EventType = EventType.Other,
-    Name = "A basic event",
-    GlobalOrchestrationScript = "Tutorial-OrchestrationEvents-DummyScript",
-};
-```
+   ```csharp
+   OrchestrationEventConfiguration orchestrationEvent = new OrchestrationEventConfiguration()
+   {
+       EventState = EventState.Confirmed,
+       EventTime = DateTimeOffset.Now + TimeSpan.FromSeconds(10),
+       EventType = EventType.Other,
+       Name = "A basic event",
+       GlobalOrchestrationScript = "Tutorial-OrchestrationEvents-DummyScript",
+   };
+   ```
 
-Publish the updated script to the DMA and run it again.
-You should now see that after 10 seconds, the dummy script is executed and a log message is printed on the DMA Alarm Console.
+1. Publish the updated script to the DMA and run it again.
+
+You should now see that after 10 seconds the dummy script is executed and a log message is shown in the Alarm Console.
 
 ## Step 9: Add node configuration to the orchestration event
 
-The scripts that we executed from the orchestration event can also be executed on a node level.
-This way, we can assign individual scripts to different resources that are involved in the orchestration event.
+Instead of executing a global script from the orchestration event, it is also possible to execute scripts on node level. This allows you to assign individual scripts to different resources involved in the orchestration event.
 
-First, remove the global script from the orchestration event.
+1. Remove the global script from the orchestration event.
 
-> [!IMPORTANT]
-> A global script has priority over node and connection configurations.
-> When a global script is defined, node and connection configurations will not automatically be configured, unless when done from the orchestration script itself.
+   This step is necessary because a **global script gets priority** over node and connection configurations. When a global script is defined, node and connection configurations will not automatically be configured, unless this is done from the orchestration script itself.
 
-To start, add two nodes to the orchestration event. Each node has the option to execute a script as well.
-For this example, add the `Tutorial-OrchestrationEvents-DummyScript` script from the previous step to both nodes.
+1. Add two nodes to the orchestration event.
 
-```csharp
-orchestrationEvent.Configuration.NodeConfigurations.Add(new NodeConfiguration
-{
-    NodeId = "1",
-    NodeLabel = "Label 1",
-    OrchestrationScriptName = "Tutorial-OrchestrationEvents-DummyScript",
-});
-orchestrationEvent.Configuration.NodeConfigurations.Add(new NodeConfiguration
-{
-    NodeId = "2",
-    NodeLabel = "Label 2",
-    OrchestrationScriptName = "Tutorial-OrchestrationEvents-DummyScript",
-});
-```
+   Each node has the option to execute a script as well. For this example, add the `Tutorial-OrchestrationEvents-DummyScript` script from the previous step to both nodes.
 
-Publish the updated script to the DMA and run it again.
-You should now see that after 10 seconds, the dummy script is executed once for each node.
+   ```csharp
+   orchestrationEvent.Configuration.NodeConfigurations.Add(new NodeConfiguration
+   {
+       NodeId = "1",
+       NodeLabel = "Label 1",
+       OrchestrationScriptName = "Tutorial-OrchestrationEvents-DummyScript",
+   });
+   orchestrationEvent.Configuration.NodeConfigurations.Add(new NodeConfiguration
+   {
+       NodeId = "2",
+       NodeLabel = "Label 2",
+       OrchestrationScriptName = "Tutorial-OrchestrationEvents-DummyScript",
+   });
+   ```
+
+1. Publish the updated script to the DMA and run it again.
+
+   You should now see that after 10 seconds the dummy script is executed once for each node.
 
 ## Step 10: Add connection configuration to the orchestration event
 
-Finally, you can add connection configurations to the orchestration event as well. This will automate the connections that can be done by the Control Surface app in the MediaOps Live solution.
+1. Add connection configurations to the orchestration event.
 
-To define the connection, you need pass the VSG objects that you want to connect.
+   This will automate the connections that can be done by the Control Surface app in the MediaOps Live solution.
 
-Using the API, you can retrieve the VSGs by their names.
+   To define a connection, you need pass the VSG objects that you want to connect. Using the API, you can retrieve the VSGs by their names.
 
-```csharp
-VirtualSignalGroup source = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("SRC-000001")).FirstOrDefault();
-VirtualSignalGroup destination = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("DST-000001")).FirstOrDefault();
-            
-orchestrationEvent.Configuration.Connections.Add(new Connection
-{
-    SourceNodeId = "1",
-    DestinationNodeId = "2",
-    SourceVsg = source,
-    DestinationVsg = destination,
-});
-```
+   ```csharp
+   VirtualSignalGroup source = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("SRC-000001")).FirstOrDefault();
+   VirtualSignalGroup destination = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("DST-000001")).FirstOrDefault();
 
-> [!NOTE]
-> If the VSGs are already connected, feel free to disconnect them in the Control Surface app, before running the script. Do note that the connection made by the script will put a lock on the VSG, so you will need to unlock it first if that is the case.
+   orchestrationEvent.Configuration.Connections.Add(new Connection
+   {
+       SourceNodeId = "1",
+       DestinationNodeId = "2",
+       SourceVsg = source,
+       DestinationVsg = destination,
+   });
+   ```
 
-Publish the updated script to the DMA and run it again.
-You should now see that after 10 seconds, a connection will be created between the specified source and destination VSGs.
+   > [!NOTE]
+   > If the VSGs are already connected, feel free to disconnect them in the Control Surface app before running the script. Do note that the connection made by the script will put a lock on the destination, so you will need to unlock it first if that is the case.
+
+1. Publish the updated script to the DMA and run it again.
+
+   You should now see that after 10 seconds a connection will be created between the specified source and destination VSGs.
 
 ## Step 11: Add level configuration to the connection
 
