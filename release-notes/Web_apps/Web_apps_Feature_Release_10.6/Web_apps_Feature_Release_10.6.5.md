@@ -57,6 +57,17 @@ From now on, it will be possible to cancel a node movement by pressing the ESC k
 
 When you do so, the move event will not be executed, and the node will automatically return to its last know position.
 
+#### Dashboards/Low-Code Apps - GQI components: Dynamically referencing data in layers of type Text and HTML as well as in tooltips [ID 44976]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In the template editor, it is now possible to dynamically reference the following types of data in layers of type *Text* and *HTML* as well as in tooltips:
+
+- Component data
+- Flow data
+- URL data
+- Variables
+
 ## Changes
 
 ### Enhancements
