@@ -30,4 +30,8 @@ Up to now, it was always possible to swap a resource for a confirmed or running 
 
 #### Scheduling: Configuration UI incorrectly showed dropdown for running job [ID 45039]
 
-In the view configuration wizard, it could occur that a dropdown was shown for the configuration section even when a job was already running, when no changes to the configuration should be possible.
+In the window where you can view the configuration for a job and its nodes, it could occur that a dropdown was shown for the configuration section even when a job was already running, when no changes to the configuration should be possible.
+
+#### Scheduling: Not possible to remove mandatory configuration added to node [ID 45048]
+
+In the Scheduling app, you can use a filter to already create a configuration when adding or swapping nodes on your job. Up to now, in case the selected resource pool did not contain any configuration, you could add anything that is defined in the system. However, if you added mandatory configuration, you could no longer remove this.
