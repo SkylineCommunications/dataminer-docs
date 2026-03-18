@@ -35,19 +35,19 @@ The content and screenshots for this tutorial were created using DataMiner 10.6.
 
 - [Step 4: Write a test](#step-4-write-a-test)
 
-- [Step 5: Write the test execution PowerShell script](#step-6-write-the-test-execution-powershell-script)
+- [Step 5: Write the test execution PowerShell script](#step-5-write-the-test-execution-powershell-script)
 
-- [Step 6: Download, install, and verify the QAOps tool](#step-7-download-install-and-verify-the-qaops-tool)
+- [Step 6: Download, install, and verify the QAOps tool](#step-6-download-install-and-verify-the-qaops-tool)
 
-- [Step 7: Find the unique test and configuration identifiers](#step-8-find-the-unique-test-and-configuration-identifiers)
+- [Step 7: Find the unique test and configuration identifiers](#step-7-find-the-unique-test-and-configuration-identifiers)
 
-- [Step 8: Create a token](#step-9-create-a-token)
+- [Step 8: Create a token](#step-8-create-a-token)
 
-- [Step 9: Create and find the test package](#step-10-create-and-find-the-test-package)
+- [Step 9: Create and find the test package](#step-9-create-and-find-the-test-package)
 
-- [Step 10: Trigger the test run](#step-11-trigger-the-test-run)
+- [Step 10: Trigger the test run](#step-10-trigger-the-test-run)
 
-- [Step 11: Verify that the request was received](#step-12-verify-that-the-request-was-received)
+- [Step 11: Verify that the request was received](#step-11-verify-that-the-request-was-received)
 
 ## Step 1: Create a new DataMiner test package project
 
@@ -131,17 +131,21 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 
 1. Open *Solution Explorer* (shortcut: Ctrl+Alt+L).
 
-1. Right-click *\\TestPackageContent\\*, select *Add New Folder*, add a folder with the name *Tests* if it does not already exist.
+1. Right-click `\TestPackageContent\`, select *Add New Folder*, and add a folder with the name *Tests* if it does not exist yet.
 
-1. Right-click *\\TestPackageContent\\Tests*, select *Add*, and then select *New Item* (Ctrl+Shift+A).
+1. Right-click `\TestPackageContent\Tests`, select *Add*, and then select *New Item* (shortcut: Ctrl+Shift+A).
 
 1. Select *C# Class* and name it **"PlaywrightUITest.cs"**.
 
    Double-check that the name matches exactly, as this is important for this specific tutorial.
 
-1. Right click the file you just added under The *\\TestPackageContent\\Tests* folder and select *Exclude From Project*. (Visual Studio is currently lacking support for intellisense on File-based App content)
+   ![Playwright test code in a QAOps test package project](~/develop/images/QAOps_CreatePackage_PlaywrightTest.png)
 
-1. Verify *Show All Files* is enabled, at the top of the Solution Explorer
+1. Right-click the file you have just added under the `\TestPackageContent\Tests` folder and select *Exclude From Project*.
+
+   This is necessary because Visual Studio currently lacks support for Intellisense on file-based app content.
+
+1. At the top of the Solution Explorer, make sure that *Show All Files* is enabled.
 
 1. Replace the file content with the following code:
 
