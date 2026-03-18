@@ -1,5 +1,6 @@
 ---
 uid: Configuring_notifications_in_System_Center
+keywords: Alerts
 ---
 
 # Configuring notifications in System Center
