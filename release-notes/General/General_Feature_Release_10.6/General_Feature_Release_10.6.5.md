@@ -169,3 +169,9 @@ When SLDataGateway checked whether a certain custom database table existed, up t
 <!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
 
 Up to now, when a booking needed to be quarantined in order to solve a range capacity conflict, in some cases, certain usages that were not related to the conflict would incorrectly also be quarantined.
+
+#### SLElement: Uninitialized memory could cause memory corruption [ID 45004]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In some cases, uninitialized memory in SLElement could cause memory corruption.

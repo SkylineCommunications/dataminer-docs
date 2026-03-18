@@ -113,3 +113,9 @@ When DVE properties were being updated, in some cases, the SLDMS process could s
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When SLDataGateway checked whether a certain custom database table existed, up to now, that check would incorrectly return false when the table in question already existed before DataMiner was started.
+
+#### SLElement: Uninitialized memory could cause memory corruption [ID 45004]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In some cases, uninitialized memory in SLElement could cause memory corruption.
