@@ -26,7 +26,7 @@ To create a redundancy group:
    1. In the *Manage primary elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with primary elements in the redundancy group.
 
       > [!NOTE]
-      > The elements in the redundancy group must use the same protocol and protocol version, and must be hosted by the same DataMiner Agent. We highly recommend using the [production version](xref:Promoting_a_protocol_version_to_production_version).
+      > The elements in the redundancy group must use the same protocol and protocol version, and must be hosted by the same DataMiner Agent. We highly recommend using the [production version](xref:Promoting_a_protocol_version_to_production_version), as this allows the protocol to be updated via the *Protocols & Templates* page without issues.
 
    1. Click *OK*. The primary elements you have added will be displayed in the *Primary elements* list.
 
