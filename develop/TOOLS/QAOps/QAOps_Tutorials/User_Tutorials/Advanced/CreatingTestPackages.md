@@ -35,21 +35,19 @@ The content and screenshots for this tutorial were created using DataMiner 10.6.
 
 - [Step 4: Write a test](#step-4-write-a-test)
 
-- [Step 5: Harvest the test](#step-5-harvest-the-test)
+- [Step 5: Write the test execution PowerShell script](#step-6-write-the-test-execution-powershell-script)
 
-- [Step 6: Write the test execution PowerShell script](#step-6-write-the-test-execution-powershell-script)
+- [Step 6: Download, install, and verify the QAOps tool](#step-7-download-install-and-verify-the-qaops-tool)
 
-- [Step 7: Download, install, and verify the QAOps tool](#step-7-download-install-and-verify-the-qaops-tool)
+- [Step 7: Find the unique test and configuration identifiers](#step-8-find-the-unique-test-and-configuration-identifiers)
 
-- [Step 8: Find the unique test and configuration identifiers](#step-8-find-the-unique-test-and-configuration-identifiers)
+- [Step 8: Create a token](#step-9-create-a-token)
 
-- [Step 9: Create a token](#step-9-create-a-token)
+- [Step 9: Create and find the test package](#step-10-create-and-find-the-test-package)
 
-- [Step 10: Create and find the test package](#step-10-create-and-find-the-test-package)
+- [Step 10: Trigger the test run](#step-11-trigger-the-test-run)
 
-- [Step 11: Trigger the test run](#step-11-trigger-the-test-run)
-
-- [Step 12: Verify that the request was received](#step-12-verify-that-the-request-was-received)
+- [Step 11: Verify that the request was received](#step-12-verify-that-the-request-was-received)
 
 ## Step 1: Create a new DataMiner test package project
 
@@ -133,15 +131,17 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 
 1. Open *Solution Explorer* (shortcut: Ctrl+Alt+L).
 
-1. Right-click *Solution 'MyFirstTestPackage'*, select *Add*, and then select *New Item* (Ctrl+Shift+A).
+1. Right-click *\\TestPackageContent\\*, select *Add New Folder*, add a folder with the name *Tests* if it does not already exist.
+
+1. Right-click *\\TestPackageContent\\Tests*, select *Add*, and then select *New Item* (Ctrl+Shift+A).
 
 1. Select *C# Class* and name it **"PlaywrightUITest.cs"**.
 
    Double-check that the name matches exactly, as this is important for this specific tutorial.
 
-1. Confirm that the file is added under *Solution Items*.
+1. Right click the file you just added under The *\\TestPackageContent\\Tests* folder and select *Exclude From Project*. (Visual Studio is currently lacking support for intellisense on File-based App content)
 
-   ![Playwright test code in a QAOps test package project](~/develop/images/QAOps_CreatePackage_PlaywrightTest.png)
+1. Verify *Show All Files* is enabled, at the top of the Solution Explorer
 
 1. Replace the file content with the following code:
 
@@ -277,57 +277,7 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 > [!NOTE]
 > In this example, the test is written as a .NET 10 C# file-based app. You can also implement tests in another language or by using a different testing framework. C# file-based apps can be run directly from a CLI by using `dotnet run`.
 
-## Step 5: Harvest the test
-
-1. Open *Solution Explorer* (shortcut: Ctrl+Alt+L).
-
-1. Expand *TestPackageContent* > *TestHarvesting* and open **TestDiscovery.ps1**.
-
-1. Replace the existing content with the following content:
-
-   ```ps1
-   $ErrorActionPreference = 'Stop'
-
-   # Base path four levels up, cross-platform
-   $pathToSolutionRoot = Resolve-Path (Join-Path $PSScriptRoot '..\..\..\')
-
-   $pathToGeneratedTests = Join-Path $PSScriptRoot 'tests.generated'
-   $pathToGeneratedDependencies = Join-Path $PSScriptRoot 'dependencies.generated'
-   $pathToXmlAutomationTests = Join-Path $PSScriptRoot 'xmlautomationtests.generated'
-
-   # Clean up any previous output
-   if (Test-Path $pathToGeneratedTests) {
-       Remove-Item -Recurse -Force $pathToGeneratedTests
-   }
-
-   if (Test-Path $pathToGeneratedDependencies) {
-       Remove-Item -Recurse -Force $pathToGeneratedDependencies
-   }
-
-   if (Test-Path $pathToXmlAutomationTests) {
-       Remove-Item -Recurse -Force $pathToXmlAutomationTests
-   }
-
-   New-Item -ItemType Directory -Force -Path $pathToGeneratedTests  | Out-Null
-   New-Item -ItemType Directory -Force -Path $pathToGeneratedDependencies  | Out-Null
-   New-Item -ItemType Directory -Force -Path $pathToXmlAutomationTests  | Out-Null
-
-   Write-Host "Looking for top-level .cs files in solution folder: $pathToSolutionRoot" -ForegroundColor Cyan
-
-   $topLevelCsFiles = Get-ChildItem -Path $pathToSolutionRoot -File -Filter '*.cs'
-
-   foreach ($file in $topLevelCsFiles) {
-       Copy-Item $file.FullName (Join-Path $pathToGeneratedTests $file.BaseName) -Force
-   }
-
-   Write-Host "Copied $($topLevelCsFiles.Count) top-level .cs file(s)." -ForegroundColor Cyan
-
-   # Warning: Do not clean up the collected files here. The next step in the SDK will use these.
-   Write-Information "`n🎉 Script completed successfully!"
-   exit 0
-   ```
-
-## Step 6: Write the test execution PowerShell script
+## Step 5: Write the test execution PowerShell script
 
 1. Open *Solution Explorer* (shortcut: Ctrl+Alt+L).
 
@@ -353,7 +303,7 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
    $pathToGeneratedDependencies = Join-Path $pathToTestHarvesting 'dependencies.generated'
    $pathToTests = Join-Path $PathToTestPackageContent 'Tests'
    $pathToDependencies = Join-Path $PathToTestPackageContent 'Dependencies'
-   $pathToPlaywrightUiTest = Join-Path $pathToGeneratedTests 'PlaywrightUITest'
+   $pathToPlaywrightUiTest = Join-Path $pathToTests 'PlaywrightUITest.cs'
 
    # Track script start time
    $scriptStart = Get-Date
@@ -395,14 +345,9 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 
        Write-Host "Starting Playwright test..." -ForegroundColor Cyan
 
-       # Create temporary .cs file
-       $tempPlaywrightFile = "$pathToPlaywrightUiTest.cs"
-       Copy-Item $pathToPlaywrightUiTest $tempPlaywrightFile -Force
 
-       $playwrightOutput = & dotnet run $tempPlaywrightFile 2>&1
+       $playwrightOutput = & dotnet run $pathToPlaywrightUiTest 2>&1
        $playwrightExitCode = $LASTEXITCODE
-
-       Remove-Item $tempPlaywrightFile -Force
 
        $playwrightMessage = ($playwrightOutput | Out-String).Trim()
 
@@ -443,7 +388,7 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
    }
    ```
 
-## Step 7: Download, install, and verify the QAOps tool
+## Step 6: Download, install, and verify the QAOps tool
 
 1. Open a Command Prompt, Bash, or PowerShell window.
 
@@ -487,7 +432,7 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 > dotnet nuget remove source "NameOfSource"
 > ```
 
-## Step 8: Find the unique test and configuration identifiers
+## Step 7: Find the unique test and configuration identifiers
 
 For more details about these entities, see [QAOps configuration](xref:QAOps_Configuration) and [QAOps test suite](xref:QAOps_Test_Suite).
 
@@ -501,7 +446,7 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
 
 ![QAOps Identifier Selections](~/develop/images/QAOps_SelectIdentifiers.png)
 
-## Step 9: Create a token
+## Step 8: Create a token
 
 1. In the QAOps User app, go to the [Tokens](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens) page.
 
@@ -519,7 +464,7 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
 
    For production environments, use a key vault solution.
 
-## Step 10: Create and find the test package
+## Step 9: Create and find the test package
 
 1. In Visual Studio, open *Solution Explorer* (shortcut: Ctrl+Alt+L).
 
@@ -531,7 +476,7 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
 
 1. Copy the generated [QAOps test package](xref:QAOps_Test_Package) .dmtest file path and save it in a text file.
 
-## Step 11: Trigger the test run
+## Step 10: Trigger the test run
 
 1. Open a Command Prompt, Bash, or PowerShell window.
 
@@ -554,7 +499,7 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
    > [!NOTE]
    > For production systems, leave out the `-san` argument. This argument specifies which QAOps system receives the command. In this example, it targets the QAOps sandbox system. The default target is the production QAOps system.
 
-## Step 12: Verify that the request was received
+## Step 11: Verify that the request was received
 
 1. In the QAOps User app, go to the [Overview](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview) page.
 
