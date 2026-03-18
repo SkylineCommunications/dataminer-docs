@@ -19,7 +19,7 @@ Expected duration: 30 minutes
 
 ## Prerequisites
 
-The DataMiner System you use for this tutorial must meet the following prerequisites
+The DataMiner System you use for this tutorial must meet the following prerequisites:
 
 - Range 1.0.1.x of the [Generic Matrix](https://catalog.dataminer.services/details/920cf3a9-ab1b-4c4c-8d67-bbffa1ca396a) connector is installed, and an element has been created using this connector.
 - [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) is installed.

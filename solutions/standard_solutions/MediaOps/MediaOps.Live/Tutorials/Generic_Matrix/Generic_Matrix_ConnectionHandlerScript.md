@@ -59,7 +59,7 @@ Make sure the following requirements are met, so that the mediation layer will r
 
 ## Step 3: Make the script inherit from the ConnectionHandlerScript base class
 
-Next, you need to make the script inherit from the `ConnectionHandlerScript` base class. The `Run` method is not needed anymore, as the base class already implements it, so you can remove it. The base class will call the appropriate methods that you will implement in the next steps.
+Next, you need to make the script inherit from the `ConnectionHandlerScript` base class. The `Run` method is no longer needed, as the base class already implements it, so you can remove it. The base class will call the appropriate methods that you will implement in the next steps.
 
 ```csharp
 using Skyline.DataMiner.Solutions.MediaOps.Live.Automation.Mediation.ConnectionHandlers;
@@ -70,7 +70,7 @@ public class Script : ConnectionHandlerScript
 }
 ```
 
-Alternatively, you can also keep the `Script` class, and create a new class that inherits from `ConnectionHandler`. In some situations this could be more flexible, for example when you dynamically want to call different connection handlers based on the input data.
+Alternatively, you can also keep the `Script` class, and create a new class that inherits from `ConnectionHandler`. In some situations, this could be more flexible, for example when you want to dynamically call different connection handlers based on the input data.
 
 ```csharp
 using Skyline.DataMiner.Solutions.MediaOps.Live.Automation.Mediation.ConnectionHandlers;
@@ -117,13 +117,13 @@ public override IEnumerable<SubscriptionInfo> GetSubscriptionInfo(IEngine engine
 
 ## Step 5: Implement ProcessParameterUpdate
 
-This method is called whenever a subscribed parameter changes on one of the supported elements. Use these updates to connect or disconnect endpoints through the API.
+The `ProcessParameterUpdate` method is called whenever a subscribed parameter changes on one of the supported elements. Use these updates to connect or disconnect endpoints through the API.
 
 This method should implement the following workflow:
 
 - Inspect the updated and/or deleted rows.
 - Find matching source and destination endpoints using `connectionEngine.Api`.
-- Register new connections or disconnects using `connectionEngine.RegisterConnections()`.
+- Register new connections or disconnections using `connectionEngine.RegisterConnections()`.
 
 The example below will look up the source and destination endpoints based on the element ID and the identifier from the table. In a similar way, you could also use other properties, such as a multicast IP address.
 
@@ -253,7 +253,7 @@ public override void Disconnect(IEngine engine, IConnectionHandlerEngine connect
 
 1. In DataMiner Cube, go to the *Connection Handler Scripts* page of the mediation element.
 
-   On this page, you should see that the connection handler script is listed as available script.
+   On this page, you should see that the connection handler script is listed as an available script.
 
    If there is a Generic Matrix element on the same DMA, it should automatically be linked to this script. If needed, you can link it manually.
 

@@ -19,7 +19,7 @@ Expected duration: 15 minutes
 
 ## Prerequisites
 
-The DataMiner System you use for this tutorial must meet the following prerequisites
+The DataMiner System you use for this tutorial must meet the following prerequisites:
 
 - Range 1.0.1.x of the [Generic Matrix](https://catalog.dataminer.services/details/920cf3a9-ab1b-4c4c-8d67-bbffa1ca396a) connector is installed, and an element has been created using this connector.
 - [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) is installed.
@@ -122,7 +122,10 @@ In this step, you will use the CSV file format to create new endpoints for the G
 
    The ID column is intentionally left empty, as it will be automatically assigned during the import. To update an existing endpoint, you would need to provide the ID of that endpoint.
 
-   The above line will create a new source endpoint named `Matrix Input 1`, linked to row key `1` of the inputs table of element `Matrix`, using `SDI` as transport type. Note that endpoint and virtual signal group **names must be unique** across your entire MediaOps Live system, so if this endpoint name already exists, use a different one.
+   The above line will create a new source endpoint named `Matrix Input 1`, linked to row key `1` of the inputs table of element `Matrix`, using `SDI` as transport type.
+
+   > [!NOTE]
+   > Endpoint and virtual signal group names are unique across your entire MediaOps Live system. If you use a name that already exists, importing the file will update the existing endpoint or virtual signal group instead of creating a new one. Deleting endpoints or virtual signal groups is currently not supported through the CSV import.
 
 1. Similarly, to create a new destination endpoint for output 1, add the following line to the CSV file.
 
@@ -155,9 +158,6 @@ In this step, you will use the CSV file format to create new endpoints for the G
    1. Click *Import* to start the import process.
 
       The new endpoints should now appear in the list.
-
-> [!NOTE]
-> The CSV import can be used to create new endpoints as well as to update existing ones. Deleting endpoints is currently not supported through the CSV import.
 
 ## Step 5: Import new virtual signal groups
 
@@ -217,9 +217,6 @@ In this step, you will create a VSG for each endpoint created in the previous st
 
       The new virtual signal groups should appear in the list.
 
-> [!NOTE]
-> The CSV import can be used to create new virtual signal groups as well as to update existing ones. Deleting virtual signal groups is currently not supported through the CSV import.
-
 ## Up next
 
-When you have finished this tutorial, you can continue with creating a [connection handler script](xref:Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript). This script will use the endpoints and virtual signal groups that you created in this tutorial to visualize and manage connections.
+When you have finished this tutorial, you can continue with creating a [connection handler script](xref:Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript). This script will use the endpoints and virtual signal groups that you have created in this tutorial to visualize and manage connections.
