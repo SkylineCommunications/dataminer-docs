@@ -44,7 +44,7 @@ A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMi
 
 This tutorial will make use of the [Generic Dynamic Table](https://catalog.dataminer.services/details/73b79bb5-0fb2-41ee-ae5f-c6b6020f909e) connector to simulate the IP matrix functionality. To deploy this connector and create the necessary elements:
 
-1. Look up the [Tutorial - SLC-AS-MediaOps.LIVE - IP Matrix](https://catalog.dataminer.services/details/02f6e3be-4244-4eee-97da-6919958377ef) package in the Catalog.
+1. Look up the package [Tutorial - SLC-AS-MediaOps.LIVE - IP Matrix](https://catalog.dataminer.services/details/02f6e3be-4244-4eee-97da-6919958377ef) in the Catalog.
 
 1. Deploy the latest version of the package to your DataMiner Agent by clicking the *Deploy* button.
 
