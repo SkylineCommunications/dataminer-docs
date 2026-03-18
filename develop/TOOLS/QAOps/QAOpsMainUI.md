@@ -149,6 +149,29 @@ You can also add new test packages to a test suite here:
 
 1. Click the ![erlenmeyer button](~/develop/images/QAOps_Erlenmeyer.png) button to add the package.
 
+The *Version* column uses the same sorting rules as the [package versioning for NuGet packages](https://learn.microsoft.com/en-us/nuget/concepts/package-versioning). However, QAOps doesn't use version ranges and instead accepts a `*` wildcard to filter on Catalog versions.
+
+| Version | Result |
+|--------|--------|
+| `*` | Latest stable version |
+| `1.2.*` | Latest `1.2.x` version |
+| `1.*` | Latest version starting with `1.` |
+| `*.1` | Latest version ending in `.1` |
+| `1.0.0-*` | Latest prerelease of `1.0.0` |
+| `*-rc1` | Latest version with `rc1` suffix |
+| `1.1.1*` | Latest version starting with `1.1.1` |
+
+The *Allow Prerelease* column can be used to include prerelease versions without specifying them in the *Version* column.
+
+> [!NOTE]
+> - The `*` wildcard can appear in any position and spans across version segments.
+> - Matching is performed using NuGet version precedence rules, not string comparison.
+> - The highest matching version is always selected.
+> - Prerelease versions are:
+>   - Excluded by default
+>   - Included when `Allow Prerelease` is enabled
+>   - Always considered when explicitly matched (e.g. `*-rc1`, `1.0.0-*`)
+
 ### QAOps Operator - Running Tests
 
 The *Running Tests* page shows a table with all known test requests.
