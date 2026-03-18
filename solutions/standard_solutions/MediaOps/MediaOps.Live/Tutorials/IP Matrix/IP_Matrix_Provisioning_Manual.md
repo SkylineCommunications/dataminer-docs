@@ -77,111 +77,115 @@ Next, you need to create a level and transport type in MediaOps Live. In this tu
 
 1. If the `TSoIP` transport type does not exist yet, create it by clicking the *New* button and specifying the following information:
 
-   - Name: `TSoIP`
-   - Fields: `Source IP`, `Multicast IP`, and `Port`
+   - *Name*: `TSoIP`
+   - *Fields*: `Source IP`, `Multicast IP`, and `Port`
 
    ![Pop-up window to create new transport type, with the correct information specified](~/solutions/images/MO_New_transport_type_TSoIP.png)
 
 1. Back on the *Levels* page, if the `Video` level does not exist yet, create it by clicking the *New* button and specifying the following information:
 
-   - Name: `Video`
-   - Number: `0` (or the next available number)
-   - Transport Type: `TSoIP`
+   - *Name*: `Video`
+   - *Number*: `0` (or the next available number)
+   - *Transport Type*: `TSoIP`
 
    ![Pop-up window to create new level](~/solutions/images/MO_New_level_TSoIP.png)
 
 ## Step 3: Create endpoints
 
-Next, you need to create endpoints for the inputs and outputs of the encoders and decoders.
-Let's start with the encoders. Each encoder element has one output (IP Out) that will be used as a source endpoint.
-The endpoint should contain the multicast IP address that is configured in the element.
-This multicast IP will be used later to configure the destination when creating a connection.
+Next, you need to create endpoints for the inputs and outputs of the encoders and decoders. Each encoder element has one output (IP Out) that will be used as a source endpoint. The endpoint should contain the multicast IP address that is configured in the element. This multicast IP will be used later to configure the destination when creating a connection.
 
-To do this, follow these steps:
+1. In the `Virtual Signal Groups` app, go to the *Endpoints* page.
 
-1. Navigate to the `Endpoints` tab in the `Virtual Signal Groups` app.
+1. Create a first endpoint for an encoder:
 
-1. Click the `New` button to create a new endpoint. A popup window will appear.
+   1. In the header bar, click *New*.
 
-1. Fill in the following details:
+   1. Fill in the following details in the pop-up window:
 
-    - Name: `Encoder 1` (needs to be unique)
-    - Role: `Source`
-    - Element: Select the `Encoder 1` element from the dropdown
-    - Identifier: Can be left empty since there is only one endpoint for this element
-    - Control Element: leave empty
-    - Control Element Identifier: leave empty
-    - Transport Type: `TSoIP`
+      - *Name*: `Encoder 1` (needs to be unique)
+      - *Role*: `Source`
+      - *Element*: Select the `Encoder - 1` element.
+      - *Identifier*: Can be left empty as there is only one endpoint for this element.
+      - *Control Element*: Leave empty.
+      - *Control Element Identifier*: Leave empty.
+      - *Transport Type*: `TSoIP`
 
-1. In the `TSoIP` section, fill in the multicast details:
+      As soon as you set the transport type to *TSoIP*, a new section will be displayed in the pop-up window where you can configure additional details.
 
-    - Source IP: `10.0.0.1` (can be any valid IP address, not important for this tutorial)
-    - Multicast IP: `239.1.1.1`. This is the multicast IP configured in the element. The third octet should match the encoder number (1-4).
-    - Port: `5000` (can be any valid port, not important for this tutorial)
+   1. In the *TSoIP* section, fill in the multicast details:
 
-1. Click `Save` to create the endpoint.
+      - *Source IP*: `10.0.0.1` (can be any valid IP address; not important for this tutorial)
+      - *Multicast IP*: `239.1.1.1`. This is the multicast IP configured in the element. The third octet should match the encoder number (1-4).
+      - *Port*: `5000` (can be any valid port, not important for this tutorial)
 
-1. Repeat these steps to create endpoints for `Encoder 2`, `Encoder 3` and `Encoder 4`.
+   1. Click *Save* to create the endpoint.
 
-   Now you should see that the (source) endpoints have been created linked to the correct elements.
-   Next, we will create the endpoints for the decoders.
+1. Repeat these steps to create endpoints for Encoder 2, Encoder 3, and Encoder 4.
 
-1. Click the `New` button to create a new endpoint. A popup window will appear.
+   Now you should see that the source endpoints have been created linked to the correct elements.
 
-1. Fill in the following details:
+   ![The configured source endpoints in the Virtual Signal Groups app](~/solutions/images/MO_Source_endpoints.png)
 
-    - Name: `Decoder 1` (needs to be unique)
-    - Role: `Destination`
-    - Element: Select the `Decoder 1` element from the dropdown
-    - Identifier: Can be left empty since there is only one endpoint for this element
-    - Control Element: leave empty
-    - Control Element Identifier: leave empty
-    - Transport Type: `TSoIP`
+1. Create a first endpoint for a decoder:
 
-1. This time you don't need to provide details for the `TSoIP` section since this is a destination endpoint.
+   1. In the header bar, click *New*.
 
-1. Click `Save` to create the endpoint.
+   1. Fill in the following details in the pop-up window:
 
-1. Repeat these steps to create endpoints for `Decoder 2`, `Decoder 3` and `Decoder 4`.
+      - *Name*: `Decoder 1` (needs to be unique)
+      - *Role*: `Destination`
+      - *Element*: Select the `Decoder 1` element from the dropdown
+      - *Identifier*: Can be left empty as there is only one endpoint for this element.
+      - *Control Element*: Leave empty.
+      - *Control Element Identifier*: Leave empty.
+      - *Transport Type*: `TSoIP`
 
-Now you should see that the (destination) endpoints have been created linked to the correct elements.
+      This time you do not need to provide details for the *TSoIP* section because this is a destination endpoint.
+
+   1. Click *Save* to create the endpoint.
+
+1. Repeat these steps to create endpoints for Decoder 2, Decoder 3, and Decoder 4.
+
+   Now you should see that the destination endpoints have been created linked to the correct elements.
+
+   ![The configured source and destination endpoints in the Virtual Signal Groups app](~/solutions/images/MO_Source_and_destination_endpoints.png)
 
 ## Step 4: Create virtual signal groups
 
-Finally, you need to create virtual signal groups (VSGs). VSGs are logical groupings that allow creating connections between multiple endpoints at the same time.
-In this case we will create a VSG for each endpoint that we created in the previous step.
-The endpoints will be assigned to the VSG on the Video level, but this can be adjusted based on your needs.
+Next, virtual signal groups (VSGs) need to be created. These are logical groupings that allow the creation of connections between multiple endpoints at the same time. In this case, **a VSG must be created for each endpoint** created in the previous step. The endpoints will be assigned to the VSG on the *Video* level, but you can adjust this based on your needs.
 
-To do this, follow these steps:
+1. In the Virtual Signal Groups app, go to the *Virtual Signal Groups* page.
 
-1. Navigate to the `Virtual Signal Groups` tab in the `Virtual Signal Groups` app.
+1. In the header bar, click the *New* button to create a new VSG.
 
-1. Click the `New` button to create a new VSG. A popup window will appear.
+1. Fill in the following details in the pop-up window, and then click *Save*:
 
-1. Fill in the following details:
+   - *Name*: `Encoder 1` (needs to be unique)
+   - *Description*: A meaningful description (optional).
+   - *Role*: `Source`
 
-    - Name: `Encoder 1` (needs to be unique)
-    - Description: a meaningful description (optional)
-    - Role: `Source`
+   In the table, a record will be added for the VSG.
 
-1. Click `Save` to create the VSG.
+1. Assign an endpoint to the VSG:
 
-   Now you should see that the VSG has been created. Next, you need to assign an endpoint to the VSG.
+   1. Click the edit endpoints icon in the row of the VSG you have just created.
 
-1. Click on the edit endpoints icon on the row of the VSG you just created. A side panel will open.
+      ![Icon to edit endpoints in the Virtual Signal Groups table](~/solutions/images/MO_Edit_endpoints_icon_IP_matrix.png)
 
-1. In the table at the top, select the `Video` level.
+      A side panel will open.
 
-1. In the table at the bottom, select the endpoint you created in the previous step (e.g., `Encoder 1`).
+   1. In the table at the top, select the *Video* level.
 
-1. Press the `Assign` button to assign the endpoint to the VSG.
+   1. In the table at the bottom, select the endpoint you created in the previous step (e.g., *Encoder 1*).
 
-1. You should now see that the endpoint is assigned on the Video level.
+   1. Click *Assign* to assign the endpoint to the VSG.
 
-Repeat these steps to create more VSGs for inputs and outputs as needed.
-Use role `Source` for the encoders and role `Destination` for the decoders.
+      ![Video level and Matrix Input 1 selected in side panel to assign endpoint](~/solutions/images/MO_Assign_endpoint_to_VSG_IP_matrix.png)
+
+      The endpoint will now be assigned on the *Video* level.
+
+1. Repeat these steps to create more VSGs for inputs and outputs as needed, using the role *Source* for the encoders and the role *Destination* for the decoders.
 
 ## Up next
 
-In this tutorial, you learned how to manually create endpoints and virtual signal groups for an IP matrix solution using the Virtual Signal Groups low-code app.
-You can now create a connection handler by following the steps in the tutorial [Creating a connection handler script for an IP Matrix element](xref:Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript). Once you have created the connection handler script, you can create connections between the encoders and decoders using the Control Surface low-code app.
+Now that you have created endpoints and virtual signal groups for an IP matrix solution, you can create a connection handler script by following the tutorial [Creating a connection handler script for an IP Matrix element](xref:Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript). Once that is done, you will be able to create connections between the encoders and decoders using the Control Surface app.

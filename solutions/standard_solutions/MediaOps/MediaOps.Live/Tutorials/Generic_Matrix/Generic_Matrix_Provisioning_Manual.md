@@ -49,9 +49,9 @@ First, you need to create a level and transport type in MediaOps Live. In this t
 
 1. Back on the *Levels* page, if the `Video` level does not exist yet, create it by clicking the *New* button and specifying the following information:
 
-   - Name: `Video`
-   - Number: `0` (or the next available number)
-   - Transport Type: `SDI`
+   - *Name*: `Video`
+   - *Number*: `0` (or the next available number)
+   - *Transport Type*: `SDI`
 
    ![Pop-up window to create new level](~/solutions/images/MO_New_level_SDI.png)
 
@@ -65,13 +65,13 @@ Next, you need to create endpoints for the inputs and outputs of the Generic Mat
 
 1. Fill in the following details in the pop-up window, and then click *Save*:
 
-   - Name: `Matrix Input 1` (needs to be unique)
-   - Role: `Source`
-   - Element: Select the Generic Matrix element from the dropdown
-   - Identifier: `1` (row key in the inputs or outputs table of the Generic Matrix connector). This identifier will be used later to link the endpoint back to the correct input or output in the element.
-   - Control Element: leave empty
-   - Control Element Identifier: leave empty
-   - Transport Type: `SDI`
+   - *Name*: `Matrix Input 1` (needs to be unique)
+   - *Role*: `Source`
+   - *Element*: Select the Generic Matrix element from the dropdown
+   - *Identifier*: `1` (row key in the inputs or outputs table of the Generic Matrix connector). This identifier will be used later to link the endpoint back to the correct input or output in the element.
+   - *Control Element*: Leave empty.
+   - *Control Element Identifier*: Leave empty.
+   - *Transport Type*: `SDI`
 
    ![Pop-up window to create new endpoint, with the necessary details filled in](~/solutions/images/MO_New_Endpoint_Generic_Matrix.png)
 
@@ -89,9 +89,9 @@ Next, virtual signal groups (VSGs) need to be created. These are logical groupin
 
 1. Fill in the following details in the pop-up window, and then click *Save*:
 
-   - Name: `Matrix Input 1` (needs to be unique)
-   - Description: a meaningful description (optional)
-   - Role: `Source`
+   - *Name*: `Matrix Input 1` (needs to be unique)
+   - *Description*: A meaningful description (optional).
+   - *Role*: `Source`
 
    ![Pop-up window to create new VSG, with the necessary details filled in](~/solutions/images/MO_New_VSG_Matrix_Input_1.png)
 

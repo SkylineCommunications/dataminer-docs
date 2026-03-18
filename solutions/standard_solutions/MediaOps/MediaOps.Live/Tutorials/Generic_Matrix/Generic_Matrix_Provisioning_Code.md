@@ -79,9 +79,9 @@ Before you can create endpoints and virtual signal groups, you need to ensure th
 
 1. Back on the *Levels* page, if the `Video` level does not exist yet, create it by clicking the *New* button and specifying the following information:
 
-   - Name: `Video`
-   - Number: `0` (or the next available number)
-   - Transport Type: `SDI`
+   - *Name*: `Video`
+   - *Number*: `0` (or the next available number)
+   - *Transport Type*: `SDI`
 
    ![Pop-up window to create new level](~/solutions/images/MO_New_level_SDI.png)
 
