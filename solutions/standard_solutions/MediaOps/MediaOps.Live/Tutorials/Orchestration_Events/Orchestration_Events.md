@@ -43,39 +43,37 @@ Expected duration: 30 minutes
 
 ## Step 1: Create a new automation script
 
-Create a new automation script in Visual Studio, using DIS.
-You can follow the steps in the [DIS documentation](https://docs.dataminer.services/develop/TOOLS/DIS/Developing/Developing_Automation_scripts_as_Visual_Studio_solutions.html#creating-a-new-script-in-a-solution) to create a new automation script.
+Create a new automation script in Visual Studio, using DIS. For details, refer to the [DIS documentation](xref:Developing_Automation_scripts_as_Visual_Studio_solutions#creating-a-new-script-in-a-solution).
 
-For the name of the script, we will use `Tutorial-OrchestrationEvents`.
+As the name of the script, use `Tutorial-OrchestrationEvents`.
 
 ## Step 2: Add NuGet packages and using statements
 
-Add the following NuGet packages to your project:
+1. Add the following NuGet packages to your project:
 
-- `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live`
-- `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation`
-- `Skyline.DataMiner.Dev.Automation`
-- `Skyline.DataMiner.Core.DataMinerSystem.Automation`
+   - `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live`
+   - `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Live.Automation`
+   - `Skyline.DataMiner.Dev.Automation`
+   - `Skyline.DataMiner.Core.DataMinerSystem.Automation`
 
-Now you can add the following using statements to your script:
+1. Add the following `using` statements to your script:
 
-```csharp
-using Skyline.DataMiner.Solutions.MediaOps.Live.API;
-using Skyline.DataMiner.Solutions.MediaOps.Live.Automation;
-```
+   ```csharp
+   using Skyline.DataMiner.Solutions.MediaOps.Live.API;
+   using Skyline.DataMiner.Solutions.MediaOps.Live.Automation;
+   ```
 
-First, you need to get an instance of the MediaOps Live API in your script.
-You can do this by using the `GetMediaOpsLiveApi` extension method on the `Engine` object.
+1. Use the `GetMediaOpsLiveApi` extension method on the `Engine` object to get an instance of the MediaOps Live API in your script.
 
-```csharp
-var api = engine.GetMediaOpsLiveApi();
-```
+   ```csharp
+   var api = engine.GetMediaOpsLiveApi();
+   ```
 
 ## Step 3: Create an orchestration event
 
 By using the MediaOps Live API, you can now create orchestration events.
 
-First, orchestration event can only be defined in context of an orchestration job. An orchestration job is a group of events that have a shared context.
+First, orchestration events can only be defined in context of an orchestration job. An orchestration job is a group of events that have a shared context.
 This can be useful for, e.g., grouping events that orchestrate the same element or are generated from the same source.
 
 ```csharp
