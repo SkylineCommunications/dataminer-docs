@@ -274,3 +274,11 @@ In some cases, *On open* events configured on pages or panels would not take int
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When a row with metadata was added via a real-time query update, up to now, the metadata would be lost when a column selector that modified the order of the columns was applied to the query.
+
+#### GQI DxM: Log level for a particular GQI extension could not be set lower than the default setting [ID 44983]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when working with the GQI DxM, it would incorrectly not be possible to lower the log level for a particular GQI extension (i.e., an ad hoc data source or a custom operator).
+
+From now on, similar to the way in which log levels can be either lowered or increased when working with SLHelper, it will also be possible to either lower or increase the log level for a particular GQI extension when working with the GQI DxM.
