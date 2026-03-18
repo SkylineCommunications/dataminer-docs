@@ -28,9 +28,17 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 #### Enhancements made to the redesigned Cube UI and themes [ID 44977]
 
-<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 In version 10.6.4, the entire Cube UI and UI themes were redesigned. In this version, a number of additional enhancements have been made.
+
+#### Trending: Enhanced performance when retrieving trend group data [ID 44982]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving trend group data, especially on systems with a large number of trend groups.
+
+Also, an SPI log entry has been added that will record how long Cube had to wait for a server response after sending a query to retrieve trend group data.
 
 ### Fixes
 
