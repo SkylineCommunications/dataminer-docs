@@ -264,6 +264,8 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
    }
    ```
 
+1. Visual Studio tends to add spaces to the first 3 lines around the colons. Make sure to remove those spaces.
+
 1. Look up the following line:
 
    ```csharp
