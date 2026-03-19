@@ -288,3 +288,11 @@ When a row with metadata was added via a real-time query update, up to now, the 
 Up to now, when working with the GQI DxM, it would incorrectly not be possible to lower the log level for a particular GQI extension (i.e., an ad hoc data source or a custom operator).
 
 From now on, similar to the way in which log levels can be either lowered or increased when working with SLHelper, it will also be possible to either lower or increase the log level for a particular GQI extension when working with the GQI DxM.
+
+#### Dashboards/Low-Code Apps: 'Allow components to shift' setting would incorrectly not be taken into account when you resized a component [ID 45045]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, the *Allow components to shift* setting would only be taken into account when you moved a component. It would incorrectly not be taken into account when you resized a component.
+
+From now on, the *Allow components to shift* setting will be taken into account when you move a component as well as when you resize a component.
