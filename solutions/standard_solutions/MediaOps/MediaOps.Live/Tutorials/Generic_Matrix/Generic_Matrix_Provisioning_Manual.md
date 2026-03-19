@@ -12,7 +12,7 @@ There are three ways to create endpoints and VSGs:
 - [Through an automation script, using the MediaOps Live API](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code).
 - [Using the CSV import functionality in the Virtual Signal Groups app](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import).
 
-Expected duration: 30 minutes
+Expected duration: 25 minutes
 
 > [!NOTE]
 > The content and screenshots of this tutorial were created using DataMiner 10.6.4 and MediaOps Live 1.0.0.
@@ -29,7 +29,6 @@ The DataMiner System you use for this tutorial must meet the following prerequis
 - [Step 1: Create level and transport type](#step-1-create-level-and-transport-type)
 - [Step 2: Create endpoints](#step-2-create-endpoints)
 - [Step 3: Create virtual signal groups](#step-3-create-virtual-signal-groups)
-- [Step 4: Create a test connection](#step-4-create-a-test-connection)
 
 ## Step 1: Create level and transport type
 
@@ -117,21 +116,8 @@ Next, virtual signal groups (VSGs) need to be created. These are logical groupin
 
 1. Repeat these steps to create more VSGs for inputs and outputs as needed, using the role *Source* for input VSGs and the role *Destination* for output VSGs.
 
-## Step 4: Create a test connection
-
-> [!TIP]
-> To be able to create a connection between a source and destination, you need a connection handler script for the Generic Matrix connector. If this script is not yet available in your system, follow the tutorial [Creating a connection handler script for a Generic Matrix element](xref:Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript) to create it.
-
-If your system has the appropriate connection handler script, you can create a test connection:
-
-1. Open the Control Surface app.
-
-1. Select a source and destination virtual signal groups you created in the previous steps.
-
-1. Click the *Connect* button.
-
-1. A connection should now be created between the source and destination.
-
 ## Up next
 
-You are now able to create endpoints and virtual signal groups one by one manually in the app, but in many cases there will be too many to do this manually. In the next tutorial, [Provisioning endpoints and virtual signal groups for a Generic Matrix element using code](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code), you will learn how to automate this process using an automation script.
+Now that you have created endpoints and VSGs, you can create a connection handler script by following the tutorial [Creating a connection handler script for a Generic Matrix element](xref:Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript). Once that is done, you will be able to create connections between the encoders and decoders using the Control Surface app.
+
+Alternatively, you can also explore how to create endpoints and virtual signal groups in a different way, as in many cases there will be too many to do this manually. You can either [automate this process using an automation script](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code) or [create endpoints and VSGs in bulk via CSV import](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import).

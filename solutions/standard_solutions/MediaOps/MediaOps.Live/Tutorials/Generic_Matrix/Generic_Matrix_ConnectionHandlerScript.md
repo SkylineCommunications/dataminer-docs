@@ -257,9 +257,13 @@ public override void Disconnect(IEngine engine, IConnectionHandlerEngine connect
 
    If there is a Generic Matrix element on the same DMA, it should automatically be linked to this script. If needed, you can link it manually.
 
-1. Test your connection handler script by making some connections to the Control Surface app. For details, refer to [step 4 of the manual provisioning tutorial](xref:Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual#step-4-create-a-test-connection).
+1. Test your script by creating a connection:
 
-   You can verify connections by looking at the button of the destination endpoint. The button should show the name of the connected source endpoint. Note that you can also check the device element directly in Cube.
+   1. In the Control Surface app, select a source and destination virtual signal group.
+
+   1. Click the *Connect* button.
+
+   A connection should now be created between the source and destination. You can verify connections by looking at the button of the destination endpoint. The button should show the name of the connected source endpoint. Note that you can also check the device element directly in Cube.
 
 > [!TIP]
 > The [SLC-AS-MediaOps.LIVE-Tutorial-GenericMatrix](https://github.com/SkylineCommunications/SLC-AS-MediaOps.LIVE-Tutorial-GenericMatrix) repository on GitHub contains the complete script that you can use as a reference.
