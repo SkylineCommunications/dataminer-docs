@@ -207,14 +207,14 @@ When a DataMiner Agent is upgraded, the Dashboard Gateway must also be updated t
 
 To do so, after the DataMiner upgrade, copy the following folders from the DataMiner Agent to the web root folder of the Dashboard Gateway web server (default: `C:\inetpub\wwwroot`):
 
-- `C:\Skyline DataMiner\Webpages\Dashboard`
+- `C:\Skyline DataMiner\Webpages\API` (Make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)
 - `C:\Skyline DataMiner\Webpages\App`
-- `C:\Skyline DataMiner\Webpages\Monitoring`
+- `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
+- `C:\Skyline DataMiner\Webpages\Dashboard`
 - `C:\Skyline DataMiner\Webpages\Jobs` (prior to DataMiner 10.5.0 only)
+- `C:\Skyline DataMiner\Webpages\Monitoring`
 - `C:\Skyline DataMiner\Webpages\Ticketing` (prior to DataMiner 10.6.0/10.6.2 only)
 - `C:\Skyline DataMiner\Webpages\SharedComponents`
-- `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
-- `C:\Skyline DataMiner\Webpages\API` (Make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)
 
 > [!NOTE]
 > When you **upgrade to DataMiner 10.5.0 [CU11]/10.6.2** or higher from an older version:
