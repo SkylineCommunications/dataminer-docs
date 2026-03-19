@@ -281,7 +281,7 @@ In this step, you will create connections between specific levels of the VSGs, i
 
 ## Step 12: Disconnect a connection
 
-In the previous steps, you have only run events with type `Other`. For single events, this is the only option. Other types can be used, but then the job needs both a start (`Start`, `PrerollStart` + `PrerollStop`) and stop (`Stop` or `PostrollStart` + `PostrollStop`) event. By design, start events will trigger a connection, while stop events will disconnect the connection.
+In the previous steps, you have only run events with type `Other`. For single events, this is the only option. Other types can be used, but then the job needs both a start (`Start` or `PrerollStart` and `PrerollStop`) and stop (`Stop` or `PostrollStart` and `PostrollStop`) event. By design, start events will trigger a connection, while stop events will disconnect the connection.
 
 With this knowledge, you can now create a job with both a connect and disconnect event.
 
