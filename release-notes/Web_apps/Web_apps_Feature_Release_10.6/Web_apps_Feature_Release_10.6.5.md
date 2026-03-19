@@ -154,6 +154,14 @@ When you install a DataMiner web upgrade package, from now on, a prerequisite ch
 
 Up to now, when a GQI extension (i.e., an ad hoc data source or a custom operator) returned a cell of which the value was set to null, its display value would be discarded. From now on, this display value will no longer be discarded. Instead, it will be displayed in the UI.
 
+#### GQI DxM: Enhanced performance of the 'Get parameters for elements where' data source [ID 44959]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when using the *Get parameters for elements where* data source, only `equals` filters on the element ID column were optimized. This meant that, for `(not)contains` and `(not)regex`, the data would only be filtered after the parameters had been retrieved.
+
+From now on, when using the *Get parameters for elements where* data source, the least amount of data possible will be retrieved, whatever comparer or filter combination was used.
+
 #### Web apps: Splash screens have been redesigned [ID 44998]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
