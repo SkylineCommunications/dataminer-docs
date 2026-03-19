@@ -60,5 +60,12 @@ The overview below indicates the support levels for all operators.
 | -------- | ------------- | ------- |
 | [Select](xref:GQI_Select) | [Real-time events](#query-update-support) | |
 | [Sort](xref:GQI_Sort) | [Real-time events](#query-update-support) | Starting from DataMiner 10.5.0 [CU4]/10.5.7 with the [GQI DxM](xref:GQI_DxM). <!-- RN 42941 --> |
-| [Filter](xref:GQI_Sort) | [Real-time events](#query-update-support) / [Notification events](#query-update-support) | When supported, this is mentioned in the relevant data source documentation. |
+| [Filter](xref:GQI_Filter) | [Real-time events](#query-update-support) / [Notification events](#query-update-support) | When supported, this is mentioned in the relevant data source documentation. |
 | All other operators | [Notification events](#query-update-support) | |
+
+## Row metadata
+
+Row metadata is supported for real-time events, but only when adding new rows. Row metadata for existing rows cannot be modified via real-time events.
+
+> [!NOTE]
+> Prior to DataMiner web 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5, real-time events passing through a `select` operator that alters the column order do not retain row metadata. <!-- RN 44974 -->
