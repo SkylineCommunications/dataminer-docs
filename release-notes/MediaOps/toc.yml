@@ -5,6 +5,8 @@ items:
       topicUid: MediaOps_Live_1.0.0
   - name: Plan
     items:
+    - name: MediaOps Plan 1.5.4 - Preview
+      topicUid: MediaOps_Plan_1.5.4
     - name: MediaOps Plan 1.5.3
       topicUid: MediaOps_Plan_1.5.3
     - name: MediaOps Plan 1.5.2
