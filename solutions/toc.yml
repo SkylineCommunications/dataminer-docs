@@ -113,7 +113,7 @@ items:
               topicUid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
             - name: Creating a connection handler script for an IP Matrix element
               topicUid: Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript
-          - name: Orchestration Events
+          - name: Orchestration events
             items:
             - name: Creating orchestration events
               topicUid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents

@@ -113,15 +113,15 @@ Even though the event is correctly saved, at this point nothing will happen yet 
 
 1. To schedule the orchestration event for execution, change the event state from `Draft` to `Confirmed`:
 
-```csharp
-OrchestrationEvent orchestrationEvent = new OrchestrationEvent()
-{
-    EventState = EventState.Confirmed,
-    EventTime = DateTimeOffset.Now + TimeSpan.FromSeconds(10),
-    EventType = EventType.Other,
-    Name = "A basic event",
-};
-```
+   ```csharp
+   OrchestrationEvent orchestrationEvent = new OrchestrationEvent()
+   {
+       EventState = EventState.Confirmed,
+       EventTime = DateTimeOffset.Now + TimeSpan.FromSeconds(10),
+       EventType = EventType.Other,
+       Name = "A basic event",
+   };
+   ```
 
 1. Publish the updated script to the DMA and run it again.
 
@@ -250,115 +250,115 @@ Instead of executing a global script from the orchestration event, it is also po
 
 ## Step 11: Add level configuration to the connection
 
-Instead of just creating a connection between two VSGs (which connects all signals between the source and destination VSG), you can also connect specific levels between the VSGs.
+In this step, you will create connections between specific levels of the VSGs, instead of creating a connection between the VSGs themselves that connects all signals between the source and destination VSG. The Demo package comes with four installed levels: Video (0), Audio1 (1), Audio2 (2) and Data (3).
 
-The Demo package comes with 4 installed levels: Video (0), Audio1 (1), Audio2 (2) and Data (3).
+1. Update the connection definition to only connect video and audio levels.
 
-You can now update the connection definition to only connection video and audio levels. With the code below, you will also shuffle the audio levels between Audio1 and Audio2.
+   With the code below, you will also shuffle the audio levels between Audio1 and Audio2.
 
-```csharp
-VirtualSignalGroup source = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("SRC-000001")).FirstOrDefault();
-VirtualSignalGroup destination = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("DST-000001")).FirstOrDefault();
+   ```csharp
+   VirtualSignalGroup source = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("SRC-000001")).FirstOrDefault();
+   VirtualSignalGroup destination = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("DST-000001")).FirstOrDefault();
 
-orchestrationEvent.Configuration.Connections.Add(new Connection
-{
-    SourceNodeId = "1",
-    DestinationNodeId = "2",
-    SourceVsg = source,
-    DestinationVsg = destination,
-    LevelMappings = new List<LevelMapping>
-    {
-        new LevelMapping(new Level("Video", 0), new Level("Video", 0)),
-        new LevelMapping(new Level("Audio1", 1), new Level("Audio2", 2)),
-        new LevelMapping(new Level("Audio2", 2), new Level("Audio1", 1)),
-    }
-});
-```
+   orchestrationEvent.Configuration.Connections.Add(new Connection
+   {
+       SourceNodeId = "1",
+       DestinationNodeId = "2",
+       SourceVsg = source,
+       DestinationVsg = destination,
+       LevelMappings = new List<LevelMapping>
+       {
+           new LevelMapping(new Level("Video", 0), new Level("Video", 0)),
+           new LevelMapping(new Level("Audio1", 1), new Level("Audio2", 2)),
+           new LevelMapping(new Level("Audio2", 2), new Level("Audio1", 1)),
+       }
+   });
+   ```
 
-Publish the updated script to the DMA and run it again.
+1. Publish the updated script to the DMA and run it again.
 
-You should now see that after 10 seconds, a connection will be created between the specified source and destination VSGs. Notice how only the video and audio levels are connected, and how the audio levels are shuffled.
+   You should now see that after 10 seconds a connection will be created between the specified source and destination VSGs. Notice how only the video and audio levels are connected, and how the audio levels are shuffled.
 
 ## Step 12: Disconnect a connection
 
-Until now, we only ran events with type `Other`. For single events, this is the only option.
-Other types can be used, but then the job needs both a start (`Start`, `PrerollStart` + `PrerollStop`) and stop (`Stop` or `PostrollStart` + `PostrollStop`) event.
+In the previous steps, you have only run events with type `Other`. For single events, this is the only option. Other types can be used, but then the job needs both a start (`Start`, `PrerollStart` + `PrerollStop`) and stop (`Stop` or `PostrollStart` + `PostrollStop`) event. By design, start events will trigger a connection, while stop events will disconnect the connection.
 
-By design, start event will trigger a connection, while a stop event will disconnect the connection.
-
-With this knowledge, we can now create a job with both a connect and disconnect event.
+With this knowledge, you can now create a job with both a connect and disconnect event.
 
 1. Change the type of the current event to `Start`.
+
 1. Create a new orchestration event, with the same configuration as the existing event, with type `Stop`.
-Set the start time of the stop event to 20 seconds in the future (10 seconds after the start event).
-1. Add both events to the same orchestration job.
 
-The following code can be copied to achieve this:
+   - Set the start time of the stop event to 20 seconds in the future (10 seconds after the start event).
 
-```csharp
- private void RunSafe(IEngine engine)
-{
-    var api = engine.GetMediaOpsLiveApi();
+   - Add both events to the same orchestration job.
 
-    string jobReference = Guid.NewGuid().ToString();
-    OrchestrationJobConfiguration orchestrationJob = api.Orchestration.GetOrCreateNewOrchestrationJobConfiguration(jobReference);
+   You can copy the following code to achieve this:
 
-    VirtualSignalGroup source = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("SRC-000001")).FirstOrDefault();
-    VirtualSignalGroup destination = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("DST-000001")).FirstOrDefault();
+   ```csharp
+    private void RunSafe(IEngine engine)
+   {
+       var api = engine.GetMediaOpsLiveApi();
 
-    orchestrationJob.OrchestrationEvents.Add(CreateOrchestrationEvent(EventType.Start, EventState.Confirmed, DateTimeOffset.Now + TimeSpan.FromSeconds(10), source, destination));
-    orchestrationJob.OrchestrationEvents.Add(CreateOrchestrationEvent(EventType.Stop, EventState.Confirmed, DateTimeOffset.Now + TimeSpan.FromSeconds(20), source, destination));
-    api.Orchestration.SaveOrchestrationJobConfiguration(orchestrationJob);
-}
+       string jobReference = Guid.NewGuid().ToString();
+       OrchestrationJobConfiguration orchestrationJob = api.Orchestration.GetOrCreateNewOrchestrationJobConfiguration(jobReference);
 
-public OrchestrationEventConfiguration CreateOrchestrationEvent(EventType type, EventState state, DateTimeOffset eventTime, VirtualSignalGroup source, VirtualSignalGroup destination)
-{
-    OrchestrationEventConfiguration orchestrationEvent = new OrchestrationEventConfiguration()
-    {
-        EventState = state,
-        EventTime = eventTime,
-        EventType = type,
-        Name = "A basic event",
-    };
+       VirtualSignalGroup source = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("SRC-000001")).FirstOrDefault();
+       VirtualSignalGroup destination = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("DST-000001")).FirstOrDefault();
 
-    orchestrationEvent.Configuration.NodeConfigurations.Add(new NodeConfiguration
-    {
-        NodeId = "1",
-        NodeLabel = "Label 1",
-        OrchestrationScriptName = "Tutorial-OrchestrationEvents-DummyScript",
-    });
-    orchestrationEvent.Configuration.NodeConfigurations.Add(new NodeConfiguration
-    {
-        NodeId = "2",
-        NodeLabel = "Label 2",
-        OrchestrationScriptName = "Tutorial-OrchestrationEvents-DummyScript",
-    });
+       orchestrationJob.OrchestrationEvents.Add(CreateOrchestrationEvent(EventType.Start, EventState.Confirmed, DateTimeOffset.Now + TimeSpan.FromSeconds(10), source, destination));
+       orchestrationJob.OrchestrationEvents.Add(CreateOrchestrationEvent(EventType.Stop, EventState.Confirmed, DateTimeOffset.Now + TimeSpan.FromSeconds(20), source, destination));
+       api.Orchestration.SaveOrchestrationJobConfiguration(orchestrationJob);
+   }
 
-    orchestrationEvent.Configuration.Connections.Add(new Connection
-    {
-        SourceNodeId = "1",
-        DestinationNodeId = "2",
-        SourceVsg = source,
-        DestinationVsg = destination,
-        LevelMappings = new List<LevelMapping>
-        {
-            new LevelMapping(new Level("Video", 0), new Level("Video", 0)),
-            new LevelMapping(new Level("Audio1", 1), new Level("Audio2", 2)),
-            new LevelMapping(new Level("Audio2", 2), new Level("Audio1", 1)),
-        },
-    });
+   public OrchestrationEventConfiguration CreateOrchestrationEvent(EventType type, EventState state, DateTimeOffset eventTime, VirtualSignalGroup source, VirtualSignalGroup destination)
+   {
+       OrchestrationEventConfiguration orchestrationEvent = new OrchestrationEventConfiguration()
+       {
+           EventState = state,
+           EventTime = eventTime,
+           EventType = type,
+           Name = "A basic event",
+       };
 
-    return orchestrationEvent;
-}
-```
+       orchestrationEvent.Configuration.NodeConfigurations.Add(new NodeConfiguration
+       {
+           NodeId = "1",
+           NodeLabel = "Label 1",
+           OrchestrationScriptName = "Tutorial-OrchestrationEvents-DummyScript",
+       });
+       orchestrationEvent.Configuration.NodeConfigurations.Add(new NodeConfiguration
+       {
+           NodeId = "2",
+           NodeLabel = "Label 2",
+           OrchestrationScriptName = "Tutorial-OrchestrationEvents-DummyScript",
+       });
 
-Publish the updated script to the DMA and run it again.
-You should now see that after 10 seconds, a connection will be created between the specified source and destination VSGs.
-After another 10 seconds, the connection will be disconnected and the destination VSG's will be unlinked.
+       orchestrationEvent.Configuration.Connections.Add(new Connection
+       {
+           SourceNodeId = "1",
+           DestinationNodeId = "2",
+           SourceVsg = source,
+           DestinationVsg = destination,
+           LevelMappings = new List<LevelMapping>
+           {
+               new LevelMapping(new Level("Video", 0), new Level("Video", 0)),
+               new LevelMapping(new Level("Audio1", 1), new Level("Audio2", 2)),
+               new LevelMapping(new Level("Audio2", 2), new Level("Audio1", 1)),
+           },
+       });
+
+       return orchestrationEvent;
+   }
+   ```
+
+1. Publish the updated script to the DMA and run it again.
+
+   You should now see that after 10 seconds a connection will be created between the specified source and destination VSGs. After another 10 seconds, the connection will be disconnected and the destination VSGs will be unlinked.
 
 > [!TIP]
 > In the [SLC-AS-MediaOps.LIVE-Tutorial-OrchestrationEvents](https://github.com/SkylineCommunications/SLC-AS-MediaOps.LIVE-Tutorial-OrchestrationEvents) repository on GitHub, you can find the complete script that you can use as a reference.
 
 ## Up next
 
-In this tutorial, you have learned how to create orchestration events in MediaOps Live using the MediaOps Live API. You can now continue with the [Create Orchestration Scripts tutorial](xref:Tutorial_MediaOpsLive_CreateOrchestrationScripts) to learn how to create more advanced orchestration scripts that can be used in the orchestration events.
+In this tutorial, you have learned how to create orchestration events in MediaOps Live using the MediaOps Live API. You can now continue with the tutorial [Creating orchestration scripts](xref:Tutorial_MediaOpsLive_CreateOrchestrationScripts) to learn how to create more advanced orchestration scripts that can be used in the orchestration events.
