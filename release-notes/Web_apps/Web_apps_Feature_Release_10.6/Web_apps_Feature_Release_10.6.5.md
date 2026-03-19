@@ -154,6 +154,12 @@ When you install a DataMiner web upgrade package, from now on, a prerequisite ch
 
 Up to now, when a GQI extension (i.e., an ad hoc data source or a custom operator) returned a cell of which the value was set to null, its display value would be discarded. From now on, this display value will no longer be discarded. Instead, it will be displayed in the UI.
 
+#### Web apps: Splash screens have been redesigned [ID 44998]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In all DataMiner web apps, the splash screen has been redesigned in order to match the UI of the app.
+
 ### Fixes
 
 #### Low-Code Apps - Form component: Required lazy-loaded dropdown boxes would incorrectly be marked as invalid [ID 44815]
