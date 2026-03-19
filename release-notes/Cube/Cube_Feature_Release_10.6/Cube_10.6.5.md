@@ -67,3 +67,9 @@ For example, when you had discarded a change to a dummy, parameter, or memory fi
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 Since DataMiner version 1.0.1.0 CU22/10.2.0 CU10/10.3.1, trend graphs in a visual overview would incorrectly not show any aggregation trending.
+
+#### UI sections containing embedded browser windows would remain empty when Microsoft Edge (WebView2) browser engine was not loaded [ID 44984]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When, for whatever reason, the Microsoft Edge (WebView2) browser engine had not been loaded, up to now, parts of the Cube UI that contained embedded browser windows would incorrectly remain empty.
