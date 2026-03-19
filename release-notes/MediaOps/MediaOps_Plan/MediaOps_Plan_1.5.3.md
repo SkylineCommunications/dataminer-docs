@@ -21,7 +21,7 @@ uid: MediaOps_Plan_1.5.3
 
 #### Scheduling: Confirmation message adjusted for job with start time in the past [ID 45031]
 
-The message that is shown when a job that has its start time in the past is confirmed has been adjusted. While previously this mentioned that automated actions linked to the job start would be triggered immediately, now it will show `The start time of this job is in the past. Confirming it will cause it to start running.` However, note that if MediaOps Live is installed, it will continue to show the previous message.
+In case MediaOps Live is not installed, a change has been implemented to the message shown when a job is confirmed that has its start time in the past. While previously this message mentioned that automated actions linked to the job start would be triggered immediately, now it will show `The start time of this job is in the past. Confirming it will cause it to start running.` If MediaOps Live is installed, the message will continue to mention that confirming the job will immediately trigger the automated actions linked to the job start.
 
 ### Fixes
 
