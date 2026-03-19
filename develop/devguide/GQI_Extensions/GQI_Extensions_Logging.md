@@ -110,42 +110,41 @@ The minimum log level determines which log entries are included in the log files
 
 ### [GQI DxM](#tab/gqi-dxm)
 
-In GQI DxM, the minimum log level for extensions is determined by the global minimum log level and, optionally, an instance-specific minimum log level.  
-If an instance-specific minimum log level is configured, it overwrites the global minimum log level for that extension instance.
+In GQI DxM, the minimum log level for extensions is determined by the global minimum log level and, optionally, an instance-specific minimum log level. If an instance-specific minimum log level is configured, it overwrites the global minimum log level for that extension instance.
 
 > [!NOTE]
-> Prior to DataMiner web 10.6.5, the effective minimum log level was the highest level of the global minimum log level and the instance-specific minimum log level. <!--RN 44983-->
+> Prior to DataMiner web 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5, the effective minimum log level was the highest level of the global minimum log level and the instance-specific minimum log level. <!--RN 44983-->
 
 #### The global minimum log level
 
 The global minimum log level is applied to all GQI extension instances by default. This can be configured in the [application settings](xref:GQI_DxM#configuration) using the `MinimumLogLevel` property. For example:
 
-  ```json
-  {
-    "GQIOptions": {
-      "Extensions": {
-        "Logging": {
-          "MinimumLogLevel": "Debug"
-        }
+```json
+{
+  "GQIOptions": {
+    "Extensions": {
+      "Logging": {
+        "MinimumLogLevel": "Debug"
       }
     }
   }
-  ```
+}
+```
 
-  The default level is `Information`.
+The default level is `Information`.
 
-#### The instance-specific minimum log level 
+#### The instance-specific minimum log level
 
 The instance-specific minimum log level can be configured at runtime in the extension implementation using the [MinimumLogLevel](xref:GQI_IGQILogger#properties) property of the logger. For example:
 
-  ```csharp
-  public OnInitOutputArgs OnInit(OnInitInputArgs args)
-  {
-    _logger = args.Logger;
-    _logger.MinimumLogLevel = GQILogLevel.Debug;
-    ...
-  }
-  ```
+```csharp
+public OnInitOutputArgs OnInit(OnInitInputArgs args)
+{
+  _logger = args.Logger;
+  _logger.MinimumLogLevel = GQILogLevel.Debug;
+  ...
+}
+```
 
 ### [GQI in SLHelper](#tab/gqi-slhelper)
 
