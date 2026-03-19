@@ -198,7 +198,7 @@ items:
         items:
           - name: Function resource settings
             topicUid: Function_resource_settings
-          - name: Resource manager settings
+          - name: Resource Manager settings
             topicUid: Resource_manager_config
           - name: Resource availability
             topicUid: Resource_availability
