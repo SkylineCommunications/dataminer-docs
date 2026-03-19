@@ -131,6 +131,8 @@ The QAOps package identifier is used when [triggering a test run with an unrelea
 
 #### Editing test suites
 
+##### Edit mode
+
 For security reasons, you will only be able to access editing functionality after you go to *Edit Mode* by clicking the button in the lower-right corner. This will open a table view of all test suites with editable columns.
 
 When you finish making changes, select *Update* in the *Actions* column. This pushes your changes through the QAOps system.
@@ -139,7 +141,9 @@ For more information about available settings, see [QAOps test suites](xref:QAOp
 
 Note that you can go to different pages without losing your changes. This can for example be convenient when you need to find global category instances and then return to test suites edit mode to continue your setup.
 
-You can also add new test packages to a test suite here:
+##### Adding test packages
+
+In edit mode, you can add new test packages to a test suite:
 
 1. Select the test suite in the table at the top.
 
@@ -148,6 +152,32 @@ You can also add new test packages to a test suite here:
 1. Specify the Catalog ID of the test package in the *Add Catalog ID to selected test suite* box.
 
 1. Click the ![erlenmeyer button](~/develop/images/QAOps_Erlenmeyer.png) button to add the package.
+
+##### Notable columns in the test packages table
+
+In edit mode, the *Version* column of the table listing the test packages uses the same sorting rules as the [package versioning for NuGet packages](https://learn.microsoft.com/en-us/nuget/concepts/package-versioning). However, QAOps does not use version ranges and instead accepts an `*` wildcard to filter on Catalog versions.
+
+| Version | Result |
+|--------|--------|
+| `*` | Latest stable version |
+| `1.2.*` | Latest `1.2.x` version |
+| `1.*` | Latest version starting with `1.` |
+| `*.1` | Latest version ending in `.1` |
+| `1.0.0-*` | Latest prerelease of `1.0.0` |
+| `*-rc1` | Latest version with `rc1` suffix |
+| `1.1.1*` | Latest version starting with `1.1.1` |
+
+The *Allow Prerelease* column can be used to include prerelease versions without specifying them in the *Version* column.
+
+> [!NOTE]
+>
+> - The `*` wildcard can appear in any position and spans across version segments.
+> - Matching is performed using NuGet version precedence rules, not string comparison.
+> - The highest matching version is always selected.
+> - Prerelease versions are:
+>   - Excluded by default.
+>   - Included when `Allow Prerelease` is enabled.
+>   - Always considered when explicitly matched (e.g. `*-rc1`, `1.0.0-*`).
 
 ### QAOps Operator - Running Tests
 
