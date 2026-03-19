@@ -164,6 +164,8 @@ First determine whether the thread is truly stuck or just taking longer than ant
 
 Depending on the situation, it may also be useful to look at `C:/Skyline Dataminer/System Cache/DELT`, either on the source or destination Agent. This location holds the data used to export or import the package.
 
+If the thread is indeed stuck, and you are unable to resolve the issue, [contact support](xref:Contacting_tech_support).
+
 > [!NOTE]
 > Export and import speed depends on several factors such as hardware performance, system load, load on elements and services, network throughput, database performance, and the overall package content. In some cases, the process can take several hours to complete.
 
