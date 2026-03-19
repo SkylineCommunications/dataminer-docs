@@ -67,5 +67,5 @@ The overview below indicates the support levels for all operators.
 
 Row metadata is supported for real-time events, but only when adding new rows. Row metadata for existing rows cannot be modified via real-time events.
 
-> [!WARNING]
-> Prior to DataMiner web apps version 10.6.5, real-time events passing through a `select` operator that altered the column order did not retain row metadata. <!-- RN 44974 -->
+> [!NOTE]
+> Prior to DataMiner web 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5, real-time events passing through a `select` operator that alters the column order do not retain row metadata. <!-- RN 44974 -->
