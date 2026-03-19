@@ -257,11 +257,11 @@ public override void Disconnect(IEngine engine, IConnectionHandlerEngine connect
 
 1. If the build is successful, publish the script to the DMA using DIS.
 
-1. In DataMiner Cube, go to the *Connection Handler Scripts* page of the mediation element.
+1. In DataMiner Cube, go to the *Connection Handler Scripts* page of the *MediaOps Mediation* element.
 
    On this page, you should see that the connection handler script is listed as an available script.
 
-   The decoder elements should be linked automatically to this script. You can also link them manually if needed.
+   The decoder elements should automatically be linked to this script. If needed, you can link them manually by selecting the script in the *Mediated Elements Table* on the *General* page of the *MediaOps Mediation* element.
 
 1. Test your connection handler script by making some connections in the Control Surface app.
 

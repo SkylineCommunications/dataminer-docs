@@ -251,11 +251,11 @@ public override void Disconnect(IEngine engine, IConnectionHandlerEngine connect
 
 1. If the build is successful, publish the script to the DMA using DIS.
 
-1. In DataMiner Cube, go to the *Connection Handler Scripts* page of the mediation element.
+1. In DataMiner Cube, go to the *Connection Handler Scripts* page of the *MediaOps Mediation* element.
 
    On this page, you should see that the connection handler script is listed as an available script.
 
-   If there is a Generic Matrix element on the same DMA, it should automatically be linked to this script. If needed, you can link it manually.
+   If there is a Generic Matrix element on the same DMA, it should automatically be linked to this script. If needed, you can link it manually by selecting it in the *Mediated Elements Table* on the *General* page of the *MediaOps Mediation* element.
 
 1. Test your script by creating a connection:
 
