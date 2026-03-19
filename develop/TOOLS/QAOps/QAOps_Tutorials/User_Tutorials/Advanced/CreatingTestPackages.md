@@ -141,12 +141,6 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
 
    ![Playwright test code in a QAOps test package project](~/develop/images/QAOps_CreatePackage_PlaywrightTest.png)
 
-1. Right-click the file you have just added under the `\TestPackageContent\Tests` folder and select *Exclude From Project*.
-
-   This is necessary because Visual Studio currently lacks support for Intellisense on file-based app content.
-
-1. At the top of the Solution Explorer, make sure that *Show All Files* is enabled.
-
 1. Replace the file content with the following code:
 
    ```csharp
@@ -269,6 +263,8 @@ Using a different DataMiner System than QAOps Sandbox where you have the necessa
        await page.Locator("dwa-cta-button").GetByText("Sign in").ClickAsync();
    }
    ```
+
+1. If Visual Studio has added spaces around the colons in the first three lines, make sure to remove those spaces.
 
 1. Look up the following line:
 
