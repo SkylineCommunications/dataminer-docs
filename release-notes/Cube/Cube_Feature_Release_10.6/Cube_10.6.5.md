@@ -40,6 +40,12 @@ Because of a number of enhancements, overall performance has increased when retr
 
 Also, an SPI log entry has been added that will record how long Cube had to wait for a server response after sending a query to retrieve trend group data.
 
+#### Spectrum analysis: Trace thumbnails will now be updated more frequently [ID 44996]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In spectrum cards, up to now, a spectrum trace thumbnail that appeared after selecting a measurement point would be updated in real time up to 5 times per seconds. From now on, trace thumbnails will be updated up to 40 times per seconds (i.e., once every 25 milliseconds), depending on overall parameter update frequency.
+
 ### Fixes
 
 #### Visual Overview: Child shapes of a Children shape would not be initialized correctly [ID 44816]
