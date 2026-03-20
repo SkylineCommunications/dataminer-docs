@@ -296,7 +296,7 @@ You have now finished configuring an Elasticsearch backup. If you do not want to
 
 1. In the target Elasticsearch cluster, execute the following POST request:
 
-   `[IP adress]:9200/_snapshot/repositoryname/snapshotname/_restore?pretty`
+   `[IP address]:9200/_snapshot/repositoryname/snapshotname/_restore?pretty`
 
    - "[IP address]": Your IP address.
 

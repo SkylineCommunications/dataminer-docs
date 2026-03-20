@@ -40,7 +40,7 @@ Applies to:
 - `Equals`/`DoesNotEqual`
 - `Contains`/`DoesNotContain`
 
-All string comparisons are **case-insensitive** and **culture-insensitive** by default. This is equivalent to the [.NET StringComparision.OrdinalIgnoreCase](https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparison).
+All string comparisons are **case-insensitive** and **culture-insensitive** by default. This is equivalent to the [.NET StringComparison.OrdinalIgnoreCase](https://learn.microsoft.com/en-us/dotnet/api/system.stringcomparison).
 
 ### Ordinal comparisons
 

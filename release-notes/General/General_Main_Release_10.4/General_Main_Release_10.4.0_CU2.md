@@ -34,7 +34,7 @@ Up to now, DOM string fields were filtered case-sensitively. From now on, these 
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.4 -->
 
-Migrating data from from Elasticsearch 6.8.22 to OpenSearch 2.11.1 involves the following steps:
+Migrating data from Elasticsearch 6.8.22 to OpenSearch 2.11.1 involves the following steps:
 
 1. Taking a snapshot of the Elasticsearch 6.8.22 cluster.
 1. Copying the snapshot to an Elasticsearch 7.10.0 cluster, and restoring it.

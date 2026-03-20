@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.6.4
 ---
 
-# DataMiner web apps Feature Release 10.6.4 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.4
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU1].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,7 +16,20 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been selected yet.*
+#### Dashboards/Low-Code Apps - Node edge graph component: Customizing nodes using templates [ID 44809]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+The *Node edge graph* component now supports node templates. This allows you to customize the appearance of nodes using the Template Editor or by applying preset templates as a starting point.
+
+![Node edge graph template example showing a network diagram with multiple nodes displaying status indicators, roles, and labels organized in a hierarchical structure](~/dataminer/images/NodeEdgeGraphTemplate.gif)
+
+In the *Settings* pane, navigate to *Identifiers* > *Nodes* > *Base node* > *Visual*. In this section, you can now select *Template*. From there, you can either click the *Edit* icon to open the Template Editor or the *Browse templates* icon to select a preset or custom template.
+
+> [!NOTE]
+> When *Visual* is set to *Template*, nodes no longer support showing a tooltip or metric, as this information can be defined in the template itself.
+>
+> In addition, actions can no longer be configured via the *Actions* section in the *Settings* pane, as actions can instead be defined on shapes in the template itself.
 
 ## New features
 
@@ -61,21 +74,6 @@ The `ClientTimeZone` (`DMAAutomationScriptOptionClientTimeZone`) data type has t
 
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.4 or newer. See [Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]](xref:General_Feature_Release_10.6.4#automation-time-zone-of-the-client-can-now-be-passed-to-the-automation-script-that-is-executed-id-44742).
-
-#### Dashboards/Low-Code Apps - Node edge graph component: Customizing nodes using templates [ID 44809]
-
-<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
-
-The *Node edge graph* component now supports node templates. This allows you to customize the appearance of nodes using the Template Editor or by applying preset templates as a starting point.
-
-![Node edge graph template example showing a network diagram with multiple nodes displaying status indicators, roles, and labels organized in a hierarchical structure](~/dataminer/images/NodeEdgeGraphTemplate.gif)
-
-In the *Settings* pane, navigate to *Identifiers* > *Nodes* > *Base node* > *Visual*. In this section, you can now select *Template*. From there, you can either click the *Edit* icon to open the Template Editor or the *Browse templates* icon to select a preset or custom template.
-
-> [!NOTE]
-> When *Visual* is set to *Template*, nodes no longer support showing a tooltip or metric, as this information can be defined in the template itself.
->
-> In addition, actions can no longer be configured via the *Actions* section in the *Settings* pane, as actions can instead be defined on shapes in the template itself.
 
 ## Changes
 
@@ -154,7 +152,7 @@ From now on, GQI will accept any type of number (int, double, and long) as filte
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-From now on, when dashboards or low-code app use the GQI DxM to process GQI queries, queries with regex filters that are linked to data will no longer combine multiple values inside a single regular expression to simulate OR filtering. Instead, whatever the filter method (contains, equals, regex, greater than, etc.), they will create a real OR filter with all the raw data values.
+From now on, when dashboards or low-code apps use the GQI DxM to process GQI queries, queries with regex filters that are linked to data will no longer combine multiple values inside a single regular expression to simulate OR filtering. Instead, whatever the filter method (contains, equals, regex, greater than, etc.), they will create a real OR filter with all the raw data values.
 
 As a result, when linking data to filter nodes, dashboards and low-code apps using the GQI DxM to process GQI queries will now behave differently to dashboards and low-code apps using SLHelper to process GQI queries.
 
@@ -192,13 +190,12 @@ Benefits:
 
 A number of enhancements have been made with regard to user authentication when accessing, for example, video thumbnails.
 
-#### Web apps: Going to the root page of the app by clicking the app name in the header [ID 44753]
+#### Web apps: Open Comparison and DOM Security apps in a new tab or window via the header bar [ID 44753]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-In a web app, from now on, you can go to the root page of the app by clicking the name of the app in the header.
+You can now open the root page of the Comparison app and DOM Security app in a new tab or window by clicking the app name in the header bar:
 
-- If you click the left mouse button, the root page will open in the same browser tab.
 - If you click the left mouse button while holding the CTRL key pressed, or if you click the middle mouse button, the root page will open in a new browser tab.
 - If you click the left mouse button while holding the SHIFT key pressed, the root page will open in a new browser window.
 
@@ -382,3 +379,29 @@ Since Chrome version 142, issues could occur when playing HLS video thumbnails.
 In order to prevent any playback issues in Chrome 142 and above, from now on, when using `type=HTML5-HLS`, the MSE javascript implementation will take priority over the native HLS playback of the browser.
 
 If you prefer to use the native HLS playback of the browser rather than the MSE javascript implementation, you can use `type=HTML5` instead.
+
+#### Low-Code Apps: 'On open' event would incorrectly not be able to consume data provided by the URL [ID 44923]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+In some cases, an *On open* event configured in a low-code app would incorrectly not be able to consume data provided by the URL.
+
+#### Dashboards/Low-Code Apps: Themes.json file was no longer present in the C:\\Skyline DataMiner\\dashboards folder [ID 44930]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+Since DataMiner version 10.5.0 CU12/10.6.3, the *themes.json* file was incorrectly no longer present in the `C:\Skyline DataMiner\dashboards` folder.
+
+This file has now been added again.
+
+#### Dashboards app: Problem with GQI components when generating a PDF report in stacked mode [ID 44945]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+Up to now, when you generated a PDF report in stacked mode of a dashboard containing *Line & area chart*, *Column & bar chart*, *Maps*, *Node edge graph* or *Timeline* components, some of those components would incorrectly have their height set to 0 in the PDF file.
+
+#### Low-Code Apps - Timeline component: Problem when migrating timeline events [ID 44966]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+When a low-code app was migrated to a newer version, in some cases, timeline events would incorrectly not get fully migrated.

@@ -4,7 +4,7 @@ uid: Protocol-EnumActionOn
 
 # EnumActionOn simple type
 
-Specifies on what type of item the exection is executed.
+Specifies on what type of item the execution is executed.
 
 ## Content Type
 

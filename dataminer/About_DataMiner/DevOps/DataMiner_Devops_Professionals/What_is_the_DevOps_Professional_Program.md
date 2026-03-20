@@ -36,7 +36,7 @@ As a co-branding partner you are leveraging the powerful DataMiner platform to o
 
 Signing up is **free** and [can be done online](https://community.dataminer.services/dataminer-devops-professional-program-signup/) at any time. Once you have signed up, you will be a member of the DataMiner DevOps Professional Program, starting at the "member" level.
 
-Once you are member, you will be able to **grow your status** in the program and attain higher membership levels to become eligible for the [benefits offered by the program](xref:Benefits_DevOps_Professionals_Program). You do so by by [**accumulating DevOps Points**](xref:DevOps_Points), which you can do continuously and almost effortlessly **by working and learning as a DataMiner DevOps Professional** on a day-to-day basis.
+Once you are member, you will be able to **grow your status** in the program and attain higher membership levels to become eligible for the [benefits offered by the program](xref:Benefits_DevOps_Professionals_Program). You do so by [**accumulating DevOps Points**](xref:DevOps_Points), which you can do continuously and almost effortlessly **by working and learning as a DataMiner DevOps Professional** on a day-to-day basis.
 
 This means that growing your status in the program really does not require any great program-specific efforts or time investment, and you will be able to do so by following **your own individual path**. Your DevOps Points tally will prove how much you align with the key values of the program and with the DataMiner culture, and will reflect the skills you have mastered related both to DataMiner and to affiliated key technologies and topics.
 

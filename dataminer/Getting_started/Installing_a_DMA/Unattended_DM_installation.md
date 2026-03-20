@@ -548,7 +548,7 @@ The example below is used to create a cluster of three DMAs, all using the same 
     </SearchDataBase>
     <!-- Settings used to install and configure Cassandra with -->
     <CassandraClusterSettings>
-      <!-- cassandra.yaml setting 'listen_adress' -->
+      <!-- cassandra.yaml setting 'listen_address' -->
       <ListenAddress>10.11.1.70</ListenAddress>
       <!-- cassandra.yaml setting 'seed_provider': The seeds which will be used to connect to Cassandra with. -->
       <Seeds>10.11.1.70,10.11.2.70,10.11.3.70</Seeds>
@@ -636,7 +636,7 @@ The example below is used to create a cluster of three DMAs, all using the same 
     </SearchDataBase>
     <!-- Settings used to install and configure Cassandra with -->
     <CassandraClusterSettings>
-      <!-- cassandra.yaml setting 'listen_adress' -->
+      <!-- cassandra.yaml setting 'listen_address' -->
       <ListenAddress>10.11.2.70</ListenAddress>
       <!-- cassandra.yaml setting 'seed_provider': The seeds which will be used to connect to Cassandra with. -->
       <Seeds>10.11.1.70,10.11.2.70,10.11.3.70</Seeds>
@@ -724,7 +724,7 @@ The example below is used to create a cluster of three DMAs, all using the same 
     </SearchDataBase>
     <!-- Settings used to install and configure Cassandra with -->
     <CassandraClusterSettings>
-      <!-- cassandra.yaml setting 'listen_adress' -->
+      <!-- cassandra.yaml setting 'listen_address' -->
       <ListenAddress>10.11.3.70</ListenAddress>
       <!-- cassandra.yaml setting 'seed_provider': The seeds which will be used to connect to Cassandra with. -->
       <Seeds>10.11.1.70,10.11.2.70,10.11.3.70</Seeds>

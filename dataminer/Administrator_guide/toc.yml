@@ -188,18 +188,12 @@ items:
             topicUid: BPA_Password_Strength
           - name: Security Advisory
             topicUid: BPA_Security_Advisory
-          - name: Service Automatic Properties
-            topicUid: BPA_Service_Automatic_Properties
           - name: SLNet connections between the DataMiner Agents
             topicUid: BPA_Check_Cluster_SLNet_Connections
           - name: SRM Framework Configuration
             topicUid: BPA_SRM_Framework_Configuration
           - name: SRM Function Resources Consistency
             topicUid: BPA_SRM_Function_Resources_Consistency
-          - name: Validate connectors
-            topicUid: BPA_Validate_Connectors
-          - name: Verify Cloud DxM Version
-            topicUid: BPA_Verify_Cloud_DxM_Version
           - name: View Recursive Loops
             topicUid: BPA_View_Recursion
           - name: Verify NATS Migration Prerequisites
@@ -252,6 +246,25 @@ items:
             topicUid: Failover_FAQ_connection_issues
           - name: What if one of the Agents cannot be started or restarted?
             topicUid: Failover_FAQ_cannot_start
+  - name: Node Recovery
+    topicUid: NodeRecovery_About
+    items:
+      - name: Installing Node Recovery
+        topicUid: NodeRecovery_Installing
+      - name: Outage detection
+        topicUid: NodeRecovery_Detection
+      - name: Node states
+        topicUid: NodeRecovery_States
+      - name: Triggering a script
+        topicUid: NodeRecovery_Triggers
+      - name: Node Recovery settings
+        topicUid: NodeRecovery_Settings
+      - name: Node Recovery API
+        topicUid: NodeRecovery_API
+      - name: Troubleshooting
+        topicUid: NodeRecovery_Troubleshooting
+      - name: Frequently asked questions
+        topicUid: NodeRecovery_FAQ
   - name: Storage
     items:
       - name: About storage
@@ -430,6 +443,8 @@ items:
             topicUid: Configuring_data_offloads
           - name: How DataMiner offloads data
             topicUid: How_DataMiner_offloads_data
+          - name: Offload database configuration with Swarming enabled
+            topicUid: Offload_Database_With_Swarming
   - name: Security
     items:
       - name: About security

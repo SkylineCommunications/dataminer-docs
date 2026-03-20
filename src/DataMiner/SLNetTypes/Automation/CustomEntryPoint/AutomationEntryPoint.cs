@@ -102,6 +102,19 @@ namespace Skyline.DataMiner.Net.Automation
 			/// Detailed information about implementing this entry point type is available in <see href="xref:Implementing_OnRequestScriptInfo_Entry_Point">Implementing the OnRequestScriptInfo entry point</see>.
 			/// </summary>
 			OnRequestScriptInfo = 13,
+			
+            /// <summary>
+            /// An OnNodeRecoveryLocalStateChange entry point is defined with:
+            /// [AutomationEntryPoint(AutomationEntryPointType.Types.OnNodeRecoveryLocalStateChange)]
+            /// </summary>
+            OnNodeRecoveryLocalStateChange = 14,
+            
+            /// <summary>
+            /// An OnNodeRecoveryGlobalStateChange entry point is defined with:
+            /// [AutomationEntryPoint(AutomationEntryPointType.Types.OnNodeRecoveryGlobalStateChange)]
+            /// </summary>
+            OnNodeRecoveryGlobalStateChange = 15,
+           
 
 			/// <summary>
 			/// Automation entry point for testing purposes.

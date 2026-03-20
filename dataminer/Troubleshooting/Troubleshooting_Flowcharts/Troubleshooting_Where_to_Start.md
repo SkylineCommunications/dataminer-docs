@@ -24,9 +24,7 @@ Open Windows Task Manager, go to the ***Performance tab***, and check if ***CPU*
 
    - *SL\*.exe*: The processes starting with SL (e.g., SLProtocol, SLElement) are the core DataMiner services.
 
-   - *DataMinerCube.exe*: The DataMiner Cube desktop application.
-
-   - *PresentationHost.exe*: The DataMiner Cube browser application.
+   - *DataMinerCube.exe*: DataMiner Cube.
 
    - *mysqld.exe*: The MySQL database, if applicable.
 
@@ -122,7 +120,7 @@ If it is unclear which DataMiner Agent is having a problem, these checks may hel
 
   ![RTE](~/dataminer/images/System_Center_Agents_RTE.png)
 
-  ![Disconnected](~/dataminer/images/System_Center_Agents_Disconnected.png)
+  ![Disconnected](~/dataminer/images/System_Center_Agents_Disconnected.png)<br>*System Center in DataMiner 10.6.4*
 
 - In the Alarm Console, add a filtered tab using the filter “Element type / Equal to / DataMiner Agent” to display DataMiner-related alarms.
 

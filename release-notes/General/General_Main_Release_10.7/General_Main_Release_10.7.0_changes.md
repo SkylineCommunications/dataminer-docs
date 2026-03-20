@@ -176,6 +176,12 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, the op
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.
 
+#### SLWatchdog will now report SLNet/SLDataGateway TPL ThreadPool and 'time dilation' issues as run-time errors [ID 44186]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+From now on, whenever the TPL ThreadPool of SLNet or SLDataGateway would get stuck or a "time dilation" would occur on your system (for example, when a freeze of a virtual machine would cause sleep actions to take longer than anticipated), SLWatchDog will report these issues as a run-time error.
+
 #### Scheduler will now be able to start more than 10 synchronously running automation scripts [ID 44200]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->

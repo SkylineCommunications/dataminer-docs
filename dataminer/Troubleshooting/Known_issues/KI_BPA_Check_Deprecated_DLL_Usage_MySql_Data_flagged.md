@@ -6,7 +6,9 @@ uid: KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged
 
 ## Affected versions
 
-From DataMiner 10.5.12/10.6.0 onwards<!--RN 43779-->.
+- DataMiner Main Release version 10.6.0.
+
+- DataMiner Feature Release version 10.5.12 up to 10.6.3<!--RN 43779-->.
 
 ## Cause
 
@@ -16,7 +18,7 @@ As a result, the BPA now also evaluates DLLs located in `C:\Skyline Dataminer\Pr
 
 ## Fix
 
-No fix is available yet. <!-- RN 44758 -->
+Install DataMiner 10.6.0 [CU1]/10.6.4<!-- RN 44758 -->.
 
 ## Workaround
 

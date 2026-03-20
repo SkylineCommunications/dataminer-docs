@@ -367,7 +367,7 @@ When the GetTableForParameterFiltered orGetTableForParameterSorted method was us
 
 #### DataMiner Cube: Problem when the version history of a protocol included a version that was incorrectly based on itself \[ID 31508\]
 
-In some cases, DataMiner Cube would become unresponsive when you changed the protocol of an element to a protocol of which the version history included a version that was incorrectly based on itself. From now on, a warning will appear when you try to change the protocol of a element to a protocol with an incorrect version history.
+In some cases, DataMiner Cube would become unresponsive when you changed the protocol of an element to a protocol of which the version history included a version that was incorrectly based on itself. From now on, a warning will appear when you try to change the protocol of an element to a protocol with an incorrect version history.
 
 #### Jobs app: User pictures incorrectly not displayed in job history \[ID 31510\]
 

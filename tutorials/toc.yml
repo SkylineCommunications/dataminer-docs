@@ -30,8 +30,10 @@ items:
         topicUid: DOM_tutorials
       - name: Protocols & Templates tutorials
         topicUid: Protocols_Templates_tutorials
+      - name: QAOps tutorials
+        topicUid: QAOps_Tutorials
       - name: Services tutorials
-        topicUid: Services_Tutorials 
+        topicUid: Services_Tutorials
       - name: Spectrum Analysis tutorials
         topicUid: Spectrum_Analysis_tutorials
       - name: User-defined APIs tutorials

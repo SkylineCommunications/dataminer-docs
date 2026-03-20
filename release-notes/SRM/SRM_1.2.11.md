@@ -74,7 +74,7 @@ When you change the timing of a booking, the displayed pop-up message will now a
 
 #### Applying custom service state now supported in case state is defined in service definition and Booking Manager \[ID 29002\]
 
-Applying a a custom service state is now also possible if the service state is defined in the service definition and the Booking Manager.
+Applying a custom service state is now also possible if the service state is defined in the service definition and the Booking Manager.
 
 #### Filter added to dropdown boxes in Service Profiles wizard \[ID 29013\]
 

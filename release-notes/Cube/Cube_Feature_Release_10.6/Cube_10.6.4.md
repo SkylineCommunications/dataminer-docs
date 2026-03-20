@@ -2,12 +2,12 @@
 uid: Cube_Feature_Release_10.6.4
 ---
 
-# DataMiner Cube Feature Release 10.6.4 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.4
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU1].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,7 +16,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## Highlights
 
-#### Cube UI and themes have been redesigned [ID 43843] [ID 43924] [ID 44618] [ID 44832] [ID 44881]
+#### Cube UI and themes have been redesigned [ID 43843] [ID 43924] [ID 44618] [ID 44832] [ID 44881] [ID 44960]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
@@ -110,7 +110,7 @@ If you view the Cube UI in one of the supported languages other than English, in
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-When, in the *Agents* section of *System Center*, you clicked *Migrate*, up to now, the *Element Migration* window would incorrectly not check whether an element was part of a redundancy group. From now on, all elements that are part of a redundancy group as either a primary element, backup element, or state element will automatically be filtered out.
+When, via *System Center* > *Agents* > *Status*, you click *Migrate*, the *Element Migration* window will now automatically filter out elements that are part of a redundancy group, whether they act as a primary element, backup element, or state element.
 
 ### Fixes
 

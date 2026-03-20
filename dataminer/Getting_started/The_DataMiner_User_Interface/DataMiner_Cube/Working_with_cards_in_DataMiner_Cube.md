@@ -61,7 +61,7 @@ The pane consists of a tree view with several fixed nodes:
 
 - **VISUAL**: Contains all available Visual Overview pages.
 
-  ![Visual page](~/dataminer/images/Visual_Page.png)<br>*VISUAL page in DataMiner 10.4.5*
+  ![Visual page](~/dataminer/images/Visual_Page.png)<br>*VISUAL page in DataMiner 10.6.4*
 
   > [!NOTE]
   >
@@ -174,11 +174,11 @@ However, you can also open items in a new card next to any cards that are alread
 
 To change the card layout on the fly, drag the edge of a card to adjust its size.
 
-![Drag card edge](~/dataminer/images/Drag_Edge_Card.png)<br>*Master bottom card layout option in DataMiner 10.4.5*
+![Drag card edge](~/dataminer/images/Drag_Edge_Card.png)<br>*Master bottom card layout option in DataMiner 10.6.4*
 
 To select a preconfigured Cube card layout, click the user icon in the top-right corner of the Cube UI (1) and select *Change layout* (2). This will open a side panel where you can select a card layout (3).
 
-![Card layout](~/dataminer/images/Card_Layout.png)<br>*Master bottom card layout option in DataMiner 10.4.5*
+![Card layout](~/dataminer/images/Card_Layout.png)<br>*Master bottom card layout option in DataMiner 10.6.4*
 
 The following layout options are available:
 
@@ -199,7 +199,7 @@ The following layout options are available:
 
 It is possible to drag a card, by left-clicking and dragging the top edge of the card to its destination.
 
-![Dragging a card](~/dataminer/images/Dragging_a_Card.png)<br>*DataMiner 10.4.5*
+![Dragging a card](~/dataminer/images/Dragging_a_Card.png)<br>*Card panes in DataMiner 10.6.4*
 
 You can drag a card:
 

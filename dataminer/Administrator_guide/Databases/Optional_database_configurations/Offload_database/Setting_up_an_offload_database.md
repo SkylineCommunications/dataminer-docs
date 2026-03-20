@@ -6,7 +6,7 @@ keywords: central database
 # Setting up an offload database
 
 > [!NOTE]
-> This feature is not available if [Swarming](xref:Swarming) is enabled.
+> When [Swarming](xref:Swarming) is enabled, some offload features are disabled. For more information, see [Offload database configuration with Swarming enabled](xref:Offload_Database_With_Swarming).
 
 ## Server configuration
 
@@ -153,6 +153,9 @@ Once the server has been configured, the next step in setting up the offload dat
 
       - For Oracle: 1521
 
+      > [!TIP]
+      > For increased security, you can limit the rule scope so that only the database server can reach this port. To do so, in the *Scope* tab, specify the database server's IP address under *Remote IP address*.
+
    1. Select *Allow the connection* and click *Next*.
 
    1. In response to *When does this rule apply*, select all the options and click *Next*.
@@ -209,10 +212,12 @@ In Cube, configure the offload or "central" database settings for each DMA in th
 
       This is necessary because the folder has to be freely accessible, as no user credentials are passed in the query that retrieves the data.
 
-   1. Click the *Share* button.
+      > [!NOTE]
+      >
+      > - In **domain environments**, instead of selecting *Everyone*, you can select the **computer account** of the DMA (e.g., `DMA-SERVER01$`).
+      > - Regardless of whether you use *Everyone* or a computer account, the selected identity must have read/write permissions on the share. Otherwise, the DMA will not be able to store data in the CSV files.
 
-   > [!NOTE]
-   > It is important that "Everyone" has read/write permissions. Otherwise, the DMA will not be able to store data in the CSV files.
+   1. Click the *Share* button.
 
 1. Activate TCP/IP:
 
@@ -290,6 +295,7 @@ In Cube, configure the offload or "central" database settings for each DMA in th
 > - If an offload to the offload database fails, an alarm will be generated in DataMiner. As soon as offloading works again, the alarm is cleared.
 > - If the offload fails for a specific offload file, this file is moved to a failure folder and an error is logged.
 > - The offload database settings can also be found in the file *DB.xml*. For more information, see [DB.xml](xref:DB_xml#dbxml).
+> - To troubleshoot offload issues, check the log file `C:\Skyline DataMiner\Logging\SLDBConnection.txt`.
 
 ## Automatic creation and verification of the offload database
 
@@ -298,4 +304,6 @@ When you install or upgrade a DataMiner Agent using an upgrade package, the offl
 Also, when you upgrade a DataMiner Agent using an upgrade package, the offload database is automatically verified (and altered if necessary).
 
 > [!NOTE]
-> This only applies to databases of type "MySQL" and "Microsoft SQL Server". Oracle databases have to be created manually.
+>
+> - This only applies to databases of type "MySQL" and "Microsoft SQL Server". Oracle databases have to be created manually.
+> - If an offload database is initially set up using a DataMiner version prior to 10.6.4/10.7.0, the updates required to support the [offload database with Swarming enabled](xref:Offload_Database_With_Swarming) are not automatically applied. In this scenario, you may need to execute manual queries before enabling Swarming. The [Swarming prerequisites check](xref:EnableSwarming#running-a-prerequisites-check) will indicate if this is necessary.

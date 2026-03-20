@@ -104,7 +104,7 @@ Up to now, this `SkipStartedInfoEvent` option would by default be set to false. 
 
 In order to enhance secure connector communication, SSL/TLS certificates will now be validated by default for all newly created HTTP elements.
 
-If you want to disable certificate validation for an element created after a 10.5.0/10.4.12 upgrade or enable certificate validation for a element created before a 10.5.0/10.4.12 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip SSL/TLS certificate verification (insecure)* option.
+If you want to disable certificate validation for an element created after a 10.5.0/10.4.12 upgrade or enable certificate validation for an element created before a 10.5.0/10.4.12 upgrade, in DataMiner Cube, right-click the element in the Surveyor, select *Edit*, and either disable or enable the *Skip SSL/TLS certificate verification (insecure)* option.
 
 When certificate validation is skipped, in case an HTTP connector polls an HTTPS endpoint:
 

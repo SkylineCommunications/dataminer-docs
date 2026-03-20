@@ -7,11 +7,11 @@ description: On a machine without internet connectivity, Cube can freeze for 20 
 
 ## Affected versions
 
-All versions of the DataMiner Cube desktop application (DataMinerCube.exe).
+All versions of DataMiner Cube (DataMinerCube.exe).
 
 ## Issue description
 
-- On a machine without internet connectivity, the DataMiner Cube desktop application will freeze for 20 seconds on startup. Once you have logged in, Cube works fine.
+- On a machine without internet connectivity, DataMiner Cube will freeze for 20 seconds on startup. Once you have logged in, Cube works fine.
 - When you go to the file properties of *DataMinerCube.exe > Digital Signatures > Details*, the same freeze occurs. After 20 seconds, the *Digital Signature Details* window is displayed.
 
     ![Digital Signature Details](~/dataminer/images/CRL-Freeze-Signature-Details.png)

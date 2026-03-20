@@ -152,7 +152,7 @@ This new BPA test checks if the minimum required version is installed for all Dx
 
 It is available from DataMiner 10.2.8 and 10.2.0 [CU6] onwards. You can run it in System Center (on the *Agents > BPA* tab), and it also runs automatically when you upgrade to 10.2.0 [CU6]/10.2.8 or higher.
 
-For more information, see [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version).
+For more information, see [Verify Cloud DxM Version](xref:Verify_Cloud_DxM_Version).
 
 #### Enhanced error handling in case QActions fail due to a problem with SLScripting [ID 34010]
 
@@ -286,7 +286,7 @@ In some rare cases, Visio files would not get rendered correctly in web apps (e.
 
 When the Cassandra Cluster Migrator tool was migrating a large amount of data, in some cases, an out of memory exception could be thrown.
 
-#### Problem with SLElement when resolving foreign keys took a long time and the the element debug log level was equal to or higher than 1 [ID 33826]
+#### Problem with SLElement when resolving foreign keys took a long time and the element debug log level was equal to or higher than 1 [ID 33826]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
