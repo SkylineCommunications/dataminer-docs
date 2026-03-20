@@ -8,33 +8,28 @@ The example below shows how a booking and the associated DataMiner service can b
 
 ```csharp
 using System;
-using Skyline.DataMiner.Library.Solutions.SRM;
-using Skyline.DataMiner.Library.Solutions.SRM.Model.ReservationAction;
 using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Core.SRM;
+using Skyline.DataMiner.Core.SRM.Extensions.Reservations;
+using Skyline.DataMiner.Core.SRM.Model.ReservationAction;
 
-    public class Script
-    {
-        public static void Run(Engine engine)
-        {
-            // Replace with reservation guid
-            var ReservationGuid = Guid.NewGuid();
+public class Script
+{
+   public static void Run(Engine engine)
+   {
+      // Replace with reservation guid
+      var reservationGuid = Guid.NewGuid();
 
-            // Replace with Element Name of the Booking Manager 
-            string BookingManagerElementName = "Booking Manager";
+      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid);
+      var bookingManager = reservation.FindBookingManager();
 
-            var bookingManager = new BookingManager(engine,
-                                   engine.FindElement(BookingManagerElementName));
+      var changeNameInputData = new ChangeNameInputData
+      {
+         IsSilent = true,
+         Name = "New Booking Name",
+      };
 
-            var sri = SrmManagers.ResourceManager.GetReservationInstance(ReservationGuid);
-
-            var changeNameInputData = new Skyline.DataMiner.Library.Solutions.SRM.Model.ReservationAction.ChangeNameInputData();
-            changeNameInputData.Name = "my new booking name";
-        
-        // to make it silent
-        changeNameInputData.IsSilent = true;
-        
-            var result = bookingManager.TryChangeName(engine, ref sri, changeNameInputData);
-            
-        }
-    }
+      var result = bookingManager.TryChangeName(engine, ref reservation, changeNameInputData);
+   }
+}
 ```
