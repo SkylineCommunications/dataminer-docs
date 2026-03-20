@@ -405,3 +405,11 @@ Up to now, when you generated a PDF report in stacked mode of a dashboard contai
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
 
 When a low-code app was migrated to a newer version, in some cases, timeline events would incorrectly not get fully migrated.
+
+#### GQI DxM: Ad hoc data source instances and custom operator instances used on the right side of a join operator would not be cleaned up correctly [ID 45064]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+Since DataMiner version 10.5.0 CU11/10.6.2, ad hoc data source instances and custom operator instances that were used on the right side of a join operator would no longer be cleaned up correctly after a query had been executed. This would lead to the extension workers leaking memory as those instances would remain in memory indefinitely.
+
+From now on, all GQI extension instances will be able to properly release their resources when used on either side of a join operator.

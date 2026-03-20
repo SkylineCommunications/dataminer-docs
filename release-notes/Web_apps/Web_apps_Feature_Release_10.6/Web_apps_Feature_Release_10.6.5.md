@@ -168,6 +168,12 @@ From now on, when using the *Get parameters for elements where* data source, the
 
 In all DataMiner web apps, the splash screen has been redesigned in order to match the UI of the app.
 
+#### Interactive Automation scripts in web apps: Checkbox of redesigned Treeview component has been aligned with that of other components [ID 45025]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, the checkbox of the redesigned *Treeview* component did not fully aligned with that of other components like *CheckBox* and *CheckBoxList*. It has now been fully aligned.
+
 ### Fixes
 
 #### Low-Code Apps - Form component: Required lazy-loaded dropdown boxes would incorrectly be marked as invalid [ID 44815]
