@@ -310,3 +310,9 @@ From now on, similar to the way in which log levels can be either lowered or inc
 Up to now, the *Allow components to shift* setting would only be taken into account when you moved a component. It would incorrectly not be taken into account when you resized a component.
 
 From now on, the *Allow components to shift* setting will be taken into account when you move a component as well as when you resize a component.
+
+#### Dashboards app: 'Loading' banner would incorrectly stay visible when navigating from a loading dashboard to an empty dashboard [ID 45055]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When you opened a dashboard and, while it was still loading, you navigated to another dashboard that did not contain any components, up to now, the "loading" banner of the first dashboard would incorrectly stay visible until you added a component to the second dashboard.
