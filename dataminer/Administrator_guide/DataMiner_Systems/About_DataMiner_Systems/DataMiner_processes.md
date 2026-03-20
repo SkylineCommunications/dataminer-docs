@@ -130,7 +130,7 @@ This process only starts on a DMA that uses [Storage as a Service](xref:STaaS) o
 
 ### SLASPConnection
 
-The DMS Reporter process.
+This is the process responsible for the legacy Reporter, sending of mails, but also alarm distributions and alarm timelines within Cube and the new Dashboards app.
 
 > [!TIP]
 > See also: [DMS Reporter](xref:reporter)
