@@ -4,7 +4,7 @@ uid: Resource_manager_config
 
 # Resource Manager configuration
 
-The Resource Manager configuration allows the configuration of caching and other runtime settings.
+The Resource Manager configuration allows the configuration of caching and other runtime settings that affect SRM bookings.
 
 This configuration is stored in `C:\Skyline DataMiner\ResourceManager\Config.xml`.
 
@@ -45,7 +45,7 @@ System administrators can modify this file to fine-tune performance or adapt Res
 
 ## Retrieving or updating the configuration via API
 
-The Resource Manager configuration can be retrieved and updated via API using message `ResourceManagerConfigInfoMessage`.
+The Resource Manager configuration can be retrieved and updated via API using the message `ResourceManagerConfigInfoMessage`.
 
 To retrieve the current configuration, send a `ResourceManagerConfigInfoMessage` of type `Get`:
 
@@ -113,7 +113,7 @@ When bookings within a specific time range are requested, all instances in that 
 
 #### HostedReservationInstanceCacheConfiguration
 
-When Resource Manager starts, this cache loads the bookings that are hosted on the Agent and schedules the start/stop actions and booking events. Any new instances hosted on the Agent that are added or updated while Resource Manager is running will also be added to this cache.
+When Resource Manager starts, the hosted reservation instance cache loads the bookings that are hosted on the Agent and schedules the start/stop actions and booking events. Any new instances hosted on the Agent that are added or updated while Resource Manager is running will also be added to this cache.
 
 | Setting | Description | Default value |
 |--|--|--|
@@ -125,7 +125,7 @@ When Resource Manager starts, this cache loads the bookings that are hosted on t
 
 ### SkipServiceHandling
 
-When this is set to `true`, service handling for SRM bookings is skipped, so **SRMServiceInfo** objects will not be checked. This improves performance and prevents the creation of unnecessary services.
+When `SkipServiceHandling` is set to `true`, service handling for SRM bookings is skipped, so **SRMServiceInfo** objects will not be checked. This improves performance and prevents the creation of unnecessary services.
 
 Default value: `false`.
 
@@ -136,7 +136,7 @@ Default value: `false`.
 
 ### IsMasterEligible
 
-When this is set to `false`, the DataMiner Agent will not be eligible to be promoted to Resource Manager master. If the current master Agent is marked as not eligible, the other Agents in the DMS will elect a new master from the pool of eligible Agents.
+When `IsMasterEligible` is set to `false`, the DataMiner Agent will not be eligible to be promoted to Resource Manager master. If the current master Agent is marked as not eligible, the other Agents in the DMS will elect a new master from the pool of eligible Agents.
 
 Default value: `true`.
 
@@ -147,28 +147,30 @@ Default value: `true`.
 
 ### ShowScriptStartEventInfo
 
-When this is set to `true`, information events will be generated when booking event scripts are executed (OnStartingEvent, OnStartedEvent, OnStoppingEvent, OnStoppedEvent, TimeoutScript, OnStartActionsFailureEvent, Events (custom script)). These information events have the description "Script started" and their value contains the name of the script.
+When `ShowScriptStartEventInfo` is set to `true`, information events will be generated when booking event scripts are executed (OnStartingEvent, OnStartedEvent, OnStoppingEvent, OnStoppedEvent, TimeoutScript, OnStartActionsFailureEvent, Events (custom script)). These information events have the description "Script started" and their value contains the name of the script.
 
 Default value: `false`.
 
 > [!NOTE]
-> Available from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40972 -->. Before this version, these information events were always generated.
+> Available from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40972 -->. In earlier versions, these information events are always generated.
 
 ### AllowNotActiveElements
 
-When this is set to `true`, it is possible to start bookings with elements that are not active.
+When `AllowNotActiveElements` is set to `true`, it is possible to start bookings with elements that are not active.
 
 Default value: `false`.
 
 > [!NOTE]
 >
 > - Available from DataMiner 10.5.0/10.5.1 onwards<!-- RN 41129 -->.
-> - This setting is synced across the cluster, so all Agents will have the same value for this setting, as bookings should behave in the same way regardless of which Agent processes the start request.
-> - Use this option with caution, as it can cause elements used in a booking to be configured incorrectly.
+> - This setting is **synced** across the cluster, so all Agents will have the same value for this setting, as bookings should behave in the same way regardless of which Agent processes the start request.
+
+> [!IMPORTANT]
+> Use this option with caution, as it can cause elements used in a booking to be configured incorrectly.
 
 ### ResourceManagerAutomationSettings
 
-Configures the threading behavior used when multiple bookings are started in parallel.
+These settings configure the threading behavior used when multiple bookings are started in parallel.
 
 | Setting | Description | Default value |
 |--|--|--|
