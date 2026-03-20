@@ -17,20 +17,20 @@ using Skyline.DataMiner.Core.SRM.Extensions.Reservations;
 
 public class Script
 {
-	public static void Run(Engine engine)
-	{
-		// Replace with reservation guid
-		var reservationId = Guid.NewGuid();
+   public static void Run(Engine engine)
+   {
+      // Replace with reservation guid
+      var reservationId = Guid.NewGuid();
 
-		var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationId);
+      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationId);
 
-		var bookingManager = reservation.FindBookingManager();
+      var bookingManager = reservation.FindBookingManager();
 
-		var result = bookingManager.TryChangeStateToConfirmed(engine, ref reservation);
-		//var result = bookingManager.TryFinish(engine, ref reservation);
-		//var result = bookingManager.TryChangeStateToOnHold(engine, ref reservation);
-		//var result = bookingManager.TryCancel(engine, ref reservation);
-		//var result = bookingManager.TryDelete(engine, reservation);
-	}
+      var result = bookingManager.TryChangeStateToConfirmed(engine, ref reservation);
+      //var result = bookingManager.TryFinish(engine, ref reservation);
+      //var result = bookingManager.TryChangeStateToOnHold(engine, ref reservation);
+      //var result = bookingManager.TryCancel(engine, ref reservation);
+      //var result = bookingManager.TryDelete(engine, reservation);
+   }
 }
 ```

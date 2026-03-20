@@ -15,18 +15,18 @@ using Skyline.DataMiner.Net.ResourceManager.Objects;
 
 public class Script
 {
-	public static void Run(Engine engine)
-	{
-		// Replace with reservation guid
-		var reservationGuid = Guid.NewGuid();
+   public static void Run(Engine engine)
+   {
+      // Replace with reservation guid
+      var reservationGuid = Guid.NewGuid();
 
-		var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid) as ServiceReservationInstance;
+      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid) as ServiceReservationInstance;
 
-		var bookingManager = reservation.FindBookingManager();
+      var bookingManager = reservation.FindBookingManager();
 
-		// Apply service state async
-		bookingManager.ApplyServiceState(engine, reservation, "STANDBY");
-	}
+      // Apply service state async
+      bookingManager.ApplyServiceState(engine, reservation, "STANDBY");
+   }
 }
 ```
 

@@ -15,22 +15,22 @@ using Skyline.DataMiner.Core.SRM.Model.ReservationAction;
 
 public class Script
 {
-	public static void Run(Engine engine)
-	{
-		// Replace with reservation guid
-		var reservationGuid = Guid.NewGuid();
+   public static void Run(Engine engine)
+   {
+      // Replace with reservation guid
+      var reservationGuid = Guid.NewGuid();
 
-		var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid);
+      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid);
 
-		var bookingManager = reservation.FindBookingManager();
+      var bookingManager = reservation.FindBookingManager();
 
-		var extendBookingInputData = new ExtendBookingInputData
-		{
-			IsSilent = true,
-			TimeToAdd = TimeSpan.FromHours(1),
-		};
+      var extendBookingInputData = new ExtendBookingInputData
+      {
+         IsSilent = true,
+         TimeToAdd = TimeSpan.FromHours(1),
+      };
 
-		var result = bookingManager.TryExtend(engine, ref reservation, extendBookingInputData);
-	}
+      var result = bookingManager.TryExtend(engine, ref reservation, extendBookingInputData);
+   }
 }
 ```

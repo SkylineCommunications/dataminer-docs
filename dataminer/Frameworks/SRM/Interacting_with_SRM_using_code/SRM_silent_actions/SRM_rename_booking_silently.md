@@ -15,21 +15,21 @@ using Skyline.DataMiner.Core.SRM.Model.ReservationAction;
 
 public class Script
 {
-	public static void Run(Engine engine)
-	{
-		// Replace with reservation guid
-		var reservationGuid = Guid.NewGuid();
+   public static void Run(Engine engine)
+   {
+      // Replace with reservation guid
+      var reservationGuid = Guid.NewGuid();
 
-		var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid);
-		var bookingManager = reservation.FindBookingManager();
+      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid);
+      var bookingManager = reservation.FindBookingManager();
 
-		var changeNameInputData = new ChangeNameInputData
-		{
-			IsSilent = true,
-			Name = "New Booking Name",
-		};
+      var changeNameInputData = new ChangeNameInputData
+      {
+         IsSilent = true,
+         Name = "New Booking Name",
+      };
 
-		var result = bookingManager.TryChangeName(engine, ref reservation, changeNameInputData);
-	}
+      var result = bookingManager.TryChangeName(engine, ref reservation, changeNameInputData);
+   }
 }
 ```

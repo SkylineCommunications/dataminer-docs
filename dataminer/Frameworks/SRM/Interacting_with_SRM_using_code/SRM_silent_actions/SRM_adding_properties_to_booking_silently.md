@@ -15,17 +15,17 @@ using Skyline.DataMiner.Core.SRM.Extensions.Reservations;
 
 public class Script
 {
-	public static void Run(Engine engine)
-	{
-		// Update with relevant data
-		var reservationId = Guid.NewGuid();
-		var propertyName = "Property";
-		var propertyValue = "Value";
+   public static void Run(Engine engine)
+   {
+      // Update with relevant data
+      var reservationId = Guid.NewGuid();
+      var propertyName = "Property";
+      var propertyValue = "Value";
 
-		var properties = new Dictionary<string, object> { { propertyName, propertyValue } };
+      var properties = new Dictionary<string, object> { { propertyName, propertyValue } };
 
-		var reservationInstance = SrmManagers.ResourceManager.GetReservationInstance(reservationId);
-		reservationInstance.UpdateServiceReservationProperties(properties);
-	}
+      var reservationInstance = SrmManagers.ResourceManager.GetReservationInstance(reservationId);
+      reservationInstance.UpdateServiceReservationProperties(properties);
+   }
 }
 ```

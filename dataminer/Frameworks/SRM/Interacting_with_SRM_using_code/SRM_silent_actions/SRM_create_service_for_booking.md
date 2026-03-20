@@ -2,12 +2,11 @@
 uid: SRM_create_service_for_booking
 ---
 
-# Create service for existing booking
+# Creating a service for an existing booking
 
-When a solution uses the *External Service Management* option is up to the solution to manage the service, though for ease of use, method *ServiceManagement.CreateReservationService* can be used to create a service for an existing booking. This method will create a service based on the current booking content in the same way that would be done automatically by the framework when a booking is created/started.
+When a solution uses the *External Service Management* option, it is up to the solution to manage the services for bookings. However, for ease of use, the method *ServiceManagement.CreateReservationService* can be used to create a service for an existing booking. This method will create a service based on the current booking content in the same way as the SRM framework automatically creates a service when a booking is created or started.
 
-> [!NOTE]
-> This is available from version 1.2.36 of the SRM framework. <!-- RN 39096 -->
+This feature is available from SRM 1.2.36 onwards.<!-- RN 39096 -->
 
 ```csharp
 using System;
@@ -19,17 +18,17 @@ using Skyline.DataMiner.Net.ResourceManager.Objects;
 
 public class Script
 {
-	public static void Run(Engine engine)
-	{
-		// Replace with reservation guid
-		var reservationGuid = Guid.NewGuid();
+   public static void Run(Engine engine)
+   {
+      // Replace with reservation guid
+      var reservationGuid = Guid.NewGuid();
 
-		var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid) as ServiceReservationInstance;
-		var logger = reservation.GetCachedLogger();
-		var bookingManager = reservation.FindBookingManager();
+      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid) as ServiceReservationInstance;
+      var logger = reservation.GetCachedLogger();
+      var bookingManager = reservation.FindBookingManager();
 
-		var srmContext = new SrmManagersContext(engine, bookingManager, reservation, logger);
-		ServiceManagement.CreateReservationService(srmContext);
-	}
+      var srmContext = new SrmManagersContext(engine, bookingManager, reservation, logger);
+      ServiceManagement.CreateReservationService(srmContext);
+   }
 }
 ```

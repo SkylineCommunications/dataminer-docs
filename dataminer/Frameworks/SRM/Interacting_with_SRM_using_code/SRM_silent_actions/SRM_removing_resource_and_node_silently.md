@@ -20,22 +20,22 @@ using Skyline.DataMiner.Core.SRM.Extensions.Reservations;
 
 public class Script
 {
-	public void Run(Engine engine)
-	{
-		// Update with relevant data
-		var reservationGuid = Guid.NewGuid();
-		var resourceGuid = Guid.NewGuid();
-		var nodeId = 1;
+   public void Run(Engine engine)
+   {
+      // Update with relevant data
+      var reservationGuid = Guid.NewGuid();
+      var resourceGuid = Guid.NewGuid();
+      var nodeId = 1;
 
-		var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid);
-		var bookingManager = reservation.FindBookingManager();
+      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid);
+      var bookingManager = reservation.FindBookingManager();
 
-		bookingManager.TryRemoveResourceAndNode(engine, ref reservation, resourceGuid, nodeId);
+      bookingManager.TryRemoveResourceAndNode(engine, ref reservation, resourceGuid, nodeId);
 
-		// Example of passing a service definition template as an extra parameter to the TryRemoveResourceAndNode method
-		var existingServiceDefinitionGuid = Guid.NewGuid();
-		bookingManager.TryRemoveResourceAndNode(engine, ref reservation, resourceGuid, nodeId, existingServiceDefinitionGuid);
-	}
+      // Example of passing a service definition template as an extra parameter to the TryRemoveResourceAndNode method
+      var existingServiceDefinitionGuid = Guid.NewGuid();
+      bookingManager.TryRemoveResourceAndNode(engine, ref reservation, resourceGuid, nodeId, existingServiceDefinitionGuid);
+   }
 }
 ```
 
@@ -43,4 +43,4 @@ public class Script
 >
 > - In case a service definition needs to be created, it will not be a template.
 > - A non-template service definition will not be cleaned up.
-> - Since version 1.2.33 <!-- RN 36792 --> it is possible to pass the desired service definition as a parameter to the *RemoveResourceAndNode* and *TryRemoveResourceAndNode* methods. If the passed service definition contains the correct nodes, it will be used; otherwise the behavior will be the same as described above.
+> - From SRM 1.2.33 onwards<!-- RN 36792 -->, it is possible to pass the desired service definition as a parameter to the *RemoveResourceAndNode* and *TryRemoveResourceAndNode* methods. If the passed service definition contains the correct nodes, it will be used; otherwise the behavior will be the same as described above.
