@@ -4,7 +4,7 @@ uid: MACC_and_DataMiner_credits
 
 # Maximizing your Azure investments with MACC and DataMiner credits
 
-([DataMiner credits](xref:Pricing_Usage_based_service#usage-terms)) can be conveniently obtained from the following sources:
+([DataMiner credits](xref:Pricing_billing_and_metering#usage-terms)) can be conveniently obtained from the following sources:
 
 - Skyline Communications ([contact us](https://www.skyline.be/contact/))
 - DataMiner Business Partners (see [Partners](https://community.dataminer.services/partners/) on DataMiner Dojo)

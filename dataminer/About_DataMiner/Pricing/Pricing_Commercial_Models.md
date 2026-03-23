@@ -35,7 +35,7 @@ In addition, you also have the option to subscribe to certain services by reserv
 
 ### DataMiner Community Edition
 
-The DataMiner Community Edition allows you to deploy a standalone, fully featured DataMiner System per [organization](xref:Pricing_Usage_based_service#organization). It can be deployed on self-managed infrastructure or as a service.
+The DataMiner Community Edition allows you to deploy a standalone, fully featured DataMiner System per [organization](xref:Pricing_billing_and_metering#organization). It can be deployed on self-managed infrastructure or as a service.
 
 When you create a new organization and [your first DataMiner System](xref:Creating_a_DMS_in_the_cloud), two subscriptions are automatically added to your account: **Community Edition** and **Hosted Community Edition**. Together, these define the available allowances depending on whether the system is self‑managed or hosted.
 

@@ -11,7 +11,7 @@ In the Admin app, you can view information about the usage of certain DataMiner 
 Currently, only usage data for Storage as a Service (STaaS) are displayed, i.e., the number of ingest operations per data type. In the future, more information will become available here.
 
 > [!TIP]
-> For more information about the metering and conversion rates, see [Metering](xref:Pricing_Usage_based_service#metering-units).
+> For more information about the metering and conversion rates, see [Billing and metering](xref:Pricing_billing_and_metering).
 
 To view your usage:
 
