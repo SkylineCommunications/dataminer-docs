@@ -394,6 +394,12 @@ Since DataMiner version 10.5.0 CU12/10.6.3, the *themes.json* file was incorrect
 
 This file has now been added again.
 
+#### Dashboards/Low-Code Apps - GQI components: Problem when data from another component changed rapidly [ID 44934]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+When, in a GQI component (e.g., *Grid*, *Table*, *Timeline*, etc.), a query was filtered by data from another component, in some cases, the filtering would not be reflected in the UI when the data from the other component changed rapidly.
+
 #### Dashboards app: Problem with GQI components when generating a PDF report in stacked mode [ID 44945]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->

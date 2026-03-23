@@ -236,12 +236,6 @@ When an input component was fed data from another component, in some cases, the 
 
 In some rare cases, a map session could close unexpectedly, causing markers or lines to disappear from the map.
 
-#### Dashboards/Low-Code Apps - GQI components: Problem when data from another component changed rapidly [ID 44934]
-
-<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
-
-When, in a GQI component (e.g., *Grid*, *Table*, *Timeline*, etc.), a query was filtered by data from another component, in some cases, the filtering would not be reflected in the UI when the data from the other component changed rapidly.
-
 #### GQI DxM: Problem when a query applied a custom operator to a row with AlarmID metadata [ID 44948]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
