@@ -127,6 +127,9 @@ If a parameter is a counter that continuously increases (e.g., received packets 
 
 With relative alarm thresholds, you can define a baseline from which the value can deviate percentage-wise. This can especially be useful for tables where every row can have a different baseline value.
 
+> [!NOTE]
+> This feature is only available on parameters that are not on paginated tables.
+
 1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
 1. At the top of the template, click *Only monitored parameters* and select *Only protocol parameters* instead.
@@ -163,6 +166,9 @@ With relative alarm thresholds, you can define a baseline from which the value c
 ## Step 6: Configure alarm monitoring using absolute thresholds
 
 In some cases, it can be easier to define in absolute numbers how much a value can deviate from the baseline (e.g., when the baseline is close to zero).
+
+> [!NOTE]
+> This feature is only available on parameters that are not on paginated tables.
 
 1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
