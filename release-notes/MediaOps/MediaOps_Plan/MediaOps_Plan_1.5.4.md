@@ -26,6 +26,10 @@ uid: MediaOps_Plan_1.5.4
 
 Up to now, it was always possible to swap a resource for a confirmed or running job. Now this will no longer be possible in case mandatory parameters are missing. Before being able to swap the resource, the user will have to provide the values for these parameters via the red hand icon in the swap panel. Only after all mandatory information has been provided, will the user be able to swap the resource.
 
+#### Unhandled exceptions in scripts now immediately flushed to log files [ID 45086]
+
+As soon as an unhandled exception is caught in a script, the logging of the script is now flushed to the log files, even while the script is still running. Previously, this only happened when the script was closed.
+
 ### Fixes
 
 #### Scheduling: Configuration UI incorrectly showed dropdown for running job [ID 45039]
@@ -35,3 +39,11 @@ In the window where you can view the configuration for a job and its nodes, it c
 #### Scheduling: Not possible to remove mandatory configuration added to node [ID 45048]
 
 In the Scheduling app, you can use a filter to already create a configuration when adding or swapping nodes on your job. Up to now, in case the selected resource pool did not contain any configuration, you could add anything that is defined in the system. However, if you added mandatory configuration, you could no longer remove this.
+
+#### Scheduling: Incorrect filter configuration applied when adding node to job [ID 45080]
+
+When a node was added to a job from the Add Node panel, up to now the node configuration was copied from the node resource pool instead of from the filter configuration defined in the Add Node panel. Now the filter configuration from the Add Node panel will be applied instead.
+
+#### Scheduling: Filter issue when only configuration parameters were defined [ID 45083]
+
+When only configuration parameters were defined as orchestration settings on a resource pool, it could occur that the filter on the Resource View page of the Scheduling app only showed the buttons without any further context. Now a pop-up message is shown to the user: "There are no capabilities or capacities available for filtering".
