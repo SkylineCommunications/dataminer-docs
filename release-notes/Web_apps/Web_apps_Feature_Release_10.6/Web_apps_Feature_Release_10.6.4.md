@@ -412,6 +412,12 @@ Up to now, when you generated a PDF report in stacked mode of a dashboard contai
 
 When a low-code app was migrated to a newer version, in some cases, timeline events would incorrectly not get fully migrated.
 
+#### Dashboards app: Timeline component highlight setting migrated incorrectly [ID 45060]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+After a web upgrade to DataMiner 10.5.0 [CU12]/10.6.3, an issue during the migration of the setting to highlight specific ranges in a timeline component of a dashboard could cause that setting to no longer be linked to its data. Users had to manually relink the setting to fix this. This issue will now be prevented.
+
 #### GQI DxM: Ad hoc data source instances and custom operator instances used on the right side of a join operator would not be cleaned up correctly [ID 45064]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
