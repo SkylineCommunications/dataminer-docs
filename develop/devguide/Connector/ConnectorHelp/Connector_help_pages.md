@@ -13,7 +13,7 @@ Note that if a technical page seems necessary, a good reflex is to first check i
 
 If a connector exports **child connectors**, a subpage should also be created for each of these child connectors.
 
-When you develop a connector using DIS, you can pre-generate the connector documentation with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu). You can also create the documentation directly in Markdown, starting from our [marketing template](xref:Connector_marketing_template) and, if necessary, [technical template](xref:Connector_technical_template). When you have created the documentation, add it in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
+You can create the documentation directly in Markdown, starting from our [marketing template](xref:Connector_marketing_template) and, if necessary, [technical template](xref:Connector_technical_template). When you have created the documentation, add it in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
 
 ## Adding new connector documentation pages
 
