@@ -17,6 +17,7 @@ In case you have a suggestion for a unit to be added to the list below, create a
 |Value|Description|
 |--- |--- |
 |%|percent|
+|%/s|percent per second|
 |%RH|relative humidity|
 |A|ampere|
 |A_AC|Ampere alternating current|
