@@ -158,6 +158,12 @@ Up to now, when an SNMP manager had been added, or its configuration had been ch
 - *Enable tracking to avoid duplicate inform acknowledgments (ACKs)*
 - *Group alarms with the same parameter name*
 
+#### Alarm severity change within two minutes after an element start or restart would be processed incorrectly [ID 44917]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When the alarm severity of an element changed within two minutes after the element had been started or restarted, up to now, that change would be processed incorrectly.
+
 #### Updating DVE properties could cause SLDMS to stop working [ID 44921]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
