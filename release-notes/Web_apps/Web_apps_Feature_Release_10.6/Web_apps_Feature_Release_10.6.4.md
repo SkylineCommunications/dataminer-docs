@@ -425,3 +425,13 @@ After a web upgrade to DataMiner 10.5.0 [CU12]/10.6.3, an issue during the migra
 Since DataMiner version 10.5.0 CU11/10.6.2, ad hoc data source instances and custom operator instances that were used on the right side of a join operator would no longer be cleaned up correctly after a query had been executed. This would lead to the extension workers leaking memory as those instances would remain in memory indefinitely.
 
 From now on, all GQI extension instances will be able to properly release their resources when used on either side of a join operator.
+
+#### GQI DxM - Custom operators: Problem with cell values of Guid columns that were converted to string values [ID 45100]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+Cell values from Guid columns are converted to string values when passed to the `IGQIRowOperator.HandleRow` life cycle method of a custom operator.
+
+As these string values would then be used throughout the rest of the query, up to now, this could lead to type mismatch errors.
+
+From now on, cell values of type String coming from a custom operator will be converted back to Guid when the column is of type Guid.
