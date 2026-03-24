@@ -109,6 +109,14 @@ The BrokerGateway DxM has been upgraded to Microsoft .NET 10.
 
 The StorageModule DxM has been upgraded to Microsoft .NET 10.
 
+#### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45022]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+Previously, when a script library was added to a DataMiner System, its hint paths were automatically sent to the automation script compilation engine, even when the library was not used by any automation script.
+
+From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
+
 ### Fixes
 
 #### One protocol thread would incorrectly be able to add new rows to a table while another protocol thread was clearing that table [ID 44764] [ID 44833]
