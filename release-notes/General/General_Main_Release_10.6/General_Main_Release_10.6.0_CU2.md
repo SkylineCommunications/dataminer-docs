@@ -170,3 +170,11 @@ Up to now, when a booking needed to be quarantined in order to solve a range cap
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 In some cases, uninitialized memory in SLElement could cause memory corruption.
+
+#### SLSNMPAgent would not properly unregister itself with SLWatchDog during a DataMiner shutdown [ID 45023]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when DataMiner was shutting down, SLSNMPAgent would not properly unregister itself with SLWatchDog. This lead to a false alarm as SLWatchDog incorrectly thought that the process had crashed.
+
+From now on, when SNMPAgent shuts down, it will unregister itself with SLWatchDog.

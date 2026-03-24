@@ -334,3 +334,9 @@ From now on, trend records with the following *iStatus* values will no longer ca
 | -6  | Element is being stopped. |
 | -9  | Trending was started for the specified parameter. |
 | -10 | Trending was stopped for the specified parameter. |
+
+#### SLAnalytics: Flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours [ID 45033]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+Up to now, flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours.
