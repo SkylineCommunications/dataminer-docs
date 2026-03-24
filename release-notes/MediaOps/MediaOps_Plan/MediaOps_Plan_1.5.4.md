@@ -26,6 +26,10 @@ uid: MediaOps_Plan_1.5.4
 
 Up to now, it was always possible to swap a resource for a confirmed or running job. Now this will no longer be possible in case mandatory parameters are missing. Before being able to swap the resource, the user will have to provide the values for these parameters via the red hand icon in the swap panel. Only after all mandatory information has been provided, will the user be able to swap the resource.
 
+#### Unhandled exceptions in scripts now immediately flushed to log files [ID 45086]
+
+As soon as an unhandled exception is caught in a script, the logging of the script is now flushed to the log files, even while the script is still running. Previously, this only happened when the script was closed.
+
 ### Fixes
 
 #### Scheduling: Configuration UI incorrectly showed dropdown for running job [ID 45039]
@@ -35,3 +39,11 @@ In the window where you can view the configuration for a job and its nodes, it c
 #### Scheduling: Not possible to remove mandatory configuration added to node [ID 45048]
 
 In the Scheduling app, you can use a filter to already create a configuration when adding or swapping nodes on your job. Up to now, in case the selected resource pool did not contain any configuration, you could add anything that is defined in the system. However, if you added mandatory configuration, you could no longer remove this.
+
+#### Scheduling: Incorrect filter configuration applied when adding node to job [ID 45080]
+
+When a node was added to a job from the Add Node panel, the settings defined in the Add Node panel were not taken into account for the node configuration. This issue has been resolved.
+
+#### Scheduling: Empty filter window for Resource View when only configuration parameters were defined [ID 45083]
+
+When you used the filter button on the Resource View page of the Scheduling app, but only configuration parameters were defined as orchestration settings on a resource pool, it could occur that the pop-up window only showed the *Apply* and *Reset* buttons without any filtering possibilities and without any further information. Now a pop-up message will be shown instead in such a case: "There are no capabilities or capacities available for filtering".
