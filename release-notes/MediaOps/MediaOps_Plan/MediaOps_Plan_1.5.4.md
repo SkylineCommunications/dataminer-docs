@@ -44,6 +44,6 @@ In the Scheduling app, you can use a filter to already create a configuration wh
 
 When a node was added to a job from the Add Node panel, up to now the node configuration was copied from the node resource pool instead of from the filter configuration defined in the Add Node panel. Now the filter configuration from the Add Node panel will be applied instead.
 
-#### Scheduling: Filter issue when only configuration parameters were defined [ID 45083]
+#### Scheduling: Empty filter window for Resource View when only configuration parameters were defined [ID 45083]
 
-When only configuration parameters were defined as orchestration settings on a resource pool, it could occur that the filter on the Resource View page of the Scheduling app only showed the buttons without any further context. Now a pop-up message is shown to the user: "There are no capabilities or capacities available for filtering".
+When you used the filter button on the Resource View page of the Scheduling app, but only configuration parameters were defined as orchestration settings on a resource pool, it could occur that the pop-up window only showed the *Apply* and *Reset* buttons without any filtering possibilities and without any further information. Now a pop-up message will be shown instead in such a case: "There are no capabilities or capacities available for filtering".
