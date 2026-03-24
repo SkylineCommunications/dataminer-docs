@@ -241,24 +241,7 @@ In case the number of issues detected by the major change checker is below 50, t
 
 ## Verify developer checklist
 
-Verifies whether the protocol implementation checklist is present. The checklist should have ".docx" as its extension and one of the following names (disregarding spaces and capitalization):
-
-- Protocol Development Checklist
-
-- Protocol Development Quick Checklist
-
-- Checklist
-
-Additionally, the following information in the checklist itself should correspond with the info provided in the protocol:
-
-- Protocol name
-
-- Protocol version
-
-- Initials of integration engineer
-
-> [!NOTE]
-> You should always use the latest version of the checklist, which is available on Dojo on the [Protocol development downloads](https://community.dataminer.services/protocol-development-downloads/) page.
+This stage is obsolete. The checklist is no longer used.
 
 ## Prepare Driver Passport Platform scheduling
 
