@@ -47,8 +47,6 @@ Currently, the pipeline for protocol development consists of the following stage
 
 - [Run major change checker](#run-major-change-checker)
 
-- [Verify developer checklist](#verify-developer-checklist)
-
 - [Prepare Driver Passport Platform scheduling](#prepare-driver-passport-platform-scheduling)
 
 - [Quality gate](#quality-gate)
@@ -238,10 +236,6 @@ The results of the major change checker are also archived as the following artif
 - MajorChangeCheckerSuppressedResults.xml
 
 In case the number of issues detected by the major change checker is below 50, the results also get published on Jenkins. They are available under the classic view of Jenkins in the DIS Major Change Checker Warnings section.
-
-## Verify developer checklist
-
-This stage is obsolete. The checklist is no longer used.
 
 ## Prepare Driver Passport Platform scheduling
 
