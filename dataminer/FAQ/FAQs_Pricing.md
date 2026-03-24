@@ -77,7 +77,7 @@ DataMiner credits are a form of currency used to subscribe to DataMiner software
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-    <b>💡 TIPS TO TAKE FLIGHT</b><br>Unfamiliar with terms like "DataMiner credits"? Take a look at our list of <a href="xref:Pricing_Usage_based_service#usage-terms" style="color: #657AB7;">usage terms</a>.
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>Unfamiliar with terms like "DataMiner credits"? Take a look at our list of <a href="xref:Pricing_billing_and_metering#usage-terms" style="color: #657AB7;">usage terms</a>.
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>
