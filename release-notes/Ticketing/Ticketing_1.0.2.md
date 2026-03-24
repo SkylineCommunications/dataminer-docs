@@ -5,9 +5,9 @@ uid: Ticketing_1.0.2
 # Ticketing 1.0.2
 
 > [!NOTE]
-> This version of the Ticketing app is only intended for use with DataMiner version 10.5.0 up to (and including) 10.5.8.
+> This version of the Ticketing app is only intended for use with DataMiner version **10.5.0 up to (and including) 10.5.8**.
 >
-> Note that Ticketing needs the GQI DxM to be enabled. Prior to DataMiner 10.5.8 this can be done as explained in [GQI DxM | DataMiner Docs](https://docs.dataminer.services/dataminer/Functions/Dashboards_and_Low_Code_Apps/GQI/GQI_DxM.html?q=GQI%20DxM#enabling-or-disabling-the-use-of-the-gqi-dxm)
+> Note that Ticketing needs the **GQI DxM** to be enabled. For information on how to enable this prior to DataMiner 10.5.8, refer to [Enabling or disabling the use of the GQI DxM](xref:GQI_DxM#enabling-or-disabling-the-use-of-the-gqi-dxm).
 
 ## New features
 
