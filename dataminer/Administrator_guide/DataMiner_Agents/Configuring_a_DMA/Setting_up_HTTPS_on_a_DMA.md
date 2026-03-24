@@ -48,7 +48,7 @@ To do so:
     ```xml
     <MaintenanceSettings>
       ...
-      <HTTPS enabled="true" name="example.skyline.local"/>
+      <HTTPS enabled="true" name="example.mydomain.local"/>
       ...
     </MaintenanceSettings>
     ```
