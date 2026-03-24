@@ -42,7 +42,7 @@ In the Scheduling app, you can use a filter to already create a configuration wh
 
 #### Scheduling: Incorrect filter configuration applied when adding node to job [ID 45080]
 
-When a node was added to a job from the Add Node panel, up to now the node configuration was copied from the node resource pool instead of from the filter configuration defined in the Add Node panel. Now the filter configuration from the Add Node panel will be applied instead.
+When a node was added to a job from the Add Node panel, the settings defined in the Add Node panel were not taken into account for the node configuration. This issue has been resolved.
 
 #### Scheduling: Empty filter window for Resource View when only configuration parameters were defined [ID 45083]
 
