@@ -209,3 +209,9 @@ From now on, when SNMPAgent shuts down, it will unregister itself with SLWatchDo
 <!-- MR 10.7.0 - FR 10.6.5 -->
 
 Up to now, flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours.
+
+#### APIGateway: '/api/versions' endpoint could return null as SLNet version [ID 45051]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In some rare cases, the `/api/versions` endpoint exposed by DataMiner APIGateway could return "null" as SLNet version, especially after the *SLNet.exe* file had been updated on disk during a DataMiner upgrade.
