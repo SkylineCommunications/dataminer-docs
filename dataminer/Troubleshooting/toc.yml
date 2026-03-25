@@ -258,6 +258,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: GQI DxM unavailable because of missing Newtonsoft.Json assembly
+            topicUid: KI_GQI_DxM_unavailable_missing_Newtonsoft_Json
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
             topicUid: KI_profile_manager_fails_after_rollback
           - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
