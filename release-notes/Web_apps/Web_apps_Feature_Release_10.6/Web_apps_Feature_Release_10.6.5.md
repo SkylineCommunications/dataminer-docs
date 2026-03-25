@@ -168,6 +168,14 @@ From now on, when using the *Get parameters for elements where* data source, the
 
 In all DataMiner web apps, the splash screen has been redesigned in order to match the UI of the app.
 
+#### Dashboards/Low-Code Apps: New default user permissions for creating or duplicating dashboards and low-code apps [ID 45017]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+The default user permissions for creating or duplicating a low-code app have been modified. The creator will now automatically be assigned the *Editor* role, while all other users will by default be assigned the *Viewer* role.
+
+Also, the default security setting for newly created or duplicated dashboards will now be "Protected, only you can edit".
+
 #### Interactive Automation scripts in web apps: Checkbox of redesigned Treeview component has been aligned with that of other components [ID 45025]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
