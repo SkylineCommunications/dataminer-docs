@@ -74,6 +74,14 @@ Since DataMiner version 1.0.1.0 CU22/10.2.0 CU10/10.3.1, trend graphs in a visua
 
 When, for whatever reason, the Microsoft Edge (WebView2) browser engine had not been loaded, up to now, parts of the Cube UI that contained embedded browser windows would incorrectly remain empty.
 
+#### Spectrum analysis: Incorrect trace data would be shown when selecting multiple measurement points [ID 45059]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when you selected multiple measurement points, in some cases, incorrect trace data would be shown.
+
+Also, the grid would not resize correctly when you selected the *Show external labels* option for the first time.
+
 #### Spectrum analysis - Combined measurement point view: Not all traces would be shown when multiple measurement points were selected [ID 45070]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
