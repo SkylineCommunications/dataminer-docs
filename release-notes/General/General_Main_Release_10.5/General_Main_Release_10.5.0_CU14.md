@@ -156,3 +156,9 @@ From now on, when SNMPAgent shuts down, it will unregister itself with SLWatchDo
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 In some rare cases, the `/api/versions` endpoint exposed by DataMiner APIGateway could return "null" as SLNet version, especially after the *SLNet.exe* file had been updated on disk during a DataMiner upgrade.
+
+#### Swarming: Problem when StorageModule failed to load elements from the database during DataMiner startup [ID 45067]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When, on swarming-enabled systems, the StorageModule DxM failed to load elements from the database during DataMiner startup, up to now, the error state would incorrectly not be propagated to SLDataMiner, causing the DataMiner Agent to start up without loaded elements.
