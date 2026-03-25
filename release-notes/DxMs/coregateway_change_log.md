@@ -4,6 +4,10 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 25 March 2026 - Fix - CoreGateway 2.14.17 - Fixed auto-sign in not working on remote access when a failover pair switched
+
+When a failover pair is switching, the CoreGateway on the agent that's going online did not always receive the event that it's going online. As a result, the automatic sign-in when using remote access to stopped working and a manual sign-in was required.
+
 #### 16 February 2026 - Fix - CoreGateway 2.14.16 - Fixed version offloading
 
 In the Admin app, it could occur that the Overview page on DMS level displayed an error. To resolve this, a small change was done to ensure that the correct CoreGateway version is uploaded, as certain checks are done against this version in the app.
