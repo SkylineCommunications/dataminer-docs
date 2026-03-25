@@ -76,6 +76,17 @@ Up to now, apart from the protocol version folders, the DataMiner Agent would al
 
 From now on, when DataMiner starts up, it will no longer check for protocol files in the *Functions* and *Helper* folders.
 
+#### Correlation: Enhanced detection of circular correlation rules [ID 45007]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+A number of enhancements have been made to the mechanism that detects circular correlation rules.
+
+A correlation rule will be blocked when it was triggered due to a correlated alarm that depends on an alarm created by the rule in question.
+
+> [!NOTE]
+> ​This feature only works when the correlation rule and all alarms in question reside on the same DataMiner Agent.
+
 ### Fixes
 
 #### One protocol thread would incorrectly be able to add new rows to a table while another protocol thread was clearing that table [ID 44764] [ID 44833]

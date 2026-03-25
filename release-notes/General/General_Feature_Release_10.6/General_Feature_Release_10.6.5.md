@@ -109,6 +109,17 @@ The BrokerGateway DxM has been upgraded to Microsoft .NET 10.
 
 The StorageModule DxM has been upgraded to Microsoft .NET 10.
 
+#### Correlation: Enhanced detection of circular correlation rules [ID 45007]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+A number of enhancements have been made to the mechanism that detects circular correlation rules.
+
+A correlation rule will be blocked when it was triggered due to a correlated alarm that depends on an alarm created by the rule in question.
+
+> [!NOTE]
+> ​This feature only works when the correlation rule and all alarms in question reside on the same DataMiner Agent.
+
 #### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45022]
 
 <!-- MR 10.7.0 - FR 10.6.5 -->
