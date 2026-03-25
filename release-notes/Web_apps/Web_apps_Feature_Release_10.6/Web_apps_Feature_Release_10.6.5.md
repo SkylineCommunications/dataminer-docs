@@ -176,6 +176,16 @@ The default user permissions for creating or duplicating a low-code app have bee
 
 Also, the default security setting for newly created or duplicated dashboards will now be "Protected, only you can edit".
 
+#### GQI DxM: Session will now be closed automatically whenever an exception occurs while data is being requested [ID 45024]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when an exception occurred while data was being requested, the session would remain open until it was closed by the client.
+
+From now on, whenever an exception occurs while data is being requested, the session will be closed automatically.
+
+Also, a number of enhancements have been made to ensure that closing sessions will no longer interfere with other session operations.
+
 #### Interactive Automation scripts in web apps: Checkbox of redesigned Treeview component has been aligned with that of other components [ID 45025]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->

@@ -221,6 +221,14 @@ From now on, when SNMPAgent shuts down, it will unregister itself with SLWatchDo
 
 Up to now, flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours.
 
+#### Nats-server would incorrectly not be installed alongside BrokerGateway when no DataMiner software had been installed on the system [ID 45049]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When BrokerGateway was installed on a system on which no DataMiner software had been installed, up to now, nats-server would incorrectly not be installed automatically because certain required DataMiner files were missing.
+
+From now on, nats-server will correctly be installed alongside BrokerGateway.
+
 #### APIGateway: '/api/versions' endpoint could return null as SLNet version [ID 45051]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
