@@ -176,6 +176,12 @@ When SLDataGateway checked whether a certain custom database table existed, up t
 
 Up to now, when a booking needed to be quarantined in order to solve a range capacity conflict, in some cases, certain usages that were not related to the conflict would incorrectly also be quarantined.
 
+#### Burst of traps would incorrectly cause multiple alarms to be generated when the parameter had the mapAlarm attribute configured [ID 44980]
+
+<!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
+
+When a burst of traps was received for a parameter that had the `mapAlarm` attribute configured, up to now, multiple active alarms would incorrectly be generated instead of one active alarm with the alarms of all previous traps grouped in the same alarm tree.
+
 #### SLElement: Uninitialized memory could cause memory corruption [ID 45004]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
