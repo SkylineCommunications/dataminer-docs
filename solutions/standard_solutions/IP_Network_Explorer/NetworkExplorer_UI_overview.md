@@ -12,8 +12,9 @@ Both network devices and connections are color-coded to reflect their status.
 
 Click any [device](#device-details) or [connection](#connection-details) to view more details.
 
-A topology selector is available in the upper right-hand corner of the Topology view.
-This dropdown allows you to select one of the available topologies to display.
+A topology selector is available in the center of the header bar.
+Use this dropdown to choose which topology to display.
+
 Topologies make it possible to:
 - Visualize the same network segments in different ways
 - Focus on specific parts of the network
@@ -76,7 +77,7 @@ You can filter by:
 
 In the application settings window, you can manage the different topologies, update the default IP scan range and adjust the automatic removal behavior for removed connections.
 
-To access the application settings, click the *About* button in the top-right corner and then click the *Settings* button at the top of window.
+To open Application Settings, click the *Settings* button in the bottom-left of the sidebar.
 
 ![Settings](~/solutions/images/NS_manual_settings.png)
 
