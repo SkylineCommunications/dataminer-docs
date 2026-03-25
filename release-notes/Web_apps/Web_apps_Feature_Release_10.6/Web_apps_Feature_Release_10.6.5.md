@@ -324,3 +324,9 @@ From now on, the *Allow components to shift* setting will be taken into account 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When you opened a dashboard and, while it was still loading, you navigated to another dashboard that did not contain any components, up to now, the "loading" banner of the first dashboard would incorrectly stay visible until you added a component to the second dashboard.
+
+#### Dashboards/Low-Code Apps - Time range component: Typing "00" in the hours field would not cause the cursor to jump to the minutes field [ID 45098]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When, in a *Time range* component, you wanted to enter, for example, the time "00:30", up to now, typing "00" in the hours field would incorrectly not cause the cursor to automatically jump to the minutes field.
