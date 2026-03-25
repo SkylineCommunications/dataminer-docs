@@ -8,7 +8,7 @@ uid: KI_GQI_DxM_unavailable_missing_Newtonsoft_Json
 
 DataMiner web 10.5.0 [CU1]/10.5.4 or higher.
 
-This issue only occurs after direct upgrades from DataMiner web 10.5.0 [CU0]/10.5.3 to higher versions. If you for example upgrade from 10.5.0 [CU1]/10.5.4 to 10.5.0 [CU2]/10.5.5, this will resolve the issue.
+This issue only occurs after direct upgrades from DataMiner web 10.5.0 [CU0]/10.5.3 to higher versions. Any subsequent upgrade to a newer version of DataMiner will resolve the issue.
 
 ## Cause
 
@@ -24,4 +24,4 @@ Repair the DataMiner GQI service by running the DataMiner GQI MSI located in the
 
 ## Description
 
-In the DataMiner web apps, the GQI DxM is unavailable. The GQI logging contains a message stating `Could not load file or 'Newtonsoft.Json'`.
+In the DataMiner web apps, the GQI DxM is unavailable. The GQI logging contains a message stating `Could not load file or assembly 'Newtonsoft.Json'`.
