@@ -22,7 +22,7 @@ Configures DataMiner to use HTTPS. For more information, refer to [Configuring H
 ```xml
 <MaintenanceSettings>
   ...
-  <HTTPS enabled="true" name="foo.skyline.local"/>
+  <HTTPS enabled="true" name="example.mydomain.local"/>
   ...
 </MaintenanceSettings>
 ```
