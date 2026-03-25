@@ -305,6 +305,12 @@ Up to now, when working with the GQI DxM, it would incorrectly not be possible t
 
 From now on, similar to the way in which log levels can be either lowered or increased when working with SLHelper, it will also be possible to either lower or increase the log level for a particular GQI extension when working with the GQI DxM.
 
+#### Dashboards/Low-Code Apps - Maps component: OpenStreetMap markers would not correctly update their alarm state [ID 45032]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When OpenStreetMaps was used as map provider, up to now, the markers would not correctly update their alarm state. They would start to cluster and show the highest alarm state.
+
 #### Dashboards/Low-Code Apps: 'Allow components to shift' setting would incorrectly not be taken into account when you resized a component [ID 45045]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
