@@ -8,7 +8,7 @@ uid: KI_GQI_DxM_unavailable_missing_Newtonsoft_Json
 
 DataMiner web 10.5.0 [CU1]/10.5.4 or higher.
 
-This issue only occurs after direct upgrades from DataMiner web 10.5.0 [CU0]/10.5.3 to higher versions. Any subsequent upgrade to a newer version of DataMiner will resolve the issue.
+This issue only occurs after direct upgrades from DataMiner web 10.5.0 [CU0], 10.5.2, or 10.5.3 to higher versions. Any subsequent upgrade to a newer version of DataMiner will resolve the issue.
 
 ## Cause
 
