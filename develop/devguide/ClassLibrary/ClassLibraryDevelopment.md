@@ -52,4 +52,4 @@ These are the most important things to keep in mind:
 
    1. Assign the task to the Data Acquisition user, with the task status *Code Review*.
 
-   1. Email [support.data-acquisition@skyline.be](mailto:support.data-acquisition@skyline.be) mentioning that you added something and include a link to the task and pull request.
+   1. Email [support.data-acquisition@skyline.be](mailto:support.data-acquisition@skyline.be) mentioning that you added something and include a link to the pull request.
