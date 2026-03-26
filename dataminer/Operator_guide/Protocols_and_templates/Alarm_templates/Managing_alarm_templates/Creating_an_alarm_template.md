@@ -14,6 +14,8 @@ You can follow the steps below or watch this short video, which walks you throug
 
 *Watch first: [Creating a DataMiner element](xref:Adding_elements)*
 
+*Watch next: [Configuring alarm hysteresis](xref:Configuring_alarm_hysteresis)*
+
 To create a new alarm template:
 
 1. Go to *Apps* > *Protocols & Templates*.
