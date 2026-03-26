@@ -194,6 +194,12 @@ When a burst of traps was received for a parameter that had the `mapAlarm` attri
 
 In some cases, uninitialized memory in SLElement could cause memory corruption.
 
+#### Names of DVE elements created with the noelementprefix option would be empty [ID 45014]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when a DVE manager generated DVE elements with the `noelementprefix` option, in some cases, the name of these elements would incorrectly be empty.
+
 #### SLSNMPAgent would not properly unregister itself with SLWatchDog during a DataMiner shutdown [ID 45023]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
