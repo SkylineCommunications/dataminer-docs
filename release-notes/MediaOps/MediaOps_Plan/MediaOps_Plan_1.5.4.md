@@ -47,3 +47,10 @@ When a node was added to a job from the Add Node panel, the settings defined in 
 #### Scheduling: Empty filter window for Resource View when only configuration parameters were defined [ID 45083]
 
 When you used the filter button on the Resource View page of the Scheduling app, but only configuration parameters were defined as orchestration settings on a resource pool, it could occur that the pop-up window only showed the *Apply* and *Reset* buttons without any filtering possibilities and without any further information. Now a pop-up message will be shown instead in such a case: "There are no capabilities or capacities available for filtering".
+
+#### Missing linked pool validation in Plan API helpers [ID 45141]
+
+The following validation related to resource pool links was missing in the Plan API helpers (Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan) and has now been added:
+
+- It should not be possible to add a deprecated resource pool as a linked resource pool.
+- Deprecating a resource pool should check if the pool is used as a linked pool.
