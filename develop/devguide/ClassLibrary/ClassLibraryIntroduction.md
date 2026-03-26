@@ -47,4 +47,4 @@ The GetDms method (see [Engine.GetDms](xref:Skyline.DataMiner.Core.DataMinerSyst
 Refer to [Examples](xref:ClassLibraryExamples) for some example use cases.
 
 > [!NOTE]
-> If you are a Skyline employee and you are interested in adding or changing the DataMinerSystem library, see [ClassLibraryDevelopment](xref:ClassLibraryDevelopment).
+> If you are a Skyline employee and you are interested in adding or changing the DataMinerSystem library, see [DataMinerSystem library development](xref:ClassLibraryDevelopment).
