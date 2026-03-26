@@ -103,6 +103,12 @@ A correlation rule will be blocked when it was triggered due to a correlated ala
 
 ### Fixes
 
+#### Problem when importing a dmimport package containing an element that generates DVE elements running a production version of the protocol with alarm templates configured on the DVEs [ID 44398]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When you imported a dmimport package containing an element that generates DVE elements running a production version of the protocol with alarm templates configured on the DVEs, up to now, the alarm templates on the DVE elements would incorrectly not be available because they were imported on the reference version instead of the production version.
+
 #### One protocol thread would incorrectly be able to add new rows to a table while another protocol thread was clearing that table [ID 44764] [ID 44833]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
