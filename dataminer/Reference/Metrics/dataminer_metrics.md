@@ -46,6 +46,9 @@ All specifications are provided based on the assumption that DMAs are running on
 | 23 | Number of concurrent automation script executions | DMA | 500 ||
 | 24 | Number of scheduled tasks starting at the same time | DMA | 100 | |
 | 25 | Total number of scheduled tasks | DMA | 3000 | This total includes all tasks, regardless of whether they are enabled and regardless of whether their trigger time is in the past or in the future. A recurring task (such as daily or weekly schedules) counts as one task, regardless of how many times it is executed. |
+| 26 | Number of overlapping bookings | DMS | 15 000 | This includes all bookings in a DMS. Validated using bookings with 6 resources on average. If a service is created for every active booking, metric 3 above applies. |
+| 27 | Number of resources | DMS | 100 000 | Validated with 1 capacity and 4 capabilities per resource. If function resources are used, metric 12 applies, since each function resource will create a DVE. |
+
 
 ## Benchmarks
 
