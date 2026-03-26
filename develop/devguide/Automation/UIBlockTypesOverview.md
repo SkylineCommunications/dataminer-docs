@@ -518,7 +518,9 @@ uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
-> This control can be used with a "WantsOnChange" property, which prevents updates being sent after a single character is changed in a text box. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange).
+>
+> - This control can be used with a "WantsOnChange" property, which prevents updates from being sent after a single character is changed in a text box. See [WantsOnChange](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange).
+> - When a TextBox is used as a multiline input, the newline characters will differ depending on the environment the interactive automation script is executed in. See [IsMultiline](xref:Skyline.DataMiner.Automation.UIBlockDefinition.IsMultiline) for more details.
 
 ## Time
 
