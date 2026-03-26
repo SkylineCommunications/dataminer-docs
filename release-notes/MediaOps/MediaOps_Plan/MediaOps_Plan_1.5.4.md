@@ -54,3 +54,10 @@ The following validation related to resource pool links was missing in the Plan 
 
 - It should not be possible to add a deprecated resource pool as a linked resource pool.
 - Deprecating a resource pool should check if the pool is used as a linked pool.
+
+#### Issues related to linked resource pools [ID 45160]
+
+The following issues related to linked resource pools have been resolved:
+
+- When a resource pool was edited in Resource Studio, all linked resource pools were removed in memory during initialization. When the user made other changes and click *Save*, the linked resource pools were removed completely.
+- When a new pool link was added, it was no longer possible to change to which pool it was linked.
