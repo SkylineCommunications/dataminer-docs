@@ -87,6 +87,18 @@ This file, located in `%SystemRoot%\System32\winevt\Logs\`, is the primary Windo
 
 From now on, the *SLWatchDog2.txt* log file will contain more detailed logging regarding run-time errors.
 
+#### SLNet will now take into account the log level before sending a log entry to SLLog [ID 44910]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+Up to now, SLNet would incorrectly send all log entries directly to SLLog, including entries of which the log level dictated that they should not be added to a log file.
+
+From now on, SLNet will only send a log entry to SLLog if the log level dictates that the entry should be logged. As a result, overall performance will increase when adding entries to log files.
+
+> [!IMPORTANT]
+> This change was reverted in Main Release 10.5.0 CU12, Main Release 10.6.0, and Feature Release 10.6.3 CU1 as it caused SLNet to leak handles whenever a user authenticated using SAML and a new SLHelper process was started. See [SLNet will no longer take into account the log level before sending a log entry to SLLog [ID 44868]](xref:General_Feature_Release_10.6.3_CU1#slnet-will-no-longer-take-into-account-the-log-level-before-sending-a-log-entry-to-sllog-id-44868).
+> The change has now been reintroduced.
+
 #### 'Functions' and 'Helper' folders will no longer be checked when protocols are being loaded [ID 44946]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
