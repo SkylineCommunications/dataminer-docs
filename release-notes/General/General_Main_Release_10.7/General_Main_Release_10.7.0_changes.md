@@ -286,6 +286,23 @@ Up to 10 log files will be kept on disk, and the log file of the current instanc
 
 A number of security enhancements have been made.
 
+#### Enhanced SSH logging [ID 44975]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+A number of enhancements have been made to the SSH logging:
+
+- From now on, when an SSH connection times out for one of the following reasons, an entry will be added to the element log:
+
+  - Host name could not be resolved.
+  - User authentication failed.
+
+- In the SSH logging, it will now clearly be indicated which operations have been performed. For example, during authentication, the logging will now clearly state which authentication methods have been used and what the results were.
+
+- In the SSH logging, most entries will now mention the session ID associated with the entry. As this same session ID is also mentioned in element log entries, users will find it much easier to find out which log entries are related.
+
+Also, an issue has been fixed. When a host name could not be resolved to an IP address, up to now, the SSH connection would incorrectly try to connect to localhost. From now on, when the host name could not be resolved, the connection will fail.
+
 #### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45022]
 
 <!-- MR 10.7.0 - FR 10.6.5 -->
