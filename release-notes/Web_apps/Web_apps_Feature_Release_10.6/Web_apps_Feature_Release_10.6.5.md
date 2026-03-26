@@ -176,6 +176,14 @@ The default user permissions for creating or duplicating a low-code app have bee
 
 Also, the default security setting for newly created or duplicated dashboards will now be "Protected, only you can edit".
 
+#### Dashboards/Low-Code Apps: Enhanced removal of data used in dashboard/page/panel [ID 45019]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In the *Data used in dashboard* and *Data used in page/panel* sections of the *Data* pane, you can remove data used in a dashboard, or in a page or panel of a low-code app by clicking the red recycle bin icon.
+
+A number of enhancements have now been made to the mechanism used to removed that data.
+
 #### GQI DxM: Session will now be closed automatically whenever an exception occurs while data is being requested [ID 45024]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
