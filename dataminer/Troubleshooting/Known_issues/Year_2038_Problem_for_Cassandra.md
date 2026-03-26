@@ -10,7 +10,7 @@ All DataMiner versions using the Cassandra database
 
 ## Cause
 
-The time formatting issue known as the [year 2038 problem](https://en.wikipedia.org/wiki/Year_2038_problem) makes it impossible to exceed the maximum Unix timestamp of 19 January 2038. Setting the TTL for a Cassandra database to any duration that exceeds that date, e.g. setting a TTL of 15 years in early 2023, will result in an error.
+The time formatting issue known as the [year 2038 problem](https://en.wikipedia.org/wiki/Year_2038_problem) makes it impossible to exceed the maximum Unix timestamp of 19 January 2038. Setting the TTL for a Cassandra database to any duration that exceeds that date, e.g., setting a TTL of 15 years in early 2023, will result in an error.
 
 From Cassandra version 3.11.2 and 4.0 onwards, an exception will be thrown in this case, while Cassandra version 3.7 will fail silently and drop the data.
 

@@ -7,7 +7,7 @@ uid: GetPagesForServiceSorted
 Use this method to retrieve a specific number of Data Display pages of a particular service.
 
 > [!NOTE]
-> Using this method, you can e.g. request Data Display pages in batches in order to minimize loading time.
+> Using this method, you can e.g., request Data Display pages in batches in order to minimize loading time.
 
 ## Input
 

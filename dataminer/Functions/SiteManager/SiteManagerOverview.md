@@ -4,7 +4,7 @@ uid: SiteManagerOverview
 
 # About Site Manager
 
-The Site Manager module is available as a DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)). It is used to set up secure communication tunnels enabling communication with selected on-premises data sources from a DaaS system without the need to configure e.g. a site-to-site VPN.
+The Site Manager module is available as a DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)). It is used to set up secure communication tunnels enabling communication with selected on-premises data sources from a DaaS system without the need to configure e.g., a site-to-site VPN.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ Site Manager can be used to set up communication tunnels for the following eleme
 The following limitations apply:
 
 - SNMP traps are currently not supported.
-- Elements that act as a server (e.g. a smart-serial server) are currently not supported.
+- Elements that act as a server (e.g., a smart-serial server) are currently not supported.
 - The *Test connection* button in Cube is not supported for testing connections to data sources on a remote site.
 - All tunnels route through Europe (Amsterdam). Depending on the location of DataMiner and the data source, latency may vary.
 

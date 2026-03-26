@@ -18,4 +18,4 @@ uid: General_Feature_Release_10.3.2_CU1
 
 <!-- MR 10.3.0 [CU0] - FR 10.3.2 [CU1] -->
 
-When a web app (e.g. Dashboards) tried to execute a GQI query, in some cases, a `Node: 'X' is not supported by the current server version.` error could be thrown (`'X'` being the node that caused the error).
+When a web app (e.g., Dashboards) tried to execute a GQI query, in some cases, a `Node: 'X' is not supported by the current server version.` error could be thrown (`'X'` being the node that caused the error).

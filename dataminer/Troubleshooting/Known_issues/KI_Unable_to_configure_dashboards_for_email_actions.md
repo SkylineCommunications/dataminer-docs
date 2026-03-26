@@ -2,7 +2,7 @@
 uid: KI_Unable_to_configure_dashboards_included_in_email_actions
 ---
 
-# Unable to configure dashboards included in 'Email' actions for Automation scripts, scheduled tasks, and Correlation rules
+# Unable to configure dashboards included in 'Email' actions for automation scripts, scheduled tasks, and correlation rules
 
 ## Affected versions
 
@@ -18,7 +18,7 @@ Available from DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3<!--RN 42240--> onwards
 
 ## Description
 
-When you select the *Include report or dashboard* option while configuring an *Email* action in an Automation script, scheduled task, or Correlation rule, the *Configure* button, which allows you to open a window where you can further configure the dashboard, is no longer available.
+When you select the *Include report or dashboard* option while configuring an *Email* action in an automation script, scheduled task, or correlation rule, the *Configure* button, which allows you to open a window where you can further configure the dashboard, is no longer available.
 
 ![*Configure* button](~/dataminer/images/Configure_button_missing.png)
 

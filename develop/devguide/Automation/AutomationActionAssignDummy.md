@@ -4,7 +4,7 @@ uid: AutomationActionAssignDummy
 
 # Assign dummy
 
-Assign an Automation script's dummy to a specific element by using a variable or a value.
+Assign an automation script's dummy to a specific element by using a variable or a value.
 
 - For a pre-determined element, select Value to select a specific element, and enter the element name or ID.
 

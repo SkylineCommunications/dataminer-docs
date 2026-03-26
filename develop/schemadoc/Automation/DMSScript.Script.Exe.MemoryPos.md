@@ -16,7 +16,7 @@ string
 
 ## Remarks
 
-Format "memory file ID:position of the item to retrieve or set" e.g. "2:100".
+Format "memory file ID:position of the item to retrieve or set" e.g., "2:100".
 
 ## Examples
 

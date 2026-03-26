@@ -6,7 +6,7 @@ uid: ConnectorBestPracticesNames
 
 ## Unique and meaningful
 
-A protocol consists of different items such as parameters, actions, QActions, etc. Every item has a name that is used for internal reference in e.g. SLProtocol or DIS. Protocol item names must be unique per item type and must be meaningful.
+A protocol consists of different items such as parameters, actions, QActions, etc. Every item has a name that is used for internal reference in e.g., SLProtocol or DIS. Protocol item names must be unique per item type and must be meaningful.
 
 ## Parameters
 
@@ -21,7 +21,7 @@ A protocol consists of different items such as parameters, actions, QActions, et
 
 ## Actions and QActions
 
-A meaningful name must be chosen for QActions or Actions, indicating the functionality that is executed. The name of an action should contain a verb (e.g. CheckMaximumDuration, InitiateImageTransfer, etc.).
+A meaningful name must be chosen for QActions or Actions, indicating the functionality that is executed. The name of an action should contain a verb (e.g., CheckMaximumDuration, InitiateImageTransfer, etc.).
 
 ## Groups
 
@@ -29,7 +29,7 @@ The name of a group must clearly describe its content.
 
 ## Triggers
 
-The name of a trigger must reflect what it is triggering on (e.g. On Poll Counter Change).
+The name of a trigger must reflect what it is triggering on (e.g., On Poll Counter Change).
 
 ## Elements
 

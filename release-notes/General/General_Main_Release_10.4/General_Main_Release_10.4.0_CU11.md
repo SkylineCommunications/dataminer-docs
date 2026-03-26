@@ -118,7 +118,7 @@ In some rare cases, SLDataMiner could stop working when a connector was deleted 
 
 Up to now, all Cassandra compaction settings would incorrectly be overwritten at DataMiner startup.
 
-For example, if you had manually configured a compaction setting (e.g. *unsafe_aggressive_sstable_expiration*), this change would get overwritten by the default setting.
+For example, if you had manually configured a compaction setting (e.g., *unsafe_aggressive_sstable_expiration*), this change would get overwritten by the default setting.
 
 #### DataMiner Maps: Markers that did not match the alarm level filter would become visible for a split second [ID 41555]
 

@@ -68,7 +68,7 @@ The result will look like this:
 
 ## Step 1: Create the implementation
 
-Change the *GQIMetaData* attribute above the class to configure a new name for your custom operator, e.g. "Balance & obfuscate".
+Change the *GQIMetaData* attribute above the class to configure a new name for your custom operator, e.g., "Balance & obfuscate".
 
 The code of your operator should look like this:
 
@@ -182,7 +182,7 @@ With a large dataset, you may want to filter your results to avoid retrieving mi
 
 Results are now only displayed for subjects aged 70 or older. However, while the outcome is accurate, you may notice the query takes a very long time to load.
 
-To expedite the process, we recommend **filtering as early as possible**. This approach prevents the need to generate results for all individuals before filtering by age. Even if the data source efficiently filters on *Age* (e.g. using internal SQL queries), the framework cannot filter directly on the data source because the custom operator is defined first.
+To expedite the process, we recommend **filtering as early as possible**. This approach prevents the need to generate results for all individuals before filtering by age. Even if the data source efficiently filters on *Age* (e.g., using internal SQL queries), the framework cannot filter directly on the data source because the custom operator is defined first.
 
 ![Prioritizing age filtering](~/dataminer/images/tutorial_2_query_2.png)
 
@@ -306,7 +306,7 @@ Imagine you want to identify an individual even after the original entries in th
 
 ![filter by 'name'](~/dataminer/images/tutorial_2_query_7.png)
 
-If you filter on a specific name, e.g. Luiz Nevaeh, you get the following result:
+If you filter on a specific name, e.g., Luiz Nevaeh, you get the following result:
 
 | Name | Age | Income | Expenses | Balance |
 |--|--|--|--|--|

@@ -50,7 +50,7 @@ When a DataMiner upgrade finishes (successful or not), from now on, all remainin
 
 #### Client applications now also get notified when cell alarm levels in the source data tables of direct views change due to updates that do not change the cell value \[ID 27785\]
 
-From now on, client applications displaying direct views will also be notified when cell alarm levels in the source data tables change due to updates that do not change the cell value. (e.g. when a cell in a source table gets masked).
+From now on, client applications displaying direct views will also be notified when cell alarm levels in the source data tables change due to updates that do not change the cell value. (e.g., when a cell in a source table gets masked).
 
 #### Live Sharing Service: Enhanced error handling \[ID 27791\]
 
@@ -68,17 +68,17 @@ Virtual functions are now displayed in a separate *Virtual Functions* section in
 
 Due to a number of enhancements, overall performance has increased when connecting to a DataMiner Agent with a large amount of alarms.
 
-#### Interactive Automation scripts: No longer possible to clear the value of a selection box control \[ID 27845\]
+#### Interactive automation scripts: No longer possible to clear the value of a selection box control \[ID 27845\]
 
-Up to now, in an interactive Automation script, it was possible to clear the value of a selection box control by clicking an X button. From now on, this is no longer possible.
+Up to now, in an interactive automation script, it was possible to clear the value of a selection box control by clicking an X button. From now on, this is no longer possible.
 
 #### DataMiner Cube: Enhanced performance when logging in and logging out \[ID 27851\]
 
 Due to a number of enhancements, overall performance has increased when logging in and logging out, especially on large systems.
 
-#### Interactive Automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
+#### Interactive automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
 
-Up to now, a multiline text box (i.e. a UIBlock of type TextBox with IsMultiline set to true) would by default have a height of 1 line and would expand when it was selected. From now on, its initial height will be fixed. It will no longer expand when selected.
+Up to now, a multiline text box (i.e., a UIBlock of type TextBox with IsMultiline set to true) would by default have a height of 1 line and would expand when it was selected. From now on, its initial height will be fixed. It will no longer expand when selected.
 
 #### Failover: More information will now be returned after synchronizing the two agents \[ID 27870\]
 
@@ -120,7 +120,7 @@ The *FieldDescriptor* class for DataMiner jobs now has a new *DefaultValue* prop
 
 #### DataMiner Cube: Enhanced performance when opening the Reports page of a view card \[ID 27937\]
 
-Due to a number of enhancements, overall performance has increased when opening the Reports page of a view card, especially when that page shows a large amount of elements with heatlines (e.g. the root view).
+Due to a number of enhancements, overall performance has increased when opening the Reports page of a view card, especially when that page shows a large amount of elements with heatlines (e.g., the root view).
 
 #### Service & Resource Management: ResourcesNotMatchWithServiceDefinition check removed \[ID 27938\]
 
@@ -206,9 +206,9 @@ When a DataMiner Agent with a Cassandra database had experienced two days of hig
 
 A number of enhancements have now been made to the way in which the alarm history is retrieved during a DataMiner startup.
 
-#### Interactive Automation scripts: Problem when a text box had its wantOnChange setting set to true and its value set to an empty string \[ID 27666\]
+#### Interactive automation scripts: Problem when a text box had its wantOnChange setting set to true and its value set to an empty string \[ID 27666\]
 
-When a text box in an interactive Automation script had its wantOnChange setting set to true and its value set to an empty string, in some cases, an exception could be thrown.
+When a text box in an interactive automation script had its wantOnChange setting set to true and its value set to an empty string, in some cases, an exception could be thrown.
 
 #### Mobile apps: Problem with time range quick pick buttons \[ID 27676\]
 
@@ -247,7 +247,7 @@ On a system using automatic incident tracking on which DataMiner Infrastructure 
 
 When a VirtualFunctionResource was unbound, in some cases, it would still be processing parameter sets from its bound element. This would cause the parameters of the unbound element to no longer be in an “uninitialized” state. Instead, they would incorrectly stay set to the last received value from the bound element.
 
-#### Interactive Automation scripts: MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly \[ID 27736\]
+#### Interactive automation scripts: MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly \[ID 27736\]
 
 In some cases, the MinWidth, MaxWidth, MinHeight and MaxHeight properties of UIBlock components would not be parsed correctly.
 
@@ -267,7 +267,7 @@ Also, it will now be indicated more clearly that a highlighted IO button is sele
 
 #### Service & Resource Management: When a ReservationInstance was updated, the timeout scripts would incorrectly be executed instead of the expected event script \[ID 27757\]
 
-When you updated an ongoing ReservationInstance, in some cases, all ongoing and future events (i.e. scripts) of that instance would incorrectly be canceled and the timeout scripts would be run on all DataMiner Agents instead.
+When you updated an ongoing ReservationInstance, in some cases, all ongoing and future events (i.e., scripts) of that instance would incorrectly be canceled and the timeout scripts would be run on all DataMiner Agents instead.
 
 #### DataMiner Cube: 'Show all alarm updates' option not working with alarm for migrated element \[ID 27761\]
 
@@ -291,7 +291,7 @@ In some cases, a KeyNotFound exception could be thrown when you opened a ListVie
 
 #### Memory leak when using the Chromium browser engine in a browser version of DataMiner Cube \[ID 27789\]
 
-When running a browser version of DataMiner Cube in Microsoft Internet Explorer, in some cases, a memory leak could occur when using the Chromium browser engine to e.g. visualize web pages in Visual Overview.
+When running a browser version of DataMiner Cube in Microsoft Internet Explorer, in some cases, a memory leak could occur when using the Chromium browser engine to, for example, visualize web pages in Visual Overview.
 
 #### Problem with SLDataMiner at startup when no NICs could be found \[ID 27799\]
 
@@ -327,7 +327,7 @@ When an alarm associated with a column parameter was masked for a limited period
 
 #### Dashboards app - Line chart component: Problems when retrieving trend data \[ID 27853\]
 
-In some cases, a trend graph legend would show an error when a trend data request was interrupted, e.g. by scrolling to another page before the current page was fully loaded.
+In some cases, a trend graph legend would show an error when a trend data request was interrupted, e.g., by scrolling to another page before the current page was fully loaded.
 
 Also, when multiple trend requests were required, in some cases, those requests would be ignored when a trend data request was already in progress.
 
@@ -365,11 +365,11 @@ Also, a selection box problem could occur when multiple conditions were configur
 
 #### Automation: Problem when retrieving information events from all DMAs \[ID 27903\]
 
-When, in a DataMiner System with multiple agents, information events were retrieved by an Automation script, in some cases, not all information events would be retrieved.
+When, in a DataMiner System with multiple agents, information events were retrieved by an automation script, in some cases, not all information events would be retrieved.
 
 #### Dashboards app - Time range component: Default range would be used even after being overwritten afterwards \[ID 27941\]
 
-If the default values of a time range component had been set to a custom range, in some cases, those values would incorrectly still be used after being overwritten afterwards (e.g. by means of URL arguments or another feed).
+If the default values of a time range component had been set to a custom range, in some cases, those values would incorrectly still be used after being overwritten afterwards (e.g., by means of URL arguments or another feed).
 
 #### DataMiner Cube - Bookings app: Memory leak when opening the Signal Path tab \[ID 27952\]
 

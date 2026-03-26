@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.SkipInformationEvents
 
 # SkipInformationEvents element
 
-Specifies whether no information events should be generated when scripts are triggered by Correlation rules or scheduled tasks. Default: true.
+Specifies whether no information events should be generated when scripts are triggered by correlation rules or scheduled tasks. Default: true.
 
 ## Content Type
 
@@ -16,4 +16,4 @@ boolean
 
 ## See also
 
-- [Enabling information events when scripts are started by Correlation rules or scheduled tasks](xref:Configuration_of_DataMiner_processes#enabling-information-events-when-scripts-are-started-by-correlation-rules-or-scheduled-tasks)
+- [Enabling information events when scripts are started by correlation rules or scheduled tasks](xref:Configuration_of_DataMiner_processes#enabling-information-events-when-scripts-are-started-by-correlation-rules-or-scheduled-tasks)

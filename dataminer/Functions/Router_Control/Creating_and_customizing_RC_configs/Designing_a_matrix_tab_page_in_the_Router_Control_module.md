@@ -43,7 +43,7 @@ uid: Designing_a_matrix_tab_page_in_the_Router_Control_module
 
 ## Adding a matrix represented by two table parameters
 
-The Router Control module also allows you to configure a matrix based on two table parameters, i.e. an input and an output table. This can especially be of use for large matrices (512x512 and more), as it will result in better performance than using a matrix parameter.
+The Router Control module also allows you to configure a matrix based on two table parameters, i.e., an input and an output table. This can especially be of use for large matrices (512x512 and more), as it will result in better performance than using a matrix parameter.
 
 If you configure a matrix like this, an output cannot be connected to more than one input at a time.
 
@@ -79,7 +79,7 @@ Note that the input and output tables must have at least the following read and 
 
 | Column | Description |
 |--|--|
-| Index | Primary key, i.e. a 1-based sequential numbering of inputs/outputs. |
+| Index | Primary key, i.e., a 1-based sequential numbering of inputs/outputs. |
 | Label | Text to be displayed. |
 | IsEnabled | Whether or not this input/output is currently enabled (Boolean: 0 or 1). |
 | IsLocked | Whether or not this input/output is currently locked (Boolean: 0 or 1). |
@@ -168,7 +168,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
    If syntax errors are detected, a message will appear at the bottom of the dialog box. Click the message to see more information on those errors.
 
 > [!NOTE]
-> Router Control themes can be specified on three levels: on global level (i.e. the entire Router Control module), on configuration level, and on matrix level. Themes defined on a higher level are inherited by lower levels, and themes defined on a lower level override the ones defined on a higher level.
+> Router Control themes can be specified on three levels: on global level (i.e., the entire Router Control module), on configuration level, and on matrix level. Themes defined on a higher level are inherited by lower levels, and themes defined on a lower level override the ones defined on a higher level.
 
 ## Deleting a matrix tab page
 

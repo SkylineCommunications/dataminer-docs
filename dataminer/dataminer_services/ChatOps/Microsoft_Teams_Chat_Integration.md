@@ -14,14 +14,14 @@ If your DataMiner System is connected to dataminer.services, you can integrate y
 
 ### Development prerequisites
 
-If you want to create chat integration Automation scripts, you will need to make sure the following are installed:
+If you want to create chat integration automation scripts, you will need to make sure the following are installed:
 
-- **Skyline.DataMiner.DcpChatIntegrationHelper NuGet package**: You can find this package on [nuget.org](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper). It allows easy integration with business communication platforms from a DataMiner Automation script.
+- **Skyline.DataMiner.DcpChatIntegrationHelper NuGet package**: You can find this package on [nuget.org](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper). It allows easy integration with business communication platforms from an automation script.
 
   > [!TIP]
   > We recommend that you always use the **latest version** of the Skyline.DataMiner.DcpChatIntegrationHelper NuGet package.
 
-- **DataMiner Integration Studio (DIS) Visual Studio extension**: DIS is required for development of Automation scripts using the Skyline.DataMiner.DcpChatIntegrationHelper NuGet package. You can also use DIS to deploy Automation scripts directly from your development environment to your DataMiner Systems.
+- **DataMiner Integration Studio (DIS) Visual Studio extension**: DIS is required for development of automation scripts using the Skyline.DataMiner.DcpChatIntegrationHelper NuGet package. You can also use DIS to deploy automation scripts directly from your development environment to your DataMiner Systems.
 
   > [!TIP]
   > See [Installing DataMiner Integration Studio](xref:Installing_and_configuring_the_software).
@@ -62,7 +62,7 @@ The following features are available:
 - Sending notifications using Adaptive Cards in private chats in the name of the DataMiner Teams bot
 - Sending notifications using Adaptive Cards with buttons in private chats in the name of the DataMiner Teams bot
 
-To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples).
+To get started, you can find several example automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples).
 
 After you have made sure the above-mentioned prerequisites are in place, you can download and deploy [the DcpChatIntegrationExamples DMAPP](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
 
@@ -72,7 +72,7 @@ After you have made sure the above-mentioned prerequisites are in place, you can
 
 ## Security
 
-By granting [Admin consent](xref:Granting_admin_consent) from your Microsoft (Teams) tenant to "DataMiner" (i.e. Skyline Communications) in the [Admin app](https://admin.dataminer.services), you allow Skyline Communications to execute these chat integration actions. This includes creating teams, channels, and chats, fetching users, chats, etc.
+By granting [Admin consent](xref:Granting_admin_consent) from your Microsoft (Teams) tenant to "DataMiner" (i.e., Skyline Communications) in the [Admin app](https://admin.dataminer.services), you allow Skyline Communications to execute these chat integration actions. This includes creating teams, channels, and chats, fetching users, chats, etc.
 
 You can revoke this access at any time. See [Granting admin consent for Teams Chat Integration](xref:Granting_admin_consent).
 

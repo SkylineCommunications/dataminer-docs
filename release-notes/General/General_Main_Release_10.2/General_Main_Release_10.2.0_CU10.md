@@ -109,7 +109,7 @@ The *Show the DataMiner TV section* setting has been removed from the *User > Cu
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
-Previously, cell values of GQI result rows for DomInstanceIds, DomDefinitionIds, ProfileInstanceIds, and ProfileDefinitionIds contained both the display value of the GUID and the object type (e.g. "DomDefinitionId[00000000-0000-0000-0000-000000000000]"). Now the cell value will only contain the display value of the GUID.
+Previously, cell values of GQI result rows for DomInstanceIds, DomDefinitionIds, ProfileInstanceIds, and ProfileDefinitionIds contained both the display value of the GUID and the object type (e.g., "DomDefinitionId[00000000-0000-0000-0000-000000000000]"). Now the cell value will only contain the display value of the GUID.
 
 #### Port initialization error messages have been improved [ID 34920]
 
@@ -188,11 +188,11 @@ When, in a service chain within a service context, an element shape was linked t
 
 When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
 
-#### Web apps - Interactive Automation scripts: All other tree view components in a dialog box would incorrectly collapse when you selected an item in a tree view component [ID 34773]
+#### Web apps - Interactive automation scripts: All other tree view components in a dialog box would incorrectly collapse when you selected an item in a tree view component [ID 34773]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
-When, in a dialog box of an interactive Automation script, you selected an item in a tree view component, other tree view components on that dialog box would incorrectly collapse.
+When, in a dialog box of an interactive automation script, you selected an item in a tree view component, other tree view components on that dialog box would incorrectly collapse.
 
 #### Standalone parameters belonging to another child of the same DVE parent element could be set to 'Not Initialized' when a row linked to a DVE child element was deleted [ID 34785]
 

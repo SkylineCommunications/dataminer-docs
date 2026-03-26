@@ -58,11 +58,21 @@ On the *General* page, the following settings are available:
 
 - **Background theme**: In the dropdown box, you can select the background theme for DataMiner Cube. The following themes are available:
 
-  - *Skyline Mixed*
+  - From DataMiner 10.5.0 [CU13]/10.6.0/10.6.3 onwards<!--RN 44832 + 44881-->:
 
-  - *Skyline Black*
+    - *Operating System* (default): Follows the Windows app mode (Light or Dark) configured in the Windows settings.
 
-  - *Skyline Light* (from DataMiner 10.2.9/10.3.0 onwards)
+    - *Dark*
+
+    - *Light*
+
+  - Previous versions:
+
+    - *Skyline Mixed*
+
+    - *Skyline Black*
+
+    - *Skyline Light*
 
   > [!NOTE]
   > When you have modified this setting, reconnect your DataMiner Cube session to make sure the change is applied throughout the UI.
@@ -147,7 +157,7 @@ To configure a custom tab page:
 
 ### Card settings
 
-On the *Card* page, the settings are divided into four sections, i.e. a section for view cards, element cards, service cards, and all cards. Some settings return in several sections, so that they can be applied separately for different types of card.
+On the *Card* page, the settings are divided into four sections, i.e., a section for view cards, element cards, service cards, and all cards. Some settings return in several sections, so that they can be applied separately for different types of card.
 
 - **How to show view/element/EPM/service card Visual pages**: This setting can be configured separately for view cards, element cards, EPM cards and service cards. It provides three options for navigation between Visual Overview pages:
 
@@ -230,7 +240,7 @@ On the *Cube* page, the following settings are available:
 
 - **Do not show compatibility warnings for Visio drawings**: When you select this setting, no compatibility warnings will appear when you open a Visio file, for instance when you open a VDX file in a recent version of MS Visio.
 
-- **Do not confirm program executions from scripts**: Available from DataMiner 10.3.3/10.4.0 onwards. When you select this setting, no confirmation box will be displayed when an interactive Automation script tries to execute a program. <!-- RN 35418 -->
+- **Do not confirm program executions from scripts**: Available from DataMiner 10.3.3/10.4.0 onwards. When you select this setting, no confirmation box will be displayed when an interactive automation script tries to execute a program. <!-- RN 35418 -->
 
 - **Mouse word highlighting in Alarm Console**: This setting determines which key should be pressed in order to highlight words by moving the mouse over them, with the purpose of adding them to a filter.
 
@@ -239,7 +249,7 @@ On the *Cube* page, the following settings are available:
   > [!TIP]
   > See also: [Alarm Console settings](xref:AlarmConsoleSettings)
 
-- **Enable 'Multiple set'**: Available from DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards<!--RN 43135-->. This setting determines whether users can open [the *Multiple set* window](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements) to update the same parameter on several elements at once. This dialog box can be accessed by selecting the *Multiple set* option from an element's right-click menu (e.g. in the surveyor) or by clicking a shape linked to a [MULTIPLE SET command](xref:Linking_a_shape_to_a_MULTIPLE_SET_command) in a visual overview. This setting is mainly intended to make it possible for administrators to restrict access to the *Multiple set* feature via the [user group settings](xref:Configuring_a_set_of_user_group_settings). By default, this setting is enabled.
+- **Enable 'Multiple set'**: Available from DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards<!--RN 43135-->. This setting determines whether users can open [the *Multiple set* window](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements) to update the same parameter on several elements at once. This dialog box can be accessed by selecting the *Multiple set* option from an element's right-click menu (e.g., in the surveyor) or by clicking a shape linked to a [MULTIPLE SET command](xref:Linking_a_shape_to_a_MULTIPLE_SET_command) in a visual overview. This setting is mainly intended to make it possible for administrators to restrict access to the *Multiple set* feature via the [user group settings](xref:Configuring_a_set_of_user_group_settings). By default, this setting is enabled.
 
 - **Show the news section**: Determines whether the optional news section is displayed on the DataMiner Pulse welcome page in Cube.
 

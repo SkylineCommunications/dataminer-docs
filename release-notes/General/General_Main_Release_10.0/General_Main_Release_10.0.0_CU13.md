@@ -14,7 +14,7 @@ uid: General_Main_Release_10.0.0_CU13
 
 #### Schedule configuration of BPA tests \[ID 29000\]
 
-On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
+On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g., daily or every 12 hours.
 
 #### Enhanced performance when assigning alarm templates with conditions used in multiple rules \[ID 29109\]
 
@@ -89,7 +89,7 @@ When you generated a PDF report with the options “No grouping” and “Includ
 
 #### DataMiner Cube - Automation: Discarding a newly created script would not delete it \[ID 29032\]
 
-When you discarded a newly created Automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
+When you discarded a newly created automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
 
 #### No trigger keys listed when debugging a QAction due to a compatibility issue between DataMiner and DataMiner Integration Studio \[ID 29049\]
 

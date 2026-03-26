@@ -12,7 +12,7 @@ The following high-level phases are typically part of the Turnkey methodology:
 
 - **Initial Requirements & Budgeting**: A Turnkey Project starts with User Requirements. An initial estimated budget is provided for the project based on those requirements, along with an initial estimated timeline for that kind of project, based on the information available at that time.
 
-- **Letter of Intent or Purchase Order**: The Consultancy & Detailed System Design of a Turnkey Project cannot start without a firm commitment to the commercial terms & conditions (e.g. unit pricing, payment terms, contract terms, etc.) that came with the budget. Typically, there needs to be a clear and firm agreement on the funding of the design and consultancy services required for the Consultancy & Detailed System Design phase.
+- **Letter of Intent or Purchase Order**: The Consultancy & Detailed System Design of a Turnkey Project cannot start without a firm commitment to the commercial terms & conditions (e.g., unit pricing, payment terms, contract terms, etc.) that came with the budget. Typically, there needs to be a clear and firm agreement on the funding of the design and consultancy services required for the Consultancy & Detailed System Design phase.
 
 - **Consultancy & Detailed System Design**: During this phase, the entire solution must be designed, described and documented in great detail along with all activities that will be required for the implementation of the solution, in order to create a solid project plan fit for a waterfall Turnkey Project execution. This typically includes:
 
@@ -24,7 +24,7 @@ The following high-level phases are typically part of the Turnkey methodology:
 
     - **TAP - Test Acceptance Plan**: Along with the FDS/DDS, the user also must draft a Test Acceptance Plan with a detailed description of all the points of verification and all tests that must be executed for the formal acceptance, along with an accurate description of the expected outcome, in tangible, easy-to-measure and unambiguous terms. The success of the outcome of the project is measured by verifying the TAP against the implemented solution.
 
-    - **Update of Project Price and/or Project Plan**: Depending on the delta between the initial requirements and the final FDS/DDS, Skyline is entitled to update the pricing and implementation timeline as compared to the initially provided budget and timeline (i.e. if fundamental new requirements were included in the FDS/DDS, which were not referenced in the initial requirements, and/or if certain initial requirements were further developed beyond what could have been reasonably expected, then this has an impact on both the cost and the implementation timeline).
+    - **Update of Project Price and/or Project Plan**: Depending on the delta between the initial requirements and the final FDS/DDS, Skyline is entitled to update the pricing and implementation timeline as compared to the initially provided budget and timeline (i.e., if fundamental new requirements were included in the FDS/DDS, which were not referenced in the initial requirements, and/or if certain initial requirements were further developed beyond what could have been reasonably expected, then this has an impact on both the cost and the implementation timeline).
 
     - **Sign-Off**: Only after all parties have formally signed off these documents, can the actual implementation and deployment of the project start.
 

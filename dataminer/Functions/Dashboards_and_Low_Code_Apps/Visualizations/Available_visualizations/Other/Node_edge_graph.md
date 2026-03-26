@@ -4,13 +4,13 @@ uid: DashboardNodeEdgeGraph
 
 # Node edge graph
 
-The node edge graph component allows you to **visualize any type of objects (i.e. "nodes") and the connections between them (i.e. "edges")**. By linking parameters and properties to those nodes and edges, you can turn the graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
+The node edge graph component allows you to **visualize any type of objects (i.e., "nodes") and the connections between them (i.e., "edges")**. By linking parameters and properties to those nodes and edges, you can turn the graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data.
 
 ![Node edge graph](~/dataminer/images/Node_Edge_Graph.gif)<br>*Node edge graph component in DataMiner 10.4.9*
 
 ## Supported data types
 
-The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects).
+The data necessary to create a node edge graph can be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e., objects), whereas edge queries provide data that will be visualized as edges (i.e., connections between objects).
 
 The component should therefore **always be configured with [query data input](xref:Query_Data)**.
 
@@ -27,12 +27,12 @@ You can interact with the node edge graph in several ways:
 
 - **Selecting an item**: Click an item to select it. You can select multiple items at the same time by keeping the Ctrl key pressed while clicking nodes. You can select all items at once, by pressing Ctrl + A.
 
-  When you select one or multiple items in the node edge graph, the selected data becomes available under *All available data* > *Components* > *[Page name]* > *Node edge graph* > *Tables*.
+  When you select one or multiple items in the node edge graph, the selected data becomes available under *All available data* > *Components* > *[Page/Panel name]* > *Node edge graph* > *Tables*.
 
-  Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e. a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
+  Thanks to this exposed data, you can use the node edge graph component as a dynamic selector, i.e., a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is showing additional details when a node is selected.
 
   > [!NOTE]
-  > Prior to DataMiner 10.5.0 [CU12]/10.6.3<!--RN 44015-->, the exact path to the exposed data may differ. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
+  > Note that depending on your setup, the exact path to the exposed data may differ. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
 - **Moving a node**: You can select and drag a node to a new position. You can move multiple nodes at the same time by keeping the Ctrl key pressed while selecting several nodes and then moving them together. You can move all nodes at once by pressing Ctrl + A and dragging them together.
 
@@ -46,7 +46,7 @@ You can interact with the node edge graph in several ways:
 
       - When *Advanced* > *Node positions* is set to *Layered* in the *Layout* pane, node positions are stored automatically when the user has editor permissions<!--RN 44154-->. See [Configuring security for a dashboard](xref:Configuring_dashboard_security) and [Configuring app security](xref:LowCodeApps_security_config).
 
-      - When *Advanced* > *Node positions* is set to *Linked to data*, node positions are only stored if a node-move event is configured that triggers a *Launch a script* action. This Automation script should update the original data objects with the modified ones exposed by the event. For more information, see [Configuring node movement events](#configuring-node-movement-events).
+      - When *Advanced* > *Node positions* is set to *Linked to data*, node positions are only stored if a node-move event is configured that triggers a *Launch a script* action. This automation script should update the original data objects with the modified ones exposed by the event. For more information, see [Configuring node movement events](#configuring-node-movement-events).
 
   - Up to DataMiner 10.5.0 [CU9]/10.5.12:
 
@@ -90,9 +90,9 @@ To highlight items with a query filter:
 
 1. Apply the same query data to the query filter that is used by the node edge graph.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your node edge graph component.
+1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *All available data* > *Components* > *[Page/Panel name]* > *Query filter* in the *Data* pane, and drag the *Query columns* data item onto your node edge graph component.
 
-   Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
+   Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
    You can now use the query filter component to filter and refine the data displayed in the node edge graph component. Items that do not meet the specified criteria will be shown with lowered opacity.
 
@@ -185,12 +185,12 @@ The node edge graph component supports showing multiple layers. The following *I
 | Nodes | Base node | Node name | This name is not displayed in the component itself, and is only intended to clarify the configuration. |
 | Nodes | Base node | Label | Select the column to use as the label for the node. |
 | Nodes | Base node | Shape | Select a different shape in the dropdown box to customize the node shape. By default, no shape is used. You can also select *Custom* in the dropdown box in order to get additional options that allow you to create a fully customized shape instead of one of the available presets. Click the circle to the right of the dropdown box to select a custom color for the shape. |
-| Nodes | Base node | Visual | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Choose whether to show an icon or custom image within the node shape. |
+| Nodes | Base node | Visual | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. Choose whether to show an icon, custom image, or use the Template Editor. See [Customizing nodes](#customizing-nodes). |
 | Nodes | Base node | Icon | Select a different icon from the dropdown box to customize the icon shown within the node shape. Click the circle to the right of the box to select a custom color. From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, this setting is only available if the *Visual* setting is set to *Icon*. |
 | Nodes | Base node | Image | Only available if the *Visual* setting is set to *Image*. Enter a custom image link. |
 | Nodes | Base node | Size | From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, use the slider to adjust the size of the node, with a minimum of 1 px and a maximum of 100 px (default: 48 px). Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, select whether the node should be small, medium-sized, or large. |
 | Nodes | Base node | Weight | A number indicating the relative importance of the node. The higher the number, the more important the node, which determines where it is displayed in the graph (depending on the layout settings). |
-| Nodes | Base node | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default. |
+| Nodes | Base node | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default. From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44809-->, nodes using templates do not support this setting, as tooltip content is defined in the template. |
 | Nodes | Base node | Metric | Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->. Configure how the node label is displayed. You can hide the label, derive it from conditional coloring, or select a custom column to display as the label. See [Configuring node and edge labels](#configuring-node-and-edge-labels). |
 | Nodes | Base node | Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6<!--RN 39417--> up to DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44218-->, when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node. |
 | Nodes | Base node | Actions | Select *Add action* to configure an action that is executed when a node is clicked or double-clicked, or when an icon is clicked in the tooltip. See [Adding actions to a node edge graph](#adding-actions-to-a-node-edge-graph). |
@@ -228,6 +228,43 @@ For each node query and edge query, and for any configured node or edge override
 
   - If neither has conditional coloring, the default background color of the node edge graph component is used.
 
+#### Customizing nodes
+
+You can **customize the appearance of nodes** in the graph to better represent your data.
+
+1. In the *Settings* pane, navigate to *Identifiers* > *Nodes* > *Base node* > *Visual*.
+
+   ![*Settings* pane displaying *Identifiers* section with *Nodes* subsection expanded, showing the *Base node* > *Visual* options](~/dataminer/images/Node_Edge_Graph_Visual.png)<br>*Node edge graph settings in DataMiner 10.6.4*
+
+1. Choose how you want the node to look:
+
+   - *Image*: Enter the URL of a custom image to display inside the node. Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards.
+
+   - *Icon*: Select an icon from the dropdown list to display inside the node shape (Default: `CircleRing`). Click the circle to the right of the box to select a custom color.
+
+   - *Template*: Use a prebuilt or custom design for more control over the node's appearance. Available from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44809-->.
+
+     ![Node edge graph template example showing a network diagram with multiple nodes displaying status indicators, roles, and labels organized in a hierarchical structure](~/dataminer/images/NodeEdgeGraphTemplate.gif)<br>*Node edge graph component in DataMiner 10.6.4*
+
+     In the example above, a custom template is used to display additional node information, such as status indicators, roles, and labels, directly within each node.
+
+     The following options are available when the *Template* option is enabled:
+
+     - ![Edit](~/dataminer/images/Edit_Template.png): Open the Template Editor to edit the node design. See [Using the Template Editor](xref:Template_Editor).
+
+     - ![Browse templates](~/dataminer/images/Browse_Templates.png): Browse available [preset templates](xref:Template_Editor#using-a-preset-template) or [reuse a custom template](xref:Template_Editor#reusing-a-custom-template).
+
+     By default, node templates contain the following pre-configured layers:
+
+     | Layer | Type | Description |
+     | -- | -- | -- |
+     | ![Ellipse layer](~/dataminer/images/Nodes_Template_Layer1.png) | Ellipse | Acts as the background of each node, with conditional formatting for hover and selection. |
+     | ![Ellipse layer 2](~/dataminer/images/Nodes_Template_Layer2.png) | Ellipse | Acts as a visual border by being slightly larger than the background layer, with conditional formatting for hover and selection. |
+
+     This default template ensures that a node is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
+
+     This can for instance be useful when the node edge graph component data (for example, *Components* > *[Page/Panel name]* > *Node edge graph* > *Selected items* > *Tables*) is used in another component. The highlight helps users identify which data is driving the content of the linked component.
+
 ## Adding actions to a node edge graph
 
 When you add a node edge graph to a low-code app, you can configure actions that are executed when a node or edge is clicked or double-clicked, or when an icon is selected in the tooltip that appears when you hover over the node or edge.
@@ -237,6 +274,9 @@ To configure actions:
 1. In the *Component* > *Settings* pane, under the nodes or edges you want to configure actions for, expand the *Actions* section.
 
 1. Click *Add action*.
+
+   > [!NOTE]
+   > If the [*Visual* setting](#customizing-nodes) is set to *Template*, the *Add action* button will not be available. In that case, actions must be defined on shapes within the template itself. See [Customizing layer appearance and behavior](xref:Template_Editor#customizing-layer-appearance-and-behavior).
 
 1. At the top of the action configuration section, specify how the action is triggered:
 

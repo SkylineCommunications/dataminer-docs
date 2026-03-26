@@ -7,6 +7,14 @@ uid: General_Main_Release_10.5.0_CU1
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.5.0 CU1](xref:Cube_Main_Release_10.5.0_CU1).
@@ -83,11 +91,11 @@ A number of security enhancements have been made.
 
 A number of enhancements have been made to the ProtocolFunctionManager with regard to the handling of locked files when activating or deactivating functions.
 
-#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]
+#### Interactive automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]
 
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
-When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
+When UI components of type *Calendar* or *Time* are used in interactive automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive automation script is being run, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
 
 To allow the client to return the time zone and client time and date, on the `UIBlockDefinition`, set the `ClientTimeInfo` option to `UIClientTimeInfo.Return`. This option is intended to be used for UI components of type *Calendar* or *Time* (the latter with either `AutomationDateTimeUpDownOptions`, `AutomationDateTimeUpDownOptions` or `AutomationDateTimePickerOptions`).
 
@@ -112,13 +120,13 @@ If this time zone information has to be stored for later use, consider the follo
 - Use the `Id` property, which can then be restored by using `TimeZoneInfo.FindSystemTimeZoneById(storedId)`.
 
   > [!NOTE]
-  > The ID that is returned might not be available on the DataMiner Agent that is executing the Automation script.
+  > The ID that is returned might not be available on the DataMiner Agent that is executing the automation script.
 
 For more info, see [Saving and restoring time zones](https://learn.microsoft.com/en-us/dotnet/standard/datetime/saving-and-restoring-time-zones)
 
 ##### DateTimeOffset GetClientDateTime(string destVar)
 
-This method will return the date and time as it was entered in the UI block with the specified *destVar*, in the time zone of the client (taking into account the client's UTC offset). The `DateTime` property of the returned value will contain the the date and/or time in the user's time zone.
+This method will return the date and time as it was entered in the UI block with the specified *destVar*, in the time zone of the client (taking into account the client's UTC offset). The `DateTime` property of the returned value will contain the date and/or time in the user's time zone.
 
 The returned value will be `DateTimeOffset.MinValue` if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information.
 
@@ -168,7 +176,7 @@ From now on, you can view the logging of the GQI DxM in DataMiner Cube.
 Also, no new log file will be started every day anymore. From now on, a new log file will only be started as soon as the size of the existing file reaches 5 MB.
 
 > [!NOTE]
-> Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e. the logging of the ad hoc data sources and the operators).
+> Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e., the logging of the ad hoc data sources and the operators).
 
 #### GQI DxM: Separate log file per extension library in Extensions folder [ID 42355]
 

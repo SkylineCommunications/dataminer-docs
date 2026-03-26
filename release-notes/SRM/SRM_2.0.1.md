@@ -6,9 +6,9 @@ uid: SRM_2.0.1
 
 > [!NOTE]
 >
-> - Since this feature release of the SRM framework, the [SRM Dev Pack](https://www.nuget.org/packages/Skyline.DataMiner.Core.SRM) is available, which allows you to easily add the required dependencies to develop [custom SRM Automation scripts](xref:srm_scripting).
+> - Since this feature release of the SRM framework, the [SRM Dev Pack](https://www.nuget.org/packages/Skyline.DataMiner.Core.SRM) is available, which allows you to easily add the required dependencies to develop [custom SRM automation scripts](xref:srm_scripting).
 >
->   For detailed information on how to start implementing or updating the custom Automation scripts, see [SRM scripting using the SRM Dev Pack](xref:srm_scripting_devpack). For existing scripts, in addition to installing the NuGet, you will need to [review the required namespaces](xref:srm_scripting_devpack#updating-the-srm-namespaces).
+>   For detailed information on how to start implementing or updating the custom automation scripts, see [SRM scripting using the SRM Dev Pack](xref:srm_scripting_devpack). For existing scripts, in addition to installing the NuGet, you will need to [review the required namespaces](xref:srm_scripting_devpack#updating-the-srm-namespaces).
 >
 > - This version requires that **DataMiner 10.3.2.0 – 12627 or higher** is installed. The DataMiner Main Release track is not supported.
 
@@ -34,7 +34,7 @@ On the *Configuration* page of the Booking Manager, you can now deactivate the B
 
 #### Problem with SRM_DiscoverResources script [ID 38769]
 
-When a resource had at least one capacity and it had two properties of which the name was the same except for spaces (e.g. *Connected Input* and *ConnectedInput*), the *SRM_DiscoverResources* script could throw the following exception:
+When a resource had at least one capacity and it had two properties of which the name was the same except for spaces (e.g., *Connected Input* and *ConnectedInput*), the *SRM_DiscoverResources* script could throw the following exception:
 
 `System.Data.OleDb.OleDbException (0x80040E07): Data type mismatch in criteria expression.`
 

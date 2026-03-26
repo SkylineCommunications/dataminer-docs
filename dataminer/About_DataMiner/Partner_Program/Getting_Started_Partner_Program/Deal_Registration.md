@@ -110,4 +110,4 @@ Skyline’s Partner Success Manager (PSM) will act as the first point of contact
 
 ### Deviations
 
-Skyline understands that every business situation is different, and exceptions to the rules might therefore be required. For such exceptions you must obtain written agreement from Skyline, who will use reasonable judgement to determine if the exception is applicable.
+Skyline understands that every business situation is different, and exceptions to the rules might therefore be required. For such exceptions you must obtain written agreement from Skyline, who will use reasonable judgment to determine if the exception is applicable.

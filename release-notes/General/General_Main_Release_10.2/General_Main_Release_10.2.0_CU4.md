@@ -118,7 +118,7 @@ Because of a number of enhancements, overall performance of SLDataGateway has in
 
 #### DataMiner Cube - Visual Overview: Shape that displays a page of the Visio drawing linked to a view, service or element will no longer be displayed when the element, service or view in question does not exist \[ID 33484\]
 
-From now on, a shape that displays a page of the Visio drawing linked to a view, service or element (i.e. a shape with a shape data field of type VdxPage) will no longer be displayed when the view, service or element in question does not exist.
+From now on, a shape that displays a page of the Visio drawing linked to a view, service or element (i.e., a shape with a shape data field of type VdxPage) will no longer be displayed when the view, service or element in question does not exist.
 
 #### SLLogCollector will now also collect the VerifyClusterPorts files \[ID 33503\]
 
@@ -222,7 +222,7 @@ Also, when a table column contained an OID in an incorrect format, the table wou
 
 #### Incorrect IP address could be added to DMS.xml during a DataMiner startup \[ID 33339\]
 
-When the DataMiner software started up on an agent that was not part of a Failover setup, in some cases, an incorrect IP address could get added to the DMS.xml file. Later on, this could lead to e.g. agent synchronization issues.
+When the DataMiner software started up on an agent that was not part of a Failover setup, in some cases, an incorrect IP address could get added to the DMS.xml file. Later on, this could lead to, for example, agent synchronization issues.
 
 #### DataMiner Cube: No longer possible to go to the previous or the next frame after pausing a replay of a spectrum recording \[ID 33349\]
 
@@ -234,11 +234,11 @@ A number of issues were solved related to how DataMiner executes prerequisites a
 
 #### Automation scripts would incorrectly succeed even when uploading a report had failed \[ID 33368\]
 
-When, in an Automation script, you had configured an action that uploads a report to a shared folder or FTP, up to now, the script would still succeed even when it had not been able to copy the generated report to the remote location (shared folder or FTP). From now on, when a script is not able to copy a report to a remote location, it will fail.
+When, in an automation script, you had configured an action that uploads a report to a shared folder or FTP, up to now, the script would still succeed even when it had not been able to copy the generated report to the remote location (shared folder or FTP). From now on, when a script is not able to copy a report to a remote location, it will fail.
 
 #### DataMiner Cube - Alarm Console: Incidents would incorrectly appear when enabling 'Automatic incident tracking' in an Information tab \[ID 33382\]
 
-When you enabled the *Automatic incident tracking* option in an Information tab, the incidents (i.e. alarm groups) would incorrectly appear in that tab.
+When you enabled the *Automatic incident tracking* option in an Information tab, the incidents (i.e., alarm groups) would incorrectly appear in that tab.
 
 #### DataMiner Cube: Casing incorrectly not taken into account when comparing the name of a newly created property against the existing property names \[ID 33388\]
 
@@ -272,13 +272,13 @@ A number of alarm-related issues have been fixed:
 
 - In some cases, alarms retrieved from the database would contain outdated fields in the alarm tree.
 
-#### Interactive Automation scripts: Range limits of a numeric IBlockDefinition would be ignored \[ID 33419\]
+#### Interactive automation scripts: Range limits of a numeric IBlockDefinition would be ignored \[ID 33419\]
 
-When an Automation script was launch from the Dashboards app or from a custom web app, in some cases, the range limits of a numeric IBlockDefinition would be ignored when you clicked the Up or Down button.
+When an automation script was launch from the Dashboards app or from a custom web app, in some cases, the range limits of a numeric IBlockDefinition would be ignored when you clicked the Up or Down button.
 
 #### Automation scripts: Problem with processor directives \[ID 33424\]
 
-Up to now, the following preprocessor directives would incorrectly be inserted into the Automation script code, causing syntax errors to appear on the incorrect lines.
+Up to now, the following preprocessor directives would incorrectly be inserted into the automation script code, causing syntax errors to appear on the incorrect lines.
 
 - #define DBInfo
 - #define DCFv1
@@ -298,19 +298,19 @@ If you add a shape data field of type *AlarmFilter* to a shape, clicking the sha
 
 #### Problem when trying to migrate elements of which the name contained square brackets \[ID 33455\]
 
-When you tried to migrate an element with a name containing square brackets (e.g. “\[HQ\] Main Switch”), in some cases, the operation could fail with an error message like “Illegal 'Reference Protocol' syntax”.
+When you tried to migrate an element with a name containing square brackets (e.g., “\[HQ\] Main Switch”), in some cases, the operation could fail with an error message like “Illegal 'Reference Protocol' syntax”.
 
 #### DataMiner Cube - Visual Overview: Problems with History Mode shape data field \[ID 33456\]
 
 When a shape linked to a parameter had a *History Mode* shape data field set to “State=On”, in some cases, no units would be shown. Also, in case of a parameter with discreet values, the shape would incorrectly show the actual value instead of the display value.
 
-#### Interactive Automation scripts: Tree view component would incorrectly collapse when selecting an item that unselected the previously selected item \[ID 33480\]
+#### Interactive automation scripts: Tree view component would incorrectly collapse when selecting an item that unselected the previously selected item \[ID 33480\]
 
-When, in a tree view component of an interactive Automation script, you selected an item that unselected the previously selected item, in some cases, the entire tree view component would incorrectly collapse.
+When, in a tree view component of an interactive automation script, you selected an item that unselected the previously selected item, in some cases, the entire tree view component would incorrectly collapse.
 
 #### Automatic Incident Tracking: Clearable base alarms of an incident were cleared when the incident was cleared \[ID 33481\]
 
-When an incident (i.e. alarm group) was cleared, in some cases, its clearable base alarms would incorrectly be cleared as well when the AutoClear option was disabled.
+When an incident (i.e., alarm group) was cleared, in some cases, its clearable base alarms would incorrectly be cleared as well when the AutoClear option was disabled.
 
 #### Problem when running multiple GQI queries simultaneously \[ID 33482\]
 
@@ -318,7 +318,7 @@ When multiple GQI queries were run simultaneously, in some rare cases, a “Ther
 
 #### Automation: SetParameterByPrimaryKey would fail to update a write-only parameter when using the parameter name as argument \[ID 33511\]
 
-When, from an Automation script, a write parameter in a column of a table inside an element was updated using a ScriptDummy.SetParameterByPrimaryKey call with the parameter name as argument, the update would fail when that write parameter did not have a matching read parameter.
+When, from an automation script, a write parameter in a column of a table inside an element was updated using a ScriptDummy.SetParameterByPrimaryKey call with the parameter name as argument, the update would fail when that write parameter did not have a matching read parameter.
 
 #### Problem when deleting a DVE child element or a virtual function \[ID 33519\]
 
@@ -326,7 +326,7 @@ When a DVE child element or a virtual function was deleted, all data related to 
 
 #### VerifyClusterPorts.dmupgrade package failed to run when it no longer had its original name \[ID 33529\]
 
-When the VerifyClusterPorts.dmupgrade package no longer had its original name (e.g. “VerfiyClusterPorts (1).dmupgrade”), it would fail to run.
+When the VerifyClusterPorts.dmupgrade package no longer had its original name (e.g., “VerfiyClusterPorts (1).dmupgrade”), it would fail to run.
 
 From now on, the name of the package is allowed to have a prefix and/or a suffix. In other words, its name must match \*VerifyClusterPorts\*.dmupgrade.
 

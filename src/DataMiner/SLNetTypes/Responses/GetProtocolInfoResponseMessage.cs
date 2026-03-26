@@ -962,7 +962,7 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Filters and/or sorts a collection of parameters, given a combination of selection options. E.g. returns a collection with only the analog parameters if <paramref name="options"/> is set to <see cref="ParameterFilterOptions.AnalogOnly"/>.
+		/// Filters and/or sorts a collection of parameters, given a combination of selection options. For example, returns a collection with only the analog parameters if <paramref name="options"/> is set to <see cref="ParameterFilterOptions.AnalogOnly"/>.
 		/// </summary>
 		/// <param name="options">The options.</param>
 		/// <returns>The filtered parameters.</returns>
@@ -972,7 +972,7 @@ namespace Skyline.DataMiner.Net.Messages
 		}
 
 		/// <summary>
-		/// Filters and/or sorts a collection of parameters, given a combination of selection options. E.g. returns a collection with only the analog parameters if <paramref name="options"/> is set to <see cref="ParameterFilterOptions.AnalogOnly"/>.
+		/// Filters and/or sorts a collection of parameters, given a combination of selection options. For example, returns a collection with only the analog parameters if <paramref name="options"/> is set to <see cref="ParameterFilterOptions.AnalogOnly"/>.
 		/// </summary>
 		/// <param name="options">The options.</param>
 		/// <param name="extraFilter">Callback function to extra filter. Function should return <c>true</c> only when the object needs to be included.</param>.

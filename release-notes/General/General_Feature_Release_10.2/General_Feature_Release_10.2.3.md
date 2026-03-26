@@ -137,10 +137,10 @@ This will, for instance, allow you to find a resource by passing a label of a se
 
 The \<DMAIP> placeholder can only be used inside another placeholder, or in a URL for a shape data field of type Link. It is replaced with the first configured value from the following list that can be found for the DMA you are connecting to: the certificate address, the hostname or the primary IP address.
 
-When the \<DMAIP> placeholder is resolved, from now on, the URI scheme of the DataMiner Agent in question (i.e. HTTP or HTTPS) will automatically be applied.
+When the \<DMAIP> placeholder is resolved, from now on, the URI scheme of the DataMiner Agent in question (i.e., HTTP or HTTPS) will automatically be applied.
 
 > [!NOTE]
-> When a \<DMAIP> placeholder does not represent the URI host (e.g. when it is used as a query argument), the URI scheme of the DataMiner Agent (i.e. HTTP or HTTPS) will not automatically be applied.
+> When a \<DMAIP> placeholder does not represent the URI host (e.g., when it is used as a query argument), the URI scheme of the DataMiner Agent (i.e., HTTP or HTTPS) will not automatically be applied.
 
 #### Visual Overview: Linking a shape to an alarm filter with a System Name filter context \[ID 32252\]
 
@@ -154,7 +154,7 @@ If you specify a filter context like the one above, the shape will be linked to 
 
 #### Visual Overview: Use of dynamic units now depends on value of DynamicUnits soft-launch option \[ID 32256\]
 
-Up to now, when configuring a parameter shape, it was possible to enable to use of dynamic units (i.e. units that can be converted to other units according to rules configured in the protocol) by adding “DynamicUnits=true” in an Options data field. From now on, when you do not specify this option in a parameter shape, whether or not that shape will use dynamic unit will depend on the value of the DynamicUnits soft-launch option.
+Up to now, when configuring a parameter shape, it was possible to enable to use of dynamic units (i.e., units that can be converted to other units according to rules configured in the protocol) by adding “DynamicUnits=true” in an Options data field. From now on, when you do not specify this option in a parameter shape, whether or not that shape will use dynamic unit will depend on the value of the DynamicUnits soft-launch option.
 
 > [!NOTE]
 > The DynamicUnits=true/false option can now be used to override the value of the DynamicUnits soft-launch option. For example, if the DynamicUnits soft-launch option is set to true, you can configure a parameter shape to not use dynamic units by adding "DynamicUnits=False" to its Options data field.
@@ -238,7 +238,7 @@ To do so, add a shape data field of type TextStyle, and set its value to “Text
 - **None**: The text will be cut off when necessary (default option).
 
 > [!NOTE]
-> Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e. “WrapWithOverflow”).
+> Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e., “WrapWithOverflow”).
 
 ### DMS Reports & Dashboards
 
@@ -598,7 +598,7 @@ In some cases, automatic incident tracking would not start up when an alarm was 
 
 #### SLAnalytics: Problem with alarm grouping when alarms were generated while automatic incident tracking was starting up \[ID 32410\]
 
-When alarms were generated while automatic incident tracking was starting up, in some cases, an alarm could internally be duplicated, leading to incorrect alarm groups (e.g. groups containing only a single alarm).
+When alarms were generated while automatic incident tracking was starting up, in some cases, an alarm could internally be duplicated, leading to incorrect alarm groups (e.g., groups containing only a single alarm).
 
 #### DataMiner Cube - Alarm Console: Problem with 'new alarms' counter when alarms were grouped by service \[ID 32427\]
 
@@ -630,7 +630,7 @@ In some cases, component selection was not cleared when you switched between dif
 
 #### Not possible to create element with invalid XML character in name \[ID 32455\]
 
-In some cases, it was no longer possible to create elements with an invalid XML character in the element name, even if that character was supported in Cube (e.g. “&”).
+In some cases, it was no longer possible to create elements with an invalid XML character in the element name, even if that character was supported in Cube (e.g., “&”).
 
 #### DataMiner Cube: Problem when accessing an information template, a trend template or an alarm template from within the Alarm Console \[ID 32457\]
 
@@ -656,4 +656,4 @@ Also, when the *How to show element card Data pages* setting was set to “Show
 
 #### Web apps: 'Refresh now' message would incorrectly appear when opening a web app that did not have an active websocket connection \[ID 32585\]
 
-When your opened a web app (e.g. Dashboards, Monitoring, Ticketing, etc.) that did not have an active websocket connection, a “Refresh now” message would incorrectly appear. From now on, this message will only appear when an active websocket connection was broken.
+When your opened a web app (e.g., Dashboards, Monitoring, Ticketing, etc.) that did not have an active websocket connection, a “Refresh now” message would incorrectly appear. From now on, this message will only appear when an active websocket connection was broken.

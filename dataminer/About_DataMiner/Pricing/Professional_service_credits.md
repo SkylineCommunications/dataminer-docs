@@ -85,4 +85,4 @@ Below, you can find an overview of how the Service Credits can be used.
 | Idle Days | 10 credits<br>Per day, per visit |
 
 > [!NOTE]
-> Additional credits apply on top of the daily expense costs, based on the number of idle days involved in the visit (i.e. days spent on traveling or weekend on site).
+> Additional credits apply on top of the daily expense costs, based on the number of idle days involved in the visit (i.e., days spent on traveling or weekend on site).

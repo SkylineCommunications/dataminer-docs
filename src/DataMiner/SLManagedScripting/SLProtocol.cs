@@ -205,10 +205,10 @@ namespace Skyline.DataMiner.Scripting
 		int DeleteRow(int tableId, string[] rows);
 
 		/// <summary>
-		/// Executes the specified Automation script.
+		/// Executes the specified automation script.
 		/// </summary>
 		/// <param name="message">Information about the script to execute.</param>
-		/// <returns>Information about the execution of the Automation script.</returns>
+		/// <returns>Information about the execution of the automation script.</returns>
 		/// <remarks>
 		/// <para>The script will be executed by the user who is performing the QAction. It will return an <see cref="ExecuteScriptResponseMessage"/>, containing information about the execution of the script.</para>
 		/// <para>Using this overload of the ExecuteScript method is particularly useful when the script in question needs a dummy or protocol information to run.</para>
@@ -254,15 +254,15 @@ namespace Skyline.DataMiner.Scripting
 		/// <para>You can enable this by adding the option string “DEFER:FALSE'” to the Options property of ExecuteScriptMessage.</para>
 		/// <para>You should also include the "EXTENDED_ERROR_INFO" option as this will make sure that the errors are returned in the response message. (Otherwise SLAutomation will throw an exception when the script fails and the errors are lost).</para>
 		/// <para>The HadError property will return true when the ErrorCode property has a code (int) lower than 0, indicating that something went wrong.</para>
-		/// <para>For another example that illustrates the execution of an Automation script with a custom entry point, refer to <see cref="AutomationEntryPoint"/> class.</para>
+		/// <para>For another example that illustrates the execution of an automation script with a custom entry point, refer to <see cref="AutomationEntryPoint"/> class.</para>
 		/// </examples>
 		ExecuteScriptResponseMessage ExecuteScript(ExecuteScriptMessage message);
 
 		/// <summary>
-		/// Executes the Automation script with the specified name.
+		/// Executes the automation script with the specified name.
 		/// </summary>
-		/// <param name="scriptName">The name of the Automation script to execute.</param>
-		/// <returns>Information about the execution of the Automation script.</returns>
+		/// <param name="scriptName">The name of the automation script to execute.</param>
+		/// <returns>Information about the execution of the automation script.</returns>
 		/// <remarks>
 		/// <para>The script will be executed by the user who is performing the QAction. It will return an <see cref="ExecuteScriptResponseMessage"/>, containing information about the execution of the script.</para>
 		/// <para>If you execute a script using this method, it will be executed with all script execution settings set to the default values. If more control is needed, then use the <see cref="SLProtocol.ExecuteScript(ExecuteScriptMessage)"/> overload.</para>

@@ -21,7 +21,7 @@ uid: General_Main_Release_10.4.0_CU17
 
 From now on, each time a DataMiner upgrade is performed, all TXF files will be automatically removed from the `C:\Skyline DataMiner\Scripts\` folder.
 
-When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying.
+When you create an automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying.
 
 ### Fixes
 
@@ -43,7 +43,7 @@ In some cases, a DataMiner Agent would not start up properly, and the following 
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
 
-When, in an alarm template, you had configured conditional monitoring based on a condition made up of multiple AND/OR clauses, up to now, some of those AND/OR clauses could incorrectly get disabled when the alarm template was refreshed in SLElement following e.g. a template update.
+When, in an alarm template, you had configured conditional monitoring based on a condition made up of multiple AND/OR clauses, up to now, some of those AND/OR clauses could incorrectly get disabled when the alarm template was refreshed in SLElement following e.g., a template update.
 
 #### Problem with SLPort when stopping an element with a GPIB connection in an error state [ID 42949]
 
@@ -65,15 +65,15 @@ If a redundancy group has more primary elements than backup elements, at the mom
 
 By default, that alarm is cleared as soon as one of the backup elements is available again. However, up to now, in some cases, the alarm would incorrectly not get cleared.
 
-#### Automation: Problem when trying to publish an Automation script with an invalid name via DIS [ID 42974]
+#### Automation: Problem when trying to publish an automation script with an invalid name via DIS [ID 42974]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
 
-When, in DataMiner Integration Studio (DIS), you tried to publish an Automation script of which the name contained leading and/or trailing spaces, up to now, the script would initially be added, but it would immediately be removed from the system. Also, the following error message would be added to the SLAutomation log file:
+When, in DataMiner Integration Studio (DIS), you tried to publish an automation script of which the name contained leading and/or trailing spaces, up to now, the script would initially be added, but it would immediately be removed from the system. Also, the following error message would be added to the SLAutomation log file:
 
 `Failed to load info for script 'XXX'`
 
-From now on, when you publish an Automation script via DIS, its name will be validated. If the name is invalid, the publish action will be aborted.
+From now on, when you publish an automation script via DIS, its name will be validated. If the name is invalid, the publish action will be aborted.
 
 #### Protocols: Problem when polling an SNMP table using the partialSnmp option in combination with the multipleGetBulk option [ID 43034]
 
@@ -81,7 +81,7 @@ From now on, when you publish an Automation script via DIS, its name will be val
 
 When both the `partialSnmp` option and the `multipleGetBulk` option were used when polling an SNMP table, up to now, too many `GetBulk` requests would be sent.
 
-From now on, the maximum number of repetitions defined for `multipleGetBulk` will also be taken into account. For example, in case of `partialSnmp:8;multipleGetBulk:3`, the first 3 rows will be requested, then the next 3 rows will be requested, and finally the next 2 rows will be requested. A total of 8 rows will then be returned to SLProtocol. 3 plus 3 plus 2 makes 8, i.e. the value defined for `partialSnmp`.
+From now on, the maximum number of repetitions defined for `multipleGetBulk` will also be taken into account. For example, in case of `partialSnmp:8;multipleGetBulk:3`, the first 3 rows will be requested, then the next 3 rows will be requested, and finally the next 2 rows will be requested. A total of 8 rows will then be returned to SLProtocol. 3 plus 3 plus 2 makes 8, i.e., the value defined for `partialSnmp`.
 
 > [!NOTE]
 >

@@ -1,5 +1,6 @@
 ---
 uid: Overview_Principal_Advantages
+description: DataMiner's key advantages include vendor independence, technology agnosticism, open-source connectors, and agility.
 ---
 
 # DataMiner principal advantages

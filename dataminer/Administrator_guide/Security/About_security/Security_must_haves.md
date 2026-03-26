@@ -14,23 +14,23 @@ This page provides an overview of the security-related requirements that new pro
 
 - **Roles-based access control and permissions (RBAC)**: This must be implemented for both users and groups defined in Active Directory or Azure Active Directory (Entra ID), in order to support the setup of Least Privilege Access profiles for users and to optimize the overall security posture, in line with Zero Trust best practices.
 
-  - High granularity of permissions in the software for all individual features and capabilities, supporting the setup of Least Privilege Access profiles for users (e.g. adding elements, deleting elements, changing alarm thresholds, etc.) to maximize the security posture. Each individual software feature or capability should have an associated permission.
+  - High granularity of permissions in the software for all individual features and capabilities, supporting the setup of Least Privilege Access profiles for users (e.g., adding elements, deleting elements, changing alarm thresholds, etc.) to maximize the security posture. Each individual software feature or capability should have an associated permission.
 
-  - Ability to define which users have access to which underlying elements managed by the software (e.g. user A can access element X and Y in read/write mode, they can access element Z in read-only mode, and element Q is not visible or accessible for that user).
+  - Ability to define which users have access to which underlying elements managed by the software (e.g., user A can access element X and Y in read/write mode, they can access element Z in read-only mode, and element Q is not visible or accessible for that user).
 
-  - Ability to limit access for critical element controls to a limited set of users within the group of users that can access those elements in read/write mode (e.g. users A, B, and C can fully access, read, and control element X, but the reboot and reset function of element X can only be controlled by user A and not by users B and C).
+  - Ability to limit access for critical element controls to a limited set of users within the group of users that can access those elements in read/write mode (e.g., users A, B, and C can fully access, read, and control element X, but the reboot and reset function of element X can only be controlled by user A and not by users B and C).
 
 - **Audit trailing**: Each product introduced in the environment must provide continuous real-time audit trailing, easily accessible via both an intuitive UI (supporting real-time updates, time-stamping, easy sorting, filtering, exporting, etc.) and an API (to pass to a SIEM solution), which provides detailed insights on all relevant activities in the product. This must in the very least include the following:
 
-  - All user authentication and authorization activities, e.g. which user logged in, any failed log-in attempts, from which client machine, etc.
+  - All user authentication and authorization activities, e.g., which user logged in, any failed log-in attempts, from which client machine, etc.
 
-  - All changes in the configuration and setup of the product performed by users, e.g. which items were added, updated, or deleted by users, etc.
+  - All changes in the configuration and setup of the product performed by users, e.g., which items were added, updated, or deleted by users, etc.
 
   - All resources/functions/modules in the product accessed by a user.
 
-  - All actions performed by a user while using the product, e.g. which workflows were triggered by a user, step-by-step details of the execution of workflows, etc.
+  - All actions performed by a user while using the product, e.g., which workflows were triggered by a user, step-by-step details of the execution of workflows, etc.
 
-  - All interactions of the product with other third-party products and systems, e.g. which settings were performed on third-party products and systems, what was the outcome of that interaction, etc.
+  - All interactions of the product with other third-party products and systems, e.g., which settings were performed on third-party products and systems, what was the outcome of that interaction, etc.
 
 - **APIs**: All APIs must comply with the following requirements:
 
@@ -48,8 +48,8 @@ This page provides an overview of the security-related requirements that new pro
 
 - **Third-party components and libraries**: The vendor must submit a full list of all third-party components and libraries used in its products.
 
-- **Interaction with third-party products**: For interactions with third-party products (e.g. in case of monitoring and control software products), the proposed solution must include the following:
+- **Interaction with third-party products**: For interactions with third-party products (e.g., in case of monitoring and control software products), the proposed solution must include the following:
 
-  - Support for the most secure interface method available on the third-party product (e.g. SNMPv3, HTTPS, etc.).
+  - Support for the most secure interface method available on the third-party product (e.g., SNMPv3, HTTPS, etc.).
 
   - Secure credentials vault: To interface with third-party products, credentials are often required in order to authenticate. These credentials must be saved in a secure dedicated vault that needs to be part of the offered product or at least be professionally encrypted when stored.

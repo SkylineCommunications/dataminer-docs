@@ -17,7 +17,7 @@ To configure a script:
    - **Support back/forward buttons in interactive mode**: Adds back and forward buttons when the script shows a dialog asking for a user response.
 
      > [!NOTE]
-     > If you use this option in an Automation script that depends on C# code blocks, do not forget to also use the methods [WasBack](xref:Skyline.DataMiner.Automation.UIResults.WasBack) and [WasForward](xref:Skyline.DataMiner.Automation.UIResults.WasForward).
+     > If you use this option in an automation script that depends on C# code blocks, do not forget to also use the methods [WasBack](xref:Skyline.DataMiner.Automation.UIResults.WasBack) and [WasForward](xref:Skyline.DataMiner.Automation.UIResults.WasForward).
 
    - **Do not fail when elements are not active or in timeout**: Keeps the script from failing when it encounters an element that is not active or in timeout.
 
@@ -28,4 +28,4 @@ To configure a script:
 
    - **C#: Return NULL instead of an exception upon a GetParameter of a non-initialized parameter**: Ensures that no exception is thrown when an undefined or empty parameter is encountered in C# code. Null will be returned instead.
 
-   - **Web compliant**: This option is only displayed if the *UseWebIAS* [soft-launch option](xref:SoftLaunchOptions) is enabled. It allows you to execute the script in a web environment, which can be useful for interactive Automation scripts that use web-only features.<!-- RN 29623 -->
+   - **Web compliant**: This option is only displayed if the *UseWebIAS* [soft-launch option](xref:SoftLaunchOptions) is enabled. It allows you to execute the script in a web environment, which can be useful for interactive automation scripts that use web-only features.<!-- RN 29623 -->

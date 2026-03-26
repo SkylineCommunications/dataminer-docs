@@ -39,7 +39,7 @@ From now on, it is possible to specify another port in the *Db.xml* file. See th
 
 #### DataMiner Cube - Automation: Script execution messages will now be sent asynchronously  \[ID 25438\]
 
-Up to now, when an Automation script was launched from Cube, a script execution message would be sent to the DataMiner Agent synchronously. In order to avoid timeout issues, from now on, script execution messages will be sent asynchronously.
+Up to now, when an automation script was launched from Cube, a script execution message would be sent to the DataMiner Agent synchronously. In order to avoid timeout issues, from now on, script execution messages will be sent asynchronously.
 
 #### DataMiner Cube - Visual Overview: Using the \[Reservation\] placeholder no longer requires Cube to retrieve all service information \[ID 25463\]
 
@@ -95,13 +95,13 @@ In some rare cases, an error could occur when retrieving alarms with a rootkey e
 
 Also, each time an alarm with rootkey equal to 0 is encountered, an entry will now be added to the SLDBConnection.txt log file.
 
-#### DataMiner Cube - Correlation: Problem when saving a Correlation rule mail action that sends a PDF report \[ID 25315\]
+#### DataMiner Cube - Correlation: Problem when saving a correlation rule mail action that sends a PDF report \[ID 25315\]
 
-When you added a mail action to a Correlation rule and configured that action to send a PDF report, in some cases, that configuration would not be saved correctly.
+When you added a mail action to a correlation rule and configured that action to send a PDF report, in some cases, that configuration would not be saved correctly.
 
-#### DataMiner Cube - Correlation: Mail action in Correlation rule could not be modified more than once \[ID 25317\]
+#### DataMiner Cube - Correlation: Mail action in correlation rule could not be modified more than once \[ID 25317\]
 
-When, in a Correlation rule, you had configured a mail action, in some cases, it would not be possible to update this action more than once.
+When, in a correlation rule, you had configured a mail action, in some cases, it would not be possible to update this action more than once.
 
 #### DataMiner Cube - Spectrum analysis: Problem when editing presets \[ID 25330\]
 
@@ -143,9 +143,9 @@ In the Monitoring app, password boxes would incorrectly display their contents i
 
 When a user setting was hidden in the group settings, it would incorrectly also be hidden in the group settings editor.
 
-#### Automation: Problem when generating a large report via an Automation script \[ID 25482\]
+#### Automation: Problem when generating a large report via an automation script \[ID 25482\]
 
-When a large report was generated via an Automation script, in some cases, all other communication with the SLReportsAndDashboardsManager process could get blocked.
+When a large report was generated via an automation script, in some cases, all other communication with the SLReportsAndDashboardsManager process could get blocked.
 
 #### Jobs app: Problem when entering text in the search box \[ID 25489\]
 

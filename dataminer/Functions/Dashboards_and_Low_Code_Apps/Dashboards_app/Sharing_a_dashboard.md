@@ -41,7 +41,7 @@ From DataMiner 10.2.0/10.2.2 onwards, you can generate a URL to easily share you
 
 - If they access directly, only their DataMiner System account is required.
 
-- If they access remotely (i.e. the URL contains `.on.dataminer.services`), they will also need a [dataminer.services account](xref:Logging_on_to_dataminer_services), with access to the cloud organization and the DataMiner System.
+- If they access remotely (i.e., the URL contains `.on.dataminer.services`), they will also need a [dataminer.services account](xref:Logging_on_to_dataminer_services), with access to the cloud organization and the DataMiner System.
 
 To generate a shareable URL:
 
@@ -95,7 +95,7 @@ You can set an optional expiration date to stop sharing automatically.
 > [!NOTE]
 >
 > - Dashboards with [restricted user access](xref:Configuring_dashboard_security) can be shared from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44067 -->
-> - Dashboards containing certain components cannot be shared yet: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries linked to data, and visualizations based on query data (e.g. node edge graph, table). For dashboards with queries that have the *Update data* setting enabled, sharing is supported from DataMiner 10.2.0 [CU4]/10.2.6 onwards. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
+> - Dashboards containing certain components cannot be shared yet: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries linked to data, and visualizations based on query data (e.g., node edge graph, table). For dashboards with queries that have the *Update data* setting enabled, sharing is supported from DataMiner 10.2.0 [CU4]/10.2.6 onwards. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 
 ### Managing or deleting a cloud share
 

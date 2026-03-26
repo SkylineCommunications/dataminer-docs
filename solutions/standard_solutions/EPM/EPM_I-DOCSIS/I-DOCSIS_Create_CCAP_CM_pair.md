@@ -153,7 +153,7 @@ The elements will be created with the following specifications:
    > [!NOTE]
    >
    > - Each time the script is executed, it will attempt to create five elements. If there are fewer than five elements left to create, it will create as many as possible without any issues. After the first set of elements has been created, you can execute the script again without modifying the CSV file, and it will attempt to create the next set of five elements.
-   > - Click the *Cancel* button in any window to close the Automation script at any time.
+   > - Click the *Cancel* button in any window to close the automation script at any time.
 
 1. When the script has been executed, carefully read the window with information about the execution.
 

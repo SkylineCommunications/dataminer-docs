@@ -4,7 +4,7 @@ uid: Protocol.Display.Pages
 
 # Pages element
 
-Allows to define pages and specify their configuration (e.g. configure the visibility).<!-- RN 12840 -->
+Allows to define pages and specify their configuration (e.g., configure the visibility).<!-- RN 12840 -->
 
 ## Parent
 

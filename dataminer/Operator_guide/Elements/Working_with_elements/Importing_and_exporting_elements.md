@@ -102,6 +102,8 @@ When altering an exported CSV file in a third-party application like Microsoft E
 
 - When changing existing elements, **do not change the DataMiner ID or the element ID**.
 
+- A row with no element ID will **create a new element** instead of altering an existing one.
+
 - You **cannot delete** existing elements by importing a CSV file.
 
 - When you import a CSV file into MS **Excel**, remember that **tabs will be automatically removed**. MS Excel does not support the use of tabs inside cell values. If you want tabs to survive an import operation, replace each tab by *\\t*.

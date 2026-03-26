@@ -12,7 +12,7 @@ You can access DataMiner Scheduler in DataMiner Cube, via *Apps* > *Scheduler*.
 
 In the Scheduler module, you can [add scheduled tasks in the *list* tab](xref:Manually_adding_a_scheduled_task), and get an overview of everything that has been scheduled in the *timeline* > *tasks* tab.
 
-The *timeline* > *events* tab provides a different way to [create scheduled events](xref:Scheduling_an_event_based_on_a_Scheduler_template), based on a special type of Automation scripts called "Scheduler templates".
+The *timeline* > *events* tab provides a different way to [create scheduled events](xref:Scheduling_an_event_based_on_a_Scheduler_template), based on a special type of automation scripts called "Scheduler templates".
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">

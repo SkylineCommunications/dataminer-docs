@@ -57,13 +57,13 @@ The connectors ship with the EPM Solution package.
 
 ## Automation scripts
 
-The VSAT EPM Solution uses the Automation scripts detailed below.
+The VSAT EPM Solution uses the automation scripts detailed below.
 
 ### EPM GEO BE Handler
 
 This script is in charge of communicating to the collector that the ID assignment files from the VSAT Platform Manager are ready for ingestion after the EPM back ends are done processing and setting the topology data in their respective tables.
 
-This Automation script is dependent on the following connectors:
+This automation script is dependent on the following connectors:
 
 - [Collector(s)](#collector-connectors) that triggered the initial *EPM Message Handler* script.
 - [Skyline EPM Platform VSAT GEO](#epm-connectors) handling the aggregation of KPIs from different collector elements.
@@ -72,7 +72,7 @@ This Automation script is dependent on the following connectors:
 
 This script operates within the messaging system domain taking care of communication about the collector and the entity the processed data originated from, between EPM front-end elements and back-end elements.
 
-This Automation script is dependent on the following connectors:
+This automation script is dependent on the following connectors:
 
 - [Collector(s)](#collector-connectors) that triggered the initial *EPM Message Handler* script.
 - [Skyline EPM Platform VSAT GEO](#epm-connectors) handling the aggregation of KPIs from different collector elements.
@@ -81,7 +81,7 @@ This Automation script is dependent on the following connectors:
 
 This script is in charge of handling EPM messages. It is triggered from the collector after the ID request files for the entities are exported. It tells the EPM front end to ingest the request files.
 
-This Automation script is dependent on the following connectors:
+This automation script is dependent on the following connectors:
 
 - [Collector(s)](#collector-connectors) that triggered the initial *EPM Message Handler* script.
 
@@ -89,6 +89,6 @@ This Automation script is dependent on the following connectors:
 
 This script is in charge of centralizing the information of the subscription tables of different peripherals across all the DMAs. It receives the request from the elements to update/change a subscription table, it stores the updated information, and it sends it back to all elements to keep them updated with the latest changes.
 
-This Automation script is dependent on the following connector:
+This automation script is dependent on the following connector:
 
 - [Skyline EPM Platform VSAT DSM SO](#sun-outage), which triggers the initial script.

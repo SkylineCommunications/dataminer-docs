@@ -7,7 +7,7 @@ uid: GetElementsFiltered
 Use this method to request a specified series of elements.
 
 > [!NOTE]
-> Using this method, you can e.g. request elements in batches in order to minimize loading time.
+> Using this method, you can e.g., request elements in batches in order to minimize loading time.
 
 ## Input
 

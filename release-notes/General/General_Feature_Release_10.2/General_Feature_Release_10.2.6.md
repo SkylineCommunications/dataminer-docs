@@ -41,7 +41,7 @@ It is now possible to define a "time to live" property for the following types o
 | DomTemplate                        | DomTemplateTtl        |
 | HistoryChange (DomInstanceHistory) | DomInstanceHistoryTtl |
 
-Times are defined as TimeSpan objects. By default, these will be set to TimeSpan.Zero, i.e. no TTL. When, for a particular type of object, the TTL is set to e.g. 1 year, those objects will be automatically removed when they were last modified more than a year ago.
+Times are defined as TimeSpan objects. By default, these will be set to TimeSpan.Zero, i.e., no TTL. When, for a particular type of object, the TTL is set to, for example, 1 year, those objects will be automatically removed when they were last modified more than a year ago.
 
 Example:
 
@@ -61,7 +61,7 @@ var moduleSettings = new ModuleSettings("example")
 ```
 
 > [!NOTE]
-> TTL settings are checked every 30 minutes. When you configure a very short TTL (e.g. 15 minutes), keep in mind that the objects in question will only be removed during the next cleanup cycle.
+> TTL settings are checked every 30 minutes. When you configure a very short TTL (e.g., 15 minutes), keep in mind that the objects in question will only be removed during the next cleanup cycle.
 
 #### SLMessageBroker log files are now split per process and limited to 3 MB \[ID 33126\]
 
@@ -109,19 +109,19 @@ When acting as an SSH client, DataMiner now supports the following host key veri
 
 #### DataMiner Cube - Resources app: Function instance name can now be updated \[ID 32811\]
 
-When updating a resource in the Resources app, it is now possible to change the function instance name, i.e. the name of the DVE element linked to a function resource.
+When updating a resource in the Resources app, it is now possible to change the function instance name, i.e., the name of the DVE element linked to a function resource.
 
 > [!NOTE]
 >
 > - It is recommended to modify DVE names via the resource instead of via the main DVE element.
 > - Names of DVE elements can also be modified in *General Parameters \> Resource Info \> DVE Table*.
 
-#### Visual Overview: Passing Interactive Automation script output to session variables \[ID 32874\]
+#### Visual Overview: Passing interactive automation script output to session variables \[ID 32874\]
 
-Similar to regular Automation scripts, interactive Automation scripts are now also able to pass their output to session variables in Visual Overview.
+Similar to regular automation scripts, interactive automation scripts are now also able to pass their output to session variables in Visual Overview.
 
 > [!NOTE]
-> When configuring the Execute shape, it is recommended to specify both the NoConfirmation option and the CloseWhenFinished option in the value of the Execute data field.
+> When you configure the Execute shape, we recommend specifying both the NoConfirmation option and the CloseWhenFinished option in the value of the Execute data field.
 
 #### Visual Overview - Resource Manager component: Enhancements with regard to selecting bookings in the timeline \[ID 32938\]
 
@@ -134,15 +134,15 @@ A number of enhancements have been made with regard to selecting bookings in the
 
 #### Trending - Behavioral anomaly detection: Flatline change points can now also be detected for history set parameters that are set nearly in real time \[ID 32993\]
 
-Flatline change points can now also be detected for history set parameters that are set nearly in real time, i.e. parameters of which the incoming changes never have a delay larger than 10 minutes.
+Flatline change points can now also be detected for history set parameters that are set nearly in real time, i.e., parameters of which the incoming changes never have a delay larger than 10 minutes.
 
 #### Alarm Console: Manually creating incident alarms even when 'Automatic incident tracking' is disabled \[ID 33000\]
 
-From now on, in the Alarm Console, you will be able to manually create incident alarms (i.e. alarm groups) even when the “Automatic incident tracking” option is disabled.
+From now on, in the Alarm Console, you will be able to manually create incident alarms (i.e., alarm groups) even when the “Automatic incident tracking” option is disabled.
 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window\* will appear, asking you
 
-  - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
+  - to create a new incident (i.e., a new alarm group) and add the alarm to it, or
   - to add the alarm to an existing alarm group.
 
 These manually created groups will always be visible in active alarm tabs, even when the “Automatic incident tracking” option is disabled.
@@ -299,7 +299,7 @@ The discreet value can contain the SystemType and SystemName of the object, or a
 
 If you know the type of the EPM object, you can add a type prefix (epm or view), followed by an equal sign and (a reference to) the identifier, and if you want to specify the page to be selected by default, you can add a suffix to the identifier in the \<Value> tag containing the root page name and the page name, separated by a colon.
 
-If the SystemName contains colons (e.g. a MAC address), then you can now replace the default separator (i.e. colon) by another one (e.g. a pipe character) by placing a \[sep:XY\] prefix in front of the system name. See the following example:
+If the SystemName contains colons (e.g., a MAC address), then you can now replace the default separator (i.e., colon) by another one (e.g., a pipe character) by placing a \[sep:XY\] prefix in front of the system name. See the following example:
 
 *\<Value type="open">{EPM=***\[sep::\|\]***CPE/'00:01:08:01:08:01\|DATA\|CPE Frequencies}\</Value>*
 
@@ -376,8 +376,8 @@ If you want to use a specific Cube version to connect to a particular agent or c
 When connected to a particular DataMiner System, users with *Manage client versions* permission can go to *System Center \> System settings \> Manage client versions*, and select one of the following Cube update modes:
 
 - Allow automatic updates
-- Force the matching release version (i.e. force users to always use the Cube version that was shipped with the DMA upgrade package)
-- Force a specific version (i.e. force users to always use a particular Cube version)
+- Force the matching release version (i.e., force users to always use the Cube version that was shipped with the DMA upgrade package)
+- Force a specific version (i.e., force users to always use a particular Cube version)
 
 By default, the setting chosen here will apply to all agents in the DMS, including Failover setups. However, it is possible (but not recommended) to configure the Cube update mode per agent.
 
@@ -385,9 +385,9 @@ By default, the setting chosen here will apply to all agents in the DMS, includi
 
 #### Engine object: TriggeredByName property added \[ID 33122\]
 
-A TriggeredByName property has been added to the Engine object. This property of type string will contain the full name of the user who started the Automation script (e.g. “John Doe”).
+A TriggeredByName property has been added to the Engine object. This property of type string will contain the full name of the user who started the automation script (e.g., “John Doe”).
 
-When an Automation script is triggered by the scheduler, a correlation rule or a redundancy group, the TriggeredByName property will contain one of the following strings:
+When an automation script is triggered by the scheduler, a correlation rule or a redundancy group, the TriggeredByName property will contain one of the following strings:
 
 - “Scheduled task \<name task>”
 - “Correlation-rule \<name rule>”
@@ -475,9 +475,9 @@ From now on, the alarm state change graphs (pie chart and time line) in the lega
 
 Also, in the legacy Reporter app, the default colors have now been aligned with the default DataMiner alarm colors.
 
-#### Enhancements with regard to Automation scripts \[ID 33129\] \[ID 33226\]
+#### Enhancements with regard to automation scripts \[ID 33129\] \[ID 33226\]
 
-A number of enhancements have been made with regard to Automation scripts.
+A number of enhancements have been made with regard to automation scripts.
 
 - When a script is launched, from now on, only the parameters/dummies with missing values will be shown. Automatically filled in values will no longer be shown.
 - When script input is filled in with feed data, users will no longer be asked to change that input manually.
@@ -492,7 +492,7 @@ Because of a number of enhancements, overall performance has increased when crea
 
 #### Service & Resource Management: Enhanced logging \[ID 33183\]
 
-Up to now, when the SRM log files were set to “No logging”, no information would be logged if e.g. a Reservation event had failed. All ResourceManager, ResourceManagerAutomation and FunctionManager logging has now been re-evaluated, and the log settings have been optimized. All critical issues occurring in those modules will now be logged.
+Up to now, when the SRM log files were set to “No logging”, no information would be logged if e.g., a Reservation event had failed. All ResourceManager, ResourceManagerAutomation and FunctionManager logging has now been re-evaluated, and the log settings have been optimized. All critical issues occurring in those modules will now be logged.
 
 #### Profile instance list for PA service definition node now also contains child instances \[ID 33187\]
 
@@ -504,7 +504,7 @@ SLDMS, which is a 32-bit process, will now be started with the /LARGEADDRESSAWAR
 
 #### Enhanced performance when processing a large number of objects with links to other objects \[ID 33271\]
 
-Because of a number of enhancements, overall performance has increased when processing (e.g. exporting) a large number of objects with links to other objects.
+Because of a number of enhancements, overall performance has increased when processing (e.g., exporting) a large number of objects with links to other objects.
 
 #### IPC channel port names will now always be unique \[ID 33274\]
 
@@ -537,7 +537,7 @@ In some rare cases, protocols could incorrectly load the QActionHelper DLL file 
 
 #### Elasticsearch: TTL settings would not be applied correctly \[ID 32913\]
 
-In some cases, TTL settings defined in an Elasticsearch database would not be applied correctly. As a result, certain data (e.g. profile instance data) would not get properly cleaned up.
+In some cases, TTL settings defined in an Elasticsearch database would not be applied correctly. As a result, certain data (e.g., profile instance data) would not get properly cleaned up.
 
 #### DataMiner Cube - ListView component: Time zone would not be taken into account when setting the default time range interval \[ID 33011\]
 
@@ -561,9 +561,9 @@ When a resource was deleted from the cache of a Cube client, in some cases, no u
 
 When you entered a search string in the filter box, all tickets would incorrectly be returned.
 
-#### DataMiner Cube - Automation: Problem when validating an Automation script \[ID 33084\]
+#### DataMiner Cube - Automation: Problem when validating an automation script \[ID 33084\]
 
-When, in the Automation app, you validated an Automation script that either contained an empty line in the DLL references or had a DLL reference removed, in some cases, an “Empty path name is not legal” error could be thrown.
+When, in the Automation app, you validated an automation script that either contained an empty line in the DLL references or had a DLL reference removed, in some cases, an “Empty path name is not legal” error could be thrown.
 
 #### DataMiner Cube: REPORTS page of a masked element would incorrectly indicate that the element was in alarm instead of masked \[ID 33087\]
 
@@ -589,7 +589,7 @@ In the Application framework, in some cases, two button component would incorrec
 
 #### DataMiner Agent would not start up when the computer name contained special characters \[ID 33137\]
 
-In some cases, a DataMiner Agent would fail to start up when the computer name contained special characters (e.g. “ü”).
+In some cases, a DataMiner Agent would fail to start up when the computer name contained special characters (e.g., “ü”).
 
 #### Dashboards app: Selection in parameter feed would incorrectly be cleared whenever the linked EPM feed was updated \[ID 33153\]
 
@@ -609,7 +609,7 @@ When ticket fields of type “dropdown list” were retrieved using a GQI query,
 
 #### SLPort would incorrectly split WebSocket messages larger than 65kB \[ID 33182\]
 
-Up to now, when SLPort received a WebSocket message larger than the WebSocket buffer (i.e. 65 kB), it would incorrectly split that message in multiple chunks before passing it to the protocol.
+Up to now, when SLPort received a WebSocket message larger than the WebSocket buffer (i.e., 65 kB), it would incorrectly split that message in multiple chunks before passing it to the protocol.
 
 #### Visual Overview: Problems with SelectedServiceDefinition session variable and with commands for ServiceManager component \[ID 33187\]
 
@@ -668,7 +668,7 @@ When a PDF report was generated from a dashboard, in some cases, it would not be
 
 #### Application framework: Table row action buttons would incorrectly always be displayed on the first column of a table \[ID 33258\]
 
-Up to now, table row action buttons would incorrectly always be displayed on the first column of a table. As a result, those buttons would disappear when e.g. a filter was applied that caused the first column to be hidden. From now on, table row action buttons will instead always be displayed on the first visible column of a table.
+Up to now, table row action buttons would incorrectly always be displayed on the first column of a table. As a result, those buttons would disappear when e.g., a filter was applied that caused the first column to be hidden. From now on, table row action buttons will instead always be displayed on the first visible column of a table.
 
 #### SLNetTypes protocol buffer contract was no longer compatible with DataMiner versions older than version 10.2.3 \[ID 33260\]
 
@@ -683,7 +683,7 @@ Up to now, the action editor would incorrectly update the application each time 
 
 #### Application framework: An 'http://' prefix would incorrectly be added to any URL that did not start with 'http://' \[ID 33262\]
 
-Up to now, the application framework would incorrectly add an “http://” prefix to any URL that did not start with “http://”. From now on, all URLs will be validated first. Only if the URL is invalid (e.g. “skyline.be”) will an “http://” prefix be added.
+Up to now, the application framework would incorrectly add an “http://” prefix to any URL that did not start with “http://”. From now on, all URLs will be validated first. Only if the URL is invalid (e.g., “skyline.be”) will an “http://” prefix be added.
 
 #### Dashboards: Not possible to share dashboards that contained query components of which the 'Update data' option was enabled \[ID 33267\]
 
@@ -701,11 +701,11 @@ Up to now, these anomaly detection alarms would incorrectly disappear from the A
 
 #### Problem when trying to retrieve base parameter values after changing the production version of a protocol based on a base protocol \[ID 33288\]
 
-After changing the production version of a protocol based on a so-called base protocol, it would no longer be possible to retrieve values from any of the base parameters (i.e. parameters of the base protocol).
+After changing the production version of a protocol based on a so-called base protocol, it would no longer be possible to retrieve values from any of the base parameters (i.e., parameters of the base protocol).
 
-#### Application framework: Problem when switching between feeds linked to Automation script input \[ID 33290\]
+#### Application framework: Problem when switching between feeds linked to automation script input \[ID 33290\]
 
-When, in the application framework, you add an action that launches an Automation script, you can link the script parameters to feeds. Up to now, when those feeds each had a property with the same name (e.g. a property called “Name”), the action would incorrectly not get updated when you switched from one feed to another.
+When, in the application framework, you add an action that launches an automation script, you can link the script parameters to feeds. Up to now, when those feeds each had a property with the same name (e.g., a property called “Name”), the action would incorrectly not get updated when you switched from one feed to another.
 
 #### Application framework: Minor issues fixed \[ID 33291\]
 
@@ -725,9 +725,9 @@ In some rare cases, an error could occur when you created a new group in the sta
 
 Also, the name of a group could get lost when you deleted the first agent/cluster in that group.
 
-#### Application framework: A request to update the application would incorrectly be sent when you opened an action that launches an Automation script \[ID 33302\]
+#### Application framework: A request to update the application would incorrectly be sent when you opened an action that launches an automation script \[ID 33302\]
 
-When, in the application framework, you opened an action that launches an Automation script, up to now, a request to update the application would incorrectly be sent as soon as the script was loaded.
+When, in the application framework, you opened an action that launches an automation script, up to now, a request to update the application would incorrectly be sent as soon as the script was loaded.
 
 #### Problem with SLDataMiner when a DMA started up while another DMA in the DMS was registering the SLAs \[ID 33303\]
 
@@ -773,4 +773,4 @@ When, in the Alarm Console, you right-click an alarm, you can copy the value in 
 
 #### Automatic Incident Tracking: Clearable base alarms of an incident were cleared when the incident was cleared \[ID 33481\]
 
-When an incident (i.e. alarm group) was cleared, in some cases, its clearable base alarms would incorrectly be cleared as well when the AutoClear option was disabled.
+When an incident (i.e., alarm group) was cleared, in some cases, its clearable base alarms would incorrectly be cleared as well when the AutoClear option was disabled.

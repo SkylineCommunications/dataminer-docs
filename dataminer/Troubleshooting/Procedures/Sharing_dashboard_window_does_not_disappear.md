@@ -4,7 +4,7 @@ uid: Sharing_dashboard_window_does_not_disappear
 
 # 'Sharing dashboard' window does not disappear
 
-When you try to share a dashboard, you should get a pop-up window that asks you to enter e.g. the email address of the person you want to share the dashboard with. If, instead, you see a loading window that keeps on saying *Sharing dashboard*, follow the actions detailed below, in the specified order:
+When you try to share a dashboard, you should get a pop-up window that asks you to enter e.g., the email address of the person you want to share the dashboard with. If, instead, you see a loading window that keeps on saying *Sharing dashboard*, follow the actions detailed below, in the specified order:
 
 1. [Exit the loading window and try sharing the dashboard again](#exit-the-loading-window-and-try-sharing-the-dashboard-again)
 1. [Check the SSL configuration](#check-the-ssl-configuration)

@@ -55,7 +55,7 @@ The administrator can see the changes made per user or per device/element, inclu
 
 DataMiner security enables role-based and domain-based management. It provides the administrator with a simple tool to define in detail what each account or group is allowed to do or see, based on views (write, configure, visibility), permissions (access, add, edit, delete, import, properties, lock, unlock, pause, stop, etc.), and access levels. Administrators can create as many groups/profiles as they want.
 
-DataMiner supports two principal schemes to manage the actual user accounts (i.e. username and password):
+DataMiner supports two principal schemes to manage the actual user accounts (i.e., username and password):
 
 - Standalone: As with any other typical solution, DataMiner allows the administrator to create all user accounts (username/password) from scratch in the DataMiner System.
 - Domain-integrated: Rather than adding all the user accounts separately in the DataMiner System, you can simply point DataMiner to an existing Windows domain.

@@ -31,7 +31,7 @@ The following elements and element attributes have been added to the Protocol XM
 - Protocol.Params.Param.Measurement.Discreets@matrixLayout
 
 > [!NOTE]
-> The Protocol.Compliancies.MaximumSupportedVersion element contains the most recent DataMiner version supported by the protocol in question. Format: “A.B.C.D” or “A.B.C.D - Buildnumber” (e.g. 9.6.13.0 or 9.6.13.0 - 8820)
+> The Protocol.Compliancies.MaximumSupportedVersion element contains the most recent DataMiner version supported by the protocol in question. Format: “A.B.C.D” or “A.B.C.D - Buildnumber” (e.g., 9.6.13.0 or 9.6.13.0 - 8820)
 
 ## Changes
 
@@ -39,7 +39,7 @@ The following elements and element attributes have been added to the Protocol XM
 
 #### IDE - Automation scripts: Class Library EXE block will now be added at the top of the script \[ID 26325\]
 
-Up to now, when DIS generated the EXE block with the Class Library code, it would add that block at the end of the Automation script. From now on, it will add it at the top of the script. That way, other precompiled EXE blocks will also be able to make use of the Class Library code it contains.
+Up to now, when DIS generated the EXE block with the Class Library code, it would add that block at the end of the automation script. From now on, it will add it at the top of the script. That way, other precompiled EXE blocks will also be able to make use of the Class Library code it contains.
 
 Also, the generated Class Library EXE block will now be assigned an ID in the 63000 range. Up to now, it would be assigned the first available ID starting from 1.
 

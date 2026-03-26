@@ -7,7 +7,7 @@ uid: Creating_a_repository_for_an_install_package
 > [!IMPORTANT]
 > This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
 
-An install package is defined through a manifest XML file. This manifest provides information about the install package such as its name, version and content (e.g. protocols, Automation scripts, Visio files).
+An install package is defined through a manifest XML file. This manifest provides information about the install package such as its name, version and content (e.g., protocols, automation scripts, Visio files).
 
 On the *Packages* tab of the SLC SE Repo Manager, you can create a new repository for an install package.
 
@@ -25,4 +25,4 @@ After creating and cloning the repository, you will find a repository with a sol
 
 The manifest file will contain the items you previously selected in selection mode in the repo manager. Note that the content of the manifest can be adapted and extended with additional items.
 
-The install script is an Automation script that performs the installation of the package. This installation script by default only performs installation of the package items but can be customized to your needs.
+The install script is an automation script that performs the installation of the package. This installation script by default only performs installation of the package items but can be customized to your needs.

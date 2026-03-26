@@ -10,13 +10,13 @@ uid: DIS_2.31
 
 #### Automation script debugging \[ID 28062\]
 
-From now on, you can also use the DIS Inject tool window to debug Automation scripts.
+From now on, you can also use the DIS Inject tool window to debug automation scripts.
 
-To debug an Automation script, do the following:
+To debug an automation script, do the following:
 
 1. In the *DIS* menu, go to *DMA \> Connect*, and select the DataMiner Agent to which you want DIS to connect.
 
-1. Import the Automation script. In the *DIS* menu, select *DMA \> Import Automation script*, select an Automation script, and click *Import*.
+1. Import the automation script. In the *DIS* menu, select *DMA \> Import Automation script*, select an automation script, and click *Import*.
 
 1. In the XML editor, go to the Exe block that you want to debug, and click the *Edit C#* button in front of it to open the Exe block in a C# editor.
 
@@ -26,7 +26,7 @@ To debug an Automation script, do the following:
 
 1. Select the *Automation script* tab.
 
-1. Open the large selection box at the top of the window, and select the Automation script that you want to debug.
+1. Open the large selection box at the top of the window, and select the automation script that you want to debug.
 
 1. In the *Exe blocks* list:
 
@@ -40,24 +40,24 @@ To debug an Automation script, do the following:
 
 1. Click the *Attach* button to build all temporary Exe block projects and attach the Microsoft Visual Studio Debugger to the DataMiner SLAutomation process.
 
-1. In the *DIS Inject* window, click *Execute* to manually trigger the Automation script.
+1. In the *DIS Inject* window, click *Execute* to manually trigger the automation script.
 
 > [!NOTE]
 >
 > - Automation script debugging only works in conjunction with DataMiner Agents running at least DataMiner Main Release Version 10.1.0 or Feature Release Version 10.0.6.
 > - Automation script debugging currently does not yet support memory files and precompiled Exe blocks.
 
-#### Solution-based Automation script development \[ID 28231\]
+#### Solution-based automation script development \[ID 28231\]
 
-Similar to protocols, it is now also possible to develop Automation scripts as Visual Studio solutions. However, an Automation script solution can contain multiple scripts, while a protocol solution can only contain one single protocol.
+Similar to protocols, it is now also possible to develop automation scripts as Visual Studio solutions. However, an automation script solution can contain multiple scripts, while a protocol solution can only contain one single protocol.
 
-- C# projects that contain the code for the Exe blocks of an Automation script can contain multiple .cs files. At compilation, the contents of those files will be combined into one Exe block.
+- C# projects that contain the code for the Exe blocks of an automation script can contain multiple .cs files. At compilation, the contents of those files will be combined into one Exe block.
 
 - DLL imports need to be configured on the C# project itself by adding references to the external components. These can be external DLL files (located in C:\\DataMiner\\ProtocolScripts or C:\\DataMiner\\Files) or other scripts in the same solution.
 
-##### Creating an Automation Script solution
+##### Creating an automation script solution
 
-To create a new Automation script solution containing one dummy Automation script, do the following:
+To create a new automation script solution containing one dummy automation script, do the following:
 
 1. Select *File \> New \> DataMiner Automation Script Solution...*
 
@@ -66,7 +66,7 @@ To create a new Automation script solution containing one dummy Automation scrip
 1. Select the target folder.
 
    > [!NOTE]
-   > The default protocol solution folder and the default Automation script folder can both be specified in *DIS Settings \> Solutions*.
+   > The default protocol solution folder and the default automation script folder can both be specified in *DIS Settings \> Solutions*.
 
 1. Select *Create initial Automation script* if you want to solution to contain a basic script with one Exe block.
 
@@ -77,9 +77,9 @@ To create a new Automation script solution containing one dummy Automation scrip
 
 ##### Creating a new script in a solution
 
-To create a new script in an Automation script solution, do the following:
+To create a new script in an automation script solution, do the following:
 
-1. Open the Automation script solution.
+1. Open the automation script solution.
 
 1. Select *File \> New \> New DataMiner Automation Script...* or right-click a solution folder in the Solution Explorer and select *Add \> New DataMiner Automation Script...*
 
@@ -89,24 +89,24 @@ To create a new script in an Automation script solution, do the following:
 
 ##### Adding an existing script to a solution
 
-To add an existing Automation script to an Automation script solution, do the following:
+To add an existing automation script to an automation script solution, do the following:
 
 1. Right-click a solution folder in the Solution Explorer.
 
 1. Select *Add \> Existing DataMiner Automation Script*.
 
-1. Select a least one Automation script file.
+1. Select a least one automation script file.
 
 1. Click *Open*.
 
 > [!NOTE]
-> When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
+> When you add existing scripts to an automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
 
 ##### Saving a compiled script
 
-To save a compiled version of an Automation script to a file (with all C# code in its Exe block), do the following:
+To save a compiled version of an automation script to a file (with all C# code in its Exe block), do the following:
 
-1. Open the XML file containing the Automation script that you want to compile.
+1. Open the XML file containing the automation script that you want to compile.
 
 1. Select *File \> Save Compiled Automation Script...*
 
@@ -116,9 +116,9 @@ To save a compiled version of an Automation script to a file (with all C# code i
 
 ##### Uploading a script to a DataMiner Agent
 
-To upload an Automation script to a DataMiner Agent, do the following:
+To upload an automation script to a DataMiner Agent, do the following:
 
-1. Open the XML file containing the Automation script.
+1. Open the XML file containing the automation script.
 
 1. Click *Publish* to compile the script and publish it to the DataMiner Agent that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
 
@@ -179,7 +179,7 @@ The following checks and error messages have been enhanced:
 
 #### IDE - 'DIS Validator' window: After having an error fixed, the next error in the list will get selected instead of the first error in the list \[ID 28418\]
 
-In the DIS Validator window, when you had an error automatically fixed (e.g. by right-clicking the error and selecting Fix \> This error), up to now, the first error in the list would get selected. From now on, after having an error automatically fixed, the next error in the list will now get selected instead.
+In the DIS Validator window, when you had an error automatically fixed (e.g., by right-clicking the error and selecting Fix \> This error), up to now, the first error in the list would get selected. From now on, after having an error automatically fixed, the next error in the list will now get selected instead.
 
 #### Validator: Grouping of error messages \[ID 28432\]
 

@@ -24,7 +24,7 @@ Defines the layout and the order of the Data Display pages.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Pages](xref:Protocol.Display.Pages)|[0, 1]|Allows to define pages and specify their configuration (e.g. configure the visibility).|
+|&nbsp;&nbsp;[Pages](xref:Protocol.Display.Pages)|[0, 1]|Allows to define pages and specify their configuration (e.g., configure the visibility).|
 
 ## Examples
 

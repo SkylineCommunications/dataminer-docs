@@ -4,7 +4,7 @@ uid: DMSScript.Description
 
 # Description element
 
-Specifies the description of the Automation script.
+Specifies the description of the automation script.
 
 ## Type
 

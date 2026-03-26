@@ -43,7 +43,7 @@ For each KPI, a value is calculated that can be used to generate alarms and make
 
 - **Number ONT Online**: The ONTs that have the state *Online*.
 
-- **Number ONT Offline**: The total number of ONTs from which the system has not received a data package in the last 30 minutes (i.e. 2 polling cycles with the default 15 minutes polling time).
+- **Number ONT Offline**: The total number of ONTs from which the system has not received a data package in the last 30 minutes (i.e., 2 polling cycles with the default 15 minutes polling time).
 
 - **Percentage ONT Online**: The calculated percentage of online ONTs.
 

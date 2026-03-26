@@ -2,9 +2,9 @@
 uid: SchemaFunctions
 ---
 
-# Functions Schema
+# Functions schema
 
-DataMiner Functions XML Schema.
+DataMiner Functions XML schema.
 
 ## Root element
 

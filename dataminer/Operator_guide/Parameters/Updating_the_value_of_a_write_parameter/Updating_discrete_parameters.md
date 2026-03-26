@@ -25,4 +25,4 @@ In case the parameter can contain particular pieces of text, it will have a text
 ![Discrete parameter text box](~/dataminer/images/Discrete_Parameter_Text_Box.png)<br>*Discrete parameter with text box control in DataMiner 10.4.6*
 
    > [!NOTE]
-   > When you update the value of a string parameter, DataMiner checks both the format (e.g. capitalization) and the length of the new string before sending it to the device. If you enter a value that is not accepted by the protocol, the change to the parameter will not be accepted.
+   > When you update the value of a string parameter, DataMiner checks both the format (e.g., capitalization) and the length of the new string before sending it to the device. If you enter a value that is not accepted by the protocol, the change to the parameter will not be accepted.

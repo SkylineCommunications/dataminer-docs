@@ -13,13 +13,13 @@ The module consist of a pane on the left, listing resource pools, and a pane on 
 
 ## Pools pane
 
-The *Pools* pane on the left contains a list of pools, i.e. collections of resources that have something in common. For example, microphones, headphones, audio mixers, etc. can be grouped together in a resource pool named “Audio equipment”. Pools can be added, edited, and deleted with three buttons at the bottom of the pane.
+The *Pools* pane on the left contains a list of pools, i.e., collections of resources that have something in common. For example, microphones, headphones, audio mixers, etc. can be grouped together in a resource pool named “Audio equipment”. Pools can be added, edited, and deleted with three buttons at the bottom of the pane.
 
 ## Resources tab
 
-The *Resources* tab lists resources, i.e. objects that can be used to achieve something.
+The *Resources* tab lists resources, i.e., objects that can be used to achieve something.
 
-- You can link resources to DataMiner elements, or they can refer to places (e.g. meeting rooms), persons, frequency bands, etc. If a resource is linked to an element, a link icon will be displayed next to the resource name.
+- You can link resources to DataMiner elements, or they can refer to places (e.g., meeting rooms), persons, frequency bands, etc. If a resource is linked to an element, a link icon will be displayed next to the resource name.
 
 - From DataMiner 10.2.0/10.1.5 onwards, three subtabs are displayed when a resource is selected.
 
@@ -44,7 +44,7 @@ The *Resources* tab lists resources, i.e. objects that can be used to achieve so
 
 > [!NOTE]
 >
-> - Booking resources can be done via Automation scripts. By means of an embedded Resource Manager component in Visio, you can create an overview of the bookings. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
+> - Booking resources can be done via automation scripts. By means of an embedded Resource Manager component in Visio, you can create an overview of the bookings. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
 > - When you try to delete a resource that is in use or is about to be in use, a warning message will be displayed. However, keep in mind that only bookings that are displayed according to the latest zoom level in the *timeline* or *occupancy* tab are taken into account for this.
 
 ## Properties tab

@@ -8,7 +8,7 @@ When communicating with a serial device, a DataMiner Agent will send commands to
 
 > [!NOTE]
 >
-> - Devices supporting serial communication often implement a proprietary, vendor-specific serial communication protocol. However, public standardized protocols are also possible (e.g. Modbus).
+> - Devices supporting serial communication often implement a proprietary, vendor-specific serial communication protocol. However, public standardized protocols are also possible (e.g., Modbus).
 > - Serial devices cannot send unsolicited messages to a DataMiner Agent; devices only send responses to commands sent by DataMiner.
 
 The communication will occur over TCP/IP, UDP, or, less commonly, over a serial cable.

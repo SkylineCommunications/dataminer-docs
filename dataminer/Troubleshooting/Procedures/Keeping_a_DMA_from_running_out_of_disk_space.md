@@ -25,6 +25,15 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
 
 1. Depending on the results of this initial analysis, you can then make the following adjustments:
 
+    - **Cleaning up the LogCollector folder - 5 minutes**
+
+      When LogCollector packages are created manually, these are typically saved on the desktop. These packages need to get cleaned up manually.
+
+      On the desktop, look inside the *SL_LogCollector* folder and remove the old packages. If other users also access the server, be sure to check the desktop of those other users via `C:\Users\<user>\Desktop\SL_LogCollector`.
+
+      > [!NOTE]
+      > If Skyline retrieves LogCollector packages remotely, i.e., via dataminer.services, these are automatically cleaned up.
+
     - **Adjusting the TTL settings – 5 minutes**
 
         Adjust your TTL settings, so that data are removed from the local database more quickly. On a DMA with an SQL local database, changing these settings will have an effect in approximately one hour. However, on a DMA with a Cassandra database, there will be no immediate effect, as it is the TTL at the time a record is created that determines when that record is removed.
@@ -43,7 +52,7 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
 
     - **Checking the minidump and crashdump folders – 5 minutes**
 
-        Check the `C:\Skyline DataMiner\Logging\MiniDump` and `C:\Skyline DataMiner\Logging\CrashDump` folders, and remove any items that are old enough to be no longer relevant, e.g. anything more than one year old.
+        Check the `C:\Skyline DataMiner\Logging\MiniDump` and `C:\Skyline DataMiner\Logging\CrashDump` folders, and remove any items that are old enough to be no longer relevant, e.g., anything more than one year old.
 
     - **Removing old backup files – 5 minutes**
 
@@ -72,7 +81,7 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
             ```
 
       > [!TIP]
-      > If you are using a system with self-managed DataMiner storage (e.g. Cassandra), we recommend switching to [Storage as a Service](xref:STaaS) instead.
+      > If you are using a system with self-managed DataMiner storage (e.g., Cassandra), we recommend switching to [Storage as a Service](xref:STaaS) instead.
 
     - **Cleaning up alarm and trend templates – approx. 2 minutes/protocol**
 

@@ -64,7 +64,7 @@ To initialize a repository for a snapshot, use the following arguments:
 
 - `--repo` or `-r`: The name of the repository to be created.
 
-- `--path`: The path of the repository as defined in the *yaml.xml* file of the Elasticsearch cluster (i.e. `path.repo`), enclosed by "". Add an extra backslash ("\") in front of backslash characters to make sure these are interpreted correctly. This is the location where the snapshot will be placed.
+- `--path`: The path of the repository as defined in the *yaml.xml* file of the Elasticsearch cluster (i.e., `path.repo`), enclosed by "". Add an extra backslash ("\") in front of backslash characters to make sure these are interpreted correctly. This is the location where the snapshot will be placed.
 
 > [!NOTE]
 > Snapshots are incremental. Do not delete any of them. For more information, see [Register a snapshot repository](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-register-repository.html).
@@ -96,4 +96,4 @@ To restore a backup/snapshot, use the following arguments:
 > - We recommend that you disable security when restoring a backup with security enabled. To do so, comment the security setting in the *.yaml* file.
 > - It is only possible to restore indices that do not exist yet. Therefore, in most cases, you will have to delete all data from all nodes before restoring a backup.
 > - Do not restore a backup while DataMiner is online.
-> - You can get a list of existing snapshots to help find the right snapshot name by running a query on Kibana DevTools, e.g. `GET /snapshot/my_repository`. For more information, see [Get a list of available snapshots](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-restore-snapshot.html#get-snapshot-list).
+> - You can get a list of existing snapshots to help find the right snapshot name by running a query on Kibana DevTools, e.g., `GET /snapshot/my_repository`. For more information, see [Get a list of available snapshots](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-restore-snapshot.html#get-snapshot-list).

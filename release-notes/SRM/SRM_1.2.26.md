@@ -95,9 +95,9 @@ The corresponding ReservationInstanceType enum has been made available in the Bo
 
 Changing the booking instance type changes the default service definition type.
 
-#### Wait time added when importing Automation scripts [ID 33683]
+#### Wait time added when importing automation scripts [ID 33683]
 
-To make sure function protocols are available in time during an import, a wait time of 5 seconds has now been implemented when Automation scripts are imported.
+To make sure function protocols are available in time during an import, a wait time of 5 seconds has now been implemented when automation scripts are imported.
 
 #### Support for script DLLs in SRM configuration import/export [ID 33699]
 

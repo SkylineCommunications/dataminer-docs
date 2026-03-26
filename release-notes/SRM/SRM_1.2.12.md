@@ -104,7 +104,7 @@ When log files are removed, either manually or automatically, the cluster will n
 
 #### SRM Manager failed to load after initial loading failed \[ID 29180\]
 
-If an SRM Manager failed to load initially, e.g. because a script timed out, any subsequent calls to the manager would also fail.
+If an SRM Manager failed to load initially, e.g., because a script timed out, any subsequent calls to the manager would also fail.
 
 #### Problem when duplicating finished permanent booking \[ID 29220\]
 

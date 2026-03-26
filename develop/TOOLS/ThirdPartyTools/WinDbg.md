@@ -61,7 +61,7 @@ The following table contains an overview of some useful commands for investigati
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | `ClrStack [-a] [-l] [-p] [-m]`                                             | Provides a stack trace of managed code only.                              |
 | `DumpClass <EEClassAddress>`                                               | Displays information about the EEClass structure associated type.         |
-| `DumpDomain`                                                               | Displays app domains info (e.g. all assemblies loaded in the app domain). |
+| `DumpDomain`                                                               | Displays app domains info (e.g., all assemblies loaded in the app domain). |
 | `DumpHeap [-stat] [-mt <>] [-type <>] [-strings] [-min] [-max]`            | Lists types and the space they take on the managed heap.                  |
 | `DumpMD <MethodDescAddress>`                                               | Displays information about a MethodDesc structure at the specified address. |
 | `DumpMT <MethodTableAddress>`                                              | Displays information about a method table at the specified address.       |

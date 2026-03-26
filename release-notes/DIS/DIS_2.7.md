@@ -39,7 +39,7 @@ Due to a number of enhancements, overall performance has increased when loading 
 
 #### RTDisplay check now also supports conditional syntax in dependencyValues attribute \[ID 17172\]
 
-Up to now, when the dependencyValues attribute of a Discreet tag contained conditional syntax (e.g. “123?” or “123?:\[value:123\]”), an exception was thrown and all other RTDisplay checks were ignored. From now on, the RTDisplay check will support conditional syntax in dependencyValues attributes.
+Up to now, when the dependencyValues attribute of a Discreet tag contained conditional syntax (e.g., “123?” or “123?:\[value:123\]”), an exception was thrown and all other RTDisplay checks were ignored. From now on, the RTDisplay check will support conditional syntax in dependencyValues attributes.
 
 ### Fixes
 

@@ -16,6 +16,8 @@ uid: Troubleshooting_DaaS
 
 To begin an investigation on a DaaS setup:
 
+1. Check if the procedure from the [DaaS Unavailable: troubleshooting guide](https://internaldocs.skyline.be/DevDocs/DaaS/Troubleshooting/DaaSUnavailable.html) applies *(link for Skyline employees only)*.
+
 1. Connect to the setup via Remote Desktop.
 
    > [!TIP]

@@ -19,14 +19,14 @@ uid: Web_apps_Feature_Release_10.4.12
 
 ## New features
 
-#### Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40700]
+#### Interactive automation scripts: New option to skip the confirmation window when aborting [ID 40700]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-DataMiner web applications now support the new `SkipAbortConfirmation` property that was added to `UIBuilder`. When this property is set to true, the confirmation window will not be displayed when the interactive Automation script is aborted. By default, this property will be set to false.
+DataMiner web applications now support the new `SkipAbortConfirmation` property that was added to `UIBuilder`. When this property is set to true, the confirmation window will not be displayed when the interactive automation script is aborted. By default, this property will be set to false.
 
 > [!TIP]
-> See also: [Interactive Automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
+> See also: [Interactive automation scripts: New option to skip the confirmation window when aborting [ID 40683]](xref:General_Feature_Release_10.4.12#interactive-automation-scripts-new-option-to-skip-the-confirmation-window-when-aborting-id-40683)
 
 #### Dashboards/Low-Code Apps: Flows [ID 40974]
 
@@ -194,7 +194,7 @@ In the color themes used by the web apps, the gray colors have been updated.
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Up to now, when you added, updated or deleted an application on the root page (e.g. `https://myDma/root/`), the entire list of applications would always be refreshed. From now on, only the information that has changed will be refreshed.
+Up to now, when you added, updated or deleted an application on the root page (e.g., `https://myDma/root/`), the entire list of applications would always be refreshed. From now on, only the information that has changed will be refreshed.
 
 #### Dashboards/Low-Code Apps: Term 'Feed' replaced by 'Components' and 'URL' [ID 41141]
 
@@ -266,7 +266,7 @@ When parameter data was loaded into a *State* component, the dashboard could get
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-When, on a system that was not using automatic Windows authentication, you were logged in to one of the other web apps (e.g. Monitoring, Dashboards, etc.), you would no longer automatically be logged in to the legacy *Reports & Dashboards* app.
+When, on a system that was not using automatic Windows authentication, you were logged in to one of the other web apps (e.g., Monitoring, Dashboards, etc.), you would no longer automatically be logged in to the legacy *Reports & Dashboards* app.
 
 #### Dashboards app - Generic map component: Problem when rendering maps with AppVersion set to 1 [ID 41035]
 
@@ -291,7 +291,7 @@ Example:
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Due to a serialization issue, the `GetVisioFor...` methods would throw an error when the Visio page contained shapes that executed Automation scripts with dummies, parameters or memory files.
+Due to a serialization issue, the `GetVisioFor...` methods would throw an error when the Visio page contained shapes that executed automation scripts with dummies, parameters or memory files.
 
 #### Dashboards/Low-Code Apps: Migration of a dashboard or page of a low-code app would incorrectly continue when the dashboard or page was closed [ID 41045]
 
@@ -343,11 +343,11 @@ When you panned or zoomed out while map data was being retrieved, in some cases,
 
 When your mouse pointer was hovering over a timeline item that should only become visible when you hover over it, in some cases, it would incorrectly not be displayed. In order to have it displayed, you had to move the mouse pointer away from the timeline and back.
 
-#### Interactive Automation scripts: Problem when none of the components had an identifier configured [ID 41128]
+#### Interactive automation scripts: Problem when none of the components had an identifier configured [ID 41128]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-When none of the components defined in an interactive Automation script had an identifier (DestVar) configured, interacting with the UI of the script would result in an exception being thrown.
+When none of the components defined in an interactive automation script had an identifier (DestVar) configured, interacting with the UI of the script would result in an exception being thrown.
 
 #### Dashboards/Low-Code Apps - Web component: URL changes would no longer be detected [ID 41179]
 
@@ -371,7 +371,7 @@ During the migration of a low-code app that was created before the introduction 
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-While all GQI components (i.e. *Table*, *Grid*, *Maps*, *State*, *Column & bar chart*, *Pie & donut chart*, *Line & area chart*, *Node edge graph*)allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
+While all GQI components (i.e., *Table*, *Grid*, *Maps*, *State*, *Column & bar chart*, *Pie & donut chart*, *Line & area chart*, *Node edge graph*)allowed you to drop tables onto them as data, up to now, they would not fully support those static tables.
 
 In many cases, a component would not be able to properly visualize the table. Also, users would not be able to properly configure the component settings.
 
@@ -411,7 +411,7 @@ When a GQI query was run multiple times in quick succession, in some cases, a `S
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] / 10.5.0 [CU0] - FR 10.4.12 [CU0] -->
 
-When the value of a parameter selected in another component (e.g. a *Gauge* or a *Ring* component) was fed to a *Line & area chart* component that was linked to a *Time range* component, in some cases, the *Line & area chart* component would not show any data.
+When the value of a parameter selected in another component (e.g., a *Gauge* or a *Ring* component) was fed to a *Line & area chart* component that was linked to a *Time range* component, in some cases, the *Line & area chart* component would not show any data.
 
 #### Monitoring/Dashboards/Low-Code Apps - Line & area chart component: Changes would not always be detected and processed properly [ID 41470]
 

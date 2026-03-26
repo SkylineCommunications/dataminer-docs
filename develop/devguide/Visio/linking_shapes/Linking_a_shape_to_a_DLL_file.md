@@ -6,7 +6,7 @@ uid: Linking_a_shape_to_a_DLL_file
 
 Using a shape data field of type **Execute**, you can link a shape to one or more DLL files.
 
-When you link a shape to one or more DLL files, the DLL file(s) will be executed each time a user clicks that shape. This way, you can allow users to start e.g. WFM modules.
+When you link a shape to one or more DLL files, the DLL file(s) will be executed each time a user clicks that shape. This way, you can allow users to start e.g., WFM modules.
 
 ## Configuring the shape data field
 

@@ -75,7 +75,7 @@ In some cases, an error could occur during a DataMiner upgrade.
 
 #### DataMiner Cube - Automation: Not possible to save a script after modifying an if/then block \[ID 28532\]
 
-When, in an Automation scripts, you had changed the actions in an if/then block, in some cases, the *Save script* button would incorrectly not get activated. As a result, you were not able to save the modified script.
+When, in an automation scripts, you had changed the actions in an if/then block, in some cases, the *Save script* button would incorrectly not get activated. As a result, you were not able to save the modified script.
 
 #### DataMiner Cube - Scheduler app: Problem when editing a script event in the timeline \[ID 28542\]
 

@@ -17,8 +17,8 @@ Throughout this chapter, two capitalization styles are mentioned: Pascal case an
 
 ### Compound words
 
-- Words that are part of a closed-form compound word (i.e. compound words written as a single word, e.g. endpoint) should not be capitalized, but should be treated as a single word.
+- Words that are part of a closed-form compound word (i.e., compound words written as a single word, e.g., endpoint) should not be capitalized, but should be treated as a single word.
 
 ### Acronyms and Initialisms
 
-- Acronyms or initialisms consisting of only two characters should be capitalized (e.g. "PollingIP"). PascalCasing or camelCasing should be used for acronyms that consist of more than two characters (e.g. "SnmpResponse" or "snmpResponse" instead of "SNMPResponse").
+- Acronyms or initialisms consisting of only two characters should be capitalized (e.g., "PollingIP"). PascalCasing or camelCasing should be used for acronyms that consist of more than two characters (e.g., "SnmpResponse" or "snmpResponse" instead of "SNMPResponse").

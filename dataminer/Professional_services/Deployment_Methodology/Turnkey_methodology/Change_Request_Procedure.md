@@ -12,10 +12,10 @@ The Change Request procedure is governed by the following principles:
 
 - Any non-compliance with the terms & conditions automatically results in a Change Request.
 
-- A Change Request always includes a detailed description of the nature and subject of the Change Request (e.g. deviation from terms & conditions, change in requirements, new requirement, etc.), along with the impact on the overall timing of the project as well as on the cost of the project (even if either of those is nil).
+- A Change Request always includes a detailed description of the nature and subject of the Change Request (e.g., deviation from terms & conditions, change in requirements, new requirement, etc.), along with the impact on the overall timing of the project as well as on the cost of the project (even if either of those is nil).
 
 - A Change Request only formally applies when it has been formally signed off and returned to Skyline. Only then will it be considered along with the initial specifications for execution.
 
 - A Change Request submitted for approval and sign-off is only valid for two weeks at most, after which Skyline will update the time and cost impact to revalidate it and make it eligible for sign-off again.
 
-- Any Change Request that requires design preparation work (e.g. workshops, testing, reviews, designs, etc.) will inevitably and irrevocably result in a time and cost impact, irrespective of whether the Change Request is eventually approved and executed or not. Skyline will indicate this prior to starting the design preparation work.
+- Any Change Request that requires design preparation work (e.g., workshops, testing, reviews, designs, etc.) will inevitably and irrevocably result in a time and cost impact, irrespective of whether the Change Request is eventually approved and executed or not. Skyline will indicate this prior to starting the design preparation work.

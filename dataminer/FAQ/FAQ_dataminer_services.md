@@ -49,7 +49,7 @@ STaaS is a service, which means you do not need to worry about how data are stor
 
 ### What about resiliency?
 
-Our solution separately replicates your storage account synchronously across three Azure availability zones (i.e. a group of data centers in a region, close enough to have a low-latency of < 2ms) in the primary region. Each availability zone is a separate physical location in one region with independent power, cooling, and networking, which means you are protected against server, rack, or driver failures and against physical disasters (such as fire or flooding) within the data center.
+Our solution separately replicates your storage account synchronously across three Azure availability zones (i.e., a group of data centers in a region, close enough to have a low-latency of < 2ms) in the primary region. Each availability zone is a separate physical location in one region with independent power, cooling, and networking, which means you are protected against server, rack, or driver failures and against physical disasters (such as fire or flooding) within the data center.
 
 See also [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
 
@@ -63,7 +63,7 @@ The same configuration settings are used as when you have an on-premises DataMin
 
 ### Can I download the data for archiving purposes?
 
-You cannot access the data from the database directly, similar as with an on-premises DataMiner System; however, the standard data offload feature in DataMiner remains fully functional in case you need to offload data e.g. for archiving/legal purposes.
+You cannot access the data from the database directly, similar as with an on-premises DataMiner System; however, the standard data offload feature in DataMiner remains fully functional in case you need to offload data e.g., for archiving/legal purposes.
 
 ### What type of databases are used in the cloud?
 
@@ -73,7 +73,7 @@ Azure Cosmos DB (NOSQL, fully managed DBaaS) and Azure Table storage.
 
 Please visit [Azure Speed Test](https://azurespeedtest.azurewebsites.net/) to measure the latency.
 
-### What if I am in government business or located in a country with e.g. strict regulations?
+### What if I am in government business or located in a country with e.g., strict regulations?
 
 There are separated Azure ecosystems, completely isolated from the commercial Azure, which are in cooperation with a local/in-country data center service provider that has pretty much the full Azure stack available, allowing Skyline Communications to deploy everything over there in a separate URL if necessary.
 
@@ -97,7 +97,7 @@ While it is very difficult to assess, and this can also be different depending o
 
 ### CapEx vs. OpEx?
 
-CapEx investments depreciate over the useful life of the asset whereas cloud server expenses are considered as operational expenses that are deducted from costs supporting day-to-day operations. From an accounting point of view, these are funds that are used at the end of the accounting period, or within the year they are purchased, meaning they can be deducted in full from taxes the year they are incurred. CapEx are depreciated, meaning they are deducted over their expected useful life (e.g. an asset purchased for $10,000, for example, might depreciate by $2000 a year, over an expected five years of use).
+CapEx investments depreciate over the useful life of the asset whereas cloud server expenses are considered as operational expenses that are deducted from costs supporting day-to-day operations. From an accounting point of view, these are funds that are used at the end of the accounting period, or within the year they are purchased, meaning they can be deducted in full from taxes the year they are incurred. CapEx are depreciated, meaning they are deducted over their expected useful life (e.g., an asset purchased for $10,000, for example, might depreciate by $2000 a year, over an expected five years of use).
 
 With OpEx purchases, such as cloud storage, you only need to pay for items you use. You can scale up or scale down as defined by your actual needs, rather than trying to predict how much capacity you will need in the distant future. This enables more cash at hand and creates a predictable recurring cost structure that aligns with your net income. Also, it is important to understand that capital expenditures typically have to go through several management approvals before they can be purchased. Operational expenditures, on the other hand, can typically be procured as long as they are considered within the operating expense budget.
 

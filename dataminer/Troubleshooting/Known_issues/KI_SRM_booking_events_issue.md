@@ -10,7 +10,7 @@ SRM setups using a DataMiner version prior to 10.3.0/10.3.2.
 
 ## Cause
 
-From DataMiner 10.3.0/10.3.2 onwards ([RN 34856](xref:General_Feature_Release_10.3.2#breaking-change-capacity-property-will-no-longer-be-initialized-on-new-resources-id-34856)), the *Capacity* property is no longer initialized on new resources. However, if you use a 10.3.0/10.3.2 Cube version while the server uses an older DataMiner version, this can cause deactivating function DVEs to happen with large delays. This in turn can cause delays to booking automation in general (i.e. event scripts and starting/stopping of bookings).
+From DataMiner 10.3.0/10.3.2 onwards ([RN 34856](xref:General_Feature_Release_10.3.2#breaking-change-capacity-property-will-no-longer-be-initialized-on-new-resources-id-34856)), the *Capacity* property is no longer initialized on new resources. However, if you use a 10.3.0/10.3.2 Cube version while the server uses an older DataMiner version, this can cause deactivating function DVEs to happen with large delays. This in turn can cause delays to booking automation in general (i.e., event scripts and starting/stopping of bookings).
 
 ## Fix
 

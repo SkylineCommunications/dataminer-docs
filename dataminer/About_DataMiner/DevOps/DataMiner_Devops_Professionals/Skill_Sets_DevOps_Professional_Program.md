@@ -12,7 +12,7 @@ If you are considering becoming a DataMiner DevOps Professional, or if you are s
 
 - **New world mindset**: Knowledge of and experience with agile methodologies, value delivery, objectives and key results, continuous learning, being community-oriented, empowering people, etc.
 
-- **Domain knowledge & expertise**: Knowledge of and experience within your specific vertical, e.g. satellite, OTT, contribution, data centers, media, energy, HFC, security, IP, cloud, IoT, etc.
+- **Domain knowledge & expertise**: Knowledge of and experience within your specific vertical, e.g., satellite, OTT, contribution, data centers, media, energy, HFC, security, IP, cloud, IoT, etc.
 
 - **General ICT concepts & architecture knowledge**: Knowledge of and experience with general concepts and technology related to CI/CD, automation and orchestration, process modeling, object modeling, IP networking, KQI engineering, coding, actionable insights, unit testing, data storage, cloud, etc.
 

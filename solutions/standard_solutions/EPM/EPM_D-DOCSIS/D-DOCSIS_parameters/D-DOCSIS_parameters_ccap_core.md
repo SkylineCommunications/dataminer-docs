@@ -34,7 +34,7 @@ This page contains an overview of the CCAP Core parameters available in the D-DO
 
 - **Core Leaf (DPA) X Percentage IF (Links) Over-utilized**: Calculated. The percentage of CCAP core interfaces connected to the specific core Leaf (1, 2, etc.) that are currently over-utilized.
 
-  This metric is obtained from the CCAP Core Relations KPIs table, by looking up the "Source Percentage IF Over-Utilized" for the CCAP in relation to the corresponding core leaf (e.g. Core Leaf 1 = Destination Hop 1).
+  This metric is obtained from the CCAP Core Relations KPIs table, by looking up the "Source Percentage IF Over-Utilized" for the CCAP in relation to the corresponding core leaf (e.g., Core Leaf 1 = Destination Hop 1).
 
 - **CPU Utilization**: Direct value. The percentage of the CPU that is being utilized.
 

@@ -4,7 +4,7 @@ uid: MaintenanceSettings.SLNet.NonElementProtocol
 
 # NonElementProtocol element
 
-In a Visio drawing, a "NonElementProtocol" option can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like description.xml, information.xml, or port.xml. This can enhance the overall performance of the corresponding visual overview. It is also possible to apply this option system-wide, instead of limiting it to one shape or page. Default: false.
+In a Visio drawing, a [NonElementProtocol](xref:Overview_of_page_and_shape_options#nonelementprotocol) option can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *information.xml*, or *port.xml*. This can enhance the overall performance of the corresponding visual overview. It is also possible to apply this option system-wide, instead of limiting it to one shape or page. Default: false.
 
 ## Content Type
 

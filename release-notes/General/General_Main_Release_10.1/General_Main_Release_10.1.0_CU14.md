@@ -50,7 +50,7 @@ When you opened the Resources app, in some cases, no resources or resource pools
 
 #### Processes would not get registered correctly when a DataMiner upgrade included a reboot \[ID 32818\]
 
-When a DataMiner upgrade included a reboot (either explicitly requested, or e.g. after installing Microsoft .NET 4.8), in some cases, services would not get registered correctly, especially when the new DataMiner version included services that did not previously exist.
+When a DataMiner upgrade included a reboot (either explicitly requested, or e.g., after installing Microsoft .NET 4.8), in some cases, services would not get registered correctly, especially when the new DataMiner version included services that did not previously exist.
 
 #### Problem with SLDMS hosting agent cache \[ID 32827\]
 

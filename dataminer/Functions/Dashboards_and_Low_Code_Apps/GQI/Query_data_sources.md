@@ -9,7 +9,7 @@ When you create a query, you can use one or more of the data sources listed belo
 > [!NOTE]
 >
 > - Some data sources can be linked to data. From DataMiner 10.3.5/10.4.0 onwards<!--  RN 35837 -->, a link icon is displayed to the right of a selection box if using data is possible. Click this icon to select the data. In earlier DataMiner versions, a *Use feed* checkbox is available for this instead.
-> - Custom properties that are marked as read-only, e.g. the *System Name* and *System Type* alarm properties, can be retrieved with a GQI query from DataMiner 10.2.0 [CU6]/10.2.9 onwards. In addition, from DataMiner 10.2.10/10.3.0 onwards, the *System Name* and *System Type* data are available in the *Data* pane (depending on the data source, as mentioned below).
+> - Custom properties that are marked as read-only, e.g., the *System Name* and *System Type* alarm properties, can be retrieved with a GQI query from DataMiner 10.2.0 [CU6]/10.2.9 onwards. In addition, from DataMiner 10.2.10/10.3.0 onwards, the *System Name* and *System Type* data are available in the *Data* pane (depending on the data source, as mentioned below).
 
 - [Get alarms](xref:Get_alarms)
 
@@ -20,6 +20,8 @@ When you create a query, you can use one or more of the data sources listed belo
 - [Get trend data pattern events](xref:Get_trend_data_pattern_events)
 
 - [Get behavioral change events](xref:Get_behavioral_change_events)
+
+- [Get bookings](xref:Get_bookings)
 
 - [Get DCF connections](xref:Get_DCF_connections)
 
@@ -38,6 +40,10 @@ When you create a query, you can use one or more of the data sources listed belo
 - [Get profile instances](xref:Get_profile_instances)
 
 - [Get relational anomalies](xref:Get_relational_anomalies)
+
+- [Get resource pools](xref:Get_resource_pools)
+
+- [Get resource usages](xref:Get_resource_usages)
 
 - [Get resources](xref:Get_resources)
 

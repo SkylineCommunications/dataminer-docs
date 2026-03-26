@@ -10,7 +10,7 @@ In DCF, two main concepts are defined: interfaces and connections.
 
 An interface can be thought of as the start or end point of a connection. Typically, there will be a DCF interface for every physical interface on a device, such as an Ethernet port or serial port.
 
-Additional interfaces are often created to help visualize the internal connections and flow within a device or to facilitate switching logic (e.g. switching 1 connection instead of 10 connections). These are usually called virtual interfaces.
+Additional interfaces are often created to help visualize the internal connections and flow within a device or to facilitate switching logic (e.g., switching 1 connection instead of 10 connections). These are usually called virtual interfaces.
 
 Within DataMiner, there is no actual distinction between a physical or virtual interface; both are simply considered to be an interface. However, different types of interfaces exist. DataMiner defines three types of interfaces based on the direction of the data flow:
 
@@ -26,7 +26,7 @@ A connection is a link between two interfaces.
 
 Elements can have in/out interfaces, among which two types of connections can be established: internal and external connections. DataMiner is aware of this difference and internal logic will be different depending on the type of connection:
 
-- Internal connections: Define a connection within the same element (e.g. matrix, switch, multiplexer, etc.). Internal connections always have a link from input interface to output interface, with inout interfaces being a wildcard.
+- Internal connections: Define a connection within the same element (e.g., matrix, switch, multiplexer, etc.). Internal connections always have a link from input interface to output interface, with inout interfaces being a wildcard.
 
     ![Internal connection](~/develop/images/DCFInternalConnection.png)
 
@@ -36,7 +36,7 @@ Elements can have in/out interfaces, among which two types of connections can be
 
 ## Properties
 
-DCF provides the possibility to add properties to interfaces (e.g. the interface's IP address) and connections (e.g. a service name).
+DCF provides the possibility to add properties to interfaces (e.g., the interface's IP address) and connections (e.g., a service name).
 
 These properties are not intended for fast-changing data but for relatively static data that describes the interface.
 

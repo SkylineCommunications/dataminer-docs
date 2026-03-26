@@ -23,7 +23,7 @@ Default setting: “None”
 
 Next to certain parameters, you find a button in the shape of a paper clip. When you hover over this paper clip, a list box will appear, listing all items that are in some way linked to the parameter in question. From now on, in case of a read parameter with an associated write parameter, that list box will also contain a reference to the write parameter (and vice versa).
 
-Also, when you click a write parameter in the Protocol Tree window (i.e. a parameter marked with “\[W\]”), then the associated read parameter will appear in the “linked items” list box at the bottom.
+Also, when you click a write parameter in the Protocol Tree window (i.e., a parameter marked with “\[W\]”), then the associated read parameter will appear in the “linked items” list box at the bottom.
 
 #### Table editor: Buttons to automatically adjust column widths \[ID 16415\]
 
@@ -33,7 +33,7 @@ When you open the table editor, DIS will check whether there are columns that ar
 - In the *Displayed Columns Layout* section, click the red *Fix* button in the *Width* column of a particular table column to automatically adjust the width of that column.
 
 > [!NOTE]
-> Hidden columns, i.e. columns of which the width was set to 0, are ignored.
+> Hidden columns, i.e., columns of which the width was set to 0, are ignored.
 
 ## Changes
 

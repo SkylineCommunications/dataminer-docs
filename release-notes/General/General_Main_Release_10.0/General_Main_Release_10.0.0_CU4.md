@@ -14,7 +14,7 @@ uid: General_Main_Release_10.0.0_CU4
 
 #### DataMiner Cube - Automation: Dummies, parameters and memory files now sorted in the order in which they were added to the script \[ID 25897\]
 
-Up to now, the dummies, parameters and memory files added to an Automation script were sorted naturally. From now on, they will be sorted in the order in which they were added to the script.
+Up to now, the dummies, parameters and memory files added to an automation script were sorted naturally. From now on, they will be sorted in the order in which they were added to the script.
 
 #### DataMiner Cube - Visual Overview: Colors linked to the Cube theme will now be changed immediately when you change the Cube theme \[ID 26045\]
 
@@ -68,7 +68,7 @@ In some cases, it could occur that hotfixes were not properly validated during i
 
 #### When adding or editing an element, some fields would not correctly be saved into the element.xml file \[ID 25994\]
 
-When adding or editing an element, in some cases, the contents of a number of fields (e.g. GetCommunity, SetCommunity, etc.) would not correctly be saved into the element.xml file.
+When adding or editing an element, in some cases, the contents of a number of fields (e.g., GetCommunity, SetCommunity, etc.) would not correctly be saved into the element.xml file.
 
 #### DataMiner Cube - Alarm Console: Alarm duration indicator was missing \[ID 26044\]
 
@@ -81,11 +81,11 @@ The problem would occur in the following situations:
 
 #### Automation scripts: Problem when a parameter specified in an email action contained a double quote character \[ID 26046\]
 
-When, in an Automation script, you specified a parameter containing a double quote character in an email action configured to send a report, in some cases, it would not be possible to save the script.
+When, in an automation script, you specified a parameter containing a double quote character in an email action configured to send a report, in some cases, it would not be possible to save the script.
 
 #### DataMiner Cube - Trending: Zoom buttons in top-right corner of a trend graph window would incorrectly not be displayed \[ID 26068\]
 
-When you opened a trend graph, e.g. by clicking the trend graph icon next to a parameter shown on an element card, in some cases, the zoom buttons (Last 24 hours, Week to date and Month to date) in the top-right corner would incorrectly not be displayed.
+When you opened a trend graph, e.g., by clicking the trend graph icon next to a parameter shown on an element card, in some cases, the zoom buttons (Last 24 hours, Week to date and Month to date) in the top-right corner would incorrectly not be displayed.
 
 #### Deadlock between SLNet and SLDataGateway during a DataMiner startup or a Failover switch \[ID 26074\]
 
@@ -97,7 +97,7 @@ In some cases, an exception could be thrown while initializing a Visio page cont
 
 #### DataMiner Cube - Visual Overview: No tool tip shown when SetVar shape was configured using legacy syntax \[ID 26087\]
 
-In some cases, no tool tip would be shown when you had used legacy syntax to configure a tool tip on a shape (e.g. SetVar set to "varA:X:Y" and SetVarOptions set to "Control=Shape").
+In some cases, no tool tip would be shown when you had used legacy syntax to configure a tool tip on a shape (e.g., SetVar set to "varA:X:Y" and SetVarOptions set to "Control=Shape").
 
 #### DataMiner Cube - Element Connections: Problem when swapping connections \[ID 26098\]
 
@@ -145,7 +145,7 @@ When, in an element with DCF interfaces, rows were added or deleted in the DCF i
 
 #### Automation: Date and time not adapted to local time zone in calendar component \[ID 26258\]
 
-If an interactive Automation script used a calendar component, it could occur that the date and time in the component were not adapted to the local time zone.
+If an interactive automation script used a calendar component, it could occur that the date and time in the component were not adapted to the local time zone.
 
 #### DataMiner Cube - Data Display: Time control values would incorrectly change when you edited them \[ID 26278\]
 
@@ -165,7 +165,7 @@ When you are about to change the protocol version of an element, a popup message
 
 #### An SNMP table configured to retrieve data via a bulk operation would not get filled in when one of the responses contained an error \[ID 26333\]
 
-When an SNMP table was configured to retrieve data via a bulk operation (e.g. multiple get), up to now, the table would only get filled in when all requests had received a correct response. One response containing an error would cause the entire table to not get filled in.
+When an SNMP table was configured to retrieve data via a bulk operation (e.g., multiple get), up to now, the table would only get filled in when all requests had received a correct response. One response containing an error would cause the entire table to not get filled in.
 
 From now on, each time a correct response is received, the data in that response will be returned to SLProtocol for processing.
 
@@ -187,7 +187,7 @@ A number of minor issues have been fixes in the Alarm Console:
 
 - When the alarms in a particular tab page were grouped by Time, in some cases, the sorting would be reversed each time you changed the Automatically grouped according to arrangement setting.
 
-- In some cases, similar alarms would have different parameter descriptions. One alarm would e.g. show “Temperature” while another alarm would show “Temperature A”.
+- In some cases, similar alarms would have different parameter descriptions. One alarm would e.g., show “Temperature” while another alarm would show “Temperature A”.
 
 #### DataMiner Cube: Module names in side bar not translated when UI language was set to a language other than English \[ID 26402\]
 

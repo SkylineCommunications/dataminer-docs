@@ -28,4 +28,4 @@ Install DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9<!--RN 36865-->.
 
 ## Description
 
-Data that was added while the Cassandra cluster database was unavailable is missing in the database, causing e.g. gaps in trending.
+Data that was added while the Cassandra cluster database was unavailable is missing in the database, causing e.g., gaps in trending.

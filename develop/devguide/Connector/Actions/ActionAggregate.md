@@ -42,7 +42,7 @@ Comma-separated list of values that have to be either included in or excluded fr
 
 There are two ways to specify a value:
 
-- Plain value (e.g. -1)
+- Plain value (e.g., -1)
 - 0-based column position, followed by a slash and a value: All values in the specified column that are equal to the value after the slash will be either allowed or ignored.
 
 If you define multiple items, they will be combined in a logical OR expression.
@@ -51,7 +51,7 @@ For example, if you specify ignoreValues:2/4,3/5, the row will be ignored if col
 
 > [!NOTE]
 >
-> Suppose that groupby column 8 contains an exception key "-1" for special rows (e.g. parent not found) you do not want to aggregate, and that the aggregate action is groupby:8;count;ignoreValues:8/-1. In the parent table, this will return a row with key "-1" and value 0 (if there is at least one row in the source table that contains "-1").
+> Suppose that groupby column 8 contains an exception key "-1" for special rows (e.g., parent not found) you do not want to aggregate, and that the aggregate action is groupby:8;count;ignoreValues:8/-1. In the parent table, this will return a row with key "-1" and value 0 (if there is at least one row in the source table that contains "-1").
 >
 > This is the case for aggregate actions of type count, sum and pct. When type is avg, no row will be created and no value will be returned in the parent table.
 >
@@ -93,7 +93,7 @@ Result table:
 
 In case the result table did not already contain a row with primary key "2", the updated aggregation result table will also not include a row with primary key 2.
 
-In case the result table did already contain a row with primary key "2" (e.g. with aggregation result value 20), the value will remain unchanged for that row.
+In case the result table did already contain a row with primary key "2" (e.g., with aggregation result value 20), the value will remain unchanged for that row.
 
 Result table:
 
@@ -105,7 +105,7 @@ Result table:
 
 In case the previous aggregation result did not include a row with primary key 2, the new result table will also not include a row with primary key 2.
 
-In case the result table did already contain a row with primary key "2" (e.g. with aggregation result value 20), the value will be updated to the specified default value.
+In case the result table did already contain a row with primary key "2" (e.g., with aggregation result value 20), the value will be updated to the specified default value.
 
 Result table:
 
@@ -253,10 +253,10 @@ The (0-based) ID(s) of the column(s) by which to group the data. If you specify 
 
 Specify these destination columns by:
 
-- Adding a colon in the groupby items, e.g. groupby:3:1103,2:1104;return:1105
-- OR adding the destination columns in the return, e.g. groupby:3,2;return:1103,1104,1105
+- Adding a colon in the groupby items, e.g., groupby:3:1103,2:1104;return:1105
+- OR adding the destination columns in the return, e.g., groupby:3,2;return:1103,1104,1105
 
-The first possibility is the preferred one as it gives a clearer indication of where a certain group by column will be written to. Using e.g. "groupby:3,2;return:1105" will result in unexpected behavior, as the first group by column will be placed in destination column 1105 instead of the expected result of the aggregate action.
+The first possibility is the preferred one as it gives a clearer indication of where a certain group by column will be written to. Using e.g., "groupby:3,2;return:1105" will result in unexpected behavior, as the first group by column will be placed in destination column 1105 instead of the expected result of the aggregate action.
 
 The groupby column of the source table is preferably of type string. When using a parameter of type signed number with a fixed length of 4 bytes and value "-1", then in the result table this key will not be "-1" but 4294967295 (or 2^32 -1). No problems will occur if you use positive numbers or string parameters with value "-1".
 
@@ -283,9 +283,9 @@ Specify the parameter IDs of the columns, separated by commas.
 
 The destination parameter IDs of the table or columns in which the results of the aggregate action must be stored. The returned result will contain multiple items; the number of items depends on the aggregation type.
 
-You can configure where the result should be placed by specifying comma-separated parameter IDs, e.g. "return:1105,1106".
+You can configure where the result should be placed by specifying comma-separated parameter IDs, e.g., "return:1105,1106".
 
-It is not mandatory to put all returned result columns into parameters; you could choose to only retrieve the calculated value and omit the weight, e.g. "return:1105".
+It is not mandatory to put all returned result columns into parameters; you could choose to only retrieve the calculated value and omit the weight, e.g., "return:1105".
 
 Suppose, for example, you have a PID table listing the details of all PIDs across a number of services, and you want to aggregate the bandwidth values of those PIDs per service in a separate Services table.
 
@@ -301,7 +301,7 @@ The table must at least have three columns:
 - one for the groupby key
 
   > [!NOTE]
-  > In case of a multiple groupby, extra columns are needed. If you have e.g. a groupby=1,2, then you must have three groupby columns: one for the 1, one for the 2, and one for the 1.2.
+  > In case of a multiple groupby, extra columns are needed. If you have e.g., a groupby=1,2, then you must have three groupby columns: one for the 1, one for the 2, and one for the 1.2.
 
 - one for the aggregated value
 - one for the weight
@@ -448,7 +448,7 @@ For example, with a parent table (300), recursive table (200), and a child table
   <Type options="type:count;return:303;defaultvalue:303,0;threaded">aggregate</Type>
   ```
 
-- It is also possible to aggregate in the other direction, e.g. if you want to see how many rows there are above. For example, if table 100 contains customers, 200 contains amplifiers, and 300 contains nodes, you can count how many amplifiers are above a customer before being connected to a node.
+- It is also possible to aggregate in the other direction, e.g., if you want to see how many rows there are above. For example, if table 100 contains customers, 200 contains amplifiers, and 300 contains nodes, you can count how many amplifiers are above a customer before being connected to a node.
 
   ```xml
   <On id="201">parameter</On>

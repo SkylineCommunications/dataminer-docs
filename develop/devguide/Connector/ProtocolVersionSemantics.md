@@ -29,7 +29,7 @@ It is possible that different version ranges are maintained in parallel but we s
 
 ### Branch
 
-- A new branch number is used to support multiple versions that contain distinct differences (e.g. different protocol types, subsets of a connector, etc.).
+- A new branch number is used to support multiple versions that contain distinct differences (e.g., different protocol types, subsets of a connector, etc.).
 - Different branch ranges are maintained in parallel unless a range is explicitly marked as obsolete.
 - Range: [1 ... n]
 - Examples:

@@ -7,7 +7,7 @@ uid: GetParametersSorted
 Use this method to retrieve a specific number of element parameters by ID and name.
 
 > [!NOTE]
-> Using this method, you can e.g. request parameters in batches in order to minimize loading time.
+> Using this method, you can e.g., request parameters in batches in order to minimize loading time.
 
 ## Input
 

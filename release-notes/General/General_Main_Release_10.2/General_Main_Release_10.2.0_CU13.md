@@ -134,17 +134,17 @@ When an EPM element was stopped, in some rare cases, an error could occur in SLE
 
 When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
 
-#### Web apps - Interactive Automation scripts: Components in a row following a component with a row span greater than 1 would not be positioned correctly [ID 35504]
+#### Web apps - Interactive automation scripts: Components in a row following a component with a row span greater than 1 would not be positioned correctly [ID 35504]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-In an interactive Automation script executed in a web app, components positioned in a row following a row that contained a component with a row span greater than 1 would not be positioned correctly.
+In an interactive automation script executed in a web app, components positioned in a row following a row that contained a component with a row span greater than 1 would not be positioned correctly.
 
 > [!NOTE]
-> If, in an interactive Automation script executed in a web app, a component is positioned on a cell that is overlapped by a component with a row span greater than 1, it will not be displayed.
+> If, in an interactive automation script executed in a web app, a component is positioned on a cell that is overlapped by a component with a row span greater than 1, it will not be displayed.
 
 > [!IMPORTANT]
-> **BREAKING CHANGE**: If, in an interactive Automation script designed to be executed in a web app, the column property was altered to position a component at a specific spot, because of this fix, the component in question will no longer be displayed. It will be hidden by the component of which the row span is greater than 1. The component can be made visible again by changing the column property.
+> **BREAKING CHANGE**: If, in an interactive automation script designed to be executed in a web app, the column property was altered to position a component at a specific spot, because of this fix, the component in question will no longer be displayed. It will be hidden by the component of which the row span is greater than 1. The component can be made visible again by changing the column property.
 
 #### SLAnalytics : Problem after a DVE parent element had been deleted [ID 35521]
 
@@ -156,7 +156,7 @@ In some cases, an error could occur in the SLAnalytics process after a DVE paren
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-When you open the *Bookings* app, Cube adds a small offset to the time window when it requests the list of bookings from the server. Up to now, instead of subtracting 1 minute from the start time, it would incorrectly add 1 minute to it. When the initial time window was e.g. 11h00 to 12h00, it would incorrectly request the bookings from 11h01 to 12h01 instead of from 10h59 to 12h01.
+When you open the *Bookings* app, Cube adds a small offset to the time window when it requests the list of bookings from the server. Up to now, instead of subtracting 1 minute from the start time, it would incorrectly add 1 minute to it. When the initial time window was e.g., 11h00 to 12h00, it would incorrectly request the bookings from 11h01 to 12h01 instead of from 10h59 to 12h01.
 
 Also, in some cases, the "loading" indicator of the bookings timeline would incorrectly not disappear when all bookings were loaded.
 
@@ -222,7 +222,7 @@ Clock components in a published low-code app would incorrectly only update when 
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-When a client subscribed on a column parameter with a filter as index (e.g. *), the messages would be throttled incorrectly.
+When a client subscribed on a column parameter with a filter as index (e.g., *), the messages would be throttled incorrectly.
 
 From now on, parameter update throttling can be disabled by setting the *MessageThrottlingThreshold* option to -1 in the *MaintenanceSettings.xml* file.
 

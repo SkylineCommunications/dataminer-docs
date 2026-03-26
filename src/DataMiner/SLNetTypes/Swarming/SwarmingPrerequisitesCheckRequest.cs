@@ -11,7 +11,7 @@ namespace Skyline.DataMiner.Net.Swarming
     public class SwarmingPrerequisitesCheckRequest // : TargetedClientRequestMessage
     {
         /// <summary>
-        /// Whether this check includes analyzing Automation scripts for incompatible AlarmID usage.
+        /// Whether this check includes analyzing automation scripts for incompatible AlarmID usage.
         /// </summary>
         public bool AnalyzeAlarmIDUsage { get; set; } = true;
     }

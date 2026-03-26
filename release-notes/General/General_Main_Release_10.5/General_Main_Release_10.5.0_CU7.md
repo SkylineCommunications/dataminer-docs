@@ -7,6 +7,14 @@ uid: General_Main_Release_10.5.0_CU7
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.5.0 CU7](xref:Cube_Main_Release_10.5.0_CU7).
@@ -110,7 +118,7 @@ When, in DataMiner Cube, matrix crosspoints were loaded or saved over a gRPC con
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 [CU0] -->
 
-When a client application (e.g. DataMiner Cube) sends unsupported messages to a DataMiner Agent, deserialization exceptions are thrown in SLNet.
+When a client application (e.g., DataMiner Cube) sends unsupported messages to a DataMiner Agent, deserialization exceptions are thrown in SLNet.
 
 Up to now, those exceptions would not get processed correctly when the unsupported messages were sent over a gRPC connection, causing the client application to get stuck while waiting for a response that would never arrive.
 

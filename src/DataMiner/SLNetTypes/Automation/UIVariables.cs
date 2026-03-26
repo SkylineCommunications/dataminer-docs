@@ -39,7 +39,7 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Available from DataMiner 10.0.13 (RN 27895) onwards.</para>
 		/// <list type="bullet">
-		/// <item><description>This only works when the Automation script has been executed in Visual Overview and the script has been executed successfully.</description></item>
+		/// <item><description>This only works when the automation script has been executed in Visual Overview and the script has been executed successfully.</description></item>
 		/// <item><description>The option SessionVariablePrefix is linked with this feature, which means it is possible to store 2 different values from the same script. For instance: 2 pages, each having a script that results in Script session variable 'MyPage'. Prefix 'One_' is used on the first page and 'Two_' is used as prefix. This will result in session variables 'One_MyPage' and 'Two_MyPage' if the script is executed successfully on both pages.</description></item>
 		/// </list>
 		/// </remarks>

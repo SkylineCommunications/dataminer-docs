@@ -95,7 +95,7 @@ When *Simulation Mode* is set to *Spikes*, alarms will exist for short periods o
 
 ## Step 4: Configure alarm monitoring using rate thresholds
 
-If a parameter is a counter that continuously increases (e.g. received packets on a network interface), it is not possible to define regular alarm thresholds. For such a parameter, you can use rate thresholds instead.
+If a parameter is a counter that continuously increases (e.g., received packets on a network interface), it is not possible to define regular alarm thresholds. For such a parameter, you can use rate thresholds instead.
 
 1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
@@ -162,7 +162,7 @@ With relative alarm thresholds, you can define a baseline from which the value c
 
 ## Step 6: Configure alarm monitoring using absolute thresholds
 
-In some cases, it can be easier to define in absolute numbers how much a value can deviate from the baseline (e.g. when the baseline is close to zero).
+In some cases, it can be easier to define in absolute numbers how much a value can deviate from the baseline (e.g., when the baseline is close to zero).
 
 1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 

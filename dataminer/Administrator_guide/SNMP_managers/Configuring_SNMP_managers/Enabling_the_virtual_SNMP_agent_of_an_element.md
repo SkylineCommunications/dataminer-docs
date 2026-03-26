@@ -17,4 +17,4 @@ To do so:
 1. Click *Apply*.
 
 > [!NOTE]
-> If the virtual SNMP agent of an element is disabled (e.g. because the element has not been assigned a virtual IP address), then all SNMP notifications associated with that element will be sent from the primary IP address of either the DataMiner Agent hosting the element or the DataMiner Agent assigned to send all northbound SNMP notifications. See the *Send all notifications via one DMA* setting in [Configuring an SNMP manager in DataMiner Cube](xref:Configuring_an_SNMP_manager_in_DataMiner_Cube).
+> If the virtual SNMP agent of an element is disabled (e.g., because the element has not been assigned a virtual IP address), then all SNMP notifications associated with that element will be sent from the primary IP address of either the DataMiner Agent hosting the element or the DataMiner Agent assigned to send all northbound SNMP notifications. See the *Send all notifications via one DMA* setting in [Configuring an SNMP manager in DataMiner Cube](xref:Configuring_an_SNMP_manager_in_DataMiner_Cube).

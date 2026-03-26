@@ -33,12 +33,12 @@ object result = protocol.NotifyDataMiner(260 /* NT_GET_REMOTE_TREND_AVG */, elem
   - elementDetails[4]: The Agent ID of the element.
 - options (string[]):
   - options[0]: The primary key.
-  - options[1]: The starting timestamp as of which the trend data should be returned. Format: YYYY-MM-DD HH.mm:SS. This is optional (i.e. when all trend data should be returned, provide a string array of size one holding just the primary key).
+  - options[1]: The starting timestamp as of which the trend data should be returned. Format: YYYY-MM-DD HH.mm:SS. This is optional (i.e., when all trend data should be returned, provide a string array of size one holding just the primary key).
 
 ## Return Value
 
 - object[] result:
-  - result[0]: string array, denoting the meaning of the cells (e.g. `["dtFirst","chValueAvg","chValueMin","chValueMax","iStatus"]`).
+  - result[0]: string array, denoting the meaning of the cells (e.g., `["dtFirst","chValueAvg","chValueMin","chValueMax","iStatus"]`).
   - result[1]: string array containing the trend data.
 
     string[] data = (string[]) result[1];

@@ -98,7 +98,7 @@ List of headers that can only appear in HTTP responses.
 |&nbsp;&nbsp;Enumeration|X-Content-Type-Options|Marker used by the server to indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed.|
 |&nbsp;&nbsp;Enumeration|X-DNS-Prefetch-Control|Controls DNS prefetching, a feature by which browsers pro actively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, etc.|
 |&nbsp;&nbsp;Enumeration|X-Frame-Options|Can be used to indicate whether or not a browser should be allowed to render a page in a \<frame\>, \<iframe\> or \<object\>.|
-|&nbsp;&nbsp;Enumeration|X-Powered-By|Specifies the technology (e.g. ASP.NET, PHP, JBoss) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version).|
+|&nbsp;&nbsp;Enumeration|X-Powered-By|Specifies the technology (e.g., ASP.NET, PHP, JBoss) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version).|
 |&nbsp;&nbsp;Enumeration|X-UA-Compatible|Recommends the preferred rendering engine (often a backward-compatibility mode) to use to display the content.|
 |&nbsp;&nbsp;Enumeration|X-WebKit-CSP|Content Security Policy definition.|
 |&nbsp;&nbsp;Enumeration|X-XSS-Protection|A feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.|

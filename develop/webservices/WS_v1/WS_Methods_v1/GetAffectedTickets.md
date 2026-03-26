@@ -9,7 +9,7 @@ uid: GetAffectedTickets
 > - The Ticketing app is obsolete. It is no longer available from DataMiner 10.6.0/10.6.2 onwards.<!-- RN 44371+44373 -->
 > - DataMiner Ticketing is not supported on systems using [Storage as a Service (STaaS)](xref:STaaS).
 
-Use this method to retrieve the tickets linked to a particular DataMiner resource, e.g. an element or a service. The tickets are retrieved in pages, in descending order.
+Use this method to retrieve the tickets linked to a particular DataMiner resource, e.g., an element or a service. The tickets are retrieved in pages, in descending order.
 
 ## Input
 
@@ -27,7 +27,7 @@ Use this method to retrieve the tickets linked to a particular DataMiner resourc
 | filter.SearchText | String | A piece of text used to filter the tickets, similar to the quick filter in the Ticketing app. |
 
 > [!NOTE]
-> As there can be a large number of tickets, this method makes use of paging, so that you do not have to download all tickets at once. To get the first page of tickets, execute the method with *PageNumber* = 0, and *Count* equaling the number of tickets you want to retrieve on one page (e.g. 50). In the response, the *HasNextPage* indicates if there is another page after the current page.
+> As there can be a large number of tickets, this method makes use of paging, so that you do not have to download all tickets at once. To get the first page of tickets, execute the method with *PageNumber* = 0, and *Count* equaling the number of tickets you want to retrieve on one page (e.g., 50). In the response, the *HasNextPage* indicates if there is another page after the current page.
 
 ## Output
 

@@ -10,7 +10,7 @@ uid: DIS_2.12
 
 #### QAction code library \[ID 13977\]
 
-DIS now contains a code library with reusable C# code, such as classes and methods that can be used for e.g. creating elements and services, processing DVEs, etc. Code from that library can be used in all QActions without having to copy/paste code from an external source into the protocol.
+DIS now contains a code library with reusable C# code, such as classes and methods that can be used for e.g., creating elements and services, processing DVEs, etc. Code from that library can be used in all QActions without having to copy/paste code from an external source into the protocol.
 
 When you use code from this built-in library in a particular QAction, DIS will automatically detect this code and copy all used classes, methods, etc. (along with all dependencies) from the code library to a generic QAction (with ID 63000).
 

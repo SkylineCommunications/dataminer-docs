@@ -4,7 +4,7 @@ uid: AdvancedDcfMatrices
 
 # DCF and matrices
 
-DCF supports matrix UI components, i.e. you can refer to a matrix parameter in the [dynamicId](xref:Protocol.ParameterGroups.Group-dynamicId) attribute, which will result in the DCF Connections table being filled in with all the connections of the matrix.
+DCF supports matrix UI components, i.e., you can refer to a matrix parameter in the [dynamicId](xref:Protocol.ParameterGroups.Group-dynamicId) attribute, which will result in the DCF Connections table being filled in with all the connections of the matrix.
 
 ```xml
 <ParameterGroups>

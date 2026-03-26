@@ -2,9 +2,9 @@
 uid: SchemaAutomationScript
 ---
 
-# Protocol Schema
+# Automation script schema
 
-DataMiner Automation script XML Schema.
+DataMiner automation script XML schema.
 
 ## Root element
 

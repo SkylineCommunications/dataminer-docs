@@ -5,7 +5,7 @@ keywords: ResourceManagerHelper
 
 # Interacting with Resource Manager
 
-The *ResourceManagerHelper* class can be used in code to interact with *Resource* and *ReservationInstance* (i.e. booking) objects. To instantiate a *ResourceManagerHelper*, a callback to SLNet needs to be provided:
+The *ResourceManagerHelper* class can be used in code to interact with *Resource* and *ReservationInstance* (i.e., booking) objects. To instantiate a *ResourceManagerHelper*, a callback to SLNet needs to be provided:
 
 ```csharp
 // In an automation script
@@ -98,7 +98,7 @@ helper.RemoveResources(decoder, antenna);
 
 ## Reading resources and bookings
 
-The *ResourceManagerHelper* provides methods to retrieve *Resource* and *ReservationInstance* (i.e. booking) objects in a filtered, sorted, and paged way.
+The *ResourceManagerHelper* provides methods to retrieve *Resource* and *ReservationInstance* (i.e., booking) objects in a filtered, sorted, and paged way.
 
 Filters are constructed by concatenating together *Exposers* that specify the field you want to filter on.
 
@@ -410,7 +410,7 @@ if (!traceData.HasSucceeded())
 }
 ```
 
-When bookings are updated via the framework, a *ResourceManagerTraceDataException* will be thrown if trace data is returned when the *ReservationInstance* (i.e. booking) is updated. This exception has a property to access the full trace data, as well as a method to format some known errors. When you use the framework, we highly recommend using the framework methods to update *ReservationInstances*.
+When bookings are updated via the framework, a *ResourceManagerTraceDataException* will be thrown if trace data is returned when the *ReservationInstance* (i.e., booking) is updated. This exception has a property to access the full trace data, as well as a method to format some known errors. When you use the framework, we highly recommend using the framework methods to update *ReservationInstances*.
 
 ```csharp
 try 
@@ -444,7 +444,7 @@ The *ResourceManagerErrorData* has a *Reason* field, which gives more informatio
 |ModuleNotInitialized| The Resource Manager is not initialized yet; the request cannot be handled. | None|
 |UnknownError| An unexpected error happened. | *Message* could contain more information. |
 |NotAllowed| The user does not have the necessary permissions to create, read, update, or delete the resource. | *SubjectId* contains the ID of the resource. <br>*Message* will contain more details. |
-|MainElementNotReachable| When deleting a resource, the record in the *[Generic DVE Table]* of the parent element could not be deleted. This is not possible if the element is not reachable (e.g. the element is stopped).|*SubjectId* contains the ID of the resource that cannot be deleted.<br>*ElementID* contains the ID of the main element of the resource.|
+|MainElementNotReachable| When deleting a resource, the record in the *[Generic DVE Table]* of the parent element could not be deleted. This is not possible if the element is not reachable (e.g., the element is stopped).|*SubjectId* contains the ID of the resource that cannot be deleted.<br>*ElementID* contains the ID of the main element of the resource.|
 
 #### Possible values for the InitializeFunctionResourceResult property
 
@@ -465,7 +465,7 @@ The following table contains possible values for the *InitializeFunctionResource
 
 | Error reason   | Description  | Available properties |
 |---|---|---|
-| NotLicensed | The necessary licenses are missing. To add or update a *ReservationInstance* (i.e. booking), the *ResourceManager* and *ServiceManager* licenses are required. | None. |
+| NotLicensed | The necessary licenses are missing. To add or update a *ReservationInstance* (i.e., booking), the *ResourceManager* and *ServiceManager* licenses are required. | None. |
 | ResourceDoesNotExist | The *ReservationInstance* uses a resource that does not exist in the system. | *SubjectId* contains the ID of the *ReservationInstance*. <br>*ResourceId* contains the ID of the missing resource. |
 | ConcurrentLicense | Adding or updating the *ReservationInstance* is not possible because this would exceed the maximum number of concurrent bookings defined in the license. | *UsingIdsWithNames* contains the IDs of the *ReservationInstances* that could not be added. <br>*Message* contains more information. |
 | ReservationInstanceInvalidFunctionResources | The *ReservationInstance* cannot be set to mode *Confirmed* because one or more resources are used where the linked function is not active or does not exist. | *SubjectId* contains the ID of the *ReservationInstance*. <br>*UsingIds* contains the IDs of the function definitions or system function definitions that are not active or do not exist. |
@@ -483,7 +483,7 @@ The following table contains possible values for the *InitializeFunctionResource
 
 #### Restrictions on property names
 
-Because custom properties of resources and bookings (i.e. *ReservationInstances*) are indexed in the database, some restrictions apply to the names of these properties. The following validation is done:
+Because custom properties of resources and bookings (i.e., *ReservationInstances*) are indexed in the database, some restrictions apply to the names of these properties. The following validation is done:
 
 - Property names must not start with an underscore (`_`).
 - Property names must not contain a period (`.`), hashtag (`#`), asterisk (`*`), comma (`,`), double quotation mark (`"`), or single quotation mark (`'`).

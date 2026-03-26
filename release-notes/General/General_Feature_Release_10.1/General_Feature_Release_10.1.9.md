@@ -105,8 +105,8 @@ var settings = new ModuleSettings()
 
 > [!NOTE]
 >
-> - When no concatenation is defined (i.e. when DomInstanceNameDefinition is empty or null), the ID of the DomInstance will be used as DomInstance name.
-> - When multiple values are defined for the same FieldDescriptor (i.e. when there are multiple Sections for the same SectionDefinition), the first value will be used for the concatenation.
+> - When no concatenation is defined (i.e., when DomInstanceNameDefinition is empty or null), the ID of the DomInstance will be used as DomInstance name.
+> - When multiple values are defined for the same FieldDescriptor (i.e., when there are multiple Sections for the same SectionDefinition), the first value will be used for the concatenation.
 > - The DomInstanceNameDefinition can be overridden by a DomDefinition on the ModuleSettingsOverrides property.
 
 #### DataMiner Object Model: SectionDefinitionId, DomDefinitionId, DomInstanceId and DomTemplateId objects now all have a ModuleId property \[ID 30302\]
@@ -176,7 +176,7 @@ Up to now, when Active Directory was used, DataMiner would automatically receive
 
 #### View table columns with options like 'view=:x:y:z' or 'view=a:b:c:z' can now be filtered by means of a 'VALUE=' filter \[ID 30237\]
 
-View tables containing a column with view options like “view=:x:y:z” or “view=a:b:c:z” now allow that column to be filtered by means of a "VALUE=" filter (e.g. VALUE=5 == abc).
+View tables containing a column with view options like “view=:x:y:z” or “view=a:b:c:z” now allow that column to be filtered by means of a "VALUE=" filter (e.g., VALUE=5 == abc).
 
 > [!NOTE]
 > Combining filters with AND or OR is not supported.
@@ -198,7 +198,7 @@ Up to now, when a parameter had a (smart) baseline value specified in the protoc
 > [!NOTE]
 >
 > - The alarm template baseline editor will not allow you to change the monitoring type (Normal, Relative, Absolute or Rate).
-> - When a baseline is specified in a protocol, the baseline value is stored in a separate parameter. Although you should specify a read parameter (e.g. `<Alarm type="absolute:READ_PARAM_ID,108">`), make sure that read parameter has an associated write parameter. Otherwise, it will not be possible to update the baseline value stored in that parameter. Also, the parameter in which the baseline value is stored must be free of any restrictions (e.g. step size, number of decimals, high/low range, etc.)
+> - When a baseline is specified in a protocol, the baseline value is stored in a separate parameter. Although you should specify a read parameter (e.g., `<Alarm type="absolute:READ_PARAM_ID,108">`), make sure that read parameter has an associated write parameter. Otherwise, it will not be possible to update the baseline value stored in that parameter. Also, the parameter in which the baseline value is stored must be free of any restrictions (e.g., step size, number of decimals, high/low range, etc.)
 
 #### Data Display: Extended support for launching elements, services, redundancy groups and views by clicking buttons in Data Display table cells \[ID 30413\]
 
@@ -563,11 +563,11 @@ When drawing connections between nodes in a service definition diagram, in some 
 
 #### Web apps: Problems with DefaultTimeZone setting \[ID 30301\]
 
-The time displayed in the DataMiner web apps (e.g. Jobs, Dashboards, etc.) is based on the DefaultTimeZone setting in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
+The time displayed in the DataMiner web apps (e.g., Jobs, Dashboards, etc.) is based on the DefaultTimeZone setting in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
 
 Up to now, the following problems could occur with regard to this setting:
 
-- When DefaultTimeZone was set to a time zone without offset (e.g. UTC), in some cases, an error message could appear.
+- When DefaultTimeZone was set to a time zone without offset (e.g., UTC), in some cases, an error message could appear.
 - In the Dashboards app and the Monitoring app, the configured time zone would not always be applied correctly.
 
 #### Cassandra cluster: Problems with cluster health monitoring & data offloads \[ID 30310\]
@@ -645,7 +645,7 @@ Failover DB forwarding is failing since YYYY-MM-DD HH:MM:SS
 
 When a service definition was passed in a session variable to an embedded Service Manager component, in some cases, that service definition would not be selected and, as a result, its diagram would not be loaded.
 
-#### Interactive Automation scripts: Lazy-loaded tree controls would incorrectly not forward their selected items \[ID 30406\]
+#### Interactive automation scripts: Lazy-loaded tree controls would incorrectly not forward their selected items \[ID 30406\]
 
 When a dialog contained multiple lazy-loaded tree controls, in some cases, those controls would not forward their selected items.
 
@@ -667,7 +667,7 @@ In some cases, a problem could occur when adding a domain user or a domain group
 
 #### Dashboards app - GQI: Queries could cease to function when items used in those queries were renamed \[ID 30436\]
 
-Up to now, in some cases, a GQI query could cease to function when items used in that query (e.g. parameters, profile definitions, etc.) were renamed.
+Up to now, in some cases, a GQI query could cease to function when items used in that query (e.g., parameters, profile definitions, etc.) were renamed.
 
 #### Dashboards app - State timeline: Problem with state change highlighting in Mozilla Firefox \[ID 30446\]
 
@@ -727,9 +727,9 @@ When the shape text of an “Info” shape contained more than just an asterisk 
 
 When, in the *Agents* section of *System Center*, you selected a DataMiner Agent and clicked *Failover* to check its Failover configuration, the *Failover Config* window would incorrectly always show the Failover configuration of the DataMiner Agent to which you were connected.
 
-#### DataMiner Cube - Tab layout: Clicking e.g. an element multiple times would incorrectly each time open a new instance of the card in question \[ID 30541\]
+#### DataMiner Cube - Tab layout: Clicking e.g., an element multiple times would incorrectly each time open a new instance of the card in question \[ID 30541\]
 
-When in tab layout, clicking e.g. an element multiple times would incorrectly each time open a new instance of the card in question.
+When in tab layout, clicking e.g., an element multiple times would incorrectly each time open a new instance of the card in question.
 
 > [!NOTE]
 > When, on a visual overview, you click a button to navigate to another card and then click the *Back* button, in some cases, clicking the button to navigate to another card a second time may no longer open that other card.
@@ -748,7 +748,7 @@ In some cases, it would no longer be possible to create new GQI queries on DataM
 
 #### Visual Overview: Delay when setting variable \[ID 30595\]
 
-When a variable was set in Visual Overview, it could occur that there was a delay of 1 second. This could cause problems with an embedded Bookings component, e.g. when zooming in and out on the bookings timeline.
+When a variable was set in Visual Overview, it could occur that there was a delay of 1 second. This could cause problems with an embedded Bookings component, e.g., when zooming in and out on the bookings timeline.
 
 #### Problem when multiple threads simultaneously created the serializer when ServiceReservationInstances had to be serialized \[ID 30613\]
 

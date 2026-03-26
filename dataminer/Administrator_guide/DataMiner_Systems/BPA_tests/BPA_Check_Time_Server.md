@@ -25,11 +25,31 @@ This test will check if the NTP server settings are configured correctly and all
 
 - In case the cluster only consists of one Agent (this always succeeds):
 
-  `All agents in the cluster use the same NTP server ([timeserver]).`
+  `All DataMiner Agents in the cluster use the same NTP server ([timeserver]).`
 
 - If all DataMiner Agents are configured correctly and use the same NTP server:
 
-  `All DMAs use the same time server ([timeserver]).`
+  `All DataMiner Agents have the same NTP server configured ([timeserver]).`
+
+- From DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44837-->, if multiple NTP servers have been detected, but they are peers of one another:
+
+  `Multiple NTP servers have been detected, but they are peers of one another.`
+
+### Warning
+
+For all warnings:
+
+- The outcome is `Warning`.
+
+The following warnings are possible:
+
+- If the NTP server could not be retrieved from all DataMiner Agents:
+
+  - Result message: `The NTP server could not be retrieved from all DataMiner Agents.`
+
+- From DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44837-->, if multiple NTP servers are detected and they are not peers of one another:
+
+  - Result message: `Multiple NTP servers detected that are not peers of one another.`
 
 ### Error
 
@@ -59,7 +79,7 @@ The following errors are possible:
 
 - Not all NTP servers are reachable:
 
-  - Result message: `Not all NTP servers are reachable.`.
+  - Result message: `Not all NTP servers are reachable.`
   - Detailed results: `Agent {agentName} (id: {dma id}) uses NTP server '{NTP server name}'. The Stratum of this server is 0. Stratum 0 indicates the configured NTP server cannot distribute time.` (one line for each Agent)
 
 - No DMA has an NTP server configured.
@@ -73,7 +93,7 @@ When the test fails to execute for unexpected reasons and cannot provide a concl
 
 `Could not execute test (*[message]*)`
 
-In the message above, the exception message is included (e.g. `Access Denied`). The test result details contain the full exception text, if available.
+In the message above, the exception message is included (e.g., `Access Denied`). The test result details contain the full exception text, if available.
 
 ## Limitations
 

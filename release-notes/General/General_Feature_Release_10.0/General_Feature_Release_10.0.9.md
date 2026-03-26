@@ -32,7 +32,7 @@ From now on, it is possible to install a DataMiner application or solution on an
 
 ##### Creating an application package
 
-To create an application package, create the following files and folders, and compress them into a zip file (e.g. AppPackage.zip):
+To create an application package, create the following files and folders, and compress them into a zip file (e.g., AppPackage.zip):
 
 AppInfo.xml
 
@@ -172,8 +172,8 @@ A LogEntry object contains the following fields:
 - Timestamp
 - Message
 - LogLevel
-- Category (e.g. SRM.Reservations)
-- Name (e.g. a specific booking ID)
+- Category (e.g., SRM.Reservations)
+- Name (e.g., a specific booking ID)
 - FullName (Category.Name)
 - DmaId (ID of the DataMiner Agent to which the user was connected)
 - ProcessId
@@ -196,9 +196,9 @@ In the Users/Groups section of Cube’s System Center, the following user permis
 
 In Visual Overview, three-digit number groups in numeric parameter values displayed on shapes with an *Element* and/or *Parameter* data field and a “\*” in the shape text will now by default be separated by a thin space. This will make large numbers more legible.
 
-Also, a new *DynamicUnits* option will now allow you to enable the use of dynamic units, i.e. units that can be converted to other units according to rules configured in the protocol. You may decide to enable this feature if you want to have large values converted to more legible values (e.g. to convert 1000 Mb to 1 Gb, 1000 m to 1 km, etc.).
+Also, a new *DynamicUnits* option will now allow you to enable the use of dynamic units, i.e., units that can be converted to other units according to rules configured in the protocol. You may decide to enable this feature if you want to have large values converted to more legible values (e.g., to convert 1000 Mb to 1 Gb, 1000 m to 1 km, etc.).
 
-To enable this feature, add an *Options* data field and set its value to “DynamicUnits=true”. By default, this option is disabled (i.e. false). See the following example:
+To enable this feature, add an *Options* data field and set its value to “DynamicUnits=true”. By default, this option is disabled (i.e., false). See the following example:
 
 | Shape data field | Value             |
 |------------------|-------------------|
@@ -252,16 +252,16 @@ It is now possible to automatically generate booking shapes. To implement this f
 
 1. Create a shape group containing the shape you made in step 1, add a *Children* data field to the shape group, and set its value to "Booking".
 
-By default, all bookings in the Cube cache will be shown. If that cache does not contain any bookings, then a default set of bookings will be retrieved (i.e. from 1 day in the past to 2 days in the future).
+By default, all bookings in the Cube cache will be shown. If that cache does not contain any bookings, then a default set of bookings will be retrieved (i.e., from 1 day in the past to 2 days in the future).
 
-- If you want to set a specific time range, then add a *ChildrenSource* data field to the shape group and set its value to a specific time range (e.g. "StartTime=\<dateTime>; EndTime=\<dateTime>").
+- If you want to set a specific time range, then add a *ChildrenSource* data field to the shape group and set its value to a specific time range (e.g., "StartTime=\<dateTime>; EndTime=\<dateTime>").
 
     > [!NOTE]
     > If you retrieve a specific set of bookings by using a *ChildrenSource* data field set to a specific time range, the retrieved bookings will be added to the ones already present in the cache. If, by specifying a time range, you only want to filter the bookings currently in the cache, then use a *ChildrenFilter* data field instead.
 
 - If you want to filter the bookings, then add a *ChildrenFilter* data field to the shape group and set its value to a booking filter, using the same filter format that is used when specifying a ListView filter.
 
-- If you want to sort the bookings, then add a *ChildrenSort* data field to the shape group and set its value to "Name" (i.e. the default setting), "Property\|Start time" or "Property\|End time", optionally followed by ",asc" (i.e. the default order) or ",desc".
+- If you want to sort the bookings, then add a *ChildrenSort* data field to the shape group and set its value to "Name" (i.e., the default setting), "Property\|Start time" or "Property\|End time", optionally followed by ",asc" (i.e., the default order) or ",desc".
 
     > [!NOTE]
     > Dynamically generated booking shapes are functionally identical to shapes linked to bookings using a *Reservation* data field. For example, they support the same placeholders.
@@ -618,7 +618,7 @@ A FieldValueChange object has the following properties:
 
 #### Enhanced visualization of disabled text boxes \[ID 26193\]
 
-Disabled text boxes in e.g. interactive Automation scripts will now automatically be optimized as to size and will have a scrollbar when needed.
+Disabled text boxes in e.g., interactive automation scripts will now automatically be optimized as to size and will have a scrollbar when needed.
 
 #### User menu now has a 'Sign out' command \[ID 26254\]
 
@@ -663,7 +663,7 @@ Due to a number of enhancements, overall performance has increased when displayi
 
 #### DataMiner Cube - Automation: Dummies, parameters and memory files now sorted in the order in which they were added to the script \[ID 25897\]
 
-Up to now, the dummies, parameters and memory files added to an Automation script were sorted naturally. From now on, they will be sorted in the order in which they were added to the script.
+Up to now, the dummies, parameters and memory files added to an automation script were sorted naturally. From now on, they will be sorted in the order in which they were added to the script.
 
 #### SLAnalytics: Sending messages asynchronously has been optimized \[ID 25942\]
 
@@ -769,7 +769,7 @@ In some cases, it could occur that hotfixes were not properly validated during i
 
 #### When adding or editing an element, some fields would not correctly be saved into the element.xml file \[ID 25994\]
 
-When adding or editing an element, in some cases, the contents of a number of fields (e.g. GetCommunity, SetCommunity, etc.) would not correctly be saved into the element.xml file.
+When adding or editing an element, in some cases, the contents of a number of fields (e.g., GetCommunity, SetCommunity, etc.) would not correctly be saved into the element.xml file.
 
 #### Failover: Backup agent would lose its connection to the virtual agent \[ID 26025\]
 
@@ -790,11 +790,11 @@ The problem would occur in the following situations:
 
 #### Automation scripts: Problem when a parameter specified in an email action contained a double quote character \[ID 26046\]
 
-When, in an Automation script, you specified a parameter containing a double quote character in an email action configured to send a report, in some cases, it would not be possible to save the script.
+When, in an automation script, you specified a parameter containing a double quote character in an email action configured to send a report, in some cases, it would not be possible to save the script.
 
 #### DataMiner Cube - Trending: Zoom buttons in top-right corner of a trend graph window would incorrectly not be displayed \[ID 26068\]
 
-When you opened a trend graph, e.g. by clicking the trend graph icon next to a parameter shown on an element card, in some cases, the zoom buttons (Last 24 hours, Week to date and Month to date) in the top-right corner would incorrectly not be displayed.
+When you opened a trend graph, e.g., by clicking the trend graph icon next to a parameter shown on an element card, in some cases, the zoom buttons (Last 24 hours, Week to date and Month to date) in the top-right corner would incorrectly not be displayed.
 
 #### Deadlock between SLNet and SLDataGateway during a DataMiner startup or a Failover switch \[ID 26074\]
 
@@ -810,7 +810,7 @@ On systems with a MySQL database, in some cases, a delete query would incorrectl
 
 #### DataMiner Cube - Visual Overview: No tool tip shown when SetVar shape was configured using legacy syntax \[ID 26087\]
 
-In some cases, no tool tip would be shown when you had used legacy syntax to configure a tool tip on a shape (e.g. SetVar set to "varA:X:Y" and SetVarOptions set to "Control=Shape").
+In some cases, no tool tip would be shown when you had used legacy syntax to configure a tool tip on a shape (e.g., SetVar set to "varA:X:Y" and SetVarOptions set to "Control=Shape").
 
 #### DataMiner Cube - Element Connections: Problem when swapping connections \[ID 26098\]
 
@@ -890,7 +890,7 @@ When, in an element with DCF interfaces, rows were added or deleted in the DCF i
 
 #### Automation: Date and time not adapted to local time zone in calendar component \[ID 26258\]
 
-If an interactive Automation script used a calendar component, it could occur that the date and time in the component were not adapted to the local time zone.
+If an interactive automation script used a calendar component, it could occur that the date and time in the component were not adapted to the local time zone.
 
 #### DataMiner Cube - Data Display: Time control values would incorrectly change when you edited them \[ID 26278\]
 
@@ -916,7 +916,7 @@ When you are about to change the protocol version of an element, a popup message
 
 #### An SNMP table configured to retrieve data via a bulk operation would not get filled in when one of the responses contained an error \[ID 26333\]
 
-When an SNMP table was configured to retrieve data via a bulk operation (e.g. multiple get), up to now, the table would only get filled in when all requests had received a correct response. One response containing an error would cause the entire table to not get filled in.
+When an SNMP table was configured to retrieve data via a bulk operation (e.g., multiple get), up to now, the table would only get filled in when all requests had received a correct response. One response containing an error would cause the entire table to not get filled in.
 
 From now on, each time a correct response is received, the data in that response will be returned to SLProtocol for processing.
 
@@ -942,7 +942,7 @@ A number of minor issues have been fixes in the Alarm Console:
 
 - When the alarms in a particular tab page were grouped by Time, in some cases, the sorting would be reversed each time you changed the Automatically grouped according to arrangement setting.
 
-- In some cases, similar alarms would have different parameter descriptions. One alarm would e.g. show “Temperature” while another alarm would show “Temperature A”.
+- In some cases, similar alarms would have different parameter descriptions. One alarm would e.g., show “Temperature” while another alarm would show “Temperature A”.
 
 #### DataMiner Cube: Module names in side bar not translated when UI language was set to a language other than English \[ID 26402\]
 
@@ -976,7 +976,7 @@ When too many alarms are generated for the same parameter, an alarm storm preven
 
 #### Problem when opening a Visio file in an HTML5 app \[ID 26610\]
 
-In some cases, an exception could be thrown when opening a Visio file in an HTML5 app (e.g. Monitoring).
+In some cases, an exception could be thrown when opening a Visio file in an HTML5 app (e.g., Monitoring).
 
 ## Addendum CU1
 

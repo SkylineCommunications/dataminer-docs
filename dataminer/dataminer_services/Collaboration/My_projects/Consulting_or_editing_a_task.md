@@ -30,7 +30,7 @@ In the top-right corner, you can find two buttons:
 
   - Click *Full screen* to expand the task pane (List view only). In full-screen mode, you can then click *Split view* to exit the full-screen mode.
 
-  - Click *Show/Hide planning fields* to have the task pane also show planning fields (e.g. *Start date*).
+  - Click *Show/Hide planning fields* to have the task pane also show planning fields (e.g., *Start date*).
 
   - Click *Show/Hide customer response fields* to have the task pane also show the SLA metrics used to calculate the SLA timings (if the task is subject to an SLA):
 
@@ -55,5 +55,5 @@ When editing a task, you are only allowed to make a limited number of changes. S
 
 > [!NOTE]
 >
-> - Only open tasks can be edited or deleted. Once a task has been closed, i.e. set to status “Closed” or “Closed - Rejected”, it can no longer be edited or deleted.
+> - Only open tasks can be edited or deleted. Once a task has been closed, i.e., set to status “Closed” or “Closed - Rejected”, it can no longer be edited or deleted.
 > - A task can only be deleted by the person who created it.

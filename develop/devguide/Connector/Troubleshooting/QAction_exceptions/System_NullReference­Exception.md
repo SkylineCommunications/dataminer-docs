@@ -12,7 +12,7 @@ Three special cases:
 
 - String variables can be null (as it is a reference type), but do not have the "new" key word to be instantiated. Simply assign a value to them.
 - Static methods and properties can be accessed without calling the constructor.
-- A nullable int, bool, double, etc. can be defined by adding a question mark, e.g. `double? bitrate;`
+- A nullable int, bool, double, etc. can be defined by adding a question mark, e.g., `double? bitrate;`
 
 ## Example 1
 

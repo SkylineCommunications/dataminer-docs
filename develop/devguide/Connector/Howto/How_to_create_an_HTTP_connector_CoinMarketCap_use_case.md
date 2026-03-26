@@ -107,7 +107,7 @@ Whenever you need to work with an API, it is important that you first check all 
 
 For our example, the CoinMarketCap API Documentation is available via [coinmarketcap.com](https://coinmarketcap.com/api/documentation/v1/#section/Introduction). To access this API, you will need to register. You will then get a key that should be used for all requests.
 
-For the sake of simplicity, we will only implement one call from the API, i.e. [Get Crypto Currency Listings](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsHistorical).
+For the sake of simplicity, we will only implement one call from the API, i.e., [Get Crypto Currency Listings](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsHistorical).
 
 ### Step 2 – Creating a new protocol solution in Visual Studio
 
@@ -295,7 +295,7 @@ If you open Stream Viewer for the example element, you will see a window like il
 The image above shows an example of a Stream Viewer capture for Group 1. On the left-hand side, all connections and groups are identified. This provides confirmation that a group was executed. In this case, since our group contains an HTTP session, it confirms that the HTTP request was sent. On the right-hand side, you can see the HTTP response with the status code and content. You can see that we have received an HTTP/1.1 200 OK with a reply bearing JSON content.
 
 > [!NOTE]
-> From DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1 onwards, the Stream Viewer tree view supports more levels. This allows for more detailed information. E.g. in case of HTTP communication, there will be extra levels for sessions, connections, requests/responses, parameters, status codes, and error codes.
+> From DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1 onwards, the Stream Viewer tree view supports more levels. This allows for more detailed information. For example, in case of HTTP communication, there will be extra levels for sessions, connections, requests/responses, parameters, status codes, and error codes.
 
 ### Step 8 – Processing the Response
 

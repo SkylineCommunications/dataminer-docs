@@ -23,7 +23,7 @@ Estimated duration: 15 minutes.
 - [Step 1: Add the DataMiner app to Microsoft Teams](#step-1-add-the-dataminer-app-to-microsoft-teams)
 - [Step 2: Deploy the ChatIntegration Examples package from the Catalog](#step-2-deploy-the-chat-integration-examples-package-from-the-catalog)
 - [Step 3: Fetch the private chat for a user and send a notification](#step-3-fetch-the-private-chat-for-a-user-and-send-a-notification)
-- [Step 4: Configure a Correlation rule triggered by a specific alarm to send the chat notification](#step-4-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification)
+- [Step 4: Configure a correlation rule triggered by a specific alarm to send the chat notification](#step-4-configure-a-correlation-rule-triggered-by-a-specific-alarm-to-send-the-chat-notification)
 
 ## Step 1: Add the DataMiner app to Microsoft Teams
 
@@ -75,9 +75,9 @@ If you have not yet installed the DataMiner Teams bot, follow the steps below. O
 
 1. Verify that the notification has been received in the DataMiner chat.
 
-## Step 4: Configure a Correlation rule triggered by a specific alarm to send the chat notification
+## Step 4: Configure a correlation rule triggered by a specific alarm to send the chat notification
 
-1. Configure a Correlation rule so it will be triggered by a specific alarm and will execute the *Send Chat Notification Example* script.
+1. Configure a correlation rule so it will be triggered by a specific alarm and will execute the *Send Chat Notification Example* script.
 
    ![ChatIntegration Examples Correlation Rule](~/dataminer/images/chatops_notification_03_001.png)
 

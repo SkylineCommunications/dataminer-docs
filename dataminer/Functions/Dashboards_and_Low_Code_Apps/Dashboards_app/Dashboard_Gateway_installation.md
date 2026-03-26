@@ -23,7 +23,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 - At least one web server (running Windows Server)
 
-- A valid SSL certificate signed by a public certificate authority for the FQDN of the Dashboard Gateway (e.g. “gateway.mycompany.com”)
+- A valid SSL certificate signed by a public certificate authority for the FQDN of the Dashboard Gateway (e.g., “gateway.mycompany.com”)
 
 - A DataMiner user account with:
 
@@ -85,7 +85,11 @@ There are two main reasons to consider a Dashboard Gateway setup:
    - If the system uses **[BrokerGateway](xref:BrokerGateway_Migration)**:
 
      - *nats:credsUrl*: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
-     - *nats:apiKeyPath*: The file path to the *appsettings.runtime.json* file containing the private key, for example: `C:\webgateway\brokergateway\appsettings.runtime.json`. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+     - *nats:apiKeyPath*:
+
+       - From 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!-- RN 44757 -->, a [BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) should be used. *apiKeyPath* should point to the [client secret file](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets).
+       - In earlier DataMiner versions, the file `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` has to be copied from the DMA to the local server, and the new path of that file needs to be set in *apiKeyPath*.
 
    - If the system does not use BrokerGateway yet (only possible on 10.5.x systems):
 
@@ -143,7 +147,7 @@ To add a rewrite rule that will proxy any request to the DataMiner Maps module a
 
 1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
 
-   - **Name**: e.g. "Maps module"
+   - **Name**: e.g., "Maps module"
 
    - **Pattern**: `^maps/(.*)`
 
@@ -161,7 +165,7 @@ To add a rewrite rule that will proxy any request to the Maps API at `https://my
 
 1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
 
-   - **Name**: e.g. "Maps API"
+   - **Name**: e.g., "Maps API"
 
    - **Pattern**: `^API/v0/maps.asmx/(.*)`
 
@@ -181,7 +185,7 @@ To add a rewrite rule that will proxy any request to the VideoThumbnails web pag
 
 1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
 
-   - **Name**: e.g. "VideoThumbnails"
+   - **Name**: e.g., "VideoThumbnails"
 
    - **Pattern**: `^videothumbnails/(.*)`
 
@@ -203,14 +207,14 @@ When a DataMiner Agent is upgraded, the Dashboard Gateway must also be updated t
 
 To do so, after the DataMiner upgrade, copy the following folders from the DataMiner Agent to the web root folder of the Dashboard Gateway web server (default: `C:\inetpub\wwwroot`):
 
-- `C:\Skyline DataMiner\Webpages\Dashboard`
+- `C:\Skyline DataMiner\Webpages\API` (Make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)
 - `C:\Skyline DataMiner\Webpages\App`
-- `C:\Skyline DataMiner\Webpages\Monitoring`
+- `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
+- `C:\Skyline DataMiner\Webpages\Dashboard`
 - `C:\Skyline DataMiner\Webpages\Jobs` (prior to DataMiner 10.5.0 only)
+- `C:\Skyline DataMiner\Webpages\Monitoring`
 - `C:\Skyline DataMiner\Webpages\Ticketing` (prior to DataMiner 10.6.0/10.6.2 only)
 - `C:\Skyline DataMiner\Webpages\SharedComponents`
-- `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
-- `C:\Skyline DataMiner\Webpages\API` (Make sure not to overwrite the existing web.config file. Copy all other files and folders, but keep the existing web.config in place.)
 
 > [!NOTE]
 > When you **upgrade to DataMiner 10.5.0 [CU11]/10.6.2** or higher from an older version:

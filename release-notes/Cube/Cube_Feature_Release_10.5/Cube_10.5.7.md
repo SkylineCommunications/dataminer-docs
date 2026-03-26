@@ -40,7 +40,7 @@ From now on, users will get more feedback when a DataMiner version mismatch is d
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
-An improvement has been implemented to the search engine in DataMiner Cube, so that diacritic similarities within the same alphabet will now be taken into account when text is entered in the search box (e.g. "é" with will match "e"). However, transliteration is not supported. Typos or substitutions with the closest corresponding letters (e.g. "ø" vs. "o" or "graphic" vs. "grafic") will not yield any results.
+An improvement has been implemented to the search engine in DataMiner Cube, so that diacritic similarities within the same alphabet will now be taken into account when text is entered in the search box (e.g., "é" with will match "e"). However, transliteration is not supported. Typos or substitutions with the closest corresponding letters (e.g., "ø" vs. "o" or "graphic" vs. "grafic") will not yield any results.
 
 > [!NOTE]
 > For Japanese characters to be processed properly, your Windows system needs to support Japanese text rendering.
@@ -54,7 +54,7 @@ When, in the DataMiner Cube desktop app, you opened the cogwheel menu and clicke
 From now on, when you open the cogwheel menu and click *Check for updates*, the app will always let users download the very latest app version of the update track that had been chosen.
 
 > [!NOTE]
-> This change in behavior only applies to manual updates, i.e. updates launched by a user clicking the *Check for updates* button. Automatic updates launched by a scheduled task will always respect the update track and the phase delay specified in the configuration file.
+> This change in behavior only applies to manual updates, i.e., updates launched by a user clicking the *Check for updates* button. Automatic updates launched by a scheduled task will always respect the update track and the phase delay specified in the configuration file.
 
 ### Fixes
 

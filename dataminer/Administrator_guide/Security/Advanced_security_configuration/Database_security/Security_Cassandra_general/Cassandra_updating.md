@@ -13,7 +13,7 @@ Doing a rolling upgrade basically means:
 1. Move to the next one.
 
 > [!IMPORTANT]
-> When going from one major range to another (e.g. from 3.x to 4.x), it is best practice to first upgrade to the latest version in the current range before going to the new range.
+> When going from one major range to another (e.g., from 3.x to 4.x), it is best practice to first upgrade to the latest version in the current range before going to the new range.
 
 > [!TIP]
 > If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.

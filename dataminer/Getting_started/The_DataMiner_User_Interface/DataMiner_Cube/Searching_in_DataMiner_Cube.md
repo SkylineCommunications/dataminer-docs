@@ -50,7 +50,7 @@ Please note the following:
 
 - For Japanese characters to be processed properly in search results, your Windows system must support Japanese text rendering.
 
-- The search does not support fuzzy matching, so typos or substitutions with visually similar characters (e.g. "ø" vs. "o") will not yield results. However, from DataMiner 10.4.0 [CU16]/10.5.0 [CU4] onwards, search results do account for diacritic similarities within the same alphabet. For example, entering "e" will also return matches that contain "é".<!-- RN 42911 -->
+- The search does not support fuzzy matching, so typos or substitutions with visually similar characters (e.g., "ø" vs. "o") will not yield results. However, from DataMiner 10.4.0 [CU16]/10.5.0 [CU4] onwards, search results do account for diacritic similarities within the same alphabet. For example, entering "e" will also return matches that contain "é".<!-- RN 42911 -->
 
 - For more information on which search terms you can enter to find specific DataMiner items, see [Searching for specific DataMiner items](#searching-for-specific-dataminer-items).
 
@@ -100,7 +100,7 @@ To search for an **element**, enter (part of):
 
 - a polling IP
 
-- an alarm severity (e.g. critical, etc.)
+- an alarm severity (e.g., critical, etc.)
 
 - an element property displayed in Surveyor
 
@@ -117,7 +117,7 @@ To search for a **service**, enter (part of):
 
 - a name of a child element or a child service
 
-- an alarm severity (e.g. critical, etc.)
+- an alarm severity (e.g., critical, etc.)
 
 - a service property displayed in Surveyor
 
@@ -189,13 +189,13 @@ To search for a **document**, enter (part of):
 
 For advanced searches, a number of special search options are available:
 
-- To do a negative search, i.e. to look for items that do not match a particular search term, put an exclamation mark in front of the search term.
+- To do a negative search, i.e., to look for items that do not match a particular search term, put an exclamation mark in front of the search term.
 
-  E.g. *!redundancy*
+  Example: `!redundancy`
 
 - To look for an exact phrase of several words, surround the phrase by double quotes.
 
-  E.g. *“MS Server”*
+  Example: `"MS Server"`
 
 - The following special keywords can be used in conjunction with a search term, separated from the term with a space.
 
@@ -248,7 +248,7 @@ You can use the following two wildcard characters:
 
 > [!NOTE]
 >
-> - The expression must always match the entire string (e.g. “a\*” will not match “bar”).
+> - The expression must always match the entire string (e.g., “a\*” will not match “bar”).
 > - The checks are executed using the invariant culture and ignoring case.
 > - These characters are not supported for the quick search from the Cube search box, only for the advanced search.
 

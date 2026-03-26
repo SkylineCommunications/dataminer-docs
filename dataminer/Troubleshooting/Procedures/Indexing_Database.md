@@ -50,9 +50,9 @@ When you are using a dedicated clustered storage setup, DataMiner data is stored
 
   - Active or historical alarms
 
-  - SRM data (e.g. bookings, resources, service definitions)
+  - SRM data (e.g., bookings, resources, service definitions)
 
-  - DOM data (e.g. a low-code app that uses DOM data is unable to display it)
+  - DOM data (e.g., a low-code app that uses DOM data is unable to display it)
 
 - User-Defined APIs are unavailable.
 

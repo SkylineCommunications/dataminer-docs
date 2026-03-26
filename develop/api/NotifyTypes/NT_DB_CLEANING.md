@@ -12,7 +12,7 @@ protocol.NotifyDataMiner(385 /*NT_DB_CLEANING*/, false, null);
 //disable the thread
 try
 {
-   //// E.g. create a large amount of enhanced services.
+   //// For example, create a large number of enhanced services.
 }
 finally
 {

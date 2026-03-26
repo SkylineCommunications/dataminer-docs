@@ -221,7 +221,7 @@ Disallowed examples:
 > - If `FieldValueReferences` are used to grant access to the instances of a definition, only the ID of one definition can be provided in the filter.
 
 > [!NOTE]
-> Standard GQI queries (e.g. from a low-code app or dashboard) already include a DOM definition context by default. No special changes are required there; however, queries targeting definitions without access will surface permission errors in the app.
+> Standard GQI queries (e.g., from a low-code app or dashboard) already include a DOM definition context by default. No special changes are required there; however, queries targeting definitions without access will surface permission errors in the app.
 
 #### DOM history read and count operations
 
@@ -264,10 +264,10 @@ Link security also applies to events:
 - If an event contains only instances that the user cannot access, it is dropped for that connection.
 - The following properties help identify special cases:
   - `FromSecurityEnabledModule`: Indicates that security was applied. If `true`, additional instance changes may have been omitted for this subscriber.
-  - `SecurityEnabledModuleNotAvailable`: If `true` and the event is empty, the security context could not be evaluated (e.g. a remote Agent could not initialize its DOM manager because of database connectivity issues). Subscribers relying on event-driven caches should reload their data upon receiving such an event.
+  - `SecurityEnabledModuleNotAvailable`: If `true` and the event is empty, the security context could not be evaluated (e.g., a remote Agent could not initialize its DOM manager because of database connectivity issues). Subscribers relying on event-driven caches should reload their data upon receiving such an event.
 
 ### General notes
 
 - Renaming a DataMiner security group invalidates any existing group links using the old name. Update the links accordingly.
-- Enabling link security introduces some overhead. Testing showed only minor measurable impact, predominantly in large-scale bulk operations with very high numbers of links (e.g. 100K). More typical scenarios showed little to no noticeable performance difference.
+- Enabling link security introduces some overhead. Testing showed only minor measurable impact, predominantly in large-scale bulk operations with very high numbers of links (e.g., 100K). More typical scenarios showed little to no noticeable performance difference.
 - When security is enabled, the DOM instance tab in a DOM module window of the [SLNetClientTest tool](xref:SLNetClientTest_tool) will require you to select one or more DOM definitions before you can read the DOM instances.

@@ -90,15 +90,15 @@ In the report, you will find the following information:
 
 - The start and end time of the period represented in the report.
 
-- The total affected time, i.e. the actual total duration of all alarms that occurred in the indicated time span, without corrections.
+- The total affected time, i.e., the actual total duration of all alarms that occurred in the indicated time span, without corrections.
 
-- The total violation time, i.e. the total duration of all SLA violations that occurred in the indicated time span.
+- The total violation time, i.e., the total duration of all SLA violations that occurred in the indicated time span.
 
-- The minimum availability, i.e. the percentage of time that must be without violations in order for the SLA not to be breached.
+- The minimum availability, i.e., the percentage of time that must be without violations in order for the SLA not to be breached.
 
-- The measured availability, i.e. the percentage of time that the SLA was without violations.
+- The measured availability, i.e., the percentage of time that the SLA was without violations.
 
-- The deviation, i.e. the difference between the minimum and the measured availability (deviation = measured - minimum availability).
+- The deviation, i.e., the difference between the minimum and the measured availability (deviation = measured - minimum availability).
 
 - The number of violations.
 

@@ -28,9 +28,9 @@ In short, when creating a redundancy group, you have to do the following:
 
 - Add the primary and the backup elements to the redundancy group.
 
-- Specify (for every primary element) when to switch from primary to backup, i.e. when to link the virtual primary element to the backup element.
+- Specify (for every primary element) when to switch from primary to backup, i.e., when to link the virtual primary element to the backup element.
 
-- Specify (for every primary element) when to switch back from backup to primary, i.e. when to link the virtual primary element to the primary element again.
+- Specify (for every primary element) when to switch back from backup to primary, i.e., when to link the virtual primary element to the primary element again.
 
 > [!NOTE]
 >
@@ -41,7 +41,7 @@ In short, when creating a redundancy group, you have to do the following:
 
 In DataMiner, you can set up redundancy groups that include devices without native redundancy features.
 
-To do so, you have to use an optional extra layer of redundancy logic called “software redundancy”, which is based on Automation scripts.
+To do so, you have to use an optional extra layer of redundancy logic called “software redundancy”, which is based on automation scripts.
 
 > [!TIP]
 > See also: [Creating a redundancy group](xref:Creating_a_redundancy_group)

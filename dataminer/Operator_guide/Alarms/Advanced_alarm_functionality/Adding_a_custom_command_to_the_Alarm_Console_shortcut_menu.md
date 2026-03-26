@@ -30,4 +30,4 @@ In case DataMiner Cube was open while you edited the settings, the changes will 
 > [!TIP]
 > See also:
 >
-> - [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
+> - [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script)

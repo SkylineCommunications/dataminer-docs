@@ -13,7 +13,7 @@ Use this action to send a notification via email.
 - The subject and message support the following **placeholders**<!--RN 42985-->:
 
   - `[dummyX]`: This will be replaced with the name of the specific element you want to display. X is the dummy ID.
-  - `[user]`: This will be replaced with the name of the user executing the Automation script.
+  - `[user]`: This will be replaced with the name of the user executing the automation script.
 
 - To send a **plain text** email, select *Plain text*.
 

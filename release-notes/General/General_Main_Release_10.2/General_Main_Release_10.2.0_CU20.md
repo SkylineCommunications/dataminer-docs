@@ -134,7 +134,7 @@ When a custom time zone was used, in some cases, that time zone would not be pro
 For example, when you set a custom time zone in a *Clock* component, the current time of that custom time zone would not be identical to the current time of the local time zone.
 
 > [!NOTE]
-> This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g. Altai Standard Time).
+> This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g., Altai Standard Time).
 
 #### DataMiner Cube - Trending: Problem with Y axis labels on trend graphs showing data from string and non-string parameters [ID 37281]
 
@@ -164,7 +164,7 @@ An error could occur in the SLAnalytics process due to some features not startin
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
+When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g., `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
 
 #### DataMiner Cube: No breadcrumbs would be displayed when you opened a service card [ID 37384]
 
@@ -190,6 +190,6 @@ The issue was due to Cube trying to parse the default value with the current cul
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-In the Alarm Console footer, you can find counters that display the number of alarms in the current tab per severity. When you hover over one of those counters, a tooltip appears with the text "[nr of alarms] [severity]" (e.g. 31 Major).
+In the Alarm Console footer, you can find counters that display the number of alarms in the current tab per severity. When you hover over one of those counters, a tooltip appears with the text "[nr of alarms] [severity]" (e.g., 31 Major).
 
 Up to now, when you hovered over the suggestions counter, the tooltip would incorrectly show the word "SUGGESTION" in capitals. From now on, it will be shown as "Suggestion" (with capital S).

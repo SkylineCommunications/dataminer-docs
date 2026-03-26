@@ -69,8 +69,12 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
 
    - To limit the log file size, use the following configuration:
 
-      - `maxFileSize: 1MB`
+      - Replace the default log level `level: INFO` with `level: WARN` 
+      - `maxFileSize: 10MB`
       - `archivedLogFilenamePattern: /var/log/cassandra-reaper/reaper-%d{yyyy-MM-dd}_%i.log.gz`
+      - `archivedFileCount: 10`
+
+   - Configure the following logging format: `logFormat: "%date{ISO8601} %-6level [%t] %logger{5} - %msg %n"`. Compared to the default format, this setting adds a timestamp to the log line.
 
    - For a sidecar-based configuration, to configure the connection with the Cassandra cluster, use the following configuration:
 
@@ -78,9 +82,6 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
       - `enableDynamicSeedList: true`
 
    For more information on the different options, refer to the [Reaper documentation](http://cassandra-reaper.io/docs/configuration/).
-  
-   > [!NOTE]
-   > By default, Reaper logs do not contain timestamps. To add timestamps to the log output, add *%date{ISO8601}* to the *logFormat* setting in *cassandra-reaper.yaml*. For example: `logFormat: "%date{ISO8601} %-6level [%t] %logger{5} - %msg %n"`
 
 1. Run the following command to enable automatic startup of the Reaper service:
 

@@ -6,7 +6,7 @@ uid: SLNetClientTest_managing_base_subscriptions
 
 The "base subscriptions" feature allows you to increase performance when retrieving element and parameter information by caching the data in SLNet.
 
-When a client (e.g. DataMiner Cube) opens an element card, a subscription is made for that element. SLNet then retrieves the element data from the other processes (SLDataminer, SLElement, etc.), caches it, and makes arrangements so that changes get pushed to it immediately. When a client closes an element card, the subscription is removed, and the cached data is cleared.
+When a client (e.g., DataMiner Cube) opens an element card, a subscription is made for that element. SLNet then retrieves the element data from the other processes (SLDataminer, SLElement, etc.), caches it, and makes arrangements so that changes get pushed to it immediately. When a client closes an element card, the subscription is removed, and the cached data is cleared.
 
 However, if a base subscription has been defined for an element, the subscription for this element stays open permanently. As a consequence, when you open an element card for such an element, SLNet will send the data to the client instantly, as it does not have to do any initial setup. This is particularly useful for elements that are accessed very frequently.
 
@@ -30,7 +30,7 @@ In order to ensure that the subscription for a particular element stays open:
 
    - The *MessageType*, usually "ParameterChangeEventMessage".
 
-   - The *Name* of the subscription, e.g. "MyElementSubscription".
+   - The *Name* of the subscription, e.g., "MyElementSubscription".
 
    - The *Type*, in this case "Element".
 

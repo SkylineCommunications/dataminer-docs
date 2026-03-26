@@ -47,9 +47,9 @@ Multiple enhancements have been implemented to the I-DOCSIS back end:
 - Collector registration has been adjusted. Now the IDs for CCAP and CM collector are both placed in the table, in the format CCAPDataMinerID/CCAPElementID\|CMCollectorDataMinerID/CMCollectorElementID.
 - A back-end registration table has been added, which makes it possible to map view tables.
 
-#### New messaging Automation scripts using InterApp communication \[ID 32632\]
+#### New messaging automation scripts using InterApp communication \[ID 32632\]
 
-The existing EPM messaging logic using Correlation and Automation has been replaced with 3 new Automation scripts that use InterApp communication:
+The existing EPM messaging logic using Correlation and Automation has been replaced with 3 new automation scripts that use InterApp communication:
 
 - *CcapToEpmFe*: This script is triggered by a CCAP and sends an InterApp message to the front-end element.
 - *EpmFeToEpmBe*: This script is triggered by the front end and sends an InterApp message to the back-end element.

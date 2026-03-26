@@ -14,7 +14,7 @@ uid: General_Main_Release_10.2.0_CU3
 
 #### DataMiner Cube - Resources app: Function instance name can now be updated \[ID 32811\]
 
-When updating a resource in the Resources app, it is now possible to change the function instance name, i.e. the name of the DVE element linked to a function resource.
+When updating a resource in the Resources app, it is now possible to change the function instance name, i.e., the name of the DVE element linked to a function resource.
 
 > [!NOTE]
 >
@@ -68,7 +68,7 @@ SLDMS, which is a 32-bit process, will now be started with the /LARGEADDRESSAWAR
 
 #### Enhanced performance when processing a large number of objects with links to other objects \[ID 33271\]
 
-Because of a number of enhancements, overall performance has increased when processing (e.g. exporting) a large number of objects with links to other objects.
+Because of a number of enhancements, overall performance has increased when processing (e.g., exporting) a large number of objects with links to other objects.
 
 #### IPC channel port names will now always be unique \[ID 33274\]
 
@@ -107,8 +107,8 @@ If you want to use a specific Cube version to connect to a particular agent or c
 When connected to a particular DataMiner System, users with *Manage client versions* permission can go to *System Center \> System settings \> Manage client versions*, and select one of the following Cube update modes:
 
 - Allow automatic updates
-- Force the matching release version (i.e. force users to always use the Cube version that was shipped with the DMA upgrade package)
-- Force a specific version (i.e. force users to always use a particular Cube version)
+- Force the matching release version (i.e., force users to always use the Cube version that was shipped with the DMA upgrade package)
+- Force a specific version (i.e., force users to always use a particular Cube version)
 
 By default, the setting chosen here will apply to all agents in the DMS, including Failover setups. However, it is possible (but not recommended) to configure the Cube update mode per agent.
 
@@ -140,9 +140,9 @@ When a resource was deleted from the cache of a Cube client, in some cases, no u
 
 When you entered a search string in the filter box, all tickets would incorrectly be returned.
 
-#### DataMiner Cube - Automation: Problem when validating an Automation script \[ID 33084\]
+#### DataMiner Cube - Automation: Problem when validating an automation script \[ID 33084\]
 
-When, in the Automation app, you validated an Automation script that either contained an empty line in the DLL references or had a DLL reference removed, in some cases, an “Empty path name is not legal” error could be thrown.
+When, in the Automation app, you validated an automation script that either contained an empty line in the DLL references or had a DLL reference removed, in some cases, an “Empty path name is not legal” error could be thrown.
 
 #### DataMiner Cube: REPORTS page of a masked element would incorrectly indicate that the element was in alarm instead of masked \[ID 33087\]
 
@@ -164,7 +164,7 @@ When a Visio file of type VDX contained bitmap images, in some cases, those imag
 
 #### DataMiner Agent would not start up when the computer name contained special characters \[ID 33137\]
 
-In some cases, a DataMiner Agent would fail to start up when the computer name contained special characters (e.g. “ü”).
+In some cases, a DataMiner Agent would fail to start up when the computer name contained special characters (e.g., “ü”).
 
 #### Dashboards app - GQI: Problem when a feed used by a query was changed while the query table was being sorted \[ID 33168\]
 
@@ -218,15 +218,15 @@ When a PDF report was generated from a dashboard, in some cases, it would not be
 
 #### Application framework: Table row action buttons would incorrectly always be displayed on the first column of a table \[ID 33258\]
 
-Up to now, table row action buttons would incorrectly always be displayed on the first column of a table. As a result, those buttons would disappear when e.g. a filter was applied that caused the first column to be hidden. From now on, table row action buttons will instead always be displayed on the first visible column of a table.
+Up to now, table row action buttons would incorrectly always be displayed on the first column of a table. As a result, those buttons would disappear when e.g., a filter was applied that caused the first column to be hidden. From now on, table row action buttons will instead always be displayed on the first visible column of a table.
 
 #### Application framework: An 'http://' prefix would incorrectly be added to any URL that did not start with 'http://' \[ID 33262\]
 
-Up to now, the application framework would incorrectly add an “http://” prefix to any URL that did not start with “http://”. From now on, all URLs will be validated first. Only if the URL is invalid (e.g. “skyline.be”) will an “http://” prefix be added.
+Up to now, the application framework would incorrectly add an “http://” prefix to any URL that did not start with “http://”. From now on, all URLs will be validated first. Only if the URL is invalid (e.g., “skyline.be”) will an “http://” prefix be added.
 
 #### Problem when trying to retrieve base parameter values after changing the production version of a protocol based on a base protocol \[ID 33288\]
 
-After changing the production version of a protocol based on a so-called base protocol, it would no longer be possible to retrieve values from any of the base parameters (i.e. parameters of the base protocol).
+After changing the production version of a protocol based on a so-called base protocol, it would no longer be possible to retrieve values from any of the base parameters (i.e., parameters of the base protocol).
 
 #### Application framework: Minor issues fixed \[ID 33291\]
 

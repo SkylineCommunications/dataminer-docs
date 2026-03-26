@@ -20,7 +20,7 @@ Is something not working as expected? Then do the following:
 
      This could mean that the [IIS web server](#iis-web-server-w3wp) is not running or that the cloud connection has been lost.
 
-   - Are there any network calls failing (e.g. `GetVisioForElement`)?
+   - Are there any network calls failing (e.g., `GetVisioForElement`)?
 
      This could indicate an issue in the [web APIs](#web-apis) or in the DMA core software.
 
@@ -66,7 +66,7 @@ Logging for the [Web DcM](xref:DataMinerExtensionModules#web) is available in `C
 
 Check the logging in Windows Event Viewer (included in a [Log Collector](xref:Collecting_data_to_report_an_issue_to_TechSupport#log-collector-packages) package), or create a memory dump (`procdump -ma -g -e 1 w3wp.exe`).
 
-If the process crashes several times (i.e. more than the configured maximum within the configured interval (*Rapid-Fail Protection*)), then IIS will shut it down and a manual action will be needed to start it again.
+If the process crashes several times (i.e., more than the configured maximum within the configured interval (*Rapid-Fail Protection*)), then IIS will shut it down and a manual action will be needed to start it again.
 
 ### High CPU/memory
 
@@ -180,7 +180,7 @@ Do you keep getting *"We're getting things ready... This won't take long."*? Thi
 
 Visual Overview in web apps has limited functionality:
 
-- Visual Overview pages are rendered as images containing clickable regions. As a result, some features (e.g. embedding) and some session variable controls are not fully supported.
+- Visual Overview pages are rendered as images containing clickable regions. As a result, some features (e.g., embedding) and some session variable controls are not fully supported.
 
 - To render a Visual Overview page, [SLHelper](xref:Troubleshooting_SLHelper_exe) loads a virtual instance of DataMiner Cube in its memory. Initial loading of a page can take a long time because SLHelper needs to start Cube, connect to a DMA, and then generate an image.
 
@@ -190,7 +190,7 @@ Visual Overview in web apps has limited functionality:
 
 - Visual Overview pages are displayed only after all images have loaded, or after a one-minute timeout. If some shapes on the page fail to load and have inherited the *EnableLoading=True* setting from a parent shape or the page itself (from DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 41517-->), the page may not appear until the one-minute timeout is reached. For more information on how to disable this setting, see [Disabling the indication that a page or shape is loading](xref:Disabling_the_Loading_message_for_a_page_or_shape).
 
-- Prior to DataMiner 10.5.4/10.6.0, if no user-specific information (i.e. user context) is required in a visual overview, the system tries to reuse server-side cards across different users. This may cause incorrect user information to be shown, especially when displaying pop-up windows or embedded visual overviews. From DataMiner 10.5.4/10.6.0 onwards<!--RN 42061-->, a separate card is created for each user. When a user opens a new visual overview in a web app, a new card is generated specifically for them, so that the correct user information is always shown.
+- Prior to DataMiner 10.5.4/10.6.0, if no user-specific information (i.e., user context) is required in a visual overview, the system tries to reuse server-side cards across different users. This may cause incorrect user information to be shown, especially when displaying pop-up windows or embedded visual overviews. From DataMiner 10.5.4/10.6.0 onwards<!--RN 42061-->, a separate card is created for each user. When a user opens a new visual overview in a web app, a new card is generated specifically for them, so that the correct user information is always shown.
 
 - Displaying a [video stream via VLC](xref:Linking_a_shape_to_a_video_stream_using_VLC) inside a shape is not supported in visual overviews that are used in DataMiner web apps.
 

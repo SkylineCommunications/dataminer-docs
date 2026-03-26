@@ -32,10 +32,10 @@ If you want booking blocks to display information over more than one line, it is
 
      1. Right-click the table and select *Add Block Info*.
 
-     1. In the *Block Info* field, specify the block info (e.g. *\[BOOKINGNAME\]*, or a property name in the format *\[PROPERTY:**Property name**\]*).
+     1. In the *Block Info* field, specify the block info (e.g., *\[BOOKINGNAME\]*, or a property name in the format *\[PROPERTY:**Property name**\]*).
 
         > [!NOTE]
-        > You can also combine the above-mentioned placeholders, e.g. `[PROPERTY:VIRTUAL PLATFORM]_[BOOKINGNAME]`. <!-- RN 28995 -->
+        > You can also combine the above-mentioned placeholders, e.g., `[PROPERTY:VIRTUAL PLATFORM]_[BOOKINGNAME]`. <!-- RN 28995 -->
 
      1. In the *Order* field, specify in which position on the block the item should be displayed, The lower the number (lowest = 0), the higher the position.
 

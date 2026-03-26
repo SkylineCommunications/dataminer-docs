@@ -41,4 +41,4 @@ You can configure this size limit as follows:
 
 ## Configuring multiple OpenSearch or Elasticsearch clusters
 
-It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e. one main cluster and several replicated clusters. Prior to DataMiner 10.4.0/10.4.2, this is configured in *DBConfiguration.xml*. In later DataMiner versions, it is configured in *DB.xml*. For detailed information, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
+It is possible to have data offloaded to multiple OpenSearch or Elasticsearch clusters, i.e., one main cluster and several replicated clusters. Prior to DataMiner 10.4.0/10.4.2, this is configured in *DBConfiguration.xml*. In later DataMiner versions, it is configured in *DB.xml*. For detailed information, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).

@@ -58,7 +58,7 @@ In this example, the items will first be ordered by bubble-up alarm level, then 
 > - Empty values (Not Initialized) are always put at the bottom of the list.
 > - If a column value changes, the diagram items will automatically be sorted again.
 
-It is also possible to define the sort order, i.e. ascending or descending, by adding `|ASC` (for ascending order) or `|DESC` (for descending order) after the sorting field, e.g. `1506|DESC,1507|ASC`.<!-- RN 14946 -->
+It is also possible to define the sort order, i.e., ascending or descending, by adding `|ASC` (for ascending order) or `|DESC` (for descending order) after the sorting field, e.g., `1506|DESC,1507|ASC`.<!-- RN 14946 -->
 
 The default sort order is ascending.
 

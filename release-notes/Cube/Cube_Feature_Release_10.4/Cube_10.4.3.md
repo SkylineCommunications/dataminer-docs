@@ -148,7 +148,7 @@ When you opened a service card of which the default page was set to *Reports*, a
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
-On undocked alarm cards or alarm consoles that were embedded in e.g. elements cards, in some cases, the reports view button would incorrectly not be shown.
+On undocked alarm cards or alarm consoles that were embedded in e.g., elements cards, in some cases, the reports view button would incorrectly not be shown.
 
 #### Visual Overview: Parsing problem when using a custom separator inside a [param:] placeholder [ID 38405]
 
@@ -160,7 +160,7 @@ When a custom separator was used inside a [param:] placeholder referring to a ta
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
-When, while creating or editing an Automation script, you opened the *Add action* selection box and selected "User interaction", in some cases, an exception could be thrown.
+When, while creating or editing an automation script, you opened the *Add action* selection box and selected "User interaction", in some cases, an exception could be thrown.
 
 #### Protocols & templates: Problem when creating alarm templates or trend templates due to casing issue [ID 38456]
 
@@ -188,7 +188,7 @@ When a redundancy group included a primary or backup element that had been impor
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
-When editing a correlation rule in which a *Set Parameter* action had previously been configured, up to now, enabling or disabling any of the options for that action (e.g. *Execute on base alarm updates*) would incorrectly not enable the *Apply* button. As a result, it would not be possible to save the correlation rule after enabling or disabling some of those options.
+When editing a correlation rule in which a *Set Parameter* action had previously been configured, up to now, enabling or disabling any of the options for that action (e.g., *Execute on base alarm updates*) would incorrectly not enable the *Apply* button. As a result, it would not be possible to save the correlation rule after enabling or disabling some of those options.
 
 #### Sidebar would not contain any buttons [ID 38652]
 

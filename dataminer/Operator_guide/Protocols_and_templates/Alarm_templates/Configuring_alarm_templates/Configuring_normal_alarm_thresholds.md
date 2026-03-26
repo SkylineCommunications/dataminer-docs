@@ -66,7 +66,7 @@ To configure alarm thresholds for a [hybrid parameter](xref:Discrete_analog_and_
 
 ### Configuring alarm thresholds for string parameters
 
-To configure alarm thresholds for a string parameter, i.e. a parameter that has a string as its value:
+To configure alarm thresholds for a string parameter, i.e., a parameter that has a string as its value:
 
 1. Select the checkbox in the first column next to the parameter to enable alarm monitoring
 

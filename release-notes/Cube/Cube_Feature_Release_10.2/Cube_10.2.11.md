@@ -81,7 +81,7 @@ From now on, you can override a Visio page name by specifying an "OverridePageNa
 
 > [!NOTE]
 >
-> - Always use the actual page name when referring to a particular page in options like e.g. *VdxPage*, *NavigatePage*, *InlineVdx*, etc. Using a page override when referring to a page will not work.
+> - Always use the actual page name when referring to a particular page in options like e.g., *VdxPage*, *NavigatePage*, *InlineVdx*, etc. Using a page override when referring to a page will not work.
 > - This feature allows you to define duplicate page names. When you do so, take into account that components that display Visio page names may then also display those duplicate page names.
 > - Visio files used in web apps do not support the OverridePageName option.
 

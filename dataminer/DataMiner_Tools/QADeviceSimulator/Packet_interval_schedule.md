@@ -9,9 +9,9 @@ uid: Packet_interval_schedule
 
 The main options are:
 
-- *Original*: Use this option if you want the time between the sending of each trap to be equal to the time detected in the PDML or CSV file, i.e. when it should be the same as for the original traps.
+- *Original*: Use this option if you want the time between the sending of each trap to be equal to the time detected in the PDML or CSV file, i.e., when it should be the same as for the original traps.
 
-- *Fixed*: Use this option if you want a fixed time between the sending of each trap, i.e. the amount of time specified in the box next to this option.
+- *Fixed*: Use this option if you want a fixed time between the sending of each trap, i.e., the amount of time specified in the box next to this option.
 
 - *Random*: Use this option if you want a random time between the sending of each trap. The amount of time will be a random number between the lower and upper bound specified in the boxes next this option (in milliseconds).
 
@@ -26,4 +26,4 @@ Additional options:
 
 - *Random loop*: Use this option if you want the sender to pick a random trap from the list each time.
 
-- No additional option (i.e. *Loop* and *Random loop* not selected): If neither of the above loop options are selected, trap sending will stop after the last trap in the list has been sent.
+- No additional option (i.e., *Loop* and *Random loop* not selected): If neither of the above loop options are selected, trap sending will stop after the last trap in the list has been sent.

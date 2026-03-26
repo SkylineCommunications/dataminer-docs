@@ -5,7 +5,7 @@ description: DataMiner connectors (or 'protocols'/'drivers') are XML files conta
 
 # About DataMiner connectors
 
-A DataMiner connector (also referred to as a "driver" or "protocol") is an XML file containing all the information a DataMiner Agent needs to be able to communicate with the device: instructions on how to poll the device and display all relevant data on the user interface (i.e. DataMiner Cube element cards), default port settings, alarm thresholds, parameter labels, etc. The language used to define a protocol is referred to as the DataMiner Protocol Markup Language (DPML).
+A DataMiner connector (also referred to as a "driver" or "protocol") is an XML file containing all the information a DataMiner Agent needs to be able to communicate with the device: instructions on how to poll the device and display all relevant data on the user interface (i.e., DataMiner Cube element cards), default port settings, alarm thresholds, parameter labels, etc. The language used to define a protocol is referred to as the DataMiner Protocol Markup Language (DPML).
 
 A DataMiner protocol can be uploaded to a DataMiner Agent, so that elements can be created that will run the protocol.
 

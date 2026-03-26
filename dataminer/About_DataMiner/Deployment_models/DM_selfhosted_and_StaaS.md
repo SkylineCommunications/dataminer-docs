@@ -11,20 +11,20 @@ If you choose to [manage the DataMiner nodes yourself](#self-managed-dataminer-n
 
 ## Self-managed DataMiner nodes
 
-To set up and maintain your DataMiner System, you can make use of the DataMiner **System Center** in DataMiner Cube. This provides an intuitive UI to manage DataMiner nodes, users, log files, and so on. System Center is also the place where the administrator can configure the DataMiner redundancy settings (i.e. high-availability or Failover nodes), and it includes an upgrade center to easily trigger a software update, regardless of the number of DataMiner nodes.
+To set up and maintain your DataMiner System, you can make use of the DataMiner **System Center** in DataMiner Cube. This provides an intuitive UI to manage DataMiner nodes, users, log files, and so on. System Center is also the place where the administrator can configure the DataMiner redundancy settings (i.e., high-availability or Failover nodes), and it includes an upgrade center to easily trigger a software update, regardless of the number of DataMiner nodes.
 
 In terms of **redundancy**, each DMA (DataMiner node) in a DataMiner System can be teamed up with a dedicated backup DMA in a so-called [Failover setup](xref:failover). Within a DMA redundancy team, the backup DMA will continuously be synchronized so that, at all times, it is ready to take over from its team member the moment that one fails. When you team up a particular DataMiner node with a backup DMA, a virtual DMA team will be created. Within a DMA team, the two team members will act as peers. In other words, they will not act as master DMA versus slave DMA, but as active DMA versus passive DMA.
 
 By default, all synchronization traffic between the active and the passive team member will pass via the corporate network. If necessary, both team members can also be equipped with an additional network card to be used for synchronization traffic only.
 
-The decision when to switch from the active to the passive DMA can be taken either by a person (i.e. manual Failover) or by the DMAs themselves (i.e. automatic Failover). In the latter case, the two DMAs in the team will check each other’s status by exchanging heartbeats.
+The decision when to switch from the active to the passive DMA can be taken either by a person (i.e., manual Failover) or by the DMAs themselves (i.e., automatic Failover). In the latter case, the two DMAs in the team will check each other’s status by exchanging heartbeats.
 
 In terms of **backup and restore**, DataMiner nodes require a [one-time configuration by the administrator](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups) in order to fully automatically take care of backups. The administrator can choose:
 
-- When the DMAs need to take a backup (e.g. every 24 hours at 01:00 AM).
+- When the DMAs need to take a backup (e.g., every 24 hours at 01:00 AM).
 - What kind of information needs to be included in those backups (configuration, core software, connectors, files, etc.).
-- How many backups to maintain (e.g. 7 backups, with a backup taken every 24 hours, so that you can always go back one week).
-- Where to store the backup file. The backup file can be stored locally on the DMA (e.g. on a second hard drive), but it can also be stored on a secured network drive on a file server.
+- How many backups to maintain (e.g., 7 backups, with a backup taken every 24 hours, so that you can always go back one week).
+- Where to store the backup file. The backup file can be stored locally on the DMA (e.g., on a second hard drive), but it can also be stored on a secured network drive on a file server.
 
 A default DataMiner System also comes with a set of features and capabilities that increase the availability and that enable proactive maintenance and support. This includes for example:
 

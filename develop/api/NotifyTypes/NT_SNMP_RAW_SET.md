@@ -169,4 +169,4 @@ else
 
 ## Return Value
 
-- (object[]): Array holding strings indicating whether the SNMP set succeeded or not. An empty string means the set succeeded; the string "TIMEOUT" indicates the set went into timeout. The size of the object array equals the number of SNMP sets that were issued (i.e. the size of the oidInfo array).
+- (object[]): Array holding strings indicating whether the SNMP set succeeded or not. An empty string means the set succeeded; the string "TIMEOUT" indicates the set went into timeout. The size of the object array equals the number of SNMP sets that were issued (i.e., the size of the oidInfo array).

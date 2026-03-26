@@ -12,9 +12,9 @@ There are two main types of test cases that can be configured, [script-based tes
 
 ### Script-based tests
 
-Script-based tests use custom Automation scripts to execute and retrieve data. These tests can retrieve data from various sources, including DataMiner elements (via SLNet calls), DataMiner Agents (via DMS calls), or other external systems the DMS communicates with. Once the data is retrieved, it is evaluated against predefined thresholds to determine if the test passes or fails.
+Script-based tests use custom automation scripts to execute and retrieve data. These tests can retrieve data from various sources, including DataMiner elements (via SLNet calls), DataMiner Agents (via DMS calls), or other external systems the DMS communicates with. Once the data is retrieved, it is evaluated against predefined thresholds to determine if the test passes or fails.
 
-Several default tests are available related to the state of the DataMiner System, but you can also **integrate new tests using Automation scripts**. For the Health Check tool to recognize the new tests, the Automation scripts must be placed in the following folder in the Automation module: *Automation Scripts* > *Health Check* > *Health Check Tests*.
+Several default tests are available related to the state of the DataMiner System, but you can also **integrate new tests using automation scripts**. For the Health Check tool to recognize the new tests, the automation scripts must be placed in the following folder in the Automation module: *Automation Scripts* > *Health Check* > *Health Check Tests*.
 
 ![Health Check tests in the Automation module](~/solutions/images/Health_Check_Automation_Path.png)
 

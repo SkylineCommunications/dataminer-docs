@@ -6,7 +6,7 @@ uid: TableSourceInfo
 
 In the `<TableSourceInfo>` tag, you have to specify the dynamic table from which to retrieve the necessary data in order to draw the layer’s objects, which can be either markers or lines.
 
-- If the *style* attribute is set to "markers" (i.e. the default setting), the layer will display markers, each positioned at a location specified by one pair of latitude/longitude values retrieved from the dynamic table.
+- If the *style* attribute is set to "markers" (i.e., the default setting), the layer will display markers, each positioned at a location specified by one pair of latitude/longitude values retrieved from the dynamic table.
 
 - If the *style* attribute is set to "lines", the layer will display lines, each connecting two pairs of latitude/longitude values retrieved from the dynamic table. Each line will be displayed as a geodesic, a segment of a "great circle" representing the shortest distance between two points on the surface of the Earth.
 
@@ -58,7 +58,7 @@ If the marker images are image strips containing a separate image for every alar
 Markers indicating a masked alarm will be shown in the color associated with the "Masked" status (default: purple).
 
 > [!NOTE]
-> The cells in the specified column must be monitored, i.e. they must be included in at least one Alarm template.
+> The cells in the specified column must be monitored, i.e., they must be included in at least one Alarm template.
 
 ### MarkerSelectionPID
 

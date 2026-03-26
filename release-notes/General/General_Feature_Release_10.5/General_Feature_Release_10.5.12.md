@@ -80,13 +80,13 @@ The endpoint can now also return the following additional errors:
 
 From now on, the `Engine` class exposes the public property `ScriptName`.
 
-This means that, in an Automation script, it will now be possible to retrieve the name of that script.
+This means that, in an automation script, it will now be possible to retrieve the name of that script.
 
-#### Interactive Automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
+#### Interactive automation scripts executed in a web app: UI version can now be set in the script [ID 43875]
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
-Up to now, when you wanted an interactive Automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
+Up to now, when you wanted an interactive automation script executed in a web app to use the new UI version, you had to add `useNewIASInputComponents=true` to the URL of the app.
 
 From now on, it is also possible to indicate the UI version in the script itself. To do so, set the `engine.WebUIVersion` property to one of the following values:
 
@@ -104,11 +104,11 @@ engine.WebUIVersion = WebUIVersion.V2
 
 The URL parameter `useNewIASInputComponents` has priority over the UI version set in the script.
 
-- If you use `useNewIASInputComponents=true`, the script will use the new UI version (i.e. V2), even when V1 was set in the script.
-- If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e. V1), even when V2 was set in the script.
+- If you use `useNewIASInputComponents=true`, the script will use the new UI version (i.e., V2), even when V1 was set in the script.
+- If you use `useNewIASInputComponents=false`, the script will use the current UI version (i.e., V1), even when V2 was set in the script.
 
 > [!IMPORTANT]
-> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+> This feature is only supported for interactive automation scripts executed in web apps. It is not supported for interactive automation scripts executed in DataMiner Cube.
 
 ## Changes
 
@@ -184,6 +184,14 @@ From now on, the *NATSMigration* tool will also check for outdated DLL files in 
 
 When an outdated DLL file is found, the migration will be aborted. For the migration to succeed, the user will have to remove the outdated DLL file and update the protocol in question.
 
+#### BPA test 'Check Deprecated DLL Usage' will now also check the DataMinerMessageBroker.API.dll file [ID 43779]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.12 -->
+
+The BPA test *Check Deprecated DLL Usage* will now also check whether the *DataMinerMessageBroker.API.dll* file is used by protocols or automation scripts, and if so, whether it is not outdated.
+
+If this file cannot be found, or if its version is not equal or higher than 3.0.0, the BPA test will fail.
+
 #### OPC communication is End of Life [ID 43785]
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
@@ -214,7 +222,7 @@ From now on, the new `GetAllRelationalAnomaliesMessage` will allow you to retrie
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
+Because of a number of enhancements, overall performance of the *Cube CRL Freeze* BPA test has increased.
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
@@ -305,7 +313,7 @@ The model fit score is derived from the evolution of anomaly scores over time fo
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
-When a client application retrieves information about time-scoped related parameters using the `GetTimeScopedRelationsMessage`, from now on, exceptions will be thrown when that message is sent with incorrect arguments (e.g. a non-existing parameter ID, an invalid time range, etc.).
+When a client application retrieves information about time-scoped related parameters using the `GetTimeScopedRelationsMessage`, from now on, exceptions will be thrown when that message is sent with incorrect arguments (e.g., a non-existing parameter ID, an invalid time range, etc.).
 
 #### QActions: Variables will now also be logged when a NotifyProtocol call fails [ID 43967]
 
@@ -330,7 +338,7 @@ From now on, when BrokerGateway is uninstalled, the entire `C:\ProgramData\Skyli
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-After a DataMiner connection had been re-established (due to e.g. a network issue, a failover switch, etc.), in some rare cases, an issue could occur that would cause parameter or DCF information to be unavailable to remotely hosted elements.
+After a DataMiner connection had been re-established (due to, for example, a network issue, a failover switch, etc.), in some rare cases, an issue could occur that would cause parameter or DCF information to be unavailable to remotely hosted elements.
 
 #### Alerter would incorrectly require .NET Framework 2.0 [ID 43787]
 
@@ -415,7 +423,7 @@ From now on, regardless of whether DataMiner Cube can retrieve its own user sett
 
 <!-- MR 10.6.0 - FR 10.5.12 -->
 
-Up to now, because of SLNet caching issues, in client applications like e.g. DataMiner Cube, outdated SLAnalytics icons would incorrectly remain visible for too long.
+Up to now, because of SLNet caching issues, in client applications like e.g., DataMiner Cube, outdated SLAnalytics icons would incorrectly remain visible for too long.
 
 #### Notices regarding incorrect baseline values would no longer be generated when an element was started after being swarmed or migrated [ID 43970]
 
@@ -432,7 +440,7 @@ These notices will now be generated again.
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, Automation script matrix actions associated with those elements could fail.
+Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, automation script matrix actions associated with those elements could fail.
 
 #### Problem when an element with an active filtered table subscription was swarmed to the DMA on which it was already located [ID 44150]
 

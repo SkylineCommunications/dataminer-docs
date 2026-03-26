@@ -43,9 +43,9 @@ To configure the component:
      > [!NOTE]
      > A pivot table that displays trend statistics can use data exposed by a time range component as a filter.
 
-   - *Limit*: Determines how many rows (i.e. indices) or elements can be displayed. If a particular number “X” is specified, only the X first rows or elements that are retrieved from the server will be displayed.
+   - *Limit*: Determines how many rows (i.e., indices) or elements can be displayed. If a particular number “X” is specified, only the X first rows or elements that are retrieved from the server will be displayed.
 
-   - *Filter*: In case table column parameter data is used, this box allows you to specify a table row filer. To combine multiple filters, use a semicolon, e.g. *SLA\*;SLP\**.
+   - *Filter*: In case table column parameter data is used, this box allows you to specify a table row filer. To combine multiple filters, use a semicolon, e.g., *SLA\*;SLP\**.
 
    - *Conditions*: Allows you to add conditions, so that for example an element is only displayed if a particular parameter has a particular value.
 

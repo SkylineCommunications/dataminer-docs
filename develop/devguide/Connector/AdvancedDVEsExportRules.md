@@ -4,7 +4,7 @@ uid: AdvancedDVEsExportRules
 
 # Export rules
 
-Export rules allow you to change the properties of exported parameters, e.g. the position of the parameter in the DVE. An export rule overwrites a declaration in the parent element.
+Export rules allow you to change the properties of exported parameters, e.g., the position of the parameter in the DVE. An export rule overwrites a declaration in the parent element.
 
 ```xml
 <ExportRule table="" tag=" " attribute="" value=""/>
@@ -28,7 +28,7 @@ It is possible to use regular expressions in export rules, making it possible to
 |^|Match at the beginning of the input string.|
 |$|Match at the end of the input string.|
 
-Hidden DVE tables (i.e. tables with RTDisplay="false") can be exported using an export rule.<!-- RN 7831 --> In other words, a table not displayed in the DVE "parent" element can be visible in the DVE "child" element.
+Hidden DVE tables (i.e., tables with RTDisplay="false") can be exported using an export rule.<!-- RN 7831 --> In other words, a table not displayed in the DVE "parent" element can be visible in the DVE "child" element.
 
 ## Examples
 

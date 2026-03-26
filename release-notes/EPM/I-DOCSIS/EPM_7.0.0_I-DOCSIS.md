@@ -8,7 +8,7 @@ uid: EPM_7.0.0_I-DOCSIS
 
 #### Separate procedures for adding a single CCAP/CM pair and creating elements in bulk [ID 38518]
 
-In DataMiner Cube, the interactive Automation script *epm_i_docsis_addnewccapcmpair* now includes the *Create Bulk* and *Create Single* options, to either create a single CCAP/CM pair, or create elements in bulk from a CSV file. Additionally, the *Create Single* procedure now includes a step for entering both the get community string and set community string for the collector.
+In DataMiner Cube, the interactive automation script *epm_i_docsis_addnewccapcmpair* now includes the *Create Bulk* and *Create Single* options, to either create a single CCAP/CM pair, or create elements in bulk from a CSV file. Additionally, the *Create Single* procedure now includes a step for entering both the get community string and set community string for the collector.
 
 #### Skyline EPM Platform: Creating multiple threshold tables for CCAP and CM collectors streamlined [ID 38741]
 

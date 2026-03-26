@@ -2,9 +2,9 @@
 uid: SchemaHyperlinks
 ---
 
-# Hyperlinks Schema
+# Hyperlinks schema
 
-DataMiner Hyperlinks XML Schema.
+DataMiner Hyperlinks XML schema.
 
 For more information about hyperlinks, refer to [Hyperlinks.xml](xref:Hyperlinks_xml).
 

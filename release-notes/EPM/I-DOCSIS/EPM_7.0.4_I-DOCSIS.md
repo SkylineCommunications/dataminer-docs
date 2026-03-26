@@ -38,7 +38,7 @@ An improvement has been implemented to the way data is retrieved in the interfac
 
 #### Automation scripts placed in dedicated folder during deployment [ID 39922]
 
-When the EPM package is deployed, all its Automation scripts are now placed in an I-DOCSIS folder instead of at the root level of the Automation module.
+When the EPM package is deployed, all its automation scripts are now placed in an I-DOCSIS folder instead of at the root level of the Automation module.
 
 #### Skyline EPM Platform and Skyline EPM Platform DOCSIS information templates updated [ID 39933]
 

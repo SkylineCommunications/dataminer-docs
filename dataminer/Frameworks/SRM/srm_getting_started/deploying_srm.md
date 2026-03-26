@@ -51,9 +51,9 @@ uid: deploying_srm
 
 1. In the visual overview of the *Skyline Booking Manager* element, go to *Config* > *General* and configure the following settings:
 
-   - Set *Application Setup* > *Default Virtual Platform* to the correct [Virtual Platform](xref:srm_instantiations#virtual-platform) identifier, e.g. *SRM*, *Default*, *Satellite Downlink*, etc.
+   - Set *Application Setup* > *Default Virtual Platform* to the correct [Virtual Platform](xref:srm_instantiations#virtual-platform) identifier, e.g., *SRM*, *Default*, *Satellite Downlink*, etc.
 
-   - Set *Services* > *App. Services View* to the name of the view you created to contain services (e.g. "3 - Services").
+   - Set *Services* > *App. Services View* to the name of the view you created to contain services (e.g., "3 - Services").
 
    - Set *History and Logs* > *Booking Logging Location* to a shared folder accessible from both the client machine and the DataMiner servers, so that users will be able to view the log files. See [Configuring SRM logging](xref:SRM_logging_config).
 

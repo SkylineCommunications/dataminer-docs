@@ -18,7 +18,7 @@ Specifies the names of DLL files used by the QAction. Multiple values have to be
 
 Items mentioned in the *dllImport* attribute will be added as references to the Roslyn compiler when DataMiner compiles the QAction. The items are also used to add additional hint paths to be used by the assembly resolver. For more information, refer to [Runtime assembly binding](xref:Run_Time_Assembly_Binding) and [Assembly binding connectors](xref:AssemblyResolvingConnectors).
 
-When an assembly that is part of the Base Class Library (BCL) of .NET Framework is used (e.g. System.Xml.dll), it is sufficient to just mention it in the *dllImport* attribute. Assemblies that are part of the BCL must **not** be included in the protocol package.
+When an assembly that is part of the Base Class Library (BCL) of .NET Framework is used (e.g., System.Xml.dll), it is sufficient to just mention it in the *dllImport* attribute. Assemblies that are part of the BCL must **not** be included in the protocol package.
 
 Other assemblies that are used by the protocol must be stored in the `C:\Skyline DataMiner\ProtocolScripts\DllImport` (or `C:\Skyline DataMiner\ProtocolScripts\`) directory.
 

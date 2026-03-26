@@ -18,7 +18,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-#### Low-Code Apps - Interactive Automation scripts: Enhancements made to redesigned UI component 'StaticText' [ID 42662]
+#### Low-Code Apps - Interactive automation scripts: Enhancements made to redesigned UI component 'StaticText' [ID 42662]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
@@ -36,7 +36,7 @@ Currently, by default, the existing components will still be used by default to 
 
 A number of enhancements have been made to the way in which timeline items are updated.
 
-#### Low-Code Apps - Interactive Automation scripts: Enhancements made to redesigned UI component 'CheckBoxList' [ID 42826]
+#### Low-Code Apps - Interactive automation scripts: Enhancements made to redesigned UI component 'CheckBoxList' [ID 42826]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
@@ -117,7 +117,7 @@ When a *GetAlarms* call was sent in a JSON request, in some cases, the following
 
 - Filters in which *StartTime* and *EndTime* were set to 0 would be cached incorrectly, causing problems when the call was sent multiple times over different days since the 0 values would be replaced with "Now" en "End - 1 hour".
 
-- In the result set, the alarms would not always be sorted by *TimeOfArrival* (i.e. the default setting).
+- In the result set, the alarms would not always be sorted by *TimeOfArrival* (i.e., the default setting).
 
 #### Dashboards app: Problem after generating PDF reports [ID 42907]
 
@@ -129,7 +129,7 @@ Up to now, in some cases, an exception could be thrown after a PDF report had be
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
-When you had created an "Open monitoring card" action that referenced an object (i.e. an element, service or view) by name, and then deleted and recreated that object, up to now, the action would no longer work because it would still reference the object that was deleted.
+When you had created an "Open monitoring card" action that referenced an object (i.e., an element, service or view) by name, and then deleted and recreated that object, up to now, the action would no longer work because it would still reference the object that was deleted.
 
 #### Dashboards app & Low-Code Apps - Timeline component: Scroll position would incorrectly reset on Mozilla Firefox [ID 42966]
 

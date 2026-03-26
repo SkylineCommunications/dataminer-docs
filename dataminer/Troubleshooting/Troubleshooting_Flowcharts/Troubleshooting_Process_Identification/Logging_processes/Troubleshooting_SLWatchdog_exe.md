@@ -30,7 +30,7 @@ SLWatchdog will take action:
 
 - If a runtime error occurs – see [Troubleshooting – Run-Time Errors (RTEs)](xref:Troubleshooting_Run_Time_Errors).
 
-- If a process suddenly stops (i.e. a process disappearance).
+- If a process suddenly stops (i.e., a process disappearance).
 
 - If a process crashes. This is not the same as a process disappearance.
 
@@ -71,7 +71,7 @@ flowchart TD
     ConfirmLeak(How to confirm a memory leak)
     ReportsGrowing[Check if the size of generated reports is growing: C:\Skyline DataMiner\Logging\WatchDog\Reports]
     ValidateXml[Open recent reports and check if the XML is valid. Check XML tags, attributes, data.]
-    togglingRTE[Check for toggling RTEs, i.e. RTEs switching on and off in quick succession, which can cause SLWatchDog to generate many files: C:\Skyline DataMiner\Logging\WatchDog\Notifications]
+    togglingRTE[Check for toggling RTEs, i.e., RTEs switching on and off in quick succession, which can cause SLWatchDog to generate many files: C:\Skyline DataMiner\Logging\WatchDog\Notifications]
     RteLink([How to check for RTEs])
     CheckSlXml[Check SLXML process for issues]
     XmlFlowchart([SLXML flowchart])

@@ -126,7 +126,7 @@ The error message usually provides sufficient information to understand the caus
 
 - Incorrect credentials
 
-- Mismatching communication protocol (e.g. HTTPS enabled on one side but not the other)
+- Mismatching communication protocol (e.g., HTTPS enabled on one side but not the other)
 
 - Invalid TLS certificate
 
@@ -190,13 +190,13 @@ Maintaining the health of your indexing database network is vital for optimal pe
 
    - If the ping succeeds: Network connectivity is intact, but communication on the expected port may still be blocked. Proceed to step 3.
 
-1. Work with your IT team to verify that the firewall on the indexing database server is not blocking communication on the required port (e.g. 9200 for OpenSearch/Elasticsearch).
+1. Work with your IT team to verify that the firewall on the indexing database server is not blocking communication on the required port (e.g., 9200 for OpenSearch/Elasticsearch).
 
    On Ubuntu-based systems:
 
    - Check whether the firewall status is active and review the configured rules: `sudo ufw status`.
 
-   - Ensure the port is open (i.e. listed as `ALLOW`): `sudo ufw status | grep PORT_NUMBER`.
+   - Ensure the port is open (i.e., listed as `ALLOW`): `sudo ufw status | grep PORT_NUMBER`.
 
      > [!NOTE]
      > Red Hat-based operating systems use `firewalld` instead of `ufw`, managed with the `firewall-cmd` command.

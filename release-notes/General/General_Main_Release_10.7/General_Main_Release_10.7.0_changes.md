@@ -26,17 +26,17 @@ Note that is possible to configure the number of simultaneously running SLScript
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
 
-When the system receives a trap binding value of type OctetString, that value will either be automatically converted into characters (e.g. 0x41 will become "A") or remain in a hexadecimal string format (e.g. when the value contains a byte that is not printable like 0x02, which is an STX control character).
+When the system receives a trap binding value of type OctetString, that value will either be automatically converted into characters (e.g., 0x41 will become "A") or remain in a hexadecimal string format (e.g., when the value contains a byte that is not printable like 0x02, which is an STX control character).
 
-Up to now, hexadecimal values above the ASCII range (i.e. values >= 0x7F) were considered printable characters, and were not converted into a hexadecimal string. This would cause issues with, for example, the Unicode control character 0x8C, which would be displayed as a question mark. In such cases, complex QAction code would then be required to have it converted back into a hexadecimal value.
+Up to now, hexadecimal values above the ASCII range (i.e., values >= 0x7F) were considered printable characters, and were not converted into a hexadecimal string. This would cause issues with, for example, the Unicode control character 0x8C, which would be displayed as a question mark. In such cases, complex QAction code would then be required to have it converted back into a hexadecimal value.
 
-Also, DataMiner is not aware of whether a binding value actually contains text (e.g. a MAC address consisting of octets) or, if the value contains text, how that text was encoded (e.g. Windows code page 1252, UTF-8, UTF-16, etc.).
+Also, DataMiner is not aware of whether a binding value actually contains text (e.g., a MAC address consisting of octets) or, if the value contains text, how that text was encoded (e.g., Windows code page 1252, UTF-8, UTF-16, etc.).
 
 From now on, hexadecimal values outside of the ASCII range will be considered non-printable characters, and will remain in hexadecimal string format.
 
 This is a breaking change.
 
-Up to now, text containing characters that were encoded in extended ASCII (i.e. Windows code page 1252) were converted from raw octets into string text. For example, the French word "hélicoptère" would be received correctly. From now on, that same word will be received as hexadecimal string "68e96c69636f7074e87265", and a QAction will need to convert it back into a string using the correct encoding.
+Up to now, text containing characters that were encoded in extended ASCII (i.e., Windows code page 1252) were converted from raw octets into string text. For example, the French word "hélicoptère" would be received correctly. From now on, that same word will be received as hexadecimal string "68e96c69636f7074e87265", and a QAction will need to convert it back into a string using the correct encoding.
 
 ### Enhancements
 
@@ -80,7 +80,7 @@ Multiple handlers can be added. They will run synchronously, and if one handler 
 
 <!-- MR 10.7.0 - FR 10.6.3 -->
 
-Two new parameter caches are now available for client apps (e.g. DataMiner Cube):
+Two new parameter caches are now available for client apps (e.g., DataMiner Cube):
 
 - ProtocolParameters (linked to GetProtocolParameter on the client connection)
 - ElementProtocolParameters (linked to GetElementProtocolParameter on the client connection)
@@ -106,7 +106,7 @@ Also, in the resource manager, it is now possible to configure the number of sta
 | MaxAmountOfThreads       | The number of threads the resource manager will use to start bookings.<br>By default, 6 threads will be used. To restore this setting to the default value, set its value to null.<br>Note: The number of threads must at least be set to 2 in order for the scheduler to be able to start an action and keep a thread available for asynchronous continuations. |
 | MaxAmountOfParallelTasks | The number of parallel actions the resource manager will start on the threads.<br>By default, the number of parallel action is set to 7. To restore this setting to the default value, set its value to null. |
 
-The following example shows how you can configure this from an Automation script.
+The following example shows how you can configure this from an automation script.
 
 ```csharp
 private void UpdateResourceManagerConfigSettings()
@@ -148,7 +148,7 @@ Visibility on SLNet connection issues has been enhanced:
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-When, in DataMiner client applications (e.g. DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
+When, in DataMiner client applications (e.g., DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
 
 | Mode | Description |
 |------|-------------|
@@ -172,17 +172,23 @@ This means, that any DataMiner Agent on which you want to perform a web-only upg
 From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
 
 - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
-- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
+- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e., they are not part of the same cloud-connected system.
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.
 
-#### Scheduler will now be able to start more than 10 synchronously running Automation scripts [ID 44200]
+#### SLWatchdog will now report SLNet/SLDataGateway TPL ThreadPool and 'time dilation' issues as run-time errors [ID 44186]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+From now on, whenever the TPL ThreadPool of SLNet or SLDataGateway would get stuck or a "time dilation" would occur on your system (for example, when a freeze of a virtual machine would cause sleep actions to take longer than anticipated), SLWatchDog will report these issues as a run-time error.
+
+#### Scheduler will now be able to start more than 10 synchronously running automation scripts [ID 44200]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-Up to now, using Scheduler, it would only be possible to start a maximum of 10 synchronously running Automation scripts.
+Up to now, using Scheduler, it would only be possible to start a maximum of 10 synchronously running automation scripts.
 
-From now on, it will be possible to start more than 10 synchronously running Automation scripts.
+From now on, it will be possible to start more than 10 synchronously running automation scripts.
 
 #### Relational anomaly detection: GetRADParameterGroupInfoResponseMessage now also includes the ID of the RAD parameter group [ID 44237]
 
@@ -213,7 +219,7 @@ See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in th
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-The entry added to the *SLAutomation.txt* log file when an Automation script has finished will now contain the entrypoint ID.
+The entry added to the *SLAutomation.txt* log file when an automation script has finished will now contain the entrypoint ID.
 
 In the following example, the entrypoint ID can be found at the end of the entry between brackets (11):
 
@@ -236,6 +242,87 @@ From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Schedule
 
 If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
 
+#### DataMiner Objects Models: Selected subset of fields from DomInstance objects will now be read from the repository API [ID 44600]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Since DataMiner 10.6.0/10.6.1, it is possible to read only a selected subset of fields from `DomInstance` objects. In order to further enhance performance, from now on, those subsets will be read from the repository API.
+
+Currently, the repository API will still request the full objects from the database and extract the required values.
+
+> [!NOTE]
+> When a field value is requested, the type defined in the field descriptor will be used. In order to determine that type, field descriptor IDs should be unique across section definitions in a DOM module.
+
+#### NotifyMail.html has been updated in order to better support both classic Microsoft Outlook and new Microsoft Outlook [ID 44617]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+The `C:\Skyline DataMiner\NotifyMail.html` file, i.e., the email report template, has been updated to better support both classic Microsoft Outlook and new Microsoft Outlook.
+
+#### SLDataGateway: Job queue updates will now be logged in SLJobQueues.txt [ID 44661]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, log entries regarding SLDataGateway job queue updates would be logged in the `C:\Skyline DataMiner\Logging\SLDbConnection.txt` file.
+
+From now on, these log entries will be logged in the `C:\Skyline DataMiner\Logging\SLDataGateway\SLJobQueues.txt` file instead.
+
+#### SLLogCollector: Separate log file per instance [ID 44668]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, all SLLogCollector logging of all SLLogCollector instances would end up in the following files, stored in the `C:\ProgramData\Skyline\DataMiner\SL_LogCollector\Log` folder:
+
+- `SL_LogCollector_fulllog.log`
+- `SL_LogCollector_log.log`
+
+From now on, each SLLogCollector instance will have its own dedicated log file named `log-[creation timestamp].txt`, stored in the `C:\ProgramData\Skyline Communications\SLLogCollector` folder.
+
+Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
+
+#### Security enhancements [ID 44804]
+
+<!-- 44804: MR 10.7.0 - FR 10.6.5 -->
+
+A number of security enhancements have been made.
+
+#### SLNet will now take into account the log level before sending a log entry to SLLog [ID 44910]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+Up to now, SLNet would incorrectly send all log entries directly to SLLog, including entries of which the log level dictated that they should not be added to a log file.
+
+From now on, SLNet will only send a log entry to SLLog if the log level dictates that the entry should be logged. As a result, overall performance will increase when adding entries to log files.
+
+> [!IMPORTANT]
+> This change was reverted in Main Release 10.5.0 CU12, Main Release 10.6.0, and Feature Release 10.6.3 CU1 as it caused SLNet to leak handles whenever a user authenticated using SAML and a new SLHelper process was started. See [SLNet will no longer take into account the log level before sending a log entry to SLLog [ID 44868]](xref:General_Feature_Release_10.6.3_CU1#slnet-will-no-longer-take-into-account-the-log-level-before-sending-a-log-entry-to-sllog-id-44868).
+> The change has now been reintroduced.
+
+#### Enhanced SSH logging [ID 44975]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+A number of enhancements have been made to the SSH logging:
+
+- From now on, when an SSH connection times out for one of the following reasons, an entry will be added to the element log:
+
+  - Host name could not be resolved.
+  - User authentication failed.
+
+- In the SSH logging, it will now clearly be indicated which operations have been performed. For example, during authentication, the logging will now clearly state which authentication methods have been used and what the results were.
+
+- In the SSH logging, most entries will now mention the session ID associated with the entry. As this same session ID is also mentioned in element log entries, users will find it much easier to find out which log entries are related.
+
+Also, an issue has been fixed. When a host name could not be resolved to an IP address, up to now, the SSH connection would incorrectly try to connect to localhost. From now on, when the host name could not be resolved, the connection will fail.
+
+#### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45022]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+Previously, when a script library was added to a DataMiner System, its hint paths were automatically sent to the automation script compilation engine, even when the library was not used by any automation script.
+
+From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
@@ -257,3 +344,28 @@ From now on, when a capability is booked, it will no longer be possible to set i
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
+
+#### History set trending would show gaps where no gaps were expected [ID 44705]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, history set trending would show gaps where no gaps were expected.
+
+From now on, trend records with the following *iStatus* values will no longer cause gaps in trend graphs:
+
+| Value | Description |
+|-------|-------------|
+| -1  | Element is starting up. |
+| -2  | Element is being paused. |
+| -3  | Element is being activated. |
+| -4  | Element is going into a timeout state. |
+| -5  | Element is coming out of a timeout state. |
+| -6  | Element is being stopped. |
+| -9  | Trending was started for the specified parameter. |
+| -10 | Trending was stopped for the specified parameter. |
+
+#### SLAnalytics: Flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours [ID 45033]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+Up to now, flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours.

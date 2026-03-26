@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_DevOps_Creative_Collective
+description: The Creative Collective fosters collaboration among DevOps Professionals to unlock DataMiner's full potential.
 ---
 
 # The DataMiner DevOps Creative Collective

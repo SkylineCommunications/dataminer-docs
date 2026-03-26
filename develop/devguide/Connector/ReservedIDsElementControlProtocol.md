@@ -97,7 +97,7 @@ General Parameters (DataMiner Element Control Protocol):
 |64569|Scheduled Task Deleted|Scheduled task deleted|
 |64570|Notification|Notification|
 |64571|Stop DataMiner|Stop DataMiner|
-|64572|DataMiner run-time|DataMiner run-time|
+|64572|DataMiner runtime|DataMiner runtime|
 |64573|Task started|Task started|
 |64574|Client notification|Client notification|
 |64575|Set as production protocol|Set as production protocol|

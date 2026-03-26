@@ -8,7 +8,7 @@ Use this method to have a method executed asynchronously.
 
 ## Executing methods asynchronously
 
-Some methods can take quite some time to execute (e.g. the *GetVisio*... methods). As it is not advised to block an HTTP channel for long periods of time, methods that take a long time to execute should be executed asynchronously.
+Some methods can take quite some time to execute (e.g., the *GetVisio*... methods). As it is not advised to block an HTTP channel for long periods of time, methods that take a long time to execute should be executed asynchronously.
 
 To execute a method asynchronously, do the following:
 

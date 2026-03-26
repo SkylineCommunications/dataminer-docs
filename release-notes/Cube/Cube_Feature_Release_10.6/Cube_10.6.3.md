@@ -2,25 +2,17 @@
 uid: Cube_Feature_Release_10.6.3
 ---
 
-# DataMiner Cube Feature Release 10.6.3 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.3
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.5.0 [CU12].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.3](xref:General_Feature_Release_10.6.3).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.3](xref:Web_apps_Feature_Release_10.6.3).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No new features have been added yet.*
 
 ## Changes
 
@@ -52,9 +44,9 @@ Because of a number of enhancements, especially to the way in which script infor
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-When, in System Center, you viewed Automation script logging, up to now, all scripts would be listed. This could cause users to try to view non-existing logs. For example, Automation scripts that only contain library blocks do not have a dedicated log file.
+When, in System Center, you viewed automation script logging, up to now, all scripts would be listed. This could cause users to try to view non-existing logs. For example, automation scripts that only contain library blocks do not have a dedicated log file.
 
-From now on, when Cube is connected to a DataMiner Agent running DataMiner main release 10.7.0 or feature release 10.6.2 (or above), only Automation scripts that contain at least one executable C# block will allow user to view their log file.
+From now on, when Cube is connected to a DataMiner Agent running DataMiner main release 10.7.0 or feature release 10.6.2 (or above), only automation scripts that contain at least one executable C# block will allow user to view their log file.
 
 This change applies to the following ways to access a log file:
 
@@ -74,7 +66,7 @@ Up to now, this log file list contained a *Scripting* entry. However, as no *SLS
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-When Cube connects to a DMA that is connected to dataminer.services (i.e. a DMA of which the hostname ends with ".dataminer.services"), the connection will always be of type gRPC, whatever the connection type that is specified in the Cube settings.
+When Cube connects to a DMA that is connected to dataminer.services (i.e., a DMA of which the hostname ends with ".dataminer.services"), the connection will always be of type gRPC, whatever the connection type that is specified in the Cube settings.
 
 #### Initialization exceptions thrown by the Microsoft Edge browser engine will now be added to the Cube logging [ID 44549]
 
@@ -88,7 +80,7 @@ From now on, all initialization exceptions thrown by the Microsoft Edge (WebView
 
 From now on, it will no longer be possible to migrate booking data from a Cassandra database per DMA to an indexing database.
 
-Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
+Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e., from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
 
 #### Microsoft Edge (WebView2) browser engine can now also be installed on a per user basis [ID 44580]
 
@@ -105,7 +97,7 @@ On systems running the Windows Server OS, the Microsoft Edge (WebView2) browser 
   - IsInstalled (*True* or *False*)
   - Installation type (*Undefined*, *System wide*, *Per user*, or *Fixed version*)
   - Version number
-  - Location (i.e. the local path to the browser engine folder)
+  - Location (i.e., the local path to the browser engine folder)
 
 - The NuGet package *Microsoft.Web.WebView2* has been upgraded to version 1.0.3650.58.
 
@@ -171,7 +163,7 @@ As the severity of an incident alarm is the highest severity found among its sou
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-When an *AlarmSummary* shape was linked to an object (e.g. an element, a service, or a view), and that object contained a correlated alarm, up to now, that correlated alarm would not be removed from the summary when the element associated with the correlated alarm had its status set to "Paused", "Stopped", or "Deleted".
+When an *AlarmSummary* shape was linked to an object (e.g., an element, a service, or a view), and that object contained a correlated alarm, up to now, that correlated alarm would not be removed from the summary when the element associated with the correlated alarm had its status set to "Paused", "Stopped", or "Deleted".
 
 From now on, correlated alarms will be removed from the summary when the status of the elements associated with those correlated alarms changes.
 

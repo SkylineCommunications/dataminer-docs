@@ -20,7 +20,7 @@ Alarm cards consist of three panes:
 - The **pane on the left** shows the **history** of the alarm. For correlated alarms, it also shows the source alarms.
 
   > [!NOTE]
-  > If the *AlarmSettings*.*MustSquashAlarms* option is enabled in *MaintenanceSettings.xml*, an alarm tree can contain consolidated alarm events (i.e. consecutive alarm events without a severity change that are combined into a consolidated event). To view all the separate events within a consolidated alarm event, click the *Show alarm events* option at the bottom of this pane.
+  > If the *AlarmSettings*.*MustSquashAlarms* option is enabled in *MaintenanceSettings.xml*, an alarm tree can contain consolidated alarm events (i.e., consecutive alarm events without a severity change that are combined into a consolidated event). To view all the separate events within a consolidated alarm event, click the *Show alarm events* option at the bottom of this pane.
 
 - The **large pane on the right** has three tabs:
 

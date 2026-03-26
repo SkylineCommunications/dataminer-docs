@@ -1,6 +1,6 @@
 ---
 uid: DSIEmberPlus
-description: Ember+ is a control protocol allowing communication between a data provider and a consumer, consisting of three parts, i.e. Glow, EmBER, and S101.
+description: Ember+ is a control protocol allowing communication between a data provider and a consumer, consisting of three parts, i.e., Glow, EmBER, and S101.
 ---
 
 # Ember+

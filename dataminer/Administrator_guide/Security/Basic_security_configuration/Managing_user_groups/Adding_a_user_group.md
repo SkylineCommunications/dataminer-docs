@@ -31,8 +31,8 @@ When you add a domain group to DataMiner, keep the following in mind:
 
 - All members of the domain group are automatically added to DataMiner.
 
-- If changes are made to the domain group outside of DataMiner (e.g. users are added or deleted), DataMiner will automatically update its security settings.
+- If changes are made to the domain group outside of DataMiner (e.g., users are added or deleted), DataMiner will automatically update its security settings.
 
 - If you add a domain group that contains subgroups, the users from the subgroups will also automatically be added as if they are in the parent group. For example, if you add a group with 2 subgroups containing 5 users each, in DataMiner you will only see the parent group, containing the 10 users that were in the subgroups.
 
-- Some properties of domain users (e.g. name, password) cannot be changed in DataMiner. To indicate that domain users are read-only, these users are marked by a gray user icon in the user list.
+- Some properties of domain users (e.g., name, password) cannot be changed in DataMiner. To indicate that domain users are read-only, these users are marked by a gray user icon in the user list.

@@ -118,8 +118,8 @@ var settings = new ModuleSettings()
 
 > [!NOTE]
 >
-> - When no concatenation is defined (i.e. when DomInstanceNameDefinition is empty or null), the ID of the DomInstance will be used as DomInstance name.
-> - When multiple values are defined for the same FieldDescriptor (i.e. when there are multiple Sections for the same SectionDefinition), the first value will be used for the concatenation.
+> - When no concatenation is defined (i.e., when DomInstanceNameDefinition is empty or null), the ID of the DomInstance will be used as DomInstance name.
+> - When multiple values are defined for the same FieldDescriptor (i.e., when there are multiple Sections for the same SectionDefinition), the first value will be used for the concatenation.
 > - The DomInstanceNameDefinition can be overridden by a DomDefinition on the ModuleSettingsOverrides property.
 
 #### DataMiner Object Model: DomBehaviorDefinition object & status system \[ID 30443\]
@@ -351,7 +351,7 @@ It is now possible to define actions on a DomBehaviorDefinition, which can be tr
 
 You can define an action by adding an IDomActionDefinition to the ActionDefinitions list of a DomBehaviorDefinition. Each action definition has an ID of type string and a condition of type IDomCondition. The ID must be unique for the DomBehaviorDefinition in question and can only contain lower-case characters.
 
-Currently, you can only define actions of type ExecuteScriptDomActionDefinition, i.e. actions that execute a specified script. This type of action has the following properties.
+Currently, you can only define actions of type ExecuteScriptDomActionDefinition, i.e., actions that execute a specified script. This type of action has the following properties.
 
 | Property | Type | Description |
 |--|--|--|
@@ -359,7 +359,7 @@ Currently, you can only define actions of type ExecuteScriptDomActionDefinition,
 | Condition | IDomCondition | The condition that should be met before the action is allowed to be executed. Note: When you do not define a condition, it will always be allowed to execute the action. |
 | Script | string | The name of the script to be executed. |
 | Async | bool | Whether the script will be run asynchronously (true) or synchronously (false). When true, no errors or info data from the script will be returned. |
-| ScriptOptions | List\<string> | A list of options (e.g. “PARAMETER:1:MyValue”) that will be passed to the SLAutomation process during execution. Note: Do not add the “DEFER” option. This option will be added automatically depending on the value of the Async property. |
+| ScriptOptions | List\<string> | A list of options (e.g., “PARAMETER:1:MyValue”) that will be passed to the SLAutomation process during execution. Note: Do not add the “DEFER” option. This option will be added automatically depending on the value of the Async property. |
 
 The scripts that will be executed using this action require a custom entry point of type OnDomAction. This entry point method should have two arguments: the IEngine object and an ExecuteScriptDomActionContext object. See the following example.
 
@@ -524,9 +524,9 @@ In the *MaintenanceSettings.xml* file of a newly installed DataMiner Agent, the 
 </MaintenanceSettings>
 ```
 
-#### Redundancy groups: Additional information in information events and Automation scripts \[ID 31358\]
+#### Redundancy groups: Additional information in information events and automation scripts \[ID 31358\]
 
-When elements within a redundancy group are switched, from now on, additional information will be added both to the information events and to the Automation scripts that are executed.
+When elements within a redundancy group are switched, from now on, additional information will be added both to the information events and to the automation scripts that are executed.
 
 ##### Information events
 
@@ -545,11 +545,11 @@ The following information will be added to the information events.
 
 - When a switch is performed, an additional information event with parameter description “Redundancy switch” will now be generated to indicate the cause of the switch. In case of a manual switch, the information event will mention the user and in case of an automatic switch, it will mention the trigger ID.
 
-- When DataMiner intervenes in the switching process, an information event with parameter description “Linked to” is generated. From now on, this event will also mention the element from which the switch occurred. It will now contain e.g. “RDG1, Unlinked from RDG3” instead of just “RDG1”.
+- When DataMiner intervenes in the switching process, an information event with parameter description “Linked to” is generated. From now on, this event will also mention the element from which the switch occurred. It will now contain e.g., “RDG1, Unlinked from RDG3” instead of just “RDG1”.
 
 ##### Automation scripts
 
-When an Automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the Automation script using the GetScriptParam(\<id>) method on the engine object.
+When an automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the automation script using the GetScriptParam(\<id>) method on the engine object.
 
 | ID | Name | Description |
 |--|--|--|
@@ -564,7 +564,7 @@ When an Automation script is triggered as part of an redundancy group action, th
 From now on, Automatic Incident Tracking will be enabled by default
 
 - on newly installed systems, and
-- on systems that upgrade from a version on which Automatic Incident Tracking was not yet available (i.e. versions older than version 10.0.11).
+- on systems that upgrade from a version on which Automatic Incident Tracking was not yet available (i.e., versions older than version 10.0.11).
 
 > [!NOTE]
 > In systems where Automatic Incident Tracking has explicitly been disabled, the feature will remain disabled.

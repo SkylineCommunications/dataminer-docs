@@ -4,7 +4,7 @@ uid: SwarmingScriptBooking
 
 # Configuring a script to swarm bookings
 
-If [swarming of bookings is enabled](xref:SwarmingBookings), you can use an Automation script to trigger the swarming.
+If [swarming of bookings is enabled](xref:SwarmingBookings), you can use an automation script to trigger the swarming.
 
 In this script, create a *SwarmingHelper* with the new hosting Agent ID and the booking IDs. See also [Configuring a script to swarm elements](xref:SwarmingScriptElement) for examples on how to use the swarming helper to swarm elements.
 

@@ -10,7 +10,7 @@ When you select this option, follow the steps below:
 
 1. Select the column to filter.
 
-1. Specify the filter method (e.g. equals, greater than, etc.).
+1. Specify the filter method (e.g., equals, greater than, etc.).
 
    The available filter methods depend on the type of data in the selected column.
 
@@ -30,9 +30,12 @@ When you select this option, follow the steps below:
 
        If *Type* is set to *Tables*/*Query rows*, instead of a property, you can select the columns from the table containing the query rows. However, note that you will only be able to select columns that are compatible with the type of column you are filtering.
 
-     - *Empty data shows*: Select what should be shown in case the field is empty: nothing, empty values, or everything (i.e. the full table). Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this option is called *When feed is empty, show*.
+     - *Empty data shows*: Select what should be shown in case the field is empty: nothing, empty values, or everything (i.e., the full table). Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this option is called *When feed is empty, show*.
 
 1. Optionally refine the results by applying another operator, such as an additional filter.
 
 > [!NOTE]
-> If the *regex* or *not regex* filter method is used and the data contains multiple values, these are combined with an "or" operator.
+> Prior to DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4<!--RN 44714-->, or when the SLHelper process is used for GQI operations instead of the GQI DxM, multiple filter values are not handled as a true "or" filter:
+>
+> - If the *regex* or *not regex* filter method is used and the data contains multiple values, these values are combined into a single regular expression using an "or" operator. This only works for string values.
+> - Other filter methods (for example *contains* or *equals*) only apply the first value. Any additional values are ignored.

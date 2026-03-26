@@ -63,7 +63,7 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
   IsIssueFixed_1{{Issue fixed?}}
   IsIssueFixed_1 --- |Yes| Ending_1
   IsIssueFixed_1 --- |No| NotInSameDomain
-  NotInSameDomain{{Are the DMAs not in the same domain or is the Administrator password not the same accross the cluster?}}
+  NotInSameDomain{{Are the DMAs not in the same domain or is the Administrator password not the same across the cluster?}}
   NotInSameDomain --- |Yes| CheckSLDMS
   NotInSameDomain --- |No| ContactTechsupport
   CheckSLDMS{{Does SLDMS.txt contain 'Authentication failed' messages?}}
@@ -151,7 +151,7 @@ In that case, a "callback timeout (waited 30 s)" type error is generated. This m
 
 Possible reasons for such callback timeouts could be:
 
-- An unreachable destination (e.g. client was stopped or firewall intervened).
+- An unreachable destination (e.g., client was stopped or firewall intervened).
 
 - The packet of forwarded data is too large.
 

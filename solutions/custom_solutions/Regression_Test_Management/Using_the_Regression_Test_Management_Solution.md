@@ -33,7 +33,7 @@ On the visual overview of the *Regression Test Results* element, click the *EXEC
 
 1. [Create a new task](xref:Manually_adding_a_scheduled_task), using the following configuration:
 
-   1. Set the *Recurrence* (e.g. daily at 2:00 AM).
+   1. Set the *Recurrence* (e.g., daily at 2:00 AM).
 
    1. Under *Actions*, select the *RegressionTestRunner* script.
 

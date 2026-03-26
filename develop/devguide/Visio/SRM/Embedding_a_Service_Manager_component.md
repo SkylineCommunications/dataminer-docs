@@ -29,7 +29,7 @@ Configure the following shape data fields on the shape that is to contain the Se
 
      Should be set to a comma-separated list of values. Possible values:
 
-     - Undefined (i.e. NULL value)
+     - Undefined (i.e., NULL value)
      - UserTask
      - ScriptTask
      - ResourceTask
@@ -130,8 +130,8 @@ A shape can be turned into a command control to manipulate a Service Manager com
 
 1. Add the following shape data fields to the component shape:
 
-   - **Component**: Set the value to the name of the component, i.e. *ServiceManager*.
-   - **CommandPrefix**: Optional. Set the value to the prefix that should be added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g. "*One\_*").
+   - **Component**: Set the value to the name of the component, i.e., *ServiceManager*.
+   - **CommandPrefix**: Optional. Set the value to the prefix that should be added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g., "*One\_*").
    - **ComponentOptions**: To hide the default "Save" and "Discard" buttons of the Service Manager component, specify the value *HideSaveDiscardButtons=true*.
 
    > [!TIP]
@@ -146,13 +146,13 @@ A shape can be turned into a command control to manipulate a Service Manager com
      - *SaveCurrent*: Saves pending changes for the current service definition. Can be used when the Service Manager shape is configured with **ComponentOptions**: *interface=definition*.
      - *DiscardCurrent*: Discards pending changes for the current service definition. Can be used when the Service Manager shape is configured with **ComponentOptions**: *interface=definition*.
 
-     Optionally, you can include the command prefix specified in the shape of the Service Manager component, e.g. "*One_SaveAll*".
+     Optionally, you can include the command prefix specified in the shape of the Service Manager component, e.g., "*One_SaveAll*".
 
    - **Scope**: Set the value to the scope of the command:
 
      - *Page* (default): All components that can execute the configured command on the same Visio page.
      - *Card*: All components that can execute the configured command on all pages of the current Visio file.
-     - *Application*: All components that can execute the configured command anywhere in the client application (e.g. DataMiner Cube).
+     - *Application*: All components that can execute the configured command anywhere in the client application (e.g., DataMiner Cube).
 
 > [!NOTE]
 >

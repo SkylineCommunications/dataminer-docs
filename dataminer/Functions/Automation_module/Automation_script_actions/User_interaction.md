@@ -49,4 +49,4 @@ To configure the dialog box, select parts in the *Add part* box on the right, an
 - To delete a part, click the x next to the part in question.
 
 > [!NOTE]
-> It is also possible to add dialog boxes in C# code blocks. For more information, see [Building interactive Automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp).
+> It is also possible to add dialog boxes in C# code blocks. For more information, see [Building interactive automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp).

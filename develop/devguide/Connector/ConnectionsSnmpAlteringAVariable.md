@@ -4,7 +4,7 @@ uid: ConnectionsSnmpAlteringAVariable
 
 # Altering a variable
 
-Devices running an SNMP agent typically not only allow the inspecting of variables but also the altering of variables (i.e. some OIDs in the MIB will be of type "read-write"). In order to allow a user to set variables via the DataMiner element running the protocol, a parameter of type "write" can be defined in the protocol.
+Devices running an SNMP agent typically not only allow the inspecting of variables but also the altering of variables (i.e., some OIDs in the MIB will be of type "read-write"). In order to allow a user to set variables via the DataMiner element running the protocol, a parameter of type "write" can be defined in the protocol.
 
 For example, the following parameter allows you to set the sysContact (OID "1.3.6.1.2.1.1.4.0") variable.
 
@@ -92,7 +92,7 @@ There are two ways to implement an SNMP set request for a standalone parameter.
 
 The method using the `snmpSet` option is generally preferred, as it does not require an action and trigger to be defined.
 
-It is important to note that when an SNMP parameter (i.e. a parameter containing an SNMP tag) of type "write" is set, the corresponding read parameter is immediately set to this new value (even if the actual value set still needs to be sent to the device). As it is possible that an SNMP set fails, it is important to always perform an additional SNMP get operation to retrieve the value. This way, when a set failed, the value of the read parameter will eventually be set back to the correct value upon completion of the SNMP get request.
+It is important to note that when an SNMP parameter (i.e., a parameter containing an SNMP tag) of type "write" is set, the corresponding read parameter is immediately set to this new value (even if the actual value set still needs to be sent to the device). As it is possible that an SNMP set fails, it is important to always perform an additional SNMP get operation to retrieve the value. This way, when a set failed, the value of the read parameter will eventually be set back to the correct value upon completion of the SNMP get request.
 
 The reason why SNMP parameters of type "write" immediately set the corresponding read parameter is because the probability that an SNMP set will fail is low (in normal operation) and therefore in most cases we can assume the set will succeed. Therefore, the read parameter can already be updated so the user already sees the new value. Because a get is always performed afterwards, the correct value will eventually always be displayed, even if it failed (meaning that when the set failed, the read parameter will show the wrong value until the get request has been completely processed).
 
@@ -128,7 +128,7 @@ To perform this get request, a trigger on the write parameter is needed. This tr
 
 You can use the options `snmpSetWithWait` and `snmpSetAndGetWithWait` as attributes on parameters (see [options attribute](xref:Protocol.Params.Param-options)):
 
-- The `snmpSetWithWait` option will perform a set and wait until the set has succeeded (i.e. when the SNMP manager has received a "noError" from the device). In this case, a group to perform the set is added to the group execution queue.
+- The `snmpSetWithWait` option will perform a set and wait until the set has succeeded (i.e., when the SNMP manager has received a "noError" from the device). In this case, a group to perform the set is added to the group execution queue.
 - The `snmpSetAndGetWithWait` option will perform a set, wait until the set has succeeded and then perform a get of the read parameter and wait until the get has succeeded. Note that there is no verification of the get/set value.
 
 The same options can be used for write parameters on a column: use a wildcard on the set parameter and the "instance" option on the table.

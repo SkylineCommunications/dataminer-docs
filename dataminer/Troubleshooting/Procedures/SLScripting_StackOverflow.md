@@ -4,7 +4,7 @@ uid: TroubleshootingSLScriptingStackOverflowException
 
 # Investigating StackOverflowException occurrences
 
-This section illustrates how to investigate a [StackOverflowException](https://learn.microsoft.com/en-us/dotnet/api/system.stackoverflowexception?view=netframework-4.8.1) that occurs in SLScripting. By way of example, a connector is used that was created with a QAction with a method resulting in infinite recursion (i.e. a recursive method that does not have stop condition). DataMiner automatically creates a dump for this (in the `C:\Skyline DataMiner\Logging\CrashDump` directory). Below, you will find out how this dump can be investigated.
+This section illustrates how to investigate a [StackOverflowException](https://learn.microsoft.com/en-us/dotnet/api/system.stackoverflowexception?view=netframework-4.8.1) that occurs in SLScripting. By way of example, a connector is used that was created with a QAction with a method resulting in infinite recursion (i.e., a recursive method that does not have stop condition). DataMiner automatically creates a dump for this (in the `C:\Skyline DataMiner\Logging\CrashDump` directory). Below, you will find out how this dump can be investigated.
 
 ## Investigating the crash dump in Visual Studio
 

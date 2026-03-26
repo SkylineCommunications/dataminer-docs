@@ -8,7 +8,7 @@ The xPON branch of the DataMiner EPM Solution is designed to manage Gigabit Pass
 
 In a typical xPON deployment, there are four main components:
 
-- **Optical Line Termination (OLT)**: The main traffic concentrator and control device for the underlying network. Its main function is to control the traffic flow in both directions (upstream and downstream, i.e. TX and RX in xPON).
+- **Optical Line Termination (OLT)**: The main traffic concentrator and control device for the underlying network. Its main function is to control the traffic flow in both directions (upstream and downstream, i.e., TX and RX in xPON).
 
 - **Optical Fiber**: The xPON transmission medium. Its size (in number of fiber strands) depends on each implementation.
 

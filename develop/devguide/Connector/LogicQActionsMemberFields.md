@@ -40,7 +40,7 @@ All scenarios below assume that the data does **not** need to persist when the e
 
 In case the QAction class has members that should be disposed of, you can implement the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface on the QAction class.
 
-From DataMiner 10.2.9 onwards (RN 33965), DataMiner will call the [Dispose](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable.dispose) method of the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface when a QAction instance is released (i.e. when the element is stopped, removed, or restarted) if this interface is implemented on the QAction class.
+From DataMiner 10.2.9 onwards (RN 33965), DataMiner will call the [Dispose](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable.dispose) method of the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface when a QAction instance is released (i.e., when the element is stopped, removed, or restarted) if this interface is implemented on the QAction class.
 
 > [!NOTE]
 >

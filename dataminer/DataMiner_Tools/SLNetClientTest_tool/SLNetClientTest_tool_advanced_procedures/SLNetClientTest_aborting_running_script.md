@@ -2,9 +2,9 @@
 uid: SLNetClientTest_aborting_running_script
 ---
 
-# Aborting a running Automation script
+# Aborting a running automation script
 
-To abort an Automation script while it is running:
+To abort an automation script while it is running:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 

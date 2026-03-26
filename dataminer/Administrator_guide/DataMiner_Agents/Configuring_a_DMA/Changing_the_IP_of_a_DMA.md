@@ -9,7 +9,7 @@ The way you can change the IP of a DMA depends on how your DataMiner System is s
 
 ## Standalone DMA
 
-For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a cluster:
+For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a cluster:
 
 1. Stop the DataMiner software on the DMA.
 
@@ -375,7 +375,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 ## DMA in a DMS using a Cassandra cluster locally
 
-If your DataMiner System uses the Cassandra cluster feature for its general database (i.e. one Cassandra cluster for the entire DMS), but Cassandra is hosted on the same machine as DataMiner (which is not recommended), follow the procedure below to alter both the IP address of the DMA and the databases.
+If your DataMiner System uses the Cassandra cluster feature for its general database (i.e., one Cassandra cluster for the entire DMS), but Cassandra is hosted on the same machine as DataMiner (which is not recommended), follow the procedure below to alter both the IP address of the DMA and the databases.
 
 1. Stop the Cassandra and OpenSearch/Elasticsearch services on the DMA server.
 
@@ -401,7 +401,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
    ![Example of the nodetool status resuls](~/dataminer/images/nodetoolstatus.png)
 
-1. In the same command window, execute *nodetool removenode \[host ID of the old IP\]*, e.g. *nodetool removenode 35506039-0f03-4a1e-8642-94484d440116*.
+1. In the same command window, execute *nodetool removenode \[host ID of the old IP\]*, e.g., *nodetool removenode 35506039-0f03-4a1e-8642-94484d440116*.
 
 1. Locate the *cassandra.yaml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the seeds list in these files with the new IP address.
 
@@ -442,7 +442,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. Open the file *DB.xml* for all other DMAs in the DMS, and replace the old IP address with the new IP address for both Cassandra and OpenSearch/Elasticsearch.
 
-1. Continue the procedure relevant for you, i.e. [Standalone DMA](#standalone-dma), [Single DMA in a DMS](#single-dma-in-a-dms), or [Failover DMA in a DMS](#failover-dma-in-a-dms), starting from the step after "If you are not using Storage as a Service (STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:".
+1. Continue the procedure relevant for you, i.e., [Standalone DMA](#standalone-dma), [Single DMA in a DMS](#single-dma-in-a-dms), or [Failover DMA in a DMS](#failover-dma-in-a-dms), starting from the step after "If you are not using Storage as a Service (STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:".
 
 > [!TIP]
 > See also: [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)

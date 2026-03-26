@@ -24,7 +24,7 @@ By default, the interfaces of a virtual function are the interfaces defined in t
 
 #### Protocols: Export rules would fail to parse values containing escaped XML characters \[ID 31362\]
 
-When, in a protocol, values contained escaped XML characters (e.g. \<Description>Measurements \> 5\</Description>), the export rules would fail to parse those values and the generated DVE or Virtual Function protocol would only have some or none of the export rules applied.
+When, in a protocol, values contained escaped XML characters (e.g., \<Description>Measurements \> 5\</Description>), the export rules would fail to parse those values and the generated DVE or Virtual Function protocol would only have some or none of the export rules applied.
 
 #### Alarm limit updates for column parameters would contain invalid data \[ID 31415\]
 
@@ -34,7 +34,7 @@ From now on, alarm limit change events will only be sent for standalone paramete
 
 #### DataMiner Cube - Correlation: Incorrect background color when creating or opening an analyzer or a correlation rule \[ID 31482\]
 
-When, in the Correlation app, you created or opened an analyzer in the Analyzers tab or you created or opened a legacy correlation rule in the Correlation rules tab, the tab would incorrectly have a gray background.
+When, in the Correlation app, you created or opened an analyzer in the Analyzers tab or you created or opened a legacy correlation rule in the correlation rules tab, the tab would incorrectly have a gray background.
 
 #### SLPort would leak a socket when executing an action of type 'open' via a socket that had already been opened \[ID 31512\]
 

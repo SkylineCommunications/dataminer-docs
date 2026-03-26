@@ -20,7 +20,7 @@ When facilities, floors, and rooms have been added, this page is where you will 
 
 1. Specify the zone name and optionally its cooling capacity and thermal type, and click *Save*.
 
-   On the [Room Designer](xref:Room_Designer) page, the thermal type of the zone, i.e. *Warm* or *Cold*, will be highlighted in red or blue, respectively.
+   On the [Room Designer](xref:Room_Designer) page, the thermal type of the zone, i.e., *Warm* or *Cold*, will be highlighted in red or blue, respectively.
 
 1. Optionally, add a plan for the zone:
 

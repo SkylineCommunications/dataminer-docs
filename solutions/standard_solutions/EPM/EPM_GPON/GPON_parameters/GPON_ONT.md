@@ -6,7 +6,7 @@ uid: xPON_ONT
 
 Below you can find the indexable parameters for an ONT in the xPON EPM Solution.
 
-These are parameters that will not be available in an alarm template, but that can be used by queries or Automation scripts to execute complex actions.
+These are parameters that will not be available in an alarm template, but that can be used by queries or automation scripts to execute complex actions.
 
 - **Serial number**: The serial number reported by the vendor. This value will be the index for this ONT element through all xPON EPM queries and aggregations.
 

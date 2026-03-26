@@ -95,11 +95,11 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
 - Apply consistent spacing between components.
 
-- Avoid clutter. Tailor the complexity of the interface to your target audience (e.g. technical users vs. management).
+- Avoid clutter. Tailor the complexity of the interface to your target audience (e.g., technical users vs. management).
 
 - Use the *fit to view* option when the content fits the screen.
 
-- Adjust component sizes to the content they display (e.g. avoid oversized ring and state components or undersized tables and timelines filled with data).
+- Adjust component sizes to the content they display (e.g., avoid oversized ring and state components or undersized tables and timelines filled with data).
 
 - Before you publish a low-code app, test your layout on different screen resolutions to ensure that it displays correctly on all target devices.
 

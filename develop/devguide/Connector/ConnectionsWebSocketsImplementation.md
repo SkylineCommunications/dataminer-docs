@@ -64,7 +64,7 @@ Sec-WebSocket-Protocol: chat
 Sec-WebSocket-Version: 13
 ```
 
-If the URL used to set up the connection comes from a parameter value, e.g. from parameter 10, then specify url="10" (hard-coded values are not supported for the url attribute).
+If the URL used to set up the connection comes from a parameter value, e.g., from parameter 10, then specify url="10" (hard-coded values are not supported for the url attribute).
 
 For example, suppose you need to connect to ws://10.4.2.8:4601/x-nmos/events, then there are two possibilities:
 
@@ -102,7 +102,7 @@ These are possible reasons why the connection might be terminated:
 
 ## Binary vs. Text Data Frames
 
-By default, DataMiner sends the WebSocket messages as binary data (i.e. a frame with Opcode 0x2, [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.8)). Some WebSocket servers will reply with an \[ACK\] packet but ignore the message as the server does not support binary formatted messages.
+By default, DataMiner sends the WebSocket messages as binary data (i.e., a frame with Opcode 0x2, [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.8)). Some WebSocket servers will reply with an \[ACK\] packet but ignore the message as the server does not support binary formatted messages.
 
 If the message you want to send only contains text and the server does not seem to support binary formatted messages, try to add `<WebSocketMessageType>text</WebSocketMessageType>` to the `<Command>`. This will result in the command being sent as UTF-8 encoded text (Opcode 0x1, [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.8)).
 

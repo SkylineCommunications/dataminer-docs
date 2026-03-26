@@ -37,7 +37,7 @@ If a display key already exists, and you want to change its format:
 - Refer to *SLC SDF Naming Format Compatibility* [on SVN](https://svn.skyline.be/svn/SystemDevelopmentFeature/Protocols/), version PE.0.0.1. (This link is only accessible for Skyline users.)
 
 > [!NOTE]
-> It is possible to implement a workflow to change the display key format on element creation (when the default display key is not the desired one). This will avoid a manual action after every element creation. You can implement this with a correlation rule and an Automation script.
+> It is possible to implement a workflow to change the display key format on element creation (when the default display key is not the desired one). This will avoid a manual action after every element creation. You can implement this with a correlation rule and an automation script.
 
 ### Display key column does not exist (primary key is the current display key)
 

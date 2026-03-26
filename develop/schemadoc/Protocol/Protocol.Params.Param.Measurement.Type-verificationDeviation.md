@@ -16,7 +16,7 @@ decimal
 
 ## Remarks
 
-Verification of a set done via the UI is done via a confirmation/negation of the user. In case of a remote set (e.g. SNMP set), the verification will check if the write corresponds with the read. It will also take the number of decimals into account.
+Verification of a set done via the UI is done via a confirmation/negation of the user. In case of a remote set (e.g., SNMP set), the verification will check if the write corresponds with the read. It will also take the number of decimals into account.
 
 This verification is done on single and on table parameters. The ExecutionVerification is configured in the ProtocolSettings in *MaintenanceSettings.xml*. However, the changes will only take effect after a restart of the DMA.
 

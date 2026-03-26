@@ -53,7 +53,7 @@ If you want to specify the page to be selected by default, add a suffix to the i
 - VIEW=436:BelowThisObject:STB
 - VIEW=436:BelowThisView:Elements
 
-If the SystemName contains colons (e.g. a MAC address), then replace the default separator (i.e. colon) by another one (e.g. a pipe character) by placing a \[sep:XY\] prefix in front of the SystemName. See the following example:
+If the SystemName contains colons (e.g., a MAC address), then replace the default separator (i.e., colon) by another one (e.g., a pipe character) by placing a \[sep:XY\] prefix in front of the SystemName. See the following example:
 
 ```xml
 <Value type="open">{EPM=[sep::|]CPE/00:01:08:01:08:01|DATA|CPE Frequencies}</Value>
@@ -111,7 +111,7 @@ To do so, add a shape data field of type TextStyle, and set its value to “Text
 - **None**: The text will be cut off when necessary (default option).
 
 > [!NOTE]
-> Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e. “WrapWithOverflow”).
+> Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e., “WrapWithOverflow”).
 
 #### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' [ID 32660]
 
@@ -210,7 +210,7 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window will appear, asking you
 
-  - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
+  - to create a new incident (i.e., a new alarm group) and add the alarm to it, or
 
   - to add the alarm to an existing alarm group.
 
@@ -245,18 +245,18 @@ Whenever an anomalous flatline is detected, a “suggestion event” is generate
 A new flatline trend icon will be used to indicate when a parameter has flatlined.
 
 > [!NOTE]
-> Flatline change points can also be detected for history set parameters that are set nearly in real time, i.e. parameters of which the incoming changes never have a delay larger than 10 minutes.
+> Flatline change points can also be detected for history set parameters that are set nearly in real time, i.e., parameters of which the incoming changes never have a delay larger than 10 minutes.
 > Flatline events will be cleared as soon as the flatline ends.
 
 #### Alarm Console: Manually creating incident alarms even when 'Automatic incident tracking' is disabled [ID 33000]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
-From now on, in the Alarm Console, you will be able to manually create incident alarms (i.e. alarm groups) even when the “Automatic incident tracking” option is disabled.
+From now on, in the Alarm Console, you will be able to manually create incident alarms (i.e., alarm groups) even when the “Automatic incident tracking” option is disabled.
 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window\* will appear, asking you
 
-  - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
+  - to create a new incident (i.e., a new alarm group) and add the alarm to it, or
 
   - to add the alarm to an existing alarm group.
 
@@ -400,7 +400,7 @@ Example of how to add both a *Refresh* button and a *Sort* button:
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
-In the Alarm Console, it is now possible to edit incidents (i.e. alarm groups) using the side panel.
+In the Alarm Console, it is now possible to edit incidents (i.e., alarm groups) using the side panel.
 
 When you open the side panel and select an incident, a *Drag-and-drop editing* button will appear. Clicking that button will freeze both the side panel and the alarm tab and will allow you to
 
@@ -428,14 +428,14 @@ Password boxes in Cube will now indicate the password strength (common, very wea
 These new password boxes can be found in the following locations:
 
 - Cube login screen (peek only)
-- Data Display: parameters of type password (e.g. the password box of a Microsoft Platform element)
+- Data Display: parameters of type password (e.g., the password box of a Microsoft Platform element)
 - Edit port settings of an SNMPv3 element
 - System Center \> Agents \> Add
 - System Center \> Database
 - System Center \> Users/groups \> Add new user... (peek only)
 - System Center \> System Settings \> Credentials Library
 - System Center \> System Settings \> LDAP
-- Interactive Automation scripts (UIBlock of type PasswordBox)
+- Interactive automation scripts (UIBlock of type PasswordBox)
 
 > [!NOTE]
 >
@@ -468,7 +468,7 @@ Relationships between parameters are found by studying the changes in the behavi
 <!-- MR 10.3.0 - FR 10.3.3 -->
 <!-- See General RNs for other change from this RN -->
 
-If a DataMiner System is configured to use a Cassandra Cluster setup (i.e. a setup where one Cassandra cluster is used for the entire DMS), in the *Database* section of System Center, you can now also configure the settings for the Elasticsearch or OpenSearch database:
+If a DataMiner System is configured to use a Cassandra Cluster setup (i.e., a setup where one Cassandra cluster is used for the entire DMS), in the *Database* section of System Center, you can now also configure the settings for the Elasticsearch or OpenSearch database:
 
 - Database: *Elasticsearch* or *Elasticsearch/OpenSearch*.
 - Database prefix: The name all indices will be prefixed with.

@@ -54,7 +54,7 @@ The dropdown component will now list all available elements that match the proto
 
    ![Adding a query](~/dataminer/images/Tutorial_Add_Query.png)
 
-1. Enter a descriptive query name, e.g. *Disk Information Table*.
+1. Enter a descriptive query name, e.g., *Disk Information Table*.
 
 1. Select the *Get parameters for elements where* data source.
 

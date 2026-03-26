@@ -55,7 +55,7 @@ When you add a *Toggle* component to a low-code app, you can also configure a *S
 
 The *Time range* component has been updated. It now has a calendar display that allows you to enter one or two date or datetime values without having to open the picker. The latter will now include a filterable list of all presets configured in the layout settings. Selecting a preset will cause a value to be updated instantly, while the selected date and time from the calendar will only be applied when you click the *Apply* button. Also, the component now follows the colors defined in the theme (font, background and accent color).
 
-*Time range* components that were already added to a dashboard or low-code app will by default be in *Calendar* mode, showing the configured time as text, and will open the new picker when clicked. This way, the former behavior is mimicked. To change the mode, use the new *Edit using* setting explained below. New *Time range* components added as from now will automatically have the new layout (i.e. calendar and keyboard).
+*Time range* components that were already added to a dashboard or low-code app will by default be in *Calendar* mode, showing the configured time as text, and will open the new picker when clicked. This way, the former behavior is mimicked. To change the mode, use the new *Edit using* setting explained below. New *Time range* components added as from now will automatically have the new layout (i.e., calendar and keyboard).
 
 From now on, the *Time range* component will no longer output relative time spans. It will now always output absolute time spans. For example, selecting "last 5 minutes" will no longer output "last 5 minutes" but "DD/MM/YYYY HH:MM - DD/MM/YYYY HH:MM".
 
@@ -76,8 +76,8 @@ New settings:
   > [!NOTE]
   > When *Granularity* is set to "Date":
   >
-  > - Specifying an input like e.g. "20/01/2025 - 20/01/2025" will be considered valid. A time span like this will include the entire 24 hours, midnight to midnight.
-  > - Specifying an input like e.g. "20/01/2025 00:00 - 20/01/2025 00:00" will be considered invalid as the start time is equal to the end time.
+  > - Specifying an input like e.g., "20/01/2025 - 20/01/2025" will be considered valid. A time span like this will include the entire 24 hours, midnight to midnight.
+  > - Specifying an input like e.g., "20/01/2025 00:00 - 20/01/2025 00:00" will be considered invalid as the start time is equal to the end time.
 
 - *Edit using*, with the following possible values:
 
@@ -90,7 +90,7 @@ New settings:
 
 ### Enhancements
 
-#### Low-Code Apps - Interactive Automation scripts: Redesigned UI components 'Calendar' and 'Time' [ID 41529]
+#### Low-Code Apps - Interactive automation scripts: Redesigned UI components 'Calendar' and 'Time' [ID 41529]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
@@ -122,7 +122,7 @@ By linking a *Trigger* component to a *Query filter* component, it is now possib
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-When, on the root page of a DataMiner Agent (i.e. `https://myDMA/root/`), you click the user icon and then select *Tools*, a *Tools* page will open.
+When, on the root page of a DataMiner Agent (i.e., `https://myDMA/root/`), you click the user icon and then select *Tools*, a *Tools* page will open.
 
 Up to now, this page would still contain links to the XBAP version of DataMiner Cube and to the legacy *Reports & Dashboards* app. As both are now deprecated, the links to both those apps as well as the *Clean DataMiner Cube XBAP Cache* link have now been removed.
 
@@ -150,7 +150,7 @@ If the GQI DxM is installed and enabled on the local DataMiner Agent, the DataMi
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-When you create a new low-code app on the root page of a DataMiner Agent (e.g. `https://myDMA/root/`), from now on, a default set of icon files will automatically be created for that app.
+When you create a new low-code app on the root page of a DataMiner Agent (e.g., `https://myDMA/root/`), from now on, a default set of icon files will automatically be created for that app.
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Zoom factor for arrows and KPI labels on edges is now capped [ID 42011]
 

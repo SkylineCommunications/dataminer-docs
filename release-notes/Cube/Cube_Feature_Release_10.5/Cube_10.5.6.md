@@ -32,7 +32,7 @@ These are the possible values that can be displayed in the *Isolation mode* colu
 
 | Value | Description |
 |-------|-------------|
-| None               | Not applicable. E.g. When viewing the *All* page of a service. |
+| None               | Not applicable. E.g., when viewing the *All* page of a service. |
 | Disabled           | The element is not running in isolation mode. |
 | Enabled (protocol) | The element is running in isolation mode because of a setting configured in the *protocol.xml* file, which applies to all elements that are using this protocol version. |
 | Enabled (element)  | The element is running in isolation mode because of a setting configured in the element itself. |
@@ -112,7 +112,7 @@ In some cases, it could occur that a matrix did not display the correct values. 
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
-When the alarm template editor was shown in a separate window (e.g. after you had click the pop-out icon in the top-right corner of an alarm template), up to now, when you clicked the button in the *Analytics* or *Anomalies* column, the *Augmented Operations alarm settings* window would incorrectly open inside the main window instead of the alarm template editor window.
+When the alarm template editor was shown in a separate window (e.g., after you had click the pop-out icon in the top-right corner of an alarm template), up to now, when you clicked the button in the *Analytics* or *Anomalies* column, the *Augmented Operations alarm settings* window would incorrectly open inside the main window instead of the alarm template editor window.
 
 #### Visual Overview: Problem when information about impacted services displayed in an element shape was updated [ID 42786]
 

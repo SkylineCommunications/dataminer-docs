@@ -133,7 +133,7 @@ If you use self-managed DataMiner storage instead of the recommended [Storage as
 
    - **MAX_LOCKED_MEMORY**: Set this to *unlimited*.
 
-   - **JAVA_HOME**: Set this to the custom Java path to be used for Elasticsearch, e.g. *java-11-openjdk-11.0.14.0.9-1.el7_9.x86_64*.
+   - **JAVA_HOME**: Set this to the custom Java path to be used for Elasticsearch, e.g., *java-11-openjdk-11.0.14.0.9-1.el7_9.x86_64*.
 
 1. Make the following adjustment in */usr/lib/systemd/system/elasticsearch.service*:
 

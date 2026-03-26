@@ -4,6 +4,14 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 26 March 2026 - Enhancement - CloudGateway 3.0.1 - Cloud connection stability improvements
+
+The stability of the connection to dataminer.services has been enhanced through improved retry mechanisms.
+
+#### 26 March 2026 - Fix - CloudGateway 3.0.1 - CloudGateway failed to start up in DMZ setups
+
+An issue has been resolved where the CloudGateway DxM failed to start up correctly if the `C:\Skyline DataMiner\` folder did not exist, as is usually the case in DMZ setups.
+
 #### 2 February 2026 - Fix - CloudGateway 2.17.16 - Incorrect throttling behavior
 
 After several failed requests were sent to CloudGateway in a short time period, this could cause a large throttle cooldown, causing further requests to be refused for several hours. This issue has been resolved.
@@ -78,9 +86,9 @@ A TCP port leak could occur in the CloudGateway, especially when there was an is
 
 #### 4 April 2025 - Fix - CloudGateway 2.17.4 - Connection issue caused by hibernation mode [ID 42383]
 
-​When the DataMiner CloudGateway DxM was run on a machine that goes into hibernation mode (e.g. a laptop or desktop computer), the process to create the connection to dataminer.services could get stuck as a side effect of the hibernation mode. To prevent this, this process will now time out after 30 seconds, and a new attempt will be made.
+​When the DataMiner CloudGateway DxM was run on a machine that goes into hibernation mode (e.g., a laptop or desktop computer), the process to create the connection to dataminer.services could get stuck as a side effect of the hibernation mode. To prevent this, this process will now time out after 30 seconds, and a new attempt will be made.
 
-This does not affect machines that do not go into hibernation mode (e.g. servers).
+This does not affect machines that do not go into hibernation mode (e.g., servers).
 
 #### 30 January 2025 - Fix - CloudGateway 2.17.2 - Reconnect banner continually showing when remote access is used [ID 42086]
 

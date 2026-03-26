@@ -133,7 +133,7 @@ In the Surveyor of the Monitoring app, items of which the name contained a numbe
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
-When, in the *Automation* app, you saved an Automation script after making changes to a C# code block, the C# editor would incorrectly jump to the first line of that code block. From now on, when you save an Automation script, the C# editor will jump to the last line of code that was changed.
+When, in the *Automation* app, you saved an automation script after making changes to a C# code block, the C# editor would incorrectly jump to the first line of that code block. From now on, when you save an automation script, the C# editor will jump to the last line of code that was changed.
 
 #### DataMiner Cube - Visual Overview: Problem when opening an EPM card [ID 36323]
 

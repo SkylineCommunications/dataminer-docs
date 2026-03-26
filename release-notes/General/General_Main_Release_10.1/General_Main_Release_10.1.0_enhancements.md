@@ -8,7 +8,7 @@ uid: General_Main_Release_10.1.0_enhancements
 
 Up to now, when a large amount of alarms were retrieved via the Web Services API while the IIS server alarm cache was not fully initialized yet, in some cases, an incomplete result set would be returned. From now on, an exception will be returned instead.
 
-The HTML5 apps (e.g. Monitoring), which make use of the Web Services API, will in this case now also display an error message indicating the alarm cache status.
+The HTML5 apps (e.g., Monitoring), which make use of the Web Services API, will in this case now also display an error message indicating the alarm cache status.
 
 #### SLNet: Enhanced alarm sorting \[ID 22739\]
 
@@ -123,7 +123,7 @@ Up to now, when no data could be displayed in a Line chart component, a general 
 
 #### HTML5 apps: Enhanced installation \[ID 24745\]
 
-A number of enhancements have been made to the DataMiner HTML5 apps (e.g. Jobs, Dashboards, etc.). Users will now be able to install these apps much like they install other mobile apps.
+A number of enhancements have been made to the DataMiner HTML5 apps (e.g., Jobs, Dashboards, etc.). Users will now be able to install these apps much like they install other mobile apps.
 
 #### DataMiner Analytics - Alarm focus: AlarmFocusEvents associated with alarms of elements that are paused or stopped will no longer be cleared \[ID 24750\]
 
@@ -186,7 +186,7 @@ A number of enhancements have been made to the mechanism used to delete data fro
 
 #### Mobile apps: Confirmation message when leaving page with interactive script or job configuration \[ID 25078\]
 
-When a user leaves a DataMiner mobile app page while in an interactive Automation script or while configuring jobs, a confirmation message will now be displayed. However, note that this is message is not displayed when the mobile apps are used on iOS.
+When a user leaves a DataMiner mobile app page while in an interactive automation script or while configuring jobs, a confirmation message will now be displayed. However, note that this is message is not displayed when the mobile apps are used on iOS.
 
 #### Reports & Dashboards: PDF library updated \[ID 25117\]
 
@@ -208,7 +208,7 @@ In a *ListView* component in Visual Overview that has been configured to displa
 - Protocol Version
 - Polling IP
 - Element properties \> Created by
-- Element properties \> Created at (i.e. creation date)
+- Element properties \> Created at (i.e., creation date)
 
 In addition, it is now also possible to configure a filter on the *ListView* shape using the term "Element.PollingIP", for example *Element.PollingIP == '127.0.0.1'*.
 
@@ -242,7 +242,7 @@ AlarmFocusEvents now have a timeOfArrival field. In most cases, this field will 
 
 #### Default alarm bubble-up behavior in recursive tables changed from 'recursive=none' to 'recursive=up' \[ID 25349\]
 
-The default alarm bubble-up behavior in recursive tables has been changed from “recursive=none” to “recursive=up”, i.e. from child nodes up to parent nodes (following the foreign key in the direction it is in).
+The default alarm bubble-up behavior in recursive tables has been changed from “recursive=none” to “recursive=up”, i.e., from child nodes up to parent nodes (following the foreign key in the direction it is in).
 
 #### DataMiner Installer now targets Microsoft .NET Framework 4.6.2 \[ID 25378\]
 
@@ -275,7 +275,7 @@ A number of enhancements have been made to the locking behavior of serial client
 
 #### Dashboards app: Enhanced rendering of scalable text \[ID 25671\]
 
-Due to a number of enhancements, the rendering of scalable text in a number of dashboard components (e.g. digital clock, trend statistics, state visualizations) has been optimized.
+Due to a number of enhancements, the rendering of scalable text in a number of dashboard components (e.g., digital clock, trend statistics, state visualizations) has been optimized.
 
 #### DataMiner Cube - Visual Overview: \[profile:\] placeholder enhancements \[ID 25795\]
 
@@ -407,7 +407,7 @@ Due to a number of enhancements, overall performance has increased when deleting
 
 In the database, trend values are stored as text strings.
 
-Up to now, all values of type Double with a length of more than 6 characters were converted to a scientific notation string (e.g. “1e07”). From now on, only values of type Double with a length of more than 12 characters will be converted to a scientific notation string.
+Up to now, all values of type Double with a length of more than 6 characters were converted to a scientific notation string (e.g., “1e07”). From now on, only values of type Double with a length of more than 12 characters will be converted to a scientific notation string.
 
 #### Improved logging in case client is disconnected \[ID 26667\]
 
@@ -457,7 +457,7 @@ In the list of *ProtocolLinks* of a *VirtualFunctionDefinition*, an asterisk ('
 
 #### DataMiner mobile apps updated to Angular 9 \[ID 26975\]
 
-The DataMiner mobile apps that use Angular, e.g. the Monitoring, Dashboards and Jobs app, now use Angular 9 instead of Angular 8.
+The DataMiner mobile apps that use Angular, e.g., the Monitoring, Dashboards and Jobs app, now use Angular 9 instead of Angular 8.
 
 #### Opening the DataMiner Cube start window via system tray icon can now restore existing minimized window \[ID 27006\]
 
@@ -465,7 +465,7 @@ When the DataMiner Cube start window was opened and minimized, opening it again 
 
 #### DataMiner Cube: Embedded DataMiner apps now always use Chromium browser \[ID 27052\]
 
-All DataMiner apps displayed within an embedded web browser in DataMiner Cube (e.g. Ticketing, Dashboards, Reports, Annotations, etc.) will now always use the Chromium browser engine, regardless of which default browser engine is configured.
+All DataMiner apps displayed within an embedded web browser in DataMiner Cube (e.g., Ticketing, Dashboards, Reports, Annotations, etc.) will now always use the Chromium browser engine, regardless of which default browser engine is configured.
 
 #### Alarm when Cassandra or Elasticsearch database go offline \[ID 27061\]
 
@@ -477,11 +477,11 @@ When an app package is uploaded to one of the DMAs in a Failover pair, it is now
 
 #### Improved behavior of input controls in HTML5 apps \[ID 27129\]
 
-In the DataMiner HTML5 apps, when you fill in a control consisting of multiple parts, e.g. a datetime control, now the next part will always be automatically selected after a part has been completed.
+In the DataMiner HTML5 apps, when you fill in a control consisting of multiple parts, e.g., a datetime control, now the next part will always be automatically selected after a part has been completed.
 
-#### Dashboards app: Improved pop-up window when interactive Automation script is canceled \[ID 27141\]
+#### Dashboards app: Improved pop-up window when interactive automation script is canceled \[ID 27141\]
 
-If an interactive Automation script is canceled in the Dashboards app, a pop-up window will now be displayed with the title of the current content of the script, or with the name of the script if no title is available. The pop-up window will not mention the term "script" to avoid confusion in users who may not be aware that they are using a script.
+If an interactive automation script is canceled in the Dashboards app, a pop-up window will now be displayed with the title of the current content of the script, or with the name of the script if no title is available. The pop-up window will not mention the term "script" to avoid confusion in users who may not be aware that they are using a script.
 
 #### Improved logging of PowerShell scripts in DataMiner upgrades \[ID 27160\]
 
@@ -571,7 +571,7 @@ When, on a system with an SRM license but no Indexing Engine, you try to configu
 
 #### Client applications now also get notified when cell alarm levels in the source data tables of direct views change due to updates that do not change the cell value \[ID 27785\]
 
-From now on, client applications displaying direct views will also be notified when cell alarm levels in the source data tables change due to updates that do not change the cell value. (e.g. when a cell in a source table gets masked).
+From now on, client applications displaying direct views will also be notified when cell alarm levels in the source data tables change due to updates that do not change the cell value. (e.g., when a cell in a source table gets masked).
 
 #### Live Sharing Service: Enhanced error handling \[ID 27791\]
 
@@ -589,13 +589,13 @@ Virtual functions are now displayed in a separate *Virtual Functions* section i
 
 Due to a number of enhancements, overall performance has increased when connecting to a DataMiner Agent with a large amount of alarms.
 
-#### Interactive Automation scripts: No longer possible to clear the value of a selection box control \[ID 27845\]
+#### Interactive automation scripts: No longer possible to clear the value of a selection box control \[ID 27845\]
 
-Up to now, in an interactive Automation script, it was possible to clear the value of a selection box control by clicking an X button. From now on, this is no longer possible.
+Up to now, in an interactive automation script, it was possible to clear the value of a selection box control by clicking an X button. From now on, this is no longer possible.
 
-#### Interactive Automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
+#### Interactive automation scripts: Multiline text boxes will no longer expand when selected \[ID 27858\]
 
-Up to now, a multiline text box (i.e. a UIBlock of type TextBox with IsMultiline set to true) would by default have a height of 1 line and would expand when it was selected. From now on, its initial height will be fixed. It will no longer expand when selected.
+Up to now, a multiline text box (i.e., a UIBlock of type TextBox with IsMultiline set to true) would by default have a height of 1 line and would expand when it was selected. From now on, its initial height will be fixed. It will no longer expand when selected.
 
 #### DataMiner Cube: Enhanced retrieval of user images \[ID 27861\]
 

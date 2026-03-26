@@ -55,7 +55,7 @@ A new script, *IDP_Connectivity*, has been added to the IDP Solution, in the Aut
 
 #### Connectivity discovery in the IDP app \[ID 25126\]\[ID 25312\]\[ID 25428\]
 
-You can now assign an Automation script to a CI type in order to discover connectivity information for an element so that the IDP Solution can provision the necessary connections.
+You can now assign an automation script to a CI type in order to discover connectivity information for an element so that the IDP Solution can provision the necessary connections.
 
 In the IDP app, you can assign a script to a CI type on the page *Admin* > *CI Types* > *Connectivity*. This page displays a table listing the CI types with an indication of the completeness of their connectivity discovery configuration and their assigned script, if any. To assign a script, in the *Connectivity Discovery Script* column, you can select any of the scripts from the connectivity discovery scripts folder (by default *DataMiner Solutions/IDP/CI Type Management/Connectivity/Discovery*). The main CI type management wizard has also been updated to include the settings to configure connectivity discovery. Clicking the *Advanced* button in the table will open the wizard on the relevant page.
 

@@ -47,7 +47,7 @@ Once all the necessary data has been collected, it needs to be imported in the d
    ![](~/develop/images/QADS_ImportProxySim.png)
    <br>Import proxysimulation to DB window
 
-1. Select a database, i.e. MySQL or Cassandra.
+1. Select a database, i.e., MySQL or Cassandra.
 
 1. Enter the database server, the user and password to connect to the server.
 

@@ -46,7 +46,7 @@ The *InvalidConnectionName* check (1.23.2) has been extended to expect *SSH Conn
 
 #### New snippet: Interactive Toolkit [ID 37932]
 
-A new snippet has been added that jump-starts the creation of interactive Automation scripts with the [IAS Toolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
+A new snippet has been added that jump-starts the creation of interactive automation scripts with the [IAS Toolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
 
 It replaces the existing script class with a new one that contains boiler plate code that will help you work with the IAS Toolkit.
 

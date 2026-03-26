@@ -4,7 +4,7 @@ uid: RAD_API
 
 # Working with the RAD API
 
-The RAD API is a set of messages that allows you to configure [Relational Anomaly Detection](xref:Relational_anomaly_detection) through an [Automation script](xref:automation). Compared to using the [RAD Manager](xref:RAD_manager), the RAD API offers more flexibility, making it particularly useful for use cases that deviate from the default options provided by the RAD Manager.
+The RAD API is a set of messages that allows you to configure [Relational Anomaly Detection](xref:Relational_anomaly_detection) through an [automation script](xref:automation). Compared to using the [RAD Manager](xref:RAD_manager), the RAD API offers more flexibility, making it particularly useful for use cases that deviate from the default options provided by the RAD Manager.
 
 All messages in the RAD API reside in the `Skyline.DataMiner.Analytics.Rad` namespace. The following messages are available:
 
@@ -32,7 +32,7 @@ Each request message sent to DataMiner will return a response message of the cor
 
 ## Example
 
-Below you can find an example of an Automation script that uses the RAD API to add a RAD parameter group with four parameter instances for each element of which the name begins with `Commtia LON`.
+Below you can find an example of an automation script that uses the RAD API to add a RAD parameter group with four parameter instances for each element of which the name begins with `Commtia LON`.
 
 The core logic resides in the `RunSafe()` method. It loops through all elements matching the filter `Commtia LON*`. For each element, it builds a list of parameters to include in the RAD group, specifically, the output power of three power amplifiers (represented as cells in the same table column), and the total output power of the DAB transmitter. It then constructs a `RADGroupInfo` object, which contains the group's name, the list of parameters, and additional options. Finally, it creates and sends an `AddRADParameterGroupMessage` to DataMiner.
 
@@ -46,7 +46,7 @@ namespace AddRADParameterGroupWithAPI
     using Skyline.DataMiner.Automation;
 
     /// <summary>
-    /// Represents a DataMiner Automation script.
+    /// Represents a DataMiner automation script.
     /// </summary>
     public class Script
     {

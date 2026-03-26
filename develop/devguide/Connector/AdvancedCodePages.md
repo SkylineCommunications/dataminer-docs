@@ -8,9 +8,9 @@ A code page is used to convert a text character to a unique number, called a cod
 
 ## Windows code page
 
-When the unicode [option](xref:Protocol.Type-options) is not explicitly defined in a connector, string-type parameters default to using the **system-default ANSI code page** configured on the server OS hosting DataMiner, e.g. Windows-1252 (Latin 1). As the terminology "system-default ANSI code page" could be confused with the formal ANSI standard, it will be further referred to as the "Windows code page". Windows-1252 (Latin 1) contains 256 characters, being assigned to 256 numbers, and fitting into a single byte (0x00 - 0xFF).
+When the unicode [option](xref:Protocol.Type-options) is not explicitly defined in a connector, string-type parameters default to using the **system-default ANSI code page** configured on the server OS hosting DataMiner, e.g., Windows-1252 (Latin 1). As the terminology "system-default ANSI code page" could be confused with the formal ANSI standard, it will be further referred to as the "Windows code page". Windows-1252 (Latin 1) contains 256 characters, being assigned to 256 numbers, and fitting into a single byte (0x00 - 0xFF).
 
-String values that enter, e.g. through protocol.SetParameter in a QAction, are always in UTF-16 encoding format. Before being stored in the parameter, the incoming (Unicode) character is looked up in the Windows code page to know what the code point is and store this number. If a character present in the Unicode code page cannot be represented in the Windows code page (e.g. an emoji), it is replaced with a default character. For Windows-1252 (Latin 1), this defaults to the question mark "?".
+String values that enter, e.g., through protocol.SetParameter in a QAction, are always in UTF-16 encoding format. Before being stored in the parameter, the incoming (Unicode) character is looked up in the Windows code page to know what the code point is and store this number. If a character present in the Unicode code page cannot be represented in the Windows code page (e.g., an emoji), it is replaced with a default character. For Windows-1252 (Latin 1), this defaults to the question mark "?".
 
 Because the Windows code page depends on the OS configuration, parameter values may differ across DMAs with different settings. For example:
 
@@ -30,7 +30,7 @@ Because of these inconsistencies, we recommend only using characters inside of t
 Improvements introduced in DataMiner 10.6.0/10.6.1 (RN 43929) help make transitions between the Windows code page and Unicode smoother for elements with stored values:
 
 - Table primary key values are always stored in Unicode. This ensures consistent row loading, regardless of the code page.
-- The Unicode characters are also saved in the database when a string value enters on a saved string-type parameter, e.g. via a protocol.SetParameter call in a QAction, or a write parameter with the `setter="true"` attribute. This enables an element that switches to a Unicode version to load and display the text as it was originally set on the parameter.
+- The Unicode characters are also saved in the database when a string value enters on a saved string-type parameter, e.g., via a protocol.SetParameter call in a QAction, or a write parameter with the `setter="true"` attribute. This enables an element that switches to a Unicode version to load and display the text as it was originally set on the parameter.
 
 > [!NOTE]
 >
@@ -99,7 +99,7 @@ The parameter value will be different with Unicode or Windows code page, as the 
 
 To simplify connector development, for a fixed string-type parameter only define [Interprete.Value](xref:Protocol.Params.Param.Interprete.Value) without [Interprete.Length](xref:Protocol.Params.Param.Interprete.Length). This ensures consistent loading of the specified value in both Windows code page and Unicode.
 
-If a fixed series of byte values should remain the same in Windows code page and Unicode (e.g. to send a serial command or match a serial response), use [Interprete.Value](xref:Protocol.Params.Param.Interprete.Value) in "0x" format (e.g. 0x02). This preserves the byte values without converting them to Windows code page or Unicode.
+If a fixed series of byte values should remain the same in Windows code page and Unicode (e.g., to send a serial command or match a serial response), use [Interprete.Value](xref:Protocol.Params.Param.Interprete.Value) in "0x" format (e.g., 0x02). This preserves the byte values without converting them to Windows code page or Unicode.
 
 ### Serial commands
 
@@ -122,7 +122,7 @@ The interpretation of the raw bytes of a parameter back to string text depends o
 
 As there is no `ascii` attribute on a response when Unicode is active, correctly interpreting the raw bytes as ASCII or Windows code page string text requires manual handling.
 
-Read the raw bytes with a QAction and use the applicable encoding (e.g. Encoding.ASCII.GetString) to convert the bytes into a string. Then set that string on a displayed parameter.
+Read the raw bytes with a QAction and use the applicable encoding (e.g., Encoding.ASCII.GetString) to convert the bytes into a string. Then set that string on a displayed parameter.
 
 ### Trap binding OctetString
 
@@ -130,12 +130,12 @@ A parameter that is used to receive traps with `setBindings="allBindingInfo"` re
 
 Converting the readable string value back to a string in HEX format can be done as illustrated in the code example below. Every byte value of the OctetString is directly inserted into one Unicode character, without performing any mapping with the used code page. Unicode.GetBytes needs to be used to get the exact byte value of the OctetString back, even when the connector is not using the Unicode option. As only one byte is inserted per Unicode character, only the bytes on the even positions are needed back from the decoded Unicode bytes.
 
-Do not use a different encoding like System.Text.Encoding.Default.GetBytes. At first sight, this will look correct when the server uses Windows-1252 and the content is limited to characters in the ASCII range. The same number of bytes are returned as in the OctetString. However, it could be that the inserted byte was e.g. 0x8C, pushed into Unicode UTF-16 as 0x008C, which is a control character in Unicode. This control character does not exist in Windows-1252, defaulting back to the question mark "?" = 0x3F. Instead of the inserted byte 0x8C, the returned byte will be 0x3F.
+Do not use a different encoding like System.Text.Encoding.Default.GetBytes. At first sight, this will look correct when the server uses Windows-1252 and the content is limited to characters in the ASCII range. The same number of bytes are returned as in the OctetString. However, it could be that the inserted byte was e.g., 0x8C, pushed into Unicode UTF-16 as 0x008C, which is a control character in Unicode. This control character does not exist in Windows-1252, defaulting back to the question mark "?" = 0x3F. Instead of the inserted byte 0x8C, the returned byte will be 0x3F.
 
 ```csharp
 // Expected size of the MAC address is 6 bytes in this example.
-// When the returned value has a length of 12, e.g. '313233343536', then this is in HEX format and 'mac' can be used as is.
-// When the returned value has a length of 6, e.g. '123456', then this is readable text and it needs to be converted back to the HEX format.
+// When the returned value has a length of 12, e.g., '313233343536', then this is in HEX format and 'mac' can be used as is.
+// When the returned value has a length of 6, e.g., '123456', then this is readable text and it needs to be converted back to the HEX format.
 if (mac.Length == 6)
 {
     byte[] rawBytes = System.Text.Encoding.Unicode.GetBytes(mac); // Converting the Unicode text back to bytes. Size of rawBytes will be zero.
@@ -157,7 +157,7 @@ If you are using DataMiner 10.6.0/10.6.1 or higher, when you implement Unicode i
 
 1. When there are fixed-length parameters with [Interprete.Value](xref:Protocol.Params.Param.Interprete.Value) and [Interprete.Length](xref:Protocol.Params.Param.Interprete.Length) defined, remove the [Interprete.Length](xref:Protocol.Params.Param.Interprete.Length), but do keep in mind that there might be prefixed spaces in case the value in Interprete.Length is larger than that in Interprete.Value. (See [Fixed parameters](#fixed-parameters).)
 
-1. Adapt elements with a serial connection: The `ascii` attribute needs to be added to the commands to let the command send the same value as before. String type parameters can no longer be displayed directly: define new hidden parameters to be used in the response. A QAction should read out the raw bytes of the hidden string parameter in the response with a NotifyProtocol NT_GET_DATA, and then convert these bytes back into a string, e.g. with Encoding.ASCII.GetString, and set that string value to the displayed parameter that was originally in the response of the previous connector version. (See [Serial responses](#serial-responses).)
+1. Adapt elements with a serial connection: The `ascii` attribute needs to be added to the commands to let the command send the same value as before. String type parameters can no longer be displayed directly: define new hidden parameters to be used in the response. A QAction should read out the raw bytes of the hidden string parameter in the response with a NotifyProtocol NT_GET_DATA, and then convert these bytes back into a string, e.g., with Encoding.ASCII.GetString, and set that string value to the displayed parameter that was originally in the response of the previous connector version. (See [Serial responses](#serial-responses).)
 
 > [!NOTE]
 > DataMiner 10.6.0/10.6.1 (RN 43929) or higher is required for this. In earlier DataMiner versions, the behavior is different, and an upgrade to 10.6.0/10.6.1 or higher will introduce breaking changes to this functionality. Fixed parameters with a value as text in combination with Unicode is not supported in earlier versions. If you are using an earlier DataMiner version, specify the value in the 0x format. In addition, in earlier versions `ascii="true"` on a command is applied to all parameters in the command, even on numeric text parameters. Explicitly specify the parameter IDs in the `ascii` attribute to make it compatible with earlier DataMiner versions.

@@ -4,7 +4,7 @@ uid: Element_properties
 
 # Element properties
 
-By adding properties to views, elements, services, and alarms, you can link all kinds of additional information to those DataMiner items. This information can be displayed in the Alarm Console and can be used when creating filters and Correlation rules.
+By adding properties to views, elements, services, and alarms, you can link all kinds of additional information to those DataMiner items. This information can be displayed in the Alarm Console and can be used when creating filters and correlation rules.
 
 The *Properties* window of an element includes the following tabs:
 

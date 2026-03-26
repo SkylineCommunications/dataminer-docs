@@ -264,13 +264,13 @@ Apart from highlighting all bars belonging to a specific variable, you can now a
 
 ### DMS Automation
 
-#### Interactive Automation scripts will now take into account timeouts set in the engine.Timeout property of the executed script \[ID 28405\]
+#### Interactive automation scripts will now take into account timeouts set in the engine.Timeout property of the executed script \[ID 28405\]
 
-From now on, interactive Automation scripts will also take into account any timeout set in the engine.Timeout property of the executed script
+From now on, interactive automation scripts will also take into account any timeout set in the engine.Timeout property of the executed script
 
-#### Interactive Automation scripts: Lazy loading of tree view items \[ID 28528\]
+#### Interactive automation scripts: Lazy loading of tree view items \[ID 28528\]
 
-It is now possible to configure that a tree view item in interactive Automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
+It is now possible to configure that a tree view item in interactive automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
 
 To activate this so-called lazy loading for a particular tree view item, set its SupportsLazy-Loading property to true. An arrow will appear in front of the tree view item (even if it does not have any child items).
 
@@ -293,9 +293,9 @@ All web applications\* will now connect to SLNet with the “AllowMessageThrottl
 
 ### DMS Service & Resource Management
 
-#### Triggering an Automation script to reconfigure running bookings after a ProfileInstance was changed \[ID 28186\]
+#### Triggering an automation script to reconfigure running bookings after a ProfileInstance was changed \[ID 28186\]
 
-It is now possible to have an Automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
+It is now possible to have an automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
 
 ##### Configuring the script
 
@@ -332,7 +332,7 @@ The script will be triggered using a new OnSrmBookingsUpdatedByReference entrypo
 
 The UpdateAndApply call for a ProfileInstance can now return a number of additional errors.
 
-When calling UpdateAndApply without forcing quarantine (i.e. with forceQuarantine set to false):
+When calling UpdateAndApply without forcing quarantine (i.e., with forceQuarantine set to false):
 
 - If no instances need to be quarantined, the update will be applied and the following warning will be returned:
 
@@ -343,7 +343,7 @@ When calling UpdateAndApply without forcing quarantine (i.e. with forceQuarantin
   - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
   - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
 
-When calling UpdateAndApply and forcing quarantine (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
+When calling UpdateAndApply and forcing quarantine (i.e., with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
 
 - A warning of type ReservationInstancesMovedToQuarantine, listing the reservations and the usages that were quarantined.
 - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the reservations that were reconfigured because of the update.
@@ -369,7 +369,7 @@ var instancesThatRequiredReconfig = rmHelper.GetReservationInstances(filter);
   Failed to run script to reconfigure bookings after updating ProfileInstance because an exception occurred. See SLProfileManager.txt logging for more details.
   ```
 
-- When the UpdateBookingConfigByReferenceScript is not configured (i.e. when the setting is empty or null in the profile manager configuration):
+- When the UpdateBookingConfigByReferenceScript is not configured (i.e., when the setting is empty or null in the profile manager configuration):
 
   - No attempt will be made to trigger a script.
   - The RequiredProfileInstanceReconfiguration property will not be set to true on the instances.
@@ -507,9 +507,9 @@ When, in the *Database* section of *System Center*, you clicked the *Offload* ta
 
 In a PDF report, in some cases, trend statistics components would not show any content.
 
-#### DataMiner Cube - Automation app: A change to a dashboard configuration in an Automation script would not cause the Save button to be activated \[ID 28287\]
+#### DataMiner Cube - Automation app: A change to a dashboard configuration in an automation script would not cause the Save button to be activated \[ID 28287\]
 
-When a dashboard configuration in an email action of an Automation script was changed, in some cases, the script would incorrectly not be considered changed. As a result, the user would not be able to save the changes.
+When a dashboard configuration in an email action of an automation script was changed, in some cases, the script would incorrectly not be considered changed. As a result, the user would not be able to save the changes.
 
 #### Service & Resource Management: Exported protocol would show incorrect parameters after a new function file had been activated \[ID 28290\]
 
@@ -519,7 +519,7 @@ When a new function file was activated, which updated parameters for a particula
 
 When offloading data to SLDataGateway, in some cases, a CPU leak could occur.
 
-#### Interactive Automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
+#### Interactive automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
 
 In some cases, equals signs ("=") could not be used in UI block values.
 
@@ -583,7 +583,7 @@ Cannot read property 'Data' of undefined'.
 
 #### SLWatchDog would not log error messages when it failed to generate or clear alarm events \[ID 28435\]
 
-When SLWatchDog was creating or clearing alarm events (e.g. alarm events reporting runtime errors), no error messages would be logged when a request to create or clear an alarm event failed. From now on, those errors will be logged in SLWatchDog2.txt.
+When SLWatchDog was creating or clearing alarm events (e.g., alarm events reporting runtime errors), no error messages would be logged when a request to create or clear an alarm event failed. From now on, those errors will be logged in SLWatchDog2.txt.
 
 #### Problem during DataMiner startup when all nodes of an Elasticsearch database were down \[ID 28443\]
 
@@ -627,7 +627,7 @@ When you duplicated a service as a templated service, in some cases, the newly c
 
 #### Dashboards app: Some components would not be displayed when embedded \[ID 28492\]
 
-In some cases, dashboards components would not be displayed when embedded in e.g. Visual Overview.
+In some cases, dashboards components would not be displayed when embedded in e.g., Visual Overview.
 
 #### DataMiner Cube - Query Executor: Problem when a Cassandra database returned a collection object \[ID 28499\]
 

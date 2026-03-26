@@ -22,7 +22,7 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
 ## Cassandra cluster database
 
-For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the general database for the entire DMS, rather than one Cassandra cluster per DMA), configure the settings as follows:
+For a Cassandra cluster database (i.e., one Cassandra cluster that is used as the general database for the entire DMS, rather than one Cassandra cluster per DMA), configure the settings as follows:
 
 1. Go to *Apps* > *System Center* > *Database*.
 
@@ -33,7 +33,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
 1. Specify the following database settings for the Cassandra nodes:
 
-   - **Database**: The type of database, i.e. *CassandraCluster*.
+   - **Database**: The type of database, i.e., *CassandraCluster*.
 
    - **Keyspace prefix** or **Name**: The prefix that the DataMiner System will use to create the keyspaces.
 
@@ -48,11 +48,11 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
 1. From DataMiner Cube 10.3.0/10.3.3 onwards, you can also specify the database settings for the indexing database.
 
-   - **Database**: The type of database, e.g. *Elasticsearch/OpenSearch*.
+   - **Database**: The type of database, e.g., *Elasticsearch/OpenSearch*.
 
    - **Database prefix**: The prefix that the DataMiner System will use to create the indices.
 
-   - **DB server**: The IP addresses or hostnames of the indexing database nodes, separated by commas. If TLS is enabled, the full URL must be specified, e.g. `https://elastic.mydomain.local`. If no port is provided, the default port for the indexing database is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)).
+   - **DB server**: The IP addresses or hostnames of the indexing database nodes, separated by commas. If TLS is enabled, the full URL must be specified, e.g., `https://elastic.mydomain.local`. If no port is provided, the default port for the indexing database is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)).
 
    - **User**: The username with which the DMA has to log on to the indexing database (if applicable).
 
@@ -90,7 +90,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    - **Type**: *Database per cluster*.
 
-   - **Database**: The type of database, i.e. *Amazon Keyspaces*.
+   - **Database**: The type of database, i.e., *Amazon Keyspaces*.
 
    - **Keyspace prefix**: The name all Amazon Keyspaces will be prefixed with. This will be identical for all DMAs in the DMS.
 
@@ -100,7 +100,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
      - The prefix has a maximum length of 20 characters. Prior to DataMiner 10.3.0 [CU5]/10.3.8<!-- RN 36503 -->, it has a maximum length of 11 characters.
 
-   - **DB Server**: The URL of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your Amazon Keyspaces cluster is in. (e.g. `cassandra.eu-north-1.amazonaws.com`).
+   - **DB Server**: The URL of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your Amazon Keyspaces cluster is in. (e.g., `cassandra.eu-north-1.amazonaws.com`).
 
    - **User**: The username of your [Amazon Keyspaces credentials](xref:Deploying_Amazon_Keyspaces_Service#generating-credentials-for-amazon-keyspaces).
 
@@ -120,7 +120,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 ## Amazon OpenSearch Service
 
 > [!NOTE]
-> Ensure your server version is compatible with OpenSearch. Cube will display `Elasticsearch/OpenSearch` instead of `Elasticsearch` if your server is compatible (i.e. running DataMiner 10.3.0/10.3.3 or higher).
+> Ensure your server version is compatible with OpenSearch. Cube will display `Elasticsearch/OpenSearch` instead of `Elasticsearch` if your server is compatible (i.e., running DataMiner 10.3.0/10.3.3 or higher).
 
 > [!TIP]
 > See also: [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service)
@@ -131,11 +131,11 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    - **Type**: *Database per cluster*.
 
-   - **Database**: The type of database, i.e. *Elasticsearch/OpenSearch*.
+   - **Database**: The type of database, i.e., *Elasticsearch/OpenSearch*.
 
    - **Database prefix**: The name all indices will be prefixed with. This will be identical for all DMAs in the same cluster.
 
-   - **DB Server**: The full URL of your Amazon OpenSearch Service endpoint, e.g. `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com/`
+   - **DB Server**: The full URL of your Amazon OpenSearch Service endpoint, e.g., `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com/`
 
      > [!IMPORTANT]
      > From DataMiner 10.3.0 [CU4]/10.3.7 onwards, you must append the port `:443` to the Amazon OpenSearch Service endpoint URL. For example: `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com:443`. In earlier DataMiner versions, this is not needed.

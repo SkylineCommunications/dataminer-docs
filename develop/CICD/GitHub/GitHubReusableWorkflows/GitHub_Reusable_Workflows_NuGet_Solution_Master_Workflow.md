@@ -30,7 +30,7 @@ The goal of this workflow is to automatically create and upload reusable .NET li
   - [Push to GitHub NuGet registry](#push-to-github-nuget-registry)
 
 > [!IMPORTANT]
-> This workflow can run for both development or release cycles. A development cycle is any run that triggered from a change on a branch. A release cycle is any run that triggered from adding a tag with format A.B.C or A.B.C-text. During the development cycle, the version of an artifact automatically includes the run number. The .nupkg is available as artifact on GitHub. During the release cycle, the version of the artifact becomes the tag provided and the .nupkg is published on nuget.org. A release cycle can also release a pre-release version of a NuGet package. To do so, simply tag with format A.B.C-text. (e.g. 1.0.1-AlphaOne).
+> This workflow can run for both development or release cycles. A development cycle is any run that triggered from a change on a branch. A release cycle is any run that triggered from adding a tag with format A.B.C or A.B.C-text. During the development cycle, the version of an artifact automatically includes the run number. The .nupkg is available as artifact on GitHub. During the release cycle, the version of the artifact becomes the tag provided and the .nupkg is published on nuget.org. A release cycle can also release a pre-release version of a NuGet package. To do so, simply tag with format A.B.C-text. (e.g., 1.0.1-AlphaOne).
 
 ## How to use
 

@@ -20,7 +20,7 @@ unsignedInt
 - Using big endian, the StartPosition 0 is the most significant bit.
 - When retrieving a serial response with rawType unsigned number, it is the most significant bit since the bytes are actually reversed by DataMiner.
 
-For example, if the device responds with 0100 (256) and you display the group parameter, it will show 1 instead of 256. If you use big endian, the parameter will display 256. But then StartPosition will be like in the case of an SNMP parameter (i.e. 0 being the most significant bit of the least significant byte).
+For example, if the device responds with 0100 (256) and you display the group parameter, it will show 1 instead of 256. If you use big endian, the parameter will display 256. But then StartPosition will be like in the case of an SNMP parameter (i.e., 0 being the most significant bit of the least significant byte).
 
 Using big endian, the StartPosition 0 is the most significant bit of the least significant byte.
 

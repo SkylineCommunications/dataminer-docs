@@ -4,7 +4,7 @@ uid: Running_an_analyzer
 
 # Running an analyzer
 
-To run a Correlation analyzer:
+To run a correlation analyzer:
 
 1. In the Correlation module, select the analyzer in the tree view of the *analyzers* pane.
 
@@ -16,9 +16,9 @@ To run a Correlation analyzer:
 
 1. To stop real-time analyzing, click *Stop analyzing*. Analysis of history alarms will stop automatically as soon as the analyzer is ready.
 
-   The status of the analyzer will return to *Idle*, and a Correlation rule will be proposed under *Results*.
+   The status of the analyzer will return to *Idle*, and a correlation rule will be proposed under *Results*.
 
-1. To view the proposed Correlation rule, right-click the result and select *Add to correlation*.
+1. To view the proposed correlation rule, right-click the result and select *Add to Correlation*.
 
    > [!NOTE]
-   > The new Correlation rule is not automatically enabled and saved.
+   > The new correlation rule is not automatically enabled and saved.

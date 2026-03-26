@@ -42,6 +42,31 @@ namespace Skyline.DataMiner.Net.AutomationUI.Objects
 		public bool IsCollapsed { get; set; }
 
 		/// <summary>
+		/// Gets or sets a value indicating whether the previous collapsed state of the node should be restored. Default is <c>false</c>.
+		/// If no prior state is available, the value of <see cref="IsCollapsed"/> will be used instead.
+		/// </summary>
+		/// <value><c>true</c> if the previous collapsed state of the node should be restored; otherwise, <c>false</c>.</value>
+		/// <remarks>
+		/// <note type="note">Available from DataMiner 10.6.0/10.6.3 onwards.</note> <!-- RN 44515 / RN 44541 -->
+		/// <note type="important">For the tree view to keep track of the collapsed/expanded states, the <c>DestVar</c> and the location (row and column) of the component should remain the same.</note>
+		/// </remarks>
+		public bool UsePreviousCollapsedState { get; set; }
+
+		/// <summary>
+		/// Gets or sets a value indicating whether the item supports lazy loading. Default is <c>false</c>.
+		/// </summary>
+		/// <value><c>true</c> if lazy loading is supported; otherwise, <c>false</c>.</value>
+		/// <remarks>
+		/// <note type="note">
+		///   When this is set to <c>true</c>, an arrow will be shown in front of the tree view item, even when it does not have any child items.
+		///   When the arrow is clicked, the script will continue (note that <c>WantsOnChange</c> is not required for this), and the expanded
+		///   state of the item can be checked by using the <c>GetExpanded</c> method on <c>UIResults</c>.
+		///   The child items for the expanded item can now be added to the tree view.
+		/// </note> <!-- RN 28528 -->
+		/// </remarks>
+		public bool SupportsLazyLoading { get; set; }
+
+		/// <summary>
 		/// Gets or sets the string value displayed for this item in the UI.
 		/// </summary>
 		/// <value>The string value displayed for this item in the UI.</value>

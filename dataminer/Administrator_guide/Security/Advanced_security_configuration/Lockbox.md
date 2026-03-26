@@ -10,7 +10,7 @@ For more information about this service, contact your Skyline representative.
 
 <!-- The Lockbox service ensures that Skyline cannot access your DataMiner System to perform service operations without your explicit approval. With DataMiner Lockbox, you remain in control via the [approval workflow process](#workflow) that Skyline uses to ensure that only authorized requests allow access to your system.
 
-If you want to grant a support engineer access to your DataMiner System for troubleshooting or maintenance (e.g. installing DataMiner updates), Lockbox enables this process with your approval. Alternatively, if a Skyline support engineer cannot fully resolve an issue without access to your system, they may initiate an access request, which you then have the option to approve or deny.
+If you want to grant a support engineer access to your DataMiner System for troubleshooting or maintenance (e.g., installing DataMiner updates), Lockbox enables this process with your approval. Alternatively, if a Skyline support engineer cannot fully resolve an issue without access to your system, they may initiate an access request, which you then have the option to approve or deny.
 
 Once an access request is approved, the support engineer is granted access for the specified time, after which access is automatically revoked.
 

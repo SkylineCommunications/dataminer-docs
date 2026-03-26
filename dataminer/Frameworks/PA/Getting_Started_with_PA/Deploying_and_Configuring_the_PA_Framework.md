@@ -71,7 +71,7 @@ To install the PA framework:
    > It is essential that you run this script first before moving on to the next steps.
 
    > [!TIP]
-   > See also: [Running Automation scripts](xref:Running_Automation_scripts)
+   > See also: [Running automation scripts](xref:Running_Automation_scripts)
 
    Also make sure that the files *ProcessAutomation.dll* and *SLSRMLibrary.dll* are not present in the following subfolders of the Skyline DataMiner folder: `C:\Skyline DataMiner\Files\` and `C:\Skyline DataMiner\ProtocolScripts\DLLImport\`.
 
@@ -84,7 +84,7 @@ To install the PA framework:
 
 To set up the initial configuration of the PA framework or to upgrade to a more recent version of the PA framework:
 
-1. Go to *Automation* module in DataMiner Cube and select the *SRM_Setup* Automation script.
+1. Go to *Automation* module in DataMiner Cube and select the *SRM_Setup* automation script.
 
 1. In the lower-right corner, select *Execute*.
 

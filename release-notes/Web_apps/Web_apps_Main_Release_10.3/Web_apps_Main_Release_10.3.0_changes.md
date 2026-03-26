@@ -126,7 +126,7 @@ Because of a number of enhancements, overall performance has increased when open
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
+When PDF files are uploaded via the WebAPI (e.g., when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
 
 #### Dashboards app / Low-Code Apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID 34624]
 
@@ -241,11 +241,11 @@ In the generic filter component, in some cases, column filters would be incorrec
 
 when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.
 
-#### Web apps - Interactive Automation scripts: Not possible to clear a selection box by selecting an empty option [ID 34315]
+#### Web apps - Interactive automation scripts: Not possible to clear a selection box by selecting an empty option [ID 34315]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
+When an interactive automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
 
 #### Web Services API - CreateServiceTemplate: DataMinerID and ElementID incorrectly set to 0 instead of -1 [ID 34440]
 
@@ -314,7 +314,7 @@ When you had manually changed the sorting order of a GQI table by clicking a col
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
-When you sorted or filtered a table fed by e.g. a query filter, the table would incorrectly lose its conditional coloring.
+When you sorted or filtered a table fed by e.g., a query filter, the table would incorrectly lose its conditional coloring.
 
 #### Web apps: Problem when a trend graph displaying multiple parameters showed data that was partly in the future [ID 34982]
 
@@ -378,7 +378,7 @@ Up to now, in some cases, one folder would incorrectly take over feed selections
 
 <!-- MR 10.3.0 [CU0] - FR 10.3.2 [CU1] -->
 
-When a web app (e.g. Dashboards) tried to execute a GQI query, in some cases, a `Node: 'X' is not supported by the current server version.` error could be thrown (`'X'` being the node that caused the error).
+When a web app (e.g., Dashboards) tried to execute a GQI query, in some cases, a `Node: 'X' is not supported by the current server version.` error could be thrown (`'X'` being the node that caused the error).
 
 #### Low-Code Apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID 35542]
 

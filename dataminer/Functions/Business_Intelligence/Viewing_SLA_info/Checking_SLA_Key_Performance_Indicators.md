@@ -31,4 +31,4 @@ To check the key performance indicators for the SLA, check the section *Performa
 - **Longest Outage Time**: The actual total duration of the longest alarm that occurred in this window, without corrections.
 
 > [!NOTE]
-> In earlier versions of the SLA protocol, the naming of some parameters may be different, e.g. *Total Affected Time* instead of *Total Outage Time*.
+> In earlier versions of the SLA protocol, the naming of some parameters may be different, e.g., *Total Affected Time* instead of *Total Outage Time*.

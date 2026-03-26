@@ -4,7 +4,7 @@ uid: DataMiner_Cube_card_pane
 
 # Card pane
 
-When you open an item in Cube, e.g. an element or an app, it is opened in a so-called card in the large, central pane of the Cube UI.
+When you open an item in Cube, e.g., an element or an app, it is opened in a so-called card in the large, central pane of the Cube UI.
 
 For more information, see [Working with cards in DataMiner Cube](xref:Working_with_cards_in_DataMiner_Cube).
 
@@ -12,7 +12,7 @@ For more information, see [Working with cards in DataMiner Cube](xref:Working_wi
 
 At the top of each card, there can be several buttons:
 
-![Header bar buttons](~/dataminer/images/Card_Header_Bar.png)<br/>*Card pane in DataMiner 10.4.1*
+![Header bar buttons](~/dataminer/images/Card_Header_Bar.png)<br/>*Card pane in DataMiner 10.6.4*
 
 | Button | Description |
 |--------|-------------|

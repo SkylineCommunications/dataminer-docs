@@ -14,7 +14,7 @@ DataMiner SLA Management is a cutting-edge DataMiner technology that provides op
 
 DataMiner SLA Management allows its stakeholders to manage the SLA for both incoming and outgoing services, as well as Operating Level Agreements (OLA) for the various internal interdependent segments of the corporation. The solution features seamless integration with the existing DataMiner environment (including dashboards, notifications, correlation, mobile access, etc.), which enables users to leverage their existing investments. SLA Management also features a pronounced open architecture, with open XML SLA definitions, user-definable alarm thresholds and interfaces for northbound applications such as trouble ticket platforms.
 
-The design of this powerful module in DataMiner provides a variety of strategic capabilities, including the ability to have different impact ratios for different types of issues (e.g. audio versus video problems on a video service). Another unique feature is the possibility to run new SLA definitions against existing historical data, enabling managers to make well-founded decisions when specifying and committing to service SLAs, or to adapt easily to changing business requirements.
+The design of this powerful module in DataMiner provides a variety of strategic capabilities, including the ability to have different impact ratios for different types of issues (e.g., audio versus video problems on a video service). Another unique feature is the possibility to run new SLA definitions against existing historical data, enabling managers to make well-founded decisions when specifying and committing to service SLAs, or to adapt easily to changing business requirements.
 
 **DataMiner SLA Manager features:**
 
@@ -24,7 +24,7 @@ The design of this powerful module in DataMiner provides a variety of strategic 
 - Open XML format for definition of SLA metrics so that virtually any SLA scheme can be quickly defined and deployed in the operational environment.
 - Update SLA definitions at runtime with no interruption of the operational environment.
 - Manage both internal and external services, and incoming as well as outgoing services.
-- Ability to cater for delay times, and to suspend SLA tracking on services either manually, triggered by user-defined system events, or triggered by a time schedule (e.g. for time-based services or to accommodate for maintenance windows).
+- Ability to cater for delay times, and to suspend SLA tracking on services either manually, triggered by user-defined system events, or triggered by a time schedule (e.g., for time-based services or to accommodate for maintenance windows).
 - Track key SLA metrics such as total violation time, number of violations and duration of individual violation events.
 - Choose to track absolute usage of SLA margins, relative usage of SLA margins, or remaining SLA margins.
 - Use predicted compliance to trigger warnings when SLAs have a projected breach at the end of their current evaluation time frame, enabling proactive corrections.
@@ -32,10 +32,10 @@ The design of this powerful module in DataMiner provides a variety of strategic 
 - Real-time SLA Data Display, enabling operators to track in detail all SLA metrics defined in their system.
 - User-definable alarm thresholds, to issue early warnings for operators such that appropriate actions can be taken before SLA breaches occur.
 - Ability to send email and text message notifications when certain important user-defined SLA events occur.
-- Forward SLA-related events and alarms to third-party applications (e.g. trouble ticket applications, alarm managers, reporting applications, etc.).
-- Trending of SLA metrics (e.g. available time) for detailed historical analysis, with features to load trend graphs, to export trend information to spreadsheets, etc.
+- Forward SLA-related events and alarms to third-party applications (e.g., trouble ticket applications, alarm managers, reporting applications, etc.).
+- Trending of SLA metrics (e.g., available time) for detailed historical analysis, with features to load trend graphs, to export trend information to spreadsheets, etc.
 - User-definable SLA web dashboards, showing a summary overview of all SLAs, including real-time readings of key metrics.
-- Intelligent correlation of SLA events (e.g. automatically escalate SLA events that remain unresolved for too long, escalate alarms on non-operational backup devices when SLAs exhibit poor condition, automatically re-allocate backup resources to services exhibiting a poor SLA status, etc.).
+- Intelligent correlation of SLA events (e.g., automatically escalate SLA events that remain unresolved for too long, escalate alarms on non-operational backup devices when SLAs exhibit poor condition, automatically re-allocate backup resources to services exhibiting a poor SLA status, etc.).
 
 > [!TIP]
 >

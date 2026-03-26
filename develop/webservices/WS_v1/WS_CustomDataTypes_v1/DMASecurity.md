@@ -50,5 +50,5 @@ uid: DMASecurity
 | UserDefinableAppView | Boolean | Whether or not the user is allowed to view user-defined apps. |
 | ViewSharedItems | Boolean | Whether or not the user is allowed to view items shared via dataminer.services. |
 | Security | Boolean | Whether or not the user is allowed to modify security settings. |
-| SDAutomation | Boolean | Whether or not the user is allowed to open the Automation module in DataMiner Cube and view the list of available Automation scripts in web apps. |
-| AutomationExecuteScripts | Boolean | Whether or not the user is allowed to execute Automation scripts. |
+| SDAutomation | Boolean | Whether or not the user is allowed to open the Automation module in DataMiner Cube and view the list of available automation scripts in web apps. |
+| AutomationExecuteScripts | Boolean | Whether or not the user is allowed to execute automation scripts. |

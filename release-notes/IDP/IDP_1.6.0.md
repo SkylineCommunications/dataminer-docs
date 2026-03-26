@@ -24,7 +24,7 @@ Note that this feature requires DataMiner 10.4.1/10.5.0 or higher.
 
 IDP now supports custom restore scripts with interactive UI, allowing users to provide input or control the restore as it is being executed.
 
-Note that such scripts will need to call *IEngine.FindInteractiveClient* to make sure that their UI is shown to the user (see [Launching and attaching interactive Automation scripts](xref:Launching_and_attaching_interactive_Automation_scripts#launching-a-script-from-non-ui-contexts-scheduler-correlation-qaction-other-non-interactive-scripts)).
+Note that such scripts will need to call *IEngine.FindInteractiveClient* to make sure that their UI is shown to the user (see [Launching and attaching interactive automation scripts](xref:Launching_and_attaching_interactive_Automation_scripts#launching-a-script-from-non-ui-contexts-scheduler-correlation-qaction-other-non-interactive-scripts)).
 
 #### Support for skipping SSL/TLS certificate verification in CI Types [ID 44110]
 

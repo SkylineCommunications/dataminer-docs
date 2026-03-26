@@ -42,18 +42,18 @@ After you have requested access, you will be able to log in to Ziine. To get sta
 
 ### Installing DataMiner Cube
 
-On the homepage of Ziine you can find different apps, dashboards and monitoring options to explore.
+On the home page of Ziine you can find different apps, dashboards and monitoring options to explore.
 
 To install DataMiner Cube:
 
-1. On the [ziine.dataminer.services](https://ziine.dataminer.services/) homepage, click the ... icon on the *Cube* button, and select *Download installer*.
+1. On the [ziine.dataminer.services](https://ziine.dataminer.services/) home page, click the ... icon on the *Cube* button, and select *Download installer*.
 
    ![Download Cube installer](~/dataminer/images/DownloadCubeForZiine.png)
 
    > [!TIP]
    > See also: [Installing DataMiner Cube](xref:Installing_the_DataMiner_Cube_desktop_application)
 
-1. After installation, open the DataMiner Cube desktop application.
+1. After installation, open DataMiner Cube.
 
 1. Connect to the DataMiner System "the [Ziine Demo System](xref:ZiineDemoSystem)" as described under [Connecting to a DataMiner Agent with Cube](xref:Connecting_to_a_DMA_with_Cube).
 

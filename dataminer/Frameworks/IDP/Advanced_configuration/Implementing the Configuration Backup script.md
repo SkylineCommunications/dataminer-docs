@@ -13,7 +13,7 @@ DataMiner IDP can be used to create configuration backups from [elements](xref:A
 
 ## About Configuration Backup scripts
 
-The backup configuration of the device depends heavily on the type of device: some devices have a single file (e.g. a startup configuration), others require a set of files (typically archived). Others do not really use a configuration file, so the backup could be a collection of the relevant parameter sets, allowing the element to be easily reconfigured at any time.
+The backup configuration of the device depends heavily on the type of device: some devices have a single file (e.g., a startup configuration), others require a set of files (typically archived). Others do not really use a configuration file, so the backup could be a collection of the relevant parameter sets, allowing the element to be easily reconfigured at any time.
 
 A [CI Type](xref:CI_Types1) can be configured with a script that will be used to take the configuration backup of the element of this CI Type. The script will be executed for a specific element and will typically interact with it.
 
@@ -92,7 +92,7 @@ In this case, IDP will create a new file with the supplied value in the DataMine
 
 Instead of supplying the contents of a backup file to IDP, the script can supply a path to a file location. In this case, IDP  will copy the file from that location to the archive. This location can be on a DMA in the cluster or on a separate server, as long as it can be accessed with the credentials configured in **File Transfer Credentials** on the [Admin > Configuration > Network Shares](xref:Configuration#network-shares) page of the IDP app.
 
-This setup can be used when the device can be triggered to copy its configuration to a server itself (e.g. using a copy command) and then expose the server location in a way that DataMiner IDP can access it.
+This setup can be used when the device can be triggered to copy its configuration to a server itself (e.g., using a copy command) and then expose the server location in a way that DataMiner IDP can access it.
 
 With this approach, the script supplies the path when invoking the method *SendBackupFilePathToIdp*.
 
@@ -121,7 +121,7 @@ DataMiner IDP can detect changes between consecutive backups. This can be done b
 
 When the script supplies the backup to IDP, it needs to supply a **version** number for change detection. The version makes it possible to control different structures of configurations that may arise when different data needs to be compared.
 
-For example, it could occur that you initially only want to perform change detection on the uplink interface configuration, but eventually you also want to compare other parts of the configuration such as specific downlink interfaces. In that case, if you include the new parts, e.g. the downlink interface configuration, this increases the version number to 2. This way, with the different version number, the subject of the change detection changes.
+For example, it could occur that you initially only want to perform change detection on the uplink interface configuration, but eventually you also want to compare other parts of the configuration such as specific downlink interfaces. In that case, if you include the new parts, e.g., the downlink interface configuration, this increases the version number to 2. This way, with the different version number, the subject of the change detection changes.
 
 ### Backup and change detection by exchanging file contents
 

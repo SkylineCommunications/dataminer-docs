@@ -26,7 +26,7 @@ From now on, the deprecated NotifyDataMiner type *NT_CONNECTIONS_TO_REMOVE* can 
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
-When an increasing or decreasing trend is detected on a highly aggregated level (i.e. a trend that persists for more than 24 hours), from now on, a proactive cap detection suggestion event will be generated when there is a probability that the trend change in question could lead to a breach of a critical alarm limit at some point in the future, even when the breach has not yet been confirmed by the full prediction model built on the historic trend data.
+When an increasing or decreasing trend is detected on a highly aggregated level (i.e., a trend that persists for more than 24 hours), from now on, a proactive cap detection suggestion event will be generated when there is a probability that the trend change in question could lead to a breach of a critical alarm limit at some point in the future, even when the breach has not yet been confirmed by the full prediction model built on the historic trend data.
 
 #### Service & Resource Management: Enhanced performance of ResourceManagerHelper.GetResources when using the ResourceExposers.ID.Equal filter [ID 37720]
 
@@ -114,7 +114,7 @@ When downgrading a DataMiner System using a Cassandra database, from now on, the
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
 
-Up to now, when a user-defined API was triggered, log entries like the ones below would only be added to the *SLUserDefinableApiManager.txt* file when the log level was set to 5. From now on, when a user-defined API is triggered, these entries will be added to *SLUserDefinableApiManager.txt* when the log level is set to 0 (i.e. always).
+Up to now, when a user-defined API was triggered, log entries like the ones below would only be added to the *SLUserDefinableApiManager.txt* file when the log level was set to 5. From now on, when a user-defined API is triggered, these entries will be added to *SLUserDefinableApiManager.txt* when the log level is set to 0 (i.e., always).
 
 ```txt
 2024/01/18 10:13:00.740|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Started handling API trigger from NATS for route 'dma/id-2'.
@@ -317,7 +317,7 @@ Types of log entries related to SLNet requests:
 
   This type of entry will be added to the log for each individual message in an SLNet request.
 
-  - *RequestID.Index*: The unique ID of the message, consisting of the *RequestID* (which identifies the request) and an *Index* (i.e. the sequence number of the message).
+  - *RequestID.Index*: The unique ID of the message, consisting of the *RequestID* (which identifies the request) and an *Index* (i.e., the sequence number of the message).
   - *Description*: The string representation of the actual SLNet message, which should give a short but meaningful description of the message.
 
 - `Finished SLNet request <RequestID> in <Duration>ms`
@@ -352,22 +352,22 @@ From now on, this error message will include a reference to the StorageModule lo
 
 The *MySql.Data.dll* file, located in `C:\Skyline DataMiner\ProtocolScripts\`, should from now on be considered deprecated.
 
-This file will no longer be included in DataMiner upgrade packages. Also, a BPA test has been created to detect the presence and usage of this DLL file in protocols and Automation scripts.
+This file will no longer be included in DataMiner upgrade packages. Also, a BPA test has been created to detect the presence and usage of this DLL file in protocols and automation scripts.
 
-To remove all references to the *MySql.Data.dll* file in your protocols and Automation scripts, do the following:
+To remove all references to the *MySql.Data.dll* file in your protocols and automation scripts, do the following:
 
 1. Open DataMiner Cube.
 1. Open *System Center*.
 1. Go to *Agents > BPA*.
 1. Run the *Check Deprecated MySql DLL* test (if it has not been run yet).
-1. If references to the DLL file have been found, click the ellipsis button next to the message to see an overview of all protocols and Automation scripts that are still using this DLL file.
+1. If references to the DLL file have been found, click the ellipsis button next to the message to see an overview of all protocols and automation scripts that are still using this DLL file.
 
    This overview is displayed as a string in JSON format. It will contain the following information:
 
    - The names and versions of the protocols that are still using this file, including the IDs of the QActions in which this file is referenced.
-   - The names of the Automation scripts that are still using this file.
+   - The names of the automation scripts that are still using this file.
 
-1. Replace every reference to the *MySql.Data.dll* file in the listed protocol QActions and Automation scripts by a reference to the [MySql.Data NuGet](https://www.nuget.org/packages/MySql.Data). Using that NuGet should not require any other changes to the existing code.
+1. Replace every reference to the *MySql.Data.dll* file in the listed protocol QActions and automation scripts by a reference to the [MySql.Data NuGet](https://www.nuget.org/packages/MySql.Data). Using that NuGet should not require any other changes to the existing code.
 
 When you have replaced all references to the *MySql.Data.dll* file, do the following:
 
@@ -377,7 +377,7 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 
 > [!IMPORTANT]
 > The BPA test *Check Deprecated MySql DLL* is only able to detect whether the *MySql.Data.dll* file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the *MySql.Data.dll* file, the BPA will not be able to detect this.
-> When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
+> When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an automation script was executed.
 
 #### SLNet: Enhancements that optimize the performance of the Jobs and Ticketing APIs [ID 39385]
 
@@ -446,7 +446,7 @@ SLNet will now cache [ApiToken](xref:UD_APIs_Objects_ApiToken) and [ApiDefinitio
 
 <!-- MR 10.5.0 - FR 10.4.9 -->
 
-From now on, in Automation scripts, it is possible to retrieve resources page by page.
+From now on, in automation scripts, it is possible to retrieve resources page by page.
 
 See the following example, which shows how to implement this.
 
@@ -566,7 +566,7 @@ Also, a parameter will need to have had at least one day of fluctuating trend da
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
-From now on, when using STaaS, it is possible to limit the result set of queries against custom data types (e.g. DOM, SRM, etc.). This will enhance overall performance of this type of queries.
+From now on, when using STaaS, it is possible to limit the result set of queries against custom data types (e.g., DOM, SRM, etc.). This will enhance overall performance of this type of queries.
 
 #### DaaS: BPA tests that cannot be run on a DaaS system will now be flagged as "Not applicable" [ID 39910]
 
@@ -696,7 +696,7 @@ The page size must be set to a value between 10 and 500. When a page size value 
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
-In e.g. DataMiner Cube, a light bulb icon will be displayed when you select a time range on the trend graph of a parameter. If you want to know which other parameters are related to this parameter, based purely on the behavior during the selected time range, then you can click this icon to add or view related parameters. Even if multiple curves are displayed on the same trend graph, the light bulb always shows relations with one specific parameter, whose name is mentioned in the light bulb tooltip.
+In e.g., DataMiner Cube, a light bulb icon will be displayed when you select a time range on the trend graph of a parameter. If you want to know which other parameters are related to this parameter, based purely on the behavior during the selected time range, then you can click this icon to add or view related parameters. Even if multiple curves are displayed on the same trend graph, the light bulb always shows relations with one specific parameter, whose name is mentioned in the light bulb tooltip.
 
 Up to now, this feature only proposed parameters from the same DataMiner element. From now on, it will also propose parameters from other elements within the same service.
 
@@ -871,7 +871,7 @@ Additionally, the following script will also no longer generate an information e
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-For visual overviews in web apps (e.g. Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
+For visual overviews in web apps (e.g., Monitoring, Dashboards, etc.), up to now, the default page would always be the first page, regardless of whether that page had been set to "hidden" or not. From now on, the default page will be the first page that has not been set to "hidden".
 
 #### SLManagedAutomation and SLManagedScripting will now use at least TLS 1.2 encryption when communicating with BrokerGateway [ID 41048]
 

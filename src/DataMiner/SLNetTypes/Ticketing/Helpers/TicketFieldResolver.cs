@@ -76,7 +76,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Helpers
 	///		dmaState.DynamicAdd( "Closed", 4);
 	///		
 	///		// We now link our custom ticket states to a DataMiner <see cref="TicketState"/>.
-	///		// I.e. "Created" has value 0 and gets linked to <see cref="TicketState.Open"/>.
+	///		// I.e., "Created" has value 0 and gets linked to <see cref="TicketState.Open"/>.
 	///		resolver.StateResolver.Add(0, TicketState.Open); // Created
 	///		resolver.StateResolver.Add(1, TicketState.Open); // Started
 	///		resolver.StateResolver.Add(2, TicketState.Open); // Paused

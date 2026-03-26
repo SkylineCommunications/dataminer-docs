@@ -6,7 +6,7 @@ uid: DisTreeViewToolWindow
 
 If you click *Tool Windows > DIS Tree View*, the *DIS Tree* tool window will appear.
 
-This tool window acts as a table of contents, allowing you to easily navigate to a particular location in the connector or Automation script you are working on.
+This tool window acts as a table of contents, allowing you to easily navigate to a particular location in the connector or automation script you are working on.
 
 By default, the *DIS Tree* window will open undocked. You can dock it like any other tool window in Visual Studio.
 
@@ -48,9 +48,9 @@ See also: [DIS keyboard shortcuts](xref:DIS_keyboard_shortcuts)
 
 ### Working with the breadcrumb control
 
-At the top of the *DIS Tree* tool window, there is a breadcrumb control that allows you to quickly navigate to a particular location inside a *protocol.xml* file. This control always shows the path towards the node that is currently selected in the tree view (i.e. *Protocol > Params > Param*).
+At the top of the *DIS Tree* tool window, there is a breadcrumb control that allows you to quickly navigate to a particular location inside a *protocol.xml* file. This control always shows the path towards the node that is currently selected in the tree view (i.e., *Protocol > Params > Param*).
 
-- If you click a breadcrumb (e.g. "Params"), the corresponding (parent) node will be selected in the tree view (e.g. "Params").
+- If you click a breadcrumb (e.g., "Params"), the corresponding (parent) node will be selected in the tree view (e.g., "Params").
 
 - If you click an arrow next to a breadcrumb, a dropdown list will open, allowing you to immediately navigate to one of the child nodes.
 

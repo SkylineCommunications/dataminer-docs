@@ -73,7 +73,7 @@ Also, when you open the *Profiles*, *Resources* or *Bookings* app in Cube, a mes
 
 With the introduction of time-scoped parameter relations, two different light bulb icons can now appear in a trend graph: one in the top-right corner and another one whenever you select a section of the trend graph.
 
-When the requirements of a light bulb are not met, an entry is added to the Cube logging. From now on, these log entries will make a clearer distinction between the "relation light bulb feature" (i.e. the icon appearing in the top-right corner) and the "time-scoped relation feature" (i.e. the icon appearing when you select a trend graph section).
+When the requirements of a light bulb are not met, an entry is added to the Cube logging. From now on, these log entries will make a clearer distinction between the "relation light bulb feature" (i.e., the icon appearing in the top-right corner) and the "time-scoped relation feature" (i.e., the icon appearing when you select a trend graph section).
 
 #### Resources: Enhanced logging when function resources failed to initialize [ID 36763]
 

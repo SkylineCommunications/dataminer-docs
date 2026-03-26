@@ -34,7 +34,7 @@ The latest benchmark tests, at the time of release, demonstrate that the roundtr
 
 #### New feature - Enhanced security: Remote code execution exploit prevention
 
-Several classes are now checked and blocked from getting deserialized when InterApp calls are used. This will prevent bad actors from abusing these calls and remove their ability to maliciously run software as part of JSON deserialization (i.e. remote code execution exploits).
+Several classes are now checked and blocked from getting deserialized when InterApp calls are used. This will prevent bad actors from abusing these calls and remove their ability to maliciously run software as part of JSON deserialization (i.e., remote code execution exploits).
 
 If such a potentially risky class is detected, a *SecurityException* will indicate that a potential RCE exploitation was found.
 

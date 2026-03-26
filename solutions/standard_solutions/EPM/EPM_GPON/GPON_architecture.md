@@ -38,6 +38,6 @@ All operative data received for a xPON ONT is provided by a third party in a Kaf
 
 ## System connectors
 
-System connectors are designed to operate as peripherals within the EPM Solution. Some system connectors interface with specific data sources (e.g. CRM, network elements inventory, billing), and feed information into the logic of the main connectors (i.e. the OLT, back-end, and front-end). Other system connectors perform logic required for the execution of specific workflows.
+System connectors are designed to operate as peripherals within the EPM Solution. Some system connectors interface with specific data sources (e.g., CRM, network elements inventory, billing), and feed information into the logic of the main connectors (i.e., the OLT, back-end, and front-end). Other system connectors perform logic required for the execution of specific workflows.
 
 System elements (running system connectors) are typically distributed per DMA to ensure self-contained functionality.

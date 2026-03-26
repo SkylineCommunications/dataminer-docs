@@ -145,11 +145,11 @@ Up to now, when you ran the DataMiner installer to install a new DataMiner Agent
 
 From now on, when you run the DataMiner installer to install a new DataMiner Agent using a DataMiner upgrade package, all installation steps will be performed, including the upgrade actions.
 
-#### Problem when loading data of elements hosted on another DMA while a Correlation rule action was running [ID 38121]
+#### Problem when loading data of elements hosted on another DMA while a correlation rule action was running [ID 38121]
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.2 -->
 
-When, while an extensive Correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the Correlation rule action had finished.
+When, while an extensive correlation rule action was running, you opened an element card of an element hosted on a DataMiner Agent other than the one you were connected to, loading the data of that element could get delayed until the correlation rule action had finished.
 
 #### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID 38180]
 
@@ -175,11 +175,11 @@ When, in a visual overview with one non-hidden page displayed in a web app, you 
 
 In some rare cases, a cleanup routine within SLAutomation could prematurely clean up data of scripts that had not yet finished, causing an error to occur.
 
-#### Automation: Problem when empty data is passed to the UI parser when running an interactive Automation script [ID 38408]
+#### Automation: Problem when empty data is passed to the UI parser when running an interactive automation script [ID 38408]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
-When running an interactive Automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
+When running an interactive automation script that was launched from Cube or a web app, in some cases, an exception could be thrown when empty data was passed to the UI parser.
 
 From now on, an exception will no longer be thrown when empty data is passed to the UI parser.
 

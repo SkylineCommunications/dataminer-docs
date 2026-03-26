@@ -4,7 +4,7 @@ uid: SwarmingRollback
 
 # Rolling back Swarming
 
-When Swarming is enabled, the element config XML files (e.g. `Element.xml`, `ElementData.xml`, `Description.xml`, etc.) are moved from disk to the database. There is currently no procedure to move them back to disk, so you will instead need to [restore the files from a backup](#restoring-the-element-xml-files-from-a-backup) from before Swarming was enabled. Any **changes that happened to elements or redundancy groups after Swarming was enabled will be lost**. As a consequence, if you enabled Swarming but want to switch back, e.g. to temporarily go for a Failover setup and only enable Swarming later when failure detection has been implemented, the sooner you roll back Swarming again, the better.
+When Swarming is enabled, the element config XML files (e.g., `Element.xml`, `ElementData.xml`, `Description.xml`, etc.) are moved from disk to the database. There is currently no procedure to move them back to disk, so you will instead need to [restore the files from a backup](#restoring-the-element-xml-files-from-a-backup) from before Swarming was enabled. Any **changes that happened to elements or redundancy groups after Swarming was enabled will be lost**. As a consequence, if you enabled Swarming but want to switch back, e.g., to temporarily go for a Failover setup and only enable Swarming later when failure detection has been implemented, the sooner you roll back Swarming again, the better.
 
 The longer you wait, the greater the impact will be. Any modifications to existing elements or redundancy groups since the backup and any new elements or redundancy groups created since the backup will be lost, and any reference to them could become invalid. This for example means that services, redundancy groups, etc. could have references to elements that no longer exist.
 
@@ -18,8 +18,8 @@ When DataMiner is moving the XML files from disk to database, it will take a bac
 
 The backup is initially stored in the *Recycle Bin* folder, but you can manually copy it over to a different location to have long-term access. It is stored in two .zip files, one for the elements folder and one for the redundancy folder. These .zip files are a snapshot from the moment Swarming was enabled. The files will for instance look like this:
 
-- `2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip`
-- `2024_11_20 11_03_12_300_RedundancyFolder_BeforeSwarmingMigration.zip`
+- `2024_11_20 11_03_12_300_Elements - Elements 1591715048.zip`
+- `2024_11_20 11_03_12_300_Redundancy - Redundancy 1722493042.zip`
 
 To restore this backup and roll back Swarming:
 

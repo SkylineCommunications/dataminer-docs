@@ -64,7 +64,7 @@ From now on, the getResourcesMessage, the getResourcePoolsMessage and the getRes
 
 #### Protocols: Export rules would fail to parse values containing escaped XML characters \[ID 31362\]
 
-When, in a protocol, values contained escaped XML characters (e.g. \<Description>Measurements \> 5\</Description>), the export rules would fail to parse those values and the generated DVE or Virtual Function protocol would only have some or none of the export rules applied.
+When, in a protocol, values contained escaped XML characters (e.g., \<Description>Measurements \> 5\</Description>), the export rules would fail to parse those values and the generated DVE or Virtual Function protocol would only have some or none of the export rules applied.
 
 #### Jobs app: Jobs would be retrieved using a query that contained an incorrect time filter \[ID 31365\]
 
@@ -86,7 +86,7 @@ From now on, alarm limit change events will only be sent for standalone paramete
 
 #### DataMiner Cube - Correlation: Incorrect background color when creating or opening an analyzer or a correlation rule \[ID 31482\]
 
-When, in the Correlation app, you created or opened an analyzer in the Analyzers tab or you created or opened a legacy correlation rule in the Correlation rules tab, the tab would incorrectly have a gray background.
+When, in the Correlation app, you created or opened an analyzer in the Analyzers tab or you created or opened a legacy correlation rule in the correlation rules tab, the tab would incorrectly have a gray background.
 
 #### DataMiner Cube: Problem when opening a specific page of a card \[ID 31490\]
 
@@ -102,7 +102,7 @@ When the GetTableForParameterFiltered orGetTableForParameterSorted method was us
 
 #### DataMiner Cube: Problem when the version history of a protocol included a version that was incorrectly based on itself \[ID 31508\]
 
-In some cases, DataMiner Cube would become unresponsive when you changed the protocol of an element to a protocol of which the version history included a version that was incorrectly based on itself. From now on, a warning will appear when you try to change the protocol of a element to a protocol with an incorrect version history.
+In some cases, DataMiner Cube would become unresponsive when you changed the protocol of an element to a protocol of which the version history included a version that was incorrectly based on itself. From now on, a warning will appear when you try to change the protocol of an element to a protocol with an incorrect version history.
 
 #### Problem when interpreting cell content wrapped in quotes while importing CSV files \[ID 31511\] \[ID 31522\]
 

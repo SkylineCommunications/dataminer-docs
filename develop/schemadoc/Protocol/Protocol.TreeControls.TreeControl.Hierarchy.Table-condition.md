@@ -24,11 +24,11 @@ Format: columnPid:value or columnPid:value;filter:fk=fkColumnPid
 
 Where:
 
-- columnPid: Table column parameter ID.
-- value: Value to match. Note that this is the raw value. E.g. if this represents a discrete "1 -> Enabled", you should specify "1", not "Enabled".
-- fkColumnPid: Table column parameter ID used for the subscription filter "fk=fkColumnPid == d", where d is the primary key of the row matching the columnPid:value condition for which relations get resolved.
+- **columnPid**: Table column parameter ID.
+- **value**: Value to match. Note that this is the raw value. For example, if this represents a discrete "1 -> Enabled", you should specify "1", not "Enabled".
+- **fkColumnPid**: Table column parameter ID used for the subscription filter "fk=fkColumnPid == d", where d is the primary key of the row matching the columnPid:value condition for which relations get resolved.
 
-The optional filter:fk=fkColumnPid part serves as an explicit subscription filter, to be used if there are multiple relations to the same table and the auto-detection mechanism cannot figure it out. If this is not specified, the following auto-detection behavior is applicable:
+The optional `filter:fk=fkColumnPid` part serves as an explicit subscription filter, to be used if there are multiple relations to the same table and the auto-detection mechanism cannot figure it out. If this is not specified, the following auto-detection behavior is applicable:
 
 - If there is a foreignkey column defined, this will be used with a value filter: "value=2005 == xyz"
 - If there is no foreignkey column, we assume there is an indirect relation defined, and an fk filter is used: "fk=1001 == xyz"

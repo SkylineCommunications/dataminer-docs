@@ -21,8 +21,8 @@ This record contains the following information, separated by pipe characters:
 - DataMiner element name
 - Protocol process ID
 - DataMiner protocol name
-- Selected protocol version, e.g. Production
-- Linked protocol version e.g. 1.0.0.2
+- Selected protocol version, e.g., Production
+- Linked protocol version e.g., 1.0.0.2
 - Scripting process ID
 - Reason of the (re)start (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)
 - Number of normal (re)starts (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)

@@ -12,9 +12,9 @@ uid: DIS_2.37
 
 When, in the Function editor, you wanted to link a profile definition to a function, up to now, you had to fetch the profiles.xml file from the DataMiner Agent and open it next to the function.xml file in Visual Studio. From now on, when editing a function or one of its interfaces in the Function editor, you will be able to select a profile definition from a selection box listing all profile definitions found on the connected DataMiner Agent.
 
-#### DIS now partially supports the use of NuGet packages in protocols and Automation scripts \[ID 32962\]
+#### DIS now partially supports the use of NuGet packages in protocols and automation scripts \[ID 32962\]
 
-DIS now partially supports the use of NuGet packages in protocols and Automation scripts.
+DIS now partially supports the use of NuGet packages in protocols and automation scripts.
 
 - Apart from saving the protocol.xml file, the *File \> Save Compiled Protocol As…* command will now also extract the necessary DLL files from the configured/used NuGet packages and place them in a DLLs folder.
 
@@ -40,7 +40,7 @@ The following checks and error messages have been added.
 
 #### TypeDataMinerVersion now also allows 5-digit build numbers \[ID 32682\]
 
-The type “TypeDataMinerVersion”, which is used by the following elements, now also allows 5-digit build numbers (e.g. 10.1.0.0 - 10600).
+The type “TypeDataMinerVersion”, which is used by the following elements, now also allows 5-digit build numbers (e.g., 10.1.0.0 - 10600).
 
 - Compliancies.MinimumRequiredDataMinerVersion
 - Compliancies.MaximumSupportedVersion

@@ -23,17 +23,17 @@ Support for Microsoft Visual Studio 2017 has been dropped. The last DIS version 
 
 The Class Library generation feature has been removed in favor of NuGet packages.
 
-- If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, see [About the class library](xref:ClassLibraryIntroduction).
+- If you have a connector or automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, see [About the class library](xref:ClassLibraryIntroduction).
 
-- If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package. For more information on how to create a NuGet package, see [Producing NuGet packages](xref:Producing_NuGet). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
+- If you have a connector or automation script that makes use of a community package, we recommend turning this into a NuGet package. For more information on how to create a NuGet package, see [Producing NuGet packages](xref:Producing_NuGet). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
 
 Also, an information bar will allow you to convert existing solutions that make use of the Class Library generation feature.
 
-This information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or Automation script solution. As soon as you click *Fix*, the Class Library project will be removed and the references to the project will be replaced by references to the automatically generated Class Library project (which, by default, will have ID 63000).
+This information bar will appear when a Class Library project (i.e., a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or automation script solution. As soon as you click *Fix*, the Class Library project will be removed and the references to the project will be replaced by references to the automatically generated Class Library project (which, by default, will have ID 63000).
 
 #### C# editor: New snippet [ID 35991]
 
-In the C# editor, the following snippet now allows you to generate an `OnApiTrigger` entrypoint method in an Automation script. This entrypoint method will be used to create an API from an Automation script.
+In the C# editor, the following snippet now allows you to generate an `OnApiTrigger` entrypoint method in an automation script. This entrypoint method will be used to create an API from an automation script.
 
 - DIS \> Automation Script \> CreateUserDefinedApi (Automation)
 
@@ -41,9 +41,9 @@ In the C# editor, the following snippet now allows you to generate an `OnApiTrig
 
 Up to now, DIS would filter out any development packs or Skyline.DataMiner.Files NuGet packages. From now on, when it detects that a reference to such a SLManagedAutomation DLL file is needed for a particular QAction to run, it will add the reference to the `dllImport` attribute of the QAction. However, the file itself will not be included.
 
-#### XML editor: Referring to a library script Exe from another Automation script [ID 36117]
+#### XML editor: Referring to a library script Exe from another automation script [ID 36117]
 
-​Up to now, it was only possible to refer to a library script Exe from within the same Automation script. From now on, in a Visual Studio solution, you can also add a reference to a project from another Automation script in the solution. DIS will then automatically add a `scriptRef`.
+​Up to now, it was only possible to refer to a library script Exe from within the same automation script. From now on, in a Visual Studio solution, you can also add a reference to a project from another automation script in the solution. DIS will then automatically add a `scriptRef`.
 
 See the following example, in which `{SCRIPTNAME}` is the name of the other script containing the library and `{LIBRARYNAME}` is the name of the library:
 

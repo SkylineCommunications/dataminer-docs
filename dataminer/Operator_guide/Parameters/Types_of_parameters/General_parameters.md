@@ -29,7 +29,7 @@ These general parameters indicate how many alarms of particular alarm levels are
 
 ### [Element alarm state]
 
-This general parameter indicates the overall alarm state of the element, i.e. the alarm state of the non-masked alarm with the highest alarm level on the element.
+This general parameter indicates the overall alarm state of the element, i.e., the alarm state of the non-masked alarm with the highest alarm level on the element.
 
 ### [Number of masked alarms]
 

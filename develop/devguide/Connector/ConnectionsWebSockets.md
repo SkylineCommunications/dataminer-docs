@@ -6,7 +6,7 @@ uid: ConnectionsWebSockets
 
 The WebSocket protocol enables two-way (full-duplex) communication over a single TCP connection.
 
-The goal of this technology is to provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections (e.g. using XMLHttpRequest).The protocol consists of an opening handshake followed by basic message framing, layered over TCP (IETF, 2011).
+The goal of this technology is to provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections (e.g., using XMLHttpRequest).The protocol consists of an opening handshake followed by basic message framing, layered over TCP (IETF, 2011).
 
 To initiate a WebSocket connection, the WebSocket client sends an HTTP Upgrade request (opening handshake):
 

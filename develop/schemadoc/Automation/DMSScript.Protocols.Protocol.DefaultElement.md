@@ -22,4 +22,4 @@ Specifies the default element.
 
 ## Remarks
 
-Format: "Agent ID/Element ID" (E.g.: 200/160).
+Format: "Agent ID/Element ID" (e.g., 200/160).

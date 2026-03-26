@@ -39,7 +39,7 @@ To do so, use the following syntax:
 
 From now on, in DataMiner.xml, you can set the scriptingProcesses option to an integer value, indicating the exact number of SLScripting processes that have to be launched. The SLProtocol processes will then be assigned one of the available SLScripting processes in a round-robin way.
 
-For example, if protocolProcesses is set to 5 (i.e. the default value), and scriptingProcesses is set to 3, then...
+For example, if protocolProcesses is set to 5 (i.e., the default value), and scriptingProcesses is set to 3, then...
 
 - SLScripting 1 will host SLProtocol #1 and #4
 - SLScripting 2 will host SLProtocol #2 and #5
@@ -129,7 +129,7 @@ When users manually create an incident, change the display value of a manually c
 
 #### Alarm Console: Updating incidents using the side panel \[ID 33436\]\[ID 33450\]
 
-In the Alarm Console, it is now possible to edit incidents (i.e. alarm groups) using the side panel.
+In the Alarm Console, it is now possible to edit incidents (i.e., alarm groups) using the side panel.
 
 When you open the side panel and select an incident, a *Drag-and-drop editing* button will appear. Clicking that button will freeze both the side panel and the alarm tab and will allow you to
 
@@ -150,7 +150,7 @@ To do so, add a FunctionTypes option to the ComponentOptions shape data field.
 | Shape data field | Value |
 |--|--|
 | Component | ServiceManager |
-| ComponentOptions | FunctionTypes=\[comma-separated list of values\]<br> Possible values:<br> - Undefined (i.e. NULL value)<br> - UserTask<br> - ScriptTask<br> - ResourceTask<br> - Gateway<br> - NoneStartEvent<br> - TimeStartEvent<br> - EndEvent |
+| ComponentOptions | FunctionTypes=\[comma-separated list of values\]<br> Possible values:<br> - Undefined (i.e., NULL value)<br> - UserTask<br> - ScriptTask<br> - ResourceTask<br> - Gateway<br> - NoneStartEvent<br> - TimeStartEvent<br> - EndEvent |
 
 > [!NOTE]
 >
@@ -163,7 +163,7 @@ To do so, add a FunctionTypes option to the ComponentOptions shape data field.
 
 #### DataMiner Cube - Visual Overview: Shape that displays a page of the Visio drawing linked to a view, service or element will no longer be displayed when the element, service or view in question does not exist \[ID 33484\]
 
-From now on, a shape that displays a page of the Visio drawing linked to a view, service or element (i.e. a shape with a shape data field of type VdxPage) will no longer be displayed when the view, service or element in question does not exist.
+From now on, a shape that displays a page of the Visio drawing linked to a view, service or element (i.e., a shape with a shape data field of type VdxPage) will no longer be displayed when the view, service or element in question does not exist.
 
 ### DMS Automation
 
@@ -215,7 +215,7 @@ In the Ticketing app, tickets can now also be filtered on fields of type “drop
 
 #### Web apps - Data table component: Search box \[ID 33385\]
 
-When you hover over a data table component (e.g. a GQI table), a search box will now appear in the bottom-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
+When you hover over a data table component (e.g., a GQI table), a search box will now appear in the bottom-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
 
 #### Web apps: Dashboards, app pages and app panels now all have a 'Fit to view' setting \[ID 33401\]
 
@@ -223,9 +223,9 @@ In the Dashboards app and the Application Framework, dashboards, app pages and a
 
 #### Web apps - Data table component: Sorting, grouping and filtering options \[ID 33403\] \[ID 33433\] \[ID 33454\]
 
-When you right-click a column header of a data table component (e.g. a GQI table), you will now be presented with a number of sorting, grouping and filtering options.
+When you right-click a column header of a data table component (e.g., a GQI table), you will now be presented with a number of sorting, grouping and filtering options.
 
-- To sort by the column in question, select a sort order (e.g. A \> Z, Z \> A, etc.).
+- To sort by the column in question, select a sort order (e.g., A \> Z, Z \> A, etc.).
 - To group by the column in question, select *Group*.
 - To filter the data in the table, construct a single or composite condition depending on the column type:
 
@@ -243,7 +243,7 @@ When you right-click a column header of a data table component (e.g. a GQI table
 
 #### Web apps - Data table component: Copy cell/row/column/table \[ID 33440\]
 
-When you right-click a non-empty cell in a data table component (e.g. a GQI table), you can now choose to copy the cell value, the entire row, the entire column or the entire table.
+When you right-click a non-empty cell in a data table component (e.g., a GQI table), you can now choose to copy the cell value, the entire row, the entire column or the entire table.
 
 If you choose to copy the entire row or the entire table, the data will be copied in CSV format.
 
@@ -462,7 +462,7 @@ Also, when a table column contained an OID in an incorrect format, the table wou
 
 #### Incorrect IP address could be added to DMS.xml during a DataMiner startup \[ID 33339\]
 
-When the DataMiner software started up on an agent that was not part of a Failover setup, in some cases, an incorrect IP address could get added to the DMS.xml file. Later on, this could lead to e.g. agent synchronization issues.
+When the DataMiner software started up on an agent that was not part of a Failover setup, in some cases, an incorrect IP address could get added to the DMS.xml file. Later on, this could lead to, for example, agent synchronization issues.
 
 #### SLCloud.xml files would incorrectly refer to the local agent using the IP address instead of the hostname when the agents were configured to use HTTPS \[ID 33342\]
 
@@ -484,7 +484,7 @@ A number of issues were solved related to how DataMiner executes prerequisites a
 
 #### Automation scripts would incorrectly succeed even when uploading a report had failed \[ID 33368\]
 
-When, in an Automation script, you had configured an action that uploads a report to a shared folder or FTP, up to now, the script would still succeed even when it had not been able to copy the generated report to the remote location (shared folder or FTP). From now on, when a script is not able to copy a report to a remote location, it will fail.
+When, in an automation script, you had configured an action that uploads a report to a shared folder or FTP, up to now, the script would still succeed even when it had not been able to copy the generated report to the remote location (shared folder or FTP). From now on, when a script is not able to copy a report to a remote location, it will fail.
 
 #### Web apps: Only part of the value would be selected when moving the mouse pointer over a selection box that had the focus \[ID 33379\]
 
@@ -492,7 +492,7 @@ When you moved the mouse pointer over a selection box that had the focus, in som
 
 #### DataMiner Cube - Alarm Console: Incidents would incorrectly appear when enabling 'Automatic incident tracking' in an Information tab \[ID 33382\]
 
-When you enabled the *Automatic incident tracking* option in an Information tab, the incidents (i.e. alarm groups) would incorrectly appear in that tab.
+When you enabled the *Automatic incident tracking* option in an Information tab, the incidents (i.e., alarm groups) would incorrectly appear in that tab.
 
 #### DataMiner Cube: Casing incorrectly not taken into account when comparing the name of a newly created property against the existing property names \[ID 33388\]
 
@@ -533,13 +533,13 @@ A number of alarm-related issues have been fixed:
 
 When a profile parameter of type “number” had no decimals defined, its value would incorrectly be displayed as the maximum value that can be assigned to a parameter of type integer. From now on, when a profile parameter has no decimals defined, its value will be displayed as is, without decimals.
 
-#### Interactive Automation scripts: Range limits of a numeric IBlockDefinition would be ignored \[ID 33419\]
+#### Interactive automation scripts: Range limits of a numeric IBlockDefinition would be ignored \[ID 33419\]
 
-When an Automation script was launch from the Dashboards app or from a custom web app, in some cases, the range limits of a numeric IBlockDefinition would be ignored when you clicked the Up or Down button.
+When an automation script was launch from the Dashboards app or from a custom web app, in some cases, the range limits of a numeric IBlockDefinition would be ignored when you clicked the Up or Down button.
 
 #### Automation scripts: Problem with processor directives \[ID 33424\]
 
-Up to now, the following preprocessor directives would incorrectly be inserted into the Automation script code, causing syntax errors to appear on the incorrect lines.
+Up to now, the following preprocessor directives would incorrectly be inserted into the automation script code, causing syntax errors to appear on the incorrect lines.
 
 - #define DBInfo
 - #define DCFv1
@@ -563,15 +563,15 @@ If, in the Ticketing app, you tried to edit a ticket of a domain linked to an el
 
 #### Problem when trying to migrate elements of which the name contained square brackets \[ID 33455\]
 
-When you tried to migrate an element with a name containing square brackets (e.g. “\[HQ\] Main Switch”), in some cases, the operation could fail with an error message like “Illegal 'Reference Protocol' syntax”.
+When you tried to migrate an element with a name containing square brackets (e.g., “\[HQ\] Main Switch”), in some cases, the operation could fail with an error message like “Illegal 'Reference Protocol' syntax”.
 
 #### DataMiner Cube - Visual Overview: Problems with History Mode shape data field \[ID 33456\]
 
 When a shape linked to a parameter had a *History Mode* shape data field set to “State=On”, in some cases, no units would be shown. Also, in case of a parameter with discreet values, the shape would incorrectly show the actual value instead of the display value.
 
-#### Interactive Automation scripts: Tree view component would incorrectly collapse when selecting an item that unselected the previously selected item \[ID 33480\]
+#### Interactive automation scripts: Tree view component would incorrectly collapse when selecting an item that unselected the previously selected item \[ID 33480\]
 
-When, in a tree view component of an interactive Automation script, you selected an item that unselected the previously selected item, in some cases, the entire tree view component would incorrectly collapse.
+When, in a tree view component of an interactive automation script, you selected an item that unselected the previously selected item, in some cases, the entire tree view component would incorrectly collapse.
 
 #### Problem when running multiple GQI queries simultaneously \[ID 33482\]
 
@@ -583,7 +583,7 @@ A number of issues with NATS request/response actions have been solved.
 
 #### Automation: SetParameterByPrimaryKey would fail to update a write-only parameter when using the parameter name as argument \[ID 33511\]
 
-When, from an Automation script, a write parameter in a column of a table inside an element was updated using a ScriptDummy.SetParameterByPrimaryKey call with the parameter name as argument, the update would fail when that write parameter did not have a matching read parameter.
+When, from an automation script, a write parameter in a column of a table inside an element was updated using a ScriptDummy.SetParameterByPrimaryKey call with the parameter name as argument, the update would fail when that write parameter did not have a matching read parameter.
 
 #### Service & Resource Management: Problem when booking all concurrency of a resource \[ID 33516\]
 
@@ -595,7 +595,7 @@ When a DVE child element or a virtual function was deleted, all data related to 
 
 #### VerifyClusterPorts.dmupgrade package failed to run when it no longer had its original name \[ID 33529\]
 
-When the VerifyClusterPorts.dmupgrade package no longer had its original name (e.g. “VerfiyClusterPorts (1).dmupgrade”), it would fail to run.
+When the VerifyClusterPorts.dmupgrade package no longer had its original name (e.g., “VerfiyClusterPorts (1).dmupgrade”), it would fail to run.
 
 From now on, the name of the package is allowed to have a prefix and/or a suffix. In other words, its name must match \*VerifyClusterPorts\*.dmupgrade.
 

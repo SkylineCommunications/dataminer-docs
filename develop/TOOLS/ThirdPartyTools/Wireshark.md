@@ -98,7 +98,7 @@ The *delta displayed* column shows the time between displayed packets. Adding th
 
 ### Avoid leaving a capture running for too long
 
-It is essential not to leave a Wireshark capture running for too long (e.g. double-check when you close a remote desktop session), as this can use up all memory.
+It is essential not to leave a Wireshark capture running for too long (e.g., double-check when you close a remote desktop session), as this can use up all memory.
 
 To prevent situations where a Wireshark capture keeps running for too long, you can configure the following setting in the *Output* tab (*Capture > Options*):
 
@@ -125,7 +125,7 @@ You can then export the filtered packets (*File > Export Specified/Packets*) to 
 
 > [!NOTE]
 >
-> - To be able to filter frames based on a specific field in the network protocol, they need to be decoded correctly. If the traffic was sent to a port that is not well known (e.g. a port different from the 80/tcp for HTTP traffic), that might not be the case. However, Wireshark allows you to change the type. To do so, right-click the frame that matches the traffic and select *Decode As*. The dialog box allows you to tweak how the stream should get decoded based on a particular field value, like the destination port.
+> - To be able to filter frames based on a specific field in the network protocol, they need to be decoded correctly. If the traffic was sent to a port that is not well known (e.g., a port different from the 80/tcp for HTTP traffic), that might not be the case. However, Wireshark allows you to change the type. To do so, right-click the frame that matches the traffic and select *Decode As*. The dialog box allows you to tweak how the stream should get decoded based on a particular field value, like the destination port.
 > - In case you are only interested in the packets of a particular TCP stream, you can make use of Wireshark’s ability to follow a TCP stream. Select a TCP packet in the packet list of the stream/connection you are interested in and then select *Follow > TCP Stream* from the Wireshark Tools menu (or use the context menu in the packet list). Wireshark will then set a display filter and pop up a dialog box with all the data from the TCP stream laid out in order.
 
 > [!TIP]
@@ -137,6 +137,6 @@ Wireshark will capture what is actually available on the wire. This means only t
 
 Exceptions to this can apply in the following situations:
 
-- When the NIC is connected to a virtual switch (e.g. in ESXi or Hyper-V), it could be set up to accept promiscuous mode requests. This is not recommended in a production environment.
+- When the NIC is connected to a virtual switch (e.g., in ESXi or Hyper-V), it could be set up to accept promiscuous mode requests. This is not recommended in a production environment.
 
-- When you are not connected to a switch (e.g. a hub) or when the switch is suffering from MAC address flooding. However, this should not occur in a healthy network.
+- When you are not connected to a switch (e.g., a hub) or when the switch is suffering from MAC address flooding. However, this should not occur in a healthy network.

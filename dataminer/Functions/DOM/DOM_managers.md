@@ -10,7 +10,7 @@ The DOM manager handles every request related to a specific set of models, logic
 
 > [!NOTE]
 >
-> - Logging for each DOM manager is done in a separate log file with the name "SLDomManager_{moduleId}", e.g. "SLDomManager_my_module.txt".
+> - Logging for each DOM manager is done in a separate log file with the name "SLDomManager_{moduleId}", e.g., "SLDomManager_my_module.txt".
 > - For more information on backing up the data of a DOM manager, refer to [DOM data storage](xref:DOM_data_storage#backups).
 
 ## Module ID
@@ -23,7 +23,7 @@ A DOM manager gets initialized in SLNet as soon as the first call arrives for it
 
 The following logic flow applies:
 
-1. DataMiner receives a message for an unknown manager (e.g. from a script or application).
+1. DataMiner receives a message for an unknown manager (e.g., from a script or application).
 
 1. The object type is checked to see if a custom manager can be created.
 

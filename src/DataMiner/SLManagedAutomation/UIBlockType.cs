@@ -1,7 +1,7 @@
 ﻿namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// Specifies the of a dialog box item in an interactive Automation script.
+	/// Specifies the of a dialog box item in an interactive automation script.
 	/// </summary>
 	/// <remarks>
 	/// <para>Refer to <see href="xref:UIBlockTypesOverview">UIBlockType overview</see>.</para>
@@ -28,7 +28,8 @@
 		/// Text box.
 		/// </summary>
 		/// <remarks>
-		/// <para>This control can be used with a ‘WantsOnChange’ property, which prevents updates being sent after a single character is changed in a text box. See <see href="xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange*">WantsOnChange</see>.</para>
+		/// <para>This control can be used with a ‘WantsOnChange’ property, which prevents updates from being sent after a single character is changed in a text box. See <see href="xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnChange*">WantsOnChange</see>.</para>
+		/// <para>Use <see cref="UIBlockDefinition.IsMultiline"/> to allow a user to input multiple lines.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>

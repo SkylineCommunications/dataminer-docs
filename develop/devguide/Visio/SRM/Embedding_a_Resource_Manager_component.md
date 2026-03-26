@@ -18,9 +18,9 @@ In addition, you can specify options using various other shape data fields, such
 | Shape data field | Value | Description |
 |--|--|--|
 | ComponentOptions | SessionVariablePrefix=\[prefix\] | When you specify this option, a unique prefix is assigned to the session variable names. This can be used in order to avoid any conflicts. For example, if you specify the value `SessionVariablePrefix=RM`, the session variable *YaxisResources* becomes *RMYaxisResources*. |
-| ComponentOptions | DefaultBandHeight= | Sets the default height of the timeline bands. This value has to be an integer greater than 10, e.g. `DefaultBandHeight=100`. Any height specified using a JSON object in a *YaxisResources* session variable will override this value. See [YAxisResources](#yaxisresources). |
+| ComponentOptions | DefaultBandHeight= | Sets the default height of the timeline bands. This value has to be an integer greater than 10, e.g., `DefaultBandHeight=100`. Any height specified using a JSON object in a *YaxisResources* session variable will override this value. See [YAxisResources](#yaxisresources). |
 | ComponentOptions | EnableFollowMode | Activates the follow mode. This will make the timeline move along with the current time. When you navigate away from the line that represents now while follow mode is enabled, follow mode will temporarily be paused. As soon as you navigate back in view of the line that represents now, follow mode will be activated again. |
-| ComponentOptions | AutoReEnableFollowModeTimeout= | Sets the number of seconds after which the follow mode will be reactivated each time a user jumps to another time range. This value has to be an integer greater than 0, e.g. `AutoReEnableFollowModeTimeout=5` |
+| ComponentOptions | AutoReEnableFollowModeTimeout= | Sets the number of seconds after which the follow mode will be reactivated each time a user jumps to another time range. This value has to be an integer greater than 0, e.g., `AutoReEnableFollowModeTimeout=5` |
 | ComponentOptions | UseCommandsForCustomActions | Allows the timeline to be used in conjunction with command control shapes to select an action mode. See [Configuring command controls for a Resource Manager component](#configuring-command-controls-for-a-resource-manager-component). |
 | ComponentActions | \[{...json...}\] | Custom actions, specified with JSON objects. For more information, see [Specifying custom actions in a Resource Manager component](#specifying-custom-actions-in-a-resource-manager-component). |
 | Options | CardVariable | This option can be used to specify that the session variables mentioned in the other shape data fields are card variables, not page variables. It is also possible to configure a different session variable scope, as specified in [Indicating the scope of the variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable#indicating-the-scope-of-the-variable). |
@@ -244,7 +244,7 @@ When a booking block is selected, this session variable will contain a comma-sep
 
 ### TimerangeOfSelectedReservation
 
-When a booking block is selected, this session variable will contain the start-stop time range of the booking, inflated by 10%. Values in this session variable will be serialized, e.g. "5248098399646517511;5248392353962787511".
+When a booking block is selected, this session variable will contain the start-stop time range of the booking, inflated by 10%. Values in this session variable will be serialized, e.g., "5248098399646517511;5248392353962787511".
 
 ### Viewport
 
@@ -252,7 +252,7 @@ When you pan or zoom in on the timeline, this session variable will contain the 
 
 When this session variable is set by an external source, the timeline component will be updated to show the new time range.
 
-The value can be set in serialized form (e.g. "5248098399646517511;5248392353962787511") or using a "start;stop" format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. "2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z" in ISO 8601 format, or "2017-08-07 9:42:01;2017-08-10 15:05:53" in UTC format "yyyy-mm-dd hh:mm:ss").
+The value can be set in serialized form (e.g., "5248098399646517511;5248392353962787511") or using a "start;stop" format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g., "2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z" in ISO 8601 format, or "2017-08-07 9:42:01;2017-08-10 15:05:53" in UTC format "yyyy-mm-dd hh:mm:ss").
 
 > [!NOTE]
 > If both *Viewport* and *Navigate* are used, the *Navigate* variable will be processed after the *Viewport* variable.
@@ -390,7 +390,7 @@ The JSON object for the custom bands can be configured with the following proper
 
 - **Background**: Color. The background color for the band.
 
-- **Height**: GridLength. The height of the band, either relative (e.g. *3\**), absolute (e.g. *200*) or *auto*. When empty, a default absolute height of 64 pixels is used. Not applicable when *ItemHeight* is filled in.
+- **Height**: GridLength. The height of the band, either relative (e.g., *3\**), absolute (e.g., *200*) or *auto*. When empty, a default absolute height of 64 pixels is used. Not applicable when *ItemHeight* is filled in.
 
 - **MinimumHeight**: Integer. The absolute minimum height, in case Height is relative or *ItemHeight* is used.
 
@@ -457,7 +457,7 @@ To have shapes display information about an object selected on the timeline, the
 
 - **SelectedReservationDefinition**: If the selected block is a booking instance linked to a particular booking definition, this variable will be filled in with the GUID of that definition.
 
-- **SelectedTimeRange**: Available from DataMiner 10.2.1/10.3.0 onwards. The value of this variable can be set in serialized form (e.g. "5248098399646517511;5248392353962787511") or using a "start;stop" format. In the latter case, start and stop must be timestamps that can be parsed by datetime (e.g. "2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z" in ISO 8601 format, or "17/09/2017 9:42:01;23/08/2018 15:05:53" in local format).
+- **SelectedTimeRange**: Available from DataMiner 10.2.1/10.3.0 onwards. The value of this variable can be set in serialized form (e.g., "5248098399646517511;5248392353962787511") or using a "start;stop" format. In the latter case, start and stop must be timestamps that can be parsed by datetime (e.g., "2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z" in ISO 8601 format, or "17/09/2017 9:42:01;23/08/2018 15:05:53" in local format).
 
   > [!NOTE]
   > Prior to DataMiner 10.3.0/10.2.3, when a resource item is selected, the *SelectedTimeRange* session variable is cleared. From DataMiner 10.2.3 to 10.2.7, it is only cleared when the time range selection shown in the timeline area is changed. From DataMiner 10.3.0/10.2.8 onwards, the session variable is cleared when the selection is cleared.
@@ -495,7 +495,7 @@ The **ComponentActions** shape data field should contain a JSON object with the 
 
 - **Type**: Can be "script" or "set". Determines the type of action to be executed:
 
-  - *script*: Run an Automation script.
+  - *script*: Run an automation script.
 
   - *set*: Perform a parameter set.
 
@@ -514,7 +514,7 @@ The **ComponentActions** shape data field should contain a JSON object with the 
   - *Set\|DmaID/ElementID\|ParameterID:TableRowKey\|NewValue\|Options*
 
   > [!NOTE]
-  > You can omit trailing pipe characters when you specify the Automation script. For example, instead of specifying "Script:MyScript\|\|\|\|\|", you can simply specify "Script:MyScript".
+  > You can omit trailing pipe characters when you specify the automation script. For example, instead of specifying "Script:MyScript\|\|\|\|\|", you can simply specify "Script:MyScript".
 
   Within this string, the following placeholders can be used:
 
@@ -563,7 +563,7 @@ You can configure this as follows:
     | Component      | Name of the Visio component: *Reservations* or *Bookings*. |
     | ComponentActions | Custom actions, specified with JSON objects. See [Specifying custom actions in a Resource Manager component](#specifying-custom-actions-in-a-resource-manager-component). |
     | ComponentOptions | *UseCommandsForCustomActions* |
-    | CommandPrefix    | Optional prefix added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g. "*One\_*"). |
+    | CommandPrefix    | Optional prefix added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g., "*One\_*"). |
 
 1. Add the following shape data fields to the command control shape:
 
@@ -633,7 +633,7 @@ The value of these properties can be defined as follows:
 
 - Using (A)RGB Integer Functional Notation
 
-  - 3 integer values separated by commas. Can be preceded by a fourth integer value (i.e. an alpha value). Each of these values must be between 0 and 255.
+  - 3 integer values separated by commas. Can be preceded by a fourth integer value (i.e., an alpha value). Each of these values must be between 0 and 255.
 
   - Template: "R,G,B" or "A,R,G,B" - A (alpha), R (red), G (green), B (blue)
 

@@ -2,9 +2,9 @@
 uid: LogicQActionsAutomationScriptExecution
 ---
 
-# Starting an Automation script from a QAction
+# Starting an automation script from a QAction
 
-To start an Automation script from a QAction, the SLNet message "ExecuteScriptMessage" can be used. You can send this message using the [ExecuteScript](xref:Skyline.DataMiner.Scripting.SLProtocol.ExecuteScript(System.String)) method on SLProtocol.<!-- RN 24475 -->
+To start an automation script from a QAction, the SLNet message "ExecuteScriptMessage" can be used. You can send this message using the [ExecuteScript](xref:Skyline.DataMiner.Scripting.SLProtocol.ExecuteScript(System.String)) method on SLProtocol.<!-- RN 24475 -->
 
 ```csharp
 public static void Run(SLProtocol protocol)
@@ -39,4 +39,4 @@ public static void Run(SLProtocol protocol)
 For more information, refer to Skyline.DataMiner.Net.Messages.
 
 > [!NOTE]
-> To start an Automation script from a QAction, the use of the Interop.SLAutomation DLL is now deprecated. The ExecuteScriptMessage should be used instead.
+> To start an automation script from a QAction, the use of the Interop.SLAutomation DLL is now deprecated. The ExecuteScriptMessage should be used instead.

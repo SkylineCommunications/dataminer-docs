@@ -27,7 +27,7 @@ To investigate the issue, they will need [basic information](#basic-information)
 
 1. In the dropdown box, select the relevant DIS items and copy the logging.
 
-   You can select several output panes in the dropdown box (e.g. *Build*, *Build Order*, *DIS*, *Tests*, etc.). Some of these come from Visual Studio, the others from extensions you have installed. Not all of these may be shown, as they only appear when there is any logging for them. Several items can be selected for DIS:
+   You can select several output panes in the dropdown box (e.g., *Build*, *Build Order*, *DIS*, *Tests*, etc.). Some of these come from Visual Studio, the others from extensions you have installed. Not all of these may be shown, as they only appear when there is any logging for them. Several items can be selected for DIS:
 
    - *DIS*
 
@@ -40,7 +40,7 @@ To investigate the issue, they will need [basic information](#basic-information)
    This list may expand in the future, but the format stays the same: *DIS - {topic}*.
 
 > [!IMPORTANT]
-> Make sure to copy/paste the complete contents of the output panes, because if e.g. exceptions occur, the stack trace can be quite long, and with a screenshot not everything will be visible. We recommend copying the content to a text file with the same name as the output pane. This way, it will be clear for the DIS team where the issue occurred, which will help point their investigation in the right direction.
+> Make sure to copy/paste the complete contents of the output panes, because if e.g., exceptions occur, the stack trace can be quite long, and with a screenshot not everything will be visible. We recommend copying the content to a text file with the same name as the output pane. This way, it will be clear for the DIS team where the issue occurred, which will help point their investigation in the right direction.
 
 ## Visual Studio Solution
 

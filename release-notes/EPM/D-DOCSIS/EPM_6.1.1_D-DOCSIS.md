@@ -36,7 +36,7 @@ The CCAP WM DCF workflow will now only ingest files that have the same DMA ID as
 
 #### Juniper Networks Manager now uses element-level EPMConfig.xml file \[ID 32899\]
 
-Up to now, the cell used for the topology exposer had to be hard-coded in the Juniper Networks Manager CIN Platform connector, which could cause issues when that connector was used for different topology types, e.g. when it was used for an amplifier and a node element and their temperature sensor alarms were linked to the EPM topology.
+Up to now, the cell used for the topology exposer had to be hard-coded in the Juniper Networks Manager CIN Platform connector, which could cause issues when that connector was used for different topology types, e.g., when it was used for an amplifier and a node element and their temperature sensor alarms were linked to the EPM topology.
 
 Since [DataMiner 10.2.2](xref:General_Feature_Release_10.2.2) (RN 32028), it is possible to specify an alias for a topology cell for a specific element by means of an *EPMConfig.xml* file. The connector will now make use of this feature. When an element starts up, it will check if an *EPMConfig.xml* file is needed for the exposer logic. If it is, it will create the file and restart, so that it can use the *EPMConfig.xml* file to make sure that the correct exposer tables are displayed in the Data section of the topology card when the Core Leaf entity is selected, and that the alarms from the exposed tables are correctly linked to the EPM entity.
 

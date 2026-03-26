@@ -45,9 +45,9 @@ This check can return the following error messages:
 
 ### Enhancements
 
-#### Enhanced performance when connecting to a DMA with a large number of Automation scripts [ID 36899]
+#### Enhanced performance when connecting to a DMA with a large number of automation scripts [ID 36899]
 
-Because of a number of enhancements, overall performance has increased when connecting to a DataMiner Agent with a large number of Automation scripts.
+Because of a number of enhancements, overall performance has increased when connecting to a DataMiner Agent with a large number of automation scripts.
 
 #### DIS Validator: 'DveColumnOptionElement' check will no longer be performed when validating an exported protocol [ID 36921]
 
@@ -57,7 +57,7 @@ The *DveColumnOptionElement* check will no longer be performed when validating a
 
 #### DIS would incorrectly consider code analysis files outdated when it did not have the correct line endings [ID 36771]
 
-Up to now, when DIS checked whether the code analysis files were up to date, it would incorrectly consider a file outdated when it did not have the correct line endings (e.g. Unix line endings vs. Windows line endings). From now on, DIS will ignore the line endings when checking whether the code analysis files are up to date.
+Up to now, when DIS checked whether the code analysis files were up to date, it would incorrectly consider a file outdated when it did not have the correct line endings (e.g., Unix line endings vs. Windows line endings). From now on, DIS will ignore the line endings when checking whether the code analysis files are up to date.
 
 #### Snippets would not be available or would not be updated [ID 36950]
 

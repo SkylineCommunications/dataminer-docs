@@ -7,17 +7,17 @@ uid: Service_Orchestration_LSO_script
 > [!TIP]
 > An example LSO script is available as part of the framework: *SRM_LSOTemplate*.<!-- RN 23626 -->
 
-LSO scripts are responsible for orchestrating the configuration of resources, i.e. launching Profile-Load Scripts to configure the resources included in bookings. See [Lifecycle Service Orchestration (LSO) script](xref:srm_scripting#lifecycle-service-orchestration-lso-script).
+LSO scripts are responsible for orchestrating the configuration of resources, i.e., launching Profile-Load Scripts to configure the resources included in bookings. See [Lifecycle Service Orchestration (LSO) script](xref:srm_scripting#lifecycle-service-orchestration-lso-script).
 
-When an event needs to be triggered (e.g. end of pre-roll) for a specific booking, the SRM framework will look up the [target service state](xref:Service_Orchestration_service_states) defined in the Booking Manager app (e.g. START). Based on this, it will then identify the LSO script to run by looking at the list of [actions defined in the service definition](xref:Service_Orchestration_service_states#configuring-the-action-linked-to-each-service-state).
+When an event needs to be triggered (e.g., end of pre-roll) for a specific booking, the SRM framework will look up the [target service state](xref:Service_Orchestration_service_states) defined in the Booking Manager app (e.g., START). Based on this, it will then identify the LSO script to run by looking at the list of [actions defined in the service definition](xref:Service_Orchestration_service_states#configuring-the-action-linked-to-each-service-state).
 
 ## Main classes
 
 LSO scripts can make use of the following classes to interact with bookings and their included resources:
 
 - [LsoEnhancedAction](#lsoenhancedaction-class): Used to retrieve information about the event or the target service state triggering the LSO script.
-- [SrmBookingConfiguration](#srmbookingconfiguration-class): Used to interact with the booking and related objects (e.g. get a list of resources).
-- [SrmResourceConfiguration](#srmresourceconfiguration-class): Used to interact with the resource/function DVE (e.g. apply a profile).
+- [SrmBookingConfiguration](#srmbookingconfiguration-class): Used to interact with the booking and related objects (e.g., get a list of resources).
+- [SrmResourceConfiguration](#srmresourceconfiguration-class): Used to interact with the resource/function DVE (e.g., apply a profile).
 
 > [!TIP]
 > Load *SLSRMLibrary.dll* in a software development environment to get an exhaustive list of the available methods.
@@ -170,7 +170,7 @@ In case an LSO script fails and throws an exception or exits with `engine.ExitFa
 
 The booking lifecycle state will also be adjusted to one of the following values:<!-- RN 33121 -->
 
-- *Failed Service Pre-Roll*: If the LSO script failed at the start of a booking, i.e. at the start of the pre-roll stage.
+- *Failed Service Pre-Roll*: If the LSO script failed at the start of a booking, i.e., at the start of the pre-roll stage.
 
 - *Failed Service Active*: If the LSO script failed at the end of the pre-roll stage.
 

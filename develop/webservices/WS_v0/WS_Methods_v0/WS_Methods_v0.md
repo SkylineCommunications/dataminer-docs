@@ -13,7 +13,7 @@ uid: WS_Methods_v0
 |--|--|
 | [CleanupConnections](xref:CleanupConnections) | Closes all connections that have been idle for a specific period of time. |
 | [Connect](xref:Connect) | Logs on to the DataMiner System and requests authentication. |
-| [CreateAutomationScript](xref:CreateAutomationScript) | Creates DataMiner Automation scripts consisting of statements that each contain a C# code block. |
+| [CreateAutomationScript](xref:CreateAutomationScript) | Creates DataMiner automation scripts consisting of statements that each contain a C# code block. |
 | [GetActiveAlarmsFromElement](xref:GetActiveAlarmsFromElement) | Retrieves a list of all the alarms of a specific element (referenced by name). |
 | [GetActiveAlarmsFromView](xref:GetActiveAlarmsFromView) | Retrieves a list of all the alarms of a specific view (referenced by name). |
 | [GetElementByPollingIp](xref:GetElementByPollingIp) | Retrieves a list of all the elements that poll a specific IP address. |
@@ -35,5 +35,5 @@ uid: WS_Methods_v0
 | [GetServicesAlarmStateByID](xref:GetServicesAlarmStateByID) | Retrieves the current alarm state of a specific service (referenced by ID). |
 | [GetServicesAlarmStateByName](xref:GetServicesAlarmStateByName) | Retrieves the current alarm state of a specific service (referenced by name). |
 | [GetSubViews](xref:GetSubViews) | Retrieves the names of all subviews of a specified view. |
-| [RequestLoginAsTicket](xref:RequestLoginAsTicket1) | Retrieves a logon ticket that can then be added to e.g. a DataMiner Maps URL. |
+| [RequestLoginAsTicket](xref:RequestLoginAsTicket1) | Retrieves a logon ticket that can then be added to, for example, a DataMiner Maps URL. |
 | [SetParameterValueByElementID](xref:SetParameterValueByElementID) | Updates the value of a parameter linked to an element (referenced by ID). |

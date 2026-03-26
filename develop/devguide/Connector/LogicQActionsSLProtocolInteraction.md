@@ -9,7 +9,7 @@ uid: LogicQActionsSLProtocolInteraction
 Often, a QAction needs to retrieve parameter values from the SLProtocol process. There are two different ways to retrieve parameter values in a Quick Action:
 
 - By including the parameter IDs in the [inputParameters](xref:Protocol.QActions.QAction-inputParameters) attribute.
-- By retrieving the values via an instance of the SLProtocol or SLProtocolExt interface (e.g. by using the [GetParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameter(System.Int32)) method).
+- By retrieving the values via an instance of the SLProtocol or SLProtocolExt interface (e.g., by using the [GetParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameter(System.Int32)) method).
 
 Which approach should be used to retrieve data from the SLProtocol process depends on the situation:
 

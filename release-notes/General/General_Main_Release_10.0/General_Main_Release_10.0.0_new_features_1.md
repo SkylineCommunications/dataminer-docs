@@ -14,7 +14,7 @@ uid: General_Main_Release_10.0.0_new_features_1
 
 #### DataMiner Indexing \[ID 13370\]\[ID 13406\]\[ID 13504\]\[ID 13571\]\[ID 13623\]\[ID 13622\]\[ID 13629\] \[ID 13695\]\[ID 13769\]\[ID 13912\]\[ID 14001\]\[ID 14038\]\[ID 16287\]\[ID 16896\]\[ID 16915\]\[ID 16935\] \[ID 16959\]\[ID 17081\]\[ID 17166\]\[ID 17328\]\[ID 17851\]\[ID 18562\]\[ID 18714\]\[ID 19337\]\[ID 19437\] \[ID 19443\]\[ID 19691\]\[ID 20373\]\[ID 20845\]\[ID 20998\]\[ID 21205\]\[ID 21257\]\[ID 21634\]\[ID 22378\] \[ID 22927\]\[ID 23049\]\[ID 23998\]\[ID 24054\]\[ID 24158\]
 
-On DataMiner Agents running Cassandra, it is possible to install a dedicated indexing database (e.g. Elasticsearch). If this so-called Indexing Engine is installed, new search features will now become available in the Alarm Console. Additional features are also being developed that will make use of the Indexing Engine in the future.
+On DataMiner Agents running Cassandra, it is possible to install a dedicated indexing database (e.g., Elasticsearch). If this so-called Indexing Engine is installed, new search features will now become available in the Alarm Console. Additional features are also being developed that will make use of the Indexing Engine in the future.
 
 ##### Indexing system requirements
 
@@ -248,7 +248,7 @@ Most actions involving jobs can be done with buttons in the header bar of the ap
   When editing a job, you can save that job as a job template.
 
   - To create a job template, click the downward arrow in the top-right corner, and click *Save template*.
-  - To apply a job template (i.e. to fill the fields of the job you are editing with the field values stored in the template), click the downward arrow in the top-right corner, select a template from the list, and click *Apply template*.
+  - To apply a job template (i.e., to fill the fields of the job you are editing with the field values stored in the template), click the downward arrow in the top-right corner, select a template from the list, and click *Apply template*.
 
   > [!NOTE]
   > Auto-increment and booking fields are not included in job templates.
@@ -319,7 +319,7 @@ A number of new methods have been added to the Web Services API v1 to support th
 
 #### SLSNMPManager: A notification will now be generated when a received SNMPv3 trap cannot be processed \[ID 20340\]
 
-When an SNMP manager receives an SNMPv3 trap or inform message that cannot be processed (e.g. due to authentication problems), it will now generate a notification.
+When an SNMP manager receives an SNMPv3 trap or inform message that cannot be processed (e.g., due to authentication problems), it will now generate a notification.
 
 Note that for this feature to work, the *SNMPv3* tag in the DMA’s *DataMiner.xml* file has to have its *generateNoticeOnIncorrectTrapReceived* attribute set to “true”. See the following example:
 
@@ -366,7 +366,7 @@ If the DataMiner.xml file does not contain alarm color overrides, DataMiner will
 
 #### Information event will be generated when a TTL setting is changed \[ID 21265\]
 
-From now on, an information event will be generated when a TTL setting is changed by a user or an Automation script.
+From now on, an information event will be generated when a TTL setting is changed by a user or an automation script.
 
 > [!NOTE]
 > Information events of this type will have a description that starts with “\[TTL\]”.
@@ -417,7 +417,7 @@ Default value: 60 times (with 30-second intervals)
 
 It is now possible to upload and run Best Practice Analysis (BPA) tests using the SLNetClientTest tool.
 
-BPA tests, which are meant to be short checks, can be configured to run either once or periodically (e.g. once a day). A BPA test can be run to verify, for example, whether all agents in a DataMiner System are set to use the same time server.
+BPA tests, which are meant to be short checks, can be configured to run either once or periodically (e.g., once a day). A BPA test can be run to verify, for example, whether all agents in a DataMiner System are set to use the same time server.
 
 If a BPA test takes more than 15 minutes, the SLNet process may throw a runtime error.
 
@@ -504,7 +504,7 @@ To check if the certificate was correctly installed, open an internet browser, a
 
 > [!NOTE]
 >
-> - In production environments, it is recommended to use the domain certificate of the network (e.g. smseagle.skyline.be) and to generate a server certificate for the SMSEagle device that is trusted by the root skyline.be certificate.
+> - In production environments, it is recommended to use the domain certificate of the network (e.g., smseagle.skyline.be) and to generate a server certificate for the SMSEagle device that is trusted by the root skyline.be certificate.
 > - The SMSEagle firmware supports HTTPS as from version 2.7.
 > - When using an SMSEagle device with firmware version 3.32 it is not possible to retrieve the signal strength due to a bug in said firmware.
 
@@ -537,7 +537,7 @@ When, in a system with a Cassandra database, average trending for a parameter ha
 
 It is now possible to edit properties of alarms that have already been closed. This will create a new alarm entry with the updated properties in the alarm tree of the closed alarm.
 
-To update a property of a closed alarm, in Cube, select the root alarm in the alarm tree and then edit the property. Alternatively, in an Automation script, use the *SetDataMinerInfoMessage* with NT_EDIT_PROPERTY (62).
+To update a property of a closed alarm, in Cube, select the root alarm in the alarm tree and then edit the property. Alternatively, in an automation script, use the *SetDataMinerInfoMessage* with NT_EDIT_PROPERTY (62).
 
 #### DBMaintenanceDMS.xml: TTL settings can now be specified for all custom data types defined in an Elastic database \[ID 24549\]\[ID 24575\]\[ID 24846\]
 
@@ -577,7 +577,7 @@ A Cube user trying to log in to a DataMiner Agent using external authentication 
 
 #### HTML5 apps: External user authentication via SAML \[23905\]
 
-The DataMiner HTML5 apps (e.g. Dashboards, Jobs, etc.) now all support external user authentication via Security Assertion Markup Language (SAML).
+The DataMiner HTML5 apps (e.g., Dashboards, Jobs, etc.) now all support external user authentication via Security Assertion Markup Language (SAML).
 
 ### DMS Protocols
 

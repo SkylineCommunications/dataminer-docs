@@ -78,7 +78,7 @@ Next to the [RegexReplace:x,y,z] placeholder, you can now use the [RegexMatch:x,
 
 This new placeholder, which basically takes a regular expression and an input, will return the parts of the input that match the regular expression.
 
-For example, `[RegexMatch: [a-z], aBc]` will return all the lowercase letters in the input, i.e. "ac".
+For example, `[RegexMatch: [a-z], aBc]` will return all the lowercase letters in the input, i.e., "ac".
 
 When multiple matches are found within the input, by default, all matches will be concatenated and returned as one single string, without any separators.
 
@@ -210,7 +210,7 @@ When a shape was configured to be shown or hidden depending on the value of a pl
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-In DataMiner Cube, there are two places where you can find a link to your DMA's root page (e.g. <https://myDMA/root/>):
+In DataMiner Cube, there are two places where you can find a link to your DMA's root page (e.g., <https://myDMA/root/>):
 
 - the *DataMiner web apps* link on the Cube home page, and
 - the *Open DataMiner web apps* link on the user menu.
@@ -221,7 +221,7 @@ Up to now, when you clicked one of those links when using a STaaS or DaaS system
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-When Cube was connected to a DataMiner Agent via a gRPC connection, in some cases, the URLs of e.g. log files would contain an incorrect hostname, making it impossible to retrieve those files from the DataMiner Agent.
+When Cube was connected to a DataMiner Agent via a gRPC connection, in some cases, the URLs of e.g., log files would contain an incorrect hostname, making it impossible to retrieve those files from the DataMiner Agent.
 
 #### Documents: Issues fixed [ID 39876]
 

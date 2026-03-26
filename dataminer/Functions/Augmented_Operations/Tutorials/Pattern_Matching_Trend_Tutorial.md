@@ -254,7 +254,7 @@ A new *Patterns* tab will now be shown in the Alarm Console, listing the pattern
 ![Cleaning up patterns in your system](~/dataminer/images/tutorial_pattern_matching_cleanup.gif)
 
 > [!IMPORTANT]
-> We want to keep improving our pattern matching feature, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us examples of patterns that are valuable for your operations and/or situations where pattern matching can be improved (e.g. the feature did not perform as well as you had hoped).
+> We want to keep improving our pattern matching feature, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us examples of patterns that are valuable for your operations and/or situations where pattern matching can be improved (e.g., the feature did not perform as well as you had hoped).
 >
 > Use the following email format to send us your examples:
 >

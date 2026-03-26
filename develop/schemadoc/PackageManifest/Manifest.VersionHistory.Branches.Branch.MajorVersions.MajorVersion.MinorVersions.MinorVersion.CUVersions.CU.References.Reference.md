@@ -4,7 +4,7 @@ uid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVer
 
 # Reference element
 
-Provides a reference to e.g. a registration system.
+Provides a reference to, for example, a registration system.
 
 ## Type
 

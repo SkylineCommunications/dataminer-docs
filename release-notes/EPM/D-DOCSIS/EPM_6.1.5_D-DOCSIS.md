@@ -35,7 +35,7 @@ Up to now, the *CISCO CIN Manager Platform* connector did not use trailers for S
 
 A number of improvements have been implemented to the Skyline CCAP Platform EPM pages:
 
-- The Visual pages with a side panel, i.e. *CM Overview*, *RPD Association*, and *Node Utilization*, now show all available fields and buttons regardless of the resolution or aspect ratio used.
+- The Visual pages with a side panel, i.e., *CM Overview*, *RPD Association*, and *Node Utilization*, now show all available fields and buttons regardless of the resolution or aspect ratio used.
 
 - On the *CM Overview* page, you can now search for *Unknown* for the manufacturer.
 

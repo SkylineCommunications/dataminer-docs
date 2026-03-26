@@ -34,6 +34,6 @@ DataMiner is based on a non-exclusive upgrade model, meaning that users can skip
 
 ## Connector update policy
 
-Changes and evolutions of firmware on products (e.g. new metrics or functionality are added) are covered by an active Support Services agreement. This does not include cases where the interface is entirely deprecated by the vendor (e.g. there is a complete overhaul of the API or a brand-new API is introduced); in such cases, a new connector purchase will be required.
+Changes and evolutions of firmware on products (e.g., new metrics or functionality are added) are covered by an active Support Services agreement. This does not include cases where the interface is entirely deprecated by the vendor (e.g., there is a complete overhaul of the API or a brand-new API is introduced); in such cases, a new connector purchase will be required.
 
 In short, the DataMiner Support Services cover evolutions of a purchased DataMiner connector but not its replacement.

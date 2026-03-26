@@ -46,7 +46,7 @@ Expected duration: 20 minutes.
 
 1. Select *DataMiner Connector Solution* from the list of templates, and click *Next*.
 
-1. Enter a solution name, e.g. *MyPipelineTest*, and click *Next*.
+1. Enter a solution name, e.g., *MyPipelineTest*, and click *Next*.
 
 1. Enter the following information:
 

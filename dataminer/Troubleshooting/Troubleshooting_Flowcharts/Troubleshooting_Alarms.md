@@ -111,7 +111,7 @@ CreationIssue([Creation issue])
 AlarmTemplate{{"Check alarm template configuration."}}
 ProtocolDebug{{"Use the protocol debug tool to simulate. Click the node to go the relevant docs page."}}
 CanSimulate{{"Managed to simulate?"}}
-ReduceFeatures{{"Reduce the number of features used to narrow down the issue. (e.g. Hysteresis, conditional monitoring...) Click the node to go to a relevant docs page."}}
+ReduceFeatures{{"Reduce the number of features used to narrow down the issue. (e.g., Hysteresis, conditional monitoring...) Click the node to go to a relevant docs page."}}
 VerifyConfiguration{{"Verify if you have a clear issue, incorrect configuration or undefined behavior."}}
 NotFixedCOPS{{"Contact <a href="mailto:support@dataminer.services">support@dataminer.services</a>. Include all gathered information and steps taken."}}
 ExtraInfoNotFixed{{"1\. Check if the behavior is the same on a standalone parameter, column parameter, matrix parameter... <br>2\. Check the element logging. <br>3\. Contact <a href="mailto:support.data-core@skyline.be">support.data-core@skyline.be></a>. Include all gathered information and steps taken."}}

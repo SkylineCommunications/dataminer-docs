@@ -68,9 +68,9 @@ When an IS-04 node registers itself with the IS-04 registry, the node ID is now 
 
 When a backup cannot be stored in the Configuration Archive, the update progress on the *Configuration* > *Summary* page will now mention that the configuration backup has failed. It will also mention the cause of the failure if possible.
 
-#### IDP Process Automation scripts moved to different folder in Automation module \[ID 30442\]
+#### IDP Process automation scripts moved to different folder in Automation module \[ID 30442\]
 
-All IDP Process Automation scripts are now located in the folder *DataMiner Solutions\\IDP\\Processes* in the Automation module. The following scripts are included:
+All IDP Process automation scripts are now located in the folder *DataMiner Solutions\\IDP\\Processes* in the Automation module. The following scripts are included:
 
 - IDP_Configuration_TakeBackup
 - IDP_Discovery_Actions_Start

@@ -10,7 +10,7 @@ From DataMiner 9.5.0 [CU12]/9.6.3 onwards.<!-- RN 20426 -->
 
 ## Cause
 
-A failed login attempt will result in an additional attempt by SLNet in order to check if the password was expired, and Cube will also automatically and silently try to log in at startup with saved credentials, which will also lead to four additional login attempts in case the password had been changed. In addition, because of an issue in the software, Cube will also try to automatically reconnect every second in the background under certain conditions. As a result of this, if the security policy only allows a small number of login attempts (e.g. 5), one failed attempt can already cause a user to be locked out.
+A failed login attempt will result in an additional attempt by SLNet in order to check if the password was expired, and Cube will also automatically and silently try to log in at startup with saved credentials, which will also lead to four additional login attempts in case the password had been changed. In addition, because of an issue in the software, Cube will also try to automatically reconnect every second in the background under certain conditions. As a result of this, if the security policy only allows a small number of login attempts (e.g., 5), one failed attempt can already cause a user to be locked out.
 
 Note that this behavior will only occur with Windows users (local or domain), but not if external authentication is used (SAML, RADIUS, CROWD).
 
@@ -32,4 +32,4 @@ In case a local security policy is used:
 
 ## Description
 
-Users get locked out after a single failed login attempt, even if the security policy allows several attempts (e.g. 5).
+Users get locked out after a single failed login attempt, even if the security policy allows several attempts (e.g., 5).

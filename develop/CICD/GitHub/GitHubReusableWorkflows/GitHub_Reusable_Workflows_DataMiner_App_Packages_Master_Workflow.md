@@ -12,7 +12,7 @@ The DataMiner App Package Master Workflow should run on repositories containing 
 - Dataminer Package Project
 - Dataminer User-Defined API Project
 
-This workflow will act as a quality gate and code coverage collection, only creating and uploading one or more artifacts of your Automation script solution to your private storage in the Catalog if it passes the Skyline quality gate job.
+This workflow will act as a quality gate and code coverage collection, only creating and uploading one or more artifacts of your automation script solution to your private storage in the Catalog if it passes the Skyline quality gate job.
 
 The following actions will be performed:
 

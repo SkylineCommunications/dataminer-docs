@@ -154,7 +154,7 @@ Suppose parameters 1023 and 33 are defined as follows:
 </Param>
 ```
 
-Suppose when requesting the value of parameter 1023, 10 is returned. When parameter 33 is polled, the resulting OID in the request will be 1.3.6.1.2.1.10.127.1.3.3.1.10.10, i.e. the returned value of parameter 1023 is used as the instance.
+Suppose when requesting the value of parameter 1023, 10 is returned. When parameter 33 is polled, the resulting OID in the request will be 1.3.6.1.2.1.10.127.1.3.3.1.10.10, i.e., the returned value of parameter 1023 is used as the instance.
 
 ### table
 

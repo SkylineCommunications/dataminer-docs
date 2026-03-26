@@ -11,7 +11,7 @@ One of the main functionalities of DataMiner is to monitor devices. Most modern 
 
 However, there are still devices out there that do not have an Ethernet card. In most cases, those devices rely on serial communication or on IO pins. Here, we focus on devices that use serial communication, more particularly using the standards RS-232, RS-422 or RS-485.
 
-One of the first widely used serial communication standards was **RS-232**, which was introduced in 1962. Even today, devices are still in use that support this standard. RS-232 is a single-ended data transmission (one signal line) and can be used for cables up to 15 m (up to 300 m with low-capacitance cables). The original standard advises 25-pin (DB-25) connectors, but there are over 20 different connection variants described in the standard. In many devices, there are a lot of pins that are not used, and therefore, to reduce cost and to save space, smaller connectors came into use (e.g. DE-9 and recently also RJ-45 connectors).
+One of the first widely used serial communication standards was **RS-232**, which was introduced in 1962. Even today, devices are still in use that support this standard. RS-232 is a single-ended data transmission (one signal line) and can be used for cables up to 15 m (up to 300 m with low-capacitance cables). The original standard advises 25-pin (DB-25) connectors, but there are over 20 different connection variants described in the standard. In many devices, there are a lot of pins that are not used, and therefore, to reduce cost and to save space, smaller connectors came into use (e.g., DE-9 and recently also RJ-45 connectors).
 
 ![Connectors](~/dataminer/images/Connectors.png)
 

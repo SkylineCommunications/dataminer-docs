@@ -4,6 +4,18 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 25 March 2026 - Fix - CoreGateway 2.14.17 - Auto-sign in not working on remote access when a Failover pair switched
+
+When a Failover pair was switching, the CoreGateway on the Agent that was going online did not always receive the event that it was going online. As a result, the automatic sign-in when using remote access stopped working and a manual sign-in was required. This issue has been resolved.
+
+#### 16 February 2026 - Fix - CoreGateway 2.14.16 - Fixed version offloading
+
+In the Admin app, it could occur that the Overview page on DMS level displayed an error. To resolve this, a small change was done to ensure that the correct CoreGateway version is uploaded, as certain checks are done against this version in the app.
+
+#### 13 February 2026 - Enhancement - CoreGateway 2.14.15 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 28 August 2025 - Fix - CoreGateway 2.14.14 - Race condition blocking Catalog deployments
 
 A race condition has been resolved that could lead to the Catalog displaying the following error while there were actually no issues. 
@@ -140,7 +152,7 @@ The CoreGateway DxM must now be installed on the same DMA as CloudGateway to ens
 
 #### 1 September 2022 - Fix - CoreGateway 2.11.4 - CoreGateway of offline DMA tried to respond to requests from dataminer.services [ID 33973]
 
-When a DMA was offline (e.g. stopped, upgrading, restarting, or offline in a Failover pair), it could occur that the DataMiner CoreGateway tried to respond to requests from dataminer.services, while this should not happen.
+When a DMA was offline (e.g., stopped, upgrading, restarting, or offline in a Failover pair), it could occur that the DataMiner CoreGateway tried to respond to requests from dataminer.services, while this should not happen.
 
 With CoreGateway 2.11.4 (included in Cloud Pack version 2.8.2), this will no longer occur.
 

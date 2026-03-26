@@ -10,7 +10,7 @@ Service templates allow you to create entire series of almost identical services
 
 In a service template, you have to specify
 
-- The input data, i.e. all data that has to be supplied to the template (user input, element parameters, element properties, etc.)
+- The input data, i.e., all data that has to be supplied to the template (user input, element parameters, element properties, etc.)
 
 - The child elements of the services to be created
 

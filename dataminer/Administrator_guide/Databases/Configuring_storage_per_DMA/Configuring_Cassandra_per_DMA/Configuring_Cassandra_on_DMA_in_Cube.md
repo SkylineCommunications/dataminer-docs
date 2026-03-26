@@ -18,7 +18,7 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
    - **Type**: *Database per Agent*.
 
-   - **Database**: The type of database, i.e. *Cassandra*.
+   - **Database**: The type of database, i.e., *Cassandra*.
 
    - **Name**: The name of the database.
 

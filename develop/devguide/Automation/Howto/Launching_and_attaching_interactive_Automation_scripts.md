@@ -2,9 +2,9 @@
 uid: Launching_and_attaching_interactive_Automation_scripts
 ---
 
-# Launching and attaching interactive Automation scripts
+# Launching and attaching interactive automation scripts
 
-This guide explains how to reliably launch an interactive Automation script in different scenarios.
+This guide explains how to reliably launch an interactive automation script in different scenarios.
 
 ## Launching a script directly (from the Cube UI)
 
@@ -23,9 +23,9 @@ If you want a script to show the UI when user interaction is required:
 
 - If you rely on automatic detection:
 
-  - Make sure UI calls (e.g. `engine.ShowUI`) are clearly present in the code.
+  - Make sure UI calls (e.g., `engine.ShowUI`) are clearly present in the code.
 
-  - If a framework wraps `ShowUI`, add a hint comment (e.g. `// engine.ShowUI`).
+  - If a framework wraps `ShowUI`, add a hint comment (e.g., `// engine.ShowUI`).
 
 This is why:
 
@@ -46,7 +46,7 @@ if (!engine.FindInteractiveClient("Scheduled task requires operator input to pro
 
 This is why:
 
-- Non-UI contexts (e.g. Scheduler) are not users. The script cannot show them the UI.
+- Non-UI contexts (e.g., Scheduler) are not users. The script cannot show them the UI.
 
 - [FindInteractiveClient](xref:Find_interactive_client) lets a user attach to the script. All active users are shown a message to attach to the script. The first user to click *Attach* sees the UI.
 
@@ -92,7 +92,7 @@ string id = protocol.UserCookie;
 // {448BB4B8-4E55-4CB7-BCC3-848923BD19DA}:AUTOMATION:Automation script:581/120:John Smith
 ```
 
-From an Automation script started by a user:
+From an automation script started by a user:
 
 ```csharp
 string id = engine.UserCookie;

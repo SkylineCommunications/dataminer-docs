@@ -12,7 +12,7 @@ Within a DMA team, the two team members will act as peers. In other words, they 
 
 By default, all synchronization traffic between the active and the passive team member will pass via the corporate network. If necessary, both team members can also be equipped with an additional network card.
 
-The decision when to switch from the active to the passive DMA can be taken either by a person (i.e. manual Failover) or by the DMAs themselves (i.e. automatic Failover). In the latter case, the two DMAs in the team will check each other’s status by exchanging heartbeats.
+The decision when to switch from the active to the passive DMA can be taken either by a person (i.e., manual Failover) or by the DMAs themselves (i.e., automatic Failover). In the latter case, the two DMAs in the team will check each other’s status by exchanging heartbeats.
 
 > [!NOTE]
 > Any given DMA can only be part of one virtual DMA team. In other words, one DMA cannot act as a backup for more than one DMA.

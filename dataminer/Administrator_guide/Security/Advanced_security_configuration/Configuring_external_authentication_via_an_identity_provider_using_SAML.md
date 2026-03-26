@@ -7,7 +7,7 @@ keywords: Azure AD, AzureAD, Microsoft Entra ID, SAML, Okta, Azure B2C
 
 If you want to configure your DataMiner System to use external authentication, the best way to do so is using SAML (Security Assertion Markup Language).
 
-To configure SAML, you will first need to set up authentication. For this, you need to generate a metadata file for the service provider (i.e. DataMiner) and a metadata file for the identity provider, and DataMiner and the identity provider need to exchange metadata files. This way, a trust relationship between the two is established. The following metadata must be shared between DataMiner and the identity provider service: Entity ID, Cryptographic Keys, Protocol Endpoints (bindings, locations). Once this is done, you then need to configure user provisioning.
+To configure SAML, you will first need to set up authentication. For this, you need to generate a metadata file for the service provider (i.e., DataMiner) and a metadata file for the identity provider, and DataMiner and the identity provider need to exchange metadata files. This way, a trust relationship between the two is established. The following metadata must be shared between DataMiner and the identity provider service: Entity ID, Cryptographic Keys, Protocol Endpoints (bindings, locations). Once this is done, you then need to configure user provisioning.
 
 You can find detailed information about this configuration for the different supported identity providers here:
 
@@ -21,7 +21,7 @@ Please note the following:
 
 - Any DataMiner Agent configured for SAML external authentication must be **accessible via [HTTPS](xref:Setting_up_HTTPS_on_a_DMA)**.
 
-- DataMiner integrates with **identity providers using version 2.0 of the SAML protocol**. Compatibility with older SAML versions is not supported. In addition, the identity provider must support **redirect binding** for communication between the service provider (i.e. DataMiner) and the identity provider. Most SAML identity providers support redirect binding by default.
+- DataMiner integrates with **identity providers using version 2.0 of the SAML protocol**. Compatibility with older SAML versions is not supported. In addition, the identity provider must support **redirect binding** for communication between the service provider (i.e., DataMiner) and the identity provider. Most SAML identity providers support redirect binding by default.
 
 - DataMiner uses service provider-initiated **Single Sign-On (SSO)** through redirect binding. It does not support the use of POST or SOAP binding for requests. However, standard POST binding is used for responses.
 

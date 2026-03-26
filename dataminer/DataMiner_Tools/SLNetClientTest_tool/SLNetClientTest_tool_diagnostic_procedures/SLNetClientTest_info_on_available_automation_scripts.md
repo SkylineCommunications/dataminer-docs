@@ -2,9 +2,9 @@
 uid: SLNetClientTest_info_on_available_automation_scripts
 ---
 
-# Retrieving information on the available Automation scripts
+# Retrieving information on the available automation scripts
 
-From DataMiner 10.6.2/10.7.0 onwards<!--RN 44209-->, you can retrieve the following information about each Automation script available in the DataMiner System:
+From DataMiner 10.6.2/10.7.0 onwards<!--RN 44209-->, you can retrieve the following information about each automation script available in the DataMiner System:
 
 - The folder containing the script's XML file
 

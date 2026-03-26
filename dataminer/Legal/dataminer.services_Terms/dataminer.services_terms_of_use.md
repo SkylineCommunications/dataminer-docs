@@ -44,7 +44,7 @@ You retain ownership of any content you post in the community, but by posting, y
 
 ## Catalog
 
-The DataMiner Catalog offers an extensive collection of downloadables created by Skyline content experts and other contributors, such as packages, connectors,Automation scripts, and Visio files.
+The DataMiner Catalog offers an extensive collection of downloadables created by Skyline content experts and other contributors, such as packages, connectors,automation scripts, and Visio files.
 
 - You may use Catalog content within your DataMiner environment. Some items may require payment in credits.
 

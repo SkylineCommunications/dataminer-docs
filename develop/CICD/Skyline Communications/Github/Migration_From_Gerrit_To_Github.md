@@ -14,7 +14,7 @@ Before migrating from Gerrit to GitHub:
 
 - Make sure SLC SE Repo Manager is installed.
 
-- Make sure that GitHub has a starter workflow available (see [SkylineCommunications/.github workflow-templates](https://github.com/SkylineCommunications/.github/tree/main/workflow-templates)) for the type of repository you are moving (connector, Automation script, install package, custom solution, etc.).
+- Make sure that GitHub has a starter workflow available (see [SkylineCommunications/.github workflow-templates](https://github.com/SkylineCommunications/.github/tree/main/workflow-templates)) for the type of repository you are moving (connector, automation script, install package, custom solution, etc.).
 
 - Use the SLC SE Repo Manager to check if the repository you are attempting to migrate has not already been migrated.
 

@@ -22,7 +22,7 @@ Specifies the level of access users will have to elements, views, services and r
 
 ## Remarks
 
-This will allow you, for instance, to grant users either read-write access or read-only access to an element (or parts of that element, e.g. certain fields like Description). However, administrators will always have full access, regardless of the ownership settings you have specified.
+This will allow you, for instance, to grant users either read-write access or read-only access to an element (or parts of that element, e.g., certain fields like Description). However, administrators will always have full access, regardless of the ownership settings you have specified.
 
 Please note the following regarding the usage of this tag:
 

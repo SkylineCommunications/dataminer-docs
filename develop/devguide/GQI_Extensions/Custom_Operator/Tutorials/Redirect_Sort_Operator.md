@@ -257,4 +257,4 @@ Now that the implement is finished, you can test and use your sort redirector in
 1. Append a sort operator that sorts the query on the IP address column.
 
    > [!NOTE]
-   > This sort operator does not have to be added statically. It can also be added when a user sorts by e.g. clicking the table column header in a table visualization.
+   > This sort operator does not have to be added statically. It can also be added when a user sorts by e.g., clicking the table column header in a table visualization.

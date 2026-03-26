@@ -14,7 +14,7 @@ When developing a GQI extension, keep the following in mind:
 
 ## Use DIS to create and publish extensions
 
-Using [DataMiner Integration Studio (DIS)](xref:Overall_concept_of_the_DataMiner_Integration_Studio) in Visual Studio is the most efficient way to develop a GQI extension. You can use the *DataMiner Automation Script Solution* project template to get started or import an existing Automation script to edit.
+Using [DataMiner Integration Studio (DIS)](xref:Overall_concept_of_the_DataMiner_Integration_Studio) in Visual Studio is the most efficient way to develop a GQI extension. You can use the *DataMiner Automation Script Solution* project template to get started or import an existing automation script to edit.
 
 This way of working gives you the best tools to write and maintain the required C# code. It also allows you to easily push your extension to a DataMiner Agent for testing.
 
@@ -40,7 +40,7 @@ Remember to **compile the script as a library**. You can configure this in your 
 
 Never use references to the Skyline.DataMiner.Automation namespace in your GQI extension code.
 
-If you [use DIS to create your extensions](#use-dis-to-create-and-publish-extensions), these references are automatically available through the *Skyline.DataMiner.Dev.Automation* NuGet package. They should only ever be used in actual Automation scripts.
+If you [use DIS to create your extensions](#use-dis-to-create-and-publish-extensions), these references are automatically available through the *Skyline.DataMiner.Dev.Automation* NuGet package. They should only ever be used in actual automation scripts.
 
 Types and methods in this namespace have no use in a GQI extension and, more importantly, **will prevent GQI from loading your extension** (see: [Only use 64-bit DLL references](#only-use-64-bit-assembly-references)).
 

@@ -14,9 +14,9 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
 1. In the *general* tab, specify the following properties, and click *Next*.
 
-   - **Name**: The name of the SNMP manager (e.g. "HP OpenView", "IBM Tivoli Netcool", etc.).
+   - **Name**: The name of the SNMP manager (e.g., "HP OpenView", "IBM Tivoli Netcool", etc.).
 
-   - **IP address**: The IP address of the SNMP manager, i.e. the address to which the SNMP notifications will be sent.
+   - **IP address**: The IP address of the SNMP manager, i.e., the address to which the SNMP notifications will be sent.
 
    - **Get community string**: The community string to be used in all SNMP notifications toward the SNMP manager you are configuring.
 
@@ -141,7 +141,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
      1. Optionally, add a description for the filter in the *Description* box.
 
-     1. Click *Select a filter*, and select what you want to filter on, e.g. Alarm type, Service impact, etc.
+     1. Click *Select a filter*, and select what you want to filter on, e.g., Alarm type, Service impact, etc.
 
      1. Select a logical operator, and then click *\<Click to select>* to select one or more values to combine it with.
 
@@ -152,7 +152,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
      1. When the filter is fully configured, click *OK*.
 
    > [!NOTE]
-   > To check whether a filter has been configured correctly, it can be useful to also create a new alarm tab in the Alarm Console using the same filter. This way you can check if it indeed filters out the correct alarms. See [Manually applying an alarm filter in an Alarm Console tab](xref:ApplyingAlarmFiltersInTheAlarmConsole#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
+   > To check whether a filter has been configured correctly, it can be useful to also create a new alarm tab in the Alarm Console using the same filter. This way you can check if it indeed filters out the correct alarms. See [Manually applying an alarm filter in an Alarm Console tab](xref:ManuallyApplyingAnAlarmFilter).
 
    > [!TIP]
    > See also: [Alarm filters](xref:Alarm_filters)

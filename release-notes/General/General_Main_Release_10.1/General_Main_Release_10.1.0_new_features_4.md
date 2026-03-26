@@ -74,7 +74,7 @@ You can construct a query to use as data input for a component by following thes
 
 5. Select an operator. This step is optional; if you do not select an operator, the entire dataset will be used. The following operators are available:
 
-    - *Aggregate*: Allows you to aggregate data from the data source. After you have selected this option, first select the aggregation column, and the method that should be used. Depending on the type of data available in the selected column, different methods are available, e.g. Average, Count, Distinct Count, Maximum, Median, Minimum, Percentile 90/95/98 or Standard deviation.
+    - *Aggregate*: Allows you to aggregate data from the data source. After you have selected this option, first select the aggregation column, and the method that should be used. Depending on the type of data available in the selected column, different methods are available, e.g., Average, Count, Distinct Count, Maximum, Median, Minimum, Percentile 90/95/98 or Standard deviation.
 
         You can then further filter the result by applying another operator. An additional *Group by* operator is available for this, which will display the result of the aggregation operation for each different item in the column selected in the *Group by column* box.
 
@@ -86,11 +86,11 @@ You can construct a query to use as data input for a component by following thes
 
         For both manipulation methods, you will also need to specify the name for the new column. When the column manipulation operation is fully configured, you can further fine-tune the result by applying another operator.
 
-    - *Filter*: Filters the dataset. When you select this option, select the column to filter, specify the filter method (e.g. equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g. an additional filter.
+    - *Filter*: Filters the dataset. When you select this option, select the column to filter, specify the filter method (e.g., equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g., an additional filter.
 
     - *Join*: Joins two tables together. When you select this option, in the *Type* dropdown box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
 
-        The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e. the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
+        The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e., the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
 
     - *Select*: Displays the selected columns only. When you have selected the columns to display, you can apply another operator to refine the query.
 
@@ -106,7 +106,7 @@ You can construct a query to use as data input for a component by following thes
 >
 > - When a query has been created, the columns from the table that results from the query are available as individual data items in the data pane, so that you can use them to filter or group a component.
 > - It is not possible to retrieve data from a stopped element.
-> - When retrieving profile parameter values, configured converters (i.e. mediation snippets) will be taken into account.
+> - When retrieving profile parameter values, configured converters (i.e., mediation snippets) will be taken into account.
 > - A GQI query is not saved in a separate file but in the dashboard itself.
 > - A GQI query based on the *Get parameter table by ID* or *Get parameters for elements where* data sources will, by default, inherit the dashboard’s *Use dynamic units* setting. If necessary, you can override this automatic inheritance by selecting the component’s *Override dynamic units* setting.
 >
@@ -160,7 +160,7 @@ In addition, the following layout options can now be configured for this visuali
 
 - *Chart layout*: Can be set to *Relative* or *Absolute*. *Relative* means that the dimension of each bar is shown as a relative percentage. *Absolute* means that the dimension of each bar is shown as an absolute numeric value.
 
-- *Chart orientation*: Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top.
+- *Chart orientation*: Determines how the chart is displayed, i.e., from left to right, from right to left, from top to bottom or from bottom to top.
 
 - *Legend*: The legend can be hidden. If it is set to be displayed, you can select whether it should be displayed on the left, on the right, at the top or at the bottom of the visualization.
 
@@ -168,7 +168,7 @@ In addition, the following layout options can now be configured for this visuali
 
 #### Dashboards app: New 'Clear all' action + settings to pin actions \[ID 24356\]
 
-In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g. the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
+In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g., the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
 
 If a dashboard contains at least one feed, a new *Clear all* action is now available in the dashboard header, which can be used to clear the selection of the feeds in the dashboard.
 
@@ -206,7 +206,7 @@ Several options are available to fine-tune the layout of the component. You can 
 
 When the service definition component displays nodes that are linked to particular resources, alarm and element info will now be displayed for these nodes in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
 
-In the settings for the *Service definition* component, one or more actions can be defined. For each action, an Automation script and an icon need to be defined, and you need to specify to which node or nodes the action must be added. The icon will then be displayed on the specified node or nodes. When the icon is clicked, the script is launched. The booking ID or service definition ID used in the component and the node ID of the node for which the icon was clicked will be passed to the script as parameter ID 1 and parameter ID 2, respectively. The order of the specified actions can be modified in the *Settings* pane. In case there are too many actions on a node to display them all, clicking the action bar at the bottom of the node will expand the bar to display all the actions.
+In the settings for the *Service definition* component, one or more actions can be defined. For each action, an automation script and an icon need to be defined, and you need to specify to which node or nodes the action must be added. The icon will then be displayed on the specified node or nodes. When the icon is clicked, the script is launched. The booking ID or service definition ID used in the component and the node ID of the node for which the icon was clicked will be passed to the script as parameter ID 1 and parameter ID 2, respectively. The order of the specified actions can be modified in the *Settings* pane. In case there are too many actions on a node to display them all, clicking the action bar at the bottom of the node will expand the bar to display all the actions.
 
 #### BREAKING CHANGE - Dashboards app: CPE feed component now uses element data feed \[ID 25216\]
 
@@ -293,7 +293,7 @@ Do the following:
 
 2. Right-click the component and select *Copy embed URL*.
 
-3. Use the URL of the component in either a Visio page (e.g. in a shape with a data field of type “Link”) or a web page (e.g. in an \<img> tag).
+3. Use the URL of the component in either a Visio page (e.g., in a shape with a data field of type “Link”) or a web page (e.g., in an \<img> tag).
 
 A component URL has the following syntax:
 
@@ -451,7 +451,7 @@ For the *Ring* and *Gauge* component, if parameter feeds are used, additional 
 
 #### Dashboards app: Dashboards created by users will now be included in DataMiner backup packages \[ID 26836\]
 
-When, in DataMiner Cube, you take a backup, all dashboards created by users (i.e. all files stored in C:\\Skyline DataMiner\\Dashboards) will now be included in the backup package if you selected either “full backup” or “full backup without database”.
+When, in DataMiner Cube, you take a backup, all dashboards created by users (i.e., all files stored in C:\\Skyline DataMiner\\Dashboards) will now be included in the backup package if you selected either “full backup” or “full backup without database”.
 
 #### Dashboards app: New Image size option for Image component \[ID 27040\]
 
@@ -465,7 +465,7 @@ In the Dashboards app, a new *Image size* option is now available for *Image* 
 
 #### Dashboards app: State component now supports dynamic units \[ID 27066\]
 
-The State component in the Dashboards app now supports dynamic units, i.e. units that can be converted to other units according to rules configured in the protocol.
+The State component in the Dashboards app now supports dynamic units, i.e., units that can be converted to other units according to rules configured in the protocol.
 
 For this purpose, 2 new methods have been added to the web services API v1: *GetParameterWithDynamicUnits* and *GetParameterForServiceWithDynamicUnits*, which are similar to the *GetParameter* and *GetParameterForService* methods, respectively.
 
@@ -473,11 +473,11 @@ For this purpose, 2 new methods have been added to the web services API v1: *Get
 
 It is now possible to use spectrum buffers as input for a Spectrum Analyzer visualization. These are available in the new *Spectrum Buffers* section in the *Data* pane. To select a spectrum buffer, first specify the name of a spectrum element in the box at the top if this section. The buffers are then listed in the format *MonitorName: TraceName \[MeasptName\] \[PresetName\]*.
 
-You can link a Spectrum Analyzer visualization to spectrum buffer input directly, or use feed components (e.g. dropdown or list), by adding an individual spectrum buffer to a feed component or by adding the spectrum buffers as a collection and then adding a spectrum element as a filter.
+You can link a Spectrum Analyzer visualization to spectrum buffer input directly, or use feed components (e.g., dropdown or list), by adding an individual spectrum buffer to a feed component or by adding the spectrum buffers as a collection and then adding a spectrum element as a filter.
 
 #### Dashboards app: Line chart component now exposes timespan feed \[ID 27128\]
 
-If a line chart component is used in a dashboard, a timespan feed now becomes available in the data pane, which can be used to apply the timespan of the line chart to other components as a feed. This timespan feed is updated whenever the timespan displayed by the trend graph is adjusted, e.g. because you zoom in on a specific timespan.
+If a line chart component is used in a dashboard, a timespan feed now becomes available in the data pane, which can be used to apply the timespan of the line chart to other components as a feed. This timespan feed is updated whenever the timespan displayed by the trend graph is adjusted, e.g., because you zoom in on a specific timespan.
 
 #### Dashboards app: Threshold state visualization in spectrum analyzer components \[ID 27169\]\[ID 27273\]
 
@@ -520,7 +520,7 @@ When you use a table column parameter as input for a State component in the Dash
 
 #### Ordering of data entries used in a dashboard component \[ID 27486\]
 
-For dashboard components that can display multiple data entries and for which it makes sense to modify the order in which these entries are displayed (e.g. State components, Parameter table components, etc.), in the *Data* pane, a new *Data used in component* section is available. This section lists the different data entries used by the selected component, with arrow icons on the right that can be used to change the order in which the entries are displayed.
+For dashboard components that can display multiple data entries and for which it makes sense to modify the order in which these entries are displayed (e.g., State components, Parameter table components, etc.), in the *Data* pane, a new *Data used in component* section is available. This section lists the different data entries used by the selected component, with arrow icons on the right that can be used to change the order in which the entries are displayed.
 
 #### Dashboards app: Support for quick filters of tables in visual overview components \[ID 27517\]
 
@@ -570,7 +570,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 Requirements:
 
 - At least one web server (running Windows Server)
-- A valid SSL certificate signed by a public certificate authority for the FQDN of the Dashboard Gateway (e.g. “gateway.mycompany.com”)
+- A valid SSL certificate signed by a public certificate authority for the FQDN of the Dashboard Gateway (e.g., “gateway.mycompany.com”)
 - A DataMiner user account with
 
   - access to all views, elements and alarms,
@@ -591,7 +591,7 @@ Configuration:
 
 1. From a DataMiner Agent, copy the C:\\Skyline DataMiner\\Webpages\\API folder to the web root folder of the Dashboard Gateway web server (default: C:\\inetpub\\wwwroot) and, in IIS Manager, convert the API into an application.
 
-1. From a DataMiner Agent, copy over the web application(s) (e.g. C:\\Skyline DataMiner\\Webpages\\Dashboard, C:\\Skyline DataMiner\\Webpages\\Monitoring, C:\\Skyline DataMiner\\Webpages\\Jobs, C:\\Skyline DataMiner\\Webpages\\Ticketing, etc.) to the web root folder of the Dashboard Gateway web server.
+1. From a DataMiner Agent, copy over the web application(s) (e.g., C:\\Skyline DataMiner\\Webpages\\Dashboard, C:\\Skyline DataMiner\\Webpages\\Monitoring, C:\\Skyline DataMiner\\Webpages\\Jobs, C:\\Skyline DataMiner\\Webpages\\Ticketing, etc.) to the web root folder of the Dashboard Gateway web server.
 
 1. On the Dashboard Gateway web server, edit the web.config in the API folder, and specify the following settings:
 

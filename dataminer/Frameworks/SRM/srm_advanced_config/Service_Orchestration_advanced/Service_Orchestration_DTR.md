@@ -4,7 +4,7 @@ uid: Service_Orchestration_DTR
 
 # Service Orchestration: Data Transfer Rules configuration
 
-[Data Transfer Rules](xref:srm_scripting#data-transfer-rules-dtr) are implemented using custom Automation scripts.
+[Data Transfer Rules](xref:srm_scripting#data-transfer-rules-dtr) are implemented using custom automation scripts.
 
 ## Configuring regular Data Transfer Rules
 
@@ -77,4 +77,4 @@ To create a service profile Data Transfer Rule:
    ```
 
 > [!NOTE]
-> When the selected service profile definition/instance does not refer to one or more nodes of the service definition, the *GetUnmappedFunction* method must be used to access data from those nodes (i.e. the selected resources). <!-- RN 30630 -->
+> When the selected service profile definition/instance does not refer to one or more nodes of the service definition, the *GetUnmappedFunction* method must be used to access data from those nodes (i.e., the selected resources). <!-- RN 30630 -->

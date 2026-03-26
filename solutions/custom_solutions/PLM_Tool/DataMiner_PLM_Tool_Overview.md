@@ -13,3 +13,9 @@ The tool's flexible nature allows the definition of resources for any parameter 
 This solution empowers users to create, edit, and delete maintenance events directly from the protocol interface or a low-code app.
 
 ![Planned Maintenance tool home page](~/dataminer/images/PLM_main_page_new.png)
+
+> [!IMPORTANT]
+> The Planned Maintenance tool is designed as a **scheduling and tracking system** for maintenance activities. It does not execute proactive actions or automated workflows based on the scheduler. This tool's purpose is to provide visibility into planned maintenance windows, allowing operators and integrated systems to coordinate activities accordingly.
+
+> [!NOTE]
+> This solution includes the *SLC-AS-PLM_MaskAlarms* Automation script, which can **mask/unmask correlation-based alarms** during active PLM activities. To use this feature, you must **configure a Correlation rule** manually. For setup instructions, refer to the [PLM Mask Alarms documentation](https://github.com/SkylineCommunications/SLC-AS-Example_PLM_MaskAlarms).

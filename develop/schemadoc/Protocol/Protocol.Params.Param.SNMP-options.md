@@ -16,13 +16,13 @@ string
 
 ## Remarks
 
-- In the Param tag of the parameter that will contain the **GetCommunity** string to be used whenever an SNMP Get command has to be performed on connection 0 (i.e. the first connection), specify the following SNMP tag:
+- In the Param tag of the parameter that will contain the **GetCommunity** string to be used whenever an SNMP Get command has to be performed on connection 0 (i.e., the first connection), specify the following SNMP tag:
 
   ```xml
   <SNMP options="GetCommunity:0">
   ```
 
-  In the Param tag of the parameter that will contain the **SetCommunity** string to be used whenever an SNMP Set command has to be performed on connection 0 (i.e. the first connection), specify the following SNMP tag:
+  In the Param tag of the parameter that will contain the **SetCommunity** string to be used whenever an SNMP Set command has to be performed on connection 0 (i.e., the first connection), specify the following SNMP tag:
 
   ```xml
   <SNMP options="SetCommunity:0">
@@ -47,5 +47,5 @@ string
 
   > [!NOTE]
   >
-  > - If the parameter is not initialized or contains an empty string, the default context name or context ID (i.e. an empty string) will be used.
-  > - The context name and context ID can be changed at runtime. However, unless the `save` attribute is set to "true" on the parameter (e.g. `<Param id="1" save="true">`), the values will not persist after an element restart.
+  > - If the parameter is not initialized or contains an empty string, the default context name or context ID (i.e., an empty string) will be used.
+  > - The context name and context ID can be changed at runtime. However, unless the `save` attribute is set to "true" on the parameter (e.g., `<Param id="1" save="true">`), the values will not persist after an element restart.

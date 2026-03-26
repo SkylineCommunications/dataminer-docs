@@ -35,7 +35,7 @@ The following wildcards can be used:
 - \*: A series of characters
 - ?: A single character
 
-In the following example, users have to enter a value containing a dot (e.g. 10.5, 2.3, 245.63, etc.):
+In the following example, users have to enter a value containing a dot (e.g., 10.5, 2.3, 245.63, etc.):
 
 ```xml
 <Value>*.*</Value>

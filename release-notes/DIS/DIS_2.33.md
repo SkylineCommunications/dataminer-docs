@@ -167,9 +167,9 @@ Monitors that subscribe to a table can now execute code whenever data in that ta
 
 ### Enhancements
 
-#### IDE: No longer possible to open a DIS macro in a protocol or Automation script solution \[ID 29093\]
+#### IDE: No longer possible to open a DIS macro in a protocol or automation script solution \[ID 29093\]
 
-Each time you open a DIS macro, a hidden C# project is created. Up to now, when you did so while working inside a protocol or Automation script solution, that hidden C# project would also be added to the solution. As this is unwanted behavior, from now on, when you try to open a DIS macro while working inside a solution, a message will appear, asking whether you want to open the DIS macro in a new Visual Studio instance.
+Each time you open a DIS macro, a hidden C# project is created. Up to now, when you did so while working inside a protocol or automation script solution, that hidden C# project would also be added to the solution. As this is unwanted behavior, from now on, when you try to open a DIS macro while working inside a solution, a message will appear, asking whether you want to open the DIS macro in a new Visual Studio instance.
 
 #### Class Library: Additional check to prevent elements to restart after being updated \[ID 29777\]
 

@@ -68,7 +68,7 @@ When, in the Alarm Console, you opened a history tab on a system with a large nu
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
-When you exported more than a week's worth of real-time trend data to a CSV file, only the trend data of the last week (i.e. "week to date") would be exported.
+When you exported more than a week's worth of real-time trend data to a CSV file, only the trend data of the last week (i.e., "week to date") would be exported.
 
 #### Settings: Suggestion tab added to a group setting would not show any suggestion alarms [ID 36666]
 

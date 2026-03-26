@@ -4,7 +4,7 @@ uid: Manifest.Content.AutomationScripts.AutomationScript.Version
 
 # Version element
 
-Specifies the version of the Automation script solutions.
+Specifies the version of the automation script solutions.
 
 ## Parent
 

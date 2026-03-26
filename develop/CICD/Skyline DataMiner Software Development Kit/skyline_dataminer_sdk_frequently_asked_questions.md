@@ -7,7 +7,7 @@ keywords: Skyline.DataMiner.Sdk
 
 ## What about custom DLLs?
 
-For connector solutions and the old Automation script solutions, there was a dedicated DLLs directory to store the necessary custom DLLs. With Skyline DataMiner SDK, this is no longer present. Instead, the Skyline DataMiner SDK will look at the **paths in the .csproj file** to find the custom DLLs to be able to package the solution.
+For connector solutions and the old automation script solutions, there was a dedicated DLLs directory to store the necessary custom DLLs. With Skyline DataMiner SDK, this is no longer present. Instead, the Skyline DataMiner SDK will look at the **paths in the .csproj file** to find the custom DLLs to be able to package the solution.
 
 For ease of use, you can still manually add this, but you are free to choose where and how. The only requirement is that the file needs to be accessible when building the DataMiner application package. This means that if you store your code on Git, your directory with DLLs need to be pushed as well.
 

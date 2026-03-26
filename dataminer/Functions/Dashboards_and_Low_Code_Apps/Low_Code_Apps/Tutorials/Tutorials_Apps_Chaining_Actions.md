@@ -36,7 +36,7 @@ Expected duration: 10 minutes
 
 1. Check if the module already contains a folder with the name "Utility", and [create this folder](xref:Managing_Automation_scripts#adding-a-new-automation-script-folder) if it does not exist yet.
 
-1. Within this folder, [add a new Automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script) with the name "Touch".
+1. Within this folder, [add a new automation script](xref:Managing_Automation_scripts#adding-a-new-automation-script) with the name "Touch".
 
 1. Add a script parameter named "Path".
 

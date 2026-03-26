@@ -67,7 +67,7 @@ In the above-mentioned command, you can use the following options.
 
 If you use the option mentioned above, the character that is used to separate the different parts of the SET command cannot be used in the ConfirmationMessage text.
 
-If you want to use e.g. a pipe character in the ConfirmationMessage text, you have to change the separator character by adding a \[sep:XY\] option in front of the entire SET command, where "X" is the default separator, and "Y" is the separator that is being used instead:
+If you want to use e.g., a pipe character in the ConfirmationMessage text, you have to change the separator character by adding a \[sep:XY\] option in front of the entire SET command, where "X" is the default separator, and "Y" is the separator that is being used instead:
 
 ```txt
 [sep:|;]Set;234/20;101;2;ConfirmationMessage=Message with a |.
@@ -76,13 +76,13 @@ If you want to use e.g. a pipe character in the ConfirmationMessage text, you ha
 > [!NOTE]
 > This \[sep:XY\] option can be used in most shape data.
 
-Note that, if you add a \[sep:XY\] option in front of the entire SET command, you can only replace the pipe character (i.e. the default separator) by another character. If, in the \[sep:XY\] option, the first separator is not a pipe character, and the second separator is not a valid replacement, the shape will not be visible. If, for instance, you specify the following, the shape will not be visible:
+Note that, if you add a \[sep:XY\] option in front of the entire SET command, you can only replace the pipe character (i.e., the default separator) by another character. If, in the \[sep:XY\] option, the first separator is not a pipe character, and the second separator is not a valid replacement, the shape will not be visible. If, for instance, you specify the following, the shape will not be visible:
 
 ```txt
 [sep:;*]Set|234/20|101|2|ConfirmationMessage=Message.
 ```
 
-Note also that commas cannot be used to separate different parts of a SET command. In certain cases, e.g. when a SET command refers to an Automation script, commas have to be used to separate the necessary script options. If, however, you do want to use commas in the ConfirmationMessage text, then you can add a \[sep:XY\] option in front of the ConfirmationMessage option:
+Note also that commas cannot be used to separate different parts of a SET command. In certain cases, e.g., when a SET command refers to an automation script, commas have to be used to separate the necessary script options. If, however, you do want to use commas in the ConfirmationMessage text, then you can add a \[sep:XY\] option in front of the ConfirmationMessage option:
 
 ```txt
 Set|234/20|101|2|[sep:,*]ConfirmationMessage=Hi, this is correct.

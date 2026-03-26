@@ -37,7 +37,7 @@ To deploy the package:
 
    - The **Generic Data Simulator** connector, which exposes DCF interfaces and will be used by the elements created for this tutorial.
 
-   - The **SLC-AS-Kata-DCF** Automation script, which will be used to provision the view, elements, DCF interface properties, DCF connections, and properties required for this tutorial.
+   - The **SLC-AS-Kata-DCF** automation script, which will be used to provision the view, elements, DCF interface properties, DCF connections, and properties required for this tutorial.
 
    - The **kata_dcf_view.vsdx** Visio file, which will be used to visualize DCF interfaces, connections, and related properties in Cube.
 

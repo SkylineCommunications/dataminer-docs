@@ -35,7 +35,7 @@ Specifies the code that must execute when a parameter or a row has changed.
 
 The actual script code of a QAction must be placed inside a CDATA section. By placing code inside a CDATA section, characters like “<” and “&”, which are normally illegal when placed inside normal XML tags, will no longer be considered as such. A CDATA section starts with `<![CDATA[` and ends with `]]>`.
 
-In order to interact with the SLProtocol process (e.g. to access parameters or to notify DataMiner of certain events)
+In order to interact with the SLProtocol process (e.g., to access parameters or to notify DataMiner of certain events)
 
 - in Jscript or VBScript code, use the SLScript object. (Note the VBScript is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).)
 

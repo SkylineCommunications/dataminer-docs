@@ -133,4 +133,4 @@ This issue is often caused by an outdated or misaligned DIS or SDK version. To r
       }
       ```
 
-      The version must be the **latest stable release** (i.e. without "*-abc" suffix).
+      The version must be the **latest stable release** (i.e., without "*-abc" suffix).

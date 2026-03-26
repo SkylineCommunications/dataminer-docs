@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.0.6
 
 From now on, LDAP queries will, by default, time out after 5 minutes.
 
-This setting can be configured in the *DataMiner.xml* file. Enter a value in seconds. If the LDAP.QueryTimeout tag is not present, a default value of 300 seconds (i.e. 5 minutes) will be taken. See the example below.
+This setting can be configured in the *DataMiner.xml* file. Enter a value in seconds. If the LDAP.QueryTimeout tag is not present, a default value of 300 seconds (i.e., 5 minutes) will be taken. See the example below.
 
 ```xml
 <DataMiner>
@@ -67,7 +67,7 @@ The simulation file will be stored on the DataMiner Agent, in the protocol folde
 
 #### Resources app: Time-dependent capabilities \[ID 25409\]
 
-When, in the *Resources* app, you assign a capability parameter to a resource, instead of specifying a fixed value for that parameter, you can now indicate that its value will be time-dependent, i.e. that the capability of the resource can change over time.
+When, in the *Resources* app, you assign a capability parameter to a resource, instead of specifying a fixed value for that parameter, you can now indicate that its value will be time-dependent, i.e., that the capability of the resource can change over time.
 
 #### Visual Overview: SetVar controls 'ListBox' and 'FilterComboBox' now use virtualization \[ID 25436\]
 
@@ -89,9 +89,9 @@ From now on, a CPE feed will no longer pass along all selected fields. Instead, 
 
 ### DMS Automation
 
-#### Injecting a DLL into an Automation script \[ID 24945\]
+#### Injecting a DLL into an automation script \[ID 24945\]
 
-It is now possible to inject DLL files into an Automation script.
+It is now possible to inject DLL files into an automation script.
 
 ##### To inject a DLL
 
@@ -125,7 +125,7 @@ The server will send back a *GetAutomationDllOverviewResponseMessage* containing
 
 ##### To eject a DLL
 
-If you eject a previously injected DLL from an Automation script, this will cause the script to behave as it did before the injection. To do so, send an *EjectAutomationDllRequestMessage* containing the name of the script and the Exe ID (i.e. the ID of the script action).
+If you eject a previously injected DLL from an automation script, this will cause the script to behave as it did before the injection. To do so, send an *EjectAutomationDllRequestMessage* containing the name of the script and the Exe ID (i.e., the ID of the script action).
 
 The server will send back a EjectAutomationDllResponseMessage. If any errors would have occurred, they will be included as errors of type *AutomationErrorData* in the message’s *TraceData* object. Possible errors include:
 
@@ -231,7 +231,7 @@ When you turned a shape into a text block control by adding a shape data item of
 
 #### Service & Resource Management: Enhanced performance when retrieving available resources \[ID 25061\]
 
-Due to a number of enhancements, overall performance has increased when retrieving available resources (e.g. by means of the GetAvailableResource method).
+Due to a number of enhancements, overall performance has increased when retrieving available resources (e.g., by means of the GetAvailableResource method).
 
 #### Migrating booking data to Indexing Engine: Enhanced message in case of successful migration \[ID 25101\]
 
@@ -275,7 +275,7 @@ When a backup package is created, from now on, the log information regarding the
 
 #### Default alarm bubble-up behavior in recursive tables changed from 'recursive=none' to 'recursive=up' \[ID 25349\]
 
-The default alarm bubble-up behavior in recursive tables has been changed from “recursive=none” to “recursive=up”, i.e. from child nodes up to parent nodes (following the foreign key in the direction it is in).
+The default alarm bubble-up behavior in recursive tables has been changed from “recursive=none” to “recursive=up”, i.e., from child nodes up to parent nodes (following the foreign key in the direction it is in).
 
 #### DataMiner Cube - Data display: Partial tables with protocol-defined sorting now have a refresh button \[ID 25354\]
 
@@ -384,7 +384,7 @@ When SLGSMGateway updated its cache after an element had been added, updated or 
 
 #### Problem when the view column of a table containing DVE child elements to be created contained single view IDs \[ID 25255\]
 
-A table containing DVE child elements to be created can have a column that contains the view(s) the child element has to be created in (i.e. a column with option="view"). In the cells of this column, you can enter a single view ID, a single view name, a list of view IDs separated by semicolons, a list of view names separated by semicolons or a mixed list of view IDs and view names separated by semicolons.
+A table containing DVE child elements to be created can have a column that contains the view(s) the child element has to be created in (i.e., a column with option="view"). In the cells of this column, you can enter a single view ID, a single view name, a list of view IDs separated by semicolons, a list of view names separated by semicolons or a mixed list of view IDs and view names separated by semicolons.
 
 In some cases, a problem could occur when single view IDs had been entered in this column.
 
@@ -410,7 +410,7 @@ In some cases, an error could occur in SLNet when retrieving the CPU usage or th
 
 #### Automation: Scripts using a library could no longer be executed after a DataMiner restart \[ID 25282\]
 
-After a DataMiner restart, in some cases, Automation scripts that used a library could no longer be executed because the DataMiner Agent was not able to find the DLL file of that library.
+After a DataMiner restart, in some cases, automation scripts that used a library could no longer be executed because the DataMiner Agent was not able to find the DLL file of that library.
 
 #### DataMiner Cube - Workspaces: A saved workspace could no longer be opened in an undocked window \[ID 25308\]
 
@@ -502,7 +502,7 @@ In some rare cases, the *FollowPathColor* option would not get applied, especial
 
 Up to now, in some cases, user initials in DataMiner Cube would be inconsistent. Now, user initials will always be the first letters of the full name.
 
-Note that, by design, the user selector at the bottom of the login screen will still display only one letter (i.e. the first letter of the full name).
+Note that, by design, the user selector at the bottom of the login screen will still display only one letter (i.e., the first letter of the full name).
 
 #### DataMiner Cube - Services app: Items in diagram would still appear to be selected after switching from one tab to another \[ID 25468\]
 
@@ -538,7 +538,7 @@ In the *Element Connections* app, in some cases, issues could occur with regard 
 
 #### DataMiner Cube - Data Display: Zero-width column was not saved at the correct position when saving the column layout of a table \[ID 25534\]
 
-When you saved the column layout of a table that contained a hidden column (i.e. a column of which the width was set to 0 in the protocol), that hidden column would not be saved at the correct position.
+When you saved the column layout of a table that contained a hidden column (i.e., a column of which the width was set to 0 in the protocol), that hidden column would not be saved at the correct position.
 
 #### Web Services API v0/v1: Methods would return parameters to which users had not been granted access \[ID 25544\]
 

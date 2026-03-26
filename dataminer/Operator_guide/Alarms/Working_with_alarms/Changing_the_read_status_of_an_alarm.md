@@ -6,7 +6,7 @@ uid: Changing_the_read_status_of_an_alarm
 
 In DataMiner Cube, a new "unread" alarm record shows up in the Alarm Console in bold typeface. As soon as you select it for more than two seconds, it is considered "read" and subsequently loses its bold typeface.
 
-The number of "unread" alarm records shown in a particular alarm tab is indicated in the label of that alarm tab, e.g. "Active alarms (55 new)".
+The number of "unread" alarm records shown in a particular alarm tab is indicated in the label of that alarm tab, e.g., "Active alarms (55 new)".
 
 To set a read alarm record back to "unread", right-click the alarm record and click *Set alarm as unread*.
 

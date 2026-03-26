@@ -13,7 +13,7 @@ If a page is hidden, it will not be displayed in the tree view of a card navigat
 
 > [!NOTE]
 >
-> - If a user opens the Visual pages of a card, but all Visio pages are hidden, e.g. because of conditional hiding, a line of type Info will be added to the Cube logging to indicate this.
+> - If a user opens the Visual pages of a card, but all Visio pages are hidden, e.g., because of conditional hiding, a line of type Info will be added to the Cube logging to indicate this.
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[misc > CUBE ONLY]* page.
 
 ## Depending on the current value of a parameter or a property

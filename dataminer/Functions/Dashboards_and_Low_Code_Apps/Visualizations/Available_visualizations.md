@@ -6,7 +6,7 @@ uid: Available_visualizations
 
 Many visualizations are available in the Dashboards app and Low-Code Apps, in the categories listed below.
 
-### General
+## General
 
 | Visualization | Description |
 |:--:|--|
@@ -27,7 +27,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![Trigger](~/dataminer/images/Trigger.svg)](xref:DashboardTrigger) | A [trigger](xref:DashboardTrigger) allows users to manually or automatically refresh other components. |
 | [![Web](~/dataminer/images/Web.svg)](xref:DashboardWeb) | A [web](xref:DashboardWeb) component displays a webpage or a block of static HTML. It can also be used to display a video thumbnail. |
 
-### States and values
+## States and values
 
 | Visualization | Description |
 |:--:|--|
@@ -37,7 +37,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![Ring](~/dataminer/images/Ring.svg)](xref:DashboardRing) | A [ring](xref:DashboardRing) displays the name and, if applicable, the value of an object within a colored ring matching the state of the object. |
 | [![State timeline](~/dataminer/images/State_Timeline.svg)](xref:DashboardStateTimeline) | A [state timeline](xref:DashboardStateTimeline) visualizes alarm state changes over time. |
 
-### Tables
+## Tables
 
 | Visualization | Description |
 |:--:|--|
@@ -46,7 +46,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![Pivot table](~/dataminer/images/Pivot_Table.svg)](xref:DashboardPivotTable) | A [pivot table](xref:DashboardPivotTable) (obsolete) displays a status report for a number of parameters of the elements using the selected protocol and protocol version. |
 | [![Table](~/dataminer/images/Table.svg)](xref:DashboardTable) | A [table](xref:DashboardTable) displays the results of a query in a structured, row-column format, similar to a spreadsheet. |
 
-### Charts
+## Charts
 
 | Visualization | Description |
 |:--:|--|
@@ -54,7 +54,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![Line & Area chart](~/dataminer/images/Line_Area_Chart.svg)](xref:LineAndAreaChart) | A [line & area chart](xref:LineAndAreaChart) displays a graph that can for example be based on DataMiner trending or on a GQI query. |
 | [![Pie & Donut chart](~/dataminer/images/Pie_Donut_Chart.svg)](xref:PieAndDonutChart) | A [pie & donut chart](xref:PieAndDonutChart) displays information in a chart shaped like a pie or donut. |
 
-### Other
+## Other
 
 | Visualization | Description |
 |:--:|--|
@@ -62,8 +62,8 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![List](~/dataminer/images/List.svg)](xref:DashboardList) | A [list](xref:DashboardList) allows users to select one or more items in a list. |
 | [![EPM picker](~/dataminer/images/EPM_Picker.svg)](xref:DashboardEPMPicker) | An [EPM picker](xref:DashboardEPMPicker) allows users to make a filter selection for a particular EPM element and EPM chain. |
 | [![Grid](~/dataminer/images/Grid.svg)](xref:DashboardGrid) | A [grid](xref:DashboardGrid) displays information in a clear, tile-based grid format and offers a wide range of customization options. |
-| [![IAS](~/dataminer/images/IAS.svg)](xref:InteractiveAutomationScript) | An [interactive Automation script](xref:InteractiveAutomationScript) component visualizes any interactive Automation script (IAS) within pages or panels of a low-code app. |
-| [![Node edge graph](~/dataminer/images/Node_Edge_Graph.svg)](xref:DashboardNodeEdgeGraph) | A [node edge graph](xref:DashboardNodeEdgeGraph) visualizes any type of objects (i.e. "nodes") and the connections between them (i.e. "edges"). By linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data. |
+| [![IAS](~/dataminer/images/IAS.svg)](xref:InteractiveAutomationScript) | An [interactive automation script](xref:InteractiveAutomationScript) component visualizes any interactive automation script (IAS) within pages or panels of a low-code app. |
+| [![Node edge graph](~/dataminer/images/Node_Edge_Graph.svg)](xref:DashboardNodeEdgeGraph) | A [node edge graph](xref:DashboardNodeEdgeGraph) visualizes any type of objects (i.e., "nodes") and the connections between them (i.e., "edges"). By linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data. |
 | [![Parameter page](~/dataminer/images/Parameter_Page.svg)](xref:DashboardParameterPage) | A [parameter page](xref:DashboardParameterPage) displays a particular data page of an element. |
 | [![Service definition](~/dataminer/images/Service_Definition.svg)](xref:DashboardServiceDefinition) | A [service definition](xref:DashboardServiceDefinition) displays a service definition as a node edge graph. It can display the graph based on service definition data or booking data. |
 | [![Spectrum analyzer](~/dataminer/images/Spectrum_Analyzer.svg)](xref:DashboardSpectrumAnalyzer) | A [spectrum analyzer](xref:DashboardSpectrumAnalyzer) displays a spectrum graph. |
@@ -72,7 +72,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | [![Parameter picker](~/dataminer/images/Parameter_Picker.svg)](xref:DashboardParameterPicker) | A [parameter picker](xref:DashboardParameterPicker) allows users to select multiple parameters from a predefined list. |
 | [![Trend statistics](~/dataminer/images/Trend_Statistics.svg)](xref:DashboardTrendStatistics) | A [trend statistics](xref:DashboardTrendStatistics) component displays the minimum, average, and maximum value of one or more trended parameters. |
 
-### Basic controls
+## Basic controls
 
 | Visualization | Description |
 |:--:|--|

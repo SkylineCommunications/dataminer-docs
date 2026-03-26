@@ -12,7 +12,7 @@ To view more information on SLA compliance, check the section *Compliance Info* 
 
     - *Compliant*: The SLA has never been violated and is currently not being violated.
 
-    - *Breached*: The SLA has been violated beyond the acceptable limits, i.e. penalties could be due.
+    - *Breached*: The SLA has been violated beyond the acceptable limits, i.e., penalties could be due.
 
     - *Compliant (Degraded)*: The SLA has been violated, but not beyond the acceptable limits.
 

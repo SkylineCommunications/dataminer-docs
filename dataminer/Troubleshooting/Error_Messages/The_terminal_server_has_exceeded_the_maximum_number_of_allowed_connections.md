@@ -18,7 +18,7 @@ You can, however, always connect to the so-called console session.
 
 Execute the following command in a command prompt window to set up a remote desktop connection to the console session of a remote machine.
 
-If that console session is being used by another user, you will be offered the possibility to disconnect that user (i.e. force a log-off).
+If that console session is being used by another user, you will be offered the possibility to disconnect that user (i.e., force a log-off).
 
 ```txt
 mstsc /v:[IP address of remote machine] /admin
@@ -35,7 +35,7 @@ In that tab, you can disconnect or log off open sessions. You can also send mess
 
 ## Shadowing a Remote Desktop session
 
-When you open a “normal” terminal session on a remote machine (i.e. no console session), you can shadow another session on that same machine, even the console session.
+When you open a “normal” terminal session on a remote machine (i.e., no console session), you can shadow another session on that same machine, even the console session.
 
 After having established a “normal” terminal session on a remote machine, execute the following command in a command prompt window if you want to shadow another session on that same remote machine:
 

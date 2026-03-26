@@ -33,4 +33,4 @@ Example:
 ```
 
 > [!NOTE]
-> When you use an XML reserved character as a separator, it has to be escaped. (e.g. "`&amp;`" instead of "&").
+> When you use an XML reserved character as a separator, it has to be escaped. (e.g., "`&amp;`" instead of "&").

@@ -35,9 +35,9 @@ Add the following shape data fields to the shape:
     > [!NOTE]
     >
     > - Instead of specifying the DMA ID/Element ID in the **Parameters** shape data field, you can also specify an **Element** shape data field and set it to the element name, and then only list the parameters in the **Parameters** shape data field, separated by pipe characters.
-    > - You can use element wildcards, e.g. "\*:1010:0" for index 0 on parameter 1010 of a table.
+    > - You can use element wildcards, e.g., "\*:1010:0" for index 0 on parameter 1010 of a table.
     > - By default no more than 10 results can be displayed if a wildcard is used. If more results are available than this default limit, a notification will be displayed.
-    > - Instead of the element ID, you can also use the element name or a \[this element\] placeholder. Keys containing forward slashes (e.g. dmaID/elementID) are also supported.
+    > - Instead of the element ID, you can also use the element name or a \[this element\] placeholder. Keys containing forward slashes (e.g., dmaID/elementID) are also supported.
 
   - For trend groups, either set the field to "TrendGroup=username:groupname" for a private trend group, where username is the name of the user that created the group, or to "TrendGroup=sharedusersettings:groupname" for a shared trend group or a read-only group. Set the field to "\|" to display an empty trend component.
 
@@ -49,7 +49,7 @@ Add the following shape data fields to the shape:
 
     For example, if "Limit:2" is specified, only two values matching the wildcard in the *Parameters* field will be displayed. However, note that if not all results can be displayed, a notification will only be displayed if more results are available than the default limit of 10.
 
-  - **MinChartHeight=*X***: Determines the minimum height of the chart area. "X" should be set to the number of pixels, e.g. "MinChartHeight=400". To make sure this height is reached, the legend of the trend component will become smaller when necessary, or it may even be hidden.
+  - **MinChartHeight=*X***: Determines the minimum height of the chart area. "X" should be set to the number of pixels, e.g., "MinChartHeight=400". To make sure this height is reached, the legend of the trend component will become smaller when necessary, or it may even be hidden.
 
     By default, the minimum height is 200 px.
 
@@ -57,7 +57,7 @@ Add the following shape data fields to the shape:
 
   - **NoWildcard**: If this option is specified, this will force DataMiner to load the specified index, instead of a filtered set of indexes.
 
-    This can particularly be of use for cases where an index is not considered to be trended, even though trend data is available, e.g. an index that has trend data in the past but is no longer trended now.
+    This can particularly be of use for cases where an index is not considered to be trended, even though trend data is available, e.g., an index that has trend data in the past but is no longer trended now.
 
   - **Range:*X***: Determines the trend range. "X" can be "Day", "Week", "Month", or "Year".
 
@@ -101,7 +101,7 @@ Example of the configuration:
 
 ## Configuring session variables to be updated with the graph’s time range
 
-It is possible to configure a trend component so that a session variable is populated with the time range displayed in the graph (i.e. the start time and end time).
+It is possible to configure a trend component so that a session variable is populated with the time range displayed in the graph (i.e., the start time and end time).
 
 To do so, add a shape data field of type **SetVar**, and set its value to "RangeStart:\<VariableA>\|RangeEnd:\<VariableB>".
 
@@ -123,16 +123,16 @@ It is possible to create a special kind of trend component that incorporates a c
    | Shape data | Value |
    | ---------- | ----- |
    | Component | Name of the Visio component: "Trending". |
-   | CommandPrefix | Optional prefix added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g. "\_Left\_\_"). |
+   | CommandPrefix | Optional prefix added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g., "\_Left\_\_"). |
 
 1. Add the following shape data fields to the command control shape:
 
    | Shape data | Value | 
    | ---------- | ----- |
-   | Command | Name of the command to be executed when the shape is clicked. Only one command is possible with a trending component: "SetTrendRange"<br>Optionally, you can include the command prefix specified in the shape of the trending component, e.g. "Left_SetTrendRange". |
+   | Command | Name of the command to be executed when the shape is clicked. Only one command is possible with a trending component: "SetTrendRange"<br>Optionally, you can include the command prefix specified in the shape of the trending component, e.g., "Left_SetTrendRange". |
    | CommandParameter | Optional parameters for the command. For the SetTrendRange command, you can specify the following trend ranges:<br>- "Range:Day"<br>- "Range:Week"<br>- "Range:Month"<br>- "Range:Year" |
    | Options | To turn the shape into a button, specify: "Control=Button" |
-   | Scope | The scope of the command:<br>- "Page" (default): All components that can execute the configured command on the same Visio page.<br>- "Card": All components that can execute the configured command on all pages of the current Visio file.<br>- "Application": All components that can execute the configured command anywhere in the client application (e.g. DataMiner Cube) |
+   | Scope | The scope of the command:<br>- "Page" (default): All components that can execute the configured command on the same Visio page.<br>- "Card": All components that can execute the configured command on all pages of the current Visio file.<br>- "Application": All components that can execute the configured command anywhere in the client application (e.g., DataMiner Cube) |
 
 ### Example
 

@@ -31,7 +31,7 @@ In the overlay to select a different organization, it could occur that character
 
 ### 5 December 2025 - Enhancement - Billing - DaaS usage billing
 
-Starting from December 2025, automatic monthly billing will be implemented for DaaS. On the 5th day of each month, the expended DataMiner credits for the previous month's DaaS usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
+Starting from December 2025, automatic monthly billing will be implemented for DaaS. On the 5th day of each month, the expended DataMiner credits for the previous month's DaaS usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Billing and metering](xref:Pricing_billing_and_metering) for more details.
 
 In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
 
@@ -67,7 +67,7 @@ Previously, if descriptions for incidents contained tabs or new lines, these wer
 
 ### 1 October 2025 - Enhancement - Billing - STaaS usage billing
 
-Starting from October 2025, automatic monthly billing will be implemented for STaaS. On the first day of each month, the expended DataMiner credits for the previous month's STaaS usage will be subtracted from the organization's balance. This billing will take effect retroactively, going as far back as April 2024. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
+Starting from October 2025, automatic monthly billing will be implemented for STaaS. On the first day of each month, the expended DataMiner credits for the previous month's STaaS usage will be subtracted from the organization's balance. This billing will take effect retroactively, going as far back as April 2024. See [Billing and metering](xref:Pricing_billing_and_metering) for more details.
 
 In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
 
@@ -301,11 +301,11 @@ The context menu for a Catalog item range and version is now only shown if the p
 
 ### 1 April 2025 - Enhancement - Catalog & Home - Show notifications bell for unauthenticated users [ID 42559]
 
-In the Catalog app and on the dataminer.services homepage, users can now see the notifications button even when they are not signed in.
+In the Catalog app and on the dataminer.services home page, users can now see the notifications button even when they are not signed in.
 
 ### 1 April 2025 - Fix - Admin, Catalog, Home & Sharing - User profile was visible after signing out [ID 42559]
 
-In some cases, it could occur that you could still see your user profile even after clicking *Sign out*. This issue affected the Admin app, Catalog app, Sharing app, and dataminer.services homepage.
+In some cases, it could occur that you could still see your user profile even after clicking *Sign out*. This issue affected the Admin app, Catalog app, Sharing app, and dataminer.services home page.
 
 ### 1 April 2025 - Fix - Catalog API - Users could update ranges and versions they did not have rights to [ID 42566]
 
@@ -341,7 +341,7 @@ Note that in case the button is displayed as enabled while a user is not logged 
 
 ### 11 March 2025 - Enhancement - Catalog - Ranges displayed for all items [ID 42426]
 
-The Catalog now displays version ranges for all item types. Previously, ranges were only displayed for connectors. A range is created when a version ID follows a semantic format (e.g. x.x.x.x or x.x.x). Other versions are grouped under *other*.
+The Catalog now displays version ranges for all item types. Previously, ranges were only displayed for connectors. A range is created when a version ID follows a semantic format (e.g., x.x.x.x or x.x.x). Other versions are grouped under *other*.
 
 ### 11 March 2025 - Fix - Catalog API - Different recommended versions shown depending on API used [ID 42464]
 

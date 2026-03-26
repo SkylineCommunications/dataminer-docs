@@ -2,9 +2,9 @@
 uid: SchemaProtocol
 ---
 
-# Protocol Schema
+# Protocol schema
 
-DataMiner Protocol XML Schema.
+DataMiner protocol XML schema.
 
 ## Root element
 

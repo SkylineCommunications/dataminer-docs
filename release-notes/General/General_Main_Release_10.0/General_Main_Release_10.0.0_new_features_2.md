@@ -45,7 +45,7 @@ Any change in behavior is called a change point. At present, there are five type
 
   Examples:
 
-  - A value fluctuating around 10 (i.e. a trend slope of 0) which suddenly starts increasing 1 unit per second (i.e. a trend slope of 1).
+  - A value fluctuating around 10 (i.e., a trend slope of 0) which suddenly starts increasing 1 unit per second (i.e., a trend slope of 1).
   - A value fluctuating around a line with slope 1 which suddenly starts fluctuating around a line with slope -1.
 
 - **Unlabeled change**: If a change point cannot be classified as one of the above-mentioned change points, it is considered an unlabeled change.
@@ -54,7 +54,7 @@ Any change in behavior is called a change point. At present, there are five type
 
 Some change points are more significant or unexpected than others. The stranger the current change point is compared to past change points, the higher its significance will be.
 
-Of every new change point, its significance is calculated based on its characteristics (change point type, direction, absolute or relative change size, etc.), taking into account the parameter's change point history of the last month. The change points that are considered the most significant, i.e. the most "surprising", are labeled "anomalous".
+Of every new change point, its significance is calculated based on its characteristics (change point type, direction, absolute or relative change size, etc.), taking into account the parameter's change point history of the last month. The change points that are considered the most significant, i.e., the most "surprising", are labeled "anomalous".
 
 Level shifts which are higher or which have a different direction than previous recent jumps, or which jump to a previously unseen level, will typically be labeled "anomalous". Similarly, trend or variance changes will be labeled "anomalous" when no earlier trend or variance changes in the same direction appeared during the last weeks.
 
@@ -66,7 +66,7 @@ On a trend graph, a change point is indicated by a bar below the graph. The leng
 
 When you hover the mouse pointer over a change point bar, a semi-transparent ribbon will appear over the entire height of the trend graph, showing more information about the change point.
 
-Labels of change points of type "trend change" will indicate the level of increase or decrease in seconds, minutes, hours or days depending on the value. If, for example, the value increases by 0.01 per second (i.e. 0.6 per minute, 36 per hour or 864 per day), the label will show an increase of 36 per hour as it is the smallest amount greater than 1.
+Labels of change points of type "trend change" will indicate the level of increase or decrease in seconds, minutes, hours or days depending on the value. If, for example, the value increases by 0.01 per second (i.e., 0.6 per minute, 36 per hour or 864 per day), the label will show an increase of 36 per hour as it is the smallest amount greater than 1.
 
 ##### Trend state icons next to parameters in DATA pages
 
@@ -190,7 +190,7 @@ It is now possible to force a refresh of a (direct) view table displayed in Data
 
 - To configure this, create a string parameter named "\[TableName\]\_REFRESHVIEWFORKEY", and set its RTDisplay property to "True".
 
-When values in a particular row have changed due to a forced poll by the user (i.e. a user clicking a row’s *Update*, *Force poll* or *Refresh* button), then set the "\[TableName\]\_REFRESHVIEWFORKEY" parameter to the following value: the primary key of the row in question, followed by a pipe character ("\|") and a random value (e.g. the current time).
+When values in a particular row have changed due to a forced poll by the user (i.e., a user clicking a row’s *Update*, *Force poll* or *Refresh* button), then set the "\[TableName\]\_REFRESHVIEWFORKEY" parameter to the following value: the primary key of the row in question, followed by a pipe character ("\|") and a random value (e.g., the current time).
 
 If, for example, you have a direct view table named "View_Cable Modems", and the protocol has a parameter named "View_Cable Modems_REFRESHVIEWFORKEY", then you can force an immediate update of that table in DataMiner Cube by setting that parameter to the following value: "ABCDEF\|124831898" (in which ABCDEF is the primary key of the row and 124831898 is a random value).
 
@@ -324,11 +324,11 @@ From now on, icons of alarms associated with an element in timeout state will ha
 
 #### Protocols & Templates: Viewing protocol version differences when changing the protocol version of an existing element \[ID 20742\]
 
-When you change the protocol version of an existing element, and the protocol XML files of both the old and the new protocol version contain version history information (i.e. inside a \<VersionHistory> element), an icon will now appear next to the *Version* box. When you click that icon, a pop-up window will show an overview of the differences between the two versions.
+When you change the protocol version of an existing element, and the protocol XML files of both the old and the new protocol version contain version history information (i.e., inside a \<VersionHistory> element), an icon will now appear next to the *Version* box. When you click that icon, a pop-up window will show an overview of the differences between the two versions.
 
 A protocol version number is made up of four parts:
 
-`Branch.SystemVersion.MajorVersion.MinorVersion (e.g. 2.1.0.1)`
+`Branch.SystemVersion.MajorVersion.MinorVersion (e.g., 2.1.0.1)`
 
 The level of information shown in the pop-up window will depend on the version number part that has changed:
 
@@ -392,9 +392,9 @@ When you upload a document and link it to an element:
 > [!NOTE]
 > From now on, in the *Documents* app, a progress bar will be displayed when you are uploading or downloading a document.
 
-#### All Cube clients will now display 'broadcast popups' sent from QActions, Automation scripts, etc. \[ID 21733\]\[ID 21928\]\[ID 22089\]
+#### All Cube clients will now display 'broadcast popups' sent from QActions, automation scripts, etc. \[ID 21733\]\[ID 21928\]\[ID 22089\]
 
-When a QAction, an Automation script, etc. sends a BroadCastPopupRequestMessage with the following arguments, a BroadCastPopupEventMessage will now be sent to all recipients specified in the UserNames and GroupNames arguments, causing a so-called "broadcast popup" to appear.
+When a QAction, an automation script, etc. sends a BroadCastPopupRequestMessage with the following arguments, a BroadCastPopupEventMessage will now be sent to all recipients specified in the UserNames and GroupNames arguments, causing a so-called "broadcast popup" to appear.
 
 | Argument | Format | Description |
 |--|--|--|
@@ -418,7 +418,7 @@ When a QAction, an Automation script, etc. sends a BroadCastPopupRequestMessage 
 
 - Each message will show the time at which it was received and the time until which it will be shown (if such a time was specified in the BroadCastPopupRequestMessage).
 
-- In the Message argument (i.e. the contents of a message), you can include some of the placeholders that can be included in Visio shape data values. As this kind of broadcast messages do not have any context, placeholders like e.g. \[this element\] or \[cardvar:abc\] will not work. For a list of Visio placeholders, see [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
+- In the Message argument (i.e., the contents of a message), you can include some of the placeholders that can be included in Visio shape data values. As this kind of broadcast messages do not have any context, placeholders like e.g., \[this element\] or \[cardvar:abc\] will not work. For a list of Visio placeholders, see [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
 #### New ClientSettings.json setting to determine CPE card behavior \[ID 21822\]
 
@@ -440,7 +440,7 @@ For example:
 
 In a \<Hyperlink> tag, from now on, the filterElement attribute supports alarm property names that contain spaces.
 
-If, in a filterElement attribute, you specify a property name that contains spaces (e.g. "System Type", "System Name", etc.), then you must enclose it in XML-encoded double quotes. See the following example.
+If, in a filterElement attribute, you specify a property name that contains spaces (e.g., "System Type", "System Name", etc.), then you must enclose it in XML-encoded double quotes. See the following example.
 
 ```txt
 filterElement="AlarmEventMessage.PropertiesDict.&quot;System Type&quot;[String] == 'OLT'"
@@ -492,11 +492,11 @@ If you click this option, you can choose to merge all alarm trees for the same e
 > [!NOTE]
 > This new option will only be available when *History tracking* is enabled, *Freeze* is disabled and automatic alarm clearing is disabled.
 
-#### More detailed error message will now appear when an interactive Automation script fails \[ID 23251\]\[ID 23561\]
+#### More detailed error message will now appear when an interactive automation script fails \[ID 23251\]\[ID 23561\]
 
-Up to now, when an interactive Automation script failed, a generic popup message was displayed, stating that something went wrong.
+Up to now, when an interactive automation script failed, a generic popup message was displayed, stating that something went wrong.
 
-From now on, when an interactive Automation script fails, a popup message will appear, containing more detailed information about why the script failed (e.g. the user aborted the script while it was running, the script ran for too long and went into timeout, etc.).
+From now on, when an interactive automation script fails, a popup message will appear, containing more detailed information about why the script failed (e.g., the user aborted the script while it was running, the script ran for too long and went into timeout, etc.).
 
 #### Redesigned DataMiner Cube layout \[ID 23427\]\[ID 23486\]\[ID 23540\]\[ID 23628\]\[ID 23646\] \[ID 23813\]\[ID 23822\]\[ID 23904\]\[ID 23982\]\[ID 24036\]\[ID 24044\]\[ID 24079\]\[ID 24086\]\[ID 24129\] \[ID 24143\]\[ID 24160\]\[ID 24165\]\[ID 24189\]\[ID 24218\]\[ID 24518\]
 
@@ -607,7 +607,7 @@ The focus score that is assigned to an alarm is a combination of likelihood, fre
 > [!NOTE]
 >
 > - Currently, every DataMiner Agent is responsible for calculating the focus scores of the alarms it is hosting.
-> - Currently, no focus score is assigned to the following types of alarms: Correlation alarms, external alarms and information events. By default, those alarms are assigned a focus score equal to null.
+> - Currently, no focus score is assigned to the following types of alarms: correlation alarms, external alarms and information events. By default, those alarms are assigned a focus score equal to null.
 
 ##### New column in Alarm Console: Focus
 

@@ -98,9 +98,9 @@ From now on, this will no longer the case when you do not have access to the ele
 
 When, in a trend template, you changed the Allow offload database configuration setting, in some cases, the setting would not be applied correctly.
 
-#### Problem when launching Automation scripts when switching elements in a redundancy group that contained DELT elements \[ID 28832\]
+#### Problem when launching automation scripts when switching elements in a redundancy group that contained DELT elements \[ID 28832\]
 
-When Automation scripts were launched when switching elements in a redundancy group of which either the primary or backup elements were DELT elements, in some cases, it would not be possible to pass \<Any Primary> or \<Any backup> as dummies.
+When automation scripts were launched when switching elements in a redundancy group of which either the primary or backup elements were DELT elements, in some cases, it would not be possible to pass \<Any Primary> or \<Any backup> as dummies.
 
 #### Element log file would not be properly restarted on element restart \[ID 28841\]
 
@@ -112,13 +112,13 @@ In some cases, the SLNet cache would thrown exceptions when receiving NULL data.
 
 From now on, the SLNet cache will ignore any NULL data it receives.
 
-#### Problem with SLAutomation when an interactive Automation script was communicating with a client app \[ID 28862\]
+#### Problem with SLAutomation when an interactive automation script was communicating with a client app \[ID 28862\]
 
-When an interactive Automation script was communicating with the client app, in some cases, an error could occur in SLAutomation.
+When an interactive automation script was communicating with the client app, in some cases, an error could occur in SLAutomation.
 
-#### DataMiner Cube - Interactive Automation scripts: Multiple 'Continue' messages would be sent to the DataMiner Agent \[ID 28872\]
+#### DataMiner Cube - Interactive automation scripts: Multiple 'Continue' messages would be sent to the DataMiner Agent \[ID 28872\]
 
-When an interactive Automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
+When an interactive automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
 
 #### DataMiner Cube - Visual Overview: Problem when pressing Ctrl+Tab while an item inside a Visio page had the focus \[ID 28876\]
 

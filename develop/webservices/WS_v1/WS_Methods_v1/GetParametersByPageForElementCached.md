@@ -7,7 +7,7 @@ uid: GetParametersByPageForElementCached
 Use this method to retrieve the data of the parameters on a particular Data Display page of an element added or changed since a particular point in time.
 
 > [!NOTE]
-> Using this method, you can e.g. request parameter data in batches in order to minimize loading time.
+> Using this method, you can e.g., request parameter data in batches in order to minimize loading time.
 
 ## Input
 

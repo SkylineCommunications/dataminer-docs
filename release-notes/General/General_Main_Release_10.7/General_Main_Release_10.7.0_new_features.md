@@ -60,11 +60,11 @@ By default, a Content-Type header of type `application/octet-stream` will be ret
 > - `TriggerUserDefinableApiRequestMessage` is now also capable of returning bytes.
 > - When a user-defined API being tested in the SLNetClientTest tool returns bytes, the following message will appear: "Response body is in bytes and cannot be displayed".
 
-#### Automation: New message to retrieve information about the available Automation scripts [ID 44209]
+#### Automation: New message to retrieve information about the available automation scripts [ID 44209]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each Automation script available in the DataMiner System:
+A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve the following information about each automation script available in the DataMiner System:
 
 - The folder containing the script's XML file.
 - Whether or not the script supports a dedicated log file.
@@ -97,7 +97,7 @@ To activate SLNet subscription event logging, do the following:
 
 ##### Event type and cache key filtering
 
-The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g. *ParameterChangeEventMessage*) and/or cache key (e.g. DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
+The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g., *ParameterChangeEventMessage*) and/or cache key (e.g., DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
 
 Options for filtering by event type:
 
@@ -180,7 +180,7 @@ If a *MigrationStatus* is stuck in the *InProgress* state, you will need to canc
 
 ##### Configuring a script to swarm scheduled tasks
 
-If scheduled tasks are stored in the database, you can use an Automation script to initiate the swarming process.
+If scheduled tasks are stored in the database, you can use an automation script to initiate the swarming process.
 
 In this script, create a SwarmingHelper using the new hosting Agent ID along with the scheduled task IDs. See the following example.
 
@@ -241,3 +241,79 @@ public class Script
 >
 > - To swarm a scheduled task, the new hosting Agent must be up and running. In case the current hosting Agent is unreachable, swarming will still take place, but an error will be logged in the *SLScheduler* log file.
 > - To be able to trigger swarming for a scheduled task, you need the *Modules > Swarming* user permission.
+
+#### Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+When an automation script is executed, it is now possible to pass the time zone of the client to that script.
+
+In the `ExecuteScriptMessage`, you can add the time zone information to the string parameter array in the following format:
+
+`CLIENT_TIME_ZONE:<Serialized TimeZone String>`
+
+Example: `CLIENT_TIME_ZONE:Tokyo Standard Time;540;(UTC+09:00) Osaka, Sapporo, Tokyo;Tokyo Standard Time;Tokyo Summer Time;;`
+
+In the automation script, the time zone will be available on the `IEngine` input argument:
+
+`engine.ClientInfo.TimeZone`
+
+> [!NOTE]
+>
+> - If the script was executed from a source other than a web app, or if the time zone information could not be parsed, the `TimeZone` property can be null.
+> - In case a subscript is executed, the `ClientInfo` of the parent script will also be available in the subscript.
+
+#### Offloading data is now partially supported when Swarming is enabled [ID 44751]
+
+<!-- MR 10.7.0 - FR 10.6.4 [CU0] -->
+
+Up to now, it was not possible to offload data on systems with Swarming enabled. From now on, provided the `info` and `alarm` tables have a compatible primary key definition, offloading data will be supported when Swarming is enabled, except for the following tables:
+
+- `alarm_property`
+- `brainlink`
+- `interface_alarm`
+- `service_alarm`
+
+When Swarming is enabled, the `alarm` and `info` tables in the offload database will need an updated primary key that includes the *eid* column next to the *id* and *dmaid* columns. Swarming prerequisites will complain if the primary key is incorrect.
+
+The `CentralTable*.*` scripts in `C:\Skyline DataMiner\tools\` have been updated to initialize any new offload database with the expected primary keys right from the start.
+
+#### SLNet: Minimum number of worker threads and I/O threads is now configurable [ID 44843]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+In the *SLNet.exe.config* file, it is now possible to configure the minimum number of worker threads and I/O threads for the SLNet process.
+
+Configuring a specific minimum number of threads will especially be useful for systems that experience bursts of high message throughput, which can lead to thread starvation under default .NET ThreadPool behavior. Examples of such systems include SRM systems on which a large number of bookings start simultaneously.
+
+See the following example:
+
+```xml
+<configuration>
+   ...
+    <appSettings>
+        ...
+        <add key="ThreadPoolMinWorkerThreads" value="64" />
+        <add key="ThreadPoolMinIOThreads" value="64" />
+    </appSettings>
+    ...
+</configuration>
+```
+
+On startup, SLNet adds an entry mentioning the configured thread pool values in the SLNet.txt log file. See the following example:
+
+`2026-02-23 10:26:07.802|5|ConfigureMinThreadPoolThreads|Setting ThreadPool minimum worker threads to 64 and minimum IO threads to 64`
+
+If no value (or an invalid value) is configured, SLNet will fall back to the default behavior to avoid issues related to excessively high thread counts. By default, the minimum number of I/O and completion port threads will be set to at least 16 if the default chosen by .NET would be less than that.
+
+#### Automation: DEBUG preprocessor directive will now be added to a C# code block when you select the 'Compile in DEBUG mode' option [ID 44958]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+From now on, when you select the *Compile in DEBUG mode* option in the *Advanced* section of a C# code block, a `DEBUG` preprocessor directive will automatically be added inside that code block. In that preprocessor directive, you can then add code that will only be compiled when in DEBUG mode.
+
+```csharp
+#if DEBUG
+    engine.Log("This code is only compiled in DEBUG mode.");
+#endif
+```

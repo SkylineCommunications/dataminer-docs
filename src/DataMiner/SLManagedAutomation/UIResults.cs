@@ -3,7 +3,7 @@ using System;
 namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// Represents the information a user has entered or selected in a dialog box of an interactive Automation script.
+	/// Represents the information a user has entered or selected in a dialog box of an interactive automation script.
 	/// </summary>
 	/// <example>
 	/// <code>
@@ -165,7 +165,7 @@ namespace Skyline.DataMiner.Automation
 		///   </item>
 		///   <item>
 		///		The <see cref="TimeZoneInfo.Id"/> property. The info can be restored using <see cref="TimeZoneInfo.FindSystemTimeZoneById"/>.
-		///     However, keep in mind that the ID of the TimeZoneInfo might not (or no longer) be available on the DataMiner Agent executing the Automation script.
+		///     However, keep in mind that the ID of the TimeZoneInfo might not (or no longer) be available on the DataMiner Agent executing the automation script.
 		///   </item>
 		/// </list>
 		/// More info is available here: <see href="https://learn.microsoft.com/en-us/dotnet/standard/datetime/saving-and-restoring-time-zones">Saving and restoring time zones - .NET @ Microsoft Learn</see>.
@@ -254,7 +254,7 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>.</para>
 		/// <para>For <see cref="GetFilterString"/> to work, <see cref="UIBlockDefinition.WantsOnFilter"/> has to be set to true and <see cref="WasOnFilter"/> for the current result should return true.</para>
-		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps, if the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2.</note> <!-- RN 42808 / RN 42845 -->
+		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in automation scripts launched from web apps, if the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2.</note> <!-- RN 42808 / RN 42845 -->
 		/// <note type="important">When the options are filtered, the currently selected option (if still relevant) needs to be inserted as an option, regardless of whether the filter matches. Otherwise, the dropdown will consider that value incorrect, and the dropdown will be cleared.</note>
 		/// <note type="tip">Consider only filtering the display value of the options and, if possible, ensure that the filter is not case-sensitive.</note>
 		/// </remarks>
@@ -492,7 +492,7 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>.</para>
-		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps, if the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2.</note> <!-- RN 42808 / RN 42845 -->
+		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in automation scripts launched from web apps, if the <see href="xref:Skyline.DataMiner.Automation.Engine.WebUIVersion">WebUIVersion</see> is WebUIVersion.V2.</note> <!-- RN 42808 / RN 42845 -->
 		/// <para>For <see cref="WasOnFilter"/> to work, <see cref="UIBlockDefinition.WantsOnFilter"/> has to be set to true. Use <see cref="GetFilterString"/> to get the filter value. See example.</para>
 		/// <note type="important">When the options are filtered, the currently selected option (if still relevant) needs to be inserted as an option, regardless of whether the filter matches. Otherwise, the dropdown will consider that value incorrect, and the dropdown will be cleared.</note>
 		/// <note type="tip">Consider only filtering the display value of the options and, if possible, ensure that the filter is not case-sensitive.</note>

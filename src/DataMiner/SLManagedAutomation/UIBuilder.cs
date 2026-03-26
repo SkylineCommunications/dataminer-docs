@@ -10,7 +10,7 @@ namespace Skyline.DataMiner.Automation
 	/// If you want to use IntelliSense in DataMiner Cube, the name of the dialog box has to start with “uib”.
 	/// </note>
 	/// <note type="note">
-	/// Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.
+	/// Interactive automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.
 	/// </note>
 	/// </remarks>
 	public class UIBuilder
@@ -64,7 +64,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The fixed height (in pixels) of the dialog box.</value>
 		/// <remarks>
-		/// <note type="note">Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
+		/// <note type="note">Interactive automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -79,7 +79,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The minimum height (in pixels) of the dialog box.</value>
 		/// <remarks>
-		/// <note type="note">Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
+		/// <note type="note">Interactive automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -94,7 +94,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The maximum width (in pixels) of the dialog box.</value>
 		/// <remarks>
-		/// <note type="note" >Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
+		/// <note type="note" >Interactive automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -109,7 +109,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The minimum height (in pixels) of the dialog box.</value>
 		/// <remarks>
-		/// <note type="note">Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
+		/// <note type="note">Interactive automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -124,7 +124,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The minimum width (in pixels) of the dialog box.</value>
 		/// <remarks>
-		/// <note type="note">Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
+		/// <note type="note">Interactive automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -180,7 +180,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The title</value>
 		/// <remarks>
-		/// <para>In case no title is specified, the name of the Automation script is used as title.</para>
+		/// <para>In case no title is specified, the name of the automation script is used as title.</para>
 		/// <para>Feature introduced in DataMiner 9.6.6 (RN 21552).</para>
 		/// </remarks>
 		/// <example>
@@ -196,7 +196,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The fixed width (in pixels) of the dialog box.</value>
 		/// <remarks>
-		/// <para>Note: Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</para>
+		/// <para>Note: Interactive automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>

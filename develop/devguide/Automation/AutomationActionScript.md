@@ -4,7 +4,7 @@ uid: AutomationActionScript
 
 # Script
 
-Runs another Automation script from within the current script.
+Runs another automation script from within the current script.
 
 ```xml
 <Exe id="2" type="script">

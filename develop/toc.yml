@@ -210,7 +210,7 @@ items:
             topicUid: LogicQActionsExecution
           - name: QAction compilation
             topicUid: LogicQActionsCompilation
-          - name: Starting an Automation script from a QAction
+          - name: Starting an automation script from a QAction
             topicUid: LogicQActionsAutomationScriptExecution            
           - name: Examples
             topicUid: LogicQActionsExamples
@@ -892,7 +892,7 @@ items:
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
-    - name: Getting started with Automation script development
+    - name: Getting started with automation script development
       topicUid: GettingStartedWithAutomationScriptDevelopment
     - name: Actions
       topicUid:  AutomationActions
@@ -951,15 +951,15 @@ items:
         topicUid: Handling_Async_Code
     - name: How-tos
       items:
-      - name: Making your Automation scripts debug-ready
+      - name: Making your automation scripts debug-ready
         topicUid: How_to_make_your_automation_scripts_debug_ready
       - name: Getting started with the IAS Toolkit
         topicUid: Getting_Started_with_the_IAS_Toolkit
-      - name: Implementing interactive Automation scripts in regression tests (best practices)
+      - name: Implementing interactive automation scripts in regression tests (best practices)
         topicUid: BP_Implementing_IAS_in_Regression_Tests
-      - name: Creating a Cypress test for an interactive Automation script
+      - name: Creating a Cypress test for an interactive automation script
         topicUid: Creating_a_cypress_test_for_an_interactive_automation_script
-      - name: Launching and attaching interactive Automation scripts
+      - name: Launching and attaching interactive automation scripts
         topicUid: Launching_and_attaching_interactive_Automation_scripts
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
@@ -1146,7 +1146,6 @@ items:
           - name: DataMiner Visio templates
             topicUid: DataMiner_Visio_templates
       - name: Linking shapes to DataMiner items
-        topicUid: Linking_shapes_to_DataMiner_items
         items:
           - name: Linking a shape to an element, a service or a redundancy group
             topicUid: Linking_a_shape_to_an_element_a_service_or_a_redundancy_group
@@ -1178,7 +1177,7 @@ items:
             topicUid: Linking_a_shape_to_a_video_stream_using_VLC
           - name: Linking a shape to a webpage
             topicUid: Linking_a_shape_to_a_webpage
-          - name: Linking a shape to an Automation script
+          - name: Linking a shape to an automation script
             topicUid: Linking_a_shape_to_an_Automation_script
           - name: Linking a shape to a matrix parameter
             topicUid: Linking_a_shape_to_a_matrix_parameter
@@ -1576,6 +1575,8 @@ items:
       topicUid: Skyline.DataMiner.Analytics.Rad
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
+    - name: Skyline.DataMiner.Net.NodeRecovery
+      topicUid: Skyline.DataMiner.Net.NodeRecovery
     - name: Skyline.DataMiner.Net.Swarming
       topicUid: Skyline.DataMiner.Net.Swarming
     - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
@@ -4746,8 +4747,6 @@ items:
         items:
         - name: '@time'
           topicUid: MaintenanceSettings.AutoElementLock-time
-      - name: BrokerGateway
-        topicUid: MaintenanceSettings.BrokerGateway
       - name: Correlation
         topicUid: MaintenanceSettings.Correlation
         items:
@@ -4890,6 +4889,8 @@ items:
           topicUid: MaintenanceSettings.SLNet.AvailableDashboardsServiceUrl
         - name: BackgroundTasksMaxList
           topicUid: MaintenanceSettings.SLNet.BackgroundTasksMaxList
+        - name: BrokerGateway
+          topicUid: MaintenanceSettings.SLNet.BrokerGateway
         - name: CallbackTimeout
           topicUid: MaintenanceSettings.SLNet.CallbackTimeout
         - name: ClearedAlarmStoreTime
@@ -6770,6 +6771,8 @@ items:
             topicUid: DMAAutomationScriptDummy
           - name: DMAAutomationScriptMemoryFile
             topicUid: DMAAutomationScriptMemoryFile
+          - name: DMAAutomationScriptOptionClientTimeZone
+            topicUid: DMAAutomationScriptOptionClientTimeZone
           - name: DMAAutomationScriptParameter
             topicUid: DMAAutomationScriptParameter
           - name: DMAAutomationVariableInfo
@@ -7260,7 +7263,7 @@ items:
         items:
         - name: Automation scripts as a Visual Studio solution
           topicUid: Automation_scripts_as_a_Visual_Studio_solution
-        - name: Pipeline stages for Automation scripts
+        - name: Pipeline stages for automation scripts
           topicUid: Pipeline_stages_for_Automation_scripts
       - name: Visual overview development with CI/CD pipeline
         items:
@@ -7358,9 +7361,9 @@ items:
               items:
                 - name: Using the DIS MIB Browser
                   topicUid: DIS_MIB_Browser
-            - name: Developing Automation scripts
+            - name: Developing automation scripts
               topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
-        - name: Debugging connectors and Automation scripts
+        - name: Debugging connectors and automation scripts
           topicUid: Debugging_connectors_and_Automation_scripts
           items:
             - name: Concept
@@ -7371,7 +7374,7 @@ items:
               topicUid: Preparing_to_debug_on_a_remote_DataMiner_Agent
             - name: Debugging a connector
               topicUid: Debugging_a_connector
-            - name: Debugging an Automation script
+            - name: Debugging an automation script
               topicUid: Debugging_an_Automation_script
         - name: Tutorials
           items:
@@ -7394,6 +7397,8 @@ items:
               topicUid: DIS_Troubleshooting_CompilationFailure
             - name: Publishing problems
               topicUid: DIS_Troubleshooting_UploadFailure
+            - name: Importing problems
+              topicUid: DIS_Troubleshooting_ImportFailure
         - name: DIS reference
           items:
             - name: DIS settings
@@ -7430,7 +7435,7 @@ items:
               topicUid: Run_Time_Assembly_Binding
             - name: Assembly binding connectors
               topicUid: AssemblyResolvingConnectors
-            - name: Assembly binding Automation scripts
+            - name: Assembly binding automation scripts
               topicUid: AssemblyResolvingAutomationScripts
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
@@ -7466,8 +7471,41 @@ items:
           topicUid: Notifications
         - name: Viewing test results
           topicUid: Viewing_test_results
-    - name: Definition of Done (DoD) Platform
-      topicUid: About_DoD
+    - name: QAOps
+      topicUid: QAOps
+      items:
+      - name: QAOps main UI
+        topicUid: QAOps_Main_UI
+      - name: QAOps configurations
+        topicUid: QAOps_Configuration
+      - name: QAOps test suites
+        topicUid: QAOps_Test_Suite
+      - name: QAOps test packages
+        topicUid: QAOps_Test_Package
+      - name: QAOps test runs
+        topicUid: QAOps_Test_Run
+      - name: QAOps test results
+        topicUid: QAOps_Test_Result
+      - name: QAOps tool
+        topicUid: QAOps_Tool
+      - name: QAOps tutorials
+        items:
+        - name: QAOps User
+          items:
+          - name: Basic
+            items:
+            - name: Getting started with the QAOps User app
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_What_Is_QAOps
+            - name: Triggering a test run
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_How_To_Trigger_A_Test_Run
+            - name: Viewing test results
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results
+            - name: Preventing unnecessary costs as a user
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_Avoiding_Unnecessary_Costs
+          - name: Advanced
+            items:
+            - name: Creating a test package
+              topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:
@@ -7643,6 +7681,8 @@ items:
         topicUid: Best_Practices_When_Documenting_Catalog_Items
       - name: Naming conventions for Catalog item components
         topicUid: Naming_Conventions_For_Catalog_Item_Components
+    - name: NuGet package recommendations
+      topicUid: NuGet_Recommendations
     - name: Unit testing
       topicUid: Unit_testing
       items:

@@ -78,6 +78,6 @@ If `<RequireValidSsl>` is set to *false*, no further configuration is required. 
 
 > [!NOTE]
 >
-> - In production environments, it is recommended to use the domain certificate of the network (e.g. smseagle.skyline.be) and to generate a server certificate for the SMSEagle device that is trusted by the root skyline.be certificate.
+> - In production environments, it is recommended to use the domain certificate of the network (e.g., smseagle.skyline.be) and to generate a server certificate for the SMSEagle device that is trusted by the root skyline.be certificate.
 > - The SMSEagle firmware supports HTTPS as from version 2.7.
 > - When an SMSEagle device with firmware version 3.32 is used, because of an issue with this firmware version, it is not possible to retrieve the signal strength.

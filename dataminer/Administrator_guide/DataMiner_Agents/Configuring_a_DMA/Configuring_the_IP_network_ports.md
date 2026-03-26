@@ -19,7 +19,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 |----------|------------|------------------|
 | SNMP     | 161/udp<br> 162/udp | SNMP    |
 | .NET Remoting  | Configurable port<br> Default port: 8004/tcp | Inter-DMA communication ([unless gRPC is configured instead](xref:DMS_xml#redirects-subtag))<br> DataMiner Cube ([unless gRPC is configured instead](xref:ConnectionSettings_txt#connectionsettingstxt-options))<br> Alerter |
-| HTTP(S) | 80/tcp<br> 443/tcp | Inter-DMA communication ([if gRPC is configured](xref:DMS_xml#redirects-subtag))<br>DataMiner Cube<br> Alerter<br> Web apps (e.g. Monitoring, Jobs)<br> Dashboards, Reporter |
+| HTTP(S) | 80/tcp<br> 443/tcp | Inter-DMA communication ([if gRPC is configured](xref:DMS_xml#redirects-subtag))<br>DataMiner Cube<br> Alerter<br> Web apps (e.g., Monitoring, Jobs)<br> Dashboards, Reporter |
 | N/A     | 7000/tcp | Cassandra: non-TLS setup (inter-node communication in Failover setups) |
 | N/A     | 7001/tcp | Cassandra: TLS setup (available from DataMiner 10.1.3 onwards) |
 | N/A     | 7199/tcp | Cassandra: cluster backups |

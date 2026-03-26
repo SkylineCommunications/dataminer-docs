@@ -5,7 +5,7 @@ uid: PA_Creating_script_tasks
 # Creating script tasks
 
 > [!NOTE]
-> Script tasks need to be designed in such a way that their execution does not exceed the default Automation script timeout time of 15 minutes.
+> Script tasks need to be designed in such a way that their execution does not exceed the default automation script timeout time of 15 minutes.
 
 1. In the [*Profiles* module](xref:The_Profiles_module), define the **input parameters** required for the script task to execute.
 
@@ -15,7 +15,7 @@ uid: PA_Creating_script_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the parameter, e.g. "Ping - IP Address".
+      - **Name**: The name of the parameter, e.g., "Ping - IP Address".
 
       - **Type**: Set to *Text*.
 
@@ -31,7 +31,7 @@ uid: PA_Creating_script_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the parameter, e.g. "Ping - Result".
+      - **Name**: The name of the parameter, e.g., "Ping - Result".
 
       - **Type**: Depends on the parameter. For example:
 
@@ -71,7 +71,7 @@ uid: PA_Creating_script_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the profile definition, e.g. "PING IP"
+      - **Name**: The name of the profile definition, e.g., "PING IP"
 
       - **Parameters**: Add your previously created input and output parameters.
 
@@ -81,7 +81,7 @@ uid: PA_Creating_script_tasks
 
       ![PING IP](~/dataminer/images/PING_IP.png)
 
-1. Create an Automation script based on the *PA_ProfileLoadDomTemplate* script available in the PA framework:
+1. Create an automation script based on the *PA_ProfileLoadDomTemplate* script available in the PA framework:
 
    1. Add a C# block in the script and configure it as follows:
 

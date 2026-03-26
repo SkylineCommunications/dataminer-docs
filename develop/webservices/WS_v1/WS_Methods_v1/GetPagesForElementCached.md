@@ -7,7 +7,7 @@ uid: GetPagesForElementCached
 Use this method to retrieve the Data Display pages of a particular element added or changed since a particular point in time.
 
 > [!NOTE]
-> Using this method, you can e.g. request Data Display pages in batches in order to minimize loading time.
+> Using this method, you can e.g., request Data Display pages in batches in order to minimize loading time.
 
 ## Input
 

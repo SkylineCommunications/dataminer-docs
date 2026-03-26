@@ -17,7 +17,7 @@ Resources would not always be released correctly, causing some resources to be u
 
 <!-- MR 10.5.0 - FR 10.4.2 -->
 
-When cleaning (i.e. resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
+When cleaning (i.e., resetting) a Cassandra database, in some cases, a `TypeInitializationException` could be thrown.
 
 #### StorageModule: Only final retry will be logged as error when a data storage request fails [ID 38897]
 
@@ -31,7 +31,7 @@ From now on, only the final retry will be logged as error. All prior retries wil
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
-When GQI extensions (i.e. ad hoc data sources or custom operators) were being loaded, in some cases, an exception could be thrown when inspecting the assembly of an extension that prevented subsequent extensions from being loaded.
+When GQI extensions (i.e., ad hoc data sources or custom operators) were being loaded, in some cases, an exception could be thrown when inspecting the assembly of an extension that prevented subsequent extensions from being loaded.
 
 This type of exceptions will be now be properly caught and logged as warnings so that other extensions will no longer be prevented from being loaded.
 
@@ -48,7 +48,7 @@ A *ModelHostException* could be thrown while checking whether the DataMiner Syst
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
-In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
+In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g., comments).
 
 #### STaaS: Problem when using a delete statement with a filter [ID 39416]
 
@@ -142,13 +142,13 @@ Up to now, when *defaultApp* was set to "Cube" in `C:\Skyline DataMiner\Webpages
 For example, when *defaultApp* is set to "Cube" in `C:\Skyline DataMiner\Webpages\Config.manual.asp`, using the URL ``https://mydma/?element=12/76`` will open DataMiner Cube, which will then immediately open an element card containing the specified element.
 
 > [!NOTE]
-> When *defaultApp* was set to "Cube" in `C:\Skyline DataMiner\Webpages\Config.manual.asp`, up to now, if you tried to open a link like ``https://mydma/?element=dmaID/elementID`` in Microsoft Edge, Google Chrome or Mozilla Firefox on Microsoft Windows, the link would incorrectly be opened in the Monitoring app instead of DataMiner Cube. From now on, that link will correctly be opened in DataMiner Cube. Only if you open the link on a mobile device or an operating system other than Microsoft Windows (e.g. Linux, macOS, etc.), will it still be opened in the Monitoring app.
+> When *defaultApp* was set to "Cube" in `C:\Skyline DataMiner\Webpages\Config.manual.asp`, up to now, if you tried to open a link like ``https://mydma/?element=dmaID/elementID`` in Microsoft Edge, Google Chrome or Mozilla Firefox on Microsoft Windows, the link would incorrectly be opened in the Monitoring app instead of DataMiner Cube. From now on, that link will correctly be opened in DataMiner Cube. Only if you open the link on a mobile device or an operating system other than Microsoft Windows (e.g., Linux, macOS, etc.), will it still be opened in the Monitoring app.
 
 #### SLDataGateway would not send the correct error to the client application when there was a database problem [ID 40488]
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
-When SLDataGateway detected a database problem, up to now, it would incorrectly send a message mentioning a Cassandra error to the client (e.g. DataMiner Cube) whatever the type of database that was being used. From now on, the message sent to the client will mention the database that is actually being used.
+When SLDataGateway detected a database problem, up to now, it would incorrectly send a message mentioning a Cassandra error to the client (e.g., DataMiner Cube) whatever the type of database that was being used. From now on, the message sent to the client will mention the database that is actually being used.
 
 Also, on systems using a Cassandra Cluster database, when the indexing engine could not be reached, up to now, DataMiner would keep on restarting. From now on, as soon as a required database cannot be reached, DataMiner will stop without trying to restart.
 
@@ -162,7 +162,7 @@ When, in a DataMiner System, some agents used external authentication while othe
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
-When, in e.g. Cube's Scheduler app, an action would send an email with in attachment a dashboard that no longer existed, the email would not be sent, but no error would be shown.
+When, in e.g., Cube's Scheduler app, an action would send an email with in attachment a dashboard that no longer existed, the email would not be sent, but no error would be shown.
 
 From now on, when an action tries to send an email with a non-existing dashboard in attachment, the task will fail and an exception will be thrown.
 
@@ -241,7 +241,7 @@ From now on, in case of connection problems, the generation of *SLErrors.txt* lo
 
 A number of problems that occurred when polling SNMP tables using *GetNext* have been fixed:
 
-- When an entire SNMP table was polled using *GetNext* messages, and not all rows had values with the same syntax (e.g. 1.2.3 vs 4.5.6.7), in some cases, cells would be empty or would be shifted to another row. The SLSNMPManager process could even disappear. From now on, all table cell values will be displayed correctly.
+- When an entire SNMP table was polled using *GetNext* messages, and not all rows had values with the same syntax (e.g., 1.2.3 vs 4.5.6.7), in some cases, cells would be empty or would be shifted to another row. The SLSNMPManager process could even disappear. From now on, all table cell values will be displayed correctly.
 
 - Up to now, an SNMP table would be polled until the returned OID result went out of scope. For example, when only 3 columns were defined in the table parameter, and the SNMP table contained 20 columns, all 20 columns would be polled, even though the data in the remaining 17 columns was not needed. From now on, as soon as the columns defined in the table parameter are polled, polling will stop and the result will be filled in.
 

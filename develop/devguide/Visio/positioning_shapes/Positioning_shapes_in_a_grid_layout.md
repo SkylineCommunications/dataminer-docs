@@ -9,7 +9,7 @@ In a Visio drawing, you can position shapes in a grid layout. This allows you to
 > [!NOTE]
 >
 > - When this feature is used, the Visio drawing will be displayed at 100% zoom level.
-> - You can use placeholders for variables in **Layout** shape data, so that the positioning of shapes in a grid can be controlled dynamically (e.g. by using a session variable).
+> - You can use placeholders for variables in **Layout** shape data, so that the positioning of shapes in a grid can be controlled dynamically (e.g., by using a session variable).
 
 > [!TIP]
 > For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[positioning > GRID]* page.
@@ -54,11 +54,11 @@ In a column or a row definition, you specify a series of values (one for every c
 
 | Value   | Description                                                           |
 | ------- | --------------------------------------------------------------------- |
-| Integer | A number of pixels (i.e. a fixed column width or row height)          |
+| Integer | A number of pixels (i.e., a fixed column width or row height)          |
 | \*      | A weighted proportion of the available width/height.                  |
 | Auto    | Column width or row height is determined by the size of its contents. |
 
-In case of "\*", you can also specify e.g. "2\*". If you have two columns and you specify "\*;2\*", then the first column will get one third of the available width and the second column will get two thirds of the available width.
+In case of "\*", you can also specify e.g., "2\*". If you have two columns and you specify "\*;2\*", then the first column will get one third of the available width and the second column will get two thirds of the available width.
 
 The following code, for example, will create a grid with 6 columns and 9 rows:
 
@@ -66,7 +66,7 @@ The following code, for example, will create a grid with 6 columns and 9 rows:
 Control=Grid|Columns=Auto;*;Auto;Auto;Auto;Auto| Rows=Auto;Auto;Auto;Auto;*;Auto;20;Auto;Auto| VerticalScrollBarVisibility=Disabled|HorizontalScrollBarVisibility=Disabled
 ```
 
-By default, scrolling is disabled when using proportional column widths and row heights (i.e. when using column widths and row heights equal to "\*"). So, when you do not specify any scrollbar visibility settings, the following page-level settings will be used by default:
+By default, scrolling is disabled when using proportional column widths and row heights (i.e., when using column widths and row heights equal to "\*"). So, when you do not specify any scrollbar visibility settings, the following page-level settings will be used by default:
 
 ```txt
 VerticalScrollBarVisibility=Disabled|HorizontalScrollBarVisibility=Disabled

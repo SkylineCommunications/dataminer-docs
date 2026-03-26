@@ -30,6 +30,6 @@ Also, from now on, the *Extra Options* column in the *All Columns* section will 
 
 #### IDE: Could not find DLL Import \[ID 16099\]
 
-When you added a new DLL import to a QAction that had already been opened in Visual Studio (i.e. a QAction for which a C# project had already been created), in some cases, the new DLL import was not applied correctly. Also, “\\\\?\\” was added in front of the DLL file path. As a result, the QAction could not be built and an error was added to the error list.
+When you added a new DLL import to a QAction that had already been opened in Visual Studio (i.e., a QAction for which a C# project had already been created), in some cases, the new DLL import was not applied correctly. Also, “\\\\?\\” was added in front of the DLL file path. As a result, the QAction could not be built and an error was added to the error list.
 
 This issue would only occur if the DLL file was located in the `C:\Skyline DataMiner\ProtocolScripts` folder or the `C:\Skyline DataMiner\Files` folder, not if the DLL file was a .NET framework assembly.

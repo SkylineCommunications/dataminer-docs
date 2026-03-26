@@ -15,7 +15,7 @@ To define a custom context menu, define a parameter with the same name as the ta
 - Action with dependencies: The user will be asked to enter a value for each parameter specified in the [dependencyValues](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-dependencyValues) attribute.
 - Action with [rowselection](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#tableselection): This is only available if the user has selected one or more rows in the table. The index of each row will be passed to the QAction.
 - Action with [confirmation](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#confirmabc): This action will only be executed when the user confirms the pop-up.
-- [Automation script](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#script): This will start an Automation script instead of triggering a QAction. It uses the same syntax as for Visio and you can use * for dummies to use the current element and specify parameter IDs of columns of the selected row to use as values for script parameters.
+- [Automation script](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#script): This will start an automation script instead of triggering a QAction. It uses the same syntax as for Visio and you can use * for dummies to use the current element and specify parameter IDs of columns of the selected row to use as values for script parameters.
 - [Separator](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#separator): This displays a separator line between menu items.
 
 ```xml
@@ -220,7 +220,7 @@ You can insert the following dynamic values into button values and context menu 
 | {elementProperty:x} | Value of the element property x. |
 | {rowPK} | Primary key of the current row. |
 | {rowDK} | Display key of the current row. |
-| {extPID:epid/pid/key} | Value of a parameter from another element:<br>- **epid** = Parameter ID of the parameter containing the element ID (format "DMAID/element ID", e.g. 200/400)<br>- **pid** = Parameter ID<br>- **key** = Row key (optional) |
+| {extPID:epid/pid/key} | Value of a parameter from another element:<br>- **epid** = Parameter ID of the parameter containing the element ID (format "DMAID/element ID", e.g., 200/400)<br>- **pid** = Parameter ID<br>- **key** = Row key (optional) |
 | {extPID:[dmaID/eID]/pid/key} | Value of a parameter from another element:<!-- RN 16071 --><br>- *[dmaID/eID]* = Element ID (format "dmaid/eid")<br>- **pid** = Parameter ID<br>- **key** = Row key (optional) |
 | {pid:x/k} | Value of a parameter from the current element:<br>- **x** = Parameter ID<br>- **k** = Row key (optional)<br>Note: You can omit row key (k) if the parameter is a column of the current row. |
 | {fkPid:x} | Value of the column with parameter ID x of the first row with a foreign key relation to the current row. |

@@ -25,7 +25,7 @@ The following shape data fields can be added to a shape that has to represent a 
   - View
 
 > [!NOTE]
-> Other optional shape data, e.g. **ChildMargin**, can also be specified, in the same manner as for other ChildType shapes. See [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows), [Generating shapes based on child items in a view or a service](xref:Generating_shapes_based_on_child_items_in_a_view_or_a_service) and [Generating shapes that represent alarms](xref:Generating_shapes_that_represent_alarms).
+> Other optional shape data, e.g., **ChildMargin**, can also be specified, in the same manner as for other ChildType shapes. See [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows), [Generating shapes based on child items in a view or a service](xref:Generating_shapes_based_on_child_items_in_a_view_or_a_service) and [Generating shapes that represent alarms](xref:Generating_shapes_that_represent_alarms).
 
 ## Group-level shape data
 
@@ -47,11 +47,11 @@ The following shape data fields can be added to the group containing the table r
   Set=SRM List Service 02;520/80
   ```
 
-  This shape data field can also be used with dynamic placeholders, e.g. \[SLAFromService:\<service(s)>\]. For example, to generate child shapes for the SLAs in two services "Service A" and "Service B", you can specify the following:
+  This shape data field can also be used with dynamic placeholders, e.g., \[SLAFromService:\<service(s)>\]. For example, to generate child shapes for the SLAs in two services "Service A" and "Service B", you can specify the following:
 
   ```txt
   Set=[SLAFromService:Service A;Service B]
   ```
 
 > [!NOTE]
-> Other optional shape data can also be specified, e.g. **ChildrenOptions**, in the same manner as with other Children shapes. See [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows), [Generating shapes based on child items in a view or a service](xref:Generating_shapes_based_on_child_items_in_a_view_or_a_service) and [Generating shapes that represent alarms](xref:Generating_shapes_that_represent_alarms).
+> Other optional shape data can also be specified, e.g., **ChildrenOptions**, in the same manner as with other Children shapes. See [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows), [Generating shapes based on child items in a view or a service](xref:Generating_shapes_based_on_child_items_in_a_view_or_a_service) and [Generating shapes that represent alarms](xref:Generating_shapes_that_represent_alarms).

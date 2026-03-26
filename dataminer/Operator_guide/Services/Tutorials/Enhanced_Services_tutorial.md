@@ -96,7 +96,7 @@ For example, the *Elements* card contains relevant information about the managed
 
    This will open a pop-up window.
 
-1. In the pop-up window, specify a name of your choice (e.g. *Service Tutorial*) and click *OK*.
+1. In the pop-up window, specify a name of your choice (e.g., *Service Tutorial*) and click *OK*.
 
 1. Select *Monitor Active Alarms* and click *Apply*.
 
@@ -176,7 +176,7 @@ You should now have a table displaying the name of all the services in your syst
 
 1. With the table selected, go to the *Layout* pane on the right, and set *Title* to `Enhanced Service Data`.
 
-You should now have a table displaying the information about the managed objects (i.e. elements) for the services in your system.
+You should now have a table displaying the information about the managed objects (i.e., elements) for the services in your system.
 
 ![Enhanced Service Data table](~/dataminer/images/tutorial_enhanced_services_img05.png).
 

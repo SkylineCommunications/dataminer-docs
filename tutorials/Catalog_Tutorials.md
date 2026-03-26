@@ -4,7 +4,7 @@ uid: Catalog_Tutorials
 
 # Catalog tutorials
 
-As part of dataminer.services, the Catalog allows DataMiner users and DataMiner Strategic Partners to browse and deploy available DataMiner connectors, packages, Visio drawings, Automation scripts, dashboards, and more.
+As part of dataminer.services, the Catalog allows DataMiner users and DataMiner Strategic Partners to browse and deploy available DataMiner connectors, packages, Visio drawings, automation scripts, dashboards, and more.
 
 Using the [Catalog Registration API](xref:Register_Catalog_Item), new Catalog items can be made available in the Catalog.
 

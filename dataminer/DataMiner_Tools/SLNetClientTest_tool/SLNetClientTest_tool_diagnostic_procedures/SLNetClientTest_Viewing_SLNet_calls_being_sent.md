@@ -4,7 +4,7 @@ uid: SLNetClientTest_Viewing_SLNet_calls_being_sent
 
 # Viewing SLNet calls being sent
 
-To get an overview of the SLNet calls that are being sent from a QAction, an Automation script or DataMiner Cube, do the following.
+To get an overview of the SLNet calls that are being sent from a QAction, an automation script or DataMiner Cube, do the following.
 
 1. In the *Follow* menu, click *Follow...*.
 
@@ -14,4 +14,4 @@ To get an overview of the SLNet calls that are being sent from a QAction, an Aut
 
    - For QActions, select *SLManagedScripting*.
 
-   - For Automation scripts, select *SLManagedAutomation*.
+   - For automation scripts, select *SLManagedAutomation*.

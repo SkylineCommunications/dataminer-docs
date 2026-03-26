@@ -126,7 +126,7 @@ viewname|name
 
 > [!NOTE]
 >
-> - In case of *elementname\|name*, the element name can contain wildcards, e.g. "elementname\|\*-MODEM\*". When an additional *?service* parameter is specified in the URL, the element will be searched for within the specified service using the name mask.
+> - In case of *elementname\|name*, the element name can contain wildcards, e.g., "elementname\|\*-MODEM\*". When an additional *?service* parameter is specified in the URL, the element will be searched for within the specified service using the name mask.
 > - *idx\|idx* refers to a row index of a dynamic table.
 > - If you specify strings containing "!" or "\|" characters, you can encode them as "!!" and "\|\|".
 

@@ -126,7 +126,7 @@ Next to active alarm tab pages, history tab pages now also allow you to display 
 
 On history tab pages, a severity duration column will be available either when no filter is applied or when a filter based on Element ID, DMA ID, Element Type, Parameter ID, Protocol and/or Source ID is applied.
 
-DataMiner Cube will calculate severity durations based on the alarms listed on the history tab page in question. If the duration of an alarm cannot be calculated (e.g. because the next alarm is not listed on the history tab page, or because the alarm has not been cleared while the element is stopped), the severity duration column will show “N/A”.
+DataMiner Cube will calculate severity durations based on the alarms listed on the history tab page in question. If the duration of an alarm cannot be calculated (e.g., because the next alarm is not listed on the history tab page, or because the alarm has not been cleared while the element is stopped), the severity duration column will show “N/A”.
 
 Additionally, a number of enhancements have been made with respect to severity durations. For instance, it is now also possible to display the severity duration when history tracking is disabled.
 
@@ -189,9 +189,9 @@ From now on, if you set the *Source* shape data field to “Elements” or “Se
   | Element.AlarmState | The alarm state of the element. For the difference with the alarm level, see "Element.AlarmLevel". |
   | Element.AlarmCount | The number of alarms of the element. |
   | Element.Type | The type of element as defined in the protocol. |
-  | Element.DisplayType | The display type of the element as defined in the protocol, e.g. *spectrum analyzer*, *element manager*. |
+  | Element.DisplayType | The display type of the element as defined in the protocol, e.g., *spectrum analyzer*, *element manager*. |
   | Element.IP | The IP of the element. |
-  | Element.State | The current state of the element, e.g. Paused, Stopped. |
+  | Element.State | The current state of the element, e.g., Paused, Stopped. |
   | Element.Protocol | The protocol used by the element. |
   | Element.ProtocolVersion | The protocol version used by the element. |
   | Element.ProtocolType | The protocol type used by the element. |
@@ -252,7 +252,7 @@ In case a feed component is used to provide a booking feed to the *Service defin
 
 When the *Service definition* component displays nodes that are linked to particular resources, alarm and element info will now be displayed for these nodes in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
 
-In the settings for the *Service definition* component, one or more actions can be defined. For each action, an Automation script and an icon need to be defined, and you need to specify to which node or nodes the action must be added. The icon will then be displayed on the specified node or nodes. When the icon is clicked, the script is launched. The booking ID or service definition ID used in the component and the node ID of the node for which the icon was clicked will be passed to the script as parameter ID 1 and parameter ID 2, respectively. The order of the specified actions can be modified in the *Settings* pane. In case there are too many actions on a node to display them all, clicking the action bar at the bottom of the node will expand the bar to display all the actions.
+In the settings for the *Service definition* component, one or more actions can be defined. For each action, an automation script and an icon need to be defined, and you need to specify to which node or nodes the action must be added. The icon will then be displayed on the specified node or nodes. When the icon is clicked, the script is launched. The booking ID or service definition ID used in the component and the node ID of the node for which the icon was clicked will be passed to the script as parameter ID 1 and parameter ID 2, respectively. The order of the specified actions can be modified in the *Settings* pane. In case there are too many actions on a node to display them all, clicking the action bar at the bottom of the node will expand the bar to display all the actions.
 
 #### BREAKING CHANGE - Dashboards app: CPE feed component now uses element data feed \[ID 25216\]
 
@@ -264,9 +264,9 @@ In the legacy Reporter app, the alarm list component will now also return alarms
 
 ### DMS Automation
 
-#### New methods to allows QActions to execute Automation scripts \[ID 24475\]
+#### New methods to allows QActions to execute automation scripts \[ID 24475\]
 
-Two new SLProtocol methods now allow QActions to execute Automation scripts:
+Two new SLProtocol methods now allow QActions to execute automation scripts:
 
 - ExecuteScript(string scriptName)
 - ExecuteScript(ExecuteScriptMessage message)
@@ -275,7 +275,7 @@ Also, the Engine object has a new UserCookie property.
 
 ##### ExecuteScript(string scriptName)
 
-This method will execute an Automation script of which the name is passed in the “scriptName” argument.
+This method will execute an automation script of which the name is passed in the “scriptName” argument.
 
 The script will be executed by the user who is performing the QAction. It will return an “ExecuteScriptResponseMessage”, containing information about the execution of the script.
 
@@ -292,11 +292,11 @@ public static void Run(SLProtocol protocol)
 
 ##### ExecuteScript(ExecuteScriptMessage message)
 
-This method will execute an Automation script of which all details and execution settings are passed in the “ExecuteScriptMessage”.
+This method will execute an automation script of which all details and execution settings are passed in the “ExecuteScriptMessage”.
 
 The script will be executed by the user who is performing the QAction. It will return an “ExecuteScriptResponseMessage”, containing information about the execution of the script.
 
-Using this method to execute an Automation script is particularly useful when the script in question needs a dummy or protocol information to run.
+Using this method to execute an automation script is particularly useful when the script in question needs a dummy or protocol information to run.
 
 Code Example:
 
@@ -314,7 +314,7 @@ ExecuteScriptMessage esm = new ExecuteScriptMessage("RT_AUTOMATION_ExecuteAutoma
 protocol.ExecuteScript(esm);
 ```
 
-When you execute an Automation script using the “DEFER:FALSE” option, be aware that this will lock any further processing of the protocol. If, for example, the Automation script that is being executed by a QAction sets a parameter of the element containing that same QAction, the parameter will be locked until the Automation script times out. This default behavior can be bypassed in two ways:
+When you execute an automation script using the “DEFER:FALSE” option, be aware that this will lock any further processing of the protocol. If, for example, the automation script that is being executed by a QAction sets a parameter of the element containing that same QAction, the parameter will be locked until the automation script times out. This default behavior can be bypassed in two ways:
 
 - In the protocol, add the “queued” option to the QAction tag, or
 
@@ -322,8 +322,8 @@ When you execute an Automation script using the “DEFER:FALSE” option, be awa
 
     | If you use...   | then...                                                                                                                              |
     |-----------------|--------------------------------------------------------------------------------------------------------------------------------------|
-    | DEFER:FALSE     | the QAction will halt while the Automation script is being executed, and will only continue once the Automation script has finished. |
-    | DEFER:TRUE      | the QAction will continue while the Automation script is being executed asynchronously.                                              |
+    | DEFER:FALSE     | the QAction will halt while the automation script is being executed, and will only continue once the automation script has finished. |
+    | DEFER:TRUE      | the QAction will continue while the automation script is being executed asynchronously.                                              |
 
 ##### New property on Engine object: UserCookie
 
@@ -333,7 +333,7 @@ string Engine.UserCookie;
 
 #### New method to link ReservationInstances to a ticket \[ID 25154\]
 
-In a C# block of an Automation script, you can now link ReservationInstances to a ticket.
+In a C# block of an automation script, you can now link ReservationInstances to a ticket.
 
 See the following example:
 
@@ -355,14 +355,14 @@ var ticketLinkFilter = new[] {ticketLink};
 var tickets = ticketingGatewayHelper.GetTickets(ticketLinkFilter);
 ```
 
-#### Interactive Automation scripts: Properties added to UIBlockDefinition class \[ID 25183\]\[ID 25253\]
+#### Interactive automation scripts: Properties added to UIBlockDefinition class \[ID 25183\]\[ID 25253\]
 
 The following properties have been added to the UIBlockDefinition class:
 
 | Property | Description |
 |--|--|
 | IsRequired | Indicates whether the input control requires a value.<br> Possible value:<br> - true<br> - false<br> If “true”, the control will be marked “Invalid” when empty. |
-| PlaceholderText | Text that will be displayed as long as the control is empty (e.g. “In this box, enter...”). |
+| PlaceholderText | Text that will be displayed as long as the control is empty (e.g., “In this box, enter...”). |
 | ValidationState | Indicates whether the value was validated and whether that value is valid.<br> Possible values:<br> - NotValidated<br> - Valid<br> - Invalid<br> Note: This property can be used to indicate to users that they entered an invalid value. |
 | ValidationText | Text that will be displayed when ValidationState is “Invalid”. |
 
@@ -370,7 +370,7 @@ The following properties have been added to the UIBlockDefinition class:
 
 The ValidationState and ValidationText properties should be used in combination with the WantsOnChange property.
 
-If WantsOnChange is true, the interactive Automation script will have its Engine#ShowUI(...) method return each time the user input changes. This will also be indicated by the \_ONCHANGE key, which is returned in the UIResults.
+If WantsOnChange is true, the interactive automation script will have its Engine#ShowUI(...) method return each time the user input changes. This will also be indicated by the \_ONCHANGE key, which is returned in the UIResults.
 
 This functionality will allow you to offer clear feedback on user input.
 
@@ -387,7 +387,7 @@ This functionality will allow you to offer clear feedback on user input.
 
 #### UnSetFlag method now also added to IEngine interface \[ID 25188\]
 
-Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching runtime flags in an Automation script.
+Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching runtime flags in an automation script.
 
 This method has now also been added to the IEngine interface.
 
@@ -421,7 +421,7 @@ The following tabs were added to the spectrum page of Spectrum Analyzer elements
 |--|--|
 | Information | Shows basic information regarding measurement points, markers, thresholds and parameters. |
 | Traces | Allows you to display or hide the current trace, the minimum trace, the maximum trace and the average trace. |
-| Presets | Lists the available presets. By default, only the private presets are listed (i.e. the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag. When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
+| Presets | Lists the available presets. By default, only the private presets are listed (i.e., the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag. When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
 
 #### Monitoring app: Card header, sidebar and menu available on mobile devices \[ID 25156\]
 
@@ -441,8 +441,8 @@ For every color linked to a selection box value, a VisualFieldEnum object should
 
 | Property  | Description                                                          |
 |-----------|----------------------------------------------------------------------|
-| FieldName | The name of the selection box (i.e. enum field).                     |
-| EnumValue | The selection box value (i.e. the discreet value in the enum field). |
+| FieldName | The name of the selection box (i.e., enum field).                     |
+| EnumValue | The selection box value (i.e., the discreet value in the enum field). |
 | Color     | The color associated with the selection box value.                   |
 
 #### On mobile devices, the sidebar will now appear at the bottom of the screen \[ID 25225\]
@@ -465,7 +465,7 @@ Mediation snippets are pieces of code that will convert a parameter value from t
 
 MediationSnippet objects, defined on profile parameter level, consist of an ID and a string containing the actual snippet code (C#). They can be managed by means of the ProfileManagerHelper#MediationSnippets API.
 
-To a particular profile parameter, you can add only one mediation snippet per protocol version. In other words, linking to both parameter 10 and parameter 20 in version 1.0.0.0 of Protocol X in the same profile parameter is not allowed. However, it is possible to specify a single wildcard character at the end of a protocol version (e.g. “1.0.0.\*”). When there are multiple matches, the most specific entry will be chosen (i.e. “1.0.0.\*” will take precedence over “1.\*”).
+To a particular profile parameter, you can add only one mediation snippet per protocol version. In other words, linking to both parameter 10 and parameter 20 in version 1.0.0.0 of Protocol X in the same profile parameter is not allowed. However, it is possible to specify a single wildcard character at the end of a protocol version (e.g., “1.0.0.\*”). When there are multiple matches, the most specific entry will be chosen (i.e., “1.0.0.\*” will take precedence over “1.\*”).
 
 > [!NOTE]
 >
@@ -614,7 +614,7 @@ A number of minor enhancements have been made to the *Advanced Editing* pane:
 
 - The current selection will now be taken into account when starting the *Advanced Editing* extension.
 
-#### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in 'Send Email' actions of Correlation rules \[ID 24816\]
+#### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in 'Send Email' actions of correlation rules \[ID 24816\]
 
 A number of minor enhancements have been made with regard to the use of placeholders in “Send Email” actions of correlation rules.
 
@@ -654,7 +654,7 @@ Up to now, when the value of an element property was updated using the *SetPrope
 
 #### Mobile apps: Confirmation message when leaving page with interactive script or job configuration \[ID 25078\]
 
-When a user leaves a DataMiner mobile app page while in an interactive Automation script or while configuring jobs, a confirmation message will now be displayed. However, note that this is message is not displayed when the mobile apps are used on iOS.
+When a user leaves a DataMiner mobile app page while in an interactive automation script or while configuring jobs, a confirmation message will now be displayed. However, note that this is message is not displayed when the mobile apps are used on iOS.
 
 #### DataMiner Cube - Visual Overview: ListView component will not show a set of default columns when no columns are configured in its shape data \[ID 25098\]
 
@@ -690,7 +690,7 @@ In a *ListView* component in Visual Overview that has been configured to display
 - Protocol Version
 - Polling IP
 - Element properties \> Created by
-- Element properties \> Created at (i.e. creation date)
+- Element properties \> Created at (i.e., creation date)
 
 In addition, it is now also possible to configure a filter on the *ListView* shape using the term "Element.PollingIP", for example *Element.PollingIP == '127.0.0.1'*.
 
@@ -714,11 +714,11 @@ Due to a number of enhancements, the method used by the SLDataGateway process to
 
 #### DataMiner Cube - Automation: Problem when turning a SET action into a GET action or vice versa \[ID 24498\]
 
-When you added a SET action to an Automation script and then changed it to a GET action (or vice versa), in some cases, it would no longer be possible to configure the action.
+When you added a SET action to an automation script and then changed it to a GET action (or vice versa), in some cases, it would no longer be possible to configure the action.
 
 #### DataMiner Cube - Visual Overview: Problem when loading a trend group in a trend component \[ID 24590\]
 
-When you embed a trend component on a Visio page, you can have it load a trend group by setting the *Parameters* shape data field to “TrendGroup=\<username>/sharedusersettings:\<groupName>”. When this entry contained a dynamic part (e.g. \[var:xxx\]), in some cases, updates would not get processed correctly and the trend graph would be cleared.
+When you embed a trend component on a Visio page, you can have it load a trend group by setting the *Parameters* shape data field to “TrendGroup=\<username>/sharedusersettings:\<groupName>”. When this entry contained a dynamic part (e.g., \[var:xxx\]), in some cases, updates would not get processed correctly and the trend graph would be cleared.
 
 #### Problem with SLSNMPAgent when retrieving the views \[ID 24663\]
 
@@ -739,9 +739,9 @@ After a DCF connection update, in some cases, the highlighting of a manually dra
 > [!NOTE]
 > This problem only occurred when one or both of the interfaces connected to the connector were of type input/output.
 
-#### Dashboards app: Problem when loading dropdown boxes of interactive Automation scripts \[ID 24888\]
+#### Dashboards app: Problem when loading dropdown boxes of interactive automation scripts \[ID 24888\]
 
-When a dialog box of an interactive Automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
+When a dialog box of an interactive automation script showed multiple dropdown boxes next to each other, in some cases, some of those boxes would become unresponsive when data was being loaded into them.
 
 #### DataMiner Cube - Visual Overview: Views selection boxes on Edit Shape pane were empty when editing a Visio file in Cube \[ID 24900\]
 
@@ -834,9 +834,9 @@ The URL argument “cpes” now has the following extended format:
 
 When, after restarting an element, the alarms associated with that element were retrieved from the database, in some cases, the view impact information in those alarms would be incorrect.
 
-#### Interactive Automation scripts: Problem with checkbox updates \[ID 25054\]
+#### Interactive automation scripts: Problem with checkbox updates \[ID 25054\]
 
-In interactive Automation scripts, in some cases, checkbox components would not be updated correctly.
+In interactive automation scripts, in some cases, checkbox components would not be updated correctly.
 
 #### SLDMS runtime errors when connection with remote DMA could not be initialized \[ID 25068\]
 
@@ -928,9 +928,9 @@ In some cases, an error could occur in SLProtocol when starting a DVE element or
 
 If a protocol with serial connection over UDP or TDC/IP used either an action of type "close" on a serial connection or a parameter with type option "dynamic IP", a runtime error could occur in the protocol thread.
 
-#### Automation: Options text in narrow Automation script execution window not fully displayed \[ID 25226\]
+#### Automation: Options text in narrow automation script execution window not fully displayed \[ID 25226\]
 
-In the window displaying the options for the execution of an Automation script, text wrapping was not implemented, so that it could occur that the text was not fully displayed if the window was too narrow.
+In the window displaying the options for the execution of an automation script, text wrapping was not implemented, so that it could occur that the text was not fully displayed if the window was too narrow.
 
 #### Problem with EPM filters \[ID 25231\]
 

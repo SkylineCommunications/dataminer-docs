@@ -6,7 +6,7 @@ uid: Regression_Test_Management
 
 The Regression Test Management Solution allows you to centrally organize, configure, and monitor regression tests for your DataMiner platform. It is designed to support continuous validation of critical functionality across elements, connectors, or services.
 
-This solution includes a dedicated connector, visual overview, and reusable Automation script that together help teams automate and track the execution of regression test scripts. Results are visualized, emailed, and stored historically for auditing and reporting purposes.
+This solution includes a dedicated connector, visual overview, and reusable automation script that together help teams automate and track the execution of regression test scripts. Results are visualized, emailed, and stored historically for auditing and reporting purposes.
 
 Deployed as a [Catalog package](https://catalog.dataminer.services/details/27636bb4-e3ce-4a2a-bd28-fe514a4ac5e7), the solution installs everything needed to start managing your regression tests immediately.
 

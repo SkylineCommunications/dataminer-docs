@@ -17,4 +17,4 @@ string
 ## Remarks
 
 > [!NOTE]
-> When a row is added to this table, a null value is also considered a value, i.e. when null is specified, the default value will not be set.
+> When a row is added to this table, a null value is also considered a value, i.e., when null is specified, the default value will not be set.

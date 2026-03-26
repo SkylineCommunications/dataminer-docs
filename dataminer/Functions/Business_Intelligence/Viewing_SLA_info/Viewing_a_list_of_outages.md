@@ -18,7 +18,7 @@ One or more alarms that potentially affect the SLA at a particular time are grou
 
 - **Outage Corrected**: Shows the duration of the outage with corrections applied.
 
-- **Violation**: Shows the duration of the violation, taking into account the SLA settings (e.g. violation filter settings).
+- **Violation**: Shows the duration of the violation, taking into account the SLA settings (e.g., violation filter settings).
 
 - **Correction** and **Motivation**: Show a possible correction on the outage, and its motivation.
 

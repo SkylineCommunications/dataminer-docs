@@ -7,7 +7,7 @@ uid: GetServicesForViewSorted
 Use this method to retrieve the data of a number of services in a particular view.
 
 > [!NOTE]
-> Using this method, you can e.g. request services in batches in order to minimize loading time.
+> Using this method, you can e.g., request services in batches in order to minimize loading time.
 
 ## Input
 

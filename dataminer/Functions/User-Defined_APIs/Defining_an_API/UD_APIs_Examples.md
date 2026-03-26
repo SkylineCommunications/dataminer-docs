@@ -23,7 +23,7 @@ For each of these examples, the input JSON could look like this:
 }
 ```
 
-The difference is that this JSON is either parsed by the script, automatically parsed to a dictionary in the input, or automatically parsed to Automation script parameter values.
+The difference is that this JSON is either parsed by the script, automatically parsed to a dictionary in the input, or automatically parsed to automation script parameter values.
 
 You can test these examples yourself by adjusting the input to an element and parameter that exist in your DMS. However, make sure that the values that will be set will not harm your setup.
 
@@ -37,7 +37,7 @@ This is the most powerful way of defining API scripts. It provides the most flex
 - **API definition in code**:
   - Property `ActionType` should contain the default value [AutomationScript](xref:UD_APIs_Objects_ApiDefinition#automationscript).
   - Property `ActionMeta` should contain an `AutomationScriptActionMeta` instance with the `ScriptName` property filled in and the `InputType` property set to the default value `RawBody`.
-- **Automation script DLL references:** As an external DLL is used to parse the JSON, when you configure the Automation script in Cube, expand the *Advanced* section at the bottom of the C# block and add the path to the DLL in the *DLL references* box. In this case, this is `C:\Skyline DataMiner\Files\Newtonsoft.Json.dll`.
+- **Automation script DLL references:** As an external DLL is used to parse the JSON, when you configure the automation script in Cube, expand the *Advanced* section at the bottom of the C# block and add the path to the DLL in the *DLL references* box. In this case, this is `C:\Skyline DataMiner\Files\Newtonsoft.Json.dll`.
 
 **Example:**
 
@@ -127,7 +127,7 @@ namespace UserDefinableApiScripts.Examples.OnApiTriggerWithDictionaryParsing
 
 While this approach makes it easy to use existing scripts as the logic for APIs, it does have several limitations:
 
-- It is only possible to have user input via the Automation script parameters.
+- It is only possible to have user input via the automation script parameters.
 - It is not possible to know any other metadata of the API trigger (route, request method, etc.).
 - It is not possible to provide output.
 

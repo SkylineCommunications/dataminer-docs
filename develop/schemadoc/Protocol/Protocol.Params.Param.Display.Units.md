@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Display.Units
 
 # Units element
 
-Specifies a unit for a parameter value displayed in the user interface (e.g. in a report, in the Alarm Console, etc.).
+Specifies a unit for a parameter value displayed in the user interface (e.g., in a report, in the Alarm Console, etc.).
 
 ## Type
 
@@ -17,6 +17,7 @@ In case you have a suggestion for a unit to be added to the list below, create a
 |Value|Description|
 |--- |--- |
 |%|percent|
+|%/s|percent per second|
 |%RH|relative humidity|
 |A|ampere|
 |A_AC|Ampere alternating current|

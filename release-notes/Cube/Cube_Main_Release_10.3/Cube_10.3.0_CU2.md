@@ -24,7 +24,7 @@ From now on, DataMiner Cube will no longer accept database TTL settings that exc
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
-When viewing a trend graph with a trend prediction (i.e. predicted trend information beyond the "Now" line), it will no longer be possible to create pattern matching tags that include predicted trend data.
+When viewing a trend graph with a trend prediction (i.e., predicted trend information beyond the "Now" line), it will no longer be possible to create pattern matching tags that include predicted trend data.
 
 In other words, when you select a section of a trend graph that is either partly or entirely past the "Now" line, you will not be able to save the tag.
 
@@ -81,7 +81,7 @@ From now on, Cube will initialize the *Capacity* property if it detects that the
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
-When, in a shape data field of type *ParameterControlOptions*, you had specified a table row filter that included a `[ServiceDefinitionFilter]` placeholder (e.g. "TableRowFilter:101=[ServiceDefinitionFilter]"), that placeholder would incorrectly not be resolved, causing the linked table control to be empty when filtered.
+When, in a shape data field of type *ParameterControlOptions*, you had specified a table row filter that included a `[ServiceDefinitionFilter]` placeholder (e.g., "TableRowFilter:101=[ServiceDefinitionFilter]"), that placeholder would incorrectly not be resolved, causing the linked table control to be empty when filtered.
 
 #### Spectrum analysis: Problem when opening a spectrum element with an empty username [ID 35927]
 

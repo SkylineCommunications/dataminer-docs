@@ -4,7 +4,7 @@ uid: Importing_elements_services_etc_from_a_dmimport_file
 
 # Importing elements, services, etc. from a .dmimport file
 
-With .dmimport packages, you can not only import elements, but also services, service templates, views, redundancy groups, properties, protocols, documents, SLAs, and Automation scripts. This way you can migrate entire structures from one DMS to another.
+With .dmimport packages, you can not only import elements, but also services, service templates, views, redundancy groups, properties, protocols, documents, SLAs, and automation scripts. This way you can migrate entire structures from one DMS to another.
 
 To import a .dmimport file:
 

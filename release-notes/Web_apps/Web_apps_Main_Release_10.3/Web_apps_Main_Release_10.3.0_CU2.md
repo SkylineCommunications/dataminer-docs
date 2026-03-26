@@ -34,11 +34,11 @@ For example, up to now, when you selected the *Get elements* data source, follow
 
 Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
 
-#### Web apps: Enhanced error handling when executing an interactive Automation script by clicking a DOM button [ID 35909]
+#### Web apps: Enhanced error handling when executing an interactive automation script by clicking a DOM button [ID 35909]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
-Overall error handling has been improved when executing an interactive Automation script by clicking a DOM button in a web app.
+Overall error handling has been improved when executing an interactive automation script by clicking a DOM button in a web app.
 
 #### Security enhancements [ID 35965]
 
@@ -116,7 +116,7 @@ When you opened a visual overview in a web app, in some cases, the web app could
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
-When, in the *Layout* tab, a text box (e.g. the box containing the title of the selected component) had the focus, and you selected another component, the text box in the *Layout* tab would incorrectly still contain the value of the previously selected component.
+When, in the *Layout* tab, a text box (e.g., the box containing the title of the selected component) had the focus, and you selected another component, the text box in the *Layout* tab would incorrectly still contain the value of the previously selected component.
 
 #### Dashboards app & Low-Code Apps - Table component: A collapsed group would incorrectly expand when new data was loaded into the table [ID 35856]
 

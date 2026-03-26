@@ -54,7 +54,7 @@ To edit a script, in the *Edit script* window, select the script in the pane on 
 
 ## Using global constants
 
-Within a script, it is possible that you often use fixed variables to perform a calculation (e.g. a correction factor). Though you can enter this value directly in the script, it is also possible to create a global variable that refers to that global value in the script. This option makes it easier to maintain your scripts.
+Within a script, it is possible that you often use fixed variables to perform a calculation (e.g., a correction factor). Though you can enter this value directly in the script, it is also possible to create a global variable that refers to that global value in the script. This option makes it easier to maintain your scripts.
 
 To access the global constants, in the *Edit script* window, click the *Globals* button.
 

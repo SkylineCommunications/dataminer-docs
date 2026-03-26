@@ -33,7 +33,7 @@ To check the current state of primary or backup elements of a redundancy group, 
 | State                                   | Description                                                                                                                                         |
 |-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Available                               | The backup element is not operational, but ready to take over from a primary element if necessary.                                                  |
-| Operational                             | The primary or backup element is operational (i.e. linked to the virtual primary element).                                                          |
+| Operational                             | The primary or backup element is operational (i.e., linked to the virtual primary element).                                                          |
 | Failed                                  | The primary element has been taken over by a backup element.                                                                                        |
 | Error                                   | A primary element should have been taken over by a backup element, but DataMiner was not able to do so.                                             |
 | Unavailable                             | The backup element cannot take over from a primary element.                                                                                         |

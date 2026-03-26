@@ -4,7 +4,7 @@ uid: SLNetClientTest_creating_dump_for_process
 
 # Creating a dump file for a particular process
 
-With the SLNetClientTest tool, you can create a dump file for a process, i.e. a snapshot of that process at a particular time. To do so:
+With the SLNetClientTest tool, you can create a dump file for a process, i.e., a snapshot of that process at a particular time. To do so:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 

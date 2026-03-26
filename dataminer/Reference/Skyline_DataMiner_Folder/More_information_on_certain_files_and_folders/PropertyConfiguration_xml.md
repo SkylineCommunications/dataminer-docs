@@ -126,7 +126,7 @@ To disable alarm updates on changes of such a read-only property:
 
 ## Having a property value copied to an alarm field
 
-It is possible to have the value of a property that is available for an alarm copied to a predefined field of the alarm (i.e. the *Owner*, *Comment*, *Element Name*, or *Parameter Name* field) or to another property.
+It is possible to have the value of a property that is available for an alarm copied to a predefined field of the alarm (i.e., the *Owner*, *Comment*, *Element Name*, or *Parameter Name* field) or to another property.
 
 To do so:
 

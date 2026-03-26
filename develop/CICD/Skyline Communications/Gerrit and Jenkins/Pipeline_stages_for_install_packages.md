@@ -23,7 +23,7 @@ During this stage, the repository is scanned for the presence of a Visual Studio
 
 ## Verify tag
 
-This stage verifies that a tag matches the regular expression `^\d+\.\d+\.\d+-CU\d+$`, e.g. `1.0.1-CU0`.
+This stage verifies that a tag matches the regular expression `^\d+\.\d+\.\d+-CU\d+$`, e.g., `1.0.1-CU0`.
 
 ## Validate possible dependency NuGets
 
@@ -54,7 +54,7 @@ The resulting package will include a suffix \_B\<buildNumber>, where buildNumber
 
 ## Validate subchains
 
-In case the package references items that are in development (i.e. items with Version/Selection/Range@rangeSelection set to *latestBuild*), Jenkins will validate the state of the pipelines for these items.
+In case the package references items that are in development (i.e., items with Version/Selection/Range@rangeSelection set to *latestBuild*), Jenkins will validate the state of the pipelines for these items.
 
 If one of the sub items failed, then the pipeline will be marked as unstable.
 
@@ -75,7 +75,7 @@ This stage executes the integration test projects. If no integration test projec
 This stage performs SonarQube C# code analysis on the code provided in the Exe blocks.
 
 > [!TIP]
-> It is possible to exclude some items from analysis (e.g. auto-generated code). For more information on how to exclude items from analysis, refer to <xref:SonarQube>.
+> It is possible to exclude some items from analysis (e.g., auto-generated code). For more information on how to exclude items from analysis, refer to <xref:SonarQube>.
 
 ## Quality gate
 

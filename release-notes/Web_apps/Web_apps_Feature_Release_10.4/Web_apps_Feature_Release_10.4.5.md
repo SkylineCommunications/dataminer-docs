@@ -170,7 +170,7 @@ Because of a number of enhancements, overall performance has increased when star
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-When you open the landing page of a DataMiner Agent (e.g. `https://myDMA/root/`) on a mobile device, it will no longer be possible to open the context menu of apps listed in the *Other apps* section.
+When you open the landing page of a DataMiner Agent (e.g., `https://myDMA/root/`) on a mobile device, it will no longer be possible to open the context menu of apps listed in the *Other apps* section.
 
 #### Web apps - Authentication: Enhanced multi-domain support [ID 39061]
 
@@ -208,11 +208,11 @@ Up to now, when two states were able to transition to each other, an infinite lo
 
 When a *Dropdown* component with a filter applied lost the focus, the moment it had the focus again, the filter would no longer be applied.
 
-#### Dashboards app & Low-Code Apps - Interactive Automation scripts: Values would not get updated when the focus changed [ID 38838]
+#### Dashboards app & Low-Code Apps - Interactive automation scripts: Values would not get updated when the focus changed [ID 38838]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-When, in an interactive Automation script run from a dashboard or a low-code app, you had changed a value, that value would incorrectly not get updated when the focus changed.
+When, in an interactive automation script run from a dashboard or a low-code app, you had changed a value, that value would incorrectly not get updated when the focus changed.
 
 #### Dashboards app: Problem with Dropdown components on shared dashboards [ID 38953]
 
@@ -314,13 +314,13 @@ Up to now, when you right-clicked a dashboard in the left pane, and selected *Cr
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-When you opened the color picker and the color was set to a grey color (i.e. RGB 0/0/0), it would not be possible to select another color by moving the color slider.
+When you opened the color picker and the color was set to a grey color (i.e., RGB 0/0/0), it would not be possible to select another color by moving the color slider.
 
 #### Low-Code Apps: Refreshing an app would cause it to redirect the user to the root page instead of the authentication page [ID 39231]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-When you refreshed a low-code app while the connection was lost, the app would incorrectly redirect you to the root page (e.g. `https://myDma/root/`) instead of the app's authentication page.
+When you refreshed a low-code app while the connection was lost, the app would incorrectly redirect you to the root page (e.g., `https://myDma/root/`) instead of the app's authentication page.
 
 #### Low-Code Apps: Draft version of an app could incorrectly be opened via the URL of the published version [ID 39242]
 

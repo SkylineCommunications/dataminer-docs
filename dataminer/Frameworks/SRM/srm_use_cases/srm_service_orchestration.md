@@ -32,9 +32,9 @@ The actual automation of the resources used for a service is executed by [Profil
 
 Service Orchestration relies on different scripts to know the behavior of a particular type of service. In addition to the existing PLS scripts, which the teams will often have at hand already, Service Orchestration makes use of DTR and LSO scripts per service definition.
 
-This means that Service Orchestration is the SRM flavor requiring the biggest implementation efforts. This is typically used to support very **repetitive and deterministic use cases**. Everything is prepared in advance to make the life of the user as easy as possible. However, this requires that each and every action that the user can potentially trigger on each type of service is defined and implemented (e.g. switching to a backup device, inserting a video processing unit, etc.).
+This means that Service Orchestration is the SRM flavor requiring the biggest implementation efforts. This is typically used to support very **repetitive and deterministic use cases**. Everything is prepared in advance to make the life of the user as easy as possible. However, this requires that each and every action that the user can potentially trigger on each type of service is defined and implemented (e.g., switching to a backup device, inserting a video processing unit, etc.).
 
-Typical uses of Service Orchestration include contribution and distribution networks (e.g. IP over fiber and satellite), media aggregation and distribution headends, etc. When service quantities are high and repeated configuration actions are needed, it makes perfect sense to spend the incremental development effort.
+Typical uses of Service Orchestration include contribution and distribution networks (e.g., IP over fiber and satellite), media aggregation and distribution headends, etc. When service quantities are high and repeated configuration actions are needed, it makes perfect sense to spend the incremental development effort.
 
 While the DataMiner SRM stack is deployed on any DataMiner node by default at no additional cost, using Service Orchestration requires [SRM licenses](xref:Pricing_Perpetual_Use_Licensing#special-purpose-licenses).
 

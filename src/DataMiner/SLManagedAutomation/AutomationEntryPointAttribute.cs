@@ -3,7 +3,7 @@
 namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// Indicates that a method can be used as an Automation script entry point.
+	/// Indicates that a method can be used as an automation script entry point.
 	/// </summary>
 	/// <remarks>
 	/// <para>The entry points must be public, and may be static or non-static.</para>
@@ -11,7 +11,7 @@ namespace Skyline.DataMiner.Automation
 	/// <para>Restrictions: </para>
 	/// <list type="bullet">
 	/// <item>
-	/// <description>An Automation script using custom entry points can have only one executable action, which must be a C# code block.</description>
+	/// <description>An automation script using custom entry points can have only one executable action, which must be a C# code block.</description>
 	/// </item>
 	/// <item>
 	/// <description>If, in a C# code block, you have defined multiple entry points, you must make sure they are of different types. Multiple entry points of the same type are not allowed.</description>

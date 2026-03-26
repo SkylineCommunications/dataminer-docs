@@ -75,7 +75,7 @@ Also, when in the *Write ID* column a suggested parameter ID is not available, y
 
 #### Analysis rules for QAction projects \[ID 19726\]
 
-DIS will now define a default set of analysis rules for QAction projects. These rules can then be used by Visual Studio extensions like e.g. SonarLint to analyze the code.
+DIS will now define a default set of analysis rules for QAction projects. These rules can then be used by Visual Studio extensions like e.g., SonarLint to analyze the code.
 
 > [!NOTE]
 >
@@ -91,22 +91,22 @@ Additional changes:
 - When you select a web interface page, the URL defined on that page can now be edited in the *Layout* section.
 - Warning icons will now appear next to pages that are empty and popup windows in which other popup windows are defined.
 
-#### C# editor: Additional hyperlink in file tab header to return to QAction or Exe code block in protocol or Automation script \[ID 19776\]
+#### C# editor: Additional hyperlink in file tab header to return to QAction or Exe code block in protocol or automation script \[ID 19776\]
 
-Up to now, in the header of a file tab containing the C# code of a QAction or Exe code block, you could click a link to return to the file tab containing the associated protocol XML file or Automation script XML file at the location where the cursor was positioned when you last viewed the file.
+Up to now, in the header of a file tab containing the C# code of a QAction or Exe code block, you could click a link to return to the file tab containing the associated protocol XML file or automation script XML file at the location where the cursor was positioned when you last viewed the file.
 
-Now, an additional link will allow you to return to the associated protocol XML file or Automation script XML file at the location where the QAction or Exe code block is found.
+Now, an additional link will allow you to return to the associated protocol XML file or automation script XML file at the location where the QAction or Exe code block is found.
 
 #### DIS Tree: Element breadcrumbs & enhanced DIS.JumpToDisTree keyboard shortcut \[ID 19810\]
 
 At the top of the DIS Tree window, there is now a breadcrumb control that allows you to quickly navigate to a particular location inside a protocol.xml file.
 
-This control always shows the path towards the node that is currently selected in the tree view (i.e. “Protocol \> Params \> Param”).
+This control always shows the path towards the node that is currently selected in the tree view (i.e., “Protocol \> Params \> Param”).
 
-- If you click a breadcrumb (e.g. “Params”), the corresponding (parent) node will be selected in the tree view (e.g. “Params”).
+- If you click a breadcrumb (e.g., “Params”), the corresponding (parent) node will be selected in the tree view (e.g., “Params”).
 - If you click an arrow next to a breadcrumb, a dropdown list will open, allowing you to immediately navigate to one of the child nodes.
 
-Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e. Ctrl+1) has been enhanced. Up to now, this shortcut allowed you to select the DIS tree node representing the element you were editing in the XML editor. From now on, it will also allow you to select the DIS tree node representing the QAction you are editing in the C# editor.
+Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e., Ctrl+1) has been enhanced. Up to now, this shortcut allowed you to select the DIS tree node representing the element you were editing in the XML editor. From now on, it will also allow you to select the DIS tree node representing the QAction you are editing in the C# editor.
 
 ### Validator
 
@@ -144,7 +144,7 @@ Also, the error messages shown in the UI have been redesigned. These now include
 - Source (Validator, Major Change Checker)
 
 > [!NOTE]
-> When you hover over the columns containing this additional information, tool tips will appear, describing what is meant with e.g. “Breaking” or “Minor”.
+> When you hover over the columns containing this additional information, tool tips will appear, describing what is meant with e.g., “Breaking” or “Minor”.
 
 ##### List of possible error messages
 
@@ -442,7 +442,7 @@ The following attribute now has to refer to an existing parameter:
 
 #### IDE - Table editor: ‘disable...’ column options no longer removed when alarm monitoring is disabled \[ID 18825\]
 
-From now on, ‘disable...’ column options (e.g. ‘disableHistogram’) will no longer be removed when alarm monitoring is disabled.
+From now on, ‘disable...’ column options (e.g., ‘disableHistogram’) will no longer be removed when alarm monitoring is disabled.
 
 #### IDE - XML editor: Snippet enhancements \[ID 19148\]\[ID 19730\]\[ID 19912\]
 

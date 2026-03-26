@@ -136,7 +136,7 @@ This retrieval method uses GetNext requests to fetch the index of each row indiv
 
 ![GetNext + MultipleGet (column-based) execution](~/develop/images/Interfaces_Table_GetNext_MultipleGet.png)
 
-To use this polling method, add `bulk` to the `options` attribute of the table parameter's `OID` tag. You can specify the number of cells to retrieve per request by adding a value after `bulk` (e.g. `bulk:10`). If no value is provided, the default is 50.
+To use this polling method, add `bulk` to the `options` attribute of the table parameter's `OID` tag. You can specify the number of cells to retrieve per request by adding a value after `bulk` (e.g., `bulk:10`). If no value is provided, the default is 50.
 
 > [!CAUTION]
 > This method is vulnerable to the [index shift issue](#index-shift-issues-during-polling).
@@ -200,7 +200,7 @@ SNMP communication flow:
 
 This retrieval method uses GetNext requests to fetch the index of each row individually. Then, Get requests are used to fetch all columns for one or multiple rows at once.
 
-To use this polling method, add `multipleGet` to the `options` attribute of the table parameter's `OID` tag. You can specify the number of rows to retrieve per request by adding a value after `multipleGet` (e.g. `multipleGet:10`). If no value is provided, the default is 10.
+To use this polling method, add `multipleGet` to the `options` attribute of the table parameter's `OID` tag. You can specify the number of rows to retrieve per request by adding a value after `multipleGet` (e.g., `multipleGet:10`). If no value is provided, the default is 10.
 
 #### Example
 
@@ -316,9 +316,9 @@ To use this polling method, add `multipleGetNext` to the `options` attribute of 
 
 SNMP communication flow:
 
-1. A GetNext request is performed to fetch the first row. The request variable bindings contain each column OID defined in the table (e.g. 1.3.6.1.2.1.2.2.1.1, 1.3.6.1.2.1.2.2.1.2, etc.).
+1. A GetNext request is performed to fetch the first row. The request variable bindings contain each column OID defined in the table (e.g., 1.3.6.1.2.1.2.2.1.1, 1.3.6.1.2.1.2.2.1.2, etc.).
 
-1. Then, a GetNext request is sent using the previously retrieved OIDs (e.g. 1.3.6.1.2.1.2.2.1.1.1, 1.3.6.1.2.1.2.2.1.2.1, etc.).
+1. Then, a GetNext request is sent using the previously retrieved OIDs (e.g., 1.3.6.1.2.1.2.2.1.1.1, 1.3.6.1.2.1.2.2.1.2.1, etc.).
 
 1. The GetNext requests proceed until the response contains an OID outside the table range or contains a column OID that is not defined in the protocol table.
 
@@ -328,7 +328,7 @@ This retrieval method uses GetBulk requests to fetch all column values for multi
 
 ![MultipleGetBulk execution](~/develop/images/Interfaces_Table_multipleGetBulk.png)
 
-To use this polling method, add `multipleGetBulk` to the `options` attribute of the table parameter's `OID` tag. You can specify the number of rows to retrieve per request by adding a value after `multipleGetBulk` (e.g. `multipleGetBulk:10`). If no value is provided, the default is 10.
+To use this polling method, add `multipleGetBulk` to the `options` attribute of the table parameter's `OID` tag. You can specify the number of rows to retrieve per request by adding a value after `multipleGetBulk` (e.g., `multipleGetBulk:10`). If no value is provided, the default is 10.
 
 > [!NOTE]
 >
@@ -386,7 +386,7 @@ To use this polling method, add `multipleGetBulk` to the `options` attribute of 
 
 SNMP communication flow:
 
-1. A GetBulk request is performed to fetch the first couple of rows. The request variable bindings contain each column OID defined in the table (e.g. 1.3.6.1.2.1.2.2.1.1, 1.3.6.1.2.1.2.2.1.2, etc.). The max-repetitions field of the request indicates how many rows will be retrieved.
+1. A GetBulk request is performed to fetch the first couple of rows. The request variable bindings contain each column OID defined in the table (e.g., 1.3.6.1.2.1.2.2.1.1, 1.3.6.1.2.1.2.2.1.2, etc.). The max-repetitions field of the request indicates how many rows will be retrieved.
 
 1. Then, similar to the GetNext flow, a GetBulk request is sent using the OID of the last row of the previously retrieved OIDs (1.3.6.1.2.1.2.2.1.1.10, 1.3.6.1.2.1.2.2.1.2.10, etc.)
 
@@ -394,7 +394,7 @@ SNMP communication flow:
 
 ### Index shift issues during polling
 
-SNMP table indexes are often based on sequential numbers (e.g. `1`, `2`, `3`, etc.). When a row is added or removed from such a table, the indexes of subsequent rows will shift. If DataMiner is polling the table during this shift, and the polling method does **not retrieve an entire row in one operation**, this can result in inconsistent data retrieval. Parts of a row may be collected **before** the shift and others **after**, causing the final row in DataMiner to contain a **mix of values from two different rows**, leading to an incorrect representation of the data.
+SNMP table indexes are often based on sequential numbers (e.g., `1`, `2`, `3`, etc.). When a row is added or removed from such a table, the indexes of subsequent rows will shift. If DataMiner is polling the table during this shift, and the polling method does **not retrieve an entire row in one operation**, this can result in inconsistent data retrieval. Parts of a row may be collected **before** the shift and others **after**, causing the final row in DataMiner to contain a **mix of values from two different rows**, leading to an incorrect representation of the data.
 
 To avoid this issue, choose polling methods that can retrieve complete rows in a single operation such as **GetNext + MultipleGet (row-based)**, **MultipleGetNext**, and **MultipleGetBulk**.
 
@@ -402,7 +402,7 @@ To avoid this issue, choose polling methods that can retrieve complete rows in a
 > Methods that fetch individual columns across multiple requests, such as **GetNext** or **GetNext + MultipleGet (column-based)**, are **especially vulnerable** to this problem.
 
 > [!NOTE]
-> Tables where the row indexes do **not** shift when rows are added or removed (e.g. tables with fixed or unique indexes) are **not affected** by this issue.
+> Tables where the row indexes do **not** shift when rows are added or removed (e.g., tables with fixed or unique indexes) are **not affected** by this issue.
 
 ## Instance Option
 
@@ -473,11 +473,11 @@ To correctly poll these types of tables, you must add the `instance` option to t
 
 The [subtable](xref:Protocol.Params.Param.SNMP.OID-options#subtable) option allows you to retrieve a filtered subset of rows from an SNMP table, based on a specified filter. This can significantly reduce the volume of data transferred, especially when only certain rows are relevant.
 
-To enable this feature, add `subtable` to the `options` attribute of the SNMP OID tag on the **table parameter** (i.e. the parameter of type "array"). The filter itself is defined in the SNMP OID tag using the `id` attribute to reference a parameter containing the desired filter.
+To enable this feature, add `subtable` to the `options` attribute of the SNMP OID tag on the **table parameter** (i.e., the parameter of type "array"). The filter itself is defined in the SNMP OID tag using the `id` attribute to reference a parameter containing the desired filter.
 
 > [!NOTE]
 >
-> - You can specify **multiple filters** by separating them with commas in the filter parameter (e.g. `filter1,filter2`).
+> - You can specify **multiple filters** by separating them with commas in the filter parameter (e.g., `filter1,filter2`).
 > - If you require true request-level filtering, consider using [dynamic OIDs with wildcards](#filtered-set-of-rows-in-table-using-dynamic-oid).
 
 ### Supported polling methods
@@ -521,7 +521,7 @@ In this example, the parameter with ID 101 holds the filter.
 
 ## Filtered set of rows in table using dynamic OID
 
-Another way to retrieve a filtered set of rows is by defining a dynamic OID on the columns (i.e. defining a wildcard ('*') in the OID itself and referencing the filter with the id attribute). No options need to be defined.
+Another way to retrieve a filtered set of rows is by defining a dynamic OID on the columns (i.e., defining a wildcard ('*') in the OID itself and referencing the filter with the id attribute). No options need to be defined.
 
 The advantage of this method is that only requests are sent to the device matching the desired rows.
 

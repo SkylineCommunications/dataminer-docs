@@ -6,7 +6,7 @@ uid: LogicActions
 
 An action defines something that must be performed. It is activated by a trigger. An action can also be part of a group.
 
-Many different types of actions are defined (e.g. an action exists to copy the value of a parameter to another parameter, read a file from a directory, add a group to the group execution queue, increment the value of a parameter, etc.).
+Many different types of actions are defined (e.g., an action exists to copy the value of a parameter to another parameter, read a file from a directory, add a group to the group execution queue, increment the value of a parameter, etc.).
 
 Actions are typically executed when a trigger goes off. Multiple actions can be linked to one trigger.
 

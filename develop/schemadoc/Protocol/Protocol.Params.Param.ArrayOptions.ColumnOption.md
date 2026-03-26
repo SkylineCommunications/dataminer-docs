@@ -36,7 +36,7 @@ In a QAction, you can use the SLProtocol.GetKeysForIndex method to retrieve the 
 > [!CAUTION]
 > Using this option affects memory usage!
 >
-> When this option is used, the SLProtocol process will maintain an index for this column. The SLProtocol process will update the index for every update to the column data (e.g. through a FillArray, AddRow, etc. call). It is therefore strongly advised to **only use this option for columns that do not change frequently**.
+> When this option is used, the SLProtocol process will maintain an index for this column. The SLProtocol process will update the index for every update to the column data (e.g., through a FillArray, AddRow, etc. call). It is therefore strongly advised to **only use this option for columns that do not change frequently**.
 
 See also:
 

@@ -16,7 +16,7 @@ For xPON, these are the required EPM connectors:
 
 - [Skyline EPM Platform xPON](https://catalog.dataminer.services/details/2de7ee12-650b-442a-8c7e-c8ddf2b358f9)
 
-- [Skyline EPM Platform xPON WM](https://catalog.dataminer.services/details/ac349ec5-a7a6-4e5f-8732-6e43ed14b3ee)
+- [Skyline EPM Platform xPON WM](https://catalog.dataminer.services/details/ac349ec5-a7a6-4e5f-8732-6e43ed14b3ee) (link accessible for Skyline employees only)
 
 ### Data collection
 
@@ -28,7 +28,7 @@ For an overview of the available collector connectors, see [Supported technologi
 
 ### System connectors
 
-To gather the ONT operative data, the default method is a Kafka data stream provided by a third party. Usually this is an ACS if the xPON implementation has multiple vendors deployed (i.e. one vendor for the OLT and multiple vendors for the ONT).
+To gather the ONT operative data, the default method is a Kafka data stream provided by a third party. Usually this is an ACS if the xPON implementation has multiple vendors deployed (i.e., one vendor for the OLT and multiple vendors for the ONT).
 
 A [Generic Kafka Consumer](https://catalog.dataminer.services/details/ed00ca53-7d1a-4bf0-88f8-7bb2a457f697) connector is available, which is able to retrieve information from any stream, as it does not process any of the received data. It only polls the data, ensures that its formatting is consistent, and stores it in a defined location:
 
@@ -44,7 +44,7 @@ This could be a database, a CRM, another data stream, local files (CSV or JSON),
 
 ## Automation scripts
 
-The xPON EPM Solution uses the following Automation scripts:
+The xPON EPM Solution uses the following automation scripts:
 
 - **EpmBeToOLT**
 
@@ -56,4 +56,4 @@ The xPON EPM Solution uses the following Automation scripts:
 
 - **WmToBexPON**
 
-Each of these Automation scripts has a defined task. All of them use the DataMiner messaging system to request, provide, and sync data among EPM components.
+Each of these automation scripts has a defined task. All of them use the DataMiner messaging system to request, provide, and sync data among EPM components.

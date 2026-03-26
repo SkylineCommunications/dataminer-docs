@@ -12,9 +12,9 @@ uid: DIS_2.48
 
 ### IDE
 
-#### A message will now be shown when a connector or an Automation script package is being uploaded [ID 38846]
+#### A message will now be shown when a connector or an automation script package is being uploaded [ID 38846]
 
-When a connector or an Automation script is being published, a message will now be shown to indicate that the package is being uploaded.
+When a connector or an automation script is being published, a message will now be shown to indicate that the package is being uploaded.
 
 ### Validator
 

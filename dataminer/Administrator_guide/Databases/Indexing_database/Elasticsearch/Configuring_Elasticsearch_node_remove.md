@@ -54,6 +54,6 @@ PUT _cluster/settings
 
 ## Removing a potential master node
 
-After removing a potential master node (i.e. a node of which the `node.master` property was set to true in the *elasticsearch.yml* file), you will probably need to promote another node to potential master node. To do so, change the `node.master` property of that node from false to true, and restart it.
+After removing a potential master node (i.e., a node of which the `node.master` property was set to true in the *elasticsearch.yml* file), you will probably need to promote another node to potential master node. To do so, change the `node.master` property of that node from false to true, and restart it.
 
 For more information on master nodes, see [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes).

@@ -63,7 +63,7 @@ The **Continuous Integration/Continuous Deployment (CI/CD) pipeline** is there t
 
 The goal is to **test, configure, and build** the code in various environments, including the lab, staging, and production environment.
 
-This process includes using **Git for push and pull requests** and utilizing a CI/CD pipeline to **automatically trigger and execute multiple steps**, such as building the solution, executing unit tests, performing code analysis, running the DIS validator, publishing a new version of the connector, and deploying Automation scripts from a GitHub repository.
+This process includes using **Git for push and pull requests** and utilizing a CI/CD pipeline to **automatically trigger and execute multiple steps**, such as building the solution, executing unit tests, performing code analysis, running the DIS validator, publishing a new version of the connector, and deploying automation scripts from a GitHub repository.
 
 **Continuous deployment** involves creating a dataminer.services key, adding it as a secret in the repository, and adding the Skyline DataMiner Deploy Action to your workflow to streamline the deployment process.
 
@@ -77,7 +77,7 @@ This process includes using **Git for push and pull requests** and utilizing a C
 
 ### DataMiner Integration Studio (DIS)
 
-The **DataMiner Integration Studio (DIS)**, an Integrated Development Environment (IDE) in the form of a **plugin for Microsoft Visual Studio**, and **free of charge to all users**, streamlines the process of **building, designing, validating, and deploying** connectors, Automation scripts, virtual functions, and more. Its **user-friendly features** make the task of developing and testing DataMiner interface connectors effortless, leading to an optimized operation.
+The **DataMiner Integration Studio (DIS)**, an Integrated Development Environment (IDE) in the form of a **plugin for Microsoft Visual Studio**, and **free of charge to all users**, streamlines the process of **building, designing, validating, and deploying** connectors, automation scripts, virtual functions, and more. Its **user-friendly features** make the task of developing and testing DataMiner interface connectors effortless, leading to an optimized operation.
 
 Moreover, the IDE's integration with online code repository services like GitHub empowers everyone to become a true DevOps engineer. This integration enables developers and customers to collaborate and share their expertise, resulting in a more efficient and enjoyable development process.
 

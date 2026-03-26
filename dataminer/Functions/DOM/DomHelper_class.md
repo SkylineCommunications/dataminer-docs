@@ -47,7 +47,7 @@ if (!traceData.HasSucceeded())
     var errors = traceData.GetErrorDataOfType<DomInstanceError>();
     foreach (var error in errors)
     {
-        // Do something with the error, e.g. log it
+        // Do something with the error, e.g., log it
         engine.GenerateInformation($"Error reason: {error.ErrorReason}");
     }
 
@@ -209,7 +209,7 @@ var orderedOnName = domHelper.DomInstances.Read(onNameQuery);
 var onModifiedQuery = filter.OrderByDescending(DomInstanceExposers.LastModified);
 var orderedOnModified = domHelper.DomInstances.Read(onModifiedQuery);
 
-// Sort on certain field (e.g. 'Vehicle mass')
+// Sort on certain field (e.g., 'Vehicle mass')
 var fieldDescriptorId = new FieldDescriptorID(Guid.Parse("253700a1-1293-4dfa-997b-86efb601d894")); // Vehicle mass
 var field = DomInstanceExposers.FieldValues.DomInstanceField(fieldDescriptorId);
 var onFieldQuery = filter.OrderBy(field);
@@ -316,7 +316,7 @@ The result of the bulk methods will contain:
 
 - A list of `DomInstance` IDs that were successfully deleted, when `Delete` is called.
 
-From DataMiner 10.5.0/10.5.2 onwards<!-- RN 41546 -->, if an issue occurs for any of the items that are getting created, updated, or deleted in bulk (e.g. validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Examples#checking-issues).
+From DataMiner 10.5.0/10.5.2 onwards<!-- RN 41546 -->, if an issue occurs for any of the items that are getting created, updated, or deleted in bulk (e.g., validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Examples#checking-issues).
 
 As an alternative, the `TryCreateOrUpdate` or `TryDelete` methods can be used. When the operation fails for one of the `DomInstances`, those calls will return false. The `result` output parameter will contain:
 
@@ -355,7 +355,7 @@ The stitching functionality makes it easier to work with a `DomInstance`. With t
 - Retrieve the full `FieldDescriptor` object that a `FieldValue` is linked to, by calling `GetFieldDescriptor()` on the `FieldValue`.
 
 > [!NOTE]
-> When an item is not stitched, and one of the above-mentioned get methods is called (e.g. GetDomDefinition), an exception will be thrown.
+> When an item is not stitched, and one of the above-mentioned get methods is called (e.g., GetDomDefinition), an exception will be thrown.
 
 There are two ways to stitch DOM instances:
 

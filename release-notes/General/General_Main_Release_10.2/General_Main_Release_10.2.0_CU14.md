@@ -52,11 +52,11 @@ In the *Monitoring* app, from now on, elements, services and views opened by cli
 
 Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
 
-#### Web apps: Enhanced error handling when executing an interactive Automation script by clicking a DOM button [ID 35909]
+#### Web apps: Enhanced error handling when executing an interactive automation script by clicking a DOM button [ID 35909]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
-Overall error handling has been improved when executing an interactive Automation script by clicking a DOM button in a web app.
+Overall error handling has been improved when executing an interactive automation script by clicking a DOM button in a web app.
 
 #### DataMiner Cube - Alarm templates: 'Condition (Monitoring disabled if condition is true)' column renamed to 'Condition (Parameter excluded if condition is true)' [ID 36007]
 
@@ -211,7 +211,7 @@ When a clock component (analog or digital) was set to use server time, the clock
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
-When, in a shape data field of type *ParameterControlOptions*, you had specified a table row filter that included a `[ServiceDefinitionFilter]` placeholder (e.g. "TableRowFilter:101=[ServiceDefinitionFilter]"), that placeholder would incorrectly not be resolved, causing the linked table control to be empty when filtered.
+When, in a shape data field of type *ParameterControlOptions*, you had specified a table row filter that included a `[ServiceDefinitionFilter]` placeholder (e.g., "TableRowFilter:101=[ServiceDefinitionFilter]"), that placeholder would incorrectly not be resolved, causing the linked table control to be empty when filtered.
 
 #### DataMiner Cube - Spectrum analysis: Problem when opening a spectrum element with an empty username [ID 35927]
 

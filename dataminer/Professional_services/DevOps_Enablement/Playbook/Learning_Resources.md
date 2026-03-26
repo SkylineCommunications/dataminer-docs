@@ -19,8 +19,8 @@ On [DataMiner Dojo](https://community.dataminer.services/learning/courses/), you
 >
 > - Orchestration & Automation:
 >
->   - [Getting started with Automation script development](xref:GettingStartedWithAutomationScriptDevelopment)
->   - [How to make your Automation scripts debug ready](xref:How_to_make_your_automation_scripts_debug_ready)
+>   - [Getting started with automation script development](xref:GettingStartedWithAutomationScriptDevelopment)
+>   - [How to make your automation scripts debug ready](xref:How_to_make_your_automation_scripts_debug_ready)
 >   - [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit)
 >
 > - Cloud Services:

@@ -10,7 +10,7 @@ uid: IDP_1.1.20
 
 It is now possible to use credentials from the Credentials Library during a discovery. To do so, in a discovery profile for SNMPv1, SNMPV2 or SNMPv3, you can specify an ID that links to a set of credentials from the Credentials Library.
 
-If a discovery template with invalid credentials is imported, IDP will display an error. This can be the case if the credentials no longer exist in the Credentials Library or if they are not applicable for the selected protocol type (e.g. Community credentials used in an SNMPv3 profile).
+If a discovery template with invalid credentials is imported, IDP will display an error. This can be the case if the credentials no longer exist in the Credentials Library or if they are not applicable for the selected protocol type (e.g., Community credentials used in an SNMPv3 profile).
 
 #### Adding/editing discovery profiles directly in IDP UI \[ID 32778\]
 
@@ -20,14 +20,14 @@ Two new buttons are available above the list of discovery profiles that allow yo
 
 #### New Admin \> Activities tab \[ID 32889\]
 
-The activities configuration has now been moved to one consolidated location in the IDP app. i.e. the *Admin* > *Activities* tab, which has two pages:
+The activities configuration has now been moved to one consolidated location in the IDP app. i.e., the *Admin* > *Activities* tab, which has two pages:
 
 - The *Overview* page, containing the configuration that was previously available under *Processes* > *Activities*.
 - The *Default Behavior* page, containing the configuration that was available under *Admin* > *CI Types* > *Activity Management*.
 
 #### File Transfer credentials clarified in IDP UI \[ID 32980\]
 
-On the *Configuration* > *Admin* tab, the *Network Shares* page previously contained a set of credentials for the working directories. While these credentials were in fact used for all file transfers (including e.g. for a configuration backup), a user could easily get the impression that they were exclusively used for the configuration update operation. For this reason, the credentials are now displayed in a new *File Transfer Credentials* section on the same page. Similarly, in the Configuration Manager section of the setup wizard, they are now mentioned as “File Transfer Credentials”.
+On the *Configuration* > *Admin* tab, the *Network Shares* page previously contained a set of credentials for the working directories. While these credentials were in fact used for all file transfers (including e.g., for a configuration backup), a user could easily get the impression that they were exclusively used for the configuration update operation. For this reason, the credentials are now displayed in a new *File Transfer Credentials* section on the same page. Similarly, in the Configuration Manager section of the setup wizard, they are now mentioned as “File Transfer Credentials”.
 
 ## Changes
 

@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Interprete.Range.Low
 
 # Low element
 
-Specifies the lower limit of the range, i.e. the minimum value of a parameter.
+Specifies the lower limit of the range, i.e., the minimum value of a parameter.
 
 ## Type
 

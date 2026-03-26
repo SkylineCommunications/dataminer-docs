@@ -55,7 +55,7 @@ The visual overviews shown in the DataMiner web apps are a lightweight version o
 
 - Interactivity features of the DataMiner Connectivity Framework (DCF), such as being able to click connection lines.
 
-- Alarm list components (e.g. an [alarm timeline](xref:Embedding_an_alarm_timeline_component) or [filtered Alarm Console](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked)).
+- Alarm list components (e.g., an [alarm timeline](xref:Embedding_an_alarm_timeline_component) or [filtered Alarm Console](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked)).
 
 - [Drag/drop functionalities](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape).
 
@@ -67,4 +67,4 @@ There are also some differences in functionality:
 
 - If you navigate to an element, service, or view from a visual overview in a DataMiner web app, this will always open the Monitoring app, even if the visual overview is embedded in a dashboard or low-code app.
 
-- Prior to DataMiner 10.4.10<!--RN 40497-->, when you have multiple components that show the same visual overview with user context (e.g. a visual overview with card variables), the contexts of those components are shared. For example, if you click a button on one component, the same action will be mirrored on the other component.
+- Prior to DataMiner 10.4.10<!--RN 40497-->, when you have multiple components that show the same visual overview with user context (e.g., a visual overview with card variables), the contexts of those components are shared. For example, if you click a button on one component, the same action will be mirrored on the other component.

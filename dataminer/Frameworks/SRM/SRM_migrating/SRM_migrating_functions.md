@@ -4,7 +4,7 @@ uid: SRM_migrating_functions
 
 # Migrating virtual function definitions
 
-To export and import virtual functions definitions and the associated objects, you can use the *SRM_ExportFunctions* and *SRM_ImportFunctions* Automation scripts, respectively.
+To export and import virtual functions definitions and the associated objects, you can use the *SRM_ExportFunctions* and *SRM_ImportFunctions* automation scripts, respectively.
 
 ## Exporting virtual function definitions
 

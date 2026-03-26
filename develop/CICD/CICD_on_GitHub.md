@@ -9,7 +9,7 @@ Skyline Communications is currently in the process of migrating its internal CI/
 We use a combination of:
 
 - GitHub as source control
-- GitHub workflows (reusable or starter) that run on commits to GitHub repositories to trigger e.g. quality control
+- GitHub workflows (reusable or starter) that run on commits to GitHub repositories to trigger e.g., quality control
 - GitHub actions for specific popular actions such as deployment of artifacts
 - Dotnet tooling within workflows to provide reusable and well-tested scripting
 - DIS extension within Visual Studio

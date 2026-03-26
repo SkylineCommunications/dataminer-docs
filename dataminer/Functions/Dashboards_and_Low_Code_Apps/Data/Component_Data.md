@@ -8,7 +8,7 @@ keywords: feeds
 > [!NOTE]
 > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, component data is referred to as "feeds" instead.
 
-Many components in dashboards and low-code apps can be configured to be linked to component data, i.e. data that is made available by other components in the dashboard or app. This way, their content can be dynamically adjusted by users.
+Many components in dashboards and low-code apps can be configured to be linked to component data, i.e., data that is made available by other components in the dashboard or app. This way, their content can be dynamically adjusted by users.
 
 ## Configuration
 
@@ -37,7 +37,7 @@ To have a component in your dashboard or app updated based on component data:
 
 ## Selection-dependent component data
 
-Some component data is only available **when data is selected in the original component**, e.g. the *Grid* > *Selected items* > *Tables* data object. This data is dependent on the selection in the original component, and when passed to a linked component, the data displayed will update based on the current selection.
+Some component data is only available **when data is selected in the original component**, e.g., the *Grid* > *Selected items* > *Tables* data object. This data is dependent on the selection in the original component, and when passed to a linked component, the data displayed will update based on the current selection.
 
 For example, if a specific cell is selected in a grid component and a table component has been passed the *Grid* > *Selected items* > *Tables* data object, the table will display data corresponding to the selected cell. If you then select a different cell in the grid, the table will update to reflect the new selection.
 

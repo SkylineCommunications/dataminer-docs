@@ -32,7 +32,7 @@ Expected duration: 15 minutes.
 
 ## Step 2: Clone your fork
 
-On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/SLC-C-DevOpsExercise1`), click the green *Code* button and select *Open in Visual Studio*.
+On the page of your GitHub fork (e.g., `https://github.com/YourGitHubHandle/SLC-C-DevOpsExercise1`), click the green *Code* button and select *Open in Visual Studio*.
 
 > [!NOTE]
 > In some cases, the *Open in Visual Studio* option may not be available. In that case, you will need to use GitHub Desktop instead to make the clone. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed, and when you click the *Code* button on your fork page, select the option *Open with GitHub Desktop* instead.

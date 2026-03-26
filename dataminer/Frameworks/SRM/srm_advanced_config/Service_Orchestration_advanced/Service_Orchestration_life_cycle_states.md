@@ -12,7 +12,7 @@ A booking is always associated with a specific booking lifecycle state. The foll
 
 - **Pre-roll**: The booking gets this state during the pre-roll phase. When it transitions to this state, the orchestration layer will typically apply the configuration on the resources.
 
-- **Service Active**: The booking gets this state during on-air time. When it transitions to this state, the orchestration layer will typically apply the last settings required to get the signal on air (e.g. enable the modulator).
+- **Service Active**: The booking gets this state during on-air time. When it transitions to this state, the orchestration layer will typically apply the last settings required to get the signal on air (e.g., enable the modulator).
 
 - **Post-roll**: The booking gets this state during the post-roll phase. When it transitions to this state, the orchestration layer will typically start resetting resources to their default values.
 
@@ -24,7 +24,7 @@ A booking is always associated with a specific booking lifecycle state. The foll
 
 - **On-Hold**: If a booking is not running yet, it can be forced to transition to this state. In that case, it will not be executed, but its resources will continue to be reserved.
 
-- **Quarantined**: When there is a resource conflict between multiple bookings, some of these bookings will get this state. This means the orchestration will not take place. Users can then edit the booking and adjust settings (e.g. select a different profile instance or resource) to make the booking leave this state.
+- **Quarantined**: When there is a resource conflict between multiple bookings, some of these bookings will get this state. This means the orchestration will not take place. Users can then edit the booking and adjust settings (e.g., select a different profile instance or resource) to make the booking leave this state.
 
   You can trigger quarantined state by:
 
@@ -52,7 +52,7 @@ On a node in a service definition, you can configure that a script should run be
 
 1. Select the service definition and the node for which you want to run the script.
 
-1. In the *properties* pane in the lower-right corner, add the *Created Booking Action* property, and specify a value in the following format (similar to the format used to link a shape to an Automation script in Visio):
+1. In the *properties* pane in the lower-right corner, add the *Created Booking Action* property, and specify a value in the following format (similar to the format used to link a shape to an automation script in Visio):
 
    ```json
    {

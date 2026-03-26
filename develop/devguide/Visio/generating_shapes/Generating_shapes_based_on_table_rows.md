@@ -59,7 +59,7 @@ The following shape data fields can be added to the group containing the table r
   > [!NOTE]
   > With the DataMiner Cube user setting *Maximum number of child shapes in a Children container shape*, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100
 
-- **ChildrenSource**: In this mandatory shape data field, specify the ID of the source table, i.e. the table of which the rows have to be turned into shapes.
+- **ChildrenSource**: In this mandatory shape data field, specify the ID of the source table, i.e., the table of which the rows have to be turned into shapes.
 
   Use the following syntax:
 
@@ -75,7 +75,7 @@ The following shape data fields can be added to the group containing the table r
 
   > [!NOTE]
   >
-  > - In this shape data field, you can use placeholders like e.g. \[this service\].
+  > - In this shape data field, you can use placeholders like e.g., \[this service\].
   > - Instead of the actual element name, you can specify an element alias from a particular service.
 
 - **ChildrenOptions**: In this optional shape data field, you can specify a number of options.
@@ -93,7 +93,7 @@ The following shape data fields can be added to the group containing the table r
   | Name | Sort by child item name. |
   | Property\|PropertyName | Sort by the specified child item property. |
   | Severity | Sort by alarm severity. |
-  | TableColumn\|\<ParamID> | Sort based on the values in a specific column of the table for which shapes are generated. Multiple table columns can be specified, separated by pipe characters. Optionally, you can also add the sorting direction for each table column, separated from the table column by a comma. If no sorting direction is specified, by default, the shapes will be sorted in ascending order. E.g. "TableColumn\|101\|102,desc\|103" |
+  | TableColumn\|\<ParamID> | Sort based on the values in a specific column of the table for which shapes are generated. Multiple table columns can be specified, separated by pipe characters. Optionally, you can also add the sorting direction for each table column, separated from the table column by a comma. If no sorting direction is specified, by default, the shapes will be sorted in ascending order. Example: "TableColumn\|101\|102,desc\|103" |
 
   > [!NOTE]
   >

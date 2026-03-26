@@ -16,7 +16,7 @@ To consult information about the Correlation engine, do the following:
 
    The message will among others contain the stack size, a list of remote subscriptions from other Agents in the cluster, the last known remote Agent states (connected or disconnected), and some counters about the number of forwarded events between Agents.
 
-To consult information about the Correlation rules of a DMA:
+To consult information about the correlation rules of a DMA:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 

@@ -16,7 +16,7 @@ object result = protocol.NotifyDataMiner(317/*NT_SYNC_SNMP_MANAGER*/ , snmpManag
 ## Parameters
 
 - snmpManagerID (int): ID of the SNMP manager.
-- onlySendLocalActiveAlarms (bool): Indicates whether to only send local active alarms of the DMA hosting the protocol or not (default: False, i.e. all active Alarms in the DMS).
+- onlySendLocalActiveAlarms (bool): Indicates whether to only send local active alarms of the DMA hosting the protocol or not (default: False, i.e., all active Alarms in the DMS).
 
 ## Return Value
 

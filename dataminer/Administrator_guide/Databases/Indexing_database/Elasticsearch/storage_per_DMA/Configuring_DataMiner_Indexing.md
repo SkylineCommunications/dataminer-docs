@@ -17,13 +17,13 @@ The following settings are available:
 
 - *Enable indexing on alarms:* Enables indexing of alarms. If this option is not enabled, the enhanced search options in the Alarm Console are not available. For systems using [STaaS](xref:STaaS) or [dedicated clustered storage](xref:Dedicated_clustered_storage), this setting is not used.<!-- RN 44435 -->
 
-- *Migrate booking data to Indexing Engine*: Allows you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database, if this has not been done yet. This option is not relevant for [dedicated clustered storage](xref:Dedicated_clustered_storage) or [STaaS](xref:STaaS) setups.
+- *Migrate booking data to Indexing Engine*: Allows you to migrate older booking data (i.e., from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database, if this has not been done yet. This option is not relevant for [dedicated clustered storage](xref:Dedicated_clustered_storage) or [STaaS](xref:STaaS) setups and is no longer available from DataMiner server 10.5.0 [CU12]/10.6.0 onwards<!--RN 44550-->.
 
   Please note the following regarding the migration of booking data:
 
   - Property names must not start with an underscore (“\_”) or contain any of the following characters: . # \* , " '<br>As such, the wizard will ask you to rename certain booking properties before starting the migration. To ensure the correct functionality of the Service & Resource Management module, some properties will be renamed automatically. For example, the *Visual.Background* and *Visual.Foreground* properties will automatically be renamed as *VisualBackground* and *VisualForeground*.
 
-  - After migrating the booking data to the indexing database, make sure to check your Automation scripts and Visio files and adjust the booking property names where necessary.
+  - After migrating the booking data to the indexing database, make sure to check your automation scripts and Visio files and adjust the booking property names where necessary.
 
   - After the migration is complete, you can use the *Retrieve report* button in the wizard to get a summary report of the migration.
 

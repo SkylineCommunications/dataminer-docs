@@ -204,7 +204,21 @@ items:
           - name: Working with the Alarm Console history slider
             topicUid: WorkingWithTheAlarmConsoleHistorySlider
           - name: Applying alarm filters in the Alarm Console
-            topicUid: ApplyingAlarmFiltersInTheAlarmConsole
+            items:
+              - name: Using the quick filter box
+                topicUid: UsingTheQuickFilterBox
+              - name: Using the quick filter buttons
+                topicUid: UsingTheQuickFilterButtons
+              - name: Manually applying an alarm filter
+                topicUid: ManuallyApplyingAnAlarmFilter
+              - name: Creating a search tab
+                topicUid: CreatingASearchTab
+              - name: Applying an alarm filter by dragging an item onto the Alarm Console
+                topicUid: ApplyingAnAlarmFilterByDragging
+              - name: Using wildcards or regular expressions in alarm filters
+                topicUid: UsingWildcardsOrRegularExpressionsInAlarmFilters
+              - name: Working with saved alarm filters
+                topicUid: WorkingWithSavedAlarmFilters
           - name: Using the RCA slider
             topicUid: UsingTheRCASlider
           - name: Configuring a custom alert sound for an alarm tab

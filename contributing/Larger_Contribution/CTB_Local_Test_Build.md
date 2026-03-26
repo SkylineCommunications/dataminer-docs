@@ -35,7 +35,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 1. Make sure **.NET 6.0 SDK or higher** is installed on your machine. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
 
-1. Go to the root folder of the repository on your local machine, e.g. `C:\GitHub\dataminer-docs\dataminer-docs`.
+1. Go to the root folder of the repository on your local machine, e.g., `C:\GitHub\dataminer-docs\dataminer-docs`.
 
 1. Double-click the file *buildDocs.cmd*.
 
@@ -59,7 +59,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 1. When you have finished previewing the website, close the command window.
 
 > [!NOTE]
-> If port 8080 is not available, you will need to run *buildDocs.cmd* from a command prompt with the correct port as an argument, e.g. `buildDocs 8081`.
+> If port 8080 is not available, you will need to run *buildDocs.cmd* from a command prompt with the correct port as an argument, e.g., `buildDocs 8081`.
 
 > [!IMPORTANT]
 > If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. Depending on your DocFX version, these can pile up and take up a large amount of memory in the long run.
@@ -94,7 +94,7 @@ If you make repeated test builds to check changes you have made, and you are onl
    1. In a browser, go to <http://localhost:8080/> to preview the website.
 
       > [!TIP]
-      > If you are not able to access localhost:8080, you can specify a different port by entering e.g. `docfx serve _site -p 8090`.
+      > If you are not able to access localhost:8080, you can specify a different port by entering e.g., `docfx serve _site -p 8090`.
 
       When you have finished previewing the website, in the Terminal pane, press Ctrl+C to exit the preview mode.
 

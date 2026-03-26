@@ -74,11 +74,11 @@ Performance has improved when elements are dynamically included or excluded in a
 
 #### Dashboards app: Problem with query linked to table component \[ID 30372\]
 
-When a query in a dashboard was linked to a table component, it could occur that the query could not be rebuilt. In some cases, an error was shown in the data pane, e.g. "Cannot ready property 'selectedBlock' of undefined".
+When a query in a dashboard was linked to a table component, it could occur that the query could not be rebuilt. In some cases, an error was shown in the data pane, e.g., "Cannot ready property 'selectedBlock' of undefined".
 
 #### Problem with conditional monitoring after alarm template update \[ID 30531\]
 
-When an alarm template was refreshed in the SLElement process, e.g. because the alarm template was modified or the baseline changed, it could occur that conditional monitoring was ignored for standalone parameters. Because of this, if a parameter was not monitored because the condition for this was met, it was shown as monitored regardless.
+When an alarm template was refreshed in the SLElement process, e.g., because the alarm template was modified or the baseline changed, it could occur that conditional monitoring was ignored for standalone parameters. Because of this, if a parameter was not monitored because the condition for this was met, it was shown as monitored regardless.
 
 #### Dashboards app: Table incorrectly identified by display name instead of ID \[ID 30591\] \[ID 30684\]
 
@@ -86,7 +86,7 @@ Previously, if a query in a dashboard used the data source "Get parameter table 
 
 #### Automation: CheckboxList and RadiobuttonList not decoding backslash correctly \[ID 30605\]
 
-In an interactive Automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
+In an interactive automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
 
 #### Information about running elements missing in SLProtocol logging \[ID 30612\]
 

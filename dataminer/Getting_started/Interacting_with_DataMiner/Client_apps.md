@@ -1,6 +1,6 @@
 ---
 uid: Client_apps
-description: Several client apps are available that allow you to interact with a DataMiner System - DataMiner Cube, DataMiner Monitoring app, Dashboards app, Low-Code Apps, etc.
+description: Several client apps are available that allow you to interact with a DataMiner System - DataMiner Cube, Dashboards app, Low-Code Apps, etc.
 ---
 
 # DataMiner client apps

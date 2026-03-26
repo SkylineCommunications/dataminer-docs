@@ -87,7 +87,7 @@ From now on, you can retrieve multiple function definitions in one go using the 
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
-The `GetConnection()` method can now be used to expose the underlying GQI SLNet connection to GQI extensions like ad hoc data sources and custom operators via the `IConnection` interface. The method is compatible with existing Nuget packages for Automation scripts.
+The `GetConnection()` method can now be used to expose the underlying GQI SLNet connection to GQI extensions like ad hoc data sources and custom operators via the `IConnection` interface. The method is compatible with existing Nuget packages for automation scripts.
 
 ```csharp
 IConnection GetConnection()
@@ -255,7 +255,7 @@ Types of log entries related to SLNet requests:
 
   This type of entry will be added to the log for each individual message in an SLNet request.
 
-  - *RequestID.Index*: The unique ID of the message, consisting of the *RequestID* (which identifies the request) and an *Index* (i.e. the sequence number of the message).
+  - *RequestID.Index*: The unique ID of the message, consisting of the *RequestID* (which identifies the request) and an *Index* (i.e., the sequence number of the message).
   - *Description*: The string representation of the actual SLNet message, which should give a short but meaningful description of the message.
 
 - `Finished SLNet request <RequestID> in <Duration>ms`
@@ -281,22 +281,22 @@ From now on, this error message will include a reference to the StorageModule lo
 
 The *MySql.Data.dll* file, located in `C:\Skyline DataMiner\ProtocolScripts\`, should from now on be considered deprecated.
 
-This file will no longer be included in DataMiner upgrade packages. Also, a BPA test has been created to detect the presence and usage of this DLL file in protocols and Automation scripts.
+This file will no longer be included in DataMiner upgrade packages. Also, a BPA test has been created to detect the presence and usage of this DLL file in protocols and automation scripts.
 
-To remove all references to the *MySql.Data.dll* file in your protocols and Automation scripts, do the following:
+To remove all references to the *MySql.Data.dll* file in your protocols and automation scripts, do the following:
 
 1. Open DataMiner Cube.
 1. Open *System Center*.
 1. Go to *Agents > BPA*.
 1. Run the *Check Deprecated MySql DLL* test (if it has not been run yet).
-1. If references to the DLL file have been found, click the ellipsis button next to the message to see an overview of all protocols and Automation scripts that are still using this DLL file.
+1. If references to the DLL file have been found, click the ellipsis button next to the message to see an overview of all protocols and automation scripts that are still using this DLL file.
 
    This overview is displayed as a string in JSON format. It will contain the following information:
 
    - The names and versions of the protocols that are still using this file, including the IDs of the QActions in which this file is referenced.
-   - The names of the Automation scripts that are still using this file.
+   - The names of the automation scripts that are still using this file.
 
-1. Replace every reference to the *MySql.Data.dll* file in the listed protocol QActions and Automation scripts by a reference to the [MySql.Data NuGet](https://www.nuget.org/packages/MySql.Data). Using that NuGet should not require any other changes to the existing code.
+1. Replace every reference to the *MySql.Data.dll* file in the listed protocol QActions and automation scripts by a reference to the [MySql.Data NuGet](https://www.nuget.org/packages/MySql.Data). Using that NuGet should not require any other changes to the existing code.
 
 When you have replaced all references to the *MySql.Data.dll* file, do the following:
 
@@ -306,7 +306,7 @@ When you have replaced all references to the *MySql.Data.dll* file, do the follo
 
 > [!IMPORTANT]
 > The BPA test *Check Deprecated MySql DLL* is only able to detect whether the *MySql.Data.dll* file is referenced directly. For example, if a QAction would contain a reference to a particular DLL that references the *MySql.Data.dll* file, the BPA will not be able to detect this.
-> When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an Automation script was executed.
+> When you remove the *MySql.Data.dll* file, it is advised to keep a temporary copy and to check the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the *MySql.Data.dll* file when a QAction or an automation script was executed.
 
 #### GQI - Get parameters for element: Enhanced performance when querying sorted tables [ID 39376]
 
@@ -370,7 +370,7 @@ From now on, when a table cell is saved, the `Interprete` type of the column wil
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
-In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
+In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g., comments).
 
 #### SLProtocol would return an error when it encountered the parameter type 'matrix' [ID 39398]
 
@@ -384,7 +384,7 @@ Up to now, SLProtocol would add the following line in the log file of an element
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
-When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g. DataMiner Cube).
+When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g., DataMiner Cube).
 
 #### STaaS: Problem when using a delete statement with a filter [ID 39416]
 
@@ -400,7 +400,7 @@ This issue has now been fixed.
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
-If the midnight synchronization of the Resource Manager fails, it is retried up to 5 times. Up to now, when a synchronization retry was triggered, the internal caches of the Resource Manager would incorrectly be loaded twice. This could lead to e.g. bookings not being starting.
+If the midnight synchronization of the Resource Manager fails, it is retried up to 5 times. Up to now, when a synchronization retry was triggered, the internal caches of the Resource Manager would incorrectly be loaded twice. This could lead to, for example, bookings not being starting.
 
 #### SLAutomation: Problem when clearing the internal parameter cache [ID 39441]
 

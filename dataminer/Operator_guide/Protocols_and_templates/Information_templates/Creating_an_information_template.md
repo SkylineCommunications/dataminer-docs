@@ -28,7 +28,7 @@ To create an information template:
 
    - **Detailed description**: The parameter description that will be displayed in the parameter details.
 
-   - **Custom name**: An alternative parameter name (i.e. alias) that can be used in Visual Overview, poll socket requests, Dashboards, Automation, etc.
+   - **Custom name**: An alternative parameter name (i.e., alias) that can be used in Visual Overview, poll socket requests, Dashboards, Automation, etc.
 
      Suppose you use three protocols that have an identical parameter but with a slightly different name. In that case, you could use this "custom name" to assign the same alias to those three parameters and then use that alias in a Visio drawing shared by the three protocols.
 
@@ -36,11 +36,11 @@ To create an information template:
 
      To visualize this information in the user interface, add the *Category* column to the Alarm Console.
 
-   - **Key point**: The exact location in the signal chain where the error has occurred. E.g. "Encoding", "Decoding", "Reception", etc.
+   - **Key point**: The exact location in the signal chain where the error has occurred, e.g., "Encoding", "Decoding", "Reception", etc.
 
      This is used in DataMiner Business Intelligence.
 
-   - **Component info**: More information about the nature of the alarm. E.g. "Audio", "Video", etc.
+   - **Component info**: More information about the nature of the alarm, e.g., "Audio", "Video", etc.
 
      This is used in DataMiner Business Intelligence.
 

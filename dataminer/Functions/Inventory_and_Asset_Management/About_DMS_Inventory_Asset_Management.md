@@ -12,7 +12,7 @@ It enables you to:
 
 - Combine real-time data from the DataMiner System with asset data from the CMDB (in the DataMiner Alarm Console, in DataMiner reports, etc.),
 
-- Push real-time data collected by DataMiner to the CMDB (e.g. DataMiner fetches the serial number of a device and subsequently stores this number in the CMDB),
+- Push real-time data collected by DataMiner to the CMDB (e.g., DataMiner fetches the serial number of a device and subsequently stores this number in the CMDB),
 
 - ...
 

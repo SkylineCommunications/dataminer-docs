@@ -5,7 +5,7 @@ using System.Text;
 namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// This class allows you to create a date and time picker control in an interactive Automation script.
+	/// This class allows you to create a date and time picker control in an interactive automation script.
 	/// </summary>
 	/// <example>
 	/// <code>

@@ -58,7 +58,7 @@ Also, when in the registry of a Windows 10 version 1607 or above the LongPathsEn
 
 #### SLManagedAutomation: Locking mechanism will now prevent exceptions from being thrown when reading or writing items in the dummies collection \[ID 29930\]
 
-In an Automation script, every Engine object contains a collection of “dummies”. Each of these dummies represents an element and can be used to interact with that element. When an Automation script wants to interact with an element that is not yet available in the dummies collection, a new dummy is created.
+In an automation script, every Engine object contains a collection of “dummies”. Each of these dummies represents an element and can be used to interact with that element. When an automation script wants to interact with an element that is not yet available in the dummies collection, a new dummy is created.
 
 Up to now, exceptions could be thrown when multiple threads were trying to read or write items in the dummies collection. Now, a locking mechanism has been added to prevent multiple threads from interfering with each other while accessing the dummies collection.
 
@@ -150,7 +150,7 @@ In some cases, DataMiner could become unresponsive when you opened a visual over
 
 #### Mobile apps: Selection box values would be ellipsed even when there was ample space to fully display them \[ID 29850\]
 
-In the mobile apps (e.g. Jobs, Ticketing, etc.), in some cases, selection box values would be ellipsed even when there was ample space to fully display them.
+In the mobile apps (e.g., Jobs, Ticketing, etc.), in some cases, selection box values would be ellipsed even when there was ample space to fully display them.
 
 #### DataMiner Cube - Trending: 'Exclude gaps' option would not work when exporting average trend data \[ID 29870\]
 

@@ -49,7 +49,7 @@ When you do so, you can click the *Configure* button to open a window where you 
 
   - *Include controls*: Select this option to include certain components in the report.
 
-  - *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g. pivot tables) in order to make sure all data is displayed.
+  - *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g., pivot tables) in order to make sure all data is displayed.
 
   - *Dashboard width*: Allows you to select a custom width for the report.
 

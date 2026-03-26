@@ -4,7 +4,7 @@ uid: Implementing_OnRequestScriptInfo_Entry_Point
 
 # Implementing the OnRequestScriptInfo entry point
 
-From DataMiner 10.5.7/10.6.0 <!-- RN 42969 --> onwards, the [OnRequestScriptInfo](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types.OnRequestScriptInfo) entry point can be implemented in an Automation script. This will allow other Automation scripts (or any other code) to request information about the script in question.
+From DataMiner 10.5.7/10.6.0 <!-- RN 42969 --> onwards, the [OnRequestScriptInfo](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types.OnRequestScriptInfo) entry point can be implemented in an automation script. This will allow other automation scripts (or any other code) to request information about the script in question.
 
 The [example](#orchestration-script-example) below uses the entry point to find out which profile parameter values a script needs in order to orchestrate a device.
 
@@ -36,13 +36,13 @@ If the entry point would make use of them, we recommend providing all defined ar
 
 ## Starting the entry point
 
-To start the `OnRequestScriptInfo` entry point, you can use the below-mentioned methods. Within an Automation script, the entry point should be executed as a [subscript](#subscript).
+To start the `OnRequestScriptInfo` entry point, you can use the below-mentioned methods. Within an automation script, the entry point should be executed as a [subscript](#subscript).
 
 ### Subscript
 
 To execute the `OnRequestScriptInfo` entry point within Automation, you have to use the [PrepareSubScript](xref:Skyline.DataMiner.Automation.Engine.PrepareSubScript(System.String,Skyline.DataMiner.Net.Automation.RequestScriptInfoInput)) method.
 
-In the following snippet, the entry point of the script "Script with entry point" will be started. The "Action" key with value "RequestValues" is used as input data. After the script's entry point has been executed synchronously (i.e. the default behavior), the returned output is checked for the value of the "ActionResult" key.
+In the following snippet, the entry point of the script "Script with entry point" will be started. The "Action" key with value "RequestValues" is used as input data. After the script's entry point has been executed synchronously (i.e., the default behavior), the returned output is checked for the value of the "ActionResult" key.
 
 ```csharp
 var input = new RequestScriptInfoInput
@@ -67,7 +67,7 @@ The `input` passed when preparing the subscript can be used to sent the data to 
 
 ### ExecuteScriptMessage
 
-The `ExecuteScriptMessage` can be used to trigger the entry point using an SLNet connection. This message should **not** be used to request the information in an Automation script.
+The `ExecuteScriptMessage` can be used to trigger the entry point using an SLNet connection. This message should **not** be used to request the information in an automation script.
 
 In the following snippet, the entry point of the script "Script with entry point" will be started. The "Action" key with value "RequestValues" is used as input data. After the script's entry point has been executed synchronously, the returned output is checked for the value of the "ActionResult" key.
 
@@ -105,7 +105,7 @@ When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will b
 
 ## Orchestration script example
 
-In this example, a library was created to implement Automation scripts that orchestrate a function of a device, resource or element. The `OnRequestScriptInfo` entry point is used to find out which values (defined as profile parameters) such a script needs in order to perform the orchestration.
+In this example, a library was created to implement automation scripts that orchestrate a function of a device, resource or element. The `OnRequestScriptInfo` entry point is used to find out which values (defined as profile parameters) such a script needs in order to perform the orchestration.
 
 The [OrchestrationHelperExample repository](https://github.com/SkylineCommunications/SLC-S-OrchestrationHelperExample) is available on GitHub.
 

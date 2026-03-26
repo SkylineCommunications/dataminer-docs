@@ -38,7 +38,7 @@ A half-open RTE logged by SLWatchdog can for instance look like this:
 2021-02-22 12:48:58 8260|HALFOPEN RTE: - (478) Not signaled 1 (since 2021-02-22 12:39:22): SLProtocol.exe - [Miteq UPB1-XTR/1.0.0.1] Miteq UPB1 UC - ProtocolThread in Process: SLProtocol.exe for Thread: [Miteq UPB1-XTR/1.0.0.1] Miteq UPB1 UC - ProtocolThread notificationID created: 10753
 ```
 
-If the time in parentheses has elapsed twice, a full runtime error is triggered, which is indicated with an alarm in the Alarm Console in DataMiner Cube. In the example for the element above, this will occur after 15 minutes (i.e. twice 7:30 minutes).
+If the time in parentheses has elapsed twice, a full runtime error is triggered, which is indicated with an alarm in the Alarm Console in DataMiner Cube. In the example for the element above, this will occur after 15 minutes (i.e., twice 7:30 minutes).
 
 An RTE logged by SLWatchdog can for instance look like this:
 

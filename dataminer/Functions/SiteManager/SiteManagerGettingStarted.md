@@ -8,7 +8,7 @@ uid: SiteManagerGettingStarted
 
 The DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) and [deploy the SiteManager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
-For a **self-managed DataMiner System**, the SiteManager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. It can be used with any DataMiner System that uses version 10.5.10/10.6.0 or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+For a **self-managed DataMiner System**, the SiteManager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. The DxM requires DataMiner 10.5.10/10.6.0 or higher and Windows 10 or Windows Server 2019 (build 17134) or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
 When the DxM has been installed, in the Windows services overview, you should see two services:
 
@@ -24,7 +24,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.ps1) script by using the following command, where you replace the placeholders with the **account token** and a **site name**.
 
    ```powershell
-   iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1) } -Command install -AccountToken '<AccountToken>' -SiteName '<SiteName>'"
+   iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1 -UseBasicParsing) } -Command install -AccountToken '<AccountToken>' -SiteName '<SiteName>'"
    ```
 
    - You can find the **account token** in the Site Manager logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
@@ -36,13 +36,13 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
    > - The minimum OS version required by the script is Windows 10 or Windows Server 2019 build 17134.
    > - You must run the script as administrator.
    > - The machine where you install this script must be able to access the data sources you want to expose. It does not have to be the machine where the data sources are running.
-   > - In case PowerShell's execution policy prevents the execution, specify an execution policy (e.g. `-ExecutionPolicy Bypass`). For more information regarding PowerShell's execution policy, refer to [About execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
+   > - In case PowerShell's execution policy prevents the execution, specify an execution policy (e.g., `-ExecutionPolicy Bypass`). For more information regarding PowerShell's execution policy, refer to [About execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
    > - Updating a site name is not straightforward. To update a site name, you will need to uninstall (as mentioned below) and then run the script again. Also, if data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
 
    To uninstall, you can use the following command:
 
    ```powershell
-   iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1) } -Command uninstall"
+   iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1 -UseBasicParsing) } -Command uninstall"
    ```
 
 1. After a successful installation, you can start exposing your data sources so Site Manager can set up a tunnel for each data source it needs to communicate with.
@@ -61,13 +61,17 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 
       For example, when integrating equipment with an on-premises IP address of 10.13.1.102 using an SNMP connection, use:
 
-      `zrok reserve private --backend-mode udpTunnel 10.13.1.102:161`
-
+      ```powershell
+      zrok reserve private --backend-mode udpTunnel 10.13.1.102:161
+      ```
+      
       SNMP uses UDP on port 161, so `<backendMode>` specifies *udpTunnel* and `<endpoint>` contains *161*.
 
       Hostnames are also supported. For example, when integrating equipment reachable via its hostname with an HTTPS connection, use:
 
-      `zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:443`
+      ```powershell
+      zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:443
+      ```
 
       HTTPS uses TCP and port 443, so `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *443*.
 
@@ -118,13 +122,17 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 
       For example, when integrating equipment with an on-premises IP address of 10.13.1.102 using an SNMP connection, use:
 
-      `zrok reserve private --backend-mode udpTunnel 10.13.1.102:161`
+      ```bash
+      zrok reserve private --backend-mode udpTunnel 10.13.1.102:161
+      ```
 
       SNMP uses UDP on port 161, so `<backendMode>` specifies *udpTunnel* and `<endpoint>` contains *161*.
 
       Hostnames are also supported. For example, when integrating equipment reachable via its hostname with an HTTPS connection, use:
 
-      `zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:443`
+      ```bash
+      zrok reserve private --backend-mode tcpTunnel vb440.lab.hq.slc:443
+      ```
 
       HTTPS uses TCP and port 443, so `<backendMode>` specifies *tcpTunnel* and `<endpoint>` contains *443*.
 
@@ -162,7 +170,7 @@ Alternatively, you can also obtain an overview in the browser by navigating to t
 zrok agent version
 ```
 
-In addition to the version, the output will also show the endpoint of the web frontend, e.g. `127.0.0.1:8888`.
+In addition to the version, the output will also show the endpoint of the web frontend, e.g., `127.0.0.1:8888`.
 Navigating to this endpoint in the browser should show a similar overview as the status command.
 
 ![Overview](~/dataminer/images/zrok_agent_webui.png)<br>*zrok Agent web UI*
@@ -171,7 +179,7 @@ Navigating to this endpoint in the browser should show a similar overview as the
 
 In case you no longer want to expose a specific endpoint:
 
-1. Execute the following command, replacing `<shareToken>` with the share token for this specific endpoint (e.g. `02x31uu2yacbh`):
+1. Execute the following command, replacing `<shareToken>` with the share token for this specific endpoint (e.g., `02x31uu2yacbh`):
 
    ```powershell
    zrok release <shareToken>

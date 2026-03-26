@@ -86,7 +86,7 @@ As such, you should think critically and limit the size of `DomInstances`, follo
 
 In most solutions, there are objects that need to be retrieved quite often to display them in a table or on a timeline. These often-retrieved `DomInstances` should be kept as small as possible and should only include the required data.
 
-If values are only needed when a specific object is known (e.g. selected in a low-code app table), create a separate metadata object that stores these additional values. A link can then be made to retrieve these values only when needed. However, as this introduces another read call, you should only do this in case these values are indeed needed less often than the main object values. If these additional values will always be joined to the main object, the performance benefit may be negated, or you may even get the opposite effect.
+If values are only needed when a specific object is known (e.g., selected in a low-code app table), create a separate metadata object that stores these additional values. A link can then be made to retrieve these values only when needed. However, as this introduces another read call, you should only do this in case these values are indeed needed less often than the main object values. If these additional values will always be joined to the main object, the performance benefit may be negated, or you may even get the opposite effect.
 
 **Not recommended:**
 
@@ -167,7 +167,7 @@ The [`AutoIncrementFieldDescriptor`](xref:DOM_AutoIncrementFieldDescriptor) gene
 
 ### Try to limit the number of CRUD calls
 
-Every call to DataMiner (e.g. `DomInstance` create call) and the database has a certain overhead. By reducing the number of calls, you can limit this overhead. You can implement the following measures:
+Every call to DataMiner (e.g., `DomInstance` create call) and the database has a certain overhead. By reducing the number of calls, you can limit this overhead. You can implement the following measures:
 
 - **Use bulk create, update, or delete whenever possible**
 
@@ -232,7 +232,7 @@ Note that this recommendation is only important when the DOM data could contain 
 
 ### Limit the use of field descriptors with external references that will be shown in a DOM form
 
-There are `FieldDescriptors` like the `DomInstanceFieldDescriptor` or `ReservationFieldDescriptor` that refer to existing DataMiner objects. When a field like this is shown in a form in a low-code app, a list of possible values will be retrieved to populate a dropdown. When there are many of these types of fields, many calls are executed, impacting the user experience for the low-code app. If these fields are hidden in a form (e.g. because they are only used by scripts), there should be no overhead.
+There are `FieldDescriptors` like the `DomInstanceFieldDescriptor` or `ReservationFieldDescriptor` that refer to existing DataMiner objects. When a field like this is shown in a form in a low-code app, a list of possible values will be retrieved to populate a dropdown. When there are many of these types of fields, many calls are executed, impacting the user experience for the low-code app. If these fields are hidden in a form (e.g., because they are only used by scripts), there should be no overhead.
 
 ### Limit the use of GQI aggregation operations
 
@@ -244,6 +244,6 @@ While GQI offers versatile [aggregation capabilities](xref:GQI_Aggregate) for DO
 
 Even when you have applied all the recommendations to optimize performance, you should still perform performance and scale testing using the designed DOM model.
 
-Try to estimate the expected load in production (e.g. 50 `DomInstances` updated every minute) and write a script that simulates these actions.
+Try to estimate the expected load in production (e.g., 50 `DomInstances` updated every minute) and write a script that simulates these actions.
 
 It is considered best practice to design the solution around this testability by providing ways to hook into a certain workflow. An example of this could be a QAction or script that contains all logic to create a certain `DomInstance`, allowing you to trigger that specific part of the solution with dummy data to execute the performance testing. Make sure the dummy data is representative of the final system in both size and amount (ideally it should even be larger).

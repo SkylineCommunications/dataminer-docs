@@ -2,10 +2,19 @@
 uid: General_Main_Release_10.5.0_CU13
 ---
 
-# General Main Release 10.5.0 CU13 - Preview
+# General Main Release 10.5.0 CU13
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> Before you upgrade to this DataMiner version:
+>
+> - Make sure the Microsoft **.NET 10** hosting bundle is installed (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)). See also: [DataMiner upgrade: New prerequisite will check whether .NET 10 is installed](xref:General_Main_Release_10.5.0_CU10#dataminer-upgrade-new-prerequisite-will-check-whether-net-10-is-installed-id-44121).
+> - Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+>   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+>   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 > [!TIP]
 >
@@ -14,6 +23,26 @@ uid: General_Main_Release_10.5.0_CU13
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
+
+#### New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In order to allow SLNet to automatically update the OAuth token needed to access an SMTP mail server that requires authentication via XOAuth2, a number of OAuth settings have now been added to the *DataMiner.xml* file. However, these settings can only be configured via DataMiner Cube.<!-- RN44594 -->
+
+See also: [System Center: Configuring outgoing email [ID 44594]](xref:Cube_Feature_Release_10.6.4#system-center-configuring-outgoing-email-id-44594)
+
+#### BPA test 'Large Alarm Trees' will now run on a daily basis [ID 44565]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+From now on, the *Large Alarm Trees* BPA test will run on a daily basis, and will now generate an error or a warning in the following cases:
+
+- It will generate an error when there is at least one alarm tree that consists of 5000 or more alarms. Only the alarm trees that have reached this size will be returned in the detailed result.
+
+- It will generate a warning when there is at least one alarm tree that consists of 1000 or more alarms, but all alarm trees have less than 5000 alarms. Only the alarm trees that have reached this size will be returned in the detailed result.
+
+Also, no notice will be generated anymore when alarm trees are getting large. As a result, in the `AlarmSettings` section of the *MaintenanceSettings.xml* file, the `recurring` attribute of the `AlarmsPerParameter` element is now obsolete.
 
 #### Security enhancements [ID 44579]
 
@@ -37,6 +66,64 @@ From now on, when the new value is equal to the old value, the value will no lon
 
 Also, write parameters will no longer be saved as this would cause unnecessary load.
 
+#### Enhanced distribution of SNMPv3 traps [ID 44626]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a DMA receives an SNMPv3 trap that it cannot process (e.g., because the SNMPv3 user is unknown), and trap distribution is enabled, from now on, the trap will be distributed to the other DMAs in the cluster in an attempt to have it processed by one of those other DMAs.
+
+Also, in some cases, traps could be forwarded to the wrong elements because the SNMPv3 USM ID was not validated correctly.
+
+#### Enhanced performance when filtering history alarms using complex filters [ID 44664]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, overall performance has increased when filtering history alarms using complex filters.
+
+Performance has especially increased using filters that consist of multiple equality conditions involving the following types of objects:
+
+- Element
+- Function
+- Protocol
+- Service
+- View
+
+> [!NOTE]
+>
+> - Non-equality and wildcard/regex filtering has not been altered.
+> - If more than 1,000 elements are affected, filtering will revert to the legacy behavior.
+
+#### Generating BrokerGateway client secrets [ID 44757] [ID 44778]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+From now on, it is possible to generate BrokerGateway client secrets. These are designed for DxMs or other clients connecting to the DataMiner NATS bus from a server without a local DataMiner installation. The secrets enable secure authentication with BrokerGateway, which then provides the necessary connection details for the NATS bus.
+
+Using internal BrokerGateway Administrator keys for these connections is discouraged, as these keys may be refreshed during cluster maintenance or because of other actions. By contrast, user-generated client secrets persist throughout the cluster's lifecycle and are immediately distributed to all BrokerGateway instances for cluster-wide availability.
+
+Common examples of clients requiring this setup include the Data Aggregator DxM and Dashboard Gateway.
+
+API calls are available to manage the BrokerGateway client secrets.
+
+| Method | Route | Description |
+|---|---|---|
+| `POST` | `/api/clientSecret/generate` | Generates a new random API key associated with a specific client name. The key is returned in the response body. |
+| `DELETE` | `/api/clientSecret/delete` | Deletes the client secret associated with the specified `clientName` argument. |
+| `GET` | `/api/clientSecret/list` | Retrieves a list of all existing client secrets with their respective names.<br>Note: The sensitive key values are redacted in the response (e.g., `abcd****************`) for security purposes. |
+
+In order to perform these API calls on a BrokerGateway instance, you will need the Administrator key. You can find this key in the file `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`. In the file, look for an entry in `APIKeys` with the name *Administrator*. The *key* property is the administrator key.
+
+You can execute the API calls by calling the REST API via PowerShell.
+
+> [!IMPORTANT]
+> Using client secrets prevents the root certificate authority from being cycled during DataMiner Agent removals or NATSRepair calls. This is done to ensure that external clients maintain stable connectivity with the cluster, without having to change credentials or trusted root certificates.
+
+#### Enhanced performance when executing a full element update on STaaS systems with Swarming enabled [ID 44772]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Because of a number of enhancements, on STaaS systems with Swarming enabled, overall performance has increased when executing a full element update.
+
 ### Fixes
 
 #### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]
@@ -58,3 +145,120 @@ When you connected to a DataMiner Agent, up to now, it would not be possible to 
 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Data would not show up in DVE child elements due to a problem with foreign key linking to logger tables [ID 44651]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, a problem with foreign key linking to logger tables would cause data to not show up in DVE child elements.
+
+#### Alarm properties passed along by Correlation or SLAnalytics could get lost when an alarm was created [ID 44669]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, alarm properties passed along by Correlation or SLAnalytics could get lost when an alarm was created.
+
+#### API Gateway would incorrectly add multiple routes with the same basePath when multiple registration requests were received for the same route [ID 44676]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When multiple registration requests were received for the same route, in some cases, instead of updating the route, API Gateway would incorrectly add multiple routes with the same basePath. As a result, the proxy would not be able to route the HTTP request.
+
+#### Failover: Two Agents in a Failover pair could get stuck during startup [ID 44680]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, the two Agents in a Failover pair could get stuck during startup.
+
+#### Scheduler: Windows task will no longer be recreated when only the actions of a scheduled task were changed [ID 44691]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a scheduled task was updated close to its execution time, in some cases, the task would incorrectly not be executed. It would miss its execution window because, during the update, the Windows task would be deleted and recreated again.
+
+From now on, when only the task actions are changed during an update of a scheduled task, the Windows task will no longer be recreated. The latter will only be recreated when the status, name, description, or timing of the scheduled task are changed.
+
+#### Problem with SLNet when rolling over log files [ID 44711]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, SLNet could stop working when rolling over from one log file to another (e.g., from *SLNet.txt* to *SLNet0.txt*).
+
+From now on, when an issue occurs when rolling over log files, an error will be logged in the Windows Event Viewer.
+
+> [!NOTE]
+> Some logging may get lost because of this fix.
+
+#### BrokerGateway installation could fail when the nsc.exe file was locked by an antivirus application [ID 44721]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, a BrokerGateway installation could fail when the *nsc.exe* file was locked by an antivirus application.
+
+From now on, a locked *nsc.exe* file will no longer cause a BrokerGateway installation to fail.
+
+#### Problem with SLAnalytics during the storage initialization routine [ID 44745]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some rare cases, the SLAnalytics process could stop working during the storage initialization routine.
+
+#### Problem with SLAnalytics when trying to process an invalid database record [ID 44748]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some cases, SLAnalytics would stop working when trying to process an invalid database record after having serialized it.
+
+#### Problem when an alarm was updated while a hysteresis timer was scheduled [ID 44749]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When an alarm was updated while a hysteresis timer was scheduled, in some cases, the timestamp of the alarm update would be more recent than that of the alarm generated by the clear hysteresis. As a result, the state changes timeline would no longer be correct.
+
+#### Problem with SLProtocol when multiple connections of the same element went into a timeout state simultaneously [ID 44752]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In some rare cases, SLProtocol could stop working when multiple connections of the same element went into a timeout state simultaneously.
+
+#### SLLogCollector: Problem when process dumps were triggered in parallel [ID 44780]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, when SLLogCollector tried to trigger process dumps in parallel, in some cases, certain dumps would not be added to the package.
+
+From now on, in order to be able to include all dumps in the package, process dumps will no longer be triggered in parallel.
+
+#### Incorrect error message would appear when a configuration mismatch prevented DataMiner Agents from being clustered [ID 44781]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+When a configuration mismatch prevented DataMiner Agents from being clustered, up to now, the following incorrect error message would appear:
+
+`Cannot cluster Agents as remote Agent has an unsupported database type.`
+
+From now on, the following correct error message will appear instead:
+
+`Cannot cluster Agents as the agent configuration is incompatible. Please check SLNet logging for more information.`
+
+#### STaaS: Retrieving the active alarms of an element would incorrectly be limited to 10,000 [ID 44793]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, if an element had more than 10,000 active alarms, on STaaS systems, only the first 10,000 would incorrectly be retrieved.
+
+From now on, all active alarms will be retrieved, even if the element in question has more than 10,000 active alarms.
+
+#### Problem when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent [ID 44848]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+On systems where each DMA has its own Cassandra database, up to now, when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent (for example because that Agent was unavailable), an error would be thrown inside the UI of that dashboard or low-code app.
+
+From now on, when a component in a dashboard or low-code app is not able to retrieve data from a remote DataMiner Agent, a "Nothing to show" message will appear in that component instead.
+
+#### Cassandra Cluster: Automation scripts would incorrectly not be able to request history alarms using a property value filter with wildcards or regular expressions [ID 44873]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, it would incorrectly not be possible for automation scripts to request history alarms from a Cassandra Cluster database using a property value filter with wildcards or regular expressions.

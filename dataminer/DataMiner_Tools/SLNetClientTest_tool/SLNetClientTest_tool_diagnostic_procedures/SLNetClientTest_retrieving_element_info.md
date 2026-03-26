@@ -16,7 +16,7 @@ In some cases, it can be useful to retrieve information about elements via SLNet
 
    - You can for example set *IncludeAggregatorElements* and *IncludeHidden* to true to get info for the hidden aggregator elements in the system.
 
-   - In the *NameFilter* field, you can specify a filter with an asterisk (`*`) wildcard in order to only retrieve information for elements matching that filter, e.g. `Skyline Generic Aggregator DMA*`.
+   - In the *NameFilter* field, you can specify a filter with an asterisk (`*`) wildcard in order to only retrieve information for elements matching that filter, e.g., `Skyline Generic Aggregator DMA*`.
 
    - From DataMiner 10.6.0/10.6.3 onwards<!--RN 44537-->, you can filter elements by *HostingAgentID*. This allows you to retrieve only the elements that are hosted on a specific DataMiner Agent.
 

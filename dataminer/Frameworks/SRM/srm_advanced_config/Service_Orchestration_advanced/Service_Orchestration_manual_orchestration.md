@@ -10,9 +10,9 @@ In some situations, it may be necessary to force a service to transition to a pa
 
 Two use cases can be defined:
 
-- The target state is one of the states defined in the Booking Manager app (e.g. Start, Stop, Standby, etc.).
+- The target state is one of the states defined in the Booking Manager app (e.g., Start, Stop, Standby, etc.).
 
-- The target state is not defined in the Booking Manager app (e.g. move to backup).
+- The target state is not defined in the Booking Manager app (e.g., move to backup).
 
 Here are the steps to support such a use case:
 

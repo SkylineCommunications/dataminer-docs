@@ -6,7 +6,7 @@ uid: Cassandra_Clone
 
 The Cassandra Clone tool can be used to clone data from a table in a [Cassandra database](xref:Cassandra_database) to another table. The table can be part of the same keyspace or can be in another keyspace. It is mainly intended to be used in case of severe issues with repair and/or compaction of a Cassandra database, in order to avoid loss of data.
 
-The tool duplicates tables, which is different from taking a snapshot (i.e. a backup) and restoring the snapshot. The tool reads and re-inserts the data row by row, so that the tables are constructed again completely. Unlike when a snapshot is restored, all tombstones are cleared and data will be placed together as efficiently as possible, resulting in less disk space usage for the same number of rows.
+The tool duplicates tables, which is different from taking a snapshot (i.e., a backup) and restoring the snapshot. The tool reads and re-inserts the data row by row, so that the tables are constructed again completely. Unlike when a snapshot is restored, all tombstones are cleared and data will be placed together as efficiently as possible, resulting in less disk space usage for the same number of rows.
 
 > You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/cassandraclone/).
 
@@ -88,7 +88,7 @@ The duration of the cloning process depends on your hardware. Using an SSD inste
 
 #### What should I do if the process stops running because my RDP session is disconnected?
 
-If your RDP session is automatically closed after some time because of inactivity, it can be a problem to use this tool. In that case, you can use the Automation script that you can find in the subfolder *Automation Script – optional* within the folder with the extracted files. This script starts the tool in a hidden command window.
+If your RDP session is automatically closed after some time because of inactivity, it can be a problem to use this tool. In that case, you can use the automation script that you can find in the subfolder *Automation Script – optional* within the folder with the extracted files. This script starts the tool in a hidden command window.
 
 > [!NOTE]
 > You should only use this solution if there are no other alternatives, as using the script means you will not be able to view any progress information.

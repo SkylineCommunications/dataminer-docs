@@ -12,7 +12,7 @@ A new Configuration Management feature is now available in the IDP app. This new
 
 For this purpose, a new *DataMiner IDP Configuration* element has been added to the Solution. This element uses the *Skyline Configuration Manager* driver, which makes it possible to store configuration files in a configuration archive in the network. When IDP is installed or upgraded, the setup wizard allows you to set the path and credentials for the configuration archive.
 
-Two example Automation scripts have also been added:
+Two example automation scripts have also been added:
 
 - The script *IDP_Example_Custom_ConfigurationBackup* is configured to perform a configuration backup of a Cisco Manager element and can be used as an example to create configuration backup scripts for other CI types.
 - The script *IDP_Example_Custom_ConfigurationDefault* is a generic script that can be used as an example to create scripts to load the default configuration for specific CI types.
@@ -33,7 +33,7 @@ A number of changes have been implemented in the IDP app as part of the Configur
   - *Network Share*: Allows you to modify the credentials and path for the configuration archive.
   - *Purge Settings*: Allows you to configure the automatic cleanup of the configuration archive. You can set a limit on the total number of files, on the number of files per element and on how much space the files use on the disk. When one of these limits is enabled, it is checked whenever a file is added to the configuration archive. The oldest files are always removed first. The *Purge Settings* tab also displays the total number of files in the configuration archive, the number of elements in the configuration archive and the current disk space used. Alarm monitoring and trending can be enabled for these KPIs.
 
-- Via *Admin* > *Settings*, you can configure the folders that contain the default and backup Automation scripts for Configuration Management. By default, these are the following folders:
+- Via *Admin* > *Settings*, you can configure the folders that contain the default and backup automation scripts for Configuration Management. By default, these are the following folders:
 
   - Backup script folder: *DataMiner Solutions/IDP/CI Type Management/Configuration Management/Backup*
   - Default script folder: *DataMiner Solutions/IDP/CI Type Management/Configuration Management/Default*
@@ -46,7 +46,7 @@ The *Rack Assignment* page displays an overview of the devices managed by the Ra
 
 - *Show in Rack*: Opens the rack view in a new card.
 - *Assign*: Allows you to assign the selected device to a rack.
-- *Auto Assign*: Launches an Automation script to automatically assign the selected device to a rack. See [Automatic rack assignment \[ID 24528\]\[ID 24543\]](#automatic-rack-assignment-id-24528id-24543).
+- *Auto Assign*: Launches an automation script to automatically assign the selected device to a rack. See [Automatic rack assignment \[ID 24528\]\[ID 24543\]](#automatic-rack-assignment-id-24528id-24543).
 - *Remove*: Removes the device from the rack it is currently assigned to.
 
 #### Automatic rack assignment \[ID 24528\]\[ID 24543\]
@@ -69,7 +69,7 @@ The automatic rack assignment script can also be launched silently in automated 
 
 #### Automation: New configuration management methods \[ID 23718\]
 
-In order to provide access to all configuration management options in Automation scripts, new methods have been made available in the *Skyline.DataMiner.DataMinerSolutions.IDP.ConfigurationManagement* namespace.
+In order to provide access to all configuration management options in automation scripts, new methods have been made available in the *Skyline.DataMiner.DataMinerSolutions.IDP.ConfigurationManagement* namespace.
 
 #### CI type name validation now ignores casing \[ID 24395\]
 

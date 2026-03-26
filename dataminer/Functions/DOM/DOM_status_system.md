@@ -92,8 +92,8 @@ You can configure the possible statuses by adding a `DomStatus` object to the *S
 
 | Property | Type | Description |
 |--|--|--|
-| Id | string | The ID of this status. It must contain lowercase characters only (e.g. "initial_status"). |
-| DisplayName | string | The display name of this status (e.g. "Initial"). |
+| Id | string | The ID of this status. It must contain lowercase characters only (e.g., "initial_status"). |
+| DisplayName | string | The display name of this status (e.g., "Initial"). |
 
 > [!NOTE]
 > Make sure that the *Statuses* collection does not contain `DomStatus` objects with the same ID. The *InitialStatusId* must also contain one of the statuses. When a `DomInstance` is created that does not have a status assigned, this initial status will automatically be filled in.
@@ -104,7 +104,7 @@ You can configure what transitions are allowed by adding a `DomStatusTransition`
 
 | Property | Type | Description |
 |--|--|--|
-| Id | string | The ID of this transition. It must contain lowercase characters only (e.g. "initial_to_accepted_status"). |
+| Id | string | The ID of this transition. It must contain lowercase characters only (e.g., "initial_to_accepted_status"). |
 | FromStatusId | string | The ID that the `DomInstance` will transition from. |
 | ToStatusId | string | The ID that the `DomInstance` will transition to. |
 | FlowLevel | int | The level of flow between transitions. The main transition will have the highest priority (0 is highest). An alternate transition from the same status will then have the value 1 or more. |
@@ -138,7 +138,7 @@ A `DomStatusFieldDescriptorLink` has the following properties:
 | Visible | bool | Determines whether this field should be visible in the UI for this status. This is only used by the UI; there is no logic for this property server-side. |
 | RequiredForStatus | bool | Determines whether a value for this field must be present AND valid in this status. If a field is marked as required, at least one value for the `FieldDescriptor` must be present in a `DomInstance`, and all values for this `FieldDescriptor` are valid according to the validators of the `FieldDescriptor` (if any are defined). |
 | ReadOnly | bool | Determines whether values of this field are read-only with this status. When a field is marked as read-only for a specified status, the values cannot be changed when the `DomInstance` has this status. This also means that if no values were present before transitioning to this status, no values can be added as long as the `DomInstance` continues to have this status. |
-| ClientReadOnly | bool | Determines whether a user is allowed to assign a value to this field in the UI. Unlike the *ReadOnly* bool, this does allow users to assign a value to the field using the API, e.g. in a script. This property is available from DataMiner versions 10.3.0/10.3.3 onwards. If the *ReadOnly* bool is true, the value of *ClientReadOnly* is ignored. |
+| ClientReadOnly | bool | Determines whether a user is allowed to assign a value to this field in the UI. Unlike the *ReadOnly* bool, this does allow users to assign a value to the field using the API, e.g., in a script. This property is available from DataMiner versions 10.3.0/10.3.3 onwards. If the *ReadOnly* bool is true, the value of *ClientReadOnly* is ignored. |
 
 > [!NOTE]
 >

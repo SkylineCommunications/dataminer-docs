@@ -33,7 +33,7 @@ Every message in a communication stream is constructed according to the followin
     - Note that not all protocols use ASCII characters. Therefore, this ASCII representation only makes sense if the protocol uses ASCII characters.
 
 > [!NOTE]
-> - If a timeout occurs, e.g. when the element did not send a valid response, the keyword “TIMEOUT” is added to the stream.
+> - If a timeout occurs, e.g., when the element did not send a valid response, the keyword “TIMEOUT” is added to the stream.
 > - If you connect to SNMP elements using telnet, Get and Set commands will only be shown in ASCII format.
-> - Depending on the logging level of an element, additional information may be displayed in the communication stream (e.g. calculations performed by the protocol using values retrieved from the element).
+> - Depending on the logging level of an element, additional information may be displayed in the communication stream (e.g., calculations performed by the protocol using values retrieved from the element).
 >

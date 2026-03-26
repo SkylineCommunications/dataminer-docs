@@ -13,7 +13,7 @@ This page consists of three sections:
 - An expandable *Log settings* section at the top of the page, which shows the log levels for info, debug and error logging.
 
     > [!NOTE]
-    > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.2.0.0", and debug logging is used for more detailed information. Which level is used depends on the configuration specified in the element protocol.
+    > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g., "Running DataMiner 10.2.0.0", and debug logging is used for more detailed information. Which level is used depends on the configuration specified in the element protocol.
 
 - A pane on the right displaying the log details for any log file selected in the list on the left. You can refresh the displayed content by clicking the refresh icon at the top of the pane.
 
@@ -21,7 +21,7 @@ This page consists of three sections:
 >
 > - It is possible to retrieve a previous version of a log file by right-clicking an element in the list and selecting *Open previous*. If there is no previous log file, this option is not available.
 > - To quickly go to the logging for a particular element from the Surveyor, right-click the element in the Surveyor and select *View \> Log*.
-> - From DataMiner 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 38623-->, to quickly go to the logging for a particular enhanced service (i.e. a service that uses a service protocol), right-click the service in the Surveyor and select *View > Log*. Alternatively, open the card of the enhanced service, access its hamburger menu, and select *View > Log*.
+> - From DataMiner 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 38623-->, to quickly go to the logging for a particular enhanced service (i.e., a service that uses a service protocol), right-click the service in the Surveyor and select *View > Log*. Alternatively, open the card of the enhanced service, access its hamburger menu, and select *View > Log*.
 > - If an element is renamed, the log file for that element will also be renamed.
 
 ## Changing log levels

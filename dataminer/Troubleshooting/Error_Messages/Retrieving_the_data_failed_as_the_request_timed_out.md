@@ -14,7 +14,7 @@ Retrieving the data failed as the request timed out. See the log files for more 
 
 ## Cause
 
-The server has not been able to respond in time to a request made by DataMiner Cube. This can be caused by many different things, such as high server load, or a lot of data being requested at the same time (e.g. alarm history data for a very long time period).
+The server has not been able to respond in time to a request made by DataMiner Cube. This can be caused by many different things, such as high server load, or a lot of data being requested at the same time (e.g., alarm history data for a very long time period).
 
 ## Resolution
 

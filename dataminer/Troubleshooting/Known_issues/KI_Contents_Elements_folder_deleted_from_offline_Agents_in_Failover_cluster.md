@@ -24,7 +24,7 @@ On offline Agents in a Failover cluster, an unexpected deletion of element conte
 > [!NOTE]
 >
 > - This issue is more likely to occur if the `noElementPrefix` option is used, as this removes the parent element name from DVE names and increases the chance of name conflicts.
-> - Entries in the database like `<INVALID NAME> element name` (i.e. also containing the element name in addition to `<INVALID NAME>`) do not trigger this issue.
+> - Entries in the database like `<INVALID NAME> element name` (i.e., also containing the element name in addition to `<INVALID NAME>`) do not trigger this issue.
 
 ## Fix
 

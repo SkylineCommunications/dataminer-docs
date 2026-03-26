@@ -471,7 +471,7 @@ There are two ways to configure this setup: with or without group claims.
 
    - The tags `<EmailClaim>`,`<Givenname>`, and`<Surname>` define the names of the claims on the service provider's side. Make sure that in these tags, the claim is defined using the appropriate XML prefix illustrated below (e.g.`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/`).
 
-   - Make sure that the name of each claim (i.e. the part after the XML prefix, e.g. *emailaddress*, *givenname*, *surname*) matches the identity provider claims that were shown under *Attributes & Claims* in the Azure portal earlier.
+   - Make sure that the name of each claim (i.e., the part after the XML prefix, e.g., *emailaddress*, *givenname*, *surname*) matches the identity provider claims that were shown under *Attributes & Claims* in the Azure portal earlier.
 
    ```xml
    <DataMiner ...>
@@ -526,7 +526,7 @@ There are two ways to configure this setup: with or without group claims.
 
    - The tags `<EmailClaim>`,`<Givenname>`, and`<Surname>` define the names of the claims on the service provider's side. Make sure that in these tags, the claim is defined using the appropriate XML prefix illustrated below (e.g.`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/`).
 
-   - Make sure that the name of each claim (i.e. the part after the XML prefix, e.g. *emailaddress*, *givenname*, *surname*) matches the identity provider claims that were shown under *Attributes & Claims* in the Azure portal earlier.
+   - Make sure that the name of each claim (i.e., the part after the XML prefix, e.g., *emailaddress*, *givenname*, *surname*) matches the identity provider claims that were shown under *Attributes & Claims* in the Azure portal earlier.
 
    ```xml
    <DataMiner ...>

@@ -67,7 +67,7 @@ The display key is composed either via NamingFormat or via the naming option (or
 >   - The *displaykey* column should alway be the last column defined in the table. Otherwise, as the *displaykey* column does not exist within SLProtocol, all subsequent columns would have a confusing shifted IDX.
 >   - Trending/alarming on this column is not possible.
 >   - Columns of type "displayKey" cannot be saved.
->   - It is not possible to obtain the values from this column using calls that obtain information from the SLProtocol process, e.g. a NotifyProtocol NT_GET_TABLE_COLUMNS (321) call.
+>   - It is not possible to obtain the values from this column using calls that obtain information from the SLProtocol process, e.g., a NotifyProtocol NT_GET_TABLE_COLUMNS (321) call.
 >   - It is also not possible to perform sets on columns of type "displaykey".
 > - When the display key is created with multiple table columns through foreign key relations, the full path from parent to child has to be defined in the relations.
 

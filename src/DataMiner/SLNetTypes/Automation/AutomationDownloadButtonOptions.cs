@@ -3,7 +3,7 @@
 namespace SLNetTypes.Automation
 {
     /// <summary>
-    /// This class allows you to create a download button in an interactive Automation script.
+    /// This class allows you to create a download button in an interactive automation script.
     /// </summary>
     /// <example>
     /// <code>

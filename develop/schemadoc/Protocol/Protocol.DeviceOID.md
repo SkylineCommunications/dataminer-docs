@@ -16,7 +16,7 @@ unsignedInt
 
 ## Remarks
 
-The device OID has to be specified right after the vendor OID. Note that the complete OID, i.e. the vendor OID followed by the device OID, must be unique. This means that for each device from the same vendor you have to use a new device OID.
+The device OID has to be specified right after the vendor OID. Note that the complete OID, i.e., the vendor OID followed by the device OID, must be unique. This means that for each device from the same vendor you have to use a new device OID.
 
 ## Examples
 

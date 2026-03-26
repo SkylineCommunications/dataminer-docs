@@ -7,7 +7,7 @@ uid: Marketplace_deployment_action
 > [!IMPORTANT]
 > This GitHub action no longer runs under its own docker image. The docker image has been deprecated and is replaced by .NET tools that makes it easier to create workflows/pipelines/... outside of GitHub and still be able to deploy packages to DataMiner. You can still use this GitHub action in GitHub workflows. It will perform the dotnet tool calls in the background on the current runner. If you want more modular control on the actions performed, consider using the .NET tools instead to package, upload, and deploy as shown in [this example](xref:CICD_GitHub_Examples).
 
-It is possible to deploy an Automation script solution from a GitHub repository by using the Skyline DataMiner Deploy Action in a workflow.
+It is possible to deploy an automation script solution from a GitHub repository by using the Skyline DataMiner Deploy Action in a workflow.
 
 To do so, you need to [create a dataminer.services key](#creating-a-dataminerservices-key), [add the key as a secret in the repository](#adding-the-key-as-a-secret-in-the-repository), and [add the Skyline DataMiner Deploy Action to a workflow](#adding-the-skyline-dataminer-deploy-action-to-a-workflow).
 
@@ -34,7 +34,7 @@ The (primary or secondary) key should be added as a secret in the repository, so
 
 1. In the top-right corner, click *New repository secret*.
 
-1. Specify a name for your secret (e.g. `MY_KEY`), paste the key as the value for the secret, and then save the secret.
+1. Specify a name for your secret (e.g., `MY_KEY`), paste the key as the value for the secret, and then save the secret.
 
    Once it is saved, your secret will be displayed in the *repository secrets*, and you will be able to use it in a workflow.
 

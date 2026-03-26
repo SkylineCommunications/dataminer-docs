@@ -6,15 +6,18 @@ uid: KI_Startup_issue_DcM_not_running
 
 ## Affected versions
 
-This issue is assumed to occur since the introduction of the DcMs, i.e. from DataMiner 10.3.7/10.4.0 onwards. It has been reproduced in DataMiner 10.5.4 and 10.5.7.
+This issue is assumed to occur since the introduction of the DcMs, i.e., from DataMiner 10.3.7/10.4.0 onwards. It has been reproduced in DataMiner 10.5.4 and 10.5.7.
 
 ## Cause
 
-Some [DataMiner Core Module (DcM)](xref:DataMinerExtensionModules#available-dcms) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g. because of Windows updates). As a consequence, these services are still stopped while the DataMiner Agent is already starting, but DataMiner needs these services to be able to start up fully.
+Some [DataMiner Core Module (DcM)](xref:DataMinerExtensionModules#available-dcms) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g., because of Windows updates). As a consequence, these services are still stopped while the DataMiner Agent is already starting, but DataMiner needs these services to be able to start up fully.
 
 ## Fix
 
-No fix is available yet. <!--Task IDs: 270375 & 268191-->
+Upgrade the Orchestrator DcM to version 1.8.0 or higher<!--RN 43824-->.
+
+> [!TIP]
+> See [Upgrading nodes to the latest DxM versions](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
 
 ## Workaround
 

@@ -87,7 +87,7 @@ In the field value, you can use the following options.
 111/273/350
 ```
 
-The shape will be linked to the alarm on parameter 350 of element 111/273 (i.e. DMA ID 111, Element ID 273).
+The shape will be linked to the alarm on parameter 350 of element 111/273 (i.e., DMA ID 111, Element ID 273).
 
 ```txt
 111/273/350|ALARM
@@ -99,4 +99,4 @@ The shape will be linked to the alarm on parameter 350 of element 111/273, and i
 111/273/350|SHOW;=critical high
 ```
 
-The shape will be linked to the alarm on parameter 350 of element 111/273 (i.e. DMA ID 111, Element ID 273), and it will only be shown if the alarm property specified in a separate shape data field of type **Info** (in this example, this would be "SEVERITY") has a value that is equal to "critical high".
+The shape will be linked to the alarm on parameter 350 of element 111/273 (i.e., DMA ID 111, Element ID 273), and it will only be shown if the alarm property specified in a separate shape data field of type **Info** (in this example, this would be "SEVERITY") has a value that is equal to "critical high".

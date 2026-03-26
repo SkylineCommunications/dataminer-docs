@@ -128,7 +128,7 @@ System.IndexOutOfRangeException: Index was outside the bounds of the array.
 
 ### Validate the protocol
 
-Verify that a trigger is present that will execute an action of type read for every response that contains a parameter of LengthType "next param". This action is needed to fill in the response data into a parameter with a variable length, i.e. *LengthType – next param*.
+Verify that a trigger is present that will execute an action of type read for every response that contains a parameter of LengthType "next param". This action is needed to fill in the response data into a parameter with a variable length, i.e., *LengthType – next param*.
 
 You can configure this with a trigger using the "each" value on the On `id` attribute:
 

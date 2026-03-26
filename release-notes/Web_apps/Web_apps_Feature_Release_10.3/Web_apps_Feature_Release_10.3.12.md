@@ -16,13 +16,13 @@ uid: Web_apps_Feature_Release_10.3.12
 
 ### Enhancements
 
-#### Interactive Automation scripts: FileSelector now allows to keep the files that were already uploaded after the UI was shown [ID 37260]
+#### Interactive automation scripts: FileSelector now allows to keep the files that were already uploaded after the UI was shown [ID 37260]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-Unlike other UI block types, *FileSelector* does not allow setting an [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue). However, from now on, during an interactive Automation script session, it is possible to keep the files that were already uploaded after the UI was shown.
+Unlike other UI block types, *FileSelector* does not allow setting an [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition.InitialValue). However, from now on, during an interactive automation script session, it is possible to keep the files that were already uploaded after the UI was shown.
 
-When an interactive Automation script is executed **in a web app**, the UI block needs to keep the same [Row](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Row), [Column](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Column), and [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If a block of a different type or [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) is at same location or that location has no blocks when the UI is shown again, the information about the uploaded files is lost.
+When an interactive automation script is executed **in a web app**, the UI block needs to keep the same [Row](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Row), [Column](xref:Skyline.DataMiner.Automation.UIBlockDefinition.Column), and [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) within the session. If a block of a different type or [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) is at same location or that location has no blocks when the UI is shown again, the information about the uploaded files is lost.
 
 See also [DataMiner Cube Feature Release 10.3.12](xref:Cube_Feature_Release_10.3.12#interactive-automation-scripts-fileselector-now-allows-to-keep-the-files-that-were-already-uploaded-after-the-ui-was-shown-id-37260)
 
@@ -38,7 +38,7 @@ A number of security enhancements have been made.
 
 Up to now, when the Dashboards app or a low-code app executed a GQI query, the invariant culture would always be used by default because the Web API was not able to provide a culture.
 
-From now on, the Web API will allow the web apps to specify a `LanguageTag` in the `DMAGenericInterfaceQueryFetchOptions`. This `LanguageTag` should contain a [BCP 47](https://www.rfc-editor.org/info/bcp47) string representation of a specific language (e.g. "en", "en-US", etc.), which will then be converted to a C# culture before being passed to GQI. For more information, see <https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.getcultureinfo>. If no valid `LanguageTag` value is provided, the invariant culture will be used as fallback.
+From now on, the Web API will allow the web apps to specify a `LanguageTag` in the `DMAGenericInterfaceQueryFetchOptions`. This `LanguageTag` should contain a [BCP 47](https://www.rfc-editor.org/info/bcp47) string representation of a specific language (e.g., "en", "en-US", etc.), which will then be converted to a C# culture before being passed to GQI. For more information, see <https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.getcultureinfo>. If no valid `LanguageTag` value is provided, the invariant culture will be used as fallback.
 
 By default, the web apps will use the browser locale to determine the culture. For more information, see <https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language>.
 
@@ -54,7 +54,7 @@ Clicking the *Clear all* button would incorrectly not clear the selection in cer
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-Up to now, when you applied a filter to a table and then exported the data to a CSV file, all rows would incorrectly be exported. From now on, only the visible rows (i.e. the rows that match the filter) will be exported.
+Up to now, when you applied a filter to a table and then exported the data to a CSV file, all rows would incorrectly be exported. From now on, only the visible rows (i.e., the rows that match the filter) will be exported.
 
 #### Dashboards app & Low-Code Apps - Table component: Exceptions would cause both an empty result message and an error message to be displayed [ID 37479]
 
@@ -82,11 +82,11 @@ From now on, when the query migration fails, the original query will be left unt
 
 When the order of the table columns was changed by the query, the table headers would incorrectly not get updated.
 
-#### Web apps - Interactive Automation scripts: Dropdown component would not show all available options [ID 37510]
+#### Web apps - Interactive automation scripts: Dropdown component would not show all available options [ID 37510]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-In some cases, a Dropdown component in an interactive Automation script would not resize itself correctly, causing some options to remain invisible.
+In some cases, a Dropdown component in an interactive automation script would not resize itself correctly, causing some options to remain invisible.
 
 #### Dashboards app & Low-Code Apps - Table component: Order of the cells in exported rows in CSV file would not match the order of the table headers [ID 37517]
 
@@ -98,7 +98,7 @@ When, in a table component, you changed the order of the columns, and then expor
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-When you clicked the waffle button while viewing a DataMiner web app (e.g. Monitoring) on a mobile device, the menu would incorrectly not open.
+When you clicked the waffle button while viewing a DataMiner web app (e.g., Monitoring) on a mobile device, the menu would incorrectly not open.
 
 #### Dashboards app: Problem when migrating empty queries [ID 37537]
 
@@ -138,13 +138,13 @@ When the *Column & bar chart*, *Line & area chart* and *Pie & donut chart* compo
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-Up to now, it would incorrectly be possible to export table data to a CSV file when a table did not display any rows. From now on, when a table does not display any rows (e.g. when no rows match the applied filter), the button allowing you to export the table data to a CSV file will be disabled.
+Up to now, it would incorrectly be possible to export table data to a CSV file when a table did not display any rows. From now on, when a table does not display any rows (e.g., when no rows match the applied filter), the button allowing you to export the table data to a CSV file will be disabled.
 
 #### Dashboards app: Sidebar would overlap large components when the viewport was too narrow [ID 37594]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-When a component was too large to fit into a narrow viewport (e.g. when viewing the dashboard on a mobile device), in some cases, the sidebar would incorrectly overlap the component.
+When a component was too large to fit into a narrow viewport (e.g., when viewing the dashboard on a mobile device), in some cases, the sidebar would incorrectly overlap the component.
 
 This issue would also occur when a visual overview had been embedded in a *Visual overview* component that was too small.
 

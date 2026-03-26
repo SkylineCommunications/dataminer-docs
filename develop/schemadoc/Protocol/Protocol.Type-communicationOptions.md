@@ -126,9 +126,13 @@ Use this option to define the packet length identifier of the response in a smar
 Syntax: packetinfo:a,b,c,d
 
 - a: Number of bytes before the length identifier.
+
 - b: Length of the length identifier. Supported values are: 1, 2, 4.
-  Number of bytes the length field. E.g. a value of 2 indicates that the length field is 2 bytes.
+
+  Indicates the number of bytes of the length field. For example, a value of 2 indicates that the length field has 2 bytes.
+
 - c: [optional] "true" (default): The value denoted by the length field comprises the preamble field, length field and data field. "false": The length field only specifies the number of bytes that follow the preamble field and length field.
+
 - d: [optional] "littleEndian": If the bytes enter in littleEndian format. Default: Big endian.
 
 In the following example, the length identifier starts at position 4, it is 2 bytes long and the first 6 bytes are not included in the length indicated by the length identifier:

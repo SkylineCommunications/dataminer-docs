@@ -26,7 +26,7 @@ In addition, in each column of the table, you can edit the configuration of a cu
 
 - **Timing Type**: Determines whether the event takes place before or after the time reference point.
 
-- **Script**: Allows you to specify a script that should be executed during the event, using the same syntax as to specify a script in Visio. See [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script).
+- **Script**: Allows you to specify a script that should be executed during the event, using the same syntax as to specify a script in Visio. See [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script).
 
   > [!NOTE]
   > The following two placeholders are supported in the script configuration: *\[RESERVATIONGUID\]* and *\[SERVICEDEFINITION:\<PropertyName>\]*.

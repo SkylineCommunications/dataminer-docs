@@ -7,7 +7,7 @@ uid: GetAllRedundancyGroupsSorted
 Use this method to retrieve a specific number of redundancy groups.
 
 > [!NOTE]
-> Using this method, you can e.g. request redundancy groups in batches in order to minimize loading time.
+> Using this method, you can e.g., request redundancy groups in batches in order to minimize loading time.
 
 ## Input
 

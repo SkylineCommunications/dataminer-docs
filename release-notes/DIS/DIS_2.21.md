@@ -16,7 +16,7 @@ In the *DMA* tab of the *DIS Settings* window, it is now possible to configure m
 
 After having configured a number of DMA connections in the *DMA* tab of the *DIS Settings* window, you can set one of them as default connection by right-clicking it and selecting *Set as Default*.
 
-- To publish a protocol or an Automation script to the default DMA, at the top of the XML editor, click the *Publish* button. To publish a protocol or an Automation script to a non-default DMA, at the top of the XML editor, click the dropdown button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
+- To publish a protocol or an automation script to the default DMA, at the top of the XML editor, click the *Publish* button. To publish a protocol or an automation script to a non-default DMA, at the top of the XML editor, click the dropdown button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 - When, in the *DIS Inject* tool window, you want to connect to the default DMA, click the *Connect* button. When, in the *DIS Inject* tool window, you want to connect to a non-default DMA, click the dropdown button at the right of the *Connect* button, and click the DMA to which you want to connect.
 
 > [!NOTE]
@@ -24,7 +24,7 @@ After having configured a number of DMA connections in the *DMA* tab of the *DIS
 
 ##### Production DMA
 
-When configuring a DMA connection, you can now indicate whether this DMA is a production DMA. When you try to publish a protocol or an Automation script to a production DMA, a confirmation box will appear to prevent you from accidentally publishing that file to it.
+When configuring a DMA connection, you can now indicate whether this DMA is a production DMA. When you try to publish a protocol or an automation script to a production DMA, a confirmation box will appear to prevent you from accidentally publishing that file to it.
 
 #### Suppressing results in the DIS Validator window \[ID 23233\]
 
@@ -111,5 +111,5 @@ Also, in the *DIS Macros* tool window, a new *CreateMatrix* macro was added. Thi
 A collection of InterApp classes now provides a C# message/response architecture that will allow for easier communication
 
 - among elements,
-- between elements and Automation scripts, and
+- between elements and automation scripts, and
 - between elements and external applications.

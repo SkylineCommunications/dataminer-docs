@@ -1,4 +1,6 @@
 items:
+  - name: PTP 1.2.0
+    topicUid: PTP_1.2.0
   - name: PTP 1.1.4
     topicUid: PTP_1.1.4
   - name: PTP 1.1.3

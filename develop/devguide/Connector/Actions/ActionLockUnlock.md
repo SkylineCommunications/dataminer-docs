@@ -10,7 +10,7 @@ These actions are used to make sure that a device does not interfere with anothe
 
 A “lock” action usually precedes an “open” action, while an “unlock” action usually follows a “close” action.
 
-With serial communication, the lock/unlock functionality is sometimes required when multiple commands must be sent to a device that are considered an atomic operation (e.g. initialize session, send request, end session).
+With serial communication, the lock/unlock functionality is sometimes required when multiple commands must be sent to a device that are considered an atomic operation (e.g., initialize session, send request, end session).
 
 Once an element has acquired a lock, performing another lock operation on the connection from the same element has no impact. Only one unlock action is needed to release the lock again (SNMP, serial and GPIB).
 

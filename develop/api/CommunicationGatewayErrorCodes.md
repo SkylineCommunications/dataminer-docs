@@ -8,7 +8,7 @@ Errors can be returned by the DataMiner CommunicationGateway extension module. I
 
 ## gRPC error codes
 
-These are the error codes that can be returned when the CommunicationGateway is communicating with a gRPC service. These are usually the errors that are returned by the gRPC service, i.e. the data source that is communicated with.
+These are the error codes that can be returned when the CommunicationGateway is communicating with a gRPC service. These are usually the errors that are returned by the gRPC service, i.e., the data source that is communicated with.
 
 |Name|Friendly Name|Code|Message|
 |--- |--- |--- |--- |
@@ -16,14 +16,14 @@ These are the error codes that can be returned when the CommunicationGateway is 
 |Canceled|Canceled|1|The operation was canceled, typically by the caller.|
 |Unknown|Unknown|2|Unknown error. The API did not return enough error information to be converted into a specific error.|
 |InvalidArgument|Invalid argument|3|The client specified an invalid argument. Note that this is different from FailedPrecondition. InvalidArgument indicates arguments that are problematic regardless of the system state.|
-|DeadlineExceeded|Deadline exceeded|4|The deadline expired before the operation could complete. Note that this error may be returned even if the operation has completed successfully. E.g. a successful response could have been delayed long.|
-|NotFound|Not found|5|Requested entity (e.g. file) was not found.|
-|AlreadyExists|Already exists|6|Attempted to create an entity (e.g. file) that already exists.|
+|DeadlineExceeded|Deadline exceeded|4|The deadline expired before the operation could complete. Note that this error may be returned even if the operation has completed successfully. For example, a successful response could have been delayed long.|
+|NotFound|Not found|5|Requested entity (e.g., file) was not found.|
+|AlreadyExists|Already exists|6|Attempted to create an entity (e.g., file) that already exists.|
 |PermissionDenied|Permission denied|7|The caller does not have permission to execute the specified operation.|
 |ResourceExhausted|Resources exhausted|8|Some resource has been exhausted. This could be a per-user quota, or the entire file system could be out of space.|
-|FailedPrecondition|Failed precondition|9|The operation was rejected because the system is not in a state required for the operation's execution. E.g. the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc.|
+|FailedPrecondition|Failed precondition|9|The operation was rejected because the system is not in a state required for the operation's execution. Examples: the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc.|
 |Aborted|Aborted|10|The operation was aborted, typically because of a concurrency issue such as a sequencer check failure or transaction abort.|
-|OutOfRange|Out of range|11|The operation was attempted past the valid range. E.g. seeking or reading past end of file.|
+|OutOfRange|Out of range|11|The operation was attempted past the valid range. Example: seeking or reading past end of file.|
 |Unimplemented|Unimplemented|12|The operation is not implemented or is not supported/enabled in this service.|
 |Internal|Internal|13|Reserved for serious errors. This means that some invariants expected by the underlying system have been broken. This error could be returned when an HTTPS connection is used and there is something wrong with the certificate (expired, root authority not trusted, etc.). Check the CommunicationGateway logging for more detailed error information.|
 |Unavailable|Unavailable|14|The service is currently unavailable. This can most likely be corrected by retrying after waiting a little bit. This error can also be returned when the TCP socket with the data source is not available. Is the IP of the data source reachable or is there a firewall blocking the connection? Check the CommunicationGateway logging for more detailed error information.|

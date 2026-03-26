@@ -10,7 +10,7 @@
 		/// </summary>
 		None = 0,
 		/// <summary>
-		/// By default, C# code used in a DMS automation script throws an exception when it encounters an undefined or an empty parameter. However, if you add the following line in a DMS Automation script statement of type “CSharp Code”, then null will be returned instead:
+		/// By default, C# code used in an automation script throws an exception when it encounters an undefined or an empty parameter. However, if you add the following line in an automation script statement of type “CSharp Code”, then null will be returned instead:
 		/// </summary>
 		AllowUndef = 16,
 		/// <summary>

@@ -28,7 +28,7 @@ As this is not a consistent error, you can just rebuild the pipeline again. The 
 
 If SonarQube complains about the *QAction_Helper* project, this means that you do not have any other C# project in your solution. Because of an issue in SonarQube, when there are no projects to analyze, it ignores the fact that *QAction_Helper* is excluded and analyzes that project anyway.
 
-You can fix this by adding another QAction project to the solution (e.g. with ID 0) and then removing it again. Make sure to not remove the project from the file explorer, so that SonarQube still sees it.
+You can fix this by adding another QAction project to the solution (e.g., with ID 0) and then removing it again. Make sure to not remove the project from the file explorer, so that SonarQube still sees it.
 
 ## DCP Registration, Prepare for SVN, Push to SVN & Push to Azure
 

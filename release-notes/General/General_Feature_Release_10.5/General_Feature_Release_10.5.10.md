@@ -42,7 +42,7 @@ The `DomInstanceNetworkAttachmentSettings` class contains the following properti
 
   The UNC path to the network share where the attachments should be saved.
 
-  This path has to start with `\\` and cannot contain any characters that are illegal for a path (e.g. "<") or strings that allow directory traversal (e.g. "../").
+  This path has to start with `\\` and cannot contain any characters that are illegal for a path (e.g., "<") or strings that allow directory traversal (e.g., "../").
 
   When the path is left empty, attachments are saved to the `C:\Skyline DataMiner\Documents` folder. This is the default behavior.
 
@@ -50,7 +50,7 @@ The `DomInstanceNetworkAttachmentSettings` class contains the following properti
 
   The ID of the credentials in the credentials library that will be used to add the attachment to the network share.
 
-  These credentials must be of type *Username and password credentials* and must be the credentials of a user that has read/write access to the path defined in `NetworkSharePath`. In case you have a Windows network share, you need to add the domain name (for a domain user) or hostname (for a local user) in front of the username (e.g. "MYPC\userName").
+  These credentials must be of type *Username and password credentials* and must be the credentials of a user that has read/write access to the path defined in `NetworkSharePath`. In case you have a Windows network share, you need to add the domain name (for a domain user) or hostname (for a local user) in front of the username (e.g., "MYPC\userName").
 
 > [!NOTE]
 >
@@ -76,7 +76,7 @@ It is now possible to configure DOM instance security based on the DOM definitio
 
 The following important changes have been made:
 
-- Only users who have been granted the *Modules > System configuration > Object Manager > Module Settings* user permission will be allowed to create, update, and delete DOM configuration objects (i.e. section definitions, DOM definitions, DOM behavior definitions, and DOM templates). This means that, if you want to deploy or change a DOM model, you will now need this permission.
+- Only users who have been granted the *Modules > System configuration > Object Manager > Module Settings* user permission will be allowed to create, update, and delete DOM configuration objects (i.e., section definitions, DOM definitions, DOM behavior definitions, and DOM templates). This means that, if you want to deploy or change a DOM model, you will now need this permission.
 
 - The DOM module settings now include a new `LinkSecuritySettings` configuration object that will allow you to link a DataMiner user group to a DOM definition by ID. This object contains a collection of `GroupLink` objects, each containing the following properties:
 
@@ -97,7 +97,7 @@ The following important changes have been made:
 
 - If a DOM module with definition-level security enabled contains multiple DOM definitions, no one will be able to access the instances of DOM definitions for which no `GroupLink` objects have been defined yet.
 
-- Currently, `GroupLink` objects grant full access (i.e. read access as well as write access) to the instances of the DOM definitions specified in them.
+- Currently, `GroupLink` objects grant full access (i.e., read access as well as write access) to the instances of the DOM definitions specified in them.
 
 ##### Filtering behavior & restrictions
 
@@ -285,7 +285,7 @@ When Swarming was enabled, in some rare cases, SLDMS and SLDataMiner could get i
 
 <!-- MR 10.6.0 - FR 10.5.10 -->
 
-When a lot of concurrent requests had to be processed by the Repository API in the background, e.g. to retrieve or update bookings, this could cause thread starvation in SLDataGateway, causing these requests to be handled much more slowly than usual.
+When a lot of concurrent requests had to be processed by the Repository API in the background, e.g., to retrieve or update bookings, this could cause thread starvation in SLDataGateway, causing these requests to be handled much more slowly than usual.
 
 #### SLDataGateway: Problem when NULL values were written to indexed logger tables [ID 43456]
 
@@ -340,7 +340,7 @@ When, in DataMiner Cube, matrix crosspoints were loaded or saved over a gRPC con
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 [CU0] -->
 
-When a client application (e.g. DataMiner Cube) sends unsupported messages to a DataMiner Agent, deserialization exceptions are thrown in SLNet.
+When a client application (e.g., DataMiner Cube) sends unsupported messages to a DataMiner Agent, deserialization exceptions are thrown in SLNet.
 
 Up to now, those exceptions would not get processed correctly when the unsupported messages were sent over a gRPC connection, causing the client application to get stuck while waiting for a response that would never arrive.
 

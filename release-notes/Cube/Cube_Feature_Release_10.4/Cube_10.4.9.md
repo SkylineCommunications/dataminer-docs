@@ -142,7 +142,7 @@ Up to now, when you changed the selection in a multiple checkbox control, in som
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-The page and shape option `EnableLoading=False` would no longer work when shapes had pending properties (e.g. properties of which the value contained unresolved placeholders).
+The page and shape option `EnableLoading=False` would no longer work when shapes had pending properties (e.g., properties of which the value contained unresolved placeholders).
 
 > [!NOTE]
 >
@@ -167,7 +167,7 @@ From now on, disconnecting the output and connecting the output to the input wil
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-When, on the same visual overview, multiple router control shapes were linked to the same session variables, in some cases, a router control shape could flicker when a session variable update was triggered by e.g. a SetVar shape update.
+When, on the same visual overview, multiple router control shapes were linked to the same session variables, in some cases, a router control shape could flicker when a session variable update was triggered by e.g., a SetVar shape update.
 
 #### Visual Overview: Problems with ClosePage and AutoClosePopup [ID 40131]
 

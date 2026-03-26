@@ -64,4 +64,4 @@ This tab is not available if a shared hostname is used instead of virtual IP add
 
 This tab is available from DataMiner 10.2.0 \[CU5]/10.2.8 onwards. It contains the following option:
 
-- **Auto restart Agent when going offline**: If you select this option, when one of the DMAs in the Failover pair goes offline, it will restart as soon as possible instead of waiting until all elements have been unloaded. This will speed up Failover switching. In earlier DataMiner versions, this could be configured in [DMS.xml](xref:DMS_xml#failover-subtag).
+- **Auto-restart Agent when going offline**: If you select this option, when one of the DMAs in the Failover pair goes offline, it will restart as soon as possible instead of waiting until all elements have been unloaded. This will speed up Failover switching. In earlier DataMiner versions, this could be configured in [DMS.xml](xref:DMS_xml#failover-subtag).

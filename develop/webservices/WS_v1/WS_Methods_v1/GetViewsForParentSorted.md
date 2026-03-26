@@ -7,7 +7,7 @@ uid: GetViewsForParentSorted
 Use this method to retrieve a specific number of subviews from a particular view.
 
 > [!NOTE]
-> Using this method, you can e.g. request views in batches in order to minimize loading time.
+> Using this method, you can e.g., request views in batches in order to minimize loading time.
 
 ## Input
 

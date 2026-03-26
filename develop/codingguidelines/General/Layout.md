@@ -6,7 +6,7 @@ uid: Layout
 
 In order to improve readability, consider the following layout guidelines:
 
-- Allman bracing style should be used, e.g. the curly brace associated with a control statement must be placed on the next line and must be indented to the same level as the control statement. Statements within the braces are indented to the next level ([SA1500](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1500), [SA1501](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1501), [SA1502](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1502)).
+- Allman bracing style should be used, e.g., the curly brace associated with a control statement must be placed on the next line and must be indented to the same level as the control statement. Statements within the braces are indented to the next level ([SA1500](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1500), [SA1501](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1501), [SA1502](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1502)).
 
     ```txt
     if (slKeysToDelete.Count > 0) { protocol.DeleteRow(16000, slKeysToDelete.ToArray()); }
@@ -29,6 +29,6 @@ In order to improve readability, consider the following layout guidelines:
 
 - The while footer of a do-while statement must not be separated from the statement by a blank line ([SA1511](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1511)).
 
-- Adjacent C# elements must be separated by a blank line ([SA1516](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1516)), e.g. a blank line should be provided between property definitions and method definitions.
+- Adjacent C# elements must be separated by a blank line ([SA1516](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1516)), e.g., a blank line should be provided between property definitions and method definitions.
 
 - Code must not contain blank lines at the start and end of the file ([SA1517](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1517), [SA1518](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1518)).

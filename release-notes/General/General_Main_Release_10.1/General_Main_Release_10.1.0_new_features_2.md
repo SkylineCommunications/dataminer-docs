@@ -57,7 +57,7 @@ To enable TLS, do the following on every DataMiner Agent in a DataMiner System c
 
 > [!NOTE]
 >
-> - DataMiner currently supports all TLS versions up to TLS 1.3 (i.e. all TLS versions supported by OpenSSL 1.1.1). It will negotiate the highest supported TLS version with the client. If the client supports TLS up to version 1.2, DataMiner will use version 1.2.
+> - DataMiner currently supports all TLS versions up to TLS 1.3 (i.e., all TLS versions supported by OpenSSL 1.1.1). It will negotiate the highest supported TLS version with the client. If the client supports TLS up to version 1.2, DataMiner will use version 1.2.
 > - PFX files are not synchronized among the agents in a cluster.
 > - When, on a DataMiner Agent, you replace a PKCS12 file, then all elements using the TCP/IP port in question have to be stopped and restarted for the changes to take effect.
 > - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
@@ -72,7 +72,7 @@ If you want such an element to use SSL/TLS encryption, then do the following:
 1. In the *Edit* tab, go to the *Serial connection* section containing the settings of the port in question, and select the *SSL/TLS* checkbox.
 
 > [!NOTE]
-> DataMiner currently supports all TLS versions up to TLS 1.3 (i.e. all TLS versions supported by OpenSSL 1.1.1).
+> DataMiner currently supports all TLS versions up to TLS 1.3 (i.e., all TLS versions supported by OpenSSL 1.1.1).
 >
 > Elements acting as SSL/TLS client will negotiate the highest supported SSL/TLS version with the server. If the server supports TLS up to version 1.2, the element will use version 1.2.
 
@@ -217,7 +217,7 @@ Next to active alarm tab pages, history tab pages now also allow you to display 
 
 On history tab pages, a severity duration column will be available either when no filter is applied or when a filter based on Element ID, DMA ID, Element Type, Parameter ID, Protocol and/or Source ID is applied.
 
-DataMiner Cube will calculate severity durations based on the alarms listed on the history tab page in question. If the duration of an alarm cannot be calculated (e.g. because the next alarm is not listed on the history tab page, or because the alarm has not been cleared while the element is stopped), the severity duration column will show “N/A”.
+DataMiner Cube will calculate severity durations based on the alarms listed on the history tab page in question. If the duration of an alarm cannot be calculated (e.g., because the next alarm is not listed on the history tab page, or because the alarm has not been cleared while the element is stopped), the severity duration column will show “N/A”.
 
 Additionally, a number of enhancements have been made with respect to severity durations. For instance, it is now also possible to display the severity duration when history tracking is disabled.
 
@@ -319,7 +319,7 @@ The simulation file will be stored on the DataMiner Agent, in the protocol folde
 
 #### Resources app: Time-dependent capabilities \[ID 25409\]
 
-When, in the *Resources* app, you assign a capability parameter to a resource, instead of specifying a fixed value for that parameter, you can now indicate that its value will be time-dependent, i.e. that the capability of the resource can change over time.
+When, in the *Resources* app, you assign a capability parameter to a resource, instead of specifying a fixed value for that parameter, you can now indicate that its value will be time-dependent, i.e., that the capability of the resource can change over time.
 
 #### Alarm Console: Special Indexing Engine search tab is now available without enabling the 'System configuration \> Indexing Engine \> UI Available' user permission \[ID 25429\]
 
@@ -484,7 +484,7 @@ The updates are retrieved from dataminer.services or from the most recently conn
 
 #### Profiles app: Converters \[ID 27264\]
 
-In the *Profiles* app, it is now possible to configure a converter (i.e. a mediation snippet) for a parameter linked to a profile parameter.
+In the *Profiles* app, it is now possible to configure a converter (i.e., a mediation snippet) for a parameter linked to a profile parameter.
 
 To configure a converter, do the following:
 
@@ -526,7 +526,7 @@ Up to now, when a DataMiner Agent disconnected from the DataMiner System, the el
 > - The cache is not persistent.
 >   - When the disconnected DMA restarts, its elements, services and redundancy groups will no longer be available to the other DMAs in the DMS.
 >   - When another DMA joins the DMS, the elements, services and redundancy groups of the disconnected DMA will not be available to the new DMA.
-> - Any messages sent to the disconnected DMA (e.g. to retrieve or update information) will result in an exception being thrown.
+> - Any messages sent to the disconnected DMA (e.g., to retrieve or update information) will result in an exception being thrown.
 
 #### Trending: Renaming of trend prediction types \[ID 27435\]
 
@@ -551,7 +551,7 @@ When you export a trend graph to CSV, a new *Exclude gaps* option is now availa
 
 #### Correlation/Automation/Scheduler: Email report configuration \[ID 27521\]\[ID 27812\]\[ID 27878\] \[ID 28032\] \[ID 28038\]\[ID 28081\]
 
-In an *Email* action of a Correlation rule, an Automation script or a scheduled task, as well as in the *Upload report to FTP* and *Upload report to shared folder* actions in an Automation script, if you add a report based on a dashboard, you can now click a *Configure* button to open an embedded browser window where you can configure the necessary data feed selections as well as the following options:
+In an *Email* action of a correlation rule, an automation script or a scheduled task, as well as in the *Upload report to FTP* and *Upload report to shared folder* actions in an automation script, if you add a report based on a dashboard, you can now click a *Configure* button to open an embedded browser window where you can configure the necessary data feed selections as well as the following options:
 
 - *Add DMS info*: Determines whether company details are displayed in the report.
 
@@ -559,7 +559,7 @@ In an *Email* action of a Correlation rule, an Automation script or a scheduled
 
 - *Include feeds*: Determines whether feed components are included in the report. By default, this option is not enabled.
 
-- *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g. pivot tables) in order to make sure all data is displayed.
+- *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g., pivot tables) in order to make sure all data is displayed.
 
 - *Dashboard width*: Allows you to select a custom width for the report.
 
@@ -569,7 +569,7 @@ It is now possible to visualize a percentile line on a trend graph in DataMiner 
 
 If the range of the graph is adapted, the percentile is not automatically updated, so that you can compare the percentile for a certain range with the data for a larger or smaller time frame. The percentile line will be displayed as a full line over the range for which it was originally displayed, and as a dashed line over the rest of the graph.
 
-When you click the percentile line, a refresh option is displayed that allows you to refresh the percentile to the currently displayed data. Clicking the line also displays the option to adjust the percentile, so that you can e.g. display the 90th percentile instead.
+When you click the percentile line, a refresh option is displayed that allows you to refresh the percentile to the currently displayed data. Clicking the line also displays the option to adjust the percentile, so that you can e.g., display the 90th percentile instead.
 
 Finally, in the *Trending* tab of the Cube user settings, a new *Show percentile* setting is now available, which can be used to have the percentile line displayed by default whenever a trend graph is opened. If this option is selected, you can also select which percentile should be calculated by default.
 
@@ -744,7 +744,7 @@ When you create a pattern in DataMiner Cube, you can now select the following ne
 
     This notice will appear at most every 2 weeks or after a DataMiner restart.
 
-    In order to reduce memory usage, users can either remove patterns that are being tracked in real time or restrict the number of parameters for which patterns are being tracked in real time (e.g. by specifying a display key in case of table parameters).
+    In order to reduce memory usage, users can either remove patterns that are being tracked in real time or restrict the number of parameters for which patterns are being tracked in real time (e.g., by specifying a display key in case of table parameters).
 
   - As soon as DataMiner uses more than 2 GB of internal memory for real-time pattern matching, the following notice will appear in the Alarm Console:
 
@@ -760,4 +760,4 @@ When you create a pattern in DataMiner Cube, you can now select the following ne
 
 ##### Suggestion events
 
-In case of real-time pattern matching, pattern occurrences are communicated to the user by means of suggestion events in the Alarm Console, i.e. alarms with severity “Information” and source “Suggestion Engine”. These events can be displayed in a separate *Suggestion events* alarm tab.
+In case of real-time pattern matching, pattern occurrences are communicated to the user by means of suggestion events in the Alarm Console, i.e., alarms with severity “Information” and source “Suggestion Engine”. These events can be displayed in a separate *Suggestion events* alarm tab.

@@ -6,24 +6,21 @@ uid: DataMiner_Cube_deployment_methods
 
 ## Overview
 
-Below you can find an overview of the different methods that can be used to deploy the DataMiner Cube desktop application.
+Below you can find an overview of the different methods that can be used to deploy DataMiner Cube.
 
 > [!IMPORTANT]
 > This information is primarily aimed at system administrators.
 
 |                             | Bitness   | Automatic updates |
 |-----------------------------|-----------|-------------------|
-| ClickOnce XBAP [(1)](#fn_1) | x86       | Yes [(3)](#fn_3)  |
-| Launcher [(2)](#fn_2)       | AnyCPU    | Yes [(4)](#fn_4)  |
-| MSI Launcher (bootstrap)    | x64       | Yes [(4)](#fn_4)  |
+| Launcher [(1)](#fn_2)       | AnyCPU    | Yes [(2)](#fn_4)  |
+| MSI Launcher (bootstrap)    | x64       | Yes [(2)](#fn_4)  |
 | MSI Launcher (shared)       | x64       | No                |
-| MSI CefSharp [(5)](#fn_5)   | x86 + x64 | No                |
+| MSI CefSharp [(3)](#fn_5)   | x86 + x64 | No                |
 
-<a id="fn_1"></a>(1) XBAP is being phased out (see [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)).<br>
-<a id="fn_2"></a>(2) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Cube_start_window).<br>
-<a id="fn_3"></a>(3) Updates from DMA only.<br>
-<a id="fn_4"></a>(4) Updates from DMA and dataminer.services (see [The Cube start window](xref:Cube_start_window)).<br>
-<a id="fn_5"></a>(5) CefSharp is being phased out. From DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards, WebView2 is used instead by default.
+<a id="fn_2"></a>(1) "Launcher" is an alternative name for the [DataMiner Cube start window](xref:Cube_start_window).<br>
+<a id="fn_4"></a>(2) Updates from DMA and dataminer.services (see [The Cube start window](xref:Cube_start_window)).<br>
+<a id="fn_5"></a>(3) CefSharp is being phased out. From DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards, WebView2 is used instead by default.
 
 ## Launcher installation
 
@@ -37,7 +34,7 @@ Below you can find an overview of the different methods that can be used to depl
 
 - Installation does not require administrator rights.
 
-- To install the Cube desktop app, you need Modify access to the folders `%AppData%\Skyline` and `%LocalAppData%\Skyline`, as well as write access to the key `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall`.
+- To install DataMiner Cube, you need Modify access to the folders `%AppData%\Skyline` and `%LocalAppData%\Skyline`, as well as write access to the key `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall`.
 
 - To be able to run the app, you need Execute access for the files *DataMinerCube.exe* in the folder `%LocalAppData%\Skyline\DataMiner\DataMinerCube\` and *CefSharp.BrowserSubprocess.exe* in the folder `%LocalAppData%\Skyline\DataMiner\DataMinerCube\CefSharp\version\architecture\`.
 
@@ -82,7 +79,7 @@ Below you can find an overview of the different methods that can be used to depl
 - The `DataMiner Cube.msi` packages contain the following optional features (which are not exposed in the UI wizard):
 
   - *MainFeature*: CubeLauncher + one Cube version (mandatory).
-  - *Autorun*: Adds a registry key to show the CubeLauncher icon in the notification area (i.e. "systray") at logon for all users.
+  - *Autorun*: Adds a registry key to show the CubeLauncher icon in the notification area (i.e., "systray") at logon for all users.
 
     - If enabled, users cannot disable the autorun feature.
     - If not enabled, each user can choose to enable the autorun feature.
@@ -101,7 +98,7 @@ Below you can find an overview of the different methods that can be used to depl
   msiexec /i CubeVersion-10.2.1.msi ADDLOCAL=ALL
   ```
 
-  Installing multiple `DataMiner Cube.msi` packages side-by-side will keep the latest version of DataMinerCube.exe (i.e. the launcher) in place:
+  Installing multiple `DataMiner Cube.msi` packages side-by-side will keep the latest version of DataMinerCube.exe (i.e., the launcher) in place:
 
   - Installing an older version after a newer version will not overwrite the launcher.
   - Uninstalling the newest version will not roll back the launcher to the previously installed version.

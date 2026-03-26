@@ -77,7 +77,7 @@ In general, the more active you are in the DataMiner Dojo community and the more
   |--------------|----------------|
   | Submit a [blog post](https://community.dataminer.services/blog/), for example about a technology or topic relevant to the community or about a solution you have designed with DataMiner. | 2500–5000 |
   | Submit a [use case](https://community.dataminer.services/use-cases/), for example related to a new product integration or a solution that you have implemented with DataMiner. | 2500–5000 |
-  | Submit a [retro recipe](https://community.dataminer.services/retro-recipes/) that you have personally tried and tested, i.e. an engaging and creative retrospective in recipe format, including a list of ingredients and step-by-step section. | 2000 |
+  | Submit a [retro recipe](https://community.dataminer.services/retro-recipes/) that you have personally tried and tested, i.e., an engaging and creative retrospective in recipe format, including a list of ingredients and step-by-step section. | 2000 |
   | Submit a solution to the [Solutions page](https://community.dataminer.services/solutions/), designed to resolve a specific technological problem or challenge using DataMiner. | 250-2500 |
 
   > [!TIP]
@@ -127,11 +127,11 @@ The lifecycle of DevOps Points operates as follows:
 
 - **Renewal period**: After your anniversary date, a new 12-month period begins. During this period, you have the opportunity to gather enough points to reach a higher status level.
 
-- **Status maintenance**: If, by the end of the 12-month period, you have not accumulated sufficient points to retain your current status level, you will lose your status and be demoted to a lower level, if applicable (e.g. from Enabler to Advocate).
+- **Status maintenance**: If, by the end of the 12-month period, you have not accumulated sufficient points to retain your current status level, you will lose your status and be demoted to a lower level, if applicable (e.g., from Enabler to Advocate).
 
 Example:
 
-- You sign up for the DevOps Professional Program on April 12, 2023. This means you have until April 12, 2024, to reach one of the three membership levels (i.e. a 12-month period).
+- You sign up for the DevOps Professional Program on April 12, 2023. This means you have until April 12, 2024, to reach one of the three membership levels (i.e., a 12-month period).
 
 - By June 12th, 2023, you have earned 750 DevOps Points, qualifying you as an Advocate. Note that you are immediately awarded this new DevOps status upon reaching the required number of points.
 

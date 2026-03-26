@@ -64,7 +64,7 @@ For remote database clusters, please follow the **in-house procedures** to roll 
 > After a downgrade, it is possible that existing dashboards and low-code apps no longer work, and these will need to be restored manually. See [Downgrading the DataMiner web apps](xref:Upgrading_Downgrading_Webapps#downgrading-the-dataminer-web-apps).
 
 > [!NOTE]
-> If you need to go back several major DataMiner versions, e.g. from DataMiner 10.4.0 to DataMiner 10.1.0, we recommend downloading a package for every major version you are downgrading to. For example, to downgrade from DataMiner 10.4.0 to DataMiner 10.1.0, you will need a package for 10.1.0, 10.2.0, and 10.3.0. You will then first need to install DataMiner 10.3.0, then DataMiner 10.2.0, and then DataMiner 10.1.0 to complete the downgrade.
+> If you need to go back several major DataMiner versions, e.g., from DataMiner 10.4.0 to DataMiner 10.1.0, we recommend downloading a package for every major version you are downgrading to. For example, to downgrade from DataMiner 10.4.0 to DataMiner 10.1.0, you will need a package for 10.1.0, 10.2.0, and 10.3.0. You will then first need to install DataMiner 10.3.0, then DataMiner 10.2.0, and then DataMiner 10.1.0 to complete the downgrade.
 
 ## Time estimate
 

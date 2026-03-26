@@ -22,4 +22,4 @@ The unused dashboards *I-DOCSIS CCAP -Trend_Test.dmadb* and *I-DOCSIS GLOBAL SYS
 
 #### Problem in GQI_Display_Trend caused incorrect trending in dashboards [ID 37712]
 
-A problem in the *GQI_Display_Trend* Automation script could cause discrepancies between trend graphs in dashboards and the corresponding tables in DataMiner Cube.
+A problem in the *GQI_Display_Trend* automation script could cause discrepancies between trend graphs in dashboards and the corresponding tables in DataMiner Cube.

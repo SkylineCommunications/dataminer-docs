@@ -4,7 +4,7 @@ uid: ThirdPartyTools
 
 # Third party tools
 
-The following table lists some development tools that can be very useful while developing e.g. a connector or Automation script.
+The following table lists some development tools that can be very useful while developing e.g., a connector or automation script.
 
 |Tool  |Description  |Category  |
 |---------|---------|---------|

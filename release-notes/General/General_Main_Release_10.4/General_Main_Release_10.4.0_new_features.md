@@ -320,16 +320,16 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 > - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
 > - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
 
-#### DataMiner Object Models: Action buttons can now be configured to launch an interactive Automation script when clicked [ID 35226]
+#### DataMiner Object Models: Action buttons can now be configured to launch an interactive automation script when clicked [ID 35226]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-An action button can now be configured to launch an interactive Automation script when clicked. To do so, set the *IsInteractive* property of the action to true.
+An action button can now be configured to launch an interactive automation script when clicked. To do so, set the *IsInteractive* property of the action to true.
 
-When such a button is clicked in a low-code app, the UI of the interactive Automation script will be displayed in a pop-up window on top of the low-code app.
+When such a button is clicked in a low-code app, the UI of the interactive automation script will be displayed in a pop-up window on top of the low-code app.
 
 > [!NOTE]
-> One button can only execute one action. So, one button can only execute one interactive Automation script.
+> One button can only execute one action. So, one button can only execute one interactive automation script.
 
 #### DataMiner Object Models: New field descriptors [ID 35278] [ID 36556]
 
@@ -451,7 +451,7 @@ When the caches are enabled, it is no longer possible to get paged results when 
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g. SLNet) or "proxy modules" (e.g. a DxM that wishes to expose an API).
+DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g., SLNet) or "proxy modules" (e.g., a DxM that wishes to expose an API).
 
 All modules registered with API Gateway will be displayed under `/APIGateway/api/version`, showing the following properties:
 
@@ -554,7 +554,7 @@ In this next example, all *Column* elements of parameters that have a `level` at
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-Smart-serial connection will now support dynamic polling, i.e. the ability to change the IP address and IP port while the element is active.
+Smart-serial connection will now support dynamic polling, i.e., the ability to change the IP address and IP port while the element is active.
 
 To enable dynamic polling for a smart-serial connection, add a parameter that contains the following:
 

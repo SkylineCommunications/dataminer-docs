@@ -174,7 +174,7 @@ In some cases, ticket fields without alarm properties would incorrectly no longe
 
 #### DataMiner Cube - Visual Overview: Problem when linking a shape to a matrix output \[ID 23980\]
 
-When you linked a shape to a matrix output by using a shape data field of type *Output* or *OutputLabel* set to a number representing the index of the output (e.g. “1”), in some cases, that shape would be linked to an incorrect output.
+When you linked a shape to a matrix output by using a shape data field of type *Output* or *OutputLabel* set to a number representing the index of the output (e.g., “1”), in some cases, that shape would be linked to an incorrect output.
 
 #### DataMiner Cube - Trending: Problem when adding a parameter to a stopped element \[ID 24045\]
 
@@ -329,7 +329,7 @@ The view state returned by the following methods would incorrectly not take into
 - GetViewsForParent
 
 > [!NOTE]
-> The above-mentioned methods are also used by the DataMiner web applications (e.g. Monitoring & Control, Dashboards, Ticketing, etc.), and the view states are also used in DataMiner Maps.
+> The above-mentioned methods are also used by the DataMiner web applications (e.g., Monitoring & Control, Dashboards, Ticketing, etc.), and the view states are also used in DataMiner Maps.
 
 #### Element connections saved incorrectly \[ID 24348\]
 
@@ -365,7 +365,7 @@ In some rare cases, it could occur that the column configuration of a *ListView*
 
 #### DataMiner Cube: Editing an SNMPv3 element created prior to DataMiner 9.6.12 would cause the authentication type to be reset to the default type \[ID 24423\]
 
-When you edited an SNMPv3 element that was created prior to DataMiner 9.6.12, in some cases, the authentication type would incorrectly be reset to the default type (i.e. SHA512).
+When you edited an SNMPv3 element that was created prior to DataMiner 9.6.12, in some cases, the authentication type would incorrectly be reset to the default type (i.e., SHA512).
 
 #### Dashboards: Problem with duplicate trend graphs in line chart component \[ID 24427\]
 
@@ -403,7 +403,7 @@ From now on, it will no longer be possible to start a backup operation while the
 
 #### Problem with SLDataMiner \[ID 24511\]
 
-In some rare cases, an error in SLDataMiner would cause other problems to occur (e.g. element timeouts).
+In some rare cases, an error in SLDataMiner would cause other problems to occur (e.g., element timeouts).
 
 #### Service & Resource Management: Editing a service in the services list would incorrectly clear the IDOfSelection session variable \[ID 24519\]
 
@@ -413,9 +413,9 @@ When you select a service in the services list, the ID of that service is stored
 
 When working with the Dashboards app in Chrome, in some cases, a mouse click could unintentionally cause a dashboard component to be moved to another location.
 
-#### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive Automation scripts \[ID 24541\]
+#### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive automation scripts \[ID 24541\]
 
-When an interactive Automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
+When an interactive automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
 
 #### DataMiner Cube: Clicking 'Open Cube Mobile' would not always direct you to the landing page \[ID 24560\]
 
@@ -469,9 +469,9 @@ On an element card, in some cases, Write parameters for which there was no corre
 
 In some cases, it would no longer be possible to mask cells or rows in view tables or direct views.
 
-#### DataMiner Cube - Automation: Problem when an Automation script tried to send an e-mail containing a report \[ID 24775\]
+#### DataMiner Cube - Automation: Problem when an automation script tried to send an e-mail containing a report \[ID 24775\]
 
-In some cases, an error could occur when an Automation script tried to send an e-email containing a report.
+In some cases, an error could occur when an automation script tried to send an e-email containing a report.
 
 #### Problem with SLProtocol when calling 'NT_LOAD_TABLE' \[ID 24780\]
 
@@ -491,7 +491,7 @@ In some rare cases, an error could occur when an element was stopped while a tim
 
 #### Problem when calling GetParameter on the virtual element of a redundancy group \[ID 24892\]
 
-When a GetParameter method was called in an Automation script on the virtual element of a redundancy group, in some cases, a CreateDummyFailedException could be thrown.
+When a GetParameter method was called in an automation script on the virtual element of a redundancy group, in some cases, a CreateDummyFailedException could be thrown.
 
 #### Memory leak in SLNet when enabling or disabling logging \[ID 24921\]
 

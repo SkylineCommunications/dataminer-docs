@@ -16,4 +16,4 @@ Specifies the type of script.
 
 ## Remarks
 
-For Automation scripts, the value is "Automation".
+For automation scripts, the value is "Automation".

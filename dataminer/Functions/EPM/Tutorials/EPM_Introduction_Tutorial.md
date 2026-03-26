@@ -66,7 +66,7 @@ The EPM architecture allows horizontal scaling: you can add more collector eleme
 
    1. Open the Surveyor in DataMiner Cube.
 
-   1. Right-click the *EPM Training* view (e.g. the root view), and select *New* > *Element*.
+   1. Right-click the *EPM Training* view (e.g., the root view), and select *New* > *Element*.
 
    1. Enter the element name *EPM Training Collector 4*, select the DMA where the element should be added, select the *Skyline EPM Integration Training Collector* protocol, and click *Create*.
 

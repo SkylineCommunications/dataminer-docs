@@ -53,10 +53,14 @@ items:
             href: PA/toc.yml
           - name: PTP release notes
             href: PTP/toc.yml
-          - name: RAD Manager
+          - name: RAD Manager release notes
             href: RAD_Manager/toc.yml
+          - name: SatOps release notes
+            href: SatOps/toc.yml
           - name: SRM release notes
             href: SRM/toc.yml
+          - name: Ticketing release notes
+            href: Ticketing/toc.yml
       - name: Breaking changes
         topicUid: Breaking_changes
       - name: Release overview

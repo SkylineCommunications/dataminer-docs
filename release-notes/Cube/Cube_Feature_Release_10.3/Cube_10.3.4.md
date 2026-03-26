@@ -18,7 +18,7 @@ uid: Cube_Feature_Release_10.3.4
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-By default, you can select multiple rows in a list view (e.g. using the Ctrl or Shift key). With the new component option *SingleSelectionMode*, you can now set the selection mode of a list view to single instead, so that only one row can be selected at a time.
+By default, you can select multiple rows in a list view (e.g., using the Ctrl or Shift key). With the new component option *SingleSelectionMode*, you can now set the selection mode of a list view to single instead, so that only one row can be selected at a time.
 
 #### Visual Overview: Re-arranging grouped shapes [ID 35323]
 
@@ -30,13 +30,13 @@ When, in a Visio drawing, shapes had been positioned dynamically based on proper
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedded web apps can interact with Cube (e.g. open an element card).
+From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedded web apps can interact with Cube (e.g., open an element card).
 
 #### Users no longer have to log in to embedded low-code apps [ID 35657]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-When a low-code app was embedded in Cube (e.g. in a visual overview), up to now, users had to explicitly log in to that app. From now on, Cube will automatically pass the authentication ticket to the low-code app, allowing users to access the app without having to log in again.
+When a low-code app was embedded in Cube (e.g., in a visual overview), up to now, users had to explicitly log in to that app. From now on, Cube will automatically pass the authentication ticket to the low-code app, allowing users to access the app without having to log in again.
 
 ## Changes
 
@@ -78,9 +78,9 @@ Because of a number of enhancements made with regard to the retrieval of overrid
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-In the Automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
+In the automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
 
-This property is only applied in interactive Automation scripts that are launched from a web app.
+This property is only applied in interactive automation scripts that are launched from a web app.
 
 #### System Center - Agents: Clearer restart warning before an upgrade is started [ID 35687]
 
@@ -100,7 +100,7 @@ This message has now been changed to provide more details:
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-When you open the *Bookings* app, Cube adds a small offset to the time window when it requests the list of bookings from the server. Up to now, instead of subtracting 1 minute from the start time, it would incorrectly add 1 minute to it. When the initial time window was e.g. 11h00 to 12h00, it would incorrectly request the bookings from 11h01 to 12h01 instead of from 10h59 to 12h01.
+When you open the *Bookings* app, Cube adds a small offset to the time window when it requests the list of bookings from the server. Up to now, instead of subtracting 1 minute from the start time, it would incorrectly add 1 minute to it. When the initial time window was e.g., 11h00 to 12h00, it would incorrectly request the bookings from 11h01 to 12h01 instead of from 10h59 to 12h01.
 
 Also, in some cases, the "loading" indicator of the bookings timeline would incorrectly not disappear when all bookings were loaded.
 

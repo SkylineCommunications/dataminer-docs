@@ -54,9 +54,9 @@ uid: ST_example_ST_creation
 
    1. In the *Included parameters* section, select *Some parameters*, and click *Select parameters*.
 
-   1. Select the parameter you want, e.g. "CPU", open the placeholder selection box, and select *Input data > Process*.
+   1. Select the parameter you want, e.g., "CPU", open the placeholder selection box, and select *Input data > Process*.
 
-   1. Select a next parameter, e.g. "Memory Usage", open the placeholder selection box, and select *Input data > Process*.
+   1. Select a next parameter, e.g., "Memory Usage", open the placeholder selection box, and select *Input data > Process*.
 
    1. Click *Close* to exit the *Select parameters* dialog box.
 

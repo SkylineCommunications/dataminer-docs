@@ -96,7 +96,7 @@ A number of improvements have been implemented to the CI type management script:
 
 #### HTTPS_GET discovery profile now contains port 443 by default \[ID 23939\]
 
-The discovery profile HTTPS_GET now contains the default port for HTTPS, i.e. 443, instead of the previous port 80, which is the default port for HTTP. In addition, the identifier name has been changed from GET_80 to GET_443.
+The discovery profile HTTPS_GET now contains the default port for HTTPS, i.e., 443, instead of the previous port 80, which is the default port for HTTP. In addition, the identifier name has been changed from GET_80 to GET_443.
 
 #### Improved support for element name changes \[ID 23974\]
 

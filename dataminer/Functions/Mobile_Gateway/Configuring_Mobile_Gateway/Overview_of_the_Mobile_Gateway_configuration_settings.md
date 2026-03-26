@@ -43,7 +43,7 @@ Default: 100 (retries).
 
 ## Files.EncryptedConfig
 
-The file that contains all encrypted settings used by Mobile Gateway (e.g. the modem’s PIN and PUK codes).
+The file that contains all encrypted settings used by Mobile Gateway (e.g., the modem’s PIN and PUK codes).
 
 Default: `C:\Skyline DataMiner\Mobile Gateway\MobileGateway.cfg`.
 
@@ -75,7 +75,7 @@ Default: +32475161616
 
 ## HttpGsm.Location
 
-The IP address of the device (e.g. SMSEagle, Turnpike).
+The IP address of the device (e.g., SMSEagle, Turnpike).
 
 The "port" attribute is the port to which DataMiner has to send its requests. This will usually be port 80. In case of HTTPS communication with an SMSEagle device, the port will most likely be 443.
 
@@ -176,4 +176,4 @@ Default: 10000 (seconds)
 
 In the *start* and *end* attributes of this tag, you can specify the prefix and/or the suffix to be cut off from any incoming text message.
 
-E.g. `<TrimmingOptions start="SLC" end=""/>`
+For example: `<TrimmingOptions start="SLC" end=""/>`

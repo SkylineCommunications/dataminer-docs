@@ -183,7 +183,7 @@ The following tabs are available:
 |--|--|
 | Information | Shows basic information regarding measurement points, markers, thresholds and parameters. |
 | Traces | Allows you to display or hide the current trace, the minimum trace, the maximum trace and the average trace. |
-| Presets | Lists the available presets. By default, only the private presets are listed (i.e. the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag. When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
+| Presets | Lists the available presets. By default, only the private presets are listed (i.e., the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag. When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
 
 #### Monitoring app: Alarm history now also available \[ID 25002\]
 
@@ -201,8 +201,8 @@ For every color linked to a selection box value, a VisualFieldEnum object should
 
 | Property  | Description                                                          |
 |-----------|----------------------------------------------------------------------|
-| FieldName | The name of the selection box (i.e. enum field).                     |
-| EnumValue | The selection box value (i.e. the discreet value in the enum field). |
+| FieldName | The name of the selection box (i.e., enum field).                     |
+| EnumValue | The selection box value (i.e., the discreet value in the enum field). |
 | Color     | The color associated with the selection box value.                   |
 
 #### On mobile devices, the sidebar will now appear at the bottom of the screen \[ID 25225\]
@@ -279,9 +279,9 @@ As a result of the above-mentioned changes, adding a new section to a domain has
 > - When you delete a job section definition, a dialog box is displayed allowing you to choose whether to delete it completely, or only sever the link between the section definition and the domain.
 > - When a job domain is deleted, all its section definitions are removed as well, unless these are linked to other domains as well.
 
-#### Interactive Automation scripts: UI components now have a TooltipText property \[ID 25609\] \[ID 25978\]
+#### Interactive automation scripts: UI components now have a TooltipText property \[ID 25609\] \[ID 25978\]
 
-UI components in interactive Automation scripts launched from a mobile app can now have a tool tip configured by means of the UIBlockDefinition class property “TooltipText”.
+UI components in interactive automation scripts launched from a mobile app can now have a tool tip configured by means of the UIBlockDefinition class property “TooltipText”.
 
 #### Jobs app: Enhanced job section configuration \[ID 25977\]
 
@@ -318,7 +318,7 @@ A FieldValueChange object has the following properties:
 
 #### Enhanced visualization of disabled text boxes \[ID 26193\]
 
-Disabled text boxes in e.g. interactive Automation scripts will now automatically be optimized as to size and will have a scrollbar when needed.
+Disabled text boxes in e.g., interactive automation scripts will now automatically be optimized as to size and will have a scrollbar when needed.
 
 #### Visual Overview: HTML5 table controls can now have a filter box \[ID 26228\]\[ID 26235\]
 
@@ -374,7 +374,7 @@ Similar to DataMiner Cube, the Monitoring app now also allows you to visualize v
 
 #### Loading screen of embedded apps will now show a loading indicator instead of the app icon \[ID 27594\]
 
-The loading screen of all mobile apps (Monitoring, Dashboards, Jobs, etc.) will now show a loading indicator instead of the app icon when opened in embedded mode (i.e. using a URL that contains either the embed=true or embedded=true argument).
+The loading screen of all mobile apps (Monitoring, Dashboards, Jobs, etc.) will now show a loading indicator instead of the app icon when opened in embedded mode (i.e., using a URL that contains either the embed=true or embedded=true argument).
 
 #### HTML5 apps: Loading indicator of selection boxes will now be displayed on the right \[ID 27871\]
 
@@ -422,7 +422,7 @@ Mediation snippets are pieces of code that will convert a parameter value from t
 
 MediationSnippet objects, defined on profile parameter level, consist of an ID and a string containing the actual snippet code (C#). They can be managed by means of the ProfileManagerHelper#MediationSnippets API.
 
-To a particular profile parameter, you can add only one mediation snippet per protocol version. In other words, linking to both parameter 10 and parameter 20 in version 1.0.0.0 of Protocol X in the same profile parameter is not allowed. However, it is possible to specify a single wildcard character at the end of a protocol version (e.g. “1.0.0.\*”). When there are multiple matches, the most specific entry will be chosen (i.e. “1.0.0.\*” will take precedence over “1.\*”).
+To a particular profile parameter, you can add only one mediation snippet per protocol version. In other words, linking to both parameter 10 and parameter 20 in version 1.0.0.0 of Protocol X in the same profile parameter is not allowed. However, it is possible to specify a single wildcard character at the end of a protocol version (e.g., “1.0.0.\*”). When there are multiple matches, the most specific entry will be chosen (i.e., “1.0.0.\*” will take precedence over “1.\*”).
 
 > [!NOTE]
 >
@@ -576,7 +576,7 @@ Logging with regard to element binding will be added to the following log files:
 
 From now on, an OnStartActionsFailureEvent will be executed when the start actions of a ReservationInstance fail.
 
-If you want to use this event to trigger an Automation script, then make sure to add a custom entry point method to that script. See the example below.
+If you want to use this event to trigger an automation script, then make sure to add a custom entry point method to that script. See the example below.
 
 ```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnSrmStartActionsFailure)]
@@ -599,9 +599,9 @@ A StartActionsFailureErrorData instance contains an *ErrorReason*, which explain
   > [!NOTE]
   > This exception can be retrieved from the Exception property. The ReservationInstanceId is available in the ErrorData object.
 
-##### Assigning an Automation script to the OnStartActionsFailureEvent
+##### Assigning an automation script to the OnStartActionsFailureEvent
 
-The following example shows how to assign an Automation script to the OnStartActionsFailureEvent.
+The following example shows how to assign an automation script to the OnStartActionsFailureEvent.
 
 ```csharp
 reservationInstance.OnStartActionsFailureEvent = new ReservationEvent("OnStartActionsFailureEvent", $"Script:StartActionsFailedScript");
@@ -816,7 +816,7 @@ ServiceReservationInstance objects now have a LockLifeCycle property, which can 
 
 #### Possibility to add attachments to booking instances \[ID 26784\]
 
-To support adding attachments to booking instances (i.e. ReservationInstance objects), a new ReservationInstanceAttachments property is now available in the ResourceManagerHelper. This property allows you to manage booking attachments using the following methods:
+To support adding attachments to booking instances (i.e., ReservationInstance objects), a new ReservationInstanceAttachments property is now available in the ResourceManagerHelper. This property allows you to manage booking attachments using the following methods:
 
 | Method                                                                                | Function                                                                         |
 |---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|

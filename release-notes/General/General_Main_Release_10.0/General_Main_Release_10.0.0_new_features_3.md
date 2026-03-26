@@ -108,7 +108,7 @@ When you embed a Resource Manager timeline component in a Visio drawing, you can
 
   When you pan or zoom in the timeline, this session variable will contain the time range that is visible on the screen.
 
-  When this session variable is set by an external source, the timeline component will be updated to show the new time range. The value can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
+  When this session variable is set by an external source, the timeline component will be updated to show the new time range. The value can be set in serialized form (e.g., “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g., “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
 
 > [!NOTE]
 >
@@ -127,7 +127,7 @@ When you click the page background, this panel will list the page data items cur
 
 - To add a data item to either the page or the selected shape, click *Add page data* or *Add shape data* and select a data item from the list. That data item will then be added to the list of data items linked to the page or shape. Now, click inside the value box of the new data item and enter a value.
 
-  When, in a value, you want to add a placeholder (i.e. a dynamic part), then type a square bracket (“\[“), select the placeholder from the list, and press TAB.
+  When, in a value, you want to add a placeholder (i.e., a dynamic part), then type a square bracket (“\[“), select the placeholder from the list, and press TAB.
 
   > [!NOTE]
   > Apart from the value of a data item, you can also change the name of a data item. If, however, you change a name to one that is unknown to DataMiner or to one that is already in the list, it will be highlighted.
@@ -155,9 +155,9 @@ To do so, specify a *Reservation* shape data field and set it to one of the foll
 
 - The GUID of the booking
 
-- A dynamic placeholder, e.g. \[pagevar:SelectedReservation\]
+- A dynamic placeholder, e.g., \[pagevar:SelectedReservation\]
 
-- A service name, service ID or placeholder referring to a service, e.g. \[this service\]. In that case, the *ReservationID* property of the service will be used.
+- A service name, service ID or placeholder referring to a service, e.g., \[this service\]. In that case, the *ReservationID* property of the service will be used.
 
 The following placeholders can be used in the text displayed on the *Reservation* shape:
 
@@ -297,7 +297,7 @@ See the following example:
 | Sort              | ASC,limit:2\|DESC,limit:1  |
 
 > [!NOTE]
-> The trend component will show an information bar only if the number of values found for a particular parameter exceeds the default limit (i.e. 10). It will not show an information bar if the number of values found for a particular parameter exceeds a limit that was explicitly specified in the “Sort” data field.
+> The trend component will show an information bar only if the number of values found for a particular parameter exceeds the default limit (i.e., 10). It will not show an information bar if the number of values found for a particular parameter exceeds a limit that was explicitly specified in the “Sort” data field.
 
 ##### Limiting wildcard results
 
@@ -314,7 +314,7 @@ See the following example:
 | ParametersOptions | Limit:2      |
 
 > [!NOTE]
-> The trend component will show an information bar only if the number of parameter found for at least one of the wildcard expressions exceeds the default limit (i.e. 10). It will not show an information bar if the number of parameters found for at least one of the wildcard expressions exceeds a limit that was explicitly specified in the “ParametersOptions” data field.
+> The trend component will show an information bar only if the number of parameter found for at least one of the wildcard expressions exceeds the default limit (i.e., 10). It will not show an information bar if the number of parameters found for at least one of the wildcard expressions exceeds a limit that was explicitly specified in the “ParametersOptions” data field.
 
 #### Service & Resource Management - Visual Overview: Shape inheritance for Reservation shapes and support for placeholders containing booking properties \[ID 21391\]
 
@@ -436,7 +436,7 @@ When configuring a trend component or a parameter chart, up to now, the shape da
 DmaID:ElementID:ParameterID[:TableRowFilter]|...|...
 ```
 
-In a value like the one found above, from now on, it is also allowed to use element names, \[this element\] placeholders and keys containing forward slashes (e.g. dmaID/elementID).
+In a value like the one found above, from now on, it is also allowed to use element names, \[this element\] placeholders and keys containing forward slashes (e.g., dmaID/elementID).
 
 #### Visual Overview: Possibility to link page to multiple CPE chains and/or fields \[ID 22107\]
 
@@ -474,7 +474,7 @@ This syntax consists of the following components:
     |-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | FullElementID                                         | The ID of the element linked to the resource in the format DmaID/ElementID. This can for instance be used to link to an actual element in Element shape data.                |
     | Name                                                  | The name of the resource.                                                                                                                                                    |
-    | Property=*\<propName>* | The value of a custom property of the resource. The name of that custom property must be specified in *\<propName>*, e.g. Property=State. |
+    | Property=*\<propName>* | The value of a custom property of the resource. The name of that custom property must be specified in *\<propName>*, e.g., Property=State. |
 
 #### Visual Overview: Displaying or using the DataMiner time in UTC or local time in a shape \[ID 22252\]
 

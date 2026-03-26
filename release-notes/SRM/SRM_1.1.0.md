@@ -71,7 +71,7 @@ Based on this information, the user can then easily apply the retrieved configur
 
 #### SRM_ResourceActions script: New FORCESWAP action [ID 23849]
 
-The *SRM_ResourceActions* script now allows a new *FORCESWAP* action, which swaps a resource for a particular booking, causing other possible bookings to go into quarantine in case the resource no longer has sufficient capacity. This action can currently only be used in "silent mode", i.e. when the script is called from another script, using one of the following methods:
+The *SRM_ResourceActions* script now allows a new *FORCESWAP* action, which swaps a resource for a particular booking, causing other possible bookings to go into quarantine in case the resource no longer has sufficient capacity. This action can currently only be used in "silent mode", i.e., when the script is called from another script, using one of the following methods:
 
 ```csharp
 BookingManager.TryForceSwapResource(Engine engine, ref ReservationInstance reservation, Guid oldResourceGuid, Guid newResourceGuid, int targetedNode)
@@ -121,7 +121,7 @@ If *interfaceName* is null or whitespace, a *System.ArgumentException* is return
 public static IEnumerable<FunctionResource> GetConnectedResources(this Node node, ServiceDefinition serviceDefinition, ServiceReservationInstance reservation);
 ```
 
-Retrieves the resources connected to a particular node in the context of a particular booking. Requires the node, service definition and reservation (i.e. booking) as input parameters.
+Retrieves the resources connected to a particular node in the context of a particular booking. Requires the node, service definition and reservation (i.e., booking) as input parameters.
 
 If any of the input parameters are null, a *System.ArgumentNullException* is returned.
 
@@ -129,7 +129,7 @@ If any of the input parameters are null, a *System.ArgumentNullException* is ret
 public static IEnumerable<FunctionResource> GetConnectedResources(this Node node, Net.ServiceManager.Objects.ServiceDefinition serviceDefinition, ServiceReservationInstance reservation, InterfaceType interfaceType, string interfaceName);
 ```
 
-Retrieves the resources connected to the node interface with type *interfaceType* and name *interfaceName*. Requires the node, service definition, reservation (i.e. booking) and the interface type and name as input parameters.
+Retrieves the resources connected to the node interface with type *interfaceType* and name *interfaceName*. Requires the node, service definition, reservation (i.e., booking) and the interface type and name as input parameters.
 
 If the node, service definition or reservation are null, a *System.ArgumentNullException* is returned. If *interfaceName* is null or whitespace, a *System.ArgumentException* is returned. If no matching interface is found, an *InterfaceNotFoundException* is returned.
 

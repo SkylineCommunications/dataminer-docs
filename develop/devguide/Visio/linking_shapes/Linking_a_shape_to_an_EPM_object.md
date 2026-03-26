@@ -28,7 +28,7 @@ By default, the background color of the shape will be the color of the instance 
 
 - *Instance*: Default value. The shape will show the instance alarm level of the EPM object.
 - *BubbleUp*: The shape will show the bubble-up alarm level of the EPM object.
-- *Summary*: The shape will show the highest alarm severity of the instance and its underlying objects (i.e. the highest severity of the instance and bubble-up alarm levels).
+- *Summary*: The shape will show the highest alarm severity of the instance and its underlying objects (i.e., the highest severity of the instance and bubble-up alarm levels).
 
 For example:
 

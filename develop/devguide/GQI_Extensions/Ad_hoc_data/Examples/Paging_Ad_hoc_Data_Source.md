@@ -6,12 +6,12 @@ uid: Paging_Ad_hoc_Data_Source
 
 This example demonstrates how a GQI ad hoc data source can efficiently return a large set of DOM instances by requesting them from the server in smaller, consecutive pages. Instead of loading the full result set into memory, a paging session is created once and then advanced as the GQI engine requests additional data. This improves perceived responsiveness (initial rows appear sooner) and reduces peak memory usage.
 
-The PagingHelper used here is a generic concept that is reused across several APIs. Similar paging helpers exist for other objects besides DOM instances, such as SRM resources, ReservationInstances (i.e. bookings), and profile-related data. The usage pattern is the same: prepare a paging session with a query, keep the helper instance alive for the duration of the GQI session, and advance it only when the next page is explicitly requested.
+The PagingHelper used here is a generic concept that is reused across several APIs. Similar paging helpers exist for other objects besides DOM instances, such as SRM resources, ReservationInstances (i.e., bookings), and profile-related data. The usage pattern is the same: prepare a paging session with a query, keep the helper instance alive for the duration of the GQI session, and advance it only when the next page is explicitly requested.
 
-Selecting an appropriate page size is a balance between transfer overhead and unused data. Smaller pages mean more round trips but less unused data in scenarios where only a small subset is ever displayed (e.g. a low-code app grid that typically shows 20 rows and is seldom scrolled). Larger pages reduce the number of server calls but increase the chance that a sizeable portion of the returned rows is never rendered. As a starting point:
+Selecting an appropriate page size is a balance between transfer overhead and unused data. Smaller pages mean more round trips but less unused data in scenarios where only a small subset is ever displayed (e.g., a low-code app grid that typically shows 20 rows and is seldom scrolled). Larger pages reduce the number of server calls but increase the chance that a sizeable portion of the returned rows is never rendered. As a starting point:
 
-- Components that expose only a few tens of rows at a time: consider lowering below the default 500 (e.g. 50–150).
-- Scenarios with predictable full traversal (e.g. timeline component): larger sizes (500 or higher) can reduce overhead.
+- Components that expose only a few tens of rows at a time: consider lowering below the default 500 (e.g., 50–150).
+- Scenarios with predictable full traversal (e.g., timeline component): larger sizes (500 or higher) can reduce overhead.
 
 Adjust based on observed user interaction patterns and network latency.
 

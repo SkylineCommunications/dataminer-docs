@@ -10,9 +10,9 @@ From DataMiner Cube 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards.
 
 ## Cause
 
-In DataMiner Cube 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8, a change is introduced to the way trend data is loaded. Before this version, when a period like *Last day* or *Last week* is requested, the system always requests all data up to the current time. To reduce the amount of data requested, from DataMiner Cube 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards, only additional data is requested (e.g. *Last week* no longer re-requests the *Last day* data if it has already been retrieved).
+In DataMiner Cube 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8, a change is introduced to the way trend data is loaded. Before this version, when a period like *Last day* or *Last week* is requested, the system always requests all data up to the current time. To reduce the amount of data requested, from DataMiner Cube 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards, only additional data is requested (e.g., *Last week* no longer re-requests the *Last day* data if it has already been retrieved).
 
-However, this causes a flatline issue in some specific cases, because requests for *Last day* use the client's time zone, but requests for longer ranges (e.g. *Last week*) use the DataMiner Agent's time zone, and these no longer include the data from shorter ranges (e.g. *Last day*) that have already been retrieved.
+However, this causes a flatline issue in some specific cases, because requests for *Last day* use the client's time zone, but requests for longer ranges (e.g., *Last week*) use the DataMiner Agent's time zone, and these no longer include the data from shorter ranges (e.g., *Last day*) that have already been retrieved.
 
 This means that when the client's time zone is different from the DataMiner Agent's time zone, part of the data is skipped, resulting in a flatline on the graph.
 

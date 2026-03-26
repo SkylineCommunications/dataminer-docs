@@ -23,7 +23,7 @@ Using the DataMiner Taskbar Utility, it is now possible to install all possible 
 Also, the *SLAppPackageInstaller.txt* log file will now keep track of all actions performed and issues encountered during the installation of an app.
 
 > [!NOTE]
-> After you have launched an upgrade, the upgrade process displayed in DataMiner Taskbar Utility may lag behind and DataMiner Taskbar Utility may use a considerable amount of memory. This is a known issue. See [Taskbar Utility performance issue while Agents are being upgraded](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded).
+> After you have launched an upgrade, the upgrade process displayed in DataMiner Taskbar Utility may lag behind and DataMiner Taskbar Utility may use a considerable amount of memory. This is a known issue.
 >
 > To prevent his issue, stay on the upgrade summary tab until the upgrade has finished, and then close DataMiner Taskbar Utility to have the memory cleared. Note also that this issue is related to the Taskbar Utility only and does not affect the upgrade process.
 
@@ -78,7 +78,7 @@ Now, this option has been replaced by a triple-state option. You can now indicat
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
-If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
+If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for correlation alarms.
 
 #### GQI: columnInfo object of data source columns of type 'discrete' will now contain the possible values [ID 34179]
 
@@ -180,7 +180,7 @@ From now on, the factory reset tool *SLReset.exe* will no longer remove the foll
 
 <!-- MR 10.3.0 (not added) - FR 10.2.10 -->
 
-In DataMiner versions from 10.2.8 onwards, during a DataMiner upgrade, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail, unless the [workaround for this issue](xref:KI_RTE_with_SLAnalytics_when_upgrading) had been implemented. During the upgrade to the next DataMiner version, this upgrade action will explicitly be triggered to make sure all unused Cassandra tables get removed.
+In DataMiner versions from 10.2.8 onwards, during a DataMiner upgrade, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail, unless the workaround for this issue had been implemented. During the upgrade to the next DataMiner version, this upgrade action will explicitly be triggered to make sure all unused Cassandra tables get removed.
 
 #### Improved performance of Resources module [ID 34205]
 
@@ -352,7 +352,7 @@ When, in the *Automation* app, you made an invalid change in a script, closed th
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-When the system time changed because of e.g. a clock resynchronization or a switch to or from daylight-saving time, up to now, the start time and end time of scheduled alarm templates would incorrectly not get updated.
+When the system time changed because of e.g., a clock resynchronization or a switch to or from daylight-saving time, up to now, the start time and end time of scheduled alarm templates would incorrectly not get updated.
 
 #### GQI: 'Bookings' data source incorrectly contained two 'Last modified at' columns [ID 34170]
 
@@ -366,7 +366,7 @@ Also, the *Created at* and *Last modified at* columns will no longer be selected
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-In web apps (e.g. Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
+In web apps (e.g., Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
 
 #### Failover: Certain correlation rules would no longer work after a Failover switch [ID 34204]
 

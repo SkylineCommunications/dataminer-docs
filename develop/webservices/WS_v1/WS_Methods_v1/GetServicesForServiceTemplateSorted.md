@@ -7,7 +7,7 @@ uid: GetServicesForServiceTemplateSorted
 Use this method to retrieve a specific number of services attached to a specified service template.
 
 > [!NOTE]
-> Using this method, you can e.g. request services in batches in order to minimize loading time.
+> Using this method, you can e.g., request services in batches in order to minimize loading time.
 
 ## Input
 

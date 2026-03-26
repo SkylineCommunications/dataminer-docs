@@ -18,7 +18,7 @@ Install SRM 1.2.30 CU3<!--RN 35998-->.
 
 ## Workaround
 
-In the Automation script, pass the function with `ShouldAutoSelectResource=false`.
+In the automation script, pass the function with `ShouldAutoSelectResource=false`.
 
 ## Description
 

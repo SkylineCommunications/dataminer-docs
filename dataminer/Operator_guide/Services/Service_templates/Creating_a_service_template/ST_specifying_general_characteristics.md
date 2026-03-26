@@ -14,7 +14,7 @@ In addition, two advanced options are available in the *General* tab:
 
 - Select *Require confirmation before applying* to ensure that the user has to confirm before the service template is applied.
 
-- Select *Auto execute template when new elements have been added in the system* to automatically apply the service template when a new element is added in the DMS.
+- Select *Auto-execute template when new elements have been added in the system* to automatically apply the service template when a new element is added in the DMS.
 
 > [!NOTE]
 > If the service template is automatically applied when a new element is added, the *Background Tasks* window will appear so that you can follow the progress.

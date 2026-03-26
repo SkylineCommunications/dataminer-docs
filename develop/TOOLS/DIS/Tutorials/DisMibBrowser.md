@@ -36,13 +36,13 @@ Once you have downloaded the tutorial files, double-click the *Tutorials-DIS-MIB
 
    1. After selecting the MIB file, click *Load files* to start the loading process.
 
-1. Go to the *MIB Tree* tab, and explore the MIB Tree by identifying the newly added parameters (i.e. "1.3.6.1.4.1.9999").
+1. Go to the *MIB Tree* tab, and explore the MIB Tree by identifying the newly added parameters (i.e., "1.3.6.1.4.1.9999").
 
 1. Generate a parameter:
 
    1. Find the *cpuLoad* parameter in the MIB Tree.
 
-   1. Drag and drop it into the connector (i.e. *protocol.xml*) to see how the parameter details are automatically filled.
+   1. Drag and drop it into the connector (i.e., *protocol.xml*) to see how the parameter details are automatically filled.
 
 1. Generate parameters in bulk:
 

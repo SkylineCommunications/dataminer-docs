@@ -7,7 +7,7 @@ uid: Linking_a_shape_to_a_booking
 It is possible to link a shape to a booking using a **Reservation** shape data field.
 
 > [!NOTE]
-> If a parent shape has *Reservation* shape data and a child shape has fields linked to the same booking (e.g. *Info* shape data, shape text placeholders), the child shape will also become a reservation shape linked to the same booking.
+> If a parent shape has *Reservation* shape data and a child shape has fields linked to the same booking (e.g., *Info* shape data, shape text placeholders), the child shape will also become a reservation shape linked to the same booking.
 
 ## Basic shape data field configuration
 
@@ -15,9 +15,9 @@ Specify a **Reservation** shape data field and set it to one of the following va
 
 - The GUID of the booking
 
-- A dynamic placeholder, e.g. *\[pagevar:SelectedReservation\]*
+- A dynamic placeholder, e.g., *\[pagevar:SelectedReservation\]*
 
-- A service name, service ID or placeholder referring to a service, e.g. *\[this service\]*. In that case, the *ReservationID* property of the service will be used.
+- A service name, service ID or placeholder referring to a service, e.g., *\[this service\]*. In that case, the *ReservationID* property of the service will be used.
 
 ## Placeholders
 
@@ -77,7 +77,7 @@ The following placeholders can be used in the text displayed on the *Reservation
 
   This placeholder supports the same options as the *\[Elapsed Time\]* placeholder.
 
-- Placeholders referring to **custom booking properties**, in the format \[*PropertyName*\], e.g. *\[Class\]*.
+- Placeholders referring to **custom booking properties**, in the format \[*PropertyName*\], e.g., *\[Class\]*.
 
 ## Making the booking shape display booking information
 

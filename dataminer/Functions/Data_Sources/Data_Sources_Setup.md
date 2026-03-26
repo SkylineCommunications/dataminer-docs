@@ -33,7 +33,7 @@ To do so:
 
 1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *DxMs* page.
 
-1. Locate the node (i.e. the DMA) you want to install the DxMs on.
+1. Locate the node (i.e., the DMA) you want to install the DxMs on.
 
    - Next to the *Data API* module, click *Deploy* to start the automatic installation process.
 

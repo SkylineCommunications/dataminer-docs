@@ -29,7 +29,7 @@ The discovery process will now be performed more efficiently, even when a large 
 
 #### Setup wizard: Support for DMAs using HTTPS \[ID 22231\]
 
-In order to support HTTPS, when the IDP solution is set up, the provisioning API now binds by default to the hostname of the hosting server instead of to localhost. In addition, the IDP Discovery element, IDP app and Rack Layout Manager element are now configured from the setup wizard to use the same settings as the provisioning API, i.e. the URI, HTTP/HTTPS and port.
+In order to support HTTPS, when the IDP solution is set up, the provisioning API now binds by default to the hostname of the hosting server instead of to localhost. In addition, the IDP Discovery element, IDP app and Rack Layout Manager element are now configured from the setup wizard to use the same settings as the provisioning API, i.e., the URI, HTTP/HTTPS and port.
 
 ### Fixes
 

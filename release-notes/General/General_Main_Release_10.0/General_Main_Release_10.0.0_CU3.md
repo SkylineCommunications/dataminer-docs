@@ -118,7 +118,7 @@ Up to now, when the hosting agent of an element or service could not be found, a
 
 When you select a routed output in the Router Control app, the crosspoints. the IO button and the tab item(s) of the corresponding button will all be highlighted.
 
-Now, this highlighting feature is also supported in a dynamic environment, i.e. when working with linked pages.
+Now, this highlighting feature is also supported in a dynamic environment, i.e., when working with linked pages.
 
 #### DataMiner.xml: XML namespace now set during DataMiner installation \[ID 26011\]
 
@@ -184,7 +184,7 @@ A number of small fixes have been made, including the following:
 
 #### DataMiner Cube - Visual Overview: Problem with session variables used by the Resource Manager timeline component \[ID 25718\]
 
-In some cases, certain session variables used by the Resource Manager timeline component (e.g. YAxisResources) would not work properly when the page contained a setvar shape but no initvar action.
+In some cases, certain session variables used by the Resource Manager timeline component (e.g., YAxisResources) would not work properly when the page contained a setvar shape but no initvar action.
 
 #### DataMiner Cube: Properties window of service or view would show incorrect Visio file extension \[ID 25760\]
 

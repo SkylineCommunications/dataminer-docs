@@ -15,7 +15,7 @@ Use this method to retrieve the rows of a table parameter that match the specifi
 | elementID | Integer | The element ID. |
 | parameterID | Integer | The parameter ID. |
 | includeCells | Boolean | If true, all column values will be included in the result. If false, only the primary key and the display key will be included. |
-| filters | Array of string | The list of table row filters.<br>You can specify standard DataMiner filters. If you specify e.g. "value=105 == test", the result will only contain the rows of which the value of the table column with parameter ID 150 equals "test". Multiple filters can be combined with semicolons (;) as separators.<br>For more information, see [Filters](#filters) below. |
+| filters | Array of string | The list of table row filters.<br>You can specify standard DataMiner filters. If you specify e.g., "value=105 == test", the result will only contain the rows of which the value of the table column with parameter ID 150 equals "test". Multiple filters can be combined with semicolons (;) as separators.<br>For more information, see [Filters](#filters) below. |
 
 ### Filters
 

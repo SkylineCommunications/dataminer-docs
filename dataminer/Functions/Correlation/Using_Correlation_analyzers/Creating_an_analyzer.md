@@ -4,7 +4,7 @@ uid: Creating_an_analyzer
 
 # Creating an analyzer
 
-There are two ways to create a Correlation analyzer:
+There are two ways to create a correlation analyzer:
 
 - In the *Analyzers* tab of the *Correlation* module, click the *Add analyzer* button.
 

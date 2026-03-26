@@ -13,18 +13,18 @@ The content and screenshots for this tutorial were created in DataMiner version 
 
 ## Overview
 
-- [Step 1: Create the Automation script](#step-1-create-the-automation-script)
+- [Step 1: Create the automation script](#step-1-create-the-automation-script)
 - [Step 2: Create an API token](#step-2-create-an-api-token)
 - [Step 3: Create the API definition](#step-3-create-the-api-definition)
 - [Step 4: Trigger the API using Postman](#step-4-trigger-the-api-using-postman)
 
-## Step 1: Create the Automation script
+## Step 1: Create the automation script
 
-To develop this new API script, you can use the Automation script solution from the [hello world tutorial](xref:UD_APIs_Hello_world_tutorial#step-1-create-an-automation-script-solution). Make sure you have this solution open in Visual Studio. You will need a new script project to develop this new API.
+To develop this new API script, you can use the automation script solution from the [hello world tutorial](xref:UD_APIs_Hello_world_tutorial#step-1-create-an-automation-script-solution). Make sure you have this solution open in Visual Studio. You will need a new script project to develop this new API.
 
 1. In Visual Studio, right-click the solution at the top of the *Solution Explorer*, and select *Add* > *New DataMiner Automation Script*.
 
-   ![Visual Studio add new Automation script solution](~/dataminer/images/UDAPIS_Tutorials_Elements_Add_New_Script.jpg)
+   ![Visual Studio add new automation script solution](~/dataminer/images/UDAPIS_Tutorials_Elements_Add_New_Script.jpg)
 
 1. In the dialog, enter the name "ElementsAPI".
 
@@ -102,7 +102,7 @@ To use JSON, you will need to include the Newtonsoft.Json NuGet package.
 > [!NOTE]
 > You could also use the built-in parameter conversion instead of doing the JSON deserialization within this script. This could be a simpler approach if you are less familiar with it. To find out more, see [User input data](xref:UD_APIs_Define_New_API#user-input-data).
 
-To convert (i.e. deserialize) the input JSON to data that can be used in the script, you will have to define a class that contains all the input data that is expected. In this case, the input would look like this:
+To convert (i.e., deserialize) the input JSON to data that can be used in the script, you will have to define a class that contains all the input data that is expected. In this case, the input would look like this:
 
 ```json
 {
@@ -173,7 +173,7 @@ To access the API, you will need an [API token](xref:UD_APIs_Objects_ApiToken). 
 
    ![Create API token](~/dataminer/images/UDAPIS_Tutorials_Elements_Create_API_Token_Name.png)
 
-1. Copy the generated secret to a safe location (e.g. a password manager).
+1. Copy the generated secret to a safe location (e.g., a password manager).
 
    ![Create API secret](~/dataminer/images/UDAPIS_Tutorials_Elements_Create_API_Token_Secret.png)
 
@@ -186,7 +186,7 @@ The next step is to create an API definition that ties the token and script toge
 
 1. Open the *Automation* module in DataMiner Cube.
 
-1. Open the *ElementsAPI* Automation script.
+1. Open the *ElementsAPI* automation script.
 
 1. At the bottom of the screen, click the *Configure API* button.
 
@@ -245,4 +245,4 @@ The API is now ready to be tested using an API testing app like Postman. If you 
 
    ![Postman UI response](~/dataminer/images/UDAPIS_Tutorials_Elements_Postman_Response.jpg)
 
-This is only a simple example of what can be done using the input and output functionality of a user-defined API. Numerous extensions could be made. For example, a list of alarm levels could be provided in the input, or a flag (i.e. bool property) could be added to the response that indicates whether there are more elements than the provided limit.
+This is only a simple example of what can be done using the input and output functionality of a user-defined API. Numerous extensions could be made. For example, a list of alarm levels could be provided in the input, or a flag (i.e., bool property) could be added to the response that indicates whether there are more elements than the provided limit.

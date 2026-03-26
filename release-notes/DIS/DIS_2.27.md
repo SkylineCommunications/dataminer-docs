@@ -110,4 +110,4 @@ Since the introduction of solution-based protocols in DIS 2.26, specifying an ab
 
 #### Validator: Checking the QAction@triggers attribute could result in a false positive \[ID 26036\]
 
-Checking the QAction@triggers attribute could result in a false positive when the attribute contained an ID of a general parameter (i.e. an ID greater than 65,000).
+Checking the QAction@triggers attribute could result in a false positive when the attribute contained an ID of a general parameter (i.e., an ID greater than 65,000).

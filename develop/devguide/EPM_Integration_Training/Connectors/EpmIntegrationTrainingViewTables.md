@@ -74,7 +74,7 @@ In the example above, the information found in table 8000 is mapped to a view ta
 </ArrayOptions>
 ```
 
-You can see that all of the columns map to columns in the local table, i.e. view column 8501 maps to local column 8001, view column 8502 maps to local column 8002, etc.
+You can see that all of the columns map to columns in the local table, i.e., view column 8501 maps to local column 8001, view column 8502 maps to local column 8002, etc.
 
 Using the *directView* option, a subscription is made to request all information from the back-end elements in the column with parameter ID 801 containing the following IDs:
 

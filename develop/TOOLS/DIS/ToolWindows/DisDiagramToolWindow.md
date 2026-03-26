@@ -10,7 +10,7 @@ This window shows a graphical representation of a protocol. It allows you to see
 
 ![DIS Diagram tool window](~/develop/images/DisDiagramToolWindow.png)
 
-When you open the tool window, you first have to select an item to start from: a parameter, a QAction, a session, a response, a group, a trigger, an action, or a timer. You can then set the required depth (i.e. the number of items you want to have displayed starting from or ending with the item you selected), the direction (see the table below), and the type of diagram (BoundedFR, EfficientSugiyama, FR, ISOM, KK, LinLog, LeftRightTree, or TopBottomTree).
+When you open the tool window, you first have to select an item to start from: a parameter, a QAction, a session, a response, a group, a trigger, an action, or a timer. You can then set the required depth (i.e., the number of items you want to have displayed starting from or ending with the item you selected), the direction (see the table below), and the type of diagram (BoundedFR, EfficientSugiyama, FR, ISOM, KK, LinLog, LeftRightTree, or TopBottomTree).
 
 | Direction | Description |
 |-----------|-------------|

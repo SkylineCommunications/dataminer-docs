@@ -14,7 +14,7 @@ In a report URL, you can combine the following parameters to directly generate a
 | report-message  | Message                                                                     |
 | report-protocol | ProtocolName:ProtocolVersion                                                |
 | report-template | Name of the template                                                        |
-| report-title    | Title of the report (i.e. email subject)                                    |
+| report-title    | Title of the report (i.e., email subject)                                    |
 | report-view     | ViewID                                                                      |
 
 > [!NOTE]

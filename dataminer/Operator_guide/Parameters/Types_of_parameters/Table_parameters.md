@@ -14,7 +14,7 @@ Regardless of the type of table parameter, the following applies:
 
 - To the right of a table parameter, a bar with a \< icon is displayed. Click this bar to view a pane with details of the row selected in the table.
 
-- To quickly **copy a table parameter** to a different application, e.g. Microsoft Outlook or Excel, right-click the table and select *Copy table*. If the table contains any hidden columns, a dialog box will appear where you can select whether these should be included as well.
+- To quickly **copy a table parameter** to a different application, e.g., Microsoft Outlook or Excel, right-click the table and select *Copy table*. If the table contains any hidden columns, a dialog box will appear where you can select whether these should be included as well.
 
 - Columns with a **width of 0 are not displayed** by default. To display such a column, right-click the table header, and select the column in the context menu. This context menu also allows you to hide columns in the same manner.
 
@@ -41,7 +41,7 @@ Users can select the tab-delimited text, copy it to the Windows clipboard, and p
 
 ## Dynamic tables
 
-A dynamic table is a special type of parameter that is used to visualize and manage large data tables (e.g. SNMP tables).
+A dynamic table is a special type of parameter that is used to visualize and manage large data tables (e.g., SNMP tables).
 
 Every column in a dynamic table is a parameter in itself. Cells in a column can be referenced by index.
 

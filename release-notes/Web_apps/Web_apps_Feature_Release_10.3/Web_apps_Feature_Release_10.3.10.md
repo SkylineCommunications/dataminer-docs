@@ -47,7 +47,7 @@ In addition, other settings found on the *Layout* tab have been rearranged. The 
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-A new *Stepper* component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
+A new *Stepper* component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e., a DOM instance or DOM definition that contains states) as data input.
 
 For more information on how to configure this component, see [Stepper](xref:DashboardStepper).
 
@@ -65,7 +65,7 @@ The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is 
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
+In all web apps (e.g., Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
 #### Security enhancements [ID 37047] [ID 37051] [ID 37068] [ID 37086]
 
@@ -107,7 +107,7 @@ This has been fixed. The display value will remain "NaN", but the raw value will
 
 In a low-code app, the form to create a new DOM instance would incorrectly display the sections that were not linked to the initial state.
 
-When a value was set for one of the fields in those sections, saving the new DOM instance would result in a error stating `Instance contains unknown fields for the current state`.
+When a value was set for one of the fields in those sections, saving the new DOM instance would result in an error stating `Instance contains unknown fields for the current state`.
 
 From now on, sections that are not linked to the initial state will no longer be displayed.
 
@@ -168,7 +168,7 @@ In some cases, it could occur that the *Copy embed URL* right-click option of a 
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
-In the Monitoring app, it could occur that Visual Overview parameter control shapes configured to show a filtered combo box control (i.e. with *SetVarOptions* set to *Control=FilterComboBox*) were not displayed correctly.
+In the Monitoring app, it could occur that Visual Overview parameter control shapes configured to show a filtered combo box control (i.e., with *SetVarOptions* set to *Control=FilterComboBox*) were not displayed correctly.
 
 #### GQI: Missing column statistics for discrete options of numeric columns [ID 37111]
 

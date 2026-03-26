@@ -28,7 +28,7 @@ To access the DataMiner landing page:
 
    > [!NOTE]
    >
-   > - If you are trying to use the remote access URL (e.g. `https://ziine-skyline.on.dataminer.services/root/`) to access the web apps, make sure you have been granted [remote access](xref:About_Remote_Access).
+   > - If you are trying to use the remote access URL (e.g., `https://ziine-skyline.on.dataminer.services/root/`) to access the web apps, make sure you have been granted [remote access](xref:About_Remote_Access).
    > - System Administrators can [configure whether the landing page is displayed](xref:Configuring_the_landing_page#configuring-whether-the-landing-page-is-displayed) or whether the Monitoring app opens directly when a user browses to a DMA. If the Monitoring app opens directly, you can access the other web apps by clicking the icon in the top-left corner.
 
 1. Sign in using your DataMiner credentials.
@@ -61,7 +61,7 @@ The landing page header bar contains the following items, from left to right:
 
 - User button: A button with the initials or an image of the current user. Click this button to open a menu that provides access to the following options:
 
-  - *About*: Displays information about DataMiner and your installed versions, e.g. web version and server version.
+  - *About*: Displays information about DataMiner and your installed versions, e.g., web version and server version.
 
   - *User settings*: Allows you to configure user-specific settings such as [customizing the landing page theme](#customizing-the-landing-page-theme) or changing your password. The user settings will only be available if at least one of the following conditions is met:
 

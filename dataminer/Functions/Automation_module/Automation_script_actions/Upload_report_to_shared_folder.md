@@ -34,7 +34,7 @@ Use this action to upload a report to a shared network folder:
 
 ### Example 1
 
-User *Admin* wants their Automation script to generate a PDF for dashboard *My Test Dashboard* and upload it to shared folder *WebFileManager* of server *node-2be94e4abd-z* (UNC path: `\\node-2be94e4abd-z\WebFileManager`).
+User *Admin* wants their automation script to generate a PDF for dashboard *My Test Dashboard* and upload it to shared folder *WebFileManager* of server *node-2be94e4abd-z* (UNC path: `\\node-2be94e4abd-z\WebFileManager`).
 
 ![Example 1 configuration](~/dataminer/images/Upload_to_shared_folder1.png)<br>
 *Configuration in DataMiner Cube 10.6.2*

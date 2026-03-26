@@ -65,6 +65,6 @@ This subdirectory contains the following files:
 
 ### Local/Failover/Offload
 
-These three subdirectories are used for pushing data to the database. They contain subfolders that refer to database tables (e.g. “alarm” or “data123”).
+These three subdirectories are used for pushing data to the database. They contain subfolders that refer to database tables (e.g., “alarm” or “data123”).
 
 Each of them can contain files like “2010_11_10_09_22_28_6348_210.dat” or “2010_11_10_09_22_28_6348_210.sql”, ready to be inserted into either the general or the offload database, or ready to be forwarded to the backup DMA (in case of Failover).

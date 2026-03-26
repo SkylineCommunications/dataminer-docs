@@ -8,7 +8,7 @@ uid: ColumnOptionOptionsOverview
 
 <!-- RN 19658 -->
 
-EPM tables often contain dummy items, i.e. virtual items that merely act as a link between two actual items. Using this option, it is possible to hide these dummy items in EPM diagrams and EPM filters.
+EPM tables often contain dummy items, i.e., virtual items that merely act as a link between two actual items. Using this option, it is possible to hide these dummy items in EPM diagrams and EPM filters.
 
 To be able to mark items as dummy items in a particular EPM table, add an extra column of type "double", and specify the "CPEDummyColumn" option in its column definition, as illustrated in the following example:
 
@@ -112,7 +112,7 @@ Example:
 
 If you specify this option, you specify that the column has to indicate the alarm state of the element that is referred to by a particular row.
 
-The value of the cell should be the ID of the element in the format "DMA ID/element ID"(e.g. "169/22").
+The value of the cell should be the ID of the element in the format "DMA ID/element ID"(e.g., "169/22").
 
 ## displayServiceAlarm
 
@@ -120,7 +120,7 @@ The value of the cell should be the ID of the element in the format "DMA ID/elem
 
 If you specify this option, you specify that the column has to indicate the alarm state of the service that is referred to by a particular row.
 
-The value of the cell should be the ID of the service in the format "DMA ID/service ID"(e.g. "169/22").
+The value of the cell should be the ID of the service in the format "DMA ID/service ID"(e.g., "169/22").
 
 Example:
 
@@ -199,7 +199,7 @@ When the disableHistogram option is used in an EPM user interface, the button to
 
 When dynamic positioning is used, it is possible to dynamically set the interfaces of each dynamically positioned element.
 
-1. In the protocol, go to the definition of the table that contains the positioning data, and add an extra column named e.g. "InterfaceData" next to the XPos and YPos columns. In the ColumnOptions tag of this additional column, add the "dynamicData" option.
+1. In the protocol, go to the definition of the table that contains the positioning data, and add an extra column named e.g., "InterfaceData" next to the XPos and YPos columns. In the ColumnOptions tag of this additional column, add the "dynamicData" option.
 1. In the subshapes that represent the interfaces in Visio, add a shape data field of type Interface, and set its value to [Dynamic:InterfaceName].
 
   Example: [Dynamic:input1]
@@ -224,7 +224,7 @@ If you specify this option, the DataMiner ID and Element ID of the Dynamic Virtu
 
 ## foreignKey
 
-A special kind of indexColumn, i.e. the parameter ID of the table containing the primary keys referred to in this column.
+A special kind of indexColumn, i.e., the parameter ID of the table containing the primary keys referred to in this column.
 
 > [!NOTE]
 > The foreign key is automatically saved in the database. For more info about persistent data in tables, see [Persisting tables](xref:AdvancedDataMinerDataPersistencePersistingTables).

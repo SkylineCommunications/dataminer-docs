@@ -8,7 +8,7 @@ uid: PA_Creating_resource_tasks
 > When resource management is not required, use script tasks instead of resource tasks if at all possible. Resource tasks are significantly more difficult to implement and maintain.
 
 > [!NOTE]
-> Resource tasks need to be designed in such a way that their execution does not exceed the default Automation script timeout time of 15 minutes.
+> Resource tasks need to be designed in such a way that their execution does not exceed the default automation script timeout time of 15 minutes.
 
 1. In the *Profiles* module, define the **input parameters** required for the resource task to execute.
 
@@ -18,7 +18,7 @@ uid: PA_Creating_resource_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the parameter, e.g. "Ping - IP Address".
+      - **Name**: The name of the parameter, e.g., "Ping - IP Address".
 
       - **Type**: Set to *Text*.
 
@@ -32,7 +32,7 @@ uid: PA_Creating_resource_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the parameter, e.g. "Ping - Result".
+      - **Name**: The name of the parameter, e.g., "Ping - Result".
 
       - **Type**: Depends on the parameter. For example:
 
@@ -70,14 +70,14 @@ uid: PA_Creating_resource_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the profile definition, e.g. "PING IP"
+      - **Name**: The name of the profile definition, e.g., "PING IP"
 
       - **Parameters**: Add your previously created input and output parameters.
 
    1. Save all changes.
 
       > [!NOTE]
-      > A reference is dynamically generated: e.g. bd625869-cb7a-472c-b834-bd4cba993705 (not visible in the UI)
+      > A reference is dynamically generated: e.g., bd625869-cb7a-472c-b834-bd4cba993705 (not visible in the UI)
 
 1. Implement a protocol containing all the logic for the resource task, and create an element based on that protocol.
 
@@ -123,7 +123,7 @@ uid: PA_Creating_resource_tasks
       </Function>
       ```
 
-      This could e.g. result in the following *function.xml* getting generated for the “Ping IP” resource task:
+      This could e.g., result in the following *function.xml* getting generated for the “Ping IP” resource task:
 
       ```xml
       <Functions xmlns="http://www.skyline.be/config/functions">
@@ -156,7 +156,7 @@ uid: PA_Creating_resource_tasks
 
    ![Functions_File](~/dataminer/images/Functions_File.png)
 
-1. Create an Automation script based on the *PA_ProfileLoadDomTemplate* script, which is added to the DataMiner System when Process Automation is deployed. In the script:
+1. Create an automation script based on the *PA_ProfileLoadDomTemplate* script, which is added to the DataMiner System when Process Automation is deployed. In the script:
 
    1. Instantiate the *PaProfileLoadDomHelper*.
 
@@ -219,7 +219,7 @@ uid: PA_Creating_resource_tasks
 
    1. Select *global* in the overview on the left and select *Add*.
 
-   1. Give your pool a name, e.g. "PING IP".
+   1. Give your pool a name, e.g., "PING IP".
 
    1. Select your newly created resource pool in the overview on the left, go to the *Properties* tab, and add the following pool property:
 
@@ -235,9 +235,9 @@ uid: PA_Creating_resource_tasks
 
    1. In the *Device* tab, specify the following information:
 
-      - **Function**: Choose your previously defined function, e.g. "PING IP".
+      - **Function**: Choose your previously defined function, e.g., "PING IP".
 
-      - **Link element**: Specify the element you created earlier, e.g. "PING 01".
+      - **Link element**: Specify the element you created earlier, e.g., "PING 01".
 
       - **Instance**: <Element>
 

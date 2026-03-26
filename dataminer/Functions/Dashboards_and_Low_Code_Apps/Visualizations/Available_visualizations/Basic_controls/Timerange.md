@@ -44,15 +44,15 @@ To configure the component:
 
    - *Granularity*: Available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 42082-->. Determines the level of detail required when setting a time range:
 
-     - *Date & time* (default): Both dates and times must be specified for the start and end times, e.g. `05/02/2025 12:05 to 06/02/2025 13:15`. The start and end times cannot be identical.
+     - *Date & time* (default): Both dates and times must be specified for the start and end times, e.g., `05/02/2025 12:05 to 06/02/2025 13:15`. The start and end times cannot be identical.
 
-     - *Date*: Only the dates must be specified for the start and end times, e.g. `05/02/2025 to 06/02/2025`. If the same date  is entered for both the start and end time, the time range will cover the full 24 hours (from midnight to midnight).
+     - *Date*: Only the dates must be specified for the start and end times, e.g., `05/02/2025 to 06/02/2025`. If the same date  is entered for both the start and end time, the time range will cover the full 24 hours (from midnight to midnight).
 
    - *Emit value on*: Available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 42082-->. Determines when the time range entered in the input box becomes available as data. This can be when the user presses Enter ("Enter"), when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change"). If you select *Focus lost*, the value will also become available when the user presses Enter.
 
    - *Edit using*: Available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 42082-->. Determines how the time range can be modified:
 
-     - *Keyboard & calendar*: Allows you to enter a custom time range manually in the input box (format: `DD/MM/YYYY HH:MM`) or select one using the calender interface, which you can access by clicking the ![Calendar](~/dataminer/images/Calendar_Icon.png) icon.
+     - *Keyboard & calendar*: Allows you to enter a custom time range manually in the input box (format: `DD/MM/YYYY HH:MM`) or select one using the calendar interface, which you can access by clicking the ![Calendar](~/dataminer/images/Calendar_Icon.png) icon.
 
      - *Calendar*: Allows you to set a custom time range only by clicking the ![Calendar](~/dataminer/images/Calendar_Icon.png) icon and selecting the dates in the calendar interface.
 

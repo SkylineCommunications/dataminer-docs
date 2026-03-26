@@ -15,14 +15,14 @@ For more information on this feature, see [AlarmLevelLink](xref:Protocol.AlarmLe
 
 ## The use case
 
-The goal of the example described below is to collect the aggregated alarm severities from different DataMiner elements that interact with data sources (i.e. data source elements).
+The goal of the example described below is to collect the aggregated alarm severities from different DataMiner elements that interact with data sources (i.e., data source elements).
 
 The data source elements have two tables:
 
 - Service Table (parameter ID = 1100).
 - Alarm Table, containing the current alarms for each service in the Service Table (parameter ID = 1200).
 
-The result of this is shown in an overview DataMiner element that does not interact with any data source (i.e. the overview element).
+The result of this is shown in an overview DataMiner element that does not interact with any data source (i.e., the overview element).
 
 The overview element must display:
 

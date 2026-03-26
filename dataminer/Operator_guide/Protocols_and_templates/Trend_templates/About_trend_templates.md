@@ -27,7 +27,7 @@ In a trend template, you can define both the scope and the type of the trend inf
     > [!NOTE]
     >
     > - In case of average trending, the DMS not only stores the average value for a particular time slot, but also the minimum and maximum value detected in that same time slot.
-    > - Average trend values and values of parameters with average type “sum” are only calculated for the current runtime of the element. Values measured during the same trend interval, but in a previous runtime of the element (e.g. after an element or DataMiner restart) are not taken into account.
+    > - Average trend values and values of parameters with average type “sum” are only calculated for the current runtime of the element. Values measured during the same trend interval, but in a previous runtime of the element (e.g., after an element or DataMiner restart) are not taken into account.
 
 > [!TIP]
 > See also: [Trending](xref:trending)

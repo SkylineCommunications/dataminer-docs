@@ -186,7 +186,7 @@ See the example below, showing how this can be configured in the *DB.xml* file.
 
 In a video thumbnail URL, you can now specify an authorization header in an "auth=" option when requesting a thumbnail image from a video server using type "Generic Images".
 
-This option has to be used when the video server expects an authentication token (e.g. OAuth2).
+This option has to be used when the video server expects an authentication token (e.g., OAuth2).
 
 > [!NOTE]
 >
@@ -208,7 +208,7 @@ When a Failover Agent claims or releases a virtual IP address, the following Pow
 
 #### Elasticsearch: Multicluster offload \[ID 28295\]\[ID 28384\]\[ID 28473\]
 
-It is now possible to have data offloaded to multiple Elasticsearch clusters, i.e. a main cluster and a number of replicated clusters.
+It is now possible to have data offloaded to multiple Elasticsearch clusters, i.e., a main cluster and a number of replicated clusters.
 
 Read actions are sent to the main cluster only, while write, delete and other modifying actions are sent to the main cluster as well as to all replicated clusters.
 
@@ -227,7 +227,7 @@ At DataMiner startup, when the *DBConfiguration.xml* file exists and an Elastics
 
 #### Message throttling configuration in MaintenanceSettings.xml \[ID 28335\] \[ID 32426\]
 
-It is now possible to fine-tune message throttling, i.e. a mechanism that avoids an excessive number of parameter update messages getting sent to a client at the same time, using the following settings in *MaintenanceSettings.xml*:
+It is now possible to fine-tune message throttling, i.e., a mechanism that avoids an excessive number of parameter update messages getting sent to a client at the same time, using the following settings in *MaintenanceSettings.xml*:
 
 - *MessageThrottlingThreshold*: Time interval in ms. The default and minimum value is 250. If two updates for the same parameter are received within this interval, message throttling is activated. The first of the parameter updates is sent immediately, but messages for the same parameter that come after this are throttled until no more parameter updates have been received for this same time interval. Once the throttling has stopped, the last update is also sent after at most this time interval.
 
@@ -264,11 +264,11 @@ alarm.dma_id.element_id.pid.row_key
 Example: alarm.162.951.102.AMP33_SLC
 
 > [!NOTE]
-> Currently, the alarm only contains the IDs of the views containing the parent object of the alarm (e.g. element, service, etc.). It does not yet contain the IDs of the views containing all the parents of that parent object.
+> Currently, the alarm only contains the IDs of the views containing the parent object of the alarm (e.g., element, service, etc.). It does not yet contain the IDs of the views containing all the parents of that parent object.
 
 #### Failover: Connecting to the online Agent using a DNS record with 2 IP addresses \[ID 28634\]
 
-It is now possible to connect to the online Agent in a Failover setup when that setup only has a single DNS record containing 2 IP addresses (i.e. one for the online agent and one for the offline agent).
+It is now possible to connect to the online Agent in a Failover setup when that setup only has a single DNS record containing 2 IP addresses (i.e., one for the online agent and one for the offline agent).
 
 #### Deletion history of services and service templates \[ID 28664\]
 
@@ -299,8 +299,8 @@ The following improvements have been implemented to average trending:
 
 - Because of improved performance and throughput, you will now be able to activate average trending for a larger number of parameters.
 - Previously, average trending was discouraged in case there were a lot of different instances of a specific parameter. This is no longer the case. You can now use average trending even if millions of instances of the parameter are polled.
-- Unexpected gaps in trend graphs, e.g. because an element is started or stopped, or because a parameter is cleared, will now be prevented.
-- Issues with history sets not being averaged, e.g. when an element had been recently restarted, will now be prevented.
+- Unexpected gaps in trend graphs, e.g., because an element is started or stopped, or because a parameter is cleared, will now be prevented.
+- Issues with history sets not being averaged, e.g., when an element had been recently restarted, will now be prevented.
 - Average data will be available more quickly. When parameter changes are averaged from 00:00:00 to 00:05:00, the average point is now guaranteed to become available in the database between 00:06:00 and 00:07:00, while previously this could take up to 5 minutes or longer. However, note that this does not apply if the parameter changes were pushed as a history set.
 
 However, note that this results in a number of breaking changes:
@@ -329,7 +329,7 @@ The last column indicates the changes that have been made to these status points
 | -4 | Element is going into a timeout state. | OK |
 | -5 | Element is coming out of a timeout state. | OK |
 | -6 | Element is being stopped. | OK |
-| -7 | A state and a display value (e.g. “No signal”) was received (separated by a semicolon). | OK |
+| -7 | A state and a display value (e.g., “No signal”) was received (separated by a semicolon). | OK |
 | -8 | A normal value was received following a “-7”. | OK |
 | -9 | Trending was started for the specified parameter. | UNKNOWN |
 | -10 | Trending was stopped for the specified parameter. | OK |
@@ -358,7 +358,7 @@ With the improved average trending, enabling short average trend data does not g
 
 Before the changes introduced with this release note, the intervals between two average trend points are practically always constant.
 
-This means that now, in cases where trend exports are generated and a fixed interval is expected, e.g. when exporting the 5-minute average trending points, this could be an issue. However, to handle such cases where fixed intervals are required, a [legacy trend data exporter tool](xref:Legacy_Trend_Data_Exporter) is available.
+This means that now, in cases where trend exports are generated and a fixed interval is expected, e.g., when exporting the 5-minute average trending points, this could be an issue. However, to handle such cases where fixed intervals are required, a [legacy trend data exporter tool](xref:Legacy_Trend_Data_Exporter) is available.
 
 ##### Protocol-defined exception values
 
@@ -475,11 +475,11 @@ To add a service property, add the following \<item> tag inside the \<value> tag
 
 The LogHelper API now has a FlushToDatabaseAfterUpsert option.
 
-- If you set this option to true (i.e. the default setting), the LogHelper will wait for the database to respond after writing log entries to the database.
+- If you set this option to true (i.e., the default setting), the LogHelper will wait for the database to respond after writing log entries to the database.
 - If you set this option to false, the LogHelper will not wait for the database to respond after writing log entries to the database.
 
 > [!NOTE]
-> If you set this option to false, there are no guarantees that all log entries will get stored in the database, especially in case of e.g. connection issues or exceptions.
+> If you set this option to false, there are no guarantees that all log entries will get stored in the database, especially in case of e.g., connection issues or exceptions.
 
 #### Masked alarms will no longer be automatically unmasked when cleared \[ID 29007\]\[ID 29138\]
 
@@ -534,7 +534,7 @@ When you set up a Failover system using a shared hostname, in IIS, a URL Rewrite
 
 #### External alarms can now also have general alarm properties \[ID 29231\]
 
-External alarms (e.g. anomaly detection alarms, etc.) can now also have general alarm properties such as “System Name” or “System Type”.
+External alarms (e.g., anomaly detection alarms, etc.) can now also have general alarm properties such as “System Name” or “System Type”.
 
 > [!NOTE]
 > DataMiner automatically evaluates and populates the “System Name” and “System Type” alarm properties. If you want external alarms to overwrite the values in those properties, make sure new property values are passed along with those external alarms.
@@ -557,11 +557,11 @@ On MySQL and Microsoft SQL Server databases, the alarm table now has an extra fi
 > [!NOTE]
 >
 > - This change will cause a small increase in latency when retrieving alarms from the database.
-> - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an Automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
+> - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
 
 #### SimulationHelper API now allows loading, enabling and disabling element simulations at runtime \[ID 29517\]
 
-Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at runtime from within protocol QActions or Automation scripts.
+Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at runtime from within protocol QActions or automation scripts.
 
 Construction:
 
@@ -587,7 +587,7 @@ SimulationHelper(Func<DMSMessage[], DMSMessage[]> messageHandler)
     void DisableSimulation(int hostingDataMinerId, int dataMinerId, int elementId)
     ```
 
-Example of how to use this in an Automation script:
+Example of how to use this in an automation script:
 
 ```csharp
 var simulationHelper = new SimulationHelper(Engine.SLNet.SendMessages);

@@ -72,7 +72,7 @@ Overall error handling has been improved when saving and loading crosspoints of 
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->
 
-When configuring a redundancy group to use an Automation script, previously it could occur that placeholders were rejected as valid input for dummies. An existing element had to be selected first before it was possible to switch to the placeholder. The redundancy group configuration validation has now been improved so that placeholders will immediately be accepted as valid input.
+When configuring a redundancy group to use an automation script, previously it could occur that placeholders were rejected as valid input for dummies. An existing element had to be selected first before it was possible to switch to the placeholder. The redundancy group configuration validation has now been improved so that placeholders will immediately be accepted as valid input.
 
 #### No expander shown for General Parameters pages on element card [ID 43480]
 

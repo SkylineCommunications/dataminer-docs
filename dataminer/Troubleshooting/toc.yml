@@ -2,8 +2,6 @@ items:
   - name: Error messages
     topicUid: ErrorMessages
     items:
-      - name: An error occurred in the application you were using
-        topicUid: An_error_occurred_in_the_application_you_were_using
       - name: Could not load type Maps.DataMinerMap
         topicUid: Could_not_load_type_Maps_DataMinerMap
       - name: Could not load Visio file
@@ -58,8 +56,6 @@ items:
         topicUid: Thread_problem_in_x
       - name: Timed out while flushing events from x
         topicUid: Timed_out_while_flushing_events
-      - name: Unknown Error
-        topicUid: Unknown_Error
   - name: Logging
     items:
       - name: Monitoring real-time communication between a DMA and an element
@@ -136,7 +132,7 @@ items:
                     items:
                       - name: SLNet - startup issues
                         topicUid: Troubleshooting_SLNet_Startup
-                      - name: SLNet - correlation engine
+                      - name: SLNet - Correlation engine
                         topicUid: Troubleshooting_SLNet_Correlation_Engine
                       - name: SLNet - disconnects
                         topicUid: Troubleshooting_SLNet_Disconnects
@@ -262,16 +258,12 @@ items:
     items:
       - name: Current issues
         items:
-          - name: DataMiner Web and GQI crash briefly during startup
-            topicUid: KI_DataMiner_Web_and_GQI_crash_briefly_during_startup
+          - name: GQI DxM unavailable because of missing Newtonsoft.Json assembly
+            topicUid: KI_GQI_DxM_unavailable_missing_Newtonsoft_Json
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
             topicUid: KI_profile_manager_fails_after_rollback
-          - name: gRPC-connected Cube not responding when Automation module is used
-            topicUid: KI_gRPC_connected_Cube_stuck_when_using_Automation
           - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
             topicUid: KI_Upgrade_fails_VerifyGRPCConnection_prerequisite
-          - name: DataMiner startup issue with one or more DcMs not running
-            topicUid: KI_Startup_issue_DcM_not_running
           - name: User locked out after single failed login attempt
             topicUid: KI_user_locked_out_after_single_failed_attempt
           - name: SLProtocol crash when restarting elements used by enhanced services
@@ -292,7 +284,7 @@ items:
             topicUid: KI_Restart_loop_when_Elasticsearch_unavailable
           - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
             topicUid: KI_Win2012R2_ignores_IP_in_SAN_field
-          - name: Various SLElement issues
+          - name: SLElement issues caused by parameter name overrides
             topicUid: KI_SLElement_issues_caused_by_parameter_name_overrides
           - name: NATS not starting if DMS name contains special characters
             topicUid: KI_NATS_not_starting_special_chars
@@ -306,6 +298,16 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: gRPC-connected Cube not responding when Automation module is used
+            topicUid: KI_gRPC_connected_Cube_stuck_when_using_Automation
+          - name: DataMiner startup issue with one or more DcMs not running
+            topicUid: KI_Startup_issue_DcM_not_running
+          - name: Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated
+            topicUid: KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged
+          - name: DataMiner Web and GQI crash briefly during startup
+            topicUid: KI_DataMiner_Web_and_GQI_crash_briefly_during_startup
+          - name: SLNet handle leak caused by SAML authentication and SLHelper startup
+            topicUid: KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup
           - name: Possible overbooking in SRM
             topicUid: KI_Possible_overbooking_in_SRM
           - name: SLDataGateway issue caused by OpenSearch health monitoring
@@ -350,7 +352,7 @@ items:
             topicUid: KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3
           - name: Failed getting progress notices during upgrade
             topicUid: KI_SLNetIPC_Errors_During_Upgrade
-          - name: SLAutomation memory leak when Automation script runs
+          - name: SLAutomation memory leak when automation script runs
             topicUid: KI_Automation_Memory_leak_when_executing_scripts
           - name: DCOMConfig flagged as virus causing upgrade issues
             topicUid: KI_DCOMConfig_flagged_as_virus
@@ -360,7 +362,7 @@ items:
             topicUid: KI_SAML_with_automatic_groups
           - name: SLScripting crash when using JScript QActions
             topicUid: KI_SLScripting_crash_JScript_QActions
-          - name: Unable to configure dashboards for 'Email' actions in Automation scripts, scheduled tasks, and Correlation rules
+          - name: Unable to configure dashboards for 'Email' actions in automation scripts, scheduled tasks, and correlation rules
             topicUid: KI_Unable_to_configure_dashboards_included_in_email_actions
           - name: Cube displays incorrect offload configuration for real-time trending data
             topicUid: KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data
@@ -454,10 +456,6 @@ items:
             topicUid: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
           - name: Vertical text in Visual Overview not displayed correctly
             topicUid: KI_Visual_Overview_Vertical_Text_no_longer_working
-          - name: Excessive SLElement CPU usage during Cassandra Cluster migration
-            topicUid: KI_SLElement_CPU_high_during_CC_migration
-          - name: SLElement memory leak during Cassandra Cluster migration
-            topicUid: KI_SLElement_CPU_memory_leak_during_CC_migration
           - name: Offload to MySQL offload database fails
             topicUid: KI_offload_database_incorrect_integer_value
           - name: Cassandra backups no longer working
@@ -466,8 +464,6 @@ items:
             topicUid: KI_RTEs_NATS_reconfiguration
           - name: Default NATS port is already in use
             topicUid: KI_NATS_port_9090
-          - name: RTEs caused by problem when updating alarm templates
-            topicUid: KI_RTEs_Alarm_Template_Issue
           - name: Inaccessible logger table data in Elasticsearch because of incorrect casing
             topicUid: KI_Inaccessible_data_Elasticsearch_casing
           - name: Activities and scripts delayed because of CheckVIPs thread
@@ -484,46 +480,18 @@ items:
             topicUid: Year_2038_Problem_for_Cassandra
           - name: Null reference exceptions in SLDBConnection.txt and unhandled exception in Alarm Console
             topicUid: KI_NullReferenceException_SLDBConnection
-          - name: SLProtocol timer thread runtime error
-            topicUid: KI_SLProtocol_timer_thread_RTE
           - name: SLNet deadlock on DMA startup
             topicUid: KI_SLNet_deadlock_on_startup
           - name: Stable trend points not kept alive
             topicUid: KI_stable_trend_points_not_kept_alive
           - name: Missing 1-day average trending records
             topicUid: KI_missing_avg_trending
-          - name: Memory leak in SLNet threads
-            topicUid: KI_SLNet_thread_leak
           - name: SLAutomation memory leak when Engine.AddScriptOutput is used
             topicUid: KI_SLAutomation_memory_leak_AddScriptOutput
-          - name: SLNet issues due to SPI obfuscation
-            topicUid: KI_SLNet_issue_SPI_obfuscation
-          - name: Various SLElement issues
-            topicUid: KI_SLElement_various_resolved_issues
-          - name: SLLog issue when large alarm tree is closed
-            topicUid: KI_SLLog_issue_when_large_alarm_tree_is_closed
           - name: Element data lost after migrating elements in Cassandra Cluster setup
             topicUid: KI_element_data_loss_after_migration_in_CC_setup
-          - name: SLDataGateway memory leak during Cassandra Cluster migration
-            topicUid: KI_SLDataGateway_leak_during_CC_migration
-          - name: SLProtocol memory leak when HTTP connectors are used
-            topicUid: KI_SLProtocol_memory_leak_HTTP
           - name: Data from Elasticsearch cluster with IPv6 addresses offloaded to files
             topicUid: KI_Elasticsearch_IPv6
-          - name: Increased CPU load and degraded performance because of excessive number of SPI events
-            topicUid: Excessive_SPI_events_causing_CPU_load
-          - name: SLDataGateway memory leak
-            topicUid: KI_SLDataGateway_memory_leak
-          - name: Taskbar Utility performance issue while agents are being upgraded
-            topicUid: KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded
-          - name: SLDMS Hosting Agent cache issue
-            topicUid: KI_SLDMS_hosting_agent_cache_issue
-          - name: Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database
-            topicUid: KI_Closed_alarms_migrated_too_slowly
-          - name: SNMP polling issues in case protocol contains wildcards in parameter OIDs
-            topicUid: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
-          - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
-            topicUid: KI_RTE_with_SLAnalytics_when_upgrading
           - name: Shapes in DataMiner stencils not found in Visio search
             topicUid: KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search
           - name: SLDataMiner addressChangeThread RTE after DMA startup

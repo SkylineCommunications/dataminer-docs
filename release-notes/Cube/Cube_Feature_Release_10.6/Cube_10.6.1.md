@@ -93,7 +93,7 @@ In the `TargetClientRequestMessage`, which is used by DataMiner Cube to request 
 
 <!-- MR 10.4.0 [CU22] / 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
 
-When, while editing an Automation script, you changed the *Wait for positive result for at most* option of an *If* condition, up to now, the *Save script* button would incorrectly remain disabled, preventing you from saving the script. The *Save script* button would only be enabled after you had made another change to the script.
+When, while editing an automation script, you changed the *Wait for positive result for at most* option of an *If* condition, up to now, the *Save script* button would incorrectly remain disabled, preventing you from saving the script. The *Save script* button would only be enabled after you had made another change to the script.
 
 Also, up to now, it would incorrectly be possible to save a script to which you added an If block without any conditions. From now on, the *Add condition* selection box will have a red border until you add a condition.
 

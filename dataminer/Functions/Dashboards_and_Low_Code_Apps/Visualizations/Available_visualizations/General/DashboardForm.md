@@ -6,7 +6,7 @@ uid: DashboardForm
 
 Available from DataMiner 10.3.6/10.4.0 onwards.<!-- RN 36124 --> To use this visualization, you need to have at least one [DOM](xref:DOM) module defined in your DMS.
 
-![Form](~/dataminer/images/Form.png)<br>*Form component in DataMiner 10.4.6*
+![Form component displaying editable input fields with labels and submission buttons in a DataMiner low-code app](~/dataminer/images/Form.png)<br>*Form component in DataMiner 10.4.6*
 
 This visualization takes an object manager instance or object manager definition as data input and displays it as a form:
 
@@ -26,7 +26,7 @@ In a low-code app, this component will also make a number of [component actions]
 
 Please note the following:
 
-- Saving an empty field value for a DOM instance is only supported from DataMiner 10.3.8/10.4.0 onwards<!-- RN 36276 -->. Prior to this, you can only empty a DOM field value using an Automation script. See [Altering values of a DomInstance - examples](xref:DOM_Altering_values_of_a_DomInstance).
+- Saving an empty field value for a DOM instance is only supported from DataMiner 10.3.8/10.4.0 onwards<!-- RN 36276 -->. Prior to this, you can only empty a DOM field value using an automation script. See [Altering values of a DomInstance - examples](xref:DOM_Altering_values_of_a_DomInstance).
 
 - The `GroupFieldDescriptor` and `UserFieldDescriptor` [field descriptors](xref:DOM_SectionDefinition#fielddescriptor) are supported as a dropdown list in the form component from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36556 -->. Fields defined as `GroupFieldDescriptor` will display the group name and use that same group name as value. Fields defined as `UserFieldDescriptor` will display the full name of the user, but will store the user name as value. When the field descriptor defines any group names, the dropdown list will only include the users belonging to those groups.
 

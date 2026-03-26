@@ -68,7 +68,7 @@ Start by adding all code-based content into a Visual Studio solution:
 
    1. Click *Create*.
 
-1. Add a first DataMiner Automation script project:
+1. Add a first DataMiner automation script project:
 
    1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
 
@@ -82,7 +82,7 @@ Start by adding all code-based content into a Visual Studio solution:
 
    1. Click *Create*.
 
-1. Add a second DataMiner Automation script project:
+1. Add a second DataMiner automation script project:
 
    1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
 
@@ -104,7 +104,7 @@ In this step, you will focus on the way to specify what needs to be in the packa
 
    1. Right-click the solution and select *Save As Solution Filter*.
 
-   1. Specify a name (e.g. `TutorialPackage1.slnf`).
+   1. Specify a name (e.g., `TutorialPackage1.slnf`).
 
 1. Create a solution filter for TutorialPackage2:
 
@@ -114,7 +114,7 @@ In this step, you will focus on the way to specify what needs to be in the packa
 
    1. Right-click the solution and select *Save As Solution Filter*.
 
-   1. Specify a name (e.g. `TutorialPackage2.slnf`).
+   1. Specify a name (e.g., `TutorialPackage2.slnf`).
 
 1. Update the package project for TutorialPackage1:
 
@@ -198,7 +198,7 @@ With this setup, any push with new content (including the initial creation) to t
 
 1. Search for the name of your package.
 
-   By default, this is your Visual Studio project name (e.g. *TutorialPackage*).
+   By default, this is your Visual Studio project name (e.g., *TutorialPackage*).
 
 1. Go to the *VERSIONS* tab.
 

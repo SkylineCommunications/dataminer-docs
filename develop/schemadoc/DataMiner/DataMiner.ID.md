@@ -4,7 +4,7 @@ uid: DataMiner.ID
 
 # ID element
 
-Specifies information about the ID ranges to be used for e.g. view creation.
+Specifies information about the ID ranges to be used for e.g., view creation.
 
 This information allows multiple DataMiner Agents to create views at the same time, without creating conflicts.
 

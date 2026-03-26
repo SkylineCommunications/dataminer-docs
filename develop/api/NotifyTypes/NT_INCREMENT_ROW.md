@@ -25,7 +25,7 @@ object[] result = (object[])protocol.NotifyProtocol(293 /*NT_INCREMENT_ROW*/, ro
 
 ## Return Value
 
-- object[]): Array containing the resulting values for every cell that was updated (i.e. where rowValues[i] was not set to null).
+- object[]): Array containing the resulting values for every cell that was updated (i.e., where rowValues[i] was not set to null).
 
 ## Remarks
 

@@ -14,9 +14,13 @@ To learn how to create a dashboard, you can follow the steps below or watch this
 
 <br>
 
-1. On the home page, select *Add* > *Dashboard* in the top-right corner. Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44222-->, select *Start with a new blank dashboard*.
+1. On the home page, in the top-right corner, click the downward arrow next to *Add* and select *Dashboard*. Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44222-->, select *Start with a new blank dashboard*.
+
+   ![Add new dashboard](~/dataminer/images/Add_new_dashboard.png)<br>*Dashboards app in DataMiner 10.6.3*
 
    Alternatively, if you want to add a dashboard to a specific folder, right-click the folder in the sidebar to the left and select *Add* > *Dashboard* or *Create dashboard* (prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44222-->).
+
+   ![Add dashboard to folder](~/dataminer/images/Add_dashboard_to_folder.png)<br>*Dashboards app in DataMiner 10.6.3*
 
 1. Enter the name of the dashboard.
 

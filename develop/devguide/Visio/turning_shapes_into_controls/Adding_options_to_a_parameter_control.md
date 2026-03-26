@@ -23,7 +23,7 @@ Option|Option|...
 
 ### Checkbox
 
-If certain types of parameters are displayed as a "Lite" parameter, you can use this option to display a checkbox. This is the case for toggle button parameters that represent a boolean value (i.e. 0 and 1) and for hybrid parameters:
+If certain types of parameters are displayed as a "Lite" parameter, you can use this option to display a checkbox. This is the case for toggle button parameters that represent a boolean value (i.e., 0 and 1) and for hybrid parameters:
 
 - For a toggle button parameter, the parameter will be displayed as a checkbox in Visual Overview. If the parameter does not yet have a value, the checkbox will be displayed as unchecked.
 - For a hybrid parameter, a checkbox will be displayed in Visual Overview that can be cleared to set the parameter to the exception value, or selected to set the parameter to any normal value.
@@ -55,7 +55,7 @@ When you have turned a shape into a table control that displays a direct view ta
 
 When displaying a table parameter in Visio, use this option to specify a client-side row filter.
 
-Use the same syntax as in a filter box (e.g. in the top-right corner of a card).
+Use the same syntax as in a filter box (e.g., in the top-right corner of a card).
 
 If, for example, you set **ParameterControlOptions** to "ClientSideRowFilter:Name:abc", the table will only display rows of which the "Name" column contains "abc".
 
@@ -226,7 +226,7 @@ TableRowFilter:FULLFILTER=(PK == 0) OR (DK == 1)
 > - In the "TableRowFilter" and "IncludedPIDs" options, you can use placeholders like "\[Param:...\]", "\[Var:...\]", etc. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 > - To specify a client-side filter for a table parameter, use the "ClientSideRowFilter" option instead: [ClientSideRowFilter](#clientsiderowfilter).
 > - Strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
-> - Note that semicolons are not supported in the fullfilter syntax unless you specify that a different separator than a semicolon applies for the filter (see [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)). E.g. "\[sep:;£\]TableRowFilter:FULLFILTER=(PK == a;b) OR (DK == 1)"
+> - Note that semicolons are not supported in the fullfilter syntax unless you specify that a different separator than a semicolon applies for the filter (see [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)). Example: "\[sep:;£\]TableRowFilter:FULLFILTER=(PK == a;b) OR (DK == 1)"
 
 ### LedBar
 
@@ -292,17 +292,17 @@ To do so, specify "TitleFont:", followed by one or more of the following font op
 
 | Option             | Description                                                                        |
 | ------------------ | ---------------------------------------------------------------------------------- |
-| Family=            | Name of the font (e.g. "Arial")                                                    |
-| Size=              | Pixel size of the font (e.g. "18")                                                 |
+| Family=            | Name of the font (e.g., "Arial")                                                    |
+| Size=              | Pixel size of the font (e.g., "18")                                                 |
 | Stretch=           | "Normal", "Condensed", or "Expanded"                                               |
-| Weight=            | Weight of the font (e.g. "Bold")                                                   |
-| Style=             | Style of the font (e.g. "Italic", "Oblique")                                       |
+| Weight=            | Weight of the font (e.g., "Bold")                                                   |
+| Style=             | Style of the font (e.g., "Italic", "Oblique")                                       |
 | Underline          | Text is underlined                                                                 |
 | BaseLine           | Text is underlined, but the line is closer to the text than when using "Underline" |
 | StrikeThrough      | Text has a line drawn through it                                                   |
 | Overline           | Text has a line drawn above it                                                     |
-| TextFormattingMode | Formatting mode (e.g. "Ideal", "Display")                                          |
-| TextRenderingMode  | Rendering mode (e.g. "Auto", "Aliased", "Grayscale", "ClearType")                  |
+| TextFormattingMode | Formatting mode (e.g., "Ideal", "Display")                                          |
+| TextRenderingMode  | Rendering mode (e.g., "Auto", "Aliased", "Grayscale", "ClearType")                  |
 
 Example:
 
@@ -325,17 +325,17 @@ To do so, specify "ValueFont:", followed by one or more of the following font op
 
 | Option             | Description                                                                        |
 | ------------------ | ---------------------------------------------------------------------------------- |
-| Family=            | Name of the font (e.g. "Arial")                                                    |
-| Size=              | Pixel size of the font (e.g. "18")                                                 |
+| Family=            | Name of the font (e.g., "Arial")                                                    |
+| Size=              | Pixel size of the font (e.g., "18")                                                 |
 | Stretch=           | "Normal", "Condensed", or "Expanded"                                               |
-| Weight=            | Weight of the font (e.g. "Bold")                                                   |
-| Style=             | Style of the font (e.g. "Italic", "Oblique")                                       |
+| Weight=            | Weight of the font (e.g., "Bold")                                                   |
+| Style=             | Style of the font (e.g., "Italic", "Oblique")                                       |
 | Underline          | Text is underlined                                                                 |
 | BaseLine           | Text is underlined, but the line is closer to the text than when using "Underline" |
 | StrikeThrough      | Text has a line drawn through it                                                   |
 | Overline           | Text has a line drawn above it                                                     |
-| TextFormattingMode | Formatting mode (e.g. "Ideal", "Display")                                          |
-| TextRenderingMode  | Rendering mode (e.g. "Auto", "Aliased", "Grayscale", "ClearType")                  |
+| TextFormattingMode | Formatting mode (e.g., "Ideal", "Display")                                          |
+| TextRenderingMode  | Rendering mode (e.g., "Auto", "Aliased", "Grayscale", "ClearType")                  |
 
 Example:
 

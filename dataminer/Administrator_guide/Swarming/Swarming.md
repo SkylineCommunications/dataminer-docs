@@ -10,7 +10,7 @@ With the Swarming feature, you can easily **swarm DataMiner objects from one Dat
 
 Swarming can be useful in many situations:
 
-- As a System Administrator, you can **eliminate downtime** resulting from maintenance activities for a more polished user experience, by carrying out the maintenance activities (e.g. Windows updates) on a live cluster, Agent by Agent, by temporarily moving functionalities away to other Agents in the cluster.
+- As a System Administrator, you can **eliminate downtime** resulting from maintenance activities for a more polished user experience, by carrying out the maintenance activities (e.g., Windows updates) on a live cluster, Agent by Agent, by temporarily moving functionalities away to other Agents in the cluster.
 
   ![Maintenance without downtime](~/dataminer/images/Swarming_maintenance.png)
 
@@ -41,7 +41,6 @@ At present, swarming is mainly supported for [basic elements](xref:SwarmingEleme
 
 In addition, we are working on adding the following functionality soon:
 
-- Support for data offloads in Swarming-enabled systems.
 - Support for swarming services.
 - Support for swarming of special elements: SLA elements, enhanced services, spectrum elements, redundancy group elements, EPM elements, and elements with element connections.
 - Support for automatic switchover of elements in case issues are detected.

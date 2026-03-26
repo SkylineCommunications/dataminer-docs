@@ -18,7 +18,7 @@ By default, Cassandra communicates with clients over an insecure channel, which 
 
 Cassandra achieves its encryption by relying on TLS (the successor of SSL). TLS relies on certificates to create a secure communication channel. To enable TLS, you will need to obtain a certificate for each Cassandra node.
 
-There are **two options**: you can create a so-called **self-signed certificate**, or you can purchase one from a **trusted public certification authority** (e.g. Comodo, Digicert, etc.). Self-signed certificates are free of charge but are not automatically trusted by browsers or other clients. Purchased certificates will cost some money but are typically already trusted by most operating systems and browsers. If you decide to deploy purchased certificates, skip the section about generating the certificates below and go directly to [Configuring the client_encryption_options](#configuring-the-client_encryption_options).
+There are **two options**: you can create a so-called **self-signed certificate**, or you can purchase one from a **trusted public certification authority** (e.g., Comodo, Digicert, etc.). Self-signed certificates are free of charge but are not automatically trusted by browsers or other clients. Purchased certificates will cost some money but are typically already trusted by most operating systems and browsers. If you decide to deploy purchased certificates, skip the section about generating the certificates below and go directly to [Configuring the client_encryption_options](#configuring-the-client_encryption_options).
 
 ## Generating the certificates
 

@@ -14,7 +14,7 @@ uid: General_Feature_Release_10.0.2_new_features
 
 #### DataMiner Indexing \[ID 13370\]\[ID 13406\]\[ID 13504\]\[ID 13571\]\[ID 13623\] \[ID 13622\]\[ID 13629\]\[ID 13695\]\[ID 13769\]\[ID 13912\]\[ID 14001\]\[ID 14038\] \[ID 16287\]\[ID 16896\]\[ID 16915\]\[ID 16935\]\[ID 16959\]\[ID 17081\]\[ID 17166\] \[ID 17328\]\[ID 17851\]\[ID 18562\]\[ID 18714\]\[ID 19337\]\[ID 19437\]\[ID 19443\] \[ID 19691\]\[ID 20373\]\[ID 20845\]\[ID 20998\]\[ID 21205\]\[ID 21257\]\[ID 21634\] \[ID 22378\]\[ID 22927\]\[ID 23049\]\[ID 23998\]\[ID 24054\]\[ID 24158\]
 
-On DataMiner Agents running Cassandra, it is possible to install a dedicated indexing database (e.g. Elasticsearch). If this so-called Indexing Engine is installed, new search features will now become available in the Alarm Console. Additional features are also being developed that will make use of the Indexing Engine in the future.
+On DataMiner Agents running Cassandra, it is possible to install a dedicated indexing database (e.g., Elasticsearch). If this so-called Indexing Engine is installed, new search features will now become available in the Alarm Console. Additional features are also being developed that will make use of the Indexing Engine in the future.
 
 ##### Indexing system requirements
 
@@ -171,7 +171,7 @@ GetIndexCountRequest<LoggerTableData> message = new GetIndexCountRequest<LoggerT
 
 #### HTML5 apps: External user authentication via SAML \[23905\]
 
-The DataMiner HTML5 apps (e.g. Dashboards, Jobs, etc.) now all support external user authentication via Security Assertion Markup Language (SAML).
+The DataMiner HTML5 apps (e.g., Dashboards, Jobs, etc.) now all support external user authentication via Security Assertion Markup Language (SAML).
 
 ### DMS Protocols
 
@@ -265,7 +265,7 @@ Any change in behavior is called a change point. At present, there are five type
 
   Examples:
 
-  - A value fluctuating around 10 (i.e. a trend slope of 0) which suddenly starts increasing 1 unit per second (i.e. a trend slope of 1).
+  - A value fluctuating around 10 (i.e., a trend slope of 0) which suddenly starts increasing 1 unit per second (i.e., a trend slope of 1).
   - A value fluctuating around a line with slope 1 which suddenly starts fluctuating around a line with slope -1.
 
 - **Unlabeled change**: If a change point cannot be classified as one of the above-mentioned change points, it is considered an unlabeled change.
@@ -274,7 +274,7 @@ Any change in behavior is called a change point. At present, there are five type
 
 Some change points are more significant or unexpected than others. The stranger the current change point is compared to past change points, the higher its significance will be.
 
-Of every new change point, its significance is calculated based on its characteristics (change point type, direction, absolute or relative change size, etc.), taking into account the parameter's change point history of the last month. The change points that are considered the most significant, i.e. the most “surprising”, are labeled “anomalous”.
+Of every new change point, its significance is calculated based on its characteristics (change point type, direction, absolute or relative change size, etc.), taking into account the parameter's change point history of the last month. The change points that are considered the most significant, i.e., the most “surprising”, are labeled “anomalous”.
 
 Level shifts which are higher or which have a different direction than previous recent jumps, or which jump to a previously unseen level, will typically be labeled “anomalous”. Similarly, trend or variance changes will be labeled “anomalous” when no earlier trend or variance changes in the same direction appeared during the last weeks.
 
@@ -286,7 +286,7 @@ On a trend graph, a change point is indicated by a bar below the graph. The leng
 
 When you hover the mouse pointer over a change point bar, a semi-transparent ribbon will appear over the entire height of the trend graph, showing more information about the change point.
 
-Labels of change points of type “trend change” will indicate the level of increase or decrease in seconds, minutes, hours or days depending on the value. If, for example, the value increases by 0.01 per second (i.e. 0.6 per minute, 36 per hour or 864 per day), the label will show an increase of 36 per hour as it is the smallest amount greater than 1.
+Labels of change points of type “trend change” will indicate the level of increase or decrease in seconds, minutes, hours or days depending on the value. If, for example, the value increases by 0.01 per second (i.e., 0.6 per minute, 36 per hour or 864 per day), the label will show an increase of 36 per hour as it is the smallest amount greater than 1.
 
 ##### Trend state icons next to parameters in DATA pages
 
@@ -361,7 +361,7 @@ To enable TLS, do the following on every DataMiner Agent in a DataMiner System c
 
 > [!NOTE]
 >
-> - DataMiner currently supports all TLS versions up to TLS 1.3 (i.e. all TLS versions supported by OpenSSL 1.1.1). It will negotiate the highest supported TLS version with the client. If the client supports TLS up to version 1.2, DataMiner will use version 1.2.
+> - DataMiner currently supports all TLS versions up to TLS 1.3 (i.e., all TLS versions supported by OpenSSL 1.1.1). It will negotiate the highest supported TLS version with the client. If the client supports TLS up to version 1.2, DataMiner will use version 1.2.
 > - PFX files are not synchronized among the agents in a cluster.
 > - When, on a DataMiner Agent, you replace a PKCS12 file, then all elements using the TCP/IP port in question have to be stopped and restarted for the changes to take effect.
 > - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
@@ -431,7 +431,7 @@ The focus score that is assigned to an alarm is a combination of likelihood, fre
 > [!NOTE]
 >
 > - Currently, every DataMiner Agent is responsible for calculating the focus scores of the alarms it is hosting.
-> - Currently, no focus score is assigned to the following types of alarms: Correlation alarms, external alarms and information events. By default, those alarms are assigned a focus score equal to null.
+> - Currently, no focus score is assigned to the following types of alarms: correlation alarms, external alarms and information events. By default, those alarms are assigned a focus score equal to null.
 
 ##### New column in Alarm Console: Focus
 
@@ -587,7 +587,7 @@ Example:
 
 Up to now, it was only possible to display a page of a Visio file associated with an object linked to a shape. To have a page named “Details” of a Visio file associated with an element named “MyElement” displayed in a separate window, for example, you had to add two data items to a shape: one of type *Element* set to “MyElement”, and one of type *VdxPage* set to “Details\|Window”.
 
-From now on, it is also possible to display a page from the current Visio file by only adding a single data item of type *VdxPage* to a shape, without any reference to an element, view or service. This will allow you to also display Visio pages when a shape is linked to e.g. an alarm. See the following example:
+From now on, it is also possible to display a page from the current Visio file by only adding a single data item of type *VdxPage* to a shape, without any reference to an element, view or service. This will allow you to also display Visio pages when a shape is linked to, for example, an alarm. See the following example:
 
 | Shape data field | Value           |
 |------------------|-----------------|
@@ -639,7 +639,7 @@ The header, sidebar and login screen of the Dashboards app have now been adapted
 
 #### Dashboards app: New 'Clear all' action + settings to pin actions \[ID 24356\]
 
-In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g. the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
+In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g., the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
 
 If a dashboard contains at least one feed, a new *Clear all* action is now available in the dashboard header, which can be used to clear the selection of the feeds in the dashboard.
 
@@ -704,9 +704,9 @@ scriptOptions.InheritScriptOutput = true;
 scriptOptions.StartScript();
 ```
 
-#### Interactive Automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
+#### Interactive automation scripts: Uploading files from a client computer \[ID 23950\]\[ID 24144\]\[ID 24164\]
 
-In an interactive Automation script, it is now possible to upload files from a client computer.
+In an interactive automation script, it is now possible to upload files from a client computer.
 
 To allow users to do so, you need to add a file selector control to the script in the following manner:
 
@@ -723,13 +723,13 @@ UIResults results = engine.ShowUI(uiBuilder);
 string uploadedFilePath = results.GetUploadedFilePath("varUserUploadedFile");
 ```
 
-When you have selected a file, the actual upload will only start after you click a button to make the script continue (e.g. Close, Next, etc.). Once the upload has started, a *Cancel* option will appear, allowing you to abort the upload operation.
+When you have selected a file, the actual upload will only start after you click a button to make the script continue (e.g., Close, Next, etc.). Once the upload has started, a *Cancel* option will appear, allowing you to abort the upload operation.
 
 All files uploaded by users will by default be placed in the `C:\Skyline DataMiner\TempDocuments` folder, which is automatically cleared at every DataMiner startup.
 
 #### New engine.UnsetFlag method to clear runtime flags \[ID 23961\]
 
-In an Automation script, you can now use the engine.UnsetFlag method to clear the following runtime flags:
+In an automation script, you can now use the engine.UnsetFlag method to clear the following runtime flags:
 
 - RunTimeFlags.AllowUndef
 - RunTimeFlags.NoInformationEvents
@@ -805,7 +805,7 @@ The header and login screen of the Jobs app have now been adapted to the new Dat
 
 When you open a browser window and enter the IP address or host name of a DataMiner Agent, you are now directed to a new DataMiner landing page (“/root”).
 
-After signing in, you will be presented with a list of apps (e.g. Monitoring, Dashboards, etc.).
+After signing in, you will be presented with a list of apps (e.g., Monitoring, Dashboards, etc.).
 
 Clicking the user menu in the upper-right corner will allow you to open the Tools page, the About page and DataMiner Help.
 
@@ -821,7 +821,7 @@ When you have successfully migrated all booking data, the button to start the wi
 
 > [!NOTE]
 >
-> - After migrating the booking data to the Indexing database, make sure to check your Automation scripts and Visio files and adjust the booking property names where necessary.
+> - After migrating the booking data to the Indexing database, make sure to check your automation scripts and Visio files and adjust the booking property names where necessary.
 > - When configuring backup settings in the *Backup* section of *System Center*, a new *Include SRM in backup* option is now available under the *Create a backup of the database* option. Select this option if you want the booking data in the Indexing database to be included in the backup package.
 > - An Indexing database takes about twice as much disk space to store booking data compared to a Cassandra database.
 > - A number of methods in the ServiceManagerHelper and ResourceManagerHelper classes have been adapted to allow them to manage booking data stored in an Indexing database.

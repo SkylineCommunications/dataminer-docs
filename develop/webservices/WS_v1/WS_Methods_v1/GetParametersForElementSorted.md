@@ -7,7 +7,7 @@ uid: GetParametersForElementSorted
 Use this method to retrieve a specific number of element parameters.
 
 > [!NOTE]
-> Using this method, you can e.g. request element parameters in batches in order to minimize loading time.
+> Using this method, you can e.g., request element parameters in batches in order to minimize loading time.
 
 ## Input
 

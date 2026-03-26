@@ -38,7 +38,7 @@ Expected duration: 5 minutes
 
 ## Step 2: Configure static web components
 
-1. Go to your DataMiner landing page (e.g. <https://myDataMiner/root/>), and click the *Web component tutorial* low-code app.
+1. Go to your DataMiner landing page (e.g., <https://myDataMiner/root/>), and click the *Web component tutorial* low-code app.
 
 1. Go to [edit mode](xref:Editing_custom_apps).
 

@@ -39,4 +39,4 @@ If you use self-managed storage instead of the recommended [Storage as a Service
 
   Taking a backup of a system using Elasticsearch is not possible if no backup path has been specified. See [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups).
 
-  If the backup settings for DataMiner Indexing (i.e. Elasticsearch) have been changed, all Elasticsearch nodes need to be restarted, which may take some time. During this time, no backups can be taken.
+  If the backup settings for DataMiner Indexing (i.e., Elasticsearch) have been changed, all Elasticsearch nodes need to be restarted, which may take some time. During this time, no backups can be taken.

@@ -115,7 +115,7 @@ When configuring an SNMP manager, you can now add the polling IP address as a cu
 
 #### SLWatchDog would not log error messages when it failed to generate or clear alarm events \[ID 28435\]
 
-When SLWatchDog was creating or clearing alarm events (e.g. alarm events reporting runtime errors), no error messages would be logged when a request to create or clear an alarm event failed. From now on, those errors will be logged in SLWatchDog2.txt.
+When SLWatchDog was creating or clearing alarm events (e.g., alarm events reporting runtime errors), no error messages would be logged when a request to create or clear an alarm event failed. From now on, those errors will be logged in SLWatchDog2.txt.
 
 #### DataMiner Cube - Resources app: Problem when adding, updating or deleting a resource \[ID 28438\]
 

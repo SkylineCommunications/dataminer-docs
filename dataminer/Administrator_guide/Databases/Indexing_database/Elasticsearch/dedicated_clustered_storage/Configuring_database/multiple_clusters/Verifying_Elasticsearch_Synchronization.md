@@ -43,7 +43,7 @@ uid: Verifying_Elasticsearch_Synchronization
 
 - **Elasticsearch API**
 
-  1. Enter `[IPADDRESS]:9200/_cat/indices?v&s=index:desc` in your browser's address bar; e.g. `1.2.3.4:9200/_cat/indices?v&s=index:desc`.
+  1. Enter `[IPADDRESS]:9200/_cat/indices?v&s=index:desc` in your browser's address bar; e.g., `1.2.3.4:9200/_cat/indices?v&s=index:desc`.
 
      ![Indices](~/dataminer/images/Retrieve_Order_Indices.png)
 
@@ -60,7 +60,7 @@ uid: Verifying_Elasticsearch_Synchronization
 
 Data loss can occur because of factors like packet loss while being transported toward the database. This can cause slight differences in the document count. Therefore, it is important to not expect the document count to be 100% identical.
 
-The number of differences that is allowed depends on several things, e.g. the place where these differences occur. A suggest index can be absent and not pose a significant threat to the system. However, an active-alarms index or an index that holds data for your SRM app may not be expendable. See [Index types](#index-types).
+The number of differences that is allowed depends on several things, e.g., the place where these differences occur. A suggest index can be absent and not pose a significant threat to the system. However, an active-alarms index or an index that holds data for your SRM app may not be expendable. See [Index types](#index-types).
 
 ### Index types
 
@@ -135,7 +135,7 @@ This is an overview of the different indices and the functionalities they are re
 
 ### Elasticsearch API
 
-1. Enter `[IPADDRESS]:9200/_cat/indices?v&s=index:desc` in your browser's address bar, e.g. `1.2.3.4:9200/_cat/indices?v&s=index:desc`.
+1. Enter `[IPADDRESS]:9200/_cat/indices?v&s=index:desc` in your browser's address bar, e.g., `1.2.3.4:9200/_cat/indices?v&s=index:desc`.
 
 1. Ensure that the `store.size` and `docs.count` have a similar number.
 

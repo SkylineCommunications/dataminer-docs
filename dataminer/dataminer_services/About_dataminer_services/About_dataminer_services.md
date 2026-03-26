@@ -20,7 +20,7 @@ The [dataminer.services home page](xref:dataminer_services_home_page) is availab
 
 <br>
 
-For more information on how to connect to dataminer.services (i.e. connect to the cloud), see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+For more information on how to connect to dataminer.services (i.e., connect to the cloud), see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 > [!TIP]
 > For information about the security of dataminer.services, see [Cloud connectivity and security](xref:Cloud_connectivity_and_security).

@@ -7,11 +7,81 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.3.8
+
+#### Enhancement - Improved scaling for parameter and table cell monitors [ID 41602]
+
+When used with **DataMiner 10.5.0/10.5.1** or higher, parameter, table cell, and table column monitors now have enhanced scaling, allowing **more monitors to be active simultaneously**.
+
+> [!IMPORTANT]
+> This enhancement is only available when the library is used with DataMiner 10.5.0/10.5.1 or higher.<!-- RN 41256 -->
+
+#### New feature - New table column monitor added [ID 44034]
+
+A new table column monitor has been added.
+
+> [!IMPORTANT]
+> This new monitor can only be used from DataMiner 10.5.0/10.5.1 onwards.<!-- RN 41256 -->
+
+Example usage:
+
+```csharp
+IDmsElement element = dms.GetElement("MyElement");
+
+const int InterfaceTableId = 100;
+const int OperationalStatusId = 102;
+
+var table = element.GetTable(InterfaceTableId);
+var column = table.GetColumn<int>(OperationalStatusId);
+
+void OnChange(ColumnValueChange<int> change)
+{
+    foreach (KeyValuePair<string, int> cellUpdate in change.ColumnUpdates)
+    {
+        Log($"Interface {cellUpdate.Key} went {(cellUpdate.Value == 1 ? "up" : "down")}.");
+    }
+}
+
+column.StartValueMonitor(protocol, OnChange);
+```
+
+#### New feature - Service alarm level and state monitors usable outside of protocols
+
+Service monitors can now be used **outside of protocol contexts** (e.g., in Automation scripts or other external integrations), allowing you to subscribe to changes without relying on *SLProtocol*.
+
+> [!IMPORTANT]
+> These monitors create **stateful SLNet subscriptions** in the background. Subscriptions **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system and continue to consume resources.
+
+Example usage:
+
+```csharp
+IDmsService service = dms.GetService("MyService");
+
+var sourceId = Guid.NewGuid().ToString();
+
+void OnChange(ServiceAlarmLevelChange change)
+{
+    Log($"Service {service.Name} switched to state {change.State}.");
+}
+
+service.StartAlarmLevelMonitor(sourceId, OnChange);
+
+try
+{
+    // ... other logic while the monitor is running ...
+}
+finally
+{
+    // Important: stop it when you are done.
+    service.StopAlarmLevelMonitor(sourceId);
+}
+```
+
 ### 1.1.3.7
 
 #### New feature - Improved API for Scheduler [ID 44556]
 
-The Scheduler component now supports task and action configuration via builders. The `IDmsScheduler` interface includes `CreateTaskBuilder` methods to configure tasks, while `DmsSchedulerActionBuilders` provides builders for Automation scripts, Email, SMS, and Information actions.
+The Scheduler component now supports task and action configuration via builders. The `IDmsScheduler` interface includes `CreateTaskBuilder` methods to configure tasks, while `DmsSchedulerActionBuilders` provides builders for automation scripts, Email, SMS, and Information actions.
 
 The `CreateTask` and `UpdateTask` methods have been extended to support `IDmsSchedulerTask` objects, providing a strongly-typed alternative to the manual `object[]` construction.
 
@@ -69,7 +139,7 @@ var createdElement = agent.CreateElement(configuration);
 
 #### Fix - AgentId property of DmsAutomationScriptRunOptions ignored when executing a script [ID 43923]
 
-When an Automation script was executed via DmsAutomationScript, the AgentId specified in DmsAutomationScriptRunOptions was not applied when constructing the SLNet message, causing the script to run on the default/incorrect Agent. This has been corrected so that the specified AgentId is now respected.
+When an automation script was executed via DmsAutomationScript, the AgentId specified in DmsAutomationScriptRunOptions was not applied when constructing the SLNet message, causing the script to run on the default/incorrect Agent. This has been corrected so that the specified AgentId is now respected.
 
 ### 1.1.3.4
 
@@ -102,7 +172,7 @@ var isHigher = agent.IsVersionHigher(version);
 ### 1.1.3.3
 
 > [!IMPORTANT]
-> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in Automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, *IDmsTable*, and **IDmsStandaloneParameter** are supported for now. If you need monitor support elsewhere, please contact <support.boost@skyline.be> to request it.
+> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g., in automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, *IDmsTable*, and **IDmsStandaloneParameter** are supported for now. If you need monitor support elsewhere, please contact <support.boost@skyline.be> to request it.
 
 #### New feature - Added monitor methods to standalone parameter interfaces
 
@@ -118,11 +188,11 @@ The `IDmsStandaloneParameter` and `IDmsStandaloneParameter<T>` interfaces have b
 ### 1.1.3.2
 
 > [!IMPORTANT]
-> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g. in Automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, and *IDmsTable* are supported for now. If you need monitor support elsewhere, please reach out to request it.
+> In this version, **new monitors** have been added to support **usage outside of protocols** (e.g., in automation scripts or ad hoc data sources). These allow external code to subscribe to state, name, or alarm level changes without relying on SLProtocol. However, subscriptions created using these monitors **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system. Only monitors on *IDms*, *IDmsElement*, and *IDmsTable* are supported for now. If you need monitor support elsewhere, please reach out to request it.
 
 #### New feature - Monitor support for non-protocol use cases
 
-The *IDms*, *IDmsElement*, and *IDmsTable* interfaces have been extended with new `Start*Monitor` and `Stop*Monitor` methods, enabling stateful event subscriptions **outside of protocols** (e.g. in ad hoc data sources or external integrations). These are alternative APIs for monitoring DataMiner behavior in custom contexts without direct use of SLProtocol. This extension provides flexible, lightweight monitoring capabilities for many integration scenarios outside the traditional protocol-based flow.
+The *IDms*, *IDmsElement*, and *IDmsTable* interfaces have been extended with new `Start*Monitor` and `Stop*Monitor` methods, enabling stateful event subscriptions **outside of protocols** (e.g., in ad hoc data sources or external integrations). These are alternative APIs for monitoring DataMiner behavior in custom contexts without direct use of SLProtocol. This extension provides flexible, lightweight monitoring capabilities for many integration scenarios outside the traditional protocol-based flow.
 
 The following types of monitors are supported:
 
@@ -144,7 +214,7 @@ The following types of monitors are supported:
 
   - `StartValueMonitor` / `StopValueMonitor`: Supports monitoring all or filtered columns using the primary key index.
 
-Each monitor requires a *sourceId* to uniquely identify the subscription and a callback delegate (e.g. `Action<ElementStateChange>`). Subscriptions can be initiated using either a default timeout or a user-defined *TimeSpan*.
+Each monitor requires a *sourceId* to uniquely identify the subscription and a callback delegate (e.g., `Action<ElementStateChange>`). Subscriptions can be initiated using either a default timeout or a user-defined *TimeSpan*.
 
 For example, to monitor an element's alarm level and state:
 
@@ -264,7 +334,7 @@ To update the slow poll settings, create an instance of either *TimeoutCountBase
 
 #### Enhancement - Element creation with empty user name prevented for elements with SNMPv3 connection and support added for using credential library with SNMPv3 connections [ID 41805]
 
-Up to now, it was possible to create an instance of the *SnmpV3SecurityConfig* class with an empty string as user name, or a user name that only consisted of whitespace characters (e.g. spaces, tabs, newlines, etc.). As these are not valid SNMPv3 user names, there is now a check in place to verify that the user name is not one of those options. When this check fails, an *ArgumentException* is thrown, and the creation of the *SnmpV3SecurityConfig* object fails.
+Up to now, it was possible to create an instance of the *SnmpV3SecurityConfig* class with an empty string as user name, or a user name that only consisted of whitespace characters (e.g., spaces, tabs, newlines, etc.). As these are not valid SNMPv3 user names, there is now a check in place to verify that the user name is not one of those options. When this check fails, an *ArgumentException* is thrown, and the creation of the *SnmpV3SecurityConfig* object fails.
 
 This means that the following restrictions now apply for the user name:
 
@@ -318,7 +388,7 @@ The IDms interface has been extended with additional methods for retrieving an o
 - IDmsElement GetElementReference(DmsElementId dmsElementId)
 - IDmsView GetViewReference(int viewId)
 
-These methods can be used as an alternative to the *IDms.GetElement(DmsElementId)*, *IDms.GetView(int)*, and *IDms.GetAgent(int)* methods. The *IDms.GetElement(DmsElementId)*, *IDms.GetView(int)*, and *IDms.GetAgent(int)* methods will perform an SLNet call in the background to request info about the item. With the new *GetAgentReference*, *GetElementReference*, and *GetViewReference* methods, this additional SLNet call will only be called when information is requested. Therefore if you perform a set, e.g. a parameter set on an element, the *SetParameterMessage* SLNet call is performed in the background without having to request additional data from SLNet.
+These methods can be used as an alternative to the *IDms.GetElement(DmsElementId)*, *IDms.GetView(int)*, and *IDms.GetAgent(int)* methods. The *IDms.GetElement(DmsElementId)*, *IDms.GetView(int)*, and *IDms.GetAgent(int)* methods will perform an SLNet call in the background to request info about the item. With the new *GetAgentReference*, *GetElementReference*, and *GetViewReference* methods, this additional SLNet call will only be called when information is requested. Therefore if you perform a set, e.g., a parameter set on an element, the *SetParameterMessage* SLNet call is performed in the background without having to request additional data from SLNet.
 
 However, note that if you request a reference to an object that does not exist in the system by providing an invalid ID, an exception will only be thrown when a call to the server is performed. If the *IDms.GetElement(DmsElementId)*, *IDms.GetView(int)* or *IDms.GetAgent(int)* method is used, an exception will already be thrown if the Agent does not exist when the method is executed.
 
@@ -355,7 +425,7 @@ parameter.SetValue(100); // Does not check State property of the ElementInfoEven
 
 Some breaking changes have been introduced in the API with regard to exceptions that are thrown because the *State* property for an element is no longer checked before a set is executed. This means that some calls no longer throw an ElementStoppedException but instead an ElementNotFoundException or no exception at all.
 
-To see if and when an exception is thrown, refer to the documentation on the methods in the API section (e.g. [GetElement](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDma.GetElement*)).
+To see if and when an exception is thrown, refer to the documentation on the methods in the API section (e.g., [GetElement](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDma.GetElement*)).
 
 - IDmsElement.GetStandaloneParameter\<T\> no longer throws an ElementNotFoundException.
 - IDmsElement.GetTable no longer throws an ElementNotFoundException.
@@ -385,7 +455,7 @@ To see if and when an exception is thrown, refer to the documentation on the met
 Additionally, some changes have been made to the SLNet calls that are executed in the background:
 
 - When info for a single view is requested, the *GetInfo* message of type *ViewInfo* will now have the *viewId* mentioned in the *ExtraData* property of the SLNet call. If the request is sent to a DataMiner version that supports this (see [RN 41169](xref:General_Feature_Release_10.5.1#slnet-getinfo-messages-for-the-propertyconfiguration-and-viewinfo-types-now-support-retrieving-information-for-a-specific-item-id-41169)), DataMiner will only provide info in the response for that view instead of for all views.
-- When property configurations are requested, the *GetInfo* message of type *PropertyConfiguration* will now include the requested type (e.g. ELEMENT, SERVICE, or VIEW) so the response only includes the property configurations of the requested type.
+- When property configurations are requested, the *GetInfo* message of type *PropertyConfiguration* will now include the requested type (e.g., ELEMENT, SERVICE, or VIEW) so the response only includes the property configurations of the requested type.
 - The *ReferencedVersion* property of *IDmsProtocol* will now be obtained via a *GetInfo* SLNet call of type *Protocols* instead of a *GetProtocolMessage* call. Performance tests indicate that this is a less impacting call.
 
 Note that only in DataMiner versions where [RN 41169](xref:General_Feature_Release_10.5.1#slnet-getinfo-messages-for-the-propertyconfiguration-and-viewinfo-types-now-support-retrieving-information-for-a-specific-item-id-41169) is implemented, DataMiner will respond with only the requested information. If the request is made to an older DataMiner version, all info will be in the response. In that case, the class library will just filter out the needed info.
@@ -522,7 +592,7 @@ When you retrieve the local element from IDms, you can now also perform a specia
 
 #### New feature - Automation script execution enhanced with async execution and additional run flags
 
-You can now trigger the execution of an Automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g. LockElements, CheckSets, WaitWhenLocked, etc.).
+You can now trigger the execution of an automation script asynchronously. In addition, you can provide several different run options similar to the options you get when triggering a script manually (e.g., LockElements, CheckSets, WaitWhenLocked, etc.).
 
 ### 1.1.1.2
 
@@ -553,7 +623,7 @@ The latest benchmark tests, at the time of release, demonstrate that the system'
 
 #### Fix - Automation scripts failed to parse with EXE blocks other than C\#
 
-IDms can now retrieve Automation scripts that have EXE blocks that do not contain C# code.
+IDms can now retrieve automation scripts that have EXE blocks that do not contain C# code.
 
 #### New feature - Creation of service properties
 

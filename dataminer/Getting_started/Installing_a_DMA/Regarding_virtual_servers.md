@@ -8,7 +8,7 @@ The DataMiner software can be run on a virtual server as long as it has sufficie
 
 Please note the following:
 
-- For the CPU, it is mainly the PassMark that determines whether the CPU has sufficient power, rather than the number of cores. Make sure you assign enough CPU power to keep the average CPU usage under 50% and the PassMark above the minimum limit indicated above, e.g. 10000. Also, we recommend to avoid oversubscribing.
+- For the CPU, it is mainly the PassMark that determines whether the CPU has sufficient power, rather than the number of cores. Make sure you assign enough CPU power to keep the average CPU usage under 50% and the PassMark above the minimum limit indicated above, e.g., 10000. Also, we recommend to avoid oversubscribing.
 
 - As far as memory is concerned, we recommend the same minimum as indicated in the above requirements.
 

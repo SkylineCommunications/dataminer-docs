@@ -25,7 +25,7 @@ Aggregation actions are used to aggregate data from within the same element. For
 
 ## Merge actions
 
-If KPI data is located outside of the element, e.g. Network KPIs (located at the FE) aggregated from the Region KPIs (located at the BE level), then [merge](xref:LogicActionMerge) actions are used.
+If KPI data is located outside of the element, e.g., Network KPIs (located at the FE) aggregated from the Region KPIs (located at the BE level), then [merge](xref:LogicActionMerge) actions are used.
 
 These actions are an extension of aggregation actions. A merge request is sent out to multiple elements, and then the responses are "merged" together to set the table.
 

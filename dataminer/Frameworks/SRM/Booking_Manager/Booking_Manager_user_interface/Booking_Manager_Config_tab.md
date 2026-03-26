@@ -142,6 +142,8 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 - **Friendly booking reference**: Allows you to specify a user-friendly booking reference. This reference will be used in the Booking ID field in the Booking Wizard and will also be mentioned in the booking overview tables.
 
+  From SRM 1.2.36 onwards<!-- RN 39199 -->, you can disable the friendly booking reference by selecting the *Disabled* checkbox. If the friendly booking reference is not necessary for a project, it should be disabled, as it has a performance impact on booking creation.
+
 ## Lifecycle colors subtab
 
 ### Lifecycle colors settings

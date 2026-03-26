@@ -13,7 +13,7 @@ reviewer: Alexander Verkest
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>
 
-To deploy an item from the Catalog (e.g. a connector or package) to your DataMiner System, make sure the following requirements are met:
+To deploy an item from the Catalog (e.g., a connector or package) to your DataMiner System, make sure the following requirements are met:
 
 - Your DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
@@ -79,7 +79,7 @@ This page also provides a quick way to execute the call: Expand the "/api/key-ca
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the download call on the production Catalog.
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
@@ -103,7 +103,7 @@ GET
 
 When you deploy a low-code app from the Catalog, using either the UI or the API as detailed above, the **version of the app in the package will always become the active version** in the system, even if a more recent version of the same app already exists in the system.
 
-Up to 15 versions of one low-code app can exist in a system at the same time. At any given time, at most two of these versions can be active: a draft version, which is still being worked on, and a published version, i.e. a released version of the app.
+Up to 15 versions of one low-code app can exist in a system at the same time. At any given time, at most two of these versions can be active: a draft version, which is still being worked on, and a published version, i.e., a released version of the app.
 
 If you deploy a package containing a published app version, that version will always become the new active published version. If you deploy a package containing a draft version, this draft version will become the current active draft version of the app, but the active published version, if available, will not change.
 

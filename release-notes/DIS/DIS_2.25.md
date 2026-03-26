@@ -107,5 +107,5 @@ Also, in some cases, a Read parameter would get separated from its Write paramet
 A number of minor issues have been fixed:
 
 - Up to now, the table editor would incorrectly indicate the “separator” option of the ColumnOption tag as unknown.
-- In some cases, compilations errors could be thrown when running Automation scripts with automatically generated Class Library EXE blocks.
-- When, in the *Class Library* tab of the *DIS Settings* window, the *Automatically generate Class Library code* option was not selected, it would not be possible to manually generate Class Library code for Automation scripts by clicking *Code Helpers \> Generate Class Library Code* in the DIS menu.
+- In some cases, compilations errors could be thrown when running automation scripts with automatically generated Class Library EXE blocks.
+- When, in the *Class Library* tab of the *DIS Settings* window, the *Automatically generate Class Library code* option was not selected, it would not be possible to manually generate Class Library code for automation scripts by clicking *Code Helpers \> Generate Class Library Code* in the DIS menu.

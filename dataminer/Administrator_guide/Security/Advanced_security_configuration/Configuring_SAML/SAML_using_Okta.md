@@ -43,7 +43,7 @@ There are two ways to configure this setup: with or without group claims. If gro
 
    - **Single sign on URL**: The location where the SAML assertion is sent with a POST operation.
 
-     - In this box, enter IP address or the DNS name of your DataMiner System, followed by `/root/`, e.g. ``https://dataminer.example.com/root/``.
+     - In this box, enter IP address or the DNS name of your DataMiner System, followed by `/root/`, e.g., ``https://dataminer.example.com/root/``.
 
      - Select the following checkboxes:
 
@@ -89,7 +89,7 @@ There are two ways to configure this setup: with or without group claims. If gro
 
    - **Audience URI (SP Entity ID)**: The intended audience of the SAML assertion.
 
-     In this box, enter the IP address or the DNS name of your DataMiner System, e.g. ``https://dataminer.example.com/``.
+     In this box, enter the IP address or the DNS name of your DataMiner System, e.g., ``https://dataminer.example.com/``.
 
      For clusters with multiple SAML Agents, we recommend using the cluster name of your DMS here instead. Make sure this name is **unique across your Okta application integrations**.
 
@@ -132,7 +132,7 @@ There are two ways to configure this setup: with or without group claims. If gro
 
 1. In *DataMiner.xml*, configure the [ExternalAuthentication](xref:DataMiner.ExternalAuthentication) tag as detailed below:
 
-   - **When using group claims**, set the *claims* attribute of the *Groups* element to "true", and add the name of the SAML attribute that will contain the group names in the XML element (i.e. *userGroups*):
+   - **When using group claims**, set the *claims* attribute of the *Groups* element to "true", and add the name of the SAML attribute that will contain the group names in the XML element (i.e., *userGroups*):
 
      ```xml
      <DataMiner ...>
@@ -153,7 +153,7 @@ There are two ways to configure this setup: with or without group claims. If gro
      </DataMiner>
      ```
 
-   - **When not using group claims**, set the *claims* attribute of the *Groups* element to "false", and add the name of the DataMiner group into which users will be imported in the XML element (e.g. *Auto-imported users*):
+   - **When not using group claims**, set the *claims* attribute of the *Groups* element to "false", and add the name of the DataMiner group into which users will be imported in the XML element (e.g., *Auto-imported users*):
 
      ```xml
      <DataMiner ...>
@@ -187,9 +187,9 @@ There are two ways to configure this setup: with or without group claims. If gro
 
 1. In the *Actions* column of the *Active* certificate, click *View IdP metadata*.
 
-1. Save this identity provider’s metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
+1. Save this identity provider’s metadata XML file to the DataMiner Agent, e.g., `C:\Skyline DataMiner\okta-ip-metadata.xml`.
 
-1. Copy the following template to a new XML file named e.g. `C:\Skyline DataMiner\okta-sp-metadata.xml` to create the service provider’s metadata file. You can find the EntityID in the previously created file `C:\Skyline DataMiner\okta-ip-metadata.xml`.
+1. Copy the following template to a new XML file named e.g., `C:\Skyline DataMiner\okta-sp-metadata.xml` to create the service provider’s metadata file. You can find the EntityID in the previously created file `C:\Skyline DataMiner\okta-ip-metadata.xml`.
 
    From DataMiner 10.3.5 onwards:
 

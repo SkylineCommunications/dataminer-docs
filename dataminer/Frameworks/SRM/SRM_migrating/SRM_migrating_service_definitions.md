@@ -4,13 +4,13 @@ uid: SRM_migrating_service_definitions
 
 # Migrating service definitions
 
-To export and import a service definition, you can use the *SRM_ServiceDefinitionImportExport* Automation script.
+To export and import a service definition, you can use the *SRM_ServiceDefinitionImportExport* automation script.
 
 ## Exporting a service definition
 
 1. Open DataMiner cube using the *debug=true* argument. See [Arguments for DataMiner Cube](xref:Options_for_opening_DataMiner_Cube).
 
-1. Go to to the Services module, select the service definition you want to export, and copy its GUID (which is only displayed if you use the debug=true argument).
+1. Go to the Services module, select the service definition you want to export, and copy its GUID (which is only displayed if you use the debug=true argument).
 
 1. In the Automation module, execute the *SRM_ServiceDefinitionImportExport* script.
 

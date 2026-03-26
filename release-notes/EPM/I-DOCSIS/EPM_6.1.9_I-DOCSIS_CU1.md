@@ -12,7 +12,7 @@ uid: EPM_6.1.9_I-DOCSIS_CU1
 
 #### Generic DOCSIS CM Collector: Interval adjusted for KPI calculation [ID 37356]
 
-To make sure the same data are shown at the same time, the logic that updates KPIs in the CM QAM Channels, Cable Modem Overview, and QAM Channels tables now uses the same interval parameter, i.e. the Threshold Execution Interval.
+To make sure the same data are shown at the same time, the logic that updates KPIs in the CM QAM Channels, Cable Modem Overview, and QAM Channels tables now uses the same interval parameter, i.e., the Threshold Execution Interval.
 
 #### DOCSIS version information streamlined [ID 38078]
 

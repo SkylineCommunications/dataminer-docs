@@ -19,7 +19,7 @@ To request a cost estimation, follow the procedure below:
 
    > [!NOTE]
    >
-   > - When you run the Automation script and there are Failover pairs in the cluster, make sure the **main Failover Agents** (i.e. the first Agent in the Failover configuration) are the **active** ones. Otherwise, the Automation script will not function correctly.
+   > - When you run the automation script and there are Failover pairs in the cluster, make sure the **main Failover Agents** (i.e., the first Agent in the Failover configuration) are the **active** ones. Otherwise, the automation script will not function correctly.
    > - To do the cost estimation for a **cluster**, you only need to execute the script on **one Agent**.
 
 1. Initialize the test run:
@@ -50,4 +50,4 @@ If you have any questions regarding this cost estimation, please contact <suppor
 > Cost estimations can currently only be performed for the West Europe, UK South, Southeast Asia, and Central US regions.
 
 > [!TIP]
-> To optimize the cost efficiency of a STaaS solution, adhere to the best practices to prevent storing unnecessary data [with Automation scripts](xref:Automation_best_practices_information_events) or [with connectors](xref:Saving_parameters).
+> To optimize the cost efficiency of a STaaS solution, adhere to the best practices to prevent storing unnecessary data [with automation scripts](xref:Automation_best_practices_information_events) or [with connectors](xref:Saving_parameters).

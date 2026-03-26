@@ -2,7 +2,7 @@
 {
 
 	/// <summary>
-	/// This class allows you to set specific options for a calendar control in an interactive Automation script.
+	/// This class allows you to set specific options for a calendar control in an interactive automation script.
 	/// </summary>
 	/// <example>
 	/// <code>

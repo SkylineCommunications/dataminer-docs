@@ -106,7 +106,7 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 
 **Do's:**
 
-- Connect examples to **common challenges** that users face (e.g. remote connectivity, high data usage).
+- Connect examples to **common challenges** that users face (e.g., remote connectivity, high data usage).
 - Use **specific, relatable examples**, such as "Monitor remote satellite terminals in real-time".
 
 **Don'ts:**
@@ -150,12 +150,12 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 **Do's:**
 
 - Use **consistent** naming conventions, such as "Installing ...", "Working with ...".
-- Use a **public link** for additional technical resources (e.g. [docs.dataminer.services](https://docs.dataminer.services) for standard solutions published by Skyline Communications).
+- Use a **public link** for additional technical resources (e.g., [docs.dataminer.services](https://docs.dataminer.services) for standard solutions published by Skyline Communications).
 - If you link to docs.dataminer.services as a Skyline employee, use "aka" redirect links. This way, if something changes to the structure of the documentation, the links can easily be updated.
 
 **Don'ts:**
 
 - Do not include procedures that should not be followed by the user.
 - Do not add **redundant information** that is already available somewhere else. If relevant, link to that information instead.
-- Avoid documenting features that **change frequently** and are not that important to document (e.g. UI).
+- Avoid documenting features that **change frequently** and are not that important to document (e.g., UI).
 - Avoid listing every **small technical dependency**. Focus only on the essentials.

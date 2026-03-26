@@ -4,7 +4,7 @@ uid: CTB_Documentation_Tools
 
 # Getting started with your documentation tools
 
-For larger contributions, e.g. to add several new pages, we recommend that you install the following (free) software, in the indicated order:
+For larger contributions, e.g., to add several new pages, we recommend that you install the following (free) software, in the indicated order:
 
 - [Git](https://git-scm.com/downloads)
 
@@ -18,7 +18,7 @@ For larger contributions, e.g. to add several new pages, we recommend that you i
 - [Visual Studio Code](https://code.visualstudio.com/) (with the [Learn Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) and [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) extensions).
 
   > [!NOTE]
-  > Microsoft also provides a zero-install Visual Studio Code for the web. When you are working in GitHub online, you can access this by pressing the "." button on your keyboard. This version offers a complete overview of the repository like in the downloadable version of Visual Studio Code, but it does not offer any extensions, e.g. a spell check.
+  > Microsoft also provides a zero-install Visual Studio Code for the web. When you are working in GitHub online, you can access this by pressing the "." button on your keyboard. This version offers a complete overview of the repository like in the downloadable version of Visual Studio Code, but it does not offer any extensions, e.g., a spell check.
 
 - [DocFX](xref:CTB_Local_Test_Build#installing-and-configuring-docfx) (optional): If you are making a larger contribution, we recommend making a test build on your local machine before pushing your changes to the repository, which requires DocFX.
 
@@ -58,10 +58,10 @@ When you install GitHub Desktop, you will also need to add the correct repositor
    1. When you are asked how you are planning to use this fork, select *To contribute to the parent project*.
 
 > [!NOTE]
-> If you have already made a fork of the repository in the past, you can also immediately add this fork as the URL when you clone the repository (e.g. `https://github.com/MyGitHubName/dataminer-docs`).
+> If you have already made a fork of the repository in the past, you can also immediately add this fork as the URL when you clone the repository (e.g., `https://github.com/MyGitHubName/dataminer-docs`).
 
 > [!TIP]
-> Creating a fork will allow you to make changes that you can then add to a pull request. If Visual Studio Code has been installed, you can click *Open in Visual Studio Code* to immediately start working on the fork. However, note that if you have other editors installed as well (e.g. Notepad++), this button might display a different editor. You can change this via the *Options* link in the box containing the button.
+> Creating a fork will allow you to make changes that you can then add to a pull request. If Visual Studio Code has been installed, you can click *Open in Visual Studio Code* to immediately start working on the fork. However, note that if you have other editors installed as well (e.g., Notepad++), this button might display a different editor. You can change this via the *Options* link in the box containing the button.
 >
 > ![GitHub Desktop](~/images/Contrib_GitHubDesktop.png)
 

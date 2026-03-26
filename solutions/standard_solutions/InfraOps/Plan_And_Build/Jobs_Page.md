@@ -18,7 +18,7 @@ Adding a new job is possible via the *New Job* button in the top-right corner of
 
 This will open a wizard where you will need to configure the job as follows:
 
-1. Specify the job's name, start time, type (*Add*, *Remove*, or *Update*), priority (*Critical*, *High*, *Low*, or *Normal*) and "sub state" (i.e. the secondary state of the job, which can be *Archived*, *Documentation Completed*, *Documentation Montage*, *Draft*, *In Progress*, *On Hold*, *Pending Approval*, *Pending Kickoff*, *Resource Allocation*, or *Reviewed*). Optionally, you can also add the end time, a description, and any additional remarks.
+1. Specify the job's name, start time, type (*Add*, *Remove*, or *Update*), priority (*Critical*, *High*, *Low*, or *Normal*) and "sub state" (i.e., the secondary state of the job, which can be *Archived*, *Documentation Completed*, *Documentation Montage*, *Draft*, *In Progress*, *On Hold*, *Pending Approval*, *Pending Kickoff*, *Resource Allocation*, or *Reviewed*). Optionally, you can also add the end time, a description, and any additional remarks.
 
    ![Create job – Info window](~/solutions/images/Plan_And_Build_Create_Job_Info_Section.png)
 

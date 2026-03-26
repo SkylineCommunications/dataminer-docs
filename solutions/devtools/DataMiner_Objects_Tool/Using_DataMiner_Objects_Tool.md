@@ -18,9 +18,9 @@ The UI of the DataMiner Objects Tool app consists of the following main componen
 
 ![Low-Code App buttons](~/dataminer/images/Using_DataMiner_Objects_Tool.png)
 
-All functionality of the tool is accessible via the *Filter All DataMiner Objects* button (1). Clicking the button launches the *DataMiner Objects Tool* interactive Automation script, which gives an overview of each supported DataMiner object type. You can then select one of the types to open a new dialog where filters can be defined.
+All functionality of the tool is accessible via the *Filter All DataMiner Objects* button (1). Clicking the button launches the *DataMiner Objects Tool* interactive automation script, which gives an overview of each supported DataMiner object type. You can then select one of the types to open a new dialog where filters can be defined.
 
-There are three more buttons available in the app. Each button is related to a common DataMiner object type, being resources, reservation (i.e. booking) instances, and DOM instances. For each of these types, the app shows some high-level statistics for the system.
+There are three more buttons available in the app. Each button is related to a common DataMiner object type, being resources, reservation (i.e., booking) instances, and DOM instances. For each of these types, the app shows some high-level statistics for the system.
 
 For **reservation instances** (2), the app shows the total number of reservation instances in the system along with a pie chart that groups the reservation instances by state. The button next to these stats launches the same *DataMiner Objects Tool* script, but immediately opens the dialog to filter reservation instances.
 

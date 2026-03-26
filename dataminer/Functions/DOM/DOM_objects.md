@@ -4,9 +4,9 @@ uid: DOM_objects
 
 # DOM objects
 
-The most basic DOM object is the **DOM instance** (or `DomInstance` in the code), which contains different values (e.g. names, dates, IDs, etc.). A **DOM definition** (or `DomDefinition`) determines which sections are present in DOM instances, by grouping a number of section definitions. Each **section definition** (or `SectionDefinition`) defines the data that should be present in a section of a DOM instance (e.g. the type of data and the number of fields).
+The most basic DOM object is the **DOM instance** (or `DomInstance` in the code), which contains different values (e.g., names, dates, IDs, etc.). A **DOM definition** (or `DomDefinition`) determines which sections are present in DOM instances, by grouping a number of section definitions. Each **section definition** (or `SectionDefinition`) defines the data that should be present in a section of a DOM instance (e.g., the type of data and the number of fields).
 
-In addition to this, a **DOM template** (or `DomTemplate`) can also be defined, which is a DOM instance object that already has specific values filled in. Finally, a DOM definition can be linked to a **DOM behavior definition** (or `DomBehaviorDefinition`), which contains configuration for extra behavior (e.g. different statuses).
+In addition to this, a **DOM template** (or `DomTemplate`) can also be defined, which is a DOM instance object that already has specific values filled in. Finally, a DOM definition can be linked to a **DOM behavior definition** (or `DomBehaviorDefinition`), which contains configuration for extra behavior (e.g., different statuses).
 
 In summary:
 

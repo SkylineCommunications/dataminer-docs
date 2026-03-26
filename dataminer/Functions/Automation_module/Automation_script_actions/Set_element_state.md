@@ -4,7 +4,7 @@ uid: Set_element_state
 
 # Set element state
 
-Use this action to set the state of a dummy in an Automation script:
+Use this action to set the state of a dummy in an automation script:
 
 1. Click *Restart* to select the element state: *Start*, *Stop*, *Restart*, *Pause*, *Mask*, or *Unmask*.
 

@@ -4,7 +4,7 @@ uid: HTTP_Headers
 
 # HTTP headers
 
-HTTP response headers allow you to instruct how the browser should behave when handling data. The HTTP headers below provide extra protection layers to mitigate vulnerabilities (e.g. cross-site scripting, clickjacking, information disclosure, etc.).
+HTTP response headers allow you to instruct how the browser should behave when handling data. The HTTP headers below provide extra protection layers to mitigate vulnerabilities (e.g., cross-site scripting, clickjacking, information disclosure, etc.).
 
 ## Headers to add
 
@@ -82,7 +82,7 @@ To enable *Strict Transport Security*:
 
 1. Set *IncludeSubDomains* to *True*.
 
-1. Set *Max-Age* to *31536000* seconds (i.e. 1 year).
+1. Set *Max-Age* to *31536000* seconds (i.e., 1 year).
 
 1. Optionally, set *Preload* to *True*.
 
@@ -102,7 +102,7 @@ To enable *Strict Transport Security*:
 
 1. Set *Name* to *Strict-Transport-Security*.
 
-1. Set *Value* to *max-age=31536000; includeSubDomains* (i.e. 1 year).
+1. Set *Value* to *max-age=31536000; includeSubDomains* (i.e., 1 year).
 
 1. Click *OK*.
 
@@ -113,7 +113,7 @@ To enable *Strict Transport Security*:
 
 ### Other headers
 
-There are some other HTTP headers that can improve security. However, their value depends on your specific DataMiner setup (e.g. resources used in Dashboards/Low-Code Apps):
+There are some other HTTP headers that can improve security. However, their value depends on your specific DataMiner setup (e.g., resources used in Dashboards/Low-Code Apps):
 
 - [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
 

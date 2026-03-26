@@ -95,7 +95,7 @@ If you are using an older, deprecated DataMiner installer, follow the steps belo
      > [!NOTE]
      >
      > - MySQL is no longer included in the 10.2.0 DataMiner installer.
-     > - If a MySQL database is used, certain DataMiner features (e.g. [Augmented Operations](xref:Overview_Augmented_Operations)) will **not be available**.
+     > - If a MySQL database is used, certain DataMiner features (e.g., [Augmented Operations](xref:Overview_Augmented_Operations)) will **not be available**.
 
    - If you are using the DataMiner 10.0 installer, on systems intended for DataMiner Failover based on virtual IP, install WinPcap by clicking *Install WinPcap*. The Setup Wizard of WinPcap will be launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
 

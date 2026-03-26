@@ -7,6 +7,14 @@ uid: General_Main_Release_10.5.0_CU9
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.5.0 CU9](xref:Cube_Main_Release_10.5.0_CU9).
@@ -54,7 +62,7 @@ From now on, OPC communication should no longer be used in DataMiner connectors.
 
 From now on, the `Engine` class exposes the public property `ScriptName`.
 
-This means that, in an Automation script, it will now be possible to retrieve the name of that script.
+This means that, in an automation script, it will now be possible to retrieve the name of that script.
 
 #### PDF reports configured in the Dashboards app can now also be sent if recipients are only specified in the CC and/or BCC fields [ID 43844]
 
@@ -71,7 +79,7 @@ From now on, it will also be possible to send PDF reports if recipients are only
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
+Because of a number of enhancements, overall performance of the *Cube CRL Freeze* BPA test has increased.
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
@@ -134,7 +142,7 @@ From now on, when BrokerGateway is uninstalled, the entire `C:\ProgramData\Skyli
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-After a DataMiner connection had been re-established (due to e.g. a network issue, a failover switch, etc.), in some rare cases, an issue could occur that would cause parameter or DCF information to be unavailable to remotely hosted elements.
+After a DataMiner connection had been re-established (due to, for example, a network issue, a failover switch, etc.), in some rare cases, an issue could occur that would cause parameter or DCF information to be unavailable to remotely hosted elements.
 
 #### MessageBroker client could get stuck while trying to fetch information from BrokerGateway [ID 43832]
 
@@ -191,4 +199,4 @@ These notices will now be generated again.
 
 <!-- MR 10.4.0 [CU21] / 10.5.0 [CU9] - FR 10.5.12 -->
 
-Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, Automation script matrix actions associated with those elements could fail.
+Up to now, after elements had been swarmed or migrated by means of a DELT package, in some cases, automation script matrix actions associated with those elements could fail.

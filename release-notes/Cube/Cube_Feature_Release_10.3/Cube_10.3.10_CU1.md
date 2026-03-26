@@ -19,4 +19,4 @@ uid: Cube_Feature_Release_10.3.10_CU1
 <!-- MR 10.4.0 - FR 10.3.10 [CU1] -->
 <!-- Not added to MR 10.4.0 -->
 
-In some cases, the cache of DataMiner Cube would incorrectly get cleared, resulting in e.g. elements not getting loaded.
+In some cases, the cache of DataMiner Cube would incorrectly get cleared, resulting in e.g., elements not getting loaded.

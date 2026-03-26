@@ -12,7 +12,7 @@ uid: Configuring_multiple_Elasticsearch_clusters
 > [!NOTE]
 > This procedure can be followed both on Linux and Windows setups. However, we highly recommend using Linux.
 
-From DataMiner 10.2.0/10.1.3 onwards, you can have data offloaded to multiple Elasticsearch clusters, i.e. one main cluster and several replicated clusters. Data is always read from the main cluster, but data updates are sent to all clusters.
+From DataMiner 10.2.0/10.1.3 onwards, you can have data offloaded to multiple Elasticsearch clusters, i.e., one main cluster and several replicated clusters. Data is always read from the main cluster, but data updates are sent to all clusters.
 
 Configuring multiple Elasticsearch clusters becomes crucial when on-premises setups are considered, as Elastic strongly advises against setting up clusters across high-latency nodes. Rather than spreading Elasticsearch nodes across locations with high latency, it is preferable to offload data to multiple Elasticsearch clusters. This approach allows for geo-redundancy, ensuring that data remains accessible even if one cluster becomes temporarily unavailable. With this configuration, if inconsistencies arise between the Elasticsearch clusters, synchronization issues can be avoided.
 
@@ -65,7 +65,7 @@ To configure this setup:
             <PWD>root</PWD>
             <DB>dms</DB>
             <!--
-            Used by file offload (i.e. when the connection with the Elastic cluster is not
+            Used by file offload (i.e., when the connection with the Elastic cluster is not
             available) for tagging the offloaded data with.
            Should be different for each defined Elastic cluster connection.
             -->
@@ -125,7 +125,7 @@ To configure this setup:
     -->
     <Prefix>dms</Prefix>
     <!--
-    Used by file offload (i.e. when the connection with the Elastic cluster is not
+    Used by file offload (i.e., when the connection with the Elastic cluster is not
     available) for tagging the offloaded data with.
    Should be different for each defined Elastic cluster connection.
     -->
@@ -175,7 +175,7 @@ To configure this setup:
      > [!NOTE]
      > The prefix has a maximum length of 20 characters.
 
-   - **DB server**: The IP addresses or hostnames of the nodes, separated by commas. You can specify an IP address with a custom port, e.g. `10.5.100.1:5555`. If no port is provided, the default port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)).
+   - **DB server**: The IP addresses or hostnames of the nodes, separated by commas. You can specify an IP address with a custom port, e.g., `10.5.100.1:5555`. If no port is provided, the default port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)).
 
    - **User**: Username with which the DMA has to log on to Elasticsearch.
 

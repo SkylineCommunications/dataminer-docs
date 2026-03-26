@@ -15,7 +15,7 @@ The procedure details how you can take and restore snapshots to back up and rest
 ## Prerequisites
 
 - Elasticsearch knowledge
-- A client application that is able to communicate with the Elasticsearch rest API, e.g. Kibana
+- A client application that is able to communicate with the Elasticsearch rest API, e.g., Kibana
 - A target Elasticsearch cluster of the same or a more recent version than the source Elasticsearch cluster
 - A high-quality connection between the Elasticsearch clusters
 

@@ -47,7 +47,7 @@ uid: WS_Methods_v1_overview
 | [ConnectAppAndInfoUsingTicket](xref:ConnectAppAndInfoUsingTicket) | Retrieves the connection string (GUID) needed to be able to connect to the host, together with information about the DataMiner Agent (time, alarm colors, etc.) and the user permissions granted, by using a DataMiner connection ticket. |
 | [ConnectMatrixCrosspoint](xref:ConnectMatrixCrosspoint) | Connects or disconnects a matrix crosspoint. |
 | [ConnectMatrixCrosspointForLabels](xref:ConnectMatrixCrosspointForLabels) | Connects or disconnects a matrix crosspoint by label. |
-| [ContinueAutomationScript](xref:ContinueAutomationScript) | Continues an Automation script. |
+| [ContinueAutomationScript](xref:ContinueAutomationScript) | Continues an automation script. |
 | [CreateAlarmTemplate](xref:CreateAlarmTemplate) | Creates a new alarm template. |
 | [CreateElement](xref:CreateElement) | Creates a new element on the specified DMA. |
 | [CreateJob](xref:CreateJob) | Creates a job. |
@@ -83,7 +83,7 @@ uid: WS_Methods_v1_overview
 | [DeleteView](xref:DeleteView) | Deletes the specified view. |
 | [DeleteVisioFile](xref:DeleteVisioFile) | Deletes a particular Visio file that can be assigned to views and services. |
 | [DeleteVisioFileFromProtocol](xref:DeleteVisioFileFromProtocol) | Deletes a particular Visio file that can be assigned to a protocol. |
-| [DetachAutomationScript](xref:DetachAutomationScript) | Aborts a running Automation script. |
+| [DetachAutomationScript](xref:DetachAutomationScript) | Aborts a running automation script. |
 | [DetachServiceFromServiceTemplate](xref:DetachServiceFromServiceTemplate) | Detaches the specified service from its service template. |
 | [DuplicateJobsDomain](xref:DuplicateJobsDomain) | Duplicates a jobs domain. |
 | [DuplicateJobsSectionDefinition](xref:DuplicateJobsSectionDefinition) | Duplicates a section definition from one jobs domain to another. |
@@ -94,8 +94,8 @@ uid: WS_Methods_v1_overview
 | [EditTicketFieldOrder](xref:EditTicketFieldOrder) | Obsolete. Changes the order of the fields of a ticket type. |
 | [EditTicketType](xref:EditTicketType) | Obsolete. Edits a ticket type. |
 | [EditView](xref:EditView) | Edits the specified view. |
-| [ExecuteAutomationScript](xref:ExecuteAutomationScript) | Executes an Automation script. |
-| [ExecuteAutomationScriptWithOutput](xref:ExecuteAutomationScriptWithOutput) | Executes an interactive Automation script and retrieves its output. |
+| [ExecuteAutomationScript](xref:ExecuteAutomationScript) | Executes an automation script. |
+| [ExecuteAutomationScriptWithOutput](xref:ExecuteAutomationScriptWithOutput) | Executes an interactive automation script and retrieves its output. |
 | [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) | Used in order to have a method executed asynchronously. |
 | [ExecuteVisioShapeAction](xref:ExecuteVisioShapeAction) | Execute an action on a Visio shape. |
 | [GenerateTicketBasedOnAlarm](xref:GenerateTicketBasedOnAlarm) | Obsolete. Generates a ticket based on alarm properties. |
@@ -166,8 +166,8 @@ uid: WS_Methods_v1_overview
 | [GetAnnotationsLinkForElement](xref:GetAnnotationsLinkForElement) | Obsolete. Retrieves a link to open the annotations page of an element. |
 | [GetAnnotationsLinkForService](xref:GetAnnotationsLinkForService) | Obsolete. Retrieves a link to open the annotations page of a service. |
 | [GetAnnotationsLinkForView](xref:GetAnnotationsLinkForView) | Obsolete. Retrieves a link to open the annotations page of a view. |
-| [GetAutomationScript](xref:GetAutomationScript) | Retrieves an Automation script. |
-| [GetAutomationScripts](xref:GetAutomationScripts) | Retrieves all Automation scripts. |
+| [GetAutomationScript](xref:GetAutomationScript) | Retrieves an automation script. |
+| [GetAutomationScripts](xref:GetAutomationScripts) | Retrieves all automation scripts. |
 | [GetAvailableAlarmProperties](xref:GetAvailableAlarmProperties) | Retrieves the properties that are available for alarm filtering. |
 | [GetAvailableVisioFiles](xref:GetAvailableVisioFiles) | Retrieves all the available Visio files that can be assigned to views and services. |
 | [GetAvailableVisioFilesForProtocol](xref:GetAvailableVisioFilesForProtocol) | Retrieves all available Visio files that can be assigned to a particular protocol. |
@@ -428,14 +428,14 @@ uid: WS_Methods_v1_overview
 | [RemoveTicketV2](xref:RemoveTicketV2) | Obsolete. Removes a specific ticket. |
 | [RemoveViewFromPinned](xref:RemoveViewFromPinned) | Unpins a view in the Recent list. |
 | [ReorderPinned](xref:ReorderPinned) | Reorders a number of pinned items in the Recent list. |
-| [RequestLoginAsTicket](xref:RequestLoginAsTicket) | Requests a logon ticket that can then be added to e.g. a DataMiner Maps URL. |
+| [RequestLoginAsTicket](xref:RequestLoginAsTicket) | Requests a logon ticket that can then be added to, for example, a DataMiner Maps URL. |
 | [RestartElement](xref:RestartElement) | Restarts an element. |
 | [SaveJobsSectionDomainConfig](xref:SaveJobsSectionDomainConfig) | Deprecated. Replaced by UpdateDomainSectionDefinitionConfiguration. |
 | [SaveSpectrumPreset](xref:SaveSpectrumPreset) | Saves a specified spectrum analyzer preset. |
 | [SetMeasurementPoints](xref:SetMeasurementPoints) | Sets the measurement point cycle of a spectrum analyzer. |
 | [SetParameter](xref:SetParameter) | Updates a particular parameter. |
 | [SetParameterRow](xref:SetParameterRow) | Updates a particular parameter row. |
-| [SetPropertyValue](xref:SetPropertyValue) | Changes the value of a property of a specified object (i.e. a view, service or element). |
+| [SetPropertyValue](xref:SetPropertyValue) | Changes the value of a property of a specified object (i.e., a view, service or element). |
 | [SetRedundancyGroupMaintenance](xref:SetRedundancyGroupMaintenance) | Sets a redundancy group element either in maintenance or out of maintenance. |
 | [SetRedundancyGroupMode](xref:SetRedundancyGroupMode) | Changes the redundancy mode of a redundancy group. |
 | [SetSpectrumParameter](xref:SetSpectrumParameter) | Sets a particular spectrum parameter. |

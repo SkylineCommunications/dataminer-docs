@@ -2,9 +2,9 @@
 uid: SchemaLogSettings
 ---
 
-# LogSettings Schema
+# LogSettings schema
 
-DataMiner LogSettings XML Schema.
+DataMiner LogSettings XML schema.
 
 For more information about LogSettings, refer to [LogSettings.xml](xref:LogSettings_xml).
 

@@ -12,4 +12,4 @@ Contains the SNMP-related configuration of the DataMiner Agents and of the defin
 | --- | --- | --- |
 | Sequence |  |  |
 | &#160;&#160;[Configuration](xref:SNMP.Configuration) |  | Contains the configuration of the DataMiner Agents. |
-| &#160;&#160;[SnmpManagers](xref:SNMP.SnmpManagers) |  | Configures a list of SNMP managers, i.e. third-party platforms to which DataMiner has to forward SNMP notifications. |
+| &#160;&#160;[SnmpManagers](xref:SNMP.SnmpManagers) |  | Configures a list of SNMP managers, i.e., third-party platforms to which DataMiner has to forward SNMP notifications. |

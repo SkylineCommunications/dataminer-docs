@@ -26,7 +26,7 @@ The functionality of the tool is similar to that of [Stream Viewer](xref:Connect
 
 Another benefit of the HTTP Sessions table is the **extra information it provides regarding data loss** compared to the element timeout state. If an element is in timeout, this means DataMiner has not received a single response from the data source in a specific time period. Usually, this indicates that the connection to the data source is lost. However, it is possible that data loss occurs without a timeout status.
 
-Imagine, for example, that a data source is unable to respond to certain requests but responds at least once within the timeout period. Every request initially succeeds after the element starts up, so all tables and parameters are filled in. However, at some point, something goes wrong with the data source, e.g. it is unable to handle a certain request, or it receives too many requests. Then it is possible that half of the requested data is lost while the element will still not be in timeout. Users will not notice the data loss, because all data seems to be filled in as expected. With the HTTP Sessions table, the data loss will become obvious.
+Imagine, for example, that a data source is unable to respond to certain requests but responds at least once within the timeout period. Every request initially succeeds after the element starts up, so all tables and parameters are filled in. However, at some point, something goes wrong with the data source, e.g., it is unable to handle a certain request, or it receives too many requests. Then it is possible that half of the requested data is lost while the element will still not be in timeout. Users will not notice the data loss, because all data seems to be filled in as expected. With the HTTP Sessions table, the data loss will become obvious.
 
 ![HTTP Sessions table example](~/develop/images/HTTPsessions4.png)
 
@@ -46,7 +46,7 @@ To make sure that the table contains valuable information about the communicatio
 
 - The **primary key** of the table: An **ID** assigned by the protocol that must be unique for every request sent. Preferably, the ID is incremented after each request, in order to maintain the chronological order when you sort on this ID.
 - The **URI** of the HTTP request, which can be reduced to its unique path, without the IP address, port, etc.
-- The **HTTP method** of the HTTP request, e.g. GET, PUT, POST, etc.
+- The **HTTP method** of the HTTP request, e.g., GET, PUT, POST, etc.
 - The **request data**: Additional data that is usually required for a POST request. This field is left empty if no data is sent with the request.
 - The **time** when the **request** is sent.
 - The **response status**: The reason phrase included in the status line of the HTTP response.
@@ -80,7 +80,7 @@ The ideal time to log a request is just before it is sent. That is why the `LogR
 After a response is received, it should be logged by a QAction, which is triggered by an after-group trigger on the session group. The `LogRequest` method adds the response information for the corresponding request to parameters 6–9 listed above. For that, it needs the ID of the request, so there must be a way to link a response to the corresponding request:
 
 - If a data source has a mirror functionality in its API, an ID can be added to the requests and the data source will mirror this ID in the corresponding responses. This is the preferred way of working.
-- If the API includes a unique item of the request (e.g. the URI) in the body of the responses, you can use this. However, this item has to be unique for all the requests, as otherwise it will not be possible to link certain responses to a request.
+- If the API includes a unique item of the request (e.g., the URI) in the body of the responses, you can use this. However, this item has to be unique for all the requests, as otherwise it will not be possible to link certain responses to a request.
 - If a data source does not support any form of linking, the linking must be done in the protocol, through the creation of different groups/sessions for each unique request.
 
 ### Additional configuration parameters

@@ -20,7 +20,7 @@ To get an overview of the number of elements monitored with license counters, do
   In the *Properties* tab of the main window, a new message will appear. You can double-click the message to read the details in a separate window, or select the message and read the details in the *Text* pane on the right.
 
   > [!NOTE]
-  > To know the total number allowed by the license, in the list of applications a DMA is licensed for, look for keys with a number at the end, e.g. ELEMENTS500, SPECTRUMELEMENTS10, PROTOCOLMICROSOFTPLATFORM:5. The number indicates the total allowed license counters.
+  > To know the total number allowed by the license, in the list of applications a DMA is licensed for, look for keys with a number at the end, e.g., ELEMENTS500, SPECTRUMELEMENTS10, PROTOCOLMICROSOFTPLATFORM:5. The number indicates the total allowed license counters.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

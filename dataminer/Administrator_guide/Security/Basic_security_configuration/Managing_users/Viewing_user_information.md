@@ -1,11 +1,11 @@
 ---
 uid: Viewing_user_information
-description: user card
+keywords: user card
 ---
 
 # Viewing user information
 
-In DataMiner Cube, you can view various detailed information about users, provided that you have the necessary user permissions to do so (i.e. [Administrator](xref:DataMiner_user_permissions#modules--system-configuration--security--administrator) or [Limited administrator](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator), with or without [View users from other groups](xref:DataMiner_user_permissions#modules--system-configuration--security--view-users-from-other-groups), depending on whether access to user information from other groups should be available).
+In DataMiner Cube, you can view various detailed information about users, provided that you have the necessary user permissions to do so (i.e., [Administrator](xref:DataMiner_user_permissions#modules--system-configuration--security--administrator) or [Limited administrator](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator), with or without [View users from other groups](xref:DataMiner_user_permissions#modules--system-configuration--security--view-users-from-other-groups), depending on whether access to user information from other groups should be available).
 
 There are two ways you can view this information:
 

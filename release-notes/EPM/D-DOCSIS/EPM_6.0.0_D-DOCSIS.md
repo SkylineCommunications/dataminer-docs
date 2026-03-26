@@ -30,7 +30,7 @@ Alarm monitoring and trending has been added for DPA links that are over-utilize
 
 #### DCF link filtering not correctly creating/removing corrections \[ID 30833\]\[ID 30834\]
 
-When DCF link filtering was used, it could occur that this did not show the right connections. The DCF logic in the Automation script for connectivity discovery and in the Cox IDP EPM Connectivity connector has now been improved to prevent this.
+When DCF link filtering was used, it could occur that this did not show the right connections. The DCF logic in the automation script for connectivity discovery and in the Cox IDP EPM Connectivity connector has now been improved to prevent this.
 
 #### 'Connected RPDs' links updated \[ID 30954\]
 

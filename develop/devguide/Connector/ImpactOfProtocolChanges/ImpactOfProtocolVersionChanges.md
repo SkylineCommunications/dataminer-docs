@@ -29,7 +29,7 @@ There are many protocol changes that can cause impact.
 
 The nature and severity of the impact will be documented via the connector XML [VersionHistory](xref:Manifest.VersionHistory) subtags along with the actions that need to be taken to overcome the impact. This information will then be exposed both in the Catalog and in DataMiner Cube when a pre-existing element is updated.
 
-This can vary from a small impact such as having to update a related Automation script or dashboard, or having to review a small part of alarm or trend templates, all the way up to a large impact such as having to create a brand-new element leading to the loss of all alarm and trend history.
+This can vary from a small impact such as having to update a related automation script or dashboard, or having to review a small part of alarm or trend templates, all the way up to a large impact such as having to create a brand-new element leading to the loss of all alarm and trend history.
 
 The impacted changes listed here are grouped based on the change that is implemented.
 

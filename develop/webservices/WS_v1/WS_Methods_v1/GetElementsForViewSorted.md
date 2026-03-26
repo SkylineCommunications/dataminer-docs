@@ -7,7 +7,7 @@ uid: GetElementsForViewSorted
 Use this method to retrieve a specific number of view child items (elements and/or services).
 
 > [!NOTE]
-> Using this method, you can e.g. request view child items in batches in order to minimize loading time.
+> Using this method, you can e.g., request view child items in batches in order to minimize loading time.
 
 ## Input
 

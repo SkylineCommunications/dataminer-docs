@@ -26,13 +26,13 @@ There are two ways in which you can link a query filter. See the following examp
 
   1. Place a new *Query filter* component on the dashboard.
 
-  1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
+  1. Create a query (e.g., a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
   
-     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
+     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g., "Query filter 1").
 
   1. Place a new *Table* component on the dashboard.
 
-  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g. "Query filter 1"), and drag *Queries* on top of the table component.
+  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g., "Query filter 1"), and drag *Queries* on top of the table component.
 
   Result: Each time you change the query filter, a new query will be fed to the table. The latter will only show the rows that match the filter set in the query filter component.
 
@@ -40,15 +40,15 @@ There are two ways in which you can link a query filter. See the following examp
 
   1. Place a new *Query filter* component on the dashboard.
 
-  1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
+  1. Create a query (e.g., a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
   
-     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
+     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g., "Query filter 1").
 
   1. Place a new *Table* component on the dashboard.
 
-  1. In the *Data* tab, go to *All available data* > *Queries*, and drag the query you created earlier (e.g. *Elements*) on top of the table component.
+  1. In the *Data* tab, go to *All available data* > *Queries*, and drag the query you created earlier (e.g., *Elements*) on top of the table component.
 
-  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g. "Query filter 1"), and drag *Query columns* on top of the yellow filter drop area of the table component.
+  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g., "Query filter 1"), and drag *Query columns* on top of the yellow filter drop area of the table component.
 
   Result: Each time you change the query filter, the data inside the table will be filtered according to the filter settings in the query filter. No new query will be fed to the table. The latter will keep on showing all rows, but those that do not match the filter will turn gray.
 
@@ -99,9 +99,9 @@ Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These c
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-In the *Parameters* section of the edit panel's *DATA* tab, column parameters will now by default list their first 100 indices (i.e. cells). When you drag one of those cells onto a component, element ID, parameter ID as well as index will be passed along.
+In the *Parameters* section of the edit panel's *DATA* tab, column parameters will now by default list their first 100 indices (i.e., cells). When you drag one of those cells onto a component, element ID, parameter ID as well as index will be passed along.
 
-If the index (i.e. cell) you need is not among the first 100 indices that are listed, you can use the search box above the parameter list to narrow down the list of indices.
+If the index (i.e., cell) you need is not among the first 100 indices that are listed, you can use the search box above the parameter list to narrow down the list of indices.
 
 ## Changes
 

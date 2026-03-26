@@ -8,11 +8,11 @@ uid: config_resource_automation
 
 <!-- RN 30227 -->
 
-When you install the SRM framework, an Automation script is included that can be used as the default wizard to apply a profile to a resource.
+When you install the SRM framework, an automation script is included that can be used as the default wizard to apply a profile to a resource.
 
 ### Required input parameters
 
-The wizard is an interactive Automation script called *SRM_ApplyProfileToResource*. As of SRM version 1.2.27, the input parameters accept the following fields in JSON format:
+The wizard is an interactive automation script called *SRM_ApplyProfileToResource*. As of SRM version 1.2.27, the input parameters accept the following fields in JSON format:
 
 - *ResourceId*: The GUID of the resource that will be used by the wizard.
 - *BookingManagerName*: Optional. The name of a Booking Manager element. This is used to generate log files in the directory specified in that element.
@@ -48,7 +48,7 @@ A typical use case is to make use of the Resource Manager component in Visual Ov
 
    When a user selects a resource band on the timeline, the *SelectedResource* variable will be populated with the GUID of the resource.
 
-1. Add a shape to the Visio drawing that executes the *SRM_ApplyProfileToResource* script, using the expected JSON as the input argument. See [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script).
+1. Add a shape to the Visio drawing that executes the *SRM_ApplyProfileToResource* script, using the expected JSON as the input argument. See [Linking a shape to an automation script](xref:Linking_a_shape_to_an_Automation_script).
 
    Use a variable placeholder in the JSON to reference the selected resource. For example:
 

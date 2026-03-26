@@ -151,7 +151,7 @@ When a capacity with a reference string has to be quarantined, from now on, the 
 
 Up to now, when a large amount of alarms were retrieved via the Web Services API while the IIS server alarm cache was not fully initialized yet, in some cases, an incomplete result set would be returned. From now on, an exception will be returned instead.
 
-The HTML5 apps (e.g. Monitoring), which make use of the Web Services API, will in this case now also display an error message indicating the alarm cache status.
+The HTML5 apps (e.g., Monitoring), which make use of the Web Services API, will in this case now also display an error message indicating the alarm cache status.
 
 #### From now on, only DMAObjectRefTreeRequestMessage requests that update information will be processed sequentially \[ID 24967\]
 
@@ -194,7 +194,7 @@ From now on, it is possible to specify another port in the *Db.xml* file. See th
 
 #### DataMiner Cube - Automation: Script execution messages will now be sent asynchronously \[ID 25438\]
 
-Up to now, when an Automation script was launched from Cube, a script execution message would be sent to the DataMiner Agent synchronously. In order to avoid timeout issues, from now on, script execution messages will be sent asynchronously.
+Up to now, when an automation script was launched from Cube, a script execution message would be sent to the DataMiner Agent synchronously. In order to avoid timeout issues, from now on, script execution messages will be sent asynchronously.
 
 #### DataMiner Cube - Visual Overview: Using the \[Reservation\] placeholder no longer requires Cube to retrieve all service information \[ID 25463\]
 
@@ -230,7 +230,7 @@ From now on, new Indexing Engine installations will have their index replication
 
 #### Dashboards app: Enhanced rendering of scalable text \[ID 25671\]
 
-Due to a number of enhancements, the rendering of scalable text in a number of dashboard components (e.g. digital clock, trend statistics, state visualizations) has been optimized.
+Due to a number of enhancements, the rendering of scalable text in a number of dashboard components (e.g., digital clock, trend statistics, state visualizations) has been optimized.
 
 #### DataMiner Cube: Enhanced timeline tool tip in Bookings app \[ID 25704\]
 
@@ -310,9 +310,9 @@ In some cases, an error could occur when SLAnalytics retrieved data from the dat
 
 When a user setting was hidden in the group settings, it would incorrectly also be hidden in the group settings editor.
 
-#### Automation: Problem when generating a large report via an Automation script \[ID 25482\]
+#### Automation: Problem when generating a large report via an automation script \[ID 25482\]
 
-When a large report was generated via an Automation script, in some cases, all other communication with the SLReportsAndDashboardsManager process could get blocked.
+When a large report was generated via an automation script, in some cases, all other communication with the SLReportsAndDashboardsManager process could get blocked.
 
 #### Protocols: When no column was polled during a polling cycle, previously polled columns could incorrectly get cleared from memory \[ID 25500\]
 
@@ -362,9 +362,9 @@ When two DMAs established contact with each other after their connection had bee
 
 The WSDL was no longer backwards compatible for the GetTicket method.
 
-#### Automation: Email sent from an Automation script had an incorrect subject \[ID 25618\]
+#### Automation: Email sent from an automation script had an incorrect subject \[ID 25618\]
 
-When an email was sent from an Automation script, in some cases, the dashboard name would incorrectly be used as email subject.
+When an email was sent from an automation script, in some cases, the dashboard name would incorrectly be used as email subject.
 
 From now on, the dashboard name will only be used as email subject when no subject was specified.
 
@@ -444,9 +444,9 @@ From now on, history sets will always be considered value changes, regardless of
 
 When you right-clicked a view in the Surveyor, and selected Actions \> Apply service template..., in some cases, the selection box containing the list of service templates to choose from would be empty due to a problem with the selection box filter.
 
-#### DataMiner Cube - Automation: Problem when including a legacy report template to an email action of an Automation script \[ID 25743\]
+#### DataMiner Cube - Automation: Problem when including a legacy report template to an email action of an automation script \[ID 25743\]
 
-When, in an Automation script, you added an email action and included a report template of type “Multiple elements/services” (created in the legacy Reporter app) to which you passed a protocol as view filter, in some cases, that protocol would not be shown until you saved the script and then closed and reopened the Automation app.
+When, in an automation script, you added an email action and included a report template of type “Multiple elements/services” (created in the legacy Reporter app) to which you passed a protocol as view filter, in some cases, that protocol would not be shown until you saved the script and then closed and reopened the Automation app.
 
 #### DataMiner Cube - Visual Overview: Selected service definition in an embedded ServiceManager component would get unselected when another service definition was modified \[ID 25748\]
 

@@ -37,7 +37,7 @@ In the *SLNetClientTest* tool, at the bottom of the main window, a new filter bo
 
 After you select the checkbox in front of it, it will allow you to filter the message list using a regular expression.
 
-This new filter box should only be used when no new messages will be added to the list, e.g. when inspecting an *\*.slnetdump* file.
+This new filter box should only be used when no new messages will be added to the list, e.g., when inspecting an *\*.slnetdump* file.
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
@@ -149,7 +149,7 @@ From now on, when DataMiner tries to send an operation of which the size exceeds
 
 <!-- MR 10.6.0 - FR 10.5.11 -->
 
-From now on, no attempts will be made anymore to automatically detect the interactive behavior of script libraries, i.e. scripts of which all Exe blocks contain precompiled C# code. These libraries are not intended to be run independently.
+From now on, no attempts will be made anymore to automatically detect the interactive behavior of script libraries, i.e., scripts of which all Exe blocks contain precompiled C# code. These libraries are not intended to be run independently.
 
 #### DataMiner upgrade: All but the Web.config file will be removed from the 'C:\\Skyline DataMiner\\Webpages\\API' folder when downgrading to an older version [ID 43687]
 
@@ -322,7 +322,7 @@ Up to now, after you had imported a DELT package containing average trend data i
 
 Since DataMiner version 10.5.0/10.4.12, the DataMiner Agent is no longer restarted when an SLProtocol process disappears. Instead, a new SLProtocol process is started and all elements that were hosted by the process that disappeared are now be hosted by the newly created process.
 
-However, up to now, when an SLProtocol process disappeared, SLWatchdog would remove all entries in its threads table that matched the name of the process (e.g. "SLProtocol"). This would result in all entries of the other SLProtocol processes to be removed as well.
+However, up to now, when an SLProtocol process disappeared, SLWatchdog would remove all entries in its threads table that matched the name of the process (e.g., "SLProtocol"). This would result in all entries of the other SLProtocol processes to be removed as well.
 
 From now on, SLWatchdog will only remove the threads table entries that match the name as well as the ID of the process.
 

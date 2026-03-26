@@ -51,9 +51,9 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
    - Your business name
 
-   - Your name (i.e. the owner)
+   - Your name (i.e., the owner)
 
-   - Your business email (i.e. the email address you will use to conduct company business)
+   - Your business email (i.e., the email address you will use to conduct company business)
 
      > [!NOTE]
      > Make sure you choose an email address you have access to as you will need to confirm it later.
@@ -99,7 +99,7 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
 1. Select the user you created, click the ellipsis button ("..."), and select *Assign assets*.
 
-1. Select the app you want to assign to this system user (i.e. the *DataMiner Alarm Notification* app), and grant them the appropriate permissions.
+1. Select the app you want to assign to this system user (i.e., the *DataMiner Alarm Notification* app), and grant them the appropriate permissions.
 
 1. Select *Generate token*.
 
@@ -129,7 +129,7 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
    This will create a DataMiner element named "META WhatsApp Alerter" in your system. The element will be located in the *DataMiner Apps & Solutions* view.
 
-   A new Automation script named "Meta Alarm Detection" will also be added to your system.
+   A new automation script named "Meta Alarm Detection" will also be added to your system.
 
 1. In Cube, go to the *DATA > Configuration* page of the *META WhatsApp Alerter* element.
 

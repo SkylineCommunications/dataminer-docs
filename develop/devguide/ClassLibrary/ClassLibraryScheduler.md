@@ -4,7 +4,7 @@ uid: Scheduler_NuGet_Package
 
 # Using the Scheduler NuGet package
 
-The Scheduler NuGet package provides useful functionalities to interact with the Scheduler module using Automation scripts. It enables the creation, updating, and deletion of scheduled tasks.
+The Scheduler NuGet package provides useful functionalities to interact with the Scheduler module using automation scripts. It enables the creation, updating, and deletion of scheduled tasks.
 
 ## Installing the Scheduler NuGet package
 
@@ -113,7 +113,7 @@ Before creating a scheduled task, you first need to **define its intended recurr
 
    In this example, assuming it is 1 PM, the task will be scheduled to run from 1 PM to 3 PM, following the specified recurrence.
 
-1. Once the task is defined, **configure the schedule action**. Currently, only Automation script actions are supported:
+1. Once the task is defined, **configure the schedule action**. Currently, only automation script actions are supported:
 
    ```csharp
    var inputScriptParams = new List<AutomationScriptInputParameter>
@@ -128,10 +128,10 @@ Before creating a scheduled task, you first need to **define its intended recurr
    schedulerTask.ISchedulerFinalAction = automationScriptAction;
    ```
 
-   This example sets an Automation script (*runAsync* flag) named "Script Name" to be executed asynchronously, with two input parameters (*InputScriptParam1* and *InputScriptParam2*). The optional *checkSets* flag determines whether a read parameter will be checked for a new value after a set command.
+   This example sets an automation script (*runAsync* flag) named "Script Name" to be executed asynchronously, with two input parameters (*InputScriptParam1* and *InputScriptParam2*). The optional *checkSets* flag determines whether a read parameter will be checked for a new value after a set command.
 
    > [!NOTE]
-   > It is possible to define a **final action** that will be executed when the Scheduler task is removed. In the presented case, the same Automation script action will be executed.
+   > It is possible to define a **final action** that will be executed when the Scheduler task is removed. In the presented case, the same automation script action will be executed.
 
 1. Finally, when the task is ready, you can **create or update it at the DataMiner Scheduler module level**:
 

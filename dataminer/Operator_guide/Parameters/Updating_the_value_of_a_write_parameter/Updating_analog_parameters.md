@@ -23,7 +23,7 @@ For analog parameters, a box is displayed with a slider control. To update the p
 
      > [!NOTE]
      >
-     > - Using the up and down arrows or keys is especially of use when making small adjustments to a current value, e.g. to change 25.08732 to 25.08733.
+     > - Using the up and down arrows or keys is especially of use when making small adjustments to a current value, e.g., to change 25.08732 to 25.08733.
      > - If no value is currently set for a parameter and you use the up and down arrows or keys to enter a value, the increase or decrease will start from the minimum or the maximum value respectively.
 
 1. Click the green button next to the parameter control to confirm.

@@ -22,4 +22,4 @@ Upgrade to DataMiner 10.2.0 [CU12] or 10.3.2. <!-- RN 35213 -->
 
 ## Issue description
 
-After migrating an element from one DMA to another, data for this element, including trending and alarm information, is missing. This only occurs in systems where one Cassandra cluster is used as the general database for the entire DMS (i.e. a "Cassandra Cluster" setup).
+After migrating an element from one DMA to another, data for this element, including trending and alarm information, is missing. This only occurs in systems where one Cassandra cluster is used as the general database for the entire DMS (i.e., a "Cassandra Cluster" setup).

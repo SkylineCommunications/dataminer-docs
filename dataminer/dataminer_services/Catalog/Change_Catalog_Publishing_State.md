@@ -40,7 +40,7 @@ This page also provides a quick way to execute the call: Expand the "publishing-
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the publishing-state call on the Catalog.
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
@@ -51,5 +51,5 @@ PATCH
 The body of the request should contain the publishing state in the body of the PATCH request (use raw - json).
 
 - A value of *true* will result in the Catalog item being published as publicly available.
-- A value of *false* will result in the Catalog item being published as private, i.e. only accessible to users included in the organization to which the item is linked.
+- A value of *false* will result in the Catalog item being published as private, i.e., only accessible to users included in the organization to which the item is linked.
 - If the patch was successful, an *HTTP 200 OK* response will be returned with the updated value of the state in the body.

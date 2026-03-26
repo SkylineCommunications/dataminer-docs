@@ -29,13 +29,13 @@ fullfilter=(512 REGEX 'x\'y\\\\z' AND 510 == 1000)
 
 #### BREAKING CHANGE: GetSpectrumTrendTraceDataMessage will now always require a time range \[ID 31402\] \[ID 32016\]
 
-When using a GetSpectrumTrendTraceDataMessage to retrieve spectrum data, up to now, it was possible to pass an optional time range (i.e. RangeStart and RangeEnd) next to an ID (i.e. RecordID). From now on, passing a time range next to an ID will be mandatory.
+When using a GetSpectrumTrendTraceDataMessage to retrieve spectrum data, up to now, it was possible to pass an optional time range (i.e., RangeStart and RangeEnd) next to an ID (i.e., RecordID). From now on, passing a time range next to an ID will be mandatory.
 
 #### EPM: Aliases for topology cells, chains and search chains can now be specified on element level \[ID 32028\]
 
 In an EPM environment, since DataMiner feature release version 10.1.7, it has been possible to override the names of topology cells, chains, and search chains specified in a protocol with aliases specified in a system-level *EPMConfig.xml* file stored in the C:\\Skyline DataMiner\\ folder. Now, it is also possible to add *EPMConfig.xml* files on element level.
 
-If you want certain aliases for topology cells, chains and search chains to only be applied to a particular element, then create an *EPMConfig.xml* file and place it in the folder of that element (e.g. C:\\Skyline DataMiner\\Elements\\\<ElementName>\\).
+If you want certain aliases for topology cells, chains and search chains to only be applied to a particular element, then create an *EPMConfig.xml* file and place it in the folder of that element (e.g., C:\\Skyline DataMiner\\Elements\\\<ElementName>\\).
 
 > [!NOTE]
 > Aliases specified in an element-level *EPMConfig.xml* file will override aliases specified in the system-level *EPMConfig.xml* file.
@@ -44,7 +44,7 @@ If you want certain aliases for topology cells, chains and search chains to only
 
 #### Trending: New 'Fixed interval' option when exporting average trend data \[ID 31699\]
 
-When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g. 5 minutes) are ignored.
+When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g., 5 minutes) are ignored.
 
 > [!NOTE]
 >
@@ -84,7 +84,7 @@ The “Start sharing” button has been replaced by a “Share” button. Clicki
 
 When you choose to copy the URL of a dashboard, you can select the following options:
 
-- Select “Embed” to use a URL that will link to the dashboard in embedded mode (i.e. not showing headers and sidebars).
+- Select “Embed” to use a URL that will link to the dashboard in embedded mode (i.e., not showing headers and sidebars).
 - Select “Use uncompressed URL parameters” to use a URL in which the data in the search parameters is not compressed. This will allow you to see and, if necessary, modify the plain JSON object.
 
 #### Dashboards app: Passing JSON data in a dashboard URL \[ID 31833\] \[ID 31885\]
@@ -152,7 +152,7 @@ This JSON object has to have the following structure:
 - In the **components** item, you can provide data to be selected in specific components referred to by their ID.
 
     > [!NOTE]
-    > When you are editing a dashboard, each component will show its ID in the bottom-right corner (e.g. “State 1”).
+    > When you are editing a dashboard, each component will show its ID in the bottom-right corner (e.g., “State 1”).
 
 > [!NOTE]
 > When a dashboard updates its own URL, it will use the new format, but in a compressed way. In that compressed syntax, the query parameter “d” will be used instead of “data”.
@@ -234,7 +234,7 @@ A number of enhancements have now been made to this pattern matching mechanism. 
 
 #### SLLogCollector: Resources to be collected can now be specified in configuration files \[ID 31674\]
 
-SLLogCollector will now check the C:\\Skyline DataMiner\\Tools\\SLLogCollector\\LogConfigs folder for configuration files in which you can specify the resources (i.e. objects) to be collected.
+SLLogCollector will now check the C:\\Skyline DataMiner\\Tools\\SLLogCollector\\LogConfigs folder for configuration files in which you can specify the resources (i.e., objects) to be collected.
 
 By default, the above-mentioned folder will contain a Default.xml file, listing a default list of resources to be collected. If necessary, additional XML files can be created and stored in this folder.
 
@@ -258,7 +258,7 @@ Example of a configuration file:
 
 In the example above, three collectors have been defined:
 
-- Collector1 is a collector of type “File”, and will order SLLogCollector to retrieve a set of files (e.g. log files).
+- Collector1 is a collector of type “File”, and will order SLLogCollector to retrieve a set of files (e.g., log files).
 - Collector2 is a collector of type “Http”, and will order SLLogCollector to send an HTTP request to a server and to store the response.
 - Collector3 is a collector of type “Exe”, and will order SLLogCollector to run an executable file and to store the output.
 
@@ -444,11 +444,11 @@ From now on, if a payload contains only a trailer, the socket buffer will be rea
 
 #### SLA: Problem when an update of an SLA setting coincided with a window change \[ID 31750\]
 
-When an update of an SLA setting (e.g. Base timestamp, Monitor span, Window size, Window Unit, Window type, Validity start or Validity end) coincided with a window change, in some rare cases, the next window would incorrectly be taken instead of the window that triggered the change. This would cause calculations to incorrectly use a timestamp in the future.
+When an update of an SLA setting (e.g., Base timestamp, Monitor span, Window size, Window Unit, Window type, Validity start or Validity end) coincided with a window change, in some rare cases, the next window would incorrectly be taken instead of the window that triggered the change. This would cause calculations to incorrectly use a timestamp in the future.
 
 #### Web apps: 'Refresh now' instead of 'Reconnecting...' message after communication was interrupted \[ID 31753\]
 
-Up now on, when a web app (e.g. Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the web page.
+Up now on, when a web app (e.g., Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the web page.
 
 #### DataMiner Cube - Alarm Console: No context menu would appear when right-clicking an instance of an alarm that impacted more than one service when the alarms were grouped by service \[ID 31764\]
 
@@ -516,7 +516,7 @@ When a shape with a connection to another shape was hidden, in some cases, the c
 
 #### Problem with filtered table subscriptions on DVE elements \[ID 31845\]
 
-When a subscription on a table of a DVE element had been created with a filter (e.g. a primary key filter), the client would receive the initial data but no updates.
+When a subscription on a table of a DVE element had been created with a filter (e.g., a primary key filter), the client would receive the initial data but no updates.
 
 #### SLProtocol could leak memory when an enhanced service was tracking alarms that contained duplicate property names \[ID 31851\]
 
@@ -534,11 +534,11 @@ System.Exception: Unexpected error from nodetool.
 
 #### SLPhotoManager would incorrectly log 'PrincipalServerDown' exceptions in SLErrors.txt when trying to retrieve pictures of local users \[ID 31865\]
 
-Up to now, when SLPhotoManager was unable to retrieve pictures of local (i.e. non-LDAP) users, it would incorrectly log “PrincipalServerDown” exceptions in the SLErrors.txt log file. From now on, it will log those exceptions in the SLPhotoManager.txt log file when the debug level is set to 5.
+Up to now, when SLPhotoManager was unable to retrieve pictures of local (i.e., non-LDAP) users, it would incorrectly log “PrincipalServerDown” exceptions in the SLErrors.txt log file. From now on, it will log those exceptions in the SLPhotoManager.txt log file when the debug level is set to 5.
 
 #### Web apps - Visual Overview: Native controls inside clickable child shapes would incorrectly not be displayed \[ID 31871\]
 
-When, in a web app, a visual overview had interactive parent shapes with clickable child shapes that contained a native control (e.g. view shapes containing an embedded browser control), that control would incorrectly not be displayed.
+When, in a web app, a visual overview had interactive parent shapes with clickable child shapes that contained a native control (e.g., view shapes containing an embedded browser control), that control would incorrectly not be displayed.
 
 #### Scheduled tasks configured to take a DataMiner backup, optimize the database or perform an LDAP resynchronization would incorrectly not get executed \[ID 31877\]
 
@@ -588,7 +588,7 @@ When DataMiner was started or when an element was started, in some cases, the fo
 Could not read element latch for DMAID/EID. 0x80131533
 ```
 
-#### Interactive Automation scripts - TreeViewItem: Selecting a tree item would not cause the corresponding valuable to be updated \[ID 31940\]
+#### Interactive automation scripts - TreeViewItem: Selecting a tree item would not cause the corresponding valuable to be updated \[ID 31940\]
 
 When you selected an item in a tree view, in some cases, the value of the corresponding variable would not be updated, especially when the parent item was also selected and was configured to not use recursion.
 
@@ -650,7 +650,7 @@ In the DataMiner.xml file, you can configure to have separate SLScripting proces
 
 #### Failover: Certain system files would incorrectly not get synchronized to the offline agent during the initial sync \[ID 32034\]
 
-When a Failover system was set up, certain system files (e.g. PropertyConfiguration.xml) would incorrectly not get synchronized to the offline agent during the initial sync.
+When a Failover system was set up, certain system files (e.g., PropertyConfiguration.xml) would incorrectly not get synchronized to the offline agent during the initial sync.
 
 #### DataMiner Cube: Information templates could no longer be edited when connected to a DataMiner Agent installed on Windows Server 2016 \[ID 32035\]
 

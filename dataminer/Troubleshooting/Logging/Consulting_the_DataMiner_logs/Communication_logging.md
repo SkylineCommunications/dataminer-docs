@@ -11,7 +11,7 @@ The log information is displayed in four columns:
 | Column | Description                                                                        |
 |--------|------------------------------------------------------------------------------------|
 | ID     | The log ID.                                                                        |
-| Type   | The type of log message, e.g. Received, Sent.                                      |
+| Type   | The type of log message, e.g., Received, Sent.                                      |
 | Time   | The time when the message was logged, displayed in the format MM/DD/YYYY HH:MM:SS. |
 | Text   | The log message itself.                                                            |
 

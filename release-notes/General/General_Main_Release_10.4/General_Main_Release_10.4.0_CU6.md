@@ -33,7 +33,7 @@ When, in the scope of behavioral anomaly detection, proactive cap detection or p
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
 
-From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an Automation script:
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g., an automation script:
 
 `SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
 
@@ -43,11 +43,11 @@ From now on, the NATS configuration can be reset by calling the following endpoi
 
 From now on, alarms generated for child DVE elements using a parameter ID from the main DVE element can also get a focus value and, as a result, be grouped by Automatic incident tracking.
 
-#### SLAutomation: Enhanced compilation of Automation scripts [ID 39965]
+#### SLAutomation: Enhanced compilation of automation scripts [ID 39965]
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
-A number of enhancements have been made with regard to the compilation of Automation scripts.
+A number of enhancements have been made with regard to the compilation of automation scripts.
 
 #### DataMiner upgrade: ResetConfig.txt will no longer be added to FilesToDelete.txt [ID 39994]
 
@@ -77,15 +77,15 @@ When booking objects are added to, updated in or deleted from the cache, from no
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the `C:\Skyline DataMiner\Files\ResetConfig.txt` file, assuming that it would always be executed from the `C:\Skyline DataMiner\Files` folder. As a result, when it was executed from another folder (e.g. from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
+Up to now, the factory reset tool *SLReset.exe* always used the relative path `.\\` to locate the `C:\Skyline DataMiner\Files\ResetConfig.txt` file, assuming that it would always be executed from the `C:\Skyline DataMiner\Files` folder. As a result, when it was executed from another folder (e.g., from a terminal window opened on the Windows desktop), it would not be able to find the *ResetConfig.txt* file.
 
 From now on, *SLReset.exe* will always use the absolute path `C:\Skyline DataMiner\Files\ResetConfig.txt` when locating *ResetConfig.txt*.
 
-#### Automation: Using the Engine.Sleep method in an Automation script could affect other scripts [ID 40104]
+#### Automation: Using the Engine.Sleep method in an automation script could affect other scripts [ID 40104]
 
 <!-- MR 10.3.0 [CU19]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, using the *Engine.Sleep* method in an Automation script could cause issues that would affect other scripts. This has now been resolved.
+Up to now, using the *Engine.Sleep* method in an automation script could cause issues that would affect other scripts. This has now been resolved.
 
 #### SLLogCollector: Enhanced CPU usage when 'Include memory dump' is selected [ID 40109]
 
@@ -193,7 +193,7 @@ When SLDataGateway retrieved data from the database page by page, in some cases,
 
 <!-- MR 10.4.0 [CU6] - FR 10.4.9 -->
 
-Events generated after DOM objects were created, updated or deleted would incorrectly be of type `DomCrudEvent<T>` instead of e.g. `DomInstancesChangedEventMessage`.
+Events generated after DOM objects were created, updated or deleted would incorrectly be of type `DomCrudEvent<T>` instead of e.g., `DomInstancesChangedEventMessage`.
 
 #### Run-time error could occur in SLProtocol when a large SNMP table was being polled [ID 39756]
 
@@ -253,13 +253,13 @@ At startup, in some cases, the CloudEndpointManager in SLNet could throw an exce
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-When a DMA did not respond during the midnight synchronization (e.g. because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
+When a DMA did not respond during the midnight synchronization (e.g., because the Resource Manager had not been initialized on that DMA), up to now, a nullreference exception would be thrown directly after the error had been logged.
 
 #### Automation scripts could fail due to zero or negative sleep intervals being passed to Engine.Sleep [ID 40084]
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-Up to now, an Automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
+Up to now, an automation script could fail because a zero or negative sleep interval was passed to the `Engine.Sleep` method. From now on, any zero or negative sleep interval will be ignored.
 
 #### SLProtocol would leak memory when performing an SNMP Set [ID 40112]
 

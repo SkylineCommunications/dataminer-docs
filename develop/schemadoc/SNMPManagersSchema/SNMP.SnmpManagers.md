@@ -4,7 +4,7 @@ uid: SNMP.SnmpManagers
 
 # SnmpManagers element
 
-Configures a list of SNMP managers, i.e. third-party platforms to which DataMiner has to forward SNMP notifications.
+Configures a list of SNMP managers, i.e., third-party platforms to which DataMiner has to forward SNMP notifications.
 
 ## Parents
 

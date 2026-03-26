@@ -8,7 +8,7 @@ uid: Terms_of_Sale
 
 | Term | Description |
 |--|--|
-| Agile | A term used to describe approaches to, amongst others, software development and project management, emphasizing incremental delivery, team collaboration, continual planning, and continual learning (e.g. <https://agilemanifesto.org/>). |
+| Agile | A term used to describe approaches to, amongst others, software development and project management, emphasizing incremental delivery, team collaboration, continual planning, and continual learning (e.g., <https://agilemanifesto.org/>). |
 | Buyer | The person, company, or government entity placing a PO with Skyline. |
 | Deliverables | The Software, Services, and any other deliverable to be provided by Skyline. |
 | Personal data | Any information relating to an identified or identifiable individual in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC. |
@@ -23,7 +23,7 @@ uid: Terms_of_Sale
 
 These terms and conditions govern Buyer's purchase of Deliverables from Skyline.
 
-Supplementary or deviating terms or conditions imposed by the Buyer shall not apply (e.g. purchasing or procurement terms). If Skyline has expressly accepted Buyer's terms and conditions in writing, then the current terms and conditions shall apply, insofar as they do not conflict with Buyer's terms and conditions.
+Supplementary or deviating terms or conditions imposed by the Buyer shall not apply (e.g., purchasing or procurement terms). If Skyline has expressly accepted Buyer's terms and conditions in writing, then the current terms and conditions shall apply, insofar as they do not conflict with Buyer's terms and conditions.
 
 ## Ordering and payment
 
@@ -31,7 +31,7 @@ Skyline shall accept or refuse a PO issued under these terms and conditions with
 
 All invoices are payable in EUR and must be clear of any deductions. The payment term of Skyline's invoices is 30 days from the date of the invoice, except if set out differently in the Quotation.
 
-PO's and invoices shall be processed through email only. All costs incurred by Skyline due to the mandatory use of a vendor management system (e.g. Ariba) shall be due by, and invoiced separately to, Buyer.
+PO's and invoices shall be processed through email only. All costs incurred by Skyline due to the mandatory use of a vendor management system (e.g., Ariba) shall be due by, and invoiced separately to, Buyer.
 
 The Buyer is responsible for paying all taxes, other than Skyline's income tax, associated with the purchase of Deliverables. All payments by or on account of the compensation payable by the Buyer shall be made free and clear of and without deduction or withholding for any taxes. If Buyer is required to deduct or withhold any taxes from such payments, then the sum payable shall be increased as necessary so that, after making all required deductions or withholdings, Skyline receives an amount equal to the sum it would have received had no such deduction or withholding been made.
 

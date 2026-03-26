@@ -17,7 +17,7 @@ The "time to live" or TTL of database records can be updated via the SLNetClient
 
 1. Select the tab corresponding to the type of record for which a TTL will be specified:
 
-   - *DataType*: Allows you to specify a TTL for specific data types, e.g. *Alarm*, *TimeTrace*, etc.
+   - *DataType*: Allows you to specify a TTL for specific data types, e.g., *Alarm*, *TimeTrace*, etc.
 
    - *LoggerTable*: Allows you to specify a TTL for a logger table. The name of the table must be specified in the *Table* box.
 

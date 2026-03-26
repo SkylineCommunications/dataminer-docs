@@ -116,7 +116,7 @@ You can follow the steps below or watch this short video, which shows you how to
      > [!NOTE]
      >
      > - Clearing the selection from this checkbox can for example be of use for an element with multiple connections. If a particular connection should not influence the timeout state of the element, then clear the checkbox for that connection. If the checkbox is selected for all connections, the element will be in timeout as soon as one of the connections fails.
-     > - Prior to DataMiner 10.2.9/10.3.0, the maximum timeout value for this setting is 2 minutes (i.e. 120 seconds). From DataMiner 10.2.9/10.3.0 onwards, the maximum value is extended to 24 hours.
+     > - Prior to DataMiner 10.2.9/10.3.0, the maximum timeout value for this setting is 2 minutes (i.e., 120 seconds). From DataMiner 10.2.9/10.3.0 onwards, the maximum value is extended to 24 hours.
 
 1. Specify the following advanced element settings if necessary:
 
@@ -132,7 +132,7 @@ You can follow the steps below or watch this short video, which shows you how to
 
      - **The element ... after**: This setting determines when the element will go into slow poll mode:
 
-       - after a fixed number of seconds (between 1 and 300), or
+       - after the element has been in timeout for a fixed number of seconds (between 1 and 300), or
        - after having been put in a timeout state for a specific number of times (between 1 and 500).
 
      - **Ping interval**: The interval (in seconds) between two ping commands. This must be between 1 and 300 seconds.

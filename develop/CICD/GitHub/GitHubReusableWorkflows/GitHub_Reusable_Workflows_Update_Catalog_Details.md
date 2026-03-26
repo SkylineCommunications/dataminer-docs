@@ -6,7 +6,7 @@ uid: github_reusable_workflows_update_catalog_details
 
 The Update Catalog Details workflow can run on any repository. It is intended to update only the Catalog metadata and details without uploading new versions of artifacts.
 
-This is an optional workflow. Running the regular Automation script or connector reusable workflows will perform the same actions, but with additional quality control and the ability to release new artifacts.
+This is an optional workflow. Running the regular automation script or connector reusable workflows will perform the same actions, but with additional quality control and the ability to release new artifacts.
 
 The following actions will be performed:
 

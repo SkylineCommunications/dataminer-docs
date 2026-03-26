@@ -52,7 +52,7 @@ This page contains an overview of the Market parameters available in the D-DOCSI
 
 - **Percentage DSG Offline**: Calculated. The percentage of offline set-top gateways (DSGs) for the level
 
-- **Number CIN Entity**: Calculated. The total number of CIN entities associated with the given market that comply with the function description Core Leaf, Spine, or Node Leaf. The function is found in the specific entity type table (e.g. Spine table).
+- **Number CIN Entity**: Calculated. The total number of CIN entities associated with the given market that comply with the function description Core Leaf, Spine, or Node Leaf. The function is found in the specific entity type table (e.g., Spine table).
 
 - **Percentage CIN Entity Offline**: Calculated. The percentage of CIN entities associated with the given market reporting a connection status equal to "Unreachable".
 

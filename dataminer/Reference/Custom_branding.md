@@ -31,7 +31,7 @@ Two login logos should be provided:
 ### Width & height
 
 - Height: 30 px
-- Width: Scales with the aspect ratio, and should not exceed 10:1 (i.e. max. 300 px).
+- Width: Scales with the aspect ratio, and should not exceed 10:1 (i.e., max. 300 px).
 - Mandatory white space: None
 
 ### Color
@@ -122,7 +122,7 @@ By default, no background image is used.
 
 ## Accent colors
 
-By default, DataMiner Cube comes with two themes: **Skyline Mixed** and **Skyline Black**.
+By default, DataMiner Cube comes with two themes: **Light** and **Dark** (see [General settings](xref:User_settings#general-settings)).
 
 > [!NOTE]
 > When asking Skyline for a custom brand theme, then please indicate on which theme you want that custom theme to be based: "Skyline Mixed", "Skyline Black" or both.

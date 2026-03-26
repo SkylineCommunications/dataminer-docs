@@ -7,7 +7,7 @@ uid: GetMaskedAlarmsForViewSorted
 Use this method to retrieve a specific number of masked view alarms.
 
 > [!NOTE]
-> Using this method, you can e.g. request masked view alarms in batches in order to minimize loading time.
+> Using this method, you can e.g., request masked view alarms in batches in order to minimize loading time.
 
 ## Input
 

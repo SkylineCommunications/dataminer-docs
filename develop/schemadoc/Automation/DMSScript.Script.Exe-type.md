@@ -13,15 +13,15 @@ Contains one of the following values:
 |Value | Description |
 |--- |--- |
 |assign|Assigns a value.|
-|assigndummy|Assigns an Automation script's dummy to a specific element by using a variable or a value.|
+|assigndummy|Assigns an automation script's dummy to a specific element by using a variable or a value.|
 |assigntemplate|Assigns an alarm or trend template to a dummy.|
-|changestate|Sets the state of a dummy in an Automation script.|
-|clearmemory|Clears the content of an Automation script's memory file.|
+|changestate|Sets the state of a dummy in an automation script.|
+|clearmemory|Clears the content of an automation script's memory file.|
 |comment|Adds an extra comment to the script.|
 |csharp|Executes a block of C# code.|
 |else|Marks the start of the else clause of an If-Else statement.|
 |endif|Marks the end of the If-Else statement.|
-|exit|Terminates the Automation script without delay.|
+|exit|Terminates the automation script without delay.|
 |get|Gets a parameter or memory value.|
 |goto|Jumps to the specified label.|
 |findinteractiveclient|Asks an interactive user to attach to the script.|
@@ -31,9 +31,9 @@ Contains one of the following values:
 |logmessage|Creates a log message that will be saved in the SLAutomation.txt log file.|
 |notification|Sends a notification via email or SMS.|
 |report|Uploads a report to an FTP server or a shared folder.|
-|script|Runs another Automation script from within the current script.|
+|script|Runs another automation script from within the current script.|
 |set|Sets a parameter, memory position or variable.|
-|sleep|Pauses the Automation script for the specified period of time.|
+|sleep|Pauses the automation script for the specified period of time.|
 |ui|Configures a dialog box asking for a user response.|
 |wait|Defines a wait for a positive result.|
 
@@ -43,4 +43,4 @@ Contains one of the following values:
 
 ## Remarks
 
-Refer to [Automation script actions](xref:AutomationActions) for more information about Automation script actions.
+Refer to [Automation script actions](xref:AutomationActions) for more information about automation script actions.

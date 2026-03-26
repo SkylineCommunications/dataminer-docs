@@ -30,7 +30,7 @@ These are the key directories within this repository:
 - `dataminer`: Core documentation for DataMiner users.
 - `solutions`: Documentation for solutions built using DataMiner.
 - `tutorials`: Overview information on tutorials. The tutorials themselves are usually located in other directories.
-- `connectors`: Only contains images used for referencing elsewhere. The actual connectors information is located in a separate repository, i.e. `SkylineCommunications/dataminer-docs-connectors`.
+- `connectors`: Only contains images used for referencing elsewhere. The actual connectors information is located in a separate repository, i.e., `SkylineCommunications/dataminer-docs-connectors`.
 - `develop`: Documentation for DataMiner developers
 - `src`: Contains source files for documentation that is automatically generated during the `docfx metadata` step of the workflow.
 - `release-notes`: Release notes for the core DataMiner software, client software, DxMs, and various DataMiner Solutions.
@@ -66,3 +66,4 @@ For most key directories (with the exception of `src`), all images are placed in
 7. If changes are implemented that remove all references to a specific image, that image must be removed, with the exception of any images included in the `connectors` directory.
 8. Avoid adding pages that only contain links to underlying pages but no actual content of their own.
 9. When referring to changes introduced by a specific release note, make sure the Main Release version and Feature Release version introducing the changes are mentioned on the page.
+10. Use sentence casing for titles.

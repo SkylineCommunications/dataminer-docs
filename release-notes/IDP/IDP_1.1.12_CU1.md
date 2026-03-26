@@ -8,7 +8,7 @@ uid: IDP_1.1.12_CU1
 
 #### Support for provisioning of elements with communication prefix in IP address \[ID 29147\]
 
-IDP now supports the provisioning of elements that have a communication prefix in the IP address field, e.g. *wss://192.168.1.1*.
+IDP now supports the provisioning of elements that have a communication prefix in the IP address field, e.g., *wss://192.168.1.1*.
 
 ## Fixes
 

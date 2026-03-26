@@ -21,7 +21,7 @@ Using the DataMiner Taskbar Utility, it is now possible to install all possible 
 Also, the *SLAppPackageInstaller.txt* log file will now keep track of all actions performed and issues encountered during the installation of an app.
 
 > [!NOTE]
-> After you have launched an upgrade, the upgrade process displayed in DataMiner Taskbar Utility may lag behind and DataMiner Taskbar Utility may use a considerable amount of memory. This is a known issue. See [Taskbar Utility performance issue while Agents are being upgraded](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded).
+> After you have launched an upgrade, the upgrade process displayed in DataMiner Taskbar Utility may lag behind and DataMiner Taskbar Utility may use a considerable amount of memory. This is a known issue.
 >
 > To prevent his issue, stay on the upgrade summary tab until the upgrade has finished, and then close DataMiner Taskbar Utility to have the memory cleared. Note also that this issue is related to the Taskbar Utility only and does not affect the upgrade process.
 
@@ -128,13 +128,13 @@ When, in the hamburger button in the top-left corner of the Alarm Console, the *
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-When the system time changed because of e.g. a clock resynchronization or a switch to or from daylight-saving time, up to now, the start time and end time of scheduled alarm templates would incorrectly not get updated.
+When the system time changed because of e.g., a clock resynchronization or a switch to or from daylight-saving time, up to now, the start time and end time of scheduled alarm templates would incorrectly not get updated.
 
 #### Web apps: Long text strings without spaces displayed in read-only boxes were clipped instead of wrapped [ID 34193]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-In web apps (e.g. Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
+In web apps (e.g., Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
 
 #### Failover: Certain correlation rules would no longer work after a Failover switch [ID 34204]
 

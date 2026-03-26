@@ -112,11 +112,11 @@ To add a service property, add the following \<item> tag inside the \<value> tag
 
 The LogHelper API now has a FlushToDatabaseAfterUpsert option.
 
-- If you set this option to true (i.e. the default setting), then the LogHelper will wait for the database to respond after writing log entries to the database.
+- If you set this option to true (i.e., the default setting), then the LogHelper will wait for the database to respond after writing log entries to the database.
 - If you set this option to false, then the LogHelper will not wait for the database to respond after writing log entries to the database.
 
 > [!NOTE]
-> If you set this option to false, there are no guarantees that all log entries will get stored in the database, especially in case of e.g. connection issues or exceptions.
+> If you set this option to false, there are no guarantees that all log entries will get stored in the database, especially in case of e.g., connection issues or exceptions.
 
 #### Masked alarms will no longer be automatically unmasked when cleared \[ID 29007\]\[ID 29138\]
 
@@ -272,14 +272,14 @@ If you do not want this to happen, then add ClearValueOnSubscriptionChange=False
 
 #### DataMiner Cube will now use Chromium to handle SAML authentication \[ID 28922\]
 
-In order to support a wider range of identity providers (e.g. Azure AD), DataMiner Cube will now use Chromium instead of Internet Explorer when handling SAML authentication.
+In order to support a wider range of identity providers (e.g., Azure AD), DataMiner Cube will now use Chromium instead of Internet Explorer when handling SAML authentication.
 
 > [!NOTE]
 > DataMiner Cube clients will now automatically download the CefSharp package from the DataMiner Agent they connect to.
 
 #### Alarm Console: New option to allow a history tab to show alarms associated with an enhanced service deleted in the selected time frame \[ID 28942\]
 
-Up to now, when you created a history tab with a service filter, it was only possible to select one of the active enhanced services. Now, it is also possible to select one of the enhanced services that has been deleted in the selected time frame (e.g. “last hour”).
+Up to now, when you created a history tab with a service filter, it was only possible to select one of the active enhanced services. Now, it is also possible to select one of the enhanced services that has been deleted in the selected time frame (e.g., “last hour”).
 
 When, in the filter section, you selected “Service” and you want to be able to select an enhanced service that has been deleted in the selected time frame, then click the *Load deleted services* option, and select the deleted service from the list. That way, you will be able to create a history tab that lists the alarms associated with an enhanced service that has been deleted in the selected time frame.
 
@@ -297,7 +297,7 @@ At the bottom of the sidebar, you can now click a help button that will open a m
 
 #### Schedule configuration of BPA tests \[ID 29000\]
 
-On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
+On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g., daily or every 12 hours.
 
 #### New Surveyor setting: Collapse DVE elements beneath their main element \[ID 29021\]
 
@@ -332,7 +332,7 @@ Each row in this data source has the following columns:
 | Child ID | The ID of the DataMiner object in the view.                                 |
 | Depth    | The level of the DataMiner object in the view tree in relation to the root. |
 
-When you set the *Recursive* option to true, the table will not only contain all direct relationships (i.e. between a parent item and a child item), but also all indirect relationships (e.g. between a grandparent item and a grandchild item).
+When you set the *Recursive* option to true, the table will not only contain all direct relationships (i.e., between a parent item and a child item), but also all indirect relationships (e.g., between a grandparent item and a grandchild item).
 
 #### Dashboards app: Existing GQI queries stored in Queries.json will now automatically be copied to the correct dashboard files during a DataMiner upgrade \[ID 28816\]
 
@@ -653,9 +653,9 @@ From now on, this will no longer the case when you do not have access to the ele
 
 When, in a trend template, you changed the Allow offload database configuration setting, in some cases, the setting would not be applied correctly.
 
-#### Problem when launching Automation scripts when switching elements in a redundancy group that contained DELT elements \[ID 28832\]
+#### Problem when launching automation scripts when switching elements in a redundancy group that contained DELT elements \[ID 28832\]
 
-When Automation scripts were launched when switching elements in a redundancy group of which either the primary or backup elements were DELT elements, in some cases, it would not be possible to pass \<Any Primary> or \<Any backup> as dummies.
+When automation scripts were launched when switching elements in a redundancy group of which either the primary or backup elements were DELT elements, in some cases, it would not be possible to pass \<Any Primary> or \<Any backup> as dummies.
 
 #### DataMiner Cube - Services app: UI selections would be lost after saving or discarding changes made to a service profile definition \[ID 28839\]
 
@@ -671,17 +671,17 @@ In the Dashboards app, in some cases, table columns would be naturally sorted by
 
 Also, in the GQI query builder, in some cases, the default columns would be sorted incorrectly when using the “Select columns” option.
 
-#### Problem with SLAutomation when an interactive Automation script was communicating with a client app \[ID 28862\]
+#### Problem with SLAutomation when an interactive automation script was communicating with a client app \[ID 28862\]
 
-When an interactive Automation script was communicating with the client app, in some cases, an error could occur in SLAutomation.
+When an interactive automation script was communicating with the client app, in some cases, an error could occur in SLAutomation.
 
 #### Service & Resource Management: Problem when saving or updating a service profile definition after defining virtual function IDs \[ID 28868\]
 
 Due to an incorrect ID check, in some cases, it would not be possible to create or update a service profile definition after defining virtual function IDs.
 
-#### DataMiner Cube - Interactive Automation scripts: Multiple 'Continue' messages would be sent to the DataMiner Agent \[ID 28872\]
+#### DataMiner Cube - Interactive automation scripts: Multiple 'Continue' messages would be sent to the DataMiner Agent \[ID 28872\]
 
-When an interactive Automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
+When an interactive automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
 
 #### Dashboards app: Problem when embedding a GQI dashboard component \[ID 28874\]
 
@@ -753,7 +753,7 @@ When opening the Profiles app, in some cases, it would incorrectly try to load s
 
 #### Cassandra: Problem with file offload \[ID 28951\]
 
-Due to a file offload problem, in some rare cases, data operations (e.g. parameter updates) executed during a Cassandra outage would not get pushed to the database after the outage.
+Due to a file offload problem, in some rare cases, data operations (e.g., parameter updates) executed during a Cassandra outage would not get pushed to the database after the outage.
 
 #### Service & Resource Management: Problem with GetEligibleResources calls \[ID 28960\]
 
@@ -791,7 +791,7 @@ In some cases, it was not possible to delete GQI queries.
 
 #### DataMiner landing page: Clicking the waffle icon did not open the sidebar \[ID 29050\]
 
-When you clicked the waffle icon in the top-left corner of a DataMiner landing page (i.e. `https://<DmaAddress>/root/`), in some cases, the sidebar listing the available apps would not open.
+When you clicked the waffle icon in the top-left corner of a DataMiner landing page (i.e., `https://<DmaAddress>/root/`), in some cases, the sidebar listing the available apps would not open.
 
 #### Updating an element via a CSV export/import would not work properly when that element had an empty port type value \[ID 29052\]
 

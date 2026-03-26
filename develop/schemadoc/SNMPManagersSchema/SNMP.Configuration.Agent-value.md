@@ -4,7 +4,7 @@ uid: SNMP.Configuration.Agent-value
 
 # value attribute
 
-Specifies the value (e.g. the IPv4 address).
+Specifies the value (e.g., the IPv4 address).
 
 ## Content Type
 

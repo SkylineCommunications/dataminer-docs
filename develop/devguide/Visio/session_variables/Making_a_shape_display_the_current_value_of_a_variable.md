@@ -24,7 +24,7 @@ Add a shape data field of type **Variable** to the shape, and set its value to:
 VariableName|Options
 ```
 
-Also, if the scope of the variable is not the default scope (i.e. the current DataMiner Cube session), then add an additional shape data field of type **Options**, and set its value to the correct scope. See [Indicating the scope of the variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable#indicating-the-scope-of-the-variable).
+Also, if the scope of the variable is not the default scope (i.e., the current DataMiner Cube session), then add an additional shape data field of type **Options**, and set its value to the correct scope. See [Indicating the scope of the variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable#indicating-the-scope-of-the-variable).
 
 ## Options
 
@@ -41,7 +41,7 @@ To add text to a shape, just double-click the shape, and enter the text.
 
 ## Using the current value of a session variable in an expression
 
-If you want to use the current value of a session variable in an expression (e.g. the value of some shape data field), use a \[var:...\], \[WorkspaceVar:...\], \[cardvar:...\] or \[pagevar:...\] placeholder (depending on the scope). This way you can e.g. link a shape to an element or view using a session variable.
+If you want to use the current value of a session variable in an expression (e.g., the value of some shape data field), use a \[var:...\], \[WorkspaceVar:...\], \[cardvar:...\] or \[pagevar:...\] placeholder (depending on the scope). This way you can e.g., link a shape to an element or view using a session variable.
 
 From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38910-->, you can add the "WaitForValue" option to the \[var:...\], \[cardvar:...\], and \[pagevar:...\] placeholders to prevent the placeholder from being resolved until the variable is set to a value. For example: `[var:testvar,WaitForValue]`.
 

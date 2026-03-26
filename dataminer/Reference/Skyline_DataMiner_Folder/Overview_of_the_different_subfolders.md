@@ -12,7 +12,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 |--|--|--|
 | Aggregation | The aggregation rules configured on the DMA. See [Aggregation](xref:Aggregation). | Yes |
 | Applications | Configuration for [low-code apps](xref:Application_framework). | Yes |
-| Analytics | Configuration of DataMiner Analytics features (e.g. [custom alarm grouping rules](xref:Customizing_alarm_grouping_rules)). | Yes |
+| Analytics | Configuration of DataMiner Analytics features (e.g., [custom alarm grouping rules](xref:Customizing_alarm_grouping_rules)). | Yes |
 | AppPackages | Uploaded and installed *.dmapp packages. | Partially (only *Installed* subfolder) |
 | AssetManager | DataMiner Inventory and Asset Management configuration. Only the *Configs*, *Cache*, and *MediaConfigs* subfolders are synchronized in a DMS. | Partially |
 | Backup | Backup settings, backup DLLs, backed-up data. | Partially |

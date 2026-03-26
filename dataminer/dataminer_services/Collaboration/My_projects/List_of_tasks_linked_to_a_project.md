@@ -8,7 +8,7 @@ When you click a project in the *My projects* tab, you will see the list of task
 
 - To filter down the list of tasks to find those that contain a particular piece of text, enter that text in the *Search* box at the top of the list.
 
-- To sort the list of tasks by a particular property, or filter it by status, type, label (i.e. a free-form identifier added by someone at Skyline) and/or project, click the button to the right of the search box.
+- To sort the list of tasks by a particular property, or filter it by status, type, label (i.e., a free-form identifier added by someone at Skyline) and/or project, click the button to the right of the search box.
 
     - To sort the list, select a property and indicate the order (ascending or descending) by toggling the button to the right of it.
 

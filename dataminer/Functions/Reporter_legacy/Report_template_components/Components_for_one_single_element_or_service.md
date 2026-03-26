@@ -26,7 +26,7 @@ Overview of an element’s active alarms or history alarms, with the following o
 
 - In order to only include certain parameters, you can apply one of the alarm filters saved in the DMS.
 
-  For more information on saved alarm filters, see [Working with saved alarm filters](xref:ApplyingAlarmFiltersInTheAlarmConsole#working-with-saved-alarm-filters).
+  For more information on saved alarm filters, see [Working with saved alarm filters](xref:WorkingWithSavedAlarmFilters).
 
 - You can choose to sort the list either by element name or by alarm time.
 
@@ -121,15 +121,15 @@ Only applicable for SLA elements. This component shows a table with an overview 
 
 - The start and end time of the period represented in the report.
 
-- The total affected time, i.e. the actual total duration of all alarms that occurred in the indicated time span, without corrections.
+- The total affected time, i.e., the actual total duration of all alarms that occurred in the indicated time span, without corrections.
 
-- The total violation time, i.e. the total duration of all SLA violations that occurred in the indicated time span.
+- The total violation time, i.e., the total duration of all SLA violations that occurred in the indicated time span.
 
-- The minimum availability, i.e. the percentage of time that must be without violations in order for the SLA not to be breached.
+- The minimum availability, i.e., the percentage of time that must be without violations in order for the SLA not to be breached.
 
-- The measured availability, i.e. the percentage of time that the SLA was without violations.
+- The measured availability, i.e., the percentage of time that the SLA was without violations.
 
-- The deviation, i.e. the difference between the minimum and the measured availability (deviation = measured - minimum availability).
+- The deviation, i.e., the difference between the minimum and the measured availability (deviation = measured - minimum availability).
 
 - The number of violations.
 
@@ -160,7 +160,7 @@ A timeline showing the alarm state of the element or service in the selected tim
 
 - You can choose between many different time spans, or set a custom time span.
 
-- You can choose to include a *Textual Overview*, i.e. a table with detailed information
+- You can choose to include a *Textual Overview*, i.e., a table with detailed information
 
 - You can choose to only show the *Textual Overview*, instead of the timeline.
 
@@ -170,7 +170,7 @@ A timeline showing the alarm state of the selected parameters in the selected ti
 
 - You can choose between many different time spans, or set a custom time span.
 
-- You can choose to include a *Textual Overview*, i.e. a table with detailed information
+- You can choose to include a *Textual Overview*, i.e., a table with detailed information
 
 - You can choose to only show the *Textual Overview*, instead of the timeline.
 

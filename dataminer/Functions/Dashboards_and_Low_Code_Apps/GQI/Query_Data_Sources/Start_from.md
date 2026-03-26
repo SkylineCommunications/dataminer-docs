@@ -6,7 +6,7 @@ uid: Start_from
 
 Available from DataMiner 10.1.0/10.1.1 onwards. If another query has already been configured in the dashboard, the *Start from* data source allows you to start from that query and then refine it further.
 
-Prior to DataMiner 10.3.8/10.4.0, if the query you start from is modified, the new query that makes use of it will not be updated unless it is also modified or the dashboard is refreshed. From DataMiner 10.3.8/10.4.0 onwards, updates in base queries (e.g. queries linked to data) are automatically taken into account.<!-- RN 36690 -->
+Prior to DataMiner 10.3.8/10.4.0, if the query you start from is modified, the new query that makes use of it will not be updated unless it is also modified or the dashboard is refreshed. From DataMiner 10.3.8/10.4.0 onwards, updates in base queries (e.g., queries linked to data) are automatically taken into account.<!-- RN 36690 -->
 
 > [!NOTE]
 >

@@ -30,7 +30,7 @@ The SLSNMPManager process communicates with devices acting as SNMP agents.
 
 The UDP ports to be used are set as follows:
 
-- The port on which the device will listen for Get and Set messages (i.e. the "polling port") has to be specified during the creation of the element associated with that device. Default: 161
+- The port on which the device will listen for Get and Set messages (i.e., the "polling port") has to be specified during the creation of the element associated with that device. Default: 161
 
 - By default, only the SLSNMPManager process for SNMPv3 will receive notifications, on port 162. It will then forward them to the SNMPv1 and SNMPv2 processes when necessary:
 
@@ -42,7 +42,7 @@ The UDP ports to be used are set as follows:
 
 ## SLSNMPAgent
 
-The SLSNMPAgent process communicates with third-party applications acting as SNMP managers (e.g. HP OpenView, IBM NetCool, etc.).
+The SLSNMPAgent process communicates with third-party applications acting as SNMP managers (e.g., HP OpenView, IBM NetCool, etc.).
 
 - It receives SNMP Get and SNMP Set messages.
 

@@ -157,7 +157,7 @@ When, in the *Navigation* panel of the *Bookings* app, you selected another time
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
-When you edited the properties of a tag (e.g. name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.
+When you edited the properties of a tag (e.g., name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.
 
 #### DataMiner Cube - EPM: Problem with topology filter [ID 34931]
 

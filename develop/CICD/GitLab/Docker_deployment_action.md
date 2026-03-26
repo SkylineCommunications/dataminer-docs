@@ -7,7 +7,7 @@ uid: Docker_deployment_action
 > [!IMPORTANT]
 > Deprecated. Though this will still work, consider using the .NET tools instead to package, upload, and deploy as shown in [this example](xref:CICD_GitLab_Examples).
 
-It is possible to deploy an Automation script solution from a GitLab repository by using the Skyline DataMiner Deploy Action in a pipeline.
+It is possible to deploy an automation script solution from a GitLab repository by using the Skyline DataMiner Deploy Action in a pipeline.
 
 To do so, you need to [create a dataminer.services key](#creating-a-dataminerservices-key), [add the key as a masked variable in the repository](#adding-the-key-as-a-masked-variable-in-the-repository), and [add the Skyline DataMiner Deploy Action to a pipeline](#adding-the-skyline-dataminer-deploy-action-to-a-pipeline).
 
@@ -36,7 +36,7 @@ The (primary or secondary) key should be added as a masked variable in the repos
 
    ![Add variable](~/develop/images/GitLab_add_variable.png)
 
-1. Specify a name for your variable (e.g. `MY_KEY`), paste the key as the value for the variable, select the *Mask variable*, and click *Add variable*. Optionally it is possible to further protect your variable by selecting *Protect variable*.
+1. Specify a name for your variable (e.g., `MY_KEY`), paste the key as the value for the variable, select the *Mask variable*, and click *Add variable*. Optionally it is possible to further protect your variable by selecting *Protect variable*.
 
    ![Create variable](~/develop/images/GitLab_create_variable.png)
 
@@ -59,7 +59,7 @@ The (primary or secondary) key should be added as a masked variable in the repos
         - uploadTag
         - deploy
 
-    # Uploading a commit on a branch with the build number of the pipeline (e.g. 0.0.56)
+    # Uploading a commit on a branch with the build number of the pipeline (e.g., 0.0.56)
     uploadBranch:
         rules:
             - if: $CI_COMMIT_BRANCH

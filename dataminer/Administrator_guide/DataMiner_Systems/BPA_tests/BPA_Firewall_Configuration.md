@@ -4,7 +4,7 @@ uid: BPA_Firewall_Configuration
 
 # Firewall Configuration
 
-The firewall acts as a "gatekeeper", blocking and monitoring unauthorized requests to a network, server, or application. It is crucial that a "gate" (i.e. a port) is closed if it is not actively being used.
+The firewall acts as a "gatekeeper", blocking and monitoring unauthorized requests to a network, server, or application. It is crucial that a "gate" (i.e., a port) is closed if it is not actively being used.
 
 A firewall policy that is too lax may allow adversaries to attack internal services.
 

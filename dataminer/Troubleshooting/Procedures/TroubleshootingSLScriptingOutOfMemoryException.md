@@ -14,7 +14,7 @@ By default, a single instance of the SLScripting process is spun up by DataMiner
 > [!TIP]
 > For investigation purposes, you can also consider configuring DataMiner so that it creates a separate SLScripting process for each SLProtocol process. Refer to [Configuring a separate SLScripting process for every protocol used](xref:Configuration_of_DataMiner_processes#configuring-a-separate-slscripting-process-for-every-protocol-used) and [Element in Protocol logging](xref:Element_in_Protocol_logging) for more information.
 
-In case a crash occurs because the SLScripting process has run out of memory, the log files in the generated log collector package, e.g. the element log files and the SLErrorsInProtocol log file, should mention the occurrence of an [OutOfMemoryException](https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception?view=netframework-4.8).
+In case a crash occurs because the SLScripting process has run out of memory, the log files in the generated log collector package, e.g., the element log files and the SLErrorsInProtocol log file, should mention the occurrence of an [OutOfMemoryException](https://learn.microsoft.com/en-us/dotnet/api/system.outofmemoryexception?view=netframework-4.8).
 
 For example:
 

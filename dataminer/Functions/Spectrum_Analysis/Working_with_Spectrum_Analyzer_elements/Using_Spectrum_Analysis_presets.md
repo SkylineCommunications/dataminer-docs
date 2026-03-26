@@ -8,7 +8,7 @@ uid: Using_Spectrum_Analysis_presets
 
 Spectrum Analysis presets can be used to reload settings, to reload a set of markers, to save and reload a trace image, to load a reference trace, etc. The following information can be stored in a preset:
 
-- Settings, e.g. start frequency, stop frequency
+- Settings, e.g., start frequency, stop frequency
 
 - Display settings, including the trace visibility
 
@@ -24,7 +24,7 @@ Spectrum Analysis presets can be used to reload settings, to reload a set of mar
 
 - The ID of the measurement point for which the trace is measured
 
-Presets can be saved publicly (i.e. shared) or privately:
+Presets can be saved publicly (i.e., shared) or privately:
 
 - Public: Anybody can access, use and modify these presets. Commonly used presets will typically be saved as “public” so that everybody performs the same measurement with the same settings, and store a reference trace image.
 

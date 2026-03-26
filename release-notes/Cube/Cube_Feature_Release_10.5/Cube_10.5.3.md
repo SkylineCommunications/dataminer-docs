@@ -57,7 +57,7 @@ When you have selected a user group, you will now also be able to choose the fol
 | Export preset            | Opens a window that will allow you to export the currently selected rights to a preset file (in JSON format).<br>If no preset is selected when you click *Export preset*, you will be asked to enter the name of the preset.<br>Note: When you export a preset to a preset file, that file will have a version number. That number will be incremented each time changes are made as to file format or syntax. |
 | Import preset            | Opens a window that will allow you to import a preset file.<br>If the name of the preset is identical to the one of an existing preset, and the currently selected rights do not entirely match the rights in the existing preset with the same name, then you will be asked whether you want to override the rights in the existing preset with the rights in the preset you are about to import. |
 | Reset                    | Reverts all changes made to the rights of the currently selected user group. |
-| Delete preset            | Deletes the currently selected preset.<br>Note: Built-in presets (e.g. *Administrators*) cannot be deleted. |
+| Delete preset            | Deletes the currently selected preset.<br>Note: Built-in presets (e.g., *Administrators*) cannot be deleted. |
 
 When you try to import
 
@@ -69,7 +69,7 @@ When you try to import
 > [!NOTE]
 >
 > - There is no command to rename a preset. To rename a preset, select it, delete it, and then save it again with another name.
-> - If you make any changes to presets, those changes will not automatically be visible in other places (e.g. other cards within the same Cube session or other Cube sessions).
+> - If you make any changes to presets, those changes will not automatically be visible in other places (e.g., other cards within the same Cube session or other Cube sessions).
 > - If you want to override a certain preset, then save it as a new preset using the same name. This way, the previously created preset with the same name will be overridden. However, note that if that preset is being used by other user groups, it will not be overridden there.
 
 #### System Center - Logging: Consulting DxM logs [ID 41674]
@@ -89,7 +89,7 @@ In the *Logging* section of *System Center*, the *DataMiner* tab now also allows
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
 
-In *System Center*, the *Cube* tab of the *Logging* section can be set to show SPI logging. This logging includes entries that show how long it took for Visual Overview pages to get loaded. From now on, the load times shown in those entries will also take into account the loading states of pending child shapes (i.e. child shapes that have placeholders that have not yet been resolved). Also, child shapes will now inherit any *EnableLoading* option that was set on shape, page, or system level.
+In *System Center*, the *Cube* tab of the *Logging* section can be set to show SPI logging. This logging includes entries that show how long it took for Visual Overview pages to get loaded. From now on, the load times shown in those entries will also take into account the loading states of pending child shapes (i.e., child shapes that have placeholders that have not yet been resolved). Also, child shapes will now inherit any *EnableLoading* option that was set on shape, page, or system level.
 
 > [!NOTE]
 >
@@ -188,7 +188,7 @@ When an alarm template was updated while a trend graph containing parameters fro
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
 
-In the Alarm Console, alarms generated during the last week of 2024 (i.e. week 53) would not be grouped correctly.
+In the Alarm Console, alarms generated during the last week of 2024 (i.e., week 53) would not be grouped correctly.
 
 #### Settings: Problem when interpreting the value of the 'Parameter display mode' setting [ID 41890]
 
@@ -198,7 +198,7 @@ In the *User > Data Display* section of the *Settings* window, the *Parameter di
 
 Up to now, Cube would check the value of this setting ("Normal" or "Lite") depending on the UI language. As a result, when that language was set to a language other than English, in some cases, the value of this setting would be interpreted incorrectly.
 
-From now on, Cube will check whether the value is the default setting (i.e. "Normal") or not. In the latter case, Cube will use the lite parameter controls.
+From now on, Cube will check whether the value is the default setting (i.e., "Normal") or not. In the latter case, Cube will use the lite parameter controls.
 
 #### Visual Overview: AlarmSummary shapes linked to a function would not show the correct alarm color [ID 41916]
 

@@ -118,7 +118,7 @@ Format of the request: requestInfo (object[]):
 
   Refer to Secure Shell (SSH) for an overview of the supported key exchange algorithms.
 
-  E.g. requestInfo[2] = new string[2] {"diffie-hellman-group1-sha1","diffie-hellman-group-exchange-sha1" }
+  Example: requestInfo[2] = new string[2] {"diffie-hellman-group1-sha1","diffie-hellman-group-exchange-sha1" }
 
   In the example above, DataMiner will first try to connect through diffie-hellman-group1-sha1, if that one is not supported by the server we will continue with diffie-hellman-group-exchange-sha1.
 

@@ -6,7 +6,7 @@ uid: AdvancedDataMinerMediationLayerCreatingABaseProtocol
 
 A base protocol is a virtual protocol defining parameters (in the range 70000-79999) that are mapped on device-specific protocols.
 
-To create a base protocol, provide an element type name (e.g. "IRD" or "Switch") in the *baseFor* attribute of the root *Protocol* tag.
+To create a base protocol, provide an element type name (e.g., "IRD" or "Switch") in the *baseFor* attribute of the root *Protocol* tag.
 
 ```xml
 <Protocol baseFor="IRD" xmlns="http://www.skyline.be/protocol">

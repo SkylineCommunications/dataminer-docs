@@ -2,9 +2,9 @@
 uid: SchemaSNMPManagers
 ---
 
-# SNMP Managers Schema
+# SNMP Managers schema
 
-SNMP Managers XML Schema.
+SNMP Managers XML schema.
 
 ## Root element
 
@@ -12,7 +12,7 @@ SNMP Managers XML Schema.
 
 ## Example
 
-This is an example of a SNMP Managers.xml file:
+This is an example of a *SNMP Managers.xml* file:
 
 ```xml
 <SNMP xmlns="http://www.skyline.be/config/snmpmanagers">

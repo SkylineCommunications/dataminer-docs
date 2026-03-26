@@ -12,8 +12,8 @@ Resources can be extended with metadata:
 
 - **Properties**
 - **Concurrency**, which defines how many concurrent bookings can make use of a resource.
-- **Capacities**, which define the capacity of the resource to perform specific tasks (e.g. "total bit rate" for an interface resource). Each booking making use of a resource will use part of its capacity.
-- **Capabilities**, which define what a resource is capable of doing (e.g. modulations supported by a demodulator).
+- **Capacities**, which define the capacity of the resource to perform specific tasks (e.g., "total bit rate" for an interface resource). Each booking making use of a resource will use part of its capacity.
+- **Capabilities**, which define what a resource is capable of doing (e.g., modulations supported by a demodulator).
 
 To make sure resources can be selected for a booking, resource capabilities and resource pools must be configured as detailed below.
 
