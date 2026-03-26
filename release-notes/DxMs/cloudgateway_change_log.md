@@ -4,6 +4,14 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 26 March 2026 - Enhancement - CloudGateway 3.0.1 - Cloud connection stability improvements
+
+Enhancements have been made to the stability of the cloud connection by improving retry mechanisms.
+
+#### 26 March 2026 - Fix - CloudGateway 3.0.1 - Crash during startup on DMZ setups
+
+An issue has been resolved where the CloudGateway DxM would crash on startup if the ```C:\Skyline Dataminer\``` folder would not exist. This is usually the case on DMZ setups.
+
 #### 2 February 2026 - Fix - CloudGateway 2.17.16 - Incorrect throttling behavior
 
 After several failed requests were sent to CloudGateway in a short time period, this could cause a large throttle cooldown, causing further requests to be refused for several hours. This issue has been resolved.
