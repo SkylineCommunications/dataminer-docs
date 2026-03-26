@@ -4,46 +4,11 @@ uid: PropertyConfiguration_xml
 
 # PropertyConfiguration.xml
 
-In the *PropertyConfiguration.xml* file, you can define custom properties to be linked to elements, parameters and alarms.
+In the *PropertyConfiguration.xml* file, you can find the custom properties defined for elements, services, views, and alarms. This file is synchronized across the cluster. It is located in the folder `C:\Skyline DataMiner\`.
 
-- This file is located in the following folder: `C:\Skyline DataMiner\`
+To create or edit custom properties, **use DataMiner Cube**. See [Managing custom properties](xref:Managing_element_properties) and [Changing custom alarm properties](xref:Changing_custom_alarm_properties).
 
-Several custom options can be configured in this file:
-
-- [Customizing how properties are displayed in the Surveyor](#customizing-how-properties-are-displayed-in-the-surveyor)
-
-- [Configuring alarm properties to motivate actions](#configuring-alarm-properties-to-motivate-actions)
-
-- [Configuring properties for Alarm Console grouping](#configuring-properties-for-alarm-console-grouping)
-
-- [Disabling alarm updates for changes of read-only alarm properties](#disabling-alarm-updates-for-changes-of-read-only-alarm-properties)
-
-- [Having a property value copied to an alarm field](#having-a-property-value-copied-to-an-alarm-field)
-
-## Customizing how properties are displayed in the Surveyor
-
-If, while creating or editing a property, you select *Display this property in the Surveyor*, the property will be displayed next to the item in the Surveyor in the format *\[Property name\]*: *\[Property value\]*.
-
-However, it is possible to have only the property values displayed instead, by customizing the configuration in *PropertyConfiguration.xml*.
-
-To do so:
-
-1. Stop the DMA.
-
-1. Open the file *PropertyConfiguration.xml*.
-
-1. In the main *\<PropertyConfiguration>* tag, add the attribute *surveyorMode="ValueOnly"*.
-
-   For example:
-
-   ```xml
-   <PropertyConfiguration xmlns="http://www.skyline.be/config/propertyconfiguration" surveyorMode="ValueOnly">
-   ```
-
-1. Start the DMA.
-
-> [!TIP]
-> See also: [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item)
+Direct configuration of properties in *PropertyConfiguration.xml* is only needed for a couple of custom options that are not available in DataMiner Cube, as detailed below.
 
 ## Configuring alarm properties to motivate actions
 
