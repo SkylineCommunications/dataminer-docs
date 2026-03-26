@@ -4,6 +4,10 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 24 March 2026 - Enhancement - CommunicationGateway 5.3.4 - NuGet dependency updated [ID 45129]
+
+The CommunicationGateway DxM has been updated to use the latest version of the DataMinerMessageBroker.API NuGet (3.6.2). Previously, it still referenced the older 3.0.3 version.
+
 #### 9 December 2025 - Fix - CommunicationGateway 5.3.3 - Deadlock during stream cleanup caused thread leakage [ID 44241]
 
 A deadlock could occur when a stream was being cleaned up, causing the operation to hang and leaving background threads unreleased. Over time, these leaked threads could increase resource usage and affect system stability.
