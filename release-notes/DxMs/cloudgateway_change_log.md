@@ -10,7 +10,7 @@ Enhancements have been made to the stability of the cloud connection by improvin
 
 #### 26 March 2026 - Fix - CloudGateway 3.0.1 - Crash during startup on DMZ setups
 
-An issue has been resolved where the CloudGateway DxM would crash on startup if the 
+An issue has been resolved where the CloudGateway DxM would crash on startup if the ```C:\Skyline DataMiner\``` folder would not exist. This is usually the case on DMZ setups.
 
 #### 2 February 2026 - Fix - CloudGateway 2.17.16 - Incorrect throttling behavior
 
