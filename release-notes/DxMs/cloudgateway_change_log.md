@@ -6,11 +6,11 @@ uid: cloudgateway_change_log
 
 #### 26 March 2026 - Enhancement - CloudGateway 3.0.1 - Cloud connection stability improvements
 
-Enhancements have been made to the stability of the cloud connection by improving retry mechanisms.
+The stability of the connection to dataminer.services has been enhanced through improved retry mechanisms.
 
-#### 26 March 2026 - Fix - CloudGateway 3.0.1 - Crash during startup on DMZ setups
+#### 26 March 2026 - Fix - CloudGateway 3.0.1 - CloudGateway failed to start up in DMZ setups
 
-An issue has been resolved where the CloudGateway DxM would crash on startup if the `C:\Skyline DataMiner\` folder would not exist. This is usually the case on DMZ setups.
+An issue has been resolved where the CloudGateway DxM failed to start up correctly if the `C:\Skyline DataMiner\` folder did not exist, as is usually the case in DMZ setups.
 
 #### 2 February 2026 - Fix - CloudGateway 2.17.16 - Incorrect throttling behavior
 
