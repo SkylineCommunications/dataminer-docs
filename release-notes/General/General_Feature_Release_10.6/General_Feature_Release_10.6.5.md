@@ -89,7 +89,7 @@ From now on, the *SLWatchDog2.txt* log file will contain more detailed logging r
 
 #### SLNet will now take into account the log level before sending a log entry to SLLog [ID 44910]
 
-<!-- MR 10.7.0 - FR 10.6.5 -->
+<!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
 
 Up to now, SLNet would incorrectly send all log entries directly to SLLog, including entries of which the log level dictated that they should not be added to a log file.
 
