@@ -4,21 +4,11 @@ uid: PropertyConfiguration_xml
 
 # PropertyConfiguration.xml
 
-In the *PropertyConfiguration.xml* file, you can define custom properties to be linked to elements, parameters and alarms.
+In the *PropertyConfiguration.xml* file, you can find the custom properties defined for elements, services, views, and alarms. This file is synchronized across the cluster. It is located in the folder `C:\Skyline DataMiner\`.
 
-- This file is located in the following folder: `C:\Skyline DataMiner\`
+To create or edit custom properties, **use DataMiner Cube**. See [Managing custom properties](xref:Managing_element_properties) and [Changing custom alarm properties](xref:Changing_custom_alarm_properties).
 
-Several custom options can be configured in this file:
-
-- [Customizing how properties are displayed in the Surveyor](#customizing-how-properties-are-displayed-in-the-surveyor)
-
-- [Configuring alarm properties to motivate actions](#configuring-alarm-properties-to-motivate-actions)
-
-- [Configuring properties for Alarm Console grouping](#configuring-properties-for-alarm-console-grouping)
-
-- [Disabling alarm updates for changes of read-only alarm properties](#disabling-alarm-updates-for-changes-of-read-only-alarm-properties)
-
-- [Having a property value copied to an alarm field](#having-a-property-value-copied-to-an-alarm-field)
+Direct configuration of properties in *PropertyConfiguration.xml* is only needed for a couple of custom options that are not available in DataMiner Cube, as detailed below.
 
 ## Customizing how properties are displayed in the Surveyor
 
