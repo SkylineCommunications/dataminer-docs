@@ -12,10 +12,14 @@ Both network devices and connections are color-coded to reflect their status.
 
 Click any [device](#device-details) or [connection](#connection-details) to view more details.
 
-A topology selector is available in the center of the header bar.
-Use this dropdown to choose which topology to display.
+![Topology](~/solutions/images/NS_manual_topology.png)
+
+### Topology selection
+
+A topology selector is available in the middle of the header bar. Use this dropdown to choose which topology to display.
 
 Topologies make it possible to:
+
 - Visualize the same network segments in different ways
 - Focus on specific parts of the network
 - Create clearer overviews for different operational needs
@@ -23,13 +27,13 @@ Topologies make it possible to:
 
 When a topology is selected, the view updates immediately to reflect the chosen configuration.
 
-![Topology](~/solutions/images/NS_manual_topology.png)
+### Metric selection
 
 When hovering over a connection, you can use the dot in the upper-right corner of the details window to choose which metric is displayed and used to color the lines.
 
 ![Topology connection details](~/solutions/images/NS_manual_topology_hover.png)
 
-You select either interface operational status or interface output utilization.
+You can select either interface operational status or interface output utilization.
 
 ![Topology connection analytics](~/solutions/images/NS_manual_topology_analytics.png)
 
@@ -51,7 +55,7 @@ The **Bitrate** and **SFP** buttons at the top allow you to access interactive t
 
 The **Ports** page shows an overview of all ports for the selected network device.
 
-To switch devices, use the **dropdown box** in the top-right corner.
+To switch devices, use the **dropdown box** in the upper-right corner.
 
 ![Ports](~/solutions/images/NS_manual_ports.png)
 
@@ -63,7 +67,7 @@ Using the Compare button in the menu bar, you can view the ports of two devices 
 
 The **Flows** page is similar to the **Topology** page but is specifically used to track multicast traffic in your network.
 
-Use the **filter box** on the left-hand side to find a multicast flow.
+Use the **filter box** on the left to find a multicast flow.
 
 You can filter by:
 
@@ -83,7 +87,7 @@ To open Application Settings, click the *Settings* button in the bottom-left of 
 
 ### Topology settings
 
-You can also use the ADD button in the upper right-hand corner of the application to create a new topology.
+You can also use the ADD button in the upper-right corner of the application to create a new topology.
 In the overview list of the topologies you can use the pencil icon to Edit an existing topology or the trashcan icon to Delete a topology.
 
 #### Creating a Topology
@@ -101,6 +105,7 @@ You must select a View.
 The selected view determines which network elements are displayed in the topology.
 
 Only elements that are:
+
 - Present in the selected view
 - Present in its subviews
 
