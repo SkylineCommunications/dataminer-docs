@@ -12,6 +12,8 @@ Existing custom reports may no longer work.
 
 *GetTable* via automation scripts will only be able to retrieve the displayed content.
 
+Baseline alarming will no longer work.
+
 *DIS MCC*
 
 | Full ID | Error message  | Description                                            |
