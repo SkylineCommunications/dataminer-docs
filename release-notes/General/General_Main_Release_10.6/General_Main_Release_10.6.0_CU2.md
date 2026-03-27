@@ -247,3 +247,9 @@ In some rare cases, the `/api/versions` endpoint exposed by DataMiner APIGateway
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When, on swarming-enabled systems, the StorageModule DxM failed to load elements from the database during DataMiner startup, up to now, the error state would incorrectly not be propagated to SLDataMiner, causing the DataMiner Agent to start up without loaded elements.
+
+#### Subsequent element updates could fail after the casing of the element name had been changed [ID 45119]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When, on a system on which Swarming was not enabled, you changed the casing of an element name and then restarted the element, in some cases, the next time you updated that element, the update would fail.

@@ -329,11 +329,11 @@ From now on, similar to the way in which log levels can be either lowered or inc
 
 When OpenStreetMaps was used as map provider, up to now, the markers would not correctly update their alarm state. They would start to cluster and show the highest alarm state.
 
-#### Problem when generating a multi-page PDF report in stacked mode of a dashboard [ID 45037]
+#### Problem when generating a multi-page PDF report of a dashboard with stacked mode disabled [ID 45037]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
-When you generated a multi-page PDF report in stacked mode of a dashboard, up to now, the PDF file would incorrectly only contain the first page.
+When you generated a multi-page PDF report of a dashboard with stacked mode disabled, up to now, the PDF file would incorrectly only contain the first page.
 
 #### Dashboards/Low-Code Apps: 'Allow components to shift' setting would incorrectly not be taken into account when you resized a component [ID 45045]
 
