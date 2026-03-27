@@ -70,8 +70,9 @@ Example:
 ```txt
 property(view.location)
 ```
->[!TIP]
->In case the property name contain spaces, use single or double quotes. For example, [property("view.Ticket ID")]  
+
+> [!NOTE]
+> In case the property name contain spaces, use single or double quotes. For example, `property("view.Ticket ID")`.
 
 ## parameter
 
