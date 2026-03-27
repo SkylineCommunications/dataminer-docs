@@ -55,7 +55,7 @@ When you have turned a shape into a table control that displays a direct view ta
 
 When displaying a table parameter in Visio, use this option to specify a client-side row filter.
 
-Use the same syntax as in a filter box (e.g., in the top-right corner of a card).
+Use the same syntax as in a filter box (e.g., in the upper-right corner of a card).
 
 If, for example, you set **ParameterControlOptions** to "ClientSideRowFilter:Name:abc", the table will only display rows of which the "Name" column contains "abc".
 

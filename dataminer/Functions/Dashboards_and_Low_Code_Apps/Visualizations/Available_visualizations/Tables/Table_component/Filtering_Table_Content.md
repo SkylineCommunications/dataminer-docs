@@ -12,7 +12,7 @@ To apply a general filter across the table, a **search box** is available:
 
 1. In edit mode, make sure the [*Show quick filter* setting](xref:DashboardTable#table-layout) is enabled (from DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->).
 
-1. In read mode, click the search icon in the top-right corner of the component.
+1. In read mode, click the search icon in the upper-right corner of the component.
 
 1. Specify the filter text in the search box. The search is case-insensitive and matches values as displayed in the table.
 

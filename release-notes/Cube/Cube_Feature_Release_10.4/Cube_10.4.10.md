@@ -47,11 +47,11 @@ To detect the presence of Pcap libraries on a DataMiner Agent, Cube will send a 
 
 In the AlarmFilter shape data value, dynamic values (e.g., session variables) are now supported.
 
-#### Trending: Enhanced requirements check before displaying the relation learning light bulb in the top-right corner of a trend graph [ID 40396]
+#### Trending: Enhanced requirements check before displaying the relation learning light bulb in the upper-right corner of a trend graph [ID 40396]
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-Before it displays the relation learning light bulb in the top-right corner of a trend graph, DataMiner Cube has to perform a requirements check.
+Before it displays the relation learning light bulb in the upper-right corner of a trend graph, DataMiner Cube has to perform a requirements check.
 
 During that requirements check, up to now, it would use the *GetCCAGatewayGlobalStateRequest* message to check whether the DataMiner System is connected to dataminer.services. From now on, it will use the new *IsCloudConnected* message instead.
 

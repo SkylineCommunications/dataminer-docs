@@ -46,7 +46,7 @@ With the filter component at the top of the page, you can filter on these tags t
 
 The *Configurations* page displays test run results, organized by configuration and test suite.
 
-By selecting your configuration and test suite, you can quickly filter and browse test runs to view both detailed test results and summary metrics in the top-right corner.
+By selecting your configuration and test suite, you can quickly filter and browse test runs to view both detailed test results and summary metrics in the upper-right corner.
 
 You can also see which server was used to run these tests, unless that server has already been undeployed.
 
@@ -60,7 +60,7 @@ The *Tokens* page allows you to create tokens that can be used to trigger test r
 
 To create a new token:
 
-1. Select *Create Token* in the top-left corner.
+1. Select *Create Token* in the upper-left corner.
 
 1. Provide a name and expiration date for the token.
 
@@ -119,7 +119,7 @@ Note that you can go to different pages without losing your changes. This can fo
 
 The *Test Suites* page shows all known test suites. When you select a test suite, you will also get an overview of all [test packages](xref:QAOps_Test_Package) in that test suite.
 
-Each test package shows a number in the top-right corner that indicates the execution order when the test suite is activated. With the *Open* button for a test package, you can go directly to the Catalog page for that package.
+Each test package shows a number in the upper-right corner that indicates the execution order when the test suite is activated. With the *Open* button for a test package, you can go directly to the Catalog page for that package.
 
 ![QAOps operator test suites](~/develop/images/QAOps_UI_TestSuites.png)
 

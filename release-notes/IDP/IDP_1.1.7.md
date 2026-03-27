@@ -145,7 +145,7 @@ To do so:
 3. Select the first configuration file to include in the comparison and click the *Left* button.
 4. Select the configuration file to compare it with and click the *Right* button.
 5. Click the *Compare* button. The configuration files will now be displayed side by side. The differences between the files will be highlighted.
-6. To close the side-by-side comparison, click the x in the top-right corner. To clear the selection of files to compare, click the *Clear* button.
+6. To close the side-by-side comparison, click the x in the upper-right corner. To clear the selection of files to compare, click the *Clear* button.
 
 You can also quickly launch the configuration comparison from the *Summary* and *Backups* subtabs of the *Configuration* tab. To do so, select an entry in the table on these pages and click the *Compare* button above the table. The app will then display the *Compare* tab with the selected configuration as the configuration file selected on the left. You will then only need to select the configuration file to compare it with and start the comparison.
 

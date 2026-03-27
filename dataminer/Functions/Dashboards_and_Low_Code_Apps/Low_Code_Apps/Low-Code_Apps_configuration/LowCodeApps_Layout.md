@@ -6,7 +6,7 @@ uid: LowCodeApps_Layout
 
 ## Customizing the icon and color of an app
 
-To customize the color and icon for a low-code app, select the icon in the top-left corner.
+To customize the color and icon for a low-code app, select the icon in the upper-left corner.
 
 You can then:
 
@@ -16,7 +16,7 @@ You can then:
 
 - Use the color picker to specify a different color for the app.
 
-To close the color and icon editor, click the icon in the top-left corner again.
+To close the color and icon editor, click the icon in the upper-left corner again.
 
 ## Customizing the theme for a low-code app page
 

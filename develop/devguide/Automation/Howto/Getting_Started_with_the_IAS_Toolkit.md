@@ -135,7 +135,7 @@ public class HelloWorldDialog : Dialog
 }
 ```
 
-In order to display the widgets, you will need to add them to your dialog using the *AddWidget* method. With this method, you can link a widget to a cell in a grid layout, where cell 0;0 is in the top-left corner of the dialog.
+In order to display the widgets, you will need to add them to your dialog using the *AddWidget* method. With this method, you can link a widget to a cell in a grid layout, where cell 0;0 is in the upper-left corner of the dialog.
 
 > [!TIP]
 > For more information on interactive automation script widgets, layouts, and event handlers, refer to the [API reference](xref:Skyline.DataMiner.Utils.InteractiveAutomationScript).

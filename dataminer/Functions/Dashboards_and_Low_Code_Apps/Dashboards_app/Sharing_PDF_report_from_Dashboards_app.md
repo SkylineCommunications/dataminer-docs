@@ -20,7 +20,7 @@ To learn how to share a dashboard as an email report in the Dashboards app, you 
 
 1. In the list of dashboards on the left, select the dashboard you want to share<!--RN 38278-->.
 
-1. Click the ... button in the top-right corner of the dashboard, and select *Share*.
+1. Click the ... button in the upper-right corner of the dashboard, and select *Share*.
 
    > [!NOTE]
    > From DataMiner 10.2.12/10.3.0 onwards, the *Share* button is only available in read mode.
@@ -73,7 +73,7 @@ To learn how to share a dashboard as an email report in the Dashboards app, you 
 
 1. In the list of dashboards on the left, select the dashboard you want to share.
 
-1. Click the ... button in the top-right corner of the dashboard, and select *Share*.
+1. Click the ... button in the upper-right corner of the dashboard, and select *Share*.
 
    > [!NOTE]
    > From DataMiner 10.2.12/10.3.0 onwards, the *Share* button is only available in read mode.

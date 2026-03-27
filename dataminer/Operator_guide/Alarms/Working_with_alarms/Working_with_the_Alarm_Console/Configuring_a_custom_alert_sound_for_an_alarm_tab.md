@@ -19,7 +19,7 @@ To do so:
    - [General > Alarms > Audible Alert > Edit audio files](xref:DataMiner_user_permissions#general--alarms--audible-alert--edit-audio-files)
    - [General > Alarms > Audible Alert > Delete audio files](xref:DataMiner_user_permissions#general--alarms--audible-alert--delete-audio-files)
 
-1. While the alarm tab is selected, click the hamburger button in the top-left corner of the Alarm Console and select the option *Audible alert*.
+1. While the alarm tab is selected, click the hamburger button in the upper-left corner of the Alarm Console and select the option *Audible alert*.
 
 1. In the *Audible alert* window, select the checkbox *Enable audible alert.*
 

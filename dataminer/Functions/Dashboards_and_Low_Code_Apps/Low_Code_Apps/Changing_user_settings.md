@@ -20,7 +20,7 @@ A user can only access the user settings if the following conditions are met:
 
 To change your password directly from the Low-Code Apps interface:
 
-1. Click the user button in the top-right corner.
+1. Click the user button in the upper-right corner.
 
 1. Select *User settings*.
 

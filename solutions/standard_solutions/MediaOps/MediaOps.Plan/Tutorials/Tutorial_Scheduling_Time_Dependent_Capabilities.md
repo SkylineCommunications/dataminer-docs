@@ -123,4 +123,4 @@ In this first step, you will create resources representing the steerable antenna
 
    ![Antenna 01 unavailable with SES-01](~/solutions/images/Resource_Studio_TDC_2Jobs_SES.png)
 
-   Note that unavailable resources are shown by default so that you can clearly see how many resources are available in a resource pool, even if they cannot be selected for a specific job. If you only want to see available resources, you can use the *Show available only* toggle button in the top-right corner.
+   Note that unavailable resources are shown by default so that you can clearly see how many resources are available in a resource pool, even if they cannot be selected for a specific job. If you only want to see available resources, you can use the *Show available only* toggle button in the upper-right corner.

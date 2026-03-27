@@ -6,13 +6,13 @@ uid: Searching_the_database
 
 To search the entire database for a particular word:
 
-- Enter a search term in the *Search* box, which is located in the top-left corner of the *Asset Manager* user interface.
+- Enter a search term in the *Search* box, which is located in the upper-left corner of the *Asset Manager* user interface.
 
     The search results will appear in the tree structure on the left.
 
 In addition, you can filter a table in the data pane:
 
-- To filter a table to only show certain items, enter a search term in the filter box in the top-right corner, just above the table.
+- To filter a table to only show certain items, enter a search term in the filter box in the upper-right corner, just above the table.
 
 - To remove the filter again, click the X in the filter box.
 

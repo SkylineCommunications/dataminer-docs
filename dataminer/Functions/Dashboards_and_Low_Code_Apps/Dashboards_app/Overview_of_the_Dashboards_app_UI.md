@@ -20,7 +20,7 @@ The main page of the Dashboards app consists of the following main components:
 
 The header bar contains the following items, from left to right:
 
-- Apps button: The button in the top-left corner provides quick access to other DataMiner web apps.
+- Apps button: The button in the upper-left corner provides quick access to other DataMiner web apps.
 
 - *Dashboards* button: Click this button to return to the main page of the app at any time.
 
@@ -49,7 +49,7 @@ The header bar contains the following items, from left to right:
 
   - The connection has been re-established: A green banner with the message `Connection recovered` is displayed.
 
-- User button: A button with the initials or an image of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
+- User button: A button with the initials or an image of the current user is displayed in the upper-right corner. Click this button to open a menu that provides access to the following options:
 
   - *(Dashboard) settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) (1) and configure whether [specific actions](#the-dashboards-app-details-pane) are pinned to the dashboard header bar (2).
 
@@ -147,7 +147,7 @@ The large pane on the right displays the contents of the selected folder or dash
 
 - **From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44222-->**: An overview of all dashboards and folders is displayed as tiles. A folder icon ![Folder](~/dataminer/images/Dashboard_Folder_Icon.png) or a dashboard icon ![Dashboard](~/dataminer/images/Dashboard_Icon.png) indicates the type of item each tile represents. If a dashboard has been [shared via cloud share](xref:Sharing_a_dashboard#sharing-a-live-dashboard-via-cloud-share), this is indicated on the tile by a blue *Shared* label underneath the dashboard name.
 
-  In the top-right corner of the details pane, the following buttons are available, from left to right:
+  In the upper-right corner of the details pane, the following buttons are available, from left to right:
 
   ![Buttons details pane](~/dataminer/images/Dashboardsapp_Buttons.png)<br>*Dashboards app details pane in DataMiner 10.6.3*
 
@@ -221,7 +221,7 @@ When a dashboard is selected, the header bar of the details pane can display a n
 
 - *Share* or *Start sharing*: Allows you to share the dashboard using dataminer.services. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available in read mode, if the DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-In the [settings of the Dashboards app](#the-dashboards-app-header-bar), you can configure whether the edit mode, clear selections, create report/export as PDF, and share dashboard buttons are always displayed (i.e., “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
+In the [settings of the Dashboards app](#the-dashboards-app-header-bar), you can configure whether the edit mode, clear selections, create report/export as PDF, and share dashboard buttons are always displayed (i.e., “pinned” to the header bar) or instead accessible via a button in the upper-right corner of a dashboard.
 
 ![Pin actions](~/dataminer/images/Pin_Actions.png)<br>*Dashboard settings in DataMiner 10.6.2*
 

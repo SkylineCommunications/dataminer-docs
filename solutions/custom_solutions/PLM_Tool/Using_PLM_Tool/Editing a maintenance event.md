@@ -8,7 +8,7 @@ To edit a maintenance event in the PLM tool, follow these steps:
 
 1. Go to the *PLM Instances* page and select the maintenance event you wish to edit.
 
-1. Click *Edit* in the top-left corner of the header bar.
+1. Click *Edit* in the upper-left corner of the header bar.
 
 1. In the pop-up window, adjust the settings you wish to modify.
 

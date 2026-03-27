@@ -692,7 +692,7 @@ It is good practice to use this option on Visio pages that contain controls (par
 
 Page-level option.
 
-If you use this option, the Visio page will not be centered on the card. Instead, it will be aligned top-left.
+If you use this option, the Visio page will not be centered on the card. Instead, it will be aligned top left.
 
 ## NoCopyElementProperty
 

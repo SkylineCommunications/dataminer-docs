@@ -570,9 +570,9 @@ The DMAJobDomain class, which now extends from the newly added DMAJobDomainLite 
 
 In the Jobs app, it is now possible to have different job domains, each with their own set of job section descriptions.
 
-- If, in the top-left corner of the jobs list, you select a job domain from the list, the jobs list will be filtered and will list only the jobs associated with the selected job domain.
+- If, in the upper-left corner of the jobs list, you select a job domain from the list, the jobs list will be filtered and will list only the jobs associated with the selected job domain.
 
-- In configuration mode, you can select the job domain in the top-left corner of the screen, and then configure the job sections within the selected domain. The *New*, *Edit* and *Delete* buttons on the right of the job domain selection box allow you to add a new domain, edit the name of the selected domain or delete the selected domain.
+- In configuration mode, you can select the job domain in the upper-left corner of the screen, and then configure the job sections within the selected domain. The *New*, *Edit* and *Delete* buttons on the right of the job domain selection box allow you to add a new domain, edit the name of the selected domain or delete the selected domain.
 
   > [!NOTE]
   > When you upgrade from a DataMiner system without job domains, all existing job section definitions will be stored in a job domain named “DefaultJobDomain”.
@@ -622,7 +622,7 @@ Disabled text boxes in e.g., interactive automation scripts will now automatical
 
 #### User menu now has a 'Sign out' command \[ID 26254\]
 
-In all mobile apps (Monitoring, Dashboards, Jobs, etc.), the user menu in the top-right corner of the screen now has a "Sign out" command.
+In all mobile apps (Monitoring, Dashboards, Jobs, etc.), the user menu in the upper-right corner of the screen now has a "Sign out" command.
 
 #### Monitoring & Dashboards apps: Number groups in numeric parameter values will now be separated by a thin space \[ID 26394\]
 
@@ -792,9 +792,9 @@ The problem would occur in the following situations:
 
 When, in an automation script, you specified a parameter containing a double quote character in an email action configured to send a report, in some cases, it would not be possible to save the script.
 
-#### DataMiner Cube - Trending: Zoom buttons in top-right corner of a trend graph window would incorrectly not be displayed \[ID 26068\]
+#### DataMiner Cube - Trending: Zoom buttons in upper-right corner of a trend graph window would incorrectly not be displayed \[ID 26068\]
 
-When you opened a trend graph, e.g., by clicking the trend graph icon next to a parameter shown on an element card, in some cases, the zoom buttons (Last 24 hours, Week to date and Month to date) in the top-right corner would incorrectly not be displayed.
+When you opened a trend graph, e.g., by clicking the trend graph icon next to a parameter shown on an element card, in some cases, the zoom buttons (Last 24 hours, Week to date and Month to date) in the upper-right corner would incorrectly not be displayed.
 
 #### Deadlock between SLNet and SLDataGateway during a DataMiner startup or a Failover switch \[ID 26074\]
 

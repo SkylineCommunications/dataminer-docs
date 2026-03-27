@@ -10,7 +10,7 @@ uid: Managing_dashboard_folders
 
    - To create the folder inside an existing folder, right-click that folder in the navigation pane on the left and select *Add* > *Folder* (from DataMiner 10.5.0 [CU11]/10.6.2 onwards) or *Create folder* (in earlier versions).
 
-   - To create a new top-level folder, right-click the background of the navigation pane on the left and select *Add* > *Folder*. Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44222 + 44432-->, make sure no folder is selected by clicking the *Dashboards* button in the header bar, click the ellipsis ("...") button in the top-right corner of the dashboard list, and select *New folder*.
+   - To create a new top-level folder, right-click the background of the navigation pane on the left and select *Add* > *Folder*. Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44222 + 44432-->, make sure no folder is selected by clicking the *Dashboards* button in the header bar, click the ellipsis ("...") button in the upper-right corner of the dashboard list, and select *New folder*.
 
 1. Specify the name of the folder and click *Create* or *OK*, depending on your DataMiner version.
 

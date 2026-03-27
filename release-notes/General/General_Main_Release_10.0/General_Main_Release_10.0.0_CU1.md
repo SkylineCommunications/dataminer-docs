@@ -436,7 +436,7 @@ When opening the Ticketing app, in some cases, the following error could be thro
 
 #### DataMiner Cube - Data Display: Problem when searching for a parameter in an element card \[ID 24801\]
 
-In some cases, DataMiner Cube would become unresponsive when, in an element card, you searched for a parameter using the search box in the top-left corner of the card.
+In some cases, DataMiner Cube would become unresponsive when, in an element card, you searched for a parameter using the search box in the upper-left corner of the card.
 
 #### Problem when masking an entire table \[ID 24805\]
 

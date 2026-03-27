@@ -47,7 +47,7 @@ The way you can access the Template Editor depends on the type of component:
 
 1. Click the *Edit* ![Edit](~/dataminer/images/Edit_Template.png) icon.
 
-   Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the top-right corner and then select *Customize preset*.
+   Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the upper-right corner and then select *Customize preset*.
 
 ### [Maps](#tab/maps)
 
@@ -86,7 +86,7 @@ The Template Editor UI consists of the following main components<!--RN 34858-->:
 - *Settings* pane (3)
 
 > [!IMPORTANT]
-> Any changes made in the Template Editor are only saved once you click the *Save* button in the lower-right corner. When you close the Template Editor by clicking the "X" in the top-right corner or the *Cancel* button in the lower-right corner, you will be alerted of any unsaved changes that may be lost if you close the editor prematurely.
+> Any changes made in the Template Editor are only saved once you click the *Save* button in the lower-right corner. When you close the Template Editor by clicking the "X" in the upper-right corner or the *Cancel* button in the lower-right corner, you will be alerted of any unsaved changes that may be lost if you close the editor prematurely.
 
 ## Working with layers
 
@@ -156,17 +156,17 @@ To temporarily mask a layer within the Template Editor, hover the mouse pointer 
 
 ### Deleting a layer
 
-To delete a layer, hover the mouse pointer over the layer, click the ellipsis button ("...") in the top-right corner, and select *Delete*.
+To delete a layer, hover the mouse pointer over the layer, click the ellipsis button ("...") in the upper-right corner, and select *Delete*.
 
 ![Delete layer](~/dataminer/images/Delete_Layer.gif)<br>*Template Editor in DataMiner 10.5.8*
 
-Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->, hover the mouse pointer over the layer and click the *delete* button in the top-right corner.
+Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->, hover the mouse pointer over the layer and click the *delete* button in the upper-right corner.
 
 Alternatively, regardless of the DataMiner version, select the layer in the preview and press *Delete* on your keyboard.
 
 ### Duplicating a layer
 
-To duplicate a layer, hover the mouse pointer over the layer, click the ellipsis button ("...") in the top-right corner, and select *Duplicate*. Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->.
+To duplicate a layer, hover the mouse pointer over the layer, click the ellipsis button ("...") in the upper-right corner, and select *Duplicate*. Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->.
 
 ![Duplicate layer](~/dataminer/images/Duplicate_Layer.gif)<br>*Template Editor in DataMiner 10.5.8*
 
@@ -357,7 +357,7 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
      1. Click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon.
 
-        In DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the top-right corner and then select *Browse templates*.
+        In DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the upper-right corner and then select *Browse templates*.
 
    - For the **maps** component:
 
@@ -379,14 +379,14 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
    - (1): Search for a template by name using the search box.
 
-   - (2): Use the filter in the top-right corner of the window to show preset templates, custom templates, or both.
+   - (2): Use the filter in the upper-right corner of the window to show preset templates, custom templates, or both.
 
    - (3): Filter the overview by visualization type using the options in the sidebar on the left.
 
    ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.4*
 
    > [!TIP]
-   > You can tell a preset template from a custom template by the *Preset* label in the top-right corner of a template tile.
+   > You can tell a preset template from a custom template by the *Preset* label in the upper-right corner of a template tile.
 
 1. Click *Apply* in the lower-right corner of the window.
 
@@ -424,7 +424,7 @@ If you have already configured at least one other template for a component in th
 
      1. Click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon.
 
-        In DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the top-right corner and then select *Browse templates*.
+        In DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the upper-right corner and then select *Browse templates*.
 
    - For the **maps** component:
 
@@ -446,7 +446,7 @@ If you have already configured at least one other template for a component in th
 
    - (1): Search for a template by name using the search box.
 
-   - (2): Use the filter in the top-right corner of the window to show preset templates, custom templates, or both.
+   - (2): Use the filter in the upper-right corner of the window to show preset templates, custom templates, or both.
 
    - (3): Filter the overview by visualization type using the options in the sidebar on the left.
 

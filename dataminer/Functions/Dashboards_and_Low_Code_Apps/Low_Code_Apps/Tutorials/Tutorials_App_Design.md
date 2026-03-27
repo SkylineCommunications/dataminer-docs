@@ -71,11 +71,11 @@ The app's primary color results in low contrast between the text and the backgro
 
 Additionally, the app does not have a customized, identifiable icon. These are the first two aspects you will look into.
 
-1. Click the user icon in the top-right corner of the app and select *Edit*.
+1. Click the user icon in the upper-right corner of the app and select *Edit*.
 
-   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards or higher<!--RN 40077-->), click the pencil icon in the top-right corner instead.
+   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards or higher<!--RN 40077-->), click the pencil icon in the upper-right corner instead.
 
-1. Click the clipboard icon in the top-left corner to open the app's theme editor. Here you can change your app's icon and color.
+1. Click the clipboard icon in the upper-left corner to open the app's theme editor. Here you can change your app's icon and color.
 
    ![Clipboard icon](~/dataminer/images/Change_app_Style.png)
 
@@ -92,7 +92,7 @@ Additionally, the app does not have a customized, identifiable icon. These are t
 
    Optionally, select your icon of choice.
 
-1. Click the new icon in the top-left corner to exit the theme editor.
+1. Click the new icon in the upper-left corner to exit the theme editor.
 
    ![Better contrast](~/dataminer/images/tutorial_app_design_better_contrast.png)
 
@@ -102,7 +102,7 @@ The different pages currently still have generic icons, which makes them hard to
 
 1. Make sure the page is selected in the leftmost pane of the app editor.
 
-1. In the *icon* section in the top-left corner of the app, select your icon of choice.
+1. In the *icon* section in the upper-left corner of the app, select your icon of choice.
 
 1. Repeat these steps for the second page.
 
@@ -114,15 +114,15 @@ The different pages currently still have generic icons, which makes them hard to
 
 To ensure an aesthetically pleasing app, start with an appealing theme, which determines default styling for pages and components. Applying a good theme can make your app look a lot better with limited effort.
 
-1. Click the user icon in the top-right corner, and select *View published app* to temporarily leave edit mode.
+1. Click the user icon in the upper-right corner, and select *View published app* to temporarily leave edit mode.
 
-   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 or higher<!--RN 40077-->), click the ellipsis button ("...") in the top-right corner instead, and select *View published app*.
+   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 or higher<!--RN 40077-->), click the ellipsis button ("...") in the upper-right corner instead, and select *View published app*.
 
-1. Click the ![Waffle](~/dataminer/images/Waffle_icon.png) icon in the top-left corner, and select *Dashboards*.
+1. Click the ![Waffle](~/dataminer/images/Waffle_icon.png) icon in the upper-left corner, and select *Dashboards*.
 
    ![Switch to Dashboards](~/dataminer/images/tutorial_app_design_switch_to_dashboards.gif)
 
-1. Click the user icon in the top-right corner, and select *Settings*.
+1. Click the user icon in the upper-right corner, and select *Settings*.
 
 1. Click *+ New theme*.
 
@@ -202,11 +202,11 @@ To ensure an aesthetically pleasing app, start with an appealing theme, which de
 
 Now that you have created a theme, you can apply it to your low-code app.
 
-1. Click the ![Waffle](~/dataminer/images/Waffle_icon_Dashboards.png) icon in the top-left corner, and select the *Best Practices in Low-Code App Design* application.
+1. Click the ![Waffle](~/dataminer/images/Waffle_icon_Dashboards.png) icon in the upper-left corner, and select the *Best Practices in Low-Code App Design* application.
 
-1. Click the user icon in the top-right corner, and select *Edit*.
+1. Click the user icon in the upper-right corner, and select *Edit*.
 
-   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 or higher<!--RN 40077-->), click the pencil button in the top-right corner instead.
+   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 or higher<!--RN 40077-->), click the pencil button in the upper-right corner instead.
 
 1. Make sure the *Contacts* page is selected in the leftmost pane of the app editor.
 
@@ -238,9 +238,9 @@ Now that you have created a theme, you can apply it to your low-code app.
 
 To ensure the page adapts to different screen sizes and avoids scrollbars, set it to *Fit to view*:
 
-1. Click the user icon in the top-right corner, click *Edit*, and click the pencil icon in the pane to the left.
+1. Click the user icon in the upper-right corner, click *Edit*, and click the pencil icon in the pane to the left.
 
-   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 or higher<!--RN 40077-->), click the pencil icon in the top-right corner instead.
+   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 or higher<!--RN 40077-->), click the pencil icon in the upper-right corner instead.
 
 1. Navigate to *Settings > Page/Panel configuration* in the configuration pane to the right.
 
@@ -319,7 +319,7 @@ Here you can <b style="color: rgb(0,9,54)">create</b> a new contact.</p></div>
 
 ### Add a functional save button to the header bar
 
-1. Click the "+" button in the top-right corner and label it "Save".
+1. Click the "+" button in the upper-right corner and label it "Save".
 
 1. In the *header bar* section, select *Icon* and enter "Save" in the filter box.
 
@@ -355,7 +355,7 @@ Here you can <b style="color: rgb(0,9,54)">create</b> a new contact.</p></div>
 
 ### Configure a functional close button
 
-1. Click *+ Add* in the top-right corner, and rename it "Close" in the *header bar* section.
+1. Click *+ Add* in the upper-right corner, and rename it "Close" in the *header bar* section.
 
 1. In the *Icon* section, enter "Close" in the filter box, and select the "X" icon.
 
@@ -422,7 +422,7 @@ You can improve the appearance of each column by editing the template applied to
 
 1. Select *Full name* from the *Select a column* dropdown list.
 
-1. Click the ellipsis button ("...") in the top-right corner and select *Customize preset*.
+1. Click the ellipsis button ("...") in the upper-right corner and select *Customize preset*.
 
 1. To modify the template settings, make sure no layers are selected by clicking the gray background.
 

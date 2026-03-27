@@ -162,7 +162,7 @@ The group entitled *PAs unbalanced* will now be created and shown in the RAD Man
 
    This will cause the *Output Power* of *PA3* to start deviating from the output powers of the other two amplifiers.
 
-1. In the Alarm Console, click the lightbulb icon in the top-right corner and select the item referring to relational anomalies.
+1. In the Alarm Console, click the lightbulb icon in the upper-right corner and select the item referring to relational anomalies.
 
    You will see an event informing you that the relation between the *Output Power* of the amplifiers and the *Tx Amplifier Output Power* is broken.
 
@@ -193,7 +193,7 @@ The group entitled *PAs unbalanced* will now be created and shown in the RAD Man
 
    ![Trend and anomaly score graphs](~/dataminer/images/tutorial_RAD_trend_and_anomaly_score.png)
 
-1. In the top-right corner, click the *Historical anomalies* button.
+1. In the upper-right corner, click the *Historical anomalies* button.
 
    This will open a panel that displays all the historical anomalies detected for the selected group in the selected time range.
 

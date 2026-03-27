@@ -473,7 +473,7 @@ In the Admin app, it is now possible to restrict remote access to the web apps a
 
 #### 9 August 2024 - New feature - Catalog - Sorting option and grid/list view buttons on Browse page [ID 40331]
 
-When browsing through the items in the Catalog, users can now sort the items using a dropdown box at the top. Buttons are also available in the top-right corner that allow users to switch between a grid view and a list view.
+When browsing through the items in the Catalog, users can now sort the items using a dropdown box at the top. Buttons are also available in the upper-right corner that allow users to switch between a grid view and a list view.
 
 #### 8 August 2024 - Enhancement - Vendor and market name of connector now considered dedicated properties [ID 40423]
 
@@ -541,7 +541,7 @@ The recommended versions will now be shown in the following order:
 
 #### 23 July 2024 - Fix - Catalog - Return button spanning whole height of container [ID 40245]
 
-The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
+The height of the return button in the upper-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
 
 #### 23 July 2024 - New feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
 

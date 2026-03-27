@@ -14,7 +14,7 @@ The *BPA* page shows a list of all the BPA tests that are currently available in
 
 - Similarly, if the list is grouped by Agent, the *Execute all* button in the *Action* column can be used to run all tests for a specific DMA or DMS, and you can expand a list item and click the *Execute* button to run only one specific test for a DMA or DMS.
 
-- Regardless of how the list is grouped, the *Execute all* button in the top-right corner can be used to execute all available tests on all applicable Agents and clusters.
+- Regardless of how the list is grouped, the *Execute all* button in the upper-right corner can be used to execute all available tests on all applicable Agents and clusters.
 
 For a group item, the *Status* column displays the number of individual entries in the group with a colored LED indicating their status: green for a successful test, red if issues were detected, light gray if no results are available, and dark gray if the test is not applicable. If the execution of a test has failed, a warning icon will be displayed in the *Status* column instead of a colored LED. For each individual item within a group, this same column can display the following status information: *No result available*, *Test running*, *OK*, *Warning*, *Issues detected*, *Execution failed*, or *Not applicable*.
 

@@ -19,7 +19,7 @@ It is possible to save a particular job configuration as a job template. This wa
    > [!TIP]
    > See also: [Manually adding a job](xref:Manually_adding_a_job)
 
-1. In the top-right corner of the *New job* pane, click the downward arrow and select *Save template*.
+1. In the upper-right corner of the *New job* pane, click the downward arrow and select *Save template*.
 
 1. Specify a name for the template.
 
@@ -34,7 +34,7 @@ It is possible to save a particular job configuration as a job template. This wa
    > [!TIP]
    > See also: [Manually adding a job](xref:Manually_adding_a_job)
 
-1. In the top-right corner of the *New job* pane, click the downward arrow and select *Apply template*.
+1. In the upper-right corner of the *New job* pane, click the downward arrow and select *Apply template*.
 
 1. In the *Load from template* dialog box, select the template you want to apply.
 
@@ -47,7 +47,7 @@ It is possible to save a particular job configuration as a job template. This wa
    > [!TIP]
    > See also: [Manually adding a job](xref:Manually_adding_a_job)
 
-1. In the top-right corner of the *New job* pane, click the downward arrow and select *Apply template*.
+1. In the upper-right corner of the *New job* pane, click the downward arrow and select *Apply template*.
 
 1. In the *Load from template* dialog box, click the red recycle bin icon next to the template you want to delete.
 

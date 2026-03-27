@@ -30,4 +30,4 @@ Managing correlation rules, e.g., adding and deleting rules or organizing them i
 - [Testing a correlation rule](xref:Testing_a_Correlation_rule)
 
 > [!NOTE]
-> To enable or disable a rule, select the rule in the tree view, and then either select or clear the checkbox next to *Enable this rule*, in the top-left corner of the pane on the right.
+> To enable or disable a rule, select the rule in the tree view, and then either select or clear the checkbox next to *Enable this rule*, in the upper-left corner of the pane on the right.

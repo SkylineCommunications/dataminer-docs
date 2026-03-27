@@ -678,9 +678,9 @@ When you opened a shared dashboard that contained EPM components, in some cases,
 
 To be able to check the prerequisites during a DataMiner upgrade, SLNet needs to load the SLUpgrade.dll file. In some cases, it would load the 32-bit version instead of the 64-bit version or vice versa.
 
-#### DataMiner landing page: User icon no longer shown in top-right corner \[ID 32108\]
+#### DataMiner landing page: User icon no longer shown in upper-right corner \[ID 32108\]
 
-On the DataMiner landing page, the user icon would incorrectly no longer be shown in the top-right corner.
+On the DataMiner landing page, the user icon would incorrectly no longer be shown in the upper-right corner.
 
 #### Incorrect error in logging during startup of Failover setup \[ID 32112\]
 

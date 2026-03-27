@@ -30,4 +30,4 @@ In a pop-up balloon, you can click certain items:
 - Click **Take Ownership** to take ownership of the alarm.
 
 > [!NOTE]
-> If a client application is already open when you click a balloon, and you are logged in with the same user account in both applications, then the element or service information will be accessed in the already opened client application window. To close a pop-up balloon, click the X in the top-right corner.
+> If a client application is already open when you click a balloon, and you are logged in with the same user account in both applications, then the element or service information will be accessed in the already opened client application window. To close a pop-up balloon, click the X in the upper-right corner.

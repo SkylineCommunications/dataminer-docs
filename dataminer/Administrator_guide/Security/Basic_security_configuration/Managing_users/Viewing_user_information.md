@@ -28,5 +28,5 @@ The information is shown on different tabs:
 > Please note the following regarding **user cards**:
 >
 > - You can also **edit** security settings for a user on a user card. To do so, click the *Edit* button in the lower-right corner first.
-> - To open your own user card, you can click the user icon in the top-right corner and select *Account details*.
+> - To open your own user card, you can click the user icon in the upper-right corner and select *Account details*.
 > - Next to the username at the top of a user card, you can also see whether the user is currently online or offline.

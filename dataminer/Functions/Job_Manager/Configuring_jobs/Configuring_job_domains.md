@@ -11,7 +11,7 @@ Different job domains can be configured, each with its own job section configura
 
 ## Adding a job domain
 
-1. Click the user icon in the top-right corner and select *Configuration*.
+1. Click the user icon in the upper-right corner and select *Configuration*.
 
 1. Click *+ New* in the header bar.
 
@@ -27,7 +27,7 @@ Different job domains can be configured, each with its own job section configura
 
 To edit the name of a job domain or change its "hidden" status:
 
-1. If you are not already on the configuration page, click the user icon in the top-right corner and select *Configuration*.
+1. If you are not already on the configuration page, click the user icon in the upper-right corner and select *Configuration*.
 
 1. In the dropdown box at the top, make sure the right job domain is selected.
 
@@ -39,7 +39,7 @@ To edit the name of a job domain or change its "hidden" status:
 
 ## Duplicating a job domain
 
-1. If you are not already on the configuration page, click the user icon in the top-right corner and select *Configuration*.
+1. If you are not already on the configuration page, click the user icon in the upper-right corner and select *Configuration*.
 
 1. In the dropdown box at the top, make sure the right job domain is selected.
 
@@ -57,7 +57,7 @@ To edit the name of a job domain or change its "hidden" status:
 
 ## Deleting a job domain
 
-1. If you are not already on the configuration page, click the user icon in the top-right corner and select *Configuration*.
+1. If you are not already on the configuration page, click the user icon in the upper-right corner and select *Configuration*.
 
 1. In the dropdown box at the top, make sure the right job domain is selected.
 

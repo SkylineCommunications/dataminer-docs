@@ -31,7 +31,7 @@ When this setting is enabled, the components on the dashboard or the page/panel 
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-When viewing a trend graph in the Monitoring app, you can now easily switch between trend graph and histogram by clicking either the trend graph or histogram icon in the top-right corner.
+When viewing a trend graph in the Monitoring app, you can now easily switch between trend graph and histogram by clicking either the trend graph or histogram icon in the upper-right corner.
 
 #### Monitoring app & Dashboards app - Line & area chart: Time range buttons [ID 35595]
 

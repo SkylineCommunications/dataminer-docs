@@ -22,7 +22,7 @@ Often, temporary organizations are created as sandbox environments with a [trial
 
 1. In the [Admin app](xref:Accessing_the_Admin_app), verify that the correct organization is displayed in the header bar.
 
-1. If you need to switch organizations, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the correct organization.
+1. If you need to switch organizations, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the upper-right corner and select the correct organization.
 
 1. In the pane on the left, under *Organization*, open the *Settings* page.
 

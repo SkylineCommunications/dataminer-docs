@@ -99,7 +99,7 @@ Expected duration: 5 minutes.
 
 1. In the QAOps User app, go to the [Tokens](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens) page.
 
-1. In the top-left corner, click *Create Token* .
+1. In the upper-left corner, click *Create Token* .
 
 1. Enter a name for the token.
 
@@ -152,7 +152,7 @@ Expected duration: 5 minutes.
 
 1. Use your tags to find your test run, and then select it.
 
-1. Locate the server information in the top-right corner.
+1. Locate the server information in the upper-right corner.
 
    This shows which server was used. After one day, it should indicate that the server is marked for deletion.
 

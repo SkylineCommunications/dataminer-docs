@@ -157,7 +157,7 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
       > [!NOTE]
       > Make sure you use the correct *Constraint* field to define the appropriate visibility of the Catalog item. See [Creating a repository](xref:Creating_a_repository).
 
-   1. Select your new repository and click the clone button in the top-right corner.
+   1. Select your new repository and click the clone button in the upper-right corner.
 
    1. Browse to the repository in File Explorer.
 
@@ -179,7 +179,7 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
 
    1. Check if the Jenkins pipeline is green or yellow.
 
-      You can do so with the link displayed in the top-right corner of SLC SE RepoManager when your repository is selected.
+      You can do so with the link displayed in the upper-right corner of SLC SE RepoManager when your repository is selected.
 
    1. Optionally, tag a commit to release a stable version.
 
@@ -221,7 +221,7 @@ Visio files can be used as a custom user interface for elements, services, or vi
       > [!NOTE]
       > Make sure you use the correct *Constraint* field to define the appropriate visibility of the Catalog item. See [Creating a repository](xref:Creating_a_repository).
 
-   1. Select your new repository and click the clone button in the top-right corner.
+   1. Select your new repository and click the clone button in the upper-right corner.
 
    1. Browse to the repository in File Explorer.
 
@@ -235,6 +235,6 @@ Visio files can be used as a custom user interface for elements, services, or vi
 
    1. Check if the Jenkins pipeline is green or yellow.
 
-      You can do so with the link displayed in the top-right corner of SLC SE RepoManager when your repository is selected.
+      You can do so with the link displayed in the upper-right corner of SLC SE RepoManager when your repository is selected.
 
    1. Tag a commit to release a stable version.

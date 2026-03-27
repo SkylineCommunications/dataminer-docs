@@ -66,7 +66,7 @@ You should now be able to see the newly created job on the timeline.
 
 1. Close the *Add Node* panel and check if you can see your resource in the *Workflow* section.
 
-   If you cannot see the resource yet, click the refresh button in the top-right corner of the section.
+   If you cannot see the resource yet, click the refresh button in the upper-right corner of the section.
 
    ![Check out the newly added resource](~/solutions/images/Scheduling_Workflow_Resource_Added.png)
 

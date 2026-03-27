@@ -9,7 +9,7 @@ uid: Adding_maintenance_event
 
 To create a maintenance event (also known as a PLM item), follow these steps:
 
-1. Go to the *PLM Instances* page and click *+ Add* in the top-left corner.
+1. Go to the *PLM Instances* page and click *+ Add* in the upper-left corner.
 
 1. In the *Planned Maintenance* pop-up window, provide the necessary information.
 

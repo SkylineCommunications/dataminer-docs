@@ -8,7 +8,7 @@ For each parameter, it is possible to configure whether alarms will be [automati
 
 To do so:
 
-1. Click the cogwheel button in the top-right corner of the alarm template editor.
+1. Click the cogwheel button in the upper-right corner of the alarm template editor.
 
 1. Select the option *Allow override of parameter autoclear*. An extra column will appear in the template editor.
 

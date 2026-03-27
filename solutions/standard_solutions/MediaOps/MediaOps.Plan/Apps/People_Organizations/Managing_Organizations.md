@@ -26,13 +26,13 @@ To add a new organization:
 
 1. Provide the necessary organization information.
 
-1. Select *Save* in the top-right corner of the panel.
+1. Select *Save* in the upper-right corner of the panel.
 
    The *Organization drafts* panel will open. The new organization is now saved as a draft.
 
-   - If you want to activate your new organization, select the organization in the *Drafts* panel and click *Activate Selected* in the top-left corner of the panel, or click *Activate All* to activate all the current drafts.
+   - If you want to activate your new organization, select the organization in the *Drafts* panel and click *Activate Selected* in the upper-left corner of the panel, or click *Activate All* to activate all the current drafts.
 
-   - If you want to activate your new organization later, close the panel with the "X" in the top-right corner. Later on, when you want to activate the organization, you can open the panel again via the *Drafts* button in the header bar of the *List* tab.
+   - If you want to activate your new organization later, close the panel with the "X" in the upper-right corner. Later on, when you want to activate the organization, you can open the panel again via the *Drafts* button in the header bar of the *List* tab.
 
 To add members to your new organization, see [Configuring organization members](#configuring-organization-members).
 
@@ -55,7 +55,7 @@ To edit an existing organization:
    > [!NOTE]
    > Skipping this step will keep the organization in an inactive *Edit* state.
 
-1. Select *Save* in the top-right corner to save your changes.
+1. Select *Save* in the upper-right corner to save your changes.
 
 ## Configuring organization members
 
@@ -108,7 +108,7 @@ To add a new organization category:
 
 1. Enter a name for the new category in the *Category* field, e.g., `Accounting Firm`.
 
-1. Select *Save* in the top-right corner.
+1. Select *Save* in the upper-right corner.
 
    Your new organization category will now appear in the list of categories.
 
@@ -120,7 +120,7 @@ To edit an existing organization category:
 
 1. Click the ![Edit](~/solutions/images/PO_Edit.png) button next to the category you want to edit.
 
-1. Edit the name of the category and select *Save* in the top-right corner.
+1. Edit the name of the category and select *Save* in the upper-right corner.
 
 ### Assigning an organization category
 

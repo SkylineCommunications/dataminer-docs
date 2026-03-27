@@ -133,7 +133,7 @@ When you have configured the destinations, the application will update to displa
 
    The details will be shown on the right, including host information, results, and settings.
 
-1. Close the panel on the right with the *Close* button near the top-right corner.
+1. Close the panel on the right with the *Close* button near the upper-right corner.
 
 ![filtering and details](~/dataminer/images/Filter_Details-PingMonitoring.gif)
 
