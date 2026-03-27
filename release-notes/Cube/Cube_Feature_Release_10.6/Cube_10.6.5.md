@@ -94,6 +94,12 @@ Also, the grid would not resize correctly when you selected the *Show external l
 
 Up to now, when the *Combined measurement point view* option was enabled, in some cases, not all traces would be shown when multiple measurement points were selected.
 
+#### Problem when restarting a spectrum element [ID 45165]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In some cases, an exception could be thrown when restarting a spectrum element.
+
 #### Overlays would incorrectly not be closed when Cube disconnected or you logged out [ID 45168]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
