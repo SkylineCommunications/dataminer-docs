@@ -94,8 +94,8 @@ Also, the grid would not resize correctly when you selected the *Show external l
 
 Up to now, when the *Combined measurement point view* option was enabled, in some cases, not all traces would be shown when multiple measurement points were selected.
 
-#### Open message boxes or popup windows would incorrectly not be closed when Cube disconnected or you logged out [ID 45168]
+#### Overlays would incorrectly not be closed when Cube disconnected or you logged out [ID 45168]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
-When DataMiner Cube was disconnected or when you logged out, in some cases, any open message boxes or popup windows would incorrectly not be closed.
+When DataMiner Cube was disconnected or when you logged out, in some cases, overlays would incorrectly not be closed.
