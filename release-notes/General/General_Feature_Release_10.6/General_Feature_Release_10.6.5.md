@@ -157,6 +157,14 @@ Previously, when a script library was added to a DataMiner System, its hint path
 
 From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
 
+#### Custom SSH settings can now be configured per SSH connection [ID 45084]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when custom SSH settings (e.g., the key exchange algorithms) were configured in a specific connector, they would be applied to all elements running in the same SLPort process as the element that was using the protocol in which they had been configured.
+
+From now on, it will be possible to configure custom SSH settings per SSH connection.
+
 ### Fixes
 
 #### Problem when importing a dmimport package containing an element that generates DVE elements running a production version of the protocol with alarm templates configured on the DVEs [ID 44398]
