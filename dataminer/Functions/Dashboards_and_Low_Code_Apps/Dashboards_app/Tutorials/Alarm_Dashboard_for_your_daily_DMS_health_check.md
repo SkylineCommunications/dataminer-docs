@@ -89,13 +89,13 @@ However, if you are for example using a **brand-new [DaaS system](xref:Creating_
 
 1. Go to the Dashboards app, and open the Alarm Report dashboard.
 
-1. In the top-right corner, click *Start editing*.
+1. In the upper-right corner, click *Start editing*.
 
    ![Start editing the dashboard](~/dataminer/images/Tutorial_Alarm_Dashboard_StartEditing.png)
 
 1. Add a dropdown component where users will be able to select a view in the DataMiner System:
 
-   1. Drag and drop the edge of the components to create free space in the top-right corner of the dashboard.
+   1. Drag and drop the edge of the components to create free space in the upper-right corner of the dashboard.
 
    1. In the *Data* pane on the right, select the *Views* data source and drag it to the empty space on your dashboard.
 
@@ -183,7 +183,7 @@ In the next step, you will need to be able to take ownership of an alarm. If you
 
 1. Open the Alarm Filtering app that you installed in [step 2](#step-2-install-the-alarm-filtering-app).
 
-1. Click the pencil icon in the top-right corner to start editing the app.
+1. Click the pencil icon in the upper-right corner to start editing the app.
 
 1. Click the + icon in the bar all the way on the left to add a new page, and name it `My Alarm Overview`.
 

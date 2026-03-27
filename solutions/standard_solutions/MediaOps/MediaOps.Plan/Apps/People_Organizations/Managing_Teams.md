@@ -26,13 +26,13 @@ To add a new team:
 
 1. Provide the necessary team information.
 
-1. Select *Save* in the top-right corner of the panel.
+1. Select *Save* in the upper-right corner of the panel.
 
    The *Team drafts* panel will open. The new team is now saved as a draft.
 
-   - If you want to activate your new team, select the team in the *Drafts* panel and click *Activate Selected* in the top-left corner of the panel, or click *Activate All* to activate all the current drafts.
+   - If you want to activate your new team, select the team in the *Drafts* panel and click *Activate Selected* in the upper-left corner of the panel, or click *Activate All* to activate all the current drafts.
 
-   - If you want to activate your new team later, close the panel with the "X" in the top-right corner. Later on, when you want to activate the team, you can open the panel again via the *Drafts* button in the header bar of the *List* tab.
+   - If you want to activate your new team later, close the panel with the "X" in the upper-right corner. Later on, when you want to activate the team, you can open the panel again via the *Drafts* button in the header bar of the *List* tab.
 
 To add members to your new team, see [Configuring team members](#configuring-team-members).
 
@@ -53,7 +53,7 @@ To edit an existing team:
    > [!NOTE]
    > Skipping this step will keep the team in an inactive *Edit* state.
 
-1. Select *Save* in the top-right corner to save your changes.
+1. Select *Save* in the upper-right corner to save your changes.
 
 ## Configuring team members
 
@@ -75,13 +75,13 @@ To verify whether a team is bookable:
 
 - In the *List* tab, check the *Bookable* column to see if *No* or *Yes* is displayed. By default, this is set to *No*.
 
-- Click the ![Details](~/solutions/images/PO_Details.png) button next to the appropriate team and check whether the toggle button in the top-right corner is set to *Not Bookable* or *Bookable*. By default, this is set to *Not bookable*.
+- Click the ![Details](~/solutions/images/PO_Details.png) button next to the appropriate team and check whether the toggle button in the upper-right corner is set to *Not Bookable* or *Bookable*. By default, this is set to *Not bookable*.
 
 To make a team bookable:
 
 1. In the *List* tab, locate the team you want to make bookable and click the ![Details](~/solutions/images/PO_Details.png) button for this team.
 
-1. Enable the toggle button in the top-right corner.
+1. Enable the toggle button in the upper-right corner.
 
    This setting will now be set to *Bookable*.
 
@@ -137,7 +137,7 @@ To create a new role:
 
 1. Enter a name for the new role, e.g., `Consultant`.
 
-1. Select *Save* in the top-right corner.
+1. Select *Save* in the upper-right corner.
 
    Your new role will now appear in the list of roles.
 
@@ -149,7 +149,7 @@ To edit an existing role:
 
 1. Click the ![Edit](~/solutions/images/PO_Edit.png) button next to the role you want to edit.
 
-1. Edit the name of the role and select *Save* in the top-right corner.
+1. Edit the name of the role and select *Save* in the upper-right corner.
 
 ### Assigning a role
 

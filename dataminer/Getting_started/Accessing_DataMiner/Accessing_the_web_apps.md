@@ -29,7 +29,7 @@ To access the DataMiner landing page:
    > [!NOTE]
    >
    > - If you are trying to use the remote access URL (e.g., `https://ziine-skyline.on.dataminer.services/root/`) to access the web apps, make sure you have been granted [remote access](xref:About_Remote_Access).
-   > - System Administrators can [configure whether the landing page is displayed](xref:Configuring_the_landing_page#configuring-whether-the-landing-page-is-displayed) or whether the Monitoring app opens directly when a user browses to a DMA. If the Monitoring app opens directly, you can access the other web apps by clicking the icon in the top-left corner.
+   > - System Administrators can [configure whether the landing page is displayed](xref:Configuring_the_landing_page#configuring-whether-the-landing-page-is-displayed) or whether the Monitoring app opens directly when a user browses to a DMA. If the Monitoring app opens directly, you can access the other web apps by clicking the icon in the upper-left corner.
 
 1. Sign in using your DataMiner credentials.
 
@@ -93,13 +93,13 @@ The landing page provides access to the following web apps:
 
   - Draft apps are not shown by default. To view them, click the cogwheel button and activate *Show draft applications*.
 
-  - From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can use the quick filter box in the top-left corner of the Low-Code Apps section to quickly search for apps by name.
+  - From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can use the quick filter box in the upper-left corner of the Low-Code Apps section to quickly search for apps by name.
 
 To access a **compact overview of all available web apps**:
 
-- On the landing page: Click the DataMiner icon or waffle icon (depending on your DataMiner version<!--RN 43024-->) in the top-left corner of the landing page.
+- On the landing page: Click the DataMiner icon or waffle icon (depending on your DataMiner version<!--RN 43024-->) in the upper-left corner of the landing page.
 
-- From within a web app: Click the waffle icon in the top-left corner of the app.
+- From within a web app: Click the waffle icon in the upper-left corner of the app.
 
 This overview allows you to easily switch between web apps. Additionally, from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, a quick filter box is available to help you narrow down the apps, and a *dataminer.services* button provides direct access to the dataminer.services home page.
 
@@ -109,7 +109,7 @@ From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can
 
 1. Add the argument `?showAdvancedSettings=true` to the landing page URL.
 
-1. Click the user button in the top-right corner of the page and select *User settings*. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->, click the cogwheel button in the top-right corner of the page.
+1. Click the user button in the upper-right corner of the page and select *User settings*. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->, click the cogwheel button in the upper-right corner of the page.
 
 1. Select one of the available themes:
 

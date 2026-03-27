@@ -82,7 +82,7 @@ See also: “Accent colors” on page 9
 
 ### 'Powered by' labels
 
-By default, the product logo in the top-left corner of the Cube screen and the footer in the About box will include a "Powered by DataMiner" label.
+By default, the product logo in the upper-left corner of the Cube screen and the footer in the About box will include a "Powered by DataMiner" label.
 
 If one or both of those labels should not be displayed, ask your Technical Account Manager to disable the *PoweredBy visible on Main* and/or *PoweredBy visible on About* options.
 

@@ -168,7 +168,7 @@ In addition, the following layout options can now be configured for this visuali
 
 #### Dashboards app: New 'Clear all' action + settings to pin actions \[ID 24356\]
 
-In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g., the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
+In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g., the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the upper-right corner of the dashboard.
 
 If a dashboard contains at least one feed, a new *Clear all* action is now available in the dashboard header, which can be used to clear the selection of the feeds in the dashboard.
 
@@ -490,7 +490,7 @@ Note that it does not matter in which preset the threshold is defined. For examp
 > [!NOTE]
 >
 > - Similar to DataMiner Cube, threshold lines will appear in front of the spectrum trace.
-> - In case of a buffered trace, a time stamp will be shown in the top-right corner, indicating when the buffer was last updated.
+> - In case of a buffered trace, a time stamp will be shown in the upper-right corner, indicating when the buffer was last updated.
 > - When the background color is changed, the marker labels and the time stamp will be updated accordingly.
 > - Changing the spectrum buffer or switching to normal mode will reset any threshold line that was linked to a monitor parameter state to its default width. Linked threshold lines are slightly thicker.
 

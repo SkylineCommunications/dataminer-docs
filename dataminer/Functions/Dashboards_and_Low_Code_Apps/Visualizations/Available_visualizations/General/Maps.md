@@ -71,7 +71,7 @@ Panning allows you to **move the visible area of the map**. You can pan in the f
 
 ### Selecting which layers are shown
 
-In the top-left corner of the component, you can choose which layers are displayed on the map by selecting them from the dropdown menu.
+In the upper-left corner of the component, you can choose which layers are displayed on the map by selecting them from the dropdown menu.
 
 ![Displaying different layers](~/dataminer/images/Maps_Layers.gif)<br>*Maps component in DataMiner 10.5.11*
 

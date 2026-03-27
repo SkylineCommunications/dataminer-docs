@@ -53,9 +53,9 @@ To add a new report template in the Reporter app:
    > [!NOTE]
    > Make sure you have chosen the correct template type before you start adding building blocks to the report (see step 3). If you change the template type afterwards, any building blocks you have added will be removed.
 
-1. If necessary, change the order of the added building blocks by clicking the upward or downward pointing arrows in the top-right corner of each building block.
+1. If necessary, change the order of the added building blocks by clicking the upward or downward pointing arrows in the upper-right corner of each building block.
 
    > [!NOTE]
-   > If you want to remove a building block, click the X in the top-right corner of the building block.
+   > If you want to remove a building block, click the X in the upper-right corner of the building block.
 
 1. When the report template is ready, click *Save Template*.

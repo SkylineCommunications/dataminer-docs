@@ -11,7 +11,7 @@ While a user is creating a job, several different job sections can be displayed.
 
 To configure these job sections:
 
-1. Click the user icon in the top-right corner and select *Configuration*.
+1. Click the user icon in the upper-right corner and select *Configuration*.
 
   The different job sections are displayed in a diagram with nodes extending to the right and in between them. The lowest nodes below the job sections are represented as + icons.
 

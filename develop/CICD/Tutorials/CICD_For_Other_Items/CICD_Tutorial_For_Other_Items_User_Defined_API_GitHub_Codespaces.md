@@ -140,7 +140,7 @@ Expected duration: 10 minutes
 
 1. Add the key as a secret in your GitHub repository, by navigating to *Settings* > *Secrets and variables* > *Actions* and creating a secret named `DATAMINER_TOKEN`.
 
-1. Re-run the workflow by going back to the failing run and selecting *Re-run jobs* in the top-right corner.
+1. Re-run the workflow by going back to the failing run and selecting *Re-run jobs* in the upper-right corner.
 
    ![Re-run job](~/develop/images/CodeSpaceTutorial_ReRunJobs.png)
 
@@ -150,7 +150,7 @@ With this setup, any push with new content (including the initial creation) to t
 
 1. Go to the [Catalog](https://catalog.dataminer.services/)
 
-1. Check in the top-right corner if the correct organization is selected.
+1. Check in the upper-right corner if the correct organization is selected.
 
 1. Search for the name of your package (in this case: *MyUserDefinedApiFromGithub*).
 

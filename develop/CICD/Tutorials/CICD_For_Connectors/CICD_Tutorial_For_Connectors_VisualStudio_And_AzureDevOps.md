@@ -103,7 +103,7 @@ This means that you will need to create a [system key](xref:Managing_dataminer_s
    > [!NOTE]
    > This step can be different for each CI/CD technology.
 
-   1. Select *Variables* in the top-right corner.
+   1. Select *Variables* in the upper-right corner.
 
    1. Select *New Variable*, and configure the new variable as follows:
 

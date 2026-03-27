@@ -58,7 +58,7 @@ Please note the following:
 
 ## Search type filter
 
-If an advanced search returns several kinds of items, it is possible to filter which categories are displayed. To do so, click the *All types* button in the top-left corner, and select the type you wish to display. For some of these types, an additional filter is displayed when you have selected the type filter.
+If an advanced search returns several kinds of items, it is possible to filter which categories are displayed. To do so, click the *All types* button in the upper-left corner, and select the type you wish to display. For some of these types, an additional filter is displayed when you have selected the type filter.
 
 > [!NOTE]
 > When server-side results are loaded, the list will be updated when you select a search type from the search type selection box.

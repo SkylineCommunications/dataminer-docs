@@ -342,6 +342,6 @@ These numbers make it easier, for example, to reference actions when [linking au
 
 To remove an action you have configured for an event:
 
-1. In the action configuration window, click the garbage can icon in the top-right corner of the section for that action.
+1. In the action configuration window, click the garbage can icon in the upper-right corner of the section for that action.
 
 1. Click the confirmation icon.

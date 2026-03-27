@@ -92,7 +92,7 @@ Expected duration: 15 minutes.
 
 1. In the QAOps User app, go to the [Tokens](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Tokens) page.
 
-1. In the top-left corner, click *Create Token* .
+1. In the upper-left corner, click *Create Token* .
 
 1. Enter a name for the token.
 

@@ -62,7 +62,7 @@ The list can be manipulated to display data according to your preference:
 
 - Click and drag a column header to change the order of the columns.
 
-- Use the filter box in the top-right corner to filter the displayed items.
+- Use the filter box in the upper-right corner to filter the displayed items.
 
   > [!TIP]
   > See also: [Using quick filters](xref:Using_quick_filters)

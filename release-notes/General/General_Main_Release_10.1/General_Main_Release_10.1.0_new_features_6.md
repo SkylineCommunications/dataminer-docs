@@ -209,9 +209,9 @@ For every color linked to a selection box value, a VisualFieldEnum object should
 
 When using a mobile app (Monitoring, Dashboards, Jobs, etc.) on a mobile device, the sidebar, which on a desktop device appears by default on the left-hand side of the screen, will now appear at the bottom of the screen.
 
-#### User picture in top-right corner \[ID 25257\]
+#### User picture in upper-right corner \[ID 25257\]
 
-The mobile apps (Monitoring, Dashboards, Jobs, etc.) will now show a picture of the user in the top-right corner. If no picture is available, then the user’s initials will be shown instead.
+The mobile apps (Monitoring, Dashboards, Jobs, etc.) will now show a picture of the user in the upper-right corner. If no picture is available, then the user’s initials will be shown instead.
 
 #### Monitoring app: On mobile devices, a redesigned footer will now group all card controls \[ID 25267\]
 
@@ -225,9 +225,9 @@ Web applications (Web Services API, legacy dashboards, Maps, etc.) have been upd
 
 In the Jobs app, it is now possible to have different job domains, each with their own set of job section descriptions.
 
-- If, in the top-left corner of the jobs list, you select a job domain from the list, the jobs list will be filtered and will list only the jobs associated with the selected job domain.
+- If, in the upper-left corner of the jobs list, you select a job domain from the list, the jobs list will be filtered and will list only the jobs associated with the selected job domain.
 
-- In configuration mode, you can select the job domain in the top-left corner of the screen, and then configure the job sections within the selected domain. The *New*, *Edit*, *Duplicate* and *Delete* buttons on the right of the job domain selection box allow you to add a new domain, edit the selected domain (change its name and/or hide it), duplicate a domain or delete the selected domain.
+- In configuration mode, you can select the job domain in the upper-left corner of the screen, and then configure the job sections within the selected domain. The *New*, *Edit*, *Duplicate* and *Delete* buttons on the right of the job domain selection box allow you to add a new domain, edit the selected domain (change its name and/or hide it), duplicate a domain or delete the selected domain.
 
 ##### Duplicating job domains
 
@@ -334,7 +334,7 @@ If a table has been defined without a filter box, the parameter control will be 
 
 #### User menu now has a 'Sign out' command \[ID 26254\]
 
-In all mobile apps (Monitoring, Dashboards, Jobs, etc.), the user menu in the top-right corner of the screen now has a “Sign out” command.
+In all mobile apps (Monitoring, Dashboards, Jobs, etc.), the user menu in the upper-right corner of the screen now has a “Sign out” command.
 
 #### Monitoring & Dashboards apps: Number groups in numeric parameter values will now be separated by a thin space \[ID 26394\]
 

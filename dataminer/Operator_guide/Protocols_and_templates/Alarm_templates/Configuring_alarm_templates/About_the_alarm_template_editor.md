@@ -44,7 +44,7 @@ The alarm template editor consists of two main sections:
 
   - The settings button (5) opens a menu where you can select whether the option to include/exclude parameters (used for [alarm template groups](xref:Alarm_template_groups)) and the option to [override autoclear](xref:Setting_the_autoclear_option_in_alarm_template) are displayed in the alarm template. Prior to DataMiner 10.3.12/10.4.0, you can also select whether the [configuration of Augmented Operations alarm settings](xref:Configuring_anomaly_detection_alarms) is displayed, but in later DataMiner versions this is displayed by default.
 
-  - To quickly find a particular parameter, you can use the filter box in the top-right corner (6).
+  - To quickly find a particular parameter, you can use the filter box in the upper-right corner (6).
 
   - The checkboxes in the *MON* column (7) determine whether a parameter is monitored or not.
 

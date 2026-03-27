@@ -28,4 +28,4 @@ In the diagram itself, each item (parameter, QAction, session, response, group, 
 
 - Double-click a box representing an item to make that item the new starting point of the diagram. This will cause the entire diagram to be redrawn.
 
-In the top-left corner of the diagram, you also have a number of zoom options: a slider to adjust to zoom factor, a *1:1* button (to switch to zoom factor 1) and a *Fill* button to automatically adjust the zoom factor to the current size of the diagram window.
+In the upper-left corner of the diagram, you also have a number of zoom options: a slider to adjust to zoom factor, a *1:1* button (to switch to zoom factor 1) and a *Fill* button to automatically adjust the zoom factor to the current size of the diagram window.

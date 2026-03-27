@@ -17,7 +17,7 @@ This page is where you will typically begin your configuration, first [adding fa
 
 ## Adding a new facility
 
-1. In the top-left corner of the Facilities page, click *New Facility*.
+1. In the upper-left corner of the Facilities page, click *New Facility*.
 
 1. Specify the following information:
 
@@ -54,7 +54,7 @@ This page is where you will typically begin your configuration, first [adding fa
    - Click the pencil icon in the *Floor Info* section to specify a description for the floor.
    - Click the pencil icon in the *Floor Plan* section to add an image as the floor plan.
 
-     To have additional images available for selection, upload them using the [Web File Manager app](xref:Web_File_Manager), which you can access directly via the button in the top-left corner.
+     To have additional images available for selection, upload them using the [Web File Manager app](xref:Web_File_Manager), which you can access directly via the button in the upper-left corner.
 
      ![Floor plan image selection](~/solutions/images/Facility_Manager_Edit_Screen_For_Room_Plans.png)
 
@@ -66,7 +66,7 @@ As soon as floors have been added to the facility, you will also be able to [add
 
    This will open the *Floor details* pane.
 
-1. In the top-left corner of the pane, click *Add Room*.
+1. In the upper-left corner of the pane, click *Add Room*.
 
 1. Specify the name of the room as well as its width and depth, and click *Save*.
 

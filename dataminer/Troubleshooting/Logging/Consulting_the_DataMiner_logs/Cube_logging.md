@@ -59,7 +59,7 @@ The following buttons at the bottom of this page allow further actions:
 
 > [!NOTE]
 >
-> - Use the filter box in the top-right corner to filter the displayed information. See [Using quick filters](xref:Using_quick_filters).
+> - Use the filter box in the upper-right corner to filter the displayed information. See [Using quick filters](xref:Using_quick_filters).
 > - By default, debug logging is not displayed. To display these log items, select the option *Show debug logging* at the top of the tab.
 > - You can select the option *Show SPI logging* at the top of the tab to see information related to system performance indicators. By default, SPI logging is not displayed.
 > - When an exception is recorded in the Cube logging, this is indicated by an icon in the Cube header. Clicking the icon will open this logging section. For warnings and errors, by default no icon is displayed in the header. However, you can have such icons displayed by adding the following argument to the Cube URL:<br>*?enablefeature=loggingnotifications*

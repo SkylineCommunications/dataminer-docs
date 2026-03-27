@@ -106,7 +106,7 @@ In this step, you will create a low-code app to visualize the performance issue 
 
    ![Performance Analyzer getting started final edit](~/dataminer/images/performance_analyzer_getting_started_final_lca_edit.png)
 
-1. Publish the low-code app using the button in the top-right corner.
+1. Publish the low-code app using the button in the upper-right corner.
 
    ![Performance Analyzer getting started publish the LCA](~/dataminer/images/performance_analyzer_getting_started_publish_the_app.png)
 

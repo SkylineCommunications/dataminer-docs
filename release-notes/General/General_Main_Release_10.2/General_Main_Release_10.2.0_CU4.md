@@ -44,7 +44,7 @@ The *row* argument of the FillArray and FillArrayNoDelete methods in theQActionT
 
 #### DataMiner Application Framework: Tooltips on sidebar of root page \[ID 33275\]
 
-When you click the apps button in the top-left corner of the root page and then hover over an app in the app list, a tooltip will now show the name of that app.
+When you click the apps button in the upper-left corner of the root page and then hover over an app in the app list, a tooltip will now show the name of that app.
 
 #### SLPort: Enhanced performance when processing large HTTP responses \[ID 33128\]
 

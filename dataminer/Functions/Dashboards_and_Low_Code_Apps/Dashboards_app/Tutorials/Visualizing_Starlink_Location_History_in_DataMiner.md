@@ -157,7 +157,7 @@ In this step, you will configure the GQI query that will fetch the trended data 
 
 1. Do the same for *History Time Range End*, with the property *To*.
 
-1. In the top-right corner of the query, click the pencil icon to stop editing it.
+1. In the upper-right corner of the query, click the pencil icon to stop editing it.
 
    ![GQI query using ad hoc data](~/dataminer/images/Tutorial_Starlink_History_Locations_GQI_result.png)
 

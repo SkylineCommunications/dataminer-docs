@@ -132,7 +132,7 @@ In all DataMiner web applications, placeholders in empty text boxes will now be 
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-On shared dashboards, the position of the WebSocket connection status indicator in the top-right corner of the screen has been improved.
+On shared dashboards, the position of the WebSocket connection status indicator in the upper-right corner of the screen has been improved.
 
 #### Dashboards app & Low-Code Apps: Number of GQI queries is now limited [ID 40370]
 

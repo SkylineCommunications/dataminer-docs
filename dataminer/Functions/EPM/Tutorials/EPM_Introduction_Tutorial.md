@@ -247,7 +247,7 @@ In dashboards and low-code apps, you can add an EPM feed component to allow user
 
 1. Drag the edges of the component so that it takes up the remaining white space of the dashboard.
 
-1. In the top-right corner, click *Stop editing*.
+1. In the upper-right corner, click *Stop editing*.
 
    Your dashboard should now look similar to this:
 

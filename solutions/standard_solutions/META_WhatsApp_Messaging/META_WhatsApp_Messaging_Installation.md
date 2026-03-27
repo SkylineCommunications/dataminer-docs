@@ -93,7 +93,7 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
 1. Go to the [*Meta Business Suite*](https://business.facebook.com/).
 
-1. Navigate to *Users > System Users* and click the *+ Add* button in the top-right corner.
+1. Navigate to *Users > System Users* and click the *+ Add* button in the upper-right corner.
 
 1. In the pop-up window, enter a name for your new system user and choose the appropriate role (*Employee* or *Admin*).
 

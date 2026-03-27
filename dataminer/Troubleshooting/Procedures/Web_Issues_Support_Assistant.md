@@ -15,7 +15,7 @@ To add the DataMiner Web Support Assistant extension to your Chromium browser:
 
 1. If a confirmation box appears, click *Add extension*.
 
-1. Click the puzzle icon in the top-right corner of your browser to check if the extension is listed among the other installed extensions.
+1. Click the puzzle icon in the upper-right corner of your browser to check if the extension is listed among the other installed extensions.
 
 1. Optionally, click the pin icon next to the extension in the extension overview.
 
@@ -36,7 +36,7 @@ When you have followed the steps above and the extension has been successfully a
 
 1. If you pinned its icon earlier, click the DataMiner Web Support Assistant icon.
 
-   If you did not pin the icon, click the puzzle icon in the top-right corner of the browser and select *DataMiner Web Support Assistant* from the list of available extensions.
+   If you did not pin the icon, click the puzzle icon in the upper-right corner of the browser and select *DataMiner Web Support Assistant* from the list of available extensions.
 
    This will open the following pane:
 

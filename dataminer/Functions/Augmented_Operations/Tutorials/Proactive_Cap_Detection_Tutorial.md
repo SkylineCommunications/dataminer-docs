@@ -92,7 +92,7 @@ In this step, you will learn what potential issues DataMiner's proactive cap det
 
    This prediction is also used to notify users when parameters are about to hit the upper or lower limit of their range.
 
-1. Click the light bulb icon in the top-right corner of the Alarm Console.
+1. Click the light bulb icon in the upper-right corner of the Alarm Console.
 
    This icon lights up blue to indicate that DataMiner Analytics has identified something interesting. For more detailed information, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
 
@@ -149,7 +149,7 @@ In the previous step, you explored how proactive cap detection can identify issu
    > [!IMPORTANT]
    > Throughout the rest of this tutorial, when generating data, always wait until the *Data Generated?* parameter displays *Yes* before proceeding to the next step.
 
-1. Click the light bulb icon in the top-right corner of the Alarm Console and select *2 alarms are predicted in the near future* to access the *Predicted alarms* tab.
+1. Click the light bulb icon in the upper-right corner of the Alarm Console and select *2 alarms are predicted in the near future* to access the *Predicted alarms* tab.
 
    You will now see a *Predicted Critical Low* event for *Optical RX Power Port 1*. DataMiner predicts that the parameter will cross the critical low threshold you just configured in the near future.
 

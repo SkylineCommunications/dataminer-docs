@@ -30,7 +30,7 @@ Expected duration: 15 minutes
 
 1. Navigate to the *Organizations* page.
 
-1. In the top-right corner, click *+ New Organization*.
+1. In the upper-right corner, click *+ New Organization*.
 
 1. Enter the *Organization name* you want to give to your organization.
 
@@ -46,7 +46,7 @@ Expected duration: 15 minutes
 
 1. Navigate to the *People* page.
 
-1. In the top-right corner, click *New contact*.
+1. In the upper-right corner, click *New contact*.
 
 1. Enter the *Full name* of the contact.
 
@@ -62,7 +62,7 @@ Expected duration: 15 minutes
 
 1. Navigate to the *Teams* page.
 
-1. In the top-right corner, click *+ New team*.
+1. In the upper-right corner, click *+ New team*.
 
 1. Enter the *Team name* you want to give to your team.
 
@@ -88,7 +88,7 @@ Expected duration: 15 minutes
 
 1. If you closed the panel in the previous step, open it again by clicking the button in the *Details* column.
 
-1. Click the *Bookable* switch in the top-right corner and click *OK* to confirm.
+1. Click the *Bookable* switch in the upper-right corner and click *OK* to confirm.
 
    ![Make Team Bookable](~/solutions/images/People_And_Organizations_Make_Team_Bookable.png)
 

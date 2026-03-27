@@ -18,7 +18,7 @@ uid: Web_apps_Feature_Release_10.4.4
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-Both the Dashboards app and the Monitoring app now have a WebSocket connection status indicator in the top-right corner of the screen.
+Both the Dashboards app and the Monitoring app now have a WebSocket connection status indicator in the upper-right corner of the screen.
 
 This indicator will show the current status of the client's WebSocket connection:
 

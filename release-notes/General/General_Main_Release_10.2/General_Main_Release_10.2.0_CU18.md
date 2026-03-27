@@ -211,7 +211,7 @@ For example, when you had specified `[param: [this EnhancedServiceID], 1]`, the 
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
-When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
+When you had opened the user menu by clicking the user icon in the upper-right corner, that menu would not close when you clicked the user icon a second time.
 
 #### Problem with SLScripting when resolving assemblies [ID 36843]
 

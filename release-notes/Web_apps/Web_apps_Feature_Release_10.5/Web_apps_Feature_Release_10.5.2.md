@@ -126,7 +126,7 @@ Up to now, when you clicked the sound icon of a video thumbnail, the video would
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-The network status indicator in the *Dashboards* app is no longer a separate icon. The current network status will now be incorporated into the user icon in the top-right corner. Also, from now on, when everything is fine, no network status will be shown.
+The network status indicator in the *Dashboards* app is no longer a separate icon. The current network status will now be incorporated into the user icon in the upper-right corner. Also, from now on, when everything is fine, no network status will be shown.
 
 In low-code apps, network status issues will now be shown in a colored banner. Possible notices include:
 

@@ -8,7 +8,7 @@ uid: Designing_a_matrix_tab_page_in_the_Router_Control_module
 
 1. Select the configuration by clicking its tab to the right of the “Default” tab.
 
-1. In the top-left corner, click the “+”.
+1. In the upper-left corner, click the “+”.
 
 1. In the *Add matrix* dialog box, specify the matrix parameter you want to add to the configuration:
 
@@ -127,7 +127,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
 
 ## Configuring a component on a matrix tab page
 
-1. Select the component, or hover over the component and click the green cogwheel in the top-right corner.
+1. Select the component, or hover over the component and click the green cogwheel in the upper-right corner.
 
 1. In the properties pane in the lower-right corner, make the necessary changes to the properties of the component.
 
@@ -136,7 +136,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
 
 ## Deleting a component from a matrix tab page
 
-1. Hover over the component and click the X in the top-left corner.
+1. Hover over the component and click the X in the upper-left corner.
 
 1. In the confirmation box, click *OK*.
 

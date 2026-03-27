@@ -85,7 +85,7 @@ In this step, you will configure an information template to change the way the p
 
    ![Configuration display name](~/dataminer/images/InfoTemplates.gif)
 
-1. Click *Only protocol parameters* in the top-left corner, and select *Only edited parameters*.
+1. Click *Only protocol parameters* in the upper-left corner, and select *Only edited parameters*.
 
    The list of parameters will now be limited to the ones you have just edited.
 
@@ -231,11 +231,11 @@ To enhance the way the table data are shown, in this step, you will assign an al
 
 This step will show how you can make a quick edit to the information template for one specific element only.
 
-1. Select the hamburger button in the top-left corner of the *Info template quick tips* element card and select *Parameter names*.
+1. Select the hamburger button in the upper-left corner of the *Info template quick tips* element card and select *Parameter names*.
 
 1. In the *Element parameter names* window, look up the "Location" parameter name in the *Information template name* column.
 
-   To quickly find this parameter, you can use the filter box in the top-right corner.
+   To quickly find this parameter, you can use the filter box in the upper-right corner.
 
 1. In the *Custom name* column for this parameter, enter the custom parameter name `Region`.
 

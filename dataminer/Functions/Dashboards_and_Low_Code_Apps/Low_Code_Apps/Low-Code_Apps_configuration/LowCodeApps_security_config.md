@@ -10,7 +10,7 @@ When you configure a low-code app, you can specify which users can access and/or
 
 <!--RN 40501-->
 
-1. Click the ellipsis button ("...")<!--RN 40077--> in the top-right corner and select *Permissions* or *Settings*, depending on your DataMiner version.<!-- RN 43536 -->
+1. Click the ellipsis button ("...")<!--RN 40077--> in the upper-right corner and select *Permissions* or *Settings*, depending on your DataMiner version.<!-- RN 43536 -->
 
 1. In the *Permissions* window, determine which users and groups are allowed to view and/or edit the app. You can configure permissions for specific users, groups, and everyone. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41079-->, this section of the settings is called "Access" instead.
 
@@ -40,13 +40,13 @@ When you configure a low-code app, you can specify which users can access and/or
 
 ## [Older DataMiner versions](#tab/tabid-2)
 
-1. Click the user icon in the top-right corner and select *Settings*.
+1. Click the user icon in the upper-right corner and select *Settings*.
 
 1. In the *Allowed to view the application* box, specify the names of the users and/or groups that should be allowed to view the app.
 
 1. In the *Allowed to edit the application* box, specify the names of the users and/or groups that should be allowed to edit the app.
 
-1. Close the *Settings* window with the X in the top-right corner.
+1. Close the *Settings* window with the X in the upper-right corner.
 
 ***
 

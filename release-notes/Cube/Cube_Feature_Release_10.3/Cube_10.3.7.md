@@ -159,4 +159,4 @@ In some cases, the following exception could be thrown when you tried to export 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 <!-- Not added to 10.4.0 -->
 
-When you clicked the light bulb icon in the top-right corner of a trend graph, Cube would incorrectly only list one related parameter. From now on, it will again list the ten most important ones.
+When you clicked the light bulb icon in the upper-right corner of a trend graph, Cube would incorrectly only list one related parameter. From now on, it will again list the ten most important ones.

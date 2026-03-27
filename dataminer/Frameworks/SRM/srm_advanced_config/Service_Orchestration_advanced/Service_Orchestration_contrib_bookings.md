@@ -188,7 +188,7 @@ You can adjust this 48-hour sliding window can be adjusted or even disable this 
 
 1. Open the Booking Manager app.
 
-1. Click the hamburger button in the top-left corner and select *Show card side panel*.
+1. Click the hamburger button in the upper-left corner and select *Show card side panel*.
 
 1. In the side panel, go to the *General* data page.
 

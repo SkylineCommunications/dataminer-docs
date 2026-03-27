@@ -140,7 +140,7 @@ To collect the SAML response, use the SAML-tracer extension:
 
 1. Go to `http(s)://[DMA name]/`.
 
-1. Click the puzzle icon in the top-right corner of your browser and select *SAML-tracer* from the list of available extensions.
+1. Click the puzzle icon in the upper-right corner of your browser and select *SAML-tracer* from the list of available extensions.
 
 1. Click any received SAML response marked with an orange bubble labeled "SAML".
 

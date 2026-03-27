@@ -13,7 +13,7 @@ To configure the components of a dashboard, you must first access the dashboard 
 
 - Simply click an existing dashboard in the *Dashboards* app.
 
-In the dashboard editor, click *Actions* in the top-right corner to access the various configuration options:
+In the dashboard editor, click *Actions* in the upper-right corner to access the various configuration options:
 
 - Add/Remove Components, see [Add/Remove Components](#addremove-components).
 

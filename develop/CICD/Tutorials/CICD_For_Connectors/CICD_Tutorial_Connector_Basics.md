@@ -84,7 +84,7 @@ Expected duration: 20 minutes.
 
       1. Drag the new parameter from the *Parameters* pane on the right onto the *General* page in the Pages pane on the left.
 
-      1. In the top-right corner of the Display Editor, click *Apply Changes*.
+      1. In the upper-right corner of the Display Editor, click *Apply Changes*.
 
 ## Step 2: Create a GitHub repository
 

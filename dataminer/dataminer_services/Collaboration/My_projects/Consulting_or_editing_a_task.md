@@ -22,7 +22,7 @@ To consult or edit a task under the current project, do the following:
 
   1. At the top of the window, click *Save*.
 
-In the top-right corner, you can find two buttons:
+In the upper-right corner, you can find two buttons:
 
 - Clicking the first button will copy the URL of the task to the Windows clipboard.
 

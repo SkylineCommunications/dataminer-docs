@@ -13,7 +13,7 @@ To make a private item available to all users, or to make a public item availabl
 
 1. Navigate to the [Catalog](https://catalog.dataminer.services/) and make sure you are signed in.
 
-1. Make sure the correct organization is selected in the top-right corner.
+1. Make sure the correct organization is selected in the upper-right corner.
 
 1. [Go to the details page](xref:Looking_up_an_item_in_the_catalog) of the Catalog item.
 
