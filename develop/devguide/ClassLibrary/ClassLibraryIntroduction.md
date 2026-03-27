@@ -26,7 +26,7 @@ To use the DataMinerSystem library in an automation script, install the followin
 Both packages have a dependency on the [Skyline.DataMiner.Core.DataMinerSystem.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Common) NuGet package. Therefore, this package is installed automatically when Skyline.DataMiner.Core.DataMinerSystem.Protocol or Skyline.DataMiner.Core.DataMinerSystem.Automation are installed.
 
 > [!NOTE]
-> Using the DataMinerSystem library, you can retrieve parameter values, tables, etc. from elements. However, it is important to note that this should only be used for obtaining values from other elements. To perform operations on the local element, it is advised to use the [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) API as this is much more efficient (This is because the operation is then performed in the SLProtocol process immediately).
+> Using the DataMinerSystem library, you can retrieve parameter values, tables, etc. from elements. However, it is important to note that this should only be used for obtaining values from other elements. To perform operations on the local element, we recommend using the [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) API as this is much more efficient (because the operation is then performed in the SLProtocol process immediately).
 
 For example, to start using the DataMinerSystem library **from a QAction**, use the [GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol.SlProtocolExtensions.GetDms(Skyline.DataMiner.Scripting.SLProtocol)) extension method:
 

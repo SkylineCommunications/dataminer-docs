@@ -168,9 +168,9 @@ To prepare effectively for the exam:
     - [Interactive Automation Script Toolkit examples](https://github.com/SkylineCommunications/SLC-AS-Example_InteractiveAutomationScriptToolkit)
   
   - System Library:
-    - [Introduction video to DIS Class Library](https://community.dataminer.services/courses/dataminer-automation/lessons/dataminer-integration-studio-dis-class-library/)
-    - [About the class library](xref:ClassLibraryIntroduction)
-    - [Class library examples](xref:ClassLibraryExamples)
+    - [Introduction video to DataMinerSystem Library](https://community.dataminer.services/courses/dataminer-automation/lessons/dataminer-integration-studio-dis-class-library/)
+    - [About the DataMinerSystem library](xref:ClassLibraryIntroduction)
+    - [DataMinerSystem library examples](xref:ClassLibraryExamples)
 
 - Schedule check-ins with your examiner via the booking page if you have any questions.
 

@@ -39,7 +39,9 @@ These are the most important things to keep in mind:
 
 1. Start development.
 
-1. Remember to add integration tests. You can look at the existing tests to see how this is done, and run them locally from within Visual Studio in the same way as the unit tests. The integration tests will then run on your local agent.
+1. Add integration tests.
+
+   You can look at the existing tests to see how this is done, and run them locally from within Visual Studio in the same way as the unit tests. The integration tests will then run on your local Agent.
 
 1. When you are ready:
 
