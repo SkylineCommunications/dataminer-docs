@@ -43,7 +43,7 @@ These are the supported download properties:
 
 - **StartDownloadImmediately**: If set to true (default setting is false), the download will start as soon as the component is displayed. The button will stay visible and can be clicked to download the file again.
 
-- **ReturnWhenDownloadIsStarted**: If set to true (default default is false), the `engine.ShowUI()` method will return as soon as the download is started (either immediately or when the user clicks the button, depending on *StartDownloadImmediately*). When both *StartDownloadImmediately* and *ReturnWhenDownloadIsStarted* are set to true, the script will start the download and exit immediately (unless a new `engine.ShowUI()` call is made).
+- **ReturnWhenDownloadIsStarted**: If set to true (default is false), the `engine.ShowUI()` method will return as soon as the download is started (either immediately or when the user clicks the button, depending on *StartDownloadImmediately*). When both *StartDownloadImmediately* and *ReturnWhenDownloadIsStarted* are set to true, the script will start the download and exit immediately (unless a new `engine.ShowUI()` call is made).
 
   > [!NOTE]
   > The script's UI will be visible for about half a second.

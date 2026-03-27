@@ -74,6 +74,8 @@ items:
     topicUid: Multi_Threaded_Timer_Polling_Rate_Calculator
   - name: Prerequisite checks
     items:
+      - name: Service Automatic Properties
+        topicUid: Service_Automatic_Properties
       - name: Verify BrokerGateway Migration
         topicUid: VerifyBrokerGatewayMigration
       - name: VerifyClusterPorts.dmupgrade

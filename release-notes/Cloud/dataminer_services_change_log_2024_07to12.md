@@ -23,7 +23,7 @@ From now on, when you export the audit information from the *Audit* page in the 
 
 #### 11 December 2024 - Enhancement - Admin app - Improved usage export file [ID 41695]
 
-From now on, when you export the usage information from the *Usage* page in the [Admin app](https://admin.dataminer.services), the export file will have a better name, which will include the organization name and a readable timestamp. The metrics in the file itself will now also contain the organization and DMS name, and if the option to include column titles was selected, there will be better column titles at the the top.
+From now on, when you export the usage information from the *Usage* page in the [Admin app](https://admin.dataminer.services), the export file will have a better name, which will include the organization name and a readable timestamp. The metrics in the file itself will now also contain the organization and DMS name, and if the option to include column titles was selected, there will be better column titles at the top.
 
 #### 9 December 2024 - Enhancement - Home/Admin/Catalog/Marketplace/Sharing - App title now works as link that can be opened in new tab [ID 41518] [ID 41524]
 

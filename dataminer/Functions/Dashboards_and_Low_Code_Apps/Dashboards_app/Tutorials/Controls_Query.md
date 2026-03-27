@@ -44,7 +44,7 @@ Expected duration: 10 minutes
 
    1. Fill in "VLAN name" as the placeholder for the text input.
 
-   1. Search for "Filter" in the *Icon* option and and select an applicable icon.
+   1. Search for "Filter" in the *Icon* option and select an applicable icon.
 
 Your text input should look like this:
 

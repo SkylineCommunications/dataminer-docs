@@ -312,7 +312,7 @@ In this step, you will add a title, a time range component, and a timeline compo
 
 1. Add a title component:
 
-   1. Drag a [web component](xref:DashboardWeb) onto the page and and position it in the top-left corner.
+   1. Drag a [web component](xref:DashboardWeb) onto the page and position it in the top-left corner.
 
    1. Make sure the component is selected and select the *Settings* pane on the right.
 

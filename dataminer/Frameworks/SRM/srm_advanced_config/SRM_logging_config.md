@@ -43,7 +43,7 @@ uid: SRM_logging_config
 
    - *Logging Files Time to Keep*: Determines how old logging files must be before they can be cleaned up.
 
-   - *Cleanup now*: Click this button to manually trigger a cleanup of the log files older than than the configured *Logging Files Time to Keep*.
+   - *Cleanup now*: Click this button to manually trigger a cleanup of the log files older than the configured *Logging Files Time to Keep*.
 
 ## Configuring custom log records
 

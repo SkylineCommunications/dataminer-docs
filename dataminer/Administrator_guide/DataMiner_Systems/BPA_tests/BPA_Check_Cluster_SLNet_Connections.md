@@ -69,7 +69,7 @@ The detailed JSON output of the BPA test may contain the following possible mess
 
 The detailed JSON output of the BPA may contain the following messages, depending on which potential issues are detected:
 
-- ICMP ping to these Agents failed: X (where X is is the summary of relevant Agents).
+- ICMP ping to these Agents failed: X (where X is the summary of relevant Agents).
 
 - ICMP ping round-trip time was bigger than 50 ms: X (where X is the summary of relevant Agents and the round-trip time).
 

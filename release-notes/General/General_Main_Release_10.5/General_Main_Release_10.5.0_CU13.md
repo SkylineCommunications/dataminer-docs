@@ -15,6 +15,14 @@ uid: General_Main_Release_10.5.0_CU13
 
 ### Enhancements
 
+#### New SMTP settings for OAuth authentication added to DataMiner.xml [ID 44478]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+In order to allow SLNet to automatically update the OAuth token needed to access an SMTP mail server that requires authentication via XOAuth2, a number of OAuth settings have now been added to the *DataMiner.xml* file. However, these settings can only be configured via DataMiner Cube.<!-- RN44594 -->
+
+See also: [System Center: Configuring outgoing email [ID 44594]](xref:Cube_Feature_Release_10.6.4#system-center-configuring-outgoing-email-id-44594)
+
 #### BPA test 'Large Alarm Trees' will now run on a daily basis [ID 44565]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
@@ -75,6 +83,31 @@ Performance has especially increased using filters that consist of multiple equa
 >
 > - Non-equality and wildcard/regex filtering has not been altered.
 > - If more than 1,000 elements are affected, filtering will revert to the legacy behavior.
+
+#### Generating BrokerGateway client secrets [ID 44757] [ID 44778]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+From now on, it is possible to generate BrokerGateway client secrets. These are designed for DxMs or other clients connecting to the DataMiner NATS bus from a server without a local DataMiner installation. The secrets enable secure authentication with BrokerGateway, which then provides the necessary connection details for the NATS bus.
+
+Using internal BrokerGateway Administrator keys for these connections is discouraged, as these keys may be refreshed during cluster maintenance or because of other actions. By contrast, user-generated client secrets persist throughout the cluster's lifecycle and are immediately distributed to all BrokerGateway instances for cluster-wide availability.
+
+Common examples of clients requiring this setup include the Data Aggregator DxM and Dashboard Gateway.
+
+API calls are available to manage the BrokerGateway client secrets.
+
+| Method | Route | Description |
+|---|---|---|
+| `POST` | `/api/clientSecret/generate` | Generates a new random API key associated with a specific client name. The key is returned in the response body. |
+| `DELETE` | `/api/clientSecret/delete` | Deletes the client secret associated with the specified `clientName` argument. |
+| `GET` | `/api/clientSecret/list` | Retrieves a list of all existing client secrets with their respective names.<br>Note: The sensitive key values are redacted in the response (e.g., `abcd****************`) for security purposes. |
+
+In order to perform these API calls on a BrokerGateway instance, you will need the Administrator key. You can find this key in the file `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`. In the file, look for an entry in `APIKeys` with the name *Administrator*. The *key* property is the administrator key.
+
+You can execute the API calls by calling the REST API via PowerShell.
+
+> [!IMPORTANT]
+> Using client secrets prevents the root certificate authority from being cycled during DataMiner Agent removals or NATSRepair calls. This is done to ensure that external clients maintain stable connectivity with the cluster, without having to change credentials or trusted root certificates.
 
 #### Enhanced performance when executing a full element update on STaaS systems with Swarming enabled [ID 44772]
 
@@ -206,3 +239,17 @@ From now on, the following correct error message will appear instead:
 Up to now, if an element had more than 10,000 active alarms, on STaaS systems, only the first 10,000 would incorrectly be retrieved.
 
 From now on, all active alarms will be retrieved, even if the element in question has more than 10,000 active alarms.
+
+#### Problem when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent [ID 44848]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+On systems where each DMA has its own Cassandra database, up to now, when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent (for example because that Agent was unavailable), an error would be thrown inside the UI of that dashboard or low-code app.
+
+From now on, when a component in a dashboard or low-code app is not able to retrieve data from a remote DataMiner Agent, a "Nothing to show" message will appear in that component instead.
+
+#### Cassandra Cluster: Automation scripts would incorrectly not be able to request history alarms using a property value filter with wildcards or regular expressions [ID 44873]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+Up to now, it would incorrectly not be possible for automation scripts to request history alarms from a Cassandra Cluster database using a property value filter with wildcards or regular expressions.
