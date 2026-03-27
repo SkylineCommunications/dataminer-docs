@@ -163,6 +163,14 @@ Up to now, when DataMiner was shutting down, SLSNMPAgent would not properly unre
 
 From now on, when SNMPAgent shuts down, it will unregister itself with SLWatchDog.
 
+#### GetProtocolInfoResponseMessage.FindParameter method would not be thread-safe [ID 45035]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, the `GetProtocolInfoResponseMessage.FindParameter` method would not be thread-safe. Using this method in different threads at the same time could lead to simultaneous access and modification of the underlying parameter cache, causing the following exception to be thrown:
+
+`Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct.`
+
 #### Nats-server would incorrectly not be installed alongside BrokerGateway when no DataMiner software had been installed on the system [ID 45049]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
