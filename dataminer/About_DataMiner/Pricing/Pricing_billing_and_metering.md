@@ -58,9 +58,9 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 | Category | Service | Definition |
 |---|---|---|
-| [Data Plane](#data-plane)   | *Standard Managed Object*       | Endpoints directly or indirectly interfaced by DataMiner with 200 or more metrics. |
-| [Data Plane](#data-plane)   | *Light Managed Object*          | Endpoints with less than 200 metrics. |
-| [Data Plane](#data-plane)   | *Unmanaged Object*              | Unmanaged Object instances available in the system (see [DataMiner Object Models](xref:DOM)). |
+| [Data Plane](#data-plane)   | *Standard Managed Objects*       | Endpoints directly or indirectly interfaced by DataMiner with 200 or more metrics. |
+| [Data Plane](#data-plane)   | *Light Managed Objects*          | Endpoints with less than 200 metrics. |
+| [Data Plane](#data-plane)   | *Unmanaged Objects*              | Unmanaged Object instances available in the system (see [DataMiner Object Models](xref:DOM)). |
 | [Data Sources](#data-sources) | *Connector Services*            | Use of Skyline-developed connectors made available through the [Catalog](https://catalog.dataminer.services/). Connectors developed by the user or a third party are not counted. |
 | [Automation](#automation)   | *Automation Actions*            | [**Automation script runs**](xref:Running_Automation_scripts) and **new Unmanaged Object instances** added to the [DataMiner Object Models](xref:DOM). |
 | [Collaboration Services](#collaboration-services) | *Dashboard Sharing*   | Sharing dashboards with real-time data and controls with internal or external organization users. |
@@ -82,9 +82,9 @@ The data plane is the operational foundation of your DataMiner System, the digit
 
 | Service | Metering unit | Starting at |
 |---|---|---|
-| *Standard Managed Object* | Count of 10K metrics on Managed Objects with 200 or more metrics | 0.4 credits per managed object |
-| *Light Managed Object* | Sum of metrics on Managed Objects with fewer than 200 metrics | 2 credits per 1,000 metrics |
-| *Unmanaged Object* | Sum of instances across all Unmanaged Object types | 4 credits per 100,000 instances |
+| *Standard Managed Objects* | Count of 10K metrics on Managed Objects with 200 or more metrics | 0.4 credits per managed object |
+| *Light Managed Objects* | Sum of metrics on Managed Objects with fewer than 200 metrics | 2 credits per 1,000 metrics |
+| *Unmanaged Objects* | Sum of instances across all Unmanaged Object types | 4 credits per 100,000 instances |
 
 > [!NOTE]
 >
@@ -163,7 +163,7 @@ Automation covers all script executions and workflow actions driven by DataMiner
 
 | Service | Metering unit | Starting at |
 |---|---|---|
-| *Automation Actions* | Sum of script runs and new Unmanaged Object instances | 5 credits per 1,000 actions. <br>**Rate decreases with volume** |
+| *Automation Actions* | Sum of automation script runs and new Unmanaged Object instances | 5 credits per 1,000 actions. <br>**Rate decreases with volume** |
 
 Automation Actions include:
 
