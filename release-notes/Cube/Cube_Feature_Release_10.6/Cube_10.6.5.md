@@ -74,6 +74,12 @@ Since DataMiner version 1.0.1.0 CU22/10.2.0 CU10/10.3.1, trend graphs in a visua
 
 When, for whatever reason, the Microsoft Edge (WebView2) browser engine had not been loaded, up to now, parts of the Cube UI that contained embedded browser windows would incorrectly remain empty.
 
+#### Lightbulb would incorrectly appear on top of one of the alarm tabs [ID 45016]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When you opened an element, service or view card, and went to the card's alarm section, in some cases, the lightbulb icon would incorrectly appear on top of one of the alarm tabs.
+
 #### Spectrum analysis: Incorrect trace data would be shown when selecting multiple measurement points [ID 45059]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
