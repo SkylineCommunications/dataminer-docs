@@ -262,7 +262,7 @@ public class Script
 
 #### Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]
 
-<!-- MR 10.7.0 - FR 10.6.3 -->
+<!-- MR 10.6.0 [CU3] - FR 10.6.3 -->
 
 Up to now, one SLScripting process was used by default. From now on, by default, there will be as many SLScripting processes as SLProtocol processes.
 
@@ -275,7 +275,7 @@ Note that is possible to configure the number of simultaneously running SLScript
 
 #### Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]
 
-<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.7.0 - FR 10.6.3 together with 44420 -->
+<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.6.0 [CU3] - FR 10.6.3 together with 44420 -->
 
 Up to now, when an SLScripting process disappeared, elements relying on that process could become unstable, requiring manual intervention to restore functionality.
 
