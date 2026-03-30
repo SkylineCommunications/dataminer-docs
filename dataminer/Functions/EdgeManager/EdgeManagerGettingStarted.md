@@ -16,21 +16,21 @@ When the DxM has been installed, in the Windows services overview, you should se
 - *DataMiner SiteManager*: This is the SiteManager DxM that interacts with DataMiner and the *zrok-agent* process.
 - *zrok-agent*: This is the zrok Agent service with which the SiteManager DxM communicates for creating the communication tunnels.
 
-## Edge Node deployment
+## On-premises setup
 
-To allow DataMiner to access a data source located on an edge node via Edge Manager, a DataMiner Edge Node must be deployed as detailed below.
+To allow DataMiner to access a data source in a remote location via the Site Manager, the following steps are needed:
 
 ### [Windows](#tab/windows)
 
-1. On a machine in your on-premises network, run the [DataMiner Edge Manager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.ps1) script by using the following command, where you replace the placeholders with the **account token** and a **location name** (or "site name").
+1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.ps1) script by using the following command, where you replace the placeholders with the **account token** and a **site name** (i.e. the name of the location).
 
    ```powershell
    iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1 -UseBasicParsing) } -Command install -AccountToken '<AccountToken>' -SiteName '<SiteName>'"
    ```
 
-   - You can find the **account token** in the Edge Manager logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
+   - You can find the **account token** in the SiteManager DxM logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
 
-   - The **location name** should be a concise description of the location from which you are exposing data sources. When a connection is configured during the creation or editing of an element in DataMiner Cube, this description will be shown in the *Site* dropdown.
+   - The **site name** should be a concise description of the location from which you are exposing data sources. When a connection is configured during the creation or editing of an element in DataMiner Cube, this description will be shown in the *Site* dropdown.
 
    > [!NOTE]
    >
@@ -38,7 +38,7 @@ To allow DataMiner to access a data source located on an edge node via Edge Mana
    > - You must run the script as administrator.
    > - The machine where you install this script must be able to access the data sources you want to expose. It does not have to be the machine where the data sources are running.
    > - In case PowerShell's execution policy prevents the execution, specify an execution policy (e.g., `-ExecutionPolicy Bypass`). For more information regarding PowerShell's execution policy, refer to [About execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.5).
-   > - Updating a location name is not straightforward. To update a location name, you will need to uninstall (as mentioned below) and then run the script again. Also, if data sources have been configured to set up a connection with this location, the configuration of these data sources will also need to be updated.
+   > - Updating a site name is not straightforward. To update a site name, you will need to uninstall (as mentioned below) and then run the script again. Also, if data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
 
    To uninstall, you can use the following command:
 
@@ -86,22 +86,22 @@ To allow DataMiner to access a data source located on an edge node via Edge Mana
 
 ### [Linux](#tab/linux)
 
-1. On a machine in your on-premises network, run the [DataMiner Edge Manager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.sh) script by using the following command, where you replace the placeholders with the **account token** and a **location name** (or "site name").
+1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.sh) script by using the following command, where you replace the placeholders with the **account token** and a **site name** (i.e. the name of the location).
 
    ```bash
    wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | sudo bash -s -- install '<AccountToken>' '<SiteName>'
    ```
 
-   - You can find the **account token** in the Edge Manager logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
+   - You can find the **account token** in the SiteManager DxM logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
 
-   - The **location name** should be a concise description of the location from which you are exposing data sources. When a connection is configured during the creation or editing of an element in DataMiner Cube, this description will be shown in the *Site* dropdown.
+   - The **site name** should be a concise description of the location from which you are exposing data sources. When a connection is configured during the creation or editing of an element in DataMiner Cube, this description will be shown in the *Site* dropdown.
 
    > [!NOTE]
    >
    > - The Linux distribution must be using `systemd` as the service manager.
    > - The script must be run via sudo.
    > - The machine where you install this script must be able to access the data sources you want to expose. It does not have to be the machine where the data sources are running.
-   > - Updating a location name is not straightforward. To update a location name, you will need to uninstall (as mentioned below) and then run the script again. Also, if data sources have been configured to set up a connection with this location, the configuration of these data sources will also need to be updated.
+   > - Updating a site name is not straightforward. To update a site name, you will need to uninstall (as mentioned below) and then run the script again. Also, if data sources have been configured to set up a connection with this site, the configuration of these data sources will also need to be updated.
 
    To uninstall, you can use the following command:
 
@@ -202,14 +202,14 @@ Once a data source has been shared, you are ready to connect to it from a DaaS s
 
 1. In DataMiner Cube, [add a new element](xref:Adding_elements).
 
-1. When you configure an element connection for the element that should communicate with a data source on an Edge Node (through a secure tunnel), select the site in the *Site* dropdown.
+1. When you configure an element connection for the element that should communicate with a data source in a remote location (through a secure tunnel), select the site in the *Site* dropdown.
 
-   The location name that appears in the *Site* dropdown corresponds with the description specified during execution of the [Edge Node installation script](#edge-node-deployment).
+   The location name that appears in the *Site* dropdown corresponds with the description specified during execution of the [on-premises installation script](#on-premises-setup).
 
 1. Fill in the IP or hostname of the exposed data source.
 
    > [!IMPORTANT]
-   > If, during [Edge Node deployment](#edge-node-deployment), you specified the endpoint to be shared (in the zrok reserve command) using the IP address, then to access the data source in DataMiner you will also need to specify the IP address. Similarly, if you used the hostname, you will also need to specify the hostname in DataMiner Cube.
+   > If, during [on-premises setup](#on-premises-setup), you specified the endpoint to be shared (in the zrok reserve command) using the IP address, then to access the data source in DataMiner you will also need to specify the IP address. Similarly, if you used the hostname, you will also need to specify the hostname in DataMiner Cube.
 
 A tunnel will only be created as long as at least one element is actively connecting to this endpoint. For example, if you have an element that sets up a connection to a data source in a remote location, the tunnel will only be created when the element is started. As soon as the element is stopped or deleted, the tunnel will be torn down.
 

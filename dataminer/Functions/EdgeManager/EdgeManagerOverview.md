@@ -5,7 +5,7 @@ keywords: Site Manager
 
 # About Edge Manager
 
-DataMiner Edge Manager is available via the SiteManager DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)). It is used to set up secure communication tunnels for communication with locations where a DataMiner Edge Node has been deployed. You can among others use it for communication with selected on-premises data sources from a DaaS system without the need to configure, for instance, a site-to-site VPN.
+DataMiner Edge Manager is available via the SiteManager DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)). It is used to set up secure tunnels for communication with remote locations. You can among others use it for communication with selected on-premises data sources from a DaaS system without the need to configure, for instance, a site-to-site VPN.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ The following limitations apply:
 
 ## Architecture
 
-To communicate with Edge Nodes, the Edge Manager module makes use of [zrok](https://zrok.io/), a secure, open-source platform that allows private sharing of data sources. zrok is built on top of [OpenZiti](https://openziti.io/), an open-source zero-trust networking platform by [NetFoundry](https://netfoundry.io/).
+DataMiner Edge Manager makes use of [zrok](https://zrok.io/), a secure, open-source platform that allows private sharing of data sources. zrok is built on top of [OpenZiti](https://openziti.io/), an open-source zero-trust networking platform by [NetFoundry](https://netfoundry.io/).
 
 The image below shows two data sources, A and B, that have been exposed and are polled by a DaaS system. Each data source has its own dedicated tunnel. Data source C is not exposed and is therefore not visible externally.
 

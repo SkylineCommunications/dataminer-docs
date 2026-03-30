@@ -11,8 +11,8 @@ keywords: Site Manager
 
 This means that the tunnel could not be set up. This could be because of several reasons:
 
-- The provided IP address or hostname does not match that of an exposed data source in the specified location as specified during [Edge Node deployment](xref:EdgeManagerGettingStarted#edge-node-deployment).
-- When the data source was exposed during [Edge Node deployment](xref:EdgeManagerGettingStarted#edge-node-deployment), only one of the two required zrok commands were executed.
+- The provided IP address or hostname does not match that of an exposed data source in the specified location as specified during [on-premises setup](xref:EdgeManagerGettingStarted#on-premises-setup).
+- When the data source was exposed during [on-premises setup](xref:EdgeManagerGettingStarted#on-premises-setup), only one of the two required zrok commands were executed.
 - The SiteManager DxM is not running.
 - The zrok Agent service is not running.
 - The zrok controller is not running.
