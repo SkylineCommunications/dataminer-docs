@@ -16,7 +16,7 @@ uid: General_Main_Release_10.0.0_CU7
 
 When you open a card on a mobile device, you will now see a card header instead of the app header, and you will be able to open a card sidebar just like on a desktop device.
 
-Also, the card menu is now accessible through a hamburger button in the top-right corner.
+Also, the card menu is now accessible through a hamburger button in the upper-right corner.
 
 #### Logging: More information stored in errorlog.txt file when an error occurs in SLProtocol \[ID 26630\]
 

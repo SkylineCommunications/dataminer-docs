@@ -228,7 +228,7 @@ When, in the *Automation* app, you made an invalid change in a script, closed th
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-When, in the hamburger button in the top-left corner of the Alarm Console, the *Automatically group according to arrangement* setting was not selected, upon reconnecting DataMiner Cube, the alarms would incorrectly be grouped anyway.
+When, in the hamburger button in the upper-left corner of the Alarm Console, the *Automatically group according to arrangement* setting was not selected, upon reconnecting DataMiner Cube, the alarms would incorrectly be grouped anyway.
 
 #### Scheduled alarm templates would incorrectly not be updated when the system time changed [ID 34154]
 

@@ -24,7 +24,7 @@ All the way at the top of the panel, you can see an overview indicating the curr
 
 ## Job Info
 
-This section contains the **general information** about the job: the ID, name, description, priority, and the start and end time. Clicking the pencil icon in the top-right corner allows you to make changes to this. The pencil icon below that can be used to modify the properties of the job.
+This section contains the **general information** about the job: the ID, name, description, priority, and the start and end time. Clicking the pencil icon in the upper-right corner allows you to make changes to this. The pencil icon below that can be used to modify the properties of the job.
 
 Below this general information, different buttons are shown depending on the [state of the job](xref:MO_S_Job_States):
 

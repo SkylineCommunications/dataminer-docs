@@ -30,7 +30,7 @@ The tab contains different subtabs representing the different views that contain
 
 At the top of the Dashboard tab, you can select whether the services should be displayed as boxes showing the service name and the overall alarm state of the service ("Service Name"), or as icons with the service alarm color, which display the service name in a tooltip when you hover the mouse pointer over them ("Small icon").
 
-In the top-right corner of the tab, a filter box is also available. If text is entered in this box, only the services of which the name matches this text will be displayed. Finally, two toggle buttons are also available in the top-left corner:
+In the upper-right corner of the tab, a filter box is also available. If text is entered in this box, only the services of which the name matches this text will be displayed. Finally, two toggle buttons are also available in the upper-left corner:
 
 - *Severity Sorting*: Determines whether services are sorted by name or by severity.
 - *Penalty Box*: Determines whether all services are displayed or only those in alarm.

@@ -107,14 +107,14 @@ The newly created duplicate will be assigned a unique name and will automaticall
 
    - To duplicate a different version:
 
-     1. In the top-right corner, click the ellipsis button ("...") and select *Versions*.
+     1. In the upper-right corner, click the ellipsis button ("...") and select *Versions*.
 
      1. Select the desired version.
 
      > [!NOTE]
      > You can only duplicate an older version of an app if you have permission to edit the app in question.
 
-1. In the top-right corner, click the ellipsis button ("..."), and select *Duplicate app*.
+1. In the upper-right corner, click the ellipsis button ("..."), and select *Duplicate app*.
 
    The low-code app will be copied and the newly created app will automatically be opened in a new browser tab.
 
@@ -128,14 +128,14 @@ The newly created duplicate will be assigned a unique name and will automaticall
 
    - To duplicate a different version:
 
-     1. In the top-right corner, click the user icon and select *Versions*.
+     1. In the upper-right corner, click the user icon and select *Versions*.
 
      1. Select the desired version.
 
      > [!NOTE]
      > You can only duplicate an older version of an app if you have permission to edit the app in question.
 
-1. In the top-right corner, click the user icon, and select *Duplicate* in the user menu.
+1. In the upper-right corner, click the user icon, and select *Duplicate* in the user menu.
 
    The current draft version will be copied and the newly created app will automatically be opened in a new browser tab.
 

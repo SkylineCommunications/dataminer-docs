@@ -68,7 +68,7 @@ To access the GitHub NuGet registry, you need a personal access token (PAT). Fol
 
 1. Select *Package Sources* from the dropdown list on the left.
 
-1. In the *Package Sources* tab, click the green plus icon in the top-right corner to add a new package source.
+1. In the *Package Sources* tab, click the green plus icon in the upper-right corner to add a new package source.
 
    - **Name**: Choose a name for your package source.
 

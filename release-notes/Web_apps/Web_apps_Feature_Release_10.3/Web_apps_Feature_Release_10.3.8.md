@@ -18,7 +18,7 @@ uid: Web_apps_Feature_Release_10.3.8
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
-You can export the data displayed by a table component by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. From now on, a pop-up window will open where you can select whether the raw values or the display values from the table should be exported.
+You can export the data displayed by a table component by clicking the ... button in the upper-right corner of the component and selecting *Export to CSV*. From now on, a pop-up window will open where you can select whether the raw values or the display values from the table should be exported.
 
 Exporting the display values will result in a CSV file that contains all the values as they are seen in the table, formatted and with units. If you export the raw values, no formatting will be applied to them. The only exception are discrete values, for which the corresponding display values will always be exported.
 
@@ -243,9 +243,9 @@ When a query linked to a table component returned null values, errors would be t
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
-When users who only had permission to view dashboards clicked the *...* button in the top-right corner of the navigation pane, an empty menu would open.
+When users who only had permission to view dashboards clicked the *...* button in the upper-right corner of the navigation pane, an empty menu would open.
 
-From now on, users who only have permission to view dashboards will not see any *...* button in the top-right corner of the navigation pane.
+From now on, users who only have permission to view dashboards will not see any *...* button in the upper-right corner of the navigation pane.
 
 #### Dashboards app & Low-Code Apps - Numeric input component: Input field would incorrectly be set to the minimum value after a refresh [ID 36677]
 

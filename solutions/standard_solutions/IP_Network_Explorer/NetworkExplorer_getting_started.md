@@ -12,7 +12,7 @@ When you open the IP Network Explorer app, you will see a topology overview of t
 
 If you do not see any network switches or only a partial topology, you can **scan your network** to detect supported network switches and update connectivity information:
 
-1. Click the **Scan** button in the top-right corner of the *Topology* page.
+1. Click the **Scan** button in the upper-right corner of the *Topology* page.
 
    ![Scan the network](~/solutions/images/NS_manual_scan-network.png)
 

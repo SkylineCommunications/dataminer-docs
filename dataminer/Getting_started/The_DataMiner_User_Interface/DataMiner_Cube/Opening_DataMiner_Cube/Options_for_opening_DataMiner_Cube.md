@@ -89,7 +89,7 @@ Use this option to immediately display a specific alarm card. Different formats 
   ```
 
 > [!NOTE]
-> To quickly find the root alarm ID, right-click the alarm in the Alarm Console and select *Properties*. The root alarm ID will be displayed below the regular ID in the top-right corner of the properties window.
+> To quickly find the root alarm ID, right-click the alarm in the Alarm Console and select *Properties*. The root alarm ID will be displayed below the regular ID in the upper-right corner of the properties window.
 
 ### app=
 

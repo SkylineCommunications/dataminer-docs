@@ -6,11 +6,11 @@ uid: Asset_Designer
 
 On the Asset Designer page, you can configure the asset classes used in your system. This is typically the first step when configuring the Asset Manager app. You can [import the classes](#importing-asset-classes) via CSV or from GitHub, but you can also [manually create classes](#manually-creating-an-asset-class).
 
-This page also allows you to configure [device types](xref:AM_Configuring_device_types), [cable types](xref:AM_Configuring_cable_types), and [port types](xref:AM_Configuring_port_types) via the buttons in the top-left corner.
+This page also allows you to configure [device types](xref:AM_Configuring_device_types), [cable types](xref:AM_Configuring_cable_types), and [port types](xref:AM_Configuring_port_types) via the buttons in the upper-left corner.
 
 ## Importing asset classes
 
-To start importing asset classes, click *Import/Export Asset Classes* in the top-right corner. You can then choose between the following options:.
+To start importing asset classes, click *Import/Export Asset Classes* in the upper-right corner. You can then choose between the following options:.
 
 - **Import Netbox Asset Classes**: Allows you to import assets from Netbox using the following GitHub repositories:
 
@@ -85,7 +85,7 @@ If you have created an asset class using a device type with a [hierarchy level](
 
    This will open the *Asset class details* pane.
 
-1. Click the *Cards*, *Modules*, *Fans*, or *Power Supplies* button in the top-left corner of the pane, depending on the type of slots you want to define.
+1. Click the *Cards*, *Modules*, *Fans*, or *Power Supplies* button in the upper-left corner of the pane, depending on the type of slots you want to define.
 
    For example, if you click *Cards*, this will open the following pane:
 
@@ -103,7 +103,7 @@ Assets created based on this asset class will by default have the same number of
 
    This will open the *Asset class details* pane.
 
-1. Click the *Ports* button in the top-left corner of the pane.
+1. Click the *Ports* button in the upper-left corner of the pane.
 
    This will open a pane with the ports details.
 

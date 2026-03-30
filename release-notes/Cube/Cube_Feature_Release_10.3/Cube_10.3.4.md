@@ -124,7 +124,7 @@ However, when, in that context menu, you then selected *Protocols & Templates > 
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
-When, in DataMiner Cube, you clicked the user icon in the top-right corner, the full user name would incorrectly no longer be displayed at the top of the user menu.
+When, in DataMiner Cube, you clicked the user icon in the upper-right corner, the full user name would incorrectly no longer be displayed at the top of the user menu.
 
 #### DataMiner Cube: Problem when receiving a notification from SLAnalytics while in alarm storm mode [ID 35596]
 

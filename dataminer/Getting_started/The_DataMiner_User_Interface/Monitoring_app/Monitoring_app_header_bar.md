@@ -11,7 +11,7 @@ The Monitoring app header bar contains the following items, from left to right:
 
 ![Monitoring app header bar](~/dataminer/images/Monitoring_app_Header_Bar.png)<br>*Monitoring app header bar in DataMiner 10.4.4*
 
-- Apps button: The button in the top-left corner provides quick access to other DataMiner web apps.
+- Apps button: The button in the upper-left corner provides quick access to other DataMiner web apps.
 
 - *Monitoring* button: Click this button to return to the main page of the app at any time.
 
@@ -40,7 +40,7 @@ The Monitoring app header bar contains the following items, from left to right:
 
   - The connection has been re-established: A green banner with the message `Connection recovered` is displayed.
 
-- User button: A button with the initials or picture of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
+- User button: A button with the initials or picture of the current user is displayed in the upper-right corner. Click this button to open a menu that provides access to the following options:
 
   - *(Monitoring) settings*: Allows you to configure the default page that is displayed when you open an element or a view card.
 

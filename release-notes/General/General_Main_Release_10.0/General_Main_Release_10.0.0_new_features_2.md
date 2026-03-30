@@ -213,7 +213,7 @@ If, for example, you set this setting to "900", all (direct) view tables opened 
 
 > [!NOTE]
 >
-> - If, in DataMiner Cube, you hover over the "last updated on" box in the top-right corner of a (direct) view table, the polling interval will be shown in a tooltip.
+> - If, in DataMiner Cube, you hover over the "last updated on" box in the upper-right corner of a (direct) view table, the polling interval will be shown in a tooltip.
 > - A number of enhancements have been made to the automatic (direct) view table polling mechanism. It will now, for example, also apply to direct view tables and view tables displayed in CPE KPI windows and in Visual Overview.
 
 #### DataMiner Cube - Data display: Table columns can now be shown or hidden using the table header’s right-click menu \[ID 20466\]
@@ -485,7 +485,7 @@ Similar to the one on Visual Overview pages, from now on, there is also a full-s
 
 #### Alarm Console: 'Merge alarm trees...' option \[ID 23200\]
 
-In the list of Alarm Console settings, which you can access by clicking the hamburger button in the top-left corner of the console, you can now find the new *Merge alarm trees...* option.
+In the list of Alarm Console settings, which you can access by clicking the hamburger button in the upper-left corner of the console, you can now find the new *Merge alarm trees...* option.
 
 If you click this option, you can choose to merge all alarm trees for the same element/parameter combination (active tree and cleared trees) into one. If you choose to do so, you can also indicate that you only want to merge trees of which the time difference is less than X seconds.
 
@@ -511,7 +511,7 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
     > [!NOTE]
     > Hidden elements are no longer included in the search results.
 
-- Cube settings, card layout settings, updates, and other options that were previously available via various menus of the header bar are now available in one single menu, which can be accessed via the user icon in the top-right corner.
+- Cube settings, card layout settings, updates, and other options that were previously available via various menus of the header bar are now available in one single menu, which can be accessed via the user icon in the upper-right corner.
 
 - If an alarm storm occurs, this is no longer displayed in the header bar. Instead, a button is now displayed at the bottom of the Alarm Console. A tooltip on the button provides more information.
 

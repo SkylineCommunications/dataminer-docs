@@ -68,6 +68,18 @@ A number of security enhancements have been made.
 
 From now on, the *SLWatchDog2.txt* log file will contain more detailed logging regarding run-time errors.
 
+#### SLNet will now take into account the log level before sending a log entry to SLLog [ID 44910]
+
+<!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, SLNet would incorrectly send all log entries directly to SLLog, including entries of which the log level dictated that they should not be added to a log file.
+
+From now on, SLNet will only send a log entry to SLLog if the log level dictates that the entry should be logged. As a result, overall performance will increase when adding entries to log files.
+
+> [!IMPORTANT]
+> This change was reverted in Main Release 10.5.0 CU12, Main Release 10.6.0, and Feature Release 10.6.3 CU1 as it caused SLNet to leak handles whenever a user authenticated using SAML and a new SLHelper process was started. See [SLNet will no longer take into account the log level before sending a log entry to SLLog [ID 44868]](xref:General_Feature_Release_10.6.3_CU1#slnet-will-no-longer-take-into-account-the-log-level-before-sending-a-log-entry-to-sllog-id-44868).
+> The change has now been reintroduced.
+
 #### 'Functions' and 'Helper' folders will no longer be checked when protocols are being loaded [ID 44946]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
@@ -101,7 +113,21 @@ A correlation rule will be blocked when it was triggered due to a correlated ala
 > [!NOTE]
 > ​This feature only works when the correlation rule and all alarms in question reside on the same DataMiner Agent.
 
+#### Custom SSH settings can now be configured per SSH connection [ID 45084]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when custom SSH settings (e.g., the key exchange algorithms) were configured in a specific connector, they would be applied to all elements running in the same SLPort process as the element that was using the protocol in which they had been configured.
+
+From now on, it will be possible to configure custom SSH settings per SSH connection.
+
 ### Fixes
+
+#### Problem when importing a dmimport package containing an element that generates DVE elements running a production version of the protocol with alarm templates configured on the DVEs [ID 44398]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When you imported a dmimport package containing an element that generates DVE elements running a production version of the protocol with alarm templates configured on the DVEs, up to now, the alarm templates on the DVE elements would incorrectly not be available because they were imported on the reference version instead of the production version.
 
 #### One protocol thread would incorrectly be able to add new rows to a table while another protocol thread was clearing that table [ID 44764] [ID 44833]
 
@@ -188,6 +214,12 @@ When a burst of traps was received for a parameter that had the `mapAlarm` attri
 
 In some cases, uninitialized memory in SLElement could cause memory corruption.
 
+#### Names of DVE elements created with the noelementprefix option would be empty [ID 45014]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when a DVE manager generated DVE elements with the `noelementprefix` option, in some cases, the name of these elements would incorrectly be empty.
+
 #### SLSNMPAgent would not properly unregister itself with SLWatchDog during a DataMiner shutdown [ID 45023]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
@@ -195,6 +227,14 @@ In some cases, uninitialized memory in SLElement could cause memory corruption.
 Up to now, when DataMiner was shutting down, SLSNMPAgent would not properly unregister itself with SLWatchDog. This lead to a false alarm as SLWatchDog incorrectly thought that the process had crashed.
 
 From now on, when SNMPAgent shuts down, it will unregister itself with SLWatchDog.
+
+#### GetProtocolInfoResponseMessage.FindParameter method would not be thread-safe [ID 45035]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, the `GetProtocolInfoResponseMessage.FindParameter` method would not be thread-safe. Using this method in different threads at the same time could lead to simultaneous access and modification of the underlying parameter cache, causing the following exception to be thrown:
+
+`Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct.`
 
 #### Nats-server would incorrectly not be installed alongside BrokerGateway when no DataMiner software had been installed on the system [ID 45049]
 
@@ -215,3 +255,9 @@ In some rare cases, the `/api/versions` endpoint exposed by DataMiner APIGateway
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When, on swarming-enabled systems, the StorageModule DxM failed to load elements from the database during DataMiner startup, up to now, the error state would incorrectly not be propagated to SLDataMiner, causing the DataMiner Agent to start up without loaded elements.
+
+#### Subsequent element updates could fail after the casing of the element name had been changed [ID 45119]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When, on a system on which Swarming was not enabled, you changed the casing of an element name and then restarted the element, in some cases, the next time you updated that element, the update would fail.

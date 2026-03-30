@@ -87,7 +87,7 @@ In this step, you will **give negative feedback to unwanted level shift anomalie
 
    ![Bit rate with drop and transition from stable signal to less stable signal](~/dataminer/images/Audio_Bit_Rate_CBR_VBR_double_anomaly.png)
 
-1. Click the light bulb icon in the top-right corner of the Alarm Console.
+1. Click the light bulb icon in the upper-right corner of the Alarm Console.
 
    This icon lights up in blue to indicate that DataMiner Analytics found something interesting. For more detailed info, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
 

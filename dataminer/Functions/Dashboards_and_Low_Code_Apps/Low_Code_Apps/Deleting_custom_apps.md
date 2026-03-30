@@ -19,9 +19,9 @@ From **within an application**:
 
 - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40077-->:
 
-  1. Click the pencil icon in the top-right corner.
+  1. Click the pencil icon in the upper-right corner.
 
-  1. Click the ellipsis button ("...") in the top-right corner and select *Delete app*.
+  1. Click the ellipsis button ("...") in the upper-right corner and select *Delete app*.
 
     > [!NOTE]
     > To delete the current draft version of the app instead, select *Discard draft*.
@@ -30,9 +30,9 @@ From **within an application**:
 
 - From DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 37878-->:
 
-  1. Click the user icon in the top-right corner and select *Edit*.
+  1. Click the user icon in the upper-right corner and select *Edit*.
 
-  1. Click the user icon in the top-right corner and select *Delete app*.
+  1. Click the user icon in the upper-right corner and select *Delete app*.
 
   1. In the pop-up window, click *Delete*.
 
@@ -41,7 +41,7 @@ From **within an application**:
 
 - Prior to DataMiner 10.3.0 [CU11]/10.4.2:
 
-  1. Click the user icon in the top-right corner and select *Edit*.
+  1. Click the user icon in the upper-right corner and select *Edit*.
 
   1. Click the garbage can icon next to the user icon.
 

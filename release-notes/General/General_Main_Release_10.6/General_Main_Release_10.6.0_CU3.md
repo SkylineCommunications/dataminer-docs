@@ -1,0 +1,70 @@
+---
+uid: General_Main_Release_10.6.0_CU3
+---
+
+# General Main Release 10.6.0 CU3 - Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
+> [!TIP]
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube 10.6.0 CU3](xref:Cube_Main_Release_10.6.0_CU3).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.6.0 CU3](xref:Web_apps_Main_Release_10.6.0_CU3).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
+## Prerequisites
+
+Before you upgrade to this DataMiner version:
+
+- Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+
+  The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+
+  - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+  - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+- Make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution.
+
+  For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+
+  See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Main_Release_10.6.0_changes#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43526-id-43856-id-43861-id-44035-id-44050-id-44062)
+
+## Changes
+
+### Breaking changes
+
+#### Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]
+
+<!-- MR 10.6.0 [CU3] - FR 10.6.3 -->
+
+Up to now, one SLScripting process was used by default. From now on, by default, there will be as many SLScripting processes as SLProtocol processes.
+
+Note that is possible to configure the number of simultaneously running SLScripting processes. See [Setting the number of simultaneously running SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes).
+
+> [!IMPORTANT]
+> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
+
+### Enhancements
+
+#### Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]
+
+<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.6.0 [CU3] - FR 10.6.3 together with 44420 -->
+
+Up to now, when an SLScripting process disappeared, elements relying on that process could become unstable, requiring manual intervention to restore functionality.
+
+From now on, when an SLScripting process disappears, a new process instance will be started automatically, and any elements that depended on the process that disappeared will be restarted to maintain consistency across SLProtocol, SLScripting, and other related components. This will ensure that lost SLScripting data is properly reinitialized and remains in sync with other processes.
+
+When an SLScripting process disappears, the following notice alarm will be generated:
+
+`Process disappearance of SLScripting.exe with PID <processId>; <x> elements affected by the disappearance have been restarted.`
+
+Also, the *SLElementsInProtocol.txt* log file has been updated to track restart reasons more accurately.
+
+- The restart reason column will now indicate either "SLScriptingCrashRestart" or "SLProtocolCrashRestart" (if everything is OK, *NormalStart* will be shown instead).
+- A new counter will now indicate the number of times the element was started due to a SLScripting process disappearance.
+
+If SLProtocol requests an SLScripting process that is no longer valid, the system will now detect this, and trigger the same element restart flow.
+
+> [!NOTE]
+> There will be a one-minute delay between the disappearance of an SLScripting process and the creation of a new SLScripting process and the subsequent element restarts. However, when one of the elements that was hosted in the SLScripting process that disappeared tries to trigger a QAction within that one-minute delay, the new SLScripting process will be created when that QAction is triggered.

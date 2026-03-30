@@ -222,7 +222,7 @@ uid: glossary_a_to_l
 
 | Term | Description |
 |------|-------------|
-| Hamburger button | Button consisting of three horizontal lines, which opens a menu. Used for example in the top-right corner of a card in DataMiner Cube. |
+| Hamburger button | Button consisting of three horizontal lines, which opens a menu. Used for example in the upper-right corner of a card in DataMiner Cube. |
 | HDR | High Dynamic Range imaging. Technique used in imaging and video to display a greater dynamic range of luminosity than with standard techniques. |
 | Heatmap | Graphical representation of data with values represented as colors. |
 | HFC | Hybrid Fiber-Coaxial. Network combining optical fiber and coaxial cable. |

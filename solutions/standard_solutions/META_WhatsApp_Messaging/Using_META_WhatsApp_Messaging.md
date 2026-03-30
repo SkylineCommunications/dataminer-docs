@@ -19,7 +19,7 @@ uid: Using_META_WhatsApp_Messaging
 
    1. Click *Add Contact*.
 
-   1. After adding all necessary contacts, click the *X* button in the top-right corner.
+   1. After adding all necessary contacts, click the *X* button in the upper-right corner.
 
 1. Create a functional [correlation rule](xref:Adding_a_new_Correlation_rule) to customize when notifications should be sent to WhatsApp. The alarm filter allows you to limit the number of alarms that will trigger the correlation rule, such as only sending notifications for critical alarms on your DataMiner Agent.
 

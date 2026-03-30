@@ -35,7 +35,7 @@ To configure a trend template:
 
    - To view general parameters as well, click the button next to the filter box and select *All parameters (protocol + general)*.
 
-   - Use the **filter box** in the top-right corner to quickly find a parameter.
+   - Use the **filter box** in the upper-right corner to quickly find a parameter.
 
    - For **dynamic table parameters**, select a parameter and use one of the following options if necessary:
 
@@ -70,7 +70,7 @@ There are several ways you can access the parameter trending editor:
 
 - In the Alarm Console, right-click an alarm for that particular parameter, and select *Change > Trending*.
 
-- On a parameter card, click the hamburger button in the top-left corner, and select *Change trending*.
+- On a parameter card, click the hamburger button in the upper-left corner, and select *Change trending*.
 
 - On a parameter card, go to the templates tab and select *TREND*.
 

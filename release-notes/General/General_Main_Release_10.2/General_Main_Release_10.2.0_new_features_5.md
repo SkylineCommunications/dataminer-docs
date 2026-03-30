@@ -266,7 +266,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 1. In the Dashboards app, go to the list of dashboards on the left, and select the dashboard you want to share.
 
-1. Click the “...” button in the top-right corner of the dashboard, and select *Start sharing*.
+1. Click the “...” button in the upper-right corner of the dashboard, and select *Start sharing*.
 
 1. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
 

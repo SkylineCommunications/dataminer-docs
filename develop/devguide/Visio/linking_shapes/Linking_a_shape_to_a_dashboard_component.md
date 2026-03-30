@@ -8,7 +8,7 @@ To link a shape to a component from the Dashboards app:
 
 1. In the Dashboards app, open the dashboard that contains the component you want to embed.
 
-1. Click the *Start editing* button in the top-right corner.
+1. Click the *Start editing* button in the upper-right corner.
 
 1. Right-click the component and select *Copy embed URL*.
 

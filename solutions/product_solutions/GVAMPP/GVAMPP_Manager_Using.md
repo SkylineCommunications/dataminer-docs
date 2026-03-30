@@ -8,7 +8,7 @@ The Grass Valley Manager application allows users to visualize and control multi
 
 ## App overview
 
-You can select a manager using the dropdown box in the top-right corner of the *Statistics* page.
+You can select a manager using the dropdown box in the upper-right corner of the *Statistics* page.
 
 ![Manager Selection](~/dataminer/images/GVAMPP_Manager_Selection.png)
 

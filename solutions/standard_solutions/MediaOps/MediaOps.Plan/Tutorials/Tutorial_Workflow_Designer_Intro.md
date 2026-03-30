@@ -30,7 +30,7 @@ Expected duration: 15 minutes
 
 1. Navigate to the **Workflow Designer** app.
 
-1. In the top-left corner, click **+ New workflow**.
+1. In the upper-left corner, click **+ New workflow**.
 
    ![New workflow button](~/solutions/images/Workflow_Designer_New_Workflow.png)
 

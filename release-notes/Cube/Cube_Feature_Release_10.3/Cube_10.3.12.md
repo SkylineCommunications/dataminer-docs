@@ -207,4 +207,4 @@ When you opened DataMiner Cube or when you opened a new alarm tab, an error coul
 <!-- MR 10.4.0 - FR 10.3.12 -->
 <!-- Not added to MR 10.4.0 -->
 
-When, in the top-right corner of the Alarm Console, you clicked the light bulb icon and then clicked the *X anomalies were found in your trend data* notification to open an alarm tab listing all anomaly suggestions/alarms, this tab would incorrectly not include any outlier alarms.
+When, in the upper-right corner of the Alarm Console, you clicked the light bulb icon and then clicked the *X anomalies were found in your trend data* notification to open an alarm tab listing all anomaly suggestions/alarms, this tab would incorrectly not include any outlier alarms.

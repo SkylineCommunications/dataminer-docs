@@ -34,7 +34,7 @@ You can start the Cube session in different ways:
   ![Remote Cube in the home app](~/dataminer/images/CcaHomeApp.png)
 
   > [!NOTE]
-  > If your DMS is not listed, check if the correct organization is selected in the top-right corner.
+  > If your DMS is not listed, check if the correct organization is selected in the upper-right corner.
 
 - **With the button on admin.dataminer.services**: Open a browser, navigate to [admin.dataminer.services](https://admin.dataminer.services), and go to the overview of your system. Here you will find the button *Open in desktop app*. This works in the same way as the button on dataminer.services.
 

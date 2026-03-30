@@ -117,7 +117,7 @@ To do so, add a shape data field of type TextStyle, and set its value to “Text
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
-When, in DataMiner Cube, you right-click a visual overview and select “Edit in Visio”, an advanced edit panel will appear. When no shape is selected, you can now click an ellipsis button (“...”) in the top-right corner of the panel. This will open a menu with the following options.
+When, in DataMiner Cube, you right-click a visual overview and select “Edit in Visio”, an advanced edit panel will appear. When no shape is selected, you can now click an ellipsis button (“...”) in the upper-right corner of the panel. This will open a menu with the following options.
 
 - Add theming: If you click this option, the following theme options will be added to the page-level “Options” data field:
 
@@ -454,7 +454,7 @@ Also, the Apps list now contains links to the Catalog, the Admin app, and custom
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-In the top-right corner of a trend graph, next to the full-screen button, a light bulb icon will now appear when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon will allow you to add one or more of those related parameters to the trend graph you are viewing.
+In the upper-right corner of a trend graph, next to the full-screen button, a light bulb icon will now appear when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon will allow you to add one or more of those related parameters to the trend graph you are viewing.
 
 Relationships between parameters are found by studying the changes in the behavior of a trend (also known as change points). These relationships are then stored in a model managed by a DataMiner Extension Module named *ModelHost*. When you open a trend graph, DataMiner Cube will check the parameter relationship model, retrieve from it all parameters related to those shown in the trend graph, and list the ten most important ones when you click the light bulb icon.
 

@@ -10,9 +10,9 @@ This will open a window consisting of the following sections:
 
 - At the top, a menu bar is displayed, containing only the *File* menu. See [File menu](xref:File_menu).
 
-- The top-left corner displays the *General configuration*. See [General configuration](xref:General_config).
+- The upper-left corner displays the *General configuration*. See [General configuration](xref:General_config).
 
-- The top-right corner contains the configuration of how much time should be between each sent trap. See [Packet interval schedule](xref:Packet_interval_schedule).
+- The upper-right corner contains the configuration of how much time should be between each sent trap. See [Packet interval schedule](xref:Packet_interval_schedule).
 
 - On the left, an overview of all available traps is displayed. See [Loaded packets](xref:Loaded_packets).
 

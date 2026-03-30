@@ -162,7 +162,7 @@ If you want to share your current Cube session with another user, you can now co
 
 To copy the link to the current Cube session, do the following:
 
-1. Open the user menu by clicking the user icon in the top-right corner of the screen.
+1. Open the user menu by clicking the user icon in the upper-right corner of the screen.
 1. Click the *Copy* button next to the name of the DataMiner System.
 
 When you hover over this *Copy* button, a tooltip will appear, saying that clicking this button will copy the link to the current session to the Windows clipboard.

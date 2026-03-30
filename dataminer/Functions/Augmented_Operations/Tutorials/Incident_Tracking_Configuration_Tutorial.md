@@ -116,7 +116,7 @@ By default, a new alarm can only be added to an existing alarm group if it occur
 
    1. Go to the *Forward Path* > *Level Detector* page of the element.
 
-   1. Click the *Toggle Alarm* button in the top-right corner.
+   1. Click the *Toggle Alarm* button in the upper-right corner.
 
       ![Set an amplifier in alarm](~/dataminer/images/setAlarm.png)
 

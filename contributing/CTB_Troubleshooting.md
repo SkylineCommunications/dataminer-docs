@@ -32,7 +32,7 @@ uid: CTB_Troubleshooting
 
   1. If multiple merge conflicts exist in the file, scroll down to the next set of conflict markers, and repeat the previous steps to resolve your merge conflict.
 
-  1. Click *Mark as resolved* in the top-right corner of the header bar.
+  1. Click *Mark as resolved* in the upper-right corner of the header bar.
 
   1. If multiple files have conflicts, select the next file you want to edit and repeat the previous steps until all merge conflicts are resolved.
 
@@ -91,7 +91,7 @@ You encounter one of the following situations:
 
 1. If multiple merge conflicts exist in the file, scroll down to the next set of conflict markers, and repeat the two previous steps to resolve your merge conflict.
 
-1. Click *File* in the top-left corner of the Visual Studio Code header bar, and select *Save*.
+1. Click *File* in the upper-left corner of the Visual Studio Code header bar, and select *Save*.
 
 1. Go to GitHub Desktop again and check if any conflicts still need to be resolved.
 
@@ -127,7 +127,7 @@ You encounter one of the following situations:
 
 1. Select *Confirm merge*.
 
-1. In the top-left corner, click *dataminer-docs*.
+1. In the upper-left corner, click *dataminer-docs*.
 
    ![dataminer-docs](~/images/DataMiner-docs.png)
 
@@ -184,7 +184,7 @@ fatal: empty ident name (for <>) not allowed
 
 **Resolution**:
 
-1. In GitHub Desktop, select *Repository* in the top-left corner and click *Repository settings*.
+1. In GitHub Desktop, select *Repository* in the upper-left corner and click *Repository settings*.
 
 1. In the *Git config* tab, select *Use my global Git config* and click *Save*.
 
@@ -264,13 +264,13 @@ No .NET API detected for .
 
 **Symptom**: When you create a test build, it does not include your recent changes.
 
-**Resolution**: Make sure your changes are all saved. If the *Explorer* icon in the top-left corner shows a blue circle with a number in it, there are unsaved changes in a number of files corresponding with that number. The files that contain unsaved changes are marked with a white dot in the file header.
+**Resolution**: Make sure your changes are all saved. If the *Explorer* icon in the upper-left corner shows a blue circle with a number in it, there are unsaved changes in a number of files corresponding with that number. The files that contain unsaved changes are marked with a white dot in the file header.
 
 ![Unsaved changes](~/images/Unsaved_Changes.png)
 
 ### The template does not load correctly in the test build
 
-**Symptom**: When you view your test build, it is not displayed correctly. Among others, no search box is available in the top-right corner.
+**Symptom**: When you view your test build, it is not displayed correctly. Among others, no search box is available in the upper-right corner.
 
 **Resolution**: Install [the latest version of DocFX](xref:CTB_Local_Test_Build#installing-and-configuring-docfx).
 

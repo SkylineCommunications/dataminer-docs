@@ -252,7 +252,7 @@ If you right-click a manually created incident, you will also be able to select 
 
 From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarms are generated instead of suggestion events when anomalies are detected for specific parameters. From now on, you can also enable this for flatline changes.
 
-1. Click the cogwheel button in the top-right corner of the alarm template editor.
+1. Click the cogwheel button in the upper-right corner of the alarm template editor.
 1. Select the option *Advanced configuration of anomaly detection*. Four extra columns will be displayed in the template editor.
 1. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
 
@@ -462,7 +462,7 @@ Up to now, alarms that did not contain any focus information were not allowed to
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
-In a trend graph, up to now, a dropdown list in the top-right corner allowed you to select one of the available trend prediction types or “Auto”. This dropdown list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or “Auto” from the context menu.
+In a trend graph, up to now, a dropdown list in the upper-right corner allowed you to select one of the available trend prediction types or “Auto”. This dropdown list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or “Auto” from the context menu.
 
 #### Browser callbacks can now open EPM objects via SystemName or SystemType [ID 33963]
 
@@ -736,7 +736,7 @@ Changes that might result in anomaly alarms of a certain type being cleared:
 
 In dialog boxes of an interactive automation script, up to now, you were able to abort the script by clicking the *Abort* button. From now on, this button will no longer be available. Instead, you can now do the following to abort a script when a dialog box has the focus:
 
-- close the dialog box by clicking the *X* in the top-right corner, or
+- close the dialog box by clicking the *X* in the upper-right corner, or
 
 - press ALT+F4.
 
@@ -893,7 +893,7 @@ The validation will now ensure that no empty names or property names that are in
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
-When multiple error messages boxes were being displayed, clicking the *Close* button on any of those boxes would incorrectly always close the last box that had been opened. All other boxes would stay open and could only be closed by clicking the X in the top-right corner.
+When multiple error messages boxes were being displayed, clicking the *Close* button on any of those boxes would incorrectly always close the last box that had been opened. All other boxes would stay open and could only be closed by clicking the X in the upper-right corner.
 
 #### Alarm Console: Problem when clearing alarm groups [ID 34196]
 
@@ -987,16 +987,16 @@ From now on, the collector pages will be loaded even when the EPM environment do
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-In some cases, the light bulb icon in the top-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
+In some cases, the light bulb icon in the upper-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
 
 #### Trending - Parameter relationships: Display keys of suggested parameters would not be correct [ID 35548]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, the display keys of those listed parameters would not be correct.
+When you open a trend graph, a light bulb icon will appear in the upper-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, the display keys of those listed parameters would not be correct.
 
 #### Trending - Parameter relationships: The same parameter could be added multiple times to the graph when you clicked it repeatedly [ID 35561]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked one of those suggested parameter multiple times, it would incorrectly be added multiple times to the graph.
+When you open a trend graph, a light bulb icon will appear in the upper-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked one of those suggested parameter multiple times, it would incorrectly be added multiple times to the graph.

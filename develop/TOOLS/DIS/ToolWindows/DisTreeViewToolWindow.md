@@ -32,7 +32,7 @@ When working in the XML editor or the C# editor, you can do one of the following
 
 - Press a key combination (default: Ctrl+1), or
 
-- Click the following button, which is situated in the top-left corner of the DIS Tree window:
+- Click the following button, which is situated in the upper-left corner of the DIS Tree window:
 
   ![SyncArrow](~/develop/images/SyncArrow_16x.jpg)
 

@@ -172,7 +172,7 @@ In this step, you will configure different data pages of your newly created SLA.
    > [!IMPORTANT]
    > If you do not see the options to change these parameters, you may not have the sufficient parameter access level. In this case, increase your access level:
    >
-   > 1. Click the user icon in the top-right corner of the Cube header bar.
+   > 1. Click the user icon in the upper-right corner of the Cube header bar.
    > 1. Select *System Center* and navigate to *Users/Groups*.
    > 1. Go to the *Groups* tab and select the group in question.
    > 1. Enter "1" in the *Group level* field on the *Details* tab.

@@ -15,4 +15,4 @@ To do so:
 
 1. On the right, next to *FOLDER*, choose the folder in the dropdown list, or choose *\<Create New>* and type the new folder name in the field below.
 
-1. Click the Save icon in the top-right corner.
+1. Click the Save icon in the upper-right corner.

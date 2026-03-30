@@ -22,7 +22,7 @@ To configure the Augmented Operations alarm settings for specific parameters<!--
    > [!NOTE]
    > The configured anomaly alarm settings only take effect for trended parameters<!--RN 37670-->.
 
-   - To choose one of the preset options, click the *Select preset* selection box in the top-left corner:
+   - To choose one of the preset options, click the *Select preset* selection box in the upper-left corner:
 
      - **All disabled**: No anomaly alarms are generated.
 
@@ -111,7 +111,7 @@ To configure anomaly detection alarms for specific parameters<!--RN 37171 + 3714
    > [!NOTE]
    > The configured anomaly alarm settings only take effect for trended parameters<!--RN 37670-->.
 
-   - To choose one of the preset options, click the *Select preset* selection box in the top-left corner:
+   - To choose one of the preset options, click the *Select preset* selection box in the upper-left corner:
 
      - **All disabled**: No anomaly alarms are generated.
 
@@ -143,7 +143,7 @@ To configure anomaly detection alarms for specific parameters<!--RN 37171 + 3714
 
 To enable or disable different types of anomaly alarm monitoring:
 
-1. Click the cogwheel button in the top-right corner of the alarm template editor.
+1. Click the cogwheel button in the upper-right corner of the alarm template editor.
 
 1. Select the option *Advanced configuration of anomaly detection*. Several extra columns will be displayed in the template editor.
 
