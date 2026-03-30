@@ -12,7 +12,7 @@ Running GQI as an extension module has several advantages:
 - **Load balancing**: With the DxM, GQI operations can distribute system load more effectively across multiple DataMiner Agents within a DataMiner System (DMS).
 - **Resource visibility**: Running each extension in a separate process provides greater insight into its resource consumption, allowing you to monitor every extension individually.
 - **Improved dependency resolving**: Using the DxM simplifies and optimizes the resolution of DLL dependencies, preventing conflicts.
-- **Performance enhancements**: The GQI DxM leverages the latest advancements in .NET 8 for improved speed and efficiency, uses proto-first communication, prevents SLNet throttling, etc.
+- **Performance enhancements**: The GQI DxM leverages the latest advancements in .NET 10 for improved speed and efficiency, uses proto-first communication, prevents SLNet throttling, etc.
 
 ## Installation
 
