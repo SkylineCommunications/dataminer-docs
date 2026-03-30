@@ -5,7 +5,7 @@ uid: Class_Library_packages
 # Class Library packages
 
 > [!IMPORTANT]
-> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [About the DataMinerSystem library](xref:ClassLibraryIntroduction).
+> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or automation script that makes use of the official class library, replace it with the corresponding NuGet package(s).
 >
 > If you have a connector or automation script that makes use of a community package, we recommend turning this into a NuGet package. For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
 >
@@ -23,3 +23,11 @@ uid: Class_Library_packages
 > - [Skyline.DataMiner.Utils.Interfaces](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Interfaces) defines types for calculation rates of interfaces.
 > - [Skyline.DataMiner.Utils.SNMP.Traps.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP.Traps.Protocol) provides functionality to easily parse traps in a connector.
 > - [Skyline.DataMiner.Utils.Table.ContextMenu](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Table.ContextMenu) provides functionality to easily create a custom context menu.
+
+## See also
+ - [About the DataMinerSystem library](xref:ClassLibraryIntroduction)
+ - [About the InterApp framework](xref:InterAppCalls_Introduction)
+ - [Matrix development using DIS](xref:UIComponentsMatrixDis)
+ - [Rate calculations in SNMP connectors](xref:ConnectionsSnmpBitRateCalculations#rate-calculations-in-snmp-connectors)
+ - [Processing traps in a QAction](xref:ConnectionsSnmpTraps#processing-traps-in-a-qaction)
+ - [Custom table context menu](xref:UIComponentsCustomTableContextMenu)
