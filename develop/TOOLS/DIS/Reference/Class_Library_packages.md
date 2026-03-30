@@ -27,9 +27,10 @@ uid: Class_Library_packages
 For older DIS versions, to download the **Class Library Packages**, go to [Class Library Packages](https://community.dataminer.services/class-library-packages/) on DataMiner Dojo.
 
 ## See also
- - [About the DataMinerSystem library](xref:ClassLibraryIntroduction)
- - [About the InterApp framework](xref:InterAppCalls_Introduction)
- - [Matrix development using DIS](xref:UIComponentsMatrixDis)
- - [Rate calculations in SNMP connectors](xref:ConnectionsSnmpBitRateCalculations#rate-calculations-in-snmp-connectors)
- - [Processing traps in a QAction](xref:ConnectionsSnmpTraps#processing-traps-in-a-qaction)
- - [Custom table context menu](xref:UIComponentsCustomTableContextMenu)
+
+- [About the DataMinerSystem library](xref:ClassLibraryIntroduction)
+- [About the InterApp framework](xref:InterAppCalls_Introduction)
+- [Matrix development using DIS](xref:UIComponentsMatrixDis)
+- [Rate calculations in SNMP connectors](xref:ConnectionsSnmpBitRateCalculations#rate-calculations-in-snmp-connectors)
+- [Processing traps in a QAction](xref:ConnectionsSnmpTraps#processing-traps-in-a-qaction)
+- [Custom table context menu](xref:UIComponentsCustomTableContextMenu)
