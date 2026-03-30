@@ -6,7 +6,7 @@ uid: TCPIP_UDPIP_Connection
 
 For **TCP/IP** or **UDP/IP** connections, you can specify the following connection settings while creating or editing an element:
 
-- **Site**: The remote site. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and remote sites are configured. For more information, refer to [Site Manager](xref:SiteManagerOverview). Note that a serial element acting as a server is not supported on remote sites.
+- **Site**: The DataMiner Edge Node location. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and Edge Nodes are configured. For more information, refer to [Edge Manager](xref:EdgeManagerOverview). Note that a serial element acting as a server is not supported on Edge Nodes.
 
 - **IP address/host**: The polling IP or URL of the destination.
 

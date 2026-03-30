@@ -1294,14 +1294,14 @@ items:
         items:
         - name: Scheduler data storage
           topicUid: SchedulerDataStorage
-  - name: Site Manager
+  - name: Edge Manager
     items:
-    - name: About Site Manager
-      topicUid: SiteManagerOverview
+    - name: About Edge Manager
+      topicUid: EdgeManagerOverview
     - name: Getting started
-      topicUid: SiteManagerGettingStarted
+      topicUid: EdgeManagerGettingStarted
     - name: Troubleshooting
-      topicUid: SiteManagerTroubleshooting
+      topicUid: EdgeManagerTroubleshooting
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:

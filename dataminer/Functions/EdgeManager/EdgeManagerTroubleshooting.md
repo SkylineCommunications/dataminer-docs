@@ -1,22 +1,23 @@
 ---
-uid: SiteManagerTroubleshooting
+uid: EdgeManagerTroubleshooting
+keywords: Site Manager
 ---
 
-# Site Manager troubleshooting
+# Edge Manager troubleshooting
 
 ## FAQ
 
-### I have created an element that connects to a data source on a remote site but the element goes into error state
+### I have created an element that connects to a data source in a remote location but the element goes into error state
 
 This means that the tunnel could not be set up. This could be because of several reasons:
 
-- The provided IP address or hostname does not match that of an exposed data source on the specified site as specified during [on-premises setup](xref:SiteManagerGettingStarted#on-premises-setup).
-- When the data source was exposed during [on-premises setup](xref:SiteManagerGettingStarted#on-premises-setup), only one of the two required zrok commands were executed.
+- The provided IP address or hostname does not match that of an exposed data source in the specified location as specified during [Edge Node deployment](xref:EdgeManagerGettingStarted#edge-node-deployment).
+- When the data source was exposed during [Edge Node deployment](xref:EdgeManagerGettingStarted#edge-node-deployment), only one of the two required zrok commands were executed.
 - The SiteManager DxM is not running.
 - The zrok Agent service is not running.
 - The zrok controller is not running.
 
-### I have created an element that connects to a data source on a remote site but the element goes into timeout
+### I have created an element that connects to a data source in a remote location but the element goes into timeout
 
 As the element is not in error state, this means that the tunnel was set up but the communication is timing out.
 
@@ -30,11 +31,11 @@ If you are using a Powershell shell, execute the following command first: `$env:
 
 ## Logging
 
-### Site Manager DxM log file
+### SiteManager DxM log file
 
-The Site Manager log file logs all tunnel creation and teardown activity. If an element is in error state, the log file can provide more information about the root cause.
+The SiteManager DxM log file logs all tunnel creation and teardown activity. If an element is in error state, the log file can provide more information about the root cause.
 
-To open the Site Manager log file in Cube, navigate to *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*.
+To open the log file in Cube, navigate to *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*.
 
 This log file is also included in a Log Collector package.
 
