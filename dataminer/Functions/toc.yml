@@ -413,12 +413,12 @@ items:
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
+          - name: Overview of the Low-Code Apps UI
+            topicUid: LCA_UI
           - name: Creating apps
             topicUid: Creating_custom_apps
           - name: Editing an app
             topicUid: Editing_custom_apps
-          - name: Changing user settings
-            topicUid: LCA_User_Settings
           - name: Configuring apps
             items:
               - name: Configuring the app layout
