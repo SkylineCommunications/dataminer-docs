@@ -24,7 +24,7 @@ The header bar contains the following items, from left to right:
 
 - Apps button: The button in the upper-left corner provides quick access to other DataMiner web apps.
 
-- App name: The name of the app. Clicking this name will remove any arguments from the app URL
+- App name: The name of the app. Clicking this name will remove any arguments from the app URL.
 
 - Pencil icon: Click this button to access the app's edit mode. See [Editing an app](xref:Editing_custom_apps).
 
@@ -60,4 +60,22 @@ The sidebar contains a button for each app page, identified by the custom icon c
 
 At the top of the sidebar, a hamburger button allows you to expand or collapse the sidebar. When expanded, the names of the app pages are shown next to the icons.
 
+![A hamburger button allows you to expand or collapse the Low-Code Apps sidebar](~/dataminer/images/LCA_Sidebar.gif)<br>*Low-Code Apps sidebar in DataMiner 10.6.4*
+
 ## The Low-Code Apps details pane
+
+The details pane is the **main content area** of a low-code app. It displays all components configured for the currently selected page.
+
+Depending on how the app has been set up, this area can contain a wide range of components, such as tables, charts, forms, graphs, and images. As a result, the exact appearance and functionality of the details pane can differ from one app to another.
+
+If a [page header bar has been enabled](xref:LowCodeApps_header_config), it is shown at the top of the details pane, directly below the main Low-Code Apps header bar. This page header bar can contain buttons that provide quick access to page-specific actions, such as running an automation script, opening a panel, or navigating to a hidden page. Some buttons may execute an action directly, while others may open a dropdown menu with additional actions.
+
+In the example below, the page header bar has been enabled.
+
+![An example of the Low-Code Apps details pane](~/dataminer/images/LCA_Details_Pane.png)<br>*Low-Code Apps details pane in DataMiner 10.6.4*
+
+> [!TIP]
+> See also:
+>
+> - [Configuring an app page](xref:LowCodeApps_page_config)
+> - [Configuring an app panel](xref:LowCodeApps_panel_config)
