@@ -25,11 +25,14 @@ Each line has to contain the following data, separated by colons (":")
 - IP address of the device
 - IP port of the device
 - Local DataMiner port (optional)
-- The word "true" or "false": this indicates whether debug or regular logging should be enabled, respectively. Enabling debug logging provides the following additional info compared to regular logging:
-    - Logs an entry when a trailer was detected in the received data
-    - Logs an entry when the length of the received data equals or exceeds the expected length
-    - Logs an entry when Fixed length received
-    - Logs an entry when data is being returned to SLProtocol (requires at least Debug logging level 1 to be configured)
+- The word "true" or "false": This indicates whether debug or regular logging should be enabled, respectively.
+
+  Enabling debug logging provides the following additional info compared to regular logging:
+
+  - Logs an entry when a trailer was detected in the received data.
+  - Logs an entry when the length of the received data equals or exceeds the expected length.
+  - Logs an entry when Fixed length received.
+  - Logs an entry when data is returned to SLProtocol (requires at least debug logging level 1 to be configured).
 
 Example:
 

@@ -284,24 +284,28 @@ A dedicated log file is used for the SSH connections: "SLSsh.txt". Standard logg
 - Write Exception
 - WriteLine Exception
 
-Logging can be disabled by creating an empty file with the name *SLSshDisableLog.txt* in the `C:\Skyline DataMiner\Logging\` directory.
+Changes to the log configuration (see below) are also logged in the *SLSsh.txt* log file:
 
-Extended logging can be activated by creating an empty file with the name *SLSSHExt.txt* in the `C:\Skyline DataMiner\Logging\` directory. Note that this file does not receive any logging itself, it only signals DataMiner that extended logging is enabled, which is put in the SSH log file *SLSsh.txt*.
+```bash
+2026-03-30 08:30:57 - -1 - Log = Enabled / Extended = Disabled
+```
+
+The SSH log thread only checks every minute whether a log configuration has changed. Therefore, when, for example, [extended logging](#activating-extended-logging) has been enabled, it can take a minute before this is activated.
+
+The *SLSsh.txt* log file can grow up to **20 MB**. Once this size is reached, SLPort will remove the file, and it will get recreated as soon as another message is logged.
+
+### Disabling SSH logging
+
+You can disable logging by creating an empty file with the name *SLSshDisableLog.txt* in the `C:\Skyline DataMiner\Logging\` directory.
+
+### Activating extended logging
+
+You can activate extended logging by creating an empty file with the name *SLSSHExt.txt* in the `C:\Skyline DataMiner\Logging\` directory. Note that this file does not receive any logging itself, it only signals to DataMiner that extended logging is enabled, which is put in the SSH log file *SLSsh.txt*.
 
 When extended logging is enabled, DataMiner writes additional information regarding the beginning and end of reads/writes and what data is written/read.
 
 > [!CAUTION]
 > Extended logging uses a lot of memory, so do not keep this running if it is not needed.
-
-The SLSsh.txt log file can grow up to 20MB. Once this size is reached, SLPort will remove the file and it will get recreated as soon as another message is logged.
-
-The SSH log thread only checks every minute whether a log configuration has changed. Therefore, when e.g. extended logging has been enabled, it can take a minute before this is activated.
-
-Changes to the log configuration are also logged in the SLSsh.txt log file:
-
-```bash
-2026-03-30 08:30:57 - -1 - Log = Enabled / Extended = Disabled
-```
 
 ## SSH support in DataMiner
 
