@@ -24,6 +24,8 @@ uid: Class_Library_packages
 > - [Skyline.DataMiner.Utils.SNMP.Traps.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP.Traps.Protocol) provides functionality to easily parse traps in a connector.
 > - [Skyline.DataMiner.Utils.Table.ContextMenu](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Table.ContextMenu) provides functionality to easily create a custom context menu.
 
+For older DIS versions, to download the **Class Library Packages**, go to [Class Library Packages](https://community.dataminer.services/class-library-packages/) on DataMiner Dojo.
+
 ## See also
  - [About the DataMinerSystem library](xref:ClassLibraryIntroduction)
  - [About the InterApp framework](xref:InterAppCalls_Introduction)
