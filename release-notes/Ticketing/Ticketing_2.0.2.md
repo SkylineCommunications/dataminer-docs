@@ -24,10 +24,6 @@ uid: Ticketing_2.0.2
 
 When a ticket is created from a correlation rule, the script that takes care of the ticket creation will now include the affected resources and any assets linked to those affected resources.
 
-#### Next transition state shown based on happy path [ID 45117]
-
-The Ticket Information page will now always show the state transition buttons according to the happy path. The first purple button on the left will always show the next expected state of the happy path.
-
 #### Ticket fields removed from the "Generic Issue" default Ticket Type [ID 45120]
 
 The "Generic Issue" default ticket type now no longer contains any additional fields.
@@ -42,10 +38,16 @@ Various improvements have been implemented to the user interface of both the Tic
 
 #### Resolved tickets now also included under Open Tickets filter [ID 45140]
 
-When you apply the Open Tickets filter, resolved tickets will now also be displayed.
+When you apply the *Open Tickets* filter in the upper-right corner of the Tickets page, resolved tickets will now also be displayed.
 
 ## Fixes
 
-#### Alarms deleted when affected resources were added/deleted [ID 45132]
+#### Ticket information displayed incorrect happy path state [ID 45117]
 
-When affected resources were added or deleted, it could occur that alarms were deleted.
+Previously, when a ticket was in the *Resolved* state, the displayed happy path state was set to *In Progress* instead of *Closed*. This issue has been resolved.
+
+The Ticket Information page will now always show the state transition buttons according to the happy path. The first purple button on the left will always show the next expected state of the happy path.
+
+#### Ticket created using correlation rule did not include triggering alarm [ID 45132]
+
+When a ticket was created using a correlation rule triggered by an alarm, the alarm was not added to the ticket as expected.
