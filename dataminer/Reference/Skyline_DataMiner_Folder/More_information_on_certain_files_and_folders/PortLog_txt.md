@@ -23,12 +23,13 @@ In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements fo
 Each line has to contain the following data, separated by colons (":")
 
 - IP address of the device
-
 - IP port of the device
-
 - Local DataMiner port (optional)
-
-- The word "true"
+- The word "true" or "false": this indicates whether debug or regular logging should be enabled, respectively. Enabling debug logging provides the following additional info compared to regular logging:
+    - Logs an entry when a trailer was detected in the received data
+    - Logs an entry when the length of the received data equals or exceeds the expected length
+    - Logs an entry when Fixed length received
+    - Logs an entry when data is being returned to SLProtocol (requires at least Debug logging level 1 to be configured)
 
 Example:
 
@@ -41,3 +42,4 @@ Example:
 > - Although the local DataMiner port is optional, each line must contain three colons (":").
 > - Logging is started when the port in question is initialized, i.e., when the element is restarted or when the IP address or the IP port of the element is changed.
 > - The IP addresses provided in the PortLog.txt file must match **exactly** with those provided in the element editor. For example, using `localhost` and `127.0.0.1` in combination with each other will not work.
+> - If Debug logging level 1 (or higher) has been set on the SLPort log file, a log entry is generated when logging is either activated or deactivated. E.g.: `127.0.0.1 Log activated.`

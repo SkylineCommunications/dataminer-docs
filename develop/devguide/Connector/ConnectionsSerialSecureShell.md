@@ -263,7 +263,7 @@ In legacy DataMiner versions prior to 7.0.3 (RN 3859), DataMiner uses the same S
 
 ## SSH logging
 
-A dedicated log file is used for the SSH connections: "SLSSH.txt". Standard logging provides information about the following:
+A dedicated log file is used for the SSH connections: "SLSsh.txt". Standard logging provides information about the following:
 
 - Create Object
 - Open 1.2.3.4
@@ -284,10 +284,24 @@ A dedicated log file is used for the SSH connections: "SLSSH.txt". Standard logg
 - Write Exception
 - WriteLine Exception
 
-More logging can be obtained by creating a file with the name *SLSSHExt.txt*. This will activate extended logging and DataMiner will then write additional information regarding the beginning and end of reads/writes and what data is written/read to this log file. Note that this file does not receive any logging itself, but it signals that extended logging should be put into the default SSH log file (*SLSsh.txt*).
+Logging can be disabled by creating an empty file with the name *SLSshDisableLog.txt* in the `C:\Skyline DataMiner\Logging\` directory.
+
+Extended logging can be activated by creating an empty file with the name *SLSSHExt.txt* in the `C:\Skyline DataMiner\Logging\` directory. Note that this file does not receive any logging itself, it only signals DataMiner that extended logging is enabled, which is put in the SSH log file *SLSsh.txt*.
+
+When extended logging is enabled, DataMiner writes additional information regarding the beginning and end of reads/writes and what data is written/read.
 
 > [!CAUTION]
 > Extended logging uses a lot of memory, so do not keep this running if it is not needed.
+
+The SLSsh.txt log file can grow up to 20MB. Once this size is reached, SLPort will remove the file and it will get recreated as soon as another message is logged.
+
+The SSH log thread only checks every minute whether a log configuration has changed. Therefore, when e.g. extended logging has been enabled, it can take a minute before this is activated.
+
+Changes to the log configuration are also logged in the SLSsh.txt log file:
+
+```bash
+2026-03-30 08:30:57 - -1 - Log = Enabled / Extended = Disabled
+```
 
 ## SSH support in DataMiner
 
