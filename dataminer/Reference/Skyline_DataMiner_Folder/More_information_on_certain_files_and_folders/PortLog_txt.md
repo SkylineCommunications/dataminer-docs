@@ -22,17 +22,17 @@ In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements fo
 
 Each line has to contain the following data, separated by colons (":")
 
-- IP address of the device
-- IP port of the device
-- Local DataMiner port (optional)
+- The IP address of the device.
+- The IP port of the device.
+- The local DataMiner port (optional).
 - The word "true" or "false": This indicates whether debug or regular logging should be enabled, respectively.
 
   Enabling debug logging additionally logs the following events compared to regular logging:
 
-  - when a trailer was detected in the received data
-  - when the length of the received data equals or exceeds the expected length
-  - when the length of the received data equals or exceeds the response with a fixed length
-  - when data is returned to SLProtocol (requires at least debug logging level 1 to be configured)
+  - When a trailer was detected in the received data.
+  - When the length of the received data equals or exceeds the expected length.
+  - When the length of the received data equals or exceeds the response with a fixed length.
+  - When data is returned to SLProtocol (requires at least Debug logging level 1 to be configured).
 
 Example:
 
