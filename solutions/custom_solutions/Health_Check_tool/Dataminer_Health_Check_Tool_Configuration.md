@@ -160,7 +160,7 @@ These are some recommended subscription-based tests that will monitor your compu
 
 These tests are useful when utilizing an on-premises database with Cassandra, OpenSearch, and/or Elastic Nodes. 
 
-###### Total Processor Load is Below 80%
+###### Total Processor Load is Below 90%
 - Subscription Settings
 
 ![Total Processor Load Subscription](../../../solutions/images/Health_Check_Linux_Total_Processor_Load_Subscription.png)
