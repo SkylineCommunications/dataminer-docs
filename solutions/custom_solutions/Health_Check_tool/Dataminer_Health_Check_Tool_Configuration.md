@@ -16,7 +16,7 @@ Script-based tests use custom automation scripts to execute and retrieve data. T
 
 Several default tests are available related to the state of the DataMiner System, but you can also **integrate new tests using automation scripts**. For the Health Check tool to recognize the new tests, the automation scripts must be placed in the following folder in the Automation module: *Automation Scripts* > *Health Check* > *Health Check Tests*.
 
-![Health Check tests in the Automation module](../../../solutions/images/Health_Check_Automation_Path.png)
+![Health Check tests in the Automation module](~/solutions/images/Health_Check_Automation_Path.png)
 
 #### Adding a script-based test
 
@@ -28,7 +28,7 @@ Several default tests are available related to the state of the DataMiner System
 
 1. Right-click the *Test Configuration* table and select *Add Test* in the context menu.
 
-   ![Add Test option](../../../solutions/images/Health_Check_Add_Test.png)
+   ![Add Test option](~/solutions/images/Health_Check_Add_Test.png)
 
 1. In the pop-up window, fill in the required fields:
 
@@ -36,13 +36,13 @@ Several default tests are available related to the state of the DataMiner System
    - *Name*: Select an available script-based test.
    - *Operator* and *Threshold*: Define the conditions for the test to determine whether it passes or fails.
    - *Display Title*:  Enter a custom and unique name for the test to make it easily identifiable. If provided, this title will be used to identify the test in the email report.
-   - *Element/DMA Filter*: (SUBSCRIPTIONS ONLY) Use this field to apply the test to a specific element. Enter the name of the element you want to target.
-    - *Available Element Search*: (SUBSCRIPTIONS ONLY) Use this field to search for elements that are compatible with your chosen Subscription.
+   - *Element/DMA Filter*: (SUBSCRIPTIONS ONLY.) Use this field to apply the test to a specific element. Enter the name of the element you want to target.
+   - *Available Element Search*: (SUBSCRIPTIONS ONLY.) Use this field to search for elements that are compatible with your chosen subscription.
    - *Display Key Filter*: Apply this filter if you want the test to consider only certain entries for the test. This filter must be in the format of a regular expression.
    - *Status Checkbox*: Select this box if you want the text to be enabled as soon as it is created.
-   - *Severity*: Pick from 1 of 5 severities to determine the priority of that test if it fails. This will determine the coloration of the failed tests in the Health Check report. 
+   - *Severity*: Pick from 1 of 5 severities to determine the priority of the test if it fails. This will determine the coloration of the failed test in the Health Check report.
 
-   ![Test configuration](../../../solutions/images/Health_Check_Configure_Test.png)
+   ![Test configuration](~/solutions/images/Health_Check_Configure_Test.png)
 
 1. Click *OK* to create the test.
 
@@ -52,7 +52,7 @@ Several default tests are available related to the state of the DataMiner System
 
 1. Right-click the test you want to edit and select *Edit Test* in the context menu.
 
-   ![Edit Test option](../../../solutions/images/Health_Check_Edit_Test.png)
+   ![Edit Test option](~/solutions/images/Health_Check_Edit_Test.png)
 
    A pop-up window will show the current configuration of the selected test.
 
@@ -74,7 +74,7 @@ Subscription-based tests allow you to select a specific standalone parameter or 
 
 1. Right-click the *Parameter Subscription Table* and select *Add Subscription* in the context menu.
 
-   ![Add Subscription option](../../../solutions/images/Health_Check_Add_Subscription.png)
+   ![Add Subscription option](~/solutions/images/Health_Check_Add_Subscription.png)
 
 1. In the pop-up window, configure the fields to set up the subscription:
 
@@ -84,7 +84,7 @@ Subscription-based tests allow you to select a specific standalone parameter or 
      - If you select *Standalone Parameter*, in the *Parameter* field, select the name of the parameter you want to subscribe to.
      - If you select *Table Parameter*, specify the table name in the *Table* field and the column name in the *Parameter* field.
 
-   ![Add Subscription window](../../../solutions/images/Health_Check_Configure_Subscription.png)
+   ![Add Subscription window](~/solutions/images/Health_Check_Configure_Subscription.png)
 
 1. Click *OK* to add the subscription.
 
@@ -94,7 +94,7 @@ Subscription-based tests allow you to select a specific standalone parameter or 
 
 1. Right-click the *Parameter Subscription Table* and select *Edit Subscription* in the context menu.
 
-   ![Edit Subscription](../../../solutions/images/Health_Check_Edit_Subscription.png)
+   ![Edit Subscription](~/solutions/images/Health_Check_Edit_Subscription.png)
 
    A pop-up window will show the current configuration of the selected subscription.
 
@@ -125,72 +125,91 @@ After you have created a subscription, you will still need to link it to a test:
    - *Status Checkbox*: Select this box if you want the text to be enabled as soon as it is created.
    - *Severity*: Pick from 1 of 5 severities to determine the priority of that test if it fails.
 
-   ![Link Subscription to Test](../../../solutions/images/Health_Check_Link_Subscription.png)
+   ![Link Subscription to Test](~/solutions/images/Health_Check_Link_Subscription.png)
 
-## Recommended Subscriptions
-These are some recommended subscription-based tests that will monitor your computer(s) and database(s) used in your DataMiner System. 
+### Recommended subscriptions
 
-### Microsoft Platform Protocol
+These are some recommended subscription-based tests that will monitor the servers and databases used in the DataMiner System.
 
-###### Total Processor Load is Below 80%
+#### Microsoft Platform protocol
+
+##### Total processor load is below 80%
+
+- Subscription settings
+
+  ![Total Processor Load Subscription](~/solutions/images/Health_Check_Total_Processor_Load_Subscription.png)
+
+- Test configuration settings
+
+  ![CPU Load Test Configuration](~/solutions/images/Health_Check_Total_Processor_Load_Test_Configuration.png)
+
+##### Memory usage is below 75%
+
+- Subscription settings
+
+  ![Memory Usage Subscription](~/solutions/images/Health_Check_Memory_Usage_Subscription.png)
+
+- Test configuration settings
+
+  ![Memory Usage Test Configuration](~/solutions/images/Health_Check_Memory_Usage_Test_Configuration.png)
+
+##### Days since last reboot
+
 - Subscription Settings
 
-   ![Total Processor Load Subscription](../../../solutions/images/Health_Check_Total_Processor_Load_Subscription.png)
+  ![Days Since Last Reboot Subscription](~/solutions/images/Health_Check_Days_Since_Last_Reboot_Subscription.png)
+
 - Test Configuration Settings
 
-   ![CPU Load Test Configuration](../../../solutions/images/Health_Check_Total_Processor_Load_Test_Configuration.png)
+  ![Days Since Last Reboot Test Configuration](~/solutions/images/Health_Check_Days_Since_Last_Reboot_Test_Configuration.png)
 
-###### Check if Memory Usage is Below 75%
-- Subscription Settings
+#### Linux Platform protocol
 
-   ![Memory Usage Subscription](../../../solutions/images/Health_Check_Memory_Usage_Subscription.png)
-- Test Configuration Settings
+These tests are useful when utilizing an on-premises database with Cassandra, OpenSearch, and/or Elasticsearch nodes.
 
-   ![Memory Usage Test Configuration](../../../solutions/images/Health_Check_Memory_Usage_Test_Configuration.png)
+##### Total processor load is below 80%
 
-###### Days Since Last Reboot
-- Subscription Settings
-
-   ![Days Since Last Reboot Subscription](../../../solutions/images/Health_Check_Days_Since_Last_Reboot_Subscription.png)
-- Test Configuration Settings
-
-   ![Days Since Last Reboot Test Configuration](../../../solutions/images/Health_Check_Days_Since_Last_Reboot_Test_Configuration.png)
-
-### Linux Platform Protocol
-
+- Subscription settings
 These tests are useful when utilizing an on-premises database with Cassandra, OpenSearch, and/or Elastic Nodes. 
 
 ###### Total Processor Load is Below 90%
 - Subscription Settings
 
-![Total Processor Load Subscription](../../../solutions/images/Health_Check_Linux_Total_Processor_Load_Subscription.png)
-- Test Configuration Settings
+  ![Total Processor Load Subscription](~/solutions/images/Health_Check_Linux_Total_Processor_Load_Subscription.png)
 
-![Total Processor Load Test Configuration](../../../solutions/images/Health_Check_Linux_Total_Processor_Load_Test_Configuration.png)
+- Test configuration settings
 
-###### Check if Memory Usage is Below 75%
-- Subscription Settings
+  ![Total Processor Load Test Configuration](~/solutions/images/Health_Check_Linux_Total_Processor_Load_Test_Configuration.png)
 
-   ![Memory Usage Subscription](../../../solutions/images/Health_Check_Linux_Memory_Usage_Subscription.png)
-- Test Configuration Settings
+##### Memory usage is below 75%
 
-   ![Memory Usage Test Configuration](../../../solutions/images/Health_Check_Linux_Memory_Usage_Test_Configuration.png)
+- Subscription settings
 
-###### Database Node Uptime
-- Subscription Settings
+  ![Memory Usage Subscription](~/solutions/images/Health_Check_Linux_Memory_Usage_Subscription.png)
 
-   ![Uptime Subscription](../../../solutions/images/Health_Check_Linux_Uptime_Subscription.png)
-- Test Configuration Settings
+- Test configuration settings
 
-   ![Uptime Test Configuration](../../../solutions/images/Health_Check_Linux_Uptime_Test_Configuration.png) 
+  ![Memory Usage Test Configuration](~/solutions/images/Health_Check_Linux_Memory_Usage_Test_Configuration.png)
 
-###### Database Disk Space is Low
-- Subscription Settings
+##### Database node uptime
 
-   ![Low Disk Space Subscription](../../../solutions/images/Health_Check_Linux_Low_Disk_Space_Subscription.png)
-- Test Configuration Settings
+- Subscription settings
 
-   ![Low Disk Space Test Configuration](../../../solutions/images/Health_Check_Linux_Low_Disk_Space_Test_Configuration.png)
+  ![Uptime Subscription](~/solutions/images/Health_Check_Linux_Uptime_Subscription.png)
+
+- Test configuration settings
+
+  ![Uptime Test Configuration](~/solutions/images/Health_Check_Linux_Uptime_Test_Configuration.png) 
+
+##### Database disk space is low
+
+- Subscription settings
+
+  ![Low Disk Space Subscription](~/solutions/images/Health_Check_Linux_Low_Disk_Space_Subscription.png)
+
+- Test configuration settings
+
+  ![Low Disk Space Test Configuration](~/solutions/images/Health_Check_Linux_Low_Disk_Space_Test_Configuration.png)
 
 ## Configuring email reports
 
@@ -200,13 +219,19 @@ To set up the recipients for the email reports, follow these steps:
 
 1. In DataMiner Cube, open the *Health Check Manager* element and go to the *Configuration* page.
 
-1. In the *Email Title* section, you can update the Subject of the email to be in a format you prefer. The values store with "[]" are dynamic which can show the exact DMS [DMS], the date and the time which the Health check was ran [DATETIME], and the overall success rate of the Health Check [SUCCESSRATE]. 
+1. In the *Email Title* section, adjust the subject of the email to the format you prefer.
+
+   The following dynamic values are supported:
+
+   - `[DMS]`: Shows the exact DMS.
+   - `[DATETIME]`: Shows the date and time when the Health Check ran.
+   - `[SUCCESSRATE]`: Shows the overall success rate of the Health Check.
 
 1. In the *Email Configuration* section, make sure *Email State* is set to *Enabled*, so that email reporting is activated.
 
 1. In the *Email Addresses* field, enter a list of email addresses that should get the reports, using a comma (`,`) as a separator.
 
-1. In the *Report Sending Mode* field, you can choose if the Health Check is sent to the specified emails only based on the recurrence times given (Scheduled Execution Only) or it can also be sent whenever the test is executed (Always). 
+1. In the *Report Sending Mode* field, select if the Health Check should be sent to the specified emails only based on the specified recurrence times (*Scheduled Execution Only*) or also whenever the test is executed (*Always*).
 
 ## Configuring the test execution schedule
 
@@ -223,7 +248,7 @@ You have the flexibility to schedule when and how frequently tests will run to e
    - Select the time when the tests should run (for example, `22:00`).
    - Select how often the tests should be executed (*Daily*, *Weekly*, *Every* X *days*, etc.).
 
-   ![Test recurrence](../../../solutions/images/Health_Check_Recurrence.png)
+   ![Test recurrence](~/solutions/images/Health_Check_Recurrence.png)
 
 1. When you have configured the schedule, click *OK*.
 
