@@ -99,15 +99,15 @@ From now on, SLNet will only send a log entry to SLLog if the log level dictates
 > This change was reverted in Main Release 10.5.0 CU12, Main Release 10.6.0, and Feature Release 10.6.3 CU1 as it caused SLNet to leak handles whenever a user authenticated using SAML and a new SLHelper process was started. See [SLNet will no longer take into account the log level before sending a log entry to SLLog [ID 44868]](xref:General_Feature_Release_10.6.3_CU1#slnet-will-no-longer-take-into-account-the-log-level-before-sending-a-log-entry-to-sllog-id-44868).
 > The change has now been reintroduced.
 
-#### 'Functions' and 'Helper' folders will no longer be checked when protocols are being loaded [ID 44946]
+#### 'Functions' and 'Help' folders will no longer be checked when protocols are being loaded [ID 44946]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 Before a DataMiner Agent starts loading protocol files during startup, it checks the protocol version folders to determine the location of all protocol files to be loaded. When a version folder does not contain any protocol files, it will log the following error: `Directory found for protocol xxx with version yyy but no protocol file found in path.`
 
-Up to now, apart from the protocol version folders, the DataMiner Agent would also incorrectly check the *Functions* and *Helper* folders. However, as these folders do not contain any protocol files, this would result in a large number of invalid errors being logged.
+Up to now, apart from the protocol version folders, the DataMiner Agent would also incorrectly check the *Functions* and *Help* folders. However, as these folders do not contain any protocol files, this would result in a large number of invalid errors being logged.
 
-From now on, when DataMiner starts up, it will no longer check for protocol files in the *Functions* and *Helper* folders.
+From now on, when DataMiner starts up, it will no longer check for protocol files in the *Functions* and *Help* folders.
 
 #### Enhanced SSH logging [ID 44975]
 
