@@ -46,4 +46,8 @@ Before you upgrade to this DataMiner version:
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Alarm squashing: Alarm would incorrectly not show up in the Alarm Console after the element had been restarted [ID 45063]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+On systems with alarm squashing enabled, an alarm of which all alarms in the alarm tree were squashable would incorrectly not show up in the Alarm Console after the element associated with the alarm had been restarted.
