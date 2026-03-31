@@ -249,13 +249,13 @@ Depending on the type of layer, you can specify different layer properties in th
 
 In text-based fields, you can use dynamic references enclosed in curly brackets to insert data into a layer.
 
-Dynamic references can be used in the following fields:
+Dynamic references can be used in:
 
-- Text box
+- Text boxes
 
 - HTML code
 
-- Tooltip
+- Tooltips
 
 Enter a column name in curly brackets (e.g., `{my column}`) to insert the corresponding cell value into the text.
 
