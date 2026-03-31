@@ -30,4 +30,8 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards/Low-Code Apps: Problem when themes were being migrated when the DMA was offline [ID 45020]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When themes were being migrated, in some cases, an exception could be thrown when the DataMiner Agent was offline.
