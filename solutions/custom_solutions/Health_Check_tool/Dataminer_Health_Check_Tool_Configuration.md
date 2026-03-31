@@ -35,10 +35,12 @@ Several default tests are available related to the state of the DataMiner System
    - *Test Type*: Make sure *Script* is selected.
    - *Name*: Select an available script-based test.
    - *Operator* and *Threshold*: Define the conditions for the test to determine whether it passes or fails.
-   - *Display Title*: Optionally, enter a custom name for the test to make it easily identifiable. If provided, this title will be used to identify the test in the email report; otherwise, the default test name will be displayed.
-   - *Element/DMA Filter*: Use this field to apply the test to a specific element. Enter the name of the element you want to target.
+   - *Display Title*:  Enter a custom and unique name for the test to make it easily identifiable. If provided, this title will be used to identify the test in the email report.
+   - *Element/DMA Filter*: (SUBSCRIPTIONS ONLY.) Use this field to apply the test to a specific element. Enter the name of the element you want to target.
+   - *Available Element Search*: (SUBSCRIPTIONS ONLY.) Use this field to search for elements that are compatible with your chosen subscription.
    - *Display Key Filter*: Apply this filter if you want the test to consider only certain entries for the test. This filter must be in the format of a regular expression.
    - *Status Checkbox*: Select this box if you want the text to be enabled as soon as it is created.
+   - *Severity*: Pick from 1 of 5 severities to determine the priority of the test if it fails. This will determine the coloration of the failed test in the Health Check report.
 
    ![Test configuration](~/solutions/images/Health_Check_Configure_Test.png)
 
@@ -121,8 +123,89 @@ After you have created a subscription, you will still need to link it to a test:
    - *Element/DMA Filter*: Use this field to apply the test to a specific element. Enter the name of the element you want to target.
    - *Display Key Filter*: Use this field if the test should only consider specific entries. The filter must be in the format of a regular expression.
    - *Status Checkbox*: Select this box if you want the text to be enabled as soon as it is created.
+   - *Severity*: Pick from 1 of 5 severities to determine the priority of that test if it fails.
 
    ![Link Subscription to Test](~/solutions/images/Health_Check_Link_Subscription.png)
+
+### Recommended subscriptions
+
+These are some recommended subscription-based tests that will monitor the servers and databases used in the DataMiner System.
+
+#### Microsoft Platform protocol
+
+##### Total processor load is below 80%
+
+- Subscription settings
+
+  ![Total processor load subscription settings for Windows](~/solutions/images/Health_Check_Total_Processor_Load_Subscription.png)
+
+- Test configuration settings
+
+  ![Total processor load test configuration for Windows](~/solutions/images/Health_Check_Total_Processor_Load_Test_Configuration.png)
+
+##### Memory usage is below 75%
+
+- Subscription settings
+
+  ![Memory usage subscription settings for Windows](~/solutions/images/Health_Check_Memory_Usage_Subscription.png)
+
+- Test configuration settings
+
+  ![Memory usage test configuration for Windows](~/solutions/images/Health_Check_Memory_Usage_Test_Configuration.png)
+
+##### Days since last reboot
+
+- Subscription settings
+
+  ![Days since last reboot subscription settings](~/solutions/images/Health_Check_Days_Since_Last_Reboot_Subscription.png)
+
+- Test configuration settings
+
+  ![Days since last reboot test configuration](~/solutions/images/Health_Check_Days_Since_Last_Reboot_Test_Configuration.png)
+
+#### Linux Platform protocol
+
+These tests are useful when utilizing an on-premises database with Cassandra, OpenSearch, and/or Elasticsearch nodes.
+
+##### Total processor load is below 90%
+
+- Subscription settings
+
+  ![Total processor load subscription settings for Linux](~/solutions/images/Health_Check_Linux_Total_Processor_Load_Subscription.png)
+
+- Test configuration settings
+
+  ![Total processor load test configuration for Linux](~/solutions/images/Health_Check_Linux_Total_Processor_Load_Test_Configuration.png)
+
+##### Memory usage is below 75%
+
+- Subscription settings
+
+  ![Memory usage subscription settings for Linux](~/solutions/images/Health_Check_Linux_Memory_Usage_Subscription.png)
+
+- Test configuration settings
+
+  ![Memory usage test configuration for Linux](~/solutions/images/Health_Check_Linux_Memory_Usage_Test_Configuration.png)
+
+##### Database node uptime
+
+- Subscription settings
+
+  ![Node uptime subscription settings](~/solutions/images/Health_Check_Linux_Uptime_Subscription.png)
+
+- Test configuration settings
+
+  ![Node uptime test configuration](~/solutions/images/Health_Check_Linux_Uptime_Test_Configuration.png)
+
+##### Database disk space is low
+
+- Subscription settings
+
+  ![Low disk space subscription settings](~/solutions/images/Health_Check_Linux_Low_Disk_Space_Subscription.png)
+
+- Test configuration settings
+
+  ![Low disk space test configuration](~/solutions/images/Health_Check_Linux_Low_Disk_Space_Test_Configuration.png)
 
 ## Configuring email reports
 
@@ -132,9 +215,19 @@ To set up the recipients for the email reports, follow these steps:
 
 1. In DataMiner Cube, open the *Health Check Manager* element and go to the *Configuration* page.
 
+1. In the *Email Title* section, adjust the subject of the email to the format you prefer.
+
+   The following dynamic values are supported:
+
+   - `[DMS]`: Shows the exact DMS.
+   - `[DATETIME]`: Shows the date and time when the Health Check ran.
+   - `[SUCCESSRATE]`: Shows the overall success rate of the Health Check.
+
 1. In the *Email Configuration* section, make sure *Email State* is set to *Enabled*, so that email reporting is activated.
 
 1. In the *Email Addresses* field, enter a list of email addresses that should get the reports, using a comma (`,`) as a separator.
+
+1. In the *Report Sending Mode* field, select if the Health Check should be sent to the specified emails only based on the specified recurrence times (*Scheduled Execution Only*) or also whenever the test is executed (*Always*).
 
 ## Configuring the test execution schedule
 
