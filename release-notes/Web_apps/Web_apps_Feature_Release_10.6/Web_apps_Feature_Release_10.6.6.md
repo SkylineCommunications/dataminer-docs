@@ -35,3 +35,9 @@ This Feature Release of the DataMiner web applications contains the same new fea
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 When themes were being migrated, in some cases, an exception could be thrown when the DataMiner Agent was offline.
+
+#### GQI DxM unavailable because of missing Newtonsoft.Json assembly [ID 45146]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+After an upgrade from DataMiner web 10.5.0 CU0, 10.5.2, or 10.5.3 to a higher version, the GQI DxM would be unavailable in the DataMiner web apps. Also, the GQI logging would contain a message stating `Could not load file or assembly 'Newtonsoft.Json'`.
