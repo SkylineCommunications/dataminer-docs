@@ -23,9 +23,9 @@ uid: DIS_3.1
 
 #### IDE
 
-##### Signing in via Sign In button reports "invalid account" after Visual Studio update
+##### Problem when clicking 'Sign in' after updating Visual Studio to version 17.14.28
 
-After updating Visual Studio to version 17.14.28, an "invalid account" message could be shown due to a version of an assembly that was not found.
+When, after updating Microsoft Visual Studio to version 17.14.28, you clicked *Sign in*, in some cases, an "invalid account" message would appear because of an assembly version could not be found.
 
 ## DIS 3.1.20
 
