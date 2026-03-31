@@ -309,3 +309,10 @@ When, on swarming-enabled systems, the StorageModule DxM failed to load elements
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When, on a system on which Swarming was not enabled, you changed the casing of an element name and then restarted the element, in some cases, the next time you updated that element, the update would fail.
+
+#### DataMiner Objects Models: Database cache would not be cleaned up after a select query had been executed [ID 45161]
+
+<!-- MR 10.7.0 - FR 10.6.5 [CU0] -->
+<!-- Not added to MR 10.7.0 -->
+
+Since DataMiner Feature Release 10.6.4, the DOM manager's database cache would incorrectly not be cleaned up after a select query had been executed. This could lead to a significant performance degradation, especially when many DOM instances were cached and only select queries were executed afterwards, as queries would be evaluated in memory against a potentially large set of cached instances.
