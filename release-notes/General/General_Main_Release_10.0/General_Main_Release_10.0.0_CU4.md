@@ -83,9 +83,9 @@ The problem would occur in the following situations:
 
 When, in an automation script, you specified a parameter containing a double quote character in an email action configured to send a report, in some cases, it would not be possible to save the script.
 
-#### DataMiner Cube - Trending: Zoom buttons in top-right corner of a trend graph window would incorrectly not be displayed \[ID 26068\]
+#### DataMiner Cube - Trending: Zoom buttons in upper-right corner of a trend graph window would incorrectly not be displayed \[ID 26068\]
 
-When you opened a trend graph, e.g., by clicking the trend graph icon next to a parameter shown on an element card, in some cases, the zoom buttons (Last 24 hours, Week to date and Month to date) in the top-right corner would incorrectly not be displayed.
+When you opened a trend graph, e.g., by clicking the trend graph icon next to a parameter shown on an element card, in some cases, the zoom buttons (Last 24 hours, Week to date and Month to date) in the upper-right corner would incorrectly not be displayed.
 
 #### Deadlock between SLNet and SLDataGateway during a DataMiner startup or a Failover switch \[ID 26074\]
 

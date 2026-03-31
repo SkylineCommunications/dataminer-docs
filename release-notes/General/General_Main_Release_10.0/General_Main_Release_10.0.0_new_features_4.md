@@ -51,7 +51,7 @@ There are several ways to start creating a new blank dashboard:
 
 - On the home page, click *Start with a new blank dashboard*.
 
-- Click the “...” icon in the top-right corner of the navigation pane, and select *New dashboard*.
+- Click the “...” icon in the upper-right corner of the navigation pane, and select *New dashboard*.
 
 - Select a folder or dashboard in the list of dashboards on the left and select *New dashboard* in the right-click menu, or click the *New dashboard* button in the header bar.
 
@@ -64,7 +64,7 @@ To create a dashboard based on an example, you can either first import the examp
 
 ##### Editing a dashboard
 
-If a dashboard is selected in the navigation button, you can enter edit mode by clicking the edit button in the top-right corner. To stop editing, click the button in the same location.
+If a dashboard is selected in the navigation button, you can enter edit mode by clicking the edit button in the upper-right corner. To stop editing, click the button in the same location.
 
 In edit mode, you can adapt the dashboard in the following ways:
 
@@ -125,7 +125,7 @@ Currently, the following components can be added to a dashboard.
     | Component     | Description                                                                                                                                                                                                                      |
     |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Parameter table | Displays a data table of an element, optionally filtered by table indices or using a dynamic table filter.                                                                                                                       |
-    | Pivot table     | Displays a status report for a number of parameters of the elements using the selected protocol and protocol version. Via the ... button in the top-right corner of the component, the status report can be exported to CSV. |
+    | Pivot table     | Displays a status report for a number of parameters of the elements using the selected protocol and protocol version. Via the ... button in the upper-right corner of the component, the status report can be exported to CSV. |
 
 - Charts
 

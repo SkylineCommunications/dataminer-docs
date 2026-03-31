@@ -226,7 +226,7 @@ For the last step, two subscripts are used:
 
 In the IDP Solution setup wizard, you can now select whether you wish to use the Activity Scheduler feature.
 
-If this feature is enabled, the *Admin* tab of the IDP app displays a ![Scheduler icon](~/release-notes/images/IDP_Scheduler.png) icon in the top-right corner, which opens the Scheduler subtab. This tab displays a timeline with all scheduled activities and a *New* button, which allows you to schedule a new discovery activity.
+If this feature is enabled, the *Admin* tab of the IDP app displays a ![Scheduler icon](~/release-notes/images/IDP_Scheduler.png) icon in the upper-right corner, which opens the Scheduler subtab. This tab displays a timeline with all scheduled activities and a *New* button, which allows you to schedule a new discovery activity.
 
 The Activity Scheduler can also be enabled or disabled after the initial setup phase via the *Activity Scheduler* parameter on the *Settings* data display page of the *Skyline Infrastructure Discovery And Provisioning* element.
 

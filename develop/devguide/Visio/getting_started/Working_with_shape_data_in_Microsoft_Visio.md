@@ -121,7 +121,7 @@ The panel can be used as follows:
 
 - To change one of the data items to a different data item, in the data box, specify a different item. If you specify a data item that is unknown to DataMiner or that is already in the list, it will be highlighted.
 
-- From DataMiner 10.2.5/10.3.0, the following special options are available via the "..." button in the top-right corner of the *Advanced Editing* panel:
+- From DataMiner 10.2.5/10.3.0, the following special options are available via the "..." button in the upper-right corner of the *Advanced Editing* panel:
 
   - *Add theming*: Adds the following theme options to the page-level *Options* data field: `#000000=ThemeForeground|#FF0000=ThemeAccentColor|#FFFFFF=ThemeBackground`. If no page-level *Options* data field exists yet, it will be created. For more information, see [#RRGGBB=ThemeForeground\|#RRGGBB=ThemeAccentColor\|#RRGGBB=ThemeBackground](xref:Overview_of_page_and_shape_options#rrggbbthemeforegroundrrggbbthemeaccentcolorrrggbbthemebackground).
 

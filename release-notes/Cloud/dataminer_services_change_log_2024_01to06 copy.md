@@ -140,7 +140,7 @@ When a user navigates to a legacy URL of the Catalog application, it will now re
 
 #### 16 May 2024 - New feature - Catalog - New apps menu [ID 39621]
 
-Clicking the logo in the top-left corner of the Catalog app will now open a new apps menu, which will allow users to easily navigate to the other dataminer.services apps.
+Clicking the logo in the upper-left corner of the Catalog app will now open a new apps menu, which will allow users to easily navigate to the other dataminer.services apps.
 
 #### 16 May 2024 - Enhancement - Admin - Message in DMS overview when latest CoreGateway version is not installed for Failover Agent [ID 39677] [ID 39678]
 

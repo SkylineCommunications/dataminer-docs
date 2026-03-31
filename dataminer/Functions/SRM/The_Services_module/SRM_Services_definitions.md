@@ -16,7 +16,7 @@ The navigation pane consists of two tabs:
 
   At the bottom of this pane, there are also two buttons, which can be used to delete a selected service definition or add a new service definition.
 
-  The icon in the top-right corner of the tab allows you to toggle grouping of template service definitions and regular service definitions. This option is also available via the context menu of the tab.
+  The icon in the upper-right corner of the tab allows you to toggle grouping of template service definitions and regular service definitions. This option is also available via the context menu of the tab.
 
 - The *All* tab allows you to filter the list of service definitions by specifying a time range and a filter. In the filter box, you can enter the following:
 

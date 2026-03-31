@@ -57,6 +57,8 @@ items:
             href: RAD_Manager/toc.yml
           - name: SatOps release notes
             href: SatOps/toc.yml
+          - name: SDM release notes
+            href: SDM/toc.yml
           - name: SRM release notes
             href: SRM/toc.yml
           - name: Ticketing release notes

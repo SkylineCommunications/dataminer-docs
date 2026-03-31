@@ -35,7 +35,7 @@ To configure this component:
 
    - *Group Layout* \> *Layout*: Determines the size and position of the different child components within the group.
 
-   - *Expand legend initially*: Select this option to immediately show the group legend in the component. Otherwise, the legend section is initially collapsed, and you can display it using the arrow icon in the top-right corner of the component.
+   - *Expand legend initially*: Select this option to immediately show the group legend in the component. Otherwise, the legend section is initially collapsed, and you can display it using the arrow icon in the upper-right corner of the component.
 
 1. Optionally, in the *Component* > *Settings* pane, configure the following options:
 

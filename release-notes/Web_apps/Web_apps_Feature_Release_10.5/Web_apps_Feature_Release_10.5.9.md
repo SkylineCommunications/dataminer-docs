@@ -27,13 +27,13 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 The DataMiner landing page (by default accessible via `https://<DMA IP or hostname>/root`) has been redesigned to be more intuitive and user-friendly. These are the main changes that have been implemented:
 
-- While previously you had to install Cube via a dropdown menu in the top-right corner, a dedicated button is now available for this, which is shown at the top of the page alongside buttons to open the Dashboards and Monitoring apps. Via a "..." icon on the Cube button, you can also install other tools.
+- While previously you had to install Cube via a dropdown menu in the upper-right corner, a dedicated button is now available for this, which is shown at the top of the page alongside buttons to open the Dashboards and Monitoring apps. Via a "..." icon on the Cube button, you can also install other tools.
 
 - Below this, the different categories for the available low-code apps in the system are now shown as tabs, which each have a quick filter box at the top. This will allow much quicker and easier navigation between the apps than before.
 
 - At the top of the apps section, two buttons are now displayed: *Browse catalog* will open the [DataMiner Catalog](https://catalog.dataminer.services/), and *Create app* (or *Create your first app*) can be used to create a new low-code app.
 
-- The button in the top-left corner of the page has been redesigned and now shows a more user-friendly menu with a link to dataminer.services and a quick filter box. Next to the button, the name of the DMS (or the DMA in case of a standalone DMA) will now be shown instead of the URL of the landing page.
+- The button in the upper-left corner of the page has been redesigned and now shows a more user-friendly menu with a link to dataminer.services and a quick filter box. Next to the button, the name of the DMS (or the DMA in case of a standalone DMA) will now be shown instead of the URL of the landing page.
 
 - Optionally, you can enable the possibility to select a different theme for the landing page. If you add the argument `?showAdvancedSettings=true` to the URL of the page, a theme selector will become available that allows you to select one of the following themes:
 

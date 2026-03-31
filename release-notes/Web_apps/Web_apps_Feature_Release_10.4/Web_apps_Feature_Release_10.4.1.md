@@ -122,11 +122,11 @@ There are now two ways to duplicate a low-code app:
 
      - To duplicate a different version:
 
-       1. In the top-right corner, click the user icon and select *Versions*.
+       1. In the upper-right corner, click the user icon and select *Versions*.
 
        1. Select the desired version.
 
-  1. In the top-right corner, click the user icon, and select *Duplicate* in the user menu.
+  1. In the upper-right corner, click the user icon, and select *Duplicate* in the user menu.
 
      The current draft version will be copied and the newly created app will automatically be opened in a new browser tab.
 

@@ -329,6 +329,12 @@ From now on, similar to the way in which log levels can be either lowered or inc
 
 When OpenStreetMaps was used as map provider, up to now, the markers would not correctly update their alarm state. They would start to cluster and show the highest alarm state.
 
+#### Dashboards app: Problem when generating a multi-page PDF report of a dashboard with stacked mode disabled [ID 45037]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When you generated a multi-page PDF report of a dashboard with stacked mode disabled, up to now, the PDF file would incorrectly only contain the first page.
+
 #### Dashboards/Low-Code Apps: 'Allow components to shift' setting would incorrectly not be taken into account when you resized a component [ID 45045]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
@@ -342,6 +348,12 @@ From now on, the *Allow components to shift* setting will be taken into account 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When you opened a dashboard and, while it was still loading, you navigated to another dashboard that did not contain any components, up to now, the "loading" banner of the first dashboard would incorrectly stay visible until you added a component to the second dashboard.
+
+#### Dashboards app: Tall component in PDF report would cause the other components to shift out of position [ID 45069]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When you generated a PDF report of a dashboard with stacked mode disabled, and the dashboard contained a component that was taller than 18 rows, up to now, that component would incorrectly grow exponentially in the PDF file, causing the other components to shift out of position.
 
 #### Dashboards/Low-Code Apps - Time range component: Typing "00" in the hours field would not cause the cursor to jump to the minutes field [ID 45098]
 

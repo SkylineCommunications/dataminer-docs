@@ -20,7 +20,7 @@ With the **date selector** at the top, you can view billing information for diff
 The *Balance* displays your current credit balance available for dataminer.services usage. This represents the total number of credits remaining in your account that can be used to pay for various services and subscriptions.
 
 - Credits are consumed when you use pay-per-use (PPU) services or when you create, renew, or commit to a subscription (charged up front for the whole period).
-- You can purchase additional credits using the **Buy credits** button in the top-right corner.
+- You can purchase additional credits using the **Buy credits** button in the upper-right corner.
 - The balance is updated in real time when services are consumed or when new credits are purchased.
 - A low balance may impact your ability to use certain services, so monitoring this regularly is important.
 - Click the **Credit history** button to view all credit transactions. See [Viewing your credit history](xref:Viewing_your_credit_history) for more information.

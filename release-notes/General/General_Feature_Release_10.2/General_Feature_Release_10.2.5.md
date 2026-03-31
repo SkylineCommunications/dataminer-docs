@@ -109,7 +109,7 @@ Example:
 
 #### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' \[ID 32660\]
 
-When, in DataMiner Cube, you right-click a visual overview and select “Edit in Visio”, an advanced edit panel will appear. When no shape is selected, you can now click an ellipsis button (“...”) in the top-right corner of the panel. This will open a menu with the following options.
+When, in DataMiner Cube, you right-click a visual overview and select “Edit in Visio”, an advanced edit panel will appear. When no shape is selected, you can now click an ellipsis button (“...”) in the upper-right corner of the panel. This will open a menu with the following options.
 
 - Add theming: If you click this option, the following theme options will be added to the page-level “Options” data field:
 

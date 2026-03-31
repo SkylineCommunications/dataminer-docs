@@ -28,5 +28,5 @@ uid: GettingStartedWithAutomationScriptDevelopment
 
 - [DataMiner automation script XML schema](xref:SchemaAutomationScript)
 - [C# code reference (Skyline.DataMiner.Automation namespace)](xref:Skyline.DataMiner.Automation)
-- [DataMiner class library (Skyline.DataMiner.Core.DataMinerSystem.Automation namespace)](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation)
+- [DataMinerSystem library (Skyline.DataMiner.Core.DataMinerSystem.Automation namespace)](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation)
 - [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit)

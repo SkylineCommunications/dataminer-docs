@@ -310,7 +310,7 @@ When the next page of naturally sorted data was requested from an Elasticsearch 
 
 #### Dashboards app: Shared dashboards still showed 'Share' option \[ID 32618\]
 
-When you clicked the “...” button in the top-right corner of a shared dashboard, the menu would incorrectly include a “Share” command.
+When you clicked the “...” button in the upper-right corner of a shared dashboard, the menu would incorrectly include a “Share” command.
 
 As it is not possible to share a dashboard that has already been shared, this command will no longer be available when you open a shared dashboard.
 

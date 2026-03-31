@@ -61,9 +61,9 @@ The tutorial consists of the following steps:
 
    ![Dynamic Dashboard](~/dataminer/images/Dashboards_Tutorial_EmbedInVisio_CreateDashboard.png)
 
-1. Click the icon in the top-right corner to stop editing the dashboard.
+1. Click the icon in the upper-right corner to stop editing the dashboard.
 
-1. Click the ... button in the top-right corner and select *Share*.
+1. Click the ... button in the upper-right corner and select *Share*.
 
 1. Select *URL*, select the *Embed* and *Use uncompressed URL parameters* checkboxes, and click *Copy*.
 

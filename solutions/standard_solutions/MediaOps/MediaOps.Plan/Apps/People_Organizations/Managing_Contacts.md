@@ -30,13 +30,13 @@ To add a new contact:
 
    Note that if you do not select an organization yet at this point, you can always [add the contact to an organization](xref:PO_Managing_Organizations#configuring-organization-members) later.
 
-1. Select *Save* in the top-right corner of the panel.
+1. Select *Save* in the upper-right corner of the panel.
 
    The *Drafts* panel will open. The new contact is now saved as a draft.
 
-   - If you want to activate your new contact, select the contact in the *Drafts* panel and click *Activate Selected* in the top-left corner of the pane, or click *Activate All* to activate all the current drafts.
+   - If you want to activate your new contact, select the contact in the *Drafts* panel and click *Activate Selected* in the upper-left corner of the pane, or click *Activate All* to activate all the current drafts.
 
-   - If you want to activate your new contact later, close the panel with the "X" in the top-right corner. Later on, when you want to activate the contact, you can open the panel again via the *Drafts* button in the header bar of the *List* tab.
+   - If you want to activate your new contact later, close the panel with the "X" in the upper-right corner. Later on, when you want to activate the contact, you can open the panel again via the *Drafts* button in the header bar of the *List* tab.
 
 ## Editing a contact
 
@@ -60,7 +60,7 @@ To edit an existing contact:
    > [!NOTE]
    > Skipping this step will keep the contact in an inactive *Edit* state.
 
-1. Select *Save* in the top-right corner to save your changes.
+1. Select *Save* in the upper-right corner to save your changes.
 
 ## Deprecating a contact
 

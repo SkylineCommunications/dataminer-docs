@@ -24,7 +24,7 @@ A key should be added as a secret in the repository, so that it is stored secure
 
    ![Actions page](~/develop/images/GitHub_settings_secrets.png)
 
-1. In the top-right corner, click *New repository secret*.
+1. In the upper-right corner, click *New repository secret*.
 
 1. Specify a name for your secret (e.g., `DATAMINER_TOKEN`), paste the key as the value for the secret, and then save the secret.
 

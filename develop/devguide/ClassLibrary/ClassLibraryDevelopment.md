@@ -1,17 +1,18 @@
 ---
 uid: ClassLibraryDevelopment
+keywords: class library
 ---
 
-# Class library development
+# DataMinerSystem library development
 
 > [!IMPORTANT]
 > This information in this section is only applicable for Skyline employees.
 
-## The class library is open to contributions
+## The DataMinerSystem library is open to contributions
 
-Everyone at Skyline is encouraged to help maintain and add features to the base class library. If you have code that deals with DataMiner and could be useful for everyone developing protocols or scripts, then the base class library might be the place to add it.
+Everyone at Skyline is encouraged to help maintain and add features to the DataMinerSystem library. If you have code that deals with DataMiner and could be useful for everyone developing protocols or scripts, then the DataMinerSystem library might be the place to add it.
 
-Adding to the class library is relatively simple, and your changes can be used in development and production right away. The official merge and release as a stable version for everyone is handled within the Skyline Data Acquisition domain after code reviewing and QA, but this does not block use in projects and possible releases.
+Adding to the DataMinerSystem library is relatively easy, and your changes can be used in development and production right away. The official merge and release as a stable version is handled within the Skyline Data Acquisition domain after code reviewing and QA.
 
 If you would like to have input on code design, do not hesitate to ask Data Acquisition for assistance (by sending an email to [support.data-acquisition@skyline.be](mailto:support.data-acquisition@skyline.be)).
 
@@ -25,43 +26,32 @@ These are the most important things to keep in mind:
 
 ## Contribution workflow
 
-1. Make a new task if one does not exist yet under the *SLC-SE-System Development Library* project. You can set the type to *New Feature*.
+1. Make a new task if one does not exist yet under the *R&D Communication & Synchronisation
+* project. You can set the type to *New Feature*.
 
-1. Clone the repository *Custom Solutions/Generic/Skyline.DataMiner.Core/DataMinerSystem*.
+1. Fork the private DataMinerSystem library repository [SkylineCommunications/Skyline.DataMiner.Core.DataMinerSystem](https://github.com/SkylineCommunications/Skyline.DataMiner.Core.DataMinerSystem), and clone your fork.
 
-   >[!NOTE]
-   > If you are working remotely and the clone takes longer than 15 minutes, please ask the BOOST team for assistance (by sending an email to [support.boost@skyline.be](mailto:support.boost@skyline.be)).
+1. In your fork, select the branch for the highest supported DataMiner version you want to start with.
 
-1. Select the master branch you want to start with.
-
-1. Make a new branch: gerrit/DCPxxxx_subject (or dev/DCPxxxx if you are not using Gerrit).
-
-1. Optionally, update the Jenkinsfile to skip the integration tests step.
-
-   During development, it can be useful to skip the integration tests to reduce the execution time of the pipeline. The Jenkins pipeline of the class library is configured to execute the Jenkinsfile present in the repository. There is also another file present: JenkinsFileNoIntegration. To skip the integration tests, copy the content of the JenkinsFileNoIntegration to the JenkinsFile.
-
-   Note: After development, be sure to place back the original content in the Jenkinsfile.
-
-1. Commit these changes and push them.
-
-1. Wait until SonarQube is finished, then open the *Issues* tab and bulk edit everything as "won't fix".
-
-   > [!NOTE]
-   > You may find 20 or so code smells that were not fixed, but these can be ignored. All new issues reported in SonarQube from now on will be related to your changes specifically.
+1. Make a new branch.
 
 1. If your branch introduces a new minimum required DataMiner version, configure the corresponding version of the `Skyline.DataMiner.Dev.*` NuGet packages.
 
 1. Start development.
 
-1. Remember to add integration tests. You can look at the existing tests to see how this is done. The DMA server running integration tests is 10.11.6.51.
+1. Add integration tests.
+
+   You can look at the existing tests to see how this is done, and run them locally from within Visual Studio in the same way as the unit tests. The integration tests will then run on your local Agent.
 
 1. When you are ready:
 
-   1. Do a Gerrit push for code review, or just do a push in case you are not using Gerrit.
+   1. Commit your changes and push your branch to your fork on GitHub.
 
-   1. Assign the task to the Data Acquisition user, with the task status *Code Review* and with the *Tools* tag added.
+   1. Open a pull request to the main repository for code review.
 
-   1. Send an email to [support.data-acquisition@skyline.be](mailto:support.data-acquisition@skyline.be) mentioning that you added something and in which branch this was done.
+      > [!NOTE]
+      > If your feature requires a higher DataMiner version and the main repository does not have a corresponding branch yet, contact Data Acquisition first by sending an email to [support.data-acquisition@skyline.be](mailto:support.data-acquisition@skyline.be).
 
-> [!TIP]
-> At this point, if you already want to use a beta package of your new class library version (and possibly even release your protocols with it), Under the SLC internal Nuget store, you will also be able to find a NuGet of your class library branch for use instead of the DIS code generation.
+   1. Assign the task to the Data Acquisition user, with the task status *Code Review*.
+
+   1. Email [support.data-acquisition@skyline.be](mailto:support.data-acquisition@skyline.be) mentioning that you added something and include a link to the pull request.

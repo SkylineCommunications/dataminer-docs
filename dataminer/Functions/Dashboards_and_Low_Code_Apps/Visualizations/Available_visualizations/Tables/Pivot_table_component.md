@@ -13,7 +13,7 @@ This component displays a status report for a number of parameters of the elemen
 
 ![Pivot table](~/dataminer/images/Pivot_Table.png)<br>*Pivot table component in DataMiner 10.4.6*
 
-It is possible to export this status report to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
+It is possible to export this status report to CSV. To do so, click the ... icon in the upper-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
 
 > [!NOTE]
 > The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.

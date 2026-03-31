@@ -93,7 +93,7 @@ Your text input should look like this:
 
 1. Select *Link* in the lower-right corner of the *Link to* dialog.
 
-1. Leave the dashboard edit mode using the button in the top-right corner.
+1. Leave the dashboard edit mode using the button in the upper-right corner.
 
 1. In the text input of the dashboard, fill in the value "VLAN 2".
 

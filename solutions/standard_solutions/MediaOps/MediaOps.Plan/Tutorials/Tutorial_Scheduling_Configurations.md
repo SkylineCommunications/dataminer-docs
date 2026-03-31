@@ -58,7 +58,7 @@ Expected duration: 15 minutes
 
    ![Converters workflow](~/solutions/images/Scheduling_Workflow_Converters.png)
 
-   If you do not see this result immediately, use the refresh button in the top-right corner of the *Workflow* section.
+   If you do not see this result immediately, use the refresh button in the upper-right corner of the *Workflow* section.
 
     ![Refresh button](~/solutions/images/Scheduling_Workflow_Refresh.png)
 

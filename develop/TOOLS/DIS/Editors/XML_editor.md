@@ -53,7 +53,7 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 > [!NOTE]
 >
 > - In the DIS Validator pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the Shift key. Use this feature to, for example, copy, suppress or postpone a number of results in one go. However, note that suppressing or postponing a number of results will only work when all selected items have the same error code.
-> - Use the filter box in the top-right corner to filter the validation results.
+> - Use the filter box in the upper-right corner to filter the validation results.
 
 ### Compare
 
@@ -221,7 +221,7 @@ If you want to automatically generate parameters of type "write" for a number of
 
 > [!NOTE]
 >
-> - As long as there is at least one row showing a duplicate parameter ID or duplicate parameter name, the *OK* button will be disabled and a warning icon will be displayed in the top-right corner of the window.
+> - As long as there is at least one row showing a duplicate parameter ID or duplicate parameter name, the *OK* button will be disabled and a warning icon will be displayed in the upper-right corner of the window.
 > - Only rows of which the checkbox is selected are taken into account when performing the above-mentioned validation.
 
 ### Repeating selected text

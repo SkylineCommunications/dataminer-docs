@@ -36,4 +36,4 @@ To link resource pools:
 
    ![Resource pool linking example](~/solutions/images/Resource_pool_linking.png)
 
-Via the **Resource Pool links** button in the top-right corner of the *Resource Pools* page, you can get an overview of all the links that have been configured between resource pools in the system.
+Via the **Resource Pool links** button in the upper-right corner of the *Resource Pools* page, you can get an overview of all the links that have been configured between resource pools in the system.

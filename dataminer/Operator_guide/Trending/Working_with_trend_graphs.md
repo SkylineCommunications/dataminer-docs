@@ -8,13 +8,13 @@ Whether you access a trend graph from a card or do so from the *Trending* module
 
 - A main graph area with a preview graph underneath. This preview graph represents the entire trend period (week, month, etc.). The main graph is an enlargement of the white part of the preview graph. When you open a trend graph, by default the trending information for the last 24 hours is loaded in the main graph, and the information for the past week is loaded in the preview graph below that.
 
-- A set of buttons in the top-right corner that allows you to quickly jump to a specific time frame: the last 24 hours, a week to date, a month to date, or a custom time frame. If you use the *Custom* button (available from DataMiner 10.2.1/10.3.0 onwards), this opens a pop-up box where you can specify a custom start and end time for the trend graph.
+- A set of buttons in the upper-right corner that allows you to quickly jump to a specific time frame: the last 24 hours, a week to date, a month to date, or a custom time frame. If you use the *Custom* button (available from DataMiner 10.2.1/10.3.0 onwards), this opens a pop-up box where you can specify a custom start and end time for the trend graph.
 
 - A parameter pane at the bottom. This pane displays more information about the parameter for which trending is shown. If the mouse pointer is held over a point of the trend graph, detailed information on this point will be displayed in the parameter pane.
 
 - A trend groups pane on the left-hand side. See [Working with trend groups](xref:Working_with_trend_groups).
 
-- A light bulb icon in the top-right corner to add parameters related to those shown in the trend graph (from DataMiner 10.2.12/10.3.0 onwards). See [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph).
+- A light bulb icon in the upper-right corner to add parameters related to those shown in the trend graph (from DataMiner 10.2.12/10.3.0 onwards). See [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph).
 
   > [!NOTE]
   > From DataMiner 10.3.6/10.4.0 onwards, the color of the light bulb icon reflects whether parameter relationships have been found. When related parameters are available, the light bulb will be "lit up", using an accent color. If DataMiner was unable to find related parameters, the light bulb will remain blank and appear turned off. <!-- RN 35868-->

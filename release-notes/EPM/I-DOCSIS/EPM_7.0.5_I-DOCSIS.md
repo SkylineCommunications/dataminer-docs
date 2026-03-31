@@ -14,7 +14,7 @@ The **Upstream** dashboard shows the fiber node name, the maximum utilization of
 
 The **Downstream** dashboard shows the fiber node name, the maximum utilization of SC-QAM channels within a specific time range, the maximum utilization of OFDM channels within a specific time range, and the number of CMs belonging to that fiber node.
 
-You can filter each column using a query filter located on the left side of the dashboard, and you can select the desired time range for the dashboard in the top-left corner.
+You can filter each column using a query filter located on the left side of the dashboard, and you can select the desired time range for the dashboard in the upper-left corner.
 
 These dashboards use an ad hoc data source script, which in turn executes another script that obtains the files provided by Data Aggregator.
 

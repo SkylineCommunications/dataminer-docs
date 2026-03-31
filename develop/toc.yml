@@ -1440,13 +1440,13 @@ items:
             topicUid: Dynamic_table_filter_syntax
           - name: Visio style guide
             topicUid: Visio_style_guide
-  - name: Class Library
+  - name: DataMinerSystem Library
     items:
-    - name: About the class library
+    - name: About the DataMinerSystem library
       topicUid: ClassLibraryIntroduction
-    - name: Class library development
+    - name: DataMinerSystem library development
       topicUid: ClassLibraryDevelopment
-    - name: Class library versioning
+    - name: DataMinerSystem library versioning
       topicUid: ClassLibraryVersioning
     - name: Lazy loading
       topicUid: ClassLibraryLazyLoading

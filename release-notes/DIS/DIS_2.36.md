@@ -20,7 +20,7 @@ In the diagram itself, each item (parameter, QAction, session, response, group, 
 - Hover over an item to see a tooltip with its full name and full description.
 - Double-click a box representing an item to make that item the new starting point of the diagram. This will cause the entire diagram to be redrawn.
 
-In the top-left corner of the diagram, you also have a number of zoom options: a slider to adjust to zoom factor, a “1:1” button (to switch to zoom factor 1) and a “Fill” button to automatically adjust the zoom factor to the current size of the diagram window.
+In the upper-left corner of the diagram, you also have a number of zoom options: a slider to adjust to zoom factor, a “1:1” button (to switch to zoom factor 1) and a “Fill” button to automatically adjust the zoom factor to the current size of the diagram window.
 
 #### New command to save all compiled automation scripts in a solution to a zip file \[ID 32166\]
 
@@ -34,11 +34,11 @@ In the *DIS Comparer* tool window, it is now also possible to suppress errors af
 
 #### Import Protocol and Import Automation Script windows now have a filter box \[ID 32396\]
 
-Both the *Import Protocol* and *Import Automation Script* windows now have a filter box in the top-right corner. This will allow you to filter the list of protocols or automation scripts.
+Both the *Import Protocol* and *Import Automation Script* windows now have a filter box in the upper-right corner. This will allow you to filter the list of protocols or automation scripts.
 
 #### DIS Validator and DIS Comparer windows now have a filter box \[ID 32407\]
 
-Both the *DIS Validator* and *DIS Comparer* tool windows now have a filter box in the top-right corner. This will allow you to filter the validation or comparison results.
+Both the *DIS Validator* and *DIS Comparer* tool windows now have a filter box in the upper-right corner. This will allow you to filter the validation or comparison results.
 
 ### Validator
 

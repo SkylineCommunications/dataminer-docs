@@ -137,7 +137,7 @@ To enable KPI option filtering when calling the *GetTableForParameterV2* method
 
 In the Monitoring & Control app, you can now view the list of users who are currently logged on to the DataMiner System.
 
-To open the contacts list, click the user icon in the top-right corner of the screen and select *Contacts*.
+To open the contacts list, click the user icon in the upper-right corner of the screen and select *Contacts*.
 
 For each user, the list displays the name of the user, the name of the computer, and the amount of active connections. Clicking a user in the list will open a details pane showing more information about that user (e.g., “\[APP\] online since \[Connect time\]”).
 
@@ -560,7 +560,7 @@ Those objects contain a ResourceManagerWarningData and a ResourceManagerErrorDat
 
 #### Service Manager: New definition grouping toggle button \[ID 21632\]
 
-In the Service Manager module, a button is now available in the top-right corner of the tree view pane that allows you to toggle grouping of template definitions and regular definitions in this pane. This template grouping feature is also available via the context menu of the tree view pane.
+In the Service Manager module, a button is now available in the upper-right corner of the tree view pane that allows you to toggle grouping of template definitions and regular definitions in this pane. This template grouping feature is also available via the context menu of the tree view pane.
 
 #### DataMiner Cube - Surveyor: Service & Resource Management apps now in 'Modules' section of 'Apps' tab \[ID 21688\]
 

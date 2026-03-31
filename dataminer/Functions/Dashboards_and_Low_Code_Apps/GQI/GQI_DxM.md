@@ -48,7 +48,7 @@ Prior to DataMiner 10.5.0 [CU10]/10.6.0/10.6.1<!--RN 44058-->, the GQI DxM is di
 
 The WebAPI process will automatically restart when you save the file. For web applications accessed through the configured server, the setting will be applied. For web applications accessed via other servers, the configuration of those servers will be used, which may be different.
 
-From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 42003-->, to verify that the GQI DxM is enabled for a web app, open the user menu in the top-right corner and select *About*. If the version of the GQI DxM is displayed next to *GQI*, the web app is using the GQI DxM. If `No DxM` is displayed, the web app is still using the SLHelper process.
+From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 42003-->, to verify that the GQI DxM is enabled for a web app, open the user menu in the upper-right corner and select *About*. If the version of the GQI DxM is displayed next to *GQI*, the web app is using the GQI DxM. If `No DxM` is displayed, the web app is still using the SLHelper process.
 
 ![No DxM](~/dataminer/images/NoDxM.png)<br>*About DataMiner pop-up window in DataMiner 10.5.3*
 

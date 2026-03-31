@@ -10,7 +10,7 @@ Each component in a dashboard or low-code app has a number of default options. B
 
 1. In the ***General*** section, you can configure basic component information:
 
-   - *Title*: Enter a custom title that appears in the top-left corner of the component.
+   - *Title*: Enter a custom title that appears in the upper-left corner of the component.
 
    - *Name*: Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43453, originally "Configuration name", but changed to "Name" by 43760-->. Enter a custom name for the component. Using a custom name can make it easier to identify components when configuring a dashboard or low-code app. When you leave this setting empty, the default name consists of the type of visualization followed by a sequence number (e.g., `Table 3`).
 

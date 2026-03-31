@@ -82,6 +82,7 @@ You can filter by:
 To open the application settings, click the cogwheel button at the bottom of the sidebar on the left.
 
 In the application settings window, you can manage the different topologies, update the default IP scan range and adjust the automatic removal behavior for removed connections.
+To access the application settings, click the *About* button in the upper-right corner and then click the *Settings* button at the top of window.
 
 ![Application settings window](~/solutions/images/NS_manual_settings.png)
 

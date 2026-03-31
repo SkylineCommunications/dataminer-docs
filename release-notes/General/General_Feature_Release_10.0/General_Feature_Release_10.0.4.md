@@ -289,7 +289,7 @@ Due to a number of enhancements, overall performance of NotifyDataMiner 128 (NT_
 
 In the Monitoring app (DATA pages, VISUAL pages and CPE pages) and the Dashboards app (Parameter Page component), parameter tables can now be displayed in full-screen mode.
 
-If your internet browser supports full-screen mode, a toggle button will appear in the top-right corner of each parameter table. You can exit full-screen mode by pressing ESC or F11.
+If your internet browser supports full-screen mode, a toggle button will appear in the upper-right corner of each parameter table. You can exit full-screen mode by pressing ESC or F11.
 
 #### DataMiner Cube - Service & Resource Management: Property columns will now automatically be updated upon property changes \[ID 24826\]
 
@@ -461,7 +461,7 @@ In some cases, it would no longer be possible to correctly take an agent out of 
 
 #### DataMiner Cube - Data Display: Problem when searching for a parameter in an element card \[ID 24801\]
 
-In some cases, DataMiner Cube would become unresponsive when, in an element card, you searched for a parameter using the search box in the top-left corner of the card.
+In some cases, DataMiner Cube would become unresponsive when, in an element card, you searched for a parameter using the search box in the upper-left corner of the card.
 
 #### Problem when performing a full synchronization \[ID 24804\]
 

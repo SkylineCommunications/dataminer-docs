@@ -47,7 +47,7 @@ To generate a shareable URL:
 
 1. Open the dashboard you want to share.
 
-1. Click the ... button in the top-right corner and select *Share*.
+1. Click the ... button in the upper-right corner and select *Share*.
 
 1. For DataMiner versions older than 10.3.0 [CU12]/10.4.3 only, click *URL*.
 
@@ -78,7 +78,7 @@ You can set an optional expiration date to stop sharing automatically.
 
 1. Open the dashboard you want to share.
 
-1. Click the ... button in the top-right corner and select *Share* or *Start sharing* (depending on your DataMiner version).
+1. Click the ... button in the upper-right corner and select *Share* or *Start sharing* (depending on your DataMiner version).
 
 1. If prompted, select *Create cloud share*.
 
@@ -101,7 +101,7 @@ You can set an optional expiration date to stop sharing automatically.
 
 1. Open the dashboard.
 
-1. Click the *Shared* button in the header bar, or click the ... button in the top-right corner and select *Manage share* or *Share* (depending on your DataMiner version).
+1. Click the *Shared* button in the header bar, or click the ... button in the upper-right corner and select *Manage share* or *Share* (depending on your DataMiner version).
 
 1. If prompted, select *Manage cloud share*.
 

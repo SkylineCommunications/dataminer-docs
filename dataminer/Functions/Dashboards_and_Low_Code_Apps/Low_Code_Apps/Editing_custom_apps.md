@@ -17,9 +17,9 @@ From the DataMiner **landing page** (supported from DataMiner 10.3.0 [CU10]/10.4
 
 From **within an application**:
 
-- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40077-->, click the pencil icon in the top-right corner.
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40077-->, click the pencil icon in the upper-right corner.
 
-- Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, click the user icon in the top-right corner and select *Edit*.
+- Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, click the user icon in the upper-right corner and select *Edit*.
 
 Once you are in edit mode, you can [customize the app](xref:LowCodeApps_Layout#customizing-the-icon-and-color-of-an-app), or edit the [pages](xref:LowCodeApps_page_config), [panels](xref:LowCodeApps_panel_config), [header bar](xref:LowCodeApps_header_config), [events](xref:LowCodeApps_event_config), or [security](xref:LowCodeApps_security_config) as needed.
 

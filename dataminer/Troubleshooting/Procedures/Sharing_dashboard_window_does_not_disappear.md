@@ -13,7 +13,7 @@ When you try to share a dashboard, you should get a pop-up window that asks you 
 
 The pop-up window might not have loaded properly.
 
-1. Exit the *Sharing dashboard* window by clicking the **X** in the top-right corner.
+1. Exit the *Sharing dashboard* window by clicking the **X** in the upper-right corner.
 1. Try sharing the dashboard again.
 
 ## Check the SSL configuration

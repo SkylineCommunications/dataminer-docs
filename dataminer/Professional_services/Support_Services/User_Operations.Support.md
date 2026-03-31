@@ -25,7 +25,7 @@ The *Ticket Overview* page is the default page shown when you open the Support a
 
 Several **filters** are available on this page:
 
-- You can use the filters in the top-left corner to only show tickets with a specific **status**.
+- You can use the filters in the upper-left corner to only show tickets with a specific **status**.
 
 - With the time filter at the top, you can filter the tickets on **creation time**.
 

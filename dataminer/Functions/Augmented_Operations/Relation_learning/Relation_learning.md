@@ -6,7 +6,7 @@ uid: Relation_learning
 
 With the relation learning feature, you can add related parameters to your trend graphs to get a better understanding of what is happening in your system. This way, you can uncover hidden connections in your data that you might not have noticed otherwise. This means that you do not have to spend hours sifting through data to find connections, because DataMiner Analytics will do the work for you.
 
-Related parameters are available via the light bulb in the top-right corner of a trend graph:
+Related parameters are available via the light bulb in the upper-right corner of a trend graph:
 
 ![Relation learning](~/dataminer/images/Relation_learning_add_parameter.gif)<br>*Relation learning in DataMiner 10.6.12*
 

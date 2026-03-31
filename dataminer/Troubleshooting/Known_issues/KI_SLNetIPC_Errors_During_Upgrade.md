@@ -53,6 +53,6 @@ Failed getting progress from http://slnetipc:8004//UpgradeService: The remote na
 
 ![Example of the issue](~/dataminer/images/KI_SLNetIPC_Upgrade_Failure.png)
 
-This happens when the upgrade is launched in a DataMiner Cube session connected via localhost. You can verify this in Cube by clicking the user icon in the top-right corner and selecting *About*. In the *connection* tab of the *About* window, look for `Connection String` or `Connection String (NR)`. If either or both says ``ipc://slnetipc/SLNetService``, this issue will occur.
+This happens when the upgrade is launched in a DataMiner Cube session connected via localhost. You can verify this in Cube by clicking the user icon in the upper-right corner and selecting *About*. In the *connection* tab of the *About* window, look for `Connection String` or `Connection String (NR)`. If either or both says ``ipc://slnetipc/SLNetService``, this issue will occur.
 
 ![Connection string](~/dataminer/images/KI_SLNetIPC_Upgrade_Connection.png)

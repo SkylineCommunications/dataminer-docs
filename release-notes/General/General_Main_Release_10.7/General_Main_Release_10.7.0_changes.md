@@ -11,17 +11,6 @@ uid: General_Main_Release_10.7.0_changes
 
 ### Breaking changes
 
-#### Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]
-
-<!-- MR 10.7.0 - FR 10.6.3 -->
-
-Up to now, one SLScripting process was used by default. From now on, by default, there will be as many SLScripting processes as SLProtocol processes.
-
-Note that is possible to configure the number of simultaneously running SLScripting processes. See [Setting the number of simultaneously running SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes).
-
-> [!IMPORTANT]
-> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
-
 #### SNMP trap binding values will now only display plain ASCII characters [ID 44527]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
@@ -45,28 +34,6 @@ Up to now, text containing characters that were encoded in extended ASCII (i.e.,
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 Because of a number of enhancements made in SLNet, trend graphs in DataMiner Cube will now also correctly display behavioral change points for table column parameters without advanced naming.
-
-#### Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]
-
-<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.7.0 - FR 10.6.3 together with 44420 -->
-
-Up to now, when an SLScripting process disappeared, elements relying on that process could become unstable, requiring manual intervention to restore functionality.
-
-From now on, when an SLScripting process disappears, a new process instance will be started automatically, and any elements that depended on the process that disappeared will be restarted to maintain consistency across SLProtocol, SLScripting, and other related components. This will ensure that lost SLScripting data is properly reinitialized and remains in sync with other processes.
-
-When an SLScripting process disappears, the following notice alarm will be generated:
-
-`Process disappearance of SLScripting.exe with PID <processId>; <x> elements affected by the disappearance have been restarted.`
-
-Also, the *SLElementsInProtocol.txt* log file has been updated to track restart reasons more accurately.
-
-- The restart reason column will now indicate either "SLScriptingCrashRestart" or "SLProtocolCrashRestart" (if everything is OK, *NormalStart* will be shown instead).
-- A new counter will now indicate the number of times the element was started due to a SLScripting process disappearance.
-
-If SLProtocol requests an SLScripting process that is no longer valid, the system will now detect this, and trigger the same element restart flow.
-
-> [!NOTE]
-> There will be a one-minute delay between the disappearance of an SLScripting process and the creation of a new SLScripting process and the subsequent element restarts. However, when one of the elements that was hosted in the SLScripting process that disappeared tries to trigger a QAction within that one-minute delay, the new SLScripting process will be created when that QAction is triggered.
 
 #### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
 
@@ -285,18 +252,6 @@ Up to 10 log files will be kept on disk, and the log file of the current instanc
 <!-- 44804: MR 10.7.0 - FR 10.6.5 -->
 
 A number of security enhancements have been made.
-
-#### SLNet will now take into account the log level before sending a log entry to SLLog [ID 44910]
-
-<!-- MR 10.7.0 - FR 10.6.5 -->
-
-Up to now, SLNet would incorrectly send all log entries directly to SLLog, including entries of which the log level dictated that they should not be added to a log file.
-
-From now on, SLNet will only send a log entry to SLLog if the log level dictates that the entry should be logged. As a result, overall performance will increase when adding entries to log files.
-
-> [!IMPORTANT]
-> This change was reverted in Main Release 10.5.0 CU12, Main Release 10.6.0, and Feature Release 10.6.3 CU1 as it caused SLNet to leak handles whenever a user authenticated using SAML and a new SLHelper process was started. See [SLNet will no longer take into account the log level before sending a log entry to SLLog [ID 44868]](xref:General_Feature_Release_10.6.3_CU1#slnet-will-no-longer-take-into-account-the-log-level-before-sending-a-log-entry-to-sllog-id-44868).
-> The change has now been reintroduced.
 
 #### Enhanced SSH logging [ID 44975]
 

@@ -119,7 +119,7 @@ Expected duration: 45 minutes
 
    ![State component](~/dataminer/images/VisioURLFeed_DashboardManualResults.png)
 
-1. In the top-right corner of the screen, click the ellipsis button, and then click *Share*.
+1. In the upper-right corner of the screen, click the ellipsis button, and then click *Share*.
 
    ![Share button](~/dataminer/images/VisioURLFeed_ShareButton.png)
 
@@ -129,7 +129,7 @@ Expected duration: 45 minutes
 
    The URL you copied will be used later in this tutorial.
 
-1. Close the pop-up window by clicking the "X" in the top-right corner.
+1. Close the pop-up window by clicking the "X" in the upper-right corner.
 
 ## Step 3: Create a new visual overview for the Generic Virtual Connector element with shapes for each numerical table index linking to the dashboard
 

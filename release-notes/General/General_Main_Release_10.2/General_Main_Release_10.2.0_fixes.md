@@ -721,9 +721,9 @@ When a Failover configuration incorrectly did not have normal heartbeats defined
 
 When, on a system that used external authentication via SAML, you tried to log in with a user account that shared its email address with another user account, up to now, an exception would be thrown. From now on, an error message will be added to the SLSAML.txt log file instead.
 
-#### DataMiner landing page: User icon no longer shown in top-right corner \[ID 32108\]
+#### DataMiner landing page: User icon no longer shown in upper-right corner \[ID 32108\]
 
-On the DataMiner landing page, the user icon would incorrectly no longer be shown in the top-right corner.
+On the DataMiner landing page, the user icon would incorrectly no longer be shown in the upper-right corner.
 
 #### Incorrect error in logging during startup of Failover setup \[ID 32112\]
 

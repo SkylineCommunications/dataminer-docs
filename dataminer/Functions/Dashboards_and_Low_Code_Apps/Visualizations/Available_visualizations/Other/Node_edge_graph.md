@@ -66,7 +66,7 @@ To **move left or right across the component**, click the graph and drag your mo
 
 ## Using dynamic coloring
 
-The component uses dynamic coloring, which can be adjusted according to preference. When you hover the mouse pointer over a node or edge, a tooltip is displayed with detailed info. Click the circle in the top-right corner of the tooltip to switch between different coloring modes for all the nodes or edges of this type:
+The component uses dynamic coloring, which can be adjusted according to preference. When you hover the mouse pointer over a node or edge, a tooltip is displayed with detailed info. Click the circle in the upper-right corner of the tooltip to switch between different coloring modes for all the nodes or edges of this type:
 
 - *Static*: Edges have no color, nodes have the color from the node settings.
 
@@ -179,7 +179,7 @@ The node edge graph component supports showing multiple layers. The following *I
 
 | Section | Subsection | Option | Description |
 |--|--|--|--|
-| N/A | `<query name>` | ![marker](~/dataminer/images/Maps_Circle_icon.png) or ![line](~/dataminer/images/Maps_Line_icon.png) | In the box representing each query, click either *Set as node* or *Set as edge*. If a query is set as node, it will move to the nodes section. If a query is set as edge, it will move to the edges section. Once a query has been set to be a node or edge, you can still change this setting by clicking the node or edge icon in the top-right corner of the query box. |
+| N/A | `<query name>` | ![marker](~/dataminer/images/Maps_Circle_icon.png) or ![line](~/dataminer/images/Maps_Line_icon.png) | In the box representing each query, click either *Set as node* or *Set as edge*. If a query is set as node, it will move to the nodes section. If a query is set as edge, it will move to the edges section. Once a query has been set to be a node or edge, you can still change this setting by clicking the node or edge icon in the upper-right corner of the query box. |
 | Nodes | `<query name>` | Node ID column | Select the column from the query that represents the node ID. |
 | Nodes | `<query name>` | X/Y | Only available when the *Node positions* layout option is set to *Linked as data*. Select the column from the query that contains the X and Y positions respectively. |
 | Nodes | Base node | Node name | This name is not displayed in the component itself, and is only intended to clarify the configuration. |
