@@ -61,3 +61,7 @@ The following issues related to linked resource pools have been resolved:
 
 - When a resource pool was edited in Resource Studio, all linked resource pools were removed in memory during initialization. When the user made other changes and click *Save*, the linked resource pools were removed completely.
 - When a new pool link was added, it was no longer possible to change to which pool it was linked.
+
+#### Categorizing a resource pool did not update the number of items in the category in the Categories app [ID 45178]
+
+In the Categories app, the number of items in each category is shown. However, when you assigned a category to a resource pool in the Resource Studio app, this number was not updated accordingly. This issue has been resolved.
