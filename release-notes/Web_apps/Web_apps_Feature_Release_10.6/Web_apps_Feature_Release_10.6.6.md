@@ -20,7 +20,30 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboards/Low-Code Apps: New 'Rich text input' component [ID 45097]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+A new basic control named *Rich text input* now allows you to enter rich text that will be exposed as HTML.
+
+Its toolbar offers the following formatting options:
+
+- Headings: Levels 1 to 4
+- Lists: Bulleted list and Numbered list
+- Blockquote
+- Code block
+- Inline text formatting: Bold (Ctrl+B), Italic (Ctrl+I), Underline (Ctrl+U), and Strikethrough
+- Hyperlinks: Insert, Edit, and Remove
+- History: Undo (Ctrl+Z) and Redo (Ctrl+Y)
+
+In the *Settings* pane for this component, you can configure the following settings:
+
+| Section | Option | Description |
+|--|--|--|
+| General | Emit value on | Determine when the value in the box becomes available as data. This can be when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change").<br>If you select *Focus lost*, the value will also become available when the user presses Enter. |
+| General | Default value | Specify the default value that will be entered into the input box when the dashboard or low-code app is opened. |
+
+Similar to all other basic controls, this new control also supports the *Set Value* component action, which sets the current value of the component to either a static or dynamic value.
 
 ## Changes
 
