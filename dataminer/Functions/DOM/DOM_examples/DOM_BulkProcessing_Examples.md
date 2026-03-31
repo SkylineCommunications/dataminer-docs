@@ -14,7 +14,7 @@ In DataMiner 10.5.0/10.5.2<!-- RN 41546 -->, the error handling has been reviewe
 > [!IMPORTANT]
 > When designing the object model, consider if a high number of `DomInstances` might need to be processed quickly or need to be provisioned. If this is the case, we recommend avoiding related actions such as [launching script actions](xref:ExecuteScriptOnDomInstanceActionSettings) and [history tracking](xref:DOM_history).
 >
-> The number of `DomInstances` that can be passed to these methods [is limited to 100](#maximum-number-of-instances). Since those related actions might outlive these CRUD calls, keep in mind that repeating these operations in succession can still impact the stability of the system.
+> The number of `DomInstances` that can be passed to these methods [is limited to 100](xref:DomHelper_class#maximum-number-of-instances). Since those related actions might outlive these CRUD calls, keep in mind that repeating these operations in succession can still impact the stability of the system.
 
 ## Creating multiple DomInstances
 
