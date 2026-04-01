@@ -33,18 +33,18 @@ Go to this tab to configure the network interface for data synchronization from 
 
 ## Heartbeats
 
-If Failover has been set to occur automatically, the “heartbeats” need to be configured on this tab.
-
-The DMAs use these heartbeats to check whether their Failover team mate is still up and running. At regular intervals, both DMAs send heartbeats to each other. When the backup Agent notices that all configured heartbeats have been failing, it will automatically go online. However, if both Agents notice that normal heartbeats are failing, no switch is performed (assuming that the Agents still have a way to communicate).
+Failover Agents use heartbeats to check whether their Failover team mate is still up and running. At regular intervals, both DMAs send heartbeats to each other. When the backup Agent notices that all configured heartbeats have been failing, it will automatically go online. However, if both Agents notice that normal heartbeats are failing, no switch is performed (assuming that the Agents still have a way to communicate).
 
 There are two types of heartbeats:
 
-- **Normal heartbeats**: An offline Agent goes online automatically when all normal heartbeats are failing.
+- **Normal heartbeats**: An offline Agent goes online automatically when all normal heartbeats are failing. Normal heartbeats should always be configured for a Failover setup, regardless of whether manual or automatic Failover is used. These will among others determine whether an Agent can go online after a restart.
 
 - **Inverted heartbeats**: An Agent goes or remains offline when all inverted heartbeats are failing. This prevents both Agents from going online simultaneously when for instance a network switch between them is down.
 
   > [!CAUTION]
-  > It is important that the inverted heartbeats are configured as well, to avoid issues with both DMAs going online the moment they can no longer contact each other. This can especially be a problem with less recent DataMiner systems.
+  >
+  > - It is important that the inverted heartbeats are configured as well, to avoid issues with both DMAs going online the moment they can no longer contact each other. This can especially be a problem with less recent DataMiner systems.
+  > - Inverted heartbeats must not be configured with the same IP address as the normal heartbeats, as doing so would create a logical conflict that would prevent both nodes from going online.
 
 Each heartbeat causes a periodical connection check:
 
@@ -53,6 +53,9 @@ Each heartbeat causes a periodical connection check:
 - **To an IP address**: A ping request is performed.
 
 For every heartbeat you configure, you can specify a maximum number of allowed failures. This way, you can keep the backup DMA from taking over each time a single heartbeat fails for one reason or another.
+
+> [!TIP]
+> For detailed information on the preferred heartbeat configuration for Failover using virtual IP addresses, refer to [Preferred configuration using virtual IP addresses (best practice)](xref:Preferred_configuration_using_virtual_IP_addresses__best_practice#four-heartbeats)
 
 ## Virtual IP Addresses
 
