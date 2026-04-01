@@ -2,10 +2,7 @@
 uid: MediaOps_Plan_1.5.4
 ---
 
-# MediaOps Plan 1.5.4 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Plan 1.5.4
 
 > [!NOTE]
 > This version requires:
@@ -21,6 +18,10 @@ uid: MediaOps_Plan_1.5.4
 ## Changes
 
 ### Enhancements
+
+#### Scheduling: Confirmation message adjusted for job with start time in the past [ID 45031]
+
+In case MediaOps Live is not installed, a change has been implemented to the message shown when a job is confirmed that has its start time in the past. While previously this message mentioned that automated actions linked to the job start would be triggered immediately, now it will show `The start time of this job is in the past. Confirming it will cause it to start running.` If MediaOps Live is installed, the message will continue to mention that confirming the job will immediately trigger the automated actions linked to the job start.
 
 #### Scheduling: Resource swapping blocked when mandatory parameters are missing for a running or confirmed job [ID 45036]
 
