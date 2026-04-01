@@ -610,6 +610,7 @@ In case you have a suggestion for a unit to be added to the list below, create a
 |MW|megawatt|
 |mW/cm^2|milliwatt per square centimeter|
 |mWb|milliweber|
+|MWh|megawatt hour|
 |N|newton|
 |nA|nanoampere|
 |nAh|nanoampere hour|
