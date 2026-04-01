@@ -7,6 +7,17 @@ uid: EnableSwarming
 > [!TIP]
 > Instead of following the procedure detailed below, you can also follow the [Enabling Swarming tutorial](xref:Swarming_Tutorial_Enable). This tutorial uses a script to check whether prerequisites are met and provides an example of how to adjust other scripts and protocols in order to prepare your system for Swarming.
 
+## Supported features
+
+In the table below, you will find the required DataMiner version and any other requirements for the currently supported Swarming features.
+
+| Feature | DataMiner version | Note |
+|---------|---------|------|
+| [Basic elements](xref:SwarmingElements) | 10.5.1/10.6.0  | Requires Swarming to be enabled globally, as detailed below. |
+| [Bookings](xref:SwarmingBookings) | 10.4.4/10.5.0 | Requires the [*SwarmingBookings* soft-launch option](xref:SwarmingBookings). Also supported when Swarming is not enabled globally. Note that the same restrictions apply as for other [soft-launch features](xref:SoftLaunchOptions). |
+| DVEs, virtual functions, and parent elements | 10.5.11/10.6.0 | No extra configuration required. Child elements cannot be swarmed directly; they follow the parent element. |
+| Automatic swarming (via [Node Recovery](xref:NodeRecovery_About)) | 10.6.0/10.6.3 | The [Node Recovery](xref:NodeRecovery_About) extension module must be [installed](xref:NodeRecovery_Installing) and [configured](xref:NodeRecovery_Triggers) to swarm on outages. |
+
 ## Prerequisites
 
 - DataMiner 10.5.1/10.6.0 or higher for swarming of basic elements. DataMiner 10.5.11/10.6.0 for swarming of DVEs or virtual function parent or child elements.

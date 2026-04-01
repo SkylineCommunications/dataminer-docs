@@ -32,18 +32,12 @@ Swarming can be enabled from DataMiner 10.5.1/10.6.0 onwards.<!-- RN 41490 --> N
 > [!IMPORTANT]
 > If you decide to [roll back Swarming](xref:SwarmingRollback) again, you will need to restore a backup to get the element XML files back. Any changes that have been implemented to elements after you enabled Swarming will be lost. As a consequence, the sooner you decide to roll back, the smaller the impact of the rollback will be.
 
-## Supported features
-
-| Feature | Version | Note |
-|---------|---------|------|
-| [Basic elements](xref:SwarmingElements) | 10.5.1/10.6.0  | Requires [Swarming](xref:EnableSwarming) to be enabled globally |
-| [Bookings](xref:SwarmingBookings) | 10.4.4/10.5.0 | Requires standalone [soft-launch option](xref:SwarmingBookings) |
-| DVEs, virtual functions and parent elements | 10.5.11/10.6.0 | No extra config required. Child elements cannot be swarmed directly; they follow the parent element |
-| Automatic Swarming (via [Node Recovery](xref:NodeRecovery_About)) | 10.6.0/10.6.3 | Requires [installing](xref:NodeRecovery_Installing) the [Node Recovery](xref:NodeRecovery_About) extension module and [configuring](xref:NodeRecovery_Triggers) it to swarm on outages |
-
 ## Upcoming features
 
 We are working on adding the following functionality soon:
 
 - Support for swarming services.
 - Support for swarming of special elements: SLA elements, enhanced services, spectrum elements, redundancy group elements, EPM elements, and elements with element connections.
+
+> [!TIP]
+> For an overview of currently supported features, refer to [Supported features](xref:EnableSwarming#supported-features).
