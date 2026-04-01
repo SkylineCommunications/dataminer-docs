@@ -8,7 +8,7 @@ On a DataMiner Agent, you can find a number of default Visio drawings. If you wa
 
 ## Overview of the default Visio templates supplied by Skyline
 
-Every DataMiner Agent is shipped with the following default Visio files.
+Every DataMiner Agent is shipped with some default Visio files.
 
 ### C:\\Skyline DataMiner\\Views\\Templates
 
@@ -16,6 +16,11 @@ Every DataMiner Agent is shipped with the following default Visio files.
 |--|--|
 | Default general-purpose drawing template | SkylineNewDrawing.vdx<br> SkylineNewDrawing.vsdx |
 | Default DataMiner stencil file | SkylineNewDrawing.vss<br> SkylineNewDrawing.vssx |
+
+The following Visio files also ship with every DataMiner Agent prior to versions 10.6.6/10.7.0.
+
+| Type of file | File name(s) |
+|--|--|
 | Stencil files containing geographical maps | United States Maps (US units).vss<br> World Maps (Metric).vss<br> World Maps (US units).vss |
 | Stencil files containing device drawings | AppearTV DC1000.vss<br> AppearTV DC1100.vss<br> AppearTV MC3000.vss<br> AppearTV MC3100.vss<br> AppearTV SC2000.vss<br> AppearTV SC2100.vss<br> BridgeTech.vss<br> Nimbra300.vss<br> Nimbra600.vss<br> NimbraNodes.vss |
 
