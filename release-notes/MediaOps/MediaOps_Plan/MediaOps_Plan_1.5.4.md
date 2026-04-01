@@ -22,6 +22,10 @@ uid: MediaOps_Plan_1.5.4
 
 ### Enhancements
 
+#### Scheduling: Confirmation message adjusted for job with start time in the past [ID 45031]
+
+In case MediaOps Live is not installed, a change has been implemented to the message shown when a job is confirmed that has its start time in the past. While previously this message mentioned that automated actions linked to the job start would be triggered immediately, now it will show `The start time of this job is in the past. Confirming it will cause it to start running.` If MediaOps Live is installed, the message will continue to mention that confirming the job will immediately trigger the automated actions linked to the job start.
+
 #### Scheduling: Resource swapping blocked when mandatory parameters are missing for a running or confirmed job [ID 45036]
 
 Up to now, it was always possible to swap a resource for a confirmed or running job. Now this will no longer be possible in case mandatory parameters are missing. Before being able to swap the resource, the user will have to provide the values for these parameters via the red hand icon in the swap panel. Only after all mandatory information has been provided, will the user be able to swap the resource.
