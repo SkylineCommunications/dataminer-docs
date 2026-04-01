@@ -69,6 +69,12 @@ If SLProtocol requests an SLScripting process that is no longer valid, the syste
 > [!NOTE]
 > There will be a one-minute delay between the disappearance of an SLScripting process and the creation of a new SLScripting process and the subsequent element restarts. However, when one of the elements that was hosted in the SLScripting process that disappeared tries to trigger a QAction within that one-minute delay, the new SLScripting process will be created when that QAction is triggered.
 
+#### BrokerGateway installer will now give a clear indication when .NET is missing [ID 45169]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When you install the BrokerGateway DxM on a server that does not have the Microsoft .NET hosting bundle installed yet, from now on, a message will appear, saying that .NET has to be installed first.
+
 ### Fixes
 
 #### Alarm squashing: Alarm would incorrectly not show up in the Alarm Console when the element had been restarted and the AlarmsPerParameter limit was exceeded [ID 45063]

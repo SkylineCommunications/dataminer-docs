@@ -26,7 +26,11 @@ uid: General_Main_Release_10.5.0_CU15
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### BrokerGateway installer will now give a clear indication when .NET is missing [ID 45169]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When you install the BrokerGateway DxM on a server that does not have the Microsoft .NET hosting bundle installed yet, from now on, a message will appear, saying that .NET has to be installed first.
 
 ### Fixes
 
