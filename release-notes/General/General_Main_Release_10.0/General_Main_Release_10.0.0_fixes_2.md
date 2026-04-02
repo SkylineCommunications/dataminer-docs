@@ -343,7 +343,7 @@ When multiple profile instances or profile definitions containing an empty field
 
 When you made the Alarm Console smaller and then restored it to its original size, in some cases, the entire console would become blank.
 
-#### DataMiner Cube: Problem when displaying dialog box while window/scroll bar thumb is dragged \[ID 24383\]
+#### DataMiner Cube: Problem when displaying dialog box while window/scrollbar thumb is dragged \[ID 24383\]
 
 In the XBAP version of DataMiner Cube, if a dialog box was displayed while a user was dragging a window or a scrollbar thumb, a problem could cause Cube to freeze.
 

@@ -366,7 +366,7 @@ In some cases, when an interactive automation script detached on closure, an exc
 
 When multiple bookings started at the same time, and each of those bookings required function DVE elements to be enabled, in some cases, the start of the bookings would be delayed.
 
-#### Dashboards - Table component: Problem with scroll bars when using Firefox \[ID 29892\]
+#### Dashboards - Table component: Problem with scrollbars when using Firefox \[ID 29892\]
 
 When Mozilla Firefox was used, the table component would show scrollbars even in situations where it was not necessary.
 

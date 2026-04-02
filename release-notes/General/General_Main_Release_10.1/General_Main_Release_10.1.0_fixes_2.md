@@ -132,7 +132,7 @@ In some cases, it could occur that a pivot table component only retrieved data f
 
 When, in the *Profiles* app, you duplicated a profile parameter of type “discrete” and discreteType “number”, in some cases, the discreteType and the raw discrete values would not be copied correctly.
 
-#### Dashboards app: Double scroll bars in dashboard with State component \[ID 27272\]
+#### Dashboards app: Double scrollbars in dashboard with State component \[ID 27272\]
 
 If a dashboard contained a State component, in some cases double scrollbars could be displayed.
 

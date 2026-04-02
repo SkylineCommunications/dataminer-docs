@@ -263,7 +263,7 @@ Up to now, when a client using polling instead of WebSockets had disconnected, t
 
 From now on, when a user closes a tab or a page containing a GQI query, the corresponding GQI session will be closed within maximum 5 minutes.
 
-#### Dashboards app & Low-Code Apps: Web component would display scroll bars when all content fitted inside [ID 38821]
+#### Dashboards app & Low-Code Apps: Web component would display scrollbars when all content fitted inside [ID 38821]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
