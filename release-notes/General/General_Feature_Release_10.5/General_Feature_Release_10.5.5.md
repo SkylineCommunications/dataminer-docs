@@ -319,11 +319,11 @@ Also, a status label will now indicate whether debug logging is enabled or disab
 > - The above-mentioned status label will show "Enabled" when a level-6 override is present. If all log files have level 6 by default, the status label will show "Disabled" until you add an override.
 > - Enabling debug logging may significantly increase the amount of logging that is written to disk.
 
-#### New log viewer web page [ID 42533]
+#### New log viewer webpage [ID 42533]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-Up to now, client applications like DataMiner Cube used the *ViewLog.asp* web page to display server-side log files. This web page has now been replaced by the *ViewLog.aspx* web page.
+Up to now, client applications like DataMiner Cube used the *ViewLog.asp* webpage to display server-side log files. This webpage has now been replaced by the *ViewLog.aspx* webpage.
 
 This new log viewer page has improved compatibility with Failover setups and better error handling for HTTPS certificates.
 

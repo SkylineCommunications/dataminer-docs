@@ -196,7 +196,7 @@ The token counters will be updated every 10 seconds.
 
 The DataMiner application framework allows you to create custom low-code applications that interact with data from a DataMiner System or an external source.
 
-These applications can be created on the root web page of a DataMiner System and can be organized into sections. To place an application in one or more specific sections, open the App.info.json file in the correct application folder (C:\\Skyline DataMiner\\applications\\APP_ID) and add the section names to the Sections array.
+These applications can be created on the root webpage of a DataMiner System and can be organized into sections. To place an application in one or more specific sections, open the App.info.json file in the correct application folder (C:\\Skyline DataMiner\\applications\\APP_ID) and add the section names to the Sections array.
 
 ##### Pages and panels
 

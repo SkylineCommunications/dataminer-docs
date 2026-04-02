@@ -176,7 +176,7 @@ Also, in the GQI query builder, in some cases, the default columns would be sort
 
 #### Dashboards app: Problem when embedding a GQI dashboard component \[ID 28874\]
 
-When an individual GQI dashboard component was embedded into Visual Overview or a web page, in some cases, the URL of that component would not contain all necessary information to run a GQI query.
+When an individual GQI dashboard component was embedded into Visual Overview or a webpage, in some cases, the URL of that component would not contain all necessary information to run a GQI query.
 
 #### Problem when saving a job or a DomInstance with a section that referred to a non-existing SectionDefinition \[ID 28908\]
 
@@ -667,7 +667,7 @@ In some cases, an exception could be thrown when you opened a histogram.
 
 #### Web apps: 'Refresh now' instead of 'Reconnecting...' message after communication was interrupted \[ID 31753\]
 
-Up now on, when a web app (e.g., Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the web page.
+Up now on, when a web app (e.g., Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the webpage.
 
 #### Failover: DataMiner modules would incorrectly consider the local IP address of the online agent as the primary IP address of the Failover setup \[ID 31756\]
 

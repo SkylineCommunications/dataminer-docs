@@ -228,7 +228,7 @@ In some cases, the URL of a dashboard would incorrectly not be updated when you 
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-In some cases, a *Web* component would not render a web page correctly when the URL pointed to an untrusted source.
+In some cases, a *Web* component would not render a webpage correctly when the URL pointed to an untrusted source.
 
 #### Dashboards app: Problem when renaming a dashboard folder after having renamed its parent folder [ID 40688]
 

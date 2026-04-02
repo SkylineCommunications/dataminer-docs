@@ -110,7 +110,7 @@ Currently, the following components can be added to a dashboard.
     | Group\]         | Displays a group of components. This allows you to display the same set of components for each item in a group feed, for example for each parameter in a group of parameters.                     |
     | Image           | Shows an image. Note: This component not only allows you to select an image that was uploaded earlier, it also allows you to upload new images.                                               |
     | Text            | Shows a block of static text. In the *Layout* tab, you can configure the styling of the text (font, font size, bold, italic, underline, horizontal alignment). |
-    | Web             | Displays either a block of static HTML or a web page.                                                                                                                                             |
+    | Web             | Displays either a block of static HTML or a webpage.                                                                                                                                             |
 
 - States
 

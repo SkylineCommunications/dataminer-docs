@@ -124,7 +124,7 @@ When a page that was displayed in a VdxPage window of type “Popup” contained
 
 #### Problems with embedded dashboards components \[ID 32782\]
 
-When a GQI component was embedded in a Visio drawing or a web page, in some cases, that component would not be rendered correctly. Also, in some cases, embedded dashboard components would not be able to retrieve data from the database.
+When a GQI component was embedded in a Visio drawing or a webpage, in some cases, that component would not be rendered correctly. Also, in some cases, embedded dashboard components would not be able to retrieve data from the database.
 
 #### DataMiner Cube - Resources app: No resources or resource pools would be loaded when opening the Resources app \[ID 32790\]
 

@@ -373,7 +373,7 @@ From now on, when a DataMiner upgrade is performed on a system containing a Mode
 By default, SLNet will now pass the following updated company information to client applications:
 
 - Company website: <https://www.skyline.be>
-- TechSupport web page: [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support)
+- Support webpage: [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support)
 - TechSupport email address: <support@dataminer.services>
 
 #### OpenSearch: auto_expand_replicas with minimum 0 and maximum 2 [ID 43179]

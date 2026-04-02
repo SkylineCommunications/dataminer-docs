@@ -171,9 +171,9 @@ When the domain server was not available, DataMiner would incorrectly remove all
 
 When a DMA temporarily lost its connection to another DMA, in some cases, remote connections of other DMAs would incorrectly also get removed from its local cache.
 
-#### DataMiner Cube - Visual Overview: An authentication popup would incorrectly appear when a browser shape with the UseChrome option set linked to a web page on the DMA \[ID 28782\]
+#### DataMiner Cube - Visual Overview: An authentication popup would incorrectly appear when a browser shape with the UseChrome option set linked to a webpage on the DMA \[ID 28782\]
 
-When, in a visual overview, an embedded browser shape with the UseChrome option set linked to a web page on the DataMiner Agent, in some cases, an authentication popup would incorrectly appear.
+When, in a visual overview, an embedded browser shape with the UseChrome option set linked to a webpage on the DataMiner Agent, in some cases, an authentication popup would incorrectly appear.
 
 #### Problems caused by DMS.xml containing multiple addresses referring to the same DataMiner Agent \[ID 28793\]
 

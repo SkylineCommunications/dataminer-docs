@@ -468,7 +468,7 @@ In a trend graph, up to now, a dropdown list in the upper-right corner allowed y
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
-When an embedded web page is displayed in Cube, it is possible to make a callback from the web page into Cube and, for example, open an element, service, view or CPE card.
+When an embedded webpage is displayed in Cube, it is possible to make a callback from the webpage into Cube and, for example, open an element, service, view or CPE card.
 
 The existing JavaScript web browser callbacks for browser shapes in Visual Overview have now been extended to allow opening an EPM card in Cube via an object’s SystemName or SystemType using the following method:
 

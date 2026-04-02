@@ -448,7 +448,7 @@ When an update of an SLA setting (e.g., Base timestamp, Monitor span, Window siz
 
 #### Web apps: 'Refresh now' instead of 'Reconnecting...' message after communication was interrupted \[ID 31753\]
 
-Up now on, when a web app (e.g., Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the web page.
+Up now on, when a web app (e.g., Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the webpage.
 
 #### DataMiner Cube - Alarm Console: No context menu would appear when right-clicking an instance of an alarm that impacted more than one service when the alarms were grouped by service \[ID 31764\]
 

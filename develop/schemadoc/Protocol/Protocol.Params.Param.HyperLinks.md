@@ -19,4 +19,4 @@ right-click an alarm of the parameter in question.
 
 ## Remarks
 
-These custom commands are often hyperlinks pointing to a web page or an automation script.
+These custom commands are often hyperlinks pointing to a webpage or an automation script.

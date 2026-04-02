@@ -318,9 +318,9 @@ The following fields have been removed from the *DMAScatterAxisInfo* object:
 
 Due to a number of enhancements, overall performance has increased when updating active function definitions.
 
-#### Annotation web pages now contain an explicit UTF-8 character encoding declaration \[ID 24555\]
+#### Annotation webpages now contain an explicit UTF-8 character encoding declaration \[ID 24555\]
 
-From now on, the annotation web pages will contain the following explicit UTF-8 character encoding declaration:
+From now on, the annotation webpages will contain the following explicit UTF-8 character encoding declaration:
 
 ```xml
 <meta charset="utf-8">

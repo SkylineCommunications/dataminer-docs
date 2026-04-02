@@ -103,7 +103,7 @@ Up to now, alarms that did not contain any focus information were not allowed to
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-When an embedded web page is displayed in Cube, it is possible to make a callback from the web page into Cube and, for example, open an element, service, view or CPE card.
+When an embedded webpage is displayed in Cube, it is possible to make a callback from the webpage into Cube and, for example, open an element, service, view or CPE card.
 
 The existing JavaScript web browser callbacks for browser shapes in Visual Overview have now been extended to allow opening an EPM card in Cube via an object's SystemName or SystemType using the following method:
 
