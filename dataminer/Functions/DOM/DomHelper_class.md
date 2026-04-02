@@ -272,6 +272,9 @@ foreach (var doc in results)
 }
 ```
 
+> [!NOTE]
+> To use the `DomHelper.DomInstances.Read(FilterElement<DomInstance>, SelectedFields<DomInstance>);` method, it requires a using statement with `using Skyline.DataMiner.Net.Messages;`.
+
 ##### Example: Reading selected fields page by page
 
 Similar to the read example, the selected fields can be used for a paged read. In the example, the default preferred page size of 500 items will be used, but a different page size can be set.
