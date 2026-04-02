@@ -324,3 +324,9 @@ From now on, trend records with the following *iStatus* values will no longer ca
 <!-- MR 10.7.0 - FR 10.6.5 -->
 
 Up to now, flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours.
+
+#### SLWatchdog to incorrectly interpret processes being stopped during a DataMiner shutdown as a crash [ID 45115]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When DataMiner is shutting down, processes are expected to be stopped. However, up to now, the tracking in SLWatchdog would not be cleaned correctly, causing certain processes to still be monitored. When these processes eventually stopped, SLWatchdog would incorrectly interpret this as a crash, which would then trigger a number of crash detection features, such as notifying CDMR or attempting to perform a full restart.
