@@ -4,7 +4,7 @@ uid: SRM_launching_service_profile_wizard
 
 # Launching the Service Profile Booking Wizard from a custom script
 
-You can configure a custom front-end script to launch the Service Profile Booking Wizard.
+You can configure a custom frontend script to launch the Service Profile Booking Wizard.
 
 The example below shows the basic configuration for this.
 

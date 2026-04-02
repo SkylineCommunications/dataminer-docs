@@ -12,7 +12,7 @@ New aggregation operations were added to the hub, market, network, CCAP, service
 
 #### Option to show/hide PNM on Node Segment map [ID 34387]
 
-Both on the *Configuration* page of the Skyline EPM Platform element and in the front-end EPM visual overview, a toggle button is now available that can be used to show or hide the PNM layers on the Node Segment map.
+Both on the *Configuration* page of the Skyline EPM Platform element and in the frontend EPM visual overview, a toggle button is now available that can be used to show or hide the PNM layers on the Node Segment map.
 
 #### Alarm color for total alarm statistics represented by colored circles in EPM visual overviews [ID 35451] [ID 35483]
 
@@ -22,7 +22,7 @@ For the Skyline EPM Platform visual overview, the alarm statistics are shown bot
 
 #### Status parameter for CM QAM US/DS tables added [ID 35369]
 
-The Status parameter present in the CM QAM US/DS tables in the Generic CM Collector has now been added to all CCAPs and to the EPM back end and front end. In the front end, a filter has also been added that only shows the active channels for a cable modem.
+The Status parameter present in the CM QAM US/DS tables in the Generic CM Collector has now been added to all CCAPs and to the EPM backend and frontend. In the frontend, a filter has also been added that only shows the active channels for a cable modem.
 
 #### US QAM Channel Time Offset calculation updated [ID 35505]
 
@@ -38,11 +38,11 @@ For other DOCSIS versions, it is calculated as follows: Time Offset = Upstream t
 
 #### Maps with PNM layer moved to Node Segment layer [ID 34390]
 
-The maps implementation with PNM layer has been moved from the Service Group layer to the Node Segment layer. Maps now retrieve data directly from the CCAP/collector elements instead of the front end.
+The maps implementation with PNM layer has been moved from the Service Group layer to the Node Segment layer. Maps now retrieve data directly from the CCAP/collector elements instead of the frontend.
 
-#### Provisioning now by default enabled after back end restart [ID 34480]
+#### Provisioning now by default enabled after backend restart [ID 34480]
 
-When the back end was restarted, up to now, provisioning was disabled by default. Now it will be enabled by default. The Provisioning parameter is now also available on the Configuration page in Visual Overview.
+When the backend was restarted, up to now, provisioning was disabled by default. Now it will be enabled by default. The Provisioning parameter is now also available on the Configuration page in Visual Overview.
 
 #### Support for maps on passive levels [ID 35022]
 

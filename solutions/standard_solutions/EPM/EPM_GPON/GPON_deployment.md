@@ -72,9 +72,9 @@ To deploy the xPON branch of the EPM Solution:
      > [!IMPORTANT]
      > The DataMiner element names must match the OLT names defined in SNMP. This is required to properly link the topology visuals to the elements. To rename an OLT Platform element, first change the user-defined OLT name in SNMP to the new name, then rename the element in DataMiner Cube to match the new name.
 
-   - **Back-end EPM elements**, in the *System* > *DataMiner EPM* > *EPM BE* view.
+   - **Backend EPM elements**, in the *System* > *DataMiner EPM* > *EPM BE* view.
 
-   - A **front-end EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
+   - A **frontend EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
 
    - **System elements**, as necessary, in the *System* view. You can name these elements as you see fit. If you add any MS/LX Platform elements, add these in a *DMS* subview of the *System* view.
 

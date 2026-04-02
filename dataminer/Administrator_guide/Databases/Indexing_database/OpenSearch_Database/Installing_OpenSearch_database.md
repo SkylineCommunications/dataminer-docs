@@ -415,7 +415,7 @@ To configure TLS, instead of using .pem certificates as recommended in the [Open
 To configure OpenSearch Dashboards to use .p12 files, add the following to `/etc/opensearch-dashboards/opensearch_dashboards.yml`:
 
 ```yaml
-# OpenSearch Dashboards is served by a back end server. This setting specifies the port to use.
+# OpenSearch Dashboards is served by a backend server. This setting specifies the port to use.
 server.port: 5601
 
 # Specifies the address to which the OpenSearch Dashboards server will bind. IP addresses and host names are both valid values.

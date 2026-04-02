@@ -5,9 +5,9 @@ keywords: I-DOCSIS GQI integration
 
 # Integrated DOCSIS GQI integration
 
-Because of the aggregative nature of EPM, many of the tables in the front-end element have no data of their own. To query the information using GQI, you need to query the actual location where the data resides. Below is a table showing where the information of the different data levels resides.
+Because of the aggregative nature of EPM, many of the tables in the frontend element have no data of their own. To query the information using GQI, you need to query the actual location where the data resides. Below is a table showing where the information of the different data levels resides.
 
-| EPM Level | Front end (Skyline EPM Platform) | Back end (Skyline EPM Platform DOCSIS) |
+| EPM Level | Frontend (Skyline EPM Platform) | Backend (Skyline EPM Platform DOCSIS) |
 | :---: | :---: | :---: |
 | Network | X | - |
 | Market | X | - |

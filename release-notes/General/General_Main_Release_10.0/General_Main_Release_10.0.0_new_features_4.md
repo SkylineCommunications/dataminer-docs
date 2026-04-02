@@ -752,9 +752,9 @@ Example:
 </Topologies>
 ```
 
-A typical CPE environment usually contains one front-end manager element and multiple back-end manager elements. All those elements, which contain the same CPE topology and refer to the same data in the background, will by default be polled by the CPE crawler.
+A typical CPE environment usually contains one frontend manager element and multiple backend manager elements. All those elements, which contain the same CPE topology and refer to the same data in the background, will by default be polled by the CPE crawler.
 
-To force the CPE crawler to only poll the front-end manager element, indicate which of the manager elements is the front-end manager. You can do this by adding to it a parameter of type “double” named “ElementManagerType”, and set its value to “1”.
+To force the CPE crawler to only poll the frontend manager element, indicate which of the manager elements is the frontend manager. You can do this by adding to it a parameter of type “double” named “ElementManagerType”, and set its value to “1”.
 
 > [!NOTE]
 >

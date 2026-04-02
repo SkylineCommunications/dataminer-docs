@@ -26,20 +26,20 @@ Several improvements have been implemented to the EPM managers:
 
 - To improve performance, the volatile option has been added to the *CM Overview*, *CM QAM US*, *CM QAM DS* and *Subscribers Overview* table. This will prevent primary keys, display keys, and foreign keys from being saved in the database automatically.
 - To improve performance, a new buffer system is now used for the reset and import/export logic, so that one CCAP-CM pair is handled at a time instead of all being handled at once.
-- A daily reset is now triggered by the front-end element to ensure that the system remains up to date with the current state of the devices.
+- A daily reset is now triggered by the frontend element to ensure that the system remains up to date with the current state of the devices.
 
-#### General improvements for EPM front-end element \[ID 32966\]
+#### General improvements for EPM frontend element \[ID 32966\]
 
 The following general improvements have been implemented in the Skyline EPM Platform connector:
 
-- To improve consistency, the *DOCSIS Number Market*, *DOCSIS Number Hub*, *DOCSIS Number CCAP* and *DOCSIS Number CM* parameters on the *General* page of the EPM front-end element are now filled in based on the *DOCSIS Network Overview* table.
+- To improve consistency, the *DOCSIS Number Market*, *DOCSIS Number Hub*, *DOCSIS Number CCAP* and *DOCSIS Number CM* parameters on the *General* page of the EPM frontend element are now filled in based on the *DOCSIS Network Overview* table.
 - To improve performance, passive logic during a reset is now processed after all CCAP-CM pairs have been processed.
 
-#### General improvements for EPM back-end element \[ID 32967\]
+#### General improvements for EPM backend element \[ID 32967\]
 
 The following general improvements have been implemented in the Skyline EPM Platform connector:
 
-- To improve consistency, the *Number CCAP* and *Number CM* parameters on the *General* page of the EPM back-end element are now filled in based on the *CCAP Core Overview* table.
+- To improve consistency, the *Number CCAP* and *Number CM* parameters on the *General* page of the EPM backend element are now filled in based on the *CCAP Core Overview* table.
 - To improve performance, passive logic during a reset is now processed after all CCAP-CM pairs have been processed.
 
 ### Fixes

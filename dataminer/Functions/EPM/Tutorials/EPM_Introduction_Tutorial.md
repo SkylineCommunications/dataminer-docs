@@ -45,9 +45,9 @@ This tutorial consists of the following steps:
 
    - A **view** named *EPM Training*.
 
-   - A **front-end element** named *EPM Training FE*.
+   - A **frontend element** named *EPM Training FE*.
 
-   - Two **back-end elements** named *EPM Training BE 1* and *EPM Training BE 2*.
+   - Two **backend elements** named *EPM Training BE 1* and *EPM Training BE 2*.
 
    - Three **collector elements** named *EPM Training Collector 1*, *EPM Training Collector 2*, and *EPM Training Collector 3*.
 
@@ -60,7 +60,7 @@ This tutorial consists of the following steps:
 
 ## Step 2: Create a new collector element and rebalance the system
 
-The EPM architecture allows horizontal scaling: you can add more collector elements at any time to reduce the load on individual elements without adding any load to the front-end element. In this step, you will add such a collector element and then rebalance the system.
+The EPM architecture allows horizontal scaling: you can add more collector elements at any time to reduce the load on individual elements without adding any load to the frontend element. In this step, you will add such a collector element and then rebalance the system.
 
 1. Create a new collector element in the *EPM Training* view:
 
@@ -85,23 +85,23 @@ The EPM architecture allows horizontal scaling: you can add more collector eleme
 
    1. Paste the DMA ID/element ID you copied earlier into the *Add Collector Element* box, and click *SET* (4).
 
-   ![Collectors tab back-end element](~/dataminer/images/EPM_GS_step_2_3.png)
+   ![Collectors tab backend element](~/dataminer/images/EPM_GS_step_2_3.png)
 
-1. Register the new element in the front-end configuration:
+1. Register the new element in the frontend configuration:
 
    1. Open the **Topology** app (1), select the *Configuration* topology chain (2), and click the ">" button (3).
 
       ![Topology chain](~/dataminer/images/EPM_Tutorial_Topology_Chain.png)
 
-      This will open the *Configuration* visual page of the EPM front-end element.
+      This will open the *Configuration* visual page of the EPM frontend element.
 
    1. On the *Configuration* visual page (1), go the *Collectors* tab (2).
 
-      ![Collectors tab front-end element](~/dataminer/images/EPM_GS_step_2_4.png)
+      ![Collectors tab frontend element](~/dataminer/images/EPM_GS_step_2_4.png)
 
    1. Paste the DMA ID/element ID you copied earlier into the *Add Collector Element* box, and click *SET* (3).
 
-1. Initiate the front-end provisioning cycle:
+1. Initiate the frontend provisioning cycle:
 
    1. Navigate to the *General* tab (1) of the *EPM Training FE* element.
 
@@ -151,7 +151,7 @@ The system should now have a large decrease in critical alarms.
 
 ## Step 4: Use the EPM feed in a dashboard
 
-In dashboards and low-code apps, you can add an EPM feed component to allow users to select an EPM filter. This component should always be linked to a front-end EPM manager element. While the steps below describe how you can do this in a dashboard, this is very similar in a low-code app.
+In dashboards and low-code apps, you can add an EPM feed component to allow users to select an EPM filter. This component should always be linked to a frontend EPM manager element. While the steps below describe how you can do this in a dashboard, this is very similar in a low-code app.
 
 1. [Open the DataMiner Dashboards app](xref:Accessing_the_web_apps).
 
@@ -181,7 +181,7 @@ In dashboards and low-code apps, you can add an EPM feed component to allow user
 
    ![EPM feed component](~/dataminer/images/EPM_GS_step_4_2.png)
 
-1. Link the component to the front-end element:
+1. Link the component to the frontend element:
 
    1. In the *Data* pane on the right, expand the *Elements* item and select *EPM Training FE*.
 
@@ -271,7 +271,7 @@ In this final step, you will learn how you can link EPM entities to views in Dat
 
    ![South Beach view](~/dataminer/images/EPM_GS_step_5_1.png)
 
-1. Update the views in the front-end element:
+1. Update the views in the frontend element:
 
    1. In the Topology app, select the *Configuration* topology chain, and click the ">" button.
 
