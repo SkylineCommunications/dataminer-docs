@@ -188,6 +188,8 @@ A high-speed network is required to be able to transfer the data between the dif
 
 We recommend installing Cassandra on Linux. In fact, from Cassandra 4.0 and DataMiner 10.4.x onwards, only Linux is supported.
 
+For information on compatibility between specific Cassandra versions and operating system versions or builds, refer to the official Cassandra documentation.
+
 #### Time
 
 If there is more than one Cassandra node, the time in the cluster must be synchronized (NTP).
@@ -228,3 +230,5 @@ Gigabit Ethernet is required for throughput, and low latency is required for eas
 We recommend installing OpenSearch on Linux. While OpenSearch is compatible with Windows (see [Operating system compatibility](https://opensearch.org/docs/2.2/install-and-configure/install-opensearch/index/#operating-system-compatibility)), this setup is not covered in our testing and therefore not recommended.
 
 Elasticsearch can be installed on the operating system of your choice, under the condition that it is supported by Elastic. A 64-bit OS is preferred.
+
+For information on compatibility between specific OpenSearch/Elasticsearch versions and operating system versions or builds, refer to the official database vendor documentation.
