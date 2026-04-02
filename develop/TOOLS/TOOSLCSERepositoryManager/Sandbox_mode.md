@@ -9,7 +9,7 @@ uid: Sandbox_mode
 
 The SLC SE Repo Manager tool supports a "Sandbox" mode that allows you to experiment with the different operations.
 
-To enable or disable Sandbox mode, go to *Tools* > *Options* and select or clear the check box *Sandbox Mode*.
+To enable or disable Sandbox mode, go to *Tools* > *Options* and select or clear the checkbox *Sandbox Mode*.
 
 When Sandbox mode is activated, the window has a pink border. In Sandbox mode, only one vendor is shown in the tree control: *SLCSandbox*.
 
