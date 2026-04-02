@@ -8,16 +8,18 @@ On a DataMiner Agent, you can find a number of default Visio drawings. If you wa
 
 ## Overview of the default Visio templates supplied by Skyline
 
-Every DataMiner Agent is shipped with some default Visio files.
+Every DataMiner Agent is shipped with some default Visio files, as detailed below.
 
 ### C:\\Skyline DataMiner\\Views\\Templates
+
+The latest DataMiner versions are shipped with the following default template files:
 
 | Type of file | File name(s) |
 |--|--|
 | Default general-purpose drawing template | SkylineNewDrawing.vdx<br> SkylineNewDrawing.vsdx |
 | Default DataMiner stencil file | SkylineNewDrawing.vss<br> SkylineNewDrawing.vssx |
 
-The following Visio files also ship with every DataMiner Agent prior to versions 10.6.6/10.7.0.
+DataMiner versions prior to 10.6.6/10.7.0 also include the following older template files:
 
 | Type of file | File name(s) |
 |--|--|
