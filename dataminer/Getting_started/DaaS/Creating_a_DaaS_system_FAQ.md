@@ -1,6 +1,7 @@
 ---
 uid: Creating_a_DaaS_system_FAQ
-keywords: cloud faq daas
+description: Get answers to common questions about DaaS setup, trial and upgrade options, backups, redundancy, security, hosting regions, and more.
+keywords: cloud FAQ, DaaS
 ---
 
 # Frequently asked questions related to DaaS
@@ -104,12 +105,12 @@ Additional query costs may be due when using e.g., Azure ExpressRoute or Amazon 
 
 User management on DaaS systems is similar to that on on-premises systems. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
 
-To configure external authentication, you can contact <daas@dataminer.services> to assist in setting up the DataMiner part of the configuration, as this requires [making changes to configuration files on the DataMiner server](xref:Creating_a_DaaS_system_FAQ#how-can-i-make-changes-to-configuration-files-on-the-dataminer-server).
+To configure external authentication, contact <daas@dataminer.services> for assistance to set up the DataMiner part of the configuration, as this requires [making changes to configuration files on the DataMiner server](xref:Creating_a_DaaS_system_FAQ#how-can-i-make-changes-to-configuration-files-on-the-dataminer-server).
 
 See also: [User management](xref:User_management).
 
 > [!NOTE]
-> A DaaS system can never be part of a domain, therefore it cannot make use of the active directory integration for user management.
+> A DaaS system can never be part of a domain; therefore it cannot make use of active directory integration for user management.
 
 ### Are there specific limitations that apply for DaaS?
 
