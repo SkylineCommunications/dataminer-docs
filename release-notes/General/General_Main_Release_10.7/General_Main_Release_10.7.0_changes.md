@@ -278,6 +278,36 @@ Previously, when a script library was added to a DataMiner System, its hint path
 
 From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
 
+#### DataMiner upgrade: A number of default Visio stencils will now be removed [ID 45202]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+From now on, a DataMiner upgrade package will no longer contain the following Visio stencil files:
+
+- AppearTV DC1000.vss
+- AppearTV DC1100.vss
+- AppearTV MC3000.vss
+- AppearTV MC3100.vss
+- AppearTV SC2000.vss
+- AppearTV SC2100.vss
+- BridgeTech.vss
+- Nimbra300.vss
+- Nimbra600.vss
+- NimbraNodes.vss
+- United States Maps (US units).vss
+- World Maps (Metric).vss
+- World Maps (US units).vss
+
+Note that the following stencil files will still be deployed:
+
+- Buttons.vssm
+- Icons.vssx
+- KPI.vssm
+- SkylineNewDrawing.vsdx
+
+> [!NOTE]
+> The above-mentioned stencil files that are no longer included in DataMiner upgrade packages will not automatically be removed from existing systems.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
@@ -324,9 +354,3 @@ From now on, trend records with the following *iStatus* values will no longer ca
 <!-- MR 10.7.0 - FR 10.6.5 -->
 
 Up to now, flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours.
-
-#### SLWatchdog to incorrectly interpret processes being stopped during a DataMiner shutdown as a crash [ID 45115]
-
-<!-- MR 10.7.0 - FR 10.6.6 -->
-
-When DataMiner is shutting down, processes are expected to be stopped. However, up to now, the tracking in SLWatchdog would not be cleaned correctly, causing certain processes to still be monitored. When these processes eventually stopped, SLWatchdog would incorrectly interpret this as a crash, which would then trigger a number of crash detection features, such as notifying CDMR or attempting to perform a full restart.
