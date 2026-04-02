@@ -55,7 +55,7 @@ Each heartbeat causes a periodical connection check:
 For every heartbeat you configure, you can specify a maximum number of allowed failures. This way, you can keep the backup DMA from taking over each time a single heartbeat fails for one reason or another.
 
 > [!TIP]
-> For detailed information on the preferred heartbeat configuration for Failover using virtual IP addresses, refer to [Preferred configuration using virtual IP addresses (best practice)](xref:Preferred_configuration_using_virtual_IP_addresses__best_practice#four-heartbeats)
+> For detailed information on the preferred heartbeat configuration, refer to [Failover configuration in Cube](xref:Failover_configuration_in_Cube)
 
 ## Virtual IP Addresses
 
