@@ -273,7 +273,7 @@ foreach (var doc in results)
 ```
 
 > [!NOTE]
-> To use the `DomHelper.DomInstances.Read(FilterElement<DomInstance>, SelectedFields<DomInstance>);` method, it requires a using statement with `using Skyline.DataMiner.Net.Messages;`.
+> To use the `DomHelper.DomInstances.Read(FilterElement<DomInstance>, SelectedFields<DomInstance>);` method, a using statement with `using Skyline.DataMiner.Net.Messages;` is required.
 
 ##### Example: Reading selected fields page by page
 
