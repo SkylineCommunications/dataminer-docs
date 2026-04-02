@@ -30,6 +30,6 @@ An oscilloscope shows the evolution of a parameter value on a time scale.
 
 - On the Y-axis, you can find the units, as well as the minimum and maximum value of the oscilloscope’s range.
 
-- New values enter on the right-hand side of the oscilloscope.
+- New values enter the oscilloscope from the right.
 
 - When the parameter is monitored, vertical colored bars will appear to indicate when a parameter was in a certain alarm state.

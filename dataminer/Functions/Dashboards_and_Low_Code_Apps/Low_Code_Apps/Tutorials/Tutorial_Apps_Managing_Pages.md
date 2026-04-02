@@ -75,7 +75,7 @@ Expected duration: 5 minutes.
 
    ![Web component](~/dataminer/images/WebComponent.png)
 
-1. Select the component you have added, go to the *Settings* pane on the right-hand side, and add HTML content in the *HTML* box:
+1. Select the component you have added, go to the *Settings* pane on the right, and add HTML content in the *HTML* box:
 
    ![HTML content](~/dataminer/images/WebComponentContent.png)
 

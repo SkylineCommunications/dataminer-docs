@@ -49,9 +49,9 @@ In the table editor, ColumnOption types unknown to DIS will no longer be updated
 
 ### Fixes
 
-#### Display editor: Problem when dragging a parameter to a page with an empty left-hand column \[ID 16294\]
+#### Display editor: Problem when dragging a parameter to a page with an empty column on the left \[ID 16294\]
 
-In some cases, an exception could be thrown when you dragged a parameter to a page of which the left-hand column was empty. This problem has now been fixed.
+In some cases, an exception could be thrown when you dragged a parameter to a page of which the column on the left was empty. This problem has now been fixed.
 
 #### QAction editor: Problem with synchronization of a QAction C# project linked to a protocol.xml file \[ID 16503\]
 

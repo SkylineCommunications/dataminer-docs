@@ -117,7 +117,7 @@ In case of a numeric parameter with exceptions, an alarm template allows you to 
 
 #### SLProtocol would evaluate certain conditions incorrectly \[ID 31129\]
 
-When a condition defined in a protocol contained an operator like +, -, \*, /, etc. at the right-hand side but no parentheses, the operation would be applied to the left-hand side, causing SLProtocol to evaluate the condition incorrectly.
+When a condition defined in a protocol contained an operator like +, -, \*, /, etc. on the right but no parentheses, the operation would be applied to the left side, causing SLProtocol to evaluate the condition incorrectly.
 
 In the following example, 20 would incorrectly be added to parameter 2002 instead of parameter 2001.
 

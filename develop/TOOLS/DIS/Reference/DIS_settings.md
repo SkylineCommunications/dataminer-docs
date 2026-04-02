@@ -12,7 +12,7 @@ In the *DMA* tab, add a list of DMAs to which you want DataMiner Integration Stu
 
 To add a DMA to the list:
 
-1. Click *Add* in the upper right-hand corner of the *DIS Settings* window.
+1. Click *Add* in the upper-right corner of the *DIS Settings* window.
 1. In the *General* tab, specify the following information:
 
    | Information | Description |

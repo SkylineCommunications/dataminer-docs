@@ -51,4 +51,4 @@ After creating the tag and running the workflow, you can find your package on th
 
 If you did not specify a repository URL in the csproj file, the package will not be linked with the repository. You can establish this link by following the steps explained [in the official GitHub Docs](https://docs.github.com/en/packages/learn-github-packages/connecting-a-repository-to-a-package#connecting-a-repository-to-an-organization-scoped-package-on-github).
 
-This will link the repository and showcase the *README.md* file, contributors, and more. On the repository's right-hand side, you will also see the released packages.
+This will link the repository and showcase the *README.md* file, contributors, and more. On the right side of the repository, you will also see the released packages.

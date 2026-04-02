@@ -72,7 +72,7 @@ The following procedure explains how to configure a virtual COM port when using 
 
       If you do not know the IP address of the device, you can also click *Search* to search for any NPort devices on the network. In some network configurations, however, this may not work.
 
-   1. In the left-hand *Function* pane, right-click *COM Mapping*, and click *Add Target*.
+   1. In the *Function* pane on the left, right-click *COM Mapping*, and click *Add Target*.
 
    1. In the *Add NPort* window, select the NPort device to which you would like to map COM ports, and click *OK*.
 
@@ -92,7 +92,7 @@ The following procedure explains how to configure a virtual COM port when using 
 
 1. Set the operating mode of the selected COM port.
 
-   1. In the left-hand *Function* pane, click *Configuration*. Then, on the right, right-click the NPort device, and click *Configure*.
+   1. In the *Function* pane on the left, click *Configuration*. Then, on the right, right-click the NPort device, and click *Configure*.
 
    1. Click the *Operating Mode* tab, and select the *Modify* checkbox.
 
