@@ -360,3 +360,9 @@ When you generated a PDF report of a dashboard with stacked mode disabled, and t
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When, in a *Time range* component, you wanted to enter, for example, the time "00:30", up to now, typing "00" in the hours field would incorrectly not cause the cursor to automatically jump to the minutes field.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Grid width and height would incorrectly be set to 0 when the graph moved out of the viewport [ID 45184]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 [CU0] -->
+
+When a node edge graph moved out of the viewport, up to now, the width and height of its grid would be set to 0, causing it to render incorrectly.
