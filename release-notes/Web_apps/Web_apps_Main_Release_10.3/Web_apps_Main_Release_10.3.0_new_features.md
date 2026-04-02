@@ -470,7 +470,7 @@ The token counters will be updated every 10 seconds.
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
-When you hover over a data table component (e.g., a GQI table), a search box will now appear in the bottom-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
+When you hover over a data table component (e.g., a GQI table), a search box will now appear in the lower-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
 
 #### Web apps: Dashboards, app pages and app panels now all have a 'Fit to view' setting [ID 33401]
 

@@ -535,7 +535,7 @@ SLNet tried to load DataMinerInstallerCommunication.XmlSerializers
 When you exported GQI data from a table component to a CSV file, up to now, only the currently loaded page would get exported. From now on, all data in the table will be exported.
 
 > [!NOTE]
-> While the export operation is progress, an “exporting to CSV” notification will be shown in the bottom-right corner of the screen.
+> While the export operation is progress, an “exporting to CSV” notification will be shown in the lower-right corner of the screen.
 
 #### Memory leak in SLElement \[ID 32885\]
 

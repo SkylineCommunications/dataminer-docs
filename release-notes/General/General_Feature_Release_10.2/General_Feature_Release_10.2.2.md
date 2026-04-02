@@ -152,7 +152,7 @@ This JSON object has to have the following structure:
 - In the **components** item, you can provide data to be selected in specific components referred to by their ID.
 
     > [!NOTE]
-    > When you are editing a dashboard, each component will show its ID in the bottom-right corner (e.g., “State 1”).
+    > When you are editing a dashboard, each component will show its ID in the lower-right corner (e.g., “State 1”).
 
 > [!NOTE]
 > When a dashboard updates its own URL, it will use the new format, but in a compressed way. In that compressed syntax, the query parameter “d” will be used instead of “data”.

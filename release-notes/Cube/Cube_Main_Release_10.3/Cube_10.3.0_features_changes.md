@@ -279,7 +279,7 @@ For example, a hyperlink of type “openelement” could contain the following c
 
 A number of enhancements have been made to the start window of the DataMiner Cube desktop app:
 
-- Settings menu (cogwheel icon in bottom-right corner)
+- Settings menu (cogwheel icon in lower-right corner)
 
   - New *About* box with version information.
 
@@ -665,7 +665,7 @@ A number of enhancements have been made to the DataMiner Cube start window:
 
 - When using the search box to filter the tiles, the last-known server version will now also be checked. This will allow users to search for clusters with a specific server version.
 
-- When you check for updates (by clicking the cogwheel icon in the bottom-right corner and selecting *Check for updates*), the last-known server version will now be taken into account to avoid having to contact every configured cluster. If a DataMiner Agent has been upgraded since the last background update, the new client version will be downloaded from the agent the first time you connect to it or from the cloud during the next background update (if that version is newer that the current version).
+- When you check for updates (by clicking the cogwheel icon in the lower-right corner and selecting *Check for updates*), the last-known server version will now be taken into account to avoid having to contact every configured cluster. If a DataMiner Agent has been upgraded since the last background update, the new client version will be downloaded from the agent the first time you connect to it or from the cloud during the next background update (if that version is newer that the current version).
 
     > [!NOTE]
     >

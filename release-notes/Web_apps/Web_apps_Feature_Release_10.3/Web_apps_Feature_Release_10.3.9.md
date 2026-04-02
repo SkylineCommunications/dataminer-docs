@@ -28,7 +28,7 @@ There are two ways in which you can link a query filter. See the following examp
 
   1. Create a query (e.g., a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
   
-     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g., "Query filter 1").
+     Note that a feed name will appear in the lower-right corner of the query filter component (e.g., "Query filter 1").
 
   1. Place a new *Table* component on the dashboard.
 
@@ -42,7 +42,7 @@ There are two ways in which you can link a query filter. See the following examp
 
   1. Create a query (e.g., a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
   
-     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g., "Query filter 1").
+     Note that a feed name will appear in the lower-right corner of the query filter component (e.g., "Query filter 1").
 
   1. Place a new *Table* component on the dashboard.
 

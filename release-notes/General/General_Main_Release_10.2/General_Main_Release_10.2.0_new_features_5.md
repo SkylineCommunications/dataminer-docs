@@ -315,7 +315,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 In the service definition component, nodes will now have a fixed initial size and ratio. When the service definition does not fit inside the component, vertical and/or horizontal panning will be enabled depending on the direction that is clipped. For example, when a service definition is very wide and its nodes are clipped on the right, horizontal panning will be possible, but vertical panning will not. Also, zooming in and out will fully scale the nodes so that every-thing keeps its aspect ratio.
 
 > [!NOTE]
-> The zoom controls in the bottom-right corner have been removed.
+> The zoom controls in the lower-right corner have been removed.
 
 #### Dashboards app - GQI: Linking a \[Get parameters for elements where\] 'Protocol' filter to a parameter feed \[ID 29335\]
 
@@ -691,7 +691,7 @@ This JSON object has to have the following structure:
 - In the **components** item, you can provide data to be selected in specific components referred to by their ID.
 
     > [!NOTE]
-    > When you are editing a dashboard, each component will show its ID in the bottom-right corner (e.g., “State 1”).
+    > When you are editing a dashboard, each component will show its ID in the lower-right corner (e.g., “State 1”).
 
 > [!NOTE]
 > When a dashboard updates its own URL, it will use the new format, but in a compressed way. In that compressed syntax, the query parameter “d” will be used instead of “data”.

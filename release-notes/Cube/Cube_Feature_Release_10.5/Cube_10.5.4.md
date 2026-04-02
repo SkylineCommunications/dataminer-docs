@@ -127,7 +127,7 @@ In the Cube UI, the following text strings have been adjusted to allow a more na
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-As Cassandra on Windows OS and Cassandra Single are no longer supported, it is no longer possible to migrate the general database to Cassandra. Hence, the *Cassandra preparation/migration* button, found in the bottom-left corner of the *Database* section, has been removed.
+As Cassandra on Windows OS and Cassandra Single are no longer supported, it is no longer possible to migrate the general database to Cassandra. Hence, the *Cassandra preparation/migration* button, found in the lower-left corner of the *Database* section, has been removed.
 
 See also: [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)
 

@@ -357,7 +357,7 @@ During an upgrade of a two-node setup (e.g., 2 single DMAs or one Failover pair)
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 <!-- Not added to 10.3.0 -->
 
-When you hover over a data table component (e.g., a GQI table), a search box will appear in the bottom-right corner. In some cases, the filter specified in that search box would incorrectly not be re-applied after a data refresh.
+When you hover over a data table component (e.g., a GQI table), a search box will appear in the lower-right corner. In some cases, the filter specified in that search box would incorrectly not be re-applied after a data refresh.
 
 #### SLLogCollector would become unresponsive when the name of the process or the path where the files had to be stored contained spaces [ID 33493]
 
