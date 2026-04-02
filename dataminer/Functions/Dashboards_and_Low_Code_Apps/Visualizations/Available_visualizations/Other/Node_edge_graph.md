@@ -54,6 +54,8 @@ You can interact with the node edge graph in several ways:
 
     - The user must have the appropriate permissions to edit the dashboard/low-code app. See [Configuring security for a dashboard](xref:Configuring_dashboard_security) and [Configuring app security](xref:LowCodeApps_security_config).
 
+At any time during an interaction, you can press ESC to cancel the action and restore the item to its last known position (available from DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44938-->).
+
 ### Zooming and panning
 
 When the [*Zooming* option](#node-edge-graph-layout) is enabled, you can **zoom in or out** in two ways:
