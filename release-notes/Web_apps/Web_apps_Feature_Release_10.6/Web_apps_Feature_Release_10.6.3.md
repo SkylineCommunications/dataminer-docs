@@ -309,11 +309,11 @@ Also, when using the following data sources, it will now also be possible to use
 > [!IMPORTANT]
 > The sorting behavior of these columns has changed. Up to now, the columns would be sorted according to the internal logic of these reference objects. From now on, they will be sorted by the key (string) value of the reference objects.
 
-#### Dashboards/Low-Code Apps: Icons of the left-hand editor buttons are now aligned vertically [ID 44612]
+#### Dashboards/Low-Code Apps: Icons of the editor buttons on the left are now aligned vertically [ID 44612]
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-In the *Browse templates* window, the icons of the left-hand editor buttons are now aligned vertically.
+In the *Browse templates* window, the icons of the editor buttons on the left are now aligned vertically.
 
 ### Fixes
 

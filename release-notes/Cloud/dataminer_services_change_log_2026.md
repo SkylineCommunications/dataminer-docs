@@ -41,7 +41,7 @@ When there are no active or expired subscriptions, a direct path to the subscrip
 
 On the Deployments page of the Admin app, event chain errors now better highlight where an error occurred.
 
-In addition, metadata now detects and shows stack traces in a separate box, with an option to copy the stack trace text. Text wrapping has also been improved to avoid horizontal scroll bars.
+In addition, metadata now detects and shows stack traces in a separate box, with an option to copy the stack trace text. Text wrapping has also been improved to avoid horizontal scrollbars.
 
 ### 23 February 2026 - New feature - Admin - Delete DataMiner System from settings
 

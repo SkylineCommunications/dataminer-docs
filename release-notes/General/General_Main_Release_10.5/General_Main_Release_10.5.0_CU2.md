@@ -188,11 +188,11 @@ This method should return the query node that represents the result of applying 
 > - This lifecycle method will only be called when the `nextOperator` is a filter or a sort operator.
 > - This lifecycle method can be called multiple times if there is a new `nextOperator`.
 
-#### New log viewer web page [ID 42533]
+#### New log viewer webpage [ID 42533]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-Up to now, client applications like DataMiner Cube used the *ViewLog.asp* web page to display server-side log files. This web page has now been replaced by the *ViewLog.aspx* web page.
+Up to now, client applications like DataMiner Cube used the *ViewLog.asp* webpage to display server-side log files. This webpage has now been replaced by the *ViewLog.aspx* webpage.
 
 This new log viewer page has improved compatibility with Failover setups and better error handling for HTTPS certificates.
 

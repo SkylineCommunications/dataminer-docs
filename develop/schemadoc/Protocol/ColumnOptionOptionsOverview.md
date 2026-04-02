@@ -261,7 +261,7 @@ For example, if a protocol contains coordinates to enable dynamic positioning, u
 
 <!-- RN 6647 -->
 
-(Service Overview Manager) This option allows you to hide the colored squares in the left-hand pane showing the aggregated service statuses.
+(Service Overview Manager) This option allows you to hide the colored squares in the pane on the left showing the aggregated service statuses.
 
 Example:
 

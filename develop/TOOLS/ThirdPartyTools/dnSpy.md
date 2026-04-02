@@ -26,7 +26,7 @@ To use this tool to debug automation scripts or QActions on a remote system, fol
    > [!NOTE]
    > A module is only available after it has run at least once.
 
-1. Use the *Assembly Explorer* on the left-hand side to navigate to the assembly/class/method you want to debug.
+1. Use the *Assembly Explorer* on the left to navigate to the assembly/class/method you want to debug.
 
 1. Add break points and let the code run.
 

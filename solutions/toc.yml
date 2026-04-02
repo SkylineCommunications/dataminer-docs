@@ -279,9 +279,9 @@ items:
         - name: EPM Integrated DOCSIS maps deployment
           topicUid: I-DOCSIS_maps_deployment
           items:
-          - name: Systems with one back-end element
+          - name: Systems with one backend element
             topicUid: I-DOCSIS_maps_deployment_one_backend
-          - name: Systems with multiple back-end elements
+          - name: Systems with multiple backend elements
             topicUid: I-DOCSIS_maps_deployment_multiple_backends
         - name: EPM Integrated DOCSIS GQI integration
           topicUid: I-DOCSIS_GQI_Integration

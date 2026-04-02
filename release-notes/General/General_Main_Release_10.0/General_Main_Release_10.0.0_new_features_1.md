@@ -572,7 +572,7 @@ A Cube user trying to log in to a DataMiner Agent using external authentication 
 
 > [!NOTE]
 >
-> - At present, the authentication web page will always be opened in Internet Explorer.
+> - At present, the authentication webpage will always be opened in Internet Explorer.
 > - DataMiner SAML authentication supports multiple assertion consumer service locations, so that authentication is possible across multiple service addresses.
 
 #### HTML5 apps: External user authentication via SAML \[23905\]

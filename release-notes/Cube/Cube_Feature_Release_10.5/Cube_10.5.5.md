@@ -29,21 +29,21 @@ All EPM integration functionality that previously required the *CPEIntegration* 
 
 ##### Topology pane
 
-The most prominent new EPM integration feature is the Topology pane, which is also known as the **Topology app**. It is available via a new *Topology* button in the Cube sidebar, if the system contains at least one correctly configured EPM Manager element (as detailed below). Clicking the button will open a pane where you can select the front-end EPM Manager (in case more than one is available), select the topology chain, drill down to any of the topology levels in that chain, and open a card representing the data of the selected item. When you navigate between (docked) EPM cards, the filter selection will be updated to match the displayed card.
+The most prominent new EPM integration feature is the Topology pane, which is also known as the **Topology app**. It is available via a new *Topology* button in the Cube sidebar, if the system contains at least one correctly configured EPM Manager element (as detailed below). Clicking the button will open a pane where you can select the frontend EPM Manager (in case more than one is available), select the topology chain, drill down to any of the topology levels in that chain, and open a card representing the data of the selected item. When you navigate between (docked) EPM cards, the filter selection will be updated to match the displayed card.
 
 ![Topology app](~/dataminer/images/EPMIntegration_Topology_app.png)
 
 To make sure the Topology app is available, the following configuration is needed:
 
-1. Make sure the DMS contains at least one front-end EPM Manager element.
+1. Make sure the DMS contains at least one frontend EPM Manager element.
 
    For DataMiner Cube to detect these elements, they should be active, the *type* attribute of the *Display* tag in their connector should be set to "element manager", and they should contain a parameter named *ElementManagerType* set to 1.
 
-   The protocol of this element (which should be the same as for the corresponding back-end elements) will describe a topology chain and its associated filters.
+   The protocol of this element (which should be the same as for the corresponding backend elements) will describe a topology chain and its associated filters.
 
-1. Go to *System Center* > *System settings* > *EPM config*, and add the front-end EPM Manager elements to the list.
+1. Go to *System Center* > *System settings* > *EPM config*, and add the frontend EPM Manager elements to the list.
 
-   In the Topology app, you will now be able to select the front-end managers and the corresponding topology chains.
+   In the Topology app, you will now be able to select the frontend managers and the corresponding topology chains.
 
 ##### EPM masking info<!-- 26002 -->
 
@@ -75,18 +75,18 @@ In addition, you can link views to EPM rows by using the [viewImpact](xref:Colum
 
 ![View impact icon in the Surveyor](~/develop/images/EPM_Surveyor_alarm_icon.png)
 
-##### Support for multiple front-end manager elements
+##### Support for multiple frontend manager elements
 
-Previously, the *CPEIntegration* soft-launch feature only allowed one front-end manager element. Now, multiple front-end elements are supported in one DataMiner System.
+Previously, the *CPEIntegration* soft-launch feature only allowed one frontend manager element. Now, multiple frontend elements are supported in one DataMiner System.
 
-To configure this, **make sure the system type for each front-end manager is unique**, as it is the system type that now will be used to trace EPM objects back to their respective front-end managers. If you for example have an "HFC" and an "IOT" front-end EPM Manager in your system, these cannot both have a "Location" cell. Instead, you can prefix this, e.g., "HFC_Location" and "IOT_Location", respectively.
+To configure this, **make sure the system type for each frontend manager is unique**, as it is the system type that now will be used to trace EPM objects back to their respective frontend managers. If you for example have an "HFC" and an "IOT" frontend EPM Manager in your system, these cannot both have a "Location" cell. Instead, you can prefix this, e.g., "HFC_Location" and "IOT_Location", respectively.
 
-In addition, the front-end and back-end elements for the **same technology** must use the **same DataMiner protocol and version**, as otherwise this may result in incorrect linking in the DataMiner Cube UI.
+In addition, the frontend and backend elements for the **same technology** must use the **same DataMiner protocol and version**, as otherwise this may result in incorrect linking in the DataMiner Cube UI.
 
-If these conditions are met, to start using the front-end EPM Managers, first define them in System Center via *System settings* > *EPM config* or via the cogwheel icon in the Topology app.
+If these conditions are met, to start using the frontend EPM Managers, first define them in System Center via *System settings* > *EPM config* or via the cogwheel icon in the Topology app.
 
 > [!IMPORTANT]
-> Because of this change, some **configuration changes may be required in systems that were previously using the *CPEIntegration* soft-launch option**. Some existing solutions may not have a unique system type per EPM Manager protocol, or they may have front-end and back-end manager elements with different protocols or protocol versions, which will no longer work correctly.
+> Because of this change, some **configuration changes may be required in systems that were previously using the *CPEIntegration* soft-launch option**. Some existing solutions may not have a unique system type per EPM Manager protocol, or they may have frontend and backend manager elements with different protocols or protocol versions, which will no longer work correctly.
 
 ##### Customization of EPM integration data pages
 

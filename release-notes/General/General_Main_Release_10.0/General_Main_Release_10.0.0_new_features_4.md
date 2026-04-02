@@ -110,7 +110,7 @@ Currently, the following components can be added to a dashboard.
     | Group\]         | Displays a group of components. This allows you to display the same set of components for each item in a group feed, for example for each parameter in a group of parameters.                     |
     | Image           | Shows an image. Note: This component not only allows you to select an image that was uploaded earlier, it also allows you to upload new images.                                               |
     | Text            | Shows a block of static text. In the *Layout* tab, you can configure the styling of the text (font, font size, bold, italic, underline, horizontal alignment). |
-    | Web             | Displays either a block of static HTML or a web page.                                                                                                                                             |
+    | Web             | Displays either a block of static HTML or a webpage.                                                                                                                                             |
 
 - States
 
@@ -752,9 +752,9 @@ Example:
 </Topologies>
 ```
 
-A typical CPE environment usually contains one front-end manager element and multiple back-end manager elements. All those elements, which contain the same CPE topology and refer to the same data in the background, will by default be polled by the CPE crawler.
+A typical CPE environment usually contains one frontend manager element and multiple backend manager elements. All those elements, which contain the same CPE topology and refer to the same data in the background, will by default be polled by the CPE crawler.
 
-To force the CPE crawler to only poll the front-end manager element, indicate which of the manager elements is the front-end manager. You can do this by adding to it a parameter of type “double” named “ElementManagerType”, and set its value to “1”.
+To force the CPE crawler to only poll the frontend manager element, indicate which of the manager elements is the frontend manager. You can do this by adding to it a parameter of type “double” named “ElementManagerType”, and set its value to “1”.
 
 > [!NOTE]
 >

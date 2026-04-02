@@ -20,6 +20,6 @@ When you have upgraded the EPM Solution, execute the following procedure:
 
 > [!NOTE]
 >
-> - `newElementID` is the element ID of the front-end element.
-> - `newDataMinerID` is the DMA ID of the DataMiner Agent where the front-end (FE) element is located.
+> - `newElementID` is the element ID of the frontend element.
+> - `newDataMinerID` is the DMA ID of the DataMiner Agent where the frontend (FE) element is located.
 > - Currently, this procedure needs to be executed every time the EPM Solution is upgraded.

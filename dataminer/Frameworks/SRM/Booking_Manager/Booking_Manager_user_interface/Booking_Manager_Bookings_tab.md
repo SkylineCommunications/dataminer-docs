@@ -56,7 +56,7 @@ This tab of the Booking Manager app displays information about current, past and
     > [!NOTE]
     > The *Release Ownership* button is only available if the Booking Locking feature is enabled (via [Config > General > Booking Locking](xref:Booking_Manager_Config_tab#application-setup-settings)).
 
-  - **Resources** / **Bookings**: This button is displayed in the bottom-left corner of the tab, and allows you to switch between the bookings and resources timeline.
+  - **Resources** / **Bookings**: This button is displayed in the lower-left corner of the tab, and allows you to switch between the bookings and resources timeline.
 
   - **Rescue**: Displayed at the bottom of the tab. This button can be used in case a booking was interrupted for some reason, e.g., because DataMiner became unavailable. It takes the booking out of the interrupted state so that it can start like a normal booking. For this purpose, the start date is adjusted when necessary.
 

@@ -12,7 +12,7 @@ uid: Investigating_Web_Issues
 Is something not working as expected? Then do the following:
 
 1. Open the F12 development tools of the browser.
-1. Refresh the web page. Long-click the refresh button and select *Empty cache and hard refresh*.
+1. Refresh the webpage. Long-click the refresh button and select *Empty cache and hard refresh*.
 1. Reproduce the issue.
 1. Check the F12 window:
 

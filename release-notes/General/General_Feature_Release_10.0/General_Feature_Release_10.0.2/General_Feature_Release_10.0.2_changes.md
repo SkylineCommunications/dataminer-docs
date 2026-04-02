@@ -318,9 +318,9 @@ The following fields have been removed from the *DMAScatterAxisInfo* object:
 
 Due to a number of enhancements, overall performance has increased when updating active function definitions.
 
-#### Annotation web pages now contain an explicit UTF-8 character encoding declaration \[ID 24555\]
+#### Annotation webpages now contain an explicit UTF-8 character encoding declaration \[ID 24555\]
 
-From now on, the annotation web pages will contain the following explicit UTF-8 character encoding declaration:
+From now on, the annotation webpages will contain the following explicit UTF-8 character encoding declaration:
 
 ```xml
 <meta charset="utf-8">
@@ -774,7 +774,7 @@ In some cases, an exception could be thrown when, during an element edit, you ch
 
 In the Bookings app, in some cases, bookings displayed on the bookings timeline would not be listed in the bookings list.
 
-#### DataMiner Cube: Problem when displaying dialog box while window/scroll bar thumb is dragged \[ID 24383\]
+#### DataMiner Cube: Problem when displaying dialog box while window/scrollbar thumb is dragged \[ID 24383\]
 
 In the XBAP version of DataMiner Cube, if a dialog box was displayed while a user was dragging a window or a scrollbar thumb, a problem could cause Cube to freeze.
 

@@ -29,7 +29,7 @@ To do so, create a shape with the following shape data fields:
 
 A *BookingData* shape will show the following information:
 
-- On the left-hand side, you will find a list of resources used by the booking.
+- On the left, you will find a list of resources used by the booking.
 
   For every resource, this list shows the following information:
   
@@ -38,7 +38,7 @@ A *BookingData* shape will show the following information:
   - an icon indicating whether the resource is linked to a service definition node
   - the node label or, if no node label is defined, the name of the function definition
 
-- On the right-hand side, you see the profile data of the node or node interface you selected in the list on the left:
+- On the right, you see the profile data of the node or node interface you selected in the list on the left:
 
   - the profile instance (if applicable), and
   - the profile parameter values that will be used (note that these values can be overridden on several levels).

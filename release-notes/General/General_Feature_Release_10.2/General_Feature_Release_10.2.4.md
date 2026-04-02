@@ -1009,7 +1009,7 @@ From now on, when no Elasticsearch database can be found, only the above-mention
 
 #### Problems with embedded dashboards components \[ID 32782\]
 
-When a GQI component was embedded in a Visio drawing or a web page, in some cases, that component would not be rendered correctly. Also, in some cases, embedded dashboard components would not be able to retrieve data from the database.
+When a GQI component was embedded in a Visio drawing or a webpage, in some cases, that component would not be rendered correctly. Also, in some cases, embedded dashboard components would not be able to retrieve data from the database.
 
 #### SLDataGateway: Result set would incorrectly be kept in memory after retrieving alarms from the database \[ID 32788\]
 

@@ -447,7 +447,7 @@ For every color linked to a selection box value, a VisualFieldEnum object should
 
 #### On mobile devices, the sidebar will now appear at the bottom of the screen \[ID 25225\]
 
-When using a mobile app (Monitoring, Dashboards, Jobs, etc.) on a mobile device, the sidebar, which on a desktop device appears by default on the left-hand side of the screen, will now appear at the bottom of the screen.
+When using a mobile app (Monitoring, Dashboards, Jobs, etc.) on a mobile device, the sidebar, which on a desktop device appears by default on the left side of the screen, will now appear at the bottom of the screen.
 
 #### User picture in upper-right corner \[ID 25257\]
 

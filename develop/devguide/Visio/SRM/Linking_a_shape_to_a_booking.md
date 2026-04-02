@@ -94,7 +94,7 @@ For example:
 
 The shape will show the following information:
 
-- On the left-hand side, a list of resources used by the booking.
+- On the left, a list of resources used by the booking.
 
   For every resource, this list shows the following information:
   
@@ -106,7 +106,7 @@ The shape will show the following information:
 
   - The node label or, if no node label is defined, the name of the function definition.
 
-- On the right-hand side, the profile data of the node or node interface selected in the list on the left:
+- On the right, the profile data of the node or node interface selected in the list on the left:
 
   - The profile instance (if applicable).
 

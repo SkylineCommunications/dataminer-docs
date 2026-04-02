@@ -11,7 +11,7 @@ From DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 42221 -->, 
 
 ## Navigating to a topology level
 
-In the filter pane on the left, you can select the front-end EPM Manager (in case more than one is available), select the topology chain, and drill down to any of the topology levels in that chain. You can then click the ">" button next to that level to open the corresponding page.
+In the filter pane on the left, you can select the frontend EPM Manager (in case more than one is available), select the topology chain, and drill down to any of the topology levels in that chain. You can then click the ">" button next to that level to open the corresponding page.
 
 > [!NOTE]
 > In the [Cube user settings](xref:User_settings#surveyorsidebar-settings), you can use the *Launch EPM card on filter selection* setting to have an EPM card opened as soon as an item is selected in the filter pane.
@@ -33,9 +33,9 @@ On the *Topology* page, you can find an overview of the topology for the selecte
 
 An overview of alarms for the selected level is available on the *Alarms* page.
 
-## Accessing the front-end element configuration
+## Accessing the frontend element configuration
 
-With the cogwheel button at the top of the filter pane, you can access the front-end EPM Manager configuration in System Center, which can be used to add more front-end manager elements.
+With the cogwheel button at the top of the filter pane, you can access the frontend EPM Manager configuration in System Center, which can be used to add more frontend manager elements.
 
 ![Topology app cogwheel button](~/dataminer/images/EPMIntegration_Cogwheel_button.png)<br>
 *EPM config settings in DataMiner Cube 10.5.5*

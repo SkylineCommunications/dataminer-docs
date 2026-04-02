@@ -66,4 +66,4 @@ Luckily, there is a workaround, which involves the following two steps:
 
 1. As you have timestamps for each set, you can detect when the device is in timeout yourself. Add an extra read parameter to indicate the connection state: Responding (value 0) or Timeout (value 1). To determine if the device is responding, verify the last received timestamp. Make sure this parameter can be monitored, so that an alarm can be raised when the state is equal to Timeout.
 
-1. Disable the native timeout feature on the DataMiner element. That way, the element will never go into the timeout state. This avoids the timeout sets in the database and enables history sets within that time period. To do this, edit the element, open the *More [type of connection]* settings section, and clear the check box *Include timeout*.
+1. Disable the native timeout feature on the DataMiner element. That way, the element will never go into the timeout state. This avoids the timeout sets in the database and enables history sets within that time period. To do this, edit the element, open the *More [type of connection]* settings section, and clear the checkbox *Include timeout*.

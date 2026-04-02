@@ -644,13 +644,13 @@ In some cases, unknown components would incorrectly no longer be indicated as su
 
 In DataMiner feature version 10.3.1, SLAnalytics would incorrectly ignore trend patterns defined for parameters of child DVE elements.
 
-#### Documents module: SLDataMiner would leak memory when email addresses and hyperlinks to web pages were retrieved [ID 35261]
+#### Documents module: SLDataMiner would leak memory when email addresses and hyperlinks to webpages were retrieved [ID 35261]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-The *Documents* module allows you to integrate documents in DataMiner. This way, you can access relevant information about the elements and services in your system at any time. You can store physical files, email addresses and hyperlinks to web pages.
+The *Documents* module allows you to integrate documents in DataMiner. This way, you can access relevant information about the elements and services in your system at any time. You can store physical files, email addresses and hyperlinks to webpages.
 
-Up to now, when email addresses and hyperlinks to web pages were retrieved from the XML files in which they are stored, SLDataMiner would leak memory due to a problem with the cleanup of temporary data.
+Up to now, when email addresses and hyperlinks to webpages were retrieved from the XML files in which they are stored, SLDataMiner would leak memory due to a problem with the cleanup of temporary data.
 
 #### Eventing and polling would incorrectly be used simultaneously [ID 35267]
 

@@ -4,7 +4,7 @@ uid: Tutorial_Dashboards_Feeds_Web_Component
 
 # Leveraging feeds in a web component
 
-In this tutorial, you will learn how to embed another webpage directly into a dashboard or low-code app using a [web component](xref:DashboardWeb). You will also find out how you can configure HTML code, the language behind any web page, and you will explore how to utilize feeds to dynamically enhance both approaches.
+In this tutorial, you will learn how to embed another webpage directly into a dashboard or low-code app using a [web component](xref:DashboardWeb). You will also find out how you can configure HTML code, the language behind any webpage, and you will explore how to utilize feeds to dynamically enhance both approaches.
 
 In the tutorial, a low-code app is used, but this component works in exactly the same way in a dashboard.
 
@@ -46,7 +46,7 @@ Expected duration: 5 minutes
 
    On this page, you will find two assignments.
 
-1. Scroll down to the first assignment, which is to embed a web page by specifying a static URL:
+1. Scroll down to the first assignment, which is to embed a webpage by specifying a static URL:
 
    1. Click the [web component](xref:DashboardWeb) to select it.
 
@@ -62,7 +62,7 @@ Expected duration: 5 minutes
 
 1. Go back to edit mode and make sure you are again on the *Static* page. Depending on your DataMiner version, you may need to click the pencil icon next to "Static".
 
-1. Scroll down to the second assignment, which is to embed a web page by specifying custom HTML code:
+1. Scroll down to the second assignment, which is to embed a webpage by specifying custom HTML code:
 
    1. Click the [web component](xref:DashboardWeb), and open the *Settings* pane.
 

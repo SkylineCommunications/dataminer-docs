@@ -699,7 +699,7 @@ When a shape in Visual Overview was linked to a Data Display page, it could occu
 
 In some rare cases, a problem could occur in the SLNet process when the alarm states of views were calculated.
 
-#### Dashboards app: Double scroll bars in dashboard with State component \[ID 27272\]
+#### Dashboards app: Double scrollbars in dashboard with State component \[ID 27272\]
 
 If a dashboard contained a State component, in some cases double scrollbars could be displayed.
 
