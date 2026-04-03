@@ -30,11 +30,10 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 
    Link to public documentation for more extensive info when necessary.
 
-> [!NOTE]
-> Depending on the size and complexity of your Catalog item, you can combine or exclude some sections. For example, for a very simple item you could leave out the Use Cases section but mention this information under Key Features.
+Depending on the size and complexity of your Catalog item, you can **combine or exclude some sections**. For example, for a very simple item you could leave out the Use Cases section but mention this information under Key Features.
 
 > [!NOTE]
-> We suggest not to include a reference to support or contact details, because it is the rule of thumb for users to reach out to our [DataMiner Support team](xref:Contacting_tech_support). As an Owner or team, you can add your e-mail adreess still in the [Manifest file](xref:Register_Catalog_Item#manifest-file).
+> Avoid including a reference to support or contact details, because it is the rule of thumb for users to reach out to our [DataMiner Support team](xref:Contacting_tech_support). As an Owner or team, you can still add your email address in the [Manifest file](xref:Register_Catalog_Item#manifest-file).
 
 ## Visuals
 
@@ -136,7 +135,7 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 - Requirements for components included in the package
 
 > [!NOTE]
-> Prerequisites on the description of the Catalog item should target the main deployment that you will deploy by default. Typically it is best practice to also include the prerequisites part of the Catalog item version description.
+> Prerequisites in the description of the Catalog item should target the default deployment of the item. Typically, it is best practice to also include the prerequisites part of the Catalog item version description.
 
 **Do's:**
 
