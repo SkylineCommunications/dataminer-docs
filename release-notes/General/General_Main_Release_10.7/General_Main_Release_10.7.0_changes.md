@@ -323,12 +323,6 @@ Note that the following stencil files will still be deployed:
 > [!NOTE]
 > The above-mentioned stencil files that are no longer included in DataMiner upgrade packages will not automatically be removed from existing systems.
 
-#### DataMiner upgrade: Legacy NATS binaries will no longer be included [ID 45208]
-
-<!-- MR 10.7.0 - FR 10.6.6 -->
-
-From now on, a DataMiner upgrade package will no longer contain a number of legacy NATS binaries that were located in the `C:\Skyline DataMiner\Resources` folder.
-
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
