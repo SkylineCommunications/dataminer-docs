@@ -135,7 +135,7 @@ Depending on the size and complexity of your Catalog item, you can **combine or 
 - Requirements for components included in the package
 
 > [!NOTE]
-> Prerequisites in the description of the Catalog item should target the default deployment of the item. Typically, it is best practice to also include the prerequisites part of the Catalog item version description.
+> Prerequisites in the description of the Catalog item should target the default deployment of the item. Typically, it is best to also include the prerequisites for a specific version in the relevant version description, so that users also know which prerequisites apply if they deploy another version than the default version. Note that the version descriptions automatically show the DataMiner (Web) version requirements, so there's no need to add those for each version of a Catalog item.
 
 **Do's:**
 
