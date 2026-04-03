@@ -220,7 +220,7 @@ For each node query and edge query, and for any configured node or edge override
 
 - **Coloring**: The label visibility is determined by the conditional coloring configuration.
 
-- **Custom**: Allows you to select either a specific column to use as the label or, from DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44907-->, link the label to data from another component by clicking the ![Link to](~/dataminer/images/Link_to_Data.png) icon. If you link the label to another component, the label can change dynamically based on that component, for example based on the column selected in a [dropdown component](xref:DashboardDropdown).
+- **Custom**: Allows you to either select a specific column to use as the label or, from DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44907-->, link the label to data from another component by clicking the ![Link to](~/dataminer/images/Link_to_Data.png) icon. If you link the label to another component, the label can change dynamically based on that component, for example based on the column selected in a [dropdown component](xref:DashboardDropdown).
 
   The label is shown even if the node or edge itself does not have conditional coloring.
 
