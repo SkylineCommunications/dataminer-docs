@@ -217,7 +217,7 @@ You can choose between two kinds of behavior:
 
 A common use case is using the timeline component as an interactive editing tool, i.e., a component where you can directly update or modify items displayed on the timeline.
 
-For example, using the [Template Editor](xref:Template_Editor), you can add a pencil icon in the top-right corner of each timeline item. When a user clicks this icon, a panel opens where they can edit the details of that item. This makes it possible to manage and adjust data directly from the timeline view, without navigating away.
+For example, using the [Template Editor](xref:Template_Editor), you can add a pencil icon in the upper-right corner of each timeline item. When a user clicks this icon, a panel opens where they can edit the details of that item. This makes it possible to manage and adjust data directly from the timeline view, without navigating away.
 
 In the example below, clicking the pencil icon on a timeline item opens an edit panel that allows the user to update job information.
 
@@ -325,7 +325,7 @@ Some **real-life examples**:
 
   Beyond changing the visual appearance, actions were configured on the icon layer so that clicking it opens a context menu. This menu allows users to manually update the icon and, at the same time, modify the underlying task status via an automation script.
 
-- In this example, the timeline component is used as an interactive TV schedule, styled with customized colors, icons, and more. A conditional case ensures that when a program has been recorded, a red dot appears in the top-right corner of the item.
+- In this example, the timeline component is used as an interactive TV schedule, styled with customized colors, icons, and more. A conditional case ensures that when a program has been recorded, a red dot appears in the upper-right corner of the item.
 
   ![Timeline - TV schedule](~/dataminer/images/TimelineTVSchedule.png)<br>*Timeline component in DataMiner 10.4.1*
 

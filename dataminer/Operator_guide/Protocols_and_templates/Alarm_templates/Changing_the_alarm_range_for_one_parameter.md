@@ -10,7 +10,7 @@ There are several ways you can access the alarm range editor:
 
 - In the Alarm Console, right-click an alarm for that particular parameter, and select *Change \> Alarm range*.
 
-- On a parameter card, click the hamburger button in the top-left corner, and select *Change alarm range*.
+- On a parameter card, click the hamburger button in the upper-left corner, and select *Change alarm range*.
 
 - On a parameter card, go to the templates tab and select *ALARM*.
 

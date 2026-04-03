@@ -1440,13 +1440,13 @@ items:
             topicUid: Dynamic_table_filter_syntax
           - name: Visio style guide
             topicUid: Visio_style_guide
-  - name: Class Library
+  - name: DataMinerSystem Library
     items:
-    - name: About the class library
+    - name: About the DataMinerSystem library
       topicUid: ClassLibraryIntroduction
-    - name: Class library development
+    - name: DataMinerSystem library development
       topicUid: ClassLibraryDevelopment
-    - name: Class library versioning
+    - name: DataMinerSystem library versioning
       topicUid: ClassLibraryVersioning
     - name: Lazy loading
       topicUid: ClassLibraryLazyLoading
@@ -7471,6 +7471,41 @@ items:
           topicUid: Notifications
         - name: Viewing test results
           topicUid: Viewing_test_results
+    - name: QAOps
+      topicUid: QAOps
+      items:
+      - name: QAOps main UI
+        topicUid: QAOps_Main_UI
+      - name: QAOps configurations
+        topicUid: QAOps_Configuration
+      - name: QAOps test suites
+        topicUid: QAOps_Test_Suite
+      - name: QAOps test packages
+        topicUid: QAOps_Test_Package
+      - name: QAOps test runs
+        topicUid: QAOps_Test_Run
+      - name: QAOps test results
+        topicUid: QAOps_Test_Result
+      - name: QAOps tool
+        topicUid: QAOps_Tool
+      - name: QAOps tutorials
+        items:
+        - name: QAOps User
+          items:
+          - name: Basic
+            items:
+            - name: Getting started with the QAOps User app
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_What_Is_QAOps
+            - name: Triggering a test run
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_How_To_Trigger_A_Test_Run
+            - name: Viewing test results
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results
+            - name: Preventing unnecessary costs as a user
+              topicUid: QAOps_Tutorials_User_Tutorials_Basic_Avoiding_Unnecessary_Costs
+          - name: Advanced
+            items:
+            - name: Creating a test package
+              topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:

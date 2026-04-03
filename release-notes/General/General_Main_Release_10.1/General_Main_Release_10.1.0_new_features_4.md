@@ -168,7 +168,7 @@ In addition, the following layout options can now be configured for this visuali
 
 #### Dashboards app: New 'Clear all' action + settings to pin actions \[ID 24356\]
 
-In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g., the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
+In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g., the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the upper-right corner of the dashboard.
 
 If a dashboard contains at least one feed, a new *Clear all* action is now available in the dashboard header, which can be used to clear the selection of the feeds in the dashboard.
 
@@ -283,9 +283,9 @@ On the *Layout* tab of the service definition component, two new options now al
 > - When the service definition component does not show any node, an animation will indicate the reason why none are shown.
 > - When actions are defined on a certain node, the group labels will now be moved to the top of that node.
 
-#### Dashboards app: Embedding a single component into Visual Overview or a web page \[ID 25804\]
+#### Dashboards app: Embedding a single component into Visual Overview or a webpage \[ID 25804\]
 
-It is now possible to embed an individual Dashboards app component into Visual Overview or a web page.
+It is now possible to embed an individual Dashboards app component into Visual Overview or a webpage.
 
 Do the following:
 
@@ -293,7 +293,7 @@ Do the following:
 
 2. Right-click the component and select *Copy embed URL*.
 
-3. Use the URL of the component in either a Visio page (e.g., in a shape with a data field of type “Link”) or a web page (e.g., in an \<img> tag).
+3. Use the URL of the component in either a Visio page (e.g., in a shape with a data field of type “Link”) or a webpage (e.g., in an \<img> tag).
 
 A component URL has the following syntax:
 
@@ -490,7 +490,7 @@ Note that it does not matter in which preset the threshold is defined. For examp
 > [!NOTE]
 >
 > - Similar to DataMiner Cube, threshold lines will appear in front of the spectrum trace.
-> - In case of a buffered trace, a time stamp will be shown in the top-right corner, indicating when the buffer was last updated.
+> - In case of a buffered trace, a time stamp will be shown in the upper-right corner, indicating when the buffer was last updated.
 > - When the background color is changed, the marker labels and the time stamp will be updated accordingly.
 > - Changing the spectrum buffer or switching to normal mode will reset any threshold line that was linked to a monitor parameter state to its default width. Linked threshold lines are slightly thicker.
 

@@ -6,4 +6,4 @@ summary: *content
 DMS interface.
 
 > [!WARNING]
-> This interface has been deprecated. Use types from the [Class Library](xref:ClassLibraryIntroduction) instead.
+> This interface has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.

@@ -88,7 +88,7 @@ To modify the reference level:
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
-The checks run to decide whether to show the relation learning light bulb in the top-right corner of a trend graph window have been optimized.
+The checks run to decide whether to show the relation learning light bulb in the upper-right corner of a trend graph window have been optimized.
 
 Also, this light bulb can now have the following states, which will indicate why it is not yet showing any results:
 

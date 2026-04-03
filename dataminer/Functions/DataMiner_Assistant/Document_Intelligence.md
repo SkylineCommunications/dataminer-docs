@@ -167,4 +167,4 @@ Document Intelligence relies on external Azure AI services for both OCR and LLM 
 
 Document Intelligence uses **DataMiner credits**, based on the amount of data analyzed. Credits will be deducted monthly based on metered usage.
 
-For more information about the pricing of DataMiner usage-based services, see [DataMiner Pricing Overview](xref:Pricing_Usage_based_service#usage-terms)
+For more information about the pricing of DataMiner usage-based services, see [Billing and metering](xref:Pricing_billing_and_metering).

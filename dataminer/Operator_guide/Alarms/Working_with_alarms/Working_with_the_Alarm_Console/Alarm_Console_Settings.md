@@ -4,7 +4,7 @@ uid: AlarmConsoleSettings
 
 # Alarm Console settings
 
-To access specific settings for the Alarm Console, click the hamburger button in the top-left corner of the console.
+To access specific settings for the Alarm Console, click the hamburger button in the upper-left corner of the console.
 
 This will open a menu containing the settings explained below.
 

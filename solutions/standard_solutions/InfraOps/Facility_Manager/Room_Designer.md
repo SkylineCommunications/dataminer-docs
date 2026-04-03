@@ -12,7 +12,7 @@ This page allows you to design a room in detail, including the placement of diff
 
 The designer consists of a grid of at most 4000 tiles. The size of each tile will be adjusted based on the size of the room.
 
-You can adjust the way the grid is displayed by pressing specific keys on the keyboard. Click the *Help* button in the top-right corner of the page to view the available keyboard commands.
+You can adjust the way the grid is displayed by pressing specific keys on the keyboard. Click the *Help* button in the upper-right corner of the page to view the available keyboard commands.
 
 ## Adding items to a room in the Room Designer
 
@@ -32,7 +32,7 @@ You can adjust the way the grid is displayed by pressing specific keys on the ke
 
       With the *View* button at the bottom of the section, you can take a look at a detailed view of the rack.
 
-   1. Fill in the X and Y coordinates to indicate the position of the top-left corner of the rack. Position "0,0" starts at the top left of the grid.
+   1. Fill in the X and Y coordinates to indicate the position of the upper-left corner of the rack. Position "0,0" starts at the top left of the grid.
 
       This means you need to make sure the indicated position leaves enough space for the rack to be included in the room. If, for example, you specify the lower-right corner as the rack position, this will result in the following notification because the rack would be positioned outside of the grid:
 
@@ -46,7 +46,7 @@ You can adjust the way the grid is displayed by pressing specific keys on the ke
 
    1. Select the zone.
 
-   1. Fill in the X and Y coordinates to indicate the position of the top-left corner of the zone. Position "0,0" starts at the top left of the grid.
+   1. Fill in the X and Y coordinates to indicate the position of the upper-left corner of the zone. Position "0,0" starts at the top left of the grid.
 
    1. Fill in the width and depth to define the size of zone on the grid.
 

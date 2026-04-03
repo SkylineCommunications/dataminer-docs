@@ -41,7 +41,7 @@ When there are no active or expired subscriptions, a direct path to the subscrip
 
 On the Deployments page of the Admin app, event chain errors now better highlight where an error occurred.
 
-In addition, metadata now detects and shows stack traces in a separate box, with an option to copy the stack trace text. Text wrapping has also been improved to avoid horizontal scroll bars.
+In addition, metadata now detects and shows stack traces in a separate box, with an option to copy the stack trace text. Text wrapping has also been improved to avoid horizontal scrollbars.
 
 ### 23 February 2026 - New feature - Admin - Delete DataMiner System from settings
 
@@ -112,7 +112,7 @@ An issue has been resolved that prevented the audit log from being exported.
 
 ### 28 January 2026 - Enhancement - Billing - Automation Actions, Connectors, and Managed Objects usage billing
 
-Starting from February 2026, automatic monthly billing will be implemented for Automation Actions, Connectors, and Managed Objects. On the 5th day of each month, the expended DataMiner credits for the previous month's usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details. Note that the Community Edition base allowance has also been updated.
+Starting from February 2026, automatic monthly billing will be implemented for Automation Actions, Connectors, and Managed Objects. On the 5th day of each month, the expended DataMiner credits for the previous month's usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Billing and metering](xref:Pricing_billing_and_metering) for more details. Note that the Community Edition base allowance has also been updated.
 
 Perpetual-licensed systems will have usage-based billing only for Automation Object Modeling, Collaboration, and Storage as a Service.
 
@@ -120,7 +120,7 @@ In case an organization does not have sufficient DataMiner credits, their balanc
 
 ### 8 January 2026 - Enhancement - Billing - Dashboard Sharing & Unmanaged Objects usage billing
 
-Starting from January 2026, automatic monthly billing will be implemented for Dashboard Sharing & Unmanaged Objects. On the 5th day of each month, the expended DataMiner credits for the previous month's usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Usage-based services – Metering units](xref:Pricing_Usage_based_service#metering-units) for more details.
+Starting from January 2026, automatic monthly billing will be implemented for Dashboard Sharing & Unmanaged Objects. On the 5th day of each month, the expended DataMiner credits for the previous month's usage will be subtracted from the organization's balance. This billing will not take effect retroactively. See [Billing and metering](xref:Pricing_billing_and_metering) for more details.
 
 In case an organization does not have sufficient DataMiner credits, their balance will go negative, and it will need to be topped up as soon as possible. Organizations with a negative balance will not be able to deploy new DaaS systems.
 

@@ -52,7 +52,7 @@ The tutorial consists of the following steps:
 
    Depending on the detected trend behavior, this icon can be an arrow icon, or it can look like this: ![the trend icon](~/dataminer/images/trend_icon_unknown.png).
 
-1. In the top-right corner of the trending page, select *Week to date* to inspect the trend data for the past week.
+1. In the upper-right corner of the trending page, select *Week to date* to inspect the trend data for the past week.
 
    You will see some CPU spikes that look similar. However, these may not have the same cause. To investigate further, some extra parameters need to be added to the trend graph.
 
@@ -113,11 +113,11 @@ The tutorial consists of the following steps:
 
    ![Video Feed pattern for video server](~/dataminer/images/tutorial_pattern_matching_multivariate_video_feed.gif)
 
-1. In the top-left corner, click *Up to Data Display*.
+1. In the upper-left corner, click *Up to Data Display*.
 
 1. Click the trend icon next to the *CPU Load* parameter again.
 
-1. In the top-right corner of the trending page, select *Week to date*.
+1. In the upper-right corner of the trending page, select *Week to date*.
 
 You will now see that context information is available for the different CPU spikes. The multivariate icon ![multivariate](~/dataminer/images/multivariate_icon.png) indicates that the pattern combines trend information from different parameters. Clicking this icon will load all trend graphs of the parameters that are part of the pattern. Hovering the mouse pointer over the tag will highlight all trend lines that are part of the pattern.
 
@@ -129,7 +129,7 @@ You will now see that context information is available for the different CPU spi
 
 1. Click the trend icon next to the *CPU Load* parameter.
 
-1. In the top-right corner of the trending page, select *Week to date*.
+1. In the upper-right corner of the trending page, select *Week to date*.
 
 1. Click the tag button above the pattern *Video Feed*.
 
@@ -158,7 +158,7 @@ You will see that the *Video Feed* pattern is indicated, but the *Backup* patter
 
 1. In the *Server overview* table, click the trend icon in the *CPU Usage* column and the *Server 1* row.
 
-1. In the top-right corner of the trending page, select *Month to date*.
+1. In the upper-right corner of the trending page, select *Month to date*.
 
 1. Add the *Free Disk Space* parameter to the trend graph:
 
@@ -182,11 +182,11 @@ You will see that the *Video Feed* pattern is indicated, but the *Backup* patter
 
    1. Click *OK*.
 
-1. Click *Up to Data Display* in the top-left corner.
+1. Click *Up to Data Display* in the upper-left corner.
 
 1. In the *Server overview* table, click the trend icon in the *CPU Usage* column and the *Server 4* row.
 
-1. In the top-right corner of the trending page, select *Month to date*.
+1. In the upper-right corner of the trending page, select *Month to date*.
 
 You will see that the *Backup* pattern is marked where relevant.
 
@@ -215,7 +215,7 @@ You will see that the *Backup* pattern is marked where relevant.
 
    1. Click the check mark icon.
 
-1. Click *Up to Data Display* in the top-left corner.
+1. Click *Up to Data Display* in the upper-left corner.
 
 1. Click the *Generate Pattern* button to generate a new power spike.
 
@@ -225,7 +225,7 @@ You will see that the *Backup* pattern is marked where relevant.
 
 1. If the Alarm Console is not yet expanded, in the lower-right corner of the Cube window, click the expand icon ![expand icon](~/dataminer/images/ExpandUp.png) to expand it.
 
-1. In the top-right corner of the Alarm Console, click the light bulb icon.
+1. In the upper-right corner of the Alarm Console, click the light bulb icon.
 
    This icon lights up in blue to indicate that DataMiner Analytics has found something interesting. For more detailed info, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
 

@@ -61,8 +61,8 @@ To deploy the D-DOCSIS branch of the EPM Solution:
      > [!NOTE]
      > Large deployments could greatly benefit from the use of DataMiner IDP. See [DataMiner IDP app](xref:SolIDP).
 
-   - **Back-end EPM elements**, in the *System* > *DataMiner EPM* > *EPM BE* view.
-   - A **front-end EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
+   - **Backend EPM elements**, in the *System* > *DataMiner EPM* > *EPM BE* view.
+   - A **frontend EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
    - **System elements**, as necessary in the *System* view. You can name these elements as you see fit. If you add any MS/LX Platform elements, add these in a *DMS* subview of the *System* view.
 
 1. In the Automation module in DataMiner Cube, **import the automation scripts** from the EPM package. See [Importing and exporting automation scripts](xref:Managing_Automation_scripts#importing-and-exporting-automation-scripts).

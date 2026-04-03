@@ -31,7 +31,7 @@ To do so, when the computer is booting:
 
 ## What do I do if I get the HTTP error 401.3 when trying to browse to the DMA?
 
-When you get an HTTP error 401.3 ("Unauthorized") when trying to browse to any web page of the DataMiner Agent in question, verify the security settings of the Skyline DataMiner directory that you copied.
+When you get an HTTP error 401.3 ("Unauthorized") when trying to browse to any webpage of the DataMiner Agent in question, verify the security settings of the Skyline DataMiner directory that you copied.
 
 1. In *File Explorer*, go to the `C:\Skyline DataMiner` directory.
 1. Right-click the directory, and click *Security*.

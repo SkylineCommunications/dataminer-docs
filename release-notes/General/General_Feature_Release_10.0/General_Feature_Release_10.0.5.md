@@ -427,7 +427,7 @@ The following tabs were added to the spectrum page of Spectrum Analyzer elements
 
 When you open a card on a mobile device, you will now see a card header instead of the app header, and you will be able to open a card sidebar just like on a desktop device.
 
-Also, the card menu is now accessible through a hamburger button in the top-right corner.
+Also, the card menu is now accessible through a hamburger button in the upper-right corner.
 
 #### Ticketing app: Selection box values can now be assigned a color \[ID 25175\]
 
@@ -447,11 +447,11 @@ For every color linked to a selection box value, a VisualFieldEnum object should
 
 #### On mobile devices, the sidebar will now appear at the bottom of the screen \[ID 25225\]
 
-When using a mobile app (Monitoring, Dashboards, Jobs, etc.) on a mobile device, the sidebar, which on a desktop device appears by default on the left-hand side of the screen, will now appear at the bottom of the screen.
+When using a mobile app (Monitoring, Dashboards, Jobs, etc.) on a mobile device, the sidebar, which on a desktop device appears by default on the left side of the screen, will now appear at the bottom of the screen.
 
-#### User picture in top-right corner \[ID 25257\]
+#### User picture in upper-right corner \[ID 25257\]
 
-The mobile apps (Monitoring, Dashboards, Jobs, etc.) will now show a picture of the user in the top-right corner. If no picture is available, then the user’s initials will be shown instead.
+The mobile apps (Monitoring, Dashboards, Jobs, etc.) will now show a picture of the user in the upper-right corner. If no picture is available, then the user’s initials will be shown instead.
 
 #### Monitoring app: On mobile devices, a redesigned footer will now group all card controls \[ID 25267\]
 

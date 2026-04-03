@@ -143,7 +143,7 @@ From now on, a slightly larger number of missing values will be allowed will you
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
+In the upper-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
 
 Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
 
@@ -299,7 +299,7 @@ From now on, the collector pages will be loaded even when the EPM environment do
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-In some cases, the light bulb icon in the top-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
+In some cases, the light bulb icon in the upper-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
 
 #### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID 35537]
 
@@ -317,10 +317,10 @@ When you enabled the *Automatic incident tracking* option of an active alarms ta
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, the display keys of those listed parameters would not be correct.
+When you open a trend graph, a light bulb icon will appear in the upper-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, the display keys of those listed parameters would not be correct.
 
 #### Trending - Parameter relationships: The same parameter could be added multiple times to the graph when you clicked it repeatedly [ID 35561]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked one of those suggested parameter multiple times, it would incorrectly be added multiple times to the graph.
+When you open a trend graph, a light bulb icon will appear in the upper-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked one of those suggested parameter multiple times, it would incorrectly be added multiple times to the graph.

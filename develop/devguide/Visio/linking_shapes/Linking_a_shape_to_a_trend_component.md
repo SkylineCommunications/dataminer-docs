@@ -65,7 +65,7 @@ Add the following shape data fields to the shape:
 
   - **ShowLegend:*X***: Determines if the bottom legend is displayed, which allows the user to add parameters. "X" can be *true* or *false*.
 
-  - **ShowGroups:*X***: Determines if the trend groups panel on the left-hand side is displayed. "X" can be *true* or *false*.
+  - **ShowGroups:*X***: Determines if the trend groups panel on the left is displayed. "X" can be *true* or *false*.
 
 Example:
 

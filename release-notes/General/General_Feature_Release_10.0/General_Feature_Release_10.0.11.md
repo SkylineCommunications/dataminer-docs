@@ -307,7 +307,7 @@ Note that it does not matter in which preset the threshold is defined. For examp
 > [!NOTE]
 >
 > - Similar to DataMiner Cube, threshold lines will appear in front of the spectrum trace.
-> - In case of a buffered trace, a time stamp will be shown in the top-right corner, indicating when the buffer was last updated.
+> - In case of a buffered trace, a time stamp will be shown in the upper-right corner, indicating when the buffer was last updated.
 > - When the background color is changed, the marker labels and the time stamp will be updated accordingly.
 > - Changing the spectrum buffer or switching to normal mode will reset any threshold line that was linked to a monitor parameter state to its default width. Linked threshold lines are slightly thicker.
 
@@ -699,7 +699,7 @@ When a shape in Visual Overview was linked to a Data Display page, it could occu
 
 In some rare cases, a problem could occur in the SLNet process when the alarm states of views were calculated.
 
-#### Dashboards app: Double scroll bars in dashboard with State component \[ID 27272\]
+#### Dashboards app: Double scrollbars in dashboard with State component \[ID 27272\]
 
 If a dashboard contained a State component, in some cases double scrollbars could be displayed.
 

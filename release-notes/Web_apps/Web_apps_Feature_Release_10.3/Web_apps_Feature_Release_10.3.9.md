@@ -28,7 +28,7 @@ There are two ways in which you can link a query filter. See the following examp
 
   1. Create a query (e.g., a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
   
-     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g., "Query filter 1").
+     Note that a feed name will appear in the lower-right corner of the query filter component (e.g., "Query filter 1").
 
   1. Place a new *Table* component on the dashboard.
 
@@ -42,7 +42,7 @@ There are two ways in which you can link a query filter. See the following examp
 
   1. Create a query (e.g., a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
   
-     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g., "Query filter 1").
+     Note that a feed name will appear in the lower-right corner of the query filter component (e.g., "Query filter 1").
 
   1. Place a new *Table* component on the dashboard.
 
@@ -58,7 +58,7 @@ Settings:
 
   For example, if the table contains a *State* column, and the table only contains rows of which that column contains "Active" or "Stopped", you will not be able to filter on other state values. Moreover, next to each filter option the number of matching rows will be displayed. For example, when there are 20 rows of which the *State* column contains "Active", then the filter will show the Active state option as "Active (20)".
 
-- **Allow color mode**: If this setting is activated (which it is by default), in the top-right corner of the filter query component, you will be able to click a color marker icon. When you do so, a color legend will appear on the right of the filter options, and for each of those options you will be able to configure a color (default color: green).
+- **Allow color mode**: If this setting is activated (which it is by default), in the upper-right corner of the filter query component, you will be able to click a color marker icon. When you do so, a color legend will appear on the right of the filter options, and for each of those options you will be able to configure a color (default color: green).
 
   > [!NOTE]
   > When you deactivate the *Allow color mode* setting, the colors you configured will stay visible and applied.
@@ -303,7 +303,7 @@ Up to now, it would incorrectly not be possible to feed a selected timeline item
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
-When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
+When you had opened the user menu by clicking the user icon in the upper-right corner, that menu would not close when you clicked the user icon a second time.
 
 #### GQI: Not all DCF interface properties would be returned [ID 36840]
 

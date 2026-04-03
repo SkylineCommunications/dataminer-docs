@@ -41,7 +41,7 @@ Expected duration: 15 minutes.
 
 1. Go to [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise)
 
-1. In the top-right corner, click *Fork*.
+1. In the upper-right corner, click *Fork*.
 
 1. Follow the wizard to create a fork of the repository under your own account.
 

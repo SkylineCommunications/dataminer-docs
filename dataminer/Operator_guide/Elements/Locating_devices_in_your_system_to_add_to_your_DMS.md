@@ -13,7 +13,7 @@ DataMiner Cube provides a wizard that can be used to automatically detect device
 
 To find devices and create elements with the Device Discovery wizard:
 
-1. Open the view card where you want to create the new element(s), and either right-click the colored header bar or click the hamburger button in the top-left corner.
+1. Open the view card where you want to create the new element(s), and either right-click the colored header bar or click the hamburger button in the upper-left corner.
 
 1. Select *Device Discovery* to open the wizard.
 

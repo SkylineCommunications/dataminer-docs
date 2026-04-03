@@ -199,9 +199,9 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 
 1. Access the *opensearch.yml* file on all nodes of the OpenSearch cluster. Open the file and set *path.repo* as your previously created shared folder.
 
-1. Open OpenSearch Dashboards. Click the hamburger button in the top-left corner and select *Snapshot Management*. In the left-hand pane, now select *Repositories* to view an overview of all repositories.
+1. Open OpenSearch Dashboards. Click the hamburger button in the upper-left corner and select *Snapshot Management*. In the pane on the left, now select *Repositories* to view an overview of all repositories.
 
-1. Select *Create repository* in the top-right corner.
+1. Select *Create repository* in the upper-right corner.
 
    ![OpenSearch Dashboards - Repository Overview ](~/dataminer/images/OpenSearchDashboards_RepositoryOverview.svg)
 
@@ -257,11 +257,11 @@ You have now finished configuring an OpenSearch backup.
 
 ### Taking a snapshot using OpenSearch Dashboards
 
-1. In OpenSearch Dashboards, click the hamburger button in the top-left corner and select *Snapshot Management*. In the left-hand pane, now select *Snapshots* to view an overview of all snapshots.
+1. In OpenSearch Dashboards, click the hamburger button in the upper-left corner and select *Snapshot Management*. In the pane on the left, now select *Snapshots* to view an overview of all snapshots.
 
    ![OpenSearch Dashboards - Snapshot Overview](~/dataminer/images/OpenSearchDashboards_SnapshotOverview.png)
 
-1. Select *Take snapshot* in the top-right corner.
+1. Select *Take snapshot* in the upper-right corner.
 
 1. Specify the following details:
 

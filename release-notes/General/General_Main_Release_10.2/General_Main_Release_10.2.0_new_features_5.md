@@ -79,9 +79,9 @@ In the *Layout* tab, you find three additional sections:
 
 - In the *Layout* section, you can specify how you want the trigger label and time label to be aligned: left, center or right.
 
-#### Dashboards app: Right-hand edit pane is now resizable \[ID 28137\]
+#### Dashboards app: Edit pane on the right is now resizable \[ID 28137\]
 
-It is now possible to change the width of the right-hand edit pane.
+It is now possible to change the width of the edit pane shown at the right side of the Dashboards UI.
 
 #### Dashboards app - Line chart component: New option to highlight parameters on graph and legend \[ID 28144\]
 
@@ -266,7 +266,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 1. In the Dashboards app, go to the list of dashboards on the left, and select the dashboard you want to share.
 
-1. Click the “...” button in the top-right corner of the dashboard, and select *Start sharing*.
+1. Click the “...” button in the upper-right corner of the dashboard, and select *Start sharing*.
 
 1. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
 
@@ -312,10 +312,10 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 #### Dashboards app - Service definition component: Node scaling \[ID 29142\]
 
-In the service definition component, nodes will now have a fixed initial size and ratio. When the service definition does not fit inside the component, vertical and/or horizontal panning will be enabled depending on the direction that is clipped. For example, when a service definition is very wide and its nodes are clipped on the right-hand side, horizontal panning will be possible, but vertical panning will not. Also, zooming in and out will fully scale the nodes so that every-thing keeps its aspect ratio.
+In the service definition component, nodes will now have a fixed initial size and ratio. When the service definition does not fit inside the component, vertical and/or horizontal panning will be enabled depending on the direction that is clipped. For example, when a service definition is very wide and its nodes are clipped on the right, horizontal panning will be possible, but vertical panning will not. Also, zooming in and out will fully scale the nodes so that every-thing keeps its aspect ratio.
 
 > [!NOTE]
-> The zoom controls in the bottom-right corner have been removed.
+> The zoom controls in the lower-right corner have been removed.
 
 #### Dashboards app - GQI: Linking a \[Get parameters for elements where\] 'Protocol' filter to a parameter feed \[ID 29335\]
 
@@ -691,7 +691,7 @@ This JSON object has to have the following structure:
 - In the **components** item, you can provide data to be selected in specific components referred to by their ID.
 
     > [!NOTE]
-    > When you are editing a dashboard, each component will show its ID in the bottom-right corner (e.g., “State 1”).
+    > When you are editing a dashboard, each component will show its ID in the lower-right corner (e.g., “State 1”).
 
 > [!NOTE]
 > When a dashboard updates its own URL, it will use the new format, but in a compressed way. In that compressed syntax, the query parameter “d” will be used instead of “data”.

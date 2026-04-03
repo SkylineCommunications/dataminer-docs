@@ -9,33 +9,20 @@ It is possible to [connect to a DMS using URL arguments](xref:Cube_start_window#
 To combine different options, use a **space as separator**.
 
 > [!NOTE]
->
-> - In the legacy **browser app**, you can pass these arguments by adding them to the URL. To combine different arguments in the browser app, use an "&" instead of a space. Note that the URL must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
-> - If the Cube desktop app is installed, you can also [use a cube:// URL to connect to a specific host](#using-a-cube-url-to-connect-to-a-specific-host).
+> You can also [use a cube:// URL to connect to a specific host](#using-a-cube-url-to-connect-to-a-specific-host).
 
 ## Examples
-
-Examples for the desktop application:
 
 ```txt
 view="My special view" element=MyElement
 view=View2 element=365 app=help
 ```
 
-Examples for the legacy browser application:
-
-```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?element=MyElement&view=MyView
-http://MyDMA1/Dataminercube/dataminercube.xbap?app=Protocols%20%26%20Templates
-DataMinerCube.exe host=MyDMA view="My special view" element=MyElement
-DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help
-```
-
 ## Overview of the arguments
 
 ### Opening a card on a particular page
 
-If you use the *element=*, *service=* or *view=* option to open an element, service, or view card at startup, you can have this card opened on a particular page.
+If you use the *element=*, *service=*, or *view=* option to open an element, service, or view card at startup, you can have this card opened on a particular page.
 
 To do so, add the following:
 
@@ -102,7 +89,7 @@ Use this option to immediately display a specific alarm card. Different formats 
   ```
 
 > [!NOTE]
-> To quickly find the root alarm ID, right-click the alarm in the Alarm Console and select *Properties*. The root alarm ID will be displayed below the regular ID in the top-right corner of the properties window.
+> To quickly find the root alarm ID, right-click the alarm in the Alarm Console and select *Properties*. The root alarm ID will be displayed below the regular ID in the upper-right corner of the properties window.
 
 ### app=
 
@@ -210,7 +197,6 @@ Example:
 > - When multiple filters are specified, only the lowest filter in the selected chain will be used. However, if no chain is specified, all filters are used to find the correct chain.
 > - If only one row matches the filter, an object will be loaded.
 > - If the filter value is a key prefix, add an asterisk ("\*") to the filter value.
-> - If you want to use this argument for the browser app, the URL must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
 
 > [!TIP]
 > See also: [Experience and Performance Management](xref:EPM)
@@ -422,7 +408,7 @@ workspace=Classic
 
 ## Using a cube:// URL to connect to a specific host
 
-If the Cube desktop app is installed, you can also use **cube:// protocol** to connect to a specific host. For example:
+You can also use **cube:// protocol** to connect to a specific host. For example:
 
 - cube://mydma?element=MyElement
 

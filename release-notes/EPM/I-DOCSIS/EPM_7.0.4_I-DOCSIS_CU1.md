@@ -16,7 +16,7 @@ When the script to add a CCAP pair was used, it could occur that this did not wo
 [ERROR]|Host of BE or Collector is not found for element [...]
 ```
 
-To prevent this issue, the logic has been adjusted so that it is no longer possible to select a different host for the collector without a corresponding back end.
+To prevent this issue, the logic has been adjusted so that it is no longer possible to select a different host for the collector without a corresponding backend.
 
 #### Invalid cast exception when deploying Generic DOCSIS CM Collector [ID 40002]
 

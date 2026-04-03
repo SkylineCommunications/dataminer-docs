@@ -122,6 +122,6 @@ On the *Destinations* and *Grid View* pages, a filter pane on the left enables y
 
 ![Filter pane](~/dataminer/images/Filter_PM.png)
 
-To limit the filter pane to an overview of the currently active filters, enable the toggle button in the top-right corner. Disable the toggle button to return to the full view.
+To limit the filter pane to an overview of the currently active filters, enable the toggle button in the upper-right corner. Disable the toggle button to return to the full view.
 
 In the lower-left corner, you can see the total destinations as well as the destinations that are currently active in your DataMiner System. Also, a progress bar above those destinations will count down to the next page refresh.

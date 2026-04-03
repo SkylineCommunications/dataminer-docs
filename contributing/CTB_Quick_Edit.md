@@ -7,15 +7,15 @@ uid: CTB_Quick_Edit
 > [!TIP]
 > See also: [Making a small contribution to DataMiner Docs](https://www.youtube.com/watch?v=hPi9kv8WKGU) ![Video](~/dataminer/images/video_Duo.png)
 
-On every page of the documentation on docs.dataminer.services, an *Improve this page* link is available in the top-right corner. Clicking this link will open the source of the documentation on GitHub. You can then make changes as follows:
+On every page of the documentation on docs.dataminer.services, an *Improve this page* link is available in the upper-right corner. Clicking this link will open the source of the documentation on GitHub. You can then make changes as follows:
 
 ![Improve this page link](~/images/Improve_this_page.png)
 
 1. Make sure you are logged in to GitHub.
 
-   If you do not have a GitHub account yet, you can quickly make one via the *Sign up* button in the top-right corner.
+   If you do not have a GitHub account yet, you can quickly make one via the *Sign up* button in the upper-right corner.
 
-1. On the page you intend to edit in GitHub, click the pencil button in the top-right corner.
+1. On the page you intend to edit in GitHub, click the pencil button in the upper-right corner.
 
    ![Pencil button](~/images/Contrib_PencilButton.png)
 
@@ -25,7 +25,7 @@ On every page of the documentation on docs.dataminer.services, an *Improve this 
 
    To get a preview of the changes, go to the *Preview* tab.
 
-1. Once you have made your changes, click *Commit changes* in the top-right corner.
+1. Once you have made your changes, click *Commit changes* in the upper-right corner.
 
    ![Commit changes](~/images/Commit_Changes.png)
 

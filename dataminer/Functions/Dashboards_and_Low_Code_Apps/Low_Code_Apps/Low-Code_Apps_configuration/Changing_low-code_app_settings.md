@@ -22,7 +22,7 @@ To configure such an event:
 
 1. Make sure the low-code app is in edit mode. See [Editing an app](xref:Editing_custom_apps).
 
-1. Click the ellipsis button ("...") in the top-right corner and select *App settings*.
+1. Click the ellipsis button ("...") in the upper-right corner and select *App settings*.
 
 1. Next to *On open*, click *Configure actions*.
 
@@ -49,7 +49,7 @@ To add, update, or delete a custom CSS file:
 
 1. Make sure the low-code app is in edit mode. See [Editing an app](xref:Editing_custom_apps).
 
-1. Click the ellipsis button ("...") in the top-right corner and select *App settings*.
+1. Click the ellipsis button ("...") in the upper-right corner and select *App settings*.
 
 1. In the *Custom-CSS* section, add, update, or delete the CSS code.
 

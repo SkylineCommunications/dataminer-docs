@@ -224,7 +224,7 @@ The KPI stencil and the Button stencil have been restyled.
 
 - The master shapes of which the name starts with “kpi-” can now show the element icon with the alarm state (\_showElement) and an icon that can be clicked to navigate to the alarm overview of the linked element (\_showAlarm).
 
-- The write icon in the top-right corner of a shape has been changed from a black triangle to a cogwheel.
+- The write icon in the upper-right corner of a shape has been changed from a black triangle to a cogwheel.
 
 ##### Button stencil
 
@@ -685,7 +685,7 @@ When an interactive automation script was running, DataMiner Cube would incorrec
 
 #### Dashboards app: Problem when embedding a GQI dashboard component \[ID 28874\]
 
-When an individual GQI dashboard component was embedded into Visual Overview or a web page, in some cases, the URL of that component would not contain all necessary information to run a GQI query.
+When an individual GQI dashboard component was embedded into Visual Overview or a webpage, in some cases, the URL of that component would not contain all necessary information to run a GQI query.
 
 Also, when a feed was used as a column filter in a GQI query, that feed would initially not be used when the query was initialized.
 
@@ -791,7 +791,7 @@ In some cases, it was not possible to delete GQI queries.
 
 #### DataMiner landing page: Clicking the waffle icon did not open the sidebar \[ID 29050\]
 
-When you clicked the waffle icon in the top-left corner of a DataMiner landing page (i.e., `https://<DmaAddress>/root/`), in some cases, the sidebar listing the available apps would not open.
+When you clicked the waffle icon in the upper-left corner of a DataMiner landing page (i.e., `https://<DmaAddress>/root/`), in some cases, the sidebar listing the available apps would not open.
 
 #### Updating an element via a CSV export/import would not work properly when that element had an empty port type value \[ID 29052\]
 

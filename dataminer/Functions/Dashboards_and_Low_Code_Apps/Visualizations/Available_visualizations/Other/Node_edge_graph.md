@@ -54,6 +54,8 @@ You can interact with the node edge graph in several ways:
 
     - The user must have the appropriate permissions to edit the dashboard/low-code app. See [Configuring security for a dashboard](xref:Configuring_dashboard_security) and [Configuring app security](xref:LowCodeApps_security_config).
 
+At any time during an interaction, you can press ESC to cancel the action and restore the item to its last known position (available from DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44938-->).
+
 ### Zooming and panning
 
 When the [*Zooming* option](#node-edge-graph-layout) is enabled, you can **zoom in or out** in two ways:
@@ -66,7 +68,7 @@ To **move left or right across the component**, click the graph and drag your mo
 
 ## Using dynamic coloring
 
-The component uses dynamic coloring, which can be adjusted according to preference. When you hover the mouse pointer over a node or edge, a tooltip is displayed with detailed info. Click the circle in the top-right corner of the tooltip to switch between different coloring modes for all the nodes or edges of this type:
+The component uses dynamic coloring, which can be adjusted according to preference. When you hover the mouse pointer over a node or edge, a tooltip is displayed with detailed info. Click the circle in the upper-right corner of the tooltip to switch between different coloring modes for all the nodes or edges of this type:
 
 - *Static*: Edges have no color, nodes have the color from the node settings.
 
@@ -117,7 +119,12 @@ Additionally, the following layout options are also available:
 | Advanced | Node positions | Change how the nodes are positioned within the component. See [Node position options](#node-position-options). |
 | Advanced | Direction | Available when the *Node positions* option is set to *Layered* (default). Determine how different nodes are displayed depending on their importance, as indicated by their configured weight. See [Node position options](#node-position-options). |
 | Advanced | Zooming | Toggle the switch to determine whether users should be able to zoom in on the component or not. See [Zooming and panning](#zooming-and-panning) |
-| Advanced | Edge style | Select whether the connections should be displayed as curly (default) or straight lines. |
+| Edges | Style | Select whether the connections should be displayed as curly (default) or straight lines. Prior to DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5<!--RN 44791-->, this setting is called *Edge style* and can be found under *Advanced*. |
+| Edges | Max bundle size | Set the maximum number of edges that can be shown before they are automatically combined into a single line (default value: 20). The color and style of that line are based either on the highest alarm severity (in alarm mode) or the lowest color (in analytical mode). Clicking the line will expand all edges, revealing their actual values and colors. Available from DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44791-->, when the parameter *showAdvancedSettings=true* is added to the URL. |
+| Edges | Spread offset | Determine the distance from the source or destination node at which edges begin to spread (default value: 0%). Available from DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44791-->, when the parameter *showAdvancedSettings=true* is added to the URL. |
+| Edges | Spread length | Determine the portion of the path where edges spread apart from the connection point (default value: 25%). Available from DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44791-->, when the parameter *showAdvancedSettings=true* is added to the URL. |
+| Edges | Max spread size | Determine the maximum distance occupied by bundled edges (default value: 80px). Available from DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44791-->, when the parameter *showAdvancedSettings=true* is added to the URL. |
+| Edges | Min gap | Determine the minimum distance between adjacent edges in a bundle (default value: 15px). Available from DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44791-->, when the parameter *showAdvancedSettings=true* is added to the URL. |
 
 #### Conditional coloring
 
@@ -179,7 +186,7 @@ The node edge graph component supports showing multiple layers. The following *I
 
 | Section | Subsection | Option | Description |
 |--|--|--|--|
-| N/A | `<query name>` | ![marker](~/dataminer/images/Maps_Circle_icon.png) or ![line](~/dataminer/images/Maps_Line_icon.png) | In the box representing each query, click either *Set as node* or *Set as edge*. If a query is set as node, it will move to the nodes section. If a query is set as edge, it will move to the edges section. Once a query has been set to be a node or edge, you can still change this setting by clicking the node or edge icon in the top-right corner of the query box. |
+| N/A | `<query name>` | ![marker](~/dataminer/images/Maps_Circle_icon.png) or ![line](~/dataminer/images/Maps_Line_icon.png) | In the box representing each query, click either *Set as node* or *Set as edge*. If a query is set as node, it will move to the nodes section. If a query is set as edge, it will move to the edges section. Once a query has been set to be a node or edge, you can still change this setting by clicking the node or edge icon in the upper-right corner of the query box. |
 | Nodes | `<query name>` | Node ID column | Select the column from the query that represents the node ID. |
 | Nodes | `<query name>` | X/Y | Only available when the *Node positions* layout option is set to *Linked as data*. Select the column from the query that contains the X and Y positions respectively. |
 | Nodes | Base node | Node name | This name is not displayed in the component itself, and is only intended to clarify the configuration. |
@@ -190,7 +197,7 @@ The node edge graph component supports showing multiple layers. The following *I
 | Nodes | Base node | Image | Only available if the *Visual* setting is set to *Image*. Enter a custom image link. |
 | Nodes | Base node | Size | From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, use the slider to adjust the size of the node, with a minimum of 1 px and a maximum of 100 px (default: 48 px). Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, select whether the node should be small, medium-sized, or large. |
 | Nodes | Base node | Weight | A number indicating the relative importance of the node. The higher the number, the more important the node, which determines where it is displayed in the graph (depending on the layout settings). |
-| Nodes | Base node | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default. From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<--RN 44809-->, nodes using templates do not support this setting, as tooltip content is defined in the template. |
+| Nodes | Base node | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default. From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44809-->, nodes using templates do not support this setting, as tooltip content is defined in the template. |
 | Nodes | Base node | Metric | Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->. Configure how the node label is displayed. You can hide the label, derive it from conditional coloring, or select a custom column to display as the label. See [Configuring node and edge labels](#configuring-node-and-edge-labels). |
 | Nodes | Base node | Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6<!--RN 39417--> up to DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44218-->, when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node. |
 | Nodes | Base node | Actions | Select *Add action* to configure an action that is executed when a node is clicked or double-clicked, or when an icon is clicked in the tooltip. See [Adding actions to a node edge graph](#adding-actions-to-a-node-edge-graph). |
@@ -216,9 +223,11 @@ For each node query and edge query, and for any configured node or edge override
 
 - **None**: No label is displayed, even if conditional coloring is configured for the selected column.
 
-- **From coloring**: The label visibility is determined by the conditional coloring configuration.
+- **Coloring**: The label visibility is determined by the conditional coloring configuration.
 
-- **Custom**: Allows you to select a specific column to use as the label. The label is shown even if the node or edge itself does not have conditional coloring.
+- **Custom**: Allows you to either select a specific column to use as the label or, from DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44907-->, link the label to data from another component by clicking the ![Link to](~/dataminer/images/Link_to_Data.png) icon. If you link the label to another component, the label can change dynamically based on that component, for example based on the column selected in a [dropdown component](xref:DashboardDropdown).
+
+  The label is shown even if the node or edge itself does not have conditional coloring.
 
   When you select *Custom*, the background color of edges is determined as follows:
 

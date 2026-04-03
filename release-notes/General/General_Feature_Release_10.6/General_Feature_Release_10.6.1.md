@@ -254,7 +254,7 @@ The *Attachments* tab has been updated as follows:
 
 - The *Load* button will now be disabled when definition-level security is enabled.
 
-- A message will now be displayed in the right-hand panel, explaining that you can add DOM instances to the list in the left-hand panel by using the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
+- A message will now be displayed in the pane on the right, explaining that you can add DOM instances to the list in the pane on the left by using the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
 
 - A *Clear* button now allows you to clear the list of DOM instances.
 

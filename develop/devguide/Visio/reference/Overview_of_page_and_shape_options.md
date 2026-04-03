@@ -692,7 +692,7 @@ It is good practice to use this option on Visio pages that contain controls (par
 
 Page-level option.
 
-If you use this option, the Visio page will not be centered on the card. Instead, it will be aligned top-left.
+If you use this option, the Visio page will not be centered on the card. Instead, it will be aligned top left.
 
 ## NoCopyElementProperty
 
@@ -971,7 +971,7 @@ See [UseEdge](xref:Linking_a_shape_to_a_webpage#useedge).
 
 Shape-level option.
 
-Use this option if you want to pass on the user credentials of the current user to a web page displayed inside a shape.
+Use this option if you want to pass on the user credentials of the current user to a webpage displayed inside a shape.
 
 See [UseLoginCredentials](xref:Linking_a_shape_to_a_webpage#uselogincredentials).
 

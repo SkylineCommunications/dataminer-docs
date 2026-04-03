@@ -56,9 +56,11 @@ This tab of the Booking Manager app displays information about current, past and
     > [!NOTE]
     > The *Release Ownership* button is only available if the Booking Locking feature is enabled (via [Config > General > Booking Locking](xref:Booking_Manager_Config_tab#application-setup-settings)).
 
-  - **Resources** / **Bookings**: This button is displayed in the bottom-left corner of the tab, and allows you to switch between the bookings and resources timeline.
+  - **Resources** / **Bookings**: This button is displayed in the lower-left corner of the tab, and allows you to switch between the bookings and resources timeline.
 
   - **Rescue**: Displayed at the bottom of the tab. This button can be used in case a booking was interrupted for some reason, e.g., because DataMiner became unavailable. It takes the booking out of the interrupted state so that it can start like a normal booking. For this purpose, the start date is adjusted when necessary.
+
+    From SRM 2.0.2 onwards<!-- RN 39357 -->, it is possible to rescue bookings that should have ended already. In this case, the booking will be put in *Failed* state (because it did not finish). You can then leave the booking as it is for reference, or use *Leave From Failure State* to set the booking to *Completed* as if it had been executed fully.
 
     > [!NOTE]
     > Prior to SRM 1.2.23, instead of a *Rescue* button, a *Leave Interrupted* button is available, which has the same functionality. <!-- RN 28472 -->

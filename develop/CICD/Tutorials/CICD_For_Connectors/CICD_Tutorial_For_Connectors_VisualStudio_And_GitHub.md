@@ -218,7 +218,7 @@ You should now see your CI jobs complete successfully, ensuring that quality sta
 
    You should now see your new workflow running in this tab. Your CI and CD jobs should complete successfully, ensuring quality standards are met and uploading the item to the Catalog UI as a private item.
 
-1. Go to <https://catalog.dataminer.services/>, make sure your organization is selected in the top-right corner, and look up your artifact.
+1. Go to <https://catalog.dataminer.services/>, make sure your organization is selected in the upper-right corner, and look up your artifact.
 
 > [!NOTE]
 > If you see the following errors: **Push .githubtocatalog/auto-generated-catalog Process completed with exit code 128.** or **remote: Permission to MyOrg/MyRepo.git denied to github-actionsbot**, you will need to either [set write permissions for the GITHUB_TOKEN in your specific repository](https://docs.github.com/en/actions/security-for-github-actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token), or, if you are an organization admin, you can enable this for the organization by [setting the workflow permissions](https://docs.github.com/en/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#setting-the-permissions-of-the-github_token-for-your-organization) to *Read and write permissions*.

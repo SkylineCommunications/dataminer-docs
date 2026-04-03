@@ -14,7 +14,7 @@ The main difference between a dashboard and a low-code app is that the latter ca
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
     <b>💡 TIPS TO TAKE FLIGHT</b><br>
-    Want to see a low-code app in action? Watch <a href="xref:Creating_custom_apps" style="color: #657AB7;">this short video</a>.
+    More of a visual learner? Watch <a href="xref:Creating_a_completely_new_dashboard" style="color: #657AB7;">this short video</a> to see how a new dashboard can be created from scratch, or watch <a href="xref:Creating_custom_apps" style="color: #657AB7;">this video</a> to see a low-code app in action.
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>

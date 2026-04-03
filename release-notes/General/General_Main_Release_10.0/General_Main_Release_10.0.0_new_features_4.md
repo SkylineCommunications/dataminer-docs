@@ -51,7 +51,7 @@ There are several ways to start creating a new blank dashboard:
 
 - On the home page, click *Start with a new blank dashboard*.
 
-- Click the “...” icon in the top-right corner of the navigation pane, and select *New dashboard*.
+- Click the “...” icon in the upper-right corner of the navigation pane, and select *New dashboard*.
 
 - Select a folder or dashboard in the list of dashboards on the left and select *New dashboard* in the right-click menu, or click the *New dashboard* button in the header bar.
 
@@ -64,7 +64,7 @@ To create a dashboard based on an example, you can either first import the examp
 
 ##### Editing a dashboard
 
-If a dashboard is selected in the navigation button, you can enter edit mode by clicking the edit button in the top-right corner. To stop editing, click the button in the same location.
+If a dashboard is selected in the navigation button, you can enter edit mode by clicking the edit button in the upper-right corner. To stop editing, click the button in the same location.
 
 In edit mode, you can adapt the dashboard in the following ways:
 
@@ -110,7 +110,7 @@ Currently, the following components can be added to a dashboard.
     | Group\]         | Displays a group of components. This allows you to display the same set of components for each item in a group feed, for example for each parameter in a group of parameters.                     |
     | Image           | Shows an image. Note: This component not only allows you to select an image that was uploaded earlier, it also allows you to upload new images.                                               |
     | Text            | Shows a block of static text. In the *Layout* tab, you can configure the styling of the text (font, font size, bold, italic, underline, horizontal alignment). |
-    | Web             | Displays either a block of static HTML or a web page.                                                                                                                                             |
+    | Web             | Displays either a block of static HTML or a webpage.                                                                                                                                             |
 
 - States
 
@@ -125,7 +125,7 @@ Currently, the following components can be added to a dashboard.
     | Component     | Description                                                                                                                                                                                                                      |
     |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Parameter table | Displays a data table of an element, optionally filtered by table indices or using a dynamic table filter.                                                                                                                       |
-    | Pivot table     | Displays a status report for a number of parameters of the elements using the selected protocol and protocol version. Via the ... button in the top-right corner of the component, the status report can be exported to CSV. |
+    | Pivot table     | Displays a status report for a number of parameters of the elements using the selected protocol and protocol version. Via the ... button in the upper-right corner of the component, the status report can be exported to CSV. |
 
 - Charts
 
@@ -752,9 +752,9 @@ Example:
 </Topologies>
 ```
 
-A typical CPE environment usually contains one front-end manager element and multiple back-end manager elements. All those elements, which contain the same CPE topology and refer to the same data in the background, will by default be polled by the CPE crawler.
+A typical CPE environment usually contains one frontend manager element and multiple backend manager elements. All those elements, which contain the same CPE topology and refer to the same data in the background, will by default be polled by the CPE crawler.
 
-To force the CPE crawler to only poll the front-end manager element, indicate which of the manager elements is the front-end manager. You can do this by adding to it a parameter of type “double” named “ElementManagerType”, and set its value to “1”.
+To force the CPE crawler to only poll the frontend manager element, indicate which of the manager elements is the frontend manager. You can do this by adding to it a parameter of type “double” named “ElementManagerType”, and set its value to “1”.
 
 > [!NOTE]
 >

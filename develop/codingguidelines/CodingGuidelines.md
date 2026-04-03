@@ -9,7 +9,7 @@ This section lists best practices and guidelines designed to uphold the quality 
 
 By adhering to these best practices and guidelines, you can ensure that protocols have a consistent look and thereby increase maintainability and readability, and you will also increase the reusability, stability, and performance of the protocols you develop.
 
-A checklist is available [on DataMiner Dojo](https://community.dataminer.services/protocol-development-downloads/), which should be used whenever a new protocol version is created. In the checklist, verify every item and specify "OK", "Fail", or "NA", as appropriate.
+For Skyline employees, using the DoD platform is the best way to ensure adherence to these best practices. For more information, see [DoD Platform](https://internaldocs.skyline.be/Corporate/PoliciesAndProcedures/EngineeringAndConsultancyServices/Definition_of_Done/DoD_Platform.html) (link accessible for Skyline employees only).
 
 > [!NOTE]
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this section are to be interpreted as described in RFC 2119 (see <https://www.ietf.org/rfc/rfc2119.txt>).

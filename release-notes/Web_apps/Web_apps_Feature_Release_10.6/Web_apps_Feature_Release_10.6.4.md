@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.6.4
 ---
 
-# DataMiner web apps Feature Release 10.6.4 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.4
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU1].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,7 +16,20 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been selected yet.*
+#### Dashboards/Low-Code Apps - Node edge graph component: Customizing nodes using templates [ID 44809]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
+
+The *Node edge graph* component now supports node templates. This allows you to customize the appearance of nodes using the Template Editor or by applying preset templates as a starting point.
+
+![Node edge graph template example showing a network diagram with multiple nodes displaying status indicators, roles, and labels organized in a hierarchical structure](~/dataminer/images/NodeEdgeGraphTemplate.gif)
+
+In the *Settings* pane, navigate to *Identifiers* > *Nodes* > *Base node* > *Visual*. In this section, you can now select *Template*. From there, you can either click the *Edit* icon to open the Template Editor or the *Browse templates* icon to select a preset or custom template.
+
+> [!NOTE]
+> When *Visual* is set to *Template*, nodes no longer support showing a tooltip or metric, as this information can be defined in the template itself.
+>
+> In addition, actions can no longer be configured via the *Actions* section in the *Settings* pane, as actions can instead be defined on shapes in the template itself.
 
 ## New features
 
@@ -61,21 +74,6 @@ The `ClientTimeZone` (`DMAAutomationScriptOptionClientTimeZone`) data type has t
 
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.4 or newer. See [Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]](xref:General_Feature_Release_10.6.4#automation-time-zone-of-the-client-can-now-be-passed-to-the-automation-script-that-is-executed-id-44742).
-
-#### Dashboards/Low-Code Apps - Node edge graph component: Customizing nodes using templates [ID 44809]
-
-<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
-
-The *Node edge graph* component now supports node templates. This allows you to customize the appearance of nodes using the Template Editor or by applying preset templates as a starting point.
-
-![Node edge graph template example showing a network diagram with multiple nodes displaying status indicators, roles, and labels organized in a hierarchical structure](~/dataminer/images/NodeEdgeGraphTemplate.gif)
-
-In the *Settings* pane, navigate to *Identifiers* > *Nodes* > *Base node* > *Visual*. In this section, you can now select *Template*. From there, you can either click the *Edit* icon to open the Template Editor or the *Browse templates* icon to select a preset or custom template.
-
-> [!NOTE]
-> When *Visual* is set to *Template*, nodes no longer support showing a tooltip or metric, as this information can be defined in the template itself.
->
-> In addition, actions can no longer be configured via the *Actions* section in the *Settings* pane, as actions can instead be defined on shapes in the template itself.
 
 ## Changes
 
@@ -396,6 +394,12 @@ Since DataMiner version 10.5.0 CU12/10.6.3, the *themes.json* file was incorrect
 
 This file has now been added again.
 
+#### Dashboards/Low-Code Apps - GQI components: Problem when data from another component changed rapidly [ID 44934]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+When, in a GQI component (e.g., *Grid*, *Table*, *Timeline*, etc.), a query was filtered by data from another component, in some cases, the filtering would not be reflected in the UI when the data from the other component changed rapidly.
+
 #### Dashboards app: Problem with GQI components when generating a PDF report in stacked mode [ID 44945]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
@@ -407,3 +411,27 @@ Up to now, when you generated a PDF report in stacked mode of a dashboard contai
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
 
 When a low-code app was migrated to a newer version, in some cases, timeline events would incorrectly not get fully migrated.
+
+#### Dashboards app: Timeline component highlight setting migrated incorrectly [ID 45060]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+After a web upgrade to DataMiner 10.5.0 [CU12]/10.6.3, an issue during the migration of the setting to highlight specific ranges in a timeline component of a dashboard could cause that setting to no longer be linked to its data. Users had to manually relink the setting to fix this. This issue will now be prevented.
+
+#### GQI DxM: Ad hoc data source instances and custom operator instances used on the right side of a join operator would not be cleaned up correctly [ID 45064]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+Since DataMiner version 10.5.0 CU11/10.6.2, ad hoc data source instances and custom operator instances that were used on the right side of a join operator would no longer be cleaned up correctly after a query had been executed. This would lead to the extension workers leaking memory as those instances would remain in memory indefinitely.
+
+From now on, all GQI extension instances will be able to properly release their resources when used on either side of a join operator.
+
+#### GQI DxM - Custom operators: Problem with cell values of Guid columns that were converted to string values [ID 45100]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
+
+Cell values from Guid columns are converted to string values when passed to the `IGQIRowOperator.HandleRow` life cycle method of a custom operator.
+
+As these string values would then be used throughout the rest of the query, up to now, this could lead to type mismatch errors.
+
+From now on, cell values of type String coming from a custom operator will be converted back to Guid when the column is of type Guid.

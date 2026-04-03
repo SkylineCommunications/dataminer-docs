@@ -379,7 +379,7 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
     > [!NOTE]
     > Hidden elements are no longer included in the search results.
 
-- Cube settings, card layout settings, updates, and other options that were previously available via various menus of the header bar are now available in one single menu, which can be accessed via the user icon in the top-right corner.
+- Cube settings, card layout settings, updates, and other options that were previously available via various menus of the header bar are now available in one single menu, which can be accessed via the user icon in the upper-right corner.
 
 - If an alarm storm occurs, this is no longer displayed in the header bar. Instead, a button is now displayed at the bottom of the Alarm Console. A tooltip on the button provides more information.
 
@@ -401,7 +401,7 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
   | ![SLA icon](~/release-notes/images/CubeXSLA.png)                      | SLA              |
   | ![view icon](~/release-notes/images/CubeXView.png)                    | View             |
 
-  If an alarm is present on an element, service, redundancy group or SLA, this is indicated by a colored circle in the bottom-right corner of the icon. For a view, the entire icon is colored according to the alarm severity.
+  If an alarm is present on an element, service, redundancy group or SLA, this is indicated by a colored circle in the lower-right corner of the icon. For a view, the entire icon is colored according to the alarm severity.
 
   However, note that these new icons do not support latch level, aggregation level and split view level indications. As such, a new user setting is available, *Use modern icons*, which can be cleared to use the previous icons again.
 
@@ -639,7 +639,7 @@ The header, sidebar and login screen of the Dashboards app have now been adapted
 
 #### Dashboards app: New 'Clear all' action + settings to pin actions \[ID 24356\]
 
-In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g., the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
+In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g., the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the upper-right corner of the dashboard.
 
 If a dashboard contains at least one feed, a new *Clear all* action is now available in the dashboard header, which can be used to clear the selection of the feeds in the dashboard.
 

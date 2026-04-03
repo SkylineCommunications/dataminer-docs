@@ -33,7 +33,7 @@ In this element, `https://dataminer.example.com` has to be replaced with the IP 
 > [!NOTE]
 >
 > - When using external authentication via SAML, DataMiner should be configured to use HTTPS.
-> - This new authentication app will also be used by DataMiner Cube, but only to authenticate users who want to access a web page stored on a DataMiner Agent, not to authenticate users who log in to Cube itself.
+> - This new authentication app will also be used by DataMiner Cube, but only to authenticate users who want to access a webpage stored on a DataMiner Agent, not to authenticate users who log in to Cube itself.
 
 ## Other new features
 

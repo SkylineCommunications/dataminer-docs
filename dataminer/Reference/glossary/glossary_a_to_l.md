@@ -37,7 +37,7 @@ uid: glossary_a_to_l
 | ASCII | American Standard Code for Information Interchange. Character-encoding standard for electronic communication.  |
 | ASI | Asynchronous serial interface. Streaming data format that often carries an MPEG transport stream. |
 | ASN.1 | Abstract Syntax Notation 1. Standardized notation for data structures. |
-| ASP | Active Server Pages. Server-side Microsoft script engine for dynamically generated web pages. |
+| ASP | Active Server Pages. Server-side Microsoft script engine for dynamically generated webpages. |
 | ATM | Asynchronous Transfer Mode. Set of network protocols used to transfer data in fixed-size packets. |
 | ATP | Acceptance Test Plan. Document describing the required testing in order to determine if a software system meets the criteria for acceptability. |
 | Automation | DataMiner module that allows you to create, manage and run scripts to execute tasks automatically. See [Automation](xref:automation). |
@@ -222,7 +222,7 @@ uid: glossary_a_to_l
 
 | Term | Description |
 |------|-------------|
-| Hamburger button | Button consisting of three horizontal lines, which opens a menu. Used for example in the top-right corner of a card in DataMiner Cube. |
+| Hamburger button | Button consisting of three horizontal lines, which opens a menu. Used for example in the upper-right corner of a card in DataMiner Cube. |
 | HDR | High Dynamic Range imaging. Technique used in imaging and video to display a greater dynamic range of luminosity than with standard techniques. |
 | Heatmap | Graphical representation of data with values represented as colors. |
 | HFC | Hybrid Fiber-Coaxial. Network combining optical fiber and coaxial cable. |

@@ -23,7 +23,7 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 ### Creating a new dashboard theme
 
-1. Click the user icon in the top-right corner of the Dashboards app and select the *Configuration* or *Settings* option.
+1. Click the user icon in the upper-right corner of the Dashboards app and select the *Configuration* or *Settings* option.
 
 1. In the *Dashboards settings* window, click the *New theme* button.
 

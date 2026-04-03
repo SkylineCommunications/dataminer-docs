@@ -2,8 +2,6 @@ items:
   - name: Error messages
     topicUid: ErrorMessages
     items:
-      - name: An error occurred in the application you were using
-        topicUid: An_error_occurred_in_the_application_you_were_using
       - name: Could not load type Maps.DataMinerMap
         topicUid: Could_not_load_type_Maps_DataMinerMap
       - name: Could not load Visio file
@@ -58,8 +56,6 @@ items:
         topicUid: Thread_problem_in_x
       - name: Timed out while flushing events from x
         topicUid: Timed_out_while_flushing_events
-      - name: Unknown Error
-        topicUid: Unknown_Error
   - name: Logging
     items:
       - name: Monitoring real-time communication between a DMA and an element
@@ -262,6 +258,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: GQI DxM unavailable because of missing Newtonsoft.Json assembly
+            topicUid: KI_GQI_DxM_unavailable_missing_Newtonsoft_Json
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
             topicUid: KI_profile_manager_fails_after_rollback
           - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite

@@ -24,9 +24,7 @@ Open Windows Task Manager, go to the ***Performance tab***, and check if ***CPU*
 
    - *SL\*.exe*: The processes starting with SL (e.g., SLProtocol, SLElement) are the core DataMiner services.
 
-   - *DataMinerCube.exe*: The DataMiner Cube desktop application.
-
-   - *PresentationHost.exe*: The DataMiner Cube browser application.
+   - *DataMinerCube.exe*: DataMiner Cube.
 
    - *mysqld.exe*: The MySQL database, if applicable.
 

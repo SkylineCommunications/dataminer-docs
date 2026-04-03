@@ -11,17 +11,6 @@ uid: General_Main_Release_10.7.0_changes
 
 ### Breaking changes
 
-#### Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]
-
-<!-- MR 10.7.0 - FR 10.6.3 -->
-
-Up to now, one SLScripting process was used by default. From now on, by default, there will be as many SLScripting processes as SLProtocol processes.
-
-Note that is possible to configure the number of simultaneously running SLScripting processes. See [Setting the number of simultaneously running SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes).
-
-> [!IMPORTANT]
-> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
-
 #### SNMP trap binding values will now only display plain ASCII characters [ID 44527]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
@@ -45,28 +34,6 @@ Up to now, text containing characters that were encoded in extended ASCII (i.e.,
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 Because of a number of enhancements made in SLNet, trend graphs in DataMiner Cube will now also correctly display behavioral change points for table column parameters without advanced naming.
-
-#### Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]
-
-<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.7.0 - FR 10.6.3 together with 44420 -->
-
-Up to now, when an SLScripting process disappeared, elements relying on that process could become unstable, requiring manual intervention to restore functionality.
-
-From now on, when an SLScripting process disappears, a new process instance will be started automatically, and any elements that depended on the process that disappeared will be restarted to maintain consistency across SLProtocol, SLScripting, and other related components. This will ensure that lost SLScripting data is properly reinitialized and remains in sync with other processes.
-
-When an SLScripting process disappears, the following notice alarm will be generated:
-
-`Process disappearance of SLScripting.exe with PID <processId>; <x> elements affected by the disappearance have been restarted.`
-
-Also, the *SLElementsInProtocol.txt* log file has been updated to track restart reasons more accurately.
-
-- The restart reason column will now indicate either "SLScriptingCrashRestart" or "SLProtocolCrashRestart" (if everything is OK, *NormalStart* will be shown instead).
-- A new counter will now indicate the number of times the element was started due to a SLScripting process disappearance.
-
-If SLProtocol requests an SLScripting process that is no longer valid, the system will now detect this, and trigger the same element restart flow.
-
-> [!NOTE]
-> There will be a one-minute delay between the disappearance of an SLScripting process and the creation of a new SLScripting process and the subsequent element restarts. However, when one of the elements that was hosted in the SLScripting process that disappeared tries to trigger a QAction within that one-minute delay, the new SLScripting process will be created when that QAction is triggered.
 
 #### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
 
@@ -176,6 +143,12 @@ From now on, when you try to add a DataMiner Agent to a DataMiner System, the op
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.
 
+#### SLWatchdog will now report SLNet/SLDataGateway TPL ThreadPool and 'time dilation' issues as run-time errors [ID 44186]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+From now on, whenever the TPL ThreadPool of SLNet or SLDataGateway would get stuck or a "time dilation" would occur on your system (for example, when a freeze of a virtual machine would cause sleep actions to take longer than anticipated), SLWatchDog will report these issues as a run-time error.
+
 #### Scheduler will now be able to start more than 10 synchronously running automation scripts [ID 44200]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -274,11 +247,81 @@ From now on, each SLLogCollector instance will have its own dedicated log file n
 
 Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
 
+#### Connector synchronization enhancements [ID 44715]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+A number of enhancements have been made with regard to the synchronization of connectors within a DataMiner System:
+
+- The first time you upload a version of a new connector, it will automatically be set as production version. Up to now, when a connector version was automatically set as production version, this would trigger a synchronization of that production version. From now on, the new connector will be synchronized within the cluster, and when a DataMiner Agent detects that it is the first version, it will set it as the production version.
+
+- Up to now, when a parent connector exported child connectors (as is the case with DVE connectors), these exported child connectors would be synchronized within the cluster when the parent connector was added or modified. From now on, only the parent connector will be synchronized, and each DataMiner Agent will then generate the child connectors.
+
+- From now on, a protocol.xml file that is generated based on the active function.xml file will no longer be synchronized when the function is activated.
+
+> [!NOTE]
+> The midnight sync has not been altered.
+
 #### Security enhancements [ID 44804]
 
 <!-- 44804: MR 10.7.0 - FR 10.6.5 -->
 
 A number of security enhancements have been made.
+
+#### Enhanced SSH logging [ID 44975]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+A number of enhancements have been made to the SSH logging:
+
+- From now on, when an SSH connection times out for one of the following reasons, an entry will be added to the element log:
+
+  - Host name could not be resolved.
+  - User authentication failed.
+
+- In the SSH logging, it will now clearly be indicated which operations have been performed. For example, during authentication, the logging will now clearly state which authentication methods have been used and what the results were.
+
+- In the SSH logging, most entries will now mention the session ID associated with the entry. As this same session ID is also mentioned in element log entries, users will find it much easier to find out which log entries are related.
+
+Also, an issue has been fixed. When a host name could not be resolved to an IP address, up to now, the SSH connection would incorrectly try to connect to localhost. From now on, when the host name could not be resolved, the connection will fail.
+
+#### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45022]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+Previously, when a script library was added to a DataMiner System, its hint paths were automatically sent to the automation script compilation engine, even when the library was not used by any automation script.
+
+From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
+
+#### DataMiner upgrade: A number of default Visio stencils will no longer be included [ID 45202]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+From now on, a DataMiner upgrade package will no longer contain the following Visio stencil files:
+
+- AppearTV DC1000.vss
+- AppearTV DC1100.vss
+- AppearTV MC3000.vss
+- AppearTV MC3100.vss
+- AppearTV SC2000.vss
+- AppearTV SC2100.vss
+- BridgeTech.vss
+- Nimbra300.vss
+- Nimbra600.vss
+- NimbraNodes.vss
+- United States Maps (US units).vss
+- World Maps (Metric).vss
+- World Maps (US units).vss
+
+Note that the following stencil files will still be deployed:
+
+- Buttons.vssm
+- Icons.vssx
+- KPI.vssm
+- SkylineNewDrawing.vsdx
+
+> [!NOTE]
+> The above-mentioned stencil files that are no longer included in DataMiner upgrade packages will not automatically be removed from existing systems.
 
 ### Fixes
 
@@ -320,3 +363,9 @@ From now on, trend records with the following *iStatus* values will no longer ca
 | -6  | Element is being stopped. |
 | -9  | Trending was started for the specified parameter. |
 | -10 | Trending was stopped for the specified parameter. |
+
+#### SLAnalytics: Flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours [ID 45033]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+Up to now, flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours.

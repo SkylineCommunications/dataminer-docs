@@ -35,14 +35,14 @@ In addition, you also have the option to subscribe to certain services by reserv
 
 ### DataMiner Community Edition
 
-The DataMiner Community Edition allows you to deploy a standalone, fully featured DataMiner System per [organization](xref:Pricing_Usage_based_service#organization). It can be deployed on self-managed infrastructure or as a service.
+The DataMiner Community Edition allows you to deploy a standalone, fully featured DataMiner System per [organization](xref:Pricing_billing_and_metering#organization). It can be deployed on self-managed infrastructure or as a service.
 
 When you create a new organization and [your first DataMiner System](xref:Creating_a_DMS_in_the_cloud), two subscriptions are automatically added to your account: **Community Edition** and **Hosted Community Edition**. Together, these define the available allowances depending on whether the system is self‑managed or hosted.
 
 | Subscription&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Included&nbsp;Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Expiration |
 |--|--|--|
 | **Community Edition** | - 25 standard managed objects<br>- 5,000 light managed objects<br>- 200,000 unmanaged objects<br>- 5 connectors<br>- 4,000 automation actions<br>- 20 Shares | Free. Renews every **12 months**. |
-| **Hosted Community Edition** | - 100,000 alarm updates<br>- 75,000 information events<br>- 7.5M trend data points<br>- 7.5M element data updates (STaaS)<br>- 150,000 metrics (DaaS) | Free for **7 days**, then 480 EUR or 660 USD per month (depending on the end‑user region), with two months free when subscribing for a year. |
+| **Hosted Community Edition** | - 100,000 alarm updates<br>- 200,000 information events<br>- 40M trend data points<br>- 10M element data updates (STaaS)<br>- 1M metrics (DaaS) | Free for **7 days**, then 480 EUR or 660 USD per month (depending on the end‑user region), with two months free when subscribing for a year. |
 
 #### Scaling up
 

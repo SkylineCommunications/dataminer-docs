@@ -11,13 +11,13 @@ In the Admin app, you can view information about the usage of certain DataMiner 
 Currently, only usage data for Storage as a Service (STaaS) are displayed, i.e., the number of ingest operations per data type. In the future, more information will become available here.
 
 > [!TIP]
-> For more information about the metering and conversion rates, see [Metering](xref:Pricing_Usage_based_service#metering-units).
+> For more information about the metering and conversion rates, see [Billing and metering](xref:Pricing_billing_and_metering).
 
 To view your usage:
 
 1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 
-1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the upper-right corner and select the organization in the list.
 
 1. In the pane on the left, under *Organization*, select *Usage*.
 

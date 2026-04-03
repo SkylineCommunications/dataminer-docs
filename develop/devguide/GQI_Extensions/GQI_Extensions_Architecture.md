@@ -17,7 +17,7 @@ This is the main entry point for all GQI operations. It manages core functionali
 
 When a query uses GQI extensions (like ad hoc data sources or custom operators), the parent process spawns one or more child processes to handle those extensions.
 
-- **Technology:** .NET 8
+- **Technology:** .NET 10
 - **Communication:** Connects to the DataMiner Agent via gRPC (APIGateway)
 
 ## Extension worker processes

@@ -214,7 +214,7 @@ The main page of the app consists of a header bar, a side panel and an overview 
 
 - The side panel can be used to filter the jobs displayed in the overview panel. Two filter options are available, one to limit the jobs that are displayed depending on the values in the job fields, and one to limit the jobs depending on the time frame in which they are planned.
 
-- The overview panel has two buttons in the top-right corner, allowing you to switch between a list view and a timeline view. In the list view, all jobs matching the specified filters are listed, along with any additional job information that has been configured to be displayed. In the timeline view, jobs are displayed on a timeline control similar to that of the DMS Scheduler app.
+- The overview panel has two buttons in the upper-right corner, allowing you to switch between a list view and a timeline view. In the list view, all jobs matching the specified filters are listed, along with any additional job information that has been configured to be displayed. In the timeline view, jobs are displayed on a timeline control similar to that of the DMS Scheduler app.
 
     > [!NOTE]
     > When you open the Jobs app on a mobile device, the timeline view will not be available.
@@ -247,8 +247,8 @@ Most actions involving jobs can be done with buttons in the header bar of the ap
 
   When editing a job, you can save that job as a job template.
 
-  - To create a job template, click the downward arrow in the top-right corner, and click *Save template*.
-  - To apply a job template (i.e., to fill the fields of the job you are editing with the field values stored in the template), click the downward arrow in the top-right corner, select a template from the list, and click *Apply template*.
+  - To create a job template, click the downward arrow in the upper-right corner, and click *Save template*.
+  - To apply a job template (i.e., to fill the fields of the job you are editing with the field values stored in the template), click the downward arrow in the upper-right corner, select a template from the list, and click *Apply template*.
 
   > [!NOTE]
   > Auto-increment and booking fields are not included in job templates.
@@ -572,7 +572,7 @@ A Cube user trying to log in to a DataMiner Agent using external authentication 
 
 > [!NOTE]
 >
-> - At present, the authentication web page will always be opened in Internet Explorer.
+> - At present, the authentication webpage will always be opened in Internet Explorer.
 > - DataMiner SAML authentication supports multiple assertion consumer service locations, so that authentication is possible across multiple service addresses.
 
 #### HTML5 apps: External user authentication via SAML \[23905\]

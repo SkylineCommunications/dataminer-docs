@@ -2,7 +2,7 @@
 uid: MediaOps_Plan_1.5.1
 ---
 
-# MediaOps 1.5.1
+# MediaOps Plan 1.5.1
 
 > [!NOTE]
 > This version requires:
@@ -38,6 +38,18 @@ As orchestration scripts have more flexibility than workflow execution scripts, 
 It is now possible to categorize resource pools using the new *Categories* app. This way, when operators select a category in the Scheduling app, they will only see the pools in that specific category.
 
 To create categories for resource pools, deploy the Categories app from the DataMiner Catalog. In the app, first select the *Resource Pools* scope and then add categories into the scope. After you have created the categories, you can edit a pool and assign it to a category. Note that while the Categories app allows the creation of multiple levels of subcategories, it is not possible to use a category that has a parent for resource pools.
+
+#### Code libraries to manipulate Resource Studio object [ID 45009]
+
+Through public NuGet libraries, helper classes and methods are now available that provide the correct way to manipulate objects in MediaOps Plan for Resource Studio. These helper classes and methods can be used from automation scripts, connectors, and/or ad hoc data sources.
+
+Depending on where you want to use them, you will have to include one of the NuGet packages listed below. Once you build a package from DIS (for which SDK style 2.4.4 or higher is needed), these references will be translated to the correct libraries on your DataMiner System. This will ensure that the correct library is used depending on the MediaOps version deployed on your system. This way, your code will continue to work after a new MediaOps version is deployed.
+
+NuGet packages:
+
+- <https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.Automation>
+- <https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.Protocol>
+- <https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.GQI>
 
 ## Changes
 

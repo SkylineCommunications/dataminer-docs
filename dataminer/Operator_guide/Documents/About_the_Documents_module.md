@@ -25,7 +25,7 @@ The following information can be stored with the app:
 
 - Email addresses
 
-- Hyperlinks to web pages
+- Hyperlinks to webpages
 
 > [!TIP]
 > See also: [Make the most of DataMiner Documents](https://www.youtube.com/watch?v=8XKpSk5fm3I) ![Video](~/dataminer/images/video_Duo.png)

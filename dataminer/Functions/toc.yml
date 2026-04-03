@@ -198,6 +198,8 @@ items:
         items:
           - name: Function resource settings
             topicUid: Function_resource_settings
+          - name: Resource Manager settings
+            topicUid: Resource_manager_config
           - name: Resource availability
             topicUid: Resource_availability
   - name: Business Intelligence
@@ -411,12 +413,12 @@ items:
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
+          - name: Overview of the Low-Code Apps UI
+            topicUid: LCA_UI
           - name: Creating apps
             topicUid: Creating_custom_apps
           - name: Editing an app
             topicUid: Editing_custom_apps
-          - name: Changing user settings
-            topicUid: LCA_User_Settings
           - name: Configuring apps
             items:
               - name: Configuring the app layout

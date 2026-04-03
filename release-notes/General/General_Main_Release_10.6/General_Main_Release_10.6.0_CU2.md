@@ -7,24 +7,40 @@ uid: General_Main_Release_10.6.0_CU2
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
-> [!IMPORTANT]
->
-> Before you upgrade to this DataMiner version:
->
-> - Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation. The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
->
->   - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
->   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
-
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.6.0 CU2](xref:Cube_Main_Release_10.6.0_CU2).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.6.0 CU2](xref:Web_apps_Main_Release_10.6.0_CU2).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+## Prerequisites
+
+Before you upgrade to this DataMiner version:
+
+- Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+
+  The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+
+  - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+  - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+- Make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution.
+
+  For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+
+  See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Main_Release_10.6.0_changes#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43526-id-43856-id-43861-id-44035-id-44050-id-44062)
+
 ## Changes
 
 ### Enhancements
+
+#### SLLogCollector packages will now include the most recent WER crash dumps [ID 40754]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Since DataMiner version 10.5.0 CU11/10.6.2, each time a DataMiner process crashes for whatever reason, a full WER crash dump is created in `C:\Skyline DataMiner\Logging\CrashDump\wer\<ExeName>\`.
+
+From now on, each time an SLLogCollector package is created, it will include the most recent WER crash dump of every process found in the `C:\Skyline DataMiner\Logging\CrashDump\wer\` folder.
 
 #### SLDataGateway will now log when the TTLs of all active alarms have been refreshed [ID 44771]
 
@@ -32,13 +48,86 @@ uid: General_Main_Release_10.6.0_CU2
 
 On systems where each DMA has its own Cassandra database, SLDataGateway will now log when the TTLs of all active alarms have been refreshed. This will allow you to better trace any job queue spikes caused by these refresh operations.
 
+#### SLLogCollector packages will now include the 'Security.evtx' file [ID 44845]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+From now on, each time an SLLogCollector package is created, it will include the *Security.evtx* file.
+
+This file, located in `%SystemRoot%\System32\winevt\Logs\`, is the primary Windows Event Log file recording security-related events, such as logon attempts, privilege usage, and object access.
+
 #### Security enhancements [ID 44898]
 
 <!-- 44898: MR 10.6.0 [CU2] - FR 10.6.5 -->
 
 A number of security enhancements have been made.
 
+#### SLWatchDog2.txt will now contain more detailed logging regarding run-time errors [ID 44904]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+From now on, the *SLWatchDog2.txt* log file will contain more detailed logging regarding run-time errors.
+
+#### SLNet will now take into account the log level before sending a log entry to SLLog [ID 44910]
+
+<!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, SLNet would incorrectly send all log entries directly to SLLog, including entries of which the log level dictated that they should not be added to a log file.
+
+From now on, SLNet will only send a log entry to SLLog if the log level dictates that the entry should be logged. As a result, overall performance will increase when adding entries to log files.
+
+> [!IMPORTANT]
+> This change was reverted in Main Release 10.5.0 CU12, Main Release 10.6.0, and Feature Release 10.6.3 CU1 as it caused SLNet to leak handles whenever a user authenticated using SAML and a new SLHelper process was started. See [SLNet will no longer take into account the log level before sending a log entry to SLLog [ID 44868]](xref:General_Feature_Release_10.6.3_CU1#slnet-will-no-longer-take-into-account-the-log-level-before-sending-a-log-entry-to-sllog-id-44868).
+> The change has now been reintroduced.
+
+#### 'Functions' and 'Help' folders will no longer be checked when protocols are being loaded [ID 44946]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Before a DataMiner Agent starts loading protocol files during startup, it checks the protocol version folders to determine the location of all protocol files to be loaded. When a version folder does not contain any protocol files, it will log the following error: `Directory found for protocol xxx with version yyy but no protocol file found in path.`
+
+Up to now, apart from the protocol version folders, the DataMiner Agent would also incorrectly check the *Functions* and *Help* folders. However, as these folders do not contain any protocol files, this would result in a large number of invalid errors being logged.
+
+From now on, when DataMiner starts up, it will no longer check for protocol files in the *Functions* and *Help* folders.
+
+#### BrokerGateway DxM has been upgraded to Microsoft .NET 10 [ID 44979]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+The BrokerGateway DxM has been upgraded to Microsoft .NET 10.
+
+#### StorageModule DxM has been upgraded to Microsoft .NET 10 [ID 45006]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+The StorageModule DxM has been upgraded to Microsoft .NET 10.
+
+#### Correlation: Enhanced detection of circular correlation rules [ID 45007]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+A number of enhancements have been made to the mechanism that detects circular correlation rules.
+
+A correlation rule will be blocked when it was triggered due to a correlated alarm that depends on an alarm created by the rule in question.
+
+> [!NOTE]
+> ​This feature only works when the correlation rule and all alarms in question reside on the same DataMiner Agent.
+
+#### Custom SSH settings can now be configured per SSH connection [ID 45084]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when custom SSH settings (e.g., the key exchange algorithms) were configured in a specific connector, they would be applied to all elements running in the same SLPort process as the element that was using the protocol in which they had been configured.
+
+From now on, it will be possible to configure custom SSH settings per SSH connection.
+
 ### Fixes
+
+#### Problem when importing a dmimport package containing an element that generates DVE elements running a production version of the protocol with alarm templates configured on the DVEs [ID 44398]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When you imported a dmimport package containing an element that generates DVE elements running a production version of the protocol with alarm templates configured on the DVEs, up to now, the alarm templates on the DVE elements would incorrectly not be available because they were imported on the reference version instead of the production version.
 
 #### One protocol thread would incorrectly be able to add new rows to a table while another protocol thread was clearing that table [ID 44764] [ID 44833]
 
@@ -49,6 +138,16 @@ Up to now, in some rare cases, while a table was being cleared by one protocol t
 From now on, it will no longer be possible for one protocol thread to add new rows to a table while another protocol thread is clearing that same table. Only when the clear operation has finished will it be possible to add new rows again.
 
 Also, up to now, a clear action would incorrectly be able to set the iRows field of the array to 0 without taking the write lock. As a result, SLProtocol would lose count of the number of rows that were stored in the table and would not be able to clear any of those rows without an element restart.
+
+#### Check Time Server BPA test would only work correctly on systems on which the language was set to English [ID 44837]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, the *Check Time Server* BPA test would only work correctly on systems on which the language was set to English.
+
+Also, the time checking algorithm would be too restrictive.
+
+In addition, when multiple NTP servers are detected, the test will now verify whether those servers are peers of one another. If they are peers, the test will still succeed; if they are not peers, a warning will be generated.
 
 #### Service & Resource Management: Quarantine conflict error data would incorrectly include all quarantined usages of the affected bookings [ID 44869]
 
@@ -64,8 +163,101 @@ From now on, the conflict error data will only include the quarantined usages of
 
 Up to now, the SLA cleaning thread would incorrectly remove history data for an active alarm that was not linked to an outage. As a result, when a replay happened, the active alarms table would no longer be updated when that alarm was cleared.
 
+#### Native MessageBroker clients would not order the IP addresses in SLCloud.xml correctly [ID 44901]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, native MessageBroker clients would not order the IP addresses in *SLCloud.xml* correctly. From now on, local IP addresses will again be put at the top of the list.
+
+#### SNMP managers: Some configuration changes would not get properly synchronized across the Agents in the cluster [ID 44909]
+
+<!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when an SNMP manager had been added, or its configuration had been changed, the following settings would not get properly synchronized across the Agents in the cluster. On the remote Agents, after synchronization, these two settings would incorrectly be set to their default value.
+
+- *Enable tracking to avoid duplicate inform acknowledgments (ACKs)*
+- *Group alarms with the same parameter name*
+
+#### Alarm severity change within two minutes after an element start or restart would be processed incorrectly [ID 44917]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When the alarm severity of an element changed within two minutes after the element had been started or restarted, up to now, that change would be processed incorrectly.
+
 #### Updating DVE properties could cause SLDMS to stop working [ID 44921]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When DVE properties were being updated, in some cases, the SLDMS process could stop working when it was not aware of the element.
+
+#### SLDataGateway: Problem with custom data table check [ID 44933]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When SLDataGateway checked whether a certain custom database table existed, up to now, that check would incorrectly return false when the table in question already existed before DataMiner was started.
+
+#### Service & Resource Management: Certain bookings would incorrectly be quarantined when a range capacity was overbooked [ID 44940]
+
+<!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when a booking needed to be quarantined in order to solve a range capacity conflict, in some cases, certain usages that were not related to the conflict would incorrectly also be quarantined.
+
+#### Burst of traps would incorrectly cause multiple alarms to be generated when the parameter had the mapAlarm attribute configured [ID 44980]
+
+<!-- MR 10.6.0 [CU2] - FR 10.6.5 -->
+
+When a burst of traps was received for a parameter that had the `mapAlarm` attribute configured, up to now, multiple active alarms would incorrectly be generated instead of one active alarm with the alarms of all previous traps grouped in the same alarm tree.
+
+#### SLElement: Uninitialized memory could cause memory corruption [ID 45004]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In some cases, uninitialized memory in SLElement could cause memory corruption.
+
+#### Names of DVE elements created with the noelementprefix option would be empty [ID 45014]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when a DVE manager generated DVE elements with the `noelementprefix` option, in some cases, the name of these elements would incorrectly be empty.
+
+#### SLSNMPAgent would not properly unregister itself with SLWatchDog during a DataMiner shutdown [ID 45023]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, when DataMiner was shutting down, SLSNMPAgent would not properly unregister itself with SLWatchDog. This lead to a false alarm as SLWatchDog incorrectly thought that the process had crashed.
+
+From now on, when SNMPAgent shuts down, it will unregister itself with SLWatchDog.
+
+#### GetProtocolInfoResponseMessage.FindParameter method would not be thread-safe [ID 45035]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+Up to now, the `GetProtocolInfoResponseMessage.FindParameter` method would not be thread-safe. Using this method in different threads at the same time could lead to simultaneous access and modification of the underlying parameter cache, causing the following exception to be thrown:
+
+`Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct.`
+
+#### Nats-server would incorrectly not be installed alongside BrokerGateway when no DataMiner software had been installed on the system [ID 45049]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When BrokerGateway was installed on a system on which no DataMiner software had been installed, up to now, nats-server would incorrectly not be installed automatically because certain required DataMiner files were missing.
+
+From now on, nats-server will correctly be installed alongside BrokerGateway.
+
+#### APIGateway: '/api/versions' endpoint could return null as SLNet version [ID 45051]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+In some rare cases, the `/api/versions` endpoint exposed by DataMiner APIGateway could return "null" as SLNet version, especially after the *SLNet.exe* file had been updated on disk during a DataMiner upgrade.
+
+#### Swarming: Problem when StorageModule failed to load elements from the database during DataMiner startup [ID 45067]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When, on swarming-enabled systems, the StorageModule DxM failed to load elements from the database during DataMiner startup, up to now, the error state would incorrectly not be propagated to SLDataMiner, causing the DataMiner Agent to start up without loaded elements.
+
+#### Subsequent element updates could fail after the casing of the element name had been changed [ID 45119]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
+
+When, on a system on which Swarming was not enabled, you changed the casing of an element name and then restarted the element, in some cases, the next time you updated that element, the update would fail.

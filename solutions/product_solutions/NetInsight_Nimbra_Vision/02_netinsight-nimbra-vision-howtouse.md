@@ -10,7 +10,7 @@ The DataMiner Nimbra Vision solution provides comprehensive monitoring and orche
 
 Provides a easy way to user to monitor and manage scheduled circuit/services in Nimbra network. The list of circuit are displayed in a table and timeline view. From the table, users can also open a node edge view to provide a user friendly way to visualize the end-to-end network connections.
 
-The page header offers quick access to schedule *J2K* and *E-Line* services. A *Plan Circuit* button is also available in the top-right corner. The button opens a window where you can select the preferred service type, capacity, interfaces, start time, and end time.
+The page header offers quick access to schedule *J2K* and *E-Line* services. A *Plan Circuit* button is also available in the upper-right corner. The button opens a window where you can select the preferred service type, capacity, interfaces, start time, and end time.
 
 ![Nimbra Services](~/solutions/images/netinsight-nimbra-vision-scheduled.png)
 

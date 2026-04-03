@@ -35,7 +35,7 @@ From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41799-->, you can use a [trigg
 
    - *Allow color mode*: Determines whether [conditional coloring](#conditional-coloring) can be applied within the query filter. By default enabled.
 
-- In the top-right corner of the query filter component, there is an *Active (x)* toggle button. If you enable this button, the component displays only the active filter options, and the button itself indicates the number of active options.
+- In the upper-right corner of the query filter component, there is an *Active (x)* toggle button. If you enable this button, the component displays only the active filter options, and the button itself indicates the number of active options.
 
 - Next to columns containing discrete values of type string or number, you can find a button that allows you to change how the possible values are displayed when you hover your mouse over it:
 
@@ -89,7 +89,7 @@ After configuring the query filter component:
 
 ## Conditional coloring
 
-If the *Allow color mode* setting is enabled, a color marker icon will be available in the top-right corner of the filter query component.
+If the *Allow color mode* setting is enabled, a color marker icon will be available in the upper-right corner of the filter query component.
 
 Click the color marker icon to see a color legend to the right of the filter options. For each option, you can configure a custom color (default color: green).
 

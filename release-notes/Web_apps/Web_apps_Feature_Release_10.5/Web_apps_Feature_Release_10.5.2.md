@@ -126,7 +126,7 @@ Up to now, when you clicked the sound icon of a video thumbnail, the video would
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-The network status indicator in the *Dashboards* app is no longer a separate icon. The current network status will now be incorporated into the user icon in the top-right corner. Also, from now on, when everything is fine, no network status will be shown.
+The network status indicator in the *Dashboards* app is no longer a separate icon. The current network status will now be incorporated into the user icon in the upper-right corner. Also, from now on, when everything is fine, no network status will be shown.
 
 In low-code apps, network status issues will now be shown in a colored banner. Possible notices include:
 
@@ -215,7 +215,7 @@ When a custom time zone was configured in a *Timeline* component, up to now, tha
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-In some cases, *Table* and *Grid* components could incorrectly keep fetching query rows after the session had been closed, eventually causing the web page to become unresponsive.
+In some cases, *Table* and *Grid* components could incorrectly keep fetching query rows after the session had been closed, eventually causing the webpage to become unresponsive.
 
 #### Web API: DOMHelper could stop working when a DOM instance was updated while a client connection was being closed [ID 41677]
 

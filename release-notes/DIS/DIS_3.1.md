@@ -4,6 +4,29 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.21
+
+### New features
+
+#### IDE
+
+##### Updated DIS dependencies
+
+- [Skyline.DataMiner.CICD.CSharpAnalysis.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.CSharpAnalysis.Protocol) version 2.1.2
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 3.2.0
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 3.2.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.3.1
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.3.1
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.3.1
+
+### Fixes
+
+#### IDE
+
+##### Problem when clicking 'Sign in' after updating Visual Studio to version 17.14.28
+
+When, after updating Microsoft Visual Studio to version 17.14.28, you clicked *Sign in*, in some cases, an "invalid account" message would appear because of an assembly version could not be found.
+
 ## DIS 3.1.20
 
 ### New features

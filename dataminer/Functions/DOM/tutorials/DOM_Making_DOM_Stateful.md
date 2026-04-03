@@ -261,7 +261,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to edit th
    > [!TIP]
    > See also: [Accessing the web apps](xref:Accessing_the_web_apps).
 
-1. Click *New* to open the event form panel on the right-hand side.
+1. Click *New* to open the event form panel on the right.
 
 1. In the *Event name* field, enter a random name for an event.
 

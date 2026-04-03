@@ -152,7 +152,7 @@ This JSON object has to have the following structure:
 - In the **components** item, you can provide data to be selected in specific components referred to by their ID.
 
     > [!NOTE]
-    > When you are editing a dashboard, each component will show its ID in the bottom-right corner (e.g., “State 1”).
+    > When you are editing a dashboard, each component will show its ID in the lower-right corner (e.g., “State 1”).
 
 > [!NOTE]
 > When a dashboard updates its own URL, it will use the new format, but in a compressed way. In that compressed syntax, the query parameter “d” will be used instead of “data”.
@@ -448,7 +448,7 @@ When an update of an SLA setting (e.g., Base timestamp, Monitor span, Window siz
 
 #### Web apps: 'Refresh now' instead of 'Reconnecting...' message after communication was interrupted \[ID 31753\]
 
-Up now on, when a web app (e.g., Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the web page.
+Up now on, when a web app (e.g., Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the webpage.
 
 #### DataMiner Cube - Alarm Console: No context menu would appear when right-clicking an instance of an alarm that impacted more than one service when the alarms were grouped by service \[ID 31764\]
 
@@ -678,9 +678,9 @@ When you opened a shared dashboard that contained EPM components, in some cases,
 
 To be able to check the prerequisites during a DataMiner upgrade, SLNet needs to load the SLUpgrade.dll file. In some cases, it would load the 32-bit version instead of the 64-bit version or vice versa.
 
-#### DataMiner landing page: User icon no longer shown in top-right corner \[ID 32108\]
+#### DataMiner landing page: User icon no longer shown in upper-right corner \[ID 32108\]
 
-On the DataMiner landing page, the user icon would incorrectly no longer be shown in the top-right corner.
+On the DataMiner landing page, the user icon would incorrectly no longer be shown in the upper-right corner.
 
 #### Incorrect error in logging during startup of Failover setup \[ID 32112\]
 

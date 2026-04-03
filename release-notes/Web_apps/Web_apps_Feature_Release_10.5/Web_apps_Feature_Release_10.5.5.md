@@ -37,7 +37,7 @@ In the *Layers* tab, you can now duplicate a layer. To do so, proceed as follows
 1. Select *Duplicate*.
 
 > [!NOTE]
-> Up to now, to delete a layer, you had to hover over the layer and click the *Delete* button in the top-right corner. From now on, you need to hover over the layer, click the ellipsis button, and select *Delete*.
+> Up to now, to delete a layer, you had to hover over the layer and click the *Delete* button in the upper-right corner. From now on, you need to hover over the layer, click the ellipsis button, and select *Delete*.
 
 #### Dashboards/Low-Code Apps - Template editor: Layer tooltips [ID 42503]
 

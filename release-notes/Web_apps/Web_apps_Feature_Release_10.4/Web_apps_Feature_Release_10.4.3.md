@@ -18,7 +18,7 @@ uid: Web_apps_Feature_Release_10.4.3
 
 <!-- MR 10.3.0 [CU12] - FR 10.4.3 -->
 
-When editing a low-code app, it is now possible to configure *Show a notification* actions. These will allow you to show a notification in the bottom-right corner of the app.
+When editing a low-code app, it is now possible to configure *Show a notification* actions. These will allow you to show a notification in the lower-right corner of the app.
 
 When configuring a *Show a notification* action, the following properties should be specified:
 

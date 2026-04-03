@@ -201,7 +201,7 @@ items:
           - name: User interface customization
             topicUid: SRM_user_interface_customization
             items:
-              - name: Creating a custom front end for the Booking Manager
+              - name: Creating a custom frontend for the Booking Manager
                 topicUid: SRM_custom_front_end
               - name: Using custom scripts instead of the default SRM wizards
                 topicUid: SRM_custom_scripts
@@ -286,6 +286,8 @@ items:
                 topicUid: SRM_creating_editing_many_bookings_with_caching
               - name: Applying a profile to an unmapped resource
                 topicUid: SRM_apply_profile_to_unmatched_resource
+              - name: Creating a service for an existing booking
+                topicUid: SRM_create_service_for_booking
           - name: Launching default wizards from custom scripts
             items:
               - name: Launching the standard Booking Wizard from a custom script

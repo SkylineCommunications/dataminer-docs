@@ -18,7 +18,7 @@ To create a new app in an existing section on the DataMiner landing page:
 
   1. Open the tab in which you want the app to appear.
 
-  1. In the top-right corner of the low-code apps section, click *Create app*.
+  1. In the upper-right corner of the low-code apps section, click *Create app*.
 
      The app will be added to the selected section automatically.
 

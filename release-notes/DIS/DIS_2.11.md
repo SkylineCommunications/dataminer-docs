@@ -73,7 +73,7 @@ As is the case with duplicate parameter IDs, duplicate parameter names will now 
 
 > [!NOTE]
 >
-> - As long as there is at least one row showing a duplicate parameter ID or duplicate parameter name, the *OK* button will be disabled and a warning icon will be displayed in the top-right corner of the window.
+> - As long as there is at least one row showing a duplicate parameter ID or duplicate parameter name, the *OK* button will be disabled and a warning icon will be displayed in the upper-right corner of the window.
 > - Only rows of which the checkbox is selected are taken into account when performing the above-mentioned validation.
 
 #### IDE - XML editor: XML declaration now also updated when encoding is changed to UTF-8 \[ID 18253\]

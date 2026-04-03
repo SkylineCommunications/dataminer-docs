@@ -107,7 +107,7 @@ To set up external authentication, you first need to create an enterprise applic
 
       If your DMS consists of DMAs accessible via different URLs, specify only the most commonly used URL here.
 
-   1. In the top-left corner, click *Save*.
+   1. In the upper-left corner, click *Save*.
 
 1. Still on the *Single sign-on* page, look for the *SAML Certificates* section and copy the *App Federation Metadata Url*.
 

@@ -124,7 +124,7 @@ When a page that was displayed in a VdxPage window of type “Popup” contained
 
 #### Problems with embedded dashboards components \[ID 32782\]
 
-When a GQI component was embedded in a Visio drawing or a web page, in some cases, that component would not be rendered correctly. Also, in some cases, embedded dashboard components would not be able to retrieve data from the database.
+When a GQI component was embedded in a Visio drawing or a webpage, in some cases, that component would not be rendered correctly. Also, in some cases, embedded dashboard components would not be able to retrieve data from the database.
 
 #### DataMiner Cube - Resources app: No resources or resource pools would be loaded when opening the Resources app \[ID 32790\]
 
@@ -204,7 +204,7 @@ SLNet tried to load DataMinerInstallerCommunication.XmlSerializers
 When you exported GQI data from a table component to a CSV file, up to now, only the currently loaded page would get exported. From now on, all data in the table will be exported.
 
 > [!NOTE]
-> While the export operation is progress, an “exporting to CSV” notification will be shown in the bottom-right corner of the screen.
+> While the export operation is progress, an “exporting to CSV” notification will be shown in the lower-right corner of the screen.
 
 #### Memory leak in SLElement \[ID 32885\]
 

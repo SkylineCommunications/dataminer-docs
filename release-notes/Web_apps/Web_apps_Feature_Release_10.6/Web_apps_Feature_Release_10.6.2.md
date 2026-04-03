@@ -26,7 +26,7 @@ In the Dashboards app, the sidebar and home page have been redesigned to improve
 
 The home page of the Dashboards app, which is shown when no dashboards or folders are selected in the sidebar, now contains a dropdown menu at the top that allows you to add a dashboard or folder. In addition, the page shows an overview of all folders and dashboards, where you can directly delete a folder, add a folder or dashboard, or import a dashboard either locally or from the Catalog.
 
-In the sidebar, the ellipsis button ("...") in the top-right corner has been replaced with a right-click menu. Right-clicking the background of the sidebar will show the following commands:
+In the sidebar, the ellipsis button ("...") in the upper-right corner has been replaced with a right-click menu. Right-clicking the background of the sidebar will show the following commands:
 
 - Add > Dashboard
 - Add > Folder

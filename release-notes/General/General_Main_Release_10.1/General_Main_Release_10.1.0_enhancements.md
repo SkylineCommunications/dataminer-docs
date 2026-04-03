@@ -81,7 +81,7 @@ Due to a number of enhancements, overall performance has increased when retrievi
 
 A number of enhancements have been made to the user picture icons that appear in search results. Those icons will now also indicate whether a user is online, and when no user picture could be found, a default user icon will now be displayed instead.
 
-Also, a user picture icon will now be displayed in the top-left corner of a user card.
+Also, a user picture icon will now be displayed in the upper-left corner of a user card.
 
 #### SLAnalytics: Enhanced alarm template monitoring \[ID 24477\]
 
@@ -141,7 +141,7 @@ Due to a number of enhancements, overall performance of NotifyDataMiner 128 (NT_
 
 In the Monitoring app (DATA pages, VISUAL pages and CPE pages) and the Dashboards app (Parameter Page component), parameter tables can now be displayed in full-screen mode.
 
-If your internet browser supports full-screen mode, a toggle button will appear in the top-right corner of each parameter table. You can exit full-screen mode by pressing ESC or F11.
+If your internet browser supports full-screen mode, a toggle button will appear in the upper-right corner of each parameter table. You can exit full-screen mode by pressing ESC or F11.
 
 #### Monitoring app: Enhanced performance when retrieving alarm information \[ID 24831\]
 

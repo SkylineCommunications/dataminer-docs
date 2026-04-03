@@ -1,5 +1,6 @@
 ---
 uid: User_management
+description: DataMiner supports different types of directories for user management and also works with local users, including a built-in Administrator user
 ---
 
 # User management
@@ -27,6 +28,8 @@ For more information see [Types of users](xref:Types_of_users).
 ## Default Users
 
 DataMiner has one built-in user, named "Administrator". This user is also the local administrator on the Windows server hosting DataMiner. This user is intended for recovery and initial configuration purposes. We highly recommend that you avoid using this account for routine and day-to-day operations and securely manage access to this account, for example via LAPS.
+
+If you need to change the password for the Administrator user, make sure to [do so from DataMiner Cube](xref:Editing_a_users_details) so that the change is synchronized across the cluster.
 
 > [!NOTE]
 > If you use self-managed storage nodes instead of the recommended [Storage as a Service](xref:STaaS), you will need to make sure that the default users of the DataMiner **databases** are also secured. For more information, see [Securing self-managed DataMiner storage](xref:Cassandra_authentication).

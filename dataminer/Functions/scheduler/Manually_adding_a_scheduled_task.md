@@ -68,4 +68,4 @@ To learn how to add a new scheduled task without a Scheduler template, you can f
    > [!NOTE]
    >
    > - To see tasks that have already been executed, select the *Show finished tasks* option in the lower-left corner.
-   > - To quickly find a particular task in the list, use the filter box in the top-right corner.
+   > - To quickly find a particular task in the list, use the filter box in the upper-right corner.

@@ -176,7 +176,7 @@ If you right-click a manually created incident, you will also be able to select 
 
 From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarms are generated instead of suggestion events when anomalies are detected for specific parameters. From now on, you can also enable this for flatline changes.
 
-1. Click the cogwheel button in the top-right corner of the alarm template editor.
+1. Click the cogwheel button in the upper-right corner of the alarm template editor.
 1. Select the option *Advanced configuration of anomaly detection*. Four extra columns will be displayed in the template editor.
 1. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
 
@@ -248,7 +248,7 @@ When Cube is connected to a DataMiner Agent that does not yet support manually c
 
 A number of enhancements have been made to the start window of the DataMiner Cube desktop app:
 
-- Settings menu (cogwheel icon in bottom-right corner)
+- Settings menu (cogwheel icon in lower-right corner)
 
   - New *About* box with version information.
   - All menu items now have icons in front of them.
@@ -360,9 +360,9 @@ When you connect DataMiner Cube to a DataMiner Agent with main release version 1
 
 ##### Client configuration
 
-If you do not want to wait for the next automatic Cube update, in the start window of the Cube desktop app, click the cogwheel icon in the bottom-right corner, and select *Check for updates*. If a new Cube version is available, it will be downloaded. When the download has finished, a *Restart now* button will appear. Click it to start using the new version.
+If you do not want to wait for the next automatic Cube update, in the start window of the Cube desktop app, click the cogwheel icon in the lower-right corner, and select *Check for updates*. If a new Cube version is available, it will be downloaded. When the download has finished, a *Restart now* button will appear. Click it to start using the new version.
 
-Two update tracks are available. Click the cogwheel icon in the bottom-right corner, and select *Settings*. If you open the Cube update track setting, you can select one of the following tracks:
+Two update tracks are available. Click the cogwheel icon in the lower-right corner, and select *Settings*. If you open the Cube update track setting, you can select one of the following tracks:
 
 | Track                     | Description                                                                                            |
 |---------------------------|--------------------------------------------------------------------------------------------------------|
@@ -407,7 +407,7 @@ As the “Low-code Apps” license is required to use the DataMiner Application 
 
 #### DataMiner Application Framework: Tooltips on sidebar of root page \[ID 33275\]
 
-When you click the apps button in the top-left corner of the root page and then hover over an app in the app list, a tooltip will now show the name of that app.
+When you click the apps button in the upper-left corner of the root page and then hover over an app in the app list, a tooltip will now show the name of that app.
 
 ### DMS Service & Resource Management
 

@@ -40,10 +40,10 @@ unmappedResource.ApplyCombinedProfile("START", "APPLY");
 
 ## Applying a profile instance to a resource without a related booking
 
-The extension method *Skyline.DataMiner.Library.Resource.ResourceExtensionMethods.GetOrchestrationHelper* allows you to apply a profile instance, a state profile instance, or both combined to a resource that is not part of a booking.
+The extension method *Skyline.DataMiner.Core.SRM.Extensions.Resources.ResourceExtensionMethods.GetOrchestrationHelper* allows you to apply a profile instance, a state profile instance, or both combined to a resource that is not part of a booking.
 
 ```csharp
-using Skyline.DataMiner.Library.Resource;
+using Skyline.DataMiner.Core.SRM.Extensions.Resources;
 // ...
 // Select the unmapped resource, assigned to the booking, by its ID
 var orchestrationHelper = resource.GetOrchestrationHelper(

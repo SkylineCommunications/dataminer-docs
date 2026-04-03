@@ -18,7 +18,7 @@ uid: Web_apps_Feature_Release_10.4.4
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-Both the Dashboards app and the Monitoring app now have a WebSocket connection status indicator in the top-right corner of the screen.
+Both the Dashboards app and the Monitoring app now have a WebSocket connection status indicator in the upper-right corner of the screen.
 
 This indicator will show the current status of the client's WebSocket connection:
 
@@ -201,7 +201,7 @@ This will no longer be the case. The value of a regex node will now have the for
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 
-When you opened the icon picker in e.g., *Configure Context menu*, up to now, the icons would not entirely fill the box, causing a white bar to appear on the right-hand size. From now on, the rows will again contain 10 icons instead of 9.
+When you opened the icon picker in e.g., *Configure Context menu*, up to now, the icons would not entirely fill the box, causing a white bar to appear on the right. From now on, the rows will again contain 10 icons instead of 9.
 
 #### Low-Code Apps: Selection boxes in the header bar would appear behind the component that had the focus [ID 38677]
 
@@ -263,7 +263,7 @@ Up to now, when a client using polling instead of WebSockets had disconnected, t
 
 From now on, when a user closes a tab or a page containing a GQI query, the corresponding GQI session will be closed within maximum 5 minutes.
 
-#### Dashboards app & Low-Code Apps: Web component would display scroll bars when all content fitted inside [ID 38821]
+#### Dashboards app & Low-Code Apps: Web component would display scrollbars when all content fitted inside [ID 38821]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->
 

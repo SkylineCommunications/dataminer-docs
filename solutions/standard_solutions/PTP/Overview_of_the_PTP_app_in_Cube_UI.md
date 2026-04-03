@@ -24,7 +24,7 @@ This tab shows an overall summary of the entire PTP stack.
 
 The information in this tab is displayed in several separate blocks.
 
-- The **PTP system summary** block in the top-left corner shows:
+- The **PTP system summary** block in the upper-left corner shows:
 
   - At the top, the number of PTP nodes that are reporting the current active grandmaster. Clicking the table icon next to this counter opens a window listing all nodes. The *Status* column in this overview, which allows alarm monitoring, provides more information about node synchronization status. This column can have the following values:
 
@@ -44,7 +44,7 @@ The information in this tab is displayed in several separate blocks.
 
   - On the right, the currently active probe. This is the probe in charge of identifying the current active grandmaster clock in the PTP topology. A cogwheel icon next to the probe allows you to select a different probe.
 
-- The **alarms** block in the top-right corner shows a summary of the PTP-related alarms (total, critical, major, minor and warning). If no domain is specified for the app, all alarms in the system are taken into account. Otherwise, only the alarms for the specified domain are taken into account. (See [The Admin tab](#the-admin-tab).)
+- The **alarms** block in the upper-right corner shows a summary of the PTP-related alarms (total, critical, major, minor and warning). If no domain is specified for the app, all alarms in the system are taken into account. Otherwise, only the alarms for the specified domain are taken into account. (See [The Admin tab](#the-admin-tab).)
 
   Clicking the list icon next to the total alarm count will open an alarm tab listing all these alarms. Clicking one of the four other alarm counters will open an alarm tab with these alarms filtered on the alarm severity in question.
 
@@ -68,9 +68,9 @@ The information in this tab is displayed in several separate blocks.
     > - The *Delay Response* parameter is retrieved from the PTP probe instead of the grandmaster. Clicking the probe icon will open a tool tip with this information.
     > - Prior to PTP 1.1.3 CU1, the aggregated alarm information is displayed in a separate *Nodes Summary* tab, which also contains the list icons to open filtered alarm tabs. Next to the tab names, an icon is available that can be clicked to switch between “play” and “stop” mode. In “play” mode, the app will automatically switch between the two tabs at regular intervals. In “stop” mode, only the last selected tab remains displayed.
 
-  - In the top-right corner, the name of the current grandmaster interface is displayed. Click the cogwheel button next to this name to select a different interface.
+  - In the upper-right corner, the name of the current grandmaster interface is displayed. Click the cogwheel button next to this name to select a different interface.
 
-- The **performance** block at the bottom of the tab allows you to track the overall PTP performance by monitoring PTP metrics that have trending activated (e.g., *Offset From Master* and *Mean Path Delay*). Below the trend graph, you can select any trended PTP parameter from any PTP node. If you want to display the trend graph in full-screen mode, click the full-screen icon in the top-right corner of this block.
+- The **performance** block at the bottom of the tab allows you to track the overall PTP performance by monitoring PTP metrics that have trending activated (e.g., *Offset From Master* and *Mean Path Delay*). Below the trend graph, you can select any trended PTP parameter from any PTP node. If you want to display the trend graph in full-screen mode, click the full-screen icon in the upper-right corner of this block.
 
 ### Special PTP parameters in the Summary tab
 
@@ -210,7 +210,7 @@ This tab shows a graphical overview of how the different PTP nodes are connected
 
 Clicking the name of a PTP node opens the element card of the node. Clicking the icon marking the type of node opens the PTP alarm tab, showing the list of active PTP alarms associated with the node. Clicking a connection line will open a pop-up window, showing more information about the connection.
 
-To change the position of the nodes, right-click anywhere on the topology overview, click *Arrange*, and drag and drop the nodes to the position where you want them. To exit arrange mode, click *Apply* in the top-right corner.
+To change the position of the nodes, right-click anywhere on the topology overview, click *Arrange*, and drag and drop the nodes to the position where you want them. To exit arrange mode, click *Apply* in the upper-right corner.
 
 Alarm states are indicated as follows:
 
@@ -221,7 +221,7 @@ Alarm states are indicated as follows:
 - If a line connecting two nodes has an alarm color, this means that there is an alarm on the interface table (e.g., interface not connected).
 
 > [!NOTE]
-> New PTP nodes are automatically displayed in the top-left corner of the topology page.
+> New PTP nodes are automatically displayed in the upper-left corner of the topology page.
 
 ## The Admin tab
 

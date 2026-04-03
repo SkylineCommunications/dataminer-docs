@@ -57,7 +57,7 @@ A regular DTR script can be triggered when the following actions happen:
 
 The DTR script can retrieve data from the selected profile instance or resource, or automatically update a (capability/capacity) parameter value on a node, so that users do not need to provide a parameter value manually. The script is not interactive and cannot be used to modify the booking itself or to configure its resources.
 
-If a DTR script is defined, it will be executed whenever a booking is created, no matter how the booking is created: with the regular Booking Wizard, with the Service Profile Wizard, or using a custom front end.
+If a DTR script is defined, it will be executed whenever a booking is created, no matter how the booking is created: with the regular Booking Wizard, with the Service Profile Wizard, or using a custom frontend.
 
 Whenever a DTR script is executed, this will generate an update of the booking. This feature should therefore be used with caution, as too many DTR script executions will slow down the booking creation time.
 

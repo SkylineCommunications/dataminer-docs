@@ -39,10 +39,10 @@ string
     - DECIMAL
 - Date and time data types:
   - DATETIME
- - The JSON data type: JSON
+  - The JSON data type: JSON
 
 > [!NOTE]
-> Depending on the back-end database, the specified data type is automatically converted to a supported back-end database type. For example, when using a Cassandra database, the specified type will be automatically mapped to a compatible Cassandra data type.
+> Depending on the backend database, the specified data type is automatically converted to a supported backend database type. For example, when using a Cassandra database, the specified type will be automatically mapped to a compatible Cassandra data type.
 
 ## Examples
 

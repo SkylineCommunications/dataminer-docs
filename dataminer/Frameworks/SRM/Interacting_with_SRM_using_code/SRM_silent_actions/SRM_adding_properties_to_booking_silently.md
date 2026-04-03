@@ -10,21 +10,22 @@ The example below shows how properties can be added to an existing booking witho
 using System;
 using System.Collections.Generic;
 using Skyline.DataMiner.Automation;
-using Skyline.DataMiner.Library.Reservation;
-using Skyline.DataMiner.Library.Solutions.SRM;
+using Skyline.DataMiner.Core.SRM;
+using Skyline.DataMiner.Core.SRM.Extensions.Reservations;
 
 public class Script
 {
- public static void Run(Engine engine)
- {
- // Replace with reservation guid
+   public static void Run(Engine engine)
+   {
+      // Update with relevant data
+      var reservationId = Guid.NewGuid();
+      var propertyName = "Property";
+      var propertyValue = "Value";
 
- var reservationId = Guid.NewGuid();
+      var properties = new Dictionary<string, object> { { propertyName, propertyValue } };
 
- var properties = new Dictionary<string, object> { { "testproperty", "testvalue" } };
-
- var reservationInstance = SrmManagers.ResourceManager.GetReservationInstance(reservationId);
- reservationInstance.UpdateServiceReservationProperties(properties);
- }
+      var reservationInstance = SrmManagers.ResourceManager.GetReservationInstance(reservationId);
+      reservationInstance.UpdateServiceReservationProperties(properties);
+   }
 }
 ```

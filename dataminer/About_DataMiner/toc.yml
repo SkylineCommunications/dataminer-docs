@@ -95,6 +95,9 @@ items:
       topicUid: Pricing_Commercial_Models
     - name: Usage-based services
       topicUid: Pricing_Usage_based_service
+      items:
+        - name: Billing and metering
+          topicUid: Pricing_billing_and_metering
     - name: Perpetual-Use Licensing
       topicUid: Pricing_Perpetual_Use_Licensing
     - name: Professional Service credits

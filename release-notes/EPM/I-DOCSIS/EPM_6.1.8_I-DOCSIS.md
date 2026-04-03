@@ -26,7 +26,7 @@ Maps are now also available at the CPE level in the topology. They will show the
 
 #### Improved ID assignment for cable modems [ID 36781]
 
-The *Skyline EPM Platform* front-end element now no longer needs to create unique IDs for all cable modems in the system. This will improve the turnaround for new IDs, and new entities in the system will appear more quickly.
+The *Skyline EPM Platform* frontend element now no longer needs to create unique IDs for all cable modems in the system. This will improve the turnaround for new IDs, and new entities in the system will appear more quickly.
 
 #### QAM Channels and CM Trending dashboards [ID 36782]
 

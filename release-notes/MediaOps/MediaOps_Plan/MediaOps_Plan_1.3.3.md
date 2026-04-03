@@ -2,7 +2,7 @@
 uid: MediaOps_Plan_1.3.3
 ---
 
-# MediaOps 1.3.3
+# MediaOps Plan 1.3.3
 
 > [!NOTE]
 > This version requires DataMiner 10.5.7/10.6.0 or higher. In addition, the [GQI DxM](xref:GQI_DxM) must be installed.

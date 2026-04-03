@@ -21,15 +21,19 @@ items:
                 topicUid: General_Main_Release_10.6.0_new_features
               - name: General Main Release 10.6.0 - Changes
                 topicUid: General_Main_Release_10.6.0_changes
-          - name: General Main Release 10.6.0 CU1 - Preview
+          - name: General Main Release 10.6.0 CU1
             topicUid: General_Main_Release_10.6.0_CU1
           - name: General Main Release 10.6.0 CU2 - Preview
             topicUid: General_Main_Release_10.6.0_CU2
+          - name: General Main Release 10.6.0 CU3 - Preview
+            topicUid: General_Main_Release_10.6.0_CU3
       - name: Feature Release
         items:
+          - name: General Feature Release 10.6.6 - Preview
+            topicUid: General_Feature_Release_10.6.6
           - name: General Feature Release 10.6.5 - Preview
             topicUid: General_Feature_Release_10.6.5
-          - name: General Feature Release 10.6.4 - Preview
+          - name: General Feature Release 10.6.4
             topicUid: General_Feature_Release_10.6.4
           - name: General Feature Release 10.6.3
             items:
@@ -84,10 +88,12 @@ items:
             topicUid: General_Main_Release_10.5.0_CU11
           - name: General Main Release 10.5.0 CU12
             topicUid: General_Main_Release_10.5.0_CU12
-          - name: General Main Release 10.5.0 CU13 - Preview
+          - name: General Main Release 10.5.0 CU13
             topicUid: General_Main_Release_10.5.0_CU13
           - name: General Main Release 10.5.0 CU14 - Preview
             topicUid: General_Main_Release_10.5.0_CU14
+          - name: General Main Release 10.5.0 CU15 - Preview
+            topicUid: General_Main_Release_10.5.0_CU15
       - name: Feature Release
         items:
           - name: General Feature Release 10.5.12

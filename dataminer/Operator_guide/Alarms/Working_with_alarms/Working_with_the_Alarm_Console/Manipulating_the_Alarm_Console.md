@@ -4,7 +4,7 @@ uid: Manipulating_the_Alarm_Console
 
 # Manipulating the Alarm Console
 
-- To collapse the Alarm Console, click the downward arrow button in the top-right corner: ![Collapse Alarm Console button](~/dataminer/images/Collapse_Alarm_Console_button.png)
+- To collapse the Alarm Console, click the downward arrow button in the upper-right corner: ![Collapse Alarm Console button](~/dataminer/images/Collapse_Alarm_Console_button.png)
 
   Only the alarm bar will be displayed, which displays the total number of active alarms, the total number of unread alarms and the number of active alarms per severity in the currently selected alarm tab. In addition, the alarm bar also displays a number of buttons that can also be used in the expanded Alarm Console.
 
