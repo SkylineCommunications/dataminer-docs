@@ -50,7 +50,13 @@ Similar to all other basic controls, this new control also supports the *Set Val
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Monitoring app: 'HTTP 404' page replaced by an embedded visual [ID 45027]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, when you try to open a non-existing page, you wil no longer be redirected to a separate "HTTP 404" page. Instead, a visual will now appear inside the Monitoring app.
+
+Clicking the *Go to overview* button in that visual will redirect you back to the home page of the app.
 
 ### Fixes
 
