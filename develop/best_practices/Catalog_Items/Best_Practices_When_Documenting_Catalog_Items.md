@@ -33,6 +33,9 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 > [!NOTE]
 > Depending on the size and complexity of your Catalog item, you can combine or exclude some sections. For example, for a very simple item you could leave out the Use Cases section but mention this information under Key Features.
 
+> [!NOTE]
+> We suggest not to include a reference to support or contact details, because it is the rule of thumb for users to reach out to our [DataMiner Support team](xref:Contacting_tech_support). As an Owner or team, you can add your e-mail adreess still in the [Manifest file](xref:Register_Catalog_Item#manifest-file).
+
 ## Visuals
 
 **Purpose:** Enhance the *Overview*, *Key Features*, and *Use Cases* sections where appropriate by showcasing key features or advantages with visuals.
@@ -129,7 +132,11 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 - **Minimum/Maximum DxM version**
 - **Licenses** (for example, DOM, SRM)
 - **Soft-launch options**
+- Other **Catalog items**
 - Requirements for components included in the package
+
+> [!NOTE]
+> Prerequisites on the description of the Catalog item should target the main deployment that you will deploy by default. Typically it is best practice to also include the prerequisites part of the Catalog item version description.
 
 **Do's:**
 
@@ -138,7 +145,7 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 
 **Don'ts:**
 
-- Avoid **installation or configuration steps**. Link to comprehensive documentation instead.
+- Avoid complex **installation or configuration steps**. Link to comprehensive documentation instead.
 - Avoid listing every **small technical dependency**. Focus only on the essentials.
 
 ## Technical Reference section
