@@ -36,7 +36,7 @@ Several default tests are available related to the state of the DataMiner System
    - *Name*: Select an available script-based test.
    - *Operator* and *Threshold*: Define the conditions for the test to determine whether it passes or fails.
    - *Display Title*:  Enter a custom and unique name for the test to make it easily identifiable. If provided, this title will be used to identify the test in the email report.
-   - *Element/DMA Filter*: (SUBSCRIPTIONS ONLY.) Use this field to apply the test to a specific element. Enter the name of the element you want to target.
+   - *Element/DMA Filter*: For subscription-based tests, use this field to apply the test to a specific element. For script-based tests, use this field to apply the test to a specific DMA. Both of these filters follow the regex format.  
    - *Available Element Search*: (SUBSCRIPTIONS ONLY.) Use this field to search for elements that are compatible with your chosen subscription.
    - *Display Key Filter*: Apply this filter if you want the test to consider only certain entries for the test. This filter must be in the format of a regular expression.
    - *Status Checkbox*: Select this box if you want the text to be enabled as soon as it is created.
