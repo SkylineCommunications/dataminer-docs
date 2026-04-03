@@ -4,7 +4,7 @@ uid: NodeRecovery_API
 
 # Node Recovery API
 
-NodeRecovery exposes certain information over an API. The API can be accessed over SLNet.
+NodeRecovery exposes certain information over an API. The API can be accessed over SLNet and requires the `AdminTools` permission.
 
 ## Requesting the local cluster state
 
