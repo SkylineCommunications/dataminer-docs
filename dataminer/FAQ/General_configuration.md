@@ -28,7 +28,7 @@ A DataMiner Agent must be restarted in the following cases:
 
 - After the **IP address** of the server hosting the DataMiner Agent has been **changed**.
 
-- After the **time zone** on the DataMiner Agent has been **changed**.
+- After the **time zone** on the DataMiner or database server has been **changed**.
 
 > [!NOTE]
 > After an **upgrade**, the DMA will automatically be restarted.
