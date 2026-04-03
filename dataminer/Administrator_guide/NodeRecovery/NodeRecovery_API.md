@@ -4,7 +4,7 @@ uid: NodeRecovery_API
 
 # Node Recovery API
 
-NodeRecovery exposes certain information over an API. The API can be accessed over SLNet and requires the `AdminTools` permission.
+NodeRecovery exposes certain information over an API. The API can be accessed over SLNet and requires the [Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) permission.
 
 ## Requesting the local cluster state
 
