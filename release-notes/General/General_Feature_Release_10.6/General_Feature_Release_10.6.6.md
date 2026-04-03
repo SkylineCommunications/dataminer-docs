@@ -42,13 +42,28 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### Connector synchronization enhancements [ID 44715]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+A number of enhancements have been made with regard to the synchronization of connectors within a DataMiner System:
+
+- The first time you upload a version of a new connector, it will automatically be set as production version. Up to now, when a connector version was automatically set as production version, this would trigger a synchronization of that production version. From now on, the new connector will be synchronized within the cluster, and when a DataMiner Agent detects that it is the first version, it will set it as the production version.
+
+- Up to now, when a parent connector exported child connectors (as is the case with DVE connectors), these exported child connectors would be synchronized within the cluster when the parent connector was added or modified. From now on, only the parent connector will be synchronized, and each DataMiner Agent will then generate the child connectors.
+
+- From now on, a protocol.xml file that is generated based on the active function.xml file will no longer be synchronized when the function is activated.
+
+> [!NOTE]
+> The midnight sync has not been altered.
+
 #### BrokerGateway installer will now give a clear indication when .NET is missing [ID 45169]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 When you install the BrokerGateway DxM on a server that does not have the Microsoft .NET hosting bundle installed yet, from now on, a message will appear, saying that .NET has to be installed first.
 
-#### DataMiner upgrade: A number of default Visio stencils will now be removed [ID 45202]
+#### DataMiner upgrade: A number of default Visio stencils will no longer be included [ID 45202]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 
@@ -77,6 +92,12 @@ Note that the following stencil files will still be deployed:
 
 > [!NOTE]
 > The above-mentioned stencil files that are no longer included in DataMiner upgrade packages will not automatically be removed from existing systems.
+
+#### DataMiner upgrade: Legacy NATS binaries will no longer be included [ID 45208]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+From now on, a DataMiner upgrade package will no longer contain a number of legacy NATS binaries that were located in the `C:\Skyline DataMiner\Resources` folder.
 
 ### Fixes
 
