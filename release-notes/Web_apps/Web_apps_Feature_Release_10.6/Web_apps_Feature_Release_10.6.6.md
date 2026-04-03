@@ -20,7 +20,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-#### Dashboards/Low-Code Apps: New 'Rich text input' component [ID 45097]
+#### Dashboards/Low-Code Apps: New 'Rich text input' component [ID 45097] [ID 45180]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
@@ -32,6 +32,7 @@ Its toolbar offers the following formatting options:
 - Lists: Bulleted list and Numbered list
 - Blockquote
 - Code block
+- Font color
 - Inline text formatting: Bold (Ctrl+B), Italic (Ctrl+I), Underline (Ctrl+U), and Strikethrough
 - Hyperlinks: Insert, Edit, and Remove
 - History: Undo (Ctrl+Z) and Redo (Ctrl+Y)
