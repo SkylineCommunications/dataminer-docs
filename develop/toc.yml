@@ -3809,6 +3809,8 @@ items:
                           - name: Fix
                             topicUid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix
                             items: 
+                            - name: '@introducedBy'
+                              topicUid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix-introducedBy
                             - name: '@suppressMajorChanges'
                               topicUid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix-suppressMajorChanges
                           - name: NewFeature
