@@ -26,6 +26,12 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
+#### Redesigned Properties window [ID 45163]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+In version 10.6.4, the entire Cube UI and UI themes were redesigned. In this version, the *Properties* windows has also been redesigned.
+
 #### Spectrum analysis: Overlays will now dynamically follow the Cube theme [ID 45172]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
