@@ -26,7 +26,11 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Spectrum analysis: Overlays will now dynamically follow the Cube theme [ID 45172]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Because of a number of enhancements, overlays appearing on top of a spectrum card will now dynamically follow the Cube theme.
 
 ### Fixes
 
