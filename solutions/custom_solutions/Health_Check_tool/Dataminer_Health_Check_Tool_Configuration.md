@@ -137,79 +137,75 @@ These are some recommended subscription-based tests that will monitor the server
 
 - Subscription settings
 
-  ![Total Processor Load Subscription](~/solutions/images/Health_Check_Total_Processor_Load_Subscription.png)
+  ![Total processor load subscription settings for Windows](~/solutions/images/Health_Check_Total_Processor_Load_Subscription.png)
 
 - Test configuration settings
 
-  ![CPU Load Test Configuration](~/solutions/images/Health_Check_Total_Processor_Load_Test_Configuration.png)
+  ![Total processor load test configuration for Windows](~/solutions/images/Health_Check_Total_Processor_Load_Test_Configuration.png)
 
 ##### Memory usage is below 75%
 
 - Subscription settings
 
-  ![Memory Usage Subscription](~/solutions/images/Health_Check_Memory_Usage_Subscription.png)
+  ![Memory usage subscription settings for Windows](~/solutions/images/Health_Check_Memory_Usage_Subscription.png)
 
 - Test configuration settings
 
-  ![Memory Usage Test Configuration](~/solutions/images/Health_Check_Memory_Usage_Test_Configuration.png)
+  ![Memory usage test configuration for Windows](~/solutions/images/Health_Check_Memory_Usage_Test_Configuration.png)
 
 ##### Days since last reboot
 
-- Subscription Settings
+- Subscription settings
 
-  ![Days Since Last Reboot Subscription](~/solutions/images/Health_Check_Days_Since_Last_Reboot_Subscription.png)
+  ![Days since last reboot subscription settings](~/solutions/images/Health_Check_Days_Since_Last_Reboot_Subscription.png)
 
-- Test Configuration Settings
+- Test configuration settings
 
-  ![Days Since Last Reboot Test Configuration](~/solutions/images/Health_Check_Days_Since_Last_Reboot_Test_Configuration.png)
+  ![Days since last reboot test configuration](~/solutions/images/Health_Check_Days_Since_Last_Reboot_Test_Configuration.png)
 
 #### Linux Platform protocol
 
 These tests are useful when utilizing an on-premises database with Cassandra, OpenSearch, and/or Elasticsearch nodes.
 
-##### Total processor load is below 80%
+##### Total processor load is below 90%
 
 - Subscription settings
-These tests are useful when utilizing an on-premises database with Cassandra, OpenSearch, and/or Elastic Nodes. 
 
-###### Total Processor Load is Below 90%
-- Subscription Settings
-
-  ![Total Processor Load Subscription](~/solutions/images/Health_Check_Linux_Total_Processor_Load_Subscription.png)
+  ![Total processor load subscription settings for Linux](~/solutions/images/Health_Check_Linux_Total_Processor_Load_Subscription.png)
 
 - Test configuration settings
 
-  ![Total Processor Load Test Configuration](~/solutions/images/Health_Check_Linux_Total_Processor_Load_Test_Configuration.png)
+  ![Total processor load test configuration for Linux](~/solutions/images/Health_Check_Linux_Total_Processor_Load_Test_Configuration.png)
 
 ##### Memory usage is below 75%
 
 - Subscription settings
 
-  ![Memory Usage Subscription](~/solutions/images/Health_Check_Linux_Memory_Usage_Subscription.png)
+  ![Memory usage subscription settings for Linux](~/solutions/images/Health_Check_Linux_Memory_Usage_Subscription.png)
 
 - Test configuration settings
 
-  ![Memory Usage Test Configuration](~/solutions/images/Health_Check_Linux_Memory_Usage_Test_Configuration.png)
+  ![Memory usage test configuration for Linux](~/solutions/images/Health_Check_Linux_Memory_Usage_Test_Configuration.png)
 
 ##### Database node uptime
 
 - Subscription settings
 
-  ![Uptime Subscription](~/solutions/images/Health_Check_Linux_Uptime_Subscription.png)
+  ![Node uptime subscription settings](~/solutions/images/Health_Check_Linux_Uptime_Subscription.png)
 
 - Test configuration settings
 
-  ![Uptime Test Configuration](~/solutions/images/Health_Check_Linux_Uptime_Test_Configuration.png) 
+  ![Node uptime test configuration](~/solutions/images/Health_Check_Linux_Uptime_Test_Configuration.png)
 
 ##### Database disk space is low
 
 - Subscription settings
 
-  ![Low Disk Space Subscription](~/solutions/images/Health_Check_Linux_Low_Disk_Space_Subscription.png)
+  ![Low disk space subscription settings](~/solutions/images/Health_Check_Linux_Low_Disk_Space_Subscription.png)
 
 - Test configuration settings
 
-  ![Low Disk Space Test Configuration](~/solutions/images/Health_Check_Linux_Low_Disk_Space_Test_Configuration.png)
+  ![Low disk space test configuration](~/solutions/images/Health_Check_Linux_Low_Disk_Space_Test_Configuration.png)
 
 ## Configuring email reports
 
