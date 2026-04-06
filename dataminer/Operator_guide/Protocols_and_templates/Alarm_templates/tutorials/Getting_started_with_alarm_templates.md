@@ -168,7 +168,7 @@ With relative alarm thresholds, you can define a baseline from which the value c
 In some cases, it can be easier to define in absolute numbers how much a value can deviate from the baseline (e.g., when the baseline is close to zero).
 
 > [!NOTE]
-> This feature is only available on parameters that are not on paginated tables.
+> This feature is only available on parameters that are not on paginated tables (aka partial tables).
 
 1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
