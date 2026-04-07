@@ -1,12 +1,13 @@
 ---
-uid: SiteManagerGettingStarted
+uid: EdgeManagerGettingStarted
+keywords: Site Manager
 ---
 
-# Getting started with Site Manager
+# Getting started with Edge Manager
 
 ## SiteManager DxM installation
 
-The DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) and [deploy the SiteManager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+DataMiner Edge Manager requires the SiteManager DxM. This DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) and [deploy the SiteManager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
 For a **self-managed DataMiner System**, the SiteManager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. The DxM requires DataMiner 10.5.10/10.6.0 or higher and Windows 10 or Windows Server 2019 (build 17134) or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
@@ -17,19 +18,19 @@ When the DxM has been installed, in the Windows services overview, you should se
 
 ## On-premises setup
 
-To allow DataMiner to access an on-premises data source via the Site Manager, the following steps are needed:
+To allow DataMiner to access a data source in a remote location via the Site Manager, the following steps are needed:
 
 ### [Windows](#tab/windows)
 
-1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.ps1) script by using the following command, where you replace the placeholders with the **account token** and a **site name**.
+1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.ps1) script by using the following command, where you replace the placeholders with the **account token** and a **site name** (i.e. the name of the location).
 
    ```powershell
    iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1 -UseBasicParsing) } -Command install -AccountToken '<AccountToken>' -SiteName '<SiteName>'"
    ```
 
-   - You can find the **account token** in the Site Manager logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
+   - You can find the **account token** in the SiteManager DxM logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
 
-   - The **site name** should be a concise description of the site from which you are exposing data sources. When a connection is configured during the creation or editing of an element in DataMiner Cube, this description will be shown in the *Site* dropdown.
+   - The **site name** should be a concise description of the location from which you are exposing data sources. When a connection is configured during the creation or editing of an element in DataMiner Cube, this description will be shown in the *Site* dropdown.
 
    > [!NOTE]
    >
@@ -45,7 +46,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
    iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1 -UseBasicParsing) } -Command uninstall"
    ```
 
-1. After a successful installation, you can start exposing your data sources so Site Manager can set up a tunnel for each data source it needs to communicate with.
+1. After a successful installation, you can start exposing your data sources so Edge Manager can set up a tunnel for each data source it needs to communicate with.
 
    1. If you are using a new **PowerShell** shell, execute the following command first: `$env:USERPROFILE = "C:\Windows\System32\config\systemprofile"`.
 
@@ -64,7 +65,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
       ```powershell
       zrok reserve private --backend-mode udpTunnel 10.13.1.102:161
       ```
-      
+
       SNMP uses UDP on port 161, so `<backendMode>` specifies *udpTunnel* and `<endpoint>` contains *161*.
 
       Hostnames are also supported. For example, when integrating equipment reachable via its hostname with an HTTPS connection, use:
@@ -85,15 +86,15 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
 
 ### [Linux](#tab/linux)
 
-1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.sh) script by using the following command, where you replace the placeholders with the **account token** and a **site name**.
+1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.sh) script by using the following command, where you replace the placeholders with the **account token** and a **site name** (i.e. the name of the location).
 
    ```bash
    wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | sudo bash -s -- install '<AccountToken>' '<SiteName>'
    ```
 
-   - You can find the **account token** in the Site Manager logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
+   - You can find the **account token** in the SiteManager DxM logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
 
-   - The **site name** should be a concise description of the site from which you are exposing data sources. When a connection is configured during the creation or editing of an element in DataMiner Cube, this description will be shown in the *Site* dropdown.
+   - The **site name** should be a concise description of the location from which you are exposing data sources. When a connection is configured during the creation or editing of an element in DataMiner Cube, this description will be shown in the *Site* dropdown.
 
    > [!NOTE]
    >
@@ -108,7 +109,7 @@ To allow DataMiner to access an on-premises data source via the Site Manager, th
    wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | sudo bash -s -- uninstall
    ```
 
-1. After a successful installation, you can start exposing your data sources so Site Manager can set up a tunnel for each data source it needs to communicate with.
+1. After a successful installation, you can start exposing your data sources so Edge Manager can set up a tunnel for each data source it needs to communicate with.
 
    For each data source you wish to expose, perform the following steps:
 
@@ -201,15 +202,15 @@ Once a data source has been shared, you are ready to connect to it from a DaaS s
 
 1. In DataMiner Cube, [add a new element](xref:Adding_elements).
 
-1. When you configure an element connection for the element that should communicate with a data source on a remote site (through a secure tunnel), select the site in the *Site* dropdown.
+1. When you configure an element connection for the element that should communicate with a data source in a remote location (through a secure tunnel), select the site in the *Site* dropdown.
 
-   The site name that appears in the *Site* dropdown corresponds with the description specified during execution of the [on-premises installation script](#on-premises-setup).
+   The location name that appears in the *Site* dropdown corresponds with the description specified during execution of the [on-premises installation script](#on-premises-setup).
 
 1. Fill in the IP or hostname of the exposed data source.
 
    > [!IMPORTANT]
    > If, during [on-premises setup](#on-premises-setup), you specified the endpoint to be shared (in the zrok reserve command) using the IP address, then to access the data source in DataMiner you will also need to specify the IP address. Similarly, if you used the hostname, you will also need to specify the hostname in DataMiner Cube.
 
-A tunnel will only be created as long as at least one element is actively connecting to this endpoint. For example, if you have an element that sets up a connection to a data source on a remote site, the tunnel will only be created when the element is started. As soon as the element is stopped or deleted, the tunnel will be torn down.
+A tunnel will only be created as long as at least one element is actively connecting to this endpoint. For example, if you have an element that sets up a connection to a data source in a remote location, the tunnel will only be created when the element is started. As soon as the element is stopped or deleted, the tunnel will be torn down.
 
 In case multiple elements on the same DataMiner Agent connect to the same remote endpoint, only a single tunnel will be set up and this tunnel will be shared by the elements on that DataMiner Agent. The tunnel will only be torn down when all elements that connect to this remote endpoint are either stopped or deleted.
