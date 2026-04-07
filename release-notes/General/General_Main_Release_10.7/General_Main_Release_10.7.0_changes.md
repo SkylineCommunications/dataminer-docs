@@ -369,3 +369,11 @@ From now on, trend records with the following *iStatus* values will no longer ca
 <!-- MR 10.7.0 - FR 10.6.5 -->
 
 Up to now, flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours.
+
+#### SLLogCollector: Problem when running BPA tests [ID 45053]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When the SLLogCollector tool was configured to execute all BPA tests available in the system when collecting log packages, up to now, in some cases, executing those BPA tests would fail and cause them to report a wide variety of exceptions.
+
+From now on, when the SLLogCollector tool detects that it is not possible to execute the BPA tests, it will skip their execution and collect the results of their last successful run.

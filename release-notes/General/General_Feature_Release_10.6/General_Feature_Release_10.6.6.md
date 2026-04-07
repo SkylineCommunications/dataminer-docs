@@ -95,6 +95,14 @@ Note that the following stencil files will still be deployed:
 
 ### Fixes
 
+#### SLLogCollector: Problem when running BPA tests [ID 45053]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When the SLLogCollector tool was configured to execute all BPA tests available in the system when collecting log packages, up to now, in some cases, executing those BPA tests would fail and cause them to report a wide variety of exceptions.
+
+From now on, when the SLLogCollector tool detects that it is not possible to execute the BPA tests, it will skip their execution and collect the results of their last successful run.
+
 #### Alarm squashing: Alarm would incorrectly not show up in the Alarm Console when the element had been restarted and the AlarmsPerParameter limit was exceeded [ID 45063]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
