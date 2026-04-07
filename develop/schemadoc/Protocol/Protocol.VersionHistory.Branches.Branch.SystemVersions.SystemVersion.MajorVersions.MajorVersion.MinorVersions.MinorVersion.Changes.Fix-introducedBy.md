@@ -4,9 +4,9 @@ uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorV
 
 # introducedBy attribute
 
-Specifies the version in which the bug being fixed was originally introduced.
-This can be determined using Git blame.
-If the bug predates Git, estimate the version based on the available version information (aka. Revision History), or use the last version released prior to the migration to Git.
+Specifies the version in which the bug that is being fixed was originally introduced.
+
+This can be determined using Git blame. If the bug predates Git, estimate the version based on the available version information (a.k.a. Revision History), or use the last version released prior to the migration to Git.
 
 ## Content Type
 
