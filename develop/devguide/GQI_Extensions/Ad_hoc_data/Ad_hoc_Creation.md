@@ -9,31 +9,25 @@ uid: Ad_hoc_Creation
 It is advised to use [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) with Visual Studio to create ad hoc data sources. DIS provides a template to start creating a data source and simplifies deployment, including potential dependencies.
 The source code of ad hoc data sources can also be viewed and edited in the automation module within Cube, but this is not meant for maintaining extensions.
 
-## API Reference
+## GQI extension API
 
-To create an ad hoc data source, it is required to have a reference to the API. The API is available in two forms:
+In order to create an ad hoc data source, you use the GQI extension API. This API can be referenced in two ways:
 
-- The `Skyline.DataMiner.Core.GQI` NuGet package
+- In the `Skyline.DataMiner.Core.GQI` NuGet package.
+    - Is the recommended API when targeting DataMiner web version 10.6.6 onwards
+    - All new features will be added within this API.
     - Requires DIS.
-    - Only available on the GQI DxM from DataMiner web version 10.6.6 onward.
-    - Supports new features on older DataMiner server versions.
-    - Namespace: `Skyline.DataMiner.Core.GQI`.
+    - Namespace: `Skyline.DataMiner.Core.GQI.*`.
 
-- The legacy API in the `Skyline.DataMiner.Files.SLAnalyticsTypes` NuGet package (`SLAnalyticsTypes.dll` in DataMiner)
-    - Requires a newer DataMiner server version for new features.
-    - Namspace: `Skyline.DataMiner.Analytics.GenericInterface`.
+- Via the `Skyline.DataMiner.Files.SLAnalyticsTypes` NuGet package or SLAnalyticsTypes.dll assembly reference.
+    - The legacy API
+    - Default API when using the DIS template.
+    - Is supported before DataMiner web version 10.6.6.
+    - Namespace: `Skyline.DataMiner.Analytics.GenericInterface.*`.
 
-> [!IMPORTANT]
-> When using the DIS template, for compatibilty reasons, the legacy API is added by default.
-> To use the Core.GQI NuGet, it must be installed manually and the legacy API needs to be removed.
-
-> [!NOTE]
-> It is possible to combine both APIs within extension libraries and within extensions.
+> [!TIP]
+> To ease extension and transition of extensions that were built against the legacy API, it is possible to combine both APIs within extension libraries and within extensions.
 > If a data source is implemented with both the Core.GQI package and the legacy API, GQI uses the Core.GQI implementation when it is supported.
-
-> [!IMPORTANT]
-> From web version 10.6.6, all new API features will only be available within the GQI NuGet package.
-> Therefore, the GQI NuGet package should be preferred over the legacy API whenever possible.
 
 ## Data source creation
 
@@ -47,7 +41,7 @@ To create an ad hoc data source, it is required to have a reference to the API. 
 
 1. Specify a name for the solution.
 
-1. Under *Additional information*, fill in the name and author for the data source, and select the lifecycle interfaces you want to implement.
+1. Under *Additional information*, fill in the name and author for the data source, and select the [lifecycle interfaces](xref:Ad_hoc_Life_cycle#detailed-lifecycle-overview) you want to implement.
 
 1. Click *Create*.
 
@@ -59,13 +53,12 @@ Any class within the project that implements this interface is discovered by GQI
 
 Above the class, the *GQIMetaData* attribute is set. This attribute sets the display name of the data source in the Dashboards app or Low-Code Apps. If this attribute is not present, the name of the class is displayed instead, which may not be very user-friendly.
 
-(See [Example ad hoc data script](xref:Forwarding_dummy_data_to_GQI) for a full example of an ad hoc data source implementation):
+(See [Example ad hoc data script](xref:Forwarding_dummy_data_to_GQI) for a full example of an ad hoc data source implementation)
 
 #### Deploying the data source
 
-The data source can be deployed in the same way as automation scripts with DIS. Next to the C# file, the template creates an automation XML file. When opening this file in Visual Studio with DIS, a publish button appears in the top left. Pressing this button and connecting to the DataMiner Agent automatically deploys the data source on the system.
-
-More information about publishing with DIS can be found [here](xref:XML_editor#publish).
+The ad hoc data source can be deployed in the same way as is possible for automation scripts using DIS.
+For more information, see [Publishing with DIS](xref:XML_editor#publish).
 
 #### Using the data source
 
