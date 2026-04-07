@@ -4,6 +4,14 @@ uid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_7.x
 
 # Skyline.DataMiner.DataSources.OpenConfig.Gnmi Range 7.x
 
+## 7.1.2
+
+#### Fix - Duplicate key errors caused by DataMapper default value handling [ID 45231]
+
+An issue was identified where the DataMapper could perform a `FillArray` operation containing duplicate primary keys. This was caused by an internal object lacking a proper `IEquatable` implementation, allowing duplicate entries to exist within a `HashSet`.
+
+In the observed scenario, this did not impact functionality as the duplicated values were identical. However, it could generate level 0 element logging errors, potentially suggesting incorrect behavior.
+
 ## 7.1.0
 
 #### Add support for configurable timeouts to GnmiClient operations [ID 43460]
@@ -14,7 +22,7 @@ Minimum required version: [CommunicationGateway 5.3.0](xref:CommunicationGateway
 
 ## 7.0.1
 
-#### Fix - Improved middleware subscription handling in Communication Gateway [ID_42740]
+#### Fix - Improved middleware subscription handling in Communication Gateway [ID 42740]
 
 It could occur that the MessageBroker object was disposed of before all middleware subscriptions were disposed of, which could cause threads to get stuck. This will now be prevented.
 
