@@ -71,3 +71,16 @@ When themes were being migrated, in some cases, an exception could be thrown whe
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 After an upgrade from DataMiner web 10.5.0 CU0, 10.5.2, or 10.5.3 to a higher version, the GQI DxM would be unavailable in the DataMiner web apps. Also, the GQI logging would contain a message stating `Could not load file or assembly 'Newtonsoft.Json'`.
+
+#### Low-Code Apps: Problem when editing an app [ID 45193]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, in some cases, editing an app could result in a draft being created from an outdated version. If a new version had been published in another tab since the page was loaded, the draft would be based on the stale version visible in the UI, and the newer changes would be silently discarded.
+
+From now on, when you click the *Edit* button, a draft will now always be created based on the latest published version.
+
+This will also apply when duplicating an app. The latest published version will be duplicated.
+
+> [!NOTE]
+> Editing a specific version via the version history panel will function as before. In that case, a draft will always be created based on the selected version.
