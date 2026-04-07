@@ -1,8 +1,8 @@
 ---
-uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix-introducedBy
+uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix-introducedIn
 ---
 
-# introducedBy attribute
+# introducedIn attribute
 
 Specifies the version in which the bug that is being fixed was originally introduced.
 
