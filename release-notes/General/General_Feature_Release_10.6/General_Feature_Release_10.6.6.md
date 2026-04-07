@@ -67,9 +67,9 @@ When you install the BrokerGateway DxM on a server that does not have the Micros
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 
-By default, elements with a smart-serial connection in server mode are not allowed to be swarmed. However, it is possible that, at startup, an element can send a message to the data source in order to indicate where data should be sent to. In that case, the element is allowed to be swarmed.
+By default, elements with a smart-serial connection in server mode are not allowed to be swarmed. However, it is possible that, at startup, an element can send a message to the data source in order to indicate where data should be sent to. In that case, the fact that the smart-serial connection is in server mode will not be considered a valid reason to prevent the element from swarming.
 
-As DataMiner is not able to automatically detect that capability, you can now indicate in the *protocol.xml* file of the element that it is allowed to be swarmed. See the following example:
+As DataMiner is not able to automatically detect such exceptional cases, you can now indicate in the *protocol.xml* file of the element that it is allowed to be swarmed. See the following example:
 
 ```xml
 <Swarming>
@@ -78,6 +78,14 @@ As DataMiner is not able to automatically detect that capability, you can now in
     </BypassChecks>
 </Swarming>
 ```
+
+#### DataMiner upgrade: .NET Framework 4.8 will no longer be installed [ID 45196]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+From now on, during a DataMiner upgrade, Microsoft .NET Framework 4.8 will no longer be installed.
+
+On most machines running DataMiner, this will already be installed. If, for any reason, you need to install this package, it can be downloaded from [the official download page](https://dotnet.microsoft.com/en-us/download/dotnet-framework).
 
 #### DataMiner upgrade: A number of default Visio stencils will no longer be included [ID 45202]
 
