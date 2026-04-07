@@ -84,3 +84,9 @@ This will also apply when duplicating an app. The latest published version will 
 
 > [!NOTE]
 > Editing a specific version via the version history panel will function as before. In that case, a draft will always be created based on the selected version.
+
+#### Monitoring app: Surveyor tree items would not be indented correctly [ID 45219]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+In some cases, Surveyor tree items would not be indented correctly.
