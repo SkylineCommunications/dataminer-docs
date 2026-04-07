@@ -63,6 +63,22 @@ A number of enhancements have been made with regard to the synchronization of co
 
 When you install the BrokerGateway DxM on a server that does not have the Microsoft .NET hosting bundle installed yet, from now on, a message will appear, saying that .NET has to be installed first.
 
+#### Protocols: Indicating that smart-serial elements in server mode are allowed to be swarmed [ID 45173]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+By default, elements with a smart-serial connection in server mode are not allowed to be swarmed. However, it is possible that, at startup, an element can send a message to the data source in order to indicate where data should be sent to. In that case, the element is allowed to be swarmed.
+
+As DataMiner is not able to automatically detect that capability, you can now indicate in the *protocol.xml* file of the element that it is allowed to be swarmed. See the following example:
+
+```xml
+<Swarming>
+    <BypassChecks>
+        <Check>smartSerialAsServer</Check>
+    </BypassChecks>
+</Swarming>
+```
+
 #### DataMiner upgrade: A number of default Visio stencils will no longer be included [ID 45202]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
@@ -94,6 +110,12 @@ Note that the following stencil files will still be deployed:
 > The above-mentioned stencil files that are no longer included in DataMiner upgrade packages will not automatically be removed from existing systems.
 
 ### Fixes
+
+#### Dynamic units: A unit would incorrectly be assigned to date/time parameters [ID 45047]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When the dynamic units feature is enabled in, for example, DataMiner Cube, many numerical values are automatically converted into more readable formats with appropriate units. Up to now, the dynamic units feature would incorrectly also try to assign a unit to parameters of type date/time.
 
 #### SLLogCollector: Problem when running BPA tests [ID 45053]
 

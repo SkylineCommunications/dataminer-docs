@@ -285,6 +285,22 @@ A number of enhancements have been made to the SSH logging:
 
 Also, an issue has been fixed. When a host name could not be resolved to an IP address, up to now, the SSH connection would incorrectly try to connect to localhost. From now on, when the host name could not be resolved, the connection will fail.
 
+#### Protocols: Indicating that smart-serial elements in server mode are allowed to be swarmed [ID 45173]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+By default, elements with a smart-serial connection in server mode are not allowed to be swarmed. However, it is possible that, at startup, an element can send a message to the data source in order to indicate where data should be sent to. In that case, the element is allowed to be swarmed.
+
+As DataMiner is not able to automatically detect that capability, you can now indicate in the *protocol.xml* file of the element that it is allowed to be swarmed. See the following example:
+
+```xml
+<Swarming>
+    <BypassChecks>
+        <Check>smartSerialAsServer</Check>
+    </BypassChecks>
+</Swarming>
+```
+
 #### DataMiner upgrade: A number of default Visio stencils will no longer be included [ID 45202]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
