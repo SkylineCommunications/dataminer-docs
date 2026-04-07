@@ -12,6 +12,8 @@ Existing custom reports may no longer work.
 
 *GetTable* via automation scripts will only be able to retrieve the displayed content.
 
+Alarm monitoring with [dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds) will no longer work.
+
 *DIS MCC*
 
 | Full ID | Error message  | Description                                            |
