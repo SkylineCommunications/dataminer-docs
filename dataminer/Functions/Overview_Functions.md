@@ -55,55 +55,55 @@ description: A DataMiner System can have several additional modules or apps, e.g
 
 <div class="row"> 
   <div class="column">
+    <a href="/dataminer/Functions/EdgeManager/EdgeManagerOverview.html" title="Edge Manager" target="_self"><img src="~/dataminer/images/Edge_Manager.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/dataminer/Functions/EPM/EPM.html" title="Experience and Performance Management" target="_self"><img src="~/dataminer/images/Experience_Performance_Management.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/Inventory_and_Asset_Management/About_DMS_Inventory_Asset_Management.html" title="Inventory & Asset Management" target="_self"><img src="~/dataminer/images/Inventory_Asset_Management.svg" style="width:100%"></a>
   </div>  
-  <div class="column">
-    <a href="/dataminer/Functions/Job_Manager/Job_Manager.html" title="Job Manager" target="_self"><img src="~/dataminer/images/Job_Manager.svg" style="width:100%"></a>
-  </div>
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/dataminer/Functions/Job_Manager/Job_Manager.html" title="Job Manager" target="_self"><img src="~/dataminer/images/Job_Manager.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/dataminer/Functions/Maps/About_DMS_Maps.html" title="Maps" target="_self"><img src="~/dataminer/images/Maps2.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/Mobile_Gateway/Mobile_Gateway.html" title="Mobile Gateway" target="_self"><img src="~/dataminer/images/Mobile_Gateway.svg" style="width:100%"></a>
   </div>
-  <div class="column">
-    <a href="/dataminer/Functions/SRM/The_Profiles_module/The_Profiles_module.html" title="Profiles" target="_self"><img src="~/dataminer/images/Profiles.svg" style="width:100%"></a>
-  </div>
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/dataminer/Functions/SRM/The_Profiles_module/The_Profiles_module.html" title="Profiles" target="_self"><img src="~/dataminer/images/Profiles.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/dataminer/Operator_guide/Protocols_and_templates/Protocols_and_templates.html" title="Protocols & Templates" target="_self"><img src="~/dataminer/images/Protocols_Templates.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/Reporter_legacy/Legacy_reporter.html" title="DMS Reporter" target="_self"><img src="~/dataminer/images/DMS_Reporter.svg" style="width:100%"></a>
   </div>
-  <div class="column">
-    <a href="/dataminer/Functions/SRM/The_Resources_module/The_Resources_module.html" title="Resources" target="_self"><img src="~/dataminer/images/Resources.svg" style="width:100%"></a>
-  </div>
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/dataminer/Functions/SRM/The_Resources_module/The_Resources_module.html" title="Resources" target="_self"><img src="~/dataminer/images/Resources.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/dataminer/Functions/Router_Control/Router_Control.html" title="Router Control" target="_self"><img src="~/dataminer/images/Router_Control.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/SRM/The_Services_module/The_Services_module.html" title="Services" target="_self"><img src="~/dataminer/images/Services_Module.svg" style="width:100%"></a>
   </div>
-  <div class="column">
-    <a href="/dataminer/Functions/scheduler/About_the_Scheduler_module.html" title="Scheduler" target="_self"><img src="~/dataminer/images/Scheduler.svg" style="width:100%"></a>
-  </div>
 </div>
 
 <div class="row"> 
   <div class="column">
-    <a href="/dataminer/Functions/EdgeManager/EdgeManagerOverview.html" title="Edge Manager" target="_self"><img src="~/dataminer/images/Edge_Manager.svg" style="width:100%"></a>
+    <a href="/dataminer/Functions/scheduler/About_the_Scheduler_module.html" title="Scheduler" target="_self"><img src="~/dataminer/images/Scheduler.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/Spectrum_Analysis/Spectrum_Analysis.html" title="Spectrum Analysis" target="_self"><img src="~/dataminer/images/Spectrum_Analysis.svg" style="width:100%"></a>
