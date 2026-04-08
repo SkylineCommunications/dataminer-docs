@@ -96,3 +96,9 @@ When you had clicked the *Show grid* button in the header bar of a dashboard, up
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 In some cases, Surveyor tree items would not be indented correctly.
+
+#### Dashboards/Low-Code Apps - Time range component: Problem when component was made smaller [ID 45221]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, when a *Time range* component was made smaller, in some cases, the separators would get ellipsed, and the picker button would disappear.
