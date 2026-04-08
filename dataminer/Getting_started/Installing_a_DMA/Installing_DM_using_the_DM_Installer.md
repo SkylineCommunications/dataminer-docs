@@ -31,10 +31,10 @@ You can follow the steps below or watch this short video, which shows you how to
 
 1. Check the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements) and make sure your system meets the necessary requirements.
 
-   If you do not intend to use the latest Installer (v10.5), make sure the necessary .NET and .NET Framework versions are installed, as mentioned in the requirements. With the v10.5 Installer, these will be included in the installation.
+   If you do not intend to use the latest Installer (v10.5/v10.6), make sure the necessary .NET and .NET Framework versions are installed, as mentioned in the requirements. With the v10.5 Installer, these will be included in the installation.
 
    > [!NOTE]
-   > If the .NET Framework is not installed, the v10.5 Installer will install it and prompt you to reboot the system before continuing the installation.
+   > If the .NET Framework is not installed, the v10.5/v10.6 Installer will install it and prompt you to reboot the system before continuing the installation.
 
 1. Make sure the server is synced with an NTP server. If you intend to install multiple DataMiner Agents in a cluster, make sure all servers are synced with the same NTP server.
 
@@ -46,9 +46,9 @@ You can follow the steps below or watch this short video, which shows you how to
 
    For more details, refer to *Change TCP/IP Settings* under [Essential Network Settings and Tasks in Windows](https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9).
 
-1. If you do not intend to use the latest Installer (v10.5), download and install the DataMiner Cloud Pack from [DataMiner Dojo](https://community.dataminer.services/dataminer-cloud-pack/).
+1. If you do not intend to use the latest Installer (v10.5/v10.6), download and install the DataMiner Cloud Pack from [DataMiner Dojo](https://community.dataminer.services/dataminer-cloud-pack/).
 
-   With the v10.5 Installer, this will be included in the installation.
+   With the v10.5/v10.6 Installer, this will be included in the installation.
 
 1. Download the DataMiner Installer from [DataMiner Dojo](https://community.dataminer.services/dataminer-installer/).
 
@@ -57,9 +57,11 @@ You can follow the steps below or watch this short video, which shows you how to
 
 ## Running the Installer
 
-### [Installer v10.5](#tab/tabid-1)
+### [Installer v10.5/v10.6](#tab/tabid-1)
+ > [!IMPORTANT]
+ > By default, the 10.5 CU13 Installer comes with NATS and 10.6 CU1 Installer comes with BrokerGateway.
 
-To install DataMiner using the DataMiner Installer v10.5, follow the steps below:
+To install DataMiner using either v10.5/v10.6 DataMiner Installer, follow the steps below:
 
 1. Double-click the setup executable.
 
