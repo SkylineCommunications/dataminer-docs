@@ -403,6 +403,9 @@ Used to override the default table loading behavior when dynamically positioning
 
 See [Overriding the default table loading behavior](xref:Positioning_shapes_dynamically1#overriding-the-default-table-loading-behavior).
 
+> [!WARNING]
+> Using this option will have a negative impact on overall performance.
+
 ## ForcePropertyFromPage
 
 Shape-level option.
