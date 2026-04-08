@@ -8,7 +8,7 @@ In the Alarm Console, you can add extra tab pages where you can specify a custom
 
 To add such a filtered tab page:
 
-1. Click the *+* symbol in the header of the Alarm Console.
+1. Click the "+" symbol in the header of the Alarm Console.
 
 1. Choose *Apply filters* or *Apply filter and window size*, depending on whether you want to see current alarms or history alarms, or alarms in a sliding window.
 
@@ -22,7 +22,7 @@ To add such a filtered tab page:
 
 1. Click *Select a filter* to create or select a filter, then select the field you want to filter on.
 
-   ![Alarm filter](~/dataminer/images/Alarm_Filter.png)<br>*Applying an alarm filter in an Alarm Console tab in DataMiner 10.4.5*
+   ![Alarm filter](~/dataminer/images/Alarm_Filter.png)<br>*Applying an alarm filter in an Alarm Console tab in DataMiner 10.6.5*
 
    > [!NOTE]
    > If any filters have been saved on your DMS, you will be able to choose them in this step. See [Working with saved alarm filters](xref:WorkingWithSavedAlarmFilters).

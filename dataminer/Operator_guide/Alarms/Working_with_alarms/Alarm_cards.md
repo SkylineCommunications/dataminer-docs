@@ -8,7 +8,7 @@ An alarm card shows detailed information about an alarm. To open an alarm card, 
 
 If the user setting *Alarm double-click action* is set to *Open alarm card*, you can also simply double-click the alarm in the Alarm Console. See [Alarm Console settings](xref:User_settings#alarm-console-settings).
 
-![Alarm card](~/dataminer/images/Alarm_Card.png)<br>*Alarm card in DataMiner 10.4.5*
+![Alarm card](~/dataminer/images/Alarm_Card.png)<br>*Alarm card in DataMiner 10.6.5*
 
 Alarm cards consist of three panes:
 
