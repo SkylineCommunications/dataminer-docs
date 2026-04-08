@@ -85,6 +85,12 @@ This will also apply when duplicating an app. The latest published version will 
 > [!NOTE]
 > Editing a specific version via the version history panel will function as before. In that case, a draft will always be created based on the selected version.
 
+#### Dashboards app: Grid lines would incorrectly stay visible after you had exited edit mode [ID 45205]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When you had clicked the *Show grid* button in the header bar of a dashboard, up to now, the grid lines would incorrectly also be visible after you had exited edit mode.
+
 #### Monitoring app: Surveyor tree items would not be indented correctly [ID 45219]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
