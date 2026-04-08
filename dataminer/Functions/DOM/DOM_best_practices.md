@@ -88,6 +88,8 @@ In most solutions, there are objects that need to be retrieved quite often to di
 
 If values are only needed when a specific object is known (e.g., selected in a low-code app table), create a separate metadata object that stores these additional values. A link can then be made to retrieve these values only when needed. However, as this introduces another read call, you should only do this in case these values are indeed needed less often than the main object values. If these additional values will always be joined to the main object, the performance benefit may be negated, or you may even get the opposite effect.
 
+It is also possible to use a [select read](xref:DomHelper_class#reading-selected-fields) to only retrieve certain values from a larger DOM instance to improve performance. This could be an option to speed up performance when a larger momdel cannot be split up.
+
 **Not recommended:**
 
 ```mermaid
