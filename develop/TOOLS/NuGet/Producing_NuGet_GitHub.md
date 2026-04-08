@@ -4,14 +4,11 @@ uid: Producing_NuGet_GitHub
 
 # Producing NuGet packages via GitHub
 
-> [!IMPORTANT]
-> This section includes information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+NuGet packages can be produced automatically using the [Master Workflow](xref:github_reusable_workflows_master_workflow). When a tag is created in the format `A.B.C` or `A.B.C-text`, the workflow will build, test, sign, and publish your NuGet packages. Where the packages are published depends on the `nuget-push-source` input.
 
-## Internal NuGet packages
+## Publishing to the GitHub NuGet registry
 
-It is possible to create internal packages on GitHub that are stored in the GitHub NuGet registry from the 'SkylineCommunications' organization.
-
-This can then be used by other repositories in our SkylineCommunications organization when using the workflows that are provided.
+By default (when no `nuget-push-source` is configured), the [Master Workflow](xref:github_reusable_workflows_master_workflow) publishes NuGet packages to the [GitHub Packages registry](https://github.com/features/packages) of the repository owner. For the *SkylineCommunications* organization, this means packages are stored in the [SkylineCommunications GitHub NuGet registry](https://github.com/orgs/SkylineCommunications/packages) and can be consumed by other repositories in the organization.
 
 ### Creating a personal access token
 
@@ -33,22 +30,56 @@ To access the GitHub NuGet registry, you need a personal access token (PAT). Fol
 
 1. Copy your personal access token. You will not be able to see it again afterwards.
 
-### Publishing an internal NuGet package
+### Setting up the workflow
 
-#### Editing the GitHub Workflow
+To publish to the GitHub NuGet registry, use the [Master Workflow](xref:github_reusable_workflows_master_workflow) without specifying a `nuget-push-source`. The default behavior will push to the GitHub Packages registry.
 
-Instead of using the regular GitHub workflow for NuGet solutions, use the following starter workflow: **Internal DataMiner CICD NuGet Solution**.
+Follow the instructions in [the official GitHub Docs](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions) to add a new secret to your repository:
 
-Follow the instructions in [the official GitHub Docs](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions) to add a new secret:
-
-- **Name**: Enter `NUGETAPIKEY_GITHUB`.
+- **Name**: Enter `NUGET_API_KEY`.
 
 - **Secret**: Enter your personal access token.
 
-#### Publishing the package
+Then pass the secret in your workflow file:
+
+```yml
+jobs:
+
+  CI:
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main
+    with:
+      sonarcloud-project-name: ${{ vars.SONAR_NAME }}
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      NUGET_API_KEY: ${{ secrets.NUGETAPIKEY_GITHUB }}
+```
+
+### Verifying the published package
 
 After creating the tag and running the workflow, you can find your package on the *Packages* page on [GitHub](https://github.com/orgs/SkylineCommunications/packages).
 
-If you did not specify a repository URL in the csproj file, the package will not be linked with the repository. You can establish this link by following the steps explained [in the official GitHub Docs](https://docs.github.com/en/packages/learn-github-packages/connecting-a-repository-to-a-package#connecting-a-repository-to-an-organization-scoped-package-on-github).
+If you did not specify a repository URL in the .csproj file, the package will not be linked with the repository. You can establish this link by following the steps explained [in the official GitHub Docs](https://docs.github.com/en/packages/learn-github-packages/connecting-a-repository-to-a-package#connecting-a-repository-to-an-organization-scoped-package-on-github).
 
 This will link the repository and showcase the *README.md* file, contributors, and more. On the right side of the repository, you will also see the released packages.
+
+## Publishing to nuget.org
+
+To publish your NuGet packages to [nuget.org](https://www.nuget.org/) instead of the GitHub Packages registry, set the `nuget-push-source` input to `https://api.nuget.org/v3/index.json` and provide a `NUGET_API_KEY` secret with a valid nuget.org API key.
+
+> [!IMPORTANT]
+> Skyline employees do not manage their own nuget.org API keys. To set up nuget.org publishing for a repository, contact the **BOOST team** and request them to configure the `NUGETAPIKEY` secret on your repository.
+
+```yml
+jobs:
+
+  CI:
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main
+    with:
+      sonarcloud-project-name: ${{ vars.SONAR_NAME }}
+      nuget-push-source: "https://api.nuget.org/v3/index.json"
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      NUGET_API_KEY: ${{ secrets.NUGETAPIKEY }}
+```
+
+After creating a tag, the workflow will build, test, sign, and publish your NuGet packages to nuget.org. You can verify the published package at `https://www.nuget.org/packages/<YourPackageName>`.

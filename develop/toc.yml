@@ -7149,6 +7149,8 @@ items:
     - name: GitHub reusable workflows
       topicUid: github_reusable_workflows
       items:
+      - name: Master Workflow
+        topicUid: github_reusable_workflows_master_workflow
       - name: DataMiner App Package Master Workflow
         topicUid: github_reusable_workflows_dataminer_app_packages_master_workflow
       - name: Automation Master Workflow

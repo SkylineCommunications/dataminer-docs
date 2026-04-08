@@ -1,6 +1,6 @@
 ---
 uid: skyline_dataminer_sdk_dataminer_package_project_advanced
-keywords: Skyline.DataMiner.Sdk, Package Project, overrideCatalogDownloadToken, OVERRIDE_DATAMINER_TOKEN, solutionFilterName
+keywords: Skyline.DataMiner.Sdk, Package Project, OVERRIDE_CATALOG_DOWNLOAD_TOKEN, OVERRIDE_DATAMINER_TOKEN, solution-filter-name
 ---
 
 # Skyline DataMiner Package Project - Advanced
@@ -14,7 +14,7 @@ Within a single solution, you can configure some advanced setups in order to:
 - Release packages to different organizations
 - Release packages with different versions
 
-This is also supported with our reusable workflow (offered through the templates as the "complete" GitHub workflow): [DataMiner App Packages Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow).
+This is also supported with the [Master Workflow](xref:github_reusable_workflows_master_workflow).
 
 In GitHub you can make several different workflows (or different jobs) that trigger the reusable workflow with different arguments that can change the behavior of the Build and Publish steps.
 
@@ -60,18 +60,12 @@ This is the default job without filters:
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@main
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main
     with:
-      configuration: Release
-      referenceName: ${{ github.ref_name }}
-      runNumber: ${{ github.run_number }}
-      referenceType: ${{ github.ref_type }}
-      repository: ${{ github.repository }}
-      owner: ${{ github.repository_owner }}
-      sonarCloudProjectName: ${{ vars.SONAR_NAME }}
+      sonarcloud-project-name: ${{ vars.SONAR_NAME }}
     secrets:
-      dataminerToken: ${{ secrets.DATAMINER_TOKEN }}
-      sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
+      DATAMINER_TOKEN: ${{ secrets.DATAMINER_TOKEN }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 ```
 
 #### Jobs with filters
@@ -82,34 +76,22 @@ Below, an extra argument is added where the .slnf names can be defined. Both job
 jobs:
 
   CI-package1:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@main
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main
     with:
-      configuration: Release
-      referenceName: ${{ github.ref_name }}
-      runNumber: ${{ github.run_number }}
-      referenceType: ${{ github.ref_type }}
-      repository: ${{ github.repository }}
-      owner: ${{ github.repository_owner }}
-      sonarCloudProjectName: ${{ vars.SONAR_NAME }}
-      solutionFilterName: "PackagesForOrganizationA.slnf"
+      sonarcloud-project-name: ${{ vars.SONAR_NAME }}
+      solution-filter-name: "PackagesForOrganizationA.slnf"
     secrets:
-      dataminerToken: ${{ secrets.DATAMINER_TOKENA }}
-      sonarCloudToken: ${{ secrets.SONAR_TOKEN }} 
-  
+      DATAMINER_TOKEN: ${{ secrets.DATAMINER_TOKENA }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
   CI-package2:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@main
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main
     with:
-      configuration: Release
-      referenceName: ${{ github.ref_name }}
-      runNumber: ${{ github.run_number }}
-      referenceType: ${{ github.ref_type }}
-      repository: ${{ github.repository }}
-      owner: ${{ github.repository_owner }}
-      sonarCloudProjectName: ${{ vars.SONAR_NAME }}
-      solutionFilterName: "PackagesForOrganizationB.slnf"
+      sonarcloud-project-name: ${{ vars.SONAR_NAME }}
+      solution-filter-name: "PackagesForOrganizationB.slnf"
     secrets:
-      dataminerToken: ${{ secrets.DATAMINER_TOKEN_B }}
-      sonarCloudToken: ${{ secrets.SONAR_TOKEN }} 
+      DATAMINER_TOKEN: ${{ secrets.DATAMINER_TOKEN_B }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 ```
 
 ## Using different organization keys for downloading Catalog items and publishing a package
@@ -145,41 +127,29 @@ When using GitHub reusable workflows as provided by Skyline Communications, if y
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@main
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main
     with:
-      configuration: Release
-      referenceName: ${{ github.ref_name }}
-      runNumber: ${{ github.run_number }}
-      referenceType: ${{ github.ref_type }}
-      repository: ${{ github.repository }}
-      owner: ${{ github.repository_owner }}
-      sonarCloudProjectName: ${{ vars.SONAR_NAME }}
+      sonarcloud-project-name: ${{ vars.SONAR_NAME }}
     secrets:
-      dataminerToken: ${{ secrets.DATAMINER_TOKEN }}
-      sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
+      DATAMINER_TOKEN: ${{ secrets.DATAMINER_TOKEN }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 ```
 
 #### Job with different organization key
 
-Notice the addition of the extra argument below where you can define the other organization key.
+Notice the addition of the extra secret below where you can define the other organization key.
 
 ```yml
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@main
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main
     with:
-      configuration: Release
-      referenceName: ${{ github.ref_name }}
-      runNumber: ${{ github.run_number }}
-      referenceType: ${{ github.ref_type }}
-      repository: ${{ github.repository }}
-      owner: ${{ github.repository_owner }}
-      sonarCloudProjectName: ${{ vars.SONAR_NAME }}
+      sonarcloud-project-name: ${{ vars.SONAR_NAME }}
     secrets:
-      dataminerToken: ${{ secrets.DATAMINER_TOKEN }}
-      sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
-      overrideCatalogDownloadToken: ${{ secrets.OVERRIDE_DATAMINER_TOKEN }}
+      DATAMINER_TOKEN: ${{ secrets.DATAMINER_TOKEN }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      OVERRIDE_CATALOG_DOWNLOAD_TOKEN: ${{ secrets.OVERRIDE_DATAMINER_TOKEN }}
 ```
 
 ## Changing the cache location of Catalog items
