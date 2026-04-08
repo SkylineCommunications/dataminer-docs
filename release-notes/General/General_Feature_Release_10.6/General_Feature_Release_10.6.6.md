@@ -154,3 +154,9 @@ In some cases, timeouts could occur due to a large number of state icon events b
 From now on, the number of state icon events sent by SLAnalytics instances will be reduced to a maximum of 10,000 events per minute. Also, they will be sent in batches of maximum 1000 events.
 
 Additionally, state icon events, alarm focus events and RAD parameter aggregation events will now all have a smaller weight, meaning that more of them will be allowed in the queue.
+
+#### Problem with MessageBroker connections during NATS migrations and NATS-related BPA test runs [ID 45175]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, during NATS migrations or NATS-related BPA test runs, establishing connections to MessageBroker would be slow due to reverse DNS lookups.
