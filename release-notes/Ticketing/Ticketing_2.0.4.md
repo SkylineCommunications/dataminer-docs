@@ -39,7 +39,7 @@ In the dropdown that can be used to assign a contact to a ticket, the contacts f
 
 #### Large description cannot be fully viewed in expanded view [ID 45245]
 
-<!-- More information needed -->
+If a ticket had a very large description (e.g., over 60 lines), the expanded view of the ticket did not show the complete description even though this should actually be the case. This issue has been resolved, so that you can now scroll down to see the complete description.
 
 #### Additional info fields could be edited for rejected, canceled, and closed tickets [ID 45246]
 
