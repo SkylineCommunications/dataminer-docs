@@ -13,20 +13,19 @@ The source code of custom operators can also be viewed and edited in the automat
 
 In order to create a custom operator, you use the GQI extension API. This API can be referenced in two ways:
 
-- In the `Skyline.DataMiner.Core.GQI` NuGet package
-    - Is the recommended API when targeting DataMiner web version 10.6.6 onwards.
+- Via the `Skyline.DataMiner.Core.GQI` NuGet package.
+    - This is the recommended API when creating GQI extensions for Dataminer 10.6.6/10.5.0 [CU15]/10.6.0 [CU3] onwards. Newer GQI features will only be supported by this API.
     - Requires DIS.
+    - Package compatibility for a specific DataMiner version can be viewed on the [NuGet page]()<!-- To be filled in when nuget is deployed -->
     - Namespace: `Skyline.DataMiner.Core.GQI.*`.
 
 - Via the `Skyline.DataMiner.Files.SLAnalyticsTypes` NuGet package or SLAnalyticsTypes.dll assembly reference.
-    - Default API when using the DIS template.
-    - Requires a newer DataMiner server version for new features.
+    - This is currently still the default API when using the DIS template. This API is end-of-life and does not support GQI features added from DataMiner 10.6.6/10.5.0 [CU15]/10.6.0 [CU3] onwards.
     - Namespace: `Skyline.DataMiner.Analytics.GenericInterface.*`.
 
 > [!TIP]
-> It is possible to combine both APIs within extension libraries and within extensions.
-> If a custom operator is implemented with both the Core.GQI package and the legacy API, GQI uses the Core.GQI implementation when it is supported.
-> Implementing both APIs can ease the transition between the two.
+> To ease the transition of extensions that were built against the legacy API, it is possible to combine both APIs within extension libraries and within extensions.
+> If an operator is implemented with both the Core.GQI package and the legacy API, GQI uses the Core.GQI implementation when it is supported.
 
 ## Operator creation
 
@@ -54,7 +53,7 @@ Above the class, the *GQIMetaData* attribute is set. This attribute sets the dis
 
 #### Deploying the custom operator
 
-The custom operator can be deployed in the same way as is possible for automation scripts using DIS.
+The custom operator can be deployed similar to deploying automation scripts using DIS.
 For more information, see [Publishing with DIS](xref:XML_editor#publish).
 
 #### Using the custom operator

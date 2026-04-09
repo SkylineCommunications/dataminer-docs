@@ -13,20 +13,18 @@ The source code of ad hoc data sources can also be viewed and edited in the auto
 
 In order to create an ad hoc data source, you use the GQI extension API. This API can be referenced in two ways:
 
-- In the `Skyline.DataMiner.Core.GQI` NuGet package.
-    - Is the recommended API when targeting DataMiner web version 10.6.6 onwards
-    - All new features will be added within this API.
+- Via the `Skyline.DataMiner.Core.GQI` NuGet package.
+    - This is the recommended API when creating GQI extensions for Dataminer 10.6.6/10.5.0 [CU15]/10.6.0 [CU3] onwards. Newer GQI features will only be supported by this API.
     - Requires DIS.
+    - Package compatibility for a specific DataMiner version can be viewed on the [NuGet page]() <!-- To be filled in when nuget is deployed -->
     - Namespace: `Skyline.DataMiner.Core.GQI.*`.
 
 - Via the `Skyline.DataMiner.Files.SLAnalyticsTypes` NuGet package or SLAnalyticsTypes.dll assembly reference.
-    - The legacy API
-    - Default API when using the DIS template.
-    - Is supported before DataMiner web version 10.6.6.
+    - This is currently still the default API when using the DIS template. This API is end-of-life and does not support GQI features added from DataMiner 10.6.6/10.5.0 [CU15]/10.6.0 [CU3] onwards.
     - Namespace: `Skyline.DataMiner.Analytics.GenericInterface.*`.
 
 > [!TIP]
-> To ease extension and transition of extensions that were built against the legacy API, it is possible to combine both APIs within extension libraries and within extensions.
+> To ease the transition of extensions that were built against the legacy API, it is possible to combine both APIs within extension libraries and within extensions.
 > If a data source is implemented with both the Core.GQI package and the legacy API, GQI uses the Core.GQI implementation when it is supported.
 
 ## Data source creation
@@ -57,7 +55,7 @@ Above the class, the *GQIMetaData* attribute is set. This attribute sets the dis
 
 #### Deploying the data source
 
-The ad hoc data source can be deployed in the same way as is possible for automation scripts using DIS.
+The data source can be deployed similar to deploying automation scripts using DIS.
 For more information, see [Publishing with DIS](xref:XML_editor#publish).
 
 #### Using the data source
