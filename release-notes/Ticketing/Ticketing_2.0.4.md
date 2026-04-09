@@ -35,6 +35,15 @@ The following text has been adjusted in the General Info and Additional Info edi
 
 In the dropdown that can be used to assign a contact to a ticket, the contacts from the People and Organizations app are now sorted alphabetically. The "No Assignee" option will continue to be shown at the top when applicable (i.e., for a ticket that has not yet been set to "In Progress", because making such a ticket unassigned again is not possible).
 
+#### Improved messages on Ticket Information page [ID 45257]
+
+In several places on the Ticket Information page, the "Nothing to show" messages have been removed or replaced with more meaningful messages:
+
+- In case a ticket is closed, canceled, or rejected, it can no longer be transitioned to another state, and no transition buttons are displayed. The previously displayed message "Nothing to show" is no longer shown.
+- In the Additional Info section, "Nothing to show" has been replaced with "No fields defined for the selected Ticket Type".
+- In the Linked Items section, "Nothing to show" has been replaced with "Ticket has no Linked Items".
+- In the External Ticketing section, "Nothing to show" has been replaced with "Ticket has no External Ticketing".
+
 ## Fixes
 
 #### Large description cannot be fully viewed in expanded view [ID 45245]
