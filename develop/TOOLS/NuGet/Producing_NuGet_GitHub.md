@@ -67,7 +67,7 @@ This will link the repository and showcase the *README.md* file, contributors, a
 To publish your NuGet packages to [nuget.org](https://www.nuget.org/) instead of the GitHub Packages registry, set the `nuget-push-source` input to `https://api.nuget.org/v3/index.json` and provide a `NUGET_API_KEY` secret with a valid nuget.org API key.
 
 > [!IMPORTANT]
-> Skyline employees do not manage their own nuget.org API keys. To set up nuget.org publishing for a repository, contact the **BOOST team** and request them to configure the `NUGETAPIKEY` secret on your repository.
+> Skyline employees do not manage their own nuget.org API keys. To set up nuget.org publishing for a repository, contact the **BOOST team** and ask them to configure the `NUGETAPIKEY` secret on your repository.
 
 ```yml
 jobs:
