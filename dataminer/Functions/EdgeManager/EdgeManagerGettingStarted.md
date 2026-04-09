@@ -22,7 +22,7 @@ To allow DataMiner to access a data source in a remote location via the Site Man
 
 ### [Windows](#tab/windows)
 
-1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.ps1) script by using the following command, where you replace the placeholders with the **account token** and a **site name** (i.e. the name of the location).
+1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.ps1) script by using the following command, where you replace the placeholders with the **account token** and a **site name** (i.e., the name of the location).
 
    ```powershell
    iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1 -UseBasicParsing) } -Command install -AccountToken '<AccountToken>' -SiteName '<SiteName>'"
@@ -86,7 +86,7 @@ To allow DataMiner to access a data source in a remote location via the Site Man
 
 ### [Linux](#tab/linux)
 
-1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.sh) script by using the following command, where you replace the placeholders with the **account token** and a **site name** (i.e. the name of the location).
+1. On a machine in your on-premises network, run the [DataMiner SiteManager setup](https://github.com/SkylineCommunications/dataminer-sitemanager-setup/blob/main/Setup-DataMinerSiteManager.sh) script by using the following command, where you replace the placeholders with the **account token** and a **site name** (i.e., the name of the location).
 
    ```bash
    wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | sudo bash -s -- install '<AccountToken>' '<SiteName>'

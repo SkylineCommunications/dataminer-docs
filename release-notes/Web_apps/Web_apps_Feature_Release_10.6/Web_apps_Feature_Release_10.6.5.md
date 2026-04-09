@@ -45,7 +45,7 @@ When configuring a *Node edge graph* component, you can now use the following ad
 
 Since DataMiner 10.5.0 CU11/10.6.2, you can select a specific field to be displayed as node or edge label.
 
-From now on, you can link a node or edge label to data from another component (e.g. a list of query columns displayed in a *Dropdown* component).
+From now on, you can link a node or edge label to data from another component (e.g., a list of query columns displayed in a *Dropdown* component).
 
 #### Dashboards/Low-Code Apps - Node edge graph component: 'Node move' events can now be cancelled by pressing ESC [ID 44938]
 
