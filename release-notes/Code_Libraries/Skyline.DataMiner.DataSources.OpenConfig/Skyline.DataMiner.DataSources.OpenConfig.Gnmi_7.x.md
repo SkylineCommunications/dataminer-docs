@@ -12,6 +12,12 @@ An issue was identified where the DataMapper could perform a `FillArray` operati
 
 In the observed scenario, this did not impact functionality as the duplicated values were identical. However, it could generate level 0 element logging errors, potentially suggesting incorrect behavior.
 
+## 7.1.1
+
+#### Updated version of Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig used [ID 45162]
+
+The Skyline.DataMiner.DataSources.OpenConfig.Gnmi library has been updated to use version 5.3.4 of Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig. Previously, it was using version 5.3.0.
+
 ## 7.1.0
 
 #### Add support for configurable timeouts to GnmiClient operations [ID 43460]
