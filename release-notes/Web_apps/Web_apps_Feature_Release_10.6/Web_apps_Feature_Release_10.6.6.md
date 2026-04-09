@@ -117,6 +117,12 @@ This will also apply when duplicating an app. The latest published version will 
 > [!NOTE]
 > Editing a specific version via the version history panel will function as before. In that case, a draft will always be created based on the selected version.
 
+#### Web Services API: Compatibility manager would incorrectly not be initialized [ID 45203]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When a DataMiner Agent restarted, or when IIS restarted, in some cases, the Web Services API compatibility manager would incorrectly not be initialized, causing an error to be thrown.
+
 #### Dashboards app: Grid lines would incorrectly stay visible after you had exited edit mode [ID 45205]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
