@@ -58,6 +58,21 @@ From now on, when you try to open a non-existing page, you wil no longer be redi
 
 Clicking the *Go to overview* button in that visual will redirect you back to the home page of the app.
 
+#### Dashboards/Low-Code Apps: Default theme of basic controls has been changed to 'Transparent' [ID 45198]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+The default theme of the following basic controls has been changed to *Transparent*:
+
+- Button
+- Dropdown
+- Numeric input
+- Rich text editor
+- Search input
+- Text input
+- Time range
+- Toggle
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Problem when themes were being migrated when the DMA was offline [ID 45020]
