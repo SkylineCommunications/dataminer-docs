@@ -58,6 +58,23 @@ From now on, when you try to open a non-existing page, you wil no longer be redi
 
 Clicking the *Go to overview* button in that visual will redirect you back to the home page of the app.
 
+#### GQI DxM: Custom property columns will now be referenced by their name instead of by their ID [ID 45085]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Custom property columns will now be referenced by their name instead of by their ID. This will ensure that, if certain objects are moved from one DataMiner System to another (e.g., by means of a DELT export), and a query that references a custom property linked to those objects is also moved to that other system, the query will still work.
+
+Previously these queries would break when moved to another system because, in some cases, the custom properties would be assigned another ID on that other system.
+
+The "by ID" columns will remain on the data sources for backward compatibility to make sure that existing queries are not affected. These columns will now be marked as `IsHidden` and "*(Legacy)*" will be added to their name. Client applications can then use this information to hide these columns and only show them in case they were already selected. On newly created queries, these legacy columns will never be visible.
+
+These changes will affect the following data sources:
+
+- Get alarms
+- Get elements
+- Get services
+- Get views
+
 #### Dashboards/Low-Code Apps: Default theme of basic controls has been changed to 'Transparent' [ID 45198]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
