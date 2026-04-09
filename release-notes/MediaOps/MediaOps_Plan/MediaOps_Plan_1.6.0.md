@@ -20,6 +20,27 @@ uid: MediaOps_Plan_1.6.0
 
 ## Changes
 
+### Breaking changes
+
+#### Plan API: Breaking changes in DevPack NuGet to ensure resource pool link is removed correctly [ID 45260]
+
+To resolve an issue where removing a resource pool did not remove its link from the associated resource, the following breaking changes have been implemented in the DevPack NuGet.
+
+- IResourcesRepository
+  - `GetResourcesPerPool(IEnumerable<ResourcePool>)`:
+    - Old return value: `IReadOnlyDictionary<ResourcePool, IEnumerable<Resource>`
+    - new return value: `IReadOnlyDictionary<ResourcePool, IReadOnlyCollection<Resource>`
+  - `GetResourcesPerPool(IEnumerable<ResourcePool>, ResourceState)`
+    - Old return value: `IReadOnlyDictionary<ResourcePool, IEnumerable<Resource>`
+    - New return value: `IReadOnlyDictionary<ResourcePool, IReadOnlyCollection<Resource>`
+- IResourcePoolsRepository
+  - `GetPoolsPerResource(IEnumerable<Resource>)`
+    - Old return value: `IReadOnlyDictionary<Resource, IEnumerable<ResourcePool>`
+    - New return value: `IReadOnlyDictionary<Resource, IReadOnlyCollection<ResourcePool>`
+  - `GetParentPoolLinks(IEnumerable<ResourcePool>)`
+    - Old return value: `IReadOnlyDictionary<Resource, IEnumerable<ResourcePool>`
+    - New return value: `IReadOnlyDictionary<Resource, IReadOnlyCollection<ResourcePool>`
+
 ### Enhancements
 
 #### Scheduling: Improved tooltips [ID 45190]
@@ -31,3 +52,7 @@ Throughout the Scheduling app, improved tooltips have been implemented to provid
 - In the Nodes table of the Edit Job panel, hovering over the icon in the Config Status column now displays assigned parameter details for capabilities, capacities, configurations, and configured automated actions.
 
 These tooltips will reduce navigation effort and improve visibility during scheduling and job validation.
+
+#### Plan API: No longer possible to update resources in Deprecated state [ID 45261]
+
+For the sake of consistency with the other objects in the DevPack, it is now no longer possible for resources to be updated while they are in the Deprecated state.
