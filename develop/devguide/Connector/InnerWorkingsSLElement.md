@@ -92,7 +92,7 @@ Always keep the column processing order in mind when implementing tables. The fo
 The column processing order can be overruled in the protocol with the [processingOrder](xref:Protocol.Params.Param.ArrayOptions-options#processingorder) option.
 
 > [!IMPORTANT]
-> Customizing the column processing order is not recommended. It can for example cause [alarm properties defined in protocols](xref:Protocol.Params.Param.Alarm-options#propertynames) to not be loaded in the Alarm Console in DataMiner Systems with high SLElement usage.
+> Customizing the column processing order is not recommended.
 
 ```xml
 <Param id="400" trending="false" export="true">
