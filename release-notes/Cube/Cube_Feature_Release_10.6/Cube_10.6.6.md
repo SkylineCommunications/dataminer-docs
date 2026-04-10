@@ -38,6 +38,12 @@ In version 10.6.4, the entire Cube UI and UI themes were redesigned. In this ver
 
 Because of a number of enhancements, overlays appearing on top of a spectrum card will now dynamically follow the Cube theme.
 
+#### Enhanced performance when loading data into the Reports page of element, service, and parameter cards [ID 45191]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Because of a number of enhancements, overall performance has increased when loading data into the Reports page of element, service, and parameter cards.
+
 ### Fixes
 
 *No fixes have been added yet.*

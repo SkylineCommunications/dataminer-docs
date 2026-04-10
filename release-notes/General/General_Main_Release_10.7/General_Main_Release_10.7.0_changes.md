@@ -395,6 +395,12 @@ From now on, trend records with the following *iStatus* values will no longer ca
 
 Up to now, flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours.
 
+#### STaaS: Problem when retrieving data to be visualized in 'State timeline' components or element and parameter heatlines [ID 45043]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When, on systems using STaaS, the `GetReportTimelineDataMessage` was used to retrieve data to be visualized in *State timeline* components or element and parameter heatlines, in some cases, the data would not be visualized correctly.
+
 #### SLLogCollector: Problem when running BPA tests [ID 45053]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->

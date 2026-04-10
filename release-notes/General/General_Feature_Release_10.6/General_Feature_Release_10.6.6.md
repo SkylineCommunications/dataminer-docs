@@ -128,6 +128,12 @@ Up to now, each time SLLogCollector created a log package, it would rerun all BP
 
 ### Fixes
 
+#### STaaS: Problem when retrieving data to be visualized in 'State timeline' components or element and parameter heatlines [ID 45043]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When, on systems using STaaS, the `GetReportTimelineDataMessage` was used to retrieve data to be visualized in *State timeline* components or element and parameter heatlines, in some cases, the data would not be visualized correctly.
+
 #### Dynamic units: A unit would incorrectly be assigned to date/time parameters [ID 45047]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
