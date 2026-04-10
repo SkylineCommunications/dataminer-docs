@@ -46,4 +46,8 @@ Because of a number of enhancements, overall performance has increased when load
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem when loading a trend graph for a dynamic discrete parameter [ID 45276]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, an exception could be thrown when DataMiner Cube tried to load a trend graph for a dynamic discrete parameter.
