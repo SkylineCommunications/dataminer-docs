@@ -50,7 +50,7 @@ Make sure your script logic is aware of the following:
 - The script will be executed when nodes enter or leave maintenance mode, even if no other state changes occur.
 - One script execution can correspond with multiple node state changes at once.
 - Even if a node is marked as being in maintenance mode, the state for this node will still be reported as *Healthy*, *Outage*, or *Unknown*. It is up to the script to check the maintenance state if needed and to decide how to handle it.
-- If your script requires information about elements hosted on an agent that is unreachable, it needs to request this info from SLNet via SLNet messages (`engine.GetUserConnection().HandleMessage()`) and not via SLAutomation (~~`engine.FindElement()`~~) as the latter only has access to elements that are currently running and reachable.
+- If your script requires information about elements hosted on an Agent that is unreachable, it needs to request this info from SLNet via SLNet messages (`engine.GetUserConnection().HandleMessage()`) and not via SLAutomation (~~`engine.FindElement()`~~) as the latter only has access to elements that are currently running and reachable.
 
 We also highly recommend that you have your script check the incoming node IDs, states, and maintenance states before starting any actions.
 
@@ -90,7 +90,7 @@ namespace NodeRecovery_Global_Action_Example
 ```
 
 > [!TIP]
-> The following trigger script is available in the Catalog by way of example: [Node Recovery - Rebalance across healthy agents](https://catalog.dataminer.services/details/3de8405e-7156-4a0a-b8c5-80937de0f4ed). Whenever the global cluster state changes, this example script will move elements hosted on nodes that are in outage to healthy nodes, while trying to keep the load balanced across the cluster as much as possible. You can use this script as is or use it as a starting point for your own scripts.
+> The following trigger script is available in the Catalog by way of example: [Node Recovery - Rebalance across healthy Agents](https://catalog.dataminer.services/details/3de8405e-7156-4a0a-b8c5-80937de0f4ed). Whenever the global cluster state changes, this example script will move elements hosted on nodes that are in outage to healthy nodes, while trying to keep the load balanced across the cluster as much as possible. You can use this script as is or use it as a starting point for your own scripts.
 
 ### Pitfalls for global state changes
 
@@ -101,7 +101,7 @@ Make sure your script logic is aware of the following:
 - Nodes start out in the *Unknown* state when added to the cluster. They will switch to *Healthy* as soon as nodes start seeing them as such.
 - In network split scenarios, only the partition that contains a strict majority of the nodes (i.e., more than half of all nodes in the cluster) will have a leader that can execute this script.
 - One script execution can correspond with multiple node state changes at once in the global view.
-- If your script requires information about elements hosted on an agent that is unreachable, it needs to request this info from SLNet via SLNet messages (`engine.GetUserConnection().HandleMessage()`) and not via SLAutomation (~~`engine.FindElement()`~~) as the latter only has access to elements that are currently running and reachable.
+- If your script requires information about elements hosted on an Agent that is unreachable, it needs to request this info from SLNet via SLNet messages (`engine.GetUserConnection().HandleMessage()`) and not via SLAutomation (~~`engine.FindElement()`~~) as the latter only has access to elements that are currently running and reachable.
 
 ## Differences between local and global state changes
 
