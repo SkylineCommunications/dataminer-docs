@@ -89,7 +89,8 @@ namespace NodeRecovery_Global_Action_Example
 ```
 
 > [!TIP]
-> The following trigger script is available in the Catalog by way of example: [NodeRecovery - Global State Change](https://catalog.dataminer.services/details/3de8405e-7156-4a0a-b8c5-80937de0f4ed). Whenever the global cluster state changes, this example script will move elements hosted on nodes that are in outage to healthy nodes, while trying to keep the load balanced across the cluster as much as possible. You can use this script as is or use it as a starting point for your own scripts.
+> The following trigger script is available in the Catalog by way of example: [Node Recovery - Rebalance across healthy agents
+](https://catalog.dataminer.services/details/3de8405e-7156-4a0a-b8c5-80937de0f4ed). Whenever the global cluster state changes, this example script will move elements hosted on nodes that are in outage to healthy nodes, while trying to keep the load balanced across the cluster as much as possible. You can use this script as is or use it as a starting point for your own scripts.
 
 ### Pitfalls for global state changes
 
