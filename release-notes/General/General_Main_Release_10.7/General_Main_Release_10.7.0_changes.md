@@ -339,6 +339,15 @@ Note that the following stencil files will still be deployed:
 > [!NOTE]
 > The above-mentioned stencil files that are no longer included in DataMiner upgrade packages will not automatically be removed from existing systems.
 
+#### SLLogCollector: Only BPA tests deployed by default will be rerun each time a log package is created [ID 45228]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+Up to now, each time SLLogCollector created a log package, it would rerun all BPA tests deployed on the system. From now on, it will only rerun the BPA tests deployed by default.
+
+> [!NOTE]
+> Each time a log package is created, all BPA test results available on the system will still be included in that package. This means, that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]

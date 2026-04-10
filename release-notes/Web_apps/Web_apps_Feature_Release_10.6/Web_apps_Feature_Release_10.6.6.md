@@ -92,6 +92,14 @@ The default theme of the following basic controls has been changed to *Transpare
 
 ### Fixes
 
+#### Dashboards app: Problem when trying to open a dashboard that was not present in the cache [ID 44989]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When you tried to open a dashboard that was not present in the cache, up to now, a `This dashboard does not exist` error would appear.
+
+From now on, when you try to open a dashboard that is not present in the cache, it will be fetched from the file system instead.
+
 #### Dashboards/Low-Code Apps: Problem when themes were being migrated when the DMA was offline [ID 45020]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
