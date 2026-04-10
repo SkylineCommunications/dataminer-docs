@@ -399,7 +399,7 @@ Up to now, flatline anomaly alerts would incorrectly not be triggered for parame
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 
-When, on systems using STaaS, the `GetReportTimelineDataMessage` was used to retrieve data to be visualized in *State timeline* components or element and parameter heatlines, in some cases, the data would not be visualized correctly.
+When, on systems using STaaS, the `GetReportTimelineDataMessage` was used to retrieve data to be visualized in *State timeline* components or element and parameter heatlines, in some cases, the data that was visualized would not be correct.
 
 #### SLLogCollector: Problem when running BPA tests [ID 45053]
 

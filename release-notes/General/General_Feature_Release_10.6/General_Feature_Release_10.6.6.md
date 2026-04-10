@@ -42,6 +42,14 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### Enhanced performance when retrieving service state information [ID 44392]
+
+<!-- MR 10.5.0 [CU15] - FR 10.6.6 -->
+
+Because of a number of enhancements, performance has increased when retrieving service state information.
+
+From now on, a `GetServiceStateMessage` will no longer be forwarded to the Agent hosting the service. Instead, the service state information will be retrieved from the local SLNet cache.
+
 #### Connector synchronization enhancements [ID 44715]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
@@ -132,7 +140,7 @@ Up to now, each time SLLogCollector created a log package, it would rerun all BP
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 
-When, on systems using STaaS, the `GetReportTimelineDataMessage` was used to retrieve data to be visualized in *State timeline* components or element and parameter heatlines, in some cases, the data would not be visualized correctly.
+When, on systems using STaaS, the `GetReportTimelineDataMessage` was used to retrieve data to be visualized in *State timeline* components or element and parameter heatlines, in some cases, the data that was visualized would not be correct.
 
 #### Dynamic units: A unit would incorrectly be assigned to date/time parameters [ID 45047]
 

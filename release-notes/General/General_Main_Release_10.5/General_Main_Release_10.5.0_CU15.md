@@ -26,6 +26,14 @@ uid: General_Main_Release_10.5.0_CU15
 
 ### Enhancements
 
+#### Enhanced performance when retrieving service state information [ID 44392]
+
+<!-- MR 10.5.0 [CU15] - FR 10.6.6 -->
+
+Because of a number of enhancements, performance has increased when retrieving service state information.
+
+From now on, a `GetServiceStateMessage` will no longer be forwarded to the Agent hosting the service. Instead, the service state information will be retrieved from the local SLNet cache.
+
 #### BrokerGateway installer will now give a clear indication when .NET is missing [ID 45169]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
