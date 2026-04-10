@@ -7,6 +7,9 @@ keywords: hardware migration
 
 The way you can change the IP of a DMA depends on how your DataMiner System is set up. It is different for a standalone DMA, a DMA in a DMS, a Failover DMA in a DMS, and a DMA in a DMS using a Cassandra cluster.
 
+> [!TIP]
+> When reconnecting from Cube Client after performing the applicable change if you are attempting to connect using a hostname you will need to delete that entry from your Cube Launcher screen and re-add the hostname.  Otherwise you will get a TrustFailure error and Cube Client will not reconnect.   Connecting with the new IP will not have this issue.
+
 ## Standalone DMA
 
 For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a cluster:
