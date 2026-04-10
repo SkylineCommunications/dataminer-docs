@@ -148,3 +148,9 @@ In some cases, Surveyor tree items would not be indented correctly.
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 Up to now, when a *Time range* component was made smaller, in some cases, the separators would get ellipsed, and the picker button would disappear.
+
+#### Dashboards/Low-Code Apps - Alarm table component: Messages appearing on top of the component would take up too much space [ID 45244]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, messages appearing on top of the *Alarm table* component would take up too much space.
