@@ -51,3 +51,9 @@ Because of a number of enhancements, overall performance has increased when load
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 Up to now, an exception could be thrown when DataMiner Cube tried to load a trend graph for a dynamic discrete parameter.
+
+#### Redundancy groups: Problem when deleting elements used for switching logic or switching detection from a redundancy group configuration [ID 45278]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When elements used for switching logic or switching detection were deleted from a redundancy group configuration, up to now, not all references to those elements would be removed correctly.
