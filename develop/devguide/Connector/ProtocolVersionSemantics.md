@@ -40,7 +40,7 @@ It is possible that different version ranges are maintained in parallel but we s
 
 ### System version
 
-- A new system version number is used when there is a new or increased system dependency, and it is not possible to keep the connector compatible with previous versions. For example, a change made to the connector requires a new data-source firmware version or a new DataMiner version to work properly.
+- A new system version number is used when there is a new or increased system dependency, and it is not possible to keep the connector compatible with previous versions. For example, a change made to the connector requires a new data source firmware version or a new DataMiner version to work properly.
 
 - Different data source ranges are maintained in parallel unless a range is explicitly marked as obsolete.
 - Range: [0 ... n]
@@ -48,7 +48,7 @@ It is possible that different version ranges are maintained in parallel but we s
 
   - 1.0.0.1 = Initial version supporting device firmware 10.0.x - 10.1.x and requiring DataMiner v10.4.
   - 1.1.0.1 = New connector range that requires DataMiner 10.5.
-  - 1.2.0.1 = New connector range that requires data-source firmware range 10.2.x.
+  - 1.2.0.1 = New connector range that requires data source firmware range 10.2.x.
   - Typically, we will always try to only maintain the last range. Exceptions are made when, for example, a hardware version is still commonly used (and supported by the vendor) and only supports up to firmware version 10.1.x not allowing us to migrate corresponding elements to the new 1.1.0.x range.
 
 ### Major change
