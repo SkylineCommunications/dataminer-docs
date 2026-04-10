@@ -116,3 +116,9 @@ Additionally, state icon events, alarm focus events and RAD parameter aggregatio
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 Up to now, during NATS migrations or NATS-related BPA test runs, establishing connections to NATS servers of other DataMiner Agents in the DMS would be slow due to reverse DNS lookups.
+
+#### SLAnalytics: Problem due to incorrect internal state in Automatic Incident Tracking [ID 45220]
+
+<!-- MR 10.6.0 [CU3] - FR 10.6.6 -->
+
+In some cases, SLAnalytics could stop working due to an incorrect internal state in Automatic Incident Tracking.
