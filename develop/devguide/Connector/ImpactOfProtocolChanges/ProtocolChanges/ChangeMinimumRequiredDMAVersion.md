@@ -4,7 +4,7 @@ uid: ChangeMinimumRequiredDMAVersion
 
 # Change minimum required DataMiner version
 
-Changing the minimum required DataMiner version for a connector to a higher version is considered a major change requiring a new [System Version](xref:Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion).
+Changing the minimum required DataMiner version for a connector to a higher version is considered a dependency change requiring a new [System Version](xref:Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion).
 
 For generic/public connectors, the minimum required DataMiner version should go in the direction of the current minimum version supported by Skyline (see [Software support lifecycles](xref:Software_support_life_cycles)).
 
