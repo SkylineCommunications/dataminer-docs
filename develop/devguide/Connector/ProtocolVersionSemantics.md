@@ -47,7 +47,7 @@ It is possible that different version ranges are maintained in parallel but we s
 - Examples:
 
   - 1.0.0.1 = Initial version supporting device firmware 10.0.x - 10.1.x and requiring DataMiner v10.4.
-  - 1.1.0.1 = New connector ragne that requires DataMiner 10.5.
+  - 1.1.0.1 = New connector range that requires DataMiner 10.5.
   - 1.2.0.1 = New connector range that requires data-source firmware range 10.2.x.
   - Typically, we will always try to only maintain the last range. Exceptions are made when, for example, a hardware version is still commonly used (and supported by the vendor) and only supports up to firmware version 10.1.x not allowing us to migrate corresponding elements to the new 1.1.0.x range.
 
