@@ -28,7 +28,7 @@ uid: General_Main_Release_10.5.0_CU15
 
 #### Enhanced performance when retrieving service state information [ID 44392]
 
-<!-- MR 10.5.0 [CU15] - FR 10.6.6 -->
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 Because of a number of enhancements, performance has increased when retrieving service state information.
 
