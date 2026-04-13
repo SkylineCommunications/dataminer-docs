@@ -42,7 +42,9 @@ Both for "absolute" and "relative" alarm thresholds, the "normal" value has to b
      > [!NOTE]
      >
      > - You can only use a smart baseline if trending has been enabled for the parameter. If it is not, you will receive a warning message, and a warning icon will be shown in the Baseline editor.
-     > - Smart baselines are incompatible with [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter). If the [`historySet` attribute](xref:Protocol.Params.Param-historySet) is set to "true" for a parameter, enabling smart baselines will have no effect. From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42326-->, you will receive a warning message when attempting to enable smart baselines for a parameter with history sets enabled.
+     > - Smart baselines are incompatible with [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter). Smart baselines operate in real time. As a result, values from history sets, although linked to a point in the past, are always compared against the baseline of the current moment (“now”). This can lead to unexpected history alarms and may also affect trend lines.
+The root cause is that state changes are always evaluated live, while value changes may originate from the past. Consequently, historical values can appear to be validated in the present.
+In use cases where history sets are used for back‑polling and alarms are not required during that process, this limitation can be worked around by ensuring that monitoring is inactive while back‑polling is in progress. This can be achieved through conditional monitoring or by using custom alarm templates. From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42326-->, you will receive a warning message when attempting to enable smart baselines for a parameter with history sets enabled.
 
 1. If you chose a smart baseline, select one of the following options:
 
