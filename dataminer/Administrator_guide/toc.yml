@@ -220,6 +220,8 @@ items:
             topicUid: Switching_to_Failover_with_shared_hostname
           - name: Advanced Failover options
             topicUid: Advanced_Failover_options
+          - name: DataMiner Failover on Amazon Web Services
+            topicUid: Failover_AWS
       - name: Synchronizing the DMA databases
         topicUid: Synchronizing_the_DMA_databases
       - name: Ending a Failover configuration
