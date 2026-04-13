@@ -20,7 +20,7 @@ These users are entirely managed by DataMiner.
 This type of user will mostly be used in situations where the DMAs have not been added to a domain.
 
 ![Local users](~/dataminer/images/Security_local_users.png)<br>
-*Local users in DataMiner 10.3.6*
+*Local users in DataMiner 10.6.5*
 
 ## Manually added domain users
 
@@ -29,7 +29,7 @@ These are domain users of which the username and the password are managed by the
 This type of user will mostly be used in situations where the DMAs have been added to a domain on which the DataMiner administrators do not have permission to change domain group memberships or update domain user properties (phone numbers, email addresses, etc.).
 
 ![Manually added domain users](~/dataminer/images/Security_manually_added_domain_users.png)<br>
-*Manually added domain users in DataMiner 10.3.6*
+*Manually added domain users in DataMiner 10.6.5*
 
 ## Automatically added domain users
 

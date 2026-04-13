@@ -108,7 +108,7 @@ The severity of a correlated alarm depends on the correlation rule configuration
 Correlated alarms are represented in the Alarm Console with a special icon.
 
 ![Correlated alarm](~/dataminer/images/correlated_alarm.png)<br>
-*Correlated alarm in the Alarm Console in DataMiner 10.3.6*
+*Correlated alarm in the Alarm Console in DataMiner 10.6.5*
 
 ### Alarm groups
 

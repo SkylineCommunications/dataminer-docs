@@ -8,7 +8,7 @@ Trend information associated with groups of parameters can be displayed in so-ca
 
 Trend groups are created and managed with the side and bottom panes in the Trending window:
 
-![Trend groups](~/dataminer/images/Trend_Groups.png)<br>*Trending in DataMiner 10.4.5*
+![Trend groups](~/dataminer/images/Trend_Groups.png)<br>*Trending in DataMiner 10.6.5*
 
 - In the **trend groups pane** on the left (1), the available trend groups can be viewed, and trend groups can be added or deleted. See [Working with the trend groups pane](xref:Working_with_the_trend_groups_pane).
 
