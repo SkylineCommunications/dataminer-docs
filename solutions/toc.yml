@@ -6,7 +6,7 @@ items:
     topicUid: SOL_About
   - name: Standard Solutions
     items:
-    - name: dataminer.MediaOps
+    - name: MediaOps
       topicUid: MediaOps
       items:
       - name: Plan
@@ -119,7 +119,7 @@ items:
               topicUid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents
             - name: Creating orchestration scripts
               topicUid: Tutorial_MediaOpsLive_CreateOrchestrationScripts
-    - name: dataminer.InfraOps
+    - name: InfraOps
       topicUid: InfraOps
       items:
       - name: Installing InfraOps
@@ -175,10 +175,10 @@ items:
           topicUid: Jobs_Page
       - name: Web File Manager
         topicUid: Web_File_Manager
-    - name: DataMiner PTP
+    - name: PTP
       topicUid: SolPTP
       items:
-      - name: Installing the DataMiner PTP app
+      - name: Installing the PTP app
         topicUid: Installing_the_DataMiner_PTP_app
       - name: Types of PTP devices
         topicUid: Types_of_PTP_devices
@@ -186,10 +186,10 @@ items:
         topicUid: Overview_of_the_PTP_LCA_UI
       - name: PTP app in Cube
         topicUid: Overview_of_the_PTP_app_in_Cube_UI
-    - name: DataMiner EPM
+    - name: EPM
       topicUid: SolEPM
       items:
-      - name: DataMiner EPM D-DOCSIS
+      - name: EPM D-DOCSIS
         topicUid: EPM_D-DOCSIS
         items:
         - name: EPM D-DOCSIS architecture
@@ -243,7 +243,7 @@ items:
           - name: Manufacturer
             topicUid: D-DOCSIS_parameters_manufacturer
       #xPON TOC
-      - name: DataMiner EPM xPON
+      - name: EPM xPON
         topicUid: EPM_xPON
         items:
         - name: EPM xPON architecture
@@ -265,7 +265,7 @@ items:
           - name: EPM xPON ONT parameters
             topicUid: xPON_ONT
       #xPON TOC END
-      - name: DataMiner EPM Integrated DOCSIS
+      - name: EPM Integrated DOCSIS
         topicUid: EPM_I-DOCSIS
         items:
         - name: EPM Integrated DOCSIS architecture
@@ -316,7 +316,7 @@ items:
             topicUid: I-DOCSIS_parameters_thresholds
           - name: PTP
             topicUid: I-DOCSIS_parameters_ptp
-      - name: DataMiner EPM VSAT
+      - name: EPM VSAT
         topicUid: EPM_VSAT
         items:
         - name: EPM VSAT architecture
@@ -331,35 +331,15 @@ items:
           topicUid: VSAT_metrics
         - name: Available parameters in VSAT
           topicUid: VSAT_parameters
-      - name: DataMiner EPM Availability
+      - name: EPM Availability
         topicUid: Availability_Overview
         items:
-        - name: Deploying the DataMiner EPM Availability Solution
+        - name: Deploying the EPM Availability Solution
           topicUid: Availability_deployment
         - name: Using the EPM Availability Solution
           topicUid: Availability_Using
         - name: Available parameters in Availability
           topicUid: Availability_parameters
-    - name: META Whatsapp Messaging Solution
-      topicUid: META_WhatsApp_Messaging
-      items:
-      - name: Installing the META WhatsApp Messaging Solution
-        topicUid: META_WhatsApp_Messaging_Installation
-      - name: Using the META WhatsApp Messaging Solution
-        topicUid: Using_META_WhatsApp_Messaging
-    - name: DataMiner Ping Monitoring
-      topicUid: PingMonitoring
-      items:
-      - name: Installing the Ping Monitoring tool
-        topicUid: Installing_Ping_Monitoring
-      - name: Accessing the Ping Monitoring tool
-        topicUid: Accessing_Ping_Monitoring
-      - name: Ping Monitoring UI overview
-        topicUid: Ping_Monitoring_UI
-      - name: Managing groups and destinations
-        topicUid: Ping_Monitoring_managing_groups_destinations
-      - name: Getting started tutorial
-        topicUid: Tutorial_Apps_Ping_Monitoring_App
     - name: IP Network Explorer
       topicUid: IpNetworkExplorer
       items:
@@ -516,3 +496,25 @@ items:
           topicUid: Monitoring_Processed_Traps
       - name: Getting started tutorial
         topicUid: Smart_Trap_Processor_Tutorial
+    - name: META Whatsapp Messaging Solution
+      topicUid: META_WhatsApp_Messaging
+      items:
+      - name: Installing the META WhatsApp Messaging Solution
+        topicUid: META_WhatsApp_Messaging_Installation
+      - name: Using the META WhatsApp Messaging Solution
+        topicUid: Using_META_WhatsApp_Messaging
+  - name: Learning & Sample
+    items:
+    - name: Ping Monitoring
+      topicUid: PingMonitoring
+      items:
+      - name: Installing the Ping Monitoring tool
+        topicUid: Installing_Ping_Monitoring
+      - name: Accessing the Ping Monitoring tool
+        topicUid: Accessing_Ping_Monitoring
+      - name: Ping Monitoring UI overview
+        topicUid: Ping_Monitoring_UI
+      - name: Managing groups and destinations
+        topicUid: Ping_Monitoring_managing_groups_destinations
+      - name: Getting started tutorial
+        topicUid: Tutorial_Apps_Ping_Monitoring_App
