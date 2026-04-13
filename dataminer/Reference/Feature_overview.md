@@ -85,6 +85,7 @@ Below you can find an overview of the main features that have been added to Data
 | DataMiner processes: [Separate SLProtocol and SLScripting instances for specific protocol](xref:Configuration_of_DataMiner_processes#configuring-separate-slprotocol-and-slscripting-instances-for-a-specific-protocol) | DataMiner 10.2.5/10.3.0 |
 | DataMiner processes: [SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process) |  DataMiner 10.3.9/10.4.0<br>DataMiner 10.1.8 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#slprotocolasx64) |
 | [DMS connection to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) | DataMiner 10.1.12/10.2.0 |
+| DataMiner systems: [Generating BrokerGateway client secrets](xref:Generating_BrokerGateway_client_secrets) | DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 <!-- [ID 44757] [ID 44778] --> |
 | [DOM](xref:DOM) (DataMiner Object Models) | DataMiner 10.1.2/10.2.0 <!-- [ID 28460] --> |
 | DOM: [Actions](xref:DOM_actions) | DataMiner 10.1.11/10.2.0 <!-- [ID 30923] --> |
 | DOM: [Attachments](xref:DomHelper_class#attachments) | DataMiner 10.1.3/10.2.0 <!-- [ID 28739] --> |
