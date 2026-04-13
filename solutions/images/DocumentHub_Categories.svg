@@ -1,0 +1,17 @@
+<svg
+  width="24" height="24" viewBox="0 0 24 24"
+  fill="none" xmlns="http://www.w3.org/2000/svg"
+  role="img" aria-label="File categories icon">
+  <path
+    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+    stroke="#111827" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"
+    fill="none" />
+  <path
+    d="M14 2v6h6"
+    stroke="#111827" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"
+    fill="none" />
+  <rect x="7.2" y="8.5" width="3" height="3" rx="0.4" fill="#111827" />
+  <rect x="12.8" y="8.5" width="3" height="3" rx="0.4" fill="#111827" />
+  <rect x="7.2" y="13.2" width="3" height="3" rx="0.4" fill="#111827" />
+  <rect x="12.8" y="13.2" width="3" height="3" rx="0.4" fill="#111827" />
+</svg>
