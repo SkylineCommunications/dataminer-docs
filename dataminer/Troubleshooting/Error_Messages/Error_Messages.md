@@ -6,8 +6,6 @@ uid: ErrorMessages
 
 This section provides more information on the following error messages:
 
-- [An error occurred in the application you were using](xref:An_error_occurred_in_the_application_you_were_using)
-
 - [Could not load type Maps.DataMinerMap](xref:Could_not_load_type_Maps_DataMinerMap)
 
 - [Could not load Visio file](xref:Could_not_load_Visio_file)
@@ -61,5 +59,3 @@ This section provides more information on the following error messages:
 - [Thread problem in x: y](xref:Thread_problem_in_x)
 
 - [Timed out while flushing events](xref:Timed_out_while_flushing_events)
-
-- [Unknown Error](xref:Unknown_Error)

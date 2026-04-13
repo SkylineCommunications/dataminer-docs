@@ -80,7 +80,7 @@ IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOper
 
 This method should return the query node that represents the result of applying the next operator to the current ad hoc data source node. Similar to the custom operator implementation, the ad hoc data source implementation can decide to do the following:
 
-- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this lifecycle method is not implemented).
+- Append the `nextOperator` to the `currentNode` (i.e., the default behavior when this lifecycle method is not implemented).
 - Remove/ignore the `nextOperator`, usually taking responsibility of the operation internally.
 - Modify/add operators.
 
@@ -155,7 +155,7 @@ For example, if a view is renamed or moved in the Surveyor, a zip file will be c
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
 
-In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:Disabling_automatic_NATS_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:Disabling_automatic_NATS_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e., ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
 
 #### Factory reset tool: New ResetBrokerGatewayNATS action [ID 40759]
 
@@ -216,7 +216,7 @@ From now on, the trace data will indicate that a `DomInstanceError` was thrown w
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to e.g. aggregation or merge actions.
+When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to, for example, aggregation or merge actions.
 
 #### STaaS: An alarm will now be generated when a data type is being throttled [ID 42387]
 
@@ -319,11 +319,11 @@ Also, a status label will now indicate whether debug logging is enabled or disab
 > - The above-mentioned status label will show "Enabled" when a level-6 override is present. If all log files have level 6 by default, the status label will show "Disabled" until you add an override.
 > - Enabling debug logging may significantly increase the amount of logging that is written to disk.
 
-#### New log viewer web page [ID 42533]
+#### New log viewer webpage [ID 42533]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-Up to now, client applications like DataMiner Cube used the *ViewLog.asp* web page to display server-side log files. This web page has now been replaced by the *ViewLog.aspx* web page.
+Up to now, client applications like DataMiner Cube used the *ViewLog.asp* webpage to display server-side log files. This webpage has now been replaced by the *ViewLog.aspx* webpage.
 
 This new log viewer page has improved compatibility with Failover setups and better error handling for HTTPS certificates.
 

@@ -102,7 +102,7 @@ To use JSON, you will need to include the Newtonsoft.Json NuGet package.
 > [!NOTE]
 > You could also use the built-in parameter conversion instead of doing the JSON deserialization within this script. This could be a simpler approach if you are less familiar with it. To find out more, see [User input data](xref:UD_APIs_Define_New_API#user-input-data).
 
-To convert (i.e. deserialize) the input JSON to data that can be used in the script, you will have to define a class that contains all the input data that is expected. In this case, the input would look like this:
+To convert (i.e., deserialize) the input JSON to data that can be used in the script, you will have to define a class that contains all the input data that is expected. In this case, the input would look like this:
 
 ```json
 {
@@ -173,7 +173,7 @@ To access the API, you will need an [API token](xref:UD_APIs_Objects_ApiToken). 
 
    ![Create API token](~/dataminer/images/UDAPIS_Tutorials_Elements_Create_API_Token_Name.png)
 
-1. Copy the generated secret to a safe location (e.g. a password manager).
+1. Copy the generated secret to a safe location (e.g., a password manager).
 
    ![Create API secret](~/dataminer/images/UDAPIS_Tutorials_Elements_Create_API_Token_Secret.png)
 
@@ -245,4 +245,4 @@ The API is now ready to be tested using an API testing app like Postman. If you 
 
    ![Postman UI response](~/dataminer/images/UDAPIS_Tutorials_Elements_Postman_Response.jpg)
 
-This is only a simple example of what can be done using the input and output functionality of a user-defined API. Numerous extensions could be made. For example, a list of alarm levels could be provided in the input, or a flag (i.e. bool property) could be added to the response that indicates whether there are more elements than the provided limit.
+This is only a simple example of what can be done using the input and output functionality of a user-defined API. Numerous extensions could be made. For example, a list of alarm levels could be provided in the input, or a flag (i.e., bool property) could be added to the response that indicates whether there are more elements than the provided limit.

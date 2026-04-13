@@ -27,7 +27,7 @@ To do so:
    "start /wait" is used to await the return code of the command, which can be checked using the *%errorlevel%* environment variable.
 
    > [!NOTE]
-   > It is still possible to open the SLTaskbarUtility user interface by either double-clicking a file with a DataMiner extension (e.g. dmupgrade, dmbackup, etc.) or entering the path to such a file in a *Command Prompt* window.
+   > It is still possible to open the SLTaskbarUtility user interface by either double-clicking a file with a DataMiner extension (e.g., dmupgrade, dmbackup, etc.) or entering the path to such a file in a *Command Prompt* window.
 
 ## List of possible commands
 
@@ -40,7 +40,7 @@ To do so:
 | -start | Start the local DataMiner Agent. |
 | -restart | Restart the local DataMiner Agent. |
 | -upgrade | Upgrade the DataMiner Agent(s).<br> Arguments:<br> -  File path to an *.dmupgrade* file or (from DataMiner 10.1.0 [CU19]/10.2.0 [CU7]/10.2.10 onwards) a *.dmapp* file. This argument is mandatory.<br> -  File path to an *UpgradeInfo.xml* file. This argument is optional and only used for .dmupgrade files. If you do not specify an *UpgradeInfo.xml* file, the .dmupgrade will only be installed on the local DataMiner Agent, with the default upgrade options.<br> For more information about *UpgradeInfo.xml* files, see [UpgradeInfo.xml](#upgradeinfoxml). |
-| -help | List information about the above-mentioned commands.<br> -  If you want information about all commands, pass the *-help* command without any argument.<br> -  If you want information about one specific command, pass the *-help* command followed by that specific command (e.g. *-help -help*). |
+| -help | List information about the above-mentioned commands.<br> -  If you want information about all commands, pass the *-help* command without any argument.<br> -  If you want information about one specific command, pass the *-help* command followed by that specific command (e.g., *-help -help*). |
 
 ## UpgradeInfo.xml
 

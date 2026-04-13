@@ -68,7 +68,7 @@ To save a compiled protocol
 1. Select *File \> Save Compiled Protocol As...*
 1. In the *Save As* window, select a folder, enter a file name, set *Save as type* to either "Protocol package (\*.dmprotocol)" or "Protocol file (\*.xml)", and click *Save*.
 
-If you choose to save a protocol as a package, the package will contain the protocol as well as all required assemblies (e.g. DLL files of NuGet packages that are used in the connector).
+If you choose to save a protocol as a package, the package will contain the protocol as well as all required assemblies (e.g., DLL files of NuGet packages that are used in the connector).
 
 ## Structure of a connector solution
 
@@ -79,9 +79,9 @@ A connector Visual Studio solution is organized into various folders, each servi
 - **Documentation**: This folder allows you to add documentation related to the solution.
 
 > [!NOTE]
-> An information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or automation script solution. This information bar provides the option to convert existing solutions that make use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
+> An information bar will appear when a Class Library project (i.e., a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or automation script solution. This information bar provides the option to convert existing solutions that make use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
 
-- **QActions**: This folder contains a C# Class Library Visual Studio project for each QAction defined in the protocol XML file. These projects are named `QAction_<id>`, where \<id> represents the ID of the QAction as defined in the protocol XML file (e.g. QAction_2).
+- **QActions**: This folder contains a C# Class Library Visual Studio project for each QAction defined in the protocol XML file. These projects are named `QAction_<id>`, where \<id> represents the ID of the QAction as defined in the protocol XML file (e.g., QAction_2).
 
 - **Solution items**: This folder contains the protocol XML. The main difference between a solution protocol XML file and a regular protocol XML file is that the former does not contain the QAction C# code (as this is now in the QAction projects in the Visual Studio solution).
 

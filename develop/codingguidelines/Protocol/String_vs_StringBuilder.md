@@ -4,7 +4,7 @@ uid: String_vs_StringBuilder
 
 # String vs. StringBuilder
 
-String objects are immutable (i.e. they cannot be modified after they have been created). This means that all String methods and C# operators, while appearing to modify a string, actually return the result in a new string object.
+String objects are immutable (i.e., they cannot be modified after they have been created). This means that all String methods and C# operators, while appearing to modify a string, actually return the result in a new string object.
 
 Therefore, when a String object will be modified frequently, the use of a StringBuilder instance should be considered. The MSDN documentation for the StringBuilder class states the following:
 
@@ -23,11 +23,11 @@ Consider using the String class under the following conditions:
 
 Consider using the StringBuilder class under the following conditions:
 
-- When the application is expected to make an unknown number of changes to a string at design time (e.g. when a loop is used to concatenate a random number of strings that contain user input).
+- When the application is expected to make an unknown number of changes to a string at design time (e.g., when a loop is used to concatenate a random number of strings that contain user input).
 
 - When the application is expected to make a significant number of changes to a string.
 
 Also note that string literals can be split in order to improve readability. The compiler will concatenate the parts into a single string, so there is no runtime performance cost.
 
 > [!NOTE]
-> Often, code is needed in a protocol to generate a string that represents a list of items that are separated by a character or string (e.g. when using a parameter that uses the dependencyId attribute). An alternative implementation is to collect all items in a list (List\<T>) and then use the String.Join method (e.g. *string sDevices = string.Join(";", lsDevices);* ).
+> Often, code is needed in a protocol to generate a string that represents a list of items that are separated by a character or string (e.g., when using a parameter that uses the dependencyId attribute). An alternative implementation is to collect all items in a list (List\<T>) and then use the String.Join method (e.g., *string sDevices = string.Join(";", lsDevices);* ).

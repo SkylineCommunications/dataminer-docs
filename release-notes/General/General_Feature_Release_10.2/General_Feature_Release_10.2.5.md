@@ -16,7 +16,7 @@ uid: General_Feature_Release_10.2.5
 
 #### DataMiner Object Model: New event message for DomInstance status transitions \[ID 32418\]
 
-With the introduction of the DomInstanceStatusChangedEventMessage, it is now possible to subscribe to DomInstance status transitions. This message contains the DomInstanceId, the FromState, the ToState and the Username (i.e. the name of the user who changed the status).
+With the introduction of the DomInstanceStatusChangedEventMessage, it is now possible to subscribe to DomInstance status transitions. This message contains the DomInstanceId, the FromState, the ToState and the Username (i.e., the name of the user who changed the status).
 
 IModuleEvents are now filtered by IModuleEventSubscriptionFilter first, before any other filter is applied.
 
@@ -87,8 +87,8 @@ The new \<ProcessAutomation> element allows you to pass parameter values to the 
 
 See the example below. For every value you want to pass, you have to add a \<ProcessAutomationOption> element with the following attributes:
 
-- name (i.e. the name assigned to the value)
-- pid (i.e. the ID of the parameter containing the value to be passed)
+- name (i.e., the name assigned to the value)
+- pid (i.e., the ID of the parameter containing the value to be passed)
 
 Example:
 
@@ -109,7 +109,7 @@ Example:
 
 #### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' \[ID 32660\]
 
-When, in DataMiner Cube, you right-click a visual overview and select “Edit in Visio”, an advanced edit panel will appear. When no shape is selected, you can now click an ellipsis button (“...”) in the top-right corner of the panel. This will open a menu with the following options.
+When, in DataMiner Cube, you right-click a visual overview and select “Edit in Visio”, an advanced edit panel will appear. When no shape is selected, you can now click an ellipsis button (“...”) in the upper-right corner of the panel. This will open a menu with the following options.
 
 - Add theming: If you click this option, the following theme options will be added to the page-level “Options” data field:
 
@@ -128,7 +128,7 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window will appear, asking you
 
-  - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
+  - to create a new incident (i.e., a new alarm group) and add the alarm to it, or
   - to add the alarm to an existing alarm group.
 
 - When you right-click an alarm that is already part of an alarm group, you will be able to click the “Remove from incident” option. If you do so, the alarm will be removed from the alarm group of which it was a part.
@@ -196,7 +196,7 @@ The token counters will be updated every 10 seconds.
 
 The DataMiner application framework allows you to create custom low-code applications that interact with data from a DataMiner System or an external source.
 
-These applications can be created on the root web page of a DataMiner System and can be organized into sections. To place an application in one or more specific sections, open the App.info.json file in the correct application folder (C:\\Skyline DataMiner\\applications\\APP_ID) and add the section names to the Sections array.
+These applications can be created on the root webpage of a DataMiner System and can be organized into sections. To place an application in one or more specific sections, open the App.info.json file in the correct application folder (C:\\Skyline DataMiner\\applications\\APP_ID) and add the section names to the Sections array.
 
 ##### Pages and panels
 
@@ -217,23 +217,23 @@ At present, the following actions can be configured:
 
 | Action                   | Description                                                                                                                                            |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Launch a script          | Launch an automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g. the Query Row feed). |
+| Launch a script          | Launch an automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g., the Query Row feed). |
 | Navigate to a URL        | Navigate to a specific URL (in a new tab).                                                                                                             |
 | Open a page              | Open a (hidden) page in the same application.                                                                                                          |
 | Open a panel             | Open a panel on the current page. Panels can appear on the left side of a page, on the right side of the page or as a popup.                       |
 | Close a panel            | Close a panel that was open on the current page.                                                                                                       |
 | Open an app              | Navigate to another application.                                                                                                                       |
-| Execute component action | Execute a component action. E.g. select an item in a table, create a new instance, etc.                                                            |
+| Execute component action | Execute a component action. For example, select an item in a table, create a new instance, etc.                                                            |
 
-By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e. only when the preceding action was executed successfully.
+By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e., only when the preceding action was executed successfully.
 
-Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to e.g. a header bar button.
+Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to, for example, a header bar button.
 
 ##### Versioning
 
 The application framework includes a versioning system that allows different versions of the same application to exist simultaneously. These different versions can be accessed via the versions panel of the application, which also allows the versions to be edited.
 
-When you create a new application, a first draft version of that application is created. That version can then be published, i.e. made accessible to end users. Each time the published version of an application is edited, a new draft version will be created. Draft versions are meant to be used as prototypes for testing purposes.
+When you create a new application, a first draft version of that application is created. That version can then be published, i.e., made accessible to end users. Each time the published version of an application is edited, a new draft version will be created. Draft versions are meant to be used as prototypes for testing purposes.
 
 Per application, there can be up to 15 versions: 14 draft versions and one published version. When a 16th version is created, the oldest draft version will automatically be deleted. The published version will never be deleted. As there can be only one published version, whenever you publish a version, the previously published version will automatically be demoted to draft version.
 
@@ -369,7 +369,7 @@ The loading indicator when GQI data are loaded for a bar or pie chart component 
 
 #### Dashboards app - GQI: Enhanced visualization of queries \[ID 32823\]
 
-A number of enhancements have been made with regard to the visualization of GQI queries. For example, raw values (e.g. column IDs, GUIDs, etc.) will be translated to display values when possible.
+A number of enhancements have been made with regard to the visualization of GQI queries. For example, raw values (e.g., column IDs, GUIDs, etc.) will be translated to display values when possible.
 
 #### Cassandra Cluster Migrator tool: Increased write timeout \[ID 32829\]
 
@@ -379,8 +379,8 @@ When it is migrating data, basically, the Cassandra Cluster Migrator tool reads 
 
 From now on, when you create, update or import a GQI query, a unique query name will be mandatory. Up to now, query names were optional.
 
-- When you create a new query, the system will suggest “New query” as default name. If that name already exists, then a counter will be added (e.g. “New query (1)”, “New query (2)”, etc.
-- When you import a query that has no name, the system will suggest “Imported query” as default name. If that name already exists, then a counter will be added (e.g. “Imported query (1)”, “Imported query (2)”, etc.
+- When you create a new query, the system will suggest “New query” as default name. If that name already exists, then a counter will be added (e.g., “New query (1)”, “New query (2)”, etc.
+- When you import a query that has no name, the system will suggest “Imported query” as default name. If that name already exists, then a counter will be added (e.g., “Imported query (1)”, “Imported query (2)”, etc.
 
 #### DataMiner upgrade packages: Obsolete upgrade/downgrade actions removed \[ID 32861\]
 
@@ -459,7 +459,7 @@ When you opened the Resources app, in some cases, no resources or resource pools
 
 Up to now, the GUIDs of the following types of DOM reference fields would be displayed incorrectly:
 
-- Reservations (i.e. bookings)
+- Reservations (i.e., bookings)
 - Service definitions
 - DOM instances
 - Resources
@@ -476,7 +476,7 @@ When you sorted a table component populated by means of a GQI query, in some cas
 
 #### Processes would not get registered correctly when a DataMiner upgrade included a reboot \[ID 32818\]
 
-When a DataMiner upgrade included a reboot (either explicitly requested, or e.g. after installing Microsoft .NET 4.8), in some cases, services would not get registered correctly, especially when the new DataMiner version included services that did not previously exist.
+When a DataMiner upgrade included a reboot (either explicitly requested, or e.g., after installing Microsoft .NET 4.8), in some cases, services would not get registered correctly, especially when the new DataMiner version included services that did not previously exist.
 
 #### Dashboards app: Problem when sharing a dashboard with a node edge component \[ID 32822\]
 
@@ -535,7 +535,7 @@ SLNet tried to load DataMinerInstallerCommunication.XmlSerializers
 When you exported GQI data from a table component to a CSV file, up to now, only the currently loaded page would get exported. From now on, all data in the table will be exported.
 
 > [!NOTE]
-> While the export operation is progress, an “exporting to CSV” notification will be shown in the bottom-right corner of the screen.
+> While the export operation is progress, an “exporting to CSV” notification will be shown in the lower-right corner of the screen.
 
 #### Memory leak in SLElement \[ID 32885\]
 

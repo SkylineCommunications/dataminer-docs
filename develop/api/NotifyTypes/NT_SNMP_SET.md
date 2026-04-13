@@ -120,7 +120,7 @@ object[] result = (object[])protocol.NotifyProtocol(292/*NT_SNMP_SET*/, elementI
 
 ## Return Value
 
-- (object[]): Array containing strings that indicate whether the SNMP set succeeded. An empty string means the set succeeded; the string "TIMEOUT" indicates that the set went into timeout. The size of the object array equals the number of SNMP sets that were issued (i.e. the size of the oidInfo array).
+- (object[]): Array containing strings that indicate whether the SNMP set succeeded. An empty string means the set succeeded; the string "TIMEOUT" indicates that the set went into timeout. The size of the object array equals the number of SNMP sets that were issued (i.e., the size of the oidInfo array).
 
 ## Remarks
 

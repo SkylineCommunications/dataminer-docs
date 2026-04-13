@@ -1,5 +1,6 @@
 ---
 uid: Configuring_notifications_in_System_Center
+keywords: Alerts
 ---
 
 # Configuring notifications in System Center
@@ -25,6 +26,6 @@ To configure notifications in System Center:
 
 1. To combine several filters, repeat step 4 until all the necessary filters have been added.
 
-1. In the *Delivery types* column, select one or more notification types: *Alerter*, *Email* or *SMS* (i.e. text message).
+1. In the *Delivery types* column, select one or more notification types: *Alerter*, *Email* or *SMS* (i.e., text message).
 
 1. Click the *Apply* button in the lower-right corner.

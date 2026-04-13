@@ -12,7 +12,7 @@ The following examples illustrate how protocol components can be combined in ord
 
 ## Periodically retrieving a MIB variable
 
-In order to periodically retrieve a MIB variable, a timer needs to be defined and set to the desired interval (e.g. 10s). Then a group is defined of type "poll", containing a parameter to be polled. The parameter definition includes the OID of the variable that must be retrieved via SNMP.
+In order to periodically retrieve a MIB variable, a timer needs to be defined and set to the desired interval (e.g., 10s). Then a group is defined of type "poll", containing a parameter to be polled. The parameter definition includes the OID of the variable that must be retrieved via SNMP.
 
 ![Periodically retrieving a MIB variable](~/develop/images/Periodically_Inspecting_a_MIB_Variable.jpg)
 

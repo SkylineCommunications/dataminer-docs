@@ -7,7 +7,7 @@ uid: GetViewsForParentCached
 Use this method to retrieve the views in a particular parent view added or changed since a particular point in time.
 
 > [!NOTE]
-> Using this method, you can e.g. request views in batches in order to minimize loading time.
+> Using this method, you can e.g., request views in batches in order to minimize loading time.
 
 ## Input
 

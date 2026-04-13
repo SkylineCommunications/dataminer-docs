@@ -33,11 +33,11 @@ In the Booking Wizard, the candidate resources for a node in the service definit
 
   For example, a steerable antenna can have a "Satellite" time-dependent capability indicating the satellite it is receiving. When an antenna is provisioned with this time-dependent capability, and it is booked in the future to receive a specific satellite, it will only be possible to book that same antenna for an overlapping booking when that overlapping booking uses it to receive the same satellite.
 
-- **Capability of type discrete**: The resource is associated with a list of items, i.e. the discrete values of the capability. A resource is considered a valid candidate resource when the capability value defined in the profile instance is one of the selected values of this capability for this resource.
+- **Capability of type discrete**: The resource is associated with a list of items, i.e., the discrete values of the capability. A resource is considered a valid candidate resource when the capability value defined in the profile instance is one of the selected values of this capability for this resource.
 
 - **Capability of type number**: The resource is associated with a numeric range. A resource is considered a valid candidate if the capability value defined in the profile instance is within the range configured for this capability for this resource.
 
-- **Capacity of type number**: The resource is associated with a specific quantity, indicated by a number. Each booking will consume a part of that quantity defined in the selected profile instance (e.g. bit rate). The resource will be a valid candidate resource if there is enough capacity left for the entire booking duration when all other overlapping bookings making use of the resource are taken into account.
+- **Capacity of type number**: The resource is associated with a specific quantity, indicated by a number. Each booking will consume a part of that quantity defined in the selected profile instance (e.g., bit rate). The resource will be a valid candidate resource if there is enough capacity left for the entire booking duration when all other overlapping bookings making use of the resource are taken into account.
 
 ### Setting up additional pre-filtering
 

@@ -6,7 +6,7 @@ description: DataStax DevCenter allows you to perform CQL queries or run scripts
 # DataStax DevCenter
 
 > [!IMPORTANT]
-> This tool is **no longer supported**. We recommend using a different query tool of your choice, e.g. [DbVisualizer](https://www.dbvis.com/).
+> This tool is **no longer supported**. We recommend using a different query tool of your choice, e.g., [DbVisualizer](https://www.dbvis.com/).
 
 This deprecated tool was used to perform CQL queries or run scripts on a Cassandra database on any server. It was included in legacy DataMiner installers prior to v10.2.
 

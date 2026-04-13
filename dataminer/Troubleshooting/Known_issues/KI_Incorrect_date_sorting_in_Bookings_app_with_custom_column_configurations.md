@@ -6,9 +6,7 @@ uid: KI_Incorrect_date_sorting_in_Bookings_app_with_custom_column_configurations
 
 ## Affected versions
 
-- SRM setups using a DataMiner version prior to 10.2.0 [CU10]/10.3.1.
-
-- SRM setups using custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1.
+SRM setups using custom column configurations created prior to DataMiner 10.2.0 [CU10]/10.3.1.
 
 ## Cause
 
@@ -16,10 +14,7 @@ In older [custom column configurations](xref:Creating_a_list_view#creating-a-new
 
 ## Fix
 
-Install DataMiner 10.2.0 [CU10]/10.3.1.
-
-> [!IMPORTANT]
-> Custom column configurations created prior to these versions are not automatically updated and require [manual intervention](#workaround).
+This issue was resolved in DataMiner 10.2.0 [CU10]/10.3.1. However, custom column configurations created prior to these versions are not automatically updated and require [manual intervention](#workaround).
 
 ## Workaround
 

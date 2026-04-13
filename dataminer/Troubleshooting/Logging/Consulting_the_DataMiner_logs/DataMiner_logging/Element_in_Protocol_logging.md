@@ -21,13 +21,13 @@ This record contains the following information, separated by pipe characters:
 - DataMiner element name
 - Protocol process ID
 - DataMiner protocol name
-- Selected protocol version, e.g. Production
-- Linked protocol version e.g. 1.0.0.2
+- Selected protocol version, e.g., Production
+- Linked protocol version e.g., 1.0.0.2
 - Scripting process ID
 - Reason of the (re)start (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)
 - Number of normal (re)starts (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)
 - Number of restarts caused by an SLProtocol crash (included from DataMiner 10.4.12/10.5.0 onwards<!-- RN 40335 -->)
-- Number of restarts caused by an SLScripting crash (included from DataMiner 10.6.3/10.7.0 onwards<!-- RN 44420 -->)
+- Number of restarts caused by an SLScripting crash (included from DataMiner 10.6.0 [CU3]/10.6.3 onwards<!-- RN 44420 -->)
 
 When a DMA starts up, the list of elements is added to the file, after a separator line consisting of asterisk signs. For example:
 

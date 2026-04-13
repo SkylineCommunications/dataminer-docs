@@ -14,4 +14,4 @@ The Meinberg microSync connector has been integrated into the mbgNMS solution. T
 
 #### IDP 1.5.0 integration [ID 40058]
 
-The IDP version integrated in the the mbgNMS solution has now been updated to IDP 1.5.0.
+The IDP version integrated in the mbgNMS solution has now been updated to IDP 1.5.0.

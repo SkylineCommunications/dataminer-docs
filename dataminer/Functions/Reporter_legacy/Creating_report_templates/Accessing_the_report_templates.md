@@ -18,9 +18,9 @@ To go to the report templates page:
 
 On the report templates page, you can:
 
-- Edit report templates, by clicking the pencil icon in the top-right corner of the template.
+- Edit report templates, by clicking the pencil icon in the upper-right corner of the template.
 
-- Delete report templates, by clicking the x in the top-right corner of the template.
+- Delete report templates, by clicking the x in the upper-right corner of the template.
 
 - Add new report templates. See [Adding a new report template](xref:Adding_a_new_report_template).
 

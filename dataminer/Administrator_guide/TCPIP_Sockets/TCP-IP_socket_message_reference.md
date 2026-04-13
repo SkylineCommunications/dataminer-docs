@@ -64,7 +64,7 @@ Each command or response must have a fixed header character and a fixed trailer 
 
   - name:\[ElementName\]
 
-  - *id:\[DataMinerID/ElementID\]* (e.g. 102/524)
+  - *id:\[DataMinerID/ElementID\]* (e.g., 102/524)
 
   - ip:\[virtual IP address\]
 
@@ -182,7 +182,7 @@ Each command or response must have a fixed header character and a fixed trailer 
 
   - name:\[ElementName\]
 
-  - *id:\[DataMinerID/ElementID\]* (e.g. 102/524)
+  - *id:\[DataMinerID/ElementID\]* (e.g., 102/524)
 
   \[2\]
 
@@ -202,7 +202,7 @@ Each command or response must have a fixed header character and a fixed trailer 
 
   - name:\[ElementName\]
 
-  - *id:\[DataMinerID/ElementID\]* (e.g. 102/524)
+  - *id:\[DataMinerID/ElementID\]* (e.g., 102/524)
 
   \[2\]
 
@@ -225,7 +225,7 @@ Each command or response must have a fixed header character and a fixed trailer 
 
   - name:\[ElementName\]
 
-  - *id:\[DataMinerID/ElementID\]* (e.g. 102/524)
+  - *id:\[DataMinerID/ElementID\]* (e.g., 102/524)
 
   \[2\]
 

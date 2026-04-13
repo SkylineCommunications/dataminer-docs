@@ -44,7 +44,7 @@ Defines a parameter.
 |&nbsp;&nbsp;[Dependencies](xref:Protocol.Params.Param.Dependencies)|[0, 1]|Allows you to link one or more parameters.|
 |&nbsp;&nbsp;[Description](xref:Protocol.Params.Param.Description)|[0, 1]|Specifies the description of the parameter.|
 |&nbsp;&nbsp;[Display](xref:Protocol.Params.Param.Display)|[0, 1]|Defines if and how a parameter will be displayed on the user interface.|
-|&nbsp;&nbsp;[HyperLinks](xref:Protocol.Params.Param.HyperLinks)|[0, 1]|Contains the custom commands (i.e. "hyperlinks") that have to appear on the shortcut menu when users right-click an alarm of this parameter.|
+|&nbsp;&nbsp;[HyperLinks](xref:Protocol.Params.Param.HyperLinks)|[0, 1]|Contains the custom commands (i.e., "hyperlinks") that have to appear on the shortcut menu when users right-click an alarm of this parameter.|
 |&nbsp;&nbsp;[Icon](xref:Protocol.Params.Param.Icon)|[0, 1]|Specifies the icon to be shown in a tree control, either by referring to a predefined icon using the ref attribute or by providing XAML content.|
 |&nbsp;&nbsp;[Information](xref:Protocol.Params.Param.Information)|[0, 1]|Specifies additional information about the parameter.|
 |&nbsp;&nbsp;[Interprete](xref:Protocol.Params.Param.Interprete)|[0, 1]|Specifies how a parameter value is processed.|

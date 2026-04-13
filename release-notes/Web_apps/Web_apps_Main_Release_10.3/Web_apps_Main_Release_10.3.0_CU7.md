@@ -81,7 +81,7 @@ In some cases, it could occur that the *Copy embed URL* right-click option of a 
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
-In the Monitoring app, it could occur that Visual Overview parameter control shapes configured to show a filtered combo box control (i.e. with *SetVarOptions* set to *Control=FilterComboBox*) were not displayed correctly.
+In the Monitoring app, it could occur that Visual Overview parameter control shapes configured to show a filtered combo box control (i.e., with *SetVarOptions* set to *Control=FilterComboBox*) were not displayed correctly.
 
 #### Low-Code Apps: Time range component overlay not fully displayed [ID 37118]
 

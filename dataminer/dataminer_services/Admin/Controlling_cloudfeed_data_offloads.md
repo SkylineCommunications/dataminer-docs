@@ -16,7 +16,7 @@ If you have the Owner or Admin role on dataminer.services for an organization, y
 
 1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 
-1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the upper-right corner and select the organization in the list.
 
 1. In the sidebar on the left, under *Organization*, select the *Settings* page.
 
@@ -33,7 +33,7 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
 
 1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 
-1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the upper-right corner and select the organization in the list.
 
 1. In the pane on the left, under *DataMiner Systems*, expand the DataMiner System, and select the *Settings* page.
 

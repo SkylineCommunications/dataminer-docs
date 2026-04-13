@@ -67,7 +67,7 @@ When using a shape of type **ParameterControls** to visualize a table in a Visio
    | ----------------------- | --------------------------------------------------------------------------------------------------------------- |
    | Element                 | Element ID or element name.                                                                                     |
    | ParameterControl        | ID of the table parameter.                                                                                      |
-   | ParameterControlOptions | "CustomTextBoxInfo:", followed by the text that has to appear inside the filter box (e.g. "Enter filter here"). |
+   | ParameterControlOptions | "CustomTextBoxInfo:", followed by the text that has to appear inside the filter box (e.g., "Enter filter here"). |
 
 ## Adding a Refresh and/or Sort button to a table control
 

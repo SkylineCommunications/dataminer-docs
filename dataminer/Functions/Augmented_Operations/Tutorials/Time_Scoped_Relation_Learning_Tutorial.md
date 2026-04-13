@@ -59,7 +59,7 @@ The tutorial consists of the following steps:
 
 1. Click ![the trend icon](~/dataminer/images/trend_icon_unknown.png) next to the *Available Physical Memory* parameter.
 
-1. Select *Month to date* from the options available in the top-right corner of the trending page to inspect the trend data for the past month.
+1. Select *Month to date* from the options available in the upper-right corner of the trending page to inspect the trend data for the past month.
 
    Initially, the available physical memory appears relatively stable. However, over the last 10 days, three anomalous events become apparent: a temporary decrease in memory (1), followed by a permanent decrease (2), and ultimately, a decreasing trend in the memory (3).
 
@@ -67,7 +67,7 @@ The tutorial consists of the following steps:
 
    Under each of the behavioral changes, a gray block is displayed. These blocks indicate a detected change in behavior, or **change point**.
 
-1. Hover the mouse pointer over a change point to see more detail about the type of change point (e.g. a level shift). If necessary, zoom in to see all details, such as the begin and end values of the change.
+1. Hover the mouse pointer over a change point to see more detail about the type of change point (e.g., a level shift). If necessary, zoom in to see all details, such as the begin and end values of the change.
 
    > [!TIP]
    > For more information on the possible types of change points, see [Behavioral anomaly detection](xref:Behavioral_anomaly_detection#types-of-change-points).
@@ -78,7 +78,7 @@ The tutorial consists of the following steps:
 
 Although the main focus of this tutorial is relation learning, it is important to note the proactive cap detection functionality at play. As you can see in the trend data, the available physical memory parameter approaches a critical level of 0MB. However, DataMiner knows that a free memory parameter is not allowed to dip below zero and proactively alerts you to this behavior without requiring any configuration.
   
-1. Click the light bulb icon in the top-right corner of the Alarm Console.
+1. Click the light bulb icon in the upper-right corner of the Alarm Console.
 
    This icon lights up in blue to indicate that DataMiner Analytics found something interesting. For more detailed info, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
 
@@ -100,7 +100,7 @@ Although the main focus of this tutorial is relation learning, it is important t
 
 Now that you have identified the memory leak problem, it is time to address it.
 
-1. Click *Up to Data Display* in the top-left corner of the *Available Physical Memory* trending page.
+1. Click *Up to Data Display* in the upper-left corner of the *Available Physical Memory* trending page.
 
 1. To find the process consuming the most memory, double-click *Memory Usage* in the *Task manager* table.
 
@@ -108,7 +108,7 @@ Now that you have identified the memory leak problem, it is time to address it.
 
 1. Click ![the trend icon](~/dataminer/images/trend_icon_unknown.png) next to *MyStockController*.
 
-1. Select *Week to date* from the options available in the top-right corner of the trending page to inspect the trend data for the past week.
+1. Select *Week to date* from the options available in the upper-right corner of the trending page to inspect the trend data for the past week.
 
    The *MyStockController* process started leaking memory approximately three days ago.
 
@@ -133,11 +133,11 @@ Given the significant and ongoing nature of the memory leakage, identifying its 
 
 Finding the cause of the permanent decrease in available physical memory, which occurred approximately a week ago, could therefore prove more difficult.
 
-1. Select *Up to Data Display* in the top-left corner of the trending page.
+1. Select *Up to Data Display* in the upper-left corner of the trending page.
 
 1. Click the trend icon next to *Available Physical Memory* to access the *Available Physical Memory* trending page.
 
-1. Select *Month to date* from the options available in the top-right corner of the trending page to inspect the trend data for the past month.
+1. Select *Month to date* from the options available in the upper-right corner of the trending page to inspect the trend data for the past month.
 
 1. Within the trend graph, select the section of the graph where the parameter exhibits a permanent drop by pressing Ctrl and dragging with the left mouse button at the same time.
 
@@ -167,7 +167,7 @@ The *Available Physical Memory* parameter exhibits a temporary drop in memory (1
 Which process was responsible for this? Find the culprit and earn at least 75 DevOps Points.
 
 > [!IMPORTANT]
-> We want to keep improving our relation learning features, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us examples of problems solved withe relation learning and/or situations where relation learning can be improved (e.g. the feature did not perform as well as you had hoped).
+> We want to keep improving our relation learning features, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us examples of problems solved withe relation learning and/or situations where relation learning can be improved (e.g., the feature did not perform as well as you had hoped).
 >
 > Use the following email format to send us your examples:
 >

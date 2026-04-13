@@ -17,6 +17,7 @@ The Template Editor is currently supported for the following components:
 - [Timeline](xref:DashboardTimeline)
 - [Table](xref:DashboardTable)
 - [Maps](xref:DashboardMaps)
+- [Node edge graph](xref:DashboardNodeEdgeGraph) (from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44809-->)
 
 ## Accessing the Template Editor
 
@@ -46,7 +47,7 @@ The way you can access the Template Editor depends on the type of component:
 
 1. Click the *Edit* ![Edit](~/dataminer/images/Edit_Template.png) icon.
 
-   Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the top-right corner and then select *Customize preset*.
+   Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the upper-right corner and then select *Customize preset*.
 
 ### [Maps](#tab/maps)
 
@@ -55,6 +56,16 @@ The way you can access the Template Editor depends on the type of component:
 1. Under the *Layer settings* for a specific layer of the map, click *Edit* ![Edit](~/dataminer/images/Edit_Template.png) in the template section.
 
    These settings will only be available once a set of markers has been added to the component.
+
+### [Node edge graph](#tab/NodeEdgeGraph)
+
+1. Select the node edge graph component and go to the *Settings* pane on the right.
+
+1. In the *Identifiers* section for the nodes, expand the *Base node* subsection.
+
+1. Make sure the *Visual* option is set to *Template*.
+
+1. Click the *Edit* ![Edit](~/dataminer/images/Edit_Template.png) icon.
 
 ***
 
@@ -75,7 +86,7 @@ The Template Editor UI consists of the following main components<!--RN 34858-->:
 - *Settings* pane (3)
 
 > [!IMPORTANT]
-> Any changes made in the Template Editor are only saved once you click the *Save* button in the lower-right corner. When you close the Template Editor by clicking the "X" in the top-right corner or the *Cancel* button in the lower-right corner, you will be alerted of any unsaved changes that may be lost if you close the editor prematurely.
+> Any changes made in the Template Editor are only saved once you click the *Save* button in the lower-right corner. When you close the Template Editor by clicking the "X" in the upper-right corner or the *Cancel* button in the lower-right corner, you will be alerted of any unsaved changes that may be lost if you close the editor prematurely.
 
 ## Working with layers
 
@@ -145,17 +156,17 @@ To temporarily mask a layer within the Template Editor, hover the mouse pointer 
 
 ### Deleting a layer
 
-To delete a layer, hover the mouse pointer over the layer, click the ellipsis button ("...") in the top-right corner, and select *Delete*.
+To delete a layer, hover the mouse pointer over the layer, click the ellipsis button ("...") in the upper-right corner, and select *Delete*.
 
 ![Delete layer](~/dataminer/images/Delete_Layer.gif)<br>*Template Editor in DataMiner 10.5.8*
 
-Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->, hover the mouse pointer over the layer and click the *delete* button in the top-right corner.
+Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->, hover the mouse pointer over the layer and click the *delete* button in the upper-right corner.
 
 Alternatively, regardless of the DataMiner version, select the layer in the preview and press *Delete* on your keyboard.
 
 ### Duplicating a layer
 
-To duplicate a layer, hover the mouse pointer over the layer, click the ellipsis button ("...") in the top-right corner, and select *Duplicate*. Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->.
+To duplicate a layer, hover the mouse pointer over the layer, click the ellipsis button ("...") in the upper-right corner, and select *Duplicate*. Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->.
 
 ![Duplicate layer](~/dataminer/images/Duplicate_Layer.gif)<br>*Template Editor in DataMiner 10.5.8*
 
@@ -188,9 +199,9 @@ In the *Dimensions* section of the *Settings* pane, you can resize and position 
 
 To change the unit used for the dimension values, click the unit itself. For instance, clicking *px* will switch to *%*.
 
-You can secure one or multiple dimension settings of a layer by clicking the ![Lock](~/dataminer/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
+You can secure one or multiple dimension settings of a layer by clicking the ![Lock](~/dataminer/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g., changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
 
-From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43740 -->, it is also possible to lock a dimension setting of a shape to the virtual bounds of a component instead of the visual bounds. To do so, keep the CTRL button pressed while clicking the lock icon. The icon will then take the accent color (blue) to indicate that virtual bound locking is enabled. Functionally, this ensures that when virtualization is supported (e.g. in the timeline), shapes will align to the virtual boundary rather than the visible shape boundary, allowing them to extend outside the visible area (i.e. viewport). This way, time-based elements such as pre-roll and post-roll bars that extend beyond the viewport can be visualized.
+From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43740 -->, it is also possible to lock a dimension setting of a shape to the virtual bounds of a component instead of the visual bounds. To do so, keep the CTRL button pressed while clicking the lock icon. The icon will then take the accent color (blue) to indicate that virtual bound locking is enabled. Functionally, this ensures that when virtualization is supported (e.g., in the timeline), shapes will align to the virtual boundary rather than the visible shape boundary, allowing them to extend outside the visible area (i.e., viewport). This way, time-based elements such as pre-roll and post-roll bars that extend beyond the viewport can be visualized.
 
 > [!NOTE]
 >
@@ -202,21 +213,21 @@ From DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- RN 43740 -->, it i
 
 Depending on the type of layer, you can specify different layer properties in the *Settings* pane.
 
-Common properties:
+#### Common properties
 
 | Icon | Property | Description | Layer types |
 |--|--|--|
 | ![Show layer](~/dataminer/images/Show_Layer-type.png) | Show [layer type] | Toggle the switch to determine whether the layer is visible in the final output. When disabled, the layer is visible (with lowered opacity) in the preview, but not in the end result. | All |
-| ![tooltip](~/dataminer/images/Tooltip.png) | Tooltip | Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Configure a tooltip that appears when hovering over the layer. If multiple layers overlap, the tooltip of the topmost layer will be displayed. | All |
+| ![tooltip](~/dataminer/images/Tooltip.png) | Tooltip | Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Configure a tooltip that appears when hovering over the layer. If multiple layers overlap, the tooltip of the topmost layer will be displayed. Dynamic references are supported. See [Using dynamic references in text fields](#using-dynamic-references-in-text-fields). | All |
 | ![Configure actions](~/dataminer/images/ConfigureActions.png) | Configure actions | [Configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the layer. Only available for DataMiner Low-Code Apps<!--RN 34761-->. | All |
 | ![Color](~/dataminer/images/Templates_Color.png) | Color | Specify a custom color for the shape, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box. The most recently used template colors and the theme colors are always displayed<!--RN 34876-->. From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards<!--RN 43113-->, you can also manually type `currentColor` into the color box. This will automatically apply the font color of the component. | Icon, Rectangle, Ellipse |
 
-Layer-specific properties:
+#### Layer-specific properties
 
 | Icon | Property | Description | Layer type(s) |
 |--|--|--|--|
 | N/A | Icon | Select any of the available icons from the dropdown list. You can search for a specific icon using the filter box. | Icon |
-| N/A | Text box | Enter custom text. You can enter a column name surrounded by curly brackets (e.g. `{my column}`) to insert the corresponding cell value inside your text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.4<!--RN 42519-->, HTML text formatting is supported. Text layers containing HTML content created before these versions will still be rendered as HTML. | Text |
+| N/A | Text box | Enter custom text. Dynamic references are supported. See [Using dynamic references in text fields](#using-dynamic-references-in-text-fields). Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.4<!--RN 42519-->, HTML text formatting is supported. Text layers containing HTML content created before these versions will still be rendered as HTML. | Text |
 | ![Font size](~/dataminer/images/Text_Font_Size.png) | Font size | Specify the size (in pixels) of the text. | Text |
 | ![Color](~/dataminer/images/Text_Color.png) | Text Color | Specify a custom text color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box. The most recently used template colors and the theme colors are always displayed<!--RN 34876-->. From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards<!--RN 43113-->, you can also manually type `currentColor` into the color box. This will automatically apply the font color of the component. | Text |
 | ![Border radius](~/dataminer/images/Text_Roundness.png) | Border radius | Specify the roundness (in pixels) of a shape. The higher the number, the rounder the corners. | Text, Rectangle |
@@ -225,7 +236,7 @@ Layer-specific properties:
 | ![Vertical padding](~/dataminer/images/Text_Vertical_Padding.png) | Vertical padding | Specify the amount of space (in pixels) that should be left free underneath the text. | Text |
 | ![Horizontal alignment](~/dataminer/images/Text_Horizontal_Alignment.png) | Horizontal alignment | Left, center, right, or justify. | Text |
 | ![Vertical alignment](~/dataminer/images/Text_Vertical_Alignment.png) | Vertical alignment | Top, center, or bottom. | Text |
-| N/A | HTML code | Enter HTML code. Basic syntax highlighting and IntelliSense is supported. | HTML |
+| N/A | HTML code | Enter HTML code. Dynamic references are supported. See [Using dynamic references in text fields](#using-dynamic-references-in-text-fields). | HTML |
 | N/A | Link width to | Link the width of the rectangle to a column, selected from the dropdown list. This will partially fill it with a background color depending on the percentage in the column it is linked to. Only available if a data source is used that includes a numeric column. | Rectangle |
 | N/A | Link height to | Link the height of the rectangle to a column, selected from the dropdown list. This will partially fill it with a background color depending on the percentage in the column it is linked to. Only available if a data source is used that includes a numeric column. | Rectangle |
 | ![Horizontal anchor left](~/dataminer/images/Rectangle_Horizontal_Anchor.png) ![Horizontal anchor right](~/dataminer/images/Rectangle_Horizontal_Anchor_Right.png) | Horizontal anchor | If *Link width to* is used, this determines whether the background color representing the linked column is anchored to the left (default) or to the right. Available from DataMiner 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43740 --> | Rectangle |
@@ -233,6 +244,28 @@ Layer-specific properties:
 
 > [!NOTE]
 > Certain HTML tags, such as `<iframe>` and `<object>`, are not supported in HTML layers because embedded content is currently restricted in templates. If you want to use these tags, consider using the [web component](xref:DashboardWeb) instead. To display content like video thumbnails in a template, you can convert the content to a base64-encoded image and display it using an `<img>` tag.
+
+#### Using dynamic references in text fields
+
+In text-based fields, you can use dynamic references enclosed in curly brackets to insert data into a layer.
+
+Dynamic references can be used in:
+
+- Text boxes
+
+- HTML code
+
+- Tooltips
+
+Enter a column name in curly brackets (e.g., `{my column}`) to insert the corresponding cell value into the text.
+
+![Example of entering a column name between curly brackets to display the end time of a meeting](~/dataminer/images/Dynamic_References.gif)<br>*Low-Code Apps module in DataMiner 10.6.5*
+
+From DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44976-->, you can also dynamically reference data in the text, such as component data, flow data, URL data, and variables.
+
+For example: `{COMPONENT."Current view"."Dropdown 3"."Selected item".Elements.Name}`
+
+For detailed instructions on referencing these types of data, see [Dynamically referencing data in text](xref:Dynamically_Referencing_Data_in_Text).
 
 ### Adding conditional cases to a layer
 
@@ -242,7 +275,7 @@ Each case includes:
 
 - Conditions: Criteria that determine when the case applies.
 
-- Actions: What happens when the conditions are met (e.g. show or hide the layer, change styling, trigger events).
+- Actions: What happens when the conditions are met (e.g., show or hide the layer, change styling, trigger events).
 
 To configure a conditional case:
 
@@ -346,7 +379,7 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
      1. Click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon.
 
-        In DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the top-right corner and then select *Browse templates*.
+        In DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the upper-right corner and then select *Browse templates*.
 
    - For the **maps** component:
 
@@ -354,18 +387,28 @@ From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44040 + 44123-->, you can star
 
      1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) in the *Template* section.
 
+   - For the **node edge graph** component:
+
+     1. Select the component and go to the *Settings* pane on the right.
+
+     1. In the *Identifiers* section for the nodes, expand the *Base node* subsection.
+
+     1. Make sure the *Visual* option is set to *Template*.
+
+     1. Click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon.
+
 1. Select a preset template from the overview. You can:
 
    - (1): Search for a template by name using the search box.
 
-   - (2): Use the filter in the top-right corner of the window to show preset templates, custom templates, or both.
+   - (2): Use the filter in the upper-right corner of the window to show preset templates, custom templates, or both.
 
    - (3): Filter the overview by visualization type using the options in the sidebar on the left.
 
-   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.2*
+   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.4*
 
    > [!TIP]
-   > You can tell a preset template from a custom template by the *Preset* label in the top-right corner of a template tile.
+   > You can tell a preset template from a custom template by the *Preset* label in the upper-right corner of a template tile.
 
 1. Click *Apply* in the lower-right corner of the window.
 
@@ -403,7 +446,7 @@ If you have already configured at least one other template for a component in th
 
      1. Click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon.
 
-        In DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the top-right corner and then select *Browse templates*.
+        In DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44174 + 44176-->, first click the ellipsis button ("...") in the upper-right corner and then select *Browse templates*.
 
    - For the **maps** component:
 
@@ -411,15 +454,25 @@ If you have already configured at least one other template for a component in th
 
      1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) in the *Template* section.
 
+   - For the **node edge graph** component:
+
+     1. Select the component and go to the *Settings* pane on the right.
+
+     1. In the *Identifiers* section for the nodes, expand the *Base node* subsection.
+
+     1. Make sure the *Visual* option is set to *Template*.
+
+     1. Click the *Browse templates* ![Browse templates](~/dataminer/images/Browse_Templates.png) icon.
+
 1. Select a custom template from the overview. From DataMiner 10.5.0 [CU10]/10.6.1 onwards<!--RN 44123-->, you can:
 
    - (1): Search for a template by name using the search box.
 
-   - (2): Use the filter in the top-right corner of the window to show preset templates, custom templates, or both.
+   - (2): Use the filter in the upper-right corner of the window to show preset templates, custom templates, or both.
 
    - (3): Filter the overview by visualization type using the options in the sidebar on the left.
 
-   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.2*
+   ![Preset template](~/dataminer/images/Preset_Template.png)<br>*Template browser in DataMiner 10.6.4*
 
 1. Click *Apply* in the lower-right corner of the window.
 
@@ -439,6 +492,6 @@ If you have already configured a template for a component of the same type in th
 
 ***
 
-Keep in mind that when you reuse templates, you may need to **manually update column references**: In a text layer of a template, you can enter a column name surrounded by curly brackets (e.g. {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
+Keep in mind that when you reuse templates, you may need to **manually update column references**: In a text layer of a template, you can enter a column name surrounded by curly brackets (for example, {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
 
-![Update template](~/dataminer/images/CustomerName.gif)<br>*Template Editor in DataMiner 10.5.4*
+![Update template](~/dataminer/images/CustomerName.gif)<br>*Template Editor in DataMiner 10.6.4*

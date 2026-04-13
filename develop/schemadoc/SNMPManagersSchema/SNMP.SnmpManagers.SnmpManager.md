@@ -31,8 +31,8 @@ Specifies the configuration of an SNMP Manager.
 | &#160;&#160;[DeviceOid](xref:SNMP.SnmpManagers.SnmpManager.DeviceOid) | [0, 1] | Indicates whether a device-specific OID is used. |
 | &#160;&#160;[Filter](xref:SNMP.SnmpManagers.SnmpManager.Filter) | [0, 1] | Specifies the alarm filter. |
 | &#160;&#160;[InformAckTracking](xref:SNMP.SnmpManagers.SnmpManager.InformAckTracking) | [0, 1] | Set to "true" to enable tracking and avoid duplicate inform acknowledgments (ACKs). |
-| &#160;&#160;[IP](xref:SNMP.SnmpManagers.SnmpManager.IP) | [0, 1] | Specifies the IP address of the SNMP manager, i.e. the address to which the SNMP notifications will be sent. |
-| &#160;&#160;[Name](xref:SNMP.SnmpManagers.SnmpManager.Name) | [0, 1] | Specifies the name of the SNMP manager (e.g. "HP OpenView", "IBM Tivoli Netcool", etc.). |
+| &#160;&#160;[IP](xref:SNMP.SnmpManagers.SnmpManager.IP) | [0, 1] | Specifies the IP address of the SNMP manager, i.e., the address to which the SNMP notifications will be sent. |
+| &#160;&#160;[Name](xref:SNMP.SnmpManagers.SnmpManager.Name) | [0, 1] | Specifies the name of the SNMP manager (e.g., "HP OpenView", "IBM Tivoli Netcool", etc.). |
 | &#160;&#160;[ResendTime](xref:SNMP.SnmpManagers.SnmpManager.ResendTime) | [0, 1] | Specifies settings related to resend notifications. |
 | &#160;&#160;[SendTraps](xref:SNMP.SnmpManagers.SnmpManager.SendTraps) | [0, 1] | When set to "true", enables the forwarding of SNMP notifications. |
 | &#160;&#160;[SNMPv3](xref:SNMP.SnmpManagers.SnmpManager.SNMPv3) | [0, 1] | Configures SNMPv3-related settings. |

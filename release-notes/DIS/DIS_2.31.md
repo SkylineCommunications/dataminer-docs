@@ -179,7 +179,7 @@ The following checks and error messages have been enhanced:
 
 #### IDE - 'DIS Validator' window: After having an error fixed, the next error in the list will get selected instead of the first error in the list \[ID 28418\]
 
-In the DIS Validator window, when you had an error automatically fixed (e.g. by right-clicking the error and selecting Fix \> This error), up to now, the first error in the list would get selected. From now on, after having an error automatically fixed, the next error in the list will now get selected instead.
+In the DIS Validator window, when you had an error automatically fixed (e.g., by right-clicking the error and selecting Fix \> This error), up to now, the first error in the list would get selected. From now on, after having an error automatically fixed, the next error in the list will now get selected instead.
 
 #### Validator: Grouping of error messages \[ID 28432\]
 

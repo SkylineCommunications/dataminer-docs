@@ -33,7 +33,7 @@ To make changes to the information template for one particular parameter:
 
    - In the Alarm Console, right-click an alarm for that particular parameter, and select *Change \> Information*.
 
-   - In the top-left corner of the parameter card, click the hamburger button, and select *Change information*.
+   - In the upper-left corner of the parameter card, click the hamburger button, and select *Change information*.
 
 1. Make the necessary changes:
 

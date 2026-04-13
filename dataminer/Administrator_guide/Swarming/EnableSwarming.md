@@ -7,6 +7,17 @@ uid: EnableSwarming
 > [!TIP]
 > Instead of following the procedure detailed below, you can also follow the [Enabling Swarming tutorial](xref:Swarming_Tutorial_Enable). This tutorial uses a script to check whether prerequisites are met and provides an example of how to adjust other scripts and protocols in order to prepare your system for Swarming.
 
+## Supported features
+
+In the table below, you will find the required DataMiner version and any other requirements for the currently supported Swarming features.
+
+| Feature | DataMiner version | Note |
+|---------|---------|------|
+| [Basic elements](xref:SwarmingElements) | 10.5.1/10.6.0  | Requires Swarming to be enabled globally, as detailed below. |
+| [Bookings](xref:SwarmingBookings) | 10.4.4/10.5.0 | Requires the [*SwarmingBookings* soft-launch option](xref:SwarmingBookings). Also supported when Swarming is not enabled globally. Note that the same restrictions apply as for other [soft-launch features](xref:SoftLaunchOptions). |
+| DVEs, virtual functions, and parent elements | 10.5.11/10.6.0 | Requires Swarming to be enabled globally, as detailed below. Child elements cannot be swarmed directly; they follow the parent element. |
+| Automatic swarming (via [Node Recovery](xref:NodeRecovery_About)) | 10.6.0/10.6.3 | The [Node Recovery](xref:NodeRecovery_About) extension module must be [installed](xref:NodeRecovery_Installing) and [configured](xref:NodeRecovery_Triggers) to swarm on outages. |
+
 ## Prerequisites
 
 - DataMiner 10.5.1/10.6.0 or higher for swarming of basic elements. DataMiner 10.5.11/10.6.0 for swarming of DVEs or virtual function parent or child elements.
@@ -17,7 +28,7 @@ uid: EnableSwarming
 
   Swarming [will eventually support automatic switchover](xref:Swarming#upcoming-features) of elements in case issues are detected, so that it will replace Failover functionality.
 
-- No [data offloads](xref:Offload_database) are configured (note that this prerequisite will no longer be needed soon).
+- If [data offloads](xref:Offload_database) are configured, the configuration is compatible with Swarming. For more information, see [Offload database configuration with Swarming enabled](xref:Offload_Database_With_Swarming).
 
 - The [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards) is not enabled.
 
@@ -57,7 +68,7 @@ To run a prerequisites check using SLNetClientTest tool:
 
 1. In the *Properties* tab, make sure the top message is selected, and check the summary in the pane on the right.
 
-   For each prerequisite, the tool will indicate whether the prerequisite is met (*True*) or not (*False*). If you hover over the *Summary* item, you will get a detailed overview of which items cause prerequisites not to be met (e.g. specific scripts, enhanced service connectors, connectors using the obsolete alarm ID format, etc.).
+   For each prerequisite, the tool will indicate whether the prerequisite is met (*True*) or not (*False*). If you hover over the *Summary* item, you will get a detailed overview of which items cause prerequisites not to be met (e.g., specific scripts, enhanced service connectors, connectors using the obsolete alarm ID format, etc.).
 
 > [!NOTE]
 > Obsolete Engine methods are only included in the prerequisites check from DataMiner 10.5.3 onwards<!--RN 42073-->. If you are using DataMiner 10.5.1 or 10.5.2, these obsolete methods may still be present even if the prerequisite check does not report any issues. For detailed info, refer to [Preparing scripts and connectors for Swarming](xref:SwarmingPrepare#obsolete-engine-methods).
@@ -104,7 +115,7 @@ To enable Swarming using SLNetClientTest tool:
    Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded to version 10.5.1/10.6.0 or higher.
 
 > [!IMPORTANT]
-> The migrated element files will be **temporarily** backed up in the *Recycle Bin* (e.g. *2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip*). We recommend that you store these files somewhere safe if you ever want to access these again later or if you want to be able to [partially roll back Swarming](wref:SwarmingRollback).
+> The migrated element files will be **temporarily** backed up in the *Recycle Bin* (e.g., *2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip*). We recommend that you store these files somewhere safe if you ever want to access these again later or if you want to be able to [partially roll back Swarming](wref:SwarmingRollback).
 
 ## Verifying whether Swarming has been activated
 

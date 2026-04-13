@@ -13,7 +13,7 @@ string protocolVersion = (string) protocol.NotifyDataMiner(56 /*NT_GET_CURRENT_P
  
 if(protocolVersion != null)
 {
-   // The value will be e.g. "1.0.1.1".
+   // The value will be e.g., "1.0.1.1".
 }
 else
 {

@@ -15,7 +15,7 @@ protocol.NotifyDataMiner(41 /*NT_SEND_DMS_FILE_CHANGE*/, filePath, fileChangeTyp
 
 ## Parameters
 
-- filePath (string): Path and file name that has changed (e.g. C:\Skyline DataMiner\path.xml).
+- filePath (string): Path and file name that has changed (e.g., C:\Skyline DataMiner\path.xml).
 - fileChangeType (int): Integer indicating the type of file change (32 = File modified, 33 = File removed, 34 = File added). 
 
 ## Return Value

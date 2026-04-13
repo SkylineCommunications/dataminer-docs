@@ -26,7 +26,7 @@ If specified, all values in "inputParameters" are forwarded to the QAction as a 
 
 By default, the DataMiner compilation engine compiles with the optimization level option set to Release. When the debug option is specified, the compilation engine compiles with the optimization level option set to Debug, which disables all optimizations, and instruments the generated code to improve the debugging experience.
 
-In addition, when this option is used, next to the DLL, a program database file (.pdb) will be generated. This way, you get more information when exceptions occur (e.g. the line number).
+In addition, when this option is used, next to the DLL, a program database file (.pdb) will be generated. This way, you get more information when exceptions occur (e.g., the line number).
 
 ### dllname=name.dll
 
@@ -54,7 +54,7 @@ This name will then replace the QAction.[QActionID] part:
 > - It is not required to include the .dll extension. If it is not provided as part of the custom name, DataMiner will add this extension automatically.
 > - When you use the dllName option, no DLLs per process will be generated when the
 > /DataMiner/ProcessOptions@scriptingProcesses attribute in the DataMiner.xml configuration file has been set to "protocol".
-> - If you specify `*` or `<No Name>` (i.e. `options="dllName=<No Name>"`), no DLL file will be compiled.
+> - If you specify `*` or `<No Name>` (i.e., `options="dllName=<No Name>"`), no DLL file will be compiled.
 > - The DLL will be refreshed when the QAction that creates this DLL is run. This means that when something changes in the QAction it does not immediately change in the (running) DLL. When the QAction is triggered, the (running) DLL is updated and run with the new data.
 
 ### group

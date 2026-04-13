@@ -78,7 +78,7 @@ To start the development of a new protocol (version 1.0.0.1), perform the follow
 
 1. Specify the vendor in the protocol.xml file.
 
-1. Open your local repository using SourceTree. You will see that the repository already has a 1.0.0.X branch. Now create a new local branch with the following name: *gerrit/DCP\<TaskID>_\<Description>* (e.g. DCP1234_FixLayout).
+1. Open your local repository using SourceTree. You will see that the repository already has a 1.0.0.X branch. Now create a new local branch with the following name: *gerrit/DCP\<TaskID>_\<Description>* (e.g., DCP1234_FixLayout).
 
    ![](~/develop/images/SourceTree_BranchCreation.png)<br>
    *Creating a branch in SourceTree*
@@ -160,7 +160,7 @@ To start the development of a new protocol (version 1.0.0.1), perform the follow
    ![](~/develop/images/SourceTree_PushCommit.png)<br>
    *Pushing a commit to the server in SourceTree*
 
-1. Create a new local branch with the following name: *gerrit/DCP\<TaskID>_\<Description>* (e.g. DCP1234_FixLayout).
+1. Create a new local branch with the following name: *gerrit/DCP\<TaskID>_\<Description>* (e.g., DCP1234_FixLayout).
 
    ![](~/develop/images/SourceTree_NewLocalBranch.png)<br>
    *Creating a new local branch in SourceTree*
@@ -193,7 +193,7 @@ This is very similar to creating a new version in an existing range branch. Befo
 
 ### I am still busy developing but I want to push my work to the remote repository so I have a backup on Gerrit. How do I do this?
 
-For your development, as a Skyline employee, you will typically have created a branch with name *DCP\<TaskID>_\<Description>* (e.g. DCP1234_FixLayout).
+For your development, as a Skyline employee, you will typically have created a branch with name *DCP\<TaskID>_\<Description>* (e.g., DCP1234_FixLayout).
 
 To push this to the remote Git repository so you have a backup on the server (without initiating a code review), click the *Push* button in SourceTree. Select your task branch and click *Push*.
 
@@ -242,7 +242,7 @@ However, be aware that in general a code review phase is required and therefore 
    ![](~/develop/images/SourceTree_CreateTag.png)<br>
    *Creating a tag for a commit in SourceTree*
 
-1. Specify the tag name (e.g. "1.0.0.9"), ensure that the *Specified commit* option is selected and select the checkbox *Push tag*, so that the tag also gets pushed to the remote repository.
+1. Specify the tag name (e.g., "1.0.0.9"), ensure that the *Specified commit* option is selected and select the checkbox *Push tag*, so that the tag also gets pushed to the remote repository.
 
    ![](~/develop/images/SourceTree_CreateTagWindow.png)<br>
    *Creating a tag for a commit in SourceTree*
@@ -423,11 +423,11 @@ Now you will see that the change has been committed to the 1.0.2.X branch.
 ![](~/develop/images/FixCommittedToBranch.png)<br>
 *Fix in range 1.0.2.X*
 
-At this point you can either cherry-pick another commit or continue development (e.g. create a new version on the 1.0.2.X range for this specific fix).
+At this point you can either cherry-pick another commit or continue development (e.g., create a new version on the 1.0.2.X range for this specific fix).
 
 ### How can I work in parallel with other developers?
 
-As a Skyline employee, in case you want to work on a protocol that is already being worked on by another developer, make sure to first communicate with the other developer to avoid merge conflicts later on as much as possible (e.g. agree upon different parameter ranges to use, different QActions, etc.).
+As a Skyline employee, in case you want to work on a protocol that is already being worked on by another developer, make sure to first communicate with the other developer to avoid merge conflicts later on as much as possible (e.g., agree upon different parameter ranges to use, different QActions, etc.).
 
 Then create a new development branch for your development and push it so other developers are aware that you are working on that protocol.
 

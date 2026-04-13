@@ -35,13 +35,13 @@ Perform the following steps to release a connector version:
 
 1. Tag the commit:
 
-   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g. 1.0.0.X.
+   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g., 1.0.0.X.
 
    1. Right-click the branch and select *View History*.
 
    1. Right-click the commit you want to release and select *New Tag*.
 
-   1. Fill in a tag name matching the branch. Connectors use four numbers for versioning, e.g. `1.0.0.3`.
+   1. Fill in a tag name matching the branch. Connectors use four numbers for versioning, e.g., `1.0.0.3`.
 
    1. Fill in a comment.
 
@@ -61,7 +61,7 @@ You can monitor the release pipeline:
 
 ## Publishing DataMiner install packages
 
-DataMiner install packages, i.e. .dmapp files, can contain any other artifacts, including other install packages and companion files. The source code of these packages is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the Catalog.
+DataMiner install packages, i.e., .dmapp files, can contain any other artifacts, including other install packages and companion files. The source code of these packages is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the Catalog.
 
 1. Make sure the following prerequisites are available:
 
@@ -96,13 +96,13 @@ DataMiner install packages, i.e. .dmapp files, can contain any other artifacts, 
 
 1. Tag the commit:
 
-   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g. 1.0.0.X.
+   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g., 1.0.0.X.
 
    1. Right-click the branch and select *View History*.
 
    1. Right-click the commit you want to release and select *New Tag*.
 
-   1. Fill in a tag name matching the branch. Packages use three numbers with a "-CUx" suffix for versioning, e.g. `1.0.1-CU0`.
+   1. Fill in a tag name matching the branch. Packages use three numbers with a "-CUx" suffix for versioning, e.g., `1.0.1-CU0`.
 
    1. Fill in a comment.
 
@@ -157,7 +157,7 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
       > [!NOTE]
       > Make sure you use the correct *Constraint* field to define the appropriate visibility of the Catalog item. See [Creating a repository](xref:Creating_a_repository).
 
-   1. Select your new repository and click the clone button in the top-right corner.
+   1. Select your new repository and click the clone button in the upper-right corner.
 
    1. Browse to the repository in File Explorer.
 
@@ -179,7 +179,7 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
 
    1. Check if the Jenkins pipeline is green or yellow.
 
-      You can do so with the link displayed in the top-right corner of SLC SE RepoManager when your repository is selected.
+      You can do so with the link displayed in the upper-right corner of SLC SE RepoManager when your repository is selected.
 
    1. Optionally, tag a commit to release a stable version.
 
@@ -221,7 +221,7 @@ Visio files can be used as a custom user interface for elements, services, or vi
       > [!NOTE]
       > Make sure you use the correct *Constraint* field to define the appropriate visibility of the Catalog item. See [Creating a repository](xref:Creating_a_repository).
 
-   1. Select your new repository and click the clone button in the top-right corner.
+   1. Select your new repository and click the clone button in the upper-right corner.
 
    1. Browse to the repository in File Explorer.
 
@@ -235,6 +235,6 @@ Visio files can be used as a custom user interface for elements, services, or vi
 
    1. Check if the Jenkins pipeline is green or yellow.
 
-      You can do so with the link displayed in the top-right corner of SLC SE RepoManager when your repository is selected.
+      You can do so with the link displayed in the upper-right corner of SLC SE RepoManager when your repository is selected.
 
    1. Tag a commit to release a stable version.

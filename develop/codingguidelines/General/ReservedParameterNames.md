@@ -4,7 +4,7 @@ uid: ConnectorBestPracticesReservedParameterNames
 
 # Reserved parameter names
 
-The following strings must not be used as parameter names or parameter descriptions. Note that the items in the table should be considered case-insensitive (E.g. \_clients_connected must also not be used).
+The following strings must not be used as parameter names or parameter descriptions. Note that the items in the table should be considered case-insensitive (e.g., \_clients_connected must also not be used).
 
 |                                        |                                            |                                |
 |----------------------------------------|--------------------------------------------|--------------------------------|

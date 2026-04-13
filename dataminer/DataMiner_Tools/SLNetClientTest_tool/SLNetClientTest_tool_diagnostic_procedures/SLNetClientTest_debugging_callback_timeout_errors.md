@@ -4,7 +4,7 @@ uid: SLNetClientTest_debugging_callback_timeout_errors
 
 # Debugging callback timeout errors
 
-When clients connect to a DataMiner Agent via eventing, the server can throw out the client when it takes longer than a particular number of seconds (default: 30) to send a packet of events to that client over the callback connection. In that case, a "callback timeout (waited 30 s)" type error is generated. This mechanism also applies to connections between DataMiner Agents. Possible reasons for such callback timeouts could be an unreachable destination (e.g. client was stopped, or firewall intervened), or also that the packet of data being forwarded is too large.
+When clients connect to a DataMiner Agent via eventing, the server can throw out the client when it takes longer than a particular number of seconds (default: 30) to send a packet of events to that client over the callback connection. In that case, a "callback timeout (waited 30 s)" type error is generated. This mechanism also applies to connections between DataMiner Agents. Possible reasons for such callback timeouts could be an unreachable destination (e.g., client was stopped, or firewall intervened), or also that the packet of data being forwarded is too large.
 
 To debug such errors, you can do the following:
 
@@ -14,7 +14,7 @@ To debug such errors, you can do the following:
 
 1. Select *Hidden Messages*, and click *Apply*.
 
-   The "callback timeout (30 s)" type error will now contain extra information, e.g. "callback timeout (waited 30 s; 251 messages; 570 KB)". A line of logging will also be generated in the SLNet log file.
+   The "callback timeout (30 s)" type error will now contain extra information, e.g., "callback timeout (waited 30 s; 251 messages; 570 KB)". A line of logging will also be generated in the SLNet log file.
 
 1. In the *Advanced* menu, select *Options* > *SLNet Flags*.
 

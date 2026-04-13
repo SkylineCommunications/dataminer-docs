@@ -6,15 +6,16 @@ reviewer: Alexander Verkest
 
 # Getting your organization verified
 
-To make sure you can get the most out of having your DataMiner System connected to dataminer.services, you need to get your organization verified on dataminer.services. This verification ensures that you have access to all the current and upcoming new dataminer.services features.
+For DataMiner Systems with a [perpetual-use license](xref:Pricing_Commercial_Models#perpetual-use-licenses) that get connected to dataminer.services, it may be necessary to get the organization verified on dataminer.services. This will ensure that you can [deploy licensed connectors from the Catalog](xref:Deploying_a_catalog_item).
 
-Benefits include access to the licensed connectors in the Catalog for systems with a perpetual license. The Catalog allows you to [install connectors directly](xref:Deploying_a_catalog_item) from dataminer.services. Systems with a subscription license can access all connectors.
+> [!NOTE]
+> This verification is **not** necessary if you use [usage-based services](xref:Pricing_Commercial_Models#usage-based-services) instead of a perpetual-use license.
 
 To get your organization verified on dataminer.services:
 
 1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 
-1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the upper-right corner and select the organization in the list.
 
 1. In the sidebar on the left, go to *Organization* > *Overview*.
 
@@ -22,5 +23,5 @@ To get your organization verified on dataminer.services:
 
 When your connection has been successfully verified, this will be displayed on this same page in the Admin app.
 
-> [!NOTE]
+> [!TIP]
 > You can also start the verification process by contacting the Skyline verification team directly at [verification@skyline.be](mailto:verification@skyline.be).

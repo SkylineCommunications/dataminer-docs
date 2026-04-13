@@ -82,7 +82,7 @@ Note that, from now on, if not all nodes of the OpenSearch cluster are listed in
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-When, in DataMiner client applications (e.g. DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
+When, in DataMiner client applications (e.g., DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
 
 | Mode | Description |
 |------|-------------|
@@ -98,7 +98,7 @@ See also: [Alarm templates: New flatline detection modes in Augmented Operations
 From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
 
 - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
-- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
+- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e., they are not part of the same cloud-connected system.
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.
 
@@ -248,7 +248,7 @@ In client applications like DataMiner Cube, up to now, elements hosted on a DMA 
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
 
-After you had uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g. a new protocol with version 1.0.0.1 versus an existing protocol with version 1.0.0.1_DEV), up to now, elements using the existing protocol (e.g. with version 1.0.0.1_DEV) would incorrectly no longer be able to execute QActions.
+After you had uploaded a protocol with a version that was identical to the prefix of the version of a protocol that was already in use (e.g., a new protocol with version 1.0.0.1 versus an existing protocol with version 1.0.0.1_DEV), up to now, elements using the existing protocol (e.g., with version 1.0.0.1_DEV) would incorrectly no longer be able to execute QActions.
 
 #### Problem with SLElement when loading elements that included matrix parameters [ID 44188]
 
@@ -269,20 +269,6 @@ From now on, the system will always ask what you want it to do:
 OR
 
 - Leave the production version untouched on the target agent, and update the imported element so that it no longer uses the production version but the referenced version instead.
-
-#### BrokerGateway: Issues related to certificates [ID 44195]
-
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
-
-Up to now, in some cases, issues related to certificates could cause `TLS handshake error: remote error: tls: bad certificate` errors to be added to the NATS log file and `Could not connect to the local NATS endpoint on '<IP>'. Please make sure that the nats service is running without issues.` notice alarms to be generated.
-
-From now on, in order to prevent any issues related to certificates, in the following cases, the certificate authority will be either added or updated in the certificate store:
-
-- When adding an agent to the cluster.
-- When removing an agent from the cluster.
-- When calling NATSRepair.
-- When migrating to BrokerGateway.
-- When no certificate authorities can be found during BrokerGateway startup.
 
 #### STaaS: Problem when migrating or importing elements with logger tables [ID 44196]
 

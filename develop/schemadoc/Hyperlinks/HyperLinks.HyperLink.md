@@ -41,15 +41,15 @@ In the *\<HyperLink>* tag, enter the following content, depending on the type of
 
 - **Type "openview"**: The view ID. Alternatively, you can use the \[VID\] placeholder to open the view of the selected alarm.
 
-  You can also have the view opened on a particular page, using the same syntax as in a [Cube argument](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page) (e.g. *\[VID\]::Aggregation*).
+  You can also have the view opened on a particular page, using the same syntax as in a [Cube argument](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page) (e.g., *\[VID\]::Aggregation*).
 
 - **Type "openservice"**: The service ID. Alternatively, you can use the \[SID\] placeholder to open the service of the selected alarm.
 
-  You can also have the service opened on a particular page, using the same syntax as in a [Cube argument](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page) (e.g. *\[SID\]:d:Australia Service*).
+  You can also have the service opened on a particular page, using the same syntax as in a [Cube argument](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page) (e.g., *\[SID\]:d:Australia Service*).
 
 - **Type "openelement"**: The element ID. Alternatively, you can use the \[EID\] placeholder to open the element of the selected alarm.
 
-  You can also have the element opened on a particular page, using the same syntax as in a [Cube argument](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page) (e.g. *\[EID\]:Data:Performance/Ping*).
+  You can also have the element opened on a particular page, using the same syntax as in a [Cube argument](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page) (e.g., *\[EID\]:Data:Performance/Ping*).
 
 - **Type "openparameter"**: The parameter ID. Alternatively, you can use the \[PID\] placeholder to open the parameter of the selected alarm.
 

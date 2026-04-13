@@ -25,7 +25,7 @@ uid: Cube_Feature_Release_10.3.10
 <!-- RNs 36777/36871/36918: MR 10.4.0 - FR 10.3.9 -->
 <!-- RNs 37057/37136/37145/37167/37184: MR 10.4.0 - FR 10.3.10 -->
 
-In the top-right corner of the Alarm Console, you can now find a light bulb icon that will light up when there are alarms or suggestion events related to an SLAnalytics feature. When you click this light bulb, a menu will open, possibly showing you the following notifications:
+In the upper-right corner of the Alarm Console, you can now find a light bulb icon that will light up when there are alarms or suggestion events related to an SLAnalytics feature. When you click this light bulb, a menu will open, possibly showing you the following notifications:
 
 | Notification | Action when clicked |
 |--------------|---------------------|

@@ -61,7 +61,7 @@ When the debug build of the extension library is successfully compiled, the foll
 
 ## Attaching the debugger
 
-1. Open the **C# source code** file (e.g. `C:\Skyline DataMiner\Scripts\Libraries\MyScript.MyLib.2025_09_13__12_34_56.D.cs`) in your preferred IDE.
+1. Open the **C# source code** file (e.g., `C:\Skyline DataMiner\Scripts\Libraries\MyScript.MyLib.2025_09_13__12_34_56.D.cs`) in your preferred IDE.
 
 1. On the DMA you want to debug, execute a GQI query that uses an extension from your library. This will start up the extension worker process on that DMA.
 

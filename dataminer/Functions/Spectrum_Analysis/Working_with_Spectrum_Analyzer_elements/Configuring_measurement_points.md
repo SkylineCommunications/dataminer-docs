@@ -4,7 +4,7 @@ uid: Configuring_measurement_points
 
 # Configuring measurement points
 
-A measurement point is a series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g. to set a switch to the correct position. This way, multiple signals can be measured with one single spectrum analyzer.
+A measurement point is a series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g., to set a switch to the correct position. This way, multiple signals can be measured with one single spectrum analyzer.
 
 ## The measurement point configuration window
 
@@ -50,9 +50,9 @@ To configure a new or existing measurement point:
 
 1. Optionally, in the *Advanced* section:
 
-   - Specify a *Delay for Parameter Set Verification*, i.e. set a number of ms that DataMiner should wait before taking a spectrum sweep after setting the measurement point.
+   - Specify a *Delay for Parameter Set Verification*, i.e., set a number of ms that DataMiner should wait before taking a spectrum sweep after setting the measurement point.
 
-   - Specify a *Frequency offset*, i.e. shift the trace in frequency.
+   - Specify a *Frequency offset*, i.e., shift the trace in frequency.
 
    - Select the checkbox next to *Invert spectrum* in order to flip the trace around the center frequency.
 

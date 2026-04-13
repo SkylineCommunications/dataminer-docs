@@ -24,7 +24,7 @@ The ID of the parameter in which to store the retrieved file content.
 
 ### Type@startoffset
 
-(optional): The ID of the parameter containing the start offset (i.e. the number of bytes to skip before starting to read the file). Defaults to a start offset of 0.
+(optional): The ID of the parameter containing the start offset (i.e., the number of bytes to skip before starting to read the file). Defaults to a start offset of 0.
 
 ## Remarks
 

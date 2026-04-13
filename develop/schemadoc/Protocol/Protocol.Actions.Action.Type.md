@@ -31,10 +31,10 @@ Defines, together with [On](xref:Protocol.Actions.Action.On), how the action is 
 |[returnValue](xref:Protocol.Actions.Action.Type-returnValue)|string||If Action/Type is "read file", this attribute specifies the ID of the parameter in which to store the retrieved file content. If Action/Type is "wmi", this attribute specifies the ID of the parameter containing the returned values (if "table" is set to "true", this ID should be the ID of a parameter of type "array").|
 |[regex](xref:Protocol.Actions.Action.Type-regex)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)||If Action/Type is "aggregate", this attribute allows to specify the regular expression to use for filtering.|
 |[scale](xref:Protocol.Actions.Action.Type-scale)|string||If Action/Type is "set info", this attribute specifies the scale to be set on the parameter.|
-|[script](xref:Protocol.Actions.Action.Type-script)|string||If Action/Type is "wmi", this attribute specifies the WMI class (e.g. Win32_PerfRawData_PerfOS_Memory).|
+|[script](xref:Protocol.Actions.Action.Type-script)|string||If Action/Type is "wmi", this attribute specifies the WMI class (e.g., Win32_PerfRawData_PerfOS_Memory).|
 |[sequence](xref:Protocol.Actions.Action.Type-sequence)|string||If Action/Type is "set info", this attribute specifies the sequence to be set on the parameter.|
-|[startoffset](xref:Protocol.Actions.Action.Type-startoffset)|unsignedInt||If Action/Type is "read file", this attribute specifies the ID of the parameter containing the start offset (i.e. the number of bytes to skip before starting to read the file). If Action/Type is "stuffing", this attribute specifies the (fixed) start position that delimits the part of the data block in which stuffing has to be performed.|
-|[value](xref:Protocol.Actions.Action.Type-value)|string||If Action/Type is "stuffing", this attribute specifies the actual stuffing character, i.e. the byte that has to be repeated.|
+|[startoffset](xref:Protocol.Actions.Action.Type-startoffset)|unsignedInt||If Action/Type is "read file", this attribute specifies the ID of the parameter containing the start offset (i.e., the number of bytes to skip before starting to read the file). If Action/Type is "stuffing", this attribute specifies the (fixed) start position that delimits the part of the data block in which stuffing has to be performed.|
+|[value](xref:Protocol.Actions.Action.Type-value)|string||If Action/Type is "stuffing", this attribute specifies the actual stuffing character, i.e., the byte that has to be repeated.|
 
 ## Remarks
 

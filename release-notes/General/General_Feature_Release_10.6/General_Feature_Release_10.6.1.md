@@ -254,7 +254,7 @@ The *Attachments* tab has been updated as follows:
 
 - The *Load* button will now be disabled when definition-level security is enabled.
 
-- A message will now be displayed in the right-hand panel, explaining that you can add DOM instances to the list in the left-hand panel by using the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
+- A message will now be displayed in the pane on the right, explaining that you can add DOM instances to the list in the pane on the left by using the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
 
 - A *Clear* button now allows you to clear the list of DOM instances.
 
@@ -331,7 +331,7 @@ See also: [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS
 
 <!-- MR 10.6.0 - FR 10.6.1 -->
 
-When a backup package was being created, up to now, the temporary file would be stored on the C drive. From now on, this temporary file will be stored on the target path (i.e. local path or network path).
+When a backup package was being created, up to now, the temporary file would be stored on the C drive. From now on, this temporary file will be stored on the target path (i.e., local path or network path).
 
 > [!NOTE]
 >

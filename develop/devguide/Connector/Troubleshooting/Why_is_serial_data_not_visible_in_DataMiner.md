@@ -21,7 +21,7 @@ All or some parameter values of a DataMiner element using a protocol with serial
 
 The first thing to verify is if there is data traffic between DataMiner and the serial data source. The easiest way to do this is via the built-in Stream Viewer.
 
-- Click the hamburger button in the top-left corner of the element card, and select *View > Stream Viewer*. For more information, see [Connecting to an element using Stream Viewer](xref:Connecting_to_an_element_using_Stream_Viewer).
+- Click the hamburger button in the upper-left corner of the element card, and select *View > Stream Viewer*. For more information, see [Connecting to an element using Stream Viewer](xref:Connecting_to_an_element_using_Stream_Viewer).
 
 There are then three possibilities:
 
@@ -62,7 +62,7 @@ These two steps are explained further below.
 
 The easiest way to know if the incoming data matches what the connector expects is by checking the element log. To do so:
 
-1. Click the hamburger button in the top-left corner of the element card, and select *View > Log*.
+1. Click the hamburger button in the upper-left corner of the element card, and select *View > Log*.
 
 1. Open the *Log settings* section at the top of the card and set the following log levels:
 
@@ -128,7 +128,7 @@ System.IndexOutOfRangeException: Index was outside the bounds of the array.
 
 ### Validate the protocol
 
-Verify that a trigger is present that will execute an action of type read for every response that contains a parameter of LengthType "next param". This action is needed to fill in the response data into a parameter with a variable length, i.e. *LengthType – next param*.
+Verify that a trigger is present that will execute an action of type read for every response that contains a parameter of LengthType "next param". This action is needed to fill in the response data into a parameter with a variable length, i.e., *LengthType – next param*.
 
 You can configure this with a trigger using the "each" value on the On `id` attribute:
 

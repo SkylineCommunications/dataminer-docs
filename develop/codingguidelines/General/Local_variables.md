@@ -45,11 +45,11 @@ In general, using Hungarian notation for all variable names is *not encouraged*.
 
 - **Arrays**
 
-  For array variables, the type prefix must be preceded by an additional "a" to indicate an array (e.g. string\[\] *asServiceNames*).
+  For array variables, the type prefix must be preceded by an additional "a" to indicate an array (e.g., string\[\] *asServiceNames*).
 
 - **Strongly Typed Collections (System.Collections.Generic)**
 
-  The following table gives an overview of the different prefixes that should be used for collections. In case a collection has only one type (e.g. HashSet\<*T*\>), the identifier should include the type prefix (e.g. HashSet\<*string*\> *hssDevices*).
+  The following table gives an overview of the different prefixes that should be used for collections. In case a collection has only one type (e.g., HashSet\<*T*\>), the identifier should include the type prefix (e.g., HashSet\<*string*\> *hssDevices*).
 
   Plural nouns should be used for lists and sets.
 
@@ -68,7 +68,7 @@ In general, using Hungarian notation for all variable names is *not encouraged*.
 
 - **Booleans**
 
-  The name of a local variable of type Boolean should start with a verb (e.g. foundCarrier, isPresent).
+  The name of a local variable of type Boolean should start with a verb (e.g., foundCarrier, isPresent).
 
 - **Enumerations**
 

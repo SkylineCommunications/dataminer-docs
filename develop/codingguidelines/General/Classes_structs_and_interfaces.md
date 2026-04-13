@@ -6,9 +6,9 @@ uid: Classes_structs_and_interfaces
 
 - PascalCasing should be used for names of classes and structs.
 
-- Classes and structs should be named with nouns or noun phrases (e.g. Alarm, Service, TransportStreamParser).
+- Classes and structs should be named with nouns or noun phrases (e.g., Alarm, Service, TransportStreamParser).
 
-- Interfaces should be named with adjective phrases (or occasionally with nouns or noun phrases) (e.g. ISortable).
+- Interfaces should be named with adjective phrases (or occasionally with nouns or noun phrases) (e.g., ISortable).
 
 - Interface names should be prefixed with the letter "I" ([SA1302](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1302)). This clearly indicates that the type is an interface.
 

@@ -38,9 +38,9 @@ Expected duration: 45 minutes
 
    1. Open the Surveyor.
 
-   1. Right-click a view (e.g. the root view), and select *New* > *Element*.
+   1. Right-click a view (e.g., the root view), and select *New* > *Element*.
 
-   1. Enter an element name, select the DMA, the protocol (i.e. *Skyline Generic Virtual Connector*) and the protocol version (e.g. 1.0.0.3), and click *Create*.
+   1. Enter an element name, select the DMA, the protocol (i.e., *Skyline Generic Virtual Connector*) and the protocol version (e.g., 1.0.0.3), and click *Create*.
 
 1. Go to the *DATA* > *Table* page of the newly created element, which contains the *Numeric Master Table*.
 
@@ -119,7 +119,7 @@ Expected duration: 45 minutes
 
    ![State component](~/dataminer/images/VisioURLFeed_DashboardManualResults.png)
 
-1. In the top-right corner of the screen, click the ellipsis button, and then click *Share*.
+1. In the upper-right corner of the screen, click the ellipsis button, and then click *Share*.
 
    ![Share button](~/dataminer/images/VisioURLFeed_ShareButton.png)
 
@@ -129,7 +129,7 @@ Expected duration: 45 minutes
 
    The URL you copied will be used later in this tutorial.
 
-1. Close the pop-up window by clicking the "X" in the top-right corner.
+1. Close the pop-up window by clicking the "X" in the upper-right corner.
 
 ## Step 3: Create a new visual overview for the Generic Virtual Connector element with shapes for each numerical table index linking to the dashboard
 
@@ -214,7 +214,7 @@ Expected duration: 45 minutes
    ```
 
    > [!NOTE]
-   > The first part of the URL (i.e. the part on the left of the question mark) needs to be changed to match the naming structure of your dashboard. The component ID (`cid`) also needs to be changed to match that of your parameter feed. You can find the ID of each component in the lower-right corner of the component while in edit mode.
+   > The first part of the URL (i.e., the part on the left of the question mark) needs to be changed to match the naming structure of your dashboard. The component ID (`cid`) also needs to be changed to match that of your parameter feed. You can find the ID of each component in the lower-right corner of the component while in edit mode.
 
 1. Again use a web-based encoded JSON URL converter, this time to convert the URL back to encoded JSON.
 

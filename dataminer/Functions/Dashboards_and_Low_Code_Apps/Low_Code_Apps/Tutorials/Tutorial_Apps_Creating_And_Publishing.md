@@ -30,7 +30,7 @@ The DataMiner Low-Code Apps are available on the DataMiner landing page. To acce
 
 1. Rename your app to "IPAM".
 
-1. To modify the appearance of your app, click the icon in the top-left corner.
+1. To modify the appearance of your app, click the icon in the upper-left corner.
 
    ![App icon](~/dataminer/images/Name.png)
 
@@ -49,7 +49,7 @@ The DataMiner Low-Code Apps are available on the DataMiner landing page. To acce
 
 Your app is currently in the "Draft" stage, but you can now take it live by publishing it. This will make it visible to everyone with the rights to access DataMiner Low-Code Apps.
 
-1. Click the leftmost icon in the top-right corner.
+1. Click the leftmost icon in the upper-right corner.
 
    ![Publish icon](~/dataminer/images/PublishHeader.png)
 

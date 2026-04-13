@@ -8,7 +8,7 @@ uid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_4.x
 
 #### Enhanced performance for NATS message processing [ID 41263]
 
-The OpenConfig library has been updated to version 3.2.3 of *Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig*. This update eliminates the creation of queues and workers for internal subscriptions (e.g. heartbeats), reducing unnecessary overhead. Since the volume of events on these subscriptions is predictable, they are processed immediately without queuing. Additionally, worker signaling has been improved to eliminate periodic polling, freeing up CPU resources for other tasks.
+The OpenConfig library has been updated to version 3.2.3 of *Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig*. This update eliminates the creation of queues and workers for internal subscriptions (e.g., heartbeats), reducing unnecessary overhead. Since the volume of events on these subscriptions is predictable, they are processed immediately without queuing. Additionally, worker signaling has been improved to eliminate periodic polling, freeing up CPU resources for other tasks.
 
 #### Improved memory efficiency for NATS message processing [ID 41033]
 
@@ -18,7 +18,7 @@ The OpenConfig library has been updated to version 3.2.3 of *Skyline.DataMiner.D
 
 #### Extra step added to the connection process [ID 39548]
 
-The OpenConfig library has been updated to the latest *Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig* version (i.e. 3.2.0). It will now initiate a `DiscoveryRequest`, and the first CommunicationGateway DxM that answers will be used to handle all further communication.
+The OpenConfig library has been updated to the latest *Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig* version (i.e., 3.2.0). It will now initiate a `DiscoveryRequest`, and the first CommunicationGateway DxM that answers will be used to handle all further communication.
 
 Minimum required version: [CommunicationGateway 3.2.0](xref:CommunicationGateway_change_log#26-june-2024---fix---communicationgateway-320---multiple-communicationgateway-nodes-in-cluster-setting-up-connection-with-endpoint-instead-of-only-one-id-39548)
 
@@ -26,7 +26,7 @@ Minimum required version: [CommunicationGateway 3.2.0](xref:CommunicationGateway
 
 #### Additional logging for subscriptions and overloads for Subscribe methods [ID 39077]
 
-The OpenConfig library has been updated to the latest *Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig* version (i.e. 3.1.0). It will now log the error message encountered for a subscription that has gone down and also add a log entry when a subscription is restored. The event that is raised when a subscription cannot be restored is forwarded through the *GnmiClient* class with the same name: *SubscriptionLost*.
+The OpenConfig library has been updated to the latest *Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig* version (i.e., 3.1.0). It will now log the error message encountered for a subscription that has gone down and also add a log entry when a subscription is restored. The event that is raised when a subscription cannot be restored is forwarded through the *GnmiClient* class with the same name: *SubscriptionLost*.
 
 Additional overloads have also been made for the *Subscribe* methods, so that additional gNMI subscription options can be controlled: *suppressRedundant* and *heartbeatInterval* for sample-type subscriptions, and *useTargetDefined* for real-time subscriptions. For more information regarding these options, refer to the [gNMI specification](https://github.com/openconfig/reference/blob/master/rpc/gnmi/gnmi-specification.md#35152-stream-subscriptions).
 

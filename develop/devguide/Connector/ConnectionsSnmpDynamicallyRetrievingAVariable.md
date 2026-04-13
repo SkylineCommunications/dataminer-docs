@@ -27,7 +27,7 @@ Since DataMiner version 7.5, it is possible to dynamically perform a get of an S
 </Param>
 ```
 
-When setting this parameter with an OID value (e.g. "1.3.6.1.4.1.290.9.3.3.21.13.1.16.1.72") DataMiner will search the protocol and find the closest matching read parameter with an SNMP tag containing this OID.
+When setting this parameter with an OID value (e.g., "1.3.6.1.4.1.290.9.3.3.21.13.1.16.1.72") DataMiner will search the protocol and find the closest matching read parameter with an SNMP tag containing this OID.
 
 After finding this parameter, DataMiner will create a temporary dynamic group to "get" this parameter, and add it to the group execution queue. If the OID links back to a column of a table, it will refresh the entire table.
 

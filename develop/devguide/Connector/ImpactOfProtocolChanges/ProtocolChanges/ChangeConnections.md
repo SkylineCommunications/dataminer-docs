@@ -6,7 +6,7 @@ uid: ChangeConnections
 
 Adding or removing one or multiple connections in a protocol is considered a major change.
 
-Changing the type of a connection is also considered a major change, e.g. from SNMP to SNMPv3.
+Changing the type of a connection is also considered a major change, e.g., from SNMP to SNMPv3.
 
 *DIS MCC*
 

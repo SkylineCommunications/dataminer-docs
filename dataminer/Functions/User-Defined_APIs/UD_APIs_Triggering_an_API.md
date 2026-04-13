@@ -93,7 +93,7 @@ The API will always return responses encoded in UTF-8.
 
 ### CORS
 
-User-defined APIs will not return any CORS headers<!-- RN 36727 -->. It will therefore not be possible to trigger a user-defined API directly from a web client. It is not safe to trigger user-defined APIs from a web client using e.g. AJAX calls in JavaScript, because there is no way to safely save and use the API tokens there.
+User-defined APIs will not return any CORS headers<!-- RN 36727 -->. It will therefore not be possible to trigger a user-defined API directly from a web client. It is not safe to trigger user-defined APIs from a web client using e.g., AJAX calls in JavaScript, because there is no way to safely save and use the API tokens there.
 
 ### Errors
 

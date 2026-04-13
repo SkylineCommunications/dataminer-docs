@@ -24,13 +24,16 @@ In this option, specify the format of the properties to be added to the alarm ta
 
 ### propertyNames
 
-In this option, specify the property labels to be added to the alarm tab. Multiple names are separated by a comma.
+With this option, you can configure one or more alarm properties on a parameter that will get their value from another parameter in that same protocol. To configure the option, specify the property labels to be added to the alarm. Multiple names are separated by a comma.
 
-Note that it is possible to refer to columns from other linked tables, as illustrated in the following example (where parameter 1005 is part of table 1000 and parameter 2002 is part of table 2000):
+It is possible to refer to columns from other linked tables, as illustrated in the following example (where parameter 1005 is part of table 1000 and parameter 2002 is part of table 2000):
 
 ```xml
 <Alarm options="propertyNames:Property 1,Property 2;properties:|1005|2002">
 ```
+
+> [!NOTE]
+> To disable alarm updates for changes of such a property, when an alarm has been raised, edit the property and disable *Update alarms on value changed*. See also: [Changing custom alarm properties](xref:Changing_custom_alarm_properties).
 
 ### threshold
 

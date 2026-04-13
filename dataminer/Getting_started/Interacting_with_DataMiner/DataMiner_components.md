@@ -30,7 +30,7 @@ Elements have two main kinds of pages. You can see these by selecting the elemen
 
 [Services](xref:About_services) are collections of data sources that are used together. They consist of a group of elements or partial elements, combined from the perspective of a particular business aspect. This way, a DataMiner service can reflect all components required for an actual business service.
 
-Like elements, services have visual overview pages and data pages. The data pages of a service represent the different service children, i.e. the elements or partial elements included in the service.
+Like elements, services have visual overview pages and data pages. The data pages of a service represent the different service children, i.e., the elements or partial elements included in the service.
 
 ![Services](~/dataminer/images/Services.gif)<br/>*Service card in DataMiner 10.2.8*
 

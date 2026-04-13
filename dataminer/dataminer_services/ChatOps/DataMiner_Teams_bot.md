@@ -142,11 +142,11 @@ For examples, see [Custom Command Examples](https://github.com/SkylineCommunicat
 
 - Interactive automation scripts are not supported.
 - Commands that run longer than 30 seconds are currently not supported. When a command takes too long, the bot will show that the request has been aborted. However, note that the command will keep running in the DMS once it has been initiated, but if it eventually completes, the bot will not display any feedback or output. This means that strictly speaking this feature could be used to trigger long-running commands, but in that case the commands should ideally be triggered asynchronously from within a command's automation script. You could for instance add a trigger command and a check output command to check if the action is done.
-- Issues with the adaptive card output will not result in proper error feedback. You need to make sure the provided JSON is valid code and that it has valid content for Teams (i.e. an array of body elements). You can validate your JSON output using the [designer](https://adaptivecards.io/designer/) by adding it in the body array of an adaptive card.
+- Issues with the adaptive card output will not result in proper error feedback. You need to make sure the provided JSON is valid code and that it has valid content for Teams (i.e., an array of body elements). You can validate your JSON output using the [designer](https://adaptivecards.io/designer/) by adding it in the body array of an adaptive card.
 - Output cannot exceed 35 KB.
 
 ### Security
 
 - A command is only visible for users of the bot if they have the appropriate rights in DataMiner Cube.
-- If users have the necessary rights to view a command, but they do not have the rights needed for certain input for the command (e.g. a dummy input in case the user has no rights for any elements in the DMS), the bot will inform them that the command cannot be executed.
+- If users have the necessary rights to view a command, but they do not have the rights needed for certain input for the command (e.g., a dummy input in case the user has no rights for any elements in the DMS), the bot will inform them that the command cannot be executed.
 - In case a command cannot be executed because the relevant elements or protocols are missing in the DMS, the bot will inform users that they have no access or that the command's input is malformed in such a way that it can never be executed. In that case, the CoreGateway DxM will log which input is involved.

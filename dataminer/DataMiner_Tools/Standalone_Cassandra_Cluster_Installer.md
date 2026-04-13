@@ -22,7 +22,7 @@ The installer includes AdoptOpenJDK 8 as well as DevCenter. It sets up a Cassand
 
 - Microsoft Windows
 
-- Server without existing Cassandra installation (i.e. there is no service called "Cassandra")
+- Server without existing Cassandra installation (i.e., there is no service called "Cassandra")
 
   > [!IMPORTANT]
   > In case the cluster will consist of multiple Cassandra nodes, all nodes must use the same time. Set up NTP on the servers to avoid possible issues caused by a time difference between the nodes.

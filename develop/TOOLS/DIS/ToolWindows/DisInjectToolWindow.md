@@ -54,7 +54,7 @@ When, for example, you open a QAction with ID 12, then the temporary project wil
 
 | If you click... | then... |
 |-----------------|---------|
-| the green plus, | you will replace (i.e. inject) the element's *QAction.dll* file (compiled in Release mode) with its counterpart found in the temporary QAction project (compiled in Debug mode). |
+| the green plus, | you will replace (i.e., inject) the element's *QAction.dll* file (compiled in Release mode) with its counterpart found in the temporary QAction project (compiled in Debug mode). |
 | the red X, | you will sever the temporary link between the element and the *QAction.dll* compiled in Debug mode.<br> This will restore the link between the element and its original *QAction.dll* (compiled in Release mode). |
 | the yellow lightning bolt, | you will manually trigger the QAction by simulating a change of the parameter selected in the *Trigger ID* box (in case of a dynamic table parameter, use the *Trigger Key* box to specify the table row).<br>Only do this after you have attached the SLScripting process(es) to the Debugger. |
 

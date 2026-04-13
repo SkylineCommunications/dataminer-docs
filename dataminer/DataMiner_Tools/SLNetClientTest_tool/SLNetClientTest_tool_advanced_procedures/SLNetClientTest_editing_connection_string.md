@@ -4,7 +4,7 @@ uid: SLNetClientTest_editing_connection_string
 
 # Editing the connection string between two DataMiner Agents
 
-In most cases, when you add a DataMiner Agent to a DataMiner System, all other DataMiner Agents in the DataMiner System connect to it using its primary IP address. However, in case e.g. NAT (Network Address Translation) is being used, you may need to configure the connection strings by hand. For more information about connection strings and how they should be used, see [Connection strings](xref:Connection_strings).
+In most cases, when you add a DataMiner Agent to a DataMiner System, all other DataMiner Agents in the DataMiner System connect to it using its primary IP address. However, in case e.g., NAT (Network Address Translation) is being used, you may need to configure the connection strings by hand. For more information about connection strings and how they should be used, see [Connection strings](xref:Connection_strings).
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
@@ -16,7 +16,7 @@ In most cases, when you add a DataMiner Agent to a DataMiner System, all other D
 
    - *From*: The DataMiner Agent from which a connection will be made.
 
-   - *To*: The primary IP address of the DataMiner Agent to which a connection will be made, e.g. `148.0.10.68`.
+   - *To*: The primary IP address of the DataMiner Agent to which a connection will be made, e.g., `148.0.10.68`.
 
      > [!NOTE]
      >

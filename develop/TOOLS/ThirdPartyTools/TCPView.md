@@ -4,7 +4,7 @@ uid: TCPView
 
 # TCPView
 
-TCPView is a Windows program that can be useful to check which process is using which port. When troubleshooting, this can be especially useful to check why a certain process (e.g. SLNet, Cassandra, etc.) is not able to listen on a specific port.
+TCPView is a Windows program that can be useful to check which process is using which port. When troubleshooting, this can be especially useful to check why a certain process (e.g., SLNet, Cassandra, etc.) is not able to listen on a specific port.
 
 To use this tool:
 

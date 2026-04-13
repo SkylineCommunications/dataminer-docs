@@ -47,7 +47,7 @@ On this page, you can select settings related to the connection of your computer
 
 - **Connection type**: Select a connection type in the dropdown list. By default, this is set to *Auto*. If you select *Remoting* instead, more settings will be displayed that need to be specified (destination port, polling interval, etc.).
 
-  From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e. a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if the connection type has been set to *Remoting*.
+  From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e., a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if the connection type has been set to *Remoting*.
 
   > [!TIP]
   > See also: [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings)

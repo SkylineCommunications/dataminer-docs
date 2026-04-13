@@ -268,7 +268,7 @@ Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an
 ***
 
 > [!NOTE]
-> When a low-code app is embedded in Cube (e.g. in Visual Overview), an *Open monitoring card* action will open the specified card in Cube.
+> When a low-code app is embedded in Cube (e.g., in Visual Overview), an *Open monitoring card* action will open the specified card in Cube.
 
 ## Showing a context menu
 
@@ -342,6 +342,6 @@ These numbers make it easier, for example, to reference actions when [linking au
 
 To remove an action you have configured for an event:
 
-1. In the action configuration window, click the garbage can icon in the top-right corner of the section for that action.
+1. In the action configuration window, click the garbage can icon in the upper-right corner of the section for that action.
 
 1. Click the confirmation icon.

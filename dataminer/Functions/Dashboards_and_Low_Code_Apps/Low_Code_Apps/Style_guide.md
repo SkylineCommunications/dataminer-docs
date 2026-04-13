@@ -95,11 +95,11 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
 - Apply consistent spacing between components.
 
-- Avoid clutter. Tailor the complexity of the interface to your target audience (e.g. technical users vs. management).
+- Avoid clutter. Tailor the complexity of the interface to your target audience (e.g., technical users vs. management).
 
 - Use the *fit to view* option when the content fits the screen.
 
-- Adjust component sizes to the content they display (e.g. avoid oversized ring and state components or undersized tables and timelines filled with data).
+- Adjust component sizes to the content they display (e.g., avoid oversized ring and state components or undersized tables and timelines filled with data).
 
 - Before you publish a low-code app, test your layout on different screen resolutions to ensure that it displays correctly on all target devices.
 
@@ -128,7 +128,7 @@ Use this documentation as a basis to build or improve dashboards and low-code ap
 
   ![Panel width configuration](~/dataminer/images/LCA_Panel_config_width.png)
 
-- Every panel should have a **close button in the top-right corner**. An icon is enough; the button does not need a label.
+- Every panel should have a **close button in the upper-right corner**. An icon is enough; the button does not need a label.
 
 - If you have too much information in one panel, you can split it into multiple panels and **use buttons in the header bar as tabs**.
 

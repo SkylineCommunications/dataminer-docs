@@ -7,7 +7,7 @@ uid: GetParametersForProtocolSorted
 Use this method to retrieve specific number of parameters for a specified protocol.
 
 > [!NOTE]
-> Using this method, you can e.g. request parameters in batches in order to minimize loading time.
+> Using this method, you can e.g., request parameters in batches in order to minimize loading time.
 
 ## Input
 

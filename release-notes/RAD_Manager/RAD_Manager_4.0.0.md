@@ -11,15 +11,15 @@ uid: RAD_Manager_4.0.0
 
 #### Historical anomalies panel [ID 43829]
 
-A *Historical Anomalies* button is now available in the upper right corner of the RAD Manager app. It opens a pane listing all detected historical anomalies for the selected relational anomaly group. In addition, the number of historical anomalies detected per group or subgroup is now shown in the relational anomaly groups grid on the left-hand side of the main page.
+A *Historical Anomalies* button is now available in the upper right corner of the RAD Manager app. It opens a pane listing all detected historical anomalies for the selected relational anomaly group. In addition, the number of historical anomalies detected per group or subgroup is now shown in the relational anomaly groups grid on the left side of the main page.
 
 #### Shared model groups [ID 44091]
 
-RAD Manager now supports shared model groups, i.e. groups that include multiple subgroups that share the same detection model. These are ideal when monitoring many similar entities or when some subgroups suffer from insufficient healthy training data.
+RAD Manager now supports shared model groups, i.e., groups that include multiple subgroups that share the same detection model. These are ideal when monitoring many similar entities or when some subgroups suffer from insufficient healthy training data.
 
 You can add a shared model group in the RAD Manager app using the *Add Shared Model Group* button. Adding a single group remains possible with the *Add Single Group* button.
 
-Both single and shared model groups are displayed in the relational anomaly groups grid on the left-hand side of the main page. To view the subgroups of a shared model group, you can click the group tile.
+Both single and shared model groups are displayed in the relational anomaly groups grid on the left side of the main page. To view the subgroups of a shared model group, you can click the group tile.
 
 #### Outlier groups and subgroup sorting [ID 44227]
 
@@ -33,7 +33,7 @@ If one of the subgroups of a shared model group behaves significantly differentl
 
 The training configuration for relational anomaly groups has now been integrated in the dialog used to add or edit groups (both shared model and single groups). In this dialog, you can now specify from which time range and from which subgroups data will be used to (re-)train the model of a group.
 
-If this is not specified in the dialog to add a group, the default configuration will be used (i.e. data from all subgroups and from the last two months). If it is not specified in the dialog to edit a group, the model will remain unchanged, provided that the number of parameters in the group does not change.
+If this is not specified in the dialog to add a group, the default configuration will be used (i.e., data from all subgroups and from the last two months). If it is not specified in the dialog to edit a group, the model will remain unchanged, provided that the number of parameters in the group does not change.
 
 #### Anomaly scores no longer cached when DataMiner supports caching [ID 44182]
 
@@ -48,7 +48,7 @@ A major redesign of the RAD Manager main page has been implemented to enhance us
 The dialogs in the RAD Manager app have been reworked:
 
 - In the dialogs to add or edit a single or shared model group, the group options and the training configuration buttons are now shorter.
-- In all dialogs, the *OK*, *Apply*, and *Cancel* buttons are now smaller, and they are shown on the right-hand side.
+- In all dialogs, the *OK*, *Apply*, and *Cancel* buttons are now smaller, and they are shown on the right.
 
 #### Support for adding DVE child element parameters to relational anomaly groups [ID 44244]
 

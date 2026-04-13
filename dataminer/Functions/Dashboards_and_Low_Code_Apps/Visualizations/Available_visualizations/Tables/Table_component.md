@@ -60,7 +60,7 @@ From DataMiner 10.2.7/10.3.0 onwards, you can filter the contents of a table com
   ![Filter operator](~/dataminer/images/Filter_Operator.gif)<br>*Table component and grid component in DataMiner 10.5.6*
 
 > [!TIP]
-> If you have made changes to the way a table is displayed, and you want to quickly reset your changes and return to the initial table view, click the eye icon in the top-right corner of the component (available from DataMiner 10.2.11/10.3.0 onwards).
+> If you have made changes to the way a table is displayed, and you want to quickly reset your changes and return to the initial table view, click the eye icon in the upper-right corner of the component (available from DataMiner 10.2.11/10.3.0 onwards).
 
 ## Resizing the table columns
 
@@ -93,7 +93,7 @@ Unless a single cell is copied, the copy is in CSV format. If an entire column o
 
 ## Exporting the table
 
-From DataMiner 10.1.3/10.2.0 onwards, you can export the content of the table by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*.
+From DataMiner 10.1.3/10.2.0 onwards, you can export the content of the table by clicking the ... button in the upper-right corner of the component and selecting *Export to CSV*.
 
 ![Export to CSV](~/dataminer/images/Export_to_CSV.png)<br>*Table component in DataMiner 10.5.6*
 
@@ -119,7 +119,7 @@ Additionally, the following layout options are also available:
 | Section | Option | Description |
 |--|--|--|
 | Filtering & Highlighting | Conditional coloring | Highlight cells based on a condition. For more information, refer to [Conditional coloring](#conditional-coloring). |
-| Filtering & Highlighting | Show quick filter | Available from DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40818-->. Toggle the switch to determine whether the search box, which lets you [apply a general filter](xref:Filtering_Table_Content#general-filter) across the table, is available in the top-right corner of the table. Enabled by default. |
+| Filtering & Highlighting | Show quick filter | Available from DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40818-->. Toggle the switch to determine whether the search box, which lets you [apply a general filter](xref:Filtering_Table_Content#general-filter) across the table, is available in the upper-right corner of the table. Enabled by default. |
 | Column appearance | Column appearance | Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->. Customize the appearance of a column. For more information, refer to [Column appearance](#column-appearance). |
 | Advanced | Empty result message | Available from DataMiner 10.3.11/10.4.0 onwards<!--RN 37173-->. Configure the message shown when a query returns no results. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!-- RN 44472 -->, this setting can be left empty, in which case no message is displayed and the component remains empty. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
 

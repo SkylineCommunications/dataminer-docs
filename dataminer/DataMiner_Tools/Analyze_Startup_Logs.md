@@ -45,7 +45,7 @@ More options are available via the right-click menu of each item in the *Output*
 
 - *Re-Analyze without checking this entry*: Opens the editor and removes the current entry, then runs the analyzer again. This can be useful if the script halts for an incorrect reason. This allows you to still execute the rest of the script.
 
-- *Re-Analyze without checking this file*: Opens the editor and removes all entries for the current file, then runs the analyzer again. This can be useful if the script halts for an incorrect reason (e.g. log file is no longer up to date). This allows you to still execute the rest of the script on the remaining files.
+- *Re-Analyze without checking this file*: Opens the editor and removes all entries for the current file, then runs the analyzer again. This can be useful if the script halts for an incorrect reason (e.g., log file is no longer up to date). This allows you to still execute the rest of the script on the remaining files.
 
 - *Export Results*: Saves the current results along with the summary into a text file.
 

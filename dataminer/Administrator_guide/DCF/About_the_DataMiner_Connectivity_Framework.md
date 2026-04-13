@@ -22,6 +22,6 @@ Connections can be set in different ways:
 
 - In *Connectivity.xml* files in the folder `C:\Skyline DataMiner\Connectivity`. See [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files).
 
-- By importing connection data from an external source (e.g. a configuration management database).
+- By importing connection data from an external source (e.g., a configuration management database).
 
-- By means of automatic detection (via a DataMiner App, e.g. IP Network Manager).
+- By means of automatic detection (via a DataMiner App, e.g., IP Network Manager).

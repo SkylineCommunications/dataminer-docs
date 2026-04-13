@@ -41,13 +41,13 @@ From DataMiner 10.2.0/10.2.2 onwards, you can generate a URL to easily share you
 
 - If they access directly, only their DataMiner System account is required.
 
-- If they access remotely (i.e. the URL contains `.on.dataminer.services`), they will also need a [dataminer.services account](xref:Logging_on_to_dataminer_services), with access to the cloud organization and the DataMiner System.
+- If they access remotely (i.e., the URL contains `.on.dataminer.services`), they will also need a [dataminer.services account](xref:Logging_on_to_dataminer_services), with access to the cloud organization and the DataMiner System.
 
 To generate a shareable URL:
 
 1. Open the dashboard you want to share.
 
-1. Click the ... button in the top-right corner and select *Share*.
+1. Click the ... button in the upper-right corner and select *Share*.
 
 1. For DataMiner versions older than 10.3.0 [CU12]/10.4.3 only, click *URL*.
 
@@ -78,7 +78,7 @@ You can set an optional expiration date to stop sharing automatically.
 
 1. Open the dashboard you want to share.
 
-1. Click the ... button in the top-right corner and select *Share* or *Start sharing* (depending on your DataMiner version).
+1. Click the ... button in the upper-right corner and select *Share* or *Start sharing* (depending on your DataMiner version).
 
 1. If prompted, select *Create cloud share*.
 
@@ -95,13 +95,13 @@ You can set an optional expiration date to stop sharing automatically.
 > [!NOTE]
 >
 > - Dashboards with [restricted user access](xref:Configuring_dashboard_security) can be shared from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44067 -->
-> - Dashboards containing certain components cannot be shared yet: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries linked to data, and visualizations based on query data (e.g. node edge graph, table). For dashboards with queries that have the *Update data* setting enabled, sharing is supported from DataMiner 10.2.0 [CU4]/10.2.6 onwards. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
+> - Dashboards containing certain components cannot be shared yet: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries linked to data, and visualizations based on query data (e.g., node edge graph, table). For dashboards with queries that have the *Update data* setting enabled, sharing is supported from DataMiner 10.2.0 [CU4]/10.2.6 onwards. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 
 ### Managing or deleting a cloud share
 
 1. Open the dashboard.
 
-1. Click the *Shared* button in the header bar, or click the ... button in the top-right corner and select *Manage share* or *Share* (depending on your DataMiner version).
+1. Click the *Shared* button in the header bar, or click the ... button in the upper-right corner and select *Manage share* or *Share* (depending on your DataMiner version).
 
 1. If prompted, select *Manage cloud share*.
 

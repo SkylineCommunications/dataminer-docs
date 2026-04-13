@@ -18,7 +18,6 @@ For the **Main Release** track, the following support is available:
 | 10.5.0  | 20 Nov 2026           | **25 Feb 2028**     | *23 Feb 2029*           |
 | 10.4.0  | 21 Nov 2025           | **26 Feb 2027**     | *25 Feb 2028*           |
 | 10.3.0  | 15 Nov 2024           | **27 Feb 2026**     | *26 Feb 2027*           |
-| 10.2.0  | 24 Nov 2023           | **28 Feb 2025**     | *27 Feb 2026*           |
 
 Older versions are no longer supported.
 
@@ -130,7 +129,7 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 
 - **End of Support – Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service**: Support for this feature ended with DataMiner 10.3.0 [CU8]/10.3.11. We recommend switching to [Storage as a Service](xref:STaaS). Note that, though not recommended, using a self-managed OpenSearch database remains supported.
 - **End of Support – Annotations**: Should no longer be used from this version onwards.
-- **End of Support – DataMiner Cube running in Internet Explorer/Edge in IE compatibility mode (XBAP)**
+- **End of Life – DataMiner Cube running in Internet Explorer/Edge in IE compatibility mode (XBAP)**
 - **End of Support – MSSQL as local database**: We recommend switching to [Storage as a Service](xref:STaaS).
 
 ### DataMiner 10.4

@@ -6,7 +6,7 @@ uid: Disconnecting_a_user_in_DataMiner_Cube
 
 In DataMiner Cube, users who have been granted the permission *Disconnect other users* can disconnect other users from a DataMiner Agent.
 
-1. Click the user icon in the top-right corner of the Cube UI.
+1. Click the user icon in the upper-right corner of the Cube UI.
 
 1. In the menu, click *X online contacts* (X being the number of users that are currently online).
 

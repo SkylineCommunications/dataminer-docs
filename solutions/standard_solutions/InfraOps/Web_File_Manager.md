@@ -12,7 +12,7 @@ The Web File Manager app is used to upload and manage image files. It is a prere
 
 1. Open the Web File Manager app, either directly from the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page), or from the Facility Manager app (see [Facilities](xref:Facilities_Page)) or Asset Manager app (see [Configuring an asset class](xref:Asset_Designer#configuring-an-asset-class)):
 
-1. In the top-right corner of the Web File Manager app, click *Upload*.
+1. In the upper-right corner of the Web File Manager app, click *Upload*.
 
 1. In the dialog:
 

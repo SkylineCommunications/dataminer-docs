@@ -17,8 +17,8 @@ The following keyboard shortcuts are available in Cube:
   | F1                        | Open the DataMiner Help.                                                                                      |
   | Tab                       | Move the focus to the next item in the UI. This navigation occurs from left to right, and from top to bottom. |
   | Shift + Tab               | Go to the previous item in the UI.                                                                            |
-  | Ctrl + Tab                | Go to the next main UI component (e.g. Card, Surveyor, Alarm Console).                                        |
-  | Ctrl + Shift + Tab        | Go to the previous main UI component (e.g. Card, Surveyor, Alarm Console).                                    |
+  | Ctrl + Tab                | Go to the next main UI component (e.g., Card, Surveyor, Alarm Console).                                        |
+  | Ctrl + Shift + Tab        | Go to the previous main UI component (e.g., Card, Surveyor, Alarm Console).                                    |
   | Alt + Left                | When on a card, go back to the previous card.                                                                 |
   | Alt + Right               | When on a card, go to the next card.                                                                          |
   | "+" and "-"               | When in a trend graph, zoom in/out.                                                                           |

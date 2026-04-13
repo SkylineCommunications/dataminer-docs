@@ -4,7 +4,7 @@ uid: Cassandra_Cluster_Validator
 
 # Cassandra Cluster Validator
 
-The Cassandra Cluster Validator can be used for monitoring and trending of parameters of the Cassandra nodes in a DataMiner cluster. It is intended to be used in DataMiner Systems where each DMA hosts its own Cassandra local database, not for setups where one Cassandra cluster is used for the entire DataMiner System (i.e. "Cassandra Cluster" setups). It can for instance be of use when investigating Cassandra-related issues in DataMiner.
+The Cassandra Cluster Validator can be used for monitoring and trending of parameters of the Cassandra nodes in a DataMiner cluster. It is intended to be used in DataMiner Systems where each DMA hosts its own Cassandra local database, not for setups where one Cassandra cluster is used for the entire DataMiner System (i.e., "Cassandra Cluster" setups). It can for instance be of use when investigating Cassandra-related issues in DataMiner.
 
 > You can download the tool from [DataMiner Dojo](https://community.dataminer.services/download/cassandraclustervalidator/).
 
@@ -53,7 +53,7 @@ To install this tool:
 
 Once you have created and configured the element, it will display information about the Cassandra databases in the cluster on its different data pages.
 
-You can find more information on which information is displayed on which page in the driver help of the element. To access the driver help, click the hamburger button in the top-left corner of the element card and select *Help*.
+You can find more information on which information is displayed on which page in the driver help of the element. To access the driver help, click the hamburger button in the upper-left corner of the element card and select *Help*.
 
 In case you have any trouble running the element, it can also be useful to go to the driver help page, as it contains a *Troubleshooting* section listing common issues.
 

@@ -6,11 +6,11 @@ uid: Asset_Designer
 
 On the Asset Designer page, you can configure the asset classes used in your system. This is typically the first step when configuring the Asset Manager app. You can [import the classes](#importing-asset-classes) via CSV or from GitHub, but you can also [manually create classes](#manually-creating-an-asset-class).
 
-This page also allows you to configure [device types](xref:AM_Configuring_device_types), [cable types](xref:AM_Configuring_cable_types), and [port types](xref:AM_Configuring_port_types) via the buttons in the top-left corner.
+This page also allows you to configure [device types](xref:AM_Configuring_device_types), [cable types](xref:AM_Configuring_cable_types), and [port types](xref:AM_Configuring_port_types) via the buttons in the upper-left corner.
 
 ## Importing asset classes
 
-To start importing asset classes, click *Import/Export Asset Classes* in the top-right corner. You can then choose between the following options:.
+To start importing asset classes, click *Import/Export Asset Classes* in the upper-right corner. You can then choose between the following options:.
 
 - **Import Netbox Asset Classes**: Allows you to import assets from Netbox using the following GitHub repositories:
 
@@ -30,7 +30,7 @@ To start importing asset classes, click *Import/Export Asset Classes* in the top
 
    - **Asset Class Name**: A unique descriptive identifier for the asset class.
 
-   - **Device Type**: The device type. This is intended to provide a higher-level classification (e.g. encoder, video router) and to determine how the asset class and its associated assets behave within the system. For info on how to manage these device types, see [Configuring device types](xref:AM_Configuring_device_types).
+   - **Device Type**: The device type. This is intended to provide a higher-level classification (e.g., encoder, video router) and to determine how the asset class and its associated assets behave within the system. For info on how to manage these device types, see [Configuring device types](xref:AM_Configuring_device_types).
 
    - **Manufacturer**: Allows you to select a manufacturer. You can select any of the organizations configured in the [People and Organization](xref:People_Organizations) app.
 
@@ -52,7 +52,7 @@ In this pane, you can configure the following details:
   - The corresponding **device type**.
   - The **description**.
   - The **manufacturer**.
-  - The **height**, which determines how many rack units are consumed when an asset with this asset class is assigned to a rack. The specified value will be converted to "U" (i.e. rack units, with 1 U being equal to 4.445 cm) and displayed as such in the details section.
+  - The **height**, which determines how many rack units are consumed when an asset with this asset class is assigned to a rack. The specified value will be converted to "U" (i.e., rack units, with 1 U being equal to 4.445 cm) and displayed as such in the details section.
   - The **width** and **depth**. This optional information is only meant to inform the user and does not affect the asset assignment.
   - The **max power consumption**, which will determine how much power (in percent) an asset assigned to the rack will consume compared to the available power consumption assigned to the rack.
   - The **typical power consumption**. This optional information is only meant to inform the user and does not affect the asset assignment.
@@ -62,8 +62,8 @@ In this pane, you can configure the following details:
 
 - The **lifecycle** of the asset class:
 
-  - The **End of Life (EOL) date** for the asset class, i.e. when the manufacturer stops selling this equipment.
-  - The **End of Service (EOS) date** for the asset class, i.e. when the vendor no longer provides support for this equipment.
+  - The **End of Life (EOL) date** for the asset class, i.e., when the manufacturer stops selling this equipment.
+  - The **End of Service (EOS) date** for the asset class, i.e., when the vendor no longer provides support for this equipment.
   - The **nominal lifetime** of the asset class (in days), which will be used along with the installation date of the asset to calculate the expected End-of-Life date of the asset.
 
   ![Asset class lifecycle wizard](~/solutions/images/Asset_Manager_Asset_Class_Lifecycle_Wizard.png)
@@ -85,7 +85,7 @@ If you have created an asset class using a device type with a [hierarchy level](
 
    This will open the *Asset class details* pane.
 
-1. Click the *Cards*, *Modules*, *Fans*, or *Power Supplies* button in the top-left corner of the pane, depending on the type of slots you want to define.
+1. Click the *Cards*, *Modules*, *Fans*, or *Power Supplies* button in the upper-left corner of the pane, depending on the type of slots you want to define.
 
    For example, if you click *Cards*, this will open the following pane:
 
@@ -103,7 +103,7 @@ Assets created based on this asset class will by default have the same number of
 
    This will open the *Asset class details* pane.
 
-1. Click the *Ports* button in the top-left corner of the pane.
+1. Click the *Ports* button in the upper-left corner of the pane.
 
    This will open a pane with the ports details.
 

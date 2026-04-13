@@ -34,4 +34,4 @@ Below the board, a pane is available that consists of two tabs:
 You can change the size of this pane by dragging its upper border up or down, and collapse or expand it using the blue button on the right. Clicking a task in this pane will open the task in a pop-up window. See also [Consulting or editing a task](xref:Consulting_or_editing_a_task).
 
 > [!NOTE]
-> In the task board, a task group is indicated with a small icon in the top-left corner. However, checking a task group and the tasks it contains is much easier in the *Buckets* and *Timeline* tabs below the board.
+> In the task board, a task group is indicated with a small icon in the upper-left corner. However, checking a task group and the tasks it contains is much easier in the *Buckets* and *Timeline* tabs below the board.

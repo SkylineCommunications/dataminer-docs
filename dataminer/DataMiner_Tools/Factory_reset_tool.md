@@ -88,9 +88,9 @@ This tool can be run with the following arguments:
 
 - `-t <type>` or `–database-type <type>`: Mandatory argument. Indicates the type of database:
 
-  - *SQL* (i.e. MySQL)
+  - *SQL* (i.e., MySQL)
   - *Cassandra*
-  - *Elastic* (i.e. Elasticsearch)
+  - *Elastic* (i.e., Elasticsearch)
 
 - `-i <ip>` or `–ip <ip>`: Mandatory argument. The IP address of the database host.
 

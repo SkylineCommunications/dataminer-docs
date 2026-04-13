@@ -66,11 +66,11 @@ From now on, Cube versions that meet the following conditions will be removed au
 - Not downloaded recently.
 - Not used recently.
 
-#### Trending - Parameter relationships: Light bulb icon is now always displayed in top-right corner of trend graph and has one of three states [ID 35868] [ID 36157] [ID 36199]
+#### Trending - Parameter relationships: Light bulb icon is now always displayed in upper-right corner of trend graph and has one of three states [ID 35868] [ID 36157] [ID 36199]
 
 <!-- MR 10.4.0 - FR 10.3.6 Also see Fixes-->
 
-In the top-right corner of a trend graph, a light bulb icon was previously only displayed if DataMiner found relations for the parameters shown in the trend graph. From now on, this icon will always be visible, regardless of whether related parameters have been found and whether all necessary requirements for the parameter relationship feature are met. The light bulb icon can now have one of three states:
+In the upper-right corner of a trend graph, a light bulb icon was previously only displayed if DataMiner found relations for the parameters shown in the trend graph. From now on, this icon will always be visible, regardless of whether related parameters have been found and whether all necessary requirements for the parameter relationship feature are met. The light bulb icon can now have one of three states:
 
 - Related parameters have been found.
 - No related parameters have been found.
@@ -78,9 +78,9 @@ In the top-right corner of a trend graph, a light bulb icon was previously only 
 
 When related parameters have been found, the light bulb icon will "light up" in an accent color to provide a visual indication of its state.
 
-If any of the mandatory requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will show a message that indicates the requirements are not met.
+If any of the mandatory requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the upper-right corner of the trend graph will show a message that indicates the requirements are not met.
 
-If any of the optional requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will show a message that advises to unlock all capabilities of this feature.
+If any of the optional requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the upper-right corner of the trend graph will show a message that advises to unlock all capabilities of this feature.
 
 Both messages are clickable and link to the relevant section of the DataMiner documentation.
 
@@ -132,7 +132,7 @@ Also, when you click *Save* after changing any of the settings in this *Database
 
 <!-- MR 10.4.0 - FR 10.3.6 Also see enhancements -->
 
-The light bulb icon would not be displayed in the top-right corner of a trend graph if the ModelHost DxM stopped working after Cube had already been started.
+The light bulb icon would not be displayed in the upper-right corner of a trend graph if the ModelHost DxM stopped working after Cube had already been started.
 
 #### Problem when connecting to a DataMiner Agent using gRPC [ID 35950]
 

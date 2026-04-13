@@ -57,7 +57,7 @@ When the timer is configured correctly, the statistics should be as low as possi
 
 ![Example of threadpool statistics](~/develop/images/MultiThreadedHTTPStatistics1.png)
 
-When the threadpool is defined too low, this can cause threads to be queued (i.e. put in a waiting state).
+When the threadpool is defined too low, this can cause threads to be queued (i.e., put in a waiting state).
 
 ![Example of threadpool statistics with queued threads](~/develop/images/MultiThreadedHTTPStatistics2.png)
 

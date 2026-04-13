@@ -14,9 +14,9 @@ Several improvements have been implemented in the EPM_I_DOCSIS_AddNewCcapCmPair 
 - If fields that must be filled in are still empty, the field validation will now prevent the user from proceeding.
 - When the script has been fully executed, a final page is now displayed with important information regarding the element creation process. If a message labeled as "[ERROR]" is shown in this window, this means that the creation of a specific element could not be completed. If a message labeled as "[INFO]" is shown, this message contains important information regarding the creation of elements.
 
-#### PNM threshold parameters now configurable for CM collectors via front end [ID 39603]
+#### PNM threshold parameters now configurable for CM collectors via frontend [ID 39603]
 
-Up to now, to update the PNM threshold settings for all collectors, the Multiple Set feature had to be used. Now you can instead configure these via the front end, on the *Configuration* > *Thresholds Settings* > *PNM* page.
+Up to now, to update the PNM threshold settings for all collectors, the Multiple Set feature had to be used. Now you can instead configure these via the frontend, on the *Configuration* > *Thresholds Settings* > *PNM* page.
 
 The following PNM parameters are available: Velocity Factor (VF) for Coax Cable, Non-Main-Tap Energy Ratio (NMTER) Threshold, Post-Main-Tap to Total Energy Ratio (Post-MTTER) Threshold, and Pre-Main-Tap to Total Energy Ratio (Pre-MTTER) Threshold.
 

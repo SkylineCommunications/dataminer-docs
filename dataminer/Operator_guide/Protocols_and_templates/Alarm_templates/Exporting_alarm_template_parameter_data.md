@@ -8,7 +8,7 @@ It is possible to export the parameter data from an alarm template or an alarm t
 
 To do so, in the list of parameters of the alarm template or alarm template group, right-click and select *Export parameter data*.
 
-Each row in the exported CSV file will contain a parameter ID, a parameter name and a list of linked fields (e.g. severity columns).
+Each row in the exported CSV file will contain a parameter ID, a parameter name and a list of linked fields (e.g., severity columns).
 
 Only the parameters visible in the parameter list will be exported, for example:
 

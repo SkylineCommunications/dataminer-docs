@@ -6,7 +6,7 @@ uid: UIComponentsTableForeignKeys
 
 In DataMiner protocols, tables often need to be linked (for example when implementing tree controls, DVEs, etc.).
 
-Consider for example two tables where table 1 lists different modulators (e.g. modulator 1 and modulator 2) and table 2 contains information about these modulators. You can link table 2 to table 1 by specifying a foreign key and a relation.
+Consider for example two tables where table 1 lists different modulators (e.g., modulator 1 and modulator 2) and table 2 contains information about these modulators. You can link table 2 to table 1 by specifying a foreign key and a relation.
 
 One column of table 2 has to contain references (keys) to information stored in table 1. In the following example, column 2010 contains key values from table 1000. The link between the two tables is established using the foreignKey option.
 

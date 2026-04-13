@@ -49,11 +49,11 @@ Prior to DataMiner 10.3.5/10.4.0, if you want to sort by multiple columns, the o
 
 or
 
-1. Query X (i.e. Data Source, sorted by B)
+1. Query X (i.e., Data Source, sorted by B)
 1. Sort by A
 
 > [!NOTE]
-> When you upgrade to DataMiner version 10.3.5/10.3.4 or higher, the behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
+> When you upgrade to DataMiner version 10.3.5/10.3.4 or higher, the behavior of existing queries (using e.g., *Sort by B* followed by *Sort by A*) will not be altered. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
 
 ## Sorting on a joined column
 

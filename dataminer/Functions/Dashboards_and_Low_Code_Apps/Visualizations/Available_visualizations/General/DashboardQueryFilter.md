@@ -20,7 +20,7 @@ From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41799-->, you can use a [trigg
 1. Apply the necessary data. See [Adding data to a component](xref:Adding_data_to_component).
 
    > [!NOTE]
-   > The assigned data name will be visible in the lower-right corner of the query filter component (e.g. Query filter 1).
+   > The assigned data name will be visible in the lower-right corner of the query filter component (e.g., Query filter 1).
 
 1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Customize_Component_Layout).
 
@@ -35,7 +35,7 @@ From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41799-->, you can use a [trigg
 
    - *Allow color mode*: Determines whether [conditional coloring](#conditional-coloring) can be applied within the query filter. By default enabled.
 
-- In the top-right corner of the query filter component, there is an *Active (x)* toggle button. If you enable this button, the component displays only the active filter options, and the button itself indicates the number of active options.
+- In the upper-right corner of the query filter component, there is an *Active (x)* toggle button. If you enable this button, the component displays only the active filter options, and the button itself indicates the number of active options.
 
 - Next to columns containing discrete values of type string or number, you can find a button that allows you to change how the possible values are displayed when you hover your mouse over it:
 
@@ -64,9 +64,9 @@ After configuring the query filter component:
    > [!NOTE]
    > In this example, we are using a table component. However, any component capable of receiving a query can be linked to the query filter.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, go to *All available data* > *Components* > *[Page name]* > *Query filter* > *Filters* > *Queries* in the *Data* pane and drag it onto the table component.
+1. Go to *All available data* > *Components* > *[Page/Panel name]* > *Query filter* > *Filters* > *Queries* in the *Data* pane and drag it onto the table component.
 
-   Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
+   Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
    Each time you change the query filter, a new query is passed to the table, displaying only rows that match the filter settings.
 
@@ -81,15 +81,15 @@ After configuring the query filter component:
 
 1. In the *Data* pane, go to *All available data > Queries*. Drag the query you created earlier onto the table component.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, go to *All available data* > *Components* > *[Page name]* > *Query filter* > *Filters* in the *Data* pane and drag *Query columns* onto the yellow filter drop area of the table component.
+1. Go to *All available data* > *Components* > *[Page/Panel name]* > *Query filter* > *Filters* in the *Data* pane and drag *Query columns* onto the yellow filter drop area of the table component.
 
-   Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
+   Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
    Each time you change the query filter, the data inside the table is filtered according to the filter settings in the query filter. No new query is passed to the table. The latter keeps displaying all rows, but those that do not match the filter will turn gray.
 
 ## Conditional coloring
 
-If the *Allow color mode* setting is enabled, a color marker icon will be available in the top-right corner of the filter query component.
+If the *Allow color mode* setting is enabled, a color marker icon will be available in the upper-right corner of the filter query component.
 
 Click the color marker icon to see a color legend to the right of the filter options. For each option, you can configure a custom color (default color: green).
 

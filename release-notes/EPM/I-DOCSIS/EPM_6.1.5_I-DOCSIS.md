@@ -14,9 +14,9 @@ A Node Segment level has been implemented in the EPM topology. This will serve a
 
 ### Enhancements
 
-#### Aggregation moved from back end to CCAPs [ID 34015]
+#### Aggregation moved from backend to CCAPs [ID 34015]
 
-The aggregation actions used to count the total number of CMs and the total number of taps in the CM table have been moved from the back end to all CCAP connectors.
+The aggregation actions used to count the total number of CMs and the total number of taps in the CM table have been moved from the backend to all CCAP connectors.
 
 #### Empty cells in DOCSIS Line Cards table now display "N/A" [ID 34092]
 
@@ -32,7 +32,7 @@ The *Number of Ping OK* and *Percentage of Ping OK* KPIs will now be hidden at U
 
 #### Adaptive polling of CCAPs adjusted [ID 34365]
 
-The behavior of adaptive fast SNMP polling of CCAPs has been adjusted. The poll interval is now based on the last execution time (i.e. the time it took to poll the last cycle) plus a period of cooling time defined by a parameter on the *Debug* page of the CCAP element. This way the polling interval is adjusted to match the speed of the device. Note that if poll times are below 15 minutes, the interval will be set to 15 minutes.
+The behavior of adaptive fast SNMP polling of CCAPs has been adjusted. The poll interval is now based on the last execution time (i.e., the time it took to poll the last cycle) plus a period of cooling time defined by a parameter on the *Debug* page of the CCAP element. This way the polling interval is adjusted to match the speed of the device. Note that if poll times are below 15 minutes, the interval will be set to 15 minutes.
 
 ### Fixes
 
@@ -70,7 +70,7 @@ The description of the *Downstream Channel Minimum SNR* parameter was incorrect.
 
 ##### Aggregation actions not executed correctly [ID 34229]
 
-It could occur that aggregation actions to get the average percentage DS/US utilization per service group and the average percentage calculations per port were not executed correctly. This could cause the relevant columns in the EPM back-end element to be empty.
+It could occur that aggregation actions to get the average percentage DS/US utilization per service group and the average percentage calculations per port were not executed correctly. This could cause the relevant columns in the EPM backend element to be empty.
 
 #### PNM and cable modem OOS parameters hidden at Service Group level [ID 34279]
 

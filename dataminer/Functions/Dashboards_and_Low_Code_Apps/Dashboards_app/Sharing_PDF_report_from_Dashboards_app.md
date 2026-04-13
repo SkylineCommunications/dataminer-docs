@@ -20,7 +20,7 @@ To learn how to share a dashboard as an email report in the Dashboards app, you 
 
 1. In the list of dashboards on the left, select the dashboard you want to share<!--RN 38278-->.
 
-1. Click the ... button in the top-right corner of the dashboard, and select *Share*.
+1. Click the ... button in the upper-right corner of the dashboard, and select *Share*.
 
    > [!NOTE]
    > From DataMiner 10.2.12/10.3.0 onwards, the *Share* button is only available in read mode.
@@ -61,7 +61,7 @@ To learn how to share a dashboard as an email report in the Dashboards app, you 
 
    - *Page numbers*: Select this option to display page numbers in the report.
 
-   - *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g. pivot tables) in order to make sure all data is displayed.
+   - *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g., pivot tables) in order to make sure all data is displayed.
 
    - *Landscape*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43826-->. Select this option to generate the report in landscape mode.
 
@@ -73,7 +73,7 @@ To learn how to share a dashboard as an email report in the Dashboards app, you 
 
 1. In the list of dashboards on the left, select the dashboard you want to share.
 
-1. Click the ... button in the top-right corner of the dashboard, and select *Share*.
+1. Click the ... button in the upper-right corner of the dashboard, and select *Share*.
 
    > [!NOTE]
    > From DataMiner 10.2.12/10.3.0 onwards, the *Share* button is only available in read mode.
@@ -98,7 +98,7 @@ To learn how to share a dashboard as an email report in the Dashboards app, you 
 
    - *Page numbers*: Select this option to display page numbers in the report.
 
-   - *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g. pivot tables) in order to make sure all data is displayed.
+   - *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g., pivot tables) in order to make sure all data is displayed.
 
    - *Paper format*: Allows you to select a different format than the default A4 format for the PDF.
 

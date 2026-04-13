@@ -118,7 +118,7 @@ The DataMiner class library (DCL) provides some methods that allow the performin
 - [NT_FILL_ARRAY_WITH_COLUMN (220)](xref:NT_FILL_ARRAY_WITH_COLUMN)
 - [NT_SET_PARAMETER_WITH_HISTORY (256)](xref:NT_SET_PARAMETER_WITH_HISTORY) (remote element)
 
-When performing history sets, keep in mind that history sets must be done in chronological order. This means it is not allowed to perform a data point set with a timestamp of e.g. 14:10:30 once a data point with a later timestamp (e.g. 14:10:40) has been set.
+When performing history sets, keep in mind that history sets must be done in chronological order. This means it is not allowed to perform a data point set with a timestamp of e.g., 14:10:30 once a data point with a later timestamp (e.g., 14:10:40) has been set.
 
 It is also important to note that once a window has been closed, it cannot be reopened again. So once the window is closed, the calculated average value can no longer be changed.
 

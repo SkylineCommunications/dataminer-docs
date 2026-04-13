@@ -28,11 +28,11 @@ You can keep a currently active alarm from being included in the SLA calculation
 
 ***
 
-## Excluding alarms from the Alarm Console
+## Excluding alarms via the Alarm Console
 
-You can also exclude real-time and history alarms from the Alarm Console.
+You can exclude real-time and history alarms from the SLA calculation by changing the value of a custom alarm property in the Alarm Console.
 
-To make sure you can use this option, the *PropertyConfiguration.xml* file has to be configured correctly for the custom alarm property. It is of particular importance that the *slaField* attribute is specified and set to “affecting”, and that the values are “No” and “Yes” for the custom alarm property. For instance:
+To make sure that you can use this option, the **PropertyConfiguration.xml** file has to be configured correctly for the custom alarm property. The `slaField` attribute must be specified and set to `affecting`, and the values for the custom alarm property must be "No" and "Yes". For instance:
 
 ```xml
 <Property id="20" type="Alarm" name="SLA Affecting" filterEnabled="true" slaField="affecting" readOnly="false">
@@ -43,7 +43,7 @@ To make sure you can use this option, the *PropertyConfiguration.xml* file has t
 
 Once this has been configured, make sure you can see the column with this property in the Alarm Console. For more information, see [Changing the layout of the Alarm Console](xref:ChangingTheAlarmConsoleLayout).
 
-Then do the following to exclude or include an alarm from the Alarm Console:
+Then do the following to exclude or include an alarm via the Alarm Console:
 
 1. Right-click the alarm in the Alarm Console and select *Properties*.
 

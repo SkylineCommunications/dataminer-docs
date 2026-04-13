@@ -76,7 +76,7 @@ Only if a connector requires a lot of technical information or technical informa
 
 #### 'About' section
 
-In the **About** section, add a short paragraph explaining the **function of the connector**. Try to also include some **information about the data source**. If you copy this information from somewhere else, make sure it fits the informative context of documentation (e.g. remove meaningless praise like "best-of-breed", "top-of-the-line", etc.).
+In the **About** section, add a short paragraph explaining the **function of the connector**. Try to also include some **information about the data source**. If you copy this information from somewhere else, make sure it fits the informative context of documentation (e.g., remove meaningless praise like "best-of-breed", "top-of-the-line", etc.).
 
 > [!NOTE]
 > In this *About* section, older connector documentation will contain **tables** with version info, product info, and system info, but these are **no longer required** as this information is now included directly within the *Protocol.xml* via the various [VersionHistory](xref:Protocol.VersionHistory) tags. However, before you remove the version history info from existing connector help pages, **make sure all the necessary info is properly added to the relevant [VersionHistory](xref:Protocol.VersionHistory) tags** and make sure this is done **for every non-deprecated range** of the connector.
@@ -90,7 +90,7 @@ In the **Configuration** section, add the information needed to create a DataMin
 
 ##### 'Connections' subsection
 
-Except for exported child connectors, every technical documentation page should have a **Connections** subsection. For each connection, you should add a title mentioning the name of the connection as defined in the connector, e.g. "SNMP Connection – Trap Input". For the Main connection, use "Main" as the name of the connection.
+Except for exported child connectors, every technical documentation page should have a **Connections** subsection. For each connection, you should add a title mentioning the name of the connection as defined in the connector, e.g., "SNMP Connection – Trap Input". For the Main connection, use "Main" as the name of the connection.
 
 Below are a couple of examples of such connections sections.
 
@@ -168,7 +168,7 @@ If you need to add a lot of information in this section, use subheaders to keep 
 
 For a connector that supports DCF, add information on which connector range supports DCF, and from which version of DataMiner it can be used. If you start from the template, remember to replace the placeholder text and remove the square brackets surrounding it.
 
-Always add this additional provision, to make sure user changes in DataMiner or changes from third-party connectors are covered: "DCF can also be implemented through the DataMiner DCF user interface and through third-party DataMiner connectors (e.g. a manager)."
+Always add this additional provision, to make sure user changes in DataMiner or changes from third-party connectors are covered: "DCF can also be implemented through the DataMiner DCF user interface and through third-party DataMiner connectors (e.g., a manager)."
 
 For a page for a parent DVE element, to make it clear that DCF in a child DVE is actually managed by the parent, add this provision: "Connectivity for all exported connectors is managed by this connector."
 

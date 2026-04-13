@@ -4,7 +4,7 @@ uid: Investigate_Reoccurring_Element_Restarts
 
 # Investigating reoccurring element restarts due to process crashes
 
-From DataMiner 10.6.3/10.7.0 onwards<!-- 42306/44420 -->, all elements hosted in an SLScripting process that crashes will be restarted **unless DataMiner is explicitly configured to only use one SLScripting process**. Similarly, starting from DataMiner 10.4.12/10.5.0, all elements hosted in an SLProtocol process that crashes will automatically be restarted. This allows automated recovery of a process crash, without leaving the elements in a possible incorrect state.
+From DataMiner 10.6.0 [CU3]/10.6.3 onwards<!-- 42306/44420 -->, all elements hosted in an SLScripting process that crashes will be restarted **unless DataMiner is explicitly configured to only use one SLScripting process**. Similarly, starting from DataMiner 10.4.12/10.5.0, all elements hosted in an SLProtocol process that crashes will automatically be restarted. This allows automated recovery of a process crash, without leaving the elements in a possible incorrect state.
 
 However, because of this mechanism, it is possible that one faulty element causes all other elements in the same process to be restarted frequently.
 

@@ -116,7 +116,7 @@ When you opened a visual overview in a web app, in some cases, the web app could
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
-When, in the *Layout* tab, a text box (e.g. the box containing the title of the selected component) had the focus, and you selected another component, the text box in the *Layout* tab would incorrectly still contain the value of the previously selected component.
+When, in the *Layout* tab, a text box (e.g., the box containing the title of the selected component) had the focus, and you selected another component, the text box in the *Layout* tab would incorrectly still contain the value of the previously selected component.
 
 #### Dashboards app & Low-Code Apps - Table component: A collapsed group would incorrectly expand when new data was loaded into the table [ID 35856]
 

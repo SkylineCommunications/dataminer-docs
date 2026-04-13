@@ -1,6 +1,6 @@
 ---
 uid: Extended_conditional_shape_manipulation_actions
-description: To apply conditional shape manipulation actions, configure the correct shape data field (e.g. Blink, Enabled, Hide, etc.) and enter the condition.
+description: To apply conditional shape manipulation actions, configure the correct shape data field (e.g., Blink, Enabled, Hide, etc.) and enter the condition.
 ---
 
 # Extended conditional shape manipulation actions
@@ -175,7 +175,7 @@ Alarm statistics can be used in the "What" part of the condition. The following 
 
 ## Specifying a default return value
 
-By default, if the condition cannot be evaluated (e.g. because the element or parameter does not exist), it always returns false. If the condition must return "true" when it cannot be evaluated, add "DefaultReturnValue=True" to the condition.
+By default, if the condition cannot be evaluated (e.g., because the element or parameter does not exist), it always returns false. If the condition must return "true" when it cannot be evaluated, add "DefaultReturnValue=True" to the condition.
 
 For example, with the configuration below, if the A condition cannot be evaluated because the element does not exist, "true" will be returned, and the shape will be shown.
 
@@ -184,7 +184,7 @@ For example, with the configuration below, if the A condition cannot be evaluate
 | Show             | \<A>-A\|Element:NonExistingElement\|Parameter:1\|\>0\|DefaultReturnValue=True |
 
 > [!NOTE]
-> The DefaultReturnValue option is placed in the same position as a possible calculation option, e.g. *Min*, *Max*, *Concat*, or *Avg*. To combine these options, use a semicolon (";"). See also: [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes).
+> The DefaultReturnValue option is placed in the same position as a possible calculation option, e.g., *Min*, *Max*, *Concat*, or *Avg*. To combine these options, use a semicolon (";"). See also: [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes).
 
 ## Conditional manipulation of connection shapes
 
@@ -224,7 +224,7 @@ The following conditions can be defined:
 
 - *Does a connection property have a specific numeric value?*
 
-  This condition will be true if a connection property is greater or smaller than a specific value. For lines that represent multiple connections, you can specify the calculation that has to be made with the different values of that same property. The default calculation is *Sum*, but you can also specify *Min*, *Max*, *Concat*, and *Avg*. Note that when you use *Concat*, the result will no longer be a numeric value but a string value (e.g. \<value1>, \<value2>). Example:
+  This condition will be true if a connection property is greater or smaller than a specific value. For lines that represent multiple connections, you can specify the calculation that has to be made with the different values of that same property. The default calculation is *Sum*, but you can also specify *Min*, *Max*, *Concat*, and *Avg*. Note that when you use *Concat*, the result will no longer be a numeric value but a string value (e.g., \<value1>, \<value2>). Example:
 
   | Shape data field | Value                                    |
   | ---------------- | ---------------------------------------- |

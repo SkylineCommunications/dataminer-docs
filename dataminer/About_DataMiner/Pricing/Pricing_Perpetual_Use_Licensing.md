@@ -13,17 +13,17 @@ DataMiner Perpetual-Use Licensing is based on three main product categories:
 
 ## Data collection and control plane
 
-A DataMiner System (DMS) consists of one or more DataMiner nodes (DMAs), interconnected by an IP network. A DMA typically manages a subset of the objects subject to monitoring and control. A single DMA is a fully operational and functional DataMiner System by itself, and multiple DMAs interconnected by an IP network behave like a single consolidated network management system towards the user (i.e. DMS or DataMiner System).
+A DataMiner System (DMS) consists of one or more DataMiner nodes (DMAs), interconnected by an IP network. A DMA typically manages a subset of the objects subject to monitoring and control. A single DMA is a fully operational and functional DataMiner System by itself, and multiple DMAs interconnected by an IP network behave like a single consolidated network management system towards the user (i.e., DMS or DataMiner System).
 
 DMAs can be distributed across the operational environment to increase the overall availability and resilience. Alternatively, they can be co-located at regional or central sites in a regionalized or centralized architecture. The number of DMAs is defined by the number of objects that need to be managed and the application, and their location is a matter of preference in terms of architecture. However, in any case, and in any scenario, all DMAs combined automatically behave like a single consolidated system towards the user.
 
-Depending on the application, licensing is available as **server-based licenses**, i.e. one license per DMA in the DataMiner System, and system-wide **volume-based licenses**, irrespective of the number of DMAs needed.
+Depending on the application, licensing is available as **server-based licenses**, i.e., one license per DMA in the DataMiner System, and system-wide **volume-based licenses**, irrespective of the number of DMAs needed.
 
 Failover is available for server-based licenses, excluding for DataMiner Probes.
 
 | Application | License | Available capacity tiers |
 |--|--|--|
-| Management of system **core processing** infrastructure.<br>From a handful to several thousands of objects. | Standard DataMiner Agent, Server-based | 5, 10, 25, 50, 100, 250, 500, 1000 Managed Objects (500 & 1000 only for selected approved applications, i.e. management of low-end complexity devices) | 
+| Management of system **core processing** infrastructure.<br>From a handful to several thousands of objects. | Standard DataMiner Agent, Server-based | 5, 10, 25, 50, 100, 250, 500, 1000 Managed Objects (500 & 1000 only for selected approved applications, i.e., management of low-end complexity devices) | 
 | Management of high-volume **distribution infrastructure** objects.<br>From 1,000 up to several 100s of thousands of objects. | System Volume Equipment (SVE), Volume-based | Starting from a volume of 1000 Managed Objects, and then onwards in multiples of 5,000 up to 50,000 Managed Objects capacity licenses. |
 | Management of high-volume **service-delivery endpoints**.<br>From 25,000 up to several millions of endpoints. | Experience and Performance Management, Volume-based | 25K, 50K, 100K, 250K, 500K, 1000K service-delivery endpoints. |
 | Local Management of **remote assets**.<br>From 5 to 50 objects per remote location. | DataMiner Probe, Server-based | 5, 10, 25, 50 Managed Objects |
@@ -36,7 +36,7 @@ Failover is available for server-based licenses, excluding for DataMiner Probes.
 
 ### Optional functions
 
-In addition to the [standard functions](https://community.dataminer.services/core-features/) included in a DataMiner System, depending on the type of application and/or functional requirements, some advanced functional modules may be required. These functions are licensed in bundles together with the corresponding server-based licenses (i.e. per DMA) and volume-based licenses above.
+In addition to the [standard functions](https://community.dataminer.services/core-features/) included in a DataMiner System, depending on the type of application and/or functional requirements, some advanced functional modules may be required. These functions are licensed in bundles together with the corresponding server-based licenses (i.e., per DMA) and volume-based licenses above.
 
 | Function | Tier-0 | Tier-1 | Tier-2 |
 |--|--|--|--|
@@ -49,7 +49,7 @@ In addition to the [standard functions](https://community.dataminer.services/cor
 *Included (x)*
 
 > [!NOTE]
-> Tier-1 is included by default with volume-based licenses, i.e. System Volume Equipment and Experience and Performance Management.
+> Tier-1 is included by default with volume-based licenses, i.e., System Volume Equipment and Experience and Performance Management.
 
 Please note that while some additional functions may be accessible without a license, full functionality may only be achieved when paired with a licensed function. For example, DataMiner Infrastructure Discovery Provisioning ([IDP](xref:SolIDP)) requires Automation as a minimum, with Process Automation being highly recommended.
 
@@ -58,7 +58,7 @@ Please note that while some additional functions may be accessible without a lic
 
 ## Data sources
 
-DataMiner connectors are used to interface a DataMiner System with a specific object, i.e. a product or platform from any vendor. One connector license is required for each object type managed by a DataMiner System.
+DataMiner connectors are used to interface a DataMiner System with a specific object, i.e., a product or platform from any vendor. One connector license is required for each object type managed by a DataMiner System.
 
 Connectors are designed in an open XML format, capable of modeling any communication protocol, industry-standard or proprietary, and can be developed by anybody, including Skyline Communications as well as any other qualified third party.
 
@@ -67,10 +67,10 @@ The license cost is a **fixed fee, independent of the number of Managed Objects*
 > [!IMPORTANT]
 > The perpetual-use connector license includes development costs. Skyline Communications does not charge additional non-recurring engineering (NRE) fees, whether the connector already exists or still needs to be developed.
 
-There are two main categories of connector licenses, i.e. Product and System Connectors:
+There are two main categories of connector licenses, i.e., Product and System Connectors:
 
 - **Product Connectors** are typically used to interface directly with devices and other equipment.
-- **System Connectors** are used to interface with other platforms (e.g. business applications, billing or asset management platforms, Element and Network Management Systems, Operations Support Systems, etc.).
+- **System Connectors** are used to interface with other platforms (e.g., business applications, billing or asset management platforms, Element and Network Management Systems, Operations Support Systems, etc.).
 
 ## Special-purpose licenses
 
@@ -88,7 +88,7 @@ This product is licensed per DataMiner System, based on the maximum number of co
 
 ### Spectrum Analysis
 
-The [Spectrum Analysis app](https://community.dataminer.services/spectrum-analysis/) is licensed per node or per number of managed spectrum analyzers, whichever is lowest. This license is included by default with volume-based licenses, i.e. System Volume Equipment and Experience and Performance Management.
+The [Spectrum Analysis app](https://community.dataminer.services/spectrum-analysis/) is licensed per node or per number of managed spectrum analyzers, whichever is lowest. This license is included by default with volume-based licenses, i.e., System Volume Equipment and Experience and Performance Management.
 
 ### SLA Manager App
 

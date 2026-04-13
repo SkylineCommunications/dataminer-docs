@@ -6,7 +6,7 @@ uid: LowCodeApps_Layout
 
 ## Customizing the icon and color of an app
 
-To customize the color and icon for a low-code app, select the icon in the top-left corner.
+To customize the color and icon for a low-code app, select the icon in the upper-left corner.
 
 You can then:
 
@@ -16,7 +16,7 @@ You can then:
 
 - Use the color picker to specify a different color for the app.
 
-To close the color and icon editor, click the icon in the top-left corner again.
+To close the color and icon editor, click the icon in the upper-left corner again.
 
 ## Customizing the theme for a low-code app page
 
@@ -78,9 +78,9 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
 
        - *Font color*: Specify a custom font color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
 
-       - *Accent color*: Available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41859-->. If a component supports an accent color (e.g. the toggle component), it will inherit the selected color. By default, this is set to *Default*, meaning the accent color will match the theme of the low-code app.
+       - *Accent color*: Available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41859-->. If a component supports an accent color (e.g., the toggle component), it will inherit the selected color. By default, this is set to *Default*, meaning the accent color will match the theme of the low-code app.
 
-       - *Data colors*/*Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->): Customize additional component colors, e.g. for the lines in a line chart.
+       - *Data colors*/*Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->): Customize additional component colors, e.g., for the lines in a line chart.
 
          From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->, components displaying the same data use the same data color by default. Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, each component independently takes the next color from the theme's assigned color palette.
 

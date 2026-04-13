@@ -8,7 +8,7 @@ uid: Designing_a_matrix_tab_page_in_the_Router_Control_module
 
 1. Select the configuration by clicking its tab to the right of the “Default” tab.
 
-1. In the top-left corner, click the “+”.
+1. In the upper-left corner, click the “+”.
 
 1. In the *Add matrix* dialog box, specify the matrix parameter you want to add to the configuration:
 
@@ -43,7 +43,7 @@ uid: Designing_a_matrix_tab_page_in_the_Router_Control_module
 
 ## Adding a matrix represented by two table parameters
 
-The Router Control module also allows you to configure a matrix based on two table parameters, i.e. an input and an output table. This can especially be of use for large matrices (512x512 and more), as it will result in better performance than using a matrix parameter.
+The Router Control module also allows you to configure a matrix based on two table parameters, i.e., an input and an output table. This can especially be of use for large matrices (512x512 and more), as it will result in better performance than using a matrix parameter.
 
 If you configure a matrix like this, an output cannot be connected to more than one input at a time.
 
@@ -79,7 +79,7 @@ Note that the input and output tables must have at least the following read and 
 
 | Column | Description |
 |--|--|
-| Index | Primary key, i.e. a 1-based sequential numbering of inputs/outputs. |
+| Index | Primary key, i.e., a 1-based sequential numbering of inputs/outputs. |
 | Label | Text to be displayed. |
 | IsEnabled | Whether or not this input/output is currently enabled (Boolean: 0 or 1). |
 | IsLocked | Whether or not this input/output is currently locked (Boolean: 0 or 1). |
@@ -106,7 +106,7 @@ To do so:
 
 ## Adding a component to a matrix tab page
 
-In the left-hand pane, click one of the following components, and drag it onto an empty spot in the middle pane.
+In the pane on the left, click one of the following components, and drag it onto an empty spot in the middle pane.
 
 | Component | Description |
 |--|--|
@@ -127,7 +127,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
 
 ## Configuring a component on a matrix tab page
 
-1. Select the component, or hover over the component and click the green cogwheel in the top-right corner.
+1. Select the component, or hover over the component and click the green cogwheel in the upper-right corner.
 
 1. In the properties pane in the lower-right corner, make the necessary changes to the properties of the component.
 
@@ -136,7 +136,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
 
 ## Deleting a component from a matrix tab page
 
-1. Hover over the component and click the X in the top-left corner.
+1. Hover over the component and click the X in the upper-left corner.
 
 1. In the confirmation box, click *OK*.
 
@@ -168,7 +168,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
    If syntax errors are detected, a message will appear at the bottom of the dialog box. Click the message to see more information on those errors.
 
 > [!NOTE]
-> Router Control themes can be specified on three levels: on global level (i.e. the entire Router Control module), on configuration level, and on matrix level. Themes defined on a higher level are inherited by lower levels, and themes defined on a lower level override the ones defined on a higher level.
+> Router Control themes can be specified on three levels: on global level (i.e., the entire Router Control module), on configuration level, and on matrix level. Themes defined on a higher level are inherited by lower levels, and themes defined on a lower level override the ones defined on a higher level.
 
 ## Deleting a matrix tab page
 

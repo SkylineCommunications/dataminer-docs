@@ -11,7 +11,7 @@ There are several ways to access this documentation:
 
 - From an element card:
 
-  Click the hamburger button in the top-left corner of the element card and select *Help*.
+  Click the hamburger button in the upper-left corner of the element card and select *Help*.
 
 - From the Protocols & Templates module:
 

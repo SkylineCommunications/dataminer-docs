@@ -107,7 +107,7 @@ alarm=48/123/6713
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
-From now on, in Visual Overview, it will also be possible to pass session variables when navigating to an element using an application protocol (e.g. SRM Booking Manager).
+From now on, in Visual Overview, it will also be possible to pass session variables when navigating to an element using an application protocol (e.g., SRM Booking Manager).
 
 #### Visual Overview - SPI logging: Log entries reporting page load timeouts will now show more accurate load times [ID 39222]
 

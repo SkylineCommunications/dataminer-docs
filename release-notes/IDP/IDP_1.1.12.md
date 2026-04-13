@@ -30,7 +30,7 @@ The *SLC_ProvisionElement_Result* gateway key contains the status of the provisi
 
 #### Token metadata can replace CI type field values in Provision Element activity \[ID 26799\]
 
-When provisioning is done via Process Automation, the token can contain metadata that can replace the CI type fields. For this to work, the name of the metadata must consist of the *IDP\_* prefix followed by the relevant JSON object from the CI type. For example, to overwrite the element description from the CI type, use the metadata name *IDP\_$.Provisioning.Configuration.Description* and place the new element description in the metadata value. If the metadata value contains special characters, e.g. double quotation marks, place a backslash in front of these to make sure they are not misinterpreted (e.g. \[*\\"Test\\", \\"Test 123\\"\]*).
+When provisioning is done via Process Automation, the token can contain metadata that can replace the CI type fields. For this to work, the name of the metadata must consist of the *IDP\_* prefix followed by the relevant JSON object from the CI type. For example, to overwrite the element description from the CI type, use the metadata name *IDP\_$.Provisioning.Configuration.Description* and place the new element description in the metadata value. If the metadata value contains special characters, e.g., double quotation marks, place a backslash in front of these to make sure they are not misinterpreted (e.g., \[*\\"Test\\", \\"Test 123\\"\]*).
 
 Other examples:
 

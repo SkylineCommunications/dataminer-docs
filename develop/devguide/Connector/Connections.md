@@ -4,9 +4,9 @@ uid: Connections
 
 # Connections
 
-A protocol typically defines one or more connections through which the element running the protocol communicates with the device (or multiple devices). DataMiner supports different types of connections, such as SNMP, serial, HTTP, etc. A protocol can define multiple connections of different types (e.g. an HTTP connection and two SNMP connections).
+A protocol typically defines one or more connections through which the element running the protocol communicates with the device (or multiple devices). DataMiner supports different types of connections, such as SNMP, serial, HTTP, etc. A protocol can define multiple connections of different types (e.g., an HTTP connection and two SNMP connections).
 
-With the [Type](xref:Protocol.Type) tag, the protocol connections can be defined. The main connection is specified as the value of the `Type` tag, e.g. `<Type relativeTimers="true">snmp</Type>`. In case multiple connections are used, the additional connections need to be defined in the [advanced](xref:Protocol.Type-advanced) attribute of the Type tag, indicating the type and name of each additional connection:
+With the [Type](xref:Protocol.Type) tag, the protocol connections can be defined. The main connection is specified as the value of the `Type` tag, e.g., `<Type relativeTimers="true">snmp</Type>`. In case multiple connections are used, the additional connections need to be defined in the [advanced](xref:Protocol.Type-advanced) attribute of the Type tag, indicating the type and name of each additional connection:
 
 ```xml
 <Type relativeTimers="true" options="unicode" communicationOptions="smartIPHeader" advanced="smart-serial:IP Connection - POST Messages;http:HTTP Connection - Master">http</Type>

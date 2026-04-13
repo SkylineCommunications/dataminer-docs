@@ -41,13 +41,13 @@ Expected duration: 15 minutes.
 
 1. Go to [https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.ValidatorsExercise)
 
-1. In the top-right corner, click *Fork*.
+1. In the upper-right corner, click *Fork*.
 
 1. Follow the wizard to create a fork of the repository under your own account.
 
 ## Step 2: Clone your fork
 
-On the page of your GitHub fork (e.g. `https://github.com/YourGitHubHandle/Skyline.DataMiner.CICD.ValidatorsExercise`), click the *Code* button and select *Open in Visual Studio*.
+On the page of your GitHub fork (e.g., `https://github.com/YourGitHubHandle/Skyline.DataMiner.CICD.ValidatorsExercise`), click the *Code* button and select *Open in Visual Studio*.
 
 > [!NOTE]
 > In some cases, the *Open in Visual Studio* option may not be available. In that case, you will need to use GitHub Desktop instead to make the clone. Make sure you have [GitHub Desktop](https://desktop.github.com/) installed. Then click the *Code* button on your fork page and select the option *Open with GitHub Desktop* instead.

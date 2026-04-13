@@ -70,7 +70,7 @@ In the protocol editor, you can now click a small *Down* arrow in front of certa
 
 When adding content to Commands, Responses, Pairs, Groups, Triggers, and Timers, an IntelliSense popup will now appear, listing all existing items that can be added.
 
-In case of a group, the listed items will depend on the type of the group, e.g. actions are only added to the list when the type is “action” or “poll action”.
+In case of a group, the listed items will depend on the type of the group, e.g., actions are only added to the list when the type is “action” or “poll action”.
 
 ### Validator
 
@@ -80,7 +80,7 @@ In case of a group, the listed items will depend on the type of the group, e.g. 
 
 The *Protocol.Params.Param.Display.RTDisplay* tag now has a new *onAppLevel* attribute.
 
-Set this attribute to “true” if the parameter needs to be accessible on Application Level, i.e. outside the protocol. In a Visio drawing for instance.
+Set this attribute to “true” if the parameter needs to be accessible on Application Level, i.e., outside the protocol. In a Visio drawing for instance.
 
 #### HTTP header types \[ID 12252\]
 
@@ -123,7 +123,7 @@ The *Protocol.Params.Param.Interprete* tag now has a new *DefaultValue* subtag.
 
 The *Protocol.Commands.Command* tag now has a new *ascii* attribute.
 
-This attribute allows you to specify that parameters should be sent as ASCII even if the protocol is in Unicode. You can specify that you want all parameters in the command to be sent as ASCII (e.g. ascii="true") or just some of the parameters, delimited with a semicolon (e.g. ascii="18;40").
+This attribute allows you to specify that parameters should be sent as ASCII even if the protocol is in Unicode. You can specify that you want all parameters in the command to be sent as ASCII (e.g., ascii="true") or just some of the parameters, delimited with a semicolon (e.g., ascii="18;40").
 
 The type of this new attribute is the new type *TypeTrueOrSemicolonSeparatedNumbers*.
 
@@ -138,7 +138,7 @@ In the new *Params.Param.Database* tag, you can now group a number of database-r
 | Tag | Description |
 |-----|-------------|
 | CQLOptions | Tag that groups a number of Cassandra database options. |
-| Clustering | The semicolon-separated list of clustering columns, i.e. the columns that are part of the compound primary key definition. |
+| Clustering | The semicolon-separated list of clustering columns, i.e., the columns that are part of the compound primary key definition. |
 | TableProperty | The WITH clause you want to use to set the necessary table properties. |
 | Finalizer | The query that has to be executed after the creation of the table. This can be, for example, a query that will preload data or create indexes. |
 

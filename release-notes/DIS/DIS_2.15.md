@@ -12,7 +12,7 @@ uid: DIS_2.15
 
 When working in the XML editor or the C# editor, you can press a key combination (default: Ctrl+1) to move the cursor to the DIS Tree tool window and select the DIS tree node representing the element you are editing.
 
-From now on, instead of pressing this key combination, you can also click the following button, which is situated in the top-left corner of the DIS Tree tool window:
+From now on, instead of pressing this key combination, you can also click the following button, which is situated in the upper-left corner of the DIS Tree tool window:
 
 ![Sync arrow button](~/release-notes/images/SyncArrow_16x.jpg)
 
@@ -148,7 +148,7 @@ The following changes have been made to attributes of the ArrayOptions element.
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | index           | Type was changed from xs:string to xs:unsignedInteger.                                                                                                                                     |
 | displayColumn   | Type was changed from xs:string to xs:unsignedInteger.                                                                                                                                     |
-| partial         | Type was changed from xs:string to regex. The regular expression must match either “false” or “true”. “true” can optionally be followed by a semicolon and a number (e.g. “true:200”). |
+| partial         | Type was changed from xs:string to regex. The regular expression must match either “false” or “true”. “true” can optionally be followed by a semicolon and a number (e.g., “true:200”). |
 | processingOrder | Removed. This is an option to be added to the value of the options attribute.                                                                                                              |
 
 #### UOM Schema: New unit added \[ID 20977\]
@@ -163,7 +163,7 @@ The following unit has been added to the UOM Schema:
 
 #### IDE - XML editor: Enhanced analysis rules for QAction projects \[ID 20566\]
 
-A number of enhancements have been made to the default set of analysis rules for QAction projects. These rules can be used by Visual Studio extensions like e.g. SonarLint to analyze the code.
+A number of enhancements have been made to the default set of analysis rules for QAction projects. These rules can be used by Visual Studio extensions like e.g., SonarLint to analyze the code.
 
 #### IDE - XML editor: When an imported XML/JSON node does not contain any value, a parameter of type ‘string’ is now created \[ID 20674\]
 
@@ -187,7 +187,7 @@ Next to certain XML elements or attributes, you will find a “jump to linked it
 | SeverityBubbleUp.Path             | Table parameters referred to in ‘Path’ element             |
 | Trigger.On                        | Sessions referred to in ‘On’ element                       |
 
-When you hover over a paper clip icon, the linked items are grouped by category (e.g. *Incoming*, *Outgoing*,...). A new category has now been added: *Conditions*. This new category will group all parameters referred to in the \<Condition> element contained within the element with the paper clip icon.
+When you hover over a paper clip icon, the linked items are grouped by category (e.g., *Incoming*, *Outgoing*,...). A new category has now been added: *Conditions*. This new category will group all parameters referred to in the \<Condition> element contained within the element with the paper clip icon.
 
 If, for example, an \<Action> element contains the following \<Condition> element, the *Conditions* section of the linked item list will contain a reference to the parameter used in that condition (in this case the parameter with ID 10).
 

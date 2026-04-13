@@ -14,7 +14,7 @@ uid: DMAServiceTemplate
 | Definition.CreateSLA | Boolean | Determines whether an SLA is created for the services generated with the service template. |
 | Definition.RequireConfirmation | Boolean | Determines whether the user has to confirm before the service template is applied. |
 | Definition.GlobalConditions | Array of DMAServiceTemplateGlobalCondition | Array of conditions, each consisting of a type (*None*, *Equals*, *WildCard* or *ContainsRow*) and two values. These conditions determine when elements can be combined in a service. They can for instance specify that part of the element names must be equal to a specific value. |
-| Definition.PreRequiredData | Array of [DMAServiceTemplateRequiredData](xref:DMAServiceTemplateRequiredData) | Extra information used in the service template to create services. This information is required before elements are assigned (e.g. data used to limit elements according to a user-specified condition). |
+| Definition.PreRequiredData | Array of [DMAServiceTemplateRequiredData](xref:DMAServiceTemplateRequiredData) | Extra information used in the service template to create services. This information is required before elements are assigned (e.g., data used to limit elements according to a user-specified condition). |
 | Definition.RequiredData | Array of [DMAServiceTemplateRequiredData](xref:DMAServiceTemplateRequiredData) | Extra information used in the service template to create services. |
 | Definition.AdvancedRequestOrder | String | The custom order in which child elements and input data should be selected when the service is generated, if any. |
 | Definition.AutoGenerateName | [DMASTString](xref:DMASTString) | The template for the name of the generated services. |
@@ -31,4 +31,4 @@ uid: DMAServiceTemplate
 | ServiceParams | Array of [DMAServiceParams](xref:DMAServiceParams) | The child elements of the generated services. |
 | VisioInfo.DefaultPage | Integer | The default page of the Visio drawing used for the generated services. |
 | VisioInfo.Name.Template | String | The template for the name of the Visio drawing used for the generated services. Placeholders in this template are in the format {0}, {1}, etc. and refer to the placeholders in the next field. See [DMASTString](xref:DMASTString). |
-| VisioInfo.Name.Placeholders | Array of DMASTPlaceholder | The placeholders used in the template, e.g. *\[data:Data Item Name\]* or *\[element:1:title\]*. See [DMASTString](xref:DMASTString). |
+| VisioInfo.Name.Placeholders | Array of DMASTPlaceholder | The placeholders used in the template, e.g., *\[data:Data Item Name\]* or *\[element:1:title\]*. See [DMASTString](xref:DMASTString). |

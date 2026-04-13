@@ -5,7 +5,7 @@ keywords: clearing the Cube cache, Cube cache clear
 
 # Cleaning up the DataMiner Cube cache
 
-To remove cached Cube versions and empty the Visio or protocol cache in the start window of the DataMiner Cube desktop application:
+To remove cached Cube versions and empty the Visio or protocol cache in the DataMiner Cube start window:
 
 1. Click the cogwheel button in the lower-right corner of the start window and select *Cleanup*.
 

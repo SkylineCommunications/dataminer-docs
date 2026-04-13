@@ -28,9 +28,9 @@ In short, when creating a redundancy group, you have to do the following:
 
 - Add the primary and the backup elements to the redundancy group.
 
-- Specify (for every primary element) when to switch from primary to backup, i.e. when to link the virtual primary element to the backup element.
+- Specify (for every primary element) when to switch from primary to backup, i.e., when to link the virtual primary element to the backup element.
 
-- Specify (for every primary element) when to switch back from backup to primary, i.e. when to link the virtual primary element to the primary element again.
+- Specify (for every primary element) when to switch back from backup to primary, i.e., when to link the virtual primary element to the primary element again.
 
 > [!NOTE]
 >

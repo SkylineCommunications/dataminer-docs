@@ -9,7 +9,7 @@ In the System Center module, the user permissions have been divided into two mai
 
 > [!NOTE]
 >
-> - To quickly find a particular user permission in System Center, use the filter box in the top-right corner of the list of permissions.
+> - To quickly find a particular user permission in System Center, use the filter box in the upper-right corner of the list of permissions.
 > - Some of these user permissions are only available if the DMA has the correct licenses and configuration, so that the user permissions are relevant.
 > - For many permissions, it makes no sense to grant them unless you grant the corresponding *UI Available* permission as well.
 
@@ -483,7 +483,7 @@ Permission to delete bookings.
 
 #### Modules \> Bookings \> Execute
 
-Permission to execute automation scripts or parameter sets linked to bookings, e.g. scripts that are linked to booking events, or custom context menu items for bookings.
+Permission to execute automation scripts or parameter sets linked to bookings, e.g., scripts that are linked to booking events, or custom context menu items for bookings.
 
 ### Modules \> Correlation
 

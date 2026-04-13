@@ -4,7 +4,7 @@ uid: MaintenanceSettings.AlarmSettings.MaxFreezeTime
 
 # MaxFreezeTime element
 
-Specifies the maximum period of time the Alarm Console can stay frozen (in milliseconds). Default: 60000000 milliseconds (i.e. 1000 minutes)
+Specifies the maximum period of time the Alarm Console can stay frozen (in milliseconds). Default: 60000000 milliseconds (i.e., 1000 minutes)
 
 ## Content Type
 

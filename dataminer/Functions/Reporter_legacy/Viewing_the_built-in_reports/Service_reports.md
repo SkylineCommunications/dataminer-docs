@@ -30,6 +30,6 @@ To go directly to the report types above, use the following URLs, replacing \[My
 
 > [!NOTE]
 > For the service history report, you can determine the time span for the report in two ways:
-> - By specifying the history duration (in hours), e.g. *http://\[MyDataMiner\]/Reports/Service-History.asp? action=gethistory&service=\[Service ID\]&history-duration=\[Number of hours\]*
-> - By specifying the history start and end time, e.g. *http://\[MyDataMiner\]/Reports/Service-History.asp? action=gethistory&history-start=\[start time\]&history-end=\[end time\]&service=\[Service ID\]*
+> - By specifying the history duration (in hours), e.g., *http://\[MyDataMiner\]/Reports/Service-History.asp? action=gethistory&service=\[Service ID\]&history-duration=\[Number of hours\]*
+> - By specifying the history start and end time, e.g., *http://\[MyDataMiner\]/Reports/Service-History.asp? action=gethistory&history-start=\[start time\]&history-end=\[end time\]&service=\[Service ID\]*
 >

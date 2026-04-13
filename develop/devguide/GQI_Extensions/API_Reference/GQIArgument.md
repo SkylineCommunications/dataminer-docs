@@ -38,7 +38,7 @@ For custom operators, you can also use the following arguments to select existin
 - `GQIColumnListArgument`
 
 > [!NOTE]
-> Each argument inherits from its typed base class, e.g. `GQIIntArgument` inherits from `GQIArgument<int>`
+> Each argument inherits from its typed base class, e.g., `GQIIntArgument` inherits from `GQIArgument<int>`
 
 ## Properties
 

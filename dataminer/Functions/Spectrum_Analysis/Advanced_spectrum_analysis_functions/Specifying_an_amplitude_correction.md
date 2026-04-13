@@ -4,7 +4,7 @@ uid: Specifying_an_amplitude_correction
 
 # Specifying an amplitude correction
 
-You can specify an amplitude correction in order to e.g. compensate for amplitude slope or/and other amplitude distortions on the cable path to a spectrum analyzer.
+You can specify an amplitude correction in order to, for example, compensate for amplitude slope or/and other amplitude distortions on the cable path to a spectrum analyzer.
 
 Specifying an amplitude correction is done by defining a set of frequency/amplitude offset pairs for a spectrum analyzer measurement point. Those are then interpolated for the whole frequency band of the spectrum analyzer and added to the trace data for display. The more pairs are defined, the more accurate the interpolated offset curve will be.
 

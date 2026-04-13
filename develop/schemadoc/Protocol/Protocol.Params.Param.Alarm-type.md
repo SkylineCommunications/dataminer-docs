@@ -30,7 +30,7 @@ string
 
 - The alarm template baseline editor in Cube allows you to configure (smart) baselines specified in protocols. However, it will not allow you to change the monitoring type (Normal, Relative, Absolute, or Rate).
 
-- When a baseline is specified in a protocol, the baseline value is stored in a separate parameter. The parameter in which the baseline value is stored must not have any restrictions (e.g. step size, number of decimals, high/low range, etc.), and the Interprete.RawType tag should not be set to [unsigned number](xref:Protocol.Params.Param.Interprete.RawType#unsigned-number).<!-- RN 36997 -->
+- When a baseline is specified in a protocol, the baseline value is stored in a separate parameter. The parameter in which the baseline value is stored must not have any restrictions (e.g., step size, number of decimals, high/low range, etc.), and the Interprete.RawType tag should not be set to [unsigned number](xref:Protocol.Params.Param.Interprete.RawType#unsigned-number).<!-- RN 36997 -->
 
 - The smart baseline algorithm may sometimes produce unexpected results with respect to parameter ranges. For example, consider a parameter that consistently fluctuates between 0 and 100. The baseline is an approximation of your data, so it might sometimes slightly dip below 0 or slightly exceed 100. To address this, we recommend configuring appropriate ranges for the parameter within the protocol. The algorithm will respect these limits during baseline calculations. For instance, if a lower range of 0 is defined in the protocol, any baseline value calculated below 0 will automatically be capped at 0.
 

@@ -84,7 +84,7 @@ In this step, you will learn what potential issues DataMiner's proactive cap det
 
    This tab displays the situation before the cache utilization of server 2 reached 100%. As mentioned earlier, when you look at the metrics in this window, it is not immediately clear that the blue line will decrease again, while the green line will continue to rise.
 
-1. Scroll slightly to the right by clicking and dragging the trend graph, and take a look at the dashed lines on the right-hand side.
+1. Scroll slightly to the right by clicking and dragging the trend graph, and take a look at the dashed lines on the right.
 
    ![Prediction of cache utilization of the three content management servers](~/dataminer/images/Proactive_Cap_Detection_Tutorial_CMS_Before_Failure_Prediction.png)
 
@@ -92,7 +92,7 @@ In this step, you will learn what potential issues DataMiner's proactive cap det
 
    This prediction is also used to notify users when parameters are about to hit the upper or lower limit of their range.
 
-1. Click the light bulb icon in the top-right corner of the Alarm Console.
+1. Click the light bulb icon in the upper-right corner of the Alarm Console.
 
    This icon lights up blue to indicate that DataMiner Analytics has identified something interesting. For more detailed information, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
 
@@ -130,7 +130,7 @@ In the previous step, you explored how proactive cap detection can identify issu
 
 1. Right-click the element *Proactive Tutorial - SFP Monitor* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
 
-1. Enter a name for the alarm template, e.g. *RX Monitoring*, and click *OK*.
+1. Enter a name for the alarm template, e.g., *RX Monitoring*, and click *OK*.
 
 1. Select the checkbox in the *MON* column for the parameter *SFPs: Optical RX Power*.
 
@@ -149,7 +149,7 @@ In the previous step, you explored how proactive cap detection can identify issu
    > [!IMPORTANT]
    > Throughout the rest of this tutorial, when generating data, always wait until the *Data Generated?* parameter displays *Yes* before proceeding to the next step.
 
-1. Click the light bulb icon in the top-right corner of the Alarm Console and select *2 alarms are predicted in the near future* to access the *Predicted alarms* tab.
+1. Click the light bulb icon in the upper-right corner of the Alarm Console and select *2 alarms are predicted in the near future* to access the *Predicted alarms* tab.
 
    You will now see a *Predicted Critical Low* event for *Optical RX Power Port 1*. DataMiner predicts that the parameter will cross the critical low threshold you just configured in the near future.
 
@@ -220,7 +220,7 @@ In this final step, you will apply what you have learned in this tutorial throug
 
 1. Use the alarm template to configure proactive alarming for the *Free Disk Space* parameter. The parameter's range has a lower limit of 0 GB.
 
-   Your goal is to configure proactive alarming so that a real alarm (i.e. not just a suggestion event) with severity *Warning* is triggered before the disk becomes full. Refer to the image below for the desired outcome.
+   Your goal is to configure proactive alarming so that a real alarm (i.e., not just a suggestion event) with severity *Warning* is triggered before the disk becomes full. Refer to the image below for the desired outcome.
 
 ![Predicted alarm with severity warning for Free Disk Space on AMS Server](~/dataminer/images/Proactive_Cap_Detection_Tutorial_AMS_Alarm.png)
 
@@ -240,7 +240,7 @@ In this final step, you will apply what you have learned in this tutorial throug
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
 
 > [!IMPORTANT]
-> We want to keep improving our proactive cap detection capabilities, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us good examples of detected predicted alarms and/or situations where the proactive cap detection can be improved (e.g. no alarm was predicted or an alarm was predicted for something that is not problematic).
+> We want to keep improving our proactive cap detection capabilities, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us good examples of detected predicted alarms and/or situations where the proactive cap detection can be improved (e.g., no alarm was predicted or an alarm was predicted for something that is not problematic).
 >
 > Use the following email format to send us your examples:
 >

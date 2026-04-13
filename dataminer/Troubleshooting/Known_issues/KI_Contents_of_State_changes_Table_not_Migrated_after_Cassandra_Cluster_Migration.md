@@ -18,4 +18,4 @@ Install DataMiner 10.3.0 [CU3]/10.2.0 [CU15]/10.3.4<!--RN 35699-->.
 
 ## Issue description
 
-After a migration from a setup with one Cassandra cluster per DMA to a [Cassandra Cluster setup](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster), heatmap data from before the migration (e.g. alarm states) are no longer displayed in heatmaps and timelines in the legacy Reporter module and on the *Reports* page of element cards.
+After a migration from a setup with one Cassandra cluster per DMA to a [Cassandra Cluster setup](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster), heatmap data from before the migration (e.g., alarm states) are no longer displayed in heatmaps and timelines in the legacy Reporter module and on the *Reports* page of element cards.

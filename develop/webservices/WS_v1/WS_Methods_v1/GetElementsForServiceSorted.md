@@ -7,7 +7,7 @@ uid: GetElementsForServiceSorted
 Use this method to retrieve a specific number of service child items (elements and/or services).
 
 > [!NOTE]
-> Using this method, you can e.g. request service child items in batches in order to minimize loading time.
+> Using this method, you can e.g., request service child items in batches in order to minimize loading time.
 
 ## Input
 

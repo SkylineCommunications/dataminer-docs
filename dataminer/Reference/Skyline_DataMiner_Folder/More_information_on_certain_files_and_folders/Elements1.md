@@ -47,7 +47,7 @@ Several things can be configured in this file:
   - *TimeSpan5MinRecords*: Determines the period during which the 5-minute "average trending" records have to be kept in the database.
   - *TimeSpanSpectrumRecords*: Determines the period during which spectrum trend data has to be kept in the database.
 
-  For each of these tags, you can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.). Each of these also has a *unit* attribute that can be set to "hour", "hours", "day", "days", "month", "months", "year" or "years".
+  For each of these tags, you can specify integer values (e.g., 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.). Each of these also has a *unit* attribute that can be set to "hour", "hours", "day", "days", "month", "months", "year" or "years".
 
   For example:
 

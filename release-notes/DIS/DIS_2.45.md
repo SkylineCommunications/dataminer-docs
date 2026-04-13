@@ -85,4 +85,4 @@ From now on, the Validator will no longer generate a minor issue when one of the
 
 #### Validator will now check for duplicate values case-insensitively [ID 37287]
 
-The Validator will now check for duplicate values (e.g. duplicate parameter names) case-insensitively.
+The Validator will now check for duplicate values (e.g., duplicate parameter names) case-insensitively.

@@ -54,7 +54,7 @@ In the *DMA* submenu, you can find the following commands:
 
   > [!NOTE]
   >
-  > - Use the filter box in the top-right corner to filter the list of automation scripts.
+  > - Use the filter box in the upper-right corner to filter the list of automation scripts.
   > - When DIS connects to a DataMiner Agent, it always uses polling.
   > - If this *Import Automation script* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect. See [DMA](xref:DIS_settings#dma)
 
@@ -70,7 +70,7 @@ In the *DMA* submenu, you can find the following commands:
 
   > [!NOTE]
   >
-  > - Use the filter box in the top-right corner to filter the list of protocols.
+  > - Use the filter box in the upper-right corner to filter the list of protocols.
   > - In order to prevent users from accidentally publishing a DVE protocol, it is not possible to publish a DVE protocol from inside DIS. When DIS detects that the *Protocol/Name* tag contains a *parentProtocol* attribute and that it is not empty, publishing will fail and a warning message will appear.
   > - When DIS connects to a DataMiner Agent, it always uses polling.
   > - If this *Import Protocol* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect. See [DMA](xref:DIS_settings#dma)

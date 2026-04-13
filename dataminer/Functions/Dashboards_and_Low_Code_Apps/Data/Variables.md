@@ -79,7 +79,7 @@ To create a new variable:
 
      1. Add content to the cells.
 
-        1. Click "ABC" in the top-right corner of a column header to select the data type (text, number, or boolean) for that column.
+        1. Click "ABC" in the upper-right corner of a column header to select the data type (text, number, or boolean) for that column.
 
            ![data type](~/dataminer/images/Variable_DataType_Column.png)<br>*Table editor in DataMiner 10.4.12*
 

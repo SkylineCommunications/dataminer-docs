@@ -72,7 +72,7 @@ After you have made sure the above-mentioned prerequisites are in place, you can
 
 ## Security
 
-By granting [Admin consent](xref:Granting_admin_consent) from your Microsoft (Teams) tenant to "DataMiner" (i.e. Skyline Communications) in the [Admin app](https://admin.dataminer.services), you allow Skyline Communications to execute these chat integration actions. This includes creating teams, channels, and chats, fetching users, chats, etc.
+By granting [Admin consent](xref:Granting_admin_consent) from your Microsoft (Teams) tenant to "DataMiner" (i.e., Skyline Communications) in the [Admin app](https://admin.dataminer.services), you allow Skyline Communications to execute these chat integration actions. This includes creating teams, channels, and chats, fetching users, chats, etc.
 
 You can revoke this access at any time. See [Granting admin consent for Teams Chat Integration](xref:Granting_admin_consent).
 

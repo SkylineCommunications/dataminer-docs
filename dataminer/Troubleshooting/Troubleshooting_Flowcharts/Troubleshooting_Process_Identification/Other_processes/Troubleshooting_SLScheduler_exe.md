@@ -120,7 +120,7 @@ class Config,ErrorYes,Win Gray;
 
   - Check errors in Cube logging.
 
-  - Pay special attention to the data, e.g. incorrect time format.
+  - Pay special attention to the data, e.g., incorrect time format.
 
 ## Windows Task Scheduler
 

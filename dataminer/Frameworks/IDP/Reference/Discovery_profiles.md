@@ -362,9 +362,9 @@ WMI discovery actions have the following fields:
 
 - **ProtocolType**: This defines the discovery mechanism and is set to *WMI*.
 
-- **Method**: The namespace, e.g. *root\\\\cimv2*.
+- **Method**: The namespace, e.g., *root\\\\cimv2*.
 
-- **Parameter**: The class and the name, e.g. *Win32_Service\\\\Name*.
+- **Parameter**: The class and the name, e.g., *Win32_Service\\\\Name*.
 
 - **Port**: The destination port on the device to send the request to, by default 135. However, this needs to be checked as WMI has a fixed port and the port cannot be specified when doing WMI queries.
 

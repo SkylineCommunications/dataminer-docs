@@ -22,7 +22,7 @@ In the *list* tab, all scheduled tasks are shown in a list. Next to each task, t
 
 In the *Last runtime result* column, the color of the entry reflects the result: red indicates that the task failed, green indicates success, and gray corresponds to a currently running task.
 
-To quickly find a particular scheduled task, you can use the quick filter box in the top-right corner. It can be used to filter on the task name or on the content of any of the other columns.
+To quickly find a particular scheduled task, you can use the quick filter box in the upper-right corner. It can be used to filter on the task name or on the content of any of the other columns.
 
 It is possible to execute a scheduled task immediately, regardless of when it is scheduled, by selecting the task and then clicking the *Execute* button at the bottom of the card. If you do so, the task will be executed again at the time when it was originally scheduled.
 
@@ -40,11 +40,11 @@ In each of the *timeline* subtabs, the large pane on the right displays the Sche
 
 - To zoom in or out, scroll in the timeline pane or drag the mouse right or left in the preview pane.
 
-- To zoom to a particular time, e.g. the next hour, or the past month, right-click the timeline, and select *Zoom to \[time\]*.
+- To zoom to a particular time, e.g., the next hour, or the past month, right-click the timeline, and select *Zoom to \[time\]*.
 
 - Open the *Navigation* section at the bottom for more options:
 
-  - Click a button with a particular time to zoom to this time on the timeline, e.g. Today, Last week, Next month, etc.
+  - Click a button with a particular time to zoom to this time on the timeline, e.g., Today, Last week, Next month, etc.
 
   - To make the timeline move along with the current time, in the lower-left corner, select *Follow mode*.
 

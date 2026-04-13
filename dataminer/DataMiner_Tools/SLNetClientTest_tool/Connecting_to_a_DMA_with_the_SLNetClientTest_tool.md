@@ -37,7 +37,7 @@ Before you can use any of the SLNetClientTest tool functions, you must first con
    - Debug SAML (not yet fully supported)<!--RN 37370-->
 
      > [!NOTE]
-     > The *Debug SAML* option is currently still being developed, so we recommend using the procedure mentioned under [Collecting the SAML response](xref:Troubleshooting_SAML_Issues#collecting-the-saml-response) for this instead. You should only use the *Debug SAML* option in the SLNetClientTest tool if this is recommended by a contact from e.g. DataMiner Support, and this contact has provided you with the necessary means to ensure that the tool functions as expected. After that, when you select this option before connecting to a DMA that uses external authentication via SAML, two pop-up windows will appear, displaying the SAML requests and SAML responses respectively.
+     > The *Debug SAML* option is currently still being developed, so we recommend using the procedure mentioned under [Collecting the SAML response](xref:Troubleshooting_SAML_Issues#collecting-the-saml-response) for this instead. You should only use the *Debug SAML* option in the SLNetClientTest tool if this is recommended by a contact from e.g., DataMiner Support, and this contact has provided you with the necessary means to ensure that the tool functions as expected. After that, when you select this option before connecting to a DMA that uses external authentication via SAML, two pop-up windows will appear, displaying the SAML requests and SAML responses respectively.
 
 ## [Prior to DataMiner 10.3.1/10.4.0](#tab/tabid-2)
 

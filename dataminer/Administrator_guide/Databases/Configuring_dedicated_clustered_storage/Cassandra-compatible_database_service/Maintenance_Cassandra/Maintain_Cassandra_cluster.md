@@ -28,7 +28,7 @@ To ensure that your Cassandra database is running fine, we highly recommend that
 
 When nodes are down for longer periods of time or when there has been a network problem, it may happen that data is no longer in sync between nodes holding copies (in case of replication). To ensure that data is synced again, repairs need to be scheduled.
 
-For large-scale clusters, this might be very difficult to manage as you need to avoid that repairs are running on multiple nodes at the same time for specific data. To deal with this, we recommend that you install [Cassandra Reaper](http://cassandra-reaper.io/) in sidecar mode (i.e. install the software on every node).
+For large-scale clusters, this might be very difficult to manage as you need to avoid that repairs are running on multiple nodes at the same time for specific data. To deal with this, we recommend that you install [Cassandra Reaper](http://cassandra-reaper.io/) in sidecar mode (i.e., install the software on every node).
 
 >[!IMPORTANT]
 > It is absolutely essential that you perform repairs on your Cassandra nodes. Not repairing your tables might have severe consequences, as detailed in [Cassandra docs - Repair](https://cassandra.apache.org/doc/4.0/cassandra/operating/repair.html). We highly recommend automating your repairs with Cassandra Reaper as outlined above.

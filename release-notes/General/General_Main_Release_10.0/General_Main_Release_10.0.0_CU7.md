@@ -16,7 +16,7 @@ uid: General_Main_Release_10.0.0_CU7
 
 When you open a card on a mobile device, you will now see a card header instead of the app header, and you will be able to open a card sidebar just like on a desktop device.
 
-Also, the card menu is now accessible through a hamburger button in the top-right corner.
+Also, the card menu is now accessible through a hamburger button in the upper-right corner.
 
 #### Logging: More information stored in errorlog.txt file when an error occurs in SLProtocol \[ID 26630\]
 
@@ -260,7 +260,7 @@ When a daylight saving time change occurred while a booking was active, in some 
 
 Up to now, when you tried to deactivate or delete a function file used by ReservationInstances, ReservationDefinitions, ServiceDefinitions or ServiceProfileDefinitions, the returned error would contain an incorrect file name.
 
-From now on, the error will contain the correct file name, i.e. the name of the file that cannot be deactivated or deleted because it is in use.
+From now on, the error will contain the correct file name, i.e., the name of the file that cannot be deactivated or deleted because it is in use.
 
 #### DataMiner Cube - Bookings app: Bookings list would not get updated when a booking was deleted \[ID 27482\]
 
@@ -280,7 +280,7 @@ If you deactivated or deleted a functions file in the Protocols & Templates app,
 
 #### Mobile apps: Date picker controls would show an incorrect month when the day was greater than or equal to 30 (or 29 in case of a leap year) \[ID 27522\]
 
-In mobile apps (e.g. Jobs), in some cases, date picker controls would show an incorrect month when the day was 30 or 31 (or 29, 30 or 31 in case of a leap year).
+In mobile apps (e.g., Jobs), in some cases, date picker controls would show an incorrect month when the day was 30 or 31 (or 29, 30 or 31 in case of a leap year).
 
 #### DataMiner Cube - Alarm templates: Problem when editing alarm levels of a matrix parameter from the Alarm Console \[ID 27535\]
 
@@ -302,7 +302,7 @@ In systems with a MySQL local database, it could occur that alarms for numeric o
 
 #### Services containing remote elements would no longer get recalculated when the agent hosting the remote elements was disconnected \[ID 27589\]
 
-In some cases, locally hosted services containing elements hosted on another DataMiner Agent (i.e. remote elements) would no longer get recalculated when the connection with the that other agent was lost.
+In some cases, locally hosted services containing elements hosted on another DataMiner Agent (i.e., remote elements) would no longer get recalculated when the connection with the that other agent was lost.
 
 #### Not possible to delete ticketing resolver \[ID 27603\]
 

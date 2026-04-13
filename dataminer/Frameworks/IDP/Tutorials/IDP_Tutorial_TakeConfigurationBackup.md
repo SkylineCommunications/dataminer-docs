@@ -74,7 +74,7 @@ Instead of creating the CI Type from scratch, you will generate it based on an e
 
    1. Click *Finish* to close the wizard.
 
-   1. Switch off the *Show All* button in the top-right corner to locate the generated CI Type more easily.
+   1. Switch off the *Show All* button in the upper-right corner to locate the generated CI Type more easily.
 
       ![Generate the CI Type](~/dataminer/images/IDP_Tutorial_TakeConfigurationBackup_GenerateCiType_2.png)
 
@@ -196,7 +196,7 @@ When IDP is installed it comes with an example script on how to retrieve the con
 
    This will open a wizard.
 
-1. Select a type (e.g. *Running*), click *Next*, and then click *Finish*.
+1. Select a type (e.g., *Running*), click *Next*, and then click *Finish*.
 
    ![Confirmation pop-up script](~/dataminer/images/IDP_Tutorial_TakeConfigurationBackup_ConfirmationPopup.png)
 

@@ -36,7 +36,7 @@ In the Protocols & Templates module in DataMiner Cube, virtual function definiti
 
 A profile parameter is a **generic definition of a parameter** that is used in SRM orchestration.
 
-For example, a "bit rate" parameter can be defined slightly differently in different connectors (e.g. different naming, units, etc.) If a profile parameter "bit rate" is created, a Profile-Load Script can provide the mapping and translation between the generic "bit rate" profile parameter and the corresponding parameter of the connector.
+For example, a "bit rate" parameter can be defined slightly differently in different connectors (e.g., different naming, units, etc.) If a profile parameter "bit rate" is created, a Profile-Load Script can provide the mapping and translation between the generic "bit rate" profile parameter and the corresponding parameter of the connector.
 
 Different types of profile parameters exist:
 
@@ -68,7 +68,7 @@ Another example of a profile definition could be a profile definition "IP Interf
 
 Service definitions are only used in the context of Service Orchestration.
 
-In essence, a service definition is a **definition of multiple virtual functions connected together through their interfaces**. It describes the various functions used to deliver a specific service (e.g. a video or data service) and how each function is connected. For example, a service definition could define how an "encoding" virtual function is linked to a "decoding" virtual function.
+In essence, a service definition is a **definition of multiple virtual functions connected together through their interfaces**. It describes the various functions used to deliver a specific service (e.g., a video or data service) and how each function is connected. For example, a service definition could define how an "encoding" virtual function is linked to a "decoding" virtual function.
 
 A service definition is a key component in the management and orchestration of services. In addition to the definition of connecting virtual functions, it contains information needed to correctly manage booking creation and orchestration. When a booking is created, this typically involves the selection of a specific service definition and of profile instances for each of the virtual functions included in that service definition. Resources can then be selected manually or automatically. The service definition itself does not contain any resource or profile configuration.
 

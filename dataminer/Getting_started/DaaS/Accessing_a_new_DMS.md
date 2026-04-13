@@ -36,7 +36,7 @@ uid: Accessing_a_new_DMS
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-    <b>💡 UP NEXT</b><br>Now that you are logged in, you can start <a href="xref:DaaS_connecting_to_data_sources">adding elements to monitor data sources</a> or, if you just want to discover some of the things DataMiner can do, <a href="xref:DaaS_deploying_solution_demos">deploy some demo solutions</a>. If you want other users to be able to use your DaaS system, <a href="xref:Managing_users">add these users and configure their rights in System Center</a>.
+    <b>💡 UP NEXT</b><br><a href="xref:Creating_your_first_element_on_a_DaaS_system">Create your first element on a DaaS system</a>
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>

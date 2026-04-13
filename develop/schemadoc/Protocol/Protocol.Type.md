@@ -43,7 +43,7 @@ This type of protocol, built like a "Serial" protocol, will allow DataMiner to c
 
 ### serial
 
-Used for standard serial protocols (e.g. RS232, RS485, etc.).
+Used for standard serial protocols (e.g., RS232, RS485, etc.).
 
 DataMiner will act as a master, and will continuously send commands to the elements. Elements will only respond after having received a valid command from DataMiner.
 
@@ -64,7 +64,7 @@ A special type of protocol that represents a Service Level Agreement.
 
 ### smart-serial
 
-Used for more advanced serial protocols (e.g. RS232, RS485) using a dedicated serial port.
+Used for more advanced serial protocols (e.g., RS232, RS485) using a dedicated serial port.
 
 Elements can send messages to DataMiner, without DataMiner having to first send a command (unlike a protocol of type "Serial", where elements only send messages after having received a command from DataMiner). Typically, this type of protocol allows more advanced features to be implemented, such as automatic detection and alarm limit download to the device level.
 

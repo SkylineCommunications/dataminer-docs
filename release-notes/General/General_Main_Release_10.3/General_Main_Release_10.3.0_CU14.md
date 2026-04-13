@@ -142,7 +142,7 @@ From now on, when a correlation rule is configured to use the *Collect events fo
 
 Up to now, when you opened a new alarm tab, and did a search using the *Search for alarms* box, the alarms matching the search criterion would incorrectly show timestamps according to the local time zone of the client computer.
 
-From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e. the local time zone of the DataMiner Agent to which the Cube client is connected.
+From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e., the local time zone of the DataMiner Agent to which the Cube client is connected.
 
 #### Not possible to delete a service created via an SRM booking when it had been assigned a name that was already being used [ID 38914]
 
@@ -176,7 +176,7 @@ When you opened a visual overview in a web app, in some cases, a `Connection cou
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
-Up to now, an error would occur when a DataMiner module (e.g. Automation, Scheduler, etc.) tried to send an email while *SLASPConnection* was still initializing. From now on, all DataMiner modules will be able to send emails, even when *SLASPConnection* is still initializing.
+Up to now, an error would occur when a DataMiner module (e.g., Automation, Scheduler, etc.) tried to send an email while *SLASPConnection* was still initializing. From now on, all DataMiner modules will be able to send emails, even when *SLASPConnection* is still initializing.
 
 #### SNMP: Timeout time of commands would incorrectly be doubled when using SNMP++ [ID 39164]
 

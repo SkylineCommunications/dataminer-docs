@@ -10,7 +10,7 @@ To specify that a shape should be created automatically for each booking in a pa
 
 1. Put the shape into a group, and add the necessary group-level shape data fields to the group. See [Group-level shape data](#group-level-shape-data).
 
-   By default, from DataMiner 10.2.0 [CU10]/10.3.1 onwards, all bookings from one day in the past up to one day in the future are shown. Prior to DataMiner 10.2.0 [CU10]/10.3.1, all bookings in the Cube cache are shown. If that cache does not contain any bookings, then a default set of bookings is retrieved (i.e. from 1 day in the past up to 1 day in the future).
+   By default, from DataMiner 10.2.0 [CU10]/10.3.1 onwards, all bookings from one day in the past up to one day in the future are shown. Prior to DataMiner 10.2.0 [CU10]/10.3.1, all bookings in the Cube cache are shown. If that cache does not contain any bookings, then a default set of bookings is retrieved (i.e., from 1 day in the past up to 1 day in the future).
 
 > [!NOTE]
 > Dynamically generated booking shapes are functionally identical to shapes linked to bookings using a *Reservation* data field. For example, they support the same placeholders. See [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking).
@@ -65,7 +65,7 @@ The following shape data fields can be added to the group containing the booking
   - `Property|End time`: Sorts on the booking end time (based on the *End* field of the *ReservationInstance* object).
   - `Property|property=End`: Sorts on the booking end time minus the post-roll time (based on the *End* custom property of the *ReservationInstance* object). Supported from DataMiner 10.2.0 [CU10]/10.3.1 onwards.
 
-  Optionally, you can also add `,asc` (i.e. the default order) or `,desc` to specify the sort order, e.g. `Property|Start time,asc`.
+  Optionally, you can also add `,asc` (i.e., the default order) or `,desc` to specify the sort order, e.g., `Property|Start time,asc`.
 
   > [!NOTE]
   > If you want to sort on start or end time based on a custom property, make sure the property is stored as a DateTime object.
@@ -85,7 +85,7 @@ The following shape data fields can be added to the group containing the booking
   - WrapVertical
   - WrapHorizontal
 
-- **ChildrenSource**: To add bookings from a specific time range, add a **ChildrenSource** shape data field to the shape group and set its value to that time range (e.g. “StartTime=\<dateTime>|EndTime=\<dateTime>”).
+- **ChildrenSource**: To add bookings from a specific time range, add a **ChildrenSource** shape data field to the shape group and set its value to that time range (e.g., “StartTime=\<dateTime>|EndTime=\<dateTime>”).
 
   > [!NOTE]
   >

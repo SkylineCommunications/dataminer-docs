@@ -1,5 +1,6 @@
 ---
 uid: User_management
+description: DataMiner supports different types of directories for user management and also works with local users, including a built-in Administrator user
 ---
 
 # User management
@@ -11,7 +12,7 @@ DataMiner supports the following types of directories for user management:
 - [Active Directory](xref:Adding_a_user#adding-an-existing-domain-user) (default)
 - [Azure Active Directory](xref:Setting_up_Azure_Active_Directory_Domain_Services)
 - [Atlassian Crowd](xref:Configuring_Atlassian_Crowd_settings)
-- [LDAP-compatible directories](xref:Configuring_LDAP_settings) (e.g. OpenLDAP)
+- [LDAP-compatible directories](xref:Configuring_LDAP_settings) (e.g., OpenLDAP)
 
 By default, DataMiner will import users from its local Active Directory.
 
@@ -20,13 +21,15 @@ By default, DataMiner will import users from its local Active Directory.
 
 ## Local users
 
-Apart from directory users, DataMiner also has a notion of local users, i.e. users created within the DataMiner System. Behind the scenes, when a new local user is created, DataMiner will create a new Windows user. Local users are completely managed by the Windows Server hosting your DataMiner System. This means Windows is responsible for password storage, complexity, and audit trail requirements.
+Apart from directory users, DataMiner also has a notion of local users, i.e., users created within the DataMiner System. Behind the scenes, when a new local user is created, DataMiner will create a new Windows user. Local users are completely managed by the Windows Server hosting your DataMiner System. This means Windows is responsible for password storage, complexity, and audit trail requirements.
 
 For more information see [Types of users](xref:Types_of_users).
 
 ## Default Users
 
 DataMiner has one built-in user, named "Administrator". This user is also the local administrator on the Windows server hosting DataMiner. This user is intended for recovery and initial configuration purposes. We highly recommend that you avoid using this account for routine and day-to-day operations and securely manage access to this account, for example via LAPS.
+
+If you need to change the password for the Administrator user, make sure to [do so from DataMiner Cube](xref:Editing_a_users_details) so that the change is synchronized across the cluster.
 
 > [!NOTE]
 > If you use self-managed storage nodes instead of the recommended [Storage as a Service](xref:STaaS), you will need to make sure that the default users of the DataMiner **databases** are also secured. For more information, see [Securing self-managed DataMiner storage](xref:Cassandra_authentication).

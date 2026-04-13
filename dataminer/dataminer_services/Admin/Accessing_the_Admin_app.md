@@ -27,7 +27,7 @@ You can also go to the app via dataminer.services:
    ![DMS in the home app](~/dataminer/images/CcaHomeApp.png)
 
 > [!NOTE]
-> If you cannot find your DMS in the list, make sure the correct organization is selected in the top-right corner.
+> If you cannot find your DMS in the list, make sure the correct organization is selected in the upper-right corner.
 
 ## Via DataMiner Cube
 

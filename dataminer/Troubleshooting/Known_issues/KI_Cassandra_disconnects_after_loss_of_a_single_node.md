@@ -12,7 +12,7 @@ Any versions using a Cassandra Cluster setup.
 
 This issue results from a difference in behavior between [replication strategies](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/architecture/archDataDistributeReplication.html).
 
-When connecting to Cassandra, SLDataGateway checks the replication factor. A Cassandra database that has keyspaces using SimpleStrategy (e.g. a Cassandra database per DMA with Failover) returns a response with the following format:
+When connecting to Cassandra, SLDataGateway checks the replication factor. A Cassandra database that has keyspaces using SimpleStrategy (e.g., a Cassandra database per DMA with Failover) returns a response with the following format:
 
 ```txt
 "{'class': 'org.apache.cassandra.locator.SimpleStrategy', 'replication_factor': '2'}"

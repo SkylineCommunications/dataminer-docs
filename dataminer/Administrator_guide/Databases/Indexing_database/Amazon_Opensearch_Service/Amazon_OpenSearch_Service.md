@@ -23,7 +23,7 @@ Supported versions:
 
 1. Go to [Amazon OpenSearch Service](https://aws.amazon.com/opensearch-service/).
 
-1. Create your domain by selecting *Create domain* in the top-right corner.
+1. Create your domain by selecting *Create domain* in the upper-right corner.
 
    ![Create Domain](~/dataminer/images/Amazon_OpenSearch_CreateDomain.png)
 

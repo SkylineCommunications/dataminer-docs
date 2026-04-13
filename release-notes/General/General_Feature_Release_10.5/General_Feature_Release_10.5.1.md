@@ -129,9 +129,9 @@ Note that when Swarming is enabled, this will result in some major changes to th
 
 Currently, the Swarming feature provides the following capabilities:
 
-- As a DataMiner System Admin, you can apply maintenance (e.g. Windows updates) on a live cluster, Agent by Agent, by temporarily moving functionalities away to other Agents in the cluster.
+- As a DataMiner System Admin, you can apply maintenance (e.g., Windows updates) on a live cluster, Agent by Agent, by temporarily moving functionalities away to other Agents in the cluster.
 
-- As a DataMiner System Admin, you can easily extend your system with an extra node and move functionalities from existing nodes to new nodes, so you can rebalance your cluster (i.e. spread the load across all nodes).
+- As a DataMiner System Admin, you can easily extend your system with an extra node and move functionalities from existing nodes to new nodes, so you can rebalance your cluster (i.e., spread the load across all nodes).
 
 - Swarming makes it possible to recover functionalities from failing nodes by moving activities hosted on such a node to the remaining nodes.
 
@@ -242,7 +242,7 @@ The legacy correlation engine is now deprecated. As of this version, DataMiner w
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 
-When, in e.g. DataMiner Cube, you try to add a DataMiner Agent to the DataMiner System, a number of checks will be performed to determine whether the new Agent is compatible to be added.
+When, in e.g., DataMiner Cube, you try to add a DataMiner Agent to the DataMiner System, a number of checks will be performed to determine whether the new Agent is compatible to be added.
 
 The checks with regard to database compatibility have now been enhanced.
 
@@ -257,7 +257,7 @@ Since DataMiner feature release 10.4.11, it is possible to switch to another mas
 Up to now, if the current master agent had been marked "not eligible to be promoted to master", it would continue to process all ongoing and queued requests as if it were still master agent. This behavior has now changed. From now on, all ongoing and queued requests sent to the current master agent that has been marked "not eligible to be promoted to master" will fail with a `NotAMasterAgentException`, and the agents that sent those messages will resend them to the new master agent.
 
 > [!NOTE]
-> Currently, property updates will still be processed by the agent that was marked "not eligible to be promoted to master" (i.e. the old master).
+> Currently, property updates will still be processed by the agent that was marked "not eligible to be promoted to master" (i.e., the old master).
 
 #### Cassandra Cluster Migrator tool: Enhancements [ID 41099]
 
@@ -390,7 +390,7 @@ From now on, DataMiner upgrade packages will include the most recent version of 
 
 From now on, it will no longer be allowed to perform a 10.5.x web-only upgrade on DMAs running a DataMiner version older than 10.4.x.
 
-If you want to perform a 10.5.x web-only upgrade on a DMA running e.g. version 10.3.x, you will first have to upgrade that DMA to 10.4.0.
+If you want to perform a 10.5.x web-only upgrade on a DMA running e.g., version 10.3.x, you will first have to upgrade that DMA to 10.4.0.
 
 #### SLAnalytics: Infinite parameter values will now be considered missing values [ID 41417]
 
@@ -497,7 +497,7 @@ When a smart-serial UDP element was stopped, the client connections would incorr
 
 A number of problems that occurred when polling SNMP tables using *GetNext* have been fixed:
 
-- When an entire SNMP table was polled using *GetNext* messages, and not all rows had values with the same syntax (e.g. 1.2.3 vs 4.5.6.7), in some cases, cells would be empty or would be shifted to another row. The SLSNMPManager process could even disappear. From now on, all table cell values will be displayed correctly.
+- When an entire SNMP table was polled using *GetNext* messages, and not all rows had values with the same syntax (e.g., 1.2.3 vs 4.5.6.7), in some cases, cells would be empty or would be shifted to another row. The SLSNMPManager process could even disappear. From now on, all table cell values will be displayed correctly.
 
 - Up to now, an SNMP table would be polled until the returned OID result went out of scope. For example, when only 3 columns were defined in the table parameter, and the SNMP table contained 20 columns, all 20 columns would be polled, even though the data in the remaining 17 columns was not needed. From now on, as soon as the columns defined in the table parameter are polled, polling will stop and the result will be filled in.
 
@@ -540,7 +540,7 @@ A number of issues that occurred while synchronizing files among agents in a DMS
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. `C:\Skyline DataMiner\users\<UserName>`).
+When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e., `C:\Skyline DataMiner\users\<UserName>`).
 
 #### DataMiner upgrade: Folder to which the contents of the upgrade package had been extracted would not be removed [ID 41393]
 

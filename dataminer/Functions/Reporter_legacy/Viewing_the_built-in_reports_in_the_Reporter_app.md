@@ -12,7 +12,7 @@ To view the built-in reports in the Reporter app:
 
 - To go directly to a particular type of built-in report, use that report’s URL as indicated below. Note that depending on your setup, you may need to use https instead of http in the indicated URLs.
 
-In the navigation menu on the left, you can see an overview of the available reports and dashboards. The pages at the top of the navigation menu contain the built-in reports. With the view filter in the top-right corner, you can display information for certain views only.
+In the navigation menu on the left, you can see an overview of the available reports and dashboards. The pages at the top of the navigation menu contain the built-in reports. With the view filter in the upper-right corner, you can display information for certain views only.
 
 - [System reports](xref:System_reports)
 

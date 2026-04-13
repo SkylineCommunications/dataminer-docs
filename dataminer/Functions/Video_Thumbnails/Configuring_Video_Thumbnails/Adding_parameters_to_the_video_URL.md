@@ -22,11 +22,15 @@ All supported video server types and their associated parameters are defined in 
 
   - HLS (HTTPS Live Streaming): `type=HTML5-HLS`
 
-    - From DataMiner web 10.4.0 [CU10]/10.5.1 onwards<!--RN 41407-->, if the HLS stream has multiple audio tracks, you can select your preferred audio track using the dropdown menu in the top-right corner of the video thumbnail.
+    - From DataMiner web 10.4.0 [CU10]/10.5.1 onwards<!--RN 41407-->, if the HLS stream has multiple audio tracks, you can select your preferred audio track using the dropdown menu in the upper-right corner of the video thumbnail.
 
     - All HLS resources must be delivered with CORS headers that permit GET requests. For more information, see <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>.
 
     - If you access a video thumbnail player that is using HTTPS, the media must also be served over HTTPS.
+
+    - From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44877-->, to prevent playback issues in Chrome version 142 and above, the MSE JavaScript implementation is used by default for HLS streams instead of the native HLS playback of the browser.
+
+      If you prefer to use the native browser HLS playback, you can use `type=HTML5` instead.
 
     > [!TIP]
     > For more information on HLS, see <https://github.com/video-dev/hls.js/>
@@ -35,10 +39,10 @@ All supported video server types and their associated parameters are defined in 
 
     - The following image formats are supported: .png, .jpg, and .bmp.
 
-    - If you want to display an image located on a DMA, place the image in the DMA's `C:\Skyline DataMiner\Webpages\Public\` folder (or one of its subfolders, e.g. `C:\Skyline DataMiner\Webpages\Public\MyImages\`).
+    - If you want to display an image located on a DMA, place the image in the DMA's `C:\Skyline DataMiner\Webpages\Public\` folder (or one of its subfolders, e.g., `C:\Skyline DataMiner\Webpages\Public\MyImages\`).
 
       > [!TIP]
-      > If you get an "Invalid path" error, open the file `C:\Skyline DataMiner\Webpages\VideoThumbnails\Web.config`, and check whether the image folder (e.g. */Public/MyImages/*) has been added to the *ExtraAllowedPaths* key.
+      > If you get an "Invalid path" error, open the file `C:\Skyline DataMiner\Webpages\VideoThumbnails\Web.config`, and check whether the image folder (e.g., */Public/MyImages/*) has been added to the *ExtraAllowedPaths* key.
       >
       > See also: [Allowed paths in case of connection via DataMiner proxy](xref:Allowed_paths_connection_DataMiner_proxy).
 
@@ -50,7 +54,7 @@ All supported video server types and their associated parameters are defined in 
 
   - VLC: `type=Generic%20VLC`
 
-    - To display video thumbnails with the VLC plugin in the Cube desktop app, use the 64-bit version of VLC.
+    - To display video thumbnails with the VLC plugin in DataMiner Cube, use the 64-bit version of VLC.
 
 - `source=`: The URL of the video/image.
 
@@ -76,7 +80,7 @@ All supported video server types and their associated parameters are defined in 
   > - In Visio, you can use the *EscapeDataString* placeholder when you add parameters, properties, or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: `https://<DMAIP>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=[EscapeDataString:[param:*,10014]]`
   > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
 
-- `volume=` (All video types): Available from DataMiner 10.2.0 [CU1]/10.2.4 onwards. Specify the volume for the video player in the URL. The volume should be specified as a percentage, ranging from 0 (i.e. muted) to 100.
+- `volume=` (All video types): Available from DataMiner 10.2.0 [CU1]/10.2.4 onwards. Specify the volume for the video player in the URL. The volume should be specified as a percentage, ranging from 0 (i.e., muted) to 100.
 
   Example: `#https://<DMAIP>/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50`
 

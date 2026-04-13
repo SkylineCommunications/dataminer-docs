@@ -180,6 +180,6 @@ When a group is removed, it will no longer be monitored by RAD. All active sugge
 
 ## Viewing historical anomalies
 
-The *Historical Anomalies* button in the top-right corner of the RAD Manager app opens a side panel listing all detected historical anomalies for the selected relational anomaly group. Clicking the *Show* button for an anomaly highlights the anomaly occurrence in the trend graphs of the main window.
+The *Historical Anomalies* button in the upper-right corner of the RAD Manager app opens a side panel listing all detected historical anomalies for the selected relational anomaly group. Clicking the *Show* button for an anomaly highlights the anomaly occurrence in the trend graphs of the main window.
 
 You can also open this side panel by clicking the ![Historical Anomalies Icon](~/dataminer/images/RAD_Manager_HistoricalAnomalies.png) icon on the relational anomaly group tile in the overview on the left side of the main page. This will show the anomalies in the last 30 days. The icon also provides a quick visual indication of the number of anomalies detected in the past 30 days, for example: ![Historical anomalies icon with number](~/dataminer/images/RAD_Manager_HistoricalAnomaliesWithNumber.png).

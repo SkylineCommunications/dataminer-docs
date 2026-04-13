@@ -10,7 +10,7 @@ uid: DIS_2.39
 
 #### Enhanced NuGet support [ID 33544] [ID 34113] [ID 34115] [ID 34117]
 
-Up to now, in QAction and EXE projects, DIS would add references to the DataMiner DLL files of the locally installed DataMiner Agent or, if no DataMiner Agent was installed on the local machine, to copies of those files shipped with the DIS installation package. Instead, DIS will now add a reference to a DataMiner DevPack, i.e. a NuGet package that contains the core DataMiner DLL files of a specific DataMiner version. As a separate DataMiner DevPack is available for every released DataMiner version, adapting a solution to a specific DataMiner version is now merely a question of making sure the solution links to the DevPack of that version.
+Up to now, in QAction and EXE projects, DIS would add references to the DataMiner DLL files of the locally installed DataMiner Agent or, if no DataMiner Agent was installed on the local machine, to copies of those files shipped with the DIS installation package. Instead, DIS will now add a reference to a DataMiner DevPack, i.e., a NuGet package that contains the core DataMiner DLL files of a specific DataMiner version. As a separate DataMiner DevPack is available for every released DataMiner version, adapting a solution to a specific DataMiner version is now merely a question of making sure the solution links to the DevPack of that version.
 
 The DataMiner DevPacks can be found on the [official NuGet store](https://www.nuget.org/packages?q=skylinecommunications).
 
@@ -23,7 +23,7 @@ To be able to work with the new DataMiner DevPacks, you will have to change the 
 1. Go to *Tools > Options -> NuGet Package Manager > General*.
 1. Set *Default package management format* to "PackageReference".
 
-If any of your existing solutions are using NuGet packages the old way (i.e. using the package management format "packages.config"), you will have to make every project in those solutions use the package management format "PackageReference".
+If any of your existing solutions are using NuGet packages the old way (i.e., using the package management format "packages.config"), you will have to make every project in those solutions use the package management format "PackageReference".
 
 1. In Microsoft Visual Studio, open a solution and go to the Solution Explorer.
 1. Navigate to a project, right-click *References*, and select *Migrate packages.config to PackageReference...*.
@@ -44,13 +44,13 @@ Up to now, it was only possible to save a protocol or an automation script as an
 
 From now on, a protocol can be saved either as an XML file or as a *.dmprotocol* package and an automation script can be saved either as an XML file or a .dmapp package.
 
-If you choose to save a protocol or an automation script as a package, the package will contain the protocol or automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the protocol or automation script).
+If you choose to save a protocol or an automation script as a package, the package will contain the protocol or automation script as well as all required DLL files (e.g., DLL files of NuGet packages that are used in the protocol or automation script).
 
 #### Display editor: Enhanced DVE support [ID 33545]
 
 Up to now, when you opened a protocol in which DVE elements were defined and clicked *Display Editor* in the file tab header, the pages of the main protocol and the pages of the DVE protocols would be displayed in the same list.
 
-From now on, when DVE elements are defined in the protocol, a dropdown box in the top-left corner of the display editor will allow you to select either the main protocol or one of the DVE elements. The editor will then only display the pages and parameters of the item you selected.
+From now on, when DVE elements are defined in the protocol, a dropdown box in the upper-left corner of the display editor will allow you to select either the main protocol or one of the DVE elements. The editor will then only display the pages and parameters of the item you selected.
 
 Also, export rules will now be created automatically.
 

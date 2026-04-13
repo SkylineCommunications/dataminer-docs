@@ -8,6 +8,7 @@ In this section, you will find the following best practices information:
 
 - [Catalog items](xref:Best_practices-Catalog_Items)
 - [GitHub guidelines](xref:Using_GitHub_for_CICD)
+- [NuGet package recommendations](xref:NuGet_Recommendations)
 - [Unit testing](xref:Unit_testing)
 - [XML documentation comments](xref:Xml_Documentation_Comments)
 

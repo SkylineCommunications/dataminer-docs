@@ -7,7 +7,7 @@ uid: GetTableForParameterCached
 Use this method to retrieve the rows from a table parameter added or changed since a particular point in time.
 
 > [!NOTE]
-> Using this method, you can e.g. request table rows in batches in order to minimize loading time.
+> Using this method, you can e.g., request table rows in batches in order to minimize loading time.
 
 ## Input
 

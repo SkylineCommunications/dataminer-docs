@@ -227,7 +227,7 @@ In the table listing the buttons, add the buttons that you want to display and s
         "version":"1.0.0.0"}
     ```
 
-    In the example above, *buttonLayout.sources* is a list of mappings. In the "html", you can then refer to a source, e.g. *$btn1*, to display the corresponding image, in this case *button1.png*.
+    In the example above, *buttonLayout.sources* is a list of mappings. In the "html", you can then refer to a source, e.g., *$btn1*, to display the corresponding image, in this case *button1.png*.
 
   > [!NOTE]
   > Any images you refer to in the advanced layout of a button must be placed in the folder `C:\Skyline DataMiner\Dashboards\_IMAGES\buttons`.

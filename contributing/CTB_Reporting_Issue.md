@@ -8,7 +8,7 @@ GitHub offers the possibility to report an issue. This feature can be used if yo
 
 1. Go to the [dataminer-docs repository](https://github.com/SkylineCommunications/dataminer-docs) on GitHub.
 
-1. In the top-left corner, select *Issues*.
+1. In the upper-left corner, select *Issues*.
 
 1. Select *New issue*.
 

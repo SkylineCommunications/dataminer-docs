@@ -69,7 +69,7 @@ The following checks and error messages have been added.
 
 The Protocol XML schema has been updated.
 
-- The visibleInUI attribute has been removed from Protocol.PortSettings (i.e. the port settings of the main connection). This attribute is now only available in Protocol.Ports.PortSettings (i.e. the port settings of the additional connections).
+- The visibleInUI attribute has been removed from Protocol.PortSettings (i.e., the port settings of the main connection). This attribute is now only available in Protocol.Ports.PortSettings (i.e., the port settings of the additional connections).
 - The backup attribute has been removed from Protocol.Params.Param.
 - PortSettings.FlowControl.DefaultValue, PortSettings.FlowControl.Range.From and PortSettings.FlowControl.Range.To can now all be set to “no”.
 - Protocol.Params.Param.Interprete.Exceptions.Exception.Display is now of type non-empty string.

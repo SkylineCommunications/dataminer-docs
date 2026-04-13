@@ -7,7 +7,7 @@ uid: GetParametersForServiceSorted
 Use this method to retrieve a specific number of service parameters.
 
 > [!NOTE]
-> Using this method, you can e.g. request service parameters in batches in order to minimize loading time.
+> Using this method, you can e.g., request service parameters in batches in order to minimize loading time.
 
 ## Input
 

@@ -82,7 +82,7 @@ Also, when the Cube login window allows you to change the hostname, and you ente
 From now on, when you try to add a DataMiner Agent to a DataMiner System, an error message will appear in the following cases:
 
 - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
-- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
+- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e., they are not part of the same cloud-connected system.
 
 If the DataMiner System is a STaaS system, an error message will also appear when the DataMiner Agent is not cloud-connected.
 

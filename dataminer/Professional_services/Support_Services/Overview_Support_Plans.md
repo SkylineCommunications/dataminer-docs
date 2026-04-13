@@ -35,7 +35,7 @@ For additional information, consult the [FAQ section](xref:FAQs_Support_Services
 
 The *Community* plan enables access to Skyline's Operations team through the forum ([questions](https://community.dataminer.services/questions/) section) and unlimited access to technical resources such as the learning materials, tutorials, or code examples. [Proactive support services](xref:Proactive_Support) are included in this plan.
 
-While software updates to the DataMiner core software are included, connector updates and access to remote technical support (i.e. Operations team) are charged per hour.
+While software updates to the DataMiner core software are included, connector updates and access to remote technical support (i.e., Operations team) are charged per hour.
 
 This plan is primarily intended for DataMiner platform users who have a [Community Edition](https://community.dataminer.services/usage-based-pricing/), pay-per-use systems, or entry-level subscriptions.
 
@@ -59,7 +59,7 @@ The *Evolve* plan goes beyond premium support; it is a partnership between the u
 Because its foundation is mutual commitment, the Evolve plan is not sold as a separate commercial product. To upgrade from *Continuity* to *Evolve*, an organization must have a [DataMiner DevOps](https://community.dataminer.services/dataminer-devops-professional-program/) team in place, and they must accumulate [DevOps Points](xref:DevOps_Points) attesting to that team's engagement and effort.
 
 > [!NOTE]
-> The number of DevOps Points measured at the end of the calendar year is the number used in the next support renewal to determine the support plan, i.e. *Continuity* or *Evolve*.
+> The number of DevOps Points measured at the end of the calendar year is the number used in the next support renewal to determine the support plan, i.e., *Continuity* or *Evolve*.
 
 ## Minimum requirements for each level
 

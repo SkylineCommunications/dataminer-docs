@@ -6,7 +6,7 @@ uid: DashboardStepper
 
 Available from DataMiner 10.3.10/10.4.0 onwards<!-- RN 37200 -->.
 
-This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
+This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e., a DOM instance or DOM definition that contains states) as data input.
 
 ![Stepper](~/dataminer/images/StepperComponent.png)<br>*Stepper component in DataMiner 10.3.10*
 
@@ -14,9 +14,9 @@ To configure the component:
 
 1. Apply DOM definition or DOM instance data. See [Adding data to a component](xref:Adding_data_to_component).
 
-   You can apply a DOM definition or DOM instance directly, or use e.g. data based on a table component, so that the stepper will display the information linked to the item selected in the table component.
+   You can apply a DOM definition or DOM instance directly, or use e.g., data based on a table component, so that the stepper will display the information linked to the item selected in the table component.
 
-   - When a DOM definition is applied, this will be used to display states along the typical path of the definition, i.e. the "happy path". This path illustrates the states an instance would undergo following the standard workflow.
+   - When a DOM definition is applied, this will be used to display states along the typical path of the definition, i.e., the "happy path". This path illustrates the states an instance would undergo following the standard workflow.
 
      > [!NOTE]
      > DOM definitions can only be applied to the stepper component within the Low-Code Apps module.

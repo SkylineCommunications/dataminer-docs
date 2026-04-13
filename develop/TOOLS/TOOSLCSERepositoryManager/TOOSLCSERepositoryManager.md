@@ -28,7 +28,7 @@ The main window of the SLC SE Repo Manager is shown below.
 ![SLC SE Repo Manager main window](~/develop/images/SLC_SE_Repo_Manager_tool.png)
 <br>*SLC SE Repo Manager main window*
 
-On startup, the tool will load all known protocol repositories hosted on Gerrit, grouped by vendor, and display these in a tree control on the left-hand side. On the right-hand side, you can find the main buttons to perform different operations. A button will only be enabled in case the item selected in the tree supports the operation.
+On startup, the tool will load all known protocol repositories hosted on Gerrit, grouped by vendor, and display these in a tree control on the left. On the right, you can find the main buttons to perform different operations. A button will only be enabled in case the item selected in the tree supports the operation.
 
 Next to each data source, you can see one of the following icons:
 
@@ -41,9 +41,9 @@ Next to each data source, you can see one of the following icons:
 > [!IMPORTANT]
 > If you use Gerrit branches, remember to delete the Gerrit branch after you finish the code review and push submit in Gerrit. It is important to clean up your Gerrit branches.
 
-On the right-hand side, you can find the main buttons to perform different operations. A button will only be enabled in case the item selected in the tree supports the operation.
+On the right, you can find the main buttons to perform different operations. A button will only be enabled in case the item selected in the tree supports the operation.
 
-On the right-hand side, just below the menu bar and tab control, links are provided to Gerrit, SonarQube, Jenkins, SourceTree and file explorer. These links will be enabled depending on your current selection in the tree control.
+Just below the menu bar and tab control, links are provided to Gerrit, SonarQube, Jenkins, SourceTree and file explorer. These links will be enabled depending on your current selection in the tree control.
 
 You can find more information on the supported operations in the following sections:
 

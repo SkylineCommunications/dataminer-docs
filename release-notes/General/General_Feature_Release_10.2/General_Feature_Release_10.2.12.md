@@ -177,7 +177,7 @@ The following methods used to add attachments to bookings, jobs and tickets have
 | AddJobAttachment     | AddJobAttachmentV2     |
 | AddTicketAttachment  | AddTicketAttachmentV2  |
 
-Also, the *ContinueAutomationScript* method now has an additional `info` parameter that can be used to provide more information about the variables passed in the `values` parameter (e.g. information to help resolve the file paths).
+Also, the *ContinueAutomationScript* method now has an additional `info` parameter that can be used to provide more information about the variables passed in the `values` parameter (e.g., information to help resolve the file paths).
 
 #### Dashboards app / Low-Code Apps: Enhanced performance of selection boxes [ID 34577]
 
@@ -207,7 +207,7 @@ When an *NT_SNMP_GET* request contained a MultipleGetBulk (`:tablev2`) and an in
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
+When PDF files are uploaded via the WebAPI (e.g., when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
 
 #### Behavioral change points stored in both Cassandra and Elasticsearch [ID 34621]
 
@@ -233,7 +233,7 @@ Missing information in dashboards is no longer indicated by means of a visual re
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-The PDF module is now available in the Jobs and Dashboards app. From now on, you can e.g. export dashboards to PDF.
+The PDF module is now available in the Jobs and Dashboards app. From now on, you can e.g., export dashboards to PDF.
 
 #### HTTP elements will now resend a request after receiving ERROR_WINHTTP_SECURE_FAILURE [ID 34644]
 
@@ -354,7 +354,7 @@ When, in an alarm template, you enabled conditional monitoring for a parameter, 
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
 
-When, on systems with a MySQL or Microsoft SQL Server database, elements had been deleted in bulk (e.g. via an automation script), in some cases, real-time trending, average trending, alarms, information events and certain reporter caching tables would incorrectly not be cleaned up.
+When, on systems with a MySQL or Microsoft SQL Server database, elements had been deleted in bulk (e.g., via an automation script), in some cases, real-time trending, average trending, alarms, information events and certain reporter caching tables would incorrectly not be cleaned up.
 
 #### Dashboards app: Parameter order in state components would change randomly and trend graphs would be displayed in an incorrect color [ID 34548]
 
@@ -428,7 +428,7 @@ When a form only contained DOM instance data, the *Read mode* setting of the for
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-When a PDF preview was made from a dashboard containing an empty GQI table (e.g. after selecting *Configure* in an email action of an automation script), in the preview, that table would incorrectly not be empty. Instead, it would contain random cell values.
+When a PDF preview was made from a dashboard containing an empty GQI table (e.g., after selecting *Configure* in an email action of an automation script), in the preview, that table would incorrectly not be empty. Instead, it would contain random cell values.
 
 #### Web apps: Read-only text in input boxes would incorrectly not be displayed in bold type when using Mozilla Firefox [ID 34641]
 
@@ -446,7 +446,7 @@ When you hovered over a trend graph while the legend was disabled, the trend val
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-When a large PDF file (e.g. a PDF report) was created in a web app, in some cases, an error could occur.
+When a large PDF file (e.g., a PDF report) was created in a web app, in some cases, an error could occur.
 
 #### DataMiner installer: Cassandra DevCenter would no longer be extracted [ID 34674]
 

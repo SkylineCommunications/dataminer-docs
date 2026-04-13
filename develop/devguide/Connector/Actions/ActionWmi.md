@@ -12,7 +12,7 @@ This action will execute a WMI script.
 
 ### Type@script
 
-Specifies a WMI class, e.g. Win32_PerfRawData_PerfOS_Memory.
+Specifies a WMI class, e.g., Win32_PerfRawData_PerfOS_Memory.
 
 ### Type@arguments
 

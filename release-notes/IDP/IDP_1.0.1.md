@@ -47,7 +47,7 @@ Several minor improvements were implemented to the *Infrastructure* tab of the I
 
 #### IDP setup wizard: Activity Scheduler screen only displayed when relevant \[ID 21641\]
 
-In the IDP setup wizard, the screen related to the Activity Scheduler is now only displayed when relevant, i.e. when a DataMiner version below 9.6.5 is used and an SRM license is detected. The default option selected in the screen is now *No*.
+In the IDP setup wizard, the screen related to the Activity Scheduler is now only displayed when relevant, i.e., when a DataMiner version below 9.6.5 is used and an SRM license is detected. The default option selected in the screen is now *No*.
 
 #### Skyline Infrastructure Discovery and Provisioning: New tab control style \[ID 21745\]
 

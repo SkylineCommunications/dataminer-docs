@@ -44,7 +44,7 @@ In addition, these links will now also allow you to navigate to the RPD associat
 
 #### Improved table filters \[ID 31457\]
 
-Table filters will now be applied server side whenever possible to ensure that all retrieved data is filtered correctly. Any filters that are still applied client side are marked with the "\[Client\]" label to make this clear to the user. Client-side filters are only applied on partial views (i.e. the first 100 rows) of a table, or on each page of the paginated search result.
+Table filters will now be applied server side whenever possible to ensure that all retrieved data is filtered correctly. Any filters that are still applied client side are marked with the "\[Client\]" label to make this clear to the user. Client-side filters are only applied on partial views (i.e., the first 100 rows) of a table, or on each page of the paginated search result.
 
 For the most accurate results, we recommend to first apply server-side filters, and then to refine those results with client-side filters.
 

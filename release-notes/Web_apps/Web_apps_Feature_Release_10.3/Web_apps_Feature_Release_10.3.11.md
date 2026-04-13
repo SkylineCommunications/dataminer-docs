@@ -22,7 +22,7 @@ All GQI components now have a new *Empty result message* setting that allows you
 
 Also, the error/warning/info visual will now only appear when the component's size exceeds about half the screen dimensions, both in width and in height.
 
-As to the *Table* component, when you applied a column filter that resulted in 0 rows, up to now, an empty window replacing the component would allow you to adjust the filter. From now on, even when a column filter yields 0 rows, the column headers will stay visible and a message will appear (i.e. either the above-mentioned *Empty result message* or a message saying that the column/search filter resulted in no rows).
+As to the *Table* component, when you applied a column filter that resulted in 0 rows, up to now, an empty window replacing the component would allow you to adjust the filter. From now on, even when a column filter yields 0 rows, the column headers will stay visible and a message will appear (i.e., either the above-mentioned *Empty result message* or a message saying that the column/search filter resulted in no rows).
 
 #### Low-Code Apps: Dynamic feed values in URL actions [ID 37229]
 
@@ -81,14 +81,14 @@ The optimization applies when the following conditions are met:
 - The GQI query starts with *Object manager instances*.
 - Only one aggregation node is applied to column *ID* with method *COUNT*.
 
-In all other cases (e.g. multiple aggregation nodes, grouping, different columns), all objects will still be retrieved from the database.
+In all other cases (e.g., multiple aggregation nodes, grouping, different columns), all objects will still be retrieved from the database.
 
 #### Dashboards app/Low-Code Apps - Stepper component: DOM instances without history will now default to the happy path [ID 37233]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 <!-- Not added to MR 10.4.0 -->
 
-A DOM instance without history will now default to the happy path, i.e. the path that illustrates the states an instance would undergo following the standard workflow.
+A DOM instance without history will now default to the happy path, i.e., the path that illustrates the states an instance would undergo following the standard workflow.
 
 #### Dashboards app: Components will now only show skeleton loading during the initial load [ID 37274]
 
@@ -183,7 +183,7 @@ When a custom time zone was used, in some cases, that time zone would not be pro
 For example, when you set a custom time zone in a *Clock* component, the current time of that custom time zone would not be identical to the current time of the local time zone.
 
 > [!NOTE]
-> This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g. Altai Standard Time).
+> This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g., Altai Standard Time).
 
 #### Monitoring app: Casing problem when using NavigatePage [ID 37279]
 

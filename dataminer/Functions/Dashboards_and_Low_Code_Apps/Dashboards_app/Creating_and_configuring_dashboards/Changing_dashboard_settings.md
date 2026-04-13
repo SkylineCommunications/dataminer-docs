@@ -45,7 +45,7 @@ uid: Changing_dashboard_settings
 
    - **Dashboard updates**
 
-     - *Allow WebSocket communication*: Web socket communication is enabled by default, but can be disabled, e.g. in case this is not allowed by the firewalls in your network.
+     - *Allow WebSocket communication*: Web socket communication is enabled by default, but can be disabled, e.g., in case this is not allowed by the firewalls in your network.
 
      - *Fast polling timer*: The polling interval (in s) for components that display real-time information.
 

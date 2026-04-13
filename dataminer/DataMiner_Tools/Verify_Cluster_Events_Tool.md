@@ -8,11 +8,11 @@ The Verify Cluster Events tool is a debugging tool that can be used to verify th
 
 The tool can be of use in cases where, when you connect to a specific DMA using Cube, different alarms and/or elements are displayed than when you connect to a different DMA in the cluster.
 
-You can download the tool from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterevents-1-0-0-9/).
+You can download the tool from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterevents-1-0-0-10/).
 
 Its usage has the following limitations:
 
-- It is **not** intended for investigating synchronization issues between DMAs (e.g. files, configuration, etc.).
+- It is **not** intended for investigating synchronization issues between DMAs (e.g., files, configuration, etc.).
 
 - It should **not** be used while one or more DMAs are disconnected.
 
@@ -25,7 +25,7 @@ Its usage has the following limitations:
 
 ### Retrieving information with this tool
 
-1. Download the tool from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterevents-1-0-0-9/).
+1. Download the tool from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterevents-1-0-0-10/).
 
 1. Extract the file and double-click *VerifyClusterEvents.exe*.
 
@@ -49,7 +49,7 @@ The number in each table cell indicates the number of events in the cache for th
 
 “[no subs]” indicates that the client DMA does not subscribe to this type of event (the tool only checks for full subscription).
 
-Double-clicking a cell opens a window with detailed information about missing events or events that are stuck for a combination of two Agents. The Pending Count at the top indicates how much this Agent is behind. If the number is high, cache differences between the Agents might be normal and are a consequence of load. The right-click menu in this window provides access to options and fixes. On the *Actions* page, you can find tools to fix issues (e.g. dropping connections between DMAs to recreate these, or clearing or re-forwarding events).
+Double-clicking a cell opens a window with detailed information about missing events or events that are stuck for a combination of two Agents. The Pending Count at the top indicates how much this Agent is behind. If the number is high, cache differences between the Agents might be normal and are a consequence of load. The right-click menu in this window provides access to options and fixes. On the *Actions* page, you can find tools to fix issues (e.g., dropping connections between DMAs to recreate these, or clearing or re-forwarding events).
 
 ### Working with the Tools tab
 

@@ -8,7 +8,7 @@ uid: SRM_1.2.16
 
 #### Running part of the Booking Wizard silently \[ID 30376\]
 
-It is now possible to run the Booking Wizard partially silently, i.e. to have some steps hidden and some steps displayed to the user. A new method is available to configure this in a script. For example, to only show the last step of the wizard (i.e. assigning profiles and resources), use the following configuration:
+It is now possible to run the Booking Wizard partially silently, i.e., to have some steps hidden and some steps displayed to the user. A new method is available to configure this in a script. For example, to only show the last step of the wizard (i.e., assigning profiles and resources), use the following configuration:
 
 ```csharp
 var wizardUserInteraction = new WizardUserInteraction
@@ -62,7 +62,7 @@ The *SRM_LSOTemplate* example script has been extended with an example of how to
 
 #### Overload to run BookingManager.ApplyServiceState method synchronously \[ID 30454\]
 
-A new overload has been added to the method *BookingManager.ApplyServiceState* so that you can indicate whether the method should run asynchronously (the standard behavior up to now) or synchronously (i.e. wait for the service state to be applied).
+A new overload has been added to the method *BookingManager.ApplyServiceState* so that you can indicate whether the method should run asynchronously (the standard behavior up to now) or synchronously (i.e., wait for the service state to be applied).
 
 ```csharp
 public void ApplyServiceState(Engine engine, ServiceReservationInstance reservation, string state, bool isSynchronous);

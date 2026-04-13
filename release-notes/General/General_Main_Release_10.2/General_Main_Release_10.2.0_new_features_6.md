@@ -95,7 +95,7 @@ public class Script
 
 The UpdateAndApply call for a ProfileInstance can now return a number of additional errors.
 
-When calling UpdateAndApply without forcing quarantine (i.e. with forceQuarantine set to false):
+When calling UpdateAndApply without forcing quarantine (i.e., with forceQuarantine set to false):
 
 - If no instances need to be quarantined, the update will be applied and the following warning will be returned:
 
@@ -106,7 +106,7 @@ When calling UpdateAndApply without forcing quarantine (i.e. with forceQuarantin
   - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
   - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
 
-When calling UpdateAndApply and forcing quarantine (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
+When calling UpdateAndApply and forcing quarantine (i.e., with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
 
 - A warning of type ReservationInstancesMovedToQuarantine, listing the reservations and the usages that were quarantined.
 - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the reservations that were reconfigured because of the update.
@@ -132,7 +132,7 @@ var instancesThatRequiredReconfig = rmHelper.GetReservationInstances(filter);
   Failed to run script to reconfigure bookings after updating ProfileInstance because an exception occurred. See SLProfileManager.txt logging for more details.
   ```
 
-- When the UpdateBookingConfigByReferenceScript is not configured (i.e. when the setting is empty or null in the profile manager configuration):
+- When the UpdateBookingConfigByReferenceScript is not configured (i.e., when the setting is empty or null in the profile manager configuration):
 
   - No attempt will be made to trigger a script.
   - The RequiredProfileInstanceReconfiguration property will not be set to true on the instances.
@@ -341,7 +341,7 @@ All these log entries will have log level 5.
 
 #### New caching mechanism when retrieving ReservationInstances from Elasticsearch \[ID 29289\]
 
-A caching mechanism involving three separate caches will now be used when retrieving ReservationInstances from an Elasticsearch database, especially when the already saved ReservationInstances have to be checked, e.g. when saving a new ReservationInstance or when requesting the availability of resources in a certain time frame.
+A caching mechanism involving three separate caches will now be used when retrieving ReservationInstances from an Elasticsearch database, especially when the already saved ReservationInstances have to be checked, e.g., when saving a new ReservationInstance or when requesting the availability of resources in a certain time frame.
 
 ##### Overview of the caches
 
@@ -586,7 +586,7 @@ Note that no retries will occur and that no messages will be queued.
 
 - ResourceManagerEventMessage
 
-    When a ResourceManagerEventMessage contains multiple types of objects, it will be split up into multiple proto events. When the ResourceManager sends out one ResourceManagerEvent containing e.g. 2 ReservationInstances and 3 Resources, the forwarder logic will publish one ReservationInstanceEvent (with the 2 objects) and one ResourceEvent (with the 3 objects).
+    When a ResourceManagerEventMessage contains multiple types of objects, it will be split up into multiple proto events. When the ResourceManager sends out one ResourceManagerEvent containing e.g., 2 ReservationInstances and 3 Resources, the forwarder logic will publish one ReservationInstanceEvent (with the 2 objects) and one ResourceEvent (with the 3 objects).
 
 ##### ReservationInstance object
 

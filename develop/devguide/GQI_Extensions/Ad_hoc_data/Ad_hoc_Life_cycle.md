@@ -45,7 +45,7 @@ The lifecycle methods that are called on an ad hoc data source instance depend o
 - The [interfaces](xref:Ad_hoc_Building_blocks) that are implemented by the associated C# class.
 - The type of GQI request for which the instance was [created](#when-is-an-ad-hoc-data-source-instance-created).
 - The operators used in the query.
-- The query options provided by the client (e.g. whether updates are enabled).
+- The query options provided by the client (e.g., whether updates are enabled).
 - The result of previous lifecycle methods.
 
 The following diagram shows a complete overview of all possible lifecycle paths.

@@ -4,7 +4,7 @@ uid: Selecting_a_matrix
 
 # Selecting a matrix
 
-At the top of the *Router Control* module, underneath the gray header area, you will find a list of all matrix elements in the DataMiner System. Click one of them, and the default configuration (i.e. user interface) for that particular matrix will appear:
+At the top of the *Router Control* module, underneath the gray header area, you will find a list of all matrix elements in the DataMiner System. Click one of them, and the default configuration (i.e., user interface) for that particular matrix will appear:
 
 - At the top: a grid with all the inputs.
 

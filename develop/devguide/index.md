@@ -1,6 +1,6 @@
 ---
 uid: DevelopmentGuide
-description: Learn how to create DataMiner connectors & automation scripts, and how to work with the Class Library & InterApp framework.
+description: Learn how to create DataMiner connectors & automation scripts, and how to work with the DataMinerSystem library & InterApp framework.
 ---
 
 # Development Guide

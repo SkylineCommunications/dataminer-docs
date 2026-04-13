@@ -102,7 +102,7 @@ To save a compiled automation script
 1. Select *File \> Save Compiled Script As...*
 1. In the *Save As* window, select a folder, enter a file name, and click *Save*.
 
-The package will contain the automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the automation script).
+The package will contain the automation script as well as all required DLL files (e.g., DLL files of NuGet packages that are used in the automation script).
 
 > [!NOTE]
 > Prior to DIS 2.41, you can also save a compiled automation script as an .xml file, by setting the type in the *Save As* window to \*.xml.
@@ -142,11 +142,11 @@ An Automaton script Visual Studio solution is organized into various folders, ea
 - **Internal**: This folder contains the C# Class Library Visual Studio project for the class library code (*AutomationScript_ClassLibrary*). Obsolete from DIS v2.41 onwards. This folder is hidden by default as the code within it is generated automatically and should not be modified.
 
   > [!NOTE]
-  > From DIS v2.41 onwards, an information bar will appear when a Class Library project (i.e. a project named "AutomationScript_ClassLibrary") is detected in an automation script solution. This information bar provides the option to convert existing solutions that use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
+  > From DIS v2.41 onwards, an information bar will appear when a Class Library project (i.e., a project named "AutomationScript_ClassLibrary") is detected in an automation script solution. This information bar provides the option to convert existing solutions that use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
 
 - **Scripts**: This folder contains subfolders, with each subfolder representing an individual automation script. The name of each subfolder corresponds with the name of the automation script. Inside each subfolder, you will find the XML file for the automation script and a subfolder named "Actions". The *Actions* folder contains the C# projects for each C# Exe block present in the automation script.
 
 - **Tests**: This folder is intended for test projects.
 
   > [!NOTE]
-  > Test projects should only be integrated into automation script solutions for the purpose of testing automation script functionality. They should not be used for system tests that include e.g. other automation scripts, among other things.
+  > Test projects should only be integrated into automation script solutions for the purpose of testing automation script functionality. They should not be used for system tests that include e.g., other automation scripts, among other things.

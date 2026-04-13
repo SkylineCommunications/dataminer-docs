@@ -67,7 +67,7 @@ This page contains an overview of provisioning details for CI Types, with the fo
 
 - **DMA**: The DMA where the element should be created. You can select any of the DMAs in the DMS, or select *Based on device address* to have a DMA assigned based on the discovered IP address (see [Provisioning](xref:Provisioning)).
 
-- **Default Element State**: Allows you to set the state the provisioned element will have when it is created, i.e. *Active*, *Paused* or *Stopped*.
+- **Default Element State**: Allows you to set the state the provisioned element will have when it is created, i.e., *Active*, *Paused* or *Stopped*.
 
 - **Initial Protocol**: The protocol that should be used for the provisioned element.
 

@@ -4,7 +4,7 @@ uid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVer
 
 # References element
 
-Provides references to e.g. registration systems.
+Provides references to, for example, registration systems.
 
 ## Parent
 
@@ -15,5 +15,5 @@ Provides references to e.g. registration systems.
 |Name|Occurrences|Description|
 |--- |--- |--- |
 |***Choice***|||
-|&nbsp;&nbsp;[Reference](xref:Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References.Reference)|[0, *]|Provides a reference to e.g. a registration system.|
+|&nbsp;&nbsp;[Reference](xref:Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References.Reference)|[0, *]|Provides a reference to, for example, a registration system.|
 |&nbsp;&nbsp;[TaskId](xref:Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References.TaskId)|[0, *]|Provides a reference to a corresponding task.|

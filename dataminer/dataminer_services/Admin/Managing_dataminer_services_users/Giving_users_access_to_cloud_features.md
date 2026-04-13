@@ -6,7 +6,7 @@ reviewer: Alexander Verkest
 
 # Controlling user access to dataminer.services features
 
-If users have a dataminer.services account (i.e. they are registered on <https://dataminer.services>), you can control whether they have access to dataminer.services features. This includes remote access to a DataMiner System via web apps such as the DataMiner Monitoring app, the use of the [Teams bot](xref:DataMiner_Teams_bot), etc. For this purpose, you must add their dataminer.services account to your organization and to the DataMiner System.
+If users have a dataminer.services account (i.e., they are registered on <https://dataminer.services>), you can control whether they have access to dataminer.services features. This includes remote access to a DataMiner System via web apps such as the DataMiner Monitoring app, the use of the [Teams bot](xref:DataMiner_Teams_bot), etc. For this purpose, you must add their dataminer.services account to your organization and to the DataMiner System.
 
 ## Giving a user access to dataminer.services features
 
@@ -17,7 +17,7 @@ If users have a dataminer.services account (i.e. they are registered on <https:/
 
 1. In the Admin app, check whether the correct organization is mentioned in the header bar.
 
-1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the upper-right corner and select the organization in the list.
 
 1. In the sidebar on the left, navigate to *Organization* > *Users*.
 
@@ -43,7 +43,7 @@ If users have a dataminer.services account (i.e. they are registered on <https:/
 
 1. In the Admin app, check whether the correct organization is mentioned in the header bar.
 
-1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the upper-right corner and select the organization in the list.
 
 1. In the sidebar on the left, navigate to *Organization* > *Users*.
 

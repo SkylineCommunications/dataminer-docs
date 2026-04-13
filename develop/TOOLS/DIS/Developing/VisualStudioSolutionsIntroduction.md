@@ -33,7 +33,7 @@ When adding new projects to existing solutions, DIS will verify the project form
 
 Prior to DIS v2.38, DIS includes references to the DataMiner assemblies of the locally installed DataMiner Agent in QAction projects of a connector solution and C# Exe projects of automation script solutions. If no DataMiner Agent is installed on the local machine, DIS will use copies of those files provided in the DIS installation package.
 
-From DIS v2.39 onwards, DIS includes a reference to a [DataMiner Development Package](xref:TOODataMinerDevPackages) (DevPack), a NuGet package that contains the core DataMiner assemblies of a specific DataMiner version, enabling development without the need for a local DataMiner installation or the requirement to compile the solution outside of DIS (e.g. from a CI/CD pipeline on GitHub).
+From DIS v2.39 onwards, DIS includes a reference to a [DataMiner Development Package](xref:TOODataMinerDevPackages) (DevPack), a NuGet package that contains the core DataMiner assemblies of a specific DataMiner version, enabling development without the need for a local DataMiner installation or the requirement to compile the solution outside of DIS (e.g., from a CI/CD pipeline on GitHub).
 
 To adapt a solution to a specific DataMiner version, you need to ensure that the solution links to the Development Package for that version as a separate DevPack is available for every released DataMiner version.
 

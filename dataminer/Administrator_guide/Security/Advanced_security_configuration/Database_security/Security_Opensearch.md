@@ -51,6 +51,6 @@ To perform a rolling upgrade, refer to the [rolling upgrade guide](https://docs.
 
 ### Major upgrade
 
-To go from one major release range to another (e.g. 1.X to 2.X), we recommend first upgrading to the latest version in the current range before upgrading to the new range.
+To go from one major release range to another (e.g., 1.X to 2.X), we recommend first upgrading to the latest version in the current range before upgrading to the new range.
 
 It is not possible to use the rolling upgrade strategy for major upgrades, so you will have to perform a [cluster restart upgrade](#cluster-restart-upgrade) for this.

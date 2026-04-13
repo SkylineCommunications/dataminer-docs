@@ -4,7 +4,7 @@ uid: FAQ_Bandwidth_data_acquisition
 
 # How much bandwidth must be provided for data acquisition on data sources?
 
-Bandwidth used for data acquisition on devices in the managed ecosystem is defined by a plethora of variables, including but not limited to the protocol used, physical interface and communication speed (e.g. IP, serial, etc.), acquisition techniques (e.g. polling versus unsolicited messages such as SNMP traps), polling speed, the amount of information contained in the specific device, and more.
+Bandwidth used for data acquisition on devices in the managed ecosystem is defined by a plethora of variables, including but not limited to the protocol used, physical interface and communication speed (e.g., IP, serial, etc.), acquisition techniques (e.g., polling versus unsolicited messages such as SNMP traps), polling speed, the amount of information contained in the specific device, and more.
 
 It is therefore extremely difficult to provide the theoretical bandwidth or traffic load that will be used for acquisition in a complex heterogeneous ecosystem. The example below is based on a benchmark in a live environment and can be used as a guide, but with the necessary reservations.
 

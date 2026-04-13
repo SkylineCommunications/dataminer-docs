@@ -8,11 +8,11 @@ Select *DIS > Settings* in the menu to open the *DIS Settings* dialog box. In th
 
 ## DMA
 
-In the *DMA* tab, add a list of DMAs to which you want DataMiner Integration Studio to be able to connect when it has to e.g. import or publish connectors or automation scripts, or debug connector QActions.
+In the *DMA* tab, add a list of DMAs to which you want DataMiner Integration Studio to be able to connect when it has to, for example, import or publish connectors or automation scripts, or debug connector QActions.
 
 To add a DMA to the list:
 
-1. Click *Add* in the upper right-hand corner of the *DIS Settings* window.
+1. Click *Add* in the upper-right corner of the *DIS Settings* window.
 1. In the *General* tab, specify the following information:
 
    | Information | Description |

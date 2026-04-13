@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.HyperLinks.HyperLink
 
 # HyperLink element
 
-Deprecated. Defines a custom command (i.e. "hyperlink") that has to appear on the shortcut menu when users right-click an alarm of the parameter in question. This is not supported in DataMiner Cube. Instead, a separate [Hyperlinks.xml](xref:Hyperlinks_xml) file is used.
+Deprecated. Defines a custom command (i.e., "hyperlink") that has to appear on the shortcut menu when users right-click an alarm of the parameter in question. This is not supported in DataMiner Cube. Instead, a separate [Hyperlinks.xml](xref:Hyperlinks_xml) file is used.
 
 ## Type
 
@@ -60,13 +60,13 @@ If you specify the following, the name of the automation script, indicated by th
 <HyperLink valueParsing="Set by Automation Script [1] to *">ExecuteScript.exe -n [1]</HyperLink>
 ```
 
-If you specify the following, a web page will be opened:
+If you specify the following, a webpage will be opened:
 
 ```xml
 <HyperLink>http://www.skyline.be</HyperLink>
 ```
 
-If you specify the following, a web page will be opened and the alarm ID will be passed to that page:
+If you specify the following, a webpage will be opened and the alarm ID will be passed to that page:
 
 ```xml
 <HyperLink>http://intranet/troubleticket.aspx?ID=[ALARMID]</HyperLink>

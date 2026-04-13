@@ -47,7 +47,7 @@ You can now create the query using the *Orders.json* file as the data source.
 
 1. Provide the necessary information:
 
-   1. Give the query a name, e.g. "Orders".
+   1. Give the query a name, e.g., "Orders".
 
    1. Open the selection box, and select *Get ad hoc data*.
 

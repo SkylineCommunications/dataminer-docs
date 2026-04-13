@@ -74,7 +74,7 @@ In the Value tag, it is also possible to use a placeholder for a table cell that
 > [!NOTE]
 >
 > - To link to a public preset, it is important that (Public) is added after the preset name.
-> - To add multiple measurement points, use a pipe character as a separator, e.g. 1|4.
+> - To add multiple measurement points, use a pipe character as a separator, e.g., 1|4.
 > - Private presets are not supported in spectrum element links from Visio or EPM.
 
 The following example is an excerpt from an EPM protocol. In the example, parameter 1610 has to contain a string like the following one:

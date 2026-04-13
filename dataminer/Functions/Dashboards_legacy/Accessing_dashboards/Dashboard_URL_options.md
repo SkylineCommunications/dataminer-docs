@@ -126,7 +126,7 @@ viewname|name
 
 > [!NOTE]
 >
-> - In case of *elementname\|name*, the element name can contain wildcards, e.g. "elementname\|\*-MODEM\*". When an additional *?service* parameter is specified in the URL, the element will be searched for within the specified service using the name mask.
+> - In case of *elementname\|name*, the element name can contain wildcards, e.g., "elementname\|\*-MODEM\*". When an additional *?service* parameter is specified in the URL, the element will be searched for within the specified service using the name mask.
 > - *idx\|idx* refers to a row index of a dynamic table.
 > - If you specify strings containing "!" or "\|" characters, you can encode them as "!!" and "\|\|".
 
@@ -162,4 +162,4 @@ The following options are mainly for internal use or for debugging purposes.
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ?noRender=true | When specified, rendering of component contents will be skipped. Use this option to solve problems in cases where the dashboard cannot be opened and you need to get into the dashboard edit mode.                                                                                                      |
 | ?prefetch=true | When specified, this will cause the aspx page to be compiled and loaded, without requesting any actual data. This option is used by SLNet when prefetching dashboard pages.                                                                                                                             |
-| ?skipIWA=true  | When specified, Internal Windows Authentication will be skipped. Use this option when, for some reason, it is impossible to log on using a Windows account. When this option is specified, a user who is not logged on will be presented a web page with a logon form (instead of a windows logon box). |
+| ?skipIWA=true  | When specified, Internal Windows Authentication will be skipped. Use this option when, for some reason, it is impossible to log on using a Windows account. When this option is specified, a user who is not logged on will be presented a webpage with a logon form (instead of a windows logon box). |

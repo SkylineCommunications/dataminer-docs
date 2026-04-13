@@ -34,7 +34,7 @@ In the Generic Query Interface, a new “DCF connections” data source is now a
 
 > [!NOTE]
 >
-> - The “Is Internal” column indicates whether a connection has been marked internal (i.e. virtual) or external (i.e. physical).
+> - The “Is Internal” column indicates whether a connection has been marked internal (i.e., virtual) or external (i.e., physical).
 > - External connections are configured both on the source element and the destination element. Hence, each external connection will be listed twice.
 > - Connections of which both the source element and the destination element are stopped will not be listed.
 > - Connections of which only the destination element is stopped will be listed once.
@@ -79,9 +79,9 @@ In the *Layout* tab, you find three additional sections:
 
 - In the *Layout* section, you can specify how you want the trigger label and time label to be aligned: left, center or right.
 
-#### Dashboards app: Right-hand edit pane is now resizable \[ID 28137\]
+#### Dashboards app: Edit pane on the right is now resizable \[ID 28137\]
 
-It is now possible to change the width of the right-hand edit pane.
+It is now possible to change the width of the edit pane shown at the right side of the Dashboards UI.
 
 #### Dashboards app - Line chart component: New option to highlight parameters on graph and legend \[ID 28144\]
 
@@ -99,7 +99,7 @@ There are two ways to highlight a trend line:
 In the Dashboards app, up to now, it was possible to delete components in edit mode by selecting them and clicking the *Delete* button at the top of the page. Now, instead of clicking the Delete button, it is also possible to press the DELETE key on your keyboard.
 
 > [!NOTE]
-> After selecting the component to be deleted, make sure the focus is on the dashboard before you press the DELETE key. If the focus in on e.g. the header bar or the subheader bar, pressing the DELETE key will not work.
+> After selecting the component to be deleted, make sure the focus is on the dashboard before you press the DELETE key. If the focus in on e.g., the header bar or the subheader bar, pressing the DELETE key will not work.
 
 #### Dashboards app: Restricting access to dashboards \[ID 28345\]
 
@@ -209,7 +209,7 @@ Each row in this data source has the following columns:
 | Child ID | The ID of the DataMiner object in the view.                                 |
 | Depth    | The level of the DataMiner object in the view tree in relation to the root. |
 
-When you set the *Recursive* option to true, the table will not only contain all direct relationships (i.e. between a parent item and a child item), but also all indirect relationships (e.g. between a grandparent item and a grandchild item).
+When you set the *Recursive* option to true, the table will not only contain all direct relationships (i.e., between a parent item and a child item), but also all indirect relationships (e.g., between a grandparent item and a grandchild item).
 
 #### Dashboards app: Existing GQI queries stored in Queries.json will now automatically be copied to the correct dashboard files during a DataMiner upgrade \[ID 28816\]
 
@@ -266,7 +266,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 1. In the Dashboards app, go to the list of dashboards on the left, and select the dashboard you want to share.
 
-1. Click the “...” button in the top-right corner of the dashboard, and select *Start sharing*.
+1. Click the “...” button in the upper-right corner of the dashboard, and select *Start sharing*.
 
 1. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
 
@@ -282,7 +282,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 >
 > - If access to a dashboard is limited to some users only, it will not be possible to share this dashboard.
 > - You can stop sharing a dashboard by clicking the “...” button again and selecting *Manage share*. This will open a pop-up box where you can delete the share or update the message.
-> - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), queries using feeds and visualizations based on query feeds (e.g. node edge graph, table), trend components with subscription filters and pivot table components. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
+> - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), queries using feeds and visualizations based on query feeds (e.g., node edge graph, table), trend components with subscription filters and pivot table components. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 
 ##### To access the Sharing module that lists the dashboards that others have shared with you
 
@@ -312,10 +312,10 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 #### Dashboards app - Service definition component: Node scaling \[ID 29142\]
 
-In the service definition component, nodes will now have a fixed initial size and ratio. When the service definition does not fit inside the component, vertical and/or horizontal panning will be enabled depending on the direction that is clipped. For example, when a service definition is very wide and its nodes are clipped on the right-hand side, horizontal panning will be possible, but vertical panning will not. Also, zooming in and out will fully scale the nodes so that every-thing keeps its aspect ratio.
+In the service definition component, nodes will now have a fixed initial size and ratio. When the service definition does not fit inside the component, vertical and/or horizontal panning will be enabled depending on the direction that is clipped. For example, when a service definition is very wide and its nodes are clipped on the right, horizontal panning will be possible, but vertical panning will not. Also, zooming in and out will fully scale the nodes so that every-thing keeps its aspect ratio.
 
 > [!NOTE]
-> The zoom controls in the bottom-right corner have been removed.
+> The zoom controls in the lower-right corner have been removed.
 
 #### Dashboards app - GQI: Linking a \[Get parameters for elements where\] 'Protocol' filter to a parameter feed \[ID 29335\]
 
@@ -353,9 +353,9 @@ When a query filter using a feed is configured to filter using a regular express
 
 #### Dashboards app: Node edge graph component \[ID 29425\]
 
-The new node edge graph component allows you to visualize any type of objects (i.e. “nodes”) and the connections between them (i.e. “edges”). Moreover, by linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data using dynamic coloring.
+The new node edge graph component allows you to visualize any type of objects (i.e., “nodes”) and the connections between them (i.e., “edges”). Moreover, by linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data using dynamic coloring.
 
-The data necessary to create a node edge graph can to be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects).
+The data necessary to create a node edge graph can to be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e., objects), whereas edge queries provide data that will be visualized as edges (i.e., connections between objects).
 
 For more detailed information, see [Node edge graph](xref:DashboardNodeEdgeGraph).
 
@@ -386,8 +386,8 @@ Root
 
 From now on...
 
-- the counter of the views data source will show “(1)”, i.e. the root, and
-- the counter of the root view data source will show “(2)”, i.e. child view 1 and 2.
+- the counter of the views data source will show “(1)”, i.e., the root, and
+- the counter of the root view data source will show “(2)”, i.e., child view 1 and 2.
 
 > [!NOTE]
 > The counter of the parameters data source will show the total amount of parameters.
@@ -419,7 +419,7 @@ Also, the following chart components have been renamed:
 When, in the Data tab, you add a filter node to a GQI query, a new option named “Return no rows when feed is empty” will allow you to specify what should be returned when the filter yields no rows.
 
 - When you enable this option, an empty table will be returned when the filter yields no rows.
-- When you disable this option, the entire table (i.e. all rows) will be returned when the filter yields no rows.
+- When you disable this option, the entire table (i.e., all rows) will be returned when the filter yields no rows.
 
 #### Dashboards app: State, Gauge and Ring components can now be used as feeds by other components \[ID 29570\] \[ID 29650\] \[ID 29657\] \[ID 29708\]
 
@@ -497,7 +497,7 @@ Before executing a query, the system will send a GenIfOpenSessionRequest message
 
 #### Dashboards app - GQI: Linking columns with values of type double or datetime to feeds in query filters \[ID 29902\]
 
-In GQI query filters, from now on, columns containing values of type datetime or double can be linked to feeds. This will allows you to e.g. filter a bookings list by linking the *End* column to a time range feed.
+In GQI query filters, from now on, columns containing values of type datetime or double can be linked to feeds. This will allows you to, for example, filter a bookings list by linking the *End* column to a time range feed.
 
 #### Dashboards app: Table visualizations now allow columns to be reordered \[ID 30091\]
 
@@ -623,7 +623,7 @@ The “Start sharing” button has been replaced by a “Share” button. Clicki
 
 When you choose to copy the URL of a dashboard, you can select the following options:
 
-- Select “Embed” to use a URL that will link to the dashboard in embedded mode (i.e. not showing headers and sidebars).
+- Select “Embed” to use a URL that will link to the dashboard in embedded mode (i.e., not showing headers and sidebars).
 - Select “Use uncompressed URL parameters” to use a URL in which the data in the search parameters is not compressed. This will allow you to see and, if necessary, modify the plain JSON object.
 
 #### Dashboards app: Passing JSON data in a dashboard URL \[ID 31833\] \[ID 31885\]
@@ -691,7 +691,7 @@ This JSON object has to have the following structure:
 - In the **components** item, you can provide data to be selected in specific components referred to by their ID.
 
     > [!NOTE]
-    > When you are editing a dashboard, each component will show its ID in the bottom-right corner (e.g. “State 1”).
+    > When you are editing a dashboard, each component will show its ID in the lower-right corner (e.g., “State 1”).
 
 > [!NOTE]
 > When a dashboard updates its own URL, it will use the new format, but in a compressed way. In that compressed syntax, the query parameter “d” will be used instead of “data”.
@@ -968,7 +968,7 @@ In the Jobs app, the time filter in the sidebar has been improved. You can now i
 
 #### Web apps will now display a warning when you do not use an HTTPS connection \[ID 29389\]
 
-From now on, when you access a web app (e.g. Monitoring, Dashboards, Jobs, Ticketing, etc.), a warning will be displayed when you do not use an HTTPS connection.
+From now on, when you access a web app (e.g., Monitoring, Dashboards, Jobs, Ticketing, etc.), a warning will be displayed when you do not use an HTTPS connection.
 
 #### Dashboards/Monitoring: EPM components now fully aligned \[ID 29770\]
 
@@ -990,7 +990,7 @@ From now on, when you hover the mouse pointer over a tooltip of an input compone
 
 #### DataMiner landing page: Browser title changed to 'DataMiner' \[ID 31373\]
 
-The browser title of the DataMiner landing page (e.g. `https://<MyDMA>/root/`) has been changed from “DataMiner Services” to “DataMiner”.
+The browser title of the DataMiner landing page (e.g., `https://<MyDMA>/root/`) has been changed from “DataMiner Services” to “DataMiner”.
 
 Also, the error message shown when you try to log in to a web application with a user account that has not been granted the “DataMiner Web Apps” user permission has now been changed to “You have no access to the DataMiner Web Apps”.
 

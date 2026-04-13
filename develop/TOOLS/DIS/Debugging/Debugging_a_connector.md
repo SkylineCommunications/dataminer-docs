@@ -26,7 +26,7 @@ When you have finished configuring all necessary settings, you can start debuggi
 
     1. If necessary, in the *Project* column, select another temporary QAction project.
 
-    1. Click the green plus to replace (i.e. inject) the element's QAction.dll file (compiled in Release mode) with its counterpart found in the temporary QAction project (compiled in Debug mode).
+    1. Click the green plus to replace (i.e., inject) the element's QAction.dll file (compiled in Release mode) with its counterpart found in the temporary QAction project (compiled in Debug mode).
 
 1. Click the *Attach* button to build all temporary QAction projects and attach the Microsoft Visual Studio Debugger to the DataMiner SLScripting process.
 

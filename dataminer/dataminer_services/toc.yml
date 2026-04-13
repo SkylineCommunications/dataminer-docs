@@ -107,10 +107,14 @@ items:
     topicUid: About_the_Admin_app
   - name: Accessing the Admin app
     topicUid: Accessing_the_Admin_app
-  - name: Creating an organization
-    topicUid: Creating_an_organization
-  - name: Getting your organization verified
-    topicUid: CloudConnectionVerification
+  - name: Managing organizations
+    items:
+      - name: Creating an organization
+        topicUid: Creating_an_organization
+      - name: Getting your organization verified
+        topicUid: CloudConnectionVerification
+      - name: Deleting an organization
+        topicUid: Deleting_an_organization
   - name: Managing dataminer.services users
     topicUid: Managing_dataminer_services_users
     items:
@@ -148,8 +152,6 @@ items:
       topicUid: Viewing_your_credit_history
     - name: Viewing information on system usage
       topicUid: Viewing_info_on_system_usage
-  - name: Deleting an organization
-    topicUid: Deleting_an_organization
 - name: ChatOps
   items:
   - name: About ChatOps

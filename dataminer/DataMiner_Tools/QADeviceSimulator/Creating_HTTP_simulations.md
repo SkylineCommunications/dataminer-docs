@@ -24,7 +24,7 @@ Creating an HTTP simulation requires a bit more work.
 
       - *simulationIP*: The IP address the simulation will listen on.
 
-      - *simulationPorts*: Either specify a range using a hyphen (“-”), e.g. "50000-50005", or a port number.
+      - *simulationPorts*: Either specify a range using a hyphen (“-”), e.g., "50000-50005", or a port number.
 
       > [!NOTE]
       > The port number must be greater than or equal to 1024.

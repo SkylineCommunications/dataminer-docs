@@ -48,7 +48,7 @@ For an example, refer to the *\<Security>* section in the example (see [Example 
 > [!NOTE]
 >
 > - It is also possible to configure security for the columns in each table with a \<Security> tag within the \<Table> tag.
-> - Security is configured per group, not per user. When you add a security group of the domain, use the down-level logon name, i.e. the domain name followed by a backslash and the group name. For example: `DomainName\GroupName`. Local DataMiner groups can be referenced by their group name.
+> - Security is configured per group, not per user. When you add a security group of the domain, use the down-level logon name, i.e., the domain name followed by a backslash and the group name. For example: `DomainName\GroupName`. Local DataMiner groups can be referenced by their group name.
 > - If you grant Write access to a specific table, then users will be able to add and delete rows in that table (using dedicated buttons) and edit data in existing rows (by clicking inside cells).
 > - If you specify multiple table names within an Allow or a Deny tag, separate them by commas.
 > - Multiple Allow tags or multiple Deny tags are not allowed within the same Read or Write tag.
@@ -78,7 +78,7 @@ If you want to change something to the appearance of a table, then add a *\<Tabl
 |--|--|--|
 | name | Yes | The actual name of the table. |
 | displayName | Yes | The name of the table as it has to appear in the user interface. |
-| displayColumn | Yes | The name of the column of which the values have to replace the table’s primary keys. It is possible to define a display name for a record that combines several columns. To do so, specify a display name containing column names, separated by a space, a dot, brackets, a backslash, a forward slash, parentheses, or square brackets. E.g. `displayColumn="column1 (column2:column3)"`. |
+| displayColumn | Yes | The name of the column of which the values have to replace the table’s primary keys. It is possible to define a display name for a record that combines several columns. To do so, specify a display name containing column names, separated by a space, a dot, brackets, a backslash, a forward slash, parentheses, or square brackets. For example: `displayColumn="column1 (column2:column3)"`. |
 | skip | No | If this table has to be hidden in the *Logical View*, then set this attribute to "true". |
 
 ### Columns
@@ -141,7 +141,7 @@ If you want to filter the records displayed in a table, then, inside a *\<Table>
 
 If you want to define a record sorting order for a table, inside a *\<Table>* tag, add an *\<Order>* tag, and specify what to order by with a definition attribute.
 
-E.g. for ascending order: *definition="columnName ASC"* or for descending order: *definition="columnName DESC"*.
+For example, for ascending order: `definition="columnName ASC"`, or for descending order: `definition="columnName DESC"`.
 
 ### Icon
 

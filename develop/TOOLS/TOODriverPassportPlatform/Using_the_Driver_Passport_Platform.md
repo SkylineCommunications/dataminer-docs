@@ -14,7 +14,7 @@ The *Overview* page of the platform contains two tabs, *Overview* and *Finishe
 
   To get an idea of how much content is available in the queue, you can check the *Queue Count* and *Queue Expected Duration* parameters. These indicate the number of tests included and the amount of time before the queue will be empty, respectively.
 
-- On the *Finished* tab, two tables provide an overview of the successfully executed tests and of the tests that encountered an execution error (e.g. server restarted, elements not active).
+- On the *Finished* tab, two tables provide an overview of the successfully executed tests and of the tests that encountered an execution error (e.g., server restarted, elements not active).
 
   The parameters *Tests Executed Pass Count* and *Tests Executed Failure Count* indicate how many tests have been executed where all execution steps passed, and how many tests have failed.
 

@@ -42,7 +42,7 @@ For each listed channel, you can do the following:
 > [!NOTE]
 > Without TAG's Media Control System (MCS) in place, the *Channel Status* page may lack the following information: bitrate, CPU usage, memory allocation, and profile data.
 
-In the top-left corner of the header bar you can switch to the *Channels Configuration* page by clicking *Channels Configuration*. This page offers an overview of all channels alongside its profiles and PIDs.
+In the upper-left corner of the header bar you can switch to the *Channels Configuration* page by clicking *Channels Configuration*. This page offers an overview of all channels alongside its profiles and PIDs.
 
 > [!NOTE]
 > Without TAG's Media Control System (MCS) in place, the *Channels Configuration* page may lack recording information.
@@ -53,7 +53,7 @@ The *Outputs* page presents a list of available outputs, alongside their associa
 
 ![Outputs page](~/dataminer/images/TAG_Outputs_Page.png)
 
-- To change the layout associated with a selected output, click the *Modify Layout* button in the top-right corner, and select a new layout from the available options.
+- To change the layout associated with a selected output, click the *Modify Layout* button in the upper-right corner, and select a new layout from the available options.
 
 - When you have selected an output and a layout, click the downward arrow in the *Title* column and select *Edit position* to modify the channels assigned to the different positions in the layout tiles table.
 

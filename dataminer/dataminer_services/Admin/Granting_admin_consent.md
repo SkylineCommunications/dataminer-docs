@@ -16,7 +16,7 @@ To grant admin consent and configure your tenant:
 
 1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 
-1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the upper-right corner and select the organization in the list.
 
 1. In the sidebar on the left, go to *Organization* > *Overview*.
 
@@ -29,7 +29,7 @@ To grant admin consent and configure your tenant:
    > [!NOTE]
    >
    > - The displayed permissions may differ from the ones in the example screenshot above. Permissions can change when new features are released or existing features are modified.
-   > - In order to grant tenant-wide consent, you have to be an administrator for that tenant, e.g. Global Administrator.
+   > - In order to grant tenant-wide consent, you have to be an administrator for that tenant, e.g., Global Administrator.
 
 1. Review the requested permissions, and if you agree, click the *Accept* button.
 

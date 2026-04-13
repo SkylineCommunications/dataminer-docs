@@ -27,7 +27,7 @@ This method is deprecated. Use the [GetActiveTicketsV2](xref:GetActiveTicketsV2)
 | filter.SearchText | String | A piece of text used to filter the tickets, similar to the quick filter in the Ticketing app. |
 
 > [!NOTE]
-> As there can be a large number of tickets, this method makes use of paging, so that you do not have to download all tickets at once. To get the first page of tickets, execute the method with *PageSessionID* = 0, *PageNumber* = 0, and *Count* equaling the number of tickets you want to retrieve on one page (e.g. 50). In the response, the *PageSessionID* will be filled in, and the total number of tickets will be indicated.
+> As there can be a large number of tickets, this method makes use of paging, so that you do not have to download all tickets at once. To get the first page of tickets, execute the method with *PageSessionID* = 0, *PageNumber* = 0, and *Count* equaling the number of tickets you want to retrieve on one page (e.g., 50). In the response, the *PageSessionID* will be filled in, and the total number of tickets will be indicated.
 >
 > With this result, you can then:
 >

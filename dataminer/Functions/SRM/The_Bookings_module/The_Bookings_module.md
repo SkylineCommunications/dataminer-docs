@@ -32,7 +32,7 @@ The timeline area of the *Bookings* module can be used as follows:
 
 - To pan the displayed timeline, drag the white area in the preview pane to the left or right.
 
-- To zoom to a particular time, e.g. the next hour, or the past month, right-click the timeline, and select *Zoom to \[time\]*.
+- To zoom to a particular time, e.g., the next hour, or the past month, right-click the timeline, and select *Zoom to \[time\]*.
 
 > [!NOTE]
 >

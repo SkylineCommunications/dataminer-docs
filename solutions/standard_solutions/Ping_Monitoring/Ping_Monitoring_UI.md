@@ -66,17 +66,17 @@ The *Destinations* page offers an overview of all IP addresses in your DataMiner
 
 The following information is available for each destination:
 
-- **Destination address**: The URL or IP address of an internet destination, e.g. *www.skyline.be*.
+- **Destination address**: The URL or IP address of an internet destination, e.g., *www.skyline.be*.
 
-- **Description**: A brief description provided to the destination, e.g. *Skyline*.
+- **Description**: A brief description provided to the destination, e.g., *Skyline*.
 
-- **Group**: The group the destination belongs to, corresponding to a Generic Ping element, e.g. *Websites*.
+- **Group**: The group the destination belongs to, corresponding to a Generic Ping element, e.g., *Websites*.
 
 - **Admin status**: The status (enabled or disabled) of the destination.
 
-- **Ping result**: The time it took each destination to reply to the last ping command, e.g. *4 ms*.
+- **Ping result**: The time it took each destination to reply to the last ping command, e.g., *4 ms*.
 
-- **Cycle packet loss**: The percentage of lost packets during ping command and response process, e.g. *0.00 %*.
+- **Cycle packet loss**: The percentage of lost packets during ping command and response process, e.g., *0.00 %*.
 
 Clicking the ![additional information](~/dataminer/images/additional_information.png) button displays additional information about the destination, including host information, results, settings, and more.
 
@@ -100,15 +100,15 @@ This is the main information that is available for each group:
 
 - **# Dst disabled**: The number of disabled destinations in the group.
 
-- **Current responding ping**: The percentage of destinations responding to ping commands, e.g. *100.00 %*.
+- **Current responding ping**: The percentage of destinations responding to ping commands, e.g., *100.00 %*.
 
-- **Average ping time**: The average time it takes for destinations within the group to receive and respond to a ping command, e.g. *11.46 ms*.
+- **Average ping time**: The average time it takes for destinations within the group to receive and respond to a ping command, e.g., *11.46 ms*.
 
 Selecting a group in the overview will display all destinations configured within that group in the *Destinations in Selected Group* pane.
 
 ![Destinations selected group](~/dataminer/images/Destinations_Selected_Group.png)
 
-Clicking the *Slowest Destinations in Group* button will display any outliers in the groups, i.e. destinations that take a longer time than average to receive and respond to a ping command.
+Clicking the *Slowest Destinations in Group* button will display any outliers in the groups, i.e., destinations that take a longer time than average to receive and respond to a ping command.
 
 With the buttons at the top of the page, you can [create, edit, and delete groups](xref:Ping_Monitoring_managing_groups_destinations#managing-groups).
 
@@ -122,6 +122,6 @@ On the *Destinations* and *Grid View* pages, a filter pane on the left enables y
 
 ![Filter pane](~/dataminer/images/Filter_PM.png)
 
-To limit the filter pane to an overview of the currently active filters, enable the toggle button in the top-right corner. Disable the toggle button to return to the full view.
+To limit the filter pane to an overview of the currently active filters, enable the toggle button in the upper-right corner. Disable the toggle button to return to the full view.
 
 In the lower-left corner, you can see the total destinations as well as the destinations that are currently active in your DataMiner System. Also, a progress bar above those destinations will count down to the next page refresh.

@@ -14,7 +14,7 @@ uid: EPM_6.0.3_I-DOCSIS
 
 #### DOCSIS and GPON configuration files separated \[ID 32087\]
 
-The configuration files of the DOCSIS and GPON technologies have been separated so that the EPM front end can now ingest them independently.
+The configuration files of the DOCSIS and GPON technologies have been separated so that the EPM frontend can now ingest them independently.
 
 ### Fixes
 

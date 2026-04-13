@@ -19,7 +19,7 @@ Install DataMiner 10.2.0 [CU12], 10.3.0.0 - 12790, or 10.3.3 [CU1]. <!-- RN 3577
 
 ## Workaround
 
-Instead of restarting an element with a serial connection, stop the element and then restart it after sufficient time, when you are sure all polling has stopped (e.g. one minute).
+Instead of restarting an element with a serial connection, stop the element and then restart it after sufficient time, when you are sure all polling has stopped (e.g., one minute).
 
 ## Issue description
 

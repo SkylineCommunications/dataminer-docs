@@ -51,9 +51,9 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
    - Your business name
 
-   - Your name (i.e. the owner)
+   - Your name (i.e., the owner)
 
-   - Your business email (i.e. the email address you will use to conduct company business)
+   - Your business email (i.e., the email address you will use to conduct company business)
 
      > [!NOTE]
      > Make sure you choose an email address you have access to as you will need to confirm it later.
@@ -93,13 +93,13 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
 1. Go to the [*Meta Business Suite*](https://business.facebook.com/).
 
-1. Navigate to *Users > System Users* and click the *+ Add* button in the top-right corner.
+1. Navigate to *Users > System Users* and click the *+ Add* button in the upper-right corner.
 
 1. In the pop-up window, enter a name for your new system user and choose the appropriate role (*Employee* or *Admin*).
 
 1. Select the user you created, click the ellipsis button ("..."), and select *Assign assets*.
 
-1. Select the app you want to assign to this system user (i.e. the *DataMiner Alarm Notification* app), and grant them the appropriate permissions.
+1. Select the app you want to assign to this system user (i.e., the *DataMiner Alarm Notification* app), and grant them the appropriate permissions.
 
 1. Select *Generate token*.
 

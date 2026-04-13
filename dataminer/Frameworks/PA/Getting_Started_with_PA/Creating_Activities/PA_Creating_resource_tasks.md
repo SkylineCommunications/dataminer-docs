@@ -18,7 +18,7 @@ uid: PA_Creating_resource_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the parameter, e.g. "Ping - IP Address".
+      - **Name**: The name of the parameter, e.g., "Ping - IP Address".
 
       - **Type**: Set to *Text*.
 
@@ -32,7 +32,7 @@ uid: PA_Creating_resource_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the parameter, e.g. "Ping - Result".
+      - **Name**: The name of the parameter, e.g., "Ping - Result".
 
       - **Type**: Depends on the parameter. For example:
 
@@ -70,14 +70,14 @@ uid: PA_Creating_resource_tasks
 
    1. Specify the following information:
 
-      - **Name**: The name of the profile definition, e.g. "PING IP"
+      - **Name**: The name of the profile definition, e.g., "PING IP"
 
       - **Parameters**: Add your previously created input and output parameters.
 
    1. Save all changes.
 
       > [!NOTE]
-      > A reference is dynamically generated: e.g. bd625869-cb7a-472c-b834-bd4cba993705 (not visible in the UI)
+      > A reference is dynamically generated: e.g., bd625869-cb7a-472c-b834-bd4cba993705 (not visible in the UI)
 
 1. Implement a protocol containing all the logic for the resource task, and create an element based on that protocol.
 
@@ -123,7 +123,7 @@ uid: PA_Creating_resource_tasks
       </Function>
       ```
 
-      This could e.g. result in the following *function.xml* getting generated for the “Ping IP” resource task:
+      This could e.g., result in the following *function.xml* getting generated for the “Ping IP” resource task:
 
       ```xml
       <Functions xmlns="http://www.skyline.be/config/functions">
@@ -219,7 +219,7 @@ uid: PA_Creating_resource_tasks
 
    1. Select *global* in the overview on the left and select *Add*.
 
-   1. Give your pool a name, e.g. "PING IP".
+   1. Give your pool a name, e.g., "PING IP".
 
    1. Select your newly created resource pool in the overview on the left, go to the *Properties* tab, and add the following pool property:
 
@@ -235,9 +235,9 @@ uid: PA_Creating_resource_tasks
 
    1. In the *Device* tab, specify the following information:
 
-      - **Function**: Choose your previously defined function, e.g. "PING IP".
+      - **Function**: Choose your previously defined function, e.g., "PING IP".
 
-      - **Link element**: Specify the element you created earlier, e.g. "PING 01".
+      - **Link element**: Specify the element you created earlier, e.g., "PING 01".
 
       - **Instance**: <Element>
 

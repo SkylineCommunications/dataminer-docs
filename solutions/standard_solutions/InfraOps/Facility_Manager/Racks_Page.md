@@ -12,7 +12,7 @@ Once you have configured your facilities and rooms in the Facility Manager app, 
 
 ## Adding a rack
 
-1. In the top-left corner of the Racks page, click *New Rack*.
+1. In the upper-left corner of the Racks page, click *New Rack*.
 
 1. Configure the following fields, and then click *Save*:
 

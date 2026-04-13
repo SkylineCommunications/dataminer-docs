@@ -20,7 +20,7 @@ The parameter ID can be:
 
 - *DK* to filter on display keys
 
-A filtering string can contain multiple value filters. By default, multiple value filters on the same column will be combined as OR, whereas multiple value filters on different columns will be combined as AND. You can also the following operators:
+A filtering string can contain multiple value filters. By default, multiple value filters on the same column will be combined as OR, whereas multiple value filters on different columns will be combined as AND. You can also use the following operators:
 
 - For all parameter types: *==* and *!=*
 
@@ -150,7 +150,7 @@ Example:
 columns=1005,1006,1022
 ```
 
-To include additional columns that retrieve data from a table that is linked via relations (i.e. left join), add a "$" prefix to the parameter IDs of the external columns. For example:
+To include additional columns that retrieve data from a table that is linked via relations (i.e., left join), add a "$" prefix to the parameter IDs of the external columns. For example:
 
 ```txt
 columns=123,456,$567
@@ -210,3 +210,6 @@ This filter should be followed by true or false, and determines whether the dire
 ## FORCEFULLTABLE=
 
 This filter can be used on [partial tables](xref:Table_parameters#partial-tables) to force the filter to go through all the pages rather than just the first. The filter should be followed by true or false.
+
+> [!CAUTION]
+> Using this filter will have a negative impact on overall performance.

@@ -150,7 +150,7 @@ From now on, it will be possible to open new suggestion event tabs in the Alarm 
 
 <!-- MR 10.3.0 [CU15] / 10.4.0 [CU3] - FR 10.4.6 -->
 
-A dialog box control showing underlined text and opening up a dropdown list when clicked (e.g. the severity selector in a *New alarm* action of a correlation rule) would incorrectly not open its dropdown list when you pressed ALT+DOWN.
+A dialog box control showing underlined text and opening up a dropdown list when clicked (e.g., the severity selector in a *New alarm* action of a correlation rule) would incorrectly not open its dropdown list when you pressed ALT+DOWN.
 
 #### Visual Overview: Problem when combining static and variable values when dynamically positioning shapes [ID 39459]
 

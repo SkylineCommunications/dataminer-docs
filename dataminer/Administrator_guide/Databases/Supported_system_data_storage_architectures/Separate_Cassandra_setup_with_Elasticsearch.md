@@ -1,5 +1,6 @@
 ---
 uid: Separate_Cassandra_setup_with_Elasticsearch
+keywords: Cassandra Single
 ---
 
 # Separate Cassandra setup with indexing

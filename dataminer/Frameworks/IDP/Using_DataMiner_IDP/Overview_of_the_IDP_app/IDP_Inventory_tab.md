@@ -52,7 +52,7 @@ This tab allows you to start a device discovery and manage the discovered elemen
   > [!NOTE]
   >
   > - It is possible to provision discovered devices even if no matching CI Type was detected for them, but in that case you will have to select the CI Type manually when you start the provisioning.<!-- RN 43095 -->
-  > - Depending on the *Discovery Results to Show* setting, either all discoveries are shown in the *Discovered Elements* table, or only the most recent discoveries. This setting can be found on the *Settings* data page of the IDP app. To access this page, click the hamburger button in the top-left corner, select *Show card side* *panel* and then go to *DATA* > *Settings*.
+  > - Depending on the *Discovery Results to Show* setting, either all discoveries are shown in the *Discovered Elements* table, or only the most recent discoveries. This setting can be found on the *Settings* data page of the IDP app. To access this page, click the hamburger button in the upper-left corner, select *Show card side* *panel* and then go to *DATA* > *Settings*.
 
 ## Deleted
 

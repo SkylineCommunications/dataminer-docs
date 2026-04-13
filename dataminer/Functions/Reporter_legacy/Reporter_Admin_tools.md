@@ -20,7 +20,7 @@ The page consists of the following sections:
 
 - **Reload Agent (by IP)**: Functions in the same way as the Reload Agent option, except that you must enter the IP of the DMA manually, instead of selecting the DMA in a dropdown list.
 
-- **Reload protocol meta info**: Reloads the information regarding the loaded protocols, i.e. the available versions, production version and protocol type.
+- **Reload protocol meta info**: Reloads the information regarding the loaded protocols, i.e., the available versions, production version and protocol type.
 
 - **Reload protocol**: Reloads a particular protocol version, which can be of use when the protocol has changed but Reporter still uses the old version.
 

@@ -7,7 +7,7 @@ uid: GetMaskedAlarmsSorted
 Use this method to retrieve a specific number of masked alarms with a particular alarm severity.
 
 > [!NOTE]
-> Using this method, you can e.g. request masked alarms in batches in order to minimize loading time.
+> Using this method, you can e.g., request masked alarms in batches in order to minimize loading time.
 
 ## Input
 

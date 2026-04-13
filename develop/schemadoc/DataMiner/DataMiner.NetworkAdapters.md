@@ -6,7 +6,7 @@ uid: DataMiner.NetworkAdapters
 
 Overrides the order of the network adapters on a DataMiner Agent.
 
-This can be useful to prevent issues in case the order in Windows changes for some reason (e.g. because there is a new network adapter).
+This can be useful to prevent issues in case the order in Windows changes for some reason (e.g., because there is a new network adapter).
 
 ## Parents
 

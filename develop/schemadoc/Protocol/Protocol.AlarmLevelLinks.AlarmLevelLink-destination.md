@@ -71,7 +71,7 @@ In this case, the destination consists of three parts:
 
    ![Alarm level linking to a primary key column](~/develop/schemadoc/Protocol/images/AlarmLevelLinking2.svg)
 
-   As the name suggests, the "bubble up level" can be used for alarm bubble up (see [SeverityBubbleUp](xref:Protocol.SeverityBubbleUp)) to pass alarm severities between linked tables (e.g. used in CPE Managers).
+   As the name suggests, the "bubble up level" can be used for alarm bubble up (see [SeverityBubbleUp](xref:Protocol.SeverityBubbleUp)) to pass alarm severities between linked tables (e.g., used in CPE Managers).
 
 1. Link option: The link option specifies how a source row is linked to a destination row. If you specify DISPLAY, the rows are linked based on the display key of the source row. If you specify PK, the rows are linked based on the PK of the row. So if, 2002 holds "BBC", you will link it using DISPLAY; if 2002 holds "1.3.5", you will link it using PK.
 

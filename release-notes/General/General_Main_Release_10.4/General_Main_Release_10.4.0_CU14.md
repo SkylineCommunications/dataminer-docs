@@ -34,7 +34,7 @@ A number of security enhancements have been made.
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to e.g. aggregation or merge actions.
+When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to, for example, aggregation or merge actions.
 
 #### STaaS: An alarm will now be generated when a data type is being throttled [ID 42387]
 
@@ -68,11 +68,11 @@ The output will be stored in the following file:
 
 *\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
 
-#### New log viewer web page [ID 42533]
+#### New log viewer webpage [ID 42533]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-Up to now, client applications like DataMiner Cube used the *ViewLog.asp* web page to display server-side log files. This web page has now been replaced by the *ViewLog.aspx* web page.
+Up to now, client applications like DataMiner Cube used the *ViewLog.asp* webpage to display server-side log files. This webpage has now been replaced by the *ViewLog.aspx* webpage.
 
 This new log viewer page has improved compatibility with Failover setups and better error handling for HTTPS certificates.
 

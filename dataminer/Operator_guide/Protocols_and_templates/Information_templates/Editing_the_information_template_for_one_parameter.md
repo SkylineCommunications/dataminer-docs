@@ -12,7 +12,7 @@ To do so:
 
 1. Select the *templates* tab, and go to the *INFORMATION* section.
 
-   Alternatively, you can also click the hamburger button in the top-left corner of the card and select *Change information*.
+   Alternatively, you can also click the hamburger button in the upper-left corner of the card and select *Change information*.
 
    > [!NOTE]
    > If a parameter is in alarm, you can also access this option by right-clicking the alarm and selecting *Change* > *Information*.

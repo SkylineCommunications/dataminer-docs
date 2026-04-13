@@ -27,7 +27,7 @@ To connect to Kibana:
     > [!TIP]
     > We recommend running *Kibana.bat* using an elevated command line, as it takes a while to start the Kibana server and this will allow you to see when it has started.
 
-1. Open any browser window and navigate to <http://ElasticNodeIP:5601> (e.g. <http://127.0.0.1:5601>) to access Kibana.
+1. Open any browser window and navigate to <http://ElasticNodeIP:5601> (e.g., <http://127.0.0.1:5601>) to access Kibana.
 
 ## Basic queries
 
@@ -39,7 +39,7 @@ To enter queries, in the bar on the left, navigate to *Dev Tools* as indicated b
 
 ### Retrieving information on indices (tables)
 
-To get relevant information on *all indices* (i.e. all tables) in the Elasticsearch database, enter the query below. Note that the *GET* is case-sensitive.
+To get relevant information on *all indices* (i.e., all tables) in the Elasticsearch database, enter the query below. Note that the *GET* is case-sensitive.
 
 ```txt
 GET _cat/indices
@@ -125,11 +125,11 @@ To query a specific index, use the *_search* functionality:
 GET tablename/_search
 ```
 
-This query addresses an index (i.e. a table) with a specific table name. For example, to know how many records there are in the table dms-csrmserviceinfo, enter the query `GET dms-csrmserviceinfo/_search` (see the example below).
+This query addresses an index (i.e., a table) with a specific table name. For example, to know how many records there are in the table dms-csrmserviceinfo, enter the query `GET dms-csrmserviceinfo/_search` (see the example below).
 
 The *_search* indicates that you are doing something similar to a "select" query in SQL; you are in fact searching the data.
 
-For the specified index, the query will return the number of *hits* (i.e. number of records) as well as the first couple of records. This allows you to get an idea of what the index contains. This is suitable for if you want to have an idea about *which data* the index contains.
+For the specified index, the query will return the number of *hits* (i.e., number of records) as well as the first couple of records. This allows you to get an idea of what the index contains. This is suitable for if you want to have an idea about *which data* the index contains.
 
 ### Clearing an index
 
@@ -198,7 +198,7 @@ The screenshot below illustrates what the queries will look like in Kibana. Note
 
 ## Example: checking an oversized dms-csrmserviceinfo index
 
-In certain circumstances, the *dms-csrmserviceinfo* index (i.e. table) might become too large, causing problems in DataMiner. Below, you can find how you can check the size of this table.
+In certain circumstances, the *dms-csrmserviceinfo* index (i.e., table) might become too large, causing problems in DataMiner. Below, you can find how you can check the size of this table.
 
 Note that it is outside the scope of this article to discuss what exactly "too large" entails for a specific table. For more information on this and on how to resolve such a situation, contact Skyline Communications.
 

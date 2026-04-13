@@ -211,13 +211,13 @@ An error could occur in the SLAnalytics process due to some features not startin
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.
+In some cases, an error could occur in SLAnalytics when a feature (e.g., automatic incident tracking) was stopped.
 
 #### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID 37336]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
+When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g., `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
 
 #### SLAnalytics: Problem when fetching protocol information while creating a multivariate pattern [ID 37366]
 

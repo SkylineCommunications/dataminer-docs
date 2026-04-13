@@ -64,7 +64,7 @@ When you opened a dashboard with a multiple parameter feed using a URL that cont
 
 #### Problem when opening an HTML5 app \[ID 24565\]
 
-When you opened an HTML5 app (e.g. Monitoring & Control, Dashboards, etc.), in some cases, the app would not load due to a missing internal component.
+When you opened an HTML5 app (e.g., Monitoring & Control, Dashboards, etc.), in some cases, the app would not load due to a missing internal component.
 
 #### Problem during protocol buffer serialization \[ID 24630\]
 
@@ -88,7 +88,7 @@ Due to a code refactoring error, in some cases, the overall memory usage of the 
 
 #### Jobs app: Action buttons no longer displayed after executing an action \[ID 24710\]
 
-In some cases, after a job action was executed (i.e. creation, editing or deletion of a job), it could occur that the action buttons in the header bar of the panel were no longer displayed.
+In some cases, after a job action was executed (i.e., creation, editing or deletion of a job), it could occur that the action buttons in the header bar of the panel were no longer displayed.
 
 #### Jobs app: Timeline action buttons displayed in incorrect location \[ID 24732\]
 
@@ -100,7 +100,7 @@ If a resource was selected in a feed, it could occur that the feed did not keep 
 
 #### Problem when writing multiple datasets to a database \[ID 24748\]
 
-When multiple datasets were written to a database in one go, e.g. when inserting data temporarily stored in offload files, in some cases, the following exception could be thrown:
+When multiple datasets were written to a database in one go, e.g., when inserting data temporarily stored in offload files, in some cases, the following exception could be thrown:
 
 ```txt
 System.InvalidOperationException: Collection was modified after the enumerator was instantiated.
@@ -130,11 +130,11 @@ In some cases, trend components with dynamic shape data could no longer be colla
 
 #### Business Intelligence: Correcting an SLA outage would incorrectly not affect the history table \[ID 24873\]
 
-If you corrected an outage that was no longer in the current SLA window, in some cases, the history table (i.e. table 1000) would incorrectly not get updated.
+If you corrected an outage that was no longer in the current SLA window, in some cases, the history table (i.e., table 1000) would incorrectly not get updated.
 
 #### Jobs app: Save button could no longer be clicked after trying to save a job that contained errors \[ID 24881\]
 
-After trying to save a job that contained errors (e.g. missing fields), in some cases, it would no longer be possible to click the *Save* button again after correcting the errors.
+After trying to save a job that contained errors (e.g., missing fields), in some cases, it would no longer be possible to click the *Save* button again after correcting the errors.
 
 #### Dashboards app: Problem when loading dropdown boxes of interactive automation scripts \[ID 24888\]
 
@@ -230,7 +230,7 @@ When a protocol configured to poll SNMP columns at a specific polling rate has w
 
 #### DataMiner Cube - Data Display: Zero-width column was not saved at the correct position when saving the column layout of a table \[ID 25534\]
 
-When you saved the column layout of a table that contained a hidden column (i.e. a column of which the width was set to 0 in the protocol), that hidden column would not be saved at the correct position.
+When you saved the column layout of a table that contained a hidden column (i.e., a column of which the width was set to 0 in the protocol), that hidden column would not be saved at the correct position.
 
 #### Exception when exporting SNMP element to CSV \[ID 25586\]
 
@@ -462,7 +462,7 @@ When a DVE parent element was deleted from a MySQL database, in some cases, its 
 
 #### Problem when opening a Visio file in an HTML5 app \[ID 26610\]
 
-In some cases, an exception could be thrown when opening a Visio file in an HTML5 app (e.g. Monitoring).
+In some cases, an exception could be thrown when opening a Visio file in an HTML5 app (e.g., Monitoring).
 
 #### Dashboards app: Problem when opening a dashboard after closing a dashboard containing feeds \[ID 26636\]
 
@@ -496,7 +496,7 @@ In some cases, it could occur that a long-term trend prediction was calculated t
 
 #### Protocols: Hex string parameters would not contain enough leading zeros \[ID 26777\]
 
-When a parameter value of type “double” was converted to a value of type “hex string” (e.g. a CRC parameter), in some cases, it would not contain enough leading zeros when put into a data stream.
+When a parameter value of type “double” was converted to a value of type “hex string” (e.g., a CRC parameter), in some cases, it would not contain enough leading zeros when put into a data stream.
 
 The problem would typically occur when the parameter was configured as follows:
 

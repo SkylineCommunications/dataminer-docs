@@ -14,7 +14,7 @@ In DataMiner Cube, the interactive automation script *epm_i_docsis_addnewccapcmp
 
 To streamline the process of creating multiple threshold tables for CCAP and CM collectors, the possibility to create multiple sets directly from the Upstream and Downstream tables within the platform has been added.
 
-For this purpose, a new script has also been added, which copies the table from the front-end *Thresholds Settings* page and applies it across active CCAP and CM collectors: *EPM_I_DOCSIS_SetThresholdsTableToCollectors*. These pages can be accessed via the *Configuration* page or *Threshold Settings* page.
+For this purpose, a new script has also been added, which copies the table from the frontend *Thresholds Settings* page and applies it across active CCAP and CM collectors: *EPM_I_DOCSIS_SetThresholdsTableToCollectors*. These pages can be accessed via the *Configuration* page or *Threshold Settings* page.
 
 ## Changes
 

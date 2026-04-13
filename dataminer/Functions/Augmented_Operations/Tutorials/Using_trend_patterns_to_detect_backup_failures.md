@@ -172,7 +172,7 @@ Now that you have retrieved the most recent pattern occurrence per server, you c
 
       1. Click *When condition*, select *Validation*, and specify the filter `Yes`.
 
-      1. Select *Show icon*, set the color to green (e.g. *#85A864*) and the icon to a check mark.
+      1. Select *Show icon*, set the color to green (e.g., *#85A864*) and the icon to a check mark.
 
          When you select the icon, you can use the filter box to quickly find a specific icon.
 
@@ -182,7 +182,7 @@ Now that you have retrieved the most recent pattern occurrence per server, you c
 
       1. Click *When condition*, select *Validation*, and specify the filter `No`.
 
-      1. Select *Show icon*, set the color to red (e.g. *#FF0000*) and the icon to an "error" exclamation mark.
+      1. Select *Show icon*, set the color to red (e.g., *#FF0000*) and the icon to an "error" exclamation mark.
 
    1. Similarly, add conditions to the text layer that will turn the text color to green or red depending on the validation.
 

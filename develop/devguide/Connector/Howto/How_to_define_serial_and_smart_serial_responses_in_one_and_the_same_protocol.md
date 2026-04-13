@@ -19,7 +19,7 @@ For more information, see [Connections](xref:Connections).
 
 ## Defining serial and smart-serial responses in one protocol
 
-In a protocol that has serial as well as smart-serial connections, we must define different responses for these two types of connections. When a DataMiner Agent receives data from a data source, it will try to match that data to the responses defined in the protocol. To allow DataMiner to determine via which connection the data was received, we must specify the connection in the options attribute in the protocol response. If the connection is not explicitly specified in the response, DataMiner will assume the data was received via the main connection (i.e. the connection with ID 0).
+In a protocol that has serial as well as smart-serial connections, we must define different responses for these two types of connections. When a DataMiner Agent receives data from a data source, it will try to match that data to the responses defined in the protocol. To allow DataMiner to determine via which connection the data was received, we must specify the connection in the options attribute in the protocol response. If the connection is not explicitly specified in the response, DataMiner will assume the data was received via the main connection (i.e., the connection with ID 0).
 
 ## Use case
 
@@ -61,7 +61,7 @@ Example:
 
 > [!NOTE]
 >
-> - In some cases, data received via a smart-serial connection is not delimited by a specific header and trailer. The data source can send all data as one package, without specific delimiters. In that case, we must define a response with a parameter of type "next param" to capture all data (and process it later on in e.g. a QAction).
+> - In some cases, data received via a smart-serial connection is not delimited by a specific header and trailer. The data source can send all data as one package, without specific delimiters. In that case, we must define a response with a parameter of type "next param" to capture all data (and process it later on in e.g., a QAction).
 > - If a serial response does not have a connection ID specified, different issues can occur. When a DataMiner Agent receives smart-serial data, in some cases, it could find a match in the serial response (in case there is a serial response with header/trailer information in the smart serial data). Also, data received via the serial connection could be captured by a smart-serial response since a response with only one "next param" parameter can match any kind of incoming data. When that happens, users checking the stream viewer or the element log will notice that, although data is being received from the data source, the parameters are not updated.
 
 ## How to

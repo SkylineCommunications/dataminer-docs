@@ -65,7 +65,7 @@ The mapping of the CM US QAM channels has been adjusted to improve performance. 
 
 #### Configuration cache backup \[ID 33689\]
 
-A cache backup feature was implemented in the EPM front end to prevent the potential loss of the configuration file containing the unique IDs in the system, which could in turn cause the loss of trend and alarm data.
+A cache backup feature was implemented in the EPM frontend to prevent the potential loss of the configuration file containing the unique IDs in the system, which could in turn cause the loss of trend and alarm data.
 
 #### RPD OFDM Profile Distribution now only targets 3.1 CMs \[ID 33690\]
 

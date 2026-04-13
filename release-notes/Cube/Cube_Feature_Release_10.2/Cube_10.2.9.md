@@ -13,7 +13,7 @@ uid: Cube_Feature_Release_10.2.9
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-In a trend graph, up to now, a dropdown list in the top-right corner allowed you to select one of the available trend prediction types or "Auto". This dropdown list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or "Auto" from the context menu.
+In a trend graph, up to now, a dropdown list in the upper-right corner allowed you to select one of the available trend prediction types or "Auto". This dropdown list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or "Auto" from the context menu.
 
 #### Tab layout: Closing a card tab by clicking it with the middle mouse button [ID 33883]
 
@@ -30,7 +30,7 @@ Password boxes in Cube will now indicate the password strength (common, very wea
 These new password boxes can be found in the following locations:
 
 - Cube login screen (peek only)
-- Data Display: parameters of type password (e.g. the password box of a Microsoft Platform element)
+- Data Display: parameters of type password (e.g., the password box of a Microsoft Platform element)
 - Edit port settings of an SNMPv3 element
 - System Center > Agents > Add
 - System Center > Database
@@ -103,7 +103,7 @@ Up to now, alarms that did not contain any focus information were not allowed to
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-When an embedded web page is displayed in Cube, it is possible to make a callback from the web page into Cube and, for example, open an element, service, view or CPE card.
+When an embedded webpage is displayed in Cube, it is possible to make a callback from the webpage into Cube and, for example, open an element, service, view or CPE card.
 
 The existing JavaScript web browser callbacks for browser shapes in Visual Overview have now been extended to allow opening an EPM card in Cube via an object's SystemName or SystemType using the following method:
 
@@ -151,7 +151,7 @@ The discreet value can contain the SystemType and SystemName of the object, or a
 
 If you know the type of the EPM object, you can add a type prefix (epm or view), followed by an equal sign and (a reference to) the identifier, and if you want to specify the page to be selected by default, you can add a suffix to the identifier in the `<Value>` tag containing the root page name and the page name, separated by a colon.
 
-If the SystemName contains colons (e.g. a MAC address), you can replace the default separator (i.e. colon) by another one (e.g. a pipe character) by placing a `[sep:XY]` prefix in front of the system name. See the following example:
+If the SystemName contains colons (e.g., a MAC address), you can replace the default separator (i.e., colon) by another one (e.g., a pipe character) by placing a `[sep:XY]` prefix in front of the system name. See the following example:
 
 ```xml
 <Value type="open">{EPM=[sep::|]CPE/00:01:08:01:08:01|DATA|CPE Frequencies}</Value>
@@ -210,7 +210,7 @@ A number of enhancements have been made to the DataMiner Cube start window:
 
 - When using the search box to filter the tiles, the last-known server version will now also be checked. This will allow users to search for clusters with a specific server version.
 
-- When you check for updates (by clicking the cogwheel icon in the bottom-right corner and selecting *Check for updates*), the last-known server version will now be taken into account to avoid having to contact every configured cluster. If a DataMiner Agent has been upgraded since the last background update, the new client version will be downloaded from the agent the first time you connect to it or from the cloud during the next background update (if that version is newer that the current version).
+- When you check for updates (by clicking the cogwheel icon in the lower-right corner and selecting *Check for updates*), the last-known server version will now be taken into account to avoid having to contact every configured cluster. If a DataMiner Agent has been upgraded since the last background update, the new client version will be downloaded from the agent the first time you connect to it or from the cloud during the next background update (if that version is newer that the current version).
 
     > [!NOTE]
     >
@@ -254,7 +254,7 @@ When you selected two or more alarm groups, and selected *Clear alarm*, *Take ow
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-When a session variable (e.g. YAxisResources) was updated in an embedded Resource Manager component, in some cases, that same session variable would also incorrectly be updated in the *Occupancy* tab of the Resources app.
+When a session variable (e.g., YAxisResources) was updated in an embedded Resource Manager component, in some cases, that same session variable would also incorrectly be updated in the *Occupancy* tab of the Resources app.
 
 #### Alarm Console would incorrectly keep loading while the tickets linked to the alarms were being loaded [ID 33847]
 
@@ -339,7 +339,7 @@ When you right-clicked a column header in an alarm tab and hovered over the *Add
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-When an element card was open on the DATA page, and a parameter on that page had its unit changed (e.g. via an automation script), that change would incorrectly not be reflected in the UI. To see the new unit, you had to close the element card and re-open it.
+When an element card was open on the DATA page, and a parameter on that page had its unit changed (e.g., via an automation script), that change would incorrectly not be reflected in the UI. To see the new unit, you had to close the element card and re-open it.
 
 #### Problem when the Cube starter window software tried to download a DataMiner Cube for a DataMiner Agent v10.0.0 [ID 34009]
 
@@ -370,7 +370,7 @@ In System Center, when you clicked the *Leave cluster* button on the *Agents* pa
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-Up to now, to resolve the monitoring state of EPM shapes displayed in Visual Overview, the source table of the EPM front end was used, which could cause an incorrect alarm color to be shown for such shapes. Now, the source table of the back end is used instead, as this is the table the monitoring is applied to.
+Up to now, to resolve the monitoring state of EPM shapes displayed in Visual Overview, the source table of the EPM frontend was used, which could cause an incorrect alarm color to be shown for such shapes. Now, the source table of the backend is used instead, as this is the table the monitoring is applied to.
 
 #### Scheduled task corrupted after it was edited [ID 34084]
 

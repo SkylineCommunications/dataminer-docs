@@ -28,7 +28,7 @@ To configure an IP-based cell phone modem that is connected to your DataMiner Sy
 1. Select the *Mobile Gateway* tab and configure the necessary settings. For more information, see [Configuring Mobile Gateway in DataMiner Cube](xref:Configuring_Mobile_Gateway_in_DataMiner_Cube).
 
 > [!NOTE]
-> Since multiple DataMiner Agents can use the same IP-based device (e.g. SMSEagle, Turnpike), there is no way to know which DataMiner Agent will receive an incoming message.
+> Since multiple DataMiner Agents can use the same IP-based device (e.g., SMSEagle, Turnpike), there is no way to know which DataMiner Agent will receive an incoming message.
 >
 > The first DataMiner Agent that sends a request to the device receives ALL unread messages.
 

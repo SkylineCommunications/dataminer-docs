@@ -22,7 +22,7 @@ To implement a logger table, perform the following steps:
     </Param>
     ```
 
-    In case the logger table persists in Cassandra, also provide a [Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag. If the [Param.Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag is used, the primary key (i.e. index) set in the ArrayOptions tag will be replaced by the primary key defined in the Clustering tag.
+    In case the logger table persists in Cassandra, also provide a [Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag. If the [Param.Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag is used, the primary key (i.e., index) set in the ArrayOptions tag will be replaced by the primary key defined in the Clustering tag.
 
     ```xml
     <Param id="5200" trending="false">
@@ -45,7 +45,7 @@ To implement a logger table, perform the following steps:
 
     The Clustering tag contains a semicolon- or colon-separated list of column idx references.
 
-    In Cassandra, the primary key consists of two parts: the partitioning key and the clustering key. In the example above, the partitioning key is the column referred to by idx 25 (i.e. the first item in the semicolon-separated list) and the remaining columns form the clustering key (2;0).
+    In Cassandra, the primary key consists of two parts: the partitioning key and the clustering key. In the example above, the partitioning key is the column referred to by idx 25 (i.e., the first item in the semicolon-separated list) and the remaining columns form the clustering key (2;0).
 
     To form composite partitioning keys, you can use parentheses.<!-- RN 12170 -->
 
@@ -238,7 +238,7 @@ In order to prevent indices from rolling over in the indexing database, it is po
 >
 > - The partitionsToKeep attribute value is ignored when Partition is set to "infinite".
 > - The column does not need to be a datetime column. Any column type is supported.
-> - The value "infinite" only works on tables with IndexingOptions@enabled = true (i.e. logger tables stored in the indexing database).
+> - The value "infinite" only works on tables with IndexingOptions@enabled = true (i.e., logger tables stored in the indexing database).
 
 ## Designing logger tables
 

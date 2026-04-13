@@ -80,7 +80,7 @@ In this step, you will create a low-code app to visualize the performance issue 
 
 1. Create a [new low-code app](xref:Creating_custom_apps#creating-a-new-low-code-app).
 
-1. Optionally, give the app a name of your choice, e.g. *Employee Overview*.
+1. Optionally, give the app a name of your choice, e.g., *Employee Overview*.
 
 1. Create a query using the new GQIDS:
 
@@ -88,7 +88,7 @@ In this step, you will create a low-code app to visualize the performance issue 
 
       ![+ icon to create query](~/dataminer/images/GQI_create_query.png)
 
-   1. Optionally, specify a custom name for the query, e.g. *Employees Table*.
+   1. Optionally, specify a custom name for the query, e.g., *Employees Table*.
 
    1. Select *Get ad hoc data* and then *Employees Table*.
 
@@ -106,7 +106,7 @@ In this step, you will create a low-code app to visualize the performance issue 
 
    ![Performance Analyzer getting started final edit](~/dataminer/images/performance_analyzer_getting_started_final_lca_edit.png)
 
-1. Publish the low-code app using the button in the top-right corner.
+1. Publish the low-code app using the button in the upper-right corner.
 
    ![Performance Analyzer getting started publish the LCA](~/dataminer/images/performance_analyzer_getting_started_publish_the_app.png)
 

@@ -46,6 +46,8 @@ uid: WS_CustomDataTypes_v1
 
 - [DMAAutomationScriptMemoryFile](xref:DMAAutomationScriptMemoryFile)
 
+- [DMAAutomationScriptOptionClientTimeZone](xref:DMAAutomationScriptOptionClientTimeZone)
+
 - [DMAAutomationScriptParameter](xref:DMAAutomationScriptParameter)
 
 - [DMAAutomationVariableInfo](xref:DMAAutomationVariableInfo)

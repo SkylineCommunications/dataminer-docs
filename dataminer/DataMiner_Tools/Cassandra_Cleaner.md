@@ -86,7 +86,7 @@ It is possible that the deletion of some partitions or time ranges fails (becaus
 
 The alarm table is left untouched. This means that after the cleaning, the alarm table will have alarms that are no longer in the timetrace table. If you encounter any problems that may be related to this, please contact [DataMiner Support](mailto:support@dataminer.services).
 
-#### What should I do if my database is part of a Cassandra cluster (e.g. in case of DataMiner Failover)?
+#### What should I do if my database is part of a Cassandra cluster (e.g., in case of DataMiner Failover)?
 
 You only need to run the tool on one of the Cassandra nodes. After the program has finished, run a full Cassandra repair on one of the Cassandra nodes. After `gc_grace_seconds` have elapsed, run a full Cassandra compaction on all Cassandra nodes.
 
@@ -96,7 +96,7 @@ In general, all functionality regarding alarm monitoring with time ranges will n
 
 Affected features for the *timetrace* table:
 
-- The alarm history retrieval function in DataMiner Cube (e.g. all alarms of the last 24 hours).
+- The alarm history retrieval function in DataMiner Cube (e.g., all alarms of the last 24 hours).
 
 - Dragging an element/service to the Alarm Console (same functionality as above).
 
@@ -106,4 +106,4 @@ Affected features for the *timetrace* table:
 
 Affected features for the *infotrace* table:
 
-- Information events history retrieval function in Cube (e.g. all information events of the last 24 hours).
+- Information events history retrieval function in Cube (e.g., all information events of the last 24 hours).

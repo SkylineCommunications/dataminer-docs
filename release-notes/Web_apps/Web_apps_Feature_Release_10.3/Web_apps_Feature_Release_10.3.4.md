@@ -31,7 +31,7 @@ When this setting is enabled, the components on the dashboard or the page/panel 
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-When viewing a trend graph in the Monitoring app, you can now easily switch between trend graph and histogram by clicking either the trend graph or histogram icon in the top-right corner.
+When viewing a trend graph in the Monitoring app, you can now easily switch between trend graph and histogram by clicking either the trend graph or histogram icon in the upper-right corner.
 
 #### Monitoring app & Dashboards app - Line & area chart: Time range buttons [ID 35595]
 
@@ -55,7 +55,7 @@ A line & area chart component now has a number of time range buttons that allow 
 In a low-code app, you can now configure a new type of action: *Open monitoring card*. When triggered, this action will open the card of a specific element, service or view in the *Monitoring* app.
 
 > [!NOTE]
-> When a low-code app is embedded in Cube (e.g. in a visual overview), an *Open monitoring card* action will open the specified card in Cube.
+> When a low-code app is embedded in Cube (e.g., in a visual overview), an *Open monitoring card* action will open the specified card in Cube.
 
 #### GQI - Ad hoc data source: Sending and receiving DMS messages [ID 35701]
 

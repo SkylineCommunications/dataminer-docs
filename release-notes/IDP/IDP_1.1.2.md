@@ -24,7 +24,7 @@ If the detected IP address and CI type are filled in for a selected element in t
 
 #### DataMiner IDP element now includes DataMiner build information \[ID 22687\]
 
-The DataMiner IDP element now contains information on the DataMiner build that is used to run the IDP Solution (e.g. 9.6.0.0-8538). This information is available on the *Version* data page of the element. On this page, the *Version-Aware* table also contains information on the minimum required version for particular IDP features.
+The DataMiner IDP element now contains information on the DataMiner build that is used to run the IDP Solution (e.g., 9.6.0.0-8538). This information is available on the *Version* data page of the element. On this page, the *Version-Aware* table also contains information on the minimum required version for particular IDP features.
 
 #### Improved handling of scan ranges \[ID 22696\]
 
@@ -32,7 +32,7 @@ Previously, when the name of an existing scan range was modified, this could cau
 
 #### Skyline Generic Provisioning API reviewed \[ID 22760\]
 
-The Skyline Generic Provisioning API has been reviewed. Several unused methods (*Logging*, *Pause*, *Start*, *Status*, *Stop* and *Update*) have been removed, and methods that perform very similar operations (i.e. *getStructure* and *getViews*) have been consolidated.
+The Skyline Generic Provisioning API has been reviewed. Several unused methods (*Logging*, *Pause*, *Start*, *Status*, *Stop* and *Update*) have been removed, and methods that perform very similar operations (i.e., *getStructure* and *getViews*) have been consolidated.
 
 #### IDP Activity Manager: Back button added \[ID 22810\]
 

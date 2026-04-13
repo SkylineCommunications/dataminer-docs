@@ -16,4 +16,4 @@ string
 
 ## Remarks
 
-If you want a hyperlink of type "script" (i.e. a hyperlink that starts an automation script) to have a custom name, then enter that name in the *name* attribute. If you leave the *name* attribute empty, the hyperlink will have the name of the script.
+If you want a hyperlink of type "script" (i.e., a hyperlink that starts an automation script) to have a custom name, then enter that name in the *name* attribute. If you leave the *name* attribute empty, the hyperlink will have the name of the script.

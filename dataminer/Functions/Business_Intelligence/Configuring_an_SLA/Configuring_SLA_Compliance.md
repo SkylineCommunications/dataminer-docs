@@ -12,9 +12,9 @@ To configure SLA compliance, go to the *Compliance Configuration* page of the SL
 
 Under *Total violation*, you can specify how long the SLA may be violated during the SLA window before it is considered breached. Two types of total violation can be configured:
 
-- Relative: e.g. 0.010 percent of the total window size
+- Relative: e.g., 0.010 percent of the total window size
 
-- Absolute: e.g. 5 minutes
+- Absolute: e.g., 5 minutes
 
 To set a relative limit:
 

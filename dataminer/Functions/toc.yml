@@ -198,6 +198,8 @@ items:
         items:
           - name: Function resource settings
             topicUid: Function_resource_settings
+          - name: Resource Manager settings
+            topicUid: Resource_manager_config
           - name: Resource availability
             topicUid: Resource_availability
   - name: Business Intelligence
@@ -411,12 +413,12 @@ items:
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
+          - name: Overview of the Low-Code Apps UI
+            topicUid: LCA_UI
           - name: Creating apps
             topicUid: Creating_custom_apps
           - name: Editing an app
             topicUid: Editing_custom_apps
-          - name: Changing user settings
-            topicUid: LCA_User_Settings
           - name: Configuring apps
             items:
               - name: Configuring the app layout
@@ -682,6 +684,8 @@ items:
                 topicUid: Get_trend_data_pattern_events
               - name: Get behavioral change events
                 topicUid: Get_behavioral_change_events
+              - name: Get bookings
+                topicUid: Get_bookings
               - name: Get DCF connections
                 topicUid: Get_DCF_connections
               - name: Get elements
@@ -700,6 +704,10 @@ items:
                 topicUid: Get_profile_instances
               - name: Get relational anomalies
                 topicUid: Get_relational_anomalies
+              - name: Get resource pools
+                topicUid: Get_resource_pools
+              - name: Get resource usages
+                topicUid: Get_resource_usages
               - name: Get resources
                 topicUid: Get_resources
               - name: Get services
@@ -963,6 +971,14 @@ items:
             topicUid: DOM_Remove_FieldDescriptor_Definition
           - name: Generating code with the DOM Editor
             topicUid: DOM_Generating_code_with_the_DOM_editor
+  - name: Edge Manager
+    items:
+    - name: About Edge Manager
+      topicUid: EdgeManagerOverview
+    - name: Getting started
+      topicUid: EdgeManagerGettingStarted
+    - name: Troubleshooting
+      topicUid: EdgeManagerTroubleshooting
   - name: Experience and Performance Management (EPM)
     topicUid: EPM
     items:
@@ -1286,14 +1302,6 @@ items:
         items:
         - name: Scheduler data storage
           topicUid: SchedulerDataStorage
-  - name: Site Manager
-    items:
-    - name: About Site Manager
-      topicUid: SiteManagerOverview
-    - name: Getting started
-      topicUid: SiteManagerGettingStarted
-    - name: Troubleshooting
-      topicUid: SiteManagerTroubleshooting
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:

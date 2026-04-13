@@ -102,7 +102,7 @@ Currently, by default, the existing components will still be used by default to 
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-The header bar of the DataMiner landing page (e.g. `https://myDMA/root/`) has been redesigned.
+The header bar of the DataMiner landing page (e.g., `https://myDMA/root/`) has been redesigned.
 
 - On the left, the DataMiner icon now also shows the URL of the landing page.
 - On the right, next to the user icon, you can now find a cogwheel icon. Clicking that icon will open the *System home settings* window, which contains a setting that allows you to show or hide draft applications.
@@ -113,7 +113,7 @@ The header bar of the DataMiner landing page (e.g. `https://myDMA/root/`) has be
 
 Up to now, certain component settings would automatically get saved in a dashboard or low-code app, even when you were not in edit mode.
 
-From now on, these automatically saved component settings will only get saved in a dashboard or low-code code when you are in edit mode.
+From now on, these automatically saved component settings will only get saved in a dashboard or low-code app when you are in edit mode.
 
 #### GQI DxM: Enhanced installation [ID 43063]
 
@@ -133,7 +133,7 @@ In all DataMiner web apps, the email address of Skyline support has been changed
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-In the template editor, for all types of layers, the color picker now allow you to configure the current color, i.e. the font color of the component.
+In the template editor, for all types of layers, the color picker now allow you to configure the current color, i.e., the font color of the component.
 
 #### Dashboards app & Low-Code Apps - Timeline component: Minor visual enhancements [ID 43129]
 
@@ -195,7 +195,7 @@ In some cases, components used in a low-code app could cause a user's web browse
 
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
 
-In some cases, both GQI DxM and SLHelper could leak memory, especially when executing GQI queries with GQI extensions (i.e. ad hoc data source or custom operators) that throw exceptions from their lifecycle methods.
+In some cases, both GQI DxM and SLHelper could leak memory, especially when executing GQI queries with GQI extensions (i.e., ad hoc data source or custom operators) that throw exceptions from their lifecycle methods.
 
 See also: [GQI DxM - Lifecycle: OnDestroy method would incorrectly be called when an error occurred in the OnInit method [ID 43186]](#gqi-dxm---lifecycle-ondestroy-method-would-incorrectly-be-called-when-an-error-occurred-in-the-oninit-method-id-43186)
 

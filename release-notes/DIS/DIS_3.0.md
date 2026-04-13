@@ -33,4 +33,4 @@ When you are working on a connector solution that has a *Compliancies.MinimumReq
 
 #### Visual Studio would incorrectly throw warnings when DIS created a QAction_Helper project [ID 39643]
 
-When DIS generated a `QAction_Helper` project (e.g. while converting a *protocol.xml* file to a protocol solution), Visual Studio would incorrectly throw a large number of warnings.
+When DIS generated a `QAction_Helper` project (e.g., while converting a *protocol.xml* file to a protocol solution), Visual Studio would incorrectly throw a large number of warnings.

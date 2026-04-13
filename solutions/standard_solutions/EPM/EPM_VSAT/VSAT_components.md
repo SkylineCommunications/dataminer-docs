@@ -61,7 +61,7 @@ The VSAT EPM Solution uses the automation scripts detailed below.
 
 ### EPM GEO BE Handler
 
-This script is in charge of communicating to the collector that the ID assignment files from the VSAT Platform Manager are ready for ingestion after the EPM back ends are done processing and setting the topology data in their respective tables.
+This script is in charge of communicating to the collector that the ID assignment files from the VSAT Platform Manager are ready for ingestion after the EPM backends are done processing and setting the topology data in their respective tables.
 
 This automation script is dependent on the following connectors:
 
@@ -70,7 +70,7 @@ This automation script is dependent on the following connectors:
 
 ### EPM GEO FE to BE
 
-This script operates within the messaging system domain taking care of communication about the collector and the entity the processed data originated from, between EPM front-end elements and back-end elements.
+This script operates within the messaging system domain taking care of communication about the collector and the entity the processed data originated from, between EPM frontend elements and backend elements.
 
 This automation script is dependent on the following connectors:
 
@@ -79,7 +79,7 @@ This automation script is dependent on the following connectors:
 
 ### EPM Message Handler
 
-This script is in charge of handling EPM messages. It is triggered from the collector after the ID request files for the entities are exported. It tells the EPM front end to ingest the request files.
+This script is in charge of handling EPM messages. It is triggered from the collector after the ID request files for the entities are exported. It tells the EPM frontend to ingest the request files.
 
 This automation script is dependent on the following connectors:
 

@@ -51,7 +51,7 @@ The following checks and error messages have been added or updated.
 | 1.22.4 | Protocol.CheckPageOrderAttribute   | Unsupported popup page '{pageName}' in pageOrder attribute.                                                                         |
 | 1.22.5 | Protocol.CheckPageOrderAttribute   | Missing page '{pageName}' on pageOrder attribute.                                                                                   |
 | 1.22.6 | Protocol.CheckPageOrderAttribute   | Missing WebInterface page.                                                                                                          |
-| 1.22.7 | Protocol.CheckPageOrderAttribute   | Web page '{pageName}' should be defined after all regular pages and the first web page should be preceded by a separator.           |
+| 1.22.7 | Protocol.CheckPageOrderAttribute   | Webpage '{pageName}' should be defined after all regular pages, and the first webpage should be preceded by a separator.            |
 | 1.22.8 | Protocol.CheckPageOrderAttribute   | The specified page '{pageName}' does not exist.                                                                                     |
 | 1.22.9 | Protocol.CheckPageOrderAttribute   | Page '{pageName}' has been added more than once to the pageOrder attribute.                                                         |
 | 2.9.3  | Param.CheckUnitsTag                | Obsolete unit '{obsoleteUnit}'. New syntax '{newUnit}'. Param ID '{paramPid}'.                                                      |

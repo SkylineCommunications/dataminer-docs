@@ -22,7 +22,7 @@ To deploy the Availability branch of the EPM Solution:
 
    - If the cluster (DMS) contains more that one DMA, it is mandatory to have a shared folder that is accessible by all DMAs available in the cluster.
 
-   - There should be a separate DMA to host the front-end element, which does not host any collectors. This is not mandatory, but it is highly recommended.
+   - There should be a separate DMA to host the frontend element, which does not host any collectors. This is not mandatory, but it is highly recommended.
 
    - If you are using a DataMiner Cube version prior to DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 -->, make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled so you can use the Topology app.
 
@@ -33,14 +33,14 @@ To deploy the Availability branch of the EPM Solution:
 
 1. Fill in the fields presented by the script:
 
-   - *Frontend Host*: Select the DMA within your DataMiner System that should host the front-end element. On the other DMAs, back-end elements will be created.
+   - *Frontend Host*: Select the DMA within your DataMiner System that should host the frontend element. On the other DMAs, backend elements will be created.
 
    - *Number of Expected Endpoints*: Determines how many collector elements will be created. The script will create a collector for every 20K endpoints. For example, for 500K expected endpoints, 25 collector elements will be created, evenly distributed over all available DMAs.
 
       > [!NOTE]
       > The collectors can support more endpoints. This setting is used as a baseline. This means that as more endpoints are added, there is nothing else that needs to be done, and the system will work without intervention. You will only need to add more collectors in case there is a large increase of the number of endpoints.
 
-   - *File Configuration*: This section contains all the required fields for distributing the endpoints to all elements. If a cluster is used, provide the remote directory with the hostname, e.g. `\\HostName\DataMiner EPM\Availability`, and the username and password of a user that has read/write access to this directory.
+   - *File Configuration*: This section contains all the required fields for distributing the endpoints to all elements. If a cluster is used, provide the remote directory with the hostname, e.g., `\\HostName\DataMiner EPM\Availability`, and the username and password of a user that has read/write access to this directory.
 
 1. Click the *Create* button.
 
@@ -59,9 +59,9 @@ To deploy the Availability branch of the EPM Solution:
 
 1. Open the *Configuration* topology chain in the Topology app.
 
-1. In the front-end visual overview, click the *Set* button next to *Import* to begin the provisioning.
+1. In the frontend visual overview, click the *Set* button next to *Import* to begin the provisioning.
 
-   ![Configuration page front-end element](~/dataminer/images/Availability_FrontEnd_Configuration.png)
+   ![Configuration page frontend element](~/dataminer/images/Availability_FrontEnd_Configuration.png)
 
    > [!NOTE]
    > If you cannot see the Topology app in between the Surveyor and Activity modules in Cube, close and reopen DataMiner Cube. If this has no effect, and you are using a DataMiner Cube version prior to DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 -->, make sure the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) is enabled. If you are using a recent DataMiner version or the option is enabled, and the app is still not shown, restart DataMiner.

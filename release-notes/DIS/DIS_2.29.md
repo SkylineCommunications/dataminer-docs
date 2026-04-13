@@ -111,14 +111,14 @@ The extensive list of snippets in the *DIS \> Protocol \> Param* folder have now
 | Folder               | Contents                                                                                          |
 |----------------------|---------------------------------------------------------------------------------------------------|
 | Displayed            | Code to add parameters to be displayed in the UI.                                                 |
-| Internal logic       | Code to add parameters used for internal logic (e.g. dummy parameters, fixed parameters, etc.)    |
-| Param options        | Code to add options to existing parameters (e.g. Alarm tags, Subtext tags, Exceptions tags, etc.) |
-| Serial communication | Code to add serial communication parameters (e.g. headers, trailers, etc.)                        |
-| SNMP communication   | Code to add SNMP communication parameters (e.g. trap receivers, SNMP tables, etc.)                |
+| Internal logic       | Code to add parameters used for internal logic (e.g., dummy parameters, fixed parameters, etc.)    |
+| Param options        | Code to add options to existing parameters (e.g., Alarm tags, Subtext tags, Exceptions tags, etc.) |
+| Serial communication | Code to add serial communication parameters (e.g., headers, trailers, etc.)                        |
+| SNMP communication   | Code to add SNMP communication parameters (e.g., trap receivers, SNMP tables, etc.)                |
 
 #### Protocol Schema: Slowpoll settings now only configurable for main port \[ID 26790\]
 
-From now on, it will only be possible to add SlowPoll and SlowPollBase elements to the Protocol.PortSettings element (i.e. the configuration of the main connection). It will no longer be possible to add these elements to the Protocol.Ports.PortSettings element (i.e. the configuration of the additional connections).
+From now on, it will only be possible to add SlowPoll and SlowPollBase elements to the Protocol.PortSettings element (i.e., the configuration of the main connection). It will no longer be possible to add these elements to the Protocol.Ports.PortSettings element (i.e., the configuration of the additional connections).
 
 #### Class Library \[ID 27161\]
 

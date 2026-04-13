@@ -10,13 +10,13 @@ When no docked cards are open, the card pane in DataMiner Cube displays the "Dat
 
 On this page, you can find:
 
-- A list of recent items on the left-hand side. Any pinned items are displayed at the top of the list, separated from the rest of the list with a line.
+- A list of recent items on the left. Any pinned items are displayed at the top of the list, separated from the rest of the list with a line.
 
 - The alarm distribution of the last day.
 
 - News items related to DataMiner. Depending on your user permissions, this may include information about protocol updates or DataMiner software updates.
 
-- A link to the landing page for the DataMiner web apps on the right-hand side.
+- A link to the landing page for the DataMiner web apps on the right.
 
 > [!NOTE]
 >
@@ -55,13 +55,13 @@ Depending on the protocol used, many more types of cards are possible, such as C
 
 On the left side of view cards, service cards, and element cards, a navigation pane is displayed.
 
-You can collapse and expand this pane with the arrow button in the top-right corner of the pane. You can also change the size of the pane by dragging its edge.
+You can collapse and expand this pane with the arrow button in the upper-right corner of the pane. You can also change the size of the pane by dragging its edge.
 
 The pane consists of a tree view with several fixed nodes:
 
 - **VISUAL**: Contains all available Visual Overview pages.
 
-  ![Visual page](~/dataminer/images/Visual_Page.png)<br>*VISUAL page in DataMiner 10.4.5*
+  ![Visual page](~/dataminer/images/Visual_Page.png)<br>*VISUAL page in DataMiner 10.6.4*
 
   > [!NOTE]
   >
@@ -97,9 +97,9 @@ The pane consists of a tree view with several fixed nodes:
 
   - Each note can have a title, a description and an expiration date.
 
-  - Each note can be removed with the x in its top-right corner.
+  - Each note can be removed with the x in its upper-right corner.
 
-  - Expired notes are only displayed if you select *Show expired notes* in the top-right corner of the card. They are then displayed in a different color, so you can clearly see the difference with the notes that are not expired.
+  - Expired notes are only displayed if you select *Show expired notes* in the upper-right corner of the card. They are then displayed in a different color, so you can clearly see the difference with the notes that are not expired.
 
   ![Notes](~/dataminer/images/Notes.png)<br>*Notes in DataMiner 10.4.5*
 
@@ -108,7 +108,7 @@ The pane consists of a tree view with several fixed nodes:
   > [!NOTE]
   > The Annotations module is no longer available from DataMiner 10.6.0/10.6.1 onwards<!-- RN 44124+44136 -->. Prior to this, starting from DataMiner 10.4.0/10.4.1<!-- RN 37786 -->, it is disabled by default, but it can be enabled with the [*LegacyAnnotations* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyannotations). In even older DataMiner versions, this feature is enabled by default, but you can optionally disable it with the soft-launch option.
 
-Depending on the type of cards, more nodes may be available, e.g. *AGGREGATION* on view cards.
+Depending on the type of cards, more nodes may be available, e.g., *AGGREGATION* on view cards.
 
 > [!NOTE]
 >
@@ -118,7 +118,7 @@ Depending on the type of cards, more nodes may be available, e.g. *AGGREGATION* 
 
 ## Card header bar menu
 
-When you click the hamburger button in the top-left corner of a card, a shortcut menu with several commands is opened.
+When you click the hamburger button in the upper-left corner of a card, a shortcut menu with several commands is opened.
 
 - **Back**: Goes to the previous open page.
 
@@ -174,11 +174,11 @@ However, you can also open items in a new card next to any cards that are alread
 
 To change the card layout on the fly, drag the edge of a card to adjust its size.
 
-![Drag card edge](~/dataminer/images/Drag_Edge_Card.png)<br>*Master bottom card layout option in DataMiner 10.4.5*
+![Drag card edge](~/dataminer/images/Drag_Edge_Card.png)<br>*Master bottom card layout option in DataMiner 10.6.4*
 
-To select a preconfigured Cube card layout, click the user icon in the top-right corner of the Cube UI (1) and select *Change layout* (2). This will open a side panel where you can select a card layout (3).
+To select a preconfigured Cube card layout, click the user icon in the upper-right corner of the Cube UI (1) and select *Change layout* (2). This will open a side panel where you can select a card layout (3).
 
-![Card layout](~/dataminer/images/Card_Layout.png)<br>*Master bottom card layout option in DataMiner 10.4.5*
+![Card layout](~/dataminer/images/Card_Layout.png)<br>*Master bottom card layout option in DataMiner 10.6.4*
 
 The following layout options are available:
 
@@ -199,7 +199,7 @@ The following layout options are available:
 
 It is possible to drag a card, by left-clicking and dragging the top edge of the card to its destination.
 
-![Dragging a card](~/dataminer/images/Dragging_a_Card.png)<br>*DataMiner 10.4.5*
+![Dragging a card](~/dataminer/images/Dragging_a_Card.png)<br>*Card panes in DataMiner 10.6.4*
 
 You can drag a card:
 
@@ -237,9 +237,9 @@ To unpin the card again, right-click the card header bar and clear the selection
 
 ## Marking cards as non-closable
 
-From DataMiner 10.3.9/10.4.0 onwards, if the [card layout](#changing-the-card-layout) is set to "Proportional", it is possible to hide the close button in the top-right corner of a card to prevent it from being closed.
+From DataMiner 10.3.9/10.4.0 onwards, if the [card layout](#changing-the-card-layout) is set to "Proportional", it is possible to hide the close button in the upper-right corner of a card to prevent it from being closed.
 
-To do so, click the hamburger button in the top-left corner and select *Hide close button*.
+To do so, click the hamburger button in the upper-left corner and select *Hide close button*.
 
 To restore the close button, click the hamburger button and clear the selection from *Hide close button*.
 
@@ -250,7 +250,7 @@ To restore the close button, click the hamburger button and clear the selection 
 
 From DataMiner 10.3.9/10.4.0 onwards, if the [card layout](#changing-the-card-layout) is set to "Proportional", it is possible to promote one card to Master card.
 
-To do so, click the hamburger button in the top-left corner and select *Set as Master card*.
+To do so, click the hamburger button in the upper-left corner and select *Set as Master card*.
 
 Once a Master card is chosen, all new cards open within it, regardless of the number of displayed cards.
 

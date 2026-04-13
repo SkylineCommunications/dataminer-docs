@@ -249,7 +249,7 @@ If you use shape positioning based on coordinates stored in dynamic tables, you 
 
 To do so:
 
-1. In the protocol, go to the definition of the table that contains the positioning data, and add an extra column named e.g. "InterfaceData" next to the "xpos" and "ypos" columns. In the *ColumnOptions* tag of this additional column, add the option "DynamicData".
+1. In the protocol, go to the definition of the table that contains the positioning data, and add an extra column named e.g., "InterfaceData" next to the "xpos" and "ypos" columns. In the *ColumnOptions* tag of this additional column, add the option "DynamicData".
 
 1. To the subshapes that represent the interfaces, add a shape data field of type **Interface**, and set its value to *\[Dynamic:InterfaceName\]*.
 
@@ -322,7 +322,7 @@ For example:
 
 When using dynamic shape positioning based on coordinates stored in tables, the dynamically positioned shapes can be automatically connected by lines.
 
-For this feature to work, the shape positioning data (i.e. the data describing where to draw which shape) and the connection data (i.e. the data describing the connections to be drawn between shapes) have to be located in separate tables of the same element.
+For this feature to work, the shape positioning data (i.e., the data describing where to draw which shape) and the connection data (i.e., the data describing the connections to be drawn between shapes) have to be located in separate tables of the same element.
 
 > [!NOTE]
 >
@@ -450,5 +450,5 @@ MyVariable:[ConnectionLineDisplayIdx] ([ConnectionLineIdx]) (from '[ConnectionLi
 
 > [!NOTE]
 >
-> - If a connection has no clear direction (i.e. when both interfaces are set to "inout"), it is impossible to know which interface will be the source and which will be the destination.
-> - If a line represents multiple connections (i.e. when the *MultipleLinesMode* and *MultipleCurvedLinesMode* options are not used), and a **SetVar** command has been configured on one of those connections, clicking the line will cause the placeholders to be replaced by the corresponding values from each connection, separated by a pipe character ("\|"). A different separator character can also be defined with a **SetVarOptions** shape data field that is set to the *MultipleValueSep=* option.
+> - If a connection has no clear direction (i.e., when both interfaces are set to "inout"), it is impossible to know which interface will be the source and which will be the destination.
+> - If a line represents multiple connections (i.e., when the *MultipleLinesMode* and *MultipleCurvedLinesMode* options are not used), and a **SetVar** command has been configured on one of those connections, clicking the line will cause the placeholders to be replaced by the corresponding values from each connection, separated by a pipe character ("\|"). A different separator character can also be defined with a **SetVarOptions** shape data field that is set to the *MultipleValueSep=* option.

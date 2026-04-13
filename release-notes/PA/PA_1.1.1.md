@@ -35,7 +35,7 @@ The *SRM_LSO_ProcessAutomation* script will process this value while creating to
 
 #### Booking automatically unregistered \[ID 28467\]
 
-In case for some reason a booking is still registered in the Process Automation framework while it has in fact already finished, e.g. because of a malfunction or because the DMA is down, it will now be automatically unregistered from the Queue Manager element.
+In case for some reason a booking is still registered in the Process Automation framework while it has in fact already finished, e.g., because of a malfunction or because the DMA is down, it will now be automatically unregistered from the Queue Manager element.
 
 #### Queue Error State now indicates if maximum empty duration is exceeded \[ID 28558\]
 

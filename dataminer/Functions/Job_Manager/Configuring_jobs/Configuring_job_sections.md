@@ -11,7 +11,7 @@ While a user is creating a job, several different job sections can be displayed.
 
 To configure these job sections:
 
-1. Click the user icon in the top-right corner and select *Configuration*.
+1. Click the user icon in the upper-right corner and select *Configuration*.
 
   The different job sections are displayed in a diagram with nodes extending to the right and in between them. The lowest nodes below the job sections are represented as + icons.
 
@@ -31,7 +31,7 @@ To configure these job sections:
 
      - *Icon*: An optional icon for the section.
 
-     - *Type*: Determines the type of section, i.e. *Fields* or *Booking*. Further configuration will depend on the selected type.
+     - *Type*: Determines the type of section, i.e., *Fields* or *Booking*. Further configuration will depend on the selected type.
 
      - *Booking manager*: Available for a booking section. Determines which Booking Manager element is used. Once jobs have been created with the selected booking manager element, you will no longer be able to modify this selection.
 

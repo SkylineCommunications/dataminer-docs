@@ -20,8 +20,8 @@ When you start troubleshooting, you first need to determine whether the setup us
 
 To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
-- If the type is *database per cluster*, *Cassandra Cluster* (i.e. *dedicated clustered storage*) is used.
-- If the type is *Cassandra*, *Cassandra Single* (i.e. *Storage Per DMA*) is used.
+- If the type is *database per cluster*, *Cassandra Cluster* (i.e., *dedicated clustered storage*) is used.
+- If the type is *Cassandra*, *Cassandra Single* (i.e., *Storage Per DMA*) is used.
 
 ## Architecture
 

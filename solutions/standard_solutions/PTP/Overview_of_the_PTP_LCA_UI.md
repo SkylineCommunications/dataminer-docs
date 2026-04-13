@@ -17,7 +17,7 @@ This page shows a list of configured PTP domains and a summary of the selected d
 
 ![Summary page](~/solutions/images/PTP_Summary.png)
 
-- In the top-right corner (1), you can see the configured PTP domains in the PTP Solution with the number of configured clocks per domain. The selected domain is highlighted. All the other data shown in the app will be related to this selected domain.
+- In the upper-right corner (1), you can see the configured PTP domains in the PTP Solution with the number of configured clocks per domain. The selected domain is highlighted. All the other data shown in the app will be related to this selected domain.
 
 - On the left (2), from left to right, the page shows the total number of grandmasters, boundary clocks, transparent clocks, and slave clocks in the selected PTP domain. The filter icon in each box indicates if there are any active alarms for the respective clock type. When you click the filter icon, the alarm list below will be filtered to the specific clock type.
 
@@ -37,7 +37,7 @@ This page lists all PTP nodes in the domain, grouped by PTP role, with icons sho
 
 With the ![Hamburger button](~/solutions/images/PTP_Hamburger_button.png) button next to each element name, you can open a context menu that provides access to the monitoring app and a details panel for the element.
 
-With the toggle button in the top-right corner, you can switch to only showing the nodes with active alarms. The alarm states are updated in real time, so there is no need to refresh the page.
+With the toggle button in the upper-right corner, you can switch to only showing the nodes with active alarms. The alarm states are updated in real time, so there is no need to refresh the page.
 
 In the header bar, several buttons are available that allow easy comparison between multiple nodes of the same clock type.
 

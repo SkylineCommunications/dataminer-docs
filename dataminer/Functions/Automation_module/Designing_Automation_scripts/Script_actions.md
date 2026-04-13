@@ -4,7 +4,7 @@ uid: Script_actions
 
 # Script actions
 
-A script consists of a series of script actions (i.e. lines). These are represented in the *Script* section of the right pane. You can add or modify script actions at any time during script configuration.
+A script consists of a series of script actions (i.e., lines). These are represented in the *Script* section of the right pane. You can add or modify script actions at any time during script configuration.
 
 To create a script action:
 

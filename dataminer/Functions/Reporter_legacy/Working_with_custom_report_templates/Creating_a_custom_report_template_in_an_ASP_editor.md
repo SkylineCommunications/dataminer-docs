@@ -12,7 +12,7 @@ To create a custom report template from scratch, do the following:
    <%@ Language="JScript" %>
    <!-- #include file="Templates.inc.asp" -->
    <%
-   // generate web page here
+   // generate webpage here
    %>
    ```
 

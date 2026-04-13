@@ -63,4 +63,4 @@ When the default configuration was restored, instead of the default configuratio
 
 #### Problem provisioning element if provisioning previously failed \[ID 30106\]
 
-If you attempted to provision a discovered element on the *Inventory* > *Discovered* tab for a second time, the provisioning process did not start unless the row selection had changed. This meant that in cases where the provisioning initially failed, e.g. because it was not enabled for the relevant CI type, it would continue to fail even if the reason for the initial failure was removed.
+If you attempted to provision a discovered element on the *Inventory* > *Discovered* tab for a second time, the provisioning process did not start unless the row selection had changed. This meant that in cases where the provisioning initially failed, e.g., because it was not enabled for the relevant CI type, it would continue to fail even if the reason for the initial failure was removed.

@@ -56,7 +56,7 @@ Also, offline Failover agents will now be prevented from becoming the primary NA
 
 #### Schedule configuration of BPA tests \[ID 29000\]
 
-On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
+On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g., daily or every 12 hours.
 
 #### Cache for SNMP inform messages \[ID 29034\]
 
@@ -207,7 +207,7 @@ Also, when you searched for an app using the search box in the Cube header, righ
 
 #### Cassandra: Problem with file offload \[ID 28951\]
 
-Due to a file offload problem, in some rare cases, data operations (e.g. parameter updates) executed during a Cassandra outage would not get pushed to the database after the outage.
+Due to a file offload problem, in some rare cases, data operations (e.g., parameter updates) executed during a Cassandra outage would not get pushed to the database after the outage.
 
 #### Dashboards app: Multiple parameter feeds in PDF reports would incorrectly also show all selected parameter indices \[ID 28978\]
 
@@ -243,7 +243,7 @@ Unexpected filter type: Skyline.DataMiner.Net.SubscriptionFilters.SubscriptionFi
 
 #### Interactive automation scripts: Date selected in calendar control would be parsed incorrectly \[ID 29153\]
 
-When, in an interactive automation script, a calendar control was used to select a date (i.e. a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
+When, in an interactive automation script, a calendar control was used to select a date (i.e., a datetime value without a specific time), in some cases, the value of the selected date would be parsed incorrectly.
 
 #### UDP smart-serial server would receive an empty package each time a new client started sending data to it \[ID 29166\]
 
@@ -263,7 +263,7 @@ In DataMiner Cube, in some cases, table columns of which the width was set to 0 
 
 #### Dashboards app - GQI: Aggregated values would incorrectly be displayed in raw format \[ID 29200\]
 
-In GQI query results, aggregated values would incorrectly be displayed in raw format. From now on, they will be formatted according to the display properties (e.g. units, decimals, etc.) defined in the protocol.
+In GQI query results, aggregated values would incorrectly be displayed in raw format. From now on, they will be formatted according to the display properties (e.g., units, decimals, etc.) defined in the protocol.
 
 #### DataMiner Cube - Alarm Console: Problem when trying to unmask an EPM object \[ID 29213\]
 

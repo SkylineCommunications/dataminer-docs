@@ -4,7 +4,7 @@ uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorV
 
 # References element
 
-Provides references to e.g. registration systems.
+Provides references to, for example, registration systems.
 
 ## Parent
 
@@ -16,7 +16,7 @@ Provides references to e.g. registration systems.
 |--- |--- |--- |
 |***Choice***|||
 |&nbsp;&nbsp;[TaskId](xref:Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.TaskId)|[1, *]|Provides a reference to a corresponding task.|
-|&nbsp;&nbsp;[Reference](xref:Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.Reference)|[1, *]|Provides a reference to e.g. a registration system.|
+|&nbsp;&nbsp;[Reference](xref:Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.Reference)|[1, *]|Provides a reference to, for example, a registration system.|
 
 ## Examples
 

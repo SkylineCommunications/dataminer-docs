@@ -15,7 +15,7 @@ To link your accounts:
 1. In the pane that mentions your DMS, click *Link account*. This will open a new tab.
 
    > [!NOTE]
-   > If this option is not available, and "..." is shown in the top-right corner of the pane, your accounts have already been linked. In that case, you can remove the link again by selecting ... > *Unlink account*.
+   > If this option is not available, and "..." is shown in the upper-right corner of the pane, your accounts have already been linked. In that case, you can remove the link again by selecting ... > *Unlink account*.
 
 1. In the new tab, if the displayed dataminer.services account and DataMiner System are correct, click *Continue to log on*.
 

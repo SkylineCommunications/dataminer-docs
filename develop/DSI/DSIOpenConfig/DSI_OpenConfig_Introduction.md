@@ -152,8 +152,8 @@ The gNMI RPC service provides the following four RPCs:
 
 This RPC can be used by clients to obtain more information from a target about its capabilities. The capabilities comprise:
 
-- The version of the gNMI protocol (e.g. 0.7.0).
-- The supported encodings (e.g. Json, Proto).
+- The version of the gNMI protocol (e.g., 0.7.0).
+- The supported encodings (e.g., Json, Proto).
 - The supported data models: A list of all the supported models. Each entry defines the name of the model, the version of the model, and the organization that published the model.
 
 > [!NOTE]
@@ -190,7 +190,7 @@ gNMI allows dial-in streaming telemetry. First, the client connects with the tar
 > [!NOTE]
 >
 > - Implementors can put limits on the number of RPCs that can exist simultaneously.
-> - Implementors do not always support all types of subscriptions on all paths. For example, CISCO NX-OS 9.3(5) currently does not support on-change stream subscriptions on octet counters (e.g. in-octets, out-octets) defined in the OpenConfig interfaces YANG model.
+> - Implementors do not always support all types of subscriptions on all paths. For example, CISCO NX-OS 9.3(5) currently does not support on-change stream subscriptions on octet counters (e.g., in-octets, out-octets) defined in the OpenConfig interfaces YANG model.
 > - When using long-lasting RPCs, it is possible that you will need to configure keep-alive settings to avoid the RPCs being closed by the target. You can find more information in [keepalive.md](https://github.com/grpc/grpc/blob/master/doc/keepalive.md).
 
 > [!TIP]

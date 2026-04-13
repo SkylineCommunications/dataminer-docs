@@ -19,7 +19,7 @@ Expected duration: 15 minutes.
 
 The DataMiner System used for this tutorial has to meet the following requirements:
 
-- DataMiner is installed on a machine running a Windows Server version (e.g. Windows Server 2022).
+- DataMiner is installed on a machine running a Windows Server version (e.g., Windows Server 2022).
 - The DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - The DataMiner version is 10.3.0 [CU0] or higher.
 
@@ -125,7 +125,7 @@ Proceed as follows:
 
    1. On the Catalog page, go to *Versions*.
 
-   1. Look up the latest version in the 1.1.3.x range (e.g. 1.1.3.20).
+   1. Look up the latest version in the 1.1.3.x range (e.g., 1.1.3.20).
 
    1. Click *Deploy* to deploy that version to your DataMiner System.
 

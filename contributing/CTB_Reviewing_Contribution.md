@@ -4,7 +4,7 @@ uid: CTB_Reviewing_Contribution
 
 # Reviewing a contribution from someone else
 
-Most contributions to the documentation are added in the form of "pull requests", i.e. requests to pull specific changes into the repository. The pull requests are listed under <https://github.com/SkylineCommunications/dataminer-docs/pulls>.
+Most contributions to the documentation are added in the form of "pull requests", i.e., requests to pull specific changes into the repository. The pull requests are listed under <https://github.com/SkylineCommunications/dataminer-docs/pulls>.
 
 Until a pull request is merged, everyone can review it and add comments of their own. To do so:
 
@@ -30,4 +30,4 @@ Until a pull request is merged, everyone can review it and add comments of their
 > You can also submit a review without adding comments directly in a file, by only clicking the green review button and using the window displayed above.
 
 > [!TIP]
-> If the Markdown source looks confusing, and you would prefer to see a preview of a file, in the *Files changed* tab, click "..." in the top-right corner of the box representing the file, and select *View file*. However, note that it is not possible to submit comments in this preview.
+> If the Markdown source looks confusing, and you would prefer to see a preview of a file, in the *Files changed* tab, click "..." in the upper-right corner of the box representing the file, and select *View file*. However, note that it is not possible to submit comments in this preview.

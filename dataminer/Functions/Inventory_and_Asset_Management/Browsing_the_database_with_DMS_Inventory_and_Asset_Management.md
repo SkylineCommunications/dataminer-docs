@@ -4,7 +4,7 @@ uid: Browsing_the_database_with_DMS_Inventory_and_Asset_Management
 
 # Browsing the database with DataMiner Inventory and Asset Management
 
-On the left-hand side of the *Asset Manager* user interface, there is an overview pane with two tabs: *Normal view* and *Logical view*. Depending on what you select in the overview pane, additional views will become available in the data pane on the right-hand side.
+On the left side of the *Asset Manager* user interface, there is an overview pane with two tabs: *Normal view* and *Logical view*. Depending on what you select in the overview pane, additional views will become available in the data pane on the right.
 
 The following sections provide information on each of the Asset Manager views:
 
@@ -19,7 +19,7 @@ The following sections provide information on each of the Asset Manager views:
 > [!NOTE]
 > Every minute, DataMiner checks the connection with the database. If no connection can be made, a notification message will appear.
 
-### Normal view
+## Normal view
 
 The *Normal view* visualizes the entire database as a tree structure in the overview pane.
 
@@ -39,7 +39,7 @@ If you click an item in the tree structure, detailed data appear in the data pan
 > [!NOTE]
 > To refresh the data in the data pane, click the *Refresh* button.
 
-### Logical view
+## Logical view
 
 The *Logical view* in the overview pane shows the key fields of each record with all linked tables in the form of a tree structure.
 
@@ -49,7 +49,7 @@ IDs are automatically replaced by the values to which they refer.
 
 If you select an item in the logical view in the overview pane, the data pane on the right will display two tabs: *Row view* and *All linked items*.
 
-### Row view
+## Row view
 
 In the *Row view*, the fields of a selected record are displayed in the data pane as a series of name/value pairs.
 
@@ -62,7 +62,7 @@ If you have Write access to the table that contains the selected record, you can
 > - In the configuration file, user groups can be granted or denied access to tables. For more information, see [Configuring DataMiner Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management).
 > - When a user updates, adds or deletes a row in Asset Manager, an information event is generated in the Alarm Console.
 
-### All linked items view
+## All linked items view
 
 In the *All linked items* view, the selected record and all records linked to it are displayed one below the other in separate sections, each representing a database table.
 

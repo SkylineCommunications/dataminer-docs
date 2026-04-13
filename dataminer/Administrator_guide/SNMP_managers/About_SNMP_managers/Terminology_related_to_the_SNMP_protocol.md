@@ -10,7 +10,7 @@ When dealing with the SNMP protocol, you have to be familiar with the following 
 
 - **SNMP manager**: A software application that manages SNMP agents.
 
-- **SNMP MIB**: A text file that describes the format of the information provided by an element (e.g. temperature, output level, etc.).
+- **SNMP MIB**: A text file that describes the format of the information provided by an element (e.g., temperature, output level, etc.).
 
   In a DataMiner System, you can find two kinds of MIBs: general MIBs and protocol-specific MIBs.
 

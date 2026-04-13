@@ -90,7 +90,7 @@ foreach (var config in parametersConfiguration)
 
 ### Function DVE configuration
 
-Using the script dummy ("FunctionDve"), you can start configuring parameters on the function DVE (i.e. the virtual function resource):
+Using the script dummy ("FunctionDve"), you can start configuring parameters on the function DVE (i.e., the virtual function resource):
 
 ```csharp
 var dummyDve = engine.GetDummy("FunctionDve");
@@ -137,7 +137,7 @@ To validate Profile-Load Scripts individually without the need to create a booki
 
 1. Create an element using the *Skyline Profile Load Script Tester* protocol.
 
-1. In the top-right corner of the visual overview of the element, select the Booking Manager app you want to use for the testing.
+1. In the upper-right corner of the visual overview of the element, select the Booking Manager app you want to use for the testing.
 
    ![PLS Tester Booking Manager selection](~/dataminer/images/PLS_Tester_Booking_Manager_Selection.png)
 

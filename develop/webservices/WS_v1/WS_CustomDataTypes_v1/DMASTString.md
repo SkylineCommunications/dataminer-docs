@@ -8,7 +8,7 @@ DMASTString is an object used within a service template configuration to dynamic
 
 This is parsed into:
 
-- A template string, e.g. "*Child element - {0} - {1}*"
+- A template string, e.g., "*Child element - {0} - {1}*"
 
 - An array of ordered placeholders (*DMASTPlaceholder*).
 

@@ -12,7 +12,7 @@ You can uninstall DataMiner Cube like any other program in Windows:
 
 1. Click the *Uninstall* button.
 
-Alternatively, you can uninstall the DataMiner Cube desktop application by running the following command:
+Alternatively, you can uninstall DataMiner Cube by running the following command:
 
 ```txt
 "%LocalAppData%\Skyline\DataMiner\DataMinerCube\DataMinerCube.exe" /Uninstall

@@ -23,7 +23,7 @@ Default setting: “None”
 
 Next to certain parameters, you find a button in the shape of a paper clip. When you hover over this paper clip, a list box will appear, listing all items that are in some way linked to the parameter in question. From now on, in case of a read parameter with an associated write parameter, that list box will also contain a reference to the write parameter (and vice versa).
 
-Also, when you click a write parameter in the Protocol Tree window (i.e. a parameter marked with “\[W\]”), then the associated read parameter will appear in the “linked items” list box at the bottom.
+Also, when you click a write parameter in the Protocol Tree window (i.e., a parameter marked with “\[W\]”), then the associated read parameter will appear in the “linked items” list box at the bottom.
 
 #### Table editor: Buttons to automatically adjust column widths \[ID 16415\]
 
@@ -33,7 +33,7 @@ When you open the table editor, DIS will check whether there are columns that ar
 - In the *Displayed Columns Layout* section, click the red *Fix* button in the *Width* column of a particular table column to automatically adjust the width of that column.
 
 > [!NOTE]
-> Hidden columns, i.e. columns of which the width was set to 0, are ignored.
+> Hidden columns, i.e., columns of which the width was set to 0, are ignored.
 
 ## Changes
 
@@ -49,9 +49,9 @@ In the table editor, ColumnOption types unknown to DIS will no longer be updated
 
 ### Fixes
 
-#### Display editor: Problem when dragging a parameter to a page with an empty left-hand column \[ID 16294\]
+#### Display editor: Problem when dragging a parameter to a page with an empty column on the left \[ID 16294\]
 
-In some cases, an exception could be thrown when you dragged a parameter to a page of which the left-hand column was empty. This problem has now been fixed.
+In some cases, an exception could be thrown when you dragged a parameter to a page of which the column on the left was empty. This problem has now been fixed.
 
 #### QAction editor: Problem with synchronization of a QAction C# project linked to a protocol.xml file \[ID 16503\]
 

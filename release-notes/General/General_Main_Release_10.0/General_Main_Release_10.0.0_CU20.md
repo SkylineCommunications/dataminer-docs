@@ -37,7 +37,7 @@ Due to a number of enhancements, overall performance of DataMiner Cube has incre
 
 #### Minor enhancements to several DataMiner processes \[ID 31155\]
 
-A number of minor enhancements have been made to a number of DataMiner processes (e.g. SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
+A number of minor enhancements have been made to a number of DataMiner processes (e.g., SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
 
 #### DataMiner Cube - Update Center: Enhanced error handling \[ID 31191\]
 
@@ -117,7 +117,7 @@ In case of a numeric parameter with exceptions, an alarm template allows you to 
 
 #### SLProtocol would evaluate certain conditions incorrectly \[ID 31129\]
 
-When a condition defined in a protocol contained an operator like +, -, \*, /, etc. at the right-hand side but no parentheses, the operation would be applied to the left-hand side, causing SLProtocol to evaluate the condition incorrectly.
+When a condition defined in a protocol contained an operator like +, -, \*, /, etc. on the right but no parentheses, the operation would be applied to the left side, causing SLProtocol to evaluate the condition incorrectly.
 
 In the following example, 20 would incorrectly be added to parameter 2002 instead of parameter 2001.
 
@@ -179,7 +179,7 @@ When you right-clicked a Service Definition diagram and selected *Configure grou
 
 #### Web apps: Setvar controls in visual overviews would no longer be rendered correctly \[ID 31351\]
 
-In web apps (e.g. Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
+In web apps (e.g., Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
 
 #### STARTTLS/SSL options for SMTP would not get applied when sending generic emails \[ID 31592\]
 

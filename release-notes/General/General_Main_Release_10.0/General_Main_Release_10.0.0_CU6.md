@@ -64,7 +64,7 @@ The BpaExecuteContext object, which BPA tests receive as input, has been extende
 
 #### Cube launcher tool: Downgrade support \[ID 27380\]
 
-When you downgraded a DataMiner Agent that came with the Cube launcher tool (i.e. DMS version10.0.9 or newer) to an earlier version without Cube launcher tool (i.e. DMS version 10.0.8 or older), up to now, the Cube launcher tool would incorrectly try to connect to the downgraded agent using the newer Cube version. From now on, after an agent is downgraded, the Cube launcher tool will by default connect to the agent using the matching Cube version.
+When you downgraded a DataMiner Agent that came with the Cube launcher tool (i.e., DMS version10.0.9 or newer) to an earlier version without Cube launcher tool (i.e., DMS version 10.0.8 or older), up to now, the Cube launcher tool would incorrectly try to connect to the downgraded agent using the newer Cube version. From now on, after an agent is downgraded, the Cube launcher tool will by default connect to the agent using the matching Cube version.
 
 ### Fixes
 
@@ -139,7 +139,7 @@ Previously, if a condition was defined for the inclusion of an element in a serv
 
 #### DataMiner Cube - Visual Overview: Children of element shapes with an Info placeholder in their shape text would not be displayed \[ID 27095\]
 
-In some cases, child shapes of Element shapes with an Info placeholder (e.g. \[NAME\]) in their shape text would incorrectly not be displayed.
+In some cases, child shapes of Element shapes with an Info placeholder (e.g., \[NAME\]) in their shape text would incorrectly not be displayed.
 
 #### DataMiner Cube - Alarm Console: Audible alert would incorrectly be played again after you restarted an element \[ID 27098\]
 
@@ -167,7 +167,7 @@ After a DMA was restarted, it could occur that LinkerTableEntries were missing i
 
 #### DataMiner Cube: No longer possible to click below or above a scrollbar thumb \[ID 27149\]
 
-In some cases, it would no longer be possible to click inside a scrollbar track (i.e. below or above the scrollbar thumb).
+In some cases, it would no longer be possible to click inside a scrollbar track (i.e., below or above the scrollbar thumb).
 
 #### DataMiner Cube - Visual Overview: Memory leak in SLHelper \[ID 27162\]
 

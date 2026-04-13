@@ -12,7 +12,7 @@ If the DataMiner [support application](xref:User_operations_support) detects tha
 
 If your system is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud):
 
-1. Verify if this system is still valid (e.g. is this a test setup that has been removed or disabled?).
+1. Verify if this system is still valid (e.g., is this a test setup that has been removed or disabled?).
 
 1. In case the system is no longer valid or in use, inform Skyline Tech Support that proactive support can be disabled.
 
@@ -50,7 +50,7 @@ This type of notification will first go to Skyline Tech Support for verification
 
      ![Skyline Admin: Cloud connection status](~/dataminer/images/Cloud_connection_status.png)
 
-  1. Verify whether the system still exists and is still valid (e.g. the cloud coordination (DMS) ID and cloud node ID still exist).
+  1. Verify whether the system still exists and is still valid (e.g., the cloud coordination (DMS) ID and cloud node ID still exist).
 
   1. In the *DxMs* tab of the Skyline Admin tool, check the DxM status, especially for *DataMiner SupportAssistant* and *DataMiner CoreGateway*.
 
@@ -74,7 +74,7 @@ This type of notification will first go to Skyline Tech Support for verification
 
 - In case the main customer stakeholder is not configured, make sure the following is done or delegated:
 
-  1. Identify the customer stakeholder on collaboration (e.g. confirm with the Product Owner).
+  1. Identify the customer stakeholder on collaboration (e.g., confirm with the Product Owner).
 
   1. Configure the main customer stakeholder in the Maintenance & Support contract and/or parent project.
 

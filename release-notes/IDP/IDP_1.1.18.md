@@ -54,7 +54,7 @@ In the IDP app itself, you will be able to find the working directories credenti
 
 When IDP is deployed silently, the *UserAndGroupCreationScreen* property no longer needs to be specified when an instance of *SetupWizardInputData* is created. This property is now obsolete. For the configuration of the working directories user in the *Extra Configurations* section, a new property has been made available. If the user for the working directories is not specified, IDP will configure the credentials from the *UsersAndGroupCreationScreen* for the working directories. That way, existing silent installation scripts will continue to work.
 
-Note that IDP will not remove the IDP API user and group. When this account is no longer used for other purposes (e.g. to have access to working directories, for third-party systems using the Provisioning API), these can be removed by an administrator in System Center.
+Note that IDP will not remove the IDP API user and group. When this account is no longer used for other purposes (e.g., to have access to working directories, for third-party systems using the Provisioning API), these can be removed by an administrator in System Center.
 
 #### New example script for configuration update activity \[ID 31886\]
 

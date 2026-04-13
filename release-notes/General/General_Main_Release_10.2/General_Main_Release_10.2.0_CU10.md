@@ -109,7 +109,7 @@ The *Show the DataMiner TV section* setting has been removed from the *User > Cu
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
-Previously, cell values of GQI result rows for DomInstanceIds, DomDefinitionIds, ProfileInstanceIds, and ProfileDefinitionIds contained both the display value of the GUID and the object type (e.g. "DomDefinitionId[00000000-0000-0000-0000-000000000000]"). Now the cell value will only contain the display value of the GUID.
+Previously, cell values of GQI result rows for DomInstanceIds, DomDefinitionIds, ProfileInstanceIds, and ProfileDefinitionIds contained both the display value of the GUID and the object type (e.g., "DomDefinitionId[00000000-0000-0000-0000-000000000000]"). Now the cell value will only contain the display value of the GUID.
 
 #### Port initialization error messages have been improved [ID 34920]
 

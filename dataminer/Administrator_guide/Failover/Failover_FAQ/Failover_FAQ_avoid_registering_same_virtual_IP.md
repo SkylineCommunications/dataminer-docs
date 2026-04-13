@@ -42,7 +42,7 @@ As a result, the DNS table will contain the following data:
 
 The fact that, after a Failover switch, the same virtual IP address has been registered by both the primary and the backup DMA causes a number of problems:
 
-- A DNS lookup for DMA-MAIN will sometimes return 10.10.10.5 (i.e. the virtual IP address assigned to DMA-BACKUP). This will cause requests to end up on the backup Agent.
+- A DNS lookup for DMA-MAIN will sometimes return 10.10.10.5 (i.e., the virtual IP address assigned to DMA-BACKUP). This will cause requests to end up on the backup Agent.
 
 - A reverse DNS lookup for 10.10.10.5 will return DMA-MAIN at one occasion and DMA-BACKUP at another occasion.
 

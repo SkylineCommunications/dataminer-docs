@@ -10,6 +10,16 @@ The DataMiner Low-Code Apps module is fully available from DataMiner 10.2.5/10.3
 
 You can access the Low-Code Apps module via the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page). The apps created in the module can also be accessed from the [*Apps* pane](xref:DataMiner_Cube_sidebar#apps-pane) in DataMiner Cube (from DataMiner 10.2.9/10.3.0 onwards<!-- RN 33944 -->).
 
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    Want to see a low-code app in action? Watch <a href="xref:Creating_custom_apps" style="color: #657AB7;">this short video</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
+
+<br>
+
 ![Low-Code App example](~/dataminer/images/Low-Code_App.png)<br>*Low-Code Apps module in DataMiner 10.4.9*
 
 > [!IMPORTANT]

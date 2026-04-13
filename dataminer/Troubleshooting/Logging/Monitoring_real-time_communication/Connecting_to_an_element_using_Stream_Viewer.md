@@ -31,4 +31,4 @@ At the bottom of the Stream Viewer window, there are five buttons:
 | Clear     | Clears the buffer for the item currently selected in the tree view pane.                |
 | Clear All | Clears the buffer for all items and resets Stream Viewer.                               |
 
-To search for a particular item in the communication stream, use the *Find* box in the top-right corner of the window. Navigate between search results using the arrow buttons next to the *Find* box.
+To search for a particular item in the communication stream, use the *Find* box in the upper-right corner of the window. Navigate between search results using the arrow buttons next to the *Find* box.

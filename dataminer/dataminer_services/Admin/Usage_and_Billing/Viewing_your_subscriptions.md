@@ -50,7 +50,7 @@ The **Subscriptions** table displays all your subscriptions, both current and hi
 - **Subscription Details**: Click the subscription row or the information icon (i) in the last column to open a detailed panel showing the full breakdown of what is included in the subscription.
 
 > [!TIP]
-> With the search icon in the top-right corner of the overview, you can quickly find specific subscriptions by name or filter by status.
+> With the search icon in the upper-right corner of the overview, you can quickly find specific subscriptions by name or filter by status.
 
 ## Subscription details
 

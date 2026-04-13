@@ -134,7 +134,7 @@ When the above-mentioned upgrade action is executed, it will log the name and th
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-From now on, if an issue occurs for any of the `DomInstances` that are getting created, updated, or deleted in bulk (e.g. validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Examples#checking-issues).
+From now on, if an issue occurs for any of the `DomInstances` that are getting created, updated, or deleted in bulk (e.g., validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Examples#checking-issues).
 
 As an alternative, the `TryCreateOrUpdate` or `TryDelete` methods can be used. When the operation fails for one of the `DomInstances`, those calls will return false. The `result` output parameter will contain:
 
@@ -369,7 +369,7 @@ During startup, in some cases, DataMiner would use an incorrect IP address when 
 
 Up to now, all Cassandra compaction settings would incorrectly be overwritten at DataMiner startup.
 
-For example, if you had manually configured a compaction setting (e.g. *unsafe_aggressive_sstable_expiration*), this change would get overwritten by the default setting.
+For example, if you had manually configured a compaction setting (e.g., *unsafe_aggressive_sstable_expiration*), this change would get overwritten by the default setting.
 
 #### DataMiner Maps: Markers that did not match the alarm level filter would become visible for a split second [ID 41555]
 

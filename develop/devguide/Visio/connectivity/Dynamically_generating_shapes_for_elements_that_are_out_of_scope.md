@@ -14,7 +14,7 @@ To enable this, add two shapes to the Visio drawing and configure them as follow
 
    - The dynamically created shapes will be placed vertically, above and under this template shape. If you want them to be placed horizontally, add a shape data field of type **ExpandDirection** to the template shape, and set it to “*horizontal*”.
 
-   - By default, there is no margin between the dynamically created shapes. If you want a margin, add a shape data field of type **ChildMargin** to the template shape, and specify either a fixed margin (i.e. a number of pixels) or a relative margin (in relation to its width or height). For example, for a relative margin you could specify “1/10”.
+   - By default, there is no margin between the dynamically created shapes. If you want a margin, add a shape data field of type **ChildMargin** to the template shape, and specify either a fixed margin (i.e., a number of pixels) or a relative margin (in relation to its width or height). For example, for a relative margin you could specify “1/10”.
 
    - Optionally, the connections to be used can be filtered by connection property. To do so, add a shape data field of type **Filter** to the template shape, and set it to “*property:x=y*” (x being the name of the connection property, and y being the value of the connection property).
 

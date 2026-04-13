@@ -6,7 +6,7 @@ uid: Script_condition_functions
 
 Below, you find a list of functions you can use in a Correlation script condition.
 
-These functions can also be used as placeholders, for instance in parameters used in correlation rules. In that case they should be placed between brackets, e.g. \[field(elementname)\].
+These functions can also be used as placeholders, for instance in parameters used in correlation rules. In that case they should be placed between brackets, e.g., \[field(elementname)\].
 
 ## field
 
@@ -70,6 +70,9 @@ Example:
 ```txt
 property(view.location)
 ```
+
+> [!NOTE]
+> In case the property name contain spaces, use single or double quotes. For example, `property("view.Ticket ID")`.
 
 ## parameter
 

@@ -16,7 +16,7 @@ DevOps is the combination of cultural philosophies, practices, and tools that in
 
 DataMiner as a technology is purposefully designed to empower a DevOps style of operation.
 
-Similar to other typical technology evolutions that you can witness today (e.g. increasingly more virtualized products that replace hardware products, an ever-growing offering of on-demand cloud services, and all-IP propositions), DataMiner is a so-called **transformational technology**.
+Similar to other typical technology evolutions that you can witness today (e.g., increasingly more virtualized products that replace hardware products, an ever-growing offering of on-demand cloud services, and all-IP propositions), DataMiner is a so-called **transformational technology**.
 
 In other words, **DataMiner is not designed to do just one thing**, but rather to have the unique capabilities and qualities to empower agile teams to create and evolve their own solutions, and to tailor those to their specific business needs, and all this in an easy, secure, and continuous fashion.
 

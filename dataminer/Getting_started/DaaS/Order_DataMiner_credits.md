@@ -4,7 +4,7 @@ uid: Order_DataMiner_credits
 
 # Ordering DataMiner credits
 
-To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_based_service#organization) must have sufficient DataMiner credits. To order DataMiner credits for the first time, follow the procedure below.
+To create and maintain a DaaS instance, your [organization](xref:Pricing_billing_and_metering#organization) must have sufficient DataMiner credits. To order DataMiner credits for the first time, follow the procedure below.
 
 > [!NOTE]
 > If you have already created a SaaS subscription as detailed below, and you want to order **additional credits**, you do not have to create a new SaaS subscription. Instead, go to your SaaS subscription in the Azure portal, and click *Open SaaS Account on publisher's site* to be redirected to the *Purchase credits* page.

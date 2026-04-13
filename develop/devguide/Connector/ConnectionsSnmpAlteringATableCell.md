@@ -172,7 +172,7 @@ This approach requires that you implement logic in the protocol to know which ro
 
 It is possible to perform an SNMP SET from a Quick Action using the NotifyProtocol method (type 292, [NT_SNMP_SET](xref:NT_SNMP_SET)).
 
-To perform an SNMP set via the SLScripting process (i.e. in a QAction), perform the following steps:
+To perform an SNMP set via the SLScripting process (i.e., in a QAction), perform the following steps:
 
 1. Create a parameter of type "write" for the column.
 1. Create a Quick Action that triggers on this parameter and executes the SNMP SET and the SNMP GET.

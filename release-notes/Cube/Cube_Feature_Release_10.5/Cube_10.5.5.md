@@ -29,21 +29,21 @@ All EPM integration functionality that previously required the *CPEIntegration* 
 
 ##### Topology pane
 
-The most prominent new EPM integration feature is the Topology pane, which is also known as the **Topology app**. It is available via a new *Topology* button in the Cube sidebar, if the system contains at least one correctly configured EPM Manager element (as detailed below). Clicking the button will open a pane where you can select the front-end EPM Manager (in case more than one is available), select the topology chain, drill down to any of the topology levels in that chain, and open a card representing the data of the selected item. When you navigate between (docked) EPM cards, the filter selection will be updated to match the displayed card.
+The most prominent new EPM integration feature is the Topology pane, which is also known as the **Topology app**. It is available via a new *Topology* button in the Cube sidebar, if the system contains at least one correctly configured EPM Manager element (as detailed below). Clicking the button will open a pane where you can select the frontend EPM Manager (in case more than one is available), select the topology chain, drill down to any of the topology levels in that chain, and open a card representing the data of the selected item. When you navigate between (docked) EPM cards, the filter selection will be updated to match the displayed card.
 
 ![Topology app](~/dataminer/images/EPMIntegration_Topology_app.png)
 
 To make sure the Topology app is available, the following configuration is needed:
 
-1. Make sure the DMS contains at least one front-end EPM Manager element.
+1. Make sure the DMS contains at least one frontend EPM Manager element.
 
    For DataMiner Cube to detect these elements, they should be active, the *type* attribute of the *Display* tag in their connector should be set to "element manager", and they should contain a parameter named *ElementManagerType* set to 1.
 
-   The protocol of this element (which should be the same as for the corresponding back-end elements) will describe a topology chain and its associated filters.
+   The protocol of this element (which should be the same as for the corresponding backend elements) will describe a topology chain and its associated filters.
 
-1. Go to *System Center* > *System settings* > *EPM config*, and add the front-end EPM Manager elements to the list.
+1. Go to *System Center* > *System settings* > *EPM config*, and add the frontend EPM Manager elements to the list.
 
-   In the Topology app, you will now be able to select the front-end managers and the corresponding topology chains.
+   In the Topology app, you will now be able to select the frontend managers and the corresponding topology chains.
 
 ##### EPM masking info<!-- 26002 -->
 
@@ -69,30 +69,30 @@ For much of the EPM integration functionality, the system type and system name m
 </Topologies>
 ```
 
-This makes the *System Type* and *System Name* properties available in the system for e.g. alarm filtering, and it also allows you to link Visio shapes to EPM objects based on these properties using the *SystemType* and *SystemName* shape data fields.<!-- 24896 -->
+This makes the *System Type* and *System Name* properties available in the system for e.g., alarm filtering, and it also allows you to link Visio shapes to EPM objects based on these properties using the *SystemType* and *SystemName* shape data fields.<!-- 24896 -->
 
 In addition, you can link views to EPM rows by using the [viewImpact](xref:ColumnOptionOptionsOverview#viewimpact) table column option in the view tables of the EPM Manager protocol, and setting the *System Type* and *System Name* properties on the views. In the Surveyor, a circle will be added to the alarm icon for the view, showing the highest alarm severity of objects within the view:
 
 ![View impact icon in the Surveyor](~/develop/images/EPM_Surveyor_alarm_icon.png)
 
-##### Support for multiple front-end manager elements
+##### Support for multiple frontend manager elements
 
-Previously, the *CPEIntegration* soft-launch feature only allowed one front-end manager element. Now, multiple front-end elements are supported in one DataMiner System.
+Previously, the *CPEIntegration* soft-launch feature only allowed one frontend manager element. Now, multiple frontend elements are supported in one DataMiner System.
 
-To configure this, **make sure the system type for each front-end manager is unique**, as it is the system type that now will be used to trace EPM objects back to their respective front-end managers. If you for example have an "HFC" and an "IOT" front-end EPM Manager in your system, these cannot both have a "Location" cell. Instead, you can prefix this, e.g. "HFC_Location" and "IOT_Location", respectively.
+To configure this, **make sure the system type for each frontend manager is unique**, as it is the system type that now will be used to trace EPM objects back to their respective frontend managers. If you for example have an "HFC" and an "IOT" frontend EPM Manager in your system, these cannot both have a "Location" cell. Instead, you can prefix this, e.g., "HFC_Location" and "IOT_Location", respectively.
 
-In addition, the front-end and back-end elements for the **same technology** must use the **same DataMiner protocol and version**, as otherwise this may result in incorrect linking in the DataMiner Cube UI.
+In addition, the frontend and backend elements for the **same technology** must use the **same DataMiner protocol and version**, as otherwise this may result in incorrect linking in the DataMiner Cube UI.
 
-If these conditions are met, to start using the front-end EPM Managers, first define them in System Center via *System settings* > *EPM config* or via the cogwheel icon in the Topology app.
+If these conditions are met, to start using the frontend EPM Managers, first define them in System Center via *System settings* > *EPM config* or via the cogwheel icon in the Topology app.
 
 > [!IMPORTANT]
-> Because of this change, some **configuration changes may be required in systems that were previously using the *CPEIntegration* soft-launch option**. Some existing solutions may not have a unique system type per EPM Manager protocol, or they may have front-end and back-end manager elements with different protocols or protocol versions, which will no longer work correctly.
+> Because of this change, some **configuration changes may be required in systems that were previously using the *CPEIntegration* soft-launch option**. Some existing solutions may not have a unique system type per EPM Manager protocol, or they may have frontend and backend manager elements with different protocols or protocol versions, which will no longer work correctly.
 
 ##### Customization of EPM integration data pages
 
 The native look of the Data section of an EPM entity is two columns filled with all the information related to the row of the entity in the column order of the table. All columns that are configured to be shown are also shown in the Data section. If a column has a width of 0, it will not show in this section, and it will be impossible to view this column.
 
-To further configure the look of the Data section and also add title boxes, you can put the parameters on one or more pages with the *CPEIntegration/[CustomPageName]* name, e.g. *CPEIntegration/Region* or *CPEIntegration/Region Ping Stats*.
+To further configure the look of the Data section and also add title boxes, you can put the parameters on one or more pages with the *CPEIntegration/[CustomPageName]* name, e.g., *CPEIntegration/Region* or *CPEIntegration/Region Ping Stats*.
 
 On these pages, you can add parameters as you would on any other page, but you can also add individual column parameters associated with the entity. If you use the [duplicateAs](xref:Protocol.Params.Param-duplicateAs) option, both the native and view table column will occupy the same space, but this will not cause issues in DataMiner.
 
@@ -162,7 +162,7 @@ If you want to share your current Cube session with another user, you can now co
 
 To copy the link to the current Cube session, do the following:
 
-1. Open the user menu by clicking the user icon in the top-right corner of the screen.
+1. Open the user menu by clicking the user icon in the upper-right corner of the screen.
 1. Click the *Copy* button next to the name of the DataMiner System.
 
 When you hover over this *Copy* button, a tooltip will appear, saying that clicking this button will copy the link to the current session to the Windows clipboard.
@@ -191,7 +191,7 @@ From now on, whenever an error occurs while a create, update or delete operation
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-From now on, when you right-click an alarm in the Alarm Console and select *Show side panel*, DataMiner Cube will check whether there are loops in the alarm tree, i.e. whether the alarm tree contains any alarms that refer to themselves.
+From now on, when you right-click an alarm in the Alarm Console and select *Show side panel*, DataMiner Cube will check whether there are loops in the alarm tree, i.e., whether the alarm tree contains any alarms that refer to themselves.
 
 #### Alarm Console: Multivariate pattern suggestion events will now be grouped into a single incident [ID 42287]
 
@@ -286,7 +286,7 @@ When you drilled down to a parameter by clicking a button on a Data Display subp
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-When, in the start window of the DataMiner Cube desktop app, you entered a search string in the search box and then pressed e.g. the left arrow key to position the cursor in the text you entered, up to now, the cursor would incorrectly not stay in the filter box. Instead, the key press would cause a different tile to be selected.
+When, in the start window of the DataMiner Cube desktop app, you entered a search string in the search box and then pressed e.g., the left arrow key to position the cursor in the text you entered, up to now, the cursor would incorrectly not stay in the filter box. Instead, the key press would cause a different tile to be selected.
 
 Also, when a certain group did no longer contain any tiles due to the filter you had entered, up to now, the empty group would incorrectly stay visible.
 
@@ -326,7 +326,7 @@ When a correlation rule created a correlated alarm that would trigger another co
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-When, in the *Search* pane, you right-clicked a parameter in the search results and selected e.g. *Open in new card*, the parameter card would refuse to open.
+When, in the *Search* pane, you right-clicked a parameter in the search results and selected e.g., *Open in new card*, the parameter card would refuse to open.
 
 #### DataMiner Cube desktop app: Problem when updating the configuration file [ID 42689]
 

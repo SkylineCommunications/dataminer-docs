@@ -48,7 +48,7 @@ When you select a particular branch or tag, an overview of the most recent build
 ![](~/develop/images/JenkinsBranch.png)<br>
 *Branch overview in Jenkins*
 
-To get a more modern visual representation, you can click the *Open Blue Ocean* link in the menu on the left-hand side.
+To get a more modern visual representation, you can click the *Open Blue Ocean* link in the menu on the left.
 
 ![](~/develop/images/JenkinsBranchBlueOcean.png)<br>
 *Branch overview in Jenkins*

@@ -22,7 +22,7 @@ For more information on how to update analog parameters, see [Updating analog pa
 
 ### Hybrid parameters
 
-These parameters are similar to analog parameters, but can have a so-called exceptional, discrete value (e.g. "Not Used").
+These parameters are similar to analog parameters, but can have a so-called exceptional, discrete value (e.g., "Not Used").
 
 ![Hybrid parameter](~/dataminer/images/Hybrid_Parameter.png)<br>*Hybrid parameter in DataMiner 10.4.5*
 

@@ -35,12 +35,12 @@ Configures the DataMiner Agent.
 | &#160;&#160;[DataMinerGuid](xref:DataMiner.DataMinerGuid) | [0, 1] | Specifies the DataMiner GUID. |
 | &#160;&#160;[DMA](xref:DataMiner.DMA) | [0, 1] | Specifies information about this DataMiner Agent. |
 | &#160;&#160;[ExternalAuthentication](xref:DataMiner.ExternalAuthentication) | [0, 1] | Configures external authentication. |
-| &#160;&#160;[ID](xref:DataMiner.ID) | [0, 1] | Specifies information about the ID ranges to be used for e.g. view creation.<br>This information allows multiple DataMiner Agents to create views at the same time, without creating conflicts. |
+| &#160;&#160;[ID](xref:DataMiner.ID) | [0, 1] | Specifies information about the ID ranges to be used for e.g., view creation.<br>This information allows multiple DataMiner Agents to create views at the same time, without creating conflicts. |
 | &#160;&#160;[IP](xref:DataMiner.IP) | [0, 1] | Configures IP-related settings. |
 | &#160;&#160;[LDAP](xref:DataMiner.LDAP) | [0, 1] | Contains the LDAP configuration.<br>See [Configuring LDAP settings](xref:Configuring_LDAP_settings). |
 | &#160;&#160;[Logging](xref:DataMiner.Logging) | [0, 1] | Specifies the logging level for Info logging, Debug logging, and Error logging.<br>See [Consulting the DataMiner logs in DataMiner Cube](xref:Consulting_the_DataMiner_logs_in_DataMiner_Cube). |
 | &#160;&#160;[MobileGateway](xref:DataMiner.MobileGateway) | [0, 1] | Specifies the mobile gateway. |
-| &#160;&#160;[NetworkAdapters](xref:DataMiner.NetworkAdapters) | [0, 1] | Overrides the order of the network adapters on a DataMiner Agent.<br>This can be useful to prevent issues in case the order in Windows changes for some reason (e.g. because there is a new network adapter). |
+| &#160;&#160;[NetworkAdapters](xref:DataMiner.NetworkAdapters) | [0, 1] | Overrides the order of the network adapters on a DataMiner Agent.<br>This can be useful to prevent issues in case the order in Windows changes for some reason (e.g., because there is a new network adapter). |
 | &#160;&#160;[PollSocket](xref:DataMiner.PollSocket) | [0, 1] | Configures the DataMiner Agent to forward information about elements and parameters when it receives a request on a particular TCP/IP socket.<br>See [Configuring the TCP-IP socket settings](xref:Configuring_the_TCP-IP_socket_settings). |
 | &#160;&#160;[ProcessOptions](xref:DataMiner.ProcessOptions) | [0, 1] | Configures the DataMiner processes.<br>See [Configuration of DataMiner processes](xref:Configuration_of_DataMiner_processes). |
 | &#160;&#160;[QOS](xref:DataMiner.QOS) | [0, 1] | Configures the DiffServ marker on network traffic from SLPort to polled devices. |

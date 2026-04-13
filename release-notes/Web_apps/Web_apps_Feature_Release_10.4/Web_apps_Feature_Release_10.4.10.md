@@ -38,7 +38,7 @@ By default, this chart title will be shown.
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-When, in a web application, you opened multiple instances of the same visual overview with user context (e.g. a visual overview with card variables), up to now, the contexts of those instances would be shared. When, for example, you clicked a button on one instance, the same button would also be clicked on the other instances. From now on, each instance of the same visual overview will have its own context. In other words, each instance will act independently.
+When, in a web application, you opened multiple instances of the same visual overview with user context (e.g., a visual overview with card variables), up to now, the contexts of those instances would be shared. When, for example, you clicked a button on one instance, the same button would also be clicked on the other instances. From now on, each instance of the same visual overview will have its own context. In other words, each instance will act independently.
 
 Also, when you open a pop-up window in a visual overview, the context of this visual overview will now be transferred to the pop-up window. As a result, in web applications, card variables will now work exactly like they work in DataMiner Cube.
 
@@ -69,7 +69,7 @@ From now on, the web API will no longer retrieve all available bookings. Instead
 Both the *Table* and the *Grid* component now support lazy loading.
 
 - When multiple queries are configured in a *Table* component, the component will now only load the visible table.
-- When a *Grid* component has paging enabled (i.e. when it has a fixed number of rows and columns), it will now only retrieve items that are being displayed on the page.
+- When a *Grid* component has paging enabled (i.e., when it has a fixed number of rows and columns), it will now only retrieve items that are being displayed on the page.
 
 > [!NOTE]
 > When items selected in the URL are not included in the data that was loaded, they will also be loaded.
@@ -78,7 +78,7 @@ Both the *Table* and the *Grid* component now support lazy loading.
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-Up to now, when you used to *Link to feed* option to e.g. link feed values to GQI query nodes, data would sometimes be retrieved unnecessarily.
+Up to now, when you used to *Link to feed* option to, for example, link feed values to GQI query nodes, data would sometimes be retrieved unnecessarily.
 
 A number of enhancements have now been made to optimize feed value resolution.
 
@@ -181,7 +181,7 @@ From now on, that warning message will no longer appear if the person in questio
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 -->
 
-When a DOM instance subscription was stopped (e.g. by closing a browser tab) while another DOM instance was being updated, up to now, that DOM instance update could incorrectly get lost.
+When a DOM instance subscription was stopped (e.g., by closing a browser tab) while another DOM instance was being updated, up to now, that DOM instance update could incorrectly get lost.
 
 #### Dashboards app: Problem when trying to rename a dashboard folder [ID 40585]
 
@@ -219,7 +219,7 @@ In some cases, a *Line & area chart* component would not update correctly whenev
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
 
-When the data displayed in a Grid component was refetched (by means of e.g. a refetch action or a Trigger component) while the component was busy loading data, the newly fetched data would not get loaded correctly.
+When the data displayed in a Grid component was refetched (by means of e.g., a refetch action or a Trigger component) while the component was busy loading data, the newly fetched data would not get loaded correctly.
 
 #### Low-Code Apps - Timeline component: Groups would reserve more screen real estate than necessary due to a time zone conversion issue [ID 40639]
 
@@ -245,7 +245,7 @@ From now on, the configured dimensions will never be ignored. Whether an interac
 
 <!-- MR 10.3.0 [CU19] / 10.4.0 [CU7] - FR 10.4.10 [CU0] -->
 
-In feature release 10.4.9, all interactive automation script components were reviewed to make sure they fully inherit the script's theme and accent color. However, in some cases, changing the coloring of those components could cause issues when those components were used in other places (e.g. web apps).
+In feature release 10.4.9, all interactive automation script components were reviewed to make sure they fully inherit the script's theme and accent color. However, in some cases, changing the coloring of those components could cause issues when those components were used in other places (e.g., web apps).
 
 From now on, when the above-mentioned components are used in places other than interactive automation scripts, applying the theme and accent color to those components will be optional. In interactive automation scripts, the theme and accent color will always be applied to the script's components.
 

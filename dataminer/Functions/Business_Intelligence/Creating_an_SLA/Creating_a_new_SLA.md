@@ -21,7 +21,7 @@ If a Service Level Agreement (SLA) exists for a particular service, you can crea
 
    - *DMA*: The DataMiner Agent on which you want to create the SLA element.
 
-   - *Protocol*: The SLA protocol, e.g. Skyline SLA Definition Basic.
+   - *Protocol*: The SLA protocol, e.g., Skyline SLA Definition Basic.
 
    - *Version*: The protocol version.
 

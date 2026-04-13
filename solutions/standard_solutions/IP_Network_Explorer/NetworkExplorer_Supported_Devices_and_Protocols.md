@@ -12,7 +12,10 @@ The IP Network Explorer supports all equipment that can be monitored using the f
 - Arista eOS Manager
 - Cisco Nexus
 - Cisco NxOS Manager
+- Cisco XrOS Manager
 - Cisco Manager
+- Huawei Manager
+- Juniper Networks Manager
 
 ## Supported multicast routing protocols
 
@@ -22,3 +25,5 @@ The IP Network Explorer can visualize multicast traffic based on the following r
   - IP Software Multicast Routing Table
 - Cisco Nexus
   - NBM Flows
+- Juniper Networks Manager
+  - Multicast Table

@@ -6,7 +6,7 @@ uid: Using_the_View_filter_for_built-in_reports
 
 In the Reporter app, you can use the *View filter* to display reports that only contain information about items located in a particular view or one of its subviews.
 
-1. In the top-right corner, select *View filter*.
+1. In the upper-right corner, select *View filter*.
 
 1. Click *switch*.
 

@@ -354,6 +354,17 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Applicable only when <see cref="Type"/> is set to TextBox or StaticText.</para>
 		/// <para>If IsMultiline is false on a StaticText UI block, but the text contains a newline/enter, the UI block will behave as if IsMultiline is true.</para>
+		/// <para>
+		///   When an interactive automation script is running in a web environment, the textbox will consider <c>\n</c> as a newline, while Cube will use <c>\r\n</c>. 
+		///   It is possible to mix both types in the initial value. 
+		///   To easily split the text values into lines when an interactive automation script is running in both environments, you can use the following code snippet:
+		///   <code>
+		///   var lines = textBoxStringValue?
+		///               .Split('\n')
+		///               .Select(x => x.Trim('\r'));
+		///   </code>
+		///   After processing, joining the lines using <c>\n</c> should work consistently across both environments.
+		/// </para>
 		/// </remarks>
 		/// <example>
 		/// <code>

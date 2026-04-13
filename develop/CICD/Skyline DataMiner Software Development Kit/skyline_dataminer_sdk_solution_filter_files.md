@@ -33,7 +33,7 @@ Working with solution filters has the following advantages:
 
 1. Select the projects you want to work with by unloading the others (right-click a project and select *Unload Project*).
 
-1. Right-click the solution and select *Save As Solution Filter* and specify a name (e.g. `MyProjectSubset.slnf`).
+1. Right-click the solution and select *Save As Solution Filter* and specify a name (e.g., `MyProjectSubset.slnf`).
 
 This will generate a .slnf file that references the original .sln but only loads the selected projects.
 

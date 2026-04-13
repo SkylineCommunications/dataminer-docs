@@ -6,7 +6,7 @@ uid: Jobs_Page
 
 ## List and timeline overview
 
-On the Jobs List page, the buttons in the top-left corner allow you to switch between a list and timeline overview of the available infrastructure jobs.
+On the Jobs List page, the buttons in the upper-left corner allow you to switch between a list and timeline overview of the available infrastructure jobs.
 
 ![Jobs List Overview](~/solutions/images/Plan_And_Build_Jobs_List_Overview.png)
 
@@ -14,11 +14,11 @@ On the Jobs List page, the buttons in the top-left corner allow you to switch be
 
 ## Adding a job
 
-Adding a new job is possible via the *New Job* button in the top-right corner of the Jobs List page and App Configuration page.
+Adding a new job is possible via the *New Job* button in the upper-right corner of the Jobs List page and App Configuration page.
 
 This will open a wizard where you will need to configure the job as follows:
 
-1. Specify the job's name, start time, type (*Add*, *Remove*, or *Update*), priority (*Critical*, *High*, *Low*, or *Normal*) and "sub state" (i.e. the secondary state of the job, which can be *Archived*, *Documentation Completed*, *Documentation Montage*, *Draft*, *In Progress*, *On Hold*, *Pending Approval*, *Pending Kickoff*, *Resource Allocation*, or *Reviewed*). Optionally, you can also add the end time, a description, and any additional remarks.
+1. Specify the job's name, start time, type (*Add*, *Remove*, or *Update*), priority (*Critical*, *High*, *Low*, or *Normal*) and "sub state" (i.e., the secondary state of the job, which can be *Archived*, *Documentation Completed*, *Documentation Montage*, *Draft*, *In Progress*, *On Hold*, *Pending Approval*, *Pending Kickoff*, *Resource Allocation*, or *Reviewed*). Optionally, you can also add the end time, a description, and any additional remarks.
 
    ![Create job – Info window](~/solutions/images/Plan_And_Build_Create_Job_Info_Section.png)
 

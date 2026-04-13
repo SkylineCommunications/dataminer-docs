@@ -255,7 +255,7 @@ Types of log entries related to SLNet requests:
 
   This type of entry will be added to the log for each individual message in an SLNet request.
 
-  - *RequestID.Index*: The unique ID of the message, consisting of the *RequestID* (which identifies the request) and an *Index* (i.e. the sequence number of the message).
+  - *RequestID.Index*: The unique ID of the message, consisting of the *RequestID* (which identifies the request) and an *Index* (i.e., the sequence number of the message).
   - *Description*: The string representation of the actual SLNet message, which should give a short but meaningful description of the message.
 
 - `Finished SLNet request <RequestID> in <Duration>ms`
@@ -370,7 +370,7 @@ From now on, when a table cell is saved, the `Interprete` type of the column wil
 
 <!-- MR 10.5.0 - FR 10.4.6 -->
 
-In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g. comments).
+In some cases, when you tried to load a PDML file containing an HTTP simulation, the simulation would fail to load, especially when the PDML file contained additional tags (e.g., comments).
 
 #### SLProtocol would return an error when it encountered the parameter type 'matrix' [ID 39398]
 
@@ -384,7 +384,7 @@ Up to now, SLProtocol would add the following line in the log file of an element
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.6 -->
 
-When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g. DataMiner Cube).
+When a protocol that was being used by elements in a redundancy group was deleted, the redundancy group and the derived element would no longer be visible in the UI after a DataMiner restart, even if their definitions existed on disk. As a result, it would not be possible to delete the redundancy group in a DataMiner client application (e.g., DataMiner Cube).
 
 #### STaaS: Problem when using a delete statement with a filter [ID 39416]
 
@@ -400,7 +400,7 @@ This issue has now been fixed.
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.6 -->
 
-If the midnight synchronization of the Resource Manager fails, it is retried up to 5 times. Up to now, when a synchronization retry was triggered, the internal caches of the Resource Manager would incorrectly be loaded twice. This could lead to e.g. bookings not being starting.
+If the midnight synchronization of the Resource Manager fails, it is retried up to 5 times. Up to now, when a synchronization retry was triggered, the internal caches of the Resource Manager would incorrectly be loaded twice. This could lead to, for example, bookings not being starting.
 
 #### SLAutomation: Problem when clearing the internal parameter cache [ID 39441]
 

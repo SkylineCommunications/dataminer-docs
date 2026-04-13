@@ -6,7 +6,7 @@ uid: Troubleshooting_SLASPConnection_exe
 
 ## About Reporter
 
-DMS Reporter is a legacy DataMiner module that is used to generate reports showing statistical data and operational metrics. These reports can be generated on the fly, forwarded by email at regular intervals (e.g. weekly, monthly, etc.) or sent by the DataMiner Correlation or Automation modules. They can also be incorporated into existing third-party web environments. For more detailed information on this module, see [DMS Reporter](xref:reporter) in the DataMiner Help.
+DMS Reporter is a legacy DataMiner module that is used to generate reports showing statistical data and operational metrics. These reports can be generated on the fly, forwarded by email at regular intervals (e.g., weekly, monthly, etc.) or sent by the DataMiner Correlation or Automation modules. They can also be incorporated into existing third-party web environments. For more detailed information on this module, see [DMS Reporter](xref:reporter) in the DataMiner Help.
 
 This page is dedicated to helping you troubleshoot issues that might be preventing the generation of legacy reports. You can request additional assistance either via our [community platform](https://community.dataminer.services/questions/) or by sending an email to <support@dataminer.services>.
 
@@ -114,7 +114,7 @@ To troubleshoot this issue:
 
 1. Check if the files *aspapi.dll*, *comchartdir.dll*, *chartdir31.dll* and *chartdir.lic* are present.
 
-1. Check the version numbers of the .dll files. They should be all equal (e.g. 3.1.0.0).
+1. Check the version numbers of the .dll files. They should be all equal (e.g., 3.1.0.0).
 
 1. Register *aspapi.dll* and *comchartdir.dll* (regsvr32).
 
@@ -156,7 +156,7 @@ To implement the change:
 
 1. Click *IRPStackSize*, click *Edit*, and then click *Modify*.
 
-1. In the *Data Value* box, specify a value between 15 and 50 (e.g. 30), and then click *OK*. Note that values between 33 and 38 are not recommended.
+1. In the *Data Value* box, specify a value between 15 and 50 (e.g., 30), and then click *OK*. Note that values between 33 and 38 are not recommended.
 
 ## Error: Failed to send request for 'https://url/Reports/Templates/ReportName.asp': (0x80072f7dh - 12157)
 

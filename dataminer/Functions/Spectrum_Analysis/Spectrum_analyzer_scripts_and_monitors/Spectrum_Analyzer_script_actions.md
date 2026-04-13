@@ -7,7 +7,7 @@ uid: Spectrum_Analyzer_script_actions
 When you add action lines to a spectrum analyzer script, a vast array of actions is available. You can select this in the *Operation* dropdown list in the *Edit Monitor Script* pane. When you select an action, a brief description is shown below, and the input fields for the statement are adjusted to the selected action.
 
 > [!NOTE]
-> Some actions only become available if certain other actions have been used earlier in the script. E.g. the *Check Threshold* action is not available unless an action *Get Threshold* is used first.
+> Some actions only become available if certain other actions have been used earlier in the script. For example, the *Check Threshold* action is not available unless an action *Get Threshold* is used first.
 
 ## Variables
 
@@ -37,8 +37,8 @@ The following table provides an overview of the available actions in spectrum sc
 | Create amplitude reference (dB) | r = CreateAmpRef(d) | Creates a reference line variable representing a certain level. This variable can then be used further down the script as if it was a reference line. |
 | Create boolean var | b = Bool(boolean) | Assigns a boolean. The following instructions are allowed:<br> -  b = Bool (TRUE) or b = Bool (1)<br> -  b = Bool (FALSE) or b = Bool (0) |
 | Create frequency reference (Hz) | r = CreateFreqRef(d) | Creates a reference line variable representing a certain frequency. This variable can then be used further down the script as if it was a reference line or reference marker. The value should be provided in Hertz (Hz). |
-| Find first frequency left | r = FindLeft(t, refFreq, refAmp, int) | Finds the first frequency level to the left of the given reference, having a level that is int dB lower than the amplitude reference refAmp.<br> E.g. *FindLeft(trace, refFreq, refAmp, 3)* and *FindRight(trace, refFreq, refAmp, 3)* can be used to find the -3dB points. |
-| Find first frequency right | r = FindRight(t, refFreq, refAmp, int) | Finds the first frequency level to the right of the given reference, having a level that is int dB lower than the amplitude reference refAmp.<br> E.g. *FindLeft(trace, refFreq, refAmp, 3)* and *FindRight(trace, refFreq, refAmp, 3)* can be used to find the -3dB points. |
+| Find first frequency left | r = FindLeft(t, refFreq, refAmp, int) | Finds the first frequency level to the left of the given reference, having a level that is int dB lower than the amplitude reference refAmp.<br>For example, *FindLeft(trace, refFreq, refAmp, 3)* and *FindRight(trace, refFreq, refAmp, 3)* can be used to find the -3dB points. |
+| Find first frequency right | r = FindRight(t, refFreq, refAmp, int) | Finds the first frequency level to the right of the given reference, having a level that is int dB lower than the amplitude reference refAmp.<br>For example, *FindLeft(trace, refFreq, refAmp, 3)* and *FindRight(trace, refFreq, refAmp, 3)* can be used to find the -3dB points. |
 | Get amplitude difference between | d = Delta(s,r1,r2) | Returns the amplitude difference of a trace s measured at reference objects r1 and r2. The resulting value can be positive or negative. |
 | Get amplitude level at | d = GetLevel(s,r) | Returns the amplitude level of a trace s at a reference object r. |
 | N/A | d = GetLevelNoise(s,r) | Returns the amplitude level of a trace s at a reference object r \[noise level\]. |

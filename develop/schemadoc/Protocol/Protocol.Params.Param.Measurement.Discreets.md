@@ -45,4 +45,4 @@ For parameters of type "write", note the following usage remarks:
 |button|Holds one entry per button on the same row. The value is the string that will be set.|
 |pagebutton|Holds one entry per page button on the same row. The value is the name of the Data Display page to open.|
 |matrix|For an NxM matrix, values must be 1…N for inputs, (N+1)…(N+M) for outputs.|
-|string, analog, number, discreet|Each of these can have a single discrete entry marked as "disabled". This will display a check box next to the normal value editor.|
+|string, analog, number, discreet|Each of these can have a single discrete entry marked as "disabled". This will display a checkbox next to the normal value editor.|

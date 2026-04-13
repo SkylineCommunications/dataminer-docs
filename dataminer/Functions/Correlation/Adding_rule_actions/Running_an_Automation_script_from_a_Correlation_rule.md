@@ -10,7 +10,7 @@ To run an automation script from a correlation rule:
 
 1. Click the first underlined field and select the script.
 
-1. Specify any additional information needed by the script, e.g. dummy elements.
+1. Specify any additional information needed by the script, e.g., dummy elements.
 
    > [!NOTE]
    > To dynamically pass the element that triggers the correlation rule to the automation script, in the dropdown list for the relevant dummy element, select *\<Dynamic>*.

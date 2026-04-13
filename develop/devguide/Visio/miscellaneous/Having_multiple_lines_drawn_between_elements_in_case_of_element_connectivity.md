@@ -4,7 +4,7 @@ uid: Having_multiple_lines_drawn_between_elements_in_case_of_element_connectivit
 
 # Having multiple lines drawn between elements in case of element connectivity
 
-If you have set up element connectivity via a Connection Manager element (i.e. a connection table), you can specify that multiple connections should be drawn between certain elements.
+If you have set up element connectivity via a Connection Manager element (i.e., a connection table), you can specify that multiple connections should be drawn between certain elements.
 
 For example, add a shape data field of type **Connection** to a connection and set its value to:
 

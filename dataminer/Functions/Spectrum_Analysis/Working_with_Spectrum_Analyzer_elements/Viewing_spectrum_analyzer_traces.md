@@ -90,7 +90,7 @@ It is possible to manually freeze and unfreeze the trace. To do so:
 
   - The trace moves to the left or right while being refreshed at a rate equal to the original rate.
 
-  - The unknown part of the trace (i.e. the frequency range located outside of the original span) is visualized as a gray area with a grid in the background.
+  - The unknown part of the trace (i.e., the frequency range located outside of the original span) is visualized as a gray area with a grid in the background.
 
   - The frequency labels on the X axis are updated continuously to reflect the ongoing change.
 
@@ -107,7 +107,7 @@ It is possible to manually freeze and unfreeze the trace. To do so:
 
   - The trace moves up or down while being refreshed at a rate equal to the original rate.
 
-  - The unknown part of the trace (i.e. the amplitude range located outside of the original span) is visualized as a gray area with a grid in the background.
+  - The unknown part of the trace (i.e., the amplitude range located outside of the original span) is visualized as a gray area with a grid in the background.
 
   - The amplitude labels on the Y axis are updated continuously to reflect the ongoing change.
 
@@ -209,7 +209,7 @@ In the *view* tab of the ribbon, you can do the following:
 
 - To change the color of the lines in the grid, in the *Colors* section, click *Grid lines* and select a different color.
 
-- To change the color of the text in the grid, e.g. the amplitude and frequency indicated along the axes, select *Grid text* and select a different color.
+- To change the color of the text in the grid, e.g., the amplitude and frequency indicated along the axes, select *Grid text* and select a different color.
 
 - To view a square real-time display area, click *Square view*.
 
@@ -241,7 +241,7 @@ To do so:
 
 It is possible for the same spectrum session to be shared, for instance when multiple users are viewing the same session at the same time, or when one user has multiple cards open showing the same spectrum session.
 
-When session sharing is enabled, all cards showing the same spectrum session will show the same trace using the same settings. The fact that a shared session is being used will be shown in the info pane. If a user changes a setting (e.g. frequency, bandwidth, etc.), this change will immediately be applied to all other cards showing that same session.
+When session sharing is enabled, all cards showing the same spectrum session will show the same trace using the same settings. The fact that a shared session is being used will be shown in the info pane. If a user changes a setting (e.g., frequency, bandwidth, etc.), this change will immediately be applied to all other cards showing that same session.
 
 ### Enabling shared session mode
 

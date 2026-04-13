@@ -10,7 +10,7 @@ uid: DMAProviderInfo
 | ContactUsEmail | String | The contact email address of the provider. |
 | DataMinerLogoVisible | Boolean | Whether the DataMiner logo is displayed. |
 | Name | String | The name of the provider. |
-| ProductName | String | The name of the product (e.g. DataMiner). |
+| ProductName | String | The name of the product (e.g., DataMiner). |
 | TechsupportAddress1 | String | The first line of the address of tech support. |
 | TechsupportAddress2 | String | The second line of the address of tech support. |
 | TechsupportAddress3 | String | The third line of the address of tech support. |

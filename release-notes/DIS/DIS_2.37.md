@@ -40,7 +40,7 @@ The following checks and error messages have been added.
 
 #### TypeDataMinerVersion now also allows 5-digit build numbers \[ID 32682\]
 
-The type “TypeDataMinerVersion”, which is used by the following elements, now also allows 5-digit build numbers (e.g. 10.1.0.0 - 10600).
+The type “TypeDataMinerVersion”, which is used by the following elements, now also allows 5-digit build numbers (e.g., 10.1.0.0 - 10600).
 
 - Compliancies.MinimumRequiredDataMinerVersion
 - Compliancies.MaximumSupportedVersion

@@ -52,11 +52,11 @@ When your pull request has been merged, others can continue to work on your chan
 
 1. Go to the [dataminer-docs repository](https://github.com/SkylineCommunications/dataminer-docs) on GitHub.
 
-1. In the top-right corner, click the triangle button next to *Fork* and select your fork.
+1. In the upper-right corner, click the triangle button next to *Fork* and select your fork.
 
    ![Your existing forks](~/images/Your_Existing_Forks.png)
 
-1. In the top-left corner, change the branch from *main* to your draft branch.
+1. In the upper-left corner, change the branch from *main* to your draft branch.
 
    ![Main to draft branch](~/images/Main_to_Draft.png)
 
@@ -78,7 +78,7 @@ When all the necessary changes have been made and the draft branch is ready for 
 
 1. Go to the [dataminer-docs repository](https://github.com/SkylineCommunications/dataminer-docs) on GitHub.
 
-1. In the top-left corner, switch from the main branch to the draft branch.
+1. In the upper-left corner, switch from the main branch to the draft branch.
 
 1. At the top of this page, click the number of commits the branch is ahead SkylineCommunications:main.
 

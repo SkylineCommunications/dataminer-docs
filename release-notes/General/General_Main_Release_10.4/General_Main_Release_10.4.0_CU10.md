@@ -188,7 +188,7 @@ When a smart-serial UDP element was stopped, the client connections would incorr
 
 A number of problems that occurred when polling SNMP tables using *GetNext* have been fixed:
 
-- When an entire SNMP table was polled using *GetNext* messages, and not all rows had values with the same syntax (e.g. 1.2.3 vs 4.5.6.7), in some cases, cells would be empty or would be shifted to another row. The SLSNMPManager process could even disappear. From now on, all table cell values will be displayed correctly.
+- When an entire SNMP table was polled using *GetNext* messages, and not all rows had values with the same syntax (e.g., 1.2.3 vs 4.5.6.7), in some cases, cells would be empty or would be shifted to another row. The SLSNMPManager process could even disappear. From now on, all table cell values will be displayed correctly.
 
 - Up to now, an SNMP table would be polled until the returned OID result went out of scope. For example, when only 3 columns were defined in the table parameter, and the SNMP table contained 20 columns, all 20 columns would be polled, even though the data in the remaining 17 columns was not needed. From now on, as soon as the columns defined in the table parameter are polled, polling will stop and the result will be filled in.
 
@@ -218,7 +218,7 @@ Up to now, that list could incorrectly contain multiple entries for the same fil
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. `C:\Skyline DataMiner\users\<UserName>`).
+When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e., `C:\Skyline DataMiner\users\<UserName>`).
 
 #### Failover: Offline Agent would not be able to synchronize with the online Agent [ID 41527]
 

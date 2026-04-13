@@ -18,7 +18,7 @@ Under the *VISUAL* node, one or more pages are displayed that contain a graphic 
 
 ### DATA
 
-The data pages of a service represent the different service children, i.e. the elements or partial elements included in the service.
+The data pages of a service represent the different service children, i.e., the elements or partial elements included in the service.
 
 A service child can have one of the following statuses:
 

@@ -22,7 +22,7 @@ Specifies the ID(s) of the destination parameter(s).
 (optional): Specifies the ID of the source parameter.
 
 > [!NOTE]
-> When the action is executed via a trigger that triggers on a parameter, the use of the Type@id attribute is not required. In this case, when the Type@id attribute is left out, DataMiner will use the trigger parameter (i.e. the parameter referred to in the On element of the trigger) as the source parameter.
+> When the action is executed via a trigger that triggers on a parameter, the use of the Type@id attribute is not required. In this case, when the Type@id attribute is left out, DataMiner will use the trigger parameter (i.e., the parameter referred to in the On element of the trigger) as the source parameter.
 
 ## Remarks
 

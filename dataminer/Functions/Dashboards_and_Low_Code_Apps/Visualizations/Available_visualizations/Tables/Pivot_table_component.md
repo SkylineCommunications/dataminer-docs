@@ -13,7 +13,7 @@ This component displays a status report for a number of parameters of the elemen
 
 ![Pivot table](~/dataminer/images/Pivot_Table.png)<br>*Pivot table component in DataMiner 10.4.6*
 
-It is possible to export this status report to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
+It is possible to export this status report to CSV. To do so, click the ... icon in the upper-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
 
 > [!NOTE]
 > The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
@@ -43,9 +43,9 @@ To configure the component:
      > [!NOTE]
      > A pivot table that displays trend statistics can use data exposed by a time range component as a filter.
 
-   - *Limit*: Determines how many rows (i.e. indices) or elements can be displayed. If a particular number “X” is specified, only the X first rows or elements that are retrieved from the server will be displayed.
+   - *Limit*: Determines how many rows (i.e., indices) or elements can be displayed. If a particular number “X” is specified, only the X first rows or elements that are retrieved from the server will be displayed.
 
-   - *Filter*: In case table column parameter data is used, this box allows you to specify a table row filer. To combine multiple filters, use a semicolon, e.g. *SLA\*;SLP\**.
+   - *Filter*: In case table column parameter data is used, this box allows you to specify a table row filer. To combine multiple filters, use a semicolon, e.g., *SLA\*;SLP\**.
 
    - *Conditions*: Allows you to add conditions, so that for example an element is only displayed if a particular parameter has a particular value.
 

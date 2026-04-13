@@ -47,7 +47,7 @@ To customize how Cube connects to a DMA for a specific computer:
 
      - The default port used for Remoting is port 8004.
 
-     - By default, [eventing](xref:Eventing_or_polling) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g. if a firewall blocks the requests).
+     - By default, [eventing](xref:Eventing_or_polling) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g., if a firewall blocks the requests).
 
 1. If necessary, adjust the settings for the selected connection type:
 
@@ -63,7 +63,7 @@ To customize how Cube connects to a DMA for a specific computer:
 >
 > - You can also configure this in the DataMiner Cube logon screen, before you actually log on. See [Overriding the default connection type](xref:Overriding_Cube_connection_type).
 > - The procedure above only applies to the one computer where it is done. If you want to change the default client communication settings for a DMA, you can do so in the file *ConnectionSettings.txt*. See [ConnectionSettings.txt](xref:ConnectionSettings_txt#connectionsettingstxt).
-> - From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e. a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if Cube has been manually configured to use .NET Remoting.
+> - From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e., a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if Cube has been manually configured to use .NET Remoting.
 
 ## Managing client versions
 
@@ -80,7 +80,7 @@ From DataMiner 10.2.0 [CU3]/10.2.6 onwards, Cube can automatically update to a m
 
    - **Force the matching release version**: This will force users to always use the Cube version that was shipped with the current DataMiner upgrade package.
 
-   - **Force a specific version**: This will force users to always use a particular Cube version. When you select this option, a dialog will be displayed where you will need to select a *Cube.zip* and *versions.txt* file. You can obtain these files from the folder `/Webpages/DataMinerCubeStandAlone/` in an upgrade package or on another DataMiner Agent (e.g. a staging platform).
+   - **Force a specific version**: This will force users to always use a particular Cube version. When you select this option, a dialog will be displayed where you will need to select a *Cube.zip* and *versions.txt* file. You can obtain these files from the folder `/Webpages/DataMinerCubeStandAlone/` in an upgrade package or on another DataMiner Agent (e.g., a staging platform).
 
      > [!NOTE]
      >

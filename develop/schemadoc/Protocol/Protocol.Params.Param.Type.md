@@ -55,7 +55,7 @@ CRC parameters are used when a device supports error detection by means of a Cyc
 
 A CRC parameter is defined by two essential elements:
 
-- Type of the CRC: e.g. EXOR, module 256 checksum, etc.
+- Type of the CRC: e.g., EXOR, module 256 checksum, etc.
 - Number of parameters on which the CRC has to be calculated
 
 ### dataminer info
@@ -139,7 +139,7 @@ See also:
 
 ### group
 
-Parameter length can be defined in terms of bytes (e.g. READ and WRITE parameters), but also in terms of bits. To do so, you have to define a GROUP to which you have to assign READ and WRITE BITS.
+Parameter length can be defined in terms of bytes (e.g., READ and WRITE parameters), but also in terms of bits. To do so, you have to define a GROUP to which you have to assign READ and WRITE BITS.
 
 A GROUP parameter contains one or more bytes from which one or more bits will be taken.
 

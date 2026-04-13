@@ -7,7 +7,7 @@ uid: GetElementsForServiceCached
 Use this method to retrieve only service child items (elements and/or services) added or changed since a particular point in time.
 
 > [!NOTE]
-> Using this method, you can e.g. request service child items in batches in order to minimize loading time.
+> Using this method, you can e.g., request service child items in batches in order to minimize loading time.
 
 ## Input
 

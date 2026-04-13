@@ -52,7 +52,7 @@ Key parameters that can be monitored using this connector include:
 
 ### Skyline SSL Certificate Monitor
 
-If the communication between DataMiner and the indexing database is secure, i.e. it uses SSL/TLS, you can use the [*Skyline SSL Certificate Monitor* connector](https://catalog.dataminer.services/details/382d6771-5162-47ce-aa2a-0f4a0d7ecd6d) to track the status of the SSL/TLS certificates that authenticate the connection and enable encryption.
+If the communication between DataMiner and the indexing database is secure, i.e., it uses SSL/TLS, you can use the [*Skyline SSL Certificate Monitor* connector](https://catalog.dataminer.services/details/382d6771-5162-47ce-aa2a-0f4a0d7ecd6d) to track the status of the SSL/TLS certificates that authenticate the connection and enable encryption.
 
 Key parameters that can be monitored using this connector include:
 

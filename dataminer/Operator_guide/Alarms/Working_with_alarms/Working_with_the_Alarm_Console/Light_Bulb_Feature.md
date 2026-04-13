@@ -4,7 +4,7 @@ uid: Light_Bulb_Feature
 
 # Working with the Alarm Console light bulb feature
 
-From DataMiner 10.3.10/10.4.0 onwards, you can leverage the Alarm Console's light bulb feature to stay updated on alarms and suggestion events related to SLAnalytics features. To access this feature, click the *light bulb* button located in the top-right corner of the Alarm Console: ![Light bulb button](~/dataminer/images/LightBulb_button.png) <!--RN 36777--> <!-- RN 37184-->
+From DataMiner 10.3.10/10.4.0 onwards, you can leverage the Alarm Console's light bulb feature to stay updated on alarms and suggestion events related to SLAnalytics features. To access this feature, click the *light bulb* button located in the upper-right corner of the Alarm Console: ![Light bulb button](~/dataminer/images/LightBulb_button.png) <!--RN 36777--> <!-- RN 37184-->
 
 The Alarm Console light bulb feature supports the following advanced analytics features:
 

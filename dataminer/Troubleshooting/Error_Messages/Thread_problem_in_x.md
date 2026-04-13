@@ -18,6 +18,7 @@ Thread problem in x: y [+ z pending]
 The following error messages are possible:
 
 - Thread problem in SLDataMiner: ActionThread
+- [Thread problem in SLDataMiner: ActionPoolThread](#thread-problem-in-sldataminer-actionpoolthread)
 - Thread problem in SLDataMiner: AddressChangeThread
 - Thread problem in SLDataMiner: AlarmLevelRegistration
 - Thread problem in SLDataMiner: AlarmLevelUpdates
@@ -27,6 +28,7 @@ The following error messages are possible:
 - [Thread problem in SLDataMiner: DBThread](#thread-problem-in-sldataminer-dbthread)
 - [Thread problem in SLDataMiner: ElementStackThread](#thread-problem-in-sldataminer-elementstackthread)
 - Thread problem in SLDataMiner: ExecuteThread
+- [Thread problem in SLDataMiner: ExportThread](#thread-problem-in-sldataminer-exportthread)
 - Thread problem in SLDataMiner: LDAPNotification thread
 - Thread problem in SLDataMiner: MergeThread
 - [Thread problem in SLDataMiner: MobileNotificationThread](#thread-problem-in-sldataminer-mobilenotificationthread)
@@ -37,6 +39,23 @@ The following error messages are possible:
 - [Thread problem in SLDataMiner: ServiceThread](#thread-problem-in-sldataminer-servicethread)
 - [Thread problem in SLDataMiner: ServiceReplicationThread](#thread-problem-in-sldataminer-servicereplicationthread)
 - Thread problem in SLDataMiner: SetTriggers
+
+## Thread problem in SLDataMiner: ActionPoolThread
+
+An *ActionPoolThread* is created to take care of the start/stop/pause actions of an element.
+
+### Symptom
+
+An element takes a long time or even fails to start, stop, or pause.
+
+### Possible cause
+
+- A long startup action, such as retrieving the database data of the element.
+- Element startup is stuck.
+
+### Resolution
+
+- At the RTE root time, check *SLDataMiner.txt* and the element log. It should show which step exactly is stuck.
 
 ## Thread problem in SLDataMiner: AlarmStackThread
 
@@ -57,7 +76,7 @@ Restart DataMiner.
 
 ## Thread problem in SLDataMiner: DBCleaning
 
-The *DBCleaning* thread removes data that is no longer needed from the local database, e.g. old trending and alarm data.
+The *DBCleaning* thread removes data that is no longer needed from the local database, e.g., old trending and alarm data.
 
 ### Symptom
 
@@ -123,6 +142,32 @@ These sets can originate from DataMiner clients, SLSNMPManager, other elements, 
 
 - Restart the element in question.
 - Stop the SLScripting process.
+
+## Thread problem in SLDataMiner: ExportThread
+
+When you export and import elements using [.dmimport packages](xref:Exporting_and_importing_packages_on_a_DMA), or when you [migrate elements between DataMiner Agents](xref:Migrating_elements_in_a_DataMiner_System), these operations are handled by the *ExportThread* in SLDataMiner.
+
+### Possible cause
+
+Exporting or importing involves many steps, and one of these steps may take longer than expected, or, in the worst case, may be stuck. Typical steps in this process include (but are not limited to) gathering element files, protocol and template files, documents, and Visio drawings, isolating view information, and retrieving database data.
+
+### Resolution
+
+To resolve this issue, you will need to pinpoint what is going wrong first. To do so, check the following log files:
+
+- `SLDELT.txt`
+- `SLDataminer.txt`
+- `SLNet.txt`
+- `SLErrors.txt`
+
+First determine whether the thread is truly stuck or just taking longer than anticipated. If you find an error or exception related to the process in any of these log files, the thread is likely stuck. If no errors are present, the operation is probably still in progress.
+
+Depending on the situation, it may also be useful to look at `C:/Skyline Dataminer/System Cache/DELT`, either on the source or destination Agent. This location holds the data used to export or import the package.
+
+If the thread is indeed stuck, and you are unable to resolve the issue, [contact support](xref:Contacting_tech_support).
+
+> [!NOTE]
+> Export and import speed depends on several factors such as hardware performance, system load, load on elements and services, network throughput, database performance, and the overall package content. In some cases, the process can take several hours to complete.
 
 ## Thread problem in SLDataMiner: MobileNotificationThread
 

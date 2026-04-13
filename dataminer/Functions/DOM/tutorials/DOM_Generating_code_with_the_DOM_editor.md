@@ -157,7 +157,7 @@ namespace GenerateKataDOMInstances_1
 >
 > 1. Go to the *Updates* tab and select the *Skyline.DataMiner.Dev.Automation* package.
 >
-> 1. On the right-hand side, select *version 10.3.10* (or higher) and click the *Install* button.
+> 1. On the right, select *version 10.3.10* (or higher) and click the *Install* button.
 >
 >    ![Install version 10.3.10 or higher](~/dataminer/images/DOM_Generating_code_Step3_4.png)
 

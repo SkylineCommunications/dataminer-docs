@@ -15,7 +15,7 @@ protocol.NotifyDataMiner(232 /*NT_SERVICE_SET_VDX*/ , serviceID, serviceVdx);
 
 ## Parameters
 
-- serviceId (string): ID of the service, formatted as follows: "[DMA ID]/[Service ID]" (e.g. "400/200").
+- serviceId (string): ID of the service, formatted as follows: "[DMA ID]/[Service ID]" (e.g., "400/200").
 - serviceVdx (string): format: VDX name|pageNumber.
 
   > [!NOTE]

@@ -19,4 +19,4 @@ string
 ## Remarks
 
 > [!NOTE]
-> In case the parameters referred to by the username and password attributes are not filled in, the resulting behavior will be as if there was no loginMethod specified (i.e. no authentication takes place).
+> In case the parameters referred to by the username and password attributes are not filled in, the resulting behavior will be as if there was no loginMethod specified (i.e., no authentication takes place).

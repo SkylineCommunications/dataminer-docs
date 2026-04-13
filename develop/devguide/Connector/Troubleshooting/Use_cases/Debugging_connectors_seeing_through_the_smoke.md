@@ -74,7 +74,7 @@ The big question of course is where to find more data sources. For this, we need
 
 - A **deadlock**, which means something is just waiting for something else indefinitely and not doing anything else.
 
-- A **livelock**, which means a process triggers a change in another process that triggers the original proces again, over and over, ad infinitum. This is also called an infinite loop.
+- A **livelock**, which means a process triggers a change in another process that triggers the original process again, over and over, ad infinitum. This is also called an infinite loop.
 
 In case our problem is caused by a livelock, this means the process is constantly “busy”. The logical place to investigate something that is always busy on a computer is the **Task Manager**. So let’s take a look there.
 

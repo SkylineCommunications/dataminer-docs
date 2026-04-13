@@ -25,13 +25,13 @@ Depending on the hardware, you may need to allow the computer to be started with
 
 To do so, when the computer is booting:
 
-1. Enter the BIOS settings, e.g. by pressing *DELETE*.
+1. Enter the BIOS settings, e.g., by pressing *DELETE*.
 1. Select *Boot Settings > Boot Settings Configuration*.
 1. Set *Halt On* to "All, but Disk/Key".
 
 ## What do I do if I get the HTTP error 401.3 when trying to browse to the DMA?
 
-When you get an HTTP error 401.3 ("Unauthorized") when trying to browse to any web page of the DataMiner Agent in question, verify the security settings of the Skyline DataMiner directory that you copied.
+When you get an HTTP error 401.3 ("Unauthorized") when trying to browse to any webpage of the DataMiner Agent in question, verify the security settings of the Skyline DataMiner directory that you copied.
 
 1. In *File Explorer*, go to the `C:\Skyline DataMiner` directory.
 1. Right-click the directory, and click *Security*.
@@ -345,5 +345,5 @@ Normally, DCOM is configured automatically when you install DataMiner. However, 
 1. In the *Select Users, Computers, or Groups* dialog box, click *Locations*.
 1. In the *Locations* dialog box, select "\[ComputerName\]", and click *OK*.
 1. Back in the *Select Users, Computers, or Groups* dialog box, click *Find Now*.
-1. In the search results, select the required account (e.g. "IUSR_\[ComputerName\]"), and click *OK*.
+1. In the search results, select the required account (e.g., "IUSR_\[ComputerName\]"), and click *OK*.
 1. In the *Select Users, Computers, or Groups* dialog box, click *OK*.

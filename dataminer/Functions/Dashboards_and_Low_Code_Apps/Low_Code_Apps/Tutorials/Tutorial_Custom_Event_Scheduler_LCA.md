@@ -130,7 +130,7 @@ The complete query should look like this:
 
 1. Add a title component:
 
-   1. Drag a [web component](xref:DashboardWeb) from the visualizations pane on the left onto the page and position it in the top-left corner.
+   1. Drag a [web component](xref:DashboardWeb) from the visualizations pane on the left onto the page and position it in the upper-left corner.
 
       ![Web component](~/dataminer/images/Tutorial_events_app_add_web_component.png)
 
@@ -241,7 +241,7 @@ In this step, you will make sure the user can create new events by clicking a bu
 
    ![Actions configured on the "Save" button](~/dataminer/images/Tutorial_events_app_save_button_actions.png)
 
-1. Click the arrow icon in the top-left corner to go back to the *Event table* page.
+1. Click the arrow icon in the upper-left corner to go back to the *Event table* page.
 
 1. Select the *Add event* button that you added to the page earlier and go to the *Settings* pane on the right.
 
@@ -262,7 +262,7 @@ In this step, you will add another panel that will open when an event in the tab
 
 1. Add a [form component](xref:DashboardForm) to the panel.
 
-1. In the *Data* pane on the right, expand *Components* > *Event table* > *Table X* (e.g. *Table 3*) > *Selected rows*, and drag *Object manager instances* onto the form.
+1. In the *Data* pane on the right, expand *Components* > *Event table* > *Table X* (e.g., *Table 3*) > *Selected rows*, and drag *Object manager instances* onto the form.
 
    In the form, you should now see the details of the event you have selected.
 
@@ -296,7 +296,7 @@ In this step, you will add another panel that will open when an event in the tab
 
    ![Actions configured on the "Delete" button](~/dataminer/images/Tutorial_events_app_delete_button_actions.png)
 
-1. Click the arrow icon in the top-left corner to go back to the *Event table* page.
+1. Click the arrow icon in the upper-left corner to go back to the *Event table* page.
 
 1. Select the table component and go to the *Settings* pane on the right.
 
@@ -312,7 +312,7 @@ In this step, you will add a title, a time range component, and a timeline compo
 
 1. Add a title component:
 
-   1. Drag a [web component](xref:DashboardWeb) onto the page and and position it in the top-left corner.
+   1. Drag a [web component](xref:DashboardWeb) onto the page and position it in the upper-left corner.
 
    1. Make sure the component is selected and select the *Settings* pane on the right.
 
@@ -383,7 +383,7 @@ In this step, you will add a title, a time range component, and a timeline compo
 
    1. In the *Link to* box, select the time range component, and click *Link*.
 
-   1. In the *Data* pane, expand *Components* > *Timeline X* (e.g. *Timeline 3*) > *Viewport*, and drag the *Timespans* item below this onto the time range component
+   1. In the *Data* pane, expand *Components* > *Timeline X* (e.g., *Timeline 3*) > *Viewport*, and drag the *Timespans* item below this onto the time range component
 
 ## Step 8: Configure actions on the timeline
 

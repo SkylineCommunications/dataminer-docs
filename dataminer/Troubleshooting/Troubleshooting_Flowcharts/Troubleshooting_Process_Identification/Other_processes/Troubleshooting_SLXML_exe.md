@@ -6,7 +6,7 @@ uid: Troubleshooting_SLXML_exe
 
 ## About SLXML
 
-SLXML is a 32-bit process that manages all interaction with the different XML files found in a DataMiner System, i.e. SLXML reads and writes towards the XML files. If SLXML is abruptly interrupted, it is possible that only half an XML file is written, leading to incorrect configuration. Any issue pertaining to an XML file (e.g. the *MaintenanceSettings.xml* file) can be found here.
+SLXML is a 32-bit process that manages all interaction with the different XML files found in a DataMiner System, i.e., SLXML reads and writes towards the XML files. If SLXML is abruptly interrupted, it is possible that only half an XML file is written, leading to incorrect configuration. Any issue pertaining to an XML file (e.g., the *MaintenanceSettings.xml* file) can be found here.
 
 You can find the SLXML log file in the folder `C:\Skyline DataMiner\Logging`.
 

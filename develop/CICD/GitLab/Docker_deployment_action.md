@@ -36,7 +36,7 @@ The (primary or secondary) key should be added as a masked variable in the repos
 
    ![Add variable](~/develop/images/GitLab_add_variable.png)
 
-1. Specify a name for your variable (e.g. `MY_KEY`), paste the key as the value for the variable, select the *Mask variable*, and click *Add variable*. Optionally it is possible to further protect your variable by selecting *Protect variable*.
+1. Specify a name for your variable (e.g., `MY_KEY`), paste the key as the value for the variable, select the *Mask variable*, and click *Add variable*. Optionally it is possible to further protect your variable by selecting *Protect variable*.
 
    ![Create variable](~/develop/images/GitLab_create_variable.png)
 
@@ -59,7 +59,7 @@ The (primary or secondary) key should be added as a masked variable in the repos
         - uploadTag
         - deploy
 
-    # Uploading a commit on a branch with the build number of the pipeline (e.g. 0.0.56)
+    # Uploading a commit on a branch with the build number of the pipeline (e.g., 0.0.56)
     uploadBranch:
         rules:
             - if: $CI_COMMIT_BRANCH

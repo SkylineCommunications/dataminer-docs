@@ -451,7 +451,7 @@ When the caches are enabled, it is no longer possible to get paged results when 
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
-DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g. SLNet) or "proxy modules" (e.g. a DxM that wishes to expose an API).
+DataMiner modules can now register with API Gateway. These modules can be either "regular modules" (e.g., SLNet) or "proxy modules" (e.g., a DxM that wishes to expose an API).
 
 All modules registered with API Gateway will be displayed under `/APIGateway/api/version`, showing the following properties:
 
@@ -554,7 +554,7 @@ In this next example, all *Column* elements of parameters that have a `level` at
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-Smart-serial connection will now support dynamic polling, i.e. the ability to change the IP address and IP port while the element is active.
+Smart-serial connection will now support dynamic polling, i.e., the ability to change the IP address and IP port while the element is active.
 
 To enable dynamic polling for a smart-serial connection, add a parameter that contains the following:
 

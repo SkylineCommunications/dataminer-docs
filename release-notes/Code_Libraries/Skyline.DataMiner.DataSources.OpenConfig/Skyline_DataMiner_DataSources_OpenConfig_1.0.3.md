@@ -44,11 +44,11 @@ When a path is specified for an element that has child elements, these child ele
 
 #### Non-basic value type now set as JSON [ID 37559]
 
-When a value enters as a type that is not basic, e.g. a string array, this value will now be passed as JSON by the data mapper. This way, *OnRawValueChange* can then be used to fully custom-process this JSON value and set the parameter as desired. Alternatively, when this method is not implemented, the parameter will be set as JSON string.
+When a value enters as a type that is not basic, e.g., a string array, this value will now be passed as JSON by the data mapper. This way, *OnRawValueChange* can then be used to fully custom-process this JSON value and set the parameter as desired. Alternatively, when this method is not implemented, the parameter will be set as JSON string.
 
 #### DataMinerConnectorParameters filled in when parent container with data enters [ID 37599]
 
-​When a container entered with data (e.g. system), the underlying values (e.g. system/state/current-datetime) were not mapped with a DataMinerConnectorParameter (i.e. a single parameter). This has been modified so that DataMinerConnectorParameters will be filled in when an parent container enters with data.
+​When a container entered with data (e.g., system), the underlying values (e.g., system/state/current-datetime) were not mapped with a DataMinerConnectorParameter (i.e., a single parameter). This has been modified so that DataMinerConnectorParameters will be filled in when an parent container enters with data.
 
 #### Support added for Path.Origin [ID 37608]
 
@@ -58,6 +58,6 @@ When a value enters as a type that is not basic, e.g. a string array, this value
 
 #### Not possible to subscribe to multiple tables in a container [ID 37545]
 
-​When the data mapper contained a data grid with a path (e.g. interfaces/interface/state) and there was also another data grid present with a path to a subdirectory of the path of the first data grid (e.g. interfaces/interface/state/counters), not all tables were updated. In addition, when the key was part of a parent path and the value was returned in JSON format, the key was not resolved.
+​When the data mapper contained a data grid with a path (e.g., interfaces/interface/state) and there was also another data grid present with a path to a subdirectory of the path of the first data grid (e.g., interfaces/interface/state/counters), not all tables were updated. In addition, when the key was part of a parent path and the value was returned in JSON format, the key was not resolved.
 
 Parent keys will now also be resolved and included in the primary key, separated by periods, to make the primary key unique. If a data grid already filters on a key value in the path, that parent key will not be included in the primary key.

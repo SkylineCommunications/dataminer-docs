@@ -33,4 +33,4 @@ Change the name of the *label.xml* file so the old file will not be overwritten.
 
 Remote sets from other elements will still fail (using discreet).
 
-For settings (e.g. labels) that are read out from the device, all updates will be done automatically. However, for those that are not read out from the device (e.g. locking), a manual action will be needed to recover the previous settings.
+For settings (e.g., labels) that are read out from the device, all updates will be done automatically. However, for those that are not read out from the device (e.g., locking), a manual action will be needed to recover the previous settings.

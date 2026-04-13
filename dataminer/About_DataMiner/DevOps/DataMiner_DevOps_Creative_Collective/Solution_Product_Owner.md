@@ -11,7 +11,7 @@ The following delineates the role and principal responsibilities of a Solution P
 
 - **Value**: The primary goal and hence the continuous touchstone of the PO is to maximize the value delivered by the solution.
 
-- **Factual & quantifiable**: The PO must render the envisioned value as quantifiable as possible, providing visibility and continuous updates. This could, for example, involve quantifying value through the number of downloads, ratings, and effective utilization of the solution by the target user base in general. Alternatively, a more solution-specific quantification could be defined by the PO to keep everybody focused on the actual goal (e.g. MTTR, QoS metrics, number of workflow runs, etc.). Where possible, these quantifiable metrics can even be built into the solution for live tracking and evaluation.
+- **Factual & quantifiable**: The PO must render the envisioned value as quantifiable as possible, providing visibility and continuous updates. This could, for example, involve quantifying value through the number of downloads, ratings, and effective utilization of the solution by the target user base in general. Alternatively, a more solution-specific quantification could be defined by the PO to keep everybody focused on the actual goal (e.g., MTTR, QoS metrics, number of workflow runs, etc.). Where possible, these quantifiable metrics can even be built into the solution for live tracking and evaluation.
 
 - **Vision**: The PO must establish and communicate a clear vision, goal, and scope for the solution, allowing everybody to contribute to it with ideas and suggestions.
 

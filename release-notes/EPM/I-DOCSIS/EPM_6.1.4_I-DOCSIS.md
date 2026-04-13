@@ -30,7 +30,7 @@ The following failure scenarios will be taken into account:
 
 - If it is not possible to read from the permanent file, the logic will check if a backup for the file is available and use it in the same way as the permanent file in the previous scenario.
 
-- If it is not possible to read from the permanent file and no backup is available, the logic will be the same as when no config file is found, i.e. a reset will be done to assign new IDs.
+- If it is not possible to read from the permanent file and no backup is available, the logic will be the same as when no config file is found, i.e., a reset will be done to assign new IDs.
 
 #### Generic DOCSIS CM Collector: Export improvements [ID 33814]
 
@@ -42,7 +42,7 @@ For debugging purposes, a button parameter has also been added that allows you t
 
 #### Problem loading Skyline EPM Platform visual overview [ID 33785]
 
-When a user went to the visual overview of one of the parents in the topology view (e.g. Hub) and then tried to go back to the visual overview of one of the children (e.g. CCAP core), it could occur that the Skyline EPM Platform visual overview did not load properly and did not display the correct values.
+When a user went to the visual overview of one of the parents in the topology view (e.g., Hub) and then tried to go back to the visual overview of one of the children (e.g., CCAP core), it could occur that the Skyline EPM Platform visual overview did not load properly and did not display the correct values.
 
 #### Generic DOCSIS CM Collector: Export directory not found [ID 33864]
 

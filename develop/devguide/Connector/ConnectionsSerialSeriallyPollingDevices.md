@@ -10,9 +10,9 @@ Information that is needed will be the polling IP/DNS name (required), and optio
 
 ![Example table used to serially poll different devices](~/develop/images/Connection_types_-_serial_polling.png)
 
-In case the element already polls a device (e.g. in the case of a controller), a second connection should be defined for the serial polling functionality. This additional connection will be used to dynamically change the polling IP at runtime to be able to poll different devices that have different addresses.
+In case the element already polls a device (e.g., in the case of a controller), a second connection should be defined for the serial polling functionality. This additional connection will be used to dynamically change the polling IP at runtime to be able to poll different devices that have different addresses.
 
-In case the element does not need to poll a device to find out which devices to poll (e.g. when importing a CSV file into a table), this second connection is not needed, and the first connection can be used.
+In case the element does not need to poll a device to find out which devices to poll (e.g., when importing a CSV file into a table), this second connection is not needed, and the first connection can be used.
 
 ```xml
 <Type advanced="serial:modules">serial</Type>
@@ -262,7 +262,7 @@ This action starts a "run actions" action on a parameter to initiate a QAction. 
 </Action>
 ```
 
-This action clears all temporary parameters, to make sure certain data is not reused for e.g. a device that is not responding.
+This action clears all temporary parameters, to make sure certain data is not reused for e.g., a device that is not responding.
 
 ```xml
 <Action id="30004">
@@ -296,7 +296,7 @@ This action clears all responses.
 
 ## Write flow
 
-A first QAction triggers on all write parameters from the tables. The necessary information (e.g. row primary key, parameter to write, value to write, IP address) should be added to a buffer parameter.
+A first QAction triggers on all write parameters from the tables. The necessary information (e.g., row primary key, parameter to write, value to write, IP address) should be added to a buffer parameter.
 
 A second QAction triggers on a change of the buffer parameter. If the buffer is not empty, the execute parameter is empty, and polling is not active ('poll_flag' is "false"), the next setting from the buffer is set in the ExecuteBuffer parameter. If polling should be active ('poll_flag' is "true"), the writes will be handled by the previously discussed QAction incrementing the 'poll_row'.
 

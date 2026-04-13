@@ -113,7 +113,7 @@ To sort the alarms by a particular field:
 
 By default, the Alarm Console is set to group alarms automatically according to whatever column is selected. However, it is also possible to group by a particular field, and then do further changes to the sort order or further grouping on other fields. To do so:
 
-1. Click the hamburger button in the top-left corner and clear the selection from *Automatically group according to arrangement*.
+1. Click the hamburger button in the upper-left corner and clear the selection from *Automatically group according to arrangement*.
 
 1. Right-click the header you want to group by and select *Group by this field*.
 

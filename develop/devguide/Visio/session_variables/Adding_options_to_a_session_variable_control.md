@@ -105,7 +105,7 @@ Add a shape data field of type **SetVarOptions** to the shape, and set its value
 
 - **Control that does not update the variable when the source is updated:**
 
-  By default all SetVar shapes are updated when their source is updated (e.g. the session variable is cleared when an item is selected in a list box and the corresponding row is deleted from the source table). However, you can prevent this by specifying the following **SetVarOptions** value:
+  By default all SetVar shapes are updated when their source is updated (e.g., the session variable is cleared when an item is selected in a list box and the corresponding row is deleted from the source table). However, you can prevent this by specifying the following **SetVarOptions** value:
 
   ```txt
   DisableSetOnSourceUpdate
@@ -301,7 +301,7 @@ MultipleValueSep=;
 ```
 
 > [!NOTE]
-> It is possible to specify separators that consist of multiple characters, e.g. `MultipleValueSep=-AND-`.
+> It is possible to specify separators that consist of multiple characters, e.g., `MultipleValueSep=-AND-`.
 
 By default, when no checkboxes are selected, the value of the session variable will be empty. If, however, you want the session variable to have a fixed value in case none of the checkboxes are selected, then add a shape data field of type **SetVarOptions** to the shape and set its value to "EmptyValue=", followed by the value of your choice:
 

@@ -66,7 +66,7 @@ The alarm state color of the shape would be initialized correctly, but when the 
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
-In Automation, up to now, when no element context was provided, parameter value selection boxes populated with values from another parameter (i.e. so-called dependency values) would incorrectly be empty. From now on, when no element context is provided, selection boxes populated with values from another parameter will now be populated with discrete values configured in the protocol. Moreover, if no values can be found for a particular selection box, it will become editable, allowing you to enter values manually.
+In Automation, up to now, when no element context was provided, parameter value selection boxes populated with values from another parameter (i.e., so-called dependency values) would incorrectly be empty. From now on, when no element context is provided, selection boxes populated with values from another parameter will now be populated with discrete values configured in the protocol. Moreover, if no values can be found for a particular selection box, it will become editable, allowing you to enter values manually.
 
 Also, when you opened a parameter value selection box populated with values from another parameter in Data Display after having configured the same parameter by means of a set action in Automation, the parameter value selection box in Data Display could incorrectly be empty.
 
@@ -74,7 +74,7 @@ Also, when you opened a parameter value selection box populated with values from
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
-When generating a mobile visual overview with *Link* shapes containing an inline link (i.e. a URL preceded by a # character), up to now, an embedded browser component would incorrectly be created. From now on, embedded browsers will no longer be created in this case.
+When generating a mobile visual overview with *Link* shapes containing an inline link (i.e., a URL preceded by a # character), up to now, an embedded browser component would incorrectly be created. From now on, embedded browsers will no longer be created in this case.
 
 #### Spectrum analyzer cards could leak memory [ID 38725]
 
@@ -112,7 +112,7 @@ Up to now, when you hovered the mouse pointer over that marker, the tooltip woul
 
 <!-- MR 10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
-When you closed an app (e.g. Automation, Correlation, etc.), in some cases, Cube could leak memory.
+When you closed an app (e.g., Automation, Correlation, etc.), in some cases, Cube could leak memory.
 
 #### Memory leak when opening trend graphs [ID 38799]
 

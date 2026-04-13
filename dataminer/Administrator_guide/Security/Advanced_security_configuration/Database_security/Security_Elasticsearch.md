@@ -87,7 +87,7 @@ To configure TLS encryption for client-server communication:
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
 
 > [!NOTE]
-> When replacing certificates, e.g. when the certificates have expired, make sure to delete the **elasticsearch.keystore** file in the **elasticsearch** folder.
+> When replacing certificates, e.g., when the certificates have expired, make sure to delete the **elasticsearch.keystore** file in the **elasticsearch** folder.
 
 ### Inter-node TLS encryption
 
@@ -130,7 +130,7 @@ To configure TLS encryption for inter-node communication:
 > [!NOTE]
 >
 > - DataMiner does **not** require a restart when enabling *inter-node* TLS encryption.
-> - When replacing certificates, e.g. when the certificates have expired, make sure to delete the **elasticsearch.keystore** file in the **elasticsearch** folder.
+> - When replacing certificates, e.g., when the certificates have expired, make sure to delete the **elasticsearch.keystore** file in the **elasticsearch** folder.
 
 ### Troubleshooting
 

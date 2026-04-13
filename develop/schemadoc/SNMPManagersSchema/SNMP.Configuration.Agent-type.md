@@ -4,7 +4,7 @@ uid: SNMP.Configuration.Agent-type
 
 # type attribute
 
-Specifies the type (e.g. IPv4).
+Specifies the type (e.g., IPv4).
 
 ## Content Type
 

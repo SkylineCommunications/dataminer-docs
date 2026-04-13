@@ -46,7 +46,7 @@ If the repository is private, the name should look like this (using "-" as separ
 > [!NOTE]
 > When working on a repository that will have projects with different types, consider this as a Solution (see below).
 
-- For a list of **customer acronyms**, refer to [DCP](https://dcp-ui.azurewebsites.net/customers). For generic repositories, use the Skyline Communications acronym (SLC).
+- For a list of **customer acronyms**, refer to [DCP](https://aka.dataminer.services/customers). For generic repositories, use the Skyline Communications acronym (SLC).
 
 - The following **item types** are currently supported (this list is to be extended):
 
@@ -71,12 +71,23 @@ If the repository is private, the name should look like this (using "-" as separ
   | T | Tests: regression tests, integration tests, performance tests, etc. |
   | UDAPI | User-Defined APIs |
   | V | Visio files |
-  | EXT | External tools - softwares  |
+  | EXT | External tools - software  |
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
 
 - It is up to the repository creator to choose the **item name**; however, make sure this name clearly indicates the purpose of the repository.
+
+## Working with NuGet repositories
+
+When creating a repository that produces NuGet packages, refer to the following documentation for comprehensive guidance:
+
+- [NuGet package recommendations](xref:NuGet_Recommendations): General recommendations on when and how to provide NuGet packages for your solution.
+- [Producing NuGet packages](xref:Producing_NuGet): Detailed technical guidance on naming conventions, versioning, metadata, and package creation.
+- [DataMiner Dev Packs](xref:TOODataMinerDevPackages): Information about Custom Dev Packs and Solution Dev Packs.
+
+> [!TIP]
+> For NuGet repositories, ensure you use the **dataminer-nuget** topic and follow the naming conventions outlined in the documentation. Remember that the NuGet package name should match the repository name.
 
 ## Adding a README file
 
@@ -159,17 +170,17 @@ Here is a list of topics you should use (this list is to be extended):
 - dataminer-chatops
 - dataminer-nuget
 
-If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
+If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g., `Skyline-Communications`. Always use a hyphen ("-") as a separator.
 
 > [!NOTE]
-> For regression tests, use *T* as the item type in the repository name, and use topics to identify the type of test, e.g. *dataminer-regression-test*.
+> For regression tests, use *T* as the item type in the repository name, and use topics to identify the type of test, e.g., *dataminer-regression-test*.
 
 > [!TIP]
 > Refer to the [guidelines about adding topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) and [Searching for repositories](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories) on docs.github.com.
 
 ## Collaborating with external users on code
 
-In case private repositories have been created for a customer's project, external users (i.e. that customer's employees) can be invited to collaborate on the code.
+In case private repositories have been created for a customer's project, external users (i.e., that customer's employees) can be invited to collaborate on the code.
 
 An invite can then be sent to external users as "outside collaborators".
 

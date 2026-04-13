@@ -12,7 +12,7 @@ uid: DIS_2.10
 
 In the Display editor, it is now possible to enable or disable alarm monitoring and trending for multiple parameters at once.
 
-Also, after selecting an option in the right-click menu (e.g. *Trending \> Enabled*), the menu will now stay open, allowing you to immediately select another option (e.g. *Alarm \> Enabled*).
+Also, after selecting an option in the right-click menu (e.g., *Trending \> Enabled*), the menu will now stay open, allowing you to immediately select another option (e.g., *Alarm \> Enabled*).
 
 > [!NOTE]
 > Menu options that can only be used after selecting one single item will be unavailable after selecting multiple items.

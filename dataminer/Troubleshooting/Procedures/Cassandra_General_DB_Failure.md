@@ -52,7 +52,7 @@ You should be able to find ERROR lines like these in the log files:
 Scanned over <amount> tombstones during query 'SELECT v, vu FROM sldmadb_elementdata.elementdata WHERE d, e = <DMAID>, <ElementID> LIMIT 1000'
 ```
 
-If such ERROR log lines are not present, you may instead find timeouts or tombstones being written to the table, e.g. `Writing xxxx tombstones`.
+If such ERROR log lines are not present, you may instead find timeouts or tombstones being written to the table, e.g., `Writing xxxx tombstones`.
 
 Be aware that tombstones being written to the table is normal. The amount is incremented with each update or delete action, and they are cleared with each compaction. Tracking these increments could give you an idea of the updates/deletes for a given table and at a given time. For example, if the number of tombstones suddenly increases with 100K or 1M in a short period of time, this is abnormal. This would mean that 100K or 1M records were updated or deleted.
 
@@ -70,7 +70,7 @@ Look for the following tombstone threshold settings within the *Cassandra.yaml* 
 The default values for these settings are too limiting for a DataMiner environment. If these have not been adjusted correctly during [Cassandra installation](xref:Installing_Cassandra), adjusting their values as mentioned above will likely be the solution for the element startup issue.
 
 > [!TIP]
-> Having an [Apache Cassandra Cluster Monitor](https://docs.dataminer.services/connector/doc/Apache_Cassandra_Cluster_Monitor.html) element in the DMS is an excellent way to know the KPIs (e.g. tombstone thresholds, gc_grace_seconds, etc.) of the Cassandra cluster without the need to log into these servers. Make sure to use the latest version of the connector to be able to view more KPIs. Unfortunately, to retrieve the configuration and log files, access to these Cassandra servers is still needed.
+> Having an [Apache Cassandra Cluster Monitor](https://docs.dataminer.services/connector/doc/Apache_Cassandra_Cluster_Monitor.html) element in the DMS is an excellent way to know the KPIs (e.g., tombstone thresholds, gc_grace_seconds, etc.) of the Cassandra cluster without the need to log into these servers. Make sure to use the latest version of the connector to be able to view more KPIs. Unfortunately, to retrieve the configuration and log files, access to these Cassandra servers is still needed.
 
 ### Check the element configuration
 
@@ -157,7 +157,7 @@ If the root cause of the large number of tombstone lies within the connector, fo
 
 ### Cassandra cluster per DMS
 
-1. Access one of the Cassandra nodes, e.g. via PuTTy.
+1. Access one of the Cassandra nodes, e.g., via PuTTy.
 
 1. Open CQLSH, by executing the following command:
 

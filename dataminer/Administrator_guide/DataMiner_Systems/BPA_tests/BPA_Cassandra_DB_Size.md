@@ -38,7 +38,7 @@ None of the files in the Cassandra file system violated any of the rules.
 - One or more of the critical rules have been violated (see [Critical rules](#critical-rules) below).
 
   - Result message: Cassandra DB size errors detected.
-  - Impact: Cassandra operations (i.e. read/write/compaction/repair/…) will fail.
+  - Impact: Cassandra operations (i.e., read/write/compaction/repair/…) will fail.
 
   Each rule violation will be described in detail in the *Detailed Result* and *Corrective Action* field. The following list shows what kind of detailed result will be added for each rule.
 
@@ -91,7 +91,7 @@ These are the messages that can appear when the test fails to execute for unexpe
 
 `Could not execute test ([message])` (on unexpected exceptions).
 
-In the message above, the exception message is included (e.g. "Access Denied"). The test result details contain the full exception text, if available.
+In the message above, the exception message is included (e.g., "Access Denied"). The test result details contain the full exception text, if available.
 
 `Unable to detect any Cassandra installation on the system`
 

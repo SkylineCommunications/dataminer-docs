@@ -7,6 +7,14 @@ uid: General_Main_Release_10.5.0_CU6
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.5.0 CU6](xref:Cube_Main_Release_10.5.0_CU6).
@@ -166,7 +174,7 @@ When an element was restarted multiple times in rapid succession, in some cases,
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When you stopped an element or performed a Failover switch when another action was being executed (e.g. a parameter set being performed by a QAction), in some cases, a deadlock could occur.
+When you stopped an element or performed a Failover switch when another action was being executed (e.g., a parameter set being performed by a QAction), in some cases, a deadlock could occur.
 
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
 
@@ -279,7 +287,7 @@ In some cases, a runtime error could be thrown when a DVE child element was dele
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
+When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g., DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
 #### StorageModule DcM would fail to read an element XML file [ID 43350]
 

@@ -29,7 +29,7 @@ Data Aggregator does not necessarily have to be installed on a server running a 
 
 1. In the Admin app, check whether the correct organization is mentioned in the header bar.
 
-1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the upper-right corner and select the organization in the list.
 
 1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *DxMs* page.
 
@@ -48,7 +48,7 @@ Data Aggregator does not necessarily have to be installed on a server running a 
 
 1. Configure the necessary settings. See [Data Aggregator settings](xref:Data_Aggregator_settings).
 
-1. Restart the *DataMiner DataAggregator* service (e.g. using Windows Task Manager).
+1. Restart the *DataMiner DataAggregator* service (e.g., using Windows Task Manager).
 
 > [!NOTE]
 > By default, a log file for Data Aggregator is stored in `C:\ProgramData\Skyline Communications\DataMiner DataAggregator\Logs`. In case the *DataAggregator* service does not start, the log file will contain more information.

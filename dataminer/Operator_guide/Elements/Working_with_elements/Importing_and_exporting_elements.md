@@ -9,7 +9,7 @@ uid: Importing_and_exporting_elements
 
 ## Importing elements from a CSV file
 
-1. Either open the card of the view where you want to import the elements and click the hamburger button in the top-left corner, or right-click the view in the Surveyor.
+1. Either open the card of the view where you want to import the elements and click the hamburger button in the upper-left corner, or right-click the view in the Surveyor.
 
 1. In the menu, select *Actions \> Import*.
 
@@ -51,7 +51,7 @@ Name checks are case-insensitive. This means that for instance "element1" is con
 > [!NOTE]
 > To export element information to a printer or to the clipboard, you can also follow this procedure.
 
-1. Either open the card of the view from which you want to export the elements and click the hamburger button in the top-left corner, or right-click the view in the Surveyor.
+1. Either open the card of the view from which you want to export the elements and click the hamburger button in the upper-left corner, or right-click the view in the Surveyor.
 
    > [!NOTE]
    >

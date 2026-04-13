@@ -36,7 +36,7 @@ By default, this feature is not enabled, and attachments are saved locally in th
 
 1. In the *Network Share Path* box, fill in the UNC path to the network share.
 
-   Makes sure the path starts with `\\` and does not contain any characters that are illegal for a path (e.g. "<") or strings that allow directory traversal (e.g. "../").
+   Makes sure the path starts with `\\` and does not contain any characters that are illegal for a path (e.g., "<") or strings that allow directory traversal (e.g., "../").
 
     ![DOM Editor: network attachment settings window](~/dataminer/images/DOM_Editor_networkshare.png)
 

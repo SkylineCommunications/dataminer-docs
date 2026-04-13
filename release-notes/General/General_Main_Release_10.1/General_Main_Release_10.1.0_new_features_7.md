@@ -61,7 +61,7 @@ SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to i
 |----------|---------------------------------------------------------------------|
 | -y       | Skip any prompts that ask you whether to run online/offline actions |
 
-##### Online actions (i.e. actions that are only run when the DMA being reset is running)
+##### Online actions (i.e., actions that are only run when the DMA being reset is running)
 
 - ResetFailoverOnline
 
@@ -71,7 +71,7 @@ SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to i
 
   Removes the DMA from the DMS if it is part of one.
 
-##### Offline actions (i.e. actions that are always run whether or not the DMA being reset is running)
+##### Offline actions (i.e., actions that are always run whether or not the DMA being reset is running)
 
 - StopTaskbarUtility
 - StopDataMiner
@@ -122,9 +122,9 @@ This tool, when run with the factory-reset argument, resets the currently active
 
 - `-t` or `--database-type <type>`: Mandatory. The type of database:
 
-  - SQL (i.e. MySQL)
+  - SQL (i.e., MySQL)
   - Cassandra
-  - Elastic (i.e. ElasticSearch)
+  - Elastic (i.e., ElasticSearch)
 
 - `-i` or `--ip <ip>`: Mandatory. The IP address of the database host.
 

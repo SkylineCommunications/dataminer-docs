@@ -22,13 +22,13 @@ In DataMiner Cube, it is also possible to add these dialog boxes using the scrip
 
 The following code first creates and then displays a simple dialog box that shows the text “Hello World!” and stays open until you click the *Close* button.
 
-Notice that the programmer defined a number of columns and rows. This forms a grid onto which all dialog box items (i.e. controls) are positioned:
+Notice that the programmer defined a number of columns and rows. This forms a grid onto which all dialog box items (i.e., controls) are positioned:
 
 - The “static text” item displaying the text “Hello World!” is positioned on row 0, column 0.
 
 - The button is positioned on row 2, column 0.
 
-Also notice that a height and a width have been defined for every dialog box item, and that the row heights and column widths have been set to “a” (i.e. automatic) instead of to a specific number of pixels. That way, the rows and columns will automatically be resized according to the size of the dialog box items.
+Also notice that a height and a width have been defined for every dialog box item, and that the row heights and column widths have been set to “a” (i.e., automatic) instead of to a specific number of pixels. That way, the rows and columns will automatically be resized according to the size of the dialog box items.
 
 ```cs
 // Create the dialog box

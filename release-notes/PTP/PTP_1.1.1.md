@@ -16,7 +16,7 @@ Version information for DataMiner PTP is now available on the *Help* tab of the 
 
 #### Support for different grandmaster clock ID formats \[ID 28641\]
 
-DataMiner PTP now supports more different PTP grandmaster clock identifier formats. An identifier can now be any string consisting of hexadecimal groups of two characters, separated by anything that is not hexadecimal, e.g. *ac:46:70:ff:fe:00:80:59* or *AC 46 70 FF FE 00 80 59* or *AC-46-70-FF-FE-00-80-59*.
+DataMiner PTP now supports more different PTP grandmaster clock identifier formats. An identifier can now be any string consisting of hexadecimal groups of two characters, separated by anything that is not hexadecimal, e.g., *ac:46:70:ff:fe:00:80:59* or *AC 46 70 FF FE 00 80 59* or *AC-46-70-FF-FE-00-80-59*.
 
 ### Fixes
 

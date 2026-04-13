@@ -163,7 +163,7 @@ classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:1p
 Action_DataMinerCrash([DataMiner crash]):::classExternalRef
 Action_CrashSLDataGateway(["Check SLDatagateway memory usage (trending graphs)"]):::classExternalRef
 Action_CrashSLDataGatewayLeakRestartYes([Restart DataMiner]):::classExternalRef
-Action_CrashSLDataGatewayLeakRestartYes2["Set an Alarm Template for DMA MS platform element with 2 thresholds for SLDatagateway memory usage (e.g. major alarm for 3Gb and a critical alarm  for 5Gb )and a correlation rule to send email notification to your squad to get memory dumps before Dataminer crashes and restart is needed"]:::classExternalRef
+Action_CrashSLDataGatewayLeakRestartYes2["Set an Alarm Template for DMA MS platform element with 2 thresholds for SLDatagateway memory usage (e.g., major alarm for 3Gb and a critical alarm  for 5Gb )and a correlation rule to send email notification to your squad to get memory dumps before Dataminer crashes and restart is needed"]:::classExternalRef
 Action_CrashSLDataGatewayLeakRestartNo([Run SLLogcollector with SLDGW memory dump. If its possible run it twice with at least 500Mb size difference]):::classExternalRef
 Action_CrashSLDataGatewaySpider[After both memory dumps are available send it to Spider Squad]:::classSolution
 Decision_CrashSLDataGatewayLeak{{Is there a SLDataGateway memory leak?}}:::classExternalRef

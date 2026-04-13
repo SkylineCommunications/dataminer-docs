@@ -103,7 +103,7 @@ Adding the `AllowEmptyDynamicValues` option resolves this by allowing the first 
 
 Shape-level option.
 
-By default, child shapes of an *Element* or *View* shape automatically inherit the shape data of the parent shape. In cases where you want to e.g. link a child shape to another service or element, you can use this option to disable this automatic inheritance.
+By default, child shapes of an *Element* or *View* shape automatically inherit the shape data of the parent shape. In cases where you want to, for example, link a child shape to another service or element, you can use this option to disable this automatic inheritance.
 
 > [!NOTE]
 >
@@ -275,7 +275,7 @@ See [Triggering an action when a shape is dragged onto another shape](xref:Trigg
 
 Shape-level option.
 
-Can be added to shapes displaying parameter values. Set this option to true to convert large values to more legible values with a different unit (e.g. to convert 1000 Mb to 1 Gb). The following units are converted out of the box: bytes (B), bits (b), bits per second (bps), bytes per second (Bps) and Kibibytes (kiB). For other units, the dynamic conversion must be defined in the element’s protocol.
+Can be added to shapes displaying parameter values. Set this option to true to convert large values to more legible values with a different unit (e.g., to convert 1000 Mb to 1 Gb). The following units are converted out of the box: bytes (B), bits (b), bits per second (bps), bytes per second (Bps) and Kibibytes (kiB). For other units, the dynamic conversion must be defined in the element’s protocol.
 
 From DataMiner 10.3.0/10.2.3 onwards, this feature can instead be enabled by the *DynamicUnits* [soft-launch option](xref:SoftLaunchOptions), and you can use the *DynamicUnits=\[true/false\]* option on a shape to override the default behavior determined by the soft-launch option.
 
@@ -402,6 +402,9 @@ Shape-level option.
 Used to override the default table loading behavior when dynamically positioning shapes.
 
 See [Overriding the default table loading behavior](xref:Positioning_shapes_dynamically1#overriding-the-default-table-loading-behavior).
+
+> [!CAUTION]
+> Using this option will have a negative impact on overall performance.
 
 ## ForcePropertyFromPage
 
@@ -692,7 +695,7 @@ It is good practice to use this option on Visio pages that contain controls (par
 
 Page-level option.
 
-If you use this option, the Visio page will not be centered on the card. Instead, it will be aligned top-left.
+If you use this option, the Visio page will not be centered on the card. Instead, it will be aligned top left.
 
 ## NoCopyElementProperty
 
@@ -750,13 +753,13 @@ See [Ignoring the highlight style](xref:Options_for_highlighting_DCF_connections
 
 Page- and shape-level option.
 
-When you are configuring a large number of shapes linked to different elements, but you do not need any element-specific formatting from files like *description.xml*, *informations.xml*, or *port.xml*, you can use the shape option “*NonElementProtocol*” to enhance the overall performance of the Visio drawing.
+When you are configuring a large number of shapes linked to different elements, but you do not need any element-specific formatting from files like *description.xml*, *informations.xml*, or *port.xml*, you can use the shape option *NonElementProtocol* to enhance the overall performance of the Visio drawing.
 
 This option can be used in shapes linked to elements, parameters, matrices, session variables, parameter summaries, and parameter controls. It can also be used on a page, so that it is applied to all shapes on that page.
 
 > [!NOTE]
 >
-> - In case of grouped shapes, this property should only be specified on the main shape, except if you use dynamic placeholders in the subshapes (e.g. \[param:...\], \[property:...\], etc.).
+> - In case of grouped shapes, this property should only be specified on the main shape, except if you use dynamic placeholders in the subshapes (e.g., \[param:...\], \[property:...\], etc.).
 > - This option can also be applied system-wide. See [Activating the NonElementProtocol option system-wide](xref:Configuration_of_DataMiner_processes#activating-the-nonelementprotocol-option-system-wide).
 > - You can use this option with a `=True` or `=False` suffix, so that it can be easily enabled or disabled.
 > - A shape-level *NonElementProtocol* option will override a page-level *NonElementProtocol* option, and a page-level *NonElementProtocol* option will override the system-level *NonElementProtocol* option in the *MaintenanceSettings.xml* file.
@@ -787,7 +790,7 @@ You can for example use this to have multiple pages with the same name in DataMi
 
 > [!NOTE]
 >
-> - Always use the actual page name when referring to a particular page in options like e.g. VdxPage, NavigatePage, InlineVdx, etc. Referring to the override name will not work in such cases.
+> - Always use the actual page name when referring to a particular page in options like e.g., VdxPage, NavigatePage, InlineVdx, etc. Referring to the override name will not work in such cases.
 > - This option is not supported for Visio drawings displayed in DataMiner web apps.
 
 ## PageScale
@@ -971,12 +974,12 @@ See [UseEdge](xref:Linking_a_shape_to_a_webpage#useedge).
 
 Shape-level option.
 
-Use this option if you want to pass on the user credentials of the current user to a web page displayed inside a shape.
+Use this option if you want to pass on the user credentials of the current user to a webpage displayed inside a shape.
 
 See [UseLoginCredentials](xref:Linking_a_shape_to_a_webpage#uselogincredentials).
 
 > [!NOTE]
-> This feature only works when you have logged on to DataMiner Cube explicitly using Basic Authentication (i.e. with a username and a password). It will not work when you have logged on with your Windows user credentials.
+> This feature only works when you have logged on to DataMiner Cube explicitly using Basic Authentication (i.e., with a username and a password). It will not work when you have logged on with your Windows user credentials.
 
 ## UseResource
 

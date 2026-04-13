@@ -24,7 +24,7 @@ When, after clicking the left mouse button, you start dragging, the following wi
 
 - The spectrum trace will move to the left or the right while being refreshed at a rate equal to the original rate.
 - The start, stop and center frequency labels on the X axis will continuously update to reflect the ongoing change.
-- The unknown part of the trace (i.e. the frequency range located outside of the original span) will be visualized as a grey area with a grid in the background.
+- The unknown part of the trace (i.e., the frequency range located outside of the original span) will be visualized as a grey area with a grid in the background.
 
 When you stop dragging and release the left mouse button, the panning dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
 
@@ -37,7 +37,7 @@ Only upon releasing the left mouse button will the unknown part of the trace be 
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-In the Credentials Library in DataMiner Cube (available via *System Center* > *System Settings* > *Credentials Library*), you can now configure a new type of credentials, i.e. username and password credentials. To do so, in the *Type* dropdown, select *Username and password credentials*, and then specify the username and password.
+In the Credentials Library in DataMiner Cube (available via *System Center* > *System Settings* > *Credentials Library*), you can now configure a new type of credentials, i.e., username and password credentials. To do so, in the *Type* dropdown, select *Username and password credentials*, and then specify the username and password.
 
 #### Spectrum analysis: Panning vertically inside a spectrum window [ID 37461]
 
@@ -49,7 +49,7 @@ When, after pressing the Ctrl key and clicking the left mouse button, you start 
 
 - The spectrum trace will move up or down while being refreshed at a rate equal to the original rate.
 - The amplitude labels on the Y axis will continuously update to reflect the ongoing change.
-- The unknown part of the trace (i.e. the amplitude range located outside of the original span) will be visualized as a grey area with a grid in the background.
+- The unknown part of the trace (i.e., the amplitude range located outside of the original span) will be visualized as a grey area with a grid in the background.
 
 When you stop dragging and release the left mouse button, the panning dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
 
@@ -166,7 +166,7 @@ Also, when you clicked *Configure API* for a particular automation script, the *
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-In the Alarm Console footer, you can find counters that display the number of alarms in the current tab per severity. When you hover over one of those counters, a tooltip appears with the text "[nr of alarms] [severity]" (e.g. 31 Major).
+In the Alarm Console footer, you can find counters that display the number of alarms in the current tab per severity. When you hover over one of those counters, a tooltip appears with the text "[nr of alarms] [severity]" (e.g., 31 Major).
 
 Up to now, when you hovered over the suggestions counter, the tooltip would incorrectly show the word "SUGGESTION" in capitals. From now on, it will be shown as "Suggestion" (with capital S).
 

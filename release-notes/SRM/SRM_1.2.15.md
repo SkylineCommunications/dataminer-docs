@@ -20,7 +20,7 @@ On the timeline in the Booking Manager, you can now have booking info shown over
 
 It is now possible to not have a booking converted to a contributing booking immediately, but instead only some time before the booking actually starts. This can help reduce the load on the system.
 
-To use this feature, on the *General* data page of the Booking Manager app, set the parameter *Contributing Conversion Window* to a specific time value, e.g. 2 hours. Below this parameter, the *Late Conversion Status* parameter will indicate the progress in case conversions are being done.
+To use this feature, on the *General* data page of the Booking Manager app, set the parameter *Contributing Conversion Window* to a specific time value, e.g., 2 hours. Below this parameter, the *Late Conversion Status* parameter will indicate the progress in case conversions are being done.
 
 ## Changes
 

@@ -53,7 +53,7 @@ To install DataMiner Cube:
    > [!TIP]
    > See also: [Installing DataMiner Cube](xref:Installing_the_DataMiner_Cube_desktop_application)
 
-1. After installation, open the DataMiner Cube desktop application.
+1. After installation, open DataMiner Cube.
 
 1. Connect to the DataMiner System "the [Ziine Demo System](xref:ZiineDemoSystem)" as described under [Connecting to a DataMiner Agent with Cube](xref:Connecting_to_a_DMA_with_Cube).
 

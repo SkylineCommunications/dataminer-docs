@@ -5,58 +5,36 @@ description: With headquarters in Belgium but present across the globe, Skyline 
 
 # About Skyline Communications
 
-With its DataMiner xOps platform, Skyline Communications empowers global leaders to manage mission-critical ecosystems, including telecom networks, satellite operations, broadcast platforms, utility grids, and smart infrastructures spanning cities, facilities and venues, transportation hubs, and industrial installations. 
+With its DataMiner xOps platform, Skyline Communications empowers global leaders to manage mission-critical ecosystems, including telecom networks, satellite operations, broadcast platforms, utility grids, and smart infrastructures spanning cities, facilities and venues, transportation hubs, and industrial installations.
 
-Its focus is on fast-tracking digital transformation and empowering organizations to operate as agile, data-driven powerhouses that thrive in a rapidly evolving world. It does so by unifying diverse data sources and controls using its DataMiner xOps platform, from hardware, software, and cloud services to operational and business insights. This provides a real-time digital twin for seamless monitoring, AI-driven analytics, hyper-automation, and resource-aware orchestration. 
+Skyline's focus is on unifying diverse data sources and controls using its DataMiner xOps platform, creating a real-time digital twin for seamless monitoring, AI-driven analytics, advanced automation, and resource-aware orchestration. It also fosters innovation by providing out-of-the-box solutions with customizable flexibility, backed by a vibrant global DevOps community. This combination of visibility, intelligence, and scalability fast-tracks digital transformation and empowers organizations to operate as agile, data-driven powerhouses that thrive in a rapidly evolving world.
 
-Providing out-of-the-box solutions with customizable flexibility, Skyline Communications fosters innovation, backed by a vibrant global DevOps community.
+Founded in 1985, Skyline has decades of industry-specific NMS and OSS expertise. The company has grown into a global software leader and the trusted partner for organizations in over 125 countries, providing future-proof xOps solutions. Not only has Skyline's DataMiner xOps platform received various prestigious awards, but the company itself has also been awarded multiple times for innovation, growth, and excellence.
 
-With deployments in 125+ countries, Skyline Communications is the trusted partner for organizations seeking scalable, future-proof xOps solutions. With its global presence and offices in Belgium, Bosnia and Herzegovina, Portugal, Singapore, UAE, and the US, Skyline empowers organizations worldwide to take control of their operations and drive innovation with confidence.
-
-Founded in 1985, Skyline has decades of industry-specific NMS and OSS expertise. Not only has Skyline's DataMiner platform received various prestigious awards, but the company itself has also been awarded multiple times for innovation, growth and excellence.
+With its global presence and offices in Belgium, Bosnia and Herzegovina, Portugal, Singapore, the UAE, and the US, Skyline empowers organizations worldwide to drive innovation with confidence.
 
 > [!TIP]
 > For more information, see [www.skyline.be](http://www.skyline.be).
 
 ## Skyline key facts and figures
 
-- 350+ staff, across 20 different countries
+- 350+ employees
 - 1500+ customers across all continents worldwide
 - 125+ different countries
-- 7000+ connectors that interface with data sources (devices, systems, etc.) from 1000+ vendors
-- 10000+ nodes deployed
+- 9000+ product integrations from 1000+ technology vendors
+- 9000+ systems deployed
 
 ## Awards
 
 As a result of its continuous, far-reaching innovation, Skyline has been recognized for its leadership in shaping the future of end-to-end multivendor network management and OSS solutions.
 
-![Awards](~/dataminer/images/awards.png)
+For a detailed overview of Skyline's awards, refer to [Awards & achievements](https://www.skyline.be/skyline/awards)
 
-> [!TIP]
-> See also: [Awards & achievements](https://www.skyline.be/skyline/awards)
+## Successful track record of 25+ years
 
-## Successful track record of 20+ years
+Skyline Communications has a successful track record of over 25 years. The company started as a distributor and manufacturer of HFC solutions in 1985 but changed its direction in 2000 to focus on software development. Since then, it has rapidly grown to a global industry leader with over 10000 nodes deployed in over 125 countries, and more than 1500 customers worldwide.
 
-Skyline Communications has a successful track record of over 20 years. The company started as a distributor and manufacturer of HFC solutions in 1985 but changed its direction in 2000 to focus on software development. Since then, it has rapidly grown to a global industry leader with over 10000 nodes deployed in over 125 countries, and more than 1500 customers worldwide.
-
-> [!TIP]
-> For more detailed info, check the timeline on our [introduction page](https://www.skyline.be/skyline/about).
-
-## Mission and vision
-
-### Mission
-
-Our mission is to redefine how operators can manage and automate their entire operation end to end across any vendor and technology boundaries, more easily and more efficiently than ever before, and to ensure that you can deliver exceptional ICT, media, and broadband services.
-
-We are laser-focused on our mission, creating and deploying the most sophisticated monitoring, control, orchestration, and end-to-end workflow software solutions, which enable our users to leverage the latest technologies (such as all-IP, cloud, etc.) more efficiently to transform their products.
-
-### Vision
-
-A relentless desire for continuous innovation lies at the heart of Skyline's mission statement. Its reputation for innovation was established at the very inception of DataMiner. Since then, year after year, Skyline has led the industry with innovative new paradigms and capabilities.
-
-Today, we continue to evaluate how the media and broadband industry is evolving, what kind of challenges this brings along for our customers, and how these can effectively be addressed with new innovative DataMiner capabilities.
-
-We believe that reliable access to information is a fundamental right for everyone, and that people around the globe should have free and equal access to ICT, media, and broadband services.
+For more detailed info, refer to the [timeline on skyline.be](https://www.skyline.be/skyline/about).
 
 ## Why Skyline Communications
 

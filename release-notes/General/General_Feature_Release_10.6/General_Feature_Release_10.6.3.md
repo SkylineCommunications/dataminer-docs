@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.3
 ---
 
-# General Feature Release 10.6.3 – Preview
+# General Feature Release 10.6.3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -41,7 +41,7 @@ uid: General_Feature_Release_10.6.3
 
 On top of [DataMiner Object Models: Definition-level security [ID 43380] [ID 43589]](xref:General_Feature_Release_10.5.10#dataminer-object-models-definition-level-security-id-43380-id-43589), which allows you to grant user groups access to all DOM instances of a DOM definition, it is now also possible to allow user groups access to an individual DOM instance based on whether that DOM instance contains at least one of a specified set of values for a specified FieldDescriptor.
 
-For example, the user group *London employees* will only be able to read the "Job" instances where the *Assigned office* field (i.e. a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
+For example, the user group *London employees* will only be able to read the "Job" instances where the *Assigned office* field (i.e., a `DomInstanceFieldDescriptor`) contains the ID of the DOM instance for the London office.
 
 ##### Limitations
 
@@ -95,7 +95,7 @@ When `FieldValueReference` values are saved in the `ModuleSettings`, the followi
 - Check if the list of values is not empty. If the list is empty, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasNoValues`.
 - Check if the list of values does not contain more than 10 items. If the list contains more than 10 items, a `DomManagerSettingsErrorData` error will be returned with reason `DomSecurityFieldValueReferenceHasTooManyValues`.
 
-In all errors listed above, the `ErrorData` properties `GroupName` and `DomDefinitionId` can be used to find out which references are invalid. The third error also contains a `Limit` property that contains the max number of values (i.e. 10).
+In all errors listed above, the `ErrorData` properties `GroupName` and `DomDefinitionId` can be used to find out which references are invalid. The third error also contains a `Limit` property that contains the max number of values (i.e., 10).
 
 #### SLNet subscription logging [ID 44361]
 
@@ -119,7 +119,7 @@ To activate SLNet subscription event logging, do the following:
 
 ##### Event type and cache key filtering
 
-The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g. *ParameterChangeEventMessage*) and/or cache key (e.g. DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
+The entries in the *SLSubscriptionLog.txt* log file can be filtered by event type (e.g., *ParameterChangeEventMessage*) and/or cache key (e.g., DataMinerID/ElementID/ParameterID). To do so, you have to provide a value with a *filter=* prefix. If you want to provide multiple values, they have to be separated by a semicolon (";").
 
 Options for filtering by event type:
 
@@ -262,7 +262,7 @@ public class Script
 
 #### Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]
 
-<!-- MR 10.7.0 - FR 10.6.3 -->
+<!-- MR 10.6.0 [CU3] - FR 10.6.3 -->
 
 Up to now, one SLScripting process was used by default. From now on, by default, there will be as many SLScripting processes as SLProtocol processes.
 
@@ -275,7 +275,7 @@ Note that is possible to configure the number of simultaneously running SLScript
 
 #### Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]
 
-<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.7.0 - FR 10.6.3 together with 44420 -->
+<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.6.0 [CU3] - FR 10.6.3 together with 44420 -->
 
 Up to now, when an SLScripting process disappeared, elements relying on that process could become unstable, requiring manual intervention to restore functionality.
 
@@ -302,7 +302,7 @@ If SLProtocol requests an SLScripting process that is no longer valid, the syste
 
 <!-- MR 10.7.0 - FR 10.6.3 -->
 
-Two new parameter caches are now available for client apps (e.g. DataMiner Cube):
+Two new parameter caches are now available for client apps (e.g., DataMiner Cube):
 
 - ProtocolParameters (linked to GetProtocolParameter on the client connection)
 - ElementProtocolParameters (linked to GetElementProtocolParameter on the client connection)
@@ -326,6 +326,9 @@ Visibility on SLNet connection issues has been enhanced:
 Up to now, SLNet would incorrectly send all log entries directly to SLLog, including entries of which the log level dictated that they should not be added to a log file.
 
 From now on, SLNet will only send a log entry to SLLog if the log level dictates that the entry should be logged. As a result, overall performance will increase when adding entries to log files.
+
+> [!IMPORTANT]
+> This change has been reverted in Main Release 10.5.0 CU12, Main Release 10.6.0, and Feature Release 10.6.3 CU1 as it caused SLNet to leak handles whenever a user authenticated using SAML and a new SLHelper process was started. See [SLNet will no longer take into account the log level before sending a log entry to SLLog [ID 44868]](xref:General_Feature_Release_10.6.3_CU1#slnet-will-no-longer-take-into-account-the-log-level-before-sending-a-log-entry-to-sllog-id-44868).
 
 #### An error will now be logged if the response to an SNMP Get request cannot be mapped [ID 44329]
 
@@ -403,7 +406,7 @@ From now on, when an issue occurs during startup, in most cases, SLAnalytics wil
 <!-- RN 44479: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 <!-- RN 44616: MR 10.4.0 [CU21] / 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 -->
 
-Because of a number of enhancements, overall performance of the the *Cube CRL Freeze* BPA test has increased.
+Because of a number of enhancements, overall performance of the *Cube CRL Freeze* BPA test has increased.
 
 This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
@@ -422,7 +425,7 @@ Up to now, in interactive automation scripts launched from web apps, only the `U
 
 <!-- MR 10.5.0 [CU12] - FR 10.6.3 -->
 
-Up to now, for a GQI extension (i.e. an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
+Up to now, for a GQI extension (i.e., an ad hoc data source or a custom operator) to be able to retrieve the username of the user who launched the query, an additional connection had to be set up, which could cause overall performance of the extension to decrease.
 
 From now on, the `OnInitInputArgs` will include a `Session` object that will contains the domain user name of the user who launched the query.
 
@@ -446,7 +449,7 @@ These log entries will include both the requested version and the actual version
 
 <!-- MR 10.6.0 - FR 10.6.3 -->
 
-The following SLNet messages, which can be used to retrieve information about elements, services, and redundancy groups, now also support filtering by HostingAgentID. This allows you to e.g. retrieve a list of all elements that are being hosted on a particular DataMiner Agent.
+The following SLNet messages, which can be used to retrieve information about elements, services, and redundancy groups, now also support filtering by HostingAgentID. This allows you to, for example, retrieve a list of all elements that are being hosted on a particular DataMiner Agent.
 
 - GetLiteElementInfo
 - GetLiteRedundancyGroupInfo
@@ -459,7 +462,7 @@ The following SLNet messages, which can be used to retrieve information about el
 
 From now on, it will no longer be possible to migrate booking data from a Cassandra database per DMA to an indexing database.
 
-Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e. from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
+Up to now, in DataMiner Cube, the *Migrate booking data to Indexing Engine*, found in *System Center > Search & Indexing*, allowed you to migrate older booking data (i.e., from prior to DataMiner 10.0) stored in a Cassandra database per DMA to the indexing database. From now on, when Cube is connected to a DMA running DataMiner 10.6.0 [CU0]/10.6.3 or newer, this option will no longer be available.
 
 #### DataMiner backup: Scheduler configuration will now be included in full and configuration backups [ID 44584]
 

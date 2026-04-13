@@ -2733,7 +2733,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>It is advised to use one of the overloads providing the input(s) and output(s) when possible(i.e.when it is known which crosspoints have been updated) to reduce the load.</description>
 		///			</item>
 		///			<item>
-		///				<para>In case of a 2x10 matrix, for example, the coordinates of the top-left crosspoint are iX=1/iY=1, and the coordinates of the bottom-right crosspoint are iX = 2 / iY = 10.</para>
+		///				<para>In case of a 2x10 matrix, for example, the coordinates of the upper-left crosspoint are iX=1/iY=1, and the coordinates of the lower-right crosspoint are iX = 2 / iY = 10.</para>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -2758,7 +2758,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>It is advised to use one of the overloads providing the input(s) and output(s) when possible(i.e.when it is known which crosspoints have been updated) to reduce the load.</description>
 		///			</item>
 		///			<item>
-		///				<para>In case of a 2x10 matrix, for example, the coordinates of the top-left crosspoint are iX=1/iY=1, and the coordinates of the bottom-right crosspoint are iX = 2 / iY = 10.</para>
+		///				<para>In case of a 2x10 matrix, for example, the coordinates of the upper-left crosspoint are iX=1/iY=1, and the coordinates of the lower-right crosspoint are iX = 2 / iY = 10.</para>
 		///			</item>
 		///		</list>
 		///	</remarks>

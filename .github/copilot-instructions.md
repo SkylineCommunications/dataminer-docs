@@ -30,7 +30,7 @@ These are the key directories within this repository:
 - `dataminer`: Core documentation for DataMiner users.
 - `solutions`: Documentation for solutions built using DataMiner.
 - `tutorials`: Overview information on tutorials. The tutorials themselves are usually located in other directories.
-- `connectors`: Only contains images used for referencing elsewhere. The actual connectors information is located in a separate repository, i.e. `SkylineCommunications/dataminer-docs-connectors`.
+- `connectors`: Only contains images used for referencing elsewhere. The actual connectors information is located in a separate repository, i.e., `SkylineCommunications/dataminer-docs-connectors`.
 - `develop`: Documentation for DataMiner developers
 - `src`: Contains source files for documentation that is automatically generated during the `docfx metadata` step of the workflow.
 - `release-notes`: Release notes for the core DataMiner software, client software, DxMs, and various DataMiner Solutions.

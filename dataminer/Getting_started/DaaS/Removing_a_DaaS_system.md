@@ -9,7 +9,7 @@ uid: Removing_a_DaaS_system
 
 1. Make sure you are logged in to dataminer.services with an account that has either the **Admin or Owner** role on organization level, or the **Owner** role on system level.
 
-1. On the dataminer.services page, click the ellipsis ("...") button in the top-right corner of the box representing the system and select *Delete DMS*.
+1. On the dataminer.services page, click the ellipsis ("...") button in the upper-right corner of the box representing the system and select *Delete DMS*.
 
 1. Fill in the name of the system to confirm that this is the system you want to remove.
 

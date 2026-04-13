@@ -16,7 +16,7 @@ To access the Ticketing app:
 > [!NOTE]
 >
 > - The standalone Ticketing app can be accessed using Google Chrome, Microsoft Edge, Mozilla Firefox or Safari.
-> - When you embed the Ticketing app in another page, e.g. in Visual Overview, you can add *embed=true* to its URL in order to hide the sidebar and header bar of the app. You can also add a filter in the Ticketing URL to only show tickets affecting a specific element, service, view or redundancy groups. To do so, add a filter in the following format: *affecting=\[type\]/\[DataMiner ID\]/\[object ID\]*, where \[type\] can be *element*, *service*, *view* or *redundancy group*. For example: *affecting=element/299/31*
+> - When you embed the Ticketing app in another page, e.g., in Visual Overview, you can add *embed=true* to its URL in order to hide the sidebar and header bar of the app. You can also add a filter in the Ticketing URL to only show tickets affecting a specific element, service, view or redundancy groups. To do so, add a filter in the following format: *affecting=\[type\]/\[DataMiner ID\]/\[object ID\]*, where \[type\] can be *element*, *service*, *view* or *redundancy group*. For example: *affecting=element/299/31*
 
 ## Accessing the Ticketing app via dataminer.services
 

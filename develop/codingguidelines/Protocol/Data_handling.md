@@ -9,11 +9,11 @@ uid: Data_handling
   In many cases, a table should only hold the entries that are currently available. If so, old rows that are no longer present will be removed. For example, SNMP and WMI tables will by default only need to display the entries that currently exist, and old rows will be removed.
 
   > [!NOTE]
-  > For tables filled in by a QAction, code is necessary to remove the old data, e.g. via FillArray, RemoveRow.
+  > For tables filled in by a QAction, code is necessary to remove the old data, e.g., via FillArray, RemoveRow.
 
 ## Previous data comparison
 
-Sometimes users need to know about items that are no longer present compared to a previous polling of the table data (e.g. missing transport streams, services, processes, DVEs, etc.). In this case, the items that are no longer present must not be automatically removed. The table should indicate which entries are no longer available.
+Sometimes users need to know about items that are no longer present compared to a previous polling of the table data (e.g., missing transport streams, services, processes, DVEs, etc.). In this case, the items that are no longer present must not be automatically removed. The table should indicate which entries are no longer available.
 
 This should be implemented as follows:
 
@@ -32,7 +32,7 @@ This should be implemented as follows:
 
 ## Infinitely growing amount of data
 
-Another possible scenario is that entries keep being added to a table (e.g. data pushed from an external third-party component to DataMiner, such as SNMP traps). In this case, the protocol must provide a means to automatically limit the size of the table. However, care must be taken to not remove entries that are still valid and of interest to the user (e.g. only remove cleared traps, old information events, etc.).
+Another possible scenario is that entries keep being added to a table (e.g., data pushed from an external third-party component to DataMiner, such as SNMP traps). In this case, the protocol must provide a means to automatically limit the size of the table. However, care must be taken to not remove entries that are still valid and of interest to the user (e.g., only remove cleared traps, old information events, etc.).
 
 Implementation based on maximum number of rows and/or maximum time to keep:
 
@@ -107,7 +107,7 @@ Based on experience, we recommend that you follow these basic guidelines:
 
   - Try to stay below 120 000 cells in 1 get, except if the content of a cell is a 20 MB string or something equally large, in which case you should split up more.
   - If you go above 100 000 rows (considering an average of 7 columns), issues will likely start to occur. Split up the data over several calls or filter only necessary data if you need more.
-  - If you have 100 columns and a large number of rows, you should split these up into several GetColumns calls (e.g. one for rows 1-49 and one for 50-100). Always retrieve the Key column for every call so you can complete your table in memory in a stable way.
+  - If you have 100 columns and a large number of rows, you should split these up into several GetColumns calls (e.g., one for rows 1-49 and one for 50-100). Always retrieve the Key column for every call so you can complete your table in memory in a stable way.
 
 - Performing sets (FillArray):
 

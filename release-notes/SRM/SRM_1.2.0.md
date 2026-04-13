@@ -104,4 +104,4 @@ In some cases, when a booking was converted to a contributing booking, it could 
 
 #### Not possible to assign capability to function with only input or output interfaces \[ID 24863\]
 
-If a function only had interfaces of one type (i.e. only input or only output), it could occur that it was not possible to assign a capability to the function.
+If a function only had interfaces of one type (i.e., only input or only output), it could occur that it was not possible to assign a capability to the function.

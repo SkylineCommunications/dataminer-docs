@@ -7,7 +7,7 @@ description: A parameter can represent a table, a table column, an internal plac
 
 ## Parameter types
 
-A protocol parameter is a versatile component. A parameter can represent a table, a table column, an internal placeholder to hold a value (e.g. a counter, a buffer), a UI component (e.g. a button), etc.
+A protocol parameter is a versatile component. A parameter can represent a table, a table column, an internal placeholder to hold a value (e.g., a counter, a buffer), a UI component (e.g., a button), etc.
 
 > [!NOTE]
 > For an overview of how to define UI components in a DataMiner protocol, see <xref:UIComponents>.
@@ -20,10 +20,10 @@ The following subsections introduce the different types of parameters that are d
 |---------|---------|
 |read     |Used as a data placeholder.         |
 |fixed     |Used to define a value that will not change.         |
-|dummy     |Used as a data placeholder for which the actual data is of no interest, e.g. to trigger a QAction.         |
+|dummy     |Used as a data placeholder for which the actual data is of no interest, e.g., to trigger a QAction.         |
 |write     |Typically used to create a write overlay of a read parameter, or to define a button.         |
 
-A parameter of type **read** is typically used as a data placeholder for internal logic (e.g. to hold a value of counter of serving as a buffer) or for defining a UI component (e.g. a label).
+A parameter of type **read** is typically used as a data placeholder for internal logic (e.g., to hold a value of counter of serving as a buffer) or for defining a UI component (e.g., a label).
 
 A **fixed** parameter acts as a data placeholder that will not change. Though it is in fact possible to change the value of a fixed parameter (using a change length action and then setting the new value), this is not a common operation. For example, to define a parameter that represents a fixed value used in a communication protocol that is being implemented, a fixed parameter can be defined as follows:
 
@@ -44,7 +44,7 @@ A **fixed** parameter acts as a data placeholder that will not change. Though it
 
 In the example above, the Interprete tag is used to define the length of the fixed parameter and the value. For more information, see [Protocol.Params.Param.Interprete](xref:Protocol.Params.Param.Interprete).
 
-A parameter of type dummy is typically used to hold data that is not of real interest, e.g. to hold part of the response that is not processed or to trigger a QAction.
+A parameter of type dummy is typically used to hold data that is not of real interest, e.g., to hold part of the response that is not processed or to trigger a QAction.
 
 > [!NOTE]
 > The units of measure for numeric parameters can be automatically adjusted to a more readable format if the dynamic units feature is enabled. This depends on the DataMiner version and the configuration of the *DynamicUnits* element. See [DynamicUnits](xref:Protocol.Params.Param.Display.DynamicUnits).
@@ -142,9 +142,9 @@ You can override the above-mentioned default behavior by adding a *GeneralParame
 
 ## Parameter change events
 
-When a parameter change triggers (e.g. when a protocol.SetParameter call is performed), the following steps are executed:
+When a parameter change triggers (e.g., when a protocol.SetParameter call is performed), the following steps are executed:
 
-- If there are triggers that trigger on a change of the parameter, these are executed. If there are no triggers defined that trigger on this parameter, but there are triggers defined that trigger on each parameter change (i.e. [Trigger\On](xref:Protocol.Triggers.Trigger.On) is set to "each"), these are executed.
+- If there are triggers that trigger on a change of the parameter, these are executed. If there are no triggers defined that trigger on this parameter, but there are triggers defined that trigger on each parameter change (i.e., [Trigger\On](xref:Protocol.Triggers.Trigger.On) is set to "each"), these are executed.
 - If the parameter has one of the following options: [ssh username](xref:Protocol.Params.Param.Type-options#ssh-username), [ssh password](xref:Protocol.Params.Param.Type-options#ssh-pwd), [ssh options](xref:Protocol.Params.Param.Type-options#ssh-options), [dynamic ip](xref:Protocol.Params.Param.Type-options#dynamic-ip), then this setting is updated.
 - If the parameter has Param@save set to `true`, the value is saved.
 - If the parameter has Param@setter set to `true`, the value gets copied to the corresponding read parameter.

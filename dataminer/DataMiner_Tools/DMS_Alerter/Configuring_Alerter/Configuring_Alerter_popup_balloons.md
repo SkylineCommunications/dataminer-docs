@@ -10,12 +10,12 @@ To do so:
 
 1. Go to *Settings \> Balloon*.
 
-1. For every property you wish to add, click the *Add property* button, and select the property. E.g. *Service impact*, *Services*, etc.
+1. For every property you wish to add, click the *Add property* button, and select the property, for example, *Service impact*, *Services*, etc.
 
 1. To remove a property, select it in the list of additional properties, and click *Remove property*.
 
-    > [!NOTE]
-    > The default properties cannot be removed.
+   > [!NOTE]
+   > The default properties cannot be removed.
 
 1. To change the order in which the additional properties will appear in the balloon, use the *Up* and *Down* buttons to move a selected property accordingly.
 

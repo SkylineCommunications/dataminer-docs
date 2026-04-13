@@ -49,9 +49,9 @@ The following figure illustrates the resulting location of the added group (see 
 
 ![Group execution queue](~/develop/images/Protocol_Explained_-_Main_Protocol_Execution_Thread_Group_Priority.svg)
 
-The action types "execute one", "execute one now", and "execute one top" correspond to "add to execute", "execute", and "execute next", respectively. The only difference is that when "execute one", "execute one now", and "execute one top" are used, the group will only get added to the queue in case the group is not already present in the queue (i.e. the group should only be present in the queue once; hence the word "one" in the name of the action types). In the figure above, it is assumed that the group being added is not already present in the queue.
+The action types "execute one", "execute one now", and "execute one top" correspond to "add to execute", "execute", and "execute next", respectively. The only difference is that when "execute one", "execute one now", and "execute one top" are used, the group will only get added to the queue in case the group is not already present in the queue (i.e., the group should only be present in the queue once; hence the word "one" in the name of the action types). In the figure above, it is assumed that the group being added is not already present in the queue.
 
-A group that is being executed by the protocol thread is not taken into account when verifying if a group is present in the queue, because before a group is executed, it is taken from the queue. This could lead to unwanted behavior when you use e.g. Execute One Top to obtain that a group is only executed once but the action is triggered multiple times in a short time span.
+A group that is being executed by the protocol thread is not taken into account when verifying if a group is present in the queue, because before a group is executed, it is taken from the queue. This could lead to unwanted behavior when you use e.g., Execute One Top to obtain that a group is only executed once but the action is triggered multiple times in a short time span.
 
 ## Item Execution
 
@@ -81,9 +81,9 @@ All linked items are considered blocking. However, it is important to note that 
 
 ## Executing groups by timer threads
 
-When a timer has as content groups that are not poll groups (i.e. the group type is "trigger" or "action"), that group will be executed by the timer thread.
+When a timer has as content groups that are not poll groups (i.e., the group type is "trigger" or "action"), that group will be executed by the timer thread.
 
-By letting the timer thread perform some actions while the main protocol thread is busy performing another operation (e.g. executing a QAction), multithreaded behavior can be obtained.
+By letting the timer thread perform some actions while the main protocol thread is busy performing another operation (e.g., executing a QAction), multithreaded behavior can be obtained.
 
 For example, consider two timers, where the first timer contains a group of type "poll action" and is therefore added to the group execution queue. This group contains an action to increment a parameter value. The second timer contains a group of type "action". The action lets a QAction triggering on parameter 2 execute. The QAction will increase the value of parameter 3 every second, until it reaches 5.
 
@@ -303,7 +303,7 @@ Timer   => group1 (type: "action")
 
 The first action will add a group to the group execution queue of the main protocol execution thread, the second one will trigger a QAction.
 
-The second action will be executed as soon as the group from action 1 (i.e. group 2) is added to the group execution queue. This means that the QAction will be executed before the main protocol execution thread has executed the group from the queue.
+The second action will be executed as soon as the group from action 1 (i.e., group 2) is added to the group execution queue. This means that the QAction will be executed before the main protocol execution thread has executed the group from the queue.
 
 If we change the type of group 1 to "poll action" (or "poll"), the group will be added to the group execution queue of the main protocol execution thread, but the remaining flow will stay the same.
 
@@ -316,9 +316,9 @@ The impact of this flow is that the QAction can run before group 2 is executed d
 
 It is possible to define additional protocol execution threads next to the main protocol execution thread, where each additional protocol execution thread maintains a group execution queue. This can be useful, for example, to separate time-critical actions from actions related to polling a device.
 
-Each additional protocol execution thread in a protocol is linked to a connection. This can be a real connection (e.g. SNMP, serial, etc.) or a virtual connection (for non-polling related functionality, e.g. for implementing cleanup).
+Each additional protocol execution thread in a protocol is linked to a connection. This can be a real connection (e.g., SNMP, serial, etc.) or a virtual connection (for non-polling related functionality, e.g., for implementing cleanup).
 
-On a group, it is then possible to define the connection (i.e. which protocol execution thread) this group must be executed from.
+On a group, it is then possible to define the connection (i.e., which protocol execution thread) this group must be executed from.
 
 For more information on how to implement multiple protocol execution threads in a protocol, see [Multithreading](xref:AdvancedMultiThreading).
 

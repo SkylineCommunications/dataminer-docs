@@ -9,7 +9,7 @@ A C# QAction gets compiled into a DLL by DataMiner. When a QAction gets compiled
 - If the QAction does not have the [precompile](xref:Protocol.QActions.QAction-options#precompile) option, the QAction is compiled the first time it is triggered.
 - If the QAction has the precompile option, it is compiled when an element is created that runs the protocol in which the QAction is defined.
 
-By default, a compiled QAction has the following name: `[protocolName].[protocolVersion].QAction.[QActionID].dll`, e.g. `Microsoft Platform.1.0.0.1.QAction.1.dll`. This default name can be customized via the [dllName=name.dll](xref:Protocol.QActions.QAction-options#dllnamenamedll) option. For more information on how a custom name can be used, see [dllName=name.dll](xref:Protocol.QActions.QAction-options#dllnamenamedll).
+By default, a compiled QAction has the following name: `[protocolName].[protocolVersion].QAction.[QActionID].dll`, e.g., `Microsoft Platform.1.0.0.1.QAction.1.dll`. This default name can be customized via the [dllName=name.dll](xref:Protocol.QActions.QAction-options#dllnamenamedll) option. For more information on how a custom name can be used, see [dllName=name.dll](xref:Protocol.QActions.QAction-options#dllnamenamedll).
 
 The QAction DLLs are stored in the directory `C:\Skyline DataMiner\ProtocolScripts`.
 
@@ -43,7 +43,7 @@ A QAction results in a DLL that is stored in the same folder (`C:\Skyline DataMi
 Referencing another QAction is mainly done in case the referenced QAction contains generic code. This allows you to centralize code in one QAction that is then used by other QActions that make use of the functionality defined in this generic QAction. This is the recommended practice as it helps avoid code duplication.
 
 > [!NOTE]
-> The generic QAction typically will not be triggered by any parameters (i.e. no *triggers* attribute is present for the QAction containing the generic code), and the QAction does not have an entry point method.
+> The generic QAction typically will not be triggered by any parameters (i.e., no *triggers* attribute is present for the QAction containing the generic code), and the QAction does not have an entry point method.
 
 The QAction that is referred to by another QAction must be compiled before the referring QAction is compiled. Therefore, QActions that are referred to by other QActions must use the [precompile](xref:Protocol.QActions.QAction-options#precompile) option.
 

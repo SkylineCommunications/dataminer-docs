@@ -20,7 +20,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 <!-- MR 10.4.0 [CU10] / 10.5.0 [CU0] - FR 10.5.1 -->
 
-Up to now, when Cube was used as a service (i.e. running inside SLHelper) to e.g. show visual overviews on mobile devices, it would always subscribe to all alarms. However, in many cases, no alarm information is needed when showing these visual overviews.
+Up to now, when Cube was used as a service (i.e., running inside SLHelper) to, for example, show visual overviews on mobile devices, it would always subscribe to all alarms. However, in many cases, no alarm information is needed when showing these visual overviews.
 
 From now on, in the *SLHelper.exe.config* file, it is possible to indicate that you want alarm subscriptions to be skipped by setting the `helper:load-alarms` option to false. See the example below.
 
@@ -180,7 +180,7 @@ When, in the *Correlation* app or the *Scheduler* app, you open an existing *Sen
 
 In the *Search & Indexing* section of *System Center*, you can indicate whether search indexing has to be enabled on the client.
 
-From now on, when Cube is used as a service (i.e. running inside SLHelper), the *Enable search indexing on the client* setting will be disregarded.
+From now on, when Cube is used as a service (i.e., running inside SLHelper), the *Enable search indexing on the client* setting will be disregarded.
 
 #### Visual Overview - Resource Manager component: Session variable 'ResourcesInSelectedReservation' will be updated automatically when the list of resources assigned to the selected booking changes [ID 41432]
 

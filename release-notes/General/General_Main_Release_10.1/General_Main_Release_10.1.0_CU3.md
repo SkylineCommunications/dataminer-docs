@@ -24,7 +24,7 @@ From now on, both variables can be processed immediately upon opening a visual o
 
 - Setting the Navigate variable using a page-level InitVar will make the timeline navigate immediately to the chosen time slot and clear the Navigate variable.
 
-- The Viewport variable will always be read upon opening the Resource Manager timeline. In other words, if a session variable already exists in the scope in question (e.g. when the time line was opened while using the global variable scope), the timeline will automatically zoom to the last-known view port.
+- The Viewport variable will always be read upon opening the Resource Manager timeline. In other words, if a session variable already exists in the scope in question (e.g., when the time line was opened while using the global variable scope), the timeline will automatically zoom to the last-known view port.
 
 > [!NOTE]
 > The Navigate variable will be processed after the Viewport variable.
@@ -49,7 +49,7 @@ The job section definition settings “Color”, “Icon” and “Allow Multipl
 
 #### Mobile apps - Visual Overview: Linking shapes to webpages \[ID 29444\]
 
-When you link a shape to a webpage using a shape data field of type *Link*, that page will be opened each time a user clicks that shape. This feature will now also work on visual overviews in mobile apps (e.g. Dashboards, Monitoring, etc.).
+When you link a shape to a webpage using a shape data field of type *Link*, that page will be opened each time a user clicks that shape. This feature will now also work on visual overviews in mobile apps (e.g., Dashboards, Monitoring, etc.).
 
 #### Dashboards app - GQI: Enhanced performance when executing large queries \[ID 29473\]
 
@@ -87,7 +87,7 @@ Sizing:
 
 - When a window is undocked via a drag operation, it will take the same size as the docked window.
 
-- When a window is undocking via SHIFT-Click or via the Undock context menu action, it will take a size based on the type of window. If no specific size is provided (e.g. in case of an element card), the default size will be used (i.e. 80% of the screen size).
+- When a window is undocking via SHIFT-Click or via the Undock context menu action, it will take a size based on the type of window. If no specific size is provided (e.g., in case of an element card), the default size will be used (i.e., 80% of the screen size).
 
 - Window size range: From 600x400 (minimum) to 80% of the screen (maximum)
 
@@ -269,7 +269,7 @@ In the legacy Dashboards app, the “Custom low range” and “Custom high rang
 
 #### Dashboards app: Data item dragged onto a component would not appear in the component’s edit panel \[ID 29481\]
 
-When you dragged a data item (e.g. the entire Elements dataset) onto a component, in some rare cases, that item would not appear in the component’s edit panel.
+When you dragged a data item (e.g., the entire Elements dataset) onto a component, in some rare cases, that item would not appear in the component’s edit panel.
 
 #### Dashboards app: Index feed would remain in status 'Loading' when an error occurred while fetching the indices \[ID 29487\]
 
@@ -285,7 +285,7 @@ When the DataMiner landing page listed 6 apps and you were redirected to an erro
 
 #### DMA that was incorrectly cleaned after having been removed from a DMS would skip its initial synchronization when added to another DMS later on \[ID 29523\]
 
-When a DataMiner Agent had been removed from the DataMiner System and was cleaned up incorrectly afterwards (e.g. by manually updating the DMS.xml file), in some cases, it would skip its initial synchronization when it was added to another DataMiner System later on.
+When a DataMiner Agent had been removed from the DataMiner System and was cleaned up incorrectly afterwards (e.g., by manually updating the DMS.xml file), in some cases, it would skip its initial synchronization when it was added to another DataMiner System later on.
 
 #### Problem with SLASPConnection when processing the results of a GetAlarmHistory call \[ID 29525\]
 

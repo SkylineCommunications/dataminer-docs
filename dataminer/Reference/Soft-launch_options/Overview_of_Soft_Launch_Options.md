@@ -214,7 +214,7 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 
 ### ReportsAndDashboardsExport
 
-Enables the export to PDF button within the Dashboards app itself. Creating PDFs of dashboards is possible outside the app (e.g. via DataMiner Scheduler) without this soft-launch option.
+Enables the export to PDF button within the Dashboards app itself. Creating PDFs of dashboards is possible outside the app (e.g., via DataMiner Scheduler) without this soft-launch option.
 
 - **Minimum version**: 9.6.4
 - **Release version**: 10.2.12/10.3.0 ([RN 34634](xref:General_Feature_Release_10.2.12#dashboards-app-jobs-and-dashboards-app-now-support-pdf-module-id-34634))

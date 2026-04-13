@@ -13,7 +13,7 @@ It can happen that information of two tables needs to be available in a single t
 
 To define a view table, start the name of the table with "View_" and make sure it is a volatile table (by specifying the [volatile](xref:Protocol.Params.Param.ArrayOptions-options#volatile) option on the ArrayOptions tag).
 
-A view table always refers to another table, the so-called base table. This is done via the option [view](xref:Protocol.Params.Param.ArrayOptions-options#view) (e.g. `options=";volatile;view=200"`) of the ArrayOptions tag. In case the view table should also show data from other tables than this base table, the base table must contain columns that hold the foreign keys to these other tables.
+A view table always refers to another table, the so-called base table. This is done via the option [view](xref:Protocol.Params.Param.ArrayOptions-options#view) (e.g., `options=";volatile;view=200"`) of the ArrayOptions tag. In case the view table should also show data from other tables than this base table, the base table must contain columns that hold the foreign keys to these other tables.
 
 The "view" option of the individual ColumnOption tags of the view table then specifies the column that should be shown. For example, `options=";view=201"` specifies that the data from column parameter 201 will be shown in this column of the view table.
 
@@ -71,7 +71,7 @@ Below is an example of a base table. Note that as the view table will show data 
 
 For a view table it is not necessary to define the individual column parameters of the view table as is done for regular tables. Instead, the column parameters of the base table (or linked table) that are duplicated in the view table must have a [duplicateAs](xref:Protocol.Params.Param-duplicateAs) attribute defined. This attribute then defines the column(s) of the view table(s) that will correspond with this column.
 
-For example, the column parameter with ID 201 of the base table will be included in the view table. Therefore, the definition of column parameter 201 includes the duplicateAs parameter and its value is set to 501 (i.e. the column parameter ID of the view table that will hold the data of this column).
+For example, the column parameter with ID 201 of the base table will be included in the view table. Therefore, the definition of column parameter 201 includes the duplicateAs parameter and its value is set to 501 (i.e., the column parameter ID of the view table that will hold the data of this column).
 
 ```xml
 <Param id="201" duplicateAs="501">
@@ -177,7 +177,7 @@ To process the parameter value that the operator enters on the table view write 
 Depending on the DataMiner version, the following functionality is available:
 
 - You can disable updates in view tables and partial subscriptions using the option disableViewRefresh: `<Type options="disableViewRefresh" />`.
-- View tables containing a column with view options like "view=:x:y:z" or "view=a:b:c:z" allow that column to be filtered by means of a "VALUE=" filter (e.g. VALUE=5 == abc). Combining filters with AND or OR is not supported.<!-- RN 30237 --> These filters can also be used to filter on a column of a view table that refers to a column of another view table.<!-- RN 30809 -->
+- View tables containing a column with view options like "view=:x:y:z" or "view=a:b:c:z" allow that column to be filtered by means of a "VALUE=" filter (e.g., VALUE=5 == abc). Combining filters with AND or OR is not supported.<!-- RN 30237 --> These filters can also be used to filter on a column of a view table that refers to a column of another view table.<!-- RN 30809 -->
 
   > [!NOTE]
-  > When a direct view table links to a view table with remote columns (i.e. view=:x:y:z), it is not yet possible to filter on those columns.
+  > When a direct view table links to a view table with remote columns (i.e., view=:x:y:z), it is not yet possible to filter on those columns.

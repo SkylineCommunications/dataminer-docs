@@ -14,7 +14,7 @@ uid: General_Main_Release_10.0.0_CU13
 
 #### Schedule configuration of BPA tests \[ID 29000\]
 
-On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
+On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the dropdown box in the *Schedule* column, you can select to run a test at different intervals, e.g., daily or every 12 hours.
 
 #### Enhanced performance when assigning alarm templates with conditions used in multiple rules \[ID 29109\]
 

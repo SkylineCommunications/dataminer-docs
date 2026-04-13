@@ -42,4 +42,4 @@ The **Credit transactions** table displays a chronological list of all transacti
   - **Positive values**: Credits added to your account (displayed in green).
 
 > [!TIP]
-> You can search the transaction table using the search icon in the top-right corner to quickly find specific transactions by subject, category, or other attributes.
+> You can search the transaction table using the search icon in the upper-right corner to quickly find specific transactions by subject, category, or other attributes.

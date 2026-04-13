@@ -18,7 +18,7 @@ The line graph at the bottom, under *Inspect the anomaly score of your group*, s
 
 ## Adding a relational anomaly group
 
-To add a new relational anomaly parameter group, select *Add Group* in the top-left corner of the app. This will open a window where you can configure the group you want to add.
+To add a new relational anomaly parameter group, select *Add Group* in the upper-left corner of the app. This will open a window where you can configure the group you want to add.
 
 Under *What to add?*, you can select one of the following options, as detailed below:
 

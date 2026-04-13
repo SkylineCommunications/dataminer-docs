@@ -277,6 +277,6 @@ List<string> actualValue = valueWrapper.Values;
 
 ## Notes
 
-- Make sure that the value is of the same type as was defined in the associated `FieldDescriptor`. We recommend that you use an IDE that allows you to easily see the type by hovering over it. Deceiving situations might occur, e.g. an "int" is assigned but the `FieldDescriptor` expects type "long" (Use "236L" instead of "236" in this case).
+- Make sure that the value is of the same type as was defined in the associated `FieldDescriptor`. We recommend that you use an IDE that allows you to easily see the type by hovering over it. Deceiving situations might occur, e.g., an "int" is assigned but the `FieldDescriptor` expects type "long" (Use "236L" instead of "236" in this case).
 
 - You can alter the `DomInstance` object as much as required. Only when passing the `DomInstance` to the `Create` or `Update` method of the helper, will a call be made to the server and will the object be created or updated in the DB.

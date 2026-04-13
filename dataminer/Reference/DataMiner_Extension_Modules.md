@@ -7,7 +7,7 @@ description: DxMs are modules that expand the core DataMiner software with addit
 
 A DataMiner Extension Module (DxM) is a service that can be installed, upgraded, and uninstalled without the need to reboot the DataMiner Agent. These modules will expand the core DataMiner software with additional features and capabilities. In most cases, DxMs will be backwards-compatible with all supported core DataMiner versions. However, this may not be possible in some cases, and then a minimum core DataMiner version will be indicated.
 
-Some DxMs are considered core modules created using the DxM technology. These are known as "DcMs" (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades and are part of the DataMiner installer starting from DataMiner 10.3.7. While DxMs are only updated if they have already been installed, DcMs will always be installed or updated with an upgrade.
+Some DxMs are considered core modules created using the DxM technology. These are known as **DcMs** (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades and are part of the DataMiner installer starting from DataMiner 10.3.7. While DxMs are only updated if they have already been installed, DcMs will always be installed or updated with an upgrade.
 
 DxMs depend on a minimum version of the core software. This is indicated in the Admin app. When you install updates, the latest compatible update will be automatically selected.
 
@@ -81,7 +81,7 @@ The UserDefinableApiEndpoint module is responsible for handling API triggers for
 
 ### Web
 
-The Web module provides back-end services for the DataMiner web apps.
+The Web module provides backend services for the DataMiner web apps.
 
 This DxM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43439 -->
 
@@ -141,7 +141,7 @@ The ModelHost DxM is not included in the Cloud Pack and [must be deployed separa
 
 The SiteManager module is used to set up secure communication tunnels enabling access to on-premises data sources from a DaaS system. It is supported from DataMiner 10.5.10/10.5.0 onwards and is included in the 10.5.10 DaaS image.
 
-For more information, refer to [Site Manager](xref:SiteManagerOverview).
+For more information, refer to [Edge Manager](xref:EdgeManagerOverview).
 
 ## Logging
 

@@ -144,7 +144,7 @@ When you opened a parameter-specific alarm, trend or information template editor
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
-When you had linked an *AlarmSummary* shape to all alarms (i.e. active alarms, masked alarms and information events) by adding a data field of type *AlarmSummary* set to "all", the counter showing the number of masked alarms in the shape text (i.e. "#Masked") would show an incorrect number of alarms.
+When you had linked an *AlarmSummary* shape to all alarms (i.e., active alarms, masked alarms and information events) by adding a data field of type *AlarmSummary* set to "all", the counter showing the number of masked alarms in the shape text (i.e., "#Masked") would show an incorrect number of alarms.
 
 #### DataMiner Cube desktop app: First instance would incorrectly open in system tray mode instead of windowed mode [ID 41532]
 
@@ -210,4 +210,4 @@ When you tried to uninstall the *DataMinerCube.exe* file from a client computer 
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
-In the Alarm Console, alarms generated during the last week of 2024 (i.e. week 53) would not be grouped correctly.
+In the Alarm Console, alarms generated during the last week of 2024 (i.e., week 53) would not be grouped correctly.

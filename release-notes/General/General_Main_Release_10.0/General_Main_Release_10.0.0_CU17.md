@@ -100,7 +100,7 @@ Due to a number of enhancements, overall performance has increased when stopping
 
 #### No longer possible to save TicketFieldDescriptor with characters that are not supported in Elasticsearch \[ID 30625\]
 
-It is now no longer possible to save a TicketFieldDescriptor with a name that contains characters that are not supported in Elasticsearch (i.e. “\_” in initial position, as well as ".", "#", "\*", "," and double or single quotation marks).
+It is now no longer possible to save a TicketFieldDescriptor with a name that contains characters that are not supported in Elasticsearch (i.e., “\_” in initial position, as well as ".", "#", "\*", "," and double or single quotation marks).
 
 When you do try to do so in a script, an exception will be returned. When you try to save a ticket field name in the Ticketing UI containing one of these characters, an error message will be displayed with more information about the characters that are not supported.
 
@@ -234,9 +234,9 @@ In DataMiner Cube, in some cases, a stack overflow exception could be thrown whe
 
 When you install a DataMiner upgrade package, a number of checks are performed before the upgrade is started. In some cases, one of those checks would throw incorrect ZipExceptions.
 
-#### DataMiner Cube - Tab layout: Clicking e.g. an element multiple times would incorrectly each time open a new instance of the card in question \[ID 30541\]
+#### DataMiner Cube - Tab layout: Clicking e.g., an element multiple times would incorrectly each time open a new instance of the card in question \[ID 30541\]
 
-When in tab layout, clicking e.g. an element multiple times would incorrectly each time open a new instance of the card in question.
+When in tab layout, clicking e.g., an element multiple times would incorrectly each time open a new instance of the card in question.
 
 > [!NOTE]
 > When, on a visual overview, you click a button to navigate to another card and then click the *Back* button, in some cases, clicking the button to navigate to another card a second time may no longer open that other card.

@@ -4,7 +4,7 @@ uid: AdvancedDcfDataMinerClassLibrary
 
 # DCF in the DataMiner class library
 
-The DataMiner Class Library provides classes to perform DCF-related operations.
+These DataMiner libraries provide classes to perform DCF-related operations.
 
 ## Connectors (QActions)
 

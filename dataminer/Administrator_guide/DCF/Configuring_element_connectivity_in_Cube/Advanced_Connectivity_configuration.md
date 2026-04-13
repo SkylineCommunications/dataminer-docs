@@ -31,7 +31,7 @@ The connections table allows you to view and configure the connections between i
 
 1. Next to *\[Add Connection\]*, click the *Add* button.
 
-1. In the column *\[Connections Name\]*, enter a name for the connection. E.g. “input 1 –> output 3”
+1. In the column *\[Connections Name\]*, enter a name for the connection. For example, "input 1 –> output 3".
 
 1. In the column *\[Source Interface\]*, enter the Interface ID of the source.
 

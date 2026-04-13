@@ -23,9 +23,9 @@ If you want a script to show the UI when user interaction is required:
 
 - If you rely on automatic detection:
 
-  - Make sure UI calls (e.g. `engine.ShowUI`) are clearly present in the code.
+  - Make sure UI calls (e.g., `engine.ShowUI`) are clearly present in the code.
 
-  - If a framework wraps `ShowUI`, add a hint comment (e.g. `// engine.ShowUI`).
+  - If a framework wraps `ShowUI`, add a hint comment (e.g., `// engine.ShowUI`).
 
 This is why:
 
@@ -46,7 +46,7 @@ if (!engine.FindInteractiveClient("Scheduled task requires operator input to pro
 
 This is why:
 
-- Non-UI contexts (e.g. Scheduler) are not users. The script cannot show them the UI.
+- Non-UI contexts (e.g., Scheduler) are not users. The script cannot show them the UI.
 
 - [FindInteractiveClient](xref:Find_interactive_client) lets a user attach to the script. All active users are shown a message to attach to the script. The first user to click *Attach* sees the UI.
 

@@ -6,6 +6,8 @@ uid: Protocol.Params.Param.Alarm.Info
 
 When the value of the alarm is equal to the value specified in this element, an information event is generated.
 
+When a new alarm template is created, any parameter that has a default info value will be enabled automatically.
+
 ## Type
 
 [TypeAlarmTemplateDefaultValues](xref:Protocol-TypeAlarmTemplateDefaultValues)
@@ -18,8 +20,8 @@ When the value of the alarm is equal to the value specified in this element, an 
 
 > [!NOTE]
 >
-> - To specify multiple values, use a semicolon as separator (“;”).
-> - To denote an exception value, prepend the exception value with a dollar character (“$”).
+> - To specify multiple values, use a semicolon as separator (";").
+> - To denote an exception value, prepend the exception value with a dollar character ("$").
 
 ## Examples
 

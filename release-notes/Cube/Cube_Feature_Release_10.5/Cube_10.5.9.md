@@ -71,7 +71,7 @@ Also, when there are any DaaS systems in the cluster to which you are connected,
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When DataMiner Cube is using the Microsoft Edge (WebView2) browser engine to display embedded webpages, popup windows containing an embedded web page will now show a banner saying that embedding a Microsoft Edge browser window within a popup window is not fully supported.
+When DataMiner Cube is using the Microsoft Edge (WebView2) browser engine to display embedded webpages, popup windows containing an embedded webpage will now show a banner saying that embedding a Microsoft Edge browser window within a popup window is not fully supported.
 
 #### Security: User permission 'General > Views > Add/remove elements' renamed to 'Add/remove items (elements, services, etc.)' [ID 43215]
 
@@ -116,7 +116,7 @@ Up to now, credentials of type *Username and password* allowed passwords up to 4
 From now on, passwords in this type of credentials will no longer be limited in size, allowing for stronger and more secure authentication.
 
 > [!NOTE]
-> This change only applies to credentials of type *Username and password*. Other credentials that include a password (e.g. credentials of type *SNMPv3*) will still only support passwords up to 43 characters.
+> This change only applies to credentials of type *Username and password*. Other credentials that include a password (e.g., credentials of type *SNMPv3*) will still only support passwords up to 43 characters.
 
 #### Default web browser engine will now be Edge instead of Chromium [ID 43429]
 
@@ -175,7 +175,7 @@ Also, when, in the *Settings* window, you went to *Alarm Console > Card-specific
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-In some cases, SPI event log entries (e.g. "Cube Connection") would not get transmitted to the DataMiner Agent.
+In some cases, SPI event log entries (e.g., "Cube Connection") would not get transmitted to the DataMiner Agent.
 
 #### Trending: Y-axis labels of histogram charts would incorrectly be displayed in the middle of the Y axis [ID 43348]
 
@@ -193,7 +193,7 @@ In some rare cases, a trend graph of an EPM KPI would incorrectly not get loaded
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-Up to now, when a element, service or view was updated, in some cases, visual overviews embedded in the visual overview linked to the element, service or view would incorrectly be fully refreshed.
+Up to now, when an element, service or view was updated, in some cases, visual overviews embedded in the visual overview linked to the element, service or view would incorrectly be fully refreshed.
 
 From now on, embedded visual overviews will only be fully refreshed when the referenced object was changed.
 

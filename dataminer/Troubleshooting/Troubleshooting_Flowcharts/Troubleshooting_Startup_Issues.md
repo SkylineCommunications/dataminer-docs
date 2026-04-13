@@ -86,7 +86,7 @@ class Home LightBlue;
 
 ### Root cause
 
-Some DataMiner Core Module (DcM) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g. because of Windows updates). As a consequence, these services are still stopped while the DataMiner Agent is already starting up, but DataMiner needs these services to be able to start up fully.
+Some DataMiner Core Module (DcM) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g., because of Windows updates). As a consequence, these services are still stopped while the DataMiner Agent is already starting up, but DataMiner needs these services to be able to start up fully.
 
 ### Solution
 
@@ -117,9 +117,9 @@ Some DataMiner Core Module (DcM) services do not respond quickly enough to the W
 
 DataMiner cannot find a valid license to run the Agent. This issue may be caused by a **MAC address change**, which can have the following causes:
 
-- Hardware changes (e.g. replacing network interface cards).
+- Hardware changes (e.g., replacing network interface cards).
 
-- NIC priority rearrangement (e.g. because of new VMs or network configurations).
+- NIC priority rearrangement (e.g., because of new VMs or network configurations).
 
 - Randomized MAC addresses.
 
@@ -149,7 +149,7 @@ If you have just enabled the [Swarming](xref:Swarming) feature and DataMiner doe
 
 - Double-check the *Swarming.xml* configuration file for errors.
 
-- Check *SLDataMiner.txt* and *SLNet.txt* for any critical exceptions (e.g. an invalid setup is detected).
+- Check *SLDataMiner.txt* and *SLNet.txt* for any critical exceptions (e.g., an invalid setup is detected).
 
 ### DataMiner is trying to connect to an old IP address
 

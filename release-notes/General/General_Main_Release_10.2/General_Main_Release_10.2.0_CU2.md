@@ -37,7 +37,7 @@ Up to now, when users wanted to share a dashboard, they also needed to have perm
 
 #### Dashboards app - GQI: Enhanced visualization of queries \[ID 32823\]
 
-A number of enhancements have been made with regard to the visualization of GQI queries. For example, raw values (e.g. column IDs, GUIDs, etc.) will be translated to display values when possible.
+A number of enhancements have been made with regard to the visualization of GQI queries. For example, raw values (e.g., column IDs, GUIDs, etc.) will be translated to display values when possible.
 
 #### Cassandra Cluster Migrator tool: Increased write timeout \[ID 32829\]
 
@@ -47,9 +47,9 @@ When it is migrating data, basically, the Cassandra Cluster Migrator tool reads 
 
 From now on, when you create, update or import a GQI query, a unique query name will be mandatory. Up to now, query names were optional.
 
-- When you create a new query, the system will suggest “New query” as default name. If that name already exists, then a counter will be added (e.g. “New query (1)”, “New query (2)”, etc.
+- When you create a new query, the system will suggest “New query” as default name. If that name already exists, then a counter will be added (e.g., “New query (1)”, “New query (2)”, etc.
 
-- When you import a query that has no name, the system will suggest “Imported query” as default name. If that name already exists, then a counter will be added (e.g. “Imported query (1)”, “Imported query (2)”, etc.
+- When you import a query that has no name, the system will suggest “Imported query” as default name. If that name already exists, then a counter will be added (e.g., “Imported query (1)”, “Imported query (2)”, etc.
 
 #### DataMiner upgrade packages: Obsolete upgrade/downgrade actions removed \[ID 32861\]
 
@@ -87,7 +87,7 @@ From now on, Elasticsearch will ignore casing when sorting fields of type string
 
 #### DataMiner web apps: Filter issue when using arrow keys in dropdown box \[ID 31472\]
 
-In the DataMiner web apps (e.g. the Dashboards app), when you opened a dropdown box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.
+In the DataMiner web apps (e.g., the Dashboards app), when you opened a dropdown box that already had a value selected and used the arrow keys to navigate through the values, the current value was applied as a filter, while this should not occur.
 
 #### Alarm templates: Miscellaneous fixes \[ID 32462\]
 
@@ -124,7 +124,7 @@ When a page that was displayed in a VdxPage window of type “Popup” contained
 
 #### Problems with embedded dashboards components \[ID 32782\]
 
-When a GQI component was embedded in a Visio drawing or a web page, in some cases, that component would not be rendered correctly. Also, in some cases, embedded dashboard components would not be able to retrieve data from the database.
+When a GQI component was embedded in a Visio drawing or a webpage, in some cases, that component would not be rendered correctly. Also, in some cases, embedded dashboard components would not be able to retrieve data from the database.
 
 #### DataMiner Cube - Resources app: No resources or resource pools would be loaded when opening the Resources app \[ID 32790\]
 
@@ -134,7 +134,7 @@ When you opened the Resources app, in some cases, no resources or resource pools
 
 Up to now, the GUIDs of the following types of DOM reference fields would be displayed incorrectly:
 
-- Reservations (i.e. bookings)
+- Reservations (i.e., bookings)
 - Service definitions
 - DOM instances
 - Resources
@@ -145,7 +145,7 @@ When you sorted a table component populated by means of a GQI query, in some cas
 
 #### Processes would not get registered correctly when a DataMiner upgrade included a reboot \[ID 32818\]
 
-When a DataMiner upgrade included a reboot (either explicitly requested, or e.g. after installing Microsoft .NET 4.8), in some cases, services would not get registered correctly, especially when the new DataMiner version included services that did not previously exist.
+When a DataMiner upgrade included a reboot (either explicitly requested, or e.g., after installing Microsoft .NET 4.8), in some cases, services would not get registered correctly, especially when the new DataMiner version included services that did not previously exist.
 
 #### Dashboards app: Problem when sharing a dashboard with a node edge component \[ID 32822\]
 
@@ -204,7 +204,7 @@ SLNet tried to load DataMinerInstallerCommunication.XmlSerializers
 When you exported GQI data from a table component to a CSV file, up to now, only the currently loaded page would get exported. From now on, all data in the table will be exported.
 
 > [!NOTE]
-> While the export operation is progress, an “exporting to CSV” notification will be shown in the bottom-right corner of the screen.
+> While the export operation is progress, an “exporting to CSV” notification will be shown in the lower-right corner of the screen.
 
 #### Memory leak in SLElement \[ID 32885\]
 

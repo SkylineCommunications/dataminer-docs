@@ -24,7 +24,7 @@ Specifies compliancy information.
 
 ## Remarks
 
-- If a protocol is configured with compliancy requirements, (e.g. because it requires Cassandra or a particular minimum DataMiner version), it will not be possible to upload this protocol if these requirements are not met.<!-- RN 21169 -->
+- If a protocol is configured with compliancy requirements, (e.g., because it requires Cassandra or a particular minimum DataMiner version), it will not be possible to upload this protocol if these requirements are not met.<!-- RN 21169 -->
 
 - If a protocol is uploaded that requires a higher DataMiner version than the one currently installed in the system, the following error message will be logged:<!-- RN 24298 -->
 

@@ -6,7 +6,7 @@ uid: Cassandra_Clone
 
 The Cassandra Clone tool can be used to clone data from a table in a [Cassandra database](xref:Cassandra_database) to another table. The table can be part of the same keyspace or can be in another keyspace. It is mainly intended to be used in case of severe issues with repair and/or compaction of a Cassandra database, in order to avoid loss of data.
 
-The tool duplicates tables, which is different from taking a snapshot (i.e. a backup) and restoring the snapshot. The tool reads and re-inserts the data row by row, so that the tables are constructed again completely. Unlike when a snapshot is restored, all tombstones are cleared and data will be placed together as efficiently as possible, resulting in less disk space usage for the same number of rows.
+The tool duplicates tables, which is different from taking a snapshot (i.e., a backup) and restoring the snapshot. The tool reads and re-inserts the data row by row, so that the tables are constructed again completely. Unlike when a snapshot is restored, all tombstones are cleared and data will be placed together as efficiently as possible, resulting in less disk space usage for the same number of rows.
 
 > You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/cassandraclone/).
 

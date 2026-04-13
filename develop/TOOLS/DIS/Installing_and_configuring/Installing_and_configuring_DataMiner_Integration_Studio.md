@@ -10,8 +10,6 @@ To download the **current version** from the Visual Studio Marketplace, go to [D
 
 If you want to use an **older DIS version**, for instance because you are using an older version of Visual Studio, go to [DataMiner Integration Studio – Downloads](https://community.dataminer.services/dataminer-integration-studio-other-downloads/) on DataMiner Dojo. On this page, you will find versions supporting Visual Studio 2019 or older. However, note that we no longer provide support for these older versions, and our documentation focuses on the most recent version of DIS.
 
-To download the **Class Library Packages**, go to [Class Library Packages](https://community.dataminer.services/class-library-packages/) on DataMiner Dojo.
-
 ## Installing the DataMiner Integration Studio extension
 
 To install DataMiner Integration Studio in Visual Studio, go to *Extensions* > *Manage Extensions...* to open the *Manage Extensions* dialog box.

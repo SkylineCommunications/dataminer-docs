@@ -32,8 +32,8 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   - Cookie: The access token (required).
   - Id: The ID of the view (required).
   - Name: The name of the view (required).
-  - Elements: Array of string in the format DMA ID/Element ID (e.g. 515/124).
-  - VisioFile: E.g. Visio.vsdx.
+  - Elements: Array of string in the format DMA ID/Element ID (e.g., 515/124).
+  - VisioFile: For example, Visio.vsdx.
   - ParentViewId.
   - Properties: Array consisting of Name and Value pairs.
 
@@ -52,7 +52,7 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   - ViewName (required)
   - ParentViewId
   - ParentViewName
-  - Elements: Array of string in the format DMA ID/Element ID (e.g. 515/124).
+  - Elements: Array of string in the format DMA ID/Element ID (e.g., 515/124).
   - Properties: Array consisting of Name and Value pairs.
   - VisioFileName
 
@@ -61,15 +61,15 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   Parameters:
 
   - Cookie: The access token (required).
-  - Dmaeid: List of DMA element IDs, e.g. 515/102;505/141 (required).
+  - Dmaeid: List of DMA element IDs, e.g., 515/102;505/141 (required).
 
 - **DeleteView**: Removes the specified views from the DMA.
 
   Parameters:
 
   - Cookie: The access token (required).
-  - ViewIds: The IDs of the views that should be deleted, e.g. 12;23 (required).
-  - ViewNames: The names of the views that should be deleted, e.g. View 1;View 2 (required).
+  - ViewIds: The IDs of the views that should be deleted, e.g., 12;23 (required).
+  - ViewNames: The names of the views that should be deleted, e.g., View 1;View 2 (required).
 
 - **GetElementConfiguration**: Returns the configuration of the element.
 
@@ -84,7 +84,7 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
 
   - Cookie: The access token (required).
   - ProtocolName: The protocol for which element information should be returned.
-  - Dmaeid: List of DMA element IDs, e.g. 515/102;505/141.
+  - Dmaeid: List of DMA element IDs, e.g., 515/102;505/141.
 
 - **GetStructure**: Returns information on the view structure on the DMA.
 
@@ -113,7 +113,7 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   - Password (required)
   - Username (required)
   
-  Returns: AccessToken (i.e. a token to be used for other requests)
+  Returns: AccessToken (i.e., a token to be used for other requests)
 
 - **Pause**: Pauses the solution platform manager element.
 
@@ -135,8 +135,8 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   Parameters:
 
   - Cookie: The access token (required).
-  - ViewIds: The IDs of the views for which the Visio file will be set, e.g. 12;23 (required).
-  - VisioFileName: The complete file name of the Visio file, e.g. Visio.vsdx (required).
+  - ViewIds: The IDs of the views for which the Visio file will be set, e.g., 12;23 (required).
+  - VisioFileName: The complete file name of the Visio file, e.g., Visio.vsdx (required).
 
 - **Start**: Starts the Solution platform manager element.
 
@@ -226,7 +226,7 @@ For the last step, two subscripts are used:
 
 In the IDP Solution setup wizard, you can now select whether you wish to use the Activity Scheduler feature.
 
-If this feature is enabled, the *Admin* tab of the IDP app displays a ![Scheduler icon](~/release-notes/images/IDP_Scheduler.png) icon in the top-right corner, which opens the Scheduler subtab. This tab displays a timeline with all scheduled activities and a *New* button, which allows you to schedule a new discovery activity.
+If this feature is enabled, the *Admin* tab of the IDP app displays a ![Scheduler icon](~/release-notes/images/IDP_Scheduler.png) icon in the upper-right corner, which opens the Scheduler subtab. This tab displays a timeline with all scheduled activities and a *New* button, which allows you to schedule a new discovery activity.
 
 The Activity Scheduler can also be enabled or disabled after the initial setup phase via the *Activity Scheduler* parameter on the *Settings* data display page of the *Skyline Infrastructure Discovery And Provisioning* element.
 

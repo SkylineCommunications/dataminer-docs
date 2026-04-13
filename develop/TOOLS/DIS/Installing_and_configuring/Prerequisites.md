@@ -19,7 +19,7 @@ https://stackpath.bootstrapcdn.com/*
 ```
 
 > [!NOTE]
-> To use NuGet packages, you will need to establish a connection with the required NuGet package sources, e.g. <https://api.nuget.org/v3/index.json>
+> To use NuGet packages, you will need to establish a connection with the required NuGet package sources, e.g., <https://api.nuget.org/v3/index.json>
 
 ## Microsoft Visual Studio
 

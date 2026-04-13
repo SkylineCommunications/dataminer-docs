@@ -80,7 +80,7 @@ In some cases, a runtime error could occur when configuring a *Node edge graph* 
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-When, in edit mode, you removed a bar from a *Colum & bar chart* component, in some cases, the chart and the legend would show different colors.
+When, in edit mode, you removed a bar from a *Column & bar chart* component, in some cases, the chart and the legend would show different colors.
 
 #### Dashboards app & Low-Code Apps - Maps component: Problem when changing a layer setting [ID 39855]
 
@@ -100,7 +100,7 @@ When you updated the name of a dashboard folder while a dashboard was open, in s
 
 In a dashboard, in some cases, components showing the result of a query filtered by feeds would not get updated when the feed values changed.
 
-Also, in some cases, a query could keep on updating when it was linked to a time range feed that exposed a sliding window (e.g. "last 5 minutes").
+Also, in some cases, a query could keep on updating when it was linked to a time range feed that exposed a sliding window (e.g., "last 5 minutes").
 
 #### Dashboards app & Low-Code Apps - Pie & donut chart component: Pie chart would not re-appear after an error message had disappeared [ID 39879]
 

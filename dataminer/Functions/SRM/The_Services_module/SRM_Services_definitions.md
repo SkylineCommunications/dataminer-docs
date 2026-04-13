@@ -16,7 +16,7 @@ The navigation pane consists of two tabs:
 
   At the bottom of this pane, there are also two buttons, which can be used to delete a selected service definition or add a new service definition.
 
-  The icon in the top-right corner of the tab allows you to toggle grouping of template service definitions and regular service definitions. This option is also available via the context menu of the tab.
+  The icon in the upper-right corner of the tab allows you to toggle grouping of template service definitions and regular service definitions. This option is also available via the context menu of the tab.
 
 - The *All* tab allows you to filter the list of service definitions by specifying a time range and a filter. In the filter box, you can enter the following:
 
@@ -57,7 +57,7 @@ On this page, you can configure the different virtual functions in the service t
 
 To do so:
 
-1. From the *Functions* list on the left-hand side of this tab, which lists all virtual function definitions available in the system, drag and drop the necessary virtual function definitions to the diagram pane on the right.
+1. From the *Functions* list on the left side of this tab, which lists all virtual function definitions available in the system, drag and drop the necessary virtual function definitions to the diagram pane on the right.
 
    The virtual function definitions you added will serve as nodes in the diagram, representing the virtual functions in the service.
 
@@ -103,11 +103,11 @@ The second tab of the service definition pane can be used to manage properties o
 
 ## Actions tab
 
-The third tab of the service definition pane allows you to specify automation scripts (i.e. [LSO scripts](xref:srm_scripting#lifecycle-service-orchestration-lso-script)) that should run when the service based on the service definition gets a specific service state:
+The third tab of the service definition pane allows you to specify automation scripts (i.e., [LSO scripts](xref:srm_scripting#lifecycle-service-orchestration-lso-script)) that should run when the service based on the service definition gets a specific service state:
 
 1. Click the *Add* button in the lower-right corner.
 
-1. In the *Name* column, select a service state, e.g. *START*, *STANDBY*, *PAUSE*, *STOP*, or *RETIRE*. The script will run when the service enters that state.
+1. In the *Name* column, select a service state, e.g., *START*, *STANDBY*, *PAUSE*, *STOP*, or *RETIRE*. The script will run when the service enters that state.
 
 1. In the *Script* column, select the LSO script.
 

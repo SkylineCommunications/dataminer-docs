@@ -24,7 +24,7 @@ Specifies the ID(s) of the destination parameter(s).
 (optional): Specifies the ID of the source parameter.
 
 > [!NOTE]
-> When the action is executed via a trigger that triggers on a parameter, the use of the Type@id attribute is not required. In this case, when the Type@id attribute is not present, DataMiner will use the trigger parameter (i.e. the parameter referred to in the On element of the trigger) as the source parameter.
+> When the action is executed via a trigger that triggers on a parameter, the use of the Type@id attribute is not required. In this case, when the Type@id attribute is not present, DataMiner will use the trigger parameter (i.e., the parameter referred to in the On element of the trigger) as the source parameter.
 
 ## Examples
 
@@ -49,7 +49,7 @@ The Value tag of a parameter contains an ASCII value. If you want to copy the va
 </Interprete>
 ```
 
-... then after the copy operation, the other parameter will display “49” (i.e. the ASCII value of 1). In the example above, you would have to specify <Value>0x01</Value> to display 1 or you would have to set RawType to “numeric text”.
+... then after the copy operation, the other parameter will display “49” (i.e., the ASCII value of 1). In the example above, you would have to specify <Value>0x01</Value> to display 1 or you would have to set RawType to “numeric text”.
 
 > [!NOTE]
 > When you copy a parameter that contains “0x00”, the copy operation will stop when it reaches “0x00”. If there are bytes after “0x00”, they will not be copied. If you want them to be copied, then in a QAction execute a “getparameter” followed by a “setparameter”.

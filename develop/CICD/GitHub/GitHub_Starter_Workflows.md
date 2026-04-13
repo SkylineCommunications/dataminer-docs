@@ -59,7 +59,7 @@ This allows your organization to easily adjust or add workflows to meet your spe
 
 ## Setting up organization starter workflows
 
-1. Optionally, start by creating a GitHub user specifically for bot activities, e.g. with the name *CICDOrganization*.
+1. Optionally, start by creating a GitHub user specifically for bot activities, e.g., with the name *CICDOrganization*.
 
    - Use a shared mailbox from your organization if possible. If this is not possible, for example because of 2FA, you can use a personal GitHub account with rights to create repositories.
 

@@ -78,9 +78,9 @@ When starting up, up to now, SLAnalytics would wait up to 400 seconds for a mess
 
 <!-- MR 10.3.0 [CU20]/10.4.0 [CU8] - FR 10.4.11 -->
 
-Up to now, smart-serial connections would support IPv6 loopback addresses only if they were abbreviated (e.g. `::1`).
+Up to now, smart-serial connections would support IPv6 loopback addresses only if they were abbreviated (e.g., `::1`).
 
-From now on, smart-serial connections will also support non-abbreviated IPv6 loopback addresses (e.g. `0:0:0:0:0:0:0:1` or similar).
+From now on, smart-serial connections will also support non-abbreviated IPv6 loopback addresses (e.g., `0:0:0:0:0:0:0:1` or similar).
 
 #### SLLogCollector: Deprecated tool used to archive collected files replaced [ID 40815]
 
@@ -89,7 +89,7 @@ From now on, smart-serial connections will also support non-abbreviated IPv6 loo
 The tool used by SLLogCollector to archive the files it collects is deprecated and has now been replaced.
 
 > [!IMPORTANT]
-> The archives produced by the new tool can no longer be opened by the built-in Windows file archiver. To open these archives, users will now have to use third-party tools like e.g. 7-Zip.
+> The archives produced by the new tool can no longer be opened by the built-in Windows file archiver. To open these archives, users will now have to use third-party tools like e.g., 7-Zip.
 
 #### Element replication: Replicated elements will fall back to their default buffer settings when created with an unlimited buffer [ID 40822]
 

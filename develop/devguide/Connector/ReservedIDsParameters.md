@@ -35,7 +35,7 @@ In general, the range [1, 63 999] can be used in a protocol for parameters. Howe
 
 ## [64 000, 64 299]
 
-Only to be used for communication with DataMiner modules. This range contains parameters that can be implemented in protocols to communicate with DataMiner (e.g. enhanced service protocols, spectrum analyzer protocols, ticketing protocols, etc.). A registry of assigned parameters is maintained. Only these specific parameter IDs can be implemented in the protocol.
+Only to be used for communication with DataMiner modules. This range contains parameters that can be implemented in protocols to communicate with DataMiner (e.g., enhanced service protocols, spectrum analyzer protocols, ticketing protocols, etc.). A registry of assigned parameters is maintained. Only these specific parameter IDs can be implemented in the protocol.
 
 ## [64 300, 69 999]
 
@@ -48,7 +48,7 @@ Only to be used in mediation/base protocols.
 
 ## [80 000, 99 999]
 
-Only to be used for communication with DataMiner modules. This range contains parameters that can be implemented in protocols to communicate with DataMiner (e.g. enhanced service protocols, spectrum analyzer protocols, ticketing protocols, etc.). A registry of assigned parameters is maintained. Only these specific parameter IDs can be implemented in the protocol.<!-- RN 13161 -->
+Only to be used for communication with DataMiner modules. This range contains parameters that can be implemented in protocols to communicate with DataMiner (e.g., enhanced service protocols, spectrum analyzer protocols, ticketing protocols, etc.). A registry of assigned parameters is maintained. Only these specific parameter IDs can be implemented in the protocol.<!-- RN 13161 -->
 
 ## [100 000, 999 999]
 

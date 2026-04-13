@@ -132,7 +132,7 @@ When performing the firewall port test, the [Security Advisory](xref:BPA_Securit
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.8 -->
 
-From now on, the NATS configuration can be reset by calling the following endpoint in e.g. an automation script:
+From now on, the NATS configuration can be reset by calling the following endpoint in e.g., an automation script:
 
 `SLEndpointTool.Config.NATSConfigManager.ResetNATSConfiguration()`
 
@@ -140,7 +140,7 @@ From now on, the NATS configuration can be reset by calling the following endpoi
 
 <!-- MR 10.5.0 - FR 10.4.8 -->
 
-From now on, when using STaaS, it is possible to limit the result set of queries against custom data types (e.g. DOM, SRM, etc.). This will enhance overall performance of this type of queries.
+From now on, when using STaaS, it is possible to limit the result set of queries against custom data types (e.g., DOM, SRM, etc.). This will enhance overall performance of this type of queries.
 
 #### DaaS: BPA tests that cannot be run on a DaaS system will now be flagged as "Not applicable" [ID 39910]
 

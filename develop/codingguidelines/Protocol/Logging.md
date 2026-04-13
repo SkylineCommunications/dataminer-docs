@@ -18,4 +18,4 @@ uid: Logging
 	#endif
 	```
 
-- Only implement logging when required, e.g. logging exceptions.
+- Only implement logging when required, e.g., logging exceptions.

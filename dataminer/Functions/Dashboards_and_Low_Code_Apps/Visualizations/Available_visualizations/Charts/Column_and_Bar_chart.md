@@ -31,7 +31,7 @@ To configure the component:
 
    - *General* \> *Type*: Determines whether the bar chart is based on the number of alarm events or on the duration of alarm states.
 
-   - *General* \> *Select*: Determines whether the top items (i.e. the items that had the most alarms or were in an alarm state for the longest time) or the bottom items (i.e. the items that had the least alarms or were in an alarm state for the shortest time) are displayed.
+   - *General* \> *Select*: Determines whether the top items (i.e., the items that had the most alarms or were in an alarm state for the longest time) or the bottom items (i.e., the items that had the least alarms or were in an alarm state for the shortest time) are displayed.
 
    - *General* \> *Limit*: Determines how many elements or services are included in the chart. From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41777-->, regardless of this setting, only the first 1000 parameters can be rendered in a single chart.
 
@@ -80,7 +80,7 @@ To configure the component:
 
      - *Relative total*: The dimension of each bar is shown as a percentage of the sum of all values. (Available from DataMiner 10.1.0/10.1.2 onwards.)
 
-   - *Advanced \> Chart orientation*: Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top. From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42106-->, *Bottom to top* is the default setting. Prior to this, *Left to right* is the default setting.
+   - *Advanced \> Chart orientation*: Determines how the chart is displayed, i.e., from left to right, from right to left, from top to bottom or from bottom to top. From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42106-->, *Bottom to top* is the default setting. Prior to this, *Left to right* is the default setting.
 
    - *Advanced* \> *Stack bars:* Available from DataMiner 10.1.0/10.1.2 onwards. Stacks the bars on top of each other instead of showing them side by side. This can be especially useful when combined with the *Relative per category* layout.
 

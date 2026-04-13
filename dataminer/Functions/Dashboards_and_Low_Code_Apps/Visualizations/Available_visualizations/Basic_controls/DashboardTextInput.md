@@ -26,9 +26,9 @@ There are two ways to configure this:
 
 1. Add a text input component to your dashboard or app.
 
-1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *Components* > *[Page name]* > *Text input* > *Value* > *Texts* in the *Data* pane.
+1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, navigate to *Components* > *[Page/Panel name]* > *Text input* > *Value* > *Texts* in the *Data* pane.
 
-   Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
+   Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
 1. Drag this data onto a compatible component, such as a table.
 
@@ -49,7 +49,7 @@ There are two ways to configure this:
 
 1. Select the column you want to filter.
 
-1. Choose the filter method, e.g. `contains`.
+1. Choose the filter method, e.g., `contains`.
 
 1. Under *Value*, click the ![Link to](~/dataminer/images/Link_to_Data.png) icon.
 

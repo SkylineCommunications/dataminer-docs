@@ -22,7 +22,7 @@ protocol.NotifyProtocol(474 /*NT_CLEAR_PARAMETER*/, parameterId, null);
 
 ## Return Value
 
-- A string with an error message if *parameterId* was an invalid parameter ID (e.g. a table column, or the parameter does not exist), otherwise null.
+- A string with an error message if *parameterId* was an invalid parameter ID (e.g., a table column, or the parameter does not exist), otherwise null.
 
 ## Remarks
 

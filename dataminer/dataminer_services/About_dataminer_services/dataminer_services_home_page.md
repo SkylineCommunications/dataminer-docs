@@ -39,7 +39,7 @@ At the top of the dataminer.services home page, you will find links to the diffe
 
 ## DataMiner Cube installation button
 
-You can install DataMiner Cube from the dataminer.services home page. To do so, click the *Desktop installation* button in the top-right corner.
+You can install DataMiner Cube from the dataminer.services home page. To do so, click the *Desktop installation* button in the upper-right corner.
 
 > [!TIP]
 > See also: [Installing DataMiner Cube](xref:Installing_the_DataMiner_Cube_desktop_application)

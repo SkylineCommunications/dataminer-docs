@@ -52,7 +52,7 @@ Add the following shape data fields to the shape:
 
 ## Example of a 'drop target' that visualizes the element name
 
-First, we turn a shape into a "drop target" (i.e. a shape onto which we will drop other shapes) by adding to it the following shape data fields:
+First, we turn a shape into a "drop target" (i.e., a shape onto which we will drop other shapes) by adding to it the following shape data fields:
 
 - **DropTarget**: TRUE
 - **Element**: \<empty>
@@ -71,7 +71,7 @@ When we now drop a shape with a valid element ID onto our newly created "drop ta
 
 ## Example of a 'drop target' that executes an automation script
 
-First, we turn a shape into a "drop target" (i.e. a shape onto which we will drop other shapes) by adding the following shape data fields to it:
+First, we turn a shape into a "drop target" (i.e., a shape onto which we will drop other shapes) by adding the following shape data fields to it:
 
 - **DropTarget**: TRUE
 - **Execute**: Script:...
@@ -93,21 +93,21 @@ When we now drop a shape with a valid service ID onto our newly created "drop ta
 
 Create the following four shapes:
 
-- Shape1 (source shape, i.e. shape that will be dropped onto shape3 or shape4)
+- Shape1 (source shape, i.e., shape that will be dropped onto shape3 or shape4)
 
   | Shape data field | Value           |
   | ---------------- | --------------- |
   | Element          | DmaID/ElementID |
   | Parameter        | pidPrimKey:\* 1 |
 
-- Shape2 (source shape, i.e. shape that will be dropped onto shape3 or shape4)
+- Shape2 (source shape, i.e., shape that will be dropped onto shape3 or shape4)
 
   | Shape data field | Value           |
   | ---------------- | --------------- |
   | Element          | DmaID/ElementID |
   | Parameter        | pidPrimKey:\* 2 |
 
-- Shape3 (target shape, i.e. shape onto which shape1 or shape2 will be dropped)
+- Shape3 (target shape, i.e., shape onto which shape1 or shape2 will be dropped)
 
   | Shape data field | Value                         |
   | ---------------- | ----------------------------- |
@@ -115,7 +115,7 @@ Create the following four shapes:
   | Parameter        | ColumnID:\[tableindexFilter\] |
   | DropTarget       | True                          |
 
-- Shape4 (target shape, i.e. shape onto which shape1 or shape2 will be dropped)
+- Shape4 (target shape, i.e., shape onto which shape1 or shape2 will be dropped)
 
   | Shape data field | Value                         |
   | ---------------- | ----------------------------- |

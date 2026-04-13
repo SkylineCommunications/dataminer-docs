@@ -72,7 +72,7 @@ To add a child element:
       > [!NOTE]
       >
       > - Like in a service, inclusion and exclusion can be triggered based on a parameter state, alarm state or element state, or on whether the element is part of the active connectivity chain. However, for the latter, connectivity must be configured on the DMA. See [Conditionally including an element in a service](xref:Conditionally_including_an_element_in_a_service).
-      > - For a matrix parameter, to create a condition where a matrix crosspoint is connected or disconnected, create a trigger on parameter value for the matrix parameter, in the trigger condition use *==* or *\<\>* respectively, and specify the input/output names in the text value, separated by a comma (e.g. "input A, output B").
+      > - For a matrix parameter, to create a condition where a matrix crosspoint is connected or disconnected, create a trigger on parameter value for the matrix parameter, in the trigger condition use *==* or *\<\>* respectively, and specify the input/output names in the text value, separated by a comma (e.g., "input A, output B").
 
    1. In the *Advanced* section, optionally set a maximum severity for elements that are included or not used.
 

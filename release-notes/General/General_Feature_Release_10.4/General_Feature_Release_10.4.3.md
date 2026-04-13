@@ -129,7 +129,7 @@ The `DomInstanceCrudMeta` input object of a DOM CRUD script has a new `GetDiffer
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
-When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
+When calculating alarm likelihood (i.e., focus score), up to now, the alarm focus feature used a combination of element ID, parameter ID and display key (if applicable) to identify previous occurrences of the same alarm. From now on, previous alarm occurrences will be identified using a combination of element ID, parameter ID and primary key.
 
 > [!NOTE]
 > When you upgrade to version 10.4.0/10.4.3, the Cassandra table *analytics_alarmfocus* will automatically be removed.
@@ -201,7 +201,7 @@ On systems with a MySQL database, SLProtocol will continue to fetch element data
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
-When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g. `Duplicate key in table 1000, key = 123`) at the default log levels.
+When SLProtocol identifies duplicate keys, it will no longer flood the error log with messages related to duplicate keys (e.g., `Duplicate key in table 1000, key = 123`) at the default log levels.
 
 From now on, if you want to have log entries related to duplicate keys, increase the error log level to 1.
 
@@ -260,7 +260,7 @@ Because of a number of enhancements with regard to memory usage, overall perform
 
 <!-- MR 10.5.0 - FR 10.4.3 -->
 
-Up to now, when a user-defined API was triggered, log entries like the ones below would only be added to the *SLUserDefinableApiManager.txt* file when the log level was set to 5. From now on, when a user-defined API is triggered, these entries will be added to *SLUserDefinableApiManager.txt* when the log level is set to 0 (i.e. always).
+Up to now, when a user-defined API was triggered, log entries like the ones below would only be added to the *SLUserDefinableApiManager.txt* file when the log level was set to 5. From now on, when a user-defined API is triggered, these entries will be added to *SLUserDefinableApiManager.txt* when the log level is set to 0 (i.e., always).
 
 ```txt
 2024/01/18 10:13:00.740|SLNet.exe|Handle|CRU|0|152|[1f9cd6c045] Started handling API trigger from NATS for route 'dma/id-2'.
@@ -285,7 +285,7 @@ For detailed information about the changes included in those versions, refer to 
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
-The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
+The accuracy of proactive cap detection events (i.e., forecasted alarms) reporting data range violations has been improved.
 
 #### Service & Resource Management: Enhanced performance when adding or updating bookings [ID 38521]
 

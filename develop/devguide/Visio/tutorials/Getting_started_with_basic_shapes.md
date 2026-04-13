@@ -120,7 +120,7 @@ In DataMiner Cube, you should see two colored shapes, one of which displays the 
 
 1. Click the *New* button to add shape data with label `Options` and value `NoAlarmColorFill`.
 
-1. Make sure you have no shapes selected, click the "..." in the top-right corner of the *Advanced Editing* panel and select *Add pretty hover*.
+1. Make sure you have no shapes selected, click the "..." in the upper-right corner of the *Advanced Editing* panel and select *Add pretty hover*.
 
    > [!NOTE]
    > If you followed this tutorial, you should see the *Advanced Editing* in your Microsoft Visio application. The panel is created when you launch Microsoft Visio from DataMiner Cube by either creating a new blank Visio file or editing an existing one.

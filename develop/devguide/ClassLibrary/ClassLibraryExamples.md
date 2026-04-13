@@ -1,5 +1,6 @@
 ---
 uid: ClassLibraryExamples
+keywords: class library
 ---
 
 # Examples
@@ -107,7 +108,7 @@ private static IDmsElement GetElementAfterStartupComplete(SLProtocol protocol, I
 The following example retrieves the value of a standalone parameter of another element.
 
 > [!NOTE]
-> Using this class library, you can retrieve parameter values, tables, etc. from elements. However, it is important to note that this should only be used for obtaining values from other elements. To perform operations on the local element, it is advised to use the [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) API as this is much more efficient (This is because the operation is then performed in the SLProtocol process immediately).
+> Using the DataMinerSystem library, you can retrieve parameter values, tables, etc. from elements. However, it is important to note that this should only be used for obtaining values from other elements. To perform operations on the local element, it is advised to use the [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) API as this is much more efficient (This is because the operation is then performed in the SLProtocol process immediately).
 
 ```csharp
 IDms dms = protocol.GetDms();

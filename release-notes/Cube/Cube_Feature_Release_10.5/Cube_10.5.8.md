@@ -48,7 +48,7 @@ Because of a number of enhancements, overall performance has increased when load
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-When you right-click an element or a service, and select *Properties*, the *General* tab of the *Properties* window will now also display the current host, i.e. the DataMiner Agent that is currently hosting that element or service.
+When you right-click an element or a service, and select *Properties*, the *General* tab of the *Properties* window will now also display the current host, i.e., the DataMiner Agent that is currently hosting that element or service.
 
 #### Scheduler: Support for memory files in scheduler templates [ID 42904]
 
@@ -56,7 +56,7 @@ When you right-click an element or a service, and select *Properties*, the *Gene
 
 When you add an event to the Scheduler timeline, from now on, you will be able to configure memory files.
 
-If a scheduler template includes a preset comment (e.g. `Preset="MyProfile"`) that defines a memory file entry named "Memory1" using the format `Memory1="MemoryFileName"`, from now on, the corresponding memory file name (`MemoryFileName`) will be correctly assigned when the event is created in the Scheduler.
+If a scheduler template includes a preset comment (e.g., `Preset="MyProfile"`) that defines a memory file entry named "Memory1" using the format `Memory1="MemoryFileName"`, from now on, the corresponding memory file name (`MemoryFileName`) will be correctly assigned when the event is created in the Scheduler.
 
 Example:
 
@@ -137,7 +137,7 @@ In trend graphs showing gaps in the trend data, in some rare cases, the data bet
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-In some cases, Cube would incorrectly try to display certain message boxes when running as a service (e.g. within SLHelper).
+In some cases, Cube would incorrectly try to display certain message boxes when running as a service (e.g., within SLHelper).
 
 #### Problem when trying to open a view card in an EPM environment [ID 43049]
 

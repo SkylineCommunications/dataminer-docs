@@ -12,7 +12,7 @@ uid: KI_LDAP_users_unable_to_log_in_after_upgrade
 
 ## Cause
 
-This issue occurs on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configuration,DC=contosa,DC=com` does not have a `nETBIOSName` attribute, e.g. when accessing the GlobalCatalog of a forest.
+This issue occurs on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configuration,DC=contosa,DC=com` does not have a `nETBIOSName` attribute, e.g., when accessing the GlobalCatalog of a forest.
 
 ## Fix
 
@@ -24,7 +24,7 @@ This issue occurs on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configurati
 
    1. Stop all DMAs simultaneously.
 
-   1. Identify users that appear without their domain prefix in the `name` attribute (i.e. `username` instead of `CONTOSA\username`) in the following files:
+   1. Identify users that appear without their domain prefix in the `name` attribute (i.e., `username` instead of `CONTOSA\username`) in the following files:
 
       - `C:\Skyline DataMiner\Security.xml`
 

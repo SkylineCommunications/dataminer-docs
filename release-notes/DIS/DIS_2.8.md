@@ -45,7 +45,7 @@ In a protocol editing window, "jump to linked item" buttons (also known as paper
 The Validator will now issue
 
 - a warning when DefaultValue is defined on a column parameter of type "read", and
-- an error when DefaultValue is defined on a parameter that is not of type "read" (e.g. write, fixed, etc.).
+- an error when DefaultValue is defined on a parameter that is not of type "read" (e.g., write, fixed, etc.).
 
 | Result code | Class       | Description                                                                                   |
 |-------------|-------------|-----------------------------------------------------------------------------------------------|

@@ -14,7 +14,7 @@ To learn how to create a dashboard, you can follow the steps below or watch this
 
 <br>
 
-1. On the home page, in the top-right corner, click the downward arrow next to *Add* and select *Dashboard*. Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44222-->, select *Start with a new blank dashboard*.
+1. On the home page, in the upper-right corner, click the downward arrow next to *Add* and select *Dashboard*. Prior to DataMiner 10.5.0 [CU11]/10.6.2<!--RN 44222-->, select *Start with a new blank dashboard*.
 
    ![Add new dashboard](~/dataminer/images/Add_new_dashboard.png)<br>*Dashboards app in DataMiner 10.6.3*
 
@@ -46,7 +46,7 @@ To learn how to create a dashboard, you can follow the steps below or watch this
 
 1. Configure the necessary components. See [Configuring components](xref:Configuring_components).
 
-1. When the dashboard is ready, in the top-right corner of the screen, click the “x” icon.
+1. When the dashboard is ready, in the upper-right corner of the screen, click the “x” icon.
 
 > [!NOTE]
 > The following characters are not allowed in the name of a dashboard or dashboard folder: / \\ : ; \* ? \< \> \| °

@@ -38,7 +38,7 @@ In each of the examples above, the card will be opened on a particular page:
 - “BelowThisObject:STB” or “bto:STB” will open the CPE card page named “STB”.
 - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
 
-Starting from DataMiner 10.2.6<!-- RN 33295 -->, if the System Name contains colons (e.g. a MAC address), you can replace the default separator (i.e. a colon) by another one (e.g. a pipe character) by placing a `[sep:XY]` prefix in front of the System Name. See the following example:
+Starting from DataMiner 10.2.6<!-- RN 33295 -->, if the System Name contains colons (e.g., a MAC address), you can replace the default separator (i.e., a colon) by another one (e.g., a pipe character) by placing a `[sep:XY]` prefix in front of the System Name. See the following example:
 
 ```xml
 <Value type="open">{EPM=[sep::|]CPE/'00:01:08:01:08:01|DATA|CPE Frequencies}</Value>

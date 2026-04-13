@@ -4,7 +4,7 @@ uid: DataMiner_Cube_sidebar
 
 # DataMiner Cube sidebar
 
-On the left-hand side of the Cube UI, a sidebar is displayed. By default, this sidebar contains the following buttons:
+On the left side of the Cube UI, a sidebar is displayed. By default, this sidebar contains the following buttons:
 
 | Icon | Name | Description |
 |--|--|--|
@@ -24,12 +24,12 @@ You can pin additional buttons to the sidebar using the "..." or "+" button. Thi
 
 To unpin a button again, right-click the button and select *Unpin*. This is not possible for the buttons that are displayed by default.
 
-![Unpin a button](~/dataminer/images/Unpin_Button.png)<br>*DataMiner Cube sidebar in DataMiner 10.4.5*
+![Unpin a button](~/dataminer/images/Unpin_Button.png)<br>*DataMiner Cube sidebar in DataMiner 10.6.4*
 
 > [!NOTE]
 >
-> - At most 4 items can be pinned to the sidebar. If the maximum number of items has been added, the button to pin more items is no longer displayed, until an item is unpinned again.
-> - It is possible to move the position of the sidebar to the right-hand side. To do so, press *Ctrl+Alt+Shift+RightArrow*. To move the pane back to the left-hand side, press *Ctrl+Alt+Shift+LeftArrow*. The sidebar position can also be changed in the Cube settings. See [Cube settings](xref:User_settings#cube-settings).
+> - At most four items can be pinned to the sidebar. If the maximum number of items has been added, the button to pin more items is no longer displayed, until an item is unpinned again.
+> - It is possible to move the position of the sidebar from the left to the right side of the UI. To do so, press *Ctrl+Alt+Shift+RightArrow*. To move the pane back to the left, press *Ctrl+Alt+Shift+LeftArrow*. The sidebar position can also be changed in the Cube settings. See [Cube settings](xref:User_settings#cube-settings).
 > - In an EPM environment, an additional *Topology* button can be available, which allows you to navigate through the EPM topology.<!-- RN 42221 -->
 
 ## Surveyor pane
@@ -166,7 +166,7 @@ The following actions are possible with this list:
 
 - Pin an item so that it is placed in the *Pinned* section at the top of the list: hover over the item with the mouse pointer until a pin icon appears to the right of it, then click the pin icon.
 
-  ![Pin an item](~/dataminer/images/Pin_Item.png)<br>*Activity pane in DataMiner 10.4.5*
+  ![Pin an item](~/dataminer/images/Pin_Item.png)<br>*Activity pane in DataMiner 10.6.4*
 
 > [!NOTE]
 >
@@ -182,7 +182,7 @@ Depending on the configuration and version of your DataMiner System, as well as 
 
 - **Modules**: DataMiner modules such as [Automation](xref:automation), [Documents](xref:About_the_Documents_module), and [Trending](xref:Accessing_trend_information_from_the_Trending_module).
 
-- **Applications**: Plug-in applications, e.g. [IDP](xref:SolIDP), [PTP](xref:SolPTP), etc.
+- **Applications**: Plug-in applications, e.g., [IDP](xref:SolIDP), [PTP](xref:SolPTP), etc.
 
 - **Web Apps**: The [Monitoring app](xref:Working_with_the_Monitoring_app), [Dashboards app](xref:newR_D), and any available [low-code apps](xref:Dashboards_and_Low_Code_Apps).<!-- RN 33944 -->
 

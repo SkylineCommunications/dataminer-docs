@@ -133,7 +133,7 @@ Prior to DataMiner 10.2.0/10.2.2, you can pass data to a dashboard using the fol
 
 ``url?<datatype1>=<datakeys1>&<datatype2>=<datakeys2>&...``
 
-In the syntax above, "datatype" is one of the objects mentioned below (e.g. "elements"), and "datakeys" is its identifier (e.g. the DMA ID and element ID).
+In the syntax above, "datatype" is one of the objects mentioned below (e.g., "elements"), and "datakeys" is its identifier (e.g., the DMA ID and element ID).
 
 Within one object, use a slash ("/") as the separator between its components. If different objects of the same type are specified, use "%1D" as the separator between the objects.
 
@@ -180,7 +180,7 @@ Within the dashboard or app URL, the following data objects can be specified:
 - *timespans*: Requires the start and/or end time stamp. If you leave out the start time stamp, the time span will be interpreted as starting at midnight. If you leave out the end time stamp, the time span will be interpreted as ending at the current time.
 
   > [!NOTE]
-  > From DataMiner 10.2.0/10.1.1 onwards, for a predefined time span in a time range component, the URL can contain the name of that time span (e.g. today, yesterday, etc.) instead of the start time and end time of the time span.
+  > From DataMiner 10.2.0/10.1.1 onwards, for a predefined time span in a time range component, the URL can contain the name of that time span (e.g., today, yesterday, etc.) instead of the start time and end time of the time span.
 
 - *bookings*: Requires the booking ID.
 

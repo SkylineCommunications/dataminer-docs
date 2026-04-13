@@ -29,7 +29,7 @@ Replicates specific parameters from another element.<!-- RN 4711 -->
 
 ## Remarks
 
-- As soon as you configure parameter replication, the polling engine will stop processing groups, i.e. only replication will be performed.
+- As soon as you configure parameter replication, the polling engine will stop processing groups, i.e., only replication will be performed.
 - Parameter replication is currently only supported for standalone parameters.
 - Replicating the same parameter of the same element multiple times into a different local parameter is not supported.
 

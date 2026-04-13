@@ -33,7 +33,7 @@ You can **create virtual functions using DataMiner Integration Studio** (version
 
 1. In the *Edit Function* window:
 
-   - Specify the name of the function (e.g. decoding).
+   - Specify the name of the function (e.g., decoding).
 
    - In the *Profile* box, select the profile definition that should be linked to the function.
 
@@ -56,7 +56,7 @@ You can **create virtual functions using DataMiner Integration Studio** (version
 
    ![New Function option in Function Editor](~/dataminer/images/FunctionEditorParameters.png)
 
-1. To save the virtual function, in the top-right corner, click *Apply Changes*.
+1. To save the virtual function, in the upper-right corner, click *Apply Changes*.
 
 ## Adding virtual functions to a DMS
 

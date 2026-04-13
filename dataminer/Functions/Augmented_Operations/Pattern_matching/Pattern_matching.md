@@ -35,7 +35,7 @@ From DataMiner 10.3.8/10.4.0 onwards, DataMiner Analytics can automatically reco
 
 When you open a trend graph showing trend information for multiple parameters, you have the option to define a *multivariate trend pattern*.
 
-As with single-parameter patterns (i.e. [univariate patterns](#univariate-patterns)), you can [specify a number of options](xref:Managing_pattern_definitions) in the *Pattern Overview* window. <!-- RN 35010 -->
+As with single-parameter patterns (i.e., [univariate patterns](#univariate-patterns)), you can [specify a number of options](xref:Managing_pattern_definitions) in the *Pattern Overview* window. <!-- RN 35010 -->
 
 If you are viewing a trend graph where one or more of the parameters involved in the multivariate pattern are loaded and multivariate patterns have been detected, these patterns will be highlighted in orange when you hover the mouse pointer over the button representing a pattern, or if the option *Expand tags* is selected in the right-click menu.
 

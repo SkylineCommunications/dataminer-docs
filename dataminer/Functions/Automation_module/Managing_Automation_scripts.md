@@ -10,7 +10,7 @@ To manage the automation scripts in a DMS, you need to open the Automation modul
 
 - A pane with script details on the right, where you can [view and edit scripts](xref:Designing_Automation_scripts), [execute scripts](xref:Running_Automation_scripts), <!-- [view logging](xref:Automation_logging) for a script,  -->or [create an API](xref:UD_APIs_Define_New_API) based on a script.
 
-Managing automation scripts, e.g. adding and deleting scripts or organizing them in folders, is done in the pane on the left:
+Managing automation scripts, e.g., adding and deleting scripts or organizing them in folders, is done in the pane on the left:
 
 - [Collapsing and expanding automation script folders](#collapsing-and-expanding-automation-script-folders)
 

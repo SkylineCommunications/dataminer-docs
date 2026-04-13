@@ -68,7 +68,7 @@ However, note that from DataMiner 10.5.4/10.6.0 onwards<!--RN 41757-->, there is
 As soon as you have concluded the investigation for which you needed this setting to be enabled, disable it again. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41757-->, an alarm will be generated when this feature is active to remind you of this.
 
 > [!WARNING]
-> Never use this option in a production environment. This feature is meant for testing/debugging purposes only.
+> This feature is intended for investigation purposes only. If you are not sure whether this option should be activated, please [contact Support](xref:Contacting_tech_support).
 
 To have separate SLProtocol processes created for every protocol being used, do the following.
 
@@ -93,7 +93,7 @@ To have separate SLProtocol processes created for every protocol being used, do 
 If you suspect that a particular protocol is causing a problem in the SLScripting process, then you can have separate SLScripting processes created for every protocol being used. This will then allow you to pinpoint the protocol that is causing the problem.
 
 > [!WARNING]
-> Never use this option in a production environment. This feature is meant for testing/debugging purposes only.
+> This feature is intended for investigation purposes only. If you are not sure whether this option should be activated, please [contact Support](xref:Contacting_tech_support).
 
 To have separate SLScripting processes created for every protocol being used, do the following.
 
@@ -118,9 +118,9 @@ To have separate SLScripting processes created for every protocol being used, do
 
 ## Configuring a separate SLScripting process for each SLProtocol process
 
-From DataMiner 10.6.3/10.7.0<!--RN 44420--> onwards, by default a separate SLScripting process is used for each SLProtocol process. If the *scriptingProcesses* attribute mentioned below is empty, the system will automatically create the same number of SLScripting processes as SLProtocol processes.
+From DataMiner 10.6.0 [CU3]/10.6.3<!--RN 44420--> onwards, by default a separate SLScripting process is used for each SLProtocol process. If the *scriptingProcesses* attribute mentioned below is empty, the system will automatically create the same number of SLScripting processes as SLProtocol processes.
 
-Earlier DataMiner versions by default use only one SLScripting process. In this case, if the load for one particular protocol has to be spread over several processes, because otherwise too much memory would be needed for one process, you can use the procedure below to have a dedicated SLScripting process created for each SLProtocol process.
+Earlier DataMiner versions by default use only one SLScripting process. In this case, if the load for one particular protocol has to be spread over several processes because otherwise too much memory would be needed for one process, you can use the procedure below to have a dedicated SLScripting process created for each SLProtocol process.
 
 > [!IMPORTANT]
 > If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. See [Sharing and persisting data](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
@@ -211,7 +211,7 @@ To do so:
 
 From DataMiner 10.2.7/10.3.0 onwards, the number of simultaneously running SLScripting processes can be set in the *\<ProcessOptions>* tag of the *DataMiner.xml* file.
 
-Note that from DataMiner 10.6.3/10.7.0<!--RN 44420--> onwards, the default behavior is to have as many SLScripting processes as SLProtocol processes. In earlier DataMiner versions, one SLScripting process is used by default.
+Note that from DataMiner 10.6.0 [CU3]/10.6.3<!--RN 44420--> onwards, the default behavior is to have as many SLScripting processes as SLProtocol processes. In earlier DataMiner versions, one SLScripting process is used by default.
 
 > [!IMPORTANT]
 > If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
@@ -233,7 +233,7 @@ Note that from DataMiner 10.6.3/10.7.0<!--RN 44420--> onwards, the default behav
 1. Restart the DataMiner software.
 
 > [!NOTE]
-> The SLProtocol processes will be assigned one of the available SLScripting processes in a round-robin way. For example, if protocolProcesses is set to 5 (i.e. the default value), and scriptingProcesses is set to 3:
+> The SLProtocol processes will be assigned one of the available SLScripting processes in a round-robin way. For example, if protocolProcesses is set to 5 (i.e., the default value), and scriptingProcesses is set to 3:
 >
 > - SLScripting 1 will host SLProtocol #1 and #4
 > - SLScripting 2 will host SLProtocol #2 and #5
@@ -577,11 +577,11 @@ Example:
 
 ### Activating the NonElementProtocol option system-wide
 
-In a Visio drawing, a `NonElementProtocol` option can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *informations.xml*, or *port.xml*. This can enhance the overall performance of the corresponding visual overview.
+In a Visio drawing, a [NonElementProtocol option](xref:Overview_of_page_and_shape_options#nonelementprotocol) can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *informations.xml*, or *port.xml*. This can enhance the overall performance of the corresponding visual overview.
 
 It is also possible to apply this option system-wide, instead of limiting it to one shape or page.
 
-To do so, add a `NonElementProtocol` element in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
+To do so, add a [NonElementProtocol element](xref:MaintenanceSettings.SLNet.NonElementProtocol) in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
 
 Example:
 
@@ -596,9 +596,6 @@ Example:
   ...
 </MaintenanceSettings>
 ```
-
-> [!TIP]
-> See also: [NonElementProtocol](xref:Overview_of_page_and_shape_options)
 
 ### Generating information events when a connection fails to authenticate
 
@@ -623,7 +620,7 @@ Example:
 
 In the `ClusterTransitionStateTimeout` element, you can specify a cluster transition state timeout (in seconds).
 
-DataMiner Agents leaving the DataMiner System (i.e. cluster) will leave the transition state after the specified timeout delay, starting from the last received notification from any of the DataMiner processes.
+DataMiner Agents leaving the DataMiner System (i.e., cluster) will leave the transition state after the specified timeout delay, starting from the last received notification from any of the DataMiner processes.
 
 Example:
 
@@ -675,7 +672,7 @@ Example:
 
 ### Fine-tuning message throttling
 
-From DataMiner 10.2.0/10.1.2 onwards, message throttling is enabled on connections from web applications (e.g. Monitoring app, Dashboards app, Web APIs, etc.) to SLNet. This is a mechanism that avoids an excessive number of parameter update messages being sent at the same time.
+From DataMiner 10.2.0/10.1.2 onwards, message throttling is enabled on connections from web applications (e.g., Monitoring app, Dashboards app, Web APIs, etc.) to SLNet. This is a mechanism that avoids an excessive number of parameter update messages being sent at the same time.
 
 From DataMiner 10.1.3 onwards, the following settings can be fine-tuned for this in *MaintenanceSettings.xml:*
 
@@ -700,7 +697,7 @@ Example:
 
 ### Customizing how long a connection ticket remains valid
 
-When establishing a new connection (e.g. using the DataMiner Web Services), SLNet makes use of a ticket for authentication. The *AuthenticationTicketExpirationTime* setting in *MaintenanceSettings.xml* determines how long this ticket remains valid. If a request for a new connection is made after the specified time has elapsed, the system will consider the request invalid.
+When establishing a new connection (e.g., using the DataMiner Web Services), SLNet makes use of a ticket for authentication. The *AuthenticationTicketExpirationTime* setting in *MaintenanceSettings.xml* determines how long this ticket remains valid. If a request for a new connection is made after the specified time has elapsed, the system will consider the request invalid.
 
 By default, this is set to 30 seconds.
 
@@ -809,7 +806,7 @@ On a DMA, you can specify the port to be used for .NET Remoting.
 
 1. Go to the `C:\Skyline DataMiner\Files` directory of the DMA.
 
-1. In a text editor (e.g. Microsoft Notepad), open *SLNet.exe.config*.
+1. In a text editor (e.g., Microsoft Notepad), open *SLNet.exe.config*.
 
 1. In the Channels section, go to the channel tag named *SLNetRemoting*, and set its "port" attribute to the port number to be used for .NET Remoting. By default, this will be port 8004:
 

@@ -53,7 +53,7 @@ In the [Identity and Access Management (IAM) Service](https://console.aws.amazon
 
    ![SearchUser](~/dataminer/images/Amazon_Keyspaces_SearchUser.png)
 
-1. Verify that this account has full access to Amazon Keyspaces, i.e. the permission *AmazonKeyspacesFullAccess*.
+1. Verify that this account has full access to Amazon Keyspaces, i.e., the permission *AmazonKeyspacesFullAccess*.
 
    ![Permissions](~/dataminer/images/Amazon_Keyspaces_Permissions.png)
 

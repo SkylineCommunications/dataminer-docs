@@ -57,14 +57,14 @@ To add a violation filter, follow the procedure below:
 
 1. Click *Add Entry* at the bottom of the *Violation Settings* table.
 
-1. In the first column, choose the *Violation Filter Type* in the dropdown list and confirm. This is the alarm field on which you wish to filter, e.g. Severity.
+1. In the first column, choose the *Violation Filter Type* in the dropdown list and confirm. This is the alarm field on which you wish to filter, e.g., Severity.
 
    > [!NOTE]
    > The violation filter types *Key point*, and *Component info* refer to parameter data that can be set in the protocol information template. For more information, see [Creating an information template](xref:Creating_an_information_template).
 
 1. Enter a *Violation Filter Property Name* in the next column, if the filter type is a custom property.
 
-1. Enter the *Violation Filter Value* in the next column, e.g. if the violation filter type is “Severity”, this could be “Minor”. It is possible to use an asterisk or question mark as wildcards here.
+1. Enter the *Violation Filter Value* in the next column, e.g., if the violation filter type is “Severity”, this could be “Minor”. It is possible to use an asterisk or question mark as wildcards here.
 
 1. Enter the impact you want the violation to have as a percentage under *Violation Filter Impact*.
 

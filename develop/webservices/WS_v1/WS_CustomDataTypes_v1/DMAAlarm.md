@@ -9,7 +9,7 @@ uid: DMAAlarm
 | DataMinerID      | Integer         | The ID of the DataMiner Agent where the element was created. |
 | HostingAgentID   | Integer         | The ID of the DataMiner Agent that is currently hosting the element. |
 | ID               | Integer         | The ID of the alarm. |
-| RootAlarmID      | Integer         | The ID of the root alarm (i.e. the first alarm in the alarm tree). |
+| RootAlarmID      | Integer         | The ID of the root alarm (i.e., the first alarm in the alarm tree). |
 | ElementID        | Integer         | The ID of the element. |
 | ElementName      | String          | The name of the element. |
 | IsElementMasked  | Boolean         | Whether or not the element is masked. |
@@ -18,7 +18,7 @@ uid: DMAAlarm
 | TableIndex       | String          | The table index (in case the parameter is a table parameter). |
 | DisplayValue     | String          | The display value (in case the parameter is a table parameter). |
 | AlarmState       | String          | The current state of the alarm. |
-| Type             | String          | The type of alarm (e.g. "New Alarm", "Escalated From Warning", "Dropped From Major", etc.). |
+| Type             | String          | The type of alarm (e.g., "New Alarm", "Escalated From Warning", "Dropped From Major", etc.). |
 | IsAggregation    | Boolean         | Whether the alarm originates from an aggregation element. |
 | IsMasked         | Boolean         | Whether or not the alarm is masked. |
 | Services         | Array of string | The names of the services affected by the alarm. |

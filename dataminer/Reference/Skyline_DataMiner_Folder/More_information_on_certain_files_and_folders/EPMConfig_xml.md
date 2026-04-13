@@ -8,7 +8,7 @@ From DataMiner 10.2.0/10.1.7 onwards, it is possible to override the names of EP
 
 To create system-wide overrides, in the folder `C:\Skyline DataMiner`, create an *EPMConfig.xml* file that contains a *\<Topologies>* and/or *\<Chains>* configuration identical to the one in the protocol, and specify the necessary aliases in override attributes.
 
-From DataMiner 10.2.2/10.3.0 onwards, you can also add *EPMConfig.xml* files on element level to apply overrides to specific elements only, overriding the system-level *EPMConfig.xml* file if there is any. To add such an element-level *EPMConfig.xml* file, place it in the folder of the relevant element (e.g. `C:\Skyline DataMiner\Elements\<ElementName>\`).
+From DataMiner 10.2.2/10.3.0 onwards, you can also add *EPMConfig.xml* files on element level to apply overrides to specific elements only, overriding the system-level *EPMConfig.xml* file if there is any. To add such an element-level *EPMConfig.xml* file, place it in the folder of the relevant element (e.g., `C:\Skyline DataMiner\Elements\<ElementName>\`).
 
 This is an example of the *EPMConfig.xml* configuration:
 

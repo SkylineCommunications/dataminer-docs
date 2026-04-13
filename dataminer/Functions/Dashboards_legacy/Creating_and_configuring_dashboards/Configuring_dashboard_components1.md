@@ -13,7 +13,7 @@ To configure the components of a dashboard, you must first access the dashboard 
 
 - Simply click an existing dashboard in the *Dashboards* app.
 
-In the dashboard editor, click *Actions* in the top-right corner to access the various configuration options:
+In the dashboard editor, click *Actions* in the upper-right corner to access the various configuration options:
 
 - Add/Remove Components, see [Add/Remove Components](#addremove-components).
 
@@ -80,7 +80,7 @@ In the dashboard editor, click *Actions* in the top-right corner to access the v
 
     - *Text color*: click the *...* button to determine the text color of the component.
 
-    - Under *Extra CSS*, more advanced customizations can be applied. E.g.: *border:1px solid red;*
+    - Under *Extra CSS*, more advanced customizations can be applied, for example, `border:1px solid red;`.
 
 1. Click *Apply* to save your changes.
 
@@ -133,4 +133,4 @@ You can configure several options here:
 
 - Click the *...* button under *Text color* to determine the text color of the dashboard.
 
-- Under *Extra CSS*, more advanced customizations can be applied. E.g.: border:1px solid red;
+- Under *Extra CSS*, more advanced customizations can be applied, for example, `border:1px solid red;`.

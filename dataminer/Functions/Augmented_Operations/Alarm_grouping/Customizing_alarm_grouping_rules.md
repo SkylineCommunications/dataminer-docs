@@ -79,7 +79,7 @@ To enable or disable service-based alarm grouping:
 
 1. Save the file.
 
-1. Restart the *SLAnalytics.exe* process on the leader Agent (e.g. using Windows Task Manager).
+1. Restart the *SLAnalytics.exe* process on the leader Agent (e.g., using Windows Task Manager).
 
 ## Fine-tuning alarm grouping based on parameter and alarm relations
 
@@ -110,7 +110,7 @@ You can enable or disable this type of alarm grouping, or adjust this threshold:
 
 1. Save the file.
 
-1. Restart the *SLAnalytics.exe* process on the leader Agent (e.g. using Windows Task Manager).
+1. Restart the *SLAnalytics.exe* process on the leader Agent (e.g., using Windows Task Manager).
 
 ## Fine-tuning location-based alarm grouping
 
@@ -142,7 +142,7 @@ You can enable or disable this type of alarm grouping, or adjust the threshold:
 
 1. Save the file.
 
-1. Restart the *SLAnalytics.exe* process on the leader Agent (e.g. using Windows Task Manager).
+1. Restart the *SLAnalytics.exe* process on the leader Agent (e.g., using Windows Task Manager).
 
 ## Defining custom properties for grouping
 

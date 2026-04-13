@@ -34,7 +34,7 @@ Keep the following restrictions in mind for the backup path:
 
 - If a login is required to use the specified network path, you must make sure the SYSTEM user has access to the network path.
 
-  1. Open a command window and execute the following command (replacing \[NameOfTask\] with the name of the Windows scheduled task that will be run to provide access to the backup location (e.g. *MountElasticBackupPath*), \[UNC Path\] with the specified path, and \[User\] and \[Password\] with the necessary credentials):
+  1. Open a command window and execute the following command (replacing \[NameOfTask\] with the name of the Windows scheduled task that will be run to provide access to the backup location (e.g., *MountElasticBackupPath*), \[UNC Path\] with the specified path, and \[User\] and \[Password\] with the necessary credentials):
 
      ```txt
      schtasks /create /tn "[NameOfTask]" /tr "net use [UNC Path] /user:[User] [Password] /persistent:yes" /sc onstart /RU SYSTEM

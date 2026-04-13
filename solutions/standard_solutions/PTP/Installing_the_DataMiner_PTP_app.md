@@ -39,9 +39,9 @@ To set up and configure the DataMiner PTP app:
 
    Either select *Create a new view* or select *Use existing view* and select the view in the dropdown list, and click *Confirm*.
 
-1. On the following page, which informs you that the wizard will now create the DataMiner PTP app, click *Confirm*. If necessary, you can also abort the wizard by clicking *Abort* in the bottom-right corner.
+1. On the following page, which informs you that the wizard will now create the DataMiner PTP app, click *Confirm*. If necessary, you can also abort the wizard by clicking *Abort* in the lower-right corner.
 
-1. On the following page, which informs you that the wizard will now configure the DataMiner PTP app, click *Confirm*. If necessary, you can also abort the wizard by clicking *Abort* in the bottom-right corner.
+1. On the following page, which informs you that the wizard will now configure the DataMiner PTP app, click *Confirm*. If necessary, you can also abort the wizard by clicking *Abort* in the lower-right corner.
 
 1. On the following page, select the pages that the PTP app should display, and click *Next*.
 
@@ -51,7 +51,7 @@ To set up and configure the DataMiner PTP app:
 
    - The list on the left shows the elements that have not (yet) been included.
 
-     If necessary, this list can be filtered to show only the supported devices. If you add an unsupported device to the PTP topology, it will not be mediated. Manual configuration of that element (i.e. indicating which parameters are PTP-related) will then be required.
+     If necessary, this list can be filtered to show only the supported devices. If you add an unsupported device to the PTP topology, it will not be mediated. Manual configuration of that element (i.e., indicating which parameters are PTP-related) will then be required.
 
    - The list of the right shows the elements that have been included.
 

@@ -28,9 +28,9 @@ When you click in the selection box in the *Condition* column, the following act
 
      1. Select the parameter you want to filter on.
 
-     1. Select the filter type. The default type is *Value*. Clicking *Value* allows you to select an alternative type, i.e. *Severity* or *Service impact*.
+     1. Select the filter type. The default type is *Value*. Clicking *Value* allows you to select an alternative type, i.e., *Severity* or *Service impact*.
 
-     1. Select the operator. The default operator is *Equal to*. Clicking *Equal to* allows you to select an alternative operator, i.e. *Not Equal to*, *Greater than*, or *Less than*.
+     1. Select the operator. The default operator is *Equal to*. Clicking *Equal to* allows you to select an alternative operator, i.e., *Not Equal to*, *Greater than*, or *Less than*.
 
      1. Specify the value, service impact or severity to filter on.
 
@@ -42,7 +42,7 @@ When you click in the selection box in the *Condition* column, the following act
   >
   > - You can configure a condition on a column parameter based on the value of a cell in the same table or a different table. However, note that this is not supported for view table columns. Note also that if the monitored table and the table used in the condition are the same or are not related, the condition will be applied to all cells in the monitored column, but only when the cell specified in the condition changes. If the two tables are related, the condition will apply to all cells in the monitored column that are linked to the row containing the cell specified in the condition.
   > - If you configure a condition based on the value of a string parameter, you can use the wildcards "\*" and "?".
-  > - Conditions are supported that check whether a parameter value is equal or not equal to "Not Initialized", i.e. the value of a parameter that has not yet been set. To configure such a condition, click the *Value* field in the second part of the condition and select *Not initialized*.
+  > - Conditions are supported that check whether a parameter value is equal or not equal to "Not Initialized", i.e., the value of a parameter that has not yet been set. To configure such a condition, click the *Value* field in the second part of the condition and select *Not initialized*.
 
 - Select an existing condition, if any are available. If necessary, click the pencil icon next to the selected condition to modify it.
 

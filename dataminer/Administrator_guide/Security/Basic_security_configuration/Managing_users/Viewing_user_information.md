@@ -5,7 +5,7 @@ keywords: user card
 
 # Viewing user information
 
-In DataMiner Cube, you can view various detailed information about users, provided that you have the necessary user permissions to do so (i.e. [Administrator](xref:DataMiner_user_permissions#modules--system-configuration--security--administrator) or [Limited administrator](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator), with or without [View users from other groups](xref:DataMiner_user_permissions#modules--system-configuration--security--view-users-from-other-groups), depending on whether access to user information from other groups should be available).
+In DataMiner Cube, you can view various detailed information about users, provided that you have the necessary user permissions to do so (i.e., [Administrator](xref:DataMiner_user_permissions#modules--system-configuration--security--administrator) or [Limited administrator](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator), with or without [View users from other groups](xref:DataMiner_user_permissions#modules--system-configuration--security--view-users-from-other-groups), depending on whether access to user information from other groups should be available).
 
 There are two ways you can view this information:
 
@@ -28,5 +28,5 @@ The information is shown on different tabs:
 > Please note the following regarding **user cards**:
 >
 > - You can also **edit** security settings for a user on a user card. To do so, click the *Edit* button in the lower-right corner first.
-> - To open your own user card, you can click the user icon in the top-right corner and select *Account details*.
+> - To open your own user card, you can click the user icon in the upper-right corner and select *Account details*.
 > - Next to the username at the top of a user card, you can also see whether the user is currently online or offline.

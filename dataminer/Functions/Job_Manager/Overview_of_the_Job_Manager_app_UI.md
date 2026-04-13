@@ -17,7 +17,7 @@ The main page of the app consists of a header bar, a side panel and an overview 
 
   - The search box: Enter text in this box to search for matching jobs.
 
-  - User icon: Click this icon in the top-right corner to open a menu with the following options:
+  - User icon: Click this icon in the upper-right corner to open a menu with the following options:
 
     - *Configuration*: Select this option to access the configuration of the job fields. See [Configuring jobs in the Jobs app](xref:Configuring_job_domains).
 

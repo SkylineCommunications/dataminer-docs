@@ -11,7 +11,7 @@ Different technology stacks, such as [Azure](xref:CICD_Azure_DevOps_Examples), [
 
 You can also run our tooling through [command line](xref:CICD_Command_Line_Examples) on both Windows and Ubuntu.
 
-For the development of items other than connectors (e.g. automation scripts, user-defined APIs, ad hoc data sources, etc.) we also provide a powerful [Skyline DataMiner Software Development Kit](xref:skyline_dataminer_sdk), which automatically runs our tooling for you in the background, directly within the standard .NET compilation and publishing.
+For the development of items other than connectors (e.g., automation scripts, user-defined APIs, ad hoc data sources, etc.) we also provide a powerful [Skyline DataMiner Software Development Kit](xref:skyline_dataminer_sdk), which automatically runs our tooling for you in the background, directly within the standard .NET compilation and publishing.
 
 ## For non-connector items
 

@@ -11,7 +11,7 @@ A change event is initiated when:
 - the value of a parameter changes.
 - a value is set to a parameter of type "write", even if the value is the same as the previous value.
 - an action of type "run actions" is performed on a parameter.
-- a parameter is set from a QAction using an instance of the SLProtocol(Ext) class, e.g. SetParameter.
+- a parameter is set from a QAction using an instance of the SLProtocol(Ext) class, e.g., SetParameter.
 
    > [!NOTE]
    > This will also trigger the QAction even if the set value is the same as the current value.

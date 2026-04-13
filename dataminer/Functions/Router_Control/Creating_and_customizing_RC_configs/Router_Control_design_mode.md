@@ -4,7 +4,7 @@ uid: Router_Control_design_mode
 
 # Router Control design mode
 
-To enter or to exit the design mode of the Router Control module, click the large cogwheel icon in the top-right corner.
+To enter or to exit the design mode of the Router Control module, click the large cogwheel icon in the upper-right corner.
 
 In design mode, there are three panes:
 
@@ -20,7 +20,7 @@ In design mode, there are three panes:
 
 ## Buttons
 
-In the top-right corner of the card, you can find the following buttons:
+In the upper-right corner of the card, you can find the following buttons:
 
 | Icon | Name | Description |
 |--|--|--|

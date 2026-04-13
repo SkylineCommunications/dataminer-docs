@@ -6,7 +6,7 @@ uid: Connecting_to_a_DMA_with_Cube
 
 ## From the Cube start window
 
-Open the DataMiner Cube desktop app via the shortcut on your desktop or in the start menu.
+Open DataMiner Cube via the shortcut on your desktop or in the start menu.
 
 The DataMiner [Cube start window](xref:Cube_start_window) is then displayed with tiles representing the different DataMiner Systems you can connect to.
 

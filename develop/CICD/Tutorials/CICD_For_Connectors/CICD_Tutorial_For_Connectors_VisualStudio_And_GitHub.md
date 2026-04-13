@@ -61,7 +61,7 @@ Follow the instructions specified in the [SonarCloud documentation](https://docs
 
 ### Step 3: Set up starter workflows for your organization
 
-1. Optionally, create a GitHub user specifically for bot activities, e.g. *CICDOrganization*.
+1. Optionally, create a GitHub user specifically for bot activities, e.g., *CICDOrganization*.
 
    - Use a shared mailbox from your organization if possible. If this is not possible, for example because of 2FA, you can use a personal GitHub account with rights to create repositories.
 
@@ -206,7 +206,7 @@ You should now see your CI jobs complete successfully, ensuring that quality sta
 
 1. Click *Choose a tag* and enter the version, for example `1.0.0.1-beta1`.
 
-   You can use any version you want. For a pre-release, usually a suffix is added, which can contain any text, e.g. "-beta1" in the example above.
+   You can use any version you want. For a pre-release, usually a suffix is added, which can contain any text, e.g., "-beta1" in the example above.
 
 1. Enter a description of your release.
 
@@ -218,7 +218,7 @@ You should now see your CI jobs complete successfully, ensuring that quality sta
 
    You should now see your new workflow running in this tab. Your CI and CD jobs should complete successfully, ensuring quality standards are met and uploading the item to the Catalog UI as a private item.
 
-1. Go to <https://catalog.dataminer.services/>, make sure your organization is selected in the top-right corner, and look up your artifact.
+1. Go to <https://catalog.dataminer.services/>, make sure your organization is selected in the upper-right corner, and look up your artifact.
 
 > [!NOTE]
 > If you see the following errors: **Push .githubtocatalog/auto-generated-catalog Process completed with exit code 128.** or **remote: Permission to MyOrg/MyRepo.git denied to github-actionsbot**, you will need to either [set write permissions for the GITHUB_TOKEN in your specific repository](https://docs.github.com/en/actions/security-for-github-actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token), or, if you are an organization admin, you can enable this for the organization by [setting the workflow permissions](https://docs.github.com/en/organizations/managing-organization-settings/disabling-or-limiting-github-actions-for-your-organization#setting-the-permissions-of-the-github_token-for-your-organization) to *Read and write permissions*.

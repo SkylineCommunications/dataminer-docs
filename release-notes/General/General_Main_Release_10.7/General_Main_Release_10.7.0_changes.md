@@ -11,32 +11,21 @@ uid: General_Main_Release_10.7.0_changes
 
 ### Breaking changes
 
-#### Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]
-
-<!-- MR 10.7.0 - FR 10.6.3 -->
-
-Up to now, one SLScripting process was used by default. From now on, by default, there will be as many SLScripting processes as SLProtocol processes.
-
-Note that is possible to configure the number of simultaneously running SLScripting processes. See [Setting the number of simultaneously running SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes).
-
-> [!IMPORTANT]
-> If you are using multiple SLScripting processes, it is important that elements running the same protocol are not sharing/exchanging data with each other through static fields. More information can be found in the [QAction documentation](xref:LogicQActionsMemberFields#sharing-and-persisting-data).
-
 #### SNMP trap binding values will now only display plain ASCII characters [ID 44527]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
 
-When the system receives a trap binding value of type OctetString, that value will either be automatically converted into characters (e.g. 0x41 will become "A") or remain in a hexadecimal string format (e.g. when the value contains a byte that is not printable like 0x02, which is an STX control character).
+When the system receives a trap binding value of type OctetString, that value will either be automatically converted into characters (e.g., 0x41 will become "A") or remain in a hexadecimal string format (e.g., when the value contains a byte that is not printable like 0x02, which is an STX control character).
 
-Up to now, hexadecimal values above the ASCII range (i.e. values >= 0x7F) were considered printable characters, and were not converted into a hexadecimal string. This would cause issues with, for example, the Unicode control character 0x8C, which would be displayed as a question mark. In such cases, complex QAction code would then be required to have it converted back into a hexadecimal value.
+Up to now, hexadecimal values above the ASCII range (i.e., values >= 0x7F) were considered printable characters, and were not converted into a hexadecimal string. This would cause issues with, for example, the Unicode control character 0x8C, which would be displayed as a question mark. In such cases, complex QAction code would then be required to have it converted back into a hexadecimal value.
 
-Also, DataMiner is not aware of whether a binding value actually contains text (e.g. a MAC address consisting of octets) or, if the value contains text, how that text was encoded (e.g. Windows code page 1252, UTF-8, UTF-16, etc.).
+Also, DataMiner is not aware of whether a binding value actually contains text (e.g., a MAC address consisting of octets) or, if the value contains text, how that text was encoded (e.g., Windows code page 1252, UTF-8, UTF-16, etc.).
 
 From now on, hexadecimal values outside of the ASCII range will be considered non-printable characters, and will remain in hexadecimal string format.
 
 This is a breaking change.
 
-Up to now, text containing characters that were encoded in extended ASCII (i.e. Windows code page 1252) were converted from raw octets into string text. For example, the French word "hélicoptère" would be received correctly. From now on, that same word will be received as hexadecimal string "68e96c69636f7074e87265", and a QAction will need to convert it back into a string using the correct encoding.
+Up to now, text containing characters that were encoded in extended ASCII (i.e., Windows code page 1252) were converted from raw octets into string text. For example, the French word "hélicoptère" would be received correctly. From now on, that same word will be received as hexadecimal string "68e96c69636f7074e87265", and a QAction will need to convert it back into a string using the correct encoding.
 
 ### Enhancements
 
@@ -45,28 +34,6 @@ Up to now, text containing characters that were encoded in extended ASCII (i.e. 
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 Because of a number of enhancements made in SLNet, trend graphs in DataMiner Cube will now also correctly display behavioral change points for table column parameters without advanced naming.
-
-#### Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]
-
-<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.7.0 - FR 10.6.3 together with 44420 -->
-
-Up to now, when an SLScripting process disappeared, elements relying on that process could become unstable, requiring manual intervention to restore functionality.
-
-From now on, when an SLScripting process disappears, a new process instance will be started automatically, and any elements that depended on the process that disappeared will be restarted to maintain consistency across SLProtocol, SLScripting, and other related components. This will ensure that lost SLScripting data is properly reinitialized and remains in sync with other processes.
-
-When an SLScripting process disappears, the following notice alarm will be generated:
-
-`Process disappearance of SLScripting.exe with PID <processId>; <x> elements affected by the disappearance have been restarted.`
-
-Also, the *SLElementsInProtocol.txt* log file has been updated to track restart reasons more accurately.
-
-- The restart reason column will now indicate either "SLScriptingCrashRestart" or "SLProtocolCrashRestart" (if everything is OK, *NormalStart* will be shown instead).
-- A new counter will now indicate the number of times the element was started due to a SLScripting process disappearance.
-
-If SLProtocol requests an SLScripting process that is no longer valid, the system will now detect this, and trigger the same element restart flow.
-
-> [!NOTE]
-> There will be a one-minute delay between the disappearance of an SLScripting process and the creation of a new SLScripting process and the subsequent element restarts. However, when one of the elements that was hosted in the SLScripting process that disappeared tries to trigger a QAction within that one-minute delay, the new SLScripting process will be created when that QAction is triggered.
 
 #### Automation: Engine class now has an OnDestroy handler that will allow resources to be cleaned up when a script ends [ID 43919]
 
@@ -80,7 +47,7 @@ Multiple handlers can be added. They will run synchronously, and if one handler 
 
 <!-- MR 10.7.0 - FR 10.6.3 -->
 
-Two new parameter caches are now available for client apps (e.g. DataMiner Cube):
+Two new parameter caches are now available for client apps (e.g., DataMiner Cube):
 
 - ProtocolParameters (linked to GetProtocolParameter on the client connection)
 - ElementProtocolParameters (linked to GetElementProtocolParameter on the client connection)
@@ -148,7 +115,7 @@ Visibility on SLNet connection issues has been enhanced:
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
 
-When, in DataMiner client applications (e.g. DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
+When, in DataMiner client applications (e.g., DataMiner Cube), you are configuring the Augmented Operations alarm settings for a particular parameter in an alarm template, from now on, it will be possible to choose between the following flatline detection modes:
 
 | Mode | Description |
 |------|-------------|
@@ -172,9 +139,15 @@ This means, that any DataMiner Agent on which you want to perform a web-only upg
 From now on, when you try to add a DataMiner Agent to a DataMiner System, the operation will fail in the following cases:
 
 - The DataMiner Agent is cloud-connected, but the DataMiner System is not.
-- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e. they are not part of the same cloud-connected system.
+- The DataMiner Agent and the DataMiner System are cloud-connected, but they do not have the same identity, i.e., they are not part of the same cloud-connected system.
 
 If the DataMiner System is a STaaS system, adding a DataMiner Agent will also fail if the DataMiner Agent is not cloud-connected.
+
+#### SLWatchdog will now report SLNet/SLDataGateway TPL ThreadPool and 'time dilation' issues as run-time errors [ID 44186]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+From now on, whenever the TPL ThreadPool of SLNet or SLDataGateway would get stuck or a "time dilation" would occur on your system (for example, when a freeze of a virtual machine would cause sleep actions to take longer than anticipated), SLWatchDog will report these issues as a run-time error.
 
 #### Scheduler will now be able to start more than 10 synchronously running automation scripts [ID 44200]
 
@@ -236,6 +209,23 @@ From now on, the Scheduler configuration found in `C:\Skyline Dataminer\Schedule
 
 If you create a custom backup, the Scheduler configuration will be included only if you selected the *DataMiner settings* option.
 
+#### DataMiner Objects Models: Selected subset of fields from DomInstance objects will now be read from the repository API [ID 44600]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Since DataMiner 10.6.0/10.6.1, it is possible to read only a selected subset of fields from `DomInstance` objects. In order to further enhance performance, from now on, those subsets will be read from the repository API.
+
+Currently, the repository API will still request the full objects from the database and extract the required values.
+
+> [!NOTE]
+> When a field value is requested, the type defined in the field descriptor will be used. In order to determine that type, field descriptor IDs should be unique across section definitions in a DOM module.
+
+#### NotifyMail.html has been updated in order to better support both classic Microsoft Outlook and new Microsoft Outlook [ID 44617]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+The `C:\Skyline DataMiner\NotifyMail.html` file, i.e., the email report template, has been updated to better support both classic Microsoft Outlook and new Microsoft Outlook.
+
 #### SLDataGateway: Job queue updates will now be logged in SLJobQueues.txt [ID 44661]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->
@@ -256,6 +246,107 @@ Up to now, all SLLogCollector logging of all SLLogCollector instances would end 
 From now on, each SLLogCollector instance will have its own dedicated log file named `log-[creation timestamp].txt`, stored in the `C:\ProgramData\Skyline Communications\SLLogCollector` folder.
 
 Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
+
+#### Connector synchronization enhancements [ID 44715]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+A number of enhancements have been made with regard to the synchronization of connectors within a DataMiner System:
+
+- The first time you upload a version of a new connector, it will automatically be set as production version. Up to now, when a connector version was automatically set as production version, this would trigger a synchronization of that production version. From now on, the new connector will be synchronized within the cluster, and when a DataMiner Agent detects that it is the first version, it will set it as the production version.
+
+- Up to now, when a parent connector exported child connectors (as is the case with DVE connectors), these exported child connectors would be synchronized within the cluster when the parent connector was added or modified. From now on, only the parent connector will be synchronized, and each DataMiner Agent will then generate the child connectors.
+
+- From now on, a protocol.xml file that is generated based on the active function.xml file will no longer be synchronized when the function is activated.
+
+> [!NOTE]
+> The midnight sync has not been altered.
+
+#### Security enhancements [ID 44804]
+
+<!-- 44804: MR 10.7.0 - FR 10.6.5 -->
+
+A number of security enhancements have been made.
+
+#### Enhanced SSH logging [ID 44975]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+A number of enhancements have been made to the SSH logging:
+
+- From now on, when an SSH connection times out for one of the following reasons, an entry will be added to the element log:
+
+  - Host name could not be resolved.
+  - User authentication failed.
+
+- In the SSH logging, it will now clearly be indicated which operations have been performed. For example, during authentication, the logging will now clearly state which authentication methods have been used and what the results were.
+
+- In the SSH logging, most entries will now mention the session ID associated with the entry. As this same session ID is also mentioned in element log entries, users will find it much easier to find out which log entries are related.
+
+Also, an issue has been fixed. When a host name could not be resolved to an IP address, up to now, the SSH connection would incorrectly try to connect to localhost. From now on, when the host name could not be resolved, the connection will fail.
+
+#### Protocols: Indicating that smart-serial elements in server mode are allowed to be swarmed [ID 45173]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+By default, elements with a smart-serial connection in server mode are not allowed to be swarmed. However, it is possible that, at startup, an element can send a message to the data source in order to indicate where data should be sent to. In that case, the fact that the smart-serial connection is in server mode will not be considered a valid reason to prevent the element from swarming.
+
+As DataMiner is not able to automatically detect such exceptional cases, you can now indicate in the *protocol.xml* file of the element that it is allowed to be swarmed. See the following example:
+
+```xml
+<Swarming>
+    <BypassChecks>
+        <Check>smartSerialAsServer</Check>
+    </BypassChecks>
+</Swarming>
+```
+
+#### DataMiner upgrade: .NET Framework 4.8 will no longer be installed [ID 45196]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+From now on, during a DataMiner upgrade, Microsoft .NET Framework 4.8 will no longer be installed.
+
+On most machines running DataMiner, this will already be installed. If, for any reason, you need to install this package, it can be downloaded from [the official download page](https://dotnet.microsoft.com/en-us/download/dotnet-framework).
+
+### DataMiner upgrade: A number of default Visio stencils will no longer be included [ID 45202]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+From now on, a DataMiner upgrade package will no longer contain the following Visio stencil files:
+
+- AppearTV DC1000.vss
+- AppearTV DC1100.vss
+- AppearTV MC3000.vss
+- AppearTV MC3100.vss
+- AppearTV SC2000.vss
+- AppearTV SC2100.vss
+- BridgeTech.vss
+- Nimbra300.vss
+- Nimbra600.vss
+- NimbraNodes.vss
+- United States Maps (US units).vss
+- World Maps (Metric).vss
+- World Maps (US units).vss
+
+Note that the following stencil files will still be deployed:
+
+- Buttons.vssm
+- Icons.vssx
+- KPI.vssm
+- SkylineNewDrawing.vsdx
+
+> [!NOTE]
+> The above-mentioned stencil files that are no longer included in DataMiner upgrade packages will not automatically be removed from existing systems.
+
+#### SLLogCollector: Only BPA tests deployed by default will be rerun each time a log package is created [ID 45228]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+Up to now, each time SLLogCollector created a log package, it would rerun all BPA tests deployed on the system. From now on, it will only rerun the BPA tests deployed by default.
+
+> [!NOTE]
+> Each time a log package is created, all BPA test results available on the system will still be included in that package. This means, that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
 
 ### Fixes
 
@@ -278,3 +369,36 @@ From now on, when a capability is booked, it will no longer be possible to set i
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
+
+#### History set trending would show gaps where no gaps were expected [ID 44705]
+
+<!-- MR 10.7.0 - FR 10.6.4 -->
+
+Up to now, history set trending would show gaps where no gaps were expected.
+
+From now on, trend records with the following *iStatus* values will no longer cause gaps in trend graphs:
+
+| Value | Description |
+|-------|-------------|
+| -1  | Element is starting up. |
+| -2  | Element is being paused. |
+| -3  | Element is being activated. |
+| -4  | Element is going into a timeout state. |
+| -5  | Element is coming out of a timeout state. |
+| -6  | Element is being stopped. |
+| -9  | Trending was started for the specified parameter. |
+| -10 | Trending was stopped for the specified parameter. |
+
+#### SLAnalytics: Flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours [ID 45033]
+
+<!-- MR 10.7.0 - FR 10.6.5 -->
+
+Up to now, flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours.
+
+#### SLLogCollector: Problem when running BPA tests [ID 45053]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When the SLLogCollector tool was configured to execute all BPA tests available in the system when collecting log packages, up to now, in some cases, executing those BPA tests would fail and cause them to report a wide variety of exceptions.
+
+From now on, when the SLLogCollector tool detects that it is not possible to execute the BPA tests, it will skip their execution and collect the results of their last successful run.

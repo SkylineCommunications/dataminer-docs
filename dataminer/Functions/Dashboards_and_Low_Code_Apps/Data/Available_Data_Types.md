@@ -6,7 +6,7 @@ uid: Available_Data_Types
 
 When you configure a component in a dashboard or low-code app, you typically need to combine a visualization with data.
 
-The type of data you select determines what information the component will show and where that information comes from, e.g. data passed from another component or real-time values from an element, service, view, etc.
+The type of data you select determines what information the component will show and where that information comes from, e.g., data passed from another component or real-time values from an element, service, view, etc.
 
 When you edit a dashboard or app, all available data types are listed in the *Data* pane under *All available data*.
 

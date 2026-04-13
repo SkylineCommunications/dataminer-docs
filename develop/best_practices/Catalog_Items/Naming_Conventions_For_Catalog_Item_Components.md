@@ -22,13 +22,13 @@ In the naming conventions, references will be made to the following abbreviation
 - **SOLCATEGORY**: The category of the solution. The following values are currently supported:
   - *Apps & Solutions*: Category that groups all apps and solutions.
   - *Frameworks*: Category that groups all solutions related to DataMiner frameworks, such as [Process Automation](xref:PA_index), [SRM](xref:About_SRM), etc.
-  - *DevOps*: Category that groups all solutions serving a learning purpose, i.e. examples or solutions to easily kickstart development.
-  - *General*: Category that groups all components deployed as standalone artifacts, meaning they are deployed as part of specific solutions (e.g. a script used in multiple solutions).
+  - *DevOps*: Category that groups all solutions serving a learning purpose, i.e., examples or solutions to easily kickstart development.
+  - *General*: Category that groups all components deployed as standalone artifacts, meaning they are deployed as part of specific solutions (e.g., a script used in multiple solutions).
 
 ## General naming conventions
 
 - Between the **solution code** and the **unique component name**, usually a **hyphen** is used. For components with more visibility to end users, such as elements, dashboards, etc., a **space** should be used instead of a hyphen to enhance readability.
-- **PascalCase** should be applied for the names of the components, i.e. the different words are appended to each other, each word starting with a single uppercase letter.
+- **PascalCase** should be applied for the names of the components, i.e., the different words are appended to each other, each word starting with a single uppercase letter.
 - Names of components should **express their purpose** or intent. This facilitates understanding of what the specific component is meant for.
 - If **dates** are used in files, use the ISO 8601 format (YYYYMMDD).
 - If **numeric values** are used, ensure there are **sufficient digits** to allow good sorting.
@@ -40,7 +40,7 @@ In the naming conventions, references will be made to the following abbreviation
 
 Generic automation scripts and automation scripts that are used in solutions should have a name in the following format, where *[TYPE]* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention): `[SOLCODE]-[TYPE]-[name]`
 
-For scripts created by Skyline for a specific customer, the customer abbreviation should be used instead of [SOLCODE]. For a list of these abbreviations, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx) (internal link for Skyline employees only).
+For scripts created by Skyline for a specific customer, the customer abbreviation should be used instead of [SOLCODE]. For a list of these abbreviations, refer to [DCP](https://dcp-ui.azurewebsites.net/customers) (internal link for Skyline employees only).
 
 Scripts should be added in the Automation module in the following folders, depending on the type of script:
 
@@ -109,7 +109,7 @@ It should be placed in a category reflecting the solution market. This can be on
 - NetOps
 - IoTOps
 
-If none of the above are a match, you can use a custom category that does match your solution (e.g. "Business Administration" for the "People & Organization" low-code app).
+If none of the above are a match, you can use a custom category that does match your solution (e.g., "Business Administration" for the "People & Organization" low-code app).
 
 ### Property
 

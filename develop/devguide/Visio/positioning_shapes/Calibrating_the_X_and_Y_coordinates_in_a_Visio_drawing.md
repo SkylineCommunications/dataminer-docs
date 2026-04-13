@@ -13,7 +13,7 @@ If, in a Visio drawing, you want to position shapes using X and Y coordinates, y
 
 Create two dummy shapes, and add two shape data fields to each of them: one of type **XPos** and one of type **YPos**.
 
-1. Create a dummy shape in the top-left corner with the following shape data fields:
+1. Create a dummy shape in the upper-left corner with the following shape data fields:
 
    | Shape data field | Value                                 |
    | ---------------- | ------------------------------------- |
@@ -33,7 +33,7 @@ Result: The page now has a virtual grid in relation to which all other shapes ca
 
 If you want a Visio page to have an X-Y grid of 100 by 50, create the following shapes.
 
-- In the top-left corner, create a shape with the following shape data fields:
+- In the upper-left corner, create a shape with the following shape data fields:
 
   | Shape data field | Value |
   | ---------------- | ----- |

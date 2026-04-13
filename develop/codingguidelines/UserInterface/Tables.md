@@ -14,4 +14,4 @@ In case a table has a column that has the same description as a column defined i
 
 ## Column header options
 
-Columns of type "number" that support alarming will by default show the sum of all values in the column. In case this default behavior is irrelevant, it must be either disabled (e.g. disableHeaderSum) or replaced by a more suitable header (e.g. enableHeaderMax). Also, note that histograms and heat maps should be disabled in case these are not relevant.
+Columns of type "number" that support alarming will by default show the sum of all values in the column. In case this default behavior is irrelevant, it must be either disabled (e.g., disableHeaderSum) or replaced by a more suitable header (e.g., enableHeaderMax). Also, note that histograms and heat maps should be disabled in case these are not relevant.

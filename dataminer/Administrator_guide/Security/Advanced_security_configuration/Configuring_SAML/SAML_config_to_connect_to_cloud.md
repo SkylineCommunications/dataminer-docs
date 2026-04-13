@@ -34,7 +34,7 @@ When you connect a DataMiner System for which SAML has already been configured t
 
         In this example, the DMS DNS name is "dataminer" and the organization name is "skyline".
 
-     1. In the top-left corner, click *Save*.
+     1. In the upper-left corner, click *Save*.
 
    - If you are using **Okta**, add the three URLs mentioned above to *Other Requestable SSO URLs*. See [Configuring SAML with Okta](xref:SAML_using_Okta).
 

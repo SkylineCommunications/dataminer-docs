@@ -129,12 +129,12 @@ The output file has the following columns:
 
 - **max trended**: The total number of values in the element that can be trended.
 
-- **% RT trended metrics**: The number of real-time trended values divided by the number of all single parameters and cells of the element (i.e. *# of RT trended* divided by *# of metrics*).
+- **% RT trended metrics**: The number of real-time trended values divided by the number of all single parameters and cells of the element (i.e., *# of RT trended* divided by *# of metrics*).
 
-- **% AVG trended metrics**: The number of average trended values divided by the number of all single parameters and cells of the element (i.e. *# of AVG trended* divided by *# of metrics*).
+- **% AVG trended metrics**: The number of average trended values divided by the number of all single parameters and cells of the element (i.e., *# of AVG trended* divided by *# of metrics*).
 
 - **# of monitored**: The number of monitored values (of single parameters and cells) of the element.
 
 - **Max monitored**: The total number of values of the element that can be monitored.
 
-- **% monitored metrics**: The number of monitored values divided by the number of all single parameters and cells of the element (i.e. *# of monitored* divided by *# of metrics*).
+- **% monitored metrics**: The number of monitored values divided by the number of all single parameters and cells of the element (i.e., *# of monitored* divided by *# of metrics*).

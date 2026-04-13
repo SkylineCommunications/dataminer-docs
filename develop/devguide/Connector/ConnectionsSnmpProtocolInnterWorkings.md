@@ -6,7 +6,7 @@ uid: ConnectionsSnmpProtocolInnterWorkings
 
 ## Altering a variable
 
-The illustration below shows what happens when an SNMP set request is issued by a protocol that is successfully processed by the SNMP agent of the device (i.e. the ErrorStatus field contains the value 0, indicating "noError").
+The illustration below shows what happens when an SNMP set request is issued by a protocol that is successfully processed by the SNMP agent of the device (i.e., the ErrorStatus field contains the value 0, indicating "noError").
 
 ![DataMiner Agent inner workings – altering a variable via SNMP](~/develop/images/DMA_-_SNMP_Device_parameter_SetRequest.svg)
 

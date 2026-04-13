@@ -7,6 +7,14 @@ uid: General_Main_Release_10.5.0_CU4
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.5.0 CU4](xref:Cube_Main_Release_10.5.0_CU4).
@@ -135,7 +143,7 @@ In some cases, the SLNet process could leak memory when the *progress.log* file 
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
-When, in e.g. DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
+When, in e.g., DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
 
 #### LDAP users added as part of an LDAP user group would incorrectly appear as local users instead of domain users [ID 42743]
 
@@ -210,7 +218,7 @@ When you create an automation script, apart from an XML file containing the actu
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
-When, in e.g. DataMiner Cube, you opened the *Failover status* window when connected to a system using STaaS, up to now, the database status would always be displayed as OK, even when STaaS was degraded.
+When, in e.g., DataMiner Cube, you opened the *Failover status* window when connected to a system using STaaS, up to now, the database status would always be displayed as OK, even when STaaS was degraded.
 
 #### DataMiner upgrade: VerifyClusterPorts prerequisite check could fail when SLXML was still running [ID 42947]
 

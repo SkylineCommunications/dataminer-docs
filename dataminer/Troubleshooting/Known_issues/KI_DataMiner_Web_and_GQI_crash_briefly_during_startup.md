@@ -14,7 +14,7 @@ During startup, the DataMiner Web and DataMiner GQI processes may attempt to acc
 
 ## Fix
 
-No fix is available yet<!--RN 44380 + 44642-->.
+Install DataMiner 10.6.2 [CU1]<!--RN 44642-->.
 
 ## Description
 

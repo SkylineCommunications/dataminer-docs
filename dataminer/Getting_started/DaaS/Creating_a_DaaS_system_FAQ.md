@@ -1,6 +1,7 @@
 ---
 uid: Creating_a_DaaS_system_FAQ
-keywords: cloud faq
+description: Get answers to common questions about DaaS setup, trial and upgrade options, backups, redundancy, security, hosting regions, and more.
+keywords: cloud FAQ, DaaS
 ---
 
 # Frequently asked questions related to DaaS
@@ -74,7 +75,9 @@ Backups are stored in zone-redundant storage (ZRS) managed by Azure backup, in t
 
 ### Is it possible to make a local backup of all data?
 
-This is currently not possible. Skyline takes regular backups of all systems, which they can use to restore systems. If you want to get access to a backup of your system, please contact <daas@dataminer.services>.
+Taking a DataMiner backup in Cube is currently not possible. Backups are managed by Azure backup and [Skyline takes regular backups of all systems](xref:Creating_a_DaaS_system_FAQ#what-backup-policy-does-a-daas-system-have). These backups can be used to restore the DaaS system to a previous point in time or to recover deleted files.
+
+To restore your system to a previous point in time or recover deleted files, please contact <daas@dataminer.services>.
 
 ### Is it possible to copy data from Azure and store it locally?
 
@@ -96,13 +99,18 @@ To request a change, contact <daas@dataminer.services>.
 
 All costs related to Azure VPN Gateway are included in your DaaS subscription. When other options are used, your providers may charge additional fees. In that case, note that Skyline will not act as a broker.
 
-Additional query costs may be due when using e.g. Azure ExpressRoute or Amazon CloudWatch to retrieve data from other cloud providers. The costs for retrieving data from Amazon Web Services are usually negligible.
+Additional query costs may be due when using e.g., Azure ExpressRoute or Amazon CloudWatch to retrieve data from other cloud providers. The costs for retrieving data from Amazon Web Services are usually negligible.
 
 ### How are user accounts managed? Where are the passwords stored?
 
 User management on DaaS systems is similar to that on on-premises systems. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
 
+To configure external authentication, contact <daas@dataminer.services> for assistance to set up the DataMiner part of the configuration, as this requires [making changes to configuration files on the DataMiner server](xref:Creating_a_DaaS_system_FAQ#how-can-i-make-changes-to-configuration-files-on-the-dataminer-server).
+
 See also: [User management](xref:User_management).
+
+> [!NOTE]
+> A DaaS system can never be part of a domain; therefore it cannot make use of active directory integration for user management.
 
 ### Are there specific limitations that apply for DaaS?
 

@@ -89,7 +89,7 @@ You should also collect information to investigate why Cube could not connect to
 
    ![View Logging](~/dataminer/images/View_Logging.png)<br/>*DataMiner Cube version 10.3.10*
 
-1. In the *Logs* folder, find the file named corresponding to the current date, e.g. `log20230904.txt` for September 4th, 2023.
+1. In the *Logs* folder, find the file named corresponding to the current date, e.g., `log20230904.txt` for September 4th, 2023.
 
 ## Web app recordings
 

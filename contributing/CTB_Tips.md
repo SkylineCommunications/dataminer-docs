@@ -10,7 +10,7 @@ To allow easier editing and ensure consistency with the rest of the documentatio
 
 When you add a procedure that consists of several steps, use a **numbered list**, and make sure each list item corresponds with one step in the procedure. This way the user will have a clear overview of the different steps.
 
-If you want to add information related to a step that is not actually something the user needs to do (e.g. the result of a step), add this as an indented paragraph in the list.
+If you want to add information related to a step that is not actually something the user needs to do (e.g., the result of a step), add this as an indented paragraph in the list.
 
 For example:
 
@@ -29,7 +29,7 @@ Only use numbered lists if the order of each list item is important. If you for 
 
 ## Avoid contractions
 
-Avoid contractions (e.g. you're, they're, it's). In formal documentation, these are not usually used.
+Avoid contractions (e.g., you're, they're, it's). In formal documentation, these are not usually used.
 
 ## Use italic type for UI text
 

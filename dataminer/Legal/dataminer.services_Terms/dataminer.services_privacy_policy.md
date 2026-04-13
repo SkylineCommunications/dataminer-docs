@@ -29,7 +29,7 @@ Skyline does not have access to or store your login credentials.
 
 When you use the platform, we automatically record certain information to ensure proper operation, auditing, and security. The information we collect consists of:
 
-- Date, time, and details of actions (e.g. deployments, Catalog activity, sharing actions).
+- Date, time, and details of actions (e.g., deployments, Catalog activity, sharing actions).
 
 - The email address of the user performing the action.
 

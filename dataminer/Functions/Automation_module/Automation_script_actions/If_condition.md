@@ -24,7 +24,7 @@ To add a condition:
 
 1. If the condition is based on a parameter, add a dummy element or choose an existing dummy element, and select the parameter in question.
 
-1. Specify if the variable or parameter should be less than, equal to, or greater than a particular value or variable it is compared to. A combination of these, e.g. “less than or equal to”, is also possible.
+1. Specify if the variable or parameter should be less than, equal to, or greater than a particular value or variable it is compared to. A combination of these, e.g., “less than or equal to”, is also possible.
 
 1. Specify whether you compare to a value or a variable. Then enter the value or select the variable.
 

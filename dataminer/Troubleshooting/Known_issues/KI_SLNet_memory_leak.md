@@ -41,4 +41,4 @@ If you do still notice a memory leak after this, you can disable the search bar 
 
 ## Description
 
-In systems with many trended parameters, especially in case a parameter name is unusually long, there is a slight increase in SLNet memory usage every time an ElementInfoMessage gets sent (e.g. when an element is restarted or edited, or when an element property is changed).
+In systems with many trended parameters, especially in case a parameter name is unusually long, there is a slight increase in SLNet memory usage every time an ElementInfoMessage gets sent (e.g., when an element is restarted or edited, or when an element property is changed).

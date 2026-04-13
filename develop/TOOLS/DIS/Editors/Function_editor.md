@@ -73,7 +73,7 @@ Every parameter you drag onto a page is represented by a building block that, by
 
 In case of a Read/Write parameter, use the *Read* and *Write* checkboxes to indicate whether you want the page to contain the Read parameter, the Write parameter, or both.
 
-In case of a table parameter, you can click the *Edit Parameter* button in the top-right corner of the building block and select the columns you want to include.
+In case of a table parameter, you can click the *Edit Parameter* button in the upper-right corner of the building block and select the columns you want to include.
 
 When you right-click after selecting a parameter (or multiple parameters), a shortcut menu appears.
 

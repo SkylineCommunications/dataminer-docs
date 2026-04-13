@@ -18,4 +18,4 @@ The offloads to a database or to files are configured in [System Center](xref:Co
 > [!IMPORTANT]
 >
 > - For [DaaS](xref:Creating_a_DMS_in_the_cloud) Agents, only offloads to files are supported.
-> - Data offloading is not available if [Swarming](xref:Swarming) is enabled.
+> - Some data offloading features are not available when [Swarming](xref:Swarming) is enabled. See [Offload database configuration with Swarming enabled](xref:Offload_Database_With_Swarming) for more information.

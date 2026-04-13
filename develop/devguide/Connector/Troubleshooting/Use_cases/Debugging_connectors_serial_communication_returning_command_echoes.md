@@ -44,7 +44,7 @@ Here is an example snippet from Stream Viewer:
    000080  0D0A533A30 382C33410D 0A533A3039 2C33420D0A  ..S:08,3A..S:09,3B..
 ```
 
-Stream Viewer will also reveal a problem with the polling cycle. If a command is sent out but the incoming data is not what the connector expects (i.e. the defined response in the *protocol.xml*), the retry mechanism will kick in, sending the command again. This means that the connector may send the command a great many times in a short period, as illustrated below.
+Stream Viewer will also reveal a problem with the polling cycle. If a command is sent out but the incoming data is not what the connector expects (i.e., the defined response in the *protocol.xml*), the retry mechanism will kick in, sending the command again. This means that the connector may send the command a great many times in a short period, as illustrated below.
 
 ```txt
 >> 21:59:33 - Status Request
@@ -95,7 +95,7 @@ Stream Viewer will also reveal a problem with the polling cycle. If a command is
 
 Though this may not be documented, when a flood of requests is sent, the equipment can have trouble managing them all. You can test if this is the case by reducing the polling cycle and verifying the impact via Stream Viewer.
 
-You can for instance lower the speed of the polling cycle, e.g. from 1 second to 10 seconds, and disable the retry mechanism. Then keep this running for a short while and check if the router recovers from the echoes and bad responses and instead starts to respond as expected with every command that is sent.
+You can for instance lower the speed of the polling cycle, e.g., from 1 second to 10 seconds, and disable the retry mechanism. Then keep this running for a short while and check if the router recovers from the echoes and bad responses and instead starts to respond as expected with every command that is sent.
 
 ## Adjusting the connector
 

@@ -16,7 +16,7 @@ In the **Surveyor**:
 
 By **editing** the item:
 
-1. Either right-click the item in the Surveyor, or click the hamburger button in the top-left corner of the item's card, and select *Edit*.
+1. Either right-click the item in the Surveyor, or click the hamburger button in the upper-left corner of the item's card, and select *Edit*.
 
 1. In the *Edit* tab, go to the *Device Details* section.
 

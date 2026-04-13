@@ -13,7 +13,7 @@ As outlined in the [responsibilities of a Solution Product Owner](xref:Solution_
 
 - **Build up a backlog**: Collect thoughts, ideas, and suggestions to obtain a broad view of the available options and to choose the best options to deliver maximum value in the next iteration.
 
-- **Limit Work In Progress (WIP)**: Maintain a focus on delivering value in a continuous manner, prioritizing the completion of ongoing work to the point of concrete, evidenced value delivery before starting on new work (i.e. Stop starting and start finishing!).
+- **Limit Work In Progress (WIP)**: Maintain a focus on delivering value in a continuous manner, prioritizing the completion of ongoing work to the point of concrete, evidenced value delivery before starting on new work (i.e., Stop starting and start finishing!).
 
 - **Early exposure to users**: Share initial concepts and previews during the development phase to collect early feedback.
 

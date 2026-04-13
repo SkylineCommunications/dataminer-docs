@@ -15,4 +15,4 @@ reviewer: Alexander Verkest
 ![Remote Cube in the home app](~/dataminer/images/findingRemoteAccessUrl.png)
 
 > [!NOTE]
-> If you cannot find your DMS in the list, make sure the correct organization is selected in the top-right corner.
+> If you cannot find your DMS in the list, make sure the correct organization is selected in the upper-right corner.

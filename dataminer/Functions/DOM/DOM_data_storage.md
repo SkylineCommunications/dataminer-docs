@@ -62,9 +62,9 @@ Follow these steps to remove the relevant indices using Elasticvue:
 
    If the connection is successful, cluster statistics should be displayed.
 
-1. Navigate to the *Indices* tab in the top-right menu.
+1. Navigate to the *Indices* tab in the upper-right menu.
 
-1. Enter the **module ID** of the DOM manager in the filter box in the top-right corner.
+1. Enter the **module ID** of the DOM manager in the filter box in the upper-right corner.
 
    The following six indices should be listed:
 

@@ -66,7 +66,7 @@ CrashdumpDetected{{"Crashdump found at issue time? C:\Skyline DataMiner\Logging\
 MinidumpDetected{{"Minidump found at issue time? C:\Skyline DataMiner\Logging\MiniDump"}}
 CheckWatchdog{{"Process disappearance in log? C:\Skyline DataMiner\SLWatchdog2.txt"}}
 UserActions["Did a user trigger a restart? Check C:\Skyline DataMiner\SLWatchdog2_BAK.txt. "]
-OSissues["Unexpected OS shutdown/problems, e.g. power outage, etc."]
+OSissues["Unexpected OS shutdown/problems, e.g., power outage, etc."]
 ProcessCrash["1\. Save \.high Crashdump + note timestamp. <br/>2\. Collect minidump/Log Collector logging. <br/>3\. Investigate using the Generic Investigation Flow. <br/>4\. Send crashdump + logging + conclusions to Create squads. "]
 ProcessDisappearance["1\. Identify process that disappeared + timestamp.<br/>2\. Collect minidump. <br/>3\. Set up process dump in Log Collector. <br/> 4\. Identify DataMiner actions during disappearance, using the Generic Investigation Flow."]
 %% Connect blocks %%

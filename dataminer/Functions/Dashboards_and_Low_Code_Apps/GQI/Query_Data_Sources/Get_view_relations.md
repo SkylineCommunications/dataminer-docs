@@ -12,4 +12,4 @@ Available from DataMiner 10.2.0/10.1.4 onwards. The *Get view relations* data so
 
 - *Depth*: The level of the object in the tree view in relation to the root view.
 
-Select the *Recursive* option for this data source to also include objects that are not directly included in a view, e.g. child objects of objects within the view.
+Select the *Recursive* option for this data source to also include objects that are not directly included in a view, e.g., child objects of objects within the view.

@@ -20,7 +20,7 @@ This query data source is available from DataMiner 10.2.4/10.3.0 onwards.
 
 From DataMiner 10.2.5/10.3.0 onwards, when you set up an ad hoc data source in a dashboard or low-code app, you can link its arguments to data of the dashboard or app. Depending on the linked data, more information may need to be specified.
 
-For example, if you link to existing query data with a table listing elements, in the *Type* box, you will then need to select whether you want to use a specific data type (e.g. elements) or tables (prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075)-->: query rows). Then you will need to select the property you want to use. In most cases, you can select the property in a dropdown list, except if *Type* is set to *Tables*, *Query rows*, or *Script output*, in which case you will have to specify the value yourself. For tables/query rows, when you start typing the value, DataMiner will propose any matching values it can find.
+For example, if you link to existing query data with a table listing elements, in the *Type* box, you will then need to select whether you want to use a specific data type (e.g., elements) or tables (prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075)-->: query rows). Then you will need to select the property you want to use. In most cases, you can select the property in a dropdown list, except if *Type* is set to *Tables*, *Query rows*, or *Script output*, in which case you will have to specify the value yourself. For tables/query rows, when you start typing the value, DataMiner will propose any matching values it can find.
 
 ## Updates
 
@@ -29,6 +29,6 @@ For example, if you link to existing query data with a table listing elements, i
 For a more detailed explanation on the different ways you can have a query result updated automatically, refer to [query updates](xref:Query_updates#query-update-support).
 
 > [!IMPORTANT]
-> When implementing real-time updates, be aware that you are operating in a multithreaded environment. The lifecycle events of an ad hoc data source (e.g. *GetNextPage*, *OnStopUpdates*, etc.) may be triggered concurrently with your real-time update logic.
+> When implementing real-time updates, be aware that you are operating in a multithreaded environment. The lifecycle events of an ad hoc data source (e.g., *GetNextPage*, *OnStopUpdates*, etc.) may be triggered concurrently with your real-time update logic.
 >
-> To ensure correctness and prevent race conditions, you must implement appropriate thread-safety measures (e.g. synchronization or locking mechanisms) when accessing shared resources or modifying the internal state.
+> To ensure correctness and prevent race conditions, you must implement appropriate thread-safety measures (e.g., synchronization or locking mechanisms) when accessing shared resources or modifying the internal state.

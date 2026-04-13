@@ -4,7 +4,7 @@ uid: AdvancedDcfBestPractices
 
 # DCF best practices
 
-DCF allows components to be linked and enables active path highlighting. DCF connections should not be removed automatically or accidentally as this can lead to an outage of a service that users are providing to their end users (e.g. because of a reboot of the equipment, the polling request only returns partial data). Additionally, depending on the number of connections, setting up and removing these can increase the load on the system. Therefore, creating duplicate connections/interfaces or updating these too often should be avoided.
+DCF allows components to be linked and enables active path highlighting. DCF connections should not be removed automatically or accidentally as this can lead to an outage of a service that users are providing to their end users (e.g., because of a reboot of the equipment, the polling request only returns partial data). Additionally, depending on the number of connections, setting up and removing these can increase the load on the system. Therefore, creating duplicate connections/interfaces or updating these too often should be avoided.
 
 This is similar to DVEs, where automatic removal could result in a significant impact such as loss of stored data.
 
@@ -31,7 +31,7 @@ For large SNMP tables, it is recommended to that you use a custom table and copy
 
 ### Interface alarm monitoring
 
-A pitfall for DCF interfaces is alarm monitoring. Every update to a table will initiate a recalculation for every interface created by that table. This means that for large tables with frequent updates (e.g. bit rates), there will be a lot of DCF alarm updates, which will consume a lot of resources.
+A pitfall for DCF interfaces is alarm monitoring. Every update to a table will initiate a recalculation for every interface created by that table. This means that for large tables with frequent updates (e.g., bit rates), there will be a lot of DCF alarm updates, which will consume a lot of resources.
 
 You can minimize or avoid this impact but will lose the functionality of seeing the interface alarm color linked to the alarm thresholds defined on the original table. To avoid this, you can either use the custom table method (described above) or make use of the [Group@calculateAlarmState](xref:Protocol.ParameterGroups.Group-calculateAlarmState) attribute to disable the interface state calculation.
 
@@ -58,6 +58,6 @@ For DataMiner Systems using DataMiner IDP, IDP can be used to provision DCF conn
 
 A custom script “Connectivity Discovery” per CI type can be run for an element (see [Implementing the Connectivity Discovery script](xref:ConnectivityDiscoveryScript)). Like with any custom script, it integrates with the connector and the element (the digital twin of the equipment).
 
-In that way, existing protocols (e.g. LLDP, CDP, ARP, etc.) that expose information about a device's neighbors can be leveraged to discover and provision connectivity.
+In that way, existing protocols (e.g., LLDP, CDP, ARP, etc.) that expose information about a device's neighbors can be leveraged to discover and provision connectivity.
 
 The DataMiner IDP package comes with an example script, IDP_Example_Custom_ConnectivityDiscovery, which you can use as a starting point for the development of a custom script for the connectors in the project.

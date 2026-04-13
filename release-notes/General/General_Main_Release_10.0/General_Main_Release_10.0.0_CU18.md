@@ -44,7 +44,7 @@ In some cases, it could occur that the initial synchronization of services in a 
 
 #### Problem with conditional monitoring after alarm template update \[ID 30531\]
 
-When an alarm template was refreshed in the SLElement process, e.g. because the alarm template was modified or the baseline changed, it could occur that conditional monitoring was ignored for standalone parameters. Because of this, if a parameter was not monitored because the condition for this was met, it was shown as monitored regardless.
+When an alarm template was refreshed in the SLElement process, e.g., because the alarm template was modified or the baseline changed, it could occur that conditional monitoring was ignored for standalone parameters. Because of this, if a parameter was not monitored because the condition for this was met, it was shown as monitored regardless.
 
 #### Automation: CheckboxList and RadiobuttonList not decoding backslash correctly \[ID 30605\]
 

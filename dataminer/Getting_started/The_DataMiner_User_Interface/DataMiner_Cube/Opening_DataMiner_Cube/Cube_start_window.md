@@ -63,7 +63,7 @@ You can sort the different tiles in the start window in groups:
 
 To remove the tile representing a DMS from the start window:
 
-1. Hover the mouse pointer over the tile and click "..." in the top-right corner.
+1. Hover the mouse pointer over the tile and click "..." in the upper-right corner.
 
 1. Click the garbage can icon in the pop-up window.
 
@@ -76,7 +76,7 @@ From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 41203-->, you can
 
 To change the name shown on a tile representing a DMS:
 
-1. Hover the mouse pointer over the tile representing the DMS and click "..." in the top-right corner.
+1. Hover the mouse pointer over the tile representing the DMS and click "..." in the upper-right corner.
 
 1. In the *Alias* box, specify the name you want to see on the tile.
 
@@ -86,7 +86,7 @@ To change the name shown on a tile representing a DMS:
 
 To set a DMS as the default DMS to connect to:
 
-1. Hover the mouse pointer over the tile representing the DMS and click "..." in the top-right corner.
+1. Hover the mouse pointer over the tile representing the DMS and click "..." in the upper-right corner.
 
 1. Select *Set as default* in the pop-up window and click *Save*.
 
@@ -94,7 +94,7 @@ To set a DMS as the default DMS to connect to:
 
 To specify a different DMA in a DMS to connect to:
 
-1. Hover the mouse pointer over the tile representing the DMS and click "..." in the top-right corner.
+1. Hover the mouse pointer over the tile representing the DMS and click "..." in the upper-right corner.
 
 1. Expand the *Agent* section, select the DMA and click *Save*.
 
@@ -102,7 +102,7 @@ To specify a different DMA in a DMS to connect to:
 
 To connect to a DMS using specific arguments:
 
-1. Hover the mouse pointer over the tile representing the DMS and click "..." in the top-right corner.
+1. Hover the mouse pointer over the tile representing the DMS and click "..." in the upper-right corner.
 
 1. Expand the *Advanced* section, specify the arguments and click *Save*.
 
@@ -112,7 +112,7 @@ For more information on the possible arguments, see [Arguments for DataMiner Cub
 
 From DataMiner 10.2.6/10.3.0 onwards, you can configure whether Cube should connect to a specific DMS using HTTPS only or whether it can fall back to HTTP if HTTPS is not available:
 
-1. Hover the mouse pointer over the tile representing this DMS and click "..." in the top-right corner.
+1. Hover the mouse pointer over the tile representing this DMS and click "..." in the upper-right corner.
 
 1. Expand the *Advanced* section.
 

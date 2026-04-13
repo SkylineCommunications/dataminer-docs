@@ -14,7 +14,7 @@ It has significant limitations compared to dedicated connectors:
 
   - Sometimes, datetime values are read as a number (milliseconds since epoch time) and need to be converted into a human-readable format.
   - Sometimes, alarms are retrieved in hexadecimal format and need to be displayed as different status parameters in a connector.
-  - Sometimes, table parameters have to be converted to single parameters or vice versa (e.g. in case the device MIB is not logically built).
+  - Sometimes, table parameters have to be converted to single parameters or vice versa (e.g., in case the device MIB is not logically built).
   - Sometimes, a value needs to be divided or multiplied by 100 or some other value.
   - etc.
 

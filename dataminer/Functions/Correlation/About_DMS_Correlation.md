@@ -22,7 +22,7 @@ The trigger consists of:
 
 - An event that has to occur to trigger the rule.
 
-- A mechanism, i.e. the behavior of the event that will trigger the rule, e.g. the event recurs a particular number of times.
+- A mechanism, i.e., the behavior of the event that will trigger the rule, e.g., the event recurs a particular number of times.
 
 The event is a combination of:
 

@@ -8,7 +8,7 @@ There are currently several major CI/CD flows within Skyline Communications. Her
 
 - Internal CI/CD for the core DataMiner software
 - Internal CI/CD for the creation of CI/CD-related dotnet tools
-- Internal CI/CD for the creation of DataMiner artifacts (e.g. automation scripts, connectors, dashboards, etc.)
+- Internal CI/CD for the creation of DataMiner artifacts (e.g., automation scripts, connectors, dashboards, etc.)
 
 > [!TIP]
 > See also:

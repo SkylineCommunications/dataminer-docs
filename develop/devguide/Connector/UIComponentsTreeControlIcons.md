@@ -79,7 +79,7 @@ By specifying a column in OverrideIconColumns (under the TreeControl tag), you c
 |![Audio PID](~/develop/images/MPEG2_AUDIO.png)|MPEG2_AUDIO|Audio PID.|
 |![Video PID](~/develop/images/MPEG2_VIDEO.png)|MPEG2_VIDEO|Video PID.|
 |![New item](~/develop/images/newItem.png)|New-Item|New item.<!-- RN 28060 -->|
-|![Network Information Table](~/develop/images/NIT.png)|NIT|Network Information Table: Info about muxes and TS, private stream info, e.g. Teletext.|
+|![Network Information Table](~/develop/images/NIT.png)|NIT|Network Information Table: Info about muxes and TS, private stream info, e.g., Teletext.|
 |![Object carousel](~/develop/images/OBJECTCAROUSEL.png)|OBJECTCAROUSEL|Object carousel.|
 |![Output](~/develop/images/Output.png)|Output|Output.|
 |![Output Transport Stream](~/develop/images/OutputTransportStream.png)|OutputTransportStream|Output Transport Stream.|
@@ -91,7 +91,7 @@ By specifying a column in OverrideIconColumns (under the TreeControl tag), you c
 |![Primary](~/develop/images/Primary.png)|Primary|Primary (See also “Secondary”)|
 |![Processor](~/develop/images/Processor.png)|Processor|Processor.|
 |![Radio](~/develop/images/RADIO.png)|RADIO|Service of type Radio.|
-|![Rectangle](~/develop/images/RECT-AliceBlue.png)|RECT-\[ColorName\]|Filled rectangle, where \[ColorName\] is a color name (e.g. RECT-AliceBlue). For a full list of the available color names, refer to <https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.colors?view=netframework-4.8>.|
+|![Rectangle](~/develop/images/RECT-AliceBlue.png)|RECT-\[ColorName\]|Filled rectangle, where \[ColorName\] is a color name (e.g., RECT-AliceBlue). For a full list of the available color names, refer to <https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.colors?view=netframework-4.8>.|
 |![RST](~/develop/images/RST.png)|RST|RST.|
 |![Satellite](~/develop/images/Satellite.png)|Satellite|Satellite.|
 |![Service Description Table](~/develop/images/SDT.png)|SDT|Service Description Table.|

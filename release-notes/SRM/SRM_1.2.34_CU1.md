@@ -11,7 +11,7 @@ uid: SRM_1.2.34_CU1
 
 #### Improved logging in case of invalid entry in Generic DVE Table [ID 38091]
 
-Logging has been improved in case there is an invalid entry in the *Generic DVE Table* when the *SRM_DiscoverResources* script is used (i.e. when resources are provisioned). An error will be shown specifying which entry is invalid.
+Logging has been improved in case there is an invalid entry in the *Generic DVE Table* when the *SRM_DiscoverResources* script is used (i.e., when resources are provisioned). An error will be shown specifying which entry is invalid.
 
 ## Fixes
 

@@ -23,7 +23,7 @@ From now on, when you export the audit information from the *Audit* page in the 
 
 #### 11 December 2024 - Enhancement - Admin app - Improved usage export file [ID 41695]
 
-From now on, when you export the usage information from the *Usage* page in the [Admin app](https://admin.dataminer.services), the export file will have a better name, which will include the organization name and a readable timestamp. The metrics in the file itself will now also contain the organization and DMS name, and if the option to include column titles was selected, there will be better column titles at the the top.
+From now on, when you export the usage information from the *Usage* page in the [Admin app](https://admin.dataminer.services), the export file will have a better name, which will include the organization name and a readable timestamp. The metrics in the file itself will now also contain the organization and DMS name, and if the option to include column titles was selected, there will be better column titles at the top.
 
 #### 9 December 2024 - Enhancement - Home/Admin/Catalog/Marketplace/Sharing - App title now works as link that can be opened in new tab [ID 41518] [ID 41524]
 
@@ -177,7 +177,7 @@ Now the URLs will instead redirect to the proper current URL format, which can b
 
 #### 11 November 2024 - Enhancement - Catalog - All version formats supported for new item versions [ID 41243]
 
-When an item version is registered, the Catalog API will now allow all version formats. If a version does not start with "x.x.x.x" or "x.x.x", it will be put in an "other" range. Versions with suffixes (e.g. -alpha, -beta, -CUxxx, etc.) will be added to their respective ranges.
+When an item version is registered, the Catalog API will now allow all version formats. If a version does not start with "x.x.x.x" or "x.x.x", it will be put in an "other" range. Versions with suffixes (e.g., -alpha, -beta, -CUxxx, etc.) will be added to their respective ranges.
 
 #### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 
@@ -201,7 +201,7 @@ Previously, when you enabled the expiration date for a share and then set a date
 
 #### 7 November 2024 - Enhancement - Admin app - Audit export rephrased [ID 41234]
 
-From now on, the audit export entry will have a better title, e.g. "Usage export by ...".
+From now on, the audit export entry will have a better title, e.g., "Usage export by ...".
 
 #### 7 November 2024 - Fix - Catalog API - Missing search results [ID 41226]
 
@@ -352,7 +352,7 @@ Improved the message when no usage data is available yet for a given organizatio
 
 #### 17 September 2024 - Fix - Remote Access (automatic) login not working with special characters in DataMiner account configuration [ID 40788]
 
-If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access to the web apps (e.g. the Monitoring app via dataminer.services), it was not possible to log in or make use of the automatic login with a linked account. This has now been fixed.
+If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access to the web apps (e.g., the Monitoring app via dataminer.services), it was not possible to log in or make use of the automatic login with a linked account. This has now been fixed.
 
 #### 17 September 2024 - New feature - Admin - STaaS region registration and configuration tile [ID 40786]
 
@@ -473,7 +473,7 @@ In the Admin app, it is now possible to restrict remote access to the web apps a
 
 #### 9 August 2024 - New feature - Catalog - Sorting option and grid/list view buttons on Browse page [ID 40331]
 
-When browsing through the items in the Catalog, users can now sort the items using a dropdown box at the top. Buttons are also available in the top-right corner that allow users to switch between a grid view and a list view.
+When browsing through the items in the Catalog, users can now sort the items using a dropdown box at the top. Buttons are also available in the upper-right corner that allow users to switch between a grid view and a list view.
 
 #### 8 August 2024 - Enhancement - Vendor and market name of connector now considered dedicated properties [ID 40423]
 
@@ -505,7 +505,7 @@ Up to now, when you had set filters in the browse page and then went to a detail
 
 #### 1 August 2024 - Fix - Cloud apps - White page was displayed when using an old browser [ID 40347]
 
-When you were using an old browser (e.g. Microsoft Internet Explorer), a white page would be displayed due to JavaScript not loading correctly.
+When you were using an old browser (e.g., Microsoft Internet Explorer), a white page would be displayed due to JavaScript not loading correctly.
 
 From now on, a notice will appear, saying that your browser is no longer supported and that you should use a newer one.
 
@@ -541,7 +541,7 @@ The recommended versions will now be shown in the following order:
 
 #### 23 July 2024 - Fix - Catalog - Return button spanning whole height of container [ID 40245]
 
-The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
+The height of the return button in the upper-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
 
 #### 23 July 2024 - New feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
 

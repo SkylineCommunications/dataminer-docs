@@ -13,7 +13,7 @@ To configure and purchase a new subscription for your organization:
 
 1. Navigate to the [Billing](xref:Viewing_billing_information) page in the Admin app.
 
-1. Click the **+ Add subscription** button in the top-right corner.
+1. Click the **+ Add subscription** button in the upper-right corner.
 
    This will open a window where you can select the services and reservations you need, choose the subscription duration, and see the total cost before confirming your purchase. For more information on these options, refer to the sections below
 

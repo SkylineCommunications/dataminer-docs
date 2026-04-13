@@ -8,7 +8,7 @@ The *Bookings* data category allows you to use data from [bookings](xref:srm_ins
 
 When you expand the *Bookings* section in the *Data* pane, a list of bookings is displayed.
 
-To find a specific booking, you can select one of the default time ranges from the filter box (e.g. *Today so far*, *This month*, *Last 30 days*, etc.), or select *Custom* to configure a custom time range:
+To find a specific booking, you can select one of the default time ranges from the filter box (e.g., *Today so far*, *This month*, *Last 30 days*, etc.), or select *Custom* to configure a custom time range:
 
 ![Custom time range](~/dataminer/images/Custom_Time_Range_Bookings.png)<br>*Low-Code Apps module in DataMiner 10.5.6*
 

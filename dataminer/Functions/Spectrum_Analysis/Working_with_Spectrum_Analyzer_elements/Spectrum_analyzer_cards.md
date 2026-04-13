@@ -6,7 +6,7 @@ uid: Spectrum_analyzer_cards
 
 Spectrum analyzer cards are a special type of element cards in DataMiner Cube. They usually have 2 pages, though depending on the protocol additional pages are possible:
 
-- *General* page: contains general information about the analyzer and some additional functions, e.g. serial number, firmware version, switch screen on/off, run calibration, etc.
+- *General* page: contains general information about the analyzer and some additional functions, e.g., serial number, firmware version, switch screen on/off, run calibration, etc.
 
 - *Spectrum Analyzer* page: contains the Spectrum Analysis user interface.
 
@@ -21,7 +21,7 @@ The Spectrum Analysis user interface consists of four main components.
 - A **real-time display section** (2) on the left side of the card, which shows the spectrum trace. See [Viewing spectrum analyzer traces](xref:Viewing_spectrum_analyzer_traces).
 
     > [!NOTE]
-    > As soon as more than one client is connected to the spectrum analyzer, the top-right corner of the display section shows the number of connected clients. Click this field to view detailed information such as the username, client station and connection time for each client.
+    > As soon as more than one client is connected to the spectrum analyzer, the upper-right corner of the display section shows the number of connected clients. Click this field to view detailed information such as the username, client station and connection time for each client.
 
 - An **info pane** (3) to the right of the display section, which displays detailed information about the trace, and allows settings for markers and reference lines.
 

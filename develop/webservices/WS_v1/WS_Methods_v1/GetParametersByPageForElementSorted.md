@@ -7,7 +7,7 @@ uid: GetParametersByPageForElementSorted
 Use this method to retrieve a specific number of parameters on a particular Data Display page of an element.
 
 > [!NOTE]
-> Using this method, you can e.g. request parameter data in batches in order to minimize loading time.
+> Using this method, you can e.g., request parameter data in batches in order to minimize loading time.
 
 ## Input
 

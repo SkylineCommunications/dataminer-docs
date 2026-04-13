@@ -72,9 +72,9 @@ To deploy the xPON branch of the EPM Solution:
      > [!IMPORTANT]
      > The DataMiner element names must match the OLT names defined in SNMP. This is required to properly link the topology visuals to the elements. To rename an OLT Platform element, first change the user-defined OLT name in SNMP to the new name, then rename the element in DataMiner Cube to match the new name.
 
-   - **Back-end EPM elements**, in the *System* > *DataMiner EPM* > *EPM BE* view.
+   - **Backend EPM elements**, in the *System* > *DataMiner EPM* > *EPM BE* view.
 
-   - A **front-end EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
+   - A **frontend EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
 
    - **System elements**, as necessary, in the *System* view. You can name these elements as you see fit. If you add any MS/LX Platform elements, add these in a *DMS* subview of the *System* view.
 
@@ -87,7 +87,7 @@ To deploy the xPON branch of the EPM Solution:
 
 1. If the EPM package contains Visio drawings (in the *Visuals* folder), **add the Visio drawings** to the DMS. To do so:
 
-   - For a Visio drawing linked to a specific connector (e.g. EPM Platform), see [Assigning a custom Visio file to a protocol](xref:Managing_Visio_files_linked_to_protocols#assigning-a-custom-visio-file-to-a-protocol).
+   - For a Visio drawing linked to a specific connector (e.g., EPM Platform), see [Assigning a custom Visio file to a protocol](xref:Managing_Visio_files_linked_to_protocols#assigning-a-custom-visio-file-to-a-protocol).
 
    - For a Visio drawing linked to a view, upload the drawing to the view. See [Setting the active Visio file for an element, service, or view](xref:Set_as_active_Visio_file).
 

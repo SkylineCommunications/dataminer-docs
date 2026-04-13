@@ -29,7 +29,7 @@ This section contains an overview of the Reporter components you can publish on 
 A graph showing the alarm distribution in a particular time range.
 
 > [!NOTE]
-> When an error occurs (e.g. no data available), a redirect to *nograph.gif* will occur.
+> When an error occurs (e.g., no data available), a redirect to *nograph.gif* will occur.
 
 ### Syntax
 
@@ -63,7 +63,7 @@ createServiceAlarmDistributionUrl(service, distriType, avgType, width, height, d
 A graph showing a comparison of the different alarm events versus the alarm states.
 
 > [!NOTE]
-> When an error occurs (e.g. no data available), a redirect to *nograph.gif* will occur.
+> When an error occurs (e.g., no data available), a redirect to *nograph.gif* will occur.
 
 ### Syntax
 
@@ -85,7 +85,7 @@ createAlarmScatterUrl(width, height, state, view)
 A graph showing what percentage of the time an element or a service was in each of the alarm states.
 
 > [!NOTE]
-> When an error occurs (e.g. no data available), a redirect to *nograph.gif* will occur.
+> When an error occurs (e.g., no data available), a redirect to *nograph.gif* will occur.
 
 ### Syntax
 
@@ -116,7 +116,7 @@ createServiceAlarmStatesUrl(service, width, height, span)
 A graph showing a time line with the most severe alarm states of an element or a service during the last 24 hours.
 
 > [!NOTE]
-> When an error occurs (e.g. no data available), a redirect to *nograph.gif* will occur.
+> When an error occurs (e.g., no data available), a redirect to *nograph.gif* will occur.
 
 ### Syntax
 
@@ -147,7 +147,7 @@ createServiceTimelineUrl(service, width, height, span)
 A graph showing the amount of new alarms of an element or a service, grouped by alarm severity.
 
 > [!NOTE]
-> When an error occurs (e.g. no data available), a redirect to *nograph.gif* will occur.
+> When an error occurs (e.g., no data available), a redirect to *nograph.gif* will occur.
 
 ### Syntax
 
@@ -178,7 +178,7 @@ createServiceNewAlarmsUrl(service, width, height, span)
 A bar graph showing the top X worst elements based on either alarm state or alarm amount.
 
 > [!NOTE]
-> When an error occurs (e.g. no data available), a redirect to *nograph.gif* will occur.
+> When an error occurs (e.g., no data available), a redirect to *nograph.gif* will occur.
 
 ### Syntax
 
@@ -209,7 +209,7 @@ createTopNewUrl(amount, width, height, view, state)
 The image of the most recent spectrum analyzer trace that was measured by a particular spectrum analyzer monitor script.
 
 > [!NOTE]
-> When an error occurs (e.g. no data available), a redirect to *nograph.gif* will occur.
+> When an error occurs (e.g., no data available), a redirect to *nograph.gif* will occur.
 
 ### Syntax
 
@@ -232,7 +232,7 @@ createSpectrumBufferUrl(element, width, height, monitor, traceId)
 The image of the spectrum analyzer trace that was measured by a particular spectrum analyzer element at the time the image was requested.
 
 > [!NOTE]
-> When an error occurs (e.g. no data available), a redirect to *nograph.gif* will occur.
+> When an error occurs (e.g., no data available), a redirect to *nograph.gif* will occur.
 
 ### Syntax
 
@@ -309,7 +309,7 @@ Property names
 A graph showing trending information for a particular parameter.
 
 > [!NOTE]
-> When an error occurs (e.g. no data available), a redirect to *nograph.gif* will occur.
+> When an error occurs (e.g., no data available), a redirect to *nograph.gif* will occur.
 
 ### Syntax
 

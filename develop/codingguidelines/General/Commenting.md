@@ -8,11 +8,11 @@ uid: Commenting
 
 - A single line comment must be preceded by a blank line ([SA1515](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1515)) and must not be followed by a blank line ([SA1512](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1512)).
 
-- A space should be inserted between the comment delimiter (i.e. "//") and the comment text ([SA1005](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1005)).
+- A space should be inserted between the comment delimiter (i.e., "//") and the comment text ([SA1005](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1005)).
 
 - For comments spanning multiple lines, the use of single-line syntax "//" is favored over using "/\* \*/".
 
-- Creation of formatted comment boxes (e.g. through the use of asterisks) should be avoided.
+- Creation of formatted comment boxes (e.g., through the use of asterisks) should be avoided.
 
 - Comments should be indented at the same level as the code they describe.
 

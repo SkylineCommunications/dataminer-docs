@@ -31,7 +31,7 @@ uid: Managing_the_Router_Control_configurations
    If syntax errors are detected, a message will appear at the bottom of the dialog box. Click the message to see more information on those errors.
 
 > [!NOTE]
-> Router Control themes can be specified on three levels: on global level (i.e. the entire Router Control module), on configuration level, and on matrix level. Themes defined on a higher level are inherited by lower levels, and themes defined on a lower level override the ones defined on a higher level.
+> Router Control themes can be specified on three levels: on global level (i.e., the entire Router Control module), on configuration level, and on matrix level. Themes defined on a higher level are inherited by lower levels, and themes defined on a lower level override the ones defined on a higher level.
 
 ## Editing the custom theme of a Router Control configuration
 
@@ -42,7 +42,7 @@ uid: Managing_the_Router_Control_configurations
    If syntax errors are detected, a message will appear at the bottom of the dialog box. Click the message to see more information on those errors.
 
 > [!NOTE]
-> Router Control themes can be specified on three levels: on global level (i.e. the entire Router Control module), on configuration level, and on matrix level. Themes defined on a higher level are inherited by lower levels, and themes defined on a lower level override the ones defined on a higher level.
+> Router Control themes can be specified on three levels: on global level (i.e., the entire Router Control module), on configuration level, and on matrix level. Themes defined on a higher level are inherited by lower levels, and themes defined on a lower level override the ones defined on a higher level.
 
 ## Deleting a Router Control configuration
 

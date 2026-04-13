@@ -49,7 +49,7 @@ To fix the problem, you need to recreate the routes and explicitly specify an in
    ```
 
    > [!NOTE]
-   > Make sure that you use the correct interface ID for the route to go through. In the example above, this should be the interface through which the 5.6.7.8 gateway address can be reached. "Ipconfig /all" might help for you to select the correct interface. If an interface exists for which the route gateway address falls within the subnet for that interface, that interface should be used (e.g. a local interface having IP address 5.6.0.1 and mask 255.255.0.0).
+   > Make sure that you use the correct interface ID for the route to go through. In the example above, this should be the interface through which the 5.6.7.8 gateway address can be reached. "Ipconfig /all" might help for you to select the correct interface. If an interface exists for which the route gateway address falls within the subnet for that interface, that interface should be used (e.g., a local interface having IP address 5.6.0.1 and mask 255.255.0.0).
 
 Once the routes have been recreated with an interface number assigned, they will no longer disappear from the list of active routes when the virtual IP address is removed because the DMA is stopped or goes offline.
 

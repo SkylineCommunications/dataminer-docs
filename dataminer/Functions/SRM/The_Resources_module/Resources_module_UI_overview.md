@@ -13,13 +13,13 @@ The module consist of a pane on the left, listing resource pools, and a pane on 
 
 ## Pools pane
 
-The *Pools* pane on the left contains a list of pools, i.e. collections of resources that have something in common. For example, microphones, headphones, audio mixers, etc. can be grouped together in a resource pool named “Audio equipment”. Pools can be added, edited, and deleted with three buttons at the bottom of the pane.
+The *Pools* pane on the left contains a list of pools, i.e., collections of resources that have something in common. For example, microphones, headphones, audio mixers, etc. can be grouped together in a resource pool named “Audio equipment”. Pools can be added, edited, and deleted with three buttons at the bottom of the pane.
 
 ## Resources tab
 
-The *Resources* tab lists resources, i.e. objects that can be used to achieve something.
+The *Resources* tab lists resources, i.e., objects that can be used to achieve something.
 
-- You can link resources to DataMiner elements, or they can refer to places (e.g. meeting rooms), persons, frequency bands, etc. If a resource is linked to an element, a link icon will be displayed next to the resource name.
+- You can link resources to DataMiner elements, or they can refer to places (e.g., meeting rooms), persons, frequency bands, etc. If a resource is linked to an element, a link icon will be displayed next to the resource name.
 
 - From DataMiner 10.2.0/10.1.5 onwards, three subtabs are displayed when a resource is selected.
 

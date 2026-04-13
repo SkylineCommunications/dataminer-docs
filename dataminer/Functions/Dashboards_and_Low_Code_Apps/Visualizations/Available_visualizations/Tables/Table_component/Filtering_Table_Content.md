@@ -12,7 +12,7 @@ To apply a general filter across the table, a **search box** is available:
 
 1. In edit mode, make sure the [*Show quick filter* setting](xref:DashboardTable#table-layout) is enabled (from DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->).
 
-1. In read mode, click the search icon in the top-right corner of the component.
+1. In read mode, click the search icon in the upper-right corner of the component.
 
 1. Specify the filter text in the search box. The search is case-insensitive and matches values as displayed in the table.
 
@@ -46,14 +46,14 @@ To apply **a filter based on a specific column**:
    - For discrete values, from DataMiner 10.2.10/10.3.0 onwards, select the relevant checkboxes.
 
    > [!NOTE]
-   > Prior to DataMiner 10.2.9/10.3.0, it is possible to specify multiple conditions by clicking the + icon. As soon as one of the specified conditions applies, a value will be shown (i.e. conditions are combined using "OR"). DataMiner 10.2.9/10.3.0 switches to more efficient server-side filtering, which greatly improves the filter performance but does not allow multiple conditions in the same filter.
+   > Prior to DataMiner 10.2.9/10.3.0, it is possible to specify multiple conditions by clicking the + icon. As soon as one of the specified conditions applies, a value will be shown (i.e., conditions are combined using "OR"). DataMiner 10.2.9/10.3.0 switches to more efficient server-side filtering, which greatly improves the filter performance but does not allow multiple conditions in the same filter.
 
 1. Click *Apply filter*.
 
    ![Column filtering](~/dataminer/images/Column_Filtering.gif)<br>*Table component in DataMiner 10.5.6*
 
 > [!NOTE]
-> If you apply several column filters or apply both the general filter and one or more column filters, values will only be shown if they match all filters (i.e. filters are combined using "AND").
+> If you apply several column filters or apply both the general filter and one or more column filters, values will only be shown if they match all filters (i.e., filters are combined using "AND").
 
 ## Filter based on text string
 
@@ -69,9 +69,9 @@ You can filter based on a text string in several different ways, for example:
 
   1. Add a [text input](xref:DashboardTextInput) or [search input](xref:DashboardSearchInput) component to your dashboard or app.
 
-  1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, hover over the table component, click the filter icon, and then add a filter from the *All available data* > *Components* > *[Page name]* > *Text input/Search input* > *Value* > *Texts* section of the *Data* pane.
+  1. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44015-->, hover over the table component, click the filter icon, and then add a filter from the *All available data* > *Components* > *[Page/Panel name]* > *Text input/Search input* > *Value* > *Texts* section of the *Data* pane.
 
-     Note that in older DataMiner versions, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
+     Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12<!--RN 41141-->, component data is found under the *Feeds* data category.
 
   When you input text in the published version of the dashboard or app, the table component will automatically filter based on this input, and the value will appear in the table's search box.
 

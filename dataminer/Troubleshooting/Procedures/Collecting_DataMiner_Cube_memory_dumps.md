@@ -35,7 +35,7 @@ To take a memory dump with ProcDump:
 1. Open a command prompt (*cmd.exe*) in the folder containing *procdump.exe*.
 1. Run `procdump -ma "DataMinerCube.exe"`
 
-In the command above, replace *DataMinerCube.exe* with the name or ID of the process you want to take a memory dump from. For example, to take a memory dump of the DataMiner Cube browser app (XBAP), specify *PresentationHost.exe* instead.
+In the command above, replace *DataMinerCube.exe* with the name or ID of the process you want to take a memory dump from. For example, to take a memory dump of the SLScripting process, specify *SLScripting.exe* instead.
 
 This tool has several interesting options, which are explained in the example section below.
 
@@ -54,7 +54,7 @@ To force garbage collection before the dump is created, you can add the option `
 
 In the examples below, unless we explicitly state otherwise, *ProcDump* is used.
 
-In all examples, a memory dump is taken of a process of the DataMiner Cube desktop application, of which only one instance is running on the client machine. In all cases, you can replace the name by *PresentationHost.exe* to make the example apply to the DataMiner Cube browser version (XBAP). Alternatively, you can replace the name by the process ID in case multiple instances with this name are running.
+In all examples, a memory dump is taken of a process of DataMiner Cube, of which only one instance is running on the client machine. If multiple instances are running, you can replace the process name with the corresponding process ID.
 
 ### Crash
 
@@ -107,7 +107,7 @@ In all examples, a memory dump is taken of a process of the DataMiner Cube deskt
 
     - A memory dump after an *OutOfMemoryException* often provides little to no info, as a lot of memory is already cleaned up at that point.
     - When memory usage is high, the .NET garbage collector will often run. Memory dumps taken during garbage collection are unusable.
-    - When there is a memory leak (i.e. memory usage keeps increasing), a comparison between two memory dumps of moments when memory usage should be but is not equal is more interesting than one single memory dump.
+    - When there is a memory leak (i.e., memory usage keeps increasing), a comparison between two memory dumps of moments when memory usage should be but is not equal is more interesting than one single memory dump.
 
 Because of these points, we recommend to **take multiple memory dumps** using the following commands:
 
@@ -131,11 +131,11 @@ To avoid taking a memory dump during garbage collection, you can either take mul
 
 ### Compressing memory dumps
 
-Memory dumps often result in large files. However, most of the time, they can be compressed (i.e. zipped) to a fraction of their original size.
+Memory dumps often result in large files. However, most of the time, they can be compressed (i.e., zipped) to a fraction of their original size.
 
 ### More is better
 
-A memory dump is a snapshot at a single point in time. Often, several snapshots (i.e. memory dumps) will provide a lot more info than just one. This, combined with the fact that memory dumps taken during garbage collecting are unusable, means that it is always better to take more than one memory dump.
+A memory dump is a snapshot at a single point in time. Often, several snapshots (i.e., memory dumps) will provide a lot more info than just one. This, combined with the fact that memory dumps taken during garbage collecting are unusable, means that it is always better to take more than one memory dump.
 
 ### Ask us!
 

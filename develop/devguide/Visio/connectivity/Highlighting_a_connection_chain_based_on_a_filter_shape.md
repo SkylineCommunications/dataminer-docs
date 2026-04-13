@@ -8,13 +8,13 @@ A connectivity chain can be set to highlight based on a filter condition set by 
 
 Create a shape, add a shape data field of type **Connection** to it, and set its value to “*Filter=xxx*”.
 
-- If xxx is a single value (e.g. “Filter=VLAN 1”), the shape will be rendered as a button.
+- If xxx is a single value (e.g., “Filter=VLAN 1”), the shape will be rendered as a button.
 
-- If xxx is a colon-separated list of values (e.g. “Filter=VLAN 1:VLAN 2”), the shape will be rendered as a selection box listing the specified values.
+- If xxx is a colon-separated list of values (e.g., “Filter=VLAN 1:VLAN 2”), the shape will be rendered as a selection box listing the specified values.
 
-- If xxx is a placeholder referring to a row of a table parameter (e.g. “\[Param:DmaID/ElementID,TableID\]”), the shape will be rendered as a selection box listing the display key values of the specified table row.
+- If xxx is a placeholder referring to a row of a table parameter (e.g., “\[Param:DmaID/ElementID,TableID\]”), the shape will be rendered as a selection box listing the display key values of the specified table row.
 
-Each defined connection can have a *Connections Filter* value. This value can be configured on internal connections (e.g. VLAN configurations), but external connections will typically not be filtered, as they represent physical cable connections. The value of the filter shape in Visio will be compared with these Connections Filters for each defined connection, and any matches will be highlighted.
+Each defined connection can have a *Connections Filter* value. This value can be configured on internal connections (e.g., VLAN configurations), but external connections will typically not be filtered, as they represent physical cable connections. The value of the filter shape in Visio will be compared with these Connections Filters for each defined connection, and any matches will be highlighted.
 
 Signal paths in which filtered internal connections are combined with unfiltered external connections are highlighted in the following way:
 

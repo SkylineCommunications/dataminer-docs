@@ -7,6 +7,14 @@ uid: General_Main_Release_10.5.0_CU1
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.5.0 CU1](xref:Cube_Main_Release_10.5.0_CU1).
@@ -118,7 +126,7 @@ For more info, see [Saving and restoring time zones](https://learn.microsoft.com
 
 ##### DateTimeOffset GetClientDateTime(string destVar)
 
-This method will return the date and time as it was entered in the UI block with the specified *destVar*, in the time zone of the client (taking into account the client's UTC offset). The `DateTime` property of the returned value will contain the the date and/or time in the user's time zone.
+This method will return the date and time as it was entered in the UI block with the specified *destVar*, in the time zone of the client (taking into account the client's UTC offset). The `DateTime` property of the returned value will contain the date and/or time in the user's time zone.
 
 The returned value will be `DateTimeOffset.MinValue` if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information.
 
@@ -168,7 +176,7 @@ From now on, you can view the logging of the GQI DxM in DataMiner Cube.
 Also, no new log file will be started every day anymore. From now on, a new log file will only be started as soon as the size of the existing file reaches 5 MB.
 
 > [!NOTE]
-> Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e. the logging of the ad hoc data sources and the operators).
+> Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e., the logging of the ad hoc data sources and the operators).
 
 #### GQI DxM: Separate log file per extension library in Extensions folder [ID 42355]
 

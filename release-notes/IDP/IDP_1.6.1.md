@@ -2,34 +2,27 @@
 uid: IDP_1.6.1
 ---
 
-# IDP 1.6.1 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
-
-> [!NOTE]
-> This IDP version requires that DataMiner 10.4.0 [CU0] or higher is installed.
-
-## New features
-
-*No new features have been added to this release yet.*
+# IDP 1.6.1
 
 ## Changes
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Network file caching introduced for faster file searches [ID 44834]
+
+Network file caching has been introduced to improve performance when searching for configuration backup files stored on network shares.
+
+#### Improved Comparison tool performance for large files [ID 44897]
+
+The Comparison tool now requires less CPU and memory usage when comparing large configuration backup files.
+
+> [!IMPORTANT]
+> This enhancement requires DataMiner web 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 or higher.
 
 ### Fixes
 
-#### Enabling extended logging could abort discovery [ID 44331]
+#### Comparison tool settings could not be changed during configuration comparisons [ID 44896]
 
-When extended logging was enabled on the IDP Discovery element, this could cause a discovery action to be aborted.
+While comparing configurations in the Comparison tool, it was not possible to change any of the comparison settings. Now the Comparison tool will open in a separate browser window, allowing users to adjust settings again, such as highlighting differences and collapsing common lines.
 
-#### Shared folder for configuration archive incorrectly reported as unavailable [ID 44436]
-
-In some cases, it could occur that the configuration archive reported a disconnected or unavailable status for the configured shared folders even though the connection was fine. This especially occurred when the shared folder had not been accessed for a while. To prevent this, the connection check has now been replaced with a more accurate implementation.
-
-#### Credential conflicts for configuration archive shared folders caused unnecessary account lockouts [ID 44450]
-
-When credential conflicts for session-global SMB connections occurred with the credentials used for the configuration archive shared folders, these conflicts were incorrectly treated as authentication failures, leading to unnecessary account lockouts. To prevent this, IDP will now attempt to resolve these conflicts by disconnecting the existing session before retrying. If a conflict persists, IDP will use the existing session but log a warning regarding potential file permission issues.
+In addition, users can now choose whether they want to compare the full backups or only the core from within the main UI.

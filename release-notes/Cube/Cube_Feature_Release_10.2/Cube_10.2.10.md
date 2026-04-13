@@ -61,7 +61,7 @@ A number of enhancements have been made to the profile parameter edit boxes, esp
 
 <!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
 
-When, in the hamburger button in the top-left corner of the Alarm Console, the *Automatically group according to arrangement* setting was not selected, upon reconnecting DataMiner Cube, the alarms would incorrectly be grouped anyway.
+When, in the hamburger button in the upper-left corner of the Alarm Console, the *Automatically group according to arrangement* setting was not selected, upon reconnecting DataMiner Cube, the alarms would incorrectly be grouped anyway.
 
 #### Resources app: Incorrectly no longer possible to delete a function resource that was used by a past booking [ID 34159] [ID 34186]
 
@@ -75,7 +75,7 @@ It will now also be possible to delete a function resource that was used by a ca
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
 
-When multiple error messages boxes were being displayed, clicking the *Close* button on any of those boxes would incorrectly always close the last box that had been opened. All other boxes would stay open and could only be closed by clicking the X in the top-right corner.
+When multiple error messages boxes were being displayed, clicking the *Close* button on any of those boxes would incorrectly always close the last box that had been opened. All other boxes would stay open and could only be closed by clicking the X in the upper-right corner.
 
 #### DataMiner Cube - Profiles app: Data from a profile instance parameter entry could no longer be retrieved after updating the entry [ID 34192]
 

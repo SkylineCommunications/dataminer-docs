@@ -167,7 +167,7 @@ A number of security enhancements have been made.
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
-When an increasing or decreasing trend is detected on a highly aggregated level (i.e. a trend that persists for more than 24 hours), from now on, a proactive cap detection suggestion event will be generated when there is a probability that the trend change in question could lead to a breach of a critical alarm limit at some point in the future, even when the breach has not yet been confirmed by the full prediction model built on the historic trend data.
+When an increasing or decreasing trend is detected on a highly aggregated level (i.e., a trend that persists for more than 24 hours), from now on, a proactive cap detection suggestion event will be generated when there is a probability that the trend change in question could lead to a breach of a critical alarm limit at some point in the future, even when the breach has not yet been confirmed by the full prediction model built on the historic trend data.
 
 #### SLAnalytics - Behavioral anomaly detection: Flatline suggestion events will now automatically be cleared after a set amount of time [ID 37716]
 
@@ -250,7 +250,7 @@ When a DataMiner Agent receives an authentication request from a client applicat
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
-Up to now, when an SNMP response was received, a buffer with a fixed size of 10240 characters was used to translate the response to the requested format (e.g. OctetStringUTF8). When the response was larger that 10240 characters, it was cut off.
+Up to now, when an SNMP response was received, a buffer with a fixed size of 10240 characters was used to translate the response to the requested format (e.g., OctetStringUTF8). When the response was larger that 10240 characters, it was cut off.
 
 From now on, the buffer will have a dynamic size. This allow larger responses to be processed, and will also make sure that less memory has to be reserved when smaller responses are received.
 
@@ -383,7 +383,7 @@ SLDataGateway would leak memory during a Cassandra Cluster migration.
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
-When a DataMiner System was configured to use gRPC connections only (i.e. when *EnableDotNetRemoting* was set to false on all agents), in some cases, remote clients would not get properly registered with SLDataMiner after restarting a DataMiner Agent. This would cause remote requests to fail if they had to be handled by SLDataMiner on the DataMiner Agent that was restarted.
+When a DataMiner System was configured to use gRPC connections only (i.e., when *EnableDotNetRemoting* was set to false on all agents), in some cases, remote clients would not get properly registered with SLDataMiner after restarting a DataMiner Agent. This would cause remote requests to fail if they had to be handled by SLDataMiner on the DataMiner Agent that was restarted.
 
 #### DELT package created on DataMiner v10.3.8 or newer could no longer be imported on DataMiner v10.3.7 or older [ID 37731]
 
@@ -407,7 +407,7 @@ When a table was polled via SNMPv3 and the response included a cell that contain
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
-When, in e.g. DataMiner Cube, you double-clicked a parameter of a DVE element and navigated to the *Details* tab, in some cases, the reports would show either incorrect alarm information or no alarm information at all.
+When, in e.g., DataMiner Cube, you double-clicked a parameter of a DVE element and navigated to the *Details* tab, in some cases, the reports would show either incorrect alarm information or no alarm information at all.
 
 The same issue would occur when, in DataMiner Cube, you opened an element card and navigated to *Reports > General*.
 
@@ -436,7 +436,7 @@ From now on, Failover setups within the system will only report errors if the Ca
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
-Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner startup and when new objects (e.g. elements) had been created.
+Incorrect entries would be added to the *SLEventCache.txt* log file on DataMiner startup and when new objects (e.g., elements) had been created.
 
 Example of an incorrect log entry:
 

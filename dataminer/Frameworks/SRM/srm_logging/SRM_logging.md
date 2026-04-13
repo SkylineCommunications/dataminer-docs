@@ -4,7 +4,7 @@ uid: SRM_logging
 
 # SRM logging
 
-In many situations, access to logging is essential to understand a particular situation. This is even more important for bookings, where any failure (e.g. configuration not succeeded) can have an impact on live operations.
+In many situations, access to logging is essential to understand a particular situation. This is even more important for bookings, where any failure (e.g., configuration not succeeded) can have an impact on live operations.
 
 ![SRM logging example](~/dataminer/images/SRM_logging.png)
 

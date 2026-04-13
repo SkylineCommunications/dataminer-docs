@@ -63,7 +63,7 @@ Next to a *ReadOnly* property, the `DomStatusFieldDescriptorLink` class now also
 
 - *ClientReadOnly* determines whether users are allowed to assign a value to the field in question in the UI.
 
-  Unlike the *ReadOnly* property, this property does allow users to assign a value to the field using the API (e.g. in a script).
+  Unlike the *ReadOnly* property, this property does allow users to assign a value to the field using the API (e.g., in a script).
 
 If the *ReadOnly* property is true, the value of *ClientReadOnly* is ignored.
 

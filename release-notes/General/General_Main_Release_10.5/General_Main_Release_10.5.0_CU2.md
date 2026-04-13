@@ -7,6 +7,14 @@ uid: General_Main_Release_10.5.0_CU2
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.5.0 CU2](xref:Cube_Main_Release_10.5.0_CU2).
@@ -32,7 +40,7 @@ In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
 
-In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:Disabling_automatic_NATS_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:Disabling_automatic_NATS_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e., ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
 
 #### Factory reset tool: New ResetBrokerGatewayNATS action [ID 40759]
 
@@ -71,7 +79,7 @@ A repair tool, *NATSRepair.exe*, will now be included in the `C:\Skyline DataMin
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to e.g. aggregation or merge actions.
+When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to, for example, aggregation or merge actions.
 
 #### STaaS: An alarm will now be generated when a data type is being throttled [ID 42387]
 
@@ -171,7 +179,7 @@ IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOper
 
 This method should return the query node that represents the result of applying the next operator to the current ad hoc data source node. Similar to the custom operator implementation, the ad hoc data source implementation can decide to do the following:
 
-- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this lifecycle method is not implemented).
+- Append the `nextOperator` to the `currentNode` (i.e., the default behavior when this lifecycle method is not implemented).
 - Remove/ignore the `nextOperator`, usually taking responsibility of the operation internally.
 - Modify/add operators.
 
@@ -180,11 +188,11 @@ This method should return the query node that represents the result of applying 
 > - This lifecycle method will only be called when the `nextOperator` is a filter or a sort operator.
 > - This lifecycle method can be called multiple times if there is a new `nextOperator`.
 
-#### New log viewer web page [ID 42533]
+#### New log viewer webpage [ID 42533]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-Up to now, client applications like DataMiner Cube used the *ViewLog.asp* web page to display server-side log files. This web page has now been replaced by the *ViewLog.aspx* web page.
+Up to now, client applications like DataMiner Cube used the *ViewLog.asp* webpage to display server-side log files. This webpage has now been replaced by the *ViewLog.aspx* webpage.
 
 This new log viewer page has improved compatibility with Failover setups and better error handling for HTTPS certificates.
 

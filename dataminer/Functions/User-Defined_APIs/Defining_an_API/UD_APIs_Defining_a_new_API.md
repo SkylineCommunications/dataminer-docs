@@ -174,10 +174,10 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 | Created | 201 | The request succeeded, and a new resource was created as a result. |
 | Accepted | 202 | The request was received, but not executed yet. Could be used for long-running async actions. |
 | NoContent | 204 | There is no content to return for the request, but the request did succeed. |
-| BadRequest | 400 | There was a client error, e.g. wrong parameters. |
+| BadRequest | 400 | There was a client error, e.g., wrong parameters. |
 | NotFound | 404 | The requested document was not found. |
 | MethodNotAllowed | 405 | The HTTP method is not valid for this request. For example `DELETE` is used while `GET` was expected. |
-| InternalServerError | 500 | Return this if something went wrong in your automation script, e.g. you try to write to a file, but the file is in use by another application. |
+| InternalServerError | 500 | Return this if something went wrong in your automation script, e.g., you try to write to a file, but the file is in use by another application. |
 
 > [!TIP]
 > For more insight into which HTTP status codes to use in which circumstances, see [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
@@ -243,7 +243,7 @@ The headers listed below are **blocked** and will result in an error if you try 
    > You will only be able to see the button *Configure API*  in the UI if the following conditions are met:
    >
    > - You are using DataMiner 10.3.6 or higher.
-   > - The DataMiner System has an active Indexing Engine (e.g. Elasticsearch).
+   > - The DataMiner System has an active Indexing Engine (e.g., Elasticsearch).
    > - You have the permission to read API definitions.
 
 1. Add a description (optional).

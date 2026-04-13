@@ -37,7 +37,7 @@ These are the columns in this tab:
 
 - **Name**: The name of the field. This is both the display name and the ID of the field.
 
-- **Type**: The data type of the DOM field, e.g. string, int, datetime, etc.
+- **Type**: The data type of the DOM field, e.g., string, int, datetime, etc.
 
 - **Default**: Optional. This is the value that will be automatically entered in a field when a new record or instance is created. For example, in an address object, you can set the default value for the city field to "New York". When users add a record to the table, they can then either accept this value or enter the name of a different city.
 

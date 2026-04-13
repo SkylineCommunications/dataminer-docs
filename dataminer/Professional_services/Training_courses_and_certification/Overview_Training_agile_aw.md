@@ -46,7 +46,7 @@ This is what the day will look like:
 - **Critical Thinking Game – Ask "Why?"**: Strengthen your Agile mindset.
 - **Team Presentations**: Share workflows and exchange insights.
 - **Adaptability in Action**: Exercises to build iterative and flexible thinking.
-- **Experiential Learning Simulation**: Virtual project experience (e.g. Lego City Online).
+- **Experiential Learning Simulation**: Virtual project experience (e.g., Lego City Online).
 - **Retrospective & Reflection**: Capture key takeaways and next steps.
 
 ## Practical info

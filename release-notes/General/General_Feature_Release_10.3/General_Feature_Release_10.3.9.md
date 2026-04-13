@@ -255,7 +255,7 @@ When you install or upgrade a DataMiner Agent, the following DataMiner Extension
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-From now on, the root time of an alarm group (i.e. the time of arrival of the first alarm in the alarm group tree) will be set to the most recent of the base alarm root times.
+From now on, the root time of an alarm group (i.e., the time of arrival of the first alarm in the alarm group tree) will be set to the most recent of the base alarm root times.
 
 Up to now, when alarm groups were recreated after a DataMiner upgrade, their time of arrival and root time was set to the time of the upgrade.
 
@@ -432,7 +432,7 @@ SLDataGateway would leak memory when migrating average trend data from MySQL to 
 
 When, in a protocol, an SNMP connection was assigned to a separate thread, in most cases, the polling would get stuck because the main protocol thread would get notified of the response rather than the thread that was assigned to the SNMP connection.
 
-From now on, a poll group will default to connection 0 rather than -1. As a result, when a separate thread is created for the main connection (i.e. the connection with ID 0), the groups for that connection will no longer need to have `connection="0"` specified.
+From now on, a poll group will default to connection 0 rather than -1. As a result, when a separate thread is created for the main connection (i.e., the connection with ID 0), the groups for that connection will no longer need to have `connection="0"` specified.
 
 Also, the following issues have been fixed:
 
@@ -451,7 +451,7 @@ When the backup agent was active, certain BPA tests would incorrectly return the
 
 `This BPA does not apply for this Agent: cannot run on Offline Failover Agents`
 
-Also, certain managers in SLNet (e.g. BPA Manager) would not properly initialize if the following Failover settings were configured in the *SLDMS.xml* file:
+Also, certain managers in SLNet (e.g., BPA Manager) would not properly initialize if the following Failover settings were configured in the *SLDMS.xml* file:
 
 - `State="Offline"`
 - `StateBeforeShutDown="Online"`
@@ -482,14 +482,14 @@ In some cases, an `index out of bounds` error could occur when processing a beha
 
 In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
 
-For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
+For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e., the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
 
 #### SLAnalytics - Automatic incident tracking: 'relationThreshold' set to an incorrect value after a DataMiner upgrade [ID 36826]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 <!-- Not added to MR 10.4.0 -->
 
-After upgrading from DataMiner main version 10.3.0 (or older) to DataMiner feature version 10.3.7 or 10.3.8, the default `relationThreshold` value would unexpectedly be set to 0.5 instead of 0.7 (i.e. the default value).
+After upgrading from DataMiner main version 10.3.0 (or older) to DataMiner feature version 10.3.7 or 10.3.8, the default `relationThreshold` value would unexpectedly be set to 0.5 instead of 0.7 (i.e., the default value).
 
 #### Problem with SLScripting when resolving assemblies [ID 36843]
 
@@ -525,7 +525,7 @@ When an SNMP table was polled with *MultipleGetNext* and the response was not pr
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
-When you imported elements from a CSV file, new elements would only be created on the local agent, not on any of the remote agents, i.e. the agents other than the one the Cube client was connected to. Existing elements would be updated correctly on the local agents as well as on all remote agents.
+When you imported elements from a CSV file, new elements would only be created on the local agent, not on any of the remote agents, i.e., the agents other than the one the Cube client was connected to. Existing elements would be updated correctly on the local agents as well as on all remote agents.
 
 #### Incorrect error message was thrown when NATS credentials could not be retrieved from a remote DMA [ID 36906]
 

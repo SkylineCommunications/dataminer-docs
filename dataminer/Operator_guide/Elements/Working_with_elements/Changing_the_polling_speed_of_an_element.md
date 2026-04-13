@@ -15,7 +15,7 @@ The \[Timer base\] parameter will only affect so-called relative timers. As such
 - If *Protocol.Type* is set to “*true with reset*”, all timers will immediately be reset when the \[Timer base\] parameter is changed.
 
 > [!NOTE]
-> If you set the *relativeTimers* attribute of the *Protocol.Type* tag to “*true*” or “*true with reset*”, all timers specified in that protocol will be relative timers. If, however, you want one or more specific timers to be fixed timers (i.e. timers with a fixed frequency, whatever the value of the \[Timer Base\] Parameter), you can set the *fixedTimer* attribute of their *Protocol.Timers.Timer* tag to “*true*”.
+> If you set the *relativeTimers* attribute of the *Protocol.Type* tag to “*true*” or “*true with reset*”, all timers specified in that protocol will be relative timers. If, however, you want one or more specific timers to be fixed timers (i.e., timers with a fixed frequency, whatever the value of the \[Timer Base\] Parameter), you can set the *fixedTimer* attribute of their *Protocol.Timers.Timer* tag to “*true*”.
 
 ## \[Timer Base\] parameter functionality
 

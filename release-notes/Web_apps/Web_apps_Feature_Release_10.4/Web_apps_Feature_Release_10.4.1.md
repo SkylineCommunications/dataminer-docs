@@ -122,11 +122,11 @@ There are now two ways to duplicate a low-code app:
 
      - To duplicate a different version:
 
-       1. In the top-right corner, click the user icon and select *Versions*.
+       1. In the upper-right corner, click the user icon and select *Versions*.
 
        1. Select the desired version.
 
-  1. In the top-right corner, click the user icon, and select *Duplicate* in the user menu.
+  1. In the upper-right corner, click the user icon, and select *Duplicate* in the user menu.
 
      The current draft version will be copied and the newly created app will automatically be opened in a new browser tab.
 
@@ -229,7 +229,7 @@ When the access level of a user was changed, up to now, that change would not im
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
-When, in the settings of a *Clock* component, you had specified that it had to display the current DataMiner time (i.e. the time of the DataMiner server to which you are connected), the component would incorrectly display the local time (i.e. the DataMiner client time), and vice versa.
+When, in the settings of a *Clock* component, you had specified that it had to display the current DataMiner time (i.e., the time of the DataMiner server to which you are connected), the component would incorrectly display the local time (i.e., the DataMiner client time), and vice versa.
 
 #### Dashboards app & Low-Code Apps: Problems with certain component settings [ID 37829]
 

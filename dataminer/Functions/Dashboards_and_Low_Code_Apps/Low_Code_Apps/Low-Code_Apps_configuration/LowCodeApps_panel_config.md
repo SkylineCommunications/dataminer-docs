@@ -41,7 +41,7 @@ From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39632-->, an open
 
 Users can close a panel in different ways:
 
-- If the panel is opened as an overlay (i.e. the background is slightly blurred), clicking outside the panel will close it.
+- If the panel is opened as an overlay (i.e., the background is slightly blurred), clicking outside the panel will close it.
 
 - Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39632-->), a panel is closed when you navigate to a different page using the sidebar.
 

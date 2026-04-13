@@ -7,11 +7,11 @@ uid: chat
 In DataMiner Cube, it is possible to exchange chat messages with other users of your DataMiner System.
 
 > [!NOTE]
-> All chat messages exchanged by DataMiner users are logged as information events. This means that they can be used to trigger e.g. correlation rules.
+> All chat messages exchanged by DataMiner users are logged as information events. This means that they can be used to trigger e.g., correlation rules.
 
 ## Starting a chat session with a DataMiner user
 
-1. Click the user icon in the top-right corner of the Cube UI.
+1. Click the user icon in the upper-right corner of the Cube UI.
 
    A menu will open.
 
@@ -25,11 +25,11 @@ In DataMiner Cube, it is possible to exchange chat messages with other users of 
 
 ## Responding to a chat message sent by another user
 
-If a DataMiner user sends you a chat message while the chat collaboration panel is not open, the user icon in the top-right corner of the Cube UI will blink to signal this.
+If a DataMiner user sends you a chat message while the chat collaboration panel is not open, the user icon in the upper-right corner of the Cube UI will blink to signal this.
 
 To view the message and respond:
 
-1. Click the user icon in the top-right corner of the Cube UI.
+1. Click the user icon in the upper-right corner of the Cube UI.
 
    A menu will open.
 

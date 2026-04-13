@@ -53,17 +53,17 @@ Finally, a new column has been incorporated into the Port, Split Distribution, a
 
 ### Enhancements
 
-#### Route EPM Entity moved to front end [ID 36683]
+#### Route EPM Entity moved to frontend [ID 36683]
 
-To prevent possible duplicate entries, the Route EPM Entity has been moved from the back-end managers to the front-end manager.
+To prevent possible duplicate entries, the Route EPM Entity has been moved from the backend managers to the frontend manager.
 
 #### Number ONT KPI improved [ID 37024]
 
 The logic that calculates the Number ONT KPI at network level has been adjusted to provide a more accurate count of the ONTs in the system.
 
-#### Improved EPM front-end ID request flow [ID 37036]
+#### Improved EPM frontend ID request flow [ID 37036]
 
-To improve the EPM front-end ID request flow, so that new entities are available to the user more quickly, the EPM front-end element now no longer has to assign IDs to the xPON CPE devices.
+To improve the EPM frontend ID request flow, so that new entities are available to the user more quickly, the EPM frontend element now no longer has to assign IDs to the xPON CPE devices.
 
 #### Remote view parameters moved from ONT overview to dashboard [ID 37160]
 

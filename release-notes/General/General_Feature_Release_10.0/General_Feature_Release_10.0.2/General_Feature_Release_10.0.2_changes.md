@@ -175,7 +175,7 @@ Due to a number of enhancements, overall performance has increased when drawing 
 
 #### SLNetClientTest tool: Failover Agents included when viewing across cluster \[ID 24170\]
 
-In the SLNetClientTest tool, for some messages (e.g. *Diagnostics* > *SLNet* > *StackSizes*) it is possible to right-click the message and select *View across cluster* to send it to the entire DMS. This feature has now been improved to include Failover Agents as well.
+In the SLNetClientTest tool, for some messages (e.g., *Diagnostics* > *SLNet* > *StackSizes*) it is possible to right-click the message and select *View across cluster* to send it to the entire DMS. This feature has now been improved to include Failover Agents as well.
 
 #### DataMiner Cube - Automation/Correlation: Width of action dialog boxes will now automatically be adapted to the size of the screen \[ID 24190\]
 
@@ -318,9 +318,9 @@ The following fields have been removed from the *DMAScatterAxisInfo* object:
 
 Due to a number of enhancements, overall performance has increased when updating active function definitions.
 
-#### Annotation web pages now contain an explicit UTF-8 character encoding declaration \[ID 24555\]
+#### Annotation webpages now contain an explicit UTF-8 character encoding declaration \[ID 24555\]
 
-From now on, the annotation web pages will contain the following explicit UTF-8 character encoding declaration:
+From now on, the annotation webpages will contain the following explicit UTF-8 character encoding declaration:
 
 ```xml
 <meta charset="utf-8">
@@ -774,7 +774,7 @@ In some cases, an exception could be thrown when, during an element edit, you ch
 
 In the Bookings app, in some cases, bookings displayed on the bookings timeline would not be listed in the bookings list.
 
-#### DataMiner Cube: Problem when displaying dialog box while window/scroll bar thumb is dragged \[ID 24383\]
+#### DataMiner Cube: Problem when displaying dialog box while window/scrollbar thumb is dragged \[ID 24383\]
 
 In the XBAP version of DataMiner Cube, if a dialog box was displayed while a user was dragging a window or a scrollbar thumb, a problem could cause Cube to freeze.
 
@@ -808,7 +808,7 @@ In some rare cases, it could occur that the column configuration of a *ListView*
 
 #### DataMiner Cube: Editing an SNMPv3 element created prior to DataMiner 9.6.12 would cause the authentication type to be reset to the default type \[ID 24423\]
 
-When you edited an SNMPv3 element that was created prior to DataMiner 9.6.12, in some cases, the authentication type would incorrectly be reset to the default type (i.e. SHA512).
+When you edited an SNMPv3 element that was created prior to DataMiner 9.6.12, in some cases, the authentication type would incorrectly be reset to the default type (i.e., SHA512).
 
 #### Tables would show incorrect data after being updated \[ID 24425\]
 
@@ -890,7 +890,7 @@ When an Indexing database was installed on a pair of DataMiner Agents in a Failo
 
 #### Problem when opening an HTML5 app \[ID 24565\]
 
-When you opened an HTML5 app (e.g. Monitoring & Control, Dashboards, etc.), in some cases, the app would not load due to a missing internal component.
+When you opened an HTML5 app (e.g., Monitoring & Control, Dashboards, etc.), in some cases, the app would not load due to a missing internal component.
 
 #### Service & Resource Management: Problem during Resource Manager initializing \[ID 24604\]
 

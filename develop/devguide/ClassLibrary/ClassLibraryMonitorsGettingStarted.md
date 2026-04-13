@@ -1,5 +1,6 @@
 ---
 uid: ClassLibraryMonitorsGettingStarted
+keywords: class library
 ---
 
 # Getting started
@@ -7,7 +8,7 @@ uid: ClassLibraryMonitorsGettingStarted
 > [!NOTE]
 > An example protocol "SLC SDF Monitors" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
-The monitor methods are extension methods on the current DMS classes framework provided with the class library.
+The monitor methods are extension methods on the current DMS classes framework provided with the DataMinerSystem library.
 
 To access these extension methods you need the following two namespaces:
 

@@ -479,7 +479,7 @@ Because of a number of enhancements, overall performance has increased when retr
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
-Previously, cell values of GQI result rows for DomInstanceIds, DomDefinitionIds, ProfileInstanceIds, and ProfileDefinitionIds contained both the display value of the GUID and the object type (e.g. "DomDefinitionId[00000000-0000-0000-0000-000000000000]"). Now the cell value will only contain the display value of the GUID.
+Previously, cell values of GQI result rows for DomInstanceIds, DomDefinitionIds, ProfileInstanceIds, and ProfileDefinitionIds contained both the display value of the GUID and the object type (e.g., "DomDefinitionId[00000000-0000-0000-0000-000000000000]"). Now the cell value will only contain the display value of the GUID.
 
 #### SLAnalytics: Enhanced automatic evaluation of trend predictions [ID 34901]
 
@@ -746,7 +746,7 @@ Also, in some cases, the value in the *Number of columns* input box could incorr
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
-When you sorted or filtered a table fed by e.g. a query filter, the table would incorrectly lose its conditional coloring.
+When you sorted or filtered a table fed by e.g., a query filter, the table would incorrectly lose its conditional coloring.
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID 34981]
 

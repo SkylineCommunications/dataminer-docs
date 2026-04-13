@@ -79,7 +79,7 @@ Up to now, it would only return the first page of such a table.
 
 ##### QueryData method
 
-The new IDmsTable QueryData method will return an IEnumerable\<object\[\]\>, i.e. a collection of row objects.
+The new IDmsTable QueryData method will return an IEnumerable\<object\[\]\>, i.e., a collection of row objects.
 
 To this method, you can pass a column filter as an ICollection\<ITableFilter>, in which each ITableFilter item contains a ColumnPid, a ColumnValue and a CompareType property. If, for example, you only want to retrieve the rows in which column parameter 1003 is set to “test”, you can specify the following:
 
@@ -130,7 +130,7 @@ The IEngine interface now supports the extension of the GetDms method.
     | 3.4.3 | NoCSharpCodeAnalysisPerformed | No C# QAction code analysis was performed due to unsupported C# version '{cSharpVersion}' in Visual Studio version '{visualStudioVersion}'. |
 
 - The Validator will no longer throw an exception if the placeholders used in the dllImport attribute are spelled incorrectly. Instead, it will show a message indicating that the specified DLL file could not be found.
-- The Validator will now ignore empty dllImport values (e.g. when the dllImport attribute value ends with “;”).
+- The Validator will now ignore empty dllImport values (e.g., when the dllImport attribute value ends with “;”).
 
 #### IDE - Table Editor: Scrolling inside selection boxes has been disabled \[ID 25310\]
 

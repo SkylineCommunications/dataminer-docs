@@ -35,7 +35,7 @@ All specifications are provided based on the assumption that DMAs are running on
 | 12 | Number of DVEs | DMA | 2,000 - 10,000 | Depending on the type of device. |
 | 13 | Number of EPM (formerly CPE) devices | DMA | 100,000 | Based on a 15-minute update cycle. |
 | 14 | Number of views | DMS | 8,000 ||
-| 15 | Number of parameters | DMA | 25,000,000 | Based on a 15-minute update cycle.<br>Note: This figure supersedes metric 13 above (i.e. number of EPM devices) |
+| 15 | Number of parameters | DMA | 25,000,000 | Based on a 15-minute update cycle.<br>Note: This figure supersedes metric 13 above (i.e., number of EPM devices) |
 | 16 | Number of configured users | DMS | 1,000 ||
 | 17 | Number of online users | DMS | 100 | Assuming common user behavior. |
 | 18 | Switch frequency | DataMiner Failover | 1 switch every 15 minutes ||
@@ -46,6 +46,8 @@ All specifications are provided based on the assumption that DMAs are running on
 | 23 | Number of concurrent automation script executions | DMA | 500 ||
 | 24 | Number of scheduled tasks starting at the same time | DMA | 100 | |
 | 25 | Total number of scheduled tasks | DMA | 3000 | This total includes all tasks, regardless of whether they are enabled and regardless of whether their trigger time is in the past or in the future. A recurring task (such as daily or weekly schedules) counts as one task, regardless of how many times it is executed. |
+| 26 | Number of overlapping bookings | DMS | 15,000 | This includes all bookings in a DMS. Validated using bookings with 6 resources on average. If a service is created for every active booking, metric 3 above applies. In case [contributing bookings](xref:srm_instantiations#contributing-booking) are used, metrics 4 and 5 above apply, because enhanced services are made for contributing bookings. |
+| 27 | Number of resources | DMS | 100,000 | Validated with 1 capacity and 4 capabilities per resource. If [virtual function resources](xref:srm_instantiations#virtual-function-resource) are used, metric 12 applies, because each function resource will create a DVE. |
 
 ## Benchmarks
 

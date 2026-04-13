@@ -23,6 +23,3 @@ No fix is available yet. <!--Task ID: 187896-->
 ## Issue description
 
 Applying a parameter name override at element level may lead to problems in SLElement, such as a memory leak or an unexpected DMA restart.
-
-> [!TIP]
-> See also: [Various resolved SLElement issues](xref:KI_SLElement_various_resolved_issues)

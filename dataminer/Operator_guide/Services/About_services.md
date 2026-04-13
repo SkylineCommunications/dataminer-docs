@@ -44,7 +44,7 @@ In short, when you focus on services rather than devices, if an alarm is raised,
 
 ## Enhanced services
 
-DataMiner also supports so-called enhanced services. These are services that are created with a **service protocol** (e.g. [Skyline Service Definition Basic](https://catalog.dataminer.services/details/809251d6-724d-499a-9c3c-d41ae1b5492b)). Enhanced services provide real-time service-level metrics, derived from metrics of the underlying and included managed objects. Alarm and trend templates can be assigned directly to such services.
+DataMiner also supports so-called enhanced services. These are services that are created with a **service protocol** (e.g., [Skyline Service Definition Basic](https://catalog.dataminer.services/details/809251d6-724d-499a-9c3c-d41ae1b5492b)). Enhanced services provide real-time service-level metrics, derived from metrics of the underlying and included managed objects. Alarm and trend templates can be assigned directly to such services.
 
 ## Service templates
 

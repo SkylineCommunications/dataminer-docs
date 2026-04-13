@@ -58,7 +58,7 @@ To disconnect a DataMiner System from dataminer.services:
 
 1. Delete the DMS on dataminer.services:
 
-   1. On the dataminer.services page, click the ellipsis ( "...") button in the top-right corner of the box representing the DataMiner System and select *Delete DMS*.
+   1. On the dataminer.services page, click the ellipsis ( "...") button in the upper-right corner of the box representing the DataMiner System and select *Delete DMS*.
 
    1. Fill in the name of the system to confirm that this is the system you want to remove.
 

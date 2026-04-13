@@ -9,7 +9,7 @@ uid: MOP_Upgrading_Elasticsearch_from_one_minor_version_to_another
 
 ## Introduction
 
-For reasons of security or stability, it can be useful to upgrade Elasticsearch from one **minor version** to another (e.g. from version 6.8.X to version 6.8.Y). This article contains detailed instructions for this upgrade.
+For reasons of security or stability, it can be useful to upgrade Elasticsearch from one **minor version** to another (e.g., from version 6.8.X to version 6.8.Y). This article contains detailed instructions for this upgrade.
 
 These instructions are only intended for Elasticsearch setups on **Microsoft Windows**. For setups on Linux systems, see [Rolling upgrades | Elasticsearch Guide [6.8] | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/rolling-upgrades.html). If you are comfortable with Linux systems, you can follow the instructions below and translate each operation to the correct Linux counterpart.
 
@@ -24,7 +24,7 @@ Access to the server with administrator rights. This requires a connection dedic
 
 ### Performing a rolling upgrade (optional)
 
-If you prefer to perform a rolling upgrade, i.e. upgrade one node at a time, make sure to perform step 1 and 2 of [Rolling upgrades | Elasticsearch Guide [6.8] | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/rolling-upgrades.html#rolling-upgrades). This will ensure that there is no unnecessary internet traffic while upgrading.
+If you prefer to perform a rolling upgrade, i.e., upgrade one node at a time, make sure to perform step 1 and 2 of [Rolling upgrades | Elasticsearch Guide [6.8] | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/rolling-upgrades.html#rolling-upgrades). This will ensure that there is no unnecessary internet traffic while upgrading.
 
 ### Downloading the binaries
 

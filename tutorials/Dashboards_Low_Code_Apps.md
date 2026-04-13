@@ -53,7 +53,7 @@ This page provides an overview of all Dashboards and Low-Code Apps tutorials, or
 
 | Name | Description |
 |--|--|
-| [Creating a minus operator](xref:Creating_Minus_Operator) | Create a custom operator that subtracts two values and adds the result to a table, e.g. to calculate your profits based on sales and costs. |
+| [Creating a minus operator](xref:Creating_Minus_Operator) | Create a custom operator that subtracts two values and adds the result to a table, e.g., to calculate your profits based on sales and costs. |
 | [Creating a duration operator](xref:Creating_Duration_Operator) | Create a custom operator that calculates the duration based on two datetime values. |
 | [Optimizing your custom operator](xref:Custom_Operator_Tutorial) | Optimize your custom operator while keeping an eye out for common pitfalls. |
 | [Providing a custom sort order](xref:GQI_Redirect_Sort_Tutorial) | Implement a custom GQI column sort order using a custom operator. |

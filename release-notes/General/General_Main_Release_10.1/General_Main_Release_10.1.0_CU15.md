@@ -50,7 +50,7 @@ SLDMS, which is a 32-bit process, will now be started with the /LARGEADDRESSAWAR
 
 #### Enhanced performance when processing a large number of objects with links to other objects \[ID 33271\]
 
-Because of a number of enhancements, overall performance has increased when processing (e.g. exporting) a large number of objects with links to other objects.
+Because of a number of enhancements, overall performance has increased when processing (e.g., exporting) a large number of objects with links to other objects.
 
 #### IPC channel port names will now always be unique \[ID 33274\]
 
@@ -104,7 +104,7 @@ From now on, when no IP port is specified, the last port set will be used. And i
 
 #### Problem when trying to retrieve base parameter values after changing the production version of a protocol based on a base protocol \[ID 33288\]
 
-After changing the production version of a protocol based on a so-called base protocol, it would no longer be possible to retrieve values from any of the base parameters (i.e. parameters of the base protocol).
+After changing the production version of a protocol based on a so-called base protocol, it would no longer be possible to retrieve values from any of the base parameters (i.e., parameters of the base protocol).
 
 #### BREAKING CHANGE: Problem when filtering a table with a foreign key relation to a remote table using a filter that contained a value from the remote table \[ID 33294\]
 

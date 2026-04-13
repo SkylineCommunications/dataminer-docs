@@ -13,22 +13,30 @@ The methods use the node label to identify a node in the service definition.
 Here is a code sample:
 
 ```csharp
-public void Run(Engine engine)
-    {
-        engine.SetFlag(RunTimeFlags.NoKeyCaching);
-    
-        try
-        {
-            
-            Guid myReservationGuid = Guid.Parse(engine.GetScriptParam("ReservationGuid").Value);
-            
-            var bookingManager = new BookingManager(engine, engine.FindElement(BookingManagerElementName));
+using System;
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Core.SRM;
+using Skyline.DataMiner.Core.SRM.Extensions.Reservations;
 
-            var instance = SrmManagers.ResourceManager.GetReservationInstance(myReservationGuid);
-            
-            bookingManager.TryAddResource(engine,ref instance,Guid.Parse(engine.GetScriptParam("ResourceGuid").Value), engine.GetScriptParam("Label").Value);
-            
-        }
+public class Script
+{
+   public void Run(Engine engine)
+   {
+      // Update with relevant data
+      var reservationGuid = Guid.NewGuid();
+      var resourceGuid = Guid.NewGuid();
+      var nodeLabel = "Decoder";
+
+      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid);
+      var bookingManager = reservation.FindBookingManager();
+
+      bookingManager.TryAddResource(engine, ref reservation, resourceGuid, nodeLabel);
+
+      // Example of passing a service definition template as an extra parameter to the TryAddResource method
+      var existingServiceDefinitionGuid = Guid.Parse(engine.GetScriptParam("ServiceDefinitionGuid").Value);
+      bookingManager.TryAddResource(engine, ref reservation, resourceGuid, nodeLabel, existingServiceDefinitionGuid);
+   }
+}
 ```
 
 > [!NOTE]
@@ -37,3 +45,4 @@ public void Run(Engine engine)
 > - In case no label is provided, SRM will try to identify a free node based on function type.
 > - In case a free and compatible node is found, but it has a non-matching label, that node will be picked.
 > - In case no label is provided and a new service definition needs to be created, the function name will be used as the label.
+> - From SRM 1.2.33 onwards<!-- RN 36792 -->, it is possible to pass the desired service definition as a parameter to the *AddResource* and *TryAddResource* methods. From SRM 1.2.35 onwards<!-- RN 38346 -->, you need to make sure that the passed service definition is compatible with the booking and contains a node with the provided label, as otherwise undesired behavior may occur.

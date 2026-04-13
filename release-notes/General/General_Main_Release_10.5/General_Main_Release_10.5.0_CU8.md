@@ -7,6 +7,14 @@ uid: General_Main_Release_10.5.0_CU8
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!IMPORTANT]
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.5.0 CU8](xref:Cube_Main_Release_10.5.0_CU8).
@@ -178,7 +186,7 @@ Up to now, after you had imported a DELT package containing average trend data i
 
 Since DataMiner version 10.5.0/10.4.12, the DataMiner Agent is no longer restarted when an SLProtocol process disappears. Instead, a new SLProtocol process is started and all elements that were hosted by the process that disappeared are now be hosted by the newly created process.
 
-However, up to now, when an SLProtocol process disappeared, SLWatchdog would remove all entries in its threads table that matched the name of the process (e.g. "SLProtocol"). This would result in all entries of the other SLProtocol processes to be removed as well.
+However, up to now, when an SLProtocol process disappeared, SLWatchdog would remove all entries in its threads table that matched the name of the process (e.g., "SLProtocol"). This would result in all entries of the other SLProtocol processes to be removed as well.
 
 From now on, SLWatchdog will only remove the threads table entries that match the name as well as the ID of the process.
 

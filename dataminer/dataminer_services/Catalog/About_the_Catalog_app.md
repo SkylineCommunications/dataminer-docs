@@ -17,12 +17,12 @@ There are several ways to access the Catalog app:
 
 - Go to <https://dataminer.services>, [sign in](xref:Logging_on_to_dataminer_services), and click *Catalog* on the landing page.
 
-- Go to the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page), and click *Browse Catalog* in the top-right corner of the Low-Code Apps section (from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->).
+- Go to the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page), and click *Browse Catalog* in the upper-right corner of the Low-Code Apps section (from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->).
 
 - In DataMiner Cube, go to *Apps* > *Catalog* (from DataMiner 10.2.9/10.3.0 onwards).
 
 > [!NOTE]
-> While you do not have to sign in to view Catalog items, not all functionality will be available if you are not signed in. To sign in, click the button in the top-right corner of the Catalog UI.
+> While you do not have to sign in to view Catalog items, not all functionality will be available if you are not signed in. To sign in, click the button in the upper-right corner of the Catalog UI.
 
 ## About Catalog items
 
@@ -56,7 +56,7 @@ At present, the following types of Catalog items are supported:
 
 ### Versioning of Catalog items
 
-Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [semantic versioning](https://semver.org/) is recommended. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
+Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [semantic versioning](https://semver.org/) is recommended. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g., 1.2.3-alpha).
 
 For Catalog items that follow semantic versioning, versions are grouped by **range**. Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.<!-- RN 41243 -->
 
@@ -69,7 +69,7 @@ The Catalog will recommend certain versions based on the following conditions:
 - If neither of the above apply, the latest version of the highest active range will be recommended.
 
 > [!NOTE]
-> Versions and ranges that are not supported (i.e. deprecated ranges and versions marked as pre-release or unlisted) are not shown by default. To view these, use the *Unsupported versions* toggle button.<!-- RN 39903 -->
+> Versions and ranges that are not supported (i.e., deprecated ranges and versions marked as pre-release or unlisted) are not shown by default. To view these, use the *Unsupported versions* toggle button.<!-- RN 39903 -->
 
 > [!TIP]
 > For detailed information about semantic versioning practices and best practices for the creation of Catalog items, see [Best practices when creating Catalog items](xref:Best_Practices_When_Creating_Catalog_Items#use-semantic-versioning).

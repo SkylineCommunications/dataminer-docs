@@ -123,6 +123,6 @@ Currently, all elements are displayed in the table. To allow filtering, you will
 
    1. Click *Ok*.
 
-1. Publish the app by clicking the ![Publish](~/dataminer/images/AppPublishIcon.png) button in the top-right corner of the low-code app header bar.
+1. Publish the app by clicking the ![Publish](~/dataminer/images/AppPublishIcon.png) button in the upper-right corner of the low-code app header bar.
 
    Your app is now functional. By default, it displays all elements in your DataMiner System, but you can use the buttons in the header bar to filter the list to show only active or stopped elements.

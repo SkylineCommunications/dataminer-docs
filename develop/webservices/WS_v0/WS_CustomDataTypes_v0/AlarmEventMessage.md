@@ -22,7 +22,7 @@ uid: AlarmEventMessage
 | ElementName | String | The name of the element on which the alarm occurred. |
 | ElementType | String | The type of the element on which the alarm occurred. |
 | ParameterName | String | The name of the parameter on which the alarm occurred. |
-| DisplayValue | String | The textual representation of the alarm value. This representation includes units and has transformations (e.g. discreet mappings) applied. See *Value* above. |
+| DisplayValue | String | The textual representation of the alarm value. This representation includes units and has transformations (e.g., discreet mappings) applied. See *Value* above. |
 | RootTime | DateTime | The timestamp of the first alarm in the tree to which this alarm record belongs. |
 | Services | Array of string | The list of DmaId/ElementId pairs referring to the services in which the alarm is included. |
 | ParentServices | Array of AlarmServiceInfo | Information about the services in which this alarm is included. Each AlarmServiceInfo object contains a service name a DmaId/ServiceId pair. |

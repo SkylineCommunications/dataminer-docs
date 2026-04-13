@@ -83,8 +83,8 @@ The elements will be created with the following specifications:
   - **Trend template**: The default trend template.
   - **Get community string CCAP**: The defined get community string for the CCAP.
   - **Set community string CCAP**: The defined set community string for the CCAP.
-  - **Entity export directory**: The same directory as is set in the back end of the host.
-  - **Entity import directory**: The same directory as is set in the back end of the host.
+  - **Entity export directory**: The same directory as is set in the backend of the host.
+  - **Entity import directory**: The same directory as is set in the backend of the host.
   - **Entity import directory type**: Remote.
   - **System username**: The username to access the shared folder.
   - **System password**: The password to access the shared folder.
@@ -99,7 +99,7 @@ The elements will be created with the following specifications:
   - **Trend template**: private.
   - **Get community string Collector**: The defined get community string for the collector.
   - **Set community string Collector**: The defined set community string for the collector.
-  - **Entity import directory**: The same directory as is set in the back end of the host.
+  - **Entity import directory**: The same directory as is set in the backend of the host.
   - **Entity import directory type**: Remote.
   - **System username**: The username to access the shared folder.
   - **System password**: The password to access the shared folder.

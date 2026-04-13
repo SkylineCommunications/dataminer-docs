@@ -51,7 +51,7 @@ For each DMA that should be connected, verify whether the DMA is operational and
    ```xml
    <MaintenanceSettings>
        ...
-       <HTTPS enabled="true" name="foo.skyline.local"/>
+       <HTTPS enabled="true" name="example.mydomain.local"/>
        ...
    </MaintenanceSettings>
    ```

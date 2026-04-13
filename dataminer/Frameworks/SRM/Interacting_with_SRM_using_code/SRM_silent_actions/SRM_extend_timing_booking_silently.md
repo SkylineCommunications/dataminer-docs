@@ -8,33 +8,29 @@ The example below shows how the timing of a booking can be extended without user
 
 ```csharp
 using System;
-using Skyline.DataMiner.Library.Solutions.SRM;
 using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Core.SRM;
+using Skyline.DataMiner.Core.SRM.Extensions.Reservations;
+using Skyline.DataMiner.Core.SRM.Model.ReservationAction;
 
-namespace SRMSolution_SilentActions.Extend
+public class Script
 {
-    public class Script
-    {
-        public static void Run(Engine engine)
-        {
-            // Replace with reservation guid
-            var ReservationGuid = Guid.NewGuid();
+   public static void Run(Engine engine)
+   {
+      // Replace with reservation guid
+      var reservationGuid = Guid.NewGuid();
 
-            // Replace with Element Name of the Booking Manager 
-            string BookingManagerElementName = "Booking Manager";
+      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid);
 
-            var sri = SrmManagers.ResourceManager.GetReservationInstance(ReservationGuid);
+      var bookingManager = reservation.FindBookingManager();
 
-            var bookingManager = new BookingManager(engine,
-                                    engine.FindElement(BookingManagerElementName));
+      var extendBookingInputData = new ExtendBookingInputData
+      {
+         IsSilent = true,
+         TimeToAdd = TimeSpan.FromHours(1),
+      };
 
-            var extendBookingInputData = new Skyline.DataMiner.Library.Solutions.SRM.Model.ReservationAction.ExtendBookingInputData();
-            extendBookingInputData.TimeToAdd = new TimeSpan(1, 0, 0);
-
-
-            var result = bookingManager.TryExtend(engine, ref sri, extendBookingInputData);
-            
-        }
-    }
+      var result = bookingManager.TryExtend(engine, ref reservation, extendBookingInputData);
+   }
 }
 ```

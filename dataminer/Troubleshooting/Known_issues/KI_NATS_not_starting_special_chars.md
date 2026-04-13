@@ -18,4 +18,4 @@ No fix is available yet.
 
 ## Issue description
 
-If a DataMiner System has a name starting with a special character, e.g. "♣ DMS ♣", each time ResetNATSCustodianRequest runs, NATS refuses to start up.
+If a DataMiner System has a name starting with a special character, e.g., "♣ DMS ♣", each time ResetNATSCustodianRequest runs, NATS refuses to start up.

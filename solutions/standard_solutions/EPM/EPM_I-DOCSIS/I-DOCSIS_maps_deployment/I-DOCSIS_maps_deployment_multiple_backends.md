@@ -2,10 +2,10 @@
 uid: I-DOCSIS_maps_deployment_multiple_backends
 ---
 
-# Systems with multiple back-end elements
+# Systems with multiple backend elements
 
 > [!NOTE]
-> The configuration files mentioned in the procedure below are automatically installed when you upgrade to the latest EPM Integrated DOCSIS version. You can find them in the following folder on the DMA where the front-end element is located: `C:\Skyline DataMiner\Maps\Configs`.
+> The configuration files mentioned in the procedure below are automatically installed when you upgrade to the latest EPM Integrated DOCSIS version. You can find them in the following folder on the DMA where the frontend element is located: `C:\Skyline DataMiner\Maps\Configs`.
 
 To deploy the Integrated DOCSIS EPM maps to a DataMiner System with multiple elements using the [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/details/b175a610-19d0-4281-99cc-359e09a7e859) protocol:
 
@@ -15,7 +15,7 @@ To deploy the Integrated DOCSIS EPM maps to a DataMiner System with multiple ele
 
    ![Verify if the elementVar field contains the card variable](~/dataminer/images/EPM_I_DOCSIS_maps_deployment_maps_config_one_backend.png)
 
-1. Create a relation layer per back-end element. You can copy one of the existing layers in the configuration file and paste it until you match the number of back-end elements in the DMS. For example, if the DMS has 11 back-end elements, you need to create 11 relation layers in the map configuration file.
+1. Create a relation layer per backend element. You can copy one of the existing layers in the configuration file and paste it until you match the number of backend elements in the DMS. For example, if the DMS has 11 backend elements, you need to create 11 relation layers in the map configuration file.
 
    A relation layer has the following structure:
 
@@ -40,9 +40,9 @@ To deploy the Integrated DOCSIS EPM maps to a DataMiner System with multiple ele
    </Layer>
    ```
 
-1. Verify for each relation layer that the *DataMinerID* and *ElementID* tags contain the DataMiner ID and element ID of a back-end element.
+1. Verify for each relation layer that the *DataMinerID* and *ElementID* tags contain the DataMiner ID and element ID of a backend element.
 
-   For example, if 26458/13 is the DataMiner ID/element ID combination of the first back-end element and 26459/29 is the DataMiner ID/element ID combination of the second back-end element:
+   For example, if 26458/13 is the DataMiner ID/element ID combination of the first backend element and 26459/29 is the DataMiner ID/element ID combination of the second backend element:
 
     - First relation layer
 
@@ -71,7 +71,7 @@ To deploy the Integrated DOCSIS EPM maps to a DataMiner System with multiple ele
       ```
 
    > [!NOTE]
-   > The order in which each back-end element is assigned to each relation layer does not matter. Make sure that all relation layers contain different DataMiner ID/element ID values, and that each back-end element in the system has a corresponding relation layer.
+   > The order in which each backend element is assigned to each relation layer does not matter. Make sure that all relation layers contain different DataMiner ID/element ID values, and that each backend element in the system has a corresponding relation layer.
 
 1. Get the files *EPM_MAPS_AMPLIFIER.xml* and *EPM_MAPS_AMPLIFIER_CPE.xml* and make sure that the *elementVar* field of all passive layers contains the name of the card variable (without the initial underscore) used in the Skyline EPM Platform Visio drawing.
 
@@ -89,4 +89,4 @@ To deploy the Integrated DOCSIS EPM maps to a DataMiner System with multiple ele
 
    1. Create a relation layer per backend element, as detailed above.
 
-   1. Verify for each relation layer that the *DataMinerID* and *ElementID* tags contain the DataMiner ID and element ID of a back-end element, as detailed above.
+   1. Verify for each relation layer that the *DataMinerID* and *ElementID* tags contain the DataMiner ID and element ID of a backend element, as detailed above.

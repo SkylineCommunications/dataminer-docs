@@ -7,7 +7,7 @@ uid: ChangeParameterDiscreetException
 Changing discreets or changing exceptions is considered a major change.
 
 > [!NOTE]
-> A change in *dependancyValue* will not cause any impact.
+> A change in *dependencyValue* will not cause any impact.
 
 ## Impact
 

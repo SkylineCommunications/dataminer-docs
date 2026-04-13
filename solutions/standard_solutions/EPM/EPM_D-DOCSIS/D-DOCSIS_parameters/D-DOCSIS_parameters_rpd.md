@@ -110,81 +110,81 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
   - RPD Sensors table OID: 1.3.6.1.4.1.4491.2.1.30.1.2.2.
   - Value column OID: 1.3.6.1.4.1.4491.2.1.30.1.2.2.1.4.
 
-- **Destination IF In Utilization**: Calculated. The In (Upstream) Utilization of the external interface(s) connected to the RPD. This is the data that flows from the RPD up to a CIN device (i.e. Layer 2 Switch).
+- **Destination IF In Utilization**: Calculated. The In (Upstream) Utilization of the external interface(s) connected to the RPD. This is the data that flows from the RPD up to a CIN device (i.e., Layer 2 Switch).
 
   Calculated by mapping the In utilization (calculated using the change in input octets) of the external interface(s) connected to the RPD.
 
   - Interface table OID: 1.3.6.1.2.1.2.2.
   - Interface in octets OID: 1.3.6.1.2.1.2.2.1.10.
 
-- **Destination IF Out Utilization**: Calculated. The Out (Downstream) Utilization of the external interface(s) connected to the RPD. This is the data that flows from the CIN device (i.e. Layer 2 Switch) to the RPD interface(s).
+- **Destination IF Out Utilization**: Calculated. The Out (Downstream) Utilization of the external interface(s) connected to the RPD. This is the data that flows from the CIN device (i.e., Layer 2 Switch) to the RPD interface(s).
 
   Calculated by mapping the Out utilization (calculated using the change in output octets) of the external interface(s) connected to the RPD.
 
   - Interface table OID: 1.3.6.1.2.1.2.2.
   - Interface out octets OID: 1.3.6.1.2.1.2.2.1.16.
 
-- **Number CM OFDM CH 1 Profile 0**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the first profile available (i.e. 0).
+- **Number CM OFDM CH 1 Profile 0**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the first profile available (i.e., 0).
 
   Call: show cable modem phy ofdm.
 
-- **Number CM OFDM CH 1 Profile 1**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the second profile available (i.e. 1).
+- **Number CM OFDM CH 1 Profile 1**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the second profile available (i.e., 1).
 
   Call: show cable modem phy ofdm.
 
-- **Number CM OFDM CH 1 Profile 2**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the third profile available (i.e. 2).
+- **Number CM OFDM CH 1 Profile 2**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the third profile available (i.e., 2).
 
   Call: show cable modem phy ofdm.
 
-- **Number CM OFDM CH 1 Profile 3**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the fourth profile available (i.e. 3).
+- **Number CM OFDM CH 1 Profile 3**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the fourth profile available (i.e., 3).
 
   Call: show cable modem phy ofdm.
 
-- **Percentage CM OFDM CH 1 Profile 0**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the first profile available (i.e. 0).
+- **Percentage CM OFDM CH 1 Profile 0**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the first profile available (i.e., 0).
 
   Call: show cable modem phy ofdm.
 
-- **Percentage CM OFDM CH 1 Profile 1**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the second profile available (i.e. 1).
+- **Percentage CM OFDM CH 1 Profile 1**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the second profile available (i.e., 1).
 
   Call: show cable modem phy ofdm.
 
-- **Percentage CM OFDM CH 1 Profile 2**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the third profile available (i.e. 2).
+- **Percentage CM OFDM CH 1 Profile 2**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the third profile available (i.e., 2).
 
   Call: show cable modem phy ofdm.
 
-- **Percentage CM OFDM CH 1 Profile 3**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the fourth profile available (i.e. 3).
+- **Percentage CM OFDM CH 1 Profile 3**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the fourth profile available (i.e., 3).
 
   Call: show cable modem phy ofdm.
 
-- **Number CM OFDM CH 2 Profile 0**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the first profile available (i.e. 0).
+- **Number CM OFDM CH 2 Profile 0**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the first profile available (i.e., 0).
 
   Call: show cable modem phy ofdm.
 
-- **Number CM OFDM CH 2 Profile 1**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the second profile available (i.e. 1).
+- **Number CM OFDM CH 2 Profile 1**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the second profile available (i.e., 1).
 
   Call: show cable modem phy ofdm.
 
-- **Number CM OFDM CH 2 Profile 2**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the third profile available (i.e. 2).
+- **Number CM OFDM CH 2 Profile 2**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the third profile available (i.e., 2).
 
   Call: show cable modem phy ofdm.
 
-- **Number CM OFDM CH 2 Profile 3**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the fourth profile available (i.e. 3).
+- **Number CM OFDM CH 2 Profile 3**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the fourth profile available (i.e., 3).
 
   Call: show cable modem phy ofdm.
 
-- **Percentage CM OFDM CH 2 Profile 0**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the first profile available (i.e. 0).
+- **Percentage CM OFDM CH 2 Profile 0**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the first profile available (i.e., 0).
 
   Call: show cable modem phy ofdm.
 
-- **Percentage CM OFDM CH 2 Profile 1**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the second profile available (i.e. 1).
+- **Percentage CM OFDM CH 2 Profile 1**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the second profile available (i.e., 1).
 
   Call: show cable modem phy ofdm.
 
-- **Percentage CM OFDM CH 2 Profile 2**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the third profile available (i.e. 2).
+- **Percentage CM OFDM CH 2 Profile 2**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the third profile available (i.e., 2).
 
   Call: show cable modem phy ofdm.
 
-- **Percentage CM OFDM CH 2 Profile 3**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the fourth profile available (i.e. 3).
+- **Percentage CM OFDM CH 2 Profile 3**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the fourth profile available (i.e., 3).
 
   Call: show cable modem phy ofdm.
 
