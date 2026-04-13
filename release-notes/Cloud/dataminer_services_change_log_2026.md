@@ -9,6 +9,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 13 April 2026 - Enhancement - Admin - Improved grouping for adding a subscription
+
+On the Add Subscription panel in the Admin app, service names are now shown instead of unit names to make it clearer which selection applies to which service.
+
+Unit names have been moved into the input boxes.
+
 ### 13 April 2026 - Enhancement - dataminer.services - DaaS configuration options added to deployment flow
 
 For users deploying a DaaS system, it is now possible to select the DaaS region and STaaS region, as well as to configure geo-replication, directly from the dataminer.services deployment flow.
