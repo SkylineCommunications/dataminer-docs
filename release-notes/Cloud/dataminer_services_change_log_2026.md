@@ -9,6 +9,54 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 13 April 2026 - Enhancement - Admin - Improved grouping for adding a subscription
+
+On the Add Subscription panel in the Admin app, service names are now shown instead of unit names to make it clearer which selection applies to which service.
+
+Unit names have been moved into the input boxes.
+
+### 13 April 2026 - Enhancement - dataminer.services - DaaS configuration options added to deployment flow
+
+For users deploying a DaaS system, it is now possible to select the DaaS region and STaaS region, as well as to configure geo-replication, directly from the dataminer.services deployment flow.
+
+### 13 April 2026 - Enhancement - Admin - Documentation link added to Add Subscription panel
+
+On the Add Subscription panel in the Admin app, a new section with a link to the metering documentation is now available to help guide users with creating their subscription.
+
+### 13 April 2026 - Enhancement - Admin - DMS subscription indicator added
+
+On the Billing page in the Admin app, the subscription detail pop-up box now indicates if the subscription is scoped to a specific DataMiner System.
+
+### 13 April 2026 - Fix - dataminer.services - DaaS deployment in new organization appeared to fail while actually succeeding
+
+On dataminer.services, creating a DaaS system in a new organization while an existing organization was selected could cause a faulty redirect, giving the impression that the deployment failed while the system had actually been successfully deployed in the new organization.
+
+### 13 April 2026 - Fix - Admin - Error notifications on organization switch
+
+In the Admin app, changing the selected organization while on certain pages could result in notifications about failed calls. This issue has been resolved.
+
+### 13 April 2026 - Fix - Admin - DMS pages not expanding on navigation
+
+In the Admin app, navigating to a page within a collapsed DataMiner System section did not auto-expand that section as it should. This behavior has been fixed.
+
+### 13 April 2026 - Fix - Catalog - Deploy buttons incorrectly disabled on Empower page
+
+On the Empower page in the Catalog app, it could occur that "Deploy" buttons were incorrectly disabled. This behavior has been fixed.
+
+### 13 April 2026 - Enhancement - Admin - UOSA page filter support
+
+On the Support page of the Admin app, you can now filter support tickets by time range and optionally include closed tickets.
+
+Filters are applied server-side, improving page performance.
+
+### 13 April 2026 - Fix - Admin - UOSA page Customer field showed assignee instead of customer
+
+On the Support page of the Admin app, the *Customer* field incorrectly displayed the name of the assignee instead of the customer name. This issue has been resolved.
+
+### 13 April 2026 - Enhancement - Admin - Link to Collaboration project added to UOSA page Order field
+
+On the Support page of the Admin app, the *Order* field is now a clickable link to the Collaboration project.
+
 ### 4 March 2026 - Enhancement - Catalog - Dependency tags shown in version overview
 
 On the *Versions* tab for a Catalog item, tags can now show the DataMiner and DataMiner Web version dependencies.
