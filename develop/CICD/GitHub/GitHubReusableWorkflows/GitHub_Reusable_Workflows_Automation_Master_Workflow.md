@@ -69,11 +69,6 @@ jobs:
   CI:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
     with:
-      referenceName: ${{ github.ref_name }}
-      runNumber: ${{ github.run_number }}
-      referenceType: ${{ github.ref_type }}
-      repository: ${{ github.repository }}
-      owner: ${{ github.repository_owner }}
       sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
       # The API-key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
@@ -100,7 +95,7 @@ Searches for any project ending with Tests or UnitTests and will then attempt to
 Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
 
 > [!NOTE]
-> For public repositories in the *SkylineCommunications* organization, the analysis step uses the *SONAR_TOKEN* organization secret. For private repositories, you will need to create a repository secret with name *SONAR_TOKEN* (as private repositories cannot access the organization secret). For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+> For repositories in the *SkylineCommunications* organization, the analysis step uses the *SONAR_TOKEN* organization secret. For repositories outside of the *SkylineCommunications* organization, you will need to create a repository secret with name *SONAR_TOKEN*. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 ### Quality gate
 

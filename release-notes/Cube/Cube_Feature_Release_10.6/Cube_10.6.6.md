@@ -38,6 +38,22 @@ In version 10.6.4, the entire Cube UI and UI themes were redesigned. In this ver
 
 Because of a number of enhancements, overlays appearing on top of a spectrum card will now dynamically follow the Cube theme.
 
+#### Enhanced performance when loading data into the Reports page of element, service, and parameter cards [ID 45191]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Because of a number of enhancements, overall performance has increased when loading data into the Reports page of element, service, and parameter cards.
+
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem when loading a trend graph for a dynamic discrete parameter [ID 45276]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, an exception could be thrown when DataMiner Cube tried to load a trend graph for a dynamic discrete parameter.
+
+#### Redundancy groups: Problem when deleting elements used for switching logic or switching detection from a redundancy group configuration [ID 45278]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When elements used for switching logic or switching detection were deleted from a redundancy group configuration, up to now, not all references to those elements would be removed correctly.

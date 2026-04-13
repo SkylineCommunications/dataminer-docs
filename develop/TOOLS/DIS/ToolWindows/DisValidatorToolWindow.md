@@ -6,7 +6,7 @@ uid: DisValidatorToolWindow
 
 If you click *Tool Windows > DIS Validator*, the *DIS Validator* window will appear.
 
-This window lists the results of the latest protocol validation in a tree grid structure, grouped by severity and category.
+This window lists the results of the latest protocol validation in a tree grid structure, grouped by severity and category. For a list of currently implemented checks, see [Validator checks](https://aka.dataminer.services/validator-checks)
 
 At the top of the tool window, you can find the following buttons:
 

@@ -6,6 +6,9 @@ uid: Configuring_dynamic_alarm_thresholds
 
 Instead of defining alarm thresholds as a fixed value, you can set them as a dynamic threshold that is compared to a certain "normal" value. This value will automatically be determined at runtime, or via a normalization procedure for each separate element.
 
+> [!NOTE]
+> This feature will not work on paginated table columns (a.k.a. partial table columns).
+
 ![Dynamic alarm thresholds](~/dataminer/images/Dynamic_Alarm_Thresholds.png)<br>*Alarm template in DataMiner 10.6.5*
 
 The different types of alarm thresholds can be selected in the dropdown list in the *Type* column:

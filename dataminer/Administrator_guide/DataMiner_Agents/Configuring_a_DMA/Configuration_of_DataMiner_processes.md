@@ -68,7 +68,7 @@ However, note that from DataMiner 10.5.4/10.6.0 onwards<!--RN 41757-->, there is
 As soon as you have concluded the investigation for which you needed this setting to be enabled, disable it again. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41757-->, an alarm will be generated when this feature is active to remind you of this.
 
 > [!WARNING]
-> Never use this option in a production environment. This feature is meant for testing/debugging purposes only.
+> This feature is intended for investigation purposes only. If you are not sure whether this option should be activated, please [contact Support](xref:Contacting_tech_support).
 
 To have separate SLProtocol processes created for every protocol being used, do the following.
 
@@ -93,7 +93,7 @@ To have separate SLProtocol processes created for every protocol being used, do 
 If you suspect that a particular protocol is causing a problem in the SLScripting process, then you can have separate SLScripting processes created for every protocol being used. This will then allow you to pinpoint the protocol that is causing the problem.
 
 > [!WARNING]
-> Never use this option in a production environment. This feature is meant for testing/debugging purposes only.
+> This feature is intended for investigation purposes only. If you are not sure whether this option should be activated, please [contact Support](xref:Contacting_tech_support).
 
 To have separate SLScripting processes created for every protocol being used, do the following.
 

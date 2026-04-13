@@ -76,7 +76,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 The data plane is the operational foundation of your DataMiner System, the digital twin of your operation. Every asset, service, and data source you bring into DataMiner becomes part of a living model of your operational fabric, enabling the intelligence and automation that drive you toward autonomous operations.
 
-**Managed Objects** are any data sources DataMiner actively interfaces with. This could be a device, service, virtual function, or software instance. How many credits a Managed Object consumes depends on its data volume, i.e. the number of metrics DataMiner is actively collecting from it. Managed Objects with 200 or more metrics are billed as [Standard Managed Objects](#standard-managed-objects), while those with fewer than 200 metrics are considered [Light Managed Objects](#light-managed-objects) and are billed per metric.
+**Managed Objects** are any data sources DataMiner actively interfaces with. This could be a device, service, virtual function, or software instance. How many credits a Managed Object consumes depends on its data volume, i.e., the number of metrics DataMiner is actively collecting from it. Managed Objects with 200 or more metrics are billed as [Standard Managed Objects](#standard-managed-objects), while those with fewer than 200 metrics are considered [Light Managed Objects](#light-managed-objects) and are billed per metric.
 
 **Unmanaged Objects** are structured records DataMiner stores. These can be tickets, assets, work orders, contracts, jobs, or any custom record type defined in your system. See [DataMiner Object Models](xref:DOM).
 

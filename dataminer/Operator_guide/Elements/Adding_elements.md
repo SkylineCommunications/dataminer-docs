@@ -96,11 +96,11 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - For a **WebSocket** connection, see [WebSocket connection](xref:WebSocket_Connection).
 
-   - For a connection from a DaaS Agent to a private data source via [Site Manager](xref:SiteManagerOverview), see [Creating an element that communicates with a data source through a tunnel](xref:SiteManagerGettingStarted#creating-an-element-that-communicates-with-a-data-source-through-a-tunnel).
+   - For a connection from a DaaS Agent to a private data source via [Edge Manager](xref:EdgeManagerOverview), see [Creating an element that communicates with a data source through a tunnel](xref:EdgeManagerGettingStarted#creating-an-element-that-communicates-with-a-data-source-through-a-tunnel).
 
 1. If the protocol is [configured to allow you to test the connection](xref:Protocol.Groups.Group-ping), optionally click the button *Test connection* below the connection you want to test.
 
-   After you click the button, a message will display the results of the test. However, note that this button is not available for connections via [Site Manager](xref:SiteManagerOverview).
+   After you click the button, a message will display the results of the test. However, note that this button is not available for connections via [Edge Manager](xref:EdgeManagerOverview).
 
 1. Specify the timeout settings per connection:
 
@@ -114,15 +114,16 @@ You can follow the steps below or watch this short video, which shows you how to
    - **Include timeout**: The element will go into timeout state if this connection times out.
 
      > [!NOTE]
-     >
-     > - Clearing the selection from this checkbox can for example be of use for an element with multiple connections. If a particular connection should not influence the timeout state of the element, then clear the checkbox for that connection. If the checkbox is selected for all connections, the element will be in timeout as soon as one of the connections fails.
-     > - Prior to DataMiner 10.2.9/10.3.0, the maximum timeout value for this setting is 2 minutes (i.e., 120 seconds). From DataMiner 10.2.9/10.3.0 onwards, the maximum value is extended to 24 hours.
-
-1. Specify the following advanced element settings if necessary:
+     > Clearing the selection from this checkbox can for example be of use for an element with multiple connections. If a particular connection should not influence the timeout state of the element, then clear the checkbox for that connection. If the checkbox is selected for all connections, the element will be in timeout as soon as one of the connections fails.
 
    - **The element goes into timeout state when it is not responding for (sec)**: When the element fails to respond to commands for longer than the number of seconds specified in this setting, the DMA will put the element in a timeout state. The specified number must be between 0 and 120.
 
      Note that this setting does not account for the number of retries. To ensure that the element has enough time to complete all retry attempts before declaring a timeout, you should therefore choose a value larger than **Timeout of a single command × (Number of retries + 1)**.
+
+     > [!NOTE]
+     > Prior to DataMiner 10.2.9/10.3.0, the maximum timeout value for this setting is 2 minutes (i.e., 120 seconds). From DataMiner 10.2.9/10.3.0 onwards, the maximum value is extended to 24 hours.
+
+1. Specify the following advanced element settings if necessary:
 
    - **Slow poll settings**: When an element is in a timeout state, the DMA can force it to go into so-called slow poll mode. While the element is in that special poll mode, the DMA will not send any commands to the element. Instead, it will just send a protocol-dependent ping command at regular intervals. As soon as the element responds to that ping command, the DMA will start polling the element the normal way again.
 

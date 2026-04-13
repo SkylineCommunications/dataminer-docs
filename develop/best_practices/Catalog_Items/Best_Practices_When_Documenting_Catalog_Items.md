@@ -30,8 +30,10 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 
    Link to public documentation for more extensive info when necessary.
 
+Depending on the size and complexity of your Catalog item, you can **combine or exclude some sections**. For example, for a very simple item you could leave out the Use Cases section but mention this information under Key Features.
+
 > [!NOTE]
-> Depending on the size and complexity of your Catalog item, you can combine or exclude some sections. For example, for a very simple item you could leave out the Use Cases section but mention this information under Key Features.
+> Avoid including a reference to support or contact details, because it is the rule of thumb for users to reach out to our [DataMiner Support team](xref:Contacting_tech_support). As an Owner or team, you can still add your email address in the [Manifest file](xref:Register_Catalog_Item#manifest-file).
 
 ## Visuals
 
@@ -129,7 +131,11 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 - **Minimum/Maximum DxM version**
 - **Licenses** (for example, DOM, SRM)
 - **Soft-launch options**
+- Other **Catalog items**
 - Requirements for components included in the package
+
+> [!NOTE]
+> Prerequisites in the description of the Catalog item should target the default deployment of the item. Typically, it is best to also include the prerequisites for a specific version in the relevant version description, so that users also know which prerequisites apply if they deploy another version than the default version. Note that the version descriptions automatically show the DataMiner (Web) version requirements, so there's no need to add those for each version of a Catalog item.
 
 **Do's:**
 
@@ -138,7 +144,7 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 
 **Don'ts:**
 
-- Avoid **installation or configuration steps**. Link to comprehensive documentation instead.
+- Avoid complex **installation or configuration steps**. Link to comprehensive documentation instead.
 - Avoid listing every **small technical dependency**. Focus only on the essentials.
 
 ## Technical Reference section

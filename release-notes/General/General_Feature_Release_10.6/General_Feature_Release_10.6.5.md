@@ -149,14 +149,6 @@ A correlation rule will be blocked when it was triggered due to a correlated ala
 > [!NOTE]
 > ​This feature only works when the correlation rule and all alarms in question reside on the same DataMiner Agent.
 
-#### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45022]
-
-<!-- MR 10.7.0 - FR 10.6.5 -->
-
-Previously, when a script library was added to a DataMiner System, its hint paths were automatically sent to the automation script compilation engine, even when the library was not used by any automation script.
-
-From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
-
 #### Custom SSH settings can now be configured per SSH connection [ID 45084]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->

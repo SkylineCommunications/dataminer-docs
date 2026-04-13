@@ -46,7 +46,7 @@ If the repository is private, the name should look like this (using "-" as separ
 > [!NOTE]
 > When working on a repository that will have projects with different types, consider this as a Solution (see below).
 
-- For a list of **customer acronyms**, refer to [DCP](https://dcp-ui.azurewebsites.net/customers). For generic repositories, use the Skyline Communications acronym (SLC).
+- For a list of **customer acronyms**, refer to [DCP](https://aka.dataminer.services/customers). For generic repositories, use the Skyline Communications acronym (SLC).
 
 - The following **item types** are currently supported (this list is to be extended):
 

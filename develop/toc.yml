@@ -3809,6 +3809,8 @@ items:
                           - name: Fix
                             topicUid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix
                             items: 
+                            - name: '@introducedIn'
+                              topicUid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix-introducedIn
                             - name: '@suppressMajorChanges'
                               topicUid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix-suppressMajorChanges
                           - name: NewFeature
@@ -7147,6 +7149,8 @@ items:
     - name: GitHub reusable workflows
       topicUid: github_reusable_workflows
       items:
+      - name: Master Workflow
+        topicUid: github_reusable_workflows_master_workflow
       - name: DataMiner App Package Master Workflow
         topicUid: github_reusable_workflows_dataminer_app_packages_master_workflow
       - name: Automation Master Workflow

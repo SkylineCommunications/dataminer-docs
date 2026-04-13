@@ -285,15 +285,31 @@ A number of enhancements have been made to the SSH logging:
 
 Also, an issue has been fixed. When a host name could not be resolved to an IP address, up to now, the SSH connection would incorrectly try to connect to localhost. From now on, when the host name could not be resolved, the connection will fail.
 
-#### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45022]
+#### Protocols: Indicating that smart-serial elements in server mode are allowed to be swarmed [ID 45173]
 
-<!-- MR 10.7.0 - FR 10.6.5 -->
+<!-- MR 10.7.0 - FR 10.6.6 -->
 
-Previously, when a script library was added to a DataMiner System, its hint paths were automatically sent to the automation script compilation engine, even when the library was not used by any automation script.
+By default, elements with a smart-serial connection in server mode are not allowed to be swarmed. However, it is possible that, at startup, an element can send a message to the data source in order to indicate where data should be sent to. In that case, the fact that the smart-serial connection is in server mode will not be considered a valid reason to prevent the element from swarming.
 
-From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
+As DataMiner is not able to automatically detect such exceptional cases, you can now indicate in the *protocol.xml* file of the element that it is allowed to be swarmed. See the following example:
 
-#### DataMiner upgrade: A number of default Visio stencils will no longer be included [ID 45202]
+```xml
+<Swarming>
+    <BypassChecks>
+        <Check>smartSerialAsServer</Check>
+    </BypassChecks>
+</Swarming>
+```
+
+#### DataMiner upgrade: .NET Framework 4.8 will no longer be installed [ID 45196]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+From now on, during a DataMiner upgrade, Microsoft .NET Framework 4.8 will no longer be installed.
+
+On most machines running DataMiner, this will already be installed. If, for any reason, you need to install this package, it can be downloaded from [the official download page](https://dotnet.microsoft.com/en-us/download/dotnet-framework).
+
+### DataMiner upgrade: A number of default Visio stencils will no longer be included [ID 45202]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 
@@ -322,6 +338,15 @@ Note that the following stencil files will still be deployed:
 
 > [!NOTE]
 > The above-mentioned stencil files that are no longer included in DataMiner upgrade packages will not automatically be removed from existing systems.
+
+#### SLLogCollector: Only BPA tests deployed by default will be rerun each time a log package is created [ID 45228]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+Up to now, each time SLLogCollector created a log package, it would rerun all BPA tests deployed on the system. From now on, it will only rerun the BPA tests deployed by default.
+
+> [!NOTE]
+> Each time a log package is created, all BPA test results available on the system will still be included in that package. This means, that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
 
 ### Fixes
 
@@ -369,3 +394,11 @@ From now on, trend records with the following *iStatus* values will no longer ca
 <!-- MR 10.7.0 - FR 10.6.5 -->
 
 Up to now, flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours.
+
+#### SLLogCollector: Problem when running BPA tests [ID 45053]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When the SLLogCollector tool was configured to execute all BPA tests available in the system when collecting log packages, up to now, in some cases, executing those BPA tests would fail and cause them to report a wide variety of exceptions.
+
+From now on, when the SLLogCollector tool detects that it is not possible to execute the BPA tests, it will skip their execution and collect the results of their last successful run.

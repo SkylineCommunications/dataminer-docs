@@ -77,7 +77,7 @@ For this tutorial, a simulation protocol is available that allows you to simulat
 
 ## Step 3: Configure hysteresis
 
-When *Simulation Mode* is set to *Spikes*, alarms will exist for short periods of time, which might make it difficult for operators to notice the alarms. The alarms might also not be relevant, as it could be that operators are only interested if the threshold is violated for longer periods of time. To deal with this, you can configure the hysteresis feature in the alarm template.
+When *Simulation Mode* is set to *Spikes*, alarms will exist for short periods of time, which might make it difficult for operators to notice the alarms. The alarms might also not be relevant, as it could be that operators are only interested if the threshold is violated for longer periods of time. To deal with this, you can configure the [hysteresis feature](xref:Configuring_alarm_hysteresis) in the alarm template.
 
 1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
@@ -95,7 +95,7 @@ When *Simulation Mode* is set to *Spikes*, alarms will exist for short periods o
 
 ## Step 4: Configure alarm monitoring using rate thresholds
 
-If a parameter is a counter that continuously increases (e.g., received packets on a network interface), it is not possible to define regular alarm thresholds. For such a parameter, you can use rate thresholds instead.
+If a parameter is a counter that continuously increases (e.g., received packets on a network interface), it is not possible to define regular alarm thresholds. For such a parameter, you can use [rate thresholds](xref:Configuring_dynamic_alarm_thresholds) instead.
 
 1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
@@ -125,7 +125,7 @@ If a parameter is a counter that continuously increases (e.g., received packets 
 
 ## Step 5: Configure alarm monitoring using relative thresholds
 
-With relative alarm thresholds, you can define a baseline from which the value can deviate percentage-wise. This can especially be useful for tables where every row can have a different baseline value.
+With [relative alarm thresholds](xref:Configuring_dynamic_alarm_thresholds), you can define a baseline from which the value can deviate percentage-wise. This can especially be useful for tables where every row can have a different baseline value.
 
 1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
@@ -162,7 +162,7 @@ With relative alarm thresholds, you can define a baseline from which the value c
 
 ## Step 6: Configure alarm monitoring using absolute thresholds
 
-In some cases, it can be easier to define in absolute numbers how much a value can deviate from the baseline (e.g., when the baseline is close to zero).
+In some cases, it can be easier to [define in absolute numbers](xref:Configuring_dynamic_alarm_thresholds) how much a value can deviate from the baseline (e.g., when the baseline is close to zero).
 
 1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
@@ -189,7 +189,7 @@ In some cases, it can be easier to define in absolute numbers how much a value c
 
 ## Step 7: Define a condition to disable alarm monitoring
 
-By defining alarm conditions, you can dynamically enable and disable alarm monitoring based on other values.
+By defining [alarm conditions](xref:Using_conditions_in_an_alarm_template), you can dynamically enable and disable alarm monitoring based on other values.
 
 1. Right-click the element in the Surveyor, and select *Protocols & Templates* > *View alarm template 'Default'*.
 
