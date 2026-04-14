@@ -46,6 +46,16 @@ In the *Settings* pane for this component, you can configure the following setti
 
 Similar to all other basic controls, this new control also supports the *Set Value* component action, which sets the current value of the component to either a static or dynamic value.
 
+#### Web apps: A custom time zone can now be specified on user level [ID 45170]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+In all web apps, it is now possible to specify a custom time zone in the user menu (which can be opened by clicking the user icon in the header bar).
+
+If you do so, the custom time zone you specify will override the local time of the client machine on user level.
+
+Note that, when a time zone is enforced for all users, this user-level setting will be disabled.
+
 ## Changes
 
 ### Enhancements
