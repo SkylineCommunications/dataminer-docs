@@ -60,6 +60,7 @@ Usage-based services are charged based on the actual monthly usage of services, 
 | Failover | Server-based license. | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
 | Optional functions | Licensed per node. | Not applicable. All optional functions are included. |
 | Automation & orchestration | Based on the volume of concurrent services running. | Based on the automation volume. |
+| Object Modeling | All customer‑specific object models and object instances are included (provided the system is licensed for Tier-2). <br> Exception: Objects belonging to Skyline Solutions / Standard Data Models (e.g. MediaOps, Ticketing) are charged as usage‑based services. | Charged as usage-based services. Charges apply for DOM creations (Service: Automation actions) and DOM capacity (Service:Unmanaged Objects).|
 | Connectors | Single connector license fee for new and existing connectors. One connector license per different, interfaced product, per DataMiner System (DMS). | Charged per connector used per month. |
 | Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [Support plans](xref:Overview_Support_Plans)). |
 | DataMiner Probes | Server-based licenses, each with fixed capacity tiers of managed objects.  | N/A |
