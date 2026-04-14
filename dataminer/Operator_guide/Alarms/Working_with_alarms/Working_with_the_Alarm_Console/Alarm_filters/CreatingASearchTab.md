@@ -6,9 +6,9 @@ uid: CreatingASearchTab
 
 When you are connected to a DMS with [self-managed storage with indexing database](xref:Indexing_Database), the Alarm Console provides an additional option to create a dynamic search tab:
 
-1. Click the *+* symbol in the header of the Alarm Console to open a new tab.
+1. Click the "+" symbol in the header of the Alarm Console to open a new tab.
 
-1. At the top of the tab, next to *Search* *for alarms*, do the following:
+1. At the top of the tab, next to *Search for alarms*, do the following:
 
    - Add one or more search terms in the search box. As soon as you start typing, suggestions will be displayed below the box.
 

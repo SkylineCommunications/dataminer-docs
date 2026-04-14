@@ -140,7 +140,7 @@ To add or remove columns:
 
 - Right-click in the table header, choose *Add/Remove column*, and select the columns you want to add or remove.
 
-  ![Alarm column](~/dataminer/images/Add_Alarm_Column.png)<br>*Adding or removing alarm columns in DataMiner 10.4.5*
+  ![Alarm column](~/dataminer/images/Add_Alarm_Column.png)<br>*Adding or removing alarm columns in DataMiner 10.6.5*
 
 > [!NOTE]
 > It is possible to add action buttons in the Alarm Console with this functionality, by selecting the required actions under *Add/Remove column \> Actions*.
@@ -205,11 +205,23 @@ To do so:
 
 ## Using the statistical view
 
-To view the alarms in an alarm tab as statistics instead of in a regular list view, click the statistical view button in the alarm bar: ![Statistical view button](~/dataminer/images/Statistical_View_button.png)
+### [From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.5 onwards](#tab/tabid-1)
+
+To view the alarms in an alarm tab as statistics instead of in a regular list view, click the statistical view button in the alarm bar: ![Statistical view button](~/dataminer/images/StatisticalViewButton.png)
+
+![Statistical view](~/dataminer/images/StatisticalView.png)<br>*Statistical view in DataMiner 10.6.5*
+
+To return to the regular list view again, click the list view button: ![List view button](~/dataminer/images/ListViewButton.png)
+
+### [Previous versions](#tab/tabid-2)
+
+To view the alarms in an alarm tab as statistics instead of in a regular list view, click the statistical view button in the alarm bar: ![Old statistical view button](~/dataminer/images/Statistical_View_button.png)
 
 ![Statistical view](~/dataminer/images/Statistical_View.png)<br>*Statistical view in DataMiner 10.4.5*
 
-To return to the regular list view again, click the list view button: ![List view button](~/dataminer/images/List_View_button.png)
+To return to the regular list view again, click the list view button: ![Old list view button](~/dataminer/images/List_View_button.png)
+
+***
 
 The statistical view has three tab pages, each offering a different drill-down approach:
 
@@ -234,7 +246,7 @@ To view severity timelines per element or per parameter:
 
 1. Depending on whether you wish to see these so-called “heat maps” for elements or for parameters, either stay in the *elements* tab, or go to the *parameters* tab.
 
-   ![Reports view](~/dataminer/images/Reports_View.png)<br>*Reports view in DataMiner 10.4.5*
+   ![Reports view](~/dataminer/images/Reports_View.png)<br>*Reports view in DataMiner 10.6.5*
 
    The tabs respectively list all elements and all parameters in the DMS for which an alarm has occurred, and for each item in the list, a timeline is displayed that shows the evolution of the alarm severity over time.
 
@@ -244,7 +256,9 @@ To view severity timelines per element or per parameter:
 
    - For a parameter heat map, the parameter card is opened. If it is a trended parameter, the trending tab is displayed, otherwise the details tab is displayed.
 
-1. To return to the regular list view again, click the list view button: ![List view button](~/dataminer/images/List_View_button00045.png)
+1. To return to the regular list view again, click the list view button: ![List view button](~/dataminer/images/ListViewButton.png)
+
+   Prior to DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4, the list view button appears as follows: ![Old list view button](~/dataminer/images/List_View_button.png)
 
 > [!NOTE]
 > This feature is only available in a DataMiner System using [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
