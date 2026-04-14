@@ -57,3 +57,11 @@ Up to now, an exception could be thrown when DataMiner Cube tried to load a tren
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 When elements used for switching logic or switching detection were deleted from a redundancy group configuration, up to now, not all references to those elements would be removed correctly.
+
+#### Trending: Row instance key in trend graph title would incorrectly not be shown in the display format [ID 45280]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When a trend graph shows trend data for a table cell value, the title above the trend graph shows the name of the column and the row instance key.
+
+However, up to now, the row instance key would incorrectly be shown in the format that is passed to the DataMiner Agent. From now on, the row instance key will be shown in a more readable display format.
