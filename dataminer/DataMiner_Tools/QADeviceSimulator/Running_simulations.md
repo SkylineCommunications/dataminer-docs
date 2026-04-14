@@ -48,9 +48,11 @@ where
         /delaypct     The percentage of packets that the delay specified in delayms should be applied to.
         /dbmaxvaloid  The maximum number of OIDs that should be kept in memory when running realistic dynamic (database) simulations.
 ```
+
 > [!IMPORTANT]
-> The simulation files must be present in the `C:\QASNMPSimulations` folder, and when referring to the files, you must use **only** the filename.
-> e.g. to start the simulation file located at `C:\QASNMPSimulations\my_simulation.xml`, you must use `.\QADeviceSimulator.exe "my_simulation.xml"`. `.\QADeviceSimulator.exe "C:\QASNMPSimulations\my_simulation.xml"` will **not** work.
+> The simulation files must be present in the folder `C:\QASNMPSimulations`, and when referring to the files, you must use **only the file name**.
+>
+> For example, to start the simulation file `C:\QASNMPSimulations\my_simulation.xml`, you must use `.\QADeviceSimulator.exe "my_simulation.xml"`. If you were to use `.\QADeviceSimulator.exe "C:\QASNMPSimulations\my_simulation.xml"`, this would not work.
 
 > [!NOTE]
 > The *packetloss*, *delayms*, *delaypct*, and *dbmaxvaloid* options are available as of version 2.0.0.0 of the device simulator, which is available from DataMiner 10.2.12/10.3.0 onwards.
