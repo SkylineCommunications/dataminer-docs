@@ -136,6 +136,14 @@ Up to now, each time SLLogCollector created a log package, it would rerun all BP
 
 ### Fixes
 
+#### BPA tests could incorrectly not be run on DMAs that were not connected to the internet [ID 45040]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, it would not be possible to run BPA tests on DataMiner Agents that were not connected to the internet because they were not able to fetch the necessary certificates.
+
+From now on, it will be possible to run BPA tests on DataMiner Agents that are not connected to the internet.
+
 #### STaaS: Problem when retrieving data to be visualized in 'State timeline' components or element and parameter heatlines [ID 45043]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
