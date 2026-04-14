@@ -105,3 +105,9 @@ In some cases, an exception could be thrown when restarting a spectrum element.
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When DataMiner Cube was disconnected or when you logged out, in some cases, overlays would incorrectly not be closed.
+
+#### 'Enable alarm storm protection' settings would incorrectly not be applied when enabled [ID 45293]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 [CU0] -->
+
+When the *Enable alarm storm protection* settings were enabled, since DataMiner version 10.6.4, they would incorrectly not be applied.
