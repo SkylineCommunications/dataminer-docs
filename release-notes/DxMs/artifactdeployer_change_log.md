@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 14 April 2026 - Enhancement - ArtifactDeployer 1.8.8 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 28 August 2025 - Enhancement - ArtifactDeployer 1.8.7 - Dependencies updated
 
 Several dependencies have been updated.
