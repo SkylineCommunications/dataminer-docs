@@ -34,9 +34,18 @@ Watch this short video to learn how to create a new DataMiner System hosted on d
 
    Only lowercase alphanumerical characters (a-z and 0-9) are allowed in the URL, and it cannot consist of numbers only.
 
-1. Optionally, in the *Time zone* box, select the time zone for your DataMiner System.
+1. Optionally, under the advanced settings.
+    1. You can select the time zone for your DataMiner System.
 
-   By default, the time zone is set to the time zone of your current location.
+       By default, the time zone is set to the time zone of your current location.
+
+    1. Select the region of your compute (DaaS).
+    
+    1. Select the region of your storage (STaaS).
+  
+       More information about STaaS regions can be found [here](xref:STaaS_features).
+  
+    1. Select geo-replicated storage if you want this enabled.
 
 1. Enter a username and password for your DataMiner account.
 
