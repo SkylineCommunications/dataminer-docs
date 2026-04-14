@@ -4,6 +4,10 @@ uid: fieldcontrol_change_log
 
 # Field Control change log
 
+#### 14 April 2026 - Enhancement - FieldControl 2.12.1 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 24 June 2025 - Enhancement - FieldControl 2.11.4 - Improved upgrade process
 
 Improvements have been made to the startup and shutdown of the DxM, which improves the upgrade process.
