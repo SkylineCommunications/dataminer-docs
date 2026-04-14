@@ -44,6 +44,10 @@ In several places on the Ticket Information page, the "Nothing to show" messages
 - In the Linked Items section, "Nothing to show" has been replaced with "Ticket has no Linked Items".
 - In the External Ticketing section, "Nothing to show" has been replaced with "Ticket has no External Ticketing".
 
+#### GQI DxM no longer restarted during Ticketing installation [ID 45292]
+
+During installation of the Ticketing app, the GQI DxM is no longer restarted. As the Dev Packs used by the solution are now installed by SDM registration, this restart is no longer needed.
+
 ## Fixes
 
 #### Large description cannot be fully viewed in expanded view [ID 45245]
@@ -57,3 +61,7 @@ If a ticket was rejected, canceled, or closed, it was possible to edit the Addit
 #### Enum default value for ticket type kept reverting to first defined Enum field [ID 45249]
 
 When a ticket type field of data type Enum was defined, the configured default value kept incorrectly reverting to the Enum field that has been defined first.
+
+#### Not possible to select 'No Assignee' for a ticket [ID 45291]
+
+When a ticket was configured, it could occur that it was not possible to select the *No Assignee* value in the *Assignee* drop-down list. This made it impossible to create a ticket and not immediately assign it to someone, even though typically a ticket will only be assigned when it is set to *In Progress*.
