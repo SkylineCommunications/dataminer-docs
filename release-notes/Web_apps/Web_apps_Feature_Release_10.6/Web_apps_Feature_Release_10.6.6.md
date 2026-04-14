@@ -68,7 +68,7 @@ From now on, when you try to open a non-existing page, you wil no longer be redi
 
 Clicking the *Go to overview* button in that visual will redirect you back to the home page of the app.
 
-#### GQI DxM: Custom property columns will now be referenced by their name instead of by their ID [ID 45085]
+#### GQI DxM: Custom property columns will now be referenced by their name instead of by their ID [ID 45085] [ID 45287]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
@@ -84,6 +84,9 @@ These changes will affect the following data sources:
 - Get elements
 - Get services
 - Get views
+
+> [!NOTE]
+> The `IsHidden` flag mentioned above is already supported by the query builder.
 
 #### Dashboards/Low-Code Apps: Default theme of basic controls has been changed to 'Transparent' [ID 45198]
 
@@ -164,6 +167,12 @@ Up to now, when a *Time range* component was made smaller, in some cases, the se
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 Up to now, when you had duplicated a panel, it would incorrectly not be available in the action editor.
+
+#### Low-Code Apps: Problem when a 'Change variable' action was executed in parallel with an 'Open a page' action in draft preview [ID 45234]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, when a draft version of an app was previewed, in some cases, a *Change variable* action could fail to apply its value when executed in parallel with an *Open a page* action.
 
 #### Dashboards/Low-Code Apps - Alarm table component: Messages appearing on top of the component would take up too much space [ID 45244]
 
