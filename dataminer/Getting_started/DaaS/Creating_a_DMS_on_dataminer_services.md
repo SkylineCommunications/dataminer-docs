@@ -1,12 +1,12 @@
 ---
 uid: Creating_a_DMS_on_dataminer_services
 keywords: dms in the cloud
-description: To create a new DaaS system, go to dataminer.services, click Add a DataMiner System, specify the necessary details, and click Deploy.
+description: To create a new DaaS system, go to dataminer.services, click Add DataMiner System, specify the necessary details, and click Deploy.
 ---
 
 # Creating a new DMS on dataminer.services
 
-Watch this short video to learn how to create a new DataMiner System hosted on dataminer.services, or follow the steps below:
+<!-- Watch this short video to learn how to create a new DataMiner System hosted on dataminer.services, or follow the steps below:
 
 <div style="width: 100%; max-width: 800px;">
   <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
@@ -14,11 +14,11 @@ Watch this short video to learn how to create a new DataMiner System hosted on d
   </video>
 </div>
 
-<br />
+<br /> -->
 
 1. [Log on to dataminer.services](xref:Logging_on_to_dataminer_services).
 
-1. Next to *DataMiner Systems*, click *Add a DataMiner System*.
+1. Next to *DataMiner Systems*, click *Add DataMiner System*.
 
    ![Add a new DataMiner System button](~/dataminer/images/daas_create_001.png)
 
@@ -34,13 +34,21 @@ Watch this short video to learn how to create a new DataMiner System hosted on d
 
    Only lowercase alphanumerical characters (a-z and 0-9) are allowed in the URL, and it cannot consist of numbers only.
 
-1. Optionally, in the *Time zone* box, select the time zone for your DataMiner System.
+1. Optionally, click *Advanced settings* and configure the following settings as needed:
 
-   By default, the time zone is set to the time zone of your current location.
+   - **Time zone**: The time zone for your DataMiner System. By default, the time zone is set to the time zone of your current location.
+
+   - **Compute region**: The region for the compute of your DaaS Agent.
+
+   - **Storage region**: The region for the Agent's data storage. For more information, see [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
+
+   - **Geo-replicated storage**: To enable this, select the region for the geo-replication. For more information, see [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
+
+1. Click *Next*.
 
 1. Enter a username and password for your DataMiner account.
 
-1. Select the box next to *I agree to the terms of service*.
+1. Select the box next to *I agree to the License and Service Terms*.
 
 1. Click *Deploy*.
 
