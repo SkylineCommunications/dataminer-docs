@@ -51,11 +51,17 @@ Background articles:
 
 ### Compliance – ensure Windows can correctly check the CRL
 
+The following workarounds can be used:
+
 - Allow Windows to periodically update all CTLs through Windows Update. This requires HTTP access to *ctldl.windowsupdate.com*.
+
 - Allow Windows to periodically update these specific CRLs. This requires HTTP access to the 4 hostnames listed above in the [Root cause](#root-cause) section.
+
 - Manage the periodic delivery of CTLs to disconnected client machines through any other mechanism.
 
 ### Avoidance – prevent Windows from checking the CRL
+
+The following workarounds can be used:
 
 - Instruct .NET Framework to not check the CRL for this application (see [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element)). Place a file named *DataMinerCube.exe.config* alongside *DataMinerCube.exe* with the following content:
 
@@ -84,6 +90,8 @@ Background articles:
   > There is no built-in group policy available in Windows for this setting.
 
 ### Mitigation – allow Windows to attempt to check the CRL, but ensure this attempt fails quickly instead of waiting for a timeout
+
+The following workarounds can be used:
 
 - On the local machine: Redirect the affected hostnames in the `C:\Windows\system32\drivers\etc\hosts` file.
 
