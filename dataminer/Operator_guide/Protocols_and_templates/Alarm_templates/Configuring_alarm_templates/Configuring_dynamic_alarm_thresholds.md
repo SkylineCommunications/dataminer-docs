@@ -6,10 +6,12 @@ uid: Configuring_dynamic_alarm_thresholds
 
 Instead of defining alarm thresholds as a fixed value, you can set them as a dynamic threshold that is compared to a certain "normal" value. This value will automatically be determined at runtime, or via a normalization procedure for each separate element.
 
+![Dynamic alarm thresholds](~/dataminer/images/Dynamic_Alarm_Thresholds.png)<br>*Alarm template in DataMiner 10.6.5*
+
 > [!NOTE]
 > This feature will not work on paginated table columns (a.k.a. partial table columns).
 
-![Dynamic alarm thresholds](~/dataminer/images/Dynamic_Alarm_Thresholds.png)<br>*Alarm template in DataMiner 10.6.5*
+## Alarm threshold type selection
 
 The different types of alarm thresholds can be selected in the dropdown list in the *Type* column:
 
@@ -24,27 +26,27 @@ The different types of alarm thresholds can be selected in the dropdown list in 
 > [!NOTE]
 > In case the type has been defined in the protocol, it will not be possible to modify this in DataMiner Cube.
 
-Both for "absolute" and "relative" alarm thresholds, the "normal" value has to be set to a baseline value:
+## Baseline configuration
+
+Both for **absolute** and **relative** alarm thresholds, the "normal" value has to be set to a baseline value:
 
 1. In the *Normal* column, click *\[BASELINE\]*.
 
 1. In the Baseline editor, you can choose either a fixed baseline, or a smart baseline:
 
-   - Set a fixed baseline value by entering this value in the table at the top of the editor. For discrete parameters, you will be able to select the value in a dropdown list.
+   - Set a **fixed baseline** value by entering this value in the table at the top of the editor. For discrete parameters, you will be able to select the value in a dropdown list.
 
      > [!NOTE]
      >
      > - With the right-click menu in the baseline editor you can copy or export lines from the table. You can also select one or more lines and then select the options *Use current value as baseline value*, *Set baseline value to current value if the baseline value is not defined* or *Set baseline value to current value if the baseline value is defined*.
      > - From DataMiner 10.1.9/10.1.0 \[CU8\] onwards, if a baseline value has been defined in a protocol, it can be edited in the baseline editor.
 
-   - Set a smart baseline by selecting *Automatically update the baseline values*.
+   - Set a **smart baseline** by selecting *Automatically update the baseline values*.
 
      > [!NOTE]
      >
      > - You can only use a smart baseline if trending has been enabled for the parameter. If it is not, you will receive a warning message, and a warning icon will be shown in the Baseline editor.
-     > - Smart baselines are incompatible with [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter). Smart baselines operate in real time. As a result, values from history sets, although linked to a point in the past, are always compared against the baseline of the current moment (“now”). This can lead to unexpected history alarms and may also affect trend lines.
-The root cause is that state changes are always evaluated live, while value changes may originate from the past. Consequently, historical values can appear to be validated in the present.
-In use cases where history sets are used for back‑polling and alarms are not required during that process, this limitation can be worked around by ensuring that monitoring is inactive while back‑polling is in progress. This can be achieved through conditional monitoring or by using custom alarm templates. From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42326-->, you will receive a warning message when attempting to enable smart baselines for a parameter with history sets enabled.
+     > - Smart baselines are [incompatible with history sets](#smart-baselines-and-history-sets).
 
 1. If you chose a smart baseline, select one of the following options:
 
@@ -77,3 +79,11 @@ In use cases where history sets are used for back‑polling and alarms are not r
 >
 > - If you want to overrule the dynamic behavior for a certain limit and specify a fixed value instead, in the template editor, select the *Fixed* option for that limit.
 > - If normalization is triggered from the protocol, rather than from the template, baseline values are available as a read-only list.
+
+## Smart baselines and history sets
+
+Smart baselines are incompatible with [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter). Smart baselines operate in real time. As a result, values from history sets, although linked to a point in the past, are always compared against the baseline of the current moment ("Now"). This can lead to unexpected history alarms and may also affect trend lines. The root cause of this is that state changes are always evaluated live, while value changes may originate from the past. Consequently, historical values can appear to be validated in the present.
+
+In use cases where history sets are used for backpolling and alarms are not required during that process, you can work around this limitation by ensuring that monitoring is inactive while backpolling is in progress. You can achieve this through conditional monitoring or by using custom alarm templates.
+
+From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42326-->, you will receive a warning message when attempting to enable smart baselines for a parameter with history sets enabled.
