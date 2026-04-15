@@ -258,8 +258,6 @@ items:
     items:
       - name: Current issues
         items:
-          - name: Values of Cube alarm storm prevention user settings would not be visualized correctly in the UI
-            topicUid: KI_Cube_Alarm_storm_prevention
           - name: GQI DxM unavailable because of missing Newtonsoft.Json assembly
             topicUid: KI_GQI_DxM_unavailable_missing_Newtonsoft_Json
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
@@ -300,6 +298,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Values of Cube alarm storm prevention user settings would not be visualized correctly in the UI
+            topicUid: KI_Cube_Alarm_storm_prevention
           - name: gRPC-connected Cube not responding when Automation module is used
             topicUid: KI_gRPC_connected_Cube_stuck_when_using_Automation
           - name: DataMiner startup issue with one or more DcMs not running
