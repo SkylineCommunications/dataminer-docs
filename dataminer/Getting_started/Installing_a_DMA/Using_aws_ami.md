@@ -17,7 +17,7 @@ To deploy DataMiner using the AWS AMI, you will need to follow the steps below:
 >
 > - We assume you have a valid AWS account and know how to use the AWS management console. You can always look into the [official docs](https://docs.aws.amazon.com/awsconsolehelpdocs/).
 > - The DataMiner license is separate from AWS infrastructure costs. You will be charged by AWS for the EC2 instance and any other AWS resources you use.
-> - After launching the AWS VM, you will be able to choose your if you want to continue with the default **Community Edition license** or use your perpetual license.
+> - After launching the AWS VM, you will be able to choose if you want to continue with the default **Community Edition license** or use your perpetual license.
 > - For information on pricing and limitations for this license, see [DataMiner Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition).
 
 ## Launching the EC2 instance
