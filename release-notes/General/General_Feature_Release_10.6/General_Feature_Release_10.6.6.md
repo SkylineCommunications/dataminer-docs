@@ -207,3 +207,11 @@ From now on, the slow poll timer will no longer make the ping command when addin
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 In some cases, SLAnalytics could stop working due to an incorrect internal state in Automatic Incident Tracking.
+
+#### An alarm will now be generated when a protocol connection acting as a server failed to bind to the socket [ID 45241]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When a protocol connection that acted as a server failed to bind to the socket during startup, up to now, this would only get logged (with debug level 1). From now on, this will be assigned error level 0.
+
+Also, the element will go into an error state, and an alarm indicating a failing binding will be generated.

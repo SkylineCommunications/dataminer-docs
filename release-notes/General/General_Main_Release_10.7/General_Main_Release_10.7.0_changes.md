@@ -402,3 +402,11 @@ Up to now, flatline anomaly alerts would incorrectly not be triggered for parame
 When the SLLogCollector tool was configured to execute all BPA tests available in the system when collecting log packages, up to now, in some cases, executing those BPA tests would fail and cause them to report a wide variety of exceptions.
 
 From now on, when the SLLogCollector tool detects that it is not possible to execute the BPA tests, it will skip their execution and collect the results of their last successful run.
+
+#### An alarm will now be generated when a protocol connection acting as a server failed to bind to the socket [ID 45241]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When a protocol connection that acted as a server failed to bind to the socket during startup, up to now, this would only get logged (with debug level 1). From now on, this will be assigned error level 0.
+
+Also, the element will go into an error state, and an alarm indicating a failing binding will be generated.

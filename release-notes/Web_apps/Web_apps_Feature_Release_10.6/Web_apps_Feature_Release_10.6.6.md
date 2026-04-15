@@ -88,6 +88,14 @@ These changes will affect the following data sources:
 > [!NOTE]
 > The `IsHidden` flag mentioned above is already supported by the query builder.
 
+#### Web apps: All 'HTTP 404' pages have now been replaced by embedded visuals [ID 45152]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, when you try to open a non-existing page in either of the DataMiner web apps, you will no longer be redirected to a separate "HTTP 404" page. Instead, a visual will now appear inside the app.
+
+Clicking the button in that visual will redirect you to the landing page or to the home page or another valid page of the app.
+
 #### Dashboards/Low-Code Apps: Default theme of basic controls has been changed to 'Transparent' [ID 45198]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
