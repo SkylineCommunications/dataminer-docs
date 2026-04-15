@@ -15,7 +15,7 @@ On the Support page in the Admin app, titles and descriptions are now cleaned au
 
 ### 13 April 2026 - Fix - Marketplace - Authentication loop
 
-In the Marketplace app, an issue has been resolved where users could get stuck in an authentication loop. This behavior has been fixed.
+An issue has been resolved where users could get stuck in an authentication loop when activating a subscription for DataMiner credits. This behavior has been fixed.
 
 ### 13 April 2026 - Enhancement - Admin - Improved grouping for adding a subscription
 
