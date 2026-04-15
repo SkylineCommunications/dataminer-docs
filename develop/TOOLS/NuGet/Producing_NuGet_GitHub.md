@@ -36,7 +36,7 @@ To publish to the GitHub NuGet registry, use the [Master Workflow](xref:github_r
 
 Follow the instructions in [the official GitHub Docs](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions) to add a new secret to your repository:
 
-- **Name**: Enter `NUGET_API_KEY`.
+- **Name**: Enter `NUGETAPIKEY_GITHUB`.
 
 - **Secret**: Enter your personal access token.
 
