@@ -90,6 +90,16 @@ Additionally, state icon events, alarm focus events and RAD parameter aggregatio
 
 Up to now, during NATS migrations or NATS-related BPA test runs, establishing connections to NATS servers of other DataMiner Agents in the DMS would be slow due to reverse DNS lookups.
 
+#### Problem when a connector was using the makeCommandByProtocol option while in slow poll mode [ID 45217]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, a problem could occur when a connector was using the `makeCommandByProtocol` option while in slow poll mode.
+
+The slow poll timer would make the ping command when adding the slow poll group to the execution queue. However, when regular groups were still being executed when a valid response entered, an attempt would be made to stop the slow poll timer. This attempt would fail was waiting for the response to release the resources.
+
+From now on, the slow poll timer will no longer make the ping command when adding the slow poll group to the queue. The ping command will be made when the group is executed, and the `makeCommandByProtocol` setting will be disregarded.
+
 #### SLAnalytics: Problem due to incorrect internal state in Automatic Incident Tracking [ID 45220]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
