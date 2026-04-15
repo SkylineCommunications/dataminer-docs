@@ -8,6 +8,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Values of Cube alarm storm prevention user settings would not be visualized correctly in the UI](xref:KI_Cube_Alarm_storm_prevention) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 | DataMiner Cube 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 | 15 April, 2026 |
 | [GQI DxM unavailable because of missing Newtonsoft.Json assembly](xref:KI_GQI_DxM_unavailable_missing_Newtonsoft_Json) | DataMiner web 10.5.0 [CU1]/10.5.4 or higher | | 25 March, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
@@ -35,6 +36,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Values of Cube alarm storm prevention user settings would not be visualized correctly in the UI](xref:KI_Cube_Alarm_storm_prevention) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 | DataMiner Cube 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 | 15 April, 2026 |
 | [GQI DxM unavailable because of missing Newtonsoft.Json assembly](xref:KI_GQI_DxM_unavailable_missing_Newtonsoft_Json) | DataMiner web 10.5.0 [CU1]/10.5.4 or higher | | 25 March, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
