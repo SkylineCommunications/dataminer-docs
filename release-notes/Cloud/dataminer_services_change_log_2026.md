@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 13 April 2026 - Enhancement - Admin - Cleaner title and description input on Support page
+
+On the Support page in the Admin app, titles and descriptions are now cleaned automatically when you type, paste, or drop text, so unsupported characters are removed immediately.
+
+### 13 April 2026 - Fix - Marketplace - Authentication loop
+
+An issue has been resolved where users could get stuck in an authentication loop when activating a subscription for DataMiner credits. This behavior has been fixed.
+
 ### 13 April 2026 - Enhancement - Admin - Improved grouping for adding a subscription
 
 On the Add Subscription panel in the Admin app, service names are now shown instead of unit names to make it clearer which selection applies to which service.
