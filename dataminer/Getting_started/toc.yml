@@ -40,6 +40,8 @@ items:
               topicUid: Using_older_installers
         - name: Using a pre-installed DataMiner Virtual Hard Disk
           topicUid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
+        - name: Deploying a DataMiner Agent using the AWS AMI
+          topicUid: Using_aws_ami
         - name: Unattended DataMiner installation
           topicUid: Unattended_DM_installation
         - name: Regarding virtual servers
