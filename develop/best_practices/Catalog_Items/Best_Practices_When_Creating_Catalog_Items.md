@@ -30,7 +30,9 @@ You can optimize the visibility of your Catalog item by making sure the [**Manif
   - Use [title case](xref:Title_case).
   - Use at most three words per tag.
 
-- Assign an **icon** to your Catalog item to catch the user's attention. You can do this by defining a vendor for your Catalog item with the `vendor_id` field in the [Manifest file](xref:Register_Catalog_Item#manifest-file). If you need assistance with this, please reach out to your technical contact.
+- Assign a vendor **icon** to your Catalog item to catch the user's attention. You can do this by defining a vendor for your Catalog item with the `vendor_id` field in the [Manifest file](xref:Register_Catalog_Item#manifest-file). If you need assistance with this, please reach out to your technical contact.
+
+- To add a custom icon, place an image named `custom-icon` in the `images` folder, using one of the supported extensions: `.jpg`, `.jpeg`, `.png`, `.bmp`, `.tif`, `.tiff`, or `.webp`.
 
 ## Optimize the accessibility of your Catalog item
 
