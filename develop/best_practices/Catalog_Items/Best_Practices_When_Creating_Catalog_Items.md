@@ -32,7 +32,7 @@ You can optimize the visibility of your Catalog item by making sure the [**Manif
 
 - Assign a vendor **icon** to your Catalog item to catch the user's attention. You can do this by defining a vendor for your Catalog item with the `vendor_id` field in the [Manifest file](xref:Register_Catalog_Item#manifest-file). If you need assistance with this, please reach out to your technical contact.
 
-- If no vendor is assigned to the Catalog item, you can add a custom icon instead. To do so, place an image named `custom-icon` in the `images` folder. PNG (`.png`) is the recommended format. Other supported formats include `.jpg`, `.jpeg`, `.bmp`, `.tif`, `.tiff`, and `.webp`. For best results, use a square image of 96x96 or 128x128 pixels.
+- You can also add a custom icon by placing an image named `custom-icon` in the `images` folder. This will overrule the vendor icon, though the vendor name will still be shown in the item's sidebar. PNG (`.png`) is the recommended format. Other supported formats include `.jpg`, `.jpeg`, `.bmp`, `.tif`, `.tiff`, and `.webp`. For best results, use a square image of 96x96 or 128x128 pixels.
 
 ## Optimize the accessibility of your Catalog item
 
