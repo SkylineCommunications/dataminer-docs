@@ -31,7 +31,7 @@ Each of the four DataMiner SRM use cases described above relies on a **combinati
 
 - **[Service Manager](xref:srm_stack#service-manager)**: Add a full-fledged service layer on top of your individual resources, allowing quick creation of services, full automation of the entire service lifecycle, and enhanced visibility of service quality and SLAs.
 
-- **Apps**: Out-of-the-box standard application for specific tech domains, such as the [Booking Manager](xref:Booking_Manager_user_interface) app, which allows you to create and manage bookings using DataMiner Service & Resource Management (SRM), the [DataMiner IDP](xref:SolIDP) (Infrastructure Discovery and Provisioning) app and the [DataMiner PTP](xref:SolPTP) (Precision Time Protocol) app.
+- **Apps**: Out-of-the-box standard application for specific tech domains, such as the [Booking Manager](xref:Booking_Manager_user_interface) app, which allows you to create and manage bookings using DataMiner Service & Resource Management (SRM), the [DataMiner IDP](xref:SolIDP) (Infrastructure Discovery and Provisioning) app and the [PTP](xref:SolPTP) (Precision Time Protocol) app.
 
 > [!TIP]
 >

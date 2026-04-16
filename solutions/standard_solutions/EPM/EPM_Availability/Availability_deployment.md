@@ -3,7 +3,7 @@ uid: Availability_deployment
 keywords: Availability deployment
 ---
 
-# Deploying the DataMiner EPM Availability solution
+# Deploying the EPM Availability solution
 
 To deploy the Availability branch of the EPM Solution:
 
