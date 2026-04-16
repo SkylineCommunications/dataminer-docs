@@ -29,6 +29,16 @@ Any script that attempts a connect or disconnect with a destination endpoint tha
 
 `Cannot resolve destination elements. Missing element for endpoints: <list of endpoints>`
 
+#### Virtual Signal Groups: Improved error messages when deleting an object in use [ID 45314]
+
+In the Virtual Signal Groups app, deleting an object that was still in use previously resulted in a generic error message. For example, when attempting to delete a transport type that was still referenced, users would see a message such as `One or more transport types are still in use.` This made it difficult to identify where the object was still being used. Similar behavior occurred when deleting endpoints, transport types, and levels.
+
+This has now been improved. Error messages will provide more detailed information by explicitly listing the objects that reference the item that is being deleted. For example:
+
+`Cannot delete transport type 'name' because it is referenced by level 'Video' and endpoints '...', '...', '...'.`
+
+If more than five references exist, the list is truncated, which is indicated with an ellipsis.
+
 ## Fixes
 
 #### Missing validation for profile parameter values [ID 45062]
