@@ -135,6 +135,12 @@ The default theme of the following basic controls has been changed to *Transpare
 - Time range
 - Toggle
 
+#### GQI DxM will no longer send log entries to the console [ID 45302]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, the GQI DxM would send its log entries to both the log file and the console. From now on, it will only send its log entries to the log file.
+
 ### Fixes
 
 #### Dashboards app: Problem when trying to open a dashboard that was not present in the cache [ID 44989]
