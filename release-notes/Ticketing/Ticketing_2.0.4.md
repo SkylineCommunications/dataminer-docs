@@ -12,7 +12,7 @@ uid: Ticketing_2.0.4
 > [!NOTE]
 > This version requires:
 >
-> - DataMiner 10.5.9/10.6.0 or higher
+> - DataMiner 10.6.0 [CU1]/10.6.4 or higher
 > - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.x or higher
 
 > [!TIP]
@@ -47,6 +47,10 @@ In several places on the Ticket Information page, the "Nothing to show" messages
 #### GQI DxM no longer restarted during Ticketing installation [ID 45292]
 
 During installation of the Ticketing app, the GQI DxM is no longer restarted. As the Dev Packs used by the solution are now installed by SDM registration, this restart is no longer needed.
+
+#### GQI DxM behavior adjustment taken into account [ID 45318]
+
+The Ticketing solution has been adjusted to take into account the GQI behavior changes introduced in DataMiner 10.6.0 [CU1]/10.6.4 ([44714](xref:Web_apps_Feature_Release_10.6.4#dashboardslow-code-apps---gqi-enhanced-filtering-when-using-the-gqi-dxm-id-44714)). As a consequence of these changes, when a filter in a query is linked to data, the data is now only considered empty when nothing is selected in the component. This behavior change has been addressed using a custom operator.
 
 ## Fixes
 
