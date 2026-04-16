@@ -32,5 +32,5 @@ Defines a tree control.
 
 ## Remarks
 
-> [!NOTE]
-> The root table of a tree control always has to be displayed. A position does not have to be added; you only need to specify RTDisplay = true.
+- The root table of a tree control always has to be displayed. A position does not have to be added; you only need to specify RTDisplay = true.
+- Tree controls are not supported in the DataMiner web apps (Monitoring app, Low-Code Apps, etc.).
