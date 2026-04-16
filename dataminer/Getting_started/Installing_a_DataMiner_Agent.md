@@ -5,7 +5,7 @@ description: Use the DataMiner Installer and then upgrade to the latest feature 
 
 # Installing a self-managed DataMiner Agent
 
-If you want to take care of hosting and managing your DataMiner System yourself, there are two ways you can install the DataMiner Agents:
+If you want to take care of hosting and managing your DataMiner System yourself, there are several ways you can install the DataMiner Agents:
 
 - [Using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 - [Deploying a virtual hard disk with DataMiner pre-installed](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk).

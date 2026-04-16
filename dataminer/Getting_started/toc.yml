@@ -38,7 +38,7 @@ items:
               topicUid: Switching_from_subscription_mode_to_offline_demo
             - name: Using an older installer (deprecated)
               topicUid: Using_older_installers
-        - name: Using a pre-installed DataMiner Virtual Hard Disk
+        - name: Deploying a pre-installed DataMiner Virtual Hard Disk
           topicUid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
         - name: Deploying a DataMiner Agent using the AWS AMI
           topicUid: Using_aws_ami
