@@ -215,3 +215,9 @@ In some cases, SLAnalytics could stop working due to an incorrect internal state
 When a protocol connection that acted as a server failed to bind to the socket during startup, up to now, this would only get logged (with debug level 1). From now on, this will be assigned error level 0.
 
 Also, the element will go into an error state, and an alarm indicating a failing binding will be generated.
+
+#### SLNet: MessageBroker cache could leak NATS threads [ID 45259]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+In some rare cases, the MessageBroker cache of SLNet could leak NATS threads.
