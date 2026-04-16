@@ -9,6 +9,22 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 16 April 2026 - Fix - Admin - Bypass the NotFound errors for NodeInfo in favor of no node info message
+
+In Admin on the DMS overview page, it could occur that both an info message and error message were shown when there were no available nodes for the system. This has been fixed by marking the NodeNotFound errors and bypassing them locally in the DMS Overview component.
+
+### 16 April 2026 - Enhancement - Home - Track progress and results of corporate website
+
+This change adds extra info (organization and coordination id) when an onboard_complete event is logged to Google analytics
+
+### 16 April 2026 - Fix - Inputs - Password stays shown when pressing peak button and releasing mouse outside of button bounds
+
+Fixed an issue where the password in a password input would stay visible when pressing the peek button and releasing the mouse outside the peek button.
+
+### 16 April 2026 - Fix - Admin - Failed to fetch audit logs when (de)selecting initiator quickly
+
+When quickly toggling the filter checkboxes on the audit page in Admin, an error could be shown.
+
 ### 13 April 2026 - Enhancement - Admin - Cleaner title and description input on Support page
 
 On the Support page in the Admin app, titles and descriptions are now cleaned automatically when you type, paste, or drop text, so unsupported characters are removed immediately.
