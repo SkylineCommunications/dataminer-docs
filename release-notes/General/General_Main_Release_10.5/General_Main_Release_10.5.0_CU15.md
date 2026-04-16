@@ -84,6 +84,15 @@ From now on, the number of state icon events sent by SLAnalytics instances will 
 
 Additionally, state icon events, alarm focus events and RAD parameter aggregation events will now all have a smaller weight, meaning that more of them will be allowed in the queue.
 
+#### Problem with alarm forwarding after an element had been edited [ID 45167]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When an element had been edited, in some cases, alarm updates would incorrectly no longer be forwarded to northbound SNMP managers.
+
+> [!NOTE]
+> This fix will not work if the element in question has the *Enable SNMP agent* option enabled, and has a virtual IP address and a subnet mask configured.
+
 #### Problem with connections to NATS servers of other DMAs during NATS migrations and NATS-related BPA test runs [ID 45175]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
