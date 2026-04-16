@@ -4,16 +4,67 @@ uid: Ad_hoc_Creation
 
 # Creating an ad hoc data source
 
-> [!TIP]
-> If you are using [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) with Visual Studio 2022, you can use a template in Visual Studio to create ad hoc data sources more easily. To do so:
->
-> 1. Create a new project in Visual Studio 2022.
-> 1. Search for the *DataMiner Ad Hoc Data Source Solution* template.
-> 1. Specify a name for the solution.
-> 1. Under *Additional information*, fill in the name and author for the data source, and select the lifecycle interfaces you want to implement.
-> 1. Click *Create*.
+## Prerequisites
 
-To define a new ad hoc data source:
+It is advised to use [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) with Visual Studio to create ad hoc data sources. DIS provides a template to start creating a data source and simplifies deployment, including potential dependencies.
+The source code of ad hoc data sources can also be viewed and edited in the automation module within Cube, but this is not meant for maintaining extensions.
+
+## GQI extension API
+
+In order to create an ad hoc data source, you use the GQI extension API. This API can be referenced in two ways:
+
+- Via the `Skyline.DataMiner.Core.GQI` NuGet package.
+    - This is the recommended API when creating GQI extensions for Dataminer 10.6.6/10.5.0 [CU15]/10.6.0 [CU3] onwards. Newer GQI features will only be supported by this API.
+    - Requires DIS.
+    - Package compatibility for a specific DataMiner version can be viewed on the [NuGet page]() <!-- To be filled in when nuget is deployed -->
+    - Namespace: `Skyline.DataMiner.Core.GQI.*`.
+
+- Via the `Skyline.DataMiner.Files.SLAnalyticsTypes` NuGet package or SLAnalyticsTypes.dll assembly reference.
+    - This is currently still the default API when using the DIS template. This API is end-of-life and does not support GQI features added from DataMiner 10.6.6/10.5.0 [CU15]/10.6.0 [CU3] onwards.
+    - Namespace: `Skyline.DataMiner.Analytics.GenericInterface.*`.
+
+> [!TIP]
+> To ease the transition of extensions that were built against the legacy API, it is possible to combine both APIs within extension libraries and within extensions.
+> If a data source is implemented with both the Core.GQI package and the legacy API, GQI uses the Core.GQI implementation when it is supported.
+
+## Data source creation
+
+### [Using DIS and the Ad Hoc Data Source template](#tab/tabid-1)
+
+#### Creating a new ad hoc data source project
+
+1. Create a new project in Visual Studio.
+
+1. Search for the *DataMiner Ad Hoc Data Source Solution* template.
+
+1. Specify a name for the solution.
+
+1. Under *Additional information*, fill in the name and author for the data source, and select the [lifecycle interfaces](xref:Ad_hoc_Life_cycle#detailed-lifecycle-overview) you want to implement.
+
+1. Click *Create*.
+
+#### Exploring the data source
+
+The template creates a C# class file with the name of the data source.
+The core of an ad hoc data source is a class that implements the [*IGQIDataSource* interface](xref:GQI_IGQIDataSource).
+Any class within the project that implements this interface is discovered by GQI and used as a data source.
+
+Above the class, the *GQIMetaData* attribute is set. This attribute sets the display name of the data source in the Dashboards app or Low-Code Apps. If this attribute is not present, the name of the class is displayed instead, which may not be very user-friendly.
+
+(See [Example ad hoc data script](xref:Forwarding_dummy_data_to_GQI) for a full example of an ad hoc data source implementation)
+
+#### Deploying the data source
+
+The data source can be deployed similar to deploying automation scripts using DIS.
+For more information, see [Publishing with DIS](xref:XML_editor#publish).
+
+#### Using the data source
+
+1. In the Dashboards app or Low-Code Apps, configure a query and select the data source *Get ad hoc data* or *Get custom data*, depending on your DataMiner version.
+
+1. In the *Data source* dropdown box, select the name of your ad hoc data source.
+
+### [Using Cube](#tab/tabid-2)
 
 1. In the Automation app, add a script containing a new class that implements the [*IGQIDataSource* interface](xref:GQI_IGQIDataSource).
 
@@ -44,6 +95,8 @@ To define a new ad hoc data source:
 1. In the Dashboards app or Low-Code Apps, configure a query and select the data source *Get ad hoc data* or *Get custom data*, depending on your DataMiner version.
 
 1. In the *Data source* dropdown box, select the name of your ad hoc data source.
+
+***
 
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the [*IGQIInputArguments* interface](xref:GQI_IGQIInputArguments) in the script to define that a specific argument is required, for instance to filter the displayed data.
 

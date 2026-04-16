@@ -4,7 +4,65 @@ uid: CO_Creation
 
 # Creating a custom operator
 
-To define a new custom operator:
+## Prerequisites
+
+It is advised to use [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) with Visual Studio to create custom operators. DIS does not provide a direct template to create a custom operator. Instead, the template for an ad hoc data source can be reused.
+The source code of custom operators can also be viewed and edited in the automation module within Cube, but this is not meant for maintaining extensions.
+
+## GQI extension API
+
+In order to create a custom operator, you use the GQI extension API. This API can be referenced in two ways:
+
+- Via the `Skyline.DataMiner.Core.GQI` NuGet package.
+    - This is the recommended API when creating GQI extensions for Dataminer 10.6.6/10.5.0 [CU15]/10.6.0 [CU3] onwards. Newer GQI features will only be supported by this API.
+    - Requires DIS.
+    - Package compatibility for a specific DataMiner version can be viewed on the [NuGet page]()<!-- To be filled in when nuget is deployed -->
+    - Namespace: `Skyline.DataMiner.Core.GQI.*`.
+
+- Via the `Skyline.DataMiner.Files.SLAnalyticsTypes` NuGet package or SLAnalyticsTypes.dll assembly reference.
+    - This is currently still the default API when using the DIS template. This API is end-of-life and does not support GQI features added from DataMiner 10.6.6/10.5.0 [CU15]/10.6.0 [CU3] onwards.
+    - Namespace: `Skyline.DataMiner.Analytics.GenericInterface.*`.
+
+> [!TIP]
+> To ease the transition of extensions that were built against the legacy API, it is possible to combine both APIs within extension libraries and within extensions.
+> If an operator is implemented with both the Core.GQI package and the legacy API, GQI uses the Core.GQI implementation when it is supported.
+
+## Operator creation
+
+### [Using DIS and the Ad Hoc Data Source template](#tab/tabid-1)
+
+1. Create a new project in Visual Studio.
+
+1. Search for the *DataMiner Ad Hoc Data Source Solution* template.
+
+1. Specify a name for the solution.
+
+1. Under *Additional information*, fill in the name and author for the operator, and select the lifecycle interfaces you want to implement.
+
+1. Click *Create*.
+
+#### Altering to be a custom operator
+
+The template creates a C# class file with the name of the data source.
+To alter it to be a custom operator, find the class that currently implements the [*IGQIDataSource* interface](xref:GQI_IGQIDataSource) and instead have it implement the [*IGQIOperator* interface](xref:GQI_IGQIOperator).
+Any class within the project that implements this interface is discovered by GQI and used as an operator.
+
+Above the class, the *GQIMetaData* attribute is set. This attribute sets the display name of the operator in the Dashboards app or Low-Code Apps. If this attribute is not present, the name of the class is displayed instead, which may not be very user-friendly.
+
+(See [Example custom operator](xref:Custom_Operator_Tutorial) for a full example of a custom operator implementation)
+
+#### Deploying the custom operator
+
+The custom operator can be deployed similar to deploying automation scripts using DIS.
+For more information, see [Publishing with DIS](xref:XML_editor#publish).
+
+#### Using the custom operator
+
+1. In the Dashboards app or Low-Code Apps, when selecting an operator, select *Apply custom operator*.
+
+1. In the *Operator* dropdown box, select the name of your custom operator.
+
+### [Using Cube](#tab/tabid-2)
 
 1. In the Automation app, add a script containing a new class that implements either the [*IGQIRowOperator*](xref:GQI_IGQIRowOperator), [*IGQIColumnOperator*](xref:GQI_IGQIColumnOperator), or [*IGQIOptimizableOperator*] interface.
 
