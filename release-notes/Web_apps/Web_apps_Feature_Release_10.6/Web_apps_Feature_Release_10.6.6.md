@@ -239,3 +239,9 @@ Up to now, when a draft version of an app was previewed, in some cases, a *Chang
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 Up to now, messages appearing on top of the *Alarm table* component would take up too much space.
+
+#### Dashboard Gateway would use an incorrect URL to retrieve data from the DMA [ID 45270]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+In some cases, a Dashboard Gateway would use an incorrect URL to retrieve data from the DataMiner Agent, especially when, after a restart of the Web Services API, the Dashboard Gateway received an API request before its persistent SLNet connection was fully initialized.
