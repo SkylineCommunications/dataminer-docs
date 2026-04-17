@@ -118,6 +118,12 @@ As DataMiner is not able to automatically detect such exceptional cases, you can
 </Swarming>
 ```
 
+#### Correlation: GetAvailableCorrelationRulesMessage response now also includes grouping information [ID 45187]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When a `GetAvailableCorrelationRulesMessage` is sent to SLNet, the response will now also include information regarding the grouping defined in the correlation rules.
+
 #### DataMiner upgrade: .NET Framework 4.8 will no longer be installed [ID 45196]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
