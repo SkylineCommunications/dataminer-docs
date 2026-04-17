@@ -50,7 +50,7 @@ During installation of the Ticketing app, the GQI DxM is no longer restarted. As
 
 #### GQI DxM behavior adjustment taken into account [ID 45318]
 
-The Ticketing solution has been adjusted to take into account the GQI behavior changes introduced in DataMiner 10.6.0 [CU1]/10.6.4 ([44714](xref:Web_apps_Feature_Release_10.6.4#dashboardslow-code-apps---gqi-enhanced-filtering-when-using-the-gqi-dxm-id-44714)). As a consequence of these changes, when a filter in a query is linked to data, the data is now only considered empty when nothing is selected in the component. This behavior change has been addressed using a custom operator.
+The Ticketing solution has been adjusted to take into account possible GQI behavior changes such as those introduced in DataMiner 10.6.0 [CU1]/10.6.4 ([44714](xref:Web_apps_Feature_Release_10.6.4#dashboardslow-code-apps---gqi-enhanced-filtering-when-using-the-gqi-dxm-id-44714)), which, when a filter in a query is linked to data, cause the data to only be considered empty when nothing is selected in the component. This has been addressed using a custom operator.
 
 #### Date and time when tickets were closed now shown in Tickets table and on ticket info page [ID 45320]
 
