@@ -80,6 +80,8 @@ In the `C:\Skyline DataMiner\Logging` folder, you can now find the following new
 | SLNetConnections.txt  | An entry will be added each time an SLNet to SLNet connection encounters a timeout. |
 | SLCubeConnections.txt | An entry will be added each time a Cube to SLNet connection encounters a timeout.   |
 
+If information logging is set to Level 4, the log entries will also mention if a message is waiting until other calls have finished. Up to 10 active calls are allowed at any given time.
+
 ##### Existing log files
 
 - *ConnectionDiagnostics* in `C:\Skyline DataMiner\Logging\SLNet\ConnectionDiagnostics` will now also report which calls were in progress at a certain point in time.
