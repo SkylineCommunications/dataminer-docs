@@ -173,6 +173,14 @@ When an element had been edited, in some cases, alarm updates would incorrectly 
 
 Up to now, during NATS migrations or NATS-related BPA test runs, establishing connections to NATS servers of other DataMiner Agents in the DMS would be slow due to reverse DNS lookups.
 
+#### SLNet: Problems with user picture requests would cause other messages to get blocked [ID 45210]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When SLNet was not able to respond to user picture requests from a web app, up to now, those request could stay active within SLNet for several minutes, causing other messages to get blocked.
+
+From now on, user picture requests will time out after 10 seconds.
+
 #### Problem when a connector was using the makeCommandByProtocol option while in slow poll mode [ID 45217]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
