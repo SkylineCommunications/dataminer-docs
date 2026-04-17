@@ -309,7 +309,7 @@ From now on, during a DataMiner upgrade, Microsoft .NET Framework 4.8 will no lo
 
 On most machines running DataMiner, this will already be installed. If, for any reason, you need to install this package, it can be downloaded from [the official download page](https://dotnet.microsoft.com/en-us/download/dotnet-framework).
 
-### DataMiner upgrade: A number of default Visio stencils will no longer be included [ID 45202]
+#### DataMiner upgrade: A number of default Visio stencils will no longer be included [ID 45202]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 
