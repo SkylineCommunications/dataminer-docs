@@ -48,6 +48,20 @@ In several places on the Ticket Information page, the "Nothing to show" messages
 
 During installation of the Ticketing app, the GQI DxM is no longer restarted. As the Dev Packs used by the solution are now installed by SDM registration, this restart is no longer needed.
 
+#### GQI DxM behavior adjustment taken into account [ID 45318]
+
+The Ticketing solution has been adjusted to take into account possible GQI behavior changes such as those introduced in DataMiner 10.6.0 [CU1]/10.6.4 ([44714](xref:Web_apps_Feature_Release_10.6.4#dashboardslow-code-apps---gqi-enhanced-filtering-when-using-the-gqi-dxm-id-44714)), which, when a filter in a query is linked to data, cause the data to only be considered empty when nothing is selected in the component. This has been addressed using a custom operator.
+
+#### Date and time when tickets were closed now shown in Tickets table and on ticket info page [ID 45320]
+
+For closed, canceled, and rejected tickets, the date and time when these were closed is now displayed in the Tickets table:
+
+![Tickets table, with the "Status" and "Closed at" columns highlighted](~/release-notes/images/Tickets_table_45320.png)
+
+In addition, this is now also indicated in the lower-right corner of the ticket info page, instead of the "Last modified" date and time:
+
+![Ticket info page, with the "Closed" time indicated in the lower-right corner](~/release-notes/images/Ticketing_Info_page_45320.png)
+
 ## Fixes
 
 #### Large description cannot be fully viewed in expanded view [ID 45245]
