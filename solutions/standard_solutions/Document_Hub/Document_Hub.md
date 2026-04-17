@@ -57,7 +57,7 @@ Document Hub supports the following capabilities by default without any customiz
 
 - **Link and Reference**: Store file references and URLs in DataMiner DOM objects and applications. Link documents to jobs, assets, contacts, and other business entities.
 
-- **Search and Navigate**: Discover documents by name and categorie. Browse and organize files through a unified interface regardless of storage location.
+- **Search and Navigate**: Discover documents by name and categories. Browse and organize files through a unified interface regardless of storage location.
 
 - **Read and Display**: View and open documents in third-party applications. Support common file types including jpg, png, gif, svg, pdf, docx, xlsx, and pptx.
 
