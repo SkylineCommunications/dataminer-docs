@@ -133,6 +133,14 @@ Up to now, the SLA cleaning thread would incorrectly remove history data for an 
 
 Up to now, native MessageBroker clients would not order the IP addresses in *SLCloud.xml* correctly. From now on, local IP addresses will again be put at the top of the list.
 
+#### Failover: Incorrect alarm would be generated at regular intervals when SLNet-managed NATS solution was used [ID 44908]
+
+<!-- MR 10.5.0 [CU14] - FR TBD -->
+
+On a DataMiner System that included a Failover setup that was still using the legacy SLNet-managed NATS solution, up to now, the following alarm would incorrectly be generated at regular intervals after an upgrade or a Failover switch:
+
+`Failover agent <IP> is experiencing sync issues. Check the Failover status.`
+
 #### Alarm severity change within two minutes after an element start or restart would be processed incorrectly [ID 44917]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
