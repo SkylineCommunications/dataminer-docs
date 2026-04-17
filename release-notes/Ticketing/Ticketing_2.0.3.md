@@ -12,6 +12,16 @@ uid: Ticketing_2.0.3
 > - DataMiner 10.5.9/10.6.0 or higher
 > - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.x or higher
 
+> [!IMPORTANT]
+> The user installing Ticketing should have permission to:
+>
+> - Add Elements under the Root View (Permissions:Rights General => Elements => Add / Permissions:Views => Root View enabled)
+> - Edit hyperlinks (Permissions:Rights General => Alarms => Allow to add or update hyperlinks)
+> - Add and Edit Alarm Properties (Permissions:Rights General => Alarms => Properties => Add/Edit)
+>
+> Any user using Ticketing should have Write access on the Ticketing Lock Manager element under the Root View (via Groups => Permissions => Views).
+
+
 > [!TIP]
 > Installing the following apps alongside the Ticketing Solution will provide access to additional functionality:
 >
