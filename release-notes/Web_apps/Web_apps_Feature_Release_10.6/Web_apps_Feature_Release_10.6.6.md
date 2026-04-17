@@ -80,6 +80,28 @@ If you do so, the custom time zone you specify will override the local time of t
 
 Note that, when a time zone is enforced for all users, this user-level setting will be disabled.
 
+#### GQI DxM: In/NotIn comparisons [ID 45255]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Clients can now use the following new filter methods when applying a filter operator:
+
+| Filter method | Description |
+| --- | ---|
+| In    | Matches when at least one item in the filter value list is equal to the target cell value.  |
+| NotIn | Matches when none of the items in the filter value list are equal to the target cell value. |
+
+> [!NOTE]
+>
+> - These filter methods are only applicable when the filter value is a list of values. The type of the items in the filter value should be comparable to the column type on which the filter is applied.
+> - These filter methods will not be provided by GQI via the filter operator capabilities. It is up to the client to provide these as an option.
+> - Internally, the *In* comparison will be translated to an OR filter with a number of *Equals* comparisons, and the *NotIn* comparison will be translated to an AND filter with a number of *NotEquals* comparisons.
+
+In addition, the following enhancements have been made:
+
+- When the *greater than*, *greater than or equal to*, *less than*, and *less than or equal to* filter methods are applied on multiple numeric filter values, the internal filters will now be simplified to only compare to the minimum or maximum filter value respectively instead of using a large OR filter.
+- Up to now, when the *NotEquals*, *NotContains*, and *NotRegex* filter methods were used in combination with multiple filter values, they would internally be translated to an OR filter. From now on, they will be translated to a AND filter. As a result, *NotEquals* with multiple filter values will now be equivalent to the new *NotIn* filter method, and *Equals* with multiple filter values will now be equivalent to the new *In* filter method.
+
 ## Changes
 
 ### Enhancements
