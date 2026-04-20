@@ -20,7 +20,7 @@ uid: Document_Hub_1.0.0
 
 - SDM 2.0 - SDM 2.0 API compliant
 - Configure file size limits - Configure file size limitations on Categories, hard limitation or soft limitation with warning
-- Give subpath to upload with category - (API-feature) Upload a folder with the catagory defined path and add a subpath to further more define your folder structure.
+- Give subpath to upload with category - (API-feature) Upload a folder with the category defined path and add a subpath to further more define your folder structure.
 
 ## Changes
 
