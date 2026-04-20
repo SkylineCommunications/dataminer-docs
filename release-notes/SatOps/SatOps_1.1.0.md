@@ -18,7 +18,7 @@ The Satellite Scheduling view now supports both a read and an edit mode for mana
 
 #### Satellite Inventory: Duplication of transponders [ID 44950]
 
-It is now possible to create a transponder based on an existing transponder. This will speed up the initial creation of multiple transponders for the same satellite. The interactive automation script even offers the option to create multiple similar transponders in bulk if they have sequential frequency bands.
+It is now possible to create a transponder based on an existing transponder. This will speed up the initial creation of multiple transponders for the same satellite.
 
 #### Satellite Inventory: Duplication of transponder plans [ID 45329]
 
