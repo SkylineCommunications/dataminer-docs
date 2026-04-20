@@ -71,9 +71,13 @@ Whereas the sections above provide more information on how to create and use XML
 - Documentation text must start with an uppercase letter and end with a period.
 - Summaries for classes, methods, properties, events, etc. should start with a verb in third person singular form. For example: "Represents ...", "Initializes a new instance of ...", "Gets or sets ...", "Retrieves ...", etc.
 - Summaries should be kept small. Additional information can be provided in the `<remarks>` tag.
-- XML documentation comments must be valid XML. For example, use XML entities to avoid XML parsing issues when providing code examples:
+- XML documentation comments must be valid XML. For example, use XML entities (e.g. `&lt;`, `&gt;`) to avoid XML parsing issues when providing code examples:
 
-  ![](~/develop/images/XML_entities.png)
+```csharp
+/// <code>
+/// Dictionary&lt;int, ConnectivityConnection&gt; connections = protocol.GetConnectivityConnections(400, 2000, "Input*", false);
+/// </code>
+```
 
 ### Constructors
 

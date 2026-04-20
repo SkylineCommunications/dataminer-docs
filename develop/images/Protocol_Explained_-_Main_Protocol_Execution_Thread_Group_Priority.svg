@@ -9,17 +9,17 @@
 	<style type="text/css">
 	<![CDATA[
 		.st1 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
-		.st2 {fill:#000000;font-family:SkylineSans;font-size:1.00001em}
+		.st2 {fill:#172554;font-family:SkylineSans;font-size:1.00001em}
 		.st3 {font-size:1em}
-		.st4 {fill:#fee599;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
-		.st5 {fill:#f9c499;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
-		.st6 {fill:#9c4a09;font-family:SkylineSans;font-size:0.916672em}
-		.st7 {fill:#fff2cc;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
-		.st8 {fill:#bf9000;font-family:SkylineSans;font-size:0.916672em}
-		.st9 {fill:#ebf1df;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
-		.st10 {fill:#789440;font-family:SkylineSans;font-size:0.916672em}
-		.st11 {fill:#dbeef3;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
-		.st12 {fill:#31859b;font-family:SkylineSans;font-size:0.916672em}
+		.st4 {fill:#f3f4f6;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st5 {fill:#172554;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st6 {fill:#f3f4f6;font-family:SkylineSans;font-size:0.916672em}
+		.st7 {fill:#60A5FA;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st8 {fill:#1E3A8A;font-family:SkylineSans;font-size:0.916672em}
+		.st9 {fill:#DBEAFE;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st10 {fill:#172554;font-family:SkylineSans;font-size:0.916672em}
+		.st11 {fill:#2563EB;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st12 {fill:#f3f4f6;font-family:SkylineSans;font-size:0.916672em}
 		.st13 {stroke:#c05046;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
 		.st14 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 	]]>
