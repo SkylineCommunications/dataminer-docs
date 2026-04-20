@@ -79,3 +79,9 @@ When a ticket type field of data type Enum was defined, the configured default v
 #### Not possible to select 'No Assignee' for a ticket [ID 45291]
 
 When a ticket was configured, it could occur that it was not possible to select the *No Assignee* value in the *Assignee* drop-down list. This made it impossible to create a ticket and not immediately assign it to someone, even though typically a ticket will only be assigned when it is set to *In Progress*.
+
+#### Ticket and ticket type creation not possible because of dependency conflict [ID 45332]
+
+It could occur that multiple versions of Skyline.DataMiner.Core.DataMinerSystem.Common were detected in the Ticketing Solution, causing creation of tickets and ticket types to fail. All DLLs have now been consolidated to prevent this issue from occurring again.
+
+Note that Skyline Lock Manager has also been upgraded from version 1.0.3.2 to 1.0.3.4 because of this change.
