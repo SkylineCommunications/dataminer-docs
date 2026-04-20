@@ -1,8 +1,8 @@
 items:
   - name: Live
     items:
-    - name: MediaOps Live 1.0.1 - Preview
-      topicUid: MediaOps_Live_1.0.1
+    - name: MediaOps Live 1.0.5 - Preview
+      topicUid: MediaOps_Live_1.0.5
     - name: MediaOps Live 1.0.0
       topicUid: MediaOps_Live_1.0.0
   - name: Plan
