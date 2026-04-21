@@ -30,7 +30,7 @@ The "Generic Issue" default ticket type now no longer contains any additional fi
 
 #### No longer possible to edit ticket fields for rejected, canceled, or closed tickets [ID 45138]
 
-On the Information page of a ticket, the *Save* button is now disabled in case the ticket is in the *Rejected*, *Cancelled*, or *Closed* state. This way, you can still view the details for such tickets, but it is no longer possible to make any changes to the ticket fields.
+On the Information page of a ticket, the *Save* button is now disabled in case the ticket is in the *Rejected*, *Cancelled*, or *Closed* state, so that it is no longer possible to make any changes to the ticket fields of such tickets.
 
 #### Various UI improvements [ID 45139]
 
