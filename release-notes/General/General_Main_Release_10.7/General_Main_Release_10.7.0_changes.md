@@ -345,6 +345,14 @@ Note that the following stencil files will still be deployed:
 > [!NOTE]
 > The above-mentioned stencil files that are no longer included in DataMiner upgrade packages will not automatically be removed from existing systems.
 
+#### Automation: Compiled assemblies generated during syntax checks will no longer be loaded into memory [ID 45214]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+Up to now, when a syntax check was performed on an automation script (e.g., by clicking *Validate* in a script's C# block in DataMiner Cube), the compiled assembly would be loaded into the SLAutomation memory.
+
+From now on, compiled assemblies generated during syntax checks will no longer be loaded into memory.
+
 #### SLLogCollector: Only BPA tests deployed by default will be rerun each time a log package is created [ID 45228]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
