@@ -4,7 +4,7 @@ uid: Pricing_sizing_guide_services_DataMiner_Assistant
 
 # Sizing guide: DataMiner Assistant
 
-Document Intelligence is charged **per page processed**, not per document, and not per workflow run.
+Document Intelligence is charged **per page processed**, not per document or per workflow run.
 
 ## Service volumes
 

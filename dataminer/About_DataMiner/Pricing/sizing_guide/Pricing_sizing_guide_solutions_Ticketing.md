@@ -25,7 +25,7 @@ Ticketing cost is driven primarily by **ticket volume created per month**, not b
 | DataMiner as a Service | Hosted Managed Objects | `1,000,000 metrics (min)` | Standalone DaaS baseline. Does not grow with ticket volume. |
 
 > [!NOTE]
-> Connecting to an **external platform** (ServiceNow, Jira, Remedy, etc.) adds at least one Connector Service and one Standard Managed Object per connected instance. Bi-directional sync also adds Automation Actions. Size these separately using the [Data Plane](xref:Pricing_sizing_guide_services_data_plane) and [Data Sources](xref:Pricing_sizing_guide_services_data_sources) guides.
+> **Third-party integration**, i.e., connecting to an external platform (ServiceNow, Jira, Remedy, etc.) adds at least one Connector Service and one Standard Managed Object per connected instance. Bi-directional sync also adds Automation Actions. Size these separately using the [Data Plane](xref:Pricing_sizing_guide_services_data_plane) and [Data Sources](xref:Pricing_sizing_guide_services_data_sources) guides.
 
 ## Configured examples
 

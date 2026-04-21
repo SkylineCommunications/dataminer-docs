@@ -27,8 +27,8 @@ For typical deployments, size STaaS directly from your Standard Managed Object c
 
 | Configuration | Average per month |
 |---|---|
-| STaaS services (ZRS) | **1.7 credits per 100 Managed Objects** |
-| STaaS services (GRS) | **3.4 credits per 100 Managed Objects** |
+| STaaS services (ZRS) | 1.7 credits per 100 Managed Objects |
+| STaaS services (GRS) | 3.4 credits per 100 Managed Objects |
 
 ## What does not affect this estimate
 
@@ -36,4 +36,4 @@ For typical deployments, size STaaS directly from your Standard Managed Object c
 - **Number of users or dashboards**: STaaS usage is driven by system write activity, not by how many users access the data or how many dashboards exist.
 
 > [!TIP]
-> STaaS volume is a consequence of your Data Plane sizing, not an independent input. Size your Managed Objects first, then apply the rule of thumb above. Adjust if your specific deployment has unusually high alarm rates or very high polling frequency.
+> STaaS volume is a consequence of your Data Plane sizing, not an independent input. [Size your Managed Objects first](xref:Pricing_sizing_guide_services_data_plane), then apply the rule of thumb above. Adjust if your specific deployment has unusually high alarm rates or very high polling frequency.

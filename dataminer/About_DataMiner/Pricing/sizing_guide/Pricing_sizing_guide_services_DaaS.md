@@ -26,4 +26,4 @@ Hosted **Managed Objects** are billed by **total metric count** across your enti
 
 - **Number of users on the hosted system**: This is not metered.
 - **Hosted node count within the default**: The first node per 1,000,000 metrics is included. Additional nodes are only billed when you explicitly provision them for resiliency.
-- **Stopped Managed Objects**: Stopped or deleted objects are not excluded.
+- **Stopped Managed Objects**: Stopped or deleted objects are not included.

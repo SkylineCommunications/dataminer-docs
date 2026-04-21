@@ -15,7 +15,7 @@ The main sizing decision for this use case comes from the intended scope:
   When DataMiner actively orchestrates job execution, the cost model follows the **same logic as MediaOps Plan**. The only additions are the Automation Actions to execute the job. In a **typical scenario**, each state (pre-roll, start, stop, post-roll) triggers a single Automation Action that activates all required workloads in one shot. It is not one Automation Action per workload.
 
 > [!IMPORTANT]
-> The Orchestration example in this guide is a **use case illustration**, not a standard packaged solution. The actual number of Automation Actions depends on your specific orchestration configuration, i.e., the workflows you define, the states you handle, and any custom logic. Use the figures above as a reference point, not a fixed formula, and validate against your actual design.
+> The Orchestration example in this guide is a **use case illustration**, not a standard packaged solution. The actual number of Automation Actions depends on your specific orchestration configuration, i.e., the workflows you define, the states you handle, and any custom logic. Use the figures below as a reference point, not a fixed formula, and validate against your actual design.
 
 ## Parameters
 

@@ -19,7 +19,7 @@ Identify your terminal count and which service usage data you need. This determi
 > [!NOTE]
 > **Daily data usage is not enabled by default.** At 12 months retention, a fleet of 1,000 terminals requires ~5 Managed Objects without usage stats, ~16 with monthly usage stats, and ~333 with daily usage stats. Evaluate carefully before enabling.
 
-## Calculation method
+### Calculation method
 
 Each terminal contributes a fixed number of metrics depending on which data is collected:
 

@@ -4,7 +4,7 @@ uid: Pricing_sizing_guide_solutions
 
 # Sizing guide: Solutions
 
-The Solution sizing guides cover packaged DataMiner deployments. Each guide provides the parameters to collect, the formulas to apply, and worked examples matched to the pricing page packages.
+The solution sizing guides cover packaged DataMiner deployments. Each guide provides the parameters to collect, the formulas to apply, and worked examples matched to the pricing page packages.
 
 | Solution | What it does | Primary cost driver |
 |----------|-------------|---------------------|
