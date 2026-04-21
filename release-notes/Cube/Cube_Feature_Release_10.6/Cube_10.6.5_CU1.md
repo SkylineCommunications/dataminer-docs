@@ -24,6 +24,6 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 Since changes were made to the Cube UI themes in Feature Version 10.6.4, a number of theme-related issues could occur:
 
-- Areas with a white background could hardly be distinguished when the background of the visual overview was also white.
+- When you used the `#FFFFFF=ThemeBackground` option, the background color would incorrectly be dark gray instead of white.
 - When a visual overview contained tabs, it was difficult to determine which tab was the active one.
 - Certain images added to the visual overview would not be visible.
