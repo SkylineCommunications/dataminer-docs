@@ -48,6 +48,9 @@ Not all Protocol.Triggers.Trigger.Time values can be used in combination with th
 |session|timeout|The trigger will go off when a timeout occurs on the specified session.<!-- RN 12542 -->|
 |timer|before|The trigger will go off before the specified timer is executed.|
 
+> [!IMPORTANT]
+> Conditions on the group cause triggers linked to the group (before and after) not to go off when the condition result is 'false'. Behavior is happening in full from 10.4.8 (CU1) and 10.4 (CU5). Before these version, the trigger before could be executing before the condition is validated.
+
 \* For example, for an HTTP connection, you can specify the following:
 
 ```xml

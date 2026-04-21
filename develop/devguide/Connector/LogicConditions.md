@@ -132,7 +132,10 @@ Conditions can be defined on the following items:
 > [!NOTE]
 > Avoid using conditions on a Timer. Instead, use a condition on the timer group(s).
 >
-> For a group condition, the evaluation of the condition will be performed when the group is executed by the group execution queue. This means the group will always be added to the queue of the protocol thread anyway. If the condition value changes between the moment the group is added to the queue and the moment the group is executed, it is possible that the behavior of the group is different than was intended when the group was added. This also means that it is no problem to have a poll group with a condition as the last group in a timer.
+> For a group condition, the evaluation of the condition will be performed when the group is dequeued by the group execution queue. This means the group will always be added to the queue of the protocol thread anyway. If the condition value changes between the moment the group is added to the queue and the moment the group is executed, it is possible that the behavior of the group is different than was intended when the group was added. This also means that it is no problem to have a poll group with a condition as the last group in a timer.
+
+> [!IMPORTANT]
+> Triggers linked to the group (before and after) will not go off when the condition result is 'false'. Behavior is happening in full from 10.4.8 (CU1) and 10.4 (CU5). Before these versions, the trigger before could be executing before the condition is validated.
 
 To build more advanced conditional constructs, you can use brackets.
 
