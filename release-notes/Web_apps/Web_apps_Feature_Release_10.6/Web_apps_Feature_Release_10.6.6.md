@@ -251,3 +251,9 @@ Up to now, messages appearing on top of the *Alarm table* component would take u
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 In some cases, a Dashboard Gateway would use an incorrect URL to retrieve data from the DataMiner Agent, especially when, after a restart of the Web Services API, the Dashboard Gateway received an API request before its persistent SLNet connection was fully initialized.
+
+#### Dashboards/Low-Code Apps - Image component: Vertical scrollbar would incorrectly appear when vertical padding was less than 5px [ID 45337]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When an *Image* component had its vertical padding set to a value less than 5px, up to now, a vertical scrollbar would incorrectly appear.
