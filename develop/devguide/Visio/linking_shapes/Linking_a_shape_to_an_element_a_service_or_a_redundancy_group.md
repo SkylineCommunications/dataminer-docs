@@ -113,11 +113,22 @@ In order to make sure that the Visio drawing of the element, service or redundan
 
 By default, a shape linked to an element or service navigates to a Visual page when clicked. However, you can make the shape navigate to a specific (visual, data or other) page instead.
 
-To do so, add the following shape data to the shape:
+To do so, add the **Page** shape data field to the shape, and configure its value as follows:
 
-| Shape data field | Value description |
-| ---------------- | ----------------- |
-| Page | \- For a Data page: "data" or "d", followed by a colon and the name of the page. To link to a subpage, add a forward slash and the name of the subpage. <br>For example: "data:performance/Task Manager"<br>- For a Visual page: "visual" or "v", followed by a colon and the name of the page.<br>For example: "v:ExamplePage"<br>- For a different page in the card side panel: a colon followed by the name of the page.<br>For example, to link to the Alarms page: ":alarms" |
+- For a Data page: "data" or "d", followed by a colon and the name of the page. To link to a subpage, add a forward slash and the name of the subpage.
+
+  For example: `data:performance/Task Manager`
+
+- For a Visual page: "visual" or "v", followed by a colon and the name of the page.
+
+  For example: `v:ExamplePage`
+
+- For a different page in the card side panel: a colon followed by the name of the page.
+
+  For example, to link to the Alarms page: `:alarms`
+
+> [!NOTE]
+> If you link to a Data or Visual page but do not include the above-mentioned prefix, Cube will look for the closest match across the available pages.
 
 ## Service navigation
 
