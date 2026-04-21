@@ -157,6 +157,12 @@ The default theme of the following basic controls has been changed to *Transpare
 - Time range
 - Toggle
 
+#### Web apps: Web version in 'About DataMiner' window will now be retrieved by means of a GetDataMinerVersionInfo message [ID 45256]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, the *Web* version displayed in the *About DataMiner* window of a DataMiner web app will be retrieved by means of a `GetDataMinerVersionInfo` message.
+
 #### GQI DxM will no longer send log entries to the console [ID 45302]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
