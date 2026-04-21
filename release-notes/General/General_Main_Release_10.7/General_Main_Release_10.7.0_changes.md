@@ -354,14 +354,14 @@ Up to now, each time SLLogCollector created a log package, it would rerun all BP
 > [!NOTE]
 > Each time a log package is created, all BPA test results available on the system will still be included in that package. This means, that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
 
-#### DxMs upgraded [ID 45304]
+#### DxMs upgraded [ID 45304] [ID 45347]
 
 <!-- RN 45304: MR 10.7.0 - FR 10.6.6 -->
+<!-- RN 45347: MR 10.7.0 - FR 10.6.6 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer 1.8.8
-- DataMiner CloudGateway 3.0.1
 - DataMiner CoreGateway 2.14.17
 - DataMiner FieldControl 2.12.1
 - DataMiner Orchestrator 1.8.2
