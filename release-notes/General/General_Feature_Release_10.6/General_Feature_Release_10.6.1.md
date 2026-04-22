@@ -415,6 +415,12 @@ A caching mechanism has now been introduced in order to enhance performance when
 
 When the anomaly scores for a particular relational anomaly (sub)group and region are retrieved twice within a 5-minute window, from now on, SLAnalytics will not recalculate the scores. Instead, it will return the scores from the cache.
 
+#### BPA test 'Antivirus on the DataMiner Agents' no longer checks for CrowdStrike files [ID 44199]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+From now on, the *Antivirus on the DataMiner Agents* BPA test will no longer check for CrowdStrike files.
+
 ### Fixes
 
 #### Service templates: Problem when parsing conditions to dynamically include or exclude child elements [ID 43120]

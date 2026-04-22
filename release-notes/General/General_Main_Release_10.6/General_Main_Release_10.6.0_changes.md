@@ -668,6 +668,12 @@ Annotations are now End of Life.
 > [!IMPORTANT]
 > Before you upgrade to this DataMiner version, make sure the soft-launch option *LegacyAnnotations* is either disabled or removed from the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file. Otherwise, the upgrade operation will be aborted.
 
+#### BPA test 'Antivirus on the DataMiner Agents' no longer checks for CrowdStrike files [ID 44199]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+From now on, the *Antivirus on the DataMiner Agents* BPA test will no longer check for CrowdStrike files.
+
 #### SLAnalytics: New database synchronization tasks will be paused when the queue is too long [ID 44243]
 
 <!-- MR 10.6.0 - FR 10.6.2 -->

@@ -106,6 +106,12 @@ A number of enhancements have been made to the stuffing and unstuffing behavior 
 
 Stuffing will now always be removed from the parameters, even if the current command did not add stuffing during a previous run. This will make it easier and more robust to reuse parameters across different commands.
 
+#### BPA test 'Antivirus on the DataMiner Agents' no longer checks for CrowdStrike files [ID 44199]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+From now on, the *Antivirus on the DataMiner Agents* BPA test will no longer check for CrowdStrike files.
+
 ### Fixes
 
 #### Service templates: Problem when parsing conditions to dynamically include or exclude child elements [ID 43120]
