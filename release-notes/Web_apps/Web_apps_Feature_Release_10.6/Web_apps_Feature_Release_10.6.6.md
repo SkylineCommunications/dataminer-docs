@@ -268,6 +268,14 @@ Up to now, messages appearing on top of the *Alarm table* component would take u
 
 In some cases, a Dashboard Gateway would use an incorrect URL to retrieve data from the DataMiner Agent, especially when, after a restart of the Web Services API, the Dashboard Gateway received an API request before its persistent SLNet connection was fully initialized.
 
+#### Low-Code Apps: Form component would incorrectly not wait until all loading had finished before executing any Update or Delete actions [ID 45328]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, a *Form* component would incorrectly already execute its actions before a newly-selected instance had finished loading. As a result, old instances could get updated or deleted.
+
+From now on, a *Form* component will wait until all loading has finished before executing any *Update* or *Delete* actions.
+
 #### Dashboards/Low-Code Apps - Image component: Vertical scrollbar would incorrectly appear when vertical padding was less than 5px [ID 45337]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
