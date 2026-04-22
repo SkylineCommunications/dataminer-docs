@@ -8,7 +8,6 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [Values of Cube alarm storm prevention user settings would not be visualized correctly in the UI](xref:KI_Cube_Alarm_storm_prevention) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 | DataMiner Cube 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 | 15 April, 2026 |
 | [GQI DxM unavailable because of missing Newtonsoft.Json assembly](xref:KI_GQI_DxM_unavailable_missing_Newtonsoft_Json) | DataMiner web 10.5.0 [CU1]/10.5.4 or higher | | 25 March, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
@@ -22,6 +21,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Values of Cube alarm storm prevention user settings not visualized correctly](xref:KI_Cube_Alarm_storm_prevention) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 | DataMiner Cube 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 | 15 April, 2026 |
 | [SLNet handle leak caused by SAML authentication and SLHelper startup](xref:KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup) | DataMiner 10.5.0 [CU12], 10.6.0, and 10.6.3 [CU0] | DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 [CU1] | February 25, 2026 |
 | [Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated](xref:KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged) | From DataMiner 10.5.12/10.6.0 onwards | DataMiner 10.6.0 [CU1]/10.6.4 | February 24, 2026 |
 | [Possible resource overbooking in SRM](xref:KI_Possible_overbooking_in_SRM) | SRM setups using DataMiner 10.5.12 or higher | DataMiner 10.6.2 [CU1] | January 29, 2026 |
@@ -36,7 +36,6 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [Values of Cube alarm storm prevention user settings would not be visualized correctly in the UI](xref:KI_Cube_Alarm_storm_prevention) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 | DataMiner Cube 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 | 15 April, 2026 |
 | [GQI DxM unavailable because of missing Newtonsoft.Json assembly](xref:KI_GQI_DxM_unavailable_missing_Newtonsoft_Json) | DataMiner web 10.5.0 [CU1]/10.5.4 or higher | | 25 March, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
@@ -50,6 +49,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Values of Cube alarm storm prevention user settings not visualized correctly](xref:KI_Cube_Alarm_storm_prevention) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 | DataMiner Cube 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 | 15 April, 2026 |
 | [SLNet handle leak caused by SAML authentication and SLHelper startup](xref:KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup) | DataMiner 10.5.0 [CU12], 10.6.0, and 10.6.3 [CU0] | DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 [CU1] | February 25, 2026 |
 | [Check Deprecated DLL Usage BPA incorrectly flags MySql.Data NuGet as deprecated](xref:KI_BPA_Check_Deprecated_DLL_Usage_MySql_Data_flagged) | From DataMiner 10.5.12/10.6.0 onwards | DataMiner 10.6.0 [CU1]/10.6.4 | February 24, 2026 |
 | [Possible resource overbooking in SRM](xref:KI_Possible_overbooking_in_SRM) | SRM setups using DataMiner 10.5.12 or higher | DataMiner 10.6.2 [CU1] | January 29, 2026 |
