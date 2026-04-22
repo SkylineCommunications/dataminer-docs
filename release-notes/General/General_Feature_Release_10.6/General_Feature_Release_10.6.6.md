@@ -334,3 +334,13 @@ Up to now, when the Agent with the lowest DMA ID had been removed from a DataMin
 `System.AggregateException: One or more errors occurred. ---> Skyline.DataMiner.Net.Exceptions.DataMinerException: Fatal error while sending request [MasterSyncRequestMessage for message of type SetReservationInstanceMessage from XXX] to master DMA XXX, max retries reached. ---> Skyline.DataMiner.Net.MasterSync.MasterSyncerException: Could not use the connection to master DMA XXX`
 
 From now on, when the Agent with the lowest DMA ID was removed from the DataMiner System, the Resource Manager will correctly re-evaluate and update the master DMA when it receives a master synchronization request.
+
+#### SLDataMiner: Problem when trying to fetch information about loopback adapters [ID 45285]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When the SLDataMiner process starts, it tries to fetch information about all network adapters. However, up to now, when it tried to fetch information about a loopback adapter, an error resembling the following one would be thrown:
+
+`CIPSettings::Init|ERR|-1|Opening device failed for adapter {14763620-5D53-11EA-90D5-806E6F6E6963} (Software Loopback Interface 1): The system cannot find the file specified. (2)`
+
+As loopback adapters are not part of any communication flow, from now on, SLDataMiner will no longer try to fetch information about those adapters.
