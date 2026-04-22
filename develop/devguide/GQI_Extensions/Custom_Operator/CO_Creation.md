@@ -94,6 +94,8 @@ For more information, see [Publishing with DIS](xref:XML_editor#publish).
 
 1. In the *Operator* dropdown box, select the name of your operator.
 
+***
+
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the [*IGQIInputArguments* interface](xref:GQI_IGQIInputArguments) in the script to define that a specific argument is required.
 
 > [!IMPORTANT]
