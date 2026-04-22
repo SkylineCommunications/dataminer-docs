@@ -298,7 +298,7 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
-          - name: Values of Cube alarm storm prevention user settings not visualized correctly
+          - name: Alarm storm prevention user settings not visualized correctly
             topicUid: KI_Cube_Alarm_storm_prevention
           - name: gRPC-connected Cube not responding when Automation module is used
             topicUid: KI_gRPC_connected_Cube_stuck_when_using_Automation

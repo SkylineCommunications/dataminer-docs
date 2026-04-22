@@ -2,7 +2,7 @@
 uid: KI_Cube_Alarm_storm_prevention
 ---
 
-# Values of Cube alarm storm prevention user settings not visualized correctly
+# Alarm storm prevention user settings not visualized correctly
 
 ## Affected versions
 
