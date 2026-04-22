@@ -297,3 +297,9 @@ No save operation would get triggered as no change was detected. After you had r
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 When an *Image* component had its vertical padding set to a value less than 5px, up to now, a vertical scrollbar would incorrectly appear.
+
+#### Web apps: Search bar would not show any results on a mobile device [ID 45350]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When certain DataMiner web apps (e.g., Dashboards, Monitoring, etc.) were used on a mobile device, up to now, the search bar at the top of the screen would incorrectly never show any results.
