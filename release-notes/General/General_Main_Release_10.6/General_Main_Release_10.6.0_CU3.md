@@ -83,6 +83,14 @@ From now on, a `GetServiceStateMessage` will no longer be forwarded to the Agent
 
 When you install the BrokerGateway DxM on a server that does not have the Microsoft .NET hosting bundle installed yet, from now on, a message will appear, saying that .NET has to be installed first.
 
+#### Aliases can now be configured for DaaS systems [ID 45327]
+
+<!-- MR 10.6.0 [CU3] - FR 10.6.6 -->
+
+If you want to configure an alias for a DataMiner Agent, in the *DataMiner.xml* file, the `mode` attribute of the `DMAName` element has to be set to "manual". If this attribute is not set to "manual", configuring an alias will also change the computer name, which will cause unintended behavior.
+
+As it is not possible for a user to make changes to the *DataMiner.xml* file of a DaaS system, up to now, it would not be possible to configure an alias for such a system. From now on, in the *DataMiner.xml* file of a DaaS system, the `mode` attribute of the `DMAName` element will be set to "manual" by default. This will allow users to also configure aliases for DaaS systems.
+
 ### Fixes
 
 #### BPA tests could incorrectly not be run on DMAs that were not connected to the internet [ID 45040]

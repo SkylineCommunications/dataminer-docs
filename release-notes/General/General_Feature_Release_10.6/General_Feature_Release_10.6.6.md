@@ -220,6 +220,14 @@ When you upgrade an entire DMS, every DMA will upgrade itself locally, and one o
 
 Up to now, while a full DMS upgrade was in progress, you could connect with a client application (e.g., DataMiner Cube) to any of the Agents that had finished upgrading locally, except the orchestrating Agent. Even when that Agent had finished upgrading locally, it would not be possible to connect to it. From now on, this will be possible.
 
+#### Aliases can now be configured for DaaS systems [ID 45327]
+
+<!-- MR 10.6.0 [CU3] - FR 10.6.6 -->
+
+If you want to configure an alias for a DataMiner Agent, in the *DataMiner.xml* file, the `mode` attribute of the `DMAName` element has to be set to "manual". If this attribute is not set to "manual", configuring an alias will also change the computer name, which will cause unintended behavior.
+
+As it is not possible for a user to make changes to the *DataMiner.xml* file of a DaaS system, up to now, it would not be possible to configure an alias for such a system. From now on, in the *DataMiner.xml* file of a DaaS system, the `mode` attribute of the `DMAName` element will be set to "manual" by default. This will allow users to also configure aliases for DaaS systems.
+
 ### Fixes
 
 #### BPA tests could incorrectly not be run on DMAs that were not connected to the internet [ID 45040]
