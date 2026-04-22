@@ -185,6 +185,14 @@ From now on, the *Web* version displayed in the *About DataMiner* window of a Da
 
 Up to now, the GQI DxM would send its log entries to both the log file and the console. From now on, it will only send its log entries to the log file.
 
+#### Dashboards/Low-Code Apps: Enhanced storage of dashboards and low-code apps [ID 45340]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, the size of a dashboard or low-code app could rapidly increase due to redundant information being saved, especially when queries had been configured.
+
+From now on, no more redundant information will be saved. As a result, dashboards and low-code apps will require less memory and disk space, the overall performance of dashboards and low-code apps will increase, and web upgrades will be executed faster.
+
 ### Fixes
 
 #### Dashboards app: Problem when trying to open a dashboard that was not present in the cache [ID 44989]
