@@ -20,25 +20,25 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-#### GQI DxM: Extensions can now be created using the Skyline.DataMiner.Core.GQI NuGet [ID 44760]
+#### GQI DxM: Extensions can now be created using the Skyline.DataMiner.Core.GQI.Extensions NuGet [ID 44760] [ID 45341]
 
-<!-- MR 10.6.0 [CU3] - FR 10.6.6 -->
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
-From now on, the `Skyline.DataMiner.Core.GQI` NuGet can be used to create GQI extensions without depending on the `SLAnalyticsTypes` API.
+From now on, the `Skyline.DataMiner.Core.GQI.Extensions` NuGet can be used to create GQI extensions without depending on the `SLAnalyticsTypes` API.
 
 Up to now, when new GQI features were added in the `SLAnalyticsTypes` API, extensions could only use these new features if DataMiner itself also used the latest `C:\Skyline DataMiner\Files\SLAnalyticsTypes.dll` file.
 
 Notes:
 
-- GQI extensions can now be created with either the `SLAnalyticsTypes` API or the `Skyline.DataMiner.Core.GQI` NuGet.
+- GQI extensions can now be created with either the `SLAnalyticsTypes` API or the `Skyline.DataMiner.Core.GQI.Extensions` NuGet.
 - Though an extension library may contain extensions for both APIs, an individual extension must stick to one specific API.
 - Functional backward compatibility is guaranteed for existing extensions using the `SLAnalyticsTypes` API.
-- Extensions that use the `SLAnalyticsTypes` API will at runtime be adapted to the new `Skyline.DataMiner.Core.GQI` NuGet API. This may introduce some additional overhead.
-- Extensions that use the `Skyline.DataMiner.Core.GQI` NuGet API will have no additional overhead.
-- The `Skyline.DataMiner.Core.GQI` NuGet contains the exact same API as the `SLAnalyticsTypes` API, but in a different namespace:
+- Extensions that use the `SLAnalyticsTypes` API will at runtime be adapted to the new `Skyline.DataMiner.Core.GQI.Extensions` NuGet API. This may introduce some additional overhead.
+- Extensions that use the `Skyline.DataMiner.Core.GQI.Extensions` NuGet API will have no additional overhead.
+- The `Skyline.DataMiner.Core.GQI.Extensions` NuGet contains the exact same API as the `SLAnalyticsTypes` API, but in a different namespace:
 
   - `SLAnalyticsTypes` API: `Skyline.DataMiner.Analytics.GenericInterface`
-  - `Skyline.DataMiner.Core.GQI` NuGet: `Skyline.DataMiner.Core.GQI`
+  - `Skyline.DataMiner.Core.GQI.Extensions` NuGet: `Skyline.DataMiner.Core.GQI.Extensions`
 
 - To convert existing extensions and extension libraries, just add the NuGet dependency and change the namespace.
 - Changing the API used by an extension does not change the extension ID and will therefore remain backward compatible with existing queries.
