@@ -70,6 +70,21 @@ In the *Settings* pane for this component, you can configure the following setti
 
 Similar to all other basic controls, this new control also supports the *Set Value* component action, which sets the current value of the component to either a static or dynamic value.
 
+#### Dashboards/Low-Code Apps - Query builder: 'Is one of' and 'Is none of' comparisons [ID 45164]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+On systems using the GQI DxM, two new filter methods will be available in the query builder:
+
+| Filter method | Description |
+| --- | ---|
+| Is one of  | Matches when at least one item in a list of values is equal to the target value. |
+| Is none of | Matches when none of the items in a list of values are equal to the target value. |
+
+Internally, the *Is one of* comparison will be translated to an OR filter with a number of *equals* comparisons (e.g., Column X equals A OR equals B OR equals C), and the *Is none of* comparison will be translated to an AND filter with a number of *not equals* comparisons (e.g., Column X not equals A AND not equals B AND not equals C).
+
+See also: [GQI DxM: In/NotIn comparisons [ID 45255]](#gqi-dxm-innotin-comparisons-id-45255)
+
 #### Web apps: A custom time zone can now be specified on user level [ID 45170]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
@@ -96,6 +111,7 @@ Clients can now use the following new filter methods when applying a filter oper
 > - These filter methods are only applicable when the filter value is a list of values. The type of the items in the filter value should be comparable to the column type on which the filter is applied.
 > - These filter methods will not be provided by GQI via the filter operator capabilities. It is up to the client to provide these as an option.
 > - Internally, the *In* comparison will be translated to an OR filter with a number of *Equals* comparisons, and the *NotIn* comparison will be translated to an AND filter with a number of *NotEquals* comparisons.
+> - For information on how this was integrated into the query builder, see [Dashboards/Low-Code Apps - Query builder: 'Is one of' and 'Is none of' comparisons [ID 45164]](#dashboardslow-code-apps---query-builder-is-one-of-and-is-none-of-comparisons-id-45164).
 
 In addition, the following enhancements have been made:
 
