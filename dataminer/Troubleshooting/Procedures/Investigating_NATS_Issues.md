@@ -113,7 +113,10 @@ Note that if the logging for processes includes the line `Failed setting up NATS
 
 - **can't listen to the '****' port**: Indicates a NATS-related port is in use by another process.
 
-This often happens due to the legacy NATS/NAS services running whilst [the system runs BrokerGateway-managed NATS](#confirm-the-system-uses-brokergateway-managed-nats) . Make sure the legacy NAS/NATS service are stopped and their startup type is set to `Manual`. If the issue persist you can run `netstat -ano | findstr.exe <port>` to find which process is using the port and resolve the conflict.
+This often happens due to the legacy NATS/NAS services running whilst together with the BrokerGateway-managed NATS.
+Confirm if [the system runs BrokerGateway-managed NATS](#confirm-the-system-uses-brokergateway-managed-nats). If the system uses BrokerGateway-Managed NATS, make sure the Legacy services are stopped and their startup type is set to `manual`.
+If the issue persist after stopping the Legacy services you can run `netstat -ano | findstr.exe <port>` to find which process is using the port and resolve the conflict by stopping said process and restarting the BrokerGateway.
+For Legacy NATS, please refer to the [Legacy NAS/NATS troubleshooting](xref:Investigating_Legacy_NATS_Issues#check-if-port-is-already-in-use)
 
 ## Check the configuration files
 
