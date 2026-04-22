@@ -111,6 +111,10 @@ Check the following log files in the order listed:
 
 Note that if the logging for processes includes the line `Failed setting up NATS session: Exception caught in fields fetching: Failed to fetch fields: Remote SSL certificate error. Does the hostname and SSL certificate match?: SSL peer certificate or SSH remote key was not OK"`, this indicates that the certificate used by the site binding of IIS is invalid. Make sure the correct certificate is used by IIS. For more information on how to check and set the IIS HTTPS certificate, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis).
 
+- **can't listen to the '****' port**: Indicates a NATS-related port is in use by another process.
+
+This often happens due to the legacy NATS/NAS services running whilst [the system runs BrokerGateway-managed NATS](#confirm-the-system-uses-brokergateway-managed-nats) . Make sure the legacy NAS/NATS service are stopped and their startup type is set to `Manual`. If the issue persist you can run `netstat -ano | findstr.exe <port>` to find which process is using the port and resolve the conflict.
+
 ## Check the configuration files
 
 Verify that the key configuration files contain the correct information for your cluster setup.
