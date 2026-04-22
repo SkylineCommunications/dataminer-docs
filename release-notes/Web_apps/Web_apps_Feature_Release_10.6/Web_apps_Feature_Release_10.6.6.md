@@ -276,6 +276,14 @@ Up to now, a *Form* component would incorrectly already execute its actions befo
 
 From now on, a *Form* component will wait until all loading has finished before executing any *Update* or *Delete* actions.
 
+#### Dashboards/Low-Code Apps - Query builder: Problem when linking a query option to component data [ID 45335]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When, while configuring a query with a custom data source, you linking a query option to component data, the data link would silently be discarded when the static value of the query option matched the value provided by the component data.
+
+No save operation would get triggered as no change was detected. After you had reloaded the dashboard or the low-code app, the query option would revert to its static value with no data link attached.
+
 #### Dashboards/Low-Code Apps - Image component: Vertical scrollbar would incorrectly appear when vertical padding was less than 5px [ID 45337]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
