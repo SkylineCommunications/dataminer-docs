@@ -16,7 +16,7 @@ If you [create a new organization](xref:Creating_an_organization), you can try o
 
 To **upgrade** your trial system to a regular DataMiner Community Edition DaaS system, please contact <support@dataminer.services>.
 
-If you would like an **extended trial period**, please contact <sales@skyline.be>.
+To **extend the trial period**, add DataMiner credits. See [How can I acquire more DataMiner credits](xref:FAQs_Pricing.html#how-can-i-acquire-more-dataminer-credits).
 
 > [!NOTE]
 > If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire. Another email notification will be sent when the system effectively expires.
