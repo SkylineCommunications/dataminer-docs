@@ -65,9 +65,10 @@ A number of enhancements have been made with regard to the synchronization of co
 > [!NOTE]
 > The midnight sync has not been altered.
 
-#### Enhanced logging for connections towards SLNet [ID 44765]
+#### Enhanced logging for connections towards SLNet [ID 44765] [ID 45359]
 
-<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+<!-- 44765: MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+<!-- 45359: MR 10.7.0 - FR 10.6.6 -->
 
 A number of enhancements have been made with regard to SLNet logging, especially to be able to troubleshoot issues with sudden disconnects between two SLNet instances or between SLNet and DataMiner Cube.
 
@@ -93,8 +94,8 @@ If information logging is set to Level 4, the log entries will also mention if a
 
 > [!NOTE]
 >
-> - Log entries can also be added to *SLNetConnections.txt* and *SLCubeConnections.txt* for SLNet connections created elsewhere. To do so, provide a `LoggerProvider` to `Diagnostics.AddLoggerProvider()` of `SLNetTypes`.
-> - When a Cube connected to a system without server-side `Diagnostics` connects to a system with server-side `Diagnostics`, the *SLCubeConnections.txt* log file will not be populated. Restart Cube if you want that log file to be populated.
+> - Log entries can also be added to *SLNetConnections.txt* and *SLCubeConnections.txt* for SLNet connections created elsewhere. To do so, provide a `LoggerProvider` to `SLNetTypesDiagnostics.AddLoggerProvider()`.
+> - When a Cube connected to a system without server-side `SLNetTypesDiagnostics` connects to a system with server-side `SLNetTypesDiagnostics`, the *SLCubeConnections.txt* log file will not be populated. Restart Cube if you want that log file to be populated.
 
 #### BrokerGateway installer will now give a clear indication when .NET is missing [ID 45169]
 
