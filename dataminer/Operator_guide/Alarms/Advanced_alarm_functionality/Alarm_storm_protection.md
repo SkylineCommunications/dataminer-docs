@@ -10,7 +10,7 @@ When an exceptional situation occurs that causes your system to be flooded with 
 
 When the Cube alarm storm protection is triggered, the following happens:
 
-![Alarm Storm Visuals](~/dataminer/images/AlarmStorm_Visuals.jpg)<br>*Alarm storm in DataMiner Cube 10.6.1*
+![Alarm Storm Visuals](~/dataminer/images/AlarmStorm_Visuals.png)<br>*Alarm storm in DataMiner Cube 10.6.5*
 
 - A **pop-up message** appears, mentioning that alarm storm mode is activated with some additional information on the alarms coming in ("1" in the image above).
 

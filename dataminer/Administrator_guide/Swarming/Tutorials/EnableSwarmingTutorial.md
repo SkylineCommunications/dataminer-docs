@@ -172,7 +172,7 @@ Once DataMiner has restarted, you can test the Swarming functionality by moving 
 
 1. On the right, select the destination DMA.
 
-   ![Cube Swarm](~/dataminer/images/Swarming_Tutorial_Enable_Cube_Swarm.png)
+   ![Cube Swarm](~/dataminer/images/Swarming_Tutorial_Enable_Cube_Swarm.png)<br>*Swarming UI in DataMiner 10.6.5*
 
 1. Click *Swarm*.
 

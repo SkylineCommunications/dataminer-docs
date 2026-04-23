@@ -30,7 +30,7 @@ If a change point other than an outlier or unlabeled change is **unexpected**, i
 
 On a trend graph, a change point is indicated by a bar below the graph. In addition, recent change points will be reflected by a [parameter's trend icon](xref:Trend_icons).
 
-![Anomaly detection](~/dataminer/images/Anomaly_Detection.png)<br>*Trending: Anomaly detection in DataMiner 10.4.5*
+![Anomaly detection](~/dataminer/images/Anomaly_Detection.png)<br>*Trending: Anomaly detection in DataMiner 10.6.5*
 
 You can interpret this bar as follows:
 
@@ -52,11 +52,11 @@ Whenever behavioral anomaly detection finds an **anomalous** level shift, trend 
 
 These suggestion events can be viewed in a dedicated suggestion events tab, as alarms with severity "Information" and source "Suggestion Engine". To see suggestion events in the Alarm Console, open a new tab and select to see suggestion events. This is possible for active alarms, history alarms, and alarms in a sliding window.
 
-![New alarm tab](~/dataminer/images/New_suggestion_events_tab.png)<br>*New Alarm Console tab in DataMiner 10.6.1*
+![New alarm tab](~/dataminer/images/New_suggestion_events_tab.png)<br>*New Alarm Console tab in DataMiner 10.6.5*
 
 Here is an example of a suggestion events tab:
 
-![Suggestion events tab](~/dataminer/images/Suggestion_events_tab.png)<br>*Suggestion events tab in DataMiner 10.6.1*
+![Suggestion events tab](~/dataminer/images/Suggestion_events_tab.png)<br>*Suggestion events tab in DataMiner 10.6.5*
 
 > [!TIP]
 > See also: [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console)

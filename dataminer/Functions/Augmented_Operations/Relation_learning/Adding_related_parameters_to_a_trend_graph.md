@@ -10,10 +10,10 @@ From DataMiner 10.2.12/10.3.0 onwards, you can use the light bulb in the upper-r
 
 The following prerequisites are **mandatory**. You will not be able to use this feature without them:
 
-- The system must be connected to dataminer.services. You can check whether this is the case on the *Cloud* page in System Center.
+- The system must be connected to dataminer.services. To check whether this is the case, go to the *Cloud* page in System Center.
 
-  ![System Center Cloud page](~/dataminer/images/Cloud_connected.jpg)<br>
-  *System Center Cloud page in DataMiner 10.3.5*
+  ![System Center Cloud page](~/dataminer/images/Cloud_connected.png)<br>
+  *System Center Cloud page and DataMiner landing page in DataMiner 10.6.5*
 
   > [!TIP]
   > See also: [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
@@ -40,8 +40,8 @@ The following prerequisites are **optional** but highly recommended, as they wil
 
 - Behavioral anomaly detection should be enabled. You can enable this feature in System Center, via *System settings* > *analytics config*. Enabling this feature allows DataMiner to generate data based on what happens in your system, so that it can understand what is going on.
 
-  ![System Center analytics config page](~/dataminer/images/Analytics_anomaly_detection.jpg)<br>
-  *System Center analytics config page in DataMiner 10.3.5*
+  ![System Center analytics config page](~/dataminer/images/Analytics_anomaly_detection.png)<br>
+  *System Center analytics config page in DataMiner 10.6.5*
 
 If both optional requirements are met, DataMiner can study the system more efficiently, leading to even more valuable insights.
 
