@@ -193,6 +193,12 @@ Up to now, the size of a dashboard or low-code app could rapidly increase due to
 
 From now on, no more redundant information will be saved. As a result, dashboards and low-code apps will require less memory and disk space, the overall performance of dashboards and low-code apps will increase, and web upgrades will be executed faster.
 
+#### Low-Code Apps: Enhanced performance when editing app pages [ID 45357]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Because of a number of enhancements, overall performance has increased when editing app pages.
+
 ### Fixes
 
 #### Dashboards app: Problem when trying to open a dashboard that was not present in the cache [ID 44989]
