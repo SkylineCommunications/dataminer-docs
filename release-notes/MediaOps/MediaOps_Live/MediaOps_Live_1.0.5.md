@@ -39,6 +39,18 @@ This has now been improved. Error messages will provide more detailed informatio
 
 If more than five references exist, the list is truncated, which is indicated with an ellipsis.
 
+#### Improved error dialogs [ID 45353]
+
+In error dialogs shown by the MediaOps Live Solution, the OK button is now aligned to the right.
+
+#### Virtual Signal Groups: Improved icons to close panels [ID 45354]
+
+The same icon is now used to close any panels in the Virtual Signal Groups app, and the icon is aligned to the right.
+
+#### MediaOps Live installer checks installed MediaOps Plan version before proceeding [ID 45364]
+
+When you install MediaOps Live, it will now verify whether a MediaOps Plan version below 1.5.0 is installed. If this is the case, the MediaOps Live installation will be blocked, as it is not compatible with older MediaOps Plan versions.
+
 ## Fixes
 
 #### Missing validation for profile parameter values [ID 45062]
