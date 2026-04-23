@@ -303,3 +303,11 @@ When an *Image* component had its vertical padding set to a value less than 5px,
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 When certain DataMiner web apps (e.g., Dashboards, Monitoring, etc.) were used on a mobile device, up to now, the search bar at the top of the screen would incorrectly never show any results.
+
+#### Dashboards/Low-Code Apps - State timeline component: Problem when dragging a parameter index onto the component to act as a filter [ID 45351]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When a table parameter index or column parameter index was dragged onto a *State timeline* component to act as a filter, up to now, the `TableDisplayIndex` of the underlying data would be modified to match the index name. This would unintentionally affect all other components that were using that same data.
+
+From now on, the `TableDisplayIndex` will only be updated when you explicitly drag an index onto the dashboard as data. When an index is dragged onto a *State timeline* component as a filter, the original data will remain unchanged, and a copied instance will be used exclusively by the *State timeline* component.
