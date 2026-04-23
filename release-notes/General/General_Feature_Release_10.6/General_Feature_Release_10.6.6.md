@@ -97,6 +97,21 @@ If information logging is set to Level 4, the log entries will also mention if a
 > - Log entries can also be added to *SLNetConnections.txt* and *SLCubeConnections.txt* for SLNet connections created elsewhere. To do so, provide a `LoggerProvider` to `SLNetTypesDiagnostics.AddLoggerProvider()`.
 > - When a Cube connected to a system without server-side `SLNetTypesDiagnostics` connects to a system with server-side `SLNetTypesDiagnostics`, the *SLCubeConnections.txt* log file will not be populated. Restart Cube if you want that log file to be populated.
 
+#### DataMiner Object Models: SLDataGateway will now try to read only the selected fields from an OpenSearch or Elasticsearch database [ID 45151]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When SLDataGateway is retrieving DOM data from an OpenSearch or Elasticsearch database, from now on, it will attempt to retrieve only the selected fields using the native field projection capabilities of these databases. This will considerably enhance data transfer efficiency and overall performance.
+
+This optimization will leverage the indexed field values to avoid transferring complete objects when only specific fields are needed.
+
+If selected field retrieval is not supported by the database, the system will automatically fall back to retrieving the full object and extracting the required values. This currently applies to STaaS and to queries that require post-filtering or post-sorting.
+
+By default, the value type will be the field type defined by the exposer. When a field value is explicitly requested, the type defined in the field descriptor will be used instead.
+
+> [!IMPORTANT]
+> To ensure correct type resolution, field descriptor IDs must be unique across all section definitions within a DOM module. Non-unique IDs may result in incorrect type mapping and unexpected behavior.
+
 #### BrokerGateway installer will now give a clear indication when .NET is missing [ID 45169]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
