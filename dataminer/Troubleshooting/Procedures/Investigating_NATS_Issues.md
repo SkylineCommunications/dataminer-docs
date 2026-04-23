@@ -105,18 +105,19 @@ Check the following log files in the order listed:
 
 ### Common error patterns
 
-- **Authorization violations**: Indicate credential mismatches or missing credential files.
-- **Connection refused errors**: Suggest firewall or antivirus issues. This can also mean that the NATS service is not running.
-- **Cluster formation errors**: Point to configuration mismatches between nodes.
+- **Authorization violations** indicate credential mismatches or missing credential files.
 
-Note that if the logging for processes includes the line `Failed setting up NATS session: Exception caught in fields fetching: Failed to fetch fields: Remote SSL certificate error. Does the hostname and SSL certificate match?: SSL peer certificate or SSH remote key was not OK"`, this indicates that the certificate used by the site binding of IIS is invalid. Make sure the correct certificate is used by IIS. For more information on how to check and set the IIS HTTPS certificate, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis).
+- **Connection refused errors** suggest firewall or antivirus issues. This can also mean that the NATS service is not running.
 
-- **can't listen to the '****' port**: Indicates a NATS-related port is in use by another process.
+- **Cluster formation errors** point to configuration mismatches between nodes.
 
-This often happens due to the legacy NATS/NAS services running whilst together with the BrokerGateway-managed NATS.
-Confirm if [the system runs BrokerGateway-managed NATS](#confirm-the-system-uses-brokergateway-managed-nats). If the system uses BrokerGateway-Managed NATS, make sure the Legacy services are stopped and their startup type is set to `manual`.
-If the issue persist after stopping the Legacy services you can run `netstat -ano | findstr.exe <port>` to find which process is using the port and resolve the conflict by stopping said process and restarting the BrokerGateway.
-For Legacy NATS, please refer to the [Legacy NAS/NATS troubleshooting](xref:Investigating_Legacy_NATS_Issues#check-if-port-is-already-in-use)
+- If the logging for processes includes the line `Failed setting up NATS session: Exception caught in fields fetching: Failed to fetch fields: Remote SSL certificate error. Does the hostname and SSL certificate match?: SSL peer certificate or SSH remote key was not OK"`, this indicates that the certificate used by the site binding of IIS is invalid. Make sure the correct certificate is used by IIS. For more information on how to check and set the IIS HTTPS certificate, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis).
+
+- The line `can't listen to the '****' port` indicates that a NATS-related port is in use by another process. This is often due to the legacy NATS/NAS services running together with the BrokerGateway-managed NATS.
+
+  To resolve this, confirm if [the system runs BrokerGateway-managed NATS](#confirm-the-system-uses-brokergateway-managed-nats). If it does, make sure the legacy services are stopped and their startup type is set to `manual`. If the issue persist after you have stopped the legacy services, run `netstat -ano | findstr.exe <port>` to find which process is using the port and resolve the conflict by stopping said process and restarting the BrokerGateway.
+
+  If the system runs the legacy NATS architecture, refer to the [Legacy NAS/NATS troubleshooting](xref:Investigating_Legacy_NATS_Issues#check-if-port-is-already-in-use).
 
 ## Check the configuration files
 
