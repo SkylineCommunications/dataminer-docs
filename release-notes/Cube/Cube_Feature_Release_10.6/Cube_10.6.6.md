@@ -44,6 +44,12 @@ Because of a number of enhancements, overlays appearing on top of a spectrum car
 
 Because of a number of enhancements, overall performance has increased when loading data into the Reports page of element, service, and parameter cards.
 
+#### Visual Overview: Selected tab will now get the accent color [ID 45300]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, when you select a tab in a visual overview, it will get the accent color.
+
 ### Fixes
 
 #### Problem when loading a trend graph for a dynamic discrete parameter [ID 45276]
