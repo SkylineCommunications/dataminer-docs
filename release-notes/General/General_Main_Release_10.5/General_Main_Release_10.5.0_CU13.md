@@ -124,6 +124,15 @@ You can execute the API calls by calling the REST API via PowerShell.
 
 Because of a number of enhancements, on STaaS systems with Swarming enabled, overall performance has increased when executing a full element update.
 
+#### DataMiner upgrade: Web.config of the Web Services API now contains assembly bindings that will automatically be updated during a DataMiner upgrade [ID 44861]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR TBD -->
+
+The *Web.config* file of the Web Services API now contains assembly bindings that will automatically be updated during a DataMiner upgrade.
+
+> [!NOTE]
+> Any custom settings in the *Web.config* file will be left untouched.
+
 ### Fixes
 
 #### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]
