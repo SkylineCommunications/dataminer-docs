@@ -23,6 +23,9 @@ Discrete values are useful in two scenarios:
 
 Use the [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptionsT) class to configure the available discrete values for a column. Each individual discrete value is defined using the [GQIDiscrete\<T\>](xref:GQI_GQIDiscreteT) class, which pairs a value with a display name.
 
+> [!IMPORTANT]
+> Each discrete value (the underlying value, not the display value) must be unique within the column. Providing duplicate values will result in an error.
+
 Pass the discrete options to one of the column constructors that accept them:
 
 ```csharp
