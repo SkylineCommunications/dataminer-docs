@@ -422,6 +422,12 @@ When the SLDataMiner process starts, it tries to fetch information about all net
 
 As loopback adapters are not part of any communication flow, from now on, SLDataMiner will no longer try to fetch information about those adapters.
 
+#### Service elements would incorrectly be removed when the view containing the service was moved to another location [ID 45286]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When a view containing a service as well as the elements included in that service was moved to another location, up to now, the elements included in the service would incorrectly be removed. From now on, they will be moved to the root view instead.
+
 #### DataMiner upgrade: Incorrect .NET 6 error would be thrown during the upgrade process [ID 45374]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->

@@ -535,3 +535,9 @@ Up to now, when the Agent with the lowest DMA ID had been removed from a DataMin
 `System.AggregateException: One or more errors occurred. ---> Skyline.DataMiner.Net.Exceptions.DataMinerException: Fatal error while sending request [MasterSyncRequestMessage for message of type SetReservationInstanceMessage from XXX] to master DMA XXX, max retries reached. ---> Skyline.DataMiner.Net.MasterSync.MasterSyncerException: Could not use the connection to master DMA XXX`
 
 From now on, when the Agent with the lowest DMA ID was removed from the DataMiner System, the Resource Manager will correctly re-evaluate and update the master DMA when it receives a master synchronization request.
+
+#### Service elements would incorrectly be removed when the view containing the service was moved to another location [ID 45286]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When a view containing a service as well as the elements included in that service was moved to another location, up to now, the elements included in the service would incorrectly be removed. From now on, they will be moved to the root view instead.
