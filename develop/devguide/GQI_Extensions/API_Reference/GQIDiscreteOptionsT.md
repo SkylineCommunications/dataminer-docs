@@ -28,7 +28,7 @@ Configures a set of discrete values for a [GQIColumn\<T\>](xref:GQI_GQIColumnT).
 
 | Property | Type | Description |
 |--|--|--|
-| Discretes | IReadOnlyList\<[GQIDiscrete\<T\>](xref:GQI_GQIDiscreteT)\> | The list of discrete values. |
+| Discretes | IReadOnlyList\<[GQIDiscrete\<T\>](xref:GQI_GQIDiscreteT)\> | The list of discrete values. Each value must be unique; providing duplicate values will result in an error. |
 | IsStrict | bool | When `true`, the column is treated as a purely discrete column whose values are expected to come exclusively from the provided list (e.g. a status field with a fixed set of states). When `false`, the column can hold a continuous range of values, but the provided discretes represent known special or exception values that are surfaced alongside free-form or range-based filtering (e.g. a numeric measurement where `-1` means "Error"). |
 
 > [!NOTE]
