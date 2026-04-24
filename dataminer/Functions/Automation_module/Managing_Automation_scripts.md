@@ -58,6 +58,9 @@ You can also add a new script by duplicating an existing script and then changin
 > [!NOTE]
 > You cannot create two automation scripts with the same name.
 
+> [!WARNING]
+> Do not use `%20` in an automation script name. `%20` is interpreted as an encoded space, which will cause the script to fail to load.
+
 To create a functional new script, you will then need to configure it further. For more information, see [Designing automation scripts](xref:Designing_Automation_scripts).
 
 ## Adding a new automation script folder
