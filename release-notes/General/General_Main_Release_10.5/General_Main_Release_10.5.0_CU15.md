@@ -46,6 +46,19 @@ When you install the BrokerGateway DxM on a server that does not have the Micros
 
 From now on, the *Windows Restart Manager* will be enabled during installations. This will prevent unnecessary delays caused by files still in use by the APIGateway instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
 
+#### SLLogCollector packages now include hosts and lmhosts files [ID 45369]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, SLLogCollector packages will also include the following files:
+
+| File | Description  |
+|---|---|
+| `C:\Windows\System32\drivers\etc\hosts`   | Maps hostnames to IP addresses for DNS name resolution. Used to override or supplement DNS locally. |
+| `C:\Windows\System32\drivers\etc\lmhosts` | Maps NetBIOS names to IP addresses for legacy Windows networking. Rarely used in modern systems.    |
+
+Both files will be added to the *Network Information* folder.
+
 ### Fixes
 
 #### BPA tests could incorrectly not be run on DMAs that were not connected to the internet [ID 45040]

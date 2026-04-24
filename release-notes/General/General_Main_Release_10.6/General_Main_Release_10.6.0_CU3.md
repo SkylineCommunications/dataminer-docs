@@ -97,6 +97,19 @@ If you want to configure an alias for a DataMiner Agent, in the *DataMiner.xml* 
 
 As it is not possible for a user to make changes to the *DataMiner.xml* file of a DaaS system, up to now, it would not be possible to configure an alias for such a system. From now on, in the *DataMiner.xml* file of a DaaS system, the `mode` attribute of the `DMAName` element will be set to "manual" by default. This will allow users to also configure aliases for DaaS systems.
 
+#### SLLogCollector packages now include hosts and lmhosts files [ID 45369]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, SLLogCollector packages will also include the following files:
+
+| File | Description  |
+|---|---|
+| `C:\Windows\System32\drivers\etc\hosts`   | Maps hostnames to IP addresses for DNS name resolution. Used to override or supplement DNS locally. |
+| `C:\Windows\System32\drivers\etc\lmhosts` | Maps NetBIOS names to IP addresses for legacy Windows networking. Rarely used in modern systems.    |
+
+Both files will be added to the *Network Information* folder.
+
 ### Fixes
 
 #### BPA tests could incorrectly not be run on DMAs that were not connected to the internet [ID 45040]
