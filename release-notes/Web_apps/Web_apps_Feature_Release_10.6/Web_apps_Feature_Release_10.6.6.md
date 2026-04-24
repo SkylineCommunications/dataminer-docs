@@ -179,6 +179,12 @@ The default theme of the following basic controls has been changed to *Transpare
 
 From now on, the *Web* version displayed in the *About DataMiner* window of a DataMiner web app will be retrieved by means of a `GetDataMinerVersionInfo` message.
 
+#### Web apps: DOM error 'NoPermission' will now include a more detailed error message [ID 45295]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When the DOM instance error `NoPermission` is thrown in a web app, from now on, it will include a full error message that provides more details on the action the user was not allowed to perform.
+
 #### GQI DxM will no longer send log entries to the console [ID 45302]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
