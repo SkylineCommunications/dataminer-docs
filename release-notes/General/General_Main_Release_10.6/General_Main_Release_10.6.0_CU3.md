@@ -77,6 +77,12 @@ Because of a number of enhancements, performance has increased when retrieving s
 
 From now on, a `GetServiceStateMessage` will no longer be forwarded to the Agent hosting the service. Instead, the service state information will be retrieved from the local SLNet cache.
 
+#### STaaS: Enhanced performance when closing alarm trees [ID 45081]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Because of a number of enhancements, on STaaS systems, overall performance has increased when closing alarm trees.
+
 #### BrokerGateway installer will now give a clear indication when .NET is missing [ID 45169]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
