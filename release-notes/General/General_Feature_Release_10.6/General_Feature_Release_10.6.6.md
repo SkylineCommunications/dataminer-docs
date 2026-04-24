@@ -36,7 +36,28 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-*No new features have been added yet.*
+#### DataMiner Object Models: DomDefinitionReferences and FieldValueReferences can now be marked as read-only [ID 45275]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When configuring DOM security settings, it is now possible to mark `DomDefinitionReferences` and `FieldValueReferences` as read-only. That way, you can indicate that a DataMiner user group only had read access based on a specific reference.
+
+When you grant *Read* access, users will be able to do the following:
+
+- Read the DOM instances
+- List the DOM instances
+- Count the DOM instances
+- Receive the events when subscribed to DOM instance changes
+- Retrieve DOM attachments linked to DOM instances
+- Read the DOM instance history
+- Count the DOM instance history records
+
+When you grant *Write* access, users will be able to do the following:
+
+- Create, update, or delete DOM instances
+- Add or remove DOM attachments to a DOM instance
+
+In the DOM API, a `ReadOnly` property (of type boolean) has been added to the `DomDefinitionReference` and `FieldValueReference` classes.
 
 ## Changes
 
