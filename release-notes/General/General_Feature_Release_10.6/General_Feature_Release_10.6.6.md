@@ -97,6 +97,21 @@ If information logging is set to Level 4, the log entries will also mention if a
 > - Log entries can also be added to *SLNetConnections.txt* and *SLCubeConnections.txt* for SLNet connections created elsewhere. To do so, provide a `LoggerProvider` to `SLNetTypesDiagnostics.AddLoggerProvider()`.
 > - When a Cube connected to a system without server-side `SLNetTypesDiagnostics` connects to a system with server-side `SLNetTypesDiagnostics`, the *SLCubeConnections.txt* log file will not be populated. Restart Cube if you want that log file to be populated.
 
+#### DataMiner Object Models: SLDataGateway will now try to read only the selected fields from an OpenSearch or Elasticsearch database [ID 45151]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When SLDataGateway is retrieving DOM data from an OpenSearch or Elasticsearch database, from now on, it will attempt to retrieve only the selected fields using the native field projection capabilities of these databases. This will considerably enhance data transfer efficiency and overall performance.
+
+This optimization will leverage the indexed field values to avoid transferring complete objects when only specific fields are needed.
+
+If selected field retrieval is not supported by the database, the system will automatically fall back to retrieving the full object and extracting the required values. This currently applies to STaaS and to queries that require post-filtering or post-sorting.
+
+By default, the value type will be the field type defined by the exposer. When a field value is explicitly requested, the type defined in the field descriptor will be used instead.
+
+> [!IMPORTANT]
+> To ensure correct type resolution, field descriptor IDs must be unique across all section definitions within a DOM module. Non-unique IDs may result in incorrect type mapping and unexpected behavior.
+
 #### BrokerGateway installer will now give a clear indication when .NET is missing [ID 45169]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
@@ -220,6 +235,14 @@ When you upgrade an entire DMS, every DMA will upgrade itself locally, and one o
 
 Up to now, while a full DMS upgrade was in progress, you could connect with a client application (e.g., DataMiner Cube) to any of the Agents that had finished upgrading locally, except the orchestrating Agent. Even when that Agent had finished upgrading locally, it would not be possible to connect to it. From now on, this will be possible.
 
+#### Aliases can now be configured for DaaS systems [ID 45327]
+
+<!-- MR 10.6.0 [CU3] - FR 10.6.6 -->
+
+If you want to configure an alias for a DataMiner Agent, in the *DataMiner.xml* file, the `mode` attribute of the `DMAName` element has to be set to "manual". If this attribute is not set to "manual", configuring an alias will also change the computer name, which will cause unintended behavior.
+
+As it is not possible for a user to make changes to the *DataMiner.xml* file of a DaaS system, up to now, it would not be possible to configure an alias for such a system. From now on, in the *DataMiner.xml* file of a DaaS system, the `mode` attribute of the `DMAName` element will be set to "manual" by default. This will allow users to also configure aliases for DaaS systems.
+
 ### Fixes
 
 #### BPA tests could incorrectly not be run on DMAs that were not connected to the internet [ID 45040]
@@ -334,3 +357,13 @@ Up to now, when the Agent with the lowest DMA ID had been removed from a DataMin
 `System.AggregateException: One or more errors occurred. ---> Skyline.DataMiner.Net.Exceptions.DataMinerException: Fatal error while sending request [MasterSyncRequestMessage for message of type SetReservationInstanceMessage from XXX] to master DMA XXX, max retries reached. ---> Skyline.DataMiner.Net.MasterSync.MasterSyncerException: Could not use the connection to master DMA XXX`
 
 From now on, when the Agent with the lowest DMA ID was removed from the DataMiner System, the Resource Manager will correctly re-evaluate and update the master DMA when it receives a master synchronization request.
+
+#### SLDataMiner: Problem when trying to fetch information about loopback adapters [ID 45285]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When the SLDataMiner process starts, it tries to fetch information about all network adapters. However, up to now, when it tried to fetch information about a loopback adapter, an error resembling the following one would be thrown:
+
+`CIPSettings::Init|ERR|-1|Opening device failed for adapter {14763620-5D53-11EA-90D5-806E6F6E6963} (Software Loopback Interface 1): The system cannot find the file specified. (2)`
+
+As loopback adapters are not part of any communication flow, from now on, SLDataMiner will no longer try to fetch information about those adapters.

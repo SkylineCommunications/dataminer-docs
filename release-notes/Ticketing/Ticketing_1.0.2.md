@@ -4,10 +4,19 @@ uid: Ticketing_1.0.2
 
 # Ticketing 1.0.2
 
-> [!NOTE]
-> This version of the Ticketing app is only intended for use with DataMiner version **10.5.0 up to (and including) 10.5.8**.
->
-> Note that Ticketing needs the **GQI DxM** to be enabled. For information on how to enable this prior to DataMiner 10.5.8, refer to [Enabling or disabling the use of the GQI DxM](xref:GQI_DxM#enabling-or-disabling-the-use-of-the-gqi-dxm).
+## Prerequisites
+
+- This version of the Ticketing app is only intended for use with DataMiner version **10.5.0 up to (and including) 10.5.8**.
+
+- Ticketing needs the **GQI DxM** to be enabled. For information on how to enable this prior to DataMiner 10.5.8, refer to [Enabling or disabling the use of the GQI DxM](xref:GQI_DxM#enabling-or-disabling-the-use-of-the-gqi-dxm).
+
+- The user installing Ticketing needs the following **user permissions**:
+
+  - [General > Elements > Add](xref:DataMiner_user_permissions#general--elements--add)
+  - [General > Alarms > Allow to add or update hyperlinks](xref:DataMiner_user_permissions#general--alarms--allow-to-add-or-update-hyperlinks)
+  - [General > Alarms > Properties > Add](xref:DataMiner_user_permissions#general--views--properties--add) and [General > Alarms > Properties > Edit](xref:DataMiner_user_permissions#general--views--properties--edit)
+
+- Any users who will use the Ticketing Solution (including the user installing the solution) will need to have **write access** to the root view and the Ticketing Lock Manager element under the root view (via *Permissions* > *Views*; see [Configuring a user group](xref:Configuring_a_user_group)).
 
 ## New features
 

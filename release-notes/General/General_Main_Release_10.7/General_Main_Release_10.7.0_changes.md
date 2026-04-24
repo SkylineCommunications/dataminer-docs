@@ -317,6 +317,21 @@ A number of enhancements have been made to the SSH logging:
 
 Also, an issue has been fixed. When a host name could not be resolved to an IP address, up to now, the SSH connection would incorrectly try to connect to localhost. From now on, when the host name could not be resolved, the connection will fail.
 
+#### DataMiner Object Models: SLDataGateway will now try to read only the selected fields from an OpenSearch or Elasticsearch database [ID 45151]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When SLDataGateway is retrieving DOM data from an OpenSearch or Elasticsearch database, from now on, it will attempt to retrieve only the selected fields using the native field projection capabilities of these databases. This will considerably enhance data transfer efficiency and overall performance.
+
+This optimization will leverage the indexed field values to avoid transferring complete objects when only specific fields are needed.
+
+If selected field retrieval is not supported by the database, the system will automatically fall back to retrieving the full object and extracting the required values. This currently applies to STaaS and to queries that require post-filtering or post-sorting.
+
+By default, the value type will be the field type defined by the exposer. When a field value is explicitly requested, the type defined in the field descriptor will be used instead.
+
+> [!IMPORTANT]
+> To ensure correct type resolution, field descriptor IDs must be unique across all section definitions within a DOM module. Non-unique IDs may result in incorrect type mapping and unexpected behavior.
+
 #### Protocols: Indicating that smart-serial elements in server mode are allowed to be swarmed [ID 45173]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->

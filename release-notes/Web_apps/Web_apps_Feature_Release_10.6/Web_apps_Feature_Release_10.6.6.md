@@ -20,25 +20,25 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-#### GQI DxM: Extensions can now be created using the Skyline.DataMiner.Core.GQI NuGet [ID 44760]
+#### GQI DxM: Extensions can now be created using the Skyline.DataMiner.Core.GQI.Extensions NuGet [ID 44760] [ID 45341]
 
-<!-- MR 10.6.0 [CU3] - FR 10.6.6 -->
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
-From now on, the `Skyline.DataMiner.Core.GQI` NuGet can be used to create GQI extensions without depending on the `SLAnalyticsTypes` API.
+From now on, the `Skyline.DataMiner.Core.GQI.Extensions` NuGet can be used to create GQI extensions without depending on the `SLAnalyticsTypes` API.
 
 Up to now, when new GQI features were added in the `SLAnalyticsTypes` API, extensions could only use these new features if DataMiner itself also used the latest `C:\Skyline DataMiner\Files\SLAnalyticsTypes.dll` file.
 
 Notes:
 
-- GQI extensions can now be created with either the `SLAnalyticsTypes` API or the `Skyline.DataMiner.Core.GQI` NuGet.
+- GQI extensions can now be created with either the `SLAnalyticsTypes` API or the `Skyline.DataMiner.Core.GQI.Extensions` NuGet.
 - Though an extension library may contain extensions for both APIs, an individual extension must stick to one specific API.
 - Functional backward compatibility is guaranteed for existing extensions using the `SLAnalyticsTypes` API.
-- Extensions that use the `SLAnalyticsTypes` API will at runtime be adapted to the new `Skyline.DataMiner.Core.GQI` NuGet API. This may introduce some additional overhead.
-- Extensions that use the `Skyline.DataMiner.Core.GQI` NuGet API will have no additional overhead.
-- The `Skyline.DataMiner.Core.GQI` NuGet contains the exact same API as the `SLAnalyticsTypes` API, but in a different namespace:
+- Extensions that use the `SLAnalyticsTypes` API will at runtime be adapted to the new `Skyline.DataMiner.Core.GQI.Extensions` NuGet API. This may introduce some additional overhead.
+- Extensions that use the `Skyline.DataMiner.Core.GQI.Extensions` NuGet API will have no additional overhead.
+- The `Skyline.DataMiner.Core.GQI.Extensions` NuGet contains the exact same API as the `SLAnalyticsTypes` API, but in a different namespace:
 
   - `SLAnalyticsTypes` API: `Skyline.DataMiner.Analytics.GenericInterface`
-  - `Skyline.DataMiner.Core.GQI` NuGet: `Skyline.DataMiner.Core.GQI`
+  - `Skyline.DataMiner.Core.GQI.Extensions` NuGet: `Skyline.DataMiner.Core.GQI.Extensions`
 
 - To convert existing extensions and extension libraries, just add the NuGet dependency and change the namespace.
 - Changing the API used by an extension does not change the extension ID and will therefore remain backward compatible with existing queries.
@@ -185,6 +185,20 @@ From now on, the *Web* version displayed in the *About DataMiner* window of a Da
 
 Up to now, the GQI DxM would send its log entries to both the log file and the console. From now on, it will only send its log entries to the log file.
 
+#### Dashboards/Low-Code Apps: Enhanced storage of dashboards and low-code apps [ID 45340]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, the size of a dashboard or low-code app could rapidly increase due to redundant information being saved, especially when queries had been configured.
+
+From now on, no more redundant information will be saved. As a result, dashboards and low-code apps will require less memory and disk space, the overall performance of dashboards and low-code apps will increase, and web upgrades will be executed faster.
+
+#### Low-Code Apps: Enhanced performance when editing app pages [ID 45357]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Because of a number of enhancements, overall performance has increased when editing app pages.
+
 ### Fixes
 
 #### Dashboards app: Problem when trying to open a dashboard that was not present in the cache [ID 44989]
@@ -268,8 +282,38 @@ Up to now, messages appearing on top of the *Alarm table* component would take u
 
 In some cases, a Dashboard Gateway would use an incorrect URL to retrieve data from the DataMiner Agent, especially when, after a restart of the Web Services API, the Dashboard Gateway received an API request before its persistent SLNet connection was fully initialized.
 
+#### Low-Code Apps: Form component would incorrectly not wait until all loading had finished before executing any Update or Delete actions [ID 45328]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, a *Form* component would incorrectly already execute its actions before a newly-selected instance had finished loading. As a result, old instances could get updated or deleted.
+
+From now on, a *Form* component will wait until all loading has finished before executing any *Update* or *Delete* actions.
+
+#### Dashboards/Low-Code Apps - Query builder: Problem when linking a query option to component data [ID 45335]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When, while configuring a query with a custom data source, you linking a query option to component data, the data link would silently be discarded when the static value of the query option matched the value provided by the component data.
+
+No save operation would get triggered as no change was detected. After you had reloaded the dashboard or the low-code app, the query option would revert to its static value with no data link attached.
+
 #### Dashboards/Low-Code Apps - Image component: Vertical scrollbar would incorrectly appear when vertical padding was less than 5px [ID 45337]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 When an *Image* component had its vertical padding set to a value less than 5px, up to now, a vertical scrollbar would incorrectly appear.
+
+#### Web apps: Search bar would not show any results on a mobile device [ID 45350]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When certain DataMiner web apps (e.g., Dashboards, Monitoring, etc.) were used on a mobile device, up to now, the search bar at the top of the screen would incorrectly never show any results.
+
+#### Dashboards/Low-Code Apps - State timeline component: Problem when dragging a parameter index onto the component to act as a filter [ID 45351]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When a table parameter index or column parameter index was dragged onto a *State timeline* component to act as a filter, up to now, the `TableDisplayIndex` of the underlying data would be modified to match the index name. This would unintentionally affect all other components that were using that same data.
+
+From now on, the `TableDisplayIndex` will only be updated when you explicitly drag an index onto the dashboard as data. When an index is dragged onto a *State timeline* component as a filter, the original data will remain unchanged, and a copied instance will be used exclusively by the *State timeline* component.
