@@ -910,3 +910,9 @@ When calculating resource availability, the resource manager only checks the fir
 - When `ReservationInstances` are created or updated, resources could get overbooked beyond their available concurrency and capacity.
 
 From now on, the creation of new bookings that overbook a resource will be prevented.
+
+#### API call 'DeleteRows' API could incorrectly delete rows from SLProtocol without having received any request to delete them [ID 44811]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+Up to now, the `DeleteRows` API call could incorrectly delete rows from SLProtocol without having received any request to delete them. This would happen after it had received a request to delete a combination of existing keys and non-existing keys.

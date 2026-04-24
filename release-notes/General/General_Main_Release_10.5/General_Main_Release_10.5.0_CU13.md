@@ -260,7 +260,7 @@ From now on, all active alarms will be retrieved, even if the element in questio
 
 #### API call 'DeleteRows' API could incorrectly delete rows from SLProtocol without having received any request to delete them [ID 44811]
 
-<!-- MR 10.5.0 [CU13] - FR TBD -->
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU0] - FR 10.6.1 -->
 
 Up to now, the `DeleteRows` API call could incorrectly delete rows from SLProtocol without having received any request to delete them. This would happen after it had received a request to delete a combination of existing keys and non-existing keys.
 
