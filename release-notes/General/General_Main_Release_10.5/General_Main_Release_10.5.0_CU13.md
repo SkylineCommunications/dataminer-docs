@@ -258,6 +258,12 @@ Up to now, if an element had more than 10,000 active alarms, on STaaS systems, o
 
 From now on, all active alarms will be retrieved, even if the element in question has more than 10,000 active alarms.
 
+#### API call 'DeleteRows' API could incorrectly delete rows from SLProtocol without having received any request to delete them [ID 44811]
+
+<!-- MR 10.5.0 [CU13] - FR TBD -->
+
+Up to now, the `DeleteRows` API call could incorrectly delete rows from SLProtocol without having received any request to delete them. This would happen after it had received a request to delete a combination of existing keys and non-existing keys.
+
 #### Problem when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent [ID 44848]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
