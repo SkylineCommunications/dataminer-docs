@@ -199,6 +199,12 @@ From now on, no more redundant information will be saved. As a result, dashboard
 
 Because of a number of enhancements, overall performance has increased when editing app pages.
 
+#### Dashboards/Low-Code Apps - Maps component: Enhanced performance when loading maps [ID 45377]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Because of a number of enhancements, overall performance has increased when loading maps into a *Maps* component.
+
 ### Fixes
 
 #### Dashboards app: Problem when trying to open a dashboard that was not present in the cache [ID 44989]
@@ -317,3 +323,11 @@ When certain DataMiner web apps (e.g., Dashboards, Monitoring, etc.) were used o
 When a table parameter index or column parameter index was dragged onto a *State timeline* component to act as a filter, up to now, the `TableDisplayIndex` of the underlying data would be modified to match the index name. This would unintentionally affect all other components that were using that same data.
 
 From now on, the `TableDisplayIndex` will only be updated when you explicitly drag an index onto the dashboard as data. When an index is dragged onto a *State timeline* component as a filter, the original data will remain unchanged, and a copied instance will be used exclusively by the *State timeline* component.
+
+#### Dashboards/Low-Code Apps - Line & area chart component: Problems when changing the 'Trend points', 'Show average', 'Show minimum', and 'Show maximum' options [ID 45363]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When, while configuring a *Line & area chart* component, you disabled the *Show average* option, and then set the *Trend points* option to "Real-time", the chart would not include any data in exported CSV files. From now on, CSV files will include all data visible in the chart.
+
+Also, when you changed the *Trend points* option from "Real-time" to "Average", and then enabled or disabled the *Show average*, *Show minimum*, or *Show maximum* options, in some cases, the trend lines and the highlighted trend data points would only get updated when the chart was reloaded. From now on, the lines and the data points will get updated immediately.
