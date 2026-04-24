@@ -83,6 +83,12 @@ From now on, a `GetServiceStateMessage` will no longer be forwarded to the Agent
 
 When you install the BrokerGateway DxM on a server that does not have the Microsoft .NET hosting bundle installed yet, from now on, a message will appear, saying that .NET has to be installed first.
 
+#### APIGateway: Enhanced handling of files in use during upgrades [ID 45230]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, the *Windows Restart Manager* will be enabled during installations. This will prevent unnecessary delays caused by files still in use by the APIGateway instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
+
 #### Aliases can now be configured for DaaS systems [ID 45327]
 
 <!-- MR 10.6.0 [CU3] - FR 10.6.6 -->

@@ -195,6 +195,12 @@ Up to now, each time SLLogCollector created a log package, it would rerun all BP
 > [!NOTE]
 > Each time a log package is created, all BPA test results available on the system will still be included in that package. This means, that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
 
+#### APIGateway: Enhanced handling of files in use during upgrades [ID 45230]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, the *Windows Restart Manager* will be enabled during installations. This will prevent unnecessary delays caused by files still in use by the APIGateway instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
+
 #### Number of smart-serial messages allowed to enter has now been limited [ID 45273]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
