@@ -16,8 +16,8 @@ You can for instance use this in case a parameter (e.g., the total available mem
 
 - Behavioral anomaly detection must be enabled. You can enable this feature in System Center, via *System settings* > *analytics config*.
 
-  ![System Center analytics config page](~/dataminer/images/Analytics_anomaly_detection.jpg)<br>
-  *System Center analytics config page in DataMiner 10.3.5*
+  ![System Center analytics config page](~/dataminer/images/Analytics_anomaly_detection.png)<br>
+  *System Center analytics config page in DataMiner 10.6.5*
 
 ## Adding a time-scoped related parameter to a trend graph
 

@@ -32,7 +32,7 @@ To swarm elements in DataMiner Cube:
 
 1. On the right, select the destination DMA.
 
-   ![Swarming UI in Cube](~/dataminer/images/Swarming_Tutorial_Enable_Cube_Swarm.png)<br>*Swarming UI in DataMiner 10.5.3*
+   ![Swarming UI in Cube](~/dataminer/images/Swarming_Tutorial_Enable_Cube_Swarm.png)<br>*Swarming UI in DataMiner 10.6.5*
 
 1. Click *Swarm*.
 
@@ -63,7 +63,7 @@ From DataMiner 10.5.5/10.6.0 onwards<!--RN 42535 + 42536-->, it is possible to b
 
 To do so, when you create or edit an element in DataMiner Cube, expand the *Advanced element settings* section and select *Block Swarming*.
 
-![Block Swarming in Cube](~/dataminer/images/Swarming_Element_BlockSwarming.png)
+![Block Swarming in Cube](~/dataminer/images/Swarming_Element_BlockSwarming.png)<br>*Creating an element in DataMiner 10.6.5*
 
 By default, this checkbox is not selected for new and existing elements.
 
