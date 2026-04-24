@@ -83,6 +83,12 @@ From now on, a `GetServiceStateMessage` will no longer be forwarded to the Agent
 
 When you install the BrokerGateway DxM on a server that does not have the Microsoft .NET hosting bundle installed yet, from now on, a message will appear, saying that .NET has to be installed first.
 
+#### APIGateway: Enhanced handling of files in use during upgrades [ID 45230]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, the *Windows Restart Manager* will be enabled during installations. This will prevent unnecessary delays caused by files still in use by the APIGateway instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
+
 #### Aliases can now be configured for DaaS systems [ID 45327]
 
 <!-- MR 10.6.0 [CU3] - FR 10.6.6 -->
@@ -183,9 +189,3 @@ When the SLDataMiner process starts, it tries to fetch information about all net
 `CIPSettings::Init|ERR|-1|Opening device failed for adapter {14763620-5D53-11EA-90D5-806E6F6E6963} (Software Loopback Interface 1): The system cannot find the file specified. (2)`
 
 As loopback adapters are not part of any communication flow, from now on, SLDataMiner will no longer try to fetch information about those adapters.
-
-#### APIGateway: Improved handling of files in use during upgrades [ID 45230]
-
-<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
-
-The Windows Restart Manager is now enabled during installations, preventing unnecessary delays caused by files still in use by the APIGateway instance that is being upgraded. This change improves the speed and reliability of the upgrade process.

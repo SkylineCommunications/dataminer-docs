@@ -195,6 +195,12 @@ Up to now, each time SLLogCollector created a log package, it would rerun all BP
 > [!NOTE]
 > Each time a log package is created, all BPA test results available on the system will still be included in that package. This means, that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
 
+#### APIGateway: Enhanced handling of files in use during upgrades [ID 45230]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, the *Windows Restart Manager* will be enabled during installations. This will prevent unnecessary delays caused by files still in use by the APIGateway instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
+
 #### Number of smart-serial messages allowed to enter has now been limited [ID 45273]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
@@ -367,9 +373,3 @@ When the SLDataMiner process starts, it tries to fetch information about all net
 `CIPSettings::Init|ERR|-1|Opening device failed for adapter {14763620-5D53-11EA-90D5-806E6F6E6963} (Software Loopback Interface 1): The system cannot find the file specified. (2)`
 
 As loopback adapters are not part of any communication flow, from now on, SLDataMiner will no longer try to fetch information about those adapters.
-
-#### APIGateway: Improved handling of files in use during upgrades [ID 45230]
-
-<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
-
-The Windows Restart Manager is now enabled during installations, preventing unnecessary delays caused by files still in use by the APIGateway instance that is being upgraded. This change improves the speed and reliability of the upgrade process.
