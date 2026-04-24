@@ -979,6 +979,8 @@ items:
             topicUid: Ad_hoc_Life_cycle
           - name: Linking rows to DataMiner objects
             topicUid: Ad_hoc_Metadata
+          - name: Defining discrete values for columns
+            topicUid: Ad_hoc_Discrete_Values
           - name: Examples
             topicUid: Ad_hoc_Examples
             items:
@@ -1033,6 +1035,10 @@ items:
             topicUid: GQI_GQIColumn
           - name: GQIColumn<T>
             topicUid: GQI_GQIColumnT
+          - name: GQIDiscrete<T>
+            topicUid: GQI_GQIDiscreteT
+          - name: GQIDiscreteOptions<T>
+            topicUid: GQI_GQIDiscreteOptionsT
           - name: GQIDMS
             topicUid: GQI_GQIDMS
           - name: GQIEditableHeader
