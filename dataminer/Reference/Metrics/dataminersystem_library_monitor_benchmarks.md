@@ -4,9 +4,6 @@ uid: dataminersystem_library_monitor_benchmarks
 
 # DataMinerSystem library benchmarks
 
-> [!NOTE]
-> Keep in mind that when the monitor executes heavy actions that put a load on the system, the expected latency may be much higher.
-
 ## Specifications of the test server
 
 - Intel Xeon Silver 4110
@@ -15,6 +12,9 @@ uid: dataminersystem_library_monitor_benchmarks
 - Windows Server 2016 Standard
 
 ## Benchmarks
+
+> [!NOTE]
+> When the monitor executes heavy actions that put a load on the system, the expected latency may be much higher.
 
 ### Parameter value monitor
 
