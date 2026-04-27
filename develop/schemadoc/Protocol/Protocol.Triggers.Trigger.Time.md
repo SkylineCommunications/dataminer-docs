@@ -32,8 +32,8 @@ Not all Protocol.Triggers.Trigger.Time values can be used in combination with th
 |command|before|The trigger will go off before the specified command is executed.|
 |command|after|The trigger will go off after the specified command is executed.|
 |communication|DATA|The trigger will go off when the connection reports the specified DATA string. See example below\*.|
-|group|before|The trigger will go off before the specified group is executed.|
-|group|after|The trigger will go off after the specified group is executed.|
+|group|before|The trigger will go off before the specified group is executed. Note that the trigger will only go off if the group condition is evaluated to 'true'.|
+|group|after| The trigger will go off after the specified group is executed. Note that the trigger will only go off if the group condition is evaluated to 'true'.|
 |pair|succeeded|The trigger will go off when the specified pair has successfully been executed.|
 |pair|timeout|The trigger will go off when a timeout occurs on the specified pair.|
 |pair|timeout after retries|The trigger will go off after the last retry.<!-- RN 8573 -->|
@@ -49,7 +49,7 @@ Not all Protocol.Triggers.Trigger.Time values can be used in combination with th
 |timer|before|The trigger will go off before the specified timer is executed.|
 
 > [!IMPORTANT]
-> Conditions on the group cause triggers linked to the group (before and after) not to go off when the condition result is 'false'. Behavior is happening in full from 10.4.8 (CU1) and 10.4 (CU5). Before these version, the trigger before could be executing before the condition is validated.
+> When the group has has a condition, 'before group' and 'after group' trigger will only go off if the condition result is 'true'. Not that prior to DataMiner 10.4.8 (CU1) and 10.4 (CU5) trigger would go off no matter the group condition result, this has now been fixed.
 
 \* For example, for an HTTP connection, you can specify the following:
 
