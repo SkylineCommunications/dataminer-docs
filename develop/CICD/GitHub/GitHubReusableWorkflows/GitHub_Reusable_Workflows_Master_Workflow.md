@@ -87,7 +87,7 @@ jobs:
 | `runs-on` | No | string | `ubuntu-latest` | The runner environment for the CI job. |
 | `debug` | No | boolean | `false` | Enables debug output for the DataMiner SDK. |
 | `override-catalog-identifiers` | No | string | | One or more lines mapping a manifest path to a Catalog identifier. See [Catalog identifier override](#catalog-identifier-override). |
-| `nuget-push-source` | No | string | | The NuGet push destination URL. Defaults to the GitHub Packages registry of the repository owner. |
+| `nuget-push-source` | No | string | | The NuGet push destination URL. Defaults to the GitHub Packages registry of the repository owner. To push to nuget.org, use `https://api.nuget.org/v3/index.json`. |
 | `oidc-client-id` | No | string | | Azure OIDC client ID. Only needed for organizations other than SkylineCommunications. |
 | `oidc-tenant-id` | No | string | | Azure OIDC tenant ID. Only needed for organizations other than SkylineCommunications. |
 | `oidc-subscription-id` | No | string | | Azure OIDC subscription ID. Only needed for organizations other than SkylineCommunications. |
