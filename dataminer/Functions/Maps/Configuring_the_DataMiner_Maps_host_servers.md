@@ -27,7 +27,7 @@ It can have the following additional subtags:
 | Tag | Description |
 |-----|-------------|
 | AppVersion | Use this tag to indicate whether only the legacy features for the Maps app should be supported ("0") or whether all recent features should be supported ("1"). |
-| MapsProvider | Use this tag to indicate whether to use Google Maps ("gmaps") or OpenStreetMap via the MapQuest API ("osm"). |
+| MapsProvider | Use this tag to indicate whether to use Google Maps ("GoogleMaps") or OpenStreetMap via the MapQuest API ("osm"). |
 | MapQuest | To use OpenStreetMap, specify an API key with the *key* attribute of this tag. |
 | OWM | To use the OpenWeatherMap features in combination with OpenStreetMap, specify an additional API key with the *key* attribute of this tag. |
 | TilesServer | Use this tag to make Open Street Maps available offline. However, this is only possible if *AppVersion* is set to "1" and *MapsProvider* is set to "OSM". For more information on how to configure this, see [Configuration of the TilesServer tag](#configuration-of-the-tilesserver-tag). |
