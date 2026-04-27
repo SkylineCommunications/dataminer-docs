@@ -9,6 +9,87 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 27 April 2026 - Fix - Admin - Audit - Change coordination service
+
+Fixed an issue where audit was using an old coordination service that the sidebar also uses. This resulted in DMS destined for the audit page filter to also be shown in the sidebar of the admin app.
+
+### 27 April 2026 - General - Generalize notifications & update styling
+
+The notifications across apps have now been streamlined to have the same grammatical structure. The styling of the notifications has also been updated.
+
+### 27 April 2026 - Home - Improving error geo-replication
+
+In the home app, the geo-replication error was not shown when switching from a region with geo-replication available to a region that does not have geo-replication available.
+
+### 27 April 2026 - Fix - Catalog - Custom Markdown parser now correctly shows alert blocks
+
+In the catalog app, some messages would not show the first line due to an issue with the custom markdown parser. Now, all messages are fully visible.
+
+### 27 April 2026 - Fix - Admin - DMS Overview - Nodes with the same DMA ID but no failover info are shown as failover pair
+
+In the DMS overview of the admin app, nodes with same same DMA ID but no failover info would be displayed as failover pairs. This issue has been resolved.
+
+### 27 April 2026 - Catalog - Cache catalog categories in sessionstorage
+
+Catalog categories are now cached in session storage, this avoids an unnecessary webAPI call and loading animation in the UI.
+
+### 27 April 2026 - Fix - Admin - Keys - A regenerated key is not correctly updated in the sidepanel
+
+All info in the side panel is now updated when a new key (primary or secondary) is generated.
+
+### 27 April 2026 - Fix - Admin - Organization deleted leaving admin in a blocking state
+
+Deleting an organization would leave the admin app in an invalid state. Now, another available organization will be selected if possible, otherwise the user will be navigated to the home app.
+
+### 27 April 2026 - Home - Updated geo-replicated error message
+
+The geo-replicated storage error message on the home app has been updated.
+
+### 27 April 2026 - Billing - Credit & discount rate overrides on organization level
+
+Credit and discount rates can now be overridden on organization level.
+
+### 27 April 2026 - Fix -Catalog - Make publishing state toggle and delete available for test packages
+
+In the catalog app, the menu actions (delete, make private) where incorrectly not available for some packages.
+
+### 27 April 2026 - Fix - Admin - Update delete dms description
+
+The description above the delete DMS button now no longer mentions the admin role, since only the owner can delete the DMS.
+
+### 27 April 2026 - Catalog - Indicate DMS name in Deployment result notification
+
+In the catalog app notifacations related to deployments of catalog packages now include the DMS name.
+
+### 27 April 2026 - Fix - Admin - Audit - Include all systems in filter regardless of access
+
+On the Audit page of the Admin app, the DMS filter now includes all DMS regardless of access.
+
+### 27 April 2026 - General - Updated some visible DCP terms into dataminer.services
+
+References to DCP Keys around the app have been renamed to dataminer.services Keys for consistency.
+
+### 27 April 2026 - Admin/Home - Refactor Delete DMS flow to prevent stale deleted systems
+
+When deleting a DMS from home, it will now navigate in the current tab of the browser.
+This will open the delete confirmation popup in Admin and, after deletion, navigate back to the home application.
+
+### 27 April 2026 - Admin - Audit - Improved filtering
+
+The checkbox filters on the Audit page of the Admin app has had a few improvements: 
+- List of options is virtualized for better performance
+- Select/deselect all button
+- Show selected only toggle
+- Filter box no longer shifts when selecting options
+
+### 27 April 2026 - General - Align favicons
+
+The favicons for all applications have been changed to the modern DataMiner logo.
+
+### 27 April 2026 - Status page - Event types
+
+On the status page, incidents are now shown as events, with possible event types (Incident and Maintenance) shown as a label in the event.
+
 ### 16 April 2026 - Fix - Admin - Bypass the NotFound errors for NodeInfo in favor of no node info message
 
 In Admin on the DMS overview page, it could occur that both an info message and error message were shown when there were no available nodes for the system. This has been fixed by marking the NodeNotFound errors and bypassing them locally in the DMS Overview component.
