@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 27 April 2026 - Fix - CloudGateway 3.0.2 - Opening a shared dashboard would show a white page
+
+An issue introduced in CloudGateway 3.0.1 has been resolved where opening a shared dashboard would show a white page.
+
 #### 26 March 2026 - Enhancement - CloudGateway 3.0.1 - Cloud connection stability improvements
 
 The stability of the connection to dataminer.services has been enhanced through improved retry mechanisms.
