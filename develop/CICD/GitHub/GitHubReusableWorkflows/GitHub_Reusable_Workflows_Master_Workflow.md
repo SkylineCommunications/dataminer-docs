@@ -84,7 +84,7 @@ jobs:
 | `sonarcloud-project-name` | Yes | string | | The SonarCloud project identifier. Create a project at <https://sonarcloud.io/projects/create> and use the ID from the project URL. |
 | `configuration` | No | string | `Release` | The build configuration (e.g., `Release` or `Debug`). |
 | `solution-filter-name` | No | string | | A filter to find a specific solution file (`.sln` or `.slnx`). If not provided, the workflow auto-discovers the solution. |
-| `runs-on` | No | string | `ubuntu-latest` | The runner environment for the CI job. |
+| `runs-on` | No | string | `ubuntu-latest` | The runner environment for the CI job. See [GitHub runner images](https://github.com/actions/runner-images/). |
 | `debug` | No | boolean | `false` | Enables debug output for the DataMiner SDK. |
 | `override-catalog-identifiers` | No | string | | One or more lines mapping a manifest path to a Catalog identifier. See [Catalog identifier override](#catalog-identifier-override). |
 | `nuget-push-source` | No | string | | The NuGet push destination URL. Defaults to the GitHub Packages registry of the repository owner. To push to nuget.org, use `https://api.nuget.org/v3/index.json`. |
