@@ -6,7 +6,7 @@ uid: cloudgateway_change_log
 
 #### 27 April 2026 - Fix - CloudGateway 3.0.2 - Opening a shared dashboard would show a white page
 
-An issue introduced in CloudGateway 3.0.1 has been resolved where opening a shared dashboard would show a white page.
+An issue was introduced in CloudGateway 3.0.1 where opening a shared dashboard would show a white page. This issue has now been resolved.
 
 #### 26 March 2026 - Enhancement - CloudGateway 3.0.1 - Cloud connection stability improvements
 
