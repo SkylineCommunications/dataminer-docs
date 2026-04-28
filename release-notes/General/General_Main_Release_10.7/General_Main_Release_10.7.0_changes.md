@@ -536,7 +536,7 @@ Up to now, when the Agent with the lowest DMA ID had been removed from a DataMin
 
 From now on, when the Agent with the lowest DMA ID was removed from the DataMiner System, the Resource Manager will correctly re-evaluate and update the master DMA when it receives a master synchronization request.
 
-#### Elements would incorrectly be moved to the root view when moving a view containing a service under another view that already contains an instance of the same element in a different location [ID 45286]
+#### Elements incorrectly moved to root view after view with service containing those same elements was moved to the view containing the original elements [ID 45286]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 

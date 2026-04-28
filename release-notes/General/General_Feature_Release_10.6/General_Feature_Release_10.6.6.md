@@ -422,7 +422,7 @@ When the SLDataMiner process starts, it tries to fetch information about all net
 
 As loopback adapters are not part of any communication flow, from now on, SLDataMiner will no longer try to fetch information about those adapters.
 
-#### Elements would incorrectly be moved to the root view when moving a view containing a service under another view that already contains an instance of the same element in a different location [ID 45286]
+#### Elements incorrectly moved to root view after view with service containing those same elements was moved to the view containing the original elements [ID 45286]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 
