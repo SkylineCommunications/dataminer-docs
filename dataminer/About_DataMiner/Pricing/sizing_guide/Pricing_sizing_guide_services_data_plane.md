@@ -52,4 +52,4 @@ The data plane is the operational foundation of your DataMiner System, the digit
 - **Read operations**: Querying, viewing, or retrieving data from Managed Objects does not generate billable events.
 
 > [!TIP]
-> DataMiner Community Edition lets you observe actual Managed Object counts before committing to a subscription. Connecting to your data sources first gives you a reliable basis for sizing.
+> DataMiner Community Edition lets you observe actual Managed Object counts in [the Admin app](https://admin.dataminer.services) before committing to a subscription. Connecting to your data sources first gives you a reliable basis for sizing. 
