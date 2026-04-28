@@ -62,6 +62,21 @@ In addition, this is now also indicated in the lower-right corner of the ticket 
 
 ![Ticket info page, with the "Closed" time indicated in the lower-right corner](~/release-notes/images/Ticketing_Info_page_45320.png)
 
+#### Color coding of expected resolution date [ID 45398]
+
+In the Ticket table and on the ticket information page, the expected resolution date is now indicated with a color depending on when the ticket is expected to be resolved:
+
+- **Red**: The ticket is overdue (i.e., taking into account the current time, the due date is in the past).
+- **Orange**: The ticket is due to be resolved today (i.e., between the current time and midnight).
+- **Yellow**: The ticket is due to be resolved in 1 to 3 days (i.e., 1 to 3 days after the current day).
+- **Green**: The ticket is due to be resolved in 4 to 7 days (i.e., 4 to 7 days after the current day).
+- **Blue**: The ticket is due to be resolved in 1 to 2 weeks (i.e., 8 to 14 days after the current day).
+- **Purple**: The ticket is due to be resolved in more than 2 weeks (i.e., 15 or more days after the current day).
+
+Example:
+
+![Colors in the Expected Resolution Data column of the Ticket table](~/release-notes/images/Ticket_table_45398.png)
+
 ## Fixes
 
 #### Large description cannot be fully viewed in expanded view [ID 45245]
