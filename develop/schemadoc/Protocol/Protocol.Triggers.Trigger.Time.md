@@ -32,8 +32,8 @@ Not all Protocol.Triggers.Trigger.Time values can be used in combination with th
 |command|before|The trigger will go off before the specified command is executed.|
 |command|after|The trigger will go off after the specified command is executed.|
 |communication|DATA|The trigger will go off when the connection reports the specified DATA string. See example below\*.|
-|group|before|The trigger will go off before the specified group is executed. Note that the trigger will only go off if the group condition is evaluated to 'true'.|
-|group|after| The trigger will go off after the specified group is executed. Note that the trigger will only go off if the group condition is evaluated to 'true'.|
+|group|before|The trigger will go off before the specified group is executed. Note that, starting from DM 10.4.8 [CU1] and 10.4.0 [CU5], the trigger will only go off if the group condition is evaluated as "true".|
+|group|after| The trigger will go off after the specified group is executed.  Note that, starting from DM 10.4.8 [CU1] and 10.4.0 [CU5], the trigger will only go off if the group condition is evaluated as "true".|
 |pair|succeeded|The trigger will go off when the specified pair has successfully been executed.|
 |pair|timeout|The trigger will go off when a timeout occurs on the specified pair.|
 |pair|timeout after retries|The trigger will go off after the last retry.<!-- RN 8573 -->|
@@ -47,9 +47,6 @@ Not all Protocol.Triggers.Trigger.Time values can be used in combination with th
 |response|after|The trigger will go off after the specified response has successfully been received, if it fully matches.|
 |session|timeout|The trigger will go off when a timeout occurs on the specified session.<!-- RN 12542 -->|
 |timer|before|The trigger will go off before the specified timer is executed.|
-
-> [!IMPORTANT]
-> When the group has has a condition, 'before group' and 'after group' trigger will only go off if the condition result is 'true'. Not that prior to DataMiner 10.4.8 (CU1) and 10.4 (CU5) trigger would go off no matter the group condition result, this has now been fixed.
 
 \* For example, for an HTTP connection, you can specify the following:
 
