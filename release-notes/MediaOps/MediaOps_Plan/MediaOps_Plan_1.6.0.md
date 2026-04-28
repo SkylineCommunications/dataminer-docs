@@ -64,3 +64,7 @@ In the Scheduling app, on panels where you can pick or swap a resource, resource
 #### Orchestration events executed asynchronously [ID 45309]
 
 Orchestration events for MediaOps Live are now executed asynchronously. This can prevent issues in case an event takes a long time or times out.
+
+#### Version info about loaded libraries in SLAutomation added to About pages [ID 45400]
+
+On the About pages of the MediaOps Plan apps, version information has been added about the loaded libraries in SLAutomation. This can be helpful as SLAutomation does not reload the new libraries after a new MediaOps version is installed, and a restart of SLAutomation is needed in that case.
