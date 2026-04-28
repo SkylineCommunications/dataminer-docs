@@ -27,3 +27,7 @@ On the *About* page of the MediaOps Plan apps, the help button no longer linked 
 #### Scheduling: Incorrectly linked data source [ID 45239]
 
 In the Scheduling app, one of the data sources was linked to the wrong panel. While this had no visible effect on the app, this has been fixed to prevent possible issues in the future.
+
+#### Error when removing parameters from swap panel [ID 45399]
+
+When parameters were removed from an existing node configuration during the pick/swap action, an error was thrown. This issue has been resolved.

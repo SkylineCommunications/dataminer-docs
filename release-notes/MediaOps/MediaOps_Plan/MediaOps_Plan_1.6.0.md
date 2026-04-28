@@ -60,3 +60,11 @@ For the sake of consistency with the other objects in the DevPack, it is now no 
 #### Scheduling: Unavailable resources grayed out [ID 45288]
 
 In the Scheduling app, on panels where you can pick or swap a resource, resources that are not available are now shown grayed out on a hatched background. Previously, unavailable resources were shown with a ⦻ icon in front of the resource name instead.
+
+#### Orchestration events executed asynchronously [ID 45309]
+
+Orchestration events for MediaOps Live are now executed asynchronously. This can prevent issues in case an event takes a long time or times out.
+
+#### Version info about loaded libraries in SLAutomation added to About pages [ID 45400]
+
+On the About pages of the MediaOps Plan apps, version information has been added about the loaded libraries in SLAutomation. This can be helpful as SLAutomation does not reload the new libraries after a new MediaOps version is installed, and a restart of SLAutomation is needed in that case.
