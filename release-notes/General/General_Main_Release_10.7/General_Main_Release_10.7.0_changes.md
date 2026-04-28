@@ -409,14 +409,6 @@ Up to now, each time SLLogCollector created a log package, it would rerun all BP
 > [!NOTE]
 > Each time a log package is created, all BPA test results available on the system will still be included in that package. This means, that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
 
-#### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45233]
-
-<!-- MR 10.7.0 - FR 10.6.6 -->
-
-Previously, when a script library was added to a DataMiner System, its hint paths were automatically sent to the automation script compilation engine, even when the library was not used by any automation script.
-
-From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
-
 #### Number of smart-serial messages allowed to enter has now been limited [ID 45273]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->

@@ -228,14 +228,6 @@ Up to now, each time SLLogCollector created a log package, it would rerun all BP
 
 From now on, the *Windows Restart Manager* will be enabled during installations. This will prevent unnecessary delays caused by files still in use by the APIGateway instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
 
-#### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45233]
-
-<!-- MR 10.7.0 - FR 10.6.6 -->
-
-Previously, when a script library was added to a DataMiner System, its hint paths were automatically sent to the automation script compilation engine, even when the library was not used by any automation script.
-
-From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
-
 #### Number of smart-serial messages allowed to enter has now been limited [ID 45273]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
