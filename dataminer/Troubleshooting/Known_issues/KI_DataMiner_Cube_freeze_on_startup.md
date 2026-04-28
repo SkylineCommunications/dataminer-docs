@@ -63,7 +63,7 @@ The following workarounds can be used:
 
 The following workarounds can be used:
 
-- Instruct .NET Framework to not check the CRL for this application (see [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element)). Place a file named *DataMinerCube.exe.config* alongside *DataMinerCube.exe* with the following content:
+- Instruct .NET Framework to not check the CRL for this application (see [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element)). Place a file named *DataMinerCube.exe.config* alongside *DataMinerCube.exe* in the local directory: `%USERPROFILE%\AppData\Local\Skyline\DataMiner\DataMinerCube\` with the following content:
 
   ```xml
   <configuration>
