@@ -118,7 +118,7 @@ The general parameters are organized into four groups: communication, DCF, repli
 
 General parameters can be loaded dynamically, and the following defaults apply:<!-- RN 12263 -->
 
-- Communication: General parameters belonging to this group are not loaded for protocols of type *http*, *websocket*, *opc*, *gpib*, *virtual*, *sla*, and *service*.
+- Communication: General parameters belonging to this group are not loaded for protocols of type *http*, *websocket*, *gpib*, *virtual*, *sla*, and *service*.
 - DCF: Only loaded if parameter groups are defined in the protocol.
 - Verification: General parameters belonging to this group are not loaded when *MaintenanceSettings.xml* has been configured to enable Command Execution Verification. (With the [ProtocolSettings.ExecutionVerification](xref:MaintenanceSettings.ProtocolSettings.ExecutionVerification) tag.)
 - Replication: By default, general parameters belonging to this group are always loaded.

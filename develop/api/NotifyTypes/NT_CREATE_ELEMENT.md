@@ -103,7 +103,7 @@ int result = (int) protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, e
   - 3: Smart-serial
   - 4: Virtual
   - 5: GPIB
-  - 6: OPC
+  - 6: ~~OPC~~ (End of Life)
   - 7: SLA
   - 8: SNMPv2
   - 9: SNMPv3

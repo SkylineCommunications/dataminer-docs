@@ -13,7 +13,6 @@ Specifies the protocol type.
 |***string restriction***|||
 |&nbsp;&nbsp;Enumeration|gpib|General Purpose Interface Bus (GPIB)|
 |&nbsp;&nbsp;Enumeration|http|Hypertext Transfer Protocol (HTTP)|
-|&nbsp;&nbsp;Enumeration|opc|OLE Process Control (OPC)|
 |&nbsp;&nbsp;Enumeration|serial|Serial|
 |&nbsp;&nbsp;Enumeration|serial single|Serial single|
 |&nbsp;&nbsp;Enumeration|service|Service|
