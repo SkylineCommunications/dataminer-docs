@@ -22,7 +22,7 @@ uid: dataminersystem_library_monitor_benchmarks
 StartValueMonitor<T>(this IDmsStandaloneParameter<T> parameter, SLProtocol protocol, Action<ParamValueChange<T>> onChange)
 ```
 
-| #    | Metric |
+| Number of simultaneously active monitors  | Time until last monitor receives the event |
 |------|--------|
 | 100  | 138 ms |
 | 1600 | 258 ms |
