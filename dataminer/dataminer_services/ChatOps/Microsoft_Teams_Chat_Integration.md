@@ -68,6 +68,7 @@ After you have made sure the above-mentioned prerequisites are in place, you can
 
 ## Limitations
 
+- The bot is currently not supported in shared or private channels
 - Notifications cannot exceed 35 KB.
 
 ## Security
