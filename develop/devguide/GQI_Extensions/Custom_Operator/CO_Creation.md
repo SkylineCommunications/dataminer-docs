@@ -9,8 +9,6 @@ uid: CO_Creation
 It is advised to use [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) with Visual Studio to create custom operators. DIS does not provide a direct template to create a custom operator. Instead, the template for an ad hoc data source can be reused.
 The source code of custom operators can also be viewed and edited in the automation module within Cube, but this is not meant for maintaining extensions.
 
-## GQI extension API
-
 In order to create a GQI custom operator, you need to reference the [GQI extension API](xref:GQI_Extension_API).
 
 ## Operator creation

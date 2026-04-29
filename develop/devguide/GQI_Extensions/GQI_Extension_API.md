@@ -4,7 +4,7 @@ uid: GQI_Extension_API
 
 # GQI extension API
 
-In order to create a GQI extension, the GQI extension API is needed. This API can be referenced in two ways:
+In order to create a GQI extension, you use the GQI extension API. This API can be referenced in two ways:
 
 - Via the `Skyline.DataMiner.Core.GQI.Extensions` NuGet package.
     - This is the recommended API when creating GQI extensions for Dataminer 10.6.6/10.5.0 [CU15]/10.6.0 [CU3] onwards. Newer GQI features will only be supported by this API.

@@ -9,8 +9,6 @@ uid: Ad_hoc_Creation
 It is advised to use [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) with Visual Studio to create ad hoc data sources. DIS provides a template to start creating a data source and simplifies deployment, including potential dependencies.
 The source code of ad hoc data sources can also be viewed and edited in the automation module within Cube, but this is not meant for maintaining extensions.
 
-## GQI extension API
-
 In order to create a GQI ad-hoc data source, you need to reference the [GQI extension API](xref:GQI_Extension_API).
 
 ## Data source creation
