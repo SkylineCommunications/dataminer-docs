@@ -6,7 +6,7 @@ uid: Get_views
 
 Available from DataMiner 10.2.0/10.1.4 onwards. The *Get views* data source retrieves a list of the views in the DMS. By default, only the columns *View ID* and *Name* are included, but you can include additional columns using a [*Select* operator](xref:GQI_Select).
 
-From DataMiner Web 10.6.6 [CU0] (MR 10.5.0 CU15/10.6.0 [CU3]) onwards, columns representing custom properties of a view will be represented in GQI by their name instead of their ID. This ensures that when queries are exported to other DataMiner systems that have the same custom properties, the query remains executable. Queries created before this version that reference custom property columns will remain working, and these columns will be suffixed with `(Legacy)` when selected within the query builder. <!-- RN 45085 -->
+From DataMiner Web 10.6.6 [CU0] (MR 10.5.0 CU15/10.6.0 [CU3]) onwards, property columns for views will be linked to the underlying property by name instead of by ID. This allows queries to be reused across DataMiner systems where the same property can have a different ID. Existing queries will still reference properties by ID to remain backwards compatible. The existing property columns will be marked as legacy columns in the query builder and can be updated manually when necessary. <!-- RN 45085 -->
 
 ## Updates
 
