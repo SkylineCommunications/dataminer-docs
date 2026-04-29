@@ -9,6 +9,103 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 27 April 2026 - Fix - Admin - Audit page DMS incorrectly also shown in sidebar
+
+In the Admin app, it could occur that the DMS used as the filter for the Audit page was incorrectly also shown in the sidebar.
+
+### 27 April 2026 - Enhancement - Grammar and styling in notifications streamlined across apps
+
+The notifications across apps have now been streamlined to have the same grammatical structure. The styling of the notifications has also been updated.
+
+### 27 April 2026 - Fix - Home - Geo-replication error not shown when expected
+
+When you switch from a region with geo-replication available to a region that does not have geo-replication available, a geo-replication error message should be shown on the home page, but this did not happen.
+
+### 27 April 2026 - Fix - Catalog - Custom Markdown parser now correctly shows alert blocks
+
+In the Catalog app, some messages would not show the first line because of an issue with the custom Markdown parser. Now all messages are fully visible.
+
+### 27 April 2026 - Fix - Admin - Nodes with same DMA ID but no Failover info shown as Failover pair in DMS overview
+
+In the DMS overview of the Admin app, nodes with the same DMA ID but no Failover info were incorrectly displayed as a Failover pair. This issue has been resolved.
+
+### 27 April 2026 - Enhancement - Catalog - Catalog categories cached in session storage
+
+Catalog categories are now cached in session storage, avoiding an unnecessary web API call and loading animation in the UI.
+
+### 27 April 2026 - Fix - Admin - Regenerated key not correctly updated in side panel
+
+When a new key (primary or secondary) was generated in the Admin app, the side panel was not correctly updated. This issue has been resolved.
+
+### 27 April 2026 - Fix - Admin - Admin app no longer working after deletion of organization
+
+When an organization was deleted, it could occur that the Admin app was no longer working correctly. Now another available organization will be selected if possible, and otherwise the home page will be shown instead.
+
+### 27 April 2026 - Enhancement - Home - Updated geo-replicated error message
+
+The geo-replicated storage error message on the home page has been updated.
+
+### 27 April 2026 - New feature - Admin - Credit and discount rate overrides on organization level
+
+On the Billing page of the Admin app, credit and discount rates can now be overridden on organization level.
+
+### 27 April 2026 - Fix - Catalog - Menu actions not available for test packages
+
+In the Catalog app, the menu actions (delete, make private) were incorrectly not available for test packages.
+
+### 27 April 2026 - Fix - Admin - Incorrect description delete DMS button
+
+The description above the delete DMS button incorrectly mentioned the admin role, but only the owner can delete the DMS. This has now been corrected.
+
+### 27 April 2026 - Enhancement - Catalog - DMS name included in deployment result notification
+
+In the Catalog app notifications related to deployments of packages, the DMS name is now included.
+
+### 27 April 2026 - Enhancement - Admin - DMS filter on Audit page now includes all systems
+
+On the Audit page of the Admin app, the DMS filter now includes all DataMiner Systems regardless of access.
+
+### 27 April 2026 - Enhancement - 'DCP' terminology adjusted to 'dataminer.services'
+
+References to 'DCP Keys' have been adjusted to 'dataminer.services Keys' to ensure consistent terminology throughout the dataminer.services apps.
+
+### 27 April 2026 - Enhancement - Admin/Home - Delete DMS flow refactored to prevent stale deleted systems
+
+When you try to delete a DMS on the dataminer.services home page, this will now open the delete confirmation dialog in the Admin app, navigating within the current tab of the browser. Once the deletion has been confirmed, the home page will be shown again. This refactored deletion flow will ensure that deleted systems are never still shown on the home page, while previously they could still be shown until the page was refreshed.
+
+### 27 April 2026 - Enhancement - Admin - Improved filtering on Audit page
+
+The following improvements have been applied to the checkbox filters on the Audit page of the Admin app:
+
+- The list of options is now virtualized for better performance.
+- A select/deselect all button is now available.
+- A toggle button is available to show selected only.
+- The filter box no longer shifts when options are selected.
+
+### 27 April 2026 -Enhancement - Favicons updated
+
+The website icons for all applications have been changed to the updated DataMiner logo.
+
+### 27 April 2026 - Enhancement - Status page - Event types shown for incidents
+
+On the status page, incidents are now shown as events, with possible event types (*Incident* and *Maintenance*) shown as a label for the event.
+
+### 16 April 2026 - Fix - Admin - Both info and error message shown when no available nodes were found in the DMS
+
+On the DMS overview page of the Admin app, it could occur that both an info message and an error message were shown when there were no available nodes for the system. This issue has been resolved.
+
+### 16 April 2026 - Enhancement - Home - Improved tracking of progress and results of corporate website
+
+When an *onboard_complete* event is logged to Google analytics, the organization and coordination ID are now included to allow improved tracking of the progress and results of the corporate website.
+
+### 16 April 2026 - Fix - Password incorrectly remained shown after peek button had been used
+
+When the peek button was clicked to show the password in a password input box, it could occur that the password was still shown when the peek button was released again and the mouse pointer was moved outside the bounds of the button. This issue has been resolved.
+
+### 16 April 2026 - Fix - Admin - Error shown after quickly toggling filter boxes for audit logs
+
+When the filter checkboxes on the Audit page in the Admin app were toggled quickly, an error could be shown.
+
 ### 13 April 2026 - Enhancement - Admin - Cleaner title and description input on Support page
 
 On the Support page in the Admin app, titles and descriptions are now cleaned automatically when you type, paste, or drop text, so unsupported characters are removed immediately.
