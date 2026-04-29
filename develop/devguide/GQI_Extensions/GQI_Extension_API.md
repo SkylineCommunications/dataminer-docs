@@ -9,7 +9,7 @@ In order to create a GQI extension, you use the GQI extension API. This API can 
 - Via the `Skyline.DataMiner.Core.GQI.Extensions` NuGet package.
     - This is the recommended API when creating GQI extensions for Dataminer 10.6.6/10.5.0 [CU15]/10.6.0 [CU3] onwards. Newer GQI features will only be supported by this API.
     - Requires DIS.
-    - Package compatibility for a specific DataMiner version can be viewed on the [NuGet page]() <!-- To be filled in when nuget is deployed -->
+    - Package compatibility for a specific DataMiner version can be viewed on the [NuGet page](https://www.nuget.org/packages/Skyline.DataMiner.Core.GQI.Extensions).
     - Namespace: `Skyline.DataMiner.Core.GQI.Extensions.*`.
 
 - Via the `Skyline.DataMiner.Files.SLAnalyticsTypes` NuGet package or SLAnalyticsTypes.dll assembly reference.
