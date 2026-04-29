@@ -34,7 +34,7 @@ StartValueMonitor<T>(this IDmsStandaloneParameter<T> parameter, SLProtocol proto
 StartValueMonitor<T>(this IDmsColumn<T> column, string primaryKey, SLProtocol protocol, Action<CellValueChange<T>> onChange)
 ```
 
-| #     | Metric |
+| Number of simultaneously active monitors  | Time until last monitor receives the event |
 |-------|--------|
 | 8     | 157 ms |
 | 512   | 163 ms |
@@ -48,7 +48,7 @@ StartValueMonitor<T>(this IDmsColumn<T> column, string primaryKey, SLProtocol pr
 StartValueMonitor<T>(this IDmsColumn<T> column, SLProtocol protocol, Action<ColumnValueChange<T>> onChange)
 ```
 
-| #     | Metric |
+| Number of simultaneously active monitors  | Time until last monitor receives the event |
 |-------|--------|
 | 4     | 123 ms |
 | 256   | 178 ms |
@@ -61,7 +61,7 @@ StartValueMonitor<T>(this IDmsColumn<T> column, SLProtocol protocol, Action<Colu
 StartValueMonitor(this IDmsTable table, SLProtocol protocol, int primaryKeyColumnIdx, Action<TableValueChange> onChange)
 ```
 
-| #     | Metric  |
+| Number of simultaneously active monitors  | Time until last monitor receives the event  |
 |-------|---------|
 | 4     | 175 ms  |
 | 256   | 189 ms  |
