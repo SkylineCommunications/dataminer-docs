@@ -31,3 +31,7 @@ In the Scheduling app, one of the data sources was linked to the wrong panel. Wh
 #### Error when removing parameters from swap panel [ID 45399]
 
 When parameters were removed from an existing node configuration during the pick/swap action, an error was thrown. This issue has been resolved.
+
+#### Resource Studio: Not possible to select VSG that contained pipe character in its name [ID 45418]
+
+When a virtual signal group (VSG) was created with a pipe character (`|`) in its name, it was not possible to select the VSG as an input or output VSG when editing a resource.
