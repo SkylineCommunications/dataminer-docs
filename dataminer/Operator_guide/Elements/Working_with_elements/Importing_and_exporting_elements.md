@@ -131,7 +131,7 @@ When altering an exported CSV file in a third-party application like Microsoft E
   | 3             | Smart-serial                       |
   | 4             | Virtual                            |
   | 5             | GPIB                               |
-  | 6             | OPC                                |
+  | 6             | ~~OPC~~ ([End of Life](xref:Software_support_life_cycles#end-of-life)) |
   | 7             | SLA                                |
   | 8             | SNMPv2                             |
   | 9             | SNMPv3                             |
