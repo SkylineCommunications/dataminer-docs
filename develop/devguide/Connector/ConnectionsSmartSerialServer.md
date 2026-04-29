@@ -67,14 +67,20 @@ All groups executed as a result of a trigger 'after response' are sent to the cl
 
 ## Message queue limitation
 
-From DataMiner 10.6.6/10.7.0 onwards<!--RN 45273-->, the total size of incoming smart-serial messages per element that still needs to be processed is limited to prevent an ever-growing queue.
+From DataMiner 10.6.6/10.7.0 onwards<!--RN 45273-->, the total size of incoming smart-serial messages per element that still need to be processed is limited to prevent an ever-growing queue.
 
-If more than 200 MB of messages are waiting in the queue, a notice alarm is generated to warn that the maximum limit is being approached.
+If more than 200 MB of messages are waiting in the queue, a notice alarm is generated to warn users that the queue is approaching the maximum limit.
 
 When more than 300 MB of messages are waiting in queue, an error alarm is generated and no additional incoming messages are accepted until the queue drops below 200 MB again. At that point, the error alarm becomes a notice alarm that remains active, even when the queue is empty, indicating that part of the communication was lost.
 
 Log entries are added to the *SLErrorsInProtocol.txt* file when the warning threshold or maximum limit is exceeded.
 
 > [!IMPORTANT]
-> If the maximum limit of 300 MB has been reached, we strongly recommend restarting the element. When messages within a data stream are dropped, incomplete data streams may be processed, which can lead to unexpected results.
-> If these kind of notices are constantly generated, it is an indication that the element is not able to process the incoming messages fast enough. This could have different causes and solutions. The source that is sending the messages could be configured to send less messages if possible, or the connector could be revised to see if there could be any improvement made to allow faster processing of the messages. Another cause could be that the element is not getting enough CPU because at that moment an other element is taking most of the CPU. It could also be possible that the QAction that processes the incoming messages in the connector is stuck and not able to process new messages. In such case, the advice would be to take memory dumps with the LogCollector and contact support to have it further investigated.
+> If the maximum limit of 300 MB has been reached, we strongly recommend **restarting the element**. When messages within a data stream are dropped, incomplete data streams may be processed, which can lead to unexpected results.
+>
+> If these kinds of notices are constantly generated, it is an indication that the element is not able to process the incoming messages fast enough. This could have different causes and solutions:
+>
+> - The source that is sending the messages could be configured to send less messages if possible.
+> - The connector could be revised to see if any improvements could be made to allow faster processing of the messages.
+> - The element may not be not getting enough CPU power because at that same moment another element is using most of the CPU power.
+> - The QAction that processes the incoming messages in the connector may be stuck and unable to process new messages. In such case, take memory dumps using [LogCollector](xref:SLLogCollector) and [contact support](xref:Contacting_tech_support) to have this further investigated.
