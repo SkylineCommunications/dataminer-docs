@@ -3510,6 +3510,14 @@ items:
         items: 
         - name: '@includepages'
           topicUid: Protocol.SNMP-includepages
+      - name: Swarming
+        topicUid: Protocol.Swarming
+        items:
+        - name: BypassChecks
+          topicUid: Protocol.Swarming.BypassChecks
+          items:
+          - name: Check
+            topicUid: Protocol.Swarming.BypassChecks.Check
       - name: SystemOptions
         topicUid: Protocol.SystemOptions
         items:
@@ -3973,6 +3981,8 @@ items:
         topicUid: Protocol-EnumSNMPType
       - name: EnumSuppressionType
         topicUid: Protocol-EnumSuppressionType
+      - name: EnumSwarmingBypassCheck
+        topicUid: Protocol-EnumSwarmingBypassCheck
       - name: EnumTrapOIDType
         topicUid: Protocol-EnumTrapOIDType
       - name: EnumTrendingType
