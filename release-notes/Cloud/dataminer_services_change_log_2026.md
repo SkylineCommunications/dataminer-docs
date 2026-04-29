@@ -71,7 +71,7 @@ References to 'DCP Keys' have been adjusted to 'dataminer.services Keys' to ensu
 
 ### 27 April 2026 - Enhancement - Admin/Home - Delete DMS flow refactored to prevent stale deleted systems
 
-When you try to delete a DMS on the dataminer.services home page, this will now open the delete confirmation dialog in the Admin app, navigating within the current tab of the browser. Once the deletion has been confirmed, the home page will be shown again. This refactored deletion flow will prevent stale deleted systems.
+When you try to delete a DMS on the dataminer.services home page, this will now open the delete confirmation dialog in the Admin app, navigating within the current tab of the browser. Once the deletion has been confirmed, the home page will be shown again. This refactored deletion flow will ensure that deleted systems are never still shown on the home page, while previously they could still be shown until the page was refreshed.
 
 ### 27 April 2026 - Enhancement - Admin - Improved filtering on Audit page
 
