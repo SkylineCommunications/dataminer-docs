@@ -78,6 +78,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 |:--:|--|
 | [![Dropdown](~/dataminer/images/Dropdown.svg)](xref:DashboardDropdown) | A [dropdown](xref:DashboardDropdown) allows users to select an item in a dropdown list. |
 | [![Numeric input](~/dataminer/images/Numeric_Input.svg)](xref:DashboardNumericInput) | A [numeric input](xref:DashboardNumericInput) component allows users to enter numbers, which will then be available as data in the dashboard or app. |
+| [![Rich text input](~/dataminer/images/Rich_Text_Input.svg)](xref:RichTextInput) | A [rich text input](xref:RichTextInput) component allows users to enter rich text, which will then be exposed as HTML. |
 | [![Search input](~/dataminer/images/Search_Input.svg)](xref:DashboardSearchInput) | A [search input](xref:DashboardSearchInput) component allows users to enter text for the purpose of searching for something in the dashboard or app. |
 | [![Text input](~/dataminer/images/Text_Input.svg)](xref:DashboardTextInput) | A [text input](xref:DashboardTextInput) component allows users to enter text, which will then be available as data in the dashboard or app. |
 | [![Time range](~/dataminer/images/Time_Range.svg)](xref:TimeRange) | A [time range](xref:TimeRange) is used to enter a specific time range, which can then for example be used as a filter for compatible components. |

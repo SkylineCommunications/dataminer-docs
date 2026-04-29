@@ -603,6 +603,8 @@ items:
                 topicUid: DashboardDropdown
               - name: Numeric input
                 topicUid: DashboardNumericInput
+              - name: Rich text input
+                topicUid: RichTextInput
               - name: Search input
                 topicUid: DashboardSearchInput
               - name: Text input
