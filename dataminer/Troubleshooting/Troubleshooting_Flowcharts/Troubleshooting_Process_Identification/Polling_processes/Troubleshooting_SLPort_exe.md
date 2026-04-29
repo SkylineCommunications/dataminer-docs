@@ -8,7 +8,7 @@ uid: Troubleshooting_SLPort_exe
 
 SLPort controls all communication from and to devices connected to either a serial or an IP port.
 
-**Communication types**: HTTP, Web Socket, serial, smart-serial, GPIB and SSH.
+**Communication types**: HTTP, Web Socket, serial, smart-serial, GPIB, and SSH.
 
 ## SLPort troubleshooting flowchart
 
