@@ -63,7 +63,59 @@ For example, consider the following functionality being implemented in a protoco
 
 Now suppose that there is also a trigger defined in the protocol that triggers on a value change of parameter 100 (the incremented parameter), which in turn initiates another action to increment parameter 200 (named "Parameter B"). The trigger and action are considered linked to the group item and therefore must complete before the processing of the group item is considered finished.
 
-![Item execution order](~/develop/images/Protocol_Explained_-_Item_Execution.svg)
+```mermaid
+flowchart LR
+    subgraph param10Box["Param 10"]
+    end
+    subgraph trigger1Box["Trigger 1"]
+        A1["Action 1"]
+    end
+    subgraph action1Box["Action 1"]
+        G1["Group 1"]
+    end
+    subgraph group1Box["Group 1"]
+        A2["Action 2"]
+    end
+    subgraph action2Box["Action 2"]
+        P100["Param 100"]
+    end
+    subgraph param100Box["Param 100"]
+    end
+    subgraph trigger2Box["Trigger 2"]
+        A3["Action 3"]
+    end
+    subgraph action3Box["Action 3"]
+        P200["Param 200"]
+    end
+
+    param10Box --> trigger1Box
+    A1 --> action1Box
+    G1 --> group1Box
+    A2 --> action2Box
+    P100 --> param100Box
+    param100Box --> trigger2Box
+    A3 --> action3Box
+
+    classDef infoText fill:none,stroke:none,color:#FFFFFF
+    classDef infoTextBlack fill:none,stroke:none,color:#000000
+    class groupDesc,sessionDesc infoText
+    class timerDesc infoTextBlack
+
+    style param10Box fill:#EFF6FF,stroke:#DBEAFE,color:#000000
+    style trigger1Box fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style action1Box fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style action2Box fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style group1Box fill:#f3f4f6,stroke:#172554,color:#000000
+    style param100Box fill:#EFF6FF,stroke:#DBEAFE,color:#000000
+    style trigger2Box fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style action3Box fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style A1 fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style G1 fill:#f3f4f6,stroke:#172554,color:#000000
+    style A2 fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style P100 fill:#EFF6FF,stroke:#DBEAFE,color:#000000
+    style A3 fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style P200 fill:#EFF6FF,stroke:#DBEAFE,color:#000000
+```
 
 This can be seen when development logging of an element running the protocol is enabled (in this example, the initial values of parameter A and B were set to 5 and 10, respectively):
 
@@ -87,7 +139,73 @@ By letting the timer thread perform some actions while the main protocol thread 
 
 For example, consider two timers, where the first timer contains a group of type "poll action" and is therefore added to the group execution queue. This group contains an action to increment a parameter value. The second timer contains a group of type "action". The action lets a QAction triggering on parameter 2 execute. The QAction will increase the value of parameter 3 every second, until it reaches 5.
 
-![Executing groups by timer threads](~/develop/images/Protocol_Explained_-_Executing_Groups_by_Timer_Threads.svg)
+```mermaid
+flowchart LR
+    subgraph timerBox["Timer 1"]
+
+        G1["Group 1"]
+    end
+    subgraph groupBox["Group 1"]
+
+        S1["Action 1"]
+    end
+    subgraph actionBox["Action 1 (increment)"]
+        C1["Param 1"]
+    end
+  subgraph paramBox["Param 1"]
+    end
+
+    G1 --> groupBox
+    S1 --> actionBox
+    C1 --> paramBox
+
+    classDef infoText fill:none,stroke:none,color:#FFFFFF
+    classDef infoTextBlack fill:none,stroke:none,color:#000000
+    class groupDesc,sessionDesc infoText
+    class timerDesc infoTextBlack
+
+    style timerBox fill:#EFF6FF,stroke:#DBEAFE,color:#000000
+    style groupBox fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style actionBox fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style paramBox fill:#f3f4f6,stroke:#172554,color:#000000
+    style G1 fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style S1 fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style C1 fill:#f3f4f6,stroke:#172554,color:#000000
+```
+
+```mermaid
+flowchart LR
+    subgraph timerBox["Timer 2"]
+
+        G1["Group 2"]
+    end
+    subgraph groupBox["Group 2"]
+
+        S1["Action 2"]
+    end
+    subgraph actionBox["Action 2 (run actitons)"]
+        C1["Param 2"]
+    end
+  subgraph qactionBox["QAction 2"]
+    end
+
+    G1 --> groupBox
+    S1 --> actionBox
+    C1 --> qactionBox
+
+    classDef infoText fill:none,stroke:none,color:#FFFFFF
+    classDef infoTextBlack fill:none,stroke:none,color:#000000
+    class groupDesc,sessionDesc infoText
+    class timerDesc infoTextBlack
+
+    style timerBox fill:#EFF6FF,stroke:#DBEAFE,color:#000000
+    style groupBox fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style actionBox fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style qactionBox fill:#f3f4f6,stroke:#172554,color:#000000
+    style G1 fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style S1 fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style C1 fill:#f3f4f6,stroke:#172554,color:#000000
+```
 
 The following development logging illustrates what happens:
 
