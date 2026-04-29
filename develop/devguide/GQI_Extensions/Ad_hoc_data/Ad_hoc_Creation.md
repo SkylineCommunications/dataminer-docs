@@ -11,7 +11,7 @@ The source code of ad hoc data sources can also be viewed and edited in the auto
 
 ## GQI extension API
 
-In order to create a GQI ad-hoc data source, you need to reference the [GQI extension API](xref:GQI_Extensions_API).
+In order to create a GQI ad-hoc data source, you need to reference the [GQI extension API](xref:GQI_Extension_API).
 
 ## Data source creation
 

@@ -11,7 +11,7 @@ The source code of custom operators can also be viewed and edited in the automat
 
 ## GQI extension API
 
-In order to create a GQI custom operator, you need to reference the [GQI extension API](xref:GQI_Extensions_API).
+In order to create a GQI custom operator, you need to reference the [GQI extension API](xref:GQI_Extension_API).
 
 ## Operator creation
 
