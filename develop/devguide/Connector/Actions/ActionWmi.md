@@ -32,6 +32,9 @@ Configures the script to be executed, made up of the following components (separ
 |where|The WHERE clause of the script. You can specify this clause hard-coded or you can specify "ID:[Parameter ID]". In the latter case, the specified parameter must contain the WHERE clause.|
 
 > [!NOTE]
+> If the `server` option references a parameter ID that is not yet initialized during element startup, the WMI query defaults to the local DMA (i.e. the DMA hosting the connector).
+
+> [!NOTE]
 > When you specify a hard-coded WHERE clause, replace quotes by "\&quot;".
 
 This is an example of a hardcoded WHERE clause:
