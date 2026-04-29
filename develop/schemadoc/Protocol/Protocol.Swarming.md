@@ -5,7 +5,8 @@ uid: Protocol.Swarming
 # Swarming element
 
 Contains the functionality to override the default swarming behavior.
-Feature introduced in DataMiner 10.6.6 (RN 45173).
+
+Feature introduced in DataMiner 10.6.6/10.7.0<!-- RN 45173 -->.
 
 ## Parent
 

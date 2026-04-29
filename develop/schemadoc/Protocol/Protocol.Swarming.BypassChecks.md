@@ -5,7 +5,8 @@ uid: Protocol.Swarming.BypassChecks
 # BypassChecks element
 
 Contains all disabled checks that will no longer prevent an element from being able to swarm.
-Feature introduced in DataMiner 10.6.6 (RN 45173).
+
+Feature introduced in DataMiner 10.6.6/10.7.0<!-- RN 45173 -->.
 
 ## Parent
 
