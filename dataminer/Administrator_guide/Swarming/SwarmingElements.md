@@ -12,7 +12,22 @@ When you are swarming an element so it gets hosted on a different DataMiner Agen
 
 At present, Swarming is not yet supported for certain specific types of elements. Refer to [Upcoming features](xref:Swarming#upcoming-features) for information on which types of elements are supported already and which will be supported in the future.
 
-Because of the way Swarming functions, it is not possible to swarm smart-serial elements in server mode, elements polling localhost, and elements receiving SNMP traps in a DMS with trap distribution disabled on at least one DMA.
+Because of the way Swarming functions, it is not possible to swarm elements polling localhost and elements receiving SNMP traps in a DMS with trap distribution disabled on at least one DMA.
+
+By default, smart-serial elements in server mode also cannot be swarmed. However, from DataMiner 10.6.6/10.7.0 onwards<!--RN 45173-->, you can explicitly allow such elements to be swarmed by adding the following configuration to the *Protocol.xml* file:
+
+```xml
+<Swarming>
+    <BypassChecks>
+        <Check>smartSerialAsServer</Check>
+    </BypassChecks>
+</Swarming>
+```
+
+With this configuration in place, at startup, the element can send a message to the data source to indicate where data should be sent. As a result, the fact that the smart-serial connection is in server mode will no longer be considered a valid reason to prevent the element from swarming.
+
+> [!TIP]
+> See also: [Making changes to a protocol.xml file](xref:Advanced_protocol_functionality#making-changes-to-a-protocolxml-file)
 
 ## Required user permissions
 
