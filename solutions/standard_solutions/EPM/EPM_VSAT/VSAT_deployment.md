@@ -4,17 +4,17 @@ uid: VSAT_deployment
 
 # EPM VSAT deployment
 
-This page outlines the procedure for deploying the DataMiner EPM VSAT package on an **empty DataMiner System**. It provides step-by-step guidance for configuring VSAT collectors, the EPM setup, and peripheral integrations to ensure a fully operational VSAT management system.
+This page outlines the procedure for deploying the EPM VSAT package on an **empty DataMiner System**. It provides step-by-step guidance for configuring VSAT collectors, the EPM setup, and peripheral integrations to ensure a fully operational VSAT management system.
 
 ## Package deployment
 
-Start by deploying the DataMiner EPM VSAT package to the system:
+Start by deploying the EPM VSAT package to the system:
 
-1. Go to the [DataMiner EPM VSAT](https://catalog.dataminer.services/details/4879501c-9716-4a33-8846-ff1835fef7ea) package in the Catalog.
+1. Go to the [EPM VSAT](https://catalog.dataminer.services/details/4879501c-9716-4a33-8846-ff1835fef7ea) package in the Catalog.
 
 1. Click the *Deploy* button to [deploy the package](xref:Deploying_a_catalog_item) on your DMA.
 
-This will install the connectors, automation scripts, and Visio drawings needed to create and configure the DataMiner EPM VSAT Solution.
+This will install the connectors, automation scripts, and Visio drawings needed to create and configure the EPM VSAT Solution.
 
 ## Collectors configuration
 
@@ -128,7 +128,7 @@ Follow the steps below to set up the **frontend and backend elements**:
 
 ## Peripherals configuration
 
-The DataMiner EPM VSAT package includes optional connectors that can be installed upon customer request. These peripherals enhance the system's functionality by integrating additional external data sources and tools.
+The EPM VSAT package includes optional connectors that can be installed upon customer request. These peripherals enhance the system's functionality by integrating additional external data sources and tools.
 
 ### Skyline Universal Weather
 
@@ -144,6 +144,6 @@ This connector will calculate and forecast sun interference for satellite commun
 
 ### DataMiner Planned Maintenance Tool
 
-While not included in the DataMiner EPM VSAT package, the DataMiner Planned Maintenance Tool is often installed alongside the EPM system to enhance operational maintenance capabilities.
+While not included in the EPM VSAT package, the DataMiner Planned Maintenance Tool is often installed alongside the EPM system to enhance operational maintenance capabilities.
 
 For more details, refer to [The DataMiner Planned Maintenance (PLM) tool](xref:DataMiner_PLM_Tool_Overview).
