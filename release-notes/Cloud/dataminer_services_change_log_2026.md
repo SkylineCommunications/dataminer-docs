@@ -9,19 +9,19 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 30 April 2026 - Fix - Improved session token refresh handling
+### 30 April 2026 - Fix - Problem with session token refresh could cause unexpected redirect to login page
 
-An issue has been resolved where session tokens were not always refreshed correctly, which could cause users to be unexpectedly redirected to a login page.
+It could occur that users were unexpectedly redirected to a login page because session tokens were not refreshed correctly. This issue has been resolved.
 
-### 30 April 2026 - Enhancement - Admin - Renewal failed state and hide expired toggle for subscriptions
+### 30 April 2026 - Enhancement - Admin - 'Renewal failed' state and toggle button to hide expired subscriptions
 
-On the Billing page of the Admin app, subscriptions that are set to auto-renew but have expired without a reference to a new subscription will now show a *Renewal failed* state.
+On the Billing page of the Admin app, if subscriptions are set to auto-renew but have expired without a reference to a new subscription, these will now show a *Renewal failed* state.
 
-In addition, a toggle has been introduced to hide expired subscriptions. This toggle is enabled by default.
+In addition, a toggle button has been introduced to hide expired subscriptions. By default, expired subscriptions are set to be shown.
 
 ### 30 April 2026 - Enhancement - Admin - Discount tooltip updated in Add Subscription panel
 
-On the Billing page of the Admin app, the tooltip for the discount in the Add Subscription panel has been updated.
+On the Billing page of the Admin app, the tooltip for the discount in the *Add Subscription* panel has been updated.
 
 ### 30 April 2026 - Enhancement - Billing - Estimated subscription based on current usage
 
@@ -33,11 +33,11 @@ On the Billing page, numbers smaller than 0.01 are now displayed as "< 0.01" ins
 
 ### 30 April 2026 - Fix - Admin - Aborted calls when navigating to DMS user page not handled gracefully
 
-When navigating to the user page of a DataMiner System, it could occur that some calls to fetch the DMS users were aborted, which was not handled gracefully and could result in errors. This issue has been resolved.
+When you navigated to the user page of a DataMiner System, it could occur that some calls to retrieve the DMS users were aborted, which was not handled gracefully and could result in errors. This issue has been resolved.
 
 ### 30 April 2026 - Fix - Home - Password feedback incorrectly shown after clearing password field
 
-When a value in a password field was cleared after a value had been entered, it could occur that the password feedback was still shown. This issue has been resolved.
+When a value that had been entered in a password field was cleared, it could occur that the password feedback was still shown. This issue has been resolved.
 
 ### 27 April 2026 - Fix - Admin - Audit page DMS incorrectly also shown in sidebar
 
