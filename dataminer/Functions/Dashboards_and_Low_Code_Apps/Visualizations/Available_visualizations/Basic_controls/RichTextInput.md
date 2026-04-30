@@ -4,7 +4,7 @@ uid: RichTextInput
 
 # Rich text input
 
-Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45097-->.
+Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45097 + 45180-->.
 
 The rich text input component allows you to **enter and edit formatted text** in a dashboard or low-code app. The entered content is stored as HTML.
 
@@ -16,15 +16,27 @@ With this component, you can:
 
 - Highlight important information with [formatting](#formatting-options) such as bold text, colors, or links.
 
-- Maintain separate notes linked to selected items in an app (see example above).
+- Maintain separate [notes linked to selected items](#use-case-editing-item-specific-notes) in an app.
 
-## TO DO
+## Use case: editing item-specific notes
 
-![Example of rich text input component](~/dataminer/images/RichTextInput.gif)<br>*Low-Code Apps module in DataMiner 10.6.6*
+A common use case in the Low-Code Apps module is to allow users to edit notes for a selected item (for example, a row in a table) in a dedicated panel. The rich text input component is well suited for this, as it supports formatted notes while remaining fully data-driven.
 
-In the example above, users can select a movie and store formatted notes for that specific item.
+![Example of rich text input component](~/dataminer/images/RichTextInput.gif)<br>*Example of a rich text input component used to store item-specific notes. Users can select a movie and store formatted notes for that item (DataMiner 10.6.6).*
 
-How to do this --> WIP
+When the notes panel is opened, an *On open* event triggers a [*Set value* component action](#text-input-component-actions) on the rich text input component. The value is typically retrieved from the data of the currently selected item, such as a column in a table data source:
+
+![Set value](~/dataminer/images/RTI_SetValue.png)<br>*On open event configuration in DataMiner 10.6.6*
+
+As a result, the rich text input is prefilled with the existing notes for the selected item. From this moment on, the user is directly editing the data associated with that item. While the panel remains open, the user can freely edit and format the content using the [rich text toolbar](#formatting-options).
+
+When the notes panel is closed, one or more *On close* events are typically configured:
+
+- *Launch a script*: Pass the current value of the rich text input to an automation script that updates the underlying data source.
+
+- *Fetch the data*: Refresh the underlying data source used by the component (for example, the table), so the updated notes are available the next time the item is selected.
+
+- (Optional) *Set value*: Reset the rich text input to an empty value. This is recommended when the component is reused for different selections, as it prevents previously loaded content from briefly appearing when the panel is opened for another item.
 
 ## Formatting options
 
