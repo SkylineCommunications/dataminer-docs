@@ -15,8 +15,8 @@ On the Billing page of the Admin app, the Subscriptions page now shows draft sub
 
 - The *Total paid* column has been renamed to *Cost*, and the *Total saved* column has been renamed to *Saved*.
 - Subscription details now support draft subscriptions, with *Continue from draft* and *Abandon draft* actions available.
-- When continuing from a draft, the Add Subscription panel is prefilled with the draft details.
-- Drafts can be saved and updated in the Add Subscription panel.
+- When continuing from a draft, the *Add Subscription* panel is prefilled with the draft details.
+- Drafts can be saved and updated in the *Add Subscription* panel.
 - A draft is automatically removed when the subscription is purchased.
 
 ### 30 April 2026 - Fix - Problem with session token refresh could cause unexpected redirect to login page
