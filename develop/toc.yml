@@ -87,7 +87,7 @@ items:
       - name: Actions
         topicUid: LogicActions
         items:
-        - name: Actions Overview
+        - name: Actions overview
           topicUid: LogicActionsOverview
           items:
           - name: add to execute
