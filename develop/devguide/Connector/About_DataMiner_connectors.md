@@ -13,7 +13,7 @@ A DataMiner protocol can be uploaded to a DataMiner Agent, so that elements can 
 
 This guide provides an overview of the different components of a protocol and what happens when a protocol is executed by a DataMiner Agent:
 
-- For more information about the key concepts you need to know to be able to develop protocols, see <xref:ConnectorFundamentals>.
+- For more information about logic-related components such as parameters, actions, triggers, see etc.: <xref:Logic>.
 - For an overview of the different UI components that can be used in a DataMiner protocol, see <xref:UIComponents>.
 - For an overview of the different connection types that are supported in DataMiner, see <xref:Connections>.
 - To find out more on how to implement alarming and trending support in a protocol, see <xref:Monitoring>.
