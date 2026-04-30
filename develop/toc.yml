@@ -1114,6 +1114,8 @@ items:
             topicUid: GQI_RowMetadataBase
           - name: TimeRangeMetadata
             topicUid: GQI_TimeRangeMetadata
+      - name: Extension API
+        topicUid: GQI_Extension_API
       - name: Architecture
         topicUid: GQI_Extensions_Architecture
       - name: Best practices
