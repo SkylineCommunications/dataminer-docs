@@ -63,17 +63,32 @@ The landing page header bar contains the following items, from left to right:
 
   - *About*: Displays information about DataMiner and your installed versions, e.g., web version and server version.
 
-  - *User settings*: Allows you to configure user-specific settings such as [customizing the landing page theme](#customizing-the-landing-page-theme) or changing your password. The user settings will only be available if at least one of the following conditions is met:
+  - *(User) Settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Provides access to user-specific configuration options:
 
-    - The `?showAdvancedSettings=true` argument has been added to the landing page URL.
+    - *Theme*: Only available when the *showAdvancedSettings=true* argument has been added to the URL. Select one of the available themes:
 
-    - You are able to change your password:
+      - *Light* (Default)
 
-      - In *System Center* > *Users*, the setting *User cannot change password* is disabled for your account.
+      - *Dark*
 
-      - You have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
+      - *System*
 
-      - You are not logged in with external or delegated authentication.
+    - *Time zone*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45170-->. This option is only configurable when no [default time zone](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) has been configured for the DataMiner web apps.
+
+      The following options are available:
+
+      - *From client OS*: Use the time zone configured in the client operating system.
+
+      - *Custom*: Select a custom time zone from the dropdown list.
+
+    - *Password*: Allows users to change their password without needing to access Cube.
+
+      > [!NOTE]
+      > This setting is only available if the following conditions are met:
+      >
+      > - In *System Center* > *Users*, the user's *User cannot change password* setting must be disabled.
+      > - The user must have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
+      > - The user must not be logged in with external or delegated authentication.
 
   - *Sign out*: Logs you out and returns you to the logon screen.
 
