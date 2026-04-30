@@ -14,9 +14,9 @@ Follow the instructions under [Creating a new DMS on dataminer.services](xref:Cr
 
 If you [create a new organization](xref:Creating_an_organization), you can try out a DataMiner Community Edition DaaS system for free. This trial system will expire after **one week**. Once this expiration date is reached, the system will automatically be removed unless it is upgraded beforehand.
 
-To **upgrade** your trial system to a regular DataMiner Community Edition DaaS system, please contact <support@dataminer.services>.
+To **upgrade** your trial system to a regular DataMiner Community Edition DaaS system, please contact <salesops@skyline.be>.
 
-To **extend the trial period**, add DataMiner credits. See [How can I acquire more DataMiner credits](xref:FAQs_Pricing#how-can-i-acquire-more-dataminer-credits).
+To **extend the trial period**, please contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
 
 > [!NOTE]
 > If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire. Another email notification will be sent when the system effectively expires.
