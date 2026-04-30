@@ -63,7 +63,7 @@ The landing page header bar contains the following items, from left to right:
 
   - *About*: Displays information about DataMiner and your installed versions, e.g., web version and server version.
 
-  - *(User) settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Provides access to user-specific configuration options:
+  - *(User) Settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Provides access to user-specific configuration options:
 
     - *Theme*: Only available when the *showAdvancedSettings=true* argument has been added to the URL. Select one of the available themes:
 

@@ -38,7 +38,7 @@ The header bar contains the following items, from left to right:
 
 - User button: A button with the initials or an image of the current user is displayed in the upper-right corner. Click this button to open a menu that provides access to the following options:
 
-  - *(User) settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Provides access to the following user-specific configuration options:
+  - *(User) Settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Provides access to the following user-specific configuration options:
 
     - *Theme*: Only available when the *showAdvancedSettings=true* argument has been added to the URL. Select one of the available themes:
 
