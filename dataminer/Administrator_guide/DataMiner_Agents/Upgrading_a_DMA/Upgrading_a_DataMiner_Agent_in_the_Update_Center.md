@@ -138,4 +138,4 @@ To do so:
 
 ***
 
-During a full DMS upgrade, you can connect to any Agent that has completed its local upgrade. Prior to DataMiner 10.6.6/10.7.0<!--RN 45312-->, the only exception is the orchestrating Agent (i.e. the Agent from which the upgrade was triggered), which can only be accessed after all Agents in the cluster have been upgraded.
+During a full DMS upgrade, you can connect to any Agent that has completed its local upgrade. Prior to DataMiner 10.6.6/10.7.0<!--RN 45312-->, the only exception is the orchestrating Agent (i.e., the Agent from which the upgrade was triggered), which can only be accessed after all Agents in the cluster have been upgraded.
