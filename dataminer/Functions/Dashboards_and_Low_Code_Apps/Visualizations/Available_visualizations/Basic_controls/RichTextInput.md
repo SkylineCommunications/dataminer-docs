@@ -6,7 +6,7 @@ uid: RichTextInput
 
 Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45097 + 45180-->.
 
-The rich text input component allows you to **enter and edit formatted text** in a dashboard or low-code app. The entered content is stored as HTML.
+The rich text input component allows you to **enter and edit formatted text** in a dashboard or low-code app.
 
 ![Example of rich text input component](~/dataminer/images/RichTextInput.png)<br>*Rich text input component in DataMiner 10.6.6*
 
@@ -16,9 +16,9 @@ With this component, you can:
 
 - Highlight important information with [formatting](#formatting-options) such as bold text, colors, or links.
 
-- Maintain separate [notes linked to selected items](#use-case-editing-item-specific-notes) in an app.
+- Maintain separate [notes linked to selected items](#use-case-item-specific-notes) in an app.
 
-## Use case: editing item-specific notes
+## Use case: item-specific notes
 
 A common use case in the Low-Code Apps module is to allow users to edit notes for a selected item (for example, a row in a table) in a dedicated panel. The rich text input component is well suited for this, as it supports formatted notes while remaining fully data-driven.
 
