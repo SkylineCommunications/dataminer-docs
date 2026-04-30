@@ -24,7 +24,7 @@ A common use case in the Low-Code Apps module is to allow users to edit notes fo
 
 ![Example of rich text input component](~/dataminer/images/RichTextInput.gif)<br>*Example of a rich text input component used to store item-specific notes. Users can select a movie and store formatted notes for that item (DataMiner 10.6.6).*
 
-When the notes panel is opened, an *On open* event triggers a [*Set value* component action](#text-input-component-actions) on the rich text input component. The value is typically retrieved from the data of the currently selected item, such as a column in a table data source:
+When the notes panel is opened, an *On open* event triggers a [*Set value* component action](#rich-text-input-component-actions) on the rich text input component. The value is typically retrieved from the data of the currently selected item, such as a column in a table data source:
 
 ![Set value](~/dataminer/images/RTI_SetValue.png)<br>*On open event configuration in DataMiner 10.6.6*
 
