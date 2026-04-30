@@ -70,7 +70,7 @@ In the *Layout* pane, you can find the default options for all components. See [
 | General | Emit value on | Determine when the value in the box becomes available as data. This can be when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change"). |
 | General | Default value | Specify the default value that will be entered into the input box when the dashboard or low-code app is opened. HTML text formatting is supported. |
 
-## Text input component actions
+## Rich text input component actions
 
 Component actions are operations that can be executed on a component when an event is triggered.
 
