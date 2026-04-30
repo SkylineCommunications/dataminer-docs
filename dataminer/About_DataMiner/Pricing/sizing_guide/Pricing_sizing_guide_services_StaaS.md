@@ -4,7 +4,7 @@ uid: Pricing_sizing_guide_services_StaaS
 
 # Sizing guide: Storage as a Service
 
-For **Brownfield deployments**, i.e. for existing systems migrating to STaaS, the most reliable approach is to take a 24-hour sample: DataMiner writes to STaaS alongside your current storage, giving you a real consumption sample you can extrapolate from. This has consistently proven to be the most accurate sizing method for migration scenarios. For more information, see [Requesting a cost estimation for STaaS](xref:STaaS_cost_estimation).
+For **Brownfield deployments**, i.e., for existing systems migrating to STaaS, the most reliable approach is to take a 24-hour sample: DataMiner writes to STaaS alongside your current storage, giving you a real consumption sample you can extrapolate from. This has consistently proven to be the most accurate sizing method for migration scenarios. For more information, see [Requesting a cost estimation for STaaS](xref:STaaS_cost_estimation).
 
 For **Greenfield deployments**, while STaaS charges vary depending on the specifics of each DataMiner deployment and setup (e.g., types of Managed Objects, system configuration, and user preferences), the rule of thumb below is a good starting point estimate, representing the typical average system.
 
