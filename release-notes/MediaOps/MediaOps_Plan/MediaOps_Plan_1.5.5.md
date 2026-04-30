@@ -35,3 +35,7 @@ When parameters were removed from an existing node configuration during the pick
 #### Resource Studio: Not possible to select VSG that contained pipe character in its name [ID 45418]
 
 When a virtual signal group (VSG) was created with a pipe character (`|`) in its name, it was not possible to select the VSG as an input or output VSG when editing a resource.
+
+#### Scheduling: Incorrect daily pattern for recurring jobs [ID 45425]
+
+When a recurring job was created with a daily pattern so that it would be repeated after a specific number of days, the second instance of the job incorrectly occurred after one additional day, after which the other instances of the job followed according to the configured interval. This issue has been resolved.
