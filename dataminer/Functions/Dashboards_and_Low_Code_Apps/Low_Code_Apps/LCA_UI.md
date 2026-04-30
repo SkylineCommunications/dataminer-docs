@@ -48,7 +48,7 @@ The header bar contains the following items, from left to right:
 
       - *System*
 
-    - *Time zone*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45170-->. This option is only available when no [default time zone](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) has been configured for the DataMiner web apps.
+    - *Time zone*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45170-->. This option is only configurable when no [default time zone](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) has been configured for the DataMiner web apps.
 
       The following options are available:
 
