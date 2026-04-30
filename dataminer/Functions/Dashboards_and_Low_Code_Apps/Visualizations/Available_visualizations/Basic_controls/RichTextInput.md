@@ -74,7 +74,7 @@ In the *Layout* pane, you can find the default options for all components. See [
 
 Component actions are operations that can be executed on a component when an event is triggered.
 
-When you select the [*Execute component action option*](xref:LowCodeApps_event_config#executing-a-component-action), you can choose from a list of components in the app and the specific actions available for each of them.
+When you select the [*Execute component action* option](xref:LowCodeApps_event_config#executing-a-component-action), you can choose from a list of components in the app and the specific actions available for each of them.
 
 For the rich text input component, the following component action is available:
 
