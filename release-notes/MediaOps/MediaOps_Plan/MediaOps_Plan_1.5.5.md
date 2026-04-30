@@ -2,10 +2,7 @@
 uid: MediaOps_Plan_1.5.5
 ---
 
-# MediaOps Plan 1.5.5 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Plan 1.5.5
 
 > [!NOTE]
 > This version requires:
@@ -34,8 +31,12 @@ When parameters were removed from an existing node configuration during the pick
 
 #### Resource Studio: Not possible to select VSG that contained pipe character in its name [ID 45418]
 
-When a virtual signal group (VSG) was created with a pipe character (`|`) in its name, it was not possible to select the VSG as an input or output VSG when editing a resource.
+When a virtual signal group (VSG) had a pipe character (`|`) in its name, it was not possible to select the VSG as an input or output VSG when editing a resource. Only part of the value was shown in the dropdown, and when the entry was selected, an exception was thrown as the partial name did not actually exist. Now pipe characters in VSG names are fully supported, resolving this issue.
 
 #### Scheduling: Incorrect daily pattern for recurring jobs [ID 45425]
 
 When a recurring job was created with a daily pattern so that it would be repeated after a specific number of days, the second instance of the job incorrectly occurred after one additional day, after which the other instances of the job followed according to the configured interval. This issue has been resolved.
+
+#### Scheduling: Pool configuration not taken into account when new node was added to job [ID 45428]
+
+When a new node was added to a job but no changes were made to the scheduling configuration, the pool configuration was not taken into account.
