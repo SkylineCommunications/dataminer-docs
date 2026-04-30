@@ -9,6 +9,16 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 30 April 2026 - New feature - Admin - Draft subscriptions
+
+On the Billing page of the Admin app, the Subscriptions page now shows draft subscriptions, which are marked as *Draft* in the state column. The following changes have also been introduced:
+
+- The *Total paid* column has been renamed to *Cost*, and the *Total saved* column has been renamed to *Saved*.
+- Subscription details now support draft subscriptions, with *Continue from draft* and *Abandon draft* actions available.
+- When continuing from a draft, the Add Subscription panel is prefilled with the draft details.
+- Drafts can be saved and updated in the Add Subscription panel.
+- A draft is automatically removed when the subscription is purchased.
+
 ### 30 April 2026 - Fix - Problem with session token refresh could cause unexpected redirect to login page
 
 It could occur that users were unexpectedly redirected to a login page because session tokens were not refreshed correctly. This issue has been resolved.
