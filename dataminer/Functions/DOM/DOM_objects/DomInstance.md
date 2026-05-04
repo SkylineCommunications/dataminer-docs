@@ -66,7 +66,7 @@ The errors below are related to the [link security](xref:DOM_SecuritySettings#li
 |--|--|
 | ReadFilterNotSupportedBySecurity | A read filter lacks the proper context to apply security. When filtering on `DomInstances`, add one or more `DomDefinitionId == X` clauses or only filter on specific instance IDs. When filtering on DOM history, add one or more `SubjectID == X` clauses. The *Message* property may contain extra info. |
 | CountFilterNotSupportedBySecurity | A count filter lacks the proper context to apply security. When filtering on `DomInstances`, add one or more `DomDefinitionId == X` clauses. When filtering on DOM history, add one or more `SubjectID == X` clauses. The *Message* property may contain extra info. |
-| NoPermission | The user does not have permission to perform the operation. When reading `DomInstances`, the user may not have access to at least one referenced DOM definition. *DomDefinitionIds* contains the inaccessible definition IDs. When reading DOM history, the user may not have access to at least one `DomInstance` for which the history was requested, or the instance does not exist. *DomInstanceIds* contains the inaccessible instance IDs. |
+| NoPermission | The user does not have permission to perform the operation. When reading `DomInstances`, the user may not have access to at least one referenced DOM definition. *DomDefinitionIds* contains the inaccessible definition IDs. When reading DOM history, the user may not have access to at least one `DomInstance` for which the history was requested, or the instance does not exist. *DomInstanceIds* contains the inaccessible instance IDs. From DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45295-->, this error will include which action was not allowed.|
 
 ## Notes
 
