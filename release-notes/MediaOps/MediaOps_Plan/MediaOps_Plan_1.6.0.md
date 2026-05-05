@@ -18,6 +18,19 @@ uid: MediaOps_Plan_1.6.0
 > [!TIP]
 > Installing [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) alongside MediaOps Plan allows you to orchestrate jobs and workflows and fully automate the setup and teardown processes.
 
+## New features
+
+#### Code library to manage objects from the People and Organizations app [ID 45455]
+
+New helper classes and methods are now available to manipulate the objects that are part of the People and Organizations app. Different NuGet packages have been made available for the different environments where these may be needed:
+
+- For DataMiner in general: <https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations>
+- For automation scripts: <https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations.Automation>
+- For connectors: <https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations.Protocol>
+- For ad hoc data sources: <https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations.GQI>
+
+Code compiled against these packages can only be executed if MediaOps Plan has been installed on the DataMiner System.
+
 ## Changes
 
 ### Breaking changes
