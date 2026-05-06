@@ -60,7 +60,7 @@ The Document Hub app works seamlessly with other DataMiner applications:
 - **People & Organizations**: Attach profile photos and organization logos.
 - **Asset Manager**: Store and display asset images and documentation.
 - **Scheduling**: Link job documents and attachments.
-- **Custom Applications**: Use the [Document Hub API](xref:DocumentHub_API) to integrate with your own low-code apps.
+- **Custom Applications**: Use the [Document Hub DevPack](xref:DH_Development) to integrate with your own low-code apps.
 
 Document usage is handled by the consuming application, allowing each app to control how documents are displayed and managed within its context.
 
@@ -86,11 +86,11 @@ Store documents on the local DataMiner Web Server for on-premises deployments. I
 
 ### DOM Attachments with Shared Drive
 
-Connect to a Shared Drive in the network and store files dirrectly on DOM instances in DataMiner.
+Connect to a Shared Drive in the network and store files directly on DOM instances in DataMiner.
 
 - Network Share Path
 - Authentication credentials (username and password)
-- (optionaly) ISS Config for virtual webserver to have resolvable paths
+- (optionally) ISS Config for virtual webserver to have resolvable paths
 
 ### Future integrations
 

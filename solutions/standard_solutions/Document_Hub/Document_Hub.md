@@ -18,17 +18,27 @@ dataminer.DocumentHub is available in the [Catalog](https://catalog.dataminer.se
 
 <div class="row">
   <div class="column">
-  <a href="/solutions/standard_solutions/Document_Hub/Apps/DH_Application.html" title="Document Hub app" target="_self"><img src="~/solutions/images/DocumentHub_App_Logo.png" style="width:100%"></a>
+    <a href="/solutions/standard_solutions/Document_Hub/Apps/DH_Application.html" title="Document Hub app" target="_self">
+      <img src="~/solutions/images/DocumentHub_App_Logo.png" style="width:100%">
+    </a>
+    <p>
+      <em>Document Hub App</em>
+    </p>
   </div>
   <div class="column">
-  <a href="xref:DocumentHub_API" title="Document Hub API" target="_self"><img src="~/solutions/images/DocumentHub_App_Logo.svg" style="width:100%"></a>
+    <a href="xref:DH_Development" title="Document Hub DevPack" target="_self">
+      <img src="~/solutions/images/DocumentHub_App_Logo.png" style="width:100%">
+    </a>
+  <p>
+    <em>Document Hub DevPack</em>
+  </p>
   </div>
 </div>
 
 > [!TIP]
 >
 > - Before you deploy the Document Hub package, review the [installation instructions](xref:DH_Installation).
-> - Developers integrating Document Hub with custom applications should refer to the [Document Hub API](xref:DocumentHub_API) documentation.
+> - Developers integrating Document Hub with custom applications should refer to the [Document Hub DevPack](xref:DH_Development) documentation.
 > - For details about the changes introduced in each Document Hub version, refer to the [release notes](xref:DocumentHub_RNs_index).
 
 ## Who can benefit from dataminer.DocumentHub?

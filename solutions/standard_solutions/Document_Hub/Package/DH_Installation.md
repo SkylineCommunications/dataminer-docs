@@ -24,6 +24,7 @@ During the installation, the following steps will automatically be executed:
 1. Install/Update automation scripts.
 1. Install/Update applications.
 1. Install/Update DOM definitions.
+1. Install/update DevPack (SDM API Helpers).
 1. Initialize the system (fresh install).
 1. Migration actions (if any).
 1. Cleanup actions (if any).

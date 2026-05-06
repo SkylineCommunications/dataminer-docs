@@ -182,8 +182,8 @@ items:
         topicUid: DH_Installation
       - name: Document Hub app
         topicUid: DH_Application
-      - name: Document Hub API
-        topicUid: DocumentHub_API
+      - name: Document Hub DevPack
+        topicUid: DH_Development
       - name: Tutorials
         items:
         - name: Configuring SharePoint as a storage backend

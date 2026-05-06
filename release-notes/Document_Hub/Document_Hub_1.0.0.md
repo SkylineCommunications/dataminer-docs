@@ -14,13 +14,12 @@ uid: Document_Hub_1.0.0
 >
 > - DataMiner 10.5.9/10.6.0 or higher
 > - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.x or higher
-> - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e)
 
 ## New features
 
 - SDM 2.0 - SDM 2.0 API compliant
-- Configure file size limits - Configure file size limitations on Categories, hard limitation or soft limitation with warning
-- Give subpath to upload with category - (API-feature) Upload a folder with the category defined path and add a subpath to further more define your folder structure.
+- Configure file size limits - Configure file size limitations on Categories.
+- Give subpath to upload within category - (API-feature) Upload a folder with the category defined path and add a subpath to further more define your folder structure.
 
 ## Changes
 
