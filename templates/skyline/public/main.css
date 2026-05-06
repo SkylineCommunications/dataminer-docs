@@ -607,10 +607,22 @@ a.backtotoplink:hover
 
 #search-close-box {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 #search-close-btn {
+  align-self: flex-start;
+  padding: 0;
+  margin-bottom: 10px;
+  outline: none;
+  color: #337ab7;
+  font-size: smaller;
+  text-decoration: none;
+}
+
+#search-syntax-btn {
   align-self: flex-end;
   padding: 0;
   margin-bottom: 10px;
