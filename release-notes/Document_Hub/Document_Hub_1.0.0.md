@@ -17,10 +17,7 @@ uid: Document_Hub_1.0.0
 
 ## New features
 
+### Document Hub: Initial functionality [ID xxxxx]
+
 - SDM 2.0 - SDM 2.0 API compliant
 - Configure file size limits - Configure file size limitations on Categories.
-- Give subpath to upload within category - (API-feature) Upload a folder with the category defined path and add a subpath to further more define your folder structure.
-
-## Changes
-
-*No enhancements or fixes have been added to this release yet.*

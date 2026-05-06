@@ -1,5 +1,5 @@
 ---
-uid: DocumentHub_RNs_index
+uid: Document_Hub_RNs_index
 ---
 
 # Document Hub release notes

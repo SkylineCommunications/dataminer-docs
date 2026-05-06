@@ -39,7 +39,7 @@ dataminer.DocumentHub is available in the [Catalog](https://catalog.dataminer.se
 >
 > - Before you deploy the Document Hub package, review the [installation instructions](xref:DH_Installation).
 > - Developers integrating Document Hub with custom applications should refer to the [Document Hub DevPack](xref:DH_Development) documentation.
-> - For details about the changes introduced in each Document Hub version, refer to the [release notes](xref:DocumentHub_RNs_index).
+> - For details about the changes introduced in each Document Hub version, refer to the [release notes](xref:Document_Hub_RNs_index).
 
 ## Who can benefit from dataminer.DocumentHub?
 
