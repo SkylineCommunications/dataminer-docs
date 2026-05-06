@@ -13,6 +13,8 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 On the Billing overview page in the Admin app, the services table now shows data at unit level instead of capping out at service level, giving users a deeper insight into what is affecting their billing the most.
 
+### 6 May 2026 - PLACEHOLDER
+
 ### 5 May 2026 - New feature - Admin - Draft subscriptions
 
 On the Billing page of the Admin app, the Subscriptions page now shows draft subscriptions, which are marked as *Draft* in the state column. The following changes have also been introduced:
