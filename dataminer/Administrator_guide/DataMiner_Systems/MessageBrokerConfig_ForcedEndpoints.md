@@ -11,7 +11,7 @@ This setting can be configured in `MessageBrokerConfig.json`.
 This is useful in scenarios where a process must reach NATS through a fixed set of endpoints — for example, when connecting through a proxy, a DMZ, or a load balancer.
 
 > [!NOTE]
-> - From DataMiner 10.6.7<!-- RN TBD --> onwards, this is supported for DataMiner server processes.
+> - From DataMiner 10.6.7<!-- RN 45491 --> onwards, this is supported for DataMiner server processes.
 > - For DxMs, check the release notes of the specific DxM to find out from which version this is supported.
 
 ## Configuration
