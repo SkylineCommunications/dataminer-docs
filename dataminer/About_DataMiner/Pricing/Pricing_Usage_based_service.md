@@ -41,7 +41,6 @@ Monthly Utilization Allowance (MUA) represents the total number of credits commi
 
 \* Alternatively, Pay‑Per‑Use customers can bypass the MUA requirement by committing to an equivalent annual credit spend, in exchange for Continuity/Evolve Support and with unused credits expiring at year‑end.
 
-
 > [!IMPORTANT]
 > New connector development and changes to existing connectors are subject to a **fair use policy** and are intended to support normal platform usage and evolution.
 
