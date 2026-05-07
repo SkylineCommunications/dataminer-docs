@@ -64,6 +64,12 @@ Up to now, when configuring a *Web* component, it would only be possible to enab
 
 From now on, it will also be possible to enable or disable this setting, which has now been renamed to *Isolate*, when *Type* is set to "Custom HTML".
 
+#### Dashboards/Low-Code Apps: Spectrum sessions list can now be filtered by name [ID 45430]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When you have a *List* component listing spectrum sessions, you can now filter that list by name. To do so, link a data field of type string to the filter of the *List* component. This data field will then act as a filter box.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Interactive automation scripts: Redesigned controls would incorrectly not allow you to use the arrow keys to move the cursor [ID 45313]
