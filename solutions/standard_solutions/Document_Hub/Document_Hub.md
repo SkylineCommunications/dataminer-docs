@@ -27,7 +27,7 @@ dataminer.DocumentHub is available in the [Catalog](https://catalog.dataminer.se
   </div>
   <div class="column">
     <a href="xref:DH_Development" title="Document Hub DevPack" target="_self">
-      <img src="~/solutions/images/DocumentHub_App_Logo.png" style="width:100%">
+      <img src="~/solutions/images/DocumentHub-devpack.png" style="width:100%">
     </a>
   <p>
     <em>Document Hub DevPack</em>
