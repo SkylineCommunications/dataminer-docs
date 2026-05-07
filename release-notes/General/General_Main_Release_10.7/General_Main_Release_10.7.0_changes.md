@@ -465,6 +465,19 @@ From now on, all state changes of all SLNet connections between Agents in the cl
 
 Because of a number of enhancements, overall performance has increased when detecting flatline events, especially on systems with a large number of monitored parameters.
 
+#### Standalone BPA Executor will now return exit code 1 or 2 when issues were detected [ID 45433]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+Up to now, the *Standalone BPA Executor* tool would always return exit code 0, regardless of whether the BPA tests it had run had detected any issues. In situations where the tool had been integrated into another process (e.g., a DataMiner upgrade, an SLLogCollector run, etc.), this would make it hard to determine whether a BPA test had failed or not.
+
+From now on, the *Standalone BPA Executor* tool will return one of the following exit codes when issues were detected:
+
+| Exit code | Description |
+|---|---|
+| 1 | Unexpected errors have occurred. |
+| 2 | BPA tests have detected issues. |
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]

@@ -83,6 +83,19 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### Standalone BPA Executor will now return exit code 1 or 2 when issues were detected [ID 45433]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+Up to now, the *Standalone BPA Executor* tool would always return exit code 0, regardless of whether the BPA tests it had run had detected any issues. In situations where the tool had been integrated into another process (e.g., a DataMiner upgrade, an SLLogCollector run, etc.), this would make it hard to determine whether a BPA test had failed or not.
+
+From now on, the *Standalone BPA Executor* tool will return one of the following exit codes when issues were detected:
+
+| Exit code | Description |
+|---|---|
+| 1 | Unexpected errors have occurred. |
+| 2 | BPA tests have detected issues. |
+
 #### SLLogCollector will now collect the system environment variables [ID 45435]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
