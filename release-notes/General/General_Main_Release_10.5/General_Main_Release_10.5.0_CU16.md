@@ -43,6 +43,21 @@ When DataMiner Cube requests timeline data using a `GetReportTimeLineDataMessage
 
 From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
 
+#### Cleanup of replication buffer files [ID 45432]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When replication buffering is enabled (which is the case by default), the replication buffers will now be cleaned every 24 hours.
+
+During this cleanup, a check will be performed to find out whether the SLNet system cache contains any files that are no longer managed by the replication buffer and that have not been updated in the last 30 days (by default). If such files are found, they will be deleted.
+
+In the *MaintenanceSettings.xml* file, a new setting has been added in the `<SLNet>` section: `<ReplicationBufferMaxDisconnectedTime>`. This setting will allow you to configure the number of days there must be no update to the replication buffer files before they can be deleted. By default, this setting will be set to 30 (day), but can be changed to a value between 14 (days) and 30 (days). If set to -1, automatic cleanup will be disabled.
+
+Whether replication buffering is enabled or not, you can also configure a replication buffer cleanup using the SLNetClientTest tool. To do so, open the tool, and send a `DiagnoseMessage` with `ExtraInfo` set to "cleanup:`<numberOfDays>`", where `<numberOfDays>` is a value between 14 and 30. For example: `cleanup:20`.
+
+> [!WARNING]
+> Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 #### SLLogCollector will now collect the system environment variables [ID 45435]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
