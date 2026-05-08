@@ -39,7 +39,7 @@ After the upgrade process, your dashboards and low-code apps may be migrated to 
 
 ## Downgrading the DataMiner web apps
 
-Web upgrades consist of the DataMiner web apps, the web API and several core (DcM) and extension modules (DxM). Therefore, the downgrade of the DataMiner web apps also consists of multiple steps:
+Web upgrades consist of the DataMiner web apps, the web API, and several core (DcM) and extension (DxM) modules. Therefore, a downgrade of the DataMiner web apps also consists of multiple steps, as detailed below.
 
 ### Restoring the dashboards and apps from backup
 
@@ -48,9 +48,14 @@ Since dashboards and low-code apps can automatically get migrated after a softwa
 To deal with this, after a downgrade, follow the steps below:
 
 1. Before proceeding, create a copy of the current files in `C:\Skyline DataMiner\Applications` and `C:\Skyline DataMiner\Dashboards` as a safety precaution.
-1. Go to `C:\Skyline DataMiner\System Cache\Web\Backups` and locate the backup created before your upgrade. If downgrading across multiple versions, select the backup that matches your target version.
+
+1. Go to `C:\Skyline DataMiner\System Cache\Web\Backups` and locate the backup created before your upgrade.
+
+   If you are downgrading across multiple versions, select the backup that matches your target version.
+
 1. Extract this zip package in `C:\Skyline DataMiner` and let it replace the files in the *Applications* and *Dashboards* folders.
-1. Do the same on every DMA in cluster.
+
+1. Do the same on every DMA in the cluster.
 
 > [!NOTE]
 >
@@ -59,14 +64,20 @@ To deal with this, after a downgrade, follow the steps below:
 
 ### Reinstalling the GQI DxM
 
-After the downgrade, the following steps need to be taken for [GQI DxM](xref:GQI_DxM):
+After the downgrade, the following steps need to be taken for the [GQI DxM](xref:GQI_DxM):
 
 1. Uninstall the current GQI DxM.
-1. Install the version of GQI DxM that corresponds to your target DataMiner version. This can be found in the `Tools\ModuleInstallers` folder on your DataMiner Agent.
+
+1. Install the version of the GQI DxM that corresponds to your target DataMiner version.
+
+   You can find this in the `Tools\ModuleInstallers` folder on your DataMiner Agent.
 
 ### Reinstalling the Web DcM
 
 If you are downgrading to a version that includes the [Web DcM](xref:DataMinerExtensionModules#web) (DataMiner 10.5.11 or later), follow these steps:
 
 1. Uninstall the current Web DcM.
-1. Install the version of Web DcM that corresponds to your target DataMiner version. This can be found in the `Tools\ModuleInstallers` folder on your DataMiner Agent.
+
+1. Install the version of Web DcM that corresponds to your target DataMiner version.
+
+   You can find this in the `Tools\ModuleInstallers` folder on your DataMiner Agent.
