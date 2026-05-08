@@ -40,6 +40,12 @@ From now on, the *Upgrade* window will also list the upgrade packages that are m
 
 Performing an upgrade with a package made available via the Orchestrator will avoid having to upload it from the client.
 
+#### Protocols & Templates: Enhanced performance when retrieving protocol function icons [ID 45279]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving protocol function icons in the *Protocols & Templates* module.
+
 #### Error message that appears when a connection issue occurs while setting up a replicated element has been updated [ID 45439]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
