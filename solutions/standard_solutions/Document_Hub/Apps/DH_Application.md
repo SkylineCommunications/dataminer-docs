@@ -15,15 +15,15 @@ The Document Hub app is a comprehensive low-code application designed for admini
 
 The following sections and features are available in the app:
 
-- ![SharePoint](~/solutions/images/DocumentHub_SharePoint.svg) **SharePoint**: Browse files stored in your SharePoint repository, quickly filter by name or category, and inspect the full metadata set for each file.
+- ![SharePoint](~/solutions/images/DocumentHub_SharePoint.svg) **SharePoint**: Browse files stored in your SharePoint repository, quickly filter by name or bucket, and inspect the full metadata set for each file.
 
-- ![DataMiner](~/solutions/images/DocumentHub_DataMiner.svg) **DataMiner**: Access files stored on your DataMiner side, use name and category filters to narrow down results, and review all available metadata details.
+- ![DataMiner](~/solutions/images/DocumentHub_DataMiner.svg) **DataMiner**: Access files stored on your DataMiner side, use name and bucket filters to narrow down results, and review all available metadata details.
 
-- ![DOM](~/solutions/images/DocumentHub_DOM.svg) **DOM**: Explore files linked to DOM records, find content by filtering on name and category, and view the complete metadata context used in your workflows.
+- ![DOM](~/solutions/images/DocumentHub_DOM.svg) **DOM**: Explore files linked to DOM records, find content by filtering on name and bucket, and view the complete metadata context used in your workflows.
 
-- ![Upload](~/solutions/images/DocumentHub_Upload.svg) **Upload**: Upload new documents to configured storage backends. Select the appropriate category to ensure files are stored in the correct location with proper metadata.
+- ![Upload](~/solutions/images/DocumentHub_Upload.svg) **Upload**: Upload new documents to configured storage backends. Select the appropriate bucket to ensure files are stored in the correct location with proper metadata.
 
-- ![Categories](~/solutions/images/DocumentHub_Categories.svg) **Categories**: Configure and manage document categories. Define which file types go where, set upload restrictions, and manage metadata templates. Available to administrators only.
+- ![Buckets](~/solutions/images/DocumentHub_Buckets.svg) **Buckets**: Configure and manage document buckets. Define which file types go where, set upload restrictions, and manage metadata templates. Available to administrators only.
 
 - ![Source Configuration](~/solutions/images/DocumentHub_Settings.svg) **Source Configuration**: Connect and manage cloud storage repositories and local storage options. Configure credentials and access settings. Available to administrators only.
 
@@ -33,25 +33,25 @@ The following sections and features are available in the app:
 
 You can upload documents to store them in your configured storage backend. The upload process guides you through:
 
-1. Selecting the appropriate **document category**.
+1. Selecting the appropriate **document bucket**.
 2. Choosing the file(s) to upload.
 3. Optionally give a new name to the file
 4. Confirm the upload destination.
 
-Once uploaded, the document will be stored in the configured backend for the selected category and will appear in the Documents view for all authorized users.
+Once uploaded, the document will be stored in the configured backend for the selected bucket and will appear in the Documents view for all authorized users.
 
-## Organizing with categories
+## Organizing with buckets
 
-Document categories streamline workflows by predefining:
+Document buckets streamline workflows by predefining:
 
-- **Name** to identify the Category
+- **Name** to identify the Bucket
 - **Target storage backend** (SharePoint, Google Drive, local storage, etc.)
 - **Allowed file extensions** (e.g., .pdf, .jpg, .png)
 - **File size limits** to prevent oversized uploads
 - **Upload Location** to organize your files
-- **Description** (Optional) to give some extra info about that Category
+- **Description** (Optional) to give some extra info about that Bucket
 
-Categories help maintain organization and security by ensuring files are stored consistently and with proper restrictions.
+Buckets help maintain organization and security by ensuring files are stored consistently and with proper restrictions.
 
 ## Integrating with other applications
 
@@ -101,7 +101,7 @@ Additional cloud storage providers may be supported in future releases based on 
 System administrators can:
 
 - Configure storage backend connections and credentials.
-- Create and manage document categories.
+- Create and manage document buckets.
 - Set upload restrictions (file types, sizes, etc.).
 
 ## Searching and filtering
@@ -109,7 +109,7 @@ System administrators can:
 The Documents view includes powerful search and filtering capabilities:
 
 - **Search by name**: Quickly find documents by filename or title.
-- **Filter by category**: View documents from specific categories.
+- **Filter by bucket**: View documents from specific buckets.
 - **Filter by storage backend**: Show documents from particular storage locations.
 
 ## Performance and scalability

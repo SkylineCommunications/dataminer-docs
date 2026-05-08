@@ -47,11 +47,11 @@ Document Hub serves diverse user groups across your organization:
 
 - **IT and Security Teams**: Implement centralized document management with control over storage backends, access credentials, file format restrictions, and compliance policies. Support customer-managed SharePoint or on-premises storage options like DataMiner Webfiles or DOM Attachments.
 
-- **System Administrators**: Configure document categories for file grouping with file upload limitations, storage locations, and file extension rules.
+- **System Administrators**: Configure document buckets for file grouping with file upload limitations, storage locations, and file extension rules.
 
 - **Content and Asset Managers**: Streamline workflows for organizing and retrieving documents across the organization. Normalize graphics formats for consistency and for automated processing.
 
-- **Application Developers**: Integrate Document Hub capabilities into custom DataMiner low-code applications using the NuGet API. Retrieve file information, upload documents, and manage categories programmatically.
+- **Application Developers**: Integrate Document Hub capabilities into custom DataMiner low-code applications using the NuGet API. Retrieve file information, upload documents, and manage buckets programmatically.
 
 - **Business Operations Teams**: Access documents from within operational applications such as People & Organizations, Asset Manager, and Scheduling. Attach job documents, profile images, asset photos, and service icons without leaving the application context.
 
@@ -67,15 +67,15 @@ Document Hub supports the following capabilities by default without any customiz
 
 - **Link and Reference**: Store file references and URLs in DataMiner DOM objects and applications. Link documents to jobs, assets, contacts, and other business entities.
 
-- **Search and Navigate**: Discover documents by name and categories. Browse and organize files through a unified interface regardless of storage location.
+- **Search and Navigate**: Discover documents by name and buckets. Browse and organize files through a unified interface regardless of storage location.
 
 - **Read and Display**: View and open documents in third-party applications. Support common file types including jpg, png, gif, svg, pdf, docx, xlsx, and pptx.
 
 - **Normalize and Format**: Apply format conversion and normalization to graphics files at ingest to ensure consistency across standard solutions.
 
-- **Organize with Categories**: Create predefined document categories to streamline workflow. Specify target platforms, allowed file extensions, and file size limits for each category.
+- **Organize with Buckets**: Create predefined document buckets to streamline workflow. Specify target platforms, allowed file extensions, and file size limits for each bucket.
 
-- **Integrate with APIs**: Use the Document Hub NuGet package to develop custom integrations. Retrieve file information, manage categories, and upload documents programmatically.
+- **Integrate with APIs**: Use the Document Hub NuGet package to develop custom integrations. Retrieve file information, manage buckets, and upload documents programmatically.
 
 Example use cases:
 

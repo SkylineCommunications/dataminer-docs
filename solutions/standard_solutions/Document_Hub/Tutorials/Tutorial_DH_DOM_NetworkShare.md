@@ -22,9 +22,17 @@ Expected duration: 15 minutes
 
 The steps in this tutorial include:
 
-- [Step 1: Prepare the network share](#step-1-prepare-the-network-share)
-- [Step 2: Configure the network share in Document Hub](#step-2-configure-the-network-share-in-document-hub)
-- [Optional: Configure browser-based access](#optional-configure-browser-based-access)
+- [Configuring DOM attachments on a network share](#configuring-dom-attachments-on-a-network-share)
+  - [Prerequisites](#prerequisites)
+  - [Overview](#overview)
+  - [Step 1: Prepare the network share](#step-1-prepare-the-network-share)
+  - [Step 2: Configure the network share in Document Hub](#step-2-configure-the-network-share-in-document-hub)
+  - [Optional: Configure browser-based access](#optional-configure-browser-based-access)
+    - [Create a local DataMiner user](#create-a-local-dataminer-user)
+    - [Configure IIS permissions](#configure-iis-permissions)
+    - [Create an IIS virtual directory](#create-an-iis-virtual-directory)
+    - [Access attachments via browser](#access-attachments-via-browser)
+  - [Next steps](#next-steps)
 
 ## Step 1: Prepare the network share
 
@@ -76,7 +84,7 @@ Configure the network share directly in the Document Hub app:
 
 1. Click **Save** to store the configuration.
 
-1. The network share backend is now available for use with DOM attachments and document categories.
+1. The network share backend is now available for use with DOM attachments and document buckets.
 
 > [!IMPORTANT]
 > DataMiner will store and retrieve attachments directly from this network location. No IIS configuration is required for basic file storage and retrieval through the Document Hub app.
@@ -156,10 +164,10 @@ Example: `https://dma.example.com/shareRedirect/document.pdf`
 
 After configuring the network share backend, you can:
 
-- Create document categories that use this network share
+- Create document buckets that use this network share
 - Configure DOM definitions to store attachments on this share
 - Upload documents to the network share through the Document Hub app
 - Link DOM attachments to jobs, assets, and other business entities
 
 > [!TIP]
-> For more information on creating and managing document categories, see [Document Hub app](xref:DH_Application).
+> For more information on creating and managing document buckets, see [Document Hub app](xref:DH_Application).

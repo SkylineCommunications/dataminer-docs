@@ -46,10 +46,10 @@ After the installation completes, you will need to configure the Document Hub ap
    - Connect to your SharePoint repository, configure your DOM attachments or use the standard DataMiner Webfiles.
    - Provide the necessary credentials and access information (if applicable).
 
-1. Define document **Categories** to organize file types:
-   - Specify the target storage backend for each category.
+1. Define document **Buckets** to organize file types:
+   - Specify the target storage backend for each bucket.
    - Define allowed file extensions.
-   - Set category rules to keep files organized.
+   - Set bucket rules to keep files organized.
 
 > [!TIP]
 > Refer to the [Document Hub app](xref:DH_Application) documentation for detailed configuration instructions.

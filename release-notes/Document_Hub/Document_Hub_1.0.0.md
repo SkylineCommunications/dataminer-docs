@@ -20,4 +20,7 @@ uid: Document_Hub_1.0.0
 ### Document Hub: Initial functionality [ID xxxxx]
 
 - SDM 2.0 - SDM 2.0 API compliant
-- Configure file size limits - Configure file size limitations on Categories.
+- Configure file size limits - Configure file size limitations on buckets.
+- Give subpath to upload within buckets - (API-feature) Upload a folder with the bucket defined path and add a subpath to further more define your folder structure.
+- Rename Categories to Buckets.
+- Upgrading Microsoft Graph API to v5

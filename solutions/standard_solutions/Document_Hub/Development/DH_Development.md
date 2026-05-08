@@ -6,7 +6,7 @@ uid: DH_Development
 
 ## About
 
-NuGet Class Library API to interact with DocumentHub functionality. It provides repositories and helpers for managing document categories, SharePoint configurations, and DOM sources, as well as a high-level API for file upload and read operations across multiple storage backends.
+NuGet Class Library API to interact with DocumentHub functionality. It provides repositories and helpers for managing document buckets, SharePoint configurations, and DOM sources, as well as a high-level API for file upload and read operations across multiple storage backends.
 
 ## Solution Structure
 
@@ -37,20 +37,20 @@ using Skyline.DataMiner.Solutions.DocumentHub.API.DocHubClient;
 
 var client = new DocHubClient(connection);
 
-// Upload a file to a document category
-client.Files.UploadFile(category, @"C:\Documents\report.pdf");
+// Upload a file to a document bucket
+client.Files.UploadFile(bucket, @"C:\Documents\report.pdf");
 
 // Upload with custom name
-client.Files.UploadFile(category, filePath, name: "CustomName");
+client.Files.UploadFile(bucket, filePath, name: "CustomName");
 
 // Upload to DOM instance
-client.Files.UploadFile(category, filePath, domInstanceId);
+client.Files.UploadFile(bucket, filePath, domInstanceId);
 
-// Read files from a category
-var files = client.Files.ReadFiles(category);
+// Read files from a bucket
+var files = client.Files.ReadFiles(bucket);
 
 // Read files with filter
-var filtered = client.Files.ReadFiles(category, filter: "invoice");
+var filtered = client.Files.ReadFiles(bucket, filter: "invoice");
 ```
 
 ### Using the DocumentHubApiHelper
@@ -71,8 +71,8 @@ helper.SharePointConfigurations.Create(new SharePointConfiguration
 });
 
 // Read with filters
-var results = helper.DocumentCategories.Read(
-    DocumentCategoryExposers.Name.Equal("Technical Documentation"));
+var results = helper.DocumentBuckets.Read(
+    DocumentBucketExposers.Name.Equal("Technical Documentation"));
 ```
 
 ## Features
@@ -81,8 +81,8 @@ var results = helper.DocumentCategories.Read(
 |-----------------------  |------------------------------------------------------------------------------------------------------|
 | **File Operations**     | Upload and read files across configured storage backends                                             |
 | **Storage Backends**    | Supports local DataMiner storage and SharePoint integration                                          |
-| **Document Categories** | Organize documents by category with configurable storage types                                       |
-| **DOM Repositories**    | Typed CRUD and filter operations for SharePoint configurations, DOM sources, and document categories |
+| **Document Buckets** | Organize documents by bucket with configurable storage types                                       |
+| **DOM Repositories**    | Typed CRUD and filter operations for SharePoint configurations, DOM sources, and document buckets |
 
 ## Requirements
 

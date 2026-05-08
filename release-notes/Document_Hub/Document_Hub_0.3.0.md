@@ -17,7 +17,7 @@ uid: Document_Hub_0.3.0
 - List document attachments - List all documents that are attached to DOM instances trough the DOM attachments and show the linked instance.
 - Support Configuration shared drive - Configure Shared drive trough DocHub to support DOM attachments.
 - Backend - Protect Sensitive Data - Azure App Registration's Client Secret (SP Integration) needs to be safely stored.
-- Filter on Categories - For each storage type there should be a way to see and therefore test the created categories in the DocumentHub.
+- Filter on bucket - For each storage type there should be a way to see and therefore test the created buckets in the DocumentHub.
 
 ## Changes
 
