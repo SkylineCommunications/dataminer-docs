@@ -147,3 +147,9 @@ In the *Monitoring* app, up to now, the list of available pages in an element ca
 In the manifest files of the DataMiner web apps, a number of inconsistencies have been fixed and a number of missing properties have been added.
 
 From now on, all web apps will use the same theme colors and the correct icons. Also, it will be possible to install all of them as Progressive Web Apps (PWAs).
+
+#### Dashboards/Low-Code Apps - Query filter component: Problem when filtering numeric columns on discrete values [ID 45490]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+On systems using the GQI DxM, in a *Query filter* component, it would no longer be possible to filter numeric columns on discrete values when filter assistance was enabled.
