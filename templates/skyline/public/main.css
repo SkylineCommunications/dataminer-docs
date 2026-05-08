@@ -612,18 +612,7 @@ a.backtotoplink:hover
   width: 100%;
 }
 
-#search-close-btn {
-  align-self: flex-start;
-  padding: 0;
-  margin-bottom: 10px;
-  outline: none;
-  color: #337ab7;
-  font-size: smaller;
-  text-decoration: none;
-}
-
-#search-syntax-btn {
-  align-self: flex-end;
+#search-syntax-btn, #search-close-btn {
   padding: 0;
   margin-bottom: 10px;
   outline: none;
