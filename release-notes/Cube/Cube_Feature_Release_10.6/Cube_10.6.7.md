@@ -40,6 +40,14 @@ From now on, the *Upgrade* window will also list the upgrade packages that are m
 
 Performing an upgrade with a package made available via the Orchestrator will avoid having to upload it from the client.
 
+#### Error message that appears when a connection issue occurs while setting up a replicated element has been updated [ID 45439]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When a connection issue occurs while you are setting up a replicated element, an error message will appear.
+
+This message has now been updated. It will state more clearly that the client needs to have access to the DataMiner Agent that hosts the element that is about to be replicated.
+
 ### Fixes
 
 #### Alarm Console: Problem when detecting recursive loops in nested correlation alarms [ID 45372]
