@@ -28,7 +28,7 @@ To override the NATS endpoints for all processes on a server, add a `ForcedEndpo
 }
 ```
 
-Each entry in `ForcedEndpoints` must be a string in the format `"host:port"`.
+Each entry in `ForcedEndpoints` can be a string in the format `"host:port"` or `"host"`.
 
 When `ForcedEndpoints` is set, the process will:
 
