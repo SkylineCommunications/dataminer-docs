@@ -4,7 +4,7 @@ uid: Advanced_Search_Syntax
 
 # Advanced search syntax
 
-The search functionality in the DataMiner documentation is powered by Azure AI Search. By default, the search uses [wildcard search](https://learn.microsoft.com/en-us/azure/search/query-lucene-syntax#bkmk_wildcard) syntax to help you find relevant results even when search terms are incomplete or slightly different from the indexed content.
+The search functionality in the DataMiner documentation is powered by Azure AI Search. By default, the search uses [wildcard search syntax](https://learn.microsoft.com/en-us/azure/search/query-lucene-syntax#bkmk_wildcard) to help you find relevant results even when search terms are incomplete or slightly different from the indexed content.
 
 In addition to this default behavior, several advanced search syntaxes are supported:
 
