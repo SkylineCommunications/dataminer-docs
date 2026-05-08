@@ -349,6 +349,11 @@ items:
         topicUid: IpNetworkExplorer_UI_overview
       - name: Supported devices and protocols
         topicUid: IpNetworkExplorer_Supported_Devices_And_Protocols
+    - name: Ticketing
+      topicUid: Ticketing
+      items:
+      - name: High-Level Overview
+        topicUid: TicketingHighLevelOverview
   - name: Product Solutions
     items:
     - name: EVS Cerebrum application
