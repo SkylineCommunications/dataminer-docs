@@ -278,8 +278,6 @@ items:
         items:
         - name: Defining a table
           topicUid: UIComponentsTableDefinition
-        - name: Column option types
-          topicUid: UIComponentsTableColumnOptionTypes
         - name: Primary keys
           topicUid: UIComponentsTablePrimaryKeys
         - name: Display keys
