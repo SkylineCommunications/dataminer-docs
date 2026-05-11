@@ -30,15 +30,35 @@ Before you upgrade to this DataMiner version:
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 
+## Highlights
+
+#### Swarming can now be enabled for a smart-serial element in server mode [ID 45173]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+In a DataMiner protocol, you can now indicate that swarming should be allowed for an element with a smart-serial connection in server mode.
+
+By default, swarming is not allowed for such elements. However, if your element can communicate with its data source at startup to specify where data should be sent, you can now safely enable swarming by adding the following configuration to the *protocol.xml* file:
+
+```xml
+<Swarming>
+    <BypassChecks>
+        <Check>smartSerialAsServer</Check>
+    </BypassChecks>
+</Swarming>
+```
+
 ## New features
 
 #### DataMiner Object Models: DomDefinitionReferences and FieldValueReferences can now be marked as read-only [ID 45275]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 
-When configuring DOM security settings, it is now possible to mark `DomDefinitionReferences` and `FieldValueReferences` as read-only. That way, you can indicate that a DataMiner user group only had read access based on a specific reference.
+When you configure DOM security, you can now set `DomDefinitionReferences` and `FieldValueReferences` to read-only. This way, you can give user groups safe, controlled access based on a specific reference, allowing users to see and inspect data but not change it.
 
-When you grant *Read* access, users will be able to do the following:
+To support this, the DOM API now includes a `ReadOnly` property (of type boolean) in the `DomDefinitionReference` and `FieldValueReference` classes.
+
+With *Read* access, users can:
 
 - Read the DOM instances
 - Retrieve specific fields from the DOM instances
@@ -48,12 +68,13 @@ When you grant *Read* access, users will be able to do the following:
 - Read the DOM instance history
 - Count the DOM instance history records
 
-When you grant *Write* access, by default, users will be able to do the following when the below-mentioned `ReadOnly` property has not been enabled:
+With *Write* access, which is the default behavior when the `ReadOnly` property is not enabled, users can:
 
 - Create, update, or delete DOM instances
-- Add or remove DOM attachments to a DOM instance
+- Add or remove DOM attachments on a DOM instance
 
-In the DOM API, a `ReadOnly` property (of type boolean) has been added to the `DomDefinitionReference` and `FieldValueReference` classes.
+> [!NOTE]
+> Support for this feature in the DOM security UI in DataMiner Cube is currently still being implemented. Consequently, it is not yet possible to configure read-only access via that UI, and if changes are made to DOM security via the UI, any read-only flags will be cleared.
 
 ## Changes
 
@@ -73,7 +94,7 @@ From now on, a `GetServiceStateMessage` will no longer be forwarded to the Agent
 
 A number of enhancements have been made with regard to the synchronization of connectors within a DataMiner System:
 
-- The first time you upload a version of a new connector, it will automatically be set as production version. Up to now, when a connector version was automatically set as production version, this would trigger a synchronization of that production version. From now on, the new connector will be synchronized within the cluster, and when a DataMiner Agent detects that it is the first version, it will set it as the production version.
+- The first time you upload a version of a new connector, it will automatically be set as production version. Up to now, when a connector version was automatically set as production, this would trigger a synchronization of that version. From now on, the new connector will be synchronized within the cluster, and when a DataMiner Agent detects that it is the first version, it will set it as the production version.
 
 - Up to now, when a parent connector exported child connectors (as is the case with DVE connectors), these exported child connectors would be synchronized within the cluster when the parent connector was added or modified. From now on, only the parent connector will be synchronized, and each DataMiner Agent will then generate the child connectors.
 
@@ -87,7 +108,7 @@ A number of enhancements have been made with regard to the synchronization of co
 <!-- 44765: MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 <!-- 45359: MR 10.7.0 - FR 10.6.6 -->
 
-A number of enhancements have been made with regard to SLNet logging, especially to be able to troubleshoot issues with sudden disconnects between two SLNet instances or between SLNet and DataMiner Cube.
+A number of improvements have been made to SLNet logging, particularly to help troubleshoot unexpected disconnects between SLNet instances and between SLNet and DataMiner Cube.
 
 ##### New log files
 
@@ -140,22 +161,6 @@ By default, the value type will be the field type defined by the exposer. When a
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 When you install the BrokerGateway DxM on a server that does not have the Microsoft .NET hosting bundle installed yet, from now on, a message will appear, saying that .NET has to be installed first.
-
-#### Protocols: Indicating that smart-serial elements in server mode are allowed to be swarmed [ID 45173]
-
-<!-- MR 10.7.0 - FR 10.6.6 -->
-
-By default, elements with a smart-serial connection in server mode are not allowed to be swarmed. However, it is possible that, at startup, an element can send a message to the data source in order to indicate where data should be sent to. In that case, the fact that the smart-serial connection is in server mode will not be considered a valid reason to prevent the element from swarming.
-
-As DataMiner is not able to automatically detect such exceptional cases, you can now indicate in the *protocol.xml* file of the element that it is allowed to be swarmed. See the following example:
-
-```xml
-<Swarming>
-    <BypassChecks>
-        <Check>smartSerialAsServer</Check>
-    </BypassChecks>
-</Swarming>
-```
 
 #### Correlation: GetAvailableCorrelationRulesMessage response now also includes grouping information [ID 45187]
 
@@ -216,7 +221,7 @@ From now on, compiled assemblies generated during syntax checks will no longer b
 Up to now, each time SLLogCollector created a log package, it would rerun all BPA tests deployed on the system. From now on, it will only rerun the BPA tests deployed by default.
 
 > [!NOTE]
-> Each time a log package is created, all BPA test results available on the system will still be included in that package. This means, that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
+> Each time a log package is created, all BPA test results available on the system will still be included in that package. This means that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
 
 #### APIGateway: Enhanced handling of files in use during upgrades [ID 45230]
 
@@ -321,7 +326,7 @@ From now on, when the SLLogCollector tool detects that it is not possible to exe
 
 When, on a system with alarm squashing enabled, the `AlarmsPerParameter` limit in the `AlarmSettings` section of the *MaintenanceSettings.xml* file was exceeded, an alarm of which all alarms in the alarm tree were squashable would incorrectly not show up in the Alarm Console after the element associated with the alarm had been restarted.
 
-#### SLWatchdog to incorrectly interpret processes being stopped during a DataMiner shutdown as a crash [ID 45115]
+#### SLWatchdog incorrectly interpreted processes being stopped during a DataMiner shutdown as a crash [ID 45115]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
@@ -356,7 +361,7 @@ Up to now, during NATS migrations or NATS-related BPA test runs, establishing co
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
-When SLNet was not able to respond to user picture requests from a web app, up to now, those request could stay active within SLNet for several minutes, causing other messages to get blocked.
+When SLNet was not able to respond to user picture requests from a web app, up to now, those requests could stay active within SLNet for several minutes, causing other messages to get blocked.
 
 From now on, user picture requests will time out after 10 seconds.
 
@@ -364,9 +369,7 @@ From now on, user picture requests will time out after 10 seconds.
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
-Up to now, a problem could occur when a connector was using the `makeCommandByProtocol` option while in slow poll mode.
-
-The slow poll timer would make the ping command when adding the slow poll group to the execution queue. However, when regular groups were still being executed when a valid response entered, an attempt would be made to stop the slow poll timer. This attempt would fail was waiting for the response to release the resources.
+Up to now, a problem could occur when a connector was using the `makeCommandByProtocol` option while in slow poll mode. The slow poll timer triggered the ping pair command as soon as the slow poll group was added to the execution queue. However, this caused a problem when regular groups were still being processed. If a valid response arrived at that moment, the system attempted to stop the slow poll timer. This failed because the timer was waiting for the response to release its resources, which led to an issue.
 
 From now on, the slow poll timer will no longer make the ping command when adding the slow poll group to the queue. The ping command will be made when the group is executed, and the `makeCommandByProtocol` setting will be disregarded.
 
@@ -410,13 +413,11 @@ When the SLDataMiner process starts, it tries to fetch information about all net
 
 As loopback adapters are not part of any communication flow, from now on, SLDataMiner will no longer try to fetch information about those adapters.
 
-#### Elements incorrectly moved to root view after view with service containing those same elements was moved to the view containing the original elements [ID 45286]
+#### Elements incorrectly moved to root view after moving view with service containing those elements to view containing the original elements [ID 45286]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.6 -->
 
-When a view that contains a service was moved under another view, elements that were only included in that first view as part of the service, and of which the original element instance existed under the other view, were handled incorrectly. In those cases, the original element instance that already existed under the other view was removed from its original location and placed at the root view.
-
-From now on, the original element instance will remain in its original view and will no longer be moved to the root view in this scenario.
+When a view containing a service was moved to another view, it could occur that elements included in that service were incorrectly moved to the root view. This happened when an element was only included in the original view because of the service, but the element already existed in the target view. This behavior has been corrected.
 
 #### DataMiner upgrade: Incorrect .NET 6 error would be thrown during the upgrade process [ID 45374]
 

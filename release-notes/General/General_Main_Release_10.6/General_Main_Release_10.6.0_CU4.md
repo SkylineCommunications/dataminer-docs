@@ -80,13 +80,11 @@ Because of a number of enhancements, overall performance of the VerifyNatsCluste
 
 ### Fixes
 
-#### Elements incorrectly moved to root view after view with service containing those same elements was moved to the view containing the original elements [ID 45286]
+#### Elements incorrectly moved to root view after moving view with service containing those elements to view containing the original elements [ID 45286]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.6 -->
 
-When a view that contains a service was moved under another view, elements that were only included in that first view as part of the service, and of which the original element instance existed under the other view, were handled incorrectly. In those cases, the original element instance that already existed under the other view was removed from its original location and placed at the root view.
-
-From now on, the original element instance will remain in its original view and will no longer be moved to the root view in this scenario.
+When a view containing a service was moved to another view, it could occur that elements included in that service were incorrectly moved to the root view. This happened when an element was only included in the original view because of the service, but the element already existed in the target view. This behavior has been corrected.
 
 #### SLDataGateway would terminate unexpectedly when shutting down [ID 45419]
 
