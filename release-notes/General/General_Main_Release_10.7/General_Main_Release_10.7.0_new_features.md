@@ -322,9 +322,11 @@ From now on, when you select the *Compile in DEBUG mode* option in the *Advanced
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 
-When configuring DOM security settings, it is now possible to mark `DomDefinitionReferences` and `FieldValueReferences` as read-only. That way, you can indicate that a DataMiner user group only had read access based on a specific reference.
+When you configure DOM security, you can now set `DomDefinitionReferences` and `FieldValueReferences` to read-only. This way, you can give user groups safe, controlled access based on a specific reference, allowing users to see and inspect data but not change it.
 
-When you grant *Read* access, users will be able to do the following:
+To support this, the DOM API now includes a `ReadOnly` property (of type boolean) in the `DomDefinitionReference` and `FieldValueReference` classes.
+
+With *Read* access, users can:
 
 - Read the DOM instances
 - Retrieve specific fields from the DOM instances
@@ -334,9 +336,7 @@ When you grant *Read* access, users will be able to do the following:
 - Read the DOM instance history
 - Count the DOM instance history records
 
-When you grant *Write* access, by default, users will be able to do the following when the below-mentioned `ReadOnly` property has not been enabled:
+With *Write* access, which is the default behavior when the `ReadOnly` property is not enabled, users can:
 
 - Create, update, or delete DOM instances
-- Add or remove DOM attachments to a DOM instance
-
-In the DOM API, a `ReadOnly` property (of type boolean) has been added to the `DomDefinitionReference` and `FieldValueReference` classes.
+- Add or remove DOM attachments on a DOM instance

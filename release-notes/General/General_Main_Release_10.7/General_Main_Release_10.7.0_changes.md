@@ -253,7 +253,7 @@ Up to 10 log files will be kept on disk, and the log file of the current instanc
 
 A number of enhancements have been made with regard to the synchronization of connectors within a DataMiner System:
 
-- The first time you upload a version of a new connector, it will automatically be set as production version. Up to now, when a connector version was automatically set as production version, this would trigger a synchronization of that production version. From now on, the new connector will be synchronized within the cluster, and when a DataMiner Agent detects that it is the first version, it will set it as the production version.
+- The first time you upload a version of a new connector, it will automatically be set as production version. Up to now, when a connector version was automatically set as production, this would trigger a synchronization of that version. From now on, the new connector will be synchronized within the cluster, and when a DataMiner Agent detects that it is the first version, it will set it as the production version.
 
 - Up to now, when a parent connector exported child connectors (as is the case with DVE connectors), these exported child connectors would be synchronized within the cluster when the parent connector was added or modified. From now on, only the parent connector will be synchronized, and each DataMiner Agent will then generate the child connectors.
 
@@ -267,7 +267,7 @@ A number of enhancements have been made with regard to the synchronization of co
 <!-- 44765: MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 <!-- 45359: MR 10.7.0 - FR 10.6.6 -->
 
-A number of enhancements have been made with regard to SLNet logging, especially to be able to troubleshoot issues with sudden disconnects between two SLNet instances or between SLNet and DataMiner Cube.
+A number of improvements have been made to SLNet logging, particularly to help troubleshoot unexpected disconnects between SLNet instances and between SLNet and DataMiner Cube.
 
 ##### New log files
 
@@ -332,13 +332,13 @@ By default, the value type will be the field type defined by the exposer. When a
 > [!IMPORTANT]
 > To ensure correct type resolution, field descriptor IDs must be unique across all section definitions within a DOM module. Non-unique IDs may result in incorrect type mapping and unexpected behavior.
 
-#### Protocols: Indicating that smart-serial elements in server mode are allowed to be swarmed [ID 45173]
+#### Swarming can now be enabled for a smart-serial element in server mode [ID 45173]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 
-By default, elements with a smart-serial connection in server mode are not allowed to be swarmed. However, it is possible that, at startup, an element can send a message to the data source in order to indicate where data should be sent to. In that case, the fact that the smart-serial connection is in server mode will not be considered a valid reason to prevent the element from swarming.
+In a DataMiner protocol, you can now indicate that swarming should be allowed for an element with a smart-serial connection in server mode.
 
-As DataMiner is not able to automatically detect such exceptional cases, you can now indicate in the *protocol.xml* file of the element that it is allowed to be swarmed. See the following example:
+By default, swarming is not allowed for such elements. However, if your element can communicate with its data source at startup to specify where data should be sent, you can now safely enable swarming by adding the following configuration to the *protocol.xml* file:
 
 ```xml
 <Swarming>
@@ -407,7 +407,7 @@ From now on, compiled assemblies generated during syntax checks will no longer b
 Up to now, each time SLLogCollector created a log package, it would rerun all BPA tests deployed on the system. From now on, it will only rerun the BPA tests deployed by default.
 
 > [!NOTE]
-> Each time a log package is created, all BPA test results available on the system will still be included in that package. This means, that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
+> Each time a log package is created, all BPA test results available on the system will still be included in that package. This means that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
 
 #### Number of smart-serial messages allowed to enter has now been limited [ID 45273]
 

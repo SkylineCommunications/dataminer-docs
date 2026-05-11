@@ -144,7 +144,7 @@ When the dynamic units feature is enabled in, for example, DataMiner Cube, many 
 
 When, on a system with alarm squashing enabled, the `AlarmsPerParameter` limit in the `AlarmSettings` section of the *MaintenanceSettings.xml* file was exceeded, an alarm of which all alarms in the alarm tree were squashable would incorrectly not show up in the Alarm Console after the element associated with the alarm had been restarted.
 
-#### SLWatchdog to incorrectly interpret processes being stopped during a DataMiner shutdown as a crash [ID 45115]
+#### SLWatchdog incorrectly interpreted processes being stopped during a DataMiner shutdown as a crash [ID 45115]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
@@ -179,7 +179,7 @@ Up to now, during NATS migrations or NATS-related BPA test runs, establishing co
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
-When SLNet was not able to respond to user picture requests from a web app, up to now, those request could stay active within SLNet for several minutes, causing other messages to get blocked.
+When SLNet was not able to respond to user picture requests from a web app, up to now, those requests could stay active within SLNet for several minutes, causing other messages to get blocked.
 
 From now on, user picture requests will time out after 10 seconds.
 
@@ -187,9 +187,7 @@ From now on, user picture requests will time out after 10 seconds.
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
-Up to now, a problem could occur when a connector was using the `makeCommandByProtocol` option while in slow poll mode.
-
-The slow poll timer would make the ping command when adding the slow poll group to the execution queue. However, when regular groups were still being executed when a valid response entered, an attempt would be made to stop the slow poll timer. This attempt would fail was waiting for the response to release the resources.
+Up to now, a problem could occur when a connector was using the `makeCommandByProtocol` option while in slow poll mode. The slow poll timer triggered the ping pair command as soon as the slow poll group was added to the execution queue. However, this caused a problem when regular groups were still being processed. If a valid response arrived at that moment, the system attempted to stop the slow poll timer. This failed because the timer was waiting for the response to release its resources, which led to an issue.
 
 From now on, the slow poll timer will no longer make the ping command when adding the slow poll group to the queue. The ping command will be made when the group is executed, and the `makeCommandByProtocol` setting will be disregarded.
 
