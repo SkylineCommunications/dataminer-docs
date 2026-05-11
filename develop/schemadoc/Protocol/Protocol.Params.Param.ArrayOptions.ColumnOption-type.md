@@ -4,7 +4,22 @@ uid: Protocol.Params.Param.ArrayOptions.ColumnOption-type
 
 # type attribute
 
-Specifies the column type.
+Specifies the column type. You can specify one of the following types:
+
+|Type|Description|
+|--- |--- |
+|[autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement)|Used to automatically create a unique value.|
+|[concatenation](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#concatenation)|Values in this column are the result of a concatenation of other columns.|
+|[custom](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#custom)|Indicates that the content of the column will be managed in the protocol.|
+|[displaykey](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#displaykey)|Column showing the display keys, automatically filled in by the SLElement process.|
+|[index](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#index)|Used when retrieving SNMP or WMI tables. It contains the row number.|
+|[retrieved](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#retrieved)|Indicates that the content of the column will be managed in the protocol.|
+|[snmp](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#snmp)|Used for columns that contain data retrieved via SNMP.|
+|[state](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#state)|Used when retrieving SNMP or WMI tables.|
+|[viewTableKey](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#viewtablekey)|Used for direct view columns containing primary keys, so that a prefix is added to them, referring to the source element that supplied the data.|
+
+> [!NOTE]
+> The usage of [retrieved](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#retrieved) is preferred over [custom](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#custom).
 
 ## Content Type
 
@@ -16,11 +31,11 @@ Specifies the column type.
 
 ## Remarks
 
-In the type attribute, you can specify one of the following options:
-
 ### autoincrement
 
 Used to automatically create a unique value. Only applicable for primary key columns.
+If this type is specified, SLProtocol will automatically provide a value for the primary key.
+This value will be an unsigned integer. During startup of the element, SLProtocol determines the highest value present in the column.
 
 > [!NOTE]
 > The use of this type is **no longer supported** for logger tables for the following reasons:
