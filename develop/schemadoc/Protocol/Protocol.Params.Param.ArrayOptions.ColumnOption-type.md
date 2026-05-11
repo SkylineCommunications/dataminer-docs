@@ -6,7 +6,7 @@ uid: Protocol.Params.Param.ArrayOptions.ColumnOption-type
 
 Specifies the column type. You can specify one of the following types:
 
-|Type|Description|
+|Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Description|
 |--- |--- |
 |[autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement)|Used to automatically create a unique value.|
 |[concatenation](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#concatenation)|Values in this column are the result of a concatenation of other columns.|
@@ -34,8 +34,8 @@ Specifies the column type. You can specify one of the following types:
 ### autoincrement
 
 Used to automatically create a unique value. Only applicable for primary key columns.
-If this type is specified, SLProtocol will automatically provide a value for the primary key.
-This value will be an unsigned integer. During startup of the element, SLProtocol determines the highest value present in the column.
+
+If this type is specified, SLProtocol will automatically provide a value for the primary key. This value will be an unsigned integer. During startup of the element, SLProtocol determines the highest value present in the column.
 
 > [!NOTE]
 > The use of this type is **no longer supported** for logger tables for the following reasons:
