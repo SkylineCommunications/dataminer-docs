@@ -23,7 +23,7 @@ To override the NATS endpoints for all processes on a server, add a `ForcedEndpo
   "BrokerGatewayConfig": {
     "CredentialsUrl": "https://<hostname>/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
     "APIKeyPath": "C:\\Program Files\\Skyline Communications\\DataMiner BrokerGateway\\appsettings.runtime.json",
-    "ForcedEndpoints": [ "custom-host-1:4222", "custom-host-2:4222" ]
+    "ForcedEndpoints": [ "custom-host-1:4222", "custom-host-2:4222", "custom-host-3" ]
   }
 }
 ```
@@ -33,6 +33,8 @@ Each entry in `ForcedEndpoints` can be a string in the format `"host:port"` or `
 When `ForcedEndpoints` is set, the process will:
 
 - Still call `CredentialsUrl` to retrieve the NATS credentials.
-- Use only the endpoints listed in `ForcedEndpoints` to connect to NATS, ignoring any endpoints returned by BrokerGateway. The order of endpoints determines which endpoint will be preferred to connect to and which to fall back to next.
+- Use only the endpoints listed in `ForcedEndpoints` to connect to NATS, ignoring any endpoints returned by BrokerGateway. 
+  - The order of endpoints determines the connection preference and fallback order.
+  - These endpoints do not need to be a subset of the known IPs of BrokerGateway.
 
 When `ForcedEndpoints` is absent or empty, normal behavior applies and the endpoints are resolved through BrokerGateway.
