@@ -26,7 +26,7 @@ Example:
 </Param>
 ```
 
-The [ArrayOptions](xref:Protocol.Params.Param.ArrayOptions) tag specifies the columns via [ColumnOption](Protocol.Params.Param.ArrayOptions.ColumnOption) child tags. The [ColumnOption@type](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type) attribute specifies the type of the column.
+The [ArrayOptions](xref:Protocol.Params.Param.ArrayOptions) tag specifies the columns via [ColumnOption](xref:Protocol.Params.Param.ArrayOptions.ColumnOption) child tags. The [ColumnOption@type](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type) attribute specifies the type of the column.
 
 For each table column, an additional parameter is defined which is referred to via the [ColumnOption@pid](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-pid) attribute.
 
