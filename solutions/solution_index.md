@@ -34,7 +34,7 @@ uid: solution_index
     <a href="/solutions/standard_solutions/IP_Network_Explorer/NetworkExplorer.html" title="IP Network Explorer" target="_self"><img src="~/solutions/images/IP_Network_Explorer.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/solutions/standard_solutions/Ticketing/Ticketing.html" title="Ticketing" target="_self"><img src="~/solutions/images/Ticketing.png" style="width:100%"></a>
+    <a href="/solutions/standard_solutions/Ticketing/Ticketing.html" title="Ticketing" target="_self"><img src="~/solutions/images/Ticketing.svg" style="width:100%"></a>
   </div>
 </div>
 
