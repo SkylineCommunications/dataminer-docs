@@ -138,7 +138,9 @@ See "Network" under [DataMiner requirements](#dataminer-requirements).
 
 ### Cassandra requirements
 
-For DataMiner Agents that make use of one or more Cassandra nodes for their [system database](xref:About_storage), additional requirements apply. For these, we follow Cassandra’s official [guidelines](https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html). A Cassandra node cannot be hosted on the same server as DataMiner anymore, a different server is required. It is also possible to use multiple Cassandra nodes with one DataMiner Agent.
+For DataMiner Agents that make use of one or more Cassandra nodes for their [system database](xref:About_storage), additional requirements apply. For these, we follow Cassandra’s official [guidelines](https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html).
+
+Cassandra nodes must be hosted on Linux. For small-scale setups, Cassandra can be hosted on the same server as DataMiner using WSL (Windows Subsystem for Linux). To set this up, you can use the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk).
 
 > [!IMPORTANT]
 > Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any Cassandra nodes.
