@@ -4,6 +4,9 @@ uid: Ticketing_1.0.2
 
 # Ticketing 1.0.2
 
+> [!IMPORTANT]
+> Note that this version can only be used on a STaaS/DaaS DataMiner system (so not on a self hosted and managed system)!
+
 ## Prerequisites
 
 - This version of the Ticketing app is only intended for use with DataMiner version **10.5.0 up to (and including) 10.5.8**.
