@@ -83,6 +83,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### APIGateway has been upgraded to Microsoft .NET 10 [ID 45421]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+The APIGateway module has been upgraded to Microsoft .NET 10.
+
 #### Cleanup of replication buffer files [ID 45432]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->

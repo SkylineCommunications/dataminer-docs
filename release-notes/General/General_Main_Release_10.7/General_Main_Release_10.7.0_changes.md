@@ -465,6 +465,12 @@ From now on, all state changes of all SLNet connections between Agents in the cl
 
 Because of a number of enhancements, overall performance has increased when detecting flatline events, especially on systems with a large number of monitored parameters.
 
+#### APIGateway has been upgraded to Microsoft .NET 10 [ID 45421]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+The APIGateway module has been upgraded to Microsoft .NET 10.
+
 #### Standalone BPA Executor will now return exit code 1 or 2 when issues were detected [ID 45433]
 
 <!-- MR 10.7.0 - FR 10.6.7 -->
