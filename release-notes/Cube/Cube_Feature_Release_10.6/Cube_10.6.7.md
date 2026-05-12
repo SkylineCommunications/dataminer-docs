@@ -60,6 +60,14 @@ This message has now been updated. It will state more clearly that the client ne
 
 In the *Dark* theme, the *accentLightColor* has been changed to provide more contrast.
 
+#### Spectrum cards: Progress bar will now more clearly indicate the progress when playing a spectrum recording [ID 45492]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When you played in spectrum recording in a spectrum card, up to now, the progress bar at the bottom of the graph would not clearly indicate the progress of the playback.
+
+From now on, playback progress will clearly be indicated by means of a colored bar.
+
 ### Fixes
 
 #### Alarm Console: Problem when detecting recursive loops in nested correlation alarms [ID 45372]
