@@ -352,8 +352,14 @@ items:
     - name: Ticketing
       topicUid: Ticketing
       items:
-      - name: High-Level Overview
-        topicUid: TicketingHighLevelOverview
+      - name: Ticketing Solution architecture
+        topicUid: TicketingArchitecture
+      - name: Installing the Ticketing Solution
+        topicUid: TicketingInstallation
+      - name: Creating tickets
+        topicUid: CreatingTickets
+      - name: External ticketing system integration
+        topicUid: ExternalTicketingSystemIntegration
   - name: Product Solutions
     items:
     - name: EVS Cerebrum application
