@@ -42,6 +42,20 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### SLLogCollector: New option to collect DLL file information [ID 45044]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+The SLLogCollector tool now has a new *Collect DLL info* option. If enabled, all packages will include the following information retrieved from all DLL files found in the `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\ProtocolScripts` folders:
+
+- Name
+- Version
+- Culture
+- Public key
+- Dependencies
+
+By default, the Collect DLL info option is disabled.
+
 #### OpenSearch: Enhanced health monitoring [ID 45294]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->

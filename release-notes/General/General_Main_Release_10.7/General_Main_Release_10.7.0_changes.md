@@ -317,6 +317,20 @@ A number of enhancements have been made to the SSH logging:
 
 Also, an issue has been fixed. When a host name could not be resolved to an IP address, up to now, the SSH connection would incorrectly try to connect to localhost. From now on, when the host name could not be resolved, the connection will fail.
 
+#### SLLogCollector: New option to collect DLL file information [ID 45044]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+The SLLogCollector tool now has a new *Collect DLL info* option. If enabled, all packages will include the following information retrieved from all DLL files found in the `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\ProtocolScripts` folders:
+
+- Name
+- Version
+- Culture
+- Public key
+- Dependencies
+
+By default, the Collect DLL info option is disabled.
+
 #### DataMiner Object Models: SLDataGateway will now try to read only the selected fields from an OpenSearch or Elasticsearch database [ID 45151]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
