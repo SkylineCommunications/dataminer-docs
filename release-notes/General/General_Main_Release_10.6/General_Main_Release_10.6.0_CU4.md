@@ -103,3 +103,9 @@ In some rare cases, a DataMiner upgrade could get stuck while running the `C:\Sk
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.6 [CU0] -->
 
 Up to now, in some cases, SLAutomation could stop working when recompiling libraries.
+
+#### Element that failed to start up would not properly clean up the assigned resources [ID 45447]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When an element failed to start up because of, for example, a faulty protocol.xml file, up to now, it would not properly clean up the assigned resources.

@@ -82,10 +82,7 @@ The Spectrum analyzer component now has a *Color source* option, which can be se
 
 - When you set this option to "Custom":
 
-  - Trace, threshold, minimum, maximum, and average colors are inherited from the theme settings or the theme input overrides, if enabled.
-
-    By default, all overrides are disabled. Except the trace override. This one is enabled by default.
-
+  - Trace, threshold, minimum, maximum, and average colors are inherited from the theme settings, and can be customized if necessary.
   - Measurement point trace colors are resolved via theme color indexing based on the measurement point key/name.
   - Background, font, axis, and grid colors are all inherited from the component theme.
 
