@@ -73,13 +73,14 @@ From now on, when a DataMiner Agent receives a timeline data request, it will fi
 
 Because of a number of enhancements, overall performance has increased when detecting flatline events, especially on systems with a large number of monitored parameters.
 
-#### DxMs upgraded [ID 45392]
+#### DxMs upgraded [ID 45392] [ID 45506]
 
 <!-- RN 45392: MR 10.7.0 - FR 10.6.7 -->
+<!-- RN 45506: MR 10.7.0 - FR 10.6.7 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
-- DataMiner CloudGateway 3.0.2
+- DataMiner CloudGateway 3.1.0
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
