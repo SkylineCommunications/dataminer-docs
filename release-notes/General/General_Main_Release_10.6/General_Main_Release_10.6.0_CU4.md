@@ -104,6 +104,12 @@ In some rare cases, a DataMiner upgrade could get stuck while running the `C:\Sk
 
 Up to now, in some cases, SLAutomation could stop working when recompiling libraries.
 
+#### Problem with SLSNMPAgent after startup or while adding virtual IP addresses [ID 45441]
+
+<!-- MR 10.6.0 [CU4] - FR 10.6.7 -->
+
+Up to now, SLSNMPAgent could unexpectedly stop working either right after startup or while adding virtual IP addresses when traps were about to be sent.
+
 #### Element that failed to start up would not properly clean up the assigned resources [ID 45447]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
