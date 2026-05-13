@@ -16,7 +16,13 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been added yet.*
+#### Dashboards/Low-Code Apps - Maps component: 'Google Maps' version pinned to 3.65 to prolong support for KML overlays [ID 45481]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+The version of the *Google Maps* maps provider has been pinned to version 3.65 in order to prolong support for KML overlays.
+
+When using DataMiner Web version 10.5.0 CU16/10.6.0 CU4/10.6.7 or newer, KML overlays will be supported until May 2027. When using any other DataMiner Web version, KML overlays will no longer be supported from August 2026 onwards.
 
 ## New features
 
