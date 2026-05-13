@@ -20,7 +20,9 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
-The version of the *Google Maps* maps provider has been pinned to version 3.65 in order to prolong support for KML overlays.
+In a [recent announcement](https://developers.google.com/maps/deprecations#kml_layer_deprecated_as_of_april_30_2026), Google informed the developer community that KML layers will be deprecated as from 30 April, 2026.
+
+In order to prolong support for KML overlays, the version of the *Google Maps* provider has been pinned to version 3.65.
 
 When using DataMiner Web version 10.5.0 CU16/10.6.0 CU4/10.6.7 or newer, KML overlays will be supported until May 2027. When using any other DataMiner Web version, KML overlays will no longer be supported from August 2026 onwards.
 
