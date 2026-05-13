@@ -95,6 +95,12 @@ The Spectrum analyzer component now has a *Color source* option, which can be se
 
 In both cases, measurement point trace colors are resolved via theme color indexing based on the measurement point key/name.
 
+#### Web apps: DataMiner Web Upgrade packages will now also include the DataMiner Maps module [ID 45521]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+From now on, the DataMiner Maps add-on module will also be included in DataMiner Web Upgrade packages.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Interactive automation scripts: Redesigned controls would incorrectly not allow you to use the arrow keys to move the cursor [ID 45313]
