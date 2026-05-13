@@ -104,6 +104,12 @@ From now on, when you click a crosspoint, the following items will again be high
 - the *I/O* button
 - the *Lock/Unlock* button when the crosspoint is locked
 
+#### Automation module: Script actions would incorrectly load the script info of the parent script [ID 45415]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+In the automation script editor, up to now, script actions would incorrectly load the script info of the parent script instead of the script that was being edited.
+
 #### Selected items in a filtered list would incorrectly not be visible [ID 45427]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
