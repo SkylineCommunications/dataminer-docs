@@ -9,6 +9,34 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 18 May 2026 - New feature - Admin - Automatic log collection for support tickets
+
+On the Support page of the Admin app, customers can now link a cloud-connected DMS cluster and specific agents to their support ticket. When enabled, this triggers automatic log collection, ensuring support engineers receive the necessary diagnostic data without manual uploads.
+
+### 18 May 2026 - Enhancement - Admin - Agent selection dynamically filtered by cluster
+
+On the Support page of the Admin app, the agent selection is now dynamically updated based on the selected cluster, ensuring only relevant agents are available for selection.
+
+### 18 May 2026 - Enhancement - Admin - Unified Support Contract/Project dropdown
+
+On the Support page of the Admin app, the multi-step *Project* and *Maintenance Contract* selection has been replaced with a single *Support Contract / Project* dropdown, providing a deduplicated list of eligible contracts and projects.
+
+### 18 May 2026 - Enhancement - Admin - Skyline Support shown in assigned-to field
+
+In the ticket details view on the Support page of the Admin app, the *Assigned to* field now clearly shows *Skyline Support* for relevant internal teams.
+
+### 18 May 2026 - New feature - Admin - Support server availability check
+
+On the Support page of the Admin app, the application now checks the availability of the support server in real-time. If the service is temporarily unavailable, a warning banner with alternative contact instructions is shown.
+
+### 18 May 2026 - Enhancement - Admin - Impact field removed from ticket details header
+
+On the Support page of the Admin app, the *Impact* field has been removed from the ticket details header.
+
+### 18 May 2026 - Enhancement - Admin - Automatic log collection toggle only shown when applicable
+
+On the Support page of the Admin app, the *Automatic log collection* toggle now only appears when cloud-connected agents are selected.
+
 ### 7 May 2026 - Enhancement - Admin - Billing overview now shows services table at unit level
 
 On the Billing overview page in the Admin app, the services table now shows data at unit level instead of capping out at service level, giving users a deeper insight into what is affecting their billing the most.
