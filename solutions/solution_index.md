@@ -28,7 +28,7 @@ uid: solution_index
 
 <div class="row"> 
   <div class="column">
-    <a href="/solutions/standard_solutions/Document_Hub/Document_Hub.html" title="Document Hub" target="_self"><img src="~/solutions/images/DocumentHub_App_Logo.png" style="width:100%"></a>
+    <a href="/solutions/standard_solutions/Document_Hub/Document_Hub.html" title="Document Hub" target="_self"><img src="~/solutions/images/DocumentHub_Solution_Icon.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/solutions/standard_solutions/EPM/SolEPM.html" title="EPM" target="_self"><img src="~/solutions/images/EPM.svg" style="width:100%"></a>

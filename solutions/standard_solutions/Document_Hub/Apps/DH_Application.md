@@ -2,22 +2,22 @@
 uid: DH_Application
 ---
 
-# Document Hub app
+# DocumentHub Application
 
-The Document Hub app is a comprehensive low-code application designed for administrators and operators to manage documents, images, and files across your DataMiner environment. It provides a centralized interface for uploading, organizing, retrieving, and linking files to business operations.
+The DocumentHub application is a comprehensive low-code application designed for administrators and operators to manage documents, images, and files across your DataMiner environment. It provides a centralized interface for uploading, organizing, retrieving, and linking files to business operations.
 
-![Document Hub app overview](~/solutions/images/DocumentHub_App_Overview.png)
+![DocumentHub Application overview](~/solutions/images/DocumentHub_App_Main_Overview.png)
 
 > [!TIP]
-> For detailed walkthroughs on using the app, refer to the [Document Hub app tutorials](xref:Tutorial_DocumentHub_Getting_Started).
+> For detailed walkthroughs on using the application, refer to the [DocumentHub application tutorials](xref:Tutorial_DocumentHub_Getting_Started).
 
-## App overview
+## Application overview
 
 The following sections and features are available in the app:
 
 - ![SharePoint](~/solutions/images/DocumentHub_SharePoint.svg) **SharePoint**: Browse files stored in your SharePoint repository, quickly filter by name or bucket, and inspect the full metadata set for each file.
 
-- ![DataMiner](~/solutions/images/DocumentHub_DataMiner.svg) **DataMiner**: Access files stored on your DataMiner side, use name and bucket filters to narrow down results, and review all available metadata details.
+- ![DataMiner](~/solutions/images/DocumentHub_DataMiner.svg) **DataMiner**: Access files stored on your DataMiner server, use name and bucket filters to narrow down results, and review all available metadata details.
 
 - ![DOM](~/solutions/images/DocumentHub_DOM.svg) **DOM**: Explore files linked to DOM records, find content by filtering on name and bucket, and view the complete metadata context used in your workflows.
 
@@ -27,7 +27,7 @@ The following sections and features are available in the app:
 
 - ![Source Configuration](~/solutions/images/DocumentHub_Settings.svg) **Source Configuration**: Connect and manage cloud storage repositories and local storage options. Configure credentials and access settings. Available to administrators only.
 
-- ![About](~/solutions/images/DocumentHub_About.svg) **About**: Provides information on the **version** of the Document Hub package.
+- ![About](~/solutions/images/DocumentHub_About.svg) **About**: Provides information on the **version** of the DocumentHub package.
 
 ## Uploading documents
 
@@ -55,18 +55,18 @@ Buckets help maintain organization and security by ensuring files are stored con
 
 ## Integrating with other applications
 
-The Document Hub app works seamlessly with other DataMiner applications:
+The DocumentHub app works seamlessly with other DataMiner applications:
 
 - **People & Organizations**: Attach profile photos and organization logos.
 - **Asset Manager**: Store and display asset images and documentation.
 - **Scheduling**: Link job documents and attachments.
-- **Custom Applications**: Use the [Document Hub DevPack](xref:DH_Development) to integrate with your own low-code apps.
+- **Custom Applications**: Use the [DocumentHub DevPack](xref:DH_Development) to integrate with your own low-code apps.
 
 Document usage is handled by the consuming application, allowing each app to control how documents are displayed and managed within its context.
 
 ## Storage backend integration
 
-Document Hub supports multiple storage backends to give you flexibility in document management:
+DocumentHub supports multiple storage backends to give you flexibility in document management:
 
 ### SharePoint (Customer-managed)
 
@@ -114,7 +114,7 @@ The Documents view includes powerful search and filtering capabilities:
 
 ## Performance and scalability
 
-The number of documents in Document Hub is not capped by the application itself. In practice, scalability depends on the storage capacity and performance of your selected backend, such as SharePoint or a shared drive.
+The number of documents in DocumentHub is not capped by the application itself. In practice, scalability depends on the storage capacity and performance of your selected backend, such as SharePoint or a shared drive.
 
 When using DataMiner Web Files in a clustered setup, keep in mind that files must be synchronized across cluster nodes. With large file volumes, this synchronization can become a bottleneck and affect overall performance.
 
