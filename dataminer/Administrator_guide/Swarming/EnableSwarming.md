@@ -112,7 +112,7 @@ To enable Swarming using SLNetClientTest tool:
 
 1. Make sure that the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission is enabled for users that need to be able to swarm DataMiner objects (see [Configuring a user group](xref:Configuring_a_user_group)).
 
-   Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded to version 10.5.1/10.6.0 or higher.
+   Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--export-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded to version 10.5.1/10.6.0 or higher.
 
 > [!IMPORTANT]
 > The migrated element files will be **temporarily** backed up in the *Recycle Bin* (e.g., *2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip*). We recommend that you store these files somewhere safe if you ever want to access these again later or if you want to be able to [partially roll back Swarming](wref:SwarmingRollback).

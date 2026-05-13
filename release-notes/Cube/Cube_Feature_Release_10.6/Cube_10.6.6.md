@@ -2,25 +2,17 @@
 uid: Cube_Feature_Release_10.6.6
 ---
 
-# DataMiner Cube Feature Release 10.6.6 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.6
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU3].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.6](xref:General_Feature_Release_10.6.6).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.6](xref:Web_apps_Feature_Release_10.6.6).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No features have been added yet.*
 
 ## Changes
 
@@ -44,6 +36,12 @@ Because of a number of enhancements, overlays appearing on top of a spectrum car
 
 Because of a number of enhancements, overall performance has increased when loading data into the Reports page of element, service, and parameter cards.
 
+#### Visual Overview: Selected tab will now get the accent color [ID 45300]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, when you select a tab in a visual overview, it will get the accent color.
+
 ### Fixes
 
 #### Problem when loading a trend graph for a dynamic discrete parameter [ID 45276]
@@ -57,3 +55,11 @@ Up to now, an exception could be thrown when DataMiner Cube tried to load a tren
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 When elements used for switching logic or switching detection were deleted from a redundancy group configuration, up to now, not all references to those elements would be removed correctly.
+
+#### Trending: Row instance key in trend graph title would incorrectly not be shown in the display format [ID 45280]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When a trend graph shows trend data for a table cell value, the title above the trend graph shows the name of the column and the row instance key.
+
+However, up to now, the row instance key would incorrectly be shown in the format that is passed to the DataMiner Agent. From now on, the row instance key will be shown in a more readable display format.

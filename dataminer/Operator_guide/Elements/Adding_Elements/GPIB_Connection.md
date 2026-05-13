@@ -28,7 +28,7 @@ Specify the following connection settings:
   >
   > "lan" is the "SICL Interface name" in the IO configuration, and "machineName" is the IP address of the network GPIB interface.
 
-  ![GPIB Connection](~/dataminer/images/GPIB_Connection.png)
+  ![GPIB Connection](~/dataminer/images/GPIB_Connection.png)<br>*GPIB connection settings in DataMiner 10.6.5*
 
 ## Using version M.01.01.04 of the IO libraries and VISA communication
 

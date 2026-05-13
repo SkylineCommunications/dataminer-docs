@@ -6,7 +6,7 @@ uid: Using_the_right-click_menu
 
 When you right-click anywhere in the trend graph window, a shortcut menu appears.
 
-![Trending right-click menu](~/dataminer/images/Trending_Right-Click_Menu.png)<br>*Trending right-click menu in DataMiner 10.4.5*
+![Trending right-click menu](~/dataminer/images/Trending_Right-Click_Menu.png)<br>*Trending right-click menu in DataMiner 10.6.5*
 
 The trending right-click menu contains the following commands:
 

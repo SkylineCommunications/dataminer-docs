@@ -12,6 +12,8 @@ It checks whether the following versions are installed:
 
 - **Microsoft ASP.NET 10.0**: Checked from DataMiner 10.6.1/10.6.0 [CU0]/10.5.0 [CU10] onwards<!--RN 44121-->. If this check fails, install the [Microsoft ASP.NET 10.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) before continuing the upgrade.
 
+- **Microsoft .NET Framework 4.8**: Checked from DataMiner 10.6.6/10.7.0 onwards<!--RN 45196-->. If this check fails, install [Microsoft .NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) before continuing the upgrade.
+
 You may have to **reboot the server** after installation to be able to pass this prerequisite check.
 
 > [!TIP]

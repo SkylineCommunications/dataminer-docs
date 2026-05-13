@@ -8,7 +8,7 @@ A workspace is a Cube screen layout, which can be saved. Saving a workspace can 
 
 To manage workspaces, click the Workspace button at the bottom of the Cube sidebar.
 
-![Workspace](~/dataminer/images/Workspace.gif)
+![Workspace](~/dataminer/images/Workspace.gif)<br>*Working with workspaces in DataMiner 10.6.5*
 
 > [!NOTE]
 >

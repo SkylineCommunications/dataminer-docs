@@ -16,8 +16,8 @@ These LEDs can have one of the following three colors:
 
 To view more detailed information about the Failover status, click the *Status* button ![Failover status button](~/dataminer/images/Failover_status_button.png) at the bottom of the dialog box. This will open the [Status window](#the-failover-status-window).
 
-![Failover](~/dataminer/images/Failover10_4_10.png)<br>
-*The Failover Config window in DataMiner 10.4.10*
+![Failover](~/dataminer/images/Failover.png)<br>
+*The Failover Config window in DataMiner 10.6.5*
 
 From DataMiner 10.4.10/10.5.0 onwards<!--RN 40257 + RN 40267-->, the *Failover Config* window can also display information about problems with the installation of the packet capture libraries on the DMA you are currently connected to. If there is a problem with these libraries, an information icon ![Failover information icon](~/dataminer/images/Failover_information_icon.png) will be displayed next to *Failover (Virtual IP)*, as these are highly recommended for a Failover setup based on virtual IP. If you then hover the mouse pointer over the icon, you will see one of the following messages:
 

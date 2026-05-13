@@ -34,19 +34,13 @@ uid: solution_index
     <a href="/solutions/standard_solutions/EPM/SolEPM.html" title="EPM" target="_self"><img src="~/solutions/images/EPM.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/solutions/standard_solutions/META_WhatsApp_Messaging/META_WhatsApp_Messaging.html" title="META WhatsApp Messaging" target="_self"><img src="~/solutions/images/META_WhatsApp_Messaging.svg" style="width:100%"></a>
-  </div>
-</div>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/solutions/standard_solutions/Ping_Monitoring/PingMonitoring.html" title="Ping Monitoring" target="_self"><img src="~/solutions/images/Ping_Monitoring.svg" style="width:100%"></a>
-  </div>
-</div>
-
-<div class="row"> 
-  <div class="column">
     <a href="/solutions/standard_solutions/IP_Network_Explorer/NetworkExplorer.html" title="IP Network Explorer" target="_self"><img src="~/solutions/images/IP_Network_Explorer.svg" style="width:100%"></a>
+  </div>
+</div>
+
+<div class="row"> 
+  <div class="column">
+    <a href="/solutions/standard_solutions/Ticketing/Ticketing.html" title="Ticketing" target="_self"><img src="~/solutions/images/Ticketing.svg" style="width:100%"></a>
   </div>
 </div>
 
@@ -113,6 +107,20 @@ uid: solution_index
   </div>
   <div class="column">
     <a href="/solutions/custom_solutions/Smart_Trap_Processor/Smart_Trap_Processor_Overview.html" title="Smart Trap Processor" target="_self"><img src="~/solutions/images/Smart_Trap_Processor.svg" style="width:100%"></a>
+  </div>
+</div>
+
+<div class="row"> 
+  <div class="column">
+    <a href="/solutions/custom_solutions/META_WhatsApp_Messaging/META_WhatsApp_Messaging.html" title="META WhatsApp Messaging" target="_self"><img src="~/solutions/images/META_WhatsApp_Messaging.svg" style="width:100%"></a>
+  </div>
+</div>
+
+## Learning & Sample
+
+<div class="row"> 
+  <div class="column">
+    <a href="/solutions/learning_samples/Ping_Monitoring/PingMonitoring.html" title="Ping Monitoring" target="_self"><img src="~/solutions/images/Ping_Monitoring.svg" style="width:100%"></a>
   </div>
 </div>
 

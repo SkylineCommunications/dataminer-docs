@@ -67,7 +67,7 @@ To configure the Augmented Operations alarm settings for specific parameters<!--
 
           For example, if you input "40" for the *Major* alarm severity in the case of *Outlier > Upward spikes*, a parameter jump from 100 to 150 will trigger a *Major* alarm as it surpasses the predefined 40. A jump from 100 to 130, however, will not trigger any alarms, since it is below the set 40.
 
-        ![Alarm thresholds](~/dataminer/images/Anomaly_Alarm_Settings.png)<br>*Anomaly alarm settings in DataMiner 10.6.2*
+        ![Alarm thresholds](~/dataminer/images/Anomaly_Alarm_Settings.png)<br>*Anomaly alarm settings in DataMiner 10.6.5*
 
         > [!NOTE]
         > Any customized behavioral anomaly monitoring setup containing relative or absolute thresholds will be lost if you downgrade to DataMiner version 10.3.11 or older. These versions do not support this extended anomaly configuration, and the thresholds will be automatically determined by DataMiner Analytics, similar to the default *Smart* option<!--RN 37434-->.

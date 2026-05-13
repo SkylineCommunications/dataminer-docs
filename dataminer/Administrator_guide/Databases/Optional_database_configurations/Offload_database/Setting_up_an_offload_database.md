@@ -18,7 +18,7 @@ Depending on the type of database, the procedure is slightly different.
 
 1. Install the MySQL Server database software.
 
-   - MySQL versions up to 8.0 are supported (using connector version 6.9.12). However, to use MySQL 8.0, an additional change is needed within the database. You need to set the *local_infile* variable to 1. In previous versions, this was not a default version, but this has changed. To do this in the database, you can use the command `SET GLOBAL local_infile=1;`.
+   - MySQL versions up to 8.4 are supported (using connector version 6.9.12). However, to use MySQL 8.0 and above, an additional change is needed within the database. You need to set the *local_infile* variable to 1. In previous versions, this was not a default version, but this has changed. To do this in the database, you can use the command `SET GLOBAL local_infile=1;`.
    - Do not activate strict mode (STRICT_TRANS_TABLES) during installation. If you do so, the database offloads will fail.
 
 1. Create and configure the MySQL remote user account that will be used by the different DMAs to connect to the offload database:

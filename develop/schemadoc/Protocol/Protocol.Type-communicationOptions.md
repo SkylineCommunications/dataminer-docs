@@ -167,6 +167,9 @@ Example:
 <Type communicationOptions="progid=National Instruments.OPCFieldPoint">opc</Type>
 ```
 
+> [!CAUTION]
+> OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector.
+
 ### redundantPolling
 
 If you specify this option in a two-port serial, SNMP, or HTTP protocol, the element will automatically switch to the second port when it goes in timeout.

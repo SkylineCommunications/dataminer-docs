@@ -4,7 +4,7 @@ uid: Overview_of_the_PTP_app_in_Cube_UI
 
 # The PTP app in DataMiner Cube
 
-In DataMiner Cube's navigation pane, the DataMiner PTP app is available in the *Applications* section of the *Apps* tab.
+In DataMiner Cube's navigation pane, the PTP app is available in the *Applications* section of the *Apps* tab.
 
 From PTP version 1.1.0 onwards, the app consists of the following tabs:
 
@@ -236,7 +236,7 @@ This tab consists of three different sections:
   - **Setup**: Launches the setup wizard again, allowing you to reconfigure the PTP topology. If there are several instances of the app, each with their own domain, the setup wizard will only allow you to reconfigure the PTP topology for the domain of the app instance you are currently using.
 
     > [!TIP]
-    > See also: [Installing the DataMiner PTP app](xref:Installing_the_DataMiner_PTP_app)
+    > See also: [Installing the PTP app](xref:Installing_the_DataMiner_PTP_app)
 
   - **Role assignment**: Launches the role assignment wizard, allowing you to change the roles that were assigned to the different PTP devices, or to assign roles to newly added devices.
 

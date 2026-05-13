@@ -19,6 +19,10 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
 1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
 
+1. Go to the folder `C:\Skyline DataMiner\` and open the file *MaintenanceSettings.xml*.
+
+1. In the HTTPS tag, replace the old IP address with the newly configured one if necessary, and save the file.
+
 1. Go to the folder `C:\Skyline DataMiner\Configurations`. If the file *ClusterEndpoints.json* exists, open it. Otherwise, skip the next step.
 
 1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
@@ -93,6 +97,16 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
 1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerExtensionModules##apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
 
+1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
+
+   ```powershell
+   $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
+   Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
+
+   $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
+   $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
+   ```
+
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
 1. Restart DataMiner.
@@ -111,6 +125,10 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 1. Go to the folder `C:\Skyline DataMiner\` and open the file *DMS.xml*.
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
+
+1. Go to the folder `C:\Skyline DataMiner\` and open the file *MaintenanceSettings.xml*.
+
+1. In the HTTPS tag, replace the old IP address with the newly configured one if necessary, and save the file.
 
 1. Go to the folder `C:\Skyline DataMiner\Configurations`. If the file *ClusterEndpoints.json* exists, open it. Otherwise, skip the next step.
 
@@ -196,6 +214,16 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
 1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerExtensionModules##apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
 
+1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
+
+   ```powershell
+   $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
+   Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
+
+   $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
+   $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
+   ```
+
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
 1. Restart DataMiner.
@@ -250,6 +278,10 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 1. On the other DMA of the Failover pair, go to the folder `C:\Skyline DataMiner\` and open the file *DMS.xml*.
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
+
+1. On the DMA of which you have changed the IP, go to the folder `C:\Skyline DataMiner\` and open the file *MaintenanceSettings.xml*.
+
+1. In the HTTPS tag, replace the old IP address with the newly configured one if necessary, and save the file.
 
 1. Go to the folder `C:\Skyline DataMiner\Configurations`. If the file *ClusterEndpoints.json* exists, open it. Otherwise, skip the next step.
 
@@ -333,6 +365,16 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
    1. Restart the DataMiner BrokerGateway service.
 
 1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerExtensionModules##apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
+
+1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
+
+   ```powershell
+   $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
+   Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
+
+   $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
+   $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
+   ```
 
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 

@@ -80,7 +80,7 @@ To do so:
 
 1. Click the *Check for updates* button.
 
-   ![Updating protocols](~/dataminer/images/Updating_Protocols.png)<br>*Update Center in DataMiner 10.4.5*
+   ![Updating protocols](~/dataminer/images/Updating_Protocols.png)<br>*Update Center in DataMiner 10.6.5*
 
 1. In the list of available protocols, select the protocols you want to install or update, and click *Install*.
 
@@ -106,7 +106,7 @@ To do so:
 
 1. Click the *Check for updates* button.
 
-   ![Updating protocols](~/dataminer/images/Updating_Protocols.png)<br>*Update Center in DataMiner 10.4.5*
+   ![Updating protocols](~/dataminer/images/Updating_Protocols2.png)<br>*Update Center in DataMiner 10.4.5*
 
 1. Enter your dataminer.services credentials, and click *OK*.
 

@@ -4,42 +4,38 @@ uid: Ad_hoc_Creation
 
 # Creating an ad hoc data source
 
+## Prerequisites
+
+To create ad hoc data sources, we recommend using [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) with Visual Studio . DIS provides a template to start creating a data source and simplifies deployment, including potential dependencies. The source code of ad hoc data sources can also be viewed and edited in the Automation module within Cube, but this is not meant for maintaining extensions.
+
+In order to create a GQI ad hoc data source, you need to reference the [GQI extension API](xref:GQI_Extension_API).
+
+## Data source creation
+
+### Creating a new ad hoc data source project
+
+1. Create a new project in Visual Studio.
+
+1. Search for the *DataMiner Ad Hoc Data Source Solution* template.
+
+1. Specify a name for the solution.
+
+1. Under *Additional information*, fill in the name and author for the data source, and select the [lifecycle interfaces](xref:Ad_hoc_Life_cycle#detailed-lifecycle-overview) you want to implement.
+
+1. Click *Create*.
+
+   The template will create a C# class file with the name of the data source. The core of an ad hoc data source is a class that implements the [*IGQIDataSource* interface](xref:GQI_IGQIDataSource). Any class within the project that implements this interface is discovered by GQI and used as a data source.
+
+   Above the class, the *GQIMetaData* attribute is set. This attribute sets the display name of the data source in the Dashboards app or Low-Code Apps. If this attribute is not present, the name of the class is displayed instead, which may not be very user-friendly.
+
 > [!TIP]
-> If you are using [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) with Visual Studio 2022, you can use a template in Visual Studio to create ad hoc data sources more easily. To do so:
->
-> 1. Create a new project in Visual Studio 2022.
-> 1. Search for the *DataMiner Ad Hoc Data Source Solution* template.
-> 1. Specify a name for the solution.
-> 1. Under *Additional information*, fill in the name and author for the data source, and select the lifecycle interfaces you want to implement.
-> 1. Click *Create*.
+> For a full example of an ad hoc data source implementation, see [Forwarding dummy data to the GQI](xref:Forwarding_dummy_data_to_GQI).
 
-To define a new ad hoc data source:
+### Deploying the data source
 
-1. In the Automation app, add a script containing a new class that implements the [*IGQIDataSource* interface](xref:GQI_IGQIDataSource).
+The data source can be deployed similar to how you deploy an automation script using DIS. For more information, see [Publishing with DIS](xref:XML_editor#publish).
 
-   > [!NOTE]
-   > All object types needed to create an ad hoc data source can be found within *SLAnalyticsTypes.dll*, which is located in the folder `C:\Skyline DataMiner\Files`.
-
-1. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app or Low-Code Apps.
-
-   For example (see [Example ad hoc data script](xref:Forwarding_dummy_data_to_GQI) for a full example):
-
-   ```csharp
-   using Skyline.DataMiner.Analytics.GenericInterface;
-
-   [GQIMetaData(Name = "People")]
-   public class MyDataSource : IGQIDataSource
-   {
-   ...
-   }
-   ```
-
-   > [!NOTE]
-   > This is the name that will be shown to the user when they select the data in the Dashboards app or Low-Code Apps. If you do not configure this name, the name of the class is displayed instead, which may not be very user-friendly.
-
-1. Compile the script as a library (see [Compiling a C# code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library)). You can use the same name as defined in the *GQIMetaData* attribute, or a different name. If there are different data sources for which the same name is defined in the *GQIMetaData* attribute, the library name is appended to the metadata name.
-
-1. Validate and save the script. It is important that you do this after you have compiled the script as a library, as otherwise the compiler will detect errors.
+### Using the data source
 
 1. In the Dashboards app or Low-Code Apps, configure a query and select the data source *Get ad hoc data* or *Get custom data*, depending on your DataMiner version.
 

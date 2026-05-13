@@ -12,7 +12,7 @@ To add parameters with the parameter pane:
 
 1. Click *Add parameter* or drag an element or parameter onto the graph from the navigation pane.
 
-   ![Add parameter](~/dataminer/images/Add_Parameters.png)<br>*Trend graph in DataMiner 10.4.5*
+   ![Add parameter](~/dataminer/images/Add_Parameters.png)<br>*Trend graph in DataMiner 10.6.5*
 
 1. Specify the element and parameter, if necessary. For a table parameter you may also need to specify the index.
 

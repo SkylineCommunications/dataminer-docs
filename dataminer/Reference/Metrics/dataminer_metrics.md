@@ -61,6 +61,7 @@ All specifications are provided based on the assumption that DMAs are running on
 - [Change history metrics](xref:change_history_benchmarks)
 - [Dashboards benchmarks](xref:dashboards_benchmarks)
 - [DataMiner Object Model benchmarks](xref:dataminer_object_model_benchmarks)
+- [DataMinerSystem library monitor benchmarks](xref:dataminersystem_library_monitor_benchmarks)
 - [dataminer.services benchmarks](xref:cloud_benchmarks)
 - [Direct view benchmarks](xref:direct_view_benchmarks)
 - [Dynamic virtual element benchmarks](xref:dynamic_virtual_element_benchmarks)

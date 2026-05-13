@@ -4,6 +4,14 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 4 May 2026 - Enhancement - CloudGateway 3.1.0 - Microsoft 365 Copilot
+
+Support for Microsoft 365 Copilot has been added.
+
+#### 27 April 2026 - Fix - CloudGateway 3.0.2 - Opening a shared dashboard would show a blank page
+
+An issue was introduced in CloudGateway 3.0.1 where opening a shared dashboard would show a blank page. This issue has now been resolved.
+
 #### 26 March 2026 - Enhancement - CloudGateway 3.0.1 - Cloud connection stability improvements
 
 The stability of the connection to dataminer.services has been enhanced through improved retry mechanisms.

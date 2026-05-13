@@ -7,12 +7,42 @@ uid: Failover_AWS
 > [!IMPORTANT]
 > This setup is deprecated. We recommend using [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) instead.
 
+> [!TIP]
+> For a less complicated setup, we recommend using Swarming with [Node Recovery](xref:NodeRecovery_About) instead of setting up Failover.
+
 When you set up a [DataMiner Failover](xref:failover) configuration, you need to assign virtual IP addresses to the corporate and acquisition networks of the active DMA. Switching from the active to the passive DMA requires that those virtual IP addresses are reassigned. This is done seamlessly by DataMiner.
 
 If you use Amazon Web Services (AWS) for your system database, you need to assign secondary private IPv4 addresses to the network interfaces of your EC2 instances. You also need to transfer those addresses between your instances whenever a switch in DataMiner occurs.
 
-> [!IMPORTANT]
-> This method assumes that the EC2 instances are in the same availability zone. If your instances are in different zones, you should use Failover with DNS instead.
+## Prerequisites
+
+- The EC2 instances must be in the same availability zone. If your instances are in different zones, you should use Failover with DNS instead.
+
+- The EC2 Instance Metadata Service (IMDS) must be reachable, and the following best practices must be followed:
+
+  - IMDSv2 enabled with `HttpTokens=required`.
+  - No local firewall blocking 169.254.169.254.
+
+- The EC2 instances must have a specific IAM role assigned, which has a policy attached similar to the following example:
+
+  ```
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowENIManagement",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AssignPrivateIpAddresses",
+                "ec2:UnassignPrivateIpAddresses",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:ModifyNetworkInterfaceAttribute"
+            ],
+            "Resource": "*"
+        }
+    ]
+  }
+  ```
 
 ## Setting up Failover
 
@@ -38,60 +68,6 @@ Install the AWS Tools for Windows PowerShell on both Failover DMAs.
 > [!TIP]
 > For more information, see [AWSPowerShell 4.1.7.0](https://www.powershellgallery.com/packages/AWSPowerShell/4.1.7.0).
 
-## Creating an access key
-
-In order to programmatically make changes in AWS, you need an API access key. To create one, taking into account the principle of least privilege, follow the procedure below.
-
-> [!NOTE]
-> You will need this information later when configuring DataMiner.
-
-1. Create a policy:
-
-   1. In the AWS Management Console, go to the Identity and Access Management (IAM) section.
-
-   1. Under *Access management*, select *Policies*.
-
-   1. Click *Create policy*.
-
-   1. Define a new policy that contains the **EC2 service**, allows the **action AssignPrivateIpAddresses** and is limited to the **network interface resources** from your EC2 instances.
-
-   1. To find the network interface IDs, in the AWS Management Console, go to the EC2 section and, under *Network & Security*, select *Network Interfaces*. Locate the network interfaces of your DMAs and write down the network interface IDs.
-
-      ![Create policy](~/dataminer/images/Create_Policy.png)
-
-1. Create a group:
-
-   1. In the AWS Management Console, go to the Identity and Access Management (IAM) section.
-
-   1. Under *Access management*, select *Groups*.
-
-   1. Click *Create New Group*.
-
-   1. Specify a name for the group and assign the policy created in the previous step.
-
-      ![Create group](~/dataminer/images/Create_Group.png)
-
-1. Create a user:
-
-   1. In the AWS Management Console, go to the Identity and Access Management (IAM) section.
-
-   1. Under *Access management*, select *Users*.
-
-   1. Click *Add user*.
-
-   1. Specify a user name and select the access type *Programmatic access*.
-
-   1. Add the user to the group created in the previous step.
-
-      ![Create user](~/dataminer/images/Create_User.png)
-
-   1. Click *Create user*. You will now be able to copy the access key ID and secret access key needed to perform API calls to AWS.
-
-      ![Copy Access Key ID](~/dataminer/images/Success_User.png)
-
-      > [!NOTE]
-      > You will not be able to copy the secret access key once you have closed this screen. If you lose the key, you will have to create a new one.
-
 ## Configuring DataMiner
 
 In order for DataMiner to be able to acquire the virtual IP addresses, these addresses need to be re-assigned in AWS first. To accomplish this, DataMiner can execute a script before it acquires the virtual IP.
@@ -104,8 +80,6 @@ In order for DataMiner to be able to acquire the virtual IP addresses, these add
 
 ```txt
 #----------------------------------AWS-----------------------------------#
-$AWS_ACCESS_KEY_ID = "";
-$AWS_SECRET_ACCESS_KEY = "";
 $AWS_REGION = "";
 
 #-----------------------------CORPORATE----------------------------------#
@@ -114,8 +88,7 @@ $NETWORK_INTERFACE_ID_CORPORATE = "";
 
 Register-EC2PrivateIpAddress -NetworkInterfaceId
 $NETWORK_INTERFACE_ID_CORPORATE -PrivateIpAddress $VIP_CORPORATE -
-AllowReassignment 1 -Region $AWS_REGION -AccessKey $AWS_ACCESS_KEY_ID -
-SecretKey $AWS_SECRET_ACCESS_KEY
+AllowReassignment 1 -Region $AWS_REGION
 
 #----------------------------ACQUISITION---------------------------------#
 $VIP_ACQUISITION = "";
@@ -123,6 +96,5 @@ $NETWORK_INTERFACE_ID_ACQUISITION = "";
 
 Register-EC2PrivateIpAddress -NetworkInterfaceId
 $NETWORK_INTERFACE_ID_ACQUISITION -PrivateIpAddress $VIP_ACQUISITION -
-AllowReassignment 1 -Region $AWS_REGION -AccessKey $AWS_ACCESS_KEY_ID -
-SecretKey $AWS_SECRET_ACCESS_KEY
+AllowReassignment 1 -Region $AWS_REGION
 ```

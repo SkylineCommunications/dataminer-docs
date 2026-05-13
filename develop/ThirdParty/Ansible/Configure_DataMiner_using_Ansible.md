@@ -45,7 +45,43 @@ This will return the following response:
 
 - *ConnectAppResult*: This key is needed in the other requests.
 
-![ConnectApp API Request](~/develop/images/Ansible_webapi.png)
+```http
+POST /API/v1/json.asmx HTTP/1.1
+Host: ga-dma-vm1-77.skyline.local
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Body>
+    <ConnectApp xmlns="http://www.skyline.be/api/v1">
+      <host>string</host>
+      <login>string</login>
+      <password>string</password>
+      <clientAppName>string</clientAppName>
+      <clientAppVersion>string</clientAppVersion>
+      <clientComputerName>string</clientComputerName>
+    </ConnectApp>
+  </soap12:Body>
+</soap12:Envelope>
+```
+
+```http
+ HTTP/1.1 200 OK
+ Content-Type: application/soap+xml; charset=utf-8
+ Content-Length: length
+ 
+ <?xml version="1.0" encoding="utf-8"?>
+ <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+   <soap12:Body>
+     <ConnectAppResponse xmlns="http://www.skyline.be/api/v1">
+       <ConnectAppResult>string</ConnectAppResult>
+     </ConnectAppResponse>
+   </soap12:Body>
+ </soap12:Envelope>
+```
 
 > [!NOTE]
 > It can be helpful to first test your API requests with an API platform like [Postman](xref:Postman) and check the returned values.

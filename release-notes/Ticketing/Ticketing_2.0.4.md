@@ -2,24 +2,26 @@
 uid: Ticketing_2.0.4
 ---
 
-# Ticketing 2.0.4 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# Ticketing 2.0.4
 
 ## Prerequisites
 
-> [!NOTE]
-> This version requires:
->
-> - DataMiner 10.5.9/10.6.0 or higher
-> - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.x or higher
+- **DataMiner 10.5.9/10.6.0** or higher must be installed.
 
-> [!TIP]
-> Installing the following apps alongside the Ticketing Solution will provide access to additional functionality:
->
-> - [MediaOps.Plan](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) 1.4.x or higher: Required to be able to assign people to tickets.
-> - [InfraOps](https://catalog.dataminer.services/details/5a1edac2-45aa-4498-8ab7-ee322d07da27): Required to be able to link assets to tickets.
+- [**Standard Data Model Registration**](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.x or higher must be installed.
+
+- The user installing Ticketing needs the following **user permissions**:
+
+  - [General > Elements > Add](xref:DataMiner_user_permissions#general--elements--add)
+  - [General > Alarms > Allow to add or update hyperlinks](xref:DataMiner_user_permissions#general--alarms--allow-to-add-or-update-hyperlinks)
+  - [General > Alarms > Properties > Add](xref:DataMiner_user_permissions#general--views--properties--add) and [General > Alarms > Properties > Edit](xref:DataMiner_user_permissions#general--views--properties--edit)
+
+- Any users who will use the Ticketing Solution (including the user installing the solution) will need to have **write access** to the root view and the Ticketing Lock Manager element under the root view (via *Permissions* > *Views*; see [Configuring a user group](xref:Configuring_a_user_group)).
+
+- Installing the following apps alongside the Ticketing Solution will provide access to **additional functionality**:
+
+  - [MediaOps.Plan](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) 1.4.x or higher: Required to be able to assign people to tickets.
+  - [InfraOps](https://catalog.dataminer.services/details/5a1edac2-45aa-4498-8ab7-ee322d07da27): Required to be able to link assets to tickets.
 
 ## Enhancements
 
@@ -44,6 +46,39 @@ In several places on the Ticket Information page, the "Nothing to show" messages
 - In the Linked Items section, "Nothing to show" has been replaced with "Ticket has no Linked Items".
 - In the External Ticketing section, "Nothing to show" has been replaced with "Ticket has no External Ticketing".
 
+#### GQI DxM no longer restarted during Ticketing installation [ID 45292]
+
+During installation of the Ticketing app, the GQI DxM is no longer restarted. As the Dev Packs used by the solution are now installed by SDM registration, this restart is no longer needed.
+
+#### GQI DxM behavior adjustment taken into account [ID 45318]
+
+The Ticketing solution has been adjusted to take into account possible GQI behavior changes such as those introduced in DataMiner 10.6.0 [CU1]/10.6.4 ([44714](xref:Web_apps_Feature_Release_10.6.4#dashboardslow-code-apps---gqi-enhanced-filtering-when-using-the-gqi-dxm-id-44714)), which, when a filter in a query is linked to data, cause the data to only be considered empty when nothing is selected in the component. This has been addressed using a custom operator.
+
+#### Date and time when tickets were closed now shown in Tickets table and on ticket info page [ID 45320]
+
+For closed, canceled, and rejected tickets, the date and time when these were closed is now displayed in the Tickets table:
+
+![Tickets table, with the "Status" and "Closed at" columns highlighted](~/release-notes/images/Tickets_table_45320.png)
+
+In addition, this is now also indicated in the lower-right corner of the ticket info page, instead of the "Last modified" date and time:
+
+![Ticket info page, with the "Closed" time indicated in the lower-right corner](~/release-notes/images/Ticketing_Info_page_45320.png)
+
+#### Color coding of expected resolution date [ID 45398]
+
+In the Ticket table and on the ticket information page, the expected resolution date is now indicated with a color depending on when the ticket is expected to be resolved:
+
+- **Red**: The ticket is overdue (i.e., taking into account the current time, the due date is in the past).
+- **Orange**: The ticket is due to be resolved today (i.e., between the current time and midnight).
+- **Yellow**: The ticket is due to be resolved in 1 to 3 days (i.e., 1 to 3 days after the current day).
+- **Green**: The ticket is due to be resolved in 4 to 7 days (i.e., 4 to 7 days after the current day).
+- **Blue**: The ticket is due to be resolved in 1 to 2 weeks (i.e., 8 to 14 days after the current day).
+- **Purple**: The ticket is due to be resolved in more than 2 weeks (i.e., 15 or more days after the current day).
+
+Example:
+
+![Colors in the Expected Resolution Data column of the Ticket table](~/release-notes/images/Ticket_table_45398.png)
+
 ## Fixes
 
 #### Large description cannot be fully viewed in expanded view [ID 45245]
@@ -57,3 +92,13 @@ If a ticket was rejected, canceled, or closed, it was possible to edit the Addit
 #### Enum default value for ticket type kept reverting to first defined Enum field [ID 45249]
 
 When a ticket type field of data type Enum was defined, the configured default value kept incorrectly reverting to the Enum field that has been defined first.
+
+#### Not possible to select 'No Assignee' for a ticket [ID 45291]
+
+When a ticket was configured, it could occur that it was not possible to select the *No Assignee* value in the *Assignee* drop-down list. This made it impossible to create a ticket and not immediately assign it to someone, even though typically a ticket will only be assigned when it is set to *In Progress*.
+
+#### Ticket and ticket type creation not possible because of dependency conflict [ID 45332]
+
+It could occur that multiple versions of Skyline.DataMiner.Core.DataMinerSystem.Common were detected in the Ticketing Solution, causing creation of tickets and ticket types to fail. All DLLs have now been consolidated to prevent this issue from occurring again.
+
+Note that Skyline Lock Manager has also been upgraded from version 1.0.3.2 to 1.0.3.4 because of this change.

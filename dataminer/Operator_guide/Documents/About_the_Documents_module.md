@@ -6,7 +6,7 @@ uid: About_the_Documents_module
 
 The *Documents* module allows you to integrate documents in DataMiner. This way, you can access relevant information about the elements and services in your system at any time.
 
-![Documents](~/dataminer/images/Documents.png)<br>*Documents in DataMiner 10.4.5*
+![Documents](~/dataminer/images/Documents.png)<br>*Documents in DataMiner 10.6.5*
 
 There are two ways to access documents in DataMiner:
 

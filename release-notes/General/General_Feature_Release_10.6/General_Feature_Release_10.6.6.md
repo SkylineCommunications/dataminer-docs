@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.6
 ---
 
-# General Feature Release 10.6.6 – Preview
+# General Feature Release 10.6.6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -32,11 +32,49 @@ Before you upgrade to this DataMiner version:
 
 ## Highlights
 
-*No highlights have been selected yet.*
+#### Swarming can now be enabled for a smart-serial element in server mode [ID 45173]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+In a DataMiner protocol, you can now indicate that swarming should be allowed for an element with a smart-serial connection in server mode.
+
+By default, swarming is not allowed for such elements. However, if your element can communicate with its data source at startup to specify where data should be sent, you can now safely enable swarming by adding the following configuration to the *protocol.xml* file:
+
+```xml
+<Swarming>
+    <BypassChecks>
+        <Check>smartSerialAsServer</Check>
+    </BypassChecks>
+</Swarming>
+```
 
 ## New features
 
-*No new features have been added yet.*
+#### DataMiner Object Models: DomDefinitionReferences and FieldValueReferences can now be marked as read-only [ID 45275]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When you configure DOM security, you can now set `DomDefinitionReferences` and `FieldValueReferences` to read-only. This way, you can give user groups safe, controlled access based on a specific reference, allowing users to see and inspect data but not change it.
+
+To support this, the DOM API now includes a `ReadOnly` property (of type boolean) in the `DomDefinitionReference` and `FieldValueReference` classes.
+
+With *Read* access, users can:
+
+- Read the DOM instances
+- Retrieve specific fields from the DOM instances
+- Count the DOM instances
+- Receive the events when subscribed to DOM instance changes
+- Retrieve DOM attachments linked to DOM instances
+- Read the DOM instance history
+- Count the DOM instance history records
+
+With *Write* access, which is the default behavior when the `ReadOnly` property is not enabled, users can:
+
+- Create, update, or delete DOM instances
+- Add or remove DOM attachments on a DOM instance
+
+> [!NOTE]
+> Support for this feature in the DOM security UI in DataMiner Cube is currently still being implemented. Consequently, it is not yet possible to configure read-only access via that UI, and if changes are made to DOM security via the UI, any read-only flags will be cleared.
 
 ## Changes
 
@@ -56,7 +94,7 @@ From now on, a `GetServiceStateMessage` will no longer be forwarded to the Agent
 
 A number of enhancements have been made with regard to the synchronization of connectors within a DataMiner System:
 
-- The first time you upload a version of a new connector, it will automatically be set as production version. Up to now, when a connector version was automatically set as production version, this would trigger a synchronization of that production version. From now on, the new connector will be synchronized within the cluster, and when a DataMiner Agent detects that it is the first version, it will set it as the production version.
+- The first time you upload a version of a new connector, it will automatically be set as production version. Up to now, when a connector version was automatically set as production, this would trigger a synchronization of that version. From now on, the new connector will be synchronized within the cluster, and when a DataMiner Agent detects that it is the first version, it will set it as the production version.
 
 - Up to now, when a parent connector exported child connectors (as is the case with DVE connectors), these exported child connectors would be synchronized within the cluster when the parent connector was added or modified. From now on, only the parent connector will be synchronized, and each DataMiner Agent will then generate the child connectors.
 
@@ -65,27 +103,70 @@ A number of enhancements have been made with regard to the synchronization of co
 > [!NOTE]
 > The midnight sync has not been altered.
 
+#### Enhanced logging for connections towards SLNet [ID 44765] [ID 45359]
+
+<!-- 44765: MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+<!-- 45359: MR 10.7.0 - FR 10.6.6 -->
+
+A number of improvements have been made to SLNet logging, particularly to help troubleshoot unexpected disconnects between SLNet instances and between SLNet and DataMiner Cube.
+
+##### New log files
+
+In the `C:\Skyline DataMiner\Logging` folder, you can now find the following new log files:
+
+| Log file | Description |
+| --- | --- |
+| SLNetConnections.txt  | An entry will be added each time an SLNet to SLNet connection encounters a timeout. |
+| SLCubeConnections.txt | An entry will be added each time a Cube to SLNet connection encounters a timeout.   |
+
+If information logging is set to Level 4, the log entries will also mention if a message is waiting until other calls have finished. Up to 10 active calls are allowed at any given time.
+
+##### Existing log files
+
+- *ConnectionDiagnostics* in `C:\Skyline DataMiner\Logging\SLNet\ConnectionDiagnostics` will now also report which calls were in progress at a certain point in time.
+
+- *SLHangingCalls.txt* will now contain more detailed information:
+
+  - Apart from blocking calls, it will now also log asynchronous calls.
+  - The entries will now mention the exact message that is hanging, rather than the wrapping `EncryptedMessage`.
+
+> [!NOTE]
+>
+> - Log entries can also be added to *SLNetConnections.txt* and *SLCubeConnections.txt* for SLNet connections created elsewhere. To do so, provide a `LoggerProvider` to `SLNetTypesDiagnostics.AddLoggerProvider()`.
+> - When a Cube connected to a system without server-side `SLNetTypesDiagnostics` connects to a system with server-side `SLNetTypesDiagnostics`, the *SLCubeConnections.txt* log file will not be populated. Restart Cube if you want that log file to be populated.
+
+#### STaaS: Enhanced performance when closing alarm trees [ID 45081]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Because of a number of enhancements, on STaaS systems, overall performance has increased when closing alarm trees.
+
+#### DataMiner Object Models: SLDataGateway will now try to read only the selected fields from an OpenSearch or Elasticsearch database [ID 45151]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When SLDataGateway is retrieving DOM data from an OpenSearch or Elasticsearch database, from now on, it will attempt to retrieve only the selected fields using the native field projection capabilities of these databases. This will considerably enhance data transfer efficiency and overall performance.
+
+This optimization will leverage the indexed field values to avoid transferring complete objects when only specific fields are needed.
+
+If selected field retrieval is not supported by the database, the system will automatically fall back to retrieving the full object and extracting the required values. This currently applies to STaaS and to queries that require post-filtering or post-sorting.
+
+By default, the value type will be the field type defined by the exposer. When a field value is explicitly requested, the type defined in the field descriptor will be used instead.
+
+> [!IMPORTANT]
+> To ensure correct type resolution, field descriptor IDs must be unique across all section definitions within a DOM module. Non-unique IDs may result in incorrect type mapping and unexpected behavior.
+
 #### BrokerGateway installer will now give a clear indication when .NET is missing [ID 45169]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 When you install the BrokerGateway DxM on a server that does not have the Microsoft .NET hosting bundle installed yet, from now on, a message will appear, saying that .NET has to be installed first.
 
-#### Protocols: Indicating that smart-serial elements in server mode are allowed to be swarmed [ID 45173]
+#### Correlation: GetAvailableCorrelationRulesMessage response now also includes grouping information [ID 45187]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
 
-By default, elements with a smart-serial connection in server mode are not allowed to be swarmed. However, it is possible that, at startup, an element can send a message to the data source in order to indicate where data should be sent to. In that case, the fact that the smart-serial connection is in server mode will not be considered a valid reason to prevent the element from swarming.
-
-As DataMiner is not able to automatically detect such exceptional cases, you can now indicate in the *protocol.xml* file of the element that it is allowed to be swarmed. See the following example:
-
-```xml
-<Swarming>
-    <BypassChecks>
-        <Check>smartSerialAsServer</Check>
-    </BypassChecks>
-</Swarming>
-```
+When a `GetAvailableCorrelationRulesMessage` is sent to SLNet, the response will now also include information regarding the grouping defined in the correlation rules.
 
 #### DataMiner upgrade: .NET Framework 4.8 will no longer be installed [ID 45196]
 
@@ -125,6 +206,14 @@ Note that the following stencil files will still be deployed:
 > [!NOTE]
 > The above-mentioned stencil files that are no longer included in DataMiner upgrade packages will not automatically be removed from existing systems.
 
+#### Automation: Compiled assemblies generated during syntax checks will no longer be loaded into memory [ID 45214]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+Up to now, when a syntax check was performed on an automation script (e.g., by clicking *Validate* in a script's C# block in DataMiner Cube), the compiled assembly would be loaded into the SLAutomation memory.
+
+From now on, compiled assemblies generated during syntax checks will no longer be loaded into memory.
+
 #### SLLogCollector: Only BPA tests deployed by default will be rerun each time a log package is created [ID 45228]
 
 <!-- MR 10.7.0 - FR 10.6.6 -->
@@ -132,9 +221,84 @@ Note that the following stencil files will still be deployed:
 Up to now, each time SLLogCollector created a log package, it would rerun all BPA tests deployed on the system. From now on, it will only rerun the BPA tests deployed by default.
 
 > [!NOTE]
-> Each time a log package is created, all BPA test results available on the system will still be included in that package. This means, that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
+> Each time a log package is created, all BPA test results available on the system will still be included in that package. This means that all results from non-default BPA tests will also be included, even when, from now on, these tests are no longer rerun when a package is created.
+
+#### APIGateway: Enhanced handling of files in use during upgrades [ID 45230]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, the *Windows Restart Manager* will be enabled during installations. This will prevent unnecessary delays caused by files still in use by the APIGateway instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
+
+#### Number of smart-serial messages allowed to enter has now been limited [ID 45273]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+In order to protect DataMiner against a continuously growing queue of incoming smart-serial messages, the number of smart-serial messages that are allowed to enter per element with smart-serial connections has now been limited.
+
+- If more than 200 MB of messages are waiting in the queue, a notice alarm will be generated, and a log entry will be added to the *SLErrorsInProtocol.txt* file. This is meant as a warning. As soon as the queue drops below 150 MB again and the maximum limit is not breached, the notice alarm will be cleared.
+
+- If more than 300 MB of messages are waiting in the queue, an error alarm will be generated, and a log entry will be added to the *SLErrorsInProtocol.txt* file. As the maximum limit was breached, the queue will no longer accept any additional messages.
+
+- Once the maximum limit has been breached, the queue will need to drop below 200 MB before new messages can be added again. As soon as the queue drops below 200 MB, the error alarm will become a notice alarm. Note that, even when the queue would be empty, the notice alarm will not be cleared. It will serve as an indication that part of the communication was lost.
+
+> [!NOTE]
+>
+> - We strongly advise you to restart the element when the limit has been breached. When certain messages within a data stream get dropped because the maximum queue limit was breached, an incomplete data stream may get processed, which could then produce unexpected results.
+> - The alarm not only mentions the limit that was reached (in MB). It also mentions the number of messages that are present in the queue. This number of messages is not always equal to the number of responses to be processed. For example, in some cases, Windows can combine multiple received UDP packets into one when adding packets to the receive buffer, causing SLPort to then add a single message to the queue.
+
+#### DxMs upgraded [ID 45304] [ID 45347]
+
+<!-- RN 45304: MR 10.7.0 - FR 10.6.6 -->
+<!-- RN 45347: MR 10.7.0 - FR 10.6.6 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer 1.8.8
+- DataMiner CoreGateway 2.14.17
+- DataMiner FieldControl 2.12.1
+- DataMiner Orchestrator 1.8.2
+- DataMiner SupportAssistant 1.9.1
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+#### DataMiner upgrade: Clients can now also connect to the orchestrating Agent when it has finished upgrading locally [ID 45312]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When you upgrade an entire DMS, every DMA will upgrade itself locally, and one of them, the so-called orchestrating Agent, will give you progress updates. This orchestrating Agent is the Agent from which the upgrade was triggered.
+
+Up to now, while a full DMS upgrade was in progress, you could connect with a client application (e.g., DataMiner Cube) to any of the Agents that had finished upgrading locally, except the orchestrating Agent. Even when that Agent had finished upgrading locally, it would not be possible to connect to it. From now on, this will be possible.
+
+#### Aliases can now be configured for DaaS systems [ID 45327]
+
+<!-- MR 10.6.0 [CU3] - FR 10.6.6 -->
+
+If you want to configure an alias for a DataMiner Agent, in the *DataMiner.xml* file, the `mode` attribute of the `DMAName` element has to be set to "manual". If this attribute is not set to "manual", configuring an alias will also change the computer name, which will cause unintended behavior.
+
+As it is not possible for a user to make changes to the *DataMiner.xml* file of a DaaS system, up to now, it would not be possible to configure an alias for such a system. From now on, in the *DataMiner.xml* file of a DaaS system, the `mode` attribute of the `DMAName` element will be set to "manual" by default. This will allow users to also configure aliases for DaaS systems.
+
+#### SLLogCollector packages now include hosts and lmhosts files [ID 45369]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, SLLogCollector packages will also include the following files:
+
+| File | Description  |
+|---|---|
+| `C:\Windows\System32\drivers\etc\hosts`   | Maps hostnames to IP addresses for DNS name resolution. Used to override or supplement DNS locally. |
+| `C:\Windows\System32\drivers\etc\lmhosts` | Maps NetBIOS names to IP addresses for legacy Windows networking. Rarely used in modern systems.    |
+
+Both files will be added to the *Network Information* folder.
 
 ### Fixes
+
+#### BPA tests could incorrectly not be run on DMAs that were not connected to the internet [ID 45040]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, it would not be possible to run BPA tests on DataMiner Agents that were not connected to the internet because they were not able to fetch the necessary certificates.
+
+From now on, it will be possible to run BPA tests on DataMiner Agents that are not connected to the internet.
 
 #### STaaS: Problem when retrieving data to be visualized in 'State timeline' components or element and parameter heatlines [ID 45043]
 
@@ -162,7 +326,7 @@ From now on, when the SLLogCollector tool detects that it is not possible to exe
 
 When, on a system with alarm squashing enabled, the `AlarmsPerParameter` limit in the `AlarmSettings` section of the *MaintenanceSettings.xml* file was exceeded, an alarm of which all alarms in the alarm tree were squashable would incorrectly not show up in the Alarm Console after the element associated with the alarm had been restarted.
 
-#### SLWatchdog to incorrectly interpret processes being stopped during a DataMiner shutdown as a crash [ID 45115]
+#### SLWatchdog incorrectly interpreted processes being stopped during a DataMiner shutdown as a crash [ID 45115]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
@@ -178,14 +342,91 @@ From now on, the number of state icon events sent by SLAnalytics instances will 
 
 Additionally, state icon events, alarm focus events and RAD parameter aggregation events will now all have a smaller weight, meaning that more of them will be allowed in the queue.
 
+#### Problem with alarm forwarding after an element had been edited [ID 45167]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When an element had been edited, in some cases, alarm updates would incorrectly no longer be forwarded to northbound SNMP managers.
+
+> [!NOTE]
+> This fix will not work if the element in question has the *Enable SNMP agent* option enabled, and has a virtual IP address and a subnet mask configured.
+
 #### Problem with connections to NATS servers of other DMAs during NATS migrations and NATS-related BPA test runs [ID 45175]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 Up to now, during NATS migrations or NATS-related BPA test runs, establishing connections to NATS servers of other DataMiner Agents in the DMS would be slow due to reverse DNS lookups.
 
+#### SLNet: Problems with user picture requests would cause other messages to get blocked [ID 45210]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When SLNet was not able to respond to user picture requests from a web app, up to now, those requests could stay active within SLNet for several minutes, causing other messages to get blocked.
+
+From now on, user picture requests will time out after 10 seconds.
+
+#### Problem when a connector was using the makeCommandByProtocol option while in slow poll mode [ID 45217]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, a problem could occur when a connector was using the `makeCommandByProtocol` option while in slow poll mode. The slow poll timer triggered the ping pair command as soon as the slow poll group was added to the execution queue. However, this caused a problem when regular groups were still being processed. If a valid response arrived at that moment, the system attempted to stop the slow poll timer. This failed because the timer was waiting for the response to release its resources, which led to an issue.
+
+From now on, the slow poll timer will no longer make the ping command when adding the slow poll group to the queue. The ping command will be made when the group is executed, and the `makeCommandByProtocol` setting will be disregarded.
+
 #### SLAnalytics: Problem due to incorrect internal state in Automatic Incident Tracking [ID 45220]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 In some cases, SLAnalytics could stop working due to an incorrect internal state in Automatic Incident Tracking.
+
+#### An alarm will now be generated when a protocol connection acting as a server failed to bind to the socket [ID 45241]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When a protocol connection that acted as a server failed to bind to the socket during startup, up to now, this would only get logged (with debug level 1). From now on, this will be assigned error level 0.
+
+Also, the element will go into an error state, and an alarm indicating a failing binding will be generated.
+
+#### SLNet: MessageBroker cache could leak NATS threads [ID 45259]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+In some rare cases, the MessageBroker cache of SLNet could leak NATS threads.
+
+#### Service & Resource Management: Problem when the Agent with the lowest DMA ID was removed from a DataMiner System [ID 45281]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+Up to now, when the Agent with the lowest DMA ID had been removed from a DataMiner System, the Resource Manager would incorrectly still consider the removed Agent the master DMA and would still attempt to communicate with it. As a result, master synchronization requests would fail, producing errors like the following one:
+
+`System.AggregateException: One or more errors occurred. ---> Skyline.DataMiner.Net.Exceptions.DataMinerException: Fatal error while sending request [MasterSyncRequestMessage for message of type SetReservationInstanceMessage from XXX] to master DMA XXX, max retries reached. ---> Skyline.DataMiner.Net.MasterSync.MasterSyncerException: Could not use the connection to master DMA XXX`
+
+From now on, when the Agent with the lowest DMA ID was removed from the DataMiner System, the Resource Manager will correctly re-evaluate and update the master DMA when it receives a master synchronization request.
+
+#### SLDataMiner: Problem when trying to fetch information about loopback adapters [ID 45285]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When the SLDataMiner process starts, it tries to fetch information about all network adapters. However, up to now, when it tried to fetch information about a loopback adapter, an error resembling the following one would be thrown:
+
+`CIPSettings::Init|ERR|-1|Opening device failed for adapter {14763620-5D53-11EA-90D5-806E6F6E6963} (Software Loopback Interface 1): The system cannot find the file specified. (2)`
+
+As loopback adapters are not part of any communication flow, from now on, SLDataMiner will no longer try to fetch information about those adapters.
+
+#### Elements incorrectly moved to root view after moving view with service containing those elements to view containing the original elements [ID 45286]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.6 -->
+
+When a view containing a service was moved to another view, it could occur that elements included in that service were incorrectly moved to the root view. This happened when an element was only included in the original view because of the service, but the element already existed in the target view. This behavior has been corrected.
+
+#### DataMiner upgrade: Incorrect .NET 6 error would be thrown during the upgrade process [ID 45374]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, the first time a newly installed DataMiner Agent was upgraded, an incorrect .NET 6 error would be thrown during the upgrade process.
+
+#### SLAutomation could stop working when recompiling libraries [ID 45436]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.6 [CU0] -->
+
+Up to now, in some cases, SLAutomation could stop working when recompiling libraries.

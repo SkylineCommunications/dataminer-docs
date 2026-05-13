@@ -79,7 +79,7 @@ The following features currently have the "End of Life" status. They are no long
 | Legacy Correlation Engine | End of Life as of DataMiner 10.5.x. This only applies to the legacy System Display Correlation engine. |
 | OPC communication | OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector. |
 | Recurring bookings | End of Life as of DataMiner 10.5.x. Recurring bookings have been retired. Instead, we suggest duplicating the previous occurrence of the booking. |
-| Ticketing app | End of Life as of DataMiner 10.6.x. Skyline is researching a replacement for this module. |
+| Ticketing app | End of Life as of DataMiner 10.6.x. Replaced by the [Ticketing Standard Solution](https://catalog.dataminer.services/details/c132decf-b918-4ee2-be25-1302f41e7705). |
 | Web Services API v0 | From DataMiner 10.1.5 onwards, version 0 of the DataMiner Web Services API is disabled. Users will be required to port any reliant applications to use Web Services API v1. |
 | XML storage of SRM resources and profiles | From DataMiner 10.4.0/10.4.1 onwards, SRM resources and profiles must be stored in the indexing database instead of in XML. |
 

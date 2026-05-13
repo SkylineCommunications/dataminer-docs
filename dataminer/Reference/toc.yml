@@ -146,6 +146,8 @@ items:
         topicUid: dashboards_benchmarks
       - name: DataMiner Object Model benchmarks
         topicUid: dataminer_object_model_benchmarks
+      - name: DataMinerSystem library monitor benchmarks
+        topicUid: dataminersystem_library_monitor_benchmarks
       - name: dataminer.services benchmarks
         topicUid: cloud_benchmarks
       - name: Direct view benchmarks

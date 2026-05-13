@@ -25,7 +25,19 @@ The combination of the first 3 numbers identifies the protocol version range.
 
 It is possible that different version ranges are maintained in parallel but we should always try to keep this to a minimum.
 
-![Protocol version semantics](~/develop/images/Connector_Version_Semantic.png)
+```mermaid
+flowchart LR
+    subgraph RANGE["RANGE"]
+        A["A: Branch"] --- B["B: System"] --- C["C: Major"]
+    end
+    C --- D["D: Minor"]
+
+    style A fill:#2563EB,color:#fff,stroke:#2563EB
+    style B fill:#2563EB,color:#fff,stroke:#2563EB
+    style C fill:#2563EB,color:#fff,stroke:#2563EB
+    style D fill:#2563EB,color:#fff,stroke:#2563EB
+    style RANGE fill:#fff,stroke:#2563EB,stroke-dasharray:5 5,color:#2563EB
+```
 
 ### Branch
 

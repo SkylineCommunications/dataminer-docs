@@ -38,7 +38,7 @@ Under the *VISUAL* node, one or more pages are displayed that contain a graphic 
 
 Under the BELOW THIS VIEW node, there is a page for each type of item that can be contained within the view. Next to the item name, a number is displayed that indicates how many of these items are in the view. Click a page in the tree view to display a list of the items in question.
 
-![BELOW THIS VIEW](~/dataminer/images/Below_This_View.png)<br>*BELOW THIS VIEW page in DataMiner 10.5.4*
+![BELOW THIS VIEW](~/dataminer/images/Below_This_View.png)<br>*BELOW THIS VIEW page in DataMiner 10.6.5*
 
 The data pages can be displayed in several ways. You can change the way they are displayed by means of the buttons in the lower-right corner of the page.
 
@@ -52,7 +52,7 @@ The data pages can be displayed in several ways. You can change the way they are
 
 In the list view, a detailed list of the items in the view is displayed, with information such as the name, alarm state, alarm count, protocol, alarm and trend template, ID, etc. The information is automatically updated when objects in the view are added, updated or deleted.
 
-![List view](~/dataminer/images/List_View.png)<br>*List view in DataMiner 10.4.5*
+![List view](~/dataminer/images/List_View.png)<br>*List view in DataMiner 10.6.5*
 
 The list can be manipulated to display data according to your preference:
 
@@ -140,7 +140,7 @@ The list consists of the following columns:
 
 In the summary view, you can choose to view one of four different lists showing limited information about the items in the view. The lists are automatically updated when items in the view are added, updated or deleted.
 
-![Summary view](~/dataminer/images/Summary_View.png)<br>*Summary view in DataMiner 10.4.5*
+![Summary view](~/dataminer/images/Summary_View.png)<br>*Summary view in DataMiner 10.6.5*
 
 | List                 | Description                                                   |
 |----------------------|---------------------------------------------------------------|

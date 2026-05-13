@@ -6,7 +6,7 @@ uid: About_alarm_templates
 
 An alarm template is an XML file that contains all alarm thresholds for all parameters defined in a particular DataMiner protocol. It is an overlay file that overrides the default alarm thresholds defined in a DataMiner protocol.
 
-![Alarm template](~/dataminer/images/Alarm_Template.png)<br>*Alarm template in DataMiner 10.4.5*
+![Alarm template](~/dataminer/images/Alarm_Template.png)<br>*Alarm template in DataMiner 10.6.5*
 
 Using the [alarm template editor](xref:About_the_alarm_template_editor) in the Protocols & Templates module, You can [create as many alarm templates](xref:Creating_an_alarm_template) for each DataMiner protocol as you want. You can then [assign different alarm templates](xref:Assigning_an_alarm_template) to different elements, even if they are using the same protocol. Switching between templates is easy, so that alarm thresholds can quickly be changed.
 

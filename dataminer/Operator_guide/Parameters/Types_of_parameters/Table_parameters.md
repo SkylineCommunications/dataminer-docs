@@ -6,7 +6,7 @@ uid: Table_parameters
 
 Different types of table parameters exist in DataMiner Cube, detailed in the sections below.
 
-![Table parameter](~/dataminer/images/Table_Parameter.png)<br>*Table parameter in DataMiner 10.4.5*
+![Table parameter](~/dataminer/images/Table_Parameter.png)<br>*Table parameter in DataMiner 10.6.5*
 
 Regardless of the type of table parameter, the following applies:
 

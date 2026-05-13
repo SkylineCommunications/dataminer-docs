@@ -20,7 +20,7 @@ Note the following:
 
 - If a parameter has an **exception value**, and you do not specify the exception value in the alarm template, it will be considered a normal value.
 
-- If you want to **quickly enable or disable a large number of parameters**, first select them by keeping the Ctrl key pressed or by selecting the first parameter, keeping the Shift key pressed, and then selecting the last parameter. Then right-click and select *Enable selected parameters* or *Disable selected parameters*, respectively. To select all parameters at once or clear the selection for all parameters at once, right-click the column header of the list of parameters and select *Enable all parameters* or *Disable all parameters*, respectively.
+- If you want to **quickly enable or disable a large number of parameters**, either keep the Ctrl key pressed as you select them separately, or select a group of parameters by selecting the first parameter, keeping the Shift key pressed, and then selecting the last parameter. Then right-click and select *Enable selected parameters* or *Disable selected parameters*, respectively. To select all parameters at once or clear the selection for all parameters at once, right-click the column header of the list of parameters and select *Enable all parameters* or *Disable all parameters*, respectively.
 
 - For **DVE elements**, the behavior of the alarm monitoring of child and parent elements can be different depending on specific circumstances. For detailed information, see [Assigning templates to DVE parent or child elements](xref:AdvancedDVEsTemplates).
 

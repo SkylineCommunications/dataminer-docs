@@ -164,6 +164,8 @@ items:
             topicUid: BPA_Cassandra_DB_Size
           - name: Check Deprecated DLL Usage
             topicUid: BPA_Check_Deprecated_DLL_Usage
+          - name: Check System Health
+            topicUid: BPA_Check_System_Health
           - name: Check Time Server
             topicUid: BPA_Check_Time_Server
           - name: Cube CRL Freeze

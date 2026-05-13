@@ -9,7 +9,7 @@ To access specific settings for the Alarm Console, click the hamburger button in
 This will open a menu containing the settings explained below.
 
 ![Alarm Console settings menu](~/dataminer/images/Alarm_Console_settings.png)<br>
-*Alarm Console settings menu in DataMiner 10.3.6*
+*Alarm Console settings menu in DataMiner 10.6.5*
 
 ## Automatically remove cleared alarms
 
@@ -127,7 +127,7 @@ This setting is only available if [History tracking](#history-tracking) is enabl
 
 When these settings are used, by default, when an alarm is cleared and then reappears, this results in a separate alarm tree. Activating *Merge alarm trees* combines these alarm trees, which can result in a better overview, e.g., in a sliding window tab.
 
-![Merge alarm trees](~/dataminer/images/Merge_Alarm_Trees.png)<br>*Merged alarm trees in DataMiner 10.4.5*
+![Merge alarm trees](~/dataminer/images/Merge_Alarm_Trees.png)<br>*Merged alarm trees in DataMiner 10.6.5*
 
 When you activate this option, you can also select an additional option to only merge alarm trees in case the time between the alarm trees is less than a particular time span (between 1 second and 1 day).
 

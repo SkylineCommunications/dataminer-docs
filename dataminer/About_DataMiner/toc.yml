@@ -98,6 +98,40 @@ items:
       items:
         - name: Billing and metering
           topicUid: Pricing_billing_and_metering
+        - name: Sizing guide
+          topicUid: Pricing_sizing_guide
+          items:
+            - name: Services
+              topicUid: Pricing_sizing_guide_services
+              items:
+              - name: Data Plane
+                topicUid: Pricing_sizing_guide_services_data_plane
+              - name: Data Sources
+                topicUid: Pricing_sizing_guide_services_data_sources
+              - name: Automation
+                topicUid: Pricing_sizing_guide_services_automation
+              - name: Collaboration Services
+                topicUid: Pricing_sizing_guide_services_collaboration_services
+              - name: Storage as a Service
+                topicUid: Pricing_sizing_guide_services_StaaS
+              - name: DataMiner as a Service
+                topicUid: Pricing_sizing_guide_services_DaaS
+              - name: DataMiner Assistant
+                topicUid: Pricing_sizing_guide_services_DataMiner_Assistant
+            - name: Solutions
+              topicUid: Pricing_sizing_guide_solutions
+              items:
+              - name: MediaOps Plan
+                topicUid: Pricing_sizing_guide_solutions_MediaOps_Plan
+              - name: Ticketing
+                topicUid: Pricing_sizing_guide_solutions_Ticketing
+              - name: Starlink
+                topicUid: Pricing_sizing_guide_solutions_Starlink
+            - name: Use cases
+              topicUid: Pricing_sizing_guide_use_cases
+              items:
+              - name: GV AMPP
+                topicUid: Pricing_sizing_guide_use_cases_GV_AMPP
     - name: Perpetual-Use Licensing
       topicUid: Pricing_Perpetual_Use_Licensing
     - name: Professional Service credits

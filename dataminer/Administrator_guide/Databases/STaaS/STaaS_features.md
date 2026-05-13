@@ -72,7 +72,7 @@ If your system is pushing too much load for a specific data type, that data type
 
 From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 42387 -->, when this happens, an alarm will be generated in Cube with information about the data type or types that are being throttled. For example:
 
-![ThrottlingAlarmExample](~/dataminer/images/throttling_alarm_example.png)
+![ThrottlingAlarmExample](~/dataminer/images/throttling_alarm_example.png)<br>*Alarm Console in DataMiner 10.6.5*
 
 If you encounter such an alarm, to ensure smooth operation of your DataMiner System, try to identify and resolve the root cause of this higher load. For assistance with this investigation, please contact <support@dataminer.services>.
 

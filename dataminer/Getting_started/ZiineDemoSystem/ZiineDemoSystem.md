@@ -74,7 +74,7 @@ If you are having problems connecting using the DataMiner Cube:
 
    1. Click the blue arrow icon to log on.
 
-      ![Logging on to Ziine](~/dataminer/images/ziine_login.png)
+      ![Logging on to Ziine](~/dataminer/images/ziine_login.png)<br>*Login screen in DataMiner 10.6.5*
 
 ## Navigating the Ziine UI in DataMiner Cube
 
@@ -88,4 +88,4 @@ Under each view, subviews represent the different demos on show. For example, un
 
 In the central pane (or "[card pane](xref:DataMiner_Cube_card_pane)") of the Cube UI, you will find navigation links to a demo hub where you can explore the ever-growing list of demos on offer, a quick starter guide, and more.
 
-![Ziine Cube](~/dataminer/images/Ziine_cube.png)
+![Ziine Cube](~/dataminer/images/Ziine_cube.png)<br>*Ziine root view in DataMiner 10.6.5*

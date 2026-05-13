@@ -476,7 +476,7 @@ To monitor expiry dates, we recommend using the **Skyline SSL Certificate Monito
 
 1. [Create an alarm template](xref:Creating_an_alarm_template) to monitor the parameter *Remaining Days* of the protocol, and [assign it to the element](xref:Assigning_an_alarm_template).
 
-   ![Alarm template configuration](~/dataminer/images/Skyline_SSL_Certificate_Monitor_thresholds.png)
+   ![Alarm template configuration](~/dataminer/images/Skyline_SSL_Certificate_Monitor_thresholds.png)<br>*Alarm template editor in DataMiner 10.6.5*
 
 ## Renewing the TLS certificates for OpenSearch
 

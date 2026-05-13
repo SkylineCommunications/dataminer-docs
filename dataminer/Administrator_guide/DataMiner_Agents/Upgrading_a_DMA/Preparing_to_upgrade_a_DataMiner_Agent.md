@@ -86,15 +86,7 @@ Also, please take into account that the following **exceptions** apply:
 
 If you are about to upgrade across major versions, before proceeding with the upgrade, **ensure the following requirements are met**:
 
-- Depending on the target DataMiner version, make sure the corresponding **Microsoft .NET and ASP.NET Core** packages are installed:
-
-  | DataMiner version | Microsoft .NET | ASP.NET Core |
-  |--|--|--|
-  | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 and higher | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) |
-  |DataMiner 10.3.0 [CU12] to 10.3.0 [CU18]<br/>DataMiner 10.4.0 to 10.4.0 [CU6]<br/>DataMiner 10.4.3 to 10.4.9| [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 6.0.13](https://download.visualstudio.microsoft.com/download/pr/0cb3c095-c4f4-4d55-929b-3b4888a7b5f1/4156664d6bfcb46b63916a8cd43f8305/dotnet-hosting-6.0.13-win.exe)<br/>[ASP.NET Core 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) |
-  | DataMiner 10.3.9/10.4.1/10.4.2 | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 6.0.13](https://download.visualstudio.microsoft.com/download/pr/0cb3c095-c4f4-4d55-929b-3b4888a7b5f1/4156664d6bfcb46b63916a8cd43f8305/dotnet-hosting-6.0.13-win.exe) |
-  | DataMiner 10.3.0 Main Release versions from 10.3.0 [CU3] onwards<br/>DataMiner 10.3.3 to 10.3.8 | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 5.0.11](https://download.visualstudio.microsoft.com/download/pr/df452763-4b7d-490a-bc03-bd1003d3ff4c/665ee1786528809f33e791558b69cf51/dotnet-hosting-5.0.11-win.exe)<br/>[ASP.NET Core 6.0.13](https://download.visualstudio.microsoft.com/download/pr/0cb3c095-c4f4-4d55-929b-3b4888a7b5f1/4156664d6bfcb46b63916a8cd43f8305/dotnet-hosting-6.0.13-win.exe) |
-  | DataMiner 10.3.0 [CU0] up to [CU2]<br/>DataMiner 10.2.0/10.2.x | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 5.0.11](https://download.visualstudio.microsoft.com/download/pr/df452763-4b7d-490a-bc03-bd1003d3ff4c/665ee1786528809f33e791558b69cf51/dotnet-hosting-5.0.11-win.exe) |
+- Depending on the target DataMiner version, make sure the corresponding **Microsoft .NET and ASP.NET Core** packages are installed. See [DataMiner Compute Requirements: Microsoft .NET](xref:DataMiner_Compute_Requirements#microsoft-net).
 
 - Depending on the target DataMiner version, make sure the corresponding minimum version of the **Microsoft Visual C++ x86/x64 redistributables** is installed.
 
@@ -151,7 +143,7 @@ The following prerequisite checks are currently available:
 
 - Verify Cluster Ports: Verifies whether the ports used by DataMiner can be reached in between DataMiner Agents. If this check fails, you will need to install the [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade) package. From DataMiner 10.2.0 [CU2]/10.2.5 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
-- [Verify .NET Version](xref:Verify_ASP_Net_Version): Verifies whether the Microsoft ASP.NET 8.0 Hosting Bundle is installed. From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, this prerequisite is available by default and runs automatically when you upgrade.
+- [Verify .NET Version](xref:Verify_ASP_Net_Version): Verifies whether the required Microsoft .NET versions are installed, necessary for guaranteeing DataMiner's access to all requisite security updates. From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify Elastic Storage Type](xref:Verify_Elastic_Storage_Type): Verifies whether the system has successfully switched to an [indexing database](xref:Indexing_Database). From DataMiner 10.4.0/10.4.1 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 

@@ -76,7 +76,7 @@ Example of minidump in case of process disappearance:
 
 ### Check SLWatchdog2.txt for the initial problem
 
-It is possible that more that one problem is occurring at the same time or that a major problem is caused by a less visible problem that occurred earlier. *SLWatchdog2.txt* can help you identify the initial problem.
+It is possible that more than one problem is occurring at the same time or that a major problem is caused by a less visible problem that occurred earlier. *SLWatchdog2.txt* can help you identify the initial problem.
 
 Look for the following lines:
 

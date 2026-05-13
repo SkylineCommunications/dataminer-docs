@@ -20,13 +20,13 @@ Yes. Even when the configuration or type of an element prevents it from being sw
 
 No, the identifier (DataMiner ID/element ID) of an element that is swarmed stays the same. You can find this identifier by right-clicking an element in the Cube Surveyor and selecting *Properties*:
 
-![Element ID in Cube](~/dataminer/images/Swarming_FAQ_DataMinerID.png)
+![Element ID in Cube](~/dataminer/images/Swarming_FAQ_DataMinerID.png)<br>*Element properties in DataMiner 10.6.5*
 
 The **DataMiner ID** part of the identifier does not refer to the Agent hosting the element but to the Agent where the element was originally created. Combined with the element ID part, it creates a unique identifier for an element throughout the DMS.
 
 Each element also stores where it is hosted, and that **Host ID** field is updated when the element is swarmed. To find this field, open the parent view of the element in DataMiner Cube, and scroll to the right in the list of elements until you see the *HOST ID* and *DATAMINER* column for the element. For example, here you can see these columns after the column order has been adjusted to show them side by side with the *NAME* and *ID*:
 
-![Hosting Agent in Cube](~/dataminer/images/Swarming_FAQ_HostingAgentCube.png)
+![Hosting Agent in Cube](~/dataminer/images/Swarming_FAQ_HostingAgentCube.png)<br>*View card in DataMiner 10.6.5*
 
 To find out which Agent is hosting an element using code, use the *HostingAgentID* property.
 

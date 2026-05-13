@@ -2,25 +2,17 @@
 uid: Cube_Feature_Release_10.6.5
 ---
 
-# DataMiner Cube Feature Release 10.6.5 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.5
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU2].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.5](xref:General_Feature_Release_10.6.5).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.5](xref:Web_apps_Feature_Release_10.6.5).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No features have been added yet.*
 
 ## Changes
 
@@ -105,3 +97,9 @@ In some cases, an exception could be thrown when restarting a spectrum element.
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When DataMiner Cube was disconnected or when you logged out, in some cases, overlays would incorrectly not be closed.
+
+#### 'Enable alarm storm protection' settings would not be visualized correctly in the UI [ID 45293]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 [CU0] -->
+
+Since DataMiner version 10.6.4, the *Enable alarm storm protection* settings would not be visualized correctly in the UI.

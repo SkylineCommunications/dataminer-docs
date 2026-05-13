@@ -4,7 +4,7 @@ uid: IO_Installation
 
 # Installing InfraOps
 
-To install dataminer.InfraOps:
+To install InfraOps:
 
 1. Confirm whether the following prerequisites are met:
 

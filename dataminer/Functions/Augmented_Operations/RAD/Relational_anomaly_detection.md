@@ -101,9 +101,9 @@ From DataMiner 10.4.0 [CU22]/10.5.0 [CU10]/10.6.0/10.6.1 onwards<!-- RN 43857 --
 
 Hovering over a tag button or right-clicking and selecting *Expand tags* will highlight the anomalies in orange.
 
-Additionally, a "+" icon will appear to the right of multivariate trend pattern tags and relational anomaly tags when not all involved parameters are currently loaded in the graph. Clicking the icon will load all parameters associated with the multi-variate trend pattern or the anomaly.
+Additionally, a "+" icon appears to the right of a tag button when not all involved parameters are currently loaded in the graph. Clicking the icon will load all parameters associated with the anomaly.
 
-![Relational anomaly group in trend graph](~/dataminer/images/RAD_trend_graph.gif)<br>*Trend graph showing a relational anomaly in DataMiner 10.6.1*
+![Relational anomaly group in trend graph](~/dataminer/images/RAD_trend_graph.gif)<br>*Trend graph showing a relational anomaly in DataMiner 10.6.5*
 
 ## Limitations
 

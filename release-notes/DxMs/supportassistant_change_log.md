@@ -4,6 +4,10 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 14 April 2026 - Enhancement - SupportAssistant 1.9.1 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 16 February 2026 - Enhancement - SupportAssistant 1.9.0 - Proxy setup support for file uploads
 
 File uploads in SupportAssistant previously attempted transfers only through the CloudGateway endpoint or directly. With this update, if the CloudGateway upload endpoint is unavailable, the DxM will now automatically fall back to using its configured proxy settings (when present).

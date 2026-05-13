@@ -13,9 +13,13 @@ uid: Manipulating_the_Alarm_Console
   > [!NOTE]
   > You can also single-click the alarm bar to temporarily open it on top of the open cards. As soon as you click anywhere else, the console will collapse again.
 
-- To maximize the Alarm Console over the entire window, click the maximize button: ![Maximize button](~/dataminer/images/Maximize_button00039.png)
+- To maximize the Alarm Console over the entire window, click the maximize button: ![Maximize button](~/dataminer/images/MaximizeButton.png)
 
-- To undock the Alarm Console into a separate window, click the undock button: ![Undock button](~/dataminer/images/Undock_button.png)
+  Prior to DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4, the maximize button appears as follows: ![Old maximize button](~/dataminer/images/Maximize_button.png)
+
+- To undock the Alarm Console into a separate window, click the undock button: ![Undock button](~/dataminer/images/UndockButton.png)
+
+  Prior to DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4, the undock button appears as follows: ![Old undock button](~/dataminer/images/Undock_button.png)
 
 - To open a menu that displays any notifications related to alarms or suggested events, click the light bulb button: ![Light bulb button](~/dataminer/images/LightBulb_button.png) <!--RN 36777-->
 

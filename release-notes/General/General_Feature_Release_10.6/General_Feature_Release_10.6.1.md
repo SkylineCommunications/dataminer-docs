@@ -415,6 +415,12 @@ A caching mechanism has now been introduced in order to enhance performance when
 
 When the anomaly scores for a particular relational anomaly (sub)group and region are retrieved twice within a 5-minute window, from now on, SLAnalytics will not recalculate the scores. Instead, it will return the scores from the cache.
 
+#### BPA test 'Antivirus on the DataMiner Agents' no longer checks for CrowdStrike files [ID 44199]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+From now on, the *Antivirus on the DataMiner Agents* BPA test will no longer check for CrowdStrike files.
+
 ### Fixes
 
 #### Service templates: Problem when parsing conditions to dynamically include or exclude child elements [ID 43120]
@@ -580,3 +586,9 @@ Because of a protobuf serialization issue, GQI data sources could throw an excep
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
+
+#### API call 'DeleteRows' API could incorrectly delete rows from SLProtocol without having received any request to delete them [ID 44811]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+Up to now, the `DeleteRows` API call could incorrectly delete rows from SLProtocol without having received any request to delete them. This would happen after it had received a request to delete a combination of existing keys and non-existing keys.

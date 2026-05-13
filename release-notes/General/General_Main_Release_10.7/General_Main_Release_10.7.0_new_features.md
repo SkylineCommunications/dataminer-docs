@@ -317,3 +317,26 @@ From now on, when you select the *Compile in DEBUG mode* option in the *Advanced
     engine.Log("This code is only compiled in DEBUG mode.");
 #endif
 ```
+
+#### DataMiner Object Models: DomDefinitionReferences and FieldValueReferences can now be marked as read-only [ID 45275]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When you configure DOM security, you can now set `DomDefinitionReferences` and `FieldValueReferences` to read-only. This way, you can give user groups safe, controlled access based on a specific reference, allowing users to see and inspect data but not change it.
+
+To support this, the DOM API now includes a `ReadOnly` property (of type boolean) in the `DomDefinitionReference` and `FieldValueReference` classes.
+
+With *Read* access, users can:
+
+- Read the DOM instances
+- Retrieve specific fields from the DOM instances
+- Count the DOM instances
+- Receive the events when subscribed to DOM instance changes
+- Retrieve DOM attachments linked to DOM instances
+- Read the DOM instance history
+- Count the DOM instance history records
+
+With *Write* access, which is the default behavior when the `ReadOnly` property is not enabled, users can:
+
+- Create, update, or delete DOM instances
+- Add or remove DOM attachments on a DOM instance

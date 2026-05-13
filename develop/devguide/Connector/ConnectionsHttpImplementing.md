@@ -7,9 +7,67 @@ description: To periodically request information from a device via HTTP, the app
 
 Periodically requesting information from a device via HTTP can be done as follows:
 
-![Implementing HTTP communication](~/develop/images/Connection_Types_-_HTTP_Session_Building_Blocks.svg)
+```mermaid
+flowchart LR
+    subgraph timerBox["Timer 1"]
 
-The approach is very similar to serial communication: with HTTP, the content of the group will be a session, whereas with serial communication a pair is used.
+        G1["Group 1"]
+    end
+    subgraph groupBox["Group 1"]
+
+        S1["Session 1"]
+    end
+    subgraph sessionBox["Session 1"]
+    end
+
+    G1 --> groupBox
+    S1 --> sessionBox
+
+    classDef infoText fill:none,stroke:none,color:#FFFFFF
+    classDef infoTextBlack fill:none,stroke:none,color:#000000
+    class groupDesc,sessionDesc infoText
+    class timerDesc infoTextBlack
+
+    style timerBox fill:#EFF6FF,stroke:#DBEAFE,color:#000000
+    style groupBox fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style sessionBox fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style G1 fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style S1 fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+```
+
+```xml
+<HTTP>
+   <Session id="1" name="getData">
+      <Connection id="1">
+         <Request verb="GET" url="localhost/data.xml" />
+         <Response statusCode="10">
+           <Content pid="20"></Content>
+         </Response>
+      </Connection>
+   </Session>
+</HTTP>
+<Groups>
+   <Group id="1">
+      <Name>getData</Name>
+      <Description>Get Data</Description>
+      <Content>
+         <Session>1</Session>
+      </Content>
+   </Group>
+</Groups>
+<Timers>
+   <Timer id="1">
+      <Name>10s - Fast Timer</Name>
+      <Time initial="true">10000</Time>
+      <Interval>75</Interval>
+      <Content>
+         <Group>1</Group>
+      </Content>
+   </Timer>
+</Timers>
+```
+
+The approach is very similar to serial communication: with HTTP, the content of the [Group](xref:Protocol.Groups.Group) will be a [session](xref:Protocol.HTTP.Session), whereas with serial communication a [Pair](xref:Protocol.Pairs.Pair) is used.
 
 > [!NOTE]
 > An example protocol "Skyline Example HTTP" is available in the [SkylineCommunications/SLC-C-Example_HTTP](https://github.com/SkylineCommunications/SLC-C-Example_HTTP) GitHub repository.
@@ -37,13 +95,13 @@ The following example shows an implementation of an HTTP request:
 </Request>
 ```
 
-Using the *verb* attribute, the request defines which HTTP method (or verb) is to be used, e.g., "GET", "POST", "PUT", etc.
+Using the [verb](xref:Protocol.HTTP.Session.Connection.Request-verb) attribute, the request defines which HTTP method (or verb) is to be used, e.g., "GET", "POST", "PUT", etc.
 
-The *url* attribute defines the path, optionally including a query string and/or fragment string.
+The [url](xref:Protocol.HTTP.Session.Connection.Request-url) attribute defines the path, optionally including a query string and/or fragment string.
 
 > [!NOTE]
 >
-> - Instead of using the *url* attribute, you can specify the ID of a parameter that holds the request path. This is done using the *pid* attribute:
+> - Instead of using the [url](xref:Protocol.HTTP.Session.Connection.Request-url) attribute, you can specify the ID of a parameter that holds the request path. This is done using the [pid](xref:Protocol.HTTP.Session.Connection.Request-pid) attribute:
 >
 >   ```xml
 >   <Request verb="GET" url="/barco-webservice/rest/NetworkWall/alarm">

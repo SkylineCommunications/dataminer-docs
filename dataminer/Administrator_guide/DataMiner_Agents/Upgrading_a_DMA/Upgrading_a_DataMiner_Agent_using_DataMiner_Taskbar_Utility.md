@@ -71,6 +71,8 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the latest version. Not
 
 1. Wait until the upgrade has finished. This can take several minutes, depending on the network properties, the type of upgrade, and the size and complexity of your DataMiner System.
 
+   During a full DMS upgrade, you can connect to any Agent that has completed its local upgrade. Prior to DataMiner 10.6.6/10.7.0<!--RN 45312-->, the only exception is the orchestrating Agent (i.e., the Agent from which the upgrade was triggered), which can only be accessed after all Agents in the cluster have been upgraded.
+
 1. When all DataMiner Agents have successfully been upgraded, click *Finished*.
 
 > [!CAUTION]

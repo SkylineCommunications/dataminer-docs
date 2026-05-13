@@ -14,7 +14,7 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
 
 1. In the Surveyor right-click menu, select *Actions \> Export*.
 
-   ![Export element](~/dataminer/images/Export_Element.png)<br/>*DataMiner Cube version 10.3.10*
+   ![Export element](~/dataminer/images/Export_Element.png)<br/>*DataMiner Cube version 10.6.5*
 
    > [!NOTE]
    >
@@ -49,7 +49,7 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
 
 1. Click *Export*.
 
-   ![Exporting an SLA](~/dataminer/images/SLA_Export.png)<br/>*DataMiner Cube version 10.3.10*
+   ![Exporting an SLA](~/dataminer/images/SLA_Export.png)<br/>*DataMiner Cube version 10.6.5*
 
 1. In the *Save As* window, browse to the location where you want to save the export and click *Save*.
 

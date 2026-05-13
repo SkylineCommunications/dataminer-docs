@@ -10,9 +10,31 @@ When you select this option, follow the steps below:
 
 1. Select the column to filter.
 
-1. Specify the filter method (e.g., equals, greater than, etc.).
+1. Choose one of the available filter methods (depending on the type of data in the selected column):
 
-   The available filter methods depend on the type of data in the selected column.
+   - *Contains*: Returns rows where the column value includes the specified value.
+
+   - *Equals*: Returns rows where the column value exactly matches the specified value.
+
+   - *Is one of*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45164 + 45255-->, on systems using the GQI DxM. Returns rows where the column value matches at least one of the specified values.
+
+   - *Is none of*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45164 + 45255-->, on systems using the GQI DxM. Returns rows where the column value does not match at least one of the specified values.
+
+   - *Not contains*: Returns rows where the column value does not include the specified value.
+
+   - *Not equals*: Returns rows where the column value does not exactly match the specified value.
+
+   - *Regex*: Returns rows where the column value matches the specified regular expression.
+
+   - *Not regex*: Returns rows where the column value does not match the specified regular expression.
+
+   - *Greater than*: Returns rows where the column value is greater than the specified value.
+
+   - *Greater than or equals*: Returns rows where the column value is greater than or equal to the specified value.
+
+   - *Less than*: Returns rows where the column value is less than the specified value.
+
+   - *Less than or equals*: Returns rows where the column value is less than or equal to the specified value.
 
 1. Specify the value to use as a filter. You have two options:
 

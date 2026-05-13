@@ -22,7 +22,7 @@ The information is shown on different tabs:
 - **Activity** > **Actions**: The recent activity of the user on the DataMiner Agent.
 
 ![Recent activity](~/dataminer/images/Recent_Activity.png)<br>
-*Recent activity on a user card in DataMiner Cube 10.5.10*
+*Recent activity on a user card in DataMiner Cube 10.6.5*
 
 > [!NOTE]
 > Please note the following regarding **user cards**:

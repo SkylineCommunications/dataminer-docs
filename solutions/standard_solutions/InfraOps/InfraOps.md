@@ -4,7 +4,7 @@ uid: InfraOps
 
 # InfraOps
 
-The dataminer.InfraOps solution unifies planning, monitoring, and automation in one powerful solution for media, telecom, satellite, and energy organizations. In one environment, you will be able to manage the entire lifecycle of your infrastructure, both on and off premises. From the first planning steps to real-time monitoring and continuous optimization, everything is connected.
+The InfraOps solution unifies planning, monitoring, and automation in one powerful solution for media, telecom, satellite, and energy organizations. In one environment, you will be able to manage the entire lifecycle of your infrastructure, both on and off premises. From the first planning steps to real-time monitoring and continuous optimization, everything is connected.
 
 The InfraOps solution includes the following three applications, which are ready for use out of the box:
 

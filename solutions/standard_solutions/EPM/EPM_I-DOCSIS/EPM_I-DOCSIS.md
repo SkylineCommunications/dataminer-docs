@@ -2,9 +2,9 @@
 uid: EPM_I-DOCSIS
 ---
 
-# DataMiner EPM Integrated DOCSIS
+# EPM Integrated DOCSIS
 
-The Integrated DOCSIS branch of the DataMiner EPM Solution is designed to manage Integrated DOCSIS deployments.
+The Integrated DOCSIS branch of the EPM Solution is designed to manage Integrated DOCSIS deployments.
 
 - [EPM Integrated DOCSIS architecture](xref:I-DOCSIS_architecture)
 - [EPM Integrated DOCSIS components](xref:I-DOCSIS_components)

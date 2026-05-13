@@ -93,7 +93,6 @@ The following table provides an overview of the port types DataMiner supports fo
 |smart-serial single|&#10004;|&#10004;||
 |http|&#10004;|||
 |gpib|&#10004;|||
-|opc|&#10004;|||
 |sla||||
 
 Port types that are not supported can be hidden from the "Type of port" box in the element editor using the *Disabled* child tag of the *PortTypeIP*, *PortTypeUDP*, and *PortTypeSerial* tag for TCP, UDP, and serial, respectively.
