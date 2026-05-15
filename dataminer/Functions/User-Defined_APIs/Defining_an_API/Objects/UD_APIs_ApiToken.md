@@ -99,8 +99,6 @@ Keep in mind that different limit/window combinations can result in different be
 
 When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `ApiTokenErrors`. Below is a list of all possible `ErrorReasons`. The `Id` property of the `ApiTokenError` object will always contain the ID of the API token that could not be created, updated or deleted.
 
-From DataMiner 10.6.7/10.7.0 onwards<!-- RN 44848 -->, the `ApiTokenError` object also has a `Message` property that contains an English description of the error.
-
 |Reason            |Description|
 |------------------|-----------|
 |InvalidName       |The specified name was null or whitespace.|
