@@ -19,6 +19,7 @@ The table below lists the properties of the `ApiToken` object. For each property
 |CreatedAt      |DateTime   |Yes        |The UTC date and time when the token was created.|
 |LastModifiedBy |string     |Yes        |The name of the last user who modified the token.|
 |LastModified   |DateTime   |Yes        |The UTC date and time when the token was last modified.|
+|RateLimit      |RateLimit  |No         |Optional rate limit that controls how frequently the token can be used to trigger APIs on a per endpoint basis. See [RateLimit](#ratelimit). Available from DataMiner 10.6.7/10.7.0 onwards.<!-- RN 44848 -->|
 
 ### Secret
 
@@ -51,6 +52,42 @@ var secret = ApiTokenSecretGenerator.GenerateSecret();
 > [!WARNING]
 > Once a token has been created with a specific secret, **it is not possible to retrieve that secret again**. The value is stored securely in the database with a non-reversible hashing function. Make sure to save it somewhere secure or pass it to the API user in a secure way.
 
+### RateLimit
+
+From DataMiner 10.6.7/10.7.0 onwards<!-- RN 44848 -->, an `ApiToken` can be configured with a rate limit to control how frequently it can be used to trigger user-defined APIs. This rate is evaluated on a per endpoint basis.
+
+A rate limit consists of the following properties:
+
+| Property | Type     | Description |
+|----------|----------|-------------|
+| Limit    | int      | The maximum number of requests allowed within the configured time window. Supported range: 1 to 100. |
+| Window   | TimeSpan | The time span during which the configured number of requests are allowed. Supported range: 1 second to 1 day. |
+
+> [!IMPORTANT]
+> Currently, rate limits cannot be configured in the UI and must be configured via the C# API. If an API token with a configured rate limit is updated through the UI, the rate limit will be cleared.
+
+#### Behavior when the limit is exceeded
+
+When the rate limit is exceeded, the *UserDefinableApiEndpoint* DxM returns an HTTP 429 *Too Many Requests* response. In this case, the API trigger is not forwarded to SLNet, and the API script is therefore not executed. The response message indicates that the rate limit was exceeded and includes internal error code 1014. See [Errors](xref:UD_APIs_Triggering_an_API#errors).
+
+Every request that can be linked to a token counts toward that token's rate limit, regardless of whether the request results in a successful API script trigger.
+
+#### Sliding window behavior
+
+Rate limiting uses a sliding window. When a request is received, the system checks how many requests were made with the same token during the preceding configured window. If the configured limit has already been reached within that period, the request is blocked.
+
+For example, with a limit of 5 requests per 1 minute, a client using the token can trigger the API up to 5 times within any rolling 1-minute period.
+
+Keep in mind that different limit/window combinations can result in different behavior, even when they allow the same average number of requests. For example:
+
+- *Limit* 10, *Window* 60 seconds allows bursts of up to 10 requests in a short time, after which the client must wait until requests fall outside the 60-second window.
+- *Limit* 1, *Window* 6 seconds spreads the requests more evenly, allowing one new request every 6 seconds.
+
+> [!NOTE]
+>
+> - Configuring a high rate limit, such as 100 requests per second, does not guarantee that DataMiner can process that number of API triggers. The actual throughput depends on factors such as API script runtime, server hardware, current system load, the number of agents in the cluster, and other system-specific conditions.
+> - When an existing rate limit is changed, the updated limit is only applied after a next trigger both starts and finishes after the update has been applied. If a long window was configured and the limit has already been reached, the client may need to wait until the window has passed before another trigger can be executed and the updated limit can take effect.
+
 ## Requirements
 
 - **Create**: The `Secret` property must contain a secret that meets the requirements mentioned under [Secret](#secret).
@@ -62,11 +99,14 @@ var secret = ApiTokenSecretGenerator.GenerateSecret();
 
 When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `ApiTokenErrors`. Below is a list of all possible `ErrorReasons`. The `Id` property of the `ApiTokenError` object will always contain the ID of the API token that could not be created, updated or deleted.
 
-|Reason        |Description|
-|--------------|-----------|
-|InvalidName   |The specified name was null or whitespace.|
-|InvalidSecret |The specified secret did not meet the requirements or is already used by another token.|
-|TokenInUse    |The token is in use by one or multiple `ApiDefinitions`. The *ApiDefinitionIdLinks* property will contain a list of IDs of the definitions using the token.|
+From DataMiner 10.6.7/10.7.0 onwards<!-- RN 44848 -->, the `ApiTokenError` object also has a `Message` property that contains an English description of the error.
+
+|Reason            |Description|
+|------------------|-----------|
+|InvalidName       |The specified name was null or whitespace.|
+|InvalidSecret     |The specified secret did not meet the requirements or is already used by another token.|
+|TokenInUse        |The token is in use by one or multiple `ApiDefinitions`. The *ApiDefinitionIdLinks* property will contain a list of IDs of the definitions using the token.|
+|InvalidRateLimit  |The configured `RateLimit` is invalid. The `Message` property contains an English description of the invalid configuration. Available from DataMiner 10.6.7/10.7.0 onwards.<!-- RN 44848 -->|
 
 ## Security
 
