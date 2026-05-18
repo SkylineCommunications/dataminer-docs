@@ -4,12 +4,14 @@ uid: BrokerGateway_Migration
 
 # Migrating to BrokerGateway
 
-From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!-- RN 42573 -->, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the "NATSMigration" tool. Prior to this, starting from DataMiner 10.5.0/10.5.2, this feature is available in [soft launch](xref:SoftLaunchOptions).
+From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!-- RN 42573 -->, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the "NATSMigration" tool.
 
 > [!IMPORTANT]
 >
 > - This migration is **mandatory to be able to upgrade to DataMiner 10.6.0/10.6.1** or higher. If you try to upgrade to such a DataMiner version when this migration has not yet been completed, the upgrade will be blocked. From DataMiner 10.6.0/10.6.1 onwards, the legacy SLNet‑managed NATS solution (NAS and NATS services) is no longer supported.<!-- RN 43861 -->
 > - We strongly recommend upgrading to 10.5.0 [CU11]/10.5.12 [CU2] or higher before starting the migration. If you do want to start the migration on an earlier version, we recommend first installing [BrokerGateway 1.9.5.23100](https://community.dataminer.services/download/dataminer-brokergateway-1-9-5-23100-msi/) on each server prior to initiating the migration.
+> -  The feature was in [soft launch](xref:SoftLaunchOptions) from DataMiner 10.5.0/10.5.2 until DataMiner 10.5.0 [CU2]/10.5.5. If you do want to start the migration in those versions, please contact Skyline Communications prior to migrating, to verify whether your system is compatible.
+
 
 > [!NOTE]
 > To start the migration, the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft‑launch option must not be disabled on any DataMiner Agent in the cluster. In DataMiner 10.5.0 [CU5]/10.5.8<!-- RN 43370 --> this option can be disabled when no migration is planned.
@@ -36,6 +38,9 @@ Before initiating the migration, ensure that the entire cluster has been operati
 
 Additionally, check whether any protocols reference *DataMinerMessageBroker.API.dll* with a version earlier than 3.0.0. Update any such references prior to the migration and remove the outdated DLL from the `C:\Skyline DataMiner\ProtocolScripts` folder. From DataMiner 10.5.0 [CU9]/10.5.12 onwards, the presence of such an outdated DLL in the *ProtocolScripts* folder will block the migration.
 
+> [!IMPORTANT]
+> If your cloud connection uses a DMZ setup, be aware that this setup will need to be adapted after the migration. For more information, see [Connecting to dataminer.services with a DMZ setup](xref:Connect_to_cloud_with_DMZ).
+
 ## Automatic migration using .dmupgrade package (recommended)
 
 If you are using a DataMiner 10.5.x version starting from 10.5.0 [CU4] or 10.5.7, the recommended way to run the migration is by means of an upgrade package available on our Dojo Community platform:
@@ -47,6 +52,9 @@ If you are using a DataMiner 10.5.x version starting from 10.5.0 [CU4] or 10.5.7
 This will automatically run `C:\Skyline DataMiner\Tools\NATSMigration.exe` with default settings on all Agents. The DataMiner Agents will not be restarted.
 
 In case any issues occur during the migration, the output will be shown (similar to the [manual migration log](#full-example-migration-log-sanitized)). Aside from this, you can check the logging in `C:\Skyline DataMiner\Upgrades\Packages\NATSMigration.dmupgrade-XXX\progress.log` and in the upgrade utility UI.
+
+> [!IMPORTANT]
+> If the DMS has a DMZ setup, please update it as outlined in [Updating the DMZ setup](#updating-the-dmz-setup)
 
 ## Manual migration
 
@@ -62,6 +70,37 @@ For DataMiner versions prior to 10.5.0 [CU4]/10.5.7, the migration needs to be r
 
 > [!IMPORTANT]
 > This must happen on **each DMA** in the cluster **within a 10-minute time frame**. It is very important that this happens for **each individual DataMiner Agent, including Failover DMAs**. Prior to DataMiner 10.5.0 [CU4]/10.5.7, this also involves a restart of each DataMiner Agent.
+> If the DMS has a DMZ setup, please update it as outlined in [Updating the DMZ setup](#updating-the-dmz-setup)
+
+## Updating the DMZ setup
+
+After migrating to BrokerGateway, update your DMZ setup to match the new BrokerGateway-based configuration.
+
+DxM modules in the DMZ connect to DataMiner by using `C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json`. In that file:
+
+- `CredentialsUrl` must point to one DMA in the internal network where the BrokerGateway process is running and that is reachable from the DMZ.
+- `APIKeyPath` must point to the local path of the copied `appsettings.runtime.json` file.
+
+To update the setup:
+
+1. Copy `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` from a DataMiner node to the same path on the DMZ host.
+
+1. On the DMZ host, open `C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json`.
+
+1. Update the file to use the following `BrokerGatewayConfig` format:
+
+    ```json
+    {
+       "BrokerGatewayConfig": {
+          "CredentialsUrl": "https://SERVERADDRESS/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
+          "APIKeyPath": "C:\\Program Files\\Skyline Communications\\DataMiner BrokerGateway\\appsettings.runtime.json"
+       }
+    }
+    ```
+
+1. Set `CredentialsUrl` to one of the servers in the internal network.
+
+1. Verify that `APIKeyPath` matches the location of the copied `appsettings.runtime.json` file.
 
 ### Full example migration log (sanitized)
 
