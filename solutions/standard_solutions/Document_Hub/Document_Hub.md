@@ -59,7 +59,7 @@ In essence, dataminer.DocumentHub enables organizations to deliver better servic
 
 ## What can you do with dataminer.DocumentHub?
 
-dataminer.DocumentHub simplifies document and file management across your DataMiner ecosystem. The solution provides a [ready-made application](#document-hub-application) that can be extended with custom workflows and integrations. It can also be extended with automation scripts and user-defined APIs to integrate with your existing systems.
+dataminer.DocumentHub simplifies document and file management across your DataMiner ecosystem. The solution provides a [ready-made application](xref:DH_Application) that can be extended with custom workflows and integrations. It can also be extended with automation scripts and user-defined APIs to integrate with your existing systems.
 
 DocumentHub supports the following capabilities by default without any customization:
 

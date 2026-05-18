@@ -191,7 +191,6 @@ items:
           topicUid: Tutorial_DH_SharePoint
         - name: Configuring DOM attachments on a network share
           topicUid: Tutorial_DH_DOM_NetworkShare
-    - name: DataMiner PTP
     - name: PTP
       topicUid: SolPTP
       items:
