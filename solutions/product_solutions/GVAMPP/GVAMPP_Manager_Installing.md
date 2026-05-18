@@ -16,10 +16,10 @@ uid: GVAMPP_Manager_Installing
 
 - A connection to an **AMPP tenancy** via its URL (e.g., `https://mytenancy.gvampp.com`)
 
-- An **API key** generated using the AMPP Identity Manager.
+- An AMPP Control **API key** generated using the AMPP Identity Manager.
 
   > [!TIP]
-  > Refer to the AMPP documentation hub for specific instructions.
+  > Starting from version 1.1.8, the installed AMPP Manager connector can also report **subscriptions and billing** information. To enable these features, you need an **additional application client API key** of type *subscriptions.admin*, with the *cluster.admin* role and allowed scopes for *cluster platform*. For detailed setup instructions, refer to the AMPP documentation hub.
 
 ## Deploying the Grass Valley AMPP Manager app
 
