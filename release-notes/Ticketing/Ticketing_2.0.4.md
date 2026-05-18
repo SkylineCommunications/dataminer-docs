@@ -4,6 +4,10 @@ uid: Ticketing_2.0.4
 
 # Ticketing 2.0.4
 
+> [!IMPORTANT]
+> Note that this version can only be used on a STaaS/DaaS DataMiner system (so not on a self hosted and managed system)!
+
+
 ## Prerequisites
 
 - **DataMiner 10.5.9/10.6.0** or higher must be installed.
