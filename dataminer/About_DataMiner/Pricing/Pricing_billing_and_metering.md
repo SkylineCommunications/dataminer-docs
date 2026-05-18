@@ -84,20 +84,15 @@ Example:
 - March 1 through 7, the maximum number of concurrent connectors used each day is 5.
 - For the rest of the month, the maximum number of concurrent connectors used each day is always 4.
 
-The number of credits consumed for Connector Services is calculated as the maximum number of concurrent connectors used per day, times the monthly credit rate, divided by 31 days (for March):
+The number of credits consumed for Connector Services is calculated as the maximum number of concurrent connectors used per day, times the monthly credit rate, divided by the number of days in the month (31 days for March):
 
-**Pay-Per-Use (PPU)**
-All usage is billed proportionally based on actual daily peaks.
+- **Pay-Per-Use (PPU)**: All usage is billed proportionally based on actual daily peaks.
 
-- Monthly Service Consumption = 5 connectors x 7 days x 8 credits / 31 + 4 connectors x 24 days x 8 credits / 31 days
+  Monthly Service Consumption = 5 connectors x 7 days x 8 credits / 31 + 4 connectors x 24 days x 8 credits / 31 days
 
+- **Subscription**: A subscription includes a fixed baseline capacity (e.g., 4 connectors). Usage above this level is billed as overage using the above-mentioned pro-rated logic.
 
-**Subscription**
-A subscription includes a fixed baseline capacity (e.g. 4 connectors). Usage above this level is billed as overage using the same pro-rated logic.
-
-- Overage Consumption = (5 − 4) connectors × 7 days × 8 credits / 31  
-
-
+  Overage Consumption = (5 − 4) connectors × 7 days × 8 credits / 31
 
 ## Cancellation
 
