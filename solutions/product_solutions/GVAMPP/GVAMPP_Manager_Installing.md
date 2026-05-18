@@ -46,7 +46,9 @@ The Grass Valley AMPP Manager app relies on an external component to communicate
 An automation script included in the package helps with both the installation of this component and the creation of the AMPP Manager element. To run the script:
 
 1. Go to the DataMiner landing page (`https://[DMA]/root/`).
+
 1. Open the *GV AMPP Manager* app.
+
 1. In the app, click the cogwheel ![cogwheel](~/dataminer/images/GV_AMPP_Manager_Configuration_page.png) icon in the sidebar to open the *Setup* page.
 
    This page provides initial instructions and a link to download and install the Microsoft .NET 8.0 Hosting Bundle, in case this is not installed yet.
