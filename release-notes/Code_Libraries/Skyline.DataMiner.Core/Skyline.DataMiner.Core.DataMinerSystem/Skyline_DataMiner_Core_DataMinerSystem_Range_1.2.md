@@ -13,7 +13,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 
 The `StartValueMonitor` methods on `IDmsStandaloneParameter`, `IDmsColumn` (cell), `IDmsColumn` (column), and `IDmsTable` now require an explicit `includeCurrentValues` boolean parameter.
 
-Previously, behavior was inconsistent: some monitors (e.g. on a table cell) included current values by default, while others (e.g. on a complete table) did not. This parameter makes the behavior explicit and consistent across all value monitor types.
+Previously, behavior was inconsistent: some monitors (e.g., on a table cell) included current values by default, while others (e.g., on a complete table) did not. This parameter makes the behavior explicit and consistent across all value monitor types.
 
 > [!IMPORTANT]
 > This is a **breaking change**. Existing code calling `StartValueMonitor` without the `includeCurrentValues` argument will no longer compile and must be updated.
