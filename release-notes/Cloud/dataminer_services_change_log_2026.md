@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 18 May 2026 - New feature - Admin - Automatic log collection for support tickets
 
-On the Support page of the Admin app, users can now link a cloud-connected DMS and specific Agents to their support ticket. When enabled, this triggers automatic log collection, ensuring support engineers receive the necessary diagnostic data without manual uploads.
+When creating a support ticket on the Support page in the Admin app, users can now link a cloud-connected DMS and specific Agents to their support ticket. When enabled, this triggers automatic log collection, ensuring support engineers receive the necessary diagnostic data without manual uploads.
 
 ### 18 May 2026 - Enhancement - Admin - Agent selection dynamically filtered by cluster
 
@@ -23,7 +23,7 @@ When a support ticket is created on the Support page in the Admin app, instead o
 
 ### 18 May 2026 - Enhancement - Admin - Skyline Support shown in assigned-to field
 
-In the ticket details view on the Support page of the Admin app, the *Assigned to* field now clearly shows *Skyline Support* for relevant internal teams.
+In the ticket details view on the Support page of the Admin app, the *Assigned to* field now shows *Skyline Support* when relevant, while previously internal teams could be shown that could be confusing for the user.
 
 ### 18 May 2026 - New feature - Admin - Support server availability check
 
@@ -35,7 +35,7 @@ On the Support page of the Admin app, the *Impact* field has been removed from t
 
 ### 18 May 2026 - Enhancement - Admin - Automatic log collection toggle only shown when applicable
 
-On the Support page of the Admin app, the *Automatic log collection* toggle now only appears when cloud-connected Agents are selected.
+When a support ticket is created on the Support page in the Admin app, the *Automatic log collection* toggle button is now only shown when cloud-connected Agents are selected.
 
 ### 7 May 2026 - Enhancement - Admin - Billing overview now shows services table at unit level
 
