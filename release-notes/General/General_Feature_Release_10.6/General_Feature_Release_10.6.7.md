@@ -100,7 +100,7 @@ For detailed information about the changes included in those versions, refer to 
 
 #### APIGateway has been upgraded to Microsoft .NET 10 [ID 45421]
 
-<!-- MR 10.7.0 - FR 10.6.7 -->
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
 The APIGateway module has been upgraded to Microsoft .NET 10.
 

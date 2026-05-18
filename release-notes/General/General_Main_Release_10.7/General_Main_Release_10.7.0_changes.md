@@ -480,12 +480,6 @@ From now on, all state changes of all SLNet connections between Agents in the cl
 
 Because of a number of enhancements, overall performance has increased when detecting flatline events, especially on systems with a large number of monitored parameters.
 
-#### APIGateway has been upgraded to Microsoft .NET 10 [ID 45421]
-
-<!-- MR 10.7.0 - FR 10.6.7 -->
-
-The APIGateway module has been upgraded to Microsoft .NET 10.
-
 #### Standalone BPA Executor will now return exit code 1 or 2 when issues were detected [ID 45433]
 
 <!-- MR 10.7.0 - FR 10.6.7 -->
@@ -561,12 +555,6 @@ From now on, when the SLLogCollector tool detects that it is not possible to exe
 When a protocol connection that acted as a server failed to bind to the socket during startup, up to now, this would only get logged (with debug level 1). From now on, this will be assigned error level 0.
 
 Also, the element will go into an error state, and an alarm indicating a failing binding will be generated.
-
-#### SLNet: MessageBroker cache could leak NATS threads [ID 45259]
-
-<!-- MR 10.7.0 - FR 10.6.6 -->
-
-In some rare cases, the MessageBroker cache of SLNet could leak NATS threads.
 
 #### Service & Resource Management: Problem when the Agent with the lowest DMA ID was removed from a DataMiner System [ID 45281]
 
