@@ -961,6 +961,8 @@ items:
     items:
       - name: Extension libraries
         topicUid: GQI_Extension_Libraries
+      - name: Defining discrete values for columns
+        topicUid: GQI_Extensions_Discrete_Values
       - name: Ad hoc data sources
         topicUid: GQI_Ad_hoc_data_sources
         items:
@@ -972,8 +974,6 @@ items:
             topicUid: Ad_hoc_Life_cycle
           - name: Linking rows to DataMiner objects
             topicUid: Ad_hoc_Metadata
-          - name: Defining discrete values for columns
-            topicUid: Ad_hoc_Discrete_Values
           - name: Examples
             topicUid: Ad_hoc_Examples
             items:
