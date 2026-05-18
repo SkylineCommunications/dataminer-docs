@@ -13,6 +13,19 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 On the Billing overview page in the Admin app, the services table now shows data at unit level instead of capping out at service level, giving users a deeper insight into what is affecting their billing the most.
 
+### 7 May 2026 - Fix - Admin - Billing - Add discounts to new subscription based on estimate
+
+This change applies discounts to new subscriptions based on estimates.
+
+### 7 May 2026 - New feature - Admin - Support - Ticket creation with attachments
+
+You can now attach files (screenshots, logs, configs, etc.) directly when creating a support ticket.
+A confirmation email and SharePoint folder are created for the ticket when possible.
+
+### 7 May 2026 - Fix - Admin - DMS Overview - StaaS tile updates when switching DMS
+
+Fixed an issue where switching DMS on the DMS Overview page did not update the StaaS configuration tile. The tile now correctly updates based on the user's role for the selected DMS.
+
 ### 5 May 2026 - New feature - Admin - Draft subscriptions
 
 On the Billing page of the Admin app, the Subscriptions page now shows draft subscriptions, which are marked as *Draft* in the state column. The following changes have also been introduced:
