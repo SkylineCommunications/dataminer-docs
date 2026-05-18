@@ -1,5 +1,5 @@
 ---
-uid: Ad_hoc_Discrete_Values
+uid: GQI_Extensions_Discrete_Values
 ---
 
 # Defining discrete values for columns
@@ -9,7 +9,7 @@ Available from DataMiner Web 10.6.7/10.5.0 [CU16]/10.6.0 [CU4] onwards.<!-- RN 4
 > [!IMPORTANT]
 > This feature requires the [GQI DxM](xref:GQI_DxM) and the [Skyline.DataMiner.Core.GQI.Extensions NuGet package](https://www.nuget.org/packages/Skyline.DataMiner.Core.GQI.Extensions). It is not available through the SLAnalyticsTypes API.
 
-When defining columns in an ad hoc data source, you can optionally associate a set of **discrete values** with a column. These discrete values are exposed to the client and can be used in filter editors, making it easier for users to filter data by selecting from predefined options rather than typing values manually.
+When defining columns in GQI extensions, you can optionally associate a set of **discrete values** with a column. These discrete values are exposed to the client and can be used in filter editors, making it easier for users to filter data by selecting from predefined options rather than typing values manually.
 
 ## When to use discrete values
 
@@ -21,40 +21,37 @@ Discrete values are useful in two scenarios:
 
 ## How to define discrete values
 
-Use the [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptionsT) class to configure the available discrete values for a column. Each individual discrete value is defined using the [GQIDiscrete\<T\>](xref:GQI_GQIDiscreteT) class, which pairs a value with a display name.
+Use the [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptionsT) class to configure the available discrete values for a column. Each individual discrete value is defined using the [GQIDiscrete\<T\>](xref:GQI_GQIDiscreteT) class, which pairs a display name with an underlying value.
 
 > [!IMPORTANT]
-> Each discrete value (the underlying value, not the display value) must be unique within the column. Providing duplicate values will result in an error.
+> Each discrete value (the underlying value, not the name) must be unique within the column. Providing duplicate values will result in an error.
 
 Pass the discrete options to one of the column constructors that accept them:
 
 ```csharp
 using Skyline.DataMiner.Core.GQI.Extensions;
 
-public GQIColumn[] GetColumns()
+// A string column with a fixed set of values
+new GQIStringColumn("Status", new GQIDiscreteOptions<string>(new[]
 {
-    return new GQIColumn[]
-    {
-        // A string column with a fixed set of values
-        new GQIStringColumn("Status", new GQIDiscreteOptions<string>(new[]
-        {
-            new GQIDiscrete<string>("active", "Active"),
-            new GQIDiscrete<string>("inactive", "Inactive"),
-            new GQIDiscrete<string>("pending", "Pending"),
-        })),
+    new GQIDiscrete<string>("Active", "active"),
+    new GQIDiscrete<string>("Inactive", "inactive"),
+    new GQIDiscrete<string>("Pending", "pending"),
+})),
 
-        // A numeric column with exception values alongside a continuous range
-        new GQIDoubleColumn("Temperature", new GQIDiscreteOptions<double>(new[]
-        {
-            new GQIDiscrete<double>(-1, "Error"),
-            new GQIDiscrete<double>(-2, "Not Available"),
-        }, isStrict: false)),
+// A numeric column with exception values alongside a continuous range
+new GQIDoubleColumn("Temperature", new GQIDiscreteOptions<double>(new[]
+{
+    new GQIDiscrete<double>("Error", -1),
+    new GQIDiscrete<double>("Not Available", -2),
+}, isStrict: false)),
 
-        // A column without discrete values
-        new GQIStringColumn("Description"),
-    };
-}
+// A column without discrete values
+new GQIStringColumn("Description"),
 ```
+
+> [!NOTE]
+> Within custom operators, the discretes of existing columns can be read but not altered.
 
 ## Strict vs. non-strict
 
@@ -62,6 +59,17 @@ The `IsStrict` property on [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptions
 
 > [!NOTE]
 > The `IsStrict` setting currently does not affect how the client presents the filter UI. Regardless of this setting, **numeric** discrete columns are generally handled as non-strict (allowing free-form input alongside discrete options) and **string** discrete columns are generally handled as strict (presenting only the discrete options). This behavior may change in a future release.
+
+## Cell values for discrete columns
+
+When a cell value for a discrete column matches one of the configured discrete values, DataMiner uses the corresponding discrete name as the cell display value.
+
+In other words:
+
+- If you provide a display value that differs from the discrete name, it is replaced by the discrete name.
+- If you do not provide a display value, it is automatically set to the discrete name.
+
+When using strict discretes, providing a cell value that does not match any configured discrete value results in an error.
 
 ## Supported column types
 
