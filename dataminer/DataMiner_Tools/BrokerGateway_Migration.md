@@ -175,6 +175,12 @@ A typical example of this file’s contents is shown below:
    }
    ```
 
+   Optionally, a `ForcedEndpoints` array can be added to override the NATS endpoints provided by BrokerGateway.
+   This setting should only be used in combination with a server that does not run a DataMiner agent.
+   For example servers hosting a [DMZ setup for dataminer.services connectivity](xref:Connect_to_cloud_with_DMZ) or [Dashboard Gateway](xref:Dashboard_Gateway_installation).
+   [Data Aggregator DxM](xref:Data_Aggregator_DxM) does not work in combination with `ForcedEndpoints`.
+   For more information, see [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
+
 > [!NOTE]
 > The NATSMigration tool has a hard‑coded 10‑minute timeout for completing the *ResetCluster* operation. If for some reason the migration cannot be completed within 10 minutes, or if something goes wrong during the migration, all Agents will revert back to using the SLNet-managed NATS solution.<!-- RN 41115 -->
 

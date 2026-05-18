@@ -164,6 +164,7 @@ This file configures how DataMiner processes connect to BrokerGateway to obtain 
 - `CredentialsUrl` typically points to the local Agent (using loopback or FQDN). This is the default setting unless it has been manually changed.
 - If the HTTPS certificate CN/SAN does not match the hostname used in the URL, clients may fail with TLS validation errors.
 - *appsettings.runtime.json* must be present at the path specified in `APIKeyPath`.
+- If you want to override the NATS endpoints returned by BrokerGateway, you can add a `ForcedEndpoints` array. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
 
 **Example:**
 

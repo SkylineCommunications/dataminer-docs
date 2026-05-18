@@ -8,7 +8,7 @@ From DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!-- RN 44757 + 44778 --
 
 Using internal BrokerGateway Administrator keys for these connections is discouraged, as these keys may be refreshed during cluster maintenance or because of other actions. By contrast, user-generated client secrets persist throughout the cluster's lifecycle and are immediately distributed to all BrokerGateway instances for cluster-wide availability.
 
-Common examples of clients requiring this setup include the [Data Aggregator DxM](xref:Data_Aggregator_DxM) and [Dashboard Gateway](xref:Dashboard_Gateway_installation).
+Common examples of clients requiring this setup include the [Data Aggregator DxM](xref:Data_Aggregator_DxM), [Dashboard Gateway](xref:Dashboard_Gateway_installation), and servers hosting a [DMZ setup for dataminer.services connectivity](xref:Connect_to_cloud_with_DMZ).
 
 > [!IMPORTANT]
 > Using client secrets prevents the root certificate authority from being cycled during DataMiner Agent removals or NATSRepair calls. This is done to ensure that external clients maintain stable connectivity with the cluster, without having to change credentials or trusted root certificates.
