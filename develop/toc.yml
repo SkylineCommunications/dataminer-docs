@@ -961,6 +961,8 @@ items:
     items:
       - name: Extension libraries
         topicUid: GQI_Extension_Libraries
+      - name: Defining discrete values for columns
+        topicUid: GQI_Extensions_Discrete_Values
       - name: Ad hoc data sources
         topicUid: GQI_Ad_hoc_data_sources
         items:
@@ -1026,6 +1028,10 @@ items:
             topicUid: GQI_GQIColumn
           - name: GQIColumn<T>
             topicUid: GQI_GQIColumnT
+          - name: GQIDiscrete<T>
+            topicUid: GQI_GQIDiscreteT
+          - name: GQIDiscreteOptions<T>
+            topicUid: GQI_GQIDiscreteOptionsT
           - name: GQIDMS
             topicUid: GQI_GQIDMS
           - name: GQIEditableHeader
