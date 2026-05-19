@@ -4,9 +4,9 @@ uid: DocumentHub
 
 # DocumentHub
 
-## Centralized document management for your DataMiner applications
+## Centralized document management for DataMiner applications
 
-DataMiner DocumentHub is a comprehensive document and file management solution that enables DataMiner applications to seamlessly store, organize, and retrieve documents, images, and other files. Whether managing job attachments, profile pictures, organizational logos, or reports, DocumentHub provides a unified, secure platform with integrated cloud storage support and metadata management.
+DataMiner DocumentHub is a comprehensive document and file management solution that can be used by DataMiner applications to store, organize, and retrieve documents, images, and other files. Whether managing job attachments, profile pictures, organizational logos, or reports, DocumentHub provides a unified, secure platform with integrated cloud storage support and metadata management.
 
 Designed for broadcast, service provider, satellite, and enterprise organizations, DocumentHub eliminates the need for fragmented file storage solutions across multiple applications. It centralizes all document workflows while allowing IT teams to maintain control over security, compliance, and storage backend selection.
 
@@ -14,15 +14,15 @@ Designed for broadcast, service provider, satellite, and enterprise organization
 
 ## DocumentHub application
 
-DataMiner DocumentHub is available in the [Catalog](https://catalog.dataminer.services/details/f9720b2e-fdaa-4956-9788-877328b587ca) as a package containing a comprehensive low-code application. The solution integrates seamlessly with other DataMiner applications and provides an NuGet API for custom application development.
+The DocumentHub Solution is available in the [Catalog](https://catalog.dataminer.services/details/f9720b2e-fdaa-4956-9788-877328b587ca) as a package containing a [dedicated low-code app](xref:DH_Application). The solution integrates seamlessly with other DataMiner applications and also provides a NuGet API for custom application development.
 
 <div class="row">
   <div class="column">
-    <a href="/solutions/standard_solutions/DocumentHub/Apps/DH_Application.html" title="DocumentHub app" target="_self">
+    <a href="xref:DH_Application" title="DocumentHub app" target="_self">
       <img src="~/solutions/images/DocumentHub_App_Logo.png" style="width:100%">
     </a>
     <p>
-      <em>DocumentHub Application</em>
+      <em>DocumentHub app</em>
     </p>
   </div>
   <div class="column">
@@ -37,7 +37,7 @@ DataMiner DocumentHub is available in the [Catalog](https://catalog.dataminer.se
 
 > [!TIP]
 >
-> - Before you deploy the DocumentHub package, review the [installation instructions](xref:DH_Installation).
+> - Before you deploy the DocumentHub package, check the [installation instructions](xref:DH_Installation).
 > - Developers integrating DocumentHub with custom applications should refer to the [DocumentHub DevPack](xref:DH_Development) documentation.
 > - For details about the changes introduced in each DocumentHub version, refer to the [release notes](xref:DocumentHub_RNs_index).
 
@@ -45,15 +45,15 @@ DataMiner DocumentHub is available in the [Catalog](https://catalog.dataminer.se
 
 DocumentHub serves diverse user groups across your organization:
 
-- **IT and Security Teams**: Implement centralized document management with control over storage backends, access credentials, file format restrictions, and compliance policies. Support customer-managed SharePoint or on-premises storage options like DataMiner Webfiles or DOM Attachments.
+- **IT and security teams**: Implement centralized document management with control over storage backends, access credentials, file format restrictions, and compliance policies. The solution supports customer-managed SharePoint or on-premises storage options like DataMiner web files or DOM attachments.
 
-- **System Administrators**: Configure document buckets for file grouping with file upload limitations, storage locations, and file extension rules.
+- **System administrators**: Configure document buckets for file grouping with file upload limitations, storage locations, and file extension rules.
 
-- **Content and Asset Managers**: Streamline workflows for organizing and retrieving documents across the organization. Normalize graphics formats for consistency and for automated processing.
+- **Content and asset managers**: Streamline workflows for organizing and retrieving documents across your organization. Normalize graphics formats for consistency and for automated processing.
 
-- **Application Developers**: Integrate DocumentHub capabilities into custom DataMiner low-code applications using the NuGet API. Retrieve file information, upload documents, and manage buckets programmatically.
+- **Application developers**: Integrate DocumentHub capabilities into custom DataMiner low-code apps using the NuGet API. Retrieve file information, upload documents, and manage buckets programmatically.
 
-- **Business Operations Teams**: Access documents from within operational applications such as People & Organizations, Asset Manager, and Scheduling. Attach job documents, profile images, asset photos, and service icons without leaving the application context.
+- **Business operations teams**: Access documents from within operational applications such as People & Organizations, Asset Manager, and Scheduling. Attach job documents, profile images, asset photos, and service icons without leaving the application context.
 
 In essence, DocumentHub enables organizations to deliver better service quality, reduce fragmentation in document workflows, respond faster to business needs, and maintain compliance through centralized, secure file management.
 
@@ -63,29 +63,29 @@ The DocumentHub Solution simplifies document and file management across your Dat
 
 DocumentHub supports the following capabilities by default without any customization:
 
-- **Upload and Store**: Upload new documents, images, and files from user terminals to configured storage backends (SharePoint, local DataMiner Web Server, and DOM attachments).
+- **Upload and store**: Upload new documents, images, and files from user terminals to configured storage backends (SharePoint, local DataMiner web server, and DOM attachments).
 
-- **Link and Reference**: Store file references and URLs in DataMiner DOM objects and applications. Link documents to jobs, assets, contacts, and other business entities.
+- **Link and reference**: Store file references and URLs in DataMiner DOM objects and applications. Link documents to jobs, assets, contacts, and other business entities.
 
-- **Search and Navigate**: Discover documents by name and buckets. Browse and organize files through a unified interface regardless of storage location.
+- **Search and navigate**: Discover documents by name and buckets. Browse and organize files through a unified interface regardless of storage location.
 
-- **Read and Display**: View and open documents in third-party applications. Support common file types including jpg, png, gif, svg, pdf, docx, xlsx, and pptx.
+- **Read and display**: View and open documents in third-party applications. Common file types are supported, including .jpg, .png, .gif, .svg, .pdf, .docx, .xlsx, and .pptx.
 
-- **Normalize and Format**: Apply format conversion and normalization to graphics files at ingest to ensure consistency across standard solutions.
+- **Normalize and format**: Apply format conversion and normalization to graphics files at ingest to ensure consistency across standard solutions.
 
-- **Organize with Buckets**: Create predefined document buckets to streamline workflow. Specify target platforms, allowed file extensions, and file size limits for each bucket.
+- **Organize with buckets**: Create predefined document buckets to streamline workflows. Specify target platforms, allowed file extensions, and file size limits for each bucket.
 
 - **Integrate with APIs**: Use the DocumentHub NuGet package to develop custom integrations. Retrieve file information, manage buckets, and upload documents programmatically.
 
 Example use cases:
 
-- **People and Organizations**: Profile photos and contact avatars for team members and external contacts.
-- **Asset Management**: Front and rear panel images of infrastructure assets, racks, and equipment.
-- **Service and Channel Management**: Service icons, channel logos, and branding assets.
-- **Scheduling and Jobs**: PDF job sheets, contracts, and task documentation.
-- **Cost and Billing**: Generated invoices, cost reports, and financial documents.
-- **Energy and Utilities**: Equipment documentation, compliance certificates, and facility plans.
-- **Fleet Management**: Vehicle documentation, maintenance records, and operational photos.
+- **People and organizations**: Profile photos and contact avatars for team members and external contacts.
+- **Asset management**: Front and rear panel images of infrastructure assets, racks, and equipment.
+- **Service and channel management**: Service icons, channel logos, and branding assets.
+- **Scheduling and jobs**: PDF job sheets, contracts, and task documentation.
+- **Cost and billing**: Generated invoices, cost reports, and financial documents.
+- **Energy and utilities**: Equipment documentation, compliance certificates, and facility plans.
+- **Fleet management**: Vehicle documentation, maintenance records, and operational photos.
 
 <style>
 .column a {
