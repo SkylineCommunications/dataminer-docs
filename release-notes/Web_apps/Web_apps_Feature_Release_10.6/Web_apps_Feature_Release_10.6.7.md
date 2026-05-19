@@ -95,6 +95,26 @@ The Spectrum analyzer component now has a *Color source* option, which can be se
 
 In both cases, measurement point trace colors are resolved via theme color indexing based on the measurement point key/name.
 
+#### Dashboards/Low-Code Apps: Tree and List components now accept a string filter [ID 45485]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+*Tree* and *List* components now accept a string filter. When string data is linked to the component, the content will be filtered by name.
+
+#### Dashboards/Low-Code Apps - Maps component: Changing the look and feel of GeoJSON overlays [ID 45518]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+The *Maps* component as well as the DataMiner Maps module now allow you to change the look and feel of GeoJSON overlays by defining the following properties on geometry objects:
+
+| Property | Default value | Description |
+|---|---|---|
+| fill           | #000000 | Defines the fill color of shapes. |
+| fill-opacity   | 0.3       | Defines the opacity of the fill color of shapes. |
+| stroke         | #000000 | Defines the stroke color of shapes and lines. |
+| stroke-opacity | 1         | Defines the opacity of the stroke. |
+| stroke-width   | 3         | Defines the weight of the stroke. The higher the weight, the wider the stroke. |
+
 #### Web apps: DataMiner Web Upgrade packages will now also include the DataMiner Maps module [ID 45521]
 
 <!-- MR 10.7.0 - FR 10.6.7 -->
