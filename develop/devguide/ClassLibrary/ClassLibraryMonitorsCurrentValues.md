@@ -4,11 +4,13 @@ uid: ClassLibraryMonitorsCurrentValues
 
 # Receiving current values when starting a monitor
 
-When you start a monitor, most monitors will immediately receive an event containing the current value or state. This allows you to act on the current situation without waiting for the first actual change.
+Most monitors, when started, will immediately receive an event containing the current value or state. This allows you to act on the current situation without waiting for the first actual change.
 
 ## ParameterValueMonitors
 
-For `StartValueMonitor` methods on `IDmsStandaloneParameter`, `IDmsColumn` (cell), `IDmsColumn` (column), and `IDmsTable`, this behavior is controlled by a mandatory `includeCurrentValues` boolean parameter. Pass `true` to receive an initial event with the current value when the monitor starts, or `false` to only receive future changes.
+For `StartValueMonitor` methods on `IDmsStandaloneParameter`, `IDmsColumn` (cell), `IDmsColumn` (column), and `IDmsTable`, this behavior is controlled by a mandatory `includeCurrentValues` boolean parameter.
+
+Pass `true` to receive an initial event with the current value when the monitor starts, or `false` to only receive future changes.
 
 ```csharp
 IDmsElement element = dms.GetElement("MyElement");
