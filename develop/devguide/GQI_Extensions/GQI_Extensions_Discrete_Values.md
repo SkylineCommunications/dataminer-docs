@@ -7,7 +7,7 @@ uid: GQI_Extensions_Discrete_Values
 From DataMiner Web 10.6.7/10.5.0 [CU16]/10.6.0 [CU4] onwards<!-- RN 45380 --> it is possible to define a set of **discretes** when creating a column within GQI extensions. Discretes are predefined, named constants for values that can occur in the column. They are exposed to the client and can be used in filter editors, making it easier for users to filter data by selecting from predefined options rather than typing values manually.
 
 > [!IMPORTANT]
-> This feature requires the [GQI DxM](xref:GQI_DxM) and the Skyline.DataMiner.Core.GQI.Extensions [extension API](xref:GQI_Extensions_API)
+> This feature requires the [GQI DxM](xref:GQI_DxM) and the Skyline.DataMiner.Core.GQI.Extensions [extension API](xref:GQI_Extension_API)
 
 ## When to use discretes
 
