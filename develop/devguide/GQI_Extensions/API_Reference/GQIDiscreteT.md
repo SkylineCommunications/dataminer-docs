@@ -13,6 +13,9 @@ Available from DataMiner Web 10.6.7/10.5.0 [CU16]/10.6.0 [CU4] onwards.<!-- RN 4
 
 Represents a single discrete value option for a column, pairing an underlying value with a user-friendly display string.
 
+> [!TIP]
+> Learn more about configuring discretes for columns [here](xref:GQI_Extensions_Discrete_Values).
+
 ## Type parameters
 
 - `T`: The value type of the discrete, matching the column it belongs to.

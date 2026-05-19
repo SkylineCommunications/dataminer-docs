@@ -4,12 +4,12 @@ uid: GQI_GQIColumnT
 
 # GQIColumn\<T\> class
 
-## [Skyline.DataMiner.Core.GQI.Extensions](#tab/tabid-1)
+## [NuGet: Skyline.DataMiner.Core.GQI.Extensions](#tab/tabid-1)
 
 ### Definition
 
 - Namespace: `Skyline.DataMiner.Core.GQI.Extensions`
-- NuGet: `Skyline.DataMiner.Core.GQI.Extensions`
+- Assembly: `Skyline.DataMiner.Core.GQI.Extensions.dll`
 
 Provides the *typed* base class for a column in GQI. It provides increased type safety compared to the non-generic [GQIColumn](xref:GQI_GQIColumn).
 
