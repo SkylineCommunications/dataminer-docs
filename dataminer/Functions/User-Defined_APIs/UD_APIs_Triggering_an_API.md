@@ -35,7 +35,15 @@ https://ziine-skyline.on.dataminer.services/api/custom/encoder/main/status
 
 ### HTTP methods
 
-The following HTTP methods are supported: GET, PUT, POST, DELETE.
+The following HTTP methods are supported:
+
+| Method | Supported since |
+|--|--|
+| GET | 10.3.6/10.4.0 |
+| PUT | 10.3.6/10.4.0 |
+| POST | 10.3.6/10.4.0 |
+| DELETE | 10.3.6/10.4.0 |
+| PATCH | 10.6.7/10.7.0 | <!-- RN45542 -->
 
 > [!NOTE]
 > You are free to choose which of these methods your API will support.
