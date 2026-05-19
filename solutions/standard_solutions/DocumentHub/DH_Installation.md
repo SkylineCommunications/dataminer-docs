@@ -9,7 +9,7 @@ uid: DH_Installation
 1. Check the prerequisites mentioned in the DocumentHub [release notes](xref:DocumentHub_RNs_index) matching the package version, and make sure your system meets these prerequisites.
 
    > [!NOTE]
-   > Minimum platform requirement: DataMiner 10.6.5 and above.
+   > Minimum DataMiner requirement: DataMiner 10.6.5/10.7.0.
 
 1. When all prerequisites are met, click the *Deploy* button.
 
@@ -36,15 +36,17 @@ Migration and cleanup actions are defined in the install package and will depend
 
 After the installation completes, you will need to configure the DocumentHub app for your environment:
 
-1. Open the DocumentHub app from the DataMiner Web interface.
+1. Open the DocumentHub app from the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
 
 1. Navigate to the **Settings** section.
 
 1. Configure your storage backend:
-   - Connect to your SharePoint repository, configure your DOM attachments or use the standard DataMiner Webfiles.
-   - Provide the necessary credentials and access information (if applicable).
 
-1. Define document **Buckets** to organize file types:
+   - Connect to your SharePoint repository, and configure your DOM attachments or use the standard DataMiner web files.
+   - Provide the necessary credentials and access information, if applicable.
+
+1. Define document **buckets** to organize file types:
+
    - Specify the target storage backend for each bucket.
    - Define allowed file extensions.
    - Set bucket rules to keep files organized.
