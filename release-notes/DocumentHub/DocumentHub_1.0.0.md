@@ -19,17 +19,16 @@ uid: DocumentHub_1.0.0
 
 ### DocumentHub: Initial functionality [ID 45528]
 
-**DocumentHub** is a DataMiner application that gives your team a central place to organize and access documents directly within the DataMiner platform.
-This initial preview includes:
+The new DocumentHub application gives your team a central place to organize and access documents directly within the DataMiner platform. This initial version includes:
 
-- **Document Buckets** — Create and manage named storage areas (called "buckets") to keep your documents organized. Each bucket can have:
+- **Document buckets**: Create and manage named storage areas (called "buckets") to keep your documents organized. Each bucket can have:
   - A name and description
   - An upload path
-  - Allowed file types (e.g. only PDFs or images)
+  - Allowed file types (e.g., only PDFs or images)
   - An optional file size limit
-- **File Uploads** — Upload files directly from within DataMiner to your storage of choice. Three storage types are supported:
-  - **SharePoint** — Store documents in your organization's Microsoft SharePoint environment.
-  - **Local DataMiner** — Store documents on the DataMiner server.
-  - **DOM Attachments** — Attach files directly to native DataMiner Object Model records.
-- **Create, Edit & Delete Buckets** — A guided on-screen form lets you set up or update a bucket in just a few steps, with instant validation to prevent mistakes.
-- **Browse & Query Files** — Files stored in DocumentHub can be queried and displayed in DataMiner dashboards and low-code apps.
+- **File uploads**: Upload files directly from within DataMiner to your storage of choice. Three storage types are supported:
+  - **SharePoint**: Store documents in your organization's Microsoft SharePoint environment.
+  - **Local DataMiner**: Store documents on the DataMiner server.
+  - **DOM attachments**: Attach files directly to native DataMiner Object Model records.
+- **Creation, editing, and deletion of buckets**: A guided on-screen form lets you set up or update a bucket in just a few steps, with instant validation to prevent mistakes.
+- **Browsing and querying of files**: Files stored in DocumentHub can be queried and displayed in DataMiner dashboards and low-code apps.

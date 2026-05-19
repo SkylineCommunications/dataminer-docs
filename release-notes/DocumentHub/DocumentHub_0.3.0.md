@@ -2,7 +2,7 @@
 uid: DocumentHub_0.3.0
 ---
 
-# DocumentHub 0.3.0 - Preview and Deprecated
+# DocumentHub 0.3.0 (deprecated)
 
 ## Prerequisites
 
@@ -14,11 +14,10 @@ uid: DocumentHub_0.3.0
 
 ## New features
 
-- List document attachments - List all documents that are attached to DOM instances trough the DOM attachments and show the linked instance.
-- Support Configuration shared drive - Configure Shared drive trough DocHub to support DOM attachments.
-- Backend - Protect Sensitive Data - Azure App Registration's Client Secret (SP Integration) needs to be safely stored.
-- Filter on bucket - For each storage type there should be a way to see and therefore test the created buckets in the DocumentHub.
+#### DOM attachments support, protection of sensitive data, and filtering on bucket [ID 45319]
 
-## Changes
+The DocumentHub Solution can now list all documents that are attached to DOM instances through DOM attachments and show the linked instance. To support DOM attachments, a shared drive can be configured.
 
-*No enhancements or fixes have been added to this release yet.*
+In addition, in the backend, protection for sensitive data has been implemented so that the Azure App Registration Client Secret (for SP integration) is safely stored.
+
+Finally, filtering on bucket has been implemented. For each storage type, the buckets created in DocumentHub can be viewed and tested.
