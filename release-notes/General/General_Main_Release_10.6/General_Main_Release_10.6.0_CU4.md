@@ -127,3 +127,9 @@ Up to now, SLSNMPAgent could unexpectedly stop working either right after startu
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
 When an element failed to start up because of, for example, a faulty protocol.xml file, up to now, it would not properly clean up the assigned resources.
+
+#### Problem when manually restarting the SLDataGateway windows service [ID 45495]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When the SLDataGateway windows service was restarted manually, in some cases, it could stop working.
