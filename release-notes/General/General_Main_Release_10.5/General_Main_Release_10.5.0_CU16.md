@@ -84,6 +84,12 @@ Because of a number of enhancements, overall performance of the VerifyNatsCluste
 
 When a view containing a service was moved to another view, it could occur that elements included in that service were incorrectly moved to the root view. This happened when an element was only included in the original view because of the service, but the element already existed in the target view. This behavior has been corrected.
 
+#### Problem when simulations were reloaded at runtime [ID 45296]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When simulations were reloaded at runtime, in some cases, simulations that previously worked would no longer do so.
+
 #### SLDataGateway would terminate unexpectedly when shutting down [ID 45419]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->

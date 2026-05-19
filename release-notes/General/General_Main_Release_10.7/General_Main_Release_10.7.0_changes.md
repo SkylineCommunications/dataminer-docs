@@ -474,6 +474,12 @@ Up to now, only the general state of the entire cluster when an Agent connected 
 
 From now on, all state changes of all SLNet connections between Agents in the cluster will be logged in the *SLNetConnectionsMonitor.txt* file.
 
+#### Automation: Enhanced memory usage when compiling development packs and script libraries [ID 45333]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+Because of a number of enhancements, memory usage has improved when compiling development packs and script libraries.
+
 #### SLAnalytics: Enhanced performance when detecting flatline events [ID 45376]
 
 <!-- MR 10.7.0 - FR 10.6.7 -->

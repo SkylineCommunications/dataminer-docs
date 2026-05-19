@@ -73,6 +73,12 @@ Up to now, only the general state of the entire cluster when an Agent connected 
 
 From now on, all state changes of all SLNet connections between Agents in the cluster will be logged in the *SLNetConnectionsMonitor.txt* file.
 
+#### Automation: Enhanced memory usage when compiling development packs and script libraries [ID 45333]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+Because of a number of enhancements, memory usage has improved when compiling development packs and script libraries.
+
 #### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from DataMiner Cube [ID 45355]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
@@ -145,6 +151,12 @@ From now on, SLLogCollector will collect the system environment variables and st
 Because of a number of enhancements, overall performance of the VerifyNatsCluster prerequisite has increased.
 
 ### Fixes
+
+#### Problem when simulations were reloaded at runtime [ID 45296]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When simulations were reloaded at runtime, in some cases, simulations that previously worked would no longer do so.
 
 #### SLDataGateway would terminate unexpectedly when shutting down [ID 45419]
 
