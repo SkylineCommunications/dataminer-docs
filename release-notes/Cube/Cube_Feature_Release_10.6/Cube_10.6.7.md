@@ -117,3 +117,9 @@ In the automation script editor, up to now, script actions would incorrectly loa
 When you selected an item in a filtered list, up to now, the selected item would incorrectly get the same color as the background, making it invisible.
 
 From now on, selected list items will get a color that is different from that of that background.
+
+#### Problem when uploading element documents [ID 45448]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When an upload of an element document was interrupted, for example because of a network disconnect, the next time an attempt was made to upload that same file, DataMiner Cube would display a warning, saying that the existing file would be overwritten. However, when you allowed the file to be overwritten, the new data would incorrectly be appended to the existing data, resulting in a corrupted file.
