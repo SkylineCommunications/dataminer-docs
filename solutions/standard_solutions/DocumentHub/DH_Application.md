@@ -4,7 +4,7 @@ uid: DH_Application
 
 # DocumentHub Application
 
-The DocumentHub application is a comprehensive low-code application designed for administrators and operators to manage documents, images, and files across your DataMiner environment. It provides a centralized interface for uploading, organizing, retrieving, and linking files to business operations.
+The DocumentHub app is designed for administrators and operators to manage documents, images, and files across their DataMiner environment. It provides a centralized interface for uploading, organizing, retrieving, and linking files to business operations.
 
 ![DocumentHub Application overview](~/solutions/images/DocumentHub_App_Main_Overview.png)
 
@@ -15,28 +15,28 @@ The DocumentHub application is a comprehensive low-code application designed for
 
 The following sections and features are available in the app:
 
-- ![SharePoint](~/solutions/images/DocumentHub_SharePoint.svg) **SharePoint**: Browse files stored in your SharePoint repository, quickly filter by name or bucket, and inspect the full metadata set for each file.
+- ![SharePoint](~/solutions/images/DocumentHub_SharePoint.png) **SharePoint**: Browse files stored in your SharePoint repository, quickly filter by name or bucket, and inspect the full metadata set for each file.
 
-- ![DataMiner](~/solutions/images/DocumentHub_DataMiner.svg) **DataMiner**: Access files stored on your DataMiner server, use name and bucket filters to narrow down results, and review all available metadata details.
+- ![DataMiner](~/solutions/images/DocumentHub_DataMiner.png) **DataMiner**: Access files stored on your DataMiner server, use name and bucket filters to narrow down results, and review all available metadata details.
 
-- ![DOM](~/solutions/images/DocumentHub_DOM.svg) **DOM**: Explore files linked to DOM records, find content by filtering on name and bucket, and view the complete metadata context used in your workflows.
+- ![DOM](~/solutions/images/DocumentHub_DOM.png) **DOM**: Explore files linked to DOM records, find content by filtering on name and bucket, and view the complete metadata context used in your workflows.
 
-- ![Upload](~/solutions/images/DocumentHub_Upload.svg) **Upload**: Upload new documents to configured storage backends. Select the appropriate bucket to ensure files are stored in the correct location with proper metadata.
+- ![Upload](~/solutions/images/DocumentHub_Upload.png) **Upload**: Upload new documents to configured storage backends. Select the appropriate bucket to ensure files are stored in the correct location with proper metadata.
 
-- ![Buckets](~/solutions/images/DocumentHub_Buckets.svg) **Buckets**: Configure and manage document buckets. Define which file types go where, set upload restrictions, and manage metadata templates. Available to administrators only.
+- ![Buckets](~/solutions/images/DocumentHub_Buckets.png) **Buckets**: Configure and manage document buckets. Define which file types go where, set upload restrictions, and manage metadata templates. Available to administrators only.
 
-- ![Source Configuration](~/solutions/images/DocumentHub_Settings.svg) **Source Configuration**: Connect and manage cloud storage repositories and local storage options. Configure credentials and access settings. Available to administrators only.
+- ![Source Configuration](~/solutions/images/DocumentHub_Settings.png) **Source Configuration**: Connect and manage cloud storage repositories and local storage options. Configure credentials and access settings. Available to administrators only.
 
-- ![About](~/solutions/images/DocumentHub_About.svg) **About**: Provides information on the **version** of the DocumentHub package.
+- ![About](~/solutions/images/DocumentHub_About.png) **About**: Provides information on the **version** of the DocumentHub package.
 
 ## Uploading documents
 
 You can upload documents to store them in your configured storage backend. The upload process guides you through:
 
 1. Selecting the appropriate **document bucket**.
-2. Choosing the file(s) to upload.
-3. Optionally give a new name to the file
-4. Confirm the upload destination.
+1. Choosing the file(s) to upload.
+1. Optionally give a new name to the file
+1. Confirm the upload destination.
 
 Once uploaded, the document will be stored in the configured backend for the selected bucket and will appear in the Documents view for all authorized users.
 
