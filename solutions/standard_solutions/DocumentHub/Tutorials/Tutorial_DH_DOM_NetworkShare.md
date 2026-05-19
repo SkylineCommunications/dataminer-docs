@@ -4,7 +4,7 @@ uid: Tutorial_DH_DOM_NetworkShare
 
 # Configuring DOM attachments on a network share
 
-This tutorial shows you how to configure a network share as a storage backend for DOM attachments in Document Hub. The configuration is performed directly in the Document Hub app's **Storage Backends** section.
+This tutorial shows you how to configure a network share as a storage backend for DOM attachments in DocumentHub. The configuration is performed directly in the DocumentHub app's **Storage Backends** section.
 
 > [!NOTE]
 > DOM attachments can be stored on a network share without any IIS configuration. The only mandatory requirement is that the network share is reachable by the DataMiner System. All IIS-related steps are optional and only required if you want to visualize or download attachments via a web browser.
@@ -13,26 +13,21 @@ Expected duration: 15 minutes
 
 ## Prerequisites
 
-- Document Hub app installed and accessible
+- DocumentHub app installed and accessible
 - A network share accessible from all DataMiner Agents in the cluster
 - Network credentials with read/write permissions to the share
 - (Optional) IIS Web Server role installed on DMAs for browser-based file access
 
 ## Overview
 
-The steps in this tutorial include:
-
-- [Configuring DOM attachments on a network share](#configuring-dom-attachments-on-a-network-share)
-  - [Prerequisites](#prerequisites)
-  - [Overview](#overview)
-  - [Step 1: Prepare the network share](#step-1-prepare-the-network-share)
-  - [Step 2: Configure the network share in Document Hub](#step-2-configure-the-network-share-in-document-hub)
-  - [Optional: Configure browser-based access](#optional-configure-browser-based-access)
-    - [Create a local DataMiner user](#create-a-local-dataminer-user)
-    - [Configure IIS permissions](#configure-iis-permissions)
-    - [Create an IIS virtual directory](#create-an-iis-virtual-directory)
-    - [Access attachments via browser](#access-attachments-via-browser)
-  - [Next steps](#next-steps)
+- [Step 1: Prepare the network share](#step-1-prepare-the-network-share)
+- [Step 2: Configure the network share in DocumentHub](#step-2-configure-the-network-share-in-documenthub)
+- [Optional: Configure browser-based access](#optional-configure-browser-based-access)
+  - [Create a local DataMiner user](#create-a-local-dataminer-user)
+  - [Configure IIS permissions](#configure-iis-permissions)
+  - [Create an IIS virtual directory](#create-an-iis-virtual-directory)
+  - [Access attachments via browser](#access-attachments-via-browser)
+- [Next steps](#next-steps)
 
 ## Step 1: Prepare the network share
 
@@ -51,11 +46,11 @@ The steps in this tutorial include:
    > [!NOTE]
    > If the share is not accessible, verify network connectivity, firewall rules, and share permissions.
 
-## Step 2: Configure the network share in Document Hub
+## Step 2: Configure the network share in DocumentHub
 
-Configure the network share directly in the Document Hub app:
+Configure the network share directly in the DocumentHub app:
 
-1. Open the **Document Hub** app in DataMiner.
+1. Open the **DocumentHub** app in DataMiner.
 
 1. Navigate to the **Storage Backends** section.
 
@@ -87,7 +82,7 @@ Configure the network share directly in the Document Hub app:
 1. The network share backend is now available for use with DOM attachments and document buckets.
 
 > [!IMPORTANT]
-> DataMiner will store and retrieve attachments directly from this network location. No IIS configuration is required for basic file storage and retrieval through the Document Hub app.
+> DataMiner will store and retrieve attachments directly from this network location. No IIS configuration is required for basic file storage and retrieval through the DocumentHub app.
 
 ## Optional: Configure browser-based access
 
@@ -158,7 +153,7 @@ https://<dma-hostname>/shareRedirect/<filename>
 Example: `https://dma.example.com/shareRedirect/document.pdf`
 
 > [!TIP]
-> The Document Hub app can automatically generate these URLs for DOM attachments when the IIS virtual directory is configured.
+> The DocumentHub app can automatically generate these URLs for DOM attachments when the IIS virtual directory is configured.
 
 ## Next steps
 
@@ -166,8 +161,8 @@ After configuring the network share backend, you can:
 
 - Create document buckets that use this network share
 - Configure DOM definitions to store attachments on this share
-- Upload documents to the network share through the Document Hub app
+- Upload documents to the network share through the DocumentHub app
 - Link DOM attachments to jobs, assets, and other business entities
 
 > [!TIP]
-> For more information on creating and managing document buckets, see [Document Hub app](xref:DH_Application).
+> For more information on creating and managing document buckets, see [DocumentHub app](xref:DH_Application).

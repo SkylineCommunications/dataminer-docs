@@ -175,14 +175,14 @@ items:
           topicUid: Jobs_Page
       - name: Web File Manager
         topicUid: Web_File_Manager
-    - name: dataminer.DocumentHub
-      topicUid: Document_Hub
+    - name: DocumentHub
+      topicUid: DocumentHub
       items:
-      - name: Installing Document Hub
+      - name: Installing DocumentHub
         topicUid: DH_Installation
-      - name: Document Hub app
+      - name: DocumentHub app
         topicUid: DH_Application
-      - name: Document Hub DevPack
+      - name: DocumentHub DevPack
         topicUid: DH_Development
       - name: Tutorials
         topicUid: Tutorial_DocumentHub_Getting_Started

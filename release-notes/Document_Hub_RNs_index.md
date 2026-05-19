@@ -1,10 +1,10 @@
 ---
-uid: Document_Hub_RNs_index
+uid: DocumentHub_RNs_index
 ---
 
-# Document Hub release notes
+# DocumentHub release notes
 
-These release notes contain all new features, enhancements, and fixes for Document Hub.
+These release notes contain all new features, enhancements, and fixes for DocumentHub.
 
 > [!TIP]
-> For detailed information about dataminer.DocumentHub, refer to the [Document Hub documentation](xref:Document_Hub).
+> For detailed information about the DocumentHub Solution, refer to the [DocumentHub documentation](xref:DocumentHub).

@@ -39,9 +39,9 @@ items:
           - name: DIS release notes
             topicUid: DIS_RNs_index
             href: DIS/toc.yml
-          - name: Document Hub release notes
-            topicUid: Document_Hub_RNs_index
-            href: Document_Hub/toc.yml            
+          - name: DocumentHub release notes
+            topicUid: DocumentHub_RNs_index
+            href: DocumentHub/toc.yml            
           - name: EPM release notes
             href: EPM/toc.yml
           - name: IDP release notes

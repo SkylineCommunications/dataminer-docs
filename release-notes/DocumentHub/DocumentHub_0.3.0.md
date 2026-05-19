@@ -1,5 +1,5 @@
 ---
-uid: Document_Hub_0.3.0
+uid: DocumentHub_0.3.0
 ---
 
 # DocumentHub 0.3.0 - Preview and Deprecated

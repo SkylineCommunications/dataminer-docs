@@ -4,7 +4,7 @@ uid: Tutorial_DH_SharePoint
 
 # Configuring SharePoint as a storage backend
 
-This tutorial shows you how to configure SharePoint as a storage backend for Document Hub. The configuration is performed directly in the Document Hub app's **Storage Backends** section.
+This tutorial shows you how to configure SharePoint as a storage backend for DocumentHub. The configuration is performed directly in the DocumentHub app's **Storage Backends** section.
 
 > [!NOTE]
 > This tutorial uses SharePoint with Azure AD (Microsoft Entra ID) authentication. You will need administrative access to Azure Portal to complete the setup.
@@ -13,22 +13,17 @@ Expected duration: 15 minutes
 
 ## Prerequisites
 
-- Document Hub app installed and accessible
+- DocumentHub app installed and accessible
 - Access to Azure Portal with permissions to register applications
 - SharePoint site with appropriate permissions
 
 ## Overview
 
-The steps in this tutorial include:
-
-- [Configuring SharePoint as a storage backend](#configuring-sharepoint-as-a-storage-backend)
-  - [Prerequisites](#prerequisites)
-  - [Overview](#overview)
-  - [Step 1: Register your app in Azure AD](#step-1-register-your-app-in-azure-ad)
-  - [Step 2: Generate a client secret](#step-2-generate-a-client-secret)
-  - [Step 3: Configure API permissions](#step-3-configure-api-permissions)
-  - [Step 4: Configure SharePoint in Document Hub](#step-4-configure-sharepoint-in-document-hub)
-  - [Next steps](#next-steps)
+- [Step 1: Register your app in Azure AD](#step-1-register-your-app-in-azure-ad)
+- [Step 2: Generate a client secret](#step-2-generate-a-client-secret)
+- [Step 3: Configure API permissions](#step-3-configure-api-permissions)
+- [Step 4: Configure SharePoint in DocumentHub](#step-4-configure-sharepoint-in-documenthub)
+- [Next steps](#next-steps)
 
 ## Step 1: Register your app in Azure AD
 
@@ -36,7 +31,7 @@ The steps in this tutorial include:
 
 1. Go to **Microsoft Entra ID** > **App Registrations**.
 
-1. Click **New Registration** and provide a descriptive name (e.g., "DataMiner Document Hub").
+1. Click **New Registration** and provide a descriptive name (e.g., "DataMiner DocumentHub").
 
 1. Set the redirect URI to your DataMiner application domain.
 
@@ -59,7 +54,7 @@ The steps in this tutorial include:
 1. **Important**: Copy the client secret value immediately. It will not be shown again.
 
    > [!WARNING]
-   > Store the client secret securely. You will need it when configuring Document Hub.
+   > Store the client secret securely. You will need it when configuring DocumentHub.
 
 ## Step 3: Configure API permissions
 
@@ -84,11 +79,11 @@ The steps in this tutorial include:
 
 1. Confirm that the permissions show "Granted" status.
 
-## Step 4: Configure SharePoint in Document Hub
+## Step 4: Configure SharePoint in DocumentHub
 
-Now that you have completed the Azure AD setup, configure SharePoint in the Document Hub app:
+Now that you have completed the Azure AD setup, configure SharePoint in the DocumentHub app:
 
-1. Open the **Document Hub** app in DataMiner.
+1. Open the **DocumentHub** app in DataMiner.
 
 1. Navigate to the **Storage Backends** section.
 
@@ -126,8 +121,8 @@ After configuring SharePoint, you can:
 
 - Create document buckets that use this SharePoint backend
 - Configure metadata templates for SharePoint-stored documents
-- Upload documents to SharePoint through the Document Hub app
+- Upload documents to SharePoint through the DocumentHub app
 - Integrate SharePoint storage with other DataMiner applications
 
 > [!TIP]
-> For more information on creating and managing document buckets, see [Document Hub app](xref:DH_Application).
+> For more information on creating and managing document buckets, see [DocumentHub app](xref:DH_Application).

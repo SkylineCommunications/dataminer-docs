@@ -2,13 +2,11 @@
 uid: DH_Installation
 ---
 
-# Installing dataminer.DocumentHub
-
-To install dataminer.DocumentHub:
+# Installing DocumentHub
 
 1. Look up the [DocumentHub package](https://catalog.dataminer.services/details/f9720b2e-fdaa-4956-9788-877328b587ca) in the DataMiner Catalog.
 
-1. Check the prerequisites mentioned in the DocumentHub [release notes](xref:Document_Hub_RNs_index) matching the package version, and make sure your system meets these prerequisites.
+1. Check the prerequisites mentioned in the DocumentHub [release notes](xref:DocumentHub_RNs_index) matching the package version, and make sure your system meets these prerequisites.
 
    > [!NOTE]
    > Minimum platform requirement: DataMiner 10.6.5 and above.

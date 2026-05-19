@@ -1,12 +1,12 @@
 ---
-uid: Document_Hub
+uid: DocumentHub
 ---
 
-# dataminer.DocumentHub
+# DocumentHub
 
 ## Centralized document management for your DataMiner applications
 
-dataminer.DocumentHub is a comprehensive document and file management solution that enables DataMiner applications to seamlessly store, organize, and retrieve documents, images, and other files. Whether managing job attachments, profile pictures, organizational logos, or reports, DocumentHub provides a unified, secure platform with integrated cloud storage support and metadata management.
+DataMiner DocumentHub is a comprehensive document and file management solution that enables DataMiner applications to seamlessly store, organize, and retrieve documents, images, and other files. Whether managing job attachments, profile pictures, organizational logos, or reports, DocumentHub provides a unified, secure platform with integrated cloud storage support and metadata management.
 
 Designed for broadcast, service provider, satellite, and enterprise organizations, DocumentHub eliminates the need for fragmented file storage solutions across multiple applications. It centralizes all document workflows while allowing IT teams to maintain control over security, compliance, and storage backend selection.
 
@@ -14,11 +14,11 @@ Designed for broadcast, service provider, satellite, and enterprise organization
 
 ## DocumentHub application
 
-dataminer.DocumentHub is available in the [Catalog](https://catalog.dataminer.services/details/f9720b2e-fdaa-4956-9788-877328b587ca) as a package containing a comprehensive low-code application. The solution integrates seamlessly with other DataMiner applications and provides an NuGet API for custom application development.
+DataMiner DocumentHub is available in the [Catalog](https://catalog.dataminer.services/details/f9720b2e-fdaa-4956-9788-877328b587ca) as a package containing a comprehensive low-code application. The solution integrates seamlessly with other DataMiner applications and provides an NuGet API for custom application development.
 
 <div class="row">
   <div class="column">
-    <a href="/solutions/standard_solutions/Document_Hub/Apps/DH_Application.html" title="DocumentHub app" target="_self">
+    <a href="/solutions/standard_solutions/DocumentHub/Apps/DH_Application.html" title="DocumentHub app" target="_self">
       <img src="~/solutions/images/DocumentHub_App_Logo.png" style="width:100%">
     </a>
     <p>
@@ -39,9 +39,9 @@ dataminer.DocumentHub is available in the [Catalog](https://catalog.dataminer.se
 >
 > - Before you deploy the DocumentHub package, review the [installation instructions](xref:DH_Installation).
 > - Developers integrating DocumentHub with custom applications should refer to the [DocumentHub DevPack](xref:DH_Development) documentation.
-> - For details about the changes introduced in each DocumentHub version, refer to the [release notes](xref:Document_Hub_RNs_index).
+> - For details about the changes introduced in each DocumentHub version, refer to the [release notes](xref:DocumentHub_RNs_index).
 
-## Who can benefit from dataminer.DocumentHub?
+## Who can benefit from DocumentHub?
 
 DocumentHub serves diverse user groups across your organization:
 
@@ -55,11 +55,11 @@ DocumentHub serves diverse user groups across your organization:
 
 - **Business Operations Teams**: Access documents from within operational applications such as People & Organizations, Asset Manager, and Scheduling. Attach job documents, profile images, asset photos, and service icons without leaving the application context.
 
-In essence, dataminer.DocumentHub enables organizations to deliver better service quality, reduce fragmentation in document workflows, respond faster to business needs, and maintain compliance through centralized, secure file management.
+In essence, DocumentHub enables organizations to deliver better service quality, reduce fragmentation in document workflows, respond faster to business needs, and maintain compliance through centralized, secure file management.
 
-## What can you do with dataminer.DocumentHub?
+## What can you do with DocumentHub?
 
-dataminer.DocumentHub simplifies document and file management across your DataMiner ecosystem. The solution provides a [ready-made application](xref:DH_Application) that can be extended with custom workflows and integrations. It can also be extended with automation scripts and user-defined APIs to integrate with your existing systems.
+The DocumentHub Solution simplifies document and file management across your DataMiner ecosystem. The solution provides a [ready-made application](xref:DH_Application) that can be extended with custom workflows and integrations. It can also be extended with automation scripts and user-defined APIs to integrate with your existing systems.
 
 DocumentHub supports the following capabilities by default without any customization:
 
