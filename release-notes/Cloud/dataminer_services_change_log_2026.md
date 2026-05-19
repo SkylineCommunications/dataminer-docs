@@ -9,20 +9,20 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 19 May 2026 - Fix - Admin/Catalog - Graceful organization switching
+### 19 May 2026 - Fix - Admin/Catalog - Issues related to organization switching
 
 Several issues related to organization switching have been resolved across the Admin app and Catalog:
 
 - Pages with organization-scoped data now react correctly to organization changes: stale data from the previous organization is cleared and fresh data is fetched for the new one.
-- In the Admin app, switching organizations now keeps you on the same page when possible. If the new organization does not have access to the current page, or if the permission check fails, you are redirected to the Overview and notified accordingly.
+- In the Admin app, switching organizations now keeps you on the same page when possible. If the new organization does not have access to the current page, or if the permission check fails, you are redirected to the Overview page and notified accordingly.
 - Rapidly switching between organizations no longer leaves behind stale data from intermediate organizations.
-- Organization Keys, Audit logs, and Usage data now refresh automatically on organization switch. If the audit log reload fails, stale data and the *Load More* button are hidden.
-- In the Catalog app, if a catalog item is unavailable for the newly selected organization, the user is automatically navigated back to the Browse page.
+- Organization keys, audit logs, and usage data now refresh automatically when you switch to a different organization. If the audit log reload fails, stale data and the *Load More* button are hidden.
+- In the Catalog app, if an item is unavailable for the newly selected organization, you are automatically redirected to the Browse page.
 - Aborted call notifications are no longer shown when switching pages.
 
 ### 19 May 2026 - Enhancement - Billing - 'Overusage' terminology updated to 'PPU'
 
-In the billing-related pages and notifications, the term "overusage" has been replaced with "pay-per-use" (PPU) to better reflect the billing model and align with consistent terminology across dataminer.services.
+On the billing-related pages and notifications, the term "overusage" has been replaced with "pay-per-use" (PPU) to better reflect the billing model and ensure consistent terminology across dataminer.services.
 
 ### 18 May 2026 - New feature - Admin - Automatic log collection for support tickets
 
