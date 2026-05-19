@@ -91,3 +91,7 @@ When system properties of type discrete were configured, the dropdown to select 
 #### Workflow Designer: Resource pool not automatically selected when swapping resource [ID 45527]
 
 When you tried to swap a resource in the Workflow Designer app, the resource pool was not automatically selected, so that you had to manually locate the resource pool before performing the swap. Now the resource pool will be correctly auto-populated based on the selected resource.
+
+#### DevPack: Not possible to update capability name [ID 45544]
+
+Up to now, it was not possible to update the name of a capability using the [MediaOps Plan DevPack](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan).
