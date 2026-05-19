@@ -1458,6 +1458,8 @@ items:
         topicUid: ClassLibraryMonitorsStartingAStartedMonitor
       - name: Stopping a stopped monitor
         topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
+      - name: Receiving current values when starting a monitor
+        topicUid: ClassLibraryMonitorsCurrentValues
     - name: Scheduler
       topicUid: Scheduler_NuGet_Package
     - name: Obsolete namespaces
