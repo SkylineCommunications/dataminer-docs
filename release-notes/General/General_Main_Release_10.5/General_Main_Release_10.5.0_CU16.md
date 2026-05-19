@@ -43,6 +43,12 @@ When DataMiner Cube requests timeline data using a `GetReportTimeLineDataMessage
 
 From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
 
+#### APIGateway has been upgraded to Microsoft .NET 10 [ID 45421]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+The APIGateway module has been upgraded to Microsoft .NET 10.
+
 #### Cleanup of replication buffer files [ID 45432]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
@@ -77,6 +83,12 @@ Because of a number of enhancements, overall performance of the VerifyNatsCluste
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.6 -->
 
 When a view containing a service was moved to another view, it could occur that elements included in that service were incorrectly moved to the root view. This happened when an element was only included in the original view because of the service, but the element already existed in the target view. This behavior has been corrected.
+
+#### Problem when simulations were reloaded at runtime [ID 45296]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When simulations were reloaded at runtime, in some cases, simulations that previously worked would no longer do so.
 
 #### SLDataGateway would terminate unexpectedly when shutting down [ID 45419]
 
