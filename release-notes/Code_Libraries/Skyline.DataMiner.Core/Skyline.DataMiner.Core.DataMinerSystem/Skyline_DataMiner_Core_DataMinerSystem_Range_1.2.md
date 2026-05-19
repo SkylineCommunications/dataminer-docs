@@ -9,7 +9,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 
 ### 1.2.0.1
 
-#### Breaking Change - Monitors now require includeCurrentValues parameter [RN 45095]
+#### Breaking Change - Monitors now require includeCurrentValues parameter [ID 45095]
 
 The `StartValueMonitor` methods on `IDmsStandaloneParameter`, `IDmsColumn` (cell), `IDmsColumn` (column), and `IDmsTable` now require an explicit `includeCurrentValues` boolean parameter.
 
