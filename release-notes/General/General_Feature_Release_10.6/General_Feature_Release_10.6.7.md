@@ -38,7 +38,7 @@ Before you upgrade to this DataMiner version:
 
 #### MessageBroker: Configuring forced endpoints [ID 45491]
 
-<!-- MR 10.7.0 - FR 10.6.7 -->
+<!-- MR 10.5.0 [CU16] - FR 10.6.7 -->
 
 In the `MessageBrokerConfig.json` file, it is now possible to configure so-called forced endpoints that will override the NATS endpoints provided by BrokerGateway. This will prove particularly useful in scenarios where a process must reach NATS through a fixed set of endpoints. For example, when connecting through a proxy, a DMZ, or a load balancer.
 
