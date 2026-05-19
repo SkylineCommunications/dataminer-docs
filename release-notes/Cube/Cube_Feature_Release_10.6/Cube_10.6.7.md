@@ -122,4 +122,4 @@ From now on, selected list items will get a color that is different from that of
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
-When an upload of an element document was interrupted, for example because of a network disconnect, the next time an attempt was made to upload that same file, DataMiner Cube would display a warning, saying that the existing file would be overwritten. However, when you allowed the file to be overwritten, the new data would incorrectly be appended to the existing data, resulting in a corrupted file.
+When you uploaded an element document, in some cases, the file contents could incorrectly get appended to previously uploaded data, resulting in a corrupted file.
