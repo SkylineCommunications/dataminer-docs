@@ -175,6 +175,17 @@ Because of a number of enhancements, overall performance of the VerifyNatsCluste
 
 ### Fixes
 
+#### SLWatchDog: Problems when switching to and from daylight savings time [ID 45290]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Because SLWatchDog tracked threads using local time, systems could run into issues when switching to and from daylight savings time:
+
+- When switching away from daylight savings time, half-open runtime errors could incorrectly get cleared immediately.
+- When switching to daylight savings time, runtime errors could be missed for an hour.
+
+In addition, crash dumps would not be detected correctly either.
+
 #### Problem when simulations were reloaded at runtime [ID 45296]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
