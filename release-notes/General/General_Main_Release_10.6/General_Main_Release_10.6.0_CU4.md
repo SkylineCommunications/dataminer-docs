@@ -43,6 +43,14 @@ A number of enhancements have been made with regard to health monitoring of Open
 
 Also, all logging with regard to OpenSearch health monitoring can now be found in *SLSearchHealth.txt*. Up to now, that logging was added to *SLCassandraHealth.txt*.
 
+#### Alarm cache: Enhanced retrieval of alarms that are not linked to a specific element [ID 45322]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Up to now, in some cases, DataMiner would not be able to retrieve alarms from the alarm cache when those alarms were not linked to a specific element. As a result, it had to retrieve them from the database instead.
+
+This has now been improved so those alarms are correctly retrieved from memory when available.
+
 #### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from DataMiner Cube [ID 45355]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
