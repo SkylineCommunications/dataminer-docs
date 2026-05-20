@@ -120,7 +120,7 @@ In this context, context leakage primarily means unintended exposure of one user
 
 The DataMiner Assistant uses separate sessions, and the Azure model services used by the Assistant isolate context between those sessions. This means context from one session is not available in another session.
 
-As a result, there is no risk of context being leaked between users, or between different organizations using the DataMiner Assistant, through shared model context.
+As a result, there is no risk of context being leaked because of shared model context between users or between different organizations using the DataMiner Assistant.
 
 ## Questions and concerns
 
