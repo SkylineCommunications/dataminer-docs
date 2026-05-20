@@ -37,6 +37,20 @@ Within a GQI extension, it will now be possible to retrieve the *Culture* and *T
 > [!NOTE]
 > For this new feature to work, the extension needs to be created with the `Skyline.DataMiner.Core.GQI.Extensions` NuGet (version 1.1.0 or above). The feature is not supported when the extension is created using the `SLAnalyticsTypes` API.
 
+#### Dashboards/Low-Code Apps - Node edge graph component: New 'Edge metric minimization' setting [ID 45538]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Node edge graph components now have a new *Edge metric minimization* setting, which will allow you to configure when edge metrics are minimized.
+
+| Mode | Description |
+|---|---|
+| Auto   | Edge metrics are minimized automatically when edges are too close to each other (default behavior). |
+| Always | Edge metrics are always minimized. |
+| Never  | Edge metrics are never minimized. |
+
+When edge metrics are minimized because the mode is set to either "Auto" or "Always", hold Ctrl+Space to make the full edge metrics visible. When you then release both keys, the configured minimization behavior will be restored again.
+
 ## Changes
 
 ### Enhancements
