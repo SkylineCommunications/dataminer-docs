@@ -51,7 +51,7 @@ No data is used for training foundation models or shared outside the Skyline Com
 
 Access to the DataMiner Assistant and the actions you can perform are controlled through your existing DataMiner user permissions:
 
-- Only users with appropriate DataMiner credentials can access the Assistant. The DataMiner Assistant web application, when enabled, is currently available for all users with permissions to use the web apps. This broad access is temporary during the current rollout phase. At this point in time, no additional Assistant-specific permissions are required. This may change after the official release of the functionality.
+- Only users with appropriate DataMiner credentials can access the Assistant. The DataMiner Assistant web application, when enabled, is currently available for all users with permissions to use the web apps. This broad access is temporary during the current rollout phase. At this point in time, no additional Assistant-specific permissions are required.
 - The Assistant respects your role-based access control (RBAC) configuration, meaning you can only view and interact with data that your DataMiner permissions allow you to access.
 - Access to the Documentation tab in the DataMiner Assistant app for retrieving information from the DataMiner documentation is typically available to all authenticated users.
 
