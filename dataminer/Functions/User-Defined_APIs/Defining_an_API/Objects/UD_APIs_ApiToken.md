@@ -19,7 +19,7 @@ The table below lists the properties of the `ApiToken` object. For each property
 |CreatedAt      |DateTime   |Yes        |The UTC date and time when the token was created.|
 |LastModifiedBy |string     |Yes        |The name of the last user who modified the token.|
 |LastModified   |DateTime   |Yes        |The UTC date and time when the token was last modified.|
-|RateLimit      |RateLimit  |No         |Optional rate limit that controls how frequently the token can be used to trigger APIs on a per endpoint basis. See [RateLimit](#ratelimit). Available from DataMiner 10.6.7/10.7.0 onwards.<!-- RN 44848 -->|
+|RateLimit      |RateLimit  |No         |Optional rate limit that controls how frequently the token can be used to trigger APIs on a per-endpoint basis. See [RateLimit](#ratelimit). Available from DataMiner 10.6.7/10.7.0 onwards.<!-- RN 44848 -->|
 
 ### Secret
 
@@ -54,7 +54,7 @@ var secret = ApiTokenSecretGenerator.GenerateSecret();
 
 ### RateLimit
 
-From DataMiner 10.6.7/10.7.0 onwards<!-- RN 44848 -->, an `ApiToken` can be configured with a rate limit to control how frequently it can be used to trigger user-defined APIs. This rate is evaluated on a per endpoint basis.
+From DataMiner 10.6.7/10.7.0 onwards<!-- RN 44848 -->, an `ApiToken` can be configured with a rate limit to control how frequently it can be used to trigger user-defined APIs. This rate is evaluated on a per-endpoint basis.
 
 A rate limit consists of the following properties:
 
@@ -76,16 +76,16 @@ Every request that can be linked to a token counts toward that token's rate limi
 
 Rate limiting uses a sliding window. When a request is received, the system checks how many requests were made with the same token during the preceding configured window. If the configured limit has already been reached within that period, the request is blocked.
 
-For example, with a limit of 5 requests per 1 minute, a client using the token can trigger the API up to 5 times within any rolling 1-minute period.
+For example, with a limit of 5 requests per minute, a client using the token can trigger the API up to 5 times within any rolling 1-minute period.
 
 Keep in mind that different limit/window combinations can result in different behavior, even when they allow the same average number of requests. For example:
 
-- *Limit* 10, *Window* 60 seconds allows bursts of up to 10 requests in a short time, after which the client must wait until requests fall outside the 60-second window.
-- *Limit* 1, *Window* 6 seconds spreads the requests more evenly, allowing one new request every 6 seconds.
+- If *Limit* is 10 and *Window* 60 seconds, bursts of up to 10 requests are allowed in a short time, after which the client must wait until requests fall outside the 60-second window.
+- If *Limit* is 1 and *Window* 6 seconds, requests are spread more evenly, as one new request is allowed every 6 seconds.
 
 > [!NOTE]
 >
-> - Configuring a high rate limit, such as 100 requests per second, does not guarantee that DataMiner can process that number of API triggers. The actual throughput depends on factors such as API script runtime, server hardware, current system load, the number of agents in the cluster, and other system-specific conditions.
+> - Configuring a high rate limit, such as 100 requests per second, does not guarantee that DataMiner can process that number of API triggers. The actual throughput depends on factors such as API script runtime, server hardware, current system load, the number of Agents in the cluster, and other system-specific conditions.
 > - When an existing rate limit is changed, the updated limit is only applied after a next trigger both starts and finishes after the update has been applied. If a long window was configured and the limit has already been reached, the client may need to wait until the window has passed before another trigger can be executed and the updated limit can take effect.
 
 ## Requirements
