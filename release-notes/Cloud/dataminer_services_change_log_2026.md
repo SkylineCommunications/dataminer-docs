@@ -17,7 +17,7 @@ Several issues related to organization switching have been resolved across the A
 - On pages with organization-scoped data, switching to a different organization could cause stale data from the previous organization to still be shown. Now stale data from the previous organization is cleared and fresh data is fetched for the new one.
 - Rapidly switching between organizations could leave behind stale data from intermediate organizations. This issue has been resolved.
 - Organization keys, audit logs, and usage data did not refresh automatically after an organization switch, and if the audit log reload failed, stale data and the *Load More* button remained visible. This issue has been resolved. The data will refresh automatically, and if the audit log reload fails, stale data and the *Load More* button will be hidden.
-- In the Catalog app, if a catalog item was unavailable for the newly selected organization, the user was not automatically navigated back to the Browse page. The user is now automatically navigated back to the Browse page in this case.
+- In the Catalog app, if a Catalog item was unavailable for the newly selected organization, a message was shown that the item was not found. Now the user is instead automatically redirected to the Browse page.
 - It could occur that aborted call notifications were shown when switching pages. These notifications are no longer shown.
 
 ### 20 May 2026 - Enhancement - Billing - 'Overusage' terminology updated to 'PPU'
