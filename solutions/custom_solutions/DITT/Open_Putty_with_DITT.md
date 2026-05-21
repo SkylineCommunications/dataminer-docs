@@ -1,5 +1,6 @@
 ---
 uid: Open_Putty_with_DITT
+description: How to configure a user-specific PuTTY path in the DITT Registrations table and add a Tools page button to open PuTTY from DataMiner Cube.
 ---
 
 # Opening PuTTY using DITT

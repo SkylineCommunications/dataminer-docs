@@ -1,5 +1,6 @@
 ---
 uid: Dataminer_IT_Tool_Overview
+description: Overview of DataMiner IT Tools, explaining integrated ping, tracert, and optional PuTTY actions in visual overviews for faster network diagnostics.
 ---
 
 # DataMiner IT Tools (DITT)

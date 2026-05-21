@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Health_Check_Usage
+description: Usage guide for Health Check Manager pages, explaining general metrics, test configuration, and results interpretation for executed health tests.
 ---
 
 # Using the DataMiner Health Check Tool

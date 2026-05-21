@@ -1,5 +1,6 @@
 ---
 uid: Implementing_DITT_in_Visio
+description: Step-by-step guide to add DITT ping and tracert buttons and pages to custom visual overviews.
 ---
 
 # Implementing DITT in a visual overview

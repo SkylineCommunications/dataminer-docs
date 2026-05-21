@@ -1,5 +1,6 @@
 ---
 uid: Installing_DITT
+description: Installation guide for DataMiner IT Tools, including prerequisites, Catalog deployment steps, and update behavior for existing DITT elements.
 ---
 
 # Installing DataMiner IT Tools

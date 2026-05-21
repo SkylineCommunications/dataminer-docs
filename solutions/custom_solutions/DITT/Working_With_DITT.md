@@ -1,5 +1,6 @@
 ---
 uid: Working_with_DITT
+description: Usage guide for DITT element pages, including operation tracking, subscriptions, registrations, and using ping, tracert, and optional PuTTY actions.
 ---
 
 # Working with DataMiner IT Tools
