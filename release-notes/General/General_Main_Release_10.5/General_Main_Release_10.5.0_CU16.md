@@ -117,17 +117,6 @@ Each entry in `ForcedEndpoints` can be a string in the format `"host:port"` or `
 
 When a view containing a service was moved to another view, it could occur that elements included in that service were incorrectly moved to the root view. This happened when an element was only included in the original view because of the service, but the element already existed in the target view. This behavior has been corrected.
 
-#### SLWatchDog: Problems when switching to and from daylight savings time [ID 45290]
-
-<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
-
-Because SLWatchDog tracked threads using local time, systems could run into issues when switching to and from daylight savings time:
-
-- When switching away from daylight savings time, half-open runtime errors could incorrectly get cleared immediately.
-- When switching to daylight savings time, runtime errors could be missed for an hour.
-
-In addition, crash dumps would not be detected correctly either.
-
 #### Problem when simulations were reloaded at runtime [ID 45296]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
