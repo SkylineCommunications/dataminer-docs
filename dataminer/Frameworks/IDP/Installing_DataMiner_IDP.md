@@ -38,8 +38,6 @@ When you deploy the IDP package, IDP will be installed with the default settings
 
       1. Click the button next to *Setup Wizard*.
 
-1. On the first page, click the button *Execute Now*.
-
 1. On the welcome page, click *Next*.
 
 1. On the view selection page, specify which views should be used by DataMiner IDP:
@@ -67,4 +65,4 @@ When you deploy the IDP package, IDP will be installed with the default settings
 
 1. On the last page of the wizard, click *Confirm*.
 
-1. When the configuration of the IDP module has finished, which may take some time, click *Finish*, and on the next page, click *Close*.
+1. When the configuration of the IDP module has finished, which may take some time, click *Finish*.

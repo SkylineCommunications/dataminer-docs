@@ -61,7 +61,10 @@ On this page, you can configure the automatic cleanup of the configuration archi
 
 - **By number of backups per device**: Allows you to set a limit on the number of backups per device and verify how many devices are currently in the archive.
 
+With the *Purge History* table below these settings, you can track which files have been deleted by each purge setting.
+
 > [!NOTE]
+>
 > - When one of these limits is enabled, it is checked whenever a backup is added to the configuration archive. The oldest backups are always removed first.
 > - If purging happens based on the total number of backups or the number of backups per element, only full configuration backups are taken into account. However, if it happens based on disk usage, the size of all files (including the extra files used for change detection) is taken into account.
 > - Alarm monitoring and trending can be enabled for the KPIs.
