@@ -1,5 +1,6 @@
 ---
 uid: Getting_Started_Tutorials
+description: Getting started tutorials that guide you through first steps in DataMiner, from creating elements on DaaS to building services.
 ---
 
 # Getting started tutorials
