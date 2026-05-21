@@ -52,14 +52,12 @@ When you deploy the IDP package, IDP will be installed with the default settings
 
 1. On the *IDP Extra Configurations* page:
 
-   - Optionally customize the HTTP binding address, with the corresponding HTTP mode and port.
-
    - Optionally specify the path and credentials for the configuration archive.
 
    - Optionally specify the credentials for file transfers.
 
    > [!NOTE]
-   > You can also configure these settings in the IDP app after the initial setup, via *Admin* > *Configuration* > *Network Shares*. However, this is not possible for the HTTP binding address, mode, and port.
+   > You can also configure these settings in the IDP app after the initial setup, via *Admin* > *Configuration* > *Network Shares*.
 
 1. Click *Next* until you reach the last page of the wizard.
 
