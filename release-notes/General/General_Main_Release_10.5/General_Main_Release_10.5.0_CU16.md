@@ -86,7 +86,7 @@ Because of a number of enhancements, overall performance of the VerifyNatsCluste
 
 #### MessageBroker: Configuring forced endpoints [ID 45491]
 
-<!-- MR 10.5.0 [CU16] - FR 10.6.7 -->
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
 In the `MessageBrokerConfig.json` file, it is now possible to configure so-called forced endpoints that will override the NATS endpoints provided by BrokerGateway. This will prove particularly useful in scenarios where a process must reach NATS through a fixed set of endpoints. For example, when connecting through a proxy, a DMZ, or a load balancer.
 
@@ -157,3 +157,9 @@ Up to now, in some cases, SLAutomation could stop working when recompiling libra
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
 When an element failed to start up because of, for example, a faulty protocol.xml file, up to now, it would not properly clean up the assigned resources.
+
+#### Connector with redundant polling connections would incorrectly switch connections when executing a poll action group on an element in timeout [ID 45534]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Up to now, a connector with redundant polling connections would incorrectly switch connections when executing a group of type "poll action" or "poll trigger" on an element that was in a timeout state. In some cases, this could lead to unexpected behavior.
