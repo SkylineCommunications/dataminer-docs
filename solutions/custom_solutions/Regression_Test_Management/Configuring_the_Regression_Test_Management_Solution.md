@@ -1,5 +1,6 @@
 ---
 uid: Configuring_the_Regression_Test_Management_Solution
+description: Configure groups, tests, and email settings for the Regression Test Management Solution to control execution timing and reporting.
 ---
 
 # Configuring the Regression Test Management Solution

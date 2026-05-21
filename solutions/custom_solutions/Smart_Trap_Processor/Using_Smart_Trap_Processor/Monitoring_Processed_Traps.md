@@ -1,5 +1,6 @@
 ---
 uid: Monitoring_Processed_Traps
+description: Learn how to monitor processed and heartbeat traps, interpret event states, and review per-processor metrics in the Smart Trap Processor tool.
 ---
 
 # Monitoring Processed Traps

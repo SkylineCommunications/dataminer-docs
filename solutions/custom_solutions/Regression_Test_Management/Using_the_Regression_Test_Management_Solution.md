@@ -1,5 +1,6 @@
 ---
 uid: Using_the_Regression_Test_Management_Solution
+description: Run regression tests manually or by schedule, monitor outcomes, and review detailed results and notifications in DataMiner.
 ---
 
 # Using the Regression Test Management Solution

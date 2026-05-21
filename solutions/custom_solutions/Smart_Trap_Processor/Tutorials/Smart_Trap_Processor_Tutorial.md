@@ -1,5 +1,6 @@
 ---
 uid: Smart_Trap_Processor_Tutorial
+description: A hands-on tutorial to deploy the Smart Trap Processor Training package, and configure rules, source mappings, and simulated trap flows.
 ---
 
 # Getting started with the Smart Trap Processor

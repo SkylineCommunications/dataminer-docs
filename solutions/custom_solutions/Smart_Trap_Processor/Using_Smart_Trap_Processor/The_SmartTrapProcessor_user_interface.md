@@ -1,5 +1,6 @@
 ---
 uid: The_SmartTrapProcessor_user_interface
+description: Explore the Smart Trap Processor interface, including navigation, page purpose, and where to access monitoring and configuration features.
 ---
 
 # The Smart Trap Processor tool user interface

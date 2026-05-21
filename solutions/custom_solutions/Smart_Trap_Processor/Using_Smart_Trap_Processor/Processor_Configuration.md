@@ -1,5 +1,6 @@
 ---
 uid: Processor_configuration
+description: Configure trap source filtering, rule matching, source mappings, and auto-clear behavior to process SNMP events consistently.
 ---
 
 # Configuring processing rules

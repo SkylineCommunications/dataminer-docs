@@ -1,5 +1,6 @@
 ---
 uid: Regression_Test_Management
+description: Learn how the Regression Test Management Solution centralizes test setup, execution, reporting, and historical insights in DataMiner.
 ---
 
 # Regression Test Management
