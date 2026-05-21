@@ -6,6 +6,7 @@ uid: DashboardDropdown
 
 This basic control allows you to **select an item in a dropdown list**. The selectable items can be based on any data.
 
+This component is typically used to let users interact with a dashboard or low-code app by selecting a value that influences what is shown elsewhere. For example, a dropdown can be used to filter data in other components, switch between different data sets, or focus on a specific element, protocol, or status. This makes it easier to explore large amounts of data and quickly find the information that is most relevant.
 
 ![Dropdown](~/dataminer/images/Dropdown.png)<br>*Dropdown component in DataMiner 10.4.6*
 
