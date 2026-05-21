@@ -118,6 +118,14 @@ When DataMiner Cube requests timeline data using a `GetReportTimeLineDataMessage
 
 From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
 
+#### Service template definitions will no longer be stored alongside services [ID 45370]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+Up to now, service templates were stored alongside services in the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders. Each service template also had exactly one DataMiner Agent actively hosting the service template.
+
+In preparation of service swarming, service template definitions have now been moved into a new `C:\Skyline DataMiner\ServiceTemplates` folder, which will be synchronized across the cluster. A service template no longer has a dedicated hosting agent, which means that they now remain available even if DataMiner Agents are down.
+
 #### SLAnalytics: Enhanced performance when detecting flatline events [ID 45376]
 
 <!-- MR 10.7.0 - FR 10.6.7 -->
