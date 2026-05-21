@@ -61,7 +61,7 @@ On this page, you can configure the automatic cleanup of the configuration archi
 
 - **By number of backups per device**: Allows you to set a limit on the number of backups per device and verify how many devices are currently in the archive.
 
-With the *Purge History* table below these settings, you can track which files have been deleted by each purge setting.
+With the *Purge History* table below these settings, you can track which files have been deleted by each purge setting.<!-- RN 45176 -->
 
 > [!NOTE]
 >
