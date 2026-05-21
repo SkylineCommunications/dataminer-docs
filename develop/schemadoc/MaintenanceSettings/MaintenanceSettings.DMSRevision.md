@@ -4,7 +4,7 @@ uid: MaintenanceSettings.DMSRevision
 
 # DMSRevision element
 
-Specifies when a double-check has to be done. You can specify as many starting times as you want. Default: Only at 00:00:00.
+Also known as the "midnight sync". Specifies when a full DataMiner System (DMS) synchronization should occur, typically once per day. It ensures all DataMiner Agents are fully in sync by triggering a complete system-wide sync at the configured times. Default: Only at 00:00:00.
 
 ## Parents
 
