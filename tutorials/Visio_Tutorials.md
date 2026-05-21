@@ -1,5 +1,6 @@
 ---
 uid: Visio_Tutorials
+description: Step-by-step Visual Overview tutorials covering basic shapes, embedded dashboards, dashboard feeds, and spectrum preset control.
 ---
 
 # Visual Overview tutorials

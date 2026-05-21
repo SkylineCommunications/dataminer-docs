@@ -1,5 +1,6 @@
 ---
 uid: Frameworks_and_Solutions_Tutorials
+description: Frameworks and Solutions tutorials for IDP, EPM, and MediaOps workflows, from onboarding equipment to orchestration setup.
 ---
 
 # Frameworks & Solutions tutorials
