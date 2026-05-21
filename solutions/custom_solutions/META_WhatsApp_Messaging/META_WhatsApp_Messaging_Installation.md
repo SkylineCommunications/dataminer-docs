@@ -1,5 +1,6 @@
 ---
 uid: META_WhatsApp_Messaging_Installation
+description: Prerequisite and setup steps to install META WhatsApp Messaging, including Meta app creation, WhatsApp setup, and user configuration.
 ---
 
 # Installing the META WhatsApp Messaging Solution

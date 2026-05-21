@@ -1,5 +1,6 @@
 ---
 uid: Installing_PLM_tool
+description: Instructions on how to set up the DataMiner Planned Maintenance tool, with prerequisites and initial element configuration in Cube.
 ---
 
 # Installing the PLM tool
