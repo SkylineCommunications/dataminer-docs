@@ -19,7 +19,7 @@ The table below lists the properties of the `ApiToken` object. For each property
 |CreatedAt      |DateTime   |Yes        |The UTC date and time when the token was created.|
 |LastModifiedBy |string     |Yes        |The name of the last user who modified the token.|
 |LastModified   |DateTime   |Yes        |The UTC date and time when the token was last modified.|
-|RateLimit      |RateLimit  |No         |Optional rate limit that controls how frequently the token can be used to trigger APIs on a per-endpoint basis. See [RateLimit](#ratelimit). Available from DataMiner 10.6.7/10.7.0 onwards.<!-- RN 44848 -->|
+|RateLimit      |RateLimit  |No         |Optional rate limit that controls how frequently the token can be used to trigger APIs on a per-endpoint basis. See [RateLimit](#ratelimit). Available from DataMiner 10.6.7/10.7.0 onwards.<!-- RN 45470 -->|
 
 ### Secret
 
@@ -54,7 +54,7 @@ var secret = ApiTokenSecretGenerator.GenerateSecret();
 
 ### RateLimit
 
-From DataMiner 10.6.7/10.7.0 onwards<!-- RN 44848 -->, an `ApiToken` can be configured with a rate limit to control how frequently it can be used to trigger user-defined APIs. This rate is evaluated on a per-endpoint basis.
+From DataMiner 10.6.7/10.7.0 onwards<!-- RN 45470 -->, an `ApiToken` can be configured with a rate limit to control how frequently it can be used to trigger user-defined APIs. This rate is evaluated on a per-endpoint basis.
 
 A rate limit consists of the following properties:
 
@@ -104,7 +104,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 |InvalidName       |The specified name was null or whitespace.|
 |InvalidSecret     |The specified secret did not meet the requirements or is already used by another token.|
 |TokenInUse        |The token is in use by one or multiple `ApiDefinitions`. The *ApiDefinitionIdLinks* property will contain a list of IDs of the definitions using the token.|
-|InvalidRateLimit  |The configured `RateLimit` is invalid. The `Message` property contains an English description of the invalid configuration. Available from DataMiner 10.6.7/10.7.0 onwards.<!-- RN 44848 -->|
+|InvalidRateLimit  |The configured `RateLimit` is invalid. The `Message` property contains an English description of the invalid configuration. Available from DataMiner 10.6.7/10.7.0 onwards.<!-- RN 45470 -->|
 
 ## Security
 
