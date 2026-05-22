@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 22 May 2026 - New feature - Admin - Audit logs for managing draft subscriptions
+
+Managing draft subscriptions will now create audit logs, allowing administrators to track and review changes related to draft subscription activity.
+
+### 22 May 2026 - New feature - Sharing - Multi-paste support for email input
+
+When sharing a dashboard, users can now paste multiple email addresses at once into the email input field. Both comma-separated (`,`) and semicolon-separated (`;`) lists are supported.
+
 ### 20 May 2026 - Fix - Admin/Catalog - Issues related to organization switching
 
 Several issues related to organization switching have been resolved across the Admin app and Catalog:
