@@ -1,6 +1,6 @@
 ---
 uid: Implementing_DITT_in_Visio
-description: Step-by-step guide to add DITT ping and tracert buttons and pages to custom visual overviews.
+description: Implement DITT in visual overview by adding Ping and Tracert buttons/pages in a Visio file, and then setting _parameter3 to an IP address or placeholder.
 ---
 
 # Implementing DITT in a visual overview

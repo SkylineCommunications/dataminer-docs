@@ -1,6 +1,6 @@
 ---
 uid: Installing_DITT
-description: Installation guide for DataMiner IT Tools, including prerequisites, Catalog deployment steps, and update behavior for existing DITT elements.
+description: Install the DataMiner IT Tools package to be able to initiate ping and traceroute commands or open PuTTY.
 ---
 
 # Installing DataMiner IT Tools

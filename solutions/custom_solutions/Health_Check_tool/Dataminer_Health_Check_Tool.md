@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_Health_Check_Tool
-description: Introduction to the DataMiner Health Check Tool, covering script and subscription tests, threshold evaluation, and dashboard or email reporting.
+description: Use the DataMiner Health Check Tool to configure script-based tests that retrieve DMA metrics and subscription-based tests that retrieve parameter data from elements.
 ---
 
 # DataMiner Health Check Tool

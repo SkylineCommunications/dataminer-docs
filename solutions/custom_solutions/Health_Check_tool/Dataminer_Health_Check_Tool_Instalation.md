@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_Health_Check_Tool_Installation
-description: Installation instructions for the DataMiner Health Check package, with prerequisites, deployment steps, default element creation, and update notes.
+description: Install the DataMiner Health Check Tool by deploying the DataMiner Health Check package after checking whether the prerequisites are met.
 ---
 
 # Installing the DataMiner Health Check Tool

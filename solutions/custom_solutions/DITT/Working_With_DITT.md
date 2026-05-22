@@ -1,6 +1,6 @@
 ---
 uid: Working_with_DITT
-description: Usage guide for DITT element pages, including operation tracking, subscriptions, registrations, and using ping, tracert, and optional PuTTY actions.
+description: To work with the DataMiner IT Tools in Cube, open the DITT element, and run a Ping, Tracert, or (optional) PuTTY command.
 ---
 
 # Working with DataMiner IT Tools

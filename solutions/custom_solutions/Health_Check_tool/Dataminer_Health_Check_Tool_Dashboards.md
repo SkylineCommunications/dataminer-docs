@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_Health_Dashboards
-description: Overview of Health Check Overview and Test Results dashboards, highlighting system health indicators, failure metrics, and passed or failed test views.
+description: Explore the DataMiner Health Check Tool dashboards. The Overview dashboard acts as a monitoring interface. The Results dashboard lists the test outcomes.
 ---
 
 # DataMiner Health Check Tool dashboards

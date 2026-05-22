@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_Health_Check_Tool_Configuration
-description: Configuration guide for Health Check test cases and report settings, including script-based and subscription-based tests with thresholds and filters.
+description: Configure the DataMiner Health Check Tool by adding test cases, and setting up email reports and execution schedules.
 ---
 
 # Configuring the DataMiner Health Check Tool

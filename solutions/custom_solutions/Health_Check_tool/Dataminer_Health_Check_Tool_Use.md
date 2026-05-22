@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_Health_Check_Usage
-description: Usage guide for Health Check Manager pages, explaining general metrics, test configuration, and results interpretation for executed health tests.
+description: Use the DataMiner Health Check Tool to review key metrics, manage the configuration of tests and subscriptions, and configure test result cleanup.
 ---
 
 # Using the DataMiner Health Check Tool
