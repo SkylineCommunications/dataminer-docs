@@ -51,14 +51,6 @@ Up to now, in some cases, DataMiner would not be able to retrieve alarms from th
 
 This has now been improved so those alarms are correctly retrieved from memory when available.
 
-#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from DataMiner Cube [ID 45355]
-
-<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
-
-When DataMiner Cube requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
-
-From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
-
 #### APIGateway has been upgraded to Microsoft .NET 10 [ID 45421]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
