@@ -160,3 +160,13 @@ From now on, selected list items will get a color that is different from that of
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
 When you uploaded an element document, in some cases, the file contents could incorrectly get appended to previously uploaded data, resulting in a corrupted file.
+
+#### Error 'We received a cleared alarm without previous alarm' would incorrectly get logged when properties of a closed correlation alarm were updated [ID 45555]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When a visual overview contains an *AlarmSummary* shape, a `We received a cleared alarm without previous alarm` error is logged whenever a cleared alarm is received without having received a previous alarm.
+
+Up to now, this error would incorrectly also get logged when properties of a closed correlation alarm were updated.
+
+From now on, when properties of a closed correlation alarm are updated, this will no longer be logged as an error. Instead, this will be logged as a debug line.
