@@ -20,7 +20,35 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No features have been added yet.*
+#### Correlation : Alarm grouping [ID 44973]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When configuring a correlation rule, it is now possible to specify that a *Group alarms* action has to be executed when that rule is triggered.
+
+This action is similar to the *New alarm* action. When the rule is triggered, a new alarm will be generated, but in the case of the *Group alarm* action, the alarm will have its severity set to "Suggestion" and be linked to the DataMiner element. The value of the alarm can be set in the action itself.
+
+When a group alarm appears in the Alarm Console, the following fields will be updated:
+
+- The severity will be set to the severity of the base alarm with the highest severity. This severity will be shown in the *Severity* column, and will also be indicated by the color of the alarm icon.
+- The parameter name will be set to the name of the correlation rule.
+- The element name will be changed according to the configuration of the correlation rule:
+
+  | Correlate across DMAs option | Alarm grouping | Element name |
+  |---|---|---|
+  | Selected     | Not defined | Name of the cluster |
+  | Selected     | Defined     | Name of the grouped object |
+  | Not selected | Not defined | Name of the DataMiner Agent |
+  | Not selected | Defined     | Name of the DataMiner Agent + Name of the grouped object |
+
+When the alarms are filtered (either by means of the quick filter or by means of an alarm filter):
+
+- If the group alarm matches the filter, the alarm and its sources will all be shown.
+- If the group alarm does not match the filter but one of its sources does, the alarm and its sources will all be shown.
+- If neither the group alarm nor any of its sources match the filter, neither the alarm nor its sources will be shown.
+
+> [!NOTE]
+> The way in which the severity of an incident is shown has also been changed. Up to now, the alarm icon of an incident would show the severity of the base alarm with the highest severity, and the *Severity* column in the Alarm Console would show "Suggestion". From now on, the Severity column of an incident will also show the severity of the base alarm with the highest severity.
 
 ## Changes
 
