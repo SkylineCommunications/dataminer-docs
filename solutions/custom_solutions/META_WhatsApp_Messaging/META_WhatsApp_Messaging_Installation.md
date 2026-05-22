@@ -1,6 +1,6 @@
 ---
 uid: META_WhatsApp_Messaging_Installation
-description: Prerequisite and setup steps to install META WhatsApp Messaging, including Meta app creation, WhatsApp setup, and user configuration.
+description: To install META WhatsApp Messaging, make sure the prerequisites—such as a correctly configured alarm notification app—are met, then install the connector
 ---
 
 # Installing the META WhatsApp Messaging Solution
