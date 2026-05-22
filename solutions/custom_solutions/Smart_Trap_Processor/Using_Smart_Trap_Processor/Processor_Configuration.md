@@ -1,6 +1,6 @@
 ---
 uid: Processor_configuration
-description: Configure trap source filtering, rule matching, source mappings, and auto-clear behavior to process SNMP events consistently.
+description: Use DataMiner Cube or the Smart Trap Processor tool to configure trap IP sources, rules, sources, and auto-clear behavior.
 ---
 
 # Configuring processing rules

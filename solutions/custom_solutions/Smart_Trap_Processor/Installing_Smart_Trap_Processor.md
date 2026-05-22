@@ -1,6 +1,6 @@
 ---
 uid: Installing_Smart_Trap_Processor
-description: Instructions on how to deploy the Smart Trap Processor package from the DataMiner Catalog.
+description: Deploy the Smart Trap Processor tool from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the Smart Trap Processor tool

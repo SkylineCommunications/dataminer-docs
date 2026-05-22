@@ -1,6 +1,6 @@
 ---
 uid: Smart_Trap_Processor_Tutorial
-description: A hands-on tutorial to deploy the Smart Trap Processor Training package, and configure rules, source mappings, and simulated trap flows.
+description: Learn how to get started with the Smart Trap Processor tool and define rules for collecting and processing SNMP traps from various sources.
 ---
 
 # Getting started with the Smart Trap Processor
