@@ -218,3 +218,14 @@ From now on, all web apps will use the same theme colors and the correct icons. 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
 On systems using the GQI DxM, in a *Query filter* component, it would no longer be possible to filter numeric columns on discrete values when filter assistance was enabled.
+
+#### Web apps - Interactive automation scripts: Error messages in FileSelector control would incorrectly show raw HTML code [ID 45572]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Up to now, when running an interactive automation script, error messages in the *FileSelector* control would incorrectly show raw HTML code.
+
+When *ValidationText* was set to, for example, `This is the <b>actual</b> error message.`, this text would incorrectly end up in the UI as `<html><head></head><body>This is the <b>actual</b> error message.</body></html>`.
+
+> [!NOTE]
+> If, for some reason, you want an error message to contain actual HTML code, you will need to escape the HTML tags.
