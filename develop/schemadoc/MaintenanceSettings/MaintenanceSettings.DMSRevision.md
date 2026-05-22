@@ -4,7 +4,9 @@ uid: MaintenanceSettings.DMSRevision
 
 # DMSRevision element
 
-Also known as the "midnight sync". Specifies when a full DataMiner System (DMS) synchronization should occur, typically once per day. It ensures all DataMiner Agents are fully in sync by triggering a complete system-wide sync at the configured times. Default: Only at 00:00:00.
+Specifies when a full DataMiner System (DMS) synchronization should occur. This typically happens once per day and is also known as the "midnight sync". It ensures that all DataMiner Agents are fully in sync by triggering a complete system-wide sync at the configured time.
+
+Default: Only at 00:00:00.
 
 ## Parents
 
