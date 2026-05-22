@@ -55,11 +55,11 @@ Once installed, DataMiner Cube will launch automatically and open a session conn
 
 ## MSI installation
 
-From DataMiner 10.2.0/10.2.2 onwards, it is also possible to install DataMiner Cube using an **MSI installer**, but this is **not recommended as this requires manual updating** when a new version is available. 
+From DataMiner 10.2.0/10.2.2 onwards, it is also possible to install DataMiner Cube using an **MSI installer**, but this is **not recommended as this requires manual updating** when a new version is available.
 
 This installation method is typically intended for system administrators who want to deploy DataMiner Cube in bulk across multiple client machines using automated deployment tools. It can also be useful in environments where automatic updates are not permitted and administrators require full control over the versions installed on client systems.
 
-Choosing the MSI installation means that neither the DataMiner Launcher nor DataMiner Cube will receive automatic updates.
+Choosing the MSI installation means that neither the [Cube start window](xref:Cube_start_window) nor DataMiner Cube itself will receive automatic updates.
 
 The MSI installer can be found in the folder `C:\Skyline DataMiner\Webpages\Tools\Installs` on each DMA.
 
