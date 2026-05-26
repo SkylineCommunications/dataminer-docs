@@ -109,6 +109,12 @@ The Spectrum analyzer component now has a *Color source* option, which can be se
 
 In both cases, measurement point trace colors are resolved via theme color indexing based on the measurement point key/name.
 
+#### Dashboards/Low-Code Apps: Redesigned 'Numeric input' component [ID 45457]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+The *Numeric input* component has been redesigned.
+
 #### Dashboards/Low-Code Apps: Tree and List components now accept a string filter [ID 45485]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
