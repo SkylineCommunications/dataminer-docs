@@ -10,7 +10,7 @@ When you configure this, the `CredentialsUrl` setting in this same JSON file wil
 
 ## Prerequisites
 
-- This setting should only be used in combination with a **server that does not run a DataMiner Agent**, for example, servers hosting a [DMZ setup for dataminer.services connectivity](xref:Connect_to_cloud_with_DMZ) or [Dashboard Gateway](xref:Dashboard_Gateway_installation).
+- This setting should only be used in combination with a **server that does not run a DataMiner Agent**, for example, servers hosting a [DMZ setup for dataminer.services connectivity](xref:Connect_to_cloud_with_DMZ) or [Dashboard Gateway](xref:Dashboard_Gateway_installation). <!-- DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 (RN 45491) introduces limited support for use of ForcedEndpoints with a DataMiner server; however, this is not recommended at all and should never be done without checking with Skyline first. -->
 
 - For DxMs, check the release notes of the specific DxM to find out from which version this is supported. The [Data Aggregator DxM](xref:Data_Aggregator_DxM) does **not** work in combination with `ForcedEndpoints`.
 
