@@ -13,7 +13,7 @@ This component is typically used to let users interact with a dashboard or low-c
 > [!NOTE]
 > Prior to DataMiner 10.3.5/10.4.0<!--  RN 35902 -->, this component is available under *Feeds*.
 
-## Data source behavior
+## How data is displayed in the dropdown
 
 The way items are listed in the dropdown depends on the type and number of data sources applied:
 
