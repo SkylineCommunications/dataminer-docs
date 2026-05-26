@@ -87,7 +87,7 @@ Additionally, the following layout options are also available:
 
 | Section | Option | Description |
 |--|--|--|
-| Advanced | Display column | Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Select which column is used to display as the display value in the dropdown. Only available when a single query data source or *Tables* component data source was applied. |
+| Advanced | Display column | Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Select the column whose values are shown in the dropdown. Only available when a single query data source or *Tables* component data source was applied. |
 | Advanced | Label | Add text that will be displayed next to the dropdown. |
 
 ### Dropdown settings
