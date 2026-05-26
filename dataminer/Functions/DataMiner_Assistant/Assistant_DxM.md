@@ -9,7 +9,7 @@ The DataMiner Assistant module is available as a DxM ([DataMiner Extension Modul
 
 The initial 1.0.0 version only supports the [natural language to GQI](xref:NL2GQI) feature. Starting from version 2.0.7, the [Document Intelligence](xref:docintel) feature is also supported.
 
-A [DataMiner Assistant app](xref:DataMinerAssistant) is also currently being developed. It can preview it in DataMiner upon request. In addition, a [DataMiner Assistant for Microsoft 365](xref:Assistant_M365) is available, which has similar features as the Assistant app but allows direct access from Microsoft Teams or Microsoft Copilot.
+A [DataMiner Assistant app](xref:DataMinerAssistant) is also currently being developed. You can preview it in DataMiner upon request. In addition, a [DataMiner Assistant for Microsoft 365](xref:Assistant_M365) is available on the Microsoft Marketplace, which has similar features as the Assistant app but allows direct access from Microsoft Teams or Microsoft Copilot.
 
 ## Installation
 
