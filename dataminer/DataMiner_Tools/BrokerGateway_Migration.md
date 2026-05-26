@@ -164,7 +164,7 @@ The following actions will be executed automatically during the migration, in th
 
    This file is used when initializing default sessions for DataMiner processes using the NATS communication channel. During system migration, the file is automatically overwritten to include the correct BrokerGateway URL and the path to the associated API key.
 
-   A typical example of this file’s contents is shown below:
+A typical example of this file’s contents is shown below:
 
    ```json
    {
