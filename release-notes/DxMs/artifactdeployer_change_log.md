@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 22 April 2026 - Enhancement - ArtifactDeployer 1.9.1.0 - MessageBroker dependency updated
+
+Now supports ForcedEndpoints in MessageBrokerConfig
+
 #### 14 April 2026 - Enhancement - ArtifactDeployer 1.8.8 - Dependencies updated
 
 Several dependencies have been updated.
