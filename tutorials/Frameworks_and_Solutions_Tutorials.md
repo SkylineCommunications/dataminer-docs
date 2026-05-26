@@ -1,5 +1,6 @@
 ---
 uid: Frameworks_and_Solutions_Tutorials
+description: Tutorials for frameworks, solutions (IDP, EPM, MediaOps Plan, etc.), and development tools (Smart Trap Processor, Performance Analyzer, etc.).
 ---
 
 # Frameworks & Solutions tutorials

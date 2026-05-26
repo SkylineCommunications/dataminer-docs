@@ -278,8 +278,6 @@ items:
         items:
         - name: Defining a table
           topicUid: UIComponentsTableDefinition
-        - name: Column option types
-          topicUid: UIComponentsTableColumnOptionTypes
         - name: Primary keys
           topicUid: UIComponentsTablePrimaryKeys
         - name: Display keys
@@ -1460,6 +1458,8 @@ items:
         topicUid: ClassLibraryMonitorsStartingAStartedMonitor
       - name: Stopping a stopped monitor
         topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
+      - name: Receiving current values when starting a monitor
+        topicUid: ClassLibraryMonitorsCurrentValues
     - name: Scheduler
       topicUid: Scheduler_NuGet_Package
     - name: Obsolete namespaces

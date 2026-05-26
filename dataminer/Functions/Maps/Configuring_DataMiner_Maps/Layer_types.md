@@ -329,6 +329,12 @@ If you want a layer of sourceType "overlay" to display a KML image, do the follo
      </Layer>
      ```
 
+> [!IMPORTANT]
+> The **KML layer** in the Google Maps API is deprecated as of 30 April, 2026. To be able to keep using maps that use this layer, you have two options:
+>
+> - Upgrade to DataMiner web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 or higher. This fixes the Google Maps integration on 3.65 (see [release note [ID 45481]](xref:Web_apps_Feature_Release_10.6.7#dashboardslow-code-apps---maps-component-google-maps-version-pinned-to-365-to-prolong-support-for-kml-overlays-id-45481)), extending support until **May 2027**.
+> - Migrate to GeoJSON (see [KmlLayer Migration Paths](https://developers.google.com/maps/comms/kml-layer-migration)). However, note that upgrading DataMiner web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 or higher is also highly recommended in this case, to prevent differences in layer appearance.<!-- RN 45518 -->
+
 > [!NOTE]
 >
 > - Do not store private KML files in the folder `C:\Skyline DataMiner\Webpages` (or any subfolder). Files in that folder will be publicly accessible.

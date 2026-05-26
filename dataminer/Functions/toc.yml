@@ -10,6 +10,8 @@ items:
           topicUid: Assistant_Context
         - name: Adding custom user context
           topicUid: Assistant_UserContext
+        - name: Data privacy and security
+          topicUid: Assistant_DataPrivacySecurity
       - name: Natural language to GQI
         topicUid: NL2GQI
       - name: Document Intelligence

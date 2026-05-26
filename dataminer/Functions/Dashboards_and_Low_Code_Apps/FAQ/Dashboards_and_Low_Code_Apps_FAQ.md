@@ -24,6 +24,9 @@ To resolve these:
 
 If you have made protocol changes, but you do not see them reflected in your GQI query results, this is likely caused by GQI caching certain protocols for faster performance.
 
+> [!IMPORTANT]
+> This problem does **not** occur when the **GQI DxM** is used, as this invalidates the caches upon protocol changes. The approach below therefore only applies when using GQI in SLHelper.
+
 To resolve this:
 
 1. Launch your system's Task Manager utility.
