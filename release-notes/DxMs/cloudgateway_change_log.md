@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 22 April 2026 - Enhancement - CloudGateway 3.1.1.0 - MessageBroker dependency updated
+
+Now supports ForcedEndpoints in MessageBrokerConfig
+
 #### 4 May 2026 - Enhancement - CloudGateway 3.1.0 - Microsoft 365 Copilot
 
 Support for Microsoft 365 Copilot has been added.
