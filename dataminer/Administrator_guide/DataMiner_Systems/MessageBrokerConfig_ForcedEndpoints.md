@@ -5,10 +5,11 @@ uid: MessageBrokerConfig_ForcedEndpoints
 # Configuring forced NATS endpoints
 
 The `ForcedEndpoints` setting allows all processes on a server to connect to specific custom NATS endpoints instead of the ones automatically provided by BrokerGateway.
-The `CredentialsUrl` is still used to fetch credentials from BrokerGateway, but the endpoints returned in that response are ignored.
-This setting can be configured in `MessageBrokerConfig.json`. 
+This is useful in scenarios where a process must reach NATS through a fixed set of endpoints.
 
-This is useful in scenarios where a process must reach NATS through a fixed set of endpoints — for example, when connecting through a proxy, a DMZ, or a load balancer.
+The `CredentialsUrl` is still used to fetch credentials and endpoints from BrokerGateway, but the endpoints returned in that response are ignored.
+
+This setting can be configured in `MessageBrokerConfig.json` and should only be used in combination with a server that does not run a DataMiner Agent, for example, servers hosting a [DMZ setup for dataminer.services connectivity](xref:Connect_to_cloud_with_DMZ) or [Dashboard Gateway](xref:Dashboard_Gateway_installation). The [Data Aggregator DxM](xref:Data_Aggregator_DxM) does not work in combination with `ForcedEndpoints`. For more information, see [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
 
 > [!NOTE]
 > - From DataMiner 10.6.7<!-- RN 45491 --> onwards, this is supported for DataMiner server processes.
