@@ -38,4 +38,8 @@ If existing correlation rules have this option configured, a warning will be sho
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Data Display: Problem when resetting the layout of a table [ID 45277]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When the layout of a table was reset in Data Display, up to now, the table column widths would incorrectly not be reset to the values specified in the element connector.
