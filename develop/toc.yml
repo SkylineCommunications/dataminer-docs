@@ -1119,6 +1119,8 @@ items:
         items:
           - name: Caching
             topicUid: GQI_Extensions_Caching
+      - name: Common Exceptions
+        topicUid: GQI_Extensions_Common_Exceptions
       - name: Debugging
         topicUid: GQI_Extensions_Debugging
       - name: Logging

@@ -10,7 +10,8 @@ When developing a GQI extension, keep the following in mind:
 - [Do not use Skyline.DataMiner.Automation](#do-not-use-skylinedataminerautomation)
 - [Only use 64-bit assembly references](#only-use-64-bit-assembly-references)
 - [Make your ad hoc data source scalable](#make-your-ad-hoc-data-source-scalable)
-- Use caching correctly and when appropriate — see [Caching](xref:GQI_Extensions_Caching).
+- [Do not use GQIDMS outside the request lifecycle](#do-not-use-gqidms-outside-the-request-lifecycle)
+- Use caching correctly and when appropriate - see [Caching](xref:GQI_Extensions_Caching).
 
 ## Use DIS to create and publish extensions
 
@@ -54,3 +55,7 @@ Each time a query is executed, a new instance of the data source is created. Thi
 
 > [!TIP]
 > For an example of how to build a highly scalable data source capable of serving many concurrent users, see [Scaling an ad hoc data source](xref:Scaling_Ad_hoc_Data_Source).
+
+## Do not use GQIDMS outside the request lifecycle
+
+`GQIDMS` should only be used during the lifecycle of a single GQI request. After [OnDestroy](xref:GQI_IGQIOnDestroy) is invoked, the `GQIDMS` instance for that request is cleaned up. Any in-progress or new requests sent through that instance will be cancelled.
