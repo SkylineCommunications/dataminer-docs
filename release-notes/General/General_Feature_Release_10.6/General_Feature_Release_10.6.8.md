@@ -42,7 +42,13 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### User-Defined APIs can now also be triggered by sending a PATCH request method [ID 45542]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+To trigger a user-defined API, up to now, you had to send a GET, PUT, POST, or DELETE request method to the UserDefinableApiEndpoint DxM.
+
+From now on, it will also be possible to trigger a user-defined API by sending a PATCH request method.
 
 ### Fixes
 

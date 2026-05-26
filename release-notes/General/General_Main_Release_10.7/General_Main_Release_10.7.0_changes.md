@@ -507,6 +507,14 @@ From now on, the *Standalone BPA Executor* tool will return one of the following
 | 1 | Unexpected errors have occurred. |
 | 2 | BPA tests have detected issues. |
 
+#### User-Defined APIs can now also be triggered by sending a PATCH request method [ID 45542]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+To trigger a user-defined API, up to now, you had to send a GET, PUT, POST, or DELETE request method to the UserDefinableApiEndpoint DxM.
+
+From now on, it will also be possible to trigger a user-defined API by sending a PATCH request method.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
