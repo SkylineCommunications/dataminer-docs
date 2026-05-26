@@ -26,7 +26,15 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Correlation: Grouping method 'By alarm' has been removed [ID 45545]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+While editing a correlation rule, in the *Alarm grouping* section, you can indicate how you want the alarms to be grouped before they are evaluated.
+
+The option "by alarm" has now been removed.
+
+If existing correlation rules have this option configured, a warning will be shown, explaining that this is no longer supported, the *Alarm grouping* section will be empty, and the grouping will be removed the first time the rule is saved again.
 
 ### Fixes
 
