@@ -225,6 +225,19 @@ From now on, all web apps will use the same theme colors and the correct icons. 
 
 On systems using the GQI DxM, in a *Query filter* component, it would no longer be possible to filter numeric columns on discrete values when filter assistance was enabled.
 
+#### GQI DxM: Problem when loading a GQI extension of which the DLL file was locked [ID 45569]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When the GQI DxM tried to load a GQI extension of which the DLL file in `C:\Skyline DataMiner\Scripts\Libraries` was locked, up to now, loading the extension would fail and a warning similar to the following example would be added to the GQI DxM logging:
+
+```txt
+[2026-05-19 13:35:22.640][WRN][GQI.ExtensionsWorker.Automation.Automation.ExtensionLoader] Failed to load assembly from C:\Skyline DataMiner\Scripts\Libraries\ScriptName.LibraryName.xxxx_xx_xx__xx_xx_xx.R.dll
+System.IO.IOException: The process cannot access the file 'C:\Skyline DataMiner\Scripts\Libraries\ScriptName.LibraryName.xxxx_xx_xx__xx_xx_xx.R.dll' because it is being used by another process.
+```
+
+In order to prevent problems when loading GQI extensions, from now on, the GQI DxM will always try to load the assembly bytes from disk with 5 retries.
+
 #### Web apps - Interactive automation scripts: Error messages in FileSelector control would incorrectly show raw HTML code [ID 45572]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
