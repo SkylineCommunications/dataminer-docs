@@ -14,9 +14,6 @@ When you configure this, the `CredentialsUrl` setting in this same JSON file wil
 
 - For DxMs, check the release notes of the specific DxM to find out from which version this is supported. The [Data Aggregator DxM](xref:Data_Aggregator_DxM) does **not** work in combination with `ForcedEndpoints`.
 
-> [!NOTE]
-> From DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<!-- RN 45491 --> onwards, this is supported for DataMiner server processes.
-
 ## Configuration
 
 To override the NATS endpoints for all processes on a server, add a `ForcedEndpoints` array to the `BrokerGatewayConfig` section in `C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json`:
