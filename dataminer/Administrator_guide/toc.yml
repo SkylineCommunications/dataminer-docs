@@ -153,6 +153,8 @@ items:
             topicUid: Disabling_automatic_NATS_config
           - name: Generating BrokerGateway client secrets
             topicUid: Generating_BrokerGateway_client_secrets
+          - name: Configuring forced NATS endpoints
+            topicUid: MessageBrokerConfig_ForcedEndpoints
       - name: Running BPA tests
         topicUid: Running_BPA_tests
         items:
