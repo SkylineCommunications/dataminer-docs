@@ -87,7 +87,7 @@ GQIDMS DMS
 Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
 
 > [!IMPORTANT]
-> `GQIDMS` should only be used during the lifecycle of a single GQI request. After [OnDestroy](xref:GQI_IGQIOnDestroy) is invoked, the `GQIDMS` instance for that request is cleaned up. Any in-progress or new requests sent through that instance will be cancelled.
+> `GQIDMS` can only be used during the lifecycle of a single extension instance. After the [OnDestroy](xref:GQI_IGQIOnDestroy) life cycle method is invoked, the `GQIDMS` object associated with the extension instance is cleaned up. Any in-progress or new requests made through that `GQIDMS` object will be cancelled.
 
 ### Example of retrieving data by means of DMS messages
 
