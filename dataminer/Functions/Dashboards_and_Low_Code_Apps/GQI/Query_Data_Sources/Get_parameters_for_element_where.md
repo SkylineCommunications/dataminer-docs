@@ -16,8 +16,10 @@ Selecting a protocol and version retrieves parameters for all active elements th
 
 You can select both table parameters and standalone parameters during query creation. If you select a table parameter, all columns in that table become available for further query operators.
 
-> [!NOTE]
-> It is not possible to select multiple table parameters or combine a table parameter with standalone parameters.
+It is not possible to select multiple table parameters or combine a table parameter with standalone parameters.
+
+> [!WARNING]
+> Retrieving table parameters from a mediated protocol is not supported. <!--RN 45539-->
 
 ## By profile definition
 
