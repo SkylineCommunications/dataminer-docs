@@ -12,6 +12,10 @@ Support for Microsoft 365 Copilot has been added.
 
 An issue was introduced in CloudGateway 3.0.1 where opening a shared dashboard would show a blank page. This issue has now been resolved.
 
+#### 22 April 2026 - Enhancement - CloudGateway 3.1.1.0 - MessageBroker dependency updated
+
+CloudGateway now supports the use of the `ForcedEndpoints` setting in *MessageBrokerConfig.json*. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
+
 #### 26 March 2026 - Enhancement - CloudGateway 3.0.1 - Cloud connection stability improvements
 
 The stability of the connection to dataminer.services has been enhanced through improved retry mechanisms.
