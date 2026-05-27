@@ -8,13 +8,13 @@ uid: Adding_rule_conditions_in_Correlation_rules
 
 In a correlation rule, multiple filter conditions can be defined within the rule condition. The way these filter conditions are structured directly determines how alarms in the bucket are evaluated and, ultimately, whether the rule is triggered.
 
-Each filter condition is evaluated against individual alarms. Specifically, the system checks whether there is at least one alarm in the bucket that fully satisfies the conditions defined within that filter condition. This means that the logic of a filter condition is strict and self-contained: the entire condition must be matched by a single alarm instance. The evaluation iterates through the alarms in the bucket until such a match is found.
+Each filter condition is evaluated against individual alarms. The system checks whether there is at least one alarm in the bucket that fully satisfies all the conditions defined within that filter condition. The logic of a filter condition is strict and self-contained: the entire condition must be matched by a single alarm instance. The evaluation iterates through the alarms in the bucket until such a match is found.
 
 When multiple filter conditions are configured, they are evaluated independently. For each filter condition, alarms in the bucket are examined to determine whether any single alarm satisfies the corresponding condition. Because each filter condition is examined individually, the system does not require one single alarm to satisfy all filter conditions simultaneously. Instead, each filter condition may be fulfilled by different alarms.
 
 This allows rules to be triggered based on more complex scenarios, such as combinations of alarms or even the absence of certain alarms. The system verifies whether the logical combination of all configured filter conditions is satisfied, rather than enforcing that all filter conditions must apply to a single alarm.
 
-This distinction becomes particularly important when combining positive and negative logic:
+This distinction becomes particularly important when combining inclusion criteria (positive logic) and exclusion criteria (negative logic):
 
 - When multiple criteria are grouped within a single filter condition, all inclusion and exclusion requirements must be satisfied by the same alarm.
 - When criteria are split across multiple filter conditions, the evaluation is no longer limited to a single alarm:
