@@ -8,7 +8,7 @@ In System Center, you can configure the default settings for upgrade options.
 
 To do so:
 
-1. In DataMiner Cube, go to *System Center* > *Settings* > *Upgrade*.
+1. In DataMiner Cube, go to *System Center* > *System settings* > *Upgrade*.
 
    The following options are available on this page:
 
