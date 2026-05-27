@@ -46,6 +46,14 @@ To use the SLLogCollector tool:
 
    - To only collect logging for the period since DataMiner was last started, select *Exclude logging of previous run of DataMiner*.
 
+   - From DataMiner 10.6.7/10.7.0 onwards<!--RN 45044-->, you can select *Collect DLL info* to include information about DLL files in the generated package. If this option is enabled, the package will contain the following details for all DLL files found in the `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\ProtocolScripts` folders:
+
+     - Name
+     - Version
+     - Culture
+     - Public key
+     - Dependencies
+
    - To collect memory dumps as well as logging, select *Include memory dump*. Then select for which process(es) memory dumps should be collected and when these should be collected.
 
      > [!NOTE]
@@ -58,7 +66,7 @@ To use the SLLogCollector tool:
    > [!NOTE]
    > If you just want to use the default settings and save the package to your desktop, there is no need to configure any of the options mentioned in the previous step. All you need to do is click the *Start* button. In case of RTEs, memory dumps are included automatically.
    >
-   > ![SLLogCollector](~/dataminer/images/SLLogCollector.png)
+   > ![SLLogCollector](~/dataminer/images/SLLogCollector.png)<br>*SLLogCollector in DataMiner 10.6.7*
 
 1. To view information on the actions of the tool, expand the *Console* section at the bottom of the window. For more detailed information, click the *Show detailed log* button.
 
