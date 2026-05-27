@@ -16,7 +16,7 @@ There are several possible types of actions:
 
 - Escalating an event. See [Escalating an event](xref:Escalating_an_event).
 
-- Grouping alarms. See [Grouping alarms](xref:Grouping_Alarms)
+- Grouping alarms. See [Grouping alarms](xref:Grouping_Alarms).
 
 - Creating a new, correlated alarm. See [Triggering a correlated alarm](xref:Triggering_a_correlated_alarm).
 
