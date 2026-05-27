@@ -95,3 +95,7 @@ When you tried to swap a resource in the Workflow Designer app, the resource poo
 #### DevPack: Not possible to update capability name [ID 45544]
 
 Up to now, it was not possible to update the name of a capability using the [MediaOps Plan DevPack](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan).
+
+#### Resource Studio: Logging for resource property management not always stored in log file [ID 45587]
+
+Attempting to add and save a new property to a resource that had a concurrency of 0 in Resource Studio would fail with the pop-up message "Something unexpected happened". However, no message was added in the Resources logging. Now this logging will be added to the related log file. Also, in case there is only one error, the error message is now shown in the pop-up message instead of the default log message.
