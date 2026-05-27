@@ -45,4 +45,8 @@ Each discrete value can have a display name that differs from the underlying val
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards/Low-Code Apps: Problem when retrieving dashboards after expired items were cleared from the cache [ID 45565]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of a locking issue that occurred while clearing expired items from the dashboard cache, up to now, an `Index was outside the bounds of the array` error would be thrown each time an attempt was made to retrieve a dashboard from the cache.
