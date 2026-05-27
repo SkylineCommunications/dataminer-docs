@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 22 May 2026 - Enhancement - ArtifactDeployer 1.9.1.0 - MessageBroker dependency updated: ForcedEndpoints support
+
+ArtifactDeployer now supports the use of the `ForcedEndpoints` setting in *MessageBrokerConfig.json*. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
+
 #### 14 April 2026 - Enhancement - ArtifactDeployer 1.8.8 - Dependencies updated
 
 Several dependencies have been updated.

@@ -515,6 +515,12 @@ To trigger a user-defined API, up to now, you had to send a GET, PUT, POST, or D
 
 From now on, it will also be possible to trigger a user-defined API by sending a PATCH request method.
 
+#### SLManagedScripting: AssemblyLoad event handler will also log the location of the loaded assembly [ID 45547]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+From now on, the `AssemblyLoad` event handler in SLManagedScripting will also log the location of the loaded assembly (if available).
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
@@ -587,9 +593,3 @@ Up to now, when the Agent with the lowest DMA ID had been removed from a DataMin
 `System.AggregateException: One or more errors occurred. ---> Skyline.DataMiner.Net.Exceptions.DataMinerException: Fatal error while sending request [MasterSyncRequestMessage for message of type SetReservationInstanceMessage from XXX] to master DMA XXX, max retries reached. ---> Skyline.DataMiner.Net.MasterSync.MasterSyncerException: Could not use the connection to master DMA XXX`
 
 From now on, when the Agent with the lowest DMA ID was removed from the DataMiner System, the Resource Manager will correctly re-evaluate and update the master DMA when it receives a master synchronization request.
-
-#### Automation: File locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation [ID 45520]
-
-<!-- MR 10.7.0 - FR 10.6.7 -->
-
-In some cases, a file locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation while, on another thread, an attempt was being made to start another script using memory files.

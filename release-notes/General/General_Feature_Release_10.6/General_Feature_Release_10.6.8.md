@@ -50,6 +50,12 @@ To trigger a user-defined API, up to now, you had to send a GET, PUT, POST, or D
 
 From now on, it will also be possible to trigger a user-defined API by sending a PATCH request method.
 
+#### SLManagedScripting: AssemblyLoad event handler will also log the location of the loaded assembly [ID 45547]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+From now on, the `AssemblyLoad` event handler in SLManagedScripting will also log the location of the loaded assembly (if available).
+
 ### Fixes
 
 *No fixes have been added yet.*

@@ -86,31 +86,6 @@ When an existing rate limit is changed, the updated limit is only applied after 
 
 If a long window was configured and the limit has already been reached, the client may need to wait until the window has passed before another trigger can be executed and the updated limit can take effect.
 
-#### MessageBroker: Configuring forced endpoints [ID 45491]
-
-<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
-
-In the `MessageBrokerConfig.json` file, it is now possible to configure so-called forced endpoints that will override the NATS endpoints provided by BrokerGateway. This will prove particularly useful in scenarios where a process must reach NATS through a fixed set of endpoints. For example, when connecting through a proxy, a DMZ, or a load balancer.
-
-To override the NATS endpoints for all processes on a server, add a `ForcedEndpoints` array to the `BrokerGatewayConfig` section in `C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json`. See the following example.
-
-```json
-{
-  "BrokerGatewayConfig": {
-    "CredentialsUrl": "https://<hostname>/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
-    "APIKeyPath": "C:\\Program Files\\Skyline Communications\\DataMiner BrokerGateway\\appsettings.runtime.json",
-    "ForcedEndpoints": [ "custom-host-1:4222", "custom-host-2:4222", "custom-host-3" ]
-  }
-}
-```
-
-Each entry in `ForcedEndpoints` can be a string in the format `"host:port"` or `"host"`.
-
-> [!IMPORTANT]
->
-> - The `ForcedEndpoints` setting should only be used in combination with a server that does not run a DataMiner Agent (e.g. servers hosting a DMZ setup for dataminer.services connectivity or a Dashboard Gateway).
-> - The Data Aggregator DxM does not work when forced endpoints have been configured.
-
 ## Changes
 
 ### Enhancements
@@ -265,7 +240,7 @@ When an element failed to start up because of, for example, a faulty protocol.xm
 
 #### Automation: File locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation [ID 45520]
 
-<!-- MR 10.7.0 - FR 10.6.7 -->
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
 In some cases, a file locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation while, on another thread, an attempt was being made to start another script using memory files.
 
