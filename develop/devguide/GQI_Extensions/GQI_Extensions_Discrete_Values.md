@@ -48,11 +48,11 @@ new GQIDoubleColumn("Percentage", new GQIDiscreteOptions<double>(new[]
 
 ## Cell values for discrete columns
 
-When creating a cell for a discrete, only the Value of that discrete needs to be specified. The name of the discrete will automatically be used as the display value. Any other DisplayValue on the cell will be ignored.
+When creating a cell for a discrete, only the `Value` of that discrete needs to be specified. The name of the discrete will automatically be used as the display value. Any other `DisplayValue` on the cell will be ignored.
 
 ## Strict vs. non-strict
 
 The `IsStrict` property on [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptionsT) indicates whether the column values come exclusively from the discrete list (`true`) or whether the discretes represent known values alongside a broader range (`false`). When omitted, it defaults to `true`.
 
-> [!WARNING]
-> When using strict discretes, providing a cell value that does not match any configured discrete value results in an error.
+> [!IMPORTANT]
+> Only cells with discrete values and empty cells are allowed in a column with strict discretes. If any other value is provided, the query will fail to execute.
