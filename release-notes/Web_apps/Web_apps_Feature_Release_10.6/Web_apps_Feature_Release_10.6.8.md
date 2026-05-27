@@ -41,7 +41,11 @@ Each discrete value can have a display name that differs from the underlying val
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Enhanced performance when returning GQI query results [ID 45559]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of a number of optimizations made with regard to JSON serialization, overall performance has increased when returning GQI query results.
 
 ### Fixes
 
