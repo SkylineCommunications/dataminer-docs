@@ -4,6 +4,58 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.22
+
+### New features
+
+#### IDE
+
+##### Version history editor: Fix tag now supports the new introducedIn attribute [ID 45242]
+
+Within the `MinorVersion` changes, the `Fix` tag now supports the new `introducedIn` attribute.
+
+From now on, this new attribute will be read and will not be removed when changes are applied.
+
+> [!NOTE]
+> Currently, the version history editor does not yet display this attribute.
+
+##### DIS snippets: Info tag removed from Alarm snippet [ID 45482]
+
+The `Info` tag has now been removed from the Alarm snippet.
+
+##### Updated DIS dependencies
+
+- [Skyline.DataMiner.CICD.CSharpAnalysis.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.CSharpAnalysis.Protocol) version 2.1.2
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation) version 6.0.1
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 6.0.1
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 2.1.0
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 6.0.1
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 3.3.0
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 3.3.0
+- [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 4.0.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.5
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.5
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.5
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.9
+
+### Fixes
+
+#### IDE
+
+##### Fixed false positive DevPack NuGet info bar [ID 45269]
+
+Up to now, the *DIS* info bar, which verifies whether projects use the *DevPack* NuGet package, could generate a false positive for test projects that do not have "tests" in the project name.
+
+The info bar logic has now been adapted. The info bar will now stop evaluating the project when the `.csproj` file does not contain linking info (which is typically the case for QAction and C# exe blocks), and when it could not determine that the project is a test project.
+
+Also, the logic to determine whether a project is a test project has been extended.
+
+##### Visual Studio IDE could get stuck when a .dmapp package was being created via the dotnet CLI [ID 45000]
+
+Up to now, in some cases, the Visual Studio IDE could get stuck on the *Compile package...* overlay while trying to publish a solution to DataMiner via the *Publish* button.
+
+In the background, DIS spawns a new process that executes the `dotnet build` command with the `DmappCreation` target. On some systems, the `WaitForExit` call could get stuck while waiting for the EOF of the standard output stream, which did not enter. To avoid getting stuck, DIS will now use the `WaitForExit` overload that accepts a timeout that does not wait for the EOF of the redirected output streams.
+
 ## DIS 3.1.21
 
 ### New features

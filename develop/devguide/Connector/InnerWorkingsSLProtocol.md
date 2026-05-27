@@ -183,7 +183,7 @@ flowchart LR
 
         S1["Action 2"]
     end
-    subgraph actionBox["Action 2 (run actitons)"]
+    subgraph actionBox["Action 2 (run actions)"]
         C1["Param 2"]
     end
   subgraph qactionBox["QAction 2"]

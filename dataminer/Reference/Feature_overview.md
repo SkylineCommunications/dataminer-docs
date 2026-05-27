@@ -64,6 +64,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards/Low-Code Apps: [*Numeric input* component](xref:DashboardNumericInput) | DataMiner web 10.3.5/10.4.0 <!-- [ID 35911] -->|
 | Dashboards/Low-Code Apps: [Preset templates](xref:Template_Editor#using-a-preset-template) | DataMiner web 10.5.0 [CU10]/10.6.1 <!-- [ID 44040 + 44123] --> |
 | Dashboards/Low-Code Apps: [*Query filter* component](xref:DashboardQueryFilter) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.10 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsptp) <!-- [ID 33530] --> |
+| Dashboards/Low-Code Apps: [*Rich text input* component](xref:RichTextInput) | DataMiner web 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 <!-- [ID 45097] [ID 45180] --> |
 | Dashboards/Low-Code Apps: [*Search input* component](xref:DashboardSearchInput) | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 <!-- [ID 39555] -->|
 | Dashboards/Low-Code Apps: [*Stepper* component](xref:DashboardStepper) | DataMiner 10.3.10/10.4.0 <!-- [ID 37200] -->|
 | Dashboards/Low-Code Apps: [Template editor](xref:Template_Editor) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with the soft-launch options [ReportsAndDashboardsDynamicVisuals](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) and [ReportsAndDashboardsScheduler](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsscheduler) |

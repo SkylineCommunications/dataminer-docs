@@ -9,6 +9,101 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 22 May 2026 - New feature - Admin - Audit logs for managing draft subscriptions
+
+Managing draft subscriptions will now create audit logs, allowing administrators to track and review changes related to draft subscription activity.
+
+### 22 May 2026 - New feature - Sharing - Multi-paste support for email input
+
+When sharing a dashboard, users can now paste multiple email addresses at once into the email input field. Both comma-separated (`,`) and semicolon-separated (`;`) lists are supported.
+
+### 20 May 2026 - Fix - Admin/Catalog - Issues related to organization switching
+
+Several issues related to organization switching have been resolved across the Admin app and Catalog:
+
+- In the Admin app, after switching organizations, users did not stay on the same page as expected. In addition, if the new organization did not have access to the current page or if the permission check failed, they were not redirected to the Overview as expected. Switching organizations now keeps you on the same page when possible. If the new organization does not have access to the current page, or if the permission check fails, you are redirected to the Overview and notified accordingly.
+- On pages with organization-scoped data, switching to a different organization could cause stale data from the previous organization to still be shown. Now stale data from the previous organization is cleared and fresh data is fetched for the new one.
+- Rapidly switching between organizations could leave behind stale data from intermediate organizations. This issue has been resolved.
+- Organization keys, audit logs, and usage data did not refresh automatically after an organization switch, and if the audit log reload failed, stale data and the *Load More* button remained visible. This issue has been resolved. The data will refresh automatically, and if the audit log reload fails, stale data and the *Load More* button will be hidden.
+- In the Catalog app, if a Catalog item was unavailable for the newly selected organization, a message was shown that the item was not found. Now the user is instead automatically redirected to the Browse page.
+- It could occur that aborted call notifications were shown when switching pages. These notifications are no longer shown.
+
+### 20 May 2026 - Enhancement - Billing - 'Overusage' terminology updated to 'PPU'
+
+On the billing-related pages and notifications, the term "overusage" has been replaced with "pay-per-use" (PPU) to better reflect the billing model and ensure consistent terminology across dataminer.services.
+
+### 18 May 2026 - New feature - Admin - Automatic log collection for support tickets
+
+When creating a support ticket on the Support page in the Admin app, users can now link a cloud-connected DMS and specific Agents to their support ticket. When enabled, this triggers automatic log collection, ensuring support engineers receive the necessary diagnostic data without manual uploads.
+
+### 18 May 2026 - Enhancement - Admin - Agent selection dynamically filtered by cluster
+
+When a support ticket is created on the Support page in the Admin app, the Agent selection is now dynamically updated based on the selected cluster, ensuring only relevant DataMiner Agents are available for selection.
+
+### 18 May 2026 - Enhancement - Admin - Unified Support Contract/Project dropdown
+
+When a support ticket is created on the Support page in the Admin app, instead of the previous multi-step *Project* and *Maintenance Contract* selection, a single *Support Contract/Project* dropdown is now displayed, providing a deduplicated list of eligible contracts and projects.
+
+### 18 May 2026 - Enhancement - Admin - Skyline Support shown in assigned-to field
+
+In the ticket details view on the Support page of the Admin app, the *Assigned to* field now shows *Skyline Support* when relevant, while previously internal teams could be shown that could be confusing for the user.
+
+### 18 May 2026 - New feature - Admin - Support server availability check
+
+On the Support page of the Admin app, the availability of the support server is now checked in real time. If the service is temporarily unavailable, a warning banner with alternative contact instructions is shown.
+
+### 18 May 2026 - Enhancement - Admin - Impact field removed from ticket details header
+
+On the Support page of the Admin app, the *Impact* field has been removed from the ticket details header.
+
+### 18 May 2026 - Enhancement - Admin - Automatic log collection toggle only shown when applicable
+
+When a support ticket is created on the Support page in the Admin app, the *Automatic log collection* toggle button is now only shown when cloud-connected Agents are selected.
+
+### 7 May 2026 - Enhancement - Admin - Billing overview now shows services table at unit level
+
+On the Billing overview page in the Admin app, the services table now shows data at unit level instead of capping out at service level, giving users a deeper insight into what is affecting their billing the most.
+
+### 5 May 2026 - New feature - Admin - Draft subscriptions
+
+On the Billing page of the Admin app, the Subscriptions page now shows draft subscriptions, which are marked as *Draft* in the state column. The following changes have also been introduced:
+
+- The *Total paid* column has been renamed to *Cost*, and the *Total saved* column has been renamed to *Saved*.
+- Subscription details now support draft subscriptions, with *Continue from draft* and *Abandon draft* actions available.
+- When continuing from a draft, the *Add Subscription* panel is prefilled with the draft details.
+- Drafts can be saved and updated in the *Add Subscription* panel.
+- A draft is automatically removed when the subscription is purchased.
+
+### 5 May 2026 - Fix - Problem with session token refresh could cause unexpected redirect to login page
+
+It could occur that users were unexpectedly redirected to a login page because session tokens were not refreshed correctly. This issue has been resolved.
+
+### 5 May 2026 - Enhancement - Admin - 'Renewal failed' state and toggle button to hide expired subscriptions
+
+On the Billing page of the Admin app, if subscriptions are set to auto-renew but have expired without a reference to a new subscription, these will now show a *Renewal failed* state.
+
+In addition, a toggle button has been introduced to hide expired subscriptions. By default, expired subscriptions are set to be shown.
+
+### 5 May 2026 - Enhancement - Admin - Discount tooltip updated in Add Subscription panel
+
+On the Billing page of the Admin app, the tooltip for the discount in the *Add Subscription* panel has been updated.
+
+### 5 May 2026 - Enhancement - Billing - Estimated subscription based on current usage
+
+When creating a new subscription on the Billing page, users can now choose to start from estimated data based on their current subscriptions and pay-per-use costs.
+
+### 5 May 2026 - Enhancement - Billing - Amounts smaller than 0.01 displayed as "< 0.01"
+
+On the Billing page, numbers smaller than 0.01 are now displayed as "< 0.01" instead of being rounded down to zero.
+
+### 5 May 2026 - Fix - Admin - Aborted calls when navigating to DMS user page not handled gracefully
+
+When you navigated to the user page of a DataMiner System, it could occur that some calls to retrieve the DMS users were aborted, which was not handled gracefully and could result in errors. This issue has been resolved.
+
+### 5 May 2026 - Fix - Home - Password feedback incorrectly shown after clearing password field
+
+When a value that had been entered in a password field was cleared, it could occur that the password feedback was still shown. This issue has been resolved.
+
 ### 27 April 2026 - Fix - Admin - Audit page DMS incorrectly also shown in sidebar
 
 In the Admin app, it could occur that the DMS used as the filter for the Audit page was incorrectly also shown in the sidebar.
