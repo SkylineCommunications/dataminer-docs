@@ -86,6 +86,10 @@ GQIDMS DMS
 
 Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
 
+> [!IMPORTANT]
+> After [OnDestroy](xref:GQI_IGQIOnDestroy) is invoked, `GQIDMS` and `IGQILogger` are disposed.
+> Any in-progress request issued through `GQIDMS` will be cancelled.
+
 ### Example of retrieving data by means of DMS messages
 
 Below you can find an example script that uses the [*GQIDMS* object](xref:GQI_GQIDMS) provided in the OnInitPutArgs to [create a data source of active client connections](#retrieving-data-by-means-of-dms-messages). The name of the data source, as defined in the *GQIMetaData* attribute, will be "Client connections".
