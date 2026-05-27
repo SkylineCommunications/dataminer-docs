@@ -4,9 +4,9 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
-#### 22 April 2026 - Enhancement - Orchestrator 1.10.0.0 - MessageBroker dependency updated
+#### 22 May 2026 - Enhancement - Orchestrator 1.10.0.0 - MessageBroker dependency updated: ForcedEndpoints support
 
-Now supports ForcedEndpoints in MessageBrokerConfig
+Orchestrator now supports the use of the `ForcedEndpoints` setting in *MessageBrokerConfig.json*. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
 
 #### 14 April 2026 - Enhancement - Orchestrator 1.8.2 - Dependencies updated
 
