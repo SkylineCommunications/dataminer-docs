@@ -5,7 +5,7 @@ description: The DataMiner Web Services methods can be used in SOAP, JSON, or UR
 
 # Using the Web Services
 
-The v1 methods can be used in SOAP, JSON, or URL-encoded requests.
+The Web Services methods can be used in SOAP, JSON, or URL-encoded requests.
 
 > [!WARNING]
 > We strongly recommend using HTTPS when accessing the Web Service APIs over public internet. If you do not do so, all information, including logon credentials, will be sent over the internet as plain, unencrypted text.
@@ -28,20 +28,20 @@ When you authenticate, make sure to pass along the name and version of the clien
 
 The DataMiner Web Services are accessible via the following interfaces.
 
-| Protocol | Version | Address          |
-|----------|---------|------------------|
-| SOAP     | v1      | `http://DmaNameOrIpAddress/API/v1/soap.asmx` |
-| JSON     | v1      | `http://DmaNameOrIpAddress/API/v1/json.asmx` |
+| Protocol | Address          |
+|----------|------------------|
+| SOAP     | `http://DmaNameOrIpAddress/API/v1/soap.asmx` |
+| JSON     | `http://DmaNameOrIpAddress/API/v1/json.asmx` |
 
 > [!NOTE]
 > For security reasons, by default, it is not possible to test web API requests from an external machine using HTTP POST instead of SOAP. To enable this, uncomment the following section in the file *web.config* in the folder `C:\Skyline DataMiner\Webpages\API`:<br><br> \<!-- uncomment to test webservices outside localhost:<br> \<protocols><br> \<add name="HttpGet"/><br> \<add name="HttpPost"/><br> \</protocols><br> //-->
 
 The WSDL files can be found on the following addresses.
 
-| Protocol | Version | Address                |
-|----------|---------|------------------------|
-| SOAP     | v1      | `http://DmaNameOrIpAddress/API/v1/soap.asmx?WSDL` |
-| JSON     | v1      | `http://DmaNameOrIpAddress/API/v1/json.asmx?WSDL` |
+| Protocol | Address                |
+|----------|------------------------|
+| SOAP     | `http://DmaNameOrIpAddress/API/v1/soap.asmx?WSDL` |
+| JSON     | `http://DmaNameOrIpAddress/API/v1/json.asmx?WSDL` |
 
 ## SOAP
 
