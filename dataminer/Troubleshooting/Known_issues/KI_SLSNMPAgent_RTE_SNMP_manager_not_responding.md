@@ -10,7 +10,7 @@ uid: KI_SLSNMPAgent_RTE_SNMP_manager_not_responding
 
 ## Cause
 
-When an SNMP manager is not responding and there is a locking issue between the polling thread and the sending thread, the latter does not release the lock, causing SLSNMPAgent runtime errors (RTEs).
+When an SNMP manager is not responding, a locking issue occurs between the polling thread and the sending thread because the latter does not release the lock, causing SLSNMPAgent runtime errors (RTEs).
 
 ## Fix
 
