@@ -20,7 +20,35 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No features have been added yet.*
+#### Correlation : Alarm grouping [ID 44973]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When configuring a correlation rule, it is now possible to specify that a *Group alarms* action has to be executed when that rule is triggered.
+
+This action is similar to the *New alarm* action. When the rule is triggered, a new alarm will be generated, but in the case of the *Group alarm* action, the alarm will have its severity set to "Suggestion" and be linked to the DataMiner element. The value of the alarm can be set in the action itself.
+
+When a group alarm appears in the Alarm Console, the following fields will be updated:
+
+- The severity will be set to the severity of the base alarm with the highest severity. This severity will be shown in the *Severity* column, and will also be indicated by the color of the alarm icon.
+- The parameter name will be set to the name of the correlation rule.
+- The element name will be changed according to the configuration of the correlation rule:
+
+  | Correlate across DMAs option | Alarm grouping | Element name |
+  |---|---|---|
+  | Selected     | Not defined | Name of the cluster |
+  | Selected     | Defined     | Name of the grouped object |
+  | Not selected | Not defined | Name of the DataMiner Agent |
+  | Not selected | Defined     | Name of the DataMiner Agent + Name of the grouped object |
+
+When the alarms are filtered (either by means of the quick filter or by means of an alarm filter):
+
+- If the group alarm matches the filter, the alarm and its sources will all be shown.
+- If the group alarm does not match the filter but one of its sources does, the alarm and its sources will all be shown.
+- If neither the group alarm nor any of its sources match the filter, neither the alarm nor its sources will be shown.
+
+> [!NOTE]
+> The way in which the severity of an incident is shown has also been changed. Up to now, the alarm icon of an incident would show the severity of the base alarm with the highest severity, and the *Severity* column in the Alarm Console would show "Suggestion". From now on, the Severity column of an incident will also show the severity of the base alarm with the highest severity.
 
 ## Changes
 
@@ -67,6 +95,15 @@ In the *Dark* theme, the *accentLightColor* has been changed to provide more con
 When you played in spectrum recording in a spectrum card, up to now, the progress bar at the bottom of the graph would not clearly indicate the progress of the playback.
 
 From now on, playback progress will clearly be indicated by means of a colored bar.
+
+#### Chromium web browser engine is no longer available [ID 45522]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+From now on, the Chromium web browser engine will no longer be available in DataMiner Cube.
+
+- When, in *System Center > System settings > Plugins*, Chromium is still set as default web browser engine, Edge will now be used instead.
+- If, in any visual overview, there are shapes in which the *UseChrome* option is specified, this option will be disregarded. The shapes in question will use Edge instead.
 
 ### Fixes
 
@@ -117,3 +154,19 @@ In the automation script editor, up to now, script actions would incorrectly loa
 When you selected an item in a filtered list, up to now, the selected item would incorrectly get the same color as the background, making it invisible.
 
 From now on, selected list items will get a color that is different from that of that background.
+
+#### Problem when uploading element documents [ID 45448]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When you uploaded an element document, in some cases, the file contents could incorrectly get appended to previously uploaded data, resulting in a corrupted file.
+
+#### Error 'We received a cleared alarm without previous alarm' would incorrectly get logged when properties of a closed correlation alarm were updated [ID 45555]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When a visual overview contains an *AlarmSummary* shape, a `We received a cleared alarm without previous alarm` error is logged whenever a cleared alarm is received without having received a previous alarm.
+
+Up to now, this error would incorrectly also get logged when properties of a closed correlation alarm were updated.
+
+From now on, when properties of a closed correlation alarm are updated, this will no longer be logged as an error. Instead, this will be logged as a debug line.

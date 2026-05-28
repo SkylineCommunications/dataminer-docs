@@ -36,7 +36,55 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-*No features have been added yet.*
+#### User-defined APIs: Token-based rate limiting [ID 45470]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+API tokens can now be configured with a rate limit to control how frequently they can be used to trigger user-definable API endpoints.
+
+A rate limit consists of:
+
+- A limit: The maximum number of requests allowed within the configured time window. Supported range: 1 to 100
+- A window: The time span in which the configured number of requests is allowed. Supported range: 1 second to 1 day
+
+##### Behavior when the limit is exceeded
+
+When the rate limit is exceeded, the *UserDefinableApiEndpoint* DxM will return an HTTP 429 message ("Too Many Requests").
+
+In this case, the API trigger will not be forwarded to SLNet, and the API script will not be executed. The response message will indicate that the rate limit was exceeded and will include internal error code 1014.
+
+Every request that can be linked to a token counts toward that token's rate limit, regardless of whether the request results in a successful API script trigger.
+
+##### Sliding window behavior
+
+Rate limiting uses a sliding window. This means that, when a request is received, the system checks how many requests were made with the same token during the preceding configured window. If the configured limit has already been reached within that period, the request is blocked.
+
+For example, with a limit of 5 requests per 1 minute, a client using the token can trigger the API up to 5 times within any rolling 1-minute period.
+
+Keep in mind that different limit/window combinations can result in different behavior, even when they allow the same average number of requests. See the following examples:
+
+- Limit 10 and window 60 seconds: Bursts of up to 10 requests are allowed in a short time, after which the client must wait until requests fall outside the 60-second window.
+- Limit 1 and window 6 seconds: The requests are spread more evenly, allowing 1 new request every 6 seconds.
+
+##### Performance considerations
+
+Configuring a high rate limit, such as 100 requests per second, does not guarantee that DataMiner can process that number of API triggers.
+
+The actual throughput depends on factors such as API script runtime, server hardware, current system load, the number of agents in the cluster, and other system-specific conditions.
+
+##### Configuration and API changes
+
+A new `RateLimit` property has been added to the `ApiToken` class. This property can be used to define the `Limit` and `Window` values.
+
+If an invalid rate limit is configured, an `ApiTokenError` with reason `InvalidRateLimit` will be returned. The new `Message` property on the error contains an English description of the invalid configuration.
+
+Currently, rate limits cannot yet be configured in the UI, and must be configured via the C# API. If an API token with a configured rate limit is updated through the UI, the rate limit will be cleared.
+
+##### Updating an existing rate limit
+
+When an existing rate limit is changed, the updated limit is only applied after a next trigger both starts and finishes after the update has been applied.
+
+If a long window was configured and the limit has already been reached, the client may need to wait until the window has passed before another trigger can be executed and the updated limit can take effect.
 
 ## Changes
 
@@ -65,6 +113,14 @@ A number of enhancements have been made with regard to health monitoring of Open
 
 Also, all logging with regard to OpenSearch health monitoring can now be found in *SLSearchHealth.txt*. Up to now, that logging was added to *SLCassandraHealth.txt*.
 
+#### Alarm cache: Enhanced retrieval of alarms that are not linked to a specific element [ID 45322]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Up to now, in some cases, DataMiner would not be able to retrieve alarms from the alarm cache when those alarms were not linked to a specific element. As a result, it had to retrieve them from the database instead.
+
+This has now been improved so those alarms are correctly retrieved from memory when available.
+
 #### SLNetConnectionsMonitor.txt will now log all state changes of all SLNet connections [ID 45316]
 
 <!-- MR 10.7.0 - FR 10.6.7 -->
@@ -73,13 +129,19 @@ Up to now, only the general state of the entire cluster when an Agent connected 
 
 From now on, all state changes of all SLNet connections between Agents in the cluster will be logged in the *SLNetConnectionsMonitor.txt* file.
 
-#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from DataMiner Cube [ID 45355]
+#### Automation: Enhanced memory usage when compiling development packs and script libraries [ID 45333]
 
-<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+<!-- MR 10.7.0 - FR 10.6.7 -->
 
-When DataMiner Cube requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
+Because of a number of enhancements, memory usage has improved when compiling development packs and script libraries.
 
-From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
+#### Service template definitions will no longer be stored alongside services [ID 45370]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+Up to now, service templates were stored alongside services in the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders. Each service template also had exactly one DataMiner Agent actively hosting the service template.
+
+In preparation of service swarming, service template definitions have now been moved into a new `C:\Skyline DataMiner\ServiceTemplates` folder, which will be synchronized across the cluster. A service template no longer has a dedicated hosting agent, which means that they now remain available even if DataMiner Agents are down.
 
 #### SLAnalytics: Enhanced performance when detecting flatline events [ID 45376]
 
@@ -146,6 +208,12 @@ Because of a number of enhancements, overall performance of the VerifyNatsCluste
 
 ### Fixes
 
+#### Problem when simulations were reloaded at runtime [ID 45296]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When simulations were reloaded at runtime, in some cases, simulations that previously worked would no longer do so.
+
 #### SLDataGateway would terminate unexpectedly when shutting down [ID 45419]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
@@ -169,3 +237,15 @@ Up to now, SLSNMPAgent could unexpectedly stop working either right after startu
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
 When an element failed to start up because of, for example, a faulty protocol.xml file, up to now, it would not properly clean up the assigned resources.
+
+#### Automation: File locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation [ID 45520]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+In some cases, a file locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation while, on another thread, an attempt was being made to start another script using memory files.
+
+#### Connector with redundant polling connections would incorrectly switch connections when executing a poll action group on an element in timeout [ID 45534]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Up to now, a connector with redundant polling connections would incorrectly switch connections when executing a group of type "poll action" or "poll trigger" on an element that was in a timeout state. In some cases, this could lead to unexpected behavior.

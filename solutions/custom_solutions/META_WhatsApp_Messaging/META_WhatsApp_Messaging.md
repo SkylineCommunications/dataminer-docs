@@ -1,5 +1,6 @@
 ---
 uid: META_WhatsApp_Messaging
+description: Learn how the META WhatsApp Messaging Solution connects DataMiner alarms to WhatsApp so authorized users receive timely mobile notifications.
 ---
 
 # META WhatsApp Messaging Solution

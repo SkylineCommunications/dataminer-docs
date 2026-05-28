@@ -72,7 +72,11 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
 
    1. If you are using the **BrokerGateway-managed** NATS solution:
 
-      1. Copy a `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` file from a DataMiner node to the same location on the DMZ.
+      1. Obtain an API key for the DMZ server:
+
+         - From DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards, [generate a BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) and place the client secret file on the DMZ server. Then set `APIKeyPath` to the path of that file.
+
+         - In earlier DataMiner versions, copy `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` from a DataMiner node to the same location on the DMZ. Then set `APIKeyPath` to the path of the copied file.
 
       1. On the DMZ, open `C:\ProgramData\Skyline Communications\DataMiner\MessagebrokerConfig.json`.
 
@@ -82,14 +86,12 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
          {
            "BrokerGatewayConfig": {
              "CredentialsUrl": "https://SERVER/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
-             "APIKeyPath": "C:\\Program Files\\Skyline Communications\\DataMiner BrokerGateway\\appsettings.runtime.json"
+             "APIKeyPath": "<path to client secret file or copied appsettings.runtime.json>"
            }
          }
          ```
 
       1. Set the `CredentialsUrl` to point to one of the servers in the **internal network**.
-
-      1. Ensure the `APIKeyPath` points to the destination location of the copied `appsettings.runtime.json` file.
 
    1. If you are using the **SLNet-managed** NATS solution:
 

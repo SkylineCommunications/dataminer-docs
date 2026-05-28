@@ -474,6 +474,20 @@ Up to now, only the general state of the entire cluster when an Agent connected 
 
 From now on, all state changes of all SLNet connections between Agents in the cluster will be logged in the *SLNetConnectionsMonitor.txt* file.
 
+#### Automation: Enhanced memory usage when compiling development packs and script libraries [ID 45333]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+Because of a number of enhancements, memory usage has improved when compiling development packs and script libraries.
+
+#### Service template definitions will no longer be stored alongside services [ID 45370]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+Up to now, service templates were stored alongside services in the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders. Each service template also had exactly one DataMiner Agent actively hosting the service template.
+
+In preparation of service swarming, service template definitions have now been moved into a new `C:\Skyline DataMiner\ServiceTemplates` folder, which will be synchronized across the cluster. A service template no longer has a dedicated hosting agent, which means that they now remain available even if DataMiner Agents are down.
+
 #### SLAnalytics: Enhanced performance when detecting flatline events [ID 45376]
 
 <!-- MR 10.7.0 - FR 10.6.7 -->
@@ -492,6 +506,20 @@ From now on, the *Standalone BPA Executor* tool will return one of the following
 |---|---|
 | 1 | Unexpected errors have occurred. |
 | 2 | BPA tests have detected issues. |
+
+#### User-Defined APIs can now also be triggered by sending a PATCH request method [ID 45542]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+To trigger a user-defined API, up to now, you had to send a GET, PUT, POST, or DELETE request method to the UserDefinableApiEndpoint DxM.
+
+From now on, it will also be possible to trigger a user-defined API by sending a PATCH request method.
+
+#### SLManagedScripting: AssemblyLoad event handler will also log the location of the loaded assembly [ID 45547]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+From now on, the `AssemblyLoad` event handler in SLManagedScripting will also log the location of the loaded assembly (if available).
 
 ### Fixes
 
