@@ -306,6 +306,8 @@ items:
             topicUid: Creating_a_ticket
           - name: Escalating an event
             topicUid: Escalating_an_event
+          - name: Grouping alarms
+            topicUid: Grouping_Alarms
           - name: Triggering a correlated alarm
             topicUid: Triggering_a_correlated_alarm
           - name: Running an automation script from a correlation rule
