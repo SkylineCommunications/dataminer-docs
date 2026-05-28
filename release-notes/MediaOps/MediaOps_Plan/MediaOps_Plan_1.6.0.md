@@ -99,3 +99,7 @@ Up to now, it was not possible to update the name of a capability using the [Med
 #### Resource Studio: Logging for resource property management not always stored in log file [ID 45587]
 
 Attempting to add and save a new property to a resource that had a concurrency of 0 in Resource Studio would fail with the pop-up message "Something unexpected happened". However, no message was added in the Resources logging. Now this logging will be added to the related log file. Also, in case there is only one error, the error message is now shown in the pop-up message instead of the default log message.
+
+#### Aborting a script caused it to be logged as failed [ID 45590]
+
+Previously, closing an interactive script by clicking the X icon in the top-right corner resulted in the script being logged as failed. This behavior has been fixed, and such actions no longer mark the script as a failure.
