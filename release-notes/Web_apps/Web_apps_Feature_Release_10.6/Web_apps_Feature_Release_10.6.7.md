@@ -92,11 +92,11 @@ From now on, it will also be possible to enable or disable this setting, which h
 
 When you have a *List* component listing spectrum sessions, you can now filter that list by name. To do so, link a data field of type string to the filter of the *List* component. This data field will then act as a filter box.
 
-#### Dashboards/Low-Code Apps - Spectrum analyzer component: New 'Color source' option [ID 45437]
+#### Dashboards/Low-Code Apps - Spectrum analyzer component: New 'Theme source' option [ID 45437]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
-The Spectrum analyzer component now has a *Color source* option, which can be set to either "Preset" or "Custom".
+The Spectrum analyzer component now has a *Theme source* option, which can be set to either "Preset" or "Custom".
 
 - When you set this option to "Preset":
 
