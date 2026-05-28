@@ -4,36 +4,48 @@ uid: DashboardList
 
 # List
 
-This component allows the user to select one or more items in a list. The selectable items can be based on any data.
+This component allows you to **select one or more items in a list**. The selectable items can be based on any data.
 
 ![List](~/dataminer/images/List.gif)<br>*List component in DataMiner 10.4.6*
 
-To configure the component:
+## How data is displayed in the list
 
-1. Apply the necessary data. See [Adding data to a component](xref:Adding_data_to_component).
+The way items are listed in the component depends on the type and number of data sources applied:
 
-   > [!NOTE]
-   >
-   > - From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->, when you apply a single query data source or *Tables* data source, individual rows from that query or table are listed instead of the query or table itself. Additionally, if you want to use this list component as data, the entry will be listed as *Tables* or *Query rows* in the *Data* pane (depending on your DataMiner version<!--RN 41075-->). When you apply multiple query data sources or *Tables* data sources, the queries or tables themselves are listed as data. Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, when you apply a single query data source, the query itself is listed as data. If you use this list component as data, the entry will be listed as *Queries* in the *Data* pane.
-   > - You can use the *Tables* data source for this component from DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards.<!--RN 41161-->
+- Built-in data sources (such as *Elements* or *Protocols*):
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
+  - When you apply a single data source, the list shows the individual items from each data source.
 
-   - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
+  - If multiple data sources are applied, the items are grouped per data source in the list. For example, protocol items may be listed first, followed by an *Elements* heading and the elements items.
 
-   - *Display column*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Allows you to select a column that should be picked to display the query rows items. This setting is only available when a single query data source or *Tables* component data source was applied.
+- Query and *Tables* data sources:
 
-1. Optionally, customize the following component options in the *Component* > *Settings* pane:
+  - When you apply a single query data source or *Tables* data source, the list shows the individual rows from that query or table. Each row becomes a selectable item.
 
-   - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
+    > [!NOTE]
+    > Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4<!--RN 38811-->, when you apply a single query data source, the query itself is listed as data.
 
-   - *Initial Selection > Select first item by default*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38775-->. Sets the first item as the value that will be applied in the data when the dashboard is opened, unless a custom URL is used specifying a different value. This setting is enabled by default.
+  - When you apply multiple query data sources or *Tables* data sources, the list instead shows the queries or tables themselves.
 
-   - *Initial Selection > Select item by default*: Allows you to specify a default value. This is the value that will be applied in the data when the dashboard is opened, unless a custom URL is used specifying a different value. From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38775-->, this setting is only available when the *Select first item by default* setting is disabled.
+## Configuration options
 
-     > [!NOTE]
-     >
-     > - Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4<!--RN 38775-->, this setting is called *Initial Selection* instead.
-     > - Prior to DataMiner 10.3.6/10.4.0<!--  RN 35984 -->, this setting is called *Feed Defaults* instead.
+### List layout
 
-   - *Data retrieval > Update data*: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Allows the values displayed in the component to be updated in real time, if the data supports this (see [Query updates](xref:Query_updates)). This setting is only available when a single query data source or an index dataset was applied. This setting is disabled by default.
+In the *Layout* pane, you can find the default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
+
+Additionally, the following layout options are also available:
+
+| Section | Option | Description |
+|--|--|--|
+| Advanced | Display column | Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Select the column whose values are shown in the list. Only available when a single query data source or *Tables* component data source was applied. |
+
+### List settings
+
+In the *Settings* pane for this component, you can customize its behavior to suit your requirements.
+
+| Section | Option | Description |
+|--|--|--|
+| WebSocket settings | Inherit WebSocket settings from page/panel | Clear the checkbox to use a custom polling interval for this component. When cleared, you can specify a different polling interval (in seconds). |
+| Initial selection | Select first item by default | Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38775-->. When enabled, the first item is automatically selected when the data in the list is refreshed, unless a custom URL is used specifying a different value. This setting is enabled by default. |
+| Initial Selection | Select item by default | Specify a fixed default value, which is automatically selected when the data in the list is refreshed, unless a custom URL is used specifying a different value. From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38775-->, this setting is only available when the *Select first item by default* setting is disabled.<br><br>Formerly known as:<br>- *Initial Selection* (Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4<!--RN 38775-->)<br>- *Feed Defaults* (Prior to DataMiner 10.3.6/10.4.0<!--RN 35984-->)|
+| Data retrieval | Update data | Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Toggle the switch to determine whether the values displayed in the component should be updated automatically (provided this is supported by the data source). See [Query updates](xref:Query_updates)<!--RN 37269-->. This setting is only available when a single query data source or an indices dataset was applied. This setting is disabled by default. |
