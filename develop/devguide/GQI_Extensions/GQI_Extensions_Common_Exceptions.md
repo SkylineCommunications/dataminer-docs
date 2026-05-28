@@ -4,7 +4,7 @@ uid: GQI_Extensions_Common_Exceptions
 
 # Common exceptions from GQI extensions
 
-The following exceptions can commonly occur when developing GQI extensions:
+The following exceptions can commonly occur when developing GQI extensions. For each exception, a number of known common causes are listed, but these are not exclusive — other causes may exist.
 
 - [System.ObjectDisposedException: The CancellationTokenSource has been disposed](#systemobjectdisposedexception-the-cancellationtokensource-has-been-disposed)
 - [System.Threading.Tasks.TaskCanceledException: A task was canceled](#systemthreadingtaskstaskcanceledexception-a-task-was-canceled)
