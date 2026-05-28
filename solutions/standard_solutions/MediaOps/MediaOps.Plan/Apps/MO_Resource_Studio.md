@@ -1,5 +1,6 @@
 ---
 uid: MO_Resource_Studio
+description: Explore the Resource Studio app, which allows you to create and manage resources, such as network inventory, services, rooms, people, vehicles etc.
 ---
 
 # Resource Studio

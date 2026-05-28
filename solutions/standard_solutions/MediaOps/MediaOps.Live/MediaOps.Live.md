@@ -1,5 +1,6 @@
 ---
 uid: MediaOps.Live
+description: Deploy MediaOps.Live from the DataMiner Catalog. This solution includes tools that enable live signal connection management and processor control. 
 ---
 
 # MediaOps Live
