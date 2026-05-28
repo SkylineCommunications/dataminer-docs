@@ -258,6 +258,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SLSNMPAgent RTEs when SNMP manager is not responding
+            topicUid: KI_SLSNMPAgent_RTE_SNMP_manager_not_responding
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
             topicUid: KI_profile_manager_fails_after_rollback
           - name: Upgrade fails because of VerifyGRPCConnection.dll prerequisite
