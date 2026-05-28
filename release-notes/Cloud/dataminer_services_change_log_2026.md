@@ -9,6 +9,29 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 22 May 2026 - New feature - Admin - Audit logs for managing draft subscriptions
+
+Managing draft subscriptions will now create audit logs, allowing administrators to track and review changes related to draft subscription activity.
+
+### 22 May 2026 - New feature - Sharing - Multi-paste support for email input
+
+When sharing a dashboard, users can now paste multiple email addresses at once into the email input field. Both comma-separated (`,`) and semicolon-separated (`;`) lists are supported.
+
+### 20 May 2026 - Fix - Admin/Catalog - Issues related to organization switching
+
+Several issues related to organization switching have been resolved across the Admin app and Catalog:
+
+- In the Admin app, after switching organizations, users did not stay on the same page as expected. In addition, if the new organization did not have access to the current page or if the permission check failed, they were not redirected to the Overview as expected. Switching organizations now keeps you on the same page when possible. If the new organization does not have access to the current page, or if the permission check fails, you are redirected to the Overview and notified accordingly.
+- On pages with organization-scoped data, switching to a different organization could cause stale data from the previous organization to still be shown. Now stale data from the previous organization is cleared and fresh data is fetched for the new one.
+- Rapidly switching between organizations could leave behind stale data from intermediate organizations. This issue has been resolved.
+- Organization keys, audit logs, and usage data did not refresh automatically after an organization switch, and if the audit log reload failed, stale data and the *Load More* button remained visible. This issue has been resolved. The data will refresh automatically, and if the audit log reload fails, stale data and the *Load More* button will be hidden.
+- In the Catalog app, if a Catalog item was unavailable for the newly selected organization, a message was shown that the item was not found. Now the user is instead automatically redirected to the Browse page.
+- It could occur that aborted call notifications were shown when switching pages. These notifications are no longer shown.
+
+### 20 May 2026 - Enhancement - Billing - 'Overusage' terminology updated to 'PPU'
+
+On the billing-related pages and notifications, the term "overusage" has been replaced with "pay-per-use" (PPU) to better reflect the billing model and ensure consistent terminology across dataminer.services.
+
 ### 18 May 2026 - New feature - Admin - Automatic log collection for support tickets
 
 When creating a support ticket on the Support page in the Admin app, users can now link a cloud-connected DMS and specific Agents to their support ticket. When enabled, this triggers automatic log collection, ensuring support engineers receive the necessary diagnostic data without manual uploads.

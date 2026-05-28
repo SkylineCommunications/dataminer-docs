@@ -1,5 +1,6 @@
 ---
 uid: Protocols_Templates_tutorials
+description: Protocols and Templates tutorials focused on getting started with alarm templates and using information templates.
 ---
 
 # Protocols & Templates tutorials

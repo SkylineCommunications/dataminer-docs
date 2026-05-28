@@ -10,6 +10,10 @@ items:
           topicUid: Assistant_Context
         - name: Adding custom user context
           topicUid: Assistant_UserContext
+        - name: DataMiner Assistant M365
+          topicUid: Assistant_M365
+        - name: Data privacy and security
+          topicUid: Assistant_DataPrivacySecurity
       - name: Natural language to GQI
         topicUid: NL2GQI
       - name: Document Intelligence
@@ -302,6 +306,8 @@ items:
             topicUid: Creating_a_ticket
           - name: Escalating an event
             topicUid: Escalating_an_event
+          - name: Grouping alarms
+            topicUid: Grouping_Alarms
           - name: Triggering a correlated alarm
             topicUid: Triggering_a_correlated_alarm
           - name: Running an automation script from a correlation rule

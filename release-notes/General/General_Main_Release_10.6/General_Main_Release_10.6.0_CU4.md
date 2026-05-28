@@ -43,13 +43,13 @@ A number of enhancements have been made with regard to health monitoring of Open
 
 Also, all logging with regard to OpenSearch health monitoring can now be found in *SLSearchHealth.txt*. Up to now, that logging was added to *SLCassandraHealth.txt*.
 
-#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from DataMiner Cube [ID 45355]
+#### Alarm cache: Enhanced retrieval of alarms that are not linked to a specific element [ID 45322]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
-When DataMiner Cube requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
+Up to now, in some cases, DataMiner would not be able to retrieve alarms from the alarm cache when those alarms were not linked to a specific element. As a result, it had to retrieve them from the database instead.
 
-From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
+This has now been improved so those alarms are correctly retrieved from memory when available.
 
 #### APIGateway has been upgraded to Microsoft .NET 10 [ID 45421]
 
@@ -127,3 +127,15 @@ Up to now, SLSNMPAgent could unexpectedly stop working either right after startu
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
 When an element failed to start up because of, for example, a faulty protocol.xml file, up to now, it would not properly clean up the assigned resources.
+
+#### Automation: File locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation [ID 45520]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+In some cases, a file locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation while, on another thread, an attempt was being made to start another script using memory files.
+
+#### Connector with redundant polling connections would incorrectly switch connections when executing a poll action group on an element in timeout [ID 45534]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Up to now, a connector with redundant polling connections would incorrectly switch connections when executing a group of type "poll action" or "poll trigger" on an element that was in a timeout state. In some cases, this could lead to unexpected behavior.

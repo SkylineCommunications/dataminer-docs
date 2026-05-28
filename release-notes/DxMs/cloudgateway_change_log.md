@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 22 May 2026 - Enhancement - CloudGateway 3.1.1.0 - MessageBroker dependency updated: ForcedEndpoints support
+
+CloudGateway now supports the use of the `ForcedEndpoints` setting in *MessageBrokerConfig.json*. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
+
 #### 4 May 2026 - Enhancement - CloudGateway 3.1.0 - Microsoft 365 Copilot
 
 Support for Microsoft 365 Copilot has been added.

@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Health_Check_Tool
+description: Use the DataMiner Health Check Tool to configure script-based tests that retrieve DMA metrics and subscription-based tests that retrieve parameter data from elements.
 ---
 
 # DataMiner Health Check Tool

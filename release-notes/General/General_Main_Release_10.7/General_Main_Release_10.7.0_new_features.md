@@ -341,27 +341,52 @@ With *Write* access, which is the default behavior when the `ReadOnly` property 
 - Create, update, or delete DOM instances
 - Add or remove DOM attachments on a DOM instance
 
-#### MessageBroker: Configuring forced endpoints [ID 45491]
+#### User-defined APIs: Token-based rate limiting [ID 45470]
 
 <!-- MR 10.7.0 - FR 10.6.7 -->
 
-In the `MessageBrokerConfig.json` file, it is now possible to configure so-called forced endpoints that will override the NATS endpoints provided by BrokerGateway. This will prove particularly useful in scenarios where a process must reach NATS through a fixed set of endpoints. For example, when connecting through a proxy, a DMZ, or a load balancer.
+API tokens can now be configured with a rate limit to control how frequently they can be used to trigger user-definable API endpoints.
 
-To override the NATS endpoints for all processes on a server, add a `ForcedEndpoints` array to the `BrokerGatewayConfig` section in `C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json`. See the following example.
+A rate limit consists of:
 
-```json
-{
-  "BrokerGatewayConfig": {
-    "CredentialsUrl": "https://<hostname>/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
-    "APIKeyPath": "C:\\Program Files\\Skyline Communications\\DataMiner BrokerGateway\\appsettings.runtime.json",
-    "ForcedEndpoints": [ "custom-host-1:4222", "custom-host-2:4222", "custom-host-3" ]
-  }
-}
-```
+- A limit: The maximum number of requests allowed within the configured time window. Supported range: 1 to 100
+- A window: The time span in which the configured number of requests is allowed. Supported range: 1 second to 1 day
 
-Each entry in `ForcedEndpoints` can be a string in the format `"host:port"` or `"host"`.
+##### Behavior when the limit is exceeded
 
-> [!IMPORTANT]
->
-> - The `ForcedEndpoints` setting should only be used in combination with a server that does not run a DataMiner Agent (e.g. servers hosting a DMZ setup for dataminer.services connectivity or a Dashboard Gateway).
-> - The Data Aggregator DxM does not work when forced endpoints have been configured.
+When the rate limit is exceeded, the *UserDefinableApiEndpoint* DxM will return an HTTP 429 message ("Too Many Requests").
+
+In this case, the API trigger will not be forwarded to SLNet, and the API script will not be executed. The response message will indicate that the rate limit was exceeded and will include internal error code 1014.
+
+Every request that can be linked to a token counts toward that token's rate limit, regardless of whether the request results in a successful API script trigger.
+
+##### Sliding window behavior
+
+Rate limiting uses a sliding window. This means that, when a request is received, the system checks how many requests were made with the same token during the preceding configured window. If the configured limit has already been reached within that period, the request is blocked.
+
+For example, with a limit of 5 requests per 1 minute, a client using the token can trigger the API up to 5 times within any rolling 1-minute period.
+
+Keep in mind that different limit/window combinations can result in different behavior, even when they allow the same average number of requests. See the following examples:
+
+- Limit 10 and window 60 seconds: Bursts of up to 10 requests are allowed in a short time, after which the client must wait until requests fall outside the 60-second window.
+- Limit 1 and window 6 seconds: The requests are spread more evenly, allowing 1 new request every 6 seconds.
+
+##### Performance considerations
+
+Configuring a high rate limit, such as 100 requests per second, does not guarantee that DataMiner can process that number of API triggers.
+
+The actual throughput depends on factors such as API script runtime, server hardware, current system load, the number of agents in the cluster, and other system-specific conditions.
+
+##### Configuration and API changes
+
+A new `RateLimit` property has been added to the `ApiToken` class. This property can be used to define the `Limit` and `Window` values.
+
+If an invalid rate limit is configured, an `ApiTokenError` with reason `InvalidRateLimit` will be returned. The new `Message` property on the error contains an English description of the invalid configuration.
+
+Currently, rate limits cannot yet be configured in the UI, and must be configured via the C# API. If an API token with a configured rate limit is updated through the UI, the rate limit will be cleared.
+
+##### Updating an existing rate limit
+
+When an existing rate limit is changed, the updated limit is only applied after a next trigger both starts and finishes after the update has been applied.
+
+If a long window was configured and the limit has already been reached, the client may need to wait until the window has passed before another trigger can be executed and the updated limit can take effect.

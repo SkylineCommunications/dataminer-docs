@@ -37,6 +37,20 @@ Within a GQI extension, it will now be possible to retrieve the *Culture* and *T
 > [!NOTE]
 > For this new feature to work, the extension needs to be created with the `Skyline.DataMiner.Core.GQI.Extensions` NuGet (version 1.1.0 or above). The feature is not supported when the extension is created using the `SLAnalyticsTypes` API.
 
+#### Dashboards/Low-Code Apps - Node edge graph component: New 'Minimize metric' setting [ID 45538]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Node edge graph components now have a new *Minimize metric* setting, which will allow you to configure when edge metrics are minimized (per edge query).
+
+| Mode | Description |
+|---|---|
+| Auto   | Edge metrics are minimized automatically when edges are too close to each other (default behavior). |
+| Always | Edge metrics are always minimized. |
+| Never  | Edge metrics are never minimized. |
+
+When edge metrics are minimized because the mode is set to either "Auto" or "Always", hold Ctrl+Space to make the full edge metrics visible. When you then release both keys, the configured minimization behavior will be restored again.
+
 ## Changes
 
 ### Enhancements
@@ -94,6 +108,12 @@ The Spectrum analyzer component now has a *Color source* option, which can be se
   - Background, font, axis, and grid colors are all inherited from the component theme.
 
 In both cases, measurement point trace colors are resolved via theme color indexing based on the measurement point key/name.
+
+#### Dashboards/Low-Code Apps: Redesigned 'Numeric input' component [ID 45457]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+The *Numeric input* component has been redesigned.
 
 #### Dashboards/Low-Code Apps: Tree and List components now accept a string filter [ID 45485]
 
@@ -204,3 +224,27 @@ From now on, all web apps will use the same theme colors and the correct icons. 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
 On systems using the GQI DxM, in a *Query filter* component, it would no longer be possible to filter numeric columns on discrete values when filter assistance was enabled.
+
+#### GQI DxM: Problem when loading a GQI extension of which the DLL file was locked [ID 45569]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When the GQI DxM tried to load a GQI extension of which the DLL file in `C:\Skyline DataMiner\Scripts\Libraries` was locked, up to now, loading the extension would fail and a warning similar to the following example would be added to the GQI DxM logging:
+
+```txt
+[2026-05-19 13:35:22.640][WRN][GQI.ExtensionsWorker.Automation.Automation.ExtensionLoader] Failed to load assembly from C:\Skyline DataMiner\Scripts\Libraries\ScriptName.LibraryName.xxxx_xx_xx__xx_xx_xx.R.dll
+System.IO.IOException: The process cannot access the file 'C:\Skyline DataMiner\Scripts\Libraries\ScriptName.LibraryName.xxxx_xx_xx__xx_xx_xx.R.dll' because it is being used by another process.
+```
+
+In order to prevent problems when loading GQI extensions, from now on, the GQI DxM will always try to load the assembly bytes from disk with 5 retries.
+
+#### Web apps - Interactive automation scripts: Error messages in FileSelector control would incorrectly show raw HTML code [ID 45572]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Up to now, when running an interactive automation script, error messages in the *FileSelector* control would incorrectly show raw HTML code.
+
+When *ValidationText* was set to, for example, `This is the <b>actual</b> error message.`, this text would incorrectly end up in the UI as `<html><head></head><body>This is the <b>actual</b> error message.</body></html>`.
+
+> [!NOTE]
+> If, for some reason, you want an error message to contain actual HTML code, you will need to escape the HTML tags.
