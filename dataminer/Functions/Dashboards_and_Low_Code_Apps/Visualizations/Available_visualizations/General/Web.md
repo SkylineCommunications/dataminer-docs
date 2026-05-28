@@ -93,7 +93,7 @@ In the *Settings* pane for this component, you can customize its behavior to sui
 | General | Type | Choose whether you want to configure the component as a webpage or as a block of HTML by selecting *Webpage* or *Custom HTML* respectively. |
 | General | HTML | Only available if *Type* is set to *Custom HTML*. Enter the HTML code. |
 | General | URL | Only available if *Type* is set to *Webpage*. Enter the URL of the webpage. |
-| Security | Isolate | Available from DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 onwards<!-- RN 43584 -->. Toggle the switch to enable or disable isolation of the content. When enabled, the content runs in a restricted environment (i.e. a sandbox). If the URL points to a file in the DMA's *Webpages/public/* folder (or one of its subfolders) and isolation is not required, you can disable this option. Only disable it if absolutely necessary, as doing so lowers browser security.<br><br>Prior to DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<!--RN 45422-->, this setting is called *Open in sandbox* and is only available if *Type* is set to *Webpage*. |
+| Security | Isolate | Available from DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 onwards<!-- RN 43584 -->. Toggle the switch to enable or disable isolation of the content. When enabled, the content runs in a restricted environment (i.e., a sandbox). If the URL points to a file in the DMA's *Webpages/public/* folder (or one of its subfolders) and isolation is not required, you can disable this option. Only disable it if absolutely necessary, as doing so lowers browser security.<br><br>Prior to DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<!--RN 45422-->, this setting is called *Open in sandbox* and is only available if *Type* is set to *Webpage*. |
 
 > [!NOTE]
 >
