@@ -26,11 +26,11 @@ Inherits from [GQIColumn](xref:GQI_GQIColumn).
 
 | Property | Type | Description | Version |
 |--|--|--|--|
-| DiscreteOptions | [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptionsT) | The discrete value options configured for this column, or `null` if no discretes are defined. | DataMiner Web 10.6.7/10.5.0 [CU16]/10.6.0 [CU4]<!-- RN 45380 --> |
+| DiscreteOptions | [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptionsT) | The discrete value options configured for this column, or `null` if no discrete values are defined. | DataMiner Web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<!-- RN 45380 --> |
 
 ### Derived types
 
-Each derived type has two constructors: one that accepts only a name (backward compatible), and one that also accepts a [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptionsT) parameter (available from DataMiner Web 10.6.7/10.5.0 [CU16]/10.6.0 [CU4] onwards<!-- RN 45380 -->).
+Each derived type has two constructors: one that accepts only a name (backward compatible), and one that also accepts a [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptionsT) parameter (available from DataMiner Web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!-- RN 45380 -->).
 
 | Type | Value type | Example |
 |--|--|--|

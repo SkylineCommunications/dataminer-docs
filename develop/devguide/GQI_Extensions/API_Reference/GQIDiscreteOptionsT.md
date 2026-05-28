@@ -9,12 +9,12 @@ uid: GQI_GQIDiscreteOptionsT
 - Namespace: `Skyline.DataMiner.Core.GQI.Extensions`
 - Assembly: `Skyline.DataMiner.Core.GQI.Extensions.dll`
 
-Available from DataMiner Web 10.6.7/10.5.0 [CU16]/10.6.0 [CU4] onwards.<!-- RN 45380 -->
+Available from DataMiner Web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards.<!-- RN 45380 -->
 
 Configures a set of discrete values for a [GQIColumn\<T\>](xref:GQI_GQIColumnT).
 
 > [!TIP]
-> Learn more about configuring discretes for columns [here](xref:GQI_Extensions_Discrete_Values).
+> See also: [Defining discrete values for a column](xref:GQI_Extensions_Discrete_Values).
 
 ## Type parameters
 
@@ -32,7 +32,7 @@ Configures a set of discrete values for a [GQIColumn\<T\>](xref:GQI_GQIColumnT).
 | Property | Type | Description |
 |--|--|--|
 | Discretes | IReadOnlyList\<[GQIDiscrete\<T\>](xref:GQI_GQIDiscreteT)\> | The list of discrete values. Each value must be unique; providing duplicate values will result in an error. |
-| IsStrict | bool | The strictness of the discretes: [strict vs. non-strict](xref:GQI_Extensions_Discrete_Values#strict-vs-non-strict) |
+| IsStrict | bool | The strictness of the discrete values: [strict vs. non-strict](xref:GQI_Extensions_Discrete_Values#strict-vs-non-strict) |
 
 ## Example
 

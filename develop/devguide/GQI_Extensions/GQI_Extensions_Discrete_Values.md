@@ -2,22 +2,22 @@
 uid: GQI_Extensions_Discrete_Values
 ---
 
-# Defining discretes for a column
+# Defining discrete values for a column
 
-From DataMiner Web 10.6.7/10.5.0 [CU16]/10.6.0 [CU4] onwards<!-- RN 45380 --> it is possible to define a set of **discretes** when creating a column within GQI extensions. Discretes are predefined, named constants for values that can occur in the column. They are exposed to the client and can be used in filter editors, making it easier for users to filter data by selecting from predefined options rather than typing values manually.
+From DataMiner Web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!-- RN 45380 --> it is possible to define a set of **discrete values** when creating a column within GQI extensions. Discrete values are predefined, named constants for values that can occur in the column. They are exposed to the client and can be used in filter editors, making it easier for users to filter data by selecting from predefined options rather than typing values manually.
 
 > [!IMPORTANT]
 > This feature requires the [GQI DxM](xref:GQI_DxM) and the Skyline.DataMiner.Core.GQI.Extensions [extension API](xref:GQI_Extension_API)
 
-## When to use discretes
+## When to use discrete values
 
-Discretes can be used in two ways:
+Discrete values can be used in two ways:
 
 - For columns that can only contain **a fixed set of values**. For example, a "Status" column that can only be *Active*, *Inactive*, or *Pending*.
 
-- For columns that may contain **a fixed set of special or exceptional values alongside regular values**. For example, a numeric measurement column where most values fall within a continuous range (e.g. 0–100), but specific values have a special meaning (e.g. `-1` means "Error"). Defining these exception values as non-strict discretes surfaces them as quick filter options alongside the standard numeric filter.
+- For columns that may contain **a fixed set of special or exceptional values alongside regular values**. For example, a numeric measurement column where most values fall within a continuous range (for example, 0–100), but specific values have a special meaning (for example, `-1` means "Error"). Defining these exception values as non-strict discrete values surfaces them as quick filter options alongside the standard numeric filter.
 
-## How to define a column with discretes
+## How to define a column with discrete values
 
 Use the [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptionsT) class to configure the available discrete values for a column. Each individual discrete value is defined using the [GQIDiscrete\<T\>](xref:GQI_GQIDiscreteT) class, which pairs a display name with an underlying value.
 
@@ -44,15 +44,15 @@ new GQIDoubleColumn("Percentage", new GQIDiscreteOptions<double>(new[]
 ```
 
 > [!NOTE]
-> Within custom operators, the discretes of existing columns can be read but not altered.
+> Within custom operators, the discrete values of existing columns can be read but not altered.
 
 ## Cell values for discrete columns
 
-When creating a cell for a discrete, only the `Value` of that discrete needs to be specified. The name of the discrete will automatically be used as the display value. Any other `DisplayValue` on the cell will be ignored.
+When creating a cell for a discrete value, you only need to specify the `Value` property of the discrete value option. The `Name` property of the discrete value option will automatically be used as the display value. Any other `DisplayValue` on the cell will be ignored.
 
 ## Strict vs. non-strict
 
-The `IsStrict` property on [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptionsT) indicates whether the column values come exclusively from the discrete list (`true`) or whether the discretes represent known values alongside a broader range (`false`). When omitted, it defaults to `true`.
+The `IsStrict` property on [GQIDiscreteOptions\<T\>](xref:GQI_GQIDiscreteOptionsT) indicates whether the column values come exclusively from the discrete value list (`true`) or whether the discrete values represent known values alongside a broader range (`false`). When omitted, it defaults to `true`.
 
 > [!IMPORTANT]
-> Only cells with discrete values and empty cells are allowed in a column with strict discretes. If any other value is provided, the query will fail to execute.
+> Only cells with discrete values and empty cells are allowed in a column with strict discrete values. If any other value is provided, the query will fail to execute.
