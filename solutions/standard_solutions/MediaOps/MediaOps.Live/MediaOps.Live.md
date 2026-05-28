@@ -1,5 +1,6 @@
 ---
 uid: MediaOps.Live
+description: Install MediaOps Live from the Catalog, review included low-code apps, and start deploying orchestration workflows on your DataMiner system.
 ---
 
 # MediaOps Live
