@@ -8,7 +8,7 @@ This action is available from DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onward
 
 Use this action in a correlation rule to generate a group alarm that combines all base alarms matching the rule.
 
-To configure a correlation rule to generate a group alarm:
+## Configuring a correlation rule to generate a group alarm
 
 1. In the *Actions* section of the details pane, click *Add Action* and select *Group alarms*.
 
@@ -20,7 +20,7 @@ To configure a correlation rule to generate a group alarm:
 
 When a correlated group alarm appears in the Alarm Console:
 
-- The **element name** depends on whether you [correlate across DMAs](xref:General_configuration_of_Correlation_rules) and whether [alarm grouping](xref:Grouping_alarms_in_Correlation_rules) is configured:
+- The **element name** depends on whether you have selected [*Correlate across DMAs*](xref:General_configuration_of_Correlation_rules) and whether [alarm grouping](xref:Grouping_alarms_in_Correlation_rules) is configured:
 
   | *Correlate across DMAs* | Alarm grouping configured | Element name |
   | -- | -- | -- |
