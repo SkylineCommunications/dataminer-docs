@@ -34,7 +34,11 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Exception.Source field will now be added to ErrorLog.txt when a managed process stops unexpectedly [ID 44722]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When a managed process stops unexpectedly, from now on, the contents of the exception's *Source* field will now be added to the *ErrorLog.txt* log file. This should provide more debug information.
 
 ### Fixes
 
