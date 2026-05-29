@@ -9,7 +9,7 @@ SLLogCollector is a tool that can be used to easily collect log information and 
 
 This log collector tool is available on every DMA in the folder `C:\Skyline DataMiner\Tools\SLLogCollector`.
 
-From DataMiner 10.1.0 \[CU2\]/10.1.5 onwards, you can also access SLLogCollector from the shortcut menu of the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). To do so, right-click the taskbar utility icon and select *Launch* > *Tools* > *Log Collector*.
+You can also access SLLogCollector from the shortcut menu of the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). To do so, right-click the taskbar utility icon and select *Launch* > *Tools* > *Log Collector*.
 
 If SLLogCollector is not installed on your DataMiner Agent, you can download it from [DataMiner Dojo](https://community.dataminer.services/download/sllogcollector/).
 
@@ -25,7 +25,7 @@ To use the SLLogCollector tool:
 
 1. In the folder mentioned above, double-click `SL_LogCollector.exe`.
 
-1. From DataMiner 10.1.0 \[CU11]/10.2.2 onwards, optionally, create a CollectorConfig XML file to fine-tune which resources are collected. See [Using a custom CollectorConfig XML file](#using-a-custom-collectorconfig-xml-file).
+1. Optionally, create a CollectorConfig XML file to fine-tune which resources are collected. See [Using a custom CollectorConfig XML file](#using-a-custom-collectorconfig-xml-file).
 
 1. Configure the necessary options:
 
@@ -46,6 +46,14 @@ To use the SLLogCollector tool:
 
    - To only collect logging for the period since DataMiner was last started, select *Exclude logging of previous run of DataMiner*.
 
+   - From DataMiner 10.6.7/10.7.0 onwards<!--RN 45044-->, you can select *Collect DLL info* to include information about DLL files in the generated package. If this option is enabled, the package will contain the following details for all DLL files found in the `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\ProtocolScripts` folders:
+
+     - Name
+     - Version
+     - Culture
+     - Public key
+     - Dependencies
+
    - To collect memory dumps as well as logging, select *Include memory dump*. Then select for which process(es) memory dumps should be collected and when these should be collected.
 
      > [!NOTE]
@@ -58,13 +66,13 @@ To use the SLLogCollector tool:
    > [!NOTE]
    > If you just want to use the default settings and save the package to your desktop, there is no need to configure any of the options mentioned in the previous step. All you need to do is click the *Start* button. In case of RTEs, memory dumps are included automatically.
    >
-   > ![SLLogCollector](~/dataminer/images/SLLogCollector.png)
+   > ![SLLogCollector](~/dataminer/images/SLLogCollector.png)<br>*SLLogCollector in DataMiner 10.6.7*
 
 1. To view information on the actions of the tool, expand the *Console* section at the bottom of the window. For more detailed information, click the *Show detailed log* button.
 
 ## Running the tool via command line
 
-From DataMiner 10.1.11/10.2.0 onwards, you can also run the tool via command line, using the options listed below.
+You can also run the tool via command line, using the options listed below.
 
 | Option | Description |
 |--------| ----------- |
@@ -94,7 +102,7 @@ SL_LogCollector.exe -c -h
 
 ## Using a custom CollectorConfig XML file
 
-From DataMiner 10.1.0 \[CU11]/10.2.2 onwards, you can use a custom CollectorConfig XML file to indicate which resources need to be collected. This file should be placed in the folder `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs`. By default, this folder will contain a *Default.xml* file, listing a default list of resources to be collected.
+You can use a custom CollectorConfig XML file to indicate which resources need to be collected. This file should be placed in the folder `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs`. By default, this folder will contain a *Default.xml* file, listing a default list of resources to be collected.
 
 > [!NOTE]
 > From DataMiner 10.2.0 [CU11]/10.3.2 onwards, instead of in the default folder `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs`, you can place the custom CollectorConfig XML file in a `LogConfig` folder within the same folder as `SL_LogCollector.exe`. <!-- RN 34739 -->

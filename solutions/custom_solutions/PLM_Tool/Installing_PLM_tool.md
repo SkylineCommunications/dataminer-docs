@@ -1,5 +1,6 @@
 ---
 uid: Installing_PLM_tool
+description: To install the PLM tool, make sure the prerequisites are met, deploy the package from the DataMiner Catalog, and then configure the element.
 ---
 
 # Installing the PLM tool

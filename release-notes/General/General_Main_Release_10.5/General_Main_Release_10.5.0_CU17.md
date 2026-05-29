@@ -26,8 +26,35 @@ uid: General_Main_Release_10.5.0_CU17
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Exception.Source field will now be added to ErrorLog.txt when a managed process stops unexpectedly [ID 44722]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When a managed process stops unexpectedly, from now on, the contents of the exception's *Source* field will now be added to the *ErrorLog.txt* log file. This should provide more debug information.
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### History set trending would show gaps where no gaps were expected [ID 44705]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.4 -->
+
+Up to now, history set trending would show gaps where no gaps were expected.
+
+From now on, trend records with the following *iStatus* values will no longer cause gaps in trend graphs:
+
+| Value | Description |
+|-------|-------------|
+| -1  | Element is starting up. |
+| -2  | Element is being paused. |
+| -3  | Element is being activated. |
+| -4  | Element is going into a timeout state. |
+| -5  | Element is coming out of a timeout state. |
+| -6  | Element is being stopped. |
+| -9  | Trending was started for the specified parameter. |
+| -10 | Trending was stopped for the specified parameter. |
+
+#### Cassandra Cluster / STaaS: 'Alarm events' graph on 'Reports' page of service card would incorrectly be empty [ID 45533]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When, in a DataMiner Cube connected to a DataMiner System using Cassandra Cluster or STaaS, you opened the *Reports* page of a service card, the *Alarm events* graph would incorrectly be empty, showing "Alarm data not found in the current time range".

@@ -22,7 +22,8 @@ For example, here you can see an *Active alarms* tab with several alarm groups:
 
 Aside from the special icon, this is what an alarm group will look like:
 
-- The alarm color of an alarm group entry reflects the highest severity of the alarms within the group, but the severity of the group itself is *Suggestion*.
+- The alarm color of an alarm group entry reflects the highest severity among the alarms in the group.
+- The *Severity* column shows the severity of the base alarm with the highest severity. Prior to DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<!--RN 44973-->, the *Severity* column always shows *Suggestion*.
 - The parameter description of the entry is *Alarm Group*.
 - The value of the alarm group reflects the reason why the alarms are grouped. If there is no single obvious reason, the value will be *Group with multiple reasons*.
 - The root time of the group is the time when the most recent alarm in the group occurred, at the moment when the group was created.
@@ -33,6 +34,14 @@ Please note:
 - If all alarm entries within an alarm group are masked, the group is automatically masked as well. However, as soon as one of the entries is unmasked, the group is also unmasked.
 
 - [Manually clearing](xref:Clearing_alarms) automatically created alarm groups is supported from DataMiner 10.3.8/10.4.0 onwards<!-- RN 36600 -->. For [manually created/updated alarm groups](xref:Manually_creating_or_updating_alarm_groups), this is supported from DataMiner 10.2.6/10.3.0 onwards.
+
+- When alarms are filtered, alarm groups are handled as follows:
+
+  - If the alarm group matches the filter, the group and all its alarms are shown.
+
+  - If the alarm group does not match the filter, but one or more alarms within the group match, the group and all its alarms are shown.
+
+  - If neither the alarm group nor any of the alarms within the group match the filter, neither the group nor its alarms are shown.
 
 > [!TIP]
 > It is possible to customize automatic alarm grouping. See [Customizing alarm grouping rules](xref:Customizing_alarm_grouping_rules).

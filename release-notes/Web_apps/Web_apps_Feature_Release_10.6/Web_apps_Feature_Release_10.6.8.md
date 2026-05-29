@@ -41,9 +41,32 @@ Each discrete value can have a display name that differs from the underlying val
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Enhanced performance when returning GQI query results [ID 45559]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of a number of optimizations made with regard to JSON serialization, overall performance has increased when returning GQI query results.
 
 ### Fixes
+
+#### GQI Dxm: Problem when querying a mediation protocol with standalone parameters using the 'Parameters for elements where' data source [ID 45494]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+When you queried a mediation protocol with standalone parameters using the *Parameters for elements where* data source, up to now, the query would fail if one of the underlying protocols linked to the mediation protocol did not implement all of the mediated parameters.
+
+From now on, standalone parameters that are not present in an element's underlying protocol will no longer cause a query to fail. Instead, they will correctly show "Not initialized".
+
+> [!NOTE]
+> Table parameters are not affected as these are not supported by the *Parameters for elements where* data source.
+
+#### Low-Code Apps: No longer possible to scroll down to the last page and add new pages [ID 45563]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, when a low-code app contained a large number of pages, you would incorrectly no longer be able to scroll down and add new pages.
+
+From now on, you can again scroll down to the last page and add new pages.
 
 #### Dashboards/Low-Code Apps: Problem when retrieving dashboards after expired items were cleared from the cache [ID 45565]
 

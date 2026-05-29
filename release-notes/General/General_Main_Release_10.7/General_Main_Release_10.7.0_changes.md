@@ -507,6 +507,14 @@ From now on, the *Standalone BPA Executor* tool will return one of the following
 | 1 | Unexpected errors have occurred. |
 | 2 | BPA tests have detected issues. |
 
+#### GQI will now throw an exception when data is requested from a mediated table parameter [ID 45539]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+Currently, because of server limitations, GQI is unable to retrieve parameter table data from DataMiner when that table is a mediated parameter. As a result, when you select a table of a mediated protocol in a client UI, that table will not contain any data, and will also not provide any details on why it does not do so.
+
+From now on, when a query using the *Parameters for elements where* data source attempts to retrieve data from a mediated table parameter, GQI will throw an error. That error will indicate that the request is not valid because mediated tables are not supported, and will also mention the table or table columns involved.
+
 #### User-Defined APIs can now also be triggered by sending a PATCH request method [ID 45542]
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
@@ -543,25 +551,6 @@ From now on, when a capability is booked, it will no longer be possible to set i
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
 
-#### History set trending would show gaps where no gaps were expected [ID 44705]
-
-<!-- MR 10.7.0 - FR 10.6.4 -->
-
-Up to now, history set trending would show gaps where no gaps were expected.
-
-From now on, trend records with the following *iStatus* values will no longer cause gaps in trend graphs:
-
-| Value | Description |
-|-------|-------------|
-| -1  | Element is starting up. |
-| -2  | Element is being paused. |
-| -3  | Element is being activated. |
-| -4  | Element is going into a timeout state. |
-| -5  | Element is coming out of a timeout state. |
-| -6  | Element is being stopped. |
-| -9  | Trending was started for the specified parameter. |
-| -10 | Trending was stopped for the specified parameter. |
-
 #### SLAnalytics: Flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours [ID 45033]
 
 <!-- MR 10.7.0 - FR 10.6.5 -->
@@ -593,9 +582,3 @@ Up to now, when the Agent with the lowest DMA ID had been removed from a DataMin
 `System.AggregateException: One or more errors occurred. ---> Skyline.DataMiner.Net.Exceptions.DataMinerException: Fatal error while sending request [MasterSyncRequestMessage for message of type SetReservationInstanceMessage from XXX] to master DMA XXX, max retries reached. ---> Skyline.DataMiner.Net.MasterSync.MasterSyncerException: Could not use the connection to master DMA XXX`
 
 From now on, when the Agent with the lowest DMA ID was removed from the DataMiner System, the Resource Manager will correctly re-evaluate and update the master DMA when it receives a master synchronization request.
-
-#### Automation: File locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation [ID 45520]
-
-<!-- MR 10.7.0 - FR 10.6.7 -->
-
-In some cases, a file locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation while, on another thread, an attempt was being made to start another script using memory files.

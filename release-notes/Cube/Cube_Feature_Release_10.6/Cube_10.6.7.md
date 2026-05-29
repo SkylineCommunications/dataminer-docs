@@ -48,7 +48,7 @@ When the alarms are filtered (either by means of the quick filter or by means of
 - If neither the group alarm nor any of its sources match the filter, neither the alarm nor its sources will be shown.
 
 > [!NOTE]
-> The way in which the severity of an incident is shown has also been changed. Up to now, the alarm icon of an incident would show the severity of the base alarm with the highest severity, and the *Severity* column in the Alarm Console would show "Suggestion". From now on, the Severity column of an incident will also show the severity of the base alarm with the highest severity.
+> The way in which the severity of an alarm group is shown has also been changed. Up to now, the alarm icon of an alarm group would show the severity of the base alarm with the highest severity, and the *Severity* column in the Alarm Console would show "Suggestion". From now on, the Severity column of an alarm group will also show the severity of the base alarm with the highest severity.
 
 ## Changes
 
