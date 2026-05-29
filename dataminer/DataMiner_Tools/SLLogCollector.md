@@ -9,6 +9,8 @@ SLLogCollector is a tool that can be used to easily collect log information and 
 
 This log collector tool is available on every DMA in the folder `C:\Skyline DataMiner\Tools\SLLogCollector`.
 
+From DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45435-->, SLLogCollector also collects the system environment variables. These are stored in the log package in the file `Windows\SystemEnvironmentVariables.txt`.
+
 You can also access SLLogCollector from the shortcut menu of the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). To do so, right-click the taskbar utility icon and select *Launch* > *Tools* > *Log Collector*.
 
 If SLLogCollector is not installed on your DataMiner Agent, you can download it from [DataMiner Dojo](https://community.dataminer.services/download/sllogcollector/).
