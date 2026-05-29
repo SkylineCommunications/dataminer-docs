@@ -551,25 +551,6 @@ From now on, when a capability is booked, it will no longer be possible to set i
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
 
-#### History set trending would show gaps where no gaps were expected [ID 44705]
-
-<!-- MR 10.7.0 - FR 10.6.4 -->
-
-Up to now, history set trending would show gaps where no gaps were expected.
-
-From now on, trend records with the following *iStatus* values will no longer cause gaps in trend graphs:
-
-| Value | Description |
-|-------|-------------|
-| -1  | Element is starting up. |
-| -2  | Element is being paused. |
-| -3  | Element is being activated. |
-| -4  | Element is going into a timeout state. |
-| -5  | Element is coming out of a timeout state. |
-| -6  | Element is being stopped. |
-| -9  | Trending was started for the specified parameter. |
-| -10 | Trending was stopped for the specified parameter. |
-
 #### SLAnalytics: Flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours [ID 45033]
 
 <!-- MR 10.7.0 - FR 10.6.5 -->
