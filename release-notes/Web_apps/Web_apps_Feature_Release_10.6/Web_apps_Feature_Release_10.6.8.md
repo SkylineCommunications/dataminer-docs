@@ -49,6 +49,17 @@ Because of a number of optimizations made with regard to JSON serialization, ove
 
 ### Fixes
 
+#### GQI Dxm: Problem when querying a mediation protocol with standalone parameters using the 'Parameters for elements where' data source [ID 45494]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+When you queried a mediation protocol with standalone parameters using the *Parameters for elements where* data source, up to now, the query would fail if one of the underlying protocols linked to the mediation protocol did not implement all of the mediated parameters.
+
+From now on, standalone parameters that are not present in an element's underlying protocol will no longer cause a query to fail. Instead, they will correctly show "Not initialized".
+
+> [!NOTE]
+> Table parameters are not affected as these are not supported by the *Parameters for elements where* data source.
+
 #### Dashboards/Low-Code Apps: Problem when retrieving dashboards after expired items were cleared from the cache [ID 45565]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
