@@ -60,6 +60,14 @@ From now on, standalone parameters that are not present in an element's underlyi
 > [!NOTE]
 > Table parameters are not affected as these are not supported by the *Parameters for elements where* data source.
 
+#### Low-Code Apps: No longer possible to scroll down to the last page and add new pages [ID 45563]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, when a low-code app contained a large number of pages, you would incorrectly no longer be able to scroll down and add new pages.
+
+From now on, you can again scroll down to the last page and add new pages.
+
 #### Dashboards/Low-Code Apps: Problem when retrieving dashboards after expired items were cleared from the cache [ID 45565]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
