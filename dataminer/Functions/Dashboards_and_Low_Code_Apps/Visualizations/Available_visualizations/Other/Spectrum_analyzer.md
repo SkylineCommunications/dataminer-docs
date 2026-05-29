@@ -6,7 +6,7 @@ uid: DashboardSpectrumAnalyzer
 
 You can use this component to **display a spectrum graph**.
 
-![Spectrum analyzer component](~/dataminer/images/Spectrum_Analyzer.gif)<br>*Spectrum analyzer component in DataMiner 10.6.7*
+![Spectrum analyzer component](~/dataminer/images/SpectrumAnalyzer.gif)<br>*Spectrum analyzer component in DataMiner 10.6.7*
 
 ## Supported data types
 
@@ -42,6 +42,8 @@ You can allow users to visualize and switch between measurement points for a spe
    Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12, component data is found under the *Feeds* data category.
 
    A list of all the available measurement points will be shown, with a colored LED. This LED will be a filled circle for the active measurement point and an empty circle for other measurement points. If measurement points are selected in the list, this will update the spectrum session, so that the spectrum analyzer visualization shows those measurement points.
+
+1.
 
 1. Optionally, enable filtering of the list by name (supported from DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45430-->):
 
