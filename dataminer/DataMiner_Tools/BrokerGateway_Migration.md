@@ -51,14 +51,23 @@ If the [DataMiner requirements](#dataminer-requirements) or the [IT-requirements
 
 ### IT requirements
 
-- TLS 1.3 enabled
-- TLS 1.2 enabled
+BrokerGateway needs TLS for the BrokerGateway DxMs to communicate between each other and for the communication between DataMiner and NATS.
+Ideally, [HTTPS](xref:Setting_up_HTTPS_on_a_DMA) has already been set up, preferably with certificates used by a trusted Certificate Authority (CA).
+In any other circumstance, self-signed certificates will be used.
+In the latter case, the maintenance is more risky, since this is potentially the first setup of TLS/HTTPS within the DMS.
 
-The following cipher suites need to be enabled on the server:
+To make sure that the migration goes smoothly, please ensure that:
+
+- TLS 1.3 is enabled
+- TLS 1.2 is enabled
+
+Furthermore, the following cipher suites need to be enabled on the server:
 
 - TLS_AES_128_GCM_SHA256 *(TLS 1.3 - used for native clients).*
 
 - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 *(TLS 1.2 - used for managed clients)*
+
+Finally, ensure that there are no problems with '[Schannel](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-ssl-schannel-ssp-overview)' logged in the Windows Event Viewer's Application event log.
 
 ### DataMiner requirements
 
@@ -89,7 +98,7 @@ If you are using a DataMiner 10.5.x version starting from 10.5.0 [CU4] or 10.5.7
 This will automatically run `C:\Skyline DataMiner\Tools\NATSMigration.exe` with default settings on all Agents. The DataMiner Agents will not be restarted.
 
 In case any issues occur during the migration, the output will be shown in the update client.
-This will look similar to the [manual migration log](#full-example-migration-log-sanitized). Aside from this, you can check the logging in `C:\Skyline DataMiner\Upgrades\Packages\NATSMigration.dmupgrade-XXX\progress.log` and in the upgrade utility UI.
+This will look similar to the [manual migration log](#what-does-a-successful-manual-brokergateway-migration-look-like-in-logging). Aside from this, you can check the logging in `C:\Skyline DataMiner\Upgrades\Packages\NATSMigration.dmupgrade-XXX\progress.log` and in the upgrade utility UI.
 
 ## Manual migration
 
@@ -167,14 +176,140 @@ When in doubt, please contact Skyline Communications.
 
 ## Troubleshooting the migration
 
-## FAQ
+### How can I tell the difference between SLNet-managed NATS and BrokerGateway-managed NATS?
 
-### Can I run a cluster with both SLNet-managed NATS and BrokerGateway-managed NATS?
+The key technical differences are:
+
+| | <div style="width:310px">Legacy SLNet-managed NATS/NAS services</div> | BrokerGateway-managed NATS service |
+|--------|------------------------------|-----------------------|
+| **Services** | Windows services: NAS, NATS. | Windows service: `nats-server`; BrokerGateway service (IIS/Kestrel hosted) supplies credentials and clustering. |
+| **Config source** | `SLCloud.xml`, NAS/NATS config files. | `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` (endpoints), `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` (BrokerGateway). |
+| **Credentials** | `.creds` files under `C:\Skyline DataMiner\NATS\nsc`. | Dynamic credentials via BrokerGateway API. Saved on disk in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\.data\nats\nsc`. |
+| **Cluster formation** | NATSCustodian recalculates NAS/NATS configs. | BrokerGateway API builds cluster. |
+| **Repair tool** | [Manual reset / reinstall](xref:Investigating_Legacy_NATS_Issues#remaining-steps). | `C:\Skyline DataMiner\Tools\NATSRepair.exe` tool. |
+
+### Can I run a cluster with both SLNet-managed NATS and BrokerGateway-managed NATS at the same time?
 
 This is not possible. Both NATS installations use the same network ports, so the services cannot run at the same time on a machine. The credentials these installations use are also different and not compatible with each other, so running SLNet-managed NATS on DMA1 and BrokerGateway-managed NATS on DMA2 will also not function.
 
-### Why should I migrate to BrokerGateway? What are the advantages?
+### What actions are typically run during the migration?
 
-BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
+The following actions will be executed automatically during the migration, in the indicated order:
 
-In addition, starting from DataMiner 10.6.0/10.6.1, the SLNet‑managed NATS solution is no longer supported, so the migration to BrokerGateway will have to be done before you can upgrade to these DataMiner versions and beyond.
+1. Prerequisites for the migration are checked.
+
+   This includes the [Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites) BPA test and (from DataMiner 10.5.0 [CU9]/10.5.12 onwards) a check for outdated DLLs in the *ProtocolScripts* folder. If any of the prerequisites are not met or if an outdated DLL is found, you will first need to solve the issue before you can start the migration again.
+
+1. The *BrokerGateway* flag in `C:\Skyline DataMiner\MaintenanceSettings.xml` is set to true, or, if you are using a DataMiner version prior to 10.5.0 [CU2]/10.5.5, a *BrokerGateway* soft-launch flag is set instead.
+
+   ```xml
+   <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+      <SLNet>
+         <BrokerGateway>true</BrokerGateway>
+      </SLNet>
+   </MaintenanceSettings>
+   ```
+
+1. The SLNet-managed NAS and NATS services are stopped and their startup type is set to "Manual".
+
+1. The *ResetCluster* API (`https://<ip>/BrokerGateway/api/clusteringapi/resetcluster`) is called on BrokerGateway to create a new BrokerGateway-managed NATS cluster, and the NATS binaries are installed at `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server` and started as a service called "nats-server".
+
+   The *ResetCluster* API call is only executed by one of the NATSMigration instances, if a cluster is migrated. The node that will execute this command is the one with the lowest IP alphabetically. The other nodes will wait until a NATS session using BrokerGateway can be created.
+
+1. The *MessageBrokerConfig.json* file is written at `C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json`.
+
+   This file is used when initializing default sessions for DataMiner processes using the NATS communication channel. During system migration, the file is automatically overwritten to include the correct BrokerGateway URL and the path to the associated API key.
+
+A typical example of this file’s contents is shown below:
+
+   ```json
+   {
+     "BrokerGatewayConfig": {
+       "CredentialsUrl": "https://HOST/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
+       "APIKeyPath": "C:\\Program Files\\Skyline Communications\\DataMiner BrokerGateway\\appsettings.runtime.json"
+     }
+   }
+   ```
+
+> [!NOTE]
+> The NATSMigration tool has a hard‑coded 10‑minute timeout for completing the *ResetCluster* operation. If for some reason the migration cannot be completed within 10 minutes, or if something goes wrong during the migration, all Agents will revert back to using the SLNet-managed NATS solution.<!-- RN 41115 -->
+
+> [!IMPORTANT]
+> The NATS configuration (*nats-server.config*) of the NATS instance before the migration is not transferrable to the NATS instance after the migration, so it should **never be copied over**.
+
+### What does a successful manual BrokerGateway migration look like in logging?
+
+Below is a full sample output of a successful manual migration run. The machine name has been replaced by `HOSTNAME` and the IP addresses by `IP1`, `IP2`, and virtual IP `VIP1`. Timestamps have been removed as well. This output is only visible if `C:\Skyline DataMiner\Tools\NATSMigration.exe` is manually executed from a command prompt.
+In this case, the tool has been initialized with options "--norestartdataminer" and "--install", written (in shorthand) as follows: "NATSMigration.exe -ri".
+
+```cmd
+C:\Skyline DataMiner\Tools>NATSMigration.exe -ri
+[05/29/26 11:58:55.321]HOSTNAME - Warning: 'norestartdataminer' flag is set. DataMiner needs to be restarted to be able to automatically reconfigure nats-server. Make sure to restart DataMiner manually to prevent unwanted behaviour.
+[05/29/26 11:58:55.417]HOSTNAME - Running prerequisite check before switching to BrokerGateway...
+[05/29/26 11:58:57.351]HOSTNAME - All prerequisites ran successfully. No issues detected.
+[05/29/26 11:58:57.353]HOSTNAME - Migrating to BrokerGateway managed nats-server.
+[05/29/26 11:58:57.406]HOSTNAME - BrokerGateway maintenance flag is set to True.
+SLKill called for "nats" with force=False
+*** Stop services ***
+Service (NATS) has been stopped.
+*** Kill processes ***
+Process (nats-account-server : 21736) has been killed.
+SLKill called for "nas" with force=False
+*** Stop services ***
+Service (NAS) has been stopped.
+*** Kill processes ***
+[05/29/26 11:58:59.850]HOSTNAME - DataMiner BrokerGateway is started.
+[05/29/26 11:59:00.195]HOSTNAME - DataMiner BrokerGateway is reachable.
+[05/29/26 11:59:00.254]HOSTNAME - Agent that will set up the cluster: IP1
+[05/29/26 11:59:00.285]HOSTNAME - This agent is setting up the cluster...
+[05/29/26 11:59:00.302]HOSTNAME - checking if BGW of IP1 is running...
+[05/29/26 11:59:00.329]HOSTNAME - BGW of IP1 is running.
+[05/29/26 11:59:00.330]HOSTNAME - checking if BGW of IP2 is running...
+[05/29/26 11:59:00.331]HOSTNAME - BGW of IP2 is running.
+[05/29/26 11:59:00.431]HOSTNAME - Cluster consists of following endpoints: IP1 (VIP1), IP2 (VIP1)
+[05/29/26 11:59:00.434]HOSTNAME - Calling ResetCluster endpoint.
+[05/29/26 11:59:03.830]HOSTNAME - Contacted nats-server and BrokerGateway successfully!
+[05/29/26 11:59:03.832]HOSTNAME - Setting the MessageBrokerConfig.json...
+[05/29/26 11:59:03.849]HOSTNAME - Migration successful!
+```
+
+### ERROR: {machineName} was not able to remove itself from its current cluster in order to join the new cluster
+
+When calling *ResetCluster*, BrokerGateway will first try to remove itself from any cluster it is part of, in order to set up a new cluster with all the endpoints specified in `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json`.
+
+The endpoints BrokerGateway is currently clustered with are listed in the ClusterInfo in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`. If one of those IPs cannot be reached, the error message above is generated.
+
+You will be asked if the node may be forcibly removed. If you agree to this, the current machine can free itself from the cluster to cluster with the new setup instead. However, because it forcibly removes itself, it no longer informs any of the unreachable endpoints of its removal. These may still attempt to contact the current machine, which will no longer be reachable for them. If you choose to not allow the forcible removal, this will cancel the migration process and revert back to the previous configuration.<!-- RN 40991 -->
+
+If you do want to migrate to BrokerGateway but you do not want this forced removal, make sure all endpoints specified in *appsettings.runtime.json* can be reached by the current machine.
+
+With the [automatic migration](#automatic-migration-using-dmupgrade-package-recommended), forced removal is always performed automatically when regular removal does not succeed.
+
+### NATSRepair.exe
+
+If you encounter any issues with your NATS cluster related to credentials or misconfigured nodes and you have migrated to BrokerGateway, you can run the *NATSRepair.exe* tool from the `C:\Skyline DataMiner\Tools\` folder.
+
+This tool needs to be run on just one Agent of the cluster. It will perform a repair on the cluster.<!-- RN 42328 -->
+
+### TLS-related errors
+
+After a DataMiner System has been migrated to BrokerGateway, DMAs may generate the following alarm:
+
+```txt
+Could not connect to the local NATS endpoint on '<IP>'. Please make sure that the nats service is running without issues.
+```
+
+This coincides with errors in the `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\nats-server.log` files similar to the following error:
+
+```txt
+TLS handshake error: remote error: tls: bad certificate
+```
+
+This TLS handshake failure occurs because the root certificate authority (CA) used to sign the NATS server certificate is not present in the Trusted Root Certification Authorities store of the local machine.
+
+During BrokerGateway setup, a root ca.pem file is generated in `C:\ProgramData\Skyline Communications\DataMiner Security`. If this certificate is not trusted on OS level, Windows will reject the TLS connection.
+
+To resolve this issue, import the generated root certificate into the Trusted Root Certification Authorities store on each DMA via the Microsoft Management Console (MMC).
+
+> [!TIP]
+> See also: [Resolved issues — TLS authentication issues when MessageBroker is connecting to the NATS bus](xref:KI_DataMinerMessageBroker_TLS)
