@@ -1,5 +1,6 @@
 ---
 uid: SCH_Create_Job
+description: Create a job in the Scheduling app in one of three ways - from scratch, starting from a predefined workflow, or by selecting a resource.
 ---
 
 # Creating a job

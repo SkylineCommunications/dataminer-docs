@@ -1,5 +1,6 @@
 ---
 uid: MO_S_Job_Locking
+description: Explore the automatic locking mechanism used by the Scheduling app. This prevents multiple users from making changes to the same job at the same time.
 ---
 
 # Job locking
