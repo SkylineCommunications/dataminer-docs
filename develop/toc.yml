@@ -1026,6 +1026,10 @@ items:
             topicUid: GQI_GQIColumn
           - name: GQIColumn<T>
             topicUid: GQI_GQIColumnT
+          - name: GQIDiscrete<T>
+            topicUid: GQI_GQIDiscreteT
+          - name: GQIDiscreteOptions<T>
+            topicUid: GQI_GQIDiscreteOptionsT
           - name: GQIDMS
             topicUid: GQI_GQIDMS
           - name: GQIEditableHeader
@@ -1123,6 +1127,8 @@ items:
         topicUid: GQI_Extensions_Common_Exceptions
       - name: Debugging
         topicUid: GQI_Extensions_Debugging
+      - name: Defining discrete values for columns
+        topicUid: GQI_Extensions_Discrete_Values
       - name: Logging
         topicUid: GQI_Extensions_Logging
   - name: User-defined APIs
