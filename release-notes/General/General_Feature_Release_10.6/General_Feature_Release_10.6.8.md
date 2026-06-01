@@ -50,7 +50,7 @@ When a managed process stops unexpectedly, from now on, the contents of the exce
 
 #### GQI will now throw an exception when data is requested from a mediated table parameter [ID 45539]
 
-<!-- MR 10.7.0 - FR 10.6.8 -->
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 Currently, because of server limitations, GQI is unable to retrieve parameter table data from DataMiner when that table is a mediated parameter. As a result, when you select a table of a mediated protocol in a client UI, that table will not contain any data, and will also not provide any details on why it does not do so.
 

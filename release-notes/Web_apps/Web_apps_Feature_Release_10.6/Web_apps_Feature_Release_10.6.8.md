@@ -51,7 +51,7 @@ Because of a number of optimizations made with regard to JSON serialization, ove
 
 #### GQI Dxm: Problem when querying a mediation protocol with standalone parameters using the 'Parameters for elements where' data source [ID 45494]
 
-<!-- MR 10.7.0 - FR 10.6.8 -->
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When you queried a mediation protocol with standalone parameters using the *Parameters for elements where* data source, up to now, the query would fail if one of the underlying protocols linked to the mediation protocol did not implement all of the mediated parameters.
 
