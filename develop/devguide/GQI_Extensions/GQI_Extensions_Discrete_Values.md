@@ -48,7 +48,7 @@ new GQIDoubleColumn("Percentage", new GQIDiscreteOptions<double>(new[]
 
 ## Cell values for discrete columns
 
-When creating a cell for a discrete value, you only need to specify the `Value` property of the discrete value option. The `Name` property of the discrete value option will automatically be used as the display value. Any other `DisplayValue` on the cell will be ignored.
+When creating a cell for a discrete value, you only need to specify the `Value` property of the discrete value. The `Name` property of the discrete value will automatically be used as the display value. Any other `DisplayValue` on the cell will be ignored.
 
 ## Strict vs. non-strict
 
