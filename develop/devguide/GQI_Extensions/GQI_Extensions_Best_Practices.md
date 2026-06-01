@@ -11,7 +11,7 @@ When developing a GQI extension, keep the following in mind:
 - [Only use 64-bit assembly references](#only-use-64-bit-assembly-references)
 - [Make your ad hoc data source scalable](#make-your-ad-hoc-data-source-scalable)
 - [Do not use GQIDMS outside the extension lifecycle](#do-not-use-gqidms-outside-the-extension-lifecycle)
-- Use caching correctly and when appropriate - see [Caching](xref:GQI_Extensions_Caching).
+- Use caching correctly and when appropriate (see [Caching](xref:GQI_Extensions_Caching)).
 
 ## Use DIS to create and publish extensions
 
@@ -58,4 +58,4 @@ Each time a query is executed, a new instance of the data source is created. Thi
 
 ## Do not use GQIDMS outside the extension lifecycle
 
-`GQIDMS` can only be used during the lifecycle of the extension instance. After the [OnDestroy](xref:GQI_IGQIOnDestroy) life cycle method is invoked, the `GQIDMS` object associated with the extension instance is cleaned up. Any in-progress or new requests made through that `GQIDMS` object will be cancelled.
+`GQIDMS` can only be used during the lifecycle of the extension instance. After the [OnDestroy](xref:GQI_IGQIOnDestroy) lifecycle method is invoked, the `GQIDMS` object associated with the extension instance is cleaned up. Any ongoing or new requests made through that `GQIDMS` object will be canceled.

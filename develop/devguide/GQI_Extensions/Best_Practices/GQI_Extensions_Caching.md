@@ -50,8 +50,7 @@ Caching in GQI extensions is **not natively supported** by the framework, meanin
 - Any object that holds open connections, handles, or stateful resources provided by the framework.
 
 > [!IMPORTANT]
-> After [OnDestroy](xref:GQI_IGQIOnDestroy) is invoked, `GQIDMS` and `IGQILogger` are disposed.
-> Any in-progress request issued through `GQIDMS` will be cancelled.
+> After [OnDestroy](xref:GQI_IGQIOnDestroy) is invoked, `GQIDMS` and `IGQILogger` are disposed of. Any request in progress issued through `GQIDMS` will be canceled.
 
 ### Respect access control
 
