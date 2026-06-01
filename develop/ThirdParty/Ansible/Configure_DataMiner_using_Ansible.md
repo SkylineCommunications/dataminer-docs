@@ -87,7 +87,7 @@ xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
 > It can be helpful to first test your API requests with an API platform like [Postman](xref:Postman) and check the returned values.
 
 > [!TIP]
-> For detailed information about each of the available methods, see [Methods (v1)](xref:WS_Methods_v1_overview).
+> For detailed information about each of the available methods, see [Methods](xref:WS_Methods_v1_overview).
 
 ## Creating an Ansible playbook
 
