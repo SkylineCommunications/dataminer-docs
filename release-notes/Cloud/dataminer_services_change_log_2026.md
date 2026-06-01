@@ -9,26 +9,26 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 1 June 2026 - New feature - Admin - Billable usage side panel for service table rows
+### 1 June 2026 - New feature - Admin - New side panel with billable usage for services
 
-On the Billing overview page in the Admin app, for data starting from May 2026, service table rows now include an info button that opens a new side panel showing the billable usage details for that service. The following changes have been introduced:
+On the Billing overview page in the Admin app, for data starting from May 2026, service table rows now include an info button that opens a new side panel showing the billable usage details for that service:
 
-- The side panel contains a chart and, where applicable, a table with billable usage data. The table is not shown for organization-based services such as Connectors.
-- A toggle allows switching between a cost view and a usage view in the chart. The cost view takes active subscriptions into account, so usage fully covered by a subscription will show as 0.
+- The side panel contains a chart and, where applicable, a table with billable usage data. The table is not shown for organization-based services such as connectors.
+- A toggle button allows you to switch between a cost view and a usage view in the chart. The cost view takes active subscriptions into account, so usage fully covered by a subscription will show as 0.
 - A time range filter is available to adjust the data shown in the panel.
 - The panel updates the URL when opened, making it easy to share or refresh.
 
-### 1 June 2026 - Enhancement - Admin - Auto-renewal toggle for active subscriptions
+### 1 June 2026 - Enhancement - Admin - Auto-renewal toggle button for active subscriptions
 
-On the Billing page of the Admin app, users can now toggle the auto-renewal setting for active Normal subscriptions. Custom Service, draft, and expired subscriptions are read-only and cannot be modified in this way. users will be notified upon success or failure.
+On the Billing page of the Admin app, you can now toggle the auto-renewal setting for active normal subscriptions. Custom service, draft, and expired subscriptions are read-only and cannot be modified in this way. users will be notified upon success or failure.
 
 ### 1 June 2026 - New feature - Admin - Shareable link to support page
 
-The Admin app now supports a `/support` route at the application root. This allows users to share a direct link to the support page without needing to know the recipient's organization ID. When the link is followed, the organization ID is automatically resolved.
+The Admin app now supports a `/support` route at the application root. This allows you to share a direct link to the support page without needing to know the recipient's organization ID. When the link is followed, the organization ID is automatically resolved.
 
 ### 1 June 2026 - Enhancement - Status event titles always show full title on hover
 
-Status event titles now always show the full title in a tooltip when hovered.
+When you hover the mouse pointer over a status event title, the full title will now always be shown in a tooltip.
 
 ### 22 May 2026 - New feature - Admin - Audit logs for managing draft subscriptions
 
