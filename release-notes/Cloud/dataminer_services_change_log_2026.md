@@ -20,7 +20,7 @@ On the Billing overview page in the Admin app, for data starting from May 2026, 
 
 ### 1 June 2026 - Enhancement - Admin - Auto-renewal toggle button for active subscriptions
 
-On the Billing page of the Admin app, you can now toggle the auto-renewal setting for active normal subscriptions. Custom service, draft, and expired subscriptions are read-only and cannot be modified in this way. users will be notified upon success or failure.
+On the Billing page of the Admin app, you can now toggle the auto-renewal setting for active normal subscriptions. Custom service, draft, and expired subscriptions are read-only and cannot be modified in this way. You will be notified when the auto-renewal succeeds or fails.
 
 ### 1 June 2026 - New feature - Admin - Shareable link to support page
 
