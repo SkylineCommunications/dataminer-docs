@@ -31,6 +31,101 @@ New helper classes and methods are now available to manipulate the objects that 
 
 Code compiled against these packages can only be executed if MediaOps Plan has been installed on the DataMiner System.
 
+#### Dynamic parameter linking [ID 45607]
+
+When configuring a resource pool in Resource Studio or configuring a workflow in the Workflow Designer or Scheduling app, it is now possible to dynamically link parameter values to other data sources. Instead of manually entering fixed values for capabilities, capacities, configurations, or orchestration script input, you can now configure a link to dynamically resolve the value from another source such as a resource property, capability, capacity, configuration, workflow property, or job property.
+
+The value will be automatically determined at runtime based on the linked source. The UI will show a placeholder indicating where the value comes from.
+
+This new feature has several benefits:
+
+- Less manual configuration
+- More consistency across setups
+- Automatic updates when source data changes
+
+##### Configuring a parameter link
+
+1. While you are editing a workflow or configuring a resource pool, click the 🔗 (link) button next to the parameter you want to link.
+
+   The parameter can be a capability, capacity, configuration, or orchestration script input.
+
+   If the parameter is not yet linked, the button has a neutral style; if it is already linked, the button appears highlighted (call-to-action style) and its tooltip shows the current link target.
+
+1. In the *Configure Link* dialog, select the [link type](#available-link-types) from the dropdown at the top.
+
+1. If the selected [link type is node-scoped](#node-scoped-link-types), in the node dropdown, select the node whose data you want to reference, or select "Workflow" to reference the workflow-level scope.
+
+   Depending on the link type, a second dropdown will appear where you can select the specific target (e.g. which property, which capability, which capacity, etc.).
+
+1. Click the *Link* button to confirm.
+
+   The parameter field in the configuration dialog will now show a placeholder indicating the linked source.
+
+##### Removing a parameter link
+
+1. While you are editing a workflow or configuring a resource pool, locate the linked parameter (recognizable by the highlighted 🔗 button and placeholder text).
+
+1. Click the 🔗 (link) button next to the parameter.
+
+1. In the *Configure Link* dialog, click *Unlink*.
+
+   This button is only shown for parameters that are currently linked. It will return the parameter to manual-entry mode and remove the link.
+
+##### Available link types
+
+The available link types depend on the parameter category being configured. Each link type resolves to a specific value or object within the workflow, job, or node context.
+
+- **Resource Name**: Resolves to the name of the resource assigned to a node.
+
+  Available for: Configuration parameters and orchestration script inputs.
+
+- **Resource Property**: Resolves to a specific property value of the assigned resource.
+
+  Available for: Configuration parameters, orchestration script inputs, and orchestration script elements.
+
+- **Resource Linked Object ID**: Resolves to the linked object ID of the assigned resource.
+
+  Available for: Configuration parameters, orchestration script inputs, and orchestration script elements.
+
+- **Capability Parameter**: Resolves to the value of a capability configured on a node.
+
+  Available for: Capability parameters, configuration parameters, and orchestration script inputs.
+
+- **Capacity Parameter**: Resolves to the value of a capacity configured on a node.
+
+  Available for: Capacity parameters, configuration parameters, and orchestration script inputs.
+
+- **Configuration Parameter**: Resolves to the value of a configuration parameter on a node.
+
+  Available for: Capability parameters, capacity parameters, configuration parameters, and orchestration script inputs.
+
+- **Workflow Name**: Resolves to the name of the workflow. This link type is only available within workflow context.
+
+  Available for: Configuration parameters and orchestration script inputs.
+
+- **Workflow Property**: Resolves to a custom property defined on the workflow. This link type is only available within workflow context.
+
+  Available for: Capability parameters, configuration parameters, and orchestration script inputs.
+
+- **Job Name**: Resolves to the name of the job.
+
+  Available for: Configuration parameters and orchestration script inputs.
+
+- **Job Property**: Resolves to a custom property defined on the job.
+
+  Available for: Capability parameters, configuration parameters, orchestration script inputs, and orchestration script elements.
+
+##### Node-Scoped Link Types
+
+The following link types are node-scoped, meaning that a specific workflow node (or the workflow itself) must be selected to determine where the value should be resolved from:
+
+- Resource Name
+- Resource Property
+- Resource Linked Object ID
+- Capability Parameter
+- Capacity Parameter
+- Configuration Parameter
+
 ## Changes
 
 ### Breaking changes
