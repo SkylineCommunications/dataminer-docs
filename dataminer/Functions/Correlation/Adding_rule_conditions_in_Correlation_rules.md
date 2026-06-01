@@ -4,41 +4,14 @@ uid: Adding_rule_conditions_in_Correlation_rules
 
 # Adding rule conditions in correlation rules
 
-## About rule conditions
+In a correlation rule, you can define one or more rule conditions that, when met, will trigger the correlation rule. You can select and combine **Script conditions** and **Filter conditions**.
 
-In a correlation rule, multiple filter conditions can be defined within the rule condition. The way these filter conditions are structured directly determines how alarms in the bucket are evaluated and, ultimately, whether the rule is triggered.
-
-Each filter condition is evaluated against individual alarms. The system checks whether there is at least one alarm in the bucket that fully satisfies all the conditions defined within that filter condition. The logic of a filter condition is strict and self-contained: the entire condition must be matched by a single alarm instance. The evaluation iterates through the alarms in the bucket until such a match is found.
-
-When multiple filter conditions are configured, they are evaluated independently. For each filter condition, alarms in the bucket are examined to determine whether any single alarm satisfies the corresponding condition. Because each filter condition is examined individually, the system does not require one single alarm to satisfy all filter conditions simultaneously. Instead, each filter condition may be fulfilled by different alarms.
-
-This allows rules to be triggered based on more complex scenarios, such as combinations of alarms or even the absence of certain alarms. The system verifies whether the logical combination of all configured filter conditions is satisfied, rather than enforcing that all filter conditions must apply to a single alarm.
-
-This distinction becomes particularly important when combining inclusion criteria (positive logic) and exclusion criteria (negative logic):
-
-- When multiple criteria are grouped within a single filter condition, all inclusion and exclusion requirements must be satisfied by the same alarm.
-- When criteria are split across multiple filter conditions, the evaluation is no longer limited to a single alarm:
-  - Inclusion requirements can be satisfied by one alarm.
-  - Exclusion requirements can be evaluated based on the presence or absence of other alarms in the bucket.
-
-More broadly, the distinction can be summarized as follows:
-
-- A single filter condition enforces that all constraints describe one alarm.
-- Multiple filter conditions allow the rule to evaluate the entire set of alarms as a whole.
-
-This explains why two rule configurations that appear similar can produce different outcomes in practice: one relies on a single alarm matching all conditions, while the other evaluates conditions across multiple alarms within the same bucket.
-
-## Adding a rule condition
-
-In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to add rule conditions to it in the details pane on the right.
-
-In the *Rule condition* section of the details pane, specify one or more conditions that, when met, will trigger the correlation rule. You can select and combine Script conditions and Filter conditions, and specify one of different trigger mechanisms. In the *Sliding window* section, an additional trigger mechanism can be selected.
-
-1. Click *Select a Condition* and select either *Script condition* or *Filter condition*.
+1. When you are [configuring a correlation rule](xref:General_configuration_of_Correlation_rules), click *Select a Condition* and select either *Script condition* or *Filter condition*.
 
 1. If you have selected *Script condition*, enter the script in the large text box.
 
-   For more information on how to enter a script condition, see [Correlation rule syntax](xref:Correlation_rule_syntax).
+   > [!TIP]
+   > For more information on how to enter a script condition, see [Script condition format](xref:Condition_format).
 
    > [!NOTE]
    > When configuring script conditions, keep in mind that a correlation rule can only be triggered by alarm events.
@@ -48,6 +21,9 @@ In the *Rule condition* section of the details pane, specify one or more conditi
    1. Click *Select a filter*.
 
    1. Select one of the listed properties and create a filter condition, or select *Saved filters* and select an existing alarm filter.
+
+   > [!TIP]
+   > For more information on what happens when you combine multiple filter conditions, see [Combining filter conditions](xref:Combining_filter_conditions).
 
 1. If this is the first (or only) rule condition, select “Is” or “Is Not” to indicate whether the condition has to be true or false.
 
