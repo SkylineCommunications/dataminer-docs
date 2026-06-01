@@ -162,8 +162,6 @@ items:
             topicUid: BPA_Report_Active_RTE
           - name: Antivirus on the DataMiner Agents
             topicUid: BPA_Check_Antivirus_DLLs
-          - name: Cassandra DB Size
-            topicUid: BPA_Cassandra_DB_Size
           - name: Check Deprecated DLL Usage
             topicUid: BPA_Check_Deprecated_DLL_Usage
           - name: Check System Health
@@ -186,6 +184,8 @@ items:
             topicUid: BPA_Https_Configuration
           - name: Large Alarm Trees
             topicUid: BPA_LargeAlarmTrees
+          - name: Local Single Cassandra DB Size
+            topicUid: BPA_Cassandra_DB_Size
           - name: NATS cluster verification
             topicUid: BPA_Check_Agent_Presence
           - name: Password Strength
