@@ -35,13 +35,13 @@ Code compiled against these packages can only be executed if MediaOps Plan has b
 
 When configuring a resource pool in Resource Studio or configuring a workflow in the Workflow Designer or Scheduling app, it is now possible to dynamically link parameter values to other data sources. Instead of manually entering fixed values for capabilities, capacities, configurations, or orchestration script input, you can now configure a link to dynamically resolve the value from another source such as a resource property, capability, capacity, configuration, workflow property, or job property.
 
-The value will be automatically determined at runtime based on the linked source. The UI will show a placeholder indicating where the value comes from.
+The value will be automatically determined on job update based on the linked source. The UI will show a placeholder indicating where the value comes from.
 
 This new feature has several benefits:
 
 - Less manual configuration
 - More consistency across setups
-- Automatic updates when source data changes
+- Dynamic linking based on resource selection
 
 ##### Configuring a parameter link
 
