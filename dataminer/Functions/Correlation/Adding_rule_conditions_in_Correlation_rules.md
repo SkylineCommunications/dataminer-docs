@@ -4,7 +4,7 @@ uid: Adding_rule_conditions_in_Correlation_rules
 
 # Adding rule conditions in correlation rules
 
-In a correlation rule, you can define one or more rule conditions that, when met, will trigger the correlation rule. You can select and combine **Script conditions** and **Filter conditions**.
+In a correlation rule, you can define one or more rule conditions that, when met, will trigger the correlation rule. You can select and combine **Script conditions** and **Filter conditions**, and specify one of different trigger mechanisms. In the *Sliding window* section, an additional trigger mechanism can be selected.
 
 1. When you are [configuring a correlation rule](xref:General_configuration_of_Correlation_rules), click *Select a Condition* and select either *Script condition* or *Filter condition*.
 
