@@ -26,6 +26,14 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
+#### Cube will now use optimized requests to manage service template definitions stored in the new C:\\Skyline DataMiner\\ServiceTemplates folder [ID 45536]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+Since DataMiner feature version 10.6.7, service template definitions are stored in the `C:\Skyline DataMiner\ServiceTemplates` folder instead of the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders.
+
+DataMiner Cube will now use optimized requests to manage the service template definitions in this new location.
+
 #### Correlation: Grouping method 'By alarm' has been removed [ID 45545]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->

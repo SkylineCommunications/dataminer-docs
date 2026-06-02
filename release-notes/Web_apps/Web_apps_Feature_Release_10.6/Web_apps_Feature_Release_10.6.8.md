@@ -49,7 +49,7 @@ Because of a number of optimizations made with regard to JSON serialization, ove
 
 ### Fixes
 
-#### GQI Dxm: Problem when querying a mediation protocol with standalone parameters using the 'Parameters for elements where' data source [ID 45494]
+#### GQI DxM: Problem when querying a mediation protocol with standalone parameters using the 'Parameters for elements where' data source [ID 45494]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
