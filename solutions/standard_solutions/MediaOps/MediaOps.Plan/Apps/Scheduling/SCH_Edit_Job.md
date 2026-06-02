@@ -1,5 +1,6 @@
 ---
 uid: SCH_Edit_Job
+description: Explore the Edit job panel of the Scheduling app. This panel consists of different sections where you can view and edit job settings and information.
 ---
 
 # Editing a job

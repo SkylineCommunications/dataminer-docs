@@ -1,5 +1,6 @@
 ---
 uid: WFD_Edit_Workflow
+description: Edit a workflow by clicking the pencil icon for that workflow on the Home page of the Workflow Designer app.
 ---
 
 # Editing a workflow
