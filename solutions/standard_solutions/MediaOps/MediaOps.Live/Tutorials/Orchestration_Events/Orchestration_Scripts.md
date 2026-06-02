@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOpsLive_CreateOrchestrationScripts
+description: Learn how to create MediaOps Live orchestration scripts that can be used by orchestration events to perform custom actions when the events are triggered.
 ---
 
 # Creating orchestration scripts

@@ -1,6 +1,6 @@
 ---
 uid: MediaOps.Live
-description: Install MediaOps Live from the Catalog, review included low-code apps, and start deploying orchestration workflows on your DataMiner system.
+description: Deploy MediaOps.Live from the DataMiner Catalog. This solution includes tools that enable live signal connection management and processor control. 
 ---
 
 # MediaOps Live

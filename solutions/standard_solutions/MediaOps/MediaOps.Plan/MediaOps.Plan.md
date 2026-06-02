@@ -1,5 +1,6 @@
 ---
 uid: MediaOps.Plan
+description: Deploy MediaOps.Live from the DataMiner Catalog. This solution includes tools to plan events, reserve resources, and automate event setup and teardown.
 ---
 
 # MediaOps Plan
