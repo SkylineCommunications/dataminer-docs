@@ -111,7 +111,7 @@ Check the following log files in the order listed:
 
 - **Connection refused errors** suggest firewall or antivirus issues. This can also mean that the NATS service is not running.
 
-  To resolve this issue, check the firewall rules, network connectivity, and the nats-server process if it is running.
+  To resolve this issue, check the firewall rules, the network connectivity, and whether the nats-server process is running.
 
 - **Cluster formation errors** point to configuration mismatches between nodes.
 
