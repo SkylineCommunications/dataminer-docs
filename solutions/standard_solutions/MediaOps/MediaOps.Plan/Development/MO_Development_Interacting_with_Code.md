@@ -1,6 +1,6 @@
 ---
 uid: MO_Development_Interacting_with_Code
-description: Explore the different ways in which developers can interact with MediaOps using code - via automation scripts, connectors, and data sources.
+description: Explore the different ways developers can interact with MediaOps using code — via automation scripts, connectors, or data sources.
 ---
 
 # Interacting with MediaOps using code
