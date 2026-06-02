@@ -297,6 +297,15 @@ items:
             topicUid: Grouping_alarms_in_Correlation_rules
       - name: Adding rule conditions in correlation rules
         topicUid: Adding_rule_conditions_in_Correlation_rules
+        items:
+          - name: Combining filter conditions
+            topicUid: Combining_filter_conditions
+          - name: Script condition format
+            topicUid: Condition_format
+          - name: Script condition functions
+            topicUid: Script_condition_functions
+          - name: Examples of script conditions
+            topicUid: Examples_of_script_conditions
       - name: Adding rule actions in correlation rules
         topicUid: Adding_rule_actions_in_Correlation_rules
         items:
@@ -324,15 +333,6 @@ items:
         items:
           - name: Responding to element timeouts using Correlation
             topicUid: Correlation_Tutorial_Element_Timeout
-      - name: Correlation rule syntax
-        topicUid: Correlation_rule_syntax
-        items:
-          - name: Condition format
-            topicUid: Condition_format
-          - name: Script condition functions
-            topicUid: Script_condition_functions
-          - name: Examples of script conditions
-            topicUid: Examples_of_script_conditions
       - name: Using correlation analyzers
         topicUid: Using_Correlation_analyzers
         items:

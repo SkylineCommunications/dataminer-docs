@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code
+description: Learn how to use the MediaOps Live API to provision endpoints and virtual signal groups for the Generic Matrix connector.
 ---
 
 # Provisioning endpoints and virtual signal groups for a Generic Matrix element using code

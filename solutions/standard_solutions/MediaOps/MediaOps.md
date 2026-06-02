@@ -1,6 +1,6 @@
 ﻿---
 uid: MediaOps
-description: Explore MediaOps, a solution that blends ICT with media technology and workflows, introducing a new era of data-driven, automated media operations. 
+description: Explore MediaOps capabilities and start automating planning, live operations, and workflows to deliver media content faster and at lower cost.
 ---
 
 # MediaOps

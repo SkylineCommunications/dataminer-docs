@@ -82,6 +82,24 @@ Orchestration events for MediaOps Live are now executed asynchronously. This can
 
 On the About pages of the MediaOps Plan apps, version information has been added about the loaded libraries in SLAutomation. This can be helpful as SLAutomation does not reload the new libraries after a new MediaOps version is installed, and a restart of SLAutomation is needed in that case.
 
+### Fixes
+
 #### Scheduling: Default value dropdown not updated after change to discrete values of system property [ID 45442]
 
 When system properties of type discrete were configured, the dropdown to select the default value was not updated with the newly added or changed discrete values.
+
+#### Workflow Designer: Resource pool not automatically selected when swapping resource [ID 45527]
+
+When you tried to swap a resource in the Workflow Designer app, the resource pool was not automatically selected, so that you had to manually locate the resource pool before performing the swap. Now the resource pool will be correctly auto-populated based on the selected resource.
+
+#### DevPack: Not possible to update capability name [ID 45544]
+
+Up to now, it was not possible to update the name of a capability using the [MediaOps Plan DevPack](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan).
+
+#### Resource Studio: Logging for resource property management not always stored in log file [ID 45587]
+
+Attempting to add and save a new property to a resource that had a concurrency of 0 in Resource Studio would fail with the pop-up message "Something unexpected happened". However, no message was added in the Resources logging. Now this logging will be added to the related log file. Also, in case there is only one error, the error message is now shown in the pop-up message instead of the default log message.
+
+#### Aborting a script caused it to be logged as failed [ID 45590]
+
+Previously, closing an interactive script by clicking the X icon in the top-right corner resulted in the script being logged as failed. This behavior has been fixed, and such actions no longer mark the script as a failure.

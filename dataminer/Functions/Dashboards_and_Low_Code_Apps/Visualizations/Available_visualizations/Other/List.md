@@ -6,6 +6,8 @@ uid: DashboardList
 
 This component allows you to **select one or more items in a list**. The selectable items can be based on any data.
 
+This component is typically used to let users interact with a dashboard or low-code app by selecting a value that influences what is shown elsewhere. For example, a list can be used to filter data in other components, or to focus on a subset of items within a dataset.
+
 ![List](~/dataminer/images/List.gif)<br>*List component in DataMiner 10.4.6*
 
 ## How data is displayed in the list
