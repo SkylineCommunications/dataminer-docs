@@ -1,5 +1,6 @@
 ---
 uid: DOM_Using_DOM_Viewer
+description: Use the DOM Viewer app to display the Standard Data Model and all modules in a graph, find field descriptors, and generate markup to document a DOM module.
 ---
 
 # Using the DOM Viewer
