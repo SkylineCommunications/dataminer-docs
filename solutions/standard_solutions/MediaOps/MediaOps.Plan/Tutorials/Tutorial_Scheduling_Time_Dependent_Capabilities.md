@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOps_Scheduling_Time_Dependent_Capabilities
+description: Learn how time-dependent capabilities can be used to ensure that a steerable antenna can be booked multiple times. 
 ---
 
 # Using time-dependent capabilities
