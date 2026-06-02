@@ -84,3 +84,13 @@ StandaloneBpaExecutor.exe -u Administrator -p my_password --"C:\BPA tests\Analyz
 
 StandaloneBpaExecutor.exe -u Administrator -p my_password -f "C:\Skyline DataMiner\Tools\StandaloneBpaExecutor\test.json" --"C:\Skyline DataMiner\Tools\StandaloneBpaExecutor\Check System Health.dll"
 ```
+
+## Exit codes
+
+From DataMiner 10.7.0/10.6.7 onwards<!--RN 45433-->, the Standalone BPA Executor returns an exit code indicating whether issues were detected when running BPA tests:
+
+| Exit code | Description |
+| --- | --- |
+| 0 | No issues detected. |
+| 1 | Unexpected errors have occurred. |
+| 2 | BPA tests have detected issues. |
