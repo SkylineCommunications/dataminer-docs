@@ -96,15 +96,6 @@ When you played in spectrum recording in a spectrum card, up to now, the progres
 
 From now on, playback progress will clearly be indicated by means of a colored bar.
 
-#### Chromium web browser engine is no longer available [ID 45522]
-
-<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
-
-From now on, the Chromium web browser engine will no longer be available in DataMiner Cube.
-
-- When, in *System Center > System settings > Plugins*, Chromium is still set as default web browser engine, Edge will now be used instead.
-- If, in any visual overview, there are shapes in which the *UseChrome* option is specified, this option will be disregarded. The shapes in question will use Edge instead.
-
 ### Fixes
 
 #### Alarm Console: Problem when detecting recursive loops in nested correlation alarms [ID 45372]
