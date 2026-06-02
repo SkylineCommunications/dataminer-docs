@@ -80,6 +80,7 @@ From DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45432-->, replica
 
 During this cleanup, DataMiner removes files in the SLNet system cache that:
 
+- Are no longer managed by the replication buffer, and
 
 - Have not been updated for a configurable number of days (30 days by default).
 
