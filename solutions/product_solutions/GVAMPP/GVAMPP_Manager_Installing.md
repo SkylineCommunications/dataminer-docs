@@ -1,5 +1,6 @@
 ---
 uid: GVAMPP_Manager_Installing
+description: Deploy the Grass Valley AMPP Manager application from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the Grass Valley AMPP Manager Application
