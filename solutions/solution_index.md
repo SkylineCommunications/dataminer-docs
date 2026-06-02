@@ -1,5 +1,6 @@
 ---
 uid: solution_index
+description: Explore technical documentation for specific, preconfigured DataMiner Solutions available through the Catalog.
 ---
 
 # DataMiner Solutions
