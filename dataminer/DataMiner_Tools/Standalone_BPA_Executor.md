@@ -9,9 +9,7 @@ The *Standalone BPA Executor* can be used to run BPA (i.e., Best Practices Analy
 This tool is available on DMA servers in the folder `C:\Skyline DataMiner\Tools\StandaloneBpaExecutor`.
 
 > [!NOTE]
->
-> - For information on the available BPA tests and on how to run these tests within DataMiner Cube instead of using this standalone tool, see [Running BPA tests](xref:Running_BPA_tests).
-> - Running a BPA test on the offline DMA of a Failover pair is only supported from DataMiner 10.1.0 \[CU11]/10.2.2 onwards.
+> For information on the available BPA tests and on how to run these tests within DataMiner Cube instead of using this standalone tool, see [Running BPA tests](xref:Running_BPA_tests).
 
 ## Running BPA tests
 
