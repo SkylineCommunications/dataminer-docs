@@ -1,10 +1,10 @@
 ---
-uid: Get_parameters_for_element_where
+uid: Get_parameters_for_elements_where
 ---
 
-# Get parameters for element where
+# Get parameters for elements where
 
-The *Get parameters for element where* data source retrieves parameters across elements. You can use it to compare metrics across devices and as input for further aggregation.
+The *Get parameters for elements where* data source retrieves parameters across elements. You can use it to compare metrics across devices and as input for further aggregation.
 
 To ensure consistent parameter mapping across devices, elements must either share the same [protocol version](#by-protocol-version) or be linked to a [profile definition](#by-profile-definition).
 
@@ -16,8 +16,10 @@ Selecting a protocol and version retrieves parameters for all active elements th
 
 You can select both table parameters and standalone parameters during query creation. If you select a table parameter, all columns in that table become available for further query operators.
 
-> [!NOTE]
-> It is not possible to select multiple table parameters or combine a table parameter with standalone parameters.
+It is not possible to select multiple table parameters or combine a table parameter with standalone parameters.
+
+> [!IMPORTANT]
+> Retrieving table parameters from a mediated protocol is not supported. <!--RN 45539-->
 
 ## By profile definition
 
