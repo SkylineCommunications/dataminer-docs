@@ -1,6 +1,6 @@
 ---
 uid: MO_S_Job_States
-description: Explore the different states that can be assigned to jobs in the Scheduling app - Draft, Tentative, Confirmed, Running, Completed, and Error.
+description: Explore the different states that can be assigned to jobs in the Scheduling app: Draft, Tentative, Confirmed, Running, Completed, and Error.
 ---
 
 # MediaOps Job States
