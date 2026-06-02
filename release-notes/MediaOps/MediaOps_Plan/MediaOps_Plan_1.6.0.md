@@ -33,7 +33,7 @@ Code compiled against these packages can only be executed if MediaOps Plan has b
 
 #### Dynamic parameter linking [ID 45607]
 
-When configuring a resource pool in Resource Studio or configuring a workflow in the Workflow Designer or Scheduling app, it is now possible to dynamically link parameter values to other data sources. Instead of manually entering fixed values for capabilities, capacities, configurations, or orchestration script input, you can now configure a link to dynamically resolve the value from another source such as a resource property, capability, capacity, configuration, workflow property, or job property.
+When configuring a resource pool in Resource Studio or configuring a workflow in the Workflow Designer or Scheduling app, it is now possible to dynamically link parameter values to other data sources. Instead of manually entering fixed values for capabilities, capacities, configurations, or orchestration script input, you can now configure a link to dynamically resolve the value from another source such as a resource property, capability, capacity, configuration, or job property.
 
 The value will be automatically determined on job update based on the linked source. The UI will show a placeholder indicating where the value comes from.
 
@@ -53,7 +53,7 @@ This new feature has several benefits:
 
 1. In the *Configure Link* dialog, select the [link type](#available-link-types) from the dropdown at the top.
 
-1. If the selected [link type is node-scoped](#node-scoped-link-types), in the node dropdown, select the node whose data you want to reference, or select "Workflow" to reference the workflow-level scope.
+1. If the selected [link type is node-scoped](#node-scoped-link-types), in the node dropdown, select the node whose data you want to reference.
 
    Depending on the link type, a second dropdown will appear where you can select the specific target (e.g. which property, which capability, which capacity, etc.).
 
@@ -98,14 +98,6 @@ The available link types depend on the parameter category being configured. Each
 - **Configuration Parameter**: Resolves to the value of a configuration parameter on a node.
 
   Available for: Capability parameters, capacity parameters, configuration parameters, and orchestration script inputs.
-
-- **Workflow Name**: Resolves to the name of the workflow. This link type is only available within workflow context.
-
-  Available for: Configuration parameters and orchestration script inputs.
-
-- **Workflow Property**: Resolves to a custom property defined on the workflow. This link type is only available within workflow context.
-
-  Available for: Capability parameters, configuration parameters, and orchestration script inputs.
 
 - **Job Name**: Resolves to the name of the job.
 
