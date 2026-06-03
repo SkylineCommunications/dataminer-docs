@@ -90,7 +90,7 @@ From now on, it will also be possible to enable or disable this setting, which h
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
-When you have a *List* component listing spectrum sessions, you can now filter that list by name. To do so, link a data field of type string to the filter of the *List* component. This data field will then act as a filter box.
+When a *List* component uses the *Spectrum sessions* component data exposed by a *Spectrum analyzer* component in a dashboard or app, it displays a list of all spectrum sessions. You can now filter that list by name. To do so, link a data field of type string to the filter of the *List* component. This data field will then act as a filter box.
 
 #### Dashboards/Low-Code Apps - Spectrum analyzer component: New 'Theme source' option [ID 45437]
 
