@@ -12,7 +12,7 @@ The library supports multiple credential types, including SNMPv2 community strin
 > Password and secret values stored in the Credentials Library are limited to a maximum size of **5120 bytes (5 KB)**.
 
 > [!NOTE]
-> From DataMiner 10.6.9 onwards<!--RN 44075-->, credential secrets in the Credentials Library are stored as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) and never appear in plain text on disk. For more information, see [Encryption in DataMiner](xref:Encryption_in_DataMiner#credentials-at-rest).
+> From DataMiner 10.6.9 onwards<!--RN 44352-->, credential secrets in the Credentials Library are stored as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) and never appear in plain text on disk. For more information, see [Encryption in DataMiner](xref:Encryption_in_DataMiner#credentials-at-rest).
 
 ## Configuring credentials in DataMiner Cube
 
