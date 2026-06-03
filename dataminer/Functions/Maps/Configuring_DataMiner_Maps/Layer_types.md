@@ -362,6 +362,8 @@ Example:
 </Layer>
 ```
 
+#### Customizing the appearance of GeoJSON overlays
+
 From DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45518-->, you can customize the appearance of GeoJSON overlays by defining style properties of the geometry objects in the GeoJSON file.
 
 The following properties are supported:
