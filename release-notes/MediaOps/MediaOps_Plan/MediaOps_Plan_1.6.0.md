@@ -169,6 +169,12 @@ Orchestration events for MediaOps Live are now executed asynchronously. This can
 
 On the About pages of the MediaOps Plan apps, version information has been added about the loaded libraries in SLAutomation. This can be helpful as SLAutomation does not reload the new libraries after a new MediaOps version is installed, and a restart of SLAutomation is needed in that case.
 
+#### Ability to push new icon to all workflows [ID 45620]
+
+When you save a resource or resource pool, the system will now detect whether the selected icon was changed by comparing the new value with the original one, and if it detects a change, it will perform an optimized usage check to determine whether the resource or resource pool is referenced in any workflows.
+
+If no workflow references exist, the save will proceed immediately like before. However, if the item is used in one or more workflows, you will now be asked to confirm whether the new icon should be applied across all workflows that reference it. When you confirm, the system will trigger a background automation script supporting both resources and resource pools to update the icon on all corresponding referencing workflow nodes.
+
 ### Fixes
 
 #### Scheduling: Default value dropdown not updated after change to discrete values of system property [ID 45442]
