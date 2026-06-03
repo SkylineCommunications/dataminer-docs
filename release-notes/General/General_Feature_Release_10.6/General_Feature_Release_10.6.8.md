@@ -48,6 +48,14 @@ Before you upgrade to this DataMiner version:
 
 When a managed process stops unexpectedly, from now on, the contents of the exception's *Source* field will now be added to the *ErrorLog.txt* log file. This should provide more debug information.
 
+#### Visual Overview in web apps: Problem when creating a new window [ID 45517]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of the way Cube sessions are loaded in the SLHelper process when creating visual overviews, up to now, Windows could throw an exception creating a new window. This would cause the SLHelper process to crash, affecting all active Cube sessions.
+
+From now on, the system will attempt to recreate the Cube session when the initial creation fails, and will handle any failures gracefully to ensure other sessions remain unaffected.
+
 #### GQI will now throw an exception when data is requested from a mediated table parameter [ID 45539]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->

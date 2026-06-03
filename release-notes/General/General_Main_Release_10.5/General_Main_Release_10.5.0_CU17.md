@@ -61,6 +61,14 @@ From now on, trend records with the following *iStatus* values will no longer ca
 | -9  | Trending was started for the specified parameter. |
 | -10 | Trending was stopped for the specified parameter. |
 
+#### Visual Overview in web apps: Problem when creating a new window [ID 45517]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of the way Cube sessions are loaded in the SLHelper process when creating visual overviews, up to now, Windows could throw an exception creating a new window. This would cause the SLHelper process to crash, affecting all active Cube sessions.
+
+From now on, the system will attempt to recreate the Cube session when the initial creation fails, and will handle any failures gracefully to ensure other sessions remain unaffected.
+
 #### Cassandra Cluster / STaaS: 'Alarm events' graph on 'Reports' page of service card would incorrectly be empty [ID 45533]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
