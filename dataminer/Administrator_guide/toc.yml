@@ -129,11 +129,11 @@ items:
             topicUid: Connection_strings
       - name: Removing a node from a DataMiner cluster
         topicUid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
-      - name: Starting or stopping nodes in your DataMiner cluster
+      - name: Starting or stopping DataMiner nodes in your cluster
         items:
-          - name: Starting or stopping a DMA in DataMiner Cube
+          - name: Starting or stopping a node in Cube
             topicUid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
-          - name: Starting or stopping a DMA using DataMiner Taskbar Utility
+          - name: Starting or stopping a node using DataMiner Taskbar Utility
             topicUid: Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility
       - name: Migrating elements within a cluster
         topicUid: Migrating_elements_in_a_DataMiner_System
@@ -141,7 +141,7 @@ items:
         topicUid: Sharing_DataMiner_data_with_third_parties
       - name: DataMiner maintenance tools
         items:
-          - name: Cleaning up unused files on a DMA
+          - name: Cleaning up unused files
             topicUid: Cleaning_up_unused_files_on_a_DMA
           - name: Synchronizing data between DataMiner Agents
             topicUid: Synchronizing_data_between_DataMiner_Agents

@@ -55,7 +55,7 @@ Depending on whether the node is part of a Failover pair or not, a different pro
 
 1. Remove all `<DMA />` and `<Redirect />` tags in *DMS.xml* that contain IP addresses from the previous cluster, and save the file.
 
-1. Restart the Agent you want to keep.
+1. Restart the Agent you want to keep as a node in the cluster.
 
    The other Agent should no longer be used and should be decommissioned.
 
@@ -65,6 +65,6 @@ Depending on whether the node is part of a Failover pair or not, a different pro
 
       This page shows an overview of all nodes, with the option to remove a node from the system.
 
-   1. Click the garbage can icon next to the Agent you have just removed and confirm.
+   1. Click the garbage can icon next to the node you have just removed and confirm.
 
-1. Restart DataMiner Cube to make sure the removed Agent is no longer displayed anywhere.
+1. Restart DataMiner Cube to make sure the removed node is no longer displayed anywhere.
