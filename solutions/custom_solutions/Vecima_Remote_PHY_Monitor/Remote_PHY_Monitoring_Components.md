@@ -1,6 +1,6 @@
 ---
 uid: Remote_PHY_Monitoring_components
-description: Explore the different components of the Remote PHY Monitoring Solution - connectors, automation scripts, and low-code apps.
+description: Explore the different components of the Remote PHY Monitoring Solution — connectors, automation scripts, and low-code apps.
 ---
 
 # Remote PHY Monitoring components

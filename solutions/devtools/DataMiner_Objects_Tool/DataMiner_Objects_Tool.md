@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_Objects_Tool
-description: Use the DataMiner Objects Tool to query the DataMiner System for objects like booking instances, DOM instances, Resources, Profile definitions, etc.
+description: Use the DataMiner Objects Tool to query the DataMiner System for objects like booking instances, DOM instances, resources, profile definitions, etc.
 ---
 
 # DataMiner Objects Tool
