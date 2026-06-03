@@ -78,13 +78,21 @@ From now on, it will also be possible to trigger a user-defined API by sending a
 
 From now on, the `AssemblyLoad` event handler in SLManagedScripting will also log the location of the loaded assembly (if available).
 
-#### SLNetClientTest tool: Enum fields in 'Build Message' tab will now be sorted alphabetically [ID 45610]
+#### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45560]
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
 
-Up to now, each enum field in the *Build Message* tab would be sorted in the order that was specified in the field itself.
+Previously, when a script library was added to a DataMiner System, its hint paths were automatically sent to the automation script compilation engine, even when the library was not used by any automation script.
 
-In order to make it easier to look up values when, for example, building a message, from now on, all enum fields in the *Build Message* tab will be sorted alphabetically.
+From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
+
+#### SLNetClientTest tool: Enum field dropdown boxes in 'Build Message' tab will now be sorted alphabetically [ID 45610]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+Up to now, each enum field dropdown box in the *Build Message* tab would show the enum values in the order in which they are defined in the enum.
+
+In order to make it easier to look up values when, for example, building a message, from now on, the enum field dropdown boxes in the *Build Message* tab will show the enum values in alphabetical order.
 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
