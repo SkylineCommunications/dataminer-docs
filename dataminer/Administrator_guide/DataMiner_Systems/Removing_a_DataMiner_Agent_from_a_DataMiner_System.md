@@ -2,7 +2,7 @@
 uid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
 ---
 
-# Removing a DataMiner Agent from a DataMiner System
+# Removing a node from a DataMiner cluster
 
 Depending on whether the DataMiner Agent is part of a Failover pair or not, a different procedure must be used.
 

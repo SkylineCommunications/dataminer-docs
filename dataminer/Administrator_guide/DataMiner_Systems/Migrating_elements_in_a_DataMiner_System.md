@@ -2,7 +2,7 @@
 uid: Migrating_elements_in_a_DataMiner_System
 ---
 
-# Migrating elements in a DataMiner System
+# Migrating elements within a cluster
 
 In DataMiner Systems where [Swarming](xref:Swarming) is not enabled, you can migrate elements from one DMA to another within a DMS. When you do so, DELT (DataMiner Element Location Transparency) will be used to export the elements from the first DMA and then import them on the other DMA.
 

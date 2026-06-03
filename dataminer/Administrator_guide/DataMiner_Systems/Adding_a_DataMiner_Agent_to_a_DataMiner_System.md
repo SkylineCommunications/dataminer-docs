@@ -2,7 +2,7 @@
 uid: Adding_a_DataMiner_Agent_to_a_DataMiner_System
 ---
 
-# Adding a DataMiner Agent to a DataMiner System
+# Adding a node to a DataMiner cluster
 
 The procedure to add a node to a DataMiner System can be different depending on the type of node and on the DMS setup:
 

@@ -95,9 +95,9 @@ items:
             topicUid: Exporting_elements_services_etc_to_a_dmimport_file
           - name: Importing elements, services, etc. from a .dmimport file
             topicUid: Importing_elements_services_etc_from_a_dmimport_file
-  - name: DataMiner Systems
+  - name: DataMiner clusters
     items:
-      - name: About DataMiner Systems
+      - name: About DataMiner clusters
         topicUid: About_DataMiner_Systems
         items:
           - name: Virtual device connections
@@ -110,15 +110,15 @@ items:
             topicUid: DataMiner_processes
           - name: DataMiner interfaces
             topicUid: DataMiner_interfaces
-      - name: Viewing information on the DMAs in a DMS
+      - name: Viewing information about DataMiner nodes
         topicUid: Viewing_information_on_the_DMAs_in_a_DMS
-      - name: Setting up a new DataMiner System
+      - name: Setting up a multi-node cluster
         items:
-          - name: Before you begin to set up a new DMS
+          - name: Before you begin to set up a new cluster
             topicUid: Before_you_begin_to_set_up_a_new_DMS
-          - name: Setting up a new DMS in DataMiner Cube
+          - name: Setting up a new cluster in DataMiner Cube
             topicUid: Setting_up_a_new_DMS_in_DataMiner_Cube
-      - name: Adding a DataMiner Agent to a DataMiner System
+      - name: Adding a node to a DataMiner cluster
         topicUid: Adding_a_DataMiner_Agent_to_a_DataMiner_System
         items:
           - name: Adding a regular DataMiner Agent
@@ -129,15 +129,15 @@ items:
             topicUid: Adding_a_DataMiner_Probe
           - name: Connection strings
             topicUid: Connection_strings
-      - name: Removing a DataMiner Agent from a DataMiner System
+      - name: Removing a node from a DataMiner cluster
         topicUid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
-      - name: Starting or stopping DataMiner Agents in your DataMiner System
+      - name: Starting or stopping nodes in your DataMiner cluster
         items:
           - name: Starting or stopping a DMA in DataMiner Cube
             topicUid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
           - name: Starting or stopping a DMA using DataMiner Taskbar Utility
             topicUid: Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility
-      - name: Migrating elements in a DataMiner System
+      - name: Migrating elements within a cluster
         topicUid: Migrating_elements_in_a_DataMiner_System
       - name: Sharing DataMiner data with third parties
         topicUid: Sharing_DataMiner_data_with_third_parties
