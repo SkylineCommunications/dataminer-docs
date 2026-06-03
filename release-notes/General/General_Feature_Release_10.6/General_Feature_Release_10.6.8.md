@@ -78,13 +78,13 @@ From now on, it will also be possible to trigger a user-defined API by sending a
 
 From now on, the `AssemblyLoad` event handler in SLManagedScripting will also log the location of the loaded assembly (if available).
 
-#### SLNetClientTest tool: Dropdown boxes will list their items in alphabetical order [ID 45610]
+#### SLNetClientTest tool: Enum fields in 'Build Message' tab will now be sorted alphabetically [ID 45610]
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
 
-Up to now, each dropdown box in the *SLNetClientTest* tool would list its items in the order that was specified in the dropdown box itself.
+Up to now, each enum field in the *Build Message* tab would be sorted in the order that was specified in the field itself.
 
-In order to make it easier to look up values when, for example, building a message, from now on, all dropdown boxes in the *SLNetClientTest* tool will list their items in alphabetical order.
+In order to make it easier to look up values when, for example, building a message, from now on, all enum fields in the *Build Message* tab will be sorted alphabetically.
 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
