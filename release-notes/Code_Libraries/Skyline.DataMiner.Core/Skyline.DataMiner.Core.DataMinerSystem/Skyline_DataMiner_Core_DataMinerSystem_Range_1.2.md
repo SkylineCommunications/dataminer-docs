@@ -7,6 +7,22 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 > [!NOTE]
 > Range 1.2.x.x is supported as from **DataMiner 10.4.0**.
 
+### 1.2.0.2
+
+#### Fix - Cyclic alarm template group caused an infinite loop [ID 45606]
+
+When an alarm template group was retrieved that was cyclic, an infinite loop would occur. This issue has now been resolved. Instead of entering an infinite loop, the code will detect cyclic alarm template groups and throw a `DmsException`, providing clear feedback about the configuration issue.
+
+#### Deprecation - ILocalElement and ILocalTable interfaces marked obsolete [ID 45608]
+
+The `ILocalElement` and `ILocalTable` interfaces have been marked obsolete. Because `ILocalElement` inherited from `IDmsElement`, SLNet-based methods and SLProtocol-based methods were mixed on the same interface, giving the false impression that all methods were equally efficient. In practice, any method going through SLNet has a significantly larger performance impact than direct interaction via SLProtocol.
+
+When interacting with a local element, the SLProtocol interface should be used directly instead. This can be done by calling a method on the `SLProtocol` or `SLProtocolExt` interface, or by using a method provided by the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+
+#### Fix - Property IDmsElement.Connections was null or empty instead of containing the expected connections [ID 45627]
+
+An issue has been resolved where `DmsElement.Connections` would be null or empty instead of containing the expected connections.
+
 ### 1.2.0.1
 
 #### Breaking Change - Monitors now require includeCurrentValues parameter [ID 45095]
