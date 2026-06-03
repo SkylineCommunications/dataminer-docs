@@ -51,3 +51,11 @@ If existing correlation rules have this option configured, a warning will be sho
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When the layout of a table was reset in Data Display, up to now, the table column widths would incorrectly not be reset to the values specified in the element connector.
+
+#### Visual Overview: No message would appear when the maximum number of child shapes in a Children container shape was reached [ID 45524]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When the number of child shapes in a *Children* container shape reached the limit specified in the *Maximum number of child shapes in a Children container shape* user setting, up to now, the shape and the page would keep loading. No message would appear explaining that the child shape limit was reached.
+
+From now on, users will get a message informing them that the child shape limit was reached and that not all shapes are being displayed.
