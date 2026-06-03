@@ -1,6 +1,4 @@
 items:
-  - name: DataMiner System layout
-    topicUid: GeneralLayout
   - name: DataMiner Agents
     topicUid: DataminerAgents
     items:
@@ -100,7 +98,7 @@ items:
       - name: About DataMiner clusters
         topicUid: About_DataMiner_Systems
         items:
-          - name: Virtual device connections
+          - name: Virtual connections to data sources
             topicUid: Virtual_device_connections
           - name: Gratuitous ARP messages
             topicUid: Gratuitous_ARP_messages
@@ -110,6 +108,8 @@ items:
             topicUid: DataMiner_processes
           - name: DataMiner interfaces
             topicUid: DataMiner_interfaces
+          - name: DMA peripherals
+            topicUid: DMA_peripherals
       - name: Viewing information about DataMiner nodes
         topicUid: Viewing_information_on_the_DMAs_in_a_DMS
       - name: Setting up a multi-node cluster
