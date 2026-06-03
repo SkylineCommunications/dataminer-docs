@@ -20,6 +20,8 @@ To add a DataMiner Agent to a DMS running STaaS:
    - DmsAccessTokenExpiration.data
    - DmsRefreshToken.data
    - DmsRefreshTokenExpiration.data
+  
+1. Remove the NodeId.txt file in the `C:\ProgramData\Skyline Communications\DxMs Shared\Data` folder on the new DMA.
 
 1. Start CloudGateway on the new DMA.
 
