@@ -78,11 +78,11 @@ When a replication buffer saves files to disk, those files are located in `C:\Sk
 
 From DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45432-->, replication buffer files are automatically cleaned every 24 hours when replication buffering is enabled.
 
-During this cleanup, DataMiner removes files in the SLNet system cache that:
+During this cleanup, DataMiner removes the following files from the SLNet system cache:
 
-- Are no longer managed by the replication buffer, and
+- Files that are still managed by the replication buffer but for which no connection was set up for the configured number of days.
 
-- Have not been updated for a configurable number of days (30 days by default).
+- Files that are no longer managed by the replication buffer and that have a last modified time that exceeds the configured number of days.
 
   The retention period can be configured using the [`ReplicationBufferMaxDisconnectedTime` setting](xref:MaintenanceSettings.SLNet.ReplicationBufferMaxDisconnectedTime) in *MaintenanceSettings.xml*.
 
