@@ -1,6 +1,7 @@
 ---
 uid: Availability_parameters
 keywords: Availability parameters
+description: Check the different aggregated parameters for each topology level in the Availability branch of the EPM Solution.
 ---
 
 # Available parameters in the EPM Availability Solution
