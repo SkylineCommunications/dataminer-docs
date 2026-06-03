@@ -25,6 +25,8 @@ In System Center, go to *System settings* > *Credentials library*. You can then:
 
     - Username and password credentials (available from DataMiner 10.3.11 onwards<!-- RN 37416 -->)
 
+    - Token credentials (available from DataMiner 10.6.9 onwards<!--RN 44075-->)
+
     - For each set of credentials, the user groups that can use them must be specified. To do so, add or remove the relevant groups in the *Included in groups* box using the *ADD \>\>* and *\<\< REMOVE* buttons.
 
 When you have applied changes to a set of credentials, do not forget to click the *Apply* button in the lower-right corner to save the changes.

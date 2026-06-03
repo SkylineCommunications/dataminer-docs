@@ -19,6 +19,9 @@ uid: Backing_up_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
 > [!NOTE]
 > By default, backup files are placed in `C:\Skyline DataMiner Backups\`. If you want to specify another backup folder, right-click the DataMiner Taskbar Utility icon, click *Options* and specify a different folder in the *General* tab. From DataMiner 10.3.11/10.3.0 [CU8]/10.2.0 [CU20] onwards<!-- RN 37143 -->, the backups for each DataMiner Agent in the DMS will be stored in a dedicated subfolder of this folder. The subfolder will have the DMA ID as its name.
 
+> [!IMPORTANT]
+> From DataMiner 10.6.9 onwards<!--RN 44352-->, credential secrets are [encrypted at rest](xref:Encryption_in_DataMiner#credentials-at-rest) using per-node encryption keys that are bound to the local machine through the Windows Data Protection API (DPAPI). To make sure that those credentials can still be recovered when a backup is restored on a different (virtual) machine, configure a **DMS Backup Password** before you take the backup. When this password is set, a passphrase-wrapped copy of the encryption material is automatically included in the backup archive. If no DMS Backup Password is configured at backup time, encrypted credentials cannot be recovered when restoring the backup to a different machine.
+
 > [!TIP]
 > See also:
 > [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
