@@ -1,5 +1,6 @@
 ---
 uid: Installing_TAG_App
+description: Deploy the DataMiner TAG Management app from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the DataMiner TAG Management app
