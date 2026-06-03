@@ -117,7 +117,7 @@ From now on, when the assembly with the different version is already loaded in t
 
 #### Failover: Advanced Failover options could incorrectly not be changed when BrokerGateway was being used [ID 45613]
 
-<!-- MR 10.7.0 - FR 10.6.8 -->
+<!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
 
 Up to now, when a Failover setup was using BrokerGateway, it would incorrectly not be possible to change any of the advanced Failover options.
 

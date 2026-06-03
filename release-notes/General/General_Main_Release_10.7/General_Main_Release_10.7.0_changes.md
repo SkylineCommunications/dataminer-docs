@@ -593,9 +593,3 @@ Up to now, when the Agent with the lowest DMA ID had been removed from a DataMin
 `System.AggregateException: One or more errors occurred. ---> Skyline.DataMiner.Net.Exceptions.DataMinerException: Fatal error while sending request [MasterSyncRequestMessage for message of type SetReservationInstanceMessage from XXX] to master DMA XXX, max retries reached. ---> Skyline.DataMiner.Net.MasterSync.MasterSyncerException: Could not use the connection to master DMA XXX`
 
 From now on, when the Agent with the lowest DMA ID was removed from the DataMiner System, the Resource Manager will correctly re-evaluate and update the master DMA when it receives a master synchronization request.
-
-#### Failover: Advanced Failover options could incorrectly not be changed when BrokerGateway was being used [ID 45613]
-
-<!-- MR 10.7.0 - FR 10.6.8 -->
-
-Up to now, when a Failover setup was using BrokerGateway, it would incorrectly not be possible to change any of the advanced Failover options.

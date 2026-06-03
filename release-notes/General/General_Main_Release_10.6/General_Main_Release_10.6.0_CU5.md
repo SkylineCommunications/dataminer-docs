@@ -93,6 +93,12 @@ Up to now, when the assembly with the different version was already loaded in th
 
 From now on, when the assembly with the different version is already loaded in the application domain, the `AssemblyResolveHelper` will again correctly return the already loaded assembly.
 
+#### Failover: Advanced Failover options could incorrectly not be changed when BrokerGateway was being used [ID 45613]
+
+<!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, when a Failover setup was using BrokerGateway, it would incorrectly not be possible to change any of the advanced Failover options.
+
 #### SLWatchDog: Log entry describing a process restart would incorrectly not include the names of the restarted processes [ID 45614]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
