@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_architecture
+description: Explore the different types of connectors used in an EPM D-DOCSIS deployment - collector, backend, frontend, and system connectors.
 ---
 
 # EPM D-DOCSIS architecture
