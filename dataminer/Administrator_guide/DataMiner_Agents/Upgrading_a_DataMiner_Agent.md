@@ -57,7 +57,7 @@ A standard DataMiner upgrade updates the core processes, DataMiner Cube, the web
 
 The following other types of upgrades exist:
 
-- **DataMiner web upgrades**: Web apps and web API can be updated independently with the [DataMiner web upgrades](xref:Upgrading_Downgrading_Webapps). From DataMiner 10.6.7/10.7.0 onwards<!--RN 45521-->, this also applies to the Dataminer Maps add-on module.
+- **DataMiner web upgrades**: Web apps and web API can be updated independently with the [DataMiner web upgrades](xref:Upgrading_Downgrading_Webapps).
 
 - **DxM upgrades**: [DataMiner Extension Modules (DxMs)](xref:DataMinerExtensionModules) can be updated independently in the [Admin app](https://admin.dataminer.services).
 
