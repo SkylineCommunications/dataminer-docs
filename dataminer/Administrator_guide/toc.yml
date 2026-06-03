@@ -102,8 +102,6 @@ items:
             topicUid: Virtual_device_connections
           - name: Gratuitous ARP messages
             topicUid: Gratuitous_ARP_messages
-          - name: Eventing or polling
-            topicUid: Eventing_or_polling
           - name: DataMiner processes
             topicUid: DataMiner_processes
           - name: DataMiner interfaces
