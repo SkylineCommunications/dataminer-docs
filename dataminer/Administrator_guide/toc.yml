@@ -121,7 +121,7 @@ items:
         items:
           - name: Adding a regular DataMiner Agent
             topicUid: Adding_a_regular_DataMiner_Agent
-          - name: Adding a DataMiner Agent to a DMS running STaaS
+          - name: Adding a DataMiner Agent to a cluster running STaaS
             topicUid: Adding_a_DMA_to_a_DMS_running_STaaS
           - name: Adding a DataMiner Probe
             topicUid: Adding_a_DataMiner_Probe

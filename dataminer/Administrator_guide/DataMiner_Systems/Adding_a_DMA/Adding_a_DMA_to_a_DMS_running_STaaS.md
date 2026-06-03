@@ -1,18 +1,17 @@
 ---
 uid: Adding_a_DMA_to_a_DMS_running_STaaS
+description: When adding a node to a DataMiner cluster that is running STaaS, make sure you apply these additional steps.
 ---
 
-# Adding a DataMiner Agent to a DMS running STaaS
+# Adding a DataMiner Agent to a cluster running STaaS
 
-To add a DataMiner Agent to a DMS running STaaS:
+1. Verify the prerequisites listed under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent).
 
-1. Verify the prerequisites listed on [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent).
-
-1. Install the [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack) on the new DMA.
+1. Install the [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack) on the new DataMiner Agent.
 
 1. Stop DataMiner and CloudGateway on the new DMA.
 
-1. From a DMA in the cluster where CloudGateway is running, copy the folder `C:\ProgramData\Skyline Communications\DataMiner CloudGateway\Data\CcaGatewayPersisted` and place it in the same location on the new DMA.
+1. From a node in the cluster where CloudGateway is running, copy the folder `C:\ProgramData\Skyline Communications\DataMiner CloudGateway\Data\CcaGatewayPersisted` and place it in the same location on the new DMA.
 
 1. Remove the following files from the folder you just copied to the new DMA:
 
@@ -58,7 +57,7 @@ To add a DataMiner Agent to a DMS running STaaS:
 
 1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent) or [Failover configuration in Cube](xref:Failover_configuration_in_Cube) for a Failover Agent.
 
-   The DMA should now be connected to the DMS running STaaS.
+   The DMA should now be connected to the cluster running STaaS.
 
 1. Optionally, if the new DMA is not intended to host the CloudGateway DxM, you can safely uninstall it.
 

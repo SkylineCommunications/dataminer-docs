@@ -94,7 +94,7 @@ Please note:
 - Using automatic alarm grouping with **history sets** is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups.
 - When an element is **stopped or paused**, the alarms associated with that element will not be taken into account when grouping alarms. Also, alarms associated with elements that are stopped or paused will be removed from any existing alarm group.
 - When an element is **swarmed** to another Agent, any active anomalies (including alarm groups) that include that element will be cleared. This does not apply for [manually created](xref:Manually_creating_or_updating_alarm_groups) alarm groups, but note that prior to DataMiner 10.5.0 [CU8]/10.5.11, alarms from swarmed elements do get removed from manually created alarm groups.<!-- RN 43739 -->
-- After a [DataMiner Agent is added to a DMS](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System), automatically generated alarm groups will temporarily be shown incorrectly. This issue will resolve itself within 30 minutes, but you can also manually fix this sooner by changing the *Leader DataMiner ID* in the [automatic alarm grouping configuration in System Center](#automatic-alarm-grouping-configuration-in-system-center).
+- After a [node is added to a DataMiner cluster](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System), automatically generated alarm groups will temporarily be shown incorrectly. This issue will resolve itself within 30 minutes, but you can also manually fix this sooner by changing the *Leader DataMiner ID* in the [automatic alarm grouping configuration in System Center](#automatic-alarm-grouping-configuration-in-system-center).
 
 ## Automatic alarm grouping configuration in System Center
 
