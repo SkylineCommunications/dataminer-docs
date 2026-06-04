@@ -19,6 +19,8 @@ description: When adding a node to a DataMiner cluster that is running STaaS, ma
    - DmsAccessTokenExpiration.data
    - DmsRefreshToken.data
    - DmsRefreshTokenExpiration.data
+  
+1. Remove the *NodeId.txt* file from the folder `C:\ProgramData\Skyline Communications\DxMs Shared\Data` on the new DMA.
 
 1. Start CloudGateway on the new DMA.
 

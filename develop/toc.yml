@@ -5087,6 +5087,8 @@ items:
           topicUid: MaintenanceSettings.SLNet.RegexHistoryCacheTimeout
         - name: RegexHistoryEnable
           topicUid: MaintenanceSettings.SLNet.RegexHistoryEnable
+        - name: ReplicationBufferMaxDisconnectedTime
+          topicUid: MaintenanceSettings.SLNet.ReplicationBufferMaxDisconnectedTime
         - name: RequireEncryptedConnections
           topicUid: MaintenanceSettings.SLNet.RequireEncryptedConnections
         - name: SearchOptions

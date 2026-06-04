@@ -48,6 +48,14 @@ Currently, because of server limitations, GQI is unable to retrieve parameter ta
 
 From now on, when a query using the *Parameters for elements where* data source attempts to retrieve data from a mediated table parameter, GQI will throw an error. That error will indicate that the request is not valid because mediated tables are not supported, and will also mention the table or table columns involved.
 
+#### SLLogCollector will now check whether the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+From now on, SLLogCollector will also check whether the Windows security policy *System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing* is enabled.
+
+DataMiner does not support having this policy enabled. Having this option enabled will prevent DataMiner from starting up properly.
+
 ### Fixes
 
 #### History set trending would show gaps where no gaps were expected [ID 44705]
@@ -69,6 +77,14 @@ From now on, trend records with the following *iStatus* values will no longer ca
 | -9  | Trending was started for the specified parameter. |
 | -10 | Trending was stopped for the specified parameter. |
 
+#### Visual Overview in web apps: Problem when creating a new window [ID 45517]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of the way Cube sessions are loaded in the SLHelper process when creating visual overviews, up to now, Windows could throw an exception creating a new window. This would cause the SLHelper process to crash, affecting all active Cube sessions.
+
+From now on, the system will attempt to recreate the Cube session when the initial creation fails, and will handle any failures gracefully to ensure other sessions remain unaffected.
+
 #### Cassandra Cluster / STaaS: 'Alarm events' graph on 'Reports' page of service card would incorrectly be empty [ID 45533]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
@@ -84,6 +100,12 @@ When the `AssemblyResolveHelper` in `SLCompilationEngine` cannot find the exact 
 Up to now, when the assembly with the different version was already loaded in the application domain, the `AssemblyResolveHelper` would incorrectly return null.
 
 From now on, when the assembly with the different version is already loaded in the application domain, the `AssemblyResolveHelper` will again correctly return the already loaded assembly.
+
+#### Failover: Advanced Failover options could incorrectly not be changed when BrokerGateway was being used [ID 45613]
+
+<!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, when a Failover setup was using BrokerGateway, it would incorrectly not be possible to change any of the advanced Failover options.
 
 #### SLWatchDog: Log entry describing a process restart would incorrectly not include the names of the restarted processes [ID 45614]
 

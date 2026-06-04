@@ -28,12 +28,9 @@ When building a custom ad hoc data source using the `Skyline.DataMiner.Core.GQI.
 
 This can be useful in the following scenarios:
 
-- *Columns with a fixed set of values*: When a column only ever contains values from a known list (e.g. a status or category), marking the discrete values as
-strict will present users with a convenient dropdown-style filter instead of a free-text input in the query filter.
+- *Columns with a fixed set of values*: When a column only ever contains values from a known list (e.g. a status or category), marking the discrete values as strict will present users with a convenient dropdown-style filter instead of a free-text input in the query filter.
 
-- *Columns with exception values*: When a column holds a continuous range (e.g. a measurement from 0 to 100), but also has special values with a specific
-meaning (e.g. -1 meaning "Error"), you can define those exception values as non-strict discrete values. Users will see these special values as quick filter
-options while still being able to filter on the full numeric range.
+- *Columns with exception values*: When a column holds a continuous range (e.g. a measurement from 0 to 100), but also has special values with a specific meaning (e.g. -1 meaning "Error"), you can define those exception values as non-strict discrete values. Users will see these special values as quick filter options while still being able to filter on the full numeric range.
 
 Each discrete value can have a display name that differs from the underlying value, making filters and UI elements more readable for end users.
 

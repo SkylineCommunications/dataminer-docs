@@ -48,6 +48,14 @@ Before you upgrade to this DataMiner version:
 
 When a managed process stops unexpectedly, from now on, the contents of the exception's *Source* field will now be added to the *ErrorLog.txt* log file. This should provide more debug information.
 
+#### Visual Overview in web apps: Problem when creating a new window [ID 45517]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of the way Cube sessions are loaded in the SLHelper process when creating visual overviews, up to now, Windows could throw an exception creating a new window. This would cause the SLHelper process to crash, affecting all active Cube sessions.
+
+From now on, the system will attempt to recreate the Cube session when the initial creation fails, and will handle any failures gracefully to ensure other sessions remain unaffected.
+
 #### GQI will now throw an exception when data is requested from a mediated table parameter [ID 45539]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
@@ -70,6 +78,33 @@ From now on, it will also be possible to trigger a user-defined API by sending a
 
 From now on, the `AssemblyLoad` event handler in SLManagedScripting will also log the location of the loaded assembly (if available).
 
+#### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45560]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+Previously, when a script library was added to a DataMiner System, its hint paths were automatically sent to the automation script compilation engine, even when the library was not used by any automation script.
+
+From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
+
+#### SLLogCollector will now check whether the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+From now on, SLLogCollector will also check whether the Windows security policy *System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing* is enabled.
+
+DataMiner does not support having this policy enabled. Having this option enabled will prevent DataMiner from starting up properly.
+
+#### SLNetClientTest tool: Enum field dropdown boxes in 'Build Message' tab will now be sorted alphabetically [ID 45610]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+Up to now, each enum field dropdown box in the *Build Message* tab would show the enum values in the order in which they are defined in the enum.
+
+In order to make it easier to look up values when, for example, building a message, from now on, the enum field dropdown boxes in the *Build Message* tab will show the enum values in alphabetical order.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Fixes
 
 #### Cassandra Cluster / STaaS: 'Alarm events' graph on 'Reports' page of service card would incorrectly be empty [ID 45533]
@@ -87,6 +122,12 @@ When the `AssemblyResolveHelper` in `SLCompilationEngine` cannot find the exact 
 Up to now, when the assembly with the different version was already loaded in the application domain, the `AssemblyResolveHelper` would incorrectly return null.
 
 From now on, when the assembly with the different version is already loaded in the application domain, the `AssemblyResolveHelper` will again correctly return the already loaded assembly.
+
+#### Failover: Advanced Failover options could incorrectly not be changed when BrokerGateway was being used [ID 45613]
+
+<!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, when a Failover setup was using BrokerGateway, it would incorrectly not be possible to change any of the advanced Failover options.
 
 #### SLWatchDog: Log entry describing a process restart would incorrectly not include the names of the restarted processes [ID 45614]
 
