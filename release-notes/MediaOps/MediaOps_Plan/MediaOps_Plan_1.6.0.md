@@ -171,9 +171,7 @@ On the About pages of the MediaOps Plan apps, version information has been added
 
 #### Ability to push new icon to all workflows [ID 45620]
 
-When you save a resource or resource pool, the system will now detect whether the selected icon was changed by comparing the new value with the original one, and if it detects a change, it will perform an optimized usage check to determine whether the resource or resource pool is referenced in any workflows.
-
-If no workflow references exist, the save will proceed immediately like before. However, if the item is used in one or more workflows, you will now be asked to confirm whether the new icon should be applied across all workflows that reference it. When you confirm, the system will trigger a background automation script supporting both resources and resource pools to update the icon on all corresponding referencing workflow nodes.
+When you update the icon on a resource or resource pool, the system will verify if the resource or resource pool is used in any workflow. If the resource or resource pool is used in a workflow, you will now be asked whether the new icon should be applied across all workflows that reference it. When you choose to update all workflows, the system will trigger a background automation script supporting both resources and resource pools to update the icon on all corresponding referencing workflow nodes.
 
 ### Fixes
 
