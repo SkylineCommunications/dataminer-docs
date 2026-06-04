@@ -11,9 +11,7 @@ This tool is available on DMA servers in the folder `C:\Skyline DataMiner\Tools\
 > [!NOTE]
 > For information on the available BPA tests and on how to run these tests within DataMiner Cube instead of using this standalone tool, see [Running BPA tests](xref:Running_BPA_tests).
 
-## Running BPA tests
-
-To execute a BPA test using the *Standalone BPA Executor* tool:
+## Running BPA tests via the tool's UI
 
 1. Go to the folder `C:\Skyline DataMiner\Tools\StandaloneBpaExecutor` and double-click *StandaloneBpaExecutor.exe*.
 
@@ -85,9 +83,9 @@ StandaloneBpaExecutor.exe -u Administrator -p my_password --"C:\BPA tests\Analyz
 StandaloneBpaExecutor.exe -u Administrator -p my_password -f "C:\Skyline DataMiner\Tools\StandaloneBpaExecutor\test.json" --"C:\Skyline DataMiner\Tools\StandaloneBpaExecutor\Check System Health.dll"
 ```
 
-## Exit codes
+### Exit codes
 
-From DataMiner 10.7.0/10.6.7 onwards<!--RN 45433-->, the Standalone BPA Executor returns an exit code indicating whether issues were detected when running BPA tests:
+From DataMiner 10.7.0/10.6.7 onwards<!--RN 45433-->, the Standalone BPA Executor returns an exit code indicating whether issues were detected when BPA tests were run:
 
 | Exit code | Description |
 | --- | --- |
