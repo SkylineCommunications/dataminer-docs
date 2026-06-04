@@ -1,5 +1,6 @@
 ---
 uid: xPON_supported_technologies
+Description: Explore the Huawei, ZTE, and Nokia technologies supported by the EPM xPON Solution and the corresponding connectors.
 ---
 
 # Supported technologies for xPON

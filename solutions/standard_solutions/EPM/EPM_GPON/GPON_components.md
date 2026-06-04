@@ -1,5 +1,6 @@
 ---
 uid: xPON_components
+description: Explore the different components (connectors and automation scripts) included in the EPM xPON Solution. 
 ---
 
 # EPM xPON components
