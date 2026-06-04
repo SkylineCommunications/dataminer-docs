@@ -143,7 +143,7 @@ items:
         items:
           - name: Cleaning up unused files
             topicUid: Cleaning_up_unused_files_on_a_DMA
-          - name: Synchronizing data between DataMiner Agents
+          - name: Synchronizing data between nodes
             topicUid: Synchronizing_data_between_DataMiner_Agents
       - name: Advanced configuration
         items:
