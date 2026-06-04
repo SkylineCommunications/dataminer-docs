@@ -34,7 +34,7 @@ Depending on whether the node is part of a Failover pair or not, a different pro
 
 1. Restart DataMiner Cube to make sure the removed node is no longer displayed anywhere.
 
-## Removing a Failover Agent
+## Removing a Failover node
 
 1. [End the Failover configuration](xref:Ending_a_Failover_configuration).
 
