@@ -86,11 +86,11 @@ Previously, when a script library was added to a DataMiner System, its hint path
 
 From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
 
-#### SLLogCollector will now check whether the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
+#### SLLogCollector will now retrieve the value of the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
-From now on, SLLogCollector will also check whether the Windows security policy *System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing* is enabled.
+From now on, SLLogCollector will also retrieve the value of the Windows security policy *System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing*.
 
 DataMiner does not support having this policy enabled. Having this option enabled will prevent DataMiner from starting up properly.
 
