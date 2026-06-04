@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_Delete_CCAP_CM_pair
+description: Learn how to manually delete a CCAP/CM pair manually in DataMiner Cube, both from the backend and the frontend elements.
 ---
 
 # Deleting a CCAP/CM pair manually
