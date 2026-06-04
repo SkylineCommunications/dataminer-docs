@@ -22,12 +22,12 @@ uid: MediaOps_Plan_1.5.8
 
 ### Fixes
 
+#### Workflow Designer: Resource pool not automatically selected when swapping resource [ID 45527]
+
+When you tried to swap a resource in the Workflow Designer app, the resource pool was not automatically selected, so that you had to manually locate the resource pool before performing the swap. Now the resource pool will be correctly auto-populated based on the selected resource.
+
 #### Scheduling: Exception because of invalid node reference made workflow inaccessible in 'Edit job' panel [ID 45591]
 
 When you opened the *Edit job* panel, the following exception could occur in the workflow: `The given key was not present in the dictionary`. This was caused by connections referencing non-existing node IDs, for example, after a node was removed but its associated connections were not updated. This exception made it impossible for operators to view the workflow, and manual intervention in the DOM instance was required to resolve the issue.
 
 To resolve this, the handling of invalid node references has now been improved. Connections with non-existing node IDs are now gracefully ignored or handled, preventing the exception and ensuring that the workflow remains visible to operators.
-
-#### Workflow Designer: Resource pool not automatically selected when swapping resource [ID 45527]
-
-When you tried to swap a resource in the Workflow Designer app, the resource pool was not automatically selected, so that you had to manually locate the resource pool before performing the swap. Now the resource pool will be correctly auto-populated based on the selected resource.
