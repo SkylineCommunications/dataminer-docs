@@ -48,6 +48,17 @@ Before you upgrade to this DataMiner version:
 
 When a managed process stops unexpectedly, from now on, the contents of the exception's *Source* field will now be added to the *ErrorLog.txt* log file. This should provide more debug information.
 
+#### Database migration from Cassandra Cluster to STaaS is now allowed on systems with Swarming enabled [ID 45507]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+From now on, it is possible to migrate the database of a Swarming-enabled system from Cassandra Cluster to STaaS.
+
+> [!NOTE]
+>
+> - This migration will be a snapshot migration, not a live migration.
+> - Migrating the database will only be possible if the system is online, cloud-connected, and has an active Cassandra Cluster database.
+
 #### Visual Overview in web apps: Problem when creating a new window [ID 45517]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
