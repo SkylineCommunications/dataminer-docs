@@ -14,7 +14,7 @@ Designed for broadcast, service provider, satellite, and enterprise organization
 
 ## DocumentHub application
 
-The DocumentHub Solution is available in the [Catalog](https://catalog.dataminer.services/details/f9720b2e-fdaa-4956-9788-877328b587ca) as a package containing a [dedicated low-code app](xref:DH_Application). The solution integrates seamlessly with other DataMiner applications and also provides a NuGet API for custom application development.
+The DocumentHub Solution is available in the [Catalog](https://catalog.dataminer.services/details/f9720b2e-fdaa-4956-9788-877328b587ca) as a package containing a [dedicated low-code app](xref:DH_Application). The solution [integrates seamlessly](#integration-with-other-applications) with other DataMiner applications and also provides a NuGet API for custom application development.
 
 <div class="row">
   <div class="column">
@@ -86,6 +86,17 @@ Example use cases:
 - **Cost and billing**: Generated invoices, cost reports, and financial documents.
 - **Energy and utilities**: Equipment documentation, compliance certificates, and facility plans.
 - **Fleet management**: Vehicle documentation, maintenance records, and operational photos.
+
+## Integration with other applications
+
+DocumentHub works together seamlessly with other DataMiner applications:
+
+- **People & Organizations**: Attach profile photos and organization logos.
+- **Asset Manager**: Store and display asset images and documentation.
+- **Scheduling**: Link job documents and attachments.
+- **Custom Applications**: Use the [DocumentHub DevPack](xref:DH_Development) to integrate with your own low-code apps.
+
+Document usage is handled by the consuming application, allowing each app to control how documents are displayed and managed within its context.
 
 <style>
 .column a {

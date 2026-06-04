@@ -185,7 +185,6 @@ items:
       - name: DocumentHub DevPack
         topicUid: DH_Development
       - name: Tutorials
-        topicUid: Tutorial_DocumentHub_Getting_Started
         items:
         - name: Configuring SharePoint as a storage backend
           topicUid: Tutorial_DH_SharePoint

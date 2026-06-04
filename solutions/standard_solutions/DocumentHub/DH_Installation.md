@@ -40,16 +40,9 @@ After the installation completes, you will need to configure the DocumentHub app
 
 1. Navigate to the **Settings** section.
 
-1. Configure your storage backend:
+1. [Configure your storage backend](xref:DH_Application#storage-backend-integration).
 
-   - Connect to your SharePoint repository, and configure your DOM attachments or use the standard DataMiner web files.
-   - Provide the necessary credentials and access information, if applicable.
-
-1. Define document **buckets** to organize file types:
-
-   - Specify the target storage backend for each bucket.
-   - Define allowed file extensions.
-   - Set bucket rules to keep files organized.
+1. [Define document buckets](xref:DH_Application#organizing-with-buckets) to organize file types.
 
 > [!TIP]
-> Refer to the [DocumentHub application](xref:DH_Application) documentation for detailed configuration instructions.
+> Refer to the [DocumentHub app](xref:DH_Application) documentation for detailed configuration instructions.

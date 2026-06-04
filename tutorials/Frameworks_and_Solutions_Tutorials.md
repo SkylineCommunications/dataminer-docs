@@ -23,6 +23,8 @@ uid: Frameworks_and_Solutions_Tutorials
 |--|--|
 | [Getting started with EPM](xref:EPM_Introduction_Tutorial) | Learn the basics of working with an EPM setup. DataMiner EPM is a software platform specifically designed to manage very high volumes of devices in cable, telco, terrestrial, and satellite environments. |
 | [Getting started with the Ping Monitoring tool](xref:Tutorial_Apps_Ping_Monitoring_App) | Learn how to use the Ping Monitoring tool for network monitoring and diagnostics. |
+| DocumentHub: [Configuring DOM attachments on a network share](xref:Tutorial_DH_DOM_NetworkShare) | Learn how to configure a network share as a storage backend for DOM attachments in DocumentHub. |
+| DocumentHub: [Configuring SharePoint as a storage backend](xref:Tutorial_DH_SharePoint) | Learn how to configure SharePoint as a storage backend for DocumentHub. |
 | MediaOps Plan: [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro) | Learn how to create resources and resource pools in the Resource Studio app of the MediaOps Plan Solution. |
 | MediaOps Plan: [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder) | Learn how to create a job and configure it with resources in the Scheduling app of the MediaOps Plan Solution. |
 | MediaOps Plan: [Creating an organization with a team and contacts to use as resources in MediaOps apps](xref:Tutorial_MediaOps_People_and_Organizations_Intro) | Learn how to create an organization with a team and contacts that can be booked within the MediaOps Plan Solution. |

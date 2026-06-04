@@ -4,8 +4,8 @@ uid: DH_Development
 
 # DocumentHub DevPack
 
-## About
+The DocumentHub DevPack is a NuGet Class Library API that allows interaction with the DocumentHub Solution.
 
-NuGet Class Library API to interact with DocumentHub functionality. It provides repositories and helpers for managing document buckets, SharePoint configurations, and DOM sources, as well as a high-level API for file upload and read operations across multiple storage backends.
+It provides repositories and helpers for managing document buckets, SharePoint configurations, and DOM sources, as well as a high-level API for file upload and read operations across multiple storage backends.
 
-[DevPack repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.DocumentHub)
+For details, go to the [DevPack repository on GitHub](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.DocumentHub).

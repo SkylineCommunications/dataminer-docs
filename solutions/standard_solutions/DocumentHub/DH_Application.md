@@ -8,118 +8,112 @@ The DocumentHub app is designed for administrators and operators to manage docum
 
 ![DocumentHub Application overview](~/solutions/images/DocumentHub_App_Main_Overview.png)
 
-> [!TIP]
-> For detailed walkthroughs on using the application, refer to the [DocumentHub application tutorials](xref:Tutorial_DocumentHub_Getting_Started).
-
 ## Application overview
 
-The following sections and features are available in the app:
+The following pages are available in the app:
 
-- ![Home](~/solutions/images/DocumentHub_Home.svg) **Home**: Access documents across buckets, filter by file name, bucket, or file type, and review related metadata.
+- ![Home icon](~/solutions/images/DocumentHub_Home.png) **Home**: Access documents across buckets, filter by file name, bucket, or file type, and review related metadata. See [Viewing and filtering documents](#viewing-and-filtering-documents).
 
-- ![Upload](~/solutions/images/DocumentHub_Upload.png) **Upload**: Upload new documents to configured storage backends. Select the appropriate bucket to ensure files are stored in the correct location with proper metadata.
+- ![Upload icon](~/solutions/images/DocumentHub_Upload.png) **Upload**: Upload new documents to configured storage backends. Select the appropriate bucket to ensure files are stored in the correct location with proper metadata. See [Uploading documents](#uploading-documents).
 
-- ![Settings](~/solutions/images/DocumentHub_Settings.png) **Settings**: Connect and manage cloud storage repositories and local storage options. Configure credentials and access settings. Available to administrators only.
+- ![Settings icon](~/solutions/images/DocumentHub_Settings.png) **Settings**: Connect and manage cloud storage repositories and local storage options. Configure credentials and access settings. Available to administrators only.
 
-- ![Buckets](~/solutions/images/DocumentHub_Buckets.png) **Buckets**: Configure and manage document buckets. Define which file types go where, set upload restrictions, and manage metadata templates. Available to administrators only.
+  The *Settings* page consists of three tabs:
 
-- ![SharePoint](~/solutions/images/DocumentHub_SharePoint.png) **SharePoint**: Browse files stored in your SharePoint repository, quickly filter by name or bucket, and inspect the full metadata set for each file.
+  - ![Buckets icon](~/solutions/images/DocumentHub_Buckets.png) **Buckets**: Configure and manage document buckets. Define which file types go where, set upload restrictions, and manage metadata templates. Available to administrators only. See [Organizing with buckets](#organizing-with-buckets).
 
-- ![DataMiner](~/solutions/images/DocumentHub_DataMiner.png) **DataMiner**: Access files stored on your DataMiner server, use name and bucket filters to narrow down results, and review all available metadata details.
+  - ![SharePoint icon](~/solutions/images/DocumentHub_SharePoint.png) **SharePoint**: Browse files stored in your SharePoint repository, quickly filter by name or bucket, and inspect the full metadata set for each file. See [SharePoint](#sharepoint-user-managed).
 
-- ![DOM](~/solutions/images/DocumentHub_DOM.png) **DOM**: Explore files linked to DOM records, find content by filtering on name and bucket, and view the complete metadata context used in your workflows.
+  - ![DOM icon](~/solutions/images/DocumentHub_DOM.png) **DOM**: Explore files linked to DOM records, find content by filtering on name and bucket, and view the complete metadata context used in your workflows. See [DOM attachments with shared drive](#dom-attachments-with-shared-drive).
 
-- ![About](~/solutions/images/DocumentHub_About.png) **About**: Provides information on the **version** of the DocumentHub package.
+- ![About icon](~/solutions/images/DocumentHub_About.png) **About**: Provides information on the **version** of the DocumentHub package.
+
+## Viewing and filtering documents
+
+On the *Home* page, all uploaded documents are listed, with different possibilities for viewing or filtering them.
+
+With the second button in the upper right corner, you can switch between a **tile view or list view** of the documents.
+
+![Toggle button to switch from tile view to list view](~/solutions/images/DocumentHub_Toggle_home_view.png)
+
+You can filter the displayed documents in different ways:
+
+- **By name**:
+
+  - If the tile view is shown, use the filter box above the tiles.
+  - If the list view is shown, click the magnifying glass icon at the top of the list to open a filter box.
+
+- **By bucket and storage location**, using the tiles to the left of the documents overview.
 
 ## Uploading documents
 
-You can upload documents to store them in your configured storage backend. The upload process guides you through:
+On the *Upload* page, you can upload documents to store them in your configured storage backend. To do so:
 
 1. Selecting the appropriate **document bucket**.
-1. Choosing the file(s) to upload.
-1. Optionally give a new name to the file
-1. Confirm the upload destination.
+1. Click the *Upload* button.
+1. Click *Choose file* and select the document you want to upload.
+1. Click *Upload*.
+1. Optionally, specify a new name for the document.
+1. Click *OK*.
 
-Once uploaded, the document will be stored in the configured backend for the selected bucket and will appear in the Documents view for all authorized users.
+Once it has been uploaded, the document will be stored in the configured backend for the selected bucket, and it will be shown on the Home page.
 
 ## Organizing with buckets
 
-Document buckets streamline workflows by predefining:
-
-- **Name** to identify the Bucket
-- **Target storage backend** (SharePoint, Google Drive, local storage, etc.)
-- **Allowed file extensions** (e.g., .pdf, .jpg, .png)
-- **File size limits** to prevent oversized uploads
-- **Upload Location** to organize your files
-- **Description** (Optional) to give some extra info about that Bucket
-
 Buckets help maintain organization and security by ensuring files are stored consistently and with proper restrictions.
 
-## Integrating with other applications
+Bucket management is done in the app via *Settings* > *Buckets*. There you can add new buckets with the *Add Bucket* button, edit existing buckets by hovering over them and clicking the pencil icon, or delete buckets by hovering over them and clicking the garbage can icon.
 
-The DocumentHub app works seamlessly with other DataMiner applications:
+For each bucket, the following settings can be configured:
 
-- **People & Organizations**: Attach profile photos and organization logos.
-- **Asset Manager**: Store and display asset images and documentation.
-- **Scheduling**: Link job documents and attachments.
-- **Custom Applications**: Use the [DocumentHub DevPack](xref:DH_Development) to integrate with your own low-code apps.
+- **Name**: Used to identify the bucket.
+- **Storage Type**: [SharePoint](#sharepoint-user-managed), [local storage](#local-dataminer-web-server), or [DOM](#dom-attachments-with-shared-drive). Depending on the selected type, additional configuration will be needed.
+- **Allowed Extensions**: Optional. Allows you to limit which types of files can be added in the bucket by specifying one or more allowed file extensions (e.g., .pdf, .jpg, .png).
+- **Size Limit**: Optional. Allows you to specify a file size limit to prevent oversized uploads.
+- **Description**: Optional. Provides additional information about the bucket.
 
-Document usage is handled by the consuming application, allowing each app to control how documents are displayed and managed within its context.
+> [!NOTE]
+> To create and manage document buckets, you need admin permissions.
 
 ## Storage backend integration
 
-DocumentHub supports multiple storage backends to give you flexibility in document management:
+DocumentHub supports multiple storage backends to give you flexibility in document management. At present, [SharePoint](#sharepoint-user-managed), [local storage](#local-dataminer-web-server), and [DOM attachments](#dom-attachments-with-shared-drive) are supported.
 
-### SharePoint (Customer-managed)
+Note that the number of documents in DocumentHub is not capped by the app itself. In practice, scalability depends on the storage capacity and performance of your selected backend, such as SharePoint or a shared drive.
 
-Connect to your organization's SharePoint repository to leverage existing document management infrastructure. Requires:
+Additional cloud storage providers may be supported in future releases based on demand.
 
-- SharePoint site URL
-- Authentication credentials (client ID and secret)
-- Folder structure configuration
+> [!NOTE]
+> To configure storage backend connections and credentials, you need admin permissions.
 
-### Local DataMiner Web Server
+### SharePoint (user-managed)
 
-Store documents on the local DataMiner Web Server for on-premises deployments. Ideal for:
+Connect to your organization's SharePoint repository to leverage existing document management infrastructure.
 
-- Air-gapped or secure environments
-- Sensitive internal documents
-- High-performance local access
+To be able to use this storage type, you will need to add a sharepoint source on the *Settings* > *SharePoint* page. This page contains the necessary setup information.
 
-### DOM Attachments with Shared Drive
+> [!TIP]
+> For a detailed walkthrough of how to use this storage type, refer to [Configuring SharePoint as a storage backend](xref:Tutorial_DH_SharePoint).
 
-Connect to a Shared Drive in the network and store files directly on DOM instances in DataMiner.
+### Local DataMiner web server
 
-- Network Share Path
-- Authentication credentials (username and password)
-- (optionally) ISS Config for virtual webserver to have resolvable paths
+Store documents on the local DataMiner web server for on-premises deployments. This is ideal for high-performance access, for air-gapped or secure environments, and for sensitive internal documents.
 
-### Future integrations
+Local documents must be stored within a subfolder of the `C:\Skyline DataMiner\Webpages\public` folder of the DataMiner web server. When you configure a bucket for documents hosted on the local web server, in the *Upload Path* field, specify the folder path within that folder. For example, for files located in the folder `C:\Skyline DataMiner\Webpages\public\Icons`, specify the path `Icons`.
 
-Additional cloud storage providers may be supported in future releases based on customer demand.
+Files stored on the local web server will be indicated with the DataMiner icon ![DataMiner icon](~/solutions/images/DocumentHub_DataMiner.png).
 
-## Admin capabilities
+> [!IMPORTANT]
+> If you use documents on a local DataMiner web server in a clustered setup, keep in mind that files must be synchronized across cluster nodes. With large file volumes, this synchronization can become a bottleneck and affect overall performance.
+>
+> As such, we recommend the following:
+>
+> - Use a local DataMiner web server mainly for images, logos, and other lightweight documents.
+> - For larger document sets or heavier files, use cloud storage backends (for example SharePoint) or DOM attachments.
 
-System administrators can:
+### DOM attachments with shared drive
 
-- Configure storage backend connections and credentials.
-- Create and manage document buckets.
-- Set upload restrictions (file types, sizes, etc.).
+Connect to a shared drive in the network and store files directly on DOM instances in DataMiner.
 
-## Searching and filtering
-
-The Documents view includes powerful search and filtering capabilities:
-
-- **Search by name**: Quickly find documents by filename or title.
-- **Filter by bucket**: View documents from specific buckets.
-- **Filter by storage backend**: Show documents from particular storage locations.
-
-## Performance and scalability
-
-The number of documents in DocumentHub is not capped by the application itself. In practice, scalability depends on the storage capacity and performance of your selected backend, such as SharePoint or a shared drive.
-
-When using DataMiner Web Files in a clustered setup, keep in mind that files must be synchronized across cluster nodes. With large file volumes, this synchronization can become a bottleneck and affect overall performance.
-
-> [!Recommended]
-> - Use DataMiner Web Files mainly for images, logos, and other lightweight documents.
-> - For larger document sets or heavier files, prefer cloud storage backends (for example SharePoint) or DOM attachments.
+> [!TIP]
+> For a detailed walkthrough of how to use this storage type, refer to [Configuring DOM attachments on a network share](xref:Tutorial_DH_DOM_NetworkShare).
