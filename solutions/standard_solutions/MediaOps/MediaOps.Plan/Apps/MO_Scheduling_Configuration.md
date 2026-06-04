@@ -41,9 +41,6 @@ To add a capability:
 
 To remove a capability, click the **X** button next to it.
 
-> [!NOTE]
-> If a capability is marked as mandatory (indicated by a ✋ icon), it must be configured before the job can be confirmed.
-
 ## Capacities
 
 [Capacities](xref:MO_Resource_Studio#capacities) define how a resource can be used, measured numerically. When capacities are configured, only resources that have sufficient remaining capacity can be selected from the resource pool.
@@ -72,8 +69,13 @@ To add a configuration:
 
 To remove a configuration, click the **X** button next to it.
 
-> [!NOTE]
-> If a configuration is marked as mandatory (indicated by a ✋ icon), it must be configured before the job can be confirmed.
+## Mandatory parameters and full configuration
+
+Capabilities, capacities, and configurations can be marked as mandatory (indicated by a ✋ icon). All mandatory parameters must have a value configured. Additionally, all input arguments of the automated actions (if any) must be provided.
+
+Only when all mandatory parameters and all automated action inputs are fully defined, a node is considered as fully configured. This is reflected in the UI by the hand icon disappearing from the node.
+
+All nodes and the job-level configuration must be fully configured before you can confirm the job. Once the job is confirmed, you can only update the job in a way that keeps everything fully configured. If an update would leave mandatory parameters incomplete, you can return the job to the tentative state first.
 
 ## Automated actions
 
