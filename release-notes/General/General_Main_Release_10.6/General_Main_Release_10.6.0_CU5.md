@@ -48,6 +48,14 @@ Currently, because of server limitations, GQI is unable to retrieve parameter ta
 
 From now on, when a query using the *Parameters for elements where* data source attempts to retrieve data from a mediated table parameter, GQI will throw an error. That error will indicate that the request is not valid because mediated tables are not supported, and will also mention the table or table columns involved.
 
+#### SLLogCollector will now check whether the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+From now on, SLLogCollector will also check whether the Windows security policy *System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing* is enabled.
+
+DataMiner does not support having this policy enabled. Having this option enabled will prevent DataMiner from starting up properly.
+
 ### Fixes
 
 #### History set trending would show gaps where no gaps were expected [ID 44705]
