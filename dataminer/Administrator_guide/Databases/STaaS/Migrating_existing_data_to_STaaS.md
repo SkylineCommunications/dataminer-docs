@@ -50,9 +50,9 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 
    This indicates that the migration has successfully finished.
 
-1. From DataMiner 10.6.8/10.7.0 onwards, run the *CloudStorageMigrationFinalize* script, after all storage types report **State=Completed** and right before continuing with the next steps.
+1. When all storage types report **State=Completed**, from DataMiner 10.6.8/10.7.0 onwards<!-- RN 45507 -->, run the *CloudStorageMigrationFinalize* script.
 
-   This will finalize the migration by migrating some config data, doing some checks etc. Important is to do this and immediately continue with the next steps because any config changes done after this finalization and before the next restart might get lost.
+   This script will finalize the migration by migrating some configuration data, doing some checks, etc. After you have run the script, **immediately continue with the next steps** because any configuration changes done after this finalization and before the next restart might otherwise be lost.
 
 1. Continue with the next step of the [setup procedure](xref:Setting_up_StaaS).
 
