@@ -40,6 +40,14 @@ Currently, because of server limitations, GQI is unable to retrieve parameter ta
 
 From now on, when a query using the *Parameters for elements where* data source attempts to retrieve data from a mediated table parameter, GQI will throw an error. That error will indicate that the request is not valid because mediated tables are not supported, and will also mention the table or table columns involved.
 
+#### SLElementInProtocol.txt log file entries will now be added by SLLog instead of SLProtocol [ID 45578]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR TBD -->
+
+Up to now, the *SLElementInProtocol.txt* log file entries were added by SLProtocol.
+
+From now on, these log file entries will be added by SLLog instead.
+
 #### SLLogCollector will now retrieve the value of the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
