@@ -1,5 +1,6 @@
 ---
 uid: TicketingArchitecture
+description: Explore the architecture of the Ticketing Solution. Learn about the backend, the frontend, and the way in which the solution can interact with other apps.
 ---
 
 # Ticketing Solution architecture

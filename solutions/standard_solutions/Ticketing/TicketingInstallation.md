@@ -1,5 +1,6 @@
 ---
 uid: TicketingInstallation
+description: Deploy the Ticketing Solution from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the Ticketing Solution

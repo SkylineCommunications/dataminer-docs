@@ -1,5 +1,6 @@
 ---
 uid: ExternalTicketingSystemIntegration
+description: Learn how the Ticketing Solution can be integrated with external ticketing systems such as ServiceNow, Jira, or Remedy.
 ---
 
 # External ticketing system integration

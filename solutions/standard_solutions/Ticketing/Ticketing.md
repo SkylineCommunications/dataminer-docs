@@ -1,5 +1,6 @@
 ---
 uid: Ticketing
+description: Explore the DataMiner Ticketing Standard Solution, which provides a way to create, manage, and track tickets within the DataMiner ecosystem.
 ---
 
 # Ticketing
