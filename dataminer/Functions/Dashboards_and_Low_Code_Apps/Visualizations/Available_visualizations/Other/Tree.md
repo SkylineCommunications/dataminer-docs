@@ -31,7 +31,7 @@ You can filter the contents of a tree component using one of two available metho
 
 - Use the **filter box** at the top of the component.
 
-- Pass a **text string** to the tree component, for example by using a text input component (available from DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45485-->).
+- Pass a **text string** to the tree component, for example by using a text input component (supported from DataMiner Web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45485-->).
 
   You can filter based on a text string in several different ways, for example:
 
