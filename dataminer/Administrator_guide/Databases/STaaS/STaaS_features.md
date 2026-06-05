@@ -88,6 +88,10 @@ To **migrate existing data** to STaaS, the following limitations apply:
 
 - Migration using a proxy is supported from DataMiner 10.4.6 onwards<!-- RN 39313 -->.
 
+- Migration of systems where [Swarming](xref:Swarming) is enabled is supported from DataMiner 10.6.8/10.7.0 onwards<!-- RN 45507 -->.
+
+- Prior to DataMiner 10.6.8/10.7.0 onwards<!-- RN 45507 -->, scheduled tasks [stored in the database](xref:SchedulerDataStorage) are not migrated.
+
 - If you start the migration while an element with a logger table is stopped, the data of that element will not be migrated.
 
 In addition, the following **other limitations** currently apply:

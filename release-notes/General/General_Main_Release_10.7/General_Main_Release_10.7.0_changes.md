@@ -507,6 +507,17 @@ From now on, the *Standalone BPA Executor* tool will return one of the following
 | 1 | Unexpected errors have occurred. |
 | 2 | BPA tests have detected issues. |
 
+#### Database migration from Cassandra Cluster to STaaS is now allowed on systems with Swarming enabled [ID 45507]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+From now on, it is possible to migrate the database of a Swarming-enabled system from Cassandra Cluster to STaaS.
+
+> [!NOTE]
+>
+> - This migration will be a snapshot migration, not a live migration.
+> - Migrating the database will only be possible if the system is online, cloud-connected, and has an active Cassandra Cluster database.
+
 #### User-Defined APIs can now also be triggered by sending a PATCH request method [ID 45542]
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
@@ -539,6 +550,15 @@ In order to make it easier to look up values when, for example, building a messa
 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### 'Check Time Server' BPA test has now been merged with the 'DataMiner Agent Minimum Requirements' BPA test [ID 45631]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+In order to combine all system requirements specified in [DataMiner Compute Requirements](https://aka.dataminer.services/DataMiner_compute_requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
+
+> [!NOTE]
+> From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.
 
 ### Fixes
 

@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_deployment
+description: Learn how to deploy and upgrade the D-DOCSIS branch of the EPM Solution using an installation package.
 ---
 
 # EPM D-DOCSIS Deployment

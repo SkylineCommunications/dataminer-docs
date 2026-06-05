@@ -71,10 +71,10 @@ From now on, you can again scroll down to the last page and add new pages.
 
 Because of a locking issue that occurred while clearing expired items from the dashboard cache, up to now, an `Index was outside the bounds of the array` error would be thrown each time an attempt was made to retrieve a dashboard from the cache.
 
-#### Dashboards/Low-Code Apps - Parameter table component: Problem with discrete values becoming outdated [ID 45624]
+#### Dashboards/Low-Code Apps - Parameter table component: Problem with values becoming outdated [ID 45624]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
-Up to now, when a *Parameter table* component contained multiple columns, of which one had discrete values that depended on values in another column, those discrete values were fetched only once. As a result, when a value in the other column changed, the discrete values that depended on that value could become outdated.
+Up to now, when a *Parameter table* component contained multiple columns, of which one had values that depended on values in another column, those values were fetched only once. As a result, when a value in the other column changed, the values that depended on that value could become outdated.
 
-From now on, because of a number of enhancements with regard to caching, discrete values depending on values in other columns will be refreshed more frequently, preventing values from getting outdated.
+From now on, because of a number of enhancements with regard to caching, values depending on values in other columns will be refreshed more frequently, preventing values from getting outdated.

@@ -1,5 +1,6 @@
 ---
 uid: xPON_ONT
+description: Check the indexable parameters for an ONT in the xPON EPM Solution. These can be used by queries or automation scripts to execute complex actions.
 --- 
 
 # EPM xPON ONT parameters

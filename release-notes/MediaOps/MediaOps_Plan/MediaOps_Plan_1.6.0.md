@@ -169,15 +169,15 @@ Orchestration events for MediaOps Live are now executed asynchronously. This can
 
 On the About pages of the MediaOps Plan apps, version information has been added about the loaded libraries in SLAutomation. This can be helpful as SLAutomation does not reload the new libraries after a new MediaOps version is installed, and a restart of SLAutomation is needed in that case.
 
+#### Ability to push new icon to all workflows [ID 45620]
+
+When you update the icon on a resource or resource pool, the system will verify if the resource or resource pool is used in any workflow. If the resource or resource pool is used in a workflow, you will now be asked whether the new icon should be applied across all workflows that reference it. When you choose to update all workflows, the system will trigger a background automation script supporting both resources and resource pools to update the icon on all corresponding referencing workflow nodes.
+
 ### Fixes
 
 #### Scheduling: Default value dropdown not updated after change to discrete values of system property [ID 45442]
 
 When system properties of type discrete were configured, the dropdown to select the default value was not updated with the newly added or changed discrete values.
-
-#### Workflow Designer: Resource pool not automatically selected when swapping resource [ID 45527]
-
-When you tried to swap a resource in the Workflow Designer app, the resource pool was not automatically selected, so that you had to manually locate the resource pool before performing the swap. Now the resource pool will be correctly auto-populated based on the selected resource.
 
 #### DevPack: Not possible to update capability name [ID 45544]
 
