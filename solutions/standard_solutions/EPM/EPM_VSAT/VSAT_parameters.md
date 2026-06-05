@@ -1,5 +1,6 @@
 ---
 uid: VSAT_parameters
+description: Explore the available parameters by protocol for each topology level in the VSAT branch of the EPM Solution.
 ---
 
 # Available parameters in VSAT
