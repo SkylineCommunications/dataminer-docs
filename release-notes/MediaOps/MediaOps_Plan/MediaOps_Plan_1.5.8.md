@@ -31,3 +31,7 @@ When you tried to swap a resource in the Workflow Designer app, the resource poo
 When you opened the *Edit job* panel, the following exception could occur in the workflow: `The given key was not present in the dictionary`. This was caused by connections referencing non-existing node IDs, for example, after a node was removed but its associated connections were not updated. This exception made it impossible for operators to view the workflow, and manual intervention in the DOM instance was required to resolve the issue.
 
 To resolve this, the handling of invalid node references has now been improved. Connections with non-existing node IDs are now gracefully ignored or handled, preventing the exception and ensuring that the workflow remains visible to operators.
+
+#### Scheduling: Node icon not updated after node swap [ID 45644]
+
+When an existing node of a non-running job was swapped, the node icon was not updated. Now swapping the node will cause the icon to be updated to match the new node.
