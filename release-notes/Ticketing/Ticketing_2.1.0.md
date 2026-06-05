@@ -19,7 +19,7 @@ uid: Ticketing_2.1.0
   - [General > Alarms > Allow to add or update hyperlinks](xref:DataMiner_user_permissions#general--alarms--allow-to-add-or-update-hyperlinks)
   - [General > Alarms > Properties > Add](xref:DataMiner_user_permissions#general--views--properties--add) and [General > Alarms > Properties > Edit](xref:DataMiner_user_permissions#general--views--properties--edit)
 
-- The (hidden) Ticketing Lock Manager element uses protocol Skyline Lock Manager version 1.0.3.4 (not set as Production version).
+- If you are upgrading an **existing Ticketing installation** to this version, make sure the hidden Ticketing Lock Manager element uses version **1.0.3.4** of the connector **Skyline Lock Manager** (not set as Production version).
 
 - Any users who will use the Ticketing Solution (including the user installing the solution) will need to have **write access** to the root view and the Ticketing Lock Manager element under the root view (via *Permissions* > *Views*; see [Configuring a user group](xref:Configuring_a_user_group)).
 
