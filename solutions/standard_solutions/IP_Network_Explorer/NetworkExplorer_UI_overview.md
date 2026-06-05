@@ -1,5 +1,6 @@
 ---
 uid: IpNetworkExplorer_UI_overview
+description: Take a tour of the UI of the IP Network Explorer - Check the network status, see all ports of a network device, and track multicast traffic.
 ---
 
 # IP Network Explorer UI overview
