@@ -43,8 +43,6 @@ You can allow users to visualize and switch between measurement points for a spe
 
    A list of all the available measurement points will be shown, with a colored LED. This LED will be a filled circle for the active measurement point and an empty circle for other measurement points. If measurement points are selected in the list, this will update the spectrum session, so that the spectrum analyzer visualization shows those measurement points.
 
-1.
-
 1. Optionally, enable filtering of the list by name (supported from DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45430-->):
 
    1. Add a a search input component (or a different component that outputs a string value).
