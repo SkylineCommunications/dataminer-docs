@@ -1,6 +1,6 @@
 ---
 uid: VSAT_components
-description: Explore the different connectors and automation scripts that are typically part of an EPM VSAT deployment.
+description: Discover the different connectors and automation scripts that are typically part of an EPM VSAT deployment.
 ---
 
 # EPM VSAT components

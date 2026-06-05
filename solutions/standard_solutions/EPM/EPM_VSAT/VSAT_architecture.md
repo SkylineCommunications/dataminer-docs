@@ -1,6 +1,6 @@
 ---
 uid: VSAT_architecture
-description: Explore the different connectors of which the EPM VSAT Solution makes use - collector, backend, frontend, and system connectors.
+description: Discover the architecture of the EPM VSAT Solution, including the collector, backend, frontend, and system connectors.
 ---
 
 # EPM VSAT architecture
