@@ -34,6 +34,7 @@ Below you can find an overview of the main features that have been added to Data
 | [BrokerGateway DxM](xref:BrokerGateway_Migration) | DataMiner 10.5.0 [CU2]/10.5.5/10.6.0<br>DataMiner 10.5.0/10.5.2 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#brokergateway) <!-- [ID 42573] --> |
 | [Cache for SNMP inform messages](xref:Adjusting_the_SNMP_inform_message_cache_size) | DataMiner 10.1.4/10.2.0 <!-- [ID 29034] -->|
 | Client-server communication: gRPC connections between [Cube and DMAs](xref:ConnectionSettings_txt#connectionsettingstxt-options) and [between DMAs](xref:DMS_xml#redirects-subtag) | DataMiner 10.3.0/10.3.2 <!-- [ID 34797] [ID 34983] --> |
+| Correlation: [*Group alarms* rule action](xref:Grouping_Alarms) | DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 <!-- [ID 44973] --> |
 | Cube: [BPA tests in System Center](xref:Running_BPA_tests) | DataMiner 10.1.2/10.2.0 <!-- [ID 28516] --> |
 | Cube: [Duplicating a resource](xref:Configuring_pools_of_resources#duplicating-a-resource-from-a-pool) | DataMiner Cube 10.3.7/10.4.0 <!-- [ID 36308] -->|
 | Cube: [*EnableAlarmSubscriptions* URL argument](xref:Options_for_opening_DataMiner_Cube#enablealarmsubscriptions) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 <!-- [ID 44779] --> |
@@ -133,6 +134,7 @@ Below you can find an overview of the main features that have been added to Data
 | Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#adding-actions-to-a-timeline) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
 | Low-Code Apps: [Trigger component actions that let users control the trigger timer](xref:DashboardTrigger#letting-users-control-the-trigger-timer) | DataMiner web 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 <!-- [ID 43184]  --> |
 | Low-Code Apps: [On app open event](xref:Changing_low-code_app_settings#having-an-event-triggered-when-the-app-is-opened) | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10<!-- [ID 43350] --> |
+| Maps: [Customizing the appearance of GeoJSON layers](xref:Layer_types#customizing-the-appearance-of-geojson-overlays) | DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 <!-- [ID 45518] --> |
 | [Node Recovery](xref:NodeRecovery_About) | DataMiner 10.6.0/10.6.2, with the NodeRecovery DxM |
 | Protocols: [Buttons in table cells to open DataMiner objects](xref:UIComponentsTableRowButtons) | DataMiner 10.1.9/10.2.0 <!-- [ID 30413] --> |
 | Protocols: [Buttons to open EPM objects](xref:AdvancedEPMLaunchEPMObjectsTableCellButtons)| DataMiner 10.2.3/10.3.0 <!-- [ID 32368] --> |
@@ -141,12 +143,14 @@ Below you can find an overview of the main features that have been added to Data
 | Protocols: [Table-based matrix](xref:UIComponentsTableMatrix) | DataMiner 10.3.1/10.4.0 <!-- [ID 34645] -->|
 | Protocols: [Direct view table with table columns of different protocols](xref:Protocol.Params.Param.CrossDriverOptions) | DataMiner 10.2.9/10.3.0 <!-- [ID 33253] --> |
 | [User-defined APIs](xref:UD_APIs) | DataMiner 10.3.6/10.4.0<br>DataMiner 10.3.5 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#userdefinableapi) <!-- [ID 36273] --> |
+| User-defined APIs: [Rate limit configuration for API tokens](xref:UD_APIs_Objects_ApiToken#ratelimit) | DataMiner 10.6.7/10.7.0 <!-- [ID 45470] --> |
 | Security: [Custom user group rights presets](xref:Configuring_a_user_group#using-presets-to-assign-rights) | DataMiner Cube 10.4.0 [CU12]/10.5.0 [CU1]/10.5.3<!-- [ID 41656] --> |
 | Security: [External user authentication using Azure B2C](xref:SAML_using_Azure_B2C) | DataMiner 10.2.6/10.3.0 <!-- [ID 32714] -->|
 | Security: [External user authentication using Entra ID (formerly Azure AD)](xref:SAML_using_Entra_ID) | DataMiner 10.1.5/10.2.0 <!-- [ID 28444] -->|
 | Security: [External user authentication using Okta](xref:SAML_using_Okta) | DataMiner 10.1.11/10.2.0 <!-- [ID 30749]-->|
 | Service & Resource Management: [Resource availability](xref:Resource_availability) | DataMiner 10.5.3/10.6.0<!-- [ID 41894] --> |
 | Spectrum Analysis: [Zooming and panning](xref:Viewing_spectrum_analyzer_traces#zooming-and-panning) | DataMiner Cube DataMiner 10.3.11/10.4.0 <!-- [ID 37284] [ID 37461] --> |
+| Standalone BPA Executor: [Exit codes](xref:Standalone_BPA_Executor#exit-codes) | DataMiner 10.7.0/10.6.7 <!-- [ID 45433] --> |
 | Storage: [Offload database configuration with Swarming enabled](xref:Offload_Database_With_Swarming) | DataMiner 10.6.4/10.7.0 <!-- [ID 44751] [ID 44767] --> |
 | [Storage as a Service (STaaS)](xref:STaaS) | DataMiner 10.4.0/10.4.1 |
 | [Swarming](xref:Swarming) | DataMiner 10.5.1/10.6.0<br>DataMiner 10.3.11 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#swarming) (Feature Release only)<!-- [ID 41490] --> |
