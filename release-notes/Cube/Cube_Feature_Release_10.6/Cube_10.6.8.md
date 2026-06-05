@@ -59,3 +59,11 @@ When the layout of a table was reset in Data Display, up to now, the table colum
 When the number of child shapes in a *Children* container shape reached the limit specified in the *Maximum number of child shapes in a Children container shape* user setting, up to now, the shape and the page would keep loading. No message would appear explaining that the child shape limit was reached.
 
 From now on, users will get a message informing them that the child shape limit was reached and that not all shapes are being displayed.
+
+#### Connection issues caused by culture-specific uppercase conversion of URL arguments [ID 45652]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When you connected to a local DataMiner Agent or a DaaS Agent via the DataMiner Cube desktop app, up to now, the URL arguments would be converted to uppercase using culture-specific rules. In some cases, this could result in incorrect character transformations and connection issues.
+
+From now on, the URL arguments will be converted to uppercase using culture-invariant rules, which will ensure consistent and correct behavior across system cultures.

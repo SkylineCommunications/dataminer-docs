@@ -42,7 +42,7 @@ From now on, when a query using the *Parameters for elements where* data source 
 
 #### SLElementInProtocol.txt log file entries will now be added by SLLog instead of SLProtocol [ID 45578]
 
-<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR TBD -->
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 Up to now, the *SLElementInProtocol.txt* log file entries were added by SLProtocol.
 

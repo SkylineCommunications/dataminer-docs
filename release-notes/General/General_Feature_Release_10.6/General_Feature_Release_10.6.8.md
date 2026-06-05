@@ -97,6 +97,14 @@ Previously, when a script library was added to a DataMiner System, its hint path
 
 From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
 
+#### SLElementInProtocol.txt log file entries will now be added by SLLog instead of SLProtocol [ID 45578]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, the *SLElementInProtocol.txt* log file entries were added by SLProtocol.
+
+From now on, these log file entries will be added by SLLog instead.
+
 #### SLLogCollector will now retrieve the value of the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
