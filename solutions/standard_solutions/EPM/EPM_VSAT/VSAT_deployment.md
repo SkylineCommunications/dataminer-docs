@@ -1,5 +1,6 @@
 ---
 uid: VSAT_deployment
+description: Learn how to deploy the EPM VSAT installation package from the DataMiner Catalog and configure it afterwards.
 ---
 
 # EPM VSAT deployment
