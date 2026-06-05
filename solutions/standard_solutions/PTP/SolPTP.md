@@ -1,5 +1,6 @@
 ---
 uid: SolPTP
+description: Explore the PTP app, which provides an overview of all PTP nodes, and monitors PTP metrics and statistics of grandmaster clocks, boundary clocks and PTP slave devices.
 ---
 
 # PTP app

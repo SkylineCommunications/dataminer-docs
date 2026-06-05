@@ -1,5 +1,6 @@
 ---
 uid: Overview_of_the_PTP_LCA_UI
+description: Explore the different pages of the PTP app - the Summary page, the Nodes page, the Topology page, and the Admin page.
 ---
 
 # The PTP low-code app
