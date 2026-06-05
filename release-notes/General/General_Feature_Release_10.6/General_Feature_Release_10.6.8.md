@@ -116,6 +116,15 @@ In order to make it easier to look up values when, for example, building a messa
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### 'Check Time Server' BPA test has now been merged with the 'DataMiner Agent Minimum Requirements' BPA test [ID 45631]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+In order to combine all system requirements specified in [DataMiner Compute Requirements](https://aka.dataminer.services/DataMiner_compute_requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
+
+> [!NOTE]
+> From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.
+
 ### Fixes
 
 #### Cassandra Cluster / STaaS: 'Alarm events' graph on 'Reports' page of service card would incorrectly be empty [ID 45533]
