@@ -258,6 +258,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SLAutomation crash during DataMiner startup
+            topicUid: KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient
           - name: SLSNMPAgent RTEs when SNMP manager is not responding
             topicUid: KI_SLSNMPAgent_RTE_SNMP_manager_not_responding
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
