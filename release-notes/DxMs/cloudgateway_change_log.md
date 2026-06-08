@@ -4,7 +4,7 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 8 June 2026 - Fix - CloudGateway 3.1.2 - Session retry when streaming errors occur
+#### 8 June 2026 - Fix - CloudGateway 3.1.2 - DataMiner Assistant session renewed when expired
 
 Previously, when you used the DataMiner Assistant through Microsoft Teams or Microsoft 365 Copilot after your DataMiner Assistant session had expired, you could get an empty response. Now, CloudGateway automatically creates a new DataMiner Assistant session when the existing one has expired, so you always receive a proper response.
 
