@@ -203,8 +203,8 @@ Depending on this selection, different *Identifiers* settings become available, 
 | Base node | Size | From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->, use the slider to adjust the size of the node, with a minimum of 1 px and a maximum of 100 px (default: 48 px). Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, select whether the node should be small, medium-sized, or large. |
 | Base node | Weight | A number indicating the relative importance of the node. The higher the number, the more important the node, which determines where it is displayed in the graph (depending on the layout settings). |
 | Base node | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over a node. This setting is enabled by default. From DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44809-->, nodes using templates do not support this setting, as tooltip content is defined in the template. |
-| Base node | Metric | Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->. Configure how the node label is displayed. You can hide the label, derive it from conditional coloring, or select a custom column to display as the label. See [Configuring node and edge labels](#configuring-node-and-edge-labels). |
-| Base node | Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6<!--RN 39417--> up to DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44218-->, when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node. |
+| Base node | Metric | Available from DataMiner web 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->. Configure how the node label is displayed. You can hide the label, derive it from conditional coloring, or select a custom column to display as the label. See [Configuring node and edge labels](#configuring-node-and-edge-labels). |
+| Base node | Show metric | Available from DataMiner web 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6<!--RN 39417--> up to DataMiner web 10.5.0 [CU10]/10.6.1<!--RN 44218-->, when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the node will not be displayed underneath the node. |
 | Base node | Actions | Select *Add action* to configure an action that is executed when a node is clicked or double-clicked, or when an icon is clicked in the tooltip. See [Adding actions to a node edge graph](#adding-actions-to-a-node-edge-graph). |
 | Override nodes | Add override | If you want to visualize some nodes differently for the same query, click *Add override*, specify a filter, and configure the nodes as detailed above. |
 
@@ -219,8 +219,8 @@ Depending on this selection, different *Identifiers* settings become available, 
 | Style | Optionally, select a different style for the connection lines. |
 | Weight | Optionally, specify a number to indicate the relative importance of the edge. This will determine the thickness of the connection line. |
 | Enable tooltip | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, a tooltip is shown when the mouse pointer hovers over an edge. This setting is enabled by default. |
-| Metric | Available from DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->. Configure how the node label is displayed. You can hide the label, derive it from conditional coloring, or select a custom column to display as the label. See [Configuring node and edge labels](#configuring-node-and-edge-labels). |
-| Show metric | Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6<!--RN 39417--> up to DataMiner 10.5.0 [CU10]/10.6.1<!--RN 44218-->, when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the edge will not be displayed underneath the edge. |
+| Metric | Available from DataMiner web 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->. Configure how the node label is displayed. You can hide the label, derive it from conditional coloring, or select a custom column to display as the label. See [Configuring node and edge labels](#configuring-node-and-edge-labels). |
+| Show metric | Available from DataMiner web 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6<!--RN 39417--> up to DataMiner web 10.5.0 [CU10]/10.6.1<!--RN 44218-->, when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the edge will not be displayed underneath the edge. |
 | Minimize metric | Available from DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45538-->. Configure when edge metrics are minimized. Possible values are *Auto* (default), where metrics are minimized automatically when edges are too close to each other; *Always*, where metrics are always minimized; and *Never*, where metrics are never minimized. |
 | Visualize directions | Available from DataMiner 10.2.4/10.3.0 onwards. Toggle the switch to specify whether the edges should display a direction. |
 | How | Only available when *Visualize directions* is enabled. Choose how the direction should be displayed. Select *Flow* to visualize the direction using animated edges (default), or *Arrows* to show arrows drawn on the edges. You can also specify the exact arrow position. |
@@ -228,7 +228,7 @@ Depending on this selection, different *Identifiers* settings become available, 
 
 #### Configuring node and edge labels
 
-From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->, you can configure how labels are displayed for nodes and edges independently of [conditional coloring](#conditional-coloring). This configuration makes it possible to control label visibility and content separately from analytical coloring.
+From DataMiner web 10.5.0 [CU11]/10.6.2 onwards<!--RN 44218-->, you can configure how labels are displayed for nodes and edges independently of [conditional coloring](#conditional-coloring). This configuration makes it possible to control label visibility and content separately from analytical coloring.
 
 For each node query and edge query, and for any configured node or edge override, you can choose one of the following label options:
 
@@ -236,7 +236,7 @@ For each node query and edge query, and for any configured node or edge override
 
 - **Coloring**: The label visibility is determined by the conditional coloring configuration.
 
-- **Custom**: Allows you to either select a specific column to use as the label or, from DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44907-->, link the label to data from another component by clicking the ![Link to](~/dataminer/images/Link_to_Data.png) icon. If you link the label to another component, the label can change dynamically based on that component, for example based on the column selected in a [dropdown component](xref:DashboardDropdown).
+- **Custom**: Allows you to either select a specific column to use as the label or, from DataMiner web 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!--RN 44907-->, link the label to data from another component by clicking the ![Link to](~/dataminer/images/Link_to_Data.png) icon. If you link the label to another component, the label can change dynamically based on that component, for example based on the column selected in a [dropdown component](xref:DashboardDropdown).
 
   The label is shown even if the node or edge itself does not have conditional coloring.
 
@@ -262,7 +262,7 @@ You can **customize the appearance of nodes** in the graph to better represent y
 
    - *Icon*: Select an icon from the dropdown list to display inside the node shape (Default: `CircleRing`). Click the circle to the right of the box to select a custom color.
 
-   - *Template*: Use a prebuilt or custom design for more control over the node's appearance. Available from DataMiner 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44809-->.
+   - *Template*: Use a prebuilt or custom design for more control over the node's appearance. Available from DataMiner web 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!--RN 44809-->.
 
      ![Node edge graph template example showing a network diagram with multiple nodes displaying status indicators, roles, and labels organized in a hierarchical structure](~/dataminer/images/NodeEdgeGraphTemplate.gif)<br>*Node edge graph component in DataMiner 10.6.4*
 

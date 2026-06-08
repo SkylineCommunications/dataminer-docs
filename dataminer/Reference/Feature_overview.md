@@ -128,13 +128,13 @@ Below you can find an overview of the main features that have been added to Data
 | Low-Code Apps: [Customizing the app styling using custom CSS code](xref:Changing_low-code_app_settings#customizing-the-app-styling-using-custom-css-code) | DataMiner web 10.5.0 [CU12]/10.6.3 <!-- [ID 44570] --> |
 | Low-Code Apps: [Duplicating an app](xref:Creating_custom_apps#duplicating-an-existing-low-code-app) | DataMiner web 10.3.0 [CU10]/10.4.1 <!-- [ID 37698] -->|
 | Low-Code Apps: [*Interactive automation script* component](xref:InteractiveAutomationScript) | DataMiner web 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 <!-- [ID 39969] -->|
-| Low-Code Apps: [Node movement events](xref:DashboardNodeEdgeGraph#configuring-node-movement-events) for the node edge graph component | DataMiner 10.5.0 [CU10]/10.6.1 <!-- [ID 44144] --> |
+| Low-Code Apps: [Node movement events](xref:DashboardNodeEdgeGraph#configuring-node-movement-events) for the node edge graph component | DataMiner web 10.5.0 [CU10]/10.6.1 <!-- [ID 44144] --> |
 | Low-Code Apps: [*Open monitoring card* action](xref:LowCodeApps_event_config#opening-a-monitoring-card) | DataMiner web 10.3.4/10.4.0 <!-- [ID 35661] -->|
-| Low-Code Apps: [*Show a notification* action](xref:LowCodeApps_event_config#showing-a-notification) | DataMiner 10.3.0 [CU12]/10.4.3 <!-- [ID 38548] -->|
+| Low-Code Apps: [*Show a notification* action](xref:LowCodeApps_event_config#showing-a-notification) | DataMiner web 10.3.0 [CU12]/10.4.3 <!-- [ID 38548] -->|
 | Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#adding-actions-to-a-timeline) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
 | Low-Code Apps: [Trigger component actions that let users control the trigger timer](xref:DashboardTrigger#letting-users-control-the-trigger-timer) | DataMiner web 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 <!-- [ID 43184]  --> |
-| Low-Code Apps: [On app open event](xref:Changing_low-code_app_settings#having-an-event-triggered-when-the-app-is-opened) | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10<!-- [ID 43350] --> |
-| Maps: [Customizing the appearance of GeoJSON layers](xref:Layer_types#customizing-the-appearance-of-geojson-overlays) | DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 <!-- [ID 45518] --> |
+| Low-Code Apps: [On app open event](xref:Changing_low-code_app_settings#having-an-event-triggered-when-the-app-is-opened) | DataMiner web 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10<!-- [ID 43350] --> |
+| Maps: [Customizing the appearance of GeoJSON layers](xref:Layer_types#customizing-the-appearance-of-geojson-overlays) | DataMiner web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 <!-- [ID 45518] --> |
 | [Node Recovery](xref:NodeRecovery_About) | DataMiner 10.6.0/10.6.2, with the NodeRecovery DxM |
 | Protocols: [Buttons in table cells to open DataMiner objects](xref:UIComponentsTableRowButtons) | DataMiner 10.1.9/10.2.0 <!-- [ID 30413] --> |
 | Protocols: [Buttons to open EPM objects](xref:AdvancedEPMLaunchEPMObjectsTableCellButtons)| DataMiner 10.2.3/10.3.0 <!-- [ID 32368] --> |
