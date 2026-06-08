@@ -6,7 +6,7 @@ uid: GVAMPP_Manager_Installing
 
 ## Prerequisites
 
-- **DataMiner 10.6.6/10.6.0** or higher
+- **DataMiner 10.6.0/10.6.6** or higher
 
 - A DataMiner System [**connected to dataminer.services**](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
