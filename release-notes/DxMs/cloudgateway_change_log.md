@@ -4,9 +4,13 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 22 May 2026 - Enhancement - CloudGateway 3.1.1.0 - MessageBroker dependency updated: ForcedEndpoints support
+#### 8 June 2026 - Fix - CloudGateway 3.1.2 - Session retry when streaming errors occur
 
-CloudGateway now supports the use of the `ForcedEndpoints` setting in *MessageBrokerConfig.json*. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
+CloudGateway will now create a new session with the DataMiner Assistant when the existing session has expired, instead of returning an empty response.
+
+#### 22 May 2026 - Enhancement - CloudGateway 3.1.1 - MessageBroker dependency updated: ForcedEndpoints support
+
+CloudGateway now supports the use of the `ForcedEndpoints` setting in _MessageBrokerConfig.json_. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
 
 #### 4 May 2026 - Enhancement - CloudGateway 3.1.0 - Microsoft 365 Copilot
 
@@ -82,7 +86,7 @@ Several dependencies have been updated.
 
 #### 17 June 2025 - Fix - CloudGateway 2.17.7 - Problem caused by rapid file changes [ID 42763]
 
-​Rapid file changes in *DataMiner.xml* or *MaintenanceSettings.xml* could cause a problem in CloudGateway, causing the DxM to restart.
+​Rapid file changes in _DataMiner.xml_ or _MaintenanceSettings.xml_ could cause a problem in CloudGateway, causing the DxM to restart.
 
 #### 4 April 2025 - Enhancement - CloudGateway 2.17.4 - Dependencies updated [ID 42682]
 
@@ -192,15 +196,15 @@ The CloudGateway DxM has been extended with the capability to offload data when 
 
 #### 29 March 2024 - Enhancement - CloudGateway 2.13.8 - Added the possibility to locally disable Remote Access & Live Sharing through the app settings [ID 39113]
 
-It is now possible to locally disable features like *Remote Access* and *Live Sharing* in the *App settings* file of the CloudGateway DxM.
+It is now possible to locally disable features like _Remote Access_ and _Live Sharing_ in the _App settings_ file of the CloudGateway DxM.
 
-To do so, set *RemoteAccessAndSharing:IsDisabled* to *true* in the app settings. On each server where DataMiner CloudGateway is installed, navigate to `C:\Program Files\Skyline Communications\DataMiner CloudGateway` and create or modify *appsettings.custom.json* with the following configuration:
+To do so, set _RemoteAccessAndSharing:IsDisabled_ to _true_ in the app settings. On each server where DataMiner CloudGateway is installed, navigate to `C:\Program Files\Skyline Communications\DataMiner CloudGateway` and create or modify _appsettings.custom.json_ with the following configuration:
 
 ```json
 {
-   "RemoteAccessAndSharing": {
-      "IsDisabled": true
-   }
+  "RemoteAccessAndSharing": {
+    "IsDisabled": true
+  }
 }
 ```
 
@@ -282,11 +286,11 @@ Unable to connect to the TunnelService[SLCcaGatewayService.Services.TunnelServic
 System.NullReferenceException: Object reference not set to an instance of an object.
 ```
 
-#### 5 May 2023 - Enhancement -  CloudGateway 2.10.9 - ConnectionTester tool output improved [ID 36260]
+#### 5 May 2023 - Enhancement - CloudGateway 2.10.9 - ConnectionTester tool output improved [ID 36260]
 
 The ConnectionTester tool, which is included in the CloudGateway installation, has been improved and will have clearer logging output that is easier to understand.
 
-#### 26 April 2023 - Enhancement/fix -  CloudGateway 2.10.8 - General improvements [ID 36014] [ID 36259]
+#### 26 April 2023 - Enhancement/fix - CloudGateway 2.10.8 - General improvements [ID 36014] [ID 36259]
 
 Changes have been implemented in DataMiner CloudGateway to make the service ignore requests when it is unable to access dataminer.services. This way, another CloudGateway service that does have access can pick them up and handle them successfully. This is most commonly needed when the CloudGateway is installed on a firewalled or offline server by accident. Previously, this could lead to seemingly random errors, for example when creating or renewing your cloud connection in Cube, or when creating or managing shares from the Dashboards app.
 
@@ -316,7 +320,7 @@ This fix is included in Cloud Pack 2.8.5.
 
 #### 22 December 2022 - Fix - CloudGateway 2.10.1 - Connection tester did not take proxy settings into account [ID 35227]
 
-If proxy settings were configured in the *appsettings.proxy.json* file, previously these were not taken into account by the connection tester tool.
+If proxy settings were configured in the _appsettings.proxy.json_ file, previously these were not taken into account by the connection tester tool.
 
 This fix is included in Cloud Pack 2.8.4.
 
@@ -339,13 +343,13 @@ This enhancement is included in Cloud Pack version 2.8.2.
 
 #### 15 September 2022 - Fix - CloudGateway 2.9.5 - Problem in CloudGateway process if MaintenanceSettings.xml contained an invalid HTTPS endpoint [ID 34341]
 
-If the HTTPS endpoint in the file *MaintenanceSettings.xml* was not configured correctly, a problem could occur in the CloudGateway process. This happened specifically when DataMiner upgrades caused the HTTPS URL to end with an encoded new line.
+If the HTTPS endpoint in the file _MaintenanceSettings.xml_ was not configured correctly, a problem could occur in the CloudGateway process. This happened specifically when DataMiner upgrades caused the HTTPS URL to end with an encoded new line.
 
 With CloudGateway 2.9.5 (included in Cloud Pack version 2.8.2), all endpoints from configuration files will be trimmed to prevent this, so that CloudGateway will no longer get this problem at runtime. However, note that CloudGateway may still fail to start up if an endpoint in a configuration file is invalid.
 
 #### 1 September 2022 - New feature - CloudGateway 2.9.4 - Connection tester tool [ID 34187] [ID 34289] [ID 34293] [ID 34297]
 
-The Cloud Gateway now comes with a new connection tester tool, *ConnectionTester.exe*. This tool can be used to validate the network setup and check if all features are available. It checks whether the network complies with the requirements for dataminer.services.
+The Cloud Gateway now comes with a new connection tester tool, _ConnectionTester.exe_. This tool can be used to validate the network setup and check if all features are available. It checks whether the network complies with the requirements for dataminer.services.
 
 You can find the new tool in the folder `Program files\Skyline Communications\Dataminer CloudGateway\` on a DMA that has the Cloud Gateway installed. Run the executable as administrator. The connection tester will connect to port 443 to check whether requirements are met, and it will show the results in a console window.
 
@@ -363,14 +367,14 @@ The CoreGateway DxM must now be installed on the same DMA as CloudGateway to ens
 
 Proxy support has been added for DataMiner CloudGateway. When you configure this, all outgoing traffic towards the public internet will pass through the proxy server.
 
-The proxy settings are configured in a single settings file that is reused for all DxMs. This *appsettings.proxy.json* file is located in the `C:\ProgramData\Skyline Communications\DxMs Shared\` folder on the DMA. It should have the following content:
+The proxy settings are configured in a single settings file that is reused for all DxMs. This _appsettings.proxy.json_ file is located in the `C:\ProgramData\Skyline Communications\DxMs Shared\` folder on the DMA. It should have the following content:
 
 ```json
 {
-   "ProxyOptions": {
-      "Enabled": true,
-      "Address": "<address of the proxy server>"
-   }
+  "ProxyOptions": {
+    "Enabled": true,
+    "Address": "<address of the proxy server>"
+  }
 }
 ```
 
@@ -383,36 +387,35 @@ You can now connect a DMS to dataminer.services using a DMZ. This way the DMS ca
 To create such a DMZ:
 
 1. Configure the firewall of the DMZ:
+   - Make sure it allows access to the endpoints mentioned in [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+   - Make sure the DMZ can communicate with the DMS through port 80, or through port 443 for a secure connection.
+   - Make sure the DMZ can communicate through NATS though port 4222.
 
-    - Make sure it allows access to the endpoints mentioned in [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-    - Make sure the DMZ can communicate with the DMS through port 80, or through port 443 for a secure connection.
-    - Make sure the DMZ can communicate through NATS though port 4222.
+1. Install all DxMs that need internet access in the DMZ. At present, these are _CloudGateway_, _CloudFeed_, and _ArtifactDeployer_.
 
-1. Install all DxMs that need internet access in the DMZ. At present, these are *CloudGateway*, *CloudFeed*, and *ArtifactDeployer*.
+1. Add the _Orchestrator_ to the DMZ, so that you can upgrade it later through dataminer.services.
 
-1. Add the *Orchestrator* to the DMZ, so that you can upgrade it later through dataminer.services.
+1. On the DataMiner nodes, install the DxMs that need to connect with the DMA or do not require internet access. At present, these are _CoreGateway_ and _FieldControl_.
 
-1. On the DataMiner nodes, install the DxMs that need to connect with the DMA or do not require internet access. At present, these are *CoreGateway* and *FieldControl*.
+   > [!NOTE]
+   > For all DxMs, it is advised to have multiple instances running at the same time. This will create redundancy in case something goes wrong and allows for upgrades without any downtime.
 
-    > [!NOTE]
-    > For all DxMs, it is advised to have multiple instances running at the same time. This will create redundancy in case something goes wrong and allows for upgrades without any downtime.
+1. In the `C:\Program Files\Skyline Communications\DataMiner CloudGateway`folder, create an override _appsettings.custom.json_ with the following contents:
 
-1. In the `C:\Program Files\Skyline Communications\DataMiner CloudGateway`folder, create an override *appsettings.custom.json* with the following contents:
+   ```json
+   {
+     "DmzOptions": {
+       "IsHttpsEnabled": <true/false>,
+       "Domain": <IIS>,
+       "DataMinerAgentName":  <name of the dataminer agent the DMZ is connected to>
+     }
+   }
+   ```
 
-    ```json
-    {
-      "DmzOptions": {
-        "IsHttpsEnabled": <true/false>,
-        "Domain": <IIS>,
-        "DataMinerAgentName":  <name of the dataminer agent the DMZ is connected to>
-      }
-    }
-    ```
+   - _IsHttpsEnabled_: Indicates whether the communication between the DMZ and the DMA is encrypted. This can only be the case if the IIS is configured to support TLS.
+   - _Domain_: The domain name of your DataMiner System, configured through the IIS settings.
+   - _DataMinerAgentName_: The name of the DataMiner Agent you are connecting to. This should be the same DMA as the one used for the domain setting.
 
-    - *IsHttpsEnabled*: Indicates whether the communication between the DMZ and the DMA is encrypted. This can only be the case if the IIS is configured to support TLS.
-    - *Domain*: The domain name of your DataMiner System, configured through the IIS settings.
-    - *DataMinerAgentName*: The name of the DataMiner Agent you are connecting to. This should be the same DMA as the one used for the domain setting.
-
-1. On a DataMiner node, copy `C:\Skyline DataMiner\SLCloud.xml` and `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`, and paste these in the `C:\Skyline DataMiner\` folder of the DMZ. Make sure that the credentials entry in *SLCloud.xml* points to the credentials file you copied over.
+1. On a DataMiner node, copy `C:\Skyline DataMiner\SLCloud.xml` and `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`, and paste these in the `C:\Skyline DataMiner\` folder of the DMZ. Make sure that the credentials entry in _SLCloud.xml_ points to the credentials file you copied over.
 
 1. Restart all DxMs in the DMZ so that they use the new settings.
