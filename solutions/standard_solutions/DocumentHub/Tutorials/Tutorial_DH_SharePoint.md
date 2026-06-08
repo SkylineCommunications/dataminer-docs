@@ -118,11 +118,13 @@ Now that you have completed the Azure AD setup, configure SharePoint in the Docu
 
 The SharePoint backend is now available for use in document buckets.
 
+> [!NOTE]
+> If you want to edit or delete your SharePoint source configuration, hover over the tile representing the configuration and click the pencil or garbage can icon, respectively.
+
 ## Next steps
 
 After configuring SharePoint, you can:
 
 - [Create document buckets](xref:DH_Application#organizing-with-buckets) that use this SharePoint backend.
 - [Upload documents](xref:DH_Application#uploading-documents) to SharePoint through the DocumentHub app.
-- Configure metadata templates for SharePoint-stored documents.
 - Integrate SharePoint storage with other DataMiner applications via DocumentHub.
