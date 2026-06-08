@@ -56,6 +56,8 @@ items:
               topicUid: Overview_MediaOps_Validation
             - name: Filtering resource pools by category
               topicUid: SCH_Filter_Pools
+        - name: Scheduling configuration
+          topicUid: MO_Scheduling_Configuration
         - name: Tutorials
           items: 
           - name: Configuring resources and resource pools
