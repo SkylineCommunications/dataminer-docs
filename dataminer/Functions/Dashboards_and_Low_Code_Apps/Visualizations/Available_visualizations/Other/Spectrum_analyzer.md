@@ -39,11 +39,11 @@ You can allow users to visualize and switch between measurement points for a spe
 
 1. In the *Data* pane, go to *All available data* > *Components* > *[Page/Panel name]* > *Spectrum analyzer* > *Selection* and drag *Spectrum sessions* onto the list component.
 
-   Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner [CU21]/10.3.0 [CU9]/10.4.12, component data is found under the *Feeds* data category.
+   Note that depending on your setup, the exact path may be different. For example, in versions prior to DataMiner web [CU21]/10.3.0 [CU9]/10.4.12, component data is found under the *Feeds* data category.
 
    A list of all the available measurement points will be shown, with a colored LED. This LED will be a filled circle for the active measurement point and an empty circle for other measurement points. If measurement points are selected in the list, this will update the spectrum session, so that the spectrum analyzer visualization shows those measurement points.
 
-1. Optionally, enable filtering of the list by name (supported from DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45430-->):
+1. Optionally, enable filtering of the list by name (supported from DataMiner web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45430-->):
 
    1. Add a a search input component (or a different component that outputs a string value).
 
@@ -57,7 +57,7 @@ You can allow users to visualize and switch between measurement points for a spe
 
 In the *Layout* pane, you can find the default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-Additionally, from DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45437-->, the *Theme source* option is available. This option **determines how colors are applied in the spectrum analyzer component**. This option can be set to either *Preset* or *Custom*:
+Additionally, from DataMiner web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45437-->, the *Theme source* option is available. This option **determines how colors are applied in the spectrum analyzer component**. This option can be set to either *Preset* or *Custom*:
 
 - *Preset* (default): The displayed trace colors and grid colors depend on the preset. The same goes for the background color and text color of the spectrum graph, and for the show/hide settings for the grid and for axis labels.
 
