@@ -26,6 +26,9 @@ In order to prolong support for KML overlays, the version of the *Google Maps* p
 
 When using DataMiner Web version 10.5.0 CU16/10.6.0 CU4/10.6.7 or newer, KML overlays will be supported until May 2027. When using any other DataMiner Web version, KML overlays will no longer be supported from August 2026 onwards.
 
+> [!div class="button"]
+> [Read the blog post on our community website](https://community.dataminer.services/)
+
 ## New features
 
 #### GQI DxM - Extensions: Retrieving the Culture and Timezone from the Session object [ID 45348]
@@ -106,6 +109,8 @@ The Spectrum analyzer component now has a *Theme source* option, which can be se
 
   - Trace, threshold, minimum, maximum, and average colors are inherited from the theme settings, and can be customized if necessary.
   - Background, font, axis, and grid colors are all inherited from the component theme.
+
+  ![A spectrum analyzer component with its *Theme source* setting set to "Custom"](~/dataminer/images/Spectrum_Analyzer.gif)
 
 In both cases, measurement point trace colors are resolved via theme color indexing based on the measurement point key/name.
 
