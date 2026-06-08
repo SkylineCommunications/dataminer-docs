@@ -1,6 +1,6 @@
 ---
 uid: Overview_of_the_PTP_app_in_Cube_UI
-description: Learn how to work with the PTP app when embedded in DataMiner Cube. In the navigation pane, it is available in the Applications section of the Apps tab.
+description: Explore the PTP app in DataMiner Cube to monitor synchronization health, analyze topology and nodes, and manage PTP performance with confidence.
 ---
 
 # The PTP app in DataMiner Cube
