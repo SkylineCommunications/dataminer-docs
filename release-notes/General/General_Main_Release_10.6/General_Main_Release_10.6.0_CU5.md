@@ -144,3 +144,9 @@ From now on, this log entry will correctly include the names of the processes be
 <!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
 
 The *NATSRepair.exe* tool would incorrectly no longer work on new DataMiner Agents that had been installed using a DataMiner Installer v10.6.
+
+#### Problem when logging in to a DaaS system using external authentication [ID 45637]
+
+<!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, when you logged in to a DaaS system using external authentication, in some cases, the DaaS system would incorrectly not be flagged as such. As a result, you would be allowed to access functionality that is restricted to non-DaaS systems.
