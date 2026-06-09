@@ -44,6 +44,14 @@ The option "by alarm" has now been removed.
 
 If existing correlation rules have this option configured, a warning will be shown, explaining that this is no longer supported, the *Alarm grouping* section will be empty, and the grouping will be removed the first time the rule is saved again.
 
+#### Visual Overview - Reservation: Values of the [Elapsed time:], [Remaining time:], and [Time until start:] placeholders will be calculated using UTC time [ID 45618]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, the values of the [Elapsed time:], [Remaining time:], and [Time until start:] placeholders, used in the text displayed on a *Reservation* shape, would be calculated using the DataMiner time (i.e., the local time). This would result in incorrect calculations when, while a booking was active, a transition occurred from daylight saving time (i.e., summer time) to standard time (i.e. winter time).
+
+From now on, the values of the [Elapsed time:], [Remaining time:], and [Time until start:] placeholders will be calculated using UTC time.
+
 ### Fixes
 
 #### Data Display: Problem when resetting the layout of a table [ID 45277]
