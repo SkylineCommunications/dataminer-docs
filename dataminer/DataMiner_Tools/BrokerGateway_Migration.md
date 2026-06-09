@@ -11,6 +11,8 @@ From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!-- RN 42573 -->, you can migrate fro
 > - This migration is **mandatory to be able to upgrade to DataMiner 10.6.0/10.6.1** or higher. If you try to upgrade to such a DataMiner version when this migration has not yet been completed, the upgrade will be blocked. From DataMiner 10.6.0/10.6.1 onwards, the legacy SLNet‑managed NATS solution (NAS and NATS services) is no longer supported.<!-- RN 43861 -->
 > - We strongly recommend upgrading to 10.5.0 [CU11]/10.5.12 [CU2] or higher before starting the migration. If you do want to start the migration on an earlier version, we recommend first installing [BrokerGateway 1.9.5.23100](https://community.dataminer.services/download/dataminer-brokergateway-1-9-5-23100-msi/) on each server prior to initiating the migration.
 
+> - I need to upgrade a system from 10.5.3 to 10.6.0. Trying to install 10.6.0-CU3 failed because of: Prerequisite VerifyBrokerGatewayMigration.dll failed: BrokerGateway is not active. According to the above recommendation I should first upgrade to 10.5.12. I did so, but I got the same error. Same with 10.5.11. So I then upgraded to 10.5.5 which is indicated above as the first version from which it is possible to migrate to the BrokerGateway-managed NATS solution using the "NATSMigration" tool. After that I attempted once more to upgrade to 10.5.12. But it fails again with the same error. So it seems this recommendation is not correct.
+
 > [!NOTE]
 > To start the migration, the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft‑launch option must not be disabled on any DataMiner Agent in the cluster. In DataMiner 10.5.0 [CU5]/10.5.8<!-- RN 43370 --> this option can be disabled when no migration is planned.
 
