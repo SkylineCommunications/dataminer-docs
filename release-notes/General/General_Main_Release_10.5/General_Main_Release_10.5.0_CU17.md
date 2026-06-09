@@ -99,6 +99,14 @@ From now on, the system will attempt to recreate the Cube session when the initi
 
 When, in a DataMiner Cube connected to a DataMiner System using Cassandra Cluster or STaaS, you opened the *Reports* page of a service card, the *Alarm events* graph would incorrectly be empty, showing "Alarm data not found in the current time range".
 
+#### SLWatchDog: Problem when restarting SLDataMiner [ID 45543]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When SLDataMiner had stopped working, up to now, any attempt made by SLWatchdog to restart the process would fail.
+
+From now on, when SLDataMiner stops working, SLWatchdog will be able to correctly restart it.
+
 #### AssemblyResolveHelper now returns already loaded fallback assembly if it was already loaded [ID 45567]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
