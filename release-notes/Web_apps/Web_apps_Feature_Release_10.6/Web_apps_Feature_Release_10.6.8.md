@@ -97,3 +97,9 @@ When, while renaming a page or a panel of a low-code app, a layer of a map, or a
 Up to now, when a *Parameter table* component contained multiple columns, of which one had values that depended on values in another column, those values were fetched only once. As a result, when a value in the other column changed, the values that depended on that value could become outdated.
 
 From now on, because of a number of enhancements with regard to caching, values depending on values in other columns will be refreshed more frequently, preventing values from getting outdated.
+
+#### Dashboards app: Problem when a GQI query was executed in a shared dashboard [ID 45662]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When a GQI query was executed in a shared dashboard, in some cases, that query would throw a `No connection` exception, causing the dashboard to redirect to the page listing all shared dashboards.
