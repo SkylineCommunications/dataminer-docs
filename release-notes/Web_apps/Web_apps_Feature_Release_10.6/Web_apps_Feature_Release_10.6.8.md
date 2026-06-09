@@ -34,6 +34,19 @@ This can be useful in the following scenarios:
 
 Each discrete value can have a display name that differs from the underlying value, making filters and UI elements more readable for end users.
 
+#### GQI DxM: Metadata will now be exposed for numeric columns [ID 45593]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When the GQI DxM is being used, from now on, GQI will expose the following metadata for a numeric column (when configured):
+
+- Unit (e.g., Mbps, %, dB)
+- Decimals (i.e., number of decimal places)
+- Min/Max (i.e., value range boundaries)
+- Step (i.e., the step size)
+
+This metadata will be available for numeric columns across all parameter-based data sources.
+
 ## Changes
 
 ### Enhancements
@@ -71,6 +84,12 @@ From now on, you can again scroll down to the last page and add new pages.
 
 Because of a locking issue that occurred while clearing expired items from the dashboard cache, up to now, an `Index was outside the bounds of the array` error would be thrown each time an attempt was made to retrieve a dashboard from the cache.
 
+#### Dashboards/Low-Code Apps: Problem when renaming an item [ID 45623]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When, while renaming a page or a panel of a low-code app, a layer of a map, or a table column name in the table editor, you clicked *Save* immediately after entering the last characters of the new name, in some cases, the new name would not contain the last characters you had typed.
+
 #### Dashboards/Low-Code Apps - Parameter table component: Problem with values becoming outdated [ID 45624]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
@@ -78,3 +97,9 @@ Because of a locking issue that occurred while clearing expired items from the d
 Up to now, when a *Parameter table* component contained multiple columns, of which one had values that depended on values in another column, those values were fetched only once. As a result, when a value in the other column changed, the values that depended on that value could become outdated.
 
 From now on, because of a number of enhancements with regard to caching, values depending on values in other columns will be refreshed more frequently, preventing values from getting outdated.
+
+#### Dashboards app: Problem when a GQI query was executed in a shared dashboard [ID 45662]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When a GQI query was executed in a shared dashboard, in some cases, that query would throw a `No connection` exception, causing the dashboard to redirect to the page listing all shared dashboards.
