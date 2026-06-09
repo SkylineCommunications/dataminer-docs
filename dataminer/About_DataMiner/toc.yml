@@ -28,6 +28,8 @@ items:
         topicUid: DM_selfhosted_and_StaaS
       - name: Self-managed DataMiner nodes and storage nodes (not recommended)
         topicUid: DM_and_storage_selfhosted
+      - name: Hybrid clusters
+        topicUid: Hybrid_clusters
   - name: Stack functions
     topicUid: Overview_Stack_Functions
     items:
