@@ -84,6 +84,12 @@ From now on, you can again scroll down to the last page and add new pages.
 
 Because of a locking issue that occurred while clearing expired items from the dashboard cache, up to now, an `Index was outside the bounds of the array` error would be thrown each time an attempt was made to retrieve a dashboard from the cache.
 
+#### Dashboards/Low-Code Apps: Problem when renaming an item [ID 45623]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When, while renaming a page or a panel of a low-code app, a layer of a map, or a table column name in the table editor, you clicked *Save* immediately after entering the last characters of the new name, in some cases, the new name would not contain the last characters you had typed.
+
 #### Dashboards/Low-Code Apps - Parameter table component: Problem with values becoming outdated [ID 45624]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
