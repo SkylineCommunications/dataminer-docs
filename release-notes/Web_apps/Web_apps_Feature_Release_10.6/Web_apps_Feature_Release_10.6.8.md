@@ -34,6 +34,19 @@ This can be useful in the following scenarios:
 
 Each discrete value can have a display name that differs from the underlying value, making filters and UI elements more readable for end users.
 
+#### GQI DxM: Metadata will now be exposed for numeric columns [ID 45593]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When the GQI DxM is being used, from now on, GQI will expose the following metadata for a numeric column (when configured):
+
+- Unit (e.g., Mbps, %, dB)
+- Decimals (i.e., number of decimal places)
+- Min/Max (i.e., value range boundaries)
+- Step (i.e., the step size)
+
+This metadata will be available for numeric columns across all parameter-based data sources.
+
 ## Changes
 
 ### Enhancements
