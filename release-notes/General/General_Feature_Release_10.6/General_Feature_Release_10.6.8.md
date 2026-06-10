@@ -210,7 +210,7 @@ From now on, this log entry will correctly include the names of the processes be
 
 #### NATSRepair.exe would incorrectly no longer work on new DMAs installed using DataMiner Installer v10.6 [ID 45636]
 
-<!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 The *NATSRepair.exe* tool would incorrectly no longer work on new DataMiner Agents that had been installed using a DataMiner Installer v10.6.
 
