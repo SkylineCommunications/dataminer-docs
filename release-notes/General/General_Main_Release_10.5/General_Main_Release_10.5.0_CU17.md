@@ -130,3 +130,11 @@ From now on, this log entry will correctly include the names of the processes be
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 The *NATSRepair.exe* tool would incorrectly no longer work on new DataMiner Agents that had been installed using a DataMiner Installer v10.6.
+
+#### MessageBroker would not be able to connect to the NATS bus of a DMA when the DMA name was an invalid DNS name [ID 45640]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, MessageBroker would not be able to connect to the NATS bus of a DataMiner Agent when the name of that Agent was an invalid DNS name.
+
+From now on, *NATSRepair.exe* and *NATSMigration.exe* will now make sure the default *MessageBrokerConfig.json* file points to localhost instead of the server name.
