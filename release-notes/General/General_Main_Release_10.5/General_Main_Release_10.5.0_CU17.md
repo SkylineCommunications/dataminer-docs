@@ -117,6 +117,16 @@ Up to now, when the assembly with the different version was already loaded in th
 
 From now on, when the assembly with the different version is already loaded in the application domain, the `AssemblyResolveHelper` will again correctly return the already loaded assembly.
 
+#### SLSNMPAgent: Problems due to a locking issue [ID 45586]
+
+<!-- MR 10.5.0 [CU17] - FR TBD -->
+
+Because of a locking issue in SLSNMPAgent, up to now, problems could occur in the following scenarios:
+
+- When resending (pending) active alarms for stopped/paused elements.
+- When reloading SNMP managers after their configuration had been updated.
+- When handling trap logic when the receiving end was not responding, resulting in a `Not acknowledged` or `Not responding` response.
+
 #### SLWatchDog: Log entry describing a process restart would incorrectly not include the names of the restarted processes [ID 45614]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
