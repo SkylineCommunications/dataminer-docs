@@ -122,3 +122,9 @@ When a GQI query was executed in a shared dashboard, in some cases, that query w
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 Since DataMiner Web version 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11, dashboards could incorrectly only be shared by users who had been granted the *Modules > System configuration > Tools > Admin tools* permission. Additionally, people also incorrectly needed that permission to update dashboards that had been shared earlier.
+
+#### Dashboards app: Problem when sharing a dashboard that included GQI components of which the queries contained nodes that could be linked to data [ID 45667]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When you shared a dashboard that included GQI components of which the queries contained nodes that could be linked to data, up to now, the GQI components would incorrectly show `Not authorized` errors.
