@@ -121,7 +121,7 @@ From now on, when the assembly with the different version is already loaded in t
 
 <!-- MR 10.5.0 [CU17] - FR TBD -->
 
-Because of a locking issue in SLSNMPAgent, up to now, problems could occur in the following scenarios:
+Because of a locking issue in SLSNMPAgent, up to now, in DataMiner 10.5.0 Main Release versions starting from DataMiner 10.5.0 [CU8], problems could occur in the following scenarios:
 
 - When resending (pending) active alarms for stopped/paused elements.
 - When reloading SNMP managers after their configuration had been updated.
