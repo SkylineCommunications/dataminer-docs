@@ -116,3 +116,9 @@ From now on, because of a number of enhancements with regard to caching, values 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When a GQI query was executed in a shared dashboard, in some cases, that query would throw a `No connection` exception, causing the dashboard to redirect to the page listing all shared dashboards.
+
+#### Dashboards app: Only people with 'Admin tools' permission would incorrectly be allowed to share dashboards and update shared dashboards [ID 45665]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Since DataMiner Web version 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11, dashboards could incorrectly only be shared by users who had been granted the *Modules > System configuration > Tools > Admin tools* permission. Additionally, people also incorrectly needed that permission to update dashboards that had been shared earlier.
