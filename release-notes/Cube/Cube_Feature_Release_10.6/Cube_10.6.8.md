@@ -91,10 +91,10 @@ When you connected to a local DataMiner Agent or a DaaS Agent via the DataMiner 
 
 From now on, the URL arguments will be converted to uppercase using culture-invariant rules, which will ensure consistent and correct behavior across system cultures.
 
-#### Spectrum analyzer cards: Left pane of the 'Edit monitor' window would have an incorrect background color [ID 45653]
+#### Spectrum analyzer cards: Left pane of the 'Edit monitor' and 'Edit script' windows would have an incorrect background color [ID 45653]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
-When, on the *Spectrum Analyzer* page of a spectrum analyzer card, you selected *Monitors > Edit Monitor*, and selected a monitor, up to now, the left pane of the *Edit monitor* window would incorrectly have its background color set to light blue.
+When, on the *Spectrum Analyzer* page of a spectrum analyzer card, you clicked the *Monitors* tab, and selected either *Edit monitor* or *Edit script*, up to now, in either the *Edit monitor* window or the *Edit script* window, the left pane would incorrectly have its background color set to light blue.
 
-From now on, this pane will have its background color set to white instead.
+From now on, in both these windows, the left pane will have its background color set to white instead.
