@@ -44,6 +44,9 @@ In the *Settings* pane for this component, you can configure the following setti
 
 The control is available under the basic controls. Like other basic controls, it also supports the *Set Value* component action, which sets the current value of the component to either a static or a dynamic value.
 
+> [!div class="button"]
+> [Read the blog post on our community website](https://community.dataminer.services/get-ready-for-richer-notes-and-better-structured-input-in-your-dashboards-and-apps/)
+
 ## New features
 
 #### GQI DxM: Extensions can now be created using the Skyline.DataMiner.Core.GQI.Extensions NuGet [ID 44760] [ID 45341]
