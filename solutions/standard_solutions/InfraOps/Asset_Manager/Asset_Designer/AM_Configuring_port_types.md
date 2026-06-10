@@ -1,6 +1,6 @@
 ---
 uid: AM_Configuring_port_types
-description: Click 'Port Types' on the Asset Designer page to define the type of ports available when establishing data/power connections between assets.
+description: Click Port Types on the Asset Designer page to define the type of ports available when establishing data/power connections between assets.
 ---
 
 # Configuring port types

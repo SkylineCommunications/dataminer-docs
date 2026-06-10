@@ -1,5 +1,6 @@
 ---
 uid: Managed_Assets
+description: Add assets to the system on the Managed Assets page when the necessary asset classes have been configured in the Asset Designer.
 ---
 
 # Managed Assets

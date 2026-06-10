@@ -1,6 +1,6 @@
 ---
 uid: App_Settings
-description: Go to the About page of the Asset Manager app to view and edit app settings like 'Enable Asset History', 'Enable Connection History', etc.
+description: Go to the About page of the Asset Manager app to view and edit app settings like Enable Asset History, Enable Connection History, etc.
 ---
 
 # App settings

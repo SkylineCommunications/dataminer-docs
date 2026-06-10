@@ -1,6 +1,6 @@
 ---
 uid: AM_Configuring_device_types
-description: Click the 'Device Types' button on the Asset Designer page to manage the device types. There is a predefined set of types you can extend as needed.
+description: Click the Device Types button on the Asset Designer page to manage the device types. There is a predefined set of types you can extend as needed.
 ---
 
 # Configuring device types
