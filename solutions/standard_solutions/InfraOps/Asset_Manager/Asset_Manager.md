@@ -1,5 +1,6 @@
 ---
 uid: Asset_Manager
+description: Explore the Asset Manager app, which allows you to add your assets to the system, including network, location, lifecycle, custody, ownership details, etc.
 ---
 
 # Asset Manager

@@ -1,10 +1,9 @@
 ---
 uid: AM_Configuring_cable_types
+description: Click 'Cable Types' on the Asset Designer page to define the type of cables available when establishing data/network connections between assets.
 ---
 
 # Configuring cable types
-
-To define the type of cables available when establishing data/network connections between assets, click *Cable Types* in the header bar of the Asset Designer page.
 
 The solution comes with a predefined list of cable types that you can configure and expand as needed:
 
