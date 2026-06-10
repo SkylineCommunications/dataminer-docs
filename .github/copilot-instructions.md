@@ -59,12 +59,13 @@ For most key directories (with the exception of `src`), all images are placed in
 
 1. Each `.md` file must have proper front matter including a unique `uid`.
 2. Each `.md` file must have a corresponding entry in the appropriate `toc.yml` file using the matching `topicUid`. The same file must never be added to more than one `toc.yml` file.
-3. Use DocFX-flavored Markdown syntax as defined in `/contributing/CTB_Markdown_Syntax.md`.
-4. Follow the instructions defined in `/contributing/CTB_Tips.md`.
-5. Use US English.
-6. Avoid em dashes when possible.
-7. One `.md` file must never contain more than 64000 characters.
-8. If changes are implemented that remove all references to a specific image, that image must be removed, with the exception of any images included in the `connectors` directory.
-9. Avoid adding pages that only contain links to underlying pages but no actual content of their own.
-10. When referring to changes introduced by a specific release note, make sure the Main Release version and Feature Release version introducing the changes are mentioned on the page.
-11. Use sentence casing for titles.
+3. Do not use spaces in file and folder names.
+4. Use DocFX-flavored Markdown syntax as defined in `/contributing/CTB_Markdown_Syntax.md`.
+5. Follow the instructions defined in `/contributing/CTB_Tips.md`.
+6. Use US English.
+7. Avoid em dashes when possible.
+8. One `.md` file must never contain more than 64000 characters.
+9. If changes are implemented that remove all references to a specific image, that image must be removed, with the exception of any images included in the `connectors` directory.
+10. Avoid adding pages that only contain links to underlying pages but no actual content of their own.
+11. When referring to changes introduced by a specific release note, make sure the Main Release version and Feature Release version introducing the changes are mentioned on the page.
+12. Use sentence casing for titles.

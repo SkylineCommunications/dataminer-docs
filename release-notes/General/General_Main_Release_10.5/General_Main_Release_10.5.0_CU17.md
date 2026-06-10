@@ -48,6 +48,14 @@ Up to now, the *SLElementInProtocol.txt* log file entries were added by SLProtoc
 
 From now on, these log file entries will be added by SLLog instead.
 
+#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
+
+From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
+
 #### SLLogCollector will now retrieve the value of the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
@@ -91,6 +99,14 @@ From now on, the system will attempt to recreate the Cube session when the initi
 
 When, in a DataMiner Cube connected to a DataMiner System using Cassandra Cluster or STaaS, you opened the *Reports* page of a service card, the *Alarm events* graph would incorrectly be empty, showing "Alarm data not found in the current time range".
 
+#### SLWatchDog: Problem when restarting DataMiner after SLDataMiner had stopped working [ID 45543]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When SLDataMiner had stopped working, up to now, any attempt made by SLWatchdog to restart the DataMiner Agent would fail.
+
+From now on, when SLDataMiner or any other critical DataMiner process stops working, SLWatchdog will be able to correctly restart the DataMiner Agent.
+
 #### AssemblyResolveHelper now returns already loaded fallback assembly if it was already loaded [ID 45567]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
@@ -101,6 +117,16 @@ Up to now, when the assembly with the different version was already loaded in th
 
 From now on, when the assembly with the different version is already loaded in the application domain, the `AssemblyResolveHelper` will again correctly return the already loaded assembly.
 
+#### SLSNMPAgent: Problems due to a locking issue [ID 45586]
+
+<!-- MR 10.5.0 [CU17] - FR TBD -->
+
+Because of a locking issue in SLSNMPAgent, up to now, in DataMiner 10.5.0 Main Release versions starting from DataMiner 10.5.0 [CU8], problems could occur in the following scenarios:
+
+- When resending (pending) active alarms for stopped/paused elements.
+- When reloading SNMP managers after their configuration had been updated.
+- When handling trap logic when the receiving end was not responding, resulting in a `Not acknowledged` or `Not responding` response.
+
 #### SLWatchDog: Log entry describing a process restart would incorrectly not include the names of the restarted processes [ID 45614]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
@@ -108,3 +134,17 @@ From now on, when the assembly with the different version is already loaded in t
 When SLWatchDog had queued a process restart after having detected that one or more non-critical processes had stop working, up to now, the associated log entry would incorrectly not include the names of the affected processes: `Queueing Process Restarts in 1 minute ()`
 
 From now on, this log entry will correctly include the names of the processes being restarted. For example: `Queueing Process Restarts in 1 minute (SLProtocol.exe)`
+
+#### NATSRepair.exe would incorrectly no longer work on new DMAs installed using DataMiner Installer v10.6 [ID 45636]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+The *NATSRepair.exe* tool would incorrectly no longer work on new DataMiner Agents that had been installed using a DataMiner Installer v10.6.
+
+#### MessageBroker would not be able to connect to the NATS bus of a DMA when the server name of the DMA was an invalid DNS name [ID 45640]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, MessageBroker would not be able to connect to the NATS bus of a DataMiner Agent when the server name of that Agent was an invalid DNS name.
+
+From now on, *NATSRepair.exe* and *NATSMigration.exe* will now make sure the default *MessageBrokerConfig.json* file points to localhost instead of the server name.

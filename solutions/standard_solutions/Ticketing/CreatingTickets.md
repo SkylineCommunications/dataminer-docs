@@ -1,5 +1,6 @@
 ---
 uid: CreatingTickets
+description: Find out the different ways in which tickets can be created and what happens when you create a ticket from a Cube alarm.
 ---
 
 # Ticket creation

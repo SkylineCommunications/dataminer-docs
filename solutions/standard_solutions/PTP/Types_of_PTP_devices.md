@@ -1,5 +1,6 @@
 ---
 uid: Types_of_PTP_devices
+description: Explore the types of PTP devices supported by the PTP app - Grandmaster clocks, boundary clocks, transparent clocks, and slave clocks.
 ---
 
 # Types of PTP devices

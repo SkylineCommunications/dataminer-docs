@@ -173,6 +173,15 @@ On the About pages of the MediaOps Plan apps, version information has been added
 
 When you update the icon on a resource or resource pool, the system will verify if the resource or resource pool is used in any workflow. If the resource or resource pool is used in a workflow, you will now be asked whether the new icon should be applied across all workflows that reference it. When you choose to update all workflows, the system will trigger a background automation script supporting both resources and resource pools to update the icon on all corresponding referencing workflow nodes.
 
+#### Improved workflow node visualization [ID 45666]
+
+The workflow node visualization in the Scheduling and Workflow Designer apps has been improved:
+
+- **Support for custom icons**: You can now configure custom icons for workflow nodes by adding them in the folder `C:\Skyline DataMiner\Webpages\Public\MediaOps\Icons`.
+- **Improved node selection indication**: When a node is selected, the background will now change to make the selected node stand out better (regardless of whether a custom icon is used).
+- **Clearer difference between resources and resource pools**: Resources and resource pools now use different colors and shapes so they can be easily told apart.
+- **Hand icon shown**: When the node configuration is incomplete, a red hand icon is now displayed on the node within the Scheduling app.
+
 ### Fixes
 
 #### Scheduling: Default value dropdown not updated after change to discrete values of system property [ID 45442]

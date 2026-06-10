@@ -17,6 +17,8 @@ items:
     topicUid: DataMiner_compliance_offering
   - name: Evolution vs. optimization in software development
     topicUid: evolution_vs_optimization
+  - name: Architecture and components
+    topicUid: Overview_Architecture_and_components
   - name: Deployment models
     topicUid: Overview_hosting
     items:
