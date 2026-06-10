@@ -56,11 +56,11 @@ Up to now, the *SLElementInProtocol.txt* log file entries were added by SLProtoc
 
 From now on, these log file entries will be added by SLLog instead.
 
-#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from DataMiner Cube [ID 45579]
+#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
-When DataMiner Cube requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
+When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
 
 From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
 
@@ -141,7 +141,7 @@ From now on, this log entry will correctly include the names of the processes be
 
 #### NATSRepair.exe would incorrectly no longer work on new DMAs installed using DataMiner Installer v10.6 [ID 45636]
 
-<!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 The *NATSRepair.exe* tool would incorrectly no longer work on new DataMiner Agents that had been installed using a DataMiner Installer v10.6.
 
@@ -150,3 +150,11 @@ The *NATSRepair.exe* tool would incorrectly no longer work on new DataMiner Agen
 <!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
 
 Up to now, when you logged in to a DaaS system using external authentication, in some cases, the DaaS system would incorrectly not be flagged as such. As a result, you would be allowed to access functionality that is restricted to non-DaaS systems.
+
+#### MessageBroker would not be able to connect to the NATS bus of a DMA when the server name of the DMA was an invalid DNS name [ID 45640]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, MessageBroker would not be able to connect to the NATS bus of a DataMiner Agent when the server name of that Agent was an invalid DNS name.
+
+From now on, *NATSRepair.exe* and *NATSMigration.exe* will now make sure the default *MessageBrokerConfig.json* file points to localhost instead of the server name.

@@ -120,11 +120,11 @@ Up to now, the *SLElementInProtocol.txt* log file entries were added by SLProtoc
 
 From now on, these log file entries will be added by SLLog instead.
 
-#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from DataMiner Cube [ID 45579]
+#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
-When DataMiner Cube requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
+When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
 
 From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
 
@@ -172,6 +172,18 @@ When SLDataMiner had stopped working, up to now, any attempt made by SLWatchdog 
 
 From now on, when SLDataMiner or any other critical DataMiner process stops working, SLWatchdog will be able to correctly restart the DataMiner Agent.
 
+#### SLNet/SLDataGateway: Paging requests via SLNetInternalRepository could fail when the paging cookie expired mid-session [ID 45550]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+In some cases, paged retrievals of DOM instances or booking instances could fail with an `InvalidOperationException` when the server-side paging cookie expired before all pages were fetched. In GQI-powered low-code apps, this could then surface as a random error:
+
+`Select failed, could not read the objects from the database: System.InvalidOperationException: The provided cookie was not found among the live paging handlers of this storage type. Maybe it has already been deleted.`
+
+From now on, SLDataGateway will gracefully reset an expired paging cookie instead of throwing an error. When the cookie is no longer found among the live paging handlers, a fresh paging session will automatically be started.
+
+Also, `SelectPagingHelper` will now maintain a set of all object IDs received across pages. When a paging session restarts due to a cookie renewal, previously returned objects are filtered out, preventing duplicates from being returned.
+
 #### AssemblyResolveHelper now returns already loaded fallback assembly if it was already loaded [ID 45567]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
@@ -198,7 +210,7 @@ From now on, this log entry will correctly include the names of the processes be
 
 #### NATSRepair.exe would incorrectly no longer work on new DMAs installed using DataMiner Installer v10.6 [ID 45636]
 
-<!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 The *NATSRepair.exe* tool would incorrectly no longer work on new DataMiner Agents that had been installed using a DataMiner Installer v10.6.
 
@@ -207,3 +219,11 @@ The *NATSRepair.exe* tool would incorrectly no longer work on new DataMiner Agen
 <!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
 
 Up to now, when you logged in to a DaaS system using external authentication, in some cases, the DaaS system would incorrectly not be flagged as such. As a result, you would be allowed to access functionality that is restricted to non-DaaS systems.
+
+#### MessageBroker would not be able to connect to the NATS bus of a DMA when the server name of the DMA was an invalid DNS name [ID 45640]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, MessageBroker would not be able to connect to the NATS bus of a DataMiner Agent when the server name of that Agent was an invalid DNS name.
+
+From now on, *NATSRepair.exe* and *NATSMigration.exe* will now make sure the default *MessageBrokerConfig.json* file points to localhost instead of the server name.

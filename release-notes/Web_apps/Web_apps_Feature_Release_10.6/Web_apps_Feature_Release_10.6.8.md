@@ -57,6 +57,19 @@ This metadata will be available for numeric columns across all parameter-based d
 
 Because of a number of optimizations made with regard to JSON serialization, overall performance has increased when returning GQI query results.
 
+#### Dashboards/Low-Code Apps: State timeline component will now use the primary key when requesting timeline data [ID 45600]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When a dashboard or a low-code app is connected to a DataMiner Agent running version 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8, *State timeline* components will now refer to display column tables using the primary key when requesting timeline data using a `GetReportTimeLineDataMessage`.
+
+When a dashboard or a low-code app is connected to a DataMiner Agent running an older version, for compatibility reasons, *State timeline* components will continue now refer to display column tables using the display key.
+
+See also: [DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]](xref:General_Feature_Release_10.6.8#dataminer-agents-will-now-translate-the-primary-key-to-the-display-key-when-receiving-timeline-data-requests-from-a-client-id-45579)
+
+> [!IMPORTANT]
+> Before you request timeline data using the `GetAlarmStateTimelineForParameter` web method, from now on, first send the `IsFeatureAvailable` web method with featureName set to "DKForReport" to check whether the DataMiner Agent requires you to send the display key or the primary key. If the method returns true, send the display key. If it returns false, send the primary key.
+
 ### Fixes
 
 #### GQI DxM: Problem when querying a mediation protocol with standalone parameters using the 'Parameters for elements where' data source [ID 45494]
@@ -103,3 +116,15 @@ From now on, because of a number of enhancements with regard to caching, values 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When a GQI query was executed in a shared dashboard, in some cases, that query would throw a `No connection` exception, causing the dashboard to redirect to the page listing all shared dashboards.
+
+#### Dashboards app: Only people with 'Admin tools' permission would incorrectly be allowed to share dashboards and update shared dashboards [ID 45665]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Since DataMiner Web version 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11, dashboards could incorrectly only be shared by users who had been granted the *Modules > System configuration > Tools > Admin tools* permission. Additionally, people also incorrectly needed that permission to update dashboards that had been shared earlier.
+
+#### Dashboards app: Problem when sharing a dashboard that included GQI components of which the queries contained nodes that could be linked to data [ID 45667]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When you shared a dashboard that included GQI components of which the queries contained nodes that could be linked to data, up to now, the GQI components would incorrectly show `Not authorized` errors.

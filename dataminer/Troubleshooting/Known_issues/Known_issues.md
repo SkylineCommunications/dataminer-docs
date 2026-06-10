@@ -38,7 +38,6 @@ uid: Known_issues
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
-| [SLSNMPAgent RTEs when SNMP manager is not responding](xref:KI_SLSNMPAgent_RTE_SNMP_manager_not_responding) | From DataMiner 10.5.0 [CU8] onwards | | May 28, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
@@ -51,6 +50,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [SLSNMPAgent RTEs when SNMP manager is not responding](xref:KI_SLSNMPAgent_RTE_SNMP_manager_not_responding) | From DataMiner 10.5.0 [CU8] onwards | DataMiner 10.5.0 [CU17] | May 28, 2026 |
 | [Alarm storm prevention user settings not visualized correctly](xref:KI_Cube_Alarm_storm_prevention) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 | DataMiner Cube 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 | 15 April, 2026 |
 | [GQI DxM unavailable because of missing Newtonsoft.Json assembly](xref:KI_GQI_DxM_unavailable_missing_Newtonsoft_Json) | DataMiner web 10.5.0 [CU1]/10.5.4 or higher | DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 | 25 March, 2026 |
 | [SLNet handle leak caused by SAML authentication and SLHelper startup](xref:KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup) | DataMiner 10.5.0 [CU12], 10.6.0, and 10.6.3 [CU0] | DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 [CU1] | February 25, 2026 |
