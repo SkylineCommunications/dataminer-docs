@@ -220,10 +220,10 @@ The *NATSRepair.exe* tool would incorrectly no longer work on new DataMiner Agen
 
 Up to now, when you logged in to a DaaS system using external authentication, in some cases, the DaaS system would incorrectly not be flagged as such. As a result, you would be allowed to access functionality that is restricted to non-DaaS systems.
 
-#### MessageBroker would not be able to connect to the NATS bus of a DMA when the DMA name was an invalid DNS name [ID 45640]
+#### MessageBroker would not be able to connect to the NATS bus of a DMA when the server name of the DMA was an invalid DNS name [ID 45640]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
-Up to now, MessageBroker would not be able to connect to the NATS bus of a DataMiner Agent when the name of that Agent was an invalid DNS name.
+Up to now, MessageBroker would not be able to connect to the NATS bus of a DataMiner Agent when the server name of that Agent was an invalid DNS name.
 
 From now on, *NATSRepair.exe* and *NATSMigration.exe* will now make sure the default *MessageBrokerConfig.json* file points to localhost instead of the server name.
