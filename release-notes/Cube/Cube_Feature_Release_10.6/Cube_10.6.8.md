@@ -30,12 +30,12 @@ The following types of connections are considered unsafe:
 
 - Connections using the HTTP protocol.
 - Connections using the HTTPS protocol with a certificate that has errors.
-- Connections using the HTTPS protocol with a valid certificate that allow that certificate to ignore SSL errors.
+- Connections using the HTTPS protocol with a valid certificate, but with the *Trust anyway* option set to true.
 
 If you hover the mouse over a padlock icon, a tooltip will appear, explaining how the issue can be resolved.
 
 > [!NOTE]
-> When you click a tile to launch a Cube, a popup window will appear once when the connection is considered unsafe. The next time you connect to that same DataMiner System, no popup window will appear anymore, but a padlock icon will be displayed on the tile until the connection is made safe.
+> When you click a tile to launch a Cube, a popup window will appear when the connection is considered unsafe (once in case of HTTPS, each time in case of HTTP).
 
 ## Changes
 
