@@ -172,6 +172,18 @@ When SLDataMiner had stopped working, up to now, any attempt made by SLWatchdog 
 
 From now on, when SLDataMiner or any other critical DataMiner process stops working, SLWatchdog will be able to correctly restart the DataMiner Agent.
 
+#### SLNet/SLDataGateway: Paging requests via SLNetInternalRepository could fail when the paging cookie expired mid-session [ID 45550]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+In some cases, paged retrievals of DOM instances or booking instances could fail with an `InvalidOperationException` when the server-side paging cookie expired before all pages were fetched. In GQI-powered low-code apps, this could then surface as a random error:
+
+`Select failed, could not read the objects from the database: System.InvalidOperationException: The provided cookie was not found among the live paging handlers of this storage type. Maybe it has already been deleted.`
+
+From now on, SLDataGateway will gracefully reset an expired paging cookie instead of throwing an error. When the cookie is no longer found among the live paging handlers, a fresh paging session will automatically be started.
+
+Also, `SelectPagingHelper` will now maintain a set of all object IDs received across pages. When a paging session restarts due to a cookie renewal, previously returned objects are filtered out, preventing duplicates from being returned.
+
 #### AssemblyResolveHelper now returns already loaded fallback assembly if it was already loaded [ID 45567]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->

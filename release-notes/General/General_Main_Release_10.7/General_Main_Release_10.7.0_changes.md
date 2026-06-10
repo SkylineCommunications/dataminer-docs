@@ -628,3 +628,15 @@ Up to now, when the Agent with the lowest DMA ID had been removed from a DataMin
 `System.AggregateException: One or more errors occurred. ---> Skyline.DataMiner.Net.Exceptions.DataMinerException: Fatal error while sending request [MasterSyncRequestMessage for message of type SetReservationInstanceMessage from XXX] to master DMA XXX, max retries reached. ---> Skyline.DataMiner.Net.MasterSync.MasterSyncerException: Could not use the connection to master DMA XXX`
 
 From now on, when the Agent with the lowest DMA ID was removed from the DataMiner System, the Resource Manager will correctly re-evaluate and update the master DMA when it receives a master synchronization request.
+
+#### SLNet/SLDataGateway: Paging requests via SLNetInternalRepository could fail when the paging cookie expired mid-session [ID 45550]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+In some cases, paged retrievals of DOM instances or booking instances could fail with an `InvalidOperationException` when the server-side paging cookie expired before all pages were fetched. In GQI-powered low-code apps, this could then surface as a random error:
+
+`Select failed, could not read the objects from the database: System.InvalidOperationException: The provided cookie was not found among the live paging handlers of this storage type. Maybe it has already been deleted.`
+
+From now on, SLDataGateway will gracefully reset an expired paging cookie instead of throwing an error. When the cookie is no longer found among the live paging handlers, a fresh paging session will automatically be started.
+
+Also, `SelectPagingHelper` will now maintain a set of all object IDs received across pages. When a paging session restarts due to a cookie renewal, previously returned objects are filtered out, preventing duplicates from being returned.
