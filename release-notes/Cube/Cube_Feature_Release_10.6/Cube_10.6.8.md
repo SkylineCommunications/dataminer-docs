@@ -20,7 +20,22 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No new features have been added yet.*
+#### Cube start window: DataMiner Systems using an unsafe connection will be marked with a padlock icon [ID 45317]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+In the Cube start window, from now on, tiles representing a DataMiner System using an unsafe connection will be marked with a padlock icon.
+
+The following types of connections are considered unsafe:
+
+- Connections using the HTTP protocol.
+- Connections using the HTTPS protocol with a certificate that has errors.
+- Connections using the HTTPS protocol with a valid certificate that allow that certificate to ignore SSL errors.
+
+If you hover the mouse over a padlock icon, a tooltip will appear, explaining how the issue can be resolved.
+
+> [!NOTE]
+> When you click a tile to launch a Cube, a popup window will appear once when the connection is considered unsafe. The next time you connect to that same DataMiner System, no popup window will appear anymore, but a padlock icon will be displayed on the tile until the connection is made safe.
 
 ## Changes
 
