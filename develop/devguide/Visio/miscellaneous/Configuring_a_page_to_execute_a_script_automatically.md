@@ -42,3 +42,9 @@ For example, with the configuration below, double-clicking a node in an embedded
 
 > [!TIP]
 > See also: [\[Event:...\]](xref:Placeholders_for_variables_in_shape_data_values#event)
+
+## Output variables
+
+When a page-level script finishes successfully, it can pass output values to session variables. See [Passing automation script output to session variables](xref:Linking_a_shape_to_an_Automation_script#passing-automation-script-output-to-session-variables).
+
+By default, these output variables are set on the card context. You can specify the `WorkspaceVariable` option to set the variable on the workspace context only (not on the card context). There is currently no option to set the output variable on the page context.
