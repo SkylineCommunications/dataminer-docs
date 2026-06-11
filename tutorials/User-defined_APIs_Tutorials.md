@@ -1,6 +1,6 @@
 ---
 uid: User-defined_APIs_Tutorials
-description: Hands-on user-defined API tutorials showing how to build simple endpoints, validate input, retrieve data, and return JSON responses.
+description: Discover all User-defined APIs tutorials. These will show you how to build simple endpoints, validate input, retrieve data, and return JSON responses.
 ---
 
 # User-defined APIs tutorials

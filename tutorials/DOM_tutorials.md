@@ -1,6 +1,6 @@
 ---
 uid: DOM_tutorials
-description: DOM tutorials that help you create definitions, manage states, build basic setups, remove field descriptors, and generate code.
+description: Discover all DOM tutorials. These will help you create definitions, manage states, build basic setups, remove field descriptors, and generate code.
 ---
 
 # Tutorials
