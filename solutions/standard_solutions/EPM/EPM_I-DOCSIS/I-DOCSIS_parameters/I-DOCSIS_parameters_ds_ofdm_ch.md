@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_parameters_ds_ofdm_ch
 keywords: I-DOCSIS parameters
+description: Discover all the DS OFDM CH parameters available in the Integrated DOCSIS branch of the EPM Solution.
 ---
 
 # Integrated DOCSIS parameters – DS OFDM CH
