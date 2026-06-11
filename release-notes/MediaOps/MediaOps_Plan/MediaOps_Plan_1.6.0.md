@@ -199,3 +199,7 @@ Attempting to add and save a new property to a resource that had a concurrency o
 #### Aborting a script caused it to be logged as failed [ID 45590]
 
 Previously, closing an interactive script by clicking the X icon in the top-right corner resulted in the script being logged as failed. This behavior has been fixed, and such actions no longer mark the script as a failure.
+
+#### Scheduling: Workflow-level configuration not cloned when creating job from workflow [ID 45679]
+
+When a new job was created from a workflow template, workflow-level configuration (e.g., capabilities) was not cloned, though node-level configuration was cloned correctly. This has now been fixed.
