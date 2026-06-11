@@ -128,3 +128,19 @@ Since DataMiner Web version 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11, dashboards could
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When you shared a dashboard that included GQI components of which the queries contained nodes that could be linked to data, up to now, the GQI components would incorrectly show `Not authorized` errors.
+
+##### Dashboards app: Header and subheader of a shared dashboard would include unnecessary UI elements [ID 45669]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+In some cases, the header and subheader of a shared dashboard would incorrectly include unnecessary UI elements like a dashboard search box, a user icon, an edit button, and a share indicator. From now on, a shared dashboard will no longer include these UI elements.
+
+Also, in some cases, the reload button of a shared dashboard would not work.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Problem with icon shape dimensions [ID 45686]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When an icon shape in a node template of a *Node edge graph* component did not have its width locked, up to now, it would not correctly apply the width when you zoomed in or out in the graph.
+
+Also, in some cases, when the width of an icon shape was locked, up to now, the icon would jump around when you panned inside a graph.

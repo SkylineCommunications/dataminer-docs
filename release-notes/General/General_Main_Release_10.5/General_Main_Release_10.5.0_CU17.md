@@ -148,3 +148,9 @@ The *NATSRepair.exe* tool would incorrectly no longer work on new DataMiner Agen
 Up to now, MessageBroker would not be able to connect to the NATS bus of a DataMiner Agent when the server name of that Agent was an invalid DNS name.
 
 From now on, *NATSRepair.exe* and *NATSMigration.exe* will now make sure the default *MessageBrokerConfig.json* file points to localhost instead of the server name.
+
+#### SLASPConnection could stop working when it failed to retrieve the local IP address [ID 45656]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+In some cases, the SLASPConnection process could stop working when it failed to retrieve the local IP address.
