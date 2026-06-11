@@ -22,8 +22,9 @@ The timing for a contributing resource is fully managed by the SRM framework and
 - **Locked**: The timing of the main booking needs to be fully included in the timing of the contributing booking
 
   > [!NOTE]
-  > When a contributing resource is added to a main booking that is already running, the constraint on the time window is not applicable for the elapsed duration. <!-- RN 27107 -->
-  > The SRM concurrency license defines the maximum number of overlapping bookings allowed in a cluster. Any regular booking will consume a credit, except for contributing bookings of type **Locked**. <!-- RN 28659 -->
+  >
+  > - When a contributing resource is added to a main booking that is already running, the constraint on the time window is not applicable for the elapsed duration. <!-- RN 27107 -->
+  > - The SRM concurrency license defines the maximum number of overlapping bookings allowed in a cluster. Any regular booking will consume a credit, except for contributing bookings of type **Locked**. <!-- RN 28659 -->
 
 ### Main or local
 
