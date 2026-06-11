@@ -1,5 +1,6 @@
 ---
 uid: Catalog_Tutorials
+description: Discover all Catalog tutorials. The Catalog allows users and Strategic Partners to browse and deploy available connectors, packages, dashboards, and more.
 ---
 
 # Catalog tutorials
