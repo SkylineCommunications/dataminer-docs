@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_us_service_group
+description: Discover the entire list of US Service Group parameters available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – US Service Group
