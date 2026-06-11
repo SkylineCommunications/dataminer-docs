@@ -1,6 +1,6 @@
 ---
 uid: Catalog_Tutorials
-description: Discover all Catalog tutorials. The Catalog allows users and Strategic Partners to browse and deploy available connectors, packages, dashboards, and more.
+description: Explore quick tutorials to register and update DataMiner Catalog items with the Catalog API and GitHub Actions.
 ---
 
 # Catalog tutorials

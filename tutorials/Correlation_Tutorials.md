@@ -1,7 +1,7 @@
 ---
 uid: Correlation_Tutorials
 keywords: correlation
-description: Discover all DataMiner Correlation tutorials. With Correlation, you can take action whenever something is happening in your DataMiner System.
+description: Learn how to build DataMiner Correlation rules that detect events early and trigger automated actions.
 ---
 
 # DataMiner Correlation tutorials

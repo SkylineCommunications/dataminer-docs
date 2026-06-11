@@ -1,6 +1,6 @@
 ---
 uid: ChatOps_Tutorials
-description: Discover all ChatOps tutorials. With ChatOps, you can integrate your DataMiner System with Microsoft Teams.
+description: Discover hands-on ChatOps tutorials to connect DataMiner with Microsoft Teams, automate notifications, and build interactive commands.
 ---
 
 # ChatOps tutorials
