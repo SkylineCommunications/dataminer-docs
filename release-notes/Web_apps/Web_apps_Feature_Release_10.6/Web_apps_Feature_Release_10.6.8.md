@@ -128,3 +128,11 @@ Since DataMiner Web version 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11, dashboards could
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When you shared a dashboard that included GQI components of which the queries contained nodes that could be linked to data, up to now, the GQI components would incorrectly show `Not authorized` errors.
+
+##### Dashboards app: Header and subheader of a shared dashboard would include unnecessary UI elements [ID 45669]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+In some cases, the header and subheader of a shared dashboard would incorrectly include unnecessary UI elements like a dashboard search box, a user icon, an edit button, and a share indicator. From now on, a shared dashboard will no longer include these UI elements.
+
+Also, in some cases, the reload button of a shared dashboard would not work.
