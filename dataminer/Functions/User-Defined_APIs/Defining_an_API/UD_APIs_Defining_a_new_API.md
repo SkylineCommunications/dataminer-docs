@@ -61,6 +61,7 @@ The entry point method has two parameters.
   | Parameters | `Dictionary<string, string>` | Contains the deserialized parameters if you select *Dictionary (parsed from JSON)* when configuring the API. See [User input data](#user-input-data). |
   | Context | [ApiTriggerContext](#apitriggercontext) | Contains properties with info about the request. Available from DataMiner 10.3.9/10.4.0 onwards. <!-- RN 37015 --> |
   | QueryParameters | [IQueryParameters](#query-parameters) | Contains the request query string parameters. Available from DataMiner 10.4.1/10.5.0 onwards. <!-- RN 37733 --> |
+  | RouteParameters | `Dictionary<string, string>` | Contains the path parameter values captured from a dynamic route. Available from DataMiner 10.6.8/10.7.0 onwards. <!-- RN 45681 --> See [Route parameters](#route-parameters). |
 
 #### ApiTriggerContext
 
@@ -141,6 +142,23 @@ HTTP GET mydataminer.customer.local/api/custom/encoders/status
 
 > [!TIP]
 > We recommend that you keep routes simple and straightforward. For some great tips on this, refer to [restfulapi.net](https://restfulapi.net/resource-naming/).
+
+##### Route parameters
+
+From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45681 -->, a route can include **dynamic segments** written as `{parameterName}`. When a request matches a dynamic route, the value at each dynamic position in the URL path is captured and made available in `ApiTriggerInput.RouteParameters`. The key is the segment name from the route template, and the value is the exact path segment from the request URL.
+
+For example, a route of `items/{id}` matches a request to `items/42`, and the script will receive `RouteParameters["id"] == "42"`. A route with multiple dynamic segments, such as `a/{x}/b/{y}`, captures each segment separately.
+
+When a request could match both a static and a dynamic route:
+
+- A static route always takes priority over a dynamic route.
+- Among dynamic routes, templates with more literal segments take priority. For example, `foo/{bar}` takes precedence over `{foo}/bar` for a request to `foo/bar`.
+
+> [!NOTE]
+>
+> - For static route matches, `RouteParameters` is an empty dictionary.
+> - Parameter names must be written as a well-formed `{name}` placeholder and cannot contain `/`, `{`, `}`, `?`, `*`, `:`, or `=`. Each parameter name must be unique within the route.
+> - Two routes that could match the same request path are considered conflicting and cannot coexist. For example, `ticket/{id}` and `ticket/{ticketId}` conflict. See [RouteInUse](xref:UD_APIs_Objects_ApiDefinition#errors).
 
 ### Output
 
