@@ -1,5 +1,6 @@
 ---
 uid: Asset_Designer
+description: Go to the Asset Designer page to configure the asset classes used in your system. You can import classes, but you can also manually create classes.
 ---
 
 # Asset Designer
