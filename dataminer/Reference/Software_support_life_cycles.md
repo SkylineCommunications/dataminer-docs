@@ -105,7 +105,7 @@ The following features currently have the "End of Support" status. They will no 
 |------|---------|---------------|
 | Support for Cassandra versions prior to 4.x |Cassandra versions older than Cassandra 4.x are no longer supported on any operating system.| End of Life as of DataMiner 10.7.x (Q4 2026).|
 | Support for MySQL as local database | End of Support as of DataMiner 10.6.x. Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage). | End of Life to be confirmed. |
-| Support for overlays of type 'kml' | As Google has deprecated KML layer support, [KML overlays](xref:Layer_types#overlays-of-type-kml) used in both the [maps component](xref:DashboardMaps) and the [Maps add-on module](xref:About_DMS_Maps) will also no longer be available. We recommend switching to [GeoJSON overlays](xref:Layer_types#overlays-of-type-geojson). | End of Life as of DataMiner 10.7.x (Q2 2027). |
+| Support for overlays of type 'kml' | As Google has deprecated KML layer support, [KML overlays](xref:Layer_types#overlays-of-type-kml) used in both the [maps component](xref:DashboardMaps) and the [Maps add-on module](xref:About_DMS_Maps) will also no longer be available. We recommend switching to [GeoJSON overlays](xref:Layer_types#overlays-of-type-geojson). | End of Life:<br> - August 2026 for systems running DataMiner versions below 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<br>- May 2027 for DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 and later |
 | Two-site redundant indexing clusters | This setup should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS). | End of Life as of DataMiner 10.7.x (Q4 2026).|
 
 ### End of Life
@@ -162,7 +162,6 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 - **End of Support – Elasticsearch 6.8**: As Elastic no longer supports Elasticsearch 6.8 (or lower), support for this will also end in DataMiner. We highly recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [OpenSearch](xref:OpenSearch_database) instead.
 - **End of Life – Legacy Reporter & Dashboards**: No longer available from this version onwards. Use the new DataMiner Dashboards app instead.
 - **End of Support – [Logger tables of type DirectConnection with a primary key](xref:AdvancedLoggerTablesDefiningDirectConnectionTable)**
-- **End of Life – [Overlays of type 'kml'](xref:Layer_types#overlays-of-type-kml)**: As Google has deprecated KML layer support, KML overlays used in both the [maps component](xref:DashboardMaps) and the [Maps add-on module](xref:About_DMS_Maps) will also no longer be available. We recommend switching to [GeoJSON overlays](xref:Layer_types#overlays-of-type-geojson).
 - **End of Support – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.
 - **End of Life - Query executor**: No longer available from this version onwards.
 - **End of Support – [Radius authentication](xref:Configuring_RADIUS_settings)**: This type of authentication is deprecated and has inherent flaws. We recommend using a different type of authentication instead.
