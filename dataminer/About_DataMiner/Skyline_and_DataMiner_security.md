@@ -1,6 +1,6 @@
 ---
 uid: Skyline_and_DataMiner_security
-description: Skyline Communications continuously invests in security, with a dedicated security team and annual security assessments by third-party specialists.
+description: Find out how Skyline continuously invests in security, with a dedicated security team and annual security assessments by third-party specialists.
 ---
 
 # Skyline Communications and DataMiner security
