@@ -47,6 +47,12 @@ When the GQI DxM is being used, from now on, GQI will expose the following metad
 
 This metadata will be available for numeric columns across all parameter-based data sources.
 
+#### Dashboards/Low-Code Apps: Exporting and importing GQI queries to and from raw JSON format [ID 45630]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+In dashboards and low-code apps, it is now possible to export and import GQI queries to and from raw JSON format.
+
 ## Changes
 
 ### Enhancements
