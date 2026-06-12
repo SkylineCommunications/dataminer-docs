@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 15 June 2026 - Enhancement - All apps - New header with improved help and support integration
 
-All dataminer.services apps now feature a new header with better integration for help and support. In the Catalog app, the search bar has also moved to a new position.
+All dataminer.services apps now feature a new header with better integration for help and support. In the Catalog app, the search bar has also been moved to a new position.
 
 ### 15 June 2026 - Enhancement - Admin - Billable usage chart limited to selected month
 
