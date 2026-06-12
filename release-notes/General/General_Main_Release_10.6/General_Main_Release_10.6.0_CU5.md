@@ -72,6 +72,14 @@ From now on, SLLogCollector will also retrieve the value of the Windows security
 
 DataMiner does not support having this policy enabled. Having this option enabled will prevent DataMiner from starting up properly.
 
+#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 45712]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of a number of enhancements, overall performance of the *Cube CRL Freeze* BPA test has increased.
+
+This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
+
 ### Fixes
 
 #### History set trending would show gaps where no gaps were expected [ID 44705]
@@ -164,3 +172,9 @@ From now on, *NATSRepair.exe* and *NATSMigration.exe* will now make sure the def
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 In some cases, the SLASPConnection process could stop working when it failed to retrieve the local IP address.
+
+#### Problem when forwarding SNMPv3 traps [ID 45660]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When, within a DataMiner System, a DataMiner Agent receives an SNMPv3 trap for an element hosted by another DataMiner Agent, it will forward that trap to the other Agent. However, in some cases, when the Agent that received the trap did not have the correct credentials needed to decrypt the trap, it would fail to forward the trap to the element.
