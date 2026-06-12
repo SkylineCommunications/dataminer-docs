@@ -238,4 +238,4 @@ In some cases, the SLASPConnection process could stop working when it failed to 
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
-When, within a DataMiner System, a DataMiner Agent receives an SNMPv3 trap for an element hosted by another DataMiner Agent, it will forward that trap to the other Agent. However, in some cases, the element would incorrectly not receive the trap when it did not have the correct credentials needed to decrypt the trap.
+When, within a DataMiner System, a DataMiner Agent receives an SNMPv3 trap for an element hosted by another DataMiner Agent, it will forward that trap to the other Agent. However, in some cases, when the Agent that received the trap did not have the correct credentials needed to decrypt the trap, it would fail to forward the trap to the element.
