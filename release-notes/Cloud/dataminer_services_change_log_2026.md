@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 15 June 2026 - Enhancement - All apps - New header with improved help and support integration
+
+All dataminer.services apps now feature a new header with better integration for help and support. In the Catalog app, the search bar has also moved to a new position.
+
+### 15 June 2026 - Enhancement - Admin - Billable usage chart limited to selected month
+
+On the Billing page of the Admin app, the billable usage chart will now only show dates within the selected month.
+
 ### 8 June 2026 - New feature - Admin - Ability to cancel planned subscriptions
 
 On the Billing page of the Admin app, you can now cancel planned subscriptions. When you do so, credits spent for the planned subscription will be refunded.
