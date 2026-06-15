@@ -60,11 +60,9 @@ Migration and cleanup actions are defined in the install package and will depend
 > [!IMPORTANT]
 > When upgrading MediaOps.Plan, to make sure all migration and cleanup actions take place, **first upgrade to the latest version of your current major version** before moving to the next major version, without skipping a major version.
 
-## User Permissions
+## Required user permissions
 
-A user working with MediaOps Plan needs the following **user permissions**:
-
-### Rights
+Users working with MediaOps Plan need the following **user permissions**:
 
 - [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps)
 - [General > Elements > Access](xref:DataMiner_user_permissions#general--elements--access)
@@ -79,7 +77,7 @@ A user working with MediaOps Plan needs the following **user permissions**:
 - [Modules > Services > UI available](xref:DataMiner_user_permissions#modules--services--ui-available)
 - [Modules > User-definable apps > View apps](xref:DataMiner_user_permissions#modules--user-definable-apps--view-apps)
 
-### Views
+In addition, they need to have access to the following views:
 
 - Root View > DataMiner Catalog > MediaOps Plan View
 - Root View > DataMiner Catalog > People and Organizations
