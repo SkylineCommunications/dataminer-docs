@@ -81,3 +81,6 @@ In addition, they need to have access to the following views:
 
 - Root View > DataMiner Catalog > MediaOps Plan View
 - Root View > DataMiner Catalog > People and Organizations
+
+> [!NOTE]
+> To install MediaOps, users need both *Write* and *Config* access to these views. To use the MediaOps apps, *Write* access is sufficient.
