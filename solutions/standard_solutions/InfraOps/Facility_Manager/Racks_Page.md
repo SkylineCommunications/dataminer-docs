@@ -1,5 +1,6 @@
 ---
 uid: Racks_Page
+description: Go to the Racks page of the Facility Manager app to get an overview of all configured racks, along with the rack capacity, power capacity, and space usage.
 ---
 
 # Racks
