@@ -1,6 +1,6 @@
 ---
 uid: Overview_About_Skyline
-description: Read all about Skyline Communications, the global leader in end-to-end digital transformation solutions.
+description: Learn about Skyline Communications, the company behind DataMiner, trusted by 1500+ customers in 125+ countries to manage mission-critical ecosystems worldwide.
 ---
 
 # About Skyline Communications

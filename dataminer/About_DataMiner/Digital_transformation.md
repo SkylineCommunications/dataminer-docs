@@ -1,6 +1,6 @@
 ---
 uid: Digital_transformation
-description: Find out how DataMiner is key technology for your digital transformation, ensuring your operation is prepared for the unexpected.
+description: Discover how DataMiner drives digital transformation by enabling agile, data-driven operations ready to adapt and evolve.
 ---
 
 # Digital transformation
