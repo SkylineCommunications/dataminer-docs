@@ -1136,12 +1136,14 @@ items:
     items:
       - name: API reference
         items:
-          - name: IDocumentProcessor
-            topicUid: DocIntel_IDocumentProcessor
-          - name: DocumentContext
-            topicUid: DocIntel_DocumentContext
-          - name: ProcessingResult
-            topicUid: DocIntel_ProcessingResult
+          - name: Document
+            topicUid: DocIntel_Document
+          - name: DocumentIntelligenceError
+            topicUid: DocIntel_DocumentIntelligenceError
+          - name: DocumentIntelligenceError.Reason
+            topicUid: DocIntel_DocumentIntelligenceError_Reason
+          - name: DocumentIntelligenceHelper
+            topicUid: DocIntel_DocumentIntelligenceHelper
   - name: User-defined APIs
     topicUid: DMI_User-DefinedAPIs
     items:
