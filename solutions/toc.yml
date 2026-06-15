@@ -365,8 +365,12 @@ items:
       - name: Creating tickets
         topicUid: CreatingTickets
         items: 
-        - name: Creating tickets from DataMiner Cube
+        - name: Manually creating a ticket in the Ticketing app
+          topicUid: CreatingTicketsManuallyFromApp
+        - name: Manually creating a ticket in DataMiner Cube
           topicUid: CreatingTicketsFromCube
+        - name: Configuring automatic ticket creation via Correlation
+          topicUid: CreatingTicketsFromCorrelation
       - name: Assigning tickets to users
         topicUid: AssigningTicketsToUsers
       - name: Linking tickets to assets

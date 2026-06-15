@@ -306,25 +306,7 @@ This audit trail provides full visibility into how a ticket evolved over time an
 
 ### Manual Creation
 
-![Create Ticket](~/solutions/images/Ticketing_Demo_17_CreateATicket.png)
-
-1. Select **Create Ticket** in the Ticketing application on Tickets Page
-1. Enter:
-   - Name
-   - Description
-   - Ticket type
-   - Assignee
-   - Priority and severity
-   - Notify me about changes via email (see note below)
-1. Optionally:
-   - Set resolution dates
-   - Link affected resources (elements and services) or assets
-   - Select external ticketing system
-   - Enable email notifications
-1. Save the ticket
-
-> [!NOTE]
-> Email notifications are disabled by default for users other than the assignee. The ticket assignee (from People & Organizations) always receives email notifications for ticket updates. Other users can opt in by enabling the **Notify me about changes via email** option during ticket creation or when editing the ticket.
+See [Manually creating a ticket in the Ticketing app](xref:CreatingTicketsManuallyFromApp).
 
 ### Progressing Through the Ticket Lifecycle
 
