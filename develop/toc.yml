@@ -1505,6 +1505,8 @@ items:
         topicUid: SwarmingScriptBooking
       - name: Configuring a script to swarm scheduled tasks
         topicUid: SwarmingScriptScheduledTask
+      - name: Enabling Swarming for elements with smart-serial connection in server mode
+        topicUid: SwarmingSmartSerialServerMode
   - name: EPM integration
     items:
       - name: EPM Integration Training
