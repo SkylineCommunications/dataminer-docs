@@ -1,4 +1,8 @@
-# My Tickets Functionality
+---
+uid: AssigningTicketsToUsers
+---
+
+# Assigning tickets to users
 
 ## Overview
 
@@ -10,8 +14,6 @@ This functionality depends on the identical email relationship between:
 - The **People & Organizations Contact or Team**
 
 A correct configuration ensures that users can easily select and view their assigned tickets.
-
----
 
 ## User and Contact Mapping
 
@@ -25,19 +27,15 @@ To allow a user to see their assigned tickets:
 - This contact must use the **same e-mail address** as the DataMiner user account.
 
 ![My Tickets](~/solutions/images/Ticketing_MyTickets.png)
----
 
 ## Configuration
 
 ### Required Setup
 
 1. Identify the **DataMiner user account**.
-2. Create or update a corresponding **contact** in People & Organizations.
-3. Ensure that:
-   - The **e-mail address matches** the DataMiner user account.
-4. Assign tickets to this contact.
-
----
+1. Create or update a corresponding **contact** in People & Organizations.
+1. Ensure that the **email address matches** the DataMiner user account.
+1. Assign tickets to this contact.
 
 ## Best Practices
 
@@ -45,5 +43,3 @@ To allow a user to see their assigned tickets:
 - Ensure each user has a corresponding contact entry.
 - Avoid duplicate contacts with the same e-mail address.
 - Validate the configuration during onboarding of new users.
-
----

@@ -1,4 +1,8 @@
-# Creating Tickets from DataMiner Cube
+---
+uid: CreatingTicketsFromCube
+---
+
+# Creating tickets from DataMiner Cube
 
 ## Overview
 
@@ -13,9 +17,7 @@ Tickets created in this way are automatically linked to the relevant:
 - Service(s)
 - Asset(s) (if available)
 
-This ensures full traceability between monitoring data and ticketing workflows. 
-
----
+This ensures full traceability between monitoring data and ticketing workflows.
 
 ## Manual Ticket Creation from an Alarm
 
@@ -29,13 +31,11 @@ This ensures full traceability between monitoring data and ticketing workflows.
 
 This action launches an **Interactive Automation Script (IAS)** provided by the Ticketing solution.
 
----
-
 ### Ticket Creation Form
 
 The interactive script presents a form with pre-filled and editable fields.
 
-#### Default Behaviour
+#### Default Behavior
 
 - The **ticket name** is automatically derived from the alarm and can be modified if needed.
 - A **description** is generated and can be modified.
@@ -49,14 +49,11 @@ The user can define:
 - **Severity**
 - **Priority**
 
----
-
 ### Ticket Creation Result
 
 After confirmation the ticket is created in Ticketing.
 
 ![Ticket Confirmation](~/solutions/images/Ticket_Creation_Succesfull.png)
-
 
 - A confirmation message shows:
   - Ticket ID
@@ -66,14 +63,11 @@ After confirmation the ticket is created in Ticketing.
 
 The form can then be closed.
 
-The below image shows the tickets have been succesfully created in Ticketing.
+The below image shows the tickets have been successfully created in Ticketing.
 
 ![Ticketing solution tickets](~/solutions/images/Ticketing_Cube_2.png)
 
-
----
-
-### Behaviour in Alarm Console
+### Behavior in Alarm Console
 
 After the ticket is created:
 
@@ -81,8 +75,6 @@ After the ticket is created:
 - The **Incident Status** is updated (*Acknowledged*).
 
 This information is visible if the alarm properties are enabled in the Alarm Console.
-
----
 
 ### Ticket Linking
 
@@ -92,8 +84,6 @@ The created ticket in Ticketing Low-Code App is automatically linked to:
 - The associated element(s) and service(s)
 - Any related asset(s) (if available through Asset Manager)
 
----
-
 ## Automatic Ticket Creation via Correlation
 
 ### Overview
@@ -101,8 +91,6 @@ The created ticket in Ticketing Low-Code App is automatically linked to:
 Tickets can also be created automatically using **correlation rules**.
 
 A correlation rule can detect specific alarm conditions and trigger ticket creation without user interaction.
-
----
 
 ### Example Configuration
 
@@ -113,9 +101,7 @@ A common use case is:
 
 The automation script used is provided with the Ticketing solution.
 
----
-
-### Behaviour
+### Behavior
 
 When a matching alarm is generated:
 
@@ -123,12 +109,8 @@ When a matching alarm is generated:
 - The ticket is linked to the alarm and related objects.
 - The Ticket ID is written back to the alarm.
 
----
-
 ## Best Practices
 
 - Use manual ticket creation for operator-driven workflows.
 - Use correlation rules for automated handling of alarms.
 - Ensure alarm properties are enabled to display Ticket ID and status.
-
----

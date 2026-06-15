@@ -1,4 +1,8 @@
-# Ticketing Application Overview
+---
+uid: TicketingAppOverview
+---
+
+# Ticketing app overview
 
 ## Overview
 
@@ -12,9 +16,7 @@ It can be accessed in multiple ways:
 - Search for the Ticketing application and pin it to the sidebar
 - Open it from the DataMiner home interface
 
----
-
-## Tickets Page
+## Tickets page
 
 ### General page
 
@@ -28,17 +30,15 @@ This page provides an overview of all tickets in the system which are currently 
 
 Each ticket shows general parameters:
 
-- Ticket ID  
-- Name  
-- Status  
-- Severity  
-- Priority  
-- Ticket type  
-- Assignee  
-- Creation date  
+- Ticket ID
+- Name
+- Status
+- Severity
+- Priority
+- Ticket type
+- Assignee
+- Creation date
 - Requested and expected resolution dates
-
----
 
 ### Filtering
 
@@ -68,9 +68,7 @@ The Tickets page includes filtering options:
 
 ![My Tickets](~/solutions/images/Ticketing_Demo_04_MyTickets.png)
 
----
-
-## Overview
+## Overview page
 
 The Overview page provides a high-level summary of all tickets in the system, allowing you to quickly monitor workload, identify trends, and track the current status of open issues. It serves as a central dashboard where key ticket statistics and recently created tickets are displayed in one place.
 
@@ -90,8 +88,6 @@ The dashboard includes several visual charts that provide insight into your tick
 - Tickets by Type – Breaks down tickets by category or ticket type, giving visibility into the kinds of requests being handled.
 
 At the bottom of the page, the Most Recently Created Tickets section displays the latest tickets added to the system. This section allows users to quickly review newly created tickets and access them for further investigation or action.
-
----
 
 ## Ticket Types
 
@@ -146,7 +142,6 @@ Characteristics:
   - Used for standard out of the box tickets
 
 ![Generic Issue](~/solutions/images/Ticketing_Demo_06_GenericIssueType.png)
----
 
 ## Sample Ticket Type
 
@@ -158,37 +153,34 @@ The **Service Disruption** sample ticket type is intended for incidents that aff
 
 The following additional fields are available:
 
-* **Affected Service** – Name of the service experiencing the disruption.
-* **Customer Impact Level** – Indicates the scope of the customer impact. Available values are:
+- **Affected Service** – Name of the service experiencing the disruption.
+- **Customer Impact Level** – Indicates the scope of the customer impact. Available values are:
 
-  * Low – Individual User
-  * Medium – Small Group
-  * High – Department/Region
-  * Critical – Entire Service
-* **Customers Affected** – Number of customers impacted by the disruption.
-* **Revenue Impact ($/hour)** – Estimated revenue loss per hour caused by the disruption.
-* **SLA Breach Risk** – Indicates whether the disruption may result in a service-level agreement (SLA) breach.
-* **Target Resolution Time** – Expected time required to restore the affected service.
-* **Service Disruption Start** – Date and time when the service disruption began.
+  - Low – Individual User
+  - Medium – Small Group
+  - High – Department/Region
+  - Critical – Entire Service
+- **Customers Affected** – Number of customers impacted by the disruption.
+- **Revenue Impact ($/hour)** – Estimated revenue loss per hour caused by the disruption.
+- **SLA Breach Risk** – Indicates whether the disruption may result in a service-level agreement (SLA) breach.
+- **Target Resolution Time** – Expected time required to restore the affected service.
+- **Service Disruption Start** – Date and time when the service disruption began.
 
 ### Ticket Type Creation
 
 Users can create ticket types:
 
 1. Select **Create ticket type**
-2. Define:
+1. Define:
    - Name
    - Icon
    - Define as Base Ticket Type (enable this option to designate the ticket type as a reusable base type that other ticket types can extend from, reusing all its fields) or select a base type from which you want to extend.
    - Additional fields
-3. Save the configuration
+1. Save the configuration
 
 ![Create Ticket Type Form](~/solutions/images/Ticketing_Demo_08_CreateTicketTypes.png)
 
----
-
 ## External Ticketing Page
-
 
 The External Ticketing page lists all configured external integrations.
 
@@ -196,12 +188,10 @@ The External Ticketing page lists all configured external integrations.
 
 - Entries may represent external systems such as ServiceNow
 - Each entry includes:
-  - Visualisation endpoint
+  - Visualization endpoint
   - API endpoint
 
 Custom external systems can also be edited or added if required.
-
----
 
 ## Ticket Information Page
 
@@ -214,25 +204,22 @@ Open the information page by:
 - Clicking the ticket ID
 - Selecting the information icon
 
----
-
 ### General Information
 
 Each ticket displays:
 
-- Status  
-- Priority  
-- Severity  
-- Ticket ID  
-- Ticket type  
-- Assignee  
-- Requested and expected resolution dates  
+- Status
+- Priority
+- Severity
+- Ticket ID
+- Ticket type
+- Assignee
+- Requested and expected resolution dates
 - Description
 
 Fields can be edited using the edit option.
 
 ![Edit Ticket Fields](~/solutions/images/Ticketing_Demo_12_EditTicketFields.png)
----
 
 ### Additional Information
 
@@ -242,8 +229,6 @@ As defined in the additional fields of a ticket type:
 - Values can be edited as needed
 
 ![Edit Ticket Type Fields](~/solutions/images/Ticketing_Demo_13_EditTicketTypeFields.png)
-
----
 
 ### Ticket Subscription To Email Notifications
 
@@ -265,22 +250,19 @@ This allows users to stay informed about ticket progress without being assigned 
 - Suggested next steps according to the happy path are highlighted and placed first in the list (see if there is a better wording for this).
 - Alternative transitions are also available when applicable.
 
----
-
 ### Linked Items
 
 Tickets can include links to:
 
-- Alarms  
-- Elements  
-- Assets  
+- Alarms
+- Elements
+- Assets
 - Services
 - External tickets
 
 These links allow navigation to:
 
 - Monitoring app or DataMiner Cube (alarms, elements and services)
-
 
 ![Linked Items Alarms](~/solutions/images/Ticketing_Demo_14_LinkedItemsAlarmDataMiner.png)
 
@@ -290,7 +272,6 @@ These links allow navigation to:
 - External systems (for example ServiceNow)
 
 ![Linked Items External Ticketing](~/solutions/images/Ticketing_Demo_LinkedItemsExternalAsset.png)
----
 
 ### Notes
 
@@ -321,8 +302,6 @@ The history page also includes filtering options, allowing users to focus on spe
 
 This audit trail provides full visibility into how a ticket evolved over time and supports operational reviews, troubleshooting, compliance requirements, and accountability.
 
----
-
 ## Creating Tickets
 
 ### Manual Creation
@@ -330,23 +309,22 @@ This audit trail provides full visibility into how a ticket evolved over time an
 ![Create Ticket](~/solutions/images/Ticketing_Demo_17_CreateATicket.png)
 
 1. Select **Create Ticket** in the Ticketing application on Tickets Page
-2. Enter:
+1. Enter:
    - Name
    - Description
    - Ticket type
    - Assignee
    - Priority and severity
    - Notify me about changes via email (see note below)
-3. Optionally:
+1. Optionally:
    - Set resolution dates
    - Link affected resources (elements and services) or assets
    - Select external ticketing system
    - Enable email notifications
-4. Save the ticket
+1. Save the ticket
 
-> **Note:** Email notifications are disabled by default for users other than the assignee. The ticket assignee (from People & Organizations) always receives email notifications for ticket updates. Other users can opt in by enabling the **Notify me about changes via email** option during ticket creation or when editing the ticket.
-
----
+> [!NOTE]
+> Email notifications are disabled by default for users other than the assignee. The ticket assignee (from People & Organizations) always receives email notifications for ticket updates. Other users can opt in by enabling the **Notify me about changes via email** option during ticket creation or when editing the ticket.
 
 ### Progressing Through the Ticket Lifecycle
 
@@ -354,7 +332,7 @@ After creation, open the ticket's information page and use the state transition 
 
 ### Viewing a Closed Ticket
 
-Once a ticket is closed, it no longer appears in the default **Open Tickets** view. To locate it, switch to the **All** filter, which includes closed, cancelled, and rejected tickets.
+Once a ticket is closed, it no longer appears in the default **Open Tickets** view. To locate it, switch to the **All** filter, which includes closed, canceled, and rejected tickets.
 
 ![Closed Ticket in All Tickets View](~/solutions/images/Ticketing_Demo_18_ClosedTicket.png)
 
@@ -370,29 +348,25 @@ The information page shows:
 - All **Additional Info** fields from the *Service Disruption* ticket type, such as Affected Service, Customer Impact Level, Customers Affected, Revenue Impact, SLA Breach Risk, and Target Resolution Time
 - A complete **Notes** history with system notes for each state transition and any user notes added during the lifecycle
 
-### Behaviour
+### Behavior
 
 - New tickets are created in an initial state (*Acknowledged*)
 - Users can progress the ticket through the states during its lifecycle
 - All state changes are automatically recorded in the Notes section
-
----
 
 ## Ticket Lifecycle Example
 
 The ideal workflow (happy path):
 
 1. Ticket is created (Acknowledged)
-2. Set to **In Progress**
-3. Move to **Resolved**
-4. Finalise as **Closed**
+1. Set to **In Progress**
+1. Move to **Resolved**
+1. Finalize as **Closed**
 
 If necessary:
 
 - Tickets can be moved to other states (add the states)
 - Additional notes can be added at each step
-
----
 
 ## Best Practices
 
@@ -402,5 +376,3 @@ If necessary:
 - Use notes to document all actions and decisions.
 - Ensure proper linking to elements, services and assets.
 - Review ticket states and update accordingly.
-
----

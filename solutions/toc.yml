@@ -356,12 +356,31 @@ items:
       items:
       - name: Ticketing Solution architecture
         topicUid: TicketingArchitecture
+      - name: Ticketing Solution concepts
+        topicUid: Ticketing_solution_concepts
       - name: Installing the Ticketing Solution
         topicUid: TicketingInstallation
+      - name: Ticketing app overview
+        topicUid: TicketingAppOverview
       - name: Creating tickets
         topicUid: CreatingTickets
+        items: 
+        - name: Creating tickets from DataMiner Cube
+          topicUid: CreatingTicketsFromCube
+      - name: Assigning tickets to users
+        topicUid: AssigningTicketsToUsers
+      - name: Linking tickets to assets
+        topicUid: LinkingTicketsToAssets
+      - name: Configuring alarm properties for Ticketing
+        topicUid: ConfiguringAlarmPropertiesForTicketing
       - name: External ticketing system integration
         topicUid: ExternalTicketingSystemIntegration
+        items:
+        - name: ServiceNow integration
+          topicUid: ServiceNowIntegration
+          items:
+          -  name: ServiceNow integration example
+             topicUid: ServiceNowIntegrationExample
   - name: Product Solutions
     items:
     - name: EVS Cerebrum application
