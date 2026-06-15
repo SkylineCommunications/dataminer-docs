@@ -67,28 +67,13 @@ Note that it may not be possible to swarm some elements even if this checkbox is
 
 ## Limitations
 
-At present, Swarming is not yet supported for certain specific types of elements. It is not possible to swarm:
+At present, Swarming is not yet supported for the following types of elements:
 
-- elements polling localhost.
-- elements receiving SNMP traps in a DMS with [trap distribution](xref:DataMiner.SnmpTrapDistribution) disabled on at least one DMA.
-- elements having active [element connections](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module).
-- elements with smart-serial connections configured in server mode.
- 
-    However, from DataMiner 10.6.6/10.7.0 onwards<!--RN 45173-->, you can explicitly allow such elements to be swarmed by adding the following configuration to the *Protocol.xml* file:
+- Elements polling localhost.
+- Elements receiving SNMP traps in a DMS with [trap distribution](xref:DataMiner.SnmpTrapDistribution) disabled on at least one DMA.
+- Elements with active [element connections](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module).
 
-   ```xml
+For elements with smart-serial connections configured in server mode, Swarming is disabled by default, but it can be [explicitly enabled in the protocol.xml](xref:SwarmingSmartSerialServerMode) from DataMiner 10.6.6/10.7.0 onwards.
 
-    <Swarming>
-        <BypassChecks>
-            <Check>smartSerialAsServer</Check>
-        </BypassChecks>
-    </Swarming>
-
-    ```
-
-     With this configuration in place, at startup, the element can send a message to the data source to indicate where data should be sent. As a result, the fact that the smart-serial connection is in server mode will no longer be considered a valid reason to prevent the element from swarming.
-
-    > [!TIP]
-    > See also: [Making changes to a protocol.xml file](xref:Advanced_protocol_functionality#making-changes-to-a-protocolxml-file)
-
-Refer to [Upcoming features](xref:Swarming#upcoming-features) for information on which types of elements will be supported in the future.
+> [!TIP]
+> Refer to [Upcoming features](xref:Swarming#upcoming-features) for information on which types of elements will be supported in the future.
