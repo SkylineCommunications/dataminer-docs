@@ -1,5 +1,6 @@
 ---
 uid: VSAT_EPM_Topology
+description: Explore the EPM topology navigation menu in DataMiner Cube, which can be used to access the collector elements' main KPIs.
 ---
 
 # EPM VSAT topology

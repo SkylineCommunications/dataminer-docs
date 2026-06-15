@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU16
 ---
 
-# General Main Release 10.5.0 CU16 - Preview
+# General Main Release 10.5.0 CU16
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > Before you upgrade to this DataMiner version:
@@ -35,13 +35,34 @@ A number of enhancements have been made with regard to health monitoring of Open
 
 Also, all logging with regard to OpenSearch health monitoring can now be found in *SLSearchHealth.txt*. Up to now, that logging was added to *SLCassandraHealth.txt*.
 
-#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from DataMiner Cube [ID 45355]
+#### Alarm cache: Enhanced retrieval of alarms that are not linked to a specific element [ID 45322]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
-When DataMiner Cube requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
+Up to now, in some cases, DataMiner would not be able to retrieve alarms from the alarm cache when those alarms were not linked to a specific element. As a result, it had to retrieve them from the database instead.
 
-From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
+This has now been improved so those alarms are correctly retrieved from memory when available.
+
+#### APIGateway has been upgraded to Microsoft .NET 10 [ID 45421]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+The APIGateway module has been upgraded to Microsoft .NET 10.
+
+#### Cleanup of replication buffer files [ID 45432]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When replication buffering is enabled (which is the case by default), the replication buffers will now be cleaned every 24 hours.
+
+During this cleanup, a check will be performed to find out whether the SLNet system cache contains any files that are no longer managed by the replication buffer and that have not been updated in the last 30 days (by default). If such files are found, they will be deleted.
+
+In the *MaintenanceSettings.xml* file, a new setting has been added in the `<SLNet>` section: `<ReplicationBufferMaxDisconnectedTime>`. This setting will allow you to configure the number of days there must be no update to the replication buffer files before they can be deleted. By default, this setting will be set to 30 (day), but can be changed to a value between 14 (days) and 30 (days). If set to -1, automatic cleanup will be disabled.
+
+Whether replication buffering is enabled or not, you can also configure a replication buffer cleanup using the SLNetClientTest tool. To do so, open the tool, and send a `DiagnoseMessage` with `ExtraInfo` set to "cleanup:`<numberOfDays>`", where `<numberOfDays>` is a value between 14 and 30. For example: `cleanup:20`.
+
+> [!WARNING]
+> Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 #### SLLogCollector will now collect the system environment variables [ID 45435]
 
@@ -57,13 +78,17 @@ Because of a number of enhancements, overall performance of the VerifyNatsCluste
 
 ### Fixes
 
-#### Elements incorrectly moved to root view after view with service containing those same elements was moved to the view containing the original elements [ID 45286]
+#### Elements incorrectly moved to root view after moving view with service containing those elements to view containing the original elements [ID 45286]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.6 -->
 
-When a view that contains a service was moved under another view, elements that were only included in that first view as part of the service, and of which the original element instance existed under the other view, were handled incorrectly. In those cases, the original element instance that already existed under the other view was removed from its original location and placed at the root view.
+When a view containing a service was moved to another view, it could occur that elements included in that service were incorrectly moved to the root view. This happened when an element was only included in the original view because of the service, but the element already existed in the target view. This behavior has been corrected.
 
-From now on, the original element instance will remain in its original view and will no longer be moved to the root view in this scenario.
+#### Problem when simulations were reloaded at runtime [ID 45296]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When simulations were reloaded at runtime, in some cases, simulations that previously worked would no longer do so.
 
 #### SLDataGateway would terminate unexpectedly when shutting down [ID 45419]
 
@@ -82,3 +107,21 @@ In some rare cases, a DataMiner upgrade could get stuck while running the `C:\Sk
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.6 [CU0] -->
 
 Up to now, in some cases, SLAutomation could stop working when recompiling libraries.
+
+#### Element that failed to start up would not properly clean up the assigned resources [ID 45447]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When an element failed to start up because of, for example, a faulty protocol.xml file, up to now, it would not properly clean up the assigned resources.
+
+#### Automation: File locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation [ID 45520]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+In some cases, a file locking issue could cause a deadlock when an automation script using memory files interacted with SLAutomation while, on another thread, an attempt was being made to start another script using memory files.
+
+#### Connector with redundant polling connections would incorrectly switch connections when executing a poll action group on an element in timeout [ID 45534]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Up to now, a connector with redundant polling connections would incorrectly switch connections when executing a group of type "poll action" or "poll trigger" on an element that was in a timeout state. In some cases, this could lead to unexpected behavior.

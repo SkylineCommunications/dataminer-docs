@@ -6,6 +6,8 @@ uid: Upgrading_Downgrading_Webapps
 
 From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are **available separately from the general DataMiner upgrades**. These updates include only the web API and the web apps, leaving all other DataMiner processes untouched. This way you can get access to the latest features and enhancements of the web apps without having to do a full DataMiner upgrade. The web upgrades only require a brief installation and do not necessitate a DataMiner restart, ensuring uninterrupted monitoring and orchestration.
 
+From DataMiner 10.6.7/10.7.0 onwards<!--RN 45521-->, DataMiner web upgrade packages also include the [DataMiner Maps module](xref:About_DMS_Maps).
+
 Starting from DataMiner 10.4.0, every **cumulative update of a Main Release includes the same web apps changes as the corresponding DataMiner Feature Release**. For example, all DataMiner web apps changes from Feature Release 10.5.4 are also available in Main Release 10.4.0 (CU13) and 10.5 (CU1). This means that if you are on the Main Release track, you can simply install the latest web upgrade package without having to check for a separate Main Release or Feature Release package. <!-- It also means that if you for example build a low-code app using the latest DataMiner Feature Release, your app will also be compatible with the latest Main Release cumulative updates. (This comment can be published once GQI DxM becomes the default in a 10.5.x Feature Release, as backwards compatibility will apply from DataMiner 10.5.0 onwards.) -->
 
 From DataMiner 10.5.x onwards, web apps can only be upgraded to the next major version if the DataMiner Agent is already running at least the baseline version introduced in the previous major release. This means:
@@ -39,16 +41,45 @@ After the upgrade process, your dashboards and low-code apps may be migrated to 
 
 ## Downgrading the DataMiner web apps
 
+Web upgrades consist of the DataMiner web apps, the web API, and several core (DcM) and extension (DxM) modules. Therefore, a downgrade of the DataMiner web apps also consists of multiple steps, as detailed below.
+
+### Restoring the dashboards and apps from backup
+
 Since dashboards and low-code apps can automatically get migrated after a software upgrade, these will then no longer work in combination with older versions of the software.
 
 To deal with this, after a downgrade, follow the steps below:
 
-1. Optionally, create a copy of the current files in `C:\Skyline DataMiner\Applications` and `C:\Skyline DataMiner\Dashboards`.
-1. Go to `C:\Skyline DataMiner\System Cache\Web\Backups` and locate the most recent zip package (or the zip package that originally got created on the version you have now downgraded to).
+1. Before proceeding, create a copy of the current files in `C:\Skyline DataMiner\Applications` and `C:\Skyline DataMiner\Dashboards` as a safety precaution.
+
+1. Go to `C:\Skyline DataMiner\System Cache\Web\Backups` and locate the backup created before your upgrade.
+
+   If you are downgrading across multiple versions, select the backup that matches your target version.
+
 1. Extract this zip package in `C:\Skyline DataMiner` and let it replace the files in the *Applications* and *Dashboards* folders.
-1. Do the same on every DMA in cluster.
+
+1. Do the same on every DMA in the cluster.
 
 > [!NOTE]
 >
 > - Any changes that have been done on the dashboards and low-code apps after the backup was created will be lost.
 > - New web functionality that depends on new features in the core processes will no longer be available.
+
+### Reinstalling the GQI DxM
+
+After the downgrade, the following steps need to be taken for the [GQI DxM](xref:GQI_DxM):
+
+1. Uninstall the current GQI DxM.
+
+1. Install the version of the GQI DxM that corresponds to your target DataMiner version.
+
+   You can find this in the `Tools\ModuleInstallers` folder on your DataMiner Agent.
+
+### Reinstalling the Web DcM
+
+If you are downgrading to a version that includes the [Web DcM](xref:DataMinerExtensionModules#web) (DataMiner 10.5.11 or later), follow these steps:
+
+1. Uninstall the current Web DcM.
+
+1. Install the version of Web DcM that corresponds to your target DataMiner version.
+
+   You can find this in the `Tools\ModuleInstallers` folder on your DataMiner Agent.

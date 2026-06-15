@@ -1,19 +1,20 @@
 ---
 uid: Synchronizing_data_between_DataMiner_Agents
+description: Learn how to quickly synchronize data between nodes in a DataMiner cluster, from a full cluster sync to targeted file and Visio updates.
 ---
 
-# Synchronizing data between DataMiner Agents
+# Synchronizing data between nodes
 
-In normal circumstances, the information on all DMAs in a cluster is synchronized at midnight. However, it may be necessary to force a synchronization earlier, either partially or completely.
+In normal circumstances, the information on all nodes in a cluster is synchronized at midnight. However, it may be necessary to force a synchronization earlier, either partially or completely.
 
 > [!NOTE]
 >
 > - In case of conflicting changes during a synchronization, the most recent change gets precedence.
 > - For more information on which files and folders are synchronized during this process, refer to [Overview of the files found in the root folder](xref:Overview_of_the_files_found_in_the_root_folder) and [Overview of the different subfolders](xref:Overview_of_the_different_subfolders), respectively.
 
-## Synchronizing your DMA with the DMS
+## Synchronizing your node with the cluster
 
-To make a DMA synchronize its changes with other Agents in the cluster, you can manually execute the midnight synchronization code on this one DMA.
+To make a node synchronize its changes with other nodes in the cluster, you can manually execute the midnight synchronization code on this one node.
 
 1. In Cube, go to *Apps* > *System Center.*
 
@@ -28,11 +29,11 @@ To make a DMA synchronize its changes with other Agents in the cluster, you can 
 1. In the confirmation window, click *Yes*.
 
 > [!NOTE]
-> In a DMS with several Agents, if a sync from one DMA is initiated, it is possible that some Agents in the DMS are not fully synchronized. For example, in a DMS with 3 DMAs, DMA A, B and C, If DMA A is synchronized with the DMS, first DMA A and DMA B will be synchronized, then DMA A and DMA C will be synchronized. However, this means that if DMA C had a more recent file than DMA B, only DMA A and C will have this newest file. As such, in most circumstances, a DMS sync is to be preferred over a DMA sync.
+> In a cluster with several nodes, if a sync from one node is initiated, it is possible that some nodes in the cluster are not fully synchronized. For example, in a cluster with 3 nodes, node A, B and C, If node A is synchronized with the cluster, first node A and node B will be synchronized, then node A and node C will be synchronized. However, this means that if node C had a more recent file than node B, only node A and C will have this newest file. As such, in most circumstances, a cluster sync is to be preferred over a node sync.
 
-## Synchronizing all Agents in your DMS
+## Synchronizing all nodes in your cluster
 
-To synchronize all Agents in the cluster, you can manually execute the complete midnight synchronization at any time.
+To synchronize all nodes in the cluster, you can manually execute the complete midnight synchronization at any time.
 
 1. In Cube, go to *Apps* > *System Center.*
 
@@ -46,9 +47,9 @@ To synchronize all Agents in the cluster, you can manually execute the complete 
 
 1. In the confirmation window, click *Yes*.
 
-## Forcing synchronization of a file with the DMS
+## Forcing synchronization of a file with the cluster
 
-When a file has been changed on a particular DMA, you can force the synchronization of this file across the cluster.
+When a file has been changed on a particular node, you can force the synchronization of this file across the cluster.
 
 1. In Cube, go to *Apps* > *System Center.*
 
@@ -64,7 +65,7 @@ When a file has been changed on a particular DMA, you can force the synchronizat
 
 1. In the confirmation window, click *Yes*.
 
-## Synchronizing all Visio files within a DMS
+## Synchronizing all Visio files within a cluster
 
 To synchronize all Visio templates used in the cluster, you can execute a file synchronization for Visio files only.
 

@@ -1,5 +1,6 @@
 ---
 uid: EPM_I-DOCSIS
+description: Explore the Integrated DOCSIS branch of the EPM Solution, which is designed to manage Integrated DOCSIS deployments.
 ---
 
 # EPM Integrated DOCSIS

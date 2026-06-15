@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.6.7
 ---
 
-# DataMiner web apps Feature Release 10.6.7 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.7
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU4].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,7 +16,18 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been added yet.*
+#### Dashboards/Low-Code Apps - Maps component: 'Google Maps' version pinned to 3.65 to prolong support for KML overlays [ID 45481]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+In a [recent announcement](https://developers.google.com/maps/deprecations#kml_layer_deprecated_as_of_april_30_2026), Google informed the developer community that KML layers will be deprecated as from 30 April, 2026.
+
+In order to prolong support for KML overlays, the version of the *Google Maps* provider has been pinned to version 3.65.
+
+When using DataMiner Web version 10.5.0 CU16/10.6.0 CU4/10.6.7 or newer, KML overlays will be supported until May 2027. When using any other DataMiner Web version, KML overlays will no longer be supported from August 2026 onwards.
+
+> [!div class="button"]
+> [Read the blog post on our community website](https://community.dataminer.services/kml-support-is-ending-what-this-means-for-your-dataminer-maps/)
 
 ## New features
 
@@ -28,6 +39,20 @@ Within a GQI extension, it will now be possible to retrieve the *Culture* and *T
 
 > [!NOTE]
 > For this new feature to work, the extension needs to be created with the `Skyline.DataMiner.Core.GQI.Extensions` NuGet (version 1.1.0 or above). The feature is not supported when the extension is created using the `SLAnalyticsTypes` API.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: New 'Minimize metric' setting [ID 45538]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Node edge graph components now have a new *Minimize metric* setting, which will allow you to configure when edge metrics are minimized (per edge query).
+
+| Mode | Description |
+|---|---|
+| Auto   | Edge metrics are minimized automatically when edges are too close to each other (default behavior). |
+| Always | Edge metrics are always minimized. |
+| Never  | Edge metrics are never minimized. |
+
+When edge metrics are minimized because the mode is set to either "Auto" or "Always", hold Ctrl+Space to make the full edge metrics visible. When you then release both keys, the configured minimization behavior will be restored again.
 
 ## Changes
 
@@ -63,6 +88,57 @@ Up to now, when you selected a new measurement point, the `maxHold` value would 
 Up to now, when configuring a *Web* component, it would only be possible to enable or disable the *Open in sandbox* setting when *Type* was set to "Webpage".
 
 From now on, it will also be possible to enable or disable this setting, which has now been renamed to *Isolate*, when *Type* is set to "Custom HTML".
+
+#### Dashboards/Low-Code Apps: Spectrum sessions list can now be filtered by name [ID 45430]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When a *List* component uses the *Spectrum sessions* component data exposed by a *Spectrum analyzer* component in a dashboard or app, it displays a list of all spectrum sessions. You can now filter that list by name. To do so, link a data field of type string to the filter of the *List* component. This data field will then act as a filter box.
+
+#### Dashboards/Low-Code Apps - Spectrum analyzer component: New 'Theme source' option [ID 45437]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+The Spectrum analyzer component now has a *Theme source* option, which can be set to either "Preset" or "Custom".
+
+- When you set this option to "Preset":
+
+  - Trace color and line visibility are inherited from the loaded preset (legacy behavior).
+
+- When you set this option to "Custom":
+
+  - Trace, threshold, minimum, maximum, and average colors are inherited from the theme settings, and can be customized if necessary.
+  - Background, font, axis, and grid colors are all inherited from the component theme.
+
+  ![A spectrum analyzer component with its *Theme source* setting set to "Custom"](~/dataminer/images/Spectrum_Analyzer.gif)
+
+In both cases, measurement point trace colors are resolved via theme color indexing based on the measurement point key/name.
+
+#### Dashboards/Low-Code Apps: Tree and List components now accept a string filter [ID 45485]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+*Tree* and *List* components now accept a string filter. When string data is linked to the component, the content will be filtered by name.
+
+#### Dashboards/Low-Code Apps - Maps component: Changing the look and feel of GeoJSON overlays [ID 45518]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+The *Maps* component as well as the DataMiner Maps module now allow you to change the look and feel of GeoJSON overlays by defining the following properties on geometry objects:
+
+| Property | Default value | Description |
+|---|---|---|
+| fill           | #000000 | Defines the fill color of shapes. |
+| fill-opacity   | 0.3       | Defines the opacity of the fill color of shapes. |
+| stroke         | #000000 | Defines the stroke color of shapes and lines. |
+| stroke-opacity | 1         | Defines the opacity of the stroke. |
+| stroke-width   | 3         | Defines the weight of the stroke. The higher the weight, the wider the stroke. |
+
+#### Web apps: DataMiner Web Upgrade packages will now also include the DataMiner Maps module [ID 45521]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+From now on, the DataMiner Maps add-on module will also be included in DataMiner Web Upgrade packages.
 
 ### Fixes
 
@@ -141,3 +217,33 @@ In the *Monitoring* app, up to now, the list of available pages in an element ca
 In the manifest files of the DataMiner web apps, a number of inconsistencies have been fixed and a number of missing properties have been added.
 
 From now on, all web apps will use the same theme colors and the correct icons. Also, it will be possible to install all of them as Progressive Web Apps (PWAs).
+
+#### Dashboards/Low-Code Apps - Query filter component: Problem when filtering numeric columns on discrete values [ID 45490]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+On systems using the GQI DxM, in a *Query filter* component, it would no longer be possible to filter numeric columns on discrete values when filter assistance was enabled.
+
+#### GQI DxM: Problem when loading a GQI extension of which the DLL file was locked [ID 45569]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+When the GQI DxM tried to load a GQI extension of which the DLL file in `C:\Skyline DataMiner\Scripts\Libraries` was locked, up to now, loading the extension would fail and a warning similar to the following example would be added to the GQI DxM logging:
+
+```txt
+[2026-05-19 13:35:22.640][WRN][GQI.ExtensionsWorker.Automation.Automation.ExtensionLoader] Failed to load assembly from C:\Skyline DataMiner\Scripts\Libraries\ScriptName.LibraryName.xxxx_xx_xx__xx_xx_xx.R.dll
+System.IO.IOException: The process cannot access the file 'C:\Skyline DataMiner\Scripts\Libraries\ScriptName.LibraryName.xxxx_xx_xx__xx_xx_xx.R.dll' because it is being used by another process.
+```
+
+In order to prevent problems when loading GQI extensions, from now on, the GQI DxM will always try to load the assembly bytes from disk with 5 retries.
+
+#### Web apps - Interactive automation scripts: Error messages in FileSelector control would incorrectly show raw HTML code [ID 45572]
+
+<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
+
+Up to now, when running an interactive automation script, error messages in the *FileSelector* control would incorrectly show raw HTML code.
+
+When *ValidationText* was set to, for example, `This is the <b>actual</b> error message.`, this text would incorrectly end up in the UI as `<html><head></head><body>This is the <b>actual</b> error message.</body></html>`.
+
+> [!NOTE]
+> If, for some reason, you want an error message to contain actual HTML code, you will need to escape the HTML tags.

@@ -1,5 +1,6 @@
 ---
 uid: Installing_DataMiner_Objects_Tool
+description: Deploy the DataMiner Objects Tool from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the DataMiner Objects Tool

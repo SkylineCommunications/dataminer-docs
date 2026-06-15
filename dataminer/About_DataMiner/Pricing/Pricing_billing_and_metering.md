@@ -84,9 +84,15 @@ Example:
 - March 1 through 7, the maximum number of concurrent connectors used each day is 5.
 - For the rest of the month, the maximum number of concurrent connectors used each day is always 4.
 
-The number of credits consumed for Connector Services is calculated as the maximum number of concurrent connectors used per day, times the monthly credit rate, divided by 31 days (for March):
+The number of credits consumed for Connector Services is calculated as the maximum number of concurrent connectors used per day, times the monthly credit rate, divided by the number of days in the month (31 days for March):
 
-- Monthly Service Consumption = 5 connectors x 7 days x 8 credits / 31 + 4 connectors x 24 days x 8 credits / 31 days
+- **Pay-Per-Use (PPU)**: All usage is billed proportionally based on actual daily peaks.
+
+  Monthly Service Consumption = 5 connectors x 7 days x 8 credits / 31 + 4 connectors x 24 days x 8 credits / 31 days
+
+- **Subscription**: A subscription includes a fixed baseline capacity (e.g., 4 connectors). Usage above this level is billed as overage using the above-mentioned pro-rated logic.
+
+  Overage Consumption = (5 − 4) connectors × 7 days × 8 credits / 31
 
 ## Cancellation
 
@@ -122,3 +128,18 @@ MUA increased to 250 credits on August 1, 2023
 **Notification**: You will receive alerts when you are approaching your usage limit and once you have exceeded it.
 
 **Avoid overages**: Although you are not penalized, the cost of overage is at the service's pay-per-use credit rate, which may be higher than the subscription rate. If you expect this overage to be **continuous**, you may want to **review your subscriptions** to benefit from more favorable pricing.
+
+## Non-production environments
+
+We recommend setting up a dedicated **sandbox organization** for non-production environments (staging, dev, lab), to keep a clear technical separation from production. This also ensures that non-production usage is not handled in the same way as production from a commercial and operational perspective, while keeping costs cleanly separated for better cost tracking.
+
+### Requirements
+
+To qualify for non-production billing, an organization must meet the following conditions:
+
+- No live, revenue-generating, or customer-facing workloads.
+- No production data sources or active integrations in use operationally.
+- Registered and designated as non-production at the time of onboarding.
+
+> [!IMPORTANT]
+> Skyline reserves the right to review non-production organization usage. Systems found running production workloads under a non-production organization will be reclassified and billed at standard rates.

@@ -1,5 +1,6 @@
 ---
 uid: MO_Virtual_Signal_Groups
+description: Use the Virtual Signal Groups app to create source and destination endpoints for every signal in your network, and to group them in virtual signal groups.
 ---
 
 # Virtual Signal Groups app

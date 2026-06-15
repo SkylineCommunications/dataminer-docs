@@ -1,5 +1,6 @@
 ---
 uid: IO_Installation
+description: Deploy the InfraOps package from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing InfraOps

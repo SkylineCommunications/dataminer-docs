@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_architecture
 keywords: I-DOCSIS architecture
+description: Discover the architecture of the EPM I-DOCSIS Solution, including the collector, backend, frontend, and system connectors.
 ---
 
 # EPM Integrated DOCSIS architecture

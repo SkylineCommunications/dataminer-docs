@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_compliance_offering
-description: Skyline Communications takes pride in the security of its products and wants to provide the necessary guarantees to its users.
+description: Learn how DataMiner meets key security and compliance standards, including ISO/IEC 27001, NIS2, CRA, and Microsoft certification.
 ---
 
 # DataMiner compliance offering
@@ -29,7 +29,7 @@ Similarly, we are also working on compliance with the more recent European Cyber
 
 ## ISO/IEC 27001 compliance
 
-Skyline is actively working towards attaining full ISO/IEC 27001 compliance. An internal and external audit are currently ongoing for this, and certification is expected in the coming months.
+Skyline has successfully finished stage 1 and stage 2 of the audit to obtain full ISO/IEC 27001 compliance. The certificate will be available for download shortly.
 
 ## GDPR compliance
 

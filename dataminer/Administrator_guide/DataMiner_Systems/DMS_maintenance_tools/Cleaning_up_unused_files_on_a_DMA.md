@@ -1,9 +1,10 @@
 ---
 uid: Cleaning_up_unused_files_on_a_DMA
 keywords: unused drivers, unused connectors, cleanup
+description: Learn how to remove clutter from your DataMiner System by cleaning up unused protocols, unused alarm filters and unused Visio files.
 ---
 
-# Cleaning up unused files on a DMA
+# Cleaning up unused files
 
 In System Center, you can clean up unused protocols, unused alarm filters and unused Visio files.
 
@@ -34,7 +35,7 @@ To do so:
      1. Select the alarm filters you want to delete and click the *Delete* button.
 
      > [!NOTE]
-     > The scan for unused alarm filters does not include the usage of alarm filters in the Alarm Console, in DMS dashboards or for alarm blinking. To be sure alarm filters are not used in these applications, a manual check is required.
+     > The scan for unused alarm filters does not include the usage of alarm filters in the Alarm Console, in the legacy Dashboards module, or for alarm blinking. To be sure alarm filters are not used in these applications, a manual check is required.
 
    - To clean up unused Visio files:
 

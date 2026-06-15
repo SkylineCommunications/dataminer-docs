@@ -2,18 +2,18 @@
 uid: BPA_Cassandra_DB_Size
 ---
 
-# Cassandra DB Size
+# Local Single Cassandra DB Size
 
 Cassandra has some operational limits regarding the size of its files, for example to keep enough disk space free for compaction. In addition, Skyline might impose some other limits based on previous issues observed in the field.
 
-The *Cassandra DB Size* BPA test checks the size of the local Cassandra file system against a predefined set of rules. You can find information about this BPA test below.
+The *Local Single Cassandra DB Size* BPA test checks the size of the local Cassandra file system against a predefined set of rules. You can find information about this BPA test below.
 
-This BPA test is available on demand. From DataMiner 10.1.4 up to DataMiner 10.4.11/10.4.0 [CU9], it is available in System Center.<!--RN 40751-->
+This BPA test is available on demand. From DataMiner 10.1.4 up to DataMiner 10.4.11/10.4.0 [CU9], it is known as *Cassandra DB Size* and it is available in System Center by default.<!--RN 40751-->
 
 > [!NOTE]
 >
 > - This BPA test does not work for remote Cassandra nodes or for systems with a Cassandra Cluster setup.
-> - Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test does not work if your IP address is "localhost".
+> - Prior to DataMiner 10.4.12/10.5.0 [CU10]<!--RN 40751-->, this BPA test does not work if your IP address is "localhost".
 
 ## Metadata
 

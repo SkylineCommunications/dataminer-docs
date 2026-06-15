@@ -1,17 +1,20 @@
 ---
 uid: Using_the_Web_Services_v1
-description: The DataMiner Web Services v1 methods can be used in SOAP, JSON, or URL-encoded requests. First authenticate to get a connection string.
+description: The DataMiner Web Services methods can be used in SOAP, JSON, or URL-encoded requests. First authenticate to get a connection string.
 ---
 
-# Using the Web Services (v1)
+# Using the Web Services
 
-The v1 methods can be used in SOAP, JSON, or URL-encoded requests.
+The Web Services methods can be used in SOAP, JSON, or URL-encoded requests.
 
 > [!WARNING]
 > We strongly recommend using HTTPS when accessing the Web Service APIs over public internet. If you do not do so, all information, including logon credentials, will be sent over the internet as plain, unencrypted text.
 
+> [!IMPORTANT]
+> Because of the additional security layer used in [DaaS systems](xref:Creating_a_DMS_in_the_cloud), at present, it is not possible to connect to a DaaS system using the Web Services.
+
 > [!NOTE]
-> Because of the additional security layer used in [DaaS systems](xref:Creating_a_DMS_in_the_cloud), at present, it is not possible to connect to a DaaS system using the Web Services (v1).
+> An earlier version of the Web Services API (v0) still exists in DataMiner versions prior to 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<!--RN 45387-->. This legacy interface is obsolete and disabled by default. While we strongly recommend using the current v1 API instead, you can enable the legacy v0 interface in older systems by opening the file `C:\Skyline DataMiner\Webpages\API\Web.config` and adding the following extra tag under `<appSettings>`: `<add key="enableLegacyV0Interface" value="true"/>`.
 
 ## Authentication
 
@@ -26,22 +29,22 @@ When you authenticate, make sure to pass along the name and version of the clien
 
 ## Interfaces and WSDL files
 
-The DataMiner Web Services (v1) are accessible via the following interfaces.
+The DataMiner Web Services are accessible via the following interfaces.
 
-| Protocol | Version | Address          |
-|----------|---------|------------------|
-| SOAP     | v1      | `http://DmaNameOrIpAddress/API/v1/soap.asmx` |
-| JSON     | v1      | `http://DmaNameOrIpAddress/API/v1/json.asmx` |
+| Protocol | Address          |
+|----------|------------------|
+| SOAP     | `http://DmaNameOrIpAddress/API/v1/soap.asmx` |
+| JSON     | `http://DmaNameOrIpAddress/API/v1/json.asmx` |
 
 > [!NOTE]
 > For security reasons, by default, it is not possible to test web API requests from an external machine using HTTP POST instead of SOAP. To enable this, uncomment the following section in the file *web.config* in the folder `C:\Skyline DataMiner\Webpages\API`:<br><br> \<!-- uncomment to test webservices outside localhost:<br> \<protocols><br> \<add name="HttpGet"/><br> \<add name="HttpPost"/><br> \</protocols><br> //-->
 
 The WSDL files can be found on the following addresses.
 
-| Protocol | Version | Address                |
-|----------|---------|------------------------|
-| SOAP     | v1      | `http://DmaNameOrIpAddress/API/v1/soap.asmx?WSDL` |
-| JSON     | v1      | `http://DmaNameOrIpAddress/API/v1/json.asmx?WSDL` |
+| Protocol | Address                |
+|----------|------------------------|
+| SOAP     | `http://DmaNameOrIpAddress/API/v1/soap.asmx?WSDL` |
+| JSON     | `http://DmaNameOrIpAddress/API/v1/json.asmx?WSDL` |
 
 ## SOAP
 

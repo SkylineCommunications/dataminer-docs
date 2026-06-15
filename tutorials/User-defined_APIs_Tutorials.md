@@ -1,5 +1,6 @@
 ---
 uid: User-defined_APIs_Tutorials
+description: Build user-defined APIs with step-by-step tutorials, from a first hello world endpoint to practical alarm data retrieval.
 ---
 
 # User-defined APIs tutorials

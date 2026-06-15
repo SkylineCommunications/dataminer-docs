@@ -1,5 +1,6 @@
 ---
 uid: Using_EVS_Cerebrum
+description: Explore the main UI components of the EVS Cerebrum application, and learn how to establish a route connection.
 ---
 
 # Working with the EVS Cerebrum application

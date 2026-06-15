@@ -1,5 +1,6 @@
 ---
 uid: Facility_Manager
+description: Explore the Facility Manager app, which allows you to create a hierarchical view of your infrastructure.
 ---
 
 # Facility Manager

@@ -1,5 +1,6 @@
 ---
 uid: MO_S_App_Configuration
+description: Use the App configuration page of the Scheduling app to configure job ID patterns, job defaults, job metadata, and reference types.
 ---
 
 # App settings

@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_architecture
+description: Discover the architecture of the EPM D-DOCSIS Solution, including the collector, backend, frontend, and system connectors.
 ---
 
 # EPM D-DOCSIS architecture

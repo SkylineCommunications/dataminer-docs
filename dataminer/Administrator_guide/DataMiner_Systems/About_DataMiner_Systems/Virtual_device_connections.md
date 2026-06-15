@@ -2,14 +2,13 @@
 uid: Virtual_device_connections
 ---
 
-# Virtual device connections
+# Virtual connections to data sources
 
-All devices monitored by your DataMiner System can be assigned a virtual IP address.
+All data sources monitored by DataMiner can be assigned a virtual IP address.
 
-That way, you can create a virtual setup of your network that masks the underlying complexity of the actual network, which typically consists of a very heterogeneous collection of devices connected via all sorts of interfaces (TCP/IP, serial, ...).
+That way, you can create a virtual setup of your network that masks the underlying complexity of the actual network, which typically consists of a very heterogeneous collection of devices connected via all sorts of interfaces (TCP/IP, serial, etc.).
 
-Serial devices, for example, can be “IP enabled” and turned into virtual SNMP agents.
+Serial devices, for example, can be "IP enabled" and turned into virtual SNMP agents.
 
 > [!TIP]
-> See also:
-> [Enabling the virtual SNMP agent of an element](xref:Enabling_the_virtual_SNMP_agent_of_an_element)
+> See also: [Enabling the virtual SNMP agent of an element](xref:Enabling_the_virtual_SNMP_agent_of_an_element)
