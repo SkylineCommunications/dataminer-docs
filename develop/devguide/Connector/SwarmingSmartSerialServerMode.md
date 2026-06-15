@@ -4,7 +4,7 @@ uid: SwarmingSmartSerialServerMode
 
 # Enabling Swarming for elements with smart-serial connection in server mode
 
-For elements with smart-serial connections configured in server mode, Swarming is disabled by default. However, from DataMiner 10.6.6/10.7.0 onwards<!--RN 45173-->, you can explicitly allow such elements to be swarmed by adding the following configuration to the *Protocol.xml* file:
+For elements with smart-serial connections configured in server mode, Swarming is disabled by default. However, from DataMiner 10.6.6/10.7.0 onwards<!--RN 45173-->, if an element can communicate with its data source at startup to specify where data should be sent, you can enable Swarming by adding the following configuration to the *Protocol.xml* file:
 
 ```xml
 
