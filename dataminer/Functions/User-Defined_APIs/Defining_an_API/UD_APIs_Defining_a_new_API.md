@@ -149,6 +149,12 @@ From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45681 -->, a route can include **dyn
 
 For example, a route of `items/{id}` matches a request to `items/42`, and the script will receive `RouteParameters["id"] == "42"`. A route with multiple dynamic segments, such as `a/{x}/b/{y}`, captures each segment separately.
 
+A dynamic segment must occupy the entire path segment. It cannot be prepended or appended with other characters. It should start with an opening curly brace (`{`) and end with a closing curly brace (`}`).
+
+- Valid: `tickets/{ticketId}/status`
+- Invalid: `actions/do{name}action`
+- Invalid: `orders/{id}-details`
+
 When a request could match both a static and a dynamic route:
 
 - A static route always takes priority over a dynamic route.
