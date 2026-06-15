@@ -88,6 +88,26 @@ The following filters can be specified in the input for this method:
 
   This filter should be followed by an integer, and determines which page is retrieved (with 1 being the first page).
 
+  This filter is intended for use with [partial tables](xref:Table_parameters#partial-tables), i.e. large tables that are split up into multiple pages. The page size (i.e. the number of rows per page) is defined in the protocol via the [partial attribute](xref:Protocol.Params.Param.ArrayOptions-partial) of the `Params.Param.ArrayOptions` element, and is typically 1000 rows.
+
+  The response includes a `PageCount` field that indicates how many pages are available:
+
+  - `PageCount: 0` means the full table was returned in a single response (no pagination needed).
+  - `PageCount: N` means N pages exist and only the first page was returned.
+
+  To retrieve all pages, loop from page 1 to `PageCount` and include `PAGE=N` in the filters array for each request. Note that pagination is controlled exclusively via the `PAGE=N` entry in the `filters` array — there is no separate page parameter in the request body. If `PAGE=N` is absent from the filters, only the first page is returned.
+
+  Example:
+
+  ```txt
+  page=2
+  ```
+
+  > [!NOTE]
+  >
+  > - To retrieve all pages in a single request regardless of paging, use the [FORCEFULLTABLE=](#forcefulltable) filter instead. However, note that this can have a negative impact on performance.
+  > - The PAGE= filter is supported in all methods that accept the standard table row filters, i.e. [GetTableForParameterFiltered](xref:GetTableForParameterFiltered), [GetTableForParameterV2](xref:GetTableForParameterV2), [GetValuesForCPETopologyFieldSorted](xref:GetValuesForCPETopologyFieldSorted), and [GetValuesForCPETopologyFieldV2](xref:GetValuesForCPETopologyFieldV2).
+
 - **SORT**=
 
   This filter determines how to sort the filter results. It should be followed by one or more parameter IDs, separated by pipe characters ("\|"). The default order is ascending, but DESC can be added in the filter to apply descending sort order instead. For example, `SORT=12502|DESC`.
