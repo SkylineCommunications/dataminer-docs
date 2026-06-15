@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 8 June 2026 - New feature - Admin - Ability to cancel planned subscriptions
+
+On the Billing page of the Admin app, you can now cancel planned subscriptions. When you do so, credits spent for the planned subscription will be refunded.
+
 ### 1 June 2026 - New feature - Admin - New side panel with billable usage for services
 
 On the Billing overview page in the Admin app, for data starting from May 2026, service table rows now include an info button that opens a new side panel showing the billable usage details for that service:

@@ -75,7 +75,7 @@ namespace Tamir.SharpSsh
 		/// <summary>
 		/// Adds the specified key exchange algorithm.
 		/// </summary>
-		/// <param name="kexAlgorithms">The hey exchange algorithm to add.</param>
+		/// <param name="kexAlgorithms">The key exchange algorithm to add.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="kexAlgorithms"/> is <see langword="null"/>.</exception>
 		public virtual void AddKexAlgorithms(string kexAlgorithms)
 		{

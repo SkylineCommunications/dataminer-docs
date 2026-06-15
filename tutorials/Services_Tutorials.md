@@ -1,6 +1,6 @@
 ---
 uid: Services_Tutorials
-description: Services tutorials that explain how to build customer-centric service views and enrich managed services with detailed monitoring data.
+description: Discover practical tutorials to build customer-centric service views and enrich managed services with detailed monitoring data.
 ---
 
 # Services tutorials

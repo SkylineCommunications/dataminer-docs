@@ -17,22 +17,22 @@ description: Explore technical documentation for specific, preconfigured DataMin
 
 <div class="row"> 
   <div class="column">
-    <a href="/solutions/standard_solutions/MediaOps/MediaOps.html" title="MediaOps" target="_self"><img src="~/solutions/images/MediaOps.svg" style="width:100%"></a>
+    <a href="/solutions/standard_solutions/EPM/SolEPM.html" title="EPM" target="_self"><img src="~/solutions/images/EPM.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/solutions/standard_solutions/InfraOps/InfraOps.html" title="InfraOps" target="_self"><img src="~/solutions/images/InfraOps.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/solutions/standard_solutions/PTP/SolPTP.html" title="PTP" target="_self"><img src="~/solutions/images/PTP.svg" style="width:100%"></a>
+    <a href="/solutions/standard_solutions/IP_Network_Explorer/NetworkExplorer.html" title="IP Network Explorer" target="_self"><img src="~/solutions/images/IP_Network_Explorer.svg" style="width:100%"></a>
   </div>
 </div>
 
 <div class="row"> 
   <div class="column">
-    <a href="/solutions/standard_solutions/EPM/SolEPM.html" title="EPM" target="_self"><img src="~/solutions/images/EPM.svg" style="width:100%"></a>
+    <a href="/solutions/standard_solutions/MediaOps/MediaOps.html" title="MediaOps" target="_self"><img src="~/solutions/images/MediaOps.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/solutions/standard_solutions/IP_Network_Explorer/NetworkExplorer.html" title="IP Network Explorer" target="_self"><img src="~/solutions/images/IP_Network_Explorer.svg" style="width:100%"></a>
+    <a href="/solutions/standard_solutions/PTP/SolPTP.html" title="PTP" target="_self"><img src="~/solutions/images/PTP.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/solutions/standard_solutions/Ticketing/Ticketing.html" title="Ticketing" target="_self"><img src="~/solutions/images/Ticketing.svg" style="width:100%"></a>

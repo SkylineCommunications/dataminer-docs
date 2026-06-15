@@ -22,7 +22,9 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 When configuring a correlation rule, it is now possible to specify that a *Group alarms* action has to be executed when that rule is triggered.
 
-This action is similar to the *New alarm* action. When the rule is triggered, a new alarm will be generated, but in the case of the *Group alarm* action, the alarm will have its severity set to "Suggestion" and be linked to the DataMiner element. The value of the alarm can be set in the action itself.
+This action is similar to the *New alarm* action. When the rule is triggered, a new alarm will be generated, but in the case of the *Group alarms* action, the alarm will be linked to the DataMiner element. The value of the alarm can be set in the action itself.
+
+![Correlation rule configured with the *Group alarms* rule action](~/dataminer/images/Group_Alarms_Config.png)
 
 When a group alarm appears in the Alarm Console, the following fields will be updated:
 
@@ -36,6 +38,8 @@ When a group alarm appears in the Alarm Console, the following fields will be up
   | Selected     | Defined     | Name of the grouped object |
   | Not selected | Not defined | Name of the DataMiner Agent |
   | Not selected | Defined     | Name of the DataMiner Agent + Name of the grouped object |
+
+![Alarm Console: two group alarms have been generated](~/dataminer/images/Group_Alarms_Result.png)
 
 When the alarms are filtered (either by means of the quick filter or by means of an alarm filter):
 

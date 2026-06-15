@@ -1,5 +1,6 @@
 ---
 uid: ChatOps_Tutorials
+description: Discover hands-on ChatOps tutorials to connect DataMiner with Microsoft Teams, automate notifications, and build interactive commands.
 ---
 
 # ChatOps tutorials

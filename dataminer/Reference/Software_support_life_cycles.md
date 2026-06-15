@@ -105,6 +105,7 @@ The following features currently have the "End of Support" status. They will no 
 |------|---------|---------------|
 | Support for Cassandra versions prior to 4.x |Cassandra versions older than Cassandra 4.x are no longer supported on any operating system.| End of Life as of DataMiner 10.7.x (Q4 2026).|
 | Support for MySQL as local database | End of Support as of DataMiner 10.6.x. Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage). | End of Life to be confirmed. |
+| Support for overlays of type 'kml' | As Google has deprecated KML layer support, [KML overlays](xref:Layer_types#overlays-of-type-kml) used in both the [maps component](xref:DashboardMaps) and the [Maps add-on module](xref:About_DMS_Maps) will also no longer be available. We recommend switching to [GeoJSON overlays](xref:Layer_types#overlays-of-type-geojson). | End of Life:<br> - August 2026 for systems running DataMiner versions below 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<br>- May 2027 for DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 and later |
 | Two-site redundant indexing clusters | This setup should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS). | End of Life as of DataMiner 10.7.x (Q4 2026).|
 
 ### End of Life

@@ -9,7 +9,7 @@ This component displays the state, name and, if applicable, the value of a DataM
 ![State](~/dataminer/images/State.png)<br>*State component in DataMiner 10.4.6*
 
 > [!NOTE]
-> From DataMiner 10.3.6/10.4.0 onwards, if an item in this component is selected, you can clear the selection by clicking it while keeping the Ctrl key pressed. If you are using the State component as data input for other components, this will also clear the data shown in those components. <!-- RN 36056 -->
+> From DataMiner web 10.3.6/10.4.0 onwards, if an item in this component is selected, you can clear the selection by clicking it while keeping the Ctrl key pressed. If you are using the State component as data input for other components, this will also clear the data shown in those components. <!-- RN 36056 -->
 
 To configure the component:
 
@@ -24,7 +24,7 @@ To configure the component:
 
    - This component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
-   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To select these, in the dropdown box for the parameter data source, select *View*.
+   - You can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To do so, in the dropdown box for the parameter data source, select *View*.
 
    > [!NOTE]
    > Once this component has been configured with data input, the exposed data will appear as [component data](xref:Component_Data) in the *Data* pane and can be used by other components. This way, if the input for this component changes, the exposed data will update automatically for all components that use it as their data input.
@@ -33,13 +33,13 @@ To configure the component:
 
    - To customize the polling interval for this component, expand the *Settings* \> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
 
-   - If the component shows a parameter with a unit, but you do not want the unit to be displayed, in the *Settings* pane, clear the *Show units* option (available from DataMiner 10.1.9/10.2.0 onwards).
+   - If the component shows a parameter with a unit, but you do not want the unit to be displayed, in the *Settings* pane, clear the *Show units* option.
 
    - In case the component displays more than one item, in the *Settings* pane, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all the above together. Note that view parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
 
-   - In case the component displays a query source and you want the data to be refreshed automatically, Set *Update data* to *On* (available from DataMiner 10.2.0/10.2.1 onwards<!-- RN 31450 -->).
+   - In case the component displays a query source and you want the data to be refreshed automatically, Set *Update data* to *On*.
 
-   - If you want the first item in the component to be selected by default, in the *Settings* pane, under *Initial Selection*, set the toggle button to *On* (available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->). This way, the first item will be automatically selected whenever the component is loaded or when the data is refreshed.
+   - If you want the first item in the component to be selected by default, in the *Settings* pane, under *Initial Selection*, set the toggle button to *On* (available from DataMiner web 10.3.6/10.4.0 onwards<!-- RN 35984 -->). This way, the first item will be automatically selected whenever the component is loaded or when the data is refreshed.
 
 1. Fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
@@ -73,4 +73,4 @@ To configure the component:
 
      - *Layout flow*: Allows you to select whether the different states should be displayed in rows or columns. If they are displayed in rows, they will be displayed next to each other until there is no more space and a new row is started. If they are displayed as columns, they will be displayed below each other until there is no more space and a new column is started.
 
-     - Alignment: Available from DataMiner 10.1.0/10.1.3 onwards. Only displayed if *Design* is set to *Large* or *Auto Size*. Allows you to align the contents of the components to the left, in the center or to the right.
+     - Alignment: Only displayed if *Design* is set to *Large* or *Auto Size*. Allows you to align the contents of the components to the left, in the center or to the right.

@@ -1,16 +1,17 @@
 ---
 uid: Adding_a_DataMiner_Probe
+description: Add a DataMiner Probe to a cluster in the same way as a regular DMA, but select to add it as an external DataMiner Agent.
 ---
 
-# Adding a DataMiner Probe
+# Adding a DataMiner Probe as a node in a cluster
 
 ## Prerequisites
 
-Verify the prerequisites listed on [Adding a DataMiner Agent to a DataMiner System](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System).
+Verify the prerequisites listed under [Adding a node to a DataMiner cluster](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System).
 
 ## Procedure
 
-To add a DataMiner Probe to a DMS, follow the same procedure as when you [add a DMA in Cube](xref:Adding_a_regular_DataMiner_Agent), with one difference:
+To add a DataMiner Probe to a cluster, follow the same procedure as when you [add a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent), with one difference:
 
 - In the *Add DataMiner Agent* pop-up window, select the checkbox *Add as an external DataMiner Agent*.
 

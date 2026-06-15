@@ -1,5 +1,6 @@
 ---
 uid: Overview_of_the_PTP_LCA_UI
+description: Get a clear overview of the PTP low-code app and quickly monitor domains, nodes, topology, and alarms with one intuitive interface.
 ---
 
 # The PTP low-code app

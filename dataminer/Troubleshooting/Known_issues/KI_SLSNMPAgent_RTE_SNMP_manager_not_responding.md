@@ -14,7 +14,7 @@ When an SNMP manager is not responding, a locking issue occurs between the polli
 
 ## Fix
 
-No fix is available yet.<!-- RN 45586 -->
+Install DataMiner 10.5.0 [CU17].<!-- RN 45586 -->
 
 ## Issue description
 
