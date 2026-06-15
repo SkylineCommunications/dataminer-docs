@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_compliance_offering
-description: Skyline Communications takes pride in the security of its products and wants to provide the necessary guarantees to its users.
+description: Learn how DataMiner meets key security and compliance standards, including ISO/IEC 27001, NIS2, CRA, and Microsoft certification.
 ---
 
 # DataMiner compliance offering
