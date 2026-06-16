@@ -375,7 +375,7 @@ items:
         topicUid: AssigningTicketsToUsers
       - name: Linking tickets to assets
         topicUid: LinkingTicketsToAssets
-      - name: Configuring alarm properties for Ticketing
+      - name: Ticketing alarm properties
         topicUid: ConfiguringAlarmPropertiesForTicketing
       - name: External ticketing system integration
         topicUid: ExternalTicketingSystemIntegration

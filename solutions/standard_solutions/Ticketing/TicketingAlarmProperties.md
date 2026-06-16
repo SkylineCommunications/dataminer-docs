@@ -2,21 +2,17 @@
 uid: ConfiguringAlarmPropertiesForTicketing
 ---
 
-# Configuring alarm properties for Ticketing
+# Ticketing alarm properties
 
-## Overview
-
-When the DataMiner Ticketing solution is installed, it automatically creates three custom alarm properties. These properties allow ticket information to be visible directly in the Alarm Console.
-
-![Ticketing Alarm Properties](~/solutions/images/Ticketing_AlarmProperties.png)
-
-The following properties are added:
+When the DataMiner Ticketing solution is installed, it automatically creates the following custom alarm properties:
 
 - **Ticket ID**
 - **Incident Status**
 - **Incident Number**
 
-These properties support both internal ticket tracking and integration with external ticketing systems.
+These properties allow ticket information to be visible directly in the Alarm Console. They support both internal ticket tracking and integration with external ticketing systems.
+
+![Ticketing Alarm Properties](~/solutions/images/Ticketing_AlarmProperties.png)
 
 ## Enabling Alarm Properties in Cube
 
