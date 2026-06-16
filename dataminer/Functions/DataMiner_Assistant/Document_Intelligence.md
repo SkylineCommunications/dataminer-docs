@@ -117,9 +117,11 @@ From DataMiner 10.6.0/10.6.1 onwards, you can integrate Document Intelligence di
 
 For the full API reference, see [Document Intelligence API reference](xref:DocumentIntelligence).
 
-The following code snippet shows how to use the built-in API call. The namespaces shown below require the NuGet package `Skyline.DataMiner.Dev.Automation` (version 10.6.0 or higher) to be included in your automation script project.
+The following code snippet shows how to use the built-in API call, including error handling. The namespaces shown below require the NuGet package `Skyline.DataMiner.Dev.Automation` (version 10.6.0 or higher) to be included in your automation script project.
 
 ```csharp
+using System.Collections.Generic;
+using System.IO;
 using Skyline.DataMiner.Net.Apps.DocumentIntelligence;
 using Skyline.DataMiner.Net.Apps.DocumentIntelligence.Objects;
 
@@ -133,14 +135,24 @@ public void Run(IEngine engine)
     // Create Document Intelligence helper
     var docIntelHelper = new DocumentIntelligenceHelper(engine.SendSLNetMessages);
     // Request Document Intelligence analysis
-    var analysisResult = docIntelHelper.AnalyzeDocuments(instructions, new List<Document>() 
-    { 
-        new Document() 
-        { 
-            Name = "myFile.pdf", 
-            Content = fileBytes 
-        }
+    var result = docIntelHelper.AnalyzeDocuments(instructions, new List<Document>()
+    {
+        new Document()
+        {
+            Name = "myFile.pdf",
+            Content = fileBytes
+        },
     });
+    // Check for errors
+    var traceData = docIntelHelper.GetTraceDataLastCall();
+    if (!traceData.HasSucceeded())
+    {
+        var errors = traceData.GetErrorDataOfType<DocumentIntelligenceError>();
+        engine.ExitFail("Document Intelligence analysis failed: " + string.Join(", ", errors.ConvertAll(e => e.Message)));
+        return;
+    }
+    // Use the analysis result
+    engine.GenerateInformation("Analysis result: " + result);
 }
 ```
 
