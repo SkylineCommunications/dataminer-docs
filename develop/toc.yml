@@ -1131,6 +1131,19 @@ items:
         topicUid: GQI_Extensions_Discrete_Values
       - name: Logging
         topicUid: GQI_Extensions_Logging
+  - name: Document Intelligence
+    topicUid: DocumentIntelligence
+    items:
+      - name: API reference
+        items:
+          - name: Document
+            topicUid: DocIntel_Document
+          - name: DocumentIntelligenceError
+            topicUid: DocIntel_DocumentIntelligenceError
+          - name: DocumentIntelligenceError.Reason
+            topicUid: DocIntel_DocumentIntelligenceError_Reason
+          - name: DocumentIntelligenceHelper
+            topicUid: DocIntel_DocumentIntelligenceHelper
   - name: User-defined APIs
     topicUid: DMI_User-DefinedAPIs
     items:
