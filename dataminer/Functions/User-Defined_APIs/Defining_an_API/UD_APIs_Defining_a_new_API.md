@@ -147,7 +147,9 @@ HTTP GET mydataminer.customer.local/api/custom/encoders/status
 
 From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45681 -->, a route can include **dynamic segments** written as `{parameterName}`. When a request matches a dynamic route, the value at each dynamic position in the URL path is captured and made available in `ApiTriggerInput.RouteParameters`. The key is the segment name from the route template, and the value is the exact path segment from the request URL.
 
-For example, a route of `items/{id}` matches a request to `items/42`, and the script will receive `RouteParameters["id"] == "42"`. A route with multiple dynamic segments, such as `repositories/{owner}/{repo}/issues/{issueId}`, captures each segment separately.
+For example, a route of `items/{id}` matches a request to `items/42`. In that case, the `id` parameter is captured with the value `42`, which the script can retrieve via `RouteParameters["id"]`. A route with multiple dynamic segments, such as `repositories/{owner}/{repo}/issues/{issueId}`, captures each segment separately.
+
+A dynamic segment only captures the value of a single path segment, so a captured value can never contain a `/` character. For example, with a route of `tickets/{ticketId}`, a request to `tickets/eu/123` does not match, because the `/` splits the path into separate segments. As a result, `ticketId` is not filled with `eu/123`.
 
 A dynamic segment must occupy the entire path segment. It cannot be prepended or appended with other characters. It should start with an opening curly brace (`{`) and end with a closing curly brace (`}`).
 
