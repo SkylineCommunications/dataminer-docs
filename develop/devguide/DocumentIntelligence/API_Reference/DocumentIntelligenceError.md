@@ -11,7 +11,7 @@ uid: DocIntel_DocumentIntelligenceError
 
 Represents an error that occurred during a Document Intelligence analysis. Instances of this class are returned via `TraceData.GetErrorDataOfType<DocumentIntelligenceError>()` after a failed [AnalyzeDocuments](xref:DocIntel_DocumentIntelligenceHelper) call.
 
-Available from DataMiner 10.6.0/10.6.1 onwards.
+Available from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44016 -->
 
 ## Properties
 

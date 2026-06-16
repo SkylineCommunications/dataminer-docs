@@ -11,7 +11,7 @@ uid: DocIntel_DocumentIntelligenceError_Reason
 
 Specifies the reason for a [DocumentIntelligenceError](xref:DocIntel_DocumentIntelligenceError).
 
-Available from DataMiner 10.6.0/10.6.1 onwards.
+Available from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44016 -->
 
 ## Fields
 

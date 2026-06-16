@@ -11,7 +11,7 @@ uid: DocIntel_DocumentIntelligenceHelper
 
 Provides helper methods to interact with the Document Intelligence feature of the [DataMiner Assistant DxM](xref:Assistant_DxM).
 
-Available from DataMiner 10.6.0/10.6.1 onwards.
+Available from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44016 -->
 
 ## Constructors
 
@@ -31,7 +31,7 @@ Sends one or more documents to the Document Intelligence service for analysis an
 
 #### Parameters
 
-- `string` `instructions`: The instructions describing what to extract or analyze (i.e. the prompt).
+- `string` `instructions`: The instructions describing what to extract or analyze (i.e., the prompt).
 - `IEnumerable<`[Document](xref:DocIntel_Document)`>` `documents`: The list of documents to analyze.
 
 #### Returns
