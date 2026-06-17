@@ -73,6 +73,12 @@ From now on, the values of the [Elapsed time:], [Remaining time:], and [Time unt
 
 Because of a number of enhancements, overall DataMiner Probe connection handling has been improved, especially in scenarios with multiple or concurrent probe connections.
 
+#### Visual Overview: Enhanced loading of profile instances into list box controls linked a session variables [ID 45701]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+A number of enhancements have been made with regard to the loading of profile instances into list box controls linked to session variables.
+
 ### Fixes
 
 #### Data Display: Problem when resetting the layout of a table [ID 45277]
