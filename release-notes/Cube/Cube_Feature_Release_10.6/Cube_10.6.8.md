@@ -67,6 +67,12 @@ Up to now, the values of the [Elapsed time:], [Remaining time:], and [Time until
 
 From now on, the values of the [Elapsed time:], [Remaining time:], and [Time until start:] placeholders will be calculated using UTC time.
 
+#### Enhanced DataMiner Probe connection handling [ID 45634]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of a number of enhancements, overall DataMiner Probe connection handling has been improved, especially in scenarios with multiple or concurrent probe connections.
+
 ### Fixes
 
 #### Data Display: Problem when resetting the layout of a table [ID 45277]
