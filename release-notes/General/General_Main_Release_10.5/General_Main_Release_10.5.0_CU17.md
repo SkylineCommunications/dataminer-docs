@@ -64,6 +64,12 @@ From now on, SLLogCollector will also retrieve the value of the Windows security
 
 DataMiner does not support having this policy enabled. Having this option enabled will prevent DataMiner from starting up properly.
 
+#### GQI: Enhanced performance when executing a GQI query against the 'Get parameters for elements where' data source in a cluster [ID 45676]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of a number of enhancements, overall performance has increased when executing a GQI query against the *Get parameters for elements where* data source in a cluster.
+
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 45712]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->

@@ -164,6 +164,12 @@ Up to now, after a DataMiner restart or upgrade, in some cases, SLAutomation cou
 
 A number of enhancements have now been made to prevent any initialization issues during SLAutomation startup.
 
+#### GQI: Enhanced performance when executing a GQI query against the 'Get parameters for elements where' data source in a cluster [ID 45676]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of a number of enhancements, overall performance has increased when executing a GQI query against the *Get parameters for elements where* data source in a cluster.
+
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 45712]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
