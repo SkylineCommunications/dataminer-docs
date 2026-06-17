@@ -191,4 +191,4 @@ Whenever a DxM registered itself for reverse proxying, APIGateway could throw an
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
-Up to now, it would incorrectly no longer be possible to synchronize any files in the `C:\Skyline DataMiner\Webpages\Public` folder among DataMiner Agents in a cluster.
+Up to now, it would no longer be possible to synchronize any files in the `C:\Skyline DataMiner\Webpages\Public` folder among DataMiner Agents in a cluster because the path name would incorrectly be compared case sensitively.
