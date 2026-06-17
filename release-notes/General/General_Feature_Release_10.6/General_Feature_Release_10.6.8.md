@@ -263,3 +263,9 @@ When, within a DataMiner System, a DataMiner Agent receives an SNMPv3 trap for a
 The reverse proxy feature in APIGateway would no longer work.
 
 Whenever a DxM registered itself for reverse proxying, APIGateway could throw an exception.
+
+#### Problem when synchronizing files in the C:\\Skyline DataMiner\\Webpages\\Public folder [ID 45694]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, it would incorrectly no longer be possible to synchronize any files in the `C:\Skyline DataMiner\Webpages\Public` folder among DataMiner Agents in a cluster.
