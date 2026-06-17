@@ -156,6 +156,14 @@ In order to combine all system requirements specified in [DataMiner Compute Requ
 > [!NOTE]
 > From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.
 
+#### SLAutomation: Enhanced startup after a DataMiner restart or upgrade [ID 45651]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+Up to now, after a DataMiner restart or upgrade, in some cases, SLAutomation could unexpectedly stop working while initializing internal components.
+
+A number of enhancements have now been made to prevent any initialization issues during SLAutomation startup.
+
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 45712]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
