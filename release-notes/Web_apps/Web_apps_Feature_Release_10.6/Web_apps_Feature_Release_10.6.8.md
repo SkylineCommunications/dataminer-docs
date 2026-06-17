@@ -76,6 +76,12 @@ See also: [DataMiner Agents will now translate the primary key to the display ke
 > [!IMPORTANT]
 > Before you request timeline data using the `GetAlarmStateTimelineForParameter` web method, from now on, first send the `IsFeatureAvailable` web method with featureName set to "DKForReport" to check whether the DataMiner Agent requires you to send the display key or the primary key. If the method returns true, send the display key. If it returns false, send the primary key.
 
+#### GQI DxM: Enhanced performance when executing a GQI query against the 'Get parameters for elements where' data source in a cluster [ID 45676]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of a number of enhancements, overall performance has increased when executing a GQI query against the *Get parameters for elements where* data source in a cluster.
+
 ### Fixes
 
 #### GQI DxM: Problem when querying a mediation protocol with standalone parameters using the 'Parameters for elements where' data source [ID 45494]
