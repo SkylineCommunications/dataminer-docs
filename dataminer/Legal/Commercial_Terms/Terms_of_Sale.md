@@ -1,100 +1,303 @@
 ---
 uid: Terms_of_Sale
+keywords: General Terms and Conditions, Terms and Conditions
 ---
 
-# Terms of sale
+# Skyline General Terms and Conditions
 
-## Glossary
+*Version 1.0 — Effective Date: 15 June 2026*
 
-| Term | Description |
-|--|--|
-| Agile | A term used to describe approaches to, amongst others, software development and project management, emphasizing incremental delivery, team collaboration, continual planning, and continual learning (e.g., <https://agilemanifesto.org/>). |
-| Buyer | The person, company, or government entity placing a PO with Skyline. |
-| Deliverables | The Software, Services, and any other deliverable to be provided by Skyline. |
-| Personal data | Any information relating to an identified or identifiable individual in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC. |
-| Quotation | The written offer provided by Skyline. |
-| Related Materials | All materials furnished by Skyline for the use or promotion of the Software, including operating manuals and information, specifications, and release notes. |
-| Skyline | Skyline Communications N.V. with its registered office at Ambachtenstraat 33, 8870 Izegem, Belgium. |
-| Software | All software licensed by Skyline, including but not limited to the DataMiner software and its accompanying drivers, all cloud software, as well as all software documentation and related materials. |
-| Services | Any service provided by Skyline, including but not limited to installation, configuration, and testing. |
-| PO | A purchase order issued by Buyer to Skyline, detailing amongst other things, the Deliverables and the price. |
+## Part A — General Terms and Conditions
 
-## Applicability
+### 1. Definitions
 
-These terms and conditions govern Buyer's purchase of Deliverables from Skyline.
+“**Agreement**” means these terms, together with the applicable Quotation, any Regional Schedules, any applicable Service Description, usage policy, commercial schedule, SLA, DPA, Maintenance and Support Terms, and any other documents expressly incorporated by reference.
 
-Supplementary or deviating terms or conditions imposed by the Buyer shall not apply (e.g., purchasing or procurement terms). If Skyline has expressly accepted Buyer's terms and conditions in writing, then the current terms and conditions shall apply, insofar as they do not conflict with Buyer's terms and conditions.
+“**Aggregated Data**” means anonymized, aggregated statistical data derived from Customer’s use of the Deliverables.
 
-## Ordering and payment
+“**Authorized Users**” means the individuals authorized by the Customer to access and use the Software or the SaaS Service under the Customer’s account, as specified in the Quotation.
 
-Skyline shall accept or refuse a PO issued under these terms and conditions within five (5) working days following the day of receipt of the PO. In case Skyline has not accepted or refused the PO within this period, the PO shall be deemed to be accepted by Skyline. A PO that has been accepted by Skyline shall be binding between the parties and cannot be terminated. Changes to an accepted PO can only be made in mutual agreement between the parties.
+“**Cloud Connected**” means a state in which the Software installed on Customer’s infrastructure maintains an active connection to Skyline’s servers for license validation and, where applicable, access to cloud-based functionalities.
 
-All invoices are payable in EUR and must be clear of any deductions. The payment term of Skyline's invoices is 30 days from the date of the invoice, except if set out differently in the Quotation.
+“**Confidential Information**” means any non-public information disclosed by one Party to the other, whether in oral, written, or electronic form, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information.
 
-PO's and invoices shall be processed through email only. All costs incurred by Skyline due to the mandatory use of a vendor management system (e.g., Ariba) shall be due by, and invoiced separately to, Buyer.
+“**Customer**” means the person, company, or government entity entering into an Agreement with Skyline.
 
-The Buyer is responsible for paying all taxes, other than Skyline's income tax, associated with the purchase of Deliverables. All payments by or on account of the compensation payable by the Buyer shall be made free and clear of and without deduction or withholding for any taxes. If Buyer is required to deduct or withhold any taxes from such payments, then the sum payable shall be increased as necessary so that, after making all required deductions or withholdings, Skyline receives an amount equal to the sum it would have received had no such deduction or withholding been made.
+“**Customer Data**” means all data, content, and information uploaded, submitted, or generated by Customer or its Authorized Users through the use of the Deliverables.
 
-The Buyer shall promptly deliver to Skyline the deduction or withholding certificate as prescribed under law, as well as any other document reasonably requested by Skyline, reflecting the amount deducted or withheld and correct particulars of Skyline and the Buyer entity that has made the deduction or withholding.
+“**Deliverables**” means the Software (whether licensed on a perpetual or usage basis), the SaaS Service, Services, and any other deliverable to be provided by Skyline.
 
-Each amount that has not been paid on the due date will be legally, without the need of any formal notice, increased by interest in accordance with the applicable provisions in the Belgian Law on late payment in commercial transactions. Moreover, each expired amount that has not been paid on the due date will, without the need of any formal notice, be increased by 10%, with a minimum of 75 EUR, as a fixed compensation of Skyline's non-legal recovery expenses, without prejudice to Skyline's compensations of judicial procedure and judicial expenses. Regardless of what precedes, Skyline remains entitled to suspend its Services or (temporarily) terminate Software license rights, or to annul the PO(s) and to claim compensation in case of non-payment.
+“**Documentation**” means all materials furnished by Skyline for the use of the Deliverables, including operating manuals, user guides, specifications, release notes, and any applicable Service Description.
 
-## Delivery and acceptance
+“**DPA**” means Skyline's then-current data processing agreement, as published or referenced by Skyline, or any separate written data processing agreement entered into by the Parties.
 
-All Software shall be delivered electronically. If any hardware is purchased by Buyer, the delivery of such hardware shall be subject to the EXW Incoterms.
+“**Fully Offline On-Premises Deployment**” means a deployment of the Software on Customer’s own infrastructure that cannot maintain Cloud Connected status, and that has been expressly approved as such by Skyline in the Quotation.
 
-All Services related to the Software shall be provided by Skyline using an Agile delivery methodology. Maintenance and Support Services shall be subject to separate specific maintenance and support terms.
+“**Maintenance and Support Terms**” means Skyline’s then-current terms governing maintenance and support for self-managed deployments of the Software, as published or referenced by Skyline.
 
-Buyer possesses 14 calendar days to accept the Deliverables following the delivery thereof by Skyline. In case the Buyer does not accept a Deliverable, it must notify Skyline of such non-acceptance within this period by written and motivated notification. If Skyline, acting reasonable, considers the non-acceptance founded, it will initiate all corrective actions as to correct the issue that gave rise to the non-acceptance, as of which a new 14 calendar days acceptance period will commence, and so further up until the Deliverables have been fully accepted by Buyer.
+“**Parties**” means Skyline and the Customer, and “Party” means either of them.
 
-Deliverables which (i) are being used in a production environment or (ii) that have been paid for, shall be deemed to be accepted by Buyer.
+“**Personal Data**” means any information relating to an identified or identifiable individual in accordance with applicable data protection law.
 
-## Data protection
+“**PO**” means a purchase order or similar order document issued by Customer for its internal administrative purposes. A PO may evidence Customer's acceptance of a Quotation, but shall not modify, supplement, or add to the Agreement, regardless of any terms it may contain.
 
-As part of Buyer's purchase of Deliverables, Skyline collects Personal Data about the Buyer (name, company name, job description, email, telephone number, etc.). Buyer acknowledges that this collected Personal Data shall be strictly necessary for the performance of the agreement between the parties. Skyline takes all necessary technical and organizational measures to keep the Buyer's Personal Data safe. The Buyer guarantees that it has obtained the required timely agreement from its directors, employees, representatives, or contractors so that Skyline can use the Personal Data for the above stated purposes.
+“**Quotation**” means the binding commercial offer issued by Skyline that sets out the applicable Deliverables, fees, license type, deployment model, and commercial parameters. For purchases made through Skyline’s online ordering platform, a Customer order accepted by Skyline shall be deemed a Quotation for purposes of these terms.
 
-Skyline may offer various other types of Services which require the collection of different types of Personal Data. These processing activities shall be governed by separate privacy policies. For more information, please contact [privacy@skyline.be](mailto:privacy@skyline.be).
+“**Regional Schedule**” means a schedule in Part B of these terms setting out region-specific provisions, applicable as determined by the Skyline contracting entity specified in the Quotation.
 
-## Licensing rights
+“**SaaS Service**” means any cloud-hosted or managed access to the Software or related functionality provided by Skyline, as described in the Quotation or applicable Service Description.
 
-Skyline shall remain at all times the owner of its intellectual property rights, including but not limited to Skyline's copyrights, patents, and trademarks. All Software, including Software drivers, shall be licensed by Skyline to Buyer, and not sold. No intellectual property rights will be transferred to the Buyer. The end user license rights are set out in the End user License Agreement included in the Software.
+“**Service Description**” means any document published or referenced by Skyline that describes the technical, functional, or commercial scope of a specific Deliverable.
 
-## Warranty
+“**Services**” means any service provided by Skyline, including but not limited to installation, configuration, testing, and consulting.
 
-Skyline warrants that its Software, when used as permitted under the EULA and in accordance with the agreed characteristics by Skyline (including use on a hardware platform approved by Skyline) will conform substantially to its Related Materials for a period of twelve (12) months from the delivery date. Warranty on hardware is limited to the warranty provided by the hardware manufacturer. Skyline provides no additional warranty on hardware. Skyline warrants that all Services will be performed in a professional and workmanlike manner.
+“**Skyline**” means Skyline Communications N.V. with its registered office at Ambachtenstraat 33, 8870 Izegem, Belgium, or the Skyline entity specified in the applicable Regional Schedule.
 
-## Confidentiality
+“**SLA**” means Skyline’s then-current service level terms for the SaaS Service, as published or referenced by Skyline.
 
-All know-how, technical information, specifications, procedures, and all other information arising from a Quotation or PO and relating to the activities of Skyline must be kept strictly confidential at all times and may not be published or disseminated without the prior written consent of Skyline and may only be used for their intended purpose(s). The Buyer hereby acknowledges that Skyline is entitled to seek appropriate compensation if the Buyer breaches its duty of confidentiality without thereby detracting from any other right or claim.
+“**Software**” means all software licensed by Skyline, including the DataMiner software and its accompanying drivers.
 
-## Indemnification
+“**Subscription Term**” means the period during which Customer has the right to access and use a Deliverable under a subscription, commitment, or similar arrangement, as set out in the Quotation.
 
-Skyline shall defend and indemnify Buyer against any third-party claim, suit, or proceeding arising out of, related to, or alleging infringement or misappropriation of any patent, copyright, trade secret, or other intellectual property right by the Software. Skyline's obligations set forth in this article do not apply to the extent that an indemnification claim arises out of: (a) Buyer's breach of these terms and conditions; (b) changes to the Software made without Skyline's written consent; (c) Buyer's failure to incorporate Software updates that would have avoided the alleged infringement, provided Skyline offered such updates without charges not otherwise required pursuant to these terms and conditions; (d) Skyline's modification of the Software in compliance with specifications provided by Customer.
+“**Usage-Based Entitlements**” means the units, credits, capacity, features, modules, seats, workloads, transactions, subscriptions, committed usage, or other commercial entitlements governing Customer’s access to or use of the Deliverables, as specified in the Quotation or applicable Service Description.
 
-## Limitation of liability
+### 2. Applicability
 
-Skyline's liability arising out of or related to the provision of Deliverables will not exceed the amount paid by the Buyer to Skyline for the Deliverables.
+2.1 These terms govern Customer’s purchase of Deliverables from Skyline, unless the Parties have entered into a separate written agreement expressly governing such purchase.
 
-In no event will Skyline be liable for lost profits or loss of business or for any consequential, indirect, special, incidental, or punitive damages arising out of or related to the provision of Deliverables.
+2.2 Supplementary or deviating terms or conditions imposed by the Customer, including but not limited to Customer’s purchasing terms, procurement terms, general conditions of purchase, or any terms included in or referenced by POs or other Customer documents, are hereby expressly rejected and shall not apply, even if Skyline has not explicitly objected to such terms. If Skyline has expressly accepted Customer’s terms in a separate written agreement signed by an authorized representative of Skyline, then these terms shall apply insofar as they do not conflict with the accepted terms.
 
-## Force majeure
+2.3 In the event of a conflict between documents forming part of the Agreement, the following order of precedence shall apply (highest to lowest):
 
-The parties will not be liable for any failure to perform that is caused by circumstances beyond its reasonable control, without such party's fault or negligence, and which by its nature could not have been foreseen by either party or, if it could have been foreseen, was unavoidable, including but not limited to, acts of God, acts of war, government action, pandemics or accidents, provided that (a) the force majeure event is promptly notified to the other party and the parties use reasonable efforts to correct its failure to perform and (b) the parties shall meet and discuss in good faith any amendments to the PO if the suspension of performance continues for sixty (60) Days after the date of the occurrence and such failure to perform would constitute a material breach of these terms and conditions in the absence of such force majeure event.
+(a) the Quotation;
+(b) the applicable Regional Schedule (Part B);
+(c) any applicable DPA;
+(d) any applicable commercial schedule;
+(e) any applicable Service Description or usage policy;
+(f) any applicable SLA or Maintenance and Support Terms;
+(g) these terms;
+(h) the End User License Agreement (EULA) embedded in the Software.
 
-## General provisions
+### 3. Ordering and Payment
 
-This Agreement sets forth the entire agreement of the parties and supersedes all prior or contemporaneous writings, negotiations, and discussions with respect to its subject matter. Neither party has relied upon any such prior or contemporaneous communications.
+3.1 A PO issued by Customer serves administrative purposes only. Skyline’s acceptance or processing of a PO is subject to and governed by the Agreement.
 
-These terms and conditions may conflict with other specific terms being in place for certain Deliverables. The present terms and conditions are meant to supplement, and not amend such others specific terms. In case of any inconsistency, the specific terms being in place for certain Deliverables shall prevail.
+3.2 All invoices are payable, clear of any deductions, in the currency specified in the Quotation or, if none is specified, in the currency set out in the applicable Regional Schedule. The payment term of Skyline’s invoices is thirty (30) days from the date of the invoice, unless set out differently in the Quotation.
 
-Any amendments to these terms and conditions, as well as any additions or omissions, can only be agreed upon in writing with the mutual consent of, and duly signed by, the parties.
+3.3 Invoices may be issued by the Skyline contracting entity specified in the Quotation or by any of its affiliates on behalf of that entity. Any invoice issued by a Skyline entity other than the contracting entity specified in the Quotation shall be deemed issued on behalf of, and for the account of, the contracting entity. Payment of such invoice shall discharge Customer’s payment obligation under the Agreement. The Skyline contracting entity specified in the Quotation shall remain the sole contracting party and shall retain all rights and remedies under the Agreement, including the right to enforce payment.
 
-Unless agreed otherwise, the Buyer cannot assign the PO or the rights and obligations arising from it to a third party without Skyline's prior written permission.
+3.4 Customer shall be responsible for any reasonable external costs or platform fees imposed on Skyline as a result of Customer's mandatory use of a vendor management, procurement, invoicing, or similar platform, unless otherwise agreed in the Quotation.
 
-The invalidity of one of more provisions of these terms and conditions or a part thereof will not affect the remainder of these terms and conditions. The parties will replace the invalid provision(s) with (a) valid provision(s), which will correspond as closely as possible to the intentions of the invalid provision(s).
+3.5 The Customer is responsible for paying all taxes, other than Skyline’s income tax, associated with the purchase of Deliverables. All payments shall be made free and clear of and without deduction or withholding for any taxes. If Customer is required to deduct or withhold taxes, the sum payable shall be increased so that, after making all required deductions or withholdings, Skyline receives an amount equal to the sum it would have received had no such deduction or withholding been made. Customer shall promptly deliver to Skyline any deduction or withholding certificate prescribed under law.
 
-Skyline will not be deemed to have waived any of its rights under these terms of conditions by lapse of time or by any statement or representation other than by an authorized representative in an explicit written waiver. No waiver of a breach of these terms and conditions will constitute a waiver of any other breach of these terms and conditions.
+3.6 Any late payment interest shall be governed by the applicable Regional Schedule. Skyline shall additionally be entitled to recover all reasonable costs incurred in collecting any overdue amounts.
 
-Nothing in this Agreement shall be construed as creating an employer-employee relationship, an agency relationship, a partnership, or a joint venture between the parties.
+3.7 Without prejudice to any other rights or remedies, and without further notice unless required by law, Skyline may, in case of non-payment, suspend the affected Deliverables, accounts, Services, license rights, or access rights under the relevant Quotation, and may suspend other Deliverables where the outstanding amount remains unpaid after notice or where the non-payment creates a material credit risk. Skyline may also terminate the Agreement, in whole or in part, and claim full compensation for any damages suffered. The exercise of any such rights shall not relieve Customer of its obligation to pay all outstanding amounts. Skyline shall not be liable for any loss, damage, or cost incurred by Customer as a result of such suspension or termination. During any period of suspension, Customer Data shall be retained in accordance with Skyline’s data retention policies.
 
-These terms and conditions shall be governed by the laws of Belgium with the exclusion of CISG, and the parties agree to submit to the exclusive jurisdiction of the courts of Kortrijk.
+### 4. Delivery and Acceptance
+
+4.1 All Software shall be delivered electronically.
+
+4.2 Access to the SaaS Service shall be provided electronically upon activation of Customer’s account, in accordance with clause 6.
+
+4.3 All Services related to the Software shall be provided by Skyline using an agile delivery methodology. Maintenance and support services shall be subject to separate Maintenance and Support Terms.
+
+4.4 The following acceptance procedure applies to Software and Services deliverables only and does not apply to the SaaS Service. Customer may reject a Deliverable only to the extent it materially fails to conform to the agreed specifications or Documentation. Customer has fourteen (14) calendar days to accept the applicable Software or Services deliverables following delivery by Skyline. If Customer does not accept a Deliverable, it must notify Skyline of such non-acceptance within this period by written notice specifying the reasons for non-acceptance in reasonable detail. If Skyline, acting reasonably, determines that the non-acceptance is justified, it will initiate corrective actions, after which a new fourteen (14) day acceptance period will commence, and so further until the Deliverables have been accepted by Customer.
+
+4.5 Deliverables shall be deemed accepted if Customer uses them in a production environment, fails to reject them within the applicable acceptance period, or otherwise confirms acceptance in writing. Payment alone shall not constitute acceptance, but shall not prejudice Skyline’s right to rely on deemed acceptance where no timely and substantiated rejection has been made.
+
+### 5. License Types and Access Rights
+
+5.1 The Quotation specifies the license type or access right granted to Customer for each Deliverable, including the following options:
+
+(a) Perpetual License: a non-exclusive, non-transferable, non-sublicensable license to use the Software for an indefinite period, subject to full payment of all applicable fees.
+
+(b) Usage-Based or Subscription Right: a non-exclusive, non-transferable, non-sublicensable right to access and use the applicable Deliverables, governed by the applicable Usage-Based Entitlements under clause 7.
+
+5.2 The Perpetual License survives expiration or non-renewal of any maintenance and support coverage. Customer retains the right to continue using the version of the Software in its possession at the time of expiration, but shall no longer be entitled to updates, upgrades, patches, or technical support unless maintenance and support coverage is renewed under the applicable Maintenance and Support Terms.
+
+5.3 All license and access rights are conditional upon full and timely payment of all fees due under the Agreement and, where applicable, compliance with Skyline’s technical license validation requirements, including Cloud Connected status. Skyline may implement technical measures to validate, manage, suspend, or enforce license and access rights. Customer shall not circumvent or disable such measures. For Fully Offline On-Premises Deployments, alternative license verification methods may apply as communicated by Skyline.
+
+5.4 Customer shall not, and shall not permit any third party to: (a) copy, modify, or create derivative works of the Software or SaaS Service; (b) reverse engineer, disassemble, or decompile the Software or SaaS Service, except to the extent expressly permitted by applicable mandatory law; (c) sublicense, sell, resell, distribute, or make the Software or SaaS Service available to any third party, except as expressly permitted in the Quotation; (d) use the Software or SaaS Service to build a competing product or service; (e) use the Software or SaaS Service in violation of applicable law; or (f) interfere with the integrity, performance, security, or technical protection measures of the Software or SaaS Service.
+
+### 6. Deployment
+
+6.1 The Software may be deployed in one of the following models, or a combination thereof, as specified in the Quotation:
+
+(a) Self-managed deployment: Customer installs and operates the Software on its own infrastructure, whether on-premises, in a private cloud, or in a hybrid configuration. Customer is responsible for the hosting environment and its compliance with Skyline’s system requirements as set out in the Documentation.
+
+(b) SaaS Service: Skyline provides Customer with cloud-hosted or managed access to the Software, as further described in the Quotation or applicable Service Description.
+
+6.2 Where any Deliverable is provided through the SaaS Service:
+
+(a) Access is limited to the Authorized Users, Usage-Based Entitlements, and other usage parameters specified in the Quotation or applicable Service Description.
+
+(b) Skyline shall provide Customer with the necessary access credentials and protocols. Customer is responsible for all activities conducted under its account and shall maintain the confidentiality of all access credentials.
+
+(c) The SaaS Service shall be provided in accordance with the service levels set out in the applicable SLA.
+
+(d) Skyline may update and enhance the SaaS Service from time to time, provided that such updates do not materially reduce the core functionality during the period for which Customer has the right to access and use the SaaS Service.
+
+(e) Customer shall not use the SaaS Service in any manner that is unlawful, that infringes the rights of others, or that may impair the security, integrity, or availability of the SaaS Service or Skyline's infrastructure.
+
+### 7. Usage-Based and Subscription Entitlements
+
+7.1 The Quotation may specify that Customer’s access to or use of the Deliverables is subject to usage-based, subscription-based, capacity-based, credit-based, feature-based, user-based, consumption-based, or other commercial entitlements.
+
+7.2 The applicable entitlement metrics, quantities, duration, commitment period, consumption rules, overage rules, renewal rules, expiry rules, rollover rules, and other commercial parameters shall be specified in the Quotation, the applicable Service Description, usage policy, commercial schedule, or Skyline’s then-current usage documentation.
+
+7.3 Customer shall not exceed the applicable entitlements. Skyline may monitor usage for billing, license validation, security, support, capacity planning, and compliance purposes.
+
+7.4 If Customer exceeds or exhausts the applicable entitlements, Skyline may charge additional fees at the rates specified in the Quotation or, failing that, at Skyline’s then-current rates, require the purchase of additional entitlements, restrict further use, suspend access to the affected Deliverables, or apply such other measures as specified in the Quotation or applicable Service Description.
+
+7.5 Unless expressly stated otherwise in the Quotation, unused entitlements, credits, allowances, committed usage, or prepaid amounts are non-refundable, non-transferable, and expire at the end of the applicable entitlement period.
+
+7.6 Skyline may update usage metrics, technical measurement methods, and commercial packaging from time to time, provided that such updates do not materially reduce Customer's purchased rights or materially increase Customer's fees during the then-current commitment period.
+
+### 8. Data Protection
+
+8.1 Skyline processes Personal Data about Customer’s personnel for the purpose of performing the Agreement (controller processing). Such processing is governed by Skyline’s privacy notice, available on Skyline’s website.
+
+8.2 Where Skyline processes Personal Data on behalf of Customer as processor, such processing shall be governed by the DPA.
+
+8.3 The applicable Regional Schedule (Part B) may impose additional or modified data protection obligations.
+
+### 9. Intellectual Property and Data Rights
+
+9.1 Skyline retains all right, title, and interest in and to the Deliverables and all related intellectual property rights, including copyrights, patents, trademarks, and trade secrets. All Software is licensed by Skyline to Customer, and not sold. No intellectual property rights are transferred to Customer except as expressly set out in the Agreement.
+
+9.2 Customer retains all right, title, and interest in and to Customer Data. Customer grants Skyline a limited, non-exclusive, worldwide license to process Customer Data solely as necessary to provide the Deliverables in accordance with the Agreement. Customer is responsible for the accuracy, quality, legality, and use of Customer Data, including obtaining all rights and consents necessary for Skyline to process Customer Data in accordance with the Agreement.
+
+9.3 Skyline may collect, generate, and use Aggregated Data for product improvement, benchmarking, analytics, security, and similar purposes. Aggregated Data shall not identify Customer or any individual.
+
+9.4 Customer grants Skyline a worldwide, perpetual, irrevocable, royalty-free right to use, implement, commercialize, and incorporate any feedback, suggestions, enhancement requests, or recommendations relating to the Deliverables, without restriction or obligation to Customer.
+
+### 10. Warranty
+
+10.1 Skyline warrants that the Software, when used as permitted under the Agreement and in accordance with the Documentation and applicable system requirements, will conform substantially to the Documentation for a period of twelve (12) months from the delivery date. Skyline further warrants that all Services will be performed in a professional and workmanlike manner.
+
+10.2 Skyline warrants that the SaaS Service shall perform substantially in accordance with the Documentation during the period for which Customer has the right to access and use it. Service availability commitments are set out in the applicable SLA.
+
+10.3 Except as expressly set out in the Agreement, Skyline makes no warranties, representations, or conditions regarding the Deliverables, whether express, implied, statutory, or otherwise, to the fullest extent permitted by applicable law. Skyline does not warrant that the Deliverables will be uninterrupted, error-free, or completely secure.
+
+10.4 Customer's sole and exclusive remedy, and Skyline's sole obligation, for breach of the warranties in clauses 10.1 or 10.2 shall be for Skyline to use commercially reasonable efforts to correct the non-conformity or re-perform the affected Services. If Skyline is unable to do so within a reasonable period, Skyline may terminate the affected Quotation and refund any prepaid fees for the affected Deliverables covering the period after termination, where applicable.
+
+### 11. Confidentiality
+
+11.1 Each Party shall keep confidential all Confidential Information of the other Party and shall use such information solely for the purposes of performing under the Agreement. Confidential Information does not include information that: (a) is or becomes publicly available through no fault of the receiving Party; (b) was lawfully known to the receiving Party prior to disclosure; (c) is independently developed without use of Confidential Information; or (d) is lawfully received from a third party without restriction. Each Party may disclose Confidential Information where required by law or court order, provided it gives prior notice where legally permitted.
+
+11.2 These obligations shall survive for five (5) years after termination of the Agreement, except in respect of trade secrets, which shall remain protected for as long as they qualify as trade secrets under applicable law.
+
+### 12. Indemnification
+
+12.1 Skyline shall defend and indemnify Customer against any third-party claim alleging that the Software or SaaS Service infringes or misappropriates any patent, copyright, trade secret, or other intellectual property right. Skyline’s obligations under this clause do not apply to the extent the claim arises from: (a) Customer’s breach of the Agreement; (b) changes to the Software made without Skyline’s written consent; (c) Customer’s failure to incorporate Software updates that would have avoided the alleged infringement, provided such updates were offered without additional charge; (d) Skyline’s modification of the Software in compliance with specifications provided by Customer; (e) Customer’s combination of the Deliverables with products, services, data, or materials not provided by Skyline; (f) use of the Deliverables outside the scope of the Agreement or Documentation; or (g) third-party or open-source components not modified by Skyline.
+
+12.2 Customer shall defend, indemnify, and hold harmless Skyline from any third-party claim arising from: (a) Customer Data; (b) Customer’s use of the Deliverables in violation of the Agreement or applicable law; or (c) any allegation that Customer Data infringes the rights of a third party.
+
+12.3 The indemnified Party shall promptly notify the indemnifying Party of any claim, provide reasonable cooperation, and allow the indemnifying Party to control the defense and settlement of the claim. Failure to provide prompt notice shall relieve the indemnifying Party of its obligations only to the extent it is materially prejudiced by such failure. The indemnifying Party shall not settle any claim in a manner that admits fault or imposes non-monetary obligations on the indemnified Party without the indemnified Party’s prior written consent, not to be unreasonably withheld.
+
+12.4 If the Software or SaaS Service becomes, or in Skyline's reasonable opinion is likely to become, the subject of an infringement claim, Skyline may, at its option: (a) procure for Customer the right to continue using it; (b) modify or replace it so that it becomes non-infringing without materially reducing its functionality; or (c) terminate the affected Quotation and refund any prepaid fees for the affected Deliverables covering the period after termination, where applicable.
+
+### 13. Limitation of Liability
+
+13.1 Skyline’s total aggregate liability arising out of or related to the Agreement shall not exceed the total amount paid by Customer to Skyline for the Deliverables during the twelve (12) months immediately preceding the event giving rise to the claim.
+
+13.2 In no event shall Skyline be liable for any loss of profits, loss of revenue, loss of business, loss of goodwill, loss of data, or for any indirect, consequential, special, incidental, exemplary, or punitive damages arising out of or related to the Agreement. The limitations set forth in clause 13 shall not apply to: (a) fraud, willful misconduct, or gross negligence; or (b) liability that cannot be limited under applicable laws.
+
+13.3 Nothing in clause 13 shall limit Customer’s obligation to pay fees and other amounts due under the Agreement.
+
+### 14. Term and Termination
+
+14.1 The term of the Agreement and the Subscription Term (where applicable) are set out in the Quotation.
+
+14.2 Unless either Party provides written notice of non-renewal at least thirty (30) days before the end of the then-current Subscription Term or commitment period, any subscription or committed-usage arrangement under this Agreement shall automatically renew for successive periods equal to the initial Subscription Term or commitment period, as applicable. Skyline may change the fees applicable to any renewal term. If Skyline notifies Customer of a fee change less than thirty (30) days before the renewal date, Customer may decline the renewal by written notice within thirty (30) days after Skyline's notice.
+
+14.3 Either Party may terminate the Agreement by written notice if the other Party: (a) materially breaches the Agreement and fails to cure such breach within thirty (30) days of receiving written notice thereof; or (b) becomes insolvent, files for bankruptcy, or ceases to operate in the ordinary course.
+
+14.4 Upon termination or expiration, Customer may request export of Customer Data within thirty (30) days. After such period, Skyline shall delete Customer Data in accordance with its data retention policies, unless retention is required by applicable law.
+
+14.5 Unless expressly stated otherwise in the Quotation, any remaining Usage-Based Entitlements, including credits, allowances, committed usage, or prepaid amounts, shall be forfeited without refund or compensation upon termination or expiration.
+
+14.6 Clauses relating to payment, intellectual property and data rights, confidentiality, indemnification, limitation of liability, and governing law shall survive termination.
+
+### 15. Force Majeure
+
+Neither Party shall be liable for any failure to perform that is caused by circumstances beyond that Party’s reasonable control, without that Party’s fault or negligence, and which by its nature could not have been foreseen or, if it could have been foreseen, was unavoidable, including acts of God, acts of war, government action, pandemics, or accident, provided that (a) the force majeure event is promptly notified to the other Party and the Parties use reasonable efforts to correct the failure to perform, and (b) the Parties shall meet and discuss in good faith any amendments to the Agreement if the suspension of performance continues for sixty (60) days after the date of the occurrence and such failure to perform would constitute a material breach of the Agreement in the absence of such force majeure event.
+
+### 16. General Provisions
+
+16.1 This Agreement sets forth the entire agreement of the Parties and supersedes all prior or contemporaneous writings, negotiations, and discussions with respect to its subject matter.
+
+16.2 Any amendment to an Agreement already entered into can only be agreed upon in writing with the mutual consent of, and duly signed by, the Parties. Skyline may update these terms from time to time. Unless otherwise agreed in the Quotation, the version of these terms applicable to a Quotation shall be the version attached to, referenced in, or otherwise made available to Customer in connection with that Quotation. Any updated version shall apply only to Quotations issued on or after the effective date.
+
+16.3 Customer may not assign the Agreement without Skyline’s prior written consent. Skyline may assign the Agreement to an affiliate or in connection with a merger, sale, or reorganization upon written notice.
+
+16.4 The invalidity of one or more provisions of the Agreement shall not affect the remainder of the Agreement. The Parties will replace any invalid provision with a valid provision corresponding as closely as possible to the intentions of the invalid provision.
+
+16.5 No waiver of any right under the Agreement shall be effective unless explicitly made in writing by an authorized representative. No waiver of a breach shall constitute a waiver of any other breach.
+
+16.6 All notices under this Agreement shall be in writing and sent by e-mail to the designated contact persons specified in the Quotation or, for online purchases, to the e-mail address associated with Customer's account. Notices relating to termination, material breach, or legal proceedings must additionally be sent by registered mail to the Party's registered office address. Each Party shall promptly notify the other of any change to its contact details.
+
+16.7 Nothing in this Agreement creates an employer-employee relationship, agency, partnership, or joint venture between the Parties.
+
+16.8 Each Party warrants that it shall comply with all applicable anti-bribery and anti-corruption laws and shall not directly or indirectly offer or accept any bribe or improper advantage in connection with this Agreement.
+
+16.9 Customer shall comply with all applicable export and import laws and regulations in its use of the Deliverables, including applicable U.S., EU, and UN export control and sanctions laws. Customer shall not use, export, re-export, transfer, or make available the Deliverables in violation of such laws, including to sanctioned parties, embargoed territories, or for prohibited end uses.
+
+16.10 Governing law and jurisdiction are determined by the applicable Regional Schedule (Part B). Where no Regional Schedule applies, the Agreement shall be governed by the laws of Belgium, with the exclusion of the United Nations Convention on Contracts for the International Sale of Goods (CISG), and the Parties submit to the exclusive jurisdiction of the competent courts of Gent, Division Kortrijk (Belgium).
+
+## Part B — Regional Schedules
+
+The following Regional Schedules form part of the Agreement. The applicable Regional Schedule is determined by the Skyline contracting entity specified in the Quotation. The provisions of a Regional Schedule supplement and, where expressly stated, override the General Terms & Conditions (Part A).
+
+### Schedule 1 — Belgium / EU / EEA
+
+This Schedule applies where the Quotation specifies Skyline Communications N.V. as the contracting entity. This is the default Regional Schedule and applies where the Quotation does not specify a different Skyline contracting entity.
+
+**S1.1 Skyline Entity** Skyline Communications N.V., Ambachtenstraat 33, 8870 Izegem, Belgium (Company No. 0428.257.869 / VAT: BE 0428.257.869).
+
+**S1.2 Currency** All fees are payable in EUR, unless otherwise specified in the Quotation.
+
+**S1.3 Late Payment** The late payment provisions in clause 3 shall be interpreted in accordance with the Belgian Law of 2 August 2002 on late payment in commercial transactions.
+
+**S1.4 Governing Law and Jurisdiction** The Agreement shall be governed by the laws of Belgium, with the exclusion of the United Nations Convention on Contracts for the International Sale of Goods (CISG). The Parties submit to the exclusive jurisdiction of the competent courts of Gent, Division Kortrijk (Belgium).
+
+### Schedule 2 — United States
+
+This Schedule applies where the Quotation specifies Skyline Communications Inc. as the contracting entity.
+
+**S2.1 Skyline Entity** Skyline Communications Inc., 1625 N Commerce Pkwy, Suite 207, Weston, FL 33326, United States (EIN: 32-0446960).
+
+**S2.2 Currency** All fees are payable in USD, unless otherwise specified in the Quotation.
+
+**S2.3 HIPAA** The Deliverables are not designed for use with Protected Health Information (PHI) under HIPAA. Customer shall not submit PHI unless a separate Business Associate Agreement (BAA) has been executed.
+
+**S2.4 Late Payment** The late payment interest rate shall be 2% per month or the maximum rate permitted by applicable state law, whichever is higher.
+
+**S2.5 Governing Law and Jurisdiction** Notwithstanding clause 16.10, this Agreement shall be governed by the internal laws of the State of Florida, without giving effect to any choice or conflict of law rule that would cause the application of laws of any other jurisdiction. Any legal suit, action, or proceeding shall be instituted exclusively in the federal or state courts located in Broward County, Florida, and each Party irrevocably submits to the exclusive jurisdiction of such courts and waives any objection based on improper venue or forum non conveniens.
+
+EACH PARTY WAIVES THE RIGHT TO A JURY TRIAL.
+
+**S2.6 Warranty Disclaimer** For Quotations governed by this Schedule, clause 10.3 is replaced by the following:
+
+TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, SKYLINE MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT, OR ARISING FROM COURSE OF DEALING, COURSE OF PERFORMANCE, OR USAGE OF TRADE.
+
+### Schedule 3 — Singapore
+
+This Schedule applies where the Quotation specifies Skyline Communications APAC Pte. Ltd. as the contracting entity.
+
+**S3.1 Skyline Entity** Skyline Communications APAC Pte. Ltd., 39 Hong Kong Street, #02-01, Singapore 059678 (UEN: 201722265W).
+
+**S3.2 Currency** All fees are payable in SGD, unless otherwise specified in the Quotation.
+
+**S3.3 Late Payment** The late payment interest rate shall be 2% per month or the maximum rate permitted by applicable Singapore law, whichever is higher.
+
+**S3.4 Dispute Resolution** Notwithstanding clause 16.10:
+
+(a) The Agreement shall be governed by the laws of Singapore.
+
+(b) Any dispute shall be settled by binding arbitration administered by the Singapore International Arbitration Centre (SIAC) under its Arbitration Rules, conducted by a single arbitrator. The seat of arbitration shall be Singapore. The language of arbitration shall be English.
+
+(c) Either Party may seek injunctive or equitable relief in any court of competent jurisdiction to protect its intellectual property rights or Confidential Information.
+
+**S3.5 Limitation of Liability** The limitations and exclusions of liability set forth in clause 13 shall be subject to the Unfair Contract Terms Act 1977 (2020 Rev Ed) of Singapore, to the extent applicable. Any term that would be rendered void or unenforceable under said Act shall be deemed modified to the minimum extent necessary to make it valid and enforceable.
