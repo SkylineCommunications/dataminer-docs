@@ -162,3 +162,9 @@ Also, in some cases, when the width of an icon shape was locked, up to now, the 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When, in a DataMiner web app, an exception was thrown while a WebSocket message was being serialized, up to now, that exception would not properly end up in the UI.
+
+#### Low-Code Apps: Problem when clicking 'Browse templates' [ID 45731]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+In some cases, an error could be thrown when you clicked *Browse templates* in the template editor.
