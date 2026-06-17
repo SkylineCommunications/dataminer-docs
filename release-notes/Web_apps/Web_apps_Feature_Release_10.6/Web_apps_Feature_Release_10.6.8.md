@@ -156,3 +156,9 @@ Also, in some cases, the reload button of a shared dashboard would not work.
 When an icon shape in a node template of a *Node edge graph* component did not have its width locked, up to now, it would not correctly apply the width when you zoomed in or out in the graph.
 
 Also, in some cases, when the width of an icon shape was locked, up to now, the icon would jump around when you panned inside a graph.
+
+#### Web apps: Exceptions thrown while serializing a WebSocket message would not properly end up in the UI [ID 45714]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When, in a DataMiner web app, an exception was thrown while a WebSocket message was being serialized, up to now, that exception would not properly end up in the UI.
