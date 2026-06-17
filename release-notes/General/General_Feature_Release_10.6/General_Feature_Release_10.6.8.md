@@ -156,6 +156,14 @@ In order to combine all system requirements specified in [DataMiner Compute Requ
 > [!NOTE]
 > From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.
 
+#### SLAutomation: Enhanced startup after a DataMiner restart or upgrade [ID 45651]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+Up to now, after a DataMiner restart or upgrade, in some cases, SLAutomation could unexpectedly stop working while initializing internal components.
+
+A number of enhancements have now been made to prevent any initialization issues during SLAutomation startup.
+
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 45712]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
@@ -247,3 +255,17 @@ In some cases, the SLASPConnection process could stop working when it failed to 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When, within a DataMiner System, a DataMiner Agent receives an SNMPv3 trap for an element hosted by another DataMiner Agent, it will forward that trap to the other Agent. However, in some cases, when the Agent that received the trap did not have the correct credentials needed to decrypt the trap, it would fail to forward the trap to the element.
+
+#### APIGateway: Problem with reverse proxy feature [ID 45688]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+The reverse proxy feature in APIGateway would no longer work.
+
+Whenever a DxM registered itself for reverse proxying, APIGateway could throw an exception.
+
+#### Problem when synchronizing files in the C:\\Skyline DataMiner\\Webpages\\Public folder [ID 45694]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, it would no longer be possible to synchronize any files in the `C:\Skyline DataMiner\Webpages\Public` folder among DataMiner Agents in a cluster because the path name would incorrectly be compared case sensitively.
