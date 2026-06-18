@@ -1,5 +1,5 @@
 ---
-uid: Ticketing_solution_concepts
+uid: TicketingConcepts
 description: Discover how tickets managed by the DataMiner Ticketing Solution are structured, managed, and linked within the DataMiner ecosystem.
 ---
 

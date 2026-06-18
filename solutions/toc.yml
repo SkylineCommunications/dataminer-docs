@@ -357,7 +357,7 @@ items:
       - name: Ticketing Solution architecture
         topicUid: TicketingArchitecture
       - name: Ticketing Solution concepts
-        topicUid: Ticketing_solution_concepts
+        topicUid: TicketingConcepts
       - name: Installing the Ticketing Solution
         topicUid: TicketingInstallation
       - name: Ticketing app overview
