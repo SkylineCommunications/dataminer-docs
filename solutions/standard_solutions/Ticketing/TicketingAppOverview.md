@@ -68,8 +68,8 @@ The Tickets page includes several filtering options:
 
 - **Predefined filters**, available via buttons in the upper-left corner:
 
-  - **Open tickets** (default view)
-  - **All tickets** (includes closed, canceled, and rejected tickets)
+  - **Open Tickets**: Default view.
+  - **All**: Shows all tickets, including closed, canceled, and rejected tickets.
 
     For example, below all tickets are set to be shown:
 
@@ -77,10 +77,13 @@ The Tickets page includes several filtering options:
 
 - **Assignment filter**, available to the right of the predefined filters:
 
-  - View tickets assigned to all users
-  - View tickets assigned to the current user (based on [People & Organizations](xref:People_Organizations)), for example:
+  - **All Assignees**: View tickets assigned to all users.
+  - **My Tickets**: View tickets assigned to the current user (based on [People & Organizations](xref:People_Organizations)), for example:
 
     ![Tickets page with 'My Tickets' filter activated](~/solutions/images/Ticketing_Demo_04_MyTickets.png)
+
+  > [!TIP]
+  > To make sure tickets can be assigned to DataMiner users, the user accounts must be [mapped to People & Organizations contacts](xref:MappingUsersAndContacts).
 
 #### Viewing closed tickets
 

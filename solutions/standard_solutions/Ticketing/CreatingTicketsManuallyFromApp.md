@@ -21,6 +21,9 @@ uid: CreatingTicketsManuallyFromApp
 
    ![Create Ticket](~/solutions/images/Ticketing_Demo_17_CreateATicket.png)
 
+   > [!TIP]
+   > To make sure tickets can be assigned to DataMiner users, the user accounts must be [mapped to People & Organizations contacts](xref:MappingUsersAndContacts).
+
 1. Optionally, also configure the following settings:
 
    - Specify a requested and expected resolution date.

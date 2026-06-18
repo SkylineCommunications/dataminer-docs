@@ -22,7 +22,7 @@ To manually create a ticket for an alarm in Cube:
    ![Ticket creation pop-up window](~/solutions/images/Ticketing_Create_ticket_popup.png)
 
    > [!TIP]
-   > Selecting an assignee is only possible if the [People & Organizations](xref:People_Organizations) app is available in the system.
+   > To make sure tickets can be assigned to DataMiner users, the user accounts must be [mapped to People & Organizations contacts](xref:MappingUsersAndContacts).
 
 1. Click *Create*.
 
