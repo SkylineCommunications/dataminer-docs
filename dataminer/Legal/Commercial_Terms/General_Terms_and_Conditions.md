@@ -1,5 +1,5 @@
 ---
-uid: Terms_of_Sale
+uid: General_Terms_and_Conditions
 keywords: General Terms and Conditions, Terms and Conditions
 ---
 
