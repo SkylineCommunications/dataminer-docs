@@ -1,5 +1,6 @@
 ---
 uid: Partnership_Governance
+description: Explore partnership governance — Find out more about operational business reporting and executive business reviews.
 ---
 
 # Partnership governance
