@@ -3,7 +3,7 @@ uid: TicketingArchitecture
 description: Explore the architecture of the Ticketing Solution. Learn about the backend, the frontend, and the way in which the solution can interact with other apps.
 ---
 
-# Ticketing Solution architecture
+# Ticketing architecture
 
 The Ticketing Standard Solution consists of two main building blocks:
 
@@ -74,3 +74,18 @@ This way, you can easily view all tickets affecting a specific asset, identify r
 
 > [!TIP]
 > To make optimal use of this functionality, ensure that elements are correctly linked to assets in Asset Manager. That way, when a ticket is created from an alarm, both the originating element and the linked asset will automatically be linked to the ticket.
+
+### DataMiner Cube alarm properties
+
+When the DataMiner Ticketing solution is installed, it automatically creates the following custom alarm properties:
+
+- **Ticket ID**: Contains the identifier of the ticket created from the alarm. This property is automatically populated when a ticket is created, allowing internal tracking within DataMiner.
+- **Incident Status**: Displays the current status of the associated ticket, reflecting any updates made during the ticket lifecycle.
+- **Incident Number**: Contains a reference to an external ticket (if any). This is used when integration with external systems (for example ServiceNow or Jira) is configured to allow synchronization of DataMiner tickets and external incidents.
+
+These properties allow ticket information to be visible directly in the Alarm Console. They support both internal ticket tracking and integration with external ticketing systems.
+
+![Ticketing Alarm Properties](~/solutions/images/Ticketing_AlarmProperties.png)
+
+> [!TIP]
+> Make sure to [add the columns with these properties to the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-or-removing-columns) so users can monitor the progress of tickets directly from the Alarm Console. By [assigning user settings to a user group](xref:Assigning_user_settings_to_a_user_group), you can even make the Alarm Console layout with these columns the default layout for an entire group of users.

@@ -354,12 +354,16 @@ items:
     - name: Ticketing
       topicUid: Ticketing
       items:
-      - name: Ticketing Solution architecture
+      - name: Ticketing architecture
         topicUid: TicketingArchitecture
-      - name: Ticketing Solution concepts
+      - name: Ticketing concepts
         topicUid: TicketingConcepts
-      - name: Installing the Ticketing Solution
-        topicUid: TicketingInstallation
+      - name: Installation and setup
+        items:
+        - name: Installing the Ticketing Solution
+          topicUid: TicketingInstallation
+        - name: Mapping users and contacts
+          topicUid: MappingUsersAndContacts
       - name: Ticketing app overview
         topicUid: TicketingAppOverview
       - name: Creating tickets
@@ -371,10 +375,6 @@ items:
           topicUid: CreatingTicketsFromCube
         - name: Configuring automatic ticket creation via Correlation
           topicUid: CreatingTicketsFromCorrelation
-      - name: Mapping users and contacts
-        topicUid: MappingUsersAndContacts
-      - name: Ticketing alarm properties
-        topicUid: ConfiguringAlarmPropertiesForTicketing
       - name: External ticketing system integration
         topicUid: ExternalTicketingSystemIntegration
         items:

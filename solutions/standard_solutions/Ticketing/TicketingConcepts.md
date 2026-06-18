@@ -3,7 +3,7 @@ uid: TicketingConcepts
 description: Discover how tickets managed by the DataMiner Ticketing Solution are structured, managed, and linked within the DataMiner ecosystem.
 ---
 
-# Ticketing Solution concepts
+# Ticketing concepts
 
 The Ticketing solution provides a structured approach to incident management within DataMiner.
 
