@@ -1,5 +1,6 @@
 ---
 uid: Support_Level_Roles
+description: Find out the responsibilities as a partner when providing support services — Offering both proactive and reactive support.
 ---
 
 # Support level roles

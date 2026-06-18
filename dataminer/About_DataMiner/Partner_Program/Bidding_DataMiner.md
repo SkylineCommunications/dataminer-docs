@@ -1,5 +1,6 @@
 ---
 uid: Bidding_DataMiner
+description: Find out what you need to take into account to build a winning proposal if you bid DataMiner for a Digital Transformation program.
 ---
 
 # Bidding DataMiner
