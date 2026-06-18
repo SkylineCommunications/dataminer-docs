@@ -110,3 +110,9 @@ From now on, the URL arguments will be converted to uppercase using culture-inva
 When, on the *Spectrum Analyzer* page of a spectrum analyzer card, you clicked the *Monitors* tab, and selected either *Edit monitor* or *Edit script*, up to now, in either the *Edit monitor* window or the *Edit script* window, the left pane would incorrectly have its background color set to light blue.
 
 From now on, in both these windows, the left pane will have its background color set to white instead.
+
+#### Spectrum analyzer cards: Pixels cut off from spectrum grid on the right and at the bottom [ID 45691]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of an issue with the grid calculation, up to now, a few pixels could get cut off from a spectrum grid on the right and at the bottom.
