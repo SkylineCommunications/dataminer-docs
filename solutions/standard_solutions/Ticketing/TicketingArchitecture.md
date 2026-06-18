@@ -49,19 +49,28 @@ The Ticketing app can be used as a standalone app or via its API Helper. Both me
 
 ## Interaction with other apps
 
-Interaction with other apps is built into the solution. For example:
+### Built-in navigation to other apps
 
-- On the Ticket Information page of the Ticketing app:
+Interaction with other apps is built into the solution. For example, on the Ticket Information page of the Ticketing app, linked items are displayed, with direct links to, for example, alarms and elements in the [Monitoring app](xref:Working_with_the_Monitoring_app) or in DataMiner Cube, or assets in the [Asset Manager](xref:Asset_Manager) app.
 
-  - Clicking an alarm opens it in the [Monitoring app](xref:Working_with_the_Monitoring_app).
-  - Clicking an element opens it in the Monitoring app.
-  - Clicking an asset opens it in the [Asset Manager](xref:Asset_Manager) app.
+For details, refer to [Linked Items section](xref:TicketingAppOverview#linked-items-section)
 
-- In the Asset Manager app:
-
-  - Assets display an indication of linked tickets.
-  - The list of linked tickets in the Ticketing application can be opened directly from the asset.
+### People & Organizations interaction
 
 The Ticketing Solution can also optionally interact with the MediaOps.Plan [People & Organizations](xref:People_Organizations) app to manage the **ownership and assignment** of tickets. Ownership ensures that it is always clear who is responsible for progressing a ticket towards closure. Tickets can be assigned to a contact or a team as defined in the People & Organizations app.
 
 While technically Ticketing can operate without the People & Organizations app, tickets cannot be assigned in that case, which means you lose the benefit of structured ticket ownership. We therefore **strongly recommend using the Ticketing application together with the MediaOps.Plan Solution**.
+
+> [!TIP]
+> To make optimal use of this functionality, make sure that DataMiner user accounts are [mapped to People & Organizations contacts](xref:MappingUsersAndContacts).
+
+### Asset Manager interaction
+
+The DataMiner Ticketing Solution supports linking tickets to assets through the Standard Data Model (SDM) Relationships layer. This enables visibility of ticket information directly within [Asset Manager](xref:Asset_Manager), allowing users to identify which assets are affected by tickets.
+
+In Asset Manager, there is a visual indication when an asset has a linked ticket, which can be clicked to open the Ticketing app filtered for the selected asset. If multiple tickets are created for alarms on the same element, and that element is linked to an asset, all those tickets will be visible when the Ticketing app is filtered on that asset.
+
+This way, you can easily view all tickets affecting a specific asset, identify recurring issues on the same asset, and correlate alarms, elements, and tickets through shared asset relationships.
+
+> [!TIP]
+> To make optimal use of this functionality, ensure that elements are correctly linked to assets in Asset Manager. That way, when a ticket is created from an alarm, both the originating element and the linked asset will automatically be linked to the ticket.

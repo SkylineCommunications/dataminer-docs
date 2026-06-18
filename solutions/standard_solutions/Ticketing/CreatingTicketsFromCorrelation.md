@@ -6,6 +6,8 @@ uid: CreatingTicketsFromCorrelation
 
 You can have DataMiner create tickets automatically based on a correlation rule. The correlation rule can detect specific alarm conditions and then trigger ticket creation without any user interaction.
 
+The tickets will be **automatically linked** to the relevant alarms, elements, and/or services. If the [Asset Manager](xref:Asset_Manager) app is installed, they will also be linked to the relevant assets.
+
 1. In the Correlation module in DataMiner Cube, [create a correlation rule](xref:Adding_a_new_Correlation_rule).
 
 1. Configure the rule to be triggered based on the needs of your use case.

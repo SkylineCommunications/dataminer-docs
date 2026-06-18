@@ -371,8 +371,6 @@ items:
           topicUid: CreatingTicketsFromCube
         - name: Configuring automatic ticket creation via Correlation
           topicUid: CreatingTicketsFromCorrelation
-      - name: Linking tickets to assets
-        topicUid: LinkingTicketsToAssets
       - name: Mapping users and contacts
         topicUid: MappingUsersAndContacts
       - name: Ticketing alarm properties
