@@ -1,5 +1,6 @@
 ---
 uid: Benefits_DevOps_Professionals_Program
+description: As a member of the DevOps Professional Program, earn DevOps Points. These will determine your level and allow you to enjoy all kinds of benefits.
 ---
 
 # Benefits for members of the DevOps Professional Program
