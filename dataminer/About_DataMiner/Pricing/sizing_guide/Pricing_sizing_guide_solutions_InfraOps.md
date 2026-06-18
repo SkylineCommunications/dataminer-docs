@@ -10,22 +10,22 @@ InfraOps cost is primarily driven by **total asset count** (charged under Automa
 
 | Parameter | Description |
 |-----------|-------------|
-| Total assets | Number of assets (equipment items) registered in the system |
+| Total assets | Number of assets (items of equipment) registered in the system |
 | Other records | Facilities, rooms, floors, zones, rows, racks, asset classes, connections |
-| SaaS | Whether the solution is Skyline-hosted (DaaS) |
+| SaaS | Whether the solution is hosted by Skyline (DaaS) |
 | Third-party integration | Whether DataMiner connects to an external DCIM or CMDB platform |
 
 ## Service volumes
 
 | Category | Service | Units / month | Calculation method |
 |----------|---------|:-------------:|---------------------|
-| Data Plane | Unmanaged Objects | `Assets + other records` | Every asset and supporting record (rack, room, facility, connections, etc.) is an object model instance. Use 4–5× the asset count as a reference multiplier for other records if not known. |
-| Automation | Actions | `Assets × 5` | Each asset triggers the equivalent to 5 Automation Actions at onboarding. This is a **one-time cost**. |
+| Data Plane | Unmanaged Objects | `Assets + other records` | Every asset and supporting record (rack, room, facility, connections, etc.) is an object model instance. Use 4–5 × the asset count as a reference multiplier for other records if not known. |
+| Automation | Actions | `Assets × 5` | Each asset triggers the equivalent to 5 automation actions at onboarding. This is a **one-time cost**. |
 | Storage as a Service | Information Events | `200,000 (min)` | Based on normal solution usage. Does not necessarily scale with asset count.|
 | DataMiner as a Service | Hosted Managed Objects | `1,000,000 metrics (min)` | InfraOps has negligible device metrics. The 1M metric DaaS minimum baseline always applies for hosted deployments. |
 
 > [!IMPORTANT]
-> **Automation Actions are a one-time onboarding charge**, at the time the asset is added to DataMiner, not a recurring monthly cost. If all assets are onboarded in a single month, you can size your Automation subscription for that month at `Assets × 5` Actions.
+> **Automation actions are a one-time onboarding charge**, at the time the asset is added to DataMiner, not a recurring monthly cost. If all assets are onboarded in a single month, you can size your Automation subscription for that month at `Assets × 5` Actions.
 
 > [!NOTE]
 > **Third-party integration** (connecting to an external CMDB, or asset management platform) adds at least one Connector Service and one Standard Managed Object per connected instance. Bi-directional sync may also add recurring Actions depending on how the solution is designed. Size these separately using the [Data Plane](xref:Pricing_sizing_guide_services_data_plane) and [Data Sources](xref:Pricing_sizing_guide_services_data_sources) guides.
@@ -43,7 +43,7 @@ InfraOps cost is primarily driven by **total asset count** (charged under Automa
 | **Hosted Managed Objects** | 1,000,000 | 1,000,000 | 1,000,000 | 1,000,000 |
 
 > [!TIP]
-> Actual Unmanaged Object counts depend on how granularly facilities, zones, and connections are modeled. The examples above assume approximately 4–5× the asset count for supporting records.
+> Actual Unmanaged Object counts depend on how granularly facilities, zones, and connections are modeled. The examples above assume approximately 4–5 × the asset count for supporting records.
 
 ## What does not affect this estimate
 
