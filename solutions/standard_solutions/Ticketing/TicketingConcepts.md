@@ -31,7 +31,7 @@ The Ticketing solution uses a predefined state model to reflect the lifecycle of
 1. Resolved
 1. Closed
 
-A ticket is typically created in the *Acknowledged* state. It progresses to *In Progress* when it is assigned to a contact. After resolution, the ticket moves to *Resolved*, and finally it gets *Closed*.
+A ticket is typically created in the *Acknowledged* state. It can then be set to *In Progress* when someone has been assigned to it. After resolution, the ticket moves to *Resolved*, and finally it gets *Closed*.
 
 ### Additional states
 
