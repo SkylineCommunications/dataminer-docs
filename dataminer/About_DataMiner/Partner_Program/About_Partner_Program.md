@@ -1,5 +1,6 @@
 ---
 uid: About_Partner_Program
+description: Find out how the DataMiner Partner Program is designed to recognize and reward you for the value your technical and business skills add to the market.
 ---
 
 # About the Partner Program
