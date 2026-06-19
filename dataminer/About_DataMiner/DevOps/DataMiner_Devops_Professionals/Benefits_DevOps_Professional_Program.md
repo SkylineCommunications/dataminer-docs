@@ -1,6 +1,6 @@
 ---
 uid: Benefits_DevOps_Professionals_Program
-description: As a member of the DevOps Professional Program, earn DevOps Points. These will determine your level and allow you to enjoy all kinds of benefits.
+description: Explore the key benefits of the DataMiner DevOps Professional Program, from exclusive support and content access to valuable credits and rewards.
 ---
 
 # Benefits for members of the DevOps Professional Program

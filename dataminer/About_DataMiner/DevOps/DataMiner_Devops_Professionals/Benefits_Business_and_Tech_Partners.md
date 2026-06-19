@@ -1,6 +1,6 @@
 ---
 uid: Benefits_Business_and_Tech_Partners
-description: As a Business Partner or Technology Partner, gain DevOps Points and use them to pay for personal or professional benefits.
+description: Discover how DataMiner business and technology partners can earn DevOps Points and unlock valuable professional and personal rewards.
 ---
 
 # Benefits for DataMiner business and technology partners
