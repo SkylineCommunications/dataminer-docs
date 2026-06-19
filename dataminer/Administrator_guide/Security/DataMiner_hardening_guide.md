@@ -69,10 +69,9 @@ To enable gRPC for the communication between DataMiner Agents in a cluster, add 
 
 #### NATS
 
-By default, NATS does not employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we strongly recommend [enabling TLS encryption for enhanced security within your NATS cluster](xref:Security_NATS).
+If you are using a DataMiner version prior to DataMiner 10.6.0/10.6.1, and your system has not yet been [migrated to BrokerGateway](xref:BrokerGateway_Migration), NATS does not employ TLS encryption by default, leaving communication susceptible to eavesdropping. Consequently, in that case we strongly recommend [enabling TLS encryption for enhanced security within your NATS cluster](xref:Security_NATS).
 
-> [!NOTE]
-> When DataMiner is installed with the [v10.5 installer](xref:Installing_DM_using_the_DM_installer), TLS is by default enabled and configured for NATS.
+This does not apply for systems that have been migrated to BrokerGateway, which includes any systems running DataMiner 10.6.0/10.6.1 or higher or systems installed using the [v10.5 installer](xref:Installing_DM_using_the_DM_installer), as TLS is configured automatically in the BrokerGateway-managed NATS solution.
 
 ### Disable legacy components
 
