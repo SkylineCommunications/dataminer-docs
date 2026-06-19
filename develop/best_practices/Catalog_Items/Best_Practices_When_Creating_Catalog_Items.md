@@ -53,14 +53,57 @@ When you release a version of a Catalog item, make sure to **adhere to [semantic
 **Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
 
 > [!NOTE]
-> The "CUx" suffix (e.g., 1.2.3-CU2) should only be used exceptionally, in case a critical issue is discovered after a release deployment. In such cases, the released version should be unlisted and a new cumulative update should be released.
+> The "CUx" suffix (e.g., 1.2.3-CU2) should only be used exceptionally, in case a critical issue is discovered after a release deployment. In such cases, the released version should be **unlisted** and a new cumulative update should be released.
 
 ### Use clear version descriptions
 
-When you add a new version of a Catalog item, in the version description, clearly state what has changed and if there are bug fixes or new features. Use the following phrases as appropriate: "Change:", "Fix:", "New Feature:". Each phrase can be used multiple times.
+When you add a new version of a Catalog item, in the version description, clearly state what has changed and if there are bug fixes or new features. Use Markdown formatting and organize the description using the following sections as headers:
+
+- **Prerequisites**
+- **New Features**
+- **Changes**
+- **Breaking Changes**
+- **Enhancements**
+- **Fixes**
+
+Keep the version description concise by documenting the most impactful updates, such as roadmap features, critical bug fixes, or breaking changes. If a section has no entries, leave it out entirely.
 
 > [!NOTE]
-> For standard solutions, the version description should contain a link to the release notes (e.g., [MediaOps release notes](xref:MediaOps_RNs_index)).
+> DataMiner version and DataMiner prerequisites are added as structured fields to the Catalog item version, so you do not need to repeat them in the version description.
+
+#### Standard solutions
+
+For standard solutions, start the version description with a link to the release notes. Although the release notes link provides the full picture, it is still useful to list the most impactful updates in the version description. Keep it concise.
+
+> [!NOTE]
+> Ideally, use an AKA link (e.g. `https://aka.dataminer.services/...`) so that the target can be updated if the documentation page is ever restructured.
+
+#### Cumulative updates
+
+As explained [above](#use-semantic-versioning), cumulative updates replace a prior release due to an exceptional impactful issue. Because the replaced version will be hidden from the default UI, a cumulative update version description should still contain the full description. In addition, a **Cumulative Updates** section is required at the top to explain each cumulative update.
+
+#### Example
+
+The following example shows a version description that includes cumulative updates, new features, and fixes:
+
+```markdown
+## Cumulative Updates
+
+- **CU2**: There was a severe memory leak.
+- **CU1**: Resolved internal reference issues affecting solution deployment.
+
+## A.B.C
+
+### New Features
+
+- There was a new roadmap feature added.
+- There was a second roadmap feature added.
+
+### Fixes
+
+- DateTime no longer drifts by UTC offset.
+- Query Filters: no error when closing while loading.
+```
 
 ### Make sure ranges are tagged correctly
 
