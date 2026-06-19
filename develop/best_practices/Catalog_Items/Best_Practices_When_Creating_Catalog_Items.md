@@ -69,7 +69,7 @@ When you add a new version of a Catalog item, in the version description, clearl
 Keep the version description concise by documenting the most impactful updates, such as roadmap features, critical bug fixes, or breaking changes. If a section has no entries, leave it out entirely.
 
 > [!NOTE]
-> DataMiner version and DataMiner Web version prerequisites are added as structured fields to the Catalog item version, so you do not need to repeat them in the version description. These fields are configured as [project properties](xref:skyline_dataminer_sdk_project_properties) in your .csproj file (e.g. `MinimumRequiredDmVersion`).
+> The DataMiner version prerequisite is added as a structured field to the Catalog item version, so you do not need to repeat it in the version description. This field is configured as a [project property](xref:skyline_dataminer_sdk_project_properties) in your .csproj file (e.g. `MinimumRequiredDmVersion`).
 
 #### Standard solutions
 
