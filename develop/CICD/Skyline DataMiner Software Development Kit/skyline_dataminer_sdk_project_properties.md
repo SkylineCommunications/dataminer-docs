@@ -1,6 +1,6 @@
 ---
 uid: skyline_dataminer_sdk_project_properties
-keywords: Skyline.DataMiner.Sdk, DataMinerType, GenerateDataMinerPackage, MinimumRequiredDmVersion, VersionComment, CatalogPublishKeyName, CatalogDefaultDownloadKeyName, UserSecretsId
+keywords: Skyline.DataMiner.Sdk, DataMinerType, GenerateDataMinerPackage, MinimumRequiredDmVersion, MinimumRequiredDmWebVersion, VersionComment, CatalogPublishKeyName, CatalogDefaultDownloadKeyName, UserSecretsId
 ---
 
 # Skyline DataMiner SDK project properties
@@ -26,6 +26,12 @@ When the value is set to `true`, it will generate a DataMiner application packag
 Expected format: `A.B.C.D - buildNumber`
 
 This will ensure that when a DataMiner application package is installed on a DataMiner Agent with a lower version, the installation will fail.
+
+## MinimumRequiredDmWebVersion
+
+Expected format: `A.B.C (CUX)`
+
+This will ensure that when a DataMiner application package is installed on a system with a lower DataMiner web version, the installation will fail.
 
 ## Version
 
