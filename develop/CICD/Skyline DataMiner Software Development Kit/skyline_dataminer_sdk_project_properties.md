@@ -29,9 +29,19 @@ This will ensure that when a DataMiner application package is installed on a Dat
 
 ## MinimumRequiredDmWebVersion
 
-Expected format: `A.B.C (CUX)`
+Available from Skyline DataMiner SDK 2.4 onwards.
 
-This will ensure that when a DataMiner application package is installed on a system with a lower DataMiner web version, the installation will fail.
+Expected format: `A.B.C (CUX)` (e.g. `10.6.2 (CU0)`)
+
+This allows you to define the minimum required DataMiner web version independently from the minimum required DataMiner core version. This will ensure that when a DataMiner application package is installed on a system with a lower DataMiner web version, the installation will fail.
+
+This property is useful because the core and web versions do not always evolve at the same pace. Each cumulative update of a Main Release includes the same web app changes as the corresponding Feature Release.
+
+For example:
+
+- If your package depends on DataMiner core 10.5.9 but relies on a web feature introduced in 10.6.3, you can keep the core requirement at 10.5.9 and set a higher minimum web version. This allows users who manually upgraded their web components to deploy your application without a full DataMiner upgrade.
+
+- If you want to support a 10.6 Main Release core system but require web features from 10.6.3, setting only a core requirement of 10.6 would still allow deployment on systems running 10.6.2. By also setting a minimum web version, you can block deployment on such systems unless the web version has been manually upgraded.
 
 ## Version
 
