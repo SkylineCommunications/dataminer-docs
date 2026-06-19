@@ -1,6 +1,6 @@
 ---
 uid: Support_Level_Roles
-description: Find out the responsibilities as a partner when providing support services — Offering both proactive and reactive support.
+description: Understand partner support level roles in DataMiner, from proactive to reactive support, including the required skills and knowledge.
 ---
 
 # Support level roles

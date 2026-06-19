@@ -1,6 +1,6 @@
 ---
 uid: Partnership_Governance
-description: Explore partnership governance — Find out more about operational business reporting and executive business reviews.
+description: Learn how Skyline partnership governance aligns goals through KPI reporting and executive reviews that accelerate measurable business growth.
 ---
 
 # Partnership governance
