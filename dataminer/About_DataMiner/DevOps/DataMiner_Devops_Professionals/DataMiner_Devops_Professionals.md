@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Devops_Professionals
+description: Explore the DataMiner DevOps Professional Program, which is centered around people knowledgeable about DataMiner and all its powerful modular functions.
 ---
 
 # DataMiner DevOps Professional Program
