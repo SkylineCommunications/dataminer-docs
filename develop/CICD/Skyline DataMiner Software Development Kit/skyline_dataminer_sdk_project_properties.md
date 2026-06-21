@@ -37,6 +37,9 @@ This allows you to define the minimum required DataMiner web version independent
 
 This property is useful because the core and web versions do not always evolve at the same pace. Each cumulative update of a Main Release includes the same web app changes as the corresponding Feature Release.
 
+> [!NOTE]
+> Always prefer the Feature Release notation over the Main Release notation. For example, use `10.6.4 (CU0)` instead of `10.6.0 (CU1)`, since both represent the same web version but the Feature Release notation is the preferred way to express it.
+
 For example:
 
 - If your package depends on DataMiner core 10.5.9 but relies on a web feature introduced in 10.6.3, you can keep the core requirement at 10.5.9 and set a higher minimum web version. This allows users who manually upgraded their web components to deploy your application without a full DataMiner upgrade.
