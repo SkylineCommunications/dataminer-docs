@@ -31,14 +31,13 @@ This will ensure that when a DataMiner application package is installed on a Dat
 
 Available from Skyline DataMiner SDK 2.4 onwards.
 
-Expected format: `A.B.C (CUX)` (e.g. `10.6.2 (CU0)`)
+Expected format: `A.B.C (CUX)` (e.g., `10.6.2 (CU0)`)
 
-This allows you to define the minimum required DataMiner web version independently from the minimum required DataMiner core version. This will ensure that when a DataMiner application package is installed on a system with a lower DataMiner web version, the installation will fail.
+This allows you to define the minimum required DataMiner web version independently from the minimum required DataMiner core version, which can be useful because the core and web versions do not always evolve at the same pace.
 
-This property is useful because the core and web versions do not always evolve at the same pace. Each cumulative update of a Main Release includes the same web app changes as the corresponding Feature Release.
+Defining this property will ensure that when a DataMiner application package is installed on a system with a lower DataMiner web version, the installation will fail.
 
-> [!NOTE]
-> Always prefer the Feature Release notation over the Main Release notation. For example, use `10.6.4 (CU0)` instead of `10.6.0 (CU1)`, since both represent the same web version but the Feature Release notation is the preferred way to express it.
+Each cumulative update of a Main Release includes the same web app changes as the corresponding Feature Release. However, you should always give **preference to the Feature Release notation** over the Main Release notation. For example, use `10.6.4 (CU0)` instead of `10.6.0 (CU1)`, since both represent the same web version but the Feature Release notation is the preferred way to express it.
 
 For example:
 
