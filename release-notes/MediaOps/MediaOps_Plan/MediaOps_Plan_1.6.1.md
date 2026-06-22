@@ -35,3 +35,7 @@ When a job is in the Error state, it will now be possible to change its configur
 #### Resource Studio: Unnecessary extra confirmation message shown when clicking Deprecate without selected resources [ID 45757]
 
 When you clicked the *Deprecate* button on the Resources page while no resource was selected, an unnecessary additional message was displayed asking you to confirm the selected resources to be deprecated, even after you had already clicked OK for an initial notification that no resources were selected. Now clicking OK for this initial notification will close the message without showing an additional message.
+
+#### Scheduling: Job property placeholder not resolved correctly [ID 45764]
+
+When placeholders were used to link to a job property, it could occur that the reference was not correctly resolved, linking to a node property instead.
