@@ -39,3 +39,9 @@ When you clicked the *Deprecate* button on the Resources page while no resource 
 #### Scheduling: Job property placeholder not resolved correctly [ID 45764]
 
 When placeholders were used to link to a job property, it could occur that the reference was not correctly resolved, linking to a node property instead.
+
+#### Stale validation errors on jobs returned to tentative state [ID 45777]
+
+Previously, when a confirmed job was returned to the tentative state, any reference validation errors (unresolved references, reservation mismatches, or live-event mismatches) raised while the job was confirmed remained on the job indefinitely. However, these checks do not apply to tentative jobs, so the errors were no longer relevant, but they were never cleared.
+
+Returning a job to tentative now re-runs job validation, so these outdated errors are automatically cleared, and the job no longer shows errors that no longer apply.
