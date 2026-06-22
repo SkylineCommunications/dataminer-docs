@@ -217,9 +217,11 @@ To add a rewrite rule that will proxy any request to the VideoThumbnails webpage
 
 ### Testing the reverse proxy functionality
 
-To test whether the reverse proxy is working properly, enter `https://gateway/maps/maps.aspx?config=yourmapconfig`, `https://gateway/videothumbnails/video.htm`, or `https://gateway/public/` in your browser's address bar.
+To test whether the reverse proxy is working properly, enter `https://gateway/maps/maps.aspx?config=yourmapconfig` or `https://gateway/videothumbnails/video.htm` in your browser's address bar.
 
-If the reverse proxy was configured correctly, you should see the login screen of the DataMiner Maps module, the VideoThumbnails webpage, or the public resources page. It should be possible to log in.
+If the reverse proxy was configured correctly, you should see the login screen of the DataMiner Maps module or the VideoThumbnails webpage. It should be possible to log in.
+
+To verify the public resources reverse proxy rule, enter a known public resource URL such as `https://gateway/public/{resource-path}` in your browser's address bar. The resource should load without requiring authentication.
 
 ## DataMiner upgrades
 
