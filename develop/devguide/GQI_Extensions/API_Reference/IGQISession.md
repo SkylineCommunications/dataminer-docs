@@ -18,8 +18,8 @@ This interface defines properties with information about the query session in wh
 | Property | Type | Description | Version |
 | -------- | ---- | ----------- | ------- |
 | Username | `string` | The username of the user who opened the current query session. This value identifies the user when connecting to SLNet and corresponds to the `DomainUserName` on the `IConnection` object. It can be used to perform security checks. | 10.6.3/10.5.0 [CU12]/10.6.0 [CU0] <!-- RN 44509 --> |
-| Culture | [`CultureInfo`](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo) | The culture of the user who opened the current query session. | 10.6.7/10.5.0 [CU16]/10.6.0 [CU4] <!-- RN 45348 --> |
-| TimeZone | [`TimeZoneInfo`](https://learn.microsoft.com/en-us/dotnet/api/system.timezoneinfo) | The time zone of the user who opened the current query session. | 10.6.7/10.5.0 [CU16]/10.6.0 [CU4] <!-- RN 45348 --> |
+| Culture | [`CultureInfo`](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo) | The culture of the user who opened the current query session. | 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 <!-- RN 45348 --> |
+| TimeZone | [`TimeZoneInfo`](https://learn.microsoft.com/en-us/dotnet/api/system.timezoneinfo) | The time zone of the user who opened the current query session. | 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 <!-- RN 45348 --> |
 
 ## [SLAnalyticsTypes](#tab/tabid-2)
 

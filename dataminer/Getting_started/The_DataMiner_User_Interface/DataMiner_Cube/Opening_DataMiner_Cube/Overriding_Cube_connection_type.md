@@ -22,7 +22,7 @@ To change the connection settings on the login page:
 
      - The default port used for Remoting is port 8004.
 
-     - By default, [eventing](xref:Eventing_or_polling) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g., if a firewall blocks the requests).
+     - By default, [eventing](xref:DMA_configuration_related_to_client_applications#net-remoting-with-or-without-eventing) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g., if a firewall blocks the requests).
 
 1. If necessary, adjust the settings for the selected connection type:
 

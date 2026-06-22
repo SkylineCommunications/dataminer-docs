@@ -4,15 +4,14 @@ uid: Adding_rule_conditions_in_Correlation_rules
 
 # Adding rule conditions in correlation rules
 
-In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to add rule conditions to it in the details pane on the right.
+In a correlation rule, you can define one or more rule conditions that, when met, will trigger the correlation rule. You can select and combine **Script conditions** and **Filter conditions**, and specify one of different trigger mechanisms. In the *Sliding window* section, an additional trigger mechanism can be selected.
 
-In the *Rule condition* section of the details pane, specify one or more conditions that, when met, will trigger the correlation rule. You can select and combine Script conditions and Filter conditions, and specify one of different trigger mechanisms. In the *Sliding window* section, an additional trigger mechanism can be selected.
-
-1. Click *Select a Condition* and select either *Script condition* or *Filter condition*.
+1. When you are [configuring a correlation rule](xref:General_configuration_of_Correlation_rules), click *Select a Condition* and select either *Script condition* or *Filter condition*.
 
 1. If you have selected *Script condition*, enter the script in the large text box.
 
-   For more information on how to enter a script condition, see [Correlation rule syntax](xref:Correlation_rule_syntax).
+   > [!TIP]
+   > For more information on how to enter a script condition, see [Script condition format](xref:Condition_format).
 
    > [!NOTE]
    > When configuring script conditions, keep in mind that a correlation rule can only be triggered by alarm events.
@@ -22,6 +21,9 @@ In the *Rule condition* section of the details pane, specify one or more conditi
    1. Click *Select a filter*.
 
    1. Select one of the listed properties and create a filter condition, or select *Saved filters* and select an existing alarm filter.
+
+   > [!TIP]
+   > For more information on what happens when you combine multiple filter conditions, see [Combining filter conditions](xref:Combining_filter_conditions).
 
 1. If this is the first (or only) rule condition, select “Is” or “Is Not” to indicate whether the condition has to be true or false.
 

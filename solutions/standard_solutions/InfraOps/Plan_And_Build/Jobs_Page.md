@@ -1,5 +1,6 @@
 ---
 uid: Jobs_Page
+description: Go to the Jobs List page of the Plan and Build app to get a list and a timeline overview of the available infrastructure jobs.
 ---
 
 # Jobs List

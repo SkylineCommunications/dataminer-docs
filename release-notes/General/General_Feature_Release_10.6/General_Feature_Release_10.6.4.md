@@ -346,7 +346,7 @@ From now on, when only the task actions are changed during an update of a schedu
 
 #### History set trending would show gaps where no gaps were expected [ID 44705]
 
-<!-- MR 10.7.0 - FR 10.6.4 -->
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.4 -->
 
 Up to now, history set trending would show gaps where no gaps were expected.
 

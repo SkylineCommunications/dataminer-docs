@@ -4,6 +4,14 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 8 June 2026 - Fix - CloudGateway 3.1.2 - DataMiner Assistant session renewed when expired
+
+Previously, when you used the DataMiner Assistant through Microsoft Teams or Microsoft 365 Copilot after your DataMiner Assistant session had expired, you could get an empty response. Now, CloudGateway automatically creates a new DataMiner Assistant session when the existing one has expired, so you always receive a proper response.
+
+#### 22 May 2026 - Enhancement - CloudGateway 3.1.1 - MessageBroker dependency updated: ForcedEndpoints support
+
+CloudGateway now supports the use of the `ForcedEndpoints` setting in *MessageBrokerConfig.json*. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
+
 #### 4 May 2026 - Enhancement - CloudGateway 3.1.0 - Microsoft 365 Copilot
 
 Support for Microsoft 365 Copilot has been added.

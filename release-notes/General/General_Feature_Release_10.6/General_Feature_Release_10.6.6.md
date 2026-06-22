@@ -389,7 +389,7 @@ Also, the element will go into an error state, and an alarm indicating a failing
 
 #### SLNet: MessageBroker cache could leak NATS threads [ID 45259]
 
-<!-- MR 10.7.0 - FR 10.6.6 -->
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 In some rare cases, the MessageBroker cache of SLNet could leak NATS threads.
 

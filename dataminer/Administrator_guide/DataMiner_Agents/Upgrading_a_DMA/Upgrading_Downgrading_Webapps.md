@@ -6,6 +6,8 @@ uid: Upgrading_Downgrading_Webapps
 
 From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are **available separately from the general DataMiner upgrades**. These updates include only the web API and the web apps, leaving all other DataMiner processes untouched. This way you can get access to the latest features and enhancements of the web apps without having to do a full DataMiner upgrade. The web upgrades only require a brief installation and do not necessitate a DataMiner restart, ensuring uninterrupted monitoring and orchestration.
 
+From DataMiner 10.6.7/10.7.0 onwards<!--RN 45521-->, DataMiner web upgrade packages also include the [DataMiner Maps module](xref:About_DMS_Maps).
+
 Starting from DataMiner 10.4.0, every **cumulative update of a Main Release includes the same web apps changes as the corresponding DataMiner Feature Release**. For example, all DataMiner web apps changes from Feature Release 10.5.4 are also available in Main Release 10.4.0 (CU13) and 10.5 (CU1). This means that if you are on the Main Release track, you can simply install the latest web upgrade package without having to check for a separate Main Release or Feature Release package. <!-- It also means that if you for example build a low-code app using the latest DataMiner Feature Release, your app will also be compatible with the latest Main Release cumulative updates. (This comment can be published once GQI DxM becomes the default in a 10.5.x Feature Release, as backwards compatibility will apply from DataMiner 10.5.0 onwards.) -->
 
 From DataMiner 10.5.x onwards, web apps can only be upgraded to the next major version if the DataMiner Agent is already running at least the baseline version introduced in the previous major release. This means:

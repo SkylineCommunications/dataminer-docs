@@ -8,6 +8,9 @@ DataMiner relies on the server time to synchronize data. For this reason, the ti
 
 This test will check if the NTP server settings are configured correctly and all the DataMiner Agents use the same NTP server to get their time.
 
+> [!NOTE]
+> From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45631 -->, this BPA test is no longer available as an independent test. Instead, it has been integrated in the [DataMiner Agent Minimum Requirements](xref:BPA_Minimum_Requirements_Check) BPA test.
+
 ## Metadata
 
 - Name: Check Time Server

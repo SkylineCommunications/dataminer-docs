@@ -10,6 +10,10 @@ items:
           topicUid: Assistant_Context
         - name: Adding custom user context
           topicUid: Assistant_UserContext
+        - name: DataMiner Assistant M365
+          topicUid: Assistant_M365
+        - name: Data privacy and security
+          topicUid: Assistant_DataPrivacySecurity
       - name: Natural language to GQI
         topicUid: NL2GQI
       - name: Document Intelligence
@@ -293,6 +297,15 @@ items:
             topicUid: Grouping_alarms_in_Correlation_rules
       - name: Adding rule conditions in correlation rules
         topicUid: Adding_rule_conditions_in_Correlation_rules
+        items:
+          - name: Combining filter conditions
+            topicUid: Combining_filter_conditions
+          - name: Script condition format
+            topicUid: Condition_format
+          - name: Script condition functions
+            topicUid: Script_condition_functions
+          - name: Examples of script conditions
+            topicUid: Examples_of_script_conditions
       - name: Adding rule actions in correlation rules
         topicUid: Adding_rule_actions_in_Correlation_rules
         items:
@@ -302,6 +315,8 @@ items:
             topicUid: Creating_a_ticket
           - name: Escalating an event
             topicUid: Escalating_an_event
+          - name: Grouping alarms
+            topicUid: Grouping_Alarms
           - name: Triggering a correlated alarm
             topicUid: Triggering_a_correlated_alarm
           - name: Running an automation script from a correlation rule
@@ -318,15 +333,6 @@ items:
         items:
           - name: Responding to element timeouts using Correlation
             topicUid: Correlation_Tutorial_Element_Timeout
-      - name: Correlation rule syntax
-        topicUid: Correlation_rule_syntax
-        items:
-          - name: Condition format
-            topicUid: Condition_format
-          - name: Script condition functions
-            topicUid: Script_condition_functions
-          - name: Examples of script conditions
-            topicUid: Examples_of_script_conditions
       - name: Using correlation analyzers
         topicUid: Using_Correlation_analyzers
         items:
@@ -700,8 +706,8 @@ items:
                 topicUid: Get_parameter_table_by_ID
               - name: Get parameter relations
                 topicUid: Get_parameter_relations
-              - name: Get parameters for element where
-                topicUid: Get_parameters_for_element_where
+              - name: Get parameters for elements where
+                topicUid: Get_parameters_for_elements_where
               - name: Get profile instances
                 topicUid: Get_profile_instances
               - name: Get relational anomalies

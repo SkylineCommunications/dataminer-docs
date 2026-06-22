@@ -1,5 +1,6 @@
 ---
 uid: META_WhatsApp_Messaging_Installation
+description: To install META WhatsApp Messaging, make sure the prerequisites—such as a correctly configured alarm notification app—are met, then install the connector
 ---
 
 # Installing the META WhatsApp Messaging Solution

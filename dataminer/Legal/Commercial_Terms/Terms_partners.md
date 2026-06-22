@@ -20,7 +20,7 @@ Any confidential information shared by Skyline Communications during the partner
 
 ## 4. Orders and Conditions
 
-Orders placed with Skyline Communications are subject to [our terms and conditions of sale](xref:Terms_of_Sale). Skyline Communications does not accept back-to-back arrangements unless expressly approved in writing. Any deviations from this policy require Skyline Communications’ explicit written consent.
+Orders placed with Skyline Communications are subject to [our General Terms and Conditions](xref:General_Terms_and_Conditions). Skyline Communications does not accept back-to-back arrangements unless expressly approved in writing. Any deviations from this policy require Skyline Communications’ explicit written consent.
 
 ## 5. Independence
 

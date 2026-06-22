@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_ds_controller
+description: Discover the entire list of DS Controller parameters available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – DS Controller

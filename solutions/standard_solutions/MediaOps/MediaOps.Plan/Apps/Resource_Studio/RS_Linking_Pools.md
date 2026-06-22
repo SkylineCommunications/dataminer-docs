@@ -1,5 +1,6 @@
 ---
 uid: RS_Linking_Pools
+description: Use the Resource Studio app to link resource pools to other pools. This feature ensures that all necessary resources are included when creating a job.
 ---
 
 # Linking resource pools

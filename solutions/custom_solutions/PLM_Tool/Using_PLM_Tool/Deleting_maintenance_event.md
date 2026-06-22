@@ -1,5 +1,6 @@
 ---
 uid: Deleting_maintenance_event
+description: Learn how to permanently remove a planned maintenance event from the PLM Instances page in the DataMiner PLM tool.
 ---
 
 # Deleting a maintenance event

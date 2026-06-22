@@ -1,5 +1,6 @@
 ---
 uid: People_Organizations
+description: Explore the People and Organizations app, which allows you to create, edit, and track records for individuals, teams, and organizations. 
 ---
 
 # People & Organizations

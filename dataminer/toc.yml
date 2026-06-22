@@ -33,7 +33,7 @@ items:
     topicUid: Part7Reference
     href: Reference/toc.yml
   - name: Legal
-    topicUid: Terms_of_Sale
+    topicUid: General_Terms_and_Conditions
     href: Legal/toc.yml
   - name: Frequently asked questions
     topicUid: FAQs

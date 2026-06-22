@@ -6,175 +6,6 @@ items:
     topicUid: SOL_About
   - name: Standard Solutions
     items:
-    - name: MediaOps
-      topicUid: MediaOps
-      items:
-      - name: Plan
-        topicUid: MediaOps.Plan
-        items:
-        - name: People & Organizations
-          topicUid: People_Organizations
-          items:
-          - name: Managing contacts
-            topicUid: PO_Managing_Contacts
-          - name: Managing teams
-            topicUid: PO_Managing_Teams
-          - name: Managing organizations
-            topicUid: PO_Managing_Organizations
-        - name: Resource Studio
-          topicUid: MO_Resource_Studio
-          items: 
-          - name: Assigning resource icons
-            topicUid: RS_Resource_Icons
-          - name: Linking resource pools
-            topicUid: RS_Linking_Pools
-        - name: Workflow Designer
-          topicUid: MO_Workflow_Designer
-          items:
-            - name: Creating workflows
-              topicUid: WFD_Creating_Workflows
-            - name: Editing workflows
-              topicUid: WFD_Edit_Workflow
-            - name: Workflow states
-              topicUid: WFD_Workflow_States
-        - name: Scheduling
-          topicUid: MO_Scheduling
-          items:
-            - name: Creating a job
-              topicUid: SCH_Create_Job
-            - name: Editing a job
-              topicUid: SCH_Edit_Job
-            - name: Working with recurring jobs
-              topicUid: SCH_Recurring
-            - name: Job states
-              topicUid: MO_S_Job_States
-            - name: Job locking
-              topicUid: MO_S_Job_Locking
-            - name: App settings
-              topicUid: MO_S_App_Configuration
-            - name: Validation of upcoming jobs
-              topicUid: Overview_MediaOps_Validation
-            - name: Filtering resource pools by category
-              topicUid: SCH_Filter_Pools
-        - name: Tutorials
-          items: 
-          - name: Configuring resources and resource pools
-            topicUid: Tutorial_MediaOps_Resource_Studio_Intro
-          - name: Creating a job and configuring it with resources
-            topicUid: Tutorial_MediaOps_Scheduling_Encoder_Decoder
-          - name: Creating an organization with a team and contacts to use as resources in MediaOps apps
-            topicUid: Tutorial_MediaOps_People_and_Organizations_Intro
-          - name: Assigning capabilities to resources
-            topicUid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
-          - name: Using time-dependent capabilities
-            topicUid: Tutorial_MediaOps_Scheduling_Time_Dependent_Capabilities
-          - name: Scheduling a job using a resource pool with specific capabilities
-            topicUid: Tutorial_MediaOps_Scheduling_Configurations
-          - name: Creating a workflow to use as a template for a job
-            topicUid: Tutorial_MediaOps_Workflow_Designer_Intro
-        - name: Development
-          items:
-          - name: Personalizing the MediaOps applications
-            topicUid: MO_Development_Personalizing_Apps
-          - name: Interacting with MediaOps using code
-            topicUid: MO_Development_Interacting_with_Code
-      - name: Live
-        topicUid: MediaOps.Live
-        items:
-        - name: Virtual Signal Groups
-          topicUid: MO_Virtual_Signal_Groups
-        - name: Control Surface
-          topicUid: MO_Control_Surface
-        - name: Orchestration Events
-          topicUid: MO_Orchestration_Events
-          items:
-          - name: Orchestration scripts
-            topicUid: MediaOpsLive_OrchestrationScript
-        - name: Mediation layer
-          topicUid: MediaOps.Live.Mediation
-          items:
-          - name: Connection handler scripts
-            topicUid: MediaOpsLive_ConnectionHandlerScript
-        - name: Tutorials
-          items:
-          - name: Generic Matrix
-            items:
-            - name: Manually provisioning endpoints and virtual signal groups for a Generic Matrix element
-              topicUid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
-            - name: Provisioning endpoints and virtual signal groups for a Generic Matrix element using code
-              topicUid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code
-            - name: Provisioning endpoints and virtual signal groups for a Generic Matrix element using CSV import
-              topicUid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import
-            - name: Creating a connection handler script for a Generic Matrix element
-              topicUid: Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript
-          - name: IP Matrix
-            items:
-            - name: Manually provisioning endpoints and virtual signal groups for an IP Matrix element
-              topicUid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
-            - name: Creating a connection handler script for an IP Matrix element
-              topicUid: Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript
-          - name: Orchestration events
-            items:
-            - name: Creating orchestration events
-              topicUid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents
-            - name: Creating orchestration scripts
-              topicUid: Tutorial_MediaOpsLive_CreateOrchestrationScripts
-    - name: InfraOps
-      topicUid: InfraOps
-      items:
-      - name: Installing InfraOps
-        topicUid: IO_Installation
-      - name: Facility Manager
-        topicUid: Facility_Manager
-        items:
-        - name: Facilities
-          topicUid: Facilities_Page
-        - name: Rooms
-          topicUid: Rooms_Page
-        - name: Racks
-          topicUid: Racks_Page
-        - name: Room Designer
-          topicUid: Room_Designer
-      - name: Asset Manager
-        topicUid: Asset_Manager
-        items:
-        - name: Asset Designer
-          topicUid: Asset_Designer
-          items:
-          - name: Configuring device types
-            topicUid: AM_Configuring_device_types
-          - name: Configuring cable types
-            topicUid: AM_Configuring_cable_types
-          - name: Configuring port types
-            topicUid: AM_Configuring_port_types
-        - name: Managed Assets
-          topicUid: Managed_Assets
-          items:
-          - name: Configuring the asset hierarchy
-            topicUid: Asset_Hierarchy
-          - name: Configuring asset connections
-            topicUid: Configuring_asset_connections
-          - name: Configuring the asset location
-            topicUid: Configuring_asset_location
-          - name: Asset lifecycle
-            topicUid: Asset_Lifecycle
-        - name: Connections
-          topicUid: AssetManager_Connections
-        - name: Rack View
-          topicUid: Rack_View
-        - name: Row Viewer
-          topicUid: Row_Viewer
-        - name: Rack Comparer
-          topicUid: Rack_Comparer
-        - name: App settings
-          topicUid: App_Settings
-      - name: Plan and Build
-        topicUid: Plan_And_Build
-        items:
-        - name: Jobs List
-          topicUid: Jobs_Page
-      - name: Web File Manager
-        topicUid: Web_File_Manager
     - name: DocumentHub
       topicUid: DocumentHub
       items:
@@ -190,17 +21,6 @@ items:
           topicUid: Tutorial_DH_SharePoint
         - name: Configuring DOM attachments on a network share
           topicUid: Tutorial_DH_DOM_NetworkShare
-    - name: PTP
-      topicUid: SolPTP
-      items:
-      - name: Installing the PTP app
-        topicUid: Installing_the_DataMiner_PTP_app
-      - name: Types of PTP devices
-        topicUid: Types_of_PTP_devices
-      - name: PTP low-code app
-        topicUid: Overview_of_the_PTP_LCA_UI
-      - name: PTP app in Cube
-        topicUid: Overview_of_the_PTP_app_in_Cube_UI
     - name: EPM
       topicUid: SolEPM
       items:
@@ -355,6 +175,62 @@ items:
           topicUid: Availability_Using
         - name: Available parameters in Availability
           topicUid: Availability_parameters
+    - name: InfraOps
+      topicUid: InfraOps
+      items:
+      - name: Installing InfraOps
+        topicUid: IO_Installation
+      - name: Facility Manager
+        topicUid: Facility_Manager
+        items:
+        - name: Facilities
+          topicUid: Facilities_Page
+        - name: Rooms
+          topicUid: Rooms_Page
+        - name: Racks
+          topicUid: Racks_Page
+        - name: Room Designer
+          topicUid: Room_Designer
+      - name: Asset Manager
+        topicUid: Asset_Manager
+        items:
+        - name: Asset Designer
+          topicUid: Asset_Designer
+          items:
+          - name: Configuring device types
+            topicUid: AM_Configuring_device_types
+          - name: Configuring cable types
+            topicUid: AM_Configuring_cable_types
+          - name: Configuring port types
+            topicUid: AM_Configuring_port_types
+        - name: Managed Assets
+          topicUid: Managed_Assets
+          items:
+          - name: Configuring the asset hierarchy
+            topicUid: Asset_Hierarchy
+          - name: Configuring asset connections
+            topicUid: Configuring_asset_connections
+          - name: Configuring the asset location
+            topicUid: Configuring_asset_location
+          - name: Asset lifecycle
+            topicUid: Asset_Lifecycle
+        - name: Connections
+          topicUid: AssetManager_Connections
+        - name: Rack View
+          topicUid: Rack_View
+        - name: Row Viewer
+          topicUid: Row_Viewer
+        - name: Rack Comparer
+          topicUid: Rack_Comparer
+        - name: App settings
+          topicUid: App_Settings
+      - name: Plan and Build
+        topicUid: Plan_And_Build
+        items:
+        - name: Jobs List
+          topicUid: Jobs_Page
+      - name: Web File Manager
+        topicUid: Web_File_Manager
     - name: IP Network Explorer
       topicUid: IpNetworkExplorer
       items:
@@ -364,6 +240,132 @@ items:
         topicUid: IpNetworkExplorer_UI_overview
       - name: Supported devices and protocols
         topicUid: IpNetworkExplorer_Supported_Devices_And_Protocols
+    - name: MediaOps
+      topicUid: MediaOps
+      items:
+      - name: Plan
+        topicUid: MediaOps.Plan
+        items:
+        - name: People & Organizations
+          topicUid: People_Organizations
+          items:
+          - name: Managing contacts
+            topicUid: PO_Managing_Contacts
+          - name: Managing teams
+            topicUid: PO_Managing_Teams
+          - name: Managing organizations
+            topicUid: PO_Managing_Organizations
+        - name: Resource Studio
+          topicUid: MO_Resource_Studio
+          items: 
+          - name: Assigning resource icons
+            topicUid: RS_Resource_Icons
+          - name: Linking resource pools
+            topicUid: RS_Linking_Pools
+        - name: Workflow Designer
+          topicUid: MO_Workflow_Designer
+          items:
+            - name: Creating workflows
+              topicUid: WFD_Creating_Workflows
+            - name: Editing workflows
+              topicUid: WFD_Edit_Workflow
+            - name: Workflow states
+              topicUid: WFD_Workflow_States
+        - name: Scheduling
+          topicUid: MO_Scheduling
+          items:
+            - name: Creating a job
+              topicUid: SCH_Create_Job
+            - name: Editing a job
+              topicUid: SCH_Edit_Job
+            - name: Working with recurring jobs
+              topicUid: SCH_Recurring
+            - name: Job states
+              topicUid: MO_S_Job_States
+            - name: Job locking
+              topicUid: MO_S_Job_Locking
+            - name: App settings
+              topicUid: MO_S_App_Configuration
+            - name: Validation of upcoming jobs
+              topicUid: Overview_MediaOps_Validation
+            - name: Filtering resource pools by category
+              topicUid: SCH_Filter_Pools
+        - name: Scheduling configuration
+          topicUid: MO_Scheduling_Configuration
+        - name: Tutorials
+          items: 
+          - name: Configuring resources and resource pools
+            topicUid: Tutorial_MediaOps_Resource_Studio_Intro
+          - name: Creating a job and configuring it with resources
+            topicUid: Tutorial_MediaOps_Scheduling_Encoder_Decoder
+          - name: Creating an organization with a team and contacts to use as resources in MediaOps apps
+            topicUid: Tutorial_MediaOps_People_and_Organizations_Intro
+          - name: Assigning capabilities to resources
+            topicUid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
+          - name: Using time-dependent capabilities
+            topicUid: Tutorial_MediaOps_Scheduling_Time_Dependent_Capabilities
+          - name: Scheduling a job using a resource pool with specific capabilities
+            topicUid: Tutorial_MediaOps_Scheduling_Configurations
+          - name: Creating a workflow to use as a template for a job
+            topicUid: Tutorial_MediaOps_Workflow_Designer_Intro
+        - name: Development
+          items:
+          - name: Personalizing the MediaOps applications
+            topicUid: MO_Development_Personalizing_Apps
+          - name: Interacting with MediaOps using code
+            topicUid: MO_Development_Interacting_with_Code
+      - name: Live
+        topicUid: MediaOps.Live
+        items:
+        - name: Virtual Signal Groups
+          topicUid: MO_Virtual_Signal_Groups
+        - name: Control Surface
+          topicUid: MO_Control_Surface
+        - name: Orchestration Events
+          topicUid: MO_Orchestration_Events
+          items:
+          - name: Orchestration scripts
+            topicUid: MediaOpsLive_OrchestrationScript
+        - name: Mediation layer
+          topicUid: MediaOps.Live.Mediation
+          items:
+          - name: Connection handler scripts
+            topicUid: MediaOpsLive_ConnectionHandlerScript
+        - name: Tutorials
+          items:
+          - name: Generic Matrix
+            items:
+            - name: Manually provisioning endpoints and virtual signal groups for a Generic Matrix element
+              topicUid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
+            - name: Provisioning endpoints and virtual signal groups for a Generic Matrix element using code
+              topicUid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code
+            - name: Provisioning endpoints and virtual signal groups for a Generic Matrix element using CSV import
+              topicUid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import
+            - name: Creating a connection handler script for a Generic Matrix element
+              topicUid: Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript
+          - name: IP Matrix
+            items:
+            - name: Manually provisioning endpoints and virtual signal groups for an IP Matrix element
+              topicUid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
+            - name: Creating a connection handler script for an IP Matrix element
+              topicUid: Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript
+          - name: Orchestration events
+            items:
+            - name: Creating orchestration events
+              topicUid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents
+            - name: Creating orchestration scripts
+              topicUid: Tutorial_MediaOpsLive_CreateOrchestrationScripts
+    - name: PTP
+      topicUid: SolPTP
+      items:
+      - name: Installing the PTP app
+        topicUid: Installing_the_DataMiner_PTP_app
+      - name: Types of PTP devices
+        topicUid: Types_of_PTP_devices
+      - name: PTP low-code app
+        topicUid: Overview_of_the_PTP_LCA_UI
+      - name: PTP app in Cube
+        topicUid: Overview_of_the_PTP_app_in_Cube_UI
     - name: Ticketing
       topicUid: Ticketing
       items:

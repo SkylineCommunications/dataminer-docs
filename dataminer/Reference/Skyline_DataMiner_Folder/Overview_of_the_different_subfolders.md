@@ -48,6 +48,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | Scripts | Automation scripts. | Yes |
 | Security | Within this folder, only the *Credentials* subfolder, which contains the credentials library configuration, and the *Ownership* subfolder are synchronized. | Partially |
 | ServiceManager | Service Manager configuration. | No |
+| ServiceTemplates | Service template definitions (from DataMiner 10.6.7/10.7.0 onwards; in earlier DataMiner versions these are included in the *Services* and *RemoteServices* folders).<!-- RN 45370 --> | Yes |
 | Services | Services hosted on the DMA. | See note below. |
 | SharedItems | Information about dashboards that have been shared on dataminer.services. See [Sharing a dashboard](xref:Sharing_a_dashboard). | Yes |
 | Simulations | Simulation files. | No |

@@ -1,5 +1,6 @@
 ---
 uid: MO_Development_Personalizing_Apps
+description: Explore the different ways you can personalize the MediaOps applications — create custom apps, edit existing apps, or create duplicate apps.
 ---
 
 # Personalizing the MediaOps applications

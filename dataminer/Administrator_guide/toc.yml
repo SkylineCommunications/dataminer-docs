@@ -1,6 +1,4 @@
 items:
-  - name: DataMiner System layout
-    topicUid: GeneralLayout
   - name: DataMiner Agents
     topicUid: DataminerAgents
     items:
@@ -95,57 +93,57 @@ items:
             topicUid: Exporting_elements_services_etc_to_a_dmimport_file
           - name: Importing elements, services, etc. from a .dmimport file
             topicUid: Importing_elements_services_etc_from_a_dmimport_file
-  - name: DataMiner Systems
+  - name: DataMiner clusters
     items:
-      - name: About DataMiner Systems
+      - name: About DataMiner clusters
         topicUid: About_DataMiner_Systems
         items:
-          - name: Virtual device connections
+          - name: Virtual connections to data sources
             topicUid: Virtual_device_connections
           - name: Gratuitous ARP messages
             topicUid: Gratuitous_ARP_messages
-          - name: Eventing or polling
-            topicUid: Eventing_or_polling
           - name: DataMiner processes
             topicUid: DataMiner_processes
           - name: DataMiner interfaces
             topicUid: DataMiner_interfaces
-      - name: Viewing information on the DMAs in a DMS
+          - name: DMA peripherals
+            topicUid: DMA_peripherals
+      - name: Viewing information about DataMiner nodes
         topicUid: Viewing_information_on_the_DMAs_in_a_DMS
-      - name: Setting up a new DataMiner System
+      - name: Setting up a multi-node cluster
         items:
-          - name: Before you begin to set up a new DMS
+          - name: Before you begin to set up a new cluster
             topicUid: Before_you_begin_to_set_up_a_new_DMS
-          - name: Setting up a new DMS in DataMiner Cube
+          - name: Setting up a new cluster in DataMiner Cube
             topicUid: Setting_up_a_new_DMS_in_DataMiner_Cube
-      - name: Adding a DataMiner Agent to a DataMiner System
+      - name: Adding a node to a DataMiner cluster
         topicUid: Adding_a_DataMiner_Agent_to_a_DataMiner_System
         items:
           - name: Adding a regular DataMiner Agent
             topicUid: Adding_a_regular_DataMiner_Agent
-          - name: Adding a DataMiner Agent to a DMS running STaaS
+          - name: Adding a DataMiner Agent to a cluster running STaaS
             topicUid: Adding_a_DMA_to_a_DMS_running_STaaS
           - name: Adding a DataMiner Probe
             topicUid: Adding_a_DataMiner_Probe
           - name: Connection strings
             topicUid: Connection_strings
-      - name: Removing a DataMiner Agent from a DataMiner System
+      - name: Removing a node from a DataMiner cluster
         topicUid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
-      - name: Starting or stopping DataMiner Agents in your DataMiner System
+      - name: Starting or stopping DataMiner nodes in your cluster
         items:
-          - name: Starting or stopping a DMA in DataMiner Cube
+          - name: Starting or stopping a node in Cube
             topicUid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
-          - name: Starting or stopping a DMA using DataMiner Taskbar Utility
+          - name: Starting or stopping a node using DataMiner Taskbar Utility
             topicUid: Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility
-      - name: Migrating elements in a DataMiner System
+      - name: Migrating elements within a cluster
         topicUid: Migrating_elements_in_a_DataMiner_System
       - name: Sharing DataMiner data with third parties
         topicUid: Sharing_DataMiner_data_with_third_parties
       - name: DataMiner maintenance tools
         items:
-          - name: Cleaning up unused files on a DMA
+          - name: Cleaning up unused files
             topicUid: Cleaning_up_unused_files_on_a_DMA
-          - name: Synchronizing data between DataMiner Agents
+          - name: Synchronizing data between nodes
             topicUid: Synchronizing_data_between_DataMiner_Agents
       - name: Advanced configuration
         items:
@@ -153,6 +151,8 @@ items:
             topicUid: Disabling_automatic_NATS_config
           - name: Generating BrokerGateway client secrets
             topicUid: Generating_BrokerGateway_client_secrets
+          - name: Configuring forced NATS endpoints
+            topicUid: MessageBrokerConfig_ForcedEndpoints
       - name: Running BPA tests
         topicUid: Running_BPA_tests
         items:
@@ -160,8 +160,6 @@ items:
             topicUid: BPA_Report_Active_RTE
           - name: Antivirus on the DataMiner Agents
             topicUid: BPA_Check_Antivirus_DLLs
-          - name: Cassandra DB Size
-            topicUid: BPA_Cassandra_DB_Size
           - name: Check Deprecated DLL Usage
             topicUid: BPA_Check_Deprecated_DLL_Usage
           - name: Check System Health
@@ -184,6 +182,8 @@ items:
             topicUid: BPA_Https_Configuration
           - name: Large Alarm Trees
             topicUid: BPA_LargeAlarmTrees
+          - name: Local Single Cassandra DB Size
+            topicUid: BPA_Cassandra_DB_Size
           - name: NATS cluster verification
             topicUid: BPA_Check_Agent_Presence
           - name: Password Strength
@@ -332,6 +332,8 @@ items:
                     topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
                   - name: Decommissioning WSL
                     topicUid: Decommissioning_WSL
+                  - name: Determining the health of the dedicated clustered storage
+                    topicUid: Determining_the_health_of_the_clustered_storage
               - name: Configuring storage per DMA
                 topicUid: Configuring_storage_per_DMA
                 items:

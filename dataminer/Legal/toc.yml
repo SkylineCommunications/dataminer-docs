@@ -1,11 +1,11 @@
 items:
-  - name: Commercial terms
+  - name: Agreements
     items:
-      - name: Terms of sale
-        topicUid: Terms_of_Sale
-      - name: Terms for online deployments
+      - name: General Terms and Conditions
+        topicUid: General_Terms_and_Conditions
+      - name: Community Edition Terms
         topicUid: License_and_Service_Terms
-      - name: Terms for partners
+      - name: Partner Terms
         topicUid: Terms_partners
   - name: dataminer.services terms
     items:

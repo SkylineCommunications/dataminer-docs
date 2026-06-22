@@ -1,5 +1,6 @@
 ---
 uid: Asset_Hierarchy
+description: Open the Asset details pane for an asset, and use the buttons at the top of that pane to add or modify assets assigned to the hierarchy.
 ---
 
 # Configuring the asset hierarchy

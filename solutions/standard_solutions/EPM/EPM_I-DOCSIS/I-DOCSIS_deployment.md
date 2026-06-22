@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_deployment
 keywords: I-DOCSIS deployment
+description: Learn how to deploy the I-DOCSIS branch of the EPM Solution from the DataMiner Catalog and configure it afterwards.
 ---
 
 # EPM Integrated DOCSIS deployment

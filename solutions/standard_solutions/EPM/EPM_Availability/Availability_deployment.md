@@ -1,6 +1,7 @@
 ---
 uid: Availability_deployment
 keywords: Availability deployment
+description: Deploy the EPM Availability solution from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Deploying the EPM Availability solution

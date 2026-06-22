@@ -1,10 +1,9 @@
 ---
 uid: Protocols_Templates_tutorials
+description: Discover practical tutorials on getting started with alarm templates and using information templates in DataMiner Cube.
 ---
 
 # Protocols & Templates tutorials
-
-## Information template tutorials
 
 | Name | Description |
 |--|--|

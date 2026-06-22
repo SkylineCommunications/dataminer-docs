@@ -93,6 +93,11 @@ If used, the harvesting process creates these directories:
 
 Scripts in `xmlautomationtests.generated` are added to the package and installed on DataMiner during the test run. For that reason, this directory is not present on the test system.
 
+> [!IMPORTANT]
+> When executed from Visual Studio, harvesting uses the highest available PowerShell 5 version. When executed from the command line, it uses the highest available PowerShell 7 version and falls back to the highest available PowerShell 5 version if PowerShell 7 is not installed.
+>
+> For the most stable results, we recommend developing your harvesting scripts for **PowerShell 5 compatibility**.
+
 #### Do not create generated directories manually
 
 The following directories are automatically created during a build. Do not create or commit them manually:

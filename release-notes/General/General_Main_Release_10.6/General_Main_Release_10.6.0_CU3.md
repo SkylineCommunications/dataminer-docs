@@ -197,6 +197,12 @@ From now on, the slow poll timer will no longer make the ping command when addin
 
 In some cases, SLAnalytics could stop working due to an incorrect internal state in Automatic Incident Tracking.
 
+#### SLNet: MessageBroker cache could leak NATS threads [ID 45259]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+In some rare cases, the MessageBroker cache of SLNet could leak NATS threads.
+
 #### SLDataMiner: Problem when trying to fetch information about loopback adapters [ID 45285]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->

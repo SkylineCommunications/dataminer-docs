@@ -1,5 +1,6 @@
 ---
 uid: GVAMPP_Manager_Using
+description: Explore the UI of the Grass Valley AMPP Manager application, and learn how to configure workload application elements.
 ---
 
 # Using the AMPP Manager app
