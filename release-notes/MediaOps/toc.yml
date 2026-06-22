@@ -11,6 +11,8 @@ items:
     items:
     - name: MediaOps Plan 1.7.0 - Preview
       topicUid: MediaOps_Plan_1.7.0
+    - name: MediaOps Plan 1.6.1 - Preview
+      topicUid: MediaOps_Plan_1.6.1
     - name: MediaOps Plan 1.6.0
       topicUid: MediaOps_Plan_1.6.0
     - name: MediaOps Plan 1.5.8 - Preview
