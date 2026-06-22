@@ -15,11 +15,13 @@ Each of the different hosting possibilities has its own strengths in term of red
 
 - [DataMiner as a Service](xref:DaaS_hosting): both the DataMiner nodes and the storage nodes as a service.
 
-  ![DaaS](~/dataminer/images/DaaS.svg)
+  ![Schematic overview of a DaaS setup](~/dataminer/images/DaaS.svg)
 
 - [Self-managed DataMiner nodes with Storage as a Service](xref:DM_selfhosted_and_StaaS).
 
-  ![Hybrid](~/dataminer/images/Hybrid.svg)
+  ![Schematic overview of a STaaS setup](~/dataminer/images/Hybrid.svg)
+
+You can also [combine these two options](xref:Hybrid_clusters) within the same DataMiner cluster.
 
 > [!NOTE]
 > Exceptionally, instead of going for a standard DataMiner deployment model, you can also host both the DataMiner nodes and the storage nodes yourself. However, note that this is a deviation from our advised deployment path, and it is a complex setup that we do not recommend and that will involve additional costs (e.g., procurement of additional hardware for hosting the databases and associated running and maintenance costs, mandatory Skyline Communications engineering services for the deployment and configuration of the database cluster, as well as for database-related tickets, etc.). See [Self-managed DataMiner nodes and storage nodes](xref:DM_and_storage_selfhosted).
