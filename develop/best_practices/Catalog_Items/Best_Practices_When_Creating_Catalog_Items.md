@@ -69,18 +69,18 @@ When you add a new version of a Catalog item, in the version description, clearl
 Keep the version description concise by documenting the most impactful updates, such as roadmap features, critical bug fixes, or breaking changes. If a section has no entries, leave it out entirely.
 
 > [!NOTE]
-> DataMiner version and DataMiner Web version prerequisites are added as structured fields to the Catalog item version, so you do not need to repeat them in the version description. These fields are configured as [project properties](xref:skyline_dataminer_sdk_project_properties) in your .csproj file (e.g. `MinimumRequiredDmVersion`).
+> DataMiner version and DataMiner Web version prerequisites are added as structured fields to the Catalog item version, so you do not need to repeat them in the version description. These fields are configured as [project properties](xref:skyline_dataminer_sdk_project_properties) in your .csproj file (e.g., `MinimumRequiredDmVersion`).
 
-#### Standard solutions
+#### Version descriptions for standard solutions
 
-For standard solutions, start the version description with a link to the release notes. Although the release notes link provides the full picture, it is still useful to list the most impactful updates in the version description. Keep it concise.
+For standard solutions, start the version description with a link to the release notes. Although the release notes link provides the full picture, it is still useful to list the most impactful updates in the version description as well. Keep it concise.
 
 > [!NOTE]
-> Ideally, use an AKA link (e.g. `https://aka.dataminer.services/...`) so that the target can be updated if the documentation page is ever restructured.
+> Ideally, use an AKA link (e.g., `https://aka.dataminer.services/...`) so that the target can be updated if the documentation is ever restructured.
 
-#### Cumulative updates
+#### Version descriptions for cumulative updates
 
-As explained [above](#use-semantic-versioning), cumulative updates replace a prior release due to an exceptional impactful issue. Because the replaced version will be hidden from the default UI, a cumulative update version description should still contain the full description. In addition, a **Cumulative Updates** section is required at the top to explain each cumulative update.
+Cumulative updates replace a prior release because of an exceptional impactful issue (see [Use semantic versioning](#use-semantic-versioning)). Because the replaced version will be hidden from the default UI, a cumulative update version description should still contain the full description. In addition, a **Cumulative Updates** section is required at the top to explain each cumulative update.
 
 #### Example
 
@@ -96,8 +96,8 @@ The following example shows a version description that includes cumulative updat
 
 ### New Features
 
-- There was a new roadmap feature added.
-- There was a second roadmap feature added.
+- A new roadmap feature was added.
+- A second roadmap feature was added.
 
 ### Fixes
 
