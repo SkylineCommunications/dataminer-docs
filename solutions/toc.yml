@@ -6,6 +6,21 @@ items:
     topicUid: SOL_About
   - name: Standard Solutions
     items:
+    - name: DocumentHub
+      topicUid: DocumentHub
+      items:
+      - name: Installing DocumentHub
+        topicUid: DH_Installation
+      - name: DocumentHub app
+        topicUid: DH_Application
+      - name: DocumentHub DevPack
+        topicUid: DH_Development
+      - name: Tutorials
+        items:
+        - name: Configuring SharePoint as a storage backend
+          topicUid: Tutorial_DH_SharePoint
+        - name: Configuring DOM attachments on a network share
+          topicUid: Tutorial_DH_DOM_NetworkShare
     - name: EPM
       topicUid: SolEPM
       items:
