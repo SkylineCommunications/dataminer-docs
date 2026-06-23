@@ -67,3 +67,7 @@ Several issues in the InfraOps low-code apps have been fixed:
 - The Create Reservation dialog no longer worked correctly, preventing users from creating reservations.
 - The GQI Get Assets data source did not return results correctly.
 - Navigation links between app pages did not work correctly.
+
+#### Asset Manager: Bulk duplication did not copy all information correctly [ID 45792]
+
+When assets were duplicated in bulk, it could occur that holder assignments and destination location data were not correctly copied to the duplicates. This issue has been resolved, and the duplicate detection logic for assets with identical names has also been improved.
