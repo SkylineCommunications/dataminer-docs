@@ -174,6 +174,8 @@ When a request could match both a static and a dynamic route:
 
 **Empty path segments:** Dynamic routes cannot have empty path segments. When a request contains a double slash (e.g., `api/custom/test//this`), it is normalized to a single slash (`api/custom/test/this`). This means a dynamic route cannot match or capture empty segments between slashes, which is consistent with standard URL handling behavior.
 
+**Invalid characters in path segments:** The following characters cannot be used in path segments: `/`, `:`, `<`, `>`, `*`, `?`. These are reserved characters in URLs or operating systems and will cause the route to be invalid.
+
 ### Output
 
 The entry point method returns an instance of the `ApiTriggerOutput` class. This will be used to determine the response to the API caller.
