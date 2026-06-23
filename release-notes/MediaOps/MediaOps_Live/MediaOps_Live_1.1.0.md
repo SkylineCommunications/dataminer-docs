@@ -7,7 +7,22 @@ uid: MediaOps_Live_1.1.0
 > [!IMPORTANT]
 > We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
 
-## Enhancements
+## New features
+
+#### Control Surface: Direct access to job details [ID 45745]
+
+A number of changes have been introduced to make it possible to see the job information associated with a destination directly from the Control Surface app, making it easier to understand what each destination is currently being used for:
+
+- **Job details on destination tiles**: When a destination has job information available, an info icon is shown on its tile. Selecting the icon opens a dialog showing the job reference, name, description, and (when configured) a link to the full job details.
+- **Direct access to the job details link**: From the job details dialog you can click a link to the configured job details, taking you straight to the relevant job information.
+- **Configuration page in the Control Surface app**: A new Configuration page in the Control Surface app lets administrators enable the job details link and define the URL used to reach an external job system. The URL is set up as a template containing a placeholder (`[JOBREFERENCE]`), which is automatically replaced with the actual job reference when a link is opened. This means a single template works for every destination, always pointing to the correct job.
+- **Automatic job information on destinations**: Job details are automatically shown on a destination while it is in use by a job, and they are cleared again once the job ends, so that the Control Surface app always reflects the current situation without any manual upkeep.
+
+In addition, the MediaOps Live API has been extended so that job information (job reference, name, and description) can be associated with a destination and cleared again from your own orchestration setup. This is what populates the job details shown in the Control Surface app.
+
+## Changes
+
+### Enhancements
 
 #### Improved visualisation of pending connections [ID 45594]
 
