@@ -56,7 +56,7 @@ Route matching now distinguishes between static and dynamic routes:
 - The full number of segments must match. Partial matches are not accepted.
 - Dynamic routes are evaluated in specificity order, so that more literal routes win over more generic templates.
 
-That means `items/special` will match the static route `items/special` before the dynamic route `items/{id}`, and `foo/{bar}` will win over `{foo}/bar` before `foo/bar` because the first literal segment is more specific.
+That means `items/special` will match the static route `items/special` before the dynamic route `items/{id}`, and, in case of `foo/bar`, `foo/{bar}` will win over `{foo}/bar` because the first literal segment is more specific.
 
 ##### Route parameters
 
