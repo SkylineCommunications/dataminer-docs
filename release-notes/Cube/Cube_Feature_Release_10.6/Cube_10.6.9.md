@@ -20,7 +20,11 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No new features have been added yet.*
+#### DataMiner Cube sidebar: New 'Report an issue' command added to 'Community' menu [ID 45741]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When, in the sidebar, you click the *Community* button, a menu will open. This menu now also includes a command that will allow you to [report an issue](https://aka.dataminer.services/ReportAnIssue).
 
 ## Changes
 
