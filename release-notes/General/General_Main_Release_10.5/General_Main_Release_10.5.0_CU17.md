@@ -24,6 +24,18 @@ uid: General_Main_Release_10.5.0_CU17
 
 ## Changes
 
+### Breaking changes
+
+#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
+
+From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
+
+See also: [Dashboards/Low-Code Apps: State timeline component will now use the primary key when requesting timeline data [ID 45600]](xref:Web_apps_Feature_Release_10.6.8#dashboardslow-code-apps-state-timeline-component-will-now-use-the-primary-key-when-requesting-timeline-data-id-45600)
+
 ### Enhancements
 
 #### Exception.Source field will now be added to ErrorLog.txt when a managed process stops unexpectedly [ID 44722]
@@ -47,14 +59,6 @@ From now on, when a query using the *Parameters for elements where* data source 
 Up to now, the *SLElementInProtocol.txt* log file entries were added by SLProtocol.
 
 From now on, these log file entries will be added by SLLog instead.
-
-#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
-
-<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
-
-When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
-
-From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
 
 #### SLLogCollector will now retrieve the value of the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
 

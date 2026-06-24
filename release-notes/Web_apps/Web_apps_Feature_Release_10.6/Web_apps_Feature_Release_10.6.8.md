@@ -55,13 +55,7 @@ In dashboards and low-code apps, it is now possible to export and import GQI que
 
 ## Changes
 
-### Enhancements
-
-#### Enhanced performance when returning GQI query results [ID 45559]
-
-<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
-
-Because of a number of optimizations made with regard to JSON serialization, overall performance has increased when returning GQI query results.
+### Breaking changes
 
 #### Dashboards/Low-Code Apps: State timeline component will now use the primary key when requesting timeline data [ID 45600]
 
@@ -75,6 +69,14 @@ See also: [DataMiner Agents will now translate the primary key to the display ke
 
 > [!IMPORTANT]
 > Before you request timeline data using the `GetAlarmStateTimelineForParameter` web method, from now on, first send the `IsFeatureAvailable` web method with featureName set to "DKForReport" to check whether the DataMiner Agent requires you to send the display key or the primary key. If the method returns true, send the display key. If it returns false, send the primary key.
+
+### Enhancements
+
+#### Enhanced performance when returning GQI query results [ID 45559]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of a number of optimizations made with regard to JSON serialization, overall performance has increased when returning GQI query results.
 
 #### GQI DxM: Enhanced performance when executing a GQI query against the 'Get parameters for elements where' data source in a cluster [ID 45676]
 
