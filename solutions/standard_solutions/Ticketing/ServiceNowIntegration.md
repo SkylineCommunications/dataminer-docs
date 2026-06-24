@@ -33,9 +33,10 @@ When the connector element is created:
 
 - An entry is automatically added to the **External Ticketing** page in the Ticketing solution.
 - A **visualization endpoint** is registered.
-- An **API endpoint** is also created (not used in this setup).
 
-![Service Now Integration](~/solutions/images/Ticketing_ServiceNowIntegration_2.png)
+![Service Now Integration](~/solutions/images/Ticketing_ServiceNowExternalTicketing.png)
+
+![Service Now Instance](~/solutions/images/Ticketing_ServiceNowInstance.png)
 
 The visualization endpoint allows direct navigation to ServiceNow incidents.
 
@@ -99,16 +100,8 @@ When a change is detected:
 2. The corresponding DataMiner ticket is located.
 3. The ticket is updated in the Ticketing application.
 
-### Extensibility
-
-The integration can be extended to support:
-
-- Two-way synchronization
-- Updates initiated from DataMiner
-- Full lifecycle management across both systems
-
 ## Best Practices
 
 - Ensure correct configuration of credentials and endpoints.
-- Use consistent mapping between DataMiner tickets and ServiceNow incidents.
+- Field mapping between DataMiner tickets and ServiceNow incidents must be defined to ensure consistent synchronization. Fields may differ in structure and therefore require explicit mapping and value translation where needed.
 - The visualization endpoint is used to navigate to the incident on the external ticketing system.
