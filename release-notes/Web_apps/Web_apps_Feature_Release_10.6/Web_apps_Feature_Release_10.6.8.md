@@ -165,6 +165,12 @@ Also, in some cases, when the width of an icon shape was locked, up to now, the 
 
 When, in a DataMiner web app, an exception was thrown while a WebSocket message was being serialized, up to now, that exception would not properly end up in the UI.
 
+#### Monitoring app: Problem when configuring a custom time zone [ID 45719]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, it would incorrectly not be possible to configure a custom time zone in the Monitoring app.
+
 #### Low-Code Apps: Problem when clicking 'Browse templates' [ID 45731]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
