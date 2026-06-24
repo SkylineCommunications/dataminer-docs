@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_solutions_InfraOps
+description: Estimate InfraOps pricing from asset counts and facility records to size subscriptions quickly and confidently.
 ---
 
 # Sizing guide: InfraOps
