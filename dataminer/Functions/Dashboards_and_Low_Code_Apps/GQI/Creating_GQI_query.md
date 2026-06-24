@@ -55,10 +55,55 @@ From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43800-->, you ca
 
    A pop-up window will appear, showing a preview of the query in JSON format.
 
+1. In the *Export for* box, select the desired export format:
+
+   - *Dashboards / Apps* (default): Exports the query as raw JSON for use in [dashboards and low-code apps](#importing-a-query-from-json). Available from DataMiner 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 onwards<!--RN 45630-->.
+
+   - *Data Aggregator*: Exports the query to JSON format compatible with the [Data Aggregator module](xref:Data_Aggregator_queries#configuration-using-an-export).
+
 1. Select *Download JSON* to download the query as a JSON file, or *Copy query* to copy the JSON object to your clipboard.
 
 > [!NOTE]
 > Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12, exporting a query is not supported in the user interface. To export a GQI query to a JSON file (for example, to have it executed by the Data Aggregator module), follow the instructions under [Configuring GQI queries for Data Aggregator](xref:Data_Aggregator_queries).
+
+## Importing a query
+
+### Importing a query from JSON
+
+From DataMiner 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 onwards<!--RN 45630-->, you can import a query from raw JSON previously exported using the [*Dashboards / Apps* export option](#exporting-a-query):
+
+1. In the *Data* pane, select *Queries* and click the ![import](~/dataminer/images/Import_icon.png) icon.
+
+1. In the *Import query* pop-up window, paste the JSON into the *Query JSON* box.
+
+1. In the *Name* box, enter a name for the imported query.
+
+1. Click *Import* in the lower-right corner of the window.
+
+The query is now available in the *Data* pane.
+
+### Importing a query from a dashboard
+
+> [!NOTE]
+> This option is only available in dashboards.
+
+You can import a query from another dashboard in the DMS:
+
+1. In the *Data* pane, select *Queries* and click the ![import](~/dataminer/images/Import_icon.png) icon.
+
+   The *Import query* pop-up window will open.
+
+1. From DataMiner 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 onwards<!--RN 45630-->, set *From* to *Dashboard*.
+
+1. Select the dashboard that contains the query.
+
+1. Select the query from the *Query* dropdown list.
+
+1. In the *Name* box, enter a name for the imported query.
+
+1. Click *Import* in the lower-right corner of the window.
+
+The query is now available in the *Data* pane.
 
 ## Letting DataMiner Assistant create a query
 

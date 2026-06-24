@@ -16,6 +16,8 @@ From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards, configuring GQI queri
 
 1. Click the ... icon next to the query to open the context menu, and select **Export**.
 
+1. From DataMiner 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 onwards<!--RN 45630-->, in the *Export for* box, select *Data Aggregator*.
+
 1. In the pop-up window, click **Download JSON**.
 
 1. Place the downloaded JSON file in the correct folder, and update the **Helper.json** file as needed. See [GQI queries](xref:Data_Aggregator_settings#gqi-queries) for detailed instructions.
