@@ -42,7 +42,11 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Security enhancements [ID 45582]
+
+<!-- 45582: MR 10.7.0 - FR 10.6.9 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
