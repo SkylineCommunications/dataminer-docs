@@ -78,6 +78,14 @@ The Asset Manager app query filters now conditionally integrate with the DataMin
 
 This is powered by a dynamic library loader that checks module availability at runtime. No configuration changes are required.
 
+#### Asset Manager: Primary IP columns added to import/export [ID 45804]
+
+Two new columns are now supported in asset imports and exports: *Is Primary IPv4* and *Is Primary IPv6*. This will allow you to designate primary IP addresses directly in the file, so that manual configuration is no longer needed after the import.
+
+The columns accept boolean values (*True*/*False*).
+
+To ensure backwards-compatibility with existing files, the fields are left unchanged if the columns are omitted.
+
 ### Fixes
 
 #### Asset Manager: Incorrect default date for asset class lifecycle fields [ID 45697]
