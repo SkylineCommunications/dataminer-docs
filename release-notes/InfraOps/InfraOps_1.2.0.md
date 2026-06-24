@@ -12,7 +12,15 @@ The Network Discovery wizard now supports device discovery and direct provisioni
 
 A new token helper manages authentication against IDP API endpoints and will automatically attempt to install missing API definitions if they are not yet present on the DataMiner System.
 
-The legacy *Link IPs To Assets* sub-wizard has been removed. Its functionality is now fully integrated into the Network Discovery wizard, providing a single end-to-end discovery and onboarding flow.
+The legacy *Link IPs To Assets* sub-wizard has been removed. Its functionality has now fully been integrated into the Network Discovery wizard, providing a single end-to-end discovery and onboarding flow.
+
+#### Facility Manager: Site management [ID 45800]
+
+Site management has now been added to the Facility Manager app. A site represents a top-level geographical or organizational location to which facilities can be linked, enabling a richer location hierarchy. Sites are visible on the map and can be created, edited, and linked to facilities through new dedicated scripts.
+
+#### Plan and Build: Job type management [ID 45802]
+
+It is now possible to create, edit, and delete job types in the Plan and Build application. Job types allow organizations to categorize jobs (e.g., installation, maintenance), improving filtering and workflow consistency.
 
 ## Changes
 
@@ -50,8 +58,22 @@ The *InfraOps - Generate Default Data* script no longer imports Plan and Build j
 
 Environments that rely on this script to generate initial data will no longer receive Plan and Build job types automatically. If Plan and Build job types are required, they must be set up separately through the dedicated Plan and Build tooling.
 
+#### Asset Manager: Conditional ticketing integration in query filters [ID 45798]
+
+The Asset Manager app query filters now conditionally integrate with the DataMiner Ticketing module. The *Ticket Flags* filter section will only be displayed when the Ticketing and Object Linking modules are installed, preventing errors on systems without Ticketing.
+
+This is powered by a dynamic library loader that checks module availability at runtime. No configuration changes are required.
+
 ### Fixes
 
 #### Asset Manager: Incorrect default date for asset class lifecycle fields [ID 45697]
 
 Up to now, the End of Life and End of Service fields in the asset class lifecycle editor by default showed a minimum date value when no value had been previously set. These fields now correctly show the current UTC date and time by default.
+
+#### Asset Manager: Incorrect duplicate holder detection during import [ID 45799]
+
+When there were two distinct holders at the same slot but with different hierarchy roles, it could occur that these were incorrectly identified as duplicates during import. The holder identifier now includes the hierarchy role, ensuring each unique combination is processed correctly.
+
+#### Asset Manager: Query filters timeout error [ID 45801]
+
+In case the Query Filters dialog timed out or was aborted, a technical error message with a stack trace was displayed. The script now detects the abort condition and handles it gracefully, preserving previously configured filter values so the workflow that includes the dialog continues uninterrupted.
