@@ -1,8 +1,8 @@
 items:
-#  - name: InfraOps 1.2.0
-#    items:
-#      - name: New features and changes
-#        topicUid: InfraOps_1.2.0
+  - name: InfraOps 1.2.0
+    items:
+      - name: New features and changes
+        topicUid: InfraOps_1.2.0
 #      - name: Addendum CU1
 #        topicUid: InfraOps_1.2.0_CU1
 #      - name: Addendum CU2
