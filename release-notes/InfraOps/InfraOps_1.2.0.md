@@ -4,6 +4,16 @@ uid: InfraOps_1.2.0
 
 # InfraOps 1.2.0
 
+## New features
+
+#### Asset Manager: Network discovery and IDP provisioning [ID 45803]
+
+The Network Discovery wizard now supports device discovery and direct provisioning via the IDP Provisioning API. Operators can scan an IP range, review discovered devices, and provision DataMiner elements in a single guided workflow.
+
+A new token helper manages authentication against IDP API endpoints and will automatically attempt to install missing API definitions if they are not yet present on the DataMiner System.
+
+The legacy *Link IPs To Assets* sub-wizard has been removed. Its functionality is now fully integrated into the Network Discovery wizard, providing a single end-to-end discovery and onboarding flow.
+
 ## Changes
 
 ### Breaking changes
@@ -14,6 +24,15 @@ The InfraOps shared library has been redesigned with a unified namespace structu
 
 > [!IMPORTANT]
 > Custom scripts or connectors referencing the old `InfraOpsShared.DOM_Classes.*` namespaces will need to be updated.
+
+#### Asset Manager: Import/export migrated to Excel format [ID 45796]
+
+Importing and exporting of assets, data ports, and power ports now happens using Excel (.xlsx) workbooks instead of CSV files. Assets, data ports, and power ports each have a dedicated worksheet within a single workbook, named *Main Asset*, *Data Ports*, and *Power Ports* respectively.
+
+Port fields have been expanded to include port number, name, label, port type, exposure type, output type, hostname, IPv4/IPv6 address, and DNS. This provides more granular control over port configuration during import.
+
+> [!IMPORTANT]
+> Existing CSV import files are no longer compatible and must be converted to the new Excel format.
 
 ### Enhancements
 
