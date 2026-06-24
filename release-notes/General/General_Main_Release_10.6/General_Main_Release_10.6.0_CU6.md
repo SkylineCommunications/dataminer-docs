@@ -34,7 +34,11 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataAPI: Enhanced handling of element creations failing because another element with the same name already exists [ID 45643]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When the DataAPI fails to create an element because another element with the same name already exists, from now on, it will check whether that element has already been synchronized among the Agents in the DataMiner System. If not, the element creation will be allowed to continue.
 
 ### Fixes
 
