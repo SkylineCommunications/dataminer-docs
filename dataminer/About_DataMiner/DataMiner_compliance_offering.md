@@ -29,7 +29,9 @@ Similarly, we are also working on compliance with the more recent European Cyber
 
 ## ISO/IEC 27001 compliance
 
-Skyline has successfully finished stage 1 and stage 2 of the audit to obtain full ISO/IEC 27001 compliance. The certificate will be available for download shortly.
+Skyline has achieved ISO/IEC 27001 certification, confirming its compliance with internationally recognized information security management standards.
+
+The certificate is available for download on our [Dojo Community platform](https://community.dataminer.services/download/certificate-of-registration-information-security-management-system-iso-iec-270012022/).
 
 ## GDPR compliance
 
