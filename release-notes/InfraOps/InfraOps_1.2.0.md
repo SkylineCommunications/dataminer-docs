@@ -42,6 +42,20 @@ Port fields have been expanded to include port number, name, label, port type, e
 > [!IMPORTANT]
 > Existing CSV import files are no longer compatible and must be converted to the new Excel format.
 
+#### Asset Manager: Import/export improvements [ID 45797]
+
+JSON-based import/export scripts have been added for assets and asset classes, providing a machine-readable alternative to the existing Excel format for integration scenarios.
+
+The Excel export has also been improved: holders and linked elements are now written to dedicated worksheet tabs instead of inline columns on the main asset sheet, improving readability for assets with multiple holders or linked elements.
+
+Additionally, the holder *SlotNumber* field has been renamed to *Number* across all scripts and editors.
+
+> [!IMPORTANT]
+> These improvements include breaking changes:
+>
+> - Existing integrations that parse the previous inline column layout must be updated to read from the new dedicated *Holders* and *Linked Elements* tabs.
+> - Custom scripts referencing the *SlotNumber* field on the holder model must be updated to use *Number* instead.
+
 ### Enhancements
 
 #### Automatic SDM registration on installation [ID 45558]
