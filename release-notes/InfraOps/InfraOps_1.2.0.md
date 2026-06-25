@@ -100,6 +100,10 @@ The migration runs as part of the Asset Manager general setup and requires no ma
 
 When creating or editing a rack, leaving the *Maximum Rack Capacity (U)* field empty will now result in a clear validation error indicating the required field. Previously, this triggered a generic error message.
 
+#### Asset Manager: Improved query filter performance [ID 45811]
+
+Query filters in the Asset Manager app now load faster. Previously, the script initialized the full ticketing library to check module availability, which increased load times. This has been replaced with a lightweight check that verifies the presence of the required DOM modules, resulting in improved performance.
+
 ### Fixes
 
 #### Asset Manager: Incorrect default date for asset class lifecycle fields [ID 45697]
@@ -129,3 +133,11 @@ This issue has now been resolved. The export destination and local save paths ar
 Previously, when an asset was set to "In Transit", the state change would occur before the destination location was assigned. If the location assignment failed, the asset could end up in an inconsistent state.
 
 Assets now transition to "In Transit" only after the destination location has been successfully assigned. This change affects the *Set Available*, *Plan*, *Build*, and *Install* actions.
+
+#### Asset Manager: Error when assigning asset to holder if child asset information was missing [ID 45812]
+
+Previously, assigning an asset to a holder in the edit and delete holder dialogs could result in an error when information about a related child asset was missing. This issue has now been resolved, ensuring the dialogs function correctly in all scenarios.
+
+#### Facility Manager: Owner and team dropdowns incorrectly defaulted to first available value when unset [ID 45813]
+
+When editing a room in the Facility Manager app, the *Owner* and *Team* dropdowns would incorrectly preselect the first available person or team when no owner or team was assigned. These fields now remain empty in such cases, accurately reflecting the room's configuration.
