@@ -22,7 +22,7 @@ Once you have configured your facilities and rooms in the Facility Manager app, 
    - **Rack Position**: If set to *Bottom*, slot 1 is at the bottom of the rack. If set to *Top*, slot 1 is at the top of the rack.
    - **Rack Label**: This is displayed in the [Room Designer](xref:Room_Designer) and Room Viewer (in the [Asset Manager](xref:Asset_Manager) app) when the rack is placed in a room.
    - **Maximum Power Capacity (kW)**: Consumed based on the assets that are placed on the rack.
-   - **Maximum Rack Capacity (U)**: The number of rack units available for this rack.
+   - **Maximum Rack Capacity (U)**: As of InfraOps 1.2.0, this is a mandatory field<!--RN 45810-->. The number of rack units available for this rack.
    - **Room Name**/**Row Name**/**Zone Name**: The location where the rack is added. You will only be able to add a rack to a room with at least one row and zone.
 
    This will add the rack to the racks overview table.

@@ -86,6 +86,20 @@ The columns accept boolean values (*True*/*False*).
 
 To ensure backwards-compatibility with existing files, the fields are left unchanged if the columns are omitted.
 
+#### Asset Manager: DOM wrapper field handling improvements [ID 45806]
+
+The internal field accessors on DOM wrapper classes have been changed from public to internal, reducing the public API surface and preventing unintended direct field manipulation from external code. In addition, numeric properties (e.g., *Height*, *Depth*, and *Width*) now apply consistent rounding at the property setter level to ensure uniform value handling.
+
+#### Asset Manager: Automatic correction of duplicate port numbers [ID 45807]
+
+A new port number migration tool has been introduced in the Asset Manager app. During installation or upgrade, this tool scans all assets and asset classes, identifies duplicate port numbers within each port category, and reassigns them to ensure uniqueness. After the migration, a summary report is generated listing the applied changes.
+
+The migration runs as part of the Asset Manager general setup and requires no manual intervention. Existing environments are updated automatically, with all port numbers corrected to prevent conflicts.
+
+#### Facility Manager: Improved rack capacity validation [ID 45810]
+
+When creating or editing a rack, leaving the *Maximum Rack Capacity (U)* field empty will now result in a clear validation error indicating the required field. Previously, this triggered a generic error message.
+
 ### Fixes
 
 #### Asset Manager: Incorrect default date for asset class lifecycle fields [ID 45697]
@@ -99,3 +113,19 @@ When there were two distinct holders at the same slot but with different hierarc
 #### Asset Manager: Query filters timeout error [ID 45801]
 
 In case the Query Filters dialog timed out or was aborted, a technical error message with a stack trace was displayed. The script now detects the abort condition and handles it gracefully, preserving previously configured filter values so the workflow that includes the dialog continues uninterrupted.
+
+#### Asset Manager: Incorrect rack position conflict for non-rack-consuming assets [ID 45805]
+
+When non-rack-consuming assets (e.g., patch panels and cable management units) were imported, an incorrect rack position conflict could occur. To prevent this, the rack position validation has been adjusted to only apply to assets with the *RackUnitConsumer* device type.
+
+#### Plan and Build: Cabling plan export failed because of incorrect file path construction [ID 45808]
+
+When exporting cabling plans upon job completion, the process could fail because the export file path was constructed incorrectly. This resulted in failed exports.
+
+This issue has now been resolved. The export destination and local save paths are correctly determined, ensuring cabling plans are successfully exported.
+
+#### Asset Manager: 'In Transit' state set before destination location assignment [ID 45809]
+
+Previously, when an asset was set to "In Transit", the state change would occur before the destination location was assigned. If the location assignment failed, the asset could end up in an inconsistent state.
+
+Assets now transition to "In Transit" only after the destination location has been successfully assigned. This change affects the *Set Available*, *Plan*, *Build*, and *Install* actions.
