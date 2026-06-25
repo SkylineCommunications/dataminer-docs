@@ -55,6 +55,12 @@ From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43800-->, you ca
 
    A pop-up window will appear, showing a preview of the query in JSON format.
 
+1. In the *Export for* box, select the desired export format:
+
+   - *Dashboards / Apps* (default): Exports the query as raw JSON for use in [dashboards and low-code apps](xref:Importing_a_query#importing-a-query-from-json). Available from DataMiner 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 onwards<!--RN 45630-->.
+
+   - *Data Aggregator*: Exports the query to JSON format compatible with the [Data Aggregator module](xref:Data_Aggregator_queries#configuration-using-an-export).
+
 1. Select *Download JSON* to download the query as a JSON file, or *Copy query* to copy the JSON object to your clipboard.
 
 > [!NOTE]

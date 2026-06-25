@@ -51,7 +51,9 @@ This metadata will be available for numeric columns across all parameter-based d
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
-In dashboards and low-code apps, it is now possible to export and import GQI queries to and from raw JSON format.
+In dashboards and low-code apps, GQI queries can now be exported as raw JSON using a new *Dashboards / Apps* export option. In addition, a new import option allows you to create a query by pasting previously exported JSON, making it possible to reuse and share queries across dashboards and apps.
+
+![Importing and exporting a GQI query to a different dashboard or low-code app](~/dataminer/images/ImportExportQuery.gif)
 
 ## Changes
 
