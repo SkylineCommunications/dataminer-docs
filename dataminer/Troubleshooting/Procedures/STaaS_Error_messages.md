@@ -29,6 +29,18 @@ CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Excep
 
 To register your system, follow the procedure to [set up STaaS](xref:Setting_up_StaaS).
 
+### The DMS cannot reach STaaS
+
+If a system is configured to use STaaS but cannot reach it, DataMiner will not be able to start up, and migrations or test runs cannot be started.
+
+The following error message will be present in the *SLCloudStorage.txt* log file:
+
+```txt
+CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing a GetConfigurationAsync. (...) A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond <IP Address>
+```
+
+To be able to reach STaaS, besides meeting the Cloud connection [requirements](xref:Connect_to_cloud_requirements), contact <support@dataminer.services> for the specific endpoints or IP addresses to whitelist. The configuration depends on the region where your system is registered.
+
 ## CloudGateway is not running correctly
 
 If a system is trying to use STaaS but the CloudGateway DxM is not running or not running correctly, DataMiner will not be able to start up.
