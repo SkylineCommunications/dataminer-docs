@@ -26,7 +26,7 @@ Up to now, when you configured a node, job, or workflow, the *Select Configurati
 From now on, the *Select Configuration* dialog will open in a simplified operator view by default. In this view, the following items are hidden to keep the focus on the parameters you can act on:
 
 - Linked (capability, capacity, or configuration) parameters
-- Automated-action events that do not have a script selected (or disabled)
+- Automated actions that are disabled or that do not have a script selected
 - The selected scripts
 - Linked input arguments
 
