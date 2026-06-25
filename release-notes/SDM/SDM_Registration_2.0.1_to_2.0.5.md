@@ -1,8 +1,8 @@
 ---
-uid: SDM_2.0.1_to_2.0.5
+uid: SDM_Registration_2.0.1_to_2.0.5
 ---
 
-# Standard Data Model 2.0.1 to 2.0.5
+# SDM Registration 2.0.1 to 2.0.5
 
 ## SDM 2.0.5 - Fix - GQI process locked the SDM.Abstractions DevPack [ID 45092]
 
