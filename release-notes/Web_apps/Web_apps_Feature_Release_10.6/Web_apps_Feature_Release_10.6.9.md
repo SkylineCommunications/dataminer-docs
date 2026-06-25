@@ -32,7 +32,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 From now on, discrete column values in a GQI query result will no longer be arrays of possible values. Instead, they will be objects containing possible values and an `IsStrict` flag.
 
-This change will only have an impact when a GQI query executed using SLHelper requests parameter trend data for discrete parameters. In that case, discrete columns containing discrete values that do not match the column type will no longer be available in the client.
+This change will only have a functional impact when columns are requested for parameter trend data of discrete parameters using GQI via SLHelper. In that case, discrete columns containing discrete values that do not match the column type will no longer be available in the client.
 
 #### Web apps: Redesigned datetime controls now fully support custom time zones set by the client [ID 45687]
 
