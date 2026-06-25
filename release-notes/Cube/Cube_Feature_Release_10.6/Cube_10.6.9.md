@@ -34,8 +34,8 @@ When, in the sidebar, you click the *Community* button, a menu will open. This m
 
 ### Fixes
 
-#### Problem when logging out right after having logged in [ID 45756]
+#### Problem when logging out right after having logged in [ID 45756] [ID 45761]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
-When you logged out of DataMiner Cube immediately after you had logged in, in some cases, an exception could be thrown related to the Alarm Console light bulb feature.
+When you logged out of DataMiner Cube immediately after you had logged in, in some cases, an exception could be thrown related to either the Alarm Console light bulb feature or the Correlation feature.
