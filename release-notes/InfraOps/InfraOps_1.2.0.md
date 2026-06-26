@@ -141,3 +141,37 @@ Previously, assigning an asset to a holder in the edit and delete holder dialogs
 #### Facility Manager: Owner and team dropdowns incorrectly defaulted to first available value when unset [ID 45813]
 
 When editing a room in the Facility Manager app, the *Owner* and *Team* dropdowns would incorrectly preselect the first available person or team when no owner or team was assigned. These fields now remain empty in such cases, accurately reflecting the room's configuration.
+
+#### Asset Manager: Import scripts froze in silent mode when errors triggered interactive dialog [ID 45814]
+
+Previously, when running an asset or asset class import script in silent (non-interactive) mode, the script could freeze if an error occurred, because it attempted to display an interactive error dialog. This prevented automated processes such as regression tests or scheduled runs from completing.
+
+In silent mode, import scripts now log failed items to the script output and exit cleanly. This ensures they can be safely used in non-interactive contexts, such as regression tests or scheduled automation, without additional configuration.
+
+#### Asset Manager: JSON import could skip assets with cross-references [ID 45815]
+
+When importing multiple assets via JSON, some assets could be silently skipped if they referenced each other. This was caused by an inverted condition that prevented newly created assets from being recognized while the import was still in progress.
+
+The import process now first creates all assets and then processes their updates in a second step. As a result, all assets are recognized before their relationships are applied, ensuring that cross-references are handled correctly.
+
+#### Facility Manager: Rack usage metrics displayed negative values when data was unavailable [ID 45816]
+
+On the Racks page in the Facility Manager app, certain rack usage metrics in the overview, such as *Power usage (%)* and *Space usage (%)*, displayed negative values when data was unavailable. These columns now show "N/A" in such cases.
+
+#### Asset Manager: Dates could change after saving lifecycle or custody details [ID 45817]
+
+When editing lifecycle or custody information in the Asset Manager app, dates could shift because of UTC offset handling when the asset was saved. As a result, users might see a different date than the one they originally entered.
+
+This issue has been fixed by ensuring that all date fields are consistently handled as UTC. Date values are now correctly interpreted when read, and the date/time picker explicitly marks all dates as UTC. This improvement applies to all interactive scripts used to edit lifecycle and custody date fields.
+
+#### Asset Manager: Incorrect default date values in lifecycle editors [ID 45818]
+
+Previously, the *Edit Asset Lifecycle* editor used local time instead of UTC when setting default dates, such as the *First-Use* and *Modification Date* fields, which could result in incorrect date values.
+
+Additionally, the *Edit Asset Class Lifecycle* editor initialized empty *End of Life* and *End of Service* date fields with the minimum possible date value instead of the current UTC time, resulting in unrealistic default dates.
+
+Both issues have now been resolved.
+
+#### Plan and Build: Duplicate asset entries [ID 45819]
+
+Previously, it was possible to add the same asset multiple times to a job, resulting in duplicate entries in the job's asset list. This occurred because the system did not check whether an asset was already linked before adding it. Now, assets that are already linked to the job are automatically excluded when adding new ones, ensuring each asset can only be linked once.
