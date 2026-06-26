@@ -220,7 +220,7 @@ Using the statusCode attribute, you can specify the ID of the parameter in which
 >   - 5xx (Server error): The element will go into timeout.
 >
 > - HTTP communication logging can be enabled by setting information logging to level 3 (RN 14439).
-> - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e., upon reception of the WINHTTP_ERROR_TIMEOUT error) and when the SLPort process is unable to connect to the web server (i.e., upon reception of the ERROR_WINHTTP_CANNOT_CONNECT, ERROR_WINHTTP_SECURE_FAILURE or SEC_E_BUFFER_TOO_SMALL error).<!-- RN 13111, RN 34888 -->
+> - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e., upon reception of the WINHTTP_ERROR_TIMEOUT error) and when the SLPort process is unable to connect to the web server (i.e., upon reception of the ERROR_WINHTTP_CANNOT_CONNECT, ERROR_WINHTTP_SECURE_FAILURE, or SEC_E_BUFFER_TOO_SMALL error).<!-- RN 13111, RN 34888 -->
 
 > [!TIP]
 > See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
