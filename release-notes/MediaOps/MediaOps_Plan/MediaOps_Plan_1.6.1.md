@@ -2,7 +2,7 @@
 uid: MediaOps_Plan_1.6.1
 ---
 
-# MediaOps Plan 1.6.1
+# MediaOps Plan 1.6.1 - Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
@@ -11,7 +11,6 @@ uid: MediaOps_Plan_1.6.1
 > This version requires:
 >
 > - DataMiner 10.6.4/10.7.0 or higher.
-> - The [GQI DxM](xref:GQI_DxM), which must be installed and enabled.
 > - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.0 or higher.
 > - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e) 1.1.0 or higher.
 
@@ -45,3 +44,7 @@ When placeholders were used to link to a job property, it could occur that the r
 Previously, when a confirmed job was returned to the tentative state, any reference validation errors (unresolved references, reservation mismatches, or live-event mismatches) raised while the job was confirmed remained on the job indefinitely. However, these checks do not apply to tentative jobs, so the errors were no longer relevant, but they were never cleared.
 
 Returning a job to tentative now re-runs job validation, so these outdated errors are automatically cleared, and the job no longer shows errors that no longer apply.
+
+#### Resource Studio: Not possible to remove capability from resource pool [ID 45840]
+
+In Resource Studio, it was not possible to remove a capability from a resource pool.
