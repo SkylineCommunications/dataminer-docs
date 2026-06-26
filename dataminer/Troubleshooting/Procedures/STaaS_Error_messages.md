@@ -39,7 +39,7 @@ The following error message will be present in the *SLCloudStorage.txt* log file
 CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing a GetConfigurationAsync. (...) A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond <IP Address>
 ```
 
-To be able to reach STaaS, besides meeting the Cloud connection [requirements](xref:Connect_to_cloud_requirements), contact <support@dataminer.services> for the specific endpoints or IP addresses to whitelist. The configuration depends on the region where your system is registered.
+To be able to reach STaaS, first make sure that the [dataminer.services connection requirements](xref:Connect_to_cloud_requirements) are met. If you are still unable to reach STaaS, contact <support@dataminer.services> for the specific endpoints or IP addresses to whitelist. The configuration depends on the region where your system is registered.
 
 ## CloudGateway is not running correctly
 
