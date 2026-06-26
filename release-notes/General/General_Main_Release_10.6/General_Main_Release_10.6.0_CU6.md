@@ -40,6 +40,14 @@ Before you upgrade to this DataMiner version:
 
 When the DataAPI fails to create an element because another element with the same name already exists, from now on, it will check whether that element has already been synchronized among the Agents in the DataMiner System. If not, the element creation will be allowed to continue.
 
+#### ConfigureIIS.bat script will now ensure a dedicated Application Pool for the API application [ID 45842]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+The *ConfigureIIS.bat* script will now ensure a dedicated Application Pool for the API application. This will avoid needless restarts of the API when files running under the same DefaultAppPool would change inside WebPages.
+
+This new application pool is called *DataMiner WebAPI AppPool*. it is solely intended to serve as pool for the web API, and will not recycle periodically.
+
 ### Fixes
 
 #### Problem when using the 'Get parameter table by alias' data source against a STaaS database [ID 45766]
