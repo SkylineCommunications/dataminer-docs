@@ -1,8 +1,8 @@
 ---
-uid: Community_Edition_terms
+uid: Community_Edition_Terms
 ---
 
-# Skyline Community Edition terms
+# Skyline Community Edition Terms
 
 *Version 1.0 — Effective Date: 15 June 2026*
 
