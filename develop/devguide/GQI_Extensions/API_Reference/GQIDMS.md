@@ -13,6 +13,9 @@ Represents the DataMiner System (DMS). Can be used to request information from t
 
 Available from DataMiner 10.3.4/10.4.0 onwards.<!-- RN 35701 -->
 
+> [!NOTE]
+> The `GQIDMS` class itself cannot be used for constructor injection. From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, when using the `Skyline.DataMiner.Core.GQI.Extensions` API and the [GQI DxM](xref:GQI_DxM), use [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) to inject DMS access via the constructor. In earlier versions, use the [DMS](xref:GQI_OnInitInputArgs#properties) property of [OnInitInputArgs](xref:GQI_OnInitInputArgs).
+
 > [!TIP]
 > See also:
 >
@@ -41,6 +44,12 @@ An [IConnection](xref:Skyline.DataMiner.Net.IConnection) object representing the
 
 > [!NOTE]
 > The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
+
+> [!IMPORTANT]
+> `GQIDMS` can only be used during the lifetime of the associated extension instance. Do not store or reuse it outside that lifetime.
+
+> [!NOTE]
+> From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, when using the GQI DxM, if the underlying SLNet connection was dropped, `GetConnection()` can be called again to receive a fresh connection.
 
 ### DMSMessage SendMessage(DMSMessage message)
 
@@ -87,7 +96,7 @@ GQIDMS DMS
 Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
 
 > [!IMPORTANT]
-> `GQIDMS` can only be used during the lifecycle of a single extension instance. After the [OnDestroy](xref:GQI_IGQIOnDestroy) lifecycle method is invoked, the `GQIDMS` object associated with the extension instance is cleaned up. Any ongoing or new requests made through that `GQIDMS` object will be canceled.
+> `GQIDMS` can only be used during the lifetime of the associated extension instance. Do not store or reuse it outside that lifetime.
 
 ### Example of retrieving data by means of DMS messages
 

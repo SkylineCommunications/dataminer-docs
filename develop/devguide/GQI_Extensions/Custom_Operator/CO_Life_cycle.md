@@ -29,6 +29,7 @@ The following lifecycle methods exist for custom operators:
 
 | Method | Interface | Required | Availability |
 |--|--|--|--|
+| [Constructor](#constructor) | None | No | Always |
 | [OnInit](#oninit) | [IGQIOnInit](xref:GQI_IGQIOnInit) | No | From DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 --> |
 | [GetInputArguments](#getinputarguments) | [IGQIInputArguments](xref:GQI_IGQIInputArguments) | No | Always |
 | [OnArgumentsProcessed](#onargumentsprocessed) | [IGQIInputArguments](xref:GQI_IGQIInputArguments) | No | Always |
@@ -36,6 +37,7 @@ The following lifecycle methods exist for custom operators:
 | [Optimize](#optimize) | [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator) | No | Always |
 | [HandleRow](#handlerow) | [IGQIRowOperator](xref:GQI_IGQIRowOperator) | No | Always |
 | [OnDestroy](#ondestroy) | [IGQIOnDestroy](xref:GQI_IGQIOnDestroy) | No | From DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 --> |
+| [Dispose](#dispose) | [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable) | No | From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards when using the [GQI DxM](xref:GQI_DxM).<!-- RN 45635 --> |
 
 The lifecycle methods that are called on a custom operator instance depend on the following conditions:
 
@@ -48,6 +50,12 @@ The following diagram shows a complete overview of all possible lifecycle paths.
 
 ![Custom operator lifecycle](~/dataminer/images/GQI_CustomOperatorLifeCycle2.png)
 
+### Constructor
+
+When a new custom operator instance is created, GQI first calls a constructor. Before DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9<!-- RN 45635 -->, this is always the public parameterless constructor. If the class does not explicitly declare a constructor, the default constructor is used.
+
+From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, custom operators using the `Skyline.DataMiner.Core.GQI.Extensions` API and the GQI DxM can use [constructor injection](xref:GQI_Extensions_Services). GQI still uses the public parameterless constructor when one exists. Otherwise, it resolves the constructor parameters before [OnInit](#oninit). If construction fails, no other lifecycle methods are called for that instance.
+
 ### OnInit
 
 Building block interface: [IGQIOnInit](xref:GQI_IGQIOnInit)
@@ -55,7 +63,7 @@ Building block interface: [IGQIOnInit](xref:GQI_IGQIOnInit)
 If implemented, `OnInit` is always the first lifecycle method. It can provide references to dependencies like a logger or an SLNet connection and can be used to initialize resources that should be available during the lifetime of the custom operator instance.
 
 > [!IMPORTANT]
-> Resources that are initialized here should be cleaned up in the final [OnDestroy](#ondestroy) lifecycle method.
+> Resources that are successfully initialized here should be cleaned up in the [OnDestroy](#ondestroy) lifecycle method. For cleanup that must also happen when `OnInit` fails, implement [IDisposable](#dispose).
 
 > [!NOTE]
 > When resources are only required to determine the columns, the initialization should instead be done in the [HandleColumns](#handlecolumns) lifecycle method to avoid unnecessary resource allocations.
@@ -115,7 +123,16 @@ If implemented, the `HandleRow` lifecycle method defines how query rows will be 
 
 Building block interface: [IGQIOnDestroy](xref:GQI_IGQIOnDestroy)
 
-If implemented, `OnDestroy` is always the last lifecycle method. It allows you to clean up any resources that were used during the lifetime of the custom operator instance.
+If implemented, `OnDestroy` is called during cleanup when [OnInit](#oninit) completed successfully. It allows you to clean up resources that were used during the lifetime of the custom operator instance.
 
 > [!IMPORTANT]
-> The `OnDestroy` lifecycle method will **not** be called when the [OnInit](#oninit) lifecycle method failed.
+> The `OnDestroy` lifecycle method will **not** be called when the [OnInit](#oninit) lifecycle method failed. For cleanup that must happen regardless of the `OnInit` result, use [Dispose](#dispose).
+
+### Dispose
+
+Building block interface: [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable)
+
+From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, when a custom operator using the `Skyline.DataMiner.Core.GQI.Extensions` API and the GQI DxM implements `IDisposable`, GQI calls `Dispose` when the instance is cleaned up. Use this to release resources that are tied to the instance lifetime.
+
+> [!NOTE]
+> Contrary to [OnDestroy](#ondestroy), `Dispose` is always called, regardless of whether [OnInit](#oninit) failed.

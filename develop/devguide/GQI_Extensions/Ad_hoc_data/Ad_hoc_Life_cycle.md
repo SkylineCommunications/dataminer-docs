@@ -29,6 +29,7 @@ The following lifecycle methods exist for ad hoc data sources:
 
 | Method | Interface | Required | Availability |
 |--|--|--|--|
+| [Constructor](#constructor) | None | No | Always |
 | [OnInit](#oninit) | [IGQIOnInit](xref:GQI_IGQIOnInit) | No | Always |
 | [GetInputArguments](#getinputarguments) | [IGQIInputArguments](xref:GQI_IGQIInputArguments) | No | Always |
 | [OnArgumentsProcessed](#onargumentsprocessed) | [IGQIInputArguments](xref:GQI_IGQIInputArguments) | No | Always |
@@ -39,6 +40,7 @@ The following lifecycle methods exist for ad hoc data sources:
 | [GetNextPage](#getnextpage) | [IGQIDataSource](xref:GQI_IGQIDataSource) | Yes | Always |
 | [OnStopUpdates](#onstopupdates) | [IGQIUpdateable](xref:GQI_IGQIUpdateable) | No | From DataMiner 10.4.4/10.5.0 onwards<!-- RN 38643 --> |
 | [OnDestroy](#ondestroy) | [IGQIOnDestroy](xref:GQI_IGQIOnDestroy) | No | Always |
+| [Dispose](#dispose) | [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable) | No | From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards when using the [GQI DxM](xref:GQI_DxM).<!-- RN 45635 --> |
 
 The lifecycle methods that are called on an ad hoc data source instance depend on the following conditions:
 
@@ -52,6 +54,12 @@ The following diagram shows a complete overview of all possible lifecycle paths.
 
 ![Ad hoc data source lifecycle](~/dataminer/images/GQI_AdHocDataSourceLifeCycle2.png)
 
+### Constructor
+
+When a new ad hoc data source instance is created, GQI first calls a constructor. Before DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9<!-- RN 45635 -->, this is always the public parameterless constructor. If the class does not explicitly declare a constructor, the default constructor is used.
+
+From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, ad hoc data sources using the `Skyline.DataMiner.Core.GQI.Extensions` API and the GQI DxM can use [constructor injection](xref:GQI_Extensions_Services). GQI still uses the public parameterless constructor when one exists. Otherwise, it resolves the constructor parameters before [OnInit](#oninit). If construction fails, no other lifecycle methods are called for that instance.
+
 ### OnInit
 
 Building block interface: [IGQIOnInit](xref:GQI_IGQIOnInit)
@@ -59,7 +67,7 @@ Building block interface: [IGQIOnInit](xref:GQI_IGQIOnInit)
 If implemented, `OnInit` is always the first lifecycle method. It can provide references to dependencies like a logger or an SLNet connection, and it can be used to initialize resources that should be available during the lifetime of the ad hoc data source instance.
 
 > [!IMPORTANT]
-> Resources that are initialized here should be cleaned up in the final [OnDestroy](#ondestroy) lifecycle method.
+> Resources that are successfully initialized here should be cleaned up in the [OnDestroy](#ondestroy) lifecycle method. For cleanup that must also happen when `OnInit` fails, implement [IDisposable](#dispose).
 
 > [!NOTE]
 > When resources are only required for specific requests, the initialization should be done in later lifecycle methods to avoid unnecessary resource allocations:
@@ -102,7 +110,7 @@ Building block interface: [IGQIOnPrepareFetch](xref:GQI_IGQIOnPrepareFetch)
 
 If implemented, the `OnPrepareFetch` lifecycle method allows the ad hoc data source instance to initialize resources that are only needed when fetching data.
 
-If resources are initialized in this method, they should be cleaned up in the final [OnDestroy](#ondestroy) lifecycle method.
+If resources are initialized in this method, they should be cleaned up in the [OnDestroy](#ondestroy) lifecycle method.
 
 ### OnStartUpdates
 
@@ -132,7 +140,16 @@ If implemented, the `OnStopUpdates` lifecycle method is only called when updates
 
 Building block interface: [IGQIOnDestroy](xref:GQI_IGQIOnDestroy)
 
-If implemented, `OnDestroy` is always the last lifecycle method. It allows you to clean up any resources that were used during the lifetime of the ad hoc data source instance.
+If implemented, `OnDestroy` is called during cleanup when [OnInit](#oninit) completed successfully. It allows you to clean up resources that were used during the lifetime of the ad hoc data source instance.
 
 > [!IMPORTANT]
-> The `OnDestroy` lifecycle method will **not** be called when the [OnInit](#oninit) lifecycle method failed.
+> The `OnDestroy` lifecycle method will **not** be called when the [OnInit](#oninit) lifecycle method failed. For cleanup that must happen regardless of the `OnInit` result, use [Dispose](#dispose).
+
+### Dispose
+
+Building block interface: [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable)
+
+From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, when an ad hoc data source using the `Skyline.DataMiner.Core.GQI.Extensions` API and the GQI DxM implements `IDisposable`, GQI calls `Dispose` when the instance is cleaned up. Use this to release resources that are tied to the instance lifetime.
+
+> [!NOTE]
+> Contrary to [OnDestroy](#ondestroy), `Dispose` is always called, regardless of whether [OnInit](#oninit) failed.

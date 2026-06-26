@@ -1038,14 +1038,24 @@ items:
             topicUid: GQI_GQIEditableRow
           - name: GQIFilterMethod
             topicUid: GQI_GQIFilterMethod
+          - name: GQILazy<T>
+            topicUid: GQI_GQILazyT
           - name: GQILogLevel
             topicUid: GQI_GQILogLevel
           - name: GQIPage
             topicUid: GQI_GQIPage
           - name: GQIRow
             topicUid: GQI_GQIRow
+          - name: GQISecurityServiceAttribute
+            topicUid: GQI_GQISecurityServiceAttribute
+          - name: GQIServiceAttribute
+            topicUid: GQI_GQIServiceAttribute
           - name: GQISortDirection
             topicUid: GQI_GQISortDirection
+          - name: GQIUserServiceAttribute
+            topicUid: GQI_GQIUserServiceAttribute
+          - name: GQIWorkerServiceAttribute
+            topicUid: GQI_GQIWorkerServiceAttribute
           - name: IGQIAndFilter
             topicUid: GQI_IGQIAndFilter
           - name: IGQIColumn
@@ -1062,6 +1072,8 @@ items:
             topicUid: GQI_IGQIDataSource
           - name: IGQIDataSourceNode 
             topicUid: GQI_IGQIDataSourceNode 
+          - name: IGQIDMSInterface
+            topicUid: GQI_IGQIDMSInterface
           - name: IGQIFactory
             topicUid: GQI_IGQIFactory
           - name: IGQIFilter
@@ -1092,6 +1104,8 @@ items:
             topicUid: GQI_IGQIQueryNode
           - name: IGQIRowOperator
             topicUid: GQI_IGQIRowOperator
+          - name: IGQISecurity
+            topicUid: GQI_IGQISecurity
           - name: IGQISession
             topicUid: GQI_IGQISession
           - name: IGQISortField
@@ -1102,6 +1116,8 @@ items:
             topicUid: GQI_IGQIUpdateable
           - name: IGQIUpdater
             topicUid: GQI_IGQIUpdater
+          - name: IGQIUser
+            topicUid: GQI_IGQIUser
           - name: IGQIValueFilter
             topicUid: GQI_IGQIValueFilter
           - name: ObjectRefMetadata
@@ -1116,6 +1132,8 @@ items:
             topicUid: GQI_TimeRangeMetadata
       - name: Extension API
         topicUid: GQI_Extension_API
+      - name: Services
+        topicUid: GQI_Extensions_Services
       - name: Architecture
         topicUid: GQI_Extensions_Architecture
       - name: Best practices
