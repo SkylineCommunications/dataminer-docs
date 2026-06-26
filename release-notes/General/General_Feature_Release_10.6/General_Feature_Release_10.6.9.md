@@ -54,6 +54,14 @@ A number of security enhancements have been made.
 
 When the DataAPI fails to create an element because another element with the same name already exists, from now on, it will check whether that element has already been synchronized among the Agents in the DataMiner System. If not, the element creation will be allowed to continue.
 
+#### ConfigureIIS.bat script will now ensure a dedicated Application Pool for the API application [ID 45842]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+The *ConfigureIIS.bat* script will now ensure a dedicated Application Pool for the API application. This will avoid needless restarts of the API when files running under the same DefaultAppPool would change inside WebPages.
+
+This new application pool is called *DataMiner WebAPI AppPool*. it is solely intended to serve as pool for the web API, and will not recycle periodically.
+
 ### Fixes
 
 #### Problem when using the 'Get parameter table by alias' data source against a STaaS database [ID 45766]
@@ -65,3 +73,11 @@ The *Get parameter table by alias* data source retrieves a parameter table from 
 Up to now, this data source would only check whether the DataMiner System included an indexing database. It would not check the type of the database. As it currently only supports Elasticsearch and OpenSearch, up to now, exceptions would be thrown when it was used to retrieve data from a STaaS database.
 
 From now on, the *Get parameter table by alias* data source will only be available when the DataMiner System includes an indexing database of type Elasticsearch or OpenSearch.
+
+#### Automatic alarm grouping: Memory leak caused by alarm duplication on element restart [ID 45831]
+
+<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
+
+When an element was frequently stopped and restarted, up to now, alarms would accumulate as duplicates in the internal alarm grouping counters, causing a memory leak in the SLAnalytics process. Alarms would incorrectly not be removed from the element's alarm counter when the element stopped, and were re-added as new entries each time the element restarted.
+
+From now on, alarms will be properly removed from the element alarm counter when an element stops. An additional safeguard has also been added to prevent duplicate alarm entries from being inserted into the counter if the same alarm tree already exists.

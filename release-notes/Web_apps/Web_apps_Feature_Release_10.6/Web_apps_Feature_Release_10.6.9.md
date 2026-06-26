@@ -44,4 +44,8 @@ This also means that these controls will now be better able to deal with transit
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards/Low-Code Apps - Table component: Correct column widths would not be applied after the table had been resized or updated [ID 45765]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In some rare cases, a *Table* component would incorrectly not apply the correct column widths after the table had been resized or updated. This led to columns being hidden when they had to be visible.
