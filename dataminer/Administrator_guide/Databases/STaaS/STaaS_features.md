@@ -110,7 +110,7 @@ In addition, the following **other limitations** currently apply:
 
 - Adding a DataMiner Agent to a DMS using STaaS requires [additional manual configuration steps](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 
-- For element table data, the first 768 bytes of a table instance row key must be unique to avoid clashing in the database (768 ASCII characters, or as few as 192 in a worst-case UTF-8 scenario); longer keys are truncated.
+- For element table data, the first 768 bytes of a table instance row key (768 ASCII characters, or as few as 192 in a worst-case UTF-8 scenario) must be unique to avoid conflicts in the database; longer keys are truncated.
 
 - Regarding logger tables:
 
