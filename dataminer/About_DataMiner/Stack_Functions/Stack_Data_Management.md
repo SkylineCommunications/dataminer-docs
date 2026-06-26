@@ -1,5 +1,6 @@
 ---
 uid: Stack_Data_Management
+description: Strengthen your data management by scheduling full and partial backups, monitoring logs, and securing access with role-based controls.
 ---
 
 # Data Management
