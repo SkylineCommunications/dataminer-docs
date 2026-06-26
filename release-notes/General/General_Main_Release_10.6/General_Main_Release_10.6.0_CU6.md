@@ -51,3 +51,11 @@ The *Get parameter table by alias* data source retrieves a parameter table from 
 Up to now, this data source would only check whether the DataMiner System included an indexing database. It would not check the type of the database. As it currently only supports Elasticsearch and OpenSearch, up to now, exceptions would be thrown when it was used to retrieve data from a STaaS database.
 
 From now on, the *Get parameter table by alias* data source will only be available when the DataMiner System includes an indexing database of type Elasticsearch or OpenSearch.
+
+#### Automatic alarm grouping: Memory leak caused by alarm duplication on element restart [ID 45831]
+
+<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
+
+When an element was frequently stopped and restarted, up to now, alarms would accumulate as duplicates in the internal alarm grouping counters, causing a memory leak in the SLAnalytics process. Alarms would incorrectly not be removed from the element's alarm counter when the element stopped, and were re-added as new entries each time the element restarted.
+
+From now on, alarms will be properly removed from the element alarm counter when an element stops. An additional safeguard has also been added to prevent duplicate alarm entries from being inserted into the counter if the same alarm tree already exists.
