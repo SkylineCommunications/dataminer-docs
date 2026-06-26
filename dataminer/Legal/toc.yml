@@ -4,7 +4,7 @@ items:
       - name: General Terms and Conditions
         topicUid: General_Terms_and_Conditions
       - name: Community Edition Terms
-        topicUid: License_and_Service_Terms
+        topicUid: Community_Edition_terms
       - name: Partner Terms
         topicUid: Terms_partners
   - name: dataminer.services terms
