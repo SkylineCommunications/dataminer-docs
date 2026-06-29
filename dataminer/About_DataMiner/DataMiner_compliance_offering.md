@@ -5,6 +5,12 @@ description: Learn how DataMiner meets key security and compliance standards, in
 
 # DataMiner compliance offering
 
+## ISO/IEC 27001 compliance
+
+Skyline is ISO/IEC 27001 certified, confirming its ongoing compliance with internationally recognized information security management standards.
+
+The certificate is available for download on our [Dojo Community platform](https://community.dataminer.services/download/certificate-of-registration-information-security-management-system-iso-iec-270012022/).
+
 ## Annual security assessment
 
 Skyline Communications takes pride in the security of its products and wants to provide the necessary guarantees to its users. For this purpose, among others, an annual security assessment of DataMiner is carried out by a third-party security specialist. In these assessments, DataMiner's security posture has consistently been ranked as above average compared to other applications the security specialist assessed in recent years.
@@ -26,12 +32,6 @@ Moreover, all DataMiner services offered on dataminer.services run on Microsoft 
 The NIS2 directive of the European Parliament of December 2022 aims to expand and strengthen cybersecurity across Europe. At present, it is not yet mandatory to comply with this, but all organizations must already work towards compliance. For this purpose, our external security partner has carried out an audit and provided us with a gap analysis. Based on this analysis, we are currently working to further strengthen our security.
 
 Similarly, we are also working on compliance with the more recent European Cyber Resilience Act (CRA) regulation, which imposes cybersecurity requirements for all connected products put on the EU market. This legal framework was introduced in November 2024. We are currently working on reviewing our policies and implementing policy changes.
-
-## ISO/IEC 27001 compliance
-
-Skyline is ISO/IEC 27001 certified, confirming its ongoing compliance with internationally recognized information security management standards.
-
-The certificate is available for download on our [Dojo Community platform](https://community.dataminer.services/download/certificate-of-registration-information-security-management-system-iso-iec-270012022/).
 
 ## GDPR compliance
 
