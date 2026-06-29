@@ -78,7 +78,7 @@ If the service class implements [IDisposable](https://learn.microsoft.com/dotnet
 
 To receive services, add constructor parameters to an ad hoc data source or custom operator. If the extension class does not explicitly declare a constructor, C# provides a public parameterless constructor and GQI uses it. If the extension class has an explicit parameterless public constructor, GQI also uses that constructor for backward compatibility. Otherwise, the extension class must have exactly one public constructor.
 
-Constructor parameters can be framework-provided dependencies, context-provider interfaces, `GQILazy<T>` wrappers, or services registered in the same extension library.
+Constructor parameters can use any of the [supported constructor dependencies](#supported-constructor-dependencies).
 
 ```csharp
 using System;
@@ -123,7 +123,7 @@ Constructor injection happens before [OnInit](xref:GQI_IGQIOnInit) is called. If
 
 Services can also use constructor injection to depend on other services in the same extension library. A service class must have exactly one public constructor. If it does not explicitly declare a constructor, the default public parameterless constructor is used.
 
-Service constructor parameters can be framework-provided dependencies, context-provider interfaces, `GQILazy<T>` wrappers, or services registered in the same extension library, as long as they are available in the service scope.
+Service constructor parameters can use any of the [supported constructor dependencies](#supported-constructor-dependencies), as long as they are available in the service scope.
 
 A service can depend on services from its own scope or from a broader scope:
 
@@ -165,14 +165,23 @@ public sealed class InventoryDataSource : IGQIDataSource
 
 Prefer direct constructor injection when the dependency is always needed. Use `GQILazy<T>` when resolving the dependency can be postponed until it is actually used.
 
-## Context providers
+## Supported constructor dependencies
 
-GQI can inject context-provider interfaces into extensions and services when the context is available:
+The following types can be used as constructor parameters:
 
-| Interface | Context | Can be injected into |
+| Type | Provides | Can be injected into |
 |--|--|--|
-| [IGQISecurity](xref:GQI_IGQISecurity) | The current security key, representing the user's security group combination. | Extensions, security services, and user services |
-| [IGQIUser](xref:GQI_IGQIUser) | The username and the related security context. | Extensions and user services |
-| [IGQISession](xref:GQI_IGQISession) | The GQI session ID, username, culture, time zone, and related user context. | Extensions |
+| [IGQILogger](xref:GQI_IGQILogger) | A logger for the extension or service. | Extensions and services |
+| [IGQIFactory](xref:GQI_IGQIFactory) | Factory methods to create GQI objects. | Extensions and services |
+| [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) | Access to the DataMiner System. | Extensions, security services, and user services |
+| [IConnection](xref:Skyline.DataMiner.Net.IConnection) | A live SLNet connection to the DataMiner System. | Extensions, security services, and user services |
+| [IGQISecurity](xref:GQI_IGQISecurity) | The current security context. | Extensions, security services, and user services |
+| [IGQIUser](xref:GQI_IGQIUser) | The user context. | Extensions and user services |
+| [IGQISession](xref:GQI_IGQISession) | The session context. | Extensions |
+| [`CultureInfo`](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo) | The culture used in the current query session. | Extensions |
+| [`TimeZoneInfo`](https://learn.microsoft.com/dotnet/api/system.timezoneinfo) | The time zone used in the current query session. | Extensions |
+| [GQILazy\<T\>](xref:GQI_GQILazyT) | [Deferred resolution](#deferred-service-injection) of a service dependency. | Extensions and services |
+| [Registered GQI services](#registering-a-service) | A service instance registered in the same extension library. | Extensions and services, depending on the [service scope](#injecting-services-into-other-services) |
 
-Security-scoped and user-scoped services are tied to the current security context. When a user's security context changes, GQI does not reuse service instances created for the old security context.
+> [!IMPORTANT]
+> Security-scoped and user-scoped services are tied to the current security context. When a user's security context changes, existing service instances are not immediately disposed, but they are recreated the next time they are requested.
