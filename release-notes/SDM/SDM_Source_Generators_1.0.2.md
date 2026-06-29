@@ -8,7 +8,7 @@ uid: SDM_Source_Generators_1.0.2
 
 ### Nullable properties [ID 45753]
 
-The SDM source generator now recognizes nullable value-type properties (including `int?`, `decimal?`, `DateTime?`, `Guid?`, and any `enum?`) when generating type-safe exposer classes via `[GenerateExposers]`. Previously, properties declared with a nullable type were silently skipped and produced no exposer. Now, each nullable property generates a correctly typed `Exposer<TModel, TField?>`, ensuring the full model surface is covered without any manual workarounds.
+The SDM source generator now recognizes nullable value-type properties (including `int?`, `decimal?`, `DateTime?`, `Guid?`, and any `enum?`) when generating type-safe exposer classes via `[GenerateExposers]`. Previously, properties declared with a nullable type produced no exposer. Now, each nullable property generates a correctly typed `Exposer<TModel, TField?>`, ensuring the full model surface is covered without any manual workarounds.
 
 Take for example this class:
 
