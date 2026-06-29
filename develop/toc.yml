@@ -1134,6 +1134,8 @@ items:
         topicUid: GQI_Extension_API
       - name: Services
         topicUid: GQI_Extensions_Services
+      - name: Retrieving data from DataMiner
+        topicUid: GQI_Extensions_Retrieving_Data_From_DataMiner
       - name: Architecture
         topicUid: GQI_Extensions_Architecture
       - name: Best practices

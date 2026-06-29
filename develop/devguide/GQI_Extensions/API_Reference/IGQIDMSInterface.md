@@ -16,7 +16,10 @@ Available from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards.<!-- RN 45635
 This type can be used to inject DMS access via the constructor of a GQI extension or GQI service when using the [GQI DxM](xref:GQI_DxM).
 
 > [!TIP]
-> See also: [GQIDMS](xref:GQI_GQIDMS).
+> See also:
+>
+> - [GQIDMS](xref:GQI_GQIDMS)
+> - [Retrieving data from DataMiner](xref:GQI_Extensions_Retrieving_Data_From_DataMiner)
 
 ## Methods
 
@@ -25,7 +28,7 @@ This type can be used to inject DMS access via the constructor of a GQI extensio
 Gets a live [IConnection](xref:Skyline.DataMiner.Net.IConnection) to the DataMiner System.
 
 > [!NOTE]
-> If the underlying SLNet connection was dropped, `GetConnection()` can be called again to receive a fresh connection.
+> `GetConnection()` can be called again to receive a fresh connection if the underlying SLNet connection was dropped.
 
 #### Returns
 

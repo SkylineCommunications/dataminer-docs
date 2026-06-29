@@ -137,6 +137,17 @@ Services cannot depend on services from a narrower scope. For example, a worker 
 
 If a service constructor dependency cannot be resolved or the constructor throws an exception, the service instance cannot be created.
 
+### Retrieving data from DataMiner in services
+
+User-scoped services can inject [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) or [IConnection](xref:Skyline.DataMiner.Net.IConnection). GQI provides the same user connection as it would provide if the dependency were injected directly into the extension for that query. This allows a user-scoped service to cache and reuse user-specific data.
+
+Security-scoped services can also inject these dependencies. In this scope, the connection is based on the security group combination, so it can be used to keep data cached and synchronized for all users with the same security context.
+
+> [!IMPORTANT]
+> To use connections in security-scoped services, DataMiner needs to support security group combination connections. This requires a full upgrade to DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 or higher<!-- RN 45658 -->.
+
+See also: [Retrieving data from DataMiner](xref:GQI_Extensions_Retrieving_Data_From_DataMiner#choosing-an-approach).
+
 ## Deferred service injection
 
 Use [GQILazy\<T\>](xref:GQI_GQILazyT) when a dependency is only needed conditionally or only in specific lifecycle methods. The service is resolved the first time the `Value` property is accessed.
@@ -173,8 +184,8 @@ The following types can be used as constructor parameters:
 |--|--|--|
 | [IGQILogger](xref:GQI_IGQILogger) | A logger for the extension or service. | Extensions and services |
 | [IGQIFactory](xref:GQI_IGQIFactory) | Factory methods to create GQI objects. | Extensions and services |
-| [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) | Access to the DataMiner System. | Extensions, security services, and user services |
-| [IConnection](xref:Skyline.DataMiner.Net.IConnection) | A live SLNet connection to the DataMiner System. | Extensions, security services, and user services |
+| [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) | Access to the DataMiner System. | Extensions and [security/user-scoped services](#retrieving-data-from-dataminer-in-services) |
+| [IConnection](xref:Skyline.DataMiner.Net.IConnection) | A live SLNet connection to the DataMiner System. | Extensions and [security/user-scoped services](#retrieving-data-from-dataminer-in-services) |
 | [IGQISecurity](xref:GQI_IGQISecurity) | The current security context. | Extensions, security services, and user services |
 | [IGQIUser](xref:GQI_IGQIUser) | The user context. | Extensions and user services |
 | [IGQISession](xref:GQI_IGQISession) | The session context. | Extensions |
@@ -183,5 +194,5 @@ The following types can be used as constructor parameters:
 | [GQILazy\<T\>](xref:GQI_GQILazyT) | [Deferred resolution](#deferred-service-injection) of a service dependency. | Extensions and services |
 | [Registered GQI services](#registering-a-service) | A service instance registered in the same extension library. | Extensions and services, depending on the [service scope](#injecting-services-into-other-services) |
 
-> [!IMPORTANT]
-> Security-scoped and user-scoped services are tied to the current security context. When a user's security context changes, existing service instances are not immediately disposed, but they are recreated the next time they are requested.
+> [!WARNING]
+> Security-scoped and user-scoped services are tied to the current security context. When a user's security context changes, references to existing service instances remain valid but new service instances with the updated security context will be created for new references.
