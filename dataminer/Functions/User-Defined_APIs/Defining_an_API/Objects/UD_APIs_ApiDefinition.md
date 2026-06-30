@@ -96,7 +96,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 |Reason      |Description|
 |------------|-----------|
 |InvalidName |The specified name only contained white space characters.|
-|RouteInUse |The specified route conflicts with an existing `ApiDefinition`. From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45681 -->, this also includes dynamic routes that could match the same request paths as an existing route (e.g. `ticket/{ticketId}` conflicts with an existing `ticket/{id}`). *ConflictingDefinitionId* contains the ID of the definition that conflicts. *Route* contains the invalid route.|
+|RouteInUse |The specified route conflicts with an existing `ApiDefinition`. From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45681 -->, this also includes dynamic routes that could match the same request paths as an existing route (e.g., `ticket/{ticketId}` conflicts with an existing `ticket/{id}`). *ConflictingDefinitionId* contains the ID of the definition that conflicts. *Route* contains the invalid route.|
 |InvalidRoute |The route did not meet the criteria. See [Route](#route). *Route* contains the invalid route.|
 |InvalidActionMeta |The defined `ActionMeta` was empty, did not match the type, or contained an invalid configuration.|
 

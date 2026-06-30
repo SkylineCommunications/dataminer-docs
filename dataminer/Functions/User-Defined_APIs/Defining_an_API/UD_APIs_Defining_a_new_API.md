@@ -168,13 +168,16 @@ When a request could match both a static and a dynamic route:
 > - Parameter names must be written as a well-formed `{name}` placeholder and cannot contain `/`, `{`, `}`, `?`, `*`, `:`, or `=`. Each parameter name must be unique within the route.
 > - Two routes that could match the same request path are considered conflicting and cannot coexist. For example, `ticket/{id}` and `ticket/{ticketId}` conflict. See [RouteInUse](xref:UD_APIs_Objects_ApiDefinition#errors).
 
+> [!TIP]
+> For an example, see [Using route parameters](xref:UD_APIs_API_script_examples#using-route-parameters).
+
 ##### Route limitations
 
-**URL length:** URLs with routes exceeding 260 characters in total will result in an HTTP 500 error. This limit includes the mandatory `api/custom/` prefix. If you need to pass large amounts of data, consider using request body parameters or query string parameters instead of extended path segments.
+- **URL length:** URLs with routes exceeding 260 characters in total will result in an HTTP 500 error. This limit includes the mandatory `api/custom/` prefix. If you need to pass large amounts of data, consider using request body parameters or query string parameters instead of extended path segments.
 
-**Empty path segments:** Dynamic routes cannot have empty path segments. When a request contains a double slash (e.g., `api/custom/test//this`), it is normalized to a single slash (`api/custom/test/this`). This means a dynamic route cannot match or capture empty segments between slashes, which is consistent with standard URL handling behavior.
+- **Empty path segments:** Dynamic routes cannot have empty path segments. When a request contains a double slash (e.g., `api/custom/test//this`), it is normalized to a single slash (`api/custom/test/this`). This means a dynamic route cannot match or capture empty segments between slashes, which is consistent with standard URL handling behavior.
 
-**Invalid characters in path segments:** The following characters cannot be used in path segments: `/`, `:`, `<`, `>`, `*`, `?`. These are reserved characters in URLs or operating systems and will cause the route to be invalid.
+- **Invalid characters in path segments:** The following characters cannot be used in path segments: `/`, `:`, `<`, `>`, `*`, `?`. These are reserved characters in URLs or operating systems and will cause the route to be invalid.
 
 ### Output
 
