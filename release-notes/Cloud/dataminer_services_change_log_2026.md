@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 31 June 2026 - Enhancement - Admin - Role validation on user actions
+
+On the organization users page and the system users page in the Admin app, the *Unlink* and *Remove* user action buttons will now be disabled when the current user has the Member role.
+
 ### 22 June 2026 - Enhancement - Admin - Custom time range for subscription usage estimate
 
 When adding a subscription, the *Start from estimate* option now allows you to select a custom time range to calculate the estimate from. The selected time range is limited to a maximum duration of 3 months.
