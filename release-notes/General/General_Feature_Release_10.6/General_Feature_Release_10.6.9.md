@@ -66,6 +66,12 @@ The *ConfigureIIS.bat* script will now ensure a dedicated Application Pool for t
 
 This new application pool is called *DataMiner WebAPI AppPool*. it is solely intended to serve as pool for the web API, and will not recycle periodically.
 
+#### CloudFeed DxM has been upgraded to Microsoft .NET 10 [ID 45849]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+The CloudFeed DxM has been upgraded to Microsoft .NET 10.
+
 ### Fixes
 
 #### Problem when using the 'Get parameter table by alias' data source against a STaaS database [ID 45766]

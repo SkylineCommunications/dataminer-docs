@@ -584,6 +584,12 @@ Up to now, after a DataMiner restart or upgrade, in some cases, SLAutomation cou
 
 A number of enhancements have now been made to prevent any initialization issues during SLAutomation startup.
 
+#### CloudFeed DxM has been upgraded to Microsoft .NET 10 [ID 45849]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+The CloudFeed DxM has been upgraded to Microsoft .NET 10.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
