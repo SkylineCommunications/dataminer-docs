@@ -10,20 +10,22 @@ uid: DIS_3.1
 
 #### Auto-Update XML Schemas at Visual Studio Startup [ID 45476]
 
-A new **XML Schemas** tab has been added to the DIS settings window. It contains a **Download XML Schemas on Visual Studio startup** checkbox, which is enabled by default.
+An *XML Schemas* tab has been added to the *DIS settings* window. It contains a *Download XML Schemas on Visual Studio startup* checkbox, which is enabled by default.
 
-When enabled, DIS checks for a newer version of the [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) NuGet package each time Visual Studio starts. If a newer version is available, DIS automatically downloads and installs the updated schemas into Visual Studio (e.g. `C:\Program Files\Microsoft Visual Studio\18\Professional\Xml\Schemas`). The outcome — whether a new version was installed or the current version is already up to date — is reported in the DIS output window.
+- When this checkbox is enabled, DIS will check for a newer version of the [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) NuGet package each time Visual Studio starts. If a newer version is available, DIS will automatically download the updated schemas and install them into Visual Studio (e.g. `C:\Program Files\Microsoft Visual Studio\18\Professional\Xml\Schemas`). The outcome — whether a new version was installed or the current version is already up to date — is reported in the DIS output window.
 
-If the checkbox is disabled, DIS will instead install the schemas that are bundled with DIS, as long as it detects that the currently installed schemas differ from the bundled ones.
+- If this checkbox is disabled, DIS will install the schemas that are bundled with DIS, as long as it detects that the currently installed schemas differ from the bundled ones.
 
-#### Publishing an Automation Script in a Solution Package Now Publishes the Whole Package [ID 45695]
+#### Publishing an automation script in a solution package will now publish the entire package [ID 45695]
 
-When you click the publish button for an Automation script that is part of a solution package (i.e. the script's `.csproj` contains a `DataMinerSolutionId`), DIS now publishes the entire solution package rather than just the individual script.
+When you click the *Publish* button for an automation script that is part of a solution package (i.e., a script of which the `.csproj` file contains a `DataMinerSolutionId`), DIS will now publish the entire solution package rather than only the individual script.
 
-- If the script belongs to a **single** solution package, a confirmation popup appears, informing you that the entire package will be published.
-- If the script is referenced in **multiple** solution packages, a selection popup appears so you can choose which package to publish (the popup also notes that the full package will be published).
+- If the script belongs to a *single* solution package, a confirmation popup will appear, informing you that the entire package will be published.
+- If the script is referenced in *multiple* solution packages, a selection popup will appear, allowing you to select the package to be published.
 
-This behavior is aligned with how DataMiner handles solution-package scripts: scripts sharing the same `DataMinerSolutionId` have their NuGet dependencies unified (the highest referenced version is used across all scripts), and they run in their own dedicated process in DataMiner.
+  The popup will also inform you that the entire package will be published.
+
+This behavior is aligned with how DataMiner handles solution-package scripts. Scripts sharing the same `DataMinerSolutionId` have their NuGet dependencies unified (the highest referenced version is used across all scripts), and run in their own dedicated process in DataMiner.
 
 ## DIS 3.1.22
 
