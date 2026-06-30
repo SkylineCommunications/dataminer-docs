@@ -36,9 +36,67 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-*No new features have been added yet.*
+#### User-Defined APIs can now use dynamic route segments to expose path parameters to the trigger script [ID 45681]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+From now on, user-defined APIs can use dynamic route segments to expose path parameters to the trigger script.
+
+A route such as `items/{id}` or `a/{x}/b/{y}` no longer needs to be fully literal, and the values that appear in the request path are forwarded to the automation script.
+
+A dynamic route segment is written as `{parameterName}`. The parameter name is captured as-is and becomes available in `ApiTriggerInput.RouteParameters` within the API trigger automation script. For example, a request to `items/42` against the route `items/{id}` will provide `id = 42`.
+
+##### Dynamic route matching
+
+Route matching now distinguishes between static and dynamic routes:
+
+- Static routes continue to work as before.
+- Static routes always win over dynamic routes when both match the same request.
+- Literal route segments are matched case-insensitively.
+- The full number of segments must match. Partial matches are not accepted.
+- Dynamic routes are evaluated in specificity order, so that more literal routes win over more generic templates.
+
+That means `items/special` will match the static route `items/special` before the dynamic route `items/{id}`, and, in case of `foo/bar`, `foo/{bar}` will win over `{foo}/bar` because the first literal segment is more specific.
+
+##### Route parameters
+
+When a dynamic route matches, the captured path values are passed through to the script as a dictionary of route parameters.
+
+Route parameters:
+
+- Are exposed on `ApiTriggerInput.RouteParameters`.
+- Use the parameter name from the template as the key.
+- Preserve the exact incoming path segment as the value.
+- Are empty for static route matches.
+
+##### Route validation and conflicts
+
+Routes are validated more strictly before create and update:
+
+- A route cannot be null, empty, or whitespace only.
+- A route cannot start or end with `/`.
+- A route cannot contain empty path segments.
+- A parameter segment must be written as a well-formed `{name}` placeholder.
+- Parameter names cannot use route syntax characters such as `/`, `{`, `}`, `?`, `*`, `:`, or `=`.
+- A route template cannot reuse the same parameter name more than once within the same route.
+
+Route conflicts are also detected across all existing definitions. Any two templates that can match the same request path are rejected, including conflicts between literal and parameterized routes and between overlapping parameterized templates. If a route with `ticket/{id}` already exists, a new route like `ticket/{ticketId}` will be rejected.
+
+When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
 
 ## Changes
+
+### Breaking changes
+
+#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
+
+From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
+
+See also: [Dashboards/Low-Code Apps: State timeline component will now use the primary key when requesting timeline data [ID 45600]](xref:Web_apps_Feature_Release_10.6.8#dashboardslow-code-apps-state-timeline-component-will-now-use-the-primary-key-when-requesting-timeline-data-id-45600)
 
 ### Enhancements
 
@@ -119,14 +177,6 @@ From now on, script library hint paths will only be sent to the automation scrip
 Up to now, the *SLElementInProtocol.txt* log file entries were added by SLProtocol.
 
 From now on, these log file entries will be added by SLLog instead.
-
-#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
-
-<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
-
-When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
-
-From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
 
 #### SLLogCollector will now retrieve the value of the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
 

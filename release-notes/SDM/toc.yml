@@ -1,3 +1,13 @@
 items:
-  - name: SDM 2.0.1 - 2.0.5
-    topicUid: SDM_2.0.1_to_2.0.5
+  - name: SDM Abstractions
+    items:
+      - name: SDM Abstractions 1.0.2
+        topicUid: SDM_Abstractions_1.0.2
+  - name: SDM Registration
+    items:
+      - name: SDM Registration 2.0.1 - 2.0.5
+        topicUid: SDM_Registration_2.0.1_to_2.0.5
+  - name: SDM Source Generators
+    items:
+      - name: SDM Source Generators 1.0.2
+        topicUid: SDM_Source_Generators_1.0.2

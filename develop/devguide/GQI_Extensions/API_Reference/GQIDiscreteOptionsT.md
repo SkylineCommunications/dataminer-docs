@@ -9,7 +9,7 @@ uid: GQI_GQIDiscreteOptionsT
 - Namespace: `Skyline.DataMiner.Core.GQI.Extensions`
 - Assembly: `Skyline.DataMiner.Core.GQI.Extensions.dll`
 
-Available from DataMiner Web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards.<!-- RN 45380 -->
+Available from DataMiner Web 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 onwards.<!-- RN 45380 -->
 
 Configures a set of discrete values for a [GQIColumn\<T\>](xref:GQI_GQIColumnT).
 

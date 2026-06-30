@@ -104,6 +104,8 @@ items:
             topicUid: Gratuitous_ARP_messages
           - name: DataMiner processes
             topicUid: DataMiner_processes
+          - name: DMA-client and inter-DMA communication
+            topicUid: DMA_client_and_inter_DMA_communication
           - name: DataMiner interfaces
             topicUid: DataMiner_interfaces
           - name: DMA peripherals
