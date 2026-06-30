@@ -48,3 +48,7 @@ Returning a job to tentative now re-runs job validation, so these outdated error
 #### Resource Studio: Not possible to remove capability from resource pool [ID 45840]
 
 In Resource Studio, it was not possible to remove a capability from a resource pool.
+
+#### Scheduling: Capacity usage not updated after job-level configuration change [ID 45864]
+
+When a job-level configuration parameter was updated, it could occur that the resource capacity usage continued to reflect the previous value until another edit was done. This could lead to overuse of resources. Now capacity calculations use the latest edited configuration immediately, including values resolved through configuration references, ensuring that the capacity usage is accurate right after each update.
