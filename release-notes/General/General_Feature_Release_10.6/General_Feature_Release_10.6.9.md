@@ -76,7 +76,7 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
 #### Problem when multiple Agents in a DMS synchronized with Azure Entra simultaneously [ID 44546]
 
-<!-- MR 10.7.0 - FR 10.6.9 -->
+<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
 
 Up to now, when multiple Agents in a DMS synchronized with Azure Entra simultaneously, in some cases, data could get corrupted due to simultaneous requests being launched to the Entra API from one of those Agents. As a result, users and/or groups could get lost.
 

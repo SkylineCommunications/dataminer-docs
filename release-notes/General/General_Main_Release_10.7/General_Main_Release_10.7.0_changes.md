@@ -612,12 +612,6 @@ From now on, when a capability is booked, it will no longer be possible to set i
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
 
-#### Problem when multiple Agents in a DMS synchronized with Azure Entra simultaneously [ID 44546]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-
-Up to now, when multiple Agents in a DMS synchronized with Azure Entra simultaneously, in some cases, data could get corrupted due to simultaneous requests being launched to the Entra API from one of those Agents. As a result, users and/or groups could get lost.
-
 #### SLAnalytics: Flatline anomaly alerts would incorrectly not be triggered for parameters that are only updated once every 24 hours [ID 45033]
 
 <!-- MR 10.7.0 - FR 10.6.5 -->

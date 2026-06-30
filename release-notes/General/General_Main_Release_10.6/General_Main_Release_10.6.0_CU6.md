@@ -54,6 +54,12 @@ This new application pool is called *DataMiner WebAPI AppPool*. it is solely int
 
 ### Fixes
 
+#### Problem when multiple Agents in a DMS synchronized with Azure Entra simultaneously [ID 44546]
+
+<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when multiple Agents in a DMS synchronized with Azure Entra simultaneously, in some cases, data could get corrupted due to simultaneous requests being launched to the Entra API from one of those Agents. As a result, users and/or groups could get lost.
+
 #### Problem when using the 'Get parameter table by alias' data source against a STaaS database [ID 45766]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
