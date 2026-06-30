@@ -117,7 +117,19 @@ From DataMiner 10.6.3/10.7.0 onwards<!-- RN 44384 -->, SLLogCollector can collec
 
 - Select *Trigger remote LogCollector* to remotely collect logs from one or more other DataMiner Agents. A list with checkboxes is displayed where you can select the agents on which LogCollector should run. The collected packages are placed at the selected location (the default folder or a custom folder).
 
+  > [!NOTE]
+  >
+  > - On single-agent systems, *Trigger remote LogCollector* is disabled, as there are no other agents to remotely collect logs from.
+  > - The local agent is always selected in the agent list and cannot be cleared.
+  > - When *Trigger remote LogCollector* is enabled and memory dumps are included, the dumps can only be collected immediately. The option to determine when the dumps are collected is then disabled.
+  > - When memory dumps are included and more than half of the detected agents are selected, a warning is displayed, as creating dumps on many agents at the same time can affect the performance of your DMS.
+
 - Select *Offload packages to cloud* to upload the resulting log packages to the cloud. This also triggers the remote LogCollector, so you can select the agents on which LogCollector should run in the same way. A GUID is displayed in a pop-up, which you can provide to Skyline via an existing support email thread so the package can be fetched.
+
+  > [!NOTE]
+  > When *Offload packages to cloud* is enabled, *Trigger remote LogCollector* is always enabled as well, including on single-agent systems, because the offload uses the same flow behind the scenes.
+
+Both options are only available when all detected DataMiner Agents are connected to the cloud. If at least one agent is not cloud-connected, remote log collection and offload to cloud are unavailable and a warning is displayed. If no other agents can be detected, the *Trigger remote LogCollector* and *Offload packages to cloud* options are not shown.
 
 ## Using a custom CollectorConfig XML file
 
