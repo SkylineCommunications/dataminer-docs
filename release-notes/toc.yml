@@ -33,6 +33,8 @@ items:
             topicUid: Cloud_Pack_change_log
       - name: Other release notes
         items:
+          - name: Categories release notes
+            href: Categories/toc.yml
           - name: Code library release notes
             topicUid: Code_Libraries_Release_Notes
             href: Code_Libraries/toc.yml
