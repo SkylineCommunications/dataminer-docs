@@ -1,7 +1,8 @@
 ---
-description: "Use when creating or editing DataMiner documentation content in Markdown. Enforces house style for US English, CTB_Markdown_Syntax.md compliance, e.g.,/i.e., punctuation, sentence-case headers, descriptive image alt text, metadata description, concise formal tone, clear structure, procedure formatting, and UI reference styling."
+description: "Guidelines for writing and structuring DataMiner documentation, ensuring consistency, clarity, and user-focused technical content."
 applyTo: "**/*.md"
 ---
+
 # DataMiner Docs house style
 
 When creating or editing documentation pages, apply the following rules.

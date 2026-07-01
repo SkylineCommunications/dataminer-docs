@@ -1,5 +1,5 @@
 ---
-description: "Use when creating or editing release note documentation in release-notes/. Focus fix entries on the issue so affected users can recognize it quickly, and ensure titles clearly summarize the feature, enhancement, or issue."
+description: "Use when creating or editing release note documentation in release-notes/."
 applyTo: "release-notes/**/*.md"
 ---
 # Release notes writing guidance
