@@ -30,7 +30,43 @@ When, in the sidebar, you click the *Community* button, a menu will open. This m
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+
+
+
+
+
+#### Credential library: Token credential and credential library enhancements [ID 45670]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In the credential library, you can now add token credentials, i.e., credentials that consist only of a single token.
+
+Also, 
+
+
+
+Foreach credential a limit of the length of the fieds has been added. All fields must be smaller than 5012 bytes. In case a field is longer the credential can not be saved.
+
+The following fields can now be left empty:
+
+* Community credential : * Get community string
+                                     * Set community string
+
+* Token credential : * Authentication password
+
+* SNMPv3 credential : * Authentication password
+                                 * Encryption password
+
+* Username and password credential : * password
+
+As the loading of the credentials can take a bit longer, a loading overlay is shown when the credential library is initialized.
+
+Only 5000 credentials can be created. Once we reache this limit the user will no longer be able to create a new credential. A warning will be shown that the limit has been reached.
+
+
+
+
+
 
 ### Fixes
 
