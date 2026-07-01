@@ -1,6 +1,6 @@
 ---
 description: "Use when reviewing a Docs page or section for house style, including markdown syntax, image alt text, metadata description, and logical structure."
-name: "DataMiner docs house style reviewer"
+name: "Docs review assistant"
 tools: [read, search, edit]
 argument-hint: "Provide one or more file paths, or paste the page/section text to review."
 ---
