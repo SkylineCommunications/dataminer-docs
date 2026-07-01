@@ -80,6 +80,26 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
 Up to now, when multiple Agents in a DMS synchronized with Azure Entra simultaneously, in some cases, data could get corrupted due to simultaneous requests being launched to the Entra API from one of those Agents. As a result, users and/or groups could get lost.
 
+#### Automation: Problem with dependency order when recompiling script libraries [ID 45673]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Up to now, when a script library was updated, the dependency order was always assumed to be correct. However, in cases where libraries were loaded in a different order, a library could be recompiled before one of its dependencies.
+
+For example, when Library A depended on Library B, and Library B was recompiled after Library A, then Library A would remain linked to an older version of Library B. This would cause an issue when, after the DataMiner Agent was restarted, the outdated DLLs were removed. Library A would then reference a DLL file that no longer existed.
+
+From now on, the recompilation flow will ensure that libraries are recompiled in the correct dependency order, preventing references to outdated dependency versions.
+
+#### Protocol object outside of QAction run would incorrectly not be notified when the element was stopped [ID 45749]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When an `SLProtocol` or `SLProtocolExt` object that was passed as argument in the `QAction` method had been stored and reused when the QAction was already finished, up to now, this object would not be notified when the element was stopped.
+
+This could lead to issues. For example, when a separate thread that was running in SLScripting when the element was stopped made calls on the `SLProtocol` object, the SLScripting process could crash as the connection with the SLProtocol process was no longer valid.
+
+Also, calling `protocol.IsActive` would incorrectly indicate that the element was still active.
+
 #### Problem when using the 'Get parameter table by alias' data source against a STaaS database [ID 45766]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
