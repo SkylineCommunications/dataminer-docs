@@ -100,19 +100,21 @@ columns 4
     D8["Group"]
   end
 
-  classDef header fill:none,stroke:none,color:#172554
+  classDef header fill:none,stroke:none,color:#6B6B6
   classDef executing fill:#172554,stroke:#172554,color:#f3f4f6
   classDef notTimer fill:#60A5FA,stroke:#60A5FA,color:#1E3A8A
   classDef byTimer fill:#DBEAFE,stroke:#DBEAFE,color:#172554
   classDef added fill:#2563EB,stroke:#2563EB,color:#f3f4f6
-  classDef legendText fill:none,stroke:none,color:#172554
+  classDef strike fill:#172554,stroke:#172554,color:#ed1c24
+  classDef legendText fill:none,stroke:none,color:#6B6B6
 
   class H1,H2,H3,H4 header
-  class A1,B1,C1,D1,L1 executing
-  class A2,A3,A4,B2,B3,C3,C4,C5,D3,D4,D5,L2 notTimer
-  class A5,A6,A7,B5,B6,B7,C6,C7,C8,D6,D7,D8,L3,B8 byTimer
-  class A8,B4,C2,D2,L4 added
+  class A1,B1,C1,L1 executing
+  class A2,A3,A4,B2,B3,B4,C3,C4,C5,D3,D4,D5,L2 notTimer
+  class A5,A6,A7,B6,B7,C6,C7,C8,D6,D7,D8,L3,B8 byTimer
+  class A8,C2,D2,L4,B5 added
   class LD1,LD2,LD3,LD4 legendText
+  class D1 strike
 ```
 
 ```mermaid
@@ -120,8 +122,8 @@ block-beta
   block:LEGEND:2
     columns 4
     L1["Group"] LD1[": group being executed"]
-    L2["Group"] LD2[": group not added<br>by a timer"]
     L3["Group"] LD3[": group added<br>by a timer"]
+    L2["Group"] LD2[": group not added<br>by a timer"]
     L4["Group"] LD4[": group being added"]
   end
 
@@ -129,7 +131,7 @@ block-beta
   classDef notTimer fill:#60A5FA,stroke:#60A5FA,color:#1E3A8A
   classDef byTimer fill:#DBEAFE,stroke:#DBEAFE,color:#172554
   classDef added fill:#2563EB,stroke:#2563EB,color:#f3f4f6
-  classDef legendText fill:none,stroke:none,color:#172554
+  classDef legendText fill:none,stroke:none,color:#6B6B6
 
   class L1 executing
   class L2 notTimer
