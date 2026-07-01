@@ -438,3 +438,13 @@ Routes are validated more strictly before create and update:
 Route conflicts are also detected across all existing definitions. Any two templates that can match the same request path are rejected, including conflicts between literal and parameterized routes and between overlapping parameterized templates. If a route with `ticket/{id}` already exists, a new route like `ticket/{ticketId}` will be rejected.
 
 When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
+
+#### GQI extensions: Support for services and constructor injection [ID 45635]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+GQI extensions using the `Skyline.DataMiner.Core.GQI.Extensions` API now support services, constructor injection, and deferred service injection using `GQILazy<T>`.
+
+Extension libraries can define worker-scoped, security-scoped, and user-scoped services. These services can be injected into ad hoc data sources, custom operators, and other services. This makes it possible to share reusable state or functionality, such as caches or external clients, without relying on static variables.
+
+For more information, see [Services in GQI extensions](xref:GQI_Extensions_Services).

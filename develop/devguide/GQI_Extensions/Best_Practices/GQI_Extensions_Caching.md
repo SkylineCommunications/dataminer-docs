@@ -21,9 +21,12 @@ Avoid caching when:
 
 ## Adding caching
 
-Caching for GQI extensions is not natively supported by the framework and must be implemented manually. The most common approach is to use in-memory caching with static variables (for example a `ConcurrentDictionary`) to share data between queries and operators within the same extension library.
+> [!TIP]
+> From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, you should use [GQI services](xref:GQI_Extensions_Services) to keep reusable state in a worker, security, or user scope. This is preferred over static variables when the cached state has to follow GQI's scope and idle-expiration behavior.
 
-Because each extensions library runs in its own process, this static cache is process-local. It will not be shared across multiple extension libraries or across DataMiner Agents. If you need to share cached data beyond a single process, you must use a different approach, for example file-based caching, DOM-based caching, etc.
+If you cannot use GQI services, you can use in-memory caching with static variables (for example a `ConcurrentDictionary`) to share data between queries and operators within the same extension library.
+
+Because each extension library runs in its own process, this static cache is process-local. It will not be shared across multiple extension libraries or across DataMiner Agents. If you need to share cached data beyond a single process, you must use a different approach, for example file-based caching, DOM-based caching, etc.
 
 ## Key considerations when caching
 
