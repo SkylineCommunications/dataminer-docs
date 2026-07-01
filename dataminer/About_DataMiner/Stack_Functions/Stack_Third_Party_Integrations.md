@@ -9,7 +9,7 @@ description: Explore third-party integrations in DataMiner. Integrate ticketing,
 
 ## Ticketing integration
 
-Integrate various ticketing systems (for example, Jira, Remedy, etc.) using [DOM](xref:DOM) and [Low-Code Apps](xref:Application_framework).
+The [DataMiner Ticketing Solution](xref:Ticketing) not only allows you to create, manage, and track tickets within the DataMiner ecosystem, but also supports integration with various [external ticketing systems](xref:ExternalTicketingSystemIntegration) (e.g., Jira, Remedy, etc.).
 
 ## Mobile Gateway
 
