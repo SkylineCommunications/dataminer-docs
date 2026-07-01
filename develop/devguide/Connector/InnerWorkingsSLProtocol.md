@@ -47,7 +47,96 @@ Timers are not the only way to add groups to the group execution queue. Multiple
 
 The following figure illustrates the resulting location of the added group (see blue box) based on the selected action type.
 
-![Group execution queue](~/develop/images/Protocol_Explained_-_Main_Protocol_Execution_Thread_Group_Priority.svg)
+```mermaid
+block-beta
+columns 4
+
+  block:Q1
+    columns 1
+    H1["Add To Execute<br/>Execute One"]
+    A1["Group"]
+    A2["Group"]
+    A3["Group"]
+    A4["Group"]
+    A5["Group"]
+    A6["Group"]
+    A7["Group"]
+    A8["Group"]
+  end
+  block:Q
+    columns 1
+    H2["Execute<br/>Execute One Now"]
+    B1["Group"]
+    B2["Group"]
+    B3["Group"]
+    B4["Group"]
+    B5["Group"]
+    B6["Group"]
+    B7["Group"]
+    B8["Group"]
+  end
+  block:Q3
+    columns 1
+    H3["Execute Next<br/>Execute One Top"]
+    C1["Group"]
+    C2["Group"]
+    C3["Group"]
+    C4["Group"]
+    C5["Group"]
+    C6["Group"]
+    C7["Group"]
+    C8["Group"]
+  end
+  block:Q4
+    columns 1
+    H4["Force Execute"]
+    D1["<span style="color: red"><s>Group</s></span>"]
+    D2["Group"]
+    D3["Group"]
+    D4["Group"]
+    D5["Group"]
+    D6["Group"]
+    D7["Group"]
+    D8["Group"]
+  end
+
+  classDef header fill:none,stroke:none,color:#172554
+  classDef executing fill:#172554,stroke:#172554,color:#f3f4f6
+  classDef notTimer fill:#60A5FA,stroke:#60A5FA,color:#1E3A8A
+  classDef byTimer fill:#DBEAFE,stroke:#DBEAFE,color:#172554
+  classDef added fill:#2563EB,stroke:#2563EB,color:#f3f4f6
+  classDef legendText fill:none,stroke:none,color:#172554
+
+  class H1,H2,H3,H4 header
+  class A1,B1,C1,D1,L1 executing
+  class A2,A3,A4,B2,B3,C3,C4,C5,D3,D4,D5,L2 notTimer
+  class A5,A6,A7,B5,B6,B7,C6,C7,C8,D6,D7,D8,L3,B8 byTimer
+  class A8,B4,C2,D2,L4 added
+  class LD1,LD2,LD3,LD4 legendText
+```
+
+```mermaid
+block-beta
+  block:LEGEND:2
+    columns 4
+    L1["Group"] LD1[": group being executed"]
+    L2["Group"] LD2[": group not added<br>by a timer"]
+    L3["Group"] LD3[": group added<br>by a timer"]
+    L4["Group"] LD4[": group being added"]
+  end
+
+  classDef executing fill:#172554,stroke:#172554,color:#f3f4f6
+  classDef notTimer fill:#60A5FA,stroke:#60A5FA,color:#1E3A8A
+  classDef byTimer fill:#DBEAFE,stroke:#DBEAFE,color:#172554
+  classDef added fill:#2563EB,stroke:#2563EB,color:#f3f4f6
+  classDef legendText fill:none,stroke:none,color:#172554
+
+  class L1 executing
+  class L2 notTimer
+  class L3 byTimer
+  class L4 added
+  class LD1,LD2,LD3,LD4 legendText
+```
 
 The action types "execute one", "execute one now", and "execute one top" correspond to "add to execute", "execute", and "execute next", respectively. The only difference is that when "execute one", "execute one now", and "execute one top" are used, the group will only get added to the queue in case the group is not already present in the queue (i.e., the group should only be present in the queue once; hence the word "one" in the name of the action types). In the figure above, it is assumed that the group being added is not already present in the queue.
 
