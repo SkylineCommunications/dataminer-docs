@@ -655,3 +655,13 @@ In some cases, paged retrievals of DOM instances or booking instances could fail
 From now on, SLDataGateway will gracefully reset an expired paging cookie instead of throwing an error. When the cookie is no longer found among the live paging handlers, a fresh paging session will automatically be started.
 
 Also, `SelectPagingHelper` will now maintain a set of all object IDs received across pages. When a paging session restarts due to a cookie renewal, previously returned objects are filtered out, preventing duplicates from being returned.
+
+#### Automation: Problem with dependency order when recompiling script libraries [ID 45673]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Up to now, when a script library was updated, the dependency order was always assumed to be correct. However, in cases where libraries were loaded in a different order, a library could be recompiled before one of its dependencies.
+
+When a dependent library (Library B) was recompiled after one of its dependencies (Library A), Library A would be recompiled using a version of Library B that was not the latest, leaving it linked to an outdated dependency. This would cause an issue when, after restarting the DataMiner Agent, the outdated DLLs were removed, as Library A would then reference a DLL file that no longer existed.
+
+From now on, the recompilation flow will ensure that libraries are recompiled in the correct dependency order, preventing references to outdated dependency versions.

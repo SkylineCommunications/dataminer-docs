@@ -80,6 +80,16 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
 Up to now, when multiple Agents in a DMS synchronized with Azure Entra simultaneously, in some cases, data could get corrupted due to simultaneous requests being launched to the Entra API from one of those Agents. As a result, users and/or groups could get lost.
 
+#### Automation: Problem with dependency order when recompiling script libraries [ID 45673]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Up to now, when a script library was updated, the dependency order was always assumed to be correct. However, in cases where libraries were loaded in a different order, a library could be recompiled before one of its dependencies.
+
+When a dependent library (Library B) was recompiled after one of its dependencies (Library A), Library A would be recompiled using a version of Library B that was not the latest, leaving it linked to an outdated dependency. This would cause an issue when, after restarting the DataMiner Agent, the outdated DLLs were removed, as Library A would then reference a DLL file that no longer existed.
+
+From now on, the recompilation flow will ensure that libraries are recompiled in the correct dependency order, preventing references to outdated dependency versions.
+
 #### Problem when using the 'Get parameter table by alias' data source against a STaaS database [ID 45766]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
