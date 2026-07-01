@@ -4,16 +4,6 @@ DataMiner Docs is a documentation-only repository containing all documentation r
 
 ## Validation of Changes
 
-### Bootstrap and Validate the Repository
-
-- Clone repository: `git clone https://github.com/SkylineCommunications/dataminer-docs.git`
-- Install validation tools:
-  - `npm install -g markdownlint-cli` - for markdown linting
-  - `pip3 install yamllint` - for YAML validation
-- Validate markdown files: `markdownlint . --ignore node_modules`
-- Validate YAML files: `find . -name "*.yml" -exec yamllint {} \;`
-- Attempt to fix issues caused by the current changes. Do not reformat existing content.
-
 ### Test the Build
 
 - Install docfx: `dotnet tool update -g docfx`
