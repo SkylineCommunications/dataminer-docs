@@ -662,6 +662,6 @@ Also, `SelectPagingHelper` will now maintain a set of all object IDs received ac
 
 Up to now, when a script library was updated, the dependency order was always assumed to be correct. However, in cases where libraries were loaded in a different order, a library could be recompiled before one of its dependencies.
 
-When a dependent library (Library B) was recompiled after one of its dependencies (Library A), Library A would be recompiled using a version of Library B that was not the latest, leaving it linked to an outdated dependency. This would cause an issue when, after restarting the DataMiner Agent, the outdated DLLs were removed, as Library A would then reference a DLL file that no longer existed.
+For example, when Library A depended on Library B, and Library B was recompiled after Library A, then Library A would remain linked to an older version of Library B. This would cause an issue when, after the DataMiner Agent was restarted, the outdated DLLs were removed. Library A would then reference a DLL file that no longer existed.
 
 From now on, the recompilation flow will ensure that libraries are recompiled in the correct dependency order, preventing references to outdated dependency versions.
