@@ -90,6 +90,16 @@ For example, when Library A depended on Library B, and Library B was recompiled 
 
 From now on, the recompilation flow will ensure that libraries are recompiled in the correct dependency order, preventing references to outdated dependency versions.
 
+#### Protocol object outside of QAction run would incorrectly not be notified when the element was stopped [ID 45749]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When an `SLProtocol` or `SLProtocolExt` object that was passed as argument in the `QAction` method had been stored and reused when the QAction was already finished, up to now, this object would not be notified when the element was stopped.
+
+This could lead to issues. For example, when a separate thread that was running in SLScripting when the element was stopped made calls on the `SLProtocol` object, the SLScripting process could crash as the connection with the SLProtocol process was no longer valid.
+
+Also, calling `protocol.IsActive` would incorrectly indicate that the element was still active.
+
 #### Problem when using the 'Get parameter table by alias' data source against a STaaS database [ID 45766]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
