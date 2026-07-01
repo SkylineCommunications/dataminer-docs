@@ -64,6 +64,8 @@ In addition, each DataMiner Agent and database node should be given a **static I
 
 For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports. <!-- However, we recommend that you use the latest Windows Server version. This will not only allow you to make use of the latest features, but also ensures that you will get support and security patches for as long as possible.  -->At the moment, Windows Server 2025 is the recommended version.
 
+IIS (Internet Information Services) is a required component, as DataMiner uses it to host its webpages.
+
 ### Time
 
 If there is more than one DataMiner Agent in your cluster, the time in the cluster must be synchronized (NTP). In addition, all DataMiner Agents in the cluster must be configured to use the same time zone.
