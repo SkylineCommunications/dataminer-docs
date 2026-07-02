@@ -19,7 +19,7 @@ On the organization users page and the system users page in the Admin app, the *
 Support ticket interactions have been updated to improve efficiency and clarity:
 
 - Ticket link in emails: Confirmation emails now render the ticket ID as a clickable hyperlink, allowing users to navigate directly to the Admin portal without manual searching.
-- Accurate assignment info: The *Assigned to* field in ticket details now accurately reflects the team responsible as tracked in the linked collaboration task.
+- Accurate assignment info: The *Assigned to* field in ticket details now accurately reflects the team responsible as tracked in the linked Collaboration task.
 
 ### 2 July 2026 - Enhancement - Admin - Support portal accessibility for non-contract organizations
 
