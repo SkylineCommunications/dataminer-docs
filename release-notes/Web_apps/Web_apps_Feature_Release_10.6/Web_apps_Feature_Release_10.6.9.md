@@ -53,6 +53,14 @@ From now on, when selecting a table parameter, it will be possible to select eit
 > [!NOTE]
 > It is not possible to mix columns from different tables or to combine a table with standalone parameters.
 
+#### Web apps: About box will now also show the version of the DataMiner Assistant DxM [ID 45833]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+From now on, the About box will also show the version of the DataMiner Assistant DxM.
+
+If this DxM is not installed or not enabled, "Not installed" will be displayed instead of the version.
+
 #### Web apps - Help menu: Feedback command replaced by a feedback submenu [ID 45853]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
