@@ -26,13 +26,16 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-#### GQI components / Web API: Discrete column values will now be objects containing possible values and an 'IsStrict' flag [ID 45388]
+#### GQI components / Web API: Discrete column values will now be objects containing possible values and an 'IsStrict' flag [ID 45388] [ID 45835]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 From now on, discrete column values in a GQI query result will no longer be arrays of possible values. Instead, they will be objects containing possible values and an `IsStrict` flag.
 
 This change will only have a functional impact when columns are requested for parameter trend data of discrete parameters using GQI via SLHelper. In that case, discrete columns containing discrete values that do not match the column type will no longer be available in the client.
+
+> [!NOTE]
+> The `IsStrict` flag will be applied by default where discrete column values can be selected: template overrides, conditional coloring, table column filters, and the Query filter component. Discrete values that are strict will only show checkbox inputs. In case of a string column, no text input will be shown, and in case of a number/date column, no range input will be shown.
 
 #### Web apps: Redesigned datetime controls now fully support custom time zones set by the client [ID 45687]
 
