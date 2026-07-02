@@ -1,6 +1,6 @@
 ---
 uid: MACC_and_DataMiner_credits
-description: Discover how you can maximize your Azure investments with Microsoft Azure Consumption Commitment (MACC) and DataMiner credits.
+description: "Discover how you can maximize your Azure investments with Microsoft Azure Consumption Commitment (MACC) and DataMiner credits."
 ---
 
 # Maximizing your Azure investments with MACC and DataMiner credits
