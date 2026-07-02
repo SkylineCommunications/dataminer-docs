@@ -37,6 +37,35 @@ All nullable scalar types supported by their non-nullable counterparts are cover
 
 No changes to existing model classes are required. Rebuilding the consuming project is sufficient for the updated generator to generate the additional exposers.
 
+### Per-project MSBuild opt-out properties for source generators [ID 45863]
+
+Consuming projects can now selectively disable individual SDM source generators through standard MSBuild properties, without removing the NuGet reference entirely. The following opt-out properties are now available in `.csproj` and `Directory.Build.props` files:
+
+- `SdmDisableExposers`: Skips generation of the exposers filter class.
+- `SdmDisableMiddleware`: Skips generation of the middleware wrapper.
+- `SdmDisableDomStorage`: Skips generation of the DOM repository.
+
+### Exposers now inherit model class access modifier [ID 45890]
+
+Generated exposer classes now inherit the access modifier (`public` or `internal`) of the annotated model class. This prevents generated filter classes from exposing wider visibility than the model they describe.
+
+For example:
+
+```csharp
+[GenerateExposers]
+public class MyPublicClass {}
+
+[GenerateExposers]
+internal class MyInternalClass {}
+```
+
+This now results in:
+
+```csharp
+public static partial class MyPublicClassExposers {}
+internal static partial class MyInternalClassExposers {}
+```
+
 ## Fixes
 
 ### NOT filter stack overflow [ID 45754]
