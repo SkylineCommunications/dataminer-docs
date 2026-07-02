@@ -69,3 +69,11 @@ In the help menu of the web apps, the *Feedback* command has been replaced by a 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 In some rare cases, a *Table* component would incorrectly not apply the correct column widths after the table had been resized or updated. This led to columns being hidden when they had to be visible.
+
+#### GQI DxM could become unrecoverable when the initial DataMiner state subscription failed [ID 45830]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When the GQI DxM established an SLNet connection but failed to set up the initial DataMiner state subscription, it could remain in an unrecoverable state.
+
+Now, the subscription step is treated as part of connection establishment. If that step fails, the connection is considered failed and is retried.
