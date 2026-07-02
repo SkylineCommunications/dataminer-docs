@@ -19,6 +19,7 @@ When creating or editing documentation pages, apply the following rules.
 - Keep a logical structure with meaningful headers.
 - For cross-references to pages within this repository, use DocFX `xref` links instead of hard links to local Markdown files.
 - Use backticks for references to code, file paths, and user input, but not for emphasis.
+- Use plain text in headers, avoiding italics, bold, or other formatting
 - Do not place two note blocks immediately after one another. When that would occur, combine the content into a single note block that uses a bulleted list.
 
 ## Procedure formatting
