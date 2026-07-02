@@ -48,6 +48,8 @@ items:
             href: EPM/toc.yml
           - name: IDP release notes
             href: IDP/toc.yml
+          - name: InfraOps release notes
+            href: InfraOps/toc.yml
           - name: MbgNMS release notes
             href: MbgNMS/toc.yml
           - name: MediaOps release notes
