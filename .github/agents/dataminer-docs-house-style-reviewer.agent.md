@@ -23,6 +23,7 @@ Your job is to review a documentation page or section and report whether it foll
   - Keep instructions concise, and place the result of each step on an indented line below that step
   - Ensure images inside procedures are indented correctly so numbering does not restart
   - Format direct UI references in italics, with optional bold for emphasis in specific cases (e.g., introductory elements followed by a colon)
+  - Use plain text in headers, avoiding italics, bold, or other formatting
 
 ## Approach
 1. Ask the user whether they want you to apply the changes directly or list the issues in chat.
