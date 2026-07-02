@@ -26,13 +26,16 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-#### GQI components / Web API: Discrete column values will now be objects containing possible values and an 'IsStrict' flag [ID 45388]
+#### GQI components / Web API: Discrete column values will now be objects containing possible values and an 'IsStrict' flag [ID 45388] [ID 45835]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 From now on, discrete column values in a GQI query result will no longer be arrays of possible values. Instead, they will be objects containing possible values and an `IsStrict` flag.
 
 This change will only have a functional impact when columns are requested for parameter trend data of discrete parameters using GQI via SLHelper. In that case, discrete columns containing discrete values that do not match the column type will no longer be available in the client.
+
+> [!NOTE]
+> The `IsStrict` flag will be applied by default where discrete column values can be selected: template overrides, conditional coloring, table column filters, and the Query filter component. Discrete values that are strict will only show checkbox inputs. In case of a string column, no text input will be shown, and in case of a number/date column, no range input will be shown.
 
 #### Web apps: Redesigned datetime controls now fully support custom time zones set by the client [ID 45687]
 
@@ -53,6 +56,14 @@ From now on, when selecting a table parameter, it will be possible to select eit
 > [!NOTE]
 > It is not possible to mix columns from different tables or to combine a table with standalone parameters.
 
+#### Web apps: About box will now also show the version of the DataMiner Assistant DxM [ID 45833]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+From now on, the About box will also show the version of the DataMiner Assistant DxM.
+
+If this DxM is not installed or not enabled, "Not installed" will be displayed instead of the version.
+
 #### Web apps - Help menu: Feedback command replaced by a feedback submenu [ID 45853]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
@@ -69,3 +80,11 @@ In the help menu of the web apps, the *Feedback* command has been replaced by a 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 In some rare cases, a *Table* component would incorrectly not apply the correct column widths after the table had been resized or updated. This led to columns being hidden when they had to be visible.
+
+#### GQI DxM could become unrecoverable when the initial DataMiner state subscription failed [ID 45830]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When the GQI DxM established an SLNet connection but failed to set up the initial DataMiner state subscription, it could remain in an unrecoverable state.
+
+Now, the subscription step is treated as part of connection establishment. If that step fails, the connection is considered failed and is retried.
