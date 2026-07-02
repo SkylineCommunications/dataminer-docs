@@ -4217,6 +4217,8 @@ items:
               topicUid: DMSScript.Script.Exe.Value-ref
       - name: Type
         topicUid: DMSScript.Type
+      - name: SolutionId
+        topicUid: DMSScript.SolutionId
     - name: SchemaTypes
       items:
       - name: EnumTrueFalse

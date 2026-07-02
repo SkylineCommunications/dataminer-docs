@@ -160,6 +160,8 @@ items:
             topicUid: Manually_executing_a_script
           - name: Script execution options
             topicUid: Script_execution_options
+          - name: Script Runners
+            topicUid: Script_Runners
       - name: Using C# code in automation scripts
         topicUid: Using_CSharp_code_in_Automation_scripts
         items:

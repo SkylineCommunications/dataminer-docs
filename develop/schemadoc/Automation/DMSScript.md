@@ -28,6 +28,7 @@ The root element of a DataMiner automation script.
 |&nbsp;&nbsp;[Memory](xref:DMSScript.Memory)||Contains the memory files.|
 |&nbsp;&nbsp;[Parameters](xref:DMSScript.Parameters)||Contains the parameter script variables defined in the script.|
 |&nbsp;&nbsp;[Script](xref:DMSScript.Script)||Contains the script actions.|
+|&nbsp;&nbsp;[SolutionId](xref:DMSScript.SolutionId)||Specifies the solution that the automation script belongs to.|
 
 ## Constraints
 
