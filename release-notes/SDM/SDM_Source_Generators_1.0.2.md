@@ -45,7 +45,26 @@ Consuming projects can now selectively disable individual SDM source generators 
 - `SdmDisableMiddleware`: Skips generation of the middleware wrapper.
 - `SdmDisableDomStorage`: Skips generation of the DOM repository.
 
-When `DataMinerType` is set to `Package`, generated `.g.cs` files are now also written to disk and included in compile output, which is useful for connector packaging workflows. In addition, the exposers generator now inherits the access modifier (`public` or `internal`) of the annotated model class, so generated filter classes no longer have wider visibility than the model they describe.
+### Exposers now inherit model class access modifier [ID 45890]
+
+Generated exposer classes now inherit the access modifier (`public` or `internal`) of the annotated model class. This prevents generated filter classes from exposing wider visibility than the model they describe.
+
+For example:
+
+```csharp
+[GenerateExposers]
+public class MyPublicClass {}
+
+[GenerateExposers]
+internal class MyInternalClass {}
+```
+
+This now results in:
+
+```csharp
+public static partial class MyPublicClassExposers {}
+internal static partial class MyInternalClassExposers {}
+```
 
 ## Fixes
 
