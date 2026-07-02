@@ -9,6 +9,22 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+
+### 2 July 2026 - Enhancement - Admin - Role validation on user actions
+
+On the organization users page and the system users page in the Admin app, the *Unlink* and *Remove* user action buttons will now be disabled when the current user has the Member role.
+
+### 2 July 2026 - Enhancement - Admin - Improved ticket communication and assignment transparency
+
+Support ticket interactions have been updated to improve efficiency and clarity:
+
+- Ticket link in emails: Confirmation emails now render the ticket ID as a clickable hyperlink, allowing users to navigate directly to the Admin portal without manual searching.
+- Accurate assignment info: The *Assigned to* field in ticket details now accurately reflects the team responsible as tracked in the linked collaboration task.
+
+### 2 July 2026 - Enhancement - Admin - Support portal accessibility for non-contract organizations
+
+The support landing page has been redesigned to provide a proactive resource hub for organizations without an active maintenance contract. Instead of encountering errors, users are now presented with a clear dashboard featuring direct access to documentation, community resources, and service status, along with actionable pathways to secure maintenance contracts for one-on-one support.
+
 ### 22 June 2026 - Enhancement - Admin - Custom time range for subscription usage estimate
 
 When adding a subscription, the *Start from estimate* option now allows you to select a custom time range to calculate the estimate from. The selected time range is limited to a maximum duration of 3 months.
