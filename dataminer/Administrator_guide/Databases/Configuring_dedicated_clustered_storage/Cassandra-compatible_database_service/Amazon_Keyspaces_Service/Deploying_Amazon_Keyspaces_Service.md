@@ -1,5 +1,6 @@
 ---
 uid: Deploying_Amazon_Keyspaces_Service
+description: "Find out how to deploy the Amazon Keyspaces Service, which was deprecated in favor of Storage as a Service (STaaS)."
 ---
 
 # Deploying the Amazon Keyspaces Service
