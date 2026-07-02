@@ -42,6 +42,26 @@ Because of a number of enhancements, the redesigned datetime controls will now f
 
 This also means that these controls will now be better able to deal with transitions to and from daylight saving time.
 
+#### GQI DxM - 'Get parameters for elements where': Possible to select either a full table or a subset of columns [ID 45692]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when you selected the parameter(s) for the *Get parameters for elements where* data source, it would only be possible to select standalone parameters and table parameters. It was not possible to select specific columns of a table.
+
+From now on, when selecting a table parameter, it will be possible to select either the full table or a subset of columns.
+
+> [!NOTE]
+> It is not possible to mix columns from different tables or to combine a table with standalone parameters.
+
+#### Web apps - Help menu: Feedback command replaced by a feedback submenu [ID 45853]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In the help menu of the web apps, the *Feedback* command has been replaced by a submenu with the following two commands:
+
+- [Share your experience](https://aka.dataminer.services/help-feedback-root)
+- [Report an issue](https://aka.dataminer.services/ReportAnIssue)
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Table component: Correct column widths would not be applied after the table had been resized or updated [ID 45765]

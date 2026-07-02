@@ -28,7 +28,11 @@ uid: General_Main_Release_10.5.0_CU18
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
-When the DataAPI fails to create an element because another element with the same name already exists, from now on, it will check whether that element has already been synchronized among the Agents in the DataMiner System. If not, the element creation will be allowed to continue.
+When DataAPI creates an element, in some cases, the element is not immediately fully synchronized in DataMiner. Subsequent requests then detect that an element with the same name already exists and fail, even though DataAPI itself created that element.
+
+To determine whether DataAPI created an element, the request must confirm that it is genuinely the same element. Up to now, when a name collision occurred, the request would simply fail with no way to identify its own recently created element.
+
+From now on, DataAPI will verify whether the existing element is one it created earlier by matching and tracking both the identifier and the type (i.e., the protocol). When both match, the request is allowed to proceed. If not, it is treated as a conflict and will be rejected.
 
 #### ConfigureIIS.bat script will now ensure a dedicated Application Pool for the API application [ID 45842]
 
@@ -39,6 +43,16 @@ The *ConfigureIIS.bat* script will now ensure a dedicated Application Pool for t
 This new application pool is called *DataMiner WebAPI AppPool*. it is solely intended to serve as pool for the web API, and will not recycle periodically.
 
 ### Fixes
+
+#### Protocol object outside of QAction run would incorrectly not be notified when the element was stopped [ID 45749]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When an `SLProtocol` or `SLProtocolExt` object that was passed as argument in the `QAction` method had been stored and reused when the QAction was already finished, up to now, this object would not be notified when the element was stopped.
+
+This could lead to issues. For example, when a separate thread that was running in SLScripting when the element was stopped made calls on the `SLProtocol` object, the SLScripting process could crash as the connection with the SLProtocol process was no longer valid.
+
+Also, calling `protocol.IsActive` would incorrectly indicate that the element was still active.
 
 #### Problem when using the 'Get parameter table by alias' data source against a STaaS database [ID 45766]
 

@@ -1,5 +1,6 @@
 ---
 uid: Stack_Open_Framework
+description: Integrate data from any source or system using user-defined RESTful APIs and northbound APIs, and offload data to databases or files.
 ---
 
 # Open Framework

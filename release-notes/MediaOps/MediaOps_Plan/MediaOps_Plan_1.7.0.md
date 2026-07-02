@@ -57,6 +57,19 @@ New helper methods have been introduced for safe type-checking and casting of Ca
   - IsTextConfiguration
   - IsDiscreteTextConfiguration
 
+#### Scheduling/Workflow Designer: Shuffled connection configuration simplified [ID 45884]
+
+When you configure a connection in a workflow or job between two nodes, you can shuffle parts of the connection based on levels. This shuffled connection setup has now been simplified. The *Predefined Subset* and *Custom Subset* options have been removed, and only two options remain:
+
+- **All**: Connect all levels straight (for example, Audio1 -> Audio1, Audio2 -> Audio2).
+- **Shuffle**: Define a custom shuffle by selecting the source level per destination level.
+
+#### DOM ImportExport script renamed for naming consistency [ID 45887]
+
+For naming consistency throughout the solution, the *DOM ImportExport* script has been renamed to *MOP DOM ImportExport*.
+
 ### Fixes
 
-*No fixes have been added to this release yet.*
+#### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
+
+When you confirmed a job with a start time in the past (which then ran automatically), node start and stop times remained anchored to that past start time. As a result, resources could appear reserved from before the reservation actually existed. This issue has now been fixed: on confirmation, past node start times are moved forward to the confirmation time so resource usage reflects the actual reserved window.
