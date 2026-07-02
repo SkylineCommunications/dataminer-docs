@@ -37,6 +37,16 @@ All nullable scalar types supported by their non-nullable counterparts are cover
 
 No changes to existing model classes are required. Rebuilding the consuming project is sufficient for the updated generator to generate the additional exposers.
 
+### Per-project MSBuild opt-out properties for source generators [ID 45863]
+
+Consuming projects can now selectively disable individual SDM source generators through standard MSBuild properties, without removing the NuGet reference entirely. The following opt-out properties are now available in `.csproj` and `Directory.Build.props` files:
+
+- `SdmDisableExposers`: Skips generation of the exposers filter class.
+- `SdmDisableMiddleware`: Skips generation of the middleware wrapper.
+- `SdmDisableDomStorage`: Skips generation of the DOM repository.
+
+When `DataMinerType` is set to `Package`, generated `.g.cs` files are now also written to disk and included in compile output, which is useful for connector packaging workflows. In addition, the exposers generator now inherits the access modifier (`public` or `internal`) of the annotated model class, so generated filter classes no longer have wider visibility than the model they describe.
+
 ## Fixes
 
 ### NOT filter stack overflow [ID 45754]
