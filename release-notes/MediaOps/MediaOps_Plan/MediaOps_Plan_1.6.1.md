@@ -52,3 +52,15 @@ In Resource Studio, it was not possible to remove a capability from a resource p
 #### Scheduling: Capacity usage not updated after job-level configuration change [ID 45864]
 
 When a job-level configuration parameter was updated, it could occur that the resource capacity usage continued to reflect the previous value until another edit was done. This could lead to overuse of resources. Now capacity calculations use the latest edited configuration immediately, including values resolved through configuration references, ensuring that the capacity usage is accurate right after each update.
+
+#### Scheduling: Configuration parameters linked to pool or resource references not applied when adding resource pool to job [ID 45872]
+
+When a resource pool was added to a job as a node, its scheduling configuration was copied to the new node, but configuration parameters linked to a pool, resource name, resource property, or resource linked object were not associated with that node. As a result, these references could not be resolved when the job was confirmed. This issue has now been resolved.
+
+#### Scheduling: Invalid resource swap not blocked on confirmed job [ID 45873]
+
+Swapping a resource on a confirmed (or running) job to a resource that was missing a property referenced by an orchestration script input was not blocked. The swap completed, and only afterwards an unresolved-reference error was attached to the job, without a clear signal up front about which resource property was missing. This has now been fixed: such invalid swaps are blocked.
+
+#### Scheduling: Orchestration event input arguments not updated after job configuration changes [ID 45874]
+
+Editing a job or node configuration value (for example, orchestration event input arguments) did not update the scheduled orchestration event in MediaOps Live. This issue has now been resolved.
