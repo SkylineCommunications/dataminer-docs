@@ -9,6 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 2 July 2026 - Enhancement - Admin - Improved username validation
+
+Username validation has been updated to enforce clearer formatting rules: usernames may not exceed 20 characters, may not contain backslashes, and may not contain consecutive percent signs.
+
+### 2 July 2026 - Enhancement - Admin - Draft subscription management improvements
+
+The *Save draft* and *Delete draft* actions in the subscription flow now have spam click prevention to avoid unintended repeated submissions. In addition, the *Delete draft* option is now also available directly on the *Add Subscription* panel.
+
+### 2 July 2026 - Enhancement - Admin - Continue from draft option and improved draft redirect for subscriptions
+
+On the Billing page of the Admin app, users can now select *Continue from draft* in the *Add subscription* context menu to resume a previously saved draft. Additionally, when a draft is saved, users are now automatically redirected to the subscriptions page on the Billing page.
+
 ### 2 July 2026 - Enhancement - Admin - Role validation on user actions
 
 On the organization users page and the system users page in the Admin app, the *Unlink* and *Remove* user action buttons will now be disabled when the current user has the Member role.
