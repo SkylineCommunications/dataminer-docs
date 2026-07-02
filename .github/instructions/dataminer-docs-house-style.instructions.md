@@ -13,7 +13,7 @@ When creating or editing documentation pages, apply the following rules.
 - Use `i.e.,` instead of `i.e.`.
 - Use sentence case in headers.
 - Use descriptive alt text for images.
-- Ensure each page has a `description` value in its metadata/front matter.
+- Ensure each page has a `description` value in its metadata/front matter, and ensure it is between 100 and 155 characters.
 - Use a formal but simple technical style that helps users find information quickly.
 - Address the reader directly with `you` and avoid third-person references to the user.
 - Keep a logical structure with meaningful headers.
