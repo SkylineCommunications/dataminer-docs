@@ -70,6 +70,17 @@ Also, all credential fields now have a maximum length of 5012 bytes, and the fol
 
 ### Fixes
 
+#### Visual Overview - Spectrum analysis component: 'ShowRibbon' option no longer worked [ID 45725]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When a spectrum analysis component was configured with `ShowRibbon=true` or `ShowRibbon=false`, in some cases, the setting was not applied correctly.
+
+Now, the `ShowRibbon` option works again, so you can use it to show or hide the ribbon.
+
+> [!NOTE]
+> In existing shapes, this option cannot be toggled on the fly.
+
 #### Problem when logging out right after having logged in [ID 45756] [ID 45761]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
