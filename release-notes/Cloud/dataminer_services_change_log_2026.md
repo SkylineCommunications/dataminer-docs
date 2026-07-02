@@ -9,7 +9,6 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-
 ### 2 July 2026 - Enhancement - Admin - Role validation on user actions
 
 On the organization users page and the system users page in the Admin app, the *Unlink* and *Remove* user action buttons will now be disabled when the current user has the Member role.
@@ -32,10 +31,6 @@ When adding a subscription, the *Start from estimate* option now allows you to s
 ### 22 June 2026 - New feature - Admin - Billable usage export
 
 In the Admin app, you can now export billable usage data from the Billing page or from the billable usage side panel.
-
-### 22 June 2026 - Enhancement - Admin - 'Unlink' and 'Remove' user action buttons disabled for Member role
-
-On the organization users page and the system users page in the Admin app, the *Unlink* and *Remove* user action buttons will now be disabled when the current user has the Member role.
 
 ### 22 June 2026 - Enhancement - Admin - Billable usage panel 'Name' column renamed to 'System name'
 
