@@ -1,0 +1,23 @@
+items:
+  - name: InfraOps 1.2.0
+    items:
+      - name: New features and changes
+        topicUid: InfraOps_1.2.0
+      - name: Addendum CU1
+        topicUid: InfraOps_1.2.0_CU1
+      - name: Addendum CU2
+        topicUid: InfraOps_1.2.0_CU2
+  - name: InfraOps 1.1.0
+    items:
+      - name: New features and changes
+        topicUid: InfraOps_1.1.0
+      - name: Addendum CU1
+        topicUid: InfraOps_1.1.0_CU1
+      - name: Addendum CU2
+        topicUid: InfraOps_1.1.0_CU2
+  - name: InfraOps 1.0.0
+    items:
+      - name: New features
+        topicUid: InfraOps_1.0.0
+      - name: Addendum CU1
+        topicUid: InfraOps_1.0.0_CU1

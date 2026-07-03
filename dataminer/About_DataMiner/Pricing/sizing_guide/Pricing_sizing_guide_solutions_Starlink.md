@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_solutions_Starlink
+description: "Use this Starlink sizing guide to convert terminal counts and usage options into managed object, storage, and hosting volumes."
 ---
 
 # Sizing guide: Starlink

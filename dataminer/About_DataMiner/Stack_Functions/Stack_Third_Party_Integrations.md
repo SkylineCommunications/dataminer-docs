@@ -1,5 +1,6 @@
 ---
 uid: Stack_Third_Party_Integrations
+description: Explore third-party integrations in DataMiner. Integrate ticketing, add a mobile gateway, and configure notifications.
 ---
 
 # Third-Party Integrations

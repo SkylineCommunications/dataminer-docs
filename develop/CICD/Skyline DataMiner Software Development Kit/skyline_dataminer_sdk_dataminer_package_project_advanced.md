@@ -52,6 +52,9 @@ dotnet publish PackagesForOrganizationB.slnf -p:Version="2.0.1" -p:VersionCommen
 
 When using GitHub reusable workflows as provided by Skyline Communications, you can optionally include a Visual Studio solution filter file that will adjust the behavior of the pipeline so it only builds, tests, and publishes the subsection defined by the filter.
 
+> [!NOTE]
+> The `sonarcloud-project-name` input and `SONAR_TOKEN` secret in the examples below are optional. Omit them if you do not want to run SonarCloud static code analysis.
+
 #### Default job
 
 This is the default job without filters:

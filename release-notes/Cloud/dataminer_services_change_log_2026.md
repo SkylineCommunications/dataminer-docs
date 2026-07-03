@@ -9,6 +9,30 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 22 June 2026 - Enhancement - Admin - Custom time range for subscription usage estimate
+
+When adding a subscription, the *Start from estimate* option now allows you to select a custom time range to calculate the estimate from. The selected time range is limited to a maximum duration of 3 months.
+
+### 22 June 2026 - New feature - Admin - Billable usage export
+
+In the Admin app, you can now export billable usage data from the Billing page or from the billable usage side panel.
+
+### 22 June 2026 - Enhancement - Admin - 'Unlink' and 'Remove' user action buttons disabled for Member role
+
+On the organization users page and the system users page in the Admin app, the *Unlink* and *Remove* user action buttons will now be disabled when the current user has the Member role.
+
+### 22 June 2026 - Enhancement - Admin - Billable usage panel 'Name' column renamed to 'System name'
+
+In the billable usage side panel in the Admin app, the *Name* column has been renamed to *System name*.
+
+### 22 June 2026 - Enhancement - All apps - New header with improved help and support integration
+
+All dataminer.services apps now feature a new header with better integration for help and support. In the Catalog app, the search bar has also been moved to a new position.
+
+### 15 June 2026 - Enhancement - Admin - Billable usage chart limited to selected month
+
+On the Billing page of the Admin app, the billable usage chart will now only show dates within the selected month.
+
 ### 8 June 2026 - New feature - Admin - Ability to cancel planned subscriptions
 
 On the Billing page of the Admin app, you can now cancel planned subscriptions. When you do so, credits spent for the planned subscription will be refunded.

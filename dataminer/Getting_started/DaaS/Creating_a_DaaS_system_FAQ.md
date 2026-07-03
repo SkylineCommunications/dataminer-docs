@@ -116,7 +116,7 @@ See also: [User management](xref:User_management).
 
 As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](xref:STaaS_features#limitations) also apply for DaaS.
 
-In addition, because of the additional security layer used in DaaS systems, at present, it is not possible to connect to a DaaS system using the [Web Services](xref:Using_the_Web_Services_v1).
+In addition, while the [Web Services API](xref:Using_the_Web_Services_v1) is accessible on DaaS systems once you have authenticated through the dataminer.services B2C layer, the additional security layer of dataminer.services makes it difficult to authenticate externally for integrations that are not hosted on the DMA itself.
 
 ### Where is my DaaS system hosted?
 

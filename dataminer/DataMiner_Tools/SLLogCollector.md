@@ -65,6 +65,8 @@ To use the SLLogCollector tool:
      > [!NOTE]
      > When you select the option to collect memory dumps and one or more runtime errors are present, processes affected by these runtime errors are automatically selected.
 
+   - From DataMiner 10.6.3/10.7.0 onwards<!-- RN 44384 -->, to collect logs from one or more other DataMiner Agents or to upload the package to the cloud, use the *Trigger remote LogCollector* and *Offload packages to cloud* options. See [Remote log collection](#remote-log-collection).
+
    - Use the radio buttons to select the location where the log package will be saved. By default, logs are saved to `%USERPROFILE%\Desktop\SL_LogCollector`.
 
 1. When the configuration is complete, click *Start*.
@@ -88,6 +90,9 @@ You can also run the tool via command line, using the options listed below.
 | `-d=VALUE`<br>`--dumps=VALUE` | Allows you to specify the process names or IDs for which dumps should be taken. "VALUE" should be a comma-separated list of names or IDs. |
 | `-m=VALUE`<br>`--memory=VALUE` | If this option is added, an additional dump will be taken after the process reaches the amount of memory (in MB) specified as "VALUE". |
 | `-b=VALUE`<br>`--bpas=VALUE` | If "VALUE" is set to true (default), BPA tests are executed before log collection. If set to false, they are not executed. Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards.<!-- RN 43588 -->|
+| `--dll=VALUE` | If "VALUE" is set to true, DLL info is collected. Available from DataMiner 10.6.7/10.7.0 onwards.<!-- RN 45044 -->|
+| `-a=VALUE`<br>`--agents=VALUE` | Comma-separated list of Agent names to remotely collect logs from. Available from DataMiner 10.6.3/10.7.0 onwards. Requires SupportAssistant 1.8.0.0 or higher.<!-- RN 44384 -->|
+| `-o=VALUE`<br>`--offload=VALUE` | If "VALUE" is set to true, logs are offloaded to the cloud. Available from DataMiner 10.6.3/10.7.0 onwards. Requires SupportAssistant 1.8.0.0 or higher.<!-- RN 44384 -->|
 
 For example:
 
@@ -105,6 +110,26 @@ SL_LogCollector.exe -c -h
 > The files containing the test results will have names using the `<BPA Name>_<Date(yyyy-MM-dd_HH)>` format and can be found in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
 >
 > From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!-- RN 43588 -->, an option is available that makes it possible to skip these BPA tests (see table above).
+
+## Remote log collection
+
+From DataMiner 10.6.3/10.7.0 onwards<!-- RN 44384 -->, SLLogCollector can collect logs from other DataMiner Agents in the cluster and optionally upload the resulting packages to the cloud. This requires SupportAssistant 1.8.0.0 or higher.
+
+- Select *Trigger remote LogCollector* to remotely collect logs from one or more other DataMiner Agents. A list with checkboxes is displayed where you can select the Agents on which LogCollector should run. The collected packages are placed at the selected location (the default folder or a custom folder).
+
+  > [!NOTE]
+  >
+  > - On single-Agent systems, *Trigger remote LogCollector* is disabled, as there are no other Agents to remotely collect logs from.
+  > - The local Agent is always selected in the Agent list and cannot be cleared.
+  > - When *Trigger remote LogCollector* is enabled and memory dumps are included, the dumps can only be collected immediately. The option to determine when the dumps are collected is then disabled.
+  > - When memory dumps are included and more than half of the detected Agents are selected, a warning is displayed, as creating dumps on many Agents at the same time can affect the performance of your DMS.
+
+- Select *Offload packages to cloud* to upload the resulting log packages to the cloud. This also triggers the remote LogCollector, so you can select the Agents on which LogCollector should run in the same way. After you click *Start*, a GUID will be displayed, which you can provide to Skyline via an existing support email thread so the package can be fetched.
+
+  > [!NOTE]
+  > When *Offload packages to cloud* is enabled, *Trigger remote LogCollector* is always enabled as well, including on single-Agent systems, because the offload uses the same flow behind the scenes.
+
+Both options are only available when all detected DataMiner Agents are [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud). If at least one Agent is not connected to dataminer.services, remote log collection and offload to the cloud are unavailable and a warning is displayed. In that case, if no other Agents can be detected, the *Trigger remote LogCollector* and *Offload packages to cloud* options are not shown.
 
 ## Using a custom CollectorConfig XML file
 
