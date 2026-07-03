@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_use_cases_GV_AMPP
+description: "Use this GV AMPP sizing guide to compare control and orchestration modes, then estimate jobs, actions, and required services."
 ---
 
 # Sizing guide: GV AMPP

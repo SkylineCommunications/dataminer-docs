@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_solutions_MediaOps_Plan
+description: "Use this MediaOps Plan sizing guide to estimate jobs, retention records, automation actions, and hosted baseline volumes."
 ---
 
 # Sizing guide: MediaOps Plan

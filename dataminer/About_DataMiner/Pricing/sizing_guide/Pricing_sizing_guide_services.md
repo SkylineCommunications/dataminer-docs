@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_services
+description: "Use these sizing guides to size Automation, Data Plane, Data Sources, DaaS, STaaS, and collaboration costs for your deployment."
 ---
 
 # Sizing guide: Services
