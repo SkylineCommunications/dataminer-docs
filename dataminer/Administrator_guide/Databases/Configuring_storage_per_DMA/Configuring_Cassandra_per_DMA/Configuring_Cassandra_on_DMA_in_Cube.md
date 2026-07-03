@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Cassandra_per_DMA_in_Cube
+description: "Follow these steps to configure the Cassandra database per DMA settings if you did not choose to use the recommended STaaS setup."
 keywords: local database
 ---
 
