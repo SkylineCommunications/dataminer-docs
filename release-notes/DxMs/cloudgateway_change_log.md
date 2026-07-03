@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 11 June 2026 - Enhancement - CloudGateway 3.2.0 - Upgrade to .NET 10
+
+DataMiner CloudGateway has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
+
 #### 8 June 2026 - Fix - CloudGateway 3.1.2 - DataMiner Assistant session renewed when expired
 
 Previously, when you used the DataMiner Assistant through Microsoft Teams or Microsoft 365 Copilot after your DataMiner Assistant session had expired, you could get an empty response. Now, CloudGateway automatically creates a new DataMiner Assistant session when the existing one has expired, so you always receive a proper response.
