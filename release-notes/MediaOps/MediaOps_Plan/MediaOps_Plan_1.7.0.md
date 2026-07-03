@@ -68,6 +68,19 @@ When you configure a connection in a workflow or job between two nodes, you can 
 
 For naming consistency throughout the solution, the *DOM ImportExport* script has been renamed to *MOP DOM ImportExport*.
 
+#### MediaOps Live events now only created for confirmed jobs [ID 45894]
+
+MediaOps Plan now creates events in MediaOps Live only for confirmed jobs.
+
+Previously, events could also be created for jobs in the *Draft* or *Tentative* status, which increased the workload and introduced unnecessary edge cases.
+
+With this change:
+
+- Events are created only when a job is confirmed.
+- If a confirmed job is moved back to *Tentative*, its corresponding events are automatically removed from MediaOps Live.
+
+This simplifies event management and ensures that MediaOps Live reflects only confirmed jobs.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]

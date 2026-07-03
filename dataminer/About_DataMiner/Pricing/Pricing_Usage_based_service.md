@@ -1,6 +1,6 @@
 ---
 uid: Pricing_Usage_based_service
-description: The usage-based services model provides high operational flexibility, allowing you to leverage any available DataMiner function
+description: "Explore usage-based services, compare pay-per-use and subscription options, and choose the model that fits your deployment and budget."
 ---
 
 # Usage-based services
