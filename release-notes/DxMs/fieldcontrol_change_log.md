@@ -4,7 +4,7 @@ uid: fieldcontrol_change_log
 
 # Field Control change log
 
-#### 17 June 2026 - Enhancement - FieldControl 2.12.1 - Upgrade to .NET 10
+#### 17 June 2026 - Enhancement - FieldControl 2.12.2 - Upgrade to .NET 10
 
 FieldControl has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
 
