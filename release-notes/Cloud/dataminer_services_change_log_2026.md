@@ -19,7 +19,7 @@ The *Save draft* and *Delete draft* actions in the subscription flow now have sp
 
 ### 2 July 2026 - Enhancement - Admin - Continue from draft option and improved draft redirect for subscriptions
 
-On the Billing page of the Admin app, users can now select *Continue from draft* in the *Add subscription* context menu to resume a previously saved draft. Additionally, when a draft is saved, users are now automatically redirected to the subscriptions page on the Billing page.
+On the Billing page of the Admin app, users can now select *Continue from draft* in the *Add subscription* context menu to resume a previously saved draft. Additionally, when a draft is saved, users are now automatically redirected to the subscriptions page.
 
 ### 2 July 2026 - Enhancement - Admin - Role validation on user actions
 
