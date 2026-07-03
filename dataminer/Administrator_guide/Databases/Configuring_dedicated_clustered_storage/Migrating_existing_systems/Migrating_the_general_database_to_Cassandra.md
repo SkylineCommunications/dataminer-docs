@@ -1,5 +1,6 @@
 ---
 uid: Migrating_the_general_database_to_Cassandra
+description: "Find out how, in legacy systems, it was possible to migrate a MySQL of MSSQL general database to Cassandra."
 keywords: local database
 ---
 

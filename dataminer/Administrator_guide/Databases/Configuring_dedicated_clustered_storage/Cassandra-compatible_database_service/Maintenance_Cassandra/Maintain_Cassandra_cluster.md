@@ -1,5 +1,6 @@
 ---
 uid: Maintain_Cassandra_Cluster
+description: "Explore how to maintain and monitor your Cassandra cluster database if you did not choose to use the recommended STaaS setup."
 ---
 
 # Maintaining a Cassandra cluster

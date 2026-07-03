@@ -1,5 +1,6 @@
 ---
 uid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+description: "Use the Cassandra Cluster Migrator to migrate self-managed storage per DMA to a Cassandra cluster database."
 keywords: local database
 ---
 
