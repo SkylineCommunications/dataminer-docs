@@ -12,3 +12,4 @@ Can you add a description to the yaml front matter of this file, keeping in mind
 - Make sure it matches the content of the page
 - Do not use colons
 - Enclose the description in double quotes
+- Make sure the description is between 100 and 155 characters long
