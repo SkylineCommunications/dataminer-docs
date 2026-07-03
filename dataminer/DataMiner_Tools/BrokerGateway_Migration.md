@@ -26,11 +26,11 @@ If the automated migration fails, please contact Skyline Communications for reco
 
 1. Ensure the [prerequisites](#prerequisites) are met.
 
-1. Once the [prerequisites](#prerequisites) are met, you can either [run an automatic migration](#automatic-migration-using-dmupgrade-package-recommended) or [run the migration manually](#manual-migration).
+1. Once the [prerequisites](#prerequisites) are met, you can either [run an automatic migration](#automatic-migration-using-dmupgrade-package-recommended) or, if recommended by Skyline, [run the migration manually](#manual-migration).
 
 ### Between DataMiner 10.5.0 [CU4]/10.5.7 [CU1] and DataMiner 10.5.0 [CU11]/10.5.12 [CU2]
 
-1. Check whether you are affected by the [known migration issues](#known-migration-issues). If you are affected, upgrade to DataMiner 10.5.0 [CU11]/10.5.12 [CU2]. If not, proceed.
+1. Preferably, upgrade to DataMiner 10.5.0 [CU11] or 10.5.12 [CU2]. If this is not possible, proceed.
 
 1. Ensure the [prerequisites](#prerequisites) are met.
 
@@ -40,7 +40,13 @@ If the automated migration fails, please contact Skyline Communications for reco
 
 ## Prerequisites
 
-### Prerequisites verified by the .dmupgrade package (only when using the .dmupgrade package)
+### Prerequisite only.dmupgrade package
+
+A [NATSMigration - Prerequisite only.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package is available.
+This package allows you to verify the prerequisites without initiating the BrokerGateway migration.
+This can be used for testing system compatibility in advance.
+
+### Prerequisites verified by the NatsMigration.dmupgrade package (only when using the .dmupgrade package)
 
 When using the .dmupgrade package:
 If the [DataMiner requirements](#dataminer-requirements) or the [IT-requirements](#it-requirements) are not met, the migration will be blocked.
@@ -56,16 +62,9 @@ Ideally, [HTTPS](xref:Setting_up_HTTPS_on_a_DMA) has already been set up, prefer
 In any other circumstance, self-signed certificates will be used.
 In the latter case, the maintenance is more risky, since this is potentially the first setup of TLS/HTTPS within the DMS.
 
-To make sure that the migration goes smoothly, please ensure that:
+To make sure that the migration goes smoothly, please ensure that TLS 1.2 is enabled.
 
-- TLS 1.3 is enabled
-- TLS 1.2 is enabled
-
-Furthermore, the following cipher suites need to be enabled on the server:
-
-- TLS_AES_128_GCM_SHA256 *(TLS 1.3 - used for native clients).*
-
-- TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 *(TLS 1.2 - used for managed clients)*
+Furthermore, the associated *TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256* or *TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384* cipher suites need to be enabled on the server.
 
 Finally, ensure that there are no problems with '[Schannel](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-ssl-schannel-ssp-overview)' logged in the Windows Event Viewer's Application event log.
 
@@ -94,11 +93,14 @@ If you are using a DataMiner 10.5.x version starting from 10.5.0 [CU4] or 10.5.7
 1. Ensure the [prerequisites](#prerequisites) are met.
 
 1. Download and run the [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package.
-
 This will automatically run `C:\Skyline DataMiner\Tools\NATSMigration.exe` with default settings on all Agents. The DataMiner Agents will not be restarted.
 
-In case any issues occur during the migration, the output will be shown in the update client.
-This will look similar to the [manual migration log](#what-does-a-successful-manual-brokergateway-migration-look-like-in-logging). Aside from this, you can check the logging in `C:\Skyline DataMiner\Upgrades\Packages\NATSMigration.dmupgrade-XXX\progress.log` and in the upgrade utility UI.
+1. After the upgrade has completed, ensure that you execute the [Post-migration actions](#post-migration-actions) when applicable.
+
+>[!NOTE]
+>
+>In case any issues occur during the migration, the output will be shown in the update client.
+>This will look similar to the [manual migration log](#what-does-a-successful-manual-brokergateway-migration-look-like-in-logging). Aside from this, you can check the logging in `C:\Skyline DataMiner\Upgrades\Packages\NATSMigration.dmupgrade-XXX\progress.log` and in the upgrade utility UI.
 
 ## Manual migration
 
@@ -112,8 +114,13 @@ When recommended by Skyline, the migration can be run manually:
 
 1. Enter the `install` command on every Agent (including Failover Agents) within 10 minutes.
 
+1. After the upgrade has completed, ensure that you execute the [Post-migration actions](#post-migration-actions) when applicable.
+
 > [!IMPORTANT]
-> This must happen on **each DMA** in the cluster **within a 10-minute time frame**. It is very important that this happens for **each individual DataMiner Agent, including Failover DMAs**. Prior to DataMiner 10.5.0 [CU4]/10.5.7, this also involves a restart of each DataMiner Agent.
+>
+> - This must happen on **each DMA** in the cluster **within a 10-minute time frame**.
+It is very important that this happens for **each individual DataMiner Agent, including Failover DMAs**. Prior to DataMiner 10.5.0 [CU4]/10.5.7, this also involves a restart of each DataMiner Agent.
+> - On DataMiner 10.5.12 [CU2], manual migration may fail due to the latest BrokerGateway version not being able to install. If you need to execute a manual migration BGW migration on that version, please contact Skyline Communications.
 
 ## Post Migration actions
 
@@ -157,22 +164,6 @@ On versions prior to 10.6.0/10.6.1, there are two different ways you can go back
 - Download and run the package [NATSMigrationRollback.dmupgrade](https://community.dataminer.services/download/natsmigrationrollback-dmupgrade/).
 
 - Follow the same procedure as when you [run the migration manually](#manual-migration), but use the `uninstall` command instead of the `install` command. In this case, the same restrictions apply as for the migration: this must happen on all DataMiner Agents in the cluster at the same time.
-
-## Known migration issues
-
-If your DataMiner version is between 10.5.0 [CU4]/10.5.7 [CU1] and DataMiner 10.5.0 [CU11]/10.5.12 [CU2], please check whether your DMA is affected by below items.
-Note that this is not an exhaustive list of issues, so upgrading to DataMiner 10.5.0 [CU11]/10.5.12 [CU2] is still preferable.
-When in doubt, please contact Skyline Communications.  
-
-- [Problem when generating a default MessageBrokerConfig.json file [ID 44155]](../../release-notes/General/General_Main_Release_10.5/General_Main_Release_10.5.0_CU11.md#problem-when-generating-a-default-messagebrokerconfigjson-file-id-44155) ([General Feature Release 10.6.2](../../release-notes/General/General_Feature_Release_10.6/General_Feature_Release_10.6.2.md#problem-when-generating-a-default-messagebrokerconfigjson-file-id-44155))
-
-- [Clearer message when SLCloud.xml cannot be found when using the legacy SLNet-managed NATS solution [ID 43890]](../../release-notes/General/General_Main_Release_10.5/General_Main_Release_10.5.0_CU10.md#clearer-message-when-slcloudxml-cannot-be-found-when-using-the-legacy-slnet-managed-nats-solution-id-43890) ([General Feature Release 10.6.1](../../release-notes/General/General_Feature_Release_10.6/General_Feature_Release_10.6.1.md#clearer-message-when-slcloudxml-cannot-be-found-when-using-the-legacy-slnet-managed-nats-solution-id-43890))
-
-- [MessageBroker client could get stuck while trying to fetch information from BrokerGateway [ID 43832]](../../release-notes/General/General_Main_Release_10.5/General_Main_Release_10.5.0_CU9.md#messagebroker-client-could-get-stuck-while-trying-to-fetch-information-from-brokergateway-id-43832) ([General Feature Release 10.5.12](../../release-notes/General/General_Feature_Release_10.5/General_Feature_Release_10.5.12.md#messagebroker-client-could-get-stuck-while-trying-to-fetch-information-from-brokergateway-id-43832))
-
-- [BrokerGateway: Enhanced error handling [ID 42929]](../../release-notes/General/General_Main_Release_10.5/General_Main_Release_10.5.0_CU4.md#brokergateway-enhanced-error-handling-id-42929) ([General Feature Release 10.5.7](../../release-notes/General/General_Feature_Release_10.5/General_Feature_Release_10.5.7.md#brokergateway-enhanced-error-handling-id-42929))
-
-- [Native MessageBroker clients would not order the IP addresses in SLCloud.xml correctly [ID 44901]](../../release-notes/General/General_Main_Release_10.6/General_Main_Release_10.6.0_CU2.md#native-messagebroker-clients-would-not-order-the-ip-addresses-in-slcloudxml-correctly-id-44901) ([General Main Release 10.5.0 CU14](../../release-notes/General/General_Main_Release_10.5/General_Main_Release_10.5.0_CU14.md#native-messagebroker-clients-would-not-order-the-ip-addresses-in-slcloudxml-correctly-id-44901), [General Feature Release 10.6.5](../../release-notes/General/General_Feature_Release_10.6/General_Feature_Release_10.6.5.md#native-messagebroker-clients-would-not-order-the-ip-addresses-in-slcloudxml-correctly-id-44901))
 
 ## Troubleshooting the migration
 
