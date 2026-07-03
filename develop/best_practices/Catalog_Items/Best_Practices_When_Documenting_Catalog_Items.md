@@ -24,7 +24,7 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 
 1. [Use Cases](#use-cases-section) *(optional)*
 
-1. [Prerequisites](#prerequisites-section) *(optional)*
+1. [Prerequisites](#prerequisites-section)
 
 1. [Technical Reference](#technical-reference-section) *(optional)*
 
@@ -135,7 +135,7 @@ Depending on the size and complexity of your Catalog item, you can **combine or 
 - Requirements for components included in the package
 
 > [!NOTE]
-> Prerequisites in the description of the Catalog item should target the default deployment of the item. Typically, it is best to also include the prerequisites for a specific version in the relevant version description, so that users also know which prerequisites apply if they deploy another version than the default version. Note that the version descriptions automatically show the DataMiner (Web) version requirements, so there's no need to add those for each version of a Catalog item.
+> **Prerequisites in the description** of the Catalog item should target the **default deployment of the item**. Typically, it is best to also include the prerequisites for a specific version in the relevant version description. For more information on version descriptions, see [Use clear version descriptions](xref:Best_Practices_When_Creating_Catalog_Items#use-clear-version-descriptions).
 
 **Do's:**
 

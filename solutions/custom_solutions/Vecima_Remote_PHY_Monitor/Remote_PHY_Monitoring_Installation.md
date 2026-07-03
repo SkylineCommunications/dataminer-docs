@@ -1,5 +1,6 @@
 ---
 uid: Remote_PHY_Monitoring_Installation
+description: Deploy the Remote PHY Monitoring Solution from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing Remote PHY Monitoring

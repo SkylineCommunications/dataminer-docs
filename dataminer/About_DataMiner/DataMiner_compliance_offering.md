@@ -1,9 +1,15 @@
 ---
 uid: DataMiner_compliance_offering
-description: Skyline Communications takes pride in the security of its products and wants to provide the necessary guarantees to its users.
+description: Learn how DataMiner meets key security and compliance standards, including ISO/IEC 27001, NIS2, CRA, and Microsoft certification.
 ---
 
 # DataMiner compliance offering
+
+## ISO/IEC 27001 compliance
+
+Skyline is ISO/IEC 27001 certified, confirming its ongoing compliance with internationally recognized information security management standards.
+
+The certificate is available for download on our [Dojo Community platform](https://community.dataminer.services/download/certificate-of-registration-information-security-management-system-iso-iec-270012022/).
 
 ## Annual security assessment
 
@@ -26,10 +32,6 @@ Moreover, all DataMiner services offered on dataminer.services run on Microsoft 
 The NIS2 directive of the European Parliament of December 2022 aims to expand and strengthen cybersecurity across Europe. At present, it is not yet mandatory to comply with this, but all organizations must already work towards compliance. For this purpose, our external security partner has carried out an audit and provided us with a gap analysis. Based on this analysis, we are currently working to further strengthen our security.
 
 Similarly, we are also working on compliance with the more recent European Cyber Resilience Act (CRA) regulation, which imposes cybersecurity requirements for all connected products put on the EU market. This legal framework was introduced in November 2024. We are currently working on reviewing our policies and implementing policy changes.
-
-## ISO/IEC 27001 compliance
-
-Skyline has successfully finished stage 1 and stage 2 of the audit to obtain full ISO/IEC 27001 compliance. The certificate will be available for download shortly.
 
 ## GDPR compliance
 

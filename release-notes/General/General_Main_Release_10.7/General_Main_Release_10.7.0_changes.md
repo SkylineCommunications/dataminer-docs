@@ -27,6 +27,14 @@ This is a breaking change.
 
 Up to now, text containing characters that were encoded in extended ASCII (i.e., Windows code page 1252) were converted from raw octets into string text. For example, the French word "hélicoptère" would be received correctly. From now on, that same word will be received as hexadecimal string "68e96c69636f7074e87265", and a QAction will need to convert it back into a string using the correct encoding.
 
+#### Service template definitions will no longer be stored alongside services [ID 45370]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+Up to now, service templates were stored alongside services in the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders. Each service template also had exactly one DataMiner Agent actively hosting the service template.
+
+In preparation of service swarming, service template definitions have now been moved into a new `C:\Skyline DataMiner\ServiceTemplates` folder, which will be synchronized across the cluster. A service template no longer has a dedicated hosting agent, which means that they now remain available even if DataMiner Agents are down.
+
 ### Enhancements
 
 #### SLNet: Trend graphs in Cube will now also correctly display behavioral change points for table column parameters without advanced naming [ID 41751]
@@ -294,9 +302,10 @@ If information logging is set to Level 4, the log entries will also mention if a
 > - Log entries can also be added to *SLNetConnections.txt* and *SLCubeConnections.txt* for SLNet connections created elsewhere. To do so, provide a `LoggerProvider` to `SLNetTypesDiagnostics.AddLoggerProvider()`.
 > - When a Cube connected to a system without server-side `SLNetTypesDiagnostics` connects to a system with server-side `SLNetTypesDiagnostics`, the *SLCubeConnections.txt* log file will not be populated. Restart Cube if you want that log file to be populated.
 
-#### Security enhancements [ID 44804]
+#### Security enhancements [ID 44804] [ID 45582]
 
 <!-- 44804: MR 10.7.0 - FR 10.6.5 -->
+<!-- 45582: MR 10.7.0 - FR 10.6.9 -->
 
 A number of security enhancements have been made.
 
@@ -480,14 +489,6 @@ From now on, all state changes of all SLNet connections between Agents in the cl
 
 Because of a number of enhancements, memory usage has improved when compiling development packs and script libraries.
 
-#### Service template definitions will no longer be stored alongside services [ID 45370]
-
-<!-- MR 10.7.0 - FR 10.6.7 -->
-
-Up to now, service templates were stored alongside services in the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders. Each service template also had exactly one DataMiner Agent actively hosting the service template.
-
-In preparation of service swarming, service template definitions have now been moved into a new `C:\Skyline DataMiner\ServiceTemplates` folder, which will be synchronized across the cluster. A service template no longer has a dedicated hosting agent, which means that they now remain available even if DataMiner Agents are down.
-
 #### SLAnalytics: Enhanced performance when detecting flatline events [ID 45376]
 
 <!-- MR 10.7.0 - FR 10.6.7 -->
@@ -507,13 +508,31 @@ From now on, the *Standalone BPA Executor* tool will return one of the following
 | 1 | Unexpected errors have occurred. |
 | 2 | BPA tests have detected issues. |
 
-#### GQI will now throw an exception when data is requested from a mediated table parameter [ID 45539]
+#### DataMiner Object Models: SLDataGateway will now try to read only the selected fields from a STaaS database [ID 45503]
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
 
-Currently, because of server limitations, GQI is unable to retrieve parameter table data from DataMiner when that table is a mediated parameter. As a result, when you select a table of a mediated protocol in a client UI, that table will not contain any data, and will also not provide any details on why it does not do so.
+When SLDataGateway is retrieving DOM data from a STaaS database, from now on, it will attempt to retrieve only the selected fields using the native field projection capabilities of these databases. This will considerably enhance data transfer efficiency and overall performance.
 
-From now on, when a query using the *Parameters for elements where* data source attempts to retrieve data from a mediated table parameter, GQI will throw an error. That error will indicate that the request is not valid because mediated tables are not supported, and will also mention the table or table columns involved.
+This optimization will leverage the indexed field values to avoid transferring complete objects when only specific fields are needed.
+
+If selected field retrieval is not supported by the database, the system will automatically fall back to retrieving the full object and extracting the required values.
+
+By default, the value type will be the field type defined by the exposer. When a field value is explicitly requested, the type defined in the field descriptor will be used instead.
+
+> [!IMPORTANT]
+> To ensure correct type resolution, field descriptor IDs must be unique across all section definitions within a DOM module. Non-unique IDs may result in incorrect type mapping and unexpected behavior.
+
+#### Database migration from Cassandra Cluster to STaaS is now allowed on systems with Swarming enabled [ID 45507]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+From now on, it is possible to migrate the database of a Swarming-enabled system from Cassandra Cluster to STaaS.
+
+> [!NOTE]
+>
+> - This migration will be a snapshot migration, not a live migration.
+> - Migrating the database will only be possible if the system is online, cloud-connected, and has an active Cassandra Cluster database.
 
 #### User-Defined APIs can now also be triggered by sending a PATCH request method [ID 45542]
 
@@ -528,6 +547,48 @@ From now on, it will also be possible to trigger a user-defined API by sending a
 <!-- MR 10.7.0 - FR 10.6.8 -->
 
 From now on, the `AssemblyLoad` event handler in SLManagedScripting will also log the location of the loaded assembly (if available).
+
+#### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45560]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+Previously, when a script library was added to a DataMiner System, its hint paths were automatically sent to the automation script compilation engine, even when the library was not used by any automation script.
+
+From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
+
+#### SLNetClientTest tool: Enum field dropdown boxes in 'Build Message' tab will now be sorted alphabetically [ID 45610]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+Up to now, each enum field dropdown box in the *Build Message* tab would show the enum values in the order in which they are defined in the enum.
+
+In order to make it easier to look up values when, for example, building a message, from now on, the enum field dropdown boxes in the *Build Message* tab will show the enum values in alphabetical order.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### 'Check Time Server' BPA test has now been merged with the 'DataMiner Agent Minimum Requirements' BPA test [ID 45631]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+In order to combine all system requirements specified in [DataMiner Compute Requirements](https://aka.dataminer.services/DataMiner_compute_requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
+
+> [!NOTE]
+> From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.
+
+#### SLAutomation: Enhanced startup after a DataMiner restart or upgrade [ID 45651]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+Up to now, after a DataMiner restart or upgrade, in some cases, SLAutomation could unexpectedly stop working while initializing internal components.
+
+A number of enhancements have now been made to prevent any initialization issues during SLAutomation startup.
+
+#### CloudFeed DxM has been upgraded to Microsoft .NET 10 [ID 45849]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
 ### Fixes
 
@@ -582,3 +643,25 @@ Up to now, when the Agent with the lowest DMA ID had been removed from a DataMin
 `System.AggregateException: One or more errors occurred. ---> Skyline.DataMiner.Net.Exceptions.DataMinerException: Fatal error while sending request [MasterSyncRequestMessage for message of type SetReservationInstanceMessage from XXX] to master DMA XXX, max retries reached. ---> Skyline.DataMiner.Net.MasterSync.MasterSyncerException: Could not use the connection to master DMA XXX`
 
 From now on, when the Agent with the lowest DMA ID was removed from the DataMiner System, the Resource Manager will correctly re-evaluate and update the master DMA when it receives a master synchronization request.
+
+#### SLNet/SLDataGateway: Paging requests via SLNetInternalRepository could fail when the paging cookie expired mid-session [ID 45550]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+In some cases, paged retrievals of DOM instances or booking instances could fail with an `InvalidOperationException` when the server-side paging cookie expired before all pages were fetched. In GQI-powered low-code apps, this could then surface as a random error:
+
+`Select failed, could not read the objects from the database: System.InvalidOperationException: The provided cookie was not found among the live paging handlers of this storage type. Maybe it has already been deleted.`
+
+From now on, SLDataGateway will gracefully reset an expired paging cookie instead of throwing an error. When the cookie is no longer found among the live paging handlers, a fresh paging session will automatically be started.
+
+Also, `SelectPagingHelper` will now maintain a set of all object IDs received across pages. When a paging session restarts due to a cookie renewal, previously returned objects are filtered out, preventing duplicates from being returned.
+
+#### Automation: Problem with dependency order when recompiling script libraries [ID 45673]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Up to now, when a script library was updated, the dependency order was always assumed to be correct. However, in cases where libraries were loaded in a different order, a library could be recompiled before one of its dependencies.
+
+For example, when Library A depended on Library B, and Library B was recompiled after Library A, then Library A would remain linked to an older version of Library B. This would cause an issue when, after the DataMiner Agent was restarted, the outdated DLLs were removed. Library A would then reference a DLL file that no longer existed.
+
+From now on, the recompilation flow will ensure that libraries are recompiled in the correct dependency order, preventing references to outdated dependency versions.

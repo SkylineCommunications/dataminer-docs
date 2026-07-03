@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.7
 ---
 
-# General Feature Release 10.6.7 – Preview
+# General Feature Release 10.6.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -29,10 +29,6 @@ Before you upgrade to this DataMiner version:
   For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -88,6 +84,16 @@ If a long window was configured and the limit has already been reached, the clie
 
 ## Changes
 
+### Breaking changes
+
+#### Service template definitions will no longer be stored alongside services [ID 45370]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+Up to now, service templates were stored alongside services in the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders. Each service template also had exactly one DataMiner Agent actively hosting the service template.
+
+In preparation of service swarming, service template definitions have now been moved into a new `C:\Skyline DataMiner\ServiceTemplates` folder, which will be synchronized across the cluster. A service template no longer has a dedicated hosting agent, which means that they now remain available even if DataMiner Agents are down.
+
 ### Enhancements
 
 #### SLLogCollector: New option to collect DLL file information [ID 45044]
@@ -134,14 +140,6 @@ From now on, all state changes of all SLNet connections between Agents in the cl
 <!-- MR 10.7.0 - FR 10.6.7 -->
 
 Because of a number of enhancements, memory usage has improved when compiling development packs and script libraries.
-
-#### Service template definitions will no longer be stored alongside services [ID 45370]
-
-<!-- MR 10.7.0 - FR 10.6.7 -->
-
-Up to now, service templates were stored alongside services in the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders. Each service template also had exactly one DataMiner Agent actively hosting the service template.
-
-In preparation of service swarming, service template definitions have now been moved into a new `C:\Skyline DataMiner\ServiceTemplates` folder, which will be synchronized across the cluster. A service template no longer has a dedicated hosting agent, which means that they now remain available even if DataMiner Agents are down.
 
 #### SLAnalytics: Enhanced performance when detecting flatline events [ID 45376]
 

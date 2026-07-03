@@ -874,3 +874,36 @@ body.embed {
     }
   }
 }
+
+
+/* Button-style links for DocFX custom div blocks */
+div.button a,
+.button a {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  background-color: #2563eb;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+div.button a:hover,
+.button a:hover {
+  background-color: #1e4fd6;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+html[data-bs-theme='dark'] div.button a,
+html[data-bs-theme='dark'] .button a {
+  background-color: #3b82f6;
+  color: #ffffff !important;
+}
+
+html[data-bs-theme='dark'] div.button a:hover,
+html[data-bs-theme='dark'] .button a:hover {
+  background-color: #2563eb;
+  color: #ffffff !important;
+}

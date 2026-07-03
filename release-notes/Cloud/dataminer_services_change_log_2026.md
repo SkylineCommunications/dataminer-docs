@@ -9,6 +9,78 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 2 July 2026 - Enhancement - Admin - Improved username validation
+
+Username validation has been updated to enforce clearer formatting rules: usernames may not exceed 20 characters, may not contain backslashes, and may not contain consecutive percent signs.
+
+### 2 July 2026 - Enhancement - Admin - Draft subscription management improvements
+
+The *Save draft* and *Delete draft* actions in the subscription flow now have spam click prevention to avoid unintended repeated submissions. In addition, the *Delete draft* option is now also available directly on the *Add Subscription* panel.
+
+### 2 July 2026 - Enhancement - Admin - Continue from draft option and improved draft redirect for subscriptions
+
+On the Billing page of the Admin app, users can now select *Continue from draft* in the *Add subscription* context menu to resume a previously saved draft. Additionally, when a draft is saved, users are now automatically redirected to the subscriptions page.
+
+### 2 July 2026 - Enhancement - Admin - Role validation on user actions
+
+On the organization users page and the system users page in the Admin app, the *Unlink* and *Remove* user action buttons will now be disabled when the current user has the Member role.
+
+### 2 July 2026 - Enhancement - Admin - Improved ticket communication and assignment transparency
+
+Support ticket interactions have been updated to improve efficiency and clarity:
+
+- Ticket link in emails: Confirmation emails now render the ticket ID as a clickable hyperlink, allowing users to navigate directly to the Admin portal without manual searching.
+- Accurate assignment info: The *Assigned to* field in ticket details now accurately reflects the team responsible as tracked in the linked Collaboration task.
+
+### 2 July 2026 - Enhancement - Admin - Support portal accessibility for non-contract organizations
+
+The support landing page has been redesigned to provide a proactive resource hub for organizations without an active maintenance contract. Instead of encountering errors, users are now presented with a clear dashboard featuring direct access to documentation, community resources, and service status, along with actionable pathways to secure maintenance contracts for one-on-one support.
+
+### 22 June 2026 - Enhancement - Admin - Custom time range for subscription usage estimate
+
+When adding a subscription, the *Start from estimate* option now allows you to select a custom time range to calculate the estimate from. The selected time range is limited to a maximum duration of 3 months.
+
+### 22 June 2026 - New feature - Admin - Billable usage export
+
+In the Admin app, you can now export billable usage data from the Billing page or from the billable usage side panel.
+
+### 22 June 2026 - Enhancement - Admin - Billable usage panel 'Name' column renamed to 'System name'
+
+In the billable usage side panel in the Admin app, the *Name* column has been renamed to *System name*.
+
+### 22 June 2026 - Enhancement - All apps - New header with improved help and support integration
+
+All dataminer.services apps now feature a new header with better integration for help and support. In the Catalog app, the search bar has also been moved to a new position.
+
+### 15 June 2026 - Enhancement - Admin - Billable usage chart limited to selected month
+
+On the Billing page of the Admin app, the billable usage chart will now only show dates within the selected month.
+
+### 8 June 2026 - New feature - Admin - Ability to cancel planned subscriptions
+
+On the Billing page of the Admin app, you can now cancel planned subscriptions. When you do so, credits spent for the planned subscription will be refunded.
+
+### 1 June 2026 - New feature - Admin - New side panel with billable usage for services
+
+On the Billing overview page in the Admin app, for data starting from May 2026, service table rows now include an info button that opens a new side panel showing the billable usage details for that service:
+
+- The side panel contains a chart and, where applicable, a table with billable usage data. The table is not shown for organization-based services such as connectors.
+- A toggle button allows you to switch between a cost view and a usage view in the chart. The cost view takes active subscriptions into account, so usage fully covered by a subscription will show as 0.
+- A time range filter is available to adjust the data shown in the panel.
+- The panel updates the URL when opened, making it easy to share or refresh.
+
+### 1 June 2026 - Enhancement - Admin - Auto-renewal toggle button for active subscriptions
+
+On the Billing page of the Admin app, you can now toggle the auto-renewal setting for active normal subscriptions. Custom service, draft, and expired subscriptions are read-only and cannot be modified in this way. You will be notified when the auto-renewal succeeds or fails.
+
+### 1 June 2026 - New feature - Admin - Shareable link to support page
+
+The Admin app now supports a `/support` route at the application root. This allows you to share a direct link to the support page without needing to know the recipient's organization ID. When the link is followed, the organization ID is automatically resolved.
+
+### 1 June 2026 - Enhancement - Status event titles always show full title on hover
+
+When you hover the mouse pointer over a status event title, the full title will now always be shown in a tooltip.
+
 ### 22 May 2026 - New feature - Admin - Audit logs for managing draft subscriptions
 
 Managing draft subscriptions will now create audit logs, allowing administrators to track and review changes related to draft subscription activity.
@@ -63,6 +135,18 @@ When a support ticket is created on the Support page in the Admin app, the *Auto
 ### 7 May 2026 - Enhancement - Admin - Billing overview now shows services table at unit level
 
 On the Billing overview page in the Admin app, the services table now shows data at unit level instead of capping out at service level, giving users a deeper insight into what is affecting their billing the most.
+
+### 7 May 2026 - Enhancement - Admin - Billing - Add discounts to new subscription based on estimate
+
+This change applies discounts to new subscriptions based on estimates.
+
+### 7 May 2026 - New feature - Admin - Support - Ticket creation with attachments
+
+You can now attach files (screenshots, logs, configs, etc.) directly when creating a support ticket. A confirmation email and SharePoint folder are created for the ticket when possible.
+
+### 7 May 2026 - Fix - Admin - DMS Overview - StaaS tile updates when switching DMS
+
+When you switched to a different DMS on the DMS Overview page in the Admin app, it could occur that the StaaS configuration tile was not updated accordingly. The tile will now correctly update based on your role for the selected DMS.
 
 ### 5 May 2026 - New feature - Admin - Draft subscriptions
 

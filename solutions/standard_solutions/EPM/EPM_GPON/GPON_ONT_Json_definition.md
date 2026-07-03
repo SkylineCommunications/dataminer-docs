@@ -1,5 +1,6 @@
 ---
 uid: xPON_ONT_Json_definition
+description: To be able to use the Kafka data stream properly in the EPM xPON Solution, make sure your data is parsed in the correct JSON format.
 ---
 
 # Standard xPON EPM ONT JSON definition

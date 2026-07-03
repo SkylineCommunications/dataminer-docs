@@ -1,5 +1,6 @@
 ---
 uid: PO_Managing_Contacts
+description: Use the People page of the People and Organizations app to add and edit contacts, and to manage skills and experience of those contacts.
 ---
 
 # Managing contacts

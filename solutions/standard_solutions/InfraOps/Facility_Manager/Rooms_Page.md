@@ -1,5 +1,6 @@
 ---
 uid: Rooms_Page
+description: Go to the Rooms page of the Facility Manager to create, edit, and delete rooms, zones, rows, and desks.
 ---
 
 # Rooms

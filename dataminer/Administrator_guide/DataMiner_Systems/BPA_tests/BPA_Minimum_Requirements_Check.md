@@ -4,25 +4,32 @@ uid: BPA_Minimum_Requirements_Check
 
 # DataMiner Agent Minimum Requirements
 
-Prior to DataMiner 10.4.12/10.5.0 [CU10]<!--RN 40751-->, this BPA test is called "Minimum Requirements Check".
+This BPA test is available by default. Prior to DataMiner 10.4.12/10.5.0 [CU10]<!--RN 40751-->, it is available under the name "Minimum Requirements Check".
 
-This BPA test checks if the following minimum hardware requirements are met or exceeded, via local WMI queries using .NET Libraries:
+This BPA test checks several requirements:
 
-- CPU cores (physical): 4
-- Disk size:
+- It checks whether the following minimum hardware requirements are met or exceeded, via local WMI queries using .NET Libraries:
 
-  - Main installation (C:\\): 128 GB
-  - Cassandra installation (D:\\ or other): 600 GB
+  - CPU cores (physical): 4
+  - Disk size:
 
-- Disk usage: Less than 50% on Cassandra drive.
-- System memory: 16 GB
+    - Main installation (C:\\): 128 GB
+    - Cassandra installation (D:\\ or other): 600 GB
 
-This BPA test is available by default from DataMiner 10.1.0 [CU4]/10.1.7 onwards.
+  - Disk usage: Less than 50% on Cassandra drive.
+  - System memory: 16 GB
+
+- From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45631 -->, it checks the **time server settings**. In earlier DataMiner versions, this is checked by a separate [Check Time Server](xref:BPA_Check_Time_Server) BPA test.
+
+  DataMiner relies on the server time to synchronize data, so the time of all DataMiner Agents in a cluster must be synchronized using an NTP server. The BPA test verifies that the NTP server settings are configured correctly and that all DataMiner Agents use the same NTP server to get their time, reporting issues if the configuration could lead to time drift across the DataMiner Agents.
 
 > [!NOTE]
-> Prior to DataMiner 10.6.0 [CU0]/10.5.12, this BPA test requires a disk size of 300 GB for the main installation and 32 GB system memory.<!-- RN 43913 --> However, the requirements indicated on this page are sufficient for most systems.
+>
+> - Prior to DataMiner 10.6.0 [CU0]/10.5.12, this BPA test requires a disk size of 300 GB for the main installation and 32 GB system memory.<!-- RN 43913 --> However, the requirements indicated on this page are sufficient for most systems.
+> - From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45631 -->, this BPA is only run once per cluster, aggregating results from all DataMiner nodes in the cluster.
 
-For more information on system requirements, see [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
+> [!TIP]
+> For more information on system requirements, see [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
 If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your entire DataMiner setup is automatically configured for optimal performance. As such, this BPA test cannot be run on a DaaS system. From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 39929-->, this BPA test will by default have the status *Not applicable* on a DaaS system.
 
@@ -35,13 +42,38 @@ If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your entire 
 
 ## Results
 
+This BPA test reports on two categories of checks:
+
+- *Minimum requirements*: CPU cores, disk size, disk usage, and system memory.
+- *Time Server Settings*: The NTP server configuration of the DataMiner Agents in the cluster.
+
 ### Success
+
+If the system meets or exceeds all minimum hardware requirements, the test will have the following result:
 
 `Test succeeded: System meets all minimum requirements.`
 
-The system meets or exceeds all minimum requirements.
+For the time server settings, the detailed results contain the NTP server per Agent, for example:
+
+`Agent {agentName} (id: {dma id}) uses time server '{NTP server name}'.`
+
+Depending on the configuration, one of the following messages is shown:
+
+- In case the cluster only consists of one Agent (this always succeeds):
+
+  `All DataMiner Agents in the cluster use the same NTP server ([timeserver]).`
+
+- If all DataMiner Agents are configured correctly and use the same NTP server:
+
+  `All DataMiner Agents have the same NTP server configured ([timeserver]).`
+
+- If multiple NTP servers have been detected, but they are peers of one another:
+
+  `Multiple NTP servers have been detected, but they are peers of one another.`
 
 ### Error
+
+#### Errors related to minimum hardware requirements
 
 `X of 5 minimum requirements were not met. See detailed result to obtain more information.`
 
@@ -59,9 +91,53 @@ The detailed JSON output of the BPA will contain the following possible messages
 
 - Memory: `Failed Memory Check: The system has X GB Total Visible Memory, 16 GB is required.` or `Passed Memory Check: The system has X GB Total Visible Memory, 16 GB is required.` (where X is the visible memory, as seen in the control panel).
 
+#### Errors related to time server settings
+
+For all time server errors:
+
+- The outcome is `IssuesDetected`.
+- The impact is `Synchronization of the DMS might be compromised`.
+- The corrective action is `Make sure the NTP servers are correctly set up and synchronized`.
+
+The following errors are possible:
+
+- An unexpected exception occurred while retrieving the NTP server details (no results at all):
+
+  - Result message: `Test was not executed: not all agents in the cluster could be reached.`
+  - Detailed results: `Invoking the check cluster-wide did not return a result.`
+
+- Not all Agents returned a successful response:
+
+  - Result message: `Test was not executed: not all agents in the cluster could be reached.`
+  - Detailed results:
+
+    ```txt
+    Could not retrieve the information of the following agents: 
+    - [Agent x]: [Error]
+    ...
+    ```
+
+- Not all NTP servers are reachable:
+
+  - Result message: `Not all NTP servers are reachable.`
+  - Detailed results: `Agent {agentName} (id: {dma id}) uses NTP server '{NTP server name}'. The Stratum of this server is 0. Stratum 0 indicates the configured NTP server cannot distribute time.` (one line for each Agent)
+
+- No DMA has an NTP server configured:
+
+  - Result message: `No agent in the cluster has an NTP server configured.`
+  - Detailed results: `Agent {agentName} (id: {dma id}) uses NTP server: 'None'`
+
 ### Warning
 
-This BPA does not generate warnings.
+The following warnings related to the time server settings are possible:
+
+- If the NTP server could not be retrieved from all DataMiner Agents:
+
+  - Result message: `The NTP server could not be retrieved from all DataMiner Agents.`
+
+- If multiple NTP servers are detected and they are not peers of one another:
+
+  - Result message: `Multiple NTP servers detected that are not peers of one another.`
 
 ### Not Executed
 

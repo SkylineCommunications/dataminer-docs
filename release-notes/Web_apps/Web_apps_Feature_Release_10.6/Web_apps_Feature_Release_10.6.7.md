@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.6.7
 ---
 
-# DataMiner web apps Feature Release 10.6.7 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.7
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU4].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -25,6 +25,9 @@ In a [recent announcement](https://developers.google.com/maps/deprecations#kml_l
 In order to prolong support for KML overlays, the version of the *Google Maps* provider has been pinned to version 3.65.
 
 When using DataMiner Web version 10.5.0 CU16/10.6.0 CU4/10.6.7 or newer, KML overlays will be supported until May 2027. When using any other DataMiner Web version, KML overlays will no longer be supported from August 2026 onwards.
+
+> [!div class="button"]
+> [Read the blog post on our community website](https://community.dataminer.services/kml-support-is-ending-what-this-means-for-your-dataminer-maps/)
 
 ## New features
 
@@ -90,13 +93,13 @@ From now on, it will also be possible to enable or disable this setting, which h
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
-When you have a *List* component listing spectrum sessions, you can now filter that list by name. To do so, link a data field of type string to the filter of the *List* component. This data field will then act as a filter box.
+When a *List* component uses the *Spectrum sessions* component data exposed by a *Spectrum analyzer* component in a dashboard or app, it displays a list of all spectrum sessions. You can now filter that list by name. To do so, link a data field of type string to the filter of the *List* component. This data field will then act as a filter box.
 
-#### Dashboards/Low-Code Apps - Spectrum analyzer component: New 'Color source' option [ID 45437]
+#### Dashboards/Low-Code Apps - Spectrum analyzer component: New 'Theme source' option [ID 45437]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
 
-The Spectrum analyzer component now has a *Color source* option, which can be set to either "Preset" or "Custom".
+The Spectrum analyzer component now has a *Theme source* option, which can be set to either "Preset" or "Custom".
 
 - When you set this option to "Preset":
 
@@ -107,13 +110,9 @@ The Spectrum analyzer component now has a *Color source* option, which can be se
   - Trace, threshold, minimum, maximum, and average colors are inherited from the theme settings, and can be customized if necessary.
   - Background, font, axis, and grid colors are all inherited from the component theme.
 
+  ![A spectrum analyzer component with its *Theme source* setting set to "Custom"](~/dataminer/images/Spectrum_Analyzer.gif)
+
 In both cases, measurement point trace colors are resolved via theme color indexing based on the measurement point key/name.
-
-#### Dashboards/Low-Code Apps: Redesigned 'Numeric input' component [ID 45457]
-
-<!-- MR 10.7.0 - FR 10.6.7 -->
-
-The *Numeric input* component has been redesigned.
 
 #### Dashboards/Low-Code Apps: Tree and List components now accept a string filter [ID 45485]
 

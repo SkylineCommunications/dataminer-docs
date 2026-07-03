@@ -1,5 +1,6 @@
 ---
 uid: Pricing_billing_and_metering
+description: "Explore billing and metering rules for subscriptions, monthly utilization allowances, invoicing, and overage so you can plan your DataMiner costs."
 ---
 
 # Billing & metering
@@ -128,3 +129,18 @@ MUA increased to 250 credits on August 1, 2023
 **Notification**: You will receive alerts when you are approaching your usage limit and once you have exceeded it.
 
 **Avoid overages**: Although you are not penalized, the cost of overage is at the service's pay-per-use credit rate, which may be higher than the subscription rate. If you expect this overage to be **continuous**, you may want to **review your subscriptions** to benefit from more favorable pricing.
+
+## Non-production environments
+
+We recommend setting up a dedicated **sandbox organization** for non-production environments (staging, dev, lab), to keep a clear technical separation from production. This also ensures that non-production usage is not handled in the same way as production from a commercial and operational perspective, while keeping costs cleanly separated for better cost tracking.
+
+### Requirements
+
+To qualify for non-production billing, an organization must meet the following conditions:
+
+- No live, revenue-generating, or customer-facing workloads.
+- No production data sources or active integrations in use operationally.
+- Registered and designated as non-production at the time of onboarding.
+
+> [!IMPORTANT]
+> Skyline reserves the right to review non-production organization usage. Systems found running production workloads under a non-production organization will be reclassified and billed at standard rates.

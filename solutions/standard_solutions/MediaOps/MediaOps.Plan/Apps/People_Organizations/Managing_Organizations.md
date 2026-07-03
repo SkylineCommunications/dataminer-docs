@@ -1,5 +1,6 @@
 ---
 uid: PO_Managing_Organizations
+description: Use the Organizations page of the People and Organizations app to add and edit organizations, and to manage organization members and categories.
 ---
 
 # Managing organizations

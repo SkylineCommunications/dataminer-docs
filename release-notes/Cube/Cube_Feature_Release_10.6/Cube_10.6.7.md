@@ -2,21 +2,17 @@
 uid: Cube_Feature_Release_10.6.7
 ---
 
-# DataMiner Cube Feature Release 10.6.7 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.7
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU4].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.7](xref:General_Feature_Release_10.6.7).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.7](xref:Web_apps_Feature_Release_10.6.7).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -26,7 +22,9 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 When configuring a correlation rule, it is now possible to specify that a *Group alarms* action has to be executed when that rule is triggered.
 
-This action is similar to the *New alarm* action. When the rule is triggered, a new alarm will be generated, but in the case of the *Group alarm* action, the alarm will have its severity set to "Suggestion" and be linked to the DataMiner element. The value of the alarm can be set in the action itself.
+This action is similar to the *New alarm* action. When the rule is triggered, a new alarm will be generated, but in the case of the *Group alarms* action, the alarm will be linked to the DataMiner element. The value of the alarm can be set in the action itself.
+
+![Correlation rule configured with the *Group alarms* rule action](~/dataminer/images/Group_Alarms_Config.png)
 
 When a group alarm appears in the Alarm Console, the following fields will be updated:
 
@@ -40,6 +38,8 @@ When a group alarm appears in the Alarm Console, the following fields will be up
   | Selected     | Defined     | Name of the grouped object |
   | Not selected | Not defined | Name of the DataMiner Agent |
   | Not selected | Defined     | Name of the DataMiner Agent + Name of the grouped object |
+
+![Alarm Console: two group alarms have been generated](~/dataminer/images/Group_Alarms_Result.png)
 
 When the alarms are filtered (either by means of the quick filter or by means of an alarm filter):
 
@@ -95,15 +95,6 @@ In the *Dark* theme, the *accentLightColor* has been changed to provide more con
 When you played in spectrum recording in a spectrum card, up to now, the progress bar at the bottom of the graph would not clearly indicate the progress of the playback.
 
 From now on, playback progress will clearly be indicated by means of a colored bar.
-
-#### Chromium web browser engine is no longer available [ID 45522]
-
-<!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.7 -->
-
-From now on, the Chromium web browser engine will no longer be available in DataMiner Cube.
-
-- When, in *System Center > System settings > Plugins*, Chromium is still set as default web browser engine, Edge will now be used instead.
-- If, in any visual overview, there are shapes in which the *UseChrome* option is specified, this option will be disregarded. The shapes in question will use Edge instead.
 
 ### Fixes
 

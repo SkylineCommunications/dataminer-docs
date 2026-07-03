@@ -107,9 +107,15 @@ Check the following log files in the order listed:
 
 - **Authorization violations** indicate credential mismatches or missing credential files.
 
+  To resolve this issue, [Repair the NATS cluster](#resettingrepairing-the-brokergateway-nats-cluster).
+
 - **Connection refused errors** suggest firewall or antivirus issues. This can also mean that the NATS service is not running.
 
+  To resolve this issue, check the firewall rules, the network connectivity, and whether the nats-server process is running.
+
 - **Cluster formation errors** point to configuration mismatches between nodes.
+
+  To resolve this issue, [Repair the NATS cluster](#resettingrepairing-the-brokergateway-nats-cluster).
 
 - If the logging for processes includes the line `Failed setting up NATS session: Exception caught in fields fetching: Failed to fetch fields: Remote SSL certificate error. Does the hostname and SSL certificate match?: SSL peer certificate or SSH remote key was not OK"`, this indicates that the certificate used by the site binding of IIS is invalid. Make sure the correct certificate is used by IIS. For more information on how to check and set the IIS HTTPS certificate, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis).
 

@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_services_DaaS
+description: "Use this DataMiner as a Service sizing guide to estimate hosted metrics and nodes, then account for the 1,000,000 metric minimum."
 ---
 
 # Sizing guide: DataMiner as a Service

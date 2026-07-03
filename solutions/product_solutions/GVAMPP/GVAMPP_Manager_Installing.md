@@ -1,12 +1,13 @@
 ---
 uid: GVAMPP_Manager_Installing
+description: Deploy the Grass Valley AMPP Manager application from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the Grass Valley AMPP Manager Application
 
 ## Prerequisites
 
-- **DataMiner 10.4.4/10.5.0** or higher
+- **DataMiner 10.6.0/10.6.3** or higher
 
 - A DataMiner System [**connected to dataminer.services**](xref:Connecting_your_DataMiner_System_to_the_cloud)
 

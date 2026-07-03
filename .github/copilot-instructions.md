@@ -4,16 +4,6 @@ DataMiner Docs is a documentation-only repository containing all documentation r
 
 ## Validation of Changes
 
-### Bootstrap and Validate the Repository
-
-- Clone repository: `git clone https://github.com/SkylineCommunications/dataminer-docs.git`
-- Install validation tools:
-  - `npm install -g markdownlint-cli` - for markdown linting
-  - `pip3 install yamllint` - for YAML validation
-- Validate markdown files: `markdownlint . --ignore node_modules`
-- Validate YAML files: `find . -name "*.yml" -exec yamllint {} \;`
-- Attempt to fix issues caused by the current changes. Do not reformat existing content.
-
 ### Test the Build
 
 - Install docfx: `dotnet tool update -g docfx`
@@ -59,11 +49,13 @@ For most key directories (with the exception of `src`), all images are placed in
 
 1. Each `.md` file must have proper front matter including a unique `uid`.
 2. Each `.md` file must have a corresponding entry in the appropriate `toc.yml` file using the matching `topicUid`. The same file must never be added to more than one `toc.yml` file.
-3. Use DocFX-flavored Markdown syntax as defined in `/contributing/CTB_Markdown_Syntax.md`.
-4. Follow the instructions defined in `/contributing/CTB_Tips.md`.
-5. Avoid em dashes when possible.
-6. One `.md` file must never contain more than 64000 characters.
-7. If changes are implemented that remove all references to a specific image, that image must be removed, with the exception of any images included in the `connectors` directory.
-8. Avoid adding pages that only contain links to underlying pages but no actual content of their own.
-9. When referring to changes introduced by a specific release note, make sure the Main Release version and Feature Release version introducing the changes are mentioned on the page.
-10. Use sentence casing for titles.
+3. Do not use spaces in file and folder names.
+4. Use DocFX-flavored Markdown syntax as defined in `/contributing/CTB_Markdown_Syntax.md`.
+5. Follow the instructions defined in `/contributing/CTB_Tips.md`.
+6. Use US English.
+7. Avoid em dashes when possible.
+8. One `.md` file must never contain more than 64000 characters.
+9. If changes are implemented that remove all references to a specific image, that image must be removed, with the exception of any images included in the `connectors` directory.
+10. Avoid adding pages that only contain links to underlying pages but no actual content of their own.
+11. When referring to changes introduced by a specific release note, make sure the Main Release version and Feature Release version introducing the changes are mentioned on the page.
+12. Use sentence casing for titles.

@@ -1,6 +1,6 @@
 ---
 uid: Skyline_and_DataMiner_security
-description: Skyline Communications continuously invests in security, with a dedicated security team and annual security assessments by third-party specialists.
+description: Find out how Skyline continuously invests in security, with a dedicated security team and annual security assessments by third-party specialists.
 ---
 
 # Skyline Communications and DataMiner security
@@ -9,7 +9,7 @@ At Skyline Communications, security is a core value. Skyline is committed to pro
 
 ## Skyline Communications security
 
-The security of the DataMiner platform starts with the security posture of Skyline Communications itself. This is why Skyline continuously invests in strengthening its internal security practices. To demonstrate this commitment, it is working towards compliance with both the [NIS2 directive](xref:DataMiner_compliance_offering#nis2-and-cra-compliance) and the [ISO/IEC 27001 standard](xref:DataMiner_compliance_offering#isoiec-27001-compliance).
+The security of the DataMiner platform starts with the security posture of Skyline Communications itself. This is why Skyline continuously invests in strengthening its internal security practices. This commitment is demonstrated by Skyline's [ISO/IEC 27001 certification](xref:DataMiner_compliance_offering#isoiec-27001-compliance) and its ongoing efforts to achieve compliance with the [NIS2 directive](xref:DataMiner_compliance_offering#nis2-and-cra-compliance).
 
 ## DataMiner security
 

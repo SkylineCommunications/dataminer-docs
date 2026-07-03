@@ -1,5 +1,6 @@
 ---
 uid: Remote_PHY_Monitoring
+description: Use the low-code apps included in the Remote PHY Monitoring Solution to monitor the Remote PHY devices in your system.
 ---
 
 # Remote PHY Monitoring

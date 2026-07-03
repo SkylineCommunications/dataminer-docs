@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_GQI_Integration
 keywords: I-DOCSIS GQI integration
+description: Find out the actual location of all EPM-related information before you launch any GQI queries to retrieve this information.
 ---
 
 # Integrated DOCSIS GQI integration

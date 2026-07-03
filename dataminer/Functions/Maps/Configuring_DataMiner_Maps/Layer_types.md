@@ -362,6 +362,49 @@ Example:
 </Layer>
 ```
 
+#### Customizing the appearance of GeoJSON overlays
+
+From DataMiner web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45518-->, you can customize the appearance of GeoJSON overlays by defining style properties of the geometry objects in the GeoJSON file.
+
+The following properties are supported:
+
+- `fill`: Defines the fill color of shapes (default: #000000).
+
+- `fill-opacity`: Defines the opacity of the fill color of shapes (default: 0.3).
+
+- `stroke`: Defines the stroke color of shapes and lines (default: #000000).
+
+- `stroke-opacity`: Defines the opacity of the stroke (default: 1).
+
+- `stroke-width`: Defines the weight of the stroke. The higher the value, the wider the stroke (default: 3).
+
+Example:
+
+```json
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [100.0, 0.0],
+        [101.0, 0.0],
+        [101.0, 1.0],
+        [100.0, 1.0],
+        [100.0, 0.0]
+      ]
+    ]
+  },
+  "properties": {
+    "fill": "#FF0000",
+    "fill-opacity": 0.5,
+    "stroke": "#000000",
+    "stroke-opacity": 1,
+    "stroke-width": 2
+  }
+}
+```
+
 ## Layers of sourceType 'parameters'
 
 Set the *sourceType* attribute of a layer to "parameters" if you want that layer to display objects positioned according to latitude and longitude values stored in element or service parameters, and use the following tags to configure the layer:

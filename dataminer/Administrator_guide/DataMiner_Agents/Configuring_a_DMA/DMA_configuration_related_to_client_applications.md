@@ -16,17 +16,6 @@ If it is set to automatically detect the connection settings, Cube will connect 
 > - [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)
 > - [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)
 
-### .NET Remoting with or without eventing
-
-By default, clients connecting to a DataMiner Agent use .NET Remoting with eventing.
-
-- **.NET Remoting with eventing**: When a client uses .NET Remoting with eventing, the DataMiner Agent will send server-initiated notifications to the client. When a client application such as DataMiner Cube connects to a DataMiner Agent, it will open a random port on the client to which the DMA will send its notifications.
-
-- **.NET Remoting without eventing**: When a client uses .NET Remoting without eventing, the DataMiner Agent will not send server-initiated notifications to the client. Instead, the client application will continuously poll the DataMiner Agent for notifications.
-
-> [!NOTE]
-> When a fallback from polling to eventing occurs, an information event is generated that contains the IP address and port that the events are sent to. Clients can use this information to detect why they cannot receive events via the callback method. When a client connects, the log files and diagnostic info also contain the external client IP address as seen from the DataMiner Agent.
-
 ### Manual configuration of client communication settings
 
 To customize how Cube connects to a DMA for a specific computer:
@@ -39,15 +28,15 @@ To customize how Cube connects to a DMA for a specific computer:
 
    - *Auto*: DataMiner will automatically select the connection settings.
 
-   <!-- - *gRPC*: Available from DataMiner 10.3.0/10.3.x onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. -->
+   - *gRPC*: Used by default from DataMiner 10.5.10/10.6.0 onwards.<!-- RN 43506 --> DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443
 
    - *Remoting*: DataMiner will communicate using .NET Remoting.
 
-     - This option is used by default.
+     - This option is used by default prior to DataMiner 10.5.10/10.6.0.
 
      - The default port used for Remoting is port 8004.
 
-     - By default, [eventing](xref:Eventing_or_polling) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g., if a firewall blocks the requests).
+     - By default, [eventing](#net-remoting-with-or-without-eventing) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g., if a firewall blocks the requests).
 
 1. If necessary, adjust the settings for the selected connection type:
 
@@ -64,6 +53,23 @@ To customize how Cube connects to a DMA for a specific computer:
 > - You can also configure this in the DataMiner Cube logon screen, before you actually log on. See [Overriding the default connection type](xref:Overriding_Cube_connection_type).
 > - The procedure above only applies to the one computer where it is done. If you want to change the default client communication settings for a DMA, you can do so in the file *ConnectionSettings.txt*. See [ConnectionSettings.txt](xref:ConnectionSettings_txt#connectionsettingstxt).
 > - From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e., a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if Cube has been manually configured to use .NET Remoting.
+
+### .NET Remoting with or without eventing
+
+If .NET Remoting is used, by default clients connecting to a DataMiner Agent will use eventing.
+
+- **.NET Remoting with eventing**: When a client uses .NET Remoting with eventing, the DataMiner Agent will send server-initiated notifications to the client. When a client application such as DataMiner Cube connects to a DataMiner Agent, it will open a random port on the client to which the DMA will send its notifications. This method offers the best performance, but is not firewall-friendly.
+
+- **.NET Remoting without eventing**: When a client uses .NET Remoting without eventing, the DataMiner Agent will not send server-initiated notifications to the client. Instead, the client application will continuously poll the DataMiner Agent for notifications. Use this method if there are firewalls in your network or if NAT is used.
+
+The client will automatically fall back to polling if the callback port cannot be reached (e.g., if a firewall blocks the requests).
+
+When a fallback from polling to eventing occurs, an information event is generated that contains the IP address and port that the events are sent to. Clients can use this information to detect why they cannot receive events via the callback method. When a client connects, the log files and diagnostic info also contain the external client IP address as seen from the DataMiner Agent.
+
+> [!NOTE]
+>
+> - Within a DataMiner System, some connections can be configured to use eventing, while others can be configured to use polling.
+> - If gRPC is used instead of .NET Remoting, the default HTTPS port is used, so no automatic fallback to polling is needed.
 
 ## Managing client versions
 

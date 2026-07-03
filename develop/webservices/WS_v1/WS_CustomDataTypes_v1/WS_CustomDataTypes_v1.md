@@ -2,7 +2,7 @@
 uid: WS_CustomDataTypes_v1
 ---
 
-# Custom data types (v1)
+# Custom data types
 
 - [AnalogTrendDataResponseMessage](xref:AnalogTrendDataResponseMessage)
 

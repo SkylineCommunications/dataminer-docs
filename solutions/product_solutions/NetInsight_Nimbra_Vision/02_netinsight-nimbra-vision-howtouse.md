@@ -1,5 +1,6 @@
 ---
 uid: netinsight-nimbra-vision-howtouse
+description: Explore the different pages and panels of the NetInsight Nimbra Vision app, which allows you to monitor and orchestrate Nimbra Nodes.
 ---
 
 # Using the NetInsight Nimbra Vision App

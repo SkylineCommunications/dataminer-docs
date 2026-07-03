@@ -1,5 +1,6 @@
 ---
 uid: domviewer_installation
+description: Deploy the DOM Viewer from the DataMiner Catalog, but first check whether the prerequisites are met.
 ---
 
 # Installing the DOM Viewer
