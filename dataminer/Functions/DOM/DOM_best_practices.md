@@ -88,7 +88,7 @@ In most solutions, there are objects that need to be retrieved quite often to di
 
 If values are only needed when a specific object is known (e.g., selected in a low-code app table), create a separate metadata object that stores these additional values. A link can then be made to retrieve these values only when needed. However, as this introduces another read call, you should only do this in case these values are indeed needed less often than the main object values. If these additional values will always be joined to the main object, the performance benefit may be negated, or you may even get the opposite effect.
 
-It is also possible to use a [select read](xref:DomHelper_class#reading-selected-fields) to only retrieve certain values from a larger DOM instance to improve performance. This could be an option to speed up performance when a larger model cannot be split up.
+It is also possible to use a [select read](xref:DOM_helper_crud_methods#reading-selected-fields) to only retrieve certain values from a larger DOM instance to improve performance. This could be an option to speed up performance when a larger model cannot be split up.
 
 **Not recommended:**
 
@@ -173,7 +173,7 @@ Every call to DataMiner (e.g., `DomInstance` create call) and the database has a
 
 - **Use bulk create, update, or delete whenever possible**
 
-  When multiple `DomInstances` need to be created or updated simultaneously, it is advisable to pass them to DataMiner using the [bulk `CreateOrUpdate` method](xref:DomHelper_class#multiple-instances) instead of looping over the list and passing them one by one. This can improve performance up to 10 times. Note that a maximum of 100 `DomInstances` can be passed at once.
+  When multiple `DomInstances` need to be created or updated simultaneously, it is advisable to pass them to DataMiner using the [bulk `CreateOrUpdate` method](xref:DOM_helper_crud_methods#multiple-instances) instead of looping over the list and passing them one by one. This can improve performance up to 10 times. Note that a maximum of 100 `DomInstances` can be passed at once.
 
 - **Avoid doing multiple updates to the same DOM instance in the same script/code**
 
@@ -195,11 +195,11 @@ Every call to DataMiner (e.g., `DomInstance` create call) and the database has a
 
   However, it is important that not too many `DomInstances` are read at once. Make sure that there are **less than 1000 records for each call**.
 
-  When there is a need to retrieve a large number of `DomInstances`, you should use [paging](xref:DomHelper_class#reading-dom-data). This increases the number of read calls, but since the payload is large, splitting up the calls is beneficial.
+  When there is a need to retrieve a large number of `DomInstances`, you should use [paging](xref:DOM_helper_crud_methods#reading-dom-data). This increases the number of read calls, but since the payload is large, splitting up the calls is beneficial.
 
 - **Select only the fields you need when reading**
 
-  When you only need a subset of a `DomInstance`'s properties (for example when populating a table), select those fields using the `SelectedFields<DomInstance>` overloads of `Read` or `PreparePaging` instead of retrieving full objects. This feature (see [Read selected fields](xref:DomHelper_class#reading-selected-fields)) reduces payload size and can significantly improve performance and memory usage. This feature is available from DataMiner 10.6.0/10.6.1 onwards <!-- RN 43852 -->.
+  When you only need a subset of a `DomInstance`'s properties (for example when populating a table), select those fields using the `SelectedFields<DomInstance>` overloads of `Read` or `PreparePaging` instead of retrieving full objects. This feature (see [Read selected fields](xref:DOM_helper_crud_methods#reading-selected-fields)) reduces payload size and can significantly improve performance and memory usage. This feature is available from DataMiner 10.6.0/10.6.1 onwards <!-- RN 43852 -->.
 
 ### Avoid using DOM CRUD scripts for DOM definitions that see many instance creates or updates
 
