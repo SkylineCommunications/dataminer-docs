@@ -8,6 +8,8 @@ uid: orchestrator_change_log
 
 Orchestrator now supports the use of the `ForcedEndpoints` setting in *MessageBrokerConfig.json*. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
 
+In addition, Orchestrator has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
+
 #### 14 April 2026 - Enhancement - Orchestrator 1.8.2 - Dependencies updated
 
 Several dependencies have been updated.
