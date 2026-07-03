@@ -1,5 +1,6 @@
 ---
-uid: Making_Cassandra_nodetool_accessible_remotely
+uid: Making_Cassandra_nodetool_accessible_remotely"
+description: "Follow these steps to make the Cassandra nodetool accessible remotely on a Windows server and on a Linux server."
 ---
 
 # Making Cassandra nodetool accessible remotely

@@ -1,5 +1,6 @@
 ---
 uid: replication_and_consistency_configuration
+description: "Configure replication factor and consistency level if you chose to use self-managed storage instead of the recommended STaaS setup."
 ---
 
 # Data replication and consistency configuration

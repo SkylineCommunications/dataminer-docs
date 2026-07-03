@@ -1,5 +1,6 @@
 ---
 uid: Installing_Cassandra
+description: "Install Cassandra on a Linux machine if you choose to use self-manage storage instead of the recommended STaaS setup."
 ---
 
 # Installing Cassandra on a Linux machine

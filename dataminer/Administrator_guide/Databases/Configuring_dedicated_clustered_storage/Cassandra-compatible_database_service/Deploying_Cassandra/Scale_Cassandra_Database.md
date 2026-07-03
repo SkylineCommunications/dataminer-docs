@@ -1,5 +1,6 @@
 ---
 uid: Scale_Cassandra_Database
+description: "Find out how to scale your Cassandra cluster database by adding or removing nodes if you did not choose to use the recommended STaaS setup."
 ---
 
 # Adding and removing nodes in a Cassandra cluster database
