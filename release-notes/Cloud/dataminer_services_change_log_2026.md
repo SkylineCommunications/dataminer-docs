@@ -9,6 +9,33 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 2 July 2026 - Enhancement - Admin - Improved username validation
+
+Username validation has been updated to enforce clearer formatting rules: usernames may not exceed 20 characters, may not contain backslashes, and may not contain consecutive percent signs.
+
+### 2 July 2026 - Enhancement - Admin - Draft subscription management improvements
+
+The *Save draft* and *Delete draft* actions in the subscription flow now have spam click prevention to avoid unintended repeated submissions. In addition, the *Delete draft* option is now also available directly on the *Add Subscription* panel.
+
+### 2 July 2026 - Enhancement - Admin - Continue from draft option and improved draft redirect for subscriptions
+
+On the Billing page of the Admin app, users can now select *Continue from draft* in the *Add subscription* context menu to resume a previously saved draft. Additionally, when a draft is saved, users are now automatically redirected to the subscriptions page.
+
+### 2 July 2026 - Enhancement - Admin - Role validation on user actions
+
+On the organization users page and the system users page in the Admin app, the *Unlink* and *Remove* user action buttons will now be disabled when the current user has the Member role.
+
+### 2 July 2026 - Enhancement - Admin - Improved ticket communication and assignment transparency
+
+Support ticket interactions have been updated to improve efficiency and clarity:
+
+- Ticket link in emails: Confirmation emails now render the ticket ID as a clickable hyperlink, allowing users to navigate directly to the Admin portal without manual searching.
+- Accurate assignment info: The *Assigned to* field in ticket details now accurately reflects the team responsible as tracked in the linked Collaboration task.
+
+### 2 July 2026 - Enhancement - Admin - Support portal accessibility for non-contract organizations
+
+The support landing page has been redesigned to provide a proactive resource hub for organizations without an active maintenance contract. Instead of encountering errors, users are now presented with a clear dashboard featuring direct access to documentation, community resources, and service status, along with actionable pathways to secure maintenance contracts for one-on-one support.
+
 ### 22 June 2026 - Enhancement - Admin - Custom time range for subscription usage estimate
 
 When adding a subscription, the *Start from estimate* option now allows you to select a custom time range to calculate the estimate from. The selected time range is limited to a maximum duration of 3 months.
@@ -16,10 +43,6 @@ When adding a subscription, the *Start from estimate* option now allows you to s
 ### 22 June 2026 - New feature - Admin - Billable usage export
 
 In the Admin app, you can now export billable usage data from the Billing page or from the billable usage side panel.
-
-### 22 June 2026 - Enhancement - Admin - 'Unlink' and 'Remove' user action buttons disabled for Member role
-
-On the organization users page and the system users page in the Admin app, the *Unlink* and *Remove* user action buttons will now be disabled when the current user has the Member role.
 
 ### 22 June 2026 - Enhancement - Admin - Billable usage panel 'Name' column renamed to 'System name'
 
