@@ -575,6 +575,8 @@ items:
                 topicUid: PieAndDonutChart
           - name: Other
             items:
+              - name: Assistant chat
+                topicUid: DashboardAssistantChat
               - name: Timeline
                 topicUid: DashboardTimeline
               - name: List
