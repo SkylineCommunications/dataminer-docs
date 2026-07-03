@@ -4,7 +4,7 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 11 June 2026 - Enhancement - CloudGateway 3.2.0 - Upgrade to .NET 10 [ID 40431]
+#### 11 June 2026 - Enhancement - CloudGateway 3.2.0 - Upgrade to .NET 10
 
 DataMiner CloudGateway has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
 
