@@ -1,5 +1,6 @@
 ---
 uid: Configuring_storage_per_DMA
+description: "Explore how storage per DMA has to be configured if you are still using an older setup with storage per DMA instead of a recommended STaaS setup."
 ---
 
 # Configuring storage per DMA

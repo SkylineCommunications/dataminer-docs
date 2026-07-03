@@ -1,5 +1,6 @@
 ---
 uid: MySQL_database
+description: "Find out how, on legacy DataMiner Systems, typically a MySQL (or MSSQL) database was used as the general database."
 keywords: local database
 ---
 
