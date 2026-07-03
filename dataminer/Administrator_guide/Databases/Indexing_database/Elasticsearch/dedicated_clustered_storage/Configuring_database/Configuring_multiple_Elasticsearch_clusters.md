@@ -1,5 +1,6 @@
 ---
 uid: Configuring_multiple_Elasticsearch_clusters
+description: "Follow these steps to configure multiple Elasticsearch clusters, which is crucial when on-premises setups are considered."
 ---
 
 <!-- Note for documentation, keep in sync with Configuring_multiple_OpenSearch_clusters.md where applicable.-->

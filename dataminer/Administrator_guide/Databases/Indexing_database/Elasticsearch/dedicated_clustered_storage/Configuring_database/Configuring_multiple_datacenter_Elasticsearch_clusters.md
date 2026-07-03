@@ -1,5 +1,6 @@
 ---
 uid: Configuring_multiple_datacenter_Elasticsearch_cluster
+description: "Configure your multiple data center Elasticsearch cluster with allocation awareness to ensure that the data is spread between the different locations."
 keywords: allocation awareness, elasticsearch
 ---
 
