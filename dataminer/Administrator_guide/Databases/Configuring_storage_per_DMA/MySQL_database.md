@@ -1,6 +1,6 @@
 ---
 uid: MySQL_database
-description: "Find out how, on legacy DataMiner Systems, typically a MySQL (or MSSQL) database was used as the general database."
+description: "Understand MySQL and MSSQL use in legacy DataMiner Systems, before Cassandra or Storage as a Service (STaaS) became the default storage."
 keywords: local database
 ---
 

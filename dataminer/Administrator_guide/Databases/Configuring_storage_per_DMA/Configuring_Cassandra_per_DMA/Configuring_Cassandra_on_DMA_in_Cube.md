@@ -1,6 +1,6 @@
 ---
 uid: Configuring_Cassandra_per_DMA_in_Cube
-description: "Follow these steps to configure the Cassandra database per DMA settings if you did not choose to use the recommended STaaS setup."
+description: "Configure Cassandra per DMA in DataMiner Cube by setting database type, server, credentials, and connection string for self-managed storage."
 keywords: local database
 ---
 

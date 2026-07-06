@@ -1,6 +1,6 @@
 ---
 uid: Amazon_OpenSearch_Service
-description: "Explore how, on older DataMiner Systems, it was possible to use the Amazon OpenSearch Service on AWS as indexing database."
+description: "Learn how the deprecated Amazon OpenSearch Service setup was used as a DataMiner indexing database in older systems."
 ---
 
 # Amazon OpenSearch Service

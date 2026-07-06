@@ -1,6 +1,6 @@
 ---
 uid: Maintain_Cassandra_Cluster
-description: "Explore how to maintain and monitor your Cassandra cluster database if you did not choose to use the recommended STaaS setup."
+description: "Learn how to maintain a self-managed DataMiner Cassandra Cluster with heap tuning, monitoring, repair planning, and software updates."
 ---
 
 # Maintaining a Cassandra cluster

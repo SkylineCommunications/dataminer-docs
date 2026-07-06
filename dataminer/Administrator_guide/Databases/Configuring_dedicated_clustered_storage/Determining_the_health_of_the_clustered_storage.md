@@ -1,6 +1,6 @@
 ---
 uid: Determining_the_health_of_the_clustered_storage
-description: "Explore how to determine the health of the dedicated clustered storage if you did not choose to use the recommended STaaS setup."
+description: "Learn how to assess Cassandra and OpenSearch cluster health using alarms, logs, and GREEN, YELLOW, and RED status thresholds."
 ---
 
 # Determining the health of the dedicated clustered storage

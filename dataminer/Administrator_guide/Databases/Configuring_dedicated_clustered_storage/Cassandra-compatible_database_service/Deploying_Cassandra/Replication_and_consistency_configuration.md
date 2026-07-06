@@ -1,6 +1,6 @@
 ---
 uid: replication_and_consistency_configuration
-description: "Configure replication factor and consistency level if you chose to use self-managed storage instead of the recommended STaaS setup."
+description: "Optimize DataMiner Cassandra Cluster reliability by configuring replication factor and consistency level for resilient reads and writes."
 ---
 
 # Data replication and consistency configuration
