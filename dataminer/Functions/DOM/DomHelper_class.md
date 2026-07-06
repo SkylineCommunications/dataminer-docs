@@ -7,7 +7,8 @@ uid: DomHelper_class
 ## CRUD methods
 
 The `DomHelper` class can be used in a script, protocol, or app to execute create, read, update, and delete (CRUD) actions on DOM objects.
-See the [CRUD methods](xref:DOM_helper_crud_methods) sub-page for all the info on how the helper and all its functionality can be used.
+
+For detailed info on how the helper and all its functionality can be used, refer to [CRUD methods](xref:DOM_helper_crud_methods).
 
 ## Special methods
 

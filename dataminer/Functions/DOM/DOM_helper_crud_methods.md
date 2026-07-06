@@ -229,7 +229,7 @@ The overloads of `Read` and `PreparePaging` introduced in DataMiner 10.6.0/10.6.
 >
 > - The `Id` is always available on a `PartialObject`; you do not need to add the `Id` exposer to `SelectedFields<DomInstance>`.
 > - Selecting the `FieldValues` or `FullObject` exposer is not supported and will result in a failed read operation.
-> - Reading a selected subset of fields can yield a significant performance improvement depending on the difference in amount of data being read from the database and transferred to the client. Note however that a large amount of fields on the `DomInstance` still impacts the select performance when used with an on-prem database.
+> - Reading a selected subset of fields can yield a significant performance improvement depending on the difference in the amount of data being read from the database and transferred to the client. Note, however, that a large number of fields on the `DomInstance` will still affect the select performance when used with an on-prem database.
 
 When used, these methods return a list of `PartialObject<DomInstance, DomInstanceId>`, which provides:
 
