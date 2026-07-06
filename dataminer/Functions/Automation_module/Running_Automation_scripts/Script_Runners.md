@@ -35,4 +35,4 @@ The following maximum limits apply:
 > [!NOTE]
 >
 > - A script executed in a Runner can run for a maximum of 12 hours. When a script exceeds this duration, its execution is stopped.
-> - Scripts executed in a Runner do not have the `C:\Skyline DataMiner\Files` hint path added by default. If your script references DLLs located in that folder, add the hint path explicitly in the script.
+> - Scripts executed in a Runner do not have the `C:\Skyline DataMiner\Files` hint path added by default. If your script references DLLs located in that folder, you must explicitly add the hint path in the script. However, avoid referencing DLLs from this folder or adding the hint path, as this can lead to conflicts with dependencies from DataMiner.
