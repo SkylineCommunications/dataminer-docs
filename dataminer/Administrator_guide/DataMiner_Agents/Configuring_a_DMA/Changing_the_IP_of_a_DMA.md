@@ -26,7 +26,7 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 1. Go to the folder `C:\Skyline DataMiner\Configurations`. If the file *ClusterEndpoints.json* exists, open it. Otherwise, skip the next step.
 
 1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
-   Run [NATSRepair](BrokerGateway_Migration.md#natsrepairexe) to create new certificates using this new IP.
+   Run [NATSRepair](xref:BrokerGateway_Migration.md#natsrepairexe) to create new certificates using this new IP.
 
 1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
@@ -137,7 +137,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
    This action will need to be repeated for all Agents in the cluster, including offline Failover Agents.
 
-   Once the IP addresses have been changed on all Agents, run [NATSRepair](BrokerGateway_Migration.md#natsrepairexe) on one agent to create new certificates using this new IP.
+   Once the IP addresses have been changed on all Agents, run [NATSRepair](xref:BrokerGateway_Migration.md#natsrepairexe) on one agent to create new certificates using this new IP.
 
 1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
@@ -292,7 +292,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
    This action will need to be repeated for all Agents in the cluster, including offline Failover Agents.
 
-   Once the IP addresses have been changed on all Agents, run [NATSRepair](BrokerGateway_Migration.md#natsrepairexe) on one agent to create new certificates using this new IP.
+   Once the IP addresses have been changed on all Agents, run [NATSRepair](xref:BrokerGateway_Migration.md#natsrepairexe) on one agent to create new certificates using this new IP.
 
 1. If the DMAs host a Cassandra database, do the following **on both DMAs**:
 
