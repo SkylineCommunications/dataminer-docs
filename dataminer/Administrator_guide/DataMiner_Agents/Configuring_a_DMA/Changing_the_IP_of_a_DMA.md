@@ -23,9 +23,13 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
 1. In the HTTPS tag, replace the old IP address with the newly configured one if necessary, and save the file.
 
-1. Go to the folder `C:\Skyline DataMiner\Configurations`. If the file *ClusterEndpoints.json* exists, open it. Otherwise, skip the next step.
+1. Go to the folder `C:\Skyline DataMiner\Configurations`, and check if the file *ClusterEndpoints.json* exists.
 
-1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+   If the file exists, follow these steps:
+
+   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+
+   1. When you have replaced the IP address, run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) to create new certificates using the new IP address.
 
 1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
@@ -130,11 +134,15 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
 1. In the HTTPS tag, replace the old IP address with the newly configured one if necessary, and save the file.
 
-1. Go to the folder `C:\Skyline DataMiner\Configurations`. If the file *ClusterEndpoints.json* exists, open it. Otherwise, skip the next step.
+1. Go to the folder `C:\Skyline DataMiner\Configurations`, and check if the file *ClusterEndpoints.json* exists.
 
-1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+   If the file exists, follow these steps:
 
-   This action will need to be repeated for all Agents in the cluster, including offline Failover Agents.
+   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+
+   1. Repeat this action for all Agents in the cluster, including offline Failover Agents.
+
+   1. When the IP addresses have been changed on all Agents, run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) on one Agent to create new certificates using the new IP address.
 
 1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
@@ -283,11 +291,15 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. In the HTTPS tag, replace the old IP address with the newly configured one if necessary, and save the file.
 
-1. Go to the folder `C:\Skyline DataMiner\Configurations`. If the file *ClusterEndpoints.json* exists, open it. Otherwise, skip the next step.
+1. Go to the folder `C:\Skyline DataMiner\Configurations`, and check if the file *ClusterEndpoints.json* exists.
 
-1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+   If the file exists, follow these steps:
 
-   This action will need to be repeated for all Agents in the cluster, including offline Failover Agents.
+   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+
+   1. Repeat this action for all Agents in the cluster, including offline Failover Agents.
+
+   1. When the IP addresses have been changed on all Agents, run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) on one Agent to create new certificates using the new IP address.
 
 1. If the DMAs host a Cassandra database, do the following **on both DMAs**:
 
