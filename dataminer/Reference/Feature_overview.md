@@ -56,7 +56,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards/Low-Code Apps: [Customizing timeline groups](xref:DashboardTimeline#customizing-timeline-groups) using the Template Editor | DataMiner web 10.5.0 [CU12]/10.6.3 <!-- [ID 44557] --> |
 | Dashboards/Low-Code Apps: [Customizing nodes](xref:DashboardNodeEdgeGraph#customizing-nodes) using the Template Editor | DataMiner web 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 <!-- [ID 44809] --> |
 | Dashboards/Low-Code Apps: [Dynamic references in text](xref:Dynamically_Referencing_Data_in_Text) | DataMiner 10.3.11/10.4.0<!-- [ID 37229] --> |
-| Dashboards/Low-Code Apps: [Exporting a GQI query](xref:Creating_GQI_query#exporting-a-query) | DataMiner web 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- [ID 43800] --> |
+| Dashboards/Low-Code Apps: [Exporting a GQI query](xref:Exporting_a_query) | DataMiner web 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!-- [ID 43800] --> |
 | Dashboards/Low-Code Apps: [Flows](xref:Using_flows) | DataMiner web 10.4.0 [CU9]/10.4.12<!-- [ID 40974] --><br>Minimum server version: DataMiner 10.3.9/10.4.0 |
 | Dashboards/Low-Code Apps: [*Form* component](xref:DashboardForm) and DOM data input | DataMiner web 10.3.6/10.4.0<br>DataMiner 10.1.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#dommanager) <!-- [ID 36124] -->|
 | Dashboards/Low-Code Apps: [*Grid* component](xref:DashboardGrid) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) |
