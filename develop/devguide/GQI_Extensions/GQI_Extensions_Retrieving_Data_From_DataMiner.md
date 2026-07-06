@@ -18,7 +18,7 @@ Choose the approach based on the API you use, the lifetime of the code that need
 - [Using OnInitInputArgs.DMS](#using-oninitinputargsdms): Use this with the legacy `SLAnalyticsTypes` API or when constructor injection is not available.
 
 > [!TIP]
-> To share or cache retrieved data across different GQI sessions, [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) and [IConnection](xref:Skyline.DataMiner.Net.IConnection) can also be used via GQI services. For more information, see [Retrieving data from DataMiner in services](xref:GQI_Extensions_Services#retrieving-data-from-dataminer-in-services).
+> To share or cache retrieved data across different GQI sessions, [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) and [IConnection](xref:Skyline.DataMiner.Net.IConnection) can also be used via user-scoped GQI services. For more information, see [Retrieving data from DataMiner in services](xref:GQI_Extensions_Services#retrieving-data-from-dataminer-in-services).
 
 ## Injecting IConnection
 

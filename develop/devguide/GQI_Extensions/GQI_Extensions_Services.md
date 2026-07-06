@@ -141,10 +141,7 @@ If a service constructor dependency cannot be resolved or the constructor throws
 
 User-scoped services can inject [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) or [IConnection](xref:Skyline.DataMiner.Net.IConnection). GQI provides the same user connection as it would provide if the dependency were injected directly into the extension for that query. This allows a user-scoped service to cache and reuse user-specific data.
 
-Security-scoped services can also inject these dependencies. In this scope, the connection is based on the security group combination, so it can be used to keep data cached and synchronized for all users with the same security context.
-
-> [!IMPORTANT]
-> To use connections in security-scoped services, DataMiner needs to support security group combination connections. This requires a full upgrade to DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 or higher<!-- RN 45658 -->.
+Security-scoped services do not yet support injecting these dependencies.
 
 See also: [Retrieving data from DataMiner](xref:GQI_Extensions_Retrieving_Data_From_DataMiner#choosing-an-approach).
 
@@ -184,8 +181,8 @@ The following types can be used as constructor parameters:
 |--|--|--|
 | [IGQILogger](xref:GQI_IGQILogger) | A logger for the extension or service. | Extensions and services |
 | [IGQIFactory](xref:GQI_IGQIFactory) | Factory methods to create GQI objects. | Extensions and services |
-| [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) | Access to the DataMiner System. | Extensions and [security/user-scoped services](#retrieving-data-from-dataminer-in-services) |
-| [IConnection](xref:Skyline.DataMiner.Net.IConnection) | A live SLNet connection to the DataMiner System. | Extensions and [security/user-scoped services](#retrieving-data-from-dataminer-in-services) |
+| [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) | Access to the DataMiner System. | Extensions and [user-scoped services](#retrieving-data-from-dataminer-in-services) |
+| [IConnection](xref:Skyline.DataMiner.Net.IConnection) | A live SLNet connection to the DataMiner System. | Extensions and [user-scoped services](#retrieving-data-from-dataminer-in-services) |
 | [IGQISecurity](xref:GQI_IGQISecurity) | The current security context. | Extensions, security services, and user services |
 | [IGQIUser](xref:GQI_IGQIUser) | The user context. | Extensions and user services |
 | [IGQISession](xref:GQI_IGQISession) | The session context. | Extensions |

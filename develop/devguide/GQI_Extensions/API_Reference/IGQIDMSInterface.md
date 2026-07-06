@@ -13,7 +13,7 @@ Provides access to the DataMiner System (DMS).
 
 Available from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards.<!-- RN 45635 -->
 
-This type can be used to inject DMS access via the constructor of a GQI extension or GQI service when using the [GQI DxM](xref:GQI_DxM).
+This type can be used to inject DMS access via the constructor of a GQI extension or user-scoped GQI service when using the [GQI DxM](xref:GQI_DxM).
 
 > [!TIP]
 > See also:
