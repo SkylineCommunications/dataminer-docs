@@ -1,5 +1,6 @@
 ---
 uid: Azure_Managed_Instance_for_Apache_Cassandra
+description: "Find out about the deprecated Azure Managed Instance setup, which could be used instead of Cassandra Cluster but is no longer supported."
 ---
 
 # Setting up an Azure Managed Instance for Apache Cassandra
