@@ -1,6 +1,6 @@
 ---
 uid: Deploying_Amazon_Keyspaces_Service
-description: "Find out how to deploy the Amazon Keyspaces Service, which was deprecated in favor of Storage as a Service (STaaS)."
+description: "Find out about the deployment of the Amazon Keyspaces Service, which could be used instead of Cassandra Cluster but is no longer supported."
 ---
 
 # Deploying the Amazon Keyspaces Service
