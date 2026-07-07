@@ -71,11 +71,11 @@ Depending on the configuration, one of the following messages is shown:
 
   `Multiple NTP servers have been detected, but they are peers of one another.`
 
-- From DataMiner 10.6.9/10.7.0 onwards<!-- RN 45661 -->, to support hybrid clusters, if multiple NTP servers are detected that are not peers of one another but the agent clocks nevertheless agree within one second, the test still succeeds:
+- If multiple NTP servers have been detected that are not peers of one another, but the Agent clocks nevertheless agree within one second:
 
   `Multiple NTP servers detected that are not peers of one another, but agent clocks agree within 1 second (measured difference up to {X} seconds).`
 
-  In this case, the detailed results also list the measured clock offset per Agent, for example:
+  This message can be shown from DataMiner 10.6.9/10.7.0 onwards<!-- RN 45661 --> and was introduced to support hybrid clusters. The detailed results also list the measured clock offset per Agent, for example:
 
   `Clock offsets between agents (relative to the slowest clock): {agentName} (id: {dma id}) +0.000s (±0.000s); ...`
 
@@ -135,7 +135,7 @@ The following errors are possible:
   - Result message: `No agent in the cluster has an NTP server configured.`
   - Detailed results: `Agent {agentName} (id: {dma id}) uses NTP server: 'None'`
 
-- From DataMiner 10.6.9/10.7.0 onwards<!-- RN 45661 -->, if multiple NTP servers are detected that are not peers of one another and the measured clock difference between Agents exceeds 5 seconds:
+- From DataMiner 10.6.9/10.7.0 onwards<!-- RN 45661 -->, if multiple NTP servers are detected that are not peers of one another, and the measured clock difference between Agents exceeds 5 seconds:
 
   - Result message: `Multiple NTP servers detected that are not peers of one another, and agent clocks differ by up to {X} seconds, which exceeds the 5 second threshold.`
   - Detailed results: The per-Agent clock offsets, for example `Clock offsets between agents (relative to the slowest clock): {agentName} (id: {dma id}) +0.000s (±0.000s); ...`
