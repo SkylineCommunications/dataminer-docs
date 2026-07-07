@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.6.8
 ---
 
-# DataMiner web apps Feature Release 10.6.8 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.8
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU5].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,7 +16,13 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been selected yet.*
+#### Dashboards/Low-Code Apps: Exporting and importing GQI queries to and from raw JSON format [ID 45630]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+In dashboards and low-code apps, GQI queries can now be exported as raw JSON using a new *Dashboards / Apps* export option. In addition, a new import option allows you to create a query by pasting previously exported JSON, making it possible to reuse and share queries across dashboards and apps.
+
+![Importing and exporting a GQI query to a different dashboard or low-code app](~/dataminer/images/ImportExportQuery.gif)
 
 ## New features
 
@@ -46,14 +52,6 @@ When the GQI DxM is being used, from now on, GQI will expose the following metad
 - Step (i.e., the step size)
 
 This metadata will be available for numeric columns across all parameter-based data sources.
-
-#### Dashboards/Low-Code Apps: Exporting and importing GQI queries to and from raw JSON format [ID 45630]
-
-<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
-
-In dashboards and low-code apps, GQI queries can now be exported as raw JSON using a new *Dashboards / Apps* export option. In addition, a new import option allows you to create a query by pasting previously exported JSON, making it possible to reuse and share queries across dashboards and apps.
-
-![Importing and exporting a GQI query to a different dashboard or low-code app](~/dataminer/images/ImportExportQuery.gif)
 
 ## Changes
 
