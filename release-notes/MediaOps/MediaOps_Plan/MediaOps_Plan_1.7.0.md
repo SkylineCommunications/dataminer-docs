@@ -81,6 +81,17 @@ With this change:
 
 This simplifies event management and ensures that MediaOps Live reflects only confirmed jobs.
 
+#### Scheduling/Workflow Designer: Swapping to a different pool now prompts to keep or reset node configuration [ID 45924]
+
+When you swap a resource or resource pool node to a different pool in the Workflow Designer or directly on a job, MediaOps Plan now detects whether the new pool has a different scheduling configuration.
+
+If differences are found, you now get a prompt to choose one of the following options:
+
+- **Keep**: Keep the node's current configuration and automated actions.
+- **Revert**: Reset the node configuration and automated actions to match the new pool.
+
+Previously, swapping pools silently kept the old configuration, which could leave a node with settings that no longer matched its new pool. Now you decide explicitly, at the moment of the swap.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
