@@ -40,3 +40,15 @@ To resolve this:
 1. After terminating the process, refresh your dashboard or application.
 
    This will prompt GQI to fetch the latest protocol changes and display accurate query results.
+
+## How to embed the DataMiner web apps in a portal using a single sign-on experience
+
+To embed DataMiner web apps (e.g. dashboards or low-code apps) in a third-party portal with a seamless single sign-on (SSO) experience, keep the following requirements in mind:
+
+- **Shared Identity Provider**: Both the portal and the hosting DataMiner Agent must use SAML authentication configured against the **same Identity Provider (IdP)**. Other agents in the DataMiner System do not need to share this authentication flow, unless a load balancer is used.
+
+- **Hosting Agent**: The DataMiner Agent hosting the web apps does not need to be a gateway — a regular DataMiner Agent is sufficient. It does, however, need to use SAML authentication through the same IdP as the portal (see above).
+
+- **Different domain or host names**: The portal and the hosting DataMiner Agent must be served from **different domain or host names**. This is required for the browser to correctly apply cross-origin security restrictions.
+
+- **iframe sandbox attribute**: The `<iframe>` element used to embed the web app must **not** have the `sandbox` attribute set. Because the embedded page originates from a different domain, the browser already applies the necessary cross-origin restrictions automatically. The hosting agent's web page can still read its own authentication cookie because that access is same-origin.
