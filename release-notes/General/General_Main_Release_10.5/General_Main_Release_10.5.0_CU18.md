@@ -44,6 +44,12 @@ This new application pool is called *DataMiner WebAPI AppPool*. it is solely int
 
 ### Fixes
 
+#### Problem with SLPort when sending a large message over a WebSocket connection [ID 45625]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when a large message (e.g., a message with a size of 400 KB) was sent over a WebSocket connection, in some cases, an internal buffer issue could cause the SLPort process to stop unexpectedly.
+
 #### Protocol object outside of QAction run would incorrectly not be notified when the element was stopped [ID 45749]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
