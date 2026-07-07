@@ -603,11 +603,11 @@ From now on, the BPA test will compare the server times of all Agents in the clu
 
 The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
-#### SLLogCollector will now automatically include a memory dump of SLPort and SLSNMPManager when a runtime error was detected in SLProtocol [ID 45865]
+#### SLLogCollector will now automatically be configured to include a memory dump of SLPort and SLSNMPManager when a runtime error was detected in SLProtocol [ID 45865]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
-From now on, when a runtime error was detected in SLProtocol, SLLogCollector will now automatically include a memory dump of the SLPort and SLSNMPManager processes.
+From now on, when you open the SLLogCollector tool, the tool will automatically be configured to include a memory dump of the SLPort and SLSNMPManager processes when a runtime error was detected in SLProtocol.
 
 ### Fixes
 
