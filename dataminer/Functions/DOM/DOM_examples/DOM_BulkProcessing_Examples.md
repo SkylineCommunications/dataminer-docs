@@ -6,7 +6,7 @@ uid: DOM_BulkProcessing_Examples
 
 From DataMiner 10.4.2/10.5.0 onwards<!-- RN 37891 -->, the `DomInstance` CRUD helper component supports processing multiple `DomInstances` in one call.
 
-In DataMiner 10.5.0/10.5.2<!-- RN 41546 -->, the error handling has been reviewed. Below you will find examples on how you can use these calls, provided by the [DomHelper](xref:DomHelper_class#multiple-instances).
+In DataMiner 10.5.0/10.5.2<!-- RN 41546 -->, the error handling has been reviewed. Below you will find examples on how you can use these calls, provided by the [DomHelper](xref:DOM_helper_crud_methods#multiple-instances).
 
 Please keep the following in mind:
 
@@ -14,7 +14,7 @@ Please keep the following in mind:
 
 - When designing the object model, consider if a **high number of `DomInstances`** might need to be processed quickly or need to be provisioned. If this is the case, we recommend **avoiding related actions** such as [launching script actions](xref:ExecuteScriptOnDomInstanceActionSettings) and [history tracking](xref:DOM_history).
 
-  The number of `DomInstances` that can be passed to these methods is [**limited to 100**](xref:DomHelper_class#maximum-number-of-instances). Since those related actions might outlive these CRUD calls, keep in mind that repeating these operations in succession can still impact the stability of the system.
+  The number of `DomInstances` that can be passed to these methods is [**limited to 100**](xref:DOM_helper_crud_methods#maximum-number-of-instances). Since those related actions might outlive these CRUD calls, keep in mind that repeating these operations in succession can still impact the stability of the system.
 
 ## Creating multiple DomInstances
 

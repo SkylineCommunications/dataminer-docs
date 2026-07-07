@@ -1,12 +1,14 @@
 ---
 uid: Importing_a_query
+keywords: import query, query JSON, GQI query, reuse query
+description: Import a GQI query from exported JSON or another dashboard to reuse exiting query configurations without rebuilding them.
 ---
 
 # Importing a query
 
 ## Importing a query from JSON
 
-From DataMiner 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 onwards<!--RN 45630-->, you can import a query from raw JSON previously exported using the [*Dashboards / Apps* export option](xref:Creating_GQI_query#exporting-a-query):
+From DataMiner 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 onwards<!--RN 45630-->, you can import a query from raw JSON previously exported using the [*Dashboards / Apps* export option](xref:Exporting_a_query):
 
 1. In the *Data* pane, select *Queries* and click the ![import](~/dataminer/images/Import_icon.png) icon.
 

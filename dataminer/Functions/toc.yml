@@ -575,6 +575,8 @@ items:
                 topicUid: PieAndDonutChart
           - name: Other
             items:
+              - name: Assistant chat
+                topicUid: DashboardAssistantChat
               - name: Timeline
                 topicUid: DashboardTimeline
               - name: List
@@ -677,8 +679,18 @@ items:
             topicUid: About_GQI
           - name: GQI DxM
             topicUid: GQI_DxM
-          - name: Creating a GQI query
-            topicUid: Creating_GQI_query
+          - name: Working with GQI queries
+            items:
+              - name: Creating a query
+                topicUid: Creating_GQI_query
+              - name: Duplicating a query
+                topicUid: Duplicating_a_query
+              - name: Exporting a query
+                topicUid: Exporting_a_query
+              - name: Importing a query
+                topicUid: Importing_a_query
+              - name: Letting DataMiner Assistant create a query
+                topicUid: Letting_DataMiner_Assistant_create_a_query
           - name: Query data sources
             topicUid: Query_data_sources
             items:
@@ -749,8 +761,6 @@ items:
             topicUid: GQI_Logging
           - name: Query updates
             topicUid: Query_updates
-          - name: Importing a query
-            topicUid: Importing_a_query
       - name: Logging
         topicUid: Dashboards_and_Low_Code_Apps_Logging
       - name: Style guide
@@ -878,6 +888,9 @@ items:
             topicUid: DomBehaviorDefinition
       - name: DOM helper class
         topicUid: DomHelper_class
+        items:
+          - name: CRUD methods
+            topicUid: DOM_helper_crud_methods
       - name: DOM module settings
         topicUid: DOM_ModuleSettings
         items:
