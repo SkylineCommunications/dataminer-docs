@@ -68,6 +68,14 @@ Also, all credential fields now have a maximum length of 5012 bytes, and the fol
 > [!NOTE]
 > The credential library can contain a maximum of 5000 credentials. When this limit is reached, users who want to add a new credential will receive a warning.
 
+#### SLNetTypes: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45672]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+From now on, gRPC connections that go through the Azure Cloud Relay service will buffer event messages until DataMiner Cube confirms they have been received.
+
+This will allow those connections to survive a temporary outage of the Azure Cloud Relay service, for example when restarting or deploying a new version.
+
 ### Fixes
 
 #### Visual Overview - Spectrum analysis component: 'ShowRibbon' option no longer worked [ID 45725]
