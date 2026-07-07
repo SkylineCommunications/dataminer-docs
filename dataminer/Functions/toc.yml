@@ -888,6 +888,9 @@ items:
             topicUid: DomBehaviorDefinition
       - name: DOM helper class
         topicUid: DomHelper_class
+        items:
+          - name: CRUD methods
+            topicUid: DOM_helper_crud_methods
       - name: DOM module settings
         topicUid: DOM_ModuleSettings
         items:
