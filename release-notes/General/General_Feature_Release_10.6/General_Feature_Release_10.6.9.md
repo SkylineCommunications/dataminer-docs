@@ -58,6 +58,17 @@ To determine whether DataAPI created an element, the request must confirm that i
 
 From now on, DataAPI will verify whether the existing element is one it created earlier by matching and tracking both the identifier and the type (i.e., the protocol). When both match, the request is allowed to proceed. If not, it is treated as a conflict and will be rejected.
 
+#### 'DataMiner Agent Minimum Requirements' BPA test: Enhanced time server check on hybrid clusters [ID 45661]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When the 'DataMiner Agent Minimum Requirements' BPA test checked the time server settings on hybrid clusters (i.e., clusters that include DaaS Agents as well as self-managed Agents), the existing checks were too strict. DaaS Agents always use VM Time as time server, whereas self-managed Agents typically use the local domain controller as time server.
+
+From now on, the BPA test will compare the server times of all Agents in the cluster:
+
+- If the server times differ from 1 to 5 seconds, this will be flagged as a warning.
+- If the server times differ more than 5 seconds, this will be flagged as an issue.
+
 #### ConfigureIIS.bat script will now ensure a dedicated Application Pool for the API application [ID 45842]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->

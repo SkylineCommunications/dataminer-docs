@@ -573,6 +573,8 @@ In order to make it easier to look up values when, for example, building a messa
 
 In order to combine all system requirements specified in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
 
+See also ['DataMiner Agent Minimum Requirements' BPA test: Enhanced time server check on hybrid clusters [ID 45661]](#dataminer-agent-minimum-requirements-bpa-test-enhanced-time-server-check-on-hybrid-clusters-id-45661)
+
 > [!NOTE]
 > From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.
 
@@ -583,6 +585,17 @@ In order to combine all system requirements specified in [DataMiner Compute Requ
 Up to now, after a DataMiner restart or upgrade, in some cases, SLAutomation could unexpectedly stop working while initializing internal components.
 
 A number of enhancements have now been made to prevent any initialization issues during SLAutomation startup.
+
+#### 'DataMiner Agent Minimum Requirements' BPA test: Enhanced time server check on hybrid clusters [ID 45661]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When the 'DataMiner Agent Minimum Requirements' BPA test checked the time server settings on hybrid clusters (i.e., clusters that include DaaS Agents as well as self-managed Agents), the existing checks were too strict. DaaS Agents always use VM Time as time server, whereas self-managed Agents typically use the local domain controller as time server.
+
+From now on, the BPA test will compare the server times of all Agents in the cluster:
+
+- If the server times differ from 1 to 5 seconds, this will be flagged as a warning.
+- If the server times differ more than 5 seconds, this will be flagged as an issue.
 
 #### CloudFeed DxM has been upgraded to Microsoft .NET 10 [ID 45849]
 
