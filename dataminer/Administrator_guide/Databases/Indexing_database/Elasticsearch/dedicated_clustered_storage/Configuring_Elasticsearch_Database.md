@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Elasticsearch_Database
+description: "Configure an Elasticsearch database on a separate machine only if you do not want to use OpenSearch or the recommended STaaS setup."
 ---
 
 # Configuring an Elasticsearch database on a separate machine

@@ -1,5 +1,6 @@
 ---
 uid: Installing_Elasticsearch_on_separate_Linux_machine
+description: "Follow the steps below to install Elasticsearch on a separate Linux machine. However, we recommended that you either use OpenSearch or a STaaS setup."
 ---
 
 # Installing Elasticsearch on a separate Linux machine

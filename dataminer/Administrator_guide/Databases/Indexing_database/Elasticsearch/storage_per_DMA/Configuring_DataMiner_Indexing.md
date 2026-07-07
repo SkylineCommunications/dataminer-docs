@@ -1,5 +1,6 @@
 ---
 uid: Configuring_DataMiner_Indexing
+description: "In DataMiner Cube's System Center, specify which information is stored in the indexing database of a dedicated clustered storage setup."
 ---
 
 # Configuring indexing settings in DataMiner Cube
