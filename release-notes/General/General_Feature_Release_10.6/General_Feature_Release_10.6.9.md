@@ -58,6 +58,25 @@ To determine whether DataAPI created an element, the request must confirm that i
 
 From now on, DataAPI will verify whether the existing element is one it created earlier by matching and tracking both the identifier and the type (i.e., the protocol). When both match, the request is allowed to proceed. If not, it is treated as a conflict and will be rejected.
 
+#### 'DataMiner Agent Minimum Requirements' BPA test: Enhanced time server check on hybrid clusters [ID 45661]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When the 'DataMiner Agent Minimum Requirements' BPA test checked the time server settings on hybrid clusters (i.e., clusters that include DaaS Agents as well as self-managed Agents), the existing checks were too strict. DaaS Agents always use VM Time as time server, whereas self-managed Agents typically use the local domain controller as time server.
+
+From now on, the BPA test will compare the server times of all Agents in the cluster:
+
+- If the server times differ from 1 to 5 seconds, this will be flagged as a warning.
+- If the server times differ more than 5 seconds, this will be flagged as an issue.
+
+#### APIGateway: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45671]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+From now on, gRPC connections that go through the Azure Cloud Relay service will buffer event messages until the client confirms they have been received.
+
+This will allow those connections to survive a temporary outage of the Azure Cloud Relay service, for example when restarting or deploying a new version.
+
 #### ConfigureIIS.bat script will now ensure a dedicated Application Pool for the API application [ID 45842]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
@@ -72,6 +91,12 @@ This new application pool is called *DataMiner WebAPI AppPool*. it is solely int
 
 The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
+#### SLLogCollector will now automatically be configured to include a memory dump of SLPort and SLSNMPManager when a runtime error was detected in SLProtocol [ID 45865]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+From now on, when you open the SLLogCollector tool, the tool will automatically be configured to include a memory dump of the SLPort and SLSNMPManager processes when a runtime error was detected in SLProtocol.
+
 ### Fixes
 
 #### Problem when multiple Agents in a DMS synchronized with Azure Entra simultaneously [ID 44546]
@@ -79,6 +104,12 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 <!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
 
 Up to now, when multiple Agents in a DMS synchronized with Azure Entra simultaneously, in some cases, data could get corrupted due to simultaneous requests being launched to the Entra API from one of those Agents. As a result, users and/or groups could get lost.
+
+#### Problem with SLPort when sending a large message over a WebSocket connection [ID 45625]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when a large message (e.g., a message with a size of 400 KB) was sent over a WebSocket connection, in some cases, an internal buffer issue could cause the SLPort process to stop unexpectedly.
 
 #### Automation: Problem with dependency order when recompiling script libraries [ID 45673]
 
