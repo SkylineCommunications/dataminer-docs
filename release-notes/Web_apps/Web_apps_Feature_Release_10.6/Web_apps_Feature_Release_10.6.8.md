@@ -14,6 +14,16 @@ This Feature Release of the DataMiner web applications contains the same new fea
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.8](xref:General_Feature_Release_10.6.8).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.8](xref:Cube_Feature_Release_10.6.8).
 
+## Highlights
+
+#### Dashboards/Low-Code Apps: Exporting and importing GQI queries to and from raw JSON format [ID 45630]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+In dashboards and low-code apps, GQI queries can now be exported as raw JSON using a new *Dashboards / Apps* export option. In addition, a new import option allows you to create a query by pasting previously exported JSON, making it possible to reuse and share queries across dashboards and apps.
+
+![Importing and exporting a GQI query to a different dashboard or low-code app](~/dataminer/images/ImportExportQuery.gif)
+
 ## New features
 
 #### GQI DxM: Defining discrete column values when building a custom ad hoc data source [ID 45380]
@@ -42,14 +52,6 @@ When the GQI DxM is being used, from now on, GQI will expose the following metad
 - Step (i.e., the step size)
 
 This metadata will be available for numeric columns across all parameter-based data sources.
-
-#### Dashboards/Low-Code Apps: Exporting and importing GQI queries to and from raw JSON format [ID 45630]
-
-<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
-
-In dashboards and low-code apps, GQI queries can now be exported as raw JSON using a new *Dashboards / Apps* export option. In addition, a new import option allows you to create a query by pasting previously exported JSON, making it possible to reuse and share queries across dashboards and apps.
-
-![Importing and exporting a GQI query to a different dashboard or low-code app](~/dataminer/images/ImportExportQuery.gif)
 
 ## Changes
 
