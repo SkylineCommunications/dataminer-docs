@@ -69,6 +69,14 @@ From now on, the BPA test will compare the server times of all Agents in the clu
 - If the server times differ from 1 to 5 seconds, this will be flagged as a warning.
 - If the server times differ more than 5 seconds, this will be flagged as an issue.
 
+#### APIGateway: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45671]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+From now on, gRPC connections that go through the Azure Cloud Relay service will buffer event messages until the client confirms they have been received.
+
+This will allow those connections to survive a temporary outage of the Azure Cloud Relay service, for example when restarting or deploying a new version.
+
 #### ConfigureIIS.bat script will now ensure a dedicated Application Pool for the API application [ID 45842]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
