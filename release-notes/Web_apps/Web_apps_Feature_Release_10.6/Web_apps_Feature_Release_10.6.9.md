@@ -96,3 +96,13 @@ In some rare cases, a *Table* component would incorrectly not apply the correct 
 When the GQI DxM established an SLNet connection but failed to set up the initial DataMiner state subscription, it could remain in an unrecoverable state.
 
 Now, the subscription step is treated as part of connection establishment. If that step fails, the connection is considered failed and is retried.
+
+#### Low-Code Apps - Line chart: Hovered data point could be incorrect after position changes [ID 45905]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In some cases, a GQI line chart in a low-code app could highlight the wrong data point when you hovered over the chart after its position changed.
+
+This issue mainly occurred when the chart was in a movable panel that had been dragged to a different location.
+
+Now, the hovered position correctly maps to the expected data point after position changes.
