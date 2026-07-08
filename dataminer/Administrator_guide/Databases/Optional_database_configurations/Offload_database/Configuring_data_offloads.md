@@ -1,6 +1,7 @@
 ---
 uid: Configuring_data_offloads
 keywords: central database
+description: "Configure data offloads to files or a central database in DataMiner Cube System Center to store alarms, trend data, and more."
 ---
 
 # Configuring data offloads
