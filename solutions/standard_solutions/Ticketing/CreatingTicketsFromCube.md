@@ -24,6 +24,9 @@ To manually create a ticket for an alarm in Cube:
    > [!TIP]
    > To make sure tickets can be assigned to DataMiner users, the user accounts must be [mapped to People & Organizations contacts](xref:MappingUsersAndContacts).
 
+   > [!NOTE]
+   > For information on the external ticketing system integration, refer to [External ticketing system integration](xref:ExternalTicketingSystemIntegration) or specifically the [ServiceNow integration example](xref:ServiceNowIntegrationExample).
+
 1. Click *Create*.
 
    A confirmation message will be shown, which will contain the ticket ID, name, severity, and priority. For example:

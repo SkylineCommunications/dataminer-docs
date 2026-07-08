@@ -128,16 +128,11 @@ All relationships are implemented using the **Standard Data Model (SDM) relation
 
 The Ticketing solution can be integrated with external ticketing systems, such as ServiceNow. This allows tickets in DataMiner to be linked to incidents managed outside the DataMiner platform.
 
-### External identifiers
-
 When a ticket or incident is created in an external system:
 
 - An external identifier is returned.
 - This identifier is stored in the DataMiner ticket.
 - A visualization endpoint for the external system is configured.
 
-### Navigating to the external system
-
-On the ticket information page in DataMiner, the external ticket identifier is displayed.
-
-To navigate directly from DataMiner to the external platform, select this identifier. This will open the corresponding ticket in the external system.
+> [!TIP]
+> For details, see [External ticketing system integration](xref:ExternalTicketingSystemIntegration).

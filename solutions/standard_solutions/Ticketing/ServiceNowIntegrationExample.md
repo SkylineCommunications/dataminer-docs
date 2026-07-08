@@ -4,87 +4,53 @@ uid: ServiceNowIntegrationExample
 
 # ServiceNow integration example
 
-## Overview
-
-This example describes the end-to-end workflow of creating a ticket from DataMiner Cube and automatically generating a corresponding incident in ServiceNow.
-
-It also demonstrates how updates performed in ServiceNow are synchronized back to DataMiner.
-
-## Creating a Ticket with External Integration
-
-### Procedure
-
-![Ticketing Service Now Integration Example](~/solutions/images/Ticketing_ServiceNowExample_1.png)
-
-1. Open **DataMiner Cube**.
-1. Navigate to the **Alarm Console**.
-1. Right-click an alarm.
-1. Select **Create ticket**.
-1. In the ticket creation form:
-   - Select an **external ticketing system**
-   - Choose the ServiceNow entry created during connector configuration
-1. Confirm the ticket creation.
-
-The system will:
-
-- Create a ticket in DataMiner
-- Trigger the creation of a corresponding incident in ServiceNow
-
-## Creation Result
-
-After the process completes:
-
-- A **DataMiner ticket ID** is assigned
-- A **ServiceNow incident ID** is generated
-- Both identifiers are shown in the creation response
-
-In the Alarm Console:
-
-- The ticket is linked to the alarm
-- Ticket properties (Ticket ID, Incident Number, Incident Status) are updated accordingly
-
-## Viewing the Ticket
-
-In the Ticketing application:
-
-- The ticket is visible with its assigned ID
-- The information page shows:
-  - Linked alarm and element
-  - External ticketing details
-  - The corresponding ServiceNow incident ID
-
-## Opening the ServiceNow Incident
-
-From the ticket information page you can select the **ServiceNow incident link**.
-
-This opens the corresponding incident directly in ServiceNow using the stored incident ID. 
-
-![Service Now Incident Example](~/solutions/images/Ticketing_ServiceNowExample_Incident.png)
-
-## Synchronization behavior
-
-### Updating in ServiceNow
-
-When the incident is updated in ServiceNow, for example:
-
-- Change status to **In Progress**
-- Assign the incident to a user
-
-These updates are automatically detected by the connector which will synchronize the ticket accordingly in the Ticketing application.
-
-After synchronization:
-
-- The DataMiner ticket reflects the updated state
-- The status changes accordingly (for example, to *In Progress*)
-- Updates are visible in the ticket details and notes section
-
-![Service Now State Change Example](~/solutions/images/Ticketing_ServiceNowExample_StateChange.png)
-
-## End-to-End Flow Summary
+This example describes the end-to-end workflow of creating a ticket from DataMiner Cube and automatically generating a corresponding incident in ServiceNow:
 
 1. An alarm is generated in DataMiner.
-1. A ticket is created from Cube with ServiceNow integration enabled.
-1. A corresponding incident is created in ServiceNow.
-1. The ServiceNow incident ID is stored in the DataMiner ticket.
-1. Updates in ServiceNow are synchronized back to DataMiner.
-1. The ticket state in DataMiner reflects the state of the incident on the external system.
+1. A [ticket is created from Cube](#creating-a-ticket) with ServiceNow integration enabled.
+1. A corresponding incident is automatically created in ServiceNow, and the ServiceNow incident ID is stored in the DataMiner ticket.
+1. [Updates in ServiceNow](#synchronization-with-updates-in-servicenow) are synchronized back to DataMiner, ensuring that the ticket state in DataMiner reflects the state of the incident on the external system.
+
+## Creating a ticket
+
+[Create a ticket from the Alarm Console](xref:CreatingTicketsFromCube), but also configure the following details in the ticket creation window:
+
+- Select an **external ticketing system**
+- Choose the ServiceNow entry created during the [integration configuration](xref:ServiceNowIntegration#configuration).
+
+![Ticket creation example illustrating the ServiceNow integration](~/solutions/images/Ticketing_ServiceNowExample_1.png)
+
+Several things will now happen:
+
+- A DataMiner ticket ID and ServiceNow incident ID are generated and shown in the creation response.
+- A ticket is created in DataMiner, linked to the alarm.
+- A corresponding incident is created in ServiceNow.
+- Ticket properties in the Alarm Console (Ticket ID, Incident Number, Incident Status) are updated accordingly.
+
+## Viewing the ticket
+
+In the Ticketing application, you will see the ticket listed with its assigned ID.
+
+Clicking the information icon for the ticket will among others show the following details:
+
+- Linked alarm and element
+- External ticketing details
+- The corresponding ServiceNow incident ID
+
+## Opening the ServiceNow incident
+
+From the ticket information page, you can select the **ServiceNow incident link**.
+
+This opens the corresponding incident directly in ServiceNow using the stored incident ID.
+
+![ServiceNow incident link on the information page with the corresponding incident in ServiceNow](~/solutions/images/Ticketing_ServiceNowExample_Incident.png)
+
+## Synchronization with updates in ServiceNow
+
+When the incident is updated in ServiceNow, for example, if the status is set to *In progress*, or if the incident is assigned to a user, the ServiceNow Incident Manager connector will automatically detect these updates. The connector will then synchronize the ticket accordingly in the Ticketing application.
+
+After synchronization, the DataMiner ticket will reflect the updated state (e.g., status change to *In progress*), and you will be able to see the updates in the ticket details and notes section.
+
+For example:
+
+![Example of ServiceNow state change reflected in the Ticketing app](~/solutions/images/Ticketing_ServiceNowExample_StateChange.png)

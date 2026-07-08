@@ -219,7 +219,7 @@ Clicking the ![Monitoring](~/solutions/images/Ticketing_Monitoring_icon.png) or 
 
 ![Linked element icons and the resulting Monitoring and Cube windows](~/solutions/images/Ticketing_Demo_20_LinkedItemsAlarmCube_2.png)
 
-Clicking a linked asset will open [Asset Manager](xref:Asset_Manager), while clicking an external ticket will open the external ticketing system (for example, ServiceNow):
+Clicking a linked asset will open [Asset Manager](xref:Asset_Manager), while clicking an external ticket will open the [external ticketing system](xref:ExternalTicketingSystemIntegration) (for example, ServiceNow):
 
 ![Linked asset and external ticket and the resulting windows when these are clicked](~/solutions/images/Ticketing_Demo_LinkedItemsExternalAsset.png)
 
@@ -300,7 +300,7 @@ To create a ticket type:
 
 ## External Ticketing page
 
-The External Ticketing page lists all configured external integrations. Entries can represent external systems such as ServiceNow. For each entry, a visualization endpoint and API endpoint are listed.
+The External Ticketing page lists all configured [external integrations](xref:ExternalTicketingSystemIntegration). Entries can represent external systems such as ServiceNow. For each entry, a visualization endpoint and API endpoint are listed.
 
 Additional custom external systems can be added with the *Create External Ticketing* button in the upper-right corner.
 

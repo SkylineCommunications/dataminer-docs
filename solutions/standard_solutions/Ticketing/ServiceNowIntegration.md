@@ -4,47 +4,37 @@ uid: ServiceNowIntegration
 
 # ServiceNow integration
 
-## Overview
-
 The DataMiner Ticketing solution can be integrated with ServiceNow to enable the creation and synchronization of external incidents.
 
-This integration is implemented using a dedicated connector element, which manages the communication between DataMiner and the ServiceNow instance.
+This integration is implemented using a dedicated element, which manages the communication between DataMiner and the ServiceNow instance.
 
-## Configuration
-
-### ServiceNow Instance & Connector Element
+## Prerequisites
 
 A ServiceNow instance must be available to allow incident creation.
 
-Integration is configured by creating a DataMiner element using the **ServiceNow Incident Manager connector**.
+![ServiceNow instance](~/solutions/images/Ticketing_ServiceNowInstance.png)
 
-The following parameters must be configured:
+## Configuration
+
+To configure the integration, create a DataMiner element using the **ServiceNow Incident Manager connector**, and configure the following parameters in the element:
 
 - ServiceNow instance IP address or endpoint
 - User credentials (username and password)
 
-The below image shows the Service Now instance and the configured element.
+The image below shows the ServiceNow instance and the configured element.
 
-![Service Now and Connector Element](~/solutions/images/Ticketing_ServiceNowIntegration_1.png)
+![ServiceNow instance and DataMiner element shown side by side](~/solutions/images/Ticketing_ServiceNowIntegration_1.png)
 
-### External Ticketing Registration
-
-When the connector element is created:
+When the element is created:
 
 - An entry is automatically added to the **External Ticketing** page in the Ticketing solution.
-- A **visualization endpoint** is registered.
+- A **visualization endpoint** is registered, allowing direct navigation to ServiceNow incidents.
 
-![Service Now Integration](~/solutions/images/Ticketing_ServiceNowExternalTicketing.png)
+![ServiceNow visualization endpoint shown in the Ticketing app](~/solutions/images/Ticketing_ServiceNowExternalTicketing.png)
 
-![Service Now Instance](~/solutions/images/Ticketing_ServiceNowInstance.png)
+## Ticket creation flow
 
-The visualization endpoint allows direct navigation to ServiceNow incidents.
-
-## Ticket Creation Flow
-
-For better understanding see the image above.
-
-### Subscription Mechanism
+### Subscription mechanism
 
 The ServiceNow connector subscribes to ticket creation events in DataMiner.
 
@@ -53,7 +43,7 @@ When a new ticket is created:
 - A message is sent to the connector element.
 - The message contains a **GUID** identifying the external ticketing configuration.
 
-### GUID Matching
+### GUID matching
 
 Each connector instance representing an external ticketing system is associated with a unique external identifier GUID.
 
@@ -62,7 +52,7 @@ Each connector instance representing an external ticketing system is associated 
   - The connector processes the request.
   - A corresponding incident is created in ServiceNow.
 
-### Incident Creation
+### Incident creation
 
 When a match is identified:
 
@@ -70,7 +60,7 @@ When a match is identified:
 1. ServiceNow returns its **incident ID**.
 1. The connector sends this ID back to the DataMiner Ticketing application.
 
-## Ticket and Incident Linking
+### Ticket and incident linking
 
 After the incident is created:
 
@@ -81,27 +71,17 @@ After the incident is created:
 
 This allows users to open the corresponding ServiceNow incident directly from DataMiner.
 
-## Synchronization behavior
+## Update behavior
 
-### Direction
+In this implementation, synchronization is **one-way** for updates. Updates are propagated from **ServiceNow to DataMiner only**.
 
-In this implementation:
-
-- Synchronization is **one-way**
-- Updates are propagated from **ServiceNow to DataMiner only**
-
-### Update Mechanism
-
-The connector element periodically polls the ServiceNow instance for updates.
-
-When a change is detected:
+The connector element periodically polls the ServiceNow instance for updates. When a change is detected:
 
 1. The update is retrieved using the ServiceNow incident ID.
-2. The corresponding DataMiner ticket is located.
-3. The ticket is updated in the Ticketing application.
+1. The corresponding DataMiner ticket is located.
+1. The ticket is updated in the Ticketing application.
 
-## Best Practices
+## Best practices
 
 - Ensure correct configuration of credentials and endpoints.
 - Field mapping between DataMiner tickets and ServiceNow incidents must be defined to ensure consistent synchronization. Fields may differ in structure and therefore require explicit mapping and value translation where needed.
-- The visualization endpoint is used to navigate to the incident on the external ticketing system.
