@@ -32,3 +32,8 @@ public class Script
   }
 }
 ```
+
+> [!IMPORTANT]
+> The `Engine` object, and every object you obtain through it (such as `Element` objects returned by `engine.FindElement`, dummies, and their parameters), is **not thread-safe**. It may only be used from a single thread at a time.
+>
+> Though sending SLNet messages through the `Engine` object is. Using methods `Engine.SendSLNetSingleResponseMessage`, `Engine.SendSLNetMessages` and `Engine.SendSLNetMessage` is thread-safe.
