@@ -73,6 +73,14 @@ In the help menu of the web apps, the *Feedback* command has been replaced by a 
 - [Share your experience](https://aka.dataminer.services/help-feedback-root)
 - [Report an issue](https://aka.dataminer.services/ReportAnIssue)
 
+#### GQI DxM: Improved performance when all DOM data is requested [ID 45866]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When GQI requests DOM data, it now checks whether all data is required instead of relying on the client-requested page size.
+
+When all data is required, e.g., for prefetch join operations or when *Filter assistance* is enabled on a query filter, GQI now requests data with a larger page size. This reduces request overhead and improves performance.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Table component: Correct column widths would not be applied after the table had been resized or updated [ID 45765]
