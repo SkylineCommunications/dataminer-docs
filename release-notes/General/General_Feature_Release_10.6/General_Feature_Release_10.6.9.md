@@ -97,6 +97,16 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
 From now on, when you open the SLLogCollector tool, the tool will automatically be configured to include a memory dump of the SLPort and SLSNMPManager processes when a runtime error was detected in SLProtocol.
 
+#### DOM: `FilterElement<T>` select extensions moved to the `Skyline.DataMiner.Net.Apps.ManagerStore.Select` namespace [ID 45902]
+
+<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
+
+When you use the DOM helper method `Read(IQuery<DomInstance, SelectedFields<T>>)` for a select read, you can pass either an `IQuery<T>` object or a `FilterElement<T>` object.
+
+Up to now, the extension method that allowed `FilterElement<T>` to be passed was located in the `Skyline.DataMiner.Net.Messages` namespace, which is often not imported in scripts. As a result, this could lead to confusing syntax errors where the filter appeared to be incorrectly converted to an `IQuery`.
+
+Equivalent extension methods have now been added in the `Skyline.DataMiner.Net.Apps.ManagerStore.Select` namespace, which also contains `SelectedFields<T>`. The old extension methods have been converted to regular static methods so that already compiled code remains compatible with newer `SLNetTypes` versions.
+
 ### Fixes
 
 #### Problem when multiple Agents in a DMS synchronized with Azure Entra simultaneously [ID 44546]
