@@ -7,6 +7,7 @@ uid: ServiceNowIntegration
 The DataMiner Ticketing solution can be integrated with ServiceNow to enable the creation and synchronization of external incidents.
 
 This integration is implemented using a dedicated element, which manages the communication between DataMiner and the ServiceNow instance.
+This element will also take care of any necessary mappings between DataMiner Ticketing data format and ServiceNow Incident data format (the Priority field is represented as Critical/High/Medium/Low in DataMiner Ticketing, but on ServiceNow this could be different).
 
 ## Prerequisites
 
@@ -27,8 +28,8 @@ The image below shows the ServiceNow instance and the configured element.
 
 When the element is created:
 
-- An entry is automatically added to the **External Ticketing** page in the Ticketing solution.
-- A **visualization endpoint** is registered, allowing direct navigation to ServiceNow incidents.
+- An entry will automatically be added to the **External Ticketing** page in the Ticketing solution (so this does not require a manual intervention by using the button *Create External Ticketing*).
+- On this entry a **visualization endpoint** is automatically configured, which will eventually allow direct navigation to ServiceNow incidents from a Ticket Information page.
 
 ![ServiceNow visualization endpoint shown in the Ticketing app](~/solutions/images/Ticketing_ServiceNowExternalTicketing.png)
 
@@ -80,8 +81,3 @@ The connector element periodically polls the ServiceNow instance for updates. Wh
 1. The update is retrieved using the ServiceNow incident ID.
 1. The corresponding DataMiner ticket is located.
 1. The ticket is updated in the Ticketing application.
-
-## Best practices
-
-- Ensure correct configuration of credentials and endpoints.
-- Field mapping between DataMiner tickets and ServiceNow incidents must be defined to ensure consistent synchronization. Fields may differ in structure and therefore require explicit mapping and value translation where needed.
