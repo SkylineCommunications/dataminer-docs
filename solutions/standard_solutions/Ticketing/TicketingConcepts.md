@@ -113,6 +113,9 @@ Ticket types can also be used to:
 - Categorize incidents.
 - Support reporting and analysis.
 
+> [!TIP]
+> See also: [Ticket Types page](xref:TicketingAppOverview#ticket-types-page)
+
 ## Linked items and affected resources
 
 Tickets can be linked to **DataMiner objects**, referred to as **affected resources**, such as alarms, elements, and services. These links provide context about what is impacted by the ticket.
@@ -123,6 +126,9 @@ All relationships are implemented using the **Standard Data Model (SDM) relation
 
 - Other DataMiner applications can query ticket relationships.
 - In applications such as the Asset Manager, linked tickets can be indicated. For example, the Asset Manager can show whether an asset has active tickets linked to it.
+
+> [!TIP]
+> See also: [Linked Items section](xref:TicketingAppOverview#linked-items-section)
 
 ## External ticketing integration
 
