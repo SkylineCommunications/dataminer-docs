@@ -93,6 +93,22 @@ An email notification system has been added so users can stay informed about tic
 > [!NOTE]
 > Automatic notifications for assigned users are only possible in case a valid email address is configured for these users in the People & Organizations app.
 
+#### Base, extended, and standalone ticket types [ID 45925]
+
+Ticket types can now be organized using a base, extended, and standalone model.
+
+- **Base ticket types** define reusable fields and cannot be used directly to create tickets.
+- **Extended ticket types** inherit fields from a base ticket type and can define additional fields.
+- **Standalone ticket types** define their own fields and do not inherit from a base ticket type.
+
+This makes it easier to reuse common field definitions while still allowing ticket-type-specific extensions where needed.
+
+For example, a *Network Issue Base* ticket type can define common fields such as *Affected Service*, *Customer Impact*, and *Location*. Extended ticket types such as *Router Issue* and *Link Issue* can then inherit these fields while adding information specific to their respective issue categories. The *Router Issue* ticket type could include fields such as *Routing Protocol Affected*, *Failover Status*, and *Configuration Change Detected*, while the *Link Issue* type could include fields such as *Affected Circuit*, *Link Utilization*, and *Observed Packet Loss*.
+
+The ticket type UI provides visibility into these relationships by displaying the base ticket type from which an extended ticket type inherits and which ticket types extend a given base ticket type.
+
+To ensure data consistency, validation rules prevent modifications that would invalidate existing ticket data, such as changing, removing, or deleting ticket type relationships that are already in use.
+
 ## Changes
 
 ### Enhancements
@@ -102,6 +118,48 @@ An email notification system has been added so users can stay informed about tic
 When creating a ticket via the Ticketing app or in Cube, you can now immediately provide values for ticket type-specific fields. Previously, these fields had to be filled in afterwards through *Ticket Information* > *Additional Info*.
 
 This streamlines ticket creation and helps ensure that all relevant ticket metadata is captured from the start.
+
+#### Prevent editing of ticket types that are already in use [ID 45920]
+
+To protect ticket data integrity, Ticketing now restricts changes to ticket type definitions once those ticket types are already used by existing tickets.
+
+When a ticket type is already in use:
+
+- Custom fields can no longer be removed.
+- The data type of an existing field can no longer be changed.
+- Enumeration values that are already in use can no longer be modified or deleted.
+
+In addition, base ticket types can no longer be structurally modified if an in-use extended ticket type depends on them.
+
+However, the following actions remain possible when a ticket type is in use:
+
+- New fields can still be added.
+- New enumeration values can still be added.
+- Existing field names can still be updated.
+
+These restrictions help prevent inconsistencies and potential information loss that can occur when ticket type field definitions are changed after tickets have been created.
+
+#### Sample tickets and ticket types for new installations [ID 45923]
+
+To improve the first-time user experience, Ticketing now automatically creates sample tickets during a fresh installation.
+
+These examples showcase key Ticketing concepts, including ticket states, priorities, severities, assignments, notes, People & Organizations integration, and custom ticket types.
+
+Example tickets include tasks such as deploying the Ticketing solution, reviewing the documentation, configuring ticket types, creating a first custom ticket, and progressing tickets through various lifecycle states. This allows users to explore the application and its workflows without starting from an empty environment.
+
+#### Automatic linking of elements and assets [ID 45926]
+
+Ticketing now automatically resolves relationships between elements and assets when linked items are added to a ticket.
+
+When you add an element that has a linked asset, the asset is added automatically. Likewise, when you add an asset that has a linked element, the element is added automatically. This happens both during ticket creation and ticket editing, ensuring that any existing element–asset relationship is reflected in Ticketing.
+
+Linked items are displayed together in the *Linked Items* section of the ticket, which supports elements, services, assets, and alarms, allowing tickets to provide visibility into the operational context associated with the reported issue.
+
+For example, imagine a ticket is created for the element *Router-A*. If no asset is linked to that element, only the element is added to the ticket. If *Router-A* has a linked asset in Asset Manager, that asset is automatically added as well, making both objects visible in the *Linked Items* section.
+
+Automatically added items are protected from accidental removal. When a user attempts to remove a linked item, a confirmation dialog is shown to determine whether the related item should also be removed.
+
+Affected resources are displayed using their resource type (*Element* or *Service*) rather than including the type in the resource name itself.
 
 ### Fixes
 
