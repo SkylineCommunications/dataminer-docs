@@ -64,7 +64,7 @@ This new application pool is called *DataMiner WebAPI AppPool*. it is solely int
 
 <!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
 
-When you use the DOM helper method `Read(IQuery<DomInstance, SelectedFields<T>>)` for a select read, you can pass either an `IQuery<T>` object or a `FilterElement<T>` object.
+When you use the DOM helper method `Read(IQuery<DomInstance>, SelectedFields<DomInstance>)` for a select read, you can pass either an `IQuery<T>` object or a `FilterElement<T>` object.
 
 Up to now, the extension method that allowed `FilterElement<T>` to be passed was located in the `Skyline.DataMiner.Net.Messages` namespace, which is often not imported in scripts. As a result, this could lead to confusing syntax errors where the filter appeared to be incorrectly converted to an `IQuery`.
 
