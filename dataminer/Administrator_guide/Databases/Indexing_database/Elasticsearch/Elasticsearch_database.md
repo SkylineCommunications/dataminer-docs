@@ -1,5 +1,6 @@
 ---
 uid: Elasticsearch_database
+description: "Install an Elasticsearch indexing database if you have a system with self-managed storage and you do not want to install an OpenSearch database."
 ---
 
 # Elasticsearch

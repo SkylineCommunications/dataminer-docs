@@ -1,5 +1,6 @@
 ---
 uid: OpenSearch_database
+description: "Explore why OpenSearch is the recommended indexing database if you choose self-managed storage instead of the recommended STaaS setup."
 ---
 
 # OpenSearch database

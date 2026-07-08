@@ -1,5 +1,6 @@
 ---
 uid: Indexing_Database
+description: "Explore why you will need an indexing database if you choose for self-managed storage instead of the recommended STaaS setup."
 ---
 
 # Configuring an indexing database

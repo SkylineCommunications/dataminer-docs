@@ -1,5 +1,6 @@
 ---
 uid: Configuring_multiple_OpenSearch_clusters
+description: "Explore how, on older systems, it was possible to have data offloaded to multiple OpenSearch clusters."
 ---
 
 # Configuring multiple OpenSearch clusters
