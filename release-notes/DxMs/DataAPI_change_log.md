@@ -7,19 +7,22 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
-### 7 July 2026 - Fix - DataAPI 1.4.6 - Prevent processing of data/config until connectors could be retrieved from DataMiner [ID 45737]
+### 7 July 2026 - Enhancement - DataAPI 1.4.6 - Initialization behavior improvement and lock handling improvements [ID 45737]
 
-The following changes have been done to DataAPI functionality:
+The following changes have been made to Data API functionality:
 
-- Prevent processing of data/config until connectors could be retrieved from DataMiner. The DxM is now marked as not yet initialized until these can be retrieved. (Prior to this RN, the DxM would initialize the connector cache as an empty set and therefore recreate all)
-- Updated OwnershipLock to handle out-of-sync and retrieval failures: When a lock is taken (which is requested by other DataAPI nodes in case these need to update a connector), it's possible that the node that requested the lock did not send a subsequent request to release it again (e.g. because it crashed some time later). In DataAPI there exists a cleanup mechanism to release these locks. This functionality has now been extended with logic to try to retrieve the updated connector again from DataMiner. If this succeeds, the lock is cleaned up. If this fails, updates to this connector are prevented until the leader could retrieve the connector from DataMiner and update its cache with this new version.
-- If a request for a lock comes in with a checksum (indicating that the requester already knows about a connector) but the leader does not know about it, it will try to retrieve the connector from DataMiner to update its cache. If this succeeds, the lock is granted. If it fails, the lock is denied until the leader could retrieve the connector from DataMiner.
+- Processing of data and configuration now only happens once connectors have been retrieved from DataMiner. Until then, the *DataAPI* DxM is marked as not yet initialized. Previously, the DxM would initialize the connector cache as an empty set and therefore recreate all connectors.
 
-### 7 July 2026 - New Feature - DataAPI 1.4.6 - Update Data API to target .NET 10  [ID 45535]
+- Ownership locking has been updated to prevent possible out-of-sync or retrieval failures:
+
+  - When a lock is taken by other DataAPI nodes to update a connector, it can happen that the node that requested the lock does not send a subsequent request to release it again (e.g., because it crashed some time later). In Data API, a cleanup mechanism exists to release these locks. This functionality has now been extended with logic to try to retrieve the updated connector again from DataMiner. If this succeeds, the lock is cleaned up. If this fails, updates to this connector are prevented until the leader is able to retrieve the connector from DataMiner and update its cache with this new version.
+  - If a request for a lock comes in with a checksum, indicating that the requester already knows about a connector, but the leader does not know about it, the leader will now try to retrieve the connector from DataMiner to update its cache. If this succeeds, the lock is granted. If it fails, the lock is denied until the leader is able to retrieve the connector from DataMiner.
+
+### 7 July 2026 - New feature - DataAPI 1.4.6 - Data API updated to target .NET 10  [ID 45535]
 
 Data API has been updated to target .NET 10.
 
-### 7 July 2026 - Fix - DataAPI 1.4.6 - Update dependencies [ID 45443]
+### 7 July 2026 - Fix - DataAPI 1.4.6 - Dependencies updated [ID 45443]
 
 Data API dependencies have been updated.
 
