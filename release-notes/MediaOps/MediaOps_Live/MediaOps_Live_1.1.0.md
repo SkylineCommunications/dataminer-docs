@@ -35,7 +35,7 @@ In addition, the MediaOps Live API has been extended so that job information (jo
 
 ### Enhancements
 
-#### Improved visualisation of pending connections [ID 45594]
+#### Improved visualization of pending connections [ID 45594]
 
 While a connection or disconnection is still in progress, an hourglass icon is now shown in front of the source name. This provides clearer feedback to the user about the current connection state.
 
