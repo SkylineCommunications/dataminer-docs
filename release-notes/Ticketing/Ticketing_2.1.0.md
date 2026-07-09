@@ -2,10 +2,7 @@
 uid: Ticketing_2.1.0
 ---
 
-# Ticketing 2.1.0 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# Ticketing 2.1.0
 
 ## Prerequisites
 
