@@ -22,21 +22,20 @@ If the automated migration fails, please contact Skyline Communications for reco
 
 ## How to migrate
 
-### in DataMiner 10.5.0 [CU11]/10.5.12 [CU2]
+### For DataMiner 10.5.x (from 10.5.0 [CU4]/10.5.7 [CU1])
+
+1. Preferably, upgrade to DataMiner 10.5.0 [CU11] or 10.5.12 [CU2] first.
 
 1. Ensure the [prerequisites](#prerequisites) are met.
 
-1. Once the [prerequisites](#prerequisites) are met, you can either [run an automatic migration](#automatic-migration-using-dmupgrade-package-recommended) or, if recommended by Skyline, [run the migration manually](#manual-migration).
+1. If you are on DataMiner 10.5.0 [CU11]/10.5.12 [CU2], once the [prerequisites](#prerequisites) are met, you can either [run an automatic migration](#automatic-migration-using-dmupgrade-package-recommended) or, if recommended by Skyline, [run the migration manually](#manual-migration).
 
-### Between DataMiner 10.5.0 [CU4]/10.5.7 [CU1] and DataMiner 10.5.0 [CU11]/10.5.12 [CU2]
+1. If you cannot upgrade first and you are on a lower supported 10.5.x version, download the latest [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package and [run an automatic migration](#automatic-migration-using-dmupgrade-package-recommended).
 
-1. Preferably, upgrade to DataMiner 10.5.0 [CU11] or 10.5.12 [CU2]. If this is not possible, proceed.
-
-1. Ensure the [prerequisites](#prerequisites) are met.
-
-1. Download the latest [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package.
-
-1. Once the [prerequisites](#prerequisites) are met, you can [run an automatic migration] using the aforementioned (#automatic-migration-using-dmupgrade-package-recommended).
+> [!IMPORTANT]
+>
+> - If you are on a version between 10.5.0 [CU4]/10.5.7 [CU1] and 10.5.0 [CU11] or 10.5.12 [CU2], we recommend running the migration automatically, as the package contains the latest BrokerGateway.exe and NATSMigration.exe. Manual migration may still be possible, if recommended by Skyline for a specific situation.
+> - On DataMiner 10.5.12 [CU2], manual migration may fail due to the latest BrokerGateway version not being able to install. If you need to execute a manual migration BGW migration on that version, please contact Skyline Communications. <!--RN44311-->
 
 ## Prerequisites
 
@@ -47,6 +46,10 @@ It should be run on all agents in the DMS.
 The package only executes prerequisites and does not cause any impact on the DMS.
 
 It verifies the [DataMiner requirements](#dataminer-requirements), the [.NET runtime requirements](#aspnet-core-runtime-10-hosting-bundle-for-automatic-migration) and the [IT-requirements](#it-requirements), then lets you know if any have failed.
+
+As of present, it does not verify the [Manual Configuration Consistency](#manual-configuration-consistency).
+
+Furthermore, before starting the BrokerGateway migration, also [Prepare the post-migration actions](#preparing-post-migration-actions).
 
 >[!NOTE]
 >
@@ -79,6 +82,19 @@ Finally, ensure that there are no problems with '[Schannel](https://learn.micros
 - Additionally, check whether any protocols/connectors reference *DataMinerMessageBroker.API.dll* with a version earlier than 3.0.0. Update any such references prior to the migration and remove the outdated DLL from the `C:\Skyline DataMiner\ProtocolScripts` folder. From DataMiner 10.5.0 [CU9]/10.5.12 onwards, the presence of such an outdated DLL in the *ProtocolScripts* folder will block the migration.
 
 - Finally, to start the migration, the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft‑launch option must not be disabled on any DataMiner Agent in the cluster. In DataMiner 10.5.0 [CU5]/10.5.8<!-- RN 43370 --> this option can be disabled when no migration is planned.
+
+### Manual configuration consistency
+
+If you apply manual configuration prior to migration, apply that same configuration consistently across the entire cluster.
+This applies when automatic NATS configuration is disabled via the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config).
+
+- Applying manual configuration on only one DataMiner Agent in a 10‑Agent cluster results in an inconsistent and incorrect setup.
+
+- Applying the same manual configuration on all 10 out of 10 DataMiner Agents results in a consistent and correct setup.
+
+>[!IMPORTANT]
+>
+> This prerequisite is not yet checked by the [dmupgrade package](#prerequisite-onlydmupgrade-package) and still needs manual verification.
 
 ### Preparing post-migration Actions
 
@@ -124,7 +140,7 @@ When recommended by Skyline, the migration can be run manually:
 >
 > - This must happen on **each DMA** in the cluster **within a 10-minute time frame**.
 It is very important that this happens for **each individual DataMiner Agent, including Failover DMAs**. Prior to DataMiner 10.5.0 [CU4]/10.5.7, this also involves a restart of each DataMiner Agent.
-> - On DataMiner 10.5.12 [CU2], manual migration may fail due to the latest BrokerGateway version not being able to install. If you need to execute a manual migration BGW migration on that version, please contact Skyline Communications.
+> - On DataMiner 10.5.12 [CU2], manual migration may fail due to the latest BrokerGateway version not being able to install. If you need to execute a manual migration BGW migration on that version, please contact Skyline Communications. <!--RN44311-->
 
 ## Post Migration actions
 
