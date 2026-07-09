@@ -12,6 +12,10 @@ DataMiner STaaS relies on Azure Storage, which stores multiple copies of your da
 
 When you use the installation wizard or [contact Skyline](mailto:support@dataminer.services) to register your system to use STaaS, you can include your preferences as to the region(s) where your data should be stored and the type of storage redundancy that should be used.
 
+When you set up a DaaS system, you can configure the storage region and (optional) geo-replication region via the advanced settings. 
+
+If your preferred storage region is not available in the options yet, please contact <daas@dataminer.services>.
+
 | Region           | Location             | Status                                                     | [Geo-Redundancy Pair](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions) for GRS ([on request](mailto:support@dataminer.services?Subject=GRS%20for%20STaaS)) |
 |------------------|----------------------|------------------------------------------------------------|----------------------------------|
 | West Europe      | The Netherlands      | Live                                                       | North Europe (Ireland)           |
@@ -24,7 +28,7 @@ When you use the installation wizard or [contact Skyline](mailto:support@datamin
 
 - **Zone-redundant storage (ZRS)** copies your data synchronously across three Azure availability zones in one region. Each availability zone is a separate physical location with independent power, cooling, and networking. By **default**, DataMiner STaaS uses ZRS.
 
-- **Geo-redundant storage (GRS)** copies your data synchronously three times within a single physical location in the primary region and then also copies your data asynchronously to a single physical location in the secondary region. Only specific regions can be combined in such a setup, e.g., if the primary region is Switzerland North, the secondary region can only be Switzerland West. For an overview of the supported regions, see [Azure paired regions](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions). GRS is **available upon request**, but will result in additional charges. If you wish to use DataMiner STaaS with GRS, contact <support@dataminer.services>.
+- **Geo-redundant storage (GRS)** copies your data synchronously three times within a single physical location in the primary region and then also copies your data asynchronously to a single physical location in the secondary region. Only specific regions can be combined in such a setup, e.g., if the primary region is Switzerland North, the secondary region can only be Switzerland West. For an overview of the supported regions, see [Azure paired regions](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions). GRS will result in additional charges. If you wish to use DataMiner STaaS with GRS on a self-managed system, contact <support@dataminer.services>.
 
 > [!TIP]
 > For detailed information, see [Azure Storage redundancy on learn.microsoft.com](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy)
