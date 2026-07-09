@@ -64,7 +64,7 @@ Takes exception values into account for display key generation. See [CorrectedDi
 This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.0.11/9.6.0 [CU18]/10.0.0 [CU6]
-- **Estimated Release version**: To be determined
+- **Estimated release version**: To be determined
 
 ### CPEIntegration
 
@@ -82,7 +82,7 @@ Enables Data API functionality and scripted connectors. This displays the Data S
 This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.4.2/10.4.0<!-- RN 36588/38307/38234 -->
-- **Estimated Release version**: To be determined
+- **Estimated release version**: To be determined
 
 > [!NOTE]
 > The latest version of the DataAggregator DxM and DataAPI DxM also have to be installed for this feature to work.
