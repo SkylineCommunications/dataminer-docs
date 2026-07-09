@@ -102,4 +102,4 @@ To deploy the Integrated DOCSIS branch of the EPM Solution:
 
       - To configure the directory settings for multiple backend elements at the same time, you can use the [multiple set](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements) feature.
 
-1. Configure the CMTS elements using the script *EPM_I_DOCSIS_AddNewCcapCmPair*. See [Creating CCAP/CM Pair](https://docs.dataminer.services/dataminer/Standard_Apps/EPM/EPM_I-DOCSIS/I-DOCSIS_Create_CCAP_CM_pair.html).
+1. Configure the CMTS elements using the script *EPM_I_DOCSIS_AddNewCcapCmPair*. See [Creating a new CCAP/CM pair](xref:I-DOCSIS_Create_CCAP_CM_pair).
