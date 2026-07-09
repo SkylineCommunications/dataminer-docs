@@ -52,3 +52,18 @@ To embed DataMiner web apps (e.g., dashboards or low-code apps) in a third-party
 - **Different domain or host names**: The portal and the hosting DataMiner Agent must be served from **different domain or host names**. This is required for the browser to correctly apply cross-origin security restrictions.
 
 - **iframe sandbox attribute**: The `<iframe>` element used to embed the web app must **not** have the `sandbox` attribute set. Because the embedded page originates from a different domain, the browser already applies the necessary cross-origin restrictions automatically. The hosting Agent's webpage can still read its own authentication cookie because that access is same-origin.
+
+## Can I use maps in an air-gapped environment without internet connectivity?
+
+Yes, but only when you use OpenStreetMap. Google Maps cannot be used in an air-gapped setup:
+
+- Google Maps requires a persistent internet connection to the Google Maps Platform.
+
+- There is no official offline deployment option or on-premises appliance for the Google Maps Platform.
+
+- Google Maps tiles cannot legally be cached or hosted locally for offline use under Google's licensing terms.
+
+To satisfy an offline or air-gapped requirement, use OpenStreetMap with a local offline maps server instead. This offline maps server is hosted on the DataMiner Agent, so the clients do not need to host anything themselves. The map tiles are downloaded in advance for the required regions and served locally from a Docker container. For detailed configuration steps, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
+
+> [!IMPORTANT]
+> The [maps component](xref:DashboardMaps) in dashboards and low-code apps only supports Google Maps and cannot use OpenStreetMap or an offline maps server. For offline or air-gapped maps, you therefore need to use the standalone [DataMiner Maps app](xref:About_DMS_Maps), which supports OpenStreetMap but does not offer the interaction possibilities available in low-code apps.

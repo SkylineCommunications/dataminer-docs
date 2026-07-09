@@ -26,6 +26,9 @@ With this component, you can:
 
 - To use the maps component, a valid maps configuration is required. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
 
+> [!NOTE]
+> The maps component only supports Google Maps, which requires internet connectivity. It cannot use OpenStreetMap or an offline maps server. If you need offline maps (e.g. in an air-gapped environment), use the standalone [DataMiner Maps app](xref:About_DMS_Maps) instead, which supports OpenStreetMap. Note that this app does not offer the interaction possibilities available in low-code apps.
+
 ## Supported data types
 
 The maps component is used to display the results of queries as geospatial data on top of a map. It should therefore **always be configured with [query data input](xref:Query_Data)**.
