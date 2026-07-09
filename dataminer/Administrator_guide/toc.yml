@@ -125,6 +125,13 @@ items:
             topicUid: Adding_a_regular_DataMiner_Agent
           - name: Adding a DataMiner Agent to a cluster running STaaS
             topicUid: Adding_a_DMA_to_a_DMS_running_STaaS
+          - name: Combining DaaS and self-managed nodes
+            topicUid: Creating_hybrid_cluster
+            items:
+            - name: Starting from a DaaS cluster
+              topicUid: Starting_from_DaaS_cluster
+            - name: Starting from a self-managed cluster
+              topicUid: Starting_from_self-managed_cluster
           - name: Adding a DataMiner Probe
             topicUid: Adding_a_DataMiner_Probe
           - name: Connection strings

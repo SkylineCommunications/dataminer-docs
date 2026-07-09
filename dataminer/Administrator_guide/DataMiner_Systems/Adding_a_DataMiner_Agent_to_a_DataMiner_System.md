@@ -13,6 +13,8 @@ The procedure to add a node in a DataMiner cluster can be different depending on
 
 - [Adding a DataMiner Probe](xref:Adding_a_DataMiner_Probe)
 
+- [Combining DaaS and self-managed nodes in one cluster](xref:Creating_hybrid_cluster)
+
 In each case, the [prerequisites](#prerequisites) below apply.
 
 ## Prerequisites
