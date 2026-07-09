@@ -37,8 +37,7 @@ This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 
 
 The BrokerGateway module is responsible for managing the NATS communication. It automatically updates the NATS cluster when the DataMiner cluster changes and provides clients with the required credentials.
 
-BrokerGateway is improved compared to the former way of managing NATS communication:
-BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
+Compared to the former way of managing NATS communication, BrokerGateway manages NATS communication based on a single source of truth that has complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS is configured automatically, and a newer version of NATS is used that has better performance and is easier to upgrade.
 
 In addition, starting from DataMiner 10.6.0/10.6.1, the SLNet‑managed NATS solution is no longer supported, so [a migration](xref:BrokerGateway_Migration) to BrokerGateway has to be executed before you can upgrade to these DataMiner versions and beyond.
 

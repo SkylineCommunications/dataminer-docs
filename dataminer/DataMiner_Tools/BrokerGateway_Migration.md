@@ -40,20 +40,24 @@ If the automated migration fails, please contact Skyline Communications for reco
 
 ## Prerequisites
 
-### Prerequisite only.dmupgrade package
+### Prerequisite-only.dmupgrade package
 
-A [NATSMigration - Prerequisite only.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package is available.
-This package allows you to verify the prerequisites without initiating the BrokerGateway migration.
-This can be used for testing system compatibility in advance.
+A [NATSMigration - Prerequisite only.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package can be used to test system compatibility in advance, without the need for the user to commit to a BrokerGateway migration.
+It should be run on all agents in the DMS.
+The package only executes prerequisites and does not cause any impact on the DMS.
 
-### Prerequisites verified by the NatsMigration.dmupgrade package (only when using the .dmupgrade package)
+It verifies the [DataMiner requirements](#dataminer-requirements), the [.NET runtime requirements](#aspnet-core-runtime-10-hosting-bundle-for-automatic-migration) and the [IT-requirements](#it-requirements), then lets you know if any have failed.
 
-When using the .dmupgrade package:
-If the [DataMiner requirements](#dataminer-requirements) or the [IT-requirements](#it-requirements) are not met, the migration will be blocked.
+>[!NOTE]
+>
+> - The NatsMigration.dmupgrade package also executes these prerequisites prior to migrating, effectively blocking the migration if a prerequisite fails. Therefore, we recommend running the prerequisite-only package in advance.
+> - Ensure that you download the latest version of the .dmupgrade package, to guarantee the presence of all aforementioned prerequisites.
+Before that version, certain prerequisites, such as the [IT-requirements](#it-requirements) or the [.NET runtime requirements](#aspnet-core-runtime-10-hosting-bundle-for-automatic-migration) are not present and need to be checked manually.
 
-> [!IMPORTANT]
-> Ensure that you download the latest version of the .dmupgrade package, to guarantee the presence of all aforementioned prerequisites.
-> Before that version, certain prerequisites, such as the [IT-requirements](#it-requirements) are not present and need to be checked manually.
+### ASP.NET Core Runtime 10 Hosting Bundle for automatic migration
+
+When you run the automatic migration by using the `.dmupgrade` package, ensure that the [ASP.NET Core Runtime 10 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) is installed on each DataMiner Agent before you start the migration.
+If it is not installed, the automatic migration cannot complete correctly.
 
 ### IT requirements
 
