@@ -38,3 +38,11 @@ In addition, the MediaOps Live API has been extended so that job information (jo
 #### Improved visualisation of pending connections [ID 45594]
 
 While a connection or disconnection is still in progress, an hourglass icon is now shown in front of the source name. This provides clearer feedback to the user about the current connection state.
+
+### Fixes
+
+#### CSV import could include the wrong endpoint when source and destination endpoints had the same name [ID 45959]
+
+When a source and destination endpoint in a virtual signal group shared the same name, a CSV import could include the wrong endpoint because matching was based on name only.
+
+When you import a virtual signal group from CSV, endpoints will now be resolved by both role and name, preventing mismatches when source and destination endpoints share the same name.
