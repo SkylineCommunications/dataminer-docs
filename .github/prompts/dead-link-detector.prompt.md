@@ -22,6 +22,8 @@ Use `grep_search` to find all external URLs (starting with `http://` or `https:/
 
 Collect results as a de-duplicated list of `{ url, filePath, lineNumber }` records.
 
+When cleaning an extracted URL, strip only unambiguous trailing punctuation: `.` `,` `:` `;`. Do **not** strip trailing `)` — parentheses are valid inside URLs (e.g., Microsoft Docs URLs such as `.../dn169026(v=ws.10)`). Only strip a trailing `)` when the URL was clearly wrapped in a Markdown link `[text](url)` and the `)` closes the link syntax rather than being part of the URL itself.
+
 ### 2 — Check each URL
 
 For every unique URL, run a HEAD (then GET fallback) request using PowerShell to determine its HTTP status code. Use the following approach:
@@ -39,6 +41,7 @@ try {
 - Treat status codes **400, 404, 410, 451** as **dead**.
 - Treat status codes **401, 403, 405, 429** and connection errors as **unknown / unverifiable** (do not mark as dead).
 - Skip `localhost`, `127.0.0.1`, `example.com`, and placeholder URLs.
+- Treat **`community.dataminer.services`** URLs as **unverifiable** without checking them — the platform is login-gated and returns HTTP 404 for unauthenticated bot requests even when the pages genuinely exist. Record them in the unverifiable table with status `LOGIN-GATED`.
 
 Batch the checks in groups of 20 to avoid overwhelming the terminal.
 
