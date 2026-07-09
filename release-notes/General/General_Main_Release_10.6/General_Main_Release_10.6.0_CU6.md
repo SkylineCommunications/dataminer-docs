@@ -60,6 +60,16 @@ The *ConfigureIIS.bat* script will now ensure a dedicated Application Pool for t
 
 This new application pool is called *DataMiner WebAPI AppPool*. it is solely intended to serve as pool for the web API, and will not recycle periodically.
 
+#### DOM: `FilterElement<T>` select extensions moved to the `Skyline.DataMiner.Net.Apps.ManagerStore.Select` namespace [ID 45902]
+
+<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
+
+When you use the DOM helper method `Read(IQuery<DomInstance>, SelectedFields<DomInstance>)` for a select read, you can pass either an `IQuery<T>` object or a `FilterElement<T>` object.
+
+Up to now, the extension method that allowed `FilterElement<T>` to be passed was located in the `Skyline.DataMiner.Net.Messages` namespace, which is often not imported in scripts. As a result, this could lead to confusing syntax errors where the filter appeared to be incorrectly converted to an `IQuery`.
+
+Equivalent extension methods have now been added in the `Skyline.DataMiner.Net.Apps.ManagerStore.Select` namespace, which also contains `SelectedFields<T>`. The old extension methods have been converted to regular static methods so that already compiled code remains compatible with newer `SLNetTypes` versions.
+
 ### Fixes
 
 #### Problem when multiple Agents in a DMS synchronized with Azure Entra simultaneously [ID 44546]

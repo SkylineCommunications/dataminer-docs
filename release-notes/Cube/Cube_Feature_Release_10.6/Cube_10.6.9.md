@@ -66,7 +66,7 @@ Also, all credential fields now have a maximum length of 5012 bytes, and the fol
 | Username and password credential | Password |
 
 > [!NOTE]
-> The credential library can contain a maximum of 5000 credentials. When this limit is reached, users who want to add a new credential will receive a warning.
+> The credential library can contain a maximum of 1000 credentials. When this limit is reached, users who want to add a new credential will receive a warning.
 
 #### SLNetTypes: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45672]
 
