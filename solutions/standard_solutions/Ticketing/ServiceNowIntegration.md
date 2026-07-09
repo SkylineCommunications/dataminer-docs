@@ -7,7 +7,8 @@ uid: ServiceNowIntegration
 The DataMiner Ticketing solution can be integrated with ServiceNow to enable the creation and synchronization of external incidents.
 
 This integration is implemented using a dedicated element, which manages the communication between DataMiner and the ServiceNow instance.
-This element will also take care of any necessary mappings between DataMiner Ticketing data format and ServiceNow Incident data format (the Priority field is represented as Critical/High/Medium/Low in DataMiner Ticketing, but on ServiceNow this could be different).
+
+This element will also take care of any necessary mapping between the DataMiner Ticketing data format and the ServiceNow incident data format (for example, the *Priority* field is represented as *Critical*/*High*/*Medium*/*Low* in DataMiner Ticketing, but on ServiceNow this could be different).
 
 ## Prerequisites
 
@@ -28,8 +29,8 @@ The image below shows the ServiceNow instance and the configured element.
 
 When the element is created:
 
-- An entry will automatically be added to the **External Ticketing** page in the Ticketing solution (so this does not require a manual intervention by using the button *Create External Ticketing*).
-- On this entry a **visualization endpoint** is automatically configured, which will eventually allow direct navigation to ServiceNow incidents from a Ticket Information page.
+- An entry will automatically be added to the **External Ticketing** page in the Ticketing app.
+- On this entry, a **visualization endpoint** is automatically configured, which will allow direct navigation to ServiceNow incidents from a ticket information page.
 
 ![ServiceNow visualization endpoint shown in the Ticketing app](~/solutions/images/Ticketing_ServiceNowExternalTicketing.png)
 
@@ -59,14 +60,14 @@ When a match is identified:
 
 1. The connector creates an incident in ServiceNow.
 1. ServiceNow returns its **incident ID**.
-1. The connector sends this ID back to the DataMiner Ticketing application.
+1. The connector sends this ID back to the DataMiner Ticketing app.
 
 ### Ticket and incident linking
 
 After the incident is created:
 
 - The ServiceNow incident ID is stored in the DataMiner ticket.
-- The Ticketing application can construct a direct link using:
+- The Ticketing app can construct a direct link using:
   - The visualization endpoint
   - The incident ID
 
@@ -80,4 +81,4 @@ The connector element periodically polls the ServiceNow instance for updates. Wh
 
 1. The update is retrieved using the ServiceNow incident ID.
 1. The corresponding DataMiner ticket is located.
-1. The ticket is updated in the Ticketing application.
+1. The ticket is updated in the Ticketing app.

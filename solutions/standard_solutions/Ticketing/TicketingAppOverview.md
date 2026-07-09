@@ -302,7 +302,7 @@ To create a ticket type:
 
 The External Ticketing page lists all configured [external integrations](xref:ExternalTicketingSystemIntegration). Entries can represent external systems such as ServiceNow. For each entry, a visualization endpoint and API endpoint are listed.
 
-If aplicable additional custom external systems can be added with the *Create External Ticketing* button in the upper-right corner, but typically however such an entry will be created automatically by the element responsible for the communication with the external ticketing system. See for example [ServiceNow integration](xref:ServiceNowIntegration).
+In some cases, custom external systems can be added with the *Create External Ticketing* button in the upper-right corner; however, typically, the entry representing an external integration will be created automatically by the element responsible for the communication with the external ticketing system. See for example [ServiceNow integration](xref:ServiceNowIntegration).
 
 Via the pencil icon, you can edit each of the added external integrations.
 
