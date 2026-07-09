@@ -20,17 +20,30 @@ Use `grep_search` to find all external URLs (starting with `http://` or `https:/
 - `_site/` and `_site_pdf/` (build output)
 - `obj/` and `build/` (build artifacts)
 
-Collect results as a de-duplicated list of `{ url, filePath, lineNumber }` records.
+Collect results as a de-duplicated list of `{ url, filePath, lineNumber, contextType }` records, where `contextType` is one of:
+
+- `markdown-link` (e.g. `[text](https://...)`)
+- `autolink` (plain URL in prose)
+- `inline-code` (inside backticks)
+- `fenced-code` (inside fenced code blocks)
+
+For URLs found in `inline-code` or `fenced-code`, treat them as examples by default and do not classify them as dead.
 
 When cleaning an extracted URL, strip only unambiguous trailing punctuation: `.` `,` `:` `;`. Do **not** strip trailing `)` — parentheses are valid inside URLs (e.g., Microsoft Docs URLs such as `.../dn169026(v=ws.10)`). Only strip a trailing `)` when the URL was clearly wrapped in a Markdown link `[text](url)` and the `)` closes the link syntax rather than being part of the URL itself.
 
+Before checking a URL, normalize it for validation:
+
+- Remove URL fragments (`#...`) before HTTP checks.
+- For NuGet package pages (`https://www.nuget.org/packages/<id>`), treat trailing slash as optional and prefer checking the canonical form with trailing slash.
+
 ### 2 — Check each URL
 
-For every unique URL, run a HEAD (then GET fallback) request using PowerShell to determine its HTTP status code. Use the following approach:
+For every unique URL, run a HEAD request and always do a GET fallback for ambiguous results (especially 404/405/429/5xx). Use a browser-like user agent and allow redirects.
 
 ```powershell
 try {
-    $r = Invoke-WebRequest -Uri '<URL>' -Method Head -TimeoutSec 15 -MaximumRedirection 5 -ErrorAction Stop -UseBasicParsing
+    $headers = @{ 'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) DeadLinkDetector/1.0' }
+    $r = Invoke-WebRequest -Uri '<URL>' -Method Head -TimeoutSec 20 -MaximumRedirection 10 -Headers $headers -ErrorAction Stop -UseBasicParsing
     $r.StatusCode
 } catch {
     if ($_.Exception.Response) { $_.Exception.Response.StatusCode.value__ } else { 'ERROR' }
@@ -38,12 +51,29 @@ try {
 ```
 
 - Treat status codes **200–399** as **alive**.
-- Treat status codes **400, 404, 410, 451** as **dead**.
+- Treat status code **410** as **dead**.
+- Treat status code **451** as **dead**.
 - Treat status codes **401, 403, 405, 429** and connection errors as **unknown / unverifiable** (do not mark as dead).
-- Skip `localhost`, `127.0.0.1`, `example.com`, and placeholder URLs.
-- Treat **`community.dataminer.services`** URLs as **unverifiable** without checking them — the platform is login-gated and returns HTTP 404 for unauthenticated bot requests even when the pages genuinely exist. Record them in the unverifiable table with status `LOGIN-GATED`.
+- Treat **404 as dead only when both HEAD and GET return 404** and the URL is not in a known false-positive category.
+- Skip `localhost`, `127.0.0.1`, `example.com`, and placeholder/sample URLs.
+
+Treat these as **unverifiable** without marking them dead (record with reason in `Status`):
+
+- `community.dataminer.services` (`LOGIN-GATED`)
+- `aka.dataminer.services` (`SHORTLINK-UNVERIFIED`)
+- `www.nuget.org/packages/*` (`BOT-PROTECTED`)
+- `*.b2clogin.com` (`AUTH-ENDPOINT`)
+- `catalogapi-prod.cca-prod.aks.westeurope.dataminer.services` (`AUTH-ENDPOINT`)
+- `api.dataminer.services/api/key-catalog/*` (`METHOD-SPECIFIC-ENDPOINT`)
+
+Treat these as placeholders/examples and do not check (or classify as dead):
+
+- URLs with private/local hosts or addresses: `10.x.x.x`, `172.16.x.x`-`172.31.x.x`, `192.168.x.x`, `169.254.x.x`, `*.local`, `intranet`, `hostname`, `node_address`, `x.x.x.x`.
+- URLs that contain obvious placeholders such as `[ALARMID]`, `<...>`, `{...}`, `mydomain`, `example`.
 
 Batch the checks in groups of 20 to avoid overwhelming the terminal.
+
+When a URL is classified as unverifiable by host/category rules, do not spend network calls on it.
 
 ### 3 — Produce the report
 
@@ -74,6 +104,12 @@ uid: dead-link-report
 |------|------|-----|--------|
 | `path/to/file.md` | 10 | https://example.com/auth | 403 |
 
+## Excluded example or placeholder URLs
+
+| File | Line | URL | Reason |
+|------|------|-----|--------|
+| `path/to/file.md` | 25 | https://10.0.0.1:9200 | PRIVATE-IP-EXAMPLE |
+
 ## Summary
 
 <Brief paragraph summarising findings and recommended next steps.>
@@ -81,6 +117,7 @@ uid: dead-link-report
 
 - List every **occurrence** of a dead link (same URL may appear in multiple files).
 - Sort dead links by file path, then line number.
+- Keep false-positive-prone hosts out of the dead-links table by applying the classification rules above before network checks.
 - If no dead links are found, state that clearly in the report and omit the table.
 
 ### 4 — Confirm
