@@ -123,6 +123,7 @@ In addition, while the [Web Services API](xref:Using_the_Web_Services_v1) is acc
 If you create a new DataMiner System via <https://dataminer.services>, it will by default be hosted in the West-Europe region.
 
 During the creation process, you can choose a different compute region via the advanced settings.
+
 If your preferred region is not available in the options yet, please contact <daas@dataminer.services>.
 
 > [!NOTE]
