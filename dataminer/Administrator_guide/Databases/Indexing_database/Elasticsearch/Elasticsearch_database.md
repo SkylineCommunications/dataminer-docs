@@ -1,6 +1,6 @@
 ---
 uid: Elasticsearch_database
-description: "Install an Elasticsearch indexing database if you have a system with self-managed storage and you do not want to install an OpenSearch database."
+description: "Learn about the legacy Elasticsearch indexing database setup for self-managed DataMiner storage, typically only used in older DataMiner Systems."
 ---
 
 # Elasticsearch

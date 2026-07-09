@@ -1,6 +1,6 @@
 ---
 uid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
-description: "Follow these steps to manually connect a DMA to an existing OpenSearch or Elasticsearch cluster if you chose self-managed storage instead of STaaS."
+description: "Follow these steps to manually connect a DMA to an existing OpenSearch or legacy Elasticsearch indexing cluster in a self-managed storage setup."
 ---
 
 # Manually connecting a DMA to an indexing database

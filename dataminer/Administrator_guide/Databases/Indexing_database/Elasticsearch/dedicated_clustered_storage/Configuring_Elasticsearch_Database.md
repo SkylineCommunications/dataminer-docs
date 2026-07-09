@@ -1,6 +1,6 @@
 ---
 uid: Configuring_Elasticsearch_Database
-description: "Configure an Elasticsearch database on a separate machine only if you do not want to use OpenSearch or the recommended STaaS setup."
+description: "Learn about the legacy Elasticsearch setup on a separate machine from DataMiner, including the requirements and main settings."
 ---
 
 # Configuring an Elasticsearch database on a separate machine

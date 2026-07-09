@@ -1,6 +1,6 @@
 ---
 uid: Configuring_multiple_OpenSearch_clusters
-description: "Explore how, on older systems, it was possible to have data offloaded to multiple OpenSearch clusters."
+description: "Learn how to configure multiple OpenSearch clusters for DataMiner storage, including DB.xml settings for main and replicated offload clusters."
 ---
 
 # Configuring multiple OpenSearch clusters

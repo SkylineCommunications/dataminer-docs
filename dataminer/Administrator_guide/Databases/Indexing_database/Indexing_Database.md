@@ -1,6 +1,6 @@
 ---
 uid: Indexing_Database
-description: "Explore why you will need an indexing database if you choose for self-managed storage instead of the recommended STaaS setup."
+description: "Discover why you will need an indexing database if you set up DataMiner with self-managed storage instead of the recommended STaaS setup."
 ---
 
 # Configuring an indexing database
