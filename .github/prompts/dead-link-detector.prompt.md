@@ -1,12 +1,12 @@
 ---
-description: "Scan all .md files in the repository for dead external links and produce a markdown report in the root folder."
+description: "Scan all .md files in the repository for dead external links and return only real dead links directly in chat."
 name: "Dead Link Detector"
 argument-hint: "Optional: subfolder to scope the scan (e.g. dataminer/ or release-notes/). Leave blank to scan the whole repo."
 agent: "agent"
 tools: [execute/runInTerminal, read/readFile, edit/createFile, search]
 ---
 
-Scan the repository for dead external links in Markdown files and produce a report.
+Scan the repository for dead external links in Markdown files and return only the real dead links in chat.
 
 ## Inputs
 
@@ -75,51 +75,35 @@ Batch the checks in groups of 20 to avoid overwhelming the terminal.
 
 When a URL is classified as unverifiable by host/category rules, do not spend network calls on it.
 
-### 3 — Produce the report
+### 3 — Return results in chat
 
-Create (or overwrite) the file `dead-link-report.md` in the repository root with the following structure:
+Do **not** create or update any file.
+Return the results directly in the chat window and include **only** real dead links (the equivalent of the existing `## Dead links` section).
+
+Use this exact output format:
 
 ```markdown
----
-uid: dead-link-report
----
-
-# Dead Link Report
-
-**Generated:** <current date and time in ISO 8601>  
-**Scope:** <folder scanned or "entire repository">  
-**Total external URLs checked:** <N>  
-**Dead links found:** <N>  
-**Unverifiable links:** <N>
-
 ## Dead links
 
 | File | Line | URL | Status |
 |------|------|-----|--------|
 | `path/to/file.md` | 42 | https://example.com/broken | 404 |
-
-## Unverifiable links (may need manual review)
-
-| File | Line | URL | Status |
-|------|------|-----|--------|
-| `path/to/file.md` | 10 | https://example.com/auth | 403 |
-
-## Excluded example or placeholder URLs
-
-| File | Line | URL | Reason |
-|------|------|-----|--------|
-| `path/to/file.md` | 25 | https://10.0.0.1:9200 | PRIVATE-IP-EXAMPLE |
-
-## Summary
-
-<Brief paragraph summarising findings and recommended next steps.>
 ```
 
-- List every **occurrence** of a dead link (same URL may appear in multiple files).
+Rules:
+
+- Include only links classified as dead (`404` confirmed by both HEAD and GET, `410`, or `451`).
+- Exclude alive links, unverifiable links, and excluded/placeholder/example links from the final output.
+- List every occurrence of a dead link (same URL may appear in multiple files).
 - Sort dead links by file path, then line number.
-- Keep false-positive-prone hosts out of the dead-links table by applying the classification rules above before network checks.
-- If no dead links are found, state that clearly in the report and omit the table.
+- If no dead links are found, output exactly:
+
+```markdown
+## Dead links
+
+No dead links were found in this scope.
+```
 
 ### 4 — Confirm
 
-After creating the report, confirm the file path and the number of dead links found.
+After returning the chat output, confirm the number of dead links found.
