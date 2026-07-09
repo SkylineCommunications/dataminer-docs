@@ -15,9 +15,7 @@ Alternatively, it is possible to migrate starting from DataMiner 10.5.0 [CU4]/10
 > [!IMPORTANT]
 >
 > - For versions under 10.5.0 [CU11]/10.5.12 [CU2], migration is discouraged.
-> - Manual migration is discouraged.
-Usually Skyline Communications itself will recommend a manual migration in specific circumstances.
-If the automated migration fails, please contact Skyline Communications for recommendations.
+> - Manual migration is discouraged. If the automated migration fails, please contact Skyline Communications for recommendations. In some specific circumstances, Skyline Communications itself will recommend a manual migration.
 > - This migration is **mandatory to be able to upgrade to DataMiner 10.6.0/10.6.1** or higher. If you try to upgrade to such a DataMiner version when this migration has not yet been completed, the upgrade will be blocked. From DataMiner 10.6.0/10.6.1 onwards, the legacy SLNet‑managed NATS solution (NAS and NATS services) is no longer supported.<!-- RN 43861 -->
 
 ## How to migrate
@@ -54,8 +52,7 @@ Furthermore, before starting the BrokerGateway migration, also [Prepare the post
 >[!NOTE]
 >
 > - The NatsMigration.dmupgrade package also executes these prerequisites prior to migrating, effectively blocking the migration if a prerequisite fails. Therefore, we recommend running the prerequisite-only package in advance.
-> - Ensure that you download the latest version of the .dmupgrade package, to guarantee the presence of all aforementioned prerequisites.
-Before that version, certain prerequisites, such as the [IT-requirements](#it-requirements) or the [.NET runtime requirements](#aspnet-core-runtime-10-hosting-bundle-for-automatic-migration) are not present and need to be checked manually.
+> - Ensure that you download the latest version of the .dmupgrade package, to guarantee the presence of all aforementioned prerequisites. Before that version, certain prerequisites, such as the [IT-requirements](#it-requirements) or the [.NET runtime requirements](#aspnet-core-runtime-10-hosting-bundle-for-automatic-migration) are not present and need to be checked manually.
 
 ### ASP.NET Core Runtime 10 Hosting Bundle for automatic migration
 
@@ -138,8 +135,7 @@ When recommended by Skyline, the migration can be run manually:
 
 > [!IMPORTANT]
 >
-> - This must happen on **each DMA** in the cluster **within a 10-minute time frame**.
-It is very important that this happens for **each individual DataMiner Agent, including Failover DMAs**. Prior to DataMiner 10.5.0 [CU4]/10.5.7, this also involves a restart of each DataMiner Agent.
+> - This must happen on **each DMA** in the cluster **within a 10-minute time frame**. It is very important that this happens for **each individual DataMiner Agent, including Failover DMAs**. Prior to DataMiner 10.5.0 [CU4]/10.5.7, this also involves a restart of each DataMiner Agent.
 > - On DataMiner 10.5.12 [CU2], manual migration may fail due to the latest BrokerGateway version not being able to install. If you need to execute a manual migration BGW migration on that version, please contact Skyline Communications. <!--RN44311-->
 
 ## Post Migration actions
@@ -171,7 +167,7 @@ For more information, see [Configuring forced NATS endpoints](xref:MessageBroker
 
 If you employ a [Dashboard Gateway](xref:Dashboard_Gateway_installation), you need to reconnect after the BrokerGateway migration.
 
-To do this, open [Dashboard Gateway Installation - Configuration](xref:Dashboard_Gateway_installation#Configuration). There, only follow the steps outlined below:
+To do this, open [Dashboard Gateway Installation - Configuration](xref:Dashboard_Gateway_installation#configuration). There, only follow the steps outlined below:
 The steps you need are under **On the Dashboard Gateway web server, edit the web.config in the API folder, and specify the following settings:**. Because you are moving from the legacy **SLNet-managed** solution to **BrokerGateway-managed NATS**, use the **If the system uses BrokerGateway:** subsection, ignoring the steps below the **If the system does not use BrokerGateway yet (only possible on 10.5.x systems):** subsection.
 
 ## Migrating back to the old system
