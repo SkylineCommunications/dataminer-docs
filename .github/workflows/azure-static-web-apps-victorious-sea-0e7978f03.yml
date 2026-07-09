@@ -151,7 +151,7 @@ jobs:
             --retry-wait-time 2
             --max-retries 2
             --user-agent "Mozilla/5.0 DeadLinkDetector/1.0"
-            --exclude-mail
+            --include-mail=false
             --exclude "^https://community\.dataminer\.services/"
             --exclude "^https://aka\.dataminer\.services/"
             --exclude "^https://www\.nuget\.org/packages/"
