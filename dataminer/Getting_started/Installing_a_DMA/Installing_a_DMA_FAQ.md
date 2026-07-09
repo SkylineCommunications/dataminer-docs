@@ -63,8 +63,6 @@ This could be the case if IIS was installed after the .NET framework. If these t
    > [!NOTE]
    > In this path, "1.1.4322" represents the version number of the .NET Framework that you installed on your server.
 
-For more information, see <http://support.microsoft.com/kb/306005/>.
-
 ## What do I do when I get a Dashboards error saying that the directory name is not valid?
 
 In some cases, the following Dashboards error may appear:
@@ -89,7 +87,7 @@ If so, do the following:
 > [!NOTE]
 > If the error message persists, restart the computer.
 
-For more information, see <http://support.microsoft.com/kb/825791>.
+For more information, see <https://learn.microsoft.com/en-us/answers/questions/5642781/cs0016-could-not-write-to-output-file>.
 
 ## What do I do if I have backup problems on a 64-bit OS?
 
