@@ -27,6 +27,9 @@ The dialog consists of two main areas:
 
 - **Right side**: The [automated actions](#automated-actions) (orchestration scripts), which allow you to configure scripts that run at specific moments during the lifecycle of a job.
 
+   > [!NOTE]
+   > [Automated actions](#automated-actions) are only visible if [MediaOps Live](xref:MediaOps.Live) is installed.
+
 ### Capabilities
 
 [Capabilities](xref:MO_Resource_Studio#capabilities) give a qualitative description of a resource, making it clear what it can be used for. When capabilities are configured in the scheduling configuration, only resources that match all defined capabilities can be selected from the resource pool.
