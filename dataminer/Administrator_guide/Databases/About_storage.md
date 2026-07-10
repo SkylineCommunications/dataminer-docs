@@ -1,6 +1,6 @@
 ---
 uid: About_storage
-description: "Compare DataMiner System data storage options and choose Storage as a Service to get full features scalable performance and simpler operations."
+description: "Learn about DataMiner storage options and why Storage as a Service is the recommended choice for scalable, low-maintenance storage."
 ---
 
 # About storage

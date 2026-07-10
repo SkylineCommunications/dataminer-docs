@@ -1,6 +1,6 @@
 ---
 uid: Separate_Cassandra_setup_without_Elasticsearch
-description: "Explore how, if you do not want to use the recommended STaaS setup, you can set up a separate Cassandra database without indexing per DMA."
+description: "Learn about separate Cassandra storage for DataMiner, a legacy setup where any features that require indexing are unavailable."
 ---
 
 # Separate Cassandra setup without indexing

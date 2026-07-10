@@ -1,6 +1,6 @@
 ---
 uid: Supported_system_data_storage_architectures
-description: "Explore the supported system data storage architectures and choose Storage as a Service to simplify maintenance and keep your DataMiner setup scalable."
+description: "Compare DataMiner storage architectures, including the recommended STaaS option and supported self-managed options for system data storage."
 ---
 
 # Storage options overview
