@@ -61,6 +61,7 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards/Low-Code Apps: [*Form* component](xref:DashboardForm) and DOM data input | DataMiner web 10.3.6/10.4.0<br>DataMiner 10.1.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#dommanager) <!-- [ID 36124] -->|
 | Dashboards/Low-Code Apps: [*Grid* component](xref:DashboardGrid) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) |
 | Dashboards/Low-Code Apps: [*Icon* component](xref:DashboardIcon) | DataMiner 10.3.1/10.4.0 <!-- [ID 34867] -->|
+| Dashboards/Low-Code Apps: [Importing a query from JSON](xref:Importing_a_query#importing-a-query-from-json) | DataMiner 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 <!-- [ID 45630] --> |
 | Dashboards/Low-Code Apps: [*Maps* component](xref:DashboardMaps) | DataMiner web 10.4.0 [CU13]/10.5.0 [CU1]/DataMiner 10.5.4<!-- [ID 42309] --> |
 | Dashboards/Low-Code Apps: [*Numeric input* component](xref:DashboardNumericInput) | DataMiner web 10.3.5/10.4.0 <!-- [ID 35911] -->|
 | Dashboards/Low-Code Apps: [Preset templates](xref:Template_Editor#using-a-preset-template) | DataMiner web 10.5.0 [CU10]/10.6.1 <!-- [ID 44040 + 44123] --> |
@@ -112,6 +113,7 @@ Below you can find an overview of the main features that have been added to Data
 | GQI: [Custom operator](xref:GQI_Custom_Operator) | DataMiner web 10.3.0 [CU10]/10.4.1 <!-- [ID 37840] --><br>DataMiner 10.2.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface) |
 | GQI: [Custom sort order](xref:GQI_Redirect_Sort_Tutorial) | DataMiner 10.4.5/10.5.0 <!-- [ID 39136] -->|
 | GQI: [DCF connections data source](xref:Get_DCF_connections) | DataMiner 10.1.3/10.2.0 <!-- [ID 29703] -->|
+| GQI: [Defining a set of discrete values when creating a column](xref:GQI_Extensions_Discrete_Values) within GQI extensions | DataMiner 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 <!-- [ID 45380]--> |
 | GQI: [Relational anomalies data source](xref:Get_relational_anomalies) | DataMiner 10.5.12/10.6.0 <!-- [ID 43820] --> |
 | GQI: [Importing queries](xref:Importing_a_query) | DataMiner 10.1.4/10.2.0 <!-- [ID 29022] --> |
 | GQI: [Logging](xref:GQI_Logging) | DataMiner 10.4.0/10.4.4 <!-- [ID 38870] --> |
@@ -144,6 +146,7 @@ Below you can find an overview of the main features that have been added to Data
 | Protocols: [Direct view table with table columns of different protocols](xref:Protocol.Params.Param.CrossDriverOptions) | DataMiner 10.2.9/10.3.0 <!-- [ID 33253] --> |
 | [User-defined APIs](xref:UD_APIs) | DataMiner 10.3.6/10.4.0<br>DataMiner 10.3.5 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#userdefinableapi) <!-- [ID 36273] --> |
 | User-defined APIs: [Rate limit configuration for API tokens](xref:UD_APIs_Objects_ApiToken#ratelimit) | DataMiner 10.6.7/10.7.0 <!-- [ID 45470] --> |
+| User-defined APIs: [Using route parameters](xref:UD_APIs_API_script_examples#using-route-parameters) | DataMiner 10.6.8/10.7.0 <!-- [ID 45681]--> |
 | Security: [Custom user group rights presets](xref:Configuring_a_user_group#using-presets-to-assign-rights) | DataMiner Cube 10.4.0 [CU12]/10.5.0 [CU1]/10.5.3<!-- [ID 41656] --> |
 | Security: [External user authentication using Azure B2C](xref:SAML_using_Azure_B2C) | DataMiner 10.2.6/10.3.0 <!-- [ID 32714] -->|
 | Security: [External user authentication using Entra ID (formerly Azure AD)](xref:SAML_using_Entra_ID) | DataMiner 10.1.5/10.2.0 <!-- [ID 28444] -->|
