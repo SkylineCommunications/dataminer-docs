@@ -55,7 +55,7 @@ When you have created a virtual signal group, you can start adding endpoints to 
 
 ## Levels
 
-Levels define a logical structure for the virtual signal groups on the system. Each level is assigned a unique level number, a name, and a specific [transport type](#transport-types). It will only be possible to add endpoints of the same type on the level in a virtual signal group.
+Levels define a logical structure for the virtual signal groups on the system. Each level is assigned a unique level number, a name, and a specific [transport type](#transport-types). Only endpoints that match the type of the level can be added for that level in a virtual signal group.
 
 Levels defined in the Virtual Signal Groups app are defined system-wide, meaning that the level structure of all virtual signal groups is the same. However, each individual signal group can contain an endpoint on a level or not.
 
