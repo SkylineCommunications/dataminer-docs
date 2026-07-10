@@ -1,7 +1,7 @@
 ---
 uid: Dedicated_clustered_storage
 keywords: Cassandra Cluster
-description: Though this is not recommended, DataMiner supports self-managed dedicated clustered storage using Cassandra and OpenSearch.
+description: "If you do not want to use the recommended STaaS setup, opt for self-managed dedicated clustered storage using Cassandra and OpenSearch."
 ---
 
 # Dedicated clustered storage

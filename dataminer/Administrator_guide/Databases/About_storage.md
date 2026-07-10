@@ -1,5 +1,6 @@
 ---
 uid: About_storage
+description: "Compare DataMiner System data storage options and choose Storage as a Service to get full features scalable performance and simpler operations."
 ---
 
 # About storage
