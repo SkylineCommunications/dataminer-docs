@@ -1,5 +1,6 @@
 ---
 uid: About_storage
+description: "Learn about DataMiner storage options and why Storage as a Service is the recommended choice for scalable, low-maintenance storage."
 ---
 
 # About storage
