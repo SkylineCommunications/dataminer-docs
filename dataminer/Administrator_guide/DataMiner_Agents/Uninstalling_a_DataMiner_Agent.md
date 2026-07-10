@@ -1,5 +1,6 @@
 ---
 uid: Uninstalling_a_DataMiner_Agent
+description: "Follow these instructions to uninstall a DataMiner Agent either by using the DataMiner Installer or by using a manual procedure."
 ---
 
 # Uninstalling a DataMiner Agent

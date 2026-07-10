@@ -1,5 +1,6 @@
 ---
 uid: Restoring_a_DataMiner_Agent
+description: "Restore a DataMiner Agent either manually or using the Taskbar Utility after having prepared the destination server."
 ---
 
 # Restoring a DataMiner Agent
