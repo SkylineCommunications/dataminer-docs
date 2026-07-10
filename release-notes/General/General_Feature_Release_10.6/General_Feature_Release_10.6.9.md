@@ -172,3 +172,11 @@ As a result, when that QAction thread then tried to update element metrics, it w
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
 When the DataMiner software was stopped, in some cases, the SLAnalytics process could get stuck while being stopped.
+
+#### Smart-serial client connection state incorrectly shown as undefined [ID 45931]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when an element with a smart-serial connection acted as a client, in some cases, the *Connection State* column in the *Communication Info* table on the *General parameters* page would incorrectly show `Undefined`.
+
+From now on, that column will correctly show the actual connection state, e.g., `Connected`.
