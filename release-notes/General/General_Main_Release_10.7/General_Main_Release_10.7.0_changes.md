@@ -690,3 +690,9 @@ From now on, the recompilation flow will ensure that libraries are recompiled in
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
 When the DataMiner software was stopped, in some cases, the SLAnalytics process could get stuck while being stopped.
+
+#### StorageModule DxM would fail to start because of a WebSocket issue [ID 45933]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Because of a WebSocket issue, in some rare cases, the StorageModule DxM would fail to start. As a result, DataMiner would not be able to start up.
