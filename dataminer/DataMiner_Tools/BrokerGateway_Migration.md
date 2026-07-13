@@ -71,7 +71,7 @@ For example, applying manual configuration on only one DataMiner Agent in a 10â€
 
 ## Prerequisite-only .dmupgrade package
 
-A [NATSMigration - Prerequisite only.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package can be used to test system compatibility in advance, without the need to commit to a BrokerGateway migration. It should be run on all Agents in the DMS.
+A [NATSMigration - Prerequisite only.dmupgrade](https://community.dataminer.services/download/natsmigration-prerequisite-only/) package can be used to test system compatibility in advance, without the need to commit to a BrokerGateway migration. It should be run on all Agents in the DMS.
 
 The package only executes prerequisite checks and does not cause any impact on the DMS.
 
