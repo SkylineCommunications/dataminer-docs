@@ -169,21 +169,32 @@ When recommended by Skyline, the migration can be run manually:
 
 ### Updating the Data Aggregator configuration
 
-[Data Aggregator](xref:Data_Aggregator_DxM) can connect to multiple DataMiner Systems. When a specific DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be [manually updated](xref:Data_Aggregator_settings#dms-with-brokergateway).
+[Data Aggregator](xref:Data_Aggregator_DxM) can connect to multiple DataMiner Systems. When a specific DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be manually updated by following the guide at [Data Aggregator Settings - DMS with BrokerGateway](xref:Data_Aggregator_settings#dms-with-brokergateway).
 
-Please verify whether you previously had a limit on the number of NATS endpoints **in your Data Aggregator configuration**.
-Please also verify whether IP addresses of certain endpoints were customized.
-To do that, see [DMS without BrokerGateway](xref:Data_Aggregator_settings#dms-without-brokergateway).
-Under [DMS without BrokerGateway](xref:Data_Aggregator_settings#dms-without-brokergateway), check the **URIs** field in **BrokerOptions.Clusters**.
-If this is the case, a `ForcedEndpoints` array can be added to override the NATS endpoints provided by BrokerGateway.
-For more information, see [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
+>[!NOTE]
+>
+> The Data Aggregator DxM does not work in combination with ForcedEndpoints.
 
 ### Updating Dashboard Gateway
 
-If you employ a [Dashboard Gateway](xref:Dashboard_Gateway_installation), you need to reconnect after the BrokerGateway migration.
+From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!-- RN 44344 -->, [Dashboard Gateway](xref:Dashboard_Gateway_installation) uses **MessageBroker/NATS** for communication.
+Therefore, starting from those versions, you need to adapt the settings of the **Dashboard Gateway** after the BrokerGateway migration.
 
-To do this, open [Dashboard Gateway Installation - Configuration](xref:Dashboard_Gateway_installation#configuration). There, only follow the steps outlined below:
-The steps you need are under **On the Dashboard Gateway web server, edit the web.config in the API folder, and specify the following settings:**. Because you are moving from the legacy **SLNet-managed** solution to **BrokerGateway-managed NATS**, use the **If the system uses BrokerGateway:** subsection, ignoring the steps below the **If the system does not use BrokerGateway yet (only possible on 10.5.x systems):** subsection.
+To do this, specify the following settings to make sure the gateway can communicate using **MessageBroker** within the DataMiner cluster:
+
+1. On the Dashboard Gateway web server, edit the *web.config* in the `C:\Skyline DataMiner\Webpages\API` folder, and specify the following settings:
+
+   - *connectionString*: The hostname or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.
+   - *connectionUser* and *connectionPassword*: The DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (username and password).
+
+   Also specify the following settings to make sure the gateway can communicate using **MessageBroker** within the DataMiner cluster:
+
+     - *nats:credsUrl*: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+
+     - *nats:apiKeyPath*:
+
+       - From 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!-- RN 44757 -->, a [BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) should be used. *apiKeyPath* should point to the [client secret file](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets).
+       - In earlier DataMiner versions, the file `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` has to be copied from the DMA to the local server, and the new path of that file needs to be set in *apiKeyPath*.
 
 ## Migrating back to the old system
 
