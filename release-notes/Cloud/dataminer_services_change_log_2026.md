@@ -9,15 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-
-
 ### 14 July 2026 - Enhancement - Home - Back button on create organization step in DaaS deploy wizard
 
 A back button is now available on the create organization step in the DaaS deploy wizard.
 
-### 14 July 2026 - Enhancement - Admin - Documentation button on DMS Overview for expiring DaaS
+### 14 July 2026 - Enhancement - Admin - Documentation button on DMS Overview for expiring DaaS system
 
-On the DMS Overview page in the Admin app, a documentation button is now shown when a DaaS is about to expire.
+On the DMS Overview page in the Admin app, a documentation button is now shown when a DaaS system is about to expire.
 
 ### 14 July 2026 - Enhancement - Home - Increased line allowance for Open in desktop notification
 
@@ -33,11 +31,11 @@ The detail panel of a subscription on the Billing page of the Admin app now incl
 
 ### 14 July 2026 - Enhancement - Catalog - Faster tooltip on Deploy button
 
-The tooltip for the *Deploy* button has been improved and now appears faster on hover.
+The tooltip for the *Deploy* button has been improved and is now shown faster on hover.
 
 ### 14 July 2026 - Fix - Catalog - Inline code not displaying correctly in catalog descriptions
 
-In the Catalog app, inline code in markdown catalog descriptions was never rendered correctly. This issue has been resolved.
+In the Catalog app, inline code in the description of Catalog items was not rendered correctly. This issue has been resolved.
 
 ### 14 July 2026 - Enhancement - Admin - API key references renamed to Key in Audit
 
@@ -49,7 +47,7 @@ The usage page has been removed from the Admin app.
 
 ### 14 July 2026 - Enhancement - Admin - Auto-save and confirmation options on settings page
 
-The Settings page in the Admin app has been updated to include an auto-save option for all settings. Settings that involve managing lists of items, such as IP addresses or domains, are excluded from auto-save. Some settings with significant system impact now also require confirmation before they are applied.
+The Settings page in the Admin app has been updated to include an auto-save option for all settings. Settings that involve managing lists of items, such as IP addresses or domains, are excluded from this auto-save. Some settings with significant system impact now also require confirmation before they are applied.
 
 ### 14 July 2026 - Enhancement - General - Icons added to all apps in the header app menu
 
