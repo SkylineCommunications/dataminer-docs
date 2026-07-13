@@ -107,3 +107,9 @@ The dialog used to dynamically link parameter values (capabilities, capacities, 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
 
 When you confirmed a job with a start time in the past (which then ran automatically), node start and stop times remained anchored to that past start time. As a result, resources could appear reserved from before the reservation actually existed. This issue has now been fixed: on confirmation, past node start times are moved forward to the confirmation time so resource usage reflects the actual reserved window.
+
+#### Scheduling: Deprecated organizations shown when creating jobs or editing job owner [ID 45981]
+
+Previously, deprecated organizations could be shown when a new job was created or the ownership of a job was edited.
+
+This issue has now been fixed, and deprecated organizations are no longer shown.
