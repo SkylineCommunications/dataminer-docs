@@ -6,7 +6,7 @@ uid: BrokerGateway_Migration
 
 Before upgrading to 10.6.0/10.6.1, migrating to BrokerGateway is **mandatory**. This migration brings DataMiner from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service).
 
-The migration is done using the "NATSMigration" tool. In most cases, this should be used to run an automatic migration. A manual migration is also possible with this tool, but will only be required in very specific circumstances and after consultation with Skyline Communications.
+The migration is done using the *NATSMigration* tool. In most cases, this should be used to run an automatic migration. A manual migration is also possible with this tool, but will only be required in very specific circumstances and after consultation with Skyline Communications.
 
 The migration should be executed on DataMiner version **10.5.0 [CU11]/10.5.12 [CU2]**. While it is possible to migrate earlier DataMiner versions starting from DataMiner 10.5.0 [CU4]/10.5.7 [CU1], this has several limitations.
 
@@ -50,7 +50,7 @@ To make sure that the migration goes smoothly, please ensure that TLS 1.2 is ena
 
 In addition, the associated *TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256* or *TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384* cipher suites need to be enabled on the server.
 
-Finally, ensure that no problems with '[Schannel](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-ssl-schannel-ssp-overview)' are logged in the Windows Event Viewer's Application event log.
+Finally, ensure that no problems with "[Schannel](https://learn.microsoft.com/en-us/windows-server/security/tls/tls-ssl-schannel-ssp-overview)" are logged in Windows Event Viewer's application log.
 
 ### DataMiner requirements
 
@@ -64,7 +64,7 @@ Finally, ensure that no problems with '[Schannel](https://learn.microsoft.com/en
 
 If you have disabled automatic NATS configuration via the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config) and manually configured NATS prior to the migration, make sure that the **same configuration** is applied consistently across the entire cluster.
 
-For example, applying manual configuration on only one DataMiner Agent in a 10‑Agent cluster will result in an inconsistent and incorrect setup. Applying the same manual configuration on all 10 of the Agents will correct this.
+For example, applying manual configuration on only one DataMiner Agent in a 10‑Agent cluster will result in an inconsistent and incorrect setup. Applying the same manual configuration on all 10 Agents will correct this.
 
 > [!IMPORTANT]
 > This prerequisite needs to be verified manually, as it is not yet included in the [Prerequisite-only .dmupgrade package](#prerequisite-only-dmupgrade-package).
@@ -73,9 +73,9 @@ For example, applying manual configuration on only one DataMiner Agent in a 10�
 
 A [NATSMigration - Prerequisite only.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package can be used to test system compatibility in advance, without the need to commit to a BrokerGateway migration. It should be run on all Agents in the DMS.
 
-The package only executes prerequisites and does not cause any impact on the DMS.
+The package only executes prerequisite checks and does not cause any impact on the DMS.
 
-It verifies the [DataMiner requirements](#dataminer-requirements), the [.NET runtime requirements](#aspnet-core-runtime-10-hosting-bundle-for-automatic-migration) and the [IT requirements](#it-requirements), and informs you in case any requirements are not met.
+It verifies the [DataMiner requirements](#dataminer-requirements), the [.NET runtime requirements](#aspnet-core-runtime-10-hosting-bundle-for-automatic-migration), and the [IT requirements](#it-requirements), and informs you in case any requirements are not met.
 
 However, note that it does not verify the [NATS configuration consistency](#configuration-consistency).
 
@@ -134,7 +134,7 @@ When recommended by Skyline, the migration can be run manually:
 
 1. Verify whether you previously had a **limit** on the number of NATS endpoints in your DMZ and whether **IP addresses** of certain endpoints were **customized**.
 
-   For details, look for "If you are using the SLNet-managed NATS solution" under [Connecting to dataminer.services with a DMZ setup](xref:Connect_to_cloud_with_DMZ). This will include a reference to the *SLCloud.xml* file, which contains the previous endpoints used by the legacy **SLNET-managed NATS solution**.
+   You can find the previous endpoints used by the legacy SLNet-managed NATS solution in the file `C:\Skyline DataMiner\SLCloud.xml`.
 
 1. If there is a limit on the number of NATS endpoints or specific NATS endpoints need to be connected, add a `ForcedEndpoints` array to override the NATS endpoints provided by BrokerGateway.
 
@@ -144,11 +144,11 @@ When recommended by Skyline, the migration can be run manually:
 
    1. Obtain an API key for the DMZ server:
 
-      - From DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards, [generate a BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) and place the client secret file on the DMZ server. Then set `APIKeyPath` to the path of that file.
+      - From DataMiner 10.5.0 [CU14] onwards, [generate a BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) and place the client secret file on the DMZ server. Then set `APIKeyPath` to the path of that file.
 
-      - In earlier DataMiner versions, copy `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` from a DataMiner node to the same location on the DMZ. Then set `APIKeyPath` to the path of the copied file.
+      - In earlier DataMiner versions or 10.5.x Feature Release versions, copy `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` from a DataMiner node to the same location on the DMZ. Then set `APIKeyPath` to the path of the copied file.
 
-   1. On the DMZ, open `C:\ProgramData\Skyline Communications\DataMiner\MessagebrokerConfig.json`.
+   1. On the DMZ, open `C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json`.
 
    1. Update the file so it follows the **BrokerGatewayConfig** format:
 
@@ -171,30 +171,22 @@ When recommended by Skyline, the migration can be run manually:
 
 [Data Aggregator](xref:Data_Aggregator_DxM) can connect to multiple DataMiner Systems. When a specific DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be manually updated by following the guide at [Data Aggregator Settings - DMS with BrokerGateway](xref:Data_Aggregator_settings#dms-with-brokergateway).
 
->[!NOTE]
->
-> The Data Aggregator DxM does not work in combination with ForcedEndpoints.
+> [!NOTE]
+> The Data Aggregator DxM does not work in combination with `ForcedEndpoints`.
 
 ### Updating Dashboard Gateway
 
-From DataMiner 10.5.0 [CU11]/10.6.2 onwards<!-- RN 44344 -->, [Dashboard Gateway](xref:Dashboard_Gateway_installation) uses **MessageBroker/NATS** for communication.
-Therefore, starting from those versions, you need to adapt the settings of the **Dashboard Gateway** after the BrokerGateway migration.
+If you are on the **Main Release** track, from DataMiner 10.5.0 [CU11] onwards<!-- RN 44344 -->, [Dashboard Gateway](xref:Dashboard_Gateway_installation) uses **MessageBroker/NATS** for communication, which means that you will need to adapt the settings of the **Dashboard Gateway** after the BrokerGateway migration. On the Feature Release track, these steps are not needed.
 
-To do this, specify the following settings to make sure the gateway can communicate using **MessageBroker** within the DataMiner cluster:
+To make sure the gateway can communicate using MessageBroker within the DataMiner cluster, on the **Dashboard Gateway web server**, edit the *web.config* in the `C:\Skyline DataMiner\Webpages\API` folder, and specify the following settings:
 
-1. On the Dashboard Gateway web server, edit the *web.config* in the `C:\Skyline DataMiner\Webpages\API` folder, and specify the following settings:
+- *connectionString*: The hostname or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.
+- *connectionUser* and *connectionPassword*: The DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (username and password).
+- *nats:credsUrl*: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+- *nats:apiKeyPath*:
 
-   - *connectionString*: The hostname or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.
-   - *connectionUser* and *connectionPassword*: The DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (username and password).
-
-   Also specify the following settings to make sure the gateway can communicate using **MessageBroker** within the DataMiner cluster:
-
-     - *nats:credsUrl*: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
-
-     - *nats:apiKeyPath*:
-
-       - From 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 onwards<!-- RN 44757 -->, a [BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) should be used. *apiKeyPath* should point to the [client secret file](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets).
-       - In earlier DataMiner versions, the file `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` has to be copied from the DMA to the local server, and the new path of that file needs to be set in *apiKeyPath*.
+  - From 10.5.0 [CU13] onwards<!-- RN 44757 -->, a [BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) should be used. *apiKeyPath* should point to the [client secret file](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets).
+  - In earlier DataMiner versions, the file `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` has to be copied from the DMA to the local server, and the new path of that file needs to be set in *apiKeyPath*.
 
 ## Migrating back to the old system
 
@@ -233,7 +225,7 @@ The following actions will be executed automatically during the migration, in th
 
    This includes the [Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites) BPA test and (from DataMiner 10.5.0 [CU9]/10.5.12 onwards) a check for outdated DLLs in the *ProtocolScripts* folder. If any of the prerequisites are not met or if an outdated DLL is found, you will first need to solve the issue before you can start the migration again.
 
-1. The *BrokerGateway* flag in `C:\Skyline DataMiner\MaintenanceSettings.xml` is set to true, or, if you are using a DataMiner version prior to 10.5.0 [CU2]/10.5.5, a *BrokerGateway* soft-launch flag is set instead.
+1. The *BrokerGateway* flag in `C:\Skyline DataMiner\MaintenanceSettings.xml` is set to true.
 
    ```xml
    <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
