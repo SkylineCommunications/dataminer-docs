@@ -14,6 +14,10 @@ A script is executed in a Runner when the [`SolutionId`](xref:DMSScript.Solution
 
 All scripts that share the same [`SolutionId`](xref:DMSScript.SolutionId) value are grouped together and executed in the same Script Runner. Scripts without a [`SolutionId`](xref:DMSScript.SolutionId) keep running in the DataMiner SLAutomation process as before.
 
+> [!NOTE]
+>
+> - The recommended way to develop automation scripts is as a Visual Studio solution. In that case, do not set the [`SolutionId`](xref:DMSScript.SolutionId) tag manually. Instead, add a `DataMinerSolutionId` property to the `.csproj` or `.props` file of the scripts that should run in the same Runner. The [`SolutionId`](xref:DMSScript.SolutionId) tag is then set automatically in the resulting automation script XML. For more information, see [Getting started with automation script development](xref:GettingStartedWithAutomationScriptDevelopment).
+
 ## Number of Runners in a system
 
 Under normal circumstances, only one Runner is active per solution, and all scripts of that solution are executed in it.
