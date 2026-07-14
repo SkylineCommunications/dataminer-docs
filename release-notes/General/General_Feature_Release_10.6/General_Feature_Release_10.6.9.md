@@ -36,39 +36,22 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-#### Database: Support for EncryptedRaw DataType in CassandraPlugin [ID 44075]
+#### Credentials at rest [ID 44075] [ID 44352] [ID 44701] [ID 44702] [ID 44911]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
-Support for the **EncryptedRaw** data type has been added to the **CassandraPlugin**. For database operations involving **DataDefinitions** that reference this data type, the actual encrypted value is replaced with a placeholder identifier (GUID). This identifier links to a corresponding record in a dedicated **encryptedsecret** table. All secrets stored in this table are protected using industry-standard encryption (AES-256-CBC with HMAC).
+From now on, credential secrets are stored as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) instead of in the legacy *Library.xml* file. The encryption material is held in a per-node `encryptors.bin` file under `%CommonApplicationData%\Skyline Communications\DataMiner StorageModule\Encryption\`, wrapped with the Windows [Data Protection API (DPAPI)](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection) under *LocalMachine* scope.
 
-Note that this approach was chosen to support efficient re-encryption, enabling the system to re-encrypt a single table rather than all DataDefinition-related tables containing **EncryptedRaw** fields.
+Because DPAPI binds the encryption keys to the host that produced them, restoring a DataMiner Agent on a different machine requires a **DMS backup password**. When this password has been configured, a full DataMiner backup contains a passphrase-wrapped envelope (`backup_encryptors.bin`) that is sealed with PBKDF2-HMAC-SHA-256 (100,000 iterations, 32-byte salt) and AES-256-CBC with HMAC-SHA-256, so that the encryption material can travel between hosts without exposing the keys in plain text. For more information, see [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent) and [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility).
 
-Additionally, client-side support has been implemented in both **C#** and **C++** to access the referenced encrypted storage. This access is deliberately limited to the re-encrypt operation, as the **StorageModule** backend explicitly blocks all standard CRUD database operations targeting the referenced storage. This safeguard prevents bypass attempts via direct or malicious **NATS** messages.
+> [!IMPORTANT]
+> Store the DMS backup password securely outside DataMiner (for example, in a password manager). If it is lost, encrypted credentials in any backup taken with that password can no longer be recovered on a clean host. In a multi-node cluster, a peer DataMiner Agent can re-synchronize the encryption material to a restored node, but this should not be relied upon as a substitute for a properly configured DMS backup password.
 
-#### Database: Support for encryption handling [ID 44352]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-
-Support for the **EncryptionManager** has been added. This manager is responsible for handling encryption, decryption, and re-encryption operations for the **EncryptedRaw** data type. It ensures cluster-wide synchronization of encryption metadata via **NATS**, which is used to instantiate the underlying **IEncryptor** responsible for performing these operations (AES-256 with HMAC).
-
-Each **StorageModule** node stores its encryption metadata locally through the **IEncryptionStore**, leveraging the .NET **DPAPI**. This guarantees that only the machine that originally encrypted the data can decrypt it.
-
-#### DataMiner Upgrade: Support to migrate from Library.xml to StorageModule and vice versa [ID 44701] [ID 44702]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-
-Support has been added to migrate credentials between Library.xml and the **StorageModule**. An upgrade will migrate credentials to the **StorageModule**, while a downgrade will migrate them back. This is handled through the **ICredentialCRUD** interface provided by **DMAObjects**.
+<!-- See also Cube RNs [ID 45704] [ID 45997] -->
 
 ## Changes
 
 ### Enhancements
-
-#### SLDataMiner: Refactored credentials handling [ID 44911]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-
-The logic related to credentials handling has been refactored in **SLDataMiner** to replace the readout of *Library.xml* via **SLXml** by the retrieval of SNMPv3 credentials through the **ICredentialCRUD** interface present in **DMAObjects**.
 
 #### Security enhancements [ID 45582]
 
