@@ -260,6 +260,12 @@ public class Script
 > - To swarm a scheduled task, the new hosting Agent must be up and running. In case the current hosting Agent is unreachable, swarming will still take place, but an error will be logged in the *SLScheduler* log file.
 > - To be able to trigger swarming for a scheduled task, you need the *Modules > Swarming* user permission.
 
+#### DataMiner Upgrade: Support to migrate from Library.xml to StorageModule and vice versa [ID 44701] [ID 44702]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Support has been added to migrate credentials from *Library.xml* to the **StorageModule** (and vice versa) via the **ICredentialCRUD** interface present in **DMAObjects**.
+
 #### Automation: Time zone of the client can now be passed to the automation script that is executed [ID 44742]
 
 <!-- MR 10.7.0 - FR 10.6.4 -->

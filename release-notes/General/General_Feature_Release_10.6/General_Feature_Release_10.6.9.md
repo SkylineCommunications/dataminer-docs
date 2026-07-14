@@ -54,6 +54,12 @@ Support for the **EncryptionManager** has been added. This manager is responsibl
 
 Each **StorageModule** node stores its encryption metadata locally through the **IEncryptionStore**, leveraging the .NET **ProtectedData** API. This guarantees that only the machine that originally encrypted the data can decrypt it. As an additional security measure, the encrypted file is written together with an **entropy** value, which is persisted in a separate file at the same location (*C:\ProgramData\Skyline Communications\DataMiner StorageModule\Encryption*) to further strengthen data protection.
 
+#### DataMiner Upgrade: Support to migrate from Library.xml to StorageModule and vice versa [ID 44701] [ID 44702]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Support has been added to migrate credentials from *Library.xml* to the **StorageModule** (and vice versa) via the **ICredentialCRUD** interface present in **DMAObjects**.
+
 ## Changes
 
 ### Enhancements
