@@ -46,7 +46,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | RemoteServices | Services hosted on other DMAs in the cluster. Each of the subfolders in this folder has the DMA ID of the DMA hosting the synchronized services. | Yes |
 | ResourceManager | Resource Manager configuration. | No |
 | Scripts | Automation scripts. | Yes |
-| Security | Within this folder, only the *Credentials* subfolder, which contains the credentials library configuration, and the *Ownership* subfolder are synchronized. From DataMiner 10.6.9 onwards<!--RN 44352-->, the *Encryption* subfolder additionally contains a backup copy of the DPAPI-protected encryption material that DataMiner uses to [encrypt credentials at rest](xref:Encryption_in_DataMiner#credentials-at-rest). | Partially |
+| Security | Within this folder, only specific subfolders are synchronized:<br>- The *Credentials* subfolder, which contains the Credentials Library configuration.<br>- The *Ownership* subfolder.<br>- From DataMiner 10.6.9/10.7.0 onwards<!--RN 44352-->, the *Encryption* subfolder, which contains a backup copy of the DPAPI-protected encryption material that DataMiner uses to [encrypt credentials at rest](xref:Encryption_in_DataMiner#credentials-at-rest). | Partially |
 | ServiceManager | Service Manager configuration. | No |
 | Services | Services hosted on the DMA. | See note below. |
 | SharedItems | Information about dashboards that have been shared on dataminer.services. See [Sharing a dashboard](xref:Sharing_a_dashboard). | Yes |

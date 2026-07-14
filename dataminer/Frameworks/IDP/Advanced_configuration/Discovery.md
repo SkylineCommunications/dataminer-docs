@@ -14,11 +14,11 @@ This page lists the available discovery profiles.
 
 - To **create a new discovery profile**, click the *New* button above the table. This button is available from IDP 1.1.20 onwards.
 
-  This will open a wizard where you can add actions and configure options for the relevant protocol type. For SNMP discovery profiles, you can select the *Use Credentials Library* option to use credentials stored in the credentials library (see [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication)).
+  This will open a wizard where you can add actions and configure options for the relevant protocol type. For SNMP discovery profiles, you can select the *Use Credentials Library* option to use credentials stored in the [Credentials Library](xref:Credentials_Library).
 
 - To **edit an existing discovery profile**, select the discovery profile in the table and click the *Edit* button above the table. This button is available from IDP 1.1.20 onwards.
 
-  This will open a wizard where you can add and delete actions, as well as configure options for the relevant protocol type. For SNMP discovery profiles, you can select the *Use Credentials Library* option to use credentials stored in the credentials library (see [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication)).
+  This will open a wizard where you can add and delete actions, as well as configure options for the relevant protocol type. For SNMP discovery profiles, you can select the *Use Credentials Library* option to use credentials stored in the [Credentials Library](xref:Credentials_Library).
 
 - To **load a discovery profile** configured in JSON, click the *Import* button above the table listing the discovery profiles. A section will then become available below the table where you can import a single discovery profile or all available discovery profiles. From IDP 1.2.0 onwards, you can also select a different file path to import from. In earlier IDP versions, the profiles must be placed in the DataMiner Documents folder *Skyline IDP Discovery* > *Discovery*.
 
