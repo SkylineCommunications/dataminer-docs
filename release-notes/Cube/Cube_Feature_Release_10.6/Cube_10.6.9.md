@@ -94,3 +94,13 @@ Now, the `ShowRibbon` option works again, so you can use it to show or hide the 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 When you logged out of DataMiner Cube immediately after you had logged in, in some cases, an exception could be thrown related to either the Alarm Console light bulb feature or the Correlation feature.
+
+#### Progress events only scroll when at the bottom [ID 45962]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+During an upgrade, or when importing or exporting, progress events come in continuously.
+
+Up to now, when you scrolled up to check other events, the window would automatically scroll back to the bottom, making it impossible to view earlier events.
+
+From now on, the window will only automatically scroll to the bottom when you are already at the bottom. If you manually scroll up to check other events, the window will remain at that position, while new events continue to arrive (as indicated by the scroll bar on the right).

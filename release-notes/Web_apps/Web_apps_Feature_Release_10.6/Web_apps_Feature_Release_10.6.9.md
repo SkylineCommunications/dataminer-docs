@@ -20,7 +20,26 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No new features have been added yet.*
+#### GQI - Extensions: Persistent scoped services [ID 45635]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When using the GQI DxM, extension developers can now define persistent services: reusable, injectable dependencies that live beyond a single query execution. This allows extensions to keep expensive setup work, cached data, helper clients, and shared state alive for the right scope instead of rebuilding everything every time a query runs.
+
+Services are registered by annotating a class with a scope attribute:
+
+- `[GQIWorkerService]`: one shared instance per extension worker process.
+- `[GQISecurityService]`: one shared instance per unique security context.
+- `[GQIUserService]`: one shared instance per user.
+
+Services can optionally configure `IdleExpirationMinutes`. When a service has been idle for that duration, it is automatically disposed. This helps reduce memory usage while still allowing frequently used services to stay warm.
+
+Services and extensions can now receive dependencies directly through their constructors. Extension developers no longer need to manually create or look up common dependencies during lifecycle methods. Constructor parameters can include:
+
+- Other registered services, resolved automatically by type or registered service contract.
+- `GQILazy<T>` for dependencies that should only be created when first used.
+- `IConnection` and `IGQIDMSInterface` for DataMiner access.
+- `IGQILogger`, `IGQIOnInitInputArgs`, and other standard GQI types.
 
 ## Changes
 
@@ -55,6 +74,23 @@ From now on, when selecting a table parameter, it will be possible to select eit
 
 > [!NOTE]
 > It is not possible to mix columns from different tables or to combine a table with standalone parameters.
+
+#### Dashboards/Low-Code Apps: New inputs implemented in components [ID 45693]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+New input components have been implemented in dashboards and low-code apps, replacing the previous input implementations:
+
+- *Button* component: Now includes a new *Type* setting that allows you to choose between call to action, subtle, normal, or danger styles.
+- *Dropdown* component: Now includes a new *Placeholder* setting.
+- *Text*, *Search*, and *Number* components: Typing is now from left to right instead of the previous right-to-left behavior.
+
+  The *Number* component now also supports scientific notation.
+
+> [!NOTE]
+>
+> - When a large number is fed to a numeric input, scientific notation is used (e.g., 1000000000000000000000 becomes 1e+21).
+> - When a number does not fit within the min and max values of the receiving component, the default value is used instead.
 
 #### Web apps: About box will now also show the version of the DataMiner Assistant DxM [ID 45833]
 

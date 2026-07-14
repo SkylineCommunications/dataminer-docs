@@ -78,6 +78,24 @@ Up to now, this data source would only check whether the DataMiner System includ
 
 From now on, the *Get parameter table by alias* data source will only be available when the DataMiner System includes an indexing database of type Elasticsearch or OpenSearch.
 
+#### Problem occurring while SL\* services were being shut down would prevent DataMiner from starting up again [ID 45839]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, while the SL* services were being shut down, in some cases, an access violation crash could occur.
+
+As a result, DataMiner could fail to start up again.
+
+#### Reconnecting a WMI connection could cause the SLProtocol process to stop unexpectedly [ID 45851]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, in some cases, reconnecting a WMI connection could cause the `SLProtocol` process to stop unexpectedly.
+
+In addition, opening StreamViewer would incorrectly show all items in the tree structure as `Undefined`.
+
+From now on, reconnecting a WMI connection will no longer cause `SLProtocol` to stop unexpectedly, and StreamViewer will correctly show the group and action executing the WMI query.
+
 #### Problem with SLProtocol when a queued QAction finished after an element had been stopped [ID 45882]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
