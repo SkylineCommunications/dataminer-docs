@@ -67,7 +67,7 @@ This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 
 
 ### StorageModule
 
-The StorageModule DcM is responsible for the storage of element configuration data.
+The StorageModule DcM is responsible for the storage of system credentials and element configuration data.
 
 ### SupportAssistant
 

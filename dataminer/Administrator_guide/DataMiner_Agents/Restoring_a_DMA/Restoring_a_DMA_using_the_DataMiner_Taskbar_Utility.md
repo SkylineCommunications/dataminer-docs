@@ -12,6 +12,10 @@ uid: Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility
 
     A description of the contents of the package will appear under *Description*.
 
+1. From DataMiner 10.6.9/10.7.0 onwards<!--RN 44352+45704-->, if the selected backup contains a passphrase-wrapped encryption envelope (i.e., it was taken on a system with a [DMS backup password](xref:Encryption_in_DataMiner#credentials-at-rest) configured), and you are restoring on a different machine, the *DMS Backup Password* field will be shown. Enter the password that was configured when the backup was taken and click *Verify*.
+
+   If the wizard instead displays a warning that encrypted secrets cannot be recovered<!-- RN 45997 -->, the backup does not contain a recoverable encryption envelope. You can still continue, but [credentials encrypted at rest](xref:Encryption_in_DataMiner#credentials-at-rest) will remain unreadable on the restored DMA until a peer DataMiner Agent in the cluster re-synchronizes the encryption material.
+
 1. Click *Restore* to start restoring the DMA.
 
    In the restore window, the different steps of the restoration process will be displayed.
