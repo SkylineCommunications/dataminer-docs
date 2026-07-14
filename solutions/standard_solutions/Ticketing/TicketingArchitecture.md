@@ -1,6 +1,6 @@
 ---
 uid: TicketingArchitecture
-description: Explore the architecture of the Ticketing Solution. Learn about the backend, the frontend, and the way in which the solution can interact with other apps.
+description: Explore the architecture of the Ticketing Solution. Learn about the backend, the frontend, and the way the solution can interact with other apps.
 ---
 
 # Ticketing architecture
@@ -37,7 +37,7 @@ This SDM relationships layer can be consulted by other DataMiner applications to
 
 The Ticketing frontend is the user interface of the solution, which is implemented as a low-code app.
 
-All tickets, fields, and related values are stored as a DataMiner Object Model (DOM).
+All tickets, fields, and related values are stored in DOM ([DataMiner Object Models](xref:DOM)).
 
 The user interaction is handled through forms. The logic for these is implemented using interactive automation scripts. The scripts are responsible for:
 
@@ -53,7 +53,7 @@ The Ticketing app can be used as a standalone app or via its API Helper. Both me
 
 Interaction with other apps is built into the solution. For example, on the Ticket Information page of the Ticketing app, linked items are displayed, with direct links to, for example, alarms and elements in the [Monitoring app](xref:Working_with_the_Monitoring_app) or in DataMiner Cube, or assets in the [Asset Manager](xref:Asset_Manager) app.
 
-For details, refer to [Linked Items section](xref:TicketingAppOverview#linked-items-section)
+For details, refer to [Linked Items section](xref:TicketingAppOverview#linked-items-section).
 
 ### People & Organizations interaction
 
@@ -81,7 +81,7 @@ When the DataMiner Ticketing solution is installed, it automatically creates the
 
 - **Ticket ID**: Contains the identifier of the ticket created from the alarm. This property is automatically populated when a ticket is created, allowing internal tracking within DataMiner.
 - **Incident Status**: Displays the current status of the associated ticket, reflecting any updates made during the ticket lifecycle.
-- **Incident Number**: Contains a reference to an external ticket (if any). This is used when integration with external systems (for example ServiceNow or Jira) is configured to allow synchronization of DataMiner tickets and external incidents.
+- **Incident Number**: Contains a reference to an external ticket (if any). This is used when integration with external systems (for example, ServiceNow or Jira) is configured to allow synchronization of DataMiner tickets and external incidents.
 
 These properties allow ticket information to be visible directly in the Alarm Console. They support both internal ticket tracking and integration with external ticketing systems.
 

@@ -5,7 +5,7 @@ description: Discover how tickets managed by the DataMiner Ticketing Solution ar
 
 # Ticketing concepts
 
-The Ticketing solution provides a structured approach to incident management within DataMiner.
+The Ticketing Solution provides a structured approach to incident management within DataMiner.
 
 Key concepts include:
 
@@ -120,12 +120,12 @@ Ticket types can also be used to:
 
 Tickets can be linked to **DataMiner objects**, referred to as **affected resources**, such as alarms, elements, and services. These links provide context about what is impacted by the ticket.
 
-Tickets can also be linked to **assets** managed through the **Asset Manager**, which is part of the InfraOps standard solution.
+Tickets can also be linked to **assets** managed through the **Asset Manager**, which is part of the InfraOps Solution.
 
 All relationships are implemented using the **Standard Data Model (SDM) relationship layer**. This allows the following functionality:
 
 - Other DataMiner applications can query ticket relationships.
-- In applications such as the Asset Manager, linked tickets can be indicated. For example, the Asset Manager can show whether an asset has active tickets linked to it.
+- In applications such as the Asset Manager, linked tickets can be indicated. For example, Asset Manager can show whether an asset has active tickets linked to it.
 
 > [!TIP]
 > See also: [Linked Items section](xref:TicketingAppOverview#linked-items-section)
