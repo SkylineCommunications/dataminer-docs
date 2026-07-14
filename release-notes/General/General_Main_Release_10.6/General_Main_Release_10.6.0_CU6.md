@@ -122,7 +122,7 @@ As a result, DataMiner could fail to start up again.
 
 #### Reconnecting a WMI connection could cause the SLProtocol process to stop unexpectedly [ID 45851]
 
-<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 Up to now, in some cases, reconnecting a WMI connection could cause the `SLProtocol` process to stop unexpectedly.
 
