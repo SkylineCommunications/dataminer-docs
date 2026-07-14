@@ -170,7 +170,7 @@ When an element was frequently stopped and restarted, up to now, alarms would ac
 
 From now on, alarms will be properly removed from the element alarm counter when an element stops. An additional safeguard has also been added to prevent duplicate alarm entries from being inserted into the counter if the same alarm tree already exists.
 
-#### Problem occurring while SL* services were being shut down would prevent DataMiner from starting up again [ID 45839]
+#### Problem occurring while SL\* services were being shut down would prevent DataMiner from starting up again [ID 45839]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
