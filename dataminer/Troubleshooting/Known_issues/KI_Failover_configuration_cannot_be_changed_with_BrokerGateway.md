@@ -17,10 +17,9 @@ Starting from DataMiner 10.5.0 [CU4]/10.5.7, in systems that have been migrated 
 
 Install DataMiner 10.6.0 [CU5]/10.6.8.<!-- RN 45613 -->
 
+> [!NOTE]
+> To upgrade an automatic Failover setup that is affected by this issue, in the upgrade options, make sure the *Failover policy* is set to *Simultaneously* or *Upgrade main and backup Agent simultaneously*.To upgrade an automatic Failover setup that is affected by this issue, in the upgrade options, make sure the *Failover policy* is set to *Simultaneously* or *Upgrade main and backup Agent simultaneously*.
+
 ## Description
 
 In DataMiner Systems that have been [migrated to BrokerGateway](xref:BrokerGateway_Migration), switching from a manual to an automatic Failover configuration or vice versa can fail.
-
-## Note on upgrading
-
-To upgrade an automatic Failover setup that is affected by this issue, in the upgrade options, make sure the *Failover policy* is set to *Simultaneously* or *Upgrade main and backup Agent simultaneously*.
