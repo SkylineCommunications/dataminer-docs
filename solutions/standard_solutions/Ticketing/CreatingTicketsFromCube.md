@@ -11,7 +11,7 @@ The tickets will be **automatically linked** to the relevant alarms, elements, a
 
 To manually create a ticket for an alarm in Cube:
 
-1. Right-click the alarm in the Alarm Console, and select **Create ticket**.
+1. Right-click the alarm in the Alarm Console, and select **Create Ticket**.
 
    ![Create Ticket option in the right-click menu of the Cube Alarm Console](~/solutions/images/Ticketing_Create_ticket.png)
 

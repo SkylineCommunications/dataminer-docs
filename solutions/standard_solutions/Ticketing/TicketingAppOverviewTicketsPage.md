@@ -62,7 +62,7 @@ The Tickets page includes several filtering options:
 
 Once a ticket is closed, it is no longer shown in the default **Open Tickets** view. To locate it, switch to the **All** filter, which includes closed, canceled, and rejected tickets.
 
-For example, the ticket #10 below (*Broadcast Signal Degradation – Sports XTreme Channel*) is shown as *Closed* in the full ticket list:
+For example, the ticket #47 below is shown as *Closed* in the full ticket list:
 
 ![Closed ticket shown in All Tickets view on the Tickets page](~/solutions/images/Ticketing_Demo_18_ClosedTicket.png)
 
