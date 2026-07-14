@@ -170,6 +170,16 @@ When an element was frequently stopped and restarted, up to now, alarms would ac
 
 From now on, alarms will be properly removed from the element alarm counter when an element stops. An additional safeguard has also been added to prevent duplicate alarm entries from being inserted into the counter if the same alarm tree already exists.
 
+#### Reconnecting a WMI connection could cause the SLProtocol process to stop unexpectedly [ID 45851]
+
+<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, in some cases, reconnecting a WMI connection could cause the `SLProtocol` process to stop unexpectedly.
+
+In addition, opening StreamViewer would incorrectly show all items in the tree structure as `Undefined`.
+
+From now on, reconnecting a WMI connection will no longer cause `SLProtocol` to stop unexpectedly, and StreamViewer will correctly show the group and action executing the WMI query.
+
 #### Problem with SLProtocol when a queued QAction finished after an element had been stopped [ID 45882]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
