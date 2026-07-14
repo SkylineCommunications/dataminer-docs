@@ -226,3 +226,10 @@ From now on, that column will correctly show the actual connection state, e.g., 
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
 Because of a WebSocket issue, in some rare cases, the StorageModule DxM would fail to start. As a result, DataMiner would not be able to start up.
+
+#### STaaS: Page size would incorrectly be ignored when retrieving DOM instances from a STaaS database [ID 45952]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+<!-- Not added to MR 10.7.0 -->
+
+When DOM instances were retrieved from a STaaS database, up to now, the page size would incorrectly be ignored.
