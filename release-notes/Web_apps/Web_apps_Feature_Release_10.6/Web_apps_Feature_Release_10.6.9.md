@@ -20,7 +20,26 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*No new features have been added yet.*
+#### GQI - Extensions: Persistent scoped services [ID 45635]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When using the GQI DxM, extension developers can now define persistent services: reusable, injectable dependencies that live beyond a single query execution. This allows extensions to keep expensive setup work, cached data, helper clients, and shared state alive for the right scope instead of rebuilding everything every time a query runs.
+
+Services are registered by annotating a class with a scope attribute:
+
+- `[GQIWorkerService]`: one shared instance per extension worker process.
+- `[GQISecurityService]`: one shared instance per unique security context.
+- `[GQIUserService]`: one shared instance per user.
+
+Services can optionally configure `IdleExpirationMinutes`. When a service has been idle for that duration, it is automatically disposed. This helps reduce memory usage while still allowing frequently used services to stay warm.
+
+Services and extensions can now receive dependencies directly through their constructors. Extension developers no longer need to manually create or look up common dependencies during lifecycle methods. Constructor parameters can include:
+
+- Other registered services, resolved automatically by type or registered service contract.
+- `GQILazy<T>` for dependencies that should only be created when first used.
+- `IConnection` and `IGQIDMSInterface` for DataMiner access.
+- `IGQILogger`, `IGQIOnInitInputArgs`, and other standard GQI types.
 
 ## Changes
 
