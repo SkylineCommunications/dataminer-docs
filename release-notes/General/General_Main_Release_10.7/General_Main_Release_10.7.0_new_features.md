@@ -13,6 +13,16 @@ uid: General_Main_Release_10.7.0_new_features
 
 ## New features
 
+#### Database: Support for EncryptedRaw DataType in CassandraPlugin [ID 44075]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Support for the **EncryptedRaw** data type has been added to the **CassandraPlugin**. For database operations involving **DataDefinitions** that reference this data type, the actual encrypted value is replaced with a placeholder identifier (GUID). This identifier links to a corresponding record in a dedicated **encryptedsecret** table. All secrets stored in this table are protected using industry-standard cryptography (AES-256-CBC with HMAC).
+
+Note that this approach was chosen to support efficient reencryption, enabling the system to reencrypt a single table rather than all DataDefinition-related tables containing **EncryptedRaw** fields.
+
+Additionally, client-side support has been implemented in both **C#** and **C++** to access the referenced encrypted storage. This access is intentionally restricted to a single operation, ensuring controlled handling of sensitive data. Complementing this protection, the **StorageModule** backend explicitly blocks all standard CRUD database operations for encrypted entries, preventing potential bypass attempts through direct or malicious **NATS** messages.
+
 #### Service & Resource Management: New PatchReservationInstanceProperties method to update properties of a reservation instance [ID 44084]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
@@ -74,6 +84,14 @@ A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve t
 >
 > - *Modules > Automation > UI available*
 > - *Modules > Automation > Execute*
+
+#### Database: Support for encryption handling [ID 44352]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Support for the **EncryptionManager** has been added. This manager is responsible for handling encryption, decryption, and re-encryption operations for the **EncryptedRaw** data type. It ensures cluster-wide synchronization of encryption metadata via **NATS**, which is used to instantiate the underlying **IEncryptor** responsible for performing these operations (AES-256 with HMAC).
+
+Each **StorageModule** node stores its encryption metadata locally through the **IEncryptionStore**, leveraging the .NET **ProtectedData** API. This guarantees that only the machine that originally encrypted the data can decrypt it. As an additional security measure, the encrypted file is written together with an **entropy** value, which is persisted in a separate file at the same location (*C:\ProgramData\Skyline Communications\DataMiner StorageModule\Encryption*) to further strengthen data protection.
 
 #### SLNet subscription logging [ID 44361]
 
