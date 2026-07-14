@@ -17,17 +17,17 @@ A back button is now available on the create organization step in the DaaS deplo
 
 On the DMS Overview page in the Admin app, a documentation button is now shown when a DaaS system is about to expire.
 
-### 14 July 2026 - Enhancement - Home - Increased line allowance for Open in desktop notification
+### 14 July 2026 - Fix - Home - Open in desktop notification not fully displayed
 
-The *Open in desktop* notification now has increased line allowance.
+When you selected to open a DataMiner System in the desktop app, the notification that mentioned that the browser was trying to open DataMiner Cube could not be fully displayed. The line allowance of this notification has now been increased, resolving this issue.
 
-### 14 July 2026 - Enhancement - Home - Remote URL Indicator now shows preview of remote URL
+### 14 July 2026 - Enhancement - Home - Remote URL indicator now shows preview of remote URL
 
-The *Remote URL Indicator* now displays a preview of the remote URL below the input field.
+When you add a DataMiner System, below the *Remote URL Indicator* field, a preview of the remote URL will now be shown.
 
-### 14 July 2026 - New feature - Admin - Created by and Created At info in subscription detail panel
+### 14 July 2026 - New feature - Admin - 'Created by' and 'Created at' info in subscription detail panel
 
-The detail panel of a subscription on the Billing page of the Admin app now includes the *Created by* and *Created At* information.
+The detail panel of a subscription on the Billing page of the Admin app now includes the *Created by* and *Created at* information.
 
 ### 14 July 2026 - Enhancement - Catalog - Faster tooltip on Deploy button
 
@@ -55,11 +55,11 @@ All applications in the app menu of the header now have icons.
 
 ### 14 July 2026 - Fix - Catalog - Clearing search value on Catalog home page not handled correctly
 
-An issue has been resolved where clearing the search value on the Catalog home page was not handled correctly.
+When you cleared the search value on the Catalog home page, it could occur that this was not handled correctly, causing part of the value to still be taken into account if you then clicked the button to browse the Catalog. This issue has been resolved.
 
-### 14 July 2026 - Fix - General - Notification counter appearing on top of popups
+### 14 July 2026 - Fix - General - Notification counter appearing on top of pop-up panels
 
-An issue has been resolved where the notification counter was displayed on top of popups.
+When a pop-up panel was opened in front of the header bar, it could occur that the counter on the notification bell icon was displayed on top of that pop-up panel. This issue has been resolved.
 
 ### 14 July 2026 - Enhancement - Admin - Billing rate and cost column improvements
 
