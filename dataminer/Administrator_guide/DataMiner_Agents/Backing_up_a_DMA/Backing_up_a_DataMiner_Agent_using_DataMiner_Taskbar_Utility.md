@@ -6,7 +6,7 @@ description: Learn how to back up a DataMiner Agent with Taskbar Utility, includ
 # Backing up a DataMiner Agent using DataMiner Taskbar Utility
 
 > [!IMPORTANT]
-> From DataMiner 10.6.9/10.7.0 onwards<!--RN 44352-->, credential secrets are [encrypted at rest](xref:Encryption_in_DataMiner#credentials-at-rest) using per-node encryption keys that are bound to the local machine through the Windows Data Protection API (DPAPI). To ensure these credentials remain recoverable when a backup is restored on a different (virtual) machine, **before you take a backup**, set a **DMS backup password** in DataMiner Cube under *System Center* > *Backup*. If no DMS backup password is configured at backup time, encrypted credentials cannot be recovered when the backup is restored to a different machine.
+> From DataMiner 10.6.9/10.7.0 onwards<!--RN 44352+45704-->, credential secrets are [encrypted at rest](xref:Encryption_in_DataMiner#credentials-at-rest) using per-node encryption keys that are bound to the local machine through the Windows Data Protection API (DPAPI). To ensure these credentials remain recoverable when a backup is restored on a different (virtual) machine, **before you take a backup**, set a **DMS backup password** in DataMiner Cube under *System Center* > *Backup*. If no DMS backup password is configured at backup time, encrypted credentials cannot be recovered when the backup is restored to a different machine.
 
 ## Backup procedure
 
@@ -27,7 +27,7 @@ description: Learn how to back up a DataMiner Agent with Taskbar Utility, includ
 
 ## Credential secret recoverability considerations
 
-From DataMiner 10.6.9/10.7.0 onwards<!--RN 44352-->, the *DMS Backup Password* field must be configured in DataMiner Cube under *System Center* > *Backup* before a backup is taken. As a result, you may encounter the following issues:
+From DataMiner 10.6.9/10.7.0 onwards<!--RN 44352+45704-->, the *DMS Backup Password* field must be configured in DataMiner Cube under *System Center* > *Backup* before a backup is taken. As a result, you may encounter the following issues:
 
 - **No DMS backup password configured at backup time**: The backup archive only contains the DPAPI-wrapped *encryptors.bin* file, which is bound to the source machine. When the backup is restored on a different machine, encrypted credentials cannot be recovered.
 
