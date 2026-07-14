@@ -330,12 +330,6 @@ On startup, SLNet adds an entry mentioning the configured thread pool values in 
 
 If no value (or an invalid value) is configured, SLNet will fall back to the default behavior to avoid issues related to excessively high thread counts. By default, the minimum number of I/O and completion port threads will be set to at least 16 if the default chosen by .NET would be less than that.
 
-#### SLDataMiner: Refactored credentials handling [ID 44911]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-
-The logic related to credentials handling has been refactored in **SLDataMiner** to replace the readout of *Library.xml* via **SLXml** by the retrieval of SNMPv3 credentials through the **ICredentialCRUD** interface present in **DMAObjects**.
-
 #### Automation: DEBUG preprocessor directive will now be added to a C# code block when you select the 'Compile in DEBUG mode' option [ID 44958]
 
 <!-- MR 10.7.0 - FR 10.6.5 -->

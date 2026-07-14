@@ -60,15 +60,15 @@ Each **StorageModule** node stores its encryption metadata locally through the *
 
 Support has been added to migrate credentials from *Library.xml* to the **StorageModule** (and vice versa) via the **ICredentialCRUD** interface present in **DMAObjects**.
 
+## Changes
+
+### Enhancements
+
 #### SLDataMiner: Refactored credentials handling [ID 44911]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
 The logic related to credentials handling has been refactored in **SLDataMiner** to replace the readout of *Library.xml* via **SLXml** by the retrieval of SNMPv3 credentials through the **ICredentialCRUD** interface present in **DMAObjects**.
-
-## Changes
-
-### Enhancements
 
 #### Security enhancements [ID 45582]
 

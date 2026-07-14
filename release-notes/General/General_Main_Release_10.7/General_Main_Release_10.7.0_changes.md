@@ -309,6 +309,12 @@ If information logging is set to Level 4, the log entries will also mention if a
 
 A number of security enhancements have been made.
 
+#### SLDataMiner: Refactored credentials handling [ID 44911]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+The logic related to credentials handling has been refactored in **SLDataMiner** to replace the readout of *Library.xml* via **SLXml** by the retrieval of SNMPv3 credentials through the **ICredentialCRUD** interface present in **DMAObjects**.
+
 #### Enhanced SSH logging [ID 44975]
 
 <!-- MR 10.7.0 - FR 10.6.5 -->
