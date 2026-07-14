@@ -1,36 +1,9 @@
 ---
-uid: TicketingAppOverview
+uid: TicketingAppOverviewTicketsPage
+description: Get a clear overview of open tickets with smart filters, quick actions, and detailed insights to track issues from creation to closure.
 ---
 
-# Ticketing app overview
-
-The Ticketing application provides a user interface to create, manage, and track tickets within DataMiner.
-
-It consists of the following main pages:
-
-- [Tickets](#tickets-page)
-- [Ticket Types](#ticket-types-page)
-- [External Ticketing](#external-ticketing-page)
-
-## Accessing the Ticketing app
-
-To access the Ticketing low-code app:
-
-1. Go to the [landing page](xref:Accessing_the_web_apps#dataminer-landing-page) of your DataMiner System.
-
-1. Search for the Ticketing app and click the app tile to open it.
-
-![The Ticketing app tile on the DataMiner System landing page](~/solutions/images/Ticketing_OpeningTicketing_Landing_page.png)
-
-Alternatively, you can also look for the Ticketing app in the *Apps* pane of the DataMiner Cube sidebar, and open the app from there.
-
-[Pinning the app in the sidebar](xref:DataMiner_Cube_sidebar) will allow quick and easy access to the app from Cube.
-
-![The Ticketing app access via the DataMiner Cube sidebar either via the Apps pane or via a pinned app in the sidebar](~/solutions/images/Ticketing_OpeningTicketing_Cube.png)<br>*Ticketing app access via the DataMiner Cube sidebar in DataMiner 10.6.7*
-
-## Tickets page
-
-### General page
+# Tickets page
 
 The **Tickets page** is displayed by default when you open the app.
 
@@ -38,7 +11,7 @@ This page provides an overview of all tickets in the system that are currently o
 
 ![Ticketing page](~/solutions/images/Ticketing_Demo_02_TicketsPage.png)
 
-### Displayed Fields
+## Displayed fields
 
 For each ticket, the following information is shown:
 
@@ -52,7 +25,7 @@ For each ticket, the following information is shown:
 - Creation date
 - Requested and expected resolution dates
 
-### Filtering
+## Filtering
 
 The Tickets page includes several filtering options:
 
@@ -85,7 +58,7 @@ The Tickets page includes several filtering options:
   > [!TIP]
   > To make sure tickets can be assigned to DataMiner users, the user accounts must be [mapped to People & Organizations contacts](xref:MappingUsersAndContacts).
 
-#### Viewing closed tickets
+## Viewing closed tickets
 
 Once a ticket is closed, it is no longer shown in the default **Open Tickets** view. To locate it, switch to the **All** filter, which includes closed, canceled, and rejected tickets.
 
@@ -93,11 +66,11 @@ For example, the ticket #10 below (*Broadcast Signal Degradation – Sports XTre
 
 ![Closed ticket shown in All Tickets view on the Tickets page](~/solutions/images/Ticketing_Demo_18_ClosedTicket.png)
 
-### Create Ticket button
+## Creating tickets
 
 The *Create Ticket* button in the upper-right corner can be used to manually add a ticket. For details, refer to [Manually creating a ticket in the Ticketing app](xref:CreatingTicketsManuallyFromApp).
 
-### Overview subpage
+## Overview subpage
 
 Via the *Overview* button in the upper-right corner of the Tickets page, you can access the Overview subpage.
 
@@ -122,13 +95,13 @@ The dashboard includes several charts that provide insight into your ticket data
 
 At the bottom of the page, the **Most Recently Created Tickets** section displays the latest tickets added to the system. This section allows you to quickly review newly created tickets and access them for further investigation or action.
 
-### Ticket Information subpage
+## Ticket Information subpage
 
 When you click the information icon for a ticket on the Tickets page, this will open the Ticket Information subpage for this ticket.
 
 ![Ticket Information subpage](~/solutions/images/Ticketing_Demo_11_InformationPageHistory.png)
 
-#### General Info section
+### General Info section
 
 In the upper-left corner, this page displays the following general information:
 
@@ -145,7 +118,7 @@ Via the pencil icon in the upper-right corner of this section, you can open a pa
 
 ![Panel shown when general ticket information is edited](~/solutions/images/Ticketing_Demo_12_EditTicketFields.png)
 
-#### Additional Info section
+### Additional Info section
 
 In the upper-right corner, any additional fields defined in the ticket type are displayed.
 
@@ -153,7 +126,7 @@ Via the pencil icon in this section, you can edit the values as needed, for exam
 
 ![Panel shown when additional ticket information is edited](~/solutions/images/Ticketing_Demo_13_EditTicketTypeFields.png)
 
-#### Ticket state transitions
+### Ticket state transitions
 
 The ticket transition controls at the top of the Ticket Information subpage can be used to progress the ticket through its lifecycle. A reason must be provided for every state change, which is automatically recorded in the [Notes section](#notes-section).
 
@@ -165,7 +138,7 @@ The suggested next step according to the happy path is highlighted and placed fi
 
 When applicable, alternative transitions are also available.
 
-#### Subscribe button
+### Subscribe button
 
 You can subscribe to a ticket by using the **Subscribe** button on the Ticket Information page.
 
@@ -181,7 +154,7 @@ When you are subscribed to a ticket, you will receive email notifications whenev
 
 This way, you can stay informed about ticket progress without being assigned to the ticket directly.
 
-#### History button
+### History button
 
 Via the History button on the Ticket Information page, you can access a complete audit trail of all changes made to a ticket throughout its lifecycle.
 
@@ -201,7 +174,7 @@ This audit trail provides full visibility into how a ticket evolved over time an
 
 ![Ticket history shown after clicking the History button](~/solutions/images/Ticketing_Demo_21_TicketHistory.png)
 
-#### Linked Items section
+### Linked Items section
 
 If a ticket has been linked to an item, this is shown in the Linked Items section.
 
@@ -223,7 +196,7 @@ Clicking a linked asset will open [Asset Manager](xref:Asset_Manager), while cli
 
 ![Linked asset and external ticket and the resulting windows when these are clicked](~/solutions/images/Ticketing_Demo_LinkedItemsExternalAsset.png)
 
-#### Notes section
+### Notes section
 
 The Notes section provides a history of system notes and user notes:
 
@@ -233,77 +206,3 @@ The Notes section provides a history of system notes and user notes:
 ![Notes section of the Ticket Information subpage](~/solutions/images/Ticketing_Demo_16_NotesOverview.png)
 
 Each user note maintains its own change history. When a note is modified, previous versions are preserved, and these can be viewed from the note history.
-
-## Ticket Types page
-
-Ticket types define the structure of tickets and may include additional fields. The Ticket Types page provides an overview of all available ticket types and allows you to [create additional ticket types](#creating-a-ticket-type).
-
-![Ticket Types page](~/solutions/images/Ticketing_Demo_05_DifferentTicketTypes.png)
-
-### Ticket type categories
-
-Ticket types can be configured as one of the following categories:
-
-- A **base ticket type** can define a common set of additional fields and can be used as a base for other ticket types. This means that base ticket types serve as a reusable foundation for other ticket types.
-
-  When creating a new ticket type or editing an existing ticket type, you can designate it as a base ticket type by enabling the **Base** option.
-
-- An **extended ticket type** inherits the configuration and additional fields of a base ticket type. It can define its own additional fields in addition to the inherited fields, allowing specialization of existing ticket types without duplicating configuration.
-
-  When creating or editing an extended ticket type, you can select the base ticket type from which it should extend.
-
-- A **standalone ticket type** is independent and is not extended from a base type. This is any ticket type that is not marked as a base type and does not extend another ticket type. This is especially suitable for unique ticket structures that do not share a common foundation with other ticket types.
-
-### Default ticket type
-
-The default ticket type is **Generic Issue**.
-
-No additional fields are defined for this ticket type, and it is used for standard out-of-the-box tickets.
-
-![Generic Issue ticket type shown in edit mode](~/solutions/images/Ticketing_Demo_06_GenericIssueType.png)
-
-### Example ticket type: Service Disruption
-
-As an example of how you can use ticket types, you could use the **Service Disruption** ticket type. This type is intended for incidents that affect the availability or performance of a service. It includes additional fields that help operators assess the operational and business impact of the disruption and prioritize response efforts accordingly, as illustrated below.
-
-![Service Disruption ticket type shown in edit mode](~/solutions/images/Ticketing_Demo_Service_Disruption.png)
-
-The following additional fields are available:
-
-- **Affected Service**: Name of the service experiencing the disruption.
-- **Customer Impact Level**: Indicates the scope of the customer impact. Available values:
-  - Low: Individual User
-  - Medium: Small Group
-  - High: Department/Region
-  - Critical: Entire Service
-- **Customers Affected**: Number of customers affected by the disruption.
-- **Revenue Impact ($/hour)**: Estimated revenue loss per hour caused by the disruption.
-- **SLA Breach Risk**: Indicates whether the disruption may result in a service-level agreement (SLA) breach.
-- **Target Resolution Time**: Expected time required to restore the affected service.
-- **Service Disruption Start**: Date and time when the service disruption began.
-
-### Creating a ticket type
-
-To create a ticket type:
-
-1. In the upper-right corner of the Ticket Types page, click **Create ticket type**.
-
-1. Enter a name and select an icon for the ticket type.
-
-1. If you wish to use the ticket type as a base ticket type, select the *Base* option, or, alternatively, if you want to create an extended ticket type based on another ticket type, select the base type from which you want to extend. See [Ticket type categories](#ticket-type-categories).
-
-1. Specify additional fields to match your use case.
-
-1. Click *Save*.
-
-![Create Ticket Type form](~/solutions/images/Ticketing_Demo_08_CreateTicketTypes.png)
-
-## External Ticketing page
-
-The External Ticketing page lists all configured [external integrations](xref:ExternalTicketingSystemIntegration). Entries can represent external systems such as ServiceNow. For each entry, a visualization endpoint and API endpoint are listed.
-
-In some cases, custom external systems can be added with the *Create External Ticketing* button in the upper-right corner; however, typically, the entry representing an external integration will be created automatically by the element responsible for the communication with the external ticketing system. See for example [ServiceNow integration](xref:ServiceNowIntegration).
-
-Via the pencil icon, you can edit each of the added external integrations.
-
-![External Ticketing page](~/solutions/images/Ticketing_Demo_09_ExternalTicketing.png)

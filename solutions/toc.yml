@@ -364,8 +364,16 @@ items:
           topicUid: TicketingInstallation
         - name: Mapping users and contacts
           topicUid: MappingUsersAndContacts
+      - name: Accessing the Ticketing app
+        topicUid: AccessingTicketingApp
       - name: Ticketing app overview
-        topicUid: TicketingAppOverview
+        items:
+        - name: Tickets page
+          topicUid: TicketingAppOverviewTicketsPage
+        - name: Ticket Types page
+          topicUid: TicketingAppOverviewTicketTypesPage
+        - name: External Ticketing page
+          topicUid: TicketingAppOverviewExternalTicketingPage
       - name: Creating tickets
         topicUid: CreatingTickets
         items: 

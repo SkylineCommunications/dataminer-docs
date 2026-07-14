@@ -53,7 +53,7 @@ The Ticketing app can be used as a standalone app or via its API Helper. Both me
 
 Interaction with other apps is built into the solution. For example, on the Ticket Information page of the Ticketing app, linked items are displayed, with direct links to, for example, alarms and elements in the [Monitoring app](xref:Working_with_the_Monitoring_app) or in DataMiner Cube, or assets in the [Asset Manager](xref:Asset_Manager) app.
 
-For details, refer to [Linked Items section](xref:TicketingAppOverview#linked-items-section).
+For details, refer to [Linked Items section](xref:TicketingAppOverviewTicketsPage#linked-items-section).
 
 ### People & Organizations interaction
 

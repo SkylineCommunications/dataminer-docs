@@ -114,7 +114,7 @@ Ticket types can also be used to:
 - Support reporting and analysis.
 
 > [!TIP]
-> See also: [Ticket Types page](xref:TicketingAppOverview#ticket-types-page)
+> See also: [Ticket Types page](xref:TicketingAppOverviewTicketTypesPage)
 
 ## Linked items and affected resources
 
@@ -128,7 +128,7 @@ All relationships are implemented using the **Standard Data Model (SDM) relation
 - In applications such as the Asset Manager, linked tickets can be indicated. For example, Asset Manager can show whether an asset has active tickets linked to it.
 
 > [!TIP]
-> See also: [Linked Items section](xref:TicketingAppOverview#linked-items-section)
+> See also: [Linked Items section](xref:TicketingAppOverviewTicketsPage#linked-items-section)
 
 ## External ticketing integration
 
