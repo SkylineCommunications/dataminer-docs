@@ -75,6 +75,23 @@ From now on, when selecting a table parameter, it will be possible to select eit
 > [!NOTE]
 > It is not possible to mix columns from different tables or to combine a table with standalone parameters.
 
+#### Dashboards/Low-Code Apps: New inputs implemented in components [ID 45693]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+New input components have been implemented in dashboards and low-code apps, replacing the previous input implementations:
+
+- *Button* component: Now includes a new *Type* setting that allows you to choose between call to action, subtle, normal, or danger styles.
+- *Dropdown* component: Now includes a new *Placeholder* setting.
+- *Text*, *Search*, and *Number* components: Typing is now from left to right instead of the previous right-to-left behavior.
+
+  The *Number* component now also supports scientific notation.
+
+> [!NOTE]
+>
+> - When a large number is fed to a numeric input, scientific notation is used (e.g., 1000000000000000000000 becomes 1e+21).
+> - When a number does not fit within the min and max values of the receiving component, the default value is used instead.
+
 #### Web apps: About box will now also show the version of the DataMiner Assistant DxM [ID 45833]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
