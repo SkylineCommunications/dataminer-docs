@@ -1,38 +1,71 @@
 ---
-uid: Unit_tests_MSTestv2_framework
+uid: Unit_tests
 ---
 
-# Creating unit tests using the MSTestv2 framework in Visual Studio
+# Creating unit tests
 
 Suppose you are working on a protocol, and you are creating a precompile QAction that contains functionality that will be used by other QActions. To ensure that the functionality provided by this precompile QAction is correct, you want to create unit tests.
 
 In the following example, a precompile QAction with ID 1 was created that, among other things, provides a `PathRewriter` class. The `PathRewriter` class defines a method `Rewrite` for which a unit test is needed.
 
-In Visual Studio, you can easily generate a unit test: Put the cursor on the method, right-click, and select *Create Unit Tests* in the context menu.
+## [Using GitHub Copilot](#tab/test-creation-1)
 
-![unittesting1.png](~/develop/images/unittesting1.png)
+Using GitHub Copilot, there are multiple ways to generate unit tests:
 
-This will open a window where you can configure things such as the test framework to use, the name format of the test class, etc. As all the default settings are OK for now, simply click *OK* to continue.
+- Type `@Test` followed by a target or prompt (see below) in the Copilot Chat window.
+- From the editor, right-click and select *Copilot Actions > Generate Tests* from the context menu.
+- In a new Copilot Chat thread, select *Write unit tests* from the Copilot Chat icebreaker suggestions.
 
-![unittesting2.png](~/develop/images/unittesting2.png)
+### Prompt syntax
 
-After clicking *OK*, you will see that a new project has been added to the solution, in this case "QAction_1Tests".
+You can choose between two prompting methods to create unit tests using Copilot: freeform or structured syntax:
 
-![unittesting3.png](~/develop/images/unittesting3.png)
+- freeform: With freeform prompts, you describe in text for what a test needs to be created. E.g. ´@Test class PathRewriter´
+- structured syntax: With structured syntax, you use the following syntax to specify for what tests need to be generated: ´@Test #<target>´. `#<target>` then denotes for example a class (e.g. `#PathRewriter`) or a git diff (`#git_changes`).
 
-This project contains a file *PathRewriterTests.cs* that defines a test class `PathRewriterTests`:
+## [Manual](#tab/test-creation-2)
 
-```csharp
-[TestClass()]
-public class PathRewriterTests
+A unit test is defined in a test project. During scaffolding of the Visual Studio solution, the connector template creates a Tests folder where you can place your test projects.
+
+In Solution Explorer, select the Tests folder and choose *Add* > *New Project...* from the context menu. (Alternatively, on the *File* menu, select *Add* > *New Project...* )
+
+This opens the *Add a new project* window. From the *All languages* dropdown, select *C#*. From the *All project types* dropdown, select *Test*. This filters the list to only show available test project types for C#.
+
+![unit_tests_test_project_creation.png](~/develop/images/unit_tests_test_project_creation.png)
+
+Different projects are listed for different test frameworks such as MSTest, NUnit or xUnit.
+In this example, we will use MSTest. Select *MSTest Test Project* and press *Next*.
+Give the project a name, e.g. "QAction_1Tests" and press *Next*.
+
+In the *Additional information* window, in the *Framework* dropdown, select *.NET Framework 4.8*.
+In the *Test runner* dropdown, select *Microsoft.Testing.Platform*. Press *Create*.
+
+![unit_tests_test_project_creation_additional_information.png](~/develop/images/unit_tests_test_project_creation_additional_information.png)
+
+A new project has been added to the solution, in this case "QAction_1Tests".
+
+![unit_tests_test_project_solution_explorer.png](~/develop/images/unit_tests_test_project_solution_explorer.png)
+
+Rename the file Test1.cs to PathRewriterTests.cs and replace the contents with the following:
+
+```cs
+namespace QAction_1Tests
 {
-    [TestMethod()]
-    public void RewriteTest()
+    [TestClass()]
+    public class PathRewriterTests
     {
-        Assert.Fail();
+        [TestMethod()]
+        public void RewriteTest()
+        {
+            Assert.Fail();
+        }
     }
 }
 ```
+
+***
+
+## Test attributes
 
 The `PathRewriterTests` class has been annotated with a `TestClass` attribute. This attribute indicates that this class contains test methods. The `RewriteTest` method has been annotated with the `TestMethod` attribute to indicate that it is a test method.
 
@@ -47,13 +80,15 @@ These attributes are defined by the MSTest framework (in the namespace *Microsof
 - **TimeoutAttribute**: Provides a timeout for the test.
 - **DataTestMethodAttribute**: Used to specify a data-driven test where data can be specified inline.
 - **DataRowAttribute**: Defines inline data for a test method.
-- **ExpectedExceptionAttribute**: Specifies the type of exception this test is expected to throw.
+- **RetryAttribute**: Used to set a retry count on a test method in case of failure.
+- **OSConditionAttribute**: Used to ignore a test class or a test method, with an optional message.
+- **CIConditionAttribute**: Used to control whether a test class or method will run or be ignored when the test executes in a CI environment.
 
-For more information about these attributes and a complete overview of all attributes that can be used, see [Microsoft.VisualStudio.TestTools.UnitTesting Namespace](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting?view=mstest-net-1.3.2).
+For more information about these attributes and a complete overview of all attributes that can be used, see [Microsoft.VisualStudio.TestTools.UnitTesting Namespace](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting?view=mstest-netfx-4.3).
 
 Visual Studio also provides a *Test Explorer*, which gives an overview of all your tests in the solution. To open the *Test Explorer* in Visual Studio, in the menu bar, go to *Test > Windows > Test Explorer*.
 
-![unittesting4.png](~/develop/images/unittesting4.png)
+![unit_tests_test_explorer.png](~/develop/images/unit_tests_test_explorer.png)
 
 From the Test Explorer, you can easily run a specific test, run all tests, create a playlist of tests, etc.
 
@@ -88,33 +123,32 @@ public void Rewrite_PathWithItemsToAbbreviate_ReturnsAbbreviatedPath()
 }
 ```
 
-The `Assert` class defines multiple methods such as `AreEqual`, `IsFalse`, `IsTrue`, etc. that can be used to make assertions. For more information on the `Assert` class, see [Assert Class](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert?view=mstest-net-1.3.2).
+The `Assert` class defines multiple methods such as `AreEqual`, `IsFalse`, `IsTrue`, etc. that can be used to make assertions. For more information on the `Assert` class, see [Assert Class](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert?view=mstest-net-4.2).
 
 Now you are ready to execute the test. This can be done in the *Test Explorer*, by e.g., clicking *Run All*. After a successful execution, everything should be green.
 
-![unittesting5.png](~/develop/images/unittesting5.png)
+![unit_tests_test_explorer_successful_run.png](~/develop/images/unit_tests_test_explorer_successful_run.png)
 
 In case a test fails, a red X will be displayed. Clicking the line that represents the test in the *Test Explorer* will provide more information about what failed.
 
-![unittesting6.png](~/develop/images/unittesting6.png)
-
 When writing unit tests, you typically want to provide tests for different scenarios. For example, you could also want to write an additional test to verify whether an `ArgumentNullException` is thrown in case the `Rewrite` method is invoked with a null reference as parameter value.
 
-This can be done as follows: The `ExpectedException` attribute can be used to indicate the type of exception that you expect.
+This can be done as follows:
 
 ```csharp
 [TestMethod()]
-[ExpectedException(typeof(ArgumentNullException))]
 public void Rewrite_NullPath_ThrowsArgumentNullException()
 {
     // Arrange
     PathRewriter pathRewriter = new PathRewriter();
-    // Act
-    pathRewriter.Rewrite(null);
-    // Assert
-    Assert.Fail("No ArgumentNullException thrown.");
+
+    // Act & Assert
+    Assert.ThrowsExactly<ArgumentNullException>(() => pathRewriter.Rewrite(null));
 }
 ```
+
+> [!NOTE]
+> The Assert class provides different methods for verifying that an exception was thrown such as `Throws<T>`, `ThrowsExactly<T>`, `ThrowsAsync<T>`, `ThrowsExactlyAsync<T>`.
 
 Note that the pattern used for the test method names consists of three parts separated by an underscore. The parts define the following:
 
@@ -148,3 +182,5 @@ For more information, see:
 
 - [Testing tools in Visual Studio](https://docs.microsoft.com/en-us/visualstudio/test/?view=vs-2019>)
 - [Unit testing best practices with .NET Core and .NET Standard](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices)
+- [Generate and run unit tests using GitHub Copilot testing for .NET](https://learn.microsoft.com/en-us/visualstudio/test/unit-testing-with-github-copilot-test-dotnet?view=visualstudio)
+- [Create and run unit tests for .NET](https://learn.microsoft.com/en-us/visualstudio/test/walkthrough-creating-and-running-unit-tests-for-managed-code?view=visualstudio)
