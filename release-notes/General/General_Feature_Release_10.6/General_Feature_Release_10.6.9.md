@@ -68,7 +68,7 @@ Runner processes are automatically stopped after they have been idle for one hou
 #### Security enhancements [ID 45582] [ID 45646]
 
 <!-- 45582: MR 10.7.0 - FR 10.6.9 -->
-<!-- 45646: MR 10.5.0 [CU18] - FR 10.6.9 -->
+<!-- 45646: MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 A number of security enhancements have been made.
 
@@ -98,6 +98,22 @@ This will allow those connections to survive a temporary outage of the Azure Clo
 In some cases, SLLogCollector can get stuck while archiving files.
 
 To improve visibility during archiving, SLLogCollector will now log which file is currently being archived and update the busy message with the number of files copied so far.
+
+#### SLLogCollector: New 'Output pending calls' option [ID 45722]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When you open the SLLogCollector, from now on, you can make it collect all pending calls for a number of the specific elements.
+
+1. Select the *Output pending calls* option.
+1. Click *Load elements*, and select all elements of which you want the pending calls to be collected.
+
+   Elements with runtime errors will be automatically selected.
+
+> [!NOTE]
+>
+> - The *Output pending calls* option will automatically be selected when any of the running processes have runtime errors linked to elements.
+> - Clearing the *Output pending calls* option will only hide the element selection grid. The current selection will not be cleared, so when you select the *Output pending calls* option again, everything is restored without any need to reload the elements.
 
 #### Automation: Improved save logic for automation scripts [ID 45836]
 
@@ -257,6 +273,6 @@ When DOM instances were retrieved from a STaaS database, up to now, the page siz
 
 #### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
 
-<!-- MR 10.7.0 - FR 10.6.9 -->
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.

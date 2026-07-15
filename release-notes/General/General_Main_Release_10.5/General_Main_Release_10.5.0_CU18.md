@@ -26,7 +26,7 @@ uid: General_Main_Release_10.5.0_CU18
 
 #### Security enhancements [ID 45646]
 
-<!-- 45646: MR 10.5.0 [CU18] - FR 10.6.9 -->
+<!-- 45646: MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 A number of security enhancements have been made.
 
@@ -107,3 +107,9 @@ As a result, when that QAction thread then tried to update element metrics, it w
 Up to now, when an element with a smart-serial connection acted as a client, in some cases, the *Connection State* column in the *Communication Info* table on the *General parameters* page would incorrectly show `Undefined`.
 
 From now on, that column will correctly show the actual connection state, e.g., `Connected`.
+
+#### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.

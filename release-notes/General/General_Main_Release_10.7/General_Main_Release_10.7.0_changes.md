@@ -607,6 +607,22 @@ From now on, the BPA test will compare the server times of all Agents in the clu
 - If the server times differ from 1 to 5 seconds, this will be flagged as a warning.
 - If the server times differ more than 5 seconds, this will be flagged as an issue.
 
+#### SLLogCollector: New 'Output pending calls' option [ID 45722]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When you open the SLLogCollector, from now on, you can make it collect all pending calls for a number of the specific elements.
+
+1. Select the *Output pending calls* option.
+1. Click *Load elements*, and select all elements of which you want the pending calls to be collected.
+
+   Elements with runtime errors will be automatically selected.
+
+> [!NOTE]
+>
+> - The *Output pending calls* option will automatically be selected when any of the running processes have runtime errors linked to elements.
+> - Clearing the *Output pending calls* option will only hide the element selection grid. The current selection will not be cleared, so when you select the *Output pending calls* option again, everything is restored without any need to reload the elements.
+
 #### Automation: Improved save logic for automation scripts [ID 45836]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
@@ -717,9 +733,3 @@ When the DataMiner software was stopped, in some cases, the SLAnalytics process 
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
 Because of a WebSocket issue, in some rare cases, the StorageModule DxM would fail to start. As a result, DataMiner would not be able to start up.
-
-#### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-
-Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.
