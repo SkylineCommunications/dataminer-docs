@@ -607,11 +607,13 @@ From now on, the BPA test will compare the server times of all Agents in the clu
 - If the server times differ from 1 to 5 seconds, this will be flagged as a warning.
 - If the server times differ more than 5 seconds, this will be flagged as an issue.
 
-#### SLLogCollector: New 'Output pending calls' option [ID 45722]
+#### SLLogCollector: Users can now choose whether to use the 'Output pending calls' option [ID 45722]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
-When you open the SLLogCollector, from now on, you can make it collect all pending calls for a number of the specific elements.
+Up to now, when you opened the SLLogCollector, the *Output pending calls* option would automatically be selected when any of the running processes have runtime errors linked to elements. Users would not have any control over this option. From now on, they will.
+
+If you want SLLogCollector to collect all pending calls for a number of the specific elements, do the following:
 
 1. Select the *Output pending calls* option.
 1. Click *Load elements*, and select all elements of which you want the pending calls to be collected.
@@ -620,7 +622,7 @@ When you open the SLLogCollector, from now on, you can make it collect all pendi
 
 > [!NOTE]
 >
-> - The *Output pending calls* option will automatically be selected when any of the running processes have runtime errors linked to elements.
+> - The *Output pending calls* option will still automatically be selected when any of the running processes have runtime errors linked to elements.
 > - Clearing the *Output pending calls* option will only hide the element selection grid. The current selection will not be cleared, so when you select the *Output pending calls* option again, everything is restored without any need to reload the elements.
 
 #### Automation: Improved save logic for automation scripts [ID 45836]
