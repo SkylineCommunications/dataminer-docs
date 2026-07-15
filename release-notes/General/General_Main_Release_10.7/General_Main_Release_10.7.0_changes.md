@@ -718,3 +718,9 @@ When the DataMiner software was stopped, in some cases, the SLAnalytics process 
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
 Because of a WebSocket issue, in some rare cases, the StorageModule DxM would fail to start. As a result, DataMiner would not be able to start up.
+
+#### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.

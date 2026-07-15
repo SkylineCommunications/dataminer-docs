@@ -264,3 +264,9 @@ Because of a WebSocket issue, in some rare cases, the StorageModule DxM would fa
 <!-- Not added to MR 10.7.0 -->
 
 When DOM instances were retrieved from a STaaS database, up to now, the page size would incorrectly be ignored.
+
+#### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.
