@@ -6,7 +6,7 @@ uid: GQI_Extensions_Services
 
 From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, GQI extensions using the [Skyline.DataMiner.Core.GQI.Extensions](xref:GQI_Extension_API) API can use constructor injection to share service instances across extension instances.
 
-Services are useful when an extension library needs reusable state or functionality, for example a cache, a client for an external system, or shared helper logic. A service belongs to the extension library worker process in which it is loaded. It is not shared across different extension libraries or across DataMiner Agents.
+Services are useful when an extension library needs a reusable state or functionality, for example a cache, a client for an external system, or shared helper logic. A service belongs to the extension library worker process in which it is loaded. It is not shared across different extension libraries or across DataMiner Agents.
 
 > [!IMPORTANT]
 > GQI services require the [GQI DxM](xref:GQI_DxM) and the `Skyline.DataMiner.Core.GQI.Extensions` NuGet package.
@@ -141,9 +141,10 @@ If a service constructor dependency cannot be resolved or the constructor throws
 
 User-scoped services can inject [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) or [IConnection](xref:Skyline.DataMiner.Net.IConnection). GQI provides the same user connection as it would provide if the dependency were injected directly into the extension for that query. This allows a user-scoped service to cache and reuse user-specific data.
 
-Security-scoped services do not yet support injecting these dependencies.
+Security-scoped services do not support injecting these dependencies yet.
 
-See also: [Retrieving data from DataMiner](xref:GQI_Extensions_Retrieving_Data_From_DataMiner#choosing-an-approach).
+> [!TIP]
+> See also: [Retrieving data from DataMiner](xref:GQI_Extensions_Retrieving_Data_From_DataMiner#choosing-an-approach).
 
 ## Deferred service injection
 
@@ -171,7 +172,7 @@ public sealed class InventoryDataSource : IGQIDataSource
 }
 ```
 
-Prefer direct constructor injection when the dependency is always needed. Use `GQILazy<T>` when resolving the dependency can be postponed until it is actually used.
+Direct constructor injection should be preferred when the dependency is always needed. Use `GQILazy<T>` when resolving the dependency can be postponed until it is actually used.
 
 ## Supported constructor dependencies
 
@@ -191,5 +192,5 @@ The following types can be used as constructor parameters:
 | [GQILazy\<T\>](xref:GQI_GQILazyT) | [Deferred resolution](#deferred-service-injection) of a service dependency. | Extensions and services |
 | [Registered GQI services](#registering-a-service) | A service instance registered in the same extension library. | Extensions and services, depending on the [service scope](#injecting-services-into-other-services) |
 
-> [!WARNING]
+> [!IMPORTANT]
 > Security-scoped and user-scoped services are tied to the current security context. When a user's security context changes, references to existing service instances remain valid but new service instances with the updated security context will be created for new references.

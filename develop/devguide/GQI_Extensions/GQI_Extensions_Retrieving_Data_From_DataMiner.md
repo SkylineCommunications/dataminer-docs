@@ -26,6 +26,9 @@ From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, exten
 
 This is the most direct option: the constructor receives an active connection that can be used immediately. This is ideal for short-lived extensions or services.
 
+> [!TIP]
+> Because of its complexity, instead of interacting directly with the `IConnection` interface, the best way you can use it is by integrating with existing DataMiner libraries.
+
 ```csharp
 using System.Collections.Generic;
 using System.Linq;
@@ -62,9 +65,6 @@ public sealed class ClientConnectionSource : IGQIDataSource
     private GQIRow CreateRow(LoginInfoResponseMessage connection) => ...;
 }
 ```
-
-> [!TIP]
-> Because of its complexity, instead of interacting directly with the `IConnection` interface, the best way you can use it is by integrating with existing DataMiner libraries.
 
 ## Injecting IGQIDMSInterface
 
@@ -115,6 +115,9 @@ From DataMiner 10.3.4/10.4.0 onwards<!-- RN 35701 -->, ad hoc data sources can u
 
 From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, when using the GQI DxM, [GQIDMS.GetConnection()](xref:GQI_GQIDMS#iconnection-getconnection) can be called again to receive a fresh connection if the underlying SLNet connection was dropped.
 
+> [!IMPORTANT]
+> `GQIDMS` can only be used during the lifetime of the associated extension instance. Do not store or reuse it outside that lifetime.
+
 ```csharp
 using System.Collections.Generic;
 using System.Linq;
@@ -151,6 +154,3 @@ public class ClientConnectionSource : IGQIDataSource, IGQIOnInit
     private GQIRow CreateRow(LoginInfoResponseMessage connection) => ...;
 }
 ```
-
-> [!IMPORTANT]
-> `GQIDMS` can only be used during the lifetime of the associated extension instance. Do not store or reuse it outside that lifetime.

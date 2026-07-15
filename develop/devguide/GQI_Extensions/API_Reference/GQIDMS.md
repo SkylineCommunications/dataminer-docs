@@ -43,13 +43,12 @@ An [IConnection](xref:Skyline.DataMiner.Net.IConnection) object representing the
 > Because of its complexity, instead of interacting directly with the IConnection interface, the best way you can use it is by integrating with existing DataMiner libraries.
 
 > [!NOTE]
-> The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
+>
+> - The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
+> - From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, when the GQI DxM is used, `GetConnection()` can be called again to receive a fresh connection if the underlying SLNet connection was dropped.
 
 > [!IMPORTANT]
 > `GQIDMS` can only be used during the lifetime of the associated extension instance. Do not store or reuse it outside that lifetime.
-
-> [!NOTE]
-> From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, when using the GQI DxM, `GetConnection()` can be called again to receive a fresh connection if the underlying SLNet connection was dropped.
 
 ### DMSMessage SendMessage(DMSMessage message)
 
