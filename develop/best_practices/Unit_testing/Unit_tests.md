@@ -20,54 +20,65 @@ Using GitHub Copilot, there are multiple ways to generate unit tests:
 
 You can choose between two prompting methods to create unit tests using Copilot: freeform or structured syntax:
 
-- freeform: With freeform prompts, you describe in text for what a test needs to be created. E.g. ´@Test class PathRewriter´
-- structured syntax: With structured syntax, you use the following syntax to specify for what tests need to be generated: ´@Test #<target>´. `#<target>` then denotes for example a class (e.g. `#PathRewriter`) or a git diff (`#git_changes`).
+- **Freeform**: With freeform prompts, you describe in text for what a test needs to be created. E.g., `@Test class PathRewriter`
+- **Structured syntax**: With structured syntax, you use the following syntax to specify for what tests need to be generated: `@Test #<target>`. `#<target>` then denotes for example a class (e.g., `#PathRewriter`) or a git diff (`#git_changes`).
 
 ## [Manual](#tab/test-creation-2)
 
-A unit test is defined in a test project. During scaffolding of the Visual Studio solution, the connector template creates a Tests folder where you can place your test projects.
+A unit test is defined in a test project. During scaffolding of the Visual Studio solution, the connector template creates a *Tests* folder where you can place your test projects.
 
-In Solution Explorer, select the Tests folder and choose *Add* > *New Project...* from the context menu. (Alternatively, on the *File* menu, select *Add* > *New Project...* )
+1. In Solution Explorer, select the *Tests* folder and select *Add* > *New Project* in the context menu.
 
-This opens the *Add a new project* window. From the *All languages* dropdown, select *C#*. From the *All project types* dropdown, select *Test*. This filters the list to only show available test project types for C#.
+   Alternatively, in the *File* menu, select *Add* > *New Project*.
 
-![unit_tests_test_project_creation.png](~/develop/images/unit_tests_test_project_creation.png)
+  This opens the *Add a new project* window.
 
-Different projects are listed for different test frameworks such as MSTest, NUnit or xUnit.
-In this example, we will use MSTest. Select *MSTest Test Project* and press *Next*.
-Give the project a name, e.g. "QAction_1Tests" and press *Next*.
+1. From the *All languages* dropdown, select *C#*.
 
-In the *Additional information* window, in the *Framework* dropdown, select *.NET Framework 4.8*.
-In the *Test runner* dropdown, select *Microsoft.Testing.Platform*. Press *Create*.
+1. From the *All project types* dropdown, select *Test*.
 
-![unit_tests_test_project_creation_additional_information.png](~/develop/images/unit_tests_test_project_creation_additional_information.png)
+   This filters the list to only show available test project types for C#.
 
-A new project has been added to the solution, in this case "QAction_1Tests".
+   ![unit_tests_test_project_creation.png](~/develop/images/unit_tests_test_project_creation.png)
 
-![unit_tests_test_project_solution_explorer.png](~/develop/images/unit_tests_test_project_solution_explorer.png)
+   Different projects are listed for different test frameworks such as MSTest, NUnit or xUnit.
 
-Rename the file Test1.cs to PathRewriterTests.cs and replace the contents with the following:
+1. Select *MSTest Test Project* and click *Next*.
 
-```cs
-namespace QAction_1Tests
-{
-    [TestClass()]
-    public class PathRewriterTests
-    {
-        [TestMethod()]
-        public void RewriteTest()
-        {
-            Assert.Fail();
-        }
-    }
-}
-```
+1. Give the project a name, e.g., `QAction_1Tests` and click *Next*.
+
+1. In the *Additional information* window, in the *Framework* dropdown, select *.NET Framework 4.8*.
+
+1. In the *Test runner* dropdown, select *Microsoft.Testing.Platform*, and click *Create*.
+
+   ![unit_tests_test_project_creation_additional_information.png](~/develop/images/unit_tests_test_project_creation_additional_information.png)
+
+   A new project will be added to the solution, in this case *QAction_1Tests*.
+
+   ![unit_tests_test_project_solution_explorer.png](~/develop/images/unit_tests_test_project_solution_explorer.png)
+
+1. Rename the file *Test1.cs* to *PathRewriterTests.cs* and replace the contents with the following:
+
+   ```cs
+   namespace QAction_1Tests
+   {
+       [TestClass()]
+       public class PathRewriterTests
+       {
+           [TestMethod()]
+           public void RewriteTest()
+           {
+               Assert.Fail();
+           }
+       }
+   }
+   ```
 
 ***
 
 ## Test attributes
 
-The `PathRewriterTests` class has been annotated with a `TestClass` attribute. This attribute indicates that this class contains test methods. The `RewriteTest` method has been annotated with the `TestMethod` attribute to indicate that it is a test method.
+The `PathRewriterTests` class is annotated with a `TestClass` attribute. This attribute indicates that this class contains test methods. The `RewriteTest` method is annotated with the `TestMethod` attribute to indicate that it is a test method.
 
 These attributes are defined by the MSTest framework (in the namespace *Microsoft.VisualStudio.TestTools.UnitTesting*). Other useful attributes are:
 
