@@ -22,7 +22,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 #### GQI - Extensions: Persistent scoped services [ID 45635]
 
-<!-- MR 10.7.0 - FR 10.6.9 -->
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 When using the GQI DxM, extension developers can now define persistent services: reusable, injectable dependencies that live beyond a single query execution. This allows extensions to keep expensive setup work, cached data, helper clients, and shared state alive for the right scope instead of rebuilding everything every time a query runs.
 
