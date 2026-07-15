@@ -6,9 +6,7 @@ reviewer: Alexander Verkest
 
 # Viewing information on system usage
 
-In the Admin app, you can view information about the usage of certain DataMiner features in your organization and the number of DataMiner credits that correspond with this usage. This does not take into account any subscriptions or other benefits you may have.
-
-Currently, only usage data for Storage as a Service (STaaS) are displayed, i.e., the number of ingest operations per data type. In the future, more information will become available here.
+On the Billing overview page in the Admin app, you can view information about the usage of certain DataMiner services in your organization and the number of DataMiner credits that correspond with this usage. This does take into account any subscriptions or other benefits you may have and will only show usage of billable usage you have.
 
 > [!TIP]
 > For more information about the metering and conversion rates, see [Billing and metering](xref:Pricing_billing_and_metering).
@@ -17,17 +15,17 @@ To view your usage:
 
 1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 
-1. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the upper-right corner and select the organization in the list.
+2. If a different organization should be selected, click the organization selector ![Organization selector](~/dataminer/images/Cloud_Admin_Selector_icon.png) in the upper-right corner and select the organization in the list.
 
-1. In the pane on the left, under *Organization*, select *Usage*.
+3. In the pane on the left, under *Organization*, select *Billing*.
 
-   This will open the page with usage information.
+4. Filter the page by using the time selector in the top left corner.
 
-   If the selected organization does not use any of the features for which usage reporting is currently supported, you will see a message stating that there is no data to display.
-
-1. Optionally, filter the displayed information by month or select one or more DataMiner Systems to view the total usage for the selected systems.
-
-   Note that filtering by month is always available, even if there is no usage for this period.
+5. In the *Services* table, billable usage will be marked with an orange indicator next to the credit value in the *Cost* column.
+   Click the info icon in the subsequent column to open the usage panel.
 
 > [!NOTE]
-> It is possible to export the usage data to CSV, with the *Export usage* button at the top of the *Usage* page.<!-- RN 41117 -->
+> Billable usage data is only available from May 2026 and onwards.
+
+> [!NOTE]
+> It is possible to export the usage data to CSV, with the *Usage export* button at the top of the *Usage* panel.

@@ -9,63 +9,63 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 14 July 2026 - Enhancement - Home - Back button on create organization step in DaaS deploy wizard
+### 15 July 2026 - Enhancement - Home - Back button on create organization step in DaaS deploy wizard
 
 A back button is now available on the create organization step in the DaaS deploy wizard.
 
-### 14 July 2026 - Enhancement - Admin - Documentation button on DMS Overview for expiring DaaS system
+### 15 July 2026 - Enhancement - Admin - Documentation button on DMS Overview for expiring DaaS system
 
 On the DMS Overview page in the Admin app, a documentation button is now shown when a DaaS system is about to expire.
 
-### 14 July 2026 - Fix - Home - Open in desktop notification not fully displayed
+### 15 July 2026 - Fix - Home - Open in desktop notification not fully displayed
 
 When you selected to open a DataMiner System in the desktop app, the notification that mentioned that the browser was trying to open DataMiner Cube could not be fully displayed. The line allowance of this notification has now been increased, resolving this issue.
 
-### 14 July 2026 - Enhancement - Home - Remote URL indicator now shows preview of remote URL
+### 15 July 2026 - Enhancement - Home - Remote URL indicator now shows preview of remote URL
 
 When you add a DataMiner System, below the *Remote URL Indicator* field, a preview of the remote URL will now be shown.
 
-### 14 July 2026 - New feature - Admin - 'Created by' and 'Created at' info in subscription detail panel
+### 15 July 2026 - New feature - Admin - 'Created by' and 'Created at' info in subscription detail panel
 
 The detail panel of a subscription on the Billing page of the Admin app now includes the *Created by* and *Created at* information.
 
-### 14 July 2026 - Enhancement - Catalog - Faster tooltip on Deploy button
+### 15 July 2026 - Enhancement - Catalog - Faster tooltip on Deploy button
 
 The tooltip for the *Deploy* button has been improved and is now shown faster on hover.
 
-### 14 July 2026 - Fix - Catalog - Inline code not displaying correctly in catalog descriptions
+### 15 July 2026 - Fix - Catalog - Inline code not displaying correctly in catalog descriptions
 
 In the Catalog app, inline code in the description of Catalog items was not rendered correctly. This issue has been resolved.
 
-### 14 July 2026 - Enhancement - Admin - API key references renamed to Key in Audit
+### 15 July 2026 - Enhancement - Admin - API key references renamed to Key in Audit
 
 In the Audit section of the Admin app, the initiator type has been renamed from *ApiKey* to *Key*. Related error messages have also been updated.
 
-### 14 July 2026 - Enhancement - Admin - Usage page removed
+### 15 July 2026 - Enhancement - Admin - Usage page removed
 
 The usage page has been removed from the Admin app.
 
-### 14 July 2026 - Enhancement - Admin - Auto-save and confirmation options on settings page
+### 15 July 2026 - Enhancement - Admin - Auto-save and confirmation options on settings page
 
 The Settings page in the Admin app has been updated to include an auto-save option for all settings. Settings that involve managing lists of items, such as IP addresses or domains, are excluded from this auto-save. Some settings with significant system impact now also require confirmation before they are applied.
 
-### 14 July 2026 - Enhancement - General - Icons added to all apps in the header app menu
+### 15 July 2026 - Enhancement - General - Icons added to all apps in the header app menu
 
 All applications in the app menu of the header now have icons.
 
-### 14 July 2026 - Fix - Catalog - Clearing search value on Catalog home page not handled correctly
+### 15 July 2026 - Fix - Catalog - Clearing search value on Catalog home page not handled correctly
 
 When you cleared the search value on the Catalog home page, it could occur that this was not handled correctly, causing part of the value to still be taken into account if you then clicked the button to browse the Catalog. This issue has been resolved.
 
-### 14 July 2026 - Fix - General - Notification counter appearing on top of pop-up panels
+### 15 July 2026 - Fix - General - Notification counter appearing on top of pop-up panels
 
 When a pop-up panel was opened in front of the header bar, it could occur that the counter on the notification bell icon was displayed on top of that pop-up panel. This issue has been resolved.
 
-### 14 July 2026 - Enhancement - Admin - Billing rate and cost column improvements
+### 15 July 2026 - Enhancement - Admin - Billing rate and cost column improvements
 
 On the Billing page of the Admin app, the *Rate* column has been renamed to *Rate (selected time period for the subscription)*, and the *Cost* column now displays the cost per month.
 
-### 14 July 2026 - New feature - Admin - Renewal history tab for renewed subscriptions
+### 15 July 2026 - New feature - Admin - Renewal history tab for renewed subscriptions
 
 Renewed subscriptions are no longer shown in the main subscription table on the Billing page of the Admin app. They are now displayed in the detail panel of a subscription, in a new *Renewal history* tab.
 
