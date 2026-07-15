@@ -65,9 +65,10 @@ Runner processes are automatically stopped after they have been idle for one hou
 
 ### Enhancements
 
-#### Security enhancements [ID 45582]
+#### Security enhancements [ID 45582] [ID 45646]
 
 <!-- 45582: MR 10.7.0 - FR 10.6.9 -->
+<!-- 45646: MR 10.7.0 - FR 10.6.9 -->
 
 A number of security enhancements have been made.
 
@@ -99,6 +100,14 @@ From now on, the BPA test will compare the server times of all Agents in the clu
 From now on, gRPC connections that go through the Azure Cloud Relay service will buffer event messages until the client confirms they have been received.
 
 This will allow those connections to survive a temporary outage of the Azure Cloud Relay service, for example when restarting or deploying a new version.
+
+#### SLLogCollector: Extra logging and progress updates while files are being archived [ID 45650]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+In some cases, SLLogCollector can get stuck while archiving files.
+
+To improve visibility during archiving, SLLogCollector will now log which file is currently being archived and update the busy message with the number of files copied so far.
 
 #### Automation: Improved save logic for automation scripts [ID 45836]
 

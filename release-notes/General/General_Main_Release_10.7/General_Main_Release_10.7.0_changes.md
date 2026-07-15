@@ -302,10 +302,11 @@ If information logging is set to Level 4, the log entries will also mention if a
 > - Log entries can also be added to *SLNetConnections.txt* and *SLCubeConnections.txt* for SLNet connections created elsewhere. To do so, provide a `LoggerProvider` to `SLNetTypesDiagnostics.AddLoggerProvider()`.
 > - When a Cube connected to a system without server-side `SLNetTypesDiagnostics` connects to a system with server-side `SLNetTypesDiagnostics`, the *SLCubeConnections.txt* log file will not be populated. Restart Cube if you want that log file to be populated.
 
-#### Security enhancements [ID 44804] [ID 45582]
+#### Security enhancements [ID 44804] [ID 45582] [ID 45646]
 
 <!-- 44804: MR 10.7.0 - FR 10.6.5 -->
 <!-- 45582: MR 10.7.0 - FR 10.6.9 -->
+<!-- 45646: MR 10.7.0 - FR 10.6.9 -->
 
 A number of security enhancements have been made.
 
@@ -579,6 +580,14 @@ See also ['DataMiner Agent Minimum Requirements' BPA test: Enhanced time server 
 
 > [!NOTE]
 > From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.
+
+#### SLLogCollector: Extra logging and progress updates while files are being archived [ID 45650]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+In some cases, SLLogCollector can get stuck while archiving files.
+
+To improve visibility during archiving, SLLogCollector will now log which file is currently being archived and update the busy message with the number of files copied so far.
 
 #### SLAutomation: Enhanced startup after a DataMiner restart or upgrade [ID 45651]
 
