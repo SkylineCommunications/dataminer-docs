@@ -72,16 +72,6 @@ Runner processes are automatically stopped after they have been idle for one hou
 
 A number of security enhancements have been made.
 
-#### DataAPI: Enhanced handling of element creations failing because another element with the same name already exists [ID 45643]
-
-<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-When DataAPI creates an element, in some cases, the element is not immediately fully synchronized in DataMiner. Subsequent requests then detect that an element with the same name already exists and fail, even though DataAPI itself created that element.
-
-To determine whether DataAPI created an element, the request must confirm that it is genuinely the same element. Up to now, when a name collision occurred, the request would simply fail with no way to identify its own recently created element.
-
-From now on, DataAPI will verify whether the existing element is one it created earlier by matching and tracking both the identifier and the type (i.e., the protocol). When both match, the request is allowed to proceed. If not, it is treated as a conflict and will be rejected.
-
 #### 'DataMiner Agent Minimum Requirements' BPA test: Enhanced time server check on hybrid clusters [ID 45661]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
