@@ -129,6 +129,16 @@ Up to now, the extension method that allowed `FilterElement<T>` to be passed was
 
 Equivalent extension methods have now been added in the `Skyline.DataMiner.Net.Apps.ManagerStore.Select` namespace, which also contains `SelectedFields<T>`. The old extension methods have been converted to regular static methods so that already compiled code remains compatible with newer `SLNetTypes` versions.
 
+#### DxMs upgraded [ID 45944]
+
+<!-- RN 45944: MR 10.7.0 - FR 10.6.9 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner DataAPI 1.4.6
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
 ### Fixes
 
 #### Problem when multiple Agents in a DMS synchronized with Azure Entra simultaneously [ID 44546]
