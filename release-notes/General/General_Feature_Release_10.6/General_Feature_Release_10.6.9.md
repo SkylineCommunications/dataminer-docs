@@ -68,7 +68,7 @@ Runner processes are automatically stopped after they have been idle for one hou
 #### Security enhancements [ID 45582] [ID 45646]
 
 <!-- 45582: MR 10.7.0 - FR 10.6.9 -->
-<!-- 45646: MR 10.7.0 - FR 10.6.9 -->
+<!-- 45646: MR 10.5.0 [CU18] - FR 10.6.9 -->
 
 A number of security enhancements have been made.
 

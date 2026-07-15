@@ -34,6 +34,12 @@ To determine whether DataAPI created an element, the request must confirm that i
 
 From now on, DataAPI will verify whether the existing element is one it created earlier by matching and tracking both the identifier and the type (i.e., the protocol). When both match, the request is allowed to proceed. If not, it is treated as a conflict and will be rejected.
 
+#### Security enhancements [ID 45646]
+
+<!-- 45646: MR 10.5.0 [CU18] - FR 10.6.9 -->
+
+A number of security enhancements have been made.
+
 #### APIGateway: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45671]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
