@@ -24,15 +24,11 @@ uid: General_Main_Release_10.5.0_CU18
 
 ### Enhancements
 
-#### DataAPI: Enhanced handling of element creations failing because another element with the same name already exists [ID 45643]
+#### Security enhancements [ID 45646]
 
-<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+<!-- 45646: MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
-When DataAPI creates an element, in some cases, the element is not immediately fully synchronized in DataMiner. Subsequent requests then detect that an element with the same name already exists and fail, even though DataAPI itself created that element.
-
-To determine whether DataAPI created an element, the request must confirm that it is genuinely the same element. Up to now, when a name collision occurred, the request would simply fail with no way to identify its own recently created element.
-
-From now on, DataAPI will verify whether the existing element is one it created earlier by matching and tracking both the identifier and the type (i.e., the protocol). When both match, the request is allowed to proceed. If not, it is treated as a conflict and will be rejected.
+A number of security enhancements have been made.
 
 #### APIGateway: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45671]
 
@@ -111,3 +107,9 @@ As a result, when that QAction thread then tried to update element metrics, it w
 Up to now, when an element with a smart-serial connection acted as a client, in some cases, the *Connection State* column in the *Communication Info* table on the *General parameters* page would incorrectly show `Undefined`.
 
 From now on, that column will correctly show the actual connection state, e.g., `Connected`.
+
+#### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.

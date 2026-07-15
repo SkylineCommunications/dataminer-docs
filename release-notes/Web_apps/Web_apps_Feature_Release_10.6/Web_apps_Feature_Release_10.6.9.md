@@ -22,7 +22,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 #### GQI - Extensions: Persistent scoped services [ID 45635]
 
-<!-- MR 10.7.0 - FR 10.6.9 -->
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 When using the GQI DxM, extension developers can now define persistent services: reusable, injectable dependencies that live beyond a single query execution. This allows extensions to keep expensive setup work, cached data, helper clients, and shared state alive for the right scope instead of rebuilding everything every time a query runs.
 
@@ -116,6 +116,12 @@ In the help menu of the web apps, the *Feedback* command has been replaced by a 
 When GQI requests DOM data, it now checks whether all data is required instead of relying on the client-requested page size.
 
 When all data is required, e.g., for prefetch join operations or when *Filter assistance* is enabled on a query filter, GQI now requests data with a larger page size. This reduces request overhead and improves performance.
+
+#### Dashboards/Low-Code Apps: No longer possible to link the Select query operator to data [ID 45991]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+From now on, it is no longer possible to link the [Select](xref:GQI_Select) query operator to data.
 
 ### Fixes
 
