@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_services_StaaS
+description: "Use this STaaS sizing guide to estimate alarm, event, trend, and element writes, then size ZRS or GRS storage for your system."
 ---
 
 # Sizing guide: Storage as a Service

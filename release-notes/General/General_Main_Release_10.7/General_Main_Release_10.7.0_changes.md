@@ -571,7 +571,9 @@ In order to make it easier to look up values when, for example, building a messa
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
 
-In order to combine all system requirements specified in [DataMiner Compute Requirements](https://aka.dataminer.services/DataMiner_compute_requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
+In order to combine all system requirements specified in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
+
+See also ['DataMiner Agent Minimum Requirements' BPA test: Enhanced time server check on hybrid clusters [ID 45661]](#dataminer-agent-minimum-requirements-bpa-test-enhanced-time-server-check-on-hybrid-clusters-id-45661)
 
 > [!NOTE]
 > From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.
@@ -583,6 +585,40 @@ In order to combine all system requirements specified in [DataMiner Compute Requ
 Up to now, after a DataMiner restart or upgrade, in some cases, SLAutomation could unexpectedly stop working while initializing internal components.
 
 A number of enhancements have now been made to prevent any initialization issues during SLAutomation startup.
+
+#### 'DataMiner Agent Minimum Requirements' BPA test: Enhanced time server check on hybrid clusters [ID 45661]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When the 'DataMiner Agent Minimum Requirements' BPA test checked the time server settings on hybrid clusters (i.e., clusters that include DaaS Agents as well as self-managed Agents), the existing checks were too strict. DaaS Agents always use VM Time as time server, whereas self-managed Agents typically use the local domain controller as time server.
+
+From now on, the BPA test will compare the server times of all Agents in the cluster:
+
+- If the server times differ from 1 to 5 seconds, this will be flagged as a warning.
+- If the server times differ more than 5 seconds, this will be flagged as an issue.
+
+#### Automation: Improved save logic for automation scripts [ID 45836]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+A number of enhancements have been made to the save logic of automation scripts:
+
+- A per-script execution reference is now kept, so deletion of an in-use script DLL is deferred until all script executions have ended.
+- When a script is updated while another instance is still running, a new DLL is created as before, while the old DLL is kept until the running instance finishes.
+- Local save logic no longer deletes DLL files that were triggered by its own file-change event.
+- A newly saved script now waits until its (re)compilation is complete before it is executed.
+
+#### CloudFeed DxM has been upgraded to Microsoft .NET 10 [ID 45849]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+The CloudFeed DxM has been upgraded to Microsoft .NET 10.
+
+#### SLLogCollector will now automatically be configured to include a memory dump of SLPort and SLSNMPManager when a runtime error was detected in SLProtocol [ID 45865]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+From now on, when you open the SLLogCollector tool, the tool will automatically be configured to include a memory dump of the SLPort and SLSNMPManager processes when a runtime error was detected in SLProtocol.
 
 ### Fixes
 
@@ -649,3 +685,25 @@ In some cases, paged retrievals of DOM instances or booking instances could fail
 From now on, SLDataGateway will gracefully reset an expired paging cookie instead of throwing an error. When the cookie is no longer found among the live paging handlers, a fresh paging session will automatically be started.
 
 Also, `SelectPagingHelper` will now maintain a set of all object IDs received across pages. When a paging session restarts due to a cookie renewal, previously returned objects are filtered out, preventing duplicates from being returned.
+
+#### Automation: Problem with dependency order when recompiling script libraries [ID 45673]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Up to now, when a script library was updated, the dependency order was always assumed to be correct. However, in cases where libraries were loaded in a different order, a library could be recompiled before one of its dependencies.
+
+For example, when Library A depended on Library B, and Library B was recompiled after Library A, then Library A would remain linked to an older version of Library B. This would cause an issue when, after the DataMiner Agent was restarted, the outdated DLLs were removed. Library A would then reference a DLL file that no longer existed.
+
+From now on, the recompilation flow will ensure that libraries are recompiled in the correct dependency order, preventing references to outdated dependency versions.
+
+#### When DataMiner was stopped, the SLAnalytics process could get stuck while being stopped [ID 45910]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When the DataMiner software was stopped, in some cases, the SLAnalytics process could get stuck while being stopped.
+
+#### StorageModule DxM would fail to start because of a WebSocket issue [ID 45933]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Because of a WebSocket issue, in some rare cases, the StorageModule DxM would fail to start. As a result, DataMiner would not be able to start up.

@@ -2,21 +2,17 @@
 uid: Cube_Feature_Release_10.6.8
 ---
 
-# DataMiner Cube Feature Release 10.6.8 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.8
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU5].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.8](xref:General_Feature_Release_10.6.8).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.8](xref:Web_apps_Feature_Release_10.6.8).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -67,7 +63,7 @@ Up to now, the values of the [Elapsed time:], [Remaining time:], and [Time until
 
 From now on, the values of the [Elapsed time:], [Remaining time:], and [Time until start:] placeholders will be calculated using UTC time.
 
-#### Enhanced DataMiner Probe connection handling [ID 45634]
+#### DataMiner Probes: Enhanced connection handling [ID 45634]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
@@ -78,6 +74,12 @@ Because of a number of enhancements, overall DataMiner Probe connection handling
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 A number of enhancements have been made with regard to the loading of profile instances into list box controls linked to session variables.
+
+#### DataMiner Probes: Enhanced stability and responsiveness when handling a large number of probes [ID 45825]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 [CU0] -->
+
+Because of a number of enhancements, overall handling of DataMiner Probes has been improved, especially in scenarios with a large number of probes or unstable network conditions.
 
 ### Fixes
 

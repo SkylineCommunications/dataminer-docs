@@ -4,6 +4,10 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 12 June 2026 - Enhancement - SupportAssistant 1.9.2 - Upgrade to .NET 10
+
+SupportAssistant has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
+
 #### 14 April 2026 - Enhancement - SupportAssistant 1.9.1 - Dependencies updated
 
 Several dependencies have been updated.

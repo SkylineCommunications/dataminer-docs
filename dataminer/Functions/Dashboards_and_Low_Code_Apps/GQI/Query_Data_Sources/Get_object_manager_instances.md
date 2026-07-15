@@ -20,4 +20,4 @@ For a more detailed explanation on the different ways you can have a query resul
 
 ## Selected columns
 
-From DataMiner 10.6.0/10.6.1 onwards<!-- RN 44141 / RN 43852 --> and when using the [GQI DxM](xref:GQI_DxM), only the data related to the selected columns will be retrieved. This uses the [Select API](xref:DomHelper_class#reading-selected-fields) for improved performance. When real-time updates are enabled, only the initial data will be loaded using that same API.
+From DataMiner 10.6.0/10.6.1 onwards<!-- RN 44141 / RN 43852 --> and when using the [GQI DxM](xref:GQI_DxM), only the data related to the selected columns will be retrieved. This uses the [Select API](xref:DOM_helper_crud_methods#reading-selected-fields) for improved performance. When real-time updates are enabled, only the initial data will be loaded using that same API.

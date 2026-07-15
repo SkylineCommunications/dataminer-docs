@@ -13,6 +13,19 @@ uid: General_Main_Release_10.7.0_new_features
 
 ## New features
 
+#### Credentials at rest [ID 44075] [ID 44352] [ID 44701] [ID 44702] [ID 44911]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+From now on, credential secrets are stored as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) instead of in the legacy *Library.xml* file. The encryption material is held in a per-node `encryptors.bin` file under `%CommonApplicationData%\Skyline Communications\DataMiner StorageModule\Encryption\`, wrapped with the Windows [Data Protection API (DPAPI)](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection) under *LocalMachine* scope.
+
+Because DPAPI binds the encryption keys to the host that produced them, restoring a DataMiner Agent on a different machine requires a **DMS backup password**. When this password has been configured, a full DataMiner backup contains a passphrase-wrapped envelope (`backup_encryptors.bin`) that is sealed with PBKDF2-HMAC-SHA-256 (100,000 iterations, 32-byte salt) and AES-256-CBC with HMAC-SHA-256, so that the encryption material can travel between hosts without exposing the keys in plain text. For more information, see [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent) and [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility).
+
+> [!IMPORTANT]
+> Store the DMS backup password securely outside DataMiner (for example, in a password manager). If it is lost, encrypted credentials in any backup taken with that password can no longer be recovered on a clean host. In a multi-node cluster, a peer DataMiner Agent can re-synchronize the encryption material to a restored node, but this should not be relied upon as a substitute for a properly configured DMS backup password.
+
+<!-- See also Cube RNs [ID 45704] [ID 45997] -->
+
 #### Service & Resource Management: New PatchReservationInstanceProperties method to update properties of a reservation instance [ID 44084]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->

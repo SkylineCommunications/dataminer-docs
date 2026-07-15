@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.8
 ---
 
-# General Feature Release 10.6.8 – Preview
+# General Feature Release 10.6.8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -29,10 +29,6 @@ Before you upgrade to this DataMiner version:
   For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -201,7 +197,7 @@ In order to make it easier to look up values when, for example, building a messa
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
 
-In order to combine all system requirements specified in [DataMiner Compute Requirements](https://aka.dataminer.services/DataMiner_compute_requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
+In order to combine all system requirements specified in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
 
 > [!NOTE]
 > From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.

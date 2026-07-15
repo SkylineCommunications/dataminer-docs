@@ -1,6 +1,6 @@
 ---
 uid: Supported_system_data_storage_architectures
-description: Aside from the recommended Storage as a Service (STaaS) data storage architecture, you can also use DataMiner with dedicated clustered storage.
+description: "Compare DataMiner storage architectures, including the recommended STaaS option and supported self-managed options for system data storage."
 ---
 
 # Storage options overview

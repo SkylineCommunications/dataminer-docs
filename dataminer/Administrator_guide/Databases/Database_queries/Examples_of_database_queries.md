@@ -1,5 +1,6 @@
 ---
 uid: Examples_of_database_queries
+description: "Explore a number of example queries that show how you can insert data into an offload database of type MSSQL or Oracle."
 ---
 
 # Examples of database queries

@@ -1,5 +1,6 @@
 ---
 uid: Amazon_Keyspaces_Service
+description: "Find out about the deprecated Amazon Keyspaces Service setup, which could be used instead of Cassandra Cluster but is no longer supported."
 ---
 
 # Amazon Keyspaces Service

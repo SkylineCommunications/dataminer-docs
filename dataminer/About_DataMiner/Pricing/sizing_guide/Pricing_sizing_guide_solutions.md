@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_solutions
+description: "Use these solution sizing guides to gather key parameters, apply formulas, and estimate packaged deployment costs with confidence."
 ---
 
 # Sizing guide: Solutions

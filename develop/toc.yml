@@ -7131,8 +7131,6 @@ items:
         topicUid: github_reusable_workflows_automation_master_workflow
       - name: NuGet Solution Master Workflow
         topicUid: github_reusable_workflows_nuget_solution_master_workflow
-      - name: SRM Function Master Workflow
-        topicUid: github_reusable_workflows_srm_function_master_workflow
       - name: Connector Master Workflow
         topicUid: github_reusable_workflows_connector_master_workflow
       - name: Update Catalog Details

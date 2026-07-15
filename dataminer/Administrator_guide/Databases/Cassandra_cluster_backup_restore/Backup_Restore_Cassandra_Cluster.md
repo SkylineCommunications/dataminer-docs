@@ -1,6 +1,6 @@
 ---
 uid: Backup_Restore_Cassandra_Cluster_Medusa
-description: With the Medusa backup system, you can back up and restore DataMiner data in a Cassandra cluster running on Linux, using a command-line interface.
+description: "Explore how the Medusa backup system allows you to back up and restore DataMiner data in a Cassandra cluster running on Linux."
 ---
 
 # Backing up and restoring a Cassandra cluster using Medusa

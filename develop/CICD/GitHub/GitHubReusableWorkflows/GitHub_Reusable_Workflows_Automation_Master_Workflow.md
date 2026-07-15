@@ -40,7 +40,7 @@ Only when the actions above and the "Artifact Creation" job have been successful
 
   Automation script solutions (and therefore this workflow) can be used to create more than an automation script. They can contain ad hoc data sources, GQI queries, ChatOps extensions, etc. This reusable workflow requires that GitHub has information that defines the Catalog item type.
 
-- Part of our quality control involves static code analysis through SonarCloud as a mandatory step. If you want to use this reusable workflow, you will need to have a SonarCloud organization setup, linked to your GitHub organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
+- Static code analysis through SonarCloud is optional but recommended. If you want to enable it, you will need to have a SonarCloud organization setup, linked to your GitHub organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/), and provide the `sonarCloudProjectName` argument. If you do not provide it, the analysis step is skipped and the quality gate is based on the other checks only.
 
 - Creating a GitHub release or tag will attempt to register your item as a private item in the Catalog. For this, the repository must have access to a DATAMINER_TOKEN. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
@@ -92,7 +92,7 @@ Searches for any project ending with Tests or UnitTests and will then attempt to
 
 ### Analyze
 
-Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
+When a `sonarCloudProjectName` is provided, this step performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines. If no `sonarCloudProjectName` is provided, this step is skipped.
 
 > [!NOTE]
 > For repositories in the *SkylineCommunications* organization, the analysis step uses the *SONAR_TOKEN* organization secret. For repositories outside of the *SkylineCommunications* organization, you will need to create a repository secret with name *SONAR_TOKEN*. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
