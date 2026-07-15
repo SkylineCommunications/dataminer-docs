@@ -142,3 +142,13 @@ In some cases, a GQI line chart in a low-code app could highlight the wrong data
 This issue mainly occurred when the chart was in a movable panel that had been dragged to a different location.
 
 Now, the hovered position correctly maps to the expected data point after position changes.
+
+#### GQI DxM: Problem when using DateTime parameter discrete values in custom operators [ID 45986]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Up to now, in some cases, discrete values of element parameters of type Date would be converted using a different time zone logic than the corresponding cell values.
+
+As a result, when these values were serialized for use in a custom operator, a `GQI error: DateTime discrete value should be in UTC.` exception could be thrown.
+
+From now on, discrete values of element parameters of type Date will use the same local-to-UTC conversion logic as the corresponding parameter cell values.
