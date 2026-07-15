@@ -4,7 +4,7 @@ uid: Unit_testing
 
 # Unit testing
 
-Below, you can find out how to create unit tests in e.g. a solution-based connector, how to use isolation frameworks, write testable code, use FluentAssertions, and use files in unit tests.
+Below, you can find out how to create unit tests in, e.g., a solution-based connector, how to use isolation frameworks, write testable code, use FluentAssertions, and use files in unit tests.
 
 - [Creating unit tests](xref:Unit_tests)
 - [Using isolation frameworks](xref:Using_isolation_frameworks)
