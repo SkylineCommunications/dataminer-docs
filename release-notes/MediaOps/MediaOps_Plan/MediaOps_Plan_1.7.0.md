@@ -113,3 +113,9 @@ When you confirmed a job with a start time in the past (which then ran automatic
 Previously, deprecated organizations could be shown when a new job was created or the ownership of a job was edited.
 
 This issue has now been fixed, and deprecated organizations are no longer shown.
+
+#### Scheduling: Unexpected pop-up message when opening node configuration of recurring job [ID 46006]
+
+When you opened the scheduling configuration of a node in a recurring workflow, it could occur that some input parameters were not correctly linked. As a result, an unexpected pop-up message appeared, prompting you to provide values for the missing parameters.
+
+This issue has been resolved. The scheduling configuration dialog is now correctly displayed in read-only mode, as intended.
