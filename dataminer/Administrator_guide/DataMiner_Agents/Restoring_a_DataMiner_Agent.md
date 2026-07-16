@@ -1,6 +1,6 @@
 ---
 uid: Restoring_a_DataMiner_Agent
-description: "Restore a DataMiner Agent either manually or using the Taskbar Utility after having prepared the destination server."
+description: "Find out about the different ways you can restore a DataMiner Agent and what to watch out for when you restore an Agent."
 ---
 
 # Restoring a DataMiner Agent
