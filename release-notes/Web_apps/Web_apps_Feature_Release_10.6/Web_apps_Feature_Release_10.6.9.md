@@ -148,3 +148,11 @@ In some cases, a GQI line chart in a low-code app could highlight the wrong data
 This issue mainly occurred when the chart was in a movable panel that had been dragged to a different location.
 
 Now, the hovered position correctly maps to the expected data point after position changes.
+
+#### Dashboards/Low-Code Apps: Code blocks no longer rendered correctly in the rich text editor and Web component [ID 45946]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In dashboards and low-code apps, in some cases, code blocks would be displayed incorrectly after a recent UI update. Inline code would appear as a separate box, and block codes would no longer take the full display width.
+
+From now on, code blocks will again render with the intended styling in the rich text editor and Web component.
