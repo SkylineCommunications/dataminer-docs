@@ -6,7 +6,7 @@ uid: Unit_tests
 
 Suppose you are working on a protocol, and you are creating a precompile QAction that contains functionality that will be used by other QActions. To ensure that the functionality provided by this precompile QAction is correct, you want to create unit tests.
 
-In the following example, a precompile QAction with ID 1 was created that, among other things, provides a `PathRewriter` class. The `PathRewriter` class defines a method `Rewrite` for which a unit test is needed.
+In the examples below, a precompile QAction with ID 1 is created that, among other things, provides a `PathRewriter` class. The `PathRewriter` class defines a method `Rewrite` for which a unit test is needed.
 
 ## [Using GitHub Copilot](#tab/test-creation-1)
 
@@ -16,9 +16,7 @@ Using GitHub Copilot, there are multiple ways to generate unit tests:
 - From the editor, right-click and select *Copilot Actions > Generate Tests* from the context menu.
 - In a new Copilot Chat thread, select *Write unit tests* from the Copilot Chat icebreaker suggestions.
 
-### Prompt syntax
-
-You can choose between two prompting methods to create unit tests using Copilot: freeform or structured syntax:
+You can choose between **two prompting methods** to create unit tests using Copilot: freeform or structured syntax:
 
 - **Freeform**: With freeform prompts, you describe in text for what a test needs to be created. E.g., `@Test class PathRewriter`
 - **Structured syntax**: With structured syntax, you use the following syntax to specify for what tests need to be generated: `@Test #<target>`. `#<target>` then denotes for example a class (e.g., `#PathRewriter`) or a git diff (`#git_changes`).
@@ -103,7 +101,7 @@ At this point, Visual Studio has created the test class and method, but it is up
 
 To implement a test method, typically the **triple A (AAA) pattern** is used. This means that the method body consists of three separate parts:
 
-- **Arrange**: The setup of everything you need to perform the tests.
+- **Arrange**: Setting up everything you need to perform the tests.
 - **Act**: Performing the action that you want to test.
 - **Assert**: Verifying whether the result is what you expected.
 
@@ -134,7 +132,7 @@ Note that the pattern used for the test method name consists of three parts sepa
 - The condition or scenario you want to test.
 - The expected result.
 
-This allows you to know what it tested, the tested scenario and the expected result, just from the test method name.
+This allows you to know what is tested, the tested scenario, and the expected result, just from the test method name.
 
 ## Testing whether an exception is thrown
 
@@ -179,7 +177,7 @@ var myClass = new MyClass();
 
 ## Test Explorer
 
-Once the unit test has been implemented, it is ready for execution. Execution can be triggered via *Test Explorer*, which gives an overview of all your tests in the solution. To open the *Test Explorer* in Visual Studio, in the menu bar, go to *Test > Windows > Test Explorer*.
+Once the unit test has been implemented, it is ready for execution. Execution can be triggered via the Test Explorer, which gives an overview of all your tests in the solution. To open the Test Explorer in Visual Studio, in the menu bar, go to *Test > Windows > Test Explorer*.
 
 ![unit_tests_test_explorer.png](~/develop/images/unit_tests_test_explorer.png)
 
@@ -187,9 +185,9 @@ From the Test Explorer, you can easily run a specific test, run all tests, creat
 
 ![unit_tests_test_explorer_successful_run.png](~/develop/images/unit_tests_test_explorer_successful_run.png)
 
-In case a test fails, a red X will be displayed. Clicking the line that represents the test in the *Test Explorer* will provide more information about what failed.
+In case a test fails, a red X will be displayed. Clicking the line that represents the test in the Test Explorer will provide more information about what failed.
 
-For more information on the *Test Explorer*, see:
+For more information on the Test Explorer, see:
 
 - [Run unit tests with Test Explorer](https://docs.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer?view=vs-2019)
 - [Debug and analyze unit tests with Test Explorer](https://docs.microsoft.com/en-us/visualstudio/test/debug-unit-tests-with-test-explorer?view=vs-2019)
