@@ -1,5 +1,6 @@
 ---
 uid: DataminerAgents
+description: "Learn how to configure, back up, upgrade, and manage a DataMiner Agent so you can keep your DMA running smoothly."
 ---
 
 # DataMiner Agents

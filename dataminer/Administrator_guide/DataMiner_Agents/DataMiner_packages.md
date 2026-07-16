@@ -1,6 +1,7 @@
 ---
 uid: DataMiner_packages
 keywords: driver package, connector package, .dmupgrade, .dmupdate, .dmbackup, .dmapp, .dmprotocol, .dmimport
+description: "Explore DataMiner packages and learn how .dmupgrade, .dmupdate, .dmbackup, .dmapp, and .dmprotocol files upgrade, restore, and install systems."
 ---
 
 # DataMiner packages
