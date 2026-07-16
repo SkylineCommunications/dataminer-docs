@@ -142,6 +142,12 @@ Up to now, when an element with a smart-serial connection acted as a client, in 
 
 From now on, that column will correctly show the actual connection state, e.g., `Connected`.
 
+#### Problem with SLDataMiner when SLWatchdog requested element statistics while an element was being stopped [ID 45945]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In some rare cases, SLDataMiner could stop unexpectedly when SLWatchdog requested statistics about the number of active elements while an element was being stopped.
+
 #### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->

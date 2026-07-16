@@ -46,6 +46,25 @@ The *Tokens* table includes a *Rate limit* column, showing the configured rate l
 > - A configured rate limit restricts the number of requests a client can make within a specified time window. However, it does not guarantee that the server can process all requests up to that limit. Actual throughput depends on several factors, including the execution time of the API script, the number of concurrently active tokens, and overall server load.
 > - This feature will only work when DataMiner Cube is connected to a DataMiner Agent running Main Release version 10.7.0, Feature Release 10.6.7, or above.
 
+#### Visual Overview - Spectrum analysis component: Options added to show or hide settings and info panels [ID 45947]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When configuring a spectrum analysis component in Visual Overview, you can now use the following options:
+
+- `ShowSettingsPanel=True` or `ShowSettingsPanel=False` to show or hide the settings panel.
+- `ShowInfoPanel=True` or `ShowInfoPanel=False` to show or hide the info panel.
+
+If you do not define these options, by default:
+
+- The settings panel is shown (expanded or collapsed according to the last saved state).
+- The info panel is shown or hidden according to the ribbon setting.
+
+If these shape options are defined, they overrule other show/hide controls.
+
+> [!NOTE]
+> These options are only applied when the shape is initialized. Afterwards, they cannot be toggled on the fly.
+
 ## Changes
 
 ### Enhancements
@@ -95,6 +114,20 @@ Now, the `ShowRibbon` option works again, so you can use it to show or hide the 
 
 When you logged out of DataMiner Cube immediately after you had logged in, in some cases, an exception could be thrown related to either the Alarm Console light bulb feature or the Correlation feature.
 
+#### Spectrum analysis: Long measurement point names without spaces were not wrapped [ID 45892]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In the *Measurement points* tab of a spectrum analyzer card, up to now, long measurement point names without spaces would not wrapped correctly.
+
+From now on, these names will be wrapped, so they are fully visible.
+
+#### Spectrum cards: 'measurements/s' label in the card footer would incorrectly get trimmed when showing a high value [ID 45907]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In the footer of spectrum cards, in some cases, the *measurements/s* label would incorrectly get trimmed when it showed a high value.
+
 #### Progress events only scroll when at the bottom [ID 45962]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
@@ -104,3 +137,9 @@ During an upgrade, or when importing or exporting, progress events come in conti
 Up to now, when you scrolled up to check other events, the window would automatically scroll back to the bottom, making it impossible to view earlier events.
 
 From now on, the window will only automatically scroll to the bottom when you are already at the bottom. If you manually scroll up to check other events, the window will remain at that position, while new events continue to arrive (as indicated by the scroll bar on the right).
+
+#### Visual Overview - Spectrum analysis component: Restarting a spectrum element would cause a null reference exception to be thrown [ID 45994]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When you restarted a spectrum element while working in DataMiner Cube, in some cases, a null reference exception could be thrown, causing problems in the spectrum UI.
