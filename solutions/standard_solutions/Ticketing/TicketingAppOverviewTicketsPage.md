@@ -17,13 +17,68 @@ For each ticket, the following information is shown:
 
 - Ticket ID
 - Name
-- Status
+- Status, with a button that allows you to trigger a state transition (see [Ticket state transitions](#ticket-state-transitions))
 - Severity
 - Priority
 - Ticket type
 - Assignee
 - Creation date
 - Requested and expected resolution dates
+
+## Color indications
+
+The Ticketing app uses a standardized color-coding scheme for the *Status*, *Severity*, *Priority*, and *Expected Resolution Date* fields to provide instant visual feedback and make it easy to identify tickets that require attention. Below you can find more information about what the different colors represent.<!-- RN 45941 -->
+
+### Status colors
+
+The status color allows you to quickly distinguish active tickets from completed or inactive tickets. Ticket statuses are represented using the following colors:
+
+| Status | Color |
+|--|--|
+| Acknowledged | Blue |
+| In Progress | Green |
+| Pending | Amber |
+| On Hold | Orange |
+| Resolved | Light Green |
+| Closed | Black |
+| Rejected | Gray |
+| Canceled | Gray |
+
+### Severity colors
+
+The severity colors make high-impact incidents immediately recognizable within ticket lists and dashboards. Severity indicates the impact of the issue and is displayed using distinct colors:
+
+| Severity | Color |
+|--|--|
+| Critical | Red |
+| Major | Orange |
+| Minor | Light Brown |
+
+### Priority colors
+
+Priority indicates how urgently a ticket needs to be resolved. These colors help support teams focus on the most urgent work first.
+
+| Priority | Color |
+|--|--|
+| Critical | Red |
+| High | Light Red |
+| Medium | Beige |
+| Low | Light Yellow |
+
+### Expected resolution date colors
+
+The expected resolution date is color-coded based on the remaining time before the target resolution date:
+
+| Resolution Timeline | Color |
+|--|--|
+| Closed, Rejected, or Canceled tickets | No coloring applied (inactive tickets) |
+| Past due date | Red |
+| Due today | Orange |
+| Due within the next 3 days | Dark Purple |
+| Due in 4–7 days | Light Purple |
+| Due more than 1 week away | Light Pigeon Blue |
+
+This color scheme helps you identify overdue tickets, upcoming deadlines, and tickets with sufficient remaining resolution time at a glance. Tickets that are no longer active do not display urgency-based coloring because no further action is required.
 
 ## Filtering
 
@@ -138,6 +193,9 @@ The suggested next step according to the happy path is highlighted and placed fi
 
 When applicable, alternative transitions are also available.
 
+> [!TIP]
+> Quick state transitions are also possible via the drop-down buttons in the *State* column of the main *Tickets* page, or via the [bulk actions button](#bulk-actions).<!-- RN 45900+45950 -->
+
 ### Subscribe button
 
 You can subscribe to a ticket by using the **Subscribe** button on the Ticket Information page.
@@ -206,3 +264,16 @@ The Notes section provides a history of system notes and user notes:
 ![Notes section of the Ticket Information subpage](~/solutions/images/Ticketing_Demo_16_NotesOverview.png)
 
 Each user note maintains its own change history. When a note is modified, previous versions are preserved, and these can be viewed from the note history.
+
+## Bulk actions
+
+With the bulk actions button in the upper right corner of the Tickets page, you can perform common operations on multiple tickets in one single action.<!-- RN 45950 -->
+
+![The bulk actions button on the Tickets page](~/solutions/images/Ticketing_bulk_actions.png)
+
+The following bulk actions are available via this button:
+
+- **Transition Selected Tickets**: Move multiple tickets to a new lifecycle state in a single operation.
+- **Change Severity**: Update the severity level of multiple tickets at once.
+- **Change Priority**: Modify the priority of multiple tickets simultaneously.
+- **Delete Selected Tickets**: Remove multiple tickets in a single action.

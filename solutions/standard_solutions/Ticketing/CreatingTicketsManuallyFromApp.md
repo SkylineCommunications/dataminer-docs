@@ -34,4 +34,6 @@ uid: CreatingTicketsManuallyFromApp
      > [!NOTE]
      > Email notifications are disabled by default for users other than the assignee. The ticket assignee always receives email notifications for ticket updates. Other users can opt in by enabling the **Notify me about changes via email** option during ticket creation or when editing the ticket.
 
+1. If you selected a ticket type that requires the configuration of additional fields, click *Next* and configure those fields.<!-- RN 45915 -->
+
 1. Click *Save*.
