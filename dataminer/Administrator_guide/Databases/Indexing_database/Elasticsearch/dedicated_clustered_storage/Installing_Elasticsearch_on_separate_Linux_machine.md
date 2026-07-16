@@ -1,5 +1,6 @@
 ---
 uid: Installing_Elasticsearch_on_separate_Linux_machine
+description: "Learn about the legacy Elasticsearch 6.8 setup on Linux for DataMiner, including firewall, storage, and cluster settings."
 ---
 
 # Installing Elasticsearch on a separate Linux machine

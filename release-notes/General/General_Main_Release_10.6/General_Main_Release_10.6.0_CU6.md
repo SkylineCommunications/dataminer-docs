@@ -34,15 +34,11 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-#### DataAPI: Enhanced handling of element creations failing because another element with the same name already exists [ID 45643]
+#### Security enhancements [ID 45646]
 
-<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+<!-- 45646: MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
-When DataAPI creates an element, in some cases, the element is not immediately fully synchronized in DataMiner. Subsequent requests then detect that an element with the same name already exists and fail, even though DataAPI itself created that element.
-
-To determine whether DataAPI created an element, the request must confirm that it is genuinely the same element. Up to now, when a name collision occurred, the request would simply fail with no way to identify its own recently created element.
-
-From now on, DataAPI will verify whether the existing element is one it created earlier by matching and tracking both the identifier and the type (i.e., the protocol). When both match, the request is allowed to proceed. If not, it is treated as a conflict and will be rejected.
+A number of security enhancements have been made.
 
 #### APIGateway: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45671]
 
@@ -111,3 +107,43 @@ From now on, the *Get parameter table by alias* data source will only be availab
 When an element was frequently stopped and restarted, up to now, alarms would accumulate as duplicates in the internal alarm grouping counters, causing a memory leak in the SLAnalytics process. Alarms would incorrectly not be removed from the element's alarm counter when the element stopped, and were re-added as new entries each time the element restarted.
 
 From now on, alarms will be properly removed from the element alarm counter when an element stops. An additional safeguard has also been added to prevent duplicate alarm entries from being inserted into the counter if the same alarm tree already exists.
+
+#### Problem occurring while SL\* services were being shut down would prevent DataMiner from starting up again [ID 45839]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, while the SL* services were being shut down, in some cases, an access violation crash could occur.
+
+As a result, DataMiner could fail to start up again.
+
+#### Reconnecting a WMI connection could cause the SLProtocol process to stop unexpectedly [ID 45851]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, in some cases, reconnecting a WMI connection could cause the `SLProtocol` process to stop unexpectedly.
+
+In addition, opening StreamViewer would incorrectly show all items in the tree structure as `Undefined`.
+
+From now on, reconnecting a WMI connection will no longer cause `SLProtocol` to stop unexpectedly, and StreamViewer will correctly show the group and action executing the WMI query.
+
+#### Problem with SLProtocol when a queued QAction finished after an element had been stopped [ID 45882]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when an element was stopped while queued QActions were still running, in some cases, one of those QActions could finish after `SLProtocol` had already cleaned up its internal objects.
+
+As a result, when that QAction thread then tried to update element metrics, it would attempt to access an object that had already been deleted, causing the `SLProtocol` process to crash.
+
+#### Smart-serial client connection state incorrectly shown as undefined [ID 45931]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when an element with a smart-serial connection acted as a client, in some cases, the *Connection State* column in the *Communication Info* table on the *General parameters* page would incorrectly show `Undefined`.
+
+From now on, that column will correctly show the actual connection state, e.g., `Connected`.
+
+#### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.

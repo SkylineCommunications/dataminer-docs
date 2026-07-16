@@ -1,5 +1,6 @@
 ---
 uid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
+description: "Follow these steps if you want to take a snapshot of one Elasticsearch cluster and restore it to another."
 ---
 
 # Taking a snapshot of one Elasticsearch cluster and restoring it to another

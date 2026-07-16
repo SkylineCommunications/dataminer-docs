@@ -1,5 +1,6 @@
 ---
 uid: Separate_Cassandra_setup_with_Elasticsearch
+description: "Explore how, if you do not want to use the recommended STaaS setup, you can set up a separate Cassandra database with indexing per DMA."
 keywords: Cassandra Single
 ---
 

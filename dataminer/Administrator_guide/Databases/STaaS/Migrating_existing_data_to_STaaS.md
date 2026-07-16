@@ -1,6 +1,7 @@
 ---
 uid: Migrating_existing_data_to_STaaS
 reviewer: Alexander Verkest
+description: "Follow these steps to migrate existing data to STaaS in DataMiner Cube using the CloudStorageMigration script."
 ---
 
 # Migrating existing data to STaaS

@@ -81,8 +81,41 @@ With this change:
 
 This simplifies event management and ensures that MediaOps Live reflects only confirmed jobs.
 
+#### Scheduling/Workflow Designer: Swapping to a different pool now prompts to keep or reset node configuration [ID 45924]
+
+When you swap a resource or resource pool node to a different pool in the Workflow Designer or directly on a job, MediaOps Plan now detects whether the new pool has a different scheduling configuration.
+
+If differences are found, you now get a prompt to choose one of the following options:
+
+- **Keep**: Keep the node's current configuration and automated actions.
+- **Revert**: Reset the node configuration and automated actions to match the new pool.
+
+Previously, swapping pools silently kept the old configuration, which could leave a node with settings that no longer matched its new pool. Now you decide explicitly, at the moment of the swap.
+
+#### Improved parameter link configuration [ID 45975]
+
+The dialog used to dynamically link parameter values (capabilities, capacities, configurations, and orchestration script input) has been improved to make linking faster and more intuitive:
+
+- **Shorter, clearer labels**: Several labels in the dialog have been shortened for faster configuration. For example, *Select the type of link you want to configure:* is now *Link to type:*, and *Select the node to link to:* is now *Link to:*. The target labels have likewise been simplified to *Property:*, *Capability:*, *Capacity:*, and *Configuration:*.
+
+- **Smart default target**: The *Link to* target is now preselected based on the link type. Node-scoped links default to the current node ("*This node*"), while job- or workflow-scoped links (capability, capacity, and configuration parameters) default to the job/workflow scope.
+
+- **Pre/post relationship indicators**: In the node list, each node now indicates how it relates to the current node. A node connected into the current node is labeled "*(pre)*", a node that the current node connects to is labeled "*(post)*", and a node for which both apply is labeled "*(pre/post)*". This makes it easier to pick the correct node when configuring links across a workflow.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
 
 When you confirmed a job with a start time in the past (which then ran automatically), node start and stop times remained anchored to that past start time. As a result, resources could appear reserved from before the reservation actually existed. This issue has now been fixed: on confirmation, past node start times are moved forward to the confirmation time so resource usage reflects the actual reserved window.
+
+#### Scheduling: Deprecated organizations shown when creating jobs or editing job owner [ID 45981]
+
+Previously, deprecated organizations could be shown when a new job was created or the ownership of a job was edited.
+
+This issue has now been fixed, and deprecated organizations are no longer shown.
+
+#### Scheduling: Unexpected pop-up message when opening node configuration of recurring job [ID 46006]
+
+When you opened the scheduling configuration of a node in a recurring workflow, it could occur that some input parameters were not correctly linked. As a result, an unexpected pop-up message appeared, prompting you to provide values for the missing parameters.
+
+This issue has been resolved. The scheduling configuration dialog is now correctly displayed in read-only mode, as intended.

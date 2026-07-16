@@ -449,18 +449,20 @@ In order to protect DataMiner against a continuously growing queue of incoming s
 > - We strongly advise you to restart the element when the limit has been breached. When certain messages within a data stream get dropped because the maximum queue limit was breached, an incomplete data stream may get processed, which could then produce unexpected results.
 > - The alarm not only mentions the limit that was reached (in MB). It also mentions the number of messages that are present in the queue. This number of messages is not always equal to the number of responses to be processed. For example, in some cases, Windows can combine multiple received UDP packets into one when adding packets to the receive buffer, causing SLPort to then add a single message to the queue.
 
-#### DxMs upgraded [ID 45304] [ID 45347] [ID 45392] [ID 45506]
+#### DxMs upgraded [ID 45304] [ID 45347] [ID 45392] [ID 45506] [ID 45944]
 
 <!-- RN 45304: MR 10.7.0 - FR 10.6.6 -->
 <!-- RN 45347: MR 10.7.0 - FR 10.6.6 -->
 <!-- RN 45392: MR 10.7.0 - FR 10.6.7 -->
 <!-- RN 45506: MR 10.7.0 - FR 10.6.7 -->
+<!-- RN 45944: MR 10.7.0 - FR 10.6.9 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer 1.8.8
 - DataMiner CloudGateway 3.1.0
 - DataMiner CoreGateway 2.14.17
+- DataMiner DataAPI 1.4.6
 - DataMiner FieldControl 2.12.1
 - DataMiner Orchestrator 1.8.2
 - DataMiner SupportAssistant 1.9.1
@@ -578,6 +580,14 @@ See also ['DataMiner Agent Minimum Requirements' BPA test: Enhanced time server 
 > [!NOTE]
 > From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.
 
+#### SLLogCollector: Extra logging and progress updates while files are being archived [ID 45650]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+In some cases, SLLogCollector can get stuck while archiving files.
+
+To improve visibility during archiving, SLLogCollector will now log which file is currently being archived and update the busy message with the number of files copied so far.
+
 #### SLAutomation: Enhanced startup after a DataMiner restart or upgrade [ID 45651]
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
@@ -596,6 +606,35 @@ From now on, the BPA test will compare the server times of all Agents in the clu
 
 - If the server times differ from 1 to 5 seconds, this will be flagged as a warning.
 - If the server times differ more than 5 seconds, this will be flagged as an issue.
+
+#### SLLogCollector: Users can now choose whether to use the 'Output pending calls' option [ID 45722]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Up to now, when you opened the SLLogCollector, the *Output pending calls* option would automatically be selected when any of the running processes have runtime errors linked to elements. Users would not have any control over this option. From now on, they will.
+
+If you want SLLogCollector to collect all pending calls for a number of the specific elements, do the following:
+
+1. Select the *Output pending calls* option.
+1. Click *Load elements*, and select all elements of which you want the pending calls to be collected.
+
+   Elements with runtime errors will be automatically selected.
+
+> [!NOTE]
+>
+> - The *Output pending calls* option will still automatically be selected when any of the running processes have runtime errors linked to elements.
+> - Clearing the *Output pending calls* option will only hide the element selection grid. The current selection will not be cleared, so when you select the *Output pending calls* option again, everything is restored without any need to reload the elements.
+
+#### Automation: Improved save logic for automation scripts [ID 45836]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+A number of enhancements have been made to the save logic of automation scripts:
+
+- A per-script execution reference is now kept, so deletion of an in-use script DLL is deferred until all script executions have ended.
+- When a script is updated while another instance is still running, a new DLL is created as before, while the old DLL is kept until the running instance finishes.
+- Local save logic no longer deletes DLL files that were triggered by its own file-change event.
+- A newly saved script now waits until its (re)compilation is complete before it is executed.
 
 #### CloudFeed DxM has been upgraded to Microsoft .NET 10 [ID 45849]
 
@@ -690,3 +729,9 @@ From now on, the recompilation flow will ensure that libraries are recompiled in
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
 When the DataMiner software was stopped, in some cases, the SLAnalytics process could get stuck while being stopped.
+
+#### StorageModule DxM would fail to start because of a WebSocket issue [ID 45933]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Because of a WebSocket issue, in some rare cases, the StorageModule DxM would fail to start. As a result, DataMiner would not be able to start up.

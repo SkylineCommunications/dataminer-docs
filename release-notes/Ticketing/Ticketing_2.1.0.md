@@ -2,10 +2,7 @@
 uid: Ticketing_2.1.0
 ---
 
-# Ticketing 2.1.0 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# Ticketing 2.1.0
 
 ## Prerequisites
 
@@ -109,6 +106,21 @@ The ticket type UI provides visibility into these relationships by displaying th
 
 To ensure data consistency, validation rules prevent modifications that would invalidate existing ticket data, such as changing, removing, or deleting ticket type relationships that are already in use.
 
+#### Bulk actions for ticket management [ID 45950]
+
+Managing large numbers of tickets is now more efficient with the introduction of bulk actions. You can now select multiple tickets and perform common operations in a single action instead of updating each ticket individually.
+
+The following bulk actions are available via the *Bulk Action* button:
+
+- **Transition Selected Tickets**: Move multiple tickets to a new lifecycle state in a single operation.
+- **Change Severity**: Update the severity level of multiple tickets at once.
+- **Change Priority**: Modify the priority of multiple tickets simultaneously.
+- **Delete Selected Tickets**: Remove multiple tickets in a single action.
+
+These capabilities help operators and support teams manage high ticket volumes more efficiently, reduce repetitive manual work, and ensure consistent updates across related tickets.
+
+![Example of how the Bulk Action button can be used in the Ticketing app](~/release-notes/images/Ticketing_bulk_actions.png)
+
 ## Changes
 
 ### Enhancements
@@ -160,6 +172,65 @@ For example, imagine a ticket is created for the element *Router-A*. If no asset
 Automatically added items are protected from accidental removal. When a user attempts to remove a linked item, a confirmation dialog is shown to determine whether the related item should also be removed.
 
 Affected resources are displayed using their resource type (*Element* or *Service*) rather than including the type in the resource name itself.
+
+#### Enhanced ticket color coding [ID 45941]
+
+To improve ticket visibility and help operators quickly assess ticket status, urgency, and SLA risk, the Ticketing app now uses a standardized color-coding scheme for *Status*, *Severity*, *Priority*, and *Expected Resolution Date*.
+
+These color indicators provide immediate visual feedback, making it easier to identify tickets that require attention and prioritize follow-up actions.
+
+![Color coding of tickets in the Ticketing app](~/release-notes/images/Ticketing_color_coding.png)
+
+##### Status colors
+
+The status color allows operators to quickly distinguish active tickets from completed or inactive tickets. Ticket statuses are represented using the following colors:
+
+| Status | Color |
+|--|--|
+| Acknowledged | Blue |
+| In Progress | Green |
+| Pending | Amber |
+| On Hold | Orange |
+| Resolved | Light Green |
+| Closed | Black |
+| Rejected | Gray |
+| Canceled | Gray |
+
+##### Severity colors
+
+The severity colors make high-impact incidents immediately recognizable within ticket lists and dashboards. Severity indicates the impact of the issue and is displayed using distinct colors:
+
+| Severity | Color |
+|--|--|
+| Critical | Red |
+| Major | Orange |
+| Minor | Light Brown |
+
+##### Priority colors
+
+Priority indicates how urgently a ticket needs to be resolved. These colors help support teams focus on the most urgent work first.
+
+| Priority | Color |
+|--|--|
+| Critical | Red |
+| High | Light Red |
+| Medium | Beige |
+| Low | Light Yellow |
+
+##### Expected resolution date colors
+
+The expected resolution date is color-coded based on the remaining time before the target resolution date:
+
+| Resolution Timeline | Color |
+|--|--|
+| Closed, Rejected, or Canceled tickets | No coloring applied (inactive tickets) |
+| Past due date | Red |
+| Due today | Orange |
+| Due within the next 3 days | Dark Purple |
+| Due in 4–7 days | Light Purple |
+| Due more than 1 week away | Light Pigeon Blue |
+
+This color scheme helps operators identify overdue tickets, upcoming deadlines, and tickets with sufficient remaining resolution time at a glance. Tickets that are no longer active do not display urgency-based coloring because no further action is required.
 
 ### Fixes
 

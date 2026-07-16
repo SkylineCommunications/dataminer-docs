@@ -1,5 +1,6 @@
 ---
 uid: Separate_Cassandra_setup_without_Elasticsearch
+description: "Learn about separate Cassandra storage for DataMiner, a legacy setup where any features that require indexing are unavailable."
 ---
 
 # Separate Cassandra setup without indexing

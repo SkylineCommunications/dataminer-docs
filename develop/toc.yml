@@ -4215,6 +4215,8 @@ items:
               topicUid: DMSScript.Script.Exe.Value-offset
             - name: '@ref'
               topicUid: DMSScript.Script.Exe.Value-ref
+      - name: SolutionId
+        topicUid: DMSScript.SolutionId
       - name: Type
         topicUid: DMSScript.Type
     - name: SchemaTypes

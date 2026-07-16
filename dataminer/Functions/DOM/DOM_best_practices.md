@@ -151,6 +151,12 @@ The way data is stored can impact the size of a `DomInstance`. Preferably, the d
 
 An example of this is a "severity" field, which could contain "Critical", "Minor", or "Major". Instead of defining these as string values every time, you should use a `GenericEnumFieldDescriptor<int>` instead. Each severity is then mapped to a number, and only that number is stored in the `DomInstance`. This will require fewer bytes compared to storing long string values.
 
+### Avoid using string-typed GenericEnumFieldDescriptors
+
+While the [GenericEnumFieldDescriptor](xref:DOM_GenericEnumFieldDescriptor) supports both `int` and `string` as the underlying enum value type, using `string` values (i.e. `GenericEnum<string>`) is considered bad practice. Always use `GenericEnum<int>` instead.
+
+String enums are not natively supported in C#, require additional custom handling in generators, tooling, and mappings, and are incompatible with SDM DOM repository generators, which assume integer enums when mapping between C# and DOM.
+
 ### Avoid reusing section definitions if not all fields are applicable
 
 `SectionDefinitions` can be reused inside a DOM manager. If all fields inside a `SectionDefinition` are applicable to two `DomDefinitions`, it may be advisable to reuse that `SectionDefinition`. However, if only a subset is applicable, it is better to define a new `SectionDefinition` specific to the other `DomDefinition`. This ensures that only relevant data is stored.
