@@ -1,5 +1,6 @@
 ---
 uid: Switching_between_DataMiner_configurations
+description: "Learn how to maintain different DataMiner configurations on one DMA and switch between them in a matter of seconds for staging, demo and testing purposes."
 ---
 
 # Switching between DataMiner configurations on a DMA

@@ -1,5 +1,6 @@
 ---
 uid: Specifying_your_company_data
+description: "Set your company data in DataMiner Cube by updating name, address, contacts, and logo, then click Save to apply changes."
 ---
 
 # Specifying your company data
