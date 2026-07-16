@@ -7644,8 +7644,8 @@ items:
     - name: Unit testing
       topicUid: Unit_testing
       items:
-      - name: Creating unit tests using the MSTestv2 framework in Visual Studio
-        topicUid: Unit_tests_MSTestv2_framework
+      - name: Creating unit tests
+        topicUid: Unit_tests
       - name: Using isolation frameworks
         topicUid: Using_isolation_frameworks
       - name: Writing testable code
