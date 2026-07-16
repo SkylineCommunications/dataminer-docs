@@ -46,6 +46,25 @@ The *Tokens* table includes a *Rate limit* column, showing the configured rate l
 > - A configured rate limit restricts the number of requests a client can make within a specified time window. However, it does not guarantee that the server can process all requests up to that limit. Actual throughput depends on several factors, including the execution time of the API script, the number of concurrently active tokens, and overall server load.
 > - This feature will only work when DataMiner Cube is connected to a DataMiner Agent running Main Release version 10.7.0, Feature Release 10.6.7, or above.
 
+#### Visual Overview - Spectrum analysis component: Options added to show or hide settings and info panels [ID 45947]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When configuring a spectrum analysis component in Visual Overview, you can now use the following options:
+
+- `ShowSettingsPanel=True` or `ShowSettingsPanel=False` to show or hide the settings panel.
+- `ShowInfoPanel=True` or `ShowInfoPanel=False` to show or hide the info panel.
+
+If you do not define these options, by default:
+
+- The settings panel is shown (expanded or collapsed according to the last saved state).
+- The info panel is shown or hidden according to the ribbon setting.
+
+If these shape options are defined, they overrule other show/hide controls.
+
+> [!NOTE]
+> These options are only applied when the shape is initialized. Afterwards, they cannot be toggled on the fly.
+
 ## Changes
 
 ### Enhancements
