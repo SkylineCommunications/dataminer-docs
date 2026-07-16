@@ -129,3 +129,9 @@ During an upgrade, or when importing or exporting, progress events come in conti
 Up to now, when you scrolled up to check other events, the window would automatically scroll back to the bottom, making it impossible to view earlier events.
 
 From now on, the window will only automatically scroll to the bottom when you are already at the bottom. If you manually scroll up to check other events, the window will remain at that position, while new events continue to arrive (as indicated by the scroll bar on the right).
+
+#### Visual Overview - Spectrum analysis component: Restarting a spectrum element would cause a null reference exception to be thrown [ID 45994]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When you restarted a spectrum element while working in DataMiner Cube, in some cases, a null reference exception could be thrown, causing problems in the spectrum UI.
