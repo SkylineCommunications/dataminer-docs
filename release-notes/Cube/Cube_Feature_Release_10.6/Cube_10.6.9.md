@@ -95,6 +95,12 @@ Now, the `ShowRibbon` option works again, so you can use it to show or hide the 
 
 When you logged out of DataMiner Cube immediately after you had logged in, in some cases, an exception could be thrown related to either the Alarm Console light bulb feature or the Correlation feature.
 
+#### Spectrum cards: 'measurements/s' label in the card footer would incorrectly get trimmed when showing a high value [ID 45907]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In the footer of spectrum cards, in some cases, the *measurements/s* label would incorrectly get trimmed when it showed a high value.
+
 #### Progress events only scroll when at the bottom [ID 45962]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
