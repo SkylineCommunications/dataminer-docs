@@ -29,6 +29,9 @@ The *Balance* displays your current credit balance available for dataminer.servi
 
 The *Services* table provides a detailed breakdown of all services consuming credits in the selected time period. Services are organized into categories that can be expanded or collapsed for better overview.
 
+> [!TIP]
+> For more information about metering and conversion rates, see [Billing and metering](xref:Pricing_billing_and_metering).
+
 Use the month selector at the top of the page to view costs for different months. Note:
 
 - The current month's data is updated on a daily basis with real-time usage.
@@ -41,6 +44,19 @@ Each service displays its credit cost with a color-coded indicator:
 - **Orange**: PPU cost.
 
 The costs shown reflect the consumption for the currently selected time period.
+
+### Billable usage panel
+
+For services with pay-per-use costs, you can click the info icon next to the *Cost* column to open the billable usage panel. This panel provides a detailed breakdown of usage for that service:
+
+- A chart and, where applicable, a table with billable usage data. The table is not shown for organization-based services such as connectors.
+- A toggle button allows you to switch between a cost view and a usage view in the chart. The cost view takes active subscriptions into account, so usage fully covered by a subscription will show as 0.
+- A time range filter is available to adjust the data shown in the panel.
+
+To export the usage data to CSV, click the *Usage export* button at the top of the panel.
+
+> [!NOTE]
+> Billable usage data is only available from May 2026 onwards.
 
 ## Monthly savings
 
