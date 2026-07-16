@@ -71,6 +71,14 @@ Depending on the configuration, one of the following messages is shown:
 
   `Multiple NTP servers have been detected, but they are peers of one another.`
 
+- If multiple NTP servers have been detected that are not peers of one another, but the Agent clocks nevertheless agree within one second:
+
+  `Multiple NTP servers detected that are not peers of one another, but agent clocks agree within 1 second (measured difference up to {X} seconds).`
+
+  This message can be shown from DataMiner 10.6.9/10.7.0 onwards<!-- RN 45661 --> and was introduced to support hybrid clusters. The detailed results also list the measured clock offset per Agent, for example:
+
+  `Clock offsets between agents (relative to the slowest clock): {agentName} (id: {dma id}) +0.000s (±0.000s); ...`
+
 ### Error
 
 #### Errors related to minimum hardware requirements
@@ -127,6 +135,11 @@ The following errors are possible:
   - Result message: `No agent in the cluster has an NTP server configured.`
   - Detailed results: `Agent {agentName} (id: {dma id}) uses NTP server: 'None'`
 
+- From DataMiner 10.6.9/10.7.0 onwards<!-- RN 45661 -->, if multiple NTP servers are detected that are not peers of one another, and the measured clock difference between Agents exceeds 5 seconds:
+
+  - Result message: `Multiple NTP servers detected that are not peers of one another, and agent clocks differ by up to {X} seconds, which exceeds the 5 second threshold.`
+  - Detailed results: The per-Agent clock offsets, for example `Clock offsets between agents (relative to the slowest clock): {agentName} (id: {dma id}) +0.000s (±0.000s); ...`
+
 ### Warning
 
 The following warnings related to the time server settings are possible:
@@ -137,7 +150,15 @@ The following warnings related to the time server settings are possible:
 
 - If multiple NTP servers are detected and they are not peers of one another:
 
-  - Result message: `Multiple NTP servers detected that are not peers of one another.`
+  - From DataMiner 10.6.9/10.7.0 onwards<!-- RN 45661 -->, if the measured clock difference between Agents is more than 1 second but does not exceed 5 seconds:
+
+    `Multiple NTP servers detected that are not peers of one another, and agent clocks differ by up to {X} seconds, which exceeds the 1 second threshold.`
+
+  - From DataMiner 10.6.9/10.7.0 onwards<!-- RN 45661 -->, if the clock difference between Agents could not be measured (the Agents did not respond with their time):
+
+    `Multiple NTP servers detected that are not peers of one another. The clock offset between agents could not be measured (the agents did not respond with their time).`
+
+    In earlier DataMiner versions, this situation always results in the following warning: `Multiple NTP servers detected that are not peers of one another.`
 
 ### Not Executed
 

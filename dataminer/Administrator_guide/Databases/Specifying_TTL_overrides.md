@@ -1,5 +1,6 @@
 ---
 uid: Specifying_TTL_overrides
+description: "Learn how to specify TTL overrides in order to control the lifespan of various data types, such as real-time trending, minute trending, and alarm events."
 ---
 
 # Specifying TTL overrides
