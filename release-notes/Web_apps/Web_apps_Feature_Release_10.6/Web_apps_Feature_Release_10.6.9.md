@@ -156,3 +156,11 @@ Now, the hovered position correctly maps to the expected data point after positi
 In dashboards and low-code apps, in some cases, code blocks would be displayed incorrectly after a recent UI update. Inline code would appear as a separate box, and block codes would no longer take the full display width.
 
 From now on, code blocks will again render with the intended styling in the rich text editor and Web component.
+
+#### Dashboards/Low-Code Apps: Filters for numeric columns with strict discrete values could incorrectly stay disabled [ID 45992]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In the *Query filter* component, and in conditional coloring and template conditions, the filters for numeric columns with strict discrete values could incorrect stay disabled.
+
+From now on, it will again be possible to use these filters.
