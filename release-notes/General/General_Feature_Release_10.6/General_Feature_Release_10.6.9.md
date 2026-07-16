@@ -266,6 +266,12 @@ From now on, that column will correctly show the actual connection state, e.g., 
 
 Because of a WebSocket issue, in some rare cases, the StorageModule DxM would fail to start. As a result, DataMiner would not be able to start up.
 
+#### Problem with SLDataMiner when SLWatchdog requested element statistics while an element was being stopped [ID 45945]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In some rare cases, SLDataMiner could stop unexpectedly when SLWatchdog requested statistics about the number of active elements while an element was being stopped.
+
 #### STaaS: Page size would incorrectly be ignored when retrieving DOM instances from a STaaS database [ID 45952]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
