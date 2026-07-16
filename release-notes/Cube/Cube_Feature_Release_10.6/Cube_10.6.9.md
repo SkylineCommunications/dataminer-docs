@@ -114,6 +114,14 @@ Now, the `ShowRibbon` option works again, so you can use it to show or hide the 
 
 When you logged out of DataMiner Cube immediately after you had logged in, in some cases, an exception could be thrown related to either the Alarm Console light bulb feature or the Correlation feature.
 
+#### Spectrum analysis: Long measurement point names without spaces were not wrapped [ID 45892]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In the *Measurement points* tab of a spectrum analyzer card, up to now, long measurement point names without spaces would not wrapped correctly.
+
+From now on, these names will be wrapped, so they are fully visible.
+
 #### Spectrum cards: 'measurements/s' label in the card footer would incorrectly get trimmed when showing a high value [ID 45907]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
