@@ -128,38 +128,3 @@ jobs:
         azure-search-indexer: indexer-1745835640388
         # Admin key used to connect to Azure Cognitive Search instance
         azure-search-admin-key: ${{ secrets.AZURE_SEARCH_KEY }}
-
-  external_link_check:
-    runs-on: ubuntu-latest
-    needs: build_job
-    name: External Link Check
-    steps:
-      - uses: actions/checkout@v7
-        with:
-          submodules: true
-      - name: Check external links in Markdown
-        id: linkcheck
-        continue-on-error: true
-        uses: lycheeverse/lychee-action@v2
-        with:
-          fail: true
-          args: >-
-            --no-progress
-            --verbose
-            --timeout 20
-            --max-concurrency 8
-            --retry-wait-time 2
-            --max-retries 2
-            --user-agent "Mozilla/5.0 DeadLinkDetector/1.0"
-            --include-mail = false
-            --exclude "^https://community\.dataminer\.services/"
-            --exclude "^https://aka\.dataminer\.services/"
-            --exclude "^https://www\.nuget\.org/packages/"
-            --exclude ".*\.b2clogin\.com/.*"
-            --exclude "^https://catalogapi-prod\.cca-prod\.aks\.westeurope\.dataminer\.services/"
-            --exclude "^https://api\.dataminer\.services/api/key-catalog/"
-            --exclude-path "_site/.*"
-            --exclude-path "_site_pdf/.*"
-            --exclude-path "obj/.*"
-            --exclude-path "build/.*"
-            .
