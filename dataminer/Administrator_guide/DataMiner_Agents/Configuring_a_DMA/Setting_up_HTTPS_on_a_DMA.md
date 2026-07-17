@@ -1,6 +1,6 @@
 ---
 uid: Setting_up_HTTPS_on_a_DMA
-description: "Set up HTTPS on a DMA by installing an SSL/TLS certificate, configuring IIS binding, and updating MaintenanceSettings.xml."
+description: "Set up HTTPS on a DMA by installing an SSL/TLS certificate, configuring the HTTPS binding in IIS, and updating MaintenanceSettings.xml."
 ---
 
 # Setting up HTTPS on a DMA

@@ -1,6 +1,6 @@
 ---
 uid: Configuring_the_landing_page
-description: "Configure the DMA landing page in config.manual.asp. Specify whether the company logo will be visible, remove apps you should not be listed, and more."
+description: "Configure the DMA landing page in config.manual.asp. Specify whether the company logo will be visible, remove apps that should not be listed, and more."
 ---
 
 # Configuring the landing page of a DMA
