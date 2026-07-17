@@ -1,5 +1,6 @@
 ---
 uid: Restoring_the_database_only
+description: "Restore a legacy MySQL database by copying files or running a dump restore, and follow the instructions to bring your DMA back online."
 ---
 
 # Restoring the database only (legacy)
