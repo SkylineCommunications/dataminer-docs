@@ -1,5 +1,6 @@
 ---
 uid: Gratuitous_ARP_messages
+description: "Learn how DataMiner broadcasts a gratuitous ARP message after adding virtual IP addresses, allowing remote clients to update their ARP cache."
 ---
 
 # Gratuitous ARP messages
