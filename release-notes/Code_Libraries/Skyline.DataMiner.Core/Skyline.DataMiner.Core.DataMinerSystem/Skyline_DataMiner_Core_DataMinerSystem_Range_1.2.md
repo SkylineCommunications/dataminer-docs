@@ -7,6 +7,45 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 > [!NOTE]
 > Range 1.2.x.x is supported as from **DataMiner 10.4.0**.
 
+### 1.2.0.3
+
+#### New feature - Editing elements and services included in a service [ID 46034]
+
+In DataMiner, a service can contain entire elements, parts of elements, or other services as *child items*, configured on the *parameters* page when [adding or editing a service](xref:Adding_a_service). Previously the library only exposed the read-only `IncludedParameters`. You can now **add, remove, and edit** these child items through `IDmsService.ParameterSettings` and persist the changes by calling `Update()` on the service.
+
+The new `IncludedElements` property returns the items as an `IReadOnlyList<ParamConfiguration>`, each being an `ElementParamConfiguration` (an included element) or a `ServiceParamConfiguration` (an included service). To manage the list, `AddElement`, `AddService`, `Remove`, `RemoveByElementId`, `RemoveByServiceId`, `RemoveByAlias`, and `Clear` were added to `IServiceParamsSettings`.
+
+> [!NOTE]
+> When the same element or service is included more than once, assign a unique non-empty `Alias` to each instance.
+
+Example usage:
+
+```csharp
+IDmsService service = dms.GetService("MyService");
+
+// Include an element, limited to a single parameter.
+service.ParameterSettings.AddElement(
+    new DmsElementId(208, 613),
+    new[] { new ElementParamFilterConfiguration(100, "*", true) });
+
+// Include another service.
+service.ParameterSettings.AddService(new DmsServiceId(208, 50));
+
+// Edit an item that is already included.
+if (service.ParameterSettings.IncludedElements[0] is ElementParamConfiguration element)
+{
+    element.Alias = "Uplink router";
+    element.IncludedCapped = AlarmLevel.Major;
+    element.AddParameter(new ElementParamFilterConfiguration(200, "*", true));
+}
+
+// Remove an included element.
+service.ParameterSettings.RemoveByElementId(new DmsElementId(208, 999));
+
+// Persist all changes, just like clicking Apply when editing the service.
+service.Update();
+```
+
 ### 1.2.0.2
 
 #### Fix - Cyclic alarm template group caused an infinite loop [ID 45606]
