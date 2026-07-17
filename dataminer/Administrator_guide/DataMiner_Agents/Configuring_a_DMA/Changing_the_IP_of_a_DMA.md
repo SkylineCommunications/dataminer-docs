@@ -1,11 +1,12 @@
 ---
 uid: Changing_the_IP_of_a_DMA
 keywords: hardware migration
+description: "Follow these instructions to change the IP address of a DMA safely and update DataMiner, databases, and services step by step."
 ---
 
-# Changing the IP of a DMA
+# Changing the IP address of a DMA
 
-The way you can change the IP of a DMA depends on how your DataMiner System is set up. It is different for a standalone DMA, a DMA in a DMS, a Failover DMA in a DMS, and a DMA in a DMS using a Cassandra cluster.
+The way you can change the IP address of a DMA depends on how your DataMiner System is set up. It is different for a standalone DMA, a DMA in a DMS, a Failover DMA in a DMS, and a DMA in a DMS using a Cassandra cluster.
 
 ## Standalone DMA
 
@@ -122,7 +123,7 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
 For a single DMA within a cluster that either uses [Storage as a Service (STaaS)](xref:STaaS) or makes use of a [Cassandra database per DMA](xref:Configuring_storage_per_DMA#cassandra-database-per-dma):
 
-1. Stop the DataMiner software on the DMA for which you want to change the IP.
+1. Stop the DataMiner software on the DMA for which you want to change the IP address.
 
 1. Change the IP address of the DMA server in Windows.
 
@@ -174,7 +175,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
       1. Restart the elasticsearch-service-x64 service.
 
-1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IPs.
+1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IP addresses.
 
    If instead the **nats-server** service is installed and *Running*, skip these steps.
 
@@ -213,8 +214,8 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
       The IP address will need to be replaced in the following places in the file:
 
       - cluster.routes
-      - cluster.advertise (only on the server where the IP was changed)
-      - client_advertise (only on the server where the IP was changed)
+      - cluster.advertise (only on the server where the IP address was changed)
+      - client_advertise (only on the server where the IP address was changed)
 
    1. Restart the nats-server service.
 
@@ -238,7 +239,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
 1. In System Center, go to the Agents page and remove the old IP address from the list of DMAs in the cluster.
 
-1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IPs.
+1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IP addresses.
 
    If instead the **nats-server** service is installed and *Running*, skip these steps.
 
@@ -263,7 +264,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
      Note that it can take up to an hour before this happens. If for any reason the old IP address is still visible in the file after that time, [contact Support](xref:Contacting_tech_support).
 
 > [!NOTE]
-> If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IPs are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
+> If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IP addresses are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
 
 ## Failover DMA in a DMS
 
@@ -275,11 +276,11 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
-   1. On the DMA of which you have changed the IP, go to the folder `C:\Skyline DataMiner\` and open the file *DB.xml*.
+   1. On the DMA of which you have changed the IP address, go to the folder `C:\Skyline DataMiner\` and open the file *DB.xml*.
 
    1. Locate all occurrences of the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. On the DMA of which you have changed the IP, go to the folder `C:\Skyline DataMiner\` and open the file *DMS.xml*.
+1. On the DMA of which you have changed the IP address, go to the folder `C:\Skyline DataMiner\` and open the file *DMS.xml*.
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
@@ -287,7 +288,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. On the DMA of which you have changed the IP, go to the folder `C:\Skyline DataMiner\` and open the file *MaintenanceSettings.xml*.
+1. On the DMA of which you have changed the IP address, go to the folder `C:\Skyline DataMiner\` and open the file *MaintenanceSettings.xml*.
 
 1. In the HTTPS tag, replace the old IP address with the newly configured one if necessary, and save the file.
 
@@ -310,7 +311,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
    1. Restart the cassandra service.
 
    > [!NOTE]
-   > If the IP of both DMAs in the Failover pair is changed, replace both IP addresses in both cassandra.yaml files.
+   > If the IP addresses of both DMAs in the Failover pair is changed, replace both IP addresses in both cassandra.yaml files.
 
 1. If the DMAs host an OpenSearch database, do the following **on both DMAs**:
 
@@ -328,7 +329,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
    1. Restart the elasticsearch-service-x64 service.
 
-1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IPs.
+1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IP addresses.
 
    If instead the **nats-server** service is installed and *Running*, skip these steps.
 
@@ -369,8 +370,8 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
       The IP address will need to be replaced in the following places in the file:
 
       - cluster.routes
-      - cluster.advertise (only on the server where the IP was changed)
-      - client_advertise (only on the server where the IP was changed)
+      - cluster.advertise (only on the server where the IP address was changed)
+      - client_advertise (only on the server where the IP address was changed)
 
    1. Restart the nats-server service.
 
@@ -400,7 +401,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. In case the Failover status is not green and there are heartbeat errors, stop DataMiner, and double-check the DMS.xml files of both DMAs to make sure all references to the old IP address have been correctly replaced.
 
-1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IPs.
+1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IP addresses.
 
    If instead the **nats-server** service is installed and *Running*, skip these steps.
 
@@ -425,7 +426,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
       Note that it can take up to an hour before this happens. If for any reason the old IP address is still visible in the file after that time, [contact Support](xref:Contacting_tech_support).
 
 > [!NOTE]
-> If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IPs are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
+> If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IP addresses are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
 
 ## DMA in a DMS using a Cassandra cluster locally
 
@@ -433,7 +434,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. Stop the Cassandra and OpenSearch/Elasticsearch services on the DMA server.
 
-1. Continue the IP migration by following one of the following procedures, but substitute the step starting with "If you are not using Storage as a Service (STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:" with the steps outlined below. Make sure you pick the correct procedure for your situation.
+1. Continue the IP address migration by following one of the following procedures, but substitute the step starting with "If you are not using Storage as a Service (STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:" with the steps outlined below. Make sure you pick the correct procedure for your situation.
 
     - [Standalone DMA](#standalone-dma)
     - [Single DMA in a DMS](#single-dma-in-a-dms)
@@ -441,7 +442,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. Locate the file *cassandra.yaml* on the DMA. By default, it is located in the folder `C:\Program Files\Cassandra\conf\`.
 
-1. Open *cassandra.yaml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
+1. Open *cassandra.yaml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP address of the server:
 
    ```txt
    listen_address: new IP
@@ -451,7 +452,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. Restart the Cassandra service.
 
-1. In a command window, execute *nodetool status* (from the directory `C:\Program Files\Cassandra\bin\`), in order to check the status of the cluster. this should result in a list with your new IP, your old IP and all other Cassandra nodes on the server. For example:
+1. In a command window, execute *nodetool status* (from the directory `C:\Program Files\Cassandra\bin\`), in order to check the status of the cluster. this should result in a list with your new IP address, your old IP address and all other Cassandra nodes on the server. For example:
 
    ![Example of the nodetool status resuls](~/dataminer/images/nodetoolstatus.png)
 
@@ -461,9 +462,9 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. If OpenSearch is used as the indexing database:
 
-   1. Locate the file *opensearch.yml* on the DMA of which you have changed the IP. By default, it is located in the folder `C:\Program Files\opensearch\conf\`.
+   1. Locate the file *opensearch.yml* on the DMA of which you have changed the IP address. By default, it is located in the folder `C:\Program Files\opensearch\conf\`.
 
-   1. Open *opensearch.yml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
+   1. Open *opensearch.yml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP address of the server:
 
       ```txt
       discovery.zen.ping.unicast.hosts: ["new IP (, IP Cassandra node 2, IP Cassandra node 3, ...)"]
@@ -476,9 +477,9 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. If Elasticsearch is used as the indexing database:
 
-   1. Locate the file *Elasticsearch.yml* on the DMA of which you have changed the IP. By default, it is located in the folder `C:\Program Files\Elasticsearch\conf\`.
+   1. Locate the file *Elasticsearch.yml* on the DMA of which you have changed the IP address. By default, it is located in the folder `C:\Program Files\Elasticsearch\conf\`.
 
-   1. Open *Elasticsearch.yml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
+   1. Open *Elasticsearch.yml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP address of the server:
 
       ```txt
       discovery.zen.ping.unicast.hosts: ["new IP (, IP Cassandra node 2, IP Cassandra node 3, ...)"]
@@ -489,7 +490,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
    1. Locate the *Elasticsearch.yml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the *discovery.zen.ping.unicast.hosts* field of these files with the new IP address.
 
-1. Open the file *DB.xml* from the `C:\Skyline DataMiner\` folder of the DMA with the new IP, and replace the old IP in the DB tags for the Cassandra and OpenSearch/Elasticsearch databases with the new IP address.
+1. Open the file *DB.xml* from the `C:\Skyline DataMiner\` folder of the DMA with the new IP address, and replace the old IP address in the DB tags for the Cassandra and OpenSearch/Elasticsearch databases with the new IP address.
 
    > [!TIP]
    > See also: [DB.xml](xref:DB_xml#dbxml)
