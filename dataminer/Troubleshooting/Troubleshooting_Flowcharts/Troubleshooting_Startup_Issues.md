@@ -137,7 +137,7 @@ DataMiner cannot find a valid license to run the Agent. This issue may be caused
 
 ## IP change issue
 
-Two different DataMiner startup issues are related to IP changes: DataMiner may be trying to [connect to an old IP address](#dataminer-is-trying-to-connect-to-an-old-ip-address), or there may be [incorrect IP addresses in *DMS.xml*](#incorrect-ip-addresses-in-dmsxml-cause-ip-conflicts).
+Two different DataMiner startup issues are related to IP changes: DataMiner may be trying to [connect to an old IP address](#dataminer-is-trying-to-connect-to-an-old-ip-address-legacy-nats), or there may be [incorrect IP addresses in *DMS.xml*](#incorrect-ip-addresses-in-dmsxml-cause-ip-conflicts).
 
 ### Swarming issue
 
@@ -151,13 +151,25 @@ If you have just enabled the [Swarming](xref:Swarming) feature and DataMiner doe
 
 - Check *SLDataMiner.txt* and *SLNet.txt* for any critical exceptions (e.g., an invalid setup is detected).
 
-### DataMiner is trying to connect to an old IP address
+### DataMiner is trying to connect to an old IP address (legacy NATS)
+
+> [!NOTE]
+> This is only relevant with DataMiner versions prior to 10.6.0/10.6.1, if the system has not yet been [migrated to BrokerGateway](xref:BrokerGateway_Migration). If you get a similar issue while you are using the BrokerGateway-managed solution, [contact support](xref:Contacting_tech_support) for technical assistance.
+
+> [!TIP]
+> To determine which NATS solution your system uses:
+>
+> 1. Check your DataMiner version: from DataMiner 10.6.0/10.6.1, the BrokerGateway-managed solution is enabled by default.
+> 1. For DataMiner versions prior to DataMiner 10.6.0/10.6.1, open the file `C:\ProgramData\Skyline Communications\DataMiner\MessagebrokerConfig.json`:
+>
+> - If it contains `"BrokerGatewayConfig"`, you are using the **[BrokerGateway-managed NATS](xref:BrokerGateway_Migration)** solution.
+> - If it contains `"SLCloudConfig"`, you are using the legacy **SLNet-managed** solution.
 
 #### Symptoms
 
 - DataMiner fails to start or gets stuck at 99%.
 
-- Error messages in *SLDataMiner.txt* indicate a failure to initialize SLNetCom.
+- Error messages in *SLDataMiner.txt* indicate a failure to initialize SLNetCom. This is the main symptom indicating a potential issue connecting to the NATS bus.
 
   For example:
 
@@ -166,29 +178,24 @@ If you have just enabled the [Swarming](xref:Swarming) feature and DataMiner doe
   Initializing SLNetCom failed. - There's no connection available with this dataminer. (hr = 0x800402CD)
   ```
 
-- Authentication timeouts are indicated in *SLNet.txt*.
-
-  For example:
+- Authentication timeouts may also be indicated in *SLNet.txt*, for example:
 
   - `Destroying connection (SLAnalytics): Authentication took too long.`
   - `Destroying connection (SLDataMiner.exe): Authentication took too long.`
 
-- *SLAnalytics.txt* mentions an exception while opening SLNetConnection.
+- You may find exceptions similar to the following example in *SLAnalytics.txt*:
 
-  For example:
-
-  `2023/12/12 17:42:20.733|SLAnalytics.txt|SLAnalytics|SLNetConnection.cpp(196): Skyline::DataMiner::Analytics::SLNetConnection::openConnection)|ERR|0|Exception while opening SLNetConnection`
-
-- NATS logging:
-
-  - The *nats-account-server.log* file in `C:\Skyline DataMiner\NATS\nats-account-server` mentions `connected to NATS for account and activation notifications`.
-  - The *nats-server.log* file in `C:\Skyline DataMiner\NATS\nats-streaming-server` mentions `STREAM: Streaming Server is ready`.
+  ```txt
+  2023/12/12 17:42:20.733|SLAnalytics.txt|SLAnalytics|SLNetConnection.cpp(196): Skyline::DataMiner::Analytics::SLNetConnection::openConnection)|ERR|0|Exception while opening SLNetConnection
+  ```
 
 #### Root cause
 
-In a two-node setup, a DMA is trying to connect to a NATS instance on an old IP address.
+If the `Initializing SLNetCom` step fails, this may be caused by an inability of the DMA to connect to and communicate with the local NATS node in the legacy NATS solution. This is usually caused by an IP address change on the server running the DataMiner Agent.
 
 #### Solution
+
+1. Check which IP address the DMA has.
 
 1. Stop the DataMiner Agent.
 
