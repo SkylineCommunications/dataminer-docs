@@ -151,13 +151,13 @@ If you have just enabled the [Swarming](xref:Swarming) feature and DataMiner doe
 
 - Check *SLDataMiner.txt* and *SLNet.txt* for any critical exceptions (e.g., an invalid setup is detected).
 
-### DataMiner is trying to connect to an old IP address
+### DataMiner is trying to connect to an old IP address (Legacy NATS)
 
 #### Symptoms
 
 - DataMiner fails to start or gets stuck at 99%.
 
-- Error messages in *SLDataMiner.txt* indicate a failure to initialize SLNetCom.
+- Error messages in *SLDataMiner.txt* indicate a failure to initialize SLNetCom. This is the main symptom indicating a potential issue connecting to the NATS bus.
 
   For example:
 
@@ -166,29 +166,39 @@ If you have just enabled the [Swarming](xref:Swarming) feature and DataMiner doe
   Initializing SLNetCom failed. - There's no connection available with this dataminer. (hr = 0x800402CD)
   ```
 
-- Authentication timeouts are indicated in *SLNet.txt*.
-
-  For example:
-
-  - `Destroying connection (SLAnalytics): Authentication took too long.`
-  - `Destroying connection (SLDataMiner.exe): Authentication took too long.`
-
-- *SLAnalytics.txt* mentions an exception while opening SLNetConnection.
-
-  For example:
-
-  `2023/12/12 17:42:20.733|SLAnalytics.txt|SLAnalytics|SLNetConnection.cpp(196): Skyline::DataMiner::Analytics::SLNetConnection::openConnection)|ERR|0|Exception while opening SLNetConnection`
-
-- NATS logging:
-
-  - The *nats-account-server.log* file in `C:\Skyline DataMiner\NATS\nats-account-server` mentions `connected to NATS for account and activation notifications`.
-  - The *nats-server.log* file in `C:\Skyline DataMiner\NATS\nats-streaming-server` mentions `STREAM: Streaming Server is ready`.
+>[!NOTE]
+>
+> - You may also experience authentication timeouts are indicated in *SLNet.txt*.
+>   e.g.
+>   - `Destroying connection (SLAnalytics): Authentication took too long.`
+>   - `Destroying connection (SLDataMiner.exe): Authentication took too long.`
+>
+> - You may also experience the following exceptions in *SLAnalytics.txt*.
+>   e.g.
+>   - `2023/12/12 17:42:20.733|SLAnalytics.txt|SLAnalytics|SLNetConnection.cpp(196): Skyline::DataMiner::Analytics::SLNetConnection::openConnection)|ERR|0|Exception while opening SLNetConnection`
+>
 
 #### Root cause
 
-In a two-node setup, a DMA is trying to connect to a NATS instance on an old IP address.
+If the `Initializing SLNetCom` step fails, it is possibly caused by an inability of the DMA to connect to and communicate with the local NATS node in the legacy NATS solution. This is usually caused by an IP-address change on the server running the DataMiner Agent.
+
+To determine which NATS solution your system uses:
+
+For DataMiner versions prior to DataMiner 10.6.0, open the file `C:\ProgramData\Skyline Communications\DataMiner\MessagebrokerConfig.json`:
+
+- If it contains `"BrokerGatewayConfig"`, you are using the **[BrokerGateway-managed NATS](xref:BrokerGateway_Migration)** solution.
+- If it contains `"SLCloudConfig"`, you are using the legacy **SLNet-managed** solution.
+
+From DataMiner 10.6.0 onwards, the BrokerGateway-managed solution is enabled by default.
+
+>[!NOTE]
+> This is for legacy NATS only. If you are using the BrokerGateway-managed solution and this error pops up, you are likely facing a different issue. In that case, please contact Skyline Communications for technical assistance.
 
 #### Solution
+
+For Legacy-NATS only:
+
+1. Check which IP-address the DMA has.
 
 1. Stop the DataMiner Agent.
 
