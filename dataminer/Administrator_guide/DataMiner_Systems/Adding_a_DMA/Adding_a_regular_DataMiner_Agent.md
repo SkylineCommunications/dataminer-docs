@@ -1,6 +1,6 @@
 ---
 uid: Adding_a_regular_DataMiner_Agent
-description: Find out what is required to add a DataMiner Agent as a node in a cluster, from the prerequisites to the procedure in DataMiner Cube.
+description: "Follow these instructions to add a regular DataMiner Agent as a node in a cluster after checking whether all prerequisites are met."
 ---
 
 # Adding a regular DataMiner Agent as a node in a cluster
