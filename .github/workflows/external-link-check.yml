@@ -1,0 +1,42 @@
+name: External Link Check
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  external_link_check:
+    runs-on: ubuntu-latest
+    name: External Link Check
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: true
+
+      - name: Check external links in Markdown
+        id: linkcheck
+        continue-on-error: true
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8
+        with:
+          fail: true
+          args: >-
+            --no-progress
+            --verbose
+            --timeout 20
+            --max-concurrency 8
+            --retry-wait-time 2
+            --max-retries 2
+            --user-agent "Mozilla/5.0 DeadLinkDetector/1.0"
+            --include-mail=false
+            --exclude "^https://community\.dataminer\.services/"
+            --exclude "^https://aka\.dataminer\.services/"
+            --exclude "^https://www\.nuget\.org/packages/"
+            --exclude ".*\.b2clogin\.com/.*"
+            --exclude "^https://catalogapi-prod\.cca-prod\.aks\.westeurope\.dataminer\.services/"
+            --exclude "^https://api\.dataminer\.services/api/key-catalog/"
+            --exclude-path "_site/.*"
+            --exclude-path "_site_pdf/.*"
+            --exclude-path "obj/.*"
+            --exclude-path "build/.*"
+            .

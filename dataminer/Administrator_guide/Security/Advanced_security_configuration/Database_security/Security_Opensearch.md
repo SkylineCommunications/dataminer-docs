@@ -27,7 +27,7 @@ There are two ways to perform a minor upgrade of an OpenSearch cluster:
 
 Regardless of which upgrade strategy you choose, you will first need to perform these steps:
 
-1. Download the latest version within your release track: [1.X](https://opensearch.org/lines/1x.html) or [2.X](https://opensearch.org/lines/2x.html).
+1. Download the latest version within your release track: [1.X](https://opensearch.org/artifacts/by-version/#release-1-x) or [2.X](https://opensearch.org/artifacts/by-version/#release-2-x).
 1. [Back up the configuration files](https://opensearch.org/docs/latest/install-and-configure/upgrade-opensearch/index/#backing-up-configuration-files).
 1. [Configure backups](xref:Configuring_OpenSearch_Backups) for your cluster if this was not configured yet.
 1. [Take a snapshot](xref:Configuring_OpenSearch_Backups#taking-the-snapshot) to back up the cluster.
