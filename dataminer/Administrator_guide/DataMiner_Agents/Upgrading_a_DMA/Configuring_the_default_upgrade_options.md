@@ -1,5 +1,6 @@
 ---
 uid: Configuring_the_default_upgrade_options
+description: "Configure the default upgrade options in System Center to control startup behavior, failover policy, and reboot handling."
 ---
 
 # Configuring the default upgrade options
