@@ -404,16 +404,6 @@ When an existing rate limit is changed, the updated limit is only applied after 
 
 If a long window was configured and the limit has already been reached, the client may need to wait until the window has passed before another trigger can be executed and the updated limit can take effect.
 
-#### GQI extensions: Support for services and constructor injection [ID 45635]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-
-GQI extensions using the `Skyline.DataMiner.Core.GQI.Extensions` API now support services, constructor injection, and deferred service injection using `GQILazy<T>`.
-
-Extension libraries can define worker-scoped, security-scoped, and user-scoped services. These services can be injected into ad hoc data sources, custom operators, and other services. This makes it possible to share a reusable state or functionality, such as caches or external clients, without relying on static variables.
-
-For more information, see [Services in GQI extensions](xref:GQI_Extensions_Services).
-
 #### User-Defined APIs can now use dynamic route segments to expose path parameters to the trigger script [ID 45681]
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
