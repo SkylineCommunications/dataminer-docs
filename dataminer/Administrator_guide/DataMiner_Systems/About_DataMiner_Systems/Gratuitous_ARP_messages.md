@@ -1,28 +1,22 @@
 ---
 uid: Gratuitous_ARP_messages
-description: "Learn how DataMiner broadcasts a gratuitous ARP message after adding virtual IP addresses, allowing remote clients to update their ARP cache."
+description: "Learn more about gratuitous ARP messages sent by DataMiner after virtual IP addresses are added, allowing remote clients to update their ARP cache."
 ---
 
 # Gratuitous ARP messages
 
 DataMiner broadcasts a gratuitous ARP message after adding virtual IP addresses (belonging to a redundant pair of DMAs or to elements). This way, remote clients will be able to update their ARP cache as soon as they receive that message.
 
-Note that DataMiner did not broadcast this message when legacy Windows versions prior to Windows Vista, Windows Server 2008 or Windows 7 were used, as these versions already broadcast such messages themselves.
+## Npcap or WinPcap
 
-## WinPcap
-
-To be able to broadcast gratuitous ARP messages, DataMiner needs WinPcap. As a consequence, WinPcap must be installed on servers hosting the DataMiner software.
-
-> [!NOTE]
-> If you install the DataMiner software using the DataMiner installer, the installation of WinPcap is included in the process.
+To be able to broadcast gratuitous ARP messages, DataMiner needs Npcap or WinPcap (deprecated). As a consequence, this must be installed on servers hosting the DataMiner software.
 
 > [!TIP]
-> See also:
-> <http://www.winpcap.org/>
+> See also: [Using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer)
 
-## Error in case WinPcap is missing
+## Error in case Npcap or WinPcap is missing
 
-If WinPcap has not been installed on the DMA, everything will work, but no ARP messages will be broadcast. In the SLErrors log file, you will notice an error similar to this example:
+If Npcap or WinPcap has not been installed on the DMA, everything will work, but no ARP messages will be broadcast. In the SLErrors log file, you will notice an error similar to this example:
 
 ```txt
 2011/02/17 09:48:15.220|SLDataMiner.txt|SLDataMiner.exe 6.5.1.2|4120|7112| CHardware::AddIPAddress()|ERR|-1|Failed to send out Gratuitous ARP message for added IP address 10.10.51.98. WinPcap is probably not installed on the system. (0xc0000135h; C:\Skyline DataMiner\Tools\SLSendGARP.exe 10.10.51.98  -if "rpcap://\Device\NPF_{4EE7C71A-D4AC-44D0-A812-D5FE1DA66175}")
