@@ -183,9 +183,9 @@ items:
       - name: Facility Manager
         topicUid: Facility_Manager
         items:
-        - name: Facilities
+        - name: Sites and Facilities
           topicUid: Facilities_Page
-        - name: Rooms
+        - name: Floors and Rooms
           topicUid: Rooms_Page
         - name: Racks
           topicUid: Racks_Page

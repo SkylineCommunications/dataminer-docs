@@ -11,9 +11,9 @@ This page also allows you to configure [device types](xref:AM_Configuring_device
 
 ## Importing asset classes
 
-To start importing asset classes, click *Import/Export Asset Classes* in the upper-right corner. You can then choose between the following options:.
+To start importing asset classes, click *Asset Class Import/Export* in the upper-right corner. You can then choose between the following options:.
 
-- **Import Netbox Asset Classes**: Allows you to import assets from Netbox using the following GitHub repositories:
+- **From Netbox**: Allows you to import assets from Netbox using the following GitHub repositories:
 
   - [devicetype-library](https://github.com/netbox-community/devicetype-library/tree/master/device-types).
 
@@ -21,7 +21,12 @@ To start importing asset classes, click *Import/Export Asset Classes* in the upp
 
   To do so, you will first have to select up to 60 files from the repositories, then click *Selected files*, and then click *Import*.
 
-- **Import/export Asset Classes to/from CSV**: Allows you to select whether to import or export the asset classes. To import them, keep the *Import* option selected, select and upload your CSV file, and click *Import*.
+- **From/to File**: Allows you to either import or export the asset classes. To import them:
+
+  1. keep the *Import* option selected
+  1. Either keep format set to *Default* to upload assets from an Excel file, or select *Json* for a JSON-based import.
+  1. Click *Choose file*, browse to the file you want to import, and then click *Upload*.
+  1. Click *Import*.
 
 ## Manually creating an asset class
 
@@ -43,7 +48,7 @@ To start importing asset classes, click *Import/Export Asset Classes* in the upp
 
 When you have added an asset class, you can fine-tune it by clicking the details button (ⓘ) for the asset class in the table. This will open the *Asset class details* pane:
 
-![Asset class details](~/solutions/images/Asset_Manager_Chassis_Asset_Class_Details.png)
+![Asset class details pane](~/solutions/images/Asset_Manager_Chassis_Asset_Class_Details.png)
 
 In this pane, you can configure the following details:
 
@@ -58,6 +63,10 @@ In this pane, you can configure the following details:
   - The **max power consumption**, which will determine how much power (in percent) an asset assigned to the rack will consume compared to the available power consumption assigned to the rack.
   - The **typical power consumption**. This optional information is only meant to inform the user and does not affect the asset assignment.
   - The **weight**.
+  - The type of **power supply**.
+  - The **CI Type**, in case IDP provisioning is used (see [Running a network discovery for an asset class](#running-a-network-discovery-for-an-asset-class)).
+
+  For optional fields that do not need to be configured for your setup, you can select the *Disabled* checkbox.
 
   ![Asset class information wizard](~/solutions/images/Asset_Manager_Asset_Class_Information_Wizard.png)
 
@@ -123,3 +132,30 @@ When an asset class has been imported or created, it will first be set to the Dr
 To activate an asset class, click the state cell in the table and select *Set to Active*:
 
 ![Asset class state context menu](~/solutions/images/Asset_Manager_Asset_Class_State_Context_Menu.png)
+
+## Running a network discovery for an asset class
+
+If an asset class has a CI type defined in the asset class information, you can run a network discovery for that class from the asset class details pane:
+
+1. Click the *Network Discovery* button in the upper-right corner of the asset class details pane.
+
+   ![Asset class details pane, with the Network Discovery button in the upper-right corner highlighted](~/solutions/images/InfraOps_Network_Discovery_button.png)
+
+   This will open a window listing the existing assets that have already been discovered, if any.
+
+1. Click *Discover IP Range*.
+
+1. Specify the start and end IP address of the range and click *Scan Range*.
+
+1. Back in the main Network Discovery window, click the + button and select an IP address in the *Discovered IPs* dropdown box.
+
+   If no IP addresses are listed in the dropdown box, nothing was found during the scan. In that case, adjust the scan range and try again.
+
+1. Repeat the step above for each discovered asset you want to add.
+
+<!-- To be continued -->
+
+> [!NOTE]
+> This feature requires [DataMiner IDP](xref:SolIDP). If this is not installed, you will not be able to run a network discovery.
+
+<!-- todo: Verify Compliance feature -->
