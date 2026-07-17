@@ -95,6 +95,14 @@ From now on, gRPC connections that go through the Azure Cloud Relay service will
 
 This will allow those connections to survive a temporary outage of the Azure Cloud Relay service, for example when restarting or deploying a new version.
 
+#### Spectrum cards: Popups showing 'The requested trace requires a sweep time of X s.' will now open on top of the spectrum component in question [ID 45899]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, in DataMiner Cube, popups showing `The requested trace requires a sweep time of X s.` would be general popups appearing on top of the DataMiner Cube UI. In order to prevent several of those popups to appear when multiple spectrum components are open, these popups will now open on top of the spectrum component in question.  
+
+Also, these popups will now be ignored when a spectrum component is in zero-span mode.
+
 ### Fixes
 
 #### Visual Overview - Spectrum analysis component: 'ShowRibbon' option no longer worked [ID 45725]
