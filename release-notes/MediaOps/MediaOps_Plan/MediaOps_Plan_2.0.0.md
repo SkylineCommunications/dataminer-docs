@@ -102,6 +102,20 @@ The dialog used to dynamically link parameter values (capabilities, capacities, 
 
 - **Pre/post relationship indicators**: In the node list, each node now indicates how it relates to the current node. A node connected into the current node is labeled "*(pre)*", a node that the current node connects to is labeled "*(post)*", and a node for which both apply is labeled "*(pre/post)*". This makes it easier to pick the correct node when configuring links across a workflow.
 
+#### Workflow Designer and Scheduling: Nodes now show tooltip with alias and resource information [ID 46025]
+
+Node components in the Workflow Designer and Scheduling apps now show a tooltip when you hover over them.
+
+Depending on what is available for the node, this tooltip can show the following information:
+
+- Alias
+- Resource name
+- Resource pool name
+
+#### Resource Studio: Improved UI when creating or editing capabilities [ID 46026]
+
+Several minor UI improvements have been implemented in the automation script responsible for creating and editing capabilities from Resource Studio.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
