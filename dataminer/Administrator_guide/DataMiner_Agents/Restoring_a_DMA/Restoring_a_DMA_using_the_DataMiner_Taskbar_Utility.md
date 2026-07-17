@@ -1,6 +1,6 @@
 ---
 uid: Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility
-description: "Use the DataMiner Taskbar Utility to restore a DMA and follow the instructions to bring your agent back online."
+description: "Learn how to restore a DataMiner Agent with the DataMiner Taskbar Utility, from selecting a backup package to completing recovery."
 ---
 
 # Restoring a DMA using the DataMiner Taskbar Utility
