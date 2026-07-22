@@ -1,5 +1,6 @@
 ---
 uid: DataminerLicenses
+description: "Learn how to obtain a DataMiner license, and pick a permanent or time-based option so you can request the right license for your system."
 ---
 
 # Obtaining a DataMiner license

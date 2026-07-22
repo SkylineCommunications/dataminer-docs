@@ -1,6 +1,6 @@
 ---
 uid: Connection_strings
-description: Learn when it can be useful to use connection strings between DataMiner nodes and what the limitations of this are.
+description: "Learn when it can be useful to use connection strings between DataMiner nodes and what the limitations are."
 ---
 
 # Connection strings

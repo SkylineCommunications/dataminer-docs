@@ -164,3 +164,9 @@ From now on, code blocks will again render with the intended styling in the rich
 In the *Query filter* component, and in conditional coloring and template conditions, the filters for numeric columns with strict discrete values could incorrect stay disabled.
 
 From now on, it will again be possible to use these filters.
+
+#### Web API would leak memory when a user logged out [ID 46020]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+The web API could leak memory when a user logged out. The user settings stored in memory would not be cleaned up properly.
