@@ -1,5 +1,6 @@
 ---
 uid: Failover_FAQ_cable_pulled_out
+description: "Find out what happens if, in a Failover setup, a network cable is pulled out of one of the DMA network cards."
 ---
 
 # What happens if a network cable is pulled out of one of the DMA network cards?
