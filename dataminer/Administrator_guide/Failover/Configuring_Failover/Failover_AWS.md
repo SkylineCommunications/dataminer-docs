@@ -1,5 +1,6 @@
 ---
 uid: Failover_AWS
+description: "Learn how to set up DataMiner Failover on Amazon Web Services. However, note that this setup is deprecated."
 ---
 
 # DataMiner Failover on Amazon Web Services
