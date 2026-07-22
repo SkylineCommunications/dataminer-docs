@@ -1,6 +1,6 @@
 ---
 uid: Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility
-description: To start or stop a DataMiner node, right-click the Taskbar Utility icon on the DataMiner server and select the start, restart, or stop option.
+description: "Right-click the Taskbar Utility icon on the DataMiner server and select the start, restart, or stop option to start or stop a DataMiner node."
 ---
 
 # Starting or stopping a DataMiner node using DataMiner Taskbar Utility

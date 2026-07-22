@@ -1,5 +1,6 @@
 ---
 uid: Disabling_automatic_NATS_config
+description: "Learn how you can configure NATS manually, especially in scenarios where specific system characteristics necessitate a custom NATS layout."
 ---
 
 # Disabling automatic NATS configuration
