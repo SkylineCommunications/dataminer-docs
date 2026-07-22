@@ -1,5 +1,6 @@
 ---
 uid: Failover_FAQ_upgrade
+description: "Find out how you can upgrade a pair of DataMiner Agents in a Failover setup using the DataMiner Taskbar Utility or the System Center module in Cube."
 ---
 
 # How do I upgrade a pair of DMAs in a Failover setup?
