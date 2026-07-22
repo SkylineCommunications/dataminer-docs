@@ -1,12 +1,13 @@
 ---
 uid: BPA_Https_Configuration
+description: "Learn how the HTTPS Configuration BPA test verifies if DataMiner and IIS are correctly configured to connect to Cube over HTTPS only."
 ---
 
 # HTTPS Configuration
 
 Hosting applications on HTTP leaves those applications vulnerable to man-in-the-middle attacks and is considered insecure. It is recommended to host DataMiner over HTTPS only. Enabling HTTPS will make sure that all data is TLS-encrypted while it is transmitted over the network.
 
-This BPA will verify if DataMiner and IIS are correctly configured to server Cube over HTTPS only.
+This BPA will verify if DataMiner and IIS are correctly configured to connect to Cube over HTTPS only.
 
 From DataMiner 10.3.0 onwards, DataMiner supports gRPC instead of the deprecated .NET Remoting technology. When gRPC is enabled, all communication with DataMiner is TLS-encrypted. This BPA test will also verify if it is possible to enable gRPC and recommend to do so. It will also verify whether the correct firewall ports are closed or open based on the supported technologies (.NET Remoting or gRPC).
 
