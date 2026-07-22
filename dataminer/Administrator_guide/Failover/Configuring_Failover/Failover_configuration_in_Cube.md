@@ -1,5 +1,6 @@
 ---
 uid: Failover_configuration_in_Cube
+description: "Follow these instructions to configure Failover in DataMiner Cube. Set the type to virtual IP or shared hostname, and configure the heartbeat settings."
 ---
 
 # Failover configuration in Cube
