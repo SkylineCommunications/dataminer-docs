@@ -1,5 +1,6 @@
 ---
 uid: BPA_Check_System_Health
+description: "Learn how the Check System Health BPA test checks whether the system's resource usage stayed within healthy boundaries."
 ---
 
 # Check System Health

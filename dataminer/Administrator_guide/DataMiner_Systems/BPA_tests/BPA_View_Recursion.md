@@ -1,5 +1,6 @@
 ---
 uid: BPA_View_Recursion
+description: "Learn how the View Recursive Loops BPA test check the Views.xml file to see if any loops are present."
 ---
 
 # View Recursive Loops

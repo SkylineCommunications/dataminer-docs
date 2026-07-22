@@ -1,5 +1,6 @@
 ---
 uid: BPA_Report_Active_RTE
+description: "Learn how the Active Runtime Errors BPA test detects the presence of active runtime errors in the system by reading the SLWatchdog2.txt file."
 ---
 
 # Active Runtime Errors
