@@ -10,10 +10,15 @@ using Skyline.DataMiner.Net.Automation;
 
 namespace Skyline.DataMiner.Automation
 {
-	/// <summary>
-	/// Allows interaction with the DataMiner System from a C# code block of an automation script.
-	/// </summary>
-	public class Engine : IDisposable, IEngine
+    /// <summary>
+    /// Allows interaction with the DataMiner System from a C# code block of an automation script.
+    /// <note>
+    /// The `Engine` object, and every object you obtain through it (such as <see cref="Element"/> objects returned by <see cref="Engine.FindElement"/>, dummies, and their parameters), is not thread-safe. It may only be used from a single thread at a time.
+    /// 
+    /// Though sending SLNet messages is. Using methods <see cref="Engine.SendSLNetSingleResponseMessage(DMSMessage)"/>, <see cref="Engine.SendSLNetMessages(DMSMessage[])"/> and <see cref="Engine.SendSLNetMessage(DMSMessage)"/> is thread-safe.
+    /// </note>
+    /// </summary>
+    public class Engine : IDisposable, IEngine
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Engine"/> class.
