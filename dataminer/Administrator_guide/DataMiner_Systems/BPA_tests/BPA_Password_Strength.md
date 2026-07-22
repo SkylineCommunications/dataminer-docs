@@ -1,5 +1,6 @@
 ---
 uid: BPA_Password_Strength
+description: "Learn how the Password Strength BPA test verifies whether the database passwords are strong enough and detects weak, default credentials."
 ---
 
 # Password Strength

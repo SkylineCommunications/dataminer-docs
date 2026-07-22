@@ -1,5 +1,6 @@
 ---
 uid: BPA_SRM_Framework_Configuration
+description: "Learn how the SRM Framework Configuration BPA test checks for booking managers with invalid configurations and bookings with invalid properties."
 ---
 
 # SRM Framework Configuration
