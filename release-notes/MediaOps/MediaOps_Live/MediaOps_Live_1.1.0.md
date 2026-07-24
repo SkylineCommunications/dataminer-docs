@@ -41,6 +41,10 @@ While a connection or disconnection is still in progress, an hourglass icon is n
 
 ### Fixes
 
+#### Discrete parameters with numeric values caused orchestration events to fail [ID 45773]
+
+When discrete parameters were used with numeric values (e.g., to indicate video formats), it could occur that orchestration events failed. Now the validation correctly supports both numeric and string discrete parameters.
+
 #### CSV import could include the wrong endpoint when source and destination endpoints had the same name [ID 45959]
 
 When a source and destination endpoint in a virtual signal group shared the same name, a CSV import could include the wrong endpoint because matching was based on name only.
