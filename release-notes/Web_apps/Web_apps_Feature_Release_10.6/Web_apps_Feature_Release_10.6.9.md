@@ -178,3 +178,9 @@ From now on, it will again be possible to use these filters.
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 The web API could leak memory when a user logged out. The user settings stored in memory would not be cleaned up properly.
+
+#### Dashboards/Low-Code Apps - Dropdown component: Deleted row could incorrectly remain selected [ID 46021]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when a realtime delete update from GQI removed the selected row in a *Dropdown* component, in some cases, a runtime error could be thrown. As a result, the data would not be cleared correctly, and the deleted row could remain selected.
