@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_services_data_sources
+description: "Use this Data Sources sizing guide to count concurrent Skyline connectors and estimate connector service usage at organization level."
 ---
 
 # Sizing guide: Data sources

@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.6.0_CU5
 ---
 
-# General Main Release 10.6.0 CU5 - Preview
+# General Main Release 10.6.0 CU5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -32,6 +32,18 @@ Before you upgrade to this DataMiner version:
 
 ## Changes
 
+### Breaking changes
+
+#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
+
+From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
+
+See also: [Dashboards/Low-Code Apps: State timeline component will now use the primary key when requesting timeline data [ID 45600]](xref:Web_apps_Feature_Release_10.6.8#dashboardslow-code-apps-state-timeline-component-will-now-use-the-primary-key-when-requesting-timeline-data-id-45600)
+
 ### Enhancements
 
 #### Exception.Source field will now be added to ErrorLog.txt when a managed process stops unexpectedly [ID 44722]
@@ -55,14 +67,6 @@ From now on, when a query using the *Parameters for elements where* data source 
 Up to now, the *SLElementInProtocol.txt* log file entries were added by SLProtocol.
 
 From now on, these log file entries will be added by SLLog instead.
-
-#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
-
-<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
-
-When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
-
-From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
 
 #### SLLogCollector will now retrieve the value of the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
 
@@ -178,3 +182,17 @@ In some cases, the SLASPConnection process could stop working when it failed to 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When, within a DataMiner System, a DataMiner Agent receives an SNMPv3 trap for an element hosted by another DataMiner Agent, it will forward that trap to the other Agent. However, in some cases, when the Agent that received the trap did not have the correct credentials needed to decrypt the trap, it would fail to forward the trap to the element.
+
+#### APIGateway: Problem with reverse proxy feature [ID 45688]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+The reverse proxy feature in APIGateway would no longer work.
+
+Whenever a DxM registered itself for reverse proxying, APIGateway could throw an exception.
+
+#### Problem when synchronizing files in the C:\\Skyline DataMiner\\Webpages\\Public folder [ID 45694]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, it would no longer be possible to synchronize any files in the `C:\Skyline DataMiner\Webpages\Public` folder among DataMiner Agents in a cluster because the path name would incorrectly be compared case sensitively.

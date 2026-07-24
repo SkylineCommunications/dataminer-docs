@@ -1,5 +1,6 @@
 ---
 uid: Installing_Cassandra_Reaper
+description: "Install Cassandra Reaper, an application that can manage Cassandra cluster repairs on its own without the need for extra external management."
 ---
 
 # Installing Cassandra Reaper

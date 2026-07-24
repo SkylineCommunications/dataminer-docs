@@ -40,3 +40,30 @@ To resolve this:
 1. After terminating the process, refresh your dashboard or application.
 
    This will prompt GQI to fetch the latest protocol changes and display accurate query results.
+
+## How can I embed the DataMiner web apps in a portal using a single sign-on experience?
+
+To embed DataMiner web apps (e.g., dashboards or low-code apps) in a third-party portal with a seamless single sign-on (SSO) experience, keep the following requirements in mind:
+
+- **Shared Identity Provider**: Both the portal and the hosting DataMiner Agent must use SAML authentication configured against the **same Identity Provider (IdP)**. Other Agents in the DataMiner System do not need to share this authentication flow, unless a load balancer is used.
+
+- **Hosting Agent**: The DataMiner Agent hosting the web apps does not need to be a gateway; a regular DataMiner Agent is sufficient. However, it does need to use SAML authentication through the same IdP as the portal (see above).
+
+- **Different domain or host names**: The portal and the hosting DataMiner Agent must be served from **different domain or host names**. This is required for the browser to correctly apply cross-origin security restrictions.
+
+- **iframe sandbox attribute**: The `<iframe>` element used to embed the web app must **not** have the `sandbox` attribute set. Because the embedded page originates from a different domain, the browser already applies the necessary cross-origin restrictions automatically. The hosting Agent's webpage can still read its own authentication cookie because that access is same-origin.
+
+## Can I use maps in an air-gapped environment without internet connectivity?
+
+Yes, but only when you use OpenStreetMap. Google Maps cannot be used in an air-gapped setup:
+
+- Google Maps requires a persistent internet connection to the Google Maps Platform.
+
+- There is no official offline deployment option or on-premises appliance for the Google Maps Platform.
+
+- Google Maps tiles cannot legally be cached or hosted locally for offline use under Google's licensing terms.
+
+To satisfy an offline or air-gapped requirement, use OpenStreetMap with a local offline maps server instead. This offline maps server is hosted on the DataMiner Agent, so the clients do not need to host anything themselves. The map tiles are downloaded in advance for the required regions and served locally from a Docker container. For detailed configuration steps, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
+
+> [!IMPORTANT]
+> The [maps component](xref:DashboardMaps) in dashboards and low-code apps only supports Google Maps and cannot use OpenStreetMap or an offline maps server. For offline or air-gapped maps, you therefore need to use the standalone [DataMiner Maps module](xref:About_DMS_Maps), which supports OpenStreetMap but does not offer the interaction possibilities available in low-code apps.

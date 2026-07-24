@@ -1,5 +1,6 @@
 ---
 uid: Scale_Cassandra_Database
+description: "Learn how to scale a self-managed DataMiner Cassandra Cluster by adding or removing nodes with nodetool, including cleanup and decommission steps."
 ---
 
 # Adding and removing nodes in a Cassandra cluster database

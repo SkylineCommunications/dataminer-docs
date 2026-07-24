@@ -11,18 +11,9 @@ description: Deploy the Ticketing Solution from the DataMiner Catalog after chec
    - [General > Alarms > Allow to add or update hyperlinks](xref:DataMiner_user_permissions#general--alarms--allow-to-add-or-update-hyperlinks)
    - [General > Alarms > Properties > Add](xref:DataMiner_user_permissions#general--views--properties--add) and [General > Alarms > Properties > Edit](xref:DataMiner_user_permissions#general--views--properties--edit)
 
-1. Confirm whether the following **prerequisites** are met:
+1. Confirm whether the **prerequisites** are met for the version of the solution you are about to install.
 
-   - **DataMiner 10.5.9/10.6.0** or higher is installed.
-
-   - [**Standard Data Model Registration**](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.x or higher is installed.
-
-   - DataMiner users who will use the Ticketing Solution (including the user installing the solution) have **write access** to the root view and the Ticketing Lock Manager element under the root view (via *Permissions* > *Views*; see [Configuring a user group](xref:Configuring_a_user_group)).
-
-   - Optionally, but **highly recommended**, as this will provide access to additional functionality:
-
-     - [MediaOps.Plan](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) 1.4.x or higher: Required to be able to assign people to tickets.
-     - [InfraOps](https://catalog.dataminer.services/details/5a1edac2-45aa-4498-8ab7-ee322d07da27): Required to be able to link assets to tickets.
+   These prerequisites are listed at the top of the release notes for each specific version, see e.g., [Ticketing 2.1.0](xref:Ticketing_2.1.0).
 
 1. Look up the [Ticketing package](https://catalog.dataminer.services/details/c132decf-b918-4ee2-be25-1302f41e7705) in the DataMiner Catalog.
 

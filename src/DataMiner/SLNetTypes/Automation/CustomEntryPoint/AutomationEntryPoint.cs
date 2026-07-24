@@ -85,7 +85,7 @@ namespace Skyline.DataMiner.Net.Automation
 			OnTicketCrud = 9,
 
 			/// <summary>
-			/// An OnTicketCrud entry point is defined with:
+			/// An OnDomAction entry point is defined with:
 			/// [AutomationEntryPoint(AutomationEntryPointType.Types.OnDomAction)]
 			/// </summary>
 			OnDomAction = 10,

@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_processes
+description: "Explore the different processes running on a DataMiner Agent. Main processes include SLDataMiner, SLDataGateway, and SLDMS."
 keywords: SL,SLElement,SLDataMiner,SLProtocol,SLNet,SLNetComService,SLDMS,SLPort,SLSNMPManager,SLWatchdog,SLLog,SLDataGateway
 ---
 

@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_services_DataMiner_Assistant
+description: "Use this DataMiner Assistant sizing guide to estimate Document Intelligence page volumes and plan monthly processing needs."
 ---
 
 # Sizing guide: DataMiner Assistant

@@ -58,9 +58,13 @@ The network speed and latency are also an important factor in DataMiner performa
 
 As a rule, we recommend a throughput ranging from 100 Mbps to 1 Gbps and a latency ranging from < 50 ms to < 30 ms.
 
+In addition, each DataMiner Agent and database node should be given a **static IP address** within the network. Dynamically assigning an IP address to the DMA at startup could cause functionality and configurations to break. Assigning a static IP address to the machines hosting the DMAs and DB nodes ensures that they will be able to reliably reach each other within the network.
+
 ### Operating System
 
 For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports. <!-- However, we recommend that you use the latest Windows Server version. This will not only allow you to make use of the latest features, but also ensures that you will get support and security patches for as long as possible.  -->At the moment, Windows Server 2025 is the recommended version.
+
+IIS (Internet Information Services) is a required component, as DataMiner uses it to host its webpages.
 
 ### Time
 

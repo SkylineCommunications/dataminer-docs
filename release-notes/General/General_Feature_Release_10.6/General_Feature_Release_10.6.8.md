@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.8
 ---
 
-# General Feature Release 10.6.8 – Preview
+# General Feature Release 10.6.8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -30,15 +30,69 @@ Before you upgrade to this DataMiner version:
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
-*No new features have been added yet.*
+#### User-Defined APIs can now use dynamic route segments to expose path parameters to the trigger script [ID 45681]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+From now on, user-defined APIs can use dynamic route segments to expose path parameters to the trigger script.
+
+A route such as `items/{id}` or `a/{x}/b/{y}` no longer needs to be fully literal, and the values that appear in the request path are forwarded to the automation script.
+
+A dynamic route segment is written as `{parameterName}`. The parameter name is captured as-is and becomes available in `ApiTriggerInput.RouteParameters` within the API trigger automation script. For example, a request to `items/42` against the route `items/{id}` will provide `id = 42`.
+
+##### Dynamic route matching
+
+Route matching now distinguishes between static and dynamic routes:
+
+- Static routes continue to work as before.
+- Static routes always win over dynamic routes when both match the same request.
+- Literal route segments are matched case-insensitively.
+- The full number of segments must match. Partial matches are not accepted.
+- Dynamic routes are evaluated in specificity order, so that more literal routes win over more generic templates.
+
+That means `items/special` will match the static route `items/special` before the dynamic route `items/{id}`, and, in case of `foo/bar`, `foo/{bar}` will win over `{foo}/bar` because the first literal segment is more specific.
+
+##### Route parameters
+
+When a dynamic route matches, the captured path values are passed through to the script as a dictionary of route parameters.
+
+Route parameters:
+
+- Are exposed on `ApiTriggerInput.RouteParameters`.
+- Use the parameter name from the template as the key.
+- Preserve the exact incoming path segment as the value.
+- Are empty for static route matches.
+
+##### Route validation and conflicts
+
+Routes are validated more strictly before create and update:
+
+- A route cannot be null, empty, or whitespace only.
+- A route cannot start or end with `/`.
+- A route cannot contain empty path segments.
+- A parameter segment must be written as a well-formed `{name}` placeholder.
+- Parameter names cannot use route syntax characters such as `/`, `{`, `}`, `?`, `*`, `:`, or `=`.
+- A route template cannot reuse the same parameter name more than once within the same route.
+
+Route conflicts are also detected across all existing definitions. Any two templates that can match the same request path are rejected, including conflicts between literal and parameterized routes and between overlapping parameterized templates. If a route with `ticket/{id}` already exists, a new route like `ticket/{ticketId}` will be rejected.
+
+When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
 
 ## Changes
+
+### Breaking changes
+
+#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
+
+From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
+
+See also: [Dashboards/Low-Code Apps: State timeline component will now use the primary key when requesting timeline data [ID 45600]](xref:Web_apps_Feature_Release_10.6.8#dashboardslow-code-apps-state-timeline-component-will-now-use-the-primary-key-when-requesting-timeline-data-id-45600)
 
 ### Enhancements
 
@@ -120,14 +174,6 @@ Up to now, the *SLElementInProtocol.txt* log file entries were added by SLProtoc
 
 From now on, these log file entries will be added by SLLog instead.
 
-#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
-
-<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
-
-When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
-
-From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
-
 #### SLLogCollector will now retrieve the value of the Windows security policy 'System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing' is enabled [ID 45592]
 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
@@ -151,10 +197,18 @@ In order to make it easier to look up values when, for example, building a messa
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
 
-In order to combine all system requirements specified in [DataMiner Compute Requirements](https://aka.dataminer.services/DataMiner_compute_requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
+In order to combine all system requirements specified in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
 
 > [!NOTE]
 > From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.
+
+#### SLAutomation: Enhanced startup after a DataMiner restart or upgrade [ID 45651]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+Up to now, after a DataMiner restart or upgrade, in some cases, SLAutomation could unexpectedly stop working while initializing internal components.
+
+A number of enhancements have now been made to prevent any initialization issues during SLAutomation startup.
 
 #### BPA test 'Cube CRL Freeze': Enhanced performance [ID 45712]
 
@@ -247,3 +301,17 @@ In some cases, the SLASPConnection process could stop working when it failed to 
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When, within a DataMiner System, a DataMiner Agent receives an SNMPv3 trap for an element hosted by another DataMiner Agent, it will forward that trap to the other Agent. However, in some cases, when the Agent that received the trap did not have the correct credentials needed to decrypt the trap, it would fail to forward the trap to the element.
+
+#### APIGateway: Problem with reverse proxy feature [ID 45688]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+The reverse proxy feature in APIGateway would no longer work.
+
+Whenever a DxM registered itself for reverse proxying, APIGateway could throw an exception.
+
+#### Problem when synchronizing files in the C:\\Skyline DataMiner\\Webpages\\Public folder [ID 45694]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, it would no longer be possible to synchronize any files in the `C:\Skyline DataMiner\Webpages\Public` folder among DataMiner Agents in a cluster because the path name would incorrectly be compared case sensitively.

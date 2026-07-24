@@ -1,5 +1,6 @@
 ---
 uid: Partner_Program
+description: Explore the DataMiner Partner Program and enable your customers to leverage the full potential of the new generation of transformational technology.
 ---
 
 # DataMiner Partner Program

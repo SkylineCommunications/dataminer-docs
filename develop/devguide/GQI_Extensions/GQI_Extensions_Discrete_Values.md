@@ -4,7 +4,7 @@ uid: GQI_Extensions_Discrete_Values
 
 # Defining discrete values for a column
 
-From DataMiner Web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!-- RN 45380 --> it is possible to define a set of **discrete values** when creating a column within GQI extensions. Discrete values are predefined, named constants for values that can occur in the column. They are exposed to the client and can be used in filter editors, making it easier for users to filter data by selecting from predefined options rather than typing values manually.
+From DataMiner Web 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 onwards<!-- RN 45380 --> it is possible to define a set of **discrete values** when creating a column within GQI extensions. Discrete values are predefined, named constants for values that can occur in the column. They are exposed to the client and can be used in filter editors, making it easier for users to filter data by selecting from predefined options rather than typing values manually.
 
 > [!IMPORTANT]
 > This feature requires the [GQI DxM](xref:GQI_DxM) and the Skyline.DataMiner.Core.GQI.Extensions [extension API](xref:GQI_Extension_API)

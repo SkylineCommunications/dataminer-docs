@@ -11,7 +11,7 @@ The Web Services methods can be used in SOAP, JSON, or URL-encoded requests.
 > We strongly recommend using HTTPS when accessing the Web Service APIs over public internet. If you do not do so, all information, including logon credentials, will be sent over the internet as plain, unencrypted text.
 
 > [!IMPORTANT]
-> Because of the additional security layer used in [DaaS systems](xref:Creating_a_DMS_in_the_cloud), at present, it is not possible to connect to a DaaS system using the Web Services.
+> On [DaaS systems](xref:Creating_a_DMS_in_the_cloud), the Web Services API is accessible once you have authenticated through the dataminer.services B2C layer. However, for integrations that are not hosted on the DMA itself, the additional security layer of dataminer.services makes it difficult to authenticate externally.
 
 > [!NOTE]
 > An earlier version of the Web Services API (v0) still exists in DataMiner versions prior to 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<!--RN 45387-->. This legacy interface is obsolete and disabled by default. While we strongly recommend using the current v1 API instead, you can enable the legacy v0 interface in older systems by opening the file `C:\Skyline DataMiner\Webpages\API\Web.config` and adding the following extra tag under `<appSettings>`: `<add key="enableLegacyV0Interface" value="true"/>`.

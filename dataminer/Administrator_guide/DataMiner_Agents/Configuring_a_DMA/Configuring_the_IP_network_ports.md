@@ -1,6 +1,6 @@
 ---
 uid: Configuring_the_IP_network_ports
-description: Specific IP ports are always used in a DMS, others depend on your setup. Only the essential ports (80, 8004, and 162) are opened by default.
+description: "Explore the different IP ports that are used in a DMS. This information will especially prove useful when you have to configure firewalls in your network."
 ---
 
 # Configuring the IP network ports

@@ -1,5 +1,6 @@
 ---
 uid: Pricing_billing_and_metering
+description: "Explore billing and metering rules for subscriptions, monthly utilization allowances, invoicing, and overage so you can plan your DataMiner costs."
 ---
 
 # Billing & metering

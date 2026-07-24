@@ -58,6 +58,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 
 | Visualization | Description |
 |:--:|--|
+| [![Assistant chat](~/dataminer/images/Assistant_Chat.svg)](xref:DashboardAssistantChat) | An [assistant chat](xref:DashboardAssistantChat) component is used to interact with the DataMiner Assistant directly from an app or dashboard. |
 | [![Timeline](~/dataminer/images/Timeline.svg)](xref:DashboardTimeline) | A [timeline](xref:DashboardTimeline) is used to visualize and manage bookings, events, and other time-bound data. |
 | [![List](~/dataminer/images/List.svg)](xref:DashboardList) | A [list](xref:DashboardList) allows users to select one or more items in a list. |
 | [![EPM picker](~/dataminer/images/EPM_Picker.svg)](xref:DashboardEPMPicker) | An [EPM picker](xref:DashboardEPMPicker) allows users to make a filter selection for a particular EPM element and EPM chain. |

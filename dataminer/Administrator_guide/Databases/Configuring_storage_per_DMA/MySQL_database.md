@@ -1,5 +1,6 @@
 ---
 uid: MySQL_database
+description: "Understand MySQL and MSSQL use in legacy DataMiner Systems, before Cassandra or Storage as a Service (STaaS) became the default storage."
 keywords: local database
 ---
 

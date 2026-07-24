@@ -1,5 +1,6 @@
 ---
 uid: Setting_the_indexing_options_for_the_server-side_search
+description: "Learn how, in the MaintenanceSettings.xml file, you can prevent certain items from being indexed by the DataMiner Cube server-side search engine."
 ---
 
 # Setting the indexing options for the server-side search

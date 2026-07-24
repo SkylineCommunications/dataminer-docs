@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_services_collaboration_services
+description: "Use this Collaboration Services sizing guide to estimate Dashboard Sharing volumes and plan unique shares by dashboard and recipient."
 ---
 
 # Sizing guide: Collaboration Services

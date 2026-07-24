@@ -1,20 +1,14 @@
 ---
 uid: CreatingTickets
-description: Find out the different ways in which tickets can be created and what happens when you create a ticket from a Cube alarm.
+description: Learn how to create tickets in DataMiner Ticketing manually or automatically for fast, efficient issue tracking and operator workflows.
 ---
 
 # Ticket creation
 
-Tickets can be created in several ways:
+Tickets can be created manually for operator-driven workflows, or automatically via DataMiner Correlation and Automation.
 
-- Directly from the Ticketing application.
-- From a Cube alarm using the right-click menu.
-- From an automation script triggered by a correlation rule.
+These are the main ways tickets can be created:
 
-When a ticket is created from a Cube alarm using the right-click menu:
-
-- An automation script is launched to collect additional details.
-- The Ticketing API Helper is used to create the ticket.
-- The alarm and the element on which the alarm occurred are automatically linked to the ticket.
-
-If the element is linked to an asset in the Asset Manager, that asset is also linked to the ticket.
+- Manually, [from the Ticketing application](xref:CreatingTicketsManuallyFromApp).
+- Manually, [by using the right-click menu for a Cube alarm](xref:CreatingTicketsFromCube).
+- Automatically, [from an automation script triggered by a correlation rule](xref:CreatingTicketsFromCorrelation).

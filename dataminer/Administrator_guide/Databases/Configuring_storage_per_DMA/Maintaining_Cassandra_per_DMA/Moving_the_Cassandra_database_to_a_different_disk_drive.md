@@ -1,10 +1,11 @@
 ---
 uid: Moving_the_Cassandra_database_to_a_different_disk_drive
+description: "Follow these steps to move the Cassandra database to a different drive if Cassandra is hosted on the same machine as DataMiner."
 ---
 
 # Moving the Cassandra database to a different disk drive
 
-In some cases, the Cassandra database may need to be moved to a different disk drive. 
+In some cases, the Cassandra database may need to be moved to a different disk drive.
 
 This is especially the case if Cassandra is hosted on the same machine as DataMiner. To ensure optimal performance, the **database should be located on a different drive than DataMiner**. If your Cassandra database is currently on the same drive, you should move it to a different disk drive.
 

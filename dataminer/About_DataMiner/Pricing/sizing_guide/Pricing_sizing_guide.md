@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide
+description: "Use this sizing guide to estimate subscription service volumes and calculate costs for services, solutions, and real-world use cases."
 ---
 
 # Sizing guide

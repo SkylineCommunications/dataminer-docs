@@ -1,5 +1,6 @@
 ---
 uid: Cassandra_database
+description: "Install and configure a Cassandra cluster database if you choose not to use the recommended STaaS setup."
 ---
 
 # Cassandra Cluster

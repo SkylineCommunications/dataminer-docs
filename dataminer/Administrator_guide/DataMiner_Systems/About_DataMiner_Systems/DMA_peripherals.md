@@ -1,5 +1,6 @@
 ---
 uid: DMA_peripherals
+description: "Learn how, in some setups, special third-party interfacing hardware called 'DMA peripherals' is used to connect a DMA to third-party devices."
 ---
 
 # DMA peripherals

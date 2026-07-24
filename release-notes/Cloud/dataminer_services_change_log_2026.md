@@ -9,6 +9,113 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 16 July 2026 - Enhancement - Home - Back button on create organization step in DaaS deploy wizard
+
+A back button is now available on the create organization step in the DaaS deploy wizard.
+
+### 16 July 2026 - Enhancement - Admin - Documentation button on DMS Overview for expiring DaaS system
+
+On the DMS Overview page in the Admin app, a documentation button is now shown when a DaaS system is about to expire.
+
+### 16 July 2026 - Fix - Home - Open in desktop notification not fully displayed
+
+When you selected to open a DataMiner System in the desktop app, the notification that mentioned that the browser was trying to open DataMiner Cube could not be fully displayed. The line allowance of this notification has now been increased, resolving this issue.
+
+### 16 July 2026 - Enhancement - Home - Remote URL indicator now shows preview of remote URL
+
+When you add a DataMiner System, below the *Remote URL Indicator* field, a preview of the remote URL will now be shown.
+
+### 16 July 2026 - New feature - Admin - 'Created by' and 'Created at' info in subscription detail panel
+
+The detail panel of a subscription on the Billing page of the Admin app now includes the *Created by* and *Created at* information.
+
+### 16 July 2026 - Enhancement - Catalog - Faster tooltip on Deploy button
+
+The tooltip for the *Deploy* button has been improved and is now shown faster on hover.
+
+### 16 July 2026 - Fix - Catalog - Inline code not displaying correctly in catalog descriptions
+
+In the Catalog app, inline code in the description of Catalog items was not rendered correctly. This issue has been resolved.
+
+### 16 July 2026 - Enhancement - Admin - API key references renamed to Key in Audit
+
+In the Audit section of the Admin app, the initiator type has been renamed from *ApiKey* to *Key*. Related error messages have also been updated.
+
+### 16 July 2026 - Enhancement - Admin - Usage page removed
+
+The usage page has been removed from the Admin app.
+
+### 16 July 2026 - Enhancement - Admin - Auto-save and confirmation options on settings page
+
+The Settings page in the Admin app has been updated to include an auto-save option for all settings. Settings that involve managing lists of items, such as IP addresses or domains, are excluded from this auto-save. Some settings with significant system impact now also require confirmation before they are applied.
+
+### 16 July 2026 - Enhancement - General - Icons added to all apps in the header app menu
+
+All applications in the app menu of the header now have icons.
+
+### 16 July 2026 - Fix - Catalog - Clearing search value on Catalog home page not handled correctly
+
+When you cleared the search value on the Catalog home page, it could occur that this was not handled correctly, causing part of the value to still be taken into account if you then clicked the button to browse the Catalog. This issue has been resolved.
+
+### 16 July 2026 - Fix - General - Notification counter appearing on top of pop-up panels
+
+When a pop-up panel was opened in front of the header bar, it could occur that the counter on the notification bell icon was displayed on top of that pop-up panel. This issue has been resolved.
+
+### 16 July 2026 - Enhancement - Admin - Billing rate and cost column improvements
+
+On the Billing page of the Admin app, the *Rate* column has been renamed to *Rate (selected time period for the subscription)*, and the *Cost* column now displays the cost per month.
+
+### 16 July 2026 - New feature - Admin - Renewal history tab for renewed subscriptions
+
+Renewed subscriptions are no longer shown in the main subscription table on the Billing page of the Admin app. They are now displayed in the detail panel of a subscription, in a new *Renewal history* tab.
+
+### 2 July 2026 - Enhancement - Admin - Improved username validation
+
+Username validation has been updated to enforce clearer formatting rules: usernames may not exceed 20 characters, may not contain backslashes, and may not contain consecutive percent signs.
+
+### 2 July 2026 - Enhancement - Admin - Draft subscription management improvements
+
+The *Save draft* and *Delete draft* actions in the subscription flow now have spam click prevention to avoid unintended repeated submissions. In addition, the *Delete draft* option is now also available directly on the *Add Subscription* panel.
+
+### 2 July 2026 - Enhancement - Admin - Continue from draft option and improved draft redirect for subscriptions
+
+On the Billing page of the Admin app, users can now select *Continue from draft* in the *Add subscription* context menu to resume a previously saved draft. Additionally, when a draft is saved, users are now automatically redirected to the subscriptions page.
+
+### 2 July 2026 - Enhancement - Admin - Role validation on user actions
+
+On the organization users page and the system users page in the Admin app, the *Unlink* and *Remove* user action buttons will now be disabled when the current user has the Member role.
+
+### 2 July 2026 - Enhancement - Admin - Improved ticket communication and assignment transparency
+
+Support ticket interactions have been updated to improve efficiency and clarity:
+
+- Ticket link in emails: Confirmation emails now render the ticket ID as a clickable hyperlink, allowing users to navigate directly to the Admin portal without manual searching.
+- Accurate assignment info: The *Assigned to* field in ticket details now accurately reflects the team responsible as tracked in the linked Collaboration task.
+
+### 2 July 2026 - Enhancement - Admin - Support portal accessibility for non-contract organizations
+
+The support landing page has been redesigned to provide a proactive resource hub for organizations without an active maintenance contract. Instead of encountering errors, users are now presented with a clear dashboard featuring direct access to documentation, community resources, and service status, along with actionable pathways to secure maintenance contracts for one-on-one support.
+
+### 22 June 2026 - Enhancement - Admin - Custom time range for subscription usage estimate
+
+When adding a subscription, the *Start from estimate* option now allows you to select a custom time range to calculate the estimate from. The selected time range is limited to a maximum duration of 3 months.
+
+### 22 June 2026 - New feature - Admin - Billable usage export
+
+In the Admin app, you can now export billable usage data from the Billing page or from the billable usage side panel.
+
+### 22 June 2026 - Enhancement - Admin - Billable usage panel 'Name' column renamed to 'System name'
+
+In the billable usage side panel in the Admin app, the *Name* column has been renamed to *System name*.
+
+### 22 June 2026 - Enhancement - All apps - New header with improved help and support integration
+
+All dataminer.services apps now feature a new header with better integration for help and support. In the Catalog app, the search bar has also been moved to a new position.
+
+### 15 June 2026 - Enhancement - Admin - Billable usage chart limited to selected month
+
+On the Billing page of the Admin app, the billable usage chart will now only show dates within the selected month.
+
 ### 8 June 2026 - New feature - Admin - Ability to cancel planned subscriptions
 
 On the Billing page of the Admin app, you can now cancel planned subscriptions. When you do so, credits spent for the planned subscription will be refunded.

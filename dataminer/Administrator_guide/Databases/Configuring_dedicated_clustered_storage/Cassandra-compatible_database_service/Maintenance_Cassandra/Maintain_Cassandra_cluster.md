@@ -1,5 +1,6 @@
 ---
 uid: Maintain_Cassandra_Cluster
+description: "Learn how to maintain a self-managed DataMiner Cassandra Cluster with heap tuning, monitoring, repair planning, and software updates."
 ---
 
 # Maintaining a Cassandra cluster

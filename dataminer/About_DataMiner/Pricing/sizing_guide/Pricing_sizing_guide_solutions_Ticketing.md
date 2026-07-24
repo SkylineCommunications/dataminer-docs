@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_solutions_Ticketing
+description: "Use this Ticketing sizing guide to estimate monthly service volumes from ticket creation, retention, the SaaS baseline, and integrations."
 ---
 
 # Sizing guide: Ticketing

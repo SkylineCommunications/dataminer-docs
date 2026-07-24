@@ -1,5 +1,6 @@
 ---
 uid: replication_and_consistency_configuration
+description: "Optimize DataMiner Cassandra Cluster reliability by configuring replication factor and consistency level for resilient reads and writes."
 ---
 
 # Data replication and consistency configuration

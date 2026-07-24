@@ -13,10 +13,13 @@ Represents the DataMiner System (DMS). Can be used to request information from t
 
 Available from DataMiner 10.3.4/10.4.0 onwards.<!-- RN 35701 -->
 
+> [!NOTE]
+> The `GQIDMS` class itself cannot be used for constructor injection. From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, when using the `Skyline.DataMiner.Core.GQI.Extensions` API and the [GQI DxM](xref:GQI_DxM), use [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) to inject DMS access via the constructor. In earlier versions, use the [DMS](xref:GQI_OnInitInputArgs#properties) property of [OnInitInputArgs](xref:GQI_OnInitInputArgs).
+
 > [!TIP]
 > See also:
 >
-> - [Example of retrieving data by means of DMS messages](#example-of-retrieving-data-by-means-of-dms-messages)
+> - [Retrieving data from DataMiner](xref:GQI_Extensions_Retrieving_Data_From_DataMiner)
 > - [Building a GQI data source that retrieves data from a DMS](xref:Ad_hoc_Tutorials_Interact_With_DMS)
 
 ## Methods
@@ -40,7 +43,12 @@ An [IConnection](xref:Skyline.DataMiner.Net.IConnection) object representing the
 > Because of its complexity, instead of interacting directly with the IConnection interface, the best way you can use it is by integrating with existing DataMiner libraries.
 
 > [!NOTE]
-> The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
+>
+> - The real underlying connection may be shared by other extensions and queries but can be used as if it were a dedicated connection.
+> - From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, when the GQI DxM is used, `GetConnection()` can be called again to receive a fresh connection if the underlying SLNet connection was dropped.
+
+> [!IMPORTANT]
+> `GQIDMS` can only be used during the lifetime of the associated extension instance. Do not store or reuse it outside that lifetime.
 
 ### DMSMessage SendMessage(DMSMessage message)
 
@@ -67,77 +75,3 @@ Sends one or more messages to retrieve multiple responses from the DMS.
 #### Returns
 
 A `DMSMessage` array of all responses from the DMS.
-
-## Retrieving data by means of DMS messages
-
-From DataMiner 10.3.4/10.4.0 onwards, ad hoc data sources can retrieve data by means of DMS messages. <!-- RN 35701 -->
-
-To do so, the [*IGQIDataSource* interface](xref:GQI_IGQIDataSource) must implement the [*IGQIOnInit* interface](xref:GQI_IGQIOnInit), of which the `OnInit` method can also be used to initialize a data source:
-
-```csharp
-OnInitOutputArgs OnInit(OnInitInputArgs args)
-```
-
-When passed to the `OnInit` method, [OnInitInputArgs](xref:GQI_OnInitInputArgs) will contain the following new property:
-
-```csharp
-GQIDMS DMS
-```
-
-Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
-
-> [!IMPORTANT]
-> `GQIDMS` can only be used during the lifecycle of a single extension instance. After the [OnDestroy](xref:GQI_IGQIOnDestroy) lifecycle method is invoked, the `GQIDMS` object associated with the extension instance is cleaned up. Any ongoing or new requests made through that `GQIDMS` object will be canceled.
-
-### Example of retrieving data by means of DMS messages
-
-Below you can find an example script that uses the [*GQIDMS* object](xref:GQI_GQIDMS) provided in the OnInitPutArgs to [create a data source of active client connections](#retrieving-data-by-means-of-dms-messages). The name of the data source, as defined in the *GQIMetaData* attribute, will be "Client connections".
-
-Two interfaces are implemented: [*IGQIDataSource*](xref:GQI_IGQIDataSource) and [*IGQIOnInit*](xref:GQI_IGQIOnInit). The `GetNextPage` method retrieves client connections using a *GetInfoMessage* request and returns a *GQIPage* containing the data.
-
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Skyline.DataMiner.Analytics.GenericInterface;
-using Skyline.DataMiner.Net.Messages;
-
-[GQIMetaData(Name = "Client connections")]
-public class ClientConnectionSource : IGQIDataSource, IGQIOnInit
-{
-    private GQIDMS _dms;
-
-    public OnInitOutputArgs OnInit(OnInitInputArgs args)
-    {
-        _dms = args.DMS;
-        return default;
-    }
-
-    public GQIColumn[] GetColumns()
-    {
-        // Return desired columns
-        // Omitted for brevity
-    }
-
-    public GQIPage GetNextPage(GetNextPageInputArgs args)
-    {
-        var connections = GetConnections();
-        var rows = connections.Select(CreateRow).ToArray();
-        return new GQIPage(rows);
-    }
-
-    private IEnumerable<LoginInfoResponseMessage> GetConnections()
-    {
-        // Retrieve client connections from the DMS using a GetInfoMessage request
-        var request = new GetInfoMessage(InfoType.ClientList);
-        var responses = _dms.SendMessages(request);
-        return responses.OfType<LoginInfoResponseMessage>();
-    }
-
-    private GQIRow CreateRow(LoginInfoResponseMessage connection)
-    {
-        // Return a GQIRow representing the client connection
-        // Omitted for brevity
-    }
-}
-```

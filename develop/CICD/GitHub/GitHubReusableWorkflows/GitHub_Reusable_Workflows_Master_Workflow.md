@@ -17,7 +17,7 @@ The Master Workflow is a unified, centralized CI/CD pipeline for .NET solutions.
 
 ## Prerequisites
 
-- Part of our quality control involves static code analysis through [SonarCloud](https://www.sonarsource.com/products/sonarcloud/) as a mandatory step. You will need a **SonarCloud organization** linked to your GitHub organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
+- Part of our quality control can involve static code analysis through [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This step is optional but recommended. To enable it, you will need a **SonarCloud organization** linked to your GitHub organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/), and you must provide the `sonarcloud-project-name` input. If you do not provide this input, the SonarCloud analysis is skipped and the quality gate is based on unit tests only.
 
 - Creating a GitHub release or tag will attempt to register your item as a private item in the Catalog. For this, the repository must have access to a *DATAMINER_TOKEN* stored as a GitHub secret. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
@@ -66,6 +66,7 @@ jobs:
   CI:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main
     with:
+      # sonarcloud-project-name is optional. Provide it to enable SonarCloud analysis.
       sonarcloud-project-name: ${{ vars.SONAR_NAME }}
       # configuration: Release
       # solution-filter-name: "MySpecificSolution.slnx"
@@ -81,7 +82,7 @@ jobs:
 
 | Input | Required | Type | Default | Description |
 |---|---|---|---|---|
-| `sonarcloud-project-name` | Yes | string | | The SonarCloud project identifier. Create a project at <https://sonarcloud.io/projects/create> and use the ID from the project URL. |
+| `sonarcloud-project-name` | No | string | | The SonarCloud project identifier. Create a project at <https://sonarcloud.io/projects/create> and use the ID from the project URL. If omitted, the SonarCloud analysis is skipped. |
 | `configuration` | No | string | `Release` | The build configuration (e.g., `Release` or `Debug`). |
 | `solution-filter-name` | No | string | | A filter to find a specific solution file (`.sln` or `.slnx`). If not provided, the workflow auto-discovers the solution. |
 | `runs-on` | No | string | `ubuntu-latest` | The runner environment for the CI job. See [GitHub runner images](https://github.com/actions/runner-images/). |
@@ -176,8 +177,7 @@ For the *SkylineCommunications* organization, the job also configures private Nu
 
 Before proceeding with the build, the workflow validates several things:
 
-- Whether the SonarCloud project name corresponds to an existing project.
-- Whether `SONAR_TOKEN` is available when SonarCloud analysis is required.
+- When a `sonarcloud-project-name` is provided, whether it corresponds to an existing SonarCloud project and whether `SONAR_TOKEN` is available.
 - Whether `DATAMINER_TOKEN` is available when a release tag triggers the workflow and DataMiner packages need to be published.
 
 ### Build
@@ -207,17 +207,17 @@ Test projects are discovered automatically based on naming conventions. Be aware
 
 ### Static code analysis
 
-The job performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This checks for common errors and bugs in C# code, tracks code coverage, and enforces clean code guidelines. The results are evaluated against the SonarCloud quality gate.
+When a `sonarcloud-project-name` is provided, the job performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This checks for common errors and bugs in C# code, tracks code coverage, and enforces clean code guidelines. The results are evaluated against the SonarCloud quality gate.
 
 > [!NOTE]
-> SonarCloud analysis is skipped for Dependabot pull requests.
+> SonarCloud analysis is optional. If no `sonarcloud-project-name` is provided, this step is skipped entirely. It is also skipped for Dependabot pull requests.
 
 ### Quality gate
 
 The job combines the results of all previous steps into a single pass/fail result. The workflow fails if:
 
 - Any unit test failed.
-- The SonarCloud quality gate reported a failure (except for Dependabot PRs, where analysis is skipped).
+- The SonarCloud quality gate reported a failure. This is only evaluated when a `sonarcloud-project-name` is provided and is skipped for Dependabot PRs.
 
 ### Artifact detection and upload
 
