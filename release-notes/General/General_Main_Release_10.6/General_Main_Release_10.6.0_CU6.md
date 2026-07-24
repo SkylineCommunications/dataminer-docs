@@ -159,3 +159,11 @@ In some rare cases, SLDataMiner could stop unexpectedly when SLWatchdog requeste
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.
+
+#### Invalid matrix 'columntypes' definition could cause SLProtocol to stop unexpectedly [ID 46011]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when a matrix parameter had fewer `columntypes` defined in its options than there were dimensions, `SLProtocol` could stop unexpectedly when `protocol.SendToDisplay` was called on that matrix parameter.
+
+From now on, missing matrix outputs that are not covered by `columntypes` will be handled correctly.

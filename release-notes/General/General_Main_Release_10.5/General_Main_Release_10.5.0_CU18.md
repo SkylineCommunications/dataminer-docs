@@ -22,6 +22,8 @@ uid: General_Main_Release_10.5.0_CU18
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.5.0 CU18](xref:Web_apps_Main_Release_10.5.0_CU18).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+## Changes
+
 ### Enhancements
 
 #### Security enhancements [ID 45646]
@@ -108,14 +110,22 @@ Up to now, when an element with a smart-serial connection acted as a client, in 
 
 From now on, that column will correctly show the actual connection state, e.g., `Connected`.
 
+#### Problem with SLDataMiner when SLWatchdog requested element statistics while an element was being stopped [ID 45945]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In some rare cases, SLDataMiner could stop unexpectedly when SLWatchdog requested statistics about the number of active elements while an element was being stopped.
+
 #### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.
 
-#### Problem with SLDataMiner when SLWatchdog requested element statistics while an element was being stopped [ID 45945]
+#### Invalid matrix 'columntypes' definition could cause SLProtocol to stop unexpectedly [ID 46011]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
-In some rare cases, SLDataMiner could stop unexpectedly when SLWatchdog requested statistics about the number of active elements while an element was being stopped.
+Up to now, when a matrix parameter had fewer `columntypes` defined in its options than there were dimensions, `SLProtocol` could stop unexpectedly when `protocol.SendToDisplay` was called on that matrix parameter.
+
+From now on, missing matrix outputs that are not covered by `columntypes` will be handled correctly.
