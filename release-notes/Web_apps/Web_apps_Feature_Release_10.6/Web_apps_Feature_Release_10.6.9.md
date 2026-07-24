@@ -117,6 +117,14 @@ When GQI requests DOM data, it now checks whether all data is required instead o
 
 When all data is required, e.g., for prefetch join operations or when *Filter assistance* is enabled on a query filter, GQI now requests data with a larger page size. This reduces request overhead and improves performance.
 
+#### GQI DxM: Query column retrieval no longer prepares the full data-fetching pipeline [ID 46018]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+GQI can now return query column information without preparing the full data-fetching pipeline.
+
+As a result, column-only operations, such as building queries or retrieving columns without statistics, are now more lightweight while full query execution behavior remains unchanged.
+
 #### Dashboards/Low-Code Apps: No longer possible to link the Select query operator to data [ID 45991]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
@@ -170,3 +178,9 @@ From now on, it will again be possible to use these filters.
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 The web API could leak memory when a user logged out. The user settings stored in memory would not be cleaned up properly.
+
+#### Dashboards/Low-Code Apps - Dropdown component: Deleted row could incorrectly remain selected [ID 46021]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when a realtime delete update from GQI removed the selected row in a *Dropdown* component, in some cases, a runtime error could be thrown. As a result, the data would not be cleared correctly, and the deleted row could remain selected.
