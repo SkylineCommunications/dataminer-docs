@@ -10,16 +10,20 @@ mbgNMS is based on the DataMiner platform and is dedicated to Meinberg products.
 
 **Meinberg NMS** supports all LTOS devices (starting from firmware version 7.04.009 ) and the microSync Product Family.
 
-The latest **mbgNMS installation package** can be downloaded using the link below. Make sure to first install or upgrade to the compatible DataMiner version. To avoid possible issues, make sure you always use compatible versions.
+## Installation
+
+The recommended way to install mbgNMS is by using a **pre-installed DataMiner Virtual Hard Disk**. This method provides you with a ready-to-use virtual machine that has DataMiner pre-installed. See [Installing mbgNMS using a pre-installed DataMiner Virtual Hard Disk](xref:mbgNMS_Installation) for detailed instructions.
+
+## Latest release
+
+- Latest release: [Meinberg Element Manager 1.4.2](https://community.dataminer.services/download/meinberg-element-manager-1-4-2/)
+
+- Release notes: [Release notes mbgNMS 1.4.2](xref:MbgNMS_1.4.2)
+
+- Minimum required DataMiner version: [10.4.0 Main Release](https://community.dataminer.services/download/dataminer-main-release-10-4-0-0-15230-cu10/)
 
 > [!TIP]
 > Refer to the [Meinberg NMS manual](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2/) and release notes for detailed instructions.
-
-- Latest release: [Meinberg Element Manager 1.4.1 CU1](https://community.dataminer.services/download/meinberg-element-manager-1-4-1-cu1/)
-
-- Release notes: [Release notes mbgNMS 1.4.1](xref:MbgNMS_1.4.1)
-
-- Minimum required DataMiner version: [10.4.0 Main Release](https://community.dataminer.services/download/dataminer-main-release-10-4-0-0-15230-cu10/)
 
 ![Upgrading](~/develop/images/mbgNMS_Upgrading_across_major_versions.png)
 
