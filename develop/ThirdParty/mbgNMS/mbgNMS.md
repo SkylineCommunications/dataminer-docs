@@ -10,10 +10,6 @@ mbgNMS is based on the DataMiner platform and is dedicated to Meinberg products.
 
 **Meinberg NMS** supports all LTOS devices (starting from firmware version 7.04.009 ) and the microSync Product Family.
 
-## Installation
-
-The recommended way to install mbgNMS is by using a **pre-installed DataMiner Virtual Hard Disk**. This method provides you with a ready-to-use virtual machine that has DataMiner pre-installed. See [Installing mbgNMS using a pre-installed DataMiner Virtual Hard Disk](xref:mbgNMS_Installation) for detailed instructions.
-
 ## Latest release
 
 - Latest release: [Meinberg Element Manager 1.4.2](https://community.dataminer.services/download/meinberg-element-manager-1-4-2/)

@@ -7639,8 +7639,6 @@ items:
     - name: mbgNMS
       topicUid: mbgNMS
       items:
-      - name: Installation
-        topicUid: mbgNMS_Installation
       - name: Releases
         topicUid: mbgNMS_Releases
       - name: Security
