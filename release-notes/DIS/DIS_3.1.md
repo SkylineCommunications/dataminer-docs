@@ -4,6 +4,42 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.24
+
+### New features
+
+#### Update snippets to use ProtocolExtension methods [ID 45875]
+
+The following C# snippets have been updated to use the extension methods of the 
+[Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package:
+
+- GetColumn
+- GetColumns
+- SetColumns
+
+#### Updated DIS dependencies
+
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 6.1.0
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 6.1.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.7
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.7
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.7
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.10
+
+### Fixes
+
+#### Update to avoid possible deadlock [ID 45898]
+
+The implementation of the "Copy protocol to clipboard" context menu item and "Save compiled protocol" menu item has been updated to be similar to the "publish" flow to avoid deadlocks.
+
+Also, the implementation of the logic that retrieves the C# projects in the solution has been updated to avoid deadlocks.
+
+#### NuGetHelper causes VS to freeze [ID 45999]
+
+When opening a VS solution, DIS could in some cases freeze while instantiating the NuGetHelper.
+
+DIS has been updated so that part of the initialization now happens asynchronously.
+
 ## DIS 3.1.23
 
 ### New features
@@ -26,6 +62,14 @@ When you click the *Publish* button for an automation script that is part of a s
   The popup will also inform you that the entire package will be published.
 
 This behavior is aligned with how DataMiner handles solution-package scripts. Scripts sharing the same `DataMinerSolutionId` have their NuGet dependencies unified (the highest referenced version is used across all scripts), and run in their own dedicated process in DataMiner.
+
+#### Updated DIS dependencies
+
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 3.4.0
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 3.4.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.6
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.6
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.6
 
 ## DIS 3.1.22
 
