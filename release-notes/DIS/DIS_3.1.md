@@ -37,7 +37,7 @@ Also, the implementation of the logic that retrieves the C# projects in the solu
 
 When opening a Visual Studio solution, in some cases, DIS could freeze while instantiating the NuGetHelper.
 
-From now on, the initialization of the NuGetHelper will happen asynchronously.
+From now on, the initialization of the NuGetHelper will partially happen asynchronously.
 
 ## DIS 3.1.23
 
