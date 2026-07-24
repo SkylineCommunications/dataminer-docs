@@ -27,11 +27,6 @@ The recommended way to install mbgNMS is by using a **pre-installed DataMiner Vi
 > [!TIP]
 > Refer to the [Meinberg NMS manual](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2/) and release notes for detailed instructions.
 
-![Upgrading](~/develop/images/mbgNMS_Upgrading_across_major_versions.png)
-
-> [!IMPORTANT]
-> If you are using an older DataMiner version and you want to upgrade to a DataMiner version that does not immediately follow your current version, see [**Best practices when upgrading across major versions**](https://docs.dataminer.services/dataminer/Administrator_guide/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#best-practices-when-upgrading-across-major-versions).  
-> Please also make sure the system meets the following [**Prerequisite Checks**](https://docs.dataminer.services/dataminer/Administrator_guide/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#prerequisite-checks) before upgrading.
 
 ## Content
 
