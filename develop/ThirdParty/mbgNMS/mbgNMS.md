@@ -16,7 +16,7 @@ The recommended way to install mbgNMS is by using a **pre-installed DataMiner Vi
 
 ![pdf](~/develop/images/mbgNMS_pdf.svg) [**Meinberg Network Management System - Installation Guide.pdf**](ADDLINK)
 
-## Latest release
+## Upgrade
 
 - Latest release: [Meinberg Element Manager 1.4.2](https://community.dataminer.services/download/meinberg-element-manager-1-4-2/)
 
