@@ -2,7 +2,7 @@
 uid: MediaOps_Live_1.1.0
 ---
 
-# MediaOps Live 1.1.0 - Preview
+# MediaOps Live 1.1.0
 
 > [!IMPORTANT]
 > We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
@@ -40,6 +40,10 @@ In addition, the MediaOps Live API has been extended so that job information (jo
 While a connection or disconnection is still in progress, an hourglass icon is now shown in front of the source name. This provides clearer feedback to the user about the current connection state.
 
 ### Fixes
+
+#### Discrete parameters with numeric values caused orchestration events to fail [ID 45773]
+
+When discrete parameters were used with numeric values (e.g., to indicate video formats), it could occur that orchestration events failed. Now the validation correctly supports both numeric and string discrete parameters.
 
 #### CSV import could include the wrong endpoint when source and destination endpoints had the same name [ID 45959]
 
