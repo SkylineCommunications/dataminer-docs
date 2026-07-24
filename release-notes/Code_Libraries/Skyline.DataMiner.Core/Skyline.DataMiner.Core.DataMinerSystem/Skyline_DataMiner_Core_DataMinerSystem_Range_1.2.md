@@ -11,9 +11,9 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 
 #### New feature - Editing elements and services included in a service [ID 46034]
 
-In DataMiner, a service can contain entire elements, parts of elements, or other services as *child items*, configured on the *parameters* page when [adding or editing a service](xref:Adding_a_service). Previously the library only exposed the read-only `IncludedParameters`. You can now **add, remove, and edit** these child items through `IDmsService.ParameterSettings` and persist the changes by calling `Update()` on the service.
+In DataMiner, a service can contain entire elements, parts of elements, or other services as *child items*, configured on the *parameters* page when [adding or editing a service](xref:Adding_a_service). Previously, the library only exposed the read-only `IncludedParameters`. From now on, you can now **add, remove, and edit** these child items through `IDmsService.ParameterSettings` and persist the changes by calling `Update()` on the service.
 
-The new `IncludedElements` property returns the items as an `IReadOnlyList<ParamConfiguration>`, each being an `ElementParamConfiguration` (an included element) or a `ServiceParamConfiguration` (an included service). To manage the list, `AddElement`, `AddService`, `Remove`, `RemoveByElementId`, `RemoveByServiceId`, `RemoveByAlias`, and `Clear` were added to `IServiceParamsSettings`.
+The new `IncludedElements` property returns the items as an `IReadOnlyList<ParamConfiguration>`, each being an `ElementParamConfiguration` (an included element) or a `ServiceParamConfiguration` (an included service). To be able to manage the list, `AddElement`, `AddService`, `Remove`, `RemoveByElementId`, `RemoveByServiceId`, `RemoveByAlias`, and `Clear` were added to `IServiceParamsSettings`.
 
 > [!NOTE]
 > When the same element or service is included more than once, assign a unique non-empty `Alias` to each instance.
