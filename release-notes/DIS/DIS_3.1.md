@@ -62,7 +62,7 @@ When you click the *Publish* button for an automation script that is part of a s
 
 This behavior is aligned with how DataMiner handles solution-package scripts. Scripts sharing the same `DataMinerSolutionId` have their NuGet dependencies unified (the highest referenced version is used across all scripts), and run in their own dedicated process in DataMiner.
 
-#### Updated DIS dependencies
+#### Updated NuGet package dependencies
 
 - [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 3.4.0
 - [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 3.4.0
