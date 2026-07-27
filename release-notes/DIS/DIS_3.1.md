@@ -8,15 +8,21 @@ uid: DIS_3.1
 
 ### New features
 
-#### GetColumn/GetColumns/SetColumns snippets will now use ProtocolExtension methods [ID 45875]
+#### C# snippets updated to use ProtocolExtension methods [ID 45875]
 
-The following C# snippets have been updated. They will now use the extension methods of the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package:
+The following C# snippets have been updated to use the extension methods of the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package:
 
 - GetColumn
 - GetColumns
 - SetColumns
 
-#### Updated DIS dependencies
+#### DIS no longer freezes during startup when initializing the NuGet helper [ID 45999]
+
+When opening a Visual Studio solution, DIS could in some cases freeze while instantiating the NuGetHelper.
+
+DIS has been updated so that part of the initialization now happens asynchronously, preventing the freeze.
+
+#### Updated NuGet package dependencies
 
 - [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 6.1.0
 - [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 6.1.0
@@ -27,17 +33,11 @@ The following C# snippets have been updated. They will now use the extension met
 
 ### Fixes
 
-#### Menu items have been updated in order to avoid possible deadlocks [ID 45898]
+#### Menu items updated to avoid possible deadlocks [ID 45898]
 
-The implementation of the *Copy protocol to clipboard* context menu item and the *Save compiled protocol* menu item has been updated. It will now work similar to the "publish" flow in order to avoid deadlocks.
+The implementation of the *Copy protocol to clipboard* context menu item and the *Save compiled protocol* menu item has been updated to work similarly to the publish flow, in order to avoid deadlocks.
 
-Also, the implementation of the logic that retrieves the C# projects in the solution has been updated in order to avoid deadlocks.
-
-#### DIS could freeze while instantiating the NuGetHelper [ID 45999]
-
-When opening a Visual Studio solution, in some cases, DIS could freeze while instantiating the NuGetHelper.
-
-From now on, the initialization of the NuGetHelper will partially happen asynchronously.
+Additionally, the implementation of the logic that retrieves the C# projects in the solution has been updated to avoid deadlocks.
 
 ## DIS 3.1.23
 
