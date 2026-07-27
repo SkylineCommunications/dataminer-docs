@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Skyline.DataMiner.Core.AppPackageCreator" Version="4.0.0" />
+    <PackageReference Include="Skyline.DataMiner.Core.AppPackageCreator" Version="4.1.0" />
     <PackageReference Include="Skyline.DataMiner.Core.AppPackageInstaller" Version="4.0.0" />
     <PackageReference Include="Skyline.DataMiner.Core.AppPackageInstaller.SRM" Version="4.0.0" />
     <PackageReference Include="Skyline.DataMiner.Core.DataMinerSystem.Automation" Version="1.2.0.3" />
