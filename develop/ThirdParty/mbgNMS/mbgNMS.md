@@ -8,13 +8,15 @@ The Meinberg Network Management System is an out-of-the-box NMS solution that ru
 Created from a partnership and joint development between Skyline Communications and Meinberg, this central platform automatically detects, provisions, and monitors all Meinberg applications.
 mbgNMS is based on the DataMiner platform and is dedicated to Meinberg products.
 
-**Meinberg NMS** supports all LTOS devices (starting from firmware version 7.04.009 ) and the microSync Product Family.
+**Meinberg NMS** supports all LTOS devices (starting from firmware version 7.04.009) and the microSync Product Family.
 
 ## Installation
 
-The recommended way to install mbgNMS is by using a **pre-installed DataMiner Virtual Hard Disk**. This method provides you with a ready-to-use virtual machine that has DataMiner pre-installed. Detailed instructions are available in the installation guide.
+The recommended way to install mbgNMS is by using a **pre-installed DataMiner Virtual Hard Disk**. This method provides you with a ready-to-use virtual machine with DataMiner already installed.
 
-![pdf](~/develop/images/mbgNMS_pdf.svg) [**Meinberg Network Management System - Installation Guide.pdf**](ADDLINK)
+For detailed installation instructions, see the installation guide below.
+
+![PDF icon](~/develop/images/mbgNMS_pdf.svg) [**Meinberg Network Management System - Installation Guide.pdf**](https://community.dataminer.services/download/meinberg-network-management-system-installation-guide/)
 
 ## Upgrade
 
@@ -26,7 +28,6 @@ The recommended way to install mbgNMS is by using a **pre-installed DataMiner Vi
 
 > [!TIP]
 > Refer to the [Meinberg NMS manual](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2/) and release notes for detailed instructions.
-
 
 ## Content
 
