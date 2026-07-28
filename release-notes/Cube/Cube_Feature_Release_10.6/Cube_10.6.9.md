@@ -69,7 +69,7 @@ If these shape options are defined, they overrule other show/hide controls.
 
 ### Enhancements
 
-#### Credential library: Token credentials added and credential library enhancements [ID 45670]
+#### Credential library: Token credentials added and credential library enhancements [ID 45670] [ID 46071]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
@@ -80,7 +80,6 @@ Also, all credential fields now have a maximum length of 5012 bytes, and the fol
 | Type of credential | Field |
 |---|---|
 | Community credential | Get community string<br>Set community string |
-| SNMPv3 credential    | Authentication password<br>Encryption password |
 | Token credential     | Authentication password |
 | Username and password credential | Password |
 
