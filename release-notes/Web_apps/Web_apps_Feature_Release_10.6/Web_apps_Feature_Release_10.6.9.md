@@ -146,6 +146,17 @@ As a result, column-only operations, such as building queries or retrieving colu
 
 From now on, it is no longer possible to link the [Select](xref:GQI_Select) query operator to data.
 
+#### DOM: Web API and front-end web code now support FieldDescriptors of type List\<string\> [ID 46053]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+The web API and the front-end web code will now be able to handle DOM configuration and DOM instances that use FieldDescriptors of type `List<string>`.
+
+See also: [DOM: Server-side support for string list FieldDescriptors [ID 46051]](xref:General_Feature_Release_10.6.9#dom-server-side-support-for-string-list-fielddescriptors-id-46051)
+
+> [!NOTE]
+> The UI will not show the generic list of string fields. If a form is shown for a definition that contains such a field, it will not displayed and no value will be provided. If a form is shown for a DOM instance that has a value for such a field, it will not be displayed and the value will be maintained if the DOM instance would be updated.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Table component: Correct column widths would not be applied after the table had been resized or updated [ID 45765]
