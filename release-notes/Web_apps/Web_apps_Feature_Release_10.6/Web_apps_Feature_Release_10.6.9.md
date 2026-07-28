@@ -199,3 +199,11 @@ The web API could leak memory when a user logged out. The user settings stored i
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 Up to now, when a realtime delete update from GQI removed the selected row in a *Dropdown* component, in some cases, a runtime error could be thrown. As a result, the data would not be cleared correctly, and the deleted row could remain selected.
+
+#### GQI DxM: GQI data retrieval could fail when parameters had malformed discrete or exception values [ID 46039]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when a protocol contained malformed discrete or exception values (e.g., string values on a numeric parameter), some GQI data retrieval requests could fail.
+
+From now on, malformed values are ignored and a warning is logged, while valid values remain available.
