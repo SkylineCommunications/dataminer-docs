@@ -122,6 +122,14 @@ In some rare cases, SLDataMiner could stop unexpectedly when SLWatchdog requeste
 
 Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.
 
+#### BrokerGateway could stop unexpectedly on startup because of concurrent semaphore access [ID 46009]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In some cases, BrokerGateway could stop unexpectedly during startup when multiple threads tried to create and release a semaphore with the same key at the same time.
+
+From now on, this concurrent semaphore access will be handled correctly.
+
 #### Invalid matrix 'columntypes' definition could cause SLProtocol to stop unexpectedly [ID 46011]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
