@@ -168,7 +168,7 @@ On DataMiner versions installed using the **DataMiner Installer v10.2**, the Dat
 - TCP 9042: Cassandra (client-server communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [secure self-managed storage](#secure-self-managed-dataminer-storage).
+  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 is used instead. For detailed information on securing Cassandra, refer to [secure self-managed storage](#secure-self-managed-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
@@ -215,7 +215,7 @@ On DataMiner versions installed using the **DataMiner Installer v10.0 (or older)
 - TCP 9042: Cassandra (client-server communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [secure self-managed storage](#secure-self-managed-dataminer-storage).
+  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 is used instead. For detailed information on securing Cassandra, refer to [secure self-managed storage](#secure-self-managed-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
