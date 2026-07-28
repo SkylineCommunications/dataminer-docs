@@ -117,6 +117,19 @@ When GQI requests DOM data, it now checks whether all data is required instead o
 
 When all data is required, e.g., for prefetch join operations or when *Filter assistance* is enabled on a query filter, GQI now requests data with a larger page size. This reduces request overhead and improves performance.
 
+#### DOM security: Group access editor updated with read-only support [ID 45886]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In the DOM security web UI, the group access editor now supports read-only access rules.
+
+Up to now, read-only configurations were not supported in the UI. As a result, when you edited and saved group access settings, a read-only flag could be reset unintentionally.
+
+From now on, group access management is shown in a table-based editor, and read-only values are visible and editable when backend support is available.
+
+> [!NOTE]
+> For this feature to work, the client app needs to be connected to a DataMiner Agent running Feature Release version 10.6.6 or above.
+
 #### GQI DxM: Query column retrieval no longer prepares the full data-fetching pipeline [ID 46018]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
