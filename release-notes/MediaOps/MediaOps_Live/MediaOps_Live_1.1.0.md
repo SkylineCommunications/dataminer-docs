@@ -4,9 +4,6 @@ uid: MediaOps_Live_1.1.0
 
 # MediaOps Live 1.1.0
 
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
-
 ## New features
 
 #### Control Surface: Direct access to job details [ID 45745]
