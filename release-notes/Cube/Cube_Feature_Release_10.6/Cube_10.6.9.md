@@ -128,7 +128,7 @@ When you logged out of DataMiner Cube immediately after you had logged in, in so
 
 When a visual overview displayed alarm statistics for a service, in some cases, those statistics would not be updated correctly after alarm changes.
 
-Up to now, only alarms with `Service impact changed` were taken into account. As a result, when service membership changed without such an alarm being generated, the displayed statistics could be incorrect.
+Up to now, only alarms with `Service impact changed` were taken into account. As a result, when service membership, alarm properties, etc. changed without such an alarm being generated, the displayed statistics could be incorrect.
 
 From now on, service alarm statistics will be updated correctly in those cases as well.
 

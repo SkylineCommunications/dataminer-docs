@@ -125,7 +125,9 @@ In the DOM security web UI, the group access editor now supports read-only acces
 
 Up to now, read-only configurations were not supported in the UI. As a result, when you edited and saved group access settings, a read-only flag could be reset unintentionally.
 
-From now on, group access management is shown in a table-based editor, and read-only values are visible and editable when backend support is available.
+From now on, groups are shown in a table instead of a list, and read-only values are visible and editable when backend support is available.
+
+Also, groups that do not have access will no longer be shown.
 
 > [!NOTE]
 > For this feature to work, the client app needs to be connected to a DataMiner Agent running Feature Release version 10.6.6 or above.
