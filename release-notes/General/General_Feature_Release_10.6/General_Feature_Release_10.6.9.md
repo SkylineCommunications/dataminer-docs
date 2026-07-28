@@ -285,6 +285,19 @@ In some rare cases, SLDataMiner could stop unexpectedly when SLWatchdog requeste
 
 When DOM instances were retrieved from a STaaS database, up to now, the page size would incorrectly be ignored.
 
+#### SLAutomation could stop unexpectedly when Engine methods were used from different threads [ID 45955]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+In some cases, SLAutomation could stop unexpectedly when automation scripts used `Engine` methods from different threads at the same time.
+
+This was caused by non-thread-safe access to cached element information, e.g., when `engine.FindElement` and `engine.CreateExtraDummy` were called concurrently.
+
+Access to that cache has now been made thread safe.
+
+> [!NOTE]
+> The `Engine` object itself is still not thread safe. Scripts should not use the same `Engine` instance from more than one thread at a time.
+
 #### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->

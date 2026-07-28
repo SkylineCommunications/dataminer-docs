@@ -735,3 +735,16 @@ When the DataMiner software was stopped, in some cases, the SLAnalytics process 
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
 Because of a WebSocket issue, in some rare cases, the StorageModule DxM would fail to start. As a result, DataMiner would not be able to start up.
+
+#### SLAutomation could stop unexpectedly when Engine methods were used from different threads [ID 45955]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+In some cases, SLAutomation could stop unexpectedly when automation scripts used `Engine` methods from different threads at the same time.
+
+This was caused by non-thread-safe access to cached element information, e.g., when `engine.FindElement` and `engine.CreateExtraDummy` were called concurrently.
+
+Access to that cache has now been made thread safe.
+
+> [!NOTE]
+> The `Engine` object itself is still not thread safe. Scripts should not use the same `Engine` instance from more than one thread at a time.
