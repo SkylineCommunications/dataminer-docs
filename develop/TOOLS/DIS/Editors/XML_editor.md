@@ -98,10 +98,10 @@ To publish a protocol or an automation script to another, non-default DMA, click
 
 When you publish a protocol or an automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, there is no need to manually copy all required DLL files on the DataMiner Agent in question (e.g., DLL files of NuGet packages that are used in the protocol or automation script).
 
-If you click *Publish* for an Automation script that is part of a solution package (i.e., a script of which the `.csproj` file contains a `DataMinerSolutionId`), DIS will publish the entire solution package rather than only the individual script:
+If you click *Publish* for an automation script that is part of a solution package (i.e., a script of which the `.csproj` file contains a `DataMinerSolutionId`), DIS will publish the entire solution package rather than only the individual script:
 
-- If the script belongs to a single solution package, a confirmation popup will appear informing you that the entire package will be published.
-- If the script is referenced in multiple solution packages, a selection popup will appear allowing you to choose which package to publish. The popup also informs you that the entire package will be published.
+- If the script belongs to a single solution package, a confirmation popup will appear, informing you that the entire package will be published.
+- If the script is referenced in multiple solution packages, a selection popup will appear, allowing you to choose which package to publish. The popup will also inform you that the entire package will be published.
 
 > [!TIP]
 > See also: [DMA](xref:DIS_settings#dma)

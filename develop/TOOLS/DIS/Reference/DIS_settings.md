@@ -256,9 +256,9 @@ In the *XML Schemas* tab, you can configure how DIS manages XML schema updates a
 
 The tab contains a *Download XML Schemas on Visual Studio startup* checkbox, which is enabled by default.
 
-- When this checkbox is enabled, DIS checks for a newer version of the [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) NuGet package each time Visual Studio starts. If a newer version is available, DIS automatically downloads the updated schemas and installs them into Visual Studio (e.g. `C:\Program Files\Microsoft Visual Studio\18\Professional\Xml\Schemas`). The outcome — whether a new version was installed or the current version is already up to date — is reported in the DIS output window.
+- When this checkbox is enabled, DIS will check for a newer version of the [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) NuGet package each time Visual Studio starts. If a newer version is available, DIS will automatically download the updated schemas and install them into Visual Studio (e.g. `C:\Program Files\Microsoft Visual Studio\18\Professional\Xml\Schemas`). The outcome — whether a new version was installed or the current version is already up to date — will be reported in the DIS output window.
 
-- When this checkbox is disabled, DIS installs the schemas that are bundled with DIS, as long as it detects that the currently installed schemas differ from the bundled ones.
+- When this checkbox is disabled, DIS will install the schemas that are bundled with DIS, as long as it detects that the currently installed schemas differ from the bundled ones.
 
 ## Info
 
