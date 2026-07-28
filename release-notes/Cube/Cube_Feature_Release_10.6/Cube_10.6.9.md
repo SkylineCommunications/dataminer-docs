@@ -122,6 +122,16 @@ Now, the `ShowRibbon` option works again, so you can use it to show or hide the 
 
 When you logged out of DataMiner Cube immediately after you had logged in, in some cases, an exception could be thrown related to either the Alarm Console light bulb feature or the Correlation feature.
 
+#### Visual Overview: Service alarm statistics would not always be updated correctly [ID 45795]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When a visual overview displayed alarm statistics for a service, in some cases, those statistics would not be updated correctly after alarm changes.
+
+Up to now, only alarms with `Service impact changed` were taken into account. As a result, when service membership changed without such an alarm being generated, the displayed statistics could be incorrect.
+
+From now on, service alarm statistics will be updated correctly in those cases as well.
+
 #### Spectrum analysis: Long measurement point names without spaces were not wrapped [ID 45892]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
