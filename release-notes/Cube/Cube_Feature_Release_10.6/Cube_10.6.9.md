@@ -155,6 +155,14 @@ Up to now, when you scrolled up to check other events, the window would automati
 
 From now on, the window will only automatically scroll to the bottom when you are already at the bottom. If you manually scroll up to check other events, the window will remain at that position, while new events continue to arrive (as indicated by the scroll bar on the right).
 
+#### Spectrum analyzers: Newly saved preset in current session could load the default preset [ID 45989]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When you saved a preset in a spectrum analyzer and then loaded it immediately in the same DataMiner Cube session, in some cases, the default preset would be loaded instead.
+
+From now on, newly saved presets are loaded correctly in the current session.
+
 #### Visual Overview - Spectrum analysis component: Restarting a spectrum element would cause a null reference exception to be thrown [ID 45994]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
