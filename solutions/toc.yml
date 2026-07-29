@@ -366,6 +366,29 @@ items:
         topicUid: Overview_of_the_PTP_LCA_UI
       - name: PTP app in Cube
         topicUid: Overview_of_the_PTP_app_in_Cube_UI
+    - name: SatOps
+      topicUid: SatOps
+      items:
+      - name: Installing SatOps
+        topicUid: SatOps_Installation
+      - name: Satellite Inventory
+        topicUid: Satellite_Inventory
+        items:
+        - name: Introduction
+          topicUid: SI_Introduction
+        - name: Managing satellites
+          topicUid: SI_Managing_Satellites
+        - name: Managing beams
+          topicUid: SI_Managing_Beams
+        - name: Managing transponders
+          topicUid: SI_Managing_Transponders
+      - name: Satellite Scheduling
+        topicUid: Satellite_Scheduling
+        items:
+        - name: Introduction
+          topicUid: SS_Introduction
+        - name: Link with scheduling app
+          topicUid: SS_Link_With_Scheduling_App
     - name: Ticketing
       topicUid: Ticketing
       items:
