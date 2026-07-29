@@ -173,3 +173,11 @@ In some cases, BrokerGateway could stop unexpectedly during startup when multipl
 Up to now, when a matrix parameter had fewer `columntypes` defined in its options than there were dimensions, `SLProtocol` could stop unexpectedly when `protocol.SendToDisplay` was called on that matrix parameter.
 
 From now on, missing matrix outputs that are not covered by `columntypes` will be handled correctly.
+
+#### Service card reports could show incorrect alarm counts on clustered databases [ID 46048]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, on clustered databases (Cassandra Cluster or STaaS), alarm counts in the *Reports* section of a service card could be duplicated by the number of DataMiner Agents involved in that service.
+
+From now on, those alarm counts will be calculated correctly when a service includes elements hosted on multiple Agents.
