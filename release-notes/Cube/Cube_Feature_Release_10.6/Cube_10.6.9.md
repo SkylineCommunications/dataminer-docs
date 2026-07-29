@@ -69,7 +69,7 @@ If these shape options are defined, they overrule other show/hide controls.
 
 ### Enhancements
 
-#### Credential library: Token credentials added and credential library enhancements [ID 45670]
+#### Credential library: Token credentials added and credential library enhancements [ID 45670] [ID 46071]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
@@ -80,7 +80,6 @@ Also, all credential fields now have a maximum length of 5012 bytes, and the fol
 | Type of credential | Field |
 |---|---|
 | Community credential | Get community string<br>Set community string |
-| SNMPv3 credential    | Authentication password<br>Encryption password |
 | Token credential     | Authentication password |
 | Username and password credential | Password |
 
@@ -122,6 +121,16 @@ Now, the `ShowRibbon` option works again, so you can use it to show or hide the 
 
 When you logged out of DataMiner Cube immediately after you had logged in, in some cases, an exception could be thrown related to either the Alarm Console light bulb feature or the Correlation feature.
 
+#### Visual Overview: Service alarm statistics would not always be updated correctly [ID 45795]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When a visual overview displayed alarm statistics for a service, in some cases, those statistics would not be updated correctly after alarm changes.
+
+Up to now, only alarms with `Service impact changed` were taken into account. As a result, when service membership, alarm properties, etc. changed without such an alarm being generated, the displayed statistics could be incorrect.
+
+From now on, service alarm statistics will be updated correctly in those cases as well.
+
 #### Spectrum analysis: Long measurement point names without spaces were not wrapped [ID 45892]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
@@ -145,6 +154,14 @@ During an upgrade, or when importing or exporting, progress events come in conti
 Up to now, when you scrolled up to check other events, the window would automatically scroll back to the bottom, making it impossible to view earlier events.
 
 From now on, the window will only automatically scroll to the bottom when you are already at the bottom. If you manually scroll up to check other events, the window will remain at that position, while new events continue to arrive (as indicated by the scroll bar on the right).
+
+#### Spectrum analyzers: Newly saved preset in current session could load the default preset [ID 45989]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When you saved a preset in a spectrum analyzer and then loaded it immediately in the same DataMiner Cube session, in some cases, the default preset would be loaded instead.
+
+From now on, newly saved presets are loaded correctly in the current session.
 
 #### Visual Overview - Spectrum analysis component: Restarting a spectrum element would cause a null reference exception to be thrown [ID 45994]
 
