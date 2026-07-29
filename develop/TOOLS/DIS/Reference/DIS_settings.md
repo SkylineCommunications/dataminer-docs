@@ -28,8 +28,6 @@ To add a DMA to the list:
 
    | Setting | Description |
    | ------- | ----------- |
-   | Publish path | The network path to the shared folder on the remote DMA where DIS will upload the DLL files and the symbol files.<br>Default: \\\\remote-dma\\dis |
-   | Path on DataMiner | The local path to the shared folder on the remote DMA where DIS will upload the DLL files and the symbol files.<br>Default: C:\\dis\\ |
    | Debugger qualifier | The qualifier supplied by Remote Debugging Monitor (msvsmon.exe) at startup.<br>Format: dmaname:ipport |
 
    > [!TIP]
