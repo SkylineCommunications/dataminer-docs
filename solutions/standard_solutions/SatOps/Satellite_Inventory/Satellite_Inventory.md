@@ -26,4 +26,6 @@ With the Satellite Inventory app, you can:
 
 - **[Managing beams](xref:SI_Managing_Beams)**: How to add and manage the beams of a satellite.
 
-- **[Managing transponders](xref:SI_Managing_Transponders)**: How to add and manage transponders, transponder plans, and slots.
+- **[Managing transponders](xref:SI_Managing_Transponders)**: How to add and manage the transponders of a beam.
+
+- **[Transponder plans and slots](xref:SI_Transponder_Plans)**: How to define permanent and temporary transponder plans and generate the bookable transponder slots.

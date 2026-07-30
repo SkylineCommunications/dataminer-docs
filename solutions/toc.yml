@@ -382,6 +382,8 @@ items:
           topicUid: SI_Managing_Beams
         - name: Managing transponders
           topicUid: SI_Managing_Transponders
+        - name: Transponder plans and slots
+          topicUid: SI_Transponder_Plans
       - name: Satellite Scheduling
         topicUid: Satellite_Scheduling
         items:

@@ -5,12 +5,46 @@ description: Learn how to add and manage the beams of a satellite in the Satelli
 
 # Managing beams
 
-A *beam* represents a coverage area of a [satellite](xref:SI_Managing_Satellites) and groups one or more [transponders](xref:SI_Managing_Transponders). You create and manage beams through interactive dialogs in the Satellite Inventory app.
+A *beam* represents a coverage area of a [satellite](xref:SI_Managing_Satellites) and groups one or more [transponders](xref:SI_Managing_Transponders). The *Beams* page lists the configured beams and lets you manage them.
 
-Using the app, you can:
+![The Beams page listing the configured beams](~/solutions/images/SO_SI_Beams_Page.png)
 
-- Add a beam to a satellite and edit its properties.
-- Display the satellite's coverage areas and beam footprints on a geographical map using KML files.
+## Filtering the beam list
+
+At the top of the page, you can filter the beams by:
+
+- *Transmission type*: transmit (Tx), receive (Rx), or carrier-in-carrier (CiC).
+- Beam *name*.
+
+To clear a filter, click the cross next to it.
+
+## Adding or editing a beam
+
+1. On the *Beams* page, add a new beam or click the pencil icon to edit an existing one.
+
+   ![The beam dialog with the footprint file, link type, transmission type, and satellite fields](~/solutions/images/SO_SI_Edit_Beam.png)
+
+1. Fill in the beam properties:
+
+   - *Footprint file*: the file that describes the beam footprint. You can embed the file directly, or point to a public URL that hosts it.
+   - *Link type*
+   - *Transmission type*
+   - *Satellite*: the satellite the beam belongs to.
+
+1. Save the beam.
 
 > [!NOTE]
-> Detailed, step-by-step instructions for creating and editing a beam, including how to attach a KML footprint, still need to be added to this page.
+> From SatOps 2.0 onwards, beam footprints are defined with KML files. Support for GeoJSON files is planned for a future release.
+
+## Viewing a beam footprint
+
+When a beam has a footprint file, you can display it on a geographical map to see the area it covers.
+
+![A beam footprint displayed on a geographical map, covering Europe](~/solutions/images/SO_SI_Beam_Footprint.png)
+
+## Deprecating a beam
+
+You can edit a beam or deprecate it, but you cannot delete it.
+
+> [!WARNING]
+> Beams can never be deleted, by design. To take a beam out of use, deprecate it instead. This keeps the historical inventory intact.

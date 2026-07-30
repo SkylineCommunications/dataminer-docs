@@ -16,3 +16,15 @@ The Satellite Inventory app lets you build and maintain a complete model of your
 The satellite hierarchy (satellite, beams, transponders) can be visualized in an interactive node edge graph, and transponder plan layouts can be inspected slot by slot.
 
 To quickly set up an environment for evaluation, you can import satellite demo data from a predefined template.
+
+## Navigating the app
+
+Open the left panel to switch between the four pages of the app: *Satellites*, *Transponders*, *Beams*, and *About*. The *Satellites* page is the main page and your usual starting point.
+
+![The navigation panel of the Satellite Inventory app showing the Satellites, Transponders, Beams, and About pages](~/solutions/images/SO_SI_Navigation.png)
+
+## About page
+
+The *About* page shows the version of the app and the version of the SatOps Catalog package you are working with. This is useful to know exactly which version of the standard solution you are on. At the bottom of the page, the *Help* button links to the official SatOps documentation on DataMiner Docs.
+
+![The About page showing the app version and the SatOps package version](~/solutions/images/SO_SI_About_Page.png)
