@@ -46,6 +46,20 @@ The *Tokens* table includes a *Rate limit* column, showing the configured rate l
 > - A configured rate limit restricts the number of requests a client can make within a specified time window. However, it does not guarantee that the server can process all requests up to that limit. Actual throughput depends on several factors, including the execution time of the API script, the number of concurrently active tokens, and overall server load.
 > - This feature will only work when DataMiner Cube is connected to a DataMiner Agent running Main Release version 10.7.0, Feature Release 10.6.7, or above.
 
+#### Spectrum analyzer: Support added for reference traces and reference trace markers [ID 45843]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Support has now been added for reference traces and reference trace markers in spectrum analyzers.
+
+Reference traces and their markers can now be used and saved in presets. You can now also update a reference trace by setting or resetting it from the ribbon.
+
+In addition, this change includes the following fixes:
+
+- Saving a reference trace no longer uses local culture formatting for numeric values.
+- The *Show reference* ribbon setting is now saved correctly in the display settings.
+- Special markers (*Min*, *Max*, and *Avg*) are now saved correctly when they are not locked to a trace.
+
 #### Visual Overview - Spectrum analysis component: Options added to show or hide settings and info panels [ID 45947]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
@@ -79,7 +93,7 @@ Also, all credential fields now have a maximum length of 5012 bytes, and the fol
 
 | Type of credential | Field |
 |---|---|
-| Token credential     | Authentication password |
+| Token credential | Authentication password |
 | Username and password credential | Password |
 
 > [!NOTE]
