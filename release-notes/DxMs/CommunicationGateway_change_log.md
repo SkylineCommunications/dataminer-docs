@@ -8,9 +8,9 @@ uid: CommunicationGateway_change_log
 
 CommunicationGateway now targets .NET 10.
 
-Also, the name of the CommunicationGateway.Grpc.Api NuGet has been changed into Skyline.DataMiner.DataSources.CommunicationGateway.Grpc.Api.
+In addition, the CommunicationGateway.Grpc.Api NuGet has been renamded to Skyline.DataMiner.DataSources.CommunicationGateway.Grpc.Api.
 
-The DataMinerMessageBroker.API dependency has been updated to version 4.0.0.
+The DataMinerMessageBroker.API dependency has also been updated to version 4.0.0.
 
 #### 30 July 2026 - Enhancement - CommunicationGateway 5.3.5 - Added .NET 10 prerequisite check in installer [ID 46063]
 
