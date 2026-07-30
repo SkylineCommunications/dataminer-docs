@@ -8,7 +8,7 @@ Before upgrading to 10.6.0/10.6.1, migrating to BrokerGateway is **mandatory**. 
 
 The migration is done using the *NATSMigration* tool. In most cases, this should be used to run an automatic migration. A manual migration is also possible with this tool, but will only be required in very specific circumstances and after consultation with Skyline Communications.
 
-The migration should be executed on DataMiner version **10.5.0 [CU11] or a later CU for the main release track or 10.5.12 [CU2] for the feature release track**. While it is possible to migrate earlier DataMiner versions starting from DataMiner 10.5.0 [CU4]/10.5.7 [CU1], this has several limitations.
+The migration should be executed on **DataMiner Main Release 10.5.0 [CU11] or any later cumulative update of that Main Release, or on DataMiner Feature Release 10.5.12 [CU2]**. While it is possible to migrate earlier DataMiner versions starting from DataMiner 10.5.0 [CU4]/10.5.7 [CU1], this has several limitations.
 
 > [!IMPORTANT]
 >
