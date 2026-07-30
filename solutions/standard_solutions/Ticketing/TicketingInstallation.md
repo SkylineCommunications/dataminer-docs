@@ -21,3 +21,6 @@ description: Deploy the Ticketing Solution from the DataMiner Catalog after chec
 
    > [!TIP]
    > For more details on deploying items from the Catalog, see [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
+
+> [!NOTE]
+> When you first install the Ticketing Solution, a set of sample tickets will be created to demonstrate the key Ticketing concepts and to allow you to explore the app and its workflows without starting from an empty environment.<!-- RN 45923 -->

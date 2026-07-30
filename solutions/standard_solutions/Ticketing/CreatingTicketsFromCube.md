@@ -27,6 +27,8 @@ To manually create a ticket for an alarm in Cube:
    > [!NOTE]
    > For information on the external ticketing system integration, refer to [External ticketing system integration](xref:ExternalTicketingSystemIntegration) or specifically the [ServiceNow integration example](xref:ServiceNowIntegrationExample).
 
+1. If you selected a ticket type that requires the configuration of additional fields, click *Next* and configure those fields.<!-- RN 45915 -->
+
 1. Click *Create*.
 
    A confirmation message will be shown, which will contain the ticket ID, name, severity, and priority. For example:
