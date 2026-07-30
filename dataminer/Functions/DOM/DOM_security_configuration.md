@@ -8,7 +8,7 @@ uid: DOM_security_ui
 
 From DataMiner 10.5.11/10.6.0 onwards<!--RN 43622-->, you can configure definition-level security settings for DOM. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44385-->, you can also configure security at DOM instance level. In the background, this will make use of the [link security](xref:DOM_security#link-security) feature.
 
-![Configuring DOM security](~/dataminer/images/DOMSecurityApp.png)<br>*Configuring DOM security in DataMiner 10.6.3*
+![Configuring DOM security](~/dataminer/images/DOMSecurityApp.png)<br>*Configuring DOM security in DataMiner 10.6.9*
 
 ## Accessing the DOM security UI
 
@@ -27,29 +27,38 @@ The UI displays all available DOM modules in a list on the left, with a filter b
 
 By default, all users will have full access to all DOM modules, which means that they will all be allowed to create, read, update, and delete DOM definitions in all available DOM modules.
 
+From DataMiner 10.6.9 onwards<!--RN 45886-->, the security configuration uses a redesigned table-based group editor. In earlier DataMiner versions, the UI may look different.
+
 To restrict access for specific definitions and their instances:
 
 1. Select a module, and switch to *Restrict access* with the button on the right.
 
    At this point, no one will have access to the definitions in the module. The list of DOM definitions within the module will expand so you can select a definition.
 
-1. Select a definition and set the access level for each user group:
+1. Select a definition.
 
-   - *No access*: The group cannot access this definition.
+   The right panel shows a table of user groups that have access to that definition.
 
-   - *Limited access*: Available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44385-->. The group can only access DOM instances that contain specific values in specific `DomInstanceFieldDescriptor` fields.
+1. Click *+ Add groups* in the top-right corner and select the groups you want to add.
 
-   - *Full access*: The group can read, update, and delete this definition.
+   Each added group gets *Full* access by default, meaning it can read, update, and delete instances of that definition.
 
-1. If you select *Limited access*:
+1. To restrict a group to specific DOM instances, add a condition in the *Condition* column (available from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44385-->):
 
-   - Select a field descriptor.
+   - Select a field descriptor from the dropdown.
 
    - Specify the value(s) the field must contain.
 
-   ![Example: London office](~/dataminer/images/LondonOffice.png)<br>*Configuring DOM security in DataMiner 10.6.3*
+   When a condition is set, the access level badge changes to *Limited*, meaning the group can only access DOM instances where the specified field contains the specified value(s).
 
-   For example, the user group *London employees* can only access *Job* instances where the *Assigned office* field contains the DOM instance ID of the London office.
+   For example, the *Engineering* group can be configured to only access *Job* instances where the *Assigned office* field contains the value *Engineering HQ*.
+
+1. To give a group read-only access, enable the *Read-only* toggle for that row.
+
+   > [!NOTE]
+   > The *Read-only* toggle is only available when the connected DataMiner server supports read-only link security (available from DataMiner 10.6.6/10.7.0 onwards<!-- RN 45275 -->).
+
+1. To remove a group's access to the definition, click the delete button at the end of that group's row.
 
 1. Repeat this for each definition users should have access to.
 
