@@ -10,11 +10,11 @@ SatOps is a standard solution for DataMiner that enables satellite broadcasters 
 The SatOps solution includes the following applications, which are ready for use out of the box:
 
 <div class="row">
-  <div class="column" style="text-align:center">
-  <a href="/solutions/standard_solutions/SatOps/Satellite_Inventory/Satellite_Inventory.html" title="Satellite Inventory" target="_self"><img src="~/solutions/images/SatelliteInventory.png" alt="Satellite Inventory app icon" style="width:120px"><br>Satellite Inventory</a>
+  <div class="column">
+  <a href="/solutions/standard_solutions/SatOps/Satellite_Inventory/Satellite_Inventory.html" title="Satellite Inventory" target="_self"><img src="~/solutions/images/SatelliteInventory.svg" alt="Satellite Inventory app icon" style="width:100%"></a>
   </div>
-  <div class="column" style="text-align:center">
-  <a href="/solutions/standard_solutions/SatOps/Satellite_Scheduling/Satellite_Scheduling.html" title="Satellite Scheduling" target="_self"><img src="~/solutions/images/SatelliteScheduling.png" alt="Satellite Scheduling app icon" style="width:120px"><br>Satellite Scheduling</a>
+  <div class="column">
+  <a href="/solutions/standard_solutions/SatOps/Satellite_Scheduling/Satellite_Scheduling.html" title="Satellite Scheduling" target="_self"><img src="~/solutions/images/SatelliteScheduling.svg" alt="Satellite Scheduling app icon" style="width:100%"></a>
   </div>
 </div>
 
