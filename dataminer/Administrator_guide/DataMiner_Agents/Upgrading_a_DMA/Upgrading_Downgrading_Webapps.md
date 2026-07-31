@@ -1,5 +1,6 @@
 ---
 uid: Upgrading_Downgrading_Webapps
+description: "Follow these instructions to upgrade or downgrade the DataMiner web apps while leaving all other DataMiner processes untouched."
 ---
 
 # Upgrading the DataMiner web apps

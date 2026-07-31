@@ -22,7 +22,7 @@ items:
             topicUid: Configuring_the_landing_page
           - name: DMA configuration related to client applications
             topicUid: DMA_configuration_related_to_client_applications
-          - name: Changing the IP of a DMA
+          - name: Changing the IP address of a DMA
             topicUid: Changing_the_IP_of_a_DMA
           - name: Forcing a DataMiner Agent to work without virtual IP addresses
             topicUid: Forcing_a_DMA_to_work_without_virtual_IPs

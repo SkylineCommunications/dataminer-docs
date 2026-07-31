@@ -1,6 +1,6 @@
 ---
 uid: Adding_a_DataMiner_Probe
-description: Add a DataMiner Probe to a cluster in the same way as a regular DMA, but select to add it as an external DataMiner Agent.
+description: "Add a DataMiner Probe to a cluster in the same way as a regular DMA, but select to add it as an external DataMiner Agent."
 ---
 
 # Adding a DataMiner Probe as a node in a cluster

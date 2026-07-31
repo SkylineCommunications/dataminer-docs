@@ -12,7 +12,7 @@ uid: MediaOps_Plan_2.0.0
 >
 > - DataMiner 10.6.4/10.7.0 or higher.
 > - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.0 or higher.
-> - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e) 1.1.0 or higher.
+> - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e) 1.3.0 or higher.
 
 > [!TIP]
 > Installing [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) alongside MediaOps Plan allows you to orchestrate jobs and workflows and fully automate the setup and teardown processes.
@@ -102,6 +102,28 @@ The dialog used to dynamically link parameter values (capabilities, capacities, 
 
 - **Pre/post relationship indicators**: In the node list, each node now indicates how it relates to the current node. A node connected into the current node is labeled "*(pre)*", a node that the current node connects to is labeled "*(post)*", and a node for which both apply is labeled "*(pre/post)*". This makes it easier to pick the correct node when configuring links across a workflow.
 
+#### Workflow Designer and Scheduling: Nodes now show tooltip with alias and resource information [ID 46025]
+
+Node components in the Workflow Designer and Scheduling apps now show a tooltip when you hover over them.
+
+Depending on what is available for the node, this tooltip can show the following information:
+
+- Alias
+- Resource name
+- Resource pool name
+
+#### Resource Studio: Improved UI when creating or editing capabilities [ID 46026]
+
+Several minor UI improvements have been implemented in the automation script responsible for creating and editing capabilities from Resource Studio.
+
+#### Jobs can now be confirmed without resource nodes [ID 46064]
+
+It is now possible to confirm a job that has no resource nodes.
+
+Previously, attempting to confirm such a job resulted in an error indicating that at least one assigned resource was required.
+
+Node-less jobs can now move freely through the *Tentative* > *Confirmed* > *Tentative* lifecycle without requiring any nodes to be present.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
@@ -119,3 +141,17 @@ This issue has now been fixed, and deprecated organizations are no longer shown.
 When you opened the scheduling configuration of a node in a recurring workflow, it could occur that some input parameters were not correctly linked. As a result, an unexpected pop-up message appeared, prompting you to provide values for the missing parameters.
 
 This issue has been resolved. The scheduling configuration dialog is now correctly displayed in read-only mode, as intended.
+
+#### Installer: Downgrade attempts now fail explicitly instead of being skipped [ID 46060]
+
+Previously, if you attempted to install an older version of MediaOps Plan while a newer compatible version was already installed, the installation could be logged as "skipped". In some cases, DataMiner could still register the incoming package version internally.
+
+As a result, the version effectively running on the system could differ from the version tracked by DataMiner, which could cause confusion during follow-up upgrades or troubleshooting.
+
+This behavior has now been changed. In downgrade scenarios where a newer compatible version is already present, the installation now fails explicitly instead of continuing as a soft skip. This ensures the version registered by DataMiner remains aligned with the version that is actually installed and active on the system.
+
+#### Installation now verifies minimum required Categories version [ID 46084]
+
+Previously, MediaOps Plan could still be installed when an older, unsupported version of Categories was present on the system. This could lead to issues later.
+
+MediaOps Plan now verifies that Categories 1.3.0 or higher is installed before continuing. If the installed Categories version is too old, the installation is stopped with a clear message so you can update Categories first.

@@ -1,6 +1,7 @@
 ---
 uid: Configuration_of_DataMiner_processes
 keywords: enabling gRPC, gRPC configuration
+description: "Follow these instructions to configure different DataMiner processes in order to enhance overall system performance."
 ---
 
 # Configuring DataMiner processes

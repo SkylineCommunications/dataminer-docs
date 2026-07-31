@@ -1,5 +1,6 @@
 ---
 uid: DMA_client_and_inter_DMA_communication
+description: "Review DMA-client and inter-DMA communication, and learn about the differences between gRPC or .NET Remoting."
 ---
 
 # DMA-client and inter-DMA communication

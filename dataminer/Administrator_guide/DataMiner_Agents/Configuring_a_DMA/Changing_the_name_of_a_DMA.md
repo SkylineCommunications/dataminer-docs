@@ -1,5 +1,6 @@
 ---
 uid: Changing_the_name_of_a_DMA
+description: "Follow these instructions to change the name of a DMA. Configure an alias in DataMiner.xml and, if necessary, change that alias in DataMiner Cube."
 ---
 
 # Changing the name of a DMA

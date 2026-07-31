@@ -2,10 +2,7 @@
 uid: MediaOps_Live_1.1.0
 ---
 
-# MediaOps Live 1.1.0 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Live 1.1.0
 
 ## New features
 
@@ -41,8 +38,20 @@ While a connection or disconnection is still in progress, an hourglass icon is n
 
 ### Fixes
 
+#### Discrete parameters with numeric values caused orchestration events to fail [ID 45773]
+
+When discrete parameters were used with numeric values (e.g., to indicate video formats), it could occur that orchestration events failed. Now the validation correctly supports both numeric and string discrete parameters.
+
 #### CSV import could include the wrong endpoint when source and destination endpoints had the same name [ID 45959]
 
 When a source and destination endpoint in a virtual signal group shared the same name, a CSV import could include the wrong endpoint because matching was based on name only.
 
 When you import a virtual signal group from CSV, endpoints will now be resolved by both role and name, preventing mismatches when source and destination endpoints share the same name.
+
+#### Installer: Downgrade attempts now fail explicitly instead of being skipped [ID 46060]
+
+Previously, if you attempted to install an older version of MediaOps Live while a newer compatible version was already installed, the installation could be logged as "skipped". In some cases, DataMiner could still register the incoming package version internally.
+
+As a result, the version effectively running on the system could differ from the version tracked by DataMiner, which could cause confusion during follow-up upgrades or troubleshooting.
+
+This behavior has now been changed. In downgrade scenarios where a newer compatible version is already present, the installation now fails explicitly instead of continuing as a soft skip. This ensures the version registered by DataMiner remains aligned with the version that is actually installed and active on the system.

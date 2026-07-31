@@ -12,8 +12,6 @@ The proxy server has to support both HTTP and WebSocket traffic.
 
 To configure this:
 
-1. [Connect to dataminer.services](xref:Connect_to_dataminer_services).
-
 1. In the folder `C:\ProgramData\Skyline Communications\DxMs Shared\` on the DMA, create the file *appsettings.proxy.json* if it does not already exist, and configure the *ProxyOptions* as follows:
 
    ```json
@@ -32,3 +30,5 @@ To configure this:
 
    > [!NOTE]
    > If you are using a version of CloudFeed prior to 1.1.0 or a version of ArtifactDeployer prior to 1.4.5, you will need to restart these DxMs as well.
+
+1. [Connect to dataminer.services](xref:Connect_to_dataminer_services).

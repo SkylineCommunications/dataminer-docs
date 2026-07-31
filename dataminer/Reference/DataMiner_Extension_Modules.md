@@ -83,7 +83,12 @@ The UserDefinableApiEndpoint module is responsible for handling API triggers for
 
 ### Web
 
-The Web module provides backend services for the DataMiner web apps.
+The Web module is a backend process that DataMiner web apps can use without relying on `SLHelper`. It is intended to make web apps more independent from server-side components for backend tasks.
+
+Currently, this module is responsible for the following:
+
+- Generating dashboard reports.
+- Spinning up a backend browser used to generate WAF rules.
 
 This DxM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43439 -->
 
