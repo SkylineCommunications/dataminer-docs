@@ -79,6 +79,18 @@ If these shape options are defined, they overrule other show/hide controls.
 > [!NOTE]
 > These options are only applied when the shape is initialized. Afterwards, they cannot be toggled on the fly.
 
+#### Visual Overview - Spectrum analysis component: New 'SaveLastSessionPreset' option [ID 46106]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When configuring a spectrum analysis component in Visual Overview, you can now use the `SaveLastSessionPreset` option to control whether the last session preset is saved:
+
+- `SaveLastSessionPreset=True`: The last session preset will be saved (default behavior).
+- `SaveLastSessionPreset=False`: The last session preset will not be saved.
+
+> [!NOTE]
+> This option is only applied when the shape is initialized. Afterwards, it cannot be toggled on the fly.
+
 ## Changes
 
 ### Enhancements
