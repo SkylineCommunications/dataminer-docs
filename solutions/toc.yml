@@ -6,6 +6,15 @@ items:
     topicUid: SOL_About
   - name: Standard Solutions
     items:
+    - name: Cost & Billing
+      topicUid: Cost_Billing_Intro
+      items:
+      - name: Architecture
+        topicUid: Cost_Billing_Architecture
+      - name: Installation
+        topicUid: Cost_Billing_Installation
+      - name: How to use
+        topicUid: Cost_Billing_Use
     - name: DocumentHub
       topicUid: DocumentHub
       items:
