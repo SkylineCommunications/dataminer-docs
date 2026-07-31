@@ -1,5 +1,6 @@
 ---
 uid: Viewing_the_Failover_setup
+description: "Find out how to view a graphical representation of a Failover setup — two DMAs set up as each other's backup."
 ---
 
 # Viewing the Failover setup
