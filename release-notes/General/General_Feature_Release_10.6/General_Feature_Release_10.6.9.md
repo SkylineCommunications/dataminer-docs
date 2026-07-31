@@ -161,12 +161,6 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
-#### CloudFeed DxM: Enhanced handling of files in use during upgrades [ID 45965]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-
-From now on, the *Windows Restart Manager* will be enabled when installing the CloudFeed DxM. This will prevent unnecessary delays caused by files still in use by the CloudFeed instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
-
 #### DOM: Server-side support for string list FieldDescriptors [ID 46051]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->

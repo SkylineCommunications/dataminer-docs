@@ -648,12 +648,6 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
 From now on, when you open the SLLogCollector tool, the tool will automatically be configured to include a memory dump of the SLPort and SLSNMPManager processes when a runtime error was detected in SLProtocol.
 
-#### CloudFeed DxM: Enhanced handling of files in use during upgrades [ID 45965]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-
-From now on, the *Windows Restart Manager* will be enabled when installing the CloudFeed DxM. This will prevent unnecessary delays caused by files still in use by the CloudFeed instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
-
 #### DOM: Server-side support for string list FieldDescriptors [ID 46051]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
