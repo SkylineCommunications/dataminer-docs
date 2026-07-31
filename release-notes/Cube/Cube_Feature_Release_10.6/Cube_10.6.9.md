@@ -115,6 +115,22 @@ Up to now, in DataMiner Cube, popups showing `The requested trace requires a swe
 
 Also, these popups will now be ignored when a spectrum component is in zero-span mode.
 
+#### System Center - User-Defined APIs: Enhanced validation of dynamic routes [ID 46007]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When you create or edit a user-defined API in *System Center* or via the *Configure API* automation script action, dynamic routes are now validated more thoroughly.
+
+This updated validation now checks, among other things, whether:
+
+- A route is not empty.
+- A route does not start or end with `/`.
+- A route does not contain empty path segments.
+- Parameter placeholders are well-formed.
+- Parameter names do not contain invalid route syntax characters.
+- A parameter name is not used more than once in the same route.
+- A route template is unique across API definitions.
+
 ### Fixes
 
 #### Visual Overview - Spectrum analysis component: 'ShowRibbon' option no longer worked [ID 45725]
