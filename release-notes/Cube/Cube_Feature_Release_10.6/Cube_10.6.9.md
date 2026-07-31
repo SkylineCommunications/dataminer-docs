@@ -197,3 +197,9 @@ From now on, newly saved presets are loaded correctly in the current session.
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 When you restarted a spectrum element while working in DataMiner Cube, in some cases, a null reference exception could be thrown, causing problems in the spectrum UI.
+
+#### Alarm Console: Problem when updating the values in the 'Alarm duration' column [ID 46103]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In the Alarm Console, in some cases, the timer that keeps the values in the *Alarm duration* column up to date could incorrectly get activated multiple times, causing updates to be performed more than once.
