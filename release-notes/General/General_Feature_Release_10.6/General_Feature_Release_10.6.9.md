@@ -36,19 +36,6 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-#### Credentials at rest [ID 44075] [ID 44352] [ID 44701] [ID 44702] [ID 44911]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-
-From now on, credential secrets are stored as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) instead of in the legacy *Library.xml* file. The encryption material is held in a per-node `encryptors.bin` file under `%CommonApplicationData%\Skyline Communications\DataMiner StorageModule\Encryption\`, wrapped with the Windows [Data Protection API (DPAPI)](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection) under *LocalMachine* scope.
-
-Because DPAPI binds the encryption keys to the host that produced them, restoring a DataMiner Agent on a different machine requires a **DMS backup password**. When this password has been configured, a full DataMiner backup contains a passphrase-wrapped envelope (`backup_encryptors.bin`) that is sealed with PBKDF2-HMAC-SHA-256 (100,000 iterations, 32-byte salt) and AES-256-CBC with HMAC-SHA-256, so that the encryption material can travel between hosts without exposing the keys in plain text. For more information, see [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent) and [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility).
-
-> [!IMPORTANT]
-> Store the DMS backup password securely outside DataMiner (for example, in a password manager). If it is lost, encrypted credentials in any backup taken with that password can no longer be recovered on a clean host. In a multi-node cluster, a peer DataMiner Agent can re-synchronize the encryption material to a restored node, but this should not be relied upon as a substitute for a properly configured DMS backup password.
-
-<!-- See also Cube RNs [ID 45704] [ID 45997] -->
-
 #### Automation: Added support for running scripts in separate SLAutomation.ScriptRunner processes by SolutionId [ID 45557]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
@@ -117,6 +104,12 @@ If you want SLLogCollector to collect all pending calls for a number of the spec
 > - The *Output pending calls* option will still automatically be selected when any of the running processes have runtime errors linked to elements.
 > - Clearing the *Output pending calls* option will only hide the element selection grid. The current selection will not be cleared, so when you select the *Output pending calls* option again, everything is restored without any need to reload the elements.
 
+#### Cassandra Cluster Migrator tool now supports migrating credential library credentials [ID 45824]
+
+<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
+
+The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to Cassandra Cluster from MySQL or Cassandra Single, now also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the credential library.
+
 #### Automation: Improved save logic for automation scripts [ID 45836]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
@@ -167,6 +160,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner DataAPI 1.4.6
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+#### DOM: Server-side support for string list FieldDescriptors [ID 46051]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When using DOM in scripts, ad hoc data sources, etc., from now on, it will be possible to specify a `List<string>` type on a normal FieldDescriptor. Up to now, only single fields were allowed. Now, multiple string values will also be supported.
 
 ### Fixes
 
@@ -279,8 +278,43 @@ In some rare cases, SLDataMiner could stop unexpectedly when SLWatchdog requeste
 
 When DOM instances were retrieved from a STaaS database, up to now, the page size would incorrectly be ignored.
 
+#### SLAutomation could stop unexpectedly when Engine methods were used from different threads [ID 45955]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+In some cases, SLAutomation could stop unexpectedly when automation scripts used `Engine` methods from different threads at the same time.
+
+This was caused by non-thread-safe access to cached element information, e.g., when `engine.FindElement` and `engine.CreateExtraDummy` were called concurrently.
+
+Access to that cache has now been made thread safe.
+
+> [!NOTE]
+> The `Engine` object itself is still not thread safe. Scripts should not use the same `Engine` instance from more than one thread at a time.
+
 #### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.
+
+#### BrokerGateway could stop unexpectedly on startup because of concurrent semaphore access [ID 46009]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In some cases, BrokerGateway could stop unexpectedly during startup when multiple threads tried to create a semaphore with the same key at the same time. This could cause the semaphore to be released more than once, which made BrokerGateway crash.
+
+#### Invalid matrix 'columntypes' definition could cause SLProtocol to stop unexpectedly [ID 46011]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when a matrix parameter had fewer `columntypes` defined in its options than there were dimensions, `SLProtocol` could stop unexpectedly when `protocol.SendToDisplay` was called on that matrix parameter.
+
+From now on, missing matrix outputs that are not covered by `columntypes` will be handled correctly.
+
+#### Service card reports could show incorrect alarm counts on clustered databases [ID 46048]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, on clustered databases (Cassandra Cluster or STaaS), alarm counts in the *Reports* section of a service card could be duplicated by the number of DataMiner Agents involved in that service.
+
+From now on, those alarm counts will be calculated correctly when a service includes elements hosted on multiple Agents.

@@ -117,11 +117,45 @@ When GQI requests DOM data, it now checks whether all data is required instead o
 
 When all data is required, e.g., for prefetch join operations or when *Filter assistance* is enabled on a query filter, GQI now requests data with a larger page size. This reduces request overhead and improves performance.
 
+#### DOM security: Group access editor updated with read-only support [ID 45886]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In the DOM security web UI, the group access editor now supports read-only access rules.
+
+Up to now, read-only configurations were not supported in the UI. As a result, when you edited and saved group access settings, a read-only flag could be reset unintentionally.
+
+From now on, groups are shown in a table instead of a list, and read-only values are visible and editable when backend support is available.
+
+Also, groups that do not have access will no longer be shown.
+
+> [!NOTE]
+> For this feature to work, the client app needs to be connected to a DataMiner Agent running Feature Release version 10.6.6 or above.
+
+#### GQI DxM: Query column retrieval no longer prepares the full data-fetching pipeline [ID 46018]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+GQI can now return query column information without preparing the full data-fetching pipeline.
+
+As a result, column-only operations, such as building queries or retrieving columns without statistics, are now more lightweight while full query execution behavior remains unchanged.
+
 #### Dashboards/Low-Code Apps: No longer possible to link the Select query operator to data [ID 45991]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 From now on, it is no longer possible to link the [Select](xref:GQI_Select) query operator to data.
+
+#### DOM: Web API and front-end web code now support FieldDescriptors of type List\<string\> [ID 46053]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+The web API and the front-end web code will now be able to handle DOM configuration and DOM instances that use FieldDescriptors of type `List<string>`.
+
+See also: [DOM: Server-side support for string list FieldDescriptors [ID 46051]](xref:General_Feature_Release_10.6.9#dom-server-side-support-for-string-list-fielddescriptors-id-46051)
+
+> [!NOTE]
+> The UI will not show the generic list of string fields. If a form is shown for a definition that contains such a field, it will not displayed and no value will be provided. If a form is shown for a DOM instance that has a value for such a field, it will not be displayed and the value will be maintained if the DOM instance would be updated.
 
 ### Fixes
 
@@ -170,3 +204,25 @@ From now on, it will again be possible to use these filters.
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 The web API could leak memory when a user logged out. The user settings stored in memory would not be cleaned up properly.
+
+#### Dashboards/Low-Code Apps - Dropdown component: Deleted row could incorrectly remain selected [ID 46021]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when a realtime delete update from GQI removed the selected row in a *Dropdown* component, in some cases, a runtime error could be thrown. As a result, the data would not be cleared correctly, and the deleted row could remain selected.
+
+#### GQI DxM: GQI data retrieval could fail when parameters had malformed discrete or exception values [ID 46039]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when a protocol contained malformed discrete or exception values (e.g., string values on a numeric parameter), some GQI data retrieval requests could fail.
+
+From now on, malformed values are ignored and a warning is logged, while valid values remain available.
+
+#### Web API: GQI error was thrown when discrete options contained exceptional values [ID 46101]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When discrete options contained exceptional values (i.e., Negative Infinity, Positive Infinity, or NaN), a GQI query would show an `An unknown error occurred (status: 200)` error in the web apps.
+
+From now on, these exceptional values will be set to null so that they can be properly serialized in the client, following the same strategy as with cell values.
