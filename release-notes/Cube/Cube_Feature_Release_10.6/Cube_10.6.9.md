@@ -46,6 +46,20 @@ The *Tokens* table includes a *Rate limit* column, showing the configured rate l
 > - A configured rate limit restricts the number of requests a client can make within a specified time window. However, it does not guarantee that the server can process all requests up to that limit. Actual throughput depends on several factors, including the execution time of the API script, the number of concurrently active tokens, and overall server load.
 > - This feature will only work when DataMiner Cube is connected to a DataMiner Agent running Main Release version 10.7.0, Feature Release 10.6.7, or above.
 
+#### Spectrum analyzer: Support added for reference traces and reference trace markers [ID 45843]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Support has now been added for reference traces and reference trace markers in spectrum analyzers.
+
+Reference traces and their markers can now be used and saved in presets. You can now also update a reference trace by setting or resetting it from the ribbon.
+
+In addition, this change includes the following fixes:
+
+- Saving a reference trace no longer uses local culture formatting for numeric values.
+- The *Show reference* ribbon setting is now saved correctly in the display settings.
+- Special markers (*Min*, *Max*, and *Avg*) are now saved correctly when they are not locked to a trace.
+
 #### Visual Overview - Spectrum analysis component: Options added to show or hide settings and info panels [ID 45947]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
@@ -65,11 +79,23 @@ If these shape options are defined, they overrule other show/hide controls.
 > [!NOTE]
 > These options are only applied when the shape is initialized. Afterwards, they cannot be toggled on the fly.
 
+#### Visual Overview - Spectrum analysis component: New 'SaveLastSessionPreset' option [ID 46106]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When configuring a spectrum analysis component in Visual Overview, you can now use the `SaveLastSessionPreset` option to control whether the last session preset is saved:
+
+- `SaveLastSessionPreset=True`: The last session preset will be saved (default behavior).
+- `SaveLastSessionPreset=False`: The last session preset will not be saved.
+
+> [!NOTE]
+> This option is only applied when the shape is initialized. Afterwards, it cannot be toggled on the fly.
+
 ## Changes
 
 ### Enhancements
 
-#### Credential library: Token credentials added and credential library enhancements [ID 45670] [ID 46071]
+#### Credential library: Token credentials added and credential library enhancements [ID 45670] [ID 46071] [ID 46092]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
@@ -79,8 +105,7 @@ Also, all credential fields now have a maximum length of 5012 bytes, and the fol
 
 | Type of credential | Field |
 |---|---|
-| Community credential | Get community string<br>Set community string |
-| Token credential     | Authentication password |
+| Token credential | Authentication password |
 | Username and password credential | Password |
 
 > [!NOTE]
@@ -101,6 +126,22 @@ This will allow those connections to survive a temporary outage of the Azure Clo
 Up to now, in DataMiner Cube, popups showing `The requested trace requires a sweep time of X s.` would be general popups appearing on top of the DataMiner Cube UI. In order to prevent several of those popups to appear when multiple spectrum components are open, these popups will now open on top of the spectrum component in question.  
 
 Also, these popups will now be ignored when a spectrum component is in zero-span mode.
+
+#### System Center - User-Defined APIs: Enhanced validation of dynamic routes [ID 46007]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When you create or edit a user-defined API in *System Center* or via the *Configure API* automation script action, dynamic routes are now validated more thoroughly.
+
+This updated validation now checks, among other things, whether:
+
+- A route is not empty.
+- A route does not start or end with `/`.
+- A route does not contain empty path segments.
+- Parameter placeholders are well-formed.
+- Parameter names do not contain invalid route syntax characters.
+- A parameter name is not used more than once in the same route.
+- A route template is unique across API definitions.
 
 ### Fixes
 
@@ -168,3 +209,9 @@ From now on, newly saved presets are loaded correctly in the current session.
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 When you restarted a spectrum element while working in DataMiner Cube, in some cases, a null reference exception could be thrown, causing problems in the spectrum UI.
+
+#### Alarm Console: Problem when updating the values in the 'Alarm duration' column [ID 46103]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In the Alarm Console, in some cases, the timer that keeps the values in the *Alarm duration* column up to date could incorrectly get activated multiple times, causing updates to be performed more than once.
