@@ -30,11 +30,13 @@ Configure the following shape data fields on the shape that is to contain the Sp
   | Preset=    | Should be followed by a preset name. Indicates that a particular preset should be loaded. It is also possible to specify an inline preset, using the same syntax as for the *preset=inline* URL parameter. See [preset=inline](xref:Options_for_opening_DataMiner_Cube#presetinline). However, note that combining an inline preset with one or more measurement points is only supported from DataMiner 10.1.0 [CU11]/10.2.2 onwards. |
   | Measpts=   | Should be followed by one or more measurement point IDs, separated by semicolons. |
   | ViewOptions= | Should be configured in the same way as the *options=* URL parameter. See [options=](xref:Options_for_opening_DataMiner_Cube#options). |
+  | SaveLastSessionPreset= | Available from DataMiner 10.5.0 [CU8]/10.6.0 [CU6]/10.6.9 onwards<!--RN 46106-->. Controls whether the last session preset is saved when the shape is initialized.<br>- `SaveLastSessionPreset=True`: The last session preset is saved (default behavior).<br>- `SaveLastSessionPreset=False`: The last session preset is not saved. |
 
 > [!NOTE]
 >
 > - These options all support dynamic placeholders. Dynamic changes to the preset or measurement points will be applied immediately. Dynamic changes to view options will only be applied when a preset is loaded.
 > - Only public presets can be used in a Visual Overview, not private presets.
+> - The *SaveLastSessionPreset=* option is only applied when the shape is initialized and cannot be changed afterwards.
 
 For example:
 
