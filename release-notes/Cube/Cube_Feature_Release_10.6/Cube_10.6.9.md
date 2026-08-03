@@ -95,21 +95,21 @@ When configuring a spectrum analysis component in Visual Overview, you can now u
 
 ### Enhancements
 
-#### Credential library: Token credentials added and credential library enhancements [ID 45670] [ID 46071] [ID 46092]
+#### Credentials library: Token credentials added and credentials library enhancements [ID 45670] [ID 46071] [ID 46092]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
-In the credential library, you can now add token credentials, i.e., credentials that consist only of a single token.
+In the credentials library, you can now add token credentials, i.e., credentials that consist only of a single token.
 
 Also, all credential fields now have a maximum length of 5012 bytes, and the following fields can be left empty:
 
-| Type of credential | Field |
+| Type of credentials | Field |
 |---|---|
-| Token credential | Authentication password |
-| Username and password credential | Password |
+| Token credentials | Authentication password |
+| Username and password credentials | Password |
 
 > [!NOTE]
-> The credential library can contain a maximum of 1000 credentials. When this limit is reached, users who want to add a new credential will receive a warning.
+> The credentials library can contain a maximum of 1000 sets of credentials. When this limit is reached, users who want to add a new set of credentials will receive a warning.
 
 #### SLNetTypes: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45672]
 
