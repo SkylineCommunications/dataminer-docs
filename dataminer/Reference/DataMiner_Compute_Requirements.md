@@ -151,12 +151,12 @@ Cassandra nodes must be hosted on Linux. For small-scale setups, Cassandra can b
 
 #### Cassandra software
 
-The minimum supported version for the Cassandra software is **3.11**. If a database per cluster (or "Cassandra Cluster") setup is used, 3.11 continues to be supported for existing setups, but for new setups Cassandra **4.x** is mandatory. If a database per Agent setup is used, Cassandra 4.x is also supported, and it is even recommended in case there are multiple nodes per database.
+The minimum supported Cassandra version is **3.11**. Cassandra 3.11 remains supported for existing setups, as do intermediate versions including 4.0.x and 4.1.x. However, Cassandra **5.0** is the recommended version for all new setups.
 
-> [!NOTE]
+> [!IMPORTANT]
 >
-> - Cassandra 4.x does not support Windows, so you will need extra Linux servers to host the Cassandra database in order to use this version.
-> - Currently, Cassandra versions 4.0 and 4.1 are supported in the 4.x range.
+> - Cassandra 3.11 reached end-of-life (EOL) in September 2024, when Apache Cassandra 5.0 was released. It no longer receives security patches, bug fixes, or community support on any operating system. If you are still running Cassandra 3.11, we strongly recommend upgrading to Cassandra **5.0** as soon as possible.
+> - Cassandra 3.11 supported Windows, but Cassandra 5.0 does not. If you are upgrading from 3.11 on Windows, you will also need to migrate your Cassandra database to a Linux server as part of the upgrade process.
 
 #### RAM
 
@@ -192,7 +192,7 @@ A high-speed network is required to be able to transfer the data between the dif
 
 #### Operating System
 
-We recommend installing Cassandra on Linux. In fact, from Cassandra 4.0 and DataMiner 10.4.x onwards, only Linux is supported.
+We recommend installing Cassandra on Linux. In fact, from Cassandra 5.0 and DataMiner 10.4.x onwards, only Linux is supported.
 
 For information on compatibility between specific Cassandra versions and operating system versions or builds, refer to the official Cassandra documentation.
 
