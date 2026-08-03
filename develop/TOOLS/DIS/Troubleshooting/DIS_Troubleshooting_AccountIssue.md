@@ -16,10 +16,6 @@ For example:
 
 ## Possible solutions
 
-1. Update Visual Studio to the latest available version.
+Updating Visual Studio to the latest available version usually solves this issue. If this does not work, you can try to reinstall Visual Studio.
 
-1. If updating does not solve the issue, reinstall Visual Studio.
-
-1. If the issue persists, report it to Skyline.
-
-   Include the basic information about Visual Studio and the Output window information in your report, as mentioned under [Retrieving information in case a problem occurs](xref:DIS_Troubleshooting_RetrieveInformation).
+If the problem persists, or reinstalling is not an option, report the issue to Skyline. Include the basic information about Visual Studio and the Output window information in your report, as mentioned under [Retrieving information in case a problem occurs](xref:DIS_Troubleshooting_RetrieveInformation).
