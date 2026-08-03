@@ -7369,6 +7369,8 @@ items:
               topicUid: DIS_Troubleshooting_RetrieveInformation
             - name: Licensing problem
               topicUid: DIS_Troubleshooting_LicenseIssue
+            - name: Account problem
+              topicUid: DIS_Troubleshooting_AccountIssue
             - name: DIS Inject problems
               topicUid: DIS_Troubleshooting_DisInject
             - name: Package creation problems
