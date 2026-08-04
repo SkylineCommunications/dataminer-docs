@@ -66,3 +66,16 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 
 > [!IMPORTANT]
 > The synchronization of files across all DMAs in a DataMiner System happens every day at midnight (00:00). It is therefore of great importance that the time settings of the DMAs are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms)
+>
+> Manually modifying files on a DMA does not automatically trigger file synchronization. DataMiner only synchronizes file changes that are accompanied by a file change notification, for example:
+>
+> ```csharp
+> SetDataMinerInfoMessage()
+> {
+> What = (int)NotifyType.SendDmsFileChange,
+> IInfo2 = (int)NotifyType.FileChanged,
+> StrInfo1 = @"C:\Skyline DataMiner\..."
+> }
+> ```
+>
+> Without such a notification, the modified files are ignored by both direct synchronization and the daily midnight synchronization. The midnight synchronization merely acts as a fallback for previously triggered synchronization actions that could not be completed because one or more DMAs were unavailable.
