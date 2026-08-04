@@ -150,7 +150,7 @@ In the *Layout* pane for this component, the *Conditional coloring* option is av
     ![Conditional coloring configuration with *Toggle checklist* enabled](~/dataminer/images/Table_Conditional_Coloring.png)<br>*Table layout options in DataMiner 10.6.8*
 
   > [!NOTE]
-  > From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45388-->, if the discrete values for a column are marked as strict, only the list format is shown. In this case, the toggle button is not available, and it is not possible to switch to free-form text input.
+  > From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45388 + 45835-->, if the discrete values for a column are marked as strict, only the list format is shown. In this case, the toggle button is not available, and it is not possible to switch to free-form text input.
 
 - **Multiple filters** can be applied on the same value. In that case, the filters will be applied from the top of the list to the bottom. Positive filters will get priority over negative filters.
 
