@@ -84,6 +84,7 @@ Examples:
 > - For a logger table, the TTL value can be set to "-1" to indicate that the TTL value is specified in the protocol.
 > - If the TTL value is set to "0" for a particular type of data, no data of that type will be stored in the database.
 > - For an indexing database, it is possible to specify "infinite", in which case the data will be kept indefinitely.
+> - For custom data related to Service & Resource Management (SRM) and Profile Manager, TTL is always infinite. SRM-related settings configured in DBMaintenanceDMS.xml will be stored but will have no effect.
 > - Element-specific TTL settings for trending purposes will always override TTL settings specified here.
 > - If a record is saved with a particular TTL setting in a Cassandra database, this setting applies permanently for that record, even if the configuration is later changed in these files. The changes are only applied for new records.
 
