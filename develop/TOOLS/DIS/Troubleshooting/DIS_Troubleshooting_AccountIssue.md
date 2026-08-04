@@ -1,6 +1,6 @@
 ---
 uid: DIS_Troubleshooting_AccountIssue
-description: Find out how to resolve the 'invalid account' in DIS, including exact diagnostics to send to Skyline if other troubleshooting steps fail.
+description: Find out how to resolve the 'invalid account' issue in DIS, including exact diagnostics to send to Skyline if other troubleshooting steps fail.
 keywords: invalid account
 ---
 
