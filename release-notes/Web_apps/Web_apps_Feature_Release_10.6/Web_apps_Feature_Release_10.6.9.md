@@ -155,7 +155,7 @@ The web API and the front-end web code will now be able to handle DOM configurat
 See also: [DOM: Server-side support for string list FieldDescriptors [ID 46051]](xref:General_Feature_Release_10.6.9#dom-server-side-support-for-string-list-fielddescriptors-id-46051)
 
 > [!NOTE]
-> The UI will not show the generic list of string fields. If a form is shown for a definition that contains such a field, it will not displayed and no value will be provided. If a form is shown for a DOM instance that has a value for such a field, it will not be displayed and the value will be maintained if the DOM instance would be updated.
+> The UI will not show the generic list of string fields. If a form is shown for a definition that contains such a field, it will not be displayed and no value will be provided. If a form is shown for a DOM instance that has a value for such a field, it will not be displayed and the value will be maintained if the DOM instance would be updated.
 
 ### Fixes
 
