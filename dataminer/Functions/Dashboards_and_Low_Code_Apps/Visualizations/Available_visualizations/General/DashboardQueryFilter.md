@@ -43,6 +43,9 @@ From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41799-->, you can use a [trigg
 
   - Select the *Toggle checklist* button to list all possible values as a checklist.
 
+  > [!NOTE]
+  > From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45388-->, if the discrete values for a column are marked as strict, the toggle button is not available. The values are shown as a checklist only, and it is not possible to switch to free-form text.
+
 - When a node edge graph is exclusively filtered by node, edges will only be highlighted when both the source and destination are highlighted. Alternatively, when a node edge graph is exclusively filtered by edge, the source and/or destination attached to the highlighted edge segments will be highlighted.
 
 ## Linking a component to the query filter
