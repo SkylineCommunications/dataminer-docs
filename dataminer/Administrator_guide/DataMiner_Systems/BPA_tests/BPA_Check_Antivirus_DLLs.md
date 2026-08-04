@@ -1,6 +1,6 @@
 ---
 uid: BPA_Check_Antivirus_DLLs
-description: "Learn how to the Antivirus on the DataMiner Agents BPA test detects the presence of antivirus DLLs loaded into DataMiner processes."
+description: "Learn about the 'Antivirus on the DataMiner Agents' BPA test, which detects the presence of antivirus DLLs loaded into DataMiner processes."
 ---
 
 # Antivirus on the DataMiner Agents
