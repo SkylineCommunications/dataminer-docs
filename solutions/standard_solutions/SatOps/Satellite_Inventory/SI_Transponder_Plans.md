@@ -67,16 +67,30 @@ Creating a plan does not generate its slots automatically. You generate them fro
 
 1. Select the plan and click the *Create slots* (play) button.
 
-   ![The confirmation warning shown before regenerating the slots of a plan](~/solutions/images/SO_SI_Generate_Slots.png)
+   ![The Create slots (play) button on a transponder plan](~/solutions/images/SO_SI_Generate_Slots.png)
 
    > [!WARNING]
-   > Generating slots overrides the slots that were previously generated for that plan. A confirmation dialog is shown before the slots are replaced.
+   > Generating slots overrides any slots that were previously generated for that plan.
 
-1. Confirm to generate the slots.
+1. The slots are generated based on the plan configuration.
 
    The app immediately shows a visualization of the resulting slot layout. A details pane provides more information about the transponder, because the slots are expressed as relative frequencies that take the start and end frequency of the full transponder into account.
 
    ![The generated transponder slots with a details pane](~/solutions/images/SO_SI_Transponder_Slots.png)
+
+## Editing a slot name
+
+After generating slots, you can override the name and start frequency of individual slots. Click the pencil icon next to a slot to open the *Update Slot* dialog.
+
+![The Update Slot dialog where you can change the slot name and start frequency](~/solutions/images/SO_SI_Update_Slot.png)
+
+- *Slot Name*: override the auto-generated name with a custom one.
+- *Slot Start Frequency (MHz)*: adjust the start frequency of the slot.
+
+Click *Update Slot* to save the change.
+
+> [!WARNING]
+> If you regenerate the slots for a plan by clicking *Create slots* again, any custom slot names or start frequencies you set are overwritten.
 
 ## Activating a plan
 

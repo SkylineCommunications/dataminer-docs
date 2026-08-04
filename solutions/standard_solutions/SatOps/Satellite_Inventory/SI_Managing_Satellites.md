@@ -25,6 +25,9 @@ You can add satellites in several ways:
 - In bulk, by importing an Excel file. You can download a predefined template from the app, fill it in, and import it.
 - From code, because Satellite Inventory is built on a DataMiner DevPack. You can create or edit satellites from an Automation script or through an agent in the DataMiner assistant.
 
+> [!NOTE]
+> The Excel import on the *Satellites* page can also import beams, transponders, transponder plans, and transponder slots in one go. While the import button is on the *Satellites* page, it is not limited to satellites.
+
 To add a satellite manually:
 
 1. On the *Satellites* page, click *Add satellite*.

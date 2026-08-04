@@ -17,6 +17,9 @@ The satellite hierarchy (satellite, beams, transponders) can be visualized in an
 
 To quickly set up an environment for evaluation, you can import satellite demo data from a predefined template.
 
+> [!NOTE]
+> The Satellite Inventory app works on top of the [MediaOps Plan](xref:MediaOps.Plan) Resource Studio. Each transponder you create is also a DataMiner resource, so the transponders you manage here are the same ones that [Satellite Scheduling](xref:Satellite_Scheduling) books against. Satellite Inventory adds the satellite-specific structure, such as satellites, beams, transponder plans, and slots, on top of those resources.
+
 ## Navigating the app
 
 Open the left panel to switch between the four pages of the app: *Satellites*, *Transponders*, *Beams*, and *About*. The *Satellites* page is the main page and your usual starting point.

@@ -7,6 +7,8 @@ description: Explore SatOps, the DataMiner standard solution that enables satell
 
 SatOps is a standard solution for DataMiner that enables satellite broadcasters to manage their daily operations. It combines a complete model of your satellite fleet with the tools to schedule and book transponder capacity, so that inventory and scheduling stay in sync in one connected environment.
 
+Transponder capacity is a special kind of resource. A transponder is rarely booked as a whole: its bandwidth is used in parts, and the way it can be divided changes over time. SatOps models this explicitly. It treats each transponder as a bookable resource whose capacity can be reserved as a frequency range, and it lets you define exactly which parts of a transponder are bookable through transponder plans. This makes it possible to schedule partial transponder capacity in a flexible way, while still preventing overlapping bookings.
+
 The SatOps solution includes the following applications, which are ready for use out of the box:
 
 <div class="row">
