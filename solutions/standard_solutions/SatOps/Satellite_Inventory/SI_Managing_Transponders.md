@@ -26,8 +26,8 @@ A *transponder* belongs to a [beam](xref:SI_Managing_Beams) and relays signal wi
 
 ## Editing and activating a transponder
 
-- To activate a transponder, click *More* and select the activate action.
-- To edit a transponder, click the pencil icon, change the fields you need, and click *Update transponder*.
+- To activate a transponder, click *More* (the ![More](~/solutions/images/SO_SI_More_Icon.png) "..." button) and select the activate action.
+- To edit a transponder, click the ![Edit](~/solutions/images/SO_SI_Edit_Icon.png) pencil icon, change the fields you need, and click *Update transponder*.
 
 ## Transponder fields
 

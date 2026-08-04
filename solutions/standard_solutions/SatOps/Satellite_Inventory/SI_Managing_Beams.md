@@ -40,7 +40,7 @@ You can also search by beam name. To clear a filter, click the cross next to it.
 
 ## Editing a beam
 
-To edit a beam, click the pencil icon on the right side of the beam row. This opens a dialog where you can change any of the beam properties. Click *Update Beam* to save.
+To edit a beam, click the ![Edit](~/solutions/images/SO_SI_Edit_Icon.png) pencil icon on the right side of the beam row. This opens a dialog where you can change any of the beam properties. Click *Update Beam* to save.
 
 ![The Update Beam dialog with the beam name, satellite, link type, transmission type, and footprint file fields](~/solutions/images/SO_SI_Edit_Beam.png)
 
@@ -49,7 +49,7 @@ To edit a beam, click the pencil icon on the right side of the beam row. This op
 After you create a beam, you must activate it before it becomes available in the system.
 
 > [!IMPORTANT]
-> A newly created beam starts in the *Draft* state. To activate it, click *More* (the "..." button) and select the activate action.
+> A newly created beam starts in the *Draft* state. To activate it, click *More* (the ![More](~/solutions/images/SO_SI_More_Icon.png) "..." button) and select the activate action.
 
 ## Viewing a beam footprint
 

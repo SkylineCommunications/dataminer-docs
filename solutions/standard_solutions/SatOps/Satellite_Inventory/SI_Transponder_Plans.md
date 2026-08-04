@@ -80,7 +80,7 @@ Creating a plan does not generate its slots automatically. You generate them fro
 
 ## Editing a slot name
 
-After generating slots, you can override the name and start frequency of individual slots. Click the pencil icon next to a slot to open the *Update Slot* dialog.
+After generating slots, you can override the name and start frequency of individual slots. Click the ![Edit](~/solutions/images/SO_SI_Edit_Icon.png) pencil icon next to a slot to open the *Update Slot* dialog.
 
 ![The Update Slot dialog where you can change the slot name and start frequency](~/solutions/images/SO_SI_Update_Slot.png)
 
