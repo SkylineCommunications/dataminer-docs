@@ -15,6 +15,8 @@ The Satellite Inventory app lets you build and maintain a complete model of your
 
 The satellite hierarchy (satellite, beams, transponders) can be visualized in an interactive node edge graph, and transponder plan layouts can be inspected slot by slot.
 
+![The interactive node edge graph for the Eutelsat 7C satellite, showing the satellite node connected to its transponders (T-01 and T-02) and beams (Europe A 1 and Europe A 2)](~/solutions/images/SO_SI_Node_Edge_Graph.png)
+
 To quickly set up an environment for evaluation, you can import satellite demo data from a predefined template.
 
 > [!NOTE]
