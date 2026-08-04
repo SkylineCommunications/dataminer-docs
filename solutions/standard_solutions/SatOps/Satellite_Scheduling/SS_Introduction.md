@@ -62,7 +62,7 @@ The state a new booking gets depends on when it is scheduled relative to the cur
 
 ## Moving a booking
 
-In edit mode, you can drag and drop an existing booking along the timeline to reschedule it. The system prevents you from creating overlapping bookings.
+In edit mode, you can drag and drop an existing booking to change it. Dragging a booking horizontally along the timeline reschedules it in time, while dragging it vertically adjusts its frequencies and transponder. The frequencies and transponder of a booking can only be changed by dragging it vertically, not by typing values in the dialog. The system prevents you from creating overlapping bookings.
 
 ## Opening and deleting a booking
 
