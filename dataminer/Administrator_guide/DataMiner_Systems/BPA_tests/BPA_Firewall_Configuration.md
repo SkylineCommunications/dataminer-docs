@@ -1,6 +1,6 @@
 ---
 uid: BPA_Firewall_Configuration
-description: "Learn how the Firewall Configuration BPA test verifies that no excessive ports are open in the Windows firewall."
+description: "Learn about the Firewall Configuration BPA test, which verifies that no excessive ports are open in the Windows firewall."
 ---
 
 # Firewall Configuration

@@ -1,6 +1,6 @@
 ---
 uid: BPA_Https_Configuration
-description: "Learn how the HTTPS Configuration BPA test verifies if DataMiner and IIS are correctly configured to connect to Cube over HTTPS only."
+description: "Learn about the HTTPS Configuration BPA test, which verifies if DataMiner and IIS are correctly configured to connect to Cube over HTTPS only."
 ---
 
 # HTTPS Configuration

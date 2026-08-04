@@ -1,6 +1,6 @@
 ---
 uid: BPA_Check_Deprecated_DLL_Usage
-description: "Learn how the Check Deprecated DLL Usage BPA test will check for the use of deprecated or outdated DLLs in QActions and automation scripts."
+description: "Learn about the Check Deprecated DLL Usage BPA test, which checks for the use of deprecated or outdated DLLs in QActions and automation scripts."
 ---
 
 # Check Deprecated DLL Usage

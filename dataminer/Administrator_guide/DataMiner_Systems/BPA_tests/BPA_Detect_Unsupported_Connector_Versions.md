@@ -1,6 +1,6 @@
 ---
 uid: BPA_Detect_Unsupported_Connector_Versions
-description: "Learn how the Detect unsupported connector versions BPA test detects elements that are using connector versions that have been removed from the Catalog."
+description: "Learn about the 'Detect unsupported connector versions' BPA test, which detects elements that use connector versions that are no longer supported."
 ---
 
 # Detect unsupported connector versions

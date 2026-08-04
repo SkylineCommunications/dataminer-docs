@@ -1,6 +1,6 @@
 ---
 uid: BPA_Security_Advisory
-description: "Learn how the Security Advisory BPA test runs a collection of checks to see if the system is configured as securely as possible."
+description: "Learn about the Security Advisory BPA test, which runs a collection of checks to see if the system is configured as securely as possible."
 ---
 
 # Security Advisory

@@ -1,6 +1,6 @@
 ---
 uid: BPA_LargeAlarmTrees
-description: "Learn how the Large Alarm Trees BPA test fetches active alarm trees and checks if any are getting too large."
+description: "Learn about the Large Alarm Trees BPA test, which fetches active alarm trees and checks if any are getting too large."
 ---
 
 # Large Alarm Trees
