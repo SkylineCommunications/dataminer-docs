@@ -4,13 +4,13 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 31 Juli 2026 - Enhancement - CloudGateway 3.3.1 - Cloud Connection stability improvements
+#### 31 Juli 2026 - Enhancement - CloudGateway 3.3.1 - Cloud connection stability improvements
 
-Several changes were made to enhance the stability of the cloud connection.
+Several changes were made to enhance the stability of the connection to dataminer.services.
 
-#### 1 Juli 2026 - Enhancement - CloudGateway 3.3.0 - DxM Health status
+#### 1 Juli 2026 - Enhancement - CloudGateway 3.3.0 - DxM health status
 
-Next to the heartbeat that the DxM sends, it will now offload extra information about it's own health status while running.
+In addition to sending a heartbeat, the CloudGateway DxM will now also offload extra information about its own health status while running.
 
 #### 11 June 2026 - Enhancement - CloudGateway 3.2.0 - Upgrade to .NET 10
 
