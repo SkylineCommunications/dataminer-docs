@@ -22,7 +22,7 @@ The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on 
 - A Cassandra cluster must be available using version 4.0 or higher. **Cassandra 5.0 is recommended for new installations.** For information on how to install Cassandra, see [Installing Cassandra on a Linux machine](xref:Installing_Cassandra).
 
   > [!NOTE]
-  > Previously Cassandra 3.11.8 was also supported. This will remain supported for existing installations; however, because of its increased performance, **Cassandra 4.0 or higher is required for new Cassandra installations** if a database per cluster is used, with **Cassandra 5.0** recommended. If you have a Cassandra 3.11.8 database and you have not yet migrated your DataMiner data, we recommend upgrading to Cassandra 5.0 first.
+  > Previously Cassandra 3.11.8 was also supported. This will remain supported for existing installations; however, because of its increased performance, for new Cassandra cluster installations, Cassandra 4.0 or higher is required and **Cassandra 5.0 is recommended**. If you have a Cassandra 3.11.8 database and you have not yet migrated your DataMiner data, we recommend upgrading to Cassandra 5.0 first.
 
 - Either an OpenSearch cluster should be available (recommended), or an Elasticsearch cluster using version 6.8.0 or higher, but lower than 7.0.
 
