@@ -10,7 +10,7 @@ Several changes were made to enhance the stability of the connection to datamine
 
 #### 1 Juli 2026 - Enhancement - CloudGateway 3.3.0 - DxM health status
 
-In addition to sending a heartbeat, the CloudGateway DxM will now also offload extra information about its own health status while running.
+In addition to sending a heartbeat, the CloudGateway DxM will now also offload extra information about its own health status while running, which will be used for proactive monitoring.
 
 #### 11 June 2026 - Enhancement - CloudGateway 3.2.0 - Upgrade to .NET 10
 
