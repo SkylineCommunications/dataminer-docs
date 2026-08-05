@@ -151,11 +151,11 @@ Cassandra nodes must be hosted on Linux. For small-scale setups, Cassandra can b
 
 #### Cassandra software
 
-The minimum supported Cassandra version is **3.11**. Cassandra 3.11 remains supported for existing setups, as do intermediate versions including 4.0.x and 4.1.x. However, Cassandra **5.0** is the recommended version for all new setups.
+The minimum supported Cassandra version is **3.11**. Cassandra 3.11 remains supported for existing DataMiner setups, as do intermediate versions including 4.0.x and 4.1.x. However, Cassandra **5.0** is the recommended version for all new setups.
 
 > [!IMPORTANT]
 >
-> - Cassandra 3.11 reached end-of-life (EOL) in September 2024, when Apache Cassandra 5.0 was released. It no longer receives security patches, bug fixes, or community support on any operating system. If you are still running Cassandra 3.11, we strongly recommend upgrading to Cassandra **5.0** as soon as possible.
+> - Cassandra 3.11 reached end of life (EOL) in September 2024, when Apache Cassandra 5.0 was released. It no longer receives security patches, bug fixes, or community support on any operating system. If you are still running Cassandra 3.11, we **strongly recommend upgrading to Cassandra 5.0** as soon as possible.
 > - Cassandra 3.11 supported Windows, but Cassandra 5.0 does not. If you are upgrading from 3.11 on Windows, you will also need to migrate your Cassandra database to a Linux server as part of the upgrade process.
 
 #### RAM
