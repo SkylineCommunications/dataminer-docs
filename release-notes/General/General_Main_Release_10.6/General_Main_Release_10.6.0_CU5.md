@@ -30,6 +30,14 @@ Before you upgrade to this DataMiner version:
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Main_Release_10.6.0_changes#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43526-id-43856-id-43861-id-44035-id-44050-id-44062)
 
+## Important changes
+
+The following changes may have an impact on your system, so please make sure to check these before you upgrade:
+
+- [Correlation: Grouping method 'By alarm' has been removed [ID 45545]](xref:Cube_Feature_Release_10.6.8#correlation-grouping-method-by-alarm-has-been-removed-id-45545)
+- [DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]](#dataminer-agents-will-now-translate-the-primary-key-to-the-display-key-when-receiving-timeline-data-requests-from-a-client-id-45579)
+- [Dashboards/Low-Code Apps: State timeline component will now use the primary key when requesting timeline data [ID 45600]](xref:Web_apps_Feature_Release_10.6.8#dashboardslow-code-apps-state-timeline-component-will-now-use-the-primary-key-when-requesting-timeline-data-id-45600)
+
 ## Changes
 
 ### Breaking changes

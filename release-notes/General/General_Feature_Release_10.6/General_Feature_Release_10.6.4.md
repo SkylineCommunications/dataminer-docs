@@ -30,6 +30,12 @@ Before you upgrade to this DataMiner version:
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 
+## Important changes
+
+The following change may have an impact on your system, so please make sure to check this before you upgrade:
+
+- [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
+
 ## New features
 
 #### New BPA test: Detect unsupported connector versions [ID 44607]
