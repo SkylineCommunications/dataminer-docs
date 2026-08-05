@@ -141,6 +141,17 @@ In the *Layout* pane for this component, the *Conditional coloring* option is av
 
   ![Conditional coloring](~/dataminer/images/Conditional_Coloring.png)<br>*Table component in DataMiner 10.5.6*
 
+- Next to columns containing discrete values of type string or number, you can find a button that allows you to change how the values can be configured. Hover over the button to reveal the following options:
+
+  - Select the *Toggle free form* button to display a text box in which you can type a value and assign a highlight color to it.
+
+  - Select the *Toggle checklist* button to list all possible discrete values as a list, allowing you to assign a highlight color to each value directly, without having to type it in manually.
+
+    ![Conditional coloring configuration with *Toggle checklist* enabled](~/dataminer/images/Table_Conditional_Coloring.png)<br>*Table layout options in DataMiner 10.6.8*
+
+  > [!NOTE]
+  > From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45388 + 45835-->, if the discrete values for a column are marked as strict, only the list format is shown. In this case, the toggle button is not available, and it is not possible to switch to free-form text input.
+
 - **Multiple filters** can be applied on the same value. In that case, the filters will be applied from the top of the list to the bottom. Positive filters will get priority over negative filters.
 
 - You can **remove a column filter** again by selecting *No color* instead of a specific color.
