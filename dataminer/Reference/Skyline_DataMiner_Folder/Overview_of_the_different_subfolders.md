@@ -65,17 +65,4 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | Webpages | All webpages of the DataMiner client applications. Within this folder, only the following things are synchronized in a DMS:<br>- The *CustomerLogo* image files.<br>- The *Public* subfolder (from DataMiner 10.5.10/10.6.0 onwards<!-- RN 43458 -->).<br>- The data for legacy dashboards (`C:\Skyline DataMiner\WebPages\Dashboards\Db\`).<br>- The data for legacy reports (`C:\Skyline DataMiner\WebPages\Reports\Templates\`), except for the `tmp_img` subfolder, which contains temporary files.<br>- The data for legacy annotations (`C:\Skyline DataMiner\WebPages\Annotations\DMS Images\` and `C:\Skyline DataMiner\WebPages\Annotations\Views\`). | Partially |
 
 > [!IMPORTANT]
-> The synchronization of files across all DMAs in a DataMiner System happens every day at midnight (00:00). It is therefore of great importance that the time settings of the DMAs are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms)
->
-> Manually modifying files on a DMA does not automatically trigger file synchronization. DataMiner only synchronizes file changes that are accompanied by a file change notification, for example:
->
-> ```csharp
-> SetDataMinerInfoMessage()
-> {
-> What = (int)NotifyType.SendDmsFileChange,
-> IInfo2 = (int)NotifyType.FileChanged,
-> StrInfo1 = @"C:\Skyline DataMiner\..."
-> }
-> ```
->
-> Without such a notification, the modified files are ignored by both direct synchronization and the daily midnight synchronization. The midnight synchronization merely acts as a fallback for previously triggered synchronization actions that could not be completed because one or more DMAs were unavailable.
+> For more information on when files and folders are synchronized, refer to [Data synchronization](xref:Data_synchronization)
