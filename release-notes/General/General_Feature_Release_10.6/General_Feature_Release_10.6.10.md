@@ -40,15 +40,9 @@ Before you upgrade to this DataMiner version:
 
 ## Changes
 
-#### DxM upgraded [ID 46124]
+### Enhancements
 
-<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
-
-The following DataMiner Extension Module (DxM), which is included in the DataMiner upgrade package, has been upgraded to the indicated version:
-
-- DataMiner SupportAssistant 1.9.3
-
-For detailed information about the changes included in this version, refer to the [DxM release notes](xref:DxM_RNs_index).
+*This release does not contain any enhancements yet.*
 
 ### Fixes
 
