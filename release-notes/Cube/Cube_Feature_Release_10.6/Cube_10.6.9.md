@@ -105,8 +105,8 @@ Also, all credential fields now have a maximum length of 5012 bytes, and the fol
 
 | Type of credentials | Field |
 |---|---|
-| Token credentials | Authentication password |
-| Username and password credentials | Password |
+| Token credentials | Access token |
+| Username and password credentials | Authentication password |
 
 > [!NOTE]
 > The credentials library can contain a maximum of 1000 sets of credentials. When this limit is reached, users who want to add a new set of credentials will receive a warning.
