@@ -30,6 +30,7 @@ Configure the following shape data fields on the shape that is to contain the Sp
   | Preset=    | Should be followed by a preset name. Indicates that a particular preset should be loaded. It is also possible to specify an inline preset, using the same syntax as for the *preset=inline* URL parameter. See [preset=inline](xref:Options_for_opening_DataMiner_Cube#presetinline). However, note that combining an inline preset with one or more measurement points is only supported from DataMiner 10.1.0 [CU11]/10.2.2 onwards. |
   | Measpts=   | Should be followed by one or more measurement point IDs, separated by semicolons. |
   | ViewOptions= | Should be configured in the same way as the *options=* URL parameter. See [options=](xref:Options_for_opening_DataMiner_Cube#options). |
+  | ShowRibbon= | Available from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45725-->. Determines whether the ribbon is displayed in the Spectrum Analysis component.<br>- `ShowRibbon=true`: The ribbon is shown.<br>- `ShowRibbon=false`: The ribbon is hidden.<br>In existing shapes, this option cannot be toggled dynamically. |
 
 > [!NOTE]
 >
