@@ -15,7 +15,7 @@ The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on 
 > [!NOTE]
 >
 > - From DataMiner 10.3.7/10.3.0 [CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [OpenSearch database](xref:Installing_OpenSearch_database#tls-and-user-configuration) or [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and your [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and OpenSearch/Elasticsearch settings](#running-the-migration) in the migration tool.<!-- RN 34852 --> For OpenSearch, configuring TLS is highly recommended.
-> - From DataMiner 10.6.0 [CU6]/10.6.10 onwards<!--RN 45824-->, the Cassandra Cluster Migrator tool also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the credential library.
+> - From DataMiner 10.6.0 [CU6]/10.6.10 onwards<!--RN 45824-->, the Cassandra Cluster Migrator tool also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the Credentials Library.
 
 ## Prerequisites
 
