@@ -14,9 +14,9 @@ From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44553-->, this data source can
 
 Selecting a protocol and version retrieves parameters for all active elements that use the specified protocol version.
 
-You can select both table parameters and standalone parameters during query creation. If you select a table parameter, all columns in that table become available for further query operators.
+You can select both table parameters and standalone parameters during query creation. If you select a table parameter, all columns in that table become available for further query operators. From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45692-->, you can choose to retrieve either the entire table or a subset of its columns.
 
-It is not possible to select multiple table parameters or combine a table parameter with standalone parameters.
+It is not possible to select multiple table parameters, combine a table parameter with standalone parameters, or mix columns from different tables.
 
 > [!IMPORTANT]
 > Retrieving table parameters from a mediated protocol is not supported. <!--RN 45539-->
