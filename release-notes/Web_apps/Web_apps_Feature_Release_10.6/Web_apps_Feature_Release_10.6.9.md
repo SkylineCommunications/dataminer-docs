@@ -83,9 +83,9 @@ New input components have been implemented in dashboards and low-code apps, repl
 
 - *Button* component: Now includes a new *Type* setting that allows you to choose between call to action, subtle, normal, or danger styles.
 - *Dropdown* component: Now includes a new *Placeholder* setting.
-- *Text*, *Search*, and *Number* components: Typing is now from left to right instead of the previous right-to-left behavior.
+- *Text input*, *Search input*, and *Numeric input* components: Typing is now from left to right instead of the previous right-to-left behavior.
 
-  The *Number* component now also supports scientific notation.
+  The *Numeric input* component now also supports scientific notation.
 
 > [!NOTE]
 >
