@@ -13,6 +13,7 @@ To install InfraOps:
    - The [GQI DxM](xref:GQI_DxM) is installed.
    - [MediaOps Plan](xref:MediaOps.Plan) 1.1.3-CU0 or higher is installed.
    - [Web File Manager](https://catalog.dataminer.services/details/330649ca-c685-4e1c-a9a5-aeca6ca8b40f) is installed.
+   - Optionally, in case you want to use the network discovery feature, [DataMiner IDP](xref:SolIDP) should also be installed.
 
 1. Look up the [InfraOps package](https://catalog.dataminer.services/details/5a1edac2-45aa-4498-8ab7-ee322d07da27) in the DataMiner Catalog.
 

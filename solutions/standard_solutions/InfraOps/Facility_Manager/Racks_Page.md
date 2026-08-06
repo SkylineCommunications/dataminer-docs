@@ -18,6 +18,7 @@ Once you have configured your facilities and rooms in the Facility Manager app, 
 1. Configure the following fields, and then click *Save*:
 
    - **Rack Name**: Mandatory field.
+   - **Rack ID**: Mandatory field.
    - **Rack Model**: Mandatory field.
    - **Rack Position**: If set to *Bottom*, slot 1 is at the bottom of the rack. If set to *Top*, slot 1 is at the top of the rack.
    - **Rack Label**: This is displayed in the [Room Designer](xref:Room_Designer) and Room Viewer (in the [Asset Manager](xref:Asset_Manager) app) when the rack is placed in a room.
@@ -46,10 +47,13 @@ Once you have configured your facilities and rooms in the Facility Manager app, 
    At the top of the *Rack details* pane, the following buttons are also available:
 
    - *Rack View*: Shows an overview of the different slots in the rack.
-   - *Delete Rack*: Removes the rack from the system.
+   - *Capacity Details*: Shows details related to the rack capacity and lists the assets currently included in the rack.
    - *Gallery*: Shows the images linked to the rack.
    - *Link Image*: Allows you to link an image to the rack. To upload images, use the [Web File Manager app](xref:Web_File_Manager), which you can access directly via a button in the *Link image* pane.
+   - *Delete Rack*: Removes the rack from the system.
 
-1. When the rack has been fully configured, at the bottom of the *Rack details* pane, click **Activate**.
+1. When the rack has been fully configured, at the bottom of the *Rack details* pane, click *Activate*.
 
-   Only when a rack has been set to active, will it be possible to assign assets to it with the [Asset Manager](xref:Asset_Manager) app.
+   As long as this button has not been clicked, the rack is considered a draft. After it has been clicked, you can remove the rack again by clicking the *Deprecate* button.
+
+   You will only be able to assign assets to a rack in the [Asset Manager](xref:Asset_Manager) app when that rack has been activated.
