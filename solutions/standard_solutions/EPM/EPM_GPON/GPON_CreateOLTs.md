@@ -5,7 +5,9 @@ description: Learn how to create GPON OLT elements, either individually through 
 
 # Creating a new GPON OLT
 
-The **CreateOLTs** automation script allows operators to create GPON OLT elements in an EPM GPON deployment.
+## About the CreateOLTs automation script
+
+The **CreateOLTs** automation script allows operators to create GPON OLT elements in an EPM xPON deployment.
 
 You can either:
 
@@ -18,7 +20,7 @@ The script supports the following OLT vendors:
 - ZTE
 - Nokia
 
-After the OLT is created, the script automatically configures the required EPM GPON integration settings, updates the FrontEnd and BackEnd components, assigns the appropriate view structure, and applies the configured element properties.
+After the OLT is created, the script automatically configures the required EPM xPON integration settings, updates the frontend and backend components, assigns the appropriate view structure, and applies the configured element properties.
 
 ## Creating a single OLT
 
@@ -46,11 +48,11 @@ After the OLT is created, the script automatically configures the required EPM G
    1. Select the **Host** where the OLT element will be created.
 
       > [!NOTE]
-      > Only DMA Agents containing a **Skyline EPM Platform GPON** BackEnd element are available for selection.
+      > Only DMA Agents containing a **Skyline EPM Platform GPON** backend element are available for selection.
 
 1. In the **Element Details** section:
 
-   1. Select the desired **Protocol**.
+   1. Select the desired **protocol**.
 
       Currently supported protocols are:
 
@@ -58,23 +60,15 @@ After the OLT is created, the script automatically configures the required EPM G
       - ZTE ZXA10 C600 GPON Platform
       - Nokia ISAM 7300
 
-   1. Enter the **IP Address** of the OLT.
+   1. Enter the necessary information:
 
-   1. Enter the **Get Community String**.
+      - **IP Address**: The IP address of the OLT.
+      - **Get Community String**
+      - **Set Community String** (optional)
+      - **System Username**
+      - **System Password**
 
-   1. Optionally enter the **Set Community String**.
-
-   1. Enter the **System Username**.
-
-   1. Enter the **System Password**.
-
-1. In the **View Details** section:
-
-   1. Select the **Network**.
-
-   1. Select the **Market**.
-
-   1. Select the **Hub**.
+1. In the **View Details** section, select the **Network**, **Market**, and **Hub**.
 
    > [!NOTE]
    > If the selected Network, Market, or Hub view does not exist, the script automatically creates the required view hierarchy.
@@ -88,11 +82,11 @@ The script will perform the following actions:
 1. Create missing views if required.
 1. Assign the element to the selected view hierarchy.
 1. Configure SNMP connectivity.
-1. Copy Export and Import paths from the corresponding EPM GPON BackEnd.
+1. Copy export and import paths from the corresponding EPM xPON backend.
 1. Configure Kafka stream paths.
 1. Configure vendor-specific parameters.
-1. Register the OLT in the EPM GPON FrontEnd.
-1. Register the OLT in the EPM GPON BackEnd.
+1. Register the OLT in the EPM xPON frontend.
+1. Register the OLT in the EPM xPON backend.
 1. Apply the Network, Market, and Hub element properties.
 1. Restart the element.
 
@@ -104,13 +98,13 @@ The element will be created with the following specifications:
 - **Protocol**: The selected protocol.
 - **Protocol version**: Production.
 - **IP address**: The specified IP address.
-- **SNMP Get community**: The specified Get Community String.
-- **SNMP Set community**: The specified Set Community String.
-- **Export path**: Automatically inherited from the GPON BackEnd.
-- **Import path**: Automatically inherited from the GPON BackEnd.
-- **Kafka path**: Automatically inherited from the GPON BackEnd.
-- **System username**: The specified System Username.
-- **System password**: The specified System Password.
+- **SNMP Get community**: The specified Get community string.
+- **SNMP Set community**: The specified Set community string (if any).
+- **Export path**: Automatically inherited from the xPON backend.
+- **Import path**: Automatically inherited from the xPON backend.
+- **Kafka path**: Automatically inherited from the xPON backend.
+- **System username**: The specified system username.
+- **System password**: The specified system password.
 - **Network property**: The selected Network.
 - **Market property**: The selected Market.
 - **Hub property**: The selected Hub.
@@ -130,7 +124,11 @@ The element will be created with the following specifications:
 
 1. Click **Create Bulk**.
 
-1. Enter the full path to the CSV file.
+1. Enter the full path to a CSV file with the correct [CSV structure](#csv-structure).
+
+1. Click **Create**.
+
+The script will validate the CSV file and create the OLT elements found in the file.
 
 ### CSV structure
 
@@ -154,11 +152,8 @@ The CSV file must contain the following headers:
 
 ```csv
 ElementName,Host,Protocol,IpAddress,GetCommunityString,SetCommunityString,Network,Market,Hub,SystemUser,SystemPass
-
 OLT-HUAWEI-001,101,Huawei 5600,10.10.10.1,public,private,North,MarketA,Hub01,admin,password
-
 OLT-ZTE-001,101,ZTE ZXA10 C600 GPON Platform,10.10.10.2,public,private,North,MarketA,Hub01,admin,password
-
 OLT-NOKIA-001,102,Nokia ISAM 7300,10.10.10.3,public,private,South,MarketB,Hub02,admin,password
 ```
 
@@ -168,10 +163,6 @@ OLT-NOKIA-001,102,Nokia ISAM 7300,10.10.10.3,public,private,South,MarketB,Hub02,
 > - The file extension must be `.csv`.
 > - CSV files must use commas (`,`) as separators.
 > - The first row must contain the required headers.
-
-1. Click **Create**.
-
-The script will validate the CSV file and create the OLT elements found in the file.
 
 ### Bulk processing behavior
 
@@ -193,46 +184,36 @@ The script automatically:
 
 The script validates all supplied information before creating an element.
 
-### Element Name
+- The **element name**:
 
-The element name:
+  - Cannot be empty.
+  - Must be unique.
+  - Cannot contain forbidden characters.
 
-- Cannot be empty.
-- Must be unique.
-- Cannot contain forbidden characters.
+- The **host**:
 
-### Host
+  - Cannot be empty.
+  - Must contain a valid DMA ID.
+  - Must correspond to an existing DMA Agent.
 
-The host:
+- The **protocol**:
 
-- Cannot be empty.
-- Must contain a valid DMA ID.
-- Must correspond to an existing DMA Agent.
+  - Cannot be empty.
+  - Must be installed in DataMiner.
+  - Must be available in the Production branch.
 
-### Protocol
+- The **IP address**:
 
-The protocol:
+  - Cannot be empty.
+  - Must be a valid IPv4 address.
+  - Must not already be used by another DataMiner element.
 
-- Cannot be empty.
-- Must be installed in DataMiner.
-- Must be available in the Production branch.
+- The following fields **cannot be empty**:
 
-### IP Address
-
-The IP address:
-
-- Cannot be empty.
-- Must be a valid IPv4 address.
-- Must not already be used by another DataMiner element.
-
-### Required fields
-
-The following fields cannot be empty:
-
-- GetCommunityString
-- Network
-- Market
-- Hub
+  - GetCommunityString
+  - Network
+  - Market
+  - Hub
 
 ## Automatic view creation
 
@@ -256,15 +237,9 @@ If the following element properties do not exist in the DataMiner System, the sc
 
 ## Troubleshooting
 
-### EPM FrontEnd not found
+### EPM frontend not found
 
-Verify that an element named:
-
-```text
-EPM FE - GPON
-```
-
-exists and is active.
+Verify that an element named `EPM FE - GPON` exists and is active.
 
 ### Host not found
 
@@ -272,11 +247,11 @@ Verify that the selected DMA exists and is operational.
 
 ### Protocol not found
 
-Verify that the protocol is installed and available in the Production version.
+Verify that the protocol is installed and available as the Production version.
 
-### Duplicated IP Address
+### Duplicated IP address
 
-Verify that the configured IP address is not already used by another element.
+Verify whether the configured IP address is not already used by another element.
 
 ### Invalid CSV file
 
@@ -289,4 +264,4 @@ Verify that:
 
 ### No elements left to be created
 
-This indicates that all OLTs defined in the CSV file already exist in the DataMiner System.
+This indicates that all OLTs defined in the CSV file already exist in the DataMiner System. See [Bulk processing behavior](#bulk-processing-behavior).
