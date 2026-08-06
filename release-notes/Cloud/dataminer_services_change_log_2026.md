@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 6 August 2026 - Enhancement - Sharing - Improved error feedback for rejected share actions
+
+Error feedback has been improved for cases where creating, updating, or deleting a share is rejected by the DataMiner System. The messages shown now help you understand how to correct linked-account or organization issues.
+
 ### 6 August 2026 - New feature - Admin - DataMiner Software section on DMS Overview page
 
 The DMS Overview page in the Admin app has been extended with a *DataMiner Software* section, showing the current software version, including the web version if a web-only upgrade has been installed.
