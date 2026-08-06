@@ -9,31 +9,31 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 06 August 2026 - New feature - Admin - DataMiner Software section on DMS Overview page
+### 6 August 2026 - New feature - Admin - DataMiner Software section on DMS Overview page
 
 The DMS Overview page in the Admin app has been extended with a *DataMiner Software* section, showing the current software version, including the web version if a web-only upgrade has been installed.
 
-### 06 August 2026 - Fix - Connection - Operation cancelled error shown when switching organizations
+### 6 August 2026 - Fix - Connection - Operation cancelled error shown when switching organizations
 
 When switching organizations, the check to determine whether a DaaS system could be deployed was triggered twice. This could cause one of the calls to be aborted, resulting in an "operation cancelled" error being shown. This issue has been resolved.
 
-### 06 August 2026 - Fix - Admin - Stale data briefly shown on rapid filter changes
+### 6 August 2026 - Fix - Admin - Stale data briefly shown on rapid filter changes
 
 On the Support Tickets page of the Admin app, rapidly switching filters could briefly display stale table data from the previous filter before the new results had finished loading. This issue has been resolved.
 
-### 06 August 2026 - Fix - Admin - Documentation links in support ticket descriptions not rendered as hyperlinks
+### 6 August 2026 - Fix - Admin - Documentation links in support ticket descriptions not rendered as hyperlinks
 
 In the ticket details view on the Support page of the Admin app, embedded documentation links in a ticket description were shown as raw text instead of as clickable hyperlinks. This issue has been resolved.
 
-### 06 August 2026 - Fix - Admin - False error shown for support tickets outside the active time filter
+### 6 August 2026 - Fix - Admin - False error shown for support tickets outside the active time filter
 
 On the Support page of the Admin app, opening a direct link to a support ticket older than the active time filter incorrectly showed an error stating that the ticket could not be found. A fallback lookup by ID has been added so these tickets now open correctly.
 
-### 06 August 2026 - Enhancement - Admin - Duplicate support ticket creation prevented
+### 6 August 2026 - Enhancement - Admin - Duplicate support ticket creation prevented
 
 On the Support page of the Admin app, safeguards have been added to prevent duplicate support tickets from being created when network issues occur or when a ticket submission is automatically retried.
 
-### 06 August 2026 - Enhancement - Admin - Cluster dropdown and ticket form validation improvements
+### 6 August 2026 - Enhancement - Admin - Cluster dropdown and ticket form validation improvements
 
 On the Support page of the Admin app, the cluster dropdown now groups standalone DataMiner Agents. In addition, form validation has been improved with deferred error messages and character limit counters.
 
