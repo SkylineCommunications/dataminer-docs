@@ -46,7 +46,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | RemoteServices | Services hosted on other DMAs in the cluster. Each of the subfolders in this folder has the DMA ID of the DMA hosting the synchronized services. | Yes |
 | ResourceManager | Resource Manager configuration. | No |
 | Scripts | Automation scripts. | Yes |
-| Security | Within this folder, only the *Credentials* subfolder, which contains the credentials library configuration, and the *Ownership* subfolder are synchronized. | Partially |
+| Security | Within this folder, only the *Credentials* subfolder, which contains the Credentials Library configuration, and the *Ownership* subfolder are synchronized. | Partially |
 | ServiceManager | Service Manager configuration. | No |
 | ServiceTemplates | Service template definitions (from DataMiner 10.6.7/10.7.0 onwards; in earlier DataMiner versions these are included in the *Services* and *RemoteServices* folders).<!-- RN 45370 --> | Yes |
 | Services | Services hosted on the DMA. | See note below. |

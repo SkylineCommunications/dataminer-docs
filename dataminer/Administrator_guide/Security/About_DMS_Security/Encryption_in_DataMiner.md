@@ -29,7 +29,7 @@ All password encryption in DataMiner is done through the Blowfish algorithm (ECB
 DataMiner encrypts the following secrets using this technique:
 
 - Password parameters
-- [Credential libraries](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication)
+- [Credential libraries](xref:Credentials_Library)
 - Database passwords
 - Element passwords
 - Replication passwords
