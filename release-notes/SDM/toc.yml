@@ -1,6 +1,8 @@
 items:
   - name: SDM Abstractions
     items:
+      - name: SDM Abstractions 1.0.4
+        topicUid: SDM_Abstractions_1.0.4
       - name: SDM Abstractions 1.0.3
         topicUid: SDM_Abstractions_1.0.3
       - name: SDM Abstractions 1.0.2
