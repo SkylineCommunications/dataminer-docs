@@ -1,13 +1,13 @@
 ---
-uid: EPM_GPON_Create_OLT
-description: Learn how to create GPON OLT elements, either individually through the interactive user interface or in bulk from a CSV file.
+uid: EPM_xPON_Create_OLT
+description: Learn how to create xPON OLT elements, either individually through the interactive user interface or in bulk from a CSV file.
 ---
 
-# Creating a new GPON OLT
+# Creating a new xPON OLT
 
 ## About the CreateOLTs automation script
 
-The **CreateOLTs** automation script allows operators to create GPON OLT elements in an EPM xPON deployment.
+The **CreateOLTs** automation script allows operators to create xPON OLT elements in an EPM xPON deployment.
 
 You can either:
 

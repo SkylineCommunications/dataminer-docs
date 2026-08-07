@@ -92,8 +92,8 @@ items:
             topicUid: xPON_ONT_Json_definition
         - name: EPM xPON deployment
           topicUid: xPON_deployment
-        - name: Creating a new GPON OLT
-          topicUid: EPM_GPON_Create_OLT
+        - name: Creating a new xPON OLT
+          topicUid: EPM_xPON_Create_OLT
         - name: Available parameters in EPM xPON
           topicUid: xPON_KPI
           items:
