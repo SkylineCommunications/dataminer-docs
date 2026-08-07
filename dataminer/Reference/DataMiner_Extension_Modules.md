@@ -5,92 +5,15 @@ description: DxMs are modules that expand the core DataMiner software with addit
 
 # DataMiner Extension Modules (DxMs)
 
-A DataMiner Extension Module (DxM) is a service that can be installed, upgraded, and uninstalled without the need to reboot the DataMiner Agent. These modules will expand the core DataMiner software with additional features and capabilities. In most cases, DxMs will be backwards-compatible with all supported core DataMiner versions. However, this may not be possible in some cases, and then a minimum core DataMiner version will be indicated.
+A DataMiner Extension Module (DxM) is an independently versioned service that can be installed, upgraded, and uninstalled without rebooting the DataMiner Agent. DxMs extend the core DataMiner software with additional features and capabilities. DxMs can be added through the Admin app and through DataMiner upgrade packages. In most cases, DxMs are backward-compatible with all supported core DataMiner versions. If this is not possible, a minimum required core DataMiner version is indicated.
 
-Some DxMs are considered core modules created using the DxM technology. These are known as **DcMs** (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades and are part of the DataMiner installer starting from DataMiner 10.3.7. While DxMs are only updated if they have already been installed, DcMs will always be installed or updated with an upgrade.
+When you trigger a DxM update via the Admin app, any dependencies (typically the required .NET version) are indicated.
 
-DxMs depend on a minimum version of the core software. This is indicated in the Admin app. When you install updates, the latest compatible update will be automatically selected.
+For information on DataMiner Core Modules, see [DataMiner Core Modules (DcMs)](xref:DataMinerCoreModules).
 
 ## Packs
 
 For ease of installation, DxMs may be packaged together in a pack, such as the [Cloud Pack](xref:DataMiner_Cloud_Pack). These packs allow users to install several DxMs at once.
-
-## Available DcMs
-
-### APIGateway
-
-The APIGateway module is the endpoint for the gRPC communication with a DataMiner Agent.
-
-From DataMiner 10.4.0/10.4.2 onwards<!--RN 37734 + 36575-->, DataMiner modules can register with APIGateway. All modules registered with APIGateway are displayed under `https://[Your DMA]/APIGateway/api/version`, showing the following properties:
-
-- Name
-- Version
-- Endpoint on which they can be accessed via APIGateway (proxy modules only)
-
-### ArtifactDeployer
-
-The ArtifactDeployer module is responsible for allowing users to deploy different DataMiner artifacts towards their system. An example of a feature that uses this module is the [deployment of connectors from within the Catalog](xref:Deploying_a_catalog_item).
-
-This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
-
-### BrokerGateway
-
-The BrokerGateway module is responsible for managing the NATS communication. It automatically updates the NATS cluster when the DataMiner cluster changes and provides clients with the required credentials.
-
-Compared to the former way of managing NATS communication, BrokerGateway manages NATS communication based on a single source of truth that has complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS is configured automatically, and a newer version of NATS is used that has better performance and is easier to upgrade.
-
-In addition, starting from DataMiner 10.6.0/10.6.1, the SLNet‑managed NATS solution is no longer supported, so [a migration](xref:BrokerGateway_Migration) to BrokerGateway has to be executed before you can upgrade to these DataMiner versions and beyond.
-
-### CoreGateway
-
-The CoreGateway module is responsible for translating requests from other modules into requests towards the DataMiner System. This ensures backwards compatibility with different DataMiner versions.
-
-This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
-
-### FieldControl
-
-The FieldControl module is responsible for handling incoming requests from dataminer.services. For example, such a request could come from the [DataMiner Teams Bot](xref:DataMiner_Teams_bot) when a user asks it to retrieve the alarms from the system.
-
-This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
-
-### GQI
-
-The GQI module is responsible for handling [GQI queries](xref:About_GQI). See [GQI DxM](xref:GQI_DxM).
-
-A preview version of this DxM is included in DataMiner upgrade packages from DataMiner 10.5.2/10.5.0 onwards and web-only upgrade packages from 10.5.2 onwards.<!-- RN 41811 --> From DataMiner 10.5.0 [CU1]/10.5.4 onwards, the DxM is fully supported.
-
-### Orchestrator
-
-The Orchestrator module is responsible for management and upgrades of DxMs through the [Admin app](xref:Managing_cloud-connected_nodes).
-
-This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
-
-### StorageModule
-
-The StorageModule DcM is responsible for the storage of element configuration data.
-
-### SupportAssistant
-
-The SupportAssistant module is responsible for features allowing Skyline Communications to provide better and faster support.
-
-This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
-
-From version 1.3.1 of the DataMiner SupportAssistant module onwards, this DxM also takes care of [offloading reports and notifications](xref:Disable_Offloading_Reports_and_Notifications) generated by SLWatchDog to dataminer.services to improve the maintenance and support experience.
-
-### UserDefinableApiEndpoint
-
-The UserDefinableApiEndpoint module is responsible for handling API triggers for DataMiner User-Defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
-
-### Web
-
-The Web module is a backend process that DataMiner web apps can use without relying on `SLHelper`. It is intended to make web apps more independent from server-side components for backend tasks.
-
-Currently, this module is responsible for the following:
-
-- Generating dashboard reports.
-- Spinning up a backend browser used to generate WAF rules.
-
-This DxM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43439 -->
 
 ## Available DxMs
 
@@ -153,5 +76,3 @@ For more information, refer to [Edge Manager](xref:EdgeManagerOverview).
 ## Logging
 
 If you encounter any issues with a DxM, consult the log files for errors and warnings. By default, you can find these in the following folder: `C:\ProgramData\Skyline Communications\<DxM>\Logs`.
-
-If this folder does not exist, it will be created automatically if necessary.

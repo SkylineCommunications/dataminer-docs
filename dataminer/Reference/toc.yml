@@ -119,8 +119,13 @@ items:
         topicUid: Activating_SLProtocol_as_a_64_Bit_Process
       - name: Activating SLProtocol as a 32-bit process
         topicUid: Activating_SLProtocol_as_a_32_Bit_Process
-  - name: DataMiner Extension Modules (DxMs)
-    topicUid: DataMinerExtensionModules
+  - name: DataMiner modules
+    topicUid: DataMinerModules
+    items:
+      - name: DataMiner Extension Modules (DxMs)
+        topicUid: DataMinerExtensionModules
+      - name: DataMiner Core Modules (DcMs)
+        topicUid: DataMinerCoreModules
   - name: Custom branding
     topicUid: Custom_branding
   - name: DataMiner metrics
