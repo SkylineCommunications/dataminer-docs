@@ -51,7 +51,9 @@ To restrict access for specific definitions and their instances:
 
    When a condition is set, the access level badge changes to *Limited*, meaning the group can only access DOM instances where the specified field contains the specified value(s).
 
-   For example, the *Engineering* group can be configured to only access *Job* instances where the *Assigned office* field contains the value *Engineering HQ*.
+   For example, the *Frankfurt Teleport Engineers* group can be configured to only access *Transmission Bookings* instances where the *Teleport Location* field contains the value *Frankfurt*.
+
+   ![Instance-level security condition](~/dataminer/images/DOMSecurityInstanceLevel.png)<br>*Instance-level security condition in DataMiner 10.6.9*
 
 1. To give a group read-only access, enable the *Read-only* toggle for that row.
 
