@@ -1,6 +1,6 @@
 ---
 uid: Advanced_Connectivity_configuration
-description: "Explore how, in Cube, you can set advanced Connectivity configuration options in four tables in the element protocol."
+description: "Learn how to configure advanced Connectivity options in Cube by using the four Connectivity tables from the element protocol."
 ---
 
 # Advanced Connectivity configuration
