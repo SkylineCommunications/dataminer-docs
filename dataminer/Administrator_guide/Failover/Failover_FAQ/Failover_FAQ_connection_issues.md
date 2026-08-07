@@ -1,6 +1,6 @@
 ---
 uid: Failover_FAQ_connection_issues
-description: "Find out what you should do if, after a Failover switch, you run into connection issues because of incorrect routing mechanisms to the correct Agent."
+description: "Learn what to do if you encounter connection issues after a Failover switch because of incorrect routing to the active Agent."
 ---
 
 # What if I have connection issues after a Failover switch?
