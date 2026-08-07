@@ -1,5 +1,6 @@
 ---
 uid: working_with_dcf_interface_properties_gqi
+description: "Learn how to create GQI queries and dashboards to display and filter DCF interface properties using grid and query filter visualizations."
 ---
 
 # Working with DCF interface properties in GQI queries
