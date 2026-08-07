@@ -124,6 +124,16 @@ Previously, attempting to confirm such a job resulted in an error indicating tha
 
 Node-less jobs can now move freely through the *Tentative* > *Confirmed* > *Tentative* lifecycle without requiring any nodes to be present.
 
+#### Workflow Designer: Execution script selection removed for workflows and workflow connections [ID 46144]
+
+The ability to specify an execution script on workflows and workflow connections has been removed, because this functionality is already available by means of the orchestration events feature in MediaOps Live.
+
+#### Scheduling: Inserting nodes now uses panel instead of interactive script [ID 46145]
+
+Inserting nodes between two connected nodes of a job is now done using a panel instead of an interactive script.
+
+This improves the visibility of available resources and aligns this action with other available node manipulation actions on a job, such as adding or swapping a node.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
