@@ -1,5 +1,6 @@
 ---
 uid: Failover_FAQ_cannot_start
+description: "Find out what you should do if one of the DataMiner Agents in a Failover pair cannot be started or restarted."
 ---
 
 # What should I do if one of the Agents in a Failover pair cannot be started or restarted?

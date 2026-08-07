@@ -1,5 +1,6 @@
 ---
 uid: Switching_to_Failover_with_shared_hostname
+description: "Switch Failover from virtual IP to shared hostname by decommissioning and reconfiguring the pair, or update DMS.xml after shutting down both DMAs."
 ---
 
 # Switching Failover from virtual IP to hostname
