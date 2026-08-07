@@ -8,7 +8,6 @@ description: "Learn how the DataMiner UserDefinableApiEndpoint DxM routes API re
 *DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
 
 > [!CAUTION]
->
 > Although [rate limiting](xref:UD_APIs_Objects_ApiToken#ratelimiting) is available, it is not a complete protection against unwanted traffic. You should also protect the endpoint with a firewall or other network security measure that allows requests only from trusted IP addresses or networks.
 
 ## Installing the DxM
