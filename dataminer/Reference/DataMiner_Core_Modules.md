@@ -33,7 +33,11 @@ This DcM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 
 
 The BrokerGateway module is responsible for managing the NATS communication. It automatically updates the NATS cluster when the DataMiner cluster changes and provides clients with the required credentials.
 
-This DcM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU2]/10.5.5 onwards. To make an existing DataMiner 10.5.x setup switch to using BrokerGateway, [a migration](xref:BrokerGateway_Migration) is required. Migrating is highly recommended, as BrokerGateway automatically configures TLS and uses a newer version of NATS, enhancing the overall system performance and error handling capabilities. Upgrading to DataMiner 10.6.0/10.6.1 or higher is not possible without [migrating to BrokerGateway](xref:BrokerGateway_Migration) first.
+This DcM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU2]/10.5.5 onwards.
+
+Compared to the former way of managing NATS communication, BrokerGateway manages NATS communication based on a single source of truth that has complete knowledge of the cluster, resulting in more robust and carefree NATS communication. In addition, TLS is configured automatically, and a newer version of NATS is used that has better performance and is easier to upgrade.
+
+Starting from DataMiner 10.6.0/10.6.1, the SLNet-managed NATS solution is no longer supported, so [a migration](xref:BrokerGateway_Migration) to BrokerGateway must be executed before you can upgrade to these DataMiner versions and beyond.
 
 ### CoreGateway
 
@@ -77,7 +81,12 @@ The UserDefinableApiEndpoint module is responsible for handling API triggers for
 
 ### Web
 
-The Web module provides backend services for the DataMiner web apps.
+The Web module is a backend process that DataMiner web apps can use without relying on `SLHelper`. It is intended to make web apps more independent from server-side components for backend tasks.
+
+Currently, this module is responsible for the following:
+
+- Generating dashboard reports.
+- Spinning up a backend browser used to generate WAF rules.
 
 This DcM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43439 -->
 
