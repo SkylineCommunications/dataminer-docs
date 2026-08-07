@@ -37,6 +37,14 @@ In addition, when there is nothing to configure in the operator view, the dialog
 > [!NOTE]
 > This change only affects which information is displayed. It has no impact on the configurations themselves or on any previously configured values.
 
+#### Scheduling: Job Type dropdown shown when multiple categories are available [ID 46112]
+
+In the Scheduling app, when creating or editing a job, a *Job Type* dropdown is now displayed whenever multiple categories are available, allowing you to select the appropriate job type.
+
+The selected job type can be used to filter the timeline on the *Job View* page, making it easier to focus on relevant jobs.
+
+If only one category is available, it is automatically selected for the job.
+
 ## Changes
 
 ### Enhancements
