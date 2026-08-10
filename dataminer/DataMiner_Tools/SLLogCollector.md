@@ -264,7 +264,7 @@ Additionally, each SLLogCollector instance writes its own [internal log file](#s
 Each SLLogCollector instance writes its own internal log file named `log-[creation timestamp].txt`. These log files are stored in `C:\ProgramData\Skyline Communications\SLLogCollector`.
 
 > [!NOTE]
-> Prior to DataMiner 10.6.4/10.7.0<!--RN 44668-->, all logging is stored in two files: `SL_LogCollector_fulllog.log` and `SL_LogCollector_Log.log`, located in `C:\ProgramData\Skyline\DataMiner\SL_LogCollector`.
+> Prior to DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.4<!--RN 44668-->, all logging is stored in two files: `SL_LogCollector_fulllog.log` and `SL_LogCollector_Log.log`, located in `C:\ProgramData\Skyline\DataMiner\SL_LogCollector`.
 
 ### Nodetool missing JAVA_HOME
 
