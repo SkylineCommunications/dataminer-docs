@@ -60,4 +60,12 @@ For detailed information about the changes included in this version, refer to th
 
 ### Fixes
 
-*This release does not contain any fixes yet.*
+#### Table subscriptions with forceFullTable filter did not deliver updates for newly added rows on regular tables [ID 45970]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+Up to now, when you created a subscription on a regular (non-partial) table and included the `forceFullTable=true` extra filter, updates for rows that did not yet exist at subscription creation time were not delivered.
+
+From now on, this filter will be ignored for regular tables. As a result, subscriptions that include this filter now behave the same as subscriptions without it, and updates for newly added rows are delivered correctly.
+
+View tables, direct view tables, partial tables, and matrixes are not affected.

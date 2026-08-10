@@ -26,7 +26,15 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-*This release does not contain any enhancements yet.*
+#### Dashboards/Low-Code Apps: Discrete filtering now uses OR filters instead of RegexFilter when GQI DxM is enabled [ID 46015]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+This change applies to the Query filter component and the Table component when the GQI DxM is enabled.
+
+Up to now, for discrete columns in these components, filtering was done by creating a regex that combined the selected display values.
+
+From now on, filtering for discrete columns will use OR filtering in GQI instead.
 
 ### Fixes
 
