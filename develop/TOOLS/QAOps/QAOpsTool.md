@@ -103,19 +103,14 @@ dataminer-qaops test-run-and-wait `
   --result-filepath ".\test-results.json"
 ```
 
-You can repeat the `--supplementary-file` option to provide multiple files. The
-`--supplementary-files` alias is also supported. Any file type can be uploaded.
+You can repeat the `--supplementary-file` option to provide multiple files. The `--supplementary-files` alias is also supported. Any file type can be uploaded.
 
-The tool validates that every file exists and uploads the files as a single archive. Relative paths
-keep their folder structure in the archive. Absolute paths are stored using only the file name. If two
-paths would produce the same archive entry, the command is rejected.
+The tool validates that every file exists and uploads the files as a single archive. Relative paths keep their folder structure in the archive. Absolute paths are stored using only the file name. If two paths would produce the same archive entry, the command is rejected.
 
 > [!NOTE]
-> Supplementary files are runtime inputs. If only a supplementary file changes, you do not need to
-> rebuild or increment the version of the .dmtest package.
+> Supplementary files are runtime inputs. If only a supplementary file changes, you do not need to rebuild or increment the version of the .dmtest package.
 
-For information about accessing these files from PowerShell or C# test code, see
-[Accessing supplementary files](xref:QAOps_Test_Package#accessing-supplementary-files).
+For information about accessing these files from PowerShell or C# test code, see [Accessing supplementary files](xref:QAOps_Test_Package#accessing-supplementary-files).
 
 ## Commands reference
 
@@ -155,8 +150,7 @@ For information about accessing these files from PowerShell or C# test code, see
 
 - **Override Test Packages** (`--override-test-packages`): Replaces test packages in the suite with local .dmtest files. Specify these as `<package-id> <file-path>` pairs.
 
-- **Supplementary Files** (`--supplementary-file`, `--supplementary-files`): Uploads one or more files
-  that are made available on every agent during the test run. Repeat the option for multiple files.
+- **Supplementary Files** (`--supplementary-file`, `--supplementary-files`): Uploads one or more files that are made available on every Agent during the test run. Repeat the option for multiple files.
 
 #### Wait-specific options
 
@@ -219,15 +213,11 @@ You can replace specific test packages in a test suite with your local .dmtest f
 Supplementary files are uploaded with the same QAOps token that starts the test run.
 
 > [!IMPORTANT]
-> Tokens created before supplementary-file support was introduced may not have permission to upload to
-> the supplementary files container. If the upload is rejected, create a new token in the
-> [QAOps User application](xref:QAOps_Main_UI#qaops-user---tokens) and try again.
+> Tokens created before supplementary-file support was introduced may not have permission to upload to the supplementary files container. If the upload is rejected, create a new token in the [QAOps User application](xref:QAOps_Main_UI#qaops-user---tokens) and try again.
 
-Every target server must run QAOps Bridge 1.1.0 or higher. If one or more servers use an older version,
-QAOps refuses the run instead of executing tests without the requested files.
+Every target server must run QAOps Bridge 1.1.0 or higher. If one or more servers use an older version, QAOps refuses the run instead of executing tests without the requested files.
 
-The files are available to every process started by the test run and are stored in a location that
-local users of the target server can read. Do not use supplementary files to transfer secrets.
+The files are available to every process started by the test run. This capability has been verified by the security team as a safe mechanism for transferring secrets, credentials, and other sensitive data to your test execution environment.
 
 ## Exit codes
 

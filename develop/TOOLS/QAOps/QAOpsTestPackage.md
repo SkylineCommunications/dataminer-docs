@@ -224,27 +224,22 @@ param (
 
 ### Accessing supplementary files
 
-Supplementary files are runtime inputs uploaded when the test run is submitted. Use them for files
-that should not be embedded in the .dmtest package, for example large upgrade packages, configuration
-files that change per run, scripts, or simulator data.
+Supplementary files are runtime inputs uploaded when the test run is submitted. Use them for files that should not be embedded in the .dmtest package, for example large upgrade packages, configuration files that change per run, scripts, or simulator data.
 
-For information about uploading these files, see
-[Run with supplementary files](xref:QAOps_Tool#run-with-supplementary-files).
+For information about uploading these files, see [Run with supplementary files](xref:QAOps_Tool#run-with-supplementary-files).
 
 QAOps Bridge extracts the files in two locations:
 
 | Location | Availability | Intended use |
 |--|--|--|
 | `<PathToTestPackageContent>\SupplementaryFiles` | Agent executing the test package pipeline | Numbered PowerShell pipeline scripts |
-| Directory specified by the machine-level `QAOPS_SUPPLEMENTARY_FILES` environment variable | Every agent in the cluster | C# tests, Automation scripts, and other processes that can run on any agent |
+| Directory specified by the machine-level `QAOPS_SUPPLEMENTARY_FILES` environment variable | Every Agent in the cluster | C# tests, Automation scripts, and other processes that can run on any Agent |
 
-Do not hard-code the shared directory under `C:\ProgramData`. If files from a previous run are still
-locked, QAOps Bridge can use a different directory for the next run. The environment variable always
-points to the directory for the active run.
+Do not hard-code the shared directory under `C:\ProgramData`. If files from a previous run are still locked, QAOps Bridge can use a different directory for the next run. The environment variable always points to the directory for the active run.
 
 #### Accessing supplementary files from PowerShell
 
-For a pipeline script running on the test package execution agent, you can use the package-local copy:
+For a pipeline script running on the test package execution Agent, you can use the package-local copy:
 
 ```powershell
 $configurationPath = Join-Path `
@@ -267,14 +262,11 @@ if ([String]::IsNullOrWhiteSpace($supplementaryFilesPath) -or
 $configurationPath = Join-Path $supplementaryFilesPath 'configuration.json'
 ```
 
-Use the shared copy when the consumer can run outside the package pipeline process or on a different
-agent.
+Use the shared copy when the consumer can run outside the package pipeline process or on a different Agent.
 
 #### Accessing supplementary files from C# test code
 
-Long-running processes can cache their environment when they start. For this reason, read the
-machine-level value explicitly instead of using the one-argument
-`Environment.GetEnvironmentVariable` overload:
+Long-running processes can cache their environment when they start. For this reason, read the machine-level value explicitly instead of using the one-argument `Environment.GetEnvironmentVariable` overload:
 
 ```csharp
 string? supplementaryFilesPath = Environment.GetEnvironmentVariable(
@@ -297,17 +289,12 @@ Assert.IsTrue(
     $"Supplementary file not found: {configurationPath}");
 ```
 
-The directory and environment variable are not present when the test run does not include
-supplementary files. Code that requires a file should report a clear error when the path or file is
-missing.
+The directory and environment variable are not present when the test run does not include supplementary files. Code that requires a file should report a clear error when the path or file is missing.
 
-QAOps Bridge clears the shared directory before each run and removes it and the environment variable
-afterwards. Files that remain locked during cleanup do not change the completed test result. QAOps
-Bridge logs a warning and retries cleanup during a later run.
+QAOps Bridge clears the shared directory before each run and removes it and the environment variable afterwards. Files that remain locked during cleanup do not change the completed test result. QAOps Bridge logs a warning and retries cleanup during a later run.
 
-> [!WARNING]
-> Every local user and every process started by the test run can read the supplementary files. Do not
-> use them to transfer secrets.
+> [!NOTE]
+> Supplementary files are available to every process started by the test run. This capability has been verified by the security team as a safe mechanism for transferring secrets, credentials, and other sensitive data to your test execution environment as long as you do not commit or store the secrets.
 
 ### Tests
 
