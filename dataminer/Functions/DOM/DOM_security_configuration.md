@@ -37,13 +37,16 @@ To restrict access for specific definitions and their instances:
 
 1. Select the definition for which you want to configure access.
 
-   A table appears showing the user groups that have access to the selected definition. By default, the table is empty because no groups have access yet.
+   You will now see a table listing the user groups that have access to the selected definition. By default, the table is empty because no groups have access yet.
 
 1. In the upper-right corner, click *+ Add groups* and select the groups that should have access to the definition.
 
    Each added group gets *Full* access by default. This means group members can read, update, and delete instances of that definition.
 
-1. To limit a group's access to specific DOM instances:
+   > [!NOTE]
+   > To remove a group's access to a definition, click the recycling bin button in that row.
+
+1. If you want to limit a group's access to specific DOM instances:
 
    1. In the *Condition* column, click *Add condition*.
 
@@ -57,9 +60,7 @@ To restrict access for specific definitions and their instances:
 
    ![Instance-level security condition](~/dataminer/images/DOMSecurityInstanceLevel.png)<br>*Instance-level security condition in DataMiner 10.6.9*
 
-1. To give a group read-only access, enable the *Read-only* toggle for that row.
-
-1. To remove a group's access to the definition, click the recycling bin button in that row.
+1. If you want to give a group read-only access, enable the *Read-only* toggle button for that row.
 
 1. Repeat this for each definition users should have access to.
 
