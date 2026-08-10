@@ -156,7 +156,7 @@ The minimum supported Cassandra version is **3.11**. Cassandra 3.11 remains supp
 > [!IMPORTANT]
 >
 > - Cassandra 3.11 reached end of life (EOL) in September 2024, when Apache Cassandra 5.0 was released. It no longer receives security patches, bug fixes, or community support on any operating system. If you are still running Cassandra 3.11, we **strongly recommend upgrading to Cassandra 5.0** as soon as possible.
-> - Cassandra 3.11 supported Windows, but Cassandra 5.0 does not. If you are upgrading from 3.11 on Windows, you will also need to migrate your Cassandra database to a Linux server as part of the upgrade process.
+> - Windows is no longer supported from Cassandra 4.0 onwards. If you are upgrading from Cassandra 3.11 on Windows, you will also need to **migrate your Cassandra database to a Linux server** as part of the upgrade process.
 
 #### RAM
 
