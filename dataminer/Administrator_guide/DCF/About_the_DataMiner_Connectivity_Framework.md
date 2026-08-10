@@ -1,5 +1,6 @@
 ---
 uid: About_the_DataMiner_Connectivity_Framework
+description: "Learn how to use the DataMiner Connectivity Framework to configure and visualize signal paths throughout your infrastructure."
 ---
 
 # About the DataMiner Connectivity Framework

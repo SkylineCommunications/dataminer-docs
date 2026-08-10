@@ -4,6 +4,10 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 4 August 2026 - Enhancement -SupportAssistant 1.9.3 - Release from GitHub
+
+SupportAssistant is now released from GitHub, which fully signs the MSI, binaries, and executables.
+
 #### 12 June 2026 - Enhancement - SupportAssistant 1.9.2 - Upgrade to .NET 10
 
 SupportAssistant has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.

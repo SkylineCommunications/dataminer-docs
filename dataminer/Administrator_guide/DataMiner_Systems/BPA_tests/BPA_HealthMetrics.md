@@ -1,5 +1,6 @@
 ---
 uid: BPA_HealthMetrics
+description: "Learn about the Health Metrics BPA test, which fetches an hourly summary of the SLNet connections that can be used to identify heavily loaded connections."
 ---
 
 # Health Metrics

@@ -1,5 +1,6 @@
 ---
 uid: MessageBrokerConfig_ForcedEndpoints
+description: "Configure forced NATS endpoints when all processes on a server have to connect to specific endpoints instead of the ones provided by BrokerGateway."
 ---
 
 # Configuring forced NATS endpoints

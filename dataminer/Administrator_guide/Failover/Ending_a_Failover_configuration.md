@@ -1,5 +1,6 @@
 ---
 uid: Ending_a_Failover_configuration
+description: "Find out how to end a Failover configuration in DataMiner to separate two teamed DMAs, including Cassandra replication factor checks."
 ---
 
 # Ending a Failover configuration
