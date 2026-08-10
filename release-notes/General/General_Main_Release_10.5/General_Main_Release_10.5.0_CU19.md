@@ -26,6 +26,19 @@ uid: General_Main_Release_10.5.0_CU19
 
 ### Enhancements
 
+#### SLLogCollector: Separate log file per instance [ID 44668]
+
+<!-- MR 10.5.0 [CU19]/10.6.0 [CU7] - FR 10.6.4 -->
+
+Up to now, all SLLogCollector logging of all SLLogCollector instances would end up in the following files, stored in the `C:\ProgramData\Skyline\DataMiner\SL_LogCollector\Log` folder:
+
+- `SL_LogCollector_fulllog.log`
+- `SL_LogCollector_log.log`
+
+From now on, each SLLogCollector instance will have its own dedicated log file named `log-[creation timestamp].txt`, stored in the `C:\ProgramData\Skyline Communications\SLLogCollector` folder.
+
+Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
+
 #### DxM upgraded [ID 46124]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
