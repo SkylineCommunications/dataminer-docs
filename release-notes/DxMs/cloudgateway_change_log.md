@@ -4,9 +4,9 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### TBD - Fix - CloudGateway 3.3.2 - Resolved possible deadlock
+#### 10 August 2026 - Fix - CloudGateway 3.3.2 - Resolved possible unstable connection
 
-Resolved a deadlock that could keep a broken connection alive, causing for an unstable cloud connection.
+Fixed an issue where the cloud connection could become unstable, causing long request durations or timeouts.
 
 #### 31 Juli 2026 - Enhancement - CloudGateway 3.3.1 - Cloud connection stability improvements
 
