@@ -42,6 +42,14 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### Cassandra Cluster Migrator tool now supports migrating Credentials Library credential types [ID 45824]
+
+<!-- MR 10.6.0 [CU6] - FR 10.6.10 -->
+
+The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to Cassandra Cluster from MySQL or Cassandra Single, now also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the Credentials Library.
+
+#### DxM upgraded [ID 46124]
+
 *This release does not contain any enhancements yet.*
 
 ### Fixes

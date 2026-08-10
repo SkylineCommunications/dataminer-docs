@@ -242,7 +242,7 @@ Performance has especially increased using filters that consist of multiple equa
 
 #### SLLogCollector: Separate log file per instance [ID 44668]
 
-<!-- MR 10.7.0 - FR 10.6.4 -->
+<!-- MR 10.5.0 [CU19]/10.6.0 [CU7] - FR 10.6.4 -->
 
 Up to now, all SLLogCollector logging of all SLLogCollector instances would end up in the following files, stored in the `C:\ProgramData\Skyline\DataMiner\SL_LogCollector\Log` folder:
 
