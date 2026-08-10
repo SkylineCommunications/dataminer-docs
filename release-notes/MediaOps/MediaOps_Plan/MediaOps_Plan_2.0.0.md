@@ -45,6 +45,14 @@ The selected job type can be used to filter the timeline on the *Job View* page,
 
 If only one category is available, it is automatically selected for the job.
 
+#### Scheduling: Custom job types [ID 46151]
+
+Instead of all jobs being automatically assigned the *Scheduled* type, you can now define custom job types and assign them when creating or editing a job.
+
+Job types are defined using the Categories Solution. From MediaOps 2.0.0 onwards, a new *Job Type* scope is created in Categories with two default types: *Ad Hoc* and *Scheduled*. You can freely add additional types on top of these defaults.
+
+The icon of the selected job type is displayed in the *Job Type* filter of the timeline view. If no icon has been assigned to a type, a default icon is displayed.
+
 ## Changes
 
 ### Enhancements
@@ -141,6 +149,30 @@ The ability to specify an execution script on workflows and workflow connections
 Inserting nodes between two connected nodes of a job is now done using a panel instead of an interactive script.
 
 This improves the visibility of available resources and aligns this action with other available node manipulation actions on a job, such as adding or swapping a node.
+
+#### Plan API: Additional filters now supported when reading jobs [ID 46146]
+
+In addition to filters by job ID or name, the Plan API now supports additional filters from the `JobExposers` class when reading jobs.
+
+You can now filter by the following fields:
+
+- Description
+- Start
+- End
+- PrerollStart
+- PostrollEnd
+- Priority
+- Notes
+- Key
+- RecurringJobId
+- JobCategoryId
+- State
+- OrganizationId
+- OwnerId
+- Capabilities (based on Capability ID or discretes)
+- Capacities (based on Capacity ID)
+- Configurations (based on Configuration ID)
+- Properties (based on Property ID)
 
 ### Fixes
 
