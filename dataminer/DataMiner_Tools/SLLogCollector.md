@@ -52,6 +52,23 @@ To use the SLLogCollector tool:
 
    - To only collect logging for the period since DataMiner was last started, select *Exclude logging of previous run of DataMiner*.
 
+   - From DataMiner 10.6.9/10.7.0 onwards<!--RN 45722-->, you can select *Output pending calls* to include pending calls in the generated package. By default, pending calls are collected for all elements with runtime errors. If you want to include additional elements, do the following:
+
+     1. Select *Load elements*.
+
+     1. Connect to DataMiner using Windows credentials or manual login.
+
+        When the connection has been established, a list of all elements in the system is displayed.
+
+     1. Select the elements for which pending calls should be collected.
+
+        Elements with runtime errors are automatically selected.
+
+     > [!NOTE]
+     >
+     > - The *Output pending calls* option is automatically enabled when any running processes have runtime errors linked to elements.
+     > - Prior to DataMiner 10.6.9/10.7.0, the *Output pending calls* option is not available, but pending calls are automatically included in the generated package for elements with runtime errors.
+
    - From DataMiner 10.6.7/10.7.0 onwards<!--RN 45044-->, you can select *Collect DLL info* to include information about DLL files in the generated package. If this option is enabled, the package will contain the following details for all DLL files found in the `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\ProtocolScripts` folders:
 
      - Name
