@@ -1,6 +1,6 @@
 ---
 uid: Migrating_elements_in_a_DataMiner_System
-description: If Swarming is not enabled in your DataMiner cluster, you can instead migrate elements from the System Center > Agents > Status page in DataMiner Cube.
+description: "Learn how to migrate elements from the System Center > Agents > Status page in DataMiner Cube if Swarming is not enabled in your DataMiner cluster."
 ---
 
 # Migrating elements within a cluster

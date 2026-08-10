@@ -1,5 +1,6 @@
 ---
 uid: Preparing_the_two_DataMiner_Agents
+description: "Prepare the two DataMiner Agents for Failover by verifying DMA roles, IP or hostname setup, required ports, and database and authentication readiness."
 ---
 
 # Preparing the two DataMiner Agents
