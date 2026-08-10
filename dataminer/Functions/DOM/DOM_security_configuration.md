@@ -49,9 +49,9 @@ To restrict access for specific definitions and their instances:
 
    1. Select a field descriptor from the dropdown.
 
-   1. Specify the value(s) the field must contain.
+   1. Specify one or more values the field can contain.
 
-   When a condition is set, the access level badge changes from *Full* to *Limited*. With *Limited* access, the group can only access DOM instances where the selected field contains the specified value(s).
+   When a condition is set, the access level badge changes from *Full* to *Limited*. With *Limited* access, the group can only access DOM instances where the specified field contains any of the specified values.
 
    For example, the user group *Frankfurt Teleport Engineers* can only access *Transmission Bookings* instances where the *Teleport Location* field contains the value *Frankfurt*.
 
@@ -85,7 +85,7 @@ To restrict access for specific definitions and their instances:
 
    - Select a field descriptor.
 
-   - Specify the value(s) the field must contain.
+   - Specify one or more values the field can contain.
 
    ![Example: London office](~/dataminer/images/LondonOffice.png)<br>*Configuring DOM security in DataMiner 10.6.3*
 
