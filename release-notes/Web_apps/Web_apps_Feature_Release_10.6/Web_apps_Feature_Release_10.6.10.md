@@ -30,11 +30,9 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
-This change applies to the Query filter component and the Table component when the GQI DxM is enabled.
+For the query filter and table component, the filtering for discrete columns now uses OR filtering in GQI. Previously, the filtering was done by creating a regex that combined the selected display values. The adjusted filtering behavior is more predictable, preventing possible issues in case a value is different from the display value.
 
-Up to now, for discrete columns in these components, filtering was done by creating a regex that combined the selected display values.
-
-From now on, filtering for discrete columns will use OR filtering in GQI instead.
+This only applies when the GQI DxM is enabled.
 
 ### Fixes
 
