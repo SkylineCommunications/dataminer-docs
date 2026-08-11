@@ -5,9 +5,9 @@ description: The DataMiner Web Support Assistant is a Chrome extension designed 
 
 # Web Support Assistant
 
-The DataMiner Web Support Assistant is a **Chrome extension** designed to assist users of DataMiner web apps on Chromium browsers. The purpose of this extension is to facilitate the reporting of bugs, allowing you to report issues accurately and efficiently, while also streamlining the bug-fixing process for the development team.
+The DataMiner Web Support Assistant is a **Chrome extension** designed to assist users of DataMiner web apps and the dataminer.services platform on Chromium browsers. The purpose of this extension is to facilitate the reporting of bugs, allowing you to report issues accurately and efficiently, while also streamlining the bug-fixing process for the development team.
 
-The assistant now also supports **DataMiner.Services**, allowing users to report issues from both DataMiner web applications and the DataMiner.Services platform.
+You can use the assistant to report any issues you encounter using DataMiner web apps or the dataminer.services platform.
 
 ## Installing the extension
 
