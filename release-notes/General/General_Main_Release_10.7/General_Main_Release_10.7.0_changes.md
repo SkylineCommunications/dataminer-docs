@@ -454,7 +454,7 @@ In order to protect DataMiner against a continuously growing queue of incoming s
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer 1.10.0
-- DataMiner CloudGateway 3.3.1
+- DataMiner CloudGateway 3.3.2
 - DataMiner CoreGateway 2.14.17
 - DataMiner DataAPI 1.4.6
 - DataMiner FieldControl 2.12.2
