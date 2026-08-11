@@ -22,6 +22,14 @@ uid: General_Main_Release_10.5.0_CU17
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.5.0 CU17](xref:Web_apps_Main_Release_10.5.0_CU17).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+## Important changes
+
+The following changes may have an impact on your system, so please make sure to check these before you upgrade:
+
+- [Correlation: Grouping method 'By alarm' has been removed [ID 45545]](xref:Cube_Feature_Release_10.6.8#correlation-grouping-method-by-alarm-has-been-removed-id-45545)
+- [DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]](#dataminer-agents-will-now-translate-the-primary-key-to-the-display-key-when-receiving-timeline-data-requests-from-a-client-id-45579)
+- [Dashboards/Low-Code Apps: State timeline component will now use the primary key when requesting timeline data [ID 45600]](xref:Web_apps_Feature_Release_10.6.8#dashboardslow-code-apps-state-timeline-component-will-now-use-the-primary-key-when-requesting-timeline-data-id-45600)
+
 ## Changes
 
 ### Breaking changes

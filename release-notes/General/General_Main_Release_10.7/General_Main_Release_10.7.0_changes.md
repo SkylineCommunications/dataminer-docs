@@ -7,6 +7,13 @@ uid: General_Main_Release_10.7.0_changes
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
+## Important changes
+
+The following changes may have an impact on your system, so please make sure to check these before you upgrade:
+
+- [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
+- [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
+
 ## Changes
 
 ### Breaking changes
@@ -241,19 +248,6 @@ The `C:\Skyline DataMiner\NotifyMail.html` file, i.e., the email report template
 Up to now, log entries regarding SLDataGateway job queue updates would be logged in the `C:\Skyline DataMiner\Logging\SLDbConnection.txt` file.
 
 From now on, these log entries will be logged in the `C:\Skyline DataMiner\Logging\SLDataGateway\SLJobQueues.txt` file instead.
-
-#### SLLogCollector: Separate log file per instance [ID 44668]
-
-<!-- MR 10.7.0 - FR 10.6.4 -->
-
-Up to now, all SLLogCollector logging of all SLLogCollector instances would end up in the following files, stored in the `C:\ProgramData\Skyline\DataMiner\SL_LogCollector\Log` folder:
-
-- `SL_LogCollector_fulllog.log`
-- `SL_LogCollector_log.log`
-
-From now on, each SLLogCollector instance will have its own dedicated log file named `log-[creation timestamp].txt`, stored in the `C:\ProgramData\Skyline Communications\SLLogCollector` folder.
-
-Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
 
 #### Connector synchronization enhancements [ID 44715]
 

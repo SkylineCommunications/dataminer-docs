@@ -24,6 +24,12 @@ uid: General_Main_Release_10.5.0_CU10
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.5.0 CU10](xref:Web_apps_Main_Release_10.5.0_CU10).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+## Important changes
+
+The following change may have an impact on your system, so please make sure to check this before you upgrade:
+
+- [Annotations are now End of Life [ID 44136]](xref:Web_apps_Feature_Release_10.6.1#annotations-are-now-end-of-life-id-44136)
+
 ### Enhancements
 
 #### Minor enhancements made to BPAs [ID 40751]
