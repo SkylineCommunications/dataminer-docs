@@ -79,7 +79,7 @@ If you want to add the Failover pair to a DataMiner System that uses STaaS, firs
 
 ### Dedicated clustered storage
 
-1. Make sure that the Agents to be added can reach the Cassandra cluster through port 9042 (also port 9042 when using TLS).
+1. Make sure that the Agents to be added can reach the Cassandra cluster through port 9042 (also when using TLS).
 
 1. Make sure that the Agents to be added can reach the OpenSearch or Elasticsearch cluster through port 9200.
 
