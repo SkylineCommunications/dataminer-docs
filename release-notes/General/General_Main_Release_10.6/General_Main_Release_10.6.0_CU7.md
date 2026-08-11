@@ -68,3 +68,11 @@ Up to now, when you created a subscription on a regular (non-partial) table and 
 From now on, this filter will be ignored for regular tables. As a result, subscriptions that include this filter now behave the same as subscriptions without it, and updates for newly added rows are delivered correctly.
 
 View tables, direct view tables, partial tables, and matrixes are not affected.
+
+#### SLAutomation could hang during shutdown [ID 46123]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+In some cases, a race condition could cause the SLAutomation process to hang during shutdown.
+
+As a result, a DataMiner upgrade could be delayed unnecessarily by up to 5 minutes.
