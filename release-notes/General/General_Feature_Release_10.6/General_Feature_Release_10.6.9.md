@@ -145,7 +145,7 @@ Up to now, the extension method that allowed `FilterElement<T>` to be passed was
 
 Equivalent extension methods have now been added in the `Skyline.DataMiner.Net.Apps.ManagerStore.Select` namespace, which also contains `SelectedFields<T>`. The old extension methods have been converted to regular static methods so that already compiled code remains compatible with newer `SLNetTypes` versions.
 
-#### DxMs upgraded [ID 45944] [ID 46119]
+#### DxMs upgraded [ID 45944] [ID 46119] [ID 46159]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
