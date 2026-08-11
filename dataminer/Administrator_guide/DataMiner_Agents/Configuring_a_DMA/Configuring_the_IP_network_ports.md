@@ -23,8 +23,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 | N/A     | 7000/tcp | Cassandra: non-TLS setup (inter-node communication in Failover setups) |
 | N/A     | 7001/tcp | Cassandra: TLS setup (available from DataMiner 10.1.3 onwards) |
 | N/A     | 7199/tcp | Cassandra: cluster backups |
-| N/A     | 9042/tcp | Cassandra: non-TLS setup (server listening for client requests) |
-| N/A     | 9142/tcp | Cassandra: TLS setup (server listening for client requests) |
+| N/A     | 9042/tcp | Cassandra: non-TLS and TLS setup (server listening for client requests) |
 | N/A     | 9200/tcp | OpenSearch/Elasticsearch |
 | N/A     | 9300/tcp | OpenSearch/Elasticsearch (inter-node communication) |
 | Multiple protocols | 4222/tcp<br> 6222/tcp | NATS (required from DataMiner 10.1.1 onwards) |
