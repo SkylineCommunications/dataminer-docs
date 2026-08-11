@@ -28,9 +28,15 @@ In order to perform these API calls on a BrokerGateway instance, you will need t
 
 You can execute the API calls by calling the REST API via PowerShell, as detailed below.
 
+> [!IMPORTANT]
+>
+> Executing these API calls requires a secure TLS connection, and therefore, a trusted certificate bound to all IP-addresses for port 443 in IIS.
+> If the certificate on the DataMiner server cannot not trusted (NOT RECOMMENDED), the script needs to be adapted to skip the certificate checks.
+
 ### Generating a client secret
 
 Executing the following PowerShell script will generate a new client secret, which will be returned in `$response`.
+For the script to run, the DMA's certificate needs to be trusted, so a valid TLS connection is required (see [API calls](#api-calls)).
 
 ```powershell
 $clientname = "external client" # The name of the client secret to generate.
@@ -54,6 +60,7 @@ It is not possible to overwrite a client secret with a new key. Instead, you wil
 ### Deleting a client secret
 
 Executing the following PowerShell script will remove a chosen client secret. The name is case-sensitive.
+For the script to run, the DMA's certificate needs to be trusted, so a valid TLS connection is required (see [API calls](#api-calls)).
 
 ```powershell
 $clientname = "external client" # The name of the client secret to remove.
@@ -69,6 +76,7 @@ Invoke-RestMethod "https://$uri/BrokerGateway/api/clientSecret/delete?clientName
 ### Listing all generated client secrets
 
 This API call lists up all generated client secrets. The keys are redacted for security reasons. Only the first four characters will be visible.
+For the script to run, the DMA's certificate needs to be trusted, so a valid TLS connection is required (see [API calls](#api-calls)).
 
 ```powershell
 $uri = "..." # Change to FQDN of the Agent.
