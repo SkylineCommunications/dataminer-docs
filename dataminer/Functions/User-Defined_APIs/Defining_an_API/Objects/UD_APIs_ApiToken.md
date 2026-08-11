@@ -64,7 +64,7 @@ A rate limit consists of the following properties:
 | Window   | TimeSpan | The time span during which the configured number of requests are allowed. Supported range: 1 second to 1 day. |
 
 > [!IMPORTANT]
-> From DataMiner Cube 10.6.9<!-- RN 45751 --> onwards, the rate limit can also be configured in the Cube token configuration window. When a token is created in Cube, a rate limit is mandatory. Tokens created previously or via the API without a rate limit can still be updated without adding a limit.
+> Currently, rate limits cannot be configured in the UI and must be configured via the C# API. If an API token with a configured rate limit is updated through the UI, the rate limit will be cleared.
 
 #### Behavior when the limit is exceeded
 
