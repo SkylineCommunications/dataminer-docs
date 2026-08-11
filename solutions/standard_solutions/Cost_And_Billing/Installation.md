@@ -17,7 +17,7 @@ Before installing the solution, make sure the following requirements are met:
 
 ## Installing the Cost & Billing Solution
 
-The core solution consists of a single [Cost & Billing ](TBD) package that must be deployed.
+The core solution consists of a single [Cost & Billing ](https://catalog.dataminer.services/details/33bca425-6591-482d-a2d5-d118ecf77d54) package that must be deployed.
 
 The **Cost & Billing Solution** package contains:
 - The Low-Code App.
