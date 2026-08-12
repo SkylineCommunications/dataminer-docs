@@ -63,7 +63,7 @@ There are two possibilities to uninstall a DataMiner Agent:
    > [!NOTE]
    > After you run these scripts, check the *Details* and *Services* tabs of Windows Task Manager for remaining DataMiner processes or services. Neither tab should contain any entries starting with "SL". If any such processes are still shown in the Task Manager, try re-running the scripts above or stop the processes manually.
 
-1. From DataMiner 10.1.0/10.1.1 onwards, use SLEndpointTool_console to remove **NATS**:
+1. Use SLEndpointTool_console to remove **NATS**:
 
    1. Run `C:\Skyline DataMiner\Files\SLEndpointTool_Console.exe` either directly or from *cmd.exe* as Administrator.
 
