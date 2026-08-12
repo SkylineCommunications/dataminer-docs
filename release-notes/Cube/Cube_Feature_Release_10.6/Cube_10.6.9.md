@@ -101,7 +101,7 @@ When configuring a spectrum analysis component in Visual Overview, you can now u
 
 In the credentials library, you can now add token credentials, i.e., credentials that consist only of a single token.
 
-Also, all credential fields now have a maximum length of 5012 bytes, and the following fields can be left empty:
+Also, all credential fields now have a maximum length of 5120 bytes (5 KB), and the following fields can be left empty:
 
 | Type of credentials | Field |
 |---|---|
