@@ -9,7 +9,7 @@ If you choose self-managed storage instead of the recommended [Storage as a Serv
 
 In a **dedicated clustered storage** setup, once you have configured a Cassandra-compatible database service, you need to set up the indexing database cluster to complete your setup. In a setup with **storage per DMA**, setting up an indexing database is not mandatory, but it is highly recommended, as otherwise you will not have access to several DataMiner features.
 
-For more information on how to **install an OpenSearch database**, see [Installing an OpenSearch database](xref:Installing_OpenSearch_database).
+For more information on how to **install an OpenSearch database**, see [Installing an OpenSearch database](xref:Installing_OpenSearch_database). For new installations, we recommend using OpenSearch 3.X.
 
 From DataMiner 10.3.0/10.3.3 onwards, you can have data offloaded to **multiple OpenSearch clusters**. For more information on how to configure this setup, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters).
 

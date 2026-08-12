@@ -202,10 +202,10 @@ If there is more than one Cassandra node, the time in the cluster must be synchr
 
 ### OpenSearch/Elasticsearch requirements
 
-Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). Ideally, this should be an OpenSearch cluster. An Elasticsearch cluster can be used instead, but this is not recommended.
+Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). Ideally, this should be an OpenSearch cluster. An Elasticsearch cluster can be used instead, but this is not recommended. For new installations, we recommend using OpenSearch 3.X.
 
 > [!IMPORTANT]
-> Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any openSearch or Elasticsearch nodes.
+> Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any OpenSearch or Elasticsearch nodes.
 
 #### RAM
 
@@ -233,7 +233,7 @@ Gigabit Ethernet is required for throughput, and low latency is required for eas
 
 #### Operating System
 
-We recommend installing OpenSearch on Linux. While OpenSearch is compatible with Windows (see [Operating system compatibility](https://opensearch.org/docs/2.2/install-and-configure/install-opensearch/index/#operating-system-compatibility)), this setup is not covered in our testing and therefore not recommended.
+We recommend installing OpenSearch on Linux. While OpenSearch is compatible with Windows (see [Operating system compatibility](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#operating-system-compatibility)), this setup is not covered in our testing and therefore not recommended.
 
 Elasticsearch can be installed on the operating system of your choice, under the condition that it is supported by Elastic. A 64-bit OS is preferred.
 
