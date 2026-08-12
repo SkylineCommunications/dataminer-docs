@@ -16,16 +16,6 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## Highlights
 
-*No highlights have been selected yet.*
-
-## New features
-
-#### DataMiner Cube sidebar: New 'Report an issue' command added to 'Community' menu [ID 45741]
-
-<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-When, in the sidebar, you click the *Community* button, a menu will open. This menu now also includes a command that will allow you to [report an issue](https://aka.dataminer.services/ReportAnIssue).
-
 #### System Center - User-Defined APIs: Viewing and configuring rate limits for API tokens [ID 45751]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
@@ -37,6 +27,8 @@ When creating or editing a token, you can configure the following settings:
 - *Limit*: Maximum number of requests allowed within the configured window (from 1 to 100).
 - *Window*: Sliding time window during which the limit applies (from 1 second to 1 day).
 
+![Rate limit option when creating a new API token](~/release-notes/images/UD_API_rate_limit.png)
+
 New tokens will be created with a default rate limit of 60 requests per minute.
 
 The *Tokens* table includes a *Rate limit* column, showing the configured rate limit for each token.
@@ -45,6 +37,16 @@ The *Tokens* table includes a *Rate limit* column, showing the configured rate l
 >
 > - A configured rate limit restricts the number of requests a client can make within a specified time window. However, it does not guarantee that the server can process all requests up to that limit. Actual throughput depends on several factors, including the execution time of the API script, the number of concurrently active tokens, and overall server load.
 > - This feature will only work when DataMiner Cube is connected to a DataMiner Agent running Main Release version 10.7.0, Feature Release 10.6.7, or above.
+
+## New features
+
+#### DataMiner Cube sidebar: New 'Report an issue' command added to 'Community' menu [ID 45741]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+When, in the sidebar, you click the *Community* button, a menu will open. This menu now also includes a command that will allow you to [report an issue](https://aka.dataminer.services/ReportAnIssue).
+
+![Community menu in DataMiner Cube](~/release-notes/images/Cube_report_issue.png)
 
 #### Spectrum analyzer: Support added for reference traces and reference trace markers [ID 45843]
 
