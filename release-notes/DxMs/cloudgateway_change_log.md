@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 10 August 2026 - Fix - CloudGateway 3.3.2 - Connection to dataminer.services could be unstable
+
+With CloudGateway 3.3.1, an issue could occur that made the connection to dataminer.services unstable, causing long request durations or timeouts. This has been resolved.
+
 #### 31 Juli 2026 - Enhancement - CloudGateway 3.3.1 - Cloud connection stability improvements
 
 Several changes were made to enhance the stability of the connection to dataminer.services.
