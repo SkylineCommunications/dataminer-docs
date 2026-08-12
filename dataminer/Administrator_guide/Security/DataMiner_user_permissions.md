@@ -1088,14 +1088,14 @@ Permission to access the Database page in System Center.
 
 #### Modules \> System configuration \> Database \> Configure local/general DB
 
-Permission to change the settings of the general database. Prior to DataMiner 10.1.0/10.1.2, this is called the local database.
+Permission to change the settings of the general database. In legacy DataMiner versions, this was called the local database.
 
 > [!NOTE]
 > This user permission is not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, it is no longer displayed in such a system.<!-- RN 39870 -->
 
 #### Modules \> System configuration \> Database \> Configure central/offload DB
 
-Permission to change the settings of the offload database. Prior to DataMiner 10.1.0/10.1.1, this is called the central database.
+Permission to change the settings of the offload database. In legacy DataMiner versions, this was called the central database.
 
 ### Modules \> System configuration \> Indexing engine
 
