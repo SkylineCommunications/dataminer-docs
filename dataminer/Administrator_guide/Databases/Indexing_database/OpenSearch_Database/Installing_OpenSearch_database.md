@@ -510,4 +510,4 @@ To renew your self-signed TLS certificates for an existing OpenSearch database, 
 
    On Ubuntu, you can do so using the following command: `openssl verify rootCA.crt`
 
-   If a different status than OK is returned, this is most likely because the *rootCA.crt* has not been applied on the OpenSearch node or the *rootCA.crt* that you have applied on the OpenSearch node is not the the one that signed the certificate.
+   If a different status than OK is returned, this is most likely because the *rootCA.crt* has not been applied on the OpenSearch node or the *rootCA.crt* that you have applied on the OpenSearch node is not the one that signed the certificate.

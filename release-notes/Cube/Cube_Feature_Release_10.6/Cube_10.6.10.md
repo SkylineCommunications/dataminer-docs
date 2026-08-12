@@ -28,4 +28,14 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Fixes
 
-*This release does not contain any fixes yet.*
+#### Upgrades: End time was not always set correctly in the Overview tab [ID 46100]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When you performed a DataMiner upgrade, it could occur that the end time in the *Overview* tab was not always set correctly. This issue has been resolved.
+
+#### Spectrum Analysis: Measurement point cycle could be reset when the same spectrum element was opened in another component [ID 46111]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When you opened a spectrum element in one spectrum analysis component and then opened the same element in another component with measurement points selected, the measurement point cycle in the first component could be reset. This issue has been resolved.

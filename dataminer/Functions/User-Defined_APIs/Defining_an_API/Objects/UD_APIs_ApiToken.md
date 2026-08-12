@@ -64,7 +64,7 @@ A rate limit consists of the following properties:
 | Window   | TimeSpan | The time span during which the configured number of requests are allowed. Supported range: 1 second to 1 day. |
 
 > [!IMPORTANT]
-> Currently, rate limits cannot be configured in the UI and must be configured via the C# API. If an API token with a configured rate limit is updated through the UI, the rate limit will be cleared.
+> From DataMiner 10.6.9/10.7.0 onwards<!--RN 45751-->, rate limits can be viewed and configured directly in *System Center* > *User-Defined APIs* when creating or editing a token. See [Configuring a rate limit for an API token](xref:UD_APIs_Viewing_in_Cube#configuring-a-rate-limit-for-an-api-token). Prior to these versions, rate limits cannot be configured in the UI and must be configured via the C# API. If an API token with a configured rate limit is updated through the UI, the rate limit will be cleared.
 
 #### Behavior when the limit is exceeded
 
