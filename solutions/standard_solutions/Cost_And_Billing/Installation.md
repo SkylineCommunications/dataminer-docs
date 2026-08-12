@@ -24,7 +24,7 @@ The **Cost & Billing Solution** package contains:
 - The DOM model and automation scripts.
 - The Cost & Billing Dev Pack, which includes the Standard Data Model and provides typed read/write access to the Cost & Billing DOM instances.
 
-Once the package is installed, the core concepts within the Cost & Billing application are fully functional, including **Value Units**, **Contracts**, and **Ratecards**.
+Once the package is installed, the core concepts within the Cost & Billing application are fully functional, including **Value Units**, **Contracts**, and **Rate Cards**.
 
 ## Installing the MediaOps sample integration 
 

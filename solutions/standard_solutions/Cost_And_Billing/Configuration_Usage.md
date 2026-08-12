@@ -3,7 +3,7 @@ uid: Cost_Billing_Use
 ---
 # How to use
 
-This section explains how to use the Cost & Billing application: from the initial configuration of value units, over the creation of ratecards and contracts, to synchronizing data from the external system and calculating the cost and billing of billable events.
+This section explains how to use the Cost & Billing application: from the initial configuration of value units, over the creation of rate cards and contracts, to synchronizing data from the external system and calculating the cost and billing of billable events.
 
 After installing the solution, open the **Cost & Billing Low-Code App** in DataMiner. All configuration and day-to-day operations described below are done from this app.
 
@@ -21,9 +21,9 @@ To set the nominal value unit, click the **Set Nominal Unit** option on the page
 
 ### Defining currency exchange rates
 
-Ratecards and contracts in the application can be defined in different value units. However, since the final calculations are always expressed in the nominal value unit, exchange rates must be defined for every other value unit you want to use.
+Rate cards and contracts in the application can be defined in different value units. However, since the final calculations are always expressed in the nominal value unit, exchange rates must be defined for every other value unit you want to use.
 
-Only the units listed in the Value Units table will be available for selection when creating a ratecard or a contract.
+Only the units listed in the Value Units table will be available for selection when creating a rate card or a contract.
 
 To create a value unit conversion:
 
@@ -35,31 +35,31 @@ All value unit conversion rates are visible on the Value Units page.
 
 ### Editing and deprecating value units
 
-Each value unit can be edited afterwards. A value unit can also be **deprecated**: a deprecated value unit can no longer be used when creating new contracts or ratecards, or when performing calculations. Value Units can also be deprecated in bulk with the action buttons: Deprecate All and Deprecate Selected.
+Each value unit can be edited afterwards. A value unit can also be **deprecated**: a deprecated value unit can no longer be used when creating new contracts or rate cards, or when performing calculations. Value Units can also be deprecated in bulk with the action buttons: Deprecate All and Deprecate Selected.
 
-## Ratecards
+## Rate cards
 
-Ratecards define the rates used by the calculation. Go to the **Ratecards** page to manage all ratecards.
+Rate cards define the rates used by the calculation. Go to the **Rate cards** page to manage all rate cards.
 
-There are two kinds of ratecards, each with a different purpose:
+There are two kinds of rate cards, each with a different purpose:
 
-- **Cost ratecards** — define the internal cost of an item (what it costs your organization).
-- **Billing ratecards** — define the customer-facing rates, and are assigned to contracts.
+- **Cost rate cards** — define the internal cost of an item (what it costs your organization).
+- **Billing rate cards** — define the customer-facing rates, and are assigned to contracts.
 
-![Cost & Billing ratecards](~/solutions/images/CostAndBilling_ratecards.png)
+![Cost & Billing rate cards](~/solutions/images/CostAndBilling_ratecards.png)
 
-### Creating a ratecard
+### Creating a rate card
 
-To create a ratecard, click **+ New Ratecard**. The following fields are available:
+To create a rate card, click **+ New Rate Card**. The following fields are available:
 
 **General**
 
 | Field | Description |
 | --- | --- |
-| **Name** | The name of the ratecard. |
-| **Ratecard Type** | Whether this is a **Cost** or a **Billing** ratecard. |
-| **State** | The initial state of the ratecard. Create it as **Draft** if it is not yet officially ready to be used, or directly as **Active**. |
-| **Value Unit** | The value unit in which the rates of this ratecard are expressed. Only value units defined on the Value Units page are available. |
+| **Name** | The name of the rate card. |
+| **Rate card Type** | Whether this is a **Cost** or a **Billing** rate card. |
+| **State** | The initial state of the rate card. Create it as **Draft** if it is not yet officially ready to be used, or directly as **Active**. |
+| **Value Unit** | The value unit in which the rates of this rate card are expressed. Only value units defined on the Value Units page are available. |
 
 **Rules**
 
@@ -67,23 +67,23 @@ To create a ratecard, click **+ New Ratecard**. The following fields are availab
 | --- | --- |
 | **Minimum Time Interval** | The minimum duration that will be charged. If the actual usage is shorter than this interval, the minimum is charged instead. |
 | **Minimum Time Increment** | The increment in which usage time is charged. Usage is rounded up to the next multiple of this increment. |
-| **Capped Rate** | When enabled, the total amount calculated with this ratecard is capped at the given maximum value. |
+| **Capped Rate** | When enabled, the total amount calculated with this rate card is capped at the given maximum value. |
 
 **Rates**
 
-Each ratecard holds one or more rates, each expressed against a **unit**: per minute, per hour, per day, or per use. Fill in the rate value and select the corresponding unit, and use **+ Add Rate** to add additional rate lines. A rate line can be removed with the **X** button.
+Each rate card holds one or more rates, each expressed against a **unit**: per minute, per hour, per day, or per use. Fill in the rate value and select the corresponding unit, and use **+ Add Rate** to add additional rate lines. A rate line can be removed with the **X** button.
 
-Click **Save** to create the ratecard.
+Click **Save** to create the rate card.
 
-### Ratecard states
+### Rate card states
 
-A ratecard always follows the same state flow: **Draft → Active → Deprecated**.
+A rate card always follows the same state flow: **Draft → Active → Deprecated**.
 
-- **Draft** — the ratecard is being prepared and is not officially ready to be used.
-- **Active** — the ratecard can be use.
-- **Deprecated** — the ratecard is retired. Once a ratecard is deprecated, it can **no longer be edited or set back** to the Active or Draft state.
+- **Draft** — the rate card is being prepared and is not officially ready to be used.
+- **Active** — the rate card can be use.
+- **Deprecated** — the rate card is retired. Once a rate card is deprecated, it can **no longer be edited or set back** to the Active or Draft state.
 
-Ratecards can be edited as long as they are not deprecated. It is also possible to change the state of multiple selected ratecards at once through the **action buttons** on the Ratecards page.
+Rate cards can be edited as long as they are not deprecated. It is also possible to change the state of multiple selected rate cards at once through the **action buttons** on the Rate cards page.
 
 ## Contracts
 
@@ -122,23 +122,23 @@ To create a contract, click **+ New Contract**. The following fields are availab
 
 Click **Save** to create the contract.
 
-### Assigning billing ratecards
+### Assigning billing rate cards
 
-For each contract, it is possible to assign the **billing ratecards** to be used in the calculation. Assignments can be made at different levels:
+For each contract, it is possible to assign the **billing rate cards** to be used in the calculation. Assignments can be made at different levels:
 
-- **Item level** — a billing ratecard assigned to a specific item.
-- **Group level** — a billing ratecard assigned to a specific group.
-- **Category level** — every item and group has a category assigned. Categories can be used to define **default billing ratecards per category**, which apply to all items or groups of that category that do not have a specific assignment.
+- **Item level** — a billing rate card assigned to a specific item.
+- **Group level** — a billing rate card assigned to a specific group.
+- **Category level** — every item and group has a category assigned. Categories can be used to define **default billing rate cards per category**, which apply to all items or groups of that category that do not have a specific assignment.
 
 ### Contract states
 
-Contracts follow the same state flow as ratecards: **Draft → Active → Deprecated**, with the same rules — once deprecated, a contract can no longer be edited or brought back to Active or Draft. The **action buttons** on the Contracts page also allow changing the state of multiple selected contracts in bulk.
+Contracts follow the same state flow as rate cards: **Draft → Active → Deprecated**, with the same rules — once deprecated, a contract can no longer be edited or brought back to Active or Draft. The **action buttons** on the Contracts page also allow changing the state of multiple selected contracts in bulk.
 
 ## Items & Groups
 
 The **Items & Groups** page shows the inventory that has been brought into Cost & Billing from the third-party solution via the adapter:
 
-- The **Items table** lists all items synced from the external system. In the sample solution integrating with MediaOps Plan, these are the **resources and resource pools**. In this table it is possible to assign a **cost ratecard** to an item.
+- The **Items table** lists all items synced from the external system. In the sample solution integrating with MediaOps Plan, these are the **resources and resource pools**. In this table it is possible to assign a **cost rate card** to an item.
 - The **Groups table** lists all groups synced via the adapter. In the MediaOps Plan sample, these are the **workflows**.
 
 ![Cost & Billing items and groups](~/solutions/images/CostAndBilling_items-groups.png)
@@ -178,20 +178,27 @@ To calculate the cost and billing of a billable event make sure the event has a 
 
 #### How the calculation works
 
-> **Note:** This section describes the calculation as implemented in the **MediaOps Plan sample calculation script**, which is **time-based**. As with the adapter, this script is specific to the MediaOps sample integration: it can be **reused as-is** for other time-based integrations, or **used as a base and customized** where a different integration needs different logic. The behavior described below reflects the sample script only — a customized script may calculate differently.
+> **Note:** This section describes the calculation as implemented in the **MediaOps Plan sample calculation script**, which is **time-based**. As with the adapter, this script is specific to the MediaOps Plan sample integration: it can be **reused as-is** for other time-based integrations, or **used as a base and customized** where a different integration needs different logic. The behavior described below reflects the sample script only — a customized script may calculate differently.
 
 When a calculation is triggered on a billable event, the sample script produces a set of **billable items** (calculation lines) for that event: one side for **cost** (what the activity costs your organization) and one side for **billing** (what the customer is charged). The two sides are calculated independently but follow the same time-based logic.
+
+#### Script Input Parameters
+
+| Variable|Description |
+| --- | --- |
+| **Input** | The identifier of the **Billable Event** to calculate |
+| **Output** | Exits success with a summary, or exits fail with the reason |
 
 ##### Cost calculation
 
 Cost is calculated per item of the billable event, in four steps:
 
-1. **Resolve the cost ratecard.** For each item, the script looks for a cost ratecard assigned to the item itself. If the item has none, it falls back to the ratecard of its **parent item** (in MediaOps terms, the resource pool the resource belongs to). If neither has a cost ratecard, the item is skipped and logged as an error — it contributes nothing to the cost.
-2. **Determine the charged time.** The item's real duration (end time − start time) is adjusted by the ratecard's timing rules:
+1. **Resolve the cost rate card.** For each item, the script looks for a cost rate card assigned to the item itself. If the item has none, it falls back to the rate card of its **parent item** (in MediaOps terms, the resource pool the resource belongs to). If neither has a cost rate card, the item is skipped and added to the Error Table. — it contributes nothing to the cost.
+2. **Determine the charged time.** The item's real duration (end time − start time) is adjusted by the rate card's timing rules:
    - **Minimum time interval** — the floor. Usage shorter than the interval is charged as the full interval.
    - **Minimum time increment** — the step size beyond the interval. Any excess above the interval is rounded **up** to the next whole increment.
-3. **Apply the rates.** The charged time is converted into an amount using the ratecard's rates (per minute, per hour, per day). Larger units are filled first, and the smallest available unit absorbs the remainder, rounded up, so no used time is charged as zero. A **per-use** rate, if present, adds a fixed amount on top regardless of duration. If a **capped rate** is set, the item's cost cannot exceed it.
-4. **Write the result.** Each rate produces a billable item line, and the lines are summed into the item's total cost.
+3. **Apply the rates.** The charged time is converted into an amount using the rate card's rates (per minute, per hour, per day). Larger units are filled first, and the smallest available unit absorbs the remainder. A **per-use** rate, if present, adds a fixed amount on top regardless of duration. If a **capped rate** is set, the item's cost cannot exceed it.
+4. **Write the result.** Each rate produces a billable item line, and the lines are summed into the item's total cost. If where  errors or items skipped during the calculation these are added to the Errors Table.
 5. **Override an item's cost (optional)**. After the calculation, the Total Calculated Amount of any billable item can be overridden manually. This value replaces that item's calculated cost entirely, and it is preserved on recalculation: when the event's total cost is computed again, the override is used in the total cost sum instead of the recalculated value.
 
 ##### Billing calculation
@@ -199,7 +206,11 @@ Cost is calculated per item of the billable event, in four steps:
 Billing is calculated in a similar way, but driven by the **contract** assigned to the billable event, and only if the event falls within the contract's validity period.
 
 1. **Determine what is billed.** The contract's **billing type** decides whether billing is calculated for **Items**, **Groups**, or **Items and Groups**. With *Item and Group*, both are calculated independently and their totals are summed.
-2. **Resolve the billing ratecard.** For each item or group, the script looks for a billing ratecard assignment on the contract at the most specific level available: the specific item (or its parent item), the specific group, or the **category** default. If none is found, that entry is skipped and logged as an error.
+2. **Resolve the billing rate card.** The script looks for a billing rate card assignment
+   on the contract, at the most specific level available:
+   - **For an item** — the specific item → its parent item → the item's **category**.
+   - **For a group** — the specific group → the group's **category**. 
+   If none is found, that entry is skipped and added to the Error Table.
 3. **Determine the charged time.** The same timing rules as the cost calculation apply — minimum time interval, minimum time increment, and capped value behave identically on the billing side.
 4. **Apply the contract's commercial modifiers.** After the base amount is calculated, the contract's rules are applied:
    - **Uplift %** — a percentage increase, applied first.
@@ -210,10 +221,13 @@ Billing is calculated in a similar way, but driven by the **contract** assigned 
 
 ##### Currency conversion
 
-Ratecards may be defined in a different value unit than the solution's **nominal value unit**. Any amount produced by a ratecard is converted into the nominal value unit — using the exchange rate valid at the time of the billable event — before it is written to the billable item and rolled into the event totals. This ensures every total on the event is expressed in the same nominal unit.
+Rate cards may be defined in a different value unit than the solution's **nominal value unit**. Any amount produced by a rate card is converted into the nominal value unit — using the exchange rate valid at the time of the billable event (Value Unit Table) — before it is written to the billable item and rolled into the event totals. This ensures every total on the event is expressed in the same nominal unit.
 
 #### Finalize summary
 
 After a calculation, at any point, you can mark the billable event as **Finalized** — a button available in the calculation panel. This **freezes** the calculated results: the billable event can no longer be recalculated.
 
-This is useful when, for example, a ratecard configuration or a contract condition changes afterwards: freezing the result guarantees that such changes will not affect it. Note that this action is **irreversible** — once a billable event is Finalized, it cannot be unfrozen or recalculated, and there is no way back.
+This is useful when, for example, a rate card configuration or a contract condition changes afterwards: freezing the result guarantees that such changes will not affect it. Note that this action is **irreversible** — once a billable event is Finalized, it cannot be unfrozen or recalculated, and there is no way back.
+
+A billable event can be calculated as many times as needed, as long as it has not been
+finalized
