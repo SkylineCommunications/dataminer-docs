@@ -32,7 +32,7 @@ Configure the following shape data fields on the shape that is to contain the Sp
   | ViewOptions= | Should be configured in the same way as the *options=* URL parameter. See [options=](xref:Options_for_opening_DataMiner_Cube#options). |
   | ShowSettingsPanel= | Available from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45947-->. Determines whether the settings panel is shown when the component is initialized.<br>- `ShowSettingsPanel=True`: The settings panel is shown.<br>- `ShowSettingsPanel=False`: The settings panel is hidden.<br>If this option is not specified, the settings panel is shown using its last saved state. |
   | ShowInfoPanel= | Available from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45947-->. Determines whether the information panel is shown the component is initialized.<br>- `ShowInfoPanel=True`: The info panel is shown.<br>- `ShowInfoPanel=False`: The info panel is hidden.<br>If this option is not specified, the visibility of the information panel is determined by the ribbon setting. |
-  | ShowRibbon= | Available from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45725-->. Determines whether the ribbon is displayed in the Spectrum Analysis component.<br>- `ShowRibbon=true`: The ribbon is shown.<br>- `ShowRibbon=false`: The ribbon is hidden.<br>In existing shapes, this option cannot be toggled dynamically. |
+  | ShowRibbon= | Available from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45725-->. Determines whether the ribbon is displayed in the Spectrum Analysis component.<br>- `ShowRibbon=True`: The ribbon is shown.<br>- `ShowRibbon=False`: The ribbon is hidden.<br>In existing shapes, this option cannot be toggled dynamically. |
   | SaveLastSessionPreset= | Available from DataMiner 10.5.0 [CU8]/10.6.0 [CU6]/10.6.9 onwards<!--RN 46106-->. Controls whether the last session preset is saved when the shape is initialized.<br>- `SaveLastSessionPreset=True`: The last session preset is saved (default behavior).<br>- `SaveLastSessionPreset=False`: The last session preset is not saved. |
 
 > [!NOTE]
@@ -47,4 +47,4 @@ For example:
 |------------------|--------------------------------------------------------------------|
 | Component        | Spectrum                                                           |
 | Element          | 111/333                                                            |
-| ComponentOptions | Preset=\[var:PresetVar\]\|ShowRibbon=true\|Measpts=\[var:measpts\] |
+| ComponentOptions | Preset=\[var:PresetVar\]\|ShowRibbon=True\|Measpts=\[var:measpts\] |

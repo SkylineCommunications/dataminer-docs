@@ -149,7 +149,7 @@ This updated validation now checks, among other things, whether:
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
-When a spectrum analysis component was configured with `ShowRibbon=true` or `ShowRibbon=false`, in some cases, the setting was not applied correctly.
+When a spectrum analysis component was configured with `ShowRibbon=True` or `ShowRibbon=False`, in some cases, the setting was not applied correctly.
 
 Now, the `ShowRibbon` option works again, so you can use it to show or hide the ribbon.
 
