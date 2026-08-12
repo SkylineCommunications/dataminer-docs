@@ -14,10 +14,6 @@ This Feature Release of the DataMiner web applications contains the same new fea
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.9](xref:General_Feature_Release_10.6.9).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.9](xref:Cube_Feature_Release_10.6.9).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
 #### GQI - Extensions: Persistent scoped services [ID 45635]
@@ -104,14 +100,16 @@ From now on, the About box will also show the version of the DataMiner Assistant
 
 If this DxM is not installed or not enabled, "Not installed" will be displayed instead of the version.
 
-#### Web apps - Help menu: Feedback command replaced by a feedback submenu [ID 45853]
+#### Web apps - Help menu: Feedback option replaced by a feedback submenu [ID 45853]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
-In the help menu of the web apps, the *Feedback* command has been replaced by a submenu with the following two commands:
+In the help menu of the web apps, the *Feedback* option now shows a submenu with the following two commands:
 
 - [Share your experience](https://aka.dataminer.services/help-feedback-root)
 - [Report an issue](https://aka.dataminer.services/ReportAnIssue)
+
+![Feedback option in the web apps help menu](~/release-notes/images/Web_apps_feedback.png)
 
 #### GQI DxM: Improved performance when all DOM data is requested [ID 45866]
 
@@ -129,9 +127,11 @@ In the DOM security web UI, the group access editor now supports read-only acces
 
 Up to now, read-only configurations were not supported in the UI. As a result, when you edited and saved group access settings, a read-only flag could be reset unintentionally.
 
-From now on, groups are shown in a table instead of a list, and read-only values are visible and editable when backend support is available.
+From now on, groups are shown in a table instead of a list, and read-only values are visible and editable when backend support is available. For example:
 
-Also, groups that do not have access will no longer be shown.
+![Instance-level security condition](~/dataminer/images/DOMSecurityInstanceLevel.png)
+
+With this change, groups that do not have access will also no longer be shown.
 
 > [!NOTE]
 > For this feature to work, the client app needs to be connected to a DataMiner Agent running Feature Release version 10.6.6 or above.
