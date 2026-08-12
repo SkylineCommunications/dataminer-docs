@@ -258,6 +258,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Data loss after Elasticsearch to OpenSearch migration
+            topicUid: KI_Data_loss_after_ES_to_OS_migration
           - name: SLAutomation crash during DataMiner startup
             topicUid: KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
