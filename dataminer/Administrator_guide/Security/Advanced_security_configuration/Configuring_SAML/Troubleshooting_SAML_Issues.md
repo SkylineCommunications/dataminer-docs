@@ -128,6 +128,12 @@ To check whether the claims and attributes match:
 > [!IMPORTANT]
 > Note that XML and as such SAML is **case-sensitive**, and mismatches may lead to the behavior associated with missing or incorrect attributes or claims. See [Capitalization errors](#capitalization-errors).
 
+### Missing Assertion signatures
+
+Identity providers are typically configured to cryptographically sign all Assertions in their SAML responses. However, it is also possible that the Identity provider only signs the overall SAML repsonse instead of all individual Assertions + the overall SAML response. By default, DataMiner expects all Assertions to have a valid signature. If the Identity Provider does not do this, signing in will fail with the following error message: *Service provider wants assertions signed but an unsigned assertion was found in SAML response*.
+
+To solve the issue, set *WantAssertionsSigned* in *spMetaData.xml* to *false*. This will make DataMiner skip the signature validation of the SAML assertions, but will still validate the overall SAML response signature.
+
 ### Collecting the SAML response
 
 To collect the SAML response, use the SAML-tracer extension:
