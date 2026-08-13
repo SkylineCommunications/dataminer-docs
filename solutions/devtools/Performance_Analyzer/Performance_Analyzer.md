@@ -1,5 +1,6 @@
 ---
 uid: Performance_Analyzer
+description: Explore the Performance Analyzer Solution, which streamlines the process of analyzing the performance of a solution.
 ---
 
 # Performance Analyzer Solution

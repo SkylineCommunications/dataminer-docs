@@ -1,5 +1,6 @@
 ---
 uid: Remote_PHY_Monitoring_Access_Restriction
+description: Restrict access to Remote PHY Monitoring by adding a group-level restriction to the parameters that are not used in the R-PHY Analog & RF low-code app.
 ---
 
 # Restricting access to Remote PHY Monitoring

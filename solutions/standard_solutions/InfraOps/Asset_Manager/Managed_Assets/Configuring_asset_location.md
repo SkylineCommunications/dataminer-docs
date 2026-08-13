@@ -1,5 +1,6 @@
 ---
 uid: Configuring_asset_location
+description: Click the pencil icon in the Location Information section of the Asset details pane to configure the location information for an asset.
 ---
 
 # Configuring the asset location

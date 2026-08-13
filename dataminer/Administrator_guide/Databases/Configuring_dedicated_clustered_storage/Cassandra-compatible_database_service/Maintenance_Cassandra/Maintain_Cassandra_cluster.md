@@ -1,5 +1,6 @@
 ---
 uid: Maintain_Cassandra_Cluster
+description: "Learn how to maintain a self-managed DataMiner Cassandra Cluster with heap tuning, monitoring, repair planning, and software updates."
 ---
 
 # Maintaining a Cassandra cluster
@@ -12,7 +13,7 @@ To ensure that your Cassandra database does not run out of memory under load, in
 
 If the default "CMS" garbage collector is used, the heap space should ideally be between 8 and 16 GB.
 
-For more information on how to tune the resources of Cassandra's Java Virtual Machine, refer to [Tuning the Java heap](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/operations/opsTuneJVM.html#opsTuneJVM__tuning-the-java-heap).
+For more information on how to tune the resources of Cassandra's Java Virtual Machine, refer to [Hardware Choices - Memory](https://cassandra.apache.org/doc/5.0/cassandra/managing/operating/hardware.html#memory).
 
 > [!WARNING]
 > Failing to adapt the heap space to the needs of your cluster will cause out of memory events which can affect availability of the DMS.
@@ -31,7 +32,7 @@ When nodes are down for longer periods of time or when there has been a network 
 For large-scale clusters, this might be very difficult to manage as you need to avoid that repairs are running on multiple nodes at the same time for specific data. To deal with this, we recommend that you install [Cassandra Reaper](http://cassandra-reaper.io/) in sidecar mode (i.e., install the software on every node).
 
 >[!IMPORTANT]
-> It is absolutely essential that you perform repairs on your Cassandra nodes. Not repairing your tables might have severe consequences, as detailed in [Cassandra docs - Repair](https://cassandra.apache.org/doc/4.0/cassandra/operating/repair.html). We highly recommend automating your repairs with Cassandra Reaper as outlined above.
+> It is absolutely essential that you perform repairs on your Cassandra nodes. Not repairing your tables might have severe consequences, as detailed in [Cassandra docs - Repair](https://cassandra.apache.org/doc/5.0/cassandra/managing/operating/repair.html#usage-and-best-practices). We highly recommend automating your repairs with any of the available repair tools or mechanisms.
 
 > [!NOTE]
 > Tables using TimeWindowCompactionStrategy should be excluded from automated repairs. This applies to the following tables:

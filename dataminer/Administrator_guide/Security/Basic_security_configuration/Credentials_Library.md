@@ -10,10 +10,7 @@ The DataMiner Credentials Library is a built-in key vault feature that centraliz
 The library supports multiple credential types, including SNMPv2 community strings, SNMPv3 configurations, username/password pairs, and token-based credentials.
 
 > [!NOTE]
-> Password and secret values stored in the Credentials Library are limited to a maximum size of **5120 bytes (5 KB)**.
-
-> [!NOTE]
-> From DataMiner 10.6.9/10.7.0 onwards<!--RN 44352-->, credential secrets in the Credentials Library are stored as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) and never appear in plain text on disk. For more information, see [Encryption in DataMiner](xref:Encryption_in_DataMiner#credentials-at-rest).
+> From DataMiner 10.6.10/10.7.0 onwards<!--RN 44352-->, credential secrets in the Credentials Library are stored as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) and never appear in plain text on disk. For more information, see [Encryption in DataMiner](xref:Encryption_in_DataMiner#credentials-at-rest).
 
 ## Configuring credentials in DataMiner Cube
 
@@ -26,15 +23,23 @@ To configure a set of credentials in DataMiner Cube:
 1. In the *General* section:
 
    - Specify a *Name* for the credentials.
+
    - Select the appropriate *Type*:
+
      - *Community credentials*
-     - *Token credentials*
+
+     - *Token credentials* (available from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45670-->)
+
      - *SNMPv3 credentials*
+
      - *Username and password credentials* (available from DataMiner 10.3.11 onwards)
 
 1. In the *Credentials* section, provide the information required for the selected credentials type.
 
    The available options adapt automatically based on the chosen type.
+
+   > [!NOTE]
+   > From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45670-->, all credential fields have a maximum length of 5120 bytes (5 KB), and the *Authentication password* field for credentials of type *Username and password* and *Access token* field for credentials of type *Token* can be left empty.
 
 1. In the *Groups* section, configure access control by adding or removing the relevant groups in the *Included in groups* box using the *ADD >>* and *<< REMOVE* buttons.
 
@@ -50,3 +55,4 @@ Once saved, the credentials can be reused across the DataMiner System, ensuring 
 > - Credentials are synchronized throughout the DMS.
 > - If a set of credentials is deleted or edited while it is in use by an active element, that element will be restarted automatically.
 > - For credentials that include a password (e.g., SNMPv3 credentials), the password can be up to 43 characters long. From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43422-->, credentials of type *Username and password* allow passwords of any length.
+> - From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45670-->, the Credentials Library can contain a maximum of 1000 sets of credentials.

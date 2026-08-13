@@ -1,5 +1,6 @@
 ---
 uid: Editing_element_connections_in_the_Properties_window
+description: "Follow these steps to edit the connections for an element that has in/out interfaces defined in its protocol."
 ---
 
 # Editing element connections in the Properties window

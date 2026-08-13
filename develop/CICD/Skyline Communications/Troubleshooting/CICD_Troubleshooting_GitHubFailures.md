@@ -12,6 +12,9 @@ Though we try to simplify workflows as much as possible for everyone, some place
 
 The errors are grouped by step and then by specific error.
 
+> [!NOTE]
+> SonarCloud static code analysis is optional. The SonarCloud-related errors below only apply when you have enabled SonarCloud analysis by providing a SonarCloud project name.
+
 ## Trigger Initial Analysis
 
 ### Error: The template is not valid. Newtonsoft.Json.JsonReaderException: Error reading JToken from JsonReader. Path '', line 0, position 0

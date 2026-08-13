@@ -1,5 +1,6 @@
 ---
 uid: What_is_the_DevOps_Professionals_Program
+description: Explore the DataMiner DevOps Professional Program, intended to empower DataMiner enthusiasts and DevOps experts across different types of organizations.
 ---
 
 # About the DevOps Professional Program

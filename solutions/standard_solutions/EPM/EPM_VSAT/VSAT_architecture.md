@@ -1,5 +1,6 @@
 ---
 uid: VSAT_architecture
+description: Discover the architecture of the EPM VSAT Solution, including the collector, backend, frontend, and system connectors.
 ---
 
 # EPM VSAT architecture

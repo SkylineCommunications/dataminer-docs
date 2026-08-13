@@ -453,7 +453,7 @@ The following table contains possible values for the *InitializeFunctionResource
 | Reason   | Description  |
 |---|---|
 | Error | A general error, without more information. |
-| MaxAmountOfInstancesReached | The function definition of the resource has reached its maximum instances. |
+| MaxAmountOfInstancesReached | The function definition of the resource has reached its maximum instances. If the function definition has an entrypoint table configured, the maximum number of instances is equal to the number of rows in the entrypoint table. If no entrypoint table is configured, the maximum number of instances is defined by the *maxInstances* property in the function definition. |
 | DVEDataNotAvailable | Fetching the necessary DVE data from the parent element for initializing the resource failed. |
 | FunctionDefinitionNotFound | The function definition this resource is linked to could not be found. |
 | InvalidParentElementState | The parent element linked to this resource is not in a valid state (hidden, active, masked, or paused). |

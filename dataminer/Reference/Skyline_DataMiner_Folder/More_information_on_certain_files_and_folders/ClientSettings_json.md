@@ -192,7 +192,7 @@ The following example illustrates how to configure the caching of an input table
 ```
 
 > [!NOTE]
-> After you update this setting, force a synchronization of the *ClientSettings.json* file in the DataMiner System. See [Forcing synchronization of a file with the DMS](xref:Synchronizing_data_between_DataMiner_Agents#forcing-synchronization-of-a-file-with-the-dms).
+> After you update this setting, [force a synchronization](xref:Synchronizing_data_between_DataMiner_Agents#forcing-synchronization-of-a-file-with-the-cluster) of the *ClientSettings.json* file in your DataMiner cluster.
 
 ## Configuring EPM card behavior based on Surveyor selection
 

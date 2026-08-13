@@ -1,5 +1,6 @@
 ---
 uid: replication_and_consistency_configuration
+description: "Optimize DataMiner Cassandra Cluster reliability by configuring replication factor and consistency level for resilient reads and writes."
 ---
 
 # Data replication and consistency configuration
@@ -27,8 +28,8 @@ If a **custom replication factor** is required, you can configure this manually.
 > [!TIP]
 > See also:
 >
-> - [Cassandra - Data replication](https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/architecture/archDataDistributeReplication.html)
-> - [Cassandra - Updating the replication factor](https://docs.datastax.com/en/cql-oss/3.3/cql/cql_using/useUpdateKeyspaceRF.html)
+> - [Cassandra - Data replication](https://cassandra.apache.org/doc/5.0/cassandra/architecture/dynamo.html#replication-strategy)
+> - [Cassandra - Updating the replication factor (ALTER KEYSPACE)](https://cassandra.apache.org/doc/5.0/cassandra/developing/cql/ddl.html#alter-keyspace-statement)
 
 ## Consistency Level
 
@@ -57,8 +58,8 @@ DataMiner uses the same consistency level for all its queries to the Cassandra d
 > [!TIP]
 > See also:
 >
-> - [Cassandra - How is the consistency level configured?](https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/dml/dmlConfigConsistency.html)
-> - [Cassandra - How are consistent read and write operations handled?](https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/dml/dmlAboutDataConsistency.html)
+> - [Cassandra - Picking consistency levels](https://cassandra.apache.org/doc/5.0/cassandra/architecture/dynamo.html#picking-consistency-levels)
+> - [Cassandra - Tunable consistency](https://cassandra.apache.org/doc/5.0/cassandra/architecture/dynamo.html#tunable-consistency)
 
 ## Examples
 

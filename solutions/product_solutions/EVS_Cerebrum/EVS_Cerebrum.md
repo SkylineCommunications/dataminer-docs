@@ -1,5 +1,6 @@
 ---
 uid: EVS_Cerebrum
+description: Explore Cerebrum, a Broadcast Control System from EVS designed for flexible control and monitoring of broadcast environments.
 ---
 
 # The EVS Cerebrum app

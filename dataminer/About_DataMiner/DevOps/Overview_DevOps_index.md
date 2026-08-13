@@ -1,5 +1,6 @@
 ---
 uid: Overview_DevOps_index
+Description: Explore the DataMiner DevOps Professional Program and learn all about the DevOps Creative Collective.
 ---
 
 # DevOps

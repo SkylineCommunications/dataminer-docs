@@ -58,9 +58,13 @@ The network speed and latency are also an important factor in DataMiner performa
 
 As a rule, we recommend a throughput ranging from 100 Mbps to 1 Gbps and a latency ranging from < 50 ms to < 30 ms.
 
+In addition, each DataMiner Agent and database node should be given a **static IP address** within the network. Dynamically assigning an IP address to the DMA at startup could cause functionality and configurations to break. Assigning a static IP address to the machines hosting the DMAs and DB nodes ensures that they will be able to reliably reach each other within the network.
+
 ### Operating System
 
 For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports. <!-- However, we recommend that you use the latest Windows Server version. This will not only allow you to make use of the latest features, but also ensures that you will get support and security patches for as long as possible.  -->At the moment, Windows Server 2025 is the recommended version.
+
+IIS (Internet Information Services) is a required component, as DataMiner uses it to host its webpages.
 
 ### Time
 
@@ -138,19 +142,21 @@ See "Network" under [DataMiner requirements](#dataminer-requirements).
 
 ### Cassandra requirements
 
-For DataMiner Agents that make use of one or more Cassandra nodes for their [system database](xref:About_storage), additional requirements apply. For these, we follow Cassandra’s official [guidelines](https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html). A Cassandra node can be hosted on the same server as DataMiner, or on a different server. It is also possible to use multiple Cassandra nodes with one DataMiner Agent.
+For DataMiner Agents that make use of one or more Cassandra nodes for their [system database](xref:About_storage), additional requirements apply. For these, we follow Cassandra’s official [guidelines](https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html).
+
+Cassandra nodes must be hosted on Linux. For small-scale setups, Cassandra can be hosted on the same server as DataMiner using WSL (Windows Subsystem for Linux). To set this up, you can use the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk).
 
 > [!IMPORTANT]
 > Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any Cassandra nodes.
 
 #### Cassandra software
 
-The minimum supported version for the Cassandra software is **3.11**. If a database per cluster (or "Cassandra Cluster") setup is used, 3.11 continues to be supported for existing setups, but for new setups Cassandra **4.x** is mandatory. If a database per Agent setup is used, Cassandra 4.x is also supported, and it is even recommended in case there are multiple nodes per database.
+The minimum supported Cassandra version is **3.11**. Cassandra 3.11 remains supported for existing DataMiner setups, as do intermediate versions including 4.0.x and 4.1.x. However, Cassandra **5.0** is the recommended version for all new setups.
 
-> [!NOTE]
+> [!IMPORTANT]
 >
-> - Cassandra 4.x does not support Windows, so you will need extra Linux servers to host the Cassandra database in order to use this version.
-> - Currently, Cassandra versions 4.0 and 4.1 are supported in the 4.x range.
+> - Cassandra 3.11 reached end of life (EOL) in September 2024, when Apache Cassandra 5.0 was released. It no longer receives security patches, bug fixes, or community support on any operating system. If you are still running Cassandra 3.11, we **strongly recommend upgrading to Cassandra 5.0** as soon as possible.
+> - Windows is no longer supported from Cassandra 4.0 onwards. If you are upgrading from Cassandra 3.11 on Windows, you will also need to **migrate your Cassandra database to a Linux server** as part of the upgrade process.
 
 #### RAM
 

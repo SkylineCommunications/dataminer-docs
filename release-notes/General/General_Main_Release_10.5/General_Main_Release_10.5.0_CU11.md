@@ -209,6 +209,14 @@ Because of file locking issues, in some cases, errors could occur when trying to
 
 When DataMiner was configured to import users and groups from a Crowd server, SLDataMiner would incorrectly disregard HTTP result codes while parsing a response during the hourly LDAP synchronization. This could lead to users being removed from their groups until the next successful synchronization, causing them to be unable to log in to DataMiner.
 
+#### ResetLocalNatsCluster call could fail due to credential files being locked [ID 44264]
+
+<!-- MR 10.5.0 [CU11] - FR TBD -->
+
+Up to now, on a DataMiner Agent using the legacy SLNet-managed NATS solution, the `ResetLocalNatsCluster` call could fail due to credential files being locked by one or more MessageBroker instances.
+
+A retry mechanism has now been put in place to prevent the `ResetLocalNatsCluster` call from failing due to file locking issues.
+
 #### BrokerGateway: getnatsconnectiondetails calls would slow down whenever an IP address listed in appsettings.runtime.json could not be reached [ID 44287]
 
 <!-- MR 10.5.0 [CU11] - FR 10.6.2 -->

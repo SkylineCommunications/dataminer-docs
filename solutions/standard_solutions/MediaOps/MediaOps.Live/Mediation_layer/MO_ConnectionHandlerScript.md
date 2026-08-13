@@ -1,5 +1,6 @@
 ---
 uid: MediaOpsLive_ConnectionHandlerScript
+description: Create MediaOps Live connection handler scripts responsible for managing the connections for one specific connector.
 ---
 
 # Connection handler scripts

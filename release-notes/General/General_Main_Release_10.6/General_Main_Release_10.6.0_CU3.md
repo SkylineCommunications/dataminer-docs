@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.6.0_CU3
 ---
 
-# General Main Release 10.6.0 CU3 - Preview
+# General Main Release 10.6.0 CU3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -29,6 +29,12 @@ Before you upgrade to this DataMiner version:
   For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Main_Release_10.6.0_changes#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43526-id-43856-id-43861-id-44035-id-44050-id-44062)
+
+## Important changes
+
+The following change may have an impact on your system, so please make sure to check this before you upgrade:
+
+- [Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]](#protocols-as-many-slscripting-processes-as-slprotocol-processes-by-default-id-44420)
 
 ## Changes
 
@@ -77,11 +83,23 @@ Because of a number of enhancements, performance has increased when retrieving s
 
 From now on, a `GetServiceStateMessage` will no longer be forwarded to the Agent hosting the service. Instead, the service state information will be retrieved from the local SLNet cache.
 
+#### STaaS: Enhanced performance when closing alarm trees [ID 45081]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Because of a number of enhancements, on STaaS systems, overall performance has increased when closing alarm trees.
+
 #### BrokerGateway installer will now give a clear indication when .NET is missing [ID 45169]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 When you install the BrokerGateway DxM on a server that does not have the Microsoft .NET hosting bundle installed yet, from now on, a message will appear, saying that .NET has to be installed first.
+
+#### APIGateway: Enhanced handling of files in use during upgrades [ID 45230]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, the *Windows Restart Manager* will be enabled during installations. This will prevent unnecessary delays caused by files still in use by the APIGateway instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
 
 #### Aliases can now be configured for DaaS systems [ID 45327]
 
@@ -90,6 +108,19 @@ When you install the BrokerGateway DxM on a server that does not have the Micros
 If you want to configure an alias for a DataMiner Agent, in the *DataMiner.xml* file, the `mode` attribute of the `DMAName` element has to be set to "manual". If this attribute is not set to "manual", configuring an alias will also change the computer name, which will cause unintended behavior.
 
 As it is not possible for a user to make changes to the *DataMiner.xml* file of a DaaS system, up to now, it would not be possible to configure an alias for such a system. From now on, in the *DataMiner.xml* file of a DaaS system, the `mode` attribute of the `DMAName` element will be set to "manual" by default. This will allow users to also configure aliases for DaaS systems.
+
+#### SLLogCollector packages now include hosts and lmhosts files [ID 45369]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+From now on, SLLogCollector packages will also include the following files:
+
+| File | Description  |
+|---|---|
+| `C:\Windows\System32\drivers\etc\hosts`   | Maps hostnames to IP addresses for DNS name resolution. Used to override or supplement DNS locally. |
+| `C:\Windows\System32\drivers\etc\lmhosts` | Maps NetBIOS names to IP addresses for legacy Windows networking. Rarely used in modern systems.    |
+
+Both files will be added to the *Network Information* folder.
 
 ### Fixes
 
@@ -119,7 +150,7 @@ When the dynamic units feature is enabled in, for example, DataMiner Cube, many 
 
 When, on a system with alarm squashing enabled, the `AlarmsPerParameter` limit in the `AlarmSettings` section of the *MaintenanceSettings.xml* file was exceeded, an alarm of which all alarms in the alarm tree were squashable would incorrectly not show up in the Alarm Console after the element associated with the alarm had been restarted.
 
-#### SLWatchdog to incorrectly interpret processes being stopped during a DataMiner shutdown as a crash [ID 45115]
+#### SLWatchdog incorrectly interpreted processes being stopped during a DataMiner shutdown as a crash [ID 45115]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
@@ -154,7 +185,7 @@ Up to now, during NATS migrations or NATS-related BPA test runs, establishing co
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
-When SLNet was not able to respond to user picture requests from a web app, up to now, those request could stay active within SLNet for several minutes, causing other messages to get blocked.
+When SLNet was not able to respond to user picture requests from a web app, up to now, those requests could stay active within SLNet for several minutes, causing other messages to get blocked.
 
 From now on, user picture requests will time out after 10 seconds.
 
@@ -162,9 +193,7 @@ From now on, user picture requests will time out after 10 seconds.
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
-Up to now, a problem could occur when a connector was using the `makeCommandByProtocol` option while in slow poll mode.
-
-The slow poll timer would make the ping command when adding the slow poll group to the execution queue. However, when regular groups were still being executed when a valid response entered, an attempt would be made to stop the slow poll timer. This attempt would fail was waiting for the response to release the resources.
+Up to now, a problem could occur when a connector was using the `makeCommandByProtocol` option while in slow poll mode. The slow poll timer triggered the ping pair command as soon as the slow poll group was added to the execution queue. However, this caused a problem when regular groups were still being processed. If a valid response arrived at that moment, the system attempted to stop the slow poll timer. This failed because the timer was waiting for the response to release its resources, which led to an issue.
 
 From now on, the slow poll timer will no longer make the ping command when adding the slow poll group to the queue. The ping command will be made when the group is executed, and the `makeCommandByProtocol` setting will be disregarded.
 
@@ -173,6 +202,12 @@ From now on, the slow poll timer will no longer make the ping command when addin
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 In some cases, SLAnalytics could stop working due to an incorrect internal state in Automatic Incident Tracking.
+
+#### SLNet: MessageBroker cache could leak NATS threads [ID 45259]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+In some rare cases, the MessageBroker cache of SLNet could leak NATS threads.
 
 #### SLDataMiner: Problem when trying to fetch information about loopback adapters [ID 45285]
 
@@ -183,3 +218,9 @@ When the SLDataMiner process starts, it tries to fetch information about all net
 `CIPSettings::Init|ERR|-1|Opening device failed for adapter {14763620-5D53-11EA-90D5-806E6F6E6963} (Software Loopback Interface 1): The system cannot find the file specified. (2)`
 
 As loopback adapters are not part of any communication flow, from now on, SLDataMiner will no longer try to fetch information about those adapters.
+
+#### DataMiner upgrade: Incorrect .NET 6 error would be thrown during the upgrade process [ID 45374]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Up to now, the first time a newly installed DataMiner Agent was upgraded, an incorrect .NET 6 error would be thrown during the upgrade process.

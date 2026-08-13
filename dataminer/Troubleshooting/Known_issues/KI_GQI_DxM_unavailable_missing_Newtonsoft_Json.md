@@ -16,7 +16,7 @@ The Newtonsoft NuGet dependency was downgraded in GQI version 1.0.18 (included i
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6<!--RN 45146-->.
 
 ## Workaround
 

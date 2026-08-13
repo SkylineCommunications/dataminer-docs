@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript
+description: Learn how to build a MediaOps Live connection handler script responsible for detecting and managing connections between endpoints for a specific connector.
 ---
 
 # Creating a connection handler script for a Generic Matrix element

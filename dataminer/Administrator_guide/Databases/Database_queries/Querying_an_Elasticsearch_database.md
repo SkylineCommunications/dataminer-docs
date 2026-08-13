@@ -1,5 +1,6 @@
 ---
 uid: Querying_an_Elasticsearch_database
+description: "Explore a number of example queries that show how you can retrieve data from an Elasticsearch database using Kibana."
 ---
 
 # Querying an Elasticsearch database

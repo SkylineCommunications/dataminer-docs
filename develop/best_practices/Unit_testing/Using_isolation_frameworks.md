@@ -53,7 +53,7 @@ public string Rewrite(SLProtocol protocol, string path)
 }
 ```
 
-This method is very similar to the method shown in [Creating unit tests using the MSTestv2 framework in Visual Studio](xref:Unit_tests_MSTestv2_framework). However, note that the method now has an additional parameter of type `SLProtocol`.
+This method is very similar to the method shown in [Creating unit tests](xref:Unit_tests). However, note that the method now has an additional parameter of type `SLProtocol`.
 
 Suppose you now want to create a unit test for this method. When calling the `Rewrite` method in the *Act* step of your test method, you should pass along something that implements *SLProtocol*.
 

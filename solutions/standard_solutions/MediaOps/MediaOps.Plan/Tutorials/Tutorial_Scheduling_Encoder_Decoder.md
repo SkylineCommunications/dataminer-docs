@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOps_Scheduling_Encoder_Decoder
+description: Learn how to create and schedule a job, swap resources, and confirm the created job, using the Scheduling app.
 ---
 
 # Creating a job and configuring it with resources

@@ -1,6 +1,7 @@
 ---
 uid: Exporting_elements_services_etc_to_a_dmimport_file
 keywords: DELT export, DELT
+description: "Learn how to export elements, services, redundancy groups, documents, SLAs, and service templates to .dmimport packages."
 ---
 
 # Exporting elements, services, etc. to a .dmimport file

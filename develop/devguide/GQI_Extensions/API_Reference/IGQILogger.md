@@ -13,6 +13,9 @@ Contains functionality to log messages and exceptions. See [Logging](xref:GQI_Ex
 
 Available from DataMiner 10.4.5/10.5.0 onwards.<!-- RN 39043 -->
 
+> [!NOTE]
+> From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, when using the `Skyline.DataMiner.Core.GQI.Extensions` API and the [GQI DxM](xref:GQI_DxM), this type can be used to inject a logger via the constructor of a GQI extension or GQI service. In earlier versions, use the [Logger](xref:GQI_OnInitInputArgs#properties) property of [OnInitInputArgs](xref:GQI_OnInitInputArgs).
+
 ## Properties
 
 | Property | Type | Description |

@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_fiber_node
+description: Discover the entire list of Fiber Node parameters available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – Fiber Node

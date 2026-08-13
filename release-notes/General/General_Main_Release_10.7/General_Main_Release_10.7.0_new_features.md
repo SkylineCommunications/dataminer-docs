@@ -317,3 +317,136 @@ From now on, when you select the *Compile in DEBUG mode* option in the *Advanced
     engine.Log("This code is only compiled in DEBUG mode.");
 #endif
 ```
+
+#### DataMiner Object Models: DomDefinitionReferences and FieldValueReferences can now be marked as read-only [ID 45275]
+
+<!-- MR 10.7.0 - FR 10.6.6 -->
+
+When you configure DOM security, you can now set `DomDefinitionReferences` and `FieldValueReferences` to read-only. This way, you can give user groups safe, controlled access based on a specific reference, allowing users to see and inspect data but not change it.
+
+To support this, the DOM API now includes a `ReadOnly` property (of type boolean) in the `DomDefinitionReference` and `FieldValueReference` classes.
+
+With *Read* access, users can:
+
+- Read the DOM instances
+- Retrieve specific fields from the DOM instances
+- Count the DOM instances
+- Receive the events when subscribed to DOM instance changes
+- Retrieve DOM attachments linked to DOM instances
+- Read the DOM instance history
+- Count the DOM instance history records
+
+With *Write* access, which is the default behavior when the `ReadOnly` property is not enabled, users can:
+
+- Create, update, or delete DOM instances
+- Add or remove DOM attachments on a DOM instance
+
+#### User-defined APIs: Token-based rate limiting [ID 45470]
+
+<!-- MR 10.7.0 - FR 10.6.7 -->
+
+API tokens can now be configured with a rate limit to control how frequently they can be used to trigger user-definable API endpoints.
+
+A rate limit consists of:
+
+- A limit: The maximum number of requests allowed within the configured time window. Supported range: 1 to 100
+- A window: The time span in which the configured number of requests is allowed. Supported range: 1 second to 1 day
+
+##### Behavior when the limit is exceeded
+
+When the rate limit is exceeded, the *UserDefinableApiEndpoint* DxM will return an HTTP 429 message ("Too Many Requests").
+
+In this case, the API trigger will not be forwarded to SLNet, and the API script will not be executed. The response message will indicate that the rate limit was exceeded and will include internal error code 1014.
+
+Every request that can be linked to a token counts toward that token's rate limit, regardless of whether the request results in a successful API script trigger.
+
+##### Sliding window behavior
+
+Rate limiting uses a sliding window. This means that, when a request is received, the system checks how many requests were made with the same token during the preceding configured window. If the configured limit has already been reached within that period, the request is blocked.
+
+For example, with a limit of 5 requests per 1 minute, a client using the token can trigger the API up to 5 times within any rolling 1-minute period.
+
+Keep in mind that different limit/window combinations can result in different behavior, even when they allow the same average number of requests. See the following examples:
+
+- Limit 10 and window 60 seconds: Bursts of up to 10 requests are allowed in a short time, after which the client must wait until requests fall outside the 60-second window.
+- Limit 1 and window 6 seconds: The requests are spread more evenly, allowing 1 new request every 6 seconds.
+
+##### Performance considerations
+
+Configuring a high rate limit, such as 100 requests per second, does not guarantee that DataMiner can process that number of API triggers.
+
+The actual throughput depends on factors such as API script runtime, server hardware, current system load, the number of agents in the cluster, and other system-specific conditions.
+
+##### Configuration and API changes
+
+A new `RateLimit` property has been added to the `ApiToken` class. This property can be used to define the `Limit` and `Window` values.
+
+If an invalid rate limit is configured, an `ApiTokenError` with reason `InvalidRateLimit` will be returned. The new `Message` property on the error contains an English description of the invalid configuration.
+
+Currently, rate limits cannot yet be configured in the UI, and must be configured via the C# API. If an API token with a configured rate limit is updated through the UI, the rate limit will be cleared.
+
+##### Updating an existing rate limit
+
+When an existing rate limit is changed, the updated limit is only applied after a next trigger both starts and finishes after the update has been applied.
+
+If a long window was configured and the limit has already been reached, the client may need to wait until the window has passed before another trigger can be executed and the updated limit can take effect.
+
+#### Automation: Added support for running scripts in separate SLAutomation.ScriptRunner processes by SolutionId [ID 45557]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+To help prevent DLL version conflicts between solutions, scripts can now run their C# code in separate `SLAutomation.ScriptRunner` child processes grouped by the script's `SolutionId` tag.
+
+When a script has a `SolutionId`, DataMiner will create a runner process for that `SolutionId` (or reuse an existing one), and execute the script code in that process instead of the main `SLAutomation` process.
+
+When you update a script that uses `SolutionId`, you can send an `InvalidateScriptRunnerMessage` to force creation of a new runner process on the next execution, ensuring the latest DLLs are loaded. A maximum of 10 runner processes can exist at the same time per `SolutionId`, and 50 runner processes in total.
+
+Runner processes are automatically stopped after they have been idle for one hour. In the *SLNetClientTest* tool, you can view the current runners via *Advanced* > *Automation...* > *Script Runners Overview*.
+
+#### User-Defined APIs can now use dynamic route segments to expose path parameters to the trigger script [ID 45681]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+From now on, user-defined APIs can use dynamic route segments to expose path parameters to the trigger script.
+
+A route such as `items/{id}` or `a/{x}/b/{y}` no longer needs to be fully literal, and the values that appear in the request path are forwarded to the automation script.
+
+A dynamic route segment is written as `{parameterName}`. The parameter name is captured as-is and becomes available in `ApiTriggerInput.RouteParameters` within the API trigger automation script. For example, a request to `items/42` against the route `items/{id}` will provide `id = 42`.
+
+##### Dynamic route matching
+
+Route matching now distinguishes between static and dynamic routes:
+
+- Static routes continue to work as before.
+- Static routes always win over dynamic routes when both match the same request.
+- Literal route segments are matched case-insensitively.
+- The full number of segments must match. Partial matches are not accepted.
+- Dynamic routes are evaluated in specificity order, so that more literal routes win over more generic templates.
+
+That means `items/special` will match the static route `items/special` before the dynamic route `items/{id}`, and, in case of `foo/bar`, `foo/{bar}` will win over `{foo}/bar` because the first literal segment is more specific.
+
+##### Route parameters
+
+When a dynamic route matches, the captured path values are passed through to the script as a dictionary of route parameters.
+
+Route parameters:
+
+- Are exposed on `ApiTriggerInput.RouteParameters`.
+- Use the parameter name from the template as the key.
+- Preserve the exact incoming path segment as the value.
+- Are empty for static route matches.
+
+##### Route validation and conflicts
+
+Routes are validated more strictly before create and update:
+
+- A route cannot be null, empty, or whitespace only.
+- A route cannot start or end with `/`.
+- A route cannot contain empty path segments.
+- A parameter segment must be written as a well-formed `{name}` placeholder.
+- Parameter names cannot use route syntax characters such as `/`, `{`, `}`, `?`, `*`, `:`, or `=`.
+- A route template cannot reuse the same parameter name more than once within the same route.
+
+Route conflicts are also detected across all existing definitions. Any two templates that can match the same request path are rejected, including conflicts between literal and parameterized routes and between overlapping parameterized templates. If a route with `ticket/{id}` already exists, a new route like `ticket/{ticketId}` will be rejected.
+
+When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.

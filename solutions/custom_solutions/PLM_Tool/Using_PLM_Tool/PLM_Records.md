@@ -1,5 +1,6 @@
 ---
 uid: PLM_Records
+description: Understand PLM record statuses and how completed or inactive maintenance events are stored for historical tracking.
 ---
 
 # Planned Maintenance records

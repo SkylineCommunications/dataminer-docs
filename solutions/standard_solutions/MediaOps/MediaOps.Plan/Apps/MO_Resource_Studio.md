@@ -1,5 +1,6 @@
 ---
 uid: MO_Resource_Studio
+description: Explore the Resource Studio app, which allows you to create and manage resources, such as network inventory, services, rooms, people, vehicles etc.
 ---
 
 # Resource Studio
@@ -23,7 +24,7 @@ The following pages are available in the app:
 
 - ![Capacity Management](~/solutions/images/Resource_Studio_Capacity_Management.png) **Capacity Management**: Here you can **create** and **manage** [capacities](#capacities).
 
-- ![Configuration Management](~/solutions/images/Resource_Studio_Configuration_Management.png) **Configuration Management**: If a resource pool has **parameters** that can be defined per job in the Scheduling app, you can add those types of parameters here. You can give the configurations default values or make it mandatory to configure them upon job creation.
+- ![Configuration Management](~/solutions/images/Resource_Studio_Configuration_Management.png) **Configuration Management**: If a resource pool has **parameters** that can be defined per job in the Scheduling app, you can add those types of parameters here. You can give the configurations default values or make it mandatory to configure them upon job creation. For more information on how to configure these parameters, see [Scheduling configuration](xref:MO_Scheduling_Configuration).
 
 - ![Properties](~/solutions/images/Resource_Studio_Properties.png) **Properties**: Allows you to manage [properties](#properties) that can be used by resources and resource pools.
 

@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOps_Workflow_Designer_Intro
+description: Learn how to use the Workflow Designer app to creating a workflow that can serve as a template for a job.
 ---
 
 # Creating a workflow to use as a template for a job

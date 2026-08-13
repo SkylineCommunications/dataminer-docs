@@ -1,5 +1,6 @@
 ---
 uid: Installing_EVS_Cerebrum
+description: Deploy the EVS Cerebrum application from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the EVS Cerebrum application

@@ -42,6 +42,11 @@ The following placeholders can be used:
 > [!NOTE]
 > The identifiers used for separators and web interfaces should not match the name of an existing page in the protocol. In case it does, it will not be considered a separator or web interface link.
 
+> [!IMPORTANT]
+>
+> - The web request is sent from the Cube client machine, not from the DMA. The device web page must therefore be reachable from the client machine.
+> - **Replicated elements**: Web interface pages that use the `[Polling IP]` placeholder will fail to load on replicated elements, because the polling IP is not available on those elements. As a workaround, use the `[id:ParameterID]` placeholder instead, with a parameter that has *RTDisplay* set to *true* and that stores the polling IP.
+
 ### Custom order for EPM integration data pages
 
 From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 29748+42221 -->, if the `CPEIntegration_` prefix is added to data pages in an EPM protocol, you can apply a custom order for these pages in the *pageOrder* attribute of the *Display* tag in the protocol. For example:

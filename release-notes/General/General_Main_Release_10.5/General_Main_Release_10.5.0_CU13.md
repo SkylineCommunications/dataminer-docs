@@ -124,6 +124,15 @@ You can execute the API calls by calling the REST API via PowerShell.
 
 Because of a number of enhancements, on STaaS systems with Swarming enabled, overall performance has increased when executing a full element update.
 
+#### DataMiner upgrade: Web.config of the Web Services API now contains assembly bindings that will automatically be updated during a DataMiner upgrade [ID 44861]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR TBD -->
+
+The *Web.config* file of the Web Services API now contains assembly bindings that will automatically be updated during a DataMiner upgrade.
+
+> [!NOTE]
+> Any custom settings in the *Web.config* file will be left untouched.
+
 ### Fixes
 
 #### Problem with SLNet when receiving a subscription with a large filter that contained wildcards [ID 44512]
@@ -248,6 +257,12 @@ From now on, the following correct error message will appear instead:
 Up to now, if an element had more than 10,000 active alarms, on STaaS systems, only the first 10,000 would incorrectly be retrieved.
 
 From now on, all active alarms will be retrieved, even if the element in question has more than 10,000 active alarms.
+
+#### API call 'DeleteRows' API could incorrectly delete rows from SLProtocol without having received any request to delete them [ID 44811]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+Up to now, the `DeleteRows` API call could incorrectly delete rows from SLProtocol without having received any request to delete them. This would happen after it had received a request to delete a combination of existing keys and non-existing keys.
 
 #### Problem when a component in a dashboard or low-code app was unable to retrieve data from a remote DataMiner Agent [ID 44848]
 

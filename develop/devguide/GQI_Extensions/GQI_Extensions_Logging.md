@@ -50,7 +50,7 @@ Log messages adhere to the following format:
 <!-- RN 42355 -->
 
 ```log
-[Timestamp][Level][Extension][User][SessionId][NodeId] Message
+[Timestamp][Level][Extension or service][Security context][SessionId][NodeId] Message
 ```
 
 By default, a log message consists of the following main parts:
@@ -59,15 +59,15 @@ By default, a log message consists of the following main parts:
 
 - **Level**: An abbreviation of the [log level](xref:GQI_GQILogLevel).
 
-- **Extension**: The GQI extension for which the log message is generated.
+- **Extension or service**: The GQI extension or service for which the log message is generated.
 
-- **User**: The GQI user involved.
+- **Security context**: The security context of the log entry. Not applicable for worker services.
 
-- **SessionId**: An identifier for the current query session of the extension instance, useful for distinguishing logs from operators used in multiple, possibly concurrent query sessions.
+- **SessionId**: An identifier for the current query session of the extension instance, useful for distinguishing logs from operators used in multiple, possibly concurrent query sessions. Not applicable for services.
 
-- **NodeId**: An identifier for the query node of the extension instance, useful for distinguishing logs from operators used more than once in the same query.
+- **NodeId**: An identifier for the query node of the extension instance, useful for distinguishing logs from operators used more than once in the same query. Not applicable for services.
 
-- **Message**: Any message intended for logging by GQI or the extension.
+- **Message**: Any message intended for logging by GQI, the extension, or the service.
 
 Example:
 
@@ -98,9 +98,6 @@ Example:
 ```log
 [1993-02-21 12:34:56.789 WRN] [c6a3d4bf] [71ba5588] This is an important warning!
 ```
-
-> [!NOTE]
-> Whenever an extension instance accesses the logger property, the current GQI user is immediately logged as a separate log message, providing additional context that would otherwise not be available for individual log messages. Refer to the logs in the [example](#example) to observe this behavior.
 
 ***
 

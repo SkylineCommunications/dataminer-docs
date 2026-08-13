@@ -24,7 +24,7 @@ DataMiner support plans are technical support services for the DataMiner core pl
 
 <sup>[1]</sup>Upgrades and updates can be downloaded/deployed from dataminer.services. Note that installing these on your system is not part of our support services.
 
-<sup>[2]</sup>Technical support and connector development and updates are charged per hour as [professional service credits](https://community.dataminer.services/service-credits/). Access to updates to the DataMiner core software is included.
+<sup>[2]</sup>Technical support and connector development and updates are charged per hour as [professional service credits](https://community.dataminer.services/service-credits/). Access to updates to the DataMiner core software is included for usage-based systems.
 
 > [!NOTE]
 > While this section refers to support during business hours, you can also subscribe to the [out-of-business-hours support](xref:Overview_Out_Of_Business_Hours_Support) add-on to *Continuity* and *Evolve*.

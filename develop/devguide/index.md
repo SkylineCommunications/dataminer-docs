@@ -7,7 +7,7 @@ description: Learn how to create DataMiner connectors & automation scripts, and 
 
 <div class="row"> 
   <div class="column">
-    <a href="/develop/devguide/Connector/About_DataMiner_connectors.html" title="Connectors" target="_self"><img src="~/develop/images/Connectors.svg" style="width:100%"></a>
+    <a href="/develop/devguide/Connector/Getting_started_with_data_source_integrations.html" title="Connectors" target="_self"><img src="~/develop/images/Connectors.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/develop/devguide/Automation/index.html" title="Automation scripts" target="_self"><img src="~/develop/images/Automation_scripts.svg" style="width:100%"></a>

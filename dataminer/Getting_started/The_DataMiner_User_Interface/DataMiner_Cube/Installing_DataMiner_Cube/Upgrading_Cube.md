@@ -23,6 +23,9 @@ In the [Cube start window](xref:Cube_start_window), you can select which Cube up
    - **Release**: Use the latest released DataMiner Cube version, so you can enjoy all the latest and greatest features.
    - **Release (delayed 2 weeks)**: Wait to use the latest released DataMiner Cube version until 2 weeks after the release date. This is the default option.
 
+   > [!TIP]
+   > If you follow the *Release* track, you can also get Cube updates that become available in between other DataMiner releases (i.e., off-cycle releases). These are intended to allow early access to fixes. Details about any off-cycle releases are available in the [Cube release notes](xref:DataMiner_Cube_RNs_index), where these releases are mentioned as cumulative updates (CUs).
+
    > [!NOTE]
    > For Skyline employees only, two additional tracks are available for development purposes:
    >

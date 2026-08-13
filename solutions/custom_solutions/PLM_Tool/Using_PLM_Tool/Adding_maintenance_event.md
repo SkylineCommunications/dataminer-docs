@@ -1,5 +1,6 @@
 ---
 uid: Adding_maintenance_event
+description: Learn how to create planned maintenance events, define timing and recurrence, and assign resources in the PLM tool.
 ---
 
 # Adding a maintenance event

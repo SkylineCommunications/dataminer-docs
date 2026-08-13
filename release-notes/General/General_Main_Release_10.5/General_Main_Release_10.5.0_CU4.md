@@ -176,6 +176,12 @@ From now on, when a new service fails to load, additional logging will be added,
 
 Also, when the service that failed to load is deleted, an attempt will be made to delete the files and folders associated with that service in order to prevent any subsequent issues when creating a new service with an identical name.
 
+#### Problem when using the GetAlarmTreeDetailsMessage [ID 42804]
+
+<!-- MR 10.5.0 [CU4] - FR TBD -->
+
+In some cases, it would no longer be possible to use the `GetAlarmTreeDetailsMessage`.
+
 #### Problem when the element.xml file of an SNMPv3 element that used a credential library did not contain a base-16 community string [ID 42805]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->

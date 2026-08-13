@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.6.6
 ---
 
-# DataMiner web apps Feature Release 10.6.6 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.6
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU3].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -16,7 +16,36 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been selected yet.*
+#### Dashboards/Low-Code Apps: New 'Rich text input' component [ID 45097] [ID 45180]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+A new rich text input component is now available for dashboards and low-code apps, allowing you to enter and edit formatted text with ease. This makes it possible to add structured notes, comments, or instructions, and highlight important information using a wide range of formatting options. The entered content is then exposed as HTML.
+
+![Example of rich text input component](~/release-notes/images/RichTextInput-1.gif)
+
+The toolbar of the new control offers the following formatting options:
+
+- Headings: Levels 1 to 4
+- Lists: Bulleted list and Numbered list
+- Blockquote
+- Code block
+- Font color
+- Inline text formatting: Bold (Ctrl+B), Italic (Ctrl+I), Underline (Ctrl+U), and Strikethrough
+- Hyperlinks: Insert, Edit, and Remove
+- History: Undo (Ctrl+Z) and Redo (Ctrl+Y)
+
+In the *Settings* pane for this component, you can configure the following settings:
+
+| Section | Option | Description |
+|--|--|--|
+| General | Emit value on | Determine when the value in the box becomes available as data. This can be when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change").<br>If you select *Focus lost*, the value will also become available when the user presses Enter. |
+| General | Default value | Specify the default value that will be entered into the input box when the dashboard or low-code app is opened. |
+
+The control is available under the basic controls. Like other basic controls, it also supports the *Set Value* component action, which sets the current value of the component to either a static or a dynamic value.
+
+> [!div class="button"]
+> [Read the blog post on our community website](https://community.dataminer.services/get-ready-for-richer-notes-and-better-structured-input-in-your-dashboards-and-apps/)
 
 ## New features
 
@@ -43,32 +72,6 @@ Notes:
 - To convert existing extensions and extension libraries, just add the NuGet dependency and change the namespace.
 - Changing the API used by an extension does not change the extension ID and will therefore remain backward compatible with existing queries.
 - If an extension implements both APIs, the new NuGet API will get priority. This could be useful in cases where you want to use the new NuGet API without overhead, but still need the exact same extension to work on older versions of the GQI DxM with SLHelper.
-
-#### Dashboards/Low-Code Apps: New 'Rich text input' component [ID 45097] [ID 45180]
-
-<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
-
-A new basic control named *Rich text input* now allows you to enter rich text that will be exposed as HTML.
-
-Its toolbar offers the following formatting options:
-
-- Headings: Levels 1 to 4
-- Lists: Bulleted list and Numbered list
-- Blockquote
-- Code block
-- Font color
-- Inline text formatting: Bold (Ctrl+B), Italic (Ctrl+I), Underline (Ctrl+U), and Strikethrough
-- Hyperlinks: Insert, Edit, and Remove
-- History: Undo (Ctrl+Z) and Redo (Ctrl+Y)
-
-In the *Settings* pane for this component, you can configure the following settings:
-
-| Section | Option | Description |
-|--|--|--|
-| General | Emit value on | Determine when the value in the box becomes available as data. This can be when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change").<br>If you select *Focus lost*, the value will also become available when the user presses Enter. |
-| General | Default value | Specify the default value that will be entered into the input box when the dashboard or low-code app is opened. |
-
-Similar to all other basic controls, this new control also supports the *Set Value* component action, which sets the current value of the component to either a static or dynamic value.
 
 #### Dashboards/Low-Code Apps - Query builder: 'Is one of' and 'Is none of' comparisons [ID 45164]
 
@@ -116,7 +119,7 @@ Clients can now use the following new filter methods when applying a filter oper
 In addition, the following enhancements have been made:
 
 - When the *greater than*, *greater than or equal to*, *less than*, and *less than or equal to* filter methods are applied on multiple numeric filter values, the internal filters will now be simplified to only compare to the minimum or maximum filter value respectively instead of using a large OR filter.
-- Up to now, when the *NotEquals*, *NotContains*, and *NotRegex* filter methods were used in combination with multiple filter values, they would internally be translated to an OR filter. From now on, they will be translated to a AND filter. As a result, *NotEquals* with multiple filter values will now be equivalent to the new *NotIn* filter method, and *Equals* with multiple filter values will now be equivalent to the new *In* filter method.
+- Up to now, when the *NotEquals*, *NotContains*, and *NotRegex* filter methods were used in combination with multiple filter values, they would internally be translated to an OR filter. From now on, they will be translated to an AND filter. As a result, *NotEquals* with multiple filter values will now be equivalent to the new *NotIn* filter method, and *Equals* with multiple filter values will now be equivalent to the new *In* filter method.
 
 ## Changes
 
@@ -126,7 +129,7 @@ In addition, the following enhancements have been made:
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
-From now on, when you try to open a non-existing page, you wil no longer be redirected to a separate "HTTP 404" page. Instead, a visual will now appear inside the Monitoring app.
+From now on, when you try to open a non-existing page, you will no longer be redirected to a separate "HTTP 404" page. Instead, a visual will now appear inside the Monitoring app.
 
 Clicking the *Go to overview* button in that visual will redirect you back to the home page of the app.
 
@@ -179,6 +182,12 @@ The default theme of the following basic controls has been changed to *Transpare
 
 From now on, the *Web* version displayed in the *About DataMiner* window of a DataMiner web app will be retrieved by means of a `GetDataMinerVersionInfo` message.
 
+#### Web apps: DOM error 'NoPermission' will now include a more detailed error message [ID 45295]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When the DOM instance error `NoPermission` is thrown in a web app, from now on, it will include a full error message that provides more details on the action the user was not allowed to perform.
+
 #### GQI DxM will no longer send log entries to the console [ID 45302]
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
@@ -198,6 +207,12 @@ From now on, no more redundant information will be saved. As a result, dashboard
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
 Because of a number of enhancements, overall performance has increased when editing app pages.
+
+#### Dashboards/Low-Code Apps - Maps component: Enhanced performance when loading maps [ID 45377]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+Because of a number of enhancements, overall performance has increased when loading maps into a *Maps* component.
 
 ### Fixes
 
@@ -294,7 +309,7 @@ From now on, a *Form* component will wait until all loading has finished before 
 
 <!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
 
-When, while configuring a query with a custom data source, you linking a query option to component data, the data link would silently be discarded when the static value of the query option matched the value provided by the component data.
+When, while configuring a query with a custom data source, you link a query option to component data, the data link would silently be discarded when the static value of the query option matched the value provided by the component data.
 
 No save operation would get triggered as no change was detected. After you had reloaded the dashboard or the low-code app, the query option would revert to its static value with no data link attached.
 
@@ -317,3 +332,11 @@ When certain DataMiner web apps (e.g., Dashboards, Monitoring, etc.) were used o
 When a table parameter index or column parameter index was dragged onto a *State timeline* component to act as a filter, up to now, the `TableDisplayIndex` of the underlying data would be modified to match the index name. This would unintentionally affect all other components that were using that same data.
 
 From now on, the `TableDisplayIndex` will only be updated when you explicitly drag an index onto the dashboard as data. When an index is dragged onto a *State timeline* component as a filter, the original data will remain unchanged, and a copied instance will be used exclusively by the *State timeline* component.
+
+#### Dashboards/Low-Code Apps - Line & area chart component: Problems when changing the 'Trend points', 'Show average', 'Show minimum', and 'Show maximum' options [ID 45363]
+
+<!-- MR 10.5.0 [CU15] / 10.6.0 [CU3] - FR 10.6.6 -->
+
+When, while configuring a *Line & area chart* component, you disabled the *Show average* option, and then set the *Trend points* option to "Real-time", the chart would not include any data in exported CSV files. From now on, CSV files will include all data visible in the chart.
+
+Also, when you changed the *Trend points* option from "Real-time" to "Average", and then enabled or disabled the *Show average*, *Show minimum*, or *Show maximum* options, in some cases, the trend lines and the highlighted trend data points were only updated when the chart was reloaded. From now on, the lines and the data points will get updated immediately.

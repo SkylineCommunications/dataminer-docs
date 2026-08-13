@@ -231,7 +231,7 @@ A special kind of indexColumn, i.e., the parameter ID of the table containing th
 
 ## groupby
 
-The index of the column by which will be grouped (only valid if type is "autoincrement").
+The index of the column by which will be grouped (only valid if type is [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement)).
 
 ## hidden
 
@@ -373,7 +373,7 @@ The interpretation of the separator value depends on the content of the type att
 - If type is "concatenation": separator between column values.
 
   By default, the columns are concatenated without a separator.
-- If type is "autoincrement": separator between column values when multiple columns make up the index (see [groupby](xref:ColumnOptionOptionsOverview#groupby)).
+- If type is [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement): separator between column values when multiple columns make up the index (see [groupby](xref:ColumnOptionOptionsOverview#groupby)).
 
   Example: "1.2" (separator is a dot)
 

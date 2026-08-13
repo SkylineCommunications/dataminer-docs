@@ -1,6 +1,6 @@
 ---
 uid: Backing_up_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
-description: Learn how to back up a DataMiner Agent with Taskbar Utility, including what to watch out for to ensure a successful restore later.
+description: "Learn how you can use DataMiner Taskbar Utility to take a full or configuration backup with or without database, or a visual configuration backup."
 ---
 
 # Backing up a DataMiner Agent using DataMiner Taskbar Utility

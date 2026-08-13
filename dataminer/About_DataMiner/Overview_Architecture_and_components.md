@@ -1,0 +1,51 @@
+---
+uid: Overview_Architecture_and_components
+description: Discover the general architecture of a DataMiner System, including its nodes, clients, storage, and the dataminer.services cloud platform.
+---
+
+# DataMiner System architecture and components
+
+## General architecture
+
+A DataMiner System (DMS) is a cluster of one or more TCP/IP interconnected nodes, also known as DataMiner Agents (DMAs). Each of these DataMiner nodes is identical as to software. Each node is a fully functional DataMiner System by itself, offering all the features and capabilities of DataMiner.
+
+This means that the smallest and simplest version of a DataMiner System is a single DataMiner Agent. Typically, multiple nodes are deployed in a cluster, with the number of nodes depending on the required overall processing capacity and potentially also on certain architectural considerations or preferences.
+
+In a DataMiner cluster, there is no central node, and there are no dedicated client terminals. When DataMiner users log on to any of the nodes in the cluster, they will perceive the cluster as a single entity.
+
+## DataMiner Agents
+
+A DataMiner Agent (DMA) is a physical or virtual compute instance running the DataMiner Agent software on top of a Microsoft Windows operating system (see [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements)).
+
+The DataMiner Agent software is essentially a collection of services, of which most names start with "SL" (for example, SLNet, SLProtocol, SLLog, etc.).
+
+> [!TIP]
+> See also: [Installing a DataMiner Agent](xref:Installing_a_DataMiner_Agent)
+
+## Clients
+
+DataMiner client applications only need to connect to one node in the cluster, and this can be any of the nodes. All nodes in the cluster have an equivalent status. Through this "single point of contact", users have access to all information in the entire cluster. The only constraints a user can potentially experience in terms of accessing certain information are defined by the DataMiner security configuration.
+
+In other words, a [DataMiner client](xref:Client_apps) can access the cluster by connecting to any DataMiner node, and it will get a consolidated view of the entire managed operation and all its managed objects across all nodes in the cluster.
+
+## Storage
+
+For essential **system data storage**, a DataMiner System can either make use of [Storage as a Service (STaaS)](xref:STaaS), in which case all the complexity and scaling of the databases is taken care of by Skyline, or you can choose to host the storage databases yourself. For more details, refer to [Deployment models](xref:Overview_hosting).
+
+To store and retrieve data, the DataMiner System relies on references and IDs. This makes the database less readable for a third-party software application without intimate knowledge of the data structures used by DataMiner. The system data storage is therefore considered to be exclusively used by the DataMiner System.
+
+An optional second data storage solution or [offload database](xref:Offload_database) can be added to a DataMiner System for the purpose of exporting the data and making it available for third-party software applications. When the DataMiner System is configured to also offload its data to the offload database, it will translate the data to more human-readable data (for example, element ID references are replaced with element names), so that it is easier for third-party applications to digest. A DataMiner System will only write data to the offload database but will not read from it. The DataMiner System will also not perform maintenance of the offload database.
+
+## dataminer.services
+
+dataminer.services is a cloud platform hosted by Skyline that provides various services. While it is not mandatory for a DataMiner System to be connected to this platform, the connection is required to have access to some DataMiner features.
+
+The most full use of dataminer.services is [DataMiner as a Service](xref:Creating_a_DMS_in_the_cloud), where the entire DataMiner System is hosted by Skyline in the cloud. It is also possible to only have the system data storage hosted by Skyline with [Storage as a Service](xref:STaaS). But even if you host a DataMiner System entirely on your own compute instances, being connected to dataminer.services provides a host of additional features, including dashboard sharing and ChatOps.
+
+For an overview of all dataminer.services functionality, refer to [dataminer.services](xref:Overview_dataminer_services).
+
+## DataMiner Probes
+
+A DataMiner Probe (DMP) provides standalone intelligent network management functionality, and typically reports to a central system. It has limited capabilities compared to a full DataMiner Agent, and typically, but not necessarily, runs on a small-form-factor compute instance in remote and unmanned locations where communication channels often have capacity constraints and/or intermittent availability.
+
+DMPs can support a multitude of applications and are typically installed in for example remote VSAT terminals, satellite hubs, terrestrial transmitter sites, small network nodes, cellular network base stations, etc.

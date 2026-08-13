@@ -1,5 +1,6 @@
 ---
 uid: MO_Virtual_Signal_Groups
+description: Use the Virtual Signal Groups app to create source and destination endpoints for every signal in your network, and to group them in virtual signal groups.
 ---
 
 # Virtual Signal Groups app
@@ -54,7 +55,7 @@ When you have created a virtual signal group, you can start adding endpoints to 
 
 ## Levels
 
-Levels define a logical structure for the virtual signal groups on the system. Each level is assigned a unique level number, a name, and a specific [transport type](#transport-types). If a specific transport type is specified for a level, it will only be possible to add endpoints of that same type on that level in a virtual signal group.
+Levels define a logical structure for the virtual signal groups on the system. Each level is assigned a unique level number, a name, and a specific [transport type](#transport-types). Only endpoints that match the type of the level can be added for that level in a virtual signal group.
 
 Levels defined in the Virtual Signal Groups app are defined system-wide, meaning that the level structure of all virtual signal groups is the same. However, each individual signal group can contain an endpoint on a level or not.
 

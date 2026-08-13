@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_network
+description: Discover the entire list of Network parameters available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – Network

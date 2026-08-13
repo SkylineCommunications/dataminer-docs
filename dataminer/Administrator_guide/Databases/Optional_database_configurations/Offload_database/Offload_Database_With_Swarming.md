@@ -1,6 +1,7 @@
 ---
 uid: Offload_Database_With_Swarming
 keywords: central database, swarming
+description: "Find out how offload database configuration changes when Swarming is enabled in DataMiner, and how to update tables for compatibility."
 ---
 
 # Offload database configuration with Swarming enabled

@@ -17,7 +17,7 @@ If set to true, the pair will be executed when the device is in timeout and slow
 ## Remarks
 
 > [!NOTE]
-> This option cannot be used in protocols of type SNMP or OPC.
+> This option cannot be used in protocols of type SNMP.
 
 ## Examples
 

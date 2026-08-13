@@ -1,5 +1,6 @@
 ---
 uid: PO_Managing_Teams
+description: Use the Teams page of the People and Organizations app to add and edit teams, to manage team members and team skills, and to assign roles within teams.
 ---
 
 # Managing teams

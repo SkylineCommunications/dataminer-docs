@@ -1,5 +1,6 @@
 ---
 uid: Importing_elements_services_etc_from_a_dmimport_file
+description: "Learn how to import elements, services, service templates, views, redundancy groups, etc. from .dmimport packages to migrate them across DataMiner Systems."
 ---
 
 # Importing elements, services, etc. from a .dmimport file

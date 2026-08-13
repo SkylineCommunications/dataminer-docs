@@ -1,5 +1,6 @@
 ---
 uid: Viewing_element_connections
+description: "Learn how to view element connections in DataMiner Cube by using the Connectivity tab in the Properties window."
 ---
 
 # Viewing element connections

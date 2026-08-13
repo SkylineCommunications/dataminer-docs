@@ -1,5 +1,6 @@
 ---
 uid: Working_with_DITT
+description: To work with the DataMiner IT Tools in Cube, open the DITT element, and run a Ping, Tracert, or (optional) PuTTY command.
 ---
 
 # Working with DataMiner IT Tools

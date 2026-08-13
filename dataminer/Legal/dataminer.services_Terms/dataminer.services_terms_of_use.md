@@ -60,7 +60,7 @@ You are solely responsible for the content you share and for ensuring you have t
 
 ## Deploying a DataMiner System
 
-Use of the "Deploy" functionality is subject to the [terms for online deployments](xref:License_and_Service_Terms).
+Use of the "Deploy" functionality is subject to the terms for online deployments.
 
 ## Privacy
 

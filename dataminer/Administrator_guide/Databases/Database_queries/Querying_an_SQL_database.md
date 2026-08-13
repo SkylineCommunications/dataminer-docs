@@ -1,5 +1,6 @@
 ---
 uid: Querying_an_SQL_database
+description: "Follow these steps if you want to query a legacy SQL database using the query executer in DataMiner Cube."
 ---
 
 # Querying an SQL database

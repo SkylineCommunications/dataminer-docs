@@ -23,6 +23,22 @@ uid: General_Main_Release_10.5.0_CU7
 
 ### Enhancements
 
+#### GQI: Enhanced error handling when invalid columns are added [ID 43511]
+
+<!-- MR 10.5.0 [CU7] - FR 10.5.10 -->
+
+Up to now, when a custom column operator added a column that was set to null or a column that had never been initialized, at first, this would be allowed, but, later on, a non-descriptive error would be thrown. From now on, when an invalid column is added, a detailed error will immediately be thrown.
+
+When using GQI via SLHelper:
+
+- Former error: `Error trapped: Value cannot be null. Parameter name: key`
+- New error: `Error trapped: Error in implementation of HandleColumns: Cannot add null columns. Parameter name: columns`
+
+When using GQI via the GQI DxM:
+
+- Former error: `GQI error: An unknown error occurred in GQI: Error trapped: Object reference not set to an instance of an object.`
+- New error: `GQI error: Error in implementation of HandleColumns: Column at index {column index} is null. All columns must be non-null. Parameter name: columns`
+
 #### SLNet-managed NATS solution: Credentials of the local agent will now be compared against the credentials of the primary NAS node [ID 43514]
 
 <!-- MR 10.4.0 [CU19] / 10.5.0 [CU7] - FR 10.5.10 -->

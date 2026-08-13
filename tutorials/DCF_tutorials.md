@@ -1,5 +1,6 @@
 ---
 uid: DCF_tutorials
+description: Discover all DataMiner Connectivity Framework tutorials. DCF is used to visualize connections throughout the infrastructure.
 ---
 
 # DataMiner Connectivity Framework (DCF) tutorials

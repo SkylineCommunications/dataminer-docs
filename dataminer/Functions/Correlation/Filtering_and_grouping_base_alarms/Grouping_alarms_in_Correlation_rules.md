@@ -10,7 +10,7 @@ In the Correlation module, the *Alarm Grouping* section of the details pane allo
 
 1. Click *Add grouping* and select one of the listed grouping options:
 
-   - by alarm: Creates a correlated alarm per individual alarm update.
+   - by alarm: Deprecated. Available up to DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<!--RN 45545-->. Creates a correlated alarm per individual alarm update.
 
    - by component info. See [Creating an information template](xref:Creating_an_information_template).
 

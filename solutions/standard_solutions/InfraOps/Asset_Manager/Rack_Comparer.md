@@ -1,5 +1,6 @@
 ---
 uid: Rack_Comparer
+description: Go to the Rack Comparer page, select two racks, and compare them side by side. Use the filter if you want to narrow down the list of racks.
 ---
 
 # Rack Comparer

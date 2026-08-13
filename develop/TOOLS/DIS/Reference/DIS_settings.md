@@ -250,6 +250,16 @@ Click *Fix default XML encoding* if you want DataMiner Integration Studio to cha
 >   - Unicode (UTF-8 with signature) - Codepage 65001
 > - XML files with an UTF-8 signature header can only be uploaded to DataMiner using DataMiner Cube.
 
+## XML Schemas
+
+In the *XML Schemas* tab, you can configure how DIS manages XML schema updates at startup.
+
+The tab contains a *Download XML Schemas on Visual Studio startup* checkbox, which is enabled by default.
+
+- When this checkbox is enabled, DIS will check for a newer version of the [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) NuGet package each time Visual Studio starts. If a newer version is available, DIS will automatically download the updated schemas and install them into Visual Studio (e.g. `C:\Program Files\Microsoft Visual Studio\18\Professional\Xml\Schemas`). The outcome — whether a new version was installed or the current version is already up to date — will be reported in the DIS output window.
+
+- When this checkbox is disabled, DIS will install the schemas that are bundled with DIS, as long as it detects that the currently installed schemas differ from the bundled ones.
+
 ## Info
 
 In the *Info* tab, you can find the version of the currently installed DataMiner Integration Studio.

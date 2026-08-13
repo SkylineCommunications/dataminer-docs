@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript
+description: Learn how to create a MediaOps Live connection handler script that will detect and manage connections between endpoints for an IP Matrix element.
 ---
 
 # Creating a connection handler script for an IP Matrix element

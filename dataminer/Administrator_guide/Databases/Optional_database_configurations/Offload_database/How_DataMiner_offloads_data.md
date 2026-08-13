@@ -1,6 +1,7 @@
 ---
 uid: How_DataMiner_offloads_data
 keywords: central database
+description: "Learn how DataMiner offloads data to offload databases of type MySQL, MSSQL, or Oracle, including how gaps and connection issues are handled."
 ---
 
 # How DataMiner offloads data
