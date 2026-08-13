@@ -36,4 +36,8 @@ This only applies when the GQI DxM is enabled.
 
 ### Fixes
 
-*This release does not contain any fixes yet.*
+#### Dashboards/Low-Code Apps - Query builder: Not possible to add multiple datetime filters [ID 46152]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+In the query builder, it is was not possible to add a filter after another filter on a datetime column that was linked to data.
