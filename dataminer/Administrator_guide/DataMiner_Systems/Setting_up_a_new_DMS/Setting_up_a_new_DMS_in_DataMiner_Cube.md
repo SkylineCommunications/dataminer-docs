@@ -1,6 +1,6 @@
 ---
 uid: Setting_up_a_new_DMS_in_DataMiner_Cube
-description: Set up a new DataMiner cluster by first adding the primary node in System Center and then adding all additional nodes.
+description: "Set up a new DataMiner cluster by first adding the primary node in System Center and then adding all additional nodes."
 ---
 
 # Setting up a new cluster in DataMiner Cube

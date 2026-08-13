@@ -9,8 +9,6 @@ Prior to DataMiner 10.4.12/10.5.0 [CU10]<!--RN 40751-->, this BPA test is called
 
 This BPA test specifically detects the presence of active runtime errors (RTEs) in the system by reading the `C:\Skyline DataMiner\logging\SLWatchdog2.txt` file.
 
-This BPA test is available by default from DataMiner 10.1.0 [CU4]/10.1.7 onwards.
-
 ## Metadata
 
 - Name: Active Runtime Errors

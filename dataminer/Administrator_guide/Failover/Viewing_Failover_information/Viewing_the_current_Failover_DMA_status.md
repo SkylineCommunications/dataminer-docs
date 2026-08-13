@@ -1,5 +1,6 @@
 ---
 uid: Viewing_the_current_Failover_DMA_status
+description: "Learn how to view the current Failover DMA status using color-coded LEDs and the Status window in the Failover Config window."
 ---
 
 # Viewing the current Failover DMA status
