@@ -47,7 +47,6 @@ Below you can find a list of all the *UserDefinableApiEndpoint* DxM versions and
 | 3.8.0       | .NET 8                | 10.4.0+                            | 10.6.8                           |
 | 3.9.0       | .NET 10               | 10.4.0+                            | 10.6.10                          |
 
-
 > [!NOTE]
 >
 > - Versions not listed above were not released in official DataMiner upgrade packages.
