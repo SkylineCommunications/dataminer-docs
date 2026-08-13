@@ -134,7 +134,7 @@ else
     > [!NOTE]
     > Values not provisioned or left null will be initialized with their default value.
 
-  - settings[7] (string): Optional. GUID of entry in credentials library.<!-- RN 27275 -->
+  - settings[7] (string): Optional. GUID of entry in Credentials Library.<!-- RN 27275 -->
 
     If you pass a GUID, you do not need to pass any credentials.
 

@@ -220,7 +220,7 @@ After you have followed the procedure above and system requirements are met, you
    1. Restart Cassandra.
 
    > [!TIP]
-   > For more information on how to tune the resources of Cassandra's Java Virtual Machine, including how to configure this on a Linux machine, see [Tuning the Java heap](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/operations/opsTuneJVM.html#opsTuneJVM__tuning-the-java-heap).
+   > For more information on how to tune the resources of Cassandra's Java Virtual Machine, including how to configure this on a Linux machine, see [Tuning the Java heap](https://cassandra.apache.org/doc/5.0/cassandra/managing/operating/hardware.html#memory).
 
 1. If MySQL or MSSQL are no longer used on the DMA server, disable the relevant service:
 

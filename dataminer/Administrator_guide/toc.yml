@@ -106,6 +106,8 @@ items:
             topicUid: DataMiner_processes
           - name: DMA-client and inter-DMA communication
             topicUid: DMA_client_and_inter_DMA_communication
+          - name: Data synchronization
+            topicUid: Data_synchronization
           - name: DataMiner interfaces
             topicUid: DataMiner_interfaces
           - name: DMA peripherals
@@ -523,10 +525,10 @@ items:
             topicUid: Assigning_user_settings_to_a_user_group
           - name: Configuring a set of user group settings
             topicUid: Configuring_a_set_of_user_group_settings
-          - name: Managing predefined sets of credentials for SNMP authentication
-            topicUid: Managing_predefined_sets_of_credentials_for_SNMP_authentication
           - name: Frequently asked questions about user group settings
             topicUid: Frequently_asked_questions_about_user_group_settings
+          - name: Credentials Library
+            topicUid: Credentials_Library
       - name: Advanced security configuration
         items:
 #          - name: Lockbox service for DaaS and STaaS systems

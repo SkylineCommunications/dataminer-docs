@@ -30,15 +30,15 @@ Ticketing cost is driven primarily by **ticket volume created per month**, not b
 
 ## Configured examples
 
-| | S | M | L |
-|-|-------|-------|-------|
-| Tickets / month | 800 | 2,000 | 5,000 |
-| Retention | 12 mo | 12 mo | 12 mo |
-| SaaS | Yes | Yes | Yes |
-| **Unmanaged Objects** | 9,600 | 24,000 | 60,000 |
-| **Actions** | 4,000 | 10,000 | 25,000 |
-| **Information Events** | 80,000 | 200,000 | 500,000 |
-| **Hosted Managed Objects** | 1,000,000 | 1,000,000 | 1,000,000 |
+| | Community | Small | Medium | Large |
+|---|-------:|-------:|-------:|-------:|
+| Tickets / month | 800 | 2,000 | 5,000 | 10,000 |
+| Retention | 12 mo | 12 mo | 12 mo | 12 mo |
+| SaaS | Yes | Yes | Yes | Yes |
+| **Unmanaged Objects** | 9,600 | 24,000 | 60,000 | 120,000 |
+| **Actions** | 4,000 | 10,000 | 25,000 | 50,000 |
+| **Information Events** | 80,000 | 200,000 | 500,000 | 1,000,000 |
+| **Hosted Managed Objects** | 1,000,000 | 1,000,000 | 1,000,000 | 1,000,000 |
 
 > [!TIP]
 > [Run your own estimate in the Admin app](https://admin.dataminer.services).

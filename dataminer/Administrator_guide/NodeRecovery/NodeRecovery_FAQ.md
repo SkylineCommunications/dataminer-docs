@@ -45,6 +45,14 @@ See [Node Recovery troubleshooting](xref:NodeRecovery_Troubleshooting).
 
 NodeRecovery requires a cluster of at least two DataMiner Agents to monitor each other for outages and launch local state change scripts. However, global state change detection requires at least three DataMiner Agents.
 
-## Is there a change log available for Node Recovery?
+## Is a change log available for Node Recovery?
 
 Yes. See [Node Recovery change log](xref:NodeRecovery_change_log) for a detailed list of changes per version.
+
+## Are any other resources available to get me started?
+
+Yes, in the [DataMiner Catalog](https://catalog.dataminer.services), you should find at least these two items when searching for "Node Recovery":
+
+- [Node Recovery Playground](https://catalog.dataminer.services/details/466a5174-e890-4a9d-9ee7-cc4ac7841e58)
+- [Node Recovery - Rebalance across healthy Agents](https://catalog.dataminer.services/details/3de8405e-7156-4a0a-b8c5-80937de0f4ed)
+

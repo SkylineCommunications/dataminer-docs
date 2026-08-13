@@ -1,5 +1,6 @@
 ---
 uid: Generating_BrokerGateway_client_secrets
+description: "Learn how to generate BrokerGateway client secrets, which are designed for DxMs or other clients connecting to the DataMiner NATS bus."
 ---
 
 # Generating BrokerGateway client secrets
