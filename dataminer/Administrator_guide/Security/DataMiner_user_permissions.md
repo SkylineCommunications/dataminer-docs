@@ -1250,15 +1250,15 @@ Permission to access the *System settings* page in System Center.
 
 #### Modules \> System configuration \> System settings \> Credentials library \> Add library credentials
 
-Permissions to add predefined credentials in the credentials library.
+Permissions to add predefined credentials in the Credentials Library.
 
 #### Modules \> System configuration \> System settings \> Credentials library \> Edit library credentials
 
-Permissions to edit credentials in the credentials library.
+Permissions to edit credentials in the Credentials Library.
 
 #### Modules \> System configuration \> System settings \> Credentials library \> Delete library credentials
 
-Permissions to delete credentials from the credentials library.
+Permissions to delete credentials from the Credentials Library.
 
 ### Modules \> System configuration \> System settings \> Manage client versions
 

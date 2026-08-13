@@ -91,12 +91,12 @@ In addition, this change includes the following fixes:
 
 In the credentials library, you can now add token credentials, i.e., credentials that consist only of a single token.
 
-Also, all credential fields now have a maximum length of 5012 bytes, and the following fields can be left empty:
+Also, all credential fields now have a maximum length of 5120 bytes (5 KB), and the following fields can be left empty:
 
 | Type of credentials | Field |
 |---|---|
-| Token credentials | Authentication password |
-| Username and password credentials | Password |
+| Token credentials | Access token |
+| Username and password credentials | Authentication password |
 
 > [!NOTE]
 > The credentials library can contain a maximum of 1000 sets of credentials. When this limit is reached, users who want to add a new set of credentials will receive a warning.
