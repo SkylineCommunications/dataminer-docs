@@ -65,6 +65,8 @@ When configuring a spectrum analysis component in Visual Overview, you can now u
 
 When, in the sidebar, you click the *Community* button, a menu will open. This menu now also includes a command that will allow you to [report an issue](https://aka.dataminer.services/ReportAnIssue).
 
+![Community menu in DataMiner Cube](~/release-notes/images/Cube_report_issue.png)
+
 #### Spectrum analyzer: Support added for reference traces and reference trace markers [ID 45843]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
