@@ -130,7 +130,7 @@ To check whether the claims and attributes match:
 
 ### Missing assertion signatures
 
-Identity providers are typically configured to cryptographically sign all assertions in their SAML responses. However, it is also possible that the identity provider only signs the overall SAML response instead of both the individual assertions and the overall SAML response. By default, DataMiner expects all assertions to have a valid signature. If the identity provider does not do so, signing in will fail with the following error message: *Service provider wants assertions signed but an unsigned assertion was found in SAML response*.
+Identity providers are typically configured to cryptographically sign all assertions in their SAML responses. However, it is also possible that the identity provider only signs the overall SAML response instead of both the individual assertions and the overall SAML response. By default, DataMiner expects all assertions to have a valid signature. If this is not the case, signing in will fail with the following error message: *Service provider wants assertions signed but an unsigned assertion was found in SAML response*.
 
 To solve this issue, set *WantAssertionsSigned* in *spMetadata.xml* to *false*. This will make DataMiner skip the signature validation of the SAML assertions but still validate the overall SAML response signature.
 
