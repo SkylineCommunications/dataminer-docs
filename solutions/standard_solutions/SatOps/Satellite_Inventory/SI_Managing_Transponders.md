@@ -1,9 +1,9 @@
 ---
-uid: SI_Managing_Transponders
+uid: SI_Adding_Editing_Transponders
 description: Learn how to manage transponders, transponder plans, and transponder slots in the Satellite Inventory app.
 ---
 
-# Managing transponders
+# Adding and editing transponders
 
 A *transponder* belongs to a [beam](xref:SI_Managing_Beams) and relays signal within that beam. Its bandwidth is divided into bookable slots through [transponder plans](xref:SI_Transponder_Plans). The *Transponders* page lists the configured transponders and lets you manage them.
 

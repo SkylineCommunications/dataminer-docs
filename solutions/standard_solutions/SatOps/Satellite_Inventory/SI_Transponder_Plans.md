@@ -5,7 +5,7 @@ description: Learn how to define permanent and temporary transponder plans in th
 
 # Transponder plans and slots
 
-A *transponder plan* defines how the bandwidth of a [transponder](xref:SI_Managing_Transponders) is divided into slots. The *transponder slots* generated from a plan are the bookable units of capacity that appear in the [Satellite Scheduling](xref:Satellite_Scheduling) app. You manage plans from the *Slots* page of a transponder.
+A *transponder plan* defines how the bandwidth of a [transponder](xref:SI_Adding_Editing_Transponders) is divided into slots. The *transponder slots* generated from a plan are the bookable units of capacity that appear in the [Satellite Scheduling](xref:Satellite_Scheduling) app. You manage plans from the *Slots* page of a transponder.
 
 ## Permanent and temporary plans
 

@@ -5,7 +5,7 @@ description: Learn how to add and manage the beams of a satellite in the Satelli
 
 # Managing beams
 
-A *beam* represents a coverage area of a [satellite](xref:SI_Managing_Satellites) and groups one or more [transponders](xref:SI_Managing_Transponders). The *Beams* page lists the configured beams and lets you manage them.
+A *beam* represents a coverage area of a [satellite](xref:SI_Managing_Satellites) and groups one or more [transponders](xref:SI_Adding_Editing_Transponders). The *Beams* page lists the configured beams and lets you manage them.
 
 ![The Beams page showing the filter bar with transmission type, link type, and status filters](~/solutions/images/SO_SI_Beams_Page.png)
 
