@@ -36,6 +36,14 @@ This only applies when the GQI DxM is enabled.
 
 ### Fixes
 
+#### Dashboards/Low-Code Apps: Element filter selection could fail while search results were loading [ID 46129]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When you selected an element in an element filter in edit mode, but search results were still loading, it could occur that the selection failed.
+
+This issue has now been fixed, ensuring that element filter selection is no longer cleared by overlapping search requests.
+
 #### Dashboard Gateway: Error while initializing themes on Dashboard Gateway setup [ID 46147]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
@@ -55,3 +63,11 @@ In the query builder, it is was not possible to add a filter after another filte
 In the query filter component, no filtering was applied when both options in a Boolean column (`true` and `false`) were selected. Now, instead an "Is one of" filter is applied with both values, filtering out empty cells. The filter selection is also stored in the URL and restored when the dashboard is reloaded.
 
 This only applies when the GQI DxM is enabled. SLHelper filtering is unaffected.
+
+#### Dashboards: EPM picker component could disappear when updates were triggered quickly [ID 46165]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When updates were triggered very quickly on an EPM picker component, a change detection issue could occur that caused the component to disappear until a mouse event occurred.
+
+This issue has now been fixed.

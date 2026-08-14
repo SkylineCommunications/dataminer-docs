@@ -59,6 +59,14 @@ For detailed information about the changes included in this version, refer to th
 
 ### Fixes
 
+#### Agent element alarm and masking information could be out of sync after a Failover switch [ID 45601]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+Up to now, when a DataMiner Agent came online after a Failover switch, the Agent element alarm tree and mask state could remain stale in memory. As a result, alarm and masking information for the Agent element could temporarily differ from what was stored in the database.
+
+From now on, when the Agent comes online after the Failover switch, the Agent element's alarm and masking information are explicitly reloaded from the database. This ensures that the incoming Agent immediately reflects the correct alarm tree, correlated alarms, and mask state.
+
 #### Table subscriptions with forceFullTable filter did not deliver updates for newly added rows on regular tables [ID 45970]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
@@ -68,6 +76,12 @@ Up to now, when you created a subscription on a regular (non-partial) table and 
 From now on, this filter will be ignored for regular tables. As a result, subscriptions that include this filter now behave the same as subscriptions without it, and updates for newly added rows are delivered correctly.
 
 View tables, direct view tables, partial tables, and matrixes are not affected.
+
+#### SLAutomation deadlock when many subscripts were launched rapidly [ID 46056]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+SLAutomation could deadlock when many subscripts were launched in a short time. This issue has been resolved.
 
 #### SLAutomation could hang during shutdown [ID 46123]
 
