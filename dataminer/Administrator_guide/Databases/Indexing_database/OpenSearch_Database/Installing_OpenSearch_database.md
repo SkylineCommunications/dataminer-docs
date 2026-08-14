@@ -13,7 +13,7 @@ Supported versions:
 - OpenSearch 3.X
 
 > [!TIP]
-> For new DataMiner installations, we recommend using OpenSearch 3.X. As this version has mainly been used with DataMiner 10.6.x, we recommend running OpenSearch 3.X on DataMiner 10.6.x or newer.
+> On new installations and with DataMiner versions starting from 10.6.x, we recommend using OpenSearch 3.x.
 
 > [!IMPORTANT]
 > OpenSearch 1.x reached community end-of-life on May 6, 2025 and is no longer supported. If you are still using OpenSearch 1.x, upgrade to a supported version.
