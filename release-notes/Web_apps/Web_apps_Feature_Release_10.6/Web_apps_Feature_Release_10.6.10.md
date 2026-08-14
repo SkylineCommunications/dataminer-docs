@@ -36,6 +36,14 @@ This only applies when the GQI DxM is enabled.
 
 ### Fixes
 
+#### Dashboards/Low-Code Apps: Element filter selection could fail while search results were loading [ID 46129]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When you selected an element in an element filter in edit mode, but search results were still loading, it could occur that the selection failed.
+
+This issue has now been fixed, ensuring that element filter selection is no longer cleared by overlapping search requests.
+
 #### Dashboard Gateway: Error while initializing themes on Dashboard Gateway setup [ID 46147]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
