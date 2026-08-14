@@ -36,8 +36,22 @@ This only applies when the GQI DxM is enabled.
 
 ### Fixes
 
+#### Dashboard Gateway: Error while initializing themes on Dashboard Gateway setup [ID 46147]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+While initializing the themes functionality, a Dashboard Gateway setup could throw a null error, which was shown in the logging. This issue has been resolved.
+
 #### Dashboards/Low-Code Apps - Query builder: Not possible to add multiple datetime filters [ID 46152]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 In the query builder, it is was not possible to add a filter after another filter on a datetime column that was linked to data.
+
+#### Dashboards/Low-Code Apps: Query filter not applied when both Boolean options were selected [ID 46155]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+In the query filter component, no filtering was applied when both options in a Boolean column (`true` and `false`) were selected. Now, instead an "Is one of" filter is applied with both values, filtering out empty cells. The filter selection is also stored in the URL and restored when the dashboard is reloaded.
+
+This only applies when the GQI DxM is enabled. SLHelper filtering is unaffected.
