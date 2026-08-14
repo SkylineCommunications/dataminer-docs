@@ -34,7 +34,7 @@ Verify the prerequisites listed under [Adding a node to a DataMiner cluster](xre
 1. Enter the IP address of the DMA you want to add and click *Add*.
 
 > [!IMPORTANT]
-> Always use the IP address to add a DMA to a cluster. Adding Agents based on hostname is not supported.
+> Always use the IP address to add a regular DMA to a cluster. Adding Agents based on hostname is only supported for DataMiner Probes.
 
 > [!NOTE]
 >
