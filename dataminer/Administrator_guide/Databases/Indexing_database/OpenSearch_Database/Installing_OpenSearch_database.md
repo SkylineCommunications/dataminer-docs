@@ -9,11 +9,8 @@ description: Install and test OpenSearch as described in the OpenSearch document
 
 Supported versions:
 
-- OpenSearch 2.X
-- OpenSearch 3.X
-
-> [!TIP]
-> On new installations and with DataMiner versions starting from 10.6.x, we recommend using OpenSearch 3.x.
+- OpenSearch 2.x
+- OpenSearch 3.x — recommended for new installations and with DataMiner versions starting from 10.6.x
 
 > [!IMPORTANT]
 > OpenSearch 1.x reached community end-of-life on May 6, 2025 and is no longer supported. If you are still using OpenSearch 1.x, upgrade to a supported version.
@@ -22,22 +19,24 @@ Supported versions:
 >
 > - We recommend using the latest version of Ubuntu LTS. However, OpenSearch also supports other Linux distributions. See [Operating system compatibility](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#operating-system-compatibility).
 > - OpenSearch is supported on Windows from OpenSearch 2.4 onwards.
-> - OpenSearch 3.X requires Java 21. If you plan to upgrade an existing OpenSearch 2.X cluster to OpenSearch 3.X, first upgrade to the latest OpenSearch 2.X version (2.19) as detailed in the [official OpenSearch documentation](https://opensearch.org/docs/latest/).
+> - OpenSearch 3.x requires Java 21. If you plan to upgrade an existing OpenSearch 2.x cluster to OpenSearch 3.x, first upgrade to the latest OpenSearch 2.x version (2.19) as detailed in the [official OpenSearch documentation](https://opensearch.org/docs/latest/).
 
 ## Before you begin
 
 Before you set up an OpenSearch cluster, take the following into account:
 
-> [!NOTE]
->
-> - **Sizing**: Make sure each OpenSearch node meets the hardware requirements (RAM, CPU, disk, and network). See the [OpenSearch/Elasticsearch requirements](xref:DataMiner_Compute_Requirements#opensearchelasticsearch-requirements) in the DataMiner Compute Requirements.
-> - **Number of nodes**: For a production cluster, use at least three cluster-manager-eligible nodes and always an odd number. This is due to the way OpenSearch works internally: to elect a cluster manager and avoid split-brain situations, a majority (quorum) of the cluster-manager-eligible nodes must be available, which is only possible with an odd number of nodes. A single-node setup is only suitable for testing or evaluation.
-> - **Java**: OpenSearch bundles its own Java runtime, so you do not need to install Java separately. Note that OpenSearch 3.X is built on Java 21.
-> - For the full setup procedure, always refer to the [official OpenSearch documentation](https://opensearch.org/docs/latest/tuning-your-cluster/cluster/).
+- **Sizing**: Make sure each OpenSearch node meets the hardware requirements (RAM, CPU, disk, and network) detailed in the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements#opensearchelasticsearch-requirements).
+
+- **Number of nodes**: For a production cluster, use **at least three** cluster-manager-eligible nodes and always an odd number. This is required because of the way OpenSearch works internally: to elect a cluster manager and avoid split-brain situations, a majority (quorum) of the cluster-manager-eligible nodes must be available, which is only possible with an odd number of nodes. A single-node setup is only suitable for testing or evaluation.
+
+- **Java**: OpenSearch bundles its own Java runtime, so you do not need to install Java separately. Note that OpenSearch 3.x is built on Java 21.
+
+> [!TIP]
+> For the full setup procedure, refer to the [official OpenSearch documentation](https://opensearch.org/docs/latest/tuning-your-cluster/cluster/).
 
 ## Setting up the OpenSearch cluster
 
-See the [official documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch cluster. The configuration is almost identical to that of an Elasticsearch cluster.
+Refer to the [official documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch cluster. The configuration is almost identical to that of an Elasticsearch cluster.
 
 > [!IMPORTANT]
 >
@@ -126,7 +125,7 @@ These are the main steps of the setup:
   > As shown above, the `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e., the maximum integer value). DataMiner can send queries containing a very large number of boolean clauses to the indexing database, so this setting is raised to its maximum to prevent such queries from being rejected.
 
   > [!IMPORTANT]
-  > Do not add the legacy `discovery.type: zen` setting to a multi-node cluster. Zen discovery has been removed in OpenSearch 3.X, where cluster formation is handled by `discovery.seed_hosts` and `cluster.initial_cluster_manager_nodes`. The `discovery.type` setting is only used for a single-node setup (see below).
+  > Do not add the legacy `discovery.type: zen` setting to a multi-node cluster. Zen discovery has been removed in OpenSearch 3.x, where cluster formation is handled by `discovery.seed_hosts` and `cluster.initial_cluster_manager_nodes`. The `discovery.type` setting is only used for a single-node setup (see below).
 
 - By default, a node takes on all roles (cluster manager, data, and ingest). To restrict a node to specific roles, add a `node.roles` setting to its *opensearch.yml* file, as illustrated below.
 

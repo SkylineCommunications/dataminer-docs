@@ -202,7 +202,7 @@ If there is more than one Cassandra node, the time in the cluster must be synchr
 
 ### OpenSearch/Elasticsearch requirements
 
-Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). Ideally, this should be an OpenSearch cluster. An Elasticsearch cluster can be used instead, but this is not recommended. For new installations, we recommend using OpenSearch 3.X.
+Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). Ideally, this should be an OpenSearch cluster. An Elasticsearch cluster can be used instead, but this is not recommended. For new installations, we recommend using OpenSearch 3.x.
 
 > [!IMPORTANT]
 > Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any OpenSearch or Elasticsearch nodes.
