@@ -70,6 +70,12 @@ From now on, this filter will be ignored for regular tables. As a result, subscr
 
 View tables, direct view tables, partial tables, and matrixes are not affected.
 
+#### SLAutomation deadlock when many subscripts were launched rapidly [ID 46056]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+SLAutomation could deadlock when many subscripts were launched in a short time. This issue has been resolved.
+
 #### SLAutomation could hang during shutdown [ID 46123]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
