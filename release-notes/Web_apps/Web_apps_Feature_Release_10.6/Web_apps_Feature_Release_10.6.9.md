@@ -23,7 +23,7 @@ This Feature Release of the DataMiner web applications contains the same new fea
 The group access editor in the DOM security web UI has been overhauled to make group access settings easier to review and manage. The updated editor includes the following changes:
 
 - Groups are shown in a table instead of a list.
-- Read-only values are visible and editable when backend support is available.
+- *Read-only* toggle buttons now allow you to configure read-only access for groups.
 - Groups that do not have access are no longer shown.
 
 ![Instance-level security condition](~/dataminer/images/DOMSecurityInstanceLevel.png)
