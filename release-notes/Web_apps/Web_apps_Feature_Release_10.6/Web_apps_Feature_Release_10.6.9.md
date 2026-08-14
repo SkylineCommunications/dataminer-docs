@@ -14,6 +14,25 @@ This Feature Release of the DataMiner web applications contains the same new fea
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.9](xref:General_Feature_Release_10.6.9).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.9](xref:Cube_Feature_Release_10.6.9).
 
+## Highlights
+
+#### DOM security: Group access editor overhauled [ID 45886]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+The group access editor in the DOM security web UI has been overhauled to make group access settings easier to review and manage. The updated editor includes the following changes:
+
+- Groups are shown in a table instead of a list.
+- *Read-only* toggle buttons now allow you to configure read-only access for groups.
+- Groups that do not have access are no longer shown.
+
+![Instance-level security condition](~/dataminer/images/DOMSecurityInstanceLevel.png)
+
+> [!NOTE]
+>
+> - To be able to view and edit read-only access, you need to be connected to a DataMiner Agent running DataMiner 10.6.6/10.7.0 or above.
+> - Previously, read-only access rules were not supported in the UI, and updating the access settings for a group via the UI could cause read-only flags to be reset.
+
 ## New features
 
 #### GQI - Extensions: Persistent scoped services [ID 45635]
@@ -118,23 +137,6 @@ In the help menu of the web apps, the *Feedback* option now shows a submenu with
 When GQI requests DOM data, it now checks whether all data is required instead of relying on the client-requested page size.
 
 When all data is required, e.g., for prefetch join operations or when *Filter assistance* is enabled on a query filter, GQI now requests data with a larger page size. This reduces request overhead and improves performance.
-
-#### DOM security: Group access editor updated with read-only support [ID 45886]
-
-<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-In the DOM security web UI, the group access editor now supports read-only access rules.
-
-Up to now, read-only configurations were not supported in the UI. As a result, when you edited and saved group access settings, a read-only flag could be reset unintentionally.
-
-From now on, groups are shown in a table instead of a list, and read-only values are visible and editable when backend support is available. For example:
-
-![Instance-level security condition](~/dataminer/images/DOMSecurityInstanceLevel.png)
-
-With this change, groups that do not have access will also no longer be shown.
-
-> [!NOTE]
-> For this feature to work, the client app needs to be connected to a DataMiner Agent running Feature Release version 10.6.6 or above.
 
 #### GQI DxM: Query column retrieval no longer prepares the full data-fetching pipeline [ID 46018]
 
