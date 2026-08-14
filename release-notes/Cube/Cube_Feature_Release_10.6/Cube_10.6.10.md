@@ -28,6 +28,14 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Fixes
 
+#### Alarm templates: Absolute proactive thresholds showed percentages instead of delta values [ID 46049]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+In alarm templates, proactive thresholds of type *Absolute* were displayed with a percentage sign in the *Thresholds to take into account* setting (e.g., *Critical High (5000000 %)*).
+
+This has now been corrected. Absolute thresholds are now shown with a delta prefix and no percentage sign (e.g., *Critical High (Δ 5000000)*), consistent with the regular alarm template editor.
+
 #### Upgrades: End time was not always set correctly in the Overview tab [ID 46100]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
