@@ -41,7 +41,7 @@ See the [official documentation](https://opensearch.org/docs/latest/) on how to 
 
 > [!IMPORTANT]
 >
-> - On production systems, the *JVM Heap Space* must be set to a value larger than the default. As a rule of thumb, set it to about 50% of the available RAM, but do not exceed approximately 30 GB, as going above that threshold disables compressed object pointers and reduces efficiency. Always leave the remaining memory to the operating system and the file system cache. To configure this setting, see [Important settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings).
+> - On production systems, the *JVM Heap Space* must be set to a value larger than the default. As a rule of thumb, set it to about 50% of the available RAM, but do not exceed 30 GB, as going above that threshold disables compressed object pointers and reduces efficiency. Always leave the remaining memory to the operating system and the file system cache. To configure this setting, see [Important settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings).
 > - The `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e., the maximum integer value). Refer to the example below for more information.
 
 > [!NOTE]
