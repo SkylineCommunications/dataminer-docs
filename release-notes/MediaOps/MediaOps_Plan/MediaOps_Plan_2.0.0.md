@@ -174,6 +174,22 @@ You can now filter by the following fields:
 - Configurations (based on Configuration ID)
 - Properties (based on Property ID)
 
+#### Scheduling: Create Job window layout updated [ID 46214]
+
+The fields in the *Create Job* window have been repositioned to provide a more logical layout.
+
+#### Scheduling/Workflow Designer: Node configuration window layout simplified [ID 46215]
+
+When a configuration is applied to the linked resource pool, the node configuration window of a job or workflow node now shows a simplified layout by default.
+
+In this simplified layout, automation scripts used by automation actions are hidden, and only parameters without linking or without defined value are shown.
+
+When you enable *Show all details*, the full view is shown again, including all parameters and the options to select capabilities, capacities, and configurations that are not defined on the linked resource pool.
+
+#### Workflow Designer: Editing actions blocked when workflow is locked by another user [ID 46225]
+
+When a workflow is locked by another user, editing actions are now blocked.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
