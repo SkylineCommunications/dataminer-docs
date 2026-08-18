@@ -68,6 +68,15 @@ Up to now, when a DataMiner Agent came online after a Failover switch, the Agent
 
 From now on, when the Agent comes online after the Failover switch, the Agent element's alarm and masking information are explicitly reloaded from the database. This ensures that the incoming Agent immediately reflects the correct alarm tree, correlated alarms, and mask state.
 
+#### SLDataGateway select paging handlers were not cleaned up correctly [ID 45937]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+<!-- Not added in MR 10.7.0 -->
+
+When SLDataGateway performed a select read page by page, the database-specific paging handler could remain active after the read completed. In addition, query limits were not consistently enforced across the returned pages.
+
+From now on, select reads use the same paging lifecycle and limit handling as regular reads. This ensures that limits are applied consistently, the final partial page is returned correctly, and the paging handlers are cleaned up when paging finishes.
+
 #### Table subscriptions with forceFullTable filter did not deliver updates for newly added rows on regular tables [ID 45970]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
