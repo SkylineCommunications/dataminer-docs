@@ -654,6 +654,12 @@ From now on, when you open the SLLogCollector tool, the tool will automatically 
 
 When using DOM in scripts, ad hoc data sources, etc., from now on, it will be possible to specify a `List<string>` type on a normal FieldDescriptor. Up to now, only single fields were allowed. Now, multiple string values will also be supported.
 
+#### UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10 [ID 46066]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
