@@ -11,10 +11,9 @@ It is possible to migrate components of an SRM configuration from one DMA to ano
 - [Resources](xref:SRM_migrating_resources)
 - [Service definitions](xref:SRM_migrating_service_definitions)
 
-If you migrate several components, it is important that you import them in the order detailed above: first the virtual function definitions, then the profile instances, etc. 
+If you migrate several components, it is important that you import them in the order detailed above: first the virtual function definitions, then the profile instances, etc.
 
 Do **not** use [.dmimport packages](xref:Exporting_and_importing_packages_on_a_DMA) or [CSV files](xref:Importing_and_exporting_elements) to export the Booking Manager element or elements linked to function resources from the original DMA and import them on the new DMA. Instead, recreate these elements manually on the DMA to which you are migrating the SRM configuration.
-
 
 > [!TIP]
 > If you are looking for information on how to migrate SRM resources and resource pools from the *Resources.xml* file to the indexing database, see [Migrating SRM resources to the indexing database](xref:Resources_migration_to_elastic).
