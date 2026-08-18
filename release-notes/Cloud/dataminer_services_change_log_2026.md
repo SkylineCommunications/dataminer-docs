@@ -9,6 +9,21 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 19 August 2026 - New feature - Catalog - Filter and search version history
+
+On the *Versions* tab of a Catalog item, it is now possible to filter and search the version history:
+
+- **Filter version history**: filter ranges and versions by metadata, such as firmware version or version dependencies (e.g. minimum DataMiner version), with a search box and a *show more* option for long lists of options.
+- **Cleaner results**: ranges, versions, and recommended versions that do not match the selected filters are hidden automatically.
+
+### 19 August 2026 - New feature - Admin - Setting to bypass automatic sign-in for remote login
+
+An admin setting is now available to bypass automatic sign-in for remote login. Previously, users could not sign out because they were automatically signed back in. With this setting enabled, admins can have their users sign out, allowing them to enforce 2FA.
+
+### 19 August 2026 - Fix - Admin - HTML-escaped characters shown in audit detail values
+
+In the audit detail view of the Admin app, values were HTML-escaped before being displayed, so for example a character such as `>` was shown as `&gt;` instead of `>`. Since these values are shown in input fields, which display their content as plain text, the escaping was not needed. This issue has been resolved.
+
 ### 6 August 2026 - Enhancement - Sharing - Improved error feedback for rejected share actions
 
 Error feedback has been improved for cases where creating, updating, or deleting a share is rejected by the DataMiner System. The messages shown now help you understand how to correct linked-account or organization issues.
