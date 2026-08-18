@@ -34,6 +34,14 @@ For the query filter and table component, the filtering for discrete columns now
 
 This only applies when the GQI DxM is enabled.
 
+#### GQI DxM: Ad hoc data sources can now expose static columns [ID 46050]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+GQI extensions can now use the `GQIStaticColumns` attribute on an ad hoc data source to indicate that its columns do not depend on any of the input arguments. This allows GQI to expose the columns even when the data source requires arguments during execution, for example, to filter or sort rows.
+
+In addition, extension characteristics are now requested once during worker initialization instead of for every created instance. This reduces repeated capability checks and pipe serialization overhead.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Element filter selection could fail while search results were loading [ID 46129]

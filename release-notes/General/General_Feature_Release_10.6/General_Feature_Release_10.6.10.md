@@ -44,9 +44,15 @@ Before you upgrade to this DataMiner version:
 
 #### Cassandra Cluster Migrator tool now supports migrating Credentials Library credential types [ID 45824]
 
-<!-- MR 10.6.0 [CU6] - FR 10.6.10 -->
+<!-- MR 10.7.0 - FR 10.6.10 -->
 
 The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to Cassandra Cluster from MySQL or Cassandra Single, now also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the Credentials Library.
+
+#### UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10 [ID 46066]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
 #### DxM upgraded [ID 46124]
 
@@ -58,6 +64,12 @@ The following DataMiner Extension Module (DxM), which is included in the DataMin
 
 For detailed information about the changes included in this version, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### DataMiner Taskbar Utility: Event colors now align with DataMiner Cube [ID 46130]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The colors used by the DataMiner Taskbar Utility for upgrade events now align with the colors used by DataMiner Cube. This makes it easier to identify the status of events such as `Finished`, `Success`, `LocalComplete`, `UploadComplete`, `UpgradeComplete`, `Notice`, and `Error`.
+
 ### Fixes
 
 #### Agent element alarm and masking information could be out of sync after a Failover switch [ID 45601]
@@ -67,6 +79,15 @@ For detailed information about the changes included in this version, refer to th
 Up to now, when a DataMiner Agent came online after a Failover switch, the Agent element alarm tree and mask state could remain stale in memory. As a result, alarm and masking information for the Agent element could temporarily differ from what was stored in the database.
 
 From now on, when the Agent comes online after the Failover switch, the Agent element's alarm and masking information are explicitly reloaded from the database. This ensures that the incoming Agent immediately reflects the correct alarm tree, correlated alarms, and mask state.
+
+#### SLDataGateway select paging handlers were not cleaned up correctly [ID 45937]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+<!-- Not added in MR 10.7.0 -->
+
+When SLDataGateway performed a select read page by page, the database-specific paging handler could remain active after the read completed. In addition, query limits were not consistently enforced across the returned pages.
+
+From now on, select reads use the same paging lifecycle and limit handling as regular reads. This ensures that limits are applied consistently, the final partial page is returned correctly, and the paging handlers are cleaned up when paging finishes.
 
 #### Table subscriptions with forceFullTable filter did not deliver updates for newly added rows on regular tables [ID 45970]
 
@@ -83,6 +104,15 @@ View tables, direct view tables, partial tables, and matrixes are not affected.
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 SLAutomation could deadlock when many subscripts were launched in a short time. This issue has been resolved.
+
+#### DataMiner upgrade: Legacy NAS and NATS services and files would not be removed [ID 46094]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+<!-- Not added to MR 10.7.0 -->
+
+When you upgraded to DataMiner 10.6, up to now, the upgrade could leave behind the legacy NAS and NATS services, the `C:\Skyline DataMiner\NATS` folder, and the `NATSRepair.exe` tool.
+
+From now on, a new upgrade action named `CleanupNatsServices` removes these legacy services and files after a DataMiner Agent has been upgraded to a 10.6 version. This ensures that the BrokerGateway-managed NATS solution can be used without the obsolete components.
 
 #### SLAutomation could hang during shutdown [ID 46123]
 

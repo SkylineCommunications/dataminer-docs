@@ -619,6 +619,12 @@ If you want SLLogCollector to collect all pending calls for a number of the spec
 > - The *Output pending calls* option will still automatically be selected when any of the running processes have runtime errors linked to elements.
 > - Clearing the *Output pending calls* option will only hide the element selection grid. The current selection will not be cleared, so when you select the *Output pending calls* option again, everything is restored without any need to reload the elements.
 
+#### Cassandra Cluster Migrator tool now supports migrating Credentials Library credential types [ID 45824]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to Cassandra Cluster from MySQL or Cassandra Single, now also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the Credentials Library.
+
 #### Automation: Improved save logic for automation scripts [ID 45836]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
@@ -647,6 +653,18 @@ From now on, when you open the SLLogCollector tool, the tool will automatically 
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
 When using DOM in scripts, ad hoc data sources, etc., from now on, it will be possible to specify a `List<string>` type on a normal FieldDescriptor. Up to now, only single fields were allowed. Now, multiple string values will also be supported.
+
+#### UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10 [ID 46066]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
+
+#### DataMiner Taskbar Utility: Event colors now align with DataMiner Cube [ID 46130]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The colors used by the DataMiner Taskbar Utility for upgrade events now align with the colors used by DataMiner Cube. This makes it easier to identify the status of events such as `Finished`, `Success`, `LocalComplete`, `UploadComplete`, `UpgradeComplete`, `Notice`, and `Error`.
 
 ### Fixes
 
