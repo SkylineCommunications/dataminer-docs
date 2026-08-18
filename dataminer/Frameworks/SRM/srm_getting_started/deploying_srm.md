@@ -11,7 +11,9 @@ uid: deploying_srm
 
 1. Download the SRM package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
-1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center). When asked which Agents to upgrade, select _All Agents in cluster_.
+1. In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
+
+   If you are asked which Agents to upgrade, select *All Agents in cluster*.
 
    > [!NOTE]
    >
