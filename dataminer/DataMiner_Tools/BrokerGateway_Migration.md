@@ -140,6 +140,9 @@ When recommended by Skyline, the migration can be run manually:
 
    For more information, see [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
 
+   > [!IMPORTANT]
+   > If you use forced NATS endpoints for the DataMiner Cloud Pack in combination with a proxy, use *DataMiner Cloud pack 3.5.1.0 (Proxy or DMZ)* or higher.
+
 1. Reconnect your DMZ to dataminer.services after the migration:
 
    1. Obtain an API key for the DMZ server:

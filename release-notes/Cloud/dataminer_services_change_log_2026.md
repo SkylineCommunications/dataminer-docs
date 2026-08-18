@@ -24,6 +24,14 @@ An admin setting is now available to bypass automatic sign-in for remote login. 
 
 In the audit detail view of the Admin app, values were HTML-escaped before being displayed, so for example a character such as `>` was shown as `&gt;` instead of `>`. Since these values are shown in input fields, which display their content as plain text, the escaping was not needed. This issue has been resolved.
 
+### 12 August 2026 - New feature - Catalog - Catalog item range Markdown support
+
+Catalog item ranges now support Markdown.
+
+### 12 August 2026 - New feature - Admin - Subscription templates
+
+On the Billing page of the Admin app, the *Add Subscription* button now launches a wizard instead of a context menu. The wizard also introduces a new *Templates* option, which offers predefined solution packs with an estimation of the units needed for a subscription based on that solution.
+
 ### 6 August 2026 - Enhancement - Sharing - Improved error feedback for rejected share actions
 
 Error feedback has been improved for cases where creating, updating, or deleting a share is rejected by the DataMiner System. The messages shown now help you understand how to correct linked-account or organization issues.
