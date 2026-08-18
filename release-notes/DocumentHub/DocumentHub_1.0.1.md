@@ -1,8 +1,8 @@
 ---
-uid: DocumentHub_1.0.0
+uid: DocumentHub_1.0.1
 ---
 
-# DocumentHub 1.0.0
+# DocumentHub 1.0.1
 
 ## Prerequisites
 
