@@ -660,6 +660,12 @@ When using DOM in scripts, ad hoc data sources, etc., from now on, it will be po
 
 The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
+#### DataMiner Taskbar Utility: Event colors now align with DataMiner Cube [ID 46130]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The colors used by the DataMiner Taskbar Utility for upgrade events now align with the colors used by DataMiner Cube. This makes it easier to identify the status of events such as `Finished`, `Success`, `LocalComplete`, `UploadComplete`, `UpgradeComplete`, `Notice`, and `Error`.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]

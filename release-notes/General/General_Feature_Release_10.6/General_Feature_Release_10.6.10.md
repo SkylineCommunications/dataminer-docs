@@ -64,6 +64,12 @@ The following DataMiner Extension Module (DxM), which is included in the DataMin
 
 For detailed information about the changes included in this version, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### DataMiner Taskbar Utility: Event colors now align with DataMiner Cube [ID 46130]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The colors used by the DataMiner Taskbar Utility for upgrade events now align with the colors used by DataMiner Cube. This makes it easier to identify the status of events such as `Finished`, `Success`, `LocalComplete`, `UploadComplete`, `UpgradeComplete`, `Notice`, and `Error`.
+
 ### Fixes
 
 #### Agent element alarm and masking information could be out of sync after a Failover switch [ID 45601]
