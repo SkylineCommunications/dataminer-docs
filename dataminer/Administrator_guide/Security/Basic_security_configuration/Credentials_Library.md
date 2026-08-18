@@ -9,11 +9,14 @@ The DataMiner Credentials Library is a built-in key vault feature that centraliz
 
 The library supports multiple credential types, including SNMPv2 community strings, SNMPv3 configurations, username/password pairs, and token-based credentials.
 
+> [!NOTE]
+> From DataMiner 10.6.10/10.7.0 onwards<!--RN 44352-->, credential secrets in the Credentials Library are stored as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) and never appear in plain text on disk. For more information, see [Encryption in DataMiner](xref:Encryption_in_DataMiner#credentials-at-rest).
+
 ## Configuring credentials in DataMiner Cube
 
 To configure a set of credentials in DataMiner Cube:
 
-1. Go to *System Center* > *System settings* > *Credentials Library*.
+1. Go to *System Center* > *System settings* > *Credentials library*.
 
 1. Click *Add credentials* at the bottom of the screen.
 
