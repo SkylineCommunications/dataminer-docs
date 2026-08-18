@@ -48,12 +48,6 @@ From now on, gRPC connections that go through the Azure Cloud Relay service will
 
 This will allow those connections to survive a temporary outage of the Azure Cloud Relay service, for example when restarting or deploying a new version.
 
-#### Cassandra Cluster Migrator tool now supports migrating Credentials Library credential types [ID 45824]
-
-<!-- MR 10.6.0 [CU6] - FR 10.6.10 -->
-
-The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to Cassandra Cluster from MySQL or Cassandra Single, now also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the Credentials Library.
-
 #### ConfigureIIS.bat script will now ensure a dedicated Application Pool for the API application [ID 45842]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
