@@ -59,6 +59,12 @@ Depending on the size and complexity of your Catalog item, you can **combine or 
 - Avoid **unnecessary blank space** by resizing the window when taking a screen capture.
 - Make sure not to show any **confidential data**. Blur any sensitive data, but keep the data that is not sensitive visible to still have a useful image.
 
+## Formatting
+
+Make sure to use DocFX-flavored markdown as detailed under [Markdown syntax](xref:CTB_Markdown_Syntax).
+
+However, avoid the use of HTML comments, as these will not be rendered correctly in the Catalog.
+
 ## About section
 
 **Purpose:** Summarize what makes the item valuable and why users should deploy it. Address the problems it solves and its primary benefits.
