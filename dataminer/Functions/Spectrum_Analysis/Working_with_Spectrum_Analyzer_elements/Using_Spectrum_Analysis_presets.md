@@ -12,7 +12,7 @@ Spectrum Analysis presets can be used to reload settings, to reload a set of mar
 
 - Display settings, including the trace visibility
 
-- A reference trace (including reference trace markers, from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45843-->)
+- A reference trace
 
 - Marker positions
 
