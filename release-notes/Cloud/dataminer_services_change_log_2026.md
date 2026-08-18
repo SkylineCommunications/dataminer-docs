@@ -13,8 +13,8 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 On the *Versions* tab of a Catalog item, it is now possible to filter and search the version history:
 
-- **Filter version history**: filter ranges and versions by metadata, such as firmware version or version dependencies (e.g. minimum DataMiner version), with a search box and a *show more* option for long lists of options.
-- **Cleaner results**: ranges, versions, and recommended versions that do not match the selected filters are hidden automatically.
+- **Filter version history**: Filter ranges and versions by metadata, such as firmware version or version dependencies (e.g., minimum DataMiner version), with a search box and a *show more* option for long lists of options.
+- **Cleaner results**: Ranges, versions, and recommended versions that do not match the selected filters are hidden automatically.
 
 ### 19 August 2026 - New feature - Admin - Setting to bypass automatic sign-in for remote login
 
