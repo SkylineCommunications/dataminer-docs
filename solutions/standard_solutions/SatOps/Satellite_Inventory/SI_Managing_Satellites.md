@@ -83,7 +83,7 @@ To edit a satellite:
 
    This opens a panel where you can modify the satellite properties.
 
-1. Click *Update satellite* to save your changes, or click outside the panel to discard them.
+1. Click *Update satellite* to save your changes.
 
    Invalid values are highlighted, and changes cannot be saved until all validation errors have been resolved.
 

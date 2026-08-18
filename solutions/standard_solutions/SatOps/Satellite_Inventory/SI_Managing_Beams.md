@@ -1,6 +1,6 @@
 ---
 uid: SI_Managing_Beams
-description: Learn how to add and manage the beams of a satellite in the Satellite Inventory app.
+description: Learn how to filter, add, edit, activate, view, and deprecate satellite beams in the Satellite Inventory app.
 ---
 
 # Managing beams
@@ -11,60 +11,75 @@ A *beam* represents a coverage area of a [satellite](xref:SI_Managing_Satellites
 
 ## Filtering the beam list
 
-At the top of the page, you can narrow down the list using three filter groups:
+At the top of the page, you can use four filters to narrow down the list of beams:
 
-- **Transmission type**: *All*, *Tx*, *Rx*, or *CiC* (carrier-in-carrier).
-- **Link type**: *All*, *User*, *Feeder*, *Uplink*, or *Downlink*.
-- **Status**: *All*, *Active*, *Draft*, *Deprecated*, or *Error*.
+- Search by beam name.
 
-You can also search by beam name. To clear a filter, click the cross next to it.
+- Filter by transmission type (*Tx*, *Rx*, or *CiC* (carrier-in-carrier)).
+
+- Filter by link type (*User*, *Feeder*, *Uplink*, or *Downlink*).
+
+- Filter by state (*Active*, *Draft*, *Deprecated*, or *Error*).
 
 ## Adding a beam
 
+To add a beam:
+
 1. On the *Beams* page, click *Add beam*.
 
-1. Fill in the beam properties:
+1. Provide the following information about the beam:
+
+   - *Beam Name*: A descriptive name for the beam.
+   - *Beam Satellite*: The satellite to which the beam belongs.
+   - *Link Type*: The beam's link type (*Feeder*, *User*, *Uplink*, or *Downlink*).
+   - *Transmission Type*: The beam's transmission type (*TX*, *RX*, or *Carrier in Carrier*).
+   - *Footprint File*: A path or URL to the KML file that describes the beam footprint.
 
    ![The Add Beam dialog showing the link type dropdown with Feeder, User, Uplink, and Downlink options](~/solutions/images/SO_SI_Add_Beam.png)
-
-   - *Beam Name*: a descriptive name for the beam.
-   - *Beam Satellite*: the satellite the beam belongs to.
-   - *Link Type*: the link type of the beam (*Feeder*, *User*, *Uplink*, or *Downlink*).
-   - *Transmission Type*: the transmission type (*TX*, *RX*, or *Carrier in Carrier*).
-   - *Footprint File*: a path or URL to the KML file that describes the beam footprint.
 
 1. Click *Create Beam*.
 
 > [!NOTE]
-> Beam footprints are defined with KML files. Support for GeoJSON files is planned for a future release. You can point to a public URL or upload the file via the document hub.
+> Beam footprints are defined using KML files. Support for GeoJSON files is planned for a future release. You can specify a public URL or upload a KML file via the document hub.
 
 ## Editing a beam
 
-To edit a beam, click the ![Edit](~/solutions/images/SO_SI_Edit_Icon.png) pencil icon on the right side of the beam row. This opens a dialog where you can change any of the beam properties. Click *Update Beam* to save.
+To edit a beam:
+
+1. Click the ![Edit](~/solutions/images/SO_SI_Edit_Icon.png) *Edit* icon in the beam's row.
+
+   This opens a panel where you can modify the beam properties.
+
+1. Click *Update Beam* to save your changes.
 
 ![The Update Beam dialog with the beam name, satellite, link type, transmission type, and footprint file fields](~/solutions/images/SO_SI_Edit_Beam.png)
 
 ## Activating a beam
 
-After you create a beam, you must activate it before it becomes available in the system.
+After you create a beam, its state will automatically be set to *Draft*. You must first activate the beam before it becomes available in the system.
 
-> [!IMPORTANT]
-> A newly created beam starts in the *Draft* state. To activate it, click *More* (the ![More](~/solutions/images/SO_SI_More_Icon.png) "..." button) and select the activate action.
+To activate a beam:
+
+1. Click the ![More](~/solutions/images/SO_SI_More_Icon.png) *More* icon in the beam's row.
+
+1. Select *Activate*.
 
 ## Viewing a beam footprint
 
-When a beam has a footprint file, you can display it on a geographical map to see the area it covers. Click the footprint icon in the beam row to open the map view.
+If a beam has a footprint file configured, you can view its coverage area on a map.
 
-![The Satellite Inventory app with a beam footprint shown on a geographical map in a side panel, covering Europe and the Mediterranean](~/solutions/images/SO_SI_Beam_Footprint.png)
+To view a beam footprint, click the ![Footprint](~/solutions/images/SO_SI_Footprint_Icon.png) *Footprint* icon in the beam's row. A side panel opens, displaying the beam footprint on a geographical map.
 
-The map opens as a side panel over the beam list, so you keep the context of the beam you are inspecting.
+![The Satellite Inventory app with a beam footprint shown on a geographical map in a side panel, covering Europe and the Mediterranean](~/solutions/images/SO_SI_Beam_Footprint.png)<br>*The footprint shown here comes from a KML file created specifically for documentation purposes. Actual beam footprints typically have a more irregular shape that reflects the beam's real signal coverage.*
 
-> [!NOTE]
-> The footprint shown above comes from a self-made KML file that is used for documentation purposes only. Real beam footprints have a more irregular shape that reflects the actual signal coverage of the beam.
+The map opens in a side panel over the beam list, allowing you to keep the context of the beam you are inspecting.
 
 ## Deprecating a beam
 
-You can edit a beam or deprecate it, but you cannot delete it. To deprecate a beam, click *More* and select the deprecate action.
+Beams cannot be deleted. To remove a beam from active use, deprecate it instead. This preserves historical inventory data.
 
-> [!WARNING]
-> Beams can never be deleted, by design. To take a beam out of use, deprecate it instead. This keeps the historical inventory intact.
+To deprecate a beam:
+
+1. Click the ![More](~/solutions/images/SO_SI_More_Icon.png) *More* icon in the beam's row.
+
+1. Select *Deprecate*.

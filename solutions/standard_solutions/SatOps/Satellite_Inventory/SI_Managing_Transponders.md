@@ -5,44 +5,57 @@ description: Learn how to manage transponders, transponder plans, and transponde
 
 # Adding and editing transponders
 
-A *transponder* belongs to a [beam](xref:SI_Managing_Beams) and relays signal within that beam. Its bandwidth is divided into bookable slots through [transponder plans](xref:SI_Transponder_Plans). The *Transponders* page lists the configured transponders and lets you manage them.
+A *transponder* belongs to a [beam](xref:SI_Managing_Beams) and relays signals within that beam. Its bandwidth is divided into bookable slots through [transponder plans](xref:SI_Transponder_Plans). The *Transponders* page lists the configured transponders and lets you manage them.
 
 ![The Transponders page listing the configured transponders](~/solutions/images/SO_SI_Transponders_Page.png)
 
 ## Adding a transponder
 
+To add a transponder:
+
 1. On the *Transponders* page, click *Add transponder*.
 
    ![The Add transponder dialog with the transponder fields](~/solutions/images/SO_SI_Add_Transponder.png)
 
-1. Fill in the transponder fields (see [Transponder fields](#transponder-fields) below).
+1. Provide the following information about the transponder:
+
+   - *Transponder Name*: The name of the transponder.
+   - *Transponder Satellite*: The satellite the transponder belongs to.
+   - *Beam*: The beam the transponder belongs to.
+   - *Band*: The frequency band.
+   - *Bandwidth (MHz)*: The bandwidth of the transponder, expressed in MHz.
+   - *Center Frequency (MHz)*:
+   - *Polarization*: The polarization type: *Linear* or *Circular*.
+   - *Downlink Center Frequency (MHz)*:The center frequency of the downlink.
+   - *Hard End Date*: The date on which the transponder stops being available.
+   - *Phone Number*: A contact phone number.
+   - *Uplink Polarization*: The uplink polarization within the selected polarization type (e.g., *Horizontal* or *Vertical*).
+   - *Downlink Polarization*: The downlink polarization within the selected polarization type (e.g., *Horizontal* or *Vertical*).
 
 1. Click *Create transponder*.
 
-   By default, a new transponder is created in the *Draft* state.
-
 > [!NOTE]
-> As with satellites, take care when filling in numeric fields such as the bandwidth or center frequency: position the cursor at the correct digit before typing.
+> When editing numeric fields such as the *Bandwidth* or *Downlink Center Frequency*, position the cursor on the digit you want to modify before typing. This is a known usability limitation that may be addressed in a future release.
 
-## Editing and activating a transponder
+## Activating a transponder
 
-- To activate a transponder, click *More* (the ![More](~/solutions/images/SO_SI_More_Icon.png) "..." button) and select the activate action.
-- To edit a transponder, click the ![Edit](~/solutions/images/SO_SI_Edit_Icon.png) pencil icon, change the fields you need, and click *Update transponder*.
+After you create a transponder, its state will automatically be set to *Draft*. You must first activate the transponder before it becomes available in the system.
 
-## Transponder fields
+To activate a transponder:
 
-| Field | Description |
-|-------|-------------|
-| Name | The name of the transponder. |
-| Satellite | The satellite the transponder belongs to. |
-| Beam | The beam the transponder belongs to. |
-| Band | The frequency band. |
-| Bandwidth | The bandwidth of the transponder, in MHz. |
-| Polarization | The polarization type: linear or circular. |
-| Downlink center frequency | The center frequency of the downlink. |
-| Hard end date | The date on which the transponder stops being available. |
-| Phone number | A contact phone number. |
-| Uplink and downlink polarization | The uplink and downlink polarization, for example horizontal or vertical. |
+1. Click the ![More](~/solutions/images/SO_SI_More_Icon.png) *More* icon in the transponder's row.
+
+1. Select *Activate*.
+
+## Editing a transponder
+
+To edit a transponder:
+
+1. Click the ![Edit](~/solutions/images/SO_SI_Edit_Icon.png) *Edit* icon in the transponder's row.
+
+   This opens a panel where you can modify the transponder properties.
+
+1. Click *Update transponder* to save your changes.
 
 ## Transponder plans and slots
 
