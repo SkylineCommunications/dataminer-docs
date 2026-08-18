@@ -14,7 +14,7 @@ uid: DocumentHub_1.1.1
 
 ## New features
 
-### DocumentHub: Updated DevPack versions to 1.1.1 - support for Graph API v5
+### DocumentHub: Updated DevPack versions to 1.1.1 - support for Graph API v5 [ID 46228 ]
 
 The DocumentHub DevPacks (`Skyline.DataMiner.Dev.Utils.Solutions.DocumentHub`, `.GQI`, and `.Automation`) have been updated to version **1.1.1**.
 
@@ -28,7 +28,7 @@ This update upgrades the underlying SharePoint integration from the deprecated M
 > [!NOTE]
 > Existing SharePoint configurations (Tenant ID, Client ID, Site URL) do not need to be changed. The upgrade is transparent to end users.
 
-### DocumentHub: implemented the KQL (Keyword Query Language) as the searchable storage for SharePoint
+### DocumentHub: implemented the KQL (Keyword Query Language) as the searchable storage for SharePoint [ID 46228]
 
 
 SharePoint-backed buckets now use **KQL (Keyword Query Language)** as the query engine when searching for files within a SharePoint document library.

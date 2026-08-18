@@ -14,21 +14,21 @@ uid: DocumentHub_1.0.3
 
 ## New features
 
-### DocumentHub: Added User-Defined APIs [ID 299213]
+### DocumentHub: Added User-Defined APIs [ID 46221]
 
 - Added User-Defined APIs (UDAPIs) that can be used through the Agent or the default UDAPI endpoint.
 
 ## Fixes
 
-### DocumentHub: DOM File Downloads [ID 299559]
+### DocumentHub: DOM File Downloads [ID 46221]
 
 - Fixed issues in script logic and implemented changes to the LCA where the user could not trigger the Download script.
 
-### DocumentHub: Preserve the existing network share attachment settings when reinstalling the solution [ID 299891]
+### DocumentHub: Preserve the existing network share attachment settings when reinstalling the solution [ID 46221]
 
 - Logic was added to ensure that credentials and network share are not overwritten.
 
-### DocumentHub: Fixed GetRelativePath [ID 303509]
+### DocumentHub: Fixed GetRelativePath [ID 46221]
 
 - The relative path for Local Storage was incorrect, causing that user could not preview or download the selected files.
 
