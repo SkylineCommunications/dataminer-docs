@@ -70,3 +70,9 @@ When you performed a DataMiner upgrade, it could occur that the end time in the 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 When you opened a spectrum element in one spectrum analysis component and then opened the same element in another component with measurement points selected, the measurement point cycle in the first component could be reset. This issue has been resolved.
+
+#### Credentials Library: Credential limit warning would be partially hidden behind the Add and Delete buttons [ID 46198]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+The credentials library can contain a maximum of 1000 sets of credentials. When this limit is reached, users who want to add a new set of credentials will receive a warning. However, up to now, that warning would be partially hidden behind the *Add* and *Delete* buttons.

@@ -81,6 +81,12 @@ The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to
 
 The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
+#### Enhanced performance when recalculating security keys [ID 46077]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+Because of a number of enhancements, overall performance has increased when recalculating security keys.
+
 #### DxM upgraded [ID 46124]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
