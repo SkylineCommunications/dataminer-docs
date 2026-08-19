@@ -5,7 +5,7 @@ description: Learn how to manage transponders, transponder plans, and transponde
 
 # Adding and editing transponders
 
-A *transponder* belongs to a [beam](xref:SI_Managing_Beams) and relays signals within that beam. Its bandwidth is divided into bookable slots through [transponder plans](xref:SI_Transponder_Plans). The *Transponders* page lists the configured transponders and lets you manage them.
+A *transponder* belongs to a [beam](xref:SI_Managing_Beams) and relays signals within that beam. Its bandwidth is divided into bookable slots through [transponder plans](xref:SI_Transponder_Plans). The *Transponders* page lists all configured transponders and allows you to manage them.
 
 ![The Transponders page listing the configured transponders](~/solutions/images/SO_SI_Transponders_Page.png)
 
@@ -24,10 +24,10 @@ To add a transponder:
    - *Beam*: The beam the transponder belongs to.
    - *Band*: The frequency band.
    - *Bandwidth (MHz)*: The bandwidth of the transponder, expressed in MHz.
-   - *Center Frequency (MHz)*:
+   - *Center Frequency (MHz)*: The center frequency of the transponder, expressed in MHz.
    - *Polarization*: The polarization type: *Linear* or *Circular*.
-   - *Downlink Center Frequency (MHz)*:The center frequency of the downlink.
-   - *Hard End Date*: The date on which the transponder stops being available.
+   - *Downlink Center Frequency (MHz)*: The center frequency of the downlink, expressed in MHz.
+   - *Hard End Date*: The date on which the transponder is no longer available.
    - *Phone Number*: A contact phone number.
    - *Uplink Polarization*: The uplink polarization within the selected polarization type (e.g., *Horizontal* or *Vertical*).
    - *Downlink Polarization*: The downlink polarization within the selected polarization type (e.g., *Horizontal* or *Vertical*).
@@ -39,7 +39,7 @@ To add a transponder:
 
 ## Activating a transponder
 
-After you create a transponder, its state will automatically be set to *Draft*. You must first activate the transponder before it becomes available in the system.
+After a transponder is created, its state is automatically set to *Draft*. You must first activate the transponder before it becomes available in the system.
 
 To activate a transponder:
 
@@ -59,4 +59,9 @@ To edit a transponder:
 
 ## Transponder plans and slots
 
-Each transponder's bandwidth is divided into slots by one or more transponder plans. From a transponder, you can open the *Slots* page to create plans and generate the slots that become bookable in Satellite Scheduling. For more information, see [Transponder plans and slots](xref:SI_Transponder_Plans).
+Each transponder's bandwidth is divided into slots by one or more transponder plans.
+
+You can open the *Slots* panel for a transponder by clicking the ![Slots](~/solutions/images/SO_SI_Slots_Icon.png) *Slots* icon in the transponder's row. A side panel will open where you can create transponder plans and generate the slots that can be booked via the Satellite Scheduling app.
+
+> [!TIP]
+> For more information, see [Transponder plans and slots](xref:SI_Transponder_Plans).

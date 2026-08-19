@@ -389,10 +389,10 @@ items:
       - name: Satellite Scheduling
         topicUid: Satellite_Scheduling
         items:
-        - name: Introduction
-          topicUid: SS_Introduction
-        - name: Link with scheduling app
-          topicUid: SS_Link_With_Scheduling_App
+        - name: Satellite Scheduling UI
+          topicUid: SS_UI
+        - name: Managing transponder bookings
+          topicUid: SS_Managing_Bookings
     - name: Ticketing
       topicUid: Ticketing
       items:
