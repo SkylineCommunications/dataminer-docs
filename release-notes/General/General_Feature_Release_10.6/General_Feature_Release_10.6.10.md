@@ -70,6 +70,12 @@ For detailed information about the changes included in this version, refer to th
 
 The colors used by the DataMiner Taskbar Utility for upgrade events now align with the colors used by DataMiner Cube. This makes it easier to identify the status of events such as `Finished`, `Success`, `LocalComplete`, `UploadComplete`, `UpgradeComplete`, `Notice`, and `Error`.
 
+#### Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+In preparation of service swarming, all load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM.
+
 ### Fixes
 
 #### Agent element alarm and masking information could be out of sync after a Failover switch [ID 45601]

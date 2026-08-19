@@ -666,6 +666,12 @@ The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
 The colors used by the DataMiner Taskbar Utility for upgrade events now align with the colors used by DataMiner Cube. This makes it easier to identify the status of events such as `Finished`, `Success`, `LocalComplete`, `UploadComplete`, `UpgradeComplete`, `Notice`, and `Error`.
 
+#### Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+In preparation of service swarming, all load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
