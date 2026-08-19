@@ -64,11 +64,21 @@ jobs:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Connector Master Workflow.yml@main
     with:
       sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
+      # Only needed when the repository contains more than one solution (SDK-style connectors only):
+      # solution-filter-name: "MyConnector.sln"
       # The API-key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
       api-key: ${{ secrets.DATAMINER_TOKEN }}
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
 ```
+
+### Optional inputs
+
+| Input | Required | Type | Default | Description |
+|--|--|--|--|--|
+| `sonarCloudProjectName` | No | string | | The SonarCloud project identifier. If omitted, the SonarCloud analysis is skipped. |
+| `solution-filter-name` | No | string | | The name of the solution file (`.sln` or `.slnx`) to build when the repository contains more than one solution. If not provided, the workflow auto-discovers the solution and fails when multiple are found. Only supported for SDK-style connector solutions; the legacy connector pipeline rejects this input. |
+| `debug` | No | boolean | `false` | Enables debug output for the DataMiner tooling. |
 
 ## Skyline quality gate
 
