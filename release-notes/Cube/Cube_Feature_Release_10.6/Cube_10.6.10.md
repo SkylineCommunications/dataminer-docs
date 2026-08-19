@@ -20,9 +20,32 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*This release does not contain any new features yet.*
+#### System Center: Backup password can now be set for restoring credentials [ID 45704]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+<!-- Was reverted and later re-added to 10.6.10 -->
+
+In the *Backup* section of *System Center*, you can now set a password for restoring credentials from a backup.
+
+When you restore a backup on another DataMiner System, you will have to provide this password to be able to restore the credentials stored in that backup. All other data in the backup will be restored as usual.
+
+When you restore a backup on the same DataMiner System, no password will be needed to restore the credentials.
+
+> [!NOTE]
+> When you open the Credentials Library, a warning message will appear when this password has not yet been set.
+
+#### Credentials Library: Warning indicator will now displayed next to a credential that could not be decrypted [ID 45997]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+<!-- Was reverted and later re-added to 10.6.10 -->
+
+When DataMiner Cube detects that a credential in the Credentials Library can no longer be decrypted, a warning icon will now be displayed next to the credential name, which is also shown in a warning color.
+
+When you hover over the warning icon, a tooltip will explain that the credential's secret values can no longer be decrypted and that you need to re-enter and save the values to resolve the issue.
 
 ## Changes
+
+### Enhancements
 
 *This release does not contain any enhancements yet.*
 
