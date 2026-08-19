@@ -74,11 +74,11 @@ jobs:
 
 ### Optional inputs
 
-| Input | Required | Type | Default | Description |
-|--|--|--|--|--|
-| `sonarCloudProjectName` | No | string | | The SonarCloud project identifier. If omitted, the SonarCloud analysis is skipped. |
-| `solution-filter-name` | No | string | | The name of the solution file (`.sln` or `.slnx`) to build when the repository contains more than one solution. If not provided, the workflow auto-discovers the solution and fails when multiple are found. Only supported for SDK-style connector solutions; the legacy connector pipeline rejects this input. |
-| `debug` | No | boolean | `false` | Enables debug output for the DataMiner tooling. |
+| Input | Type | Default | Description |
+|--|--|--|--|
+| `sonarCloudProjectName` | string | | The SonarCloud project identifier. If omitted, the SonarCloud analysis is skipped. |
+| `solution-filter-name` | string | | The name of the solution file (`.sln` or `.slnx`) to build when the repository contains more than one solution. If not provided, the workflow auto-discovers the solution and fails when multiple are found. Only supported for SDK-style connector solutions; the legacy connector pipeline rejects this input. |
+| `debug` | boolean | `false` | Enables debug output for the DataMiner tooling. |
 
 ## Skyline quality gate
 
