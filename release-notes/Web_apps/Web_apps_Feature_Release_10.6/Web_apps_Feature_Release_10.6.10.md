@@ -60,6 +60,14 @@ The Tree component now uses the new search box as its filter input, providing a 
 
 The Trigger component now uses the new subtle button, providing a more consistent experience across components.
 
+#### GQI DxM: Enhanced performance when building queries [ID 46203]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+Up to now, when GQI retrieved operator capabilities, internally, columns always had to be resolved twice. As, from now on, this is no longer necessary, overall performance will improve when building queries.
+
+Also, a parameter table query problem has been fixed. Up to now, columns that were only needed internally to execute the query would also by default be included in the query result. This has now been changed. The behavior of the *Get parameter table by ID* data source has now been made consistent with that of every other data source.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Element filter selection could fail while search results were loading [ID 46129]
