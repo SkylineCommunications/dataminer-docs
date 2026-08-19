@@ -42,6 +42,12 @@ GQI extensions can now use the `GQIStaticColumns` attribute on an ad hoc data so
 
 In addition, extension characteristics are now requested once during worker initialization instead of for every created instance. This reduces repeated capability checks and pipe serialization overhead.
 
+#### Dashboards/Low-Code Apps: Alarm table now uses the new search box for filtering [ID 46160]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+The Alarm table component now uses the new search box as its filter input, providing a more consistent experience across components. You can use the input to filter the table and clear the filter when needed.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Element filter selection could fail while search results were loading [ID 46129]
