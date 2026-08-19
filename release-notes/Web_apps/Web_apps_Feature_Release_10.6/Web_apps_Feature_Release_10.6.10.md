@@ -103,3 +103,11 @@ This only applies when the GQI DxM is enabled. SLHelper filtering is unaffected.
 When updates were triggered very quickly on an EPM picker component, a change detection issue could occur that caused the component to disappear until a mouse event occurred.
 
 This issue has now been fixed.
+
+#### GQI DxM: Optimized OR filters could be ignored on the right side of a join [ID 46201]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When a join query optimized the right-side query by adding an internal OR filter, the filter could be ignored when the query was reconstructed. As a result, filtering on the right side of the join could be skipped and the query could return additional rows.
+
+The optimized OR filter is now preserved and applied correctly.
