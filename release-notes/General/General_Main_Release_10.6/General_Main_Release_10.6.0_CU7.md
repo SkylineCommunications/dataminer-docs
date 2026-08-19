@@ -98,3 +98,9 @@ As a result, a DataMiner upgrade could be delayed unnecessarily by up to 5 minut
 Up to now, the *DataMiner Agent Minimum Requirements* BPA test would incorrectly check physical CPU cores instead of logical CPU cores. As a result, virtualized environments such as a DaaS system could incorrectly be reported as not meeting the minimum CPU core requirements.
 
 This issue has now been fixed. The test now checks logical CPU cores.
+
+#### Invalid cleared correlated alarms could be generated when DVE linking changed [ID 46174]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When a correlation rule with the *AutoClear* option disabled generated an alarm for base alarms on a linked DVE table, DataMiner could generate invalid cleared alarms if the linked row disappeared and reappeared or was unlinked and relinked.

@@ -82,3 +82,9 @@ SLAutomation could deadlock when many subscripts were launched in a short time. 
 In some cases, a race condition could cause the SLAutomation process to hang during shutdown.
 
 As a result, a DataMiner upgrade could be delayed unnecessarily by up to 5 minutes.
+
+#### Invalid cleared correlated alarms could be generated when DVE linking changed [ID 46174]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When a correlation rule with the *AutoClear* option disabled generated an alarm for base alarms on a linked DVE table, DataMiner could generate invalid cleared alarms if the linked row disappeared and reappeared or was unlinked and relinked.
