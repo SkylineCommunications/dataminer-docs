@@ -52,6 +52,12 @@ When you selected an element in an element filter in edit mode, but search resul
 
 This issue has now been fixed, ensuring that element filter selection is no longer cleared by overlapping search requests.
 
+#### Dashboards: Report configuration would incorrectly not be URL encoded when saved [ID 46136]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+Some dashboards could not be used for report generation through the Scheduler when the dashboard name or folder path contained special characters, such as parentheses. In addition, the *Open in dashboards app* button did not work for these dashboards.
+
 #### Dashboard Gateway: Error while initializing themes on Dashboard Gateway setup [ID 46147]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
