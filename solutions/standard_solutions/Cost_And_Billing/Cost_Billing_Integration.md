@@ -1,5 +1,6 @@
 ---
 uid: Cost_Billing_Integration
+description: "Learn how to integrate Cost & Billing with external solutions using adapters and calculation scripts, with MediaOps Plan as a practical example."
 ---
 
 # Integration with other solutions
@@ -35,8 +36,8 @@ The sample MediaOps Plan components simplify the development: the **MediaOps Pla
 Synchronization between the external system and Cost & Billing is performed through the adapter and can be triggered in two ways:
 
 - **Scheduled daily sync**: A routine that runs automatically once per day, keeping Cost & Billing up to date with the external system.
-- **On-demand sync**: A button in the Cost & Billing interface that lets a user trigger a full synchronization at any time.
+- **On-demand sync**: A button in the Cost & Billing interface that allows you to trigger a synchronization at any time. (See [Syncing items and groups](xref:Cost_Billing_Managing_Items_Groups#syncing-items-and-groups) and [Syncing billable events](xref:Cost_Billing_Managing_Billable_Events#syncing-billable-events).)
 
 Because of the daily sync strategy, changes made in the external system during the day are not reflected in Cost & Billing until the next sync runs. If you cannot find an expected event (e.g., a job created mid-day), you can **trigger a manual sync** to reconcile all differences between the external system and Cost & Billing. Note that this may take some time depending on data volume.
 
-Items, groups and events that no longer exist in the external system are **not deleted** from Cost & Billing. They transition to a *Missing* state, preserving historical billing records and rate card links.
+Items, groups, and events that no longer exist in the external system are **not deleted** from Cost & Billing. They transition to a *Missing* state, preserving historical billing records and rate card links.

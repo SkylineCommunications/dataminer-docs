@@ -23,7 +23,8 @@ This will deploy the following components:
 - The DOM model and automation scripts.
 - The Cost & Billing Dev Pack, which includes the Standard Data Model and provides typed read/write access to the Cost & Billing DOM instances.
 
-After the package is installed, the core concepts within the Cost & Billing application are fully functional, including value units, contracts, and rate cards.
+> [!TIP]
+> After the package is installed, you can start [configuring value units](xref:Cost_Billing_Configuring_Value_Units), [contracts](xref:Cost_Billing_Configuring_Contracts), and [rate cards](xref:Cost_Billing_Configuring_Rate_Cards).
 
 ## Installing the MediaOps sample integration
 

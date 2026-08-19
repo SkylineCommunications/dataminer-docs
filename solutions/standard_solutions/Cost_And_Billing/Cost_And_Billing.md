@@ -20,4 +20,5 @@ The solution is designed to be flexible and can be extended:
 - The Cost & Billing Solution currently focuses on **time-based** cost and billing only. Its model, however, is flexible enough to **support other billing models**. For this, the solution needs to be expanded, for example with subscription contract and rate card definitions.
 - The solution includes a sample **integration with MediaOps Plan** and can be extended to **integrate with other external solutions**. For details, refer to [Integration with other solutions](xref:Cost_Billing_Integration).
 
-For a detailed description of how the components fit together, refer to [Cost & Billing architecture](xref:Cost_Billing_Architecture). To get started, see [Installing Cost & Billing](xref:Cost_Billing_Installation) and [How to use](xref:Cost_Billing_Use).
+> [!TIP]
+> For a detailed description of how the components fit together, refer to [Cost & Billing architecture](xref:Cost_Billing_Architecture). To get started, see [Installing Cost & Billing](xref:Cost_Billing_Installation).
