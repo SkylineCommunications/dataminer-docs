@@ -94,6 +94,9 @@ Expected duration: 15 minutes.
 
 1. In the upper-left corner, click *Create Token* .
 
+   > [!TIP]
+   > The green *Create Default AI Token* button next to it creates a preconfigured short-lived token in one click. That is the quickest option for agent-driven test runs, but in this tutorial you create a custom token so you learn how scopes work.
+
 1. Enter a name for the token.
 
 1. Select the scope that matches the ".execute" scope for your chosen configuration.
@@ -131,9 +134,13 @@ Expected duration: 15 minutes.
 
 1. In the QAOps User app, go to the [Overview](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview) page.
 
-1. Locate your tag in the list.
+   This page shows the *QAOps Nebula* live topology explorer.
 
-1. Use the top filter to find your request more quickly.
+1. In the search box at the top, enter the tag you used in your request, or click the *Active runs* filter button to only show active test runs.
+
+1. Locate your run in the graph: it appears as an active-run node connected to your configuration.
+
+1. Select the node to inspect its details in the *Inspector* panel on the right.
 
 1. Track the [test run life cycle](xref:QAOps_Test_Run).
 

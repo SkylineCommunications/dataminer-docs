@@ -1,6 +1,6 @@
 ---
 uid: QAOps_Tutorials
-description: Discover all QAOps tutorials for Skyline employees. These cover user basics, test runs, result analysis, cost control, and advanced package creation.
+description: Discover all QAOps tutorials for Skyline employees. These cover user basics, test runs, result analysis, cost control, advanced package creation, and operator tasks like managing configurations, test suites, and self-hosted servers.
 ---
 
 # QAOps Tutorials
@@ -22,3 +22,12 @@ description: Discover all QAOps tutorials for Skyline employees. These cover use
 | Name | Description |
 |--|--|
 | [Creating a test package](xref:QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages) | Learn how to create a test package to test a basic low-code app. |
+
+## QAOps Operator
+
+| Name | Description |
+|--|--|
+| [Creating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration) | Learn how to create a new QAOps-hosted configuration with the QAOps Operator app. |
+| [Updating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Update_A_Configuration) | Learn how to update an existing configuration with the Edit Configuration dialog and Table Mode. |
+| [Adding self-hosted DataMiner servers](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Add_Self_Hosted_Servers) | Learn how to connect your own single DataMiner Agent or DataMiner cluster to QAOps. |
+| [Creating and managing test suites](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites) | Learn how to create a test suite and add and manage its Catalog test packages. |
