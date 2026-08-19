@@ -2,7 +2,7 @@
 uid: DocumentHub_1.1.1
 ---
 
-# DocumentHub 1.1.1 - preview
+# DocumentHub 1.1.1
 
 ## Prerequisites
 
@@ -29,7 +29,6 @@ This update upgrades the underlying SharePoint integration from the deprecated M
 > Existing SharePoint configurations (Tenant ID, Client ID, Site URL) do not need to be changed. The upgrade is transparent to end users.
 
 ### DocumentHub: implemented the KQL (Keyword Query Language) as the searchable storage for SharePoint [ID 46228]
-
 
 SharePoint-backed buckets now use **KQL (Keyword Query Language)** as the query engine when searching for files within a SharePoint document library.
 
