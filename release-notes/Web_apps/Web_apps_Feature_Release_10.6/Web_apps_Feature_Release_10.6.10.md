@@ -119,3 +119,11 @@ This issue has now been fixed.
 When a join query optimized the right-side query by adding an internal OR filter, the filter could be ignored when the query was reconstructed. As a result, filtering on the right side of the join could be skipped and the query could return additional rows.
 
 The optimized OR filter is now preserved and applied correctly.
+
+#### GQI DxM: SLNet extension worker connections could be closed unreliably [ID 46231]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+Up to now, SLNet pipe connections in the GQI extension worker could be closed unreliably, which could leave stale client state or delay disconnect handling during pipe shutdown.
+
+From now on, closed client connections will be cleaned up more deterministically, improving the reliability of extension worker shutdown and subsequent queries.
