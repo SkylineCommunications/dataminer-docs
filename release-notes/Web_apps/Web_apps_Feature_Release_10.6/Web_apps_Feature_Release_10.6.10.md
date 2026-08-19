@@ -48,6 +48,18 @@ In addition, extension characteristics are now requested once during worker init
 
 The Alarm table component now uses the new search box as its filter input, providing a more consistent experience across components. You can use the input to filter the table and clear the filter when needed.
 
+#### Dashboards/Low-Code Apps: Tree component now uses the new search box for filtering [ID 46164]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+The Tree component now uses the new search box as its filter input, providing a more consistent experience across components. You can use the input to filter the tree and clear the filter when needed.
+
+#### Dashboards/Low-Code Apps: Trigger component now uses the new subtle button [ID 46166]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+The Trigger component now uses the new subtle button, providing a more consistent experience across components.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Element filter selection could fail while search results were loading [ID 46129]
