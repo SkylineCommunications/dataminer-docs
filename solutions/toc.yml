@@ -451,6 +451,15 @@ items:
         topicUid: Open_Putty_with_DITT
       - name: Implementing DITT in a visual overview
         topicUid: Implementing_DITT_in_Visio
+    - name: Generic Penalty Box
+      topicUid: Generic_Penalty_Box_Overview
+      items:
+      - name: Installing the Generic Penalty Box
+        topicUid: Generic_Penalty_Box_Installation
+      - name: Configuring the Generic Penalty Box
+        topicUid: Generic_Penalty_Box_Configuration
+      - name: Using the Generic Penalty Box
+        topicUid: Generic_Penalty_Box_Usage
     - name: DataMiner Health Check Tool
       topicUid: DataMiner_Health_Check_Tool
       items:
