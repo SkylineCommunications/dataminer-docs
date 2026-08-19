@@ -16,7 +16,7 @@ On the *Versions* tab of a Catalog item, it is now possible to filter and search
 - **Filter version history**: Filter ranges and versions by metadata, such as firmware version or version dependencies (e.g., minimum DataMiner version), with a search box and a *show more* option for long lists of options.
 - **Cleaner results**: Ranges, versions, and recommended versions that do not match the selected filters are hidden automatically.
 
-### 19 August 2026 - New feature - Admin - Setting to bypass automatic sign-in for remote login
+### 19 August 2026 - New feature - Admin - Setting to bypass automatic sign-in for remote access
 
 An admin setting is now available to bypass automatic sign-in for remote login. Previously, users could not sign out because they were automatically signed back in. With this setting enabled, admins can have their users sign out, allowing them to enforce 2FA.
 
