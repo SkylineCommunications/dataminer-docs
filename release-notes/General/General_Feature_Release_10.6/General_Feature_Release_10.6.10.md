@@ -136,3 +136,11 @@ From now on, a new upgrade action named `CleanupNatsServices` removes these lega
 In some cases, a race condition could cause the SLAutomation process to hang during shutdown.
 
 As a result, a DataMiner upgrade could be delayed unnecessarily by up to 5 minutes.
+
+#### DataMiner Agent Minimum Requirements BPA test incorrectly checked physical CPU cores [ID 46154]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.10 -->
+
+Up to now, the *DataMiner Agent Minimum Requirements* BPA test would incorrectly check physical CPU cores instead of logical CPU cores. As a result, virtualized environments such as a DaaS system could incorrectly be reported as not meeting the minimum CPU core requirements.
+
+This issue has now been fixed. The test now checks logical CPU cores.
