@@ -14,7 +14,7 @@ uid: DocumentHub_1.0.1
 
 ## New features
 
-### DocumentHub: Initial functionality [ID 45528]
+### Initial functionality [ID 45528]
 
 The new DocumentHub application gives your team a central place to organize and access documents directly within the DataMiner platform. This initial version includes:
 
