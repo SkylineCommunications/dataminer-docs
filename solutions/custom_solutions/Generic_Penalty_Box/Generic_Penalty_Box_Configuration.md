@@ -158,6 +158,9 @@ As the wall fills with elements, the fit algorithm automatically makes cards nar
 | `alarmColor` | boolean | When `true`, the value text (and, for `batteryLevel` fields, the gauge) is tinted with the color of the active alarm on that specific parameter. This is the only per-field coloring mechanism; there is no client-side threshold. |
 | `pinned` | boolean | When `true`, the field is never dropped as cards shrink, regardless of its position in the list. |
 
+> [!NOTE]
+> `DataMinerIcons` ligature names largely follow the naming convention of [Google's Material Symbols](https://fonts.google.com/icons), so that gallery can be used to browse for an appropriate icon name. Not every Material Symbols name is available in `DataMinerIcons`, and `DataMinerIcons` also has some names of its own, so always verify the chosen name renders as an icon rather than as literal text.
+
 The reserved `key` values are namespaced under `alarm.` so that a real parameter can safely be named `time` or `message` without colliding:
 
 | Key | Description |
