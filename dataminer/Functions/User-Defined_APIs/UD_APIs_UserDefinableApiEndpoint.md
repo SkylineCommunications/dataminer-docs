@@ -44,6 +44,9 @@ Below you can find a list of all the *UserDefinableApiEndpoint* DxM versions and
 | 3.3.1       | .NET 8                | 10.4.0+                            | 10.5.6                           |
 | 3.5.0       | .NET 8                | 10.4.0+                            | 10.5.12                          |
 | 3.6.0       | .NET 8                | 10.4.0+                            | 10.6.1                           |
+| 3.7.0       | .NET 8                | 10.4.0+                            | 10.6.7                           |
+| 3.8.0       | .NET 8                | 10.4.0+                            | 10.6.8                           |
+| 3.9.0       | .NET 10               | 10.4.0+                            | 10.6.10                          |
 
 > [!NOTE]
 >

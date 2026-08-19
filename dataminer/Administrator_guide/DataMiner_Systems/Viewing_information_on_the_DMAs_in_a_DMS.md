@@ -1,6 +1,6 @@
 ---
 uid: Viewing_information_on_the_DMAs_in_a_DMS
-description: Discover where to find information about the individual nodes in a DataMiner cluster, including their state, key parameters, and BPA test results.
+description: "Discover where to find information about the individual nodes in a DataMiner cluster, including their state, key parameters, and BPA test results."
 ---
 
 # Viewing information about DataMiner nodes

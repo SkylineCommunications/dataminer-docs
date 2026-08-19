@@ -1,5 +1,6 @@
 ---
 uid: Failover_FAQ_connection_issues
+description: "Learn what to do if you encounter connection issues after a Failover switch because of incorrect routing to the active Agent."
 ---
 
 # What if I have connection issues after a Failover switch?

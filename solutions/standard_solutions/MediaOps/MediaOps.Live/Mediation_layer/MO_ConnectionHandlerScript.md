@@ -24,6 +24,11 @@ public class Script
 
 public class EVS_Cerebrum_ConnectionHandler : ConnectionHandler
 {
+    public override ConnectionHandlerConfiguration GetConfiguration()
+    {
+        // ...
+    }
+
     public override IEnumerable<ElementInfo> GetSupportedElements(IEngine engine, IEnumerable<ElementInfo> elements)
     {
         // ...
@@ -51,6 +56,23 @@ public class EVS_Cerebrum_ConnectionHandler : ConnectionHandler
 }
 ```
 
+## GetConfiguration() method
+
+The `GetConfiguration` method is an optional override that allows the connection handler script to customize its configuration. When it is not overridden, the default configuration is used.
+
+Currently, the configuration lets you customize the timeout for connect and disconnect operations. Both timeouts default to 10 seconds.
+
+```csharp
+    public override ConnectionHandlerConfiguration GetConfiguration()
+    {
+        return new ConnectionHandlerConfiguration
+        {
+            ConnectTimeout = TimeSpan.FromSeconds(30),
+            DisconnectTimeout = TimeSpan.FromSeconds(30),
+        };
+    }
+```
+
 ## GetSupportedElements() method
 
 The `GetSupportedElements` method allows the connection handler script to indicate which elements it is designed to work with.
@@ -60,7 +82,7 @@ The method receives the list of available elements from the mediation layer and 
 ```csharp
     public override IEnumerable<ElementInfo> GetSupportedElements(IEngine engine, IEnumerable<ElementInfo> elements)
     {
-        return elements.Where(e => e.ProtocolN == "My Device Protocol");
+        return elements.Where(e => e.Protocol == "My Device Protocol");
     }
 ```
 
@@ -81,19 +103,61 @@ The purpose of this method is to let the mediation layer know which parameters (
     }
 ```
 
+Instead of using the constructor, you can also create the `SubscriptionInfo` objects with the `StandaloneParameter` and `Table` factory methods:
+
+```csharp
+    public override IEnumerable<SubscriptionInfo> GetSubscriptionInfo(IEngine engine)
+    {
+        return new[]
+        {
+            SubscriptionInfo.StandaloneParameter(1000),
+            SubscriptionInfo.Table(12100), // Routes
+            SubscriptionInfo.Table(14100), // Sources
+            SubscriptionInfo.Table(15100), // Destinations
+        };
+    }
+```
+
+### Filtering on columns and row keys
+
+For table parameters, you can narrow down the subscription so that only changes to specific columns and/or a specific row are reported. This reduces the number of updates the connection handler script has to process. You can apply these filters with the following methods, which can be chained onto a `SubscriptionInfo` object:
+
+- `FilterColumn(int column)`: Only report changes to the specified column parameter ID.
+- `FilterColumns(params ICollection<int> columns)`: Only report changes to the specified column parameter IDs.
+- `FilterRowKey(string rowKey)`: Only report changes to the row with the specified row key. The provided key supports wildcards (`*` and `?`).
+
+> [!NOTE]
+> These filters are only applicable to table parameters. When you filter on columns, you must still provide the table parameter ID.
+
+```csharp
+    public override IEnumerable<SubscriptionInfo> GetSubscriptionInfo(IEngine engine)
+    {
+        return new[]
+        {
+            SubscriptionInfo.StandaloneParameter(1000),
+
+            // Only report changes to columns 12102 and 12103 of the Routes table.
+            SubscriptionInfo.Table(12100).FilterColumns(12102, 12103),
+
+            // Only report changes to column 14102 of a specific row in the Sources table.
+            SubscriptionInfo.Table(14100).FilterColumn(14102).FilterRowKey("Source 1"),
+        };
+    }
+```
+
 ## ProcessParameterUpdate() method
 
 The `ProcessParameterUpdate` method is triggered by the mediation layer whenever a parameter of a device element changes. Its purpose is to update the current connections (connect and disconnect) via the API.
 
-Based on the parameter changes, the method should try to find the corresponding source and destination endpoints that match the new data. Endpoints can be retrieved using the API object that can be found in the `connectionEngine` parameter.
+Based on the parameter changes, the method should try to find the corresponding source and destination endpoints that match the new data. Endpoints can be retrieved using the convenience methods on the `connectionEngine` parameter (e.g., `GetEndpointsWithTransportMetadata`, `GetEndpointsWithElement`, or `GetEndpointsWithIdentifier`) or directly via the API object (`connectionEngine.Api.Endpoints`).
 
 Example:
 
 ```csharp
-    var sourceEndpoints = connectionEngine.Api.Endpoints.GetByMulticasts(...);
+    var sourceEndpoints = connectionEngine.GetEndpointsWithTransportMetadata(EndpointRole.Source, ...);
 ```
 
-Once connections are detected, they should be registered using the `connectionEngine` provided as a parameter to the method. Disconnects also need to be registered. The endpoint objects retrieved using the code above should be used to create `ConnectionInfo` objects. New connections overwrite existing connections, based on the destination endpoint. In most cases, there is no need to first retrieve the existing connections from the API.
+Once connections are detected, they should be registered using the `connectionEngine` provided as a parameter to the method. Disconnects also need to be registered. The endpoint objects retrieved using the code above should be used to create `ConnectionUpdate` objects. New connections overwrite existing connections, based on the destination endpoint. In most cases, there is no need to first retrieve the existing connections from the API.
 
 > [!NOTE]
 > If a connection is detected but the corresponding source endpoint cannot be found, the connection still has to be registered.
@@ -101,7 +165,7 @@ Once connections are detected, they should be registered using the `connectionEn
 ```csharp
     public override void ProcessParameterUpdate(IEngine engine, IConnectionHandlerEngine connectionEngine, ParameterUpdate update)
     {
-        var updatedConnections = new List<ConnectionInfo>();
+        var updatedConnections = new List<ConnectionUpdate>();
 
         if (update.ParameterId != 12100)
         {

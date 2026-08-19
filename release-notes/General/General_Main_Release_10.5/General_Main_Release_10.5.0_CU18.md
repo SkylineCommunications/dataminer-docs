@@ -26,12 +26,6 @@ uid: General_Main_Release_10.5.0_CU18
 
 ### Enhancements
 
-#### Security enhancements [ID 45646]
-
-<!-- 45646: MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-A number of security enhancements have been made.
-
 #### APIGateway: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45671]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->

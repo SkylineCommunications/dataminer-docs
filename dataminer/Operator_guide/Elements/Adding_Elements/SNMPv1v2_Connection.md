@@ -19,7 +19,7 @@ For SNMPv1/v2 connections, you can specify the following connection settings whi
 
 - **Port number**: By default 161.
 
-- **Use credentials**: If predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication).
+- **Use credentials**: If predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Credentials Library](xref:Credentials_Library).
 
 - **Get community string**: The community string used when reading values from the device. The default value, unless overridden in the protocol, is *public*.
 

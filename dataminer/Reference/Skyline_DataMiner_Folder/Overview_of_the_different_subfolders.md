@@ -46,7 +46,7 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | RemoteServices | Services hosted on other DMAs in the cluster. Each of the subfolders in this folder has the DMA ID of the DMA hosting the synchronized services. | Yes |
 | ResourceManager | Resource Manager configuration. | No |
 | Scripts | Automation scripts. | Yes |
-| Security | Within this folder, only the *Credentials* subfolder, which contains the credentials library configuration, and the *Ownership* subfolder are synchronized. | Partially |
+| Security | Within this folder, only the *Credentials* subfolder, which contains the Credentials Library configuration, and the *Ownership* subfolder are synchronized. | Partially |
 | ServiceManager | Service Manager configuration. | No |
 | ServiceTemplates | Service template definitions (from DataMiner 10.6.7/10.7.0 onwards; in earlier DataMiner versions these are included in the *Services* and *RemoteServices* folders).<!-- RN 45370 --> | Yes |
 | Services | Services hosted on the DMA. | See note below. |
@@ -65,4 +65,4 @@ Except when otherwise mentioned in the relevant documentation, manual changes sh
 | Webpages | All webpages of the DataMiner client applications. Within this folder, only the following things are synchronized in a DMS:<br>- The *CustomerLogo* image files.<br>- The *Public* subfolder (from DataMiner 10.5.10/10.6.0 onwards<!-- RN 43458 -->).<br>- The data for legacy dashboards (`C:\Skyline DataMiner\WebPages\Dashboards\Db\`).<br>- The data for legacy reports (`C:\Skyline DataMiner\WebPages\Reports\Templates\`), except for the `tmp_img` subfolder, which contains temporary files.<br>- The data for legacy annotations (`C:\Skyline DataMiner\WebPages\Annotations\DMS Images\` and `C:\Skyline DataMiner\WebPages\Annotations\Views\`). | Partially |
 
 > [!IMPORTANT]
-> The synchronization of files across all DMAs in a DataMiner System happens every day at midnight (00:00). It is therefore of great importance that the time settings of the DMAs are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms)
+> For more information on when files and folders are synchronized, refer to [Data synchronization](xref:Data_synchronization)

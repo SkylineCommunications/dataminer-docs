@@ -1,6 +1,6 @@
 ---
 uid: Synchronizing_data_between_DataMiner_Agents
-description: Learn how to quickly synchronize data between nodes in a DataMiner cluster, from a full cluster sync to targeted file and Visio updates.
+description: "Learn how to quickly synchronize data between nodes in a DataMiner cluster, from a full cluster sync to targeted file and Visio updates."
 ---
 
 # Synchronizing data between nodes
