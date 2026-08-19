@@ -65,6 +65,32 @@ Key enhancements include:
 
 <!-- See also Cube RNs [ID 45704] [ID 45997] -->
 
+#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Automation scripts now support adding credentials from the Credential Library directly in the script's XML code.
+
+See the following example:
+
+```xml
+<Credentials>
+    <Credential id="1">
+        <Name>MyCredential</Name>
+        <CredentialId>8d15e7d8-f8f6-41f6-985c-fddbd3ea94ae</CredentialId>
+    </Credential>
+</Credentials>
+```
+
+| Element | Attribute | Content |
+|---|---|---|
+| Credential | id | Any integer, unique per credential in the script |
+| Name | - | Unique user-defined string |
+| CredentialId | - | GUID of an existing credential from the Credential Library |
+
+> [!NOTE]
+> If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
+
 ## Changes
 
 ### Enhancements
