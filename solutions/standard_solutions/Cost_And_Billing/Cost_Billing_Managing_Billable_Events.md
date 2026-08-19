@@ -23,7 +23,7 @@ With the **Sync** button on the *Billable Events* page, you can retrieve all bil
 > [!IMPORTANT]
 > If Cost & Billing is integrated with MediaOps Plan, this sync must be performed **at least every 24 hours**. This must be scheduled via [DataMiner Scheduler](xref:About_the_Scheduler_module).
 >
-> This is necessary because on initial installation, the MediaOps Plan Adapter retrieves every available billable event. After that, each sync retrieves the billable events from the **past 24 hours**. If more than 24 hours pass without a sync, changes that happened before that window will not be reflected in Cost & Billing.
+> This is necessary because on initial installation, the MediaOps Plan Adapter retrieves every available billable event. After that, each sync retrieves the billable events starting from the **past 24 hours**. If more than 24 hours pass without a sync, changes that happened before that window will not be reflected in Cost & Billing.
 
 ## Calculating the cost and billing for billable events
 
@@ -85,7 +85,12 @@ Billing is calculated in a similar way, but driven by the **contract** assigned 
 
    If no billing rate card assignment is found, the entry is skipped and added to the *Errors* table (available on the *Logs* page).
 
-1. The **charged time is determined**. The same timing rules as for the cost calculation apply: minimum time interval, minimum time increment, and capped value behave identically on the billing side.
+1. The **charged time is determined**. The item or group's real duration (end time − start time) is defined by the billing rate card's timing rules:
+
+   - **Minimum time interval**: The floor. Usage shorter than the interval is charged as the full interval.
+   - **Minimum time increment**: The step size beyond the interval. Any excess above the interval is rounded **up** to the next whole increment.
+
+1. **Rates are applied**. The charged time is converted into an amount using the billing rate card's rates. If a **capped rate** is set, the calculated amount cannot exceed it.
 
 1. The **contract's commercial modifiers are applied**. After the base amount is calculated, the contract's rules are applied:
 

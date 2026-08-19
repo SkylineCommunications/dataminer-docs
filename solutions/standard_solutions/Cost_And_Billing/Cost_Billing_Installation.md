@@ -32,7 +32,7 @@ If the sample integration with **MediaOps Plan** is required, the following comp
 
 - The [MediaOps Plan](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) package, version **1.6.0** or higher.
 
-- The [Cost & Billing MediaOps Plan Adapter and Calculation](TBD), which provides the integration between MediaOps Plan and Cost & Billing. This package includes:
+- The [Cost & Billing MediaOps Plan Adapter and Calculation](https://catalog.dataminer.services/details/4c6e38cd-495c-417d-bd6b-f54c4f77e407), which provides the integration between MediaOps Plan and Cost & Billing. This package includes:
 
   - **MediaOps Adapter**: Synchronizes MediaOps data into Cost & Billing by mapping resources and pools to items, jobs to billable events, and workflows to groups.
   - **MediaOps Calculation Script**: Performs the time-based cost and billing calculations required for the MediaOps integration.
