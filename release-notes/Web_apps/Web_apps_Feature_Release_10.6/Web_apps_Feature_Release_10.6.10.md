@@ -126,6 +126,14 @@ When a join query optimized the right-side query by adding an internal OR filter
 
 The optimized OR filter is now preserved and applied correctly.
 
+#### Web APIs: User settings could not be read on Dashboard Gateway setups [ID 46230]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+On a Dashboard Gateway setup, user settings could incorrectly be read from a local file. Since Dashboard Gateway setups do not provide direct file access, this could cause a *Local file access is required.* error when, for example, script execution or query fetching actions needed those settings.
+
+The required requests are now forwarded to the connected DMA instead.
+
 #### GQI DxM: SLNet extension worker connections could be closed unreliably [ID 46231]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
