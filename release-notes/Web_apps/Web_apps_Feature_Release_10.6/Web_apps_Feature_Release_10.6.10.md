@@ -66,6 +66,12 @@ The Tree component now uses the new search box as its filter input, providing a 
 
 The Trigger component now uses the new subtle button, providing a more consistent experience across components.
 
+#### Dashboards/Low-Code Apps: Parameter picker now uses new input components [ID 46176]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+The Parameter picker component now uses the new search and dropdown inputs for filtering and grouping data, providing a more consistent experience across components.
+
 #### GQI DxM: Enhanced performance when building queries [ID 46203]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
