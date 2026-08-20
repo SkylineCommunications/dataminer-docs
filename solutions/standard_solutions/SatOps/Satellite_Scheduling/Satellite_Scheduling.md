@@ -13,10 +13,10 @@ With the Satellite Scheduling app, you can:
 
 - View all transponder slots and their bookings on a timeline. Color coding shows which transponder capacity is booked by each job.
 
-- Automatically stay in line with the plan that is active at a specific time, as base plans and time-boxed plans are taken into account to determine which slots are available. You can even book slots across two subsequent plans when their slot configuration allows it.
+- View the slots available at any point in time based on the applicable permanent or temporary [transponder plans](xref:SI_Transponder_Plans). You can also book a slot across two consecutive plans if their slot configurations are compatible.
 
-- Scroll vertically and horizontally with keyboard and mouse commands (Alt-Scroll and Ctrl-Scroll).
+- Scroll vertically and horizontally using the keyboard and mouse. Use Alt + Scroll to scroll vertically and Ctrl + Scroll to scroll horizontally.
 
-- Select an available transponder slot through a dedicated Slot Picker page, filtered by satellite and transponder, which is integrated with the [MediaOps Plan](xref:MediaOps.Plan) Scheduling app.
+- Select an available transponder slot on the dedicated *Slot Picker* page. The available slots are filtered by satellite and transponder, based on the capabilities selected in the [MediaOps Plan](xref:MediaOps.Plan) Scheduling app.
 
-- Navigate to the corresponding transponder configuration panel in the [Satellite Inventory](xref:Satellite_Inventory) app by clicking the transponder's title.
+- Navigate to the corresponding transponder configuration panel in the [Satellite Inventory app](xref:Satellite_Inventory) by clicking the transponder name.

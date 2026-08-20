@@ -7,39 +7,39 @@ description: Explore the Satellite Scheduling UI, including the transponder time
 
 ## Transponder timeline
 
-The Satellite Scheduling UI is centered around a **transponder timeline**  that shows all transponder slots and existing bookings.
+The Satellite Scheduling UI is centered around a **transponder timeline**  that shows all available transponder slots and existing bookings.
 
 ![The Satellite Scheduling transponder timeline in read mode, showing transponder slots and existing bookings](~/solutions/images/SO_SS_Timeline_Read_Mode.png)
 
-Each slot is listed vertically and shows its name and bandwidth size, for example "A9 - 9 MHz". The border color of each slot indicates the slot size (e.g., 3 MHz, 9 MHz, etc.), which makes it easy to see how capacity is distributed.
+The slots are listed vertically. Each slot shows its name and bandwidth, for example "A9 - 9 MHz". The border color indicates the slot size (e.g., 3 MHz, 9 MHz, etc.), making it easy to see how the transponder capacity is divided.
 
-The timeline initially shows slots at the *Default Slot Size*, configured for the transponder plan in the [Satellite Inventory app](xref:SI_Transponder_Plans). However, you can then [filter the timeline](#filtering-the-timeline) to show only slots of a specific size.
+The timeline initially shows the slots that match the *Default Slot Size* configured for the applicable [transponder plan](xref:SI_Transponder_Plans). However, you can [filter the timeline](#filtering-the-timeline) to show slots of a different size.
 
 ## Filtering the timeline
 
-On the left, you can filter the timeline:
+You can use the filters on the left to search by:
 
-- Search by *Job name*.
+- *Job name*.
 
-- Search by *Satellite*.
+- *Satellite*.
 
-You can also filter the timeline by slot size using the color-coded size buttons at the top.
+To filter the timeline by slot size, use the color-coded size buttons at the top.
 
 > [!NOTE]
-> To book a slot of a specific size (e.g., 6 MHz), first filter the timeline to that size. Only slots that match the selected size are then available for booking.
+> To book a slot of a specific size, first select that size using the corresponding filter button. For example, to book a 6 MHz slot, select the 6 MHz filter. Only slots of the selected size are then available for booking.
 
 ## Read and edit mode
 
-The app has two modes, which you can select with the *Read* and *Edit* buttons at the top left:
+You can switch between the following modes using the *Read* and *Edit* buttons in the upper-left corner:
 
 - **Read mode**: Browse the timeline and view existing bookings. You can scroll horizontally and vertically, but you cannot make changes.
 
-- **Edit mode**: Create or change bookings by interacting with the timeline.
+- **Edit mode**: Create or modify bookings by interacting with the timeline.
 
 ## Navigating between apps
 
 You can navigate between the Satellite Scheduling and Satellite Inventory apps:
 
-- Click a transponder name in the timeline to navigate to that transponder in the Satellite Inventory app.
+- In Satellite Scheduling, click a transponder name on the timeline to open the corresponding transponder in the Satellite Inventory app.
 
-- From the Satellite Inventory *Slots* panel, click *Open in Satellite Scheduling* to jump to the timeline for that transponder.
+- In the *Slots* panel of Satellite Inventory, click *Open in Satellite Scheduling* to open the timeline for that transponder.

@@ -35,8 +35,6 @@ To add a beam:
    - *Transmission Type*: The beam's transmission type (*TX*, *RX*, or *Carrier in Carrier*).
    - *Footprint File*: A path or URL to the KML file that describes the beam footprint.
 
-   ![The Add Beam dialog showing the link type dropdown with Feeder, User, Uplink, and Downlink options](~/solutions/images/SO_SI_Add_Beam.png)
-
 1. Click *Create Beam*.
 
 > [!NOTE]

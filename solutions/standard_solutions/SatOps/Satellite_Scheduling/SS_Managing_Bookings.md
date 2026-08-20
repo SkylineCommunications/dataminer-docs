@@ -23,8 +23,6 @@ To book transponder capacity directly in Satellite Scheduling:
 
    The *Create Job* dialog opens.
 
-   ![The Create Job dialog with job name, start and end time, and frequency fields](~/solutions/images/SO_SS_Create_Job.png)
-
 1. Optionally, enter a custom *Job Name*.
 
    If you leave this field empty, the system generates a default name.
@@ -32,6 +30,8 @@ To book transponder capacity directly in Satellite Scheduling:
 1. Adjust the *Start Date Time* and *End Date Time* if needed.
 
 1. Click *Create Job*.
+
+   ![The Create Job dialog with job name, start and end time, and frequency fields](~/solutions/images/SO_SS_Create_Job.png)
 
    A MediaOps job is created with the transponder resource already booked.
 
