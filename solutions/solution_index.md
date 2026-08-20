@@ -41,6 +41,9 @@ description: Explore technical documentation for specific, preconfigured DataMin
 
 <div class="row"> 
   <div class="column">
+    <a href="/solutions/standard_solutions/SatOps/SatOps.html" title="SatOps" target="_self"><img src="~/solutions/images/SatOps.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/solutions/standard_solutions/Ticketing/Ticketing.html" title="Ticketing" target="_self"><img src="~/solutions/images/Ticketing.svg" style="width:100%"></a>
   </div>
 </div>
