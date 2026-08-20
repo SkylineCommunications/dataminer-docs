@@ -130,7 +130,7 @@ The optimized OR filter is now preserved and applied correctly.
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
-On a Dashboard Gateway setup, user settings could incorrectly be read from a local file. Since Dashboard Gateway setups do not provide direct file access, this could cause a *Local file access is required.* error when, for example, script execution or query fetching actions needed those settings.
+On a Dashboard Gateway setup, user settings could incorrectly be read from a local file. Since Dashboard Gateway setups do not provide direct file access, this could cause a *Local file access is required.* error when query actions needed those settings.
 
 The required requests are now forwarded to the connected DMA instead.
 

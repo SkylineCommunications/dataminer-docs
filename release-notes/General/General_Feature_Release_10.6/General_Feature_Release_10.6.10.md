@@ -146,6 +146,14 @@ The `GetAvailableAutomationScripts` call now returns the following additional in
 - `IsInteractive`: Indicates whether the script can show UI elements.
 - `CanBeExecuted`: Indicates whether the script can be run on its own. Scripts that only contain reusable libraries return `false`.
 
+#### User-Defined APIs: IIS rewrite rules are now validated and repaired by the UserDefinableApiEndpoint DxM [ID 46143]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The UserDefinableApiEndpoint DxM now owns the IIS rewrite rule that reroutes requests sent to `/api/custom` to the endpoint. It now validates the rule when the process starts and keeps checking it while the service runs, repairing it automatically if needed.
+
+If the rewrite rule is missing, disabled, or no longer matches the expected routing behavior, the DxM will restore it with the correct configuration. This ensures that user-defined API requests keep working even if the IIS configuration has been changed outside the installer.
+
 ### Fixes
 
 #### Agent element alarm and masking information could be out of sync after a Failover switch [ID 45601]
