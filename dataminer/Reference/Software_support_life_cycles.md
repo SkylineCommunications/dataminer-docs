@@ -155,7 +155,7 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 - **End of Life - Legacy reservations**: The legacy type of reservation used prior to DataMiner 9.5.3/9.6.0 (RN 15180) is obsolete and should no longer be used.
 - **End of Support – MySQL as local database**: Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage).
 - **End of Engineering – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.
-- **End of Life – Ticketing app**: Skyline is researching a replacement for this module.
+- **End of Life – Ticketing app**: Replaced by the [Ticketing Standard Solution](https://catalog.dataminer.services/details/c132decf-b918-4ee2-be25-1302f41e7705).
 
 ### DataMiner 10.7
 
