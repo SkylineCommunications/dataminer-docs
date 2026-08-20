@@ -48,7 +48,7 @@ See the following decision flow.
 
 ## Which user permissions are included in which security preset?
 
-The table below shows which user permissions are available in the default security presets available in DataMiner Cube (see [Using presets to assign rights](xref:Configuring_a_user_group#using-presets-to-assign-rights)). An x in a preset column indicates that the user permission in the first column is available in that preset.
+The table below shows which user permissions are available in the default security presets available in DataMiner Cube 10.6.x (see [Using presets to assign rights](xref:Configuring_a_user_group#using-presets-to-assign-rights)). An x in a preset column indicates that the user permission in the first column is available in that preset.
 
 > [!NOTE]
 > Some user permissions are only available in certain versions of Cube or depending on certain DataMiner licenses.
@@ -58,6 +58,7 @@ The table below shows which user permissions are available in the default securi
 | Surveyor available |  | x | x | x | x |
 | Data overview available |  | x | x | x | x |
 | View data overview available |  | x | x | x | x |
+| DataMiner web apps |  | x | x | x | x |
 | Elements \> Access |  | x | x | x | x |
 | Elements \> Add |  |  | x | x | x |
 | Elements \> Edit |  |  | x | x | x |
@@ -66,13 +67,13 @@ The table below shows which user permissions are available in the default securi
 | Elements \> Import DELT |  |  | x | x | x |
 | Elements \> Export DELT |  |  | x | x | x |
 | Elements \> Properties \> ... |  |  | x | x | x |
-| Elements \> Lock / unlock |  | x | x | x | x |
+| Elements \> Lock/Unlock |  | x | x | x | x |
 | Elements \> Force unlock |  |  | x | x | x |
 | Elements \> Start |  |  | x | x | x |
 | Elements \> Stop |  |  | x | x | x |
 | Elements \> Pause |  |  | x | x | x |
 | Elements \> Restart |  |  | x | x | x |
-| Elements \> Mask until clearance / for x time |  | x | x | x | x |
+| Elements \> Mask until clearance/for x time |  | x | x | x | x |
 | Elements \> Mask until unmasking |  | x | x | x | x |
 | Elements \> Allow unmasking |  | x | x | x | x |
 | Elements \> Simulation available |  | x | x | x | x |
@@ -82,7 +83,7 @@ The table below shows which user permissions are available in the default securi
 | Elements \> Data Display \> Configure matrix options |  | x | x | x | x |
 | Elements \> Data Display \> Spectrum \> Configure measurement points |  | x | x | x | x |
 | Elements \> Data Display \> Spectrum \> Configure scripts & monitors |  | x | x | x | x |
-| Elements \> Data Display \> Spectrum \> Edit / delete protected presets |  |  | x | x | x |
+| Elements \> Data Display \> Spectrum \> Edit/Delete protected presets |  |  | x | x | x |
 | Elements \> Data Display \> Spectrum \> Take device from other client |  |  | x | x | x |
 | Elements \> Data Display \> Spectrum \> Take priority over monitors |  |  | x | x | x |
 | Services \> ... |  |  | x | x | x |
@@ -103,7 +104,7 @@ The table below shows which user permissions are available in the default securi
 | Alarms \> Allow viewing of system events |  | x | x | x | x |
 | Alarms \> Extended context menu Alarm Console |  | x | x | x | x |
 | Alarms \> Extended view menu Alarm Console |  | x | x | x | x |
-| Alarms \> Edit / delete protected filters |  |  | x | x | x |
+| Alarms \> Edit/Delete protected filters |  |  | x | x | x |
 | Alarms \> Properties \> Add |  |  | x | x | x |
 | Alarms \> Properties \> Edit |  | x | x | x | x |
 | Alarms \> Properties \> Delete |  |  | x | x | x |
@@ -157,6 +158,7 @@ The table below shows which user permissions are available in the default securi
 | Modules \> Scheduler \> ... |  |  | x | x | x |
 | Modules \> Service templates \> ... |  |  | x | x | x |
 | Modules \> Services \> ... |  |  | x | x | x |
+| Modules \> Swarming |  |  | x | x | x |
 | Modules \> System configuration \> Agents \> UI available |  |  |  | x | x |
 | Modules \> System configuration \> Agents \> Add |  |  |  | x | x |
 | Modules \> System configuration \> Agents \> Delete |  |  |  | x | x |
@@ -172,9 +174,9 @@ The table below shows which user permissions are available in the default securi
 | Modules \> System configuration \> Agents \> Add DMA to cluster |  |  |  | x | x |
 | Modules \> System configuration \> Agents \> Delete DMA from cluster |  |  |  | x | x |
 | Modules \> System configuration \> Agents \> Install App packages |  |  |  | x | x |
-| Modules \> System configuration \> Agents \> Upgrade / restore |  |  |  | x | x |
+| Modules \> System configuration \> Agents \> Upgrade/Restore |  |  |  | x | x |
 | Modules \> System configuration \> Backup \> ... |  |  |  | x | x |
-| Modules \> System configuration \> Cloud sharing/gateway |  |  |  | x | x |
+| Modules \> System configuration \> Cloud Gateway |  |  |  | x | x |
 | Modules \> System configuration \> Database \> ... |  |  |  | x | x |
 | Modules \> System configuration \> Object Manager |  |  |  | x | x |
 | Modules \> System configuration \> Indexing Engine \> ... |  |  | x | x | x |
@@ -196,10 +198,10 @@ The table below shows which user permissions are available in the default securi
 | Modules \> System configuration \> Security \> Specific \> ... |  |  |  |  | x |
 | Modules \> System configuration \> Security \> View users from other groups | x | x | x | x | x |
 | Modules \> System configuration \> Security \> Group settings \> ... |  |  |  |  | x |
-| Modules \> System configuration \> Security \> Notifications / alerts \> UI available |  |  | x | x | x |
-| Modules \> System configuration \> Security \> Notifications / alerts \> Configure email |  |  | x | x | x |
-| Modules \> System configuration \> Security \> Notifications / alerts \> Configure SMS |  |  | x | x | x |
-| Modules \> System configuration \> Security \> Notifications / alerts \> Allow configuration of other users |  |  |  | x | x |
+| Modules \> System configuration \> Security \> Notifications/Alerts \> UI available |  |  | x | x | x |
+| Modules \> System configuration \> Security \> Notifications/Alerts \> Configure email |  |  | x | x | x |
+| Modules \> System configuration \> Security \> Notifications/Alerts \> Configure SMS |  |  | x | x | x |
+| Modules \> System configuration \> Security \> Notifications/Alerts \> Allow configuration of other users |  |  |  | x | x |
 | Modules \> System configuration \> SNMP Managers \> ... |  |  |  | x | x |
 | Modules \> System configuration \> System settings \> System settings available |  |  | x | x | x |
 | Modules \> System configuration \> System settings \> Credentials library \> ... |  |  |  | x | x |
@@ -208,9 +210,8 @@ The table below shows which user permissions are available in the default securi
 | Modules \> System configuration \> Tools \> Control background tasks of all users |  |  | x | x | x |
 | Modules \> System configuration \> Tools \> Allow access to query executor |  |  |  | x | x |
 | Modules \> System configuration \> Tools \> Best practices analyzer \> ... |  |  |  | x | x |
-| Modules \> Ticketing Gateway > ... |  | x | x | x | x |
 | Modules \> Trending \> ... |  | x | x | x | x |
-| Modules \> User-Defined APIs > ... |  | x | x | x | x |
+| Modules \> User-Defined APIs > ... |  |  | x | x | x |
 | Modules \> User-definable apps \> View apps |  | x | x | x | x |
 | Modules \> User-definable apps \> Add |  |  | x | x | x |
 | Modules \> User-definable apps \> Edit |  |  | x | x | x |

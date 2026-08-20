@@ -572,7 +572,7 @@ The following new placeholders are now also supported in an *Element* shape. The
 
 #### DataMiner Cube start window: Cleanup Cube Installation window \[ID 30351\]
 
-When you click the cogwheel icon in the bottom-right corner of the DataMiner Cube start window, you can now select the *Cleanup* option to open the *Cleanup Cube Installation* window. That window will allow you to remove old and/or unused Cube versions as well as to clear the Visio cache and the protocol cache.
+When you click the cogwheel icon in the lower-right corner of the DataMiner Cube start window, you can now select the *Cleanup* option to open the *Cleanup Cube Installation* window. That window will allow you to remove old and/or unused Cube versions as well as to clear the Visio cache and the protocol cache.
 
 #### Data Display: Extended support for launching elements, services, redundancy groups and views by clicking buttons in Data Display table cells \[ID 30413\]
 

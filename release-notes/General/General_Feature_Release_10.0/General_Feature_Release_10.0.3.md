@@ -385,7 +385,7 @@ Up to now, when no data could be displayed in a Line chart component, a general 
 
 When you take a full backup of your DataMiner System, from now on, the booking data stored in Indexing Engine will also be included.
 
-#### Outdated version number removed from DataMinerCubeStandAlone web page \[ID 24871\]
+#### Outdated version number removed from DataMinerCubeStandAlone webpage \[ID 24871\]
 
 Up to now, the following HTML file contained an outdated DataMiner Cube version number. That number has now been removed.
 

@@ -7,6 +7,17 @@ uid: EnableSwarming
 > [!TIP]
 > Instead of following the procedure detailed below, you can also follow the [Enabling Swarming tutorial](xref:Swarming_Tutorial_Enable). This tutorial uses a script to check whether prerequisites are met and provides an example of how to adjust other scripts and protocols in order to prepare your system for Swarming.
 
+## Supported features
+
+In the table below, you will find the required DataMiner version and any other requirements for the currently supported Swarming features.
+
+| Feature | DataMiner version | Note |
+|---------|---------|------|
+| [Basic elements](xref:SwarmingElements) | 10.5.1/10.6.0  | Requires Swarming to be enabled globally, as detailed below. |
+| [Bookings](xref:SwarmingBookings) | 10.4.4/10.5.0 | Requires the [*SwarmingBookings* soft-launch option](xref:SwarmingBookings). Also supported when Swarming is not enabled globally. Note that the same restrictions apply as for other [soft-launch features](xref:SoftLaunchOptions). |
+| DVEs, virtual functions, and parent elements | 10.5.11/10.6.0 | Requires Swarming to be enabled globally, as detailed below. Child elements cannot be swarmed directly; they follow the parent element. |
+| Automatic swarming (via [Node Recovery](xref:NodeRecovery_About)) | 10.6.0/10.6.3 | The [Node Recovery](xref:NodeRecovery_About) extension module must be [installed](xref:NodeRecovery_Installing) and [configured](xref:NodeRecovery_Triggers) to swarm on outages. |
+
 ## Prerequisites
 
 - DataMiner 10.5.1/10.6.0 or higher for swarming of basic elements. DataMiner 10.5.11/10.6.0 for swarming of DVEs or virtual function parent or child elements.
@@ -101,10 +112,10 @@ To enable Swarming using SLNetClientTest tool:
 
 1. Make sure that the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission is enabled for users that need to be able to swarm DataMiner objects (see [Configuring a user group](xref:Configuring_a_user_group)).
 
-   Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded to version 10.5.1/10.6.0 or higher.
+   Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--export-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded to version 10.5.1/10.6.0 or higher.
 
 > [!IMPORTANT]
-> The migrated element files will be **temporarily** backed up in the *Recycle Bin* (e.g., *2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip*). We recommend that you store these files somewhere safe if you ever want to access these again later or if you want to be able to [partially roll back Swarming](wref:SwarmingRollback).
+> The migrated element files will be **temporarily** backed up in the *Recycle Bin* (e.g., *2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip*). We recommend that you store these files somewhere safe if you ever want to access these again later or if you want to be able to [partially roll back Swarming](xref:SwarmingRollback).
 
 ## Verifying whether Swarming has been activated
 

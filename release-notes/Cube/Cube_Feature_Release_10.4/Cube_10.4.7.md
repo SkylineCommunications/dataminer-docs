@@ -48,4 +48,4 @@ When Cube was still loading when a visual overview page was opened, in some case
 
 When, in <https://admin.dataminer.services/>, remote access to DataMiner Cube was disabled, Cube's login screen would remain stuck at *Logging on...* indefinitely. From now on, when remote access to DataMiner Cube is disabled, Cube's login screen will show an `APIGateway is unavailable` message instead.
 
-Also, it would no longer be possible to access the *About* window and the logging window by clicking the bottom-right cogwheel button on Cube's login screen. This has now also been fixed.
+Also, it would no longer be possible to access the *About* window and the logging window by clicking the lower-right cogwheel button on Cube's login screen. This has now also been fixed.

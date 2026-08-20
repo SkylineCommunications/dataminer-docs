@@ -139,7 +139,7 @@ From now on, Cube will use Chromium as the default browser engine. When that eng
 
 Although it will remain possible to configure that a different browser should be used for specific protocols, it will no longer be possible to configure that a different browser should be used for apps like Dashboards or Ticketing. Those apps will now always use the default browser engine.
 
-When, on a Visio page, you configured a shape to display a web page, that web page will now also by default be rendered using the Chromium browser engine. However, if you want to explicitly specify the browser engine to be used, then add a shape data field of type *Options* to the shape and set its value to either “UseChrome” or “UseIE”.
+When, on a Visio page, you configured a shape to display a webpage, that webpage will now also by default be rendered using the Chromium browser engine. However, if you want to explicitly specify the browser engine to be used, then add a shape data field of type *Options* to the shape and set its value to either “UseChrome” or “UseIE”.
 
 > [!NOTE]
 > Cube also use the default browser engine when displaying annotations.

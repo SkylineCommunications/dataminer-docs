@@ -1,20 +1,21 @@
 ---
 uid: VSAT_deployment
+description: Learn how to deploy the EPM VSAT installation package from the DataMiner Catalog and configure it afterwards.
 ---
 
 # EPM VSAT deployment
 
-This page outlines the procedure for deploying the DataMiner EPM VSAT package on an **empty DataMiner System**. It provides step-by-step guidance for configuring VSAT collectors, the EPM setup, and peripheral integrations to ensure a fully operational VSAT management system.
+This page outlines the procedure for deploying the EPM VSAT package on an **empty DataMiner System**. It provides step-by-step guidance for configuring VSAT collectors, the EPM setup, and peripheral integrations to ensure a fully operational VSAT management system.
 
 ## Package deployment
 
-Start by deploying the DataMiner EPM VSAT package to the system:
+Start by deploying the EPM VSAT package to the system:
 
-1. Go to the [DataMiner EPM VSAT](https://catalog.dataminer.services/details/4879501c-9716-4a33-8846-ff1835fef7ea) package in the Catalog.
+1. Go to the [EPM VSAT](https://catalog.dataminer.services/details/4879501c-9716-4a33-8846-ff1835fef7ea) package in the Catalog.
 
 1. Click the *Deploy* button to [deploy the package](xref:Deploying_a_catalog_item) on your DMA.
 
-This will install the connectors, automation scripts, and Visio drawings needed to create and configure the DataMiner EPM VSAT Solution.
+This will install the connectors, automation scripts, and Visio drawings needed to create and configure the EPM VSAT Solution.
 
 ## Collectors configuration
 
@@ -62,17 +63,17 @@ This will install the connectors, automation scripts, and Visio drawings needed 
 
 ## EPM configuration
 
-Follow the steps below to set up the **front-end and back-end elements**:
+Follow the steps below to set up the **frontend and backend elements**:
 
-1. In DataMiner Cube, create the front-end and back-end elements using the *Skyline EPM Platform VSAT GEO* connector.
+1. In DataMiner Cube, create the frontend and backend elements using the *Skyline EPM Platform VSAT GEO* connector.
 
    Make sure you carefully plan your elements across the DMS. For more info, see [EPM VSAT architecture](xref:VSAT_architecture). You will configure these elements in a later step.
 
-1. For each of the collectors, the front end, and the back-end elements, right-click the element, select *Properties*, and take note of the element ID (in the format "DMAID/ElementID") displayed in the *Properties* window.
+1. For each of the collectors, the frontend, and the backend elements, right-click the element, select *Properties*, and take note of the element ID (in the format "DMAID/ElementID") displayed in the *Properties* window.
 
    You will need these IDs in the next steps to configure the EPM elements.
 
-1. Configure the **front-end element**:
+1. Configure the **frontend element**:
 
    1. Go to the *Visual* > *configuration* page of the element, and select the *settings* tab.
 
@@ -87,7 +88,7 @@ Follow the steps below to set up the **front-end and back-end elements**:
       | File Export Path            | A shared folder path, for example `C:\EPM\Documents\GEO`    |
 
    1. Select the *assignments* tab.
-      
+
    1. Add the element IDs (in DMAID/ElementID format) to the *Frontend Assignments* table.
 
    1. Add the element IDs (in DMAID/ElementID format) to the *Backend Assignments* table.
@@ -95,9 +96,9 @@ Follow the steps below to set up the **front-end and back-end elements**:
    1. Add the element IDs (in DMAID/ElementID format) to the *Collector Assignments* table.
 
    > [!NOTE]
-   > On the DMA hosting the front-end element, now is a good time to share the folder defined above for other DMAs to reference in the DMS. In most cases, you can leave the folder type as "Local" and use a remote path if permissions are defined the same across the DMAs in the system. Otherwise, you can set the directory type to *Remote* and use the file handling credentials to define a username/password.
+   > On the DMA hosting the frontend element, now is a good time to share the folder defined above for other DMAs to reference in the DMS. In most cases, you can leave the folder type as "Local" and use a remote path if permissions are defined the same across the DMAs in the system. Otherwise, you can set the directory type to *Remote* and use the file handling credentials to define a username/password.
 
-1. Configure each of the **back-end elements** in a similar way:
+1. Configure each of the **backend elements** in a similar way:
 
    1. Go to the *Visual* > *configuration* page of the element, and select the *settings* tab.
 
@@ -106,9 +107,9 @@ Follow the steps below to set up the **front-end and back-end elements**:
       | Parameter                   | Value                       |
       |-----------------------------|:---------------------------:|
       | Element Manager Type        | `Backend`                   |
-      | File Config Export Path     | Shared folder of front end. |
-      | File Import Path            | Shared folder of front end. |
-      | File Export Path            | Shared folder of front end. |
+      | File Config Export Path     | Shared folder of frontend. |
+      | File Import Path            | Shared folder of frontend. |
+      | File Export Path            | Shared folder of frontend. |
 
    1. Select the *assignments* tab.
 
@@ -117,18 +118,18 @@ Follow the steps below to set up the **front-end and back-end elements**:
    1. Add the element IDs (in DMAID/ElementID format) to the *Collector Assignments* table.
 
       > [!NOTE]
-      > The back-end element should only be configured for **collector elements hosted by the same DMA**.
+      > The backend element should only be configured for **collector elements hosted by the same DMA**.
 
-1. For the front-end element and each of the back-end elements, on the **Configuration** page, select the *settings* tab and set the provisioning status to *Enabled*.
+1. For the frontend element and each of the backend elements, on the **Configuration** page, select the *settings* tab and set the provisioning status to *Enabled*.
 
 1. Restart the collectors and EPM elements to complete the initial configuration.
 
 > [!NOTE]
-> To assist with troubleshooting, you can enable the *Debug* parameter. This will activate debugging for all elements (collectors, front end, and back end).
+> To assist with troubleshooting, you can enable the *Debug* parameter. This will activate debugging for all elements (collectors, frontend, and backend).
 
 ## Peripherals configuration
 
-The DataMiner EPM VSAT package includes optional connectors that can be installed upon customer request. These peripherals enhance the system's functionality by integrating additional external data sources and tools.
+The EPM VSAT package includes optional connectors that can be installed upon customer request. These peripherals enhance the system's functionality by integrating additional external data sources and tools.
 
 ### Skyline Universal Weather
 
@@ -144,6 +145,6 @@ This connector will calculate and forecast sun interference for satellite commun
 
 ### DataMiner Planned Maintenance Tool
 
-While not included in the DataMiner EPM VSAT package, the DataMiner Planned Maintenance Tool is often installed alongside the EPM system to enhance operational maintenance capabilities.
+While not included in the EPM VSAT package, the DataMiner Planned Maintenance Tool is often installed alongside the EPM system to enhance operational maintenance capabilities.
 
 For more details, refer to [The DataMiner Planned Maintenance (PLM) tool](xref:DataMiner_PLM_Tool_Overview).

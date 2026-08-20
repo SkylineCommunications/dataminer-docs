@@ -20,7 +20,7 @@ All EPM tables shown in Visual Overview are now updated every 30 seconds so that
 
 #### New EPM configuration script \[ID 32538\]
 
-A new script has been created that configures DataMiner with front-end element data, so that it does not need to perform a search of all elements to find the front-end manager. The EPM front end will start the script on startup to ensure that the front end is configured correctly.
+A new script has been created that configures DataMiner with frontend element data, so that it does not need to perform a search of all elements to find the frontend manager. The EPM frontend will start the script on startup to ensure that the frontend is configured correctly.
 
 ## Changes
 

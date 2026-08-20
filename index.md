@@ -1,6 +1,7 @@
 ---
 uid: docs_dataminer_services
 _layout: landing
+description: Official DataMiner documentation portal with user, developer, and solution guides, plus tutorials and resources for community-driven contributions.
 ---
 
 # docs.dataminer.services

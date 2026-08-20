@@ -12,7 +12,7 @@ This document sets out the terms of Skyline's Support Services for its Software 
 
 For the purpose of these Terms, the following terms shall have the meanings indicated below:
 
-- "**Business Hours**" means 9:00 AM until 4:30 PM, Monday through Friday, in the time zone of the geographically closest [offices](https://skyline.be/contact) of Skyline (Izegem, Lisbon, Miami, or Singapore), excluding respective public holidays.
+- "**Business Hours**" means 9:00 AM until 4:30 PM, Monday through Friday, in the time zone of the geographically closest [offices](https://skyline.be/contact) of Skyline (Izegem, Lisbon, Sarajevo, Miami, or Singapore), excluding respective public holidays.
 
 - "**Service Credit(s)**" means credits that can be utilized by the User for one of the following services: optimization services, performance reviews, architecture reviews, design workshops, or other consultancy services.
 

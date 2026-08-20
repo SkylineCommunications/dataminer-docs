@@ -8,7 +8,7 @@ For SNMPv3 connections, you can specify the following connection settings while 
 
 - **SNMP version**: Allows you to select a different SNMP version than the version configured in the protocol. With an SNMPv3 type protocol, you can select SNMPv2 or SNMPv3.
 
-- **Site**: The remote site. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and remote sites are configured. For more information, refer to [Site Manager](xref:SiteManagerOverview).
+- **Site**: The remote location. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and remote locations are configured. For more information, refer to [Edge Manager](xref:EdgeManagerOverview).
 
 - **IP address/host**: The polling IP or URL of the destination.
 
@@ -19,7 +19,7 @@ For SNMPv3 connections, you can specify the following connection settings while 
 
 - **Port number**: By default 161.
 
-- **Use credentials**: If predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication).
+- **Use credentials**: If predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Credentials Library](xref:Credentials_Library).
 
 - **Security level and protocol**: Select one of the following three levels in the dropdown list:
 

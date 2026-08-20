@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU14
 ---
 
-# General Main Release 10.5.0 CU14 - Preview
+# General Main Release 10.5.0 CU14
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > Before you upgrade to this DataMiner version:
@@ -54,15 +54,15 @@ This file, located in `%SystemRoot%\System32\winevt\Logs\`, is the primary Windo
 
 From now on, the *SLWatchDog2.txt* log file will contain more detailed logging regarding run-time errors.
 
-#### 'Functions' and 'Helper' folders will no longer be checked when protocols are being loaded [ID 44946]
+#### 'Functions' and 'Help' folders will no longer be checked when protocols are being loaded [ID 44946]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 Before a DataMiner Agent starts loading protocol files during startup, it checks the protocol version folders to determine the location of all protocol files to be loaded. When a version folder does not contain any protocol files, it will log the following error: `Directory found for protocol xxx with version yyy but no protocol file found in path.`
 
-Up to now, apart from the protocol version folders, the DataMiner Agent would also incorrectly check the *Functions* and *Helper* folders. However, as these folders do not contain any protocol files, this would result in a large number of invalid errors being logged.
+Up to now, apart from the protocol version folders, the DataMiner Agent would also incorrectly check the *Functions* and *Help* folders. However, as these folders do not contain any protocol files, this would result in a large number of invalid errors being logged.
 
-From now on, when DataMiner starts up, it will no longer check for protocol files in the *Functions* and *Helper* folders.
+From now on, when DataMiner starts up, it will no longer check for protocol files in the *Functions* and *Help* folders.
 
 #### BrokerGateway DxM has been upgraded to Microsoft .NET 10 [ID 44979]
 
@@ -132,6 +132,14 @@ Up to now, the SLA cleaning thread would incorrectly remove history data for an 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 Up to now, native MessageBroker clients would not order the IP addresses in *SLCloud.xml* correctly. From now on, local IP addresses will again be put at the top of the list.
+
+#### Failover: Incorrect alarm would be generated at regular intervals when SLNet-managed NATS solution was used [ID 44908]
+
+<!-- MR 10.5.0 [CU14] - FR TBD -->
+
+On a DataMiner System that included a Failover setup that was still using the legacy SLNet-managed NATS solution, up to now, the following alarm would incorrectly be generated at regular intervals after an upgrade or a Failover switch:
+
+`Failover agent <IP> is experiencing sync issues. Check the Failover status.`
 
 #### Alarm severity change within two minutes after an element start or restart would be processed incorrectly [ID 44917]
 

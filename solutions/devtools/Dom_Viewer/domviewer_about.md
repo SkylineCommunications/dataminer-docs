@@ -1,5 +1,6 @@
 ---
 uid: domviewer_about
+description: Explore the DOM Viewer, a low-code application that provides insight in and control over your DOM definitions and instances.
 ---
 
 # DOM Viewer

@@ -4,7 +4,7 @@ uid: Working_with_the_trend_groups_pane
 
 # Working with the trend groups pane
 
-In the trend group pane on the left-hand side, you can add or delete trend groups, or select trend groups to view and update them.
+In the trend group pane on the left, you can add or delete trend groups, or select trend groups to view and update them.
 
 ## Adding a trend group
 
@@ -26,7 +26,7 @@ To add a trend group:
 
    This description will be shown under the name of the group in the trend group pane.
 
-![Adding a trend group](~/dataminer/images/Add_Trend_Group.png)<br>*Saving a trend group in DataMiner 10.4.5*
+![Adding a trend group](~/dataminer/images/Add_Trend_Group.png)<br>*Saving a trend group in DataMiner 10.6.5*
 
 > [!NOTE]
 > Alternatively, you can also add parameters in the parameter pane and click the *Save as* button to save these as a trend group.

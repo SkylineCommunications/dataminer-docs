@@ -60,13 +60,13 @@ If you specify the following, the name of the automation script, indicated by th
 <HyperLink valueParsing="Set by Automation Script [1] to *">ExecuteScript.exe -n [1]</HyperLink>
 ```
 
-If you specify the following, a web page will be opened:
+If you specify the following, a webpage will be opened:
 
 ```xml
 <HyperLink>http://www.skyline.be</HyperLink>
 ```
 
-If you specify the following, a web page will be opened and the alarm ID will be passed to that page:
+If you specify the following, a webpage will be opened and the alarm ID will be passed to that page:
 
 ```xml
 <HyperLink>http://intranet/troubleticket.aspx?ID=[ALARMID]</HyperLink>

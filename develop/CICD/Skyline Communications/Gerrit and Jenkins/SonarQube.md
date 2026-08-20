@@ -11,7 +11,7 @@ SonarQube performs C# code analysis on all QActions of a protocol or C# Exe bloc
 
 ## Using SonarQube
 
-You can go to SonarQube via Jenkins, either by clicking the *SonarQube* link in the menu on the left-hand side or by clicking the SonarQube icon in the *Build History* overview.
+You can go to SonarQube via Jenkins, either by clicking the *SonarQube* link in the menu on the left or by clicking the SonarQube icon in the *Build History* overview.
 
 > [!NOTE]
 > The SonarQube icon in the Build History overview is only displayed for pipeline executions that were able to perform the SonarQube analysis pipeline step.

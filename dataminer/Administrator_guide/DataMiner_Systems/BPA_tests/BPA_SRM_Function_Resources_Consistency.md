@@ -1,5 +1,6 @@
 ---
 uid: BPA_SRM_Function_Resources_Consistency
+description: "Learn about the SRM Function Resources Consistency BPA test, which checks for inconsistencies and other possible configuration issues."
 ---
 
 # SRM Function Resources Consistency

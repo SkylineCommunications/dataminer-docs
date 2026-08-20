@@ -20,7 +20,33 @@ Multiple pairs can be defined in a protocol (in the Pairs tag), each defined usi
 
 This pair can then be added to a group which in turn is added to a timer. In the following example, the timer will add the group to the group execution queue at the specified interval.
 
-![Timer executing a pair](~/develop/images/Connection_Types_-_Pairs_Building_Blocks.svg)
+```mermaid
+flowchart LR
+    subgraph timerBox["Timer 1"]
+
+        G1["Group 1"]
+    end
+    subgraph groupBox["Group 1"]
+
+        S1["Pair 1"]
+    end
+    subgraph pairBox["Pair 1"]
+    end
+
+    G1 --> groupBox
+    S1 --> pairBox
+
+    classDef infoText fill:none,stroke:none,color:#FFFFFF
+    classDef infoTextBlack fill:none,stroke:none,color:#000000
+    class groupDesc,sessionDesc infoText
+    class timerDesc infoTextBlack
+
+    style timerBox fill:#EFF6FF,stroke:#DBEAFE,color:#000000
+    style groupBox fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style pairBox fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style G1 fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style S1 fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+```
 
 > [!NOTE]
 >

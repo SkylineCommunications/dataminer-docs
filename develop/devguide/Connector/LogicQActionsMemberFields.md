@@ -10,7 +10,7 @@ A static entry point method can use static members of the QAction class. Static 
 > Static fields are only shared between elements with the same protocol version that are running in the same SLScripting process.
 
 > [!IMPORTANT]
-> From DataMiner 10.6.3/10.7.0 onwards<!-- RN 44420 -->, multiple SLScripting processes are active by default. This causes unexpected behavior when static fields are used to share data as not all elements running the same protocol will be located in the same SLScripting process. Furthermore, restarting the element can cause it to move to another SLScripting process. Because of this, **static fields should not be used to exchange data between elements running the same protocol**. If protocols have been developed with the assumption that all elements are running in the same SLScripting process, you can [configure DataMiner to only use one SLScripting process](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes). However, we strongly recommend adapting such problematic protocols according to the approach described under [Sharing and persisting data](#sharing-and-persisting-data), as this will allow DataMiner to use multiple SLScripting processes and increases overall resilience.
+> From DataMiner 10.6.0 [CU3]/10.6.3 onwards<!-- RN 44420 -->, multiple SLScripting processes are active by default. This causes unexpected behavior when static fields are used to share data as not all elements running the same protocol will be located in the same SLScripting process. Furthermore, restarting the element can cause it to move to another SLScripting process. Because of this, **static fields should not be used to exchange data between elements running the same protocol**. If protocols have been developed with the assumption that all elements are running in the same SLScripting process, you can [configure DataMiner to only use one SLScripting process](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes). However, we strongly recommend adapting such problematic protocols according to the approach described under [Sharing and persisting data](#sharing-and-persisting-data), as this will allow DataMiner to use multiple SLScripting processes and increases overall resilience.
 
 An instance entry point method can use both static and instance fields.
 
@@ -27,7 +27,7 @@ All scenarios below assume that the data does **not** need to persist when the e
 - **Between elements running the same protocol**: Use a **static QAction** and share data via [**InterApp calls**](xref:InterAppCalls_Introduction).
 
   > [!IMPORTANT]
-  > Do **not** share data between elements running the same protocol version using static fields. This approach does not work when DataMiner uses multiple SLScripting processes, which is the default starting from DataMiner 10.6.3/10.7.0<!--RN 44420-->.
+  > Do **not** share data between elements running the same protocol version using static fields. This approach does not work when DataMiner uses multiple SLScripting processes, which is the default starting from DataMiner 10.6.0 [CU3]/10.6.3 <!--RN 44420-->.
 
 - **Within a single element across multiple executions of the same QAction**: Use an **instanced QAction** and share data through a **non-static field**.
 

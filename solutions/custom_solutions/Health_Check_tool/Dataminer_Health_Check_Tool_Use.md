@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Health_Check_Usage
+description: Use the DataMiner Health Check Tool to review key metrics, manage the configuration of tests and subscriptions, and configure test result cleanup.
 ---
 
 # Using the DataMiner Health Check Tool

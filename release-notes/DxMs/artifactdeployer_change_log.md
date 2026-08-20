@@ -4,6 +4,18 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 11 June 2026 - Enhancement - ArtifactDeployer 1.9.2 - Upgrade to .NET 10
+
+ArtifactDeployer has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
+
+#### 22 May 2026 - Enhancement - ArtifactDeployer 1.9.1 - MessageBroker dependency updated: ForcedEndpoints support
+
+ArtifactDeployer now supports the use of the `ForcedEndpoints` setting in *MessageBrokerConfig.json*. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
+
+#### 14 April 2026 - Enhancement - ArtifactDeployer 1.8.8 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 28 August 2025 - Enhancement - ArtifactDeployer 1.8.7 - Dependencies updated
 
 Several dependencies have been updated.

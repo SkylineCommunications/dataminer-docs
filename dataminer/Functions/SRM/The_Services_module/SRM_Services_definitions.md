@@ -57,7 +57,7 @@ On this page, you can configure the different virtual functions in the service t
 
 To do so:
 
-1. From the *Functions* list on the left-hand side of this tab, which lists all virtual function definitions available in the system, drag and drop the necessary virtual function definitions to the diagram pane on the right.
+1. From the *Functions* list on the left side of this tab, which lists all virtual function definitions available in the system, drag and drop the necessary virtual function definitions to the diagram pane on the right.
 
    The virtual function definitions you added will serve as nodes in the diagram, representing the virtual functions in the service.
 

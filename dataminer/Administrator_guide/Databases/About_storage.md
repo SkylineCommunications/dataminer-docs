@@ -1,5 +1,6 @@
 ---
 uid: About_storage
+description: "Learn about DataMiner storage options and why Storage as a Service is the recommended choice for scalable, low-maintenance storage."
 ---
 
 # About storage
@@ -31,5 +32,5 @@ Instead of a dedicated clustered storage setup, older systems often still use **
 
 > [!NOTE]
 >
-> - When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the file size of these offloads in the file [DBConfiguration.xml](xref:DBConfiguration_xml).
+> - When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the file size of these offloads in the file [DB.xml](xref:DB_xml#configuring-a-size-limit-for-file-offloads).
 > - You can also configure [data offloads to a separate database or to files](xref:Offload_database), for example in order to produce all kinds of reports without interfering with the live DataMiner System.

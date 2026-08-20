@@ -401,7 +401,7 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
   | ![SLA icon](~/release-notes/images/CubeXSLA.png)                      | SLA              |
   | ![view icon](~/release-notes/images/CubeXView.png)                    | View             |
 
-  If an alarm is present on an element, service, redundancy group or SLA, this is indicated by a colored circle in the bottom-right corner of the icon. For a view, the entire icon is colored according to the alarm severity.
+  If an alarm is present on an element, service, redundancy group or SLA, this is indicated by a colored circle in the lower-right corner of the icon. For a view, the entire icon is colored according to the alarm severity.
 
   However, note that these new icons do not support latch level, aggregation level and split view level indications. As such, a new user setting is available, *Use modern icons*, which can be cleared to use the previous icons again.
 

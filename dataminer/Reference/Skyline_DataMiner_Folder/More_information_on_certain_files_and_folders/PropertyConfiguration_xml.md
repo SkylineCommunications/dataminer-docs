@@ -4,21 +4,13 @@ uid: PropertyConfiguration_xml
 
 # PropertyConfiguration.xml
 
-In the *PropertyConfiguration.xml* file, you can define custom properties to be linked to elements, parameters and alarms.
+In the *PropertyConfiguration.xml* file, you can find the custom properties defined for elements, services, views, and alarms. This file is synchronized across the cluster. It is located in the folder `C:\Skyline DataMiner\`.
 
-- This file is located in the following folder: `C:\Skyline DataMiner\`
+To create or edit custom properties, **use DataMiner Cube**. See [Managing custom properties](xref:Managing_element_properties) and [Changing custom alarm properties](xref:Changing_custom_alarm_properties).
 
-Several custom options can be configured in this file:
+To create read-only alarm properties on a parameter that will get their value from another parameter in that same protocol, configure the [propertyNames](xref:Protocol.Params.Param.Alarm-options#propertynames) option in the protocol.
 
-- [Customizing how properties are displayed in the Surveyor](#customizing-how-properties-are-displayed-in-the-surveyor)
-
-- [Configuring alarm properties to motivate actions](#configuring-alarm-properties-to-motivate-actions)
-
-- [Configuring properties for Alarm Console grouping](#configuring-properties-for-alarm-console-grouping)
-
-- [Disabling alarm updates for changes of read-only alarm properties](#disabling-alarm-updates-for-changes-of-read-only-alarm-properties)
-
-- [Having a property value copied to an alarm field](#having-a-property-value-copied-to-an-alarm-field)
+Direct configuration of properties in *PropertyConfiguration.xml* is only needed for a couple of custom options that are not available in DataMiner Cube, as detailed below.
 
 ## Customizing how properties are displayed in the Surveyor
 
@@ -78,36 +70,6 @@ To do so:
      <Entry metric="0">Silver</Entry>
      <Entry metric="0">Bronze</Entry>
    </Property>
-   ```
-
-1. If the DMA is part of a cluster of several DMAs, force a synchronization of the file *PropertyConfiguration.xml* throughout your DataMiner System:
-
-   1. In DataMiner Cube, go to *Apps* > *System Center*.
-
-   1. Go to the *Tools* tab and select *synchronization*.
-
-   1. In the dropdown list next to *Type*, select *File*.
-
-   1. In the *File* box, specify the following path: `C:\Skyline DataMiner\PropertyConfiguration.xml`.
-
-   1. Click the *Sync now* button.
-
-1. Restart DataMiner.
-
-## Disabling alarm updates for changes of read-only alarm properties
-
-In a DataMiner protocol, a property can be configured on a parameter to get its value from another parameter in that same protocol. This property will then be available as a read-only property in the system.
-
-To disable alarm updates on changes of such a read-only property:
-
-1. Open the file `C:\Skyline DataMiner\PropertyConfiguration.xml`.
-
-1. In the XML file, set the attribute *doUpdateAlarmOnValueChange* for the relevant property to `false`.
-
-   For example:
-
-   ```xml
-   <Property type="Alarm" name="Hidden" readOnly="true" filterEnabled="true" doUpdateAlarmOnValueChange="false" id="19"/>
    ```
 
 1. If the DMA is part of a cluster of several DMAs, force a synchronization of the file *PropertyConfiguration.xml* throughout your DataMiner System:

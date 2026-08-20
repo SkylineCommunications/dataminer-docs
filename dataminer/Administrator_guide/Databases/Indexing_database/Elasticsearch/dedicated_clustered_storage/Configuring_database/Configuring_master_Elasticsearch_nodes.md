@@ -1,5 +1,6 @@
 ---
 uid: Configuring_master_Elasticsearch_nodes
+description: "Find out how to configure the master nodes in an Elasticsearch cluster. Make sure to check the best practices."
 ---
 
 # Configuring the master nodes

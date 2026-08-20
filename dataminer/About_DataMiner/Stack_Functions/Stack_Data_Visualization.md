@@ -1,5 +1,6 @@
 ---
 uid: Stack_Data_Visualization
+description: Enhance data visualization with spectrum analysis, Microsoft Visio, event correlation, fault management, real-time dashboards, and various low-code apps.
 ---
 
 # Data Visualization

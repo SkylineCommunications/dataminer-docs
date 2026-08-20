@@ -1,6 +1,6 @@
 ---
 uid: Pricing_Commercial_Models
-description: DataMiner is available in two commercial models, i.e., perpetual-use licenses or usage-based services, combined with your preferred deploy model.
+description: "Compare DataMiner commercial and deploy models, review perpetual-use and usage-based options, and choose the fit for your system."
 ---
 
 # Commercial & deploy models summary
@@ -42,7 +42,7 @@ When you create a new organization and [your first DataMiner System](xref:Creati
 | Subscription&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Included&nbsp;Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Expiration |
 |--|--|--|
 | **Community Edition** | - 25 standard managed objects<br>- 5,000 light managed objects<br>- 200,000 unmanaged objects<br>- 5 connectors<br>- 4,000 automation actions<br>- 20 Shares | Free. Renews every **12 months**. |
-| **Hosted Community Edition** | - 30,000 alarm updates<br>- 30,000 information events<br>- 40M trend data points<br>- 10M element data updates (STaaS)<br>- 1M metrics (DaaS) | Free for **7 days**, then 480 EUR or 660 USD per month (depending on the end‑user region), with two months free when subscribing for a year. |
+| **Hosted Community Edition** | - 100,000 alarm updates<br>- 200,000 information events<br>- 40M trend data points<br>- 10M element data updates (STaaS)<br>- 1M metrics (DaaS) | Free for **7 days**, then 480 EUR or 660 USD per month (depending on the end‑user region), with two months free when subscribing for a year. |
 
 #### Scaling up
 
@@ -60,6 +60,7 @@ Usage-based services are charged based on the actual monthly usage of services, 
 | Failover | Server-based license. | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
 | Optional functions | Licensed per node. | Not applicable. All optional functions are included. |
 | Automation & orchestration | Based on the volume of concurrent services running. | Based on the automation volume. |
+| Object Modeling | All customer‑specific object models and object instances are included (provided the system is licensed for Tier-2). <br>Exception: objects belonging to Skyline Solutions or Standard Data Models (e.g., MediaOps, Ticketing) are charged as usage‑based services. | Charged as usage-based services. Charges apply for DOM creations (service: Automation Actions) and DOM capacity (service: Unmanaged Objects).|
 | Connectors | Single connector license fee for new and existing connectors. One connector license per different, interfaced product, per DataMiner System (DMS). | Charged per connector used per month. |
 | Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [Support plans](xref:Overview_Support_Plans)). |
 | DataMiner Probes | Server-based licenses, each with fixed capacity tiers of managed objects.  | N/A |

@@ -1,16 +1,17 @@
 ---
 uid: Installing_the_DataMiner_PTP_app
+description: Deploy the PTP package from the DataMiner Catalog, set up the app, and configure all necessary settings.
 ---
 
-# Installing the DataMiner PTP app
+# Installing the PTP app
 
 ## Deploying the package
 
-To deploy or upgrade the DataMiner PTP app:
+To deploy or upgrade the PTP app:
 
 ### [From DataMiner PTP 1.1.4 onwards](#tab/tabid-1)
 
-Deploy the [DataMiner PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the Catalog.
+Deploy the [PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the Catalog.
 
 ### [Prior to DataMiner PTP 1.1.4](#tab/tabid-2)
 
@@ -39,9 +40,9 @@ To set up and configure the DataMiner PTP app:
 
    Either select *Create a new view* or select *Use existing view* and select the view in the dropdown list, and click *Confirm*.
 
-1. On the following page, which informs you that the wizard will now create the DataMiner PTP app, click *Confirm*. If necessary, you can also abort the wizard by clicking *Abort* in the bottom-right corner.
+1. On the following page, which informs you that the wizard will now create the DataMiner PTP app, click *Confirm*. If necessary, you can also abort the wizard by clicking *Abort* in the lower-right corner.
 
-1. On the following page, which informs you that the wizard will now configure the DataMiner PTP app, click *Confirm*. If necessary, you can also abort the wizard by clicking *Abort* in the bottom-right corner.
+1. On the following page, which informs you that the wizard will now configure the DataMiner PTP app, click *Confirm*. If necessary, you can also abort the wizard by clicking *Abort* in the lower-right corner.
 
 1. On the following page, select the pages that the PTP app should display, and click *Next*.
 

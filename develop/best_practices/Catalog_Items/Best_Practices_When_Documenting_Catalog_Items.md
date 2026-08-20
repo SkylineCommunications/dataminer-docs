@@ -24,14 +24,123 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 
 1. [Use Cases](#use-cases-section) *(optional)*
 
-1. [Prerequisites](#prerequisites-section) *(optional)*
+1. [Prerequisites](#prerequisites-section)
 
 1. [Technical Reference](#technical-reference-section) *(optional)*
 
    Link to public documentation for more extensive info when necessary.
 
+Depending on the size and complexity of your Catalog item, you can **combine or exclude some sections**. For example, for a very simple item you could leave out the Use Cases section but mention this information under Key Features.
+
 > [!NOTE]
-> Depending on the size and complexity of your Catalog item, you can combine or exclude some sections. For example, for a very simple item you could leave out the Use Cases section but mention this information under Key Features.
+> Avoid including a reference to support or contact details, because it is the rule of thumb for users to reach out to our [DataMiner Support team](xref:Contacting_tech_support). As an Owner or team, you can still add your email address in the [Manifest file](xref:Register_Catalog_Item#manifest-file).
+
+### About section
+
+**Purpose:** Summarize what makes the item valuable and why users should deploy it. Address the problems it solves and its primary benefits.
+
+**Format:** A relatively short piece of text that is easy to read and understand.
+
+**Do's:**
+
+- Limit the content to the **essentials**, and keep it short and well organized. When required for clarity, you can optionally divide the text over a few paragraphs.
+- Keep the tone **professional**, focused on **motivating** user adoption.
+- Highlight important points with **bold text**.
+- **Organize content** from broad benefits to specific features and practical applications.
+- Use **accessible language** for both technical and non-technical readers.
+- Make use of visual **[alerts](xref:CTB_Markdown_Syntax#alerts)** where applicable.
+
+**Don'ts:**
+
+- Avoid **excessive technical details**; link to reference documentation instead.
+- Avoid jargon or **overly complex language** that could obscure the message.
+- Avoid **excessive** amounts of **bold text and/or alerts**, as these then lose their purpose of drawing the reader's attention.
+- Do not refer to **generic DataMiner benefits** such as alarming and trending. Instead focus on the value this specific item brings.
+- Do not **duplicate** points mentioned in the **Key Features** and **Use Cases** sections.
+
+### Key Features section
+
+**Purpose:** **Product-centric**. Outline the main features that distinguish the item, focusing on functionality and unique benefits.
+
+**Format:** Maximum of 5 features. Focus on those features that are most relevant for the user: quality over quantity.
+
+**Do's:**
+
+- Use direct, **benefit-oriented** language.
+- Ensure that each feature relates to **specific value** for the user.
+- Use **action verbs** (such as "Monitor", "Track", etc.).
+- Prioritize features that **differentiate** the item.
+
+**Don'ts:**
+
+- Avoid **excessive detail** or vague descriptors like "high-performance" without specific context.
+- Avoid adding key features that **do not specifically relate to the item**, but that are general to DataMiner (for example, the benefits of having alarms for your equipment, which is already a key feature of DataMiner itself).
+
+### Use Cases section
+
+**Purpose:** **User-centric**. Demonstrate practical, real-world scenarios where the solution provides value.
+
+**Format:** Typically, the package is designed to solve specific problems for users. Explain this clearly with accompanying visuals. Optionally, provide a link to a [use case on DataMiner Dojo](https://community.dataminer.services/use-cases/).
+
+**Do's:**
+
+- Connect examples to **common challenges** that users face (e.g., remote connectivity, high data usage).
+- Use **specific, relatable examples**, such as "Monitor remote satellite terminals in real-time".
+
+**Don'ts:**
+
+- Avoid **hypothetical scenarios**. Make sure the examples are relevant to the typical user base, showing the value of the item.
+- Do not **duplicate** points covered in the **Key Features** section.
+
+### Prerequisites section
+
+**Purpose:** List essential technical requirements needed for deployment.
+
+**Format:** Use concise bullet points, limited to information that is strictly necessary.
+
+**Applicable requirements**: Mention the following requirements if they apply for the package:
+
+- **Minimum/Maximum DataMiner version**:
+  - Only mention the minimum DataMiner version if it is a [**currently supported** DataMiner version](xref:Software_support_life_cycles).
+  - Mention **both the Feature Release and Main Release version**. As users can be on the Main Release or on the Feature Release track, only adding one of these will be a problem for users who are on the other track.
+  - If the DataMiner **Web** version or **Cube** version requirement is different from the server version, mention this separately.
+- **Minimum/Maximum DxM version**
+- **Licenses** (for example, DOM, SRM)
+- **Soft-launch options**
+- Other **Catalog items**
+- Requirements for components included in the package
+
+> [!NOTE]
+> **Prerequisites in the description** of the Catalog item should target the **default deployment of the item**. Typically, it is best to also include the prerequisites for a specific version in the relevant version description. For more information on version descriptions, see [Use clear version descriptions](xref:Best_Practices_When_Creating_Catalog_Items#use-clear-version-descriptions).
+
+**Do's:**
+
+- Clearly list **essential requirements** (for example, software versions, API access).
+- Be direct and **specific** about version numbers, required permissions, or additional licenses needed for the item to work.
+
+**Don'ts:**
+
+- Avoid complex **installation or configuration steps**. Link to comprehensive documentation instead.
+- Avoid listing every **small technical dependency**. Focus only on the essentials.
+
+### Technical Reference section
+
+**Purpose:** Provide links to detailed technical documentation, as the Catalog should focus on high-level information only.
+
+**Format:** Link to technical documentation using the designated URL field in the manifest. If relevant, use a ["Note" alert](xref:CTB_Markdown_Syntax#alerts) with a link in your description.
+
+**Do's:**
+
+- Use **consistent** naming conventions, such as "Installing ...", "Working with ...".
+- Use a **public link** for additional technical resources (e.g., [docs.dataminer.services](https://docs.dataminer.services) for standard solutions published by Skyline Communications).
+- If you link to docs.dataminer.services as a Skyline employee, use "aka" redirect links. This way, if something changes to the structure of the documentation, the links can easily be updated.
+
+**Don'ts:**
+
+- Do not include procedures that should not be followed by the user.
+- Do not add **redundant information** that is already available somewhere else. If relevant, link to that information instead.
+- Avoid documenting features that **change frequently** and are not that important to document (e.g., UI).
+- Avoid listing every **small technical dependency**. Focus only on the essentials.
 
 ## Visuals
 
@@ -57,105 +166,8 @@ When you create documentation for an item in the Catalog, focus on showcasing th
 - Avoid **unnecessary blank space** by resizing the window when taking a screen capture.
 - Make sure not to show any **confidential data**. Blur any sensitive data, but keep the data that is not sensitive visible to still have a useful image.
 
-## About section
+## Formatting
 
-**Purpose:** Summarize what makes the item valuable and why users should deploy it. Address the problems it solves and its primary benefits.
+Make sure to use DocFX-flavored markdown as detailed under [Markdown syntax](xref:CTB_Markdown_Syntax).
 
-**Format:** A relatively short piece of text that is easy to read and understand.
-
-**Do's:**
-
-- Limit the content to the **essentials**, and keep it short and well organized. When required for clarity, you can optionally divide the text over a few paragraphs.
-- Keep the tone **professional**, focused on **motivating** user adoption.
-- Highlight important points with **bold text**.
-- **Organize content** from broad benefits to specific features and practical applications.
-- Use **accessible language** for both technical and non-technical readers.
-- Make use of visual **[alerts](xref:CTB_Markdown_Syntax#alerts)** where applicable.
-
-**Don'ts:**
-
-- Avoid **excessive technical details**; link to reference documentation instead.
-- Avoid jargon or **overly complex language** that could obscure the message.
-- Avoid **excessive** amounts of **bold text and/or alerts**, as these then lose their purpose of drawing the reader's attention.
-- Do not refer to **generic DataMiner benefits** such as alarming and trending. Instead focus on the value this specific item brings.
-- Do not **duplicate** points mentioned in the **Key Features** and **Use Cases** sections.
-
-## Key Features section
-
-**Purpose:** **Product-centric**. Outline the main features that distinguish the item, focusing on functionality and unique benefits.
-
-**Format:** Maximum of 5 features. Focus on those features that are most relevant for the user: quality over quantity.
-
-**Do's:**
-
-- Use direct, **benefit-oriented** language.
-- Ensure that each feature relates to **specific value** for the user.
-- Use **action verbs** (such as "Monitor", "Track", etc.).
-- Prioritize features that **differentiate** the item.
-
-**Don'ts:**
-
-- Avoid **excessive detail** or vague descriptors like "high-performance" without specific context.
-- Avoid adding key features that **do not specifically relate to the item**, but that are general to DataMiner (for example, the benefits of having alarms for your equipment, which is already a key feature of DataMiner itself).
-
-## Use Cases section
-
-**Purpose:** **User-centric**. Demonstrate practical, real-world scenarios where the solution provides value.
-
-**Format:** Typically, the package is designed to solve specific problems for users. Explain this clearly with accompanying visuals. Optionally, provide a link to a [use case on DataMiner Dojo](https://community.dataminer.services/use-cases/).
-
-**Do's:**
-
-- Connect examples to **common challenges** that users face (e.g., remote connectivity, high data usage).
-- Use **specific, relatable examples**, such as "Monitor remote satellite terminals in real-time".
-
-**Don'ts:**
-
-- Avoid **hypothetical scenarios**. Make sure the examples are relevant to the typical user base, showing the value of the item.
-- Do not **duplicate** points covered in the **Key Features** section.
-
-## Prerequisites section
-
-**Purpose:** List essential technical requirements needed for deployment.
-
-**Format:** Use concise bullet points, limited to information that is strictly necessary.
-
-**Applicable requirements**: Mention the following requirements if they apply for the package:
-
-- **Minimum/Maximum DataMiner version**:
-  - Only mention the minimum DataMiner version if it is a [**currently supported** DataMiner version](xref:Software_support_life_cycles).
-  - Mention **both the Feature Release and Main Release version**. As users can be on the Main Release or on the Feature Release track, only adding one of these will be a problem for users who are on the other track.
-  - If the DataMiner **Web** version or **Cube** version requirement is different from the server version, mention this separately.
-- **Minimum/Maximum DxM version**
-- **Licenses** (for example, DOM, SRM)
-- **Soft-launch options**
-- Requirements for components included in the package
-
-**Do's:**
-
-- Clearly list **essential requirements** (for example, software versions, API access).
-- Be direct and **specific** about version numbers, required permissions, or additional licenses needed for the item to work.
-
-**Don'ts:**
-
-- Avoid **installation or configuration steps**. Link to comprehensive documentation instead.
-- Avoid listing every **small technical dependency**. Focus only on the essentials.
-
-## Technical Reference section
-
-**Purpose:** Provide links to detailed technical documentation, as the Catalog should focus on high-level information only.
-
-**Format:** Link to technical documentation using the designated URL field in the manifest. If relevant, use a ["Note" alert](xref:CTB_Markdown_Syntax#alerts) with a link in your description.
-
-**Do's:**
-
-- Use **consistent** naming conventions, such as "Installing ...", "Working with ...".
-- Use a **public link** for additional technical resources (e.g., [docs.dataminer.services](https://docs.dataminer.services) for standard solutions published by Skyline Communications).
-- If you link to docs.dataminer.services as a Skyline employee, use "aka" redirect links. This way, if something changes to the structure of the documentation, the links can easily be updated.
-
-**Don'ts:**
-
-- Do not include procedures that should not be followed by the user.
-- Do not add **redundant information** that is already available somewhere else. If relevant, link to that information instead.
-- Avoid documenting features that **change frequently** and are not that important to document (e.g., UI).
-- Avoid listing every **small technical dependency**. Focus only on the essentials.
+However, avoid the use of HTML comments, as these will not be rendered correctly in the Catalog.

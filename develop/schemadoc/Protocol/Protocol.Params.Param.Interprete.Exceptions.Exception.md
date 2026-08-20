@@ -52,8 +52,8 @@ In the Exception.Value tag, specify the new value to which you want to internall
 
 Do not use Exception tags to add exceptions to write parameters. To do so, use Measurement.Discreets.Discreet tags instead.
 
-- For analog, number and string write parameters, you do not need to set the state attribute of the Discreet.Display tag to “disabled” if you want to display a check box with the exception.
-- For discreet parameters, you need to set the state attribute of the Discreet.Display tag to “disabled” if you want to display a check box with the exception.
+- For analog, number and string write parameters, you do not need to set the state attribute of the Discreet.Display tag to “disabled” if you want to display a checkbox with the exception.
+- For discreet parameters, you need to set the state attribute of the Discreet.Display tag to “disabled” if you want to display a checkbox with the exception.
 
 > [!NOTE]
 > If you use Discreet tags to define multiple exceptions for a particular write parameter, those exceptions will be displayed in a dropdown box.

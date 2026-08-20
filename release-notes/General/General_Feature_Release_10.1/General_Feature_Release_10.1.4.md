@@ -685,7 +685,7 @@ When an interactive automation script was running, DataMiner Cube would incorrec
 
 #### Dashboards app: Problem when embedding a GQI dashboard component \[ID 28874\]
 
-When an individual GQI dashboard component was embedded into Visual Overview or a web page, in some cases, the URL of that component would not contain all necessary information to run a GQI query.
+When an individual GQI dashboard component was embedded into Visual Overview or a webpage, in some cases, the URL of that component would not contain all necessary information to run a GQI query.
 
 Also, when a feed was used as a column filter in a GQI query, that feed would initially not be used when the query was initialized.
 

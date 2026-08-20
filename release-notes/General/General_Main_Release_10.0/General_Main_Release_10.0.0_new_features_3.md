@@ -14,7 +14,7 @@ uid: General_Main_Release_10.0.0_new_features_3
 
 #### Visual Overview: Option to embed Chromium browser \[ID 18501\]
 
-If a shape in Visio is linked to a web page, it is now possible to add an option in order to display the page using the Chromium browser. To do so, add the following shape data:
+If a shape in Visio is linked to a webpage, it is now possible to add an option in order to display the page using the Chromium browser. To do so, add the following shape data:
 
 | Shape data field | Value     |
 |------------------|-----------|

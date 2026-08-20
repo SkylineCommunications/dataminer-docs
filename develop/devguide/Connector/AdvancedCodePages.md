@@ -43,7 +43,7 @@ Unicode itself is also a code page like the Windows code pages, but contains all
 
 ### Encoding
 
-How the unique code point values are stored is defined by the encoding. There is for example UTF-8, UTF-16, and UTF-32 encoding. UTF-8 is typically used for web pages, while UTF-16 is more used in programming languages on Windows or Java. The different kinds of encoding are capable of storing all characters of the Unicode code page, but store the code points in a different way.
+How the unique code point values are stored is defined by the encoding. There is for example UTF-8, UTF-16, and UTF-32 encoding. UTF-8 is typically used for webpages, while UTF-16 is more used in programming languages on Windows or Java. The different kinds of encoding are capable of storing all characters of the Unicode code page, but store the code points in a different way.
 
 UTF-8 only uses one byte to store the range 0x00-0x7F, which contains the standard ASCII characters. When the most significant bit is one, more bytes follow to represent the character. UTF-16 uses two or more bytes to store a code point. The range of the standard ASCII characters will be 0x0000 - 0x007F. When the string content only consists of ASCII characters, UTF-8 will use half the number of bytes needed compared to UTF-16 (1 byte per character versus 2 bytes).
 

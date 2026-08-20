@@ -44,7 +44,7 @@ Total expected duration: 30 minutes.
 
 ## Part 1: Setting up your development environment in GitHub
 
-In this part, you will learn how to set up an organization in GitHub and SonarCloud so that you and your development team can collaboratively develop DataMiner artifacts while maintaining high-quality standards. This tutorial sets up the framework to achieve the same quality standards that developers at Skyline Communications adhere to. It will also add starter workflows provided by Skyline to improve efficiency. Additionally, you will learn how to set up SonarCloud, a mandatory static analysis tool used in all GitHub workflows provided by Skyline.
+In this part, you will learn how to set up an organization in GitHub and SonarCloud so that you and your development team can collaboratively develop DataMiner artifacts while maintaining high-quality standards. This tutorial sets up the framework to achieve the same quality standards that developers at Skyline Communications adhere to. It will also add starter workflows provided by Skyline to improve efficiency. Additionally, you will learn how to set up SonarCloud, an optional but recommended static analysis tool that can be used in the GitHub workflows provided by Skyline.
 
 Expected duration: 20 minutes.
 

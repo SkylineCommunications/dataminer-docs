@@ -5,7 +5,7 @@ uid: DMS_GET_VALUE
 # DMS_GET_VALUE (87)
 
 > [!WARNING]
-> The use of DMS Notify types has been deprecated. Use types from the [Class Library](xref:ClassLibraryIntroduction) instead.
+> The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.
 
 Retrieves details about a parameter (including the value).
 

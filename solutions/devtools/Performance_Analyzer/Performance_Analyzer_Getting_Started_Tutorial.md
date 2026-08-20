@@ -1,5 +1,6 @@
 ---
 uid: Performance_Analyzer_Getting_Started_Tutorial
+description: Learn how to get started with the Performance Analyzer solution based on an example solution with a simulated performance issue.
 ---
 
 # Getting started with the Performance Analyzer

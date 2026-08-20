@@ -1,5 +1,6 @@
 ---
 uid: MO_Orchestration_Events
+description: Use the Orchestration Events app to schedule the execution of regular automation scripts as well as specific orchestration scripts.
 ---
 
 # Orchestration Events app
@@ -29,7 +30,7 @@ Orchestration events can be created using the MediaOps Live API. [MediaOps Plan]
 
 ## Orchestration scripts
 
-Any automation script added to the `MediaOps/OrchestrationScripts` folder is be an orchestration script. In addition to the regular script dummies and parameters, you can use profile parameters and definitions as input arguments in these scripts by implementing the `OrchestrationScript` class. For detailed information, refer to [Orchestration scripts](xref:MediaOpsLive_OrchestrationScript).
+Any automation script added to the `MediaOps/OrchestrationScripts` folder is an orchestration script. In addition to the regular script dummies and parameters, you can use profile parameters and definitions as input arguments in these scripts by implementing the `OrchestrationScript` class. For detailed information, refer to [Orchestration scripts](xref:MediaOpsLive_OrchestrationScript).
 
 When an orchestration script is executed manually, and all script dummies and parameters have been filled in, a UI will prompt the user for the orchestration parameters. The UI will also allow the user to select a profile instance instead of providing each parameter value individually.
 

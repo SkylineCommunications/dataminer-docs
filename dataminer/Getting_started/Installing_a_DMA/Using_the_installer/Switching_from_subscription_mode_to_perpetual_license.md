@@ -4,7 +4,7 @@ uid: Switching_from_subscription_mode_to_perpetual_license
 
 # Switching from subscription mode to a perpetual license
 
-When you deploy a DataMiner Agent using the [DataMiner Installer v10.4](xref:Installing_DM_using_the_DM_installer) or by [using a pre-installed VHD](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk), your system will automatically be licensed with a [Community Edition license](xref:Pricing_Commercial_Models#dataminer-community-edition) and run in subscription mode. Part of this process involves getting a DataMiner ID, which uniquely identifies your DataMiner Agent.
+Usually, a self-managed DataMiner Agent is deployed with a [Community Edition license](xref:Pricing_Commercial_Models#dataminer-community-edition) and run in subscription mode. Part of this process involves getting a DataMiner ID, which uniquely identifies your DataMiner Agent.
 
 If you have purchased a [permanent license](xref:Pricing_Perpetual_Use_Licensing), follow the steps below to convert your subscription installation to a perpetual-license one:
 

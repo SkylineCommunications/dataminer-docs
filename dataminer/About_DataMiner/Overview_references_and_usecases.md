@@ -1,6 +1,8 @@
 ---
 uid: Overview_References_and_use_cases
+description: Explore the use cases showcased on DataMiner Dojo. DataMiner has been deployed around the world in various high-profile projects with leading operators.
 ---
+
 # References and use cases
 
 DataMiner has been deployed around the world in various high-profile projects with leading operators.

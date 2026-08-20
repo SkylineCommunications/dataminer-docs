@@ -38,7 +38,7 @@ In case the resource is part of an active booking, the script will list any conf
 > [!NOTE]
 > In case the *ReservationId* input parameter is specified, you will get different options than detailed above. You will be able to apply a profile selected during booking creation, apply a specific state profile instance, or both.<!-- RN 31531 -->
 
-## Creating a custom front end for the wizard
+## Creating a custom frontend for the wizard
 
 The wizard can be launched from Visual Overview or from a low-code app.
 

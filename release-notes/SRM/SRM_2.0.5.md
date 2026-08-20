@@ -17,6 +17,10 @@ Updating properties on a booking via the SRM solution will now use the patch API
 
 When a custom event cannot be added to a booking and is discarded, for example because the timing is in the past, this will now be mentioned in the logging.
 
+#### SRM Framework Configuration BPA test: Issue level for logging location configuration issues changed from error to warning [ID 44508]
+
+If the SRM Framework Configuration BPA test detects that the logging location is not correctly configured, it will now signal this with a warning instead of an error.
+
 ## Fixes
 
 #### Booking Wizard allowed booking names with forbidden characters [ID 44625]

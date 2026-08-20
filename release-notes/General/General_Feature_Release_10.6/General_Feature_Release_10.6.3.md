@@ -26,6 +26,12 @@ uid: General_Feature_Release_10.6.3
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.3](xref:Web_apps_Feature_Release_10.6.3).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+## Important changes
+
+The following change may have an impact on your system, so please make sure to check this before you upgrade:
+
+- [Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]](#protocols-as-many-slscripting-processes-as-slprotocol-processes-by-default-id-44420)
+
 ## Highlights
 
 - [DataMiner Object Models: Fine-grained security on instance level [ID 44233]](#dataminer-object-models-fine-grained-security-on-instance-level-id-44233)
@@ -262,7 +268,7 @@ public class Script
 
 #### Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]
 
-<!-- MR 10.7.0 - FR 10.6.3 -->
+<!-- MR 10.6.0 [CU3] - FR 10.6.3 -->
 
 Up to now, one SLScripting process was used by default. From now on, by default, there will be as many SLScripting processes as SLProtocol processes.
 
@@ -275,7 +281,7 @@ Note that is possible to configure the number of simultaneously running SLScript
 
 #### Protocols: Elements will now restart automatically when an SLScripting process has disappeared [ID 42306]
 
-<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.7.0 - FR 10.6.3 together with 44420 -->
+<!-- MR 10.6.0 - FR 10.5.5 >>> Published in 10.6.0 [CU3] - FR 10.6.3 together with 44420 -->
 
 Up to now, when an SLScripting process disappeared, elements relying on that process could become unstable, requiring manual intervention to restore functionality.
 

@@ -246,7 +246,7 @@ RN 33208: MR 10.3.0 - FR 10.2.6 -->
 
 With the DataMiner Low-Code Apps (also known as the "Application Framework"), you can create custom low-code applications that interact with data from a DataMiner System or an external source.
 
-These applications can be created on the root web page of a DataMiner System and can be organized into sections. To place an application in one or more specific sections, open the App.info.json file in the correct application folder (C:\\Skyline DataMiner\\applications\\APP_ID) and add the section names to the Sections array.
+These applications can be created on the root webpage of a DataMiner System and can be organized into sections. To place an application in one or more specific sections, open the App.info.json file in the correct application folder (C:\\Skyline DataMiner\\applications\\APP_ID) and add the section names to the Sections array.
 
 > [!NOTE]
 > The “Low-Code Apps” license is required to use or access the DataMiner Low-Code Apps.
@@ -470,7 +470,7 @@ The token counters will be updated every 10 seconds.
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
-When you hover over a data table component (e.g., a GQI table), a search box will now appear in the bottom-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
+When you hover over a data table component (e.g., a GQI table), a search box will now appear in the lower-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
 
 #### Web apps: Dashboards, app pages and app panels now all have a 'Fit to view' setting [ID 33401]
 

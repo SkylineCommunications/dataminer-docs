@@ -8,7 +8,7 @@ The Verify Cluster Events tool is a debugging tool that can be used to verify th
 
 The tool can be of use in cases where, when you connect to a specific DMA using Cube, different alarms and/or elements are displayed than when you connect to a different DMA in the cluster.
 
-You can download the tool from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterevents-1-0-0-9/).
+You can download the tool from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterevents-1-0-0-10/).
 
 Its usage has the following limitations:
 
@@ -25,7 +25,7 @@ Its usage has the following limitations:
 
 ### Retrieving information with this tool
 
-1. Download the tool from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterevents-1-0-0-9/).
+1. Download the tool from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterevents-1-0-0-10/).
 
 1. Extract the file and double-click *VerifyClusterEvents.exe*.
 

@@ -17,5 +17,5 @@ uid: DMAElementPage
 | IsWeb               | Boolean         | Whether or not the page is a webpage. |
 | IsSpectrum          | Boolean         | Whether or not the page is a spectrum page. |
 | IsGeneralParameters | Boolean         | Whether or not the page is a “General Parameters” page. |
-| Url                 | String          | If *IsWeb* is true, this field contains the URL of the web page. |
+| Url                 | String          | If *IsWeb* is true, this field contains the URL of the webpage. |
 | LastChangeUTC       | Long integer    | The time when the page was last changed, in UTC format (milliseconds since midnight January 1, 1970 GMT). |

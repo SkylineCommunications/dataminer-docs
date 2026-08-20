@@ -403,6 +403,9 @@ Used to override the default table loading behavior when dynamically positioning
 
 See [Overriding the default table loading behavior](xref:Positioning_shapes_dynamically1#overriding-the-default-table-loading-behavior).
 
+> [!CAUTION]
+> Using this option will have a negative impact on overall performance.
+
 ## ForcePropertyFromPage
 
 Shape-level option.
@@ -971,7 +974,7 @@ See [UseEdge](xref:Linking_a_shape_to_a_webpage#useedge).
 
 Shape-level option.
 
-Use this option if you want to pass on the user credentials of the current user to a web page displayed inside a shape.
+Use this option if you want to pass on the user credentials of the current user to a webpage displayed inside a shape.
 
 See [UseLoginCredentials](xref:Linking_a_shape_to_a_webpage#uselogincredentials).
 

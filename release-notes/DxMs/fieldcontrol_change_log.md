@@ -4,6 +4,18 @@ uid: fieldcontrol_change_log
 
 # Field Control change log
 
+#### 17 June 2026 - Enhancement - FieldControl 2.12.2 - Upgrade to .NET 10
+
+FieldControl has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
+
+#### 14 April 2026 - Enhancement - FieldControl 2.12.1 - Dependencies updated
+
+Several dependencies have been updated.
+
+#### 12 January 2026 - Enhancement - FieldControl 2.12.0 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 24 June 2025 - Enhancement - FieldControl 2.11.4 - Improved upgrade process
 
 Improvements have been made to the startup and shutdown of the DxM, which improves the upgrade process.

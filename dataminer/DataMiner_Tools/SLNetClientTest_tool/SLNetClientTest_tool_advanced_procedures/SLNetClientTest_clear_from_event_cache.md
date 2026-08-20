@@ -10,7 +10,10 @@ To do:
 
 1. In DataMiner Cube, get the alarm ID of the alarm you want to clear.
 
-   You can do so by [making sure the Alarm ID column is displayed in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-or-removing-columns) and then copying the ID from there.
+   You can do so by [making sure the Root Alarm ID column is displayed in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-or-removing-columns) and then copying the third part of the ID from there, as highlighted in the following example:
+
+   ![Example of alarm ID to copy from the Alarm Console](~/dataminer/images/SLNetClientTestAlarmID.png)<br>
+   *Example of alarm ID in DataMiner 10.6.6*
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 

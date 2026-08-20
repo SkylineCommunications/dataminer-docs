@@ -54,7 +54,7 @@ Configure the following shape data fields on the shape that is to contain the Se
 
    - **HideNodeConfiguration=**: When set to *true*, hides the lower part of the diagram, where the selected node can be configured.
 
-   - **HideFunctionsTree=** : When set to *true*, hides the tree view on the left-hand side with functions to drag and drop. This will typically be used together with the "ReadOnly=" option.
+   - **HideFunctionsTree=** : When set to *true*, hides the tree view on the left with functions to drag and drop. This will typically be used together with the "ReadOnly=" option.
 
    - **Interface=**: Determines which part of the Service Manager user interface is displayed. Can be set to the following values:
 

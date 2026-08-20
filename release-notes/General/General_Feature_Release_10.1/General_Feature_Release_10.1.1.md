@@ -245,9 +245,9 @@ In the *Layout* tab, you find three additional sections:
 
 - In the *Layout* section, you can specify how you want the trigger label and time label to be aligned: left, center or right.
 
-#### Dashboards app: Right-hand edit pane is now resizable \[ID 28137\]
+#### Dashboards app: Edit pane on the right is now resizable \[ID 28137\]
 
-It is now possible to change the width of the right-hand edit pane.
+It is now possible to change the width of the edit pane shown at the right side of the Dashboards UI.
 
 #### Dashboards app - Line chart component: New option to highlight parameters on graph and legend \[ID 28144\]
 

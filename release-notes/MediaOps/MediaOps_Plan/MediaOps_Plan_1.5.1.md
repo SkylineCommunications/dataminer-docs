@@ -23,7 +23,7 @@ On the *Job View* and *Resource View* pages of the Scheduling app, you can now p
 
 #### Orchestration scripts [ID 44347]
 
-Orchestration scripts have been implemented in the MediaOps Solution:
+[Orchestration scripts](xref:MO_Orchestration_Events#orchestration-scripts) have been implemented in the MediaOps Solution:
 
 - From Resource Studio, you can define orchestration settings on pools. This will define what automated actions have to be triggered when such a pool is used in a workflow or job. When a node is added to a workflow or job, the orchestration settings defined on the pool will be copied to the node.
 

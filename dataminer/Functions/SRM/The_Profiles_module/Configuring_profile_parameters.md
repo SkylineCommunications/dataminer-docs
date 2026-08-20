@@ -97,9 +97,9 @@ To convert parameter values from the format defined in the protocol to a differe
 
 1. Either link the parameter to an existing profile parameter, or create a new profile parameter:
 
-   - To link the parameter to an existing profile parameter, in the *Link* tab on the right-hand side of the *Import parameters* window, select the existing parameter in the list and then click the *Link* button.
+   - To link the parameter to an existing profile parameter, in the *Link* tab on the right side of the *Import parameters* window, select the existing parameter in the list and then click the *Link* button.
 
-   - To link the parameter to a new profile parameter, in the *New* tab on the right-hand side of the *Import parameters* window, configure the new profile parameter:
+   - To link the parameter to a new profile parameter, in the *New* tab on the right side of the *Import parameters* window, configure the new profile parameter:
 
      1. Enter the profile parameter name next to *Name* and optionally add additional information in the *Remarks* field.
 

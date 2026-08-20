@@ -42,6 +42,7 @@ For example:
 To update this file without the need to restart DataMiner, use the protocolFunctionHelper as illustrated in the code snippet below. The configuration change will then be automatically synced in the cluster.
 
 ```csharp
+using System;
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Net.Messages;
 namespace Script

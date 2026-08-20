@@ -14,11 +14,11 @@ For the **Main Release** track, the following support is available:
 
 | Version | Regular updates until | Supported until     | *Limited support until* |
 |---------|-----------------------|---------------------|-------------------------|
+| 10.7.0  | 17 Nov 2028           | **22 Feb 2030**     | *28 Feb 2031*           |
 | 10.6.0  | 19 Nov 2027           | **23 Feb 2029**     | *22 Feb 2030*           |
 | 10.5.0  | 20 Nov 2026           | **25 Feb 2028**     | *23 Feb 2029*           |
 | 10.4.0  | 21 Nov 2025           | **26 Feb 2027**     | *25 Feb 2028*           |
 | 10.3.0  | 15 Nov 2024           | **27 Feb 2026**     | *26 Feb 2027*           |
-| 10.2.0  | 24 Nov 2023           | **28 Feb 2025**     | *27 Feb 2026*           |
 
 Older versions are no longer supported.
 
@@ -80,8 +80,9 @@ The following features currently have the "End of Life" status. They are no long
 | Legacy Correlation Engine | End of Life as of DataMiner 10.5.x. This only applies to the legacy System Display Correlation engine. |
 | OPC communication | OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector. |
 | Recurring bookings | End of Life as of DataMiner 10.5.x. Recurring bookings have been retired. Instead, we suggest duplicating the previous occurrence of the booking. |
-| Ticketing app | End of Life as of DataMiner 10.6.x. Skyline is researching a replacement for this module. |
+| Ticketing app | End of Life as of DataMiner 10.6.x. Replaced by the [Ticketing Standard Solution](https://catalog.dataminer.services/details/c132decf-b918-4ee2-be25-1302f41e7705). |
 | Web Services API v0 | From DataMiner 10.1.5 onwards, version 0 of the DataMiner Web Services API is disabled. Users will be required to port any reliant applications to use Web Services API v1. |
+| Linking data to *Select* query operator | From DataMiner 10.4.0/10.4.1 onwards, it is no longer possible to link the [Select](xref:GQI_Select) query operator to data. |
 | XML storage of SRM resources and profiles | From DataMiner 10.4.0/10.4.1 onwards, SRM resources and profiles must be stored in the indexing database instead of in XML. |
 
 ## Third-party software support lifecycle
@@ -106,6 +107,7 @@ The following features currently have the "End of Support" status. They will no 
 |------|---------|---------------|
 | Support for Cassandra versions prior to 4.x |Cassandra versions older than Cassandra 4.x are no longer supported on any operating system.| End of Life as of DataMiner 10.7.x (Q4 2026).|
 | Support for MySQL as local database | End of Support as of DataMiner 10.6.x. Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage). | End of Life to be confirmed. |
+| Support for overlays of type 'kml' | As Google has deprecated KML layer support, [KML overlays](xref:Layer_types#overlays-of-type-kml) used in both the [maps component](xref:DashboardMaps) and the [Maps add-on module](xref:About_DMS_Maps) will also no longer be available. We recommend switching to [GeoJSON overlays](xref:Layer_types#overlays-of-type-geojson). | End of Life:<br> - August 2026 for systems running DataMiner versions below 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<br>- May 2027 for DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 and later |
 | Two-site redundant indexing clusters | This setup should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS). | End of Life as of DataMiner 10.7.x (Q4 2026).|
 
 ### End of Life
@@ -135,6 +137,7 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 
 ### DataMiner 10.4
 
+- **End of Life – Linking data to *Select* query operator**: From this version onwards, it is no longer possible to link the [Select](xref:GQI_Select) query operator to data.
 - **End of Life – XML storage of SRM resources and profiles**: From this version onwards, SRM resources and profiles must be stored in the indexing database instead of in XML.
 
 ### DataMiner 10.5
@@ -152,7 +155,7 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 - **End of Life - Legacy reservations**: The legacy type of reservation used prior to DataMiner 9.5.3/9.6.0 (RN 15180) is obsolete and should no longer be used.
 - **End of Support – MySQL as local database**: Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage).
 - **End of Engineering – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.
-- **End of Life – Ticketing app**: Skyline is researching a replacement for this module.
+- **End of Life – Ticketing app**: Replaced by the [Ticketing Standard Solution](https://catalog.dataminer.services/details/c132decf-b918-4ee2-be25-1302f41e7705).
 
 ### DataMiner 10.7
 

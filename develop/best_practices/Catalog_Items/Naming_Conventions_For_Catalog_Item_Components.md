@@ -40,7 +40,7 @@ In the naming conventions, references will be made to the following abbreviation
 
 Generic automation scripts and automation scripts that are used in solutions should have a name in the following format, where *[TYPE]* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention): `[SOLCODE]-[TYPE]-[name]`
 
-For scripts created by Skyline for a specific customer, the customer abbreviation should be used instead of [SOLCODE]. For a list of these abbreviations, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx) (internal link for Skyline employees only).
+For scripts created by Skyline for a specific customer, the customer abbreviation should be used instead of [SOLCODE]. For a list of these abbreviations, refer to [DCP](https://dcp-ui.azurewebsites.net/customers) (internal link for Skyline employees only).
 
 Scripts should be added in the Automation module in the following folders, depending on the type of script:
 

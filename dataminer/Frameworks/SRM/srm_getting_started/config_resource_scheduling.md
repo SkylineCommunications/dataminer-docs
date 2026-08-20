@@ -44,7 +44,7 @@ In the next step of the wizard, they can optionally provide capacity values. Alt
 
 After they click *Confirm*, the booking will be created.
 
-## Creating a custom front end for the resource scheduling wizard
+## Creating a custom frontend for the resource scheduling wizard
 
 The wizard can be launched from Visual Overview or from a low-code app.
 
@@ -82,9 +82,9 @@ A typical use case is to make use of the Resource Manager component in Visual Ov
    >   |--|--|
    >   | Execute | `script:SRM_BookResourcesQuickly||Input Data={"BookingManagerElement":"Resource Scheduling","TimeRange":"[RegexReplace:;,[cardvar:SelectedTimeRange],$]","ResourceIds":"[cardvar:SelectedResource]","AssignCapacityType":"Request"}|||NoConfirmation,CloseWhenFinished` |
 
-## Other front-end scripts
+## Other frontend scripts
 
-The SRM framework also includes other front-end scripts that can be used to execute certain actions.
+The SRM framework also includes other frontend scripts that can be used to execute certain actions.
 
 ### Default wizard to extend an existing booking with a resource
 

@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_parameters_cable_modem
 keywords: I-DOCSIS parameters
+description: Discover all the Cable Modem parameters available in the Integrated DOCSIS branch of the EPM Solution.
 ---
 
 # Integrated DOCSIS parameters – Cable Modem

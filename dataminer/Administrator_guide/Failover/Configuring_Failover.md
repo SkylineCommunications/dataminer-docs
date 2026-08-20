@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Failover
+description: "Learn how to configure Failover in DataMiner by linking a DMA to a synchronized backup DMA that takes over manually or automatically."
 ---
 
 # Configuring Failover
@@ -8,6 +9,3 @@ In a DataMiner System, a DMA can be linked to an identical backup DMA. That back
 
 > [!NOTE]
 > Failover is always one-to-one. A backup DMA can only have one primary DMA.
-
-> [!TIP]
-> See also: [Preferred configuration using virtual IP addresses (best practice)](xref:Preferred_configuration_using_virtual_IP_addresses__best_practice)

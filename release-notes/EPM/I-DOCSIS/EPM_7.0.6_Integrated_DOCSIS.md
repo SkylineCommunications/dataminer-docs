@@ -8,11 +8,11 @@ uid: EPM_7.0.6_Integrated_DOCSIS
 
 #### Skyline EPM platform: New Automatic CMTS Removal toggle button [ID 40401]
 
-In the front-end element, you can now enable or disable automatic CMTS removal using a toggle button. This button is available both on the data and visual pages. By default, it is set to disabled for new installations.
+In the frontend element, you can now enable or disable automatic CMTS removal using a toggle button. This button is available both on the data and visual pages. By default, it is set to disabled for new installations.
 
 #### Skyline EPM Platform DOCSIS: New 'Automatic CMTS Removal' toggle button [ID 40432]
 
-In the back-end elements, you can now enable or disable automatic CMTS removal using a toggle button. This button is available both on the data and visual pages. By default, it is set to disabled for new installations.
+In the backend elements, you can now enable or disable automatic CMTS removal using a toggle button. This button is available both on the data and visual pages. By default, it is set to disabled for new installations.
 
 ## Changes
 

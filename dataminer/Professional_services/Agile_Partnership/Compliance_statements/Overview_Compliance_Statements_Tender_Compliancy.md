@@ -33,4 +33,4 @@ For each feature, functionality, or requirement, a delivered solution can typica
 
 Your team has the freedom to set and shift priorities (and therefore engineering time) between buckets in the Preliminary Solution Backlog, as long as the total number of engineering days does not exceed the budget.
 
-For example, your team can put a strong focus on the user experience and user interfaces, which might require more engineering days than initially foreseen. That additional time budget will then be deducted from another bucket, which could be a back-end automation workflow that is less complex than foreseen.
+For example, your team can put a strong focus on the user experience and user interfaces, which might require more engineering days than initially foreseen. That additional time budget will then be deducted from another bucket, which could be a backend automation workflow that is less complex than foreseen.

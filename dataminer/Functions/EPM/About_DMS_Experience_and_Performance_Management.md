@@ -14,13 +14,13 @@ Many different EPM protocols exist, and often these are custom-made to match par
 
 EPM uses the following protocols:
 
-- **EPM Manager** protocol: Used for one front-end (FE) element and multiple back-end (BE) elements.
+- **EPM Manager** protocol: Used for one frontend (FE) element and multiple backend (BE) elements.
 
 - **EPM Collector** protocol(s): Used to poll all the lowest-level information and inform the FE of the topology relationships.
 
 A typical EPM architecture consists of the following elements:
 
-- **Front-end** element:
+- **Frontend** element:
 
   - In charge of provisioning and assigning unique keys to all topology entities.
   - Only sets tables with higher-level topology entities.
@@ -28,7 +28,7 @@ A typical EPM architecture consists of the following elements:
   - Merges remaining topology information from all BE elements.
   - Ideally should be on its own DMA with few or no other elements.
 
-- **Back-end** element:
+- **Backend** element:
 
   - Contains the rest of the topology information.
   - In charge of aggregating the remaining levels.

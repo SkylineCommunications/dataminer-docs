@@ -28,32 +28,32 @@ In addition, in the Arris E6000 CCAP Platform, Casa Systems CCAP Platform, CISCO
 
 ### Enhancements
 
-#### Multiple I-DOCSIS front-end enhancements \[ID 32629\]
+#### Multiple I-DOCSIS frontend enhancements \[ID 32629\]
 
-Multiple enhancements have been implemented to the I-DOCSIS front end:
-
-- A message buffer was implemented to better handle multiple requests from the CCAPs and to allow requests to be handled per element.
-- To improve performance, InterApp calls are now used for communication between different DataMiner components.
-- Multiple tables have been adjusted to reflect the fact that CCAP data has been decoupled from the CM collectors.
-- Collector registration has been adjusted. Now the IDs for CCAP and CM collector are both placed in the table, in the format CCAPDataMinerID/CCAPElementID\|CMCollectorDataMinerID/CMCollectorElementID.
-
-#### Multiple I-DOCSIS back-end enhancements \[ID 32631\]
-
-Multiple enhancements have been implemented to the I-DOCSIS back end:
+Multiple enhancements have been implemented to the I-DOCSIS frontend:
 
 - A message buffer was implemented to better handle multiple requests from the CCAPs and to allow requests to be handled per element.
 - To improve performance, InterApp calls are now used for communication between different DataMiner components.
 - Multiple tables have been adjusted to reflect the fact that CCAP data has been decoupled from the CM collectors.
 - Collector registration has been adjusted. Now the IDs for CCAP and CM collector are both placed in the table, in the format CCAPDataMinerID/CCAPElementID\|CMCollectorDataMinerID/CMCollectorElementID.
-- A back-end registration table has been added, which makes it possible to map view tables.
+
+#### Multiple I-DOCSIS backend enhancements \[ID 32631\]
+
+Multiple enhancements have been implemented to the I-DOCSIS backend:
+
+- A message buffer was implemented to better handle multiple requests from the CCAPs and to allow requests to be handled per element.
+- To improve performance, InterApp calls are now used for communication between different DataMiner components.
+- Multiple tables have been adjusted to reflect the fact that CCAP data has been decoupled from the CM collectors.
+- Collector registration has been adjusted. Now the IDs for CCAP and CM collector are both placed in the table, in the format CCAPDataMinerID/CCAPElementID\|CMCollectorDataMinerID/CMCollectorElementID.
+- A backend registration table has been added, which makes it possible to map view tables.
 
 #### New messaging automation scripts using InterApp communication \[ID 32632\]
 
 The existing EPM messaging logic using Correlation and Automation has been replaced with 3 new automation scripts that use InterApp communication:
 
-- *CcapToEpmFe*: This script is triggered by a CCAP and sends an InterApp message to the front-end element.
-- *EpmFeToEpmBe*: This script is triggered by the front end and sends an InterApp message to the back-end element.
-- *EpmBeToCcapPair*: This script is triggered by the back end and sends an InterApp message to one or more collector pairs (CCAP/CM collector).
+- *CcapToEpmFe*: This script is triggered by a CCAP and sends an InterApp message to the frontend element.
+- *EpmFeToEpmBe*: This script is triggered by the frontend and sends an InterApp message to the backend element.
+- *EpmBeToCcapPair*: This script is triggered by the backend and sends an InterApp message to one or more collector pairs (CCAP/CM collector).
 
 ### Fixes
 

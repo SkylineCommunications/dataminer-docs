@@ -22,7 +22,6 @@ Recommended port support per type:
 | HTTP                | X   |     |        |
 | GPIB                | X   |     |        |
 | Virtual             |     |     |        |
-| OPC                 | X   |     |        |
 | SLA                 |     |     |        |
 
 Make sure to disable any of the ports that are not possible for a specific type of protocol.

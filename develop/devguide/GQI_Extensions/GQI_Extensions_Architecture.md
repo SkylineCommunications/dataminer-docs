@@ -17,7 +17,7 @@ This is the main entry point for all GQI operations. It manages core functionali
 
 When a query uses GQI extensions (like ad hoc data sources or custom operators), the parent process spawns one or more child processes to handle those extensions.
 
-- **Technology:** .NET 8
+- **Technology:** .NET 10
 - **Communication:** Connects to the DataMiner Agent via gRPC (APIGateway)
 
 ## Extension worker processes
@@ -36,7 +36,7 @@ The worker process can be terminated manually using Task Manager in case an exte
 
 **Process name:** `DataMiner GQI.ExtensionsWorker.SLNet.exe`
 
-This process handles communication between GQI extensions and the DataMiner Agent using SLNet. All extensions for a given user share the same SLNet connection to optimize resource use.
+This process handles communication between GQI extensions and the DataMiner Agent using SLNet. To optimize resource use, underlying SLNet connections can be shared per user, per security context, or for system-level access.
 
 - **Technology:** .NET Framework 4
 - **Communication:** Connects to the DataMiner Agent via IPC (SLNet)

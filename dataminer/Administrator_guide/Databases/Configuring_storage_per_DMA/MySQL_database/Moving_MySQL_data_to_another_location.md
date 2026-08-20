@@ -1,5 +1,6 @@
 ---
 uid: Moving_MySQL_data_to_another_location
+description: "Follow these steps to move a MySQL data directory to another location. Apart from copying the data, you also have to change a number of settings."
 ---
 
 # Moving MySQL data to another location

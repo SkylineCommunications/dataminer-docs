@@ -24,7 +24,7 @@ To configure an alarm template, usually the alarm template editor in the Protoco
 ## The alarm template editor user interface
 
 ![Alarm template editor](~/dataminer/images/AlarmTemplateEditor.png)<br>
-*The example above shows the alarm template editor in DataMiner 10.3.6.*
+*Alarm template editor in DataMiner 10.6.5.*
 
 The alarm template editor consists of two main sections:
 

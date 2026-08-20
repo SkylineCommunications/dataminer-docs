@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_passives_integration
 keywords: I-DOCSIS passives integration
+description: Learn how the EPM Integrated DOCSIS solution supports the integration with passive devices like fiber nodes, amplifiers, and taps.
 ---
 
 # Passives integration

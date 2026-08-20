@@ -59,7 +59,7 @@ To change the log levels for a specific module:
 
 ## Sorting the log file list
 
-At the top of the left-hand list, next to the header, *A-Z* is displayed.
+At the top of the list on the left, next to the header, *A-Z* is displayed.
 
 Click this field to change the sort order. Each time you click the field again, the sort order will change, cycling through the various options:
 

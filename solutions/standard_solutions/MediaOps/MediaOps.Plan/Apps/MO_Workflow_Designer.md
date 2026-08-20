@@ -1,5 +1,6 @@
 ---
 uid: MO_Workflow_Designer
+description: Explore the Workflow Designer app, which allows you to define workflows that describe how signals go through devices, what actions take place, etc. 
 ---
 
 # Workflow Designer

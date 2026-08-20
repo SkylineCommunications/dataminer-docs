@@ -1,5 +1,6 @@
 ---
 uid: IpNetworkExplorer
+description: Use the IP Network Explorer to monitor your IP network as efficiently as possible. You may need to start a scan of the network first.
 ---
 
 # IP Network Explorer

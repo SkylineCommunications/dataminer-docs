@@ -10,7 +10,7 @@ This filter box can be used in different ways:
 
 - Like any other quick filter in Cube, by adding text in the filter box. While you are typing, suggestions will be displayed above the box. When you empty the filter box, or return the focus to the filter box after it had been elsewhere, history items will also be displayed. To search for a suggested word or history item, select it in the list.
 
-  ![Quick filter](~/dataminer/images/Quick_Filter.png)<br>*Alarm Console in DataMiner 10.4.5*
+  ![Quick filter](~/dataminer/images/Quick_Filter.png)<br>*Alarm Console in DataMiner 10.6.5*
 
 - Alternatively, it is also possible to add items to the quick filter box, or remove items from the quick filter box, by highlighting them in the Alarm Console. To do so, while pressing the key configured for this in the user settings (by default the left Ctrl key), click on the words you wish to add. You can also press this key and right-click a word to open a context menu with the following options:
 

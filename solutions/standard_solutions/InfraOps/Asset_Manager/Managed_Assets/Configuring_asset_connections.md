@@ -1,5 +1,6 @@
 ---
 uid: Configuring_asset_connections
+description: Configure the asset connections from the Asset details pane by selecting Open Connections > Power Connections or Data Connections.
 ---
 
 # Configuring asset connections

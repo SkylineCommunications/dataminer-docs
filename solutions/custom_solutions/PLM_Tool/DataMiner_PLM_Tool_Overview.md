@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_PLM_Tool_Overview
+description: Discover how the DataMiner Planned Maintenance tool helps schedule, track, and manage one-time or recurring maintenance events.
 ---
 
 # The DataMiner Planned Maintenance (PLM) tool

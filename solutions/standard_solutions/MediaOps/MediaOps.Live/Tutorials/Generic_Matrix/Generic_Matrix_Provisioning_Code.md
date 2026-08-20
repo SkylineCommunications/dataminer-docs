@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Code
+description: Learn how to use the MediaOps Live API to provision endpoints and virtual signal groups for the Generic Matrix connector.
 ---
 
 # Provisioning endpoints and virtual signal groups for a Generic Matrix element using code
@@ -110,7 +111,7 @@ private void ProvisionSources(IEngine engine, Element element, IEngineMediaOpsLi
 
     // Get existing endpoints and virtual signal groups for the element.
     var existingEndpoints = api.Endpoints.Query()
-        .Where(x => x.Role == Role.Source && x.Element == elementId)
+        .Where(x => x.Role == EndpointRole.Source && x.Element == elementId)
         .SafeToDictionary(x => (x.Element, x.Identifier));
 
     var existingVirtualSignalGroups = api.VirtualSignalGroups
@@ -134,7 +135,7 @@ private void ProvisionSources(IEngine engine, Element element, IEngineMediaOpsLi
         }
 
         endpoint.Name = name;
-        endpoint.Role = Role.Source;
+        endpoint.Role = EndpointRole.Source;
         endpoint.Element = elementId;
         endpoint.Identifier = key;
         endpoint.TransportType = sdiTransportType;
@@ -148,7 +149,7 @@ private void ProvisionSources(IEngine engine, Element element, IEngineMediaOpsLi
         }
 
         vsg.Name = name;
-        vsg.Role = Role.Source;
+        vsg.Role = EndpointRole.Source;
         vsg.AssignEndpointToLevel(videoLevel, endpoint);
 
         newVirtualSignalGroups.Add(vsg);
@@ -175,7 +176,7 @@ private void ProvisionDestinations(IEngine engine, Element element, IEngineMedia
     var sdiTransportType = api.TransportTypes.ReadSingle("SDI");
 
     var existingEndpoints = api.Endpoints.Query()
-        .Where(x => x.Role == Role.Destination && x.Element == elementId)
+        .Where(x => x.Role == EndpointRole.Destination && x.Element == elementId)
         .SafeToDictionary(x => (x.Element, x.Identifier));
 
     var existingVirtualSignalGroups = api.VirtualSignalGroups
@@ -198,7 +199,7 @@ private void ProvisionDestinations(IEngine engine, Element element, IEngineMedia
         }
 
         endpoint.Name = name;
-        endpoint.Role = Role.Destination;
+        endpoint.Role = EndpointRole.Destination;
         endpoint.Element = elementId;
         endpoint.Identifier = key;
         endpoint.TransportType = sdiTransportType;
@@ -212,7 +213,7 @@ private void ProvisionDestinations(IEngine engine, Element element, IEngineMedia
         }
 
         vsg.Name = name;
-        vsg.Role = Role.Destination;
+        vsg.Role = EndpointRole.Destination;
         vsg.AssignEndpointToLevel(videoLevel, endpoint);
 
         newVirtualSignalGroups.Add(vsg);

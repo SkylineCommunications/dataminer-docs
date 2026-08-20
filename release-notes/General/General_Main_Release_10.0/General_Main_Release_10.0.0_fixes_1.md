@@ -198,7 +198,7 @@ In some cases, it could occur that the top filters of the CPE topology remained 
 
 #### DataMiner Cube - Logging: Problem when trying to open a log entry \[ID 21676\]
 
-When you opened the *Logging* window by clicking the *Logging* button in the bottom-right corner of Cube’s login screen, selected a log entry and clicked *Open*, in some cases, the log entry would not be opened.
+When you opened the *Logging* window by clicking the *Logging* button in the lower-right corner of Cube’s login screen, selected a log entry and clicked *Open*, in some cases, the log entry would not be opened.
 
 Also, a number of minor enhancements have been made to the *Logging* window.
 

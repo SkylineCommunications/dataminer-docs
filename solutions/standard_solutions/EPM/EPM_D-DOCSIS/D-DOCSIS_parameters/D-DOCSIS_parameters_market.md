@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_market
+description: Discover the entire list of Market parameters that are available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – Market

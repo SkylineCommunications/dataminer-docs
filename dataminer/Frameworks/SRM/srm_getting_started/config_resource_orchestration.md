@@ -44,8 +44,8 @@ In the next step of the wizard, they need to select a profile instance, and they
 
 After they click *Confirm*, the booking will be created.
 
-## Creating a custom front end for the wizard
+## Creating a custom frontend for the wizard
 
 The wizard can be launched from Visual Overview or from a low-code app.
 
-A typical use case is to make use of the Resource Manager component in Visual Overview, showing resource bands on the Y-axis. This is done in the same way as for [Resource Scheduling](xref:config_resource_scheduling#creating-a-custom-front-end-for-the-resource-scheduling-wizard).
+A typical use case is to make use of the Resource Manager component in Visual Overview, showing resource bands on the Y-axis. This is done in the same way as for [Resource Scheduling](xref:config_resource_scheduling#creating-a-custom-frontend-for-the-resource-scheduling-wizard).

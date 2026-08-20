@@ -1,5 +1,6 @@
 ---
 uid: Availability_Using
+description: Explore the EPM Topology app of the EPM Availability Solution as well as the visual overview pages associated with different topology levels.
 ---
 
 # Using the EPM Availability Solution

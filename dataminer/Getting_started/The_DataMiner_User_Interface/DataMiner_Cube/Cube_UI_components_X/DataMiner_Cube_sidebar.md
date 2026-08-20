@@ -4,7 +4,7 @@ uid: DataMiner_Cube_sidebar
 
 # DataMiner Cube sidebar
 
-On the left-hand side of the Cube UI, a sidebar is displayed. By default, this sidebar contains the following buttons:
+On the left side of the Cube UI, a sidebar is displayed. By default, this sidebar contains the following buttons:
 
 | Icon | Name | Description |
 |--|--|--|
@@ -12,7 +12,7 @@ On the left-hand side of the Cube UI, a sidebar is displayed. By default, this s
 | ![Activity](~/dataminer/images/Activity.png) | Activity | Opens a pane listing recent items. See [Activity pane](#activity-pane). |
 | ![Apps](~/dataminer/images/Apps.png) | Apps | Opens a pane listing the different apps available in Cube. See [Apps pane](#apps-pane). |
 | ![Workspace](~/dataminer/images/Workspace.png) | Workspace | Opens a pane where you can select and manage different Cube workspaces. See [Working with workspaces](xref:Working_with_workspaces). |
-| ![Community](~/dataminer/images/Community.png) | Community | Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a page where you can ask questions about anything related to DataMiner, a page that allows you to suggest new features, and a page that allows you to provide feedback<!--RN 41605-->. |
+| ![Community](~/dataminer/images/Community.png) | Community | Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a page where you can ask questions about anything related to DataMiner, and pages where you can suggest new features, provide feedback<!--RN 41605-->, and report issues<!--RN 45741-->. |
 
 You can pin additional buttons to the sidebar using the "..." or "+" button. This button opens a menu where you can select the buttons you want to pin.
 
@@ -28,8 +28,8 @@ To unpin a button again, right-click the button and select *Unpin*. This is not 
 
 > [!NOTE]
 >
-> - At most 4 items can be pinned to the sidebar. If the maximum number of items has been added, the button to pin more items is no longer displayed, until an item is unpinned again.
-> - It is possible to move the position of the sidebar to the right-hand side. To do so, press *Ctrl+Alt+Shift+RightArrow*. To move the pane back to the left-hand side, press *Ctrl+Alt+Shift+LeftArrow*. The sidebar position can also be changed in the Cube settings. See [Cube settings](xref:User_settings#cube-settings).
+> - At most four items can be pinned to the sidebar. If the maximum number of items has been added, the button to pin more items is no longer displayed, until an item is unpinned again.
+> - It is possible to move the position of the sidebar from the left to the right side of the UI. To do so, press *Ctrl+Alt+Shift+RightArrow*. To move the pane back to the left, press *Ctrl+Alt+Shift+LeftArrow*. The sidebar position can also be changed in the Cube settings. See [Cube settings](xref:User_settings#cube-settings).
 > - In an EPM environment, an additional *Topology* button can be available, which allows you to navigate through the EPM topology.<!-- RN 42221 -->
 
 ## Surveyor pane

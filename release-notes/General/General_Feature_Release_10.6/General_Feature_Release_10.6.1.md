@@ -26,6 +26,13 @@ uid: General_Feature_Release_10.6.1
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.1](xref:Web_apps_Feature_Release_10.6.1).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+## Important changes
+
+The following changes may have an impact on your system, so please make sure to check these before you upgrade:
+
+- [Unicode string values will now be saved correctly in non-Unicode elements [ID 43929]](#unicode-string-values-will-now-be-saved-correctly-in-non-unicode-elements-id-43929)
+- [Annotations are now End of Life [ID 44136]](xref:Web_apps_Feature_Release_10.6.1#annotations-are-now-end-of-life-id-44136)
+
 ## Highlights
 
 - [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
@@ -254,7 +261,7 @@ The *Attachments* tab has been updated as follows:
 
 - The *Load* button will now be disabled when definition-level security is enabled.
 
-- A message will now be displayed in the right-hand panel, explaining that you can add DOM instances to the list in the left-hand panel by using the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
+- A message will now be displayed in the pane on the right, explaining that you can add DOM instances to the list in the pane on the left by using the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
 
 - A *Clear* button now allows you to clear the list of DOM instances.
 
@@ -414,6 +421,12 @@ When elements are swarmed, since DataMiner feature version 10.5.6, some events a
 A caching mechanism has now been introduced in order to enhance performance when retrieving anomaly scores via a GetRADDataMessage.
 
 When the anomaly scores for a particular relational anomaly (sub)group and region are retrieved twice within a 5-minute window, from now on, SLAnalytics will not recalculate the scores. Instead, it will return the scores from the cache.
+
+#### BPA test 'Antivirus on the DataMiner Agents' no longer checks for CrowdStrike files [ID 44199]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+From now on, the *Antivirus on the DataMiner Agents* BPA test will no longer check for CrowdStrike files.
 
 ### Fixes
 
@@ -580,3 +593,9 @@ Because of a protobuf serialization issue, GQI data sources could throw an excep
 <!-- MR 10.7.0 - FR 10.6.1 -->
 
 After a Failover switch, in some cases, the new online agent would incorrectly not reload the scheduled tasks that the former online agent had in memory.
+
+#### API call 'DeleteRows' API could incorrectly delete rows from SLProtocol without having received any request to delete them [ID 44811]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+Up to now, the `DeleteRows` API call could incorrectly delete rows from SLProtocol without having received any request to delete them. This would happen after it had received a request to delete a combination of existing keys and non-existing keys.

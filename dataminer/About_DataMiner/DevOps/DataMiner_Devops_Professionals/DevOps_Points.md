@@ -1,5 +1,6 @@
 ---
 uid: DevOps_Points
+description: Accumulate a set quantity of DevOps Points to maintain a DevOps Professional status and to be an official member of the exclusive DevOps community.
 ---
 
 # Accumulating DevOps Points

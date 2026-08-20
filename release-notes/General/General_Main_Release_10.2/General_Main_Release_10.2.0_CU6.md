@@ -450,7 +450,7 @@ In some rare cases, an error could occur in the SLSNMPManager process due to an 
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-Up to now, to resolve the monitoring state of EPM shapes displayed in Visual Overview, the source table of the EPM front end was used, which could cause an incorrect alarm color to be shown for such shapes. Now, the source table of the back end is used instead, as this is the table the monitoring is applied to.
+Up to now, to resolve the monitoring state of EPM shapes displayed in Visual Overview, the source table of the EPM frontend was used, which could cause an incorrect alarm color to be shown for such shapes. Now, the source table of the backend is used instead, as this is the table the monitoring is applied to.
 
 #### GQI: No longer possible to select another row after collapsing a group containing a selected row [ID 34042]
 

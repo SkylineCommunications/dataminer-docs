@@ -41,22 +41,22 @@ In the *Logging* section of *System Center*, it is now possible to set log level
 
 ##### Overriding the system-wide log levels for a specific log file
 
-1. In the tab listing the DataMiner log files (default tab name: “dataminer”), select the log file in the left-hand pane.
+1. In the tab listing the DataMiner log files (default tab name: “dataminer”), select the log file in the pane on the left.
 
-1. At the top of the right-hand pane, open the *Log settings* section, select the *Override log levels* option, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
+1. At the top of the pane on the right, open the *Log settings* section, select the *Override log levels* option, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
 
 > [!NOTE]
 >
 > - If you want to set the same non-default log levels for multiple log files, then note that you can select more than one file in step 1. To select more than one file, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the Shift key.
-> - In the left-hand pane, the current log levels for each of the DataMiner log files are displayed next to the name of the file.
+> - In the pane on the left, the current log levels for each of the DataMiner log files are displayed next to the name of the file.
 >   - If a file inherits the system-wide log levels, the log levels displayed next to the file will appear in gray.
 >   - If a file has specific log levels defined (i.e., if the system-wide levels are overridden), the log levels displayed next to the file will appear in black.
 > - If you clear the *Override log levels* option for a particular log file, that file will again inherit the system-wide log levels.
 
 ##### Setting the system-wide log levels
 
-1. In the tab listing the DataMiner log files (default tab name: “dataminer”), select the first entry in the left-hand pane, marked “\<Default>”.
-1. At the top of the right-hand pane, open the *Log settings* section, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
+1. In the tab listing the DataMiner log files (default tab name: “dataminer”), select the first entry in the pane on the left, marked “\<Default>”.
+1. At the top of the pane on the right, open the *Log settings* section, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
 
 #### Service & Resource Management - ListView: Alarm count column can now indicate the number of alarms as a colored icon \[ID 24598\]
 

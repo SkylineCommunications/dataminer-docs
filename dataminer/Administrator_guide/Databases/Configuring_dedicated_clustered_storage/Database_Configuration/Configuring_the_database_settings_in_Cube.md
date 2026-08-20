@@ -1,5 +1,6 @@
 ---
 uid: Configuring_the_database_settings_in_Cube
+description: "Configure the database settings for your dedicated clustered storage in DataMiner Cube if you chose not to use the recommended STaaS setup."
 keywords: local database
 ---
 
@@ -58,14 +59,10 @@ For a Cassandra cluster database (i.e., one Cassandra cluster that is used as th
 
    - **Password**: The password with which the DMA has to log on to the indexing database (if applicable).
 
-     ![Cube Cassandra Cluster Configuration](~/dataminer/images/CassandraCluster_CubeConfiguration.png)
+     ![Cube Cassandra Cluster Configuration](~/dataminer/images/CassandraCluster_CubeConfiguration.png)<br>*Database tab in System Center in DataMiner 10.3.3*
 
    > [!TIP]
    > See also: [Configuring an indexing database](xref:Indexing_Database)
-
-<!--1. From DataMiner 10.3.10/10.4.0 onwards (RN 36399 - reverted in RN 37322), you can enable TLS by selecting the checkbox next to *TLS enabled*.
-
-   ![Cube Cassandra Cluster Configuration](~/dataminer/images/CassandraCluster_CubeConfig.png)<br>*DataMiner 10.3.10 example configuration*-->
 
 1. Click *Save*.
 

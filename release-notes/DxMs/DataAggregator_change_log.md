@@ -93,7 +93,7 @@ In the debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Dat
 
 #### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Include bs4 Python library with DataAggregator installer [ID 38654]
 
-Beautiful Soup is a commonly used library that makes it easy to scrape information from web pages and as such it has been made part of the installer. The DataAggregator installer now includes the bs4 pip package and its dependencies.
+Beautiful Soup is a commonly used library that makes it easy to scrape information from webpages and as such it has been made part of the installer. The DataAggregator installer now includes the bs4 pip package and its dependencies.
 
 #### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Improve DataAggregator Migrator [ID 38682]
 

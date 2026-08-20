@@ -4,6 +4,18 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 4 August 2026 - Enhancement -SupportAssistant 1.9.3 - Release from GitHub
+
+SupportAssistant is now released from GitHub, which fully signs the MSI, binaries, and executables.
+
+#### 12 June 2026 - Enhancement - SupportAssistant 1.9.2 - Upgrade to .NET 10
+
+SupportAssistant has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
+
+#### 14 April 2026 - Enhancement - SupportAssistant 1.9.1 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 16 February 2026 - Enhancement - SupportAssistant 1.9.0 - Proxy setup support for file uploads
 
 File uploads in SupportAssistant previously attempted transfers only through the CloudGateway endpoint or directly. With this update, if the CloudGateway upload endpoint is unavailable, the DxM will now automatically fall back to using its configured proxy settings (when present).

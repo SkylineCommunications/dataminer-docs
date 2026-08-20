@@ -1,6 +1,6 @@
 ---
 uid: STaaS_features
-description: STaaS takes care of data redundancy, data resilience, data security, and data availability out of the box.
+description: "Explore the many STaaS features. STaaS takes care of data redundancy, data resilience, data security, and data availability out of the box."
 reviewer: Alexander Verkest
 ---
 
@@ -11,6 +11,10 @@ reviewer: Alexander Verkest
 DataMiner STaaS relies on Azure Storage, which stores multiple copies of your data to make sure it is always available even in case outages or disasters occur. Different storage redundancy setups are possible. STaaS supports zone-redundant storage (ZRS) and geo-redundant storage (GRS).
 
 When you use the installation wizard or [contact Skyline](mailto:support@dataminer.services) to register your system to use STaaS, you can include your preferences as to the region(s) where your data should be stored and the type of storage redundancy that should be used.
+
+When you set up a DaaS system, you can configure the storage region and (optional) geo-replication region via the advanced settings. 
+
+If your preferred storage region is not available in the options yet, please contact <daas@dataminer.services>.
 
 | Region           | Location             | Status                                                     | [Geo-Redundancy Pair](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions) for GRS ([on request](mailto:support@dataminer.services?Subject=GRS%20for%20STaaS)) |
 |------------------|----------------------|------------------------------------------------------------|----------------------------------|
@@ -24,7 +28,7 @@ When you use the installation wizard or [contact Skyline](mailto:support@datamin
 
 - **Zone-redundant storage (ZRS)** copies your data synchronously across three Azure availability zones in one region. Each availability zone is a separate physical location with independent power, cooling, and networking. By **default**, DataMiner STaaS uses ZRS.
 
-- **Geo-redundant storage (GRS)** copies your data synchronously three times within a single physical location in the primary region and then also copies your data asynchronously to a single physical location in the secondary region. Only specific regions can be combined in such a setup, e.g., if the primary region is Switzerland North, the secondary region can only be Switzerland West. For an overview of the supported regions, see [Azure paired regions](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions). GRS is **available upon request**, but will result in additional charges. If you wish to use DataMiner STaaS with GRS, contact <support@dataminer.services>.
+- **Geo-redundant storage (GRS)** copies your data synchronously three times within a single physical location in the primary region and then also copies your data asynchronously to a single physical location in the secondary region. Only specific regions can be combined in such a setup, e.g., if the primary region is Switzerland North, the secondary region can only be Switzerland West. For an overview of the supported regions, see [Azure paired regions](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions). GRS will result in additional charges. If you wish to use DataMiner STaaS with GRS on a self-managed system, contact <support@dataminer.services>.
 
 > [!TIP]
 > For detailed information, see [Azure Storage redundancy on learn.microsoft.com](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy)
@@ -72,7 +76,7 @@ If your system is pushing too much load for a specific data type, that data type
 
 From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 42387 -->, when this happens, an alarm will be generated in Cube with information about the data type or types that are being throttled. For example:
 
-![ThrottlingAlarmExample](~/dataminer/images/throttling_alarm_example.png)
+![ThrottlingAlarmExample](~/dataminer/images/throttling_alarm_example.png)<br>*Alarm Console in DataMiner 10.6.5*
 
 If you encounter such an alarm, to ensure smooth operation of your DataMiner System, try to identify and resolve the root cause of this higher load. For assistance with this investigation, please contact <support@dataminer.services>.
 
@@ -87,6 +91,10 @@ To **migrate existing data** to STaaS, the following limitations apply:
 - Direct migration from a MySQL setup is not supported. We recommend using .dmimport files (also known as "DELT export packages") to migrate your data, or [contacting support](xref:Contacting_tech_support) for assistance with the migration.
 
 - Migration using a proxy is supported from DataMiner 10.4.6 onwards<!-- RN 39313 -->.
+
+- Migration of systems where [Swarming](xref:Swarming) is enabled is supported from DataMiner 10.6.8/10.7.0 onwards<!-- RN 45507 -->.
+
+- Prior to DataMiner 10.6.8/10.7.0 onwards<!-- RN 45507 -->, scheduled tasks [stored in the database](xref:SchedulerDataStorage) are not migrated.
 
 - If you start the migration while an element with a logger table is stopped, the data of that element will not be migrated.
 
@@ -105,6 +113,8 @@ In addition, the following **other limitations** currently apply:
 - DMZ setups are currently not supported.
 
 - Adding a DataMiner Agent to a DMS using STaaS requires [additional manual configuration steps](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
+
+- For element table data, the first 768 bytes of a table instance row key (768 ASCII characters, or as few as 192 in a worst-case UTF-8 scenario) must be unique to avoid conflicts in the database; longer keys are truncated.
 
 - Regarding logger tables:
 

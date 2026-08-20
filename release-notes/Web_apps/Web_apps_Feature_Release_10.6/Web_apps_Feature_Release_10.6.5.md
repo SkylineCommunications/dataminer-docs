@@ -2,21 +2,17 @@
 uid: Web_apps_Feature_Release_10.6.5
 ---
 
-# DataMiner web apps Feature Release 10.6.5 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.5
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU2].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.5](xref:General_Feature_Release_10.6.5).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.5](xref:Cube_Feature_Release_10.6.5).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -45,7 +41,7 @@ When configuring a *Node edge graph* component, you can now use the following ad
 
 Since DataMiner 10.5.0 CU11/10.6.2, you can select a specific field to be displayed as node or edge label.
 
-From now on, you can link a node or edge label to data from another component (e.g. a list of query columns displayed in a *Dropdown* component).
+From now on, you can link a node or edge label to data from another component (e.g., a list of query columns displayed in a *Dropdown* component).
 
 #### Dashboards/Low-Code Apps - Node edge graph component: 'Node move' events can now be cancelled by pressing ESC [ID 44938]
 
@@ -116,14 +112,6 @@ The GQI DxM has been upgraded to Microsoft .NET 10. It no longer requires the .N
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 The Web DcM has been upgraded to Microsoft .NET 10.
-
-#### GQI DxM: Percentage values for trend data will now be passed and displayed like all other percentage values [ID 44884]
-
-<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
-
-Up to now, percentage values for average trend data of discreet parameters were passed as a number between 0 to 100. In order to have percentage values passed consistently throughout all GQI data sources, from now on, those percentage values will be passed as a number between 0 to 1.
-
-Also, in order to have all percentage values displayed consistently, percentage values for average trend data of discreet parameters will now be displayed in the culture of the user.
 
 #### Low-Code Apps: Enhanced performance when entering text in a text box that supports highlighting [ID 44888]
 
@@ -360,3 +348,9 @@ When you generated a PDF report of a dashboard with stacked mode disabled, and t
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When, in a *Time range* component, you wanted to enter, for example, the time "00:30", up to now, typing "00" in the hours field would incorrectly not cause the cursor to automatically jump to the minutes field.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Grid width and height would incorrectly be set to 0 when the graph moved out of the viewport [ID 45184]
+
+<!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 [CU0] -->
+
+When a node edge graph moved out of the viewport, up to now, the width and height of its grid would be set to 0, causing it to render incorrectly.

@@ -265,6 +265,21 @@ A number of issues that occurred while synchronizing files among agents in a DMS
 
 When a DataMiner Agent had been upgraded, in some cases, the folder to which the contents of the upgrade package had been extracted would incorrectly not be removed.
 
+#### NT_FILL_ARRAY_WITH_COLUMN call would silently fail when providing a string[] instead of an object[] for the keys and values [ID 41511]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When an NT_FILL_ARRAY_WITH_COLUMN call was performed in a QAction, up to now, it would silently fail when providing a string[] (or any other type of object that is allowed in an object[]) instead of an object[] for the keys and values. This would also affect all wrapper methods that accept an object[] argument.
+
+From now on, it will be allowed to provide either a string[] or an object[] to any of the following calls:
+
+- `protocol.FillArrayWithColumn(...)`
+- `protocol.FillArray(...)`
+- `protocol.FillArrayNoDelete(...)`
+- `protocol.NotifyProtocol(220, ...)`
+
+Also, a type check has now been added to these same calls in order to prevent type mismatch issues from going unnoticed. When an invalid type is passed to either of them, the error that is thrown will automatically be logged in the element's log file.
+
 #### DataMiner would use an incorrect IP address when connecting to BrokerGateway during startup [ID 41530]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->

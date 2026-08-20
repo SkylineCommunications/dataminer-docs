@@ -100,6 +100,16 @@ When you restarted a replicated element that was in the process of starting up, 
 
 When you uploaded an updated copy of a DVE protocol version that had already been uploaded before, up to now, the production version of the DVE child elements that were using that protocol would incorrectly be reset.
 
+#### DataMiner upgrade: Problem when installing a full upgrade after having installed a web-only upgrade [ID 43676]
+
+<!-- MR 10.4.0 [CU20] - FR TBD -->
+
+When, on a DataMiner Agent running version 10.4, you first installed a DataMiner 10.5.x web-only upgrade, and then installed a DataMiner 10.4 full upgrade, the following error would be thrown:
+
+`The directory 'C:\Skyline DataMiner\Tools\ModuleInstallers\Web' does not exist!`
+
+From now on, whenever you install a full DataMiner upgrade, any web-only upgrades will first be removed.
+
 #### STaaS: Data missing from heatmaps and alarm state pie charts [ID 43689]
 
 <!-- MR 10.4.0 [CU20] / 10.5.0 [CU8] - FR 10.5.11 -->

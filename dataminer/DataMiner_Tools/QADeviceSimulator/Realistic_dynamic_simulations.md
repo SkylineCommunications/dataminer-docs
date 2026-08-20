@@ -33,8 +33,14 @@ When this simulation containing the *ProxyAgent* is running, the tool will auto
 
 These files will contain all variable bindings coming from the device that the proxy captures. Each line contains a timestamp, OID, binding type, and value. All are separated by #@#. Below is an example of such a proxy simulation file:
 
-![Proxy simulation file example](~/develop/images/QADS_ProxySimulationFile.png)
-<br>
+```bash
+2018-01-25 08:24:07:782#@#1.3.6.1.2.1.2.2.1.2.49#@#OctetString#@#gigabitethernet1/1
+2018-01-25 08:24:07:782#@#1.3.6.1.2.1.2.2.1.3.49#@#OctetString#@#6
+2018-01-25 08:24:07:782#@#1.3.6.1.2.1.2.2.1.7.49#@#Integer32#@#1
+2018-01-25 08:24:07:782#@#1.3.6.1.2.1.2.2.1.8.49#@#Integer32#@#1
+2018-01-25 08:24:07:782#@#1.3.6.1.2.1.2.2.1.5.49#@#Gauge32#@#1000000000
+2018-01-25 08:24:08:130#@#1.3.6.1.2.1.2.2.1.2.50#@#OctetString#@#gigabitethernet1/2
+```
 
 ## Putting real device data in the database
 

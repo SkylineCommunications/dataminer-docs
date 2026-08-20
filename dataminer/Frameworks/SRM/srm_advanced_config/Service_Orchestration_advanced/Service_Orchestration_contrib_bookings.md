@@ -22,7 +22,9 @@ The timing for a contributing resource is fully managed by the SRM framework and
 - **Locked**: The timing of the main booking needs to be fully included in the timing of the contributing booking
 
   > [!NOTE]
-  > When a contributing resource is added to a main booking that is already running, the constraint on the time window is not applicable for the elapsed duration. <!-- RN 27107 -->
+  >
+  > - When a contributing resource is added to a main booking that is already running, the constraint on the time window is not applicable for the elapsed duration. <!-- RN 27107 -->
+  > - The SRM concurrency license defines the maximum number of overlapping bookings allowed in a cluster. Any regular booking will consume a credit, except for contributing bookings of type **Locked**. <!-- RN 28659 -->
 
 ### Main or local
 
@@ -38,7 +40,7 @@ Similar to regular bookings, contributing bookings can be **edited**. Relevant o
 
 Like a main booking, a contributing booking can have different [lifecycle states](xref:Service_Orchestration_life_cycle_states). These can be adjusted based on changes applied to the main booking, and likewise, changes applied to a contributing booking can cause a lifecycle state adjustment of the main booking making use of it:
 
-- When a booking is converted to a contributing booking (with the *Convert to Contributing* checkbox in the Booking Wizard), the SRM framework will set the booking to the **Partial** state. It is then up to the user or the front-end script to confirm the booking.<!-- RN 27573 -->
+- When a booking is converted to a contributing booking (with the *Convert to Contributing* checkbox in the Booking Wizard), the SRM framework will set the booking to the **Partial** state. It is then up to the user or the frontend script to confirm the booking.<!-- RN 27573 -->
 
 - When the **main booking is confirmed**:<!-- RN 25547 -->
 

@@ -37,7 +37,7 @@ To book an appointment, you will need to use the booking link that you will find
 >
 > - You can cancel or reschedule an appointment up to 96 hours before it starts, using the confirmation email you received when booking the appointment. If you cannot update the appointment online, please contact [Skyline Academy](mailto:academy@skyline.be) or your team of examiners.
 > - If you ordered two or more certifications, you need to complete each certification one by one. The Configurator certification process will only start after you have completed the Fundamentals exam.
-> - In order to take the DataMiner Configurator exam you must have obtained your DataMiner Fundamentals certificate or gained expertise through experience. 
+> - In order to take the DataMiner Configurator exam you must have obtained your DataMiner Fundamentals certificate or gained expertise through experience.
 
 ### Exam format and grading
 
@@ -168,15 +168,17 @@ To prepare effectively for the exam:
     - [Interactive Automation Script Toolkit examples](https://github.com/SkylineCommunications/SLC-AS-Example_InteractiveAutomationScriptToolkit)
   
   - System Library:
-    - [Introduction video to DIS Class Library](https://community.dataminer.services/courses/dataminer-automation/lessons/dataminer-integration-studio-dis-class-library/)
-    - [About the class library](xref:ClassLibraryIntroduction)
-    - [Class library examples](xref:ClassLibraryExamples)
+    - [Introduction video to DataMinerSystem Library](https://community.dataminer.services/courses/dataminer-automation/lessons/dataminer-integration-studio-dis-class-library/)
+    - [About the DataMinerSystem library](xref:ClassLibraryIntroduction)
+    - [DataMinerSystem library examples](xref:ClassLibraryExamples)
 
 - Schedule check-ins with your examiner via the booking page if you have any questions.
 
 ## Scripts & Connectors HTTP & SNMP Basics exam guide
 
 Are you preparing to take the Scripts & Connectors HTTP or SNMP Basics exam? Below you can find all the information you need, including the certification process, the exam format, the scoring criteria, and tips on how to prepare for the exam.
+
+![HTTP & SNMP Basics Certification Process Timeline](~/dataminer/images/HTTP_SNMP_Basics_Certification_Process_Timeline.png)
 
 ### Certification process
 

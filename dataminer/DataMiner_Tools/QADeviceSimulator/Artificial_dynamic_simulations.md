@@ -15,7 +15,7 @@ If you want to avoid static values but were not able to capture realistic data, 
     Example:
 
     ```txt
-    ReturnValue= "{INS}RandomInt;309;409{INS}".
+    ReturnValue= "{INS}RandomInt;309;409{INS}"
     ```
 
     > [!NOTE]

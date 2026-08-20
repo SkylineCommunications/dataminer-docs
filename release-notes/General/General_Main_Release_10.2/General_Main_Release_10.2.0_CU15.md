@@ -178,7 +178,7 @@ When you added a filtered history tab that had to show active alarms, masked ala
 
 When, while editing a low-code app with more than one header bar option, you selected another header bar option, the label of the previously selected header bar option would incorrectly still be displayed in the side panel.
 
-#### Dashboards app & Low-Code Apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID 36131]
+#### Dashboards app & Low-Code Apps: Popup panel showing a PDF preview would incorrectly have a scrollbar [ID 36131]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 

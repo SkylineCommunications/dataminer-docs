@@ -1,5 +1,6 @@
 ---
 uid: RS_Resource_Icons
+description: Use the Resource Studio app to assign icons to resources or resource pools. These will help users by adding more graphical context in workflows.
 ---
 
 # Assigning resource icons

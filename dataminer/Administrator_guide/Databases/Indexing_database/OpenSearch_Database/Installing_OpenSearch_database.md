@@ -9,21 +9,38 @@ description: Install and test OpenSearch as described in the OpenSearch document
 
 Supported versions:
 
-- OpenSearch 1.X
-- OpenSearch 2.X
+- OpenSearch 2.x
+- OpenSearch 3.x — recommended for new installations and with DataMiner versions starting from 10.6.x
+
+> [!IMPORTANT]
+> OpenSearch 1.x reached community end-of-life on May 6, 2025 and is no longer supported. If you are still using OpenSearch 1.x, upgrade to a supported version.
 
 > [!NOTE]
 >
 > - We recommend using the latest version of Ubuntu LTS. However, OpenSearch also supports other Linux distributions. See [Operating system compatibility](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#operating-system-compatibility).
 > - OpenSearch is supported on Windows from OpenSearch 2.4 onwards.
+> - OpenSearch 3.x requires Java 21. If you plan to upgrade an existing OpenSearch 2.x cluster to OpenSearch 3.x, first upgrade to the latest OpenSearch 2.x version (2.19) as detailed in the [official OpenSearch documentation](https://opensearch.org/docs/latest/).
+
+## Before you begin
+
+Before you set up an OpenSearch cluster, take the following into account:
+
+- **Sizing**: Make sure each OpenSearch node meets the hardware requirements (RAM, CPU, disk, and network) detailed in the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements#opensearchelasticsearch-requirements).
+
+- **Number of nodes**: For a production cluster, use **at least three** cluster-manager-eligible nodes and always an odd number. This is required because of the way OpenSearch works internally: to elect a cluster manager and avoid split-brain situations, a majority (quorum) of the cluster-manager-eligible nodes must be available, which is only possible with an odd number of nodes. A single-node setup is only suitable for testing or evaluation.
+
+- **Java**: OpenSearch bundles its own Java runtime, so you do not need to install Java separately. Note that OpenSearch 3.x is built on Java 21.
+
+> [!TIP]
+> For the full setup procedure, refer to the [official OpenSearch documentation](https://opensearch.org/docs/latest/tuning-your-cluster/cluster/).
 
 ## Setting up the OpenSearch cluster
 
-See the [official documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch cluster. The configuration is almost identical to that of an Elasticsearch cluster.
+Refer to the [official documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch cluster. The configuration is almost identical to that of an Elasticsearch cluster.
 
 > [!IMPORTANT]
 >
-> - On production systems, the *JVM Heap Space* must be set to a value larger than the default. To configure this setting, see [Important settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings).
+> - On production systems, the *JVM Heap Space* must be set to a value larger than the default. As a rule of thumb, set it to about 50% of the available RAM, but do not exceed 30 GB, as going above that threshold disables compressed object pointers and reduces efficiency. Always leave the remaining memory to the operating system and the file system cache. To configure this setting, see [Important settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings).
 > - The `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e., the maximum integer value). Refer to the example below for more information.
 
 > [!NOTE]
@@ -60,18 +77,16 @@ These are the main steps of the setup:
   #
   cluster.name: NameOfYourCluster
   #
-  # Identify initial cluster manager node:
-    # If you are using OpenSearch 2, use cluster.initial_cluster_manager_nodes.
-    # If you are using OpenSearch 1, use cluster.initial_master_nodes.
+  # Identify the initial cluster manager node:
   #
-  cluster.initial_cluster_manager_nodes: ["opensearchnode1"] 
+  cluster.initial_cluster_manager_nodes: ["node-1"]
   #
   # ------------------------------------ Node ------------------------------------
   #
   # Use a descriptive name for the node(node.name can be anything you desire, but we recommend hostname of node):
   #
   # Make the node.name reflect the name of your node
-  node.name: opensearchnode1
+  node.name: node-1
   #
   # ----------------------------------- Paths ------------------------------------
   #
@@ -86,9 +101,9 @@ These are the main steps of the setup:
   #
   # Set the bind address to a specific IP (IPv4 or IPv6), best is to use the real-ip of the node:
   #
-  network.host: 166.206.186.146
+  network.host: 192.0.2.1
   
-  network.publish_host: 166.206.186.146
+  network.publish_host: 192.0.2.1
   #
   # Set a custom port for HTTP:
   #
@@ -101,15 +116,18 @@ These are the main steps of the setup:
   # Pass an initial list of hosts to perform discovery when this node is started:
   # The default list of hosts is ["127.0.0.1", "[::1]"]
   #
-  discovery.seed_hosts: ["166.206.186.146","166.206.186.147","166.206.186.148"]
-  
-  discovery.type: zen
+  discovery.seed_hosts: ["192.0.2.1","192.0.2.2","192.0.2.3"]
   
   indices.query.bool.max_clause_count: 2147483647
   ```
 
   > [!NOTE]
-  > As shown above, the `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e., the maximum integer value).
+  > As shown above, the `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e., the maximum integer value). DataMiner can send queries containing a very large number of boolean clauses to the indexing database, so this setting is raised to its maximum to prevent such queries from being rejected.
+
+  > [!IMPORTANT]
+  > Do not add the legacy `discovery.type: zen` setting to a multi-node cluster. Zen discovery has been removed in OpenSearch 3.x, where cluster formation is handled by `discovery.seed_hosts` and `cluster.initial_cluster_manager_nodes`. The `discovery.type` setting is only used for a single-node setup (see below).
+
+- By default, a node takes on all roles (cluster manager, data, and ingest). To restrict a node to specific roles, add a `node.roles` setting to its *opensearch.yml* file, as illustrated below.
 
 - If you want a node to be only a **data node**, add the following configuration in *opensearch.yml*:
 
@@ -117,7 +135,7 @@ These are the main steps of the setup:
   node.roles: [ data, ingest ]
   ```
 
-- If you want a node to be only the **cluster manager node** (a.k.a. the master node), add the following configuration in *opensearch.yml*:
+- If you want a node to be only the **cluster manager node** (previously called the master node), add the following configuration in *opensearch.yml*:
 
   ```yml
   node.roles: [ cluster_manager ]
@@ -369,7 +387,7 @@ To build trust between DataMiner and OpenSearch, so that DataMiner can connect t
 
      ```xml
     <DataBase active="True" type="Elasticsearch" search="true">
-    <DBServer>https://166.206.186.146:9200</DBServer>
+    <DBServer>https://192.0.2.1:9200</DBServer>
     <UID>UserNameToConnectToOpenSearch</UID>
     <PWD>PasswordOfTheUserNameToConnectToOpenSearch</PWD>
     <ConnectString></ConnectString>
@@ -408,24 +426,24 @@ To build trust between DataMiner and OpenSearch, so that DataMiner can connect t
 
 Optionally, you can set up OpenSearch Dashboards, which is the equivalent of Kibana for Elasticsearch. To do so, follow the instructions under [Installing OpenSearch Dashboards (Debian)](https://opensearch.org/docs/latest/install-and-configure/install-dashboards/debian/).
 
-You can for example install this on a Ubuntu Server from an APT repository or using .deb-packages. You will then be able to connect to your server using `http(s)://ipaddress:5601`(example: http(s)://166.206.186.146:5601).
+You can for example install this on a Ubuntu Server from an APT repository or using .deb-packages. You will then be able to connect to your server using `http(s)://ipaddress:5601`(example: http(s)://192.0.2.1:5601).
 
 To configure TLS, instead of using .pem certificates as recommended in the [OpenSearch documentation](https://opensearch.org/docs/latest/install-and-configure/install-dashboards/tls/), we recommend using .p12 files for trust and keystore. You can generate these using the [Generate-TLS-Certificates](https://github.com/SkylineCommunications/generate-tls-certificates) script maintained by the Skyline security team.
 
 To configure OpenSearch Dashboards to use .p12 files, add the following to `/etc/opensearch-dashboards/opensearch_dashboards.yml`:
 
 ```yaml
-# OpenSearch Dashboards is served by a back end server. This setting specifies the port to use.
+# OpenSearch Dashboards is served by a backend server. This setting specifies the port to use.
 server.port: 5601
 
 # Specifies the address to which the OpenSearch Dashboards server will bind. IP addresses and host names are both valid values.
 # The default is 'localhost', which usually means remote machines will not be able to connect.
-# To allow connections from remote users, set this parameter to a non-loopback address. Example: 166.206.186.146
-server.host: 166.206.186.146
+# To allow connections from remote users, set this parameter to a non-loopback address. Example: 192.0.2.1
+server.host: 192.0.2.1
 
 # The URLs of the OpenSearch instances to use for all your queries.
 # Can be one ipAddress in case of a single node, but can also be multiple in case of an cluster, below is an example for a cluster consisting of three nodes
-opensearch.hosts: ["https://166.206.186.146:9200","https://166.206.186.147:9200","https://166.206.186.148:9200"]
+opensearch.hosts: ["https://192.0.2.1:9200","https://192.0.2.2:9200","https://192.0.2.3:9200"]
 
 # This setting is for communication between OpenSearch Dashboards and the web browser. Set to true for HTTPS, false for HTTP.
 server.ssl.enabled: true
@@ -476,7 +494,7 @@ To monitor expiry dates, we recommend using the **Skyline SSL Certificate Monito
 
 1. [Create an alarm template](xref:Creating_an_alarm_template) to monitor the parameter *Remaining Days* of the protocol, and [assign it to the element](xref:Assigning_an_alarm_template).
 
-   ![Alarm template configuration](~/dataminer/images/Skyline_SSL_Certificate_Monitor_thresholds.png)
+   ![Alarm template configuration](~/dataminer/images/Skyline_SSL_Certificate_Monitor_thresholds.png)<br>*Alarm template editor in DataMiner 10.6.5*
 
 ## Renewing the TLS certificates for OpenSearch
 
@@ -510,4 +528,4 @@ To renew your self-signed TLS certificates for an existing OpenSearch database, 
 
    On Ubuntu, you can do so using the following command: `openssl verify rootCA.crt`
 
-   If a different status than OK is returned, this is most likely because the *rootCA.crt* has not been applied on the OpenSearch node or the *rootCA.crt* that you have applied on the OpenSearch node is not the the one that signed the certificate.
+   If a different status than OK is returned, this is most likely because the *rootCA.crt* has not been applied on the OpenSearch node or the *rootCA.crt* that you have applied on the OpenSearch node is not the one that signed the certificate.

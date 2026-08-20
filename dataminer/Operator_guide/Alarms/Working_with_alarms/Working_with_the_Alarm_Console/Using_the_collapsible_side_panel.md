@@ -6,7 +6,7 @@ uid: UsingTheCollapsibleSidePanel
 
 For each alarm tab, you can open a side panel in the Alarm Console showing the real-time value and history of a selected alarm.
 
-![Alarm Console side panel](~/dataminer/images/Alarm_Console_Side_Panel.png)<br>*Collapsible side panel of the Alarm Console in DataMiner 10.4.5*
+![Alarm Console side panel](~/dataminer/images/Alarm_Console_Side_Panel.png)<br>*Collapsible side panel of the Alarm Console in DataMiner 10.6.5*
 
 You can open the side panel of an alarm tab in three ways:
 
@@ -18,7 +18,7 @@ You can open the side panel of an alarm tab in three ways:
 
 In the side panel:
 
-![Side panel](~/dataminer/images/Side_Panel.png)<br>*Collapsible side panel of the Alarm Console in DataMiner 10.4.5*
+![Side panel](~/dataminer/images/Side_Panel.png)<br>*Collapsible side panel of the Alarm Console in DataMiner 10.6.5*
 
 - The top section contains the name of the element in alarm and an overview of its alarm state in the last twenty-four hours (1). Click this section to open the element card.
 

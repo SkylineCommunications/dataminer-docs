@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.5
 ---
 
-# General Feature Release 10.6.5 – Preview
+# General Feature Release 10.6.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -29,10 +29,6 @@ Before you upgrade to this DataMiner version:
   For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -99,15 +95,15 @@ From now on, SLNet will only send a log entry to SLLog if the log level dictates
 > This change was reverted in Main Release 10.5.0 CU12, Main Release 10.6.0, and Feature Release 10.6.3 CU1 as it caused SLNet to leak handles whenever a user authenticated using SAML and a new SLHelper process was started. See [SLNet will no longer take into account the log level before sending a log entry to SLLog [ID 44868]](xref:General_Feature_Release_10.6.3_CU1#slnet-will-no-longer-take-into-account-the-log-level-before-sending-a-log-entry-to-sllog-id-44868).
 > The change has now been reintroduced.
 
-#### 'Functions' and 'Helper' folders will no longer be checked when protocols are being loaded [ID 44946]
+#### 'Functions' and 'Help' folders will no longer be checked when protocols are being loaded [ID 44946]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 Before a DataMiner Agent starts loading protocol files during startup, it checks the protocol version folders to determine the location of all protocol files to be loaded. When a version folder does not contain any protocol files, it will log the following error: `Directory found for protocol xxx with version yyy but no protocol file found in path.`
 
-Up to now, apart from the protocol version folders, the DataMiner Agent would also incorrectly check the *Functions* and *Helper* folders. However, as these folders do not contain any protocol files, this would result in a large number of invalid errors being logged.
+Up to now, apart from the protocol version folders, the DataMiner Agent would also incorrectly check the *Functions* and *Help* folders. However, as these folders do not contain any protocol files, this would result in a large number of invalid errors being logged.
 
-From now on, when DataMiner starts up, it will no longer check for protocol files in the *Functions* and *Helper* folders.
+From now on, when DataMiner starts up, it will no longer check for protocol files in the *Functions* and *Help* folders.
 
 #### Enhanced SSH logging [ID 44975]
 
@@ -148,14 +144,6 @@ A correlation rule will be blocked when it was triggered due to a correlated ala
 
 > [!NOTE]
 > ​This feature only works when the correlation rule and all alarms in question reside on the same DataMiner Agent.
-
-#### Automation: Script library hint paths will only be sent to the script compilation engine the first time they are required [ID 45022]
-
-<!-- MR 10.7.0 - FR 10.6.5 -->
-
-Previously, when a script library was added to a DataMiner System, its hint paths were automatically sent to the automation script compilation engine, even when the library was not used by any automation script.
-
-From now on, script library hint paths will only be sent to the automation script compilation engine the first time they are required, i.e., when a script referencing the library in question (either directly or via another library) is executed for the first time.
 
 #### Custom SSH settings can now be configured per SSH connection [ID 45084]
 
@@ -309,3 +297,17 @@ When, on swarming-enabled systems, the StorageModule DxM failed to load elements
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 When, on a system on which Swarming was not enabled, you changed the casing of an element name and then restarted the element, in some cases, the next time you updated that element, the update would fail.
+
+#### DataMiner Objects Models: Database cache would not be cleaned up after a select query had been executed [ID 45161]
+
+<!-- MR 10.7.0 - FR 10.6.5 [CU0] -->
+<!-- Not added to MR 10.7.0 -->
+
+Since DataMiner Feature Release 10.6.4, the DOM manager's database cache would incorrectly not be cleaned up after a select query had been executed. This could lead to a significant performance degradation, especially when many DOM instances were created and updated, and only select queries were executed afterwards, as queries would be evaluated in memory against a potentially large set of cached instances.
+
+#### DataMiner Objects Models: Problem when selecting partial DOM instances sorted by a field value [ID 45200]
+
+<!-- MR 10.7.0 - FR 10.6.5 [CU0] -->
+<!-- Not added to MR 10.7.0 -->
+
+Since DataMiner 10.6.4, select queries retrieving partial DOM instances sorted by a field value could throw an exception when the results merged from the database cache needed to be resorted.

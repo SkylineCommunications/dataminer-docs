@@ -1,6 +1,7 @@
 ---
 uid: Backing_up_a_DataMiner_Agent
 keywords: backup dataminer
+description: "Learn how to back up a DataMiner Agent with full, configuration, or custom backups and automate daily, weekly, or monthly runs."
 ---
 
 # Backing up a DataMiner Agent
@@ -9,7 +10,7 @@ To back up a DataMiner Agent, you can take an [ad hoc backup using DataMiner Tas
 
 When you back up a DataMiner Agent, you will be able to select different backup types, such as a full backup to restore an entire DataMiner Agent or a backup of the configuration only. In DataMiner Cube, you can even configure a fully customized backup and select which specific items you want to include or exclude.
 
-![Custom backup example](~/dataminer/images/Custom_Backup_Cube.png)<br>*Custom backup configuration in DataMiner Cube 10.5.6*
+![Custom backup example](~/dataminer/images/Custom_Backup_Cube.png)<br>*Custom backup configuration in DataMiner Cube 10.6.5*
 
 Note that if you want to back up the data from one or more specific elements to migrate these to a different DMA, the easiest way to do so is by [exporting the data to a .dmimport package](xref:Exporting_and_importing_packages_on_a_DMA).
 

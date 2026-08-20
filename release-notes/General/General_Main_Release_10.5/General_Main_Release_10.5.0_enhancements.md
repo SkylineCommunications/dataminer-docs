@@ -753,6 +753,7 @@ A number of minor enhancements have been made to the following BPAs:
 
 ##### Cassandra DB Size
 
+- Renamed to *Local Single Cassandra DB Size*.
 - Will no longer be considered a standard BPA test.
 - Will no longer fail when the IP address is "localhost".
 - Error `! execution failed | This BPA does not apply for this DataMiner Agent` will no longer appear on DMAs using STaaS.

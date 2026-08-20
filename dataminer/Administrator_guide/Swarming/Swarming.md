@@ -34,13 +34,10 @@ Swarming can be enabled from DataMiner 10.5.1/10.6.0 onwards.<!-- RN 41490 --> N
 
 ## Upcoming features
 
-At present, swarming is mainly supported for [basic elements](xref:SwarmingElements).
-
-- For DVEs and virtual function child and parent elements, swarming is supported from DataMiner 10.5.11/10.6.0 onwards.<!-- RN 43793 --> Note that child elements cannot be swarmed directly; they follow the parent element.
-- For [bookings](xref:SwarmingBookings), swarming is supported if the *BookingSwarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
-
-In addition, we are working on adding the following functionality soon:
+We are working on adding the following functionality soon:
 
 - Support for swarming services.
 - Support for swarming of special elements: SLA elements, enhanced services, spectrum elements, redundancy group elements, EPM elements, and elements with element connections.
-- Support for automatic switchover of elements in case issues are detected.
+
+> [!TIP]
+> For an overview of currently supported features, refer to [Supported features](xref:EnableSwarming#supported-features).

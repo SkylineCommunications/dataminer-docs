@@ -113,7 +113,7 @@ On the *Alarm Console* page, several settings are available:
 
 - **Enable alarm storm protection by applying a delay on the alarms**: When you enable this setting, as soon as the specified number of alarms occur within the specified time range, these alarms will be delayed until the specified period of time has passed. The alarm storm protection is applied as long as there are more alarms than the number specified next to *Stop delaying below*. As long as the alarms are delayed, they will not be displayed in Cube. If an alarm is cleared before the delay time has passed, it will not be displayed at all.
 
-  While Cube is in alarm storm mode, a red *Alarm storm mode* label is displayed at the top of the window. If you click this label, a card is opened listing all alarms that are currently delayed, in the same layout as in the Alarm Console. This list is not automatically updated, but can be refreshed using a refresh button on the right-hand side.
+  While Cube is in alarm storm mode, a red *Alarm storm mode* label is displayed at the top of the window. If you click this label, a card is opened listing all alarms that are currently delayed, in the same layout as in the Alarm Console. This list is not automatically updated, but can be refreshed using a refresh button on the right.
 
   > [!NOTE]
   > This alarm storm protection is triggered by the total number of alarm updates, information events included.

@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Elasticsearch_backups_Windows
+description: "Explore how you can restore Elasticsearch backups using the Standalone Elastic Backup Tool. Keep in mind the restrictions for the backup path."
 ---
 
 # Restoring backups using the Standalone Elastic Backup Tool

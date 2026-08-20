@@ -9,6 +9,438 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 12 August 2026 - New feature - Catalog - Catalog item range Markdown support
+
+Catalog item ranges now support Markdown.
+
+### 12 August 2026 - New feature - Admin - Subscription templates
+
+On the Billing page of the Admin app, the *Add Subscription* button now launches a wizard instead of a context menu. The wizard also introduces a new *Templates* option, which offers predefined solution packs with an estimation of the units needed for a subscription based on that solution.
+
+### 6 August 2026 - Enhancement - Sharing - Improved error feedback for rejected share actions
+
+Error feedback has been improved for cases where creating, updating, or deleting a share is rejected by the DataMiner System. The messages shown now help you understand how to correct linked-account or organization issues.
+
+### 6 August 2026 - New feature - Admin - DataMiner Software section on DMS Overview page
+
+The DMS Overview page in the Admin app has been extended with a *DataMiner Software* section, showing the current software version, including the web version if a web-only upgrade has been installed.
+
+### 6 August 2026 - Fix - Connection - Operation cancelled error shown when switching organizations
+
+When switching organizations, the check to determine whether a DaaS system could be deployed was triggered twice. This could cause one of the calls to be aborted, resulting in an "operation cancelled" error being shown. This issue has been resolved.
+
+### 6 August 2026 - Fix - Admin - Stale data briefly shown on rapid filter changes
+
+On the Support Tickets page of the Admin app, rapidly switching filters could briefly display stale table data from the previous filter before the new results had finished loading. This issue has been resolved.
+
+### 6 August 2026 - Fix - Admin - Documentation links in support ticket descriptions not rendered as hyperlinks
+
+In the ticket details view on the Support page of the Admin app, embedded documentation links in a ticket description were shown as raw text instead of as clickable hyperlinks. This issue has been resolved.
+
+### 6 August 2026 - Fix - Admin - False error shown for support tickets outside the active time filter
+
+On the Support page of the Admin app, opening a direct link to a support ticket older than the active time filter incorrectly showed an error stating that the ticket could not be found. A fallback lookup by ID has been added so these tickets now open correctly.
+
+### 6 August 2026 - Enhancement - Admin - Duplicate support ticket creation prevented
+
+On the Support page of the Admin app, safeguards have been added to prevent duplicate support tickets from being created when network issues occur or when a ticket submission is automatically retried.
+
+### 6 August 2026 - Enhancement - Admin - Cluster dropdown and ticket form validation improvements
+
+On the Support page of the Admin app, the cluster dropdown now groups standalone DataMiner Agents. In addition, form validation has been improved with deferred error messages and character limit counters.
+
+### 16 July 2026 - Enhancement - Home - Back button on create organization step in DaaS deploy wizard
+
+A back button is now available on the create organization step in the DaaS deploy wizard.
+
+### 16 July 2026 - Enhancement - Admin - Documentation button on DMS Overview for expiring DaaS system
+
+On the DMS Overview page in the Admin app, a documentation button is now shown when a DaaS system is about to expire.
+
+### 16 July 2026 - Fix - Home - Open in desktop notification not fully displayed
+
+When you selected to open a DataMiner System in the desktop app, the notification that mentioned that the browser was trying to open DataMiner Cube could not be fully displayed. The line allowance of this notification has now been increased, resolving this issue.
+
+### 16 July 2026 - Enhancement - Home - Remote URL indicator now shows preview of remote URL
+
+When you add a DataMiner System, below the *Remote URL Indicator* field, a preview of the remote URL will now be shown.
+
+### 16 July 2026 - New feature - Admin - 'Created by' and 'Created at' info in subscription detail panel
+
+The detail panel of a subscription on the Billing page of the Admin app now includes the *Created by* and *Created at* information.
+
+### 16 July 2026 - Enhancement - Catalog - Faster tooltip on Deploy button
+
+The tooltip for the *Deploy* button has been improved and is now shown faster on hover.
+
+### 16 July 2026 - Fix - Catalog - Inline code not displaying correctly in catalog descriptions
+
+In the Catalog app, inline code in the description of Catalog items was not rendered correctly. This issue has been resolved.
+
+### 16 July 2026 - Enhancement - Admin - API key references renamed to Key in Audit
+
+In the Audit section of the Admin app, the initiator type has been renamed from *ApiKey* to *Key*. Related error messages have also been updated.
+
+### 16 July 2026 - Enhancement - Admin - Usage page removed
+
+The usage page has been removed from the Admin app.
+
+### 16 July 2026 - Enhancement - Admin - Auto-save and confirmation options on settings page
+
+The Settings page in the Admin app has been updated to include an auto-save option for all settings. Settings that involve managing lists of items, such as IP addresses or domains, are excluded from this auto-save. Some settings with significant system impact now also require confirmation before they are applied.
+
+### 16 July 2026 - Enhancement - General - Icons added to all apps in the header app menu
+
+All applications in the app menu of the header now have icons.
+
+### 16 July 2026 - Fix - Catalog - Clearing search value on Catalog home page not handled correctly
+
+When you cleared the search value on the Catalog home page, it could occur that this was not handled correctly, causing part of the value to still be taken into account if you then clicked the button to browse the Catalog. This issue has been resolved.
+
+### 16 July 2026 - Fix - General - Notification counter appearing on top of pop-up panels
+
+When a pop-up panel was opened in front of the header bar, it could occur that the counter on the notification bell icon was displayed on top of that pop-up panel. This issue has been resolved.
+
+### 16 July 2026 - Enhancement - Admin - Billing rate and cost column improvements
+
+On the Billing page of the Admin app, the *Rate* column has been renamed to *Rate (selected time period for the subscription)*, and the *Cost* column now displays the cost per month.
+
+### 16 July 2026 - New feature - Admin - Renewal history tab for renewed subscriptions
+
+Renewed subscriptions are no longer shown in the main subscription table on the Billing page of the Admin app. They are now displayed in the detail panel of a subscription, in a new *Renewal history* tab.
+
+### 2 July 2026 - Enhancement - Admin - Improved username validation
+
+Username validation has been updated to enforce clearer formatting rules: usernames may not exceed 20 characters, may not contain backslashes, and may not contain consecutive percent signs.
+
+### 2 July 2026 - Enhancement - Admin - Draft subscription management improvements
+
+The *Save draft* and *Delete draft* actions in the subscription flow now have spam click prevention to avoid unintended repeated submissions. In addition, the *Delete draft* option is now also available directly on the *Add Subscription* panel.
+
+### 2 July 2026 - Enhancement - Admin - Continue from draft option and improved draft redirect for subscriptions
+
+On the Billing page of the Admin app, users can now select *Continue from draft* in the *Add subscription* context menu to resume a previously saved draft. Additionally, when a draft is saved, users are now automatically redirected to the subscriptions page.
+
+### 2 July 2026 - Enhancement - Admin - Role validation on user actions
+
+On the organization users page and the system users page in the Admin app, the *Unlink* and *Remove* user action buttons will now be disabled when the current user has the Member role.
+
+### 2 July 2026 - Enhancement - Admin - Improved ticket communication and assignment transparency
+
+Support ticket interactions have been updated to improve efficiency and clarity:
+
+- Ticket link in emails: Confirmation emails now render the ticket ID as a clickable hyperlink, allowing users to navigate directly to the Admin portal without manual searching.
+- Accurate assignment info: The *Assigned to* field in ticket details now accurately reflects the team responsible as tracked in the linked Collaboration task.
+
+### 2 July 2026 - Enhancement - Admin - Support portal accessibility for non-contract organizations
+
+The support landing page has been redesigned to provide a proactive resource hub for organizations without an active maintenance contract. Instead of encountering errors, users are now presented with a clear dashboard featuring direct access to documentation, community resources, and service status, along with actionable pathways to secure maintenance contracts for one-on-one support.
+
+### 22 June 2026 - Enhancement - Admin - Custom time range for subscription usage estimate
+
+When adding a subscription, the *Start from estimate* option now allows you to select a custom time range to calculate the estimate from. The selected time range is limited to a maximum duration of 3 months.
+
+### 22 June 2026 - New feature - Admin - Billable usage export
+
+In the Admin app, you can now export billable usage data from the Billing page or from the billable usage side panel.
+
+### 22 June 2026 - Enhancement - Admin - Billable usage panel 'Name' column renamed to 'System name'
+
+In the billable usage side panel in the Admin app, the *Name* column has been renamed to *System name*.
+
+### 22 June 2026 - Enhancement - All apps - New header with improved help and support integration
+
+All dataminer.services apps now feature a new header with better integration for help and support. In the Catalog app, the search bar has also been moved to a new position.
+
+### 15 June 2026 - Enhancement - Admin - Billable usage chart limited to selected month
+
+On the Billing page of the Admin app, the billable usage chart will now only show dates within the selected month.
+
+### 8 June 2026 - New feature - Admin - Ability to cancel planned subscriptions
+
+On the Billing page of the Admin app, you can now cancel planned subscriptions. When you do so, credits spent for the planned subscription will be refunded.
+
+### 1 June 2026 - New feature - Admin - New side panel with billable usage for services
+
+On the Billing overview page in the Admin app, for data starting from May 2026, service table rows now include an info button that opens a new side panel showing the billable usage details for that service:
+
+- The side panel contains a chart and, where applicable, a table with billable usage data. The table is not shown for organization-based services such as connectors.
+- A toggle button allows you to switch between a cost view and a usage view in the chart. The cost view takes active subscriptions into account, so usage fully covered by a subscription will show as 0.
+- A time range filter is available to adjust the data shown in the panel.
+- The panel updates the URL when opened, making it easy to share or refresh.
+
+### 1 June 2026 - Enhancement - Admin - Auto-renewal toggle button for active subscriptions
+
+On the Billing page of the Admin app, you can now toggle the auto-renewal setting for active normal subscriptions. Custom service, draft, and expired subscriptions are read-only and cannot be modified in this way. You will be notified when the auto-renewal succeeds or fails.
+
+### 1 June 2026 - New feature - Admin - Shareable link to support page
+
+The Admin app now supports a `/support` route at the application root. This allows you to share a direct link to the support page without needing to know the recipient's organization ID. When the link is followed, the organization ID is automatically resolved.
+
+### 1 June 2026 - Enhancement - Status event titles always show full title on hover
+
+When you hover the mouse pointer over a status event title, the full title will now always be shown in a tooltip.
+
+### 22 May 2026 - New feature - Admin - Audit logs for managing draft subscriptions
+
+Managing draft subscriptions will now create audit logs, allowing administrators to track and review changes related to draft subscription activity.
+
+### 22 May 2026 - New feature - Sharing - Multi-paste support for email input
+
+When sharing a dashboard, users can now paste multiple email addresses at once into the email input field. Both comma-separated (`,`) and semicolon-separated (`;`) lists are supported.
+
+### 20 May 2026 - Fix - Admin/Catalog - Issues related to organization switching
+
+Several issues related to organization switching have been resolved across the Admin app and Catalog:
+
+- In the Admin app, after switching organizations, users did not stay on the same page as expected. In addition, if the new organization did not have access to the current page or if the permission check failed, they were not redirected to the Overview as expected. Switching organizations now keeps you on the same page when possible. If the new organization does not have access to the current page, or if the permission check fails, you are redirected to the Overview and notified accordingly.
+- On pages with organization-scoped data, switching to a different organization could cause stale data from the previous organization to still be shown. Now stale data from the previous organization is cleared and fresh data is fetched for the new one.
+- Rapidly switching between organizations could leave behind stale data from intermediate organizations. This issue has been resolved.
+- Organization keys, audit logs, and usage data did not refresh automatically after an organization switch, and if the audit log reload failed, stale data and the *Load More* button remained visible. This issue has been resolved. The data will refresh automatically, and if the audit log reload fails, stale data and the *Load More* button will be hidden.
+- In the Catalog app, if a Catalog item was unavailable for the newly selected organization, a message was shown that the item was not found. Now the user is instead automatically redirected to the Browse page.
+- It could occur that aborted call notifications were shown when switching pages. These notifications are no longer shown.
+
+### 20 May 2026 - Enhancement - Billing - 'Overusage' terminology updated to 'PPU'
+
+On the billing-related pages and notifications, the term "overusage" has been replaced with "pay-per-use" (PPU) to better reflect the billing model and ensure consistent terminology across dataminer.services.
+
+### 18 May 2026 - New feature - Admin - Automatic log collection for support tickets
+
+When creating a support ticket on the Support page in the Admin app, users can now link a cloud-connected DMS and specific Agents to their support ticket. When enabled, this triggers automatic log collection, ensuring support engineers receive the necessary diagnostic data without manual uploads.
+
+### 18 May 2026 - Enhancement - Admin - Agent selection dynamically filtered by cluster
+
+When a support ticket is created on the Support page in the Admin app, the Agent selection is now dynamically updated based on the selected cluster, ensuring only relevant DataMiner Agents are available for selection.
+
+### 18 May 2026 - Enhancement - Admin - Unified Support Contract/Project dropdown
+
+When a support ticket is created on the Support page in the Admin app, instead of the previous multi-step *Project* and *Maintenance Contract* selection, a single *Support Contract/Project* dropdown is now displayed, providing a deduplicated list of eligible contracts and projects.
+
+### 18 May 2026 - Enhancement - Admin - Skyline Support shown in assigned-to field
+
+In the ticket details view on the Support page of the Admin app, the *Assigned to* field now shows *Skyline Support* when relevant, while previously internal teams could be shown that could be confusing for the user.
+
+### 18 May 2026 - New feature - Admin - Support server availability check
+
+On the Support page of the Admin app, the availability of the support server is now checked in real time. If the service is temporarily unavailable, a warning banner with alternative contact instructions is shown.
+
+### 18 May 2026 - Enhancement - Admin - Impact field removed from ticket details header
+
+On the Support page of the Admin app, the *Impact* field has been removed from the ticket details header.
+
+### 18 May 2026 - Enhancement - Admin - Automatic log collection toggle only shown when applicable
+
+When a support ticket is created on the Support page in the Admin app, the *Automatic log collection* toggle button is now only shown when cloud-connected Agents are selected.
+
+### 7 May 2026 - Enhancement - Admin - Billing overview now shows services table at unit level
+
+On the Billing overview page in the Admin app, the services table now shows data at unit level instead of capping out at service level, giving users a deeper insight into what is affecting their billing the most.
+
+### 7 May 2026 - Enhancement - Admin - Billing - Add discounts to new subscription based on estimate
+
+This change applies discounts to new subscriptions based on estimates.
+
+### 7 May 2026 - New feature - Admin - Support - Ticket creation with attachments
+
+You can now attach files (screenshots, logs, configs, etc.) directly when creating a support ticket. A confirmation email and SharePoint folder are created for the ticket when possible.
+
+### 7 May 2026 - Fix - Admin - DMS Overview - StaaS tile updates when switching DMS
+
+When you switched to a different DMS on the DMS Overview page in the Admin app, it could occur that the StaaS configuration tile was not updated accordingly. The tile will now correctly update based on your role for the selected DMS.
+
+### 5 May 2026 - New feature - Admin - Draft subscriptions
+
+On the Billing page of the Admin app, the Subscriptions page now shows draft subscriptions, which are marked as *Draft* in the state column. The following changes have also been introduced:
+
+- The *Total paid* column has been renamed to *Cost*, and the *Total saved* column has been renamed to *Saved*.
+- Subscription details now support draft subscriptions, with *Continue from draft* and *Abandon draft* actions available.
+- When continuing from a draft, the *Add Subscription* panel is prefilled with the draft details.
+- Drafts can be saved and updated in the *Add Subscription* panel.
+- A draft is automatically removed when the subscription is purchased.
+
+### 5 May 2026 - Fix - Problem with session token refresh could cause unexpected redirect to login page
+
+It could occur that users were unexpectedly redirected to a login page because session tokens were not refreshed correctly. This issue has been resolved.
+
+### 5 May 2026 - Enhancement - Admin - 'Renewal failed' state and toggle button to hide expired subscriptions
+
+On the Billing page of the Admin app, if subscriptions are set to auto-renew but have expired without a reference to a new subscription, these will now show a *Renewal failed* state.
+
+In addition, a toggle button has been introduced to hide expired subscriptions. By default, expired subscriptions are set to be shown.
+
+### 5 May 2026 - Enhancement - Admin - Discount tooltip updated in Add Subscription panel
+
+On the Billing page of the Admin app, the tooltip for the discount in the *Add Subscription* panel has been updated.
+
+### 5 May 2026 - Enhancement - Billing - Estimated subscription based on current usage
+
+When creating a new subscription on the Billing page, users can now choose to start from estimated data based on their current subscriptions and pay-per-use costs.
+
+### 5 May 2026 - Enhancement - Billing - Amounts smaller than 0.01 displayed as "< 0.01"
+
+On the Billing page, numbers smaller than 0.01 are now displayed as "< 0.01" instead of being rounded down to zero.
+
+### 5 May 2026 - Fix - Admin - Aborted calls when navigating to DMS user page not handled gracefully
+
+When you navigated to the user page of a DataMiner System, it could occur that some calls to retrieve the DMS users were aborted, which was not handled gracefully and could result in errors. This issue has been resolved.
+
+### 5 May 2026 - Fix - Home - Password feedback incorrectly shown after clearing password field
+
+When a value that had been entered in a password field was cleared, it could occur that the password feedback was still shown. This issue has been resolved.
+
+### 27 April 2026 - Fix - Admin - Audit page DMS incorrectly also shown in sidebar
+
+In the Admin app, it could occur that the DMS used as the filter for the Audit page was incorrectly also shown in the sidebar.
+
+### 27 April 2026 - Enhancement - Grammar and styling in notifications streamlined across apps
+
+The notifications across apps have now been streamlined to have the same grammatical structure. The styling of the notifications has also been updated.
+
+### 27 April 2026 - Fix - Home - Geo-replication error not shown when expected
+
+When you switch from a region with geo-replication available to a region that does not have geo-replication available, a geo-replication error message should be shown on the home page, but this did not happen.
+
+### 27 April 2026 - Fix - Catalog - Custom Markdown parser now correctly shows alert blocks
+
+In the Catalog app, some messages would not show the first line because of an issue with the custom Markdown parser. Now all messages are fully visible.
+
+### 27 April 2026 - Fix - Admin - Nodes with same DMA ID but no Failover info shown as Failover pair in DMS overview
+
+In the DMS overview of the Admin app, nodes with the same DMA ID but no Failover info were incorrectly displayed as a Failover pair. This issue has been resolved.
+
+### 27 April 2026 - Enhancement - Catalog - Catalog categories cached in session storage
+
+Catalog categories are now cached in session storage, avoiding an unnecessary web API call and loading animation in the UI.
+
+### 27 April 2026 - Fix - Admin - Regenerated key not correctly updated in side panel
+
+When a new key (primary or secondary) was generated in the Admin app, the side panel was not correctly updated. This issue has been resolved.
+
+### 27 April 2026 - Fix - Admin - Admin app no longer working after deletion of organization
+
+When an organization was deleted, it could occur that the Admin app was no longer working correctly. Now another available organization will be selected if possible, and otherwise the home page will be shown instead.
+
+### 27 April 2026 - Enhancement - Home - Updated geo-replicated error message
+
+The geo-replicated storage error message on the home page has been updated.
+
+### 27 April 2026 - New feature - Admin - Credit and discount rate overrides on organization level
+
+On the Billing page of the Admin app, credit and discount rates can now be overridden on organization level.
+
+### 27 April 2026 - Fix - Catalog - Menu actions not available for test packages
+
+In the Catalog app, the menu actions (delete, make private) were incorrectly not available for test packages.
+
+### 27 April 2026 - Fix - Admin - Incorrect description delete DMS button
+
+The description above the delete DMS button incorrectly mentioned the admin role, but only the owner can delete the DMS. This has now been corrected.
+
+### 27 April 2026 - Enhancement - Catalog - DMS name included in deployment result notification
+
+In the Catalog app notifications related to deployments of packages, the DMS name is now included.
+
+### 27 April 2026 - Enhancement - Admin - DMS filter on Audit page now includes all systems
+
+On the Audit page of the Admin app, the DMS filter now includes all DataMiner Systems regardless of access.
+
+### 27 April 2026 - Enhancement - 'DCP' terminology adjusted to 'dataminer.services'
+
+References to 'DCP Keys' have been adjusted to 'dataminer.services Keys' to ensure consistent terminology throughout the dataminer.services apps.
+
+### 27 April 2026 - Enhancement - Admin/Home - Delete DMS flow refactored to prevent stale deleted systems
+
+When you try to delete a DMS on the dataminer.services home page, this will now open the delete confirmation dialog in the Admin app, navigating within the current tab of the browser. Once the deletion has been confirmed, the home page will be shown again. This refactored deletion flow will ensure that deleted systems are never still shown on the home page, while previously they could still be shown until the page was refreshed.
+
+### 27 April 2026 - Enhancement - Admin - Improved filtering on Audit page
+
+The following improvements have been applied to the checkbox filters on the Audit page of the Admin app:
+
+- The list of options is now virtualized for better performance.
+- A select/deselect all button is now available.
+- A toggle button is available to show selected only.
+- The filter box no longer shifts when options are selected.
+
+### 27 April 2026 -Enhancement - Favicons updated
+
+The website icons for all applications have been changed to the updated DataMiner logo.
+
+### 27 April 2026 - Enhancement - Status page - Event types shown for incidents
+
+On the status page, incidents are now shown as events, with possible event types (*Incident* and *Maintenance*) shown as a label for the event.
+
+### 16 April 2026 - Fix - Admin - Both info and error message shown when no available nodes were found in the DMS
+
+On the DMS overview page of the Admin app, it could occur that both an info message and an error message were shown when there were no available nodes for the system. This issue has been resolved.
+
+### 16 April 2026 - Enhancement - Home - Improved tracking of progress and results of corporate website
+
+When an *onboard_complete* event is logged to Google analytics, the organization and coordination ID are now included to allow improved tracking of the progress and results of the corporate website.
+
+### 16 April 2026 - Fix - Password incorrectly remained shown after peek button had been used
+
+When the peek button was clicked to show the password in a password input box, it could occur that the password was still shown when the peek button was released again and the mouse pointer was moved outside the bounds of the button. This issue has been resolved.
+
+### 16 April 2026 - Fix - Admin - Error shown after quickly toggling filter boxes for audit logs
+
+When the filter checkboxes on the Audit page in the Admin app were toggled quickly, an error could be shown.
+
+### 13 April 2026 - Enhancement - Admin - Cleaner title and description input on Support page
+
+On the Support page in the Admin app, titles and descriptions are now cleaned automatically when you type, paste, or drop text, so unsupported characters are removed immediately.
+
+### 13 April 2026 - Fix - Marketplace - Authentication loop
+
+An issue has been resolved where users could get stuck in an authentication loop when activating a subscription for DataMiner credits. This behavior has been fixed.
+
+### 13 April 2026 - Enhancement - Admin - Improved grouping for adding a subscription
+
+On the Add Subscription panel in the Admin app, service names are now shown instead of unit names to make it clearer which selection applies to which service.
+
+Unit names have been moved into the input boxes.
+
+### 13 April 2026 - Enhancement - dataminer.services - DaaS configuration options added to deployment flow
+
+For users deploying a DaaS system, it is now possible to select the DaaS region and STaaS region, as well as to configure geo-replication, directly from the dataminer.services deployment flow.
+
+### 13 April 2026 - Enhancement - Admin - Documentation link added to Add Subscription panel
+
+On the Add Subscription panel in the Admin app, a new section with a link to the metering documentation is now available to help guide users with creating their subscription.
+
+### 13 April 2026 - Enhancement - Admin - DMS subscription indicator added
+
+On the Billing page in the Admin app, the subscription detail pop-up box now indicates if the subscription is scoped to a specific DataMiner System.
+
+### 13 April 2026 - Fix - dataminer.services - DaaS deployment in new organization appeared to fail while actually succeeding
+
+On dataminer.services, creating a DaaS system in a new organization while an existing organization was selected could cause a faulty redirect, giving the impression that the deployment failed while the system had actually been successfully deployed in the new organization.
+
+### 13 April 2026 - Fix - Admin - Error notifications on organization switch
+
+In the Admin app, changing the selected organization while on certain pages could result in notifications about failed calls. This issue has been resolved.
+
+### 13 April 2026 - Fix - Admin - DMS pages not expanding on navigation
+
+In the Admin app, navigating to a page within a collapsed DataMiner System section did not auto-expand that section as it should. This behavior has been fixed.
+
+### 13 April 2026 - Fix - Catalog - Deploy buttons incorrectly disabled on Empower page
+
+On the Empower page in the Catalog app, it could occur that "Deploy" buttons were incorrectly disabled. This behavior has been fixed.
+
+### 13 April 2026 - Enhancement - Admin - UOSA page filter support
+
+On the Support page of the Admin app, you can now filter support tickets by time range and optionally include closed tickets.
+
+Filters are applied server-side, improving page performance.
+
+### 13 April 2026 - Fix - Admin - UOSA page Customer field showed assignee instead of customer
+
+On the Support page of the Admin app, the *Customer* field incorrectly displayed the name of the assignee instead of the customer name. This issue has been resolved.
+
+### 13 April 2026 - Enhancement - Admin - Link to Collaboration project added to UOSA page Order field
+
+On the Support page of the Admin app, the *Order* field is now a clickable link to the Collaboration project.
+
 ### 4 March 2026 - Enhancement - Catalog - Dependency tags shown in version overview
 
 On the *Versions* tab for a Catalog item, tags can now show the DataMiner and DataMiner Web version dependencies.
@@ -41,7 +473,7 @@ When there are no active or expired subscriptions, a direct path to the subscrip
 
 On the Deployments page of the Admin app, event chain errors now better highlight where an error occurred.
 
-In addition, metadata now detects and shows stack traces in a separate box, with an option to copy the stack trace text. Text wrapping has also been improved to avoid horizontal scroll bars.
+In addition, metadata now detects and shows stack traces in a separate box, with an option to copy the stack trace text. Text wrapping has also been improved to avoid horizontal scrollbars.
 
 ### 23 February 2026 - New feature - Admin - Delete DataMiner System from settings
 

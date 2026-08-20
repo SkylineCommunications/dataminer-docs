@@ -1,6 +1,7 @@
 ---
 uid: Configuring_multiple_datacenter_OpenSearch_cluster
 keywords: allocation awareness, opensearch
+description: "Follow these steps to configure allocation awareness when the nodes of your OpenSearch cluster are hosted in different data centers, racks, or zones."
 ---
 
 # Configuring a multiple data center OpenSearch cluster

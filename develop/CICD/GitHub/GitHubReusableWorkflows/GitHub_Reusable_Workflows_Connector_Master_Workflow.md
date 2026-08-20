@@ -34,7 +34,7 @@ Only when the actions above and the "Artifact Creation" job have been successful
 
 - Either the repository’s name or a GitHub topic must be used to infer the catalog item type.
 
-- Part of our quality control involves static code analysis through SonarCloud as a mandatory step. If you want to use this reusable workflow, you will need to have a SonarCloud organization setup, linked to your GitHub organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
+- Static code analysis through SonarCloud is optional but recommended. If you want to enable it, you will need to have a SonarCloud organization setup, linked to your GitHub organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/), and provide the `sonarCloudProjectName` argument. If you do not provide it, the analysis step is skipped and the quality gate is based on the other checks only.
 
 - Creating a GitHub release or tag will attempt to register your item as a private item in the Catalog. For this, the repository must have access to a DATAMINER_TOKEN. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
@@ -63,17 +63,22 @@ jobs:
   CI:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Connector Master Workflow.yml@main
     with:
-      referenceName: ${{ github.ref_name }}
-      runNumber: ${{ github.run_number }}
-      referenceType: ${{ github.ref_type }}
-      repository: ${{ github.repository }}
-      owner: ${{ github.repository_owner }}
       sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
+      # Only needed when the repository contains more than one solution (SDK-style connectors only):
+      # solution-filter-name: "MyConnector.sln"
       # The API-key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
       api-key: ${{ secrets.DATAMINER_TOKEN }}
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
 ```
+
+### Optional inputs
+
+| Input | Type | Default | Description |
+|--|--|--|--|
+| `sonarCloudProjectName` | string | | The SonarCloud project identifier. If omitted, the SonarCloud analysis is skipped. |
+| `solution-filter-name` | string | | The name of the solution file (`.sln` or `.slnx`) to build when the repository contains more than one solution. If not provided, the workflow auto-discovers the solution and fails when multiple are found. Only supported for SDK-style connector solutions; the legacy connector pipeline rejects this input. |
+| `debug` | boolean | `false` | Enables debug output for the DataMiner tooling. |
 
 ## Skyline quality gate
 
@@ -95,10 +100,10 @@ This step runs the DataMiner Connector Validator, also included with DIS, to ver
 
 ### Analyze
 
-Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
+When a `sonarCloudProjectName` is provided, this step performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines. If no `sonarCloudProjectName` is provided, this step is skipped.
 
 > [!NOTE]
-> For public repositories in the *SkylineCommunications* organization, the analysis step uses the *SONAR_TOKEN* organization secret. For private repositories, you will need to create a repository secret with name *SONAR_TOKEN* (as private repositories cannot access the organization secret). For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+> For repositories in the *SkylineCommunications* organization, the analysis step uses the *SONAR_TOKEN* organization secret. For repositories outside of the *SkylineCommunications* organization, you will need to create a repository secret with name *SONAR_TOKEN*. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 ### Quality gate
 

@@ -16,7 +16,7 @@ For the *Generic DOCSIS CM Collector* connector, a *Configuration* and *Threshol
 
 #### New parameter to configure name automation script responsible for notifying elements of new data to be ingested [ID 36053]
 
-A new parameter, *Script Name*, has been added to the *Configuration* page of the Skyline EPM Platform, Arris E6000 CCAP Platform, Casa System CCAP Platform, Cisco CBR-8 CCAP Platform, CISCO CMTS CCAP Platform, and Huawei 5688-5800 CCAP Platform connectors. With this parameter, you can specify the automation script responsible for notifying the back-end elements of new data to be ingested.
+A new parameter, *Script Name*, has been added to the *Configuration* page of the Skyline EPM Platform, Arris E6000 CCAP Platform, Casa System CCAP Platform, Cisco CBR-8 CCAP Platform, CISCO CMTS CCAP Platform, and Huawei 5688-5800 CCAP Platform connectors. With this parameter, you can specify the automation script responsible for notifying the backend elements of new data to be ingested.
 
 Similarly, a *Script Name* parameter has been added to the *Configuration* page of the Skyline EPM Platform DOCSIS connector, so you can specify the automation script responsible for notifying the CCAPs/CM collector pair of new data to be ingested.
 
@@ -83,9 +83,9 @@ To improve performance, the logic used by the Generic DOCSIS CM Collector connec
 
 #### New trigger in Skyline EPM Platform visual overview improves DataMiner Maps loading time [ID 35952]
 
-A new trigger has been added to the *_epmBE* card variable in the *Skyline EPM Platform* visual overview. It sets the variable to the DMA ID/element ID of the back-end element based on the CCAP name.
+A new trigger has been added to the *_epmBE* card variable in the *Skyline EPM Platform* visual overview. It sets the variable to the DMA ID/element ID of the backend element based on the CCAP name.
 
-With this new trigger, it is no longer necessary to create a card variable for each back-end element in the system and different triggers for each of those card variables. This improves the DataMiner Maps loading time.
+With this new trigger, it is no longer necessary to create a card variable for each backend element in the system and different triggers for each of those card variables. This improves the DataMiner Maps loading time.
 
 #### CCAPs adjusted to ingest cable modems with ASCII IP addresses [ID 35977]
 
@@ -108,9 +108,9 @@ To improve performance and reduce the load on SLElement, RTDisplay has now been 
 
 #### Elements in EPM Solution now use inter-app calls [ID 36326]
 
-Inter-app calls will now be used for the communication between elements used in the EPM Solution, such as the back end and the Workflow Manager (WM), resulting in faster and more efficient communication. This way, the solution no longer needs to rely on information events and alarms triggered by automation scripts and correlation rules.
+Inter-app calls will now be used for the communication between elements used in the EPM Solution, such as the backend and the Workflow Manager (WM), resulting in faster and more efficient communication. This way, the solution no longer needs to rely on information events and alarms triggered by automation scripts and correlation rules.
 
-The following changes have been done to the Skyline EPM Platform DOCSIS connector (back end):
+The following changes have been done to the Skyline EPM Platform DOCSIS connector (backend):
 
 - The connector no longer uses calls to information events to pass information.
 - Inter-app calls are now aggregated to send information to the WM.
@@ -120,12 +120,12 @@ The following changes have been done to the Skyline EPM Platform DOCSIS WM conne
 
 - The connector no longer uses calls to information events to pass information.
 - Parameters that are used to capture information events are no longer used.
-- Inter-app calls are now aggregated to send information to the back-end elements.
-- Information coming from the back-end elements is now processed through inter-app communication.
+- Inter-app calls are now aggregated to send information to the backend elements.
+- Information coming from the backend elements is now processed through inter-app communication.
 
-#### EPM front end removed from passive logic workflow [ID 36356]
+#### EPM frontend removed from passive logic workflow [ID 36356]
 
-To improve performance, the EPM front-end element is no longer involved in retrieving the passive data in the system.
+To improve performance, the EPM frontend element is no longer involved in retrieving the passive data in the system.
 
 #### Unnecessary columns hidden on topology data pages [ID 36451]
 
@@ -137,9 +137,9 @@ To prevent parameters getting an incorrect negative value, exception values have
 
 ### Fixes
 
-#### EPM front-end element threw 'process cannot access the file because it is being used by another process' exceptions [ID 34658]
+#### EPM frontend element threw 'process cannot access the file because it is being used by another process' exceptions [ID 34658]
 
-In some cases, logging for the EPM front-end element could contain exceptions like the following example:
+In some cases, logging for the EPM frontend element could contain exceptions like the following example:
 
 ```txt
 2022/04/16 00:32:09.380|SLManagedScripting.exe|ManagedInterop|ERR|0|18|QA29|WriteCsvFile|Error writing csv file:System.IO.IOException: The process cannot access the file 'C:\DataMiner EPM\DOCSIS\Passive Relation\EP\26446_7_PASSIVERELATION_EP.csv' because it is being used by another process.
@@ -184,7 +184,7 @@ When the name of CCAP elements contained a hyphen, the CCAP page of the *Skyline
 
 #### Skyline EPM Platform DOCSIS: Incorrect default value for average percentage US and DS utilization [ID 36096]
 
-Up to now, the default value of the average percentage of US and DS utilization for the Skyline EPM Platform DOCSIS back-end connector was incorrectly indicated as "0". This has now been corrected to the exception value "-1".
+Up to now, the default value of the average percentage of US and DS utilization for the Skyline EPM Platform DOCSIS backend connector was incorrectly indicated as "0". This has now been corrected to the exception value "-1".
 
 #### Huawei 5688-5800 CCAP Platform: Incorrect Percentage DS and US values [ID 36248]
 

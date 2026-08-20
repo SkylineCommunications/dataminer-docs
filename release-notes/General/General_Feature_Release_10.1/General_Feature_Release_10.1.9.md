@@ -189,7 +189,7 @@ Up to now, while a spectrum trace recording was playing, you could select the pl
 
 #### DataMiner Cube start window: Cleanup Cube Installation window \[ID 30351\]
 
-When you click the cogwheel icon in the bottom-right corner of the DataMiner Cube start window, you can now select the *Cleanup* option to open the *Cleanup Cube Installation* window. That window will allow you to remove old and/or unused Cube versions as well as to clear the Visio cache and the protocol cache.
+When you click the cogwheel icon in the lower-right corner of the DataMiner Cube start window, you can now select the *Cleanup* option to open the *Cleanup Cube Installation* window. That window will allow you to remove old and/or unused Cube versions as well as to clear the Visio cache and the protocol cache.
 
 #### Alarm templates: Baseline editor now allows you to configure baselines and smart baselines specified in protocols \[ID 30388\] \[ID 30461\]
 

@@ -60,7 +60,7 @@ When you create an automation script, apart from an XML file containing the actu
 By default, SLNet will now pass the following updated company information to client applications:
 
 - Company website: <https://www.skyline.be>
-- TechSupport web page: [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support)
+- Support webpage: [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support)
 - TechSupport email address: <support@dataminer.services>
 
 #### ModelHost and Copilot DxMs will now only be upgraded if the version in the upgrade package is newer than the installed version [ID 43182]

@@ -29,7 +29,7 @@ Several **filters** are available on this page:
 
 - With the time filter at the top, you can filter the tickets on **creation time**.
 
-The check boxes right above the table allow you to show or hide specific columns. Below this, you can also select how many rows should be displayed at the same time.
+The checkboxes right above the table allow you to show or hide specific columns. Below this, you can also select how many rows should be displayed at the same time.
 
 If you click a ticket ID in the table, the **ticket details** will be displayed. These include any **tasks** related to the ticket.
 

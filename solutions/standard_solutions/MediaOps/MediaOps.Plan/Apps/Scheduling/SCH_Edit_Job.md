@@ -1,5 +1,6 @@
 ---
 uid: SCH_Edit_Job
+description: Explore the Edit job panel of the Scheduling app. This panel consists of different sections where you can view and edit job settings and information.
 ---
 
 # Editing a job
@@ -38,7 +39,7 @@ Below this general information, different buttons are shown depending on the [st
 These buttons can be used for the following actions:
 
 - **Save as Tentative**: Moves the job to the tentative state, which will reserve all resources.
-- **Edit job config**: Allows you to configure the capabilities and/or capacities linked to the job.
+- **Edit job config**: Allows you to configure the capabilities and/or capacities linked to the job. See [Scheduling configuration](xref:MO_Scheduling_Configuration).
 - **Confirm**: Moves the job from the tentative to the confirmed state, which will execute the orchestration script linked to the job.
 - **Cancel job**: Cancels the job and frees up the resources again.
 - **Return to Tentative**: Moves the job back to the tentative state, which frees up the resources again.<!-- RN 43042 -->

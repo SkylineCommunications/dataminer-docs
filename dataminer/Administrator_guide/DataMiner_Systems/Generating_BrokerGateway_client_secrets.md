@@ -1,14 +1,15 @@
 ---
 uid: Generating_BrokerGateway_client_secrets
+description: "Learn how to generate BrokerGateway client secrets, which are designed for DxMs or other clients connecting to the DataMiner NATS bus."
 ---
 
 # Generating BrokerGateway client secrets
 
-From DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onward<!-- RN 44757 + 44778 -->, it is possible to generate BrokerGateway client secrets. These are designed for DxMs or other clients connecting to the DataMiner NATS bus from a server without a local DataMiner installation. The secrets enable secure authentication with BrokerGateway, which then provides the necessary connection details for the NATS bus.
+From DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 onwards<!-- RN 44757 + 44778 -->, it is possible to generate BrokerGateway client secrets. These are designed for DxMs or other clients connecting to the DataMiner NATS bus from a server without a local DataMiner installation. The secrets enable secure authentication with BrokerGateway, which then provides the necessary connection details for the NATS bus.
 
 Using internal BrokerGateway Administrator keys for these connections is discouraged, as these keys may be refreshed during cluster maintenance or because of other actions. By contrast, user-generated client secrets persist throughout the cluster's lifecycle and are immediately distributed to all BrokerGateway instances for cluster-wide availability.
 
-Common examples of clients requiring this setup include the [Data Aggregator DxM](xref:Data_Aggregator_DxM) and [Dashboard Gateway](xref:Dashboard_Gateway_installation).
+Common examples of clients requiring this setup include the [Data Aggregator DxM](xref:Data_Aggregator_DxM), [Dashboard Gateway](xref:Dashboard_Gateway_installation), and servers hosting a [DMZ setup for dataminer.services connectivity](xref:Connect_to_cloud_with_DMZ).
 
 > [!IMPORTANT]
 > Using client secrets prevents the root certificate authority from being cycled during DataMiner Agent removals or NATSRepair calls. This is done to ensure that external clients maintain stable connectivity with the cluster, without having to change credentials or trusted root certificates.
@@ -27,6 +28,9 @@ In order to perform these API calls on a BrokerGateway instance, you will need t
 
 You can execute the API calls by calling the REST API via PowerShell, as detailed below.
 
+> [!IMPORTANT]
+> Executing these API calls **requires a secure TLS connection**, and therefore, a trusted certificate bound to all IP addresses for port 443 in IIS. If the certificate on the DataMiner server cannot be trusted, the script needs to be adapted to skip the certificate checks; however, note that this is not recommended.
+
 ### Generating a client secret
 
 Executing the following PowerShell script will generate a new client secret, which will be returned in `$response`.
@@ -42,6 +46,9 @@ $headers.Add("BrokerGateway-Api-Key", $adminKey)
 $response = Invoke-RestMethod "https://$uri/BrokerGateway/api/clientSecret/generate?clientName=$clientName" -Method 'POST' -Headers $headers -ContentType 'text/plain'
 $response
 ```
+
+> [!NOTE]
+> For the script to run, the DMA's certificate needs to be trusted, so a valid TLS connection is required (see [API calls](#api-calls)).
 
 Client secret names need to be unique. These are case-sensitive.
 
@@ -65,6 +72,9 @@ $headers.Add("BrokerGateway-Api-Key", $adminKey)
 Invoke-RestMethod "https://$uri/BrokerGateway/api/clientSecret/delete?clientName=$clientName" -Method 'DELETE' -Headers $headers
 ```
 
+> [!NOTE]
+> For the script to run, the DMA's certificate needs to be trusted, so a valid TLS connection is required (see [API calls](#api-calls)).
+
 ### Listing all generated client secrets
 
 This API call lists up all generated client secrets. The keys are redacted for security reasons. Only the first four characters will be visible.
@@ -79,6 +89,9 @@ $headers.Add("BrokerGateway-Api-Key", $adminKey)
 $response = Invoke-RestMethod "https://$uri/BrokerGateway/api/clientSecret/list" -Method 'GET' -Headers $headers
 $response
 ```
+
+> [!NOTE]
+> For the script to run, the DMA's certificate needs to be trusted, so a valid TLS connection is required (see [API calls](#api-calls)).
 
 ## Using the client secrets
 

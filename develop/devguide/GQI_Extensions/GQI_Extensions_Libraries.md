@@ -32,3 +32,5 @@ From DataMiner 10.5.0 [CU2]/10.5.5 onwards and when using the [GQI DxM](xref:GQI
 
 > [!NOTE]
 > If an automation script library has its own dependencies, include those dependencies in your GQI extension scripts as well.
+
+From DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45471-->, using an already loaded assembly with a different version is only allowed if a matching dependency path is found. If no matching dependency path is found, the dependency will not be resolved, and this is considered a configuration issue.

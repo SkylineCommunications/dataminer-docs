@@ -105,9 +105,9 @@ To improve performance, the CM Upstream table will no longer be displayed.
 
 To increase scalability in systems with a larger number of elements, EPM D-DOCSIS will no longer handle ID requests ad hoc. Instead it will perform this logic based on a timer and using batches of files, so that it can run the logic less frequently and update the entire system more quickly.
 
-#### Improved performance – Workflow Managers no longer need to send messages to front end [ID 36067]
+#### Improved performance – Workflow Managers no longer need to send messages to frontend [ID 36067]
 
-To improve performance, messages no longer need to be sent from the Workflow Managers to the EPM front end.
+To improve performance, messages no longer need to be sent from the Workflow Managers to the EPM frontend.
 
 #### Remote view filtering in Skyline CCAP Platform EPM connector [ID 36068]
 

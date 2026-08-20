@@ -10,13 +10,13 @@ When no docked cards are open, the card pane in DataMiner Cube displays the "Dat
 
 On this page, you can find:
 
-- A list of recent items on the left-hand side. Any pinned items are displayed at the top of the list, separated from the rest of the list with a line.
+- A list of recent items on the left. Any pinned items are displayed at the top of the list, separated from the rest of the list with a line.
 
 - The alarm distribution of the last day.
 
 - News items related to DataMiner. Depending on your user permissions, this may include information about protocol updates or DataMiner software updates.
 
-- A link to the landing page for the DataMiner web apps on the right-hand side.
+- A link to the landing page for the DataMiner web apps on the right.
 
 > [!NOTE]
 >

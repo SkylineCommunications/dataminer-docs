@@ -868,7 +868,7 @@ In DataMiner Cube, the layout of all app icons has now been enhanced.
 
 Due to a number of enhancements, overall performance has increased when deleting service definitions, especially on systems with a large number of booking instances.
 
-#### Outdated version number removed from DataMinerCubeStandAlone web page \[ID 24871\]
+#### Outdated version number removed from DataMinerCubeStandAlone webpage \[ID 24871\]
 
 Up to now, the following HTML file contained an outdated DataMiner Cube version number. That number has now been removed.
 

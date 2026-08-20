@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_supported_technologies
 keywords: I-DOCSIS supported technologies
+description: Discover the supported I-DOCSIS technologies and the corresponding DataMiner connectors available for each platform.
 ---
 
 # Supported technologies for Integrated DOCSIS

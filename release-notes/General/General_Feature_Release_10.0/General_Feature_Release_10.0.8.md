@@ -191,9 +191,9 @@ You can create new component themes in the following ways:
 > - By default, a component will use the read-only default theme from the dashboard on which it is placed.
 > - For backwards compatibility, components that previously inherited their styles from the dashboard theme will now use the default component theme instead.
 
-#### Dashboards app: Embedding a single component into Visual Overview or a web page \[ID 25804\]
+#### Dashboards app: Embedding a single component into Visual Overview or a webpage \[ID 25804\]
 
-It is now possible to embed an individual Dashboards app component into Visual Overview or a web page.
+It is now possible to embed an individual Dashboards app component into Visual Overview or a webpage.
 
 Do the following:
 
@@ -201,7 +201,7 @@ Do the following:
 
 1. Right-click the component and select *Copy embed URL*.
 
-1. Use the URL of the component in either a Visio page (e.g., in a shape with a data field of type “Link”) or a web page (e.g., in an \<img> tag).
+1. Use the URL of the component in either a Visio page (e.g., in a shape with a data field of type “Link”) or a webpage (e.g., in an \<img> tag).
 
 A component URL has the following syntax:
 

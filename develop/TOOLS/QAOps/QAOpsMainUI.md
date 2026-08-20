@@ -177,7 +177,7 @@ The *Allow Prerelease* column can be used to include prerelease versions without
 > - Prerelease versions are:
 >   - Excluded by default.
 >   - Included when `Allow Prerelease` is enabled.
->   - Always considered when explicitly matched (e.g. `*-rc1`, `1.0.0-*`).
+>   - Always considered when explicitly matched (e.g., `*-rc1`, `1.0.0-*`).
 
 ### QAOps Operator - Running Tests
 

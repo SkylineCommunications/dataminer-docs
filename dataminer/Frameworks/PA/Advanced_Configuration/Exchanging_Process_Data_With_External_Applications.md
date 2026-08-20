@@ -10,7 +10,7 @@ The responsibility of the PA framework stops at the update of the DOM instance. 
 
 ### Example
 
-For a process where a *Scan IP Range* activity is present, it might be interesting to access the list of IPs that have been detected and show it using a custom front end.
+For a process where a *Scan IP Range* activity is present, it might be interesting to access the list of IPs that have been detected and show it using a custom frontend.
 
 In that case, the process DOM definition would require a “Detected IPs” field descriptor that is used to store a serialized list of IPs.
 

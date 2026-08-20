@@ -1,6 +1,7 @@
 ---
 uid: Exporting_elements_services_etc_to_a_dmimport_file
 keywords: DELT export, DELT
+description: "Learn how to export elements, services, redundancy groups, documents, SLAs, and service templates to .dmimport packages."
 ---
 
 # Exporting elements, services, etc. to a .dmimport file
@@ -14,7 +15,7 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
 
 1. In the Surveyor right-click menu, select *Actions \> Export*.
 
-   ![Export element](~/dataminer/images/Export_Element.png)<br/>*DataMiner Cube version 10.3.10*
+   ![Export element](~/dataminer/images/Export_Element.png)<br/>*DataMiner Cube version 10.6.5*
 
    > [!NOTE]
    >
@@ -28,7 +29,7 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
 
    If you have selected to include a redundancy group or service, any elements within it will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
 
-   Note that, from DataMiner 10.4.9/10.5.0 onwards<!--RN 39356-->, if you have selected to include SNMPv3 elements, importing this package on DataMiner Systems prior to DataMiner 10.4.9/10.5.0 will result in the loss of all SNMPv3 credentials, which will need to be re-entered manually. If you used the [DataMiner Cube Credentials Library](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication) to configure the SNMPv3 credentials, you will always need to re-enter the credentials manually after an import on a different DMS, regardless of your DataMiner version.
+   Note that, from DataMiner 10.4.9/10.5.0 onwards<!--RN 39356-->, if you have selected to include SNMPv3 elements, importing this package on DataMiner Systems prior to DataMiner 10.4.9/10.5.0 will result in the loss of all SNMPv3 credentials, which will need to be re-entered manually. If you used the [DataMiner Cube Credentials Library](xref:Credentials_Library) to configure the SNMPv3 credentials, you will always need to re-enter the credentials manually after an import on a different DMS, regardless of your DataMiner version.
 
    Additionally, from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44345-->, when the export includes a .dmprotocol package, the export will also include all assemblies used by the protocol in the .dmprotocol package.
 
@@ -49,7 +50,7 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
 
 1. Click *Export*.
 
-   ![Exporting an SLA](~/dataminer/images/SLA_Export.png)<br/>*DataMiner Cube version 10.3.10*
+   ![Exporting an SLA](~/dataminer/images/SLA_Export.png)<br/>*DataMiner Cube version 10.6.5*
 
 1. In the *Save As* window, browse to the location where you want to save the export and click *Save*.
 

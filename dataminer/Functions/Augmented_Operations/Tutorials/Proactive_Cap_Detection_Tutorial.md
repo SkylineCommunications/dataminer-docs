@@ -84,7 +84,7 @@ In this step, you will learn what potential issues DataMiner's proactive cap det
 
    This tab displays the situation before the cache utilization of server 2 reached 100%. As mentioned earlier, when you look at the metrics in this window, it is not immediately clear that the blue line will decrease again, while the green line will continue to rise.
 
-1. Scroll slightly to the right by clicking and dragging the trend graph, and take a look at the dashed lines on the right-hand side.
+1. Scroll slightly to the right by clicking and dragging the trend graph, and take a look at the dashed lines on the right.
 
    ![Prediction of cache utilization of the three content management servers](~/dataminer/images/Proactive_Cap_Detection_Tutorial_CMS_Before_Failure_Prediction.png)
 

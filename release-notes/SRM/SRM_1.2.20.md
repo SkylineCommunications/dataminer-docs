@@ -34,7 +34,7 @@ The *SRM_ApplyProfileToResource* script now allows you to apply a state profile 
 
 #### New script to quickly book resources from the timeline \[ID 31577\]
 
-A new script, *SRM_BookResourcesQuickly*, is now available, which allows you to easily book resources from a custom front-end application. When you start the script for one or more resources, it will ask for the booking description and timing. When you confirm, a booking will be created that reserves the resource(s) for the specified time.
+A new script, *SRM_BookResourcesQuickly*, is now available, which allows you to easily book resources from a custom frontend application. When you start the script for one or more resources, it will ask for the booking description and timing. When you confirm, a booking will be created that reserves the resource(s) for the specified time.
 
 #### Import and export of Booking Manager settings \[ID 31593\]
 

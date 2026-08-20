@@ -106,7 +106,7 @@ To do so:
 
 ## Adding a component to a matrix tab page
 
-In the left-hand pane, click one of the following components, and drag it onto an empty spot in the middle pane.
+In the pane on the left, click one of the following components, and drag it onto an empty spot in the middle pane.
 
 | Component | Description |
 |--|--|

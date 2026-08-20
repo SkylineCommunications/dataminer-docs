@@ -373,7 +373,7 @@ From now on, when a DataMiner upgrade is performed on a system containing a Mode
 By default, SLNet will now pass the following updated company information to client applications:
 
 - Company website: <https://www.skyline.be>
-- TechSupport web page: [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support)
+- Support webpage: [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support)
 - TechSupport email address: <support@dataminer.services>
 
 #### OpenSearch: auto_expand_replicas with minimum 0 and maximum 2 [ID 43179]
@@ -612,7 +612,7 @@ The *Attachments* tab has been updated as follows:
 
 - The *Load* button will now be disabled when definition-level security is enabled.
 
-- A message will now be displayed in the right-hand panel, explaining that you can add DOM instances to the list in the left-hand panel by using the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
+- A message will now be displayed in the pane on the right, explaining that you can add DOM instances to the list in the pane on the left by using the context menu mentioned [above](#context-menu-added-to-the-list-on-the-main-dominstances-tab).
 
 - A *Clear* button now allows you to clear the list of DOM instances.
 
@@ -667,6 +667,12 @@ Annotations are now End of Life.
 
 > [!IMPORTANT]
 > Before you upgrade to this DataMiner version, make sure the soft-launch option *LegacyAnnotations* is either disabled or removed from the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file. Otherwise, the upgrade operation will be aborted.
+
+#### BPA test 'Antivirus on the DataMiner Agents' no longer checks for CrowdStrike files [ID 44199]
+
+<!-- MR 10.5.0 [CU10] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+From now on, the *Antivirus on the DataMiner Agents* BPA test will no longer check for CrowdStrike files.
 
 #### SLAnalytics: New database synchronization tasks will be paused when the queue is too long [ID 44243]
 
@@ -904,3 +910,9 @@ When calculating resource availability, the resource manager only checks the fir
 - When `ReservationInstances` are created or updated, resources could get overbooked beyond their available concurrency and capacity.
 
 From now on, the creation of new bookings that overbook a resource will be prevented.
+
+#### API call 'DeleteRows' API could incorrectly delete rows from SLProtocol without having received any request to delete them [ID 44811]
+
+<!-- MR 10.5.0 [CU13] / 10.6.0 [CU0] - FR 10.6.1 -->
+
+Up to now, the `DeleteRows` API call could incorrectly delete rows from SLProtocol without having received any request to delete them. This would happen after it had received a request to delete a combination of existing keys and non-existing keys.

@@ -1,5 +1,6 @@
 ---
 uid: Installing_NevionVideoIPath_App
+description: Deploy the Nevion Video IPath app from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the Nevion Video IPath app

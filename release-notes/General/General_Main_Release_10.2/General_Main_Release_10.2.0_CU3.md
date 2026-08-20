@@ -91,9 +91,9 @@ When you connect DataMiner Cube to a DataMiner Agent with main release version 1
 
 ##### Client configuration
 
-If you do not want to wait for the next automatic Cube update, in the start window of the Cube desktop app, click the cogwheel icon in the bottom-right corner, and select *Check for updates*. If a new Cube version is available, it will be downloaded. When the download has finished, a *Restart now* button will appear. Click it to start using the new version.
+If you do not want to wait for the next automatic Cube update, in the start window of the Cube desktop app, click the cogwheel icon in the lower-right corner, and select *Check for updates*. If a new Cube version is available, it will be downloaded. When the download has finished, a *Restart now* button will appear. Click it to start using the new version.
 
-Two update tracks are available. Click the cogwheel icon in the bottom-right corner, and select *Settings*. If you open the Cube update track setting, you can select one of the following tracks:
+Two update tracks are available. Click the cogwheel icon in the lower-right corner, and select *Settings*. If you open the Cube update track setting, you can select one of the following tracks:
 
 | Track                     | Description                                                                                            |
 |---------------------------|--------------------------------------------------------------------------------------------------------|

@@ -37,7 +37,7 @@ uid: glossary_a_to_l
 | ASCII | American Standard Code for Information Interchange. Character-encoding standard for electronic communication.  |
 | ASI | Asynchronous serial interface. Streaming data format that often carries an MPEG transport stream. |
 | ASN.1 | Abstract Syntax Notation 1. Standardized notation for data structures. |
-| ASP | Active Server Pages. Server-side Microsoft script engine for dynamically generated web pages. |
+| ASP | Active Server Pages. Server-side Microsoft script engine for dynamically generated webpages. |
 | ATM | Asynchronous Transfer Mode. Set of network protocols used to transfer data in fixed-size packets. |
 | ATP | Acceptance Test Plan. Document describing the required testing in order to determine if a software system meets the criteria for acceptability. |
 | Automation | DataMiner module that allows you to create, manage and run scripts to execute tasks automatically. See [Automation](xref:automation). |

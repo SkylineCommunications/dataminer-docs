@@ -8,7 +8,7 @@ uid: DOM_security_ui
 
 From DataMiner 10.5.11/10.6.0 onwards<!--RN 43622-->, you can configure definition-level security settings for DOM. From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44385-->, you can also configure security at DOM instance level. In the background, this will make use of the [link security](xref:DOM_security#link-security) feature.
 
-![Configuring DOM security](~/dataminer/images/DOMSecurityApp.png)<br>*Configuring DOM security in DataMiner 10.6.3*
+![Configuring DOM security](~/dataminer/images/DOMSecurityApp.png)<br>*Configuring DOM security in DataMiner 10.6.9*
 
 ## Accessing the DOM security UI
 
@@ -29,6 +29,47 @@ By default, all users will have full access to all DOM modules, which means that
 
 To restrict access for specific definitions and their instances:
 
+### [From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45886-->](#tab/tabid-1)
+
+1. Select a module, and switch to *Restrict access* with the button on the right.
+
+   At this point, no one will have access to the definitions in the module. The list of DOM definitions within the module will expand so you can select a definition.
+
+1. Select the definition for which you want to configure access.
+
+   You will now see a table listing the user groups that have access to the selected definition. By default, the table is empty because no groups have access yet.
+
+1. In the upper-right corner, click *+ Add groups* and select the groups that should have access to the definition.
+
+   Each added group gets *Full* access by default. This means group members can read, update, and delete instances of that definition.
+
+   > [!NOTE]
+   > To remove a group's access to a definition, click the recycling bin button in that row.
+
+1. If you want to limit a group's access to specific DOM instances:
+
+   1. In the *Condition* column, click *Add condition*.
+
+   1. Select a field descriptor from the dropdown.
+
+   1. Specify one or more values the field can contain.
+
+   When a condition is set, the access level badge changes from *Full* to *Limited*. With *Limited* access, the group can only access DOM instances where the specified field contains any of the specified values.
+
+   For example, the user group *Frankfurt Teleport Engineers* can only access *Transmission Bookings* instances where the *Teleport Location* field contains the value *Frankfurt*.
+
+   ![Instance-level security condition](~/dataminer/images/DOMSecurityInstanceLevel.png)<br>*Instance-level security condition in DataMiner 10.6.9*
+
+1. If you want to give a group read-only access, enable the *Read-only* toggle button for that row.
+
+1. Repeat this for each definition users should have access to.
+
+1. In the lower-right corner, click *Apply* to save your changes.
+
+   If the *Apply* button is not available yet, this means that at least one DOM module still has invalid settings. To correct this, make sure that for each module at least one user group has full access to at least one definition in that module.
+
+### [Earlier versions](#tab/tabid-2)
+
 1. Select a module, and switch to *Restrict access* with the button on the right.
 
    At this point, no one will have access to the definitions in the module. The list of DOM definitions within the module will expand so you can select a definition.
@@ -45,7 +86,7 @@ To restrict access for specific definitions and their instances:
 
    - Select a field descriptor.
 
-   - Specify the value(s) the field must contain.
+   - Specify one or more values the field can contain.
 
    ![Example: London office](~/dataminer/images/LondonOffice.png)<br>*Configuring DOM security in DataMiner 10.6.3*
 
@@ -56,6 +97,8 @@ To restrict access for specific definitions and their instances:
 1. In the lower-right corner, click *Apply* to save your changes.
 
    If the *Apply* button is not available yet, this means that at least one DOM module still has invalid settings. To correct this, make sure that for each module at least one user group has full access to at least one definition in that module.
+
+***
 
 > [!NOTE]
 > When changes are applied to the security configuration of a DOM module, that module will be reinitialized.

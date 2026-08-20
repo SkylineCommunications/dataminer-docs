@@ -18,4 +18,4 @@ The module consists of two main tabs:
 
   For details about the information shown in the *groups* tab, refer to [Viewing information about user groups](xref:Viewing_information_about_user_groups).
 
-![Managing users](~/dataminer/images/Managing_Users.png)<br/>*System Center in DataMiner 10.5.10*
+![Managing users](~/dataminer/images/Managing_Users.png)<br/>*System Center in DataMiner 10.6.5*

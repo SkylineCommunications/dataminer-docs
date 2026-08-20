@@ -1,5 +1,6 @@
 ---
 uid: Migrating_from_Elasticsearch_to_OpenSearch
+description: "If you have a system with self-managed storage, follow these steps to migrate you indexing database from Elasticsearch to OpenSearch."
 keywords: re-indexer
 ---
 

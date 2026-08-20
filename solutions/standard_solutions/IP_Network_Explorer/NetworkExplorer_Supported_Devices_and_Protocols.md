@@ -1,5 +1,6 @@
 ---
 uid: IpNetworkExplorer_Supported_Devices_And_Protocols
+description: See which types of network equipment and which routing protocols are supported by the IP Network Explorer.
 ---
 
 # Supported devices and protocols
@@ -15,12 +16,20 @@ The IP Network Explorer supports all equipment that can be monitored using the f
 - Cisco XrOS Manager
 - Cisco Manager
 - Huawei Manager
+- Juniper Networks Manager
 
 ## Supported multicast routing protocols
 
 The IP Network Explorer can visualize multicast traffic based on the following routing protocols:
 
 - Arista manager
+
   - IP Software Multicast Routing Table
+
 - Cisco Nexus
+
   - NBM Flows
+
+- Juniper Networks Manager
+
+  - Multicast Table

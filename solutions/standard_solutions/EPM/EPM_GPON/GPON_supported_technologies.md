@@ -1,5 +1,6 @@
 ---
 uid: xPON_supported_technologies
+Description: Discover the supported xPON technologies and matching DataMiner connectors available for your network deployment.
 ---
 
 # Supported technologies for xPON

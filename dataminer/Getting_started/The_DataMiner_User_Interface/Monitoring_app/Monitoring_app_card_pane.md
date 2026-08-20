@@ -25,7 +25,7 @@ The following card types are available:
 > [!NOTE]
 >
 > - If the app is used on a mobile device, to make optimal use of the available space on the screen, the app layout may be different from what is described in this section.
-> - If the app is viewed in a browser that supports full-screen mode, for parameter tables, data pages, CPE/EPM pages and visual pages, a full-screen button is available: ![Full-screen button](~/dataminer/images/CubeMaximize00028.png)
+> - If the app is viewed in a browser that supports full-screen mode, for parameter tables, data pages, CPE/EPM pages and visual pages, a full-screen button is available: ![Full-screen button](~/dataminer/images/CubeMaximize.png)
 >
 >   Click this button to view the item in full-screen mode. To leave full-screen mode using a keyboard, press Esc or F11, depending on the browser.
 

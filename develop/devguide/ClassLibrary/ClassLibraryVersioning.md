@@ -1,12 +1,13 @@
 ---
 uid: ClassLibraryVersioning
+keywords: class library
 ---
 
-# Class library versioning
+# DataMinerSystem library versioning
 
 ## Versioning scheme
 
-A class library version consists of four components. Each component is a number, separated from the other components by a period ("."), for example, 1.2.0.1.
+A DataMinerSystem library version consists of four components. Each component is a number, separated from the other components by a period ("."), for example, 1.2.0.1.
 
 The different components of a version A.B.C.D represent the following:
 

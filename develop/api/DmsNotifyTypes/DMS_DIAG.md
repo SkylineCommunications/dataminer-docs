@@ -5,7 +5,7 @@ uid: DMS_DIAG
 # DMS_DIAG (85)
 
 > [!WARNING]
-> The use of DMS Notify types has been deprecated. Use types from the [Class Library](xref:ClassLibraryIntroduction) instead.
+> The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.
 
 Obtains additional information from a DMA or a DMS.
 

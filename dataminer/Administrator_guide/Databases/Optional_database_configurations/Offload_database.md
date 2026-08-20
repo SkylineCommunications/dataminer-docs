@@ -1,6 +1,7 @@
 ---
 uid: Offload_database
 keywords: central database
+description: "Offload DataMiner data to files or a central database of type MySQL, MSSQL, or Oracle without impacting system performance."
 ---
 
 # Offloading data

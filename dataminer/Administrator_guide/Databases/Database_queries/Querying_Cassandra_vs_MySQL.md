@@ -1,5 +1,6 @@
 ---
 uid: Querying_Cassandra_vs_MySQL
+description: "Explore how data is stored in a Cassandra database and how you should use the Cassandra Query Language to retrieve that data."
 ---
 
 # Querying a Cassandra database compared to MySQL

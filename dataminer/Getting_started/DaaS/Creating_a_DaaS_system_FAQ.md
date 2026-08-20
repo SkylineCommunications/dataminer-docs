@@ -1,6 +1,7 @@
 ---
 uid: Creating_a_DaaS_system_FAQ
-keywords: cloud faq
+description: Get answers to common questions about DaaS setup, trial and upgrade options, backups, redundancy, security, hosting regions, and more.
+keywords: cloud FAQ, DaaS
 ---
 
 # Frequently asked questions related to DaaS
@@ -11,11 +12,11 @@ Follow the instructions under [Creating a new DMS on dataminer.services](xref:Cr
 
 ### Can I try out DaaS for free?
 
-If you [create a new organization](xref:Creating_an_organization), you can try out a DataMiner Community Edition DaaS system for free. This trial system will expire after **one week**. Once this expiration date is reached, the system will automatically be removed unless it is upgraded beforehand.
+If you [create a new organization](xref:Creating_an_organization), you can try out a DataMiner [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) DaaS system for free. This trial system will expire after **one week**. Once this expiration date is reached, the system will automatically be removed unless it is upgraded beforehand.
 
-To **upgrade** your trial system to a regular DataMiner Community Edition DaaS system, please contact <support@dataminer.services>.
+To **upgrade** your trial system to a regular DataMiner Community Edition DaaS system, please contact <salesops@skyline.be>.
 
-If you would like an **extended trial period**, please contact <sales@skyline.be>.
+To **extend the trial period**, please contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
 
 > [!NOTE]
 > If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire. Another email notification will be sent when the system effectively expires.
@@ -74,7 +75,9 @@ Backups are stored in zone-redundant storage (ZRS) managed by Azure backup, in t
 
 ### Is it possible to make a local backup of all data?
 
-This is currently not possible. Skyline takes regular backups of all systems, which they can use to restore systems. If you want to get access to a backup of your system, please contact <daas@dataminer.services>.
+Taking a DataMiner backup in Cube is currently not possible. Backups are managed by Azure backup and [Skyline takes regular backups of all systems](xref:Creating_a_DaaS_system_FAQ#what-backup-policy-does-a-daas-system-have). These backups can be used to restore the DaaS system to a previous point in time or to recover deleted files.
+
+To restore your system to a previous point in time or recover deleted files, please contact <daas@dataminer.services>.
 
 ### Is it possible to copy data from Azure and store it locally?
 
@@ -102,19 +105,26 @@ Additional query costs may be due when using e.g., Azure ExpressRoute or Amazon 
 
 User management on DaaS systems is similar to that on on-premises systems. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
 
+To configure external authentication, contact <daas@dataminer.services> for assistance to set up the DataMiner part of the configuration, as this requires [making changes to configuration files on the DataMiner server](xref:Creating_a_DaaS_system_FAQ#how-can-i-make-changes-to-configuration-files-on-the-dataminer-server).
+
 See also: [User management](xref:User_management).
+
+> [!NOTE]
+> A DaaS system can never be part of a domain; therefore it cannot make use of active directory integration for user management.
 
 ### Are there specific limitations that apply for DaaS?
 
 As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](xref:STaaS_features#limitations) also apply for DaaS.
 
-In addition, because of the additional security layer used in DaaS systems, at present, it is not possible to connect to a DaaS system using the [Web Services (v1)](xref:Using_the_Web_Services_v1).
+In addition, while the [Web Services API](xref:Using_the_Web_Services_v1) is accessible on DaaS systems once you have authenticated through the dataminer.services B2C layer, the additional security layer of dataminer.services makes it difficult to authenticate externally for integrations that are not hosted on the DMA itself.
 
 ### Where is my DaaS system hosted?
 
 If you create a new DataMiner System via <https://dataminer.services>, it will by default be hosted in the West-Europe region.
 
-However, you can request for it to be hosted in a different available region without incurring any additional costs. To do so, please contact <daas@dataminer.services>.
+During the creation process, you can choose a different compute region via the advanced settings.
+
+If your preferred region is not available in the options yet, please contact <daas@dataminer.services>.
 
 > [!NOTE]
 > When choosing a region, you must select a region that supports availability zones. For an overview, refer to [Azure Regions List](https://learn.microsoft.com/en-us/azure/reliability/regions-list).
@@ -123,7 +133,7 @@ However, you can request for it to be hosted in a different available region wit
 
 If you create a new DataMiner System via <https://dataminer.services>, the data for your system will by default be hosted in the West-Europe region.
 
-However, you can request for it to be hosted in any of the available STaaS regions. To do so, please contact <daas@dataminer.services>. For detailed information, refer to [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
+During the creation process, you can configure the storage region and (optional) geo-replication region via the advanced settings. For detailed information, refer to [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
 
 > [!NOTE]
 > It is perfectly possible to host your DaaS system in one region and your data in another region.

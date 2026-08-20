@@ -421,9 +421,9 @@ Communication between SLNet and SLHelper will now use NATS instead of .NET remot
 
 Performance has improved for all write and delete queries on Cassandra clusters. This applies to all data handled by the SLDataGateway process, including alarms, trending, element data, etc.
 
-#### Deprecated web pages have been removed \[ID 30877\]
+#### Deprecated webpages have been removed \[ID 30877\]
 
-The following web pages have been removed as they are related to deprecated features:
+The following webpages have been removed as they are related to deprecated features:
 
 ```txt
 http://<DMA>/Tools/CustomerLogoCheck.asp

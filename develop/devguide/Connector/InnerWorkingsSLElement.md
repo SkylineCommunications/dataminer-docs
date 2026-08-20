@@ -91,7 +91,7 @@ Always keep the column processing order in mind when implementing tables. The fo
 
 The column processing order can be overruled in the protocol with the [processingOrder](xref:Protocol.Params.Param.ArrayOptions-options#processingorder) option.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Customizing the column processing order is not recommended.
 
 ```xml

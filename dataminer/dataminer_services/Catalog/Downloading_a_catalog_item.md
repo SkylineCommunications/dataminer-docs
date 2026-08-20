@@ -17,14 +17,14 @@ The *download* API call allows you to download a Catalog item.
 
 ## API Definition
 
-For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
+For a complete definition of the API, go to [Key Catalog API Swagger](https://global.dataminer.services/swagger/catalogapi-web/index.html?urls.primaryName=Key+Catalog+API+v2.0).
 
 This page also provides a quick way to execute the call: Expand the "/api/key-catalog/v2-0/{catalogId}/versions/{versionId}/download" item, and click the *Try it out* button.
 
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the download call on the production Catalog.
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ## HTTP method
 

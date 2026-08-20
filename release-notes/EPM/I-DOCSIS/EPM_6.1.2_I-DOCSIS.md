@@ -32,13 +32,13 @@ DataMiner EPM now supports combining CCAPs and CM collectors hosted on different
 
 The following general improvements have been implemented:
 
-- Settings for subscribers, taps, amplifiers and node tables will now all be done in the back end. In the front end, they will be displayed via view tables. The tables were also made volatile.
-- To prevent possible issues, the importing logic in the back end now uses an impersonated user only during the reading of the files.
-- The timing of the aggregation actions for the front and back end has been adjusted from 20 seconds to 5 minutes
+- Settings for subscribers, taps, amplifiers and node tables will now all be done in the backend. In the frontend, they will be displayed via view tables. The tables were also made volatile.
+- To prevent possible issues, the importing logic in the backend now uses an impersonated user only during the reading of the files.
+- The timing of the aggregation actions for the front and backend has been adjusted from 20 seconds to 5 minutes
 
-#### Improved passive logic in DOCSIS back end \[ID 33421\]
+#### Improved passive logic in DOCSIS backend \[ID 33421\]
 
-The following changes have been implemented in the Skyline EPM Platform DOCSIS connector to improve the passive logic in the DOCSIS back end:
+The following changes have been implemented in the Skyline EPM Platform DOCSIS connector to improve the passive logic in the DOCSIS backend:
 
 - The logic of the connector has been adjusted to prevent invalid data from being set in the Subscribers table.
 - An exception has been added to the passive tables (Subscribers, Taps, Nodes and Amplifiers) to show "Not available" if parameters within those tables have not been initialized.
@@ -50,9 +50,9 @@ The following changes have been implemented in the Skyline EPM Platform DOCSIS c
 
 In some cases, it could occur that CCAPS were removed from the system during a reset.
 
-#### Cable Modem table not cleaned up after restart back end \[ID 33308\]
+#### Cable Modem table not cleaned up after restart backend \[ID 33308\]
 
-When a back-end element restarted, it could occur that old rows in the Cable Modem table were not cleaned up.
+When a backend element restarted, it could occur that old rows in the Cable Modem table were not cleaned up.
 
 #### Missing values in Cable Modem table \[ID 33309\]
 

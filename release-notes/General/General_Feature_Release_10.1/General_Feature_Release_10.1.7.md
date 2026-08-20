@@ -549,7 +549,7 @@ When multiple bookings started at the same time, and each of those bookings requ
 
 In some cases, opening the Services app could take a long time due to a problem while loading the SRM icons.
 
-#### Dashboards - Table component: Problem with scroll bars when using Firefox \[ID 29892\]
+#### Dashboards - Table component: Problem with scrollbars when using Firefox \[ID 29892\]
 
 When using Mozilla Firefox, the table component would should scrollbars even in situations where it was not necessary.
 

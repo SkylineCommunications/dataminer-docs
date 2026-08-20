@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_processes
+description: "Explore the different processes running on a DataMiner Agent. Main processes include SLDataMiner, SLDataGateway, and SLDMS."
 keywords: SL,SLElement,SLDataMiner,SLProtocol,SLNet,SLNetComService,SLDMS,SLPort,SLSNMPManager,SLWatchdog,SLLog,SLDataGateway
 ---
 
@@ -83,7 +84,7 @@ Controls all communication among DataMiner Agents, and between DataMiner Agents 
 
 Controls all communication from and to devices connected to either a serial port or an IP port.
 
-Types of communication controlled by this process include serial, smart-serial, GPIB and OPC.
+Types of communication controlled by this process include serial, smart-serial, and GPIB.
 
 > [!NOTE]
 > Multiple SLPort processes can run simultaneously. See [Setting the number of simultaneously running SLPort processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slport-processes).

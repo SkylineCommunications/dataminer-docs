@@ -37,7 +37,9 @@ This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 
 
 The BrokerGateway module is responsible for managing the NATS communication. It automatically updates the NATS cluster when the DataMiner cluster changes and provides clients with the required credentials.
 
-This DxM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU2]/10.5.5 onwards. To make an existing DataMiner 10.5.x setup switch to using BrokerGateway, [a migration](xref:BrokerGateway_Migration) is required. Migrating is highly recommended, as BrokerGateway automatically configures TLS and uses a newer version of NATS, enhancing the overall system performance and error handling capabilities. Upgrading to DataMiner 10.6.0/10.6.1 or higher is not possible without [migrating to BrokerGateway](xref:BrokerGateway_Migration) first.
+Compared to the former way of managing NATS communication, BrokerGateway manages NATS communication based on a single source of truth that has complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS is configured automatically, and a newer version of NATS is used that has better performance and is easier to upgrade.
+
+In addition, starting from DataMiner 10.6.0/10.6.1, the SLNet‑managed NATS solution is no longer supported, so [a migration](xref:BrokerGateway_Migration) to BrokerGateway has to be executed before you can upgrade to these DataMiner versions and beyond.
 
 ### CoreGateway
 
@@ -81,7 +83,12 @@ The UserDefinableApiEndpoint module is responsible for handling API triggers for
 
 ### Web
 
-The Web module provides back-end services for the DataMiner web apps.
+The Web module is a backend process that DataMiner web apps can use without relying on `SLHelper`. It is intended to make web apps more independent from server-side components for backend tasks.
+
+Currently, this module is responsible for the following:
+
+- Generating dashboard reports.
+- Spinning up a backend browser used to generate WAF rules.
 
 This DxM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU8]/10.5.11 onwards.<!-- RN 43439 -->
 
@@ -141,7 +148,7 @@ The ModelHost DxM is not included in the Cloud Pack and [must be deployed separa
 
 The SiteManager module is used to set up secure communication tunnels enabling access to on-premises data sources from a DaaS system. It is supported from DataMiner 10.5.10/10.5.0 onwards and is included in the 10.5.10 DaaS image.
 
-For more information, refer to [Site Manager](xref:SiteManagerOverview).
+For more information, refer to [Edge Manager](xref:EdgeManagerOverview).
 
 ## Logging
 

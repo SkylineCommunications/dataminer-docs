@@ -1,5 +1,6 @@
 ---
 uid: Skyline_Bid_Management
+description: Explore the Skyline bid management workflow, detailing how tender opportunities are identified, evaluated, approved, submitted, and monitored.
 ---
 
 # Skyline bid management
