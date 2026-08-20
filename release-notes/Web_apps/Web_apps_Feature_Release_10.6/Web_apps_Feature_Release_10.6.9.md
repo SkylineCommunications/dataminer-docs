@@ -165,12 +165,6 @@ See also: [DOM: Server-side support for string list FieldDescriptors [ID 46051]]
 
 ### Fixes
 
-#### Dashboards/Low-Code Apps - Table component: Correct column widths would not be applied after the table had been resized or updated [ID 45765]
-
-<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-In some rare cases, a *Table* component would incorrectly not apply the correct column widths after the table had been resized or updated. This led to columns being hidden when they had to be visible.
-
 #### GQI DxM could become unrecoverable when the initial DataMiner state subscription failed [ID 45830]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
