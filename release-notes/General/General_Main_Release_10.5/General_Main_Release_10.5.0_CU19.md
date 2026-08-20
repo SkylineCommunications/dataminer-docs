@@ -39,6 +39,12 @@ From now on, each SLLogCollector instance will have its own dedicated log file n
 
 Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
 
+#### Enhanced performance when recalculating security keys [ID 46077]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+Because of a number of enhancements, overall performance has increased when recalculating security keys.
+
 #### DxM upgraded [ID 46124]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
@@ -82,3 +88,9 @@ SLAutomation could deadlock when many subscripts were launched in a short time. 
 In some cases, a race condition could cause the SLAutomation process to hang during shutdown.
 
 As a result, a DataMiner upgrade could be delayed unnecessarily by up to 5 minutes.
+
+#### Invalid cleared correlated alarms could be generated when DVE linking changed [ID 46174]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When a correlation rule with the *AutoClear* option disabled generated an alarm for base alarms on a linked DVE table, DataMiner could generate invalid cleared alarms if the linked row disappeared and reappeared or was unlinked and relinked.

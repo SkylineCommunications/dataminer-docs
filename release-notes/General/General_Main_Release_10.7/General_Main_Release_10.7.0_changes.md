@@ -13,6 +13,7 @@ The following changes may have an impact on your system, so please make sure to 
 
 - [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
 - [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
+- [Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]](#load-save-and-delete-actions-for-services-have-been-rerouted-from-slxml-to-the-storagemodule-dcm-id-46134)
 
 ## Changes
 
@@ -665,6 +666,29 @@ The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 The colors used by the DataMiner Taskbar Utility for upgrade events now align with the colors used by DataMiner Cube. This makes it easier to identify the status of events such as `Finished`, `Success`, `LocalComplete`, `UploadComplete`, `UpgradeComplete`, `Notice`, and `Error`.
+
+#### Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+In preparation of service swarming, all load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM.
+
+#### Automation: GetAvailableAutomationScripts now returns additional script information [ID 46140]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The `GetAvailableAutomationScripts` call now returns the following additional information for each script:
+
+- `IsInteractive`: Indicates whether the script can show UI elements.
+- `CanBeExecuted`: Indicates whether the script can be run on its own. Scripts that only contain reusable libraries return `false`.
+
+#### User-Defined APIs: IIS rewrite rules are now validated and repaired by the UserDefinableApiEndpoint DxM [ID 46143]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The UserDefinableApiEndpoint DxM now owns the IIS rewrite rule that reroutes requests sent to `/api/custom` to the endpoint. It now validates the rule when the process starts and keeps checking it while the service runs, repairing it automatically if needed.
+
+If the rewrite rule is missing, disabled, or no longer matches the expected routing behavior, the DxM will restore it with the correct configuration. This ensures that user-defined API requests keep working even if the IIS configuration has been changed outside the installer.
 
 ### Fixes
 
