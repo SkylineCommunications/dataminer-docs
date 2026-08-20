@@ -124,6 +124,8 @@ See the following example:
 > [!NOTE]
 > If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
 
+See also: [Automation: Credentials can now be added to automation scripts [ID 44282]](xref:Cube_Feature_Release_10.6.10#automation-credentials-can-now-be-added-to-automation-scripts-id-44282)
+
 #### SLNet subscription logging [ID 44361]
 
 <!-- MR 10.7.0 - FR 10.6.3 -->
