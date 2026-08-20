@@ -1,6 +1,6 @@
 ---
 uid: Cost_Billing_Architecture
-description: "Learn how the Cost & Billing architecture separates core domain objects, adapters, and third-party systems for source-agnostic integrations."
+description: "Learn how the Cost & Billing architecture separates core domain objects, adapters, and external systems for source-agnostic integrations."
 ---
 
 # Cost & Billing architecture
@@ -15,7 +15,7 @@ The external integration architecture of the solution is built around three clea
 | --- | --- |
 | **Cost & Billing** | The core module. It owns the generic domain model (items, groups, billable events, contracts, and rate cards). It is completely **source-agnostic**, i.e., it contains no references to any external system. This component always has to be installed, regardless of the external system being integrated. |
 | **Adapter** | The component responsible for fetching data from the external system and mapping it to the Cost & Billing domain objects (e.g., resources → items, jobs → billable events). The adapter is the only component that knows about both worlds. |
-| **Third-party system** | The external operations platform (MediaOps Plan or any equivalent solution). It acts as the source of truth for operational data that must be reflected in Cost & Billing. It is accessed exclusively through the adapter. |
+| **External system** | The external operations platform (MediaOps Plan or any equivalent solution). It acts as the source of truth for operational data that must be reflected in Cost & Billing. It is accessed exclusively through the adapter. |
 
 The Cost & Billing core **never communicates directly with an external system**, and external systems never touch Cost & Billing internals. All translation happens in the adapter.
 
@@ -33,7 +33,7 @@ This is the full component stack of the solution:
 | **Automation scripts** | The solution contains a series of DataMiner automation scripts (ad hoc, interactive, and basic automation). These are mainly used through the low-code app to retrieve data, handle user interactions such as creating or saving data, and perform logic. |
 | **Cost & Billing Dev Pack** | A reusable package containing the SDM (Standard Data Model): the DOM interaction layer that provides typed read/write access to the Cost & Billing DOM instances (rate cards, contracts, items, billable events, etc.). |
 | **Adapter** | The system-specific component (e.g., the MediaOps Plan Adapter). Fetches external data and maps it to Cost & Billing domain objects. |
-| **Third-party system** | The external operations platform, which serves as the source of truth for operational data. Accessed only through the adapter. |
+| **External system** | The external operations platform, which serves as the source of truth for operational data. Accessed only through the adapter. |
 
 ![Cost & Billing component stack](~/solutions/images/CostAndBilling_component-stack.png)
 
