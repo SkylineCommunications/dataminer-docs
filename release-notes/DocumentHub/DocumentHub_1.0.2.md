@@ -14,6 +14,6 @@ uid: DocumentHub_1.0.2
 
 ## Fixes
 
-### Correct Reference of the Storage Installer [ID 46219]
+### Incorrect reference to Storage Installer [ID 46219]
 
-- Fixed the incorrect reference to the Storage Installer so the proper installer is used during setup and deployment, preventing configuration issues
+Because of an incorrect reference to the Storage Installer, it could occur that this installer could not be used during setup and deployment, causing configuration issues. This issue has been resolved.

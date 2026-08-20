@@ -31,11 +31,13 @@ Expected duration: 15 minutes
 
    Example network share location: `\\server\share`
 
-1. Make sure the account used by DataMiner has the required permissions on both the share and the underlying NTFS folder.
+1. Make sure the account used by DataMiner has the required permissions on both the share and the underlying NTFS folder:
 
    - At the share level, grant the account at least *Change* or *Full Control* so it can create and modify files.
-   - On the NTFS permissions of the target folder, grant the same account at least *Modify* or *Write* access.
-   - If the network share is configured with the correct share permissions but the folder itself is missing NTFS write access, uploads will fail even if the share is reachable.
+   - In the NTFS permissions of the target folder, grant the same account at least *Modify* or *Write* access.
+
+   > [!NOTE]
+   > If the network share is configured with the correct share permissions, but the folder itself is missing NTFS write access, uploads will fail even if the share is reachable.
 
 1. Test connectivity from each DMA by accessing the share via Windows Explorer or command line:
 
@@ -43,8 +45,7 @@ Expected duration: 15 minutes
    dir \\server\share
    ```
 
-   > [!NOTE]
-   > If the share is not accessible, verify network connectivity, firewall rules, and both share-level and NTFS permissions.
+   If the share is not accessible, verify network connectivity, firewall rules, and both share-level and NTFS permissions.
 
 ## Step 2: Configure the network share in DocumentHub
 
