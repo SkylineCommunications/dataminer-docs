@@ -6,6 +6,29 @@ items:
     topicUid: SOL_About
   - name: Standard Solutions
     items:
+    - name: Cost & Billing
+      topicUid: Cost_Billing_Intro
+      items:
+      - name: Cost & Billing architecture
+        topicUid: Cost_Billing_Architecture
+      - name: Installing Cost & Billing
+        topicUid: Cost_Billing_Installation
+      - name: Integration with other solutions
+        topicUid: Cost_Billing_Integration
+      - name: Accessing the Cost & Billing app
+        topicUid: Cost_Billing_Access
+      - name: Cost & Billing app overview
+        topicUid: Cost_Billing_App_Overview
+      - name: Configuring value units
+        topicUid: Cost_Billing_Configuring_Value_Units
+      - name: Configuring rate cards
+        topicUid: Cost_Billing_Configuring_Rate_Cards
+      - name: Configuring contracts
+        topicUid: Cost_Billing_Configuring_Contracts
+      - name: Managing items and groups
+        topicUid: Cost_Billing_Managing_Items_Groups
+      - name: Managing billable events
+        topicUid: Cost_Billing_Managing_Billable_Events
     - name: DocumentHub
       topicUid: DocumentHub
       items:
