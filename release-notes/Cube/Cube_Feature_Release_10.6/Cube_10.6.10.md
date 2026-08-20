@@ -63,7 +63,11 @@ When you hover over the warning icon, a tooltip will explain that the credential
 
 ### Enhancements
 
-*This release does not contain any enhancements yet.*
+#### Spectrum Analysis: Shared last preset is now available in shared session mode [ID 46113]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+If a spectrum analyzer is configured to work in shared session mode, a shared last session preset is now automatically kept. This means that when a user configures the spectrum analyzer and closes the card, the configuration is saved in a shared preset. When another user opens that spectrum analyzer, the same preset is loaded and all users will see the same configuration.
 
 ### Fixes
 
