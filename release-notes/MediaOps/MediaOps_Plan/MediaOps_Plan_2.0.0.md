@@ -49,9 +49,9 @@ If only one category is available, it is automatically selected for the job.
 
 Instead of all jobs being automatically assigned the *Scheduled* type, you can now define custom job types and assign them when creating or editing a job.
 
-Job types are defined using the Categories Solution. From MediaOps 2.0.0 onwards, a new *Job Type* scope is created in Categories with two default types: *Ad Hoc* and *Scheduled*. You can freely add additional types on top of these defaults.
+Job types are defined using the Categories app. From MediaOps 2.0.0 onwards, a new *Job Type* scope is created in the Categories app with the default type *Scheduled*. You can freely add additional types on top of this default.
 
-The icon of the selected job type is displayed in the *Job Type* filter of the timeline view. If no icon has been assigned to a type, a default icon is displayed.
+The icon defined for a job type in the Categories app will be used in the Scheduling app as a filter for the timeline view. Hovering over the icon will show the name of the job type. If no icon is defined for a job type, the default filter icon will be shown.
 
 ## Changes
 
