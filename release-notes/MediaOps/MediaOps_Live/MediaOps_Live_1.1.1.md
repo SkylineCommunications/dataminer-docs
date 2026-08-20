@@ -15,4 +15,4 @@ uid: MediaOps_Live_1.1.1
 
 ### Scheduler: Finished tasks not cleaned up correctly [ID 46216]
 
-Finished scheduled tasks were not cleaned up correctly, which caused completed tasks to accumulate in the Scheduler app. This issue has now been fixed.
+Finished scheduled tasks were not cleaned up correctly, which caused completed tasks to accumulate in [DataMiner Scheduler](xref:About_the_Scheduler_module). This issue has now been fixed.
