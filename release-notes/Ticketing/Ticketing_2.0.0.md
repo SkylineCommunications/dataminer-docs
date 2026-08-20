@@ -20,7 +20,7 @@ uid: Ticketing_2.0.0
 
 - Installing the following apps alongside the Ticketing Solution will provide access to **additional functionality**:
 
-  - [MediaOps.Plan](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) 1.6.x or higher (Requiring DataMiner 10.6.4/10.7.0 or higher!): Required to be able to assign people to tickets.
+  - [MediaOps.Plan](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) 1.4.x or higher: Required to be able to assign people to tickets.
   - [InfraOps](https://catalog.dataminer.services/details/5a1edac2-45aa-4498-8ab7-ee322d07da27): Required to be able to link assets to tickets.
 
 ## New features
