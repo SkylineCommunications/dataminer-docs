@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="275" height="250" viewBox="0 0 206 187" role="img" aria-labelledby="title">
+  <title id="title">Element Connections</title>
+  <rect x="1" y="1" width="204" height="185" rx="9" fill="#fbfeff" stroke="#2563eb" stroke-width="1.5"/>
+  <g fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M82 91 H94 L108 59 H119"/>
+  </g>
+  <g fill="#fbfeff" stroke="#2563eb" stroke-width="4">
+    <rect x="54" y="77" width="28" height="28"/>
+    <rect x="119" y="45" width="28" height="28"/>
+  </g>
+  <g fill="#2563eb" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">
+    <text x="103" y="145">ELEMENT</text>
+    <text x="103" y="165">CONNECTIONS</text>
+  </g>
+</svg>

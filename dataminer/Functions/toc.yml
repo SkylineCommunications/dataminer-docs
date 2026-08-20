@@ -1002,6 +1002,8 @@ items:
       topicUid: EdgeManagerGettingStarted
     - name: Troubleshooting
       topicUid: EdgeManagerTroubleshooting
+  - name: Element Connections
+    topicUid: Element_Connections_module
   - name: Experience and Performance Management (EPM)
     topicUid: EPM
     items:
@@ -1475,5 +1477,4 @@ items:
         topicUid: Visual_overview_page_priority
       - name: Cleaning up unused Visio files
         topicUid: Cleaning_up_unused_Visio_files
-
 

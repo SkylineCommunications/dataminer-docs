@@ -71,7 +71,7 @@ At present, Swarming is not yet supported for the following types of elements:
 
 - Elements polling localhost.
 - Elements receiving SNMP traps in a DMS with [trap distribution](xref:DataMiner.SnmpTrapDistribution) disabled on at least one DMA.
-- Elements with active [element connections](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module).
+- Elements with active [element connections](xref:Element_Connections_module).
 - Elements with smart-serial connections configured in server mode, except if this is [explicitly enabled in the protocol.xml](xref:SwarmingSmartSerialServerMode) (supported in specific cases from DataMiner 10.6.6/10.7.0 onwards).
 
 > [!TIP]
