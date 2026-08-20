@@ -8,13 +8,13 @@ Every data-facing part of the Generic Penalty Box, including parameter IDs, elem
 
 ## configVersion
 
-Stamps the shape *config.json* was written against.
+Stamps the schema *config.json* was written against.
 
 ```json
 "configVersion": 1
 ```
 
-This key is required. The current shape is version `1`. If a future release changes the shape again, this is the key that lets the app tell you plainly that your file is written against an old (or new) version, instead of failing with a wall of unrelated "missing key" errors.
+This key is required. The current schema is version `1`. If a future release changes the schema again, this is the key that lets the app tell you plainly that your file is written against an old (or new) version, instead of failing with a wall of unrelated "missing key" errors.
 
 ## Branding
 
