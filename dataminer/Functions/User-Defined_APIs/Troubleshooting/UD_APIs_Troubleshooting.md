@@ -51,7 +51,7 @@ end
 ## IIS rewrite rule checks
 
 > [!NOTE]
-> The service-side rewrite rule checks described in this section are available from DataMiner 10.6.10/10.7.0 onwards<!-- RN46143 -->. On earlier versions, the installer performed these checks during installation or upgrade instead. See [Installer-based checks in older versions](#installer-based-checks-in-older-versions) for the corresponding messages and behavior.
+> The service-side rewrite rule checks described in this section are available from DataMiner 10.6.10/10.7.0 onwards<!-- RN46143 -->. In earlier DataMiner versions, the installer performs these checks during installation or upgrade instead. See [Installer-based checks in older versions](#installer-based-checks-in-older-versions) for the corresponding messages and behavior.
 
 If API requests fail, check `UserDefinableApiEndpoint.txt` for errors related to rewrite rule validation or repair. For the rewrite rule configuration and `RewriteRuleHealthInfo` statuses, see [IIS rewrite rule](xref:UD_APIs_UserDefinableApiEndpoint#iis-rewrite-rule). Common causes include:
 
@@ -62,7 +62,7 @@ If API requests fail, check `UserDefinableApiEndpoint.txt` for errors related to
 
 ### Installer-based checks in older versions
 
-For DataMiner versions prior to 10.6.10/10.7.0, the installer created and validated the IIS rewrite rule during installation or upgrade. It did not continue checking the rule while the endpoint service was running. If you changed the Kestrel port, you had to update the rewrite rule manually. See [Configuring the rewrite rule on older versions](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-rewrite-rule-on-older-versions).
+In DataMiner versions prior to 10.6.10/10.7.0, the installer creates and validates the IIS rewrite rule during installation or upgrade. It does not continue checking the rule while the endpoint service is running. If you change the Kestrel port, you have to update the rewrite rule manually. See [Configuring the rewrite rule for older versions](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-rewrite-rule-for-older-versions).
 
 - **Found rewrite rule, but it has inconsistencies:**
 
@@ -70,7 +70,7 @@ For DataMiner versions prior to 10.6.10/10.7.0, the installer created and valida
 
 - **Port X is in use, this will cause the IIS rewrite rule to be disabled and User Definable APIs to be unusable.**
 
-  When no rewrite rule was found, the installer created one. If the installer detected that another process was using the configured port, it created the rule in a disabled state to avoid routing requests to an unknown process. Configure the other process or the DxM to use a different port, then enable the rewrite rule with the matching port.
+  When no rewrite rule is found, the installer creates one. If the installer detects that another process is using the configured port, it creates the rule in a disabled state to avoid routing requests to an unknown process. Configure the other process or the DxM to use a different port, then enable the rewrite rule with the matching port.
 
 ## Installation issues
 
@@ -78,7 +78,7 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 - **Could not find AspNetCore installed on this system**
 
-  The required ASP.NET Core version must be installed, depending on the [DxM version](xref:UD_APIs_UserDefinableApiEndpoint#versions). DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer will generate this error. .NET 8 must be installed manually.
+  The required ASP.NET Core version must be installed, depending on the [DxM version](xref:UD_APIs_UserDefinableApiEndpoint#versions). DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer will generate this error. Other .NET versions must be installed manually.
 
   To fix this:
 

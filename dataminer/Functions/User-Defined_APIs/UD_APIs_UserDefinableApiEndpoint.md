@@ -141,9 +141,9 @@ For example, this is the default configuration:
 ### IIS rewrite rule
 
 > [!NOTE]
-> The service-side rewrite rule checks described in this section are available from DataMiner 10.6.10/10.7.0 onwards<!-- RN46143 -->. In earlier versions, the installer created and validated the rule during installation or upgrade. If you change the Kestrel port on an earlier version, update the rewrite rule manually as described in [Configuring the rewrite rule on older versions](#configuring-the-rewrite-rule-on-older-versions).
+> The service-side rewrite rule checks described in this section are available from DataMiner 10.6.10/10.7.0 onwards<!-- RN46143 -->. In earlier versions, the installer creates and validates the rule during installation or upgrade. If you change the Kestrel port on an earlier version, update the rewrite rule manually as described in [Configuring the rewrite rule for older versions](#configuring-the-rewrite-rule-for-older-versions).
 
-The *UserDefinableApiEndpoint* service owns the IIS rewrite rule named `Reroute User Definable APIs`. It creates the rule when the service starts and checks it at a configurable interval while it is running. If the rule is missing, disabled, duplicated, or altered, the service restores a single enabled rule with the expected configuration.
+The *UserDefinableApiEndpoint* service owns the IIS rewrite rule named `Reroute User Definable APIs`. The rule is created when the service starts, and it is checked at a configurable interval while the service is running. If the rule is missing, disabled, duplicated, or altered, the service restores a single enabled rule with the expected configuration.
 
 The managed rule matches requests under `/api/custom` and forwards them to the local HTTP port configured for Kestrel. When you change the Kestrel HTTP port in *appsettings.custom.json*, restart the service. The service then updates the rewrite target automatically, so you do not need to edit the rule manually in IIS.
 
@@ -191,7 +191,7 @@ The service logs an informational message when the rule is first confirmed as he
 
 Rewrite rule creation and repair are handled by the running endpoint service instead of an installer custom action. The installer removes the managed rule only during a real uninstall and leaves it in place during a major upgrade so the service can continue to maintain it.
 
-#### Configuring the rewrite rule on older versions
+#### Configuring the rewrite rule for older versions
 
 For DataMiner versions prior to 10.6.10/10.7.0, the installer does not maintain the rewrite rule while the service is running. If you specify a custom Kestrel port in *appsettings.custom.json*, update the rewrite target manually:
 
