@@ -135,6 +135,6 @@ Expected duration: 15 minutes.
 
 1. Use the top filter to find your request more quickly.
 
-1. Track the [test run life cycle](xref:QAOps_Test_Run).
+1. Track the [test run lifecycle](xref:QAOps_Test_Run).
 
 To view and interpret the test results, follow the tutorial [Viewing test results](xref:QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results) tutorial.
