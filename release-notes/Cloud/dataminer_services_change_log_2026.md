@@ -9,6 +9,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 24 August 2026 - New feature - Catalog - Organization Key authenticated API calls
+
+It is now possible to update Catalog metadata for a specific version or version range using Organization Key authenticated API calls.
+For detailed API documentation, see the [Swagger UI](https://global.dataminer.services/swagger/catalogapi-web/index.html).
+
 ### 12 August 2026 - New feature - Catalog - Catalog item range Markdown support
 
 Catalog item ranges now support Markdown.
