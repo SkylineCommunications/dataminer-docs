@@ -46,6 +46,9 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
 1. On the System Center \> *Cloud* page, click the *Connect* button. A pop-up browser window will open.
 
    > [!NOTE]
+   > If the server or PC you are on does not have general access to the internet, you will not be able to login. Open cube from a server or pc that does have general access to the internet, or copy the url from the header bar before clicking the login button and browse to it from a server or pc that does. 
+
+   > [!NOTE]
    > Internet Explorer is not supported for this. If your default browser is Internet Explorer, we recommend that you change to a different browser in order to continue with this procedure.
 
 1. Specify the following information in the pop-up window:
