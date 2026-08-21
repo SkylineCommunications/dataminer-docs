@@ -7,11 +7,9 @@ description: DataMiner Core Modules (DcMs) are core platform modules that are de
 
 ## About DcMs
 
-DataMiner Core Modules (DcMs) are part of the DataMiner core platform. DcMs use the same underlying technology as DxMs, but they are not optional extension modules.
+DataMiner Core Modules (DcMs) are part of the DataMiner core platform. DcMs use the same underlying technology as [DataMiner Extension Modules (DxMs)](xref:DataMinerExtensionModules), but they are not optional extension modules.
 
-DcMs are delivered through the DataMiner installer starting from DataMiner 10.3.7. DcMs cannot be installed through the Admin app. During upgrades, DcMs are always installed or updated with the core upgrade.
-
-For information on DataMiner Extension Modules, see [DataMiner Extension Modules (DxMs)](xref:DataMinerExtensionModules).
+DcMs are delivered through the DataMiner installer starting from DataMiner 10.3.7 onwards. Unlike DxMs, they cannot be installed through the Admin app. During upgrades, DcMs are always installed or updated with the core upgrade.
 
 ## Available DcMs
 
@@ -39,7 +37,7 @@ This DcM is included in DataMiner upgrade packages from DataMiner 10.5.0 [CU2]/1
 
 Compared to the former way of managing NATS communication, BrokerGateway manages NATS communication based on a single source of truth that has complete knowledge of the cluster, resulting in more robust and carefree NATS communication. In addition, TLS is configured automatically, and a newer version of NATS is used that has better performance and is easier to upgrade.
 
-Starting from DataMiner 10.6.0/10.6.1, the SLNet-managed NATS solution is no longer supported, so [a migration](xref:BrokerGateway_Migration) to BrokerGateway must be executed before you can upgrade to these DataMiner versions and beyond.
+Starting from DataMiner 10.6.0/10.6.1, the SLNet-managed NATS solution is no longer supported, so [a migration to BrokerGateway](xref:BrokerGateway_Migration) must be executed before you can upgrade to these DataMiner versions and beyond.
 
 ### CoreGateway
 
