@@ -5,6 +5,11 @@ description: Discover hands-on ChatOps tutorials to connect DataMiner with Micro
 
 # ChatOps tutorials
 
+> [!CAUTION]
+> DataMiner ChatOps is being retired and will soon no longer be available for installation from the Microsoft Marketplace. ![EOL](~/dataminer/images/EOL_Duo.png)
+>
+> Existing deployments will remain supported and can continue to be used. We recommend transitioning to [DataMiner Assistant](xref:Assistant_M365), which will eventually replace DataMiner ChatOps. A preview version of DataMiner Assistant is already available upon request.
+
 With [ChatOps](xref:About_ChatOps), you can integrate your DataMiner System with Microsoft Teams.
 
 ## Tutorials

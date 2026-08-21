@@ -173,17 +173,3 @@ In a nutshell: **You operate the platform, we build and maintain the platform fo
 > - [Introducing your DataMiner co-pilot](https://community.dataminer.services/introducing-your-dataminer-co-pilot/)
 > - [Proactive Support](xref:Proactive_Support)
 > - [About Remote Access](xref:About_Remote_Access)
-
-### ChatOps
-
-**ChatOps** is a feature that enhances the value of **Microsoft Teams** as you collaborate more effectively using insights and controls from your DataMiner System directly in Microsoft Teams. Users can interact with DataMiner using generic or custom chat commands, and you can even use DataMiner Automation to manage teams and channels and interact with users in chats and channels. ChatOps is especially useful for teams that need to communicate and interact with one another frequently. In the future, we plan to offer support for ChatOps on **Slack** as well, as it is a widely used team messaging platform.
-
-> [!TIP]
-> See also:
->
-> - [Let us enhance your DataMiner ChatOps experience!](https://community.dataminer.services/let-us-enhance-your-dataminer-chatops-experience/)
-> - [About ChatOps](xref:About_ChatOps)
-> - [Example use case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-chat-commands/)
-> - [Examples - Custom chat commands](xref:DataMiner_Teams_bot)
-> - [Examples - Chat integration](xref:Microsoft_Teams_Chat_Integration)
-> - [Kata #6: Custom ChatOps operator](https://www.youtube.com/watch?v=qYOM6-55YYU) ![Video](~/dataminer/images/video_Duo.png)

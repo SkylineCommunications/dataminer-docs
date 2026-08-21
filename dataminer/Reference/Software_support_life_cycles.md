@@ -67,6 +67,7 @@ The following features currently have the "End of Support" status. They will no 
 | Item | Details | Future status |
 |------|---------|---------------|
 | Asset Manager | End of Support as of DataMiner 10.6.x. Module is being retired. | End of Life to be confirmed. |
+| ChatOps | DataMiner ChatOps is being retired and replaced by the [DataMiner Assistant](xref:Assistant_M365). | End of life as of <!--add month & year here-->, when ChatOps will no longer be available for installation from the Microsoft Marketplace. |
 | Logger tables with autoincrement option | See [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement). | End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Legacy Reporter & Dashboards | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | Legacy reservations | The legacy type of reservation used prior to DataMiner 9.5.3/9.6.0 (RN 15180) is obsolete and should no longer be used. | End of Life as of DataMiner 10.6.0 (Q1 2026). |
