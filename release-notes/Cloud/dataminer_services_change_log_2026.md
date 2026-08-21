@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 12 August 2026 - New feature - Catalog - Catalog item range Markdown support
+
+Catalog item ranges now support Markdown.
+
+### 12 August 2026 - New feature - Admin - Subscription templates
+
+On the Billing page of the Admin app, the *Add Subscription* button now launches a wizard instead of a context menu. The wizard also introduces a new *Templates* option, which offers predefined solution packs with an estimation of the units needed for a subscription based on that solution.
+
 ### 6 August 2026 - Enhancement - Sharing - Improved error feedback for rejected share actions
 
 Error feedback has been improved for cases where creating, updating, or deleting a share is rejected by the DataMiner System. The messages shown now help you understand how to correct linked-account or organization issues.

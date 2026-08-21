@@ -16,7 +16,22 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## Highlights
 
-*No highlights have been selected yet.*
+#### DOM security: Group access editor overhauled [ID 45886]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+The group access editor in the DOM security web UI has been overhauled to make group access settings easier to review and manage. The updated editor includes the following changes:
+
+- Groups are shown in a table instead of a list.
+- *Read-only* toggle buttons now allow you to configure read-only access for groups.
+- Groups that do not have access are no longer shown.
+
+![Instance-level security condition](~/dataminer/images/DOMSecurityInstanceLevel.png)
+
+> [!NOTE]
+>
+> - To be able to view and edit read-only access, you need to be connected to a DataMiner Agent running DataMiner 10.6.6/10.7.0 or above.
+> - Previously, read-only access rules were not supported in the UI, and updating the access settings for a group via the UI could cause read-only flags to be reset.
 
 ## New features
 
@@ -81,11 +96,15 @@ From now on, when selecting a table parameter, it will be possible to select eit
 
 New input components have been implemented in dashboards and low-code apps, replacing the previous input implementations:
 
-- *Button* component: Now includes a new *Type* setting that allows you to choose between call to action, subtle, normal, or danger styles.
-- *Dropdown* component: Now includes a new *Placeholder* setting.
-- *Text*, *Search*, and *Number* components: Typing is now from left to right instead of the previous right-to-left behavior.
+- *Button* component: Now includes a new *Type* setting that allows you to choose between call to action, subtle, normal, or danger styles:
 
-  The *Number* component now also supports scientific notation.
+  ![All button style options for the Type setting](~/release-notes/images/Button_Styles.png)
+
+- *Dropdown* component: Now includes a new *Placeholder* setting.
+
+- *Text input*, *Search input*, and *Numeric input* components: Typing is now from left to right instead of the previous right-to-left behavior.
+
+  The *Numeric input* component now also supports scientific notation.
 
 > [!NOTE]
 >
@@ -100,14 +119,16 @@ From now on, the About box will also show the version of the DataMiner Assistant
 
 If this DxM is not installed or not enabled, "Not installed" will be displayed instead of the version.
 
-#### Web apps - Help menu: Feedback command replaced by a feedback submenu [ID 45853]
+#### Web apps - Help menu: Feedback option replaced by a feedback submenu [ID 45853]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
-In the help menu of the web apps, the *Feedback* command has been replaced by a submenu with the following two commands:
+In the help menu of the web apps, the *Feedback* option now shows a submenu with the following two commands:
 
 - [Share your experience](https://aka.dataminer.services/help-feedback-root)
 - [Report an issue](https://aka.dataminer.services/ReportAnIssue)
+
+![Feedback option in the web apps help menu](~/release-notes/images/Web_apps_feedback.png)
 
 #### GQI DxM: Improved performance when all DOM data is requested [ID 45866]
 
@@ -116,21 +137,6 @@ In the help menu of the web apps, the *Feedback* command has been replaced by a 
 When GQI requests DOM data, it now checks whether all data is required instead of relying on the client-requested page size.
 
 When all data is required, e.g., for prefetch join operations or when *Filter assistance* is enabled on a query filter, GQI now requests data with a larger page size. This reduces request overhead and improves performance.
-
-#### DOM security: Group access editor updated with read-only support [ID 45886]
-
-<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-In the DOM security web UI, the group access editor now supports read-only access rules.
-
-Up to now, read-only configurations were not supported in the UI. As a result, when you edited and saved group access settings, a read-only flag could be reset unintentionally.
-
-From now on, groups are shown in a table instead of a list, and read-only values are visible and editable when backend support is available.
-
-Also, groups that do not have access will no longer be shown.
-
-> [!NOTE]
-> For this feature to work, the client app needs to be connected to a DataMiner Agent running Feature Release version 10.6.6 or above.
 
 #### GQI DxM: Query column retrieval no longer prepares the full data-fetching pipeline [ID 46018]
 
@@ -158,12 +164,6 @@ See also: [DOM: Server-side support for string list FieldDescriptors [ID 46051]]
 > The UI will not show the generic list of string fields. If a form is shown for a definition that contains such a field, it will not be displayed and no value will be provided. If a form is shown for a DOM instance that has a value for such a field, it will not be displayed and the value will be maintained if the DOM instance would be updated.
 
 ### Fixes
-
-#### Dashboards/Low-Code Apps - Table component: Correct column widths would not be applied after the table had been resized or updated [ID 45765]
-
-<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-In some rare cases, a *Table* component would incorrectly not apply the correct column widths after the table had been resized or updated. This led to columns being hidden when they had to be visible.
 
 #### GQI DxM could become unrecoverable when the initial DataMiner state subscription failed [ID 45830]
 

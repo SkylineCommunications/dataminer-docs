@@ -13,6 +13,29 @@ uid: General_Main_Release_10.7.0_new_features
 
 ## New features
 
+#### DataMiner key vault [ID 44075] [ID 44349] [ID 44350] [ID 44351] [ID 44352] [ID 44353] [ID 44354] [ID 44701] [ID 44702] [ID 44911] [ID 46047] [ID 46061]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+From DataMiner 10.7.0/10.6.10 onwards, all credentials managed through the Credentials Library (SNMPv2/community, SNMPv3, username/password, and token credentials) will be protected using encryption at rest.
+
+Key enhancements include:
+
+- Secure storage of secrets as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) in a dedicated encrypted store managed by the DataMiner StorageModule, with support for Cassandra, cloud storage, and XML-based deployments. Encryption keys are stored per node and protected using Windows DPAPI.
+
+- Introduction of the DMS backup password, needed to restore encrypted backups on clean machines while maintaining secure key custody. The restore wizard will automatically detect when the password is required and will validate it during restore operations.
+
+- Automatic migration of existing credentials from *Library.xml* to the encrypted store during upgrades, and reconstruction of *Library.xml* during downgrades for backwards compatibility.
+
+- Cluster-wide secret re-encryption support through the SLNetClientTest tool, allowing administrators to rotate encryption keys and re-encrypt all stored secrets without changing credential identifiers.
+
+- Additional security and robustness improvements, including permission enforcement for credential management, duplicate-name protection, decryption failure detection, and extensive reliability enhancements.
+
+> [!IMPORTANT]
+> The DMS backup password should be stored securely outside DataMiner (for example, in a password manager). If it is lost, encrypted credentials in any backup taken with that password can no longer be recovered on a clean host. In a multi-node cluster, a peer DataMiner Agent can re-synchronize the encryption material to a restored node, but this should not be relied upon as a substitute for a properly configured DMS backup password.
+
+<!-- See also Cube RNs [ID 45704] [ID 45997] -->
+
 #### Service & Resource Management: New PatchReservationInstanceProperties method to update properties of a reservation instance [ID 44084]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
@@ -74,6 +97,34 @@ A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve t
 >
 > - *Modules > Automation > UI available*
 > - *Modules > Automation > Execute*
+
+#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Automation scripts now support adding credentials from the Credential Library directly in the script's XML code.
+
+See the following example:
+
+```xml
+<Credentials>
+    <Credential id="1">
+        <Name>MyCredential</Name>
+        <CredentialId>8d15e7d8-f8f6-41f6-985c-fddbd3ea94ae</CredentialId>
+    </Credential>
+</Credentials>
+```
+
+| Element | Attribute | Content |
+|---|---|---|
+| Credential | id | Any integer, unique per credential in the script |
+| Name | - | Unique user-defined string |
+| CredentialId | - | GUID of an existing credential from the Credential Library |
+
+> [!NOTE]
+> If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
+
+See also: [Automation: Credentials can now be added to automation scripts [ID 44282]](xref:Cube_Feature_Release_10.6.10#automation-credentials-can-now-be-added-to-automation-scripts-id-44282)
 
 #### SLNet subscription logging [ID 44361]
 

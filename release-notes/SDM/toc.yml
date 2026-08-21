@@ -17,6 +17,10 @@ items:
         topicUid: SDM_Registration_2.1.0
       - name: SDM Registration 2.0.1 - 2.0.5
         topicUid: SDM_Registration_2.0.1_to_2.0.5
+  - name: SDM Relationships
+    items:
+      - name: SDM Relationships 1.0.0
+        topicUid: SDM_Relationships_1.0.0
   - name: SDM Source Generators
     items:
       - name: SDM Source Generators 1.0.4
