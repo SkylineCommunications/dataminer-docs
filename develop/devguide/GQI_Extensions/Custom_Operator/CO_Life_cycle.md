@@ -15,7 +15,7 @@ A new custom operator instance is created **every time** GQI starts one of the f
 - **[Column resolution](#column-resolution-lifecycle)**: Determines which columns are available without fetching any data.
 - **[Query execution](#query-execution-lifecycle)**: Transforms the rows in the query result.
 
-The diagrams below give an overview of the custom operator lifecycle in every query phase. Lifecycle methods are visualized in boxes and lifecycle conditions are visualized in blue diamonds. Click on the methods and conditions to get more details.
+The diagrams below give an overview of the custom operator lifecycle in every query phase. Lifecycle methods are visualized in boxes and lifecycle conditions are visualized in blue diamonds. Click the methods and conditions to get more details.
 
 ### Argument discovery lifecycle
 
@@ -236,7 +236,7 @@ Optional lifecycle methods are only called when the custom operator C# class imp
 
 ### Which query phase is running?
 
-The phase for which the custom operator instance was [created](#when-is-a-custom-operator-instance-created) determines the lifecycle path. For example, argument discovery only needs argument definitions, while query execution continues until rows have been transformed.
+The [phase for which the custom operator instance was created](#when-is-a-custom-operator-instance-created) determines the lifecycle path. For example, argument discovery only needs argument definitions, while query execution continues until rows have been transformed.
 
 ### Are there operators to optimize?
 

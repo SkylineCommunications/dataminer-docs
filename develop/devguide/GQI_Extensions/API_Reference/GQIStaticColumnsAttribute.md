@@ -12,7 +12,7 @@ description: Reference for the GQIStaticColumnsAttribute class, which marks GQI 
 
 This attribute can be used to mark an ad hoc data source class. It indicates that the columns of an ad hoc data source do not depend on input argument values and will modify the life cycle so columns can be fetched without resolving input arguments.
 
-Available from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards.<!-- RN 46050 -->
+Available from DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards.<!-- RN 46050 -->
 
 > [!TIP]
 > See also: [Lifecycle of ad hoc data sources](xref:Ad_hoc_Life_cycle#does-the-data-source-have-static-columns).

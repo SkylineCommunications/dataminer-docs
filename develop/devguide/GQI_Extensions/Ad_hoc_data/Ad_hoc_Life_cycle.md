@@ -15,7 +15,7 @@ A new ad hoc data source instance is created **every time** GQI starts one of th
 - **[Column resolution](#column-resolution-lifecycle)**: Determines which columns are available without fetching any data.
 - **[Query execution](#query-execution-lifecycle)**: Retrieves the actual data from the ad hoc data source.
 
-The diagrams below give an overview of the ad hoc data source lifecycle in every query phase. Lifecycle methods are visualized in boxes with required methods colored yellow and lifecycle conditions are visualized in blue diamonds. Click on the methods and conditions to get more details.
+The diagrams below give an overview of the ad hoc data source lifecycle in every query phase. Lifecycle methods are visualized in boxes with required methods colored yellow and lifecycle conditions are visualized in blue diamonds. Click the methods and conditions to get more details.
 
 ### Argument discovery lifecycle
 
@@ -308,11 +308,11 @@ Optional lifecycle methods are only called when the ad hoc data source C# class 
 
 ### Which query phase is running?
 
-The phase for which the ad hoc data source instance was [created](#when-is-an-ad-hoc-data-source-instance-created) determines the lifecycle path. For example, argument discovery only needs argument definitions, while query execution continues until data has been fetched.
+The [phase for which the ad hoc data source instance was created](#when-is-an-ad-hoc-data-source-instance-created) determines the lifecycle path. For example, argument discovery only needs argument definitions, while query execution continues until data has been fetched.
 
 ### Does the data source have static columns?
 
-By default, ad hoc data sources do not have static columns, but from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 46050 -->, an ad hoc data source class can be marked with the [GQIStaticColumns](xref:GQI_GQIStaticColumnsAttribute) attribute to indicate that it has static columns. This allows GQI to resolve columns without requiring irrelevant input arguments. In the lifecycle, this means [GetInputArguments](#getinputarguments) and [OnArgumentsProcessed](#onargumentsprocessed) are no longer called during the [column resolution phase](#column-resolution-lifecycle), and [GetColumns](#getcolumns) cannot depend on the input arguments.
+By default, ad hoc data sources do not have static columns, but from DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!-- RN 46050 -->, an ad hoc data source class can be marked with the [GQIStaticColumns](xref:GQI_GQIStaticColumnsAttribute) attribute to indicate that it does have static columns. This allows GQI to resolve columns without requiring irrelevant input arguments. In the lifecycle, this means [GetInputArguments](#getinputarguments) and [OnArgumentsProcessed](#onargumentsprocessed) are no longer called during the [column resolution phase](#column-resolution-lifecycle), and [GetColumns](#getcolumns) cannot depend on the input arguments.
 
 ### Are there operators to optimize?
 
