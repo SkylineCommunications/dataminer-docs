@@ -115,16 +115,6 @@ The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
 Because of a number of enhancements, overall performance has increased when recalculating security keys.
 
-#### DxM upgraded [ID 46124]
-
-<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
-
-The following DataMiner Extension Module (DxM), which is included in the DataMiner upgrade package, has been upgraded to the indicated version:
-
-- DataMiner SupportAssistant 1.9.3
-
-For detailed information about the changes included in this version, refer to the [DxM release notes](xref:DxM_RNs_index).
-
 #### DataMiner Taskbar Utility: Event colors now align with DataMiner Cube [ID 46130]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
