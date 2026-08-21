@@ -1,5 +1,6 @@
 ---
 uid: Assigning_user_settings_to_a_user_group
+description: "Assign user settings to a user group in DataMiner Cube by creating factory defaults or copying existing settings, then apply shared defaults."
 ---
 
 # Assigning user settings to a user group
