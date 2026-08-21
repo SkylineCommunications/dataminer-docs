@@ -4,7 +4,7 @@ uid: EdgeManager_change_log
 
 # Edge Manager change log
 
-#### 20 August 2026 - Enhancement - Site Manager 1.1.0 - Python runtimes now included in edge node installation [ID 46185]
+#### 20 August 2026 - Enhancement - SiteManager 1.1.0 - Python runtimes now included in edge node installation [ID 46185]
 
 Edge node installers now package Python runtimes as archives and extract them during installation or upgrade on Windows or Linux. Superseded Python runtime versions are removed, leaving only the versions supplied by the installed package.
 
