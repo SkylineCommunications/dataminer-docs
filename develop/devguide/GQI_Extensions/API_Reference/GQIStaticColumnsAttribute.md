@@ -10,7 +10,7 @@ description: Reference for the GQIStaticColumnsAttribute class, which marks GQI 
 - Namespace: `Skyline.DataMiner.Core.GQI.Extensions`
 - Assembly: `Skyline.DataMiner.Core.GQI.Extensions.dll`
 
-This attribute can be used to mark an ad hoc data source class. It indicates that the columns of an ad hoc data source do not depend on input argument values and will modify the life cycle so columns can be fetched without resolving input arguments.
+This attribute can be used to mark an ad hoc data source class. It indicates that the columns of an ad hoc data source do not depend on input argument values and will modify the lifecycle so columns can be fetched without resolving input arguments.
 
 Available from DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards.<!-- RN 46050 -->
 
