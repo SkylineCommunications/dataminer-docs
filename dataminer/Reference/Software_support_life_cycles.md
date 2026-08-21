@@ -132,14 +132,10 @@ The following features currently have the "End of Life" status. They are no long
 | Support for Cassandra database on Windows OS | Cassandra databases are no longer supported on Windows. We recommend moving to a Linux system, using [Ubuntu LTS](https://catalog.dataminer.services/details/c6285161-e8c7-4be3-a8b3-20259b20815b). |
 | Support for DataMiner Cube running in Internet Explorer/Edge in IE compatibility mode (XBAP) | End of Life as of DataMiner 10.3.x. |
 | Support for MSSQL as local database | End of Life as of DataMiner 10.3.x. We recommend switching to [Storage as a Service](xref:STaaS). |
+| Support for OpenSearch 1.x | OpenSearch 1.x reached community end of life on May 6, 2025 and should no longer be used. |
 | Support for Visual Studio 2015 | End of Life as of DIS 2.35. DIS will no longer be compatible with this Visual Studio version. |
 | Support for Visual Studio 2017 | End of Life as of DIS 2.41. DIS will no longer be compatible with this Visual Studio version. |
 | Support for Visual Studio 2019 | End of Life as of DIS 3.0. DIS will no longer be compatible with this Visual Studio version. |
-
-<!-- 
-When 10.7.0.x is released, add the following item:
-| Support for OpenSearch 1.x | OpenSearch 1.x reached community end of life on May 6, 2025 and should no longer be used. |
--->
 
 ## Overview per DataMiner version
 
