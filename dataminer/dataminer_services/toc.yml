@@ -152,8 +152,6 @@ items:
       topicUid: Viewing_your_credit_history
 - name: ChatOps
   items:
-  - name: About ChatOps
-    topicUid: About_ChatOps
   - name: DataMiner Teams bot
     topicUid: DataMiner_Teams_bot
   - name: Chat integration
