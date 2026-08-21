@@ -74,6 +74,9 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 
    For more details, refer to *Change TCP/IP Settings* under [Essential Network Settings and Tasks in Windows](https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9).
 
+> [!TIP]
+> If you need to provision the VM without any manual interaction, for example when repeatedly creating test VMs from a pipeline or a script, see [Automating the initial Windows setup of the pre-installed VHD](xref:Automating_Windows_setup_of_the_pre_installed_VHD).
+
 ## Configuring DataMiner
 
 ### [Installer v10.5](#tab/tabid-1)
