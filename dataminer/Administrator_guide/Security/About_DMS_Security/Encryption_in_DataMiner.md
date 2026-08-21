@@ -1,5 +1,6 @@
 ---
 uid: Encryption_in_DataMiner
+description: "Review DataMiner encryption for passwords, in-transit communication, and stored data, including Blowfish, Rijndael, TLS, and BitLocker options."
 ---
 
 # Encryption in DataMiner
