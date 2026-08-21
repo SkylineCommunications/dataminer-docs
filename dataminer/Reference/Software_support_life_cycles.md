@@ -48,10 +48,17 @@ The following features currently have the "End of Engineering" status. They will
 | [Atlassian Crowd authentication](xref:Configuring_Atlassian_Crowd_settings#authenticating-dataminer-users-against-an-atlassian-crowd-server) | This type of authentication will be deprecated. | End of Life to be confirmed. |
 | Connectors: Display columns in tables | The [displayColumn attribute](xref:Protocol.Params.Param.ArrayOptions-displayColumn) should no longer be used in tables. | End of Life to be confirmed. |
 | Connectors: [dllName option in QAction options attribute](xref:Protocol.QActions.QAction-options#dllnamenamedll) | This option is superfluous and should no longer be used. | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
+| GQI in SLHelper | The [GQI DxM](xref:GQI_DxM) should be used instead. | End of Support as of DataMiner 10.7.x. |
 | Logger tables of type DirectConnection with a primary key |See [Defining a logger table of type DirectConnection with a primary key](xref:AdvancedLoggerTablesDefiningDirectConnectionTable). | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Pivot table and Group components | End of Engineering as of DataMiner 10.6.x. These components are being retired in the Dashboards app and Low-Code Apps. | End of Support as of DataMiner 10.7.x (Q4 2026).<br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | [Radius authentication](xref:Configuring_RADIUS_settings) | This type of authentication is deprecated and has inherent flaws. We recommend using a different type of authentication instead. | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | SRM Service Info | This object with booking-related service info is no longer needed since SRM 2.0.2 ([RN 40666](xref:SRM_2.0.2#skipservicehandling-automatically-enabled--srmserviceinfo-objects-no-longer-used-id-40666)). | End of Life to be confirmed. |
+
+<!-- 
+When 10.7.0.x is released, add the following items:
+| Polling of data in DataMiner web apps | WebSockets will be used instead. | End of Support to be confirmed. |
+| SLOffload tool | This tool is obsolete and cannot be used in systems with a Cassandra general database | End of Life as of DataMiner 10.8.x (Q4 2027). |
+| Visual overviews in DataMiner web apps | The lightweight version of Visual Overview shown in DataMiner web apps is now considered legacy UI. [Several capabilities](xref:DashboardVisualOverview#unsupported-capabilities) of Visual Overview in Cube are not supported in the web apps. | End of Support to be confirmed. | -->
 
 ### End of Support
 
@@ -84,6 +91,11 @@ The following features currently have the "End of Life" status. They are no long
 | Web Services API v0 | From DataMiner 10.1.5 onwards, version 0 of the DataMiner Web Services API is disabled. Users will be required to port any reliant applications to use Web Services API v1. |
 | Linking data to *Select* query operator | From DataMiner 10.4.0/10.4.1 onwards, it is no longer possible to link the [Select](xref:GQI_Select) query operator to data. |
 | XML storage of SRM resources and profiles | From DataMiner 10.4.0/10.4.1 onwards, SRM resources and profiles must be stored in the indexing database instead of in XML. |
+
+<!-- 
+When 10.7.0.x is released, add the following item:
+| .NET Remoting | To improve security, gRPC must be used instead of .NET Remoting. For details, see [DataMiner Agent hardening](xref:DataMiner_hardening_guide#dataminer-agent-hardening). |
+-->
 
 ## Third-party software support lifecycle
 
@@ -124,6 +136,11 @@ The following features currently have the "End of Life" status. They are no long
 | Support for Visual Studio 2017 | End of Life as of DIS 2.41. DIS will no longer be compatible with this Visual Studio version. |
 | Support for Visual Studio 2019 | End of Life as of DIS 3.0. DIS will no longer be compatible with this Visual Studio version. |
 
+<!-- 
+When 10.7.0.x is released, add the following item:
+| Support for OpenSearch 1.x | OpenSearch 1.x reached community end of life on May 6, 2025 and should no longer be used. |
+-->
+
 ## Overview per DataMiner version
 
 The overview below shows which lifecycle changes apply for each major DataMiner version.
@@ -159,19 +176,25 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 
 ### DataMiner 10.7
 
+- **End of Life – .NET Remoting**: To improve security, gRPC must be used instead of .NET Remoting. For details, see [DataMiner Agent hardening](xref:DataMiner_hardening_guide#dataminer-agent-hardening).
 - **End of Support – Cassandra Single**: Support will end for setups where each DMA has its own Cassandra database. Instead we recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [dedicated clustered storage](xref:Dedicated_clustered_storage) instead.
 - **End of Life – Cassandra versions prior to 4.x**: Cassandra versions older than Cassandra 4.x are no longer supported on any operating system.
 - **End of Support – Connectors: [dllName option in QAction options attribute](xref:Protocol.QActions.QAction-options#dllnamenamedll)**: This option is superfluous and should no longer be used.
 - **End of Support – Elasticsearch 6.8**: As Elastic no longer supports Elasticsearch 6.8 (or lower), support for this will also end in DataMiner. We highly recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [OpenSearch](xref:OpenSearch_database) instead.
+- **End of Support – GQI in SLHelper**: The [GQI DxM](xref:GQI_DxM) should be used instead.
 - **End of Life – Legacy Reporter & Dashboards**: No longer available from this version onwards. Use the new DataMiner Dashboards app instead.
 - **End of Support – [Logger tables of type DirectConnection with a primary key](xref:AdvancedLoggerTablesDefiningDirectConnectionTable)**
+- **End of Life – OpenSearch 1.0**: OpenSearch 1.x reached community end of life on May 6, 2025 and should no longer be used.
 - **End of Support – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.
+- **End of Engineering – Polling of data in DataMiner web apps**: WebSockets will be used instead.
 - **End of Life - Query executor**: No longer available from this version onwards.
 - **End of Support – [Radius authentication](xref:Configuring_RADIUS_settings)**: This type of authentication is deprecated and has inherent flaws. We recommend using a different type of authentication instead.
+- **End of Engineering – SLOffload tool**: This tool is obsolete and cannot be used in systems with a Cassandra general database.
 - **End of Life – [SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service)**: This configuration is obsolete and should not be used.
 - **End of Life – Two-site redundant indexing clusters**: This setup should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS).
 - **End of Life – Use of JScript in QActions**: C# should be used instead. JScript in QActions cannot be used on Windows Server 2025.
 - **End of Life – Use of VBScript in QActions**: C# should be used instead.
+- **End of Engineering – Visual overviews in DataMiner web apps**: The lightweight version of Visual Overview shown in DataMiner web apps is now considered legacy UI. [Several capabilities](xref:DashboardVisualOverview#unsupported-capabilities) of Visual Overview in Cube are not supported in the web apps.
 
 ### DataMiner 10.8
 
@@ -180,3 +203,4 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 - **End of Life – Logger tables with [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) option**
 - **End of Life – Pivot table and Group components**: No longer available from this version onwards.
 - **End of Life – [Radius authentication](xref:Configuring_RADIUS_settings)**
+- **End of Life – SLOffload tool**: This tool is obsolete and cannot be used in systems with a Cassandra general database.
