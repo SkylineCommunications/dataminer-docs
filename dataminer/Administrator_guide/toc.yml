@@ -250,6 +250,13 @@ items:
             topicUid: Failover_FAQ_connection_issues
           - name: What if one of the Agents cannot be started or restarted?
             topicUid: Failover_FAQ_cannot_start
+  - name: DataMiner modules
+    topicUid: DataMinerModules
+    items:
+      - name: DataMiner Extension Modules (DxMs)
+        topicUid: DataMinerExtensionModules
+      - name: DataMiner Core Modules (DcMs)
+        topicUid: DataMinerCoreModules
   - name: Node Recovery
     topicUid: NodeRecovery_About
     items:

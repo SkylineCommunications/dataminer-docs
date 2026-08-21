@@ -5,6 +5,8 @@ description: DataMiner Core Modules (DcMs) are core platform modules that are de
 
 # DataMiner Core Modules (DcMs)
 
+## About DcMs
+
 DataMiner Core Modules (DcMs) are part of the DataMiner core platform. DcMs use the same underlying technology as DxMs, but they are not optional extension modules.
 
 DcMs are delivered through the DataMiner installer starting from DataMiner 10.3.7. DcMs cannot be installed through the Admin app. During upgrades, DcMs are always installed or updated with the core upgrade.
