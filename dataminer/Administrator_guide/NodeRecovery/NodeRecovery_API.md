@@ -1,5 +1,6 @@
 ---
 uid: NodeRecovery_API
+description: "Explore which information NodeRecovery exposes over an API. This API can be accessed over SLNet and requires the Admin tools permission."
 ---
 
 # Node Recovery API
