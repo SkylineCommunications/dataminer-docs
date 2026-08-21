@@ -110,3 +110,13 @@ This issue has now been fixed. The test now checks logical CPU cores.
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 When a correlation rule with the *AutoClear* option disabled generated an alarm for base alarms on a linked DVE table, DataMiner could generate invalid cleared alarms if the linked row disappeared and reappeared or was unlinked and relinked.
+
+#### gRPC connections could fail when the User-Agent value was invalid [ID 46192]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.10 -->
+
+Custom applications using the SLNet gRPC client could fail to establish a connection when their product version contained characters that led to an invalid User-Agent value during the APIGateway health check.
+
+As a result, the connection could incorrectly be reported as `APIGateway is unavailable`.
+
+From now on, invalid User-Agent values are skipped, so the health check can continue and the gRPC connection can be established correctly.
