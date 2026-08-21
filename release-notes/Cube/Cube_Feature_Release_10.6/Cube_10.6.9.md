@@ -2,12 +2,12 @@
 uid: Cube_Feature_Release_10.6.9
 ---
 
-# DataMiner Cube Feature Release 10.6.9 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.9
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU6].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
