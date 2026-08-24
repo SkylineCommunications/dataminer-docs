@@ -122,7 +122,11 @@ This only applies when the GQI DxM is enabled. SLHelper filtering is unaffected.
 
 When updates were triggered very quickly on an EPM picker component, a change detection issue could occur that caused the component to disappear until a mouse event occurred.
 
-This issue has now been fixed.
+#### Dashboards: Dashboard would incorrectly be visible without view rights on the root folder [ID 46200]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+Up to now, in some cases, users without view rights on the root dashboards folder could incorrectly access dashboards located in subfolders if they had view rights on those subfolders.
 
 #### GQI DxM: Optimized OR filters could be ignored on the right side of a join [ID 46201]
 
