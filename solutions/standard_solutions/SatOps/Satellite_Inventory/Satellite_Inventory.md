@@ -10,7 +10,7 @@ The Satellite Inventory app enables satellite operators to model and manage thei
 With the Satellite Inventory app, you can:
 
 - Create, edit, and manage satellites, beams, and transponders through guided, interactive dialogs.
-- Import satellite demo data from a predefined template for quick environment setup.
+- Populate the app with sample satellites, beams, and transponders by deploying the SatOps demo data package, a separate DataMiner Catalog item.
 - Define time-boxed transponder plans with configurable slot sizes, generate transponder slots from those plans, and configure a permanent base plan.
 - Visualize the satellite hierarchy (satellite, beams, transponders) in an interactive node edge graph.
 - Visualize transponder plan layouts and inspect individual transponder slots from a dedicated panel.
@@ -32,7 +32,7 @@ The satellite hierarchy, consisting of satellites, beams, and transponders, can 
 
 ![The interactive node edge graph for the Eutelsat 7C satellite, showing the satellite node connected to its transponders (T-01 and T-02) and beams (Europe A 1 and Europe A 2)](~/solutions/images/SO_SI_Node_Edge_Graph.png)
 
-To quickly set up an environment for evaluation, you can import satellite demo data from a predefined template.
+To evaluate the app without configuring an inventory from scratch, deploy the [SatOps demo data](https://catalog.dataminer.services/details/668a9580-1c5d-4215-a20e-b62fdaea5fe8) package, a separate DataMiner Catalog item that populates satellites, beams, and transponders for you.
 
 > [!NOTE]
 > The Satellite Inventory app works on top of the [MediaOps Plan](xref:MediaOps.Plan) Resource Studio. Each transponder you create is also a DataMiner resource, so the transponders you manage here are the same ones that [Satellite Scheduling](xref:Satellite_Scheduling) books against. Satellite Inventory adds the satellite-specific structure, such as satellites, beams, transponder plans, and slots, on top of those resources.
