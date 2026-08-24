@@ -161,6 +161,27 @@ It is possible to display the minimum and/or maximum hold of the trace you are c
 > [!NOTE]
 > When you are viewing multiple measurement points at the same time, these options are not available.
 
+## Displaying the reference trace
+
+From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45843-->, you can save the current trace as a reference trace and compare subsequent measurements against it.
+
+To do so:
+
+1. On the spectrum analyzer card, go to the *trace* tab of the ribbon.
+
+1. Click *Set reference* to save the current trace as the reference trace.
+
+The reference trace is displayed under *Traces* in the info pane. It remains available until it is reset or replaced by setting a new reference trace.
+
+- To remove the saved reference trace, in the *trace* tab, click *Reset reference*.
+
+- To hide the reference trace, in the *trace* tab, clear the selection from *Show reference*.
+
+- To change the color of the reference trace, in the *Colors* section of the *trace* tab, select a different color in the *Reference trace* dropdown list.
+
+> [!NOTE]
+> Prior to DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9, a reference trace can only be loaded from a preset. See [Using Spectrum Analysis presets](xref:Using_Spectrum_Analysis_presets).
+
 ## Displaying the average trace
 
 It is possible to display the average trace, next to or instead of the actual real-time trace.

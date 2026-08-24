@@ -1,5 +1,6 @@
 ---
 uid: About_security
+description: "Review cybersecurity principles, automation practices, and product security requirements to strengthen your DataMiner operation and protect sensitive data."
 ---
 
 # About security

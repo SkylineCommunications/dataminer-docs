@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU18
 ---
 
-# General Main Release 10.5.0 CU18 - Preview
+# General Main Release 10.5.0 CU18
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > Before you upgrade to this DataMiner version:
@@ -25,12 +25,6 @@ uid: General_Main_Release_10.5.0_CU18
 ## Changes
 
 ### Enhancements
-
-#### Security enhancements [ID 45646]
-
-<!-- 45646: MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-A number of security enhancements have been made.
 
 #### APIGateway: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45671]
 
