@@ -166,7 +166,7 @@ items:
     topicUid: Disabling_Remote_Access_and_Live_Sharing
   - name: Disabling reports and notifications offloading
     topicUid: Disable_Offloading_Reports_and_Notifications
-  - name: Disabling the bot feature locally
+  - name: Disabling DataMiner ChatOps locally
     topicUid: Disabling_bot_locally
   - name: Disconnecting from dataminer.services
     topicUid: Disconnecting_from_dataminer.services
