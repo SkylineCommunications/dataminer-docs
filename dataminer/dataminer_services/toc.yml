@@ -156,14 +156,6 @@ items:
     topicUid: DataMiner_Teams_bot
   - name: Chat integration
     topicUid: Microsoft_Teams_Chat_Integration
-  - name: Tutorials
-    items:
-    - name: Hello World
-      topicUid: ChatOps_Tutorials_Custom_Command_Hello_World
-    - name: Chat notifications
-      topicUid: ChatOps_Tutorials_Chat_Notification
-    - name: Adaptive Card notifications with custom buttons
-      topicUid: ChatOps_Tutorials_Custom_Buttons
 - name: Advanced configuration
   items:
   - name: Customizing the dataminer.services endpoint configuration

@@ -117,6 +117,19 @@ In addition, when you connect your DataMiner Agents to dataminer.services, your 
 > - [Introducing your DataMiner co-pilot](https://community.dataminer.services/introducing-your-dataminer-co-pilot/)
 > - [Customer DataMiner Reporting (CDMR)](xref:CDMR)
 
+### DataMiner Assistant
+
+The **DataMiner Assistant** is an integrated AI assistant that helps users **interact with their DataMiner System more efficiently**. It can answer DataMiner-related questions, assist in interpreting system data, and help users quickly find relevant information.
+
+Combining knowledge of your DataMiner environment with DataMiner documentation, the Assistant makes it easier to troubleshoot issues, analyze data, and work more efficiently.
+
+> [!TIP]
+> See also:
+>
+> - [DataMiner Assistant DxM](xref:Assistant_DxM)
+> - [DataMiner Assistant app](xref:DataMinerAssistant)
+> - [DataMiner Assistant for Microsoft 365](xref:Assistant_M365)
+
 ### Storage as a Service (STaaS)
 
 Platform services prioritize convenience. The hassle of managing your own Cassandra and OpenSearch/Elasticsearch database clusters is a thing of the past. With the scaling and complexity taken care of, you and your team can focus on the core business of your company. Our Storage as a Service (STaaS) solution streamlines your core operations by utilizing Skyline’s hosting service for your storage cluster, resulting in a significant reduction of on-premises resources, configuration, and maintenance.
