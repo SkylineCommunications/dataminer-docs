@@ -7,7 +7,7 @@ description: Explore the Satellite Scheduling UI, including the transponder time
 
 ## Transponder timeline
 
-The Satellite Scheduling UI is centered around a **transponder timeline**  that shows all available transponder slots and existing bookings.
+The Satellite Scheduling UI is centered around a **transponder timeline** that shows all available transponder slots and existing bookings.
 
 ![The Satellite Scheduling transponder timeline in read mode, showing transponder slots and existing bookings](~/solutions/images/SO_SS_Timeline_Read_Mode.png)
 
@@ -40,6 +40,8 @@ You can switch between the following modes using the *Read* and *Edit* buttons i
 
 You can navigate between the Satellite Scheduling and Satellite Inventory apps:
 
-- In Satellite Scheduling, click a transponder name on the timeline to open the corresponding transponder in the Satellite Inventory app.
+- In Satellite Inventory, click the transponder name in the header of the *Slots* panel to open the timeline for that transponder.
 
-- In the *Slots* panel of Satellite Inventory, click *Open in Satellite Scheduling* to open the timeline for that transponder.
+- In Satellite Scheduling, click the transponder block in the left column of the timeline to open that transponder in Satellite Inventory.
+
+For an example of both, see [Transponder plans and slots](xref:SI_Transponder_Plans#from-plan-to-schedule).
