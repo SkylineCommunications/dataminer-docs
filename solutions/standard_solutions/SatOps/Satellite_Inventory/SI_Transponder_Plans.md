@@ -13,7 +13,7 @@ You manage transponder plans from the *Slots* panel of a transponder.
 
 There are two types of transponder plans:
 
-- Permanent plan: The base plan of a transponder. It applies unless a temporary plan overrides it. A transponder has exactly one permanent plan, marked with an infinity icon.
+- Permanent plan: The base plan of a transponder. It applies unless a temporary plan overrides it. A transponder has exactly one permanent plan, marked with an infinity icon ![Infinity icon](~/solutions/images/SO_SI_Icon_Permanent_Plan.png) in front of the plan name.
 
 - Temporary plan: A time-boxed plan that overrides the permanent plan during a specific date range. A transponder can have any number of temporary plans, but their date ranges cannot overlap.
 
@@ -21,7 +21,7 @@ The following diagram shows how permanent and temporary plans combine over time.
 
 ![Illustration that shows that when there is a permanent plan and a temporary plan at the same time, the permanent plan is overridden during that time range and the Satellite Scheduling app uses that plan for bookings](~/solutions/images/SO_SI_Plan_Types_Timeline.png)
 
-The following example shows an existing permanent plan for transponder 1 of Eutelsat 7C. The transponder has a bandwidth range of 36 MHz, and the plan defines slots of 3, 6, 12, and 18 MHz. The permanent plan is marked with an infinity icon.
+The following example shows an existing permanent plan for transponder 1 of Eutelsat 7C. The transponder has a bandwidth range of 36 MHz, and the plan defines slots of 3, 6, 12, and 18 MHz.
 
 ![An existing permanent transponder plan with slots of 3, 6, 12, and 18 MHz](~/solutions/images/SO_SI_Permanent_Plan.png)
 
