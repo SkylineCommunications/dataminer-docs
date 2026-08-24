@@ -100,7 +100,7 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
    1. Restart the DataMiner BrokerGateway service.
 
-1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerExtensionModules##apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
+1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerCoreModules#apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
 
 1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
 
@@ -221,7 +221,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
    1. Restart the DataMiner BrokerGateway service.
 
-1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerExtensionModules##apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
+1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerCoreModules#apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
 
 1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
 
@@ -377,7 +377,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
    1. Restart the DataMiner BrokerGateway service.
 
-1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerExtensionModules##apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
+1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerCoreModules#apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
 
 1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
 
