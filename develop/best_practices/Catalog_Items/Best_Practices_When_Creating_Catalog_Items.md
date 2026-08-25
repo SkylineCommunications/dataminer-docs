@@ -61,7 +61,7 @@ Versions in the `0.x.y` range indicate that the Catalog item is not yet consider
 As the software approaches a stable release, use a SemVer pre-release identifier to communicate which stable version it is approaching. We prefer the consistent `rc.x` format (e.g., `1.0.0-rc.1`) over release-specific names, such as a specific customer.
 
 > [!NOTE]
-> Pre-release identifiers are not limited to the first `1.0.0` release. Use them whenever a version needs to be available for testing or validation before the corresponding stable release. For example, use `1.1.0-rc.1` before `1.1.0` or `2.0.0-rc.1` before `2.0.0`. A pre-release identifier may contain only ASCII alphanumeric characters and hyphens. Numeric identifiers must not contain leading zeros.
+> Pre-release identifiers are not limited to the first `1.0.0` release. Use them whenever a version needs to be available for testing or validation before the corresponding stable release. For example, use `1.1.0-rc.1` before `1.1.0` or `2.0.0-rc.1` before `2.0.0`. A pre-release version is a hyphen (`-`) followed by dot-separated identifiers; each identifier may contain only ASCII alphanumeric characters and hyphens. Numeric identifiers must not contain leading zeros.
 
 Keep the following distinction in mind:
 
