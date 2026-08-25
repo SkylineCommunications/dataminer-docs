@@ -50,6 +50,14 @@ When you restore a backup on the same DataMiner System, no password will be need
 > [!NOTE]
 > When you open the Credentials Library, a warning message will appear when this password has not yet been set.
 
+#### Visual Overview: Option to display Visio drawings in the light theme while Cube uses the dark theme [ID 45961]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+A new global setting is now available in *System Center > System settings > Visio drawing* that allows you to force Visio drawings to use the light theme, even when Cube is using the dark theme.
+
+The available options are *Follow Cube theme* (default) and *Light*. After changing the setting, click *Apply theme* and reopen any open Visio drawings to see the change.
+
 #### Credentials Library: Warning indicator will now displayed next to a credential that could not be decrypted [ID 45997]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
