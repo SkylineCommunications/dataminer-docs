@@ -73,7 +73,7 @@ After you have made sure the above-mentioned prerequisites are in place, you can
 
 ## Limitations
 
-- The bot is not supported in shared or private channels.
+- ChatOps is not supported in shared or private channels.
 - Notifications cannot exceed 35 KB.
 
 ## Security
