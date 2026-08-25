@@ -1,6 +1,7 @@
 ---
 uid: Credentials_Library
 keywords: authentication, auth, SNMP credentials
+description: "Configure secure credentials in the Credentials Library to centralize SNMP, token, and username/password access across your system."
 ---
 
 # Credentials Library
