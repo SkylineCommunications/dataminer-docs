@@ -25,4 +25,6 @@ To install SatOps:
    > [!TIP]
    > For more details on deploying items from the Catalog, see [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
 
-After installation, the SatOps applications ([Satellite Inventory](xref:Satellite_Inventory) and [Satellite Scheduling](xref:Satellite_Scheduling)) are available in your DataMiner System and ready for use out of the box. Both apps start out empty. To evaluate or test SatOps without building an inventory from scratch, deploy the [TerraBeam demo data](https://catalog.dataminer.services/details/668a9580-1c5d-4215-a20e-b62fdaea5fe8) package, a separate DataMiner Catalog item. It sets up a scenario around TerraBeam, a fictitious European satellite operator, and populates the apps with satellites, beams, and transponders.
+After installation, the SatOps applications ([Satellite Inventory](xref:Satellite_Inventory) and [Satellite Scheduling](xref:Satellite_Scheduling)) are available in your DataMiner System and ready for use out of the box.
+
+Both apps are initially empty. To evaluate or test SatOps without building an inventory from scratch, deploy the separate [TerraBeam demo data](https://catalog.dataminer.services/details/668a9580-1c5d-4215-a20e-b62fdaea5fe8) package from the DataMiner Catalog. It provides a ready-made scenario based on TerraBeam, a fictitious European satellite operator, with satellites, beams, and transponders to work with.

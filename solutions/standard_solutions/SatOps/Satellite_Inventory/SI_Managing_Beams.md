@@ -27,6 +27,8 @@ To add a beam:
 
 1. On the *Beams* page, click *Add beam*.
 
+   ![The *Add beam* button in the upper-left corner of the Beams page](~/solutions/images/SO_SI_Add_Beam.png)
+
 1. Provide the following information about the beam:
 
    - *Beam Name*: A descriptive name for the beam.

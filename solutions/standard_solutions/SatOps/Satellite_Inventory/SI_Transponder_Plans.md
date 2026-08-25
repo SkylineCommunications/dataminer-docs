@@ -7,13 +7,13 @@ description: Learn how to define permanent and temporary transponder plans in th
 
 A *transponder plan* defines how the bandwidth of a [transponder](xref:SI_Adding_Editing_Transponders) is divided into slots. The *transponder slots* generated from a plan are the bookable units of capacity that appear in the [Satellite Scheduling app](xref:Satellite_Scheduling).
 
-You manage transponder plans from the *Slots* panel of a transponder.
+To open the *Slots* panel, go to the *Transponders* page and click the ![Slots](~/solutions/images/SO_SI_Slots_Icon.png) *Slots* icon in the row of the transponder you want to manage.
 
 ## Permanent and temporary plans
 
 There are two types of transponder plans:
 
-- Permanent plan: The base plan of a transponder. It applies unless a temporary plan overrides it. A transponder has exactly one permanent plan, marked with an infinity icon ![Infinity icon](~/solutions/images/SO_SI_Icon_Permanent_Plan.png) in front of the plan name.
+- Permanent plan: The base plan of a transponder. It applies unless a temporary plan overrides it. A transponder has exactly one permanent plan, marked with an ![infinity icon](~/solutions/images/SO_SI_Icon_Permanent_Plan.png) infinity icon in front of the plan name.
 
 - Temporary plan: A time-boxed plan that overrides the permanent plan during a specific date range. A transponder can have any number of temporary plans, but their date ranges cannot overlap.
 
@@ -27,9 +27,7 @@ The following example shows an existing permanent plan for transponder 1 of Eute
 
 ## Creating a plan
 
-1. On the *Transponders* page, click the ![Slots](~/solutions/images/SO_SI_Slots_Icon.png) *Slots* icon in the row of the transponder for which you want to create a transponder plan.
-
-1. Click *Add plan* in the lower-left corner.
+1. On the *Slots* panel, click *Add plan* in the lower-left corner.
 
    ![The Create plan dialog with several bandwidth rows](~/solutions/images/SO_SI_Create_Plan.png)
 
@@ -71,6 +69,9 @@ The following example shows an existing permanent plan for transponder 1 of Eute
 
    By default, the plan is in the *Draft* state. Before the plan can take effect, you [must activate it](#activating-a-plan).
 
+> [!TIP]
+> To create a plan based on an existing plan, select *Duplicate* from the plan's *More* menu. This copies the plan and all its config rows, which is useful when a new temporary plan only differs from an existing one in its date range.
+
 ### Examples
 
 The following rows illustrate how the settings interact for a transponder with a bandwidth range of 36 MHz. Apart from the second row, these are the rows of the permanent plan shown further down on this page.
@@ -108,15 +109,17 @@ To generate the slots:
 
    ![The generated transponder slots for the selected plan](~/solutions/images/SO_SI_Transponder_Slots.png)
 
-## Checking the transponder details
+## Viewing the transponder details
 
-Slot frequencies are expressed relative to the start and end frequencies of the transponder, so it is often useful to have those numbers at hand.
+Slot frequencies are expressed relative to the transponder's frequency range, so it can be useful to have access to the transponder frequencies and other settings in the *Details* view.
 
-At the top of the panel, switch from *Slots* to *Details*. This replaces the slot layout with the transponder settings: state, bandwidth, band, beam, start and end frequency, downlink start and end frequency, and polarization.
+1. At the top of the panel, switch from *Slots* to *Details*.
 
-![The Details view of a transponder, showing bandwidth, band, beam, frequencies, and polarization](~/solutions/images/SO_SI_Transponder_Details.png)
+   The transponder settings are displayed, including its state, bandwidth, band, beam, start and end frequency, downlink start and end frequency, and polarization.
 
-Switch back to *Slots* to return to the plan overview.
+   ![The Details view of a transponder, showing bandwidth, band, beam, frequencies, and polarization](~/solutions/images/SO_SI_Transponder_Details.png)
+
+1. To return to the plan overview, switch back to *Slots*.
 
 ## Editing a slot
 
@@ -126,31 +129,15 @@ After generating the slots, you can change the auto-generated name and the start
 
    The *Update Slot* dialog opens.
 
-1. Modify the *Slot Name* and *Slot Start Frequency*.
+1. Modify the *Slot Name* and/or *Slot Start Frequency*.
 
 1. Click *Update Slot* to save your changes.
 
 ![The Update Slot dialog, where slot D3 is renamed to D3 Moved and its start frequency is set to 33 MHz](~/solutions/images/SO_SI_Update_Slot.png)
 
-The edited slot keeps its new name in the slot overview and in Satellite Scheduling.
+The updated slot name is shown in the slot overview and in Satellite Scheduling.
 
-## Plan states
-
-Every plan carries a state label on its card in the plan list:
-
-- *Draft*: The plan exists but has no effect. New plans always start here.
-
-- *Active*: The plan is in effect. Satellite Scheduling uses it for the period it covers.
-
-- *Deprecated*: The plan is retired and no longer has any effect.
-
-Plans cannot be deleted. When you no longer need a plan, you deprecate it. It stays in the overview as a record of what was configured. Use the *All*, *Active*, *Draft*, and *Deprecated* filters above the plan list to control which plans are shown.
-
-The example below shows transponder T-04 of SES-16 with three plans: an active permanent plan, a temporary plan for October that was deprecated, and an active temporary plan for September. The permanent plan is selected, so the pane on the right shows its *Plan configs* and the slots generated from them.
-
-![The Slots panel with an active permanent plan, a deprecated temporary plan, and an active temporary plan, and the plan configs and slots of the selected permanent plan](~/solutions/images/SO_SI_Plan_Overview.png)
-
-### Activating a plan
+## Activating a plan
 
 After a plan is created, its state is automatically set to *Draft*. You must activate the plan before it takes effect.
 
@@ -160,7 +147,7 @@ After a plan is created, its state is automatically set to *Draft*. You must act
 
    ![The context menu of a draft plan, with the options Edit plan, Activate, and Duplicate](~/solutions/images/SO_SI_Plan_Context_Menu_Draft.png)
 
-### Deprecating a plan
+## Deprecating a plan
 
 An active plan can be taken out of service at any time. There is no delete option, so deprecating is how you retire a plan.
 
@@ -170,24 +157,22 @@ An active plan can be taken out of service at any time. There is no delete optio
 
    ![The context menu of an active plan, with the options Edit plan, Duplicate, and Deprecate](~/solutions/images/SO_SI_Plan_Context_Menu_Active.png)
 
-The *Duplicate* option in the same menu copies a plan with all its config rows. This is useful when a new temporary plan only differs from an existing one in its date range.
+The following example shows how different plan states appear in the plan list. Transponder T-04 of SES-16 has an active permanent plan, a deprecated temporary plan for October, and an active temporary plan for September. The permanent plan is selected, so the pane on the right shows its *Plan configs* and the slots generated from them.
+
+![The Slots panel with an active permanent plan, a deprecated temporary plan, and an active temporary plan, and the plan configs and slots of the selected permanent plan](~/solutions/images/SO_SI_Plan_Overview.png)
 
 ## From plan to schedule
 
 The generated slots are the units of capacity that can be booked in Satellite Scheduling. From a plan, you can jump straight to the matching view in the [Satellite Scheduling app](xref:Satellite_Scheduling) to see the bookings, and then return to the transponder in the Satellite Inventory app.
 
-Because the effective plan changes over time, the scheduling timeline shows the slots of the plan that applies at each point in time. In the example used here, the permanent plan of T-04 generates 9 MHz slots A9, B9, and C9. The temporary plan that runs from 1 September generates 6 MHz slots A6 through F6 instead.
+- To open the transponder in Satellite Scheduling, click the transponder name in the header of the *Slots* panel.
 
-![The plan configs and generated slots of the temporary September plan, with a single 6 MHz row producing slots A6 to F6](~/solutions/images/SO_SI_Temporary_Plan_Slots.png)
+  ![The transponder name button in the header of the Slots panel](~/solutions/images/SO_SI_Open_In_Scheduling.png)
 
-To open the transponder in Satellite Scheduling, click the transponder name in the header of the *Slots* panel.
+  The timeline opens filtered on that transponder. Here the switch between both plans is visible: the 9 MHz slots apply in August, and from 1 September the 6 MHz slots take over.
 
-![The transponder name button in the header of the Slots panel](~/solutions/images/SO_SI_Open_In_Scheduling.png)
+  ![A Satellite Scheduling timeline for transponder T-04, showing 9 MHz slots in August and 6 MHz slots from 1 September](~/solutions/images/SO_SS_Timeline_Plan_Switch.png)
 
-The timeline opens filtered on that transponder. Here the switch between both plans is visible: the 9 MHz slots apply in August, and from 1 September the 6 MHz slots take over.
+- To go back to the transponder in Satellite Inventory, click the transponder block in the left column of the timeline.
 
-![A Satellite Scheduling timeline for transponder T-04, showing 9 MHz slots in August and 6 MHz slots from 1 September](~/solutions/images/SO_SS_Timeline_Plan_Switch.png)
-
-To go back to the transponder in Satellite Inventory, click the transponder block in the left column of the timeline.
-
-![The transponder block in the left column of the Satellite Scheduling timeline, showing the transponder name, its bandwidth, and its frequency range](~/solutions/images/SO_SS_Back_To_Inventory.png)
+  ![The transponder block in the left column of the Satellite Scheduling timeline, showing the transponder name, its bandwidth, and its frequency range](~/solutions/images/SO_SS_Back_To_Inventory.png)
