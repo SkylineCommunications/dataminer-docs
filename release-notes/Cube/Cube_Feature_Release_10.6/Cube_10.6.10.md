@@ -58,8 +58,6 @@ A new global setting is now available in *System Center > System settings > Visi
 
 The available options are *Follow Cube theme* (default) and *Light*. After changing the setting, click *Apply theme* and reopen any open Visio drawings to see the change.
 
-If you select *Light*, any Visio drawing theming configured inside the Visio file will be ignored.
-
 #### Credentials Library: Warning indicator will now displayed next to a credential that could not be decrypted [ID 45997]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
