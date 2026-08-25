@@ -51,7 +51,7 @@ When you release a version of a Catalog item, make sure to **adhere to [semantic
 
 - **C (PATCH)**: Incremented for backward-compatible bug fixes. When a new version range is introduced, the PATCH version (C) should always start at 0, not 1.
 
-**Choose the starting version.** As part of semantic versioning, choose the starting version based on the maturity of your Catalog item. A `0.x` release is optional. If you use this for early development catalog item releases, start with `0.1.0`. Typically, the Catalog item is not yet public at this stage. For the first official public release, use `1.0.0`. At that point, the software is expected to meet our quality standards.
+**Choose the starting version.** As part of semantic versioning, choose the starting version based on the maturity of your Catalog item. A `0.x` release is optional. If you use this for early development Catalog item releases, start with `0.1.0`. Typically, the Catalog item is not yet public at this stage. For the first official public release, use `1.0.0`. At that point, the software is expected to meet our quality standards.
 
 Versions in the `0.x.y` range indicate that the Catalog item is not yet considered stable. Breaking changes may still occur. When you use this range, increment the components as follows:
 
