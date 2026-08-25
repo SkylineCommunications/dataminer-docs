@@ -109,6 +109,14 @@ Using Kibana, you can take a snapshot in the following way:
 
 ## Restore the snapshot on an Elasticsearch 7.10.0 cluster
 
+> [!NOTE]
+> For the reindexing tool to work properly, we need to remove all complexity and character limits on regular expressions used within Elasticsearch. To do this, add    
+```txt
+   script.painless.regex.enabled: true
+   ```
+to your Elasticsearch 7.10 configuration. 
+
+
 Using Kibana, you can restore the snapshot in the following way:
 
 1. Check the *path.repo* configuration in *elasticsearch.yml*.
