@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Atlassian_Crowd_settings
+description: "Configure Atlassian Crowd settings in DataMiner.xml to import users and groups, set authentication, and override proxy detection."
 ---
 
 # Configuring Atlassian Crowd settings
