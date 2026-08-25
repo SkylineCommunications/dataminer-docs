@@ -45,15 +45,22 @@ Up to 10 log files will be kept on disk, and the log file of the current instanc
 
 Because of a number of enhancements, overall performance has increased when recalculating security keys.
 
-#### DxM upgraded [ID 46124]
+#### DxM upgraded [ID 46124] [ID 46259]
 
-<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+<!-- RN 46124: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+<!-- RN 46259: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR TBD -->
 
-The following DataMiner Extension Module (DxM), which is included in the DataMiner upgrade package, has been upgraded to the indicated version:
+The following DataMiner Extension Modules (DxM), which are included in the DataMiner upgrade package, have been upgraded to the indicated version:
 
+- DataMiner ArtifactDeployer 1.10.0
+- DataMiner CloudFeed 1.4.9
+- DataMiner CloudGateway 3.3.2
+- DataMiner CoreGateway 2.14.17
+- DataMiner FieldControl 2.12.2
+- DataMiner Orchestrator 1.11.0
 - DataMiner SupportAssistant 1.9.3
 
-For detailed information about the changes included in this version, refer to the [DxM release notes](xref:DxM_RNs_index).
+For detailed information about the changes included in these versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 ### Fixes
 
