@@ -9,8 +9,9 @@ uid: DocumentHub_1.0.3
 > [!NOTE]
 > This version requires:
 >
-> - DataMiner 10.6.5 or higher
-> - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.x or higher
+> - DataMiner 10.6.0 [CU2], 10.6.5, or higher
+> - .NET Framework 4.8
+> - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81), versions 2.0.X are supported.
 
 ## New features
 
