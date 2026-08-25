@@ -65,6 +65,17 @@ Key enhancements include:
 
 <!-- See also Cube RNs [ID 45704] [ID 45997] -->
 
+#### SLNet will now listen for connection ticket requests over NATS [ID 46057]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+From now on, SLNet will listen on the `SLNet.Authentication.Ticket` NATS topic to process connection tickets and return the username associated with the ticket.
+
+This allows APIGateway to authenticate requests via the NATS-based connection flow.
+
+> [!NOTE]
+> Tickets can be requested with `connection.RequestCloneTicket()`. This feature does not currently support impersonation with `TicketType.AuthenticateAs`.
+
 #### Automation: Credentials can now be added within the XML code of an automation script [ID 44282]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
