@@ -1,5 +1,6 @@
 ---
 uid: Changing_group_membership_of_a_user
+description: "In the Users/Groups section of System Center, change group membership of DataMiner users to update access permissions and role-based security."
 ---
 
 # Changing group membership of a user

@@ -1,5 +1,6 @@
 ---
 uid: Deleting_a_user
+description: "Delete a local user or a manually added domain user in DataMiner to remove access and clear user data."
 ---
 
 # Deleting a user
