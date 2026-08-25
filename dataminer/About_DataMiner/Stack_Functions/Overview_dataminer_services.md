@@ -24,7 +24,7 @@ Enabled [in just a few clicks](xref:Linking_your_DataMiner_and_dataminer_service
 > [!TIP]
 > Find out more:
 >
-> - [How to access dataminer.services](https://dataminer.services/make-an-account/access_dcp.html).
+> - [How to access dataminer.services](xref:Logging_on_to_dataminer_services).
 > - [How to work with dataminer.services](xref:about_dataminer_services).
 > - [The benefits of Support Services](xref:Proactive_Support).
 
