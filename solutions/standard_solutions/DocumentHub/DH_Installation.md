@@ -9,7 +9,7 @@ uid: DH_Installation
 1. Check the prerequisites mentioned in the DocumentHub [release notes](xref:DocumentHub_RNs_index) matching the package version, and make sure your system meets these prerequisites.
 
    > [!NOTE]
-   > Minimum DataMiner requirement: DataMiner 10.6.5/10.7.0.
+   > Minimum DataMiner requirement: DataMiner 10.6.0 [CU2], 10.6.5, or higher.
 
 1. When all prerequisites are met, click the *Deploy* button.
 
