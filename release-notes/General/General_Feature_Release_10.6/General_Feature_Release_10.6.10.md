@@ -34,6 +34,7 @@ Before you upgrade to this DataMiner version:
 
 The following changes may have an impact on your system, so please make sure to check these before you upgrade:
 
+- [DataMiner key vault [ID 44075] [ID 44349] [ID 44350] [ID 44351] [ID 44352] [ID 44353] [ID 44354] [ID 44701] [ID 44702] [ID 44911] [ID 46047] [ID 46061]](#dataminer-key-vault-id-44075-id-44349-id-44350-id-44351-id-44352-id-44353-id-44354-id-44701-id-44702-id-44911-id-46047-id-46061)
 - [Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]](#load-save-and-delete-actions-for-services-have-been-rerouted-from-slxml-to-the-storagemodule-dcm-id-46134)
 
 ## Highlights
