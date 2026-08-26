@@ -120,6 +120,14 @@ Up to now, the *DataMiner Agent Minimum Requirements* BPA test would incorrectly
 
 This issue has now been fixed. The test now checks logical CPU cores.
 
+#### Elasticsearch re-indexing tool did not preserve the correct name for the newest index [ID 46168]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.10 -->
+
+When the Elasticsearch re-indexing tool processed TTL rollover indices, up to now, it would not preserve the provided index name on the newest empty index. As a result, re-indexing could lead to data loss and the generation of erroneous indices.
+
+The re-indexing tool has been updated to Microsoft .NET 10 and now forces a rollover for TTL rollover indices when re-indexing is complete. This ensures that the newest empty index retains the correct provided name and is marked as the write index.
+
 #### Invalid cleared correlated alarms could be generated when DVE linking changed [ID 46174]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
