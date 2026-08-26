@@ -34,7 +34,7 @@ If you open a script that contains credentials you are not allowed to use, the n
 > - If you user permissions change while you are working in the Automation app, the changes will only take effect after you have re-opened the Automation app.
 
 > [!IMPORTANT]
-> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer. See [Automation: Credentials can now be added within the XML code of an automation script [ID 44282]](xref:General_Feature_Release_10.6.10#automation-credentials-can-now-be-added-within-the-xml-code-of-an-automation-script-id-44282)
+> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer. See [Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]](xref:General_Feature_Release_10.6.10#automation-credentials-can-now-be-added-within-the-xml-code-of-an-automation-script-id-44282-id-46229)
 
 #### System Center: Backup password can now be set for restoring credentials [ID 45704]
 
@@ -104,3 +104,9 @@ When you opened a spectrum element in one spectrum analysis component and then o
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 The credentials library can contain a maximum of 1000 sets of credentials. When this limit is reached, users who want to add a new set of credentials will receive a warning. However, up to now, that warning would be partially hidden behind the *Add* and *Delete* buttons.
+
+#### Automation: Package name and version of automation scripts could no longer be displayed after restarting Cube or re-opening the Automation module [ID 46224]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When a Cube connected to a system using STaaS was restarted, or when, on a Cube connected to a system using STaaS, the Automation module was closed and re-opened, up to now, the package name and version of the automation scripts could no longer be displayed.

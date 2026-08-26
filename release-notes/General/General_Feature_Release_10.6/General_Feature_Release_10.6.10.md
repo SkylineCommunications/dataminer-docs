@@ -34,6 +34,7 @@ Before you upgrade to this DataMiner version:
 
 The following changes may have an impact on your system, so please make sure to check these before you upgrade:
 
+- [DataMiner key vault [ID 44075] [ID 44349] [ID 44350] [ID 44351] [ID 44352] [ID 44353] [ID 44354] [ID 44701] [ID 44702] [ID 44911] [ID 46047] [ID 46061]](#dataminer-key-vault-id-44075-id-44349-id-44350-id-44351-id-44352-id-44353-id-44354-id-44701-id-44702-id-44911-id-46047-id-46061)
 - [Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]](#load-save-and-delete-actions-for-services-have-been-rerouted-from-slxml-to-the-storagemodule-dcm-id-46134)
 
 ## Highlights
@@ -65,6 +66,36 @@ Key enhancements include:
 
 <!-- See also Cube RNs [ID 45704] [ID 45997] -->
 
+#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Automation scripts now support adding credentials from the Credentials Library directly in the script's XML code.
+
+See the following example:
+
+```xml
+<Credentials>
+    <Credential id="1">
+        <Name>MyCredential</Name>
+        <CredentialId>8d15e7d8-f8f6-41f6-985c-fddbd3ea94ae</CredentialId>
+        <Type>Token</Type>
+    </Credential>
+</Credentials>
+```
+
+| Element | Attribute | Content |
+|---|---|---|
+| Credential | id | ID of the credential (integer, unique per script) |
+| Name | - | Name of the credential (string, unique per script) |
+| CredentialId | - | GUID of the linked credential from the Credentials Library |
+| Type | - | Type of credential: `UserNamePassword` or `Token` |
+
+> [!NOTE]
+>
+> - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
+> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNamePassword` and `Token` credentials stored in the Credentials Library.
+
 #### SLNet will now listen for connection ticket requests over NATS [ID 46057]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -75,34 +106,6 @@ This allows APIGateway to authenticate requests via the NATS-based connection fl
 
 > [!NOTE]
 > Tickets can be requested with `connection.RequestCloneTicket()`. This feature does not currently support impersonation with `TicketType.AuthenticateAs`.
-
-#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-Automation scripts now support adding credentials from the Credential Library directly in the script's XML code.
-
-See the following example:
-
-```xml
-<Credentials>
-    <Credential id="1">
-        <Name>MyCredential</Name>
-        <CredentialId>8d15e7d8-f8f6-41f6-985c-fddbd3ea94ae</CredentialId>
-    </Credential>
-</Credentials>
-```
-
-| Element | Attribute | Content |
-|---|---|---|
-| Credential | id | Any integer, unique per credential in the script |
-| Name | - | Unique user-defined string |
-| CredentialId | - | GUID of an existing credential from the Credential Library |
-
-> [!NOTE]
-> If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
-
-See also: [Automation: Credentials can now be added to automation scripts [ID 44282]](xref:Cube_Feature_Release_10.6.10#automation-credentials-can-now-be-added-to-automation-scripts-id-44282)
 
 ## Changes
 
@@ -119,6 +122,14 @@ The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
+
+#### APIGateway: SLNet authentication [ID 46055]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+A new REST endpoint, `/APIGateway/api/authentication/ticket`, can be used to authenticate a session with APIGateway using an SLNet connection ticket. You can then use this session to access DxM endpoints in an authenticated way, with APIGateway acting as a reverse proxy.
+
+This requires [SLNet to listen for connection ticket requests over NATS](#slnet-will-now-listen-for-connection-ticket-requests-over-nats-id-46057).
 
 #### Enhanced performance when recalculating security keys [ID 46077]
 
@@ -214,6 +225,14 @@ As a result, a DataMiner upgrade could be delayed unnecessarily by up to 5 minut
 Up to now, the *DataMiner Agent Minimum Requirements* BPA test would incorrectly check physical CPU cores instead of logical CPU cores. As a result, virtualized environments such as a DaaS system could incorrectly be reported as not meeting the minimum CPU core requirements.
 
 This issue has now been fixed. The test now checks logical CPU cores.
+
+#### Elasticsearch re-indexing tool did not preserve the correct name for the newest index [ID 46168]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.10 -->
+
+When the Elasticsearch re-indexing tool processed TTL rollover indices, up to now, it would not preserve the provided index name on the newest empty index. As a result, re-indexing could lead to data loss and the generation of erroneous indices.
+
+The re-indexing tool has been updated to Microsoft .NET 10 and now forces a rollover for TTL rollover indices when re-indexing is complete. This ensures that the newest empty index retains the correct provided name and is marked as the write index.
 
 #### Invalid cleared correlated alarms could be generated when DVE linking changed [ID 46174]
 
