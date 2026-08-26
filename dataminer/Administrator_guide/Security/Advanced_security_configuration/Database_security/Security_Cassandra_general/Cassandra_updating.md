@@ -1,5 +1,6 @@
 ---
 uid: Cassandra_updating
+description: "Upgrade Cassandra safely by checking the version, applying rolling updates, and keeping the cluster secure with backups and validated settings."
 ---
 
 # Updating Cassandra
