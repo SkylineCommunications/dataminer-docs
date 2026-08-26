@@ -4,19 +4,27 @@ uid: Generic_Penalty_Box_Configuration
 
 # Configuring the Generic Penalty Box
 
-Every data-facing part of the Generic Penalty Box, including parameter IDs, element properties, card fields, detail panels, grouping rules, branding, and real-time settings, is declared in a single *config.json* file. Repointing the wall at a new protocol is a configuration change, not a code change.
+Every data-facing part of the Generic Penalty Box, including parameter IDs, element properties, card fields, detail panels, grouping rules, branding, and real-time settings, is declared in a single *config.json* file. To have the wall show information for a different connector, all you need is a configuration change, not a code change.
+
+Below you can find an overview of the different settings available in *config.json*.
 
 ## configVersion
 
 Stamps the schema *config.json* was written against.
 
+This key is required. The schema at the time of the initial release of the app is version `1`. If a future release changes the schema, this is the key that lets the app tell you plainly that your file is written using a different version, instead of failing with unrelated "missing key" errors.
+
+Example:
+
 ```json
 "configVersion": 1
 ```
 
-This key is required. The current schema is version `1`. If a future release changes the schema again, this is the key that lets the app tell you plainly that your file is written against an old (or new) version, instead of failing with a wall of unrelated "missing key" errors.
-
 ## Branding
+
+Allows you to customize the app to show specific branding.
+
+Example:
 
 ```json
 "branding": {
@@ -29,14 +37,16 @@ This key is required. The current schema is version `1`. If a future release cha
 
 | Key | Type | Description |
 |-----|------|-------------|
-| `title` | string | Shown in the header and set as the browser tab title. |
-| `subtitle` | string | Secondary line next to the title. |
-| `logoUrl` | string | Path to the logo image, relative to the app folder. |
-| `emptyStateTitle` | string | Plural noun shown in the all-clear message, for example "All network devices are operating normally." |
+| `title` | string | The name of the app shown in the header and set as the browser tab title. |
+| `subtitle` | string | The secondary line shown next to the title in the app header. |
+| `logoUrl` | string | The path to the logo image, relative to the app folder. |
+| `emptyStateTitle` | string | The plural noun shown in the all-clear message. For example, if this is "network devices", the message will show "All network devices are operating normally." |
 
 ## dataSource
 
 Controls how the app fetches its data from DataMiner.
+
+Example:
 
 ```json
 "dataSource": {
@@ -58,6 +68,8 @@ Controls how the app fetches its data from DataMiner.
 
 Maps human-readable config keys to DataMiner parameter IDs for the given protocol. These keys are referenced throughout `cardFields`, `detailPanels`, and `groupingOptions`.
 
+Example:
+
 ```json
 "parameterIds": {
   "deviceStatus":    1,
@@ -73,6 +85,8 @@ Every entry must be a positive integer parameter ID. The automation script reads
 
 Maps config output keys to a DataMiner element custom property name, using the same left-to-right direction as `parameterIds` (config key on the left, DataMiner source on the right).
 
+Example:
+
 ```json
 "elementProperties": {
   "region":   "Region",
@@ -86,6 +100,8 @@ The keys (left-hand side) are what you reference in `cardFields` and `groupingOp
 ## groupingOptions
 
 An array of grouping modes shown in the *Grouping* toolbar dropdown. The user can switch between them at runtime; the last choice is remembered per browser. This key is optional; omit it (or leave it as `[]`) for a flat, ungrouped wall.
+
+Example:
 
 ```json
 "groupingOptions": [
@@ -127,6 +143,8 @@ List order is rank order: the first tier listed is shown first, using the same c
 ## cardFields
 
 Controls which data appears on each alarm card, in what order, and how it is formatted. List order is display order **and** drop order: the first field listed is the first to disappear as cards are progressively hidden while shrinking. Fields marked `"pinned": true` never drop.
+
+Example:
 
 ```json
 "cardFields": [
@@ -172,6 +190,8 @@ The reserved `key` values are namespaced under `alarm.` so that a real parameter
 
 Defines the tabular panels shown in the detail overlay when a card is clicked. Panels are shown in the order listed; each one groups related fields under a heading.
 
+Example:
+
 ```json
 "detailPanels": [
   {
@@ -215,6 +235,8 @@ Each entry in `fields` supports:
 
 Enables WebSocket push updates layered on top of polling. When enabled, alarm counts and parameter values update within seconds without waiting for the next poll cycle.
 
+Example:
+
 ```json
 "realtime": {
   "enabled":        true,
@@ -235,6 +257,8 @@ The *Live*/*Offline* indicator in the header shows the current push state.
 
 Maps severity names to CSS color values, used by the alarm-tinted card fields (`alarmColor: true`) and the battery gauge. This key is optional; omit it entirely to use the built-in theme colors, and only add it if you want to override one or more of them.
 
+Example:
+
 ```json
 "severityPalette": {
   "critical": "var(--sev-critical)",
@@ -249,6 +273,8 @@ The defaults reference CSS custom properties defined in the theme, so dark and l
 ## defaults
 
 Sets what a first-time visitor sees, before they have made any choices in the toolbar. Their choices are remembered per browser afterward.
+
+Example:
 
 ```json
 "defaults": {
@@ -270,6 +296,8 @@ All three keys are optional and only apply once, the first time a browser visits
 
 Controls card sizing and density behavior.
 
+Example:
+
 ```json
 "layout": {
   "minCardPx":         200,
@@ -287,6 +315,8 @@ Controls card sizing and density behavior.
 ## monitoring
 
 When enabled, a *View in Monitoring* button appears in the detail overlay, linking directly to the element in DataMiner Monitoring.
+
+Example:
 
 ```json
 "monitoring": {
