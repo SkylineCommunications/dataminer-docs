@@ -6,7 +6,266 @@ items:
     topicUid: SOL_About
   - name: Standard Solutions
     items:
-    - name: dataminer.MediaOps
+    - name: Cost & Billing
+      topicUid: Cost_Billing_Intro
+      items:
+      - name: Cost & Billing architecture
+        topicUid: Cost_Billing_Architecture
+      - name: Installing Cost & Billing
+        topicUid: Cost_Billing_Installation
+      - name: Integration with other solutions
+        topicUid: Cost_Billing_Integration
+      - name: Accessing the Cost & Billing app
+        topicUid: Cost_Billing_Access
+      - name: Cost & Billing app overview
+        topicUid: Cost_Billing_App_Overview
+      - name: Configuring value units
+        topicUid: Cost_Billing_Configuring_Value_Units
+      - name: Configuring rate cards
+        topicUid: Cost_Billing_Configuring_Rate_Cards
+      - name: Configuring contracts
+        topicUid: Cost_Billing_Configuring_Contracts
+      - name: Managing items and groups
+        topicUid: Cost_Billing_Managing_Items_Groups
+      - name: Managing billable events
+        topicUid: Cost_Billing_Managing_Billable_Events
+    - name: DocumentHub
+      topicUid: DocumentHub
+      items:
+      - name: Installing DocumentHub
+        topicUid: DH_Installation
+      - name: DocumentHub app
+        topicUid: DH_Application
+      - name: DocumentHub DevPack
+        topicUid: DH_Development
+      - name: Tutorials
+        items:
+        - name: Configuring SharePoint as a storage backend
+          topicUid: Tutorial_DH_SharePoint
+        - name: Configuring DOM attachments on a network share
+          topicUid: Tutorial_DH_DOM_NetworkShare
+    - name: EPM
+      topicUid: SolEPM
+      items:
+      - name: EPM D-DOCSIS
+        topicUid: EPM_D-DOCSIS
+        items:
+        - name: EPM D-DOCSIS architecture
+          topicUid: D-DOCSIS_architecture
+        - name: EPM D-DOCSIS components
+          topicUid: D-DOCSIS_components
+        - name: Supported technologies for D-DOCSIS
+          topicUid: D-DOCSIS_supported_technologies
+        - name: EPM D-DOCSIS deployment
+          topicUid: D-DOCSIS_deployment
+        - name: Available parameters in D-DOCSIS
+          items:
+          - name: Network
+            topicUid: D-DOCSIS_parameters_network
+          - name: Market
+            topicUid: D-DOCSIS_parameters_market
+          - name: Hub
+            topicUid: D-DOCSIS_parameters_hub
+          - name: CCAP Core
+            topicUid: D-DOCSIS_parameters_ccap_core
+          - name: RPD
+            topicUid: D-DOCSIS_parameters_rpd
+          - name: CM
+            topicUid: D-DOCSIS_parameters_cm
+          - name: DPIC
+            topicUid: D-DOCSIS_parameters_dpic
+          - name: DPIC Interface
+            topicUid: D-DOCSIS_parameters_dpic_interface
+          - name: US Controller
+            topicUid: D-DOCSIS_parameters_us_controller
+          - name: DS Controller
+            topicUid: D-DOCSIS_parameters_ds_controller
+          - name: Fiber Node
+            topicUid: D-DOCSIS_parameters_fiber_node
+          - name: Node Segment
+            topicUid: D-DOCSIS_parameters_node_segment
+          - name: Service Group
+            topicUid: D-DOCSIS_parameters_service_group
+          - name: DS Service Group
+            topicUid: D-DOCSIS_parameters_ds_service_group
+          - name: US Service Group
+            topicUid: D-DOCSIS_parameters_us_service_group
+          - name: Core Leaf
+            topicUid: D-DOCSIS_parameters_core_leaf
+          - name: Spine
+            topicUid: D-DOCSIS_parameters_spine
+          - name: Node Leaf
+            topicUid: D-DOCSIS_parameters_node_leaf
+          - name: CIN Interface
+            topicUid: D-DOCSIS_parameters_cin_interface
+          - name: Manufacturer
+            topicUid: D-DOCSIS_parameters_manufacturer
+      #xPON TOC
+      - name: EPM xPON
+        topicUid: EPM_xPON
+        items:
+        - name: EPM xPON architecture
+          topicUid: xPON_architecture
+        - name: EPM xPON components
+          topicUid: xPON_components
+          items:
+          - name: EPM xPON supported technologies
+            topicUid: xPON_supported_technologies
+          - name: Standard EPM xPON ONT JSON definition
+            topicUid: xPON_ONT_Json_definition
+        - name: EPM xPON deployment
+          topicUid: xPON_deployment
+        - name: Creating a new xPON OLT
+          topicUid: EPM_xPON_Create_OLT
+        - name: Available parameters in EPM xPON
+          topicUid: xPON_KPI
+          items:
+          - name: EPM xPON parameter thresholds
+            topicUid: xPON_parameters_thresholds
+          - name: EPM xPON ONT parameters
+            topicUid: xPON_ONT
+      #xPON TOC END
+      - name: EPM Integrated DOCSIS
+        topicUid: EPM_I-DOCSIS
+        items:
+        - name: EPM Integrated DOCSIS architecture
+          topicUid: I-DOCSIS_architecture
+        - name: EPM Integrated DOCSIS components
+          topicUid: I-DOCSIS_components
+        - name: Supported technologies for Integrated DOCSIS
+          topicUid: I-DOCSIS_supported_technologies
+        - name: EPM Integrated DOCSIS deployment
+          topicUid: I-DOCSIS_deployment
+        - name: EPM Integrated DOCSIS maps deployment
+          topicUid: I-DOCSIS_maps_deployment
+          items:
+          - name: Systems with one backend element
+            topicUid: I-DOCSIS_maps_deployment_one_backend
+          - name: Systems with multiple backend elements
+            topicUid: I-DOCSIS_maps_deployment_multiple_backends
+        - name: EPM Integrated DOCSIS GQI integration
+          topicUid: I-DOCSIS_GQI_Integration
+        - name: EPM Integrated DOCSIS passives integration
+          topicUid: I-DOCSIS_passives_integration
+        - name: EPM Integrated DOCSIS upgrade
+          topicUid: I-DOCSIS_upgrade
+        - name: Creating a new CCAP/CM pair
+          topicUid: I-DOCSIS_Create_CCAP_CM_pair
+        - name: Deleting a CCAP/CM pair
+          topicUid: I-DOCSIS_Delete_CCAP_CM_pair
+        - name: Available parameters in Integrated DOCSIS
+          topicUid: I-DOCSIS_parameters
+          items:
+          - name: Node Segment
+            topicUid: I-DOCSIS_parameters_node_segment
+          - name: CM DS QAM CH
+            topicUid: I-DOCSIS_parameters_cm_ds_qam_ch
+          - name: DS QAM CH
+            topicUid: I-DOCSIS_parameters_ds_qam_ch
+          - name: CM US QAM CH
+            topicUid: I-DOCSIS_parameters_cm_us_qam_ch
+          - name: US QAM CH
+            topicUid: I-DOCSIS_parameters_us_qam_ch
+          - name: DS OFDM CH
+            topicUid: I-DOCSIS_parameters_ds_ofdm_ch
+          - name: US OFDMA CH
+            topicUid: I-DOCSIS_parameters_us_ofdma_ch
+          - name: Cable Modem
+            topicUid: I-DOCSIS_parameters_cable_modem
+          - name: Thresholds
+            topicUid: I-DOCSIS_parameters_thresholds
+          - name: PTP
+            topicUid: I-DOCSIS_parameters_ptp
+      - name: EPM VSAT
+        topicUid: EPM_VSAT
+        items:
+        - name: EPM VSAT architecture
+          topicUid: VSAT_architecture
+        - name: EPM VSAT components
+          topicUid: VSAT_components
+        - name: EPM VSAT deployment
+          topicUid: VSAT_deployment
+        - name: EPM VSAT topology
+          topicUid: VSAT_EPM_Topology
+        - name: EPM VSAT metrics
+          topicUid: VSAT_metrics
+        - name: Available parameters in VSAT
+          topicUid: VSAT_parameters
+      - name: EPM Availability
+        topicUid: Availability_Overview
+        items:
+        - name: Deploying the EPM Availability Solution
+          topicUid: Availability_deployment
+        - name: Using the EPM Availability Solution
+          topicUid: Availability_Using
+        - name: Available parameters in Availability
+          topicUid: Availability_parameters
+    - name: InfraOps
+      topicUid: InfraOps
+      items:
+      - name: Installing InfraOps
+        topicUid: IO_Installation
+      - name: Facility Manager
+        topicUid: Facility_Manager
+        items:
+        - name: Facilities
+          topicUid: Facilities_Page
+        - name: Rooms
+          topicUid: Rooms_Page
+        - name: Racks
+          topicUid: Racks_Page
+        - name: Room Designer
+          topicUid: Room_Designer
+      - name: Asset Manager
+        topicUid: Asset_Manager
+        items:
+        - name: Asset Designer
+          topicUid: Asset_Designer
+          items:
+          - name: Configuring device types
+            topicUid: AM_Configuring_device_types
+          - name: Configuring cable types
+            topicUid: AM_Configuring_cable_types
+          - name: Configuring port types
+            topicUid: AM_Configuring_port_types
+        - name: Managed Assets
+          topicUid: Managed_Assets
+          items:
+          - name: Configuring the asset hierarchy
+            topicUid: Asset_Hierarchy
+          - name: Configuring asset connections
+            topicUid: Configuring_asset_connections
+          - name: Configuring the asset location
+            topicUid: Configuring_asset_location
+          - name: Asset lifecycle
+            topicUid: Asset_Lifecycle
+        - name: Connections
+          topicUid: AssetManager_Connections
+        - name: Rack View
+          topicUid: Rack_View
+        - name: Row Viewer
+          topicUid: Row_Viewer
+        - name: Rack Comparer
+          topicUid: Rack_Comparer
+        - name: App settings
+          topicUid: App_Settings
+      - name: Plan and Build
+        topicUid: Plan_And_Build
+        items:
+        - name: Jobs List
+          topicUid: Jobs_Page
+      - name: Web File Manager
+        topicUid: Web_File_Manager
+    - name: IP Network Explorer
+      topicUid: IpNetworkExplorer
+      items:
+      - name: Getting started with IP Network Explorer
+        topicUid: IpNetworkExplorer_getting_started
+      - name: IP Network Explorer UI overview
+        topicUid: IpNetworkExplorer_UI_overview
+      - name: Supported devices and protocols
+        topicUid: IpNetworkExplorer_Supported_Devices_And_Protocols
+    - name: MediaOps
       topicUid: MediaOps
       items:
       - name: Plan
@@ -56,6 +315,8 @@ items:
               topicUid: Overview_MediaOps_Validation
             - name: Filtering resource pools by category
               topicUid: SCH_Filter_Pools
+        - name: Scheduling configuration
+          topicUid: MO_Scheduling_Configuration
         - name: Tutorials
           items: 
           - name: Configuring resources and resource pools
@@ -119,66 +380,10 @@ items:
               topicUid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents
             - name: Creating orchestration scripts
               topicUid: Tutorial_MediaOpsLive_CreateOrchestrationScripts
-    - name: dataminer.InfraOps
-      topicUid: InfraOps
-      items:
-      - name: Installing InfraOps
-        topicUid: IO_Installation
-      - name: Facility Manager
-        topicUid: Facility_Manager
-        items:
-        - name: Facilities
-          topicUid: Facilities_Page
-        - name: Rooms
-          topicUid: Rooms_Page
-        - name: Racks
-          topicUid: Racks_Page
-        - name: Room Designer
-          topicUid: Room_Designer
-      - name: Asset Manager
-        topicUid: Asset_Manager
-        items:
-        - name: Asset Designer
-          topicUid: Asset_Designer
-          items:
-          - name: Configuring device types
-            topicUid: AM_Configuring_device_types
-          - name: Configuring cable types
-            topicUid: AM_Configuring_cable_types
-          - name: Configuring port types
-            topicUid: AM_Configuring_port_types
-        - name: Managed Assets
-          topicUid: Managed_Assets
-          items:
-          - name: Configuring the asset hierarchy
-            topicUid: Asset_Hierarchy
-          - name: Configuring asset connections
-            topicUid: Configuring_asset_connections
-          - name: Configuring the asset location
-            topicUid: Configuring_asset_location
-          - name: Asset lifecycle
-            topicUid: Asset_Lifecycle
-        - name: Connections
-          topicUid: AssetManager_Connections
-        - name: Rack View
-          topicUid: Rack_View
-        - name: Row Viewer
-          topicUid: Row_Viewer
-        - name: Rack Comparer
-          topicUid: Rack_Comparer
-        - name: App settings
-          topicUid: App_Settings
-      - name: Plan and Build
-        topicUid: Plan_And_Build
-        items:
-        - name: Jobs List
-          topicUid: Jobs_Page
-      - name: Web File Manager
-        topicUid: Web_File_Manager
-    - name: DataMiner PTP
+    - name: PTP
       topicUid: SolPTP
       items:
-      - name: Installing the DataMiner PTP app
+      - name: Installing the PTP app
         topicUid: Installing_the_DataMiner_PTP_app
       - name: Types of PTP devices
         topicUid: Types_of_PTP_devices
@@ -186,189 +391,71 @@ items:
         topicUid: Overview_of_the_PTP_LCA_UI
       - name: PTP app in Cube
         topicUid: Overview_of_the_PTP_app_in_Cube_UI
-    - name: DataMiner EPM
-      topicUid: SolEPM
+    - name: SatOps
+      topicUid: SatOps
       items:
-      - name: DataMiner EPM D-DOCSIS
-        topicUid: EPM_D-DOCSIS
+      - name: Installing SatOps
+        topicUid: SatOps_Installation
+      - name: Satellite Inventory
+        topicUid: Satellite_Inventory
         items:
-        - name: EPM D-DOCSIS architecture
-          topicUid: D-DOCSIS_architecture
-        - name: EPM D-DOCSIS components
-          topicUid: D-DOCSIS_components
-        - name: Supported technologies for D-DOCSIS
-          topicUid: D-DOCSIS_supported_technologies
-        - name: EPM D-DOCSIS deployment
-          topicUid: D-DOCSIS_deployment
-        - name: Available parameters in D-DOCSIS
+        - name: Managing satellites
+          topicUid: SI_Managing_Satellites
+        - name: Managing beams
+          topicUid: SI_Managing_Beams
+        - name: Managing transponders
           items:
-          - name: Network
-            topicUid: D-DOCSIS_parameters_network
-          - name: Market
-            topicUid: D-DOCSIS_parameters_market
-          - name: Hub
-            topicUid: D-DOCSIS_parameters_hub
-          - name: CCAP Core
-            topicUid: D-DOCSIS_parameters_ccap_core
-          - name: RPD
-            topicUid: D-DOCSIS_parameters_rpd
-          - name: CM
-            topicUid: D-DOCSIS_parameters_cm
-          - name: DPIC
-            topicUid: D-DOCSIS_parameters_dpic
-          - name: DPIC Interface
-            topicUid: D-DOCSIS_parameters_dpic_interface
-          - name: US Controller
-            topicUid: D-DOCSIS_parameters_us_controller
-          - name: DS Controller
-            topicUid: D-DOCSIS_parameters_ds_controller
-          - name: Fiber Node
-            topicUid: D-DOCSIS_parameters_fiber_node
-          - name: Node Segment
-            topicUid: D-DOCSIS_parameters_node_segment
-          - name: Service Group
-            topicUid: D-DOCSIS_parameters_service_group
-          - name: DS Service Group
-            topicUid: D-DOCSIS_parameters_ds_service_group
-          - name: US Service Group
-            topicUid: D-DOCSIS_parameters_us_service_group
-          - name: Core Leaf
-            topicUid: D-DOCSIS_parameters_core_leaf
-          - name: Spine
-            topicUid: D-DOCSIS_parameters_spine
-          - name: Node Leaf
-            topicUid: D-DOCSIS_parameters_node_leaf
-          - name: CIN Interface
-            topicUid: D-DOCSIS_parameters_cin_interface
-          - name: Manufacturer
-            topicUid: D-DOCSIS_parameters_manufacturer
-      #xPON TOC
-      - name: DataMiner EPM xPON
-        topicUid: EPM_xPON
+            - name: Adding and editing transponders
+              topicUid: SI_Adding_Editing_Transponders
+            - name: Transponder plans and slots
+              topicUid: SI_Transponder_Plans
+      - name: Satellite Scheduling
+        topicUid: Satellite_Scheduling
         items:
-        - name: EPM xPON architecture
-          topicUid: xPON_architecture
-        - name: EPM xPON components
-          topicUid: xPON_components
-          items:
-          - name: EPM xPON supported technologies
-            topicUid: xPON_supported_technologies
-          - name: Standard EPM xPON ONT JSON definition
-            topicUid: xPON_ONT_Json_definition
-        - name: EPM xPON deployment
-          topicUid: xPON_deployment
-        - name: Available parameters in EPM xPON
-          topicUid: xPON_KPI
-          items:
-          - name: EPM xPON parameter thresholds
-            topicUid: xPON_parameters_thresholds
-          - name: EPM xPON ONT parameters
-            topicUid: xPON_ONT
-      #xPON TOC END
-      - name: DataMiner EPM Integrated DOCSIS
-        topicUid: EPM_I-DOCSIS
-        items:
-        - name: EPM Integrated DOCSIS architecture
-          topicUid: I-DOCSIS_architecture
-        - name: EPM Integrated DOCSIS components
-          topicUid: I-DOCSIS_components
-        - name: Supported technologies for Integrated DOCSIS
-          topicUid: I-DOCSIS_supported_technologies
-        - name: EPM Integrated DOCSIS deployment
-          topicUid: I-DOCSIS_deployment
-        - name: EPM Integrated DOCSIS maps deployment
-          topicUid: I-DOCSIS_maps_deployment
-          items:
-          - name: Systems with one back-end element
-            topicUid: I-DOCSIS_maps_deployment_one_backend
-          - name: Systems with multiple back-end elements
-            topicUid: I-DOCSIS_maps_deployment_multiple_backends
-        - name: EPM Integrated DOCSIS GQI integration
-          topicUid: I-DOCSIS_GQI_Integration
-        - name: EPM Integrated DOCSIS passives integration
-          topicUid: I-DOCSIS_passives_integration
-        - name: EPM Integrated DOCSIS upgrade
-          topicUid: I-DOCSIS_upgrade
-        - name: Creating a new CCAP/CM pair
-          topicUid: I-DOCSIS_Create_CCAP_CM_pair
-        - name: Deleting a CCAP/CM pair
-          topicUid: I-DOCSIS_Delete_CCAP_CM_pair
-        - name: Available parameters in Integrated DOCSIS
-          topicUid: I-DOCSIS_parameters
-          items:
-          - name: Node Segment
-            topicUid: I-DOCSIS_parameters_node_segment
-          - name: CM DS QAM CH
-            topicUid: I-DOCSIS_parameters_cm_ds_qam_ch
-          - name: DS QAM CH
-            topicUid: I-DOCSIS_parameters_ds_qam_ch
-          - name: CM US QAM CH
-            topicUid: I-DOCSIS_parameters_cm_us_qam_ch
-          - name: US QAM CH
-            topicUid: I-DOCSIS_parameters_us_qam_ch
-          - name: DS OFDM CH
-            topicUid: I-DOCSIS_parameters_ds_ofdm_ch
-          - name: US OFDMA CH
-            topicUid: I-DOCSIS_parameters_us_ofdma_ch
-          - name: Cable Modem
-            topicUid: I-DOCSIS_parameters_cable_modem
-          - name: Thresholds
-            topicUid: I-DOCSIS_parameters_thresholds
-          - name: PTP
-            topicUid: I-DOCSIS_parameters_ptp
-      - name: DataMiner EPM VSAT
-        topicUid: EPM_VSAT
-        items:
-        - name: EPM VSAT architecture
-          topicUid: VSAT_architecture
-        - name: EPM VSAT components
-          topicUid: VSAT_components
-        - name: EPM VSAT deployment
-          topicUid: VSAT_deployment
-        - name: EPM VSAT topology
-          topicUid: VSAT_EPM_Topology
-        - name: EPM VSAT metrics
-          topicUid: VSAT_metrics
-        - name: Available parameters in VSAT
-          topicUid: VSAT_parameters
-      - name: DataMiner EPM Availability
-        topicUid: Availability_Overview
-        items:
-        - name: Deploying the DataMiner EPM Availability Solution
-          topicUid: Availability_deployment
-        - name: Using the EPM Availability Solution
-          topicUid: Availability_Using
-        - name: Available parameters in Availability
-          topicUid: Availability_parameters
-    - name: META Whatsapp Messaging Solution
-      topicUid: META_WhatsApp_Messaging
+        - name: Satellite Scheduling UI
+          topicUid: SS_UI
+        - name: Managing transponder bookings
+          topicUid: SS_Managing_Bookings
+    - name: Ticketing
+      topicUid: Ticketing
       items:
-      - name: Installing the META WhatsApp Messaging Solution
-        topicUid: META_WhatsApp_Messaging_Installation
-      - name: Using the META WhatsApp Messaging Solution
-        topicUid: Using_META_WhatsApp_Messaging
-    - name: DataMiner Ping Monitoring
-      topicUid: PingMonitoring
-      items:
-      - name: Installing the Ping Monitoring tool
-        topicUid: Installing_Ping_Monitoring
-      - name: Accessing the Ping Monitoring tool
-        topicUid: Accessing_Ping_Monitoring
-      - name: Ping Monitoring UI overview
-        topicUid: Ping_Monitoring_UI
-      - name: Managing groups and destinations
-        topicUid: Ping_Monitoring_managing_groups_destinations
-      - name: Getting started tutorial
-        topicUid: Tutorial_Apps_Ping_Monitoring_App
-    - name: IP Network Explorer
-      topicUid: IpNetworkExplorer
-      items:
-      - name: Getting started with IP Network Explorer
-        topicUid: IpNetworkExplorer_getting_started
-      - name: IP Network Explorer UI overview
-        topicUid: IpNetworkExplorer_UI_overview
-      - name: Supported devices and protocols
-        topicUid: IpNetworkExplorer_Supported_Devices_And_Protocols
+      - name: Ticketing architecture
+        topicUid: TicketingArchitecture
+      - name: Ticketing concepts
+        topicUid: TicketingConcepts
+      - name: Installation and setup
+        items:
+        - name: Installing the Ticketing Solution
+          topicUid: TicketingInstallation
+        - name: Mapping users and contacts
+          topicUid: MappingUsersAndContacts
+      - name: Accessing the Ticketing app
+        topicUid: AccessingTicketingApp
+      - name: Ticketing app overview
+        items:
+        - name: Tickets page
+          topicUid: TicketingAppOverviewTicketsPage
+        - name: Ticket Types page
+          topicUid: TicketingAppOverviewTicketTypesPage
+        - name: External Ticketing page
+          topicUid: TicketingAppOverviewExternalTicketingPage
+      - name: Creating tickets
+        topicUid: CreatingTickets
+        items: 
+        - name: Manually creating a ticket in the Ticketing app
+          topicUid: CreatingTicketsManuallyFromApp
+        - name: Manually creating a ticket in DataMiner Cube
+          topicUid: CreatingTicketsFromCube
+        - name: Configuring automatic ticket creation via Correlation
+          topicUid: CreatingTicketsFromCorrelation
+      - name: External ticketing system integration
+        topicUid: ExternalTicketingSystemIntegration
+        items:
+        - name: ServiceNow integration
+          topicUid: ServiceNowIntegration
+          items:
+          -  name: ServiceNow integration example
+             topicUid: ServiceNowIntegrationExample
   - name: Product Solutions
     items:
     - name: EVS Cerebrum application
@@ -525,3 +612,25 @@ items:
           topicUid: Monitoring_Processed_Traps
       - name: Getting started tutorial
         topicUid: Smart_Trap_Processor_Tutorial
+    - name: META Whatsapp Messaging Solution
+      topicUid: META_WhatsApp_Messaging
+      items:
+      - name: Installing the META WhatsApp Messaging Solution
+        topicUid: META_WhatsApp_Messaging_Installation
+      - name: Using the META WhatsApp Messaging Solution
+        topicUid: Using_META_WhatsApp_Messaging
+  - name: Learning & Sample
+    items:
+    - name: Ping Monitoring
+      topicUid: PingMonitoring
+      items:
+      - name: Installing the Ping Monitoring tool
+        topicUid: Installing_Ping_Monitoring
+      - name: Accessing the Ping Monitoring tool
+        topicUid: Accessing_Ping_Monitoring
+      - name: Ping Monitoring UI overview
+        topicUid: Ping_Monitoring_UI
+      - name: Managing groups and destinations
+        topicUid: Ping_Monitoring_managing_groups_destinations
+      - name: Getting started tutorial
+        topicUid: Tutorial_Apps_Ping_Monitoring_App

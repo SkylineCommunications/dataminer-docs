@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.9
 ---
 
-# General Feature Release 10.6.9 – Preview
+# General Feature Release 10.6.9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -29,10 +29,6 @@ Before you upgrade to this DataMiner version:
   For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -144,13 +140,19 @@ Up to now, the extension method that allowed `FilterElement<T>` to be passed was
 
 Equivalent extension methods have now been added in the `Skyline.DataMiner.Net.Apps.ManagerStore.Select` namespace, which also contains `SelectedFields<T>`. The old extension methods have been converted to regular static methods so that already compiled code remains compatible with newer `SLNetTypes` versions.
 
-#### DxMs upgraded [ID 45944]
+#### DxMs upgraded [ID 45944] [ID 46119] [ID 46159]
 
-<!-- RN 45944: MR 10.7.0 - FR 10.6.9 -->
+<!-- MR 10.7.0 - FR 10.6.9 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
+- DataMiner ArtifactDeployer 1.10.0
+- DataMiner CloudGateway 3.3.2
+- DataMiner CoreGateway 2.14.17
 - DataMiner DataAPI 1.4.6
+- DataMiner FieldControl 2.12.2
+- DataMiner Orchestrator 1.11.0
+- DataMiner SupportAssistant 1.9.3
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 

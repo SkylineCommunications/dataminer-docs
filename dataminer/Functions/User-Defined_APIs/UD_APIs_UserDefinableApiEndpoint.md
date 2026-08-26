@@ -1,5 +1,6 @@
 ---
 uid: UD_APIs_UserDefinableApiEndpoint
+description: "Learn how the DataMiner UserDefinableApiEndpoint DxM routes API requests, maintains IIS rewrite rules, and reports routing health."
 ---
 
 # DataMiner UserDefinableApiEndpoint DxM
@@ -7,7 +8,7 @@ uid: UD_APIs_UserDefinableApiEndpoint
 *DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
 
 > [!CAUTION]
-> There is currently no rate limiting or protection in place to prevent malicious users from spamming the endpoint. We recommend only exposing the DMA using a firewall or network protection that prevents unknown IP addresses from sending requests.
+> Although [rate limiting](xref:UD_APIs_Objects_ApiToken#ratelimit) is available, it is not a complete protection against unwanted traffic. You should also protect the endpoint with a firewall or other network security measure that allows requests only from trusted IP addresses or networks.
 
 ## Installing the DxM
 
@@ -45,7 +46,7 @@ Below you can find a list of all the *UserDefinableApiEndpoint* DxM versions and
 | 3.6.0       | .NET 8                | 10.4.0+                            | 10.6.1                           |
 | 3.7.0       | .NET 8                | 10.4.0+                            | 10.6.7                           |
 | 3.8.0       | .NET 8                | 10.4.0+                            | 10.6.8                           |
-| 3.9.0       | .NET 10               | 10.4.0+                            | 10.6.10                          |
+| 3.10.0      | .NET 10               | 10.4.0+                            | 10.6.10                          |
 
 > [!NOTE]
 >
@@ -84,6 +85,7 @@ The default configuration file can be found in the following location: `%program
 In this file, add the setting or settings that you want to override, with your custom value. The following main blocks of settings are available:
 
 - [Kestrel](#kestrel)
+- [IIS rewrite rule](#iis-rewrite-rule)
 - [Serilog](#serilog)
 - [UserDefinableAPIs](#userdefinableapis)
 
@@ -120,7 +122,78 @@ For example, this is the default configuration:
 }
 ```
 
-IIS also has a rewrite rule (Reroute User Definable APIs) that forwards API requests to the port used by *UserDefinableApiEndpoint* (5002). **When you specify a custom port in *appsettings.custom.json*, you will also have to update this rule**:
+#### Limits
+
+It is possible to restrict the number of open connections. By default, the DxM will allow 100 concurrent connections, but you can customize this number here.
+
+For example, this is the default configuration:
+
+```json
+{
+  "Kestrel": {
+    "Limits": {
+      "MaxConcurrentConnections": 100
+    }
+  }
+}
+```
+
+### IIS rewrite rule
+
+> [!NOTE]
+> The service-side rewrite rule checks described in this section are available from DataMiner 10.6.10/10.7.0 onwards<!-- RN46143 -->. In earlier versions, the installer creates and validates the rule during installation or upgrade. If you change the Kestrel port on an earlier version, update the rewrite rule manually as described in [Configuring the rewrite rule for older versions](#configuring-the-rewrite-rule-for-older-versions).
+
+The *UserDefinableApiEndpoint* service owns the IIS rewrite rule named `Reroute User Definable APIs`. The rule is created when the service starts, and it is checked at a configurable interval while the service is running. If the rule is missing, disabled, duplicated, or altered, the service restores a single enabled rule with the expected configuration.
+
+The managed rule matches requests under `/api/custom` and forwards them to the local HTTP port configured for Kestrel. When you change the Kestrel HTTP port in *appsettings.custom.json*, restart the service. The service then updates the rewrite target automatically, so you do not need to edit the rule manually in IIS.
+
+The service repairs the rule when any of the following applies:
+
+- The rule is missing, disabled, or duplicated.
+- Request matching has been changed or removed.
+- Processing, conditions, or the rewrite action have been changed in a way that can affect routing.
+- The rewrite target points to the wrong local port or URL.
+
+The service also checks the `web.config` file in the API folder at `C:\Skyline DataMiner\Webpages\API\Web.config` by default. It removes a `<remove>` entry or a `<rule>` entry with the exact name `Reroute User Definable APIs` when the entry suppresses or redefines the inherited rule. Other rewrite rules and configuration remain in place. To skip this folder-level check, set `ApiWebConfigPath` to an empty string.
+
+The following settings are available under `IisRewriteRule`:
+
+| Setting | Default value | Description |
+|--|--|--|
+| `SiteName` | `Default Web Site` | The IIS site that contains the managed rewrite rule. |
+| `ApiWebConfigPath` | `C:\Skyline DataMiner\Webpages\API\Web.config` | The `web.config` file in the API folder to check for entries that suppress or redefine the managed rule. |
+| `CheckIntervalInSeconds` | `900` | The interval, in seconds, between rewrite rule checks. |
+| `DisableChecks` | `false` | Disables rewrite rule validation and repair when set to `true`. |
+
+For example:
+
+```json
+{
+  "IisRewriteRule": {
+    "SiteName": "Default Web Site",
+    "ApiWebConfigPath": "C:\\Skyline DataMiner\\Webpages\\API\\Web.config",
+    "CheckIntervalInSeconds": 900,
+    "DisableChecks": false
+  }
+}
+```
+
+The service reports the current rewrite rule state in the logging and publishes it in the DxM status.
+
+| Status | Description |
+|--|--|
+| `Unknown` | The service has not performed a check yet. |
+| `Healthy` | The latest check succeeded, either without changes or after a repair. |
+| `Degraded` | The service could not check or repair the rule, for example because the IIS site is missing, the configuration is invalid, or the service account does not have the required access. |
+| `Disabled` | Rewrite rule checks are disabled through `DisableChecks`. |
+
+The service logs an informational message when the rule is first confirmed as healthy or when a problem is repaired. It logs an error when a check or repair fails. Repeated successful checks or repeated instances of the same failure use debug-level logging.
+
+Rewrite rule creation and repair are handled by the running endpoint service instead of an installer custom action. The installer removes the managed rule only during a real uninstall and leaves it in place during a major upgrade so the service can continue to maintain it.
+
+#### Configuring the rewrite rule for older versions
+
+For DataMiner versions prior to 10.6.10/10.7.0, the installer does not maintain the rewrite rule while the service is running. If you specify a custom Kestrel port in *appsettings.custom.json*, update the rewrite target manually:
 
 1. Open `Internet Information Services (IIS) Manager`.
 
@@ -139,22 +212,6 @@ IIS also has a rewrite rule (Reroute User Definable APIs) that forwards API requ
    ![IIS Manager 3](~/dataminer/images/UDAPIS_IIS_RewriteRule_3.jpg)
 
 1. Click *Apply*.
-
-#### Limits
-
-It is possible to restrict the number of open connections. By default, the DxM will allow 100 concurrent connections, but you can customize this number here.
-
-For example, this is the default configuration:
-
-```json
-{
-  "Kestrel": {
-    "Limits": {
-      "MaxConcurrentConnections": 100
-    }
-  }
-}
-```
 
 ### Serilog
 

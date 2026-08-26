@@ -65,6 +65,17 @@ Key enhancements include:
 
 <!-- See also Cube RNs [ID 45704] [ID 45997] -->
 
+#### SLNet will now listen for connection ticket requests over NATS [ID 46057]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+From now on, SLNet will listen on the `SLNet.Authentication.Ticket` NATS topic to process connection tickets and return the username associated with the ticket.
+
+This allows APIGateway to authenticate requests via the NATS-based connection flow.
+
+> [!NOTE]
+> Tickets can be requested with `connection.RequestCloneTicket()`. This feature does not currently support impersonation with `TicketType.AuthenticateAs`.
+
 #### Automation: Credentials can now be added within the XML code of an automation script [ID 44282]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -114,16 +125,6 @@ The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 Because of a number of enhancements, overall performance has increased when recalculating security keys.
-
-#### DxM upgraded [ID 46124]
-
-<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
-
-The following DataMiner Extension Module (DxM), which is included in the DataMiner upgrade package, has been upgraded to the indicated version:
-
-- DataMiner SupportAssistant 1.9.3
-
-For detailed information about the changes included in this version, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### DataMiner Taskbar Utility: Event colors now align with DataMiner Cube [ID 46130]
 
@@ -219,3 +220,23 @@ This issue has now been fixed. The test now checks logical CPU cores.
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 When a correlation rule with the *AutoClear* option disabled generated an alarm for base alarms on a linked DVE table, DataMiner could generate invalid cleared alarms if the linked row disappeared and reappeared or was unlinked and relinked.
+
+#### gRPC connections could fail when the User-Agent value was invalid [ID 46192]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.10 -->
+
+Custom applications using the SLNet gRPC client could fail to establish a connection when their product version contained characters that led to an invalid User-Agent value during the APIGateway health check.
+
+As a result, the connection could incorrectly be reported as `APIGateway is unavailable`.
+
+From now on, invalid User-Agent values are skipped, so the health check can continue and the gRPC connection can be established correctly.
+
+#### ManagerStore: Fixed limit logic when adding objects from the DatabaseCacheLayer [ID 46205]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When DOM reads were executed, the result from the database could be enriched with objects that were still present in the `DatabaseCacheLayer`. This cache keeps recently written objects available before they are fully indexed in the database, but in some cases it did not correctly keep the configured query limit in mind when paged reads were carried out.
+
+This could cause more objects than expected to be returned in the result, especially when data was still available in the cache for a later page. The limit is now reapplied correctly when objects are added from the `DatabaseCacheLayer`, and the number of objects already returned on previous pages is tracked correctly.
+
+This fixes the issue for paged DOM reads with a configured limit, ensuring the returned result always respects the requested limit even when cached objects are added to the response.

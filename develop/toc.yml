@@ -1052,6 +1052,8 @@ items:
             topicUid: GQI_GQIServiceAttribute
           - name: GQISortDirection
             topicUid: GQI_GQISortDirection
+          - name: GQIStaticColumnsAttribute
+            topicUid: GQI_GQIStaticColumnsAttribute
           - name: GQIUserServiceAttribute
             topicUid: GQI_GQIUserServiceAttribute
           - name: GQIWorkerServiceAttribute

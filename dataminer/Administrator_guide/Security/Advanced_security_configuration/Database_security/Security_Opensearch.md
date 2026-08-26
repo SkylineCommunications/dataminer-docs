@@ -14,7 +14,7 @@ For information on how to enable both client-server and inter-node TLS encryptio
 
 ## Upgrading OpenSearch
 
-DataMiner supports both the 1.X and 2.X version range of OpenSearch; however, for new installations, we recommend installing OpenSearch 2.X.
+DataMiner supports both the 2.x and 3.x version range of OpenSearch; however, for new installations, we recommend installing OpenSearch 3.x.
 
 We also recommend that you keep your OpenSearch installation up to date with the latest version within the range you have chosen.
 
@@ -51,6 +51,6 @@ To perform a rolling upgrade, refer to the [rolling upgrade guide](https://docs.
 
 ### Major upgrade
 
-To go from one major release range to another (e.g., 1.X to 2.X), we recommend first upgrading to the latest version in the current range before upgrading to the new range.
+To go from one major release range to another (e.g., 2.x to 3.x), we recommend first upgrading to the latest version in the current range before upgrading to the new range.
 
 It is not possible to use the rolling upgrade strategy for major upgrades, so you will have to perform a [cluster restart upgrade](#cluster-restart-upgrade) for this.
