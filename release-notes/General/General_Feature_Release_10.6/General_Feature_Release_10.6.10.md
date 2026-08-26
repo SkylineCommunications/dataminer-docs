@@ -102,7 +102,13 @@ See the following example:
 > [!NOTE]
 > If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
 
-See also: [Automation: Credentials can now be added to automation scripts [ID 44282]](xref:Cube_Feature_Release_10.6.10#automation-credentials-can-now-be-added-to-automation-scripts-id-44282)
+#### Automation: Scripts can now retrieve credentials from the Credential Library [ID 46229]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Automation scripts can now retrieve secrets from `UserNamePassword` and `Token` credentials in the Credential Library at runtime by using the new `engine.GetCredential()` method.
+
+To use this functionality, [define the credentials in the script XML](#automation-credentials-can-now-be-added-within-the-xml-code-of-an-automation-script-id-44282). You can then retrieve them by credential ID or name from the script code.
 
 ## Changes
 
