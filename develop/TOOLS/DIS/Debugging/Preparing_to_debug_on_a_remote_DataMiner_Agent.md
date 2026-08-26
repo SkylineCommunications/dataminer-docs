@@ -12,7 +12,7 @@ Proceed as follows if you want to debug a QAction or an automation script locate
 
      `C:\Program Files\Microsoft Visual Studio\<version>\Professional\Common7\IDE\Remote Debugger\x86`
 
-     Example: `C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\Remote Debugger\x86`
+     Example: `C:\Program Files\Microsoft Visual Studio\18\Professional\Common7\IDE\Remote Debugger\x86`
 
      > [!NOTE]
      >

@@ -21,6 +21,8 @@ sequenceDiagram
     participant VS as Visual Studio (DIS)
     participant Agent as DataMiner Agent
 
+    rect rgb(230, 240, 255)
+    Note left of User: Prepare
     User->>VS: 1. Open protocol solution (or XML file)
     User->>VS: 2. Edit C#35; (only if not working in protocol solution)
     User->>VS: 3. (Optional) Build QAction project(s)
@@ -32,11 +34,20 @@ sequenceDiagram
     VS->>Agent: Upload QAction DLL + .pdb
     VS->>Agent: Inject QActions
     VS->>Agent: Attach debugger to SLScripting
+    end
+
+    rect rgb(230, 255, 230)
+    Note left of User: Debug
     Note over User,Agent: Debugger attached - set breakpoints,<br/>trigger QAction, step through code
+    end
+
+    rect rgb(255, 235, 230)
+    Note left of User: Stop
     User->>VS: 7. Click "Detach"
     VS->>Agent: Attach debugger from SLScripting
     User->>VS: 8. Click "Eject"
     VS->>Agent: Eject injected QAction DLL
+    end
 ```
 
 ## The QAction debugging process
