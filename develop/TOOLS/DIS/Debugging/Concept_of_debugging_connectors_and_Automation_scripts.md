@@ -31,7 +31,7 @@ sequenceDiagram
     User->>VS: 5. Inject QAction project(s) to QAction(s) of element
     User->>VS: 6. Click "Attach"
     VS->>VS: Rebuild selected QAction project(s)
-    VS->>Agent: Upload QAction DLL + .pdb
+    VS->>Agent: Upload QAction DLLs
     VS->>Agent: Inject QActions
     VS->>Agent: Attach debugger to SLScripting
     end
@@ -59,7 +59,7 @@ sequenceDiagram
 | 3. Build the QAction project | (Optional, a rebuild of the selected QActions is triggered when attaching) You build the C# projects. No errors should occur. |
 | 4. Select an element | In the *DIS Inject* tool window, you select an element that uses the protocol you are currently debugging.<br>Result: All QActions in the protocol of that element are listed in the *DIS Inject* window. |
 | 5. Inject the *QAction.dll* | In the *DIS Inject* tool window, you link the QAction project to the corresponding QAction of the element (using the green + icon). |
-| 6. Attach Debugger to SLScripting | In the *DIS Inject* tool window, you click *Attach* to attach the Microsoft Visual Studio Debugger to the DataMiner SLScripting process(es).<br>Result: This will trigger a rebuild of the selected QAction projects, upload the resulting DLL and pdb file to the agent, inject these and finally attach the debugger to the SLScripting process. As soon as the Debugger is attached to the SLScripting process, you can set breakpoints, trigger the QAction manually (or set a parameter or wait for a timer to go off), step through your code, etc. |
+| 6. Attach Debugger to SLScripting | In the *DIS Inject* tool window, you click *Attach* to attach the Microsoft Visual Studio Debugger to the DataMiner SLScripting process(es).<br>Result: This will trigger a rebuild of the selected QAction projects, upload the resulting DLL files to the agent, inject these and finally attach the debugger to the SLScripting process. As soon as the Debugger is attached to the SLScripting process, you can set breakpoints, trigger the QAction manually (or set a parameter or wait for a timer to go off), step through your code, etc. |
 | 7. Detach Debugger from SLScripting | In the *DIS Inject* tool window, you click *Detach* to detach the Microsoft Visual Studio Debugger from the DataMiner SLScripting process(es). |
 | 8. Eject QAction(s) | In the *DIS Inject* tool window, you detach the injected QAction project(s) (using the red cross icon). This will now ensure the regular QAction is executed again instead of the injected one. |
 
