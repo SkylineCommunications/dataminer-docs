@@ -120,6 +120,14 @@ The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to
 
 The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
+#### APIGateway: SLNet authentication [ID 46055]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+A new REST endpoint, `/APIGateway/api/authentication/ticket`, can be used to authenticate a session with APIGateway using an SLNet connection ticket. You can then use this session to access DxM endpoints in an authenticated way, with APIGateway acting as a reverse proxy.
+
+This requires [SLNet to listen for connection ticket requests over NATS](#slnet-will-now-listen-for-connection-ticket-requests-over-nats-id-46057).
+
 #### Enhanced performance when recalculating security keys [ID 46077]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
