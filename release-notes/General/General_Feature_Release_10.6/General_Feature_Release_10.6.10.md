@@ -65,6 +65,17 @@ Key enhancements include:
 
 <!-- See also Cube RNs [ID 45704] [ID 45997] -->
 
+#### SLNet will now listen for connection ticket requests over NATS [ID 46057]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+From now on, SLNet will listen on the `SLNet.Authentication.Ticket` NATS topic to process connection tickets and return the username associated with the ticket.
+
+This allows APIGateway to authenticate requests via the NATS-based connection flow.
+
+> [!NOTE]
+> Tickets can be requested with `connection.RequestCloneTicket()`. This feature does not currently support impersonation with `TicketType.AuthenticateAs`.
+
 #### Automation: Credentials can now be added within the XML code of an automation script [ID 44282]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -219,3 +230,13 @@ Custom applications using the SLNet gRPC client could fail to establish a connec
 As a result, the connection could incorrectly be reported as `APIGateway is unavailable`.
 
 From now on, invalid User-Agent values are skipped, so the health check can continue and the gRPC connection can be established correctly.
+
+#### ManagerStore: Fixed limit logic when adding objects from the DatabaseCacheLayer [ID 46205]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When DOM reads were executed, the result from the database could be enriched with objects that were still present in the `DatabaseCacheLayer`. This cache keeps recently written objects available before they are fully indexed in the database, but in some cases it did not correctly keep the configured query limit in mind when paged reads were carried out.
+
+This could cause more objects than expected to be returned in the result, especially when data was still available in the cache for a later page. The limit is now reapplied correctly when objects are added from the `DatabaseCacheLayer`, and the number of objects already returned on previous pages is tracked correctly.
+
+This fixes the issue for paged DOM reads with a configured limit, ensuring the returned result always respects the requested limit even when cached objects are added to the response.
