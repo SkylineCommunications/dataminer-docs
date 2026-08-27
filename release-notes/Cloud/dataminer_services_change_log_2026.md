@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 24 August 2026 - New feature - Catalog - API calls authenticated by organization key
+### 27 August 2026 - New feature - Catalog - API calls authenticated by organization key
 
-It is now possible to update Catalog metadata for a specific version or version range using API calls authenticated by organization key. For detailed API documentation, refer to the [Swagger UI](https://global.dataminer.services/swagger/catalogapi-web/index.html).
+It is now possible to update Catalog metadata for a specific version or version range using two new API calls authenticated by organization key. For detailed API documentation, refer to the [Swagger UI](https://global.dataminer.services/swagger/catalogapi-web/index.html).
 
 ### 27 August 2026 - Enhancement - Admin - DMS API key permissions granularity
 
