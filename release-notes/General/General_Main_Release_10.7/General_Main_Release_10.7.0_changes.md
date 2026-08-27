@@ -690,6 +690,14 @@ The UserDefinableApiEndpoint DxM now owns the IIS rewrite rule that reroutes req
 
 If the rewrite rule is missing, disabled, or no longer matches the expected routing behavior, the DxM will restore it with the correct configuration. This ensures that user-defined API requests keep working even if the IIS configuration has been changed outside the installer.
 
+#### Scheduler: SkipStartedInformationEvent is now returned when retrieving scheduled tasks [ID 46161]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When you retrieve scheduled tasks using a `GetInfoMessage` with type set to "SchedulerTasks", the returned `AutomationScriptInstance` will now include the `SkipStartedInformationEvent` property.
+
+This will allow you to verify whether the property was enabled when the scheduled task was saved.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
