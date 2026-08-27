@@ -286,7 +286,7 @@ TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, SKYLINE MAKES NO REPRESENTATI
 
 This Schedule applies where the Quotation specifies Skyline Communications APAC Pte. Ltd. as the contracting entity.
 
-**S3.1 Skyline Entity** Skyline Communications APAC Pte. Ltd., 39 Hong Kong Street, #02-01, Singapore 059678 (UEN: 201722265W).
+**S3.1 Skyline Entity** Skyline Communications APAC Pte. Ltd., 12 Woodlands Square, #10-69, Woods Square Tower 1, Singapore 737715 (UEN: 201722265W).
 
 **S3.2 Currency** All fees are payable in SGD, unless otherwise specified in the Quotation.
 
