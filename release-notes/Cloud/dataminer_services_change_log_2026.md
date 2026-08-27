@@ -9,6 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 27 August 2026 - Enhancement - Admin - DMS API key permissions granularity
+
+From now on, API keys on DMS level will also have more permission granularity, similar to the organization API keys. All existing DMS API keys will keep working as before with the same permissions they already had. New permissions will not be assigned to existing DMS API keys. See [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
+
+### 27 August 2026 - New feature - Admin - Setting to toggle automatic login for remote access
+
+A new setting has been added in the Admin app that allows toggling automatic login for remote access. Toggling the automatic login off will require users to log in manually instead of using the linked DataMiner account by default. See [Controlling remote access](xref:Controlling_remote_access).
+
+### 27 August 2026 - Fix - Remote access - Logout from web apps not working correctly when using remote access
+
+When you logged out from the web apps while accessing them remotely, the automatic login could interfere and cause you to be logged in again. This issue has now been resolved.
+
 ### 27 August 2026 - New feature - Catalog - Filter and search version history
 
 On the *Versions* tab of a Catalog item, it is now possible to filter and search the version history:
