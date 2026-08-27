@@ -42,7 +42,7 @@ Allows you to customize the app to show specific branding.
 | `title` | string | The name of the app shown in the header and set as the browser tab title. |
 | `subtitle` | string | The secondary line shown next to the title in the app header. |
 | `logoUrl` | string | The path to the logo image, relative to the app folder. |
-| `emptyStateTitle` | string | The plural noun shown in the all-clear message. For example, if this is "network devices", the message will show "All network devices are operating normally." |
+| `emptyStateTitle` | string | The plural noun shown in the all-clear message. For example, if this is `"network devices"`, the message will show "All network devices are operating normally." |
 
 ## dataSource
 
@@ -146,7 +146,7 @@ Each tier object (inside `tiers`) supports the following keys:
 | `tier` | string | Internal identifier for the tier (used in CSS class names). |
 | `label` | string | Header text shown above the group on the wall. |
 
-List order is rank order: the first tier listed is shown first, using the same convention as [cardFields](#cardfields). Inserting a new tier just means placing it where it should rank, not renumbering the rest. Each non-dynamic grouping option must define its own `tiers`; there is no fallback shared between grouping options.
+The list order of the tiers is their rank order: the first tier listed is shown first, using the same convention as [cardFields](#cardfields). Inserting a new tier just means placing it where it should rank, not renumbering the rest. Each non-dynamic grouping option must define its own `tiers`; there is no fallback shared between grouping options.
 
 ## cardFields
 
@@ -315,7 +315,7 @@ Sets what a first-time visitor sees, before they have made any choices in the to
 
 Controls card sizing and density behavior.
 
-Example:
+### Example
 
 ```json
 "layout": {
@@ -325,17 +325,19 @@ Example:
 }
 ```
 
+### Reference
+
 | Key | Type | Description |
 |-----|------|-------------|
-| `minCardPx` | number | Target minimum card width in pixels. The grid fills available space and does not go below this value. |
+| `minCardPx` | number | The target minimum card width in pixels. The grid fills available space and does not go below this value. |
 | `minLegibleCardPx` | number | Below this width, extra fields are hidden to keep the card readable. |
 | `showMoreThreshold` | boolean | When `true`, an indicator on small cards signals that fields have been hidden. |
 
 ## monitoring
 
-When enabled, a *View in Monitoring* button appears in the detail overlay, linking directly to the element in DataMiner Monitoring.
+When enabled, a *View in Monitoring* button is shown in the detail overlay, linking directly to the element in the DataMiner Monitoring app. A small link icon will also be shown on each card. To see what this looks like, refer to [Using the Generic Penalty Box](xref:Generic_Penalty_Box_Usage#external-monitoring-link).
 
-Example:
+### Example
 
 ```json
 "monitoring": {
@@ -344,9 +346,9 @@ Example:
 }
 ```
 
+### Reference
+
 | Key | Type | Description |
 |-----|------|-------------|
-| `enabled` | boolean | Show the monitoring link in the detail overlay. |
+| `enabled` | boolean | Shows the monitoring link in the detail overlay. |
 | `urlTemplate` | string | Custom URL pattern. `{dmaId}` and `{elementId}` are substituted at runtime. Leave empty to use the DataMiner default path. |
-
-When enabled, a small link icon also appears on each card. See [Using the Generic Penalty Box](xref:Generic_Penalty_Box_Usage#external-monitoring-link) for how this looks on the wall.

@@ -6,7 +6,7 @@ uid: Generic_Penalty_Box_Usage
 
 ## Grouping
 
-The *Grouping* dropdown in the toolbar switches between the modes defined in [`groupingOptions`](xref:Generic_Penalty_Box_Configuration#groupingoptions):
+In the upper-right corner of the app UI, you can find the *Grouping* dropdown bx. You can use this to switch between the different modes defined for the app (using the [`groupingOptions`](xref:Generic_Penalty_Box_Configuration#groupingoptions) in the configuration file):
 
 - **Tier-based**: elements are placed into named buckets by matching their value against the configured tiers. Groups appear in the same order the tiers are listed (the first one listed shows first). Elements that match no tier collect in an "Uncategorized" bucket.
 - **Dynamic**: groups form automatically from the distinct values that exist in live data. This is useful for properties like *region* or *location*, where the set of values is not fixed in advance. New values appear as new group headers automatically.
