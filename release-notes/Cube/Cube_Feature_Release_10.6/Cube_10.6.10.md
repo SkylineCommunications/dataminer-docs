@@ -77,6 +77,14 @@ When you hover over the warning icon, a tooltip will explain that the credential
 
 If a spectrum analyzer is configured to work in shared session mode, a shared last session preset is now automatically kept. This means that when a user configures the spectrum analyzer and closes the card, the configuration is saved in a shared preset. When another user opens that spectrum analyzer, the same preset is loaded and all users will see the same configuration.
 
+#### Communication: Remote logging failures are now logged at debug level [ID 46285]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+Up to now, when Cube temporarily lost its connection and remote logging could not be sent, those expected failures were logged as errors.
+
+From now on, these remote logging failures are logged at debug level instead, so error logs can focus on more actionable issues.
+
 ### Fixes
 
 #### Alarm templates: Absolute proactive thresholds showed percentages instead of delta values [ID 46049]
