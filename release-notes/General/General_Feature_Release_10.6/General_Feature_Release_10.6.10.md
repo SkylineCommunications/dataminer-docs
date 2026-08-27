@@ -218,11 +218,10 @@ SLAutomation could deadlock when many subscripts were launched in a short time. 
 #### DataMiner upgrade: Legacy NAS and NATS services and files would not be removed [ID 46094]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
-<!-- Not added to MR 10.7.0 -->
 
-When you upgraded to DataMiner 10.6, up to now, the upgrade could leave behind the legacy NAS and NATS services, the `C:\Skyline DataMiner\NATS` folder, and the `NATSRepair.exe` tool.
+Up to now, a DataMiner upgrade could leave behind the legacy NAS and NATS services as well as the `C:\Skyline DataMiner\NATS` folder.
 
-From now on, a new upgrade action named `CleanupNatsServices` removes these legacy services and files after a DataMiner Agent has been upgraded to a 10.6 version. This ensures that the BrokerGateway-managed NATS solution can be used without the obsolete components.
+From now on, on systems that have already been upgraded successfully to a DataMiner 10.6 version at some point in time, a new upgrade action named `CleanupNatsServices` will make sure these legacy services and that folder are removed. This ensures that the BrokerGateway-managed NATS solution can be used without the obsolete components.
 
 #### SLAutomation could hang during shutdown [ID 46123]
 

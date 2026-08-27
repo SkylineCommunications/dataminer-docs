@@ -661,6 +661,14 @@ When using DOM in scripts, ad hoc data sources, etc., from now on, it will be po
 
 The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
+#### DataMiner upgrade: Legacy NAS and NATS services and files would not be removed [ID 46094]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Up to now, a DataMiner upgrade could leave behind the legacy NAS and NATS services as well as the `C:\Skyline DataMiner\NATS` folder.
+
+From now on, on systems that have already been upgraded successfully to a DataMiner 10.6 version at some point in time, a new upgrade action named `CleanupNatsServices` will make sure these legacy services and that folder are removed. This ensures that the BrokerGateway-managed NATS solution can be used without the obsolete components.
+
 #### DataMiner Taskbar Utility: Event colors now align with DataMiner Cube [ID 46130]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
