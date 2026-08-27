@@ -80,7 +80,7 @@ class Home LightBlue;
 
 - DataMiner fails to start, takes too long to start, or gets stuck at 99% during the startup process.
 
-- [DataMiner Core Module](xref:DataMinerExtensionModules#available-dcms) services are stopped.
+- [DataMiner Core Module](xref:DataMinerCoreModules) services are stopped.
 
 - The server where the DMA is running has recently been rebooted.
 
@@ -96,7 +96,7 @@ Some DataMiner Core Module (DcM) services do not respond quickly enough to the W
 
 1. Sort by name and locate the *DataMiner* services.
 
-1. Start all services identified as DataMiner Core Modules (see [Available DcMs](xref:DataMinerExtensionModules#available-dcms)).
+1. Start all services identified as DataMiner Core Modules (see [Available DcMs](xref:DataMinerCoreModules#available-dcms)).
 
 1. Restart the DataMiner Agent.
 

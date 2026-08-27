@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_hardening_guide
-description: This guide will give you a comprehensive overview to help you make the necessary changes to secure your DataMiner System as much as possible.
+description: "Follow this DataMiner hardening guide to update systems, run BPA security tests, secure communications, and strengthen web and operating system protection."
 keywords: hardening, hardening guide, security
 ---
 

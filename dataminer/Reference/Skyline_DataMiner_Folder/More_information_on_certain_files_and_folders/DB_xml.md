@@ -30,7 +30,7 @@ The configuration data for the general or "local" database has to be specified i
 >
 > - The *type* attribute of the `<Database>` tag indicates whether a MySQL, MSSQL, or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
 > - If a separate Cassandra cluster (consisting of one or more nodes) is used for each DMA, the *type* attribute for the database is set to *Cassandra*. If an entire DMS uses the same Cassandra cluster, the *type* attribute for the database is set to *CassandraCluster*.
-> - If the *CassandraCluster* type is used, *DB.xml* is synced completely throughout the cluster. With other types, the general database settings are not synced.
+> - If the *CassandraCluster* type is used, *DB.xml* is synced throughout the cluster, except for the `<DBServer>` settings, so that each Agent can connect to different nodes. If the *CloudStorage* type is used (see [STaaS](xref:STaaS)), the general database settings are also synced throughout the cluster, except for any `<Proxy>` settings, so that each Agent can have its own proxy configuration. With other types, the general database settings are not synced.
 
 > [!IMPORTANT]
 > MSSQL is no longer supported as the general database as from DataMiner 10.3.0.

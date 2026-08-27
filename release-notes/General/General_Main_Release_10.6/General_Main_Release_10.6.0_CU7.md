@@ -47,15 +47,36 @@ From now on, each SLLogCollector instance will have its own dedicated log file n
 
 Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
 
-#### DxM upgraded [ID 46124]
+#### APIGateway: SLNet authentication [ID 46055]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
-The following DataMiner Extension Module (DxM), which is included in the DataMiner upgrade package, has been upgraded to the indicated version:
+A new REST endpoint, `/APIGateway/api/authentication/ticket`, can be used to authenticate a session with APIGateway using an SLNet connection ticket. You can then use this session to access DxM endpoints in an authenticated way, with APIGateway acting as a reverse proxy.
 
+This requires [SLNet to listen for connection ticket requests over NATS](xref:General_Feature_Release_10.6.10#slnet-will-now-listen-for-connection-ticket-requests-over-nats-id-46057).
+
+#### Enhanced performance when recalculating security keys [ID 46077]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+Because of a number of enhancements, overall performance has increased when recalculating security keys.
+
+#### DxM upgraded [ID 46124] [ID 46259]
+
+<!-- RN 46124: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+<!-- RN 46259: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR TBD -->
+
+The following DataMiner Extension Modules (DxM), which are included in the DataMiner upgrade package, have been upgraded to the indicated version:
+
+- DataMiner ArtifactDeployer 1.10.0
+- DataMiner CloudFeed 1.4.9
+- DataMiner CloudGateway 3.3.2
+- DataMiner CoreGateway 2.14.17
+- DataMiner FieldControl 2.12.2
+- DataMiner Orchestrator 1.11.0
 - DataMiner SupportAssistant 1.9.3
 
-For detailed information about the changes included in this version, refer to the [DxM release notes](xref:DxM_RNs_index).
+For detailed information about the changes included in these versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 ### Fixes
 
@@ -90,3 +111,35 @@ SLAutomation could deadlock when many subscripts were launched in a short time. 
 In some cases, a race condition could cause the SLAutomation process to hang during shutdown.
 
 As a result, a DataMiner upgrade could be delayed unnecessarily by up to 5 minutes.
+
+#### DataMiner Agent Minimum Requirements BPA test incorrectly checked physical CPU cores [ID 46154]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.10 -->
+
+Up to now, the *DataMiner Agent Minimum Requirements* BPA test would incorrectly check physical CPU cores instead of logical CPU cores. As a result, virtualized environments such as a DaaS system could incorrectly be reported as not meeting the minimum CPU core requirements.
+
+This issue has now been fixed. The test now checks logical CPU cores.
+
+#### Elasticsearch re-indexing tool did not preserve the correct name for the newest index [ID 46168]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.10 -->
+
+When the Elasticsearch re-indexing tool processed TTL rollover indices, up to now, it would not preserve the provided index name on the newest empty index. As a result, re-indexing could lead to data loss and the generation of erroneous indices.
+
+The re-indexing tool has been updated to Microsoft .NET 10 and now forces a rollover for TTL rollover indices when re-indexing is complete. This ensures that the newest empty index retains the correct provided name and is marked as the write index.
+
+#### Invalid cleared correlated alarms could be generated when DVE linking changed [ID 46174]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When a correlation rule with the *AutoClear* option disabled generated an alarm for base alarms on a linked DVE table, DataMiner could generate invalid cleared alarms if the linked row disappeared and reappeared or was unlinked and relinked.
+
+#### gRPC connections could fail when the User-Agent value was invalid [ID 46192]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.10 -->
+
+Custom applications using the SLNet gRPC client could fail to establish a connection when their product version contained characters that led to an invalid User-Agent value during the APIGateway health check.
+
+As a result, the connection could incorrectly be reported as `APIGateway is unavailable`.
+
+From now on, invalid User-Agent values are skipped, so the health check can continue and the gRPC connection can be established correctly.
