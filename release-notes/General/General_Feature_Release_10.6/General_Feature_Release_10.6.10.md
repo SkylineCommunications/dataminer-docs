@@ -166,6 +166,20 @@ The UserDefinableApiEndpoint DxM now owns the IIS rewrite rule that reroutes req
 
 If the rewrite rule is missing, disabled, or no longer matches the expected routing behavior, the DxM will restore it with the correct configuration. This ensures that user-defined API requests keep working even if the IIS configuration has been changed outside the installer.
 
+#### Scheduler: SkipStartedInformationEvent is now returned when retrieving scheduled tasks [ID 46161]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When you retrieve scheduled tasks using a `GetInfoMessage` with type set to "SchedulerTasks", the returned `AutomationScriptInstance` will now include the `SkipStartedInformationEvent` property.
+
+This will allow you to verify whether the property was enabled when the scheduled task was saved.
+
+#### CloudStorageMigrationFinalize script will now migrate all credentials stored in the Credentials Library [ID 46204]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The CloudStorageMigrationFinalize script, which should be run when [migrating existing data to STaaS](xref:Migrating_existing_data_to_STaaS), will now migrate all credentials stored in the Credentials Library.
+
 ### Fixes
 
 #### Agent element alarm and masking information could be out of sync after a Failover switch [ID 45601]
@@ -204,11 +218,10 @@ SLAutomation could deadlock when many subscripts were launched in a short time. 
 #### DataMiner upgrade: Legacy NAS and NATS services and files would not be removed [ID 46094]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
-<!-- Not added to MR 10.7.0 -->
 
-When you upgraded to DataMiner 10.6, up to now, the upgrade could leave behind the legacy NAS and NATS services, the `C:\Skyline DataMiner\NATS` folder, and the `NATSRepair.exe` tool.
+Up to now, a DataMiner upgrade could leave behind the legacy NAS and NATS services as well as the `C:\Skyline DataMiner\NATS` folder.
 
-From now on, a new upgrade action named `CleanupNatsServices` removes these legacy services and files after a DataMiner Agent has been upgraded to a 10.6 version. This ensures that the BrokerGateway-managed NATS solution can be used without the obsolete components.
+From now on, on systems that have already been upgraded successfully to a DataMiner 10.6 version at some point in time, a new upgrade action named `CleanupNatsServices` will make sure these legacy services and that folder are removed. This ensures that the BrokerGateway-managed NATS solution can be used without the obsolete components.
 
 #### SLAutomation could hang during shutdown [ID 46123]
 

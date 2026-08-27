@@ -661,6 +661,14 @@ When using DOM in scripts, ad hoc data sources, etc., from now on, it will be po
 
 The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
+#### DataMiner upgrade: Legacy NAS and NATS services and files would not be removed [ID 46094]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Up to now, a DataMiner upgrade could leave behind the legacy NAS and NATS services as well as the `C:\Skyline DataMiner\NATS` folder.
+
+From now on, on systems that have already been upgraded successfully to a DataMiner 10.6 version at some point in time, a new upgrade action named `CleanupNatsServices` will make sure these legacy services and that folder are removed. This ensures that the BrokerGateway-managed NATS solution can be used without the obsolete components.
+
 #### DataMiner Taskbar Utility: Event colors now align with DataMiner Cube [ID 46130]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -689,6 +697,20 @@ The `GetAvailableAutomationScripts` call now returns the following additional in
 The UserDefinableApiEndpoint DxM now owns the IIS rewrite rule that reroutes requests sent to `/api/custom` to the endpoint. It now validates the rule when the process starts and keeps checking it while the service runs, repairing it automatically if needed.
 
 If the rewrite rule is missing, disabled, or no longer matches the expected routing behavior, the DxM will restore it with the correct configuration. This ensures that user-defined API requests keep working even if the IIS configuration has been changed outside the installer.
+
+#### Scheduler: SkipStartedInformationEvent is now returned when retrieving scheduled tasks [ID 46161]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When you retrieve scheduled tasks using a `GetInfoMessage` with type set to "SchedulerTasks", the returned `AutomationScriptInstance` will now include the `SkipStartedInformationEvent` property.
+
+This will allow you to verify whether the property was enabled when the scheduled task was saved.
+
+#### CloudStorageMigrationFinalize script will now migrate all credentials stored in the Credentials Library [ID 46204]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The CloudStorageMigrationFinalize script, which should be run when [migrating existing data to STaaS](xref:Migrating_existing_data_to_STaaS), will now migrate all credentials stored in the Credentials Library.
 
 ### Fixes
 
