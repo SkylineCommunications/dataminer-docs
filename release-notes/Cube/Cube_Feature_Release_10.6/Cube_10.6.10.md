@@ -22,7 +22,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 #### Automation: Credentials can now be added to automation scripts [ID 44282]
 
-<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+<!-- MR 10.7.0 - FR 10.6.10 -->
 
 When adding or updating an automation script in DataMiner Cube, you can now add credentials just like you add dummies, parameters, or memory files.
 
