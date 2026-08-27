@@ -1,5 +1,6 @@
 ---
 uid: NodeRecovery_Installing
+description: "Install Node Recovery by enabling Swarming, deploying the DxM, and configuring trigger scripts for outage handling."
 ---
 
 # Installing Node Recovery

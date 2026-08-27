@@ -174,5 +174,5 @@ Below you can find an overview of the main features that have been added to Data
 | Visual Overview: [Table control with Refresh and/or Sort button](xref:Turning_a_shape_into_a_parameter_control#adding-a-refresh-andor-sort-button-to-a-table-control) | DataMiner 10.2.6/10.3.0 <!-- [ID 33346]-->|
 | Visual Overview: [Text wrapping and trimming](xref:Configuring_text_wrapping_and_trimming) | DataMiner 10.2.3/10.3.0 <!-- [ID 32440] --> |
 | Visual Overview (web): [Load balancing](xref:Investigating_Web_Issues#load-balancing) | DataMiner 10.5.2/10.6.0 <!-- [ID 41434] [ID 41728] --> |
-| [Web DcM](xref:DataMinerExtensionModules#web) | DataMiner 10.5.0 [CU8]/10.5.11 <!-- [ID 43439] --> |
+| [Web DcM](xref:DataMinerCoreModules#web) | DataMiner 10.5.0 [CU8]/10.5.11 <!-- [ID 43439] --> |
 | Web Services: [DMAAutomationScriptOptionClientTimeZone](xref:DMAAutomationScriptOptionClientTimeZone) custom data type | DataMiner 10.6.4/10.7.0 <!-- [ID 44742] [ID 44788] --> |

@@ -13,6 +13,29 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 It is now possible to update Catalog metadata for a specific version or version range using API calls authenticated by organization key. For detailed API documentation, refer to the [Swagger UI](https://global.dataminer.services/swagger/catalogapi-web/index.html).
 
+### 27 August 2026 - Enhancement - Admin - DMS API key permissions granularity
+
+From now on, API keys on DMS level will also have more permission granularity, similar to the organization API keys. All existing DMS API keys will keep working as before with the same permissions they already had. New permissions will not be assigned to existing DMS API keys. See [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
+
+### 27 August 2026 - New feature - Admin - Setting to toggle automatic login for remote access
+
+A new setting has been added in the Admin app that allows toggling automatic login for remote access. Toggling the automatic login off will require users to log in manually instead of using the linked DataMiner account by default. See [Controlling remote access](xref:Controlling_remote_access).
+
+### 27 August 2026 - Fix - Remote access - Logout from web apps not working correctly when using remote access
+
+When you logged out from the web apps while accessing them remotely, the automatic login could interfere and cause you to be logged in again. This issue has now been resolved.
+
+### 27 August 2026 - New feature - Catalog - Filter and search version history
+
+On the *Versions* tab of a Catalog item, it is now possible to filter and search the version history:
+
+- **Filter version history**: Filter ranges and versions by metadata, such as firmware version or version dependencies (e.g., minimum DataMiner version), with a search box and a *show more* option for long lists of options.
+- **Cleaner results**: Ranges, versions, and recommended versions that do not match the selected filters are hidden automatically.
+
+### 27 August 2026 - Fix - Admin - HTML-escaped characters shown in audit detail values
+
+In the audit detail view of the Admin app, values were HTML-escaped before being displayed, so for example a character such as `>` was shown as `&gt;` instead of `>`. Since these values are shown in input fields, which display their content as plain text, the escaping was not needed. This issue has been resolved.
+
 ### 12 August 2026 - New feature - Catalog - Catalog item range Markdown support
 
 Catalog item ranges now support Markdown.

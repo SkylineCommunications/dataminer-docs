@@ -42,6 +42,8 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
    - If you want remote access to be disabled completely, switch off the main *Remote Access* toggle button.
 
    - If you want remote access to be enabled, switch on the main *Remote Access* setting. If it should only be enabled for specific DataMiner features, below this setting, switch off the features for which remote access should be disabled:
+  
+     - *Auto login*: Enable or disable auto login with a [linked DataMiner account](xref:Linking_your_DataMiner_and_dataminer_services_account).
 
      - *DataMiner Cube (desktop app)*: Enable or disable remote access to the DataMiner System(s) via the desktop app.
 

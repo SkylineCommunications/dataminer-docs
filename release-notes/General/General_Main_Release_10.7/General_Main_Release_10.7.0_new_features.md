@@ -98,11 +98,11 @@ A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve t
 > - *Modules > Automation > UI available*
 > - *Modules > Automation > Execute*
 
-#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282]
+#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
-Automation scripts now support adding credentials from the Credential Library directly in the script's XML code.
+Automation scripts now support adding credentials from the Credentials Library directly in the script's XML code.
 
 See the following example:
 
@@ -111,20 +111,22 @@ See the following example:
     <Credential id="1">
         <Name>MyCredential</Name>
         <CredentialId>8d15e7d8-f8f6-41f6-985c-fddbd3ea94ae</CredentialId>
+        <Type>Token</Type>
     </Credential>
 </Credentials>
 ```
 
 | Element | Attribute | Content |
 |---|---|---|
-| Credential | id | Any integer, unique per credential in the script |
-| Name | - | Unique user-defined string |
-| CredentialId | - | GUID of an existing credential from the Credential Library |
+| Credential | id | ID of the credential (integer, unique per script) |
+| Name | - | Name of the credential (string, unique per script) |
+| CredentialId | - | GUID of the linked credential from the Credentials Library |
+| Type | - | Type of credential: `UserNamePassword` or `Token` |
 
 > [!NOTE]
-> If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
-
-See also: [Automation: Credentials can now be added to automation scripts [ID 44282]](xref:Cube_Feature_Release_10.6.10#automation-credentials-can-now-be-added-to-automation-scripts-id-44282)
+>
+> - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
+> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNamePassword` and `Token` credentials stored in the Credentials Library.
 
 #### SLNet subscription logging [ID 44361]
 
@@ -501,3 +503,14 @@ Routes are validated more strictly before create and update:
 Route conflicts are also detected across all existing definitions. Any two templates that can match the same request path are rejected, including conflicts between literal and parameterized routes and between overlapping parameterized templates. If a route with `ticket/{id}` already exists, a new route like `ticket/{ticketId}` will be rejected.
 
 When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
+
+#### SLNet will now listen for connection ticket requests over NATS [ID 46057]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+From now on, SLNet will listen on the `SLNet.Authentication.Ticket` NATS topic to process connection tickets and return the username associated with the ticket.
+
+This allows APIGateway to authenticate requests via the NATS-based connection flow.
+
+> [!NOTE]
+> Tickets can be requested with `connection.RequestCloneTicket()`. This feature does not currently support impersonation with `TicketType.AuthenticateAs`.
