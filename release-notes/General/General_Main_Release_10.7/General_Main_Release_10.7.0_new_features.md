@@ -514,3 +514,11 @@ This allows APIGateway to authenticate requests via the NATS-based connection fl
 
 > [!NOTE]
 > Tickets can be requested with `connection.RequestCloneTicket()`. This feature does not currently support impersonation with `TicketType.AuthenticateAs`.
+
+#### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+In order to notify client applications when the measurement point cycle changes, a new spectrum parameter has been added: `SPA_SPARAM_MEASPOINT_CYCLE` (PID 64227).
+
+This will especially improve synchronization in shared sessions, keeping measurement point cycle updates aligned across connected clients.
