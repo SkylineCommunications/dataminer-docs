@@ -7,6 +7,7 @@ using Skyline.DataMiner.Net.Profiles;
 using System.Collections.Generic;
 using Skyline.DataMiner.Net.Messages.SLDataGateway;
 using Skyline.DataMiner.Net.Automation;
+using Skyline.DataMiner.Automation.Credentials;
 
 namespace Skyline.DataMiner.Automation
 {
@@ -984,6 +985,40 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		public ScriptParam GetScriptParam(int id) { return null; }
+
+		/// <summary>
+		/// Retrieves a credential that is declared by this Automation script from the credential library.
+		/// </summary>
+		/// <param name="name">The name by which the credential is referred to in the script XML. The lookup is case insensitive.</param>
+		/// <returns>The credential or <see langword="null"/> if the script does not declare a credential with the specified name.</returns>
+		/// <remarks>
+		/// <para>The values of the credential are retrieved from the credential library each time this method is called, so they are never cached.</para>
+		/// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-credential">Creating a credential</see>.</para>
+		/// <note>Available from DataMiner 10.6.10/10.7.0 onwards.</note>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// ScriptCredential credential = engine.GetCredential("myCredential");
+		/// </code>
+		/// </example>
+		public ScriptCredential GetCredential(string name) { return null; }
+
+        /// <summary>
+        /// Retrieves a credential that is declared by this Automation script from the credential library.
+        /// </summary>
+        /// <param name="id">The ID by which the credential is referred to in the script XML.</param>
+        /// <returns>The credential or <see langword="null"/> if the script does not declare a credential with the specified ID.</returns>
+        /// <remarks>
+        /// <para>The values of the credential are retrieved from the credential library each time this method is called, so they are never cached.</para>
+        /// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-credential">Creating a credential</see>.</para>
+        /// <note>Available from DataMiner 10.6.10/10.7.0 onwards.</note>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// ScriptCredential credential = engine.GetCredential(1);
+        /// </code>
+        /// </example>
+        public ScriptCredential GetCredential(int id) { return null; }
 
 		/// <summary>
 		/// Returns a copy of the script output of the current script and, if the <see cref="SubScriptOptions.InheritScriptOutput"/> option is set to “true”, the child scripts.

@@ -956,6 +956,8 @@ items:
         topicUid: Launching_and_attaching_interactive_Automation_scripts
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
+      - name: Using credentials in an automation script
+        topicUid: Using_credentials_in_an_automation_script
   - name: GQI extensions
     topicUid: GQI_Extensions
     items:
@@ -1607,6 +1609,8 @@ items:
       topicUid: Skyline.DataMiner.Scripting
     - name: Skyline.DataMiner.Automation
       topicUid: Skyline.DataMiner.Automation
+    - name: Skyline.DataMiner.Automation.Credentials
+      topicUid: Skyline.DataMiner.Automation.Credentials
     - name: Skyline.DataMiner.Core.DataMinerSystem.Common
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Common
     - name: Skyline.DataMiner.Core.DataMinerSystem.Automation
@@ -4109,6 +4113,20 @@ items:
         topicUid: DMSScript.Author
       - name: CheckSets
         topicUid: DMSScript.CheckSets
+      - name: Credentials
+        topicUid: DMSScript.Credentials
+        items:
+        - name: Credential
+          topicUid: DMSScript.Credentials.Credential
+          items:
+          - name: '@id'
+            topicUid: DMSScript.Credentials.Credential-id
+          - name: Name
+            topicUid: DMSScript.Credentials.Credential.Name
+          - name: CredentialId
+            topicUid: DMSScript.Credentials.Credential.CredentialId
+          - name: Type
+            topicUid: DMSScript.Credentials.Credential.Type
       - name: Interactivity
         topicUid: DMSScript.Interactivity
       - name: Description

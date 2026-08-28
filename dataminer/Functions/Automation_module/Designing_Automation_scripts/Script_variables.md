@@ -1,10 +1,10 @@
----
+﻿---
 uid: Script_variables
 ---
 
 # Script variables
 
-For most script actions, variables are required. There are three kinds of variables:
+For most script actions, variables are required. There are four kinds of variables:
 
 - Dummies: required for every different element in the script. When the script is run, an actual element will be linked to each dummy.
 
@@ -12,12 +12,15 @@ For most script actions, variables are required. There are three kinds of variab
 
 - Memory files: containers of values, typically provided by the script itself.
 
+- Credentials: allow a script to use credentials stored in the [Credentials Library](xref:Credentials_Library). Available from DataMiner 10.7.0/10.6.10 onwards<!--RN 44282--><!--RN 46229-->.
+
 When you add a script action that contains a variable, a line will automatically be added in the section in question. However, depending on the script, it can be more convenient to make the variables first, and then create the script actions.
 
 > [!NOTE]
 >
 > - Prior to running a script, operators will first have to link the dummies and parameters to actual elements and values in the DMS. Therefore, it is best to give the variables a meaningful name the operators will be able to work with.
 > - To remove a variable, click the x to the right of it.
+> - A user needs to have access to the script credentials to save/edit the script, though a user can execute a script with credentials they do not have access to.
 
 ## Creating a dummy
 
@@ -69,3 +72,27 @@ These files are used to hold a particular value used in a script. Within the scr
 Outside of a script, you can create permanent memory files that contain an array of values. For example, a permanent memory file named “Cities” could have the names of various cities as its values.
 
 These files can be managed in DataMiner Cube, in the *memory files* tab of the Automation module. See [How can I manage permanent memory files?](xref:How_can_I_manage_permanent_memory_files).
+
+## Creating a credential
+
+To create a new line in the *CREDENTIALS* section:
+
+- Click *Add* in the *CREDENTIALS* section
+
+You can then further specify the credential properties in the *CREDENTIALS* section:
+
+1. To change the name of the credential, enter a new name next to *Credential*.
+
+1. Select a type of credential from the dropdown list next to *Type*. The available types are:
+   - *Username and password*: a username and password combination.
+   - *Token*: a token stored in the credential library.
+
+1. Select a credential from the dropdown list. The dropdown list will show all credentials of the selected type that the current user has access to. If the user does not have access to any credentials of the selected type, the dropdown list will be empty.
+
+> [!NOTE]
+>
+> - Only credentials of type *Username and password* and *Token* can be used in an automation script. In the script XML, these types are stored as `UserNamePassword` and `Token`. See [Credential](xref:DMSScript.Credentials.Credential).
+> - If you open a script that contains credentials you are not allowed to use, the names of those credentials are replaced by *\<Not Allowed\>*. If you have permission to edit scripts, you will not be able to save the script until you have replaced those credentials with credentials you are allowed to use.
+> - If your user permissions change while you are working in the Automation module, the changes will only take effect after you have re-opened the module.
+
+To retrieve the values of a credential from a *C# code* block, see [Using credentials in an automation script](xref:Using_credentials_in_an_automation_script).
