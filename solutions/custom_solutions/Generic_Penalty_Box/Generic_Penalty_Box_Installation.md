@@ -1,5 +1,6 @@
 ---
 uid: Generic_Penalty_Box_Installation
+description: "Install the Generic Penalty Box app and set up one or multiple real-time alarm walls on your DataMiner Agent with flexible, environment-specific config."
 ---
 
 # Installing the Generic Penalty Box

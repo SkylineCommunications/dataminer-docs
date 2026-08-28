@@ -1,5 +1,6 @@
 ---
 uid: Generic_Penalty_Box_Configuration
+description: "Configure the Generic Penalty Box app using the config.json file: map data, shape cards, tune real-time behavior, and brand your alarm wall."
 ---
 
 # Configuring the Generic Penalty Box
@@ -66,7 +67,7 @@ Controls how the app fetches its data from DataMiner.
 | `scriptName` | string | The name of the DataMiner automation script that returns the penalty box JSON payload. |
 | `protocolName` | string | The connector name passed to the script so it knows which elements to scan. |
 | `pollIntervalMs` | number | How often (in ms) to poll the script when real-time updates are disabled or unavailable (see [realtime](#realtime)). |
-| `stalenessThresholdMs` | number | If polling has not not been successful for this length of time (in ms), cards are dimmed to indicate stale data. |
+| `stalenessThresholdMs` | number | If polling has not been successful for this length of time (in ms), cards are dimmed to indicate stale data. |
 
 ## parameterIds
 

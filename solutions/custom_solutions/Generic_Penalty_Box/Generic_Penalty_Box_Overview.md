@@ -1,5 +1,6 @@
 ---
 uid: Generic_Penalty_Box_Overview
+description: "Discover the Generic Penalty Box app, which provides a real-time wall of active issues with smart grouping, filtering, and fast drill-down."
 ---
 
 # Generic Penalty Box
