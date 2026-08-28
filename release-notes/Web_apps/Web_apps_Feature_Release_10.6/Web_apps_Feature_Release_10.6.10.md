@@ -151,3 +151,11 @@ The required requests are now forwarded to the connected DMA instead.
 Up to now, SLNet pipe connections in the GQI extension worker could be closed unreliably, which could leave stale client state or delay disconnect handling during pipe shutdown.
 
 From now on, closed client connections will be cleaned up more deterministically, improving the reliability of extension worker shutdown and subsequent queries.
+
+#### Date/time inputs: Manual entry and in-progress edits could behave unreliably [ID 46248]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+In automation script UIs, date and time inputs could behave unexpectedly. In Firefox, when you manually entered values starting with `0` (e.g., `05` or `09`), the cursor could jump to another field too early. Also, if a live update arrived while you were editing a time input, your in-progress changes could be lost or focus could move unexpectedly.
+
+Manual typing now behaves consistently across Firefox and Chromium-based browsers, and in-progress edits are preserved while you are still working in the field.
