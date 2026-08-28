@@ -80,6 +80,12 @@ Up to now, when GQI retrieved operator capabilities, internally, columns always 
 
 Also, a parameter table query problem has been fixed. Up to now, columns that were only needed internally to execute the query would also by default be included in the query result. This has now been changed. The behavior of the *Get parameter table by ID* data source has now been made consistent with that of every other data source.
 
+#### Dashboards/Low-Code Apps: Query filter now shows units for numeric columns that define them [ID 46269]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+In the Query filter component, numeric columns that define units (e.g., parameter columns) now show a unit indication. As a result, you will now be able to more easily identify the meaning of numeric values while configuring filters.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Element filter selection could fail while search results were loading [ID 46129]
