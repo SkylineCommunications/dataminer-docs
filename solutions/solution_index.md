@@ -98,26 +98,29 @@ description: Explore technical documentation for specific, preconfigured DataMin
     <a href="/solutions/custom_solutions/DITT/Dataminer_IT_Tool_Overview.html" title="IT Tools" target="_self"><img src="~/solutions/images/DataMiner_IT_Tools.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/solutions/custom_solutions/Health_Check_tool/Dataminer_Health_Check_Tool.html" title="Health Check tool" target="_self"><img src="~/solutions/images/DataMiner_Health_Check.svg" style="width:100%"></a>
+    <a href="/solutions/custom_solutions/Generic_Penalty_Box/Generic_Penalty_Box_Overview.html" title="Generic Penalty Box" target="_self"><img src="~/solutions/images/Generic_Penalty_Box.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/solutions/custom_solutions/PLM_Tool/DataMiner_PLM_Tool_Overview.html" title="PLM tool" target="_self"><img src="~/solutions/images/PLM.svg" style="width:100%"></a>
+    <a href="/solutions/custom_solutions/Health_Check_tool/Dataminer_Health_Check_Tool.html" title="Health Check tool" target="_self"><img src="~/solutions/images/DataMiner_Health_Check.svg" style="width:100%"></a>
   </div>
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/solutions/custom_solutions/PLM_Tool/DataMiner_PLM_Tool_Overview.html" title="PLM tool" target="_self"><img src="~/solutions/images/PLM.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/solutions/custom_solutions/Regression_Test_Management/Regression_Test_Management.html" title="Regression Test Management" target="_self"><img src="~/solutions/images/Regression_Test_Management.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/solutions/custom_solutions/Vecima_Remote_PHY_Monitor/Remote_PHY_Monitoring.html" title="Remote PHY Monitoring" target="_self"><img src="~/solutions/images/Remote_PHY_Monitoring.svg" style="width:100%"></a>
   </div>
-  <div class="column">
-    <a href="/solutions/custom_solutions/Smart_Trap_Processor/Smart_Trap_Processor_Overview.html" title="Smart Trap Processor" target="_self"><img src="~/solutions/images/Smart_Trap_Processor.svg" style="width:100%"></a>
-  </div>
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/solutions/custom_solutions/Smart_Trap_Processor/Smart_Trap_Processor_Overview.html" title="Smart Trap Processor" target="_self"><img src="~/solutions/images/Smart_Trap_Processor.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/solutions/custom_solutions/META_WhatsApp_Messaging/META_WhatsApp_Messaging.html" title="META WhatsApp Messaging" target="_self"><img src="~/solutions/images/META_WhatsApp_Messaging.svg" style="width:100%"></a>
   </div>
