@@ -57,7 +57,7 @@ Use `A.B.C` without a suffix for a stable release. This is the recommended versi
 
 #### Semantic version suffixes
 
-A semantic version suffix is the part after the hyphen in a version, such as `-CU2` in `1.2.3-CU2` or `-rc.1` in `1.2.3-rc.1`. The suffix adds information about the status or purpose of the version while preserving the `A.B.C` version it belongs to. This lets you distinguish exceptional updates and versions intended for testing from stable releases. 
+A semantic version suffix is the part after the hyphen in a version, such as `-CU2` in `1.2.3-CU2` or `-rc.1` in `1.2.3-rc.1`. The suffix adds information about the status or purpose of the version while preserving the `A.B.C` version it belongs to. This lets you distinguish exceptional updates and versions intended for testing from stable releases.
 
 > [!NOTE]
 > Each suffix identifier may contain only ASCII alphanumeric characters and hyphens. Numeric identifiers must not contain leading zeros.
