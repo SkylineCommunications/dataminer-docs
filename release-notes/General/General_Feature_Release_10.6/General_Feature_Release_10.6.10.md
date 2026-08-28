@@ -125,6 +125,12 @@ This will especially improve synchronization in shared sessions, keeping measure
 
 The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to Cassandra Cluster from MySQL or Cassandra Single, now also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the Credentials Library.
 
+#### ModelHost DxM has been upgraded to Microsoft .NET 10 [ID 45988]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The ModelHost DxM has been upgraded to Microsoft .NET 10.
+
 #### UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10 [ID 46066]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
