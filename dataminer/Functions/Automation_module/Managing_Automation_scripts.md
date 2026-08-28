@@ -116,4 +116,4 @@ You can change the name of a folder in the following ways:
 > To import automation scripts, you need the user permission *Automation: Add*. To export automation scripts, you need the user permission *Automation: Edit*. See [DataMiner user permissions](xref:DataMiner_user_permissions).
 
 > [!IMPORTANT]
-> From DataMiner 10.7.0/10.6.10 onwards<!--RN 44282--><!--RN 46229-->, if you import a script that uses [credentials](xref:Script_variables#creating-a-credential) you do not have access to, those credentials are cleared. The script can then no longer be executed until you assign credentials you do have access to. See [Credentials Library](xref:Credentials_Library#using-credentials-in-automation-scripts).
+> From DataMiner 10.7.0/10.6.10 onwards<!--RN 44282--><!--RN 46229-->, if you import a script that uses [credentials](xref:Script_variables#creating-a-credential) you do not have access to, those credentials are cleared. The script can then no longer be executed until you assign credentials you do have access to. See [Credentials Library](xref:Credentials_Library).
