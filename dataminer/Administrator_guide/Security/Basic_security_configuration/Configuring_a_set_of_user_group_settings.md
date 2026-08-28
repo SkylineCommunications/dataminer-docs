@@ -1,6 +1,6 @@
 ---
 uid: Configuring_a_set_of_user_group_settings
-description: "Assign sets of user settings to user groups, then open those sets, and specify a default value for every setting in those sets."
+description: "Assign sets of user settings to user groups, then open those sets and specify a default value for every setting in them."
 ---
 
 # Configuring a set of user group settings

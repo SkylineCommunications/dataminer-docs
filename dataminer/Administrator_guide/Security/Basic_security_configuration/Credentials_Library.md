@@ -1,7 +1,7 @@
 ---
 uid: Credentials_Library
 keywords: authentication, auth, SNMP credentials
-description: "Configure secure credentials in the Credentials Library to centralize SNMP, token, and username/password access across your system."
+description: "Securely manage and reuse SNMP, token, and username/password credentials in one DataMiner vault, with group-based access control in Cube."
 ---
 
 # Credentials Library

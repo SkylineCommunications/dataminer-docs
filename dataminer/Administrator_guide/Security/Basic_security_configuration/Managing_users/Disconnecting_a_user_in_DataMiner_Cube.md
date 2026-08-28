@@ -1,6 +1,6 @@
 ---
 uid: Disconnecting_a_user_in_DataMiner_Cube
-description: "If you are allowed to disconnect other users, then disconnect a user in DataMiner Cube to end online sessions and manage active client access."
+description: "Disconnect a user from DataMiner Cube in a few clicks, end one or all active sessions, and log a reason for secure user management."
 ---
 
 # Disconnecting a user in DataMiner Cube
