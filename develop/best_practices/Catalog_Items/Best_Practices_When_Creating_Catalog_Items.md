@@ -45,34 +45,43 @@ Help users understand what your Catalog item is, what it does, and what it looks
 
 When you release a version of a Catalog item, make sure to **adhere to [semantic versioning](https://semver.org/)** to ensure clarity and predictability for users. Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
 
+#### Standard semantic versioning format
+
+Use `A.B.C` without a suffix for a stable release. This is the recommended version for users and should be used when the Catalog item meets the quality standards for its intended audience.
+
 - **A (MAJOR)**: Incremented for incompatible changes, breaking changes, or major architectural redesigns that may require user action.
 
 - **B (MINOR)**: Incremented for new functionality added in a backward-compatible manner.
 
 - **C (PATCH)**: Incremented for backward-compatible bug fixes. When a new version range is introduced, the PATCH version (C) should always start at 0, not 1.
 
-**Choose the starting version.** As part of semantic versioning, choose the starting version based on the maturity of your Catalog item. A `0.x` release is optional. If you use this for early development Catalog item releases, start with `0.1.0`. Typically, the Catalog item is not yet public at this stage. For the first official public release, use `1.0.0`. At that point, the software is expected to meet our quality standards.
+#### Semantic version suffixes
+
+A semantic version suffix is the part after the hyphen in a version, such as `-CU2` in `1.2.3-CU2` or `-rc.1` in `1.2.3-rc.1`. The suffix adds information about the status or purpose of the version while preserving the `A.B.C` version it belongs to. This lets you distinguish exceptional updates and versions intended for testing from stable releases. 
+
+> [!NOTE]
+> Each suffix identifier may contain only ASCII alphanumeric characters and hyphens. Numeric identifiers must not contain leading zeros.
+
+For Catalog items, use suffixes according to the following guidelines: use the `-CUx` suffix for cumulative updates (e.g., `1.2.3-CU1`), and use the `-rc.x` suffix for pre-releases (e.g., `1.2.0-rc.1`). Other suffixes may also be valid for pre-releases, but for consistency, use the `-rc.x` format . This is typically used when the stable version is close and you would like to expose the Catalog item already for testing or validation.
+
+> [!NOTE]
+> Making a cumulative update is only relevant in **exceptional** cases, when a critical issue is discovered after a release has been deployed. A cumulative update replaces the affected release. Unlist the affected version and release the cumulative update with the same `A.B.C` version and an incremented CU number.
+
+> [!TIP]
+> Update the version description according to the [best practices for cumulative update version descriptions](#version-descriptions-for-cumulative-updates).
+
+#### Choosing the starting version
+
+As part of semantic versioning, choose the starting version based on the maturity of your Catalog item. A `0.x` release is optional. If you use this for early development Catalog item releases, start with `0.1.0`. Typically, the Catalog item is not yet public at this stage. For the first official public release, use `1.0.0`. At that point, the software is expected to meet our quality standards.
 
 Versions in the `0.x.y` range indicate that the Catalog item is not yet considered stable. Breaking changes may still occur. When you use this range, increment the components as follows:
 
 - **x (MINOR)**: Incremented for new features or breaking changes.
 - **y (PATCH)**: Incremented for patches and bug fixes.
 
-As the software approaches a stable release, use a SemVer pre-release identifier to communicate which stable version it is approaching. We prefer the consistent `rc.x` format (e.g., `1.0.0-rc.1`) over release-specific names, such as a specific customer.
-
-> [!NOTE]
-> Pre-release identifiers are not limited to the first `1.0.0` release. Use them whenever a version needs to be available for testing or validation before the corresponding stable release. For example, use `1.1.0-rc.1` before `1.1.0` or `2.0.0-rc.1` before `2.0.0`. A pre-release version is a hyphen (`-`) followed by dot-separated identifiers; each identifier may contain only ASCII alphanumeric characters and hyphens. Numeric identifiers must not contain leading zeros.
-
-Keep the following distinction in mind:
-
-- `0.x.y` is an optional initial-development version range where stability is not yet promised.
-- `X.Y.Z-rc.x` is a pre-release of a specific upcoming stable version.
-- `X.Y.Z` is the stable release.
+#### Connector versioning format
 
 **Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
-
-> [!NOTE]
-> The "CUx" suffix (e.g., 1.2.3-CU2) should only be used exceptionally, in case a critical issue is discovered after a release deployment. In such cases, the released version should be **unlisted** and a new cumulative update should be released.
 
 ### Use clear version descriptions
 
