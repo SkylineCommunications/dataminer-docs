@@ -649,6 +649,18 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
 From now on, when you open the SLLogCollector tool, the tool will automatically be configured to include a memory dump of the SLPort and SLSNMPManager processes when a runtime error was detected in SLProtocol.
 
+#### Enhanced performance when upgrading the ModelHost DxM [ID 45967]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Because of a number of enhancements, overall performance has increased when upgrading the ModelHost DxM.
+
+#### ModelHost DxM has been upgraded to Microsoft .NET 10 [ID 45988]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The ModelHost DxM has been upgraded to Microsoft .NET 10.
+
 #### DOM: Server-side support for string list FieldDescriptors [ID 46051]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
@@ -711,6 +723,14 @@ This will allow you to verify whether the property was enabled when the schedule
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 The CloudStorageMigrationFinalize script, which should be run when [migrating existing data to STaaS](xref:Migrating_existing_data_to_STaaS), will now migrate all credentials stored in the Credentials Library.
+
+#### User-Defined APIs: Optional notice generation when token rate limits are reached [ID 46244]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+On `ApiToken` objects, you can now enable notice generation when a token reaches its configured rate limit by setting `ApiTokenRateLimit.GenerateNotice` to `true`.
+
+When enabled, one notice can be generated per token when its rate limit is reached. Notices are not cleared automatically. If you clear a notice manually and the token hits its rate limit again, a new notice can be generated.
 
 ### Fixes
 
@@ -822,3 +842,9 @@ When DOM reads were executed, the result from the database could be enriched wit
 This could cause more objects than expected to be returned in the result, especially when data was still available in the cache for a later page. The limit is now reapplied correctly when objects are added from the `DatabaseCacheLayer`, and the number of objects already returned on previous pages is tracked correctly.
 
 This fixes the issue for paged DOM reads with a configured limit, ensuring the returned result always respects the requested limit even when cached objects are added to the response.
+
+#### Spectrum preset update events did not work when the preset name contained a dot [ID 46241]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Up to now, the spectrum preset update event on parameter `SPA_SPARAM_PRESET_UPDATE` (PID 64216) could fail when the preset name contained a dot (`.`).

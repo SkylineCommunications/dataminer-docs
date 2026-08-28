@@ -80,6 +80,12 @@ Up to now, when GQI retrieved operator capabilities, internally, columns always 
 
 Also, a parameter table query problem has been fixed. Up to now, columns that were only needed internally to execute the query would also by default be included in the query result. This has now been changed. The behavior of the *Get parameter table by ID* data source has now been made consistent with that of every other data source.
 
+#### Dashboards/Low-Code Apps: Query filter now shows units for numeric columns that define them [ID 46269]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+In the Query filter component, numeric columns that define units (e.g., parameter columns) now show a unit indication. As a result, you will now be able to more easily identify the meaning of numeric values while configuring filters.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Element filter selection could fail while search results were loading [ID 46129]
@@ -151,3 +157,11 @@ The required requests are now forwarded to the connected DMA instead.
 Up to now, SLNet pipe connections in the GQI extension worker could be closed unreliably, which could leave stale client state or delay disconnect handling during pipe shutdown.
 
 From now on, closed client connections will be cleaned up more deterministically, improving the reliability of extension worker shutdown and subsequent queries.
+
+#### Date/time inputs: Manual entry and in-progress edits could behave unreliably [ID 46248]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+In automation script UIs, date and time inputs could behave unexpectedly. In Firefox, when you manually entered values starting with `0` (e.g., `05` or `09`), the cursor could jump to another field too early. Also, if a live update arrived while you were editing a time input, your in-progress changes could be lost or focus could move unexpectedly.
+
+Manual typing now behaves consistently across Firefox and Chromium-based browsers, and in-progress edits are preserved while you are still working in the field.

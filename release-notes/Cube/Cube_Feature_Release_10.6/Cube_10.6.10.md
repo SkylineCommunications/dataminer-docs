@@ -67,6 +67,17 @@ When DataMiner Cube detects that a credential in the Credentials Library can no 
 
 When you hover over the warning icon, a tooltip will explain that the credential's secret values can no longer be decrypted and that you need to re-enter and save the values to resolve the issue.
 
+#### Element wizard: Connector settings and run-on details [ID 46287]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When you create or edit an element in DataMiner Cube, the element wizard can now show new connector-driven pages:
+
+- A *Settings* page where you can configure connector settings (including text fields, dropdown values, and credentials), with validation for required values.
+- A *Run-on details* page for connectors with scripts, where you can select an Edge node and configure script intervals.
+
+In addition, CSV export/import support has been updated with the relevant headers for protocol settings and edge scripts.
+
 ## Changes
 
 ### Enhancements
