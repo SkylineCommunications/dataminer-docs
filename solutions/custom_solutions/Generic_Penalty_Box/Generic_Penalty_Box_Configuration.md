@@ -9,6 +9,9 @@ Every data-facing part of the Generic Penalty Box, including parameter IDs, elem
 
 Below you can find an overview of the different settings available in *config.json*.
 
+> [!NOTE]
+> *config.json* is reloaded whenever you refresh the app, so any edits you make take effect immediately on the next browser refresh.
+
 ## configVersion
 
 Stamps the schema *config.json* was written against.

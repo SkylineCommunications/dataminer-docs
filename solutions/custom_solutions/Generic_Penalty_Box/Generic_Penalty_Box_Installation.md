@@ -18,9 +18,6 @@ description: "Install the Generic Penalty Box app and set up one or multiple rea
 
 1. Browse to `http://[DMA name]/public/generic-penalty-box/` in a web browser.
 
-> [!NOTE]
-> *config.json* is loaded fresh on every page load, so any edits you make take effect immediately on the next browser refresh. No rebuild is required.
-
 ## Creating additional penalty boxes
 
 It is possible to display multiple penalty box walls on the same DataMiner Agent, each with its own configuration, for example, one per connector or one per site.
