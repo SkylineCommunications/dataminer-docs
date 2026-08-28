@@ -43,11 +43,11 @@ Help users understand what your Catalog item is, what it does, and what it looks
 
 ### Use semantic versioning
 
-When you release a version of a Catalog item, make sure to **adhere to [semantic versioning](https://semver.org/)** to ensure clarity and predictability for users. Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
+When you release a version of a Catalog item, make sure to **adhere to [semantic versioning](https://semver.org/)** to ensure clarity and predictability for users. Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format.
 
 #### Standard semantic versioning format
 
-Use `A.B.C` without a suffix for a stable release. This is the recommended version for users and should be used when the Catalog item meets the quality standards for its intended audience.
+Use `A.B.C` without a suffix for a stable release of a Catalog item other than a connector (for connectors, see [Connector versioning format](#connector-versioning-format)). This is the recommended version for users and should be used when the Catalog item meets the quality standards for its intended audience.
 
 - **A (MAJOR)**: Incremented for incompatible changes, breaking changes, or major architectural redesigns that may require user action.
 
@@ -59,16 +59,16 @@ Use `A.B.C` without a suffix for a stable release. This is the recommended versi
 
 A semantic version suffix is the part after the hyphen in a version, such as `-CU2` in `1.2.3-CU2` or `-rc.1` in `1.2.3-rc.1`. The suffix adds information about the status or purpose of the version while preserving the `A.B.C` version it belongs to. This lets you distinguish exceptional updates and versions intended for testing from stable releases.
 
-> [!NOTE]
-> Each suffix identifier may contain only ASCII alphanumeric characters and hyphens. Numeric identifiers must not contain leading zeros.
+For Catalog items, use suffixes according to the following guidelines:
 
-For Catalog items, use suffixes according to the following guidelines: use the `-CUx` suffix for cumulative updates (e.g., `1.2.3-CU1`), and use the `-rc.x` suffix for pre-releases (e.g., `1.2.0-rc.1`). Other suffixes may also be valid for pre-releases, but for consistency, use the `-rc.x` format . This is typically used when the stable version is close and you would like to expose the Catalog item already for testing or validation.
+- Each suffix identifier must contain **only ASCII alphanumeric characters and hyphens**. Numeric identifiers must not contain leading zeros.
 
-> [!NOTE]
-> Making a cumulative update is only relevant in **exceptional** cases, when a critical issue is discovered after a release has been deployed. A cumulative update replaces the affected release. Unlist the affected version and release the cumulative update with the same `A.B.C` version and an incremented CU number.
+- Use the `-CUx` suffix for **cumulative updates** (e.g., `1.2.3-CU1`). Making a cumulative update is only relevant in **exceptional** cases, when a critical issue is discovered after a release has been deployed. A cumulative update replaces the affected release. Unlist the affected version and release the cumulative update with the same `A.B.C` version and an incremented CU number.
 
-> [!TIP]
-> Update the version description according to the [best practices for cumulative update version descriptions](#version-descriptions-for-cumulative-updates).
+  > [!TIP]
+  > Also update the version description according to the [best practices for cumulative update version descriptions](#version-descriptions-for-cumulative-updates).
+
+- Use the `-rc.x` suffix for **pre-releases** (e.g., `1.2.0-rc.1`). Other suffixes may also be valid for pre-releases, but for consistency, use the `-rc.x` format. This is typically used when the stable version will be available soon, and you would like to expose the Catalog item already for testing or validation.
 
 #### Choosing the starting version
 
