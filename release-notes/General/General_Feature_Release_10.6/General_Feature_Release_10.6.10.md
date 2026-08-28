@@ -188,6 +188,14 @@ This will allow you to verify whether the property was enabled when the schedule
 
 The CloudStorageMigrationFinalize script, which should be run when [migrating existing data to STaaS](xref:Migrating_existing_data_to_STaaS), will now migrate all credentials stored in the Credentials Library.
 
+#### User-Defined APIs: Optional notice generation when token rate limits are reached [ID 46244]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+On `ApiToken` objects, you can now enable notice generation when a token reaches its configured rate limit by setting `ApiTokenRateLimit.GenerateNotice` to `true`.
+
+When enabled, one notice can be generated per token when its rate limit is reached. Notices are not cleared automatically. If you clear a notice manually and the token hits its rate limit again, a new notice can be generated.
+
 ### Fixes
 
 #### Agent element alarm and masking information could be out of sync after a Failover switch [ID 45601]
