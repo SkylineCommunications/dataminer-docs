@@ -23,6 +23,8 @@ For example, the DataMiner Fundamentals Certification is intended for DataMiner 
 
 Are you preparing to take the DataMiner Fundamentals or Configurator exam? Below you can find all the information you need, including the certification process, the exam format, the scoring criteria, and tips on how to prepare for the exam.
 
+![DataMiner certification guide for self-study path - Fundamentals & Configurator](~/dataminer/images/Certification_Guide_Fundamentals_Configurator.png)
+
 ### Certification process
 
 As soon as the ordering process is finalized and your certification process can be started, you will receive an automated email from Skyline Academy with information about the process and the deadline.
