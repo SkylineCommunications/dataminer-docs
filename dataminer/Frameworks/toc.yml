@@ -47,6 +47,8 @@ items:
             topicUid: ConnectivityDiscoveryScript
           - name: Implementing the Configuration Backup script
             topicUid: ConfigurationBackupScript
+          - name: Configuring the images shown for IDP
+            topicUid: Configuring_images_IDP
       - name: Reference
         topicUid: Reference1
         items:
