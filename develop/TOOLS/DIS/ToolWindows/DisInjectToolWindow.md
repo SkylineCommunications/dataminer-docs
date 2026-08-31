@@ -29,7 +29,7 @@ Go to the *Protocol* tab if you want to debug a connector QAction.
 
 ### Selecting an element from the connected DMA
 
-Use the selection box at the top of the window to select the element to be used during the debugging operation. This must be an element that uses the exact same protocol as the one you are currently editing.
+Use the dropdown box at the top of the window to select the element to be used during the debugging operation. This must be an element that uses the exact same protocol as the one you are currently editing.
 
 ### Manipulating the selected element
 
@@ -39,32 +39,32 @@ Below the element selection box you can find the element manipulation tool bar. 
 - Pause the element
 - Stop the element
 - Restart the element
-- Open the element in *Element Display* (no longer used)
 - Open the element in *DataMiner Cube*
 - Open the element’s log file.
 
   > [!NOTE]
   > If DIS is connected to a remote DataMiner Agent, then make sure the `C:\Skyline DataMiner\logging` folder on that DataMiner Agent is shared and accessible.
 
-### Linking temporary QAction projects to QActions in the protocol of the selected element
+### Linking QAction projects to QActions in the protocol of the selected element
 
-When you have selected an element in the element selection box, the *DIS Inject* window will list all QActions found in the protocol of the selected element, and will automatically link the temporary projects of the QActions that are being edited to the QActions in the list based on protocol name and QAction ID.
+When you have selected an element in the element selection box, the *DIS Inject* window will list all QActions found in the protocol of the selected element, and will automatically link the QAction projects to the QActions in the list based on protocol name and QAction ID.
 
-When, for example, you open a QAction with ID 12, then the temporary project will be named "QAction_12". By default, when you open the *DIS Inject* window while editing QAction 12, then the *Project* selection box in row 12 will be set to "QAction_12". If you want to override this default linking mechanism, and you want to link a different temporary project to a particular QAction, open the *Project* selection box, and select another project.
+> [!NOTE]
+> When you are debugging via a protocol XML file instead of a protocol Visual Studio solution, you will first need to click the edit icon on the QActions you want to debug. This results in DIS generating a temporary QAction project which can then be used in the Inject window.
 
 | If you click... | then... |
 |-----------------|---------|
-| the green plus, | you will replace (i.e., inject) the element's *QAction.dll* file (compiled in Release mode) with its counterpart found in the temporary QAction project (compiled in Debug mode). |
+| the green plus, | you will replace (i.e., inject) the element's *QAction.dll* file (compiled in Release mode) with its counterpart found in the temporary QAction project (compiled in Debug mode). Note: the injection is only done during the attach process. This is indicated in the status column with a *Pending* state. |
 | the red X, | you will sever the temporary link between the element and the *QAction.dll* compiled in Debug mode.<br> This will restore the link between the element and its original *QAction.dll* (compiled in Release mode). |
 | the yellow lightning bolt, | you will manually trigger the QAction by simulating a change of the parameter selected in the *Trigger ID* box (in case of a dynamic table parameter, use the *Trigger Key* box to specify the table row).<br>Only do this after you have attached the SLScripting process(es) to the Debugger. |
 
 ### Attaching the Microsoft Visual Studio Debugger to the DataMiner SLScripting process(es)
 
-After injecting the necessary *QAction.dll* files, you have to attach the Debugger to the SLScripting process(es).
+After selecting which QActions should be injected, you can now to attach the Debugger to the SLScripting process(es).
 
 | If you click... | then... |
 |-----------------|---------|
-| Attach | all temporary QAction projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLScripting process(es).<br>Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
+| Attach | all temporary QAction projects will be built, uploaded to the agent and injected. Finally, the Microsoft Visual Studio Debugger will be attached to the DataMiner SLScripting process(es).<br>Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
 | Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLScripting process(es). |
 
 ## Debugging an automation script
@@ -87,7 +87,7 @@ After linking the Exe block projects, assigning values to the script parameters,
 
 | If you click... | then... |
 |-----------------|---------|
-| Attach | all temporary Exe block projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLAutomation process.<br> Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
+| Attach | all selected Exe block projects will be built, uploaded to the agent and injected. Finally, the Microsoft Visual Studio Debugger will be attached to the DataMiner SLAutomation process.<br> Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
 | Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLAutomation process. |
 
 ### Triggering the automation script
