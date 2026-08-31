@@ -11,15 +11,17 @@ description: "Learn how to use the Generic Penalty Box app to track alarms in re
 
 The app consists of the following main components:
 
-1. [Real-time updates indicator](#real-time-updates-indicator) and [theme selector](#theme-selector).
+1. [Connection indicator](#connection-indicator) and [theme selector](#theme-selector).
 1. Toolbar with, from left to right, an indicator of the total number of items in alarm, a [severity filter](#severity-filter), [timeout visibility](#timeout-visibility-setting) checkbox, and [grouping selection box](#grouping-selection-box).
 1. Cards showing the items currently in an error, degraded, or alarm state. Clicking a card shows a [detail view](#detail-view). Depending on the configuration, cards can have an [external monitoring link](#external-monitoring-link).
 
-### Real-time updates indicator
+### Connection indicator
 
-The *Live*/*Offline* indicator in the header indicates whether the app currently shows real-time information.
+The *Live*/*Offline* indicator in the header indicates whether the app currently shows up-to-date information.
 
-Real-time updates are available when [realtime.enabled](xref:Generic_Penalty_Box_Configuration#realtime) is set to `true` in the *config.json* configuration. In this case, the app opens one WebSocket session per monitored element using the *Generic Parameter Webhook* GQI data source. Parameter value changes arrive within seconds and update card fields immediately, without waiting for the next polling cycle. A separate alarm page subscription updates severity and alarm counts. On a WebSocket disconnect, the app reconnects automatically after the configured `reconnectMs` interval.
+If real-time updates are enabled (with the [realtime.enabled](xref:Generic_Penalty_Box_Configuration#realtime) in *config.json*), the app opens one WebSocket session per monitored element using the *Generic Parameter Webhook* GQI data source. Parameter value changes arrive within seconds and update card fields immediately, without waiting for the next polling cycle. A separate alarm page subscription updates severity and alarm counts. On a WebSocket disconnect, the app will show *Offline*, and it will try to reconnect automatically after the configured `reconnectMs` interval.
+
+If real-time updates are not enabled, the indicator will show *Live* as long as the app is able to communicate with the DataMiner server.
 
 ### Theme selector
 
