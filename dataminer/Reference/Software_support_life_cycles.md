@@ -45,7 +45,7 @@ The following features currently have the "End of Engineering" status. They will
 
 | Item | Details | Future status |
 |------|---------|---------------|
-| [Atlassian Crowd authentication](xref:Configuring_Atlassian_Crowd_settings#authenticating-dataminer-users-against-an-atlassian-crowd-server) | This type of authentication will be deprecated. | End of Life to be confirmed. |
+| [Atlassian Crowd authentication](xref:Configuring_Atlassian_Crowd_settings#authenticating-dataminer-users-against-an-atlassian-crowd-server) | This type of authentication will be deprecated. | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Connectors: Display columns in tables | The [displayColumn attribute](xref:Protocol.Params.Param.ArrayOptions-displayColumn) should no longer be used in tables. | End of Life to be confirmed. |
 | Connectors: [dllName option in QAction options attribute](xref:Protocol.QActions.QAction-options#dllnamenamedll) | This option is superfluous and should no longer be used. | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | GQI in SLHelper | The [GQI DxM](xref:GQI_DxM) should be used instead. | End of Support as of DataMiner 10.7.x. |
@@ -56,7 +56,9 @@ The following features currently have the "End of Engineering" status. They will
 
 <!-- 
 When 10.7.0.x is released, add the following items:
+| Failover | End of Engineering as of DataMiner 10.7.x. | End of Engineering to be determined. |
 | Polling of data in DataMiner web apps | WebSockets will be used instead. | End of Support to be confirmed. |
+| SLNetPlugins | These should no longer be used. | End of Support to be confirmed. |
 | SLOffload tool | This tool is obsolete and cannot be used in systems with a Cassandra general database | End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Visual overviews in DataMiner web apps | The lightweight version of Visual Overview shown in DataMiner web apps is now considered legacy UI. [Several capabilities](xref:DashboardVisualOverview#unsupported-capabilities) of Visual Overview in Cube are not supported in the web apps. | End of Support to be confirmed. | -->
 
@@ -69,7 +71,7 @@ The following features currently have the "End of Support" status. They will no 
 | Asset Manager | End of Support as of DataMiner 10.6.x. Module is being retired. | End of Life to be confirmed. |
 | Logger tables with autoincrement option | See [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement). | End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Legacy Reporter & Dashboards | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner 10.7.x (Q4 2026). |
-| Legacy reservations | The legacy type of reservation used prior to DataMiner 9.5.3/9.6.0 (RN 15180) is obsolete and should no longer be used. | End of Life as of DataMiner 10.6.0 (Q1 2026). |
+| [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) option | | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | Query executor | Tool is being retired. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | [SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service) | This configuration is obsolete and should not be used. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | Use of JScript in QActions | C# should be used instead. JScript in QActions cannot be used on Windows Server 2025. | End of Life as of DataMiner 10.7.x (Q4 2026). |
@@ -85,6 +87,7 @@ The following features currently have the "End of Life" status. They are no long
 | Child bookings | End of Life as of DataMiner 10.5.x. Child bookings have been retired, as the same functionality is supported with contributing bookings |
 | Jobs app | End of Life as of DataMiner 10.5.x. |
 | Legacy Correlation Engine | End of Life as of DataMiner 10.5.x. This only applies to the legacy System Display Correlation engine. |
+| Legacy reservations | The legacy type of reservation used prior to DataMiner 9.5.3/9.6.0 (RN 15180) is obsolete and should no longer be used. |
 | OPC communication | OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector. |
 | Recurring bookings | End of Life as of DataMiner 10.5.x. Recurring bookings have been retired. Instead, we suggest duplicating the previous occurrence of the booking. |
 | Ticketing app | End of Life as of DataMiner 10.6.x. Replaced by the [Ticketing Standard Solution](https://catalog.dataminer.services/details/c132decf-b918-4ee2-be25-1302f41e7705). |
@@ -99,6 +102,9 @@ When 10.7.0.x is released, add the following item:
 
 ## Third-party software support lifecycle
 
+> [!IMPORTANT]
+> As a rule, Skyline supports the third-party software (e.g., Cassandra, OpenSearch) that is currently supported by its vendor. Consequently, when a third-party vendor ends support for a version, DataMiner support for that version also ends.
+
 > [!NOTE]
 > For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports.
 
@@ -108,8 +114,12 @@ The following features currently have the "End of Engineering" status. They will
 
 | Item | Details | Future status |
 |------|---------|---------------|
-| Support for Cassandra Single | Support will end for setups where each DMA has its own Cassandra database. Instead we recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [dedicated clustered storage](xref:Dedicated_clustered_storage) instead. | End of support as of DataMiner 10.7.x (Q4 2026). |
-| Support for Elasticsearch 6.8 | As Elastic no longer supports Elasticsearch 6.8 (or lower), support for this will also end in DataMiner. We highly recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [OpenSearch](xref:OpenSearch_database) instead. | End of support as of DataMiner 10.7.x (Q4 2026). |
+| Support for Cassandra Single | Support will end for setups where each DMA has its own Cassandra database. Instead we recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [dedicated clustered storage](xref:Dedicated_clustered_storage) instead. | End of Support as of DataMiner 10.8.x (Q4 2027). |
+
+<!-- 
+When 10.7.0.x is released, add the following item:
+| Oracle offload database | As an alternative, use file offloads together with a bespoke script or tool that offloads these to an Oracle database | End of Life as of DataMiner 10.8 |
+-->
 
 ### End of Support
 
@@ -117,8 +127,7 @@ The following features currently have the "End of Support" status. They will no 
 
 | Item | Details | Future status |
 |------|---------|---------------|
-| Support for Cassandra versions prior to 4.x |Cassandra versions older than Cassandra 4.x are no longer supported on any operating system.| End of Life as of DataMiner 10.7.x (Q4 2026).|
-| Support for MySQL as local database | End of Support as of DataMiner 10.6.x. Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage). | End of Life to be confirmed. |
+| Support for MySQL as local database | End of Support as of DataMiner 10.6.x. Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage). | End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Support for overlays of type 'kml' | As Google has deprecated KML layer support, [KML overlays](xref:Layer_types#overlays-of-type-kml) used in both the [maps component](xref:DashboardMaps) and the [Maps add-on module](xref:About_DMS_Maps) will also no longer be available. We recommend switching to [GeoJSON overlays](xref:Layer_types#overlays-of-type-geojson). | End of Life:<br> - August 2026 for systems running DataMiner versions below 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<br>- May 2027 for DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 and later |
 | Two-site redundant indexing clusters | This setup should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS). | End of Life as of DataMiner 10.7.x (Q4 2026).|
 
@@ -132,7 +141,6 @@ The following features currently have the "End of Life" status. They are no long
 | Support for Cassandra database on Windows OS | Cassandra databases are no longer supported on Windows. We recommend moving to a Linux system, using [Ubuntu LTS](https://catalog.dataminer.services/details/c6285161-e8c7-4be3-a8b3-20259b20815b). |
 | Support for DataMiner Cube running in Internet Explorer/Edge in IE compatibility mode (XBAP) | End of Life as of DataMiner 10.3.x. |
 | Support for MSSQL as local database | End of Life as of DataMiner 10.3.x. We recommend switching to [Storage as a Service](xref:STaaS). |
-| Support for OpenSearch 1.x | OpenSearch 1.x reached community end of life on May 6, 2025 and should no longer be used. |
 | Support for Visual Studio 2015 | End of Life as of DIS 2.35. DIS will no longer be compatible with this Visual Studio version. |
 | Support for Visual Studio 2017 | End of Life as of DIS 2.41. DIS will no longer be compatible with this Visual Studio version. |
 | Support for Visual Studio 2019 | End of Life as of DIS 3.0. DIS will no longer be compatible with this Visual Studio version. |
@@ -168,24 +176,26 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 - **End of Life - Legacy reservations**: The legacy type of reservation used prior to DataMiner 9.5.3/9.6.0 (RN 15180) is obsolete and should no longer be used.
 - **End of Support – MySQL as local database**: Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage).
 - **End of Engineering – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.
+- **End of Support - [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) option**
 - **End of Life – Ticketing app**: Replaced by the [Ticketing Standard Solution](https://catalog.dataminer.services/details/c132decf-b918-4ee2-be25-1302f41e7705).
 
 ### DataMiner 10.7
 
 - **End of Life – .NET Remoting**: To improve security, gRPC must be used instead of .NET Remoting. For details, see [DataMiner Agent hardening](xref:DataMiner_hardening_guide#dataminer-agent-hardening).
-- **End of Support – Cassandra Single**: Support will end for setups where each DMA has its own Cassandra database. Instead we recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [dedicated clustered storage](xref:Dedicated_clustered_storage) instead.
-- **End of Life – Cassandra versions prior to 4.x**: Cassandra versions older than Cassandra 4.x are no longer supported on any operating system.
+- **End of Support - [Atlassian Crowd authentication](xref:Configuring_Atlassian_Crowd_settings#authenticating-dataminer-users-against-an-atlassian-crowd-server)**: This type of authentication will be deprecated.
 - **End of Support – Connectors: [dllName option in QAction options attribute](xref:Protocol.QActions.QAction-options#dllnamenamedll)**: This option is superfluous and should no longer be used.
-- **End of Support – Elasticsearch 6.8**: As Elastic no longer supports Elasticsearch 6.8 (or lower), support for this will also end in DataMiner. We highly recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [OpenSearch](xref:OpenSearch_database) instead.
+- **End of Engineering – Failover**: This feature will be replaced by [Swarming](xref:Swarming).
 - **End of Support – GQI in SLHelper**: The [GQI DxM](xref:GQI_DxM) should be used instead.
 - **End of Life – Legacy Reporter & Dashboards**: No longer available from this version onwards. Use the new DataMiner Dashboards app instead.
 - **End of Support – [Logger tables of type DirectConnection with a primary key](xref:AdvancedLoggerTablesDefiningDirectConnectionTable)**
-- **End of Life – OpenSearch 1.0**: OpenSearch 1.x reached community end of life on May 6, 2025 and should no longer be used.
+- **End of Engineering – Oracle offload database**: As an alternative, use file offloads together with a bespoke script or tool that offloads these to an Oracle database.
 - **End of Support – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.
 - **End of Engineering – Polling of data in DataMiner web apps**: WebSockets will be used instead.
+- **End of Life - [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) option**
 - **End of Life - Query executor**: No longer available from this version onwards.
 - **End of Support – [Radius authentication](xref:Configuring_RADIUS_settings)**: This type of authentication is deprecated and has inherent flaws. We recommend using a different type of authentication instead.
 - **End of Engineering – SLOffload tool**: This tool is obsolete and cannot be used in systems with a Cassandra general database.
+- **End of Engineering – SLNetPlugins**: These should no longer be used.
 - **End of Life – [SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service)**: This configuration is obsolete and should not be used.
 - **End of Life – Two-site redundant indexing clusters**: This setup should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS).
 - **End of Life – Use of JScript in QActions**: C# should be used instead. JScript in QActions cannot be used on Windows Server 2025.
@@ -194,9 +204,13 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 
 ### DataMiner 10.8
 
+- **End of Life - [Atlassian Crowd authentication](xref:Configuring_Atlassian_Crowd_settings#authenticating-dataminer-users-against-an-atlassian-crowd-server)**: This type of authentication will be deprecated.
+- **End of Support – Cassandra Single**: Support will end for setups where each DMA has its own Cassandra database. Instead we recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [dedicated clustered storage](xref:Dedicated_clustered_storage) instead.
 - **End of Life – Connectors: [dllName option in QAction options attribute](xref:Protocol.QActions.QAction-options#dllnamenamedll)**
 - **End of Life – [Logger tables of type DirectConnection with a primary key](xref:AdvancedLoggerTablesDefiningDirectConnectionTable)**
 - **End of Life – Logger tables with [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) option**
+- **End of Life – MySQL as local database**: You will need to switch to [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage).
+- **End of Life – Oracle offload database**: As an alternative, use file offloads together with a bespoke script or tool that offloads these to an Oracle database.
 - **End of Life – Pivot table and Group components**: No longer available from this version onwards.
 - **End of Life – [Radius authentication](xref:Configuring_RADIUS_settings)**
 - **End of Life – SLOffload tool**: This tool is obsolete and cannot be used in systems with a Cassandra general database.

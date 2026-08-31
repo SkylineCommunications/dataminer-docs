@@ -4,6 +4,9 @@ uid: Standalone_Cassandra_Backup_Tool
 
 # Standalone Cassandra Backup tool
 
+> [!IMPORTANT]
+> This tool is deprecated. It was designed to work with a version of Cassandra that is currently no longer supported.
+
 The *StandaloneCassandraBackup.exe* tool can be used by an administrator to take a backup of a Cassandra database (either a single node or a cluster).
 
 From DataMiner 10.1.8 onwards, this tool is available on each DMA server in the folder `C:\Skyline DataMiner\Tools`. As it only affects Cassandra files, it can be used on any DataMiner system regardless of version.

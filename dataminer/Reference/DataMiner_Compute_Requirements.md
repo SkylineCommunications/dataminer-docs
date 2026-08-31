@@ -151,7 +151,7 @@ Cassandra nodes must be hosted on Linux. For small-scale setups, Cassandra can b
 
 #### Cassandra software
 
-The minimum supported Cassandra version is **3.11**. Cassandra 3.11 remains supported for existing DataMiner setups, as do intermediate versions including 4.0.x and 4.1.x. However, Cassandra **5.0** is the recommended version for all new setups.
+For all supported DataMiner versions, we support all Cassandra versions that Apache Cassandra currently supports. At the moment, Cassandra **5.0** is the recommended version.
 
 > [!IMPORTANT]
 >
@@ -206,6 +206,12 @@ Several DataMiner features are only available if your data storage setup include
 
 > [!IMPORTANT]
 > Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any OpenSearch or Elasticsearch nodes.
+
+#### OpenSearch software
+
+For all supported DataMiner versions, we support all OpenSearch versions currently supported by the OpenSearch Software Foundation. At the moment, OpenSearch **3.0** is the recommended version.
+
+Any Elasticsearch versions that are currently supported by Elastic can also be used, but this is not recommended.
 
 #### RAM
 
