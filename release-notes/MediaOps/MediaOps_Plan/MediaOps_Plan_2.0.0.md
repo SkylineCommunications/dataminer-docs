@@ -196,6 +196,12 @@ In the Scheduling app, when you create a job from the *Resource View* page, it i
 
 Workflow selection remains available when you create a job from the *Job Overview* page.
 
+#### Resource Studio: Synchronization enhancements [ID 46325]
+
+The synchronization script in Resource Studio has been extended so you can now choose exactly which resources or resource pools to synchronize again. Previously, synchronization retries were all-or-nothing.
+
+In addition, the DevPack (NuGet) has been extended with synchronization methods on `IResourcePoolRepository`.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
