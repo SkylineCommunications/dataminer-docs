@@ -81,13 +81,13 @@ To create a new line in the *CREDENTIALS* section:
 
 You can then further specify the credential properties in the *CREDENTIALS* section:
 
-1. To change the name of the credential, enter a new name next to *Credential*.
+1. To change the name of the credential, enter a new name next to *Name*.
 
-1. Select a type of credential from the dropdown list next to *Type*. The available types are:
-   - *Username and password*: a username and password combination.
-   - *Token*: a token stored in the credential library.
+1. Select a type of credentials from the Credentials Library using the dropdown list next to *Type*. The available types are:
+   - *Username and password*: Credentials consisting of a username and password.
+   - *Token*: Credentials consisting of a token only
 
-1. Select a credential from the dropdown list. The dropdown list will show all credentials of the selected type that the current user has access to. If the user does not have access to any credentials of the selected type, the dropdown list will be empty.
+1. Select a credential from the dropdown list. The dropdown list will show all credentials of the selected type that the current user has access to.
 
 > [!NOTE]
 >
