@@ -75,7 +75,7 @@ Every request that can be linked to a token counts toward that token's rate limi
 
 #### Generating a notice when the limit is exceeded
 
-From DataMiner 10.6.11/10.7.0 onwards<!-- RN 46244 -->, it is also possible to enable notice generation by setting `GenerateNotice` to `true` on the `ApiTokenRateLimit` of a token via the API.
+From DataMiner 10.6.10/10.7.0 onwards<!-- RN 46244 -->, it is also possible to enable notice generation by setting `GenerateNotice` to `true` on the `ApiTokenRateLimit` of a token via the API.
 
 When the rate limit is hit on an endpoint, the *UserDefinableApiEndpoint* DxM sends a notification to the DataMiner Agent (DMA) on the same server or virtual machine. The DMA then generates a notice.
 
