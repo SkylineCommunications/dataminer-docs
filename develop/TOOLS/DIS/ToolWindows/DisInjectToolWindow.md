@@ -39,12 +39,8 @@ Below the element selection box you can find the element manipulation tool bar. 
 - Pause the element
 - Stop the element
 - Restart the element
-- Open the element in *Element Display* (no longer used)
 - Open the element in *DataMiner Cube*
-- Open the element’s log file.
-
-  > [!NOTE]
-  > If DIS is connected to a remote DataMiner Agent, then make sure the `C:\Skyline DataMiner\logging` folder on that DataMiner Agent is shared and accessible.
+- Open the element's log file.
 
 ### Linking temporary QAction projects to QActions in the protocol of the selected element
 
@@ -54,17 +50,26 @@ When, for example, you open a QAction with ID 12, then the temporary project wil
 
 | If you click... | then... |
 |-----------------|---------|
-| the green plus, | you will replace (i.e., inject) the element's *QAction.dll* file (compiled in Release mode) with its counterpart found in the temporary QAction project (compiled in Debug mode). |
-| the red X, | you will sever the temporary link between the element and the *QAction.dll* compiled in Debug mode.<br> This will restore the link between the element and its original *QAction.dll* (compiled in Release mode). |
+| the green plus, | the project is marked as *Pending (on attach)*. The project is not built immediately. The *Status* column shows this pending state. |
+| the red X, | you eject the inject. If the project has not yet been attached, no remote agent interaction occurs. If already attached, this severs the temporary link between the element and the *QAction.dll* compiled in Debug mode, restoring the link to the original release DLL. |
 | the yellow lightning bolt, | you will manually trigger the QAction by simulating a change of the parameter selected in the *Trigger ID* box (in case of a dynamic table parameter, use the *Trigger Key* box to specify the table row).<br>Only do this after you have attached the SLScripting process(es) to the Debugger. |
 
 ### Attaching the Microsoft Visual Studio Debugger to the DataMiner SLScripting process(es)
 
-After injecting the necessary *QAction.dll* files, you have to attach the Debugger to the SLScripting process(es).
+After marking the necessary QAction projects for injection, you can attach the Debugger. When you click *Attach*, DIS performs the following steps in sequence, showing progress for each:
+
+1. Compiles all injected projects.
+1. Creates a DMapp package containing the resulting DLL and PDB files.
+1. Uploads the DMapp package to the DataMiner Agent.
+1. Sends inject requests to DataMiner.
+1. Attaches the Microsoft Visual Studio Debugger to the SLScripting process(es).
+
+> [!NOTE]
+> DIS deletes any existing DLL file before rebuilding a project. If the build fails, a message is shown and the process is stopped.
 
 | If you click... | then... |
 |-----------------|---------|
-| Attach | all temporary QAction projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLScripting process(es).<br>Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
+| Attach | all pending QAction projects are built, uploaded via a DMapp package, injected, and the Microsoft Visual Studio Debugger is attached to the DataMiner SLScripting process(es).<br>Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
 | Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLScripting process(es). |
 
 ## Debugging an automation script
