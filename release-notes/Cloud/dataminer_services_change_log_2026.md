@@ -9,11 +9,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 01 September 2026 - New feature - Catalog - Custom tags for individual versions
+### 1 September 2026 - New feature - Catalog - Custom tags for individual versions
 
 Custom tags can now be added, updated, and removed for individual Catalog item versions. These tags are displayed alongside version range tags on recommended versions.
 
-### 01 September 2026 - Enhancement - Admin - Improved DxM version sorting
+### 1 September 2026 - Enhancement - Admin - Improved DxM version sorting
 
 DxM versions are now sorted according to semantic version precedence.
 
