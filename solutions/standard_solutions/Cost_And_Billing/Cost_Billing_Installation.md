@@ -9,7 +9,7 @@ description: "Learn how to install Cost & Billing, including prerequisites, core
 
 Before installing the solution, make sure the following requirements are met:
 
-- **DataMiner 10.6.4** or higher is installed.
+- **DataMiner 10.6.0** or higher is installed.
 - The [GQI DxM](xref:GQI_DxM) is installed and running.
 - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) version **2.1.1** or higher is installed.
 
@@ -28,7 +28,9 @@ This will deploy the following components:
 
 ## Installing the MediaOps sample integration
 
-If the sample integration with **MediaOps Plan** is required, the following components must also be deployed:
+If the sample integration with **MediaOps Plan** is required, **DataMiner 10.6.4** or higher must be installed installed.
+
+The following components are required:
 
 - The [MediaOps Plan](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) package, version **1.6.0** or higher.
 
