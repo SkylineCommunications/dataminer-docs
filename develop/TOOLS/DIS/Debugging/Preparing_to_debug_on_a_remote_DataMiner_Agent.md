@@ -29,12 +29,9 @@ Proceed as follows if you want to debug a QAction or an automation script locate
 
 1. Run Visual Studio as an Administrator.
 
-1. Make sure that, in the *DMA* tab of the *DIS Settings* window, you have added the DataMiner Agent with the correct user account and that, in its *Debugging* tab, you have selected the *Enable remote debugging* option and configured the *Debugger qualifier* setting.
+1. Make sure that, in the [DMA](xref:DIS_settings#dma) tab of the *DIS Settings* window, you have added the DataMiner Agent with the correct user account and that, in its *Debugging* tab, you have configured the following settings:
 
-   | Setting | Description |
-   | --- | --- |
-   | Debugger qualifier | The qualifier supplied by Remote Debugging Monitor (msvsmon.exe) in a log entry at startup.<br>Format: `dmaname:ipport`<br>Default port: 4026 |
-
-   See [DMA](xref:DIS_settings#dma)
+   - *Enable remote debugging* must be selected.
+   - *Debugger qualifier* must be set to the qualifier supplied by the Remote Debugging Monitor (msvsmon.exe) in a log entry at startup. Format: `dmaname:ipport`. Default port: 4026.
 
 You are now ready to start debugging. See [Debugging a connector](xref:Debugging_a_connector) or [Debugging an automation script](xref:Debugging_an_Automation_script).
