@@ -13,8 +13,8 @@ Other data storage solutions can be added optionally, for example to offload dat
 |-------------|--------|
 | [Storage as a Service (STaaS)](xref:STaaS) | Recommended |
 | [Dedicated clustered storage](xref:Dedicated_clustered_storage) | Supported, but **not recommended** |
-| [Separate Cassandra setup with indexing](xref:Separate_Cassandra_setup_with_Elasticsearch) | Still supported, but **not recommended** |
-| [Separate Cassandra setup without indexing](xref:Separate_Cassandra_setup_without_Elasticsearch) | Still supported, but **not recommended** |
+| [Separate Cassandra setup with indexing](xref:Separate_Cassandra_setup_with_Elasticsearch) | Deprecated. |
+| [Separate Cassandra setup without indexing](xref:Separate_Cassandra_setup_without_Elasticsearch) | Deprecated. |
 | [Legacy setup with MySQL or MSSQL database](xref:Legacy_setup_with_MySQL_or_MSSQL_database) | Legacy |
 
 > [!NOTE]

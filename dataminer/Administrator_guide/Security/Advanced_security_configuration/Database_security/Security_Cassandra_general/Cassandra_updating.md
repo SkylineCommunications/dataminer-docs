@@ -13,7 +13,7 @@ Doing a rolling upgrade basically means:
 1. Move to the next one.
 
 > [!IMPORTANT]
-> When going from one major range to another (e.g., from 3.x to 4.x), it is best practice to first upgrade to the latest version in the current range before going to the new range.
+> When going from one major range to another (e.g., from 4.x to 5.x), it is best practice to first upgrade to the latest version in the current range before going to the new range.
 
 > [!TIP]
 > If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
@@ -29,10 +29,8 @@ To check the Cassandra version, go to `C:\Program Files\Cassandra\bin` and execu
 
    `.\nodetool version`
 
-With recent DataMiner versions, in case a Cassandra database per Agent is used, **Cassandra 3.11** is installed by default, but Cassandra 4.0 is also supported (and even recommended in case the database consists of multiple nodes). If a Cassandra database per cluster is used, Cassandra 3.11 remains supported for existing installations, but 4.0 is highly recommended and is the minimum supported version for new installations.
-
 > [!NOTE]
-> Cassandra 4.0 **no longer supports Windows**. This means that extra Linux servers will be required to host the Cassandra database.
+> Cassandra 4.0 **no longer supports Windows**. To upgrade a legacy setup that was still hosted on Windows, you will need extra Linux servers.
 
 ## Updating the Cassandra version
 

@@ -56,7 +56,7 @@ The following features currently have the "End of Engineering" status. They will
 
 <!-- 
 When 10.7.0.x is released, add the following items:
-| Failover | End of Engineering as of DataMiner 10.7.x. | End of Engineering to be determined. |
+| Failover | End of Engineering as of DataMiner 10.7.x. | End of Support to be confirmed. |
 | Polling of data in DataMiner web apps | WebSockets will be used instead. | End of Support to be confirmed. |
 | SLNetPlugins | These bespoke plugins for SLNet should no longer be used. | End of Support to be confirmed. |
 | SLOffload tool | This tool is obsolete and cannot be used in systems with a Cassandra general database | End of Life as of DataMiner 10.8.x (Q4 2027). |
