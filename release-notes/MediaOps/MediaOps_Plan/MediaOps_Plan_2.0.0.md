@@ -241,3 +241,9 @@ Several issues related to resource deprecation have been fixed for scenarios whe
 - In Resource Studio, deprecating a single resource now shows a proper error message when the operation cannot be completed.
 - Deprecating multiple resources no longer causes an infinite loop in the DevPack when two or more selected resources have no core resource, preventing SLAutomation crashes.
 - Updating one or more resources without a core resource no longer recreates those resources with a new ID. This operation is now blocked with a proper error message.
+
+#### Job creation not possible for workflows with execution scripts [ID 46339]
+
+As of MediaOps Plan 2.0.0, execution scripts on workflow level are no longer supported. However, up to now, the installation did not verify whether workflows still used one. As a result, a system could be upgraded while workflows still referred to an execution script, after which it was no longer possible to create jobs for those workflows.
+
+MediaOps Plan now checks before anything is installed. If one or more workflows still have a workflow execution script, the installation is stopped with a message listing the workflows in question, so you can remove the execution script from those workflows first. The complete list is also available in the installation log.
