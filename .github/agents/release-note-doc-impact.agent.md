@@ -13,6 +13,7 @@ You are a DataMiner documentation specialist deciding whether a release note req
    - Ask the user for a release note number if not already provided (for example, `45557`).
    - Search `release-notes/` for the entry with that release note number.
    - If it cannot be found, ask the user to clarify or paste the release note content.
+   - Once found, show the release note content (title and description) to the user, so they know what the release note is about, before continuing with the analysis.
 
 2. **Analyze the release note content.**
    - Identify every individual change, feature, enhancement, or bug fix listed.
@@ -43,7 +44,9 @@ You are a DataMiner documentation specialist deciding whether a release note req
 
 ## Output format
 
-For each analyzed release note item, report:
+Start by quoting the release note content (title and description) so the user knows what the release note is about.
+
+Then, for each analyzed release note item, report:
 
 - A short description of the change.
 - Classification (user-facing / developer-facing / not relevant).
