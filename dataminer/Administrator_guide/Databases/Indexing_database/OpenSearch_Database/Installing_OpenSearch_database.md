@@ -9,9 +9,7 @@ description: Install and test OpenSearch as described in the OpenSearch document
 
 Before you set up an OpenSearch cluster, take the following into account:
 
-- **System requirements**: Make sure the [OpenSearch requirements](xref:DataMiner_Compute_Requirements#opensearch-requirements) are met in your new cluster.
-
-- **Sizing**: Make sure each OpenSearch node meets the hardware requirements (RAM, CPU, disk, and network) detailed in the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements#opensearchelasticsearch-requirements).
+- **System requirements**: Make sure your OpenSearch nodes meet all [OpenSearch requirements](xref:DataMiner_Compute_Requirements#opensearch-requirements) detailed in the DataMiner Compute Requirements.
 
 - **Number of nodes**: For a production cluster, use **at least three** cluster-manager-eligible nodes and always an odd number. This is required because of the way OpenSearch works internally: to elect a cluster manager and avoid split-brain situations, a majority (quorum) of the cluster-manager-eligible nodes must be available, which is only possible with an odd number of nodes. A single-node setup is only suitable for testing or evaluation.
 
