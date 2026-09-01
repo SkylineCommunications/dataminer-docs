@@ -1,5 +1,6 @@
 ---
 uid: QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration
+description: Learn how to create a QAOps-hosted configuration in the QAOps Operator app, from choosing test suites and run retention to provisioning DaaS servers.
 ---
 
 # Creating a QAOps configuration
@@ -45,7 +46,7 @@ Expected duration: 10 minutes.
 
 ## Step 2: Choose the configuration type and enter the basics
 
-1. In the *Configuration Type* dropdown, select **QAOps-hosted**.
+1. In the *Configuration Type* dropdown, select *QAOps-hosted*.
 
    ![Configuration Type dropdown](~/develop/images/QAOps_Operator_CreateConfiguration_TypeDropdown.png)
 
@@ -53,9 +54,9 @@ Expected duration: 10 minutes.
 
    - *Self-hosted*: You connect your own DataMiner servers to QAOps. See [Adding self-hosted DataMiner servers](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Add_Self_Hosted_Servers).
 
-1. Enter a **Name** for the configuration, for example the name of your project or solution.
+1. Enter a *Name* for the configuration, for example the name of your project or solution.
 
-1. Enter a **Description** that tells other operators what this configuration is used for.
+1. Enter a *Description* that tells other operators what this configuration is used for.
 
    ![Create Configuration dialog with basics filled in](~/develop/images/QAOps_Operator_CreateConfiguration_Filled.png)
 
@@ -68,11 +69,11 @@ Expected duration: 10 minutes.
    > [!IMPORTANT]
    > Removing a test suite later will completely clear the current test-run history for this configuration from process memory. Only select the test suites you need.
 
-1. In the *Test Runs To Keep* box, enter how many test runs (and their results) QAOps should keep in memory for this configuration. The maximum is 499.
+1. In the *Test Runs To Keep* box, enter how many test runs (and their results) QAOps should keep in memory for this configuration.
 
-   Set this to the lowest number you need to validate your quality gates and debug issues. Keep the product of the number of test suites and the number of test runs to keep well below 500.
+   Set this to the lowest number you need to validate your quality gates and debug issues. Keep the product of the number of test suites and the number of test runs to keep well below 500. The maximum is 499.
 
-1. Under *Global Categories*, optionally select one or more categories (e.g. *Standard Solutions*).
+1. Under *Global Categories*, optionally select one or more categories (e.g., *Standard Solutions*).
 
    These categories power the filter buttons in the header bar of the QAOps apps, making your configuration easier to find.
 
@@ -100,7 +101,7 @@ Because you selected *QAOps-hosted*, the dialog shows a *QAOps-Hosted Provisioni
 
 ## Step 5: Save the configuration
 
-1. Click **Save Configuration** at the bottom of the dialog.
+1. Click *Save Configuration* at the bottom of the dialog.
 
 1. Watch the *Status* box below the button. When the configuration has been created successfully, this is confirmed there.
 
