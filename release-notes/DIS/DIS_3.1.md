@@ -20,9 +20,9 @@ When publishing an install script from a package solution, the version of the re
 
 The DIS Inject functionality has been reworked to simplify remote debugging setup:
 
-- DLL and program database (PDB) files are now uploaded to the DataMiner Agent through a DMapp package, removing the need to configure a shared folder on the remote agent.
+- When performing remote debugging, DLL files are now uploaded to the DataMiner Agent through a DMapp package, removing the need to configure a shared folder on the remote agent.
 - As a result, the *Publish path* and *Path on DataMiner* settings have been removed from the *Settings > DMA > Debugging* window. Only the *Debugger qualifier* setting remains. The default value of this setting has been updated to reference port 4026, which is the default port for remote debugging with VS2026.
-- The inject workflow has changed: when you click the inject icon (green + icon), the project is no longer built immediately. Instead, a *Pending (on attach)* status is shown in a new status column. All injected projects are built when you click *Attach*. At that point, DIS compiles the projects, creates a DMapp package with all resulting DLL and PDB files, uploads the DMapp, and sends inject requests to DataMiner.
+- The inject workflow has changed: when you click the inject icon (green '+' icon), the project is no longer built immediately. Instead, a *Pending (on attach)* status is shown in a new status column. All injected projects are built when you click *Attach*. At that point, DIS compiles the projects, creates a DMapp package with all resulting DLL files, uploads the DMapp, and sends inject requests to DataMiner.
 - You can eject a pending inject without any interaction with the remote agent.
 - The *Attach* operation now shows progress for each step: compiling projects, uploading via DMapp, injecting, and attaching to the process.
 - The link to open the element in *Element Display* has been removed.
