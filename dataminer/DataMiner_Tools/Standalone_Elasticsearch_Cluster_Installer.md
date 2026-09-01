@@ -4,7 +4,7 @@ uid: Standalone_Elasticsearch_Cluster_Installer
 # Standalone Elasticsearch Cluster Installer
 
 > [!IMPORTANT]
-> This tool is deprecated. It was designed to work with a version of Elasticsearch that is currently no longer supported.
+> This tool is deprecated. Support for Elasticsearch ends in DataMiner 10.7.x. We recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-managed storage even though this is not recommended, using [OpenSearch](xref:OpenSearch_database).
 
 ## About this tool
 
