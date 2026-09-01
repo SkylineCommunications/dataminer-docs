@@ -115,6 +115,7 @@ The following features currently have the "End of Engineering" status. They will
 | Item | Details | Future status |
 |------|---------|---------------|
 | Support for Cassandra Single | Support will end for setups where each DMA has its own Cassandra database. Instead we recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [dedicated clustered storage](xref:Dedicated_clustered_storage) instead. | End of Support as of DataMiner 10.8.x (Q4 2027). |
+| Support for Elasticsearch 6.8 | As Elastic no longer supports Elasticsearch 6.8 (or lower), support for this will also end in DataMiner. We highly recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [OpenSearch](xref:OpenSearch_database) instead. | End of support as of DataMiner 10.7.x (Q4 2026). |
 
 <!-- 
 When 10.7.0.x is released, add the following item:
@@ -184,6 +185,7 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 - **End of Life – .NET Remoting**: To improve security, gRPC must be used instead of .NET Remoting. For details, see [DataMiner Agent hardening](xref:DataMiner_hardening_guide#dataminer-agent-hardening).
 - **End of Support - [Atlassian Crowd authentication](xref:Configuring_Atlassian_Crowd_settings#authenticating-dataminer-users-against-an-atlassian-crowd-server)**: This type of authentication will be deprecated.
 - **End of Support – Connectors: [dllName option in QAction options attribute](xref:Protocol.QActions.QAction-options#dllnamenamedll)**: This option is superfluous and should no longer be used.
+- **End of Support – Elasticsearch 6.8**: As Elastic no longer supports Elasticsearch 6.8 (or lower), support for this will also end in DataMiner. We highly recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [OpenSearch](xref:OpenSearch_database) instead.
 - **End of Engineering – Failover**: This feature will be replaced by [Swarming](xref:Swarming).
 - **End of Support – GQI in SLHelper**: The [GQI DxM](xref:GQI_DxM) should be used instead.
 - **End of Life – Legacy Reporter & Dashboards**: No longer available from this version onwards. Use the new DataMiner Dashboards app instead.
