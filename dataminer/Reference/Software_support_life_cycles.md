@@ -58,7 +58,7 @@ The following features currently have the "End of Engineering" status. They will
 When 10.7.0.x is released, add the following items:
 | Failover | End of Engineering as of DataMiner 10.7.x. | End of Engineering to be determined. |
 | Polling of data in DataMiner web apps | WebSockets will be used instead. | End of Support to be confirmed. |
-| SLNetPlugins | These should no longer be used. | End of Support to be confirmed. |
+| SLNetPlugins | These bespoke plugins for SLNet should no longer be used. | End of Support to be confirmed. |
 | SLOffload tool | This tool is obsolete and cannot be used in systems with a Cassandra general database | End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Visual overviews in DataMiner web apps | The lightweight version of Visual Overview shown in DataMiner web apps is now considered legacy UI. [Several capabilities](xref:DashboardVisualOverview#unsupported-capabilities) of Visual Overview in Cube are not supported in the web apps. | End of Support to be confirmed. | -->
 
@@ -71,7 +71,7 @@ The following features currently have the "End of Support" status. They will no 
 | Asset Manager | End of Support as of DataMiner 10.6.x. Module is being retired. | End of Life to be confirmed. |
 | Logger tables with autoincrement option | See [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement). | End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Legacy Reporter & Dashboards | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner 10.7.x (Q4 2026). |
-| [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) option | | End of Life as of DataMiner 10.7.x (Q4 2026). |
+| [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) option | This feature does not work correctly and should no longer be used. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | Query executor | Tool is being retired. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | [SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service) | This configuration is obsolete and should not be used. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | Use of JScript in QActions | C# should be used instead. JScript in QActions cannot be used on Windows Server 2025. | End of Life as of DataMiner 10.7.x (Q4 2026). |
@@ -176,7 +176,7 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 - **End of Life - Legacy reservations**: The legacy type of reservation used prior to DataMiner 9.5.3/9.6.0 (RN 15180) is obsolete and should no longer be used.
 - **End of Support – MySQL as local database**: Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage).
 - **End of Engineering – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.
-- **End of Support - [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) option**
+- **End of Support - [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) option**: This feature does not work correctly and should no longer be used.
 - **End of Life – Ticketing app**: Replaced by the [Ticketing Standard Solution](https://catalog.dataminer.services/details/c132decf-b918-4ee2-be25-1302f41e7705).
 
 ### DataMiner 10.7
@@ -191,11 +191,11 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 - **End of Engineering – Oracle offload database**: As an alternative, use file offloads together with a bespoke script or tool that offloads these to an Oracle database.
 - **End of Support – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.
 - **End of Engineering – Polling of data in DataMiner web apps**: WebSockets will be used instead.
-- **End of Life - [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) option**
+- **End of Life - [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) option**: This feature does not work correctly and should no longer be used.
 - **End of Life - Query executor**: No longer available from this version onwards.
 - **End of Support – [Radius authentication](xref:Configuring_RADIUS_settings)**: This type of authentication is deprecated and has inherent flaws. We recommend using a different type of authentication instead.
 - **End of Engineering – SLOffload tool**: This tool is obsolete and cannot be used in systems with a Cassandra general database.
-- **End of Engineering – SLNetPlugins**: These should no longer be used.
+- **End of Engineering – SLNetPlugins**: These bespoke plugins for SLNet should no longer be used.
 - **End of Life – [SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service)**: This configuration is obsolete and should not be used.
 - **End of Life – Two-site redundant indexing clusters**: This setup should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS).
 - **End of Life – Use of JScript in QActions**: C# should be used instead. JScript in QActions cannot be used on Windows Server 2025.

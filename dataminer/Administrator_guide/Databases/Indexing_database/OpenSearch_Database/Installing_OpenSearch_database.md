@@ -5,31 +5,17 @@ description: Install and test OpenSearch as described in the OpenSearch document
 
 # Installing an OpenSearch database
 
-## Compatibility
-
-Supported versions:
-
-- OpenSearch 2.x
-- OpenSearch 3.x — recommended for new installations and with DataMiner versions starting from 10.6.x
-
-> [!IMPORTANT]
-> OpenSearch 1.x reached community end-of-life on May 6, 2025 and is no longer supported. If you are still using OpenSearch 1.x, upgrade to a supported version.
-
-> [!NOTE]
->
-> - We recommend using the latest version of Ubuntu LTS. However, OpenSearch also supports other Linux distributions. See [Operating system compatibility](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#operating-system-compatibility).
-> - OpenSearch is supported on Windows from OpenSearch 2.4 onwards.
-> - OpenSearch 3.x requires Java 21. If you plan to upgrade an existing OpenSearch 2.x cluster to OpenSearch 3.x, first upgrade to the latest OpenSearch 2.x version (2.19) as detailed in the [official OpenSearch documentation](https://opensearch.org/docs/latest/).
-
 ## Before you begin
 
 Before you set up an OpenSearch cluster, take the following into account:
+
+- **System requirements**: Make sure the [OpenSearch requirements](xref:DataMiner_Compute_Requirements#opensearch-requirements) are met in your new cluster.
 
 - **Sizing**: Make sure each OpenSearch node meets the hardware requirements (RAM, CPU, disk, and network) detailed in the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements#opensearchelasticsearch-requirements).
 
 - **Number of nodes**: For a production cluster, use **at least three** cluster-manager-eligible nodes and always an odd number. This is required because of the way OpenSearch works internally: to elect a cluster manager and avoid split-brain situations, a majority (quorum) of the cluster-manager-eligible nodes must be available, which is only possible with an odd number of nodes. A single-node setup is only suitable for testing or evaluation.
 
-- **Java**: OpenSearch bundles its own Java runtime, so you do not need to install Java separately. Note that OpenSearch 3.x is built on Java 21.
+- **Java**: OpenSearch bundles its own Java runtime, so you do not need to install Java separately. Note that OpenSearch 3.x requires Java 21.
 
 > [!TIP]
 > For the full setup procedure, refer to the [official OpenSearch documentation](https://opensearch.org/docs/latest/tuning-your-cluster/cluster/).
