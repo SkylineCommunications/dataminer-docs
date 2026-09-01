@@ -21,6 +21,7 @@ When creating or editing documentation pages, apply the following rules.
 - Use backticks for references to code, file paths, and user input, but not for emphasis.
 - Use plain text in headers, avoiding italics, bold, or other formatting
 - Do not place two note blocks immediately after one another. When that would occur, combine the content into a single note block that uses a bulleted list.
+- Only use the following alert types: `> [!NOTE]`, `> [!TIP]`, `> [!IMPORTANT]`, `> [!CAUTION]`, and `> [!WARNING]`. No other alert type (e.g., `[!ALERT]`) is supported. Before adding or editing an alert, verify the type against `/contributing/CTB_Markdown_Syntax.md`.
 
 ## Procedure formatting
 

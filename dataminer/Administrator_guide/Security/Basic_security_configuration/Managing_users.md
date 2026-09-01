@@ -1,5 +1,6 @@
 ---
 uid: Managing_users
+description: "Manage users in DataMiner Cube by adding accounts, assigning groups, and configuring permissions to keep access secure."
 ---
 
 # Managing users

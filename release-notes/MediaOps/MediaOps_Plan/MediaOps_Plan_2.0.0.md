@@ -10,7 +10,7 @@ uid: MediaOps_Plan_2.0.0
 > [!NOTE]
 > This version requires:
 >
-> - DataMiner 10.6.4/10.7.0 or higher.
+> - DataMiner 10.6.9/10.7.0 or higher.
 > - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.0 or higher.
 > - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e) 1.3.0 or higher.
 
@@ -44,6 +44,14 @@ In the Scheduling app, when creating or editing a job, a *Job Type* dropdown is 
 The selected job type can be used to filter the timeline on the *Job View* page, making it easier to focus on relevant jobs.
 
 If only one category is available, it is automatically selected for the job.
+
+#### Scheduling: Custom job types [ID 46151]
+
+Instead of all jobs being automatically assigned the *Scheduled* type, you can now define custom job types and assign them when creating or editing a job.
+
+Job types are defined using the Categories app. From MediaOps 2.0.0 onwards, a new *Job Type* scope is created in the Categories app with the default type *Scheduled*. You can freely add additional types on top of this default.
+
+The icon defined for a job type in the Categories app will be used in the Scheduling app as a filter for the timeline view. Hovering over the icon will show the name of the job type. If no icon is defined for a job type, the default filter icon will be shown.
 
 ## Changes
 
@@ -141,6 +149,46 @@ The ability to specify an execution script on workflows and workflow connections
 Inserting nodes between two connected nodes of a job is now done using a panel instead of an interactive script.
 
 This improves the visibility of available resources and aligns this action with other available node manipulation actions on a job, such as adding or swapping a node.
+
+#### Plan API: Additional filters now supported when reading jobs [ID 46146]
+
+In addition to filters by job ID or name, the Plan API now supports additional filters from the `JobExposers` class when reading jobs.
+
+You can now filter by the following fields:
+
+- Description
+- Start
+- End
+- PrerollStart
+- PostrollEnd
+- Priority
+- Notes
+- Key
+- RecurringJobId
+- JobCategoryId
+- State
+- OrganizationId
+- OwnerId
+- Capabilities (based on Capability ID or discretes)
+- Capacities (based on Capacity ID)
+- Configurations (based on Configuration ID)
+- Properties (based on Property ID)
+
+#### Scheduling: Create Job window layout updated [ID 46214]
+
+The fields in the *Create Job* window have been repositioned to provide a more logical layout.
+
+#### Scheduling/Workflow Designer: Node configuration window layout simplified [ID 46215]
+
+When a configuration is applied to the linked resource pool, the node configuration window of a job or workflow node now shows a simplified layout by default.
+
+In this simplified layout, automation scripts used by automation actions are hidden, and only parameters without linking or without defined value are shown.
+
+When you enable *Show all details*, the full view is shown again, including all parameters and the options to select capabilities, capacities, and configurations that are not defined on the linked resource pool.
+
+#### Workflow Designer: Editing actions blocked when workflow is locked by another user [ID 46225]
+
+When a workflow is locked by another user, editing actions are now blocked.
 
 ### Fixes
 

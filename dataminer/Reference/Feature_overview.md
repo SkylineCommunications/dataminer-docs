@@ -29,6 +29,7 @@ Below you can find an overview of the main features that have been added to Data
 | Automation: [Interactivity](xref:DMSScript.Interactivity) tag | DataMiner 10.5.9/10.6.0 <!-- [ID 42954]--> |
 | Automation: [IsReadOnly](xref:Skyline.DataMiner.Automation.UIBlockDefinition.IsReadOnly) property | DataMiner web 10.4.1/10.5.0 <!-- [ID 37659] -->|
 | Automation: [Logging](xref:Automation_logging) | DataMiner Cube 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 <!-- [ID 43144] --> |
+| Automation: [Script runners](xref:Script_Runners) | DataMiner 10.6.9/10.7.0 <!-- [ID 45557] --> |
 | Automation: [SkipAbortConfirmation](xref:Skyline.DataMiner.Automation.UIBuilder.SkipAbortConfirmation) property | DataMiner 10.4.12/10.5.0<!-- [ID 40720] --> |
 | Automation: [TriggeredByName](xref:Skyline.DataMiner.Automation.Engine.TriggeredByName) property | DataMiner 10.2.6/10.3.0 <!-- [ID 33122] -->|
 | [BrokerGateway DxM](xref:BrokerGateway_Migration) | DataMiner 10.5.0 [CU2]/10.5.5/10.6.0<br>DataMiner 10.5.0/10.5.2 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#brokergateway) <!-- [ID 42573] --> |
@@ -121,6 +122,7 @@ Below you can find an overview of the main features that have been added to Data
 | GQI: [IGQISession interface](xref:GQI_IGQISession) | DataMiner 10.5.0 [CU12]/10.6.3 <!-- [ID 44509] -->|
 | GQI: [Real-time updates for ad hoc data sources](xref:GQI_IGQIUpdateable) | DataMiner 10.4.4/10.5.0 <!-- [ID 38643] --> |
 | GQI: [Sending/receiving DMS messages](xref:GQI_GQIDMS) | DataMiner web 10.3.4/10.4.0 <!-- [ID 35701] -->|
+| GQI: [Services in GQI extensions](xref:GQI_Extensions_Services) | DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 <!-- [ID 45635] --> |
 | GQI: [Trend data patterns](xref:Get_trend_data_patterns), [Trend data pattern events](xref:Get_trend_data_pattern_events), and [behavioral change events](xref:Get_behavioral_change_events) data sources | DataMiner web 10.3.3/10.4.0 <!-- [ID 34747] [ID 35027] [ID 34965] [ID 35058] -->|
 | GQI: [View relations data source](xref:Get_view_relations) | DataMiner 10.1.4/10.2.0 <!-- [ID 28797] [ID 28877] -->|
 | [GQI DxM](xref:GQI_DxM) | DataMiner web 10.5.0 [CU1]/10.5.4 |
@@ -145,7 +147,8 @@ Below you can find an overview of the main features that have been added to Data
 | Protocols: [Table-based matrix](xref:UIComponentsTableMatrix) | DataMiner 10.3.1/10.4.0 <!-- [ID 34645] -->|
 | Protocols: [Direct view table with table columns of different protocols](xref:Protocol.Params.Param.CrossDriverOptions) | DataMiner 10.2.9/10.3.0 <!-- [ID 33253] --> |
 | [User-defined APIs](xref:UD_APIs) | DataMiner 10.3.6/10.4.0<br>DataMiner 10.3.5 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#userdefinableapi) <!-- [ID 36273] --> |
-| User-defined APIs: [Rate limit configuration for API tokens](xref:UD_APIs_Objects_ApiToken#ratelimit) | DataMiner 10.6.7/10.7.0 <!-- [ID 45470] --> |
+| User-defined APIs: [Rate limit configuration for API tokens (via the C# API)](xref:UD_APIs_Objects_ApiToken#ratelimit) | DataMiner 10.6.7/10.7.0 <!-- [ID 45470] --> |
+| User-defined APIs: [Rate limit configuration for API tokens (directly in System Center)](xref:UD_APIs_Viewing_in_Cube#configuring-a-rate-limit-for-an-api-token) | DataMiner 10.6.9/10.7.0 onwards <!-- [ID 45751] --> |
 | User-defined APIs: [Using route parameters](xref:UD_APIs_API_script_examples#using-route-parameters) | DataMiner 10.6.8/10.7.0 <!-- [ID 45681]--> |
 | Security: [Custom user group rights presets](xref:Configuring_a_user_group#using-presets-to-assign-rights) | DataMiner Cube 10.4.0 [CU12]/10.5.0 [CU1]/10.5.3<!-- [ID 41656] --> |
 | Security: [External user authentication using Azure B2C](xref:SAML_using_Azure_B2C) | DataMiner 10.2.6/10.3.0 <!-- [ID 32714] -->|
@@ -174,5 +177,5 @@ Below you can find an overview of the main features that have been added to Data
 | Visual Overview: [Table control with Refresh and/or Sort button](xref:Turning_a_shape_into_a_parameter_control#adding-a-refresh-andor-sort-button-to-a-table-control) | DataMiner 10.2.6/10.3.0 <!-- [ID 33346]-->|
 | Visual Overview: [Text wrapping and trimming](xref:Configuring_text_wrapping_and_trimming) | DataMiner 10.2.3/10.3.0 <!-- [ID 32440] --> |
 | Visual Overview (web): [Load balancing](xref:Investigating_Web_Issues#load-balancing) | DataMiner 10.5.2/10.6.0 <!-- [ID 41434] [ID 41728] --> |
-| [Web DcM](xref:DataMinerExtensionModules#web) | DataMiner 10.5.0 [CU8]/10.5.11 <!-- [ID 43439] --> |
+| [Web DcM](xref:DataMinerCoreModules#web) | DataMiner 10.5.0 [CU8]/10.5.11 <!-- [ID 43439] --> |
 | Web Services: [DMAAutomationScriptOptionClientTimeZone](xref:DMAAutomationScriptOptionClientTimeZone) custom data type | DataMiner 10.6.4/10.7.0 <!-- [ID 44742] [ID 44788] --> |

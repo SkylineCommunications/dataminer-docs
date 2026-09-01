@@ -2,12 +2,12 @@
 uid: Web_apps_Feature_Release_10.6.9
 ---
 
-# DataMiner web apps Feature Release 10.6.9 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.9
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU6].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -164,12 +164,6 @@ See also: [DOM: Server-side support for string list FieldDescriptors [ID 46051]]
 > The UI will not show the generic list of string fields. If a form is shown for a definition that contains such a field, it will not be displayed and no value will be provided. If a form is shown for a DOM instance that has a value for such a field, it will not be displayed and the value will be maintained if the DOM instance would be updated.
 
 ### Fixes
-
-#### Dashboards/Low-Code Apps - Table component: Correct column widths would not be applied after the table had been resized or updated [ID 45765]
-
-<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-In some rare cases, a *Table* component would incorrectly not apply the correct column widths after the table had been resized or updated. This led to columns being hidden when they had to be visible.
 
 #### GQI DxM could become unrecoverable when the initial DataMiner state subscription failed [ID 45830]
 

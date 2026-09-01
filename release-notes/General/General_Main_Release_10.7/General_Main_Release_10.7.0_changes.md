@@ -13,6 +13,7 @@ The following changes may have an impact on your system, so please make sure to 
 
 - [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
 - [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
+- [Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]](#load-save-and-delete-actions-for-services-have-been-rerouted-from-slxml-to-the-storagemodule-dcm-id-46134)
 
 ## Changes
 
@@ -443,23 +444,23 @@ In order to protect DataMiner against a continuously growing queue of incoming s
 > - We strongly advise you to restart the element when the limit has been breached. When certain messages within a data stream get dropped because the maximum queue limit was breached, an incomplete data stream may get processed, which could then produce unexpected results.
 > - The alarm not only mentions the limit that was reached (in MB). It also mentions the number of messages that are present in the queue. This number of messages is not always equal to the number of responses to be processed. For example, in some cases, Windows can combine multiple received UDP packets into one when adding packets to the receive buffer, causing SLPort to then add a single message to the queue.
 
-#### DxMs upgraded [ID 45304] [ID 45347] [ID 45392] [ID 45506] [ID 45944]
+#### DxMs upgraded [ID 45304] [ID 45347] [ID 45392] [ID 45506] [ID 45944] [ID 46119]
 
 <!-- RN 45304: MR 10.7.0 - FR 10.6.6 -->
 <!-- RN 45347: MR 10.7.0 - FR 10.6.6 -->
 <!-- RN 45392: MR 10.7.0 - FR 10.6.7 -->
 <!-- RN 45506: MR 10.7.0 - FR 10.6.7 -->
-<!-- RN 45944: MR 10.7.0 - FR 10.6.9 -->
+<!-- RN 45944/46119: MR 10.7.0 - FR 10.6.9 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
-- DataMiner ArtifactDeployer 1.8.8
-- DataMiner CloudGateway 3.1.0
+- DataMiner ArtifactDeployer 1.10.0
+- DataMiner CloudGateway 3.3.2
 - DataMiner CoreGateway 2.14.17
 - DataMiner DataAPI 1.4.6
-- DataMiner FieldControl 2.12.1
-- DataMiner Orchestrator 1.8.2
-- DataMiner SupportAssistant 1.9.1
+- DataMiner FieldControl 2.12.2
+- DataMiner Orchestrator 1.11.0
+- DataMiner SupportAssistant 1.9.3
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
@@ -648,6 +649,18 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
 From now on, when you open the SLLogCollector tool, the tool will automatically be configured to include a memory dump of the SLPort and SLSNMPManager processes when a runtime error was detected in SLProtocol.
 
+#### Enhanced performance when upgrading the ModelHost DxM [ID 45967]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Because of a number of enhancements, overall performance has increased when upgrading the ModelHost DxM.
+
+#### ModelHost DxM has been upgraded to Microsoft .NET 10 [ID 45988]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The ModelHost DxM has been upgraded to Microsoft .NET 10.
+
 #### DOM: Server-side support for string list FieldDescriptors [ID 46051]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
@@ -660,11 +673,64 @@ When using DOM in scripts, ad hoc data sources, etc., from now on, it will be po
 
 The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
+#### DataMiner upgrade: Legacy NAS and NATS services and files would not be removed [ID 46094]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Up to now, a DataMiner upgrade could leave behind the legacy NAS and NATS services as well as the `C:\Skyline DataMiner\NATS` folder.
+
+From now on, on systems that have already been upgraded successfully to a DataMiner 10.6 version at some point in time, a new upgrade action named `CleanupNatsServices` will make sure these legacy services and that folder are removed. This ensures that the BrokerGateway-managed NATS solution can be used without the obsolete components.
+
 #### DataMiner Taskbar Utility: Event colors now align with DataMiner Cube [ID 46130]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 The colors used by the DataMiner Taskbar Utility for upgrade events now align with the colors used by DataMiner Cube. This makes it easier to identify the status of events such as `Finished`, `Success`, `LocalComplete`, `UploadComplete`, `UpgradeComplete`, `Notice`, and `Error`.
+
+#### Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+In preparation of service swarming, all load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM.
+
+#### Automation: GetAvailableAutomationScripts now returns additional script information [ID 46140]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The `GetAvailableAutomationScripts` call now returns the following additional information for each script:
+
+- `IsInteractive`: Indicates whether the script can show UI elements.
+- `CanBeExecuted`: Indicates whether the script can be run on its own. Scripts that only contain reusable libraries return `false`.
+
+#### User-Defined APIs: IIS rewrite rules are now validated and repaired by the UserDefinableApiEndpoint DxM [ID 46143]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The UserDefinableApiEndpoint DxM now owns the IIS rewrite rule that reroutes requests sent to `/api/custom` to the endpoint. It now validates the rule when the process starts and keeps checking it while the service runs, repairing it automatically if needed.
+
+If the rewrite rule is missing, disabled, or no longer matches the expected routing behavior, the DxM will restore it with the correct configuration. This ensures that user-defined API requests keep working even if the IIS configuration has been changed outside the installer.
+
+#### Scheduler: SkipStartedInformationEvent is now returned when retrieving scheduled tasks [ID 46161]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When you retrieve scheduled tasks using a `GetInfoMessage` with type set to "SchedulerTasks", the returned `AutomationScriptInstance` will now include the `SkipStartedInformationEvent` property.
+
+This will allow you to verify whether the property was enabled when the scheduled task was saved.
+
+#### CloudStorageMigrationFinalize script will now migrate all credentials stored in the Credentials Library [ID 46204]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The CloudStorageMigrationFinalize script, which should be run when [migrating existing data to STaaS](xref:Migrating_existing_data_to_STaaS), will now migrate all credentials stored in the Credentials Library.
+
+#### User-Defined APIs: Optional notice generation when token rate limits are reached [ID 46244]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+On `ApiToken` objects, you can now enable notice generation when a token reaches its configured rate limit by setting `ApiTokenRateLimit.GenerateNotice` to `true`.
+
+When enabled, one notice can be generated per token when its rate limit is reached. Notices are not cleared automatically. If you clear a notice manually and the token hits its rate limit again, a new notice can be generated.
 
 ### Fixes
 
@@ -766,3 +832,19 @@ Access to that cache has now been made thread safe.
 
 > [!NOTE]
 > The `Engine` object itself is still not thread safe. Scripts should not use the same `Engine` instance from more than one thread at a time.
+
+#### ManagerStore: Fixed limit logic when adding objects from the DatabaseCacheLayer [ID 46205]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When DOM reads were executed, the result from the database could be enriched with objects that were still present in the `DatabaseCacheLayer`. This cache keeps recently written objects available before they are fully indexed in the database, but in some cases it did not correctly keep the configured query limit in mind when paged reads were carried out.
+
+This could cause more objects than expected to be returned in the result, especially when data was still available in the cache for a later page. The limit is now reapplied correctly when objects are added from the `DatabaseCacheLayer`, and the number of objects already returned on previous pages is tracked correctly.
+
+This fixes the issue for paged DOM reads with a configured limit, ensuring the returned result always respects the requested limit even when cached objects are added to the response.
+
+#### Spectrum preset update events did not work when the preset name contained a dot [ID 46241]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Up to now, the spectrum preset update event on parameter `SPA_SPARAM_PRESET_UPDATE` (PID 64216) could fail when the preset name contained a dot (`.`).
