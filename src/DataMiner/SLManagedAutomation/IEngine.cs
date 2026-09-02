@@ -768,7 +768,7 @@ namespace Skyline.DataMiner.Automation
 		ScriptParam GetScriptParam(int id);
 
         /// <summary>
-        /// Retrieves a set of credentials declared by this automation script from the Credentials Library
+        /// Retrieves a set of credentials declared by this automation script from the Credentials Library.
         /// </summary>
         /// <param name="name">The name used to refer to the credentials in the script XML. The lookup is case insensitive.</param>
         /// <returns>The set of credentials or <see langword="null"/> if the script does not declare a set of credentials with the specified name.</returns>
@@ -785,7 +785,7 @@ namespace Skyline.DataMiner.Automation
         ScriptCredential GetCredential(string name);
 
         /// <summary>
-        /// Retrieves a set of credentials declared by this automation script from the Credentials Library
+        /// Retrieves a set of credentials declared by this automation script from the Credentials Library.
         /// </summary>
         /// <param name="id">The ID used to refer to the credentials in the script XML.</param>
         /// <returns>The set of credentials or <see langword="null"/> if the script does not declare a set of credentials with the specified ID.</returns>
