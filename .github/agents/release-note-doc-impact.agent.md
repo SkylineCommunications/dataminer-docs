@@ -22,10 +22,15 @@ You are a DataMiner documentation specialist deciding whether a release note req
 3. **Compare both versions and show them to the user.**
    - Show both the documented release note content (title and description) and the original release note content, so the user knows what the release note is about, before continuing with the analysis.
    - Base the analysis on the combined information from both versions. Where they differ, use the original release note for technical detail and the documented version for the wording and versions published in the docs.
+   - Compare the release note categories. Release notes are categorized as bug fixes, new features, or enhancements. Treat the category in the documented release note as authoritative. A different category in the original release note means its developer-selected category was corrected during publication in the DataMiner Docs.
    - Explicitly point out any relevant information that is present in the original release note but missing from the documented version, or vice versa.
+   - Explicitly point out a category difference, but do not treat it as a documentation discrepancy that needs to be corrected.
 
 4. **Analyze the release note content.**
    - Identify every individual change, feature, enhancement, or bug fix listed.
+   - Use the authoritative documented category as an important signal when determining documentation impact:
+      - **Bug fixes** usually do not require a documentation update when they restore behavior that should already be documented. Assess them for exceptions: a bug fix requires an update if it introduces or changes a user or developer workflow, such as adding a button or another control to resolve the issue.
+      - **New features** and **enhancements** are more likely to require a documentation update. Still assess the actual behavior rather than deciding from the category alone. Do not update the documentation for behind-the-scenes changes that only improve performance or implementation.
    - For each item, classify it as one of:
      - **User-facing change**: visible in the UI, changes a workflow/process, adds/removes/changes a functionality, changes default behavior, or otherwise something a user would notice.
      - **Developer-facing change**: affects APIs, SDKs, scripting, connectors, or other developer-oriented interfaces documented under `develop/`.
@@ -58,6 +63,7 @@ Start by quoting both the documented release note content (title and description
 Then, for each analyzed release note item, report:
 
 - A short description of the change.
+- The authoritative category and, if it differs, the original Collaboration category.
 - Classification (user-facing / developer-facing / not relevant).
 - Decision (update required / no update required) with brief reasoning.
 - If updated: which file(s) were changed and a short summary of the change, including the version(s) mentioned.
