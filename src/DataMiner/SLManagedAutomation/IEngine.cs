@@ -768,12 +768,12 @@ namespace Skyline.DataMiner.Automation
 		ScriptParam GetScriptParam(int id);
 
         /// <summary>
-        /// Retrieves a credential that is declared by this Automation script from the credential library.
+        /// Retrieves a set of credentials declared by this automation script from the Credentials Library
         /// </summary>
-        /// <param name="name">The name by which the credential is referred to in the script XML. The lookup is case insensitive.</param>
-        /// <returns>The credential or <see langword="null"/> if the script does not declare a credential with the specified name.</returns>
+        /// <param name="name">The name used to refer to the credentials in the script XML. The lookup is case insensitive.</param>
+        /// <returns>The set of credentials or <see langword="null"/> if the script does not declare a set of credentials with the specified name.</returns>
         /// <remarks>
-        /// <para>The values of the credential are retrieved from the credential library each time this method is called, so they are never cached.</para>
+        /// <para>The values of the set of credentials are retrieved from the Credentials Library each time this method is called, so they are never cached.</para>
         /// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-set-of-credentials">Creating a credential</see>.</para>
         /// <note>Available from DataMiner 10.6.10/10.7.0 onwards (RN 46229).</note>
         /// </remarks>
@@ -785,12 +785,12 @@ namespace Skyline.DataMiner.Automation
         ScriptCredential GetCredential(string name);
 
         /// <summary>
-        /// Retrieves a credential that is declared by this Automation script from the credential library.
+        /// Retrieves a set of credentials declared by this automation script from the Credentials Library
         /// </summary>
-        /// <param name="id">The ID by which the credential is referred to in the script XML.</param>
-        /// <returns>The credential or <see langword="null"/> if the script does not declare a credential with the specified ID.</returns>
+        /// <param name="id">The ID used to refer to the credentials in the script XML.</param>
+        /// <returns>The set of credentials or <see langword="null"/> if the script does not declare a set of credentials with the specified ID.</returns>
         /// <remarks>
-        /// <para>The values of the credential are retrieved from the credential library each time this method is called, so they are never cached.</para>
+        /// <para>The values of the set of credentials are retrieved from the Credentials Library each time this method is called, so they are never cached.</para>
         /// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-set-of-credentials">Creating a credential</see>.</para>
         /// <note>Available from DataMiner 10.6.10/10.7.0 onwards (RN 46229).</note>
         /// </remarks>
