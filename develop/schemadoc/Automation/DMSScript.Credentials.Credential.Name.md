@@ -4,7 +4,7 @@ uid: DMSScript.Credentials.Credential.Name
 
 # Name element
 
-Specifies the name of the credential.
+Specifies the name of the credentials.
 
 ## Type
 

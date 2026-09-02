@@ -8,9 +8,9 @@ From DataMiner 10.7.0/10.6.10 onwards<!-- RN 44282 --><!-- RN 46229 -->, an auto
 
 Credentials of type *Username and password* and *Token* can be used in an automation script.
 
-## Declaring a credential
+## Declaring a set of credentials
 
-Before a *C# code* block can retrieve a credential, the credential must be declared as a script variable. In DataMiner Cube, you can do so in the *CREDENTIALS* section of the script. See [Creating a credential](xref:Script_variables#creating-a-set-of-credentials).
+Before a *C# code* block can retrieve a set of credentials, the credentials must be declared as a script variable. In DataMiner Cube, you can do so in the *CREDENTIALS* section of the script. See [Creating a set of credentials](xref:Script_variables#creating-a-set-of-credentials).
 
 In the script XML, this results in a [Credentials](xref:DMSScript.Credentials) element:
 
@@ -29,11 +29,11 @@ In the script XML, this results in a [Credentials](xref:DMSScript.Credentials) e
 </Credentials>
 ```
 
-The script only stores a reference to the credential. The actual secrets remain fully secured in the Credentials Library.
+The script only stores a reference to the credentials. The actual secrets remain fully secured in the Credentials Library.
 
-## Retrieving a credential
+## Retrieving a set of credentials
 
-In a *C# code* block, use [engine.GetCredential](xref:Skyline.DataMiner.Automation.Engine.GetCredential*) to retrieve a declared credential, either by name or by ID:
+In a *C# code* block, use [engine.GetCredential](xref:Skyline.DataMiner.Automation.Engine.GetCredential*) to retrieve a declared set of credentials, either by name or by ID:
 
 ```csharp
 using Skyline.DataMiner.Automation;
@@ -60,7 +60,7 @@ public class Script
 }
 ```
 
-The name lookup is case insensitive. If the script does not declare a credential with the specified name or ID, the method returns `null`.
+The name lookup is case insensitive. If the script does not declare a set of credentials with the specified name or ID, the method returns `null`.
 
 The values are retrieved from the Credentials Library each time the method is called, so a script always works with the current content of the library.
 

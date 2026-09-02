@@ -4,7 +4,7 @@ uid: DMSScript.Credentials.Credential-id
 
 # id attribute
 
-Specifies the unique ID of the credential.
+Specifies the unique ID of the credentials.
 
 ## Content Type
 

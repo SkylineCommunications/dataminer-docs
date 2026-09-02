@@ -3,7 +3,7 @@
 namespace Skyline.DataMiner.Automation.Credentials
 {
 	/// <summary>
-	/// Represents a credential holding a single access token.
+	/// Represents a set of credentials containing a single access token.
 	/// </summary>
 	/// <remarks><note>Available from DataMiner 10.6.10/10.7.0 onwards.</note></remarks>
 	/// <example>
@@ -16,35 +16,35 @@ namespace Skyline.DataMiner.Automation.Credentials
 	public class TokenCredential : ScriptCredential
 	{
 		/// <summary>
-		/// Gets the access token stored in the credential library.
+		/// Gets the access token stored in the Credentials Library.
 		/// </summary>
-		/// <value>The access token stored in the credential library.</value>
+		/// <value>The access token stored in the Credentials Library.</value>
 		public string Token { get; }
 
         /// <summary>
-        /// Gets the type of the credential, always <see cref="ScriptCredentialType.Token"/>.
+        /// Gets the type of the credentials, which always is <see cref="ScriptCredentialType.Token"/>.
         /// </summary>
         /// <value>Always <see cref="ScriptCredentialType.Token"/>.</value>
         public override ScriptCredentialType Type { get { return ScriptCredentialType.Token; } }
 
 		/// <summary>
-		/// Not supported. A token credential does not hold a user name.
+		/// Not supported. Token credentials do not contain a username.
 		/// </summary>
 		/// <returns>This method never returns a value.</returns>
 		/// <exception cref="NotSupportedException">Always thrown.</exception>
 		public override string GetUserName() { return null; }
 
 		/// <summary>
-		/// Not supported. A token credential does not hold a password.
+		/// Not supported. Token credentials do not contain a password.
 		/// </summary>
 		/// <returns>This method never returns a value.</returns>
 		/// <exception cref="NotSupportedException">Always thrown.</exception>
 		public override string GetPassword() { return null; }
 
 		/// <summary>
-		/// Gets the access token stored in the credential library.
+		/// Gets the access token stored in the Credentials Library.
 		/// </summary>
-		/// <returns>The access token stored in the credential library.</returns>
+		/// <returns>The access token stored in the Credentials Library.</returns>
 		public override string GetToken() { return null; }
 	}
 }

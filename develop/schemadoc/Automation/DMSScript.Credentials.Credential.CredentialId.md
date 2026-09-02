@@ -4,7 +4,7 @@ uid: DMSScript.Credentials.Credential.CredentialId
 
 # CredentialId element
 
-Specifies the ID of the linked credential in the Credentials Library.
+Specifies the ID of the linked credentials in the [Credentials Library](xref:Credentials_Library).
 
 ## Type
 

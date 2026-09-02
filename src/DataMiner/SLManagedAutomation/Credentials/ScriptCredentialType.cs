@@ -1,23 +1,23 @@
 ﻿namespace Skyline.DataMiner.Automation.Credentials
 {
 	/// <summary>
-	/// Specifies the type of a credential stored in the credential library.
+	/// Specifies the type of a set of credentials stored in the Credentials Library.
 	/// </summary>
 	/// <remarks><note>Available from DataMiner 10.6.10/10.7.0 onwards.</note></remarks>
 	public enum ScriptCredentialType
 	{
 		/// <summary>
-		/// The credential type is unknown, i.e. the credential is not correctly defined in the Automation script.
+		/// The credentials type is unknown, i.e., the set of credentials is not correctly defined in the automation script.
 		/// </summary>
 		Unknown = 0,
 
 		/// <summary>
-		/// A credential holding a user name and a password.
+		/// A set of credentials containing a username and a password.
 		/// </summary>
 		UserNameAndPassword = 1,
 
 		/// <summary>
-		/// A credential holding a single access token.
+		/// A set of credentials containing a single access token.
 		/// </summary>
 		Token = 2
 	}
