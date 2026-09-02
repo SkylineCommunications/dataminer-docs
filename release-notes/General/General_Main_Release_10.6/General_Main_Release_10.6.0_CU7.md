@@ -53,8 +53,6 @@ Up to 10 log files will be kept on disk, and the log file of the current instanc
 
 A new REST endpoint, `/APIGateway/api/authentication/ticket`, can be used to authenticate a session with APIGateway using an SLNet connection ticket. You can then use this session to access DxM endpoints in an authenticated way, with APIGateway acting as a reverse proxy.
 
-This requires [SLNet to listen for connection ticket requests over NATS](xref:General_Feature_Release_10.6.10#slnet-will-now-listen-for-connection-ticket-requests-over-nats-id-46057).
-
 #### Enhanced performance when recalculating security keys [ID 46077]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->

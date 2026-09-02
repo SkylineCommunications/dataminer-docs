@@ -848,3 +848,13 @@ This fixes the issue for paged DOM reads with a configured limit, ensuring the r
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 Up to now, the spectrum preset update event on parameter `SPA_SPARAM_PRESET_UPDATE` (PID 64216) could fail when the preset name contained a dot (`.`).
+
+#### Existing behavioral change points could no longer be retrieved after a DataMiner Agent restart [ID 46271]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+In some cases, after SLAnalytics had restarted, an existing change point on a parameter could no longer be returned once a new change point was detected on that same parameter.
+
+This was caused by an internal ID collision. Change point IDs restart from zero after a restart, and the retrieval logic could incorrectly treat a new change point with a reused ID as a duplicate.
+
+Change points are now also distinguished by creation time. As a result, previously detected change points remain retrievable after a restart.

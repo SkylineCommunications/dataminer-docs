@@ -96,17 +96,6 @@ See the following example:
 > - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
 > - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNamePassword` and `Token` credentials stored in the Credentials Library.
 
-#### SLNet will now listen for connection ticket requests over NATS [ID 46057]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-From now on, SLNet will listen on the `SLNet.Authentication.Ticket` NATS topic to process connection tickets and return the username associated with the ticket.
-
-This allows APIGateway to authenticate requests via the NATS-based connection flow.
-
-> [!NOTE]
-> Tickets can be requested with `connection.RequestCloneTicket()`. This feature does not currently support impersonation with `TicketType.AuthenticateAs`.
-
 #### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -148,8 +137,6 @@ The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 A new REST endpoint, `/APIGateway/api/authentication/ticket`, can be used to authenticate a session with APIGateway using an SLNet connection ticket. You can then use this session to access DxM endpoints in an authenticated way, with APIGateway acting as a reverse proxy.
-
-This requires [SLNet to listen for connection ticket requests over NATS](#slnet-will-now-listen-for-connection-ticket-requests-over-nats-id-46057).
 
 #### Enhanced performance when recalculating security keys [ID 46077]
 
