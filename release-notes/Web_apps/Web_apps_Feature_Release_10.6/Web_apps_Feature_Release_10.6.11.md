@@ -36,6 +36,16 @@ From now on, write-only columns are retained for backward compatibility but excl
 
 Existing queries can still resolve and run if such columns were already explicitly referenced. If a write-only column is explicitly selected, it remains available for subsequent operators such as *Filter*, *Sort*, *Aggregate*, and *Join*.
 
+#### Dashboards/Low-Code Apps - Query builder: Hidden tree argument items are now excluded by default [ID 46246]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+In the query builder, tree argument items that are marked as hidden by GQI are now excluded by default.
+
+To preserve backward compatibility, existing queries that already selected one of these hidden items can still be loaded and executed.
+
+If you deselect such a hidden item, it remains available in that editing session. After you close and reopen the query builder, the hidden item is no longer offered as a selectable option.
+
 ### Fixes
 
 *No fixes have been selected yet.*
