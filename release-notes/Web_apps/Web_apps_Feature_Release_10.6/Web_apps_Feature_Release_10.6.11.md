@@ -26,7 +26,15 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-*No enhancements have been selected yet.*
+#### GQI DxM: Write-only parameter table columns are now excluded by default [ID 46033]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Some protocol parameters are write-only (e.g., buttons or action/configuration fields) and do not return readable values. Up to now, these columns could still appear in default output or in query-builder capabilities for parameter-related data sources.
+
+From now on, write-only columns are retained for backward compatibility but excluded from default selections and from new capability choices.
+
+Existing queries can still resolve and run if such columns were already explicitly referenced. If a write-only column is explicitly selected, it remains available for subsequent operators such as *Filter*, *Sort*, *Aggregate*, and *Join*.
 
 ### Fixes
 
