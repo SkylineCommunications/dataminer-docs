@@ -20,14 +20,25 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*This release does not contain any new features yet.*
+*No new features have been added yet.*
 
 ## Changes
 
 ### Enhancements
 
-*No enhancements have been selected yet.*
+### Automation script editor: Enhanced way of selecting credentials [ID 46251]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When, in DataMiner Cube, you add a credential in the Automation script editor, you will now first have to select a credential type.
+
+After you select a type, Cube will only show credentials of that type that you are allowed to use. If you change the selected type afterwards, the selected credential will be cleared and you will have to select a new credential.
+
+You cannot save the script until both a credential type and a credential have been selected.
+
+> [!IMPORTANT]
+> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer.
 
 ### Fixes
 
-*No fixes have been selected yet.*
+*No fixes have been added yet.*
