@@ -6,7 +6,7 @@ namespace Skyline.DataMiner.Automation.Credentials
 	/// Represents a credential that is declared by an Automation script and that is resolved against the credential library.
 	/// </summary>
 	/// <remarks>
-	/// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-credential">Creating a credential</see>.</para>
+	/// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-set-of-credentials">Creating a credential</see>.</para>
 	/// <note>Available from DataMiner 10.6.10/10.7.0 onwards.</note>
 	/// </remarks>
 	public abstract class ScriptCredential

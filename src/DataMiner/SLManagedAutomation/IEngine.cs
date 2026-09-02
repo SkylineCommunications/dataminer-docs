@@ -774,7 +774,7 @@ namespace Skyline.DataMiner.Automation
         /// <returns>The credential or <see langword="null"/> if the script does not declare a credential with the specified name.</returns>
         /// <remarks>
         /// <para>The values of the credential are retrieved from the credential library each time this method is called, so they are never cached.</para>
-        /// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-credential">Creating a credential</see>.</para>
+        /// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-set-of-credentials">Creating a credential</see>.</para>
         /// <note>Available from DataMiner 10.6.10/10.7.0 onwards (RN 46229).</note>
         /// </remarks>
         /// <example>
@@ -791,7 +791,7 @@ namespace Skyline.DataMiner.Automation
         /// <returns>The credential or <see langword="null"/> if the script does not declare a credential with the specified ID.</returns>
         /// <remarks>
         /// <para>The values of the credential are retrieved from the credential library each time this method is called, so they are never cached.</para>
-        /// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-credential">Creating a credential</see>.</para>
+        /// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-set-of-credentials">Creating a credential</see>.</para>
         /// <note>Available from DataMiner 10.6.10/10.7.0 onwards (RN 46229).</note>
         /// </remarks>
         /// <example>
