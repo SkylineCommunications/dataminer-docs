@@ -217,6 +217,9 @@ The key technical differences are:
 | **Cluster formation** | NATSCustodian recalculates NAS/NATS configs. | BrokerGateway API builds cluster. |
 | **Repair tool** | [Manual reset / reinstall](xref:Investigating_Legacy_NATS_Issues#remaining-steps). | `C:\Skyline DataMiner\Tools\NATSRepair.exe` tool. |
 
+> [!NOTE]
+> Migrating to BrokerGateway does not immediately remove the legacy NAS and NATS services or the `C:\Skyline DataMiner\NATS` folder. These components are retained temporarily as a safeguard. From DataMiner 10.6.10/10.7.0 onwards<!-- RN 46094 -->,the *CleanupNatsServices* upgrade action can remove these legacy components after the system has successfully been running on the BrokerGateway-managed NATS solution.
+
 ### Can I run a cluster with both SLNet-managed NATS and BrokerGateway-managed NATS at the same time?
 
 This is not possible. Both NATS installations use the same network ports, so the services cannot run at the same time on a machine. The credentials these installations use are also different and not compatible with each other, so running SLNet-managed NATS on one DMA in the cluster and BrokerGateway-managed NATS on another DMA in the cluster will also not function.
