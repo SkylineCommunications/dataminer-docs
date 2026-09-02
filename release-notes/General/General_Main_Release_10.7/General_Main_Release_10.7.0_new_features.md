@@ -504,17 +504,6 @@ Route conflicts are also detected across all existing definitions. Any two templ
 
 When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
 
-#### SLNet will now listen for connection ticket requests over NATS [ID 46057]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-From now on, SLNet will listen on the `SLNet.Authentication.Ticket` NATS topic to process connection tickets and return the username associated with the ticket.
-
-This allows APIGateway to authenticate requests via the NATS-based connection flow.
-
-> [!NOTE]
-> Tickets can be requested with `connection.RequestCloneTicket()`. This feature does not currently support impersonation with `TicketType.AuthenticateAs`.
-
 #### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
