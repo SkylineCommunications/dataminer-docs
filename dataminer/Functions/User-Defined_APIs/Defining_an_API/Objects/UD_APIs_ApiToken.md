@@ -19,7 +19,7 @@ The table below lists the properties of the `ApiToken` object. For each property
 |CreatedAt      |DateTime   |Yes        |The UTC date and time when the token was created.|
 |LastModifiedBy |string     |Yes        |The name of the last user who modified the token.|
 |LastModified   |DateTime   |Yes        |The UTC date and time when the token was last modified.|
-|RateLimit      |RateLimit  |No         |Optional rate limit that controls how frequently the token can be used to trigger APIs on a per-endpoint basis. See [RateLimit](#ratelimit). Available from DataMiner 10.6.7/10.7.0 onwards.<!-- RN 45470 -->|
+|RateLimit      |ApiTokenRateLimit |No         |Optional rate limit that controls how frequently the token can be used to trigger APIs on a per-endpoint basis. See [RateLimit](#ratelimit). Available from DataMiner 10.6.7/10.7.0 onwards.<!-- RN 45470 -->|
 
 ### Secret
 
@@ -62,6 +62,7 @@ A rate limit consists of the following properties:
 |----------|----------|-------------|
 | Limit    | int      | The maximum number of requests allowed within the configured time window. Supported range: 1 to 100. |
 | Window   | TimeSpan | The time span during which the configured number of requests are allowed. Supported range: 1 second to 1 day. |
+| GenerateNotice | bool | Determines whether a notice is generated when this token reaches its rate limit. Set to `true` to enable notice generation. |
 
 > [!IMPORTANT]
 > From DataMiner 10.6.9/10.7.0 onwards<!--RN 45751-->, rate limits can be viewed and configured directly in *System Center* > *User-Defined APIs* when creating or editing a token. See [Configuring a rate limit for an API token](xref:UD_APIs_Viewing_in_Cube#configuring-a-rate-limit-for-an-api-token). Prior to these versions, rate limits cannot be configured in the UI and must be configured via the C# API. If an API token with a configured rate limit is updated through the UI, the rate limit will be cleared.
@@ -71,6 +72,20 @@ A rate limit consists of the following properties:
 When the rate limit is exceeded, the *UserDefinableApiEndpoint* DxM returns an HTTP 429 *Too Many Requests* response. In this case, the API trigger is not forwarded to SLNet, and the API script is therefore not executed. The response message indicates that the rate limit was exceeded and includes internal error code 1014. See [Errors](xref:UD_APIs_Triggering_an_API#errors).
 
 Every request that can be linked to a token counts toward that token's rate limit, regardless of whether the request results in a successful API script trigger.
+
+#### Generating a notice when the limit is exceeded
+
+From DataMiner 10.6.10/10.7.0 onwards<!-- RN 46244 -->, it is also possible to enable notice generation by setting `GenerateNotice` to `true` on the `ApiTokenRateLimit` of a token via the API.
+
+When the rate limit is hit on an endpoint, the *UserDefinableApiEndpoint* DxM sends a notification to the DataMiner Agent (DMA) on the same server or virtual machine. The DMA then generates a notice.
+
+Only one notice is generated per token until you manually clear the notice. Notices are not cleared automatically. After you manually clear a notice, another notice is generated when the token reaches its rate limit again, subject to the one-minute suppression. A rate-limit hit results in a notice only if no rate-limit hit for the token in the previous minute has already resulted in a notice.
+
+For example:
+
+```text
+API token 'My Token Name' (5af81dc2-5935-4597-ab4a-24e2ed59ca5f) has reached its rate limit of 2 requests per 0:00:10. Requests that are performed with this token are being rejected until the rate limit window has passed.
+```
 
 #### Sliding window behavior
 
