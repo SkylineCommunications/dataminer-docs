@@ -192,6 +192,12 @@ To make sure the gateway can communicate using MessageBroker within the DataMine
   
   - In earlier DataMiner versions, the file `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` has to be copied from the DMA to the local server, and the new path of that file needs to be set in *apiKeyPath*.
 
+## Cleanup of the legacy NAS and NATS components
+
+Up to DataMiner 10.6.9, the legacy NAS and NATS services and the `C:\Skyline DataMiner\NATS` folder remain on the server after the migration, even though they are no longer used.
+
+From DataMiner 10.6.10/10.7.0 onwards<!-- RN 46094 -->, an upgrade action named *CleanupNatsServices* removes the NAS and NATS services and the `C:\Skyline DataMiner\NATS` folder automatically during a DataMiner upgrade. This upgrade action only runs on systems that have already been upgraded to a DataMiner 10.6 version at some point in time, so that the BrokerGateway-managed NATS solution is known to be stable before the legacy components are deleted.
+
 ## Migrating back to the old system
 
 > [!IMPORTANT]
