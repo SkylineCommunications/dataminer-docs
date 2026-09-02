@@ -33,9 +33,9 @@ DataMiner encrypts the following secrets:
 - Element passwords
 - Replication passwords
 
-Prior to DataMiner 10.6.9/10.7.0, all password encryption in DataMiner is done through the Blowfish algorithm (ECB mode), using a 308-bit key.
+Prior to DataMiner 10.6.10/10.7.0, all password encryption in DataMiner is done through the Blowfish algorithm (ECB mode), using a 308-bit key.
 
-From DataMiner 10.6.9/10.7.0 onwards<!-- RN 44075 -->, credential secrets stored by DataMiner (e.g., SNMPv3 passphrases, HTTP tokens, username/password credentials, and database passwords managed through the Credentials Library) are stored as authenticated ciphertext using **AES-256 in CBC mode** combined with **HMAC-SHA-256** (Encrypt-then-MAC). The per-node encryption keys are protected with the Windows [Data Protection API (DPAPI)](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection) under *LocalMachine* scope, so an offline copy of the key file cannot be opened on a different host.
+From DataMiner 10.6.10/10.7.0 onwards<!-- RN 46061 -->, credential secrets stored by DataMiner (e.g., SNMPv3 passphrases, HTTP tokens, username/password credentials, and database passwords managed through the Credentials Library) are stored as authenticated ciphertext using **AES-256 in CBC mode** combined with **HMAC-SHA-256** (Encrypt-then-MAC). The per-node encryption keys are protected with the Windows [Data Protection API (DPAPI)](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection) under *LocalMachine* scope, so an offline copy of the key file cannot be opened on a different host.
 
 ## In-transit encryption
 
@@ -119,7 +119,7 @@ DataMiner only encrypts passwords at rest, all other data is not encrypted by de
 
 ### Credentials at rest
 
-From DataMiner 10.6.9/10.7.0 onwards<!-- RN 44075, 44701, 44702 -->, credential secrets are stored as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) instead of in the legacy *Library.xml* file. The encryption material is held in a per-node `encryptors.bin` file under `%CommonApplicationData%\Skyline Communications\DataMiner StorageModule\Encryption\`, wrapped with the Windows [Data Protection API (DPAPI)](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection) under *LocalMachine* scope.
+From DataMiner 10.6.10/10.7.0 onwards<!-- RN 46061 -->, credential secrets are stored as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) instead of in the legacy *Library.xml* file. The encryption material is held in a per-node `encryptors.bin` file under `%CommonApplicationData%\Skyline Communications\DataMiner StorageModule\Encryption\`, wrapped with the Windows [Data Protection API (DPAPI)](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection) under *LocalMachine* scope.
 
 Because DPAPI binds the encryption keys to the host that produced them, restoring a DataMiner Agent on a different machine requires a **DMS backup password**. When this password has been configured, a full DataMiner backup contains a passphrase-wrapped envelope (`backup_encryptors.bin`) that is sealed with PBKDF2-HMAC-SHA-256 (100,000 iterations, 32-byte salt) and AES-256-CBC with HMAC-SHA-256, so that the encryption material can travel between hosts without exposing the keys in plain text. For more information, see [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent) and [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility).
 
