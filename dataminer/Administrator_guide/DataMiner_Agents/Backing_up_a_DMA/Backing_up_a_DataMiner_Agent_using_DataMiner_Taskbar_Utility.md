@@ -37,7 +37,7 @@ From DataMiner 10.6.10/10.7.0 onwards<!--RN 46061-->, the *DMS Backup Password* 
 
   To prevent this, always store the DMS backup password securely outside DataMiner, for example in a password manager.
 
-- **Backup taken before DataMiner 10.6.9 or before the password was set**: The archive contains no encryption envelope. The restore will continue and warn that encrypted secrets cannot be recovered. Take a new backup once the DMS backup password is configured.
+- **Backup taken before DataMiner 10.6.10 or before the password was set**: The archive contains no encryption envelope. The restore will continue and warn that encrypted secrets cannot be recovered. Take a new backup once the DMS backup password is configured.
 
 > [!TIP]
 > See also: [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility).
