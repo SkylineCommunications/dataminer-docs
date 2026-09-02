@@ -190,6 +190,18 @@ When you enable *Show all details*, the full view is shown again, including all 
 
 When a workflow is locked by another user, editing actions are now blocked.
 
+#### Scheduling: No longer possible to select workflow when creating a job from Resource View page [ID 46293]
+
+In the Scheduling app, when you create a job from the *Resource View* page, it is no longer possible to select a workflow.
+
+Workflow selection remains available when you create a job from the *Job Overview* page.
+
+#### Resource Studio: Synchronization enhancements [ID 46325]
+
+The synchronization script in Resource Studio has been extended so you can now choose exactly which resources or resource pools to synchronize again. Previously, synchronization retries were all-or-nothing.
+
+In addition, the DevPack (NuGet) has been extended with synchronization methods on `IResourcePoolRepository`.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
@@ -221,3 +233,17 @@ This behavior has now been changed. In downgrade scenarios where a newer compati
 Previously, MediaOps Plan could still be installed when an older, unsupported version of Categories was present on the system. This could lead to issues later.
 
 MediaOps Plan now verifies that Categories 1.3.0 or higher is installed before continuing. If the installed Categories version is too old, the installation is stopped with a clear message so you can update Categories first.
+
+#### Various resource deprecation issues [ID 46300]
+
+Several issues related to resource deprecation have been fixed for scenarios where the core resource no longer exists:
+
+- In Resource Studio, deprecating a single resource now shows a proper error message when the operation cannot be completed.
+- Deprecating multiple resources no longer causes an infinite loop in the DevPack when two or more selected resources have no core resource, preventing SLAutomation crashes.
+- Updating one or more resources without a core resource no longer recreates those resources with a new ID. This operation is now blocked with a proper error message.
+
+#### Job creation not possible for workflows with execution scripts [ID 46339]
+
+As of MediaOps Plan 2.0.0, execution scripts on workflow level are no longer supported. However, up to now, the installation did not verify whether workflows still used one. As a result, a system could be upgraded while workflows still referred to an execution script, after which it was no longer possible to create jobs for those workflows.
+
+MediaOps Plan now checks before anything is installed. If one or more workflows still have a workflow execution script, the installation is stopped with a message listing the workflows in question, so you can remove the execution script from those workflows first. The complete list is also available in the installation log.
