@@ -28,9 +28,9 @@ This will deploy the following components:
 
 ## Installing the MediaOps sample integration
 
-If the sample integration with **MediaOps Plan** is required, **DataMiner 10.6.4** or higher must be installed installed.
+If the sample integration with **MediaOps Plan** is required, **DataMiner 10.6.4** or higher must be installed.
 
-The following components are required:
+In addition, the following components are required:
 
 - The [MediaOps Plan](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) package, version **1.6.0** or higher.
 
