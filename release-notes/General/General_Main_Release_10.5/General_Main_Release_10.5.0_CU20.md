@@ -26,7 +26,16 @@ uid: General_Main_Release_10.5.0_CU20
 
 ### Enhancements
 
-*No enhancements have been selected yet.*
+#### NATSMigration: Prerequisite checks added [ID 45668] [ID 46125]
+
+<!-- MR 10.5.0 [CU20] - FR TBD -->
+
+Each time the `NATSMigration` tool is run, it will perform the following prerequisite checks:
+
+- DataMiner version check: Version must be at least Main Release 10.5.0 [CU4] or Feature Release 10.5.7 [CU1].
+- IIS binding check for `0.0.0.0:443`, with optional hostname restrictions. A valid configuration requires a binding for `0.0.0.0` or, when multiple bindings exist, at least one binding to `127.0.0.1`.
+- The server must run a recent Windows OS and TLS 1.2 must be available.
+- At least one of two ciphers must be available for managed NATS communication.
 
 ### Fixes
 
