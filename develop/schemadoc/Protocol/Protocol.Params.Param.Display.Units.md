@@ -257,6 +257,7 @@ In case you have a suggestion for a unit to be added to the list below, create a
 |dV|decivolt|
 |dW|deciwatt|
 |E-6|E-6 (Bit Error Rate)|
+|E-7|E-7 (Bit Error Rate)|
 |EA|exa-ampere|
 |Eb|exabit|
 |EB|exabyte|
@@ -290,6 +291,7 @@ In case you have a suggestion for a unit to be added to the list below, create a
 |Errors/Week|errors per week|
 |Errors/Year|errors per year|
 |Es|exasecond|
+|Euro|Euro|
 |eV|electronvolt|
 |EV|exavolt|
 |EW|exawatt|

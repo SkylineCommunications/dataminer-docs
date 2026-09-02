@@ -1,5 +1,6 @@
 ---
 uid: About_DMS_Security
+description: "Configure DataMiner security to control user access, assign permissions through profiles, and review detailed activity logs across your system."
 ---
 
 # About DataMiner security
@@ -7,6 +8,4 @@ uid: About_DMS_Security
 DataMiner has a standard, fully integrated security module that allows you to configure which users have access to what parts of the system. You can manage users with user profiles to determine which actions they can perform, and keep a detailed log of all user activity.
 
 > [!TIP]
-> See also:
->
-> - [Securing self-managed DataMiner storage](xref:Cassandra_authentication)
+> See also: [Securing self-managed DataMiner storage](xref:Cassandra_authentication)

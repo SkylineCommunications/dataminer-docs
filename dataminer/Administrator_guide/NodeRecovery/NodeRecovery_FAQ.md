@@ -1,5 +1,6 @@
 ---
 uid: NodeRecovery_FAQ
+description: "Learn how Node Recovery answers common cluster outage questions and guides setup, network splits, and monitoring checks."
 ---
 
 # Frequently asked questions about Node Recovery
