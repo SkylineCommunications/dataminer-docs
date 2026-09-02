@@ -32,7 +32,7 @@ To use this tool, follow the instructions below:
 
 ## Take a snapshot of the Elasticsearch 6.8.22 cluster
 
-Using Kibana, you can take a snapshot in the following way:
+Using [Kibana](https://www.elastic.co/kibana), you can take a snapshot in the following way:
 
 1. Check the *path.repo* configuration in *elasticsearch.yml*.
 
@@ -106,7 +106,15 @@ Using Kibana, you can take a snapshot in the following way:
 
 ## Restore the snapshot on an Elasticsearch 7.10.0 cluster
 
-Using Kibana, you can restore the snapshot in the following way:
+1. First remove all complexity and character limits on regular expressions used within Elasticsearch by adding the following line to your Elasticsearch 7.10 configuration:
+
+   ```txt
+   script.painless.regex.enabled: true
+   ```
+
+   This will ensure that the reindexing tool will work correctly.
+
+1. Open Kibana, as you will need to use it for the next steps of this procedure.
 
 1. Check the *path.repo* configuration in *elasticsearch.yml*.
 
