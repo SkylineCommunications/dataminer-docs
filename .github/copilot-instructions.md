@@ -4,15 +4,6 @@ DataMiner Docs is a documentation-only repository containing all documentation r
 
 ## Validation of Changes
 
-### Test the Build
-
-- Install docfx: `dotnet tool update -g docfx`
-- Run a build: 
-  - `dotnet restore "src/NuGetPackages"` - to restore NuGet packages
-  - `docfx metadata` - to restore metadata
-  - `docfx build` - to run the build itself
-- If warnings or errors are introduced during the `docfx build` step, try to fix them.
-
 ## Repository Structure
 
 These are the key directories within this repository:
@@ -52,10 +43,9 @@ For most key directories (with the exception of `src`), all images are placed in
 3. Do not use spaces in file and folder names.
 4. Use DocFX-flavored Markdown syntax as defined in `/contributing/CTB_Markdown_Syntax.md`.
 5. Follow the instructions defined in `/contributing/CTB_Tips.md`.
-6. Use US English.
-7. Avoid em dashes when possible.
-8. One `.md` file must never contain more than 64000 characters.
-9. If changes are implemented that remove all references to a specific image, that image must be removed, with the exception of any images included in the `connectors` directory.
-10. Avoid adding pages that only contain links to underlying pages but no actual content of their own.
-11. When referring to changes introduced by a specific release note, make sure the Main Release version and Feature Release version introducing the changes are mentioned on the page.
-12. Use sentence casing for titles.
+6. One `.md` file must never contain more than 64000 characters.
+7. If changes are implemented that remove all references to a specific image, that image must be removed, with the exception of any images included in the `connectors` directory.
+8. Avoid adding pages that only contain links to underlying pages but no actual content of their own.
+9. Ensure that all cross-references are accurate and up to date.
+10. Use sentence casing for titles.
+11. Follow the house style defined in `.github/instructions/dataminer-docs-house-style.instructions.md`.
