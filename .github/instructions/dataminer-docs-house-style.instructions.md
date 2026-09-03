@@ -7,6 +7,8 @@ applyTo: "**/*.md"
 
 When creating or editing documentation pages, apply the following rules.
 
+## General
+
 - Use US English.
 - Follow Markdown conventions from `/contributing/CTB_Markdown_Syntax.md`.
 - Use sentence case in headers.
@@ -16,6 +18,7 @@ When creating or editing documentation pages, apply the following rules.
 - Only use backticks for references to code, file paths, or user input, not for emphasis.
 - Format direct UI references in italics, using bold only for intentional emphasis, such as an introductory UI label followed by a colon.
 - Use plain text in headers, avoiding italics, bold, or other formatting.
+- When referring to changes introduced by a specific release note, make sure both the Main Release version and Feature Release version introducing the changes are mentioned on the page.
 
 ## Procedure formatting
 
