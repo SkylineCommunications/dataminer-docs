@@ -142,7 +142,7 @@ Expected duration: 5 minutes.
 
 1. In the search box at the top, enter the tag you used in your request, or click the *Active runs* filter button to only show active test runs.
 
-1. Locate your run in the graph and select it to follow its status in the *Inspector* panel.
+1. Locate your run in the graph, and select it to follow its status in the *Inspector* panel.
 
 1. Wait until the test run is finished.
 

@@ -4,7 +4,7 @@ uid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
 
 # Creating a test package
 
-In this tutorial, you create a basic low-code app, prepare a DataMiner test package to test it, and trigger a [QAOps](xref:QAOps) test run.
+In this tutorial, you will create a basic low-code app, prepare a DataMiner test package to test it, and trigger a [QAOps](xref:QAOps) test run.
 
 Expected duration: 15 to 25 minutes.
 
@@ -507,7 +507,7 @@ For more details about these entities, see [QAOps configuration](xref:QAOps_Conf
 
 1. In the search box at the top, enter the tag you used in your request, or click the *Active runs* filter button to only show active test runs.
 
-1. Locate your run in the graph and select it to follow its status in the *Inspector* panel.
+1. Locate your run in the graph, and select it to follow its status in the *Inspector* panel.
 
 1. Track the [test run life cycle](xref:QAOps_Test_Run).
 

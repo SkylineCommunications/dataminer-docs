@@ -16,7 +16,7 @@ Expected duration: 10 minutes.
 
 - Operator access to the [QAOps Operator app](xref:QAOps_Main_UI#qaops-operator-app) (the blue app).
 
-- At least one existing [test suite](xref:QAOps_Test_Suite). If you do not have one yet, first follow the tutorial [Creating and managing test suites](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites).
+- At least one existing [test suite](xref:QAOps_Test_Suite). If you do not have one yet, first follow the [Creating and managing test suites](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites) tutorial.
 
 ## Overview
 
@@ -40,13 +40,13 @@ Expected duration: 10 minutes.
 
 1. Click the wide blue button with the **⊕** icon below the last card.
 
-   The *Create Configuration* dialog opens. A unique configuration ID (ULID) is generated automatically.
+   The *Create Configuration* dialog will open, and a unique configuration ID (ULID) will be generated automatically.
 
    ![Create Configuration dialog](~/develop/images/QAOps_Operator_CreateConfiguration_Empty.png)
 
 ## Step 2: Choose the configuration type and enter the basics
 
-1. In the *Configuration Type* dropdown, select *QAOps-hosted*.
+1. Open the *Configuration Type* dropdown box, and select *QAOps-hosted*.
 
    ![Configuration Type dropdown](~/develop/images/QAOps_Operator_CreateConfiguration_TypeDropdown.png)
 
@@ -54,7 +54,7 @@ Expected duration: 10 minutes.
 
    - *Self-hosted*: You connect your own DataMiner servers to QAOps. See [Adding self-hosted DataMiner servers](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Add_Self_Hosted_Servers).
 
-1. Enter a *Name* for the configuration, for example the name of your project or solution.
+1. Enter a *Name* for the configuration. For example, the name of your project or solution.
 
 1. Enter a *Description* that tells other operators what this configuration is used for.
 
@@ -67,7 +67,7 @@ Expected duration: 10 minutes.
    You can use the *Filter Test Suites* box to quickly find a test suite by name.
 
    > [!IMPORTANT]
-   > Removing a test suite later will completely clear the current test-run history for this configuration from process memory. Only select the test suites you need.
+   > Removing a test suite later will completely clear the current test run history for this configuration from process memory. Only select the test suites you need.
 
 1. In the *Test Runs To Keep* box, enter how many test runs (and their results) QAOps should keep in memory for this configuration.
 
@@ -79,11 +79,11 @@ Expected duration: 10 minutes.
 
 ## Step 4: Configure QAOps-hosted provisioning
 
-Because you selected *QAOps-hosted*, the dialog shows a *QAOps-Hosted Provisioning* section.
+Because you selected *QAOps-hosted*, the dialog will show a *QAOps-Hosted Provisioning* section.
 
 ![QAOps-hosted provisioning section](~/develop/images/QAOps_Operator_CreateConfiguration_Provisioning.png)
 
-1. In the *Provisioning Type* dropdown, select how servers should be deployed:
+1. Open the *Provisioning Type* dropdown box, and select how servers should be deployed:
 
    - *Disabled*: No servers are deployed automatically. You can still deploy servers manually with the deploy button on the configuration card.
 
@@ -93,7 +93,7 @@ Because you selected *QAOps-hosted*, the dialog shows a *QAOps-Hosted Provisioni
 
 1. Set *Maximum Servers* (the number of running servers will never exceed this) and *Minimum Servers* (the pool size that *Pre-Deployed Pool* provisioning tries to maintain).
 
-1. In the *DataMiner Version Type* dropdown, select which DataMiner version the deployed servers should run.
+1. Open the *DataMiner Version Type* dropdown box, and select which DataMiner version the deployed servers should run.
 
    ![DataMiner Version Type dropdown](~/develop/images/QAOps_Operator_CreateConfiguration_VersionType.png)
 
@@ -101,16 +101,16 @@ Because you selected *QAOps-hosted*, the dialog shows a *QAOps-Hosted Provisioni
 
 ## Step 5: Save the configuration
 
-1. Click *Save Configuration* at the bottom of the dialog.
+1. At the bottom of the dialog box, click *Save Configuration*.
 
-1. Watch the *Status* box below the button. When the configuration has been created successfully, this is confirmed there.
+1. Watch the *Status* box below the button. It will indicate whether the configuration was created successfully.
 
-1. Close the dialog with the **X** in the upper-right corner.
+1. Close the dialog box by clicking the **X** in the upper-right corner.
 
 Your new configuration will appear as a card on the *Configurations* page.
 
 > [!NOTE]
-> Full removal of a configuration must be requested from a QAOps Administrator. It cannot be done in the QAOps Operator app.
+> If you want to fully remove a configuration, contact a QAOps Administrator. The QAOps Operator app does not allow you to do this.
 
 ## Next steps
 

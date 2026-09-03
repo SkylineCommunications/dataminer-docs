@@ -44,35 +44,35 @@ Expected duration: 15 minutes.
 
 ## Step 2: Create a test suite
 
-1. Scroll to the bottom of the test suite card list and click the **⊕** button.
+1. Scroll to the bottom of the test suite card list, and click the **⊕** button.
 
-   The *Create QAOps Test Suite* dialog opens with an automatically generated *Test Suite ID* (ULID).
+   The *Create QAOps Test Suite* dialog will open with an automatically generated *Test Suite ID* (ULID).
 
    ![Create Test Suite dialog](~/develop/images/QAOps_Operator_CreateTestSuite_Empty.png)
 
 1. Enter a *Name* and a *Description*.
 
-1. Optionally select one or more *Global Categories* to make the suite easier to find with the header-bar filter buttons.
+1. Optionally select one or more *Global Categories* to make the suite easier to find with the header bar filter buttons.
 
    ![Create Test Suite dialog filled in](~/develop/images/QAOps_Operator_CreateTestSuite_Filled.png)
 
 1. Click *Create Test Suite*.
 
-   The *Status* box confirms: *Test Suite created. Package selection is now available.* The button changes to *Save Test Suite* for further edits.
+   The *Status* box will confirm with *Test Suite created. Package selection is now available.*, and the button will change to *Save Test Suite* for further edits.
 
    ![Test suite created status](~/develop/images/QAOps_Operator_CreateTestSuite_Created.png)
 
 ## Step 3: Add a test package from the Catalog
 
-After the suite is created, the *Test Package Selection* section becomes available in the same dialog.
+After the suite is created, the *Test Package Selection* section will become available in the same dialog box.
 
 1. If you do not know the Catalog ID of your test package yet, click *Browse Catalog*.
 
-   This opens the DataMiner Catalog filtered on test packages in a new tab. Open your package there and copy its Catalog ID (a GUID) from the page URL or details.
+   This will open the DataMiner Catalog filtered on test packages in a new tab. Open your package there, and copy its Catalog ID (a GUID) from the page URL or details.
 
 1. Paste the GUID in the *Catalog ID* box.
 
-1. Leave *Version* set to `*` to always use the latest stable version, or enter a version filter. The version filter accepts NuGet-style wildcards, e.g., `1.2.*`; see [version filters for test packages](xref:QAOps_Main_UI#version-filters-for-test-packages).
+1. Keep *Version* set to `*` to always use the latest stable version, or enter a version filter. The version filter accepts NuGet-style wildcards, e.g., `1.2.*`; see [version filters for test packages](xref:QAOps_Main_UI#version-filters-for-test-packages).
 
 1. Set *Allow Prerelease* to *Yes* if prerelease versions may be used.
 
@@ -80,13 +80,13 @@ After the suite is created, the *Test Package Selection* section becomes availab
 
 1. Click *Add Package*.
 
-   The *Status* box confirms *Test Package added.* and the package appears in the table.
+   The *Status* box will confirm with *Test Package added.*, and the package will appear in the table.
 
    ![Package added confirmation](~/develop/images/QAOps_Operator_TestSuite_PackageAdded.png)
 
 ## Step 4: Manage the packages in a test suite
 
-You can manage packages of an existing suite at any time: on the *Test Suites* page, click the gear icon on the suite card to open the *Edit QAOps Test Suite* dialog.
+You can manage packages of an existing suite at any time. On the *Test Suites* page, click the gear icon on the suite card to open the *Edit QAOps Test Suite* dialog box.
 
 ![Edit Test Suite dialog](~/develop/images/QAOps_Operator_EditTestSuite.png)
 
@@ -94,7 +94,7 @@ In the package table at the bottom of the dialog:
 
 ![Package row with actions](~/develop/images/QAOps_Operator_TestSuite_PackageRow.png)
 
-- The **#** column shows the execution order in which packages run when the suite is triggered.
+- The **#** column will show the execution order in which packages will run when the suite is triggered.
 
 - Use the **▲** and **▼** buttons to move a package up or down in the execution order.
 
@@ -102,10 +102,10 @@ In the package table at the bottom of the dialog:
 
 - Click *Remove* to remove the package from the suite.
 
-When you are done, click *Save Test Suite* and check the *Status* box for confirmation.
+When you are done, click *Save Test Suite*, and check the *Status* box for confirmation.
 
 > [!IMPORTANT]
-> Deleting an entire test suite is an operation for a QAOps Administrator. The *Remove Test Suite* button in the dialog requests that removal; be aware that removing a suite that is still allowed on a configuration clears that configuration's test-run history.
+> Deleting an entire test suite is something only a QAOps Administrator is allowed to do. Click the *Remove Test Suite* button to request a removal. Be aware that removing a suite that is still allowed on a configuration will clear that configuration's test run history.
 
 ## Step 5: Allow the test suite on a configuration
 
@@ -120,7 +120,7 @@ A test suite only runs on configurations that explicitly allow it:
 1. Click *Save Configuration*.
 
 > [!IMPORTANT]
-> Adding a test suite to an existing configuration is an impactful operation that you cannot undo yourself. If you are not sure, create a new configuration and add the test suite there. See [QAOps test suites](xref:QAOps_Test_Suite).
+> Adding a test suite to an existing configuration is an impactful operation that you cannot undo yourself. If you are not sure, create a new configuration, and add the test suite there. See [QAOps test suites](xref:QAOps_Test_Suite).
 
 ## Next steps
 

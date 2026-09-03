@@ -42,13 +42,13 @@ Expected duration: 3 minutes.
 
 1. Use the filter buttons at the top (*Configurations*, *Suites*, *Servers*, *Active runs*) to control which entity types are shown.
 
-1. Select *Demo Test Suite* in the graph and read its details in the *Inspector* panel on the right.
+1. Select *Demo Test Suite* in the graph, and read its details in the *Inspector* panel on the right.
 
-1. Select *Demo Configuration* and read its description in the *Inspector*.
+1. Select *Demo Configuration*, and read its description in the *Inspector*.
 
-1. Select a server node and locate its details.
+1. Select a server node, and locate its details.
 
-1. With the toggle next to the *Motion* dropdown, switch to the accessible topology table and locate the same entities in the table.
+1. With the toggle button next to the *Motion* dropdown box, switch to the accessible topology table, and locate the same entities in the table.
 
 > [!TIP]
 > For detailed page and app information, see [QAOps main UI](xref:QAOps_Main_UI).

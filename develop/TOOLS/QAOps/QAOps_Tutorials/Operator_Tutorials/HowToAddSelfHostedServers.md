@@ -38,37 +38,37 @@ Expected duration: 20 minutes.
 
 1. In the QAOps Operator app, go to the *Configurations* page.
 
-1. Scroll to the bottom of the configuration card list and click the **⊕** button.
+1. Scroll to the bottom of the configuration card list, and click the **⊕** button.
 
-1. In the *Configuration Type* dropdown, keep the default *Self-hosted*.
+1. Keep the *Configuration Type* dropdown box set to *Self-hosted*, the default value.
 
-1. Enter a *Name* and *Description*, select the allowed *Test Suites*, set *Test Runs To Keep*, and optionally select *Global Categories*, in the same way as for a QAOps-hosted configuration (see [Creating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration)).
+1. Enter a *Name* and a *Description*, select the allowed *Test Suites*, set *Test Runs To Keep*, and optionally select *Global Categories*, in the same way as for a QAOps-hosted configuration (see [Creating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration)).
 
-   Note that a self-hosted configuration has no provisioning section: QAOps does not deploy servers for it.
+   Note that a self-hosted configuration has no provisioning section. QAOps does not deploy servers for it.
 
    ![Create dialog for a self-hosted configuration](~/develop/images/QAOps_Operator_CreateConfiguration_SelfHosted.png)
 
-1. Click *Save Configuration* and check the *Status* box for confirmation.
+1. Click *Save Configuration*, and check the *Status* box for confirmation.
 
    ![Saving the self-hosted configuration](~/develop/images/QAOps_Operator_CreateConfiguration_SelfHosted_Save.png)
 
-   After the configuration is saved, the *Configure Self-Hosted DataMiners* wizard opens automatically.
+   After the configuration is saved, the *Configure Self-Hosted DataMiners* wizard will open automatically.
 
 ## Step 2: Get to know the Configure Self-Hosted DataMiners wizard
 
 ![Configure Self-Hosted DataMiners wizard](~/develop/images/QAOps_Operator_ServerWizard_Single.png)
 
-The wizard allows adding or updating servers:
+The wizard allows you to add or update servers:
 
 - **Offline servers** (not yet connected to QAOps) can generate a `.dmapp` installer package that connects them to QAOps.
 
 - **Online servers** that already run the QAOps Bridge DxM can be upgraded directly from the wizard.
 
-At the top, the wizard shows the *QAOps Configuration ID* it belongs to and the *Latest known Bridge DxM version*.
+At the top, the wizard shows the *QAOps Configuration ID* it belongs to, as well as the *Latest known Bridge DxM version*.
 
-With the *What are you adding?* dropdown, you choose the topology:
+Using the *What are you adding?* dropdown box, you can choose the topology:
 
-![What are you adding dropdown](~/develop/images/QAOps_Operator_ServerWizard_TypeDropdown.png)
+![What are you adding dropdown box](~/develop/images/QAOps_Operator_ServerWizard_TypeDropdown.png)
 
 - **Single DataMiner**: One standalone DataMiner Agent.
 
@@ -79,23 +79,23 @@ With the *What are you adding?* dropdown, you choose the topology:
 
 ## Step 3: Add a single DataMiner Agent
 
-1. In the *What are you adding?* dropdown, select *Single DataMiner*.
+1. Open the *What are you adding?* dropdown box, and select *Single DataMiner*.
 
-   The wizard shows a server row with an automatically generated *Server ID*.
+   The wizard will show a server row with an automatically generated *Server ID*.
 
-1. Enter a display name for the server in the *Server display name* box, and click *Update Name*.
+1. In the *Server display name* box, enter a display name for the server, and click *Update Name*.
 
    ![Wizard with server display name filled in](~/develop/images/QAOps_Operator_ServerWizard_Named.png)
 
 1. Click *Create installer*.
 
-   The status box shows *Packaging* with a running timer while QAOps builds a `.dmapp` installer specific to this server.
+   The status box will show *Packaging* with a running timer while QAOps builds a `.dmapp` installer specific to this server.
 
    ![Wizard while packaging the installer](~/develop/images/QAOps_Operator_ServerWizard_Packaging.png)
 
 1. Wait until the status shows *Finished*.
 
-   The *Download installer* button then becomes active.
+   The *Download installer* button will then become active.
 
    ![Wizard with finished installer ready for download](~/develop/images/QAOps_Operator_ServerWizard_Finished.png)
 
@@ -103,35 +103,35 @@ With the *What are you adding?* dropdown, you choose the topology:
 
 ## Step 4: Add a DataMiner cluster
 
-1. In the *What are you adding?* dropdown, select *DataMiner Cluster*.
+1. Open the *What are you adding?* dropdown box, and select *DataMiner Cluster*.
 
-   The wizard now shows a *DataMiner Cluster display name* row and one row per server in the cluster.
+   The wizard will now show a *DataMiner Cluster display name* row and one row per server in the cluster.
 
    ![Wizard in DataMiner Cluster mode](~/develop/images/QAOps_Operator_ServerWizard_Cluster.png)
 
-1. Enter a display name for the cluster and click *Update Name* in the cluster row.
+1. Enter a display name for the cluster, and click *Update Name* in the cluster row.
 
 1. For each DataMiner Agent in the cluster, click the **+** button to add a server row.
 
    ![Cluster with two server rows](~/develop/images/QAOps_Operator_ServerWizard_Cluster_TwoServers.png)
 
-1. For every server row: enter a display name, click *Update Name*, then click *Create installer* and wait for the status to show *Finished*.
+1. For every server row, enter a display name, click *Update Name*, then click *Create installer*, and wait for the status to show *Finished*.
 
-1. Download the installer of each server with its *Download installer* button.
+1. Download the installer of each server by clicking its *Download installer* button.
 
    Each installer is tied to its own *Server ID*, so make sure to install the right package on the right machine.
 
-To remove a server from the cluster, click the **-** button in its row. To remove the whole cluster registration, click *Delete Complete Cluster Record*.
+To remove a server from the cluster, click the **-** button in its row. To remove the entire cluster registration, click *Delete Complete Cluster Record*.
 
 ## Step 5: Install the installer package on your server
 
 1. Copy the downloaded `.dmapp` file to the DataMiner server it was generated for.
 
-1. Install it like any other DataMiner application package (for example with the DataMiner Application Package installer).
+1. Install it like any other DataMiner application package (e.g., with the DataMiner Application Package installer).
 
-   The package installs the QAOps Bridge DxM preconfigured for your configuration, which connects the server to QAOps.
+   The package will install the QAOps Bridge DxM preconfigured for your configuration, which connects the server to QAOps.
 
-1. Back in the QAOps Operator app, select your configuration card on the *Configurations* page and verify in the *Servers* column that the server reports its status.
+1. Back in the QAOps Operator app, select your configuration card on the *Configurations* page, and verify in the *Servers* column that the server reports its status.
 
 Once the server is online, test runs on this configuration will execute on your self-hosted DataMiner.
 

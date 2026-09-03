@@ -8,7 +8,7 @@ description: Learn how to update an existing QAOps configuration with the Edit C
 > [!IMPORTANT]
 > This section includes information that is only applicable to Skyline employees.
 
-In this tutorial, you will learn the two ways to update an existing [QAOps configuration](xref:QAOps_Configuration) in the QAOps Operator app: with the *Edit Configuration* dialog on a configuration card, and with *Table Mode* for quick inline edits across many configurations.
+In this tutorial, you will learn the two ways to update an existing [QAOps configuration](xref:QAOps_Configuration) in the QAOps Operator app: with the *Edit Configuration* dialog box on a configuration card, and with *Table Mode* for quick inline edits across many configurations.
 
 Expected duration: 10 minutes.
 
@@ -16,17 +16,17 @@ Expected duration: 10 minutes.
 
 - Operator access to the [QAOps Operator app](xref:QAOps_Main_UI#qaops-operator-app) (the blue app).
 
-- An existing configuration you are allowed to change. If you do not have one, first follow [Creating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration).
+- An existing configuration you are allowed to change. If you do not have one, first follow the [Creating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration) tutorial.
 
 ## Overview
 
-- [Step 1: Open the Edit Configuration dialog](#step-1-open-the-edit-configuration-dialog)
+- [Step 1: Open the Edit Configuration dialog box](#step-1-open-the-edit-configuration-dialog-box)
 
 - [Step 2: Change the settings and save](#step-2-change-the-settings-and-save)
 
 - [Step 3: Update configurations in Table Mode](#step-3-update-configurations-in-table-mode)
 
-## Step 1: Open the Edit Configuration dialog
+## Step 1: Open the Edit Configuration dialog box
 
 1. In the QAOps Operator app, go to the *Configurations* page.
 
@@ -34,7 +34,7 @@ Expected duration: 10 minutes.
 
 1. Click the gear icon next to the configuration name on the card.
 
-   The *Edit Configuration* dialog opens, pre-filled with the current settings. The *Status* box at the bottom shows *Editing existing configuration*.
+   The *Edit Configuration* dialog box will open, pre-filled with the current settings. The *Status* box at the bottom will show *Editing existing configuration*.
 
    ![Edit Configuration dialog](~/develop/images/QAOps_Operator_EditConfiguration.png)
 
@@ -44,34 +44,34 @@ Expected duration: 10 minutes.
 
    > [!IMPORTANT]
    >
-   > - Removing a test suite or reducing *Test Runs To Keep* will completely clear the current test-run history for this configuration from process memory.
-   > - Changing the *Configuration Type* is an impactful operation: switching away from *QAOps-hosted* undeploys the hosted servers, and switching away from *Self-hosted* removes the registered self-hosted servers.
+   > - Removing a test suite or reducing *Test Runs To Keep* will completely clear the current test run history for this configuration from process memory.
+   > - Changing the *Configuration Type* is an impactful operation. Switching away from *QAOps-hosted* undeploys the hosted servers, and switching away from *Self-hosted* removes the registered self-hosted servers.
 
-1. Click *Save Configuration* at the bottom of the dialog.
+1. Click *Save Configuration* at the bottom of the dialog box.
 
-1. Verify in the *Status* box that the update was accepted.
+1. In the *Status* box, verify that the update was accepted.
 
-1. Close the dialog with the **X** in the upper-right corner.
+1. Close the dialog box by click the **X** in the upper-right corner.
 
 ## Step 3: Update configurations in Table Mode
 
-For quick changes to individual fields, or to edit several configurations in one place, use Table Mode:
+For quick changes to individual fields, or to edit several configurations in one place, use *Table Mode*:
 
-1. On the *Configurations* page, scroll down and click the *Table Mode* button in the lower-right corner.
+1. On the *Configurations* page, scroll down, and click the *Table Mode* button in the lower-right corner.
 
-   A table view of all configurations opens, with a *Servers* table below it.
+   A table view of all configurations will open, with a *Servers* table below it.
 
    ![Table Mode](~/develop/images/QAOps_Operator_TableMode.png)
 
 1. Use the magnifying glass in the upper-right corner of the table to search for your configuration by name.
 
-1. Click the pencil icon next to the value you want to change (for example, the description).
+1. Click the pencil icon next to the value you want to change (e.g., the description).
 
-   The cell becomes editable, with a confirm (✓) and cancel (✗) button next to it.
+   The cell will become editable, with a confirm (✓) and cancel (✗) button next to it.
 
    ![Inline editing a description in Table Mode](~/develop/images/QAOps_Operator_TableMode_EditDescription.png)
 
-1. Enter the new value and click the **✓** button to push the change through the QAOps system.
+1. Enter the new value, and click the **✓** button to push the change through the QAOps system.
 
 > [!TIP]
 > You can navigate to other pages without losing unconfirmed table changes. This is convenient when you need to look up a test suite ID or a global category and then return to finish your edit.
