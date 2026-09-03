@@ -165,3 +165,9 @@ From now on, closed client connections will be cleaned up more deterministically
 In automation script UIs, date and time inputs could behave unexpectedly. In Firefox, when you manually entered values starting with `0` (e.g., `05` or `09`), the cursor could jump to another field too early. Also, if a live update arrived while you were editing a time input, your in-progress changes could be lost or focus could move unexpectedly.
 
 Manual typing now behaves consistently across Firefox and Chromium-based browsers, and in-progress edits are preserved while you are still working in the field.
+
+#### Memory leak in web API [ID 46348]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+In some cases, the web API could leak memory, causing the memory used by the w3wp process to increase slowly.

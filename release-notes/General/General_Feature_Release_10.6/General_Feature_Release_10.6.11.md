@@ -46,7 +46,11 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-*No enhancements have been selected yet.*
+#### Jobs module: All server-side code has now been removed from the code base [ID 46163]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+The Jobs module has been end-of-life since DataMiner 10.5.0. All server-side code related to this module has now been removed from the code base.
 
 ### Fixes
 

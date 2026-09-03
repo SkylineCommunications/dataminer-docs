@@ -36,6 +36,12 @@ From now on, write-only columns are retained for backward compatibility but excl
 
 Existing queries can still resolve and run if such columns were already explicitly referenced. If a write-only column is explicitly selected, it remains available for subsequent operators such as *Filter*, *Sort*, *Aggregate*, and *Join*.
 
+#### Jobs app: All code has now been removed from the web repository [ID 46170]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+The Jobs module has been end-of-life since DataMiner 10.5.0. All code related to this module has now been removed from the web repository.
+
 #### Dashboards/Low-Code Apps - Query builder: Hidden tree argument items are now excluded by default [ID 46246]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
@@ -48,4 +54,8 @@ If you deselect such a hidden item, it remains available in that editing session
 
 ### Fixes
 
-*No fixes have been selected yet.*
+#### Dashboards/Low-Code Apps: Linked dropdown components feeding data to each other could cause a dashboard or app to become unresponsive [ID 46314]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, when two dropdown components were configured to feed data to each other, in some cases, the dashboard or low-code app could become unresponsive.
