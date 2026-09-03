@@ -4,15 +4,6 @@ DataMiner Docs is a documentation-only repository containing all documentation r
 
 ## Validation of Changes
 
-### Test the Build
-
-- Install docfx: `dotnet tool update -g docfx`
-- Run a build: 
-  - `dotnet restore "src/NuGetPackages"` - to restore NuGet packages
-  - `docfx metadata` - to restore metadata
-  - `docfx build` - to run the build itself
-- If warnings or errors are introduced during the `docfx build` step, try to fix them.
-
 ## Repository Structure
 
 These are the key directories within this repository:
