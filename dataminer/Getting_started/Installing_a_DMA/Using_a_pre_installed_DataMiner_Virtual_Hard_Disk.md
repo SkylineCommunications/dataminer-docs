@@ -68,7 +68,7 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 
 1. When the login screen is shown, log in to the VM with your set password.
 
-   The Administrator user will automatically be renamed to DataMinerAdmin after logging in.
+   The Administrator user will automatically be renamed to *DataMinerAdmin* after you log in.
 
 1. Verify in the network configuration that the network interface uses a static IP instead of DHCP, because DataMiner requires a static IP.
 
@@ -139,7 +139,7 @@ Follow the steps below to configure your DataMiner Agent:
 
    DataMiner will automatically start up and connect to dataminer.services. DataMiner Cube will also be installed, so you can connect to DataMiner locally.
 
-1. [Log in to DataMiner Cube](xref:Logging_on_to_DataMiner_Cube) using the DataMinerAdmin account.
+1. [Log in to DataMiner Cube](xref:Logging_on_to_DataMiner_Cube) using the *DataMinerAdmin* account.
 
 ### [Installer v10.4](#tab/tabid-2)
 
