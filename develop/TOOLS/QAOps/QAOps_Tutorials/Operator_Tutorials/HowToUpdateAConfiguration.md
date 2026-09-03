@@ -8,7 +8,7 @@ description: Learn how to update an existing QAOps configuration with the Edit C
 > [!IMPORTANT]
 > This section includes information that is only applicable to Skyline employees.
 
-In this tutorial, you will learn the two ways to update an existing [QAOps configuration](xref:QAOps_Configuration) in the QAOps Operator app: with the *Edit Configuration* dialog box on a configuration card, and with *Table Mode* for quick inline edits across many configurations.
+In this tutorial, you will learn the two ways to update an existing [QAOps configuration](xref:QAOps_Configuration) in the QAOps Operator app: with the *Edit Configuration* dialog on a configuration card, and with *Table Mode* for quick inline edits across many configurations.
 
 Expected duration: 10 minutes.
 
@@ -20,13 +20,13 @@ Expected duration: 10 minutes.
 
 ## Overview
 
-- [Step 1: Open the Edit Configuration dialog box](#step-1-open-the-edit-configuration-dialog-box)
+- [Step 1: Open the Edit Configuration dialog](#step-1-open-the-edit-configuration-dialog)
 
 - [Step 2: Change the settings and save](#step-2-change-the-settings-and-save)
 
 - [Step 3: Update configurations in Table Mode](#step-3-update-configurations-in-table-mode)
 
-## Step 1: Open the Edit Configuration dialog box
+## Step 1: Open the Edit Configuration dialog
 
 1. In the QAOps Operator app, go to the *Configurations* page.
 
@@ -34,7 +34,7 @@ Expected duration: 10 minutes.
 
 1. Click the gear icon next to the configuration name on the card.
 
-   The *Edit Configuration* dialog box will open, pre-filled with the current settings. The *Status* box at the bottom will show *Editing existing configuration*.
+   The *Edit Configuration* dialog will open, pre-filled with the current settings. The *Status* box at the bottom will show *Editing existing configuration*.
 
    ![Edit Configuration dialog](~/develop/images/QAOps_Operator_EditConfiguration.png)
 
@@ -47,11 +47,11 @@ Expected duration: 10 minutes.
    > - Removing a test suite or reducing *Test Runs To Keep* will completely clear the current test run history for this configuration from process memory.
    > - Changing the *Configuration Type* is an impactful operation. Switching away from *QAOps-hosted* undeploys the hosted servers, and switching away from *Self-hosted* removes the registered self-hosted servers.
 
-1. Click *Save Configuration* at the bottom of the dialog box.
+1. Click *Save Configuration* at the bottom of the dialog.
 
 1. In the *Status* box, verify that the update was accepted.
 
-1. Close the dialog box by click the **X** in the upper-right corner.
+1. Close the dialog by click the **X** in the upper-right corner.
 
 ## Step 3: Update configurations in Table Mode
 

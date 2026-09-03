@@ -64,7 +64,7 @@ Expected duration: 15 minutes.
 
 ## Step 3: Add a test package from the Catalog
 
-After the suite is created, the *Test Package Selection* section will become available in the same dialog box.
+After the suite is created, the *Test Package Selection* section will become available in the same dialog.
 
 1. If you do not know the Catalog ID of your test package yet, click *Browse Catalog*.
 
@@ -86,7 +86,7 @@ After the suite is created, the *Test Package Selection* section will become ava
 
 ## Step 4: Manage the packages in a test suite
 
-You can manage packages of an existing suite at any time. On the *Test Suites* page, click the gear icon on the suite card to open the *Edit QAOps Test Suite* dialog box.
+You can manage packages of an existing suite at any time. On the *Test Suites* page, click the gear icon on the suite card to open the *Edit QAOps Test Suite* dialog.
 
 ![Edit Test Suite dialog](~/develop/images/QAOps_Operator_EditTestSuite.png)
 

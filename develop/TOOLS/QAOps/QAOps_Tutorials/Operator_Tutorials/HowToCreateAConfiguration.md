@@ -101,11 +101,11 @@ Because you selected *QAOps-hosted*, the dialog will show a *QAOps-Hosted Provis
 
 ## Step 5: Save the configuration
 
-1. At the bottom of the dialog box, click *Save Configuration*.
+1. At the bottom of the dialog, click *Save Configuration*.
 
 1. Watch the *Status* box below the button. It will indicate whether the configuration was created successfully.
 
-1. Close the dialog box by clicking the **X** in the upper-right corner.
+1. Close the dialog by clicking the **X** in the upper-right corner.
 
 Your new configuration will appear as a card on the *Configurations* page.
 

@@ -136,24 +136,24 @@ The *Configurations* page shows all known configurations as cards, with the *Ser
 
 Each configuration card provides the following actions:
 
-- **Gear icon** (next to the configuration name): Opens the *Edit Configuration* dialog box for that configuration. See [Editing configurations](#editing-configurations).
+- **Gear icon** (next to the configuration name): Opens the *Edit Configuration* dialog for that configuration. See [Editing configurations](#editing-configurations).
 
 - **Green upward-arrow button**: Manually deploys an extra QAOps-hosted target (DaaS) for the configuration. You can click this button multiple times to start several deployments.
 
   > [!NOTE]
   > It can take up to 10 seconds before deployments begin and become visible in the low-code app.
 
-Below the last card, the wide **⊕** button opens the *Create Configuration* dialog box to [create a new configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration).
+Below the last card, the wide **⊕** button opens the *Create Configuration* dialog to [create a new configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration).
 
 #### Editing configurations
 
-To edit a configuration, click the **gear icon** on its card. The *Edit Configuration* dialog box will open with the current settings pre-filled. Adjust the settings, and click *Save Configuration*; the *Status* box at the bottom of the dialog will confirm the result.
+To edit a configuration, click the **gear icon** on its card. The *Edit Configuration* dialog will open with the current settings pre-filled. Adjust the settings, and click *Save Configuration*; the *Status* box at the bottom of the dialog will confirm the result.
 
 ![QAOps operator Edit Configuration dialog](~/develop/images/QAOps_Operator_EditConfiguration.png)
 
 For more information about the available settings, see [QAOps configuration](xref:QAOps_Configuration). For a step-by-step guide, see [Updating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Update_A_Configuration).
 
-For a **self-hosted** configuration, saving the dialog box also opens the *Configure Self-Hosted DataMiners* wizard, which you use to register your own servers (single DataMiner Agent or DataMiner cluster) and generate their installer packages. See [Adding self-hosted DataMiner servers](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Add_Self_Hosted_Servers).
+For a **self-hosted** configuration, saving the dialog also opens the *Configure Self-Hosted DataMiners* wizard, which you use to register your own servers (single DataMiner Agent or DataMiner cluster) and generate their installer packages. See [Adding self-hosted DataMiner servers](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Add_Self_Hosted_Servers).
 
 #### Table Mode
 
@@ -181,15 +181,15 @@ The QAOps package identifier is used when [triggering a test run with an unrelea
 
 #### Editing test suites
 
-To create a test suite, click the **⊕** button below the last test suite card. To edit an existing test suite, click the **gear icon** on its card. Both open the same dialog box, in which you can set the name, description, and global categories, and manage the test packages of the suite.
+To create a test suite, click the **⊕** button below the last test suite card. To edit an existing test suite, click the **gear icon** on its card. Both open the same dialog, in which you can set the name, description, and global categories, and manage the test packages of the suite.
 
-![QAOps operator Edit Test Suite dialog box](~/develop/images/QAOps_Operator_EditTestSuite.png)
+![QAOps operator Edit Test Suite dialog](~/develop/images/QAOps_Operator_EditTestSuite.png)
 
 For a step-by-step guide, see [Creating and managing test suites](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites). For more information about the available settings, see [QAOps test suites](xref:QAOps_Test_Suite).
 
 ##### Adding test packages
 
-In the *Test Package Selection* section of the dialog box (available once the test suite exists), you can add test packages from the DataMiner Catalog:
+In the *Test Package Selection* section of the dialog (available once the test suite exists), you can add test packages from the DataMiner Catalog:
 
 1. Optionally click *Browse Catalog* to open the Catalog filtered on test packages and look up the Catalog ID (a GUID) of your package.
 
