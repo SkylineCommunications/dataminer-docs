@@ -164,6 +164,16 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - **Element state**: Select the initial state of the element in this selection box. By default this will be set to “Active”.
 
+1. From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46287-->, configure the following additional pages, if necessary:
+
+   - On the *Settings* page, configure any connector-defined settings.
+
+     If you edit an element with a saved credential that you cannot access, select a credential that you can access before saving the element.
+
+   - On the *Run-on details* page, select a compatible DataMiner Edge node for connectors that contain scripts, and configure the interval for each script.
+
+   These pages are available depending on the selected connector.
+
 1. Click *Next* and specify the view(s) to which you want to link the element.
 
 1. Click *Next* and specify the value for any available custom properties if necessary.
