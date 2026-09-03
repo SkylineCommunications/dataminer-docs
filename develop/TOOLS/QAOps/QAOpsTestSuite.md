@@ -38,4 +38,4 @@ When you [create or edit a test suite in the QAOps Operator app](xref:QAOps_Main
 
 The *Test Suite ID* is a ULID that uniquely identifies the test suite. It is generated automatically and cannot be adjusted.
 
-Once the test suite exists, the *Test Package Selection* section of the dialog allows you to add test packages from the DataMiner Catalog, change their execution order, or remove them. For a step-by-step guide, see [Creating and managing test suites](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites).
+Once the test suite exists, the *Test Package Selection* section of the dialog box allows you to add test packages from the DataMiner Catalog, change their execution order, or remove them. For a step-by-step guide, see [Creating and managing test suites](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites).

@@ -28,6 +28,6 @@ description: Discover all QAOps tutorials for Skyline employees. These cover use
 | Name | Description |
 |--|--|
 | [Creating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration) | Learn how to create a new QAOps-hosted configuration with the QAOps Operator app. |
-| [Updating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Update_A_Configuration) | Learn how to update an existing configuration with the Edit Configuration dialog and Table Mode. |
+| [Updating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Update_A_Configuration) | Learn how to update an existing configuration with the Edit Configuration dialog box and Table Mode. |
 | [Adding self-hosted DataMiner servers](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Add_Self_Hosted_Servers) | Learn how to connect your own single DataMiner Agent or DataMiner cluster to QAOps. |
 | [Creating and managing test suites](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites) | Learn how to create a test suite and add and manage its Catalog test packages. |
