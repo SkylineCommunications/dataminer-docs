@@ -26,6 +26,12 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
+#### Jobs: All references with regard to the Jobs module will now be hidden when connected to a DMA running version 10.5.X or newer [ID 46180]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+The Jobs module has been end-of-life since DataMiner 10.5.0. If Cube is connected to a DataMiner Agent running version 10.5.X or newer, from now on, it will hide all references with regard to this module.
+
 ### Automation script editor: Enhanced way of selecting credentials [ID 46251]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->

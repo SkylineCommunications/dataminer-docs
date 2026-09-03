@@ -718,6 +718,12 @@ When you retrieve scheduled tasks using a `GetInfoMessage` with type set to "Sch
 
 This will allow you to verify whether the property was enabled when the scheduled task was saved.
 
+#### Jobs module: All server-side code has now been removed from the code base [ID 46163]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+The Jobs module has been end-of-life since DataMiner 10.5.0. All server-side code related to this module has now been removed from the code base.
+
 #### CloudStorageMigrationFinalize script will now migrate all credentials stored in the Credentials Library [ID 46204]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
