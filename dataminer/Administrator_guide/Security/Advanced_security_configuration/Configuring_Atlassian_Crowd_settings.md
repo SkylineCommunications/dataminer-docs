@@ -1,6 +1,6 @@
 ---
 uid: Configuring_Atlassian_Crowd_settings
-description: "Configure Atlassian Crowd settings in DataMiner.xml to import users and groups, set authentication, and override proxy detection."
+description: "Learn about the deprecated Atlassian Crowd setup for user management in DataMiner, including user/group import, authentication, and autoproxy."
 ---
 
 # Configuring Atlassian Crowd settings
