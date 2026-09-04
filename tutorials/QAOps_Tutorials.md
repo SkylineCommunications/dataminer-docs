@@ -1,6 +1,6 @@
 ---
 uid: QAOps_Tutorials
-description: Discover all QAOps tutorials for Skyline employees. These cover user basics, test runs, result analysis, cost control, advanced package creation, and operator tasks like managing configurations, test suites, and self-hosted servers.
+description: Explore QAOps tutorials for Skyline employees, including test runs, results, costs, packages, configurations, test suites, and servers.
 ---
 
 # QAOps Tutorials
