@@ -2,8 +2,6 @@
 
 DataMiner Docs is a documentation-only repository containing all documentation related to the DataMiner software. It uses docfx format with YAML TOC files.
 
-## Validation of Changes
-
 ## Repository Structure
 
 These are the key directories within this repository:
