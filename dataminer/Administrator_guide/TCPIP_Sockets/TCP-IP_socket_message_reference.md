@@ -1,5 +1,6 @@
 ---
 uid: TCP-IP_socket_message_reference
+description: "Look up the exact TCP/IP socket message format for commands like Get_Parameter and Get_Alarm_Level to query DataMiner data."
 ---
 
 # TCP-IP socket message reference
