@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.1.0_fixes_2
+status: archived
 ---
 
-# General Main Release 10.1.0 - Fixes (part 2)
+# General Main Release 10.1.0 - Fixes (part 2) [ARCHIVED]
 
 #### Dashboards app - Pivot table component: Problem with 'Auto-expand rows' option \[ID 26803\]
 
