@@ -29,9 +29,6 @@ You can configure whether the [landing page](xref:Accessing_the_web_apps#datamin
    var defaultHTMLApp = "";
    ```
 
-   > [!NOTE]
-   > In case you intend to use Edge in IE compatibility mode, you will need to configure the *defaultApp* variable instead. If you set this variable to *Cube* or an empty value, DataMiner Cube is opened. If you set it to *HTML5*, the Monitoring app is opened.
-
 ## Showing the company logo on the landing page
 
 It is possible to customize the landing page so that the company logo is displayed.
