@@ -7506,6 +7506,16 @@ items:
             items:
             - name: Creating a test package
               topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
+        - name: QAOps Operator
+          items:
+          - name: Creating a QAOps configuration
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration
+          - name: Updating a QAOps configuration
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Update_A_Configuration
+          - name: Adding self-hosted DataMiner servers
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Add_Self_Hosted_Servers
+          - name: Creating and managing test suites
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:
