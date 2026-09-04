@@ -1,5 +1,6 @@
 ---
 uid: SwarmingFAQ
+description: "Find answers to frequently asked questions about swarming elements, element IDs, licensing, and Agent hosting behavior."
 ---
 
 # Frequently asked questions

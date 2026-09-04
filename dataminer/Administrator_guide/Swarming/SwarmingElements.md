@@ -1,5 +1,6 @@
 ---
 uid: SwarmingElements
+description: "Swarm elements to a different DataMiner Agent within a cluster using DataMiner Cube or an automation script."
 ---
 
 # Swarming elements
