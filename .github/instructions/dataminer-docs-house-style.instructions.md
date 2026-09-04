@@ -24,8 +24,10 @@ When creating or editing documentation pages, apply the following rules.
 
 - Write procedures as numbered lists.
 - Use one logical action per numbered step.
+- An exception to the above is procedures consisting of a single step, which do not require numbering.
 - Keep instruction lines short and easy to scan.
-- Put the result of a step on an indented line below that step.
+- Put any additional information about a step in a separate, indented paragraph below that step.
+- Put the result of a step in an indented paragraph below that step, and use future tense (e.g., "A new window will open" instead of "A new window opens").
 - If a step contains an image, indent it correctly so list numbering does not restart.
 
 ## Alert blocks
