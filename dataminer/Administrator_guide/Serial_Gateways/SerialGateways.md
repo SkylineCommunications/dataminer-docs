@@ -1,5 +1,6 @@
 ---
 uid: SerialGateways
+description: "Deploy a DMS Serial Gateway to connect multiple RS-232 ports over the DMA acquisition LAN and improve your DataMiner architecture and performance."
 ---
 
 # Serial gateways
