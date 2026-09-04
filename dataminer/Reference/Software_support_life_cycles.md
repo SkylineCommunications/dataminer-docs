@@ -36,8 +36,13 @@ Legend:
 
 ## DataMiner functionality evolution and retirement
 
-> [!NOTE]
-> For information about functionality in soft launch that is retired, refer to [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+The sections below list DataMiner functionality that has reached End of Engineering, End of Support, or End of Life, together with its current status and planned retirement timeline.
+
+> [!IMPORTANT]
+> When functionality reaches the End of Support status, starting from DataMiner 10.7, this functionality will be disabled by default. To keep using functionality that is no longer supported, you will need to explicitly enable it using a [soft-launch option](xref:SoftLaunchOptions) **before** you upgrade to a DataMiner version that no longer supports that functionality. Otherwise, a prerequisite check will detect that you are still using the functionality, and you will not be able to upgrade.
+
+> [!TIP]
+> For information on the available soft-launch options and about functionality in soft launch that is retired, refer to [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
 
 ### End of Engineering
 
