@@ -304,15 +304,17 @@ items:
                 topicUid: Cube_Feature_Release_10.3.2_CU1
           - name: DataMiner Cube Feature Release 10.3.1
             topicUid: Cube_Feature_Release_10.3.1
-  - name: v10.2
+  - name: Archived
     items:
-      - name: Feature Release
-        items:
-          - name: DataMiner Cube Feature Release 10.2.12
-            topicUid: Cube_Feature_Release_10.2.12
-          - name: DataMiner Cube Feature Release 10.2.11
-            topicUid: Cube_Feature_Release_10.2.11
-          - name: DataMiner Cube Feature Release 10.2.10
-            topicUid: Cube_Feature_Release_10.2.10
-          - name: DataMiner Cube Feature Release 10.2.9
-            topicUid: Cube_Feature_Release_10.2.9
+    - name: v10.2
+      items:
+        - name: Feature Release
+          items:
+            - name: DataMiner Cube Feature Release 10.2.12
+              topicUid: Cube_Feature_Release_10.2.12
+            - name: DataMiner Cube Feature Release 10.2.11
+              topicUid: Cube_Feature_Release_10.2.11
+            - name: DataMiner Cube Feature Release 10.2.10
+              topicUid: Cube_Feature_Release_10.2.10
+            - name: DataMiner Cube Feature Release 10.2.9
+              topicUid: Cube_Feature_Release_10.2.9
