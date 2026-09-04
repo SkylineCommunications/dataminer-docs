@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.1.0_fixes_1
+status: archived
 ---
 
-# General Main Release 10.1.0 - Fixes (part 1)
+# General Main Release 10.1.0 - Fixes (part 1) [ARCHIVED]
 
 #### Dashboards app: Polling issues when WebSocket communication was disabled \[ID 23801\]
 

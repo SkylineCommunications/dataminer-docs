@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Feature_Release_10.0.10_changes
+status: archived
 ---
 
-# General Feature Release 10.0.10 – Changes
+# General Feature Release 10.0.10 – Changes [ARCHIVED]
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
