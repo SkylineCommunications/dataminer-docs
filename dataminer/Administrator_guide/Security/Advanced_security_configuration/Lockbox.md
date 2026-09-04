@@ -1,5 +1,6 @@
 ---
 uid: Lockbox
+description: "Learn how DataMiner Lockbox controls time-limited access to DaaS and STaaS systems as an opt-in service for production environments."
 ---
 
 # Lockbox service for DaaS and STaaS systems

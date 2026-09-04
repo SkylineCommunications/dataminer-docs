@@ -1,5 +1,6 @@
 ---
 uid: SAML_Example_Config_DMS
+description: "Explore this example, which illustrates how you can configure SAML for a complex DataMiner System that includes Failover pairs."
 ---
 
 # Example setup - DMS with Failover pair

@@ -1,5 +1,6 @@
 ---
 uid: Security_OpenSearch
+description: "Secure OpenSearch with TLS, keep the cluster up to date, and follow upgrade guidance for safe DataMiner search configuration."
 keywords: updating OpenSearch, upgrading OpenSearch, OpenSearch security
 ---
 

@@ -1,5 +1,6 @@
 ---
 uid: Cassandra_firewall
+description: "Open the correct Cassandra firewall ports for cluster traffic and client access, including TLS requirements for secure DataMiner communication."
 ---
 
 # Firewall ports used with Cassandra
