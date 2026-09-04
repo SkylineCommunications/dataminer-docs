@@ -1,5 +1,6 @@
 ---
 uid: Enabling_notifications_in_case_SNMPv3_traps_cannot_be_processed
+description: "Learn how to enable notifications in DataMiner.xml when SNMPv3 traps or inform messages cannot be processed due to errors."
 ---
 
 # Enabling notifications in case SNMPv3 traps cannot be processed
