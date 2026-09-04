@@ -1,5 +1,6 @@
 ---
 uid: Generating_SMIv2_MIB_files
+description: "Learn how to generate SMIv2 MIB files for SNMPv2 and SNMPv3 managers to integrate custom bindings with third-party systems."
 ---
 
 # Generating SMIv2 MIB files

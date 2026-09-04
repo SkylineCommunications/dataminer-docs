@@ -1,5 +1,6 @@
 ---
 uid: Adjusting_the_SNMP_inform_message_cache_size
+description: "Learn how to adjust the SNMP inform message cache size in DataMiner.xml to control how many messages are stored."
 ---
 
 # Adjusting the SNMP inform message cache size
