@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Feature_Release_10.0.13_new_features
+status: archived
 ---
 
-# General Feature Release 10.0.13 – New features
+# General Feature Release 10.0.13 – New features [ARCHIVED]
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
