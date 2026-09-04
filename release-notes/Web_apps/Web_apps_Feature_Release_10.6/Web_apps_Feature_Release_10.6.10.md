@@ -171,3 +171,14 @@ Manual typing now behaves consistently across Firefox and Chromium-based browser
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
 
 In some cases, the web API could leak memory, causing the memory used by the w3wp process to increase slowly.
+
+#### Dashboards/Low-Code Apps: Query filter could show incorrect distinct values when filter assistance was enabled [ID 46352]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+In the Query filter component, several issues could occur in the checkbox list of distinct values when filter assistance was enabled:
+
+- Values from a previous query could still be shown, even though they no longer applied to the current query.
+- Discrete values that did not occur in the currently filtered query could incorrectly be hidden, even though they should still have been selectable.
+- Enabling a range filter did not disable the checkbox filters for numeric and date columns, even though only one of these filter types can be applied at a time.
+- Too many options could be shown in the checkbox list when filtering on a column while a filter was already active on a discrete numeric column.

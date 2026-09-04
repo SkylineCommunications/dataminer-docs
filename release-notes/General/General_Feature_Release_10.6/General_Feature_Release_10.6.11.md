@@ -63,3 +63,9 @@ In some cases, after SLAnalytics had restarted, an existing change point on a pa
 This was caused by an internal ID collision. Change point IDs restart from zero after a restart, and the retrieval logic could incorrectly treat a new change point with a reused ID as a duplicate.
 
 Change points are now also distinguished by creation time. As a result, previously detected change points remain retrievable after a restart.
+
+#### Stopping an element with a logger table could cause SLProtocol to stop unexpectedly [ID 46299]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, in some rare cases, stopping an element with a logger table could cause the SLProtocol process hosting the element to stop unexpectedly.
