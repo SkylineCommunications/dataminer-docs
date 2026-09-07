@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
+description: Learn how to manually provision endpoints and virtual signal groups for an IP Matrix element in the Virtual Signal Groups app.
 ---
 
 # Manually provisioning endpoints and virtual signal groups for an IP Matrix element

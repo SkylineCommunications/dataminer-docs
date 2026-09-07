@@ -1,6 +1,6 @@
 ---
 uid: DaaS_hosting
-description: DataMiner as a Service will allow you to spin up your DataMiner System in the cloud in just a few minutes with cloud-hosted DataMiner nodes.
+description: Explore how DataMiner as a Service will allow you to spin up your DataMiner System in the cloud in just a few minutes with cloud-hosted DataMiner nodes.
 ---
 
 # DataMiner as a Service
@@ -73,7 +73,7 @@ You can go to [dataminer.services](xref:Overview_dataminer_services), where
 
 ## Regional support for DaaS
 
-By default, your DaaS system is hosted in the Azure West Europe region. However, you can request deployment in [other Azure regions](https://datacenters.microsoft.com/globe/explore/).
+By default, your DaaS system is hosted in the Azure West Europe region. However, when [creating your DaaS system](xref:Creating_a_DMS_on_dataminer_services), you can select a different compute region in the advanced settings. If the region you want to deploy in is not available, contact us at [daas@dataminer.services](mailto:daas@dataminer.services) to request it.
 
 Geographically distributed systems with multiple nodes across different regions are also supported. If you require a *custom setup*, contact us at [daas@dataminer.services](mailto:daas@dataminer.services).
 

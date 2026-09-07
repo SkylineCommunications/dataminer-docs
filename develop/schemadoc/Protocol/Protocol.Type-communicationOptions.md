@@ -149,6 +149,9 @@ In the following example, the length identifier starts at position 4, it is 2 by
 
 ### postPonePortInitialisation
 
+> [!IMPORTANT]
+> This option is no longer supported as of DataMiner 10.6.x.
+
 At DMA restart, the initialization of the ports is postponed until all elements are started. The restart of an element will then start with the port initialization (first action of the protocolThread).
 
 Example:
@@ -166,6 +169,9 @@ Example:
 ```xml
 <Type communicationOptions="progid=National Instruments.OPCFieldPoint">opc</Type>
 ```
+
+> [!CAUTION]
+> OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector.
 
 ### redundantPolling
 

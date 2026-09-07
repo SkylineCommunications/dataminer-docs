@@ -1,6 +1,6 @@
 ---
 uid: skyline_dataminer_sdk_project_properties
-keywords: Skyline.DataMiner.Sdk, DataMinerType, GenerateDataMinerPackage, MinimumRequiredDmVersion, VersionComment, CatalogPublishKeyName, CatalogDefaultDownloadKeyName, UserSecretsId
+keywords: Skyline.DataMiner.Sdk, DataMinerType, GenerateDataMinerPackage, MinimumRequiredDmVersion, MinimumRequiredDmWebVersion, VersionComment, CatalogPublishKeyName, CatalogDefaultDownloadKeyName, UserSecretsId
 ---
 
 # Skyline DataMiner SDK project properties
@@ -26,6 +26,24 @@ When the value is set to `true`, it will generate a DataMiner application packag
 Expected format: `A.B.C.D - buildNumber`
 
 This will ensure that when a DataMiner application package is installed on a DataMiner Agent with a lower version, the installation will fail.
+
+## MinimumRequiredDmWebVersion
+
+Available from Skyline DataMiner SDK 2.4 onwards.
+
+Expected format: `A.B.C (CUX)` (e.g., `10.6.2 (CU0)`)
+
+This allows you to define the minimum required DataMiner web version independently from the minimum required DataMiner core version, which can be useful because the core and web versions do not always evolve at the same pace.
+
+Defining this property will ensure that when a DataMiner application package is installed on a system with a lower DataMiner web version, the installation will fail.
+
+Each cumulative update of a Main Release includes the same web app changes as the corresponding Feature Release. However, you should always give **preference to the Feature Release notation** over the Main Release notation. For example, use `10.6.4 (CU0)` instead of `10.6.0 (CU1)`, since both represent the same web version but the Feature Release notation is the preferred way to express it.
+
+For example:
+
+- If your package depends on DataMiner core 10.5.9 but relies on a web feature introduced in 10.6.3, you can keep the core requirement at 10.5.9 and set a higher minimum web version. This allows users who manually upgraded their web components to deploy your application without a full DataMiner upgrade.
+
+- If you want to support a 10.6 Main Release core system but require web features from 10.6.3, setting only a core requirement of 10.6 would still allow deployment on systems running 10.6.2. By also setting a minimum web version, you can block deployment on such systems unless the web version has been manually upgraded.
 
 ## Version
 

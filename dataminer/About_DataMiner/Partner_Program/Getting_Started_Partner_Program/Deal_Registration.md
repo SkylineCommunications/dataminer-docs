@@ -1,5 +1,6 @@
 ---
 uid: Deal_Registration
+description: Find out how the Deal Registration will help achieve a fruitful cooperation between Skyline and its partners by outlining the terms of engagement.
 ---
 
 # Deal Registration - Business Development Reward

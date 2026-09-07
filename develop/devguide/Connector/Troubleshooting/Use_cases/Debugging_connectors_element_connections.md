@@ -18,7 +18,59 @@ The first indication that something was wrong was in the element itself. There, 
 
 As usual when something goes wrong with an element, the first place we looked was the **element logging**. In the log file for the element, we could see exceptions indicating that while commands were received, no data was returned that made it possible to process these commands. This suggests that something was preventing data from reaching the destination element.
 
-![Debugging connectors 1](~/develop/images/Debuggingconnectors1.png)
+```bash
+2021/09/17 09:15:12.422|SLManagedScripting.exe|ManagedInterop|ERR|-1|125|Exception during execution:
+ Cookie: 124
+ Content 1: VT_ARRAY|VT_VARIANT (7)
+ 0 VT_I4 : 3
+ 1 VT_I4 : 135
+ 2 VT_I4 : 3693
+ 3 VT_BSTR : jsontest
+ 4 VT_BSTR : [REDACTED]...
+ Slot 2: VT_EMPTY
+ 
+ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> 
+Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, 
+Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at QAction.Run(SLProtocolExt protocol)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] 
+parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CManagedScript.Run(CManagedScript* , Int32 iCookie, IUnknown* pILog, IUnknown* pProtocol, tagVARIANT* 
+varParameters, tagVARIANT* varRowInfo, tagVARIANT* pvarReturn)
+ InnerException:
+ Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: n. Path '', line 0, 
+position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.JsonReader.ReadForType(JsonContract contract, Boolean hasConverter)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, 
+Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at QAction.Run(SLProtocolExt protocol)
+ 
+ 2021/09/17 09:15:12.422|SLProtocol - 6380 - jsontest|33816|CQAction::RunWrapped|DBG|-1|Script 1 triggered by 
+parameter 3 from element 'jsontest' threw an unhandled exception. Please check the
+ 2021/09/17 09:15:12.422|SLProtocol - 6380 - jsontest|33816|CQAction::Run|ERR|-1|QAction [1] triggered by 
+[pid=3/idx=-1/pk=/user=[REDACTED]] failed. (0x800402DA)
+   Input: new = <NULL>
+   Input: old = <NULL>
+   Input: extra = <NULL>
+ 
+ *********
+```
 
 The next step was to take a look at the **Element Connections module** in DataMiner Cube. There we spotted several element connections that were configured incorrectly. However, after we corrected these, we noticed that the changes were not being saved.
 
@@ -36,7 +88,10 @@ We were facing two issues in this use case: one was a problem in the *ElementCon
 
 To fix the problem in the *ElementConnections.xml* file, we first took a screenshot of all connections in the Element Connections app. Then we stopped all DMAs in the cluster and deleted everything in the *ElementConnections.xml* file on each DMA, except for the *Connections* tag.
 
-![Debugging connectors 4](~/develop/images/Debuggingconnectors4.png)
+```xml
+<Connections xmlns="http://www.skyline.be/config/elementconnections">
+</Connections>
+```
 
 We then restarted all DMAs and configured the element connections again in the Element Connections app, based on the screenshot we took earlier. Just to be safe, we added them one by one, saving after each element connection was configured. The element connections that were configured incorrectly earlier, we now added correctly instead. After this, the element received data again.
 
@@ -47,5 +102,4 @@ The solution in our connector was to build in a mechanism to save the received d
 ## Tips & tricks
 
 - If data is missing in an element, always check the element logging for errors.
-
 - Do not design a connector that requires element connection data from different elements in a specific order, because you cannot count on the order in which you will receive this data.

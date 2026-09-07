@@ -1,5 +1,6 @@
 ---
 uid: Setting_up_Azure_Active_Directory_Domain_Services
+description: "Set up Azure AD DS to connect DataMiner to Entra ID, deploy the service, configure the DNS servers, and join Windows servers to your domain."
 ---
 
 # Setting up Azure Active Directory Domain Services

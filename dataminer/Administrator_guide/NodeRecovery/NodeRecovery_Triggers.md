@@ -1,5 +1,6 @@
 ---
 uid: NodeRecovery_Triggers
+description: "Configure Node Recovery local and global trigger scripts to act on cluster state changes, maintenance updates, and rebalancing needs."
 ---
 
 # Triggering a script

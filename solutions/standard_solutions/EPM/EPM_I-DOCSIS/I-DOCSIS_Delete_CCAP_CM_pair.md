@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_Delete_CCAP_CM_pair
+description: Learn how to safely remove an I-DOCSIS CCAP/CM pair in DataMiner, including cleanup steps on the backend and frontend element.
 ---
 
 # Deleting a CCAP/CM pair manually

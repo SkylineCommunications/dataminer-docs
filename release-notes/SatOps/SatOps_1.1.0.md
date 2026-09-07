@@ -2,10 +2,7 @@
 uid: SatOps_1.1.0
 ---
 
-# SatOps 1.1.0 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# SatOps 1.1.0
 
 > [!NOTE]
 > This version requires:
@@ -15,13 +12,21 @@ uid: SatOps_1.1.0
 
 ## New features
 
-#### Satellite Scheduling: Jobs creation [ID 44879]
+#### Satellite Scheduling: Read and edit mode for managing transponder jobs [ID 44879]
 
-It is now possible to create jobs directly from the Satellite Scheduling app.
+The Satellite Scheduling view now supports both a read and an edit mode for managing transponder jobs. Read mode provides a static overview of job details, while edit mode allows you to create and modify jobs directly from the Scheduling interface. All changes are handled through MediaOps jobs in the background, ensuring full consistency.
 
 #### Satellite Inventory: Duplication of transponders [ID 44950]
 
-It is now possible to create a transponder based on an existing transponder. This will speed up the initial creation of multiple transponders for the same satellite. The interactive automation script even offers the option to create multiple similar transponders in bulk if they have sequential frequency bands.
+It is now possible to create a transponder based on an existing transponder. This will speed up the initial creation of multiple transponders for the same satellite.
+
+#### Satellite Inventory: Duplication of transponder plans [ID 45329]
+
+It is now possible to create a transponder plan based on an existing one, enabling faster configuration of multiple similar plans within the same transponder. A duplicate option is available in the context menu, allowing you to efficiently copy and adapt existing plans as needed.
+
+#### Satellite Scheduling: Direct navigation to Scheduling app from transponder timeline and slot picker [ID 45330]
+
+In the Satellite Scheduling app, a new context menu action for the transponder timeline allows you to open the Scheduling app with the relevant instance panel preselected. Additionally, the slot picker now includes a shortcut link that opens the Scheduling app with the selected resource and slot inserted, enabling faster navigation between the applications.
 
 ## Changes
 
@@ -29,4 +34,4 @@ It is now possible to create a transponder based on an existing transponder. Thi
 
 #### Satellite Scheduling: Transponder timeline design enhancements [ID 44949]
 
-The transponder timeline will now be better able to handle long transponder names and transponder slot names. In addition, the alignment of the timeline has been fine-tuned.
+The transponder timeline has been improved to better accommodate longer transponder and slot names, with refined alignment for improved readability and overall UI consistency. New filters by satellite and job name have been added to enhance navigation. In addition, the timeline now fully supports both read and edit mode, enabling both overview and direct management of transponder jobs.

@@ -4,7 +4,7 @@ uid: DashboardProgressBar
 
 # Progress bar
 
-This component shows the value of one or more analog parameters with a progress bar. It is available from DataMiner 10.2.0/10.1.7 onwards.
+This component shows the value of one or more analog parameters with a progress bar.
 
 ![Progress bar](~/dataminer/images/Progress_Bar.png)<br>*Progress bar component in DataMiner 10.4.5*
 

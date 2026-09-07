@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOps_People_and_Organizations_Intro
+description: Learn how to create an organization, a team, and contacts in the People & Organizations app, to interconnect these, and to make them bookable.
 ---
 
 # Creating an organization with a team and contacts to use as resources in MediaOps apps

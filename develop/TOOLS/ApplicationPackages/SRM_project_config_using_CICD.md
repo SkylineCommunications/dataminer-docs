@@ -60,15 +60,15 @@ To create the repository:
 
 1. Create a "Package" repository and clone it.
 
-2. In the repository, inside the "SetupContent" folder add an "SRM" folder and include the files from the extracted archive (see [Configuration extraction](#configuration-extraction)).
+1. In the repository, inside the "SetupContent" folder add an "SRM" folder and include the files from the extracted archive (see [Configuration extraction](#configuration-extraction)).
 
-3. In the "Install" automation script of the "Package" repository, add the necessary steps to import the SRM configuration:
+1. In the "Install" automation script of the "Package" repository, add the necessary steps to import the SRM configuration:
 
    1. Add the [Skyline.DataMiner.Core.AppPackageInstaller.SRM](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageInstaller.SRM) NuGet package (available on <nuget.org>) to the "Install" project. Be sure to select version 4.0.0 or higher.
 
-   2. In the code of the "Install" script, reference the *Skyline.DataMiner.Srm.AppPackageInstaller* namespace.
+   1. In the code of the "Install" script, reference the *Skyline.DataMiner.Srm.AppPackageInstaller* namespace.
 
-   3. In the "Install" method, add the following lines:
+   1. In the "Install" method, add the following lines:
 
       ```csharp
       var srmInstaller = new SrmInstaller(engine, context);

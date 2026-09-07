@@ -1,5 +1,6 @@
 ---
 uid: PO_Managing_Organizations
+description: Use the Organizations page of the People and Organizations app to add and edit organizations, and to manage organization members and categories.
 ---
 
 # Managing organizations
@@ -70,6 +71,9 @@ To configure organization members for an existing organization:
 1. Move contacts to and from the *Non-members* and *Members* columns using the ► and ◄ buttons.
 
    If you quickly want to find a specific contact in the lists, click the magnifying glass icon at the top and specify a filter.
+
+   > [!NOTE]
+   > Adding members who are already part of another organization will remove them from that organization.
 
 When you close the panel, the selected organization members will be shown in the list of members in the *Details* panel.
 

@@ -51,14 +51,14 @@ The Catalog API allows you to retrieve information of a Catalog item.
 
 ### API definition
 
-For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
+For a complete definition of the API, go to [Key Catalog API Swagger](https://global.dataminer.services/swagger/catalogapi-web/index.html?urls.primaryName=Key+Catalog+API+v2.0).
 
 This page also provides a quick way to execute the call: Expand the "/api/key-catalog/v2-0/catalogs/{catalogId}" item, and click the *Try it out* button.
 
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the call on the production Catalog.
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
@@ -84,14 +84,14 @@ The *versions* API call allows you to retrieve version information for a Catalog
 
 ### API Definition
 
-For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
+For a complete definition of the API, go to [Key Catalog API Swagger](https://global.dataminer.services/swagger/catalogapi-web/index.html?urls.primaryName=Key+Catalog+API+v2.0).
 
 This page also provides a quick way to execute the call: Expand the "/api/key-catalog/v2-0/catalogs/{catalogId}/versions" item, and click the *Try it out* button.
 
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the call on the production Catalog.
 
-The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 

@@ -24,7 +24,6 @@ For more details about what each workflow does, you can check one of the links b
 - [Master Workflow](xref:github_reusable_workflows_master_workflow)
 - [Automation Master Workflow](xref:github_reusable_workflows_automation_master_workflow)
 - [NuGet Solution Master Workflow](xref:github_reusable_workflows_nuget_solution_master_workflow)
-- [SRM Function Master Workflow](xref:github_reusable_workflows_srm_function_master_workflow)
 - [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow)
 - [DataMiner App Package Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow)
 - [Update Catalog Details](xref:github_reusable_workflows_update_catalog_details)
@@ -68,4 +67,4 @@ jobs:
 ```
 
 > [!NOTE]
-> For repositories in the *SkylineCommunications* organization, the analysis step uses the *SONAR_TOKEN* organization secret. For repositories outside of the *SkylineCommunications* organization, you will need to create a repository secret with name *SONAR_TOKEN*. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+> Static code analysis through SonarCloud is optional. When you enable it, for repositories in the *SkylineCommunications* organization the analysis step uses the *SONAR_TOKEN* organization secret. For repositories outside of the *SkylineCommunications* organization, you will need to create a repository secret with name *SONAR_TOKEN*. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).

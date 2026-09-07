@@ -66,6 +66,7 @@ To load a preset in DataMiner Cube:
 >
 > - You can change the reference trace color in the *trace* tab of the ribbon, by clicking *Color* > *Reference trace*, and selecting the new color.
 > - To hide the reference trace, in the *trace* tab of the ribbon, clear the selection from *Show reference*.
+> - From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45843-->, reference trace markers are also restored when a preset containing a reference trace is loaded.
 
 ## Creating new presets
 

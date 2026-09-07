@@ -1,5 +1,6 @@
 ---
 uid: Health_Assessment_Guidelines_for_DataMiner_Agent
+description: "Learn how monitoring the health of a DataMiner Agent requires attention for several key metrics like processor load, physical memory and commit charge."
 ---
 
 # Health assessment guidelines for DataMiner Agents

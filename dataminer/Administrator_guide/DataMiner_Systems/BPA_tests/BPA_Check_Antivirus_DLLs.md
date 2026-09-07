@@ -1,5 +1,6 @@
 ---
 uid: BPA_Check_Antivirus_DLLs
+description: "Learn about the 'Antivirus on the DataMiner Agents' BPA test, which detects the presence of antivirus DLLs loaded into DataMiner processes."
 ---
 
 # Antivirus on the DataMiner Agents
@@ -67,7 +68,7 @@ The following DLLs are currently checked (case insensitive):
 
 ### Regular expressions
 
-- `^(?:CrowdStrike\.Sensor\.)?ScriptControl(?:32_|64_|86_)?\d+\.dll$` (CrowdStrike)
+- `^(?:CrowdStrike\.Sensor\.)?ScriptControl(?:32_|64_|86_)?\d+\.dll$` (CrowdStrike — only included prior to DataMiner 10.5.0 [CU10]/10.6.0/10.6.1<!-- RN 44199 -->)
 - `^ScriptSn\.\d+\.dll$` (McAfee)
 
 ### File path checks

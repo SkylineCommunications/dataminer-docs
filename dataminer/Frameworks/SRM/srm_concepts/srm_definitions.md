@@ -11,7 +11,7 @@ This section explains the definitions used in the SRM framework.
 A DataMiner connector (also known as a "protocol" or "driver") is an **XML file that allows the DataMiner System to communicate with a data source**.
 
 > [!TIP]
-> For more information, see [About DataMiner connectors](xref:About_DataMiner_connectors) and [Protocols](xref:Protocols1).
+> For more information, see [Getting started with data source integrations](xref:Getting_started_with_data_source_integrations) and [Protocols](xref:Protocols1).
 
 ## Virtual function
 

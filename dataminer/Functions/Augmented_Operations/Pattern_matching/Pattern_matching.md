@@ -12,7 +12,7 @@ This feature requires a DataMiner System using [Storage as a Service](xref:STaaS
 
 If you are viewing a trend graph for a single parameter, and it contains patterns matching existing tags, these will be highlighted in orange when you hover the mouse pointer over the button representing a tag, or if the option *Expand tags* is selected in the right-click menu. For example:
 
-![Pattern matching](~/dataminer/images/Pattern_Matching.png)<br>*Univariate pattern in DataMiner 10.4.5*
+![Pattern matching](~/dataminer/images/Pattern_Matching.png)<br>*Univariate pattern in DataMiner 10.6.5*
 
 The matches can be highlighted in bright orange or in a lighter orange. The meaning of these colors depends on the DataMiner version:
 
@@ -39,9 +39,11 @@ As with single-parameter patterns (i.e., [univariate patterns](#univariate-patte
 
 If you are viewing a trend graph where one or more of the parameters involved in the multivariate pattern are loaded and multivariate patterns have been detected, these patterns will be highlighted in orange when you hover the mouse pointer over the button representing a pattern, or if the option *Expand tags* is selected in the right-click menu.
 
-The ![multivariate](~/dataminer/images/multivariate_icon.png) icon indicates that the pattern combines trend information from different parameters. By clicking this icon, you can load all trend graphs of the parameters that are part of the pattern, as illustrated below. <!-- RN 36628 -->
+The ![multivariate](~/dataminer/images/multivariate_icon.png) icon indicates that the pattern combines trend information from multiple parameters. A "+" icon appears next to the trend pattern tag when not all parameters are loaded. Clicking this icon loads all trend graphs for the parameters that are part of the pattern, as illustrated below. <!-- RN 36628 -->
 
-![Multivariate pattern in trend graph](~/dataminer/images/blog_multiPM.gif)<br>*Multivariate pattern in DataMiner 10.3.12*
+![Multivariate pattern in trend graph](~/dataminer/images/blog_multiPM.gif)<br>*Multivariate pattern in DataMiner 10.6.5*
+
+Prior to DataMiner 10.4.0 [CU22]/10.5.0 [CU10]/10.6.0/10.6.1<!--RN 43857-->, click the ![multivariate](~/dataminer/images/multivariate_icon.png) icon to load all involved parameters.
 
 > [!NOTE]
 > From DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12 onwards<!--RN 36661-->, trend patterns of all parameters are loaded onto the trend graph. Prior to DataMiner 10.2.0 [CU21]/10.3.0 [CU9]/10.3.12, only the trend pattern of the first parameter is loaded onto the trend graph.

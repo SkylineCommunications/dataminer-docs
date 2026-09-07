@@ -1,6 +1,6 @@
 ---
 uid: Overview_About_DataMiner
-description: DataMiner is a standard, widely adopted and endorsed, modular, open, and fully independent software platform, empowering Digital Transformation.
+description: Discover how DataMiner unifies complex ecosystems with AI-driven monitoring, automation, and orchestration for agile, data-driven operations.
 ---
 
 # About DataMiner

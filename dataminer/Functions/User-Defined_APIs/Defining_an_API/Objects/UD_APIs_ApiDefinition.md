@@ -42,6 +42,8 @@ HTTP GET mydataminer.customer.local/api/custom/encoders/status
 > [!TIP]
 > We recommend that you keep routes simple and straightforward. For some great tips on this, refer to [restfulapi.net](https://restfulapi.net/resource-naming/).
 
+From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45681 -->, a route can include **dynamic segments** written as `{parameterName}`. A dynamic segment matches any single path segment at that position in the URL and captures its value as a route parameter. For more information, see [Route parameters](xref:UD_APIs_Define_New_API#route-parameters).
+
 ### SecuritySettings
 
 The `SecuritySettings` property can be used to describe which tokens can be used to access the API. It has the following property:
@@ -94,7 +96,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 |Reason      |Description|
 |------------|-----------|
 |InvalidName |The specified name only contained white space characters.|
-|RouteInUse |The specified route is already used by another `ApiDefinition`. *ConflictingDefinitionId* contains the ID of the definition that is already using the route. *Route* contains the invalid route.|
+|RouteInUse |The specified route conflicts with an existing `ApiDefinition`. From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45681 -->, this also includes dynamic routes that could match the same request paths as an existing route (e.g., `ticket/{ticketId}` conflicts with an existing `ticket/{id}`). *ConflictingDefinitionId* contains the ID of the definition that conflicts. *Route* contains the invalid route.|
 |InvalidRoute |The route did not meet the criteria. See [Route](#route). *Route* contains the invalid route.|
 |InvalidActionMeta |The defined `ActionMeta` was empty, did not match the type, or contained an invalid configuration.|
 

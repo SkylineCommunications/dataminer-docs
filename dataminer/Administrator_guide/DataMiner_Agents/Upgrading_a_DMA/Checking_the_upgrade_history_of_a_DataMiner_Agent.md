@@ -1,5 +1,6 @@
 ---
 uid: Checking_the_upgrade_history_of_a_DataMiner_Agent
+description: "Check the upgrade history of a DataMiner Agent in VersionHistory.txt or DataMiner Cube to verify performed upgrades and troubleshoot changes."
 ---
 
 # Checking the upgrade history of a DataMiner Agent

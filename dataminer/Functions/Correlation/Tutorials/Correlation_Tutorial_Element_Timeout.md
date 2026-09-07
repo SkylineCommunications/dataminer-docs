@@ -78,7 +78,7 @@ In this step, you will create a correlation rule that will trigger based on alar
 
    ![Configuring *persistent event time*](~/dataminer/images/Correlation_PersistentEvent.png)
 
-1. Under *RULE CONDITION*, configure an action to run a script that will generate an information event:
+1. Under *ACTIONS*, configure an action to run a script that will generate an information event:
 
    1. Click *Add action* and select *Run script*.
 

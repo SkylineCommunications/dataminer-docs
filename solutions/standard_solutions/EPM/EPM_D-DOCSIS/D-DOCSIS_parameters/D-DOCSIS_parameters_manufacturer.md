@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_manufacturer
+description: Discover the entire list of Manufacturer parameters available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – Manufacturer

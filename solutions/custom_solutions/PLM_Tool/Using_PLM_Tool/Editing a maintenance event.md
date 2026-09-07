@@ -1,5 +1,6 @@
 ---
 uid: Editing_maintenance_event
+description: Update existing planned maintenance events by editing their settings from the PLM Instances page and applying changes.
 ---
 
 # Editing a maintenance event

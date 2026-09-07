@@ -1,12 +1,13 @@
 ---
 uid: Sales_and_Marketing
+description: Find out which tools and means are available for you as a DataMiner Partner to support your Sales and Marketing activities.
 ---
 
 # Sales and Marketing
 
 The tools and means mentioned in this section are available for you to support your Sales and Marketing activities.
 
-### Prepare your staff to excel
+## Prepare your staff to excel
 
 For starters, it is important to properly inform and train all your customer-facing staff (e.g., sales, pre-sales, marketing, product marketing, etc.).
 
@@ -28,7 +29,7 @@ Typically, this is achieved with a tailored program of online sessions, adjusted
 
 - **Sales meet & greet**: As networking and people in general are instrumental in a successful collaboration, it is important for the right people to get introduced to one another so that they can establish a strong ongoing relationship (e.g., it is important for regional sales people to be connected to their peer at Skyline).
 
-### Leverage the brand
+## Leverage the brand
 
 DataMiner is one of the biggest brands in the industry and has a powerful presence in thousands of leading organizations, across more than 110 countries around the world.
 
@@ -84,7 +85,7 @@ Here are some pointers to maximize your visibility.
 
 - **Brand Materials**: A variety of standard off-the-shelf brand materials are available for you to leverage the DataMiner brand ([corporate materials](https://skyline.be/corporate-images), [skylicons](https://skyline.be/skylicons/), etc.).
 
-### Day-to-day engagement
+## Day-to-day engagement
 
 Considering the multitude of applications and the infinite number of solutions supported by DataMiner, the broad range of verticals covered, and the strategic selling aspect of the platform, Skyline typically collaborates very closely with its partners during the pre-sales phase to maximize success.
 

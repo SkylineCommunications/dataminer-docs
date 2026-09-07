@@ -93,6 +93,11 @@ If used, the harvesting process creates these directories:
 
 Scripts in `xmlautomationtests.generated` are added to the package and installed on DataMiner during the test run. For that reason, this directory is not present on the test system.
 
+> [!IMPORTANT]
+> When executed from Visual Studio, harvesting uses the highest available PowerShell 5 version. When executed from the command line, it uses the highest available PowerShell 7 version and falls back to the highest available PowerShell 5 version if PowerShell 7 is not installed.
+>
+> For the most stable results, we recommend developing your harvesting scripts for **PowerShell 5 compatibility**.
+
 #### Do not create generated directories manually
 
 The following directories are automatically created during a build. Do not create or commit them manually:
@@ -216,6 +221,80 @@ param (
 # python "$PSScriptRoot\helpers\data-processor.py"
 # node "$PSScriptRoot\helpers\config-validator.js"
 ```
+
+### Accessing supplementary files
+
+Supplementary files are runtime inputs uploaded when the test run is submitted. Use them for files that should not be embedded in the .dmtest package, for example large upgrade packages, configuration files that change per run, scripts, or simulator data.
+
+For information about uploading these files, see [Run with supplementary files](xref:QAOps_Tool#run-with-supplementary-files).
+
+QAOps Bridge extracts the files in two locations:
+
+| Location | Availability | Intended use |
+|--|--|--|
+| `<PathToTestPackageContent>\SupplementaryFiles` | Agent executing the test package pipeline | Numbered PowerShell pipeline scripts |
+| Directory specified by the machine-level `QAOPS_SUPPLEMENTARY_FILES` environment variable | Every Agent in the cluster | C# tests, Automation scripts, and other processes that can run on any Agent |
+
+Do not hard-code the shared directory under `C:\ProgramData`. If files from a previous run are still locked, QAOps Bridge can use a different directory for the next run. The environment variable always points to the directory for the active run.
+
+#### Accessing supplementary files from PowerShell
+
+For a pipeline script running on the test package execution Agent, you can use the package-local copy:
+
+```powershell
+$configurationPath = Join-Path `
+  $PathToTestPackageContent `
+  'SupplementaryFiles\configuration.json'
+```
+
+To access the shared copy, read the machine-level environment variable explicitly:
+
+```powershell
+$supplementaryFilesPath = [Environment]::GetEnvironmentVariable(
+    'QAOPS_SUPPLEMENTARY_FILES',
+    [EnvironmentVariableTarget]::Machine)
+
+if ([String]::IsNullOrWhiteSpace($supplementaryFilesPath) -or
+    -not (Test-Path -LiteralPath $supplementaryFilesPath -PathType Container)) {
+    throw 'This test requires supplementary files, but none are available for the current run.'
+}
+
+$configurationPath = Join-Path $supplementaryFilesPath 'configuration.json'
+```
+
+Use the shared copy when the consumer can run outside the package pipeline process or on a different Agent.
+
+#### Accessing supplementary files from C# test code
+
+Long-running processes can cache their environment when they start. For this reason, read the machine-level value explicitly instead of using the one-argument `Environment.GetEnvironmentVariable` overload:
+
+```csharp
+string? supplementaryFilesPath = Environment.GetEnvironmentVariable(
+    "QAOPS_SUPPLEMENTARY_FILES",
+    EnvironmentVariableTarget.Machine);
+
+if (String.IsNullOrWhiteSpace(supplementaryFilesPath) ||
+    !Directory.Exists(supplementaryFilesPath))
+{
+    Assert.Fail(
+        "This test requires supplementary files, but none are available for the current run.");
+}
+
+string configurationPath = Path.Combine(
+    supplementaryFilesPath,
+    "configuration.json");
+
+Assert.IsTrue(
+    File.Exists(configurationPath),
+    $"Supplementary file not found: {configurationPath}");
+```
+
+The directory and environment variable are not present when the test run does not include supplementary files. Code that requires a file should report a clear error when the path or file is missing.
+
+QAOps Bridge clears the shared directory before each run and removes it and the environment variable afterwards. Files that remain locked during cleanup do not change the completed test result. QAOps Bridge logs a warning and retries cleanup during a later run.
+
+> [!NOTE]
+> Supplementary files are available to every process started by the test run. This capability has been verified by the security team as a safe mechanism for transferring secrets, credentials, and other sensitive data to your test execution environment as long as you do not commit or store the secrets.
 
 ### Tests
 

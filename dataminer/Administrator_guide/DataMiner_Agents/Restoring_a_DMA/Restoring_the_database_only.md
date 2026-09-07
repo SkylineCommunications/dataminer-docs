@@ -1,5 +1,6 @@
 ---
 uid: Restoring_the_database_only
+description: "Restore a legacy DataMiner MySQL database by importing a backup dump or manually copying SLDMADB data files to the destination server."
 ---
 
 # Restoring the database only (legacy)

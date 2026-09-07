@@ -1,5 +1,6 @@
 ---
 uid: Viewing_information_about_user_groups
+description: "In the Users/Groups section of System Center, view user group information to check details, members, permissions, and alerts."
 ---
 
 # Viewing information about user groups

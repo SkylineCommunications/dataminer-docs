@@ -33,11 +33,25 @@ You can also use the *dotnet new* command to manage the templates. To install th
 dotnet new install Skyline.DataMiner.VisualStudioTemplates
 ```
 
-This will install the NuGet package. When that is done, you can create a connector or automation script solution via the dotnet CLI. For example, to create a new automation script solution, you can use the following command:
+This will install the NuGet package. When that is done, you can create a connector or automation script project via the dotnet CLI. For example, to create a new automation script project, you can use the following command:
 
 ```dotnetcli
-dotnet new dataminer-automation-solution -name "ExampleScript" -auth "Joe"
+dotnet new dataminer-automation-project --name "ExampleScript" -auth "Joe"
 ```
+
+Other available templates include `dataminer-automation-library-project`, `dataminer-gqi-ad-hoc-data-source-project`, `dataminer-user-defined-api-project`, and `dataminer-package-project`.
+
+The following table lists all available DataMiner templates:
+
+| Template | Short name |
+|----------|------------|
+| Connector solution | `dataminer-connector-solution` |
+| Automation script project | `dataminer-automation-project` |
+| Automation script library project | `dataminer-automation-library-project` |
+| User-defined API project | `dataminer-user-defined-api-project` |
+| GQI ad hoc data source project | `dataminer-gqi-ad-hoc-data-source-project` |
+| Package project | `dataminer-package-project` |
+| Test package project | `dataminer-test-package-project` |
 
 To see all the available options for a template, use the command `dotnet new <template-name> --help`. For example:
 

@@ -1,5 +1,6 @@
 ---
 uid: MediaOps.Live.Mediation
+description: Learn how the MediaOps Live mediation layer enables the conversion of parameter values into connectivity relationships between endpoints.
 ---
 
 # Mediation layer

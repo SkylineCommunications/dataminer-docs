@@ -1,5 +1,6 @@
 ---
 uid: User_groups
+description: "Configure DataMiner user groups to assign permissions, views, and access levels, then manage inherited rights for local, domain, and cloud groups."
 ---
 
 # User groups

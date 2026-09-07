@@ -87,7 +87,47 @@ By default, the following behavior is applicable in serial connectors:
 
 For example, consider the following logic being implemented in a protocol. In this case, the command is composed of 2 parameters: one fixed ("Get") and one with dynamic content.
 
-![Executing a command via a timer](~/develop/images/Connection_Types_-_makeCommandByProtocol_Building_Blocks.png)
+```mermaid
+flowchart LR
+    subgraph timerBox["Timer 1"]
+
+        G1["Group 1"]
+    end
+    subgraph groupBox["Group 1"]
+
+        S1["Pair 1"]
+    end
+    subgraph pairBox["Pair 1"]
+        C1["Command 1"]
+        R1["Response 1"]
+    end
+
+    subgraph commandBox["Command 1"]
+        direction LR
+        P1["Param 1"]
+        P2["Param 2"]
+    end
+
+    G1 --> groupBox
+    S1 --> pairBox
+    C1 --> commandBox
+
+    classDef infoText fill:none,stroke:none,color:#FFFFFF
+    classDef infoTextBlack fill:none,stroke:none,color:#000000
+    class groupDesc,sessionDesc infoText
+    class timerDesc infoTextBlack
+
+    style timerBox fill:#EFF6FF,stroke:#DBEAFE,color:#000000
+    style groupBox fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style pairBox fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style commandBox fill:#f3f4f6,stroke:#172554,color:#000000
+    style G1 fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style S1 fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style C1 fill:#f3f4f6,stroke:#172554,color:#000000
+    style R1 fill:#f3f4f6,stroke:#172554,color:#000000
+    style P1 fill:#d1d5db,stroke:#172554,color:#000000
+    style P2 fill:#d1d5db,stroke:#172554,color:#000000
+```
 
 When the timer goes off, group 1 will be added to the group execution queue. Now suppose parameter 2 holds value "A" at this time.
 

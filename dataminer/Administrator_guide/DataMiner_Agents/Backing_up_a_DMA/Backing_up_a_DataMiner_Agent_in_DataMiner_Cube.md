@@ -1,5 +1,6 @@
 ---
 uid: Backing_up_a_DataMiner_Agent_in_DataMiner_Cube
+description: "Learn how, in DataMiner Cube, you can configure automatic backups that will run at regular intervals and execute an immediate backup when necessary."
 ---
 
 # Backing up a DataMiner Agent in DataMiner Cube

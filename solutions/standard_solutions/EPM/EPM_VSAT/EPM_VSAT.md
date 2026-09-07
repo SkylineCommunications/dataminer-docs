@@ -1,10 +1,11 @@
 ---
 uid: EPM_VSAT
+description: Explore the VSAT branch of the EPM Solution, which is designed specifically to manage VSAT deployments.
 ---
 
-# DataMiner EPM VSAT
+# EPM VSAT
 
-The VSAT branch of the DataMiner EPM Solution is designed to manage VSAT deployments.
+The VSAT branch of the EPM Solution is designed to manage VSAT deployments.
 
 - [EPM VSAT architecture](xref:VSAT_architecture)
 - [EPM VSAT components](xref:VSAT_components)

@@ -1,5 +1,6 @@
 ---
 uid: Configuring_multiple_Elasticsearch_clusters
+description: "Learn about the legacy multi-cluster Elasticsearch setup for DataMiner, and the legacy configuration used in older systems."
 ---
 
 <!-- Note for documentation, keep in sync with Configuring_multiple_OpenSearch_clusters.md where applicable.-->

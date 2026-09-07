@@ -1,6 +1,6 @@
 ---
 uid: Solution_Product_Owner
-description: A Solution Product Owner maximizes value, establishes vision, applies Agile principles, and manages development activities.
+description: Explore the role of Solution Product Owners. They maximize value, establish vision, apply Agile principles, and manage development activities.
 ---
 
 # Solution Product Owner

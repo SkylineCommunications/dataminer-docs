@@ -1,12 +1,13 @@
 ---
 uid: GVAMPP_Manager_Installing
+description: Deploy the Grass Valley AMPP Manager application from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the Grass Valley AMPP Manager Application
 
 ## Prerequisites
 
-- **DataMiner 10.4.4/10.5.0** or higher
+- **DataMiner 10.6.0/10.6.3** or higher
 
 - A DataMiner System [**connected to dataminer.services**](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
@@ -16,10 +17,10 @@ uid: GVAMPP_Manager_Installing
 
 - A connection to an **AMPP tenancy** via its URL (e.g., `https://mytenancy.gvampp.com`)
 
-- An **API key** generated using the AMPP Identity Manager.
+- An AMPP Control **API key** generated using the AMPP Identity Manager.
 
   > [!TIP]
-  > Refer to the AMPP documentation hub for specific instructions.
+  > Starting from version 1.1.8, the installed AMPP Manager connector can also report **subscriptions and billing** information. To enable these features, you need an **additional application client API key** of type *subscriptions.admin*, with the *cluster.admin* role and allowed scopes for *cluster platform*. For detailed setup instructions, refer to the AMPP documentation hub.
 
 ## Deploying the Grass Valley AMPP Manager app
 

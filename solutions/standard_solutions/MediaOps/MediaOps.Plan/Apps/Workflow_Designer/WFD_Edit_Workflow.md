@@ -1,5 +1,6 @@
 ---
 uid: WFD_Edit_Workflow
+description: Edit a workflow by clicking the pencil icon for that workflow on the Home page of the Workflow Designer app.
 ---
 
 # Editing a workflow
@@ -45,9 +46,7 @@ You will then be able to adjust the name and description of the workflow, config
 
 ### Configuring the workflow orchestration settings
 
-To edit the workflow orchestration settings, click the cogwheel next to the title of the workflow section.
-
-<!-- TODO: Add info on orchestration settings -->
+To edit the workflow orchestration settings, click the cogwheel next to the title of the workflow section. This opens the [Scheduling configuration](xref:MO_Scheduling_Configuration) dialog at the workflow (global) level, which allows you to define the required capabilities, capacities, configurations, and automated actions that apply to the workflow as a whole.
 
 ![The cogwheel icon to edit the workflow orchestration settings](~/solutions/images/Workflow_Designer_Configure_Workflow.png)
 
@@ -85,9 +84,7 @@ To do so, select the node and click *Swap To Pool* or *Swap to Resource*, depend
 
 ### Configuring the node orchestration settings
 
-To edit the node orchestration settings, select the node and click the *Configure* button.
-
-<!-- TODO: Add info on orchestration settings -->
+To edit the node orchestration settings, select the node and click the *Configure* button. This opens the [Scheduling configuration](xref:MO_Scheduling_Configuration) dialog, which allows you to define the required capabilities, capacities, and configurations for the node, as well as automated actions.
 
 ![Button to configure the orchestration settings of the selected node](~/solutions/images/Workflow_Designer_Configure_Node.png)
 

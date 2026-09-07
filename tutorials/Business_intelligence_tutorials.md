@@ -1,5 +1,6 @@
 ---
 uid: Business_intelligence_tutorials
+description: Discover all Service Level Agreement (SLA) tutorials. For example, learn how to create an SLA that allows you to monitor a power service.
 ---
 
 # Business Intelligence tutorials

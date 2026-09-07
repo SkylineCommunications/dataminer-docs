@@ -1,5 +1,6 @@
 ---
 uid: Profile_migration_to_elastic
+description: "Follow these instructions to migrate the profiles from the Profiles.xml file to the indexing database."
 ---
 
 # Migrating SRM profiles to the indexing database

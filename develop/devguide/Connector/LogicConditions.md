@@ -132,7 +132,10 @@ Conditions can be defined on the following items:
 > [!NOTE]
 > Avoid using conditions on a Timer. Instead, use a condition on the timer group(s).
 >
-> For a group condition, the evaluation of the condition will be performed when the group is executed by the group execution queue. This means the group will always be added to the queue of the protocol thread anyway. If the condition value changes between the moment the group is added to the queue and the moment the group is executed, it is possible that the behavior of the group is different than was intended when the group was added. This also means that it is no problem to have a poll group with a condition as the last group in a timer.
+> For a group condition, the evaluation of the condition will be performed when the group is dequeued from the group execution queue. This means the group will always be added to the queue of the protocol thread anyway. If the condition value changes between the moment the group is added to the queue and the moment the group is executed, it is possible that the behavior of the group is different than was intended when the group was added. This also means that it is no problem to have a poll group with a condition as the last group in a timer.
+
+> [!IMPORTANT]
+> When the group has a condition, `before group` and `after group` triggers will only go off if the condition result is `true`. Note that prior to DataMiner 10.4.8 [CU1] and 10.4.0 [CU5], `before group` triggers will go off regardless of the group condition result, but this is no longer the case in later DataMiner versions.
 
 To build more advanced conditional constructs, you can use brackets.
 

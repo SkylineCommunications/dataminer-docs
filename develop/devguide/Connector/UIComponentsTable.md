@@ -7,7 +7,6 @@ uid: UIComponentsTable
 In this section:
 
 - <xref:UIComponentsTableDefinition>
-- <xref:UIComponentsTableColumnOptionTypes>
 - <xref:UIComponentsTablePrimaryKeys>
 - <xref:UIComponentsTableDisplayKeys>
 - <xref:UIComponentsTableForeignKeys>

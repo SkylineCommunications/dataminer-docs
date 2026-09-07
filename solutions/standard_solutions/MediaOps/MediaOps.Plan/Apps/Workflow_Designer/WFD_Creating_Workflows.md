@@ -1,5 +1,6 @@
 ---
 uid: WFD_Creating_Workflows
+description: Create a completely new workflow by using the New button in the header bar of the Workflow Designer app.
 ---
 
 # Creating workflows

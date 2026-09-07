@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_ccap_core
+description: Discover the entire list of CCAP Core parameters available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – CCAP Core

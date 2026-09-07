@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_core_leaf
+description: Discover the entire list of Core Leaf parameters available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – Core Leaf

@@ -4,7 +4,7 @@ uid: Configuring_a_new_DMA_in_Failover_pair
 
 # Configuring a new DataMiner Agent as a new Agent in a Failover pair
 
-If you are installing an Agent that will be paired with an existing Agent in a Failover setup, after the core DataMiner software has been installed (either via the [DataMiner Installer v10.4](xref:Installing_DM_using_the_DM_installer) or by [using a pre-installed VHD](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk)), instead of clicking *Start* to configure the DataMiner Agent automatically, follow the steps below:
+If you are installing an Agent that will be paired with an existing Agent in a Failover setup, after the core DataMiner software has been installed (see [Installing a self-managed DataMiner Agent](xref:Installing_a_DataMiner_Agent)), instead of clicking *Start* to configure the DataMiner Agent automatically, follow the steps below:
 
 1. Make sure both the existing and new DMA are prepared and the necessary prerequisites are met, as detailed under [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
 

@@ -1,5 +1,6 @@
 ---
 uid: PLM_tool_configuring_resources
+description: Configure resource types and subscribers so the PLM tool can validate resources when creating maintenance events.
 ---
 
 # Configuring resources

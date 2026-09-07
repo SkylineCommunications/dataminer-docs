@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOpsLive_Tutorial_IPMatrix_CreateOrchestrationEvents
+description: Learn how to create MediaOps Live orchestration events that can be used to trigger actions in an automated and scheduled manner.
 ---
 
 # Creating orchestration events

@@ -1,5 +1,6 @@
 ---
 uid: BPA_Check_Time_Server
+description: "Learn about the Check Time Server BPA test, which checks if the NTP server settings are configured correctly and all DMAs use the same NTP server."
 ---
 
 # Check Time Server
@@ -7,6 +8,9 @@ uid: BPA_Check_Time_Server
 DataMiner relies on the server time to synchronize data. For this reason, the time of DataMiner Agents in a cluster must be synchronized using an NTP server.
 
 This test will check if the NTP server settings are configured correctly and all the DataMiner Agents use the same NTP server to get their time.
+
+> [!NOTE]
+> From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45631 -->, this BPA test is no longer available as an independent test. Instead, it has been integrated in the [DataMiner Agent Minimum Requirements](xref:BPA_Minimum_Requirements_Check) BPA test.
 
 ## Metadata
 

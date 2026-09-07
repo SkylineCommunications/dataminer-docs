@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.0.0_enhancements
+status: archived
 ---
 
-# General Main Release 10.0.0 - Enhancements
+# General Main Release 10.0.0 - Enhancements [ARCHIVED]
 
 #### HTML5 apps: Enhanced UI component consistency \[ID 18892\]
 

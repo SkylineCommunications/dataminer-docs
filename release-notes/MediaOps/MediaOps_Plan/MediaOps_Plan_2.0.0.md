@@ -1,0 +1,289 @@
+---
+uid: MediaOps_Plan_2.0.0
+---
+
+# MediaOps Plan 2.0.0 - Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+
+> [!NOTE]
+> This version requires:
+>
+> - DataMiner 10.6.9/10.7.0 or higher.
+> - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.0 or higher.
+> - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e) 1.3.0 or higher.
+
+> [!TIP]
+> Installing [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) alongside MediaOps Plan allows you to orchestrate jobs and workflows and fully automate the setup and teardown processes.
+
+## New features
+
+#### Select Configuration dialog now shows simplified operator view [ID 45838]
+
+Up to now, when you configured a node, job, or workflow, the *Select Configuration* dialog always displayed every available detail at once, including linked parameters, all automated-action events, the selected scripts, and linked input arguments. For day-to-day operations, this often resulted in a cluttered overview where the values that actually needed attention could be hard to find.
+
+From now on, the *Select Configuration* dialog will open in a simplified operator view by default. In this view, the following items are hidden to keep the focus on the parameters you can act on:
+
+- Linked (capability, capacity, or configuration) parameters
+- Automated actions that are disabled or that do not have a script selected
+- The selected scripts
+- Linked input arguments
+
+A new *Show all details* checkbox has been added at the top of the dialog. When you enable this option, the dialog switches to the full engineer view, showing the complete configuration again, including all of the items listed above.
+
+In addition, when there is nothing to configure in the operator view, the dialog now displays a message indicating that you can enable *Show all details* to see all parameters and events.
+
+> [!NOTE]
+> This change only affects which information is displayed. It has no impact on the configurations themselves or on any previously configured values.
+
+#### Scheduling: Job Type dropdown shown when multiple categories are available [ID 46112]
+
+In the Scheduling app, when creating or editing a job, a *Job Type* dropdown is now displayed whenever multiple categories are available, allowing you to select the appropriate job type.
+
+The selected job type can be used to filter the timeline on the *Job View* page, making it easier to focus on relevant jobs.
+
+If only one category is available, it is automatically selected for the job.
+
+#### Scheduling: Custom job types [ID 46151]
+
+Instead of all jobs being automatically assigned the *Scheduled* type, you can now define custom job types and assign them when creating or editing a job.
+
+Job types are defined using the Categories app. From MediaOps 2.0.0 onwards, a new *Job Type* scope is created in the Categories app with the default type *Scheduled*. You can freely add additional types on top of this default.
+
+The icon defined for a job type in the Categories app will be used in the Scheduling app as a filter for the timeline view. Hovering over the icon will show the name of the job type. If no icon is defined for a job type, the default filter icon will be shown.
+
+#### Workflow Designer: Job type can now be defined for workflows [ID 46347]
+
+When you create, edit, or duplicate a workflow, you can now select a *Job Type* for that workflow.
+
+Every job created from the workflow is automatically assigned this job type, so you no longer need to select it manually for each job. If you explicitly select a job type when creating a job, that selection takes precedence over the job type defined for the workflow.
+
+The *Job Type* dropdown is only displayed when job types are available in the Categories app. If you select *- Not defined -*, the workflow does not define a job type, and jobs created from it keep their default job type.
+
+## Changes
+
+### Enhancements
+
+#### DevPack: API enhancement to improve type-checking and casting for Capacity and Configuration classes [ID 45715]
+
+New helper methods have been introduced for safe type-checking and casting of Capacity and Configuration instances to their specific derived types, with comprehensive XML documentation.
+
+- In **Capacity.cs**, the following methods have been added:
+
+  - IsNumberCapacity
+  - IsRangeCapacity
+
+- In **Configuration.cs**, the following methods have been added:
+
+  - IsNumberConfiguration
+  - IsDiscreteNumberConfiguration
+  - IsTextConfiguration
+  - IsDiscreteTextConfiguration
+
+#### Scheduling/Workflow Designer: Shuffled connection configuration simplified [ID 45884]
+
+When you configure a connection in a workflow or job between two nodes, you can shuffle parts of the connection based on levels. This shuffled connection setup has now been simplified. The *Predefined Subset* and *Custom Subset* options have been removed, and only two options remain:
+
+- **All**: Connect all levels straight (for example, Audio1 -> Audio1, Audio2 -> Audio2).
+- **Shuffle**: Define a custom shuffle by selecting the source level per destination level.
+
+#### DOM ImportExport script renamed for naming consistency [ID 45887]
+
+For naming consistency throughout the solution, the *DOM ImportExport* script has been renamed to *MOP DOM ImportExport*.
+
+#### MediaOps Live events now only created for confirmed jobs [ID 45894]
+
+MediaOps Plan now creates events in MediaOps Live only for confirmed jobs.
+
+Previously, events could also be created for jobs in the *Draft* or *Tentative* status, which increased the workload and introduced unnecessary edge cases.
+
+With this change:
+
+- Events are created only when a job is confirmed.
+- If a confirmed job is moved back to *Tentative*, its corresponding events are automatically removed from MediaOps Live.
+
+This simplifies event management and ensures that MediaOps Live reflects only confirmed jobs.
+
+#### Scheduling/Workflow Designer: Swapping to a different pool now prompts to keep or reset node configuration [ID 45924]
+
+When you swap a resource or resource pool node to a different pool in the Workflow Designer or directly on a job, MediaOps Plan now detects whether the new pool has a different scheduling configuration.
+
+If differences are found, you now get a prompt to choose one of the following options:
+
+- **Keep**: Keep the node's current configuration and automated actions.
+- **Revert**: Reset the node configuration and automated actions to match the new pool.
+
+Previously, swapping pools silently kept the old configuration, which could leave a node with settings that no longer matched its new pool. Now you decide explicitly, at the moment of the swap.
+
+#### Improved parameter link configuration [ID 45975]
+
+The dialog used to dynamically link parameter values (capabilities, capacities, configurations, and orchestration script input) has been improved to make linking faster and more intuitive:
+
+- **Shorter, clearer labels**: Several labels in the dialog have been shortened for faster configuration. For example, *Select the type of link you want to configure:* is now *Link to type:*, and *Select the node to link to:* is now *Link to:*. The target labels have likewise been simplified to *Property:*, *Capability:*, *Capacity:*, and *Configuration:*.
+
+- **Smart default target**: The *Link to* target is now preselected based on the link type. Node-scoped links default to the current node ("*This node*"), while job- or workflow-scoped links (capability, capacity, and configuration parameters) default to the job/workflow scope.
+
+- **Pre/post relationship indicators**: In the node list, each node now indicates how it relates to the current node. A node connected into the current node is labeled "*(pre)*", a node that the current node connects to is labeled "*(post)*", and a node for which both apply is labeled "*(pre/post)*". This makes it easier to pick the correct node when configuring links across a workflow.
+
+#### Workflow Designer and Scheduling: Nodes now show tooltip with alias and resource information [ID 46025]
+
+Node components in the Workflow Designer and Scheduling apps now show a tooltip when you hover over them.
+
+Depending on what is available for the node, this tooltip can show the following information:
+
+- Alias
+- Resource name
+- Resource pool name
+
+#### Resource Studio: Improved UI when creating or editing capabilities [ID 46026]
+
+Several minor UI improvements have been implemented in the automation script responsible for creating and editing capabilities from Resource Studio.
+
+#### Jobs can now be confirmed without resource nodes [ID 46064]
+
+It is now possible to confirm a job that has no resource nodes.
+
+Previously, attempting to confirm such a job resulted in an error indicating that at least one assigned resource was required.
+
+Node-less jobs can now move freely through the *Tentative* > *Confirmed* > *Tentative* lifecycle without requiring any nodes to be present.
+
+#### Workflow Designer: Execution script selection removed for workflows and workflow connections [ID 46144]
+
+The ability to specify an execution script on workflows and workflow connections has been removed, because this functionality is already available by means of the orchestration events feature in MediaOps Live.
+
+#### Scheduling: Inserting nodes now uses panel instead of interactive script [ID 46145]
+
+Inserting nodes between two connected nodes of a job is now done using a panel instead of an interactive script.
+
+This improves the visibility of available resources and aligns this action with other available node manipulation actions on a job, such as adding or swapping a node.
+
+#### Plan API: Additional filters now supported when reading jobs [ID 46146]
+
+In addition to filters by job ID or name, the Plan API now supports additional filters from the `JobExposers` class when reading jobs.
+
+You can now filter by the following fields:
+
+- Description
+- Start
+- End
+- PrerollStart
+- PostrollEnd
+- Priority
+- Notes
+- Key
+- RecurringJobId
+- JobCategoryId
+- State
+- OrganizationId
+- OwnerId
+- Capabilities (based on Capability ID or discretes)
+- Capacities (based on Capacity ID)
+- Configurations (based on Configuration ID)
+- Properties (based on Property ID)
+
+#### Scheduling: Create Job window layout updated [ID 46214]
+
+The fields in the *Create Job* window have been repositioned to provide a more logical layout.
+
+#### Scheduling/Workflow Designer: Node configuration window layout simplified [ID 46215]
+
+When a configuration is applied to the linked resource pool, the node configuration window of a job or workflow node now shows a simplified layout by default.
+
+In this simplified layout, automation scripts used by automation actions are hidden, and only parameters without linking or without defined value are shown.
+
+When you enable *Show all details*, the full view is shown again, including all parameters and the options to select capabilities, capacities, and configurations that are not defined on the linked resource pool.
+
+#### Workflow Designer: Editing actions blocked when workflow is locked by another user [ID 46225]
+
+When a workflow is locked by another user, editing actions are now blocked.
+
+#### Scheduling: No longer possible to select workflow when creating a job from Resource View page [ID 46293]
+
+In the Scheduling app, when you create a job from the *Resource View* page, it is no longer possible to select a workflow.
+
+Workflow selection remains available when you create a job from the *Job Overview* page.
+
+#### Resource Studio: Synchronization enhancements [ID 46325]
+
+The synchronization script in Resource Studio has been extended so you can now choose exactly which resources or resource pools to synchronize again. Previously, synchronization retries were all-or-nothing.
+
+In addition, the DevPack (NuGet) has been extended with synchronization methods on `IResourcePoolRepository`.
+
+#### Scheduling: Property enhancements [ID 46357]
+
+Several enhancements have been made to property management in the Scheduling app.
+
+When defining properties:
+
+- If an uploaded file exceeds the maximum document size configured on the DataMiner Agent, a clear message is now displayed instead of a raw SLNet exception. This also applies when the size limit configured for the property is higher than the Agent's limit.
+- Validation errors returned by the server are now displayed next to the property that caused them. If a widget cannot display a message inline, the property name is included in the dialog message.
+- If saving fails, the dialog now remains open so you can correct the problem without losing your input.
+- Error markers are now cleared before each save attempt, so properties that have been corrected are no longer marked as invalid.
+
+When assigning properties:
+
+- The property type can no longer be changed after a property has been created, as this would orphan its stored values. The *Type* dropdown remains available when you add a property but is disabled when you edit an existing property.
+- You can no longer delete a property that is still in use. This applies both when you delete a single property and when you remove an entire section.
+- Invalid property configurations, such as duplicate or invalid names, invalid section names, invalid string or file size limits, and missing or duplicate discrete values, now result in clear validation messages instead of script failures.
+- A file property with the default size limit now follows the maximum document size configured on the DataMiner Agent instead of storing the limit that applied when the property was created.
+
+#### Installer: Upgrades from versions older than 1.6.0 now blocked [ID 46369]
+
+Previously, MediaOps Plan could be upgraded to version 2.0.0 directly from any older version. Because several migration actions are only executed by the 1.6.x installers, this could leave existing data without the required migrations.
+
+MediaOps Plan now verifies the installed version before continuing an upgrade. If a version older than 1.6.0 is detected, the installation is stopped with a message asking you to first upgrade to a 1.6.x version and then install version 2.0.0. This ensures that all migration actions are executed.
+
+#### Automation scripts now run in separate process [ID 46385]
+
+Automation scripts that are part of MediaOps Plan now run in their own process. This reduces the risk of code libraries from other solutions installed on the DataMiner Agent being loaded into SLAutomation.
+
+#### Resource Studio: Improved error when deleting an in-use capability [ID 46388]
+
+When you attempt to delete a capability that is still in use, the error message now identifies up to the first 10 affected resources instead of displaying resource pool details.
+
+### Fixes
+
+#### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
+
+When you confirmed a job with a start time in the past (which then ran automatically), node start and stop times remained anchored to that past start time. As a result, resources could appear reserved from before the reservation actually existed. This issue has now been fixed: on confirmation, past node start times are moved forward to the confirmation time so resource usage reflects the actual reserved window.
+
+#### Scheduling: Deprecated organizations shown when creating jobs or editing job owner [ID 45981]
+
+Previously, deprecated organizations could be shown when a new job was created or the ownership of a job was edited.
+
+This issue has now been fixed, and deprecated organizations are no longer shown.
+
+#### Scheduling: Unexpected pop-up message when opening node configuration of recurring job [ID 46006]
+
+When you opened the scheduling configuration of a node in a recurring workflow, it could occur that some input parameters were not correctly linked. As a result, an unexpected pop-up message appeared, prompting you to provide values for the missing parameters.
+
+This issue has been resolved. The scheduling configuration dialog is now correctly displayed in read-only mode, as intended.
+
+#### Installer: Downgrade attempts now fail explicitly instead of being skipped [ID 46060]
+
+Previously, if you attempted to install an older version of MediaOps Plan while a newer compatible version was already installed, the installation could be logged as "skipped". In some cases, DataMiner could still register the incoming package version internally.
+
+As a result, the version effectively running on the system could differ from the version tracked by DataMiner, which could cause confusion during follow-up upgrades or troubleshooting.
+
+This behavior has now been changed. In downgrade scenarios where a newer compatible version is already present, the installation now fails explicitly instead of continuing as a soft skip. This ensures the version registered by DataMiner remains aligned with the version that is actually installed and active on the system.
+
+#### Installation now verifies minimum required Categories version [ID 46084]
+
+Previously, MediaOps Plan could still be installed when an older, unsupported version of Categories was present on the system. This could lead to issues later.
+
+MediaOps Plan now verifies that Categories 1.3.0 or higher is installed before continuing. If the installed Categories version is too old, the installation is stopped with a clear message so you can update Categories first.
+
+#### Various resource deprecation issues [ID 46300]
+
+Several issues related to resource deprecation have been fixed for scenarios where the core resource no longer exists:
+
+- In Resource Studio, deprecating a single resource now shows a proper error message when the operation cannot be completed.
+- Deprecating multiple resources no longer causes an infinite loop in the DevPack when two or more selected resources have no core resource, preventing SLAutomation crashes.
+- Updating one or more resources without a core resource no longer recreates those resources with a new ID. This operation is now blocked with a proper error message.
+
+#### Job creation not possible for workflows with execution scripts [ID 46339]
+
+As of MediaOps Plan 2.0.0, execution scripts on workflow level are no longer supported. However, up to now, the installation did not verify whether workflows still used one. As a result, a system could be upgraded while workflows still referred to an execution script, after which it was no longer possible to create jobs for those workflows.
+
+MediaOps Plan now checks before anything is installed. If one or more workflows still have a workflow execution script, the installation is stopped with a message listing the workflows in question, so you can remove the execution script from those workflows first. The complete list is also available in the installation log.

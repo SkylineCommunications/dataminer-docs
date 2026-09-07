@@ -1,5 +1,6 @@
 ---
 uid: Performance_Analyzer_Library
+description: Install the Performance Analyzer library, and use it to track and log performance metrics for methods in single- or multithreaded environments.
 ---
 
 # Performance Analyzer library

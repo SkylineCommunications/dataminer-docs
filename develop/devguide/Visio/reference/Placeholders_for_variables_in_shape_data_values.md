@@ -35,7 +35,7 @@ Keep the following in mind when using placeholders:
 - Placeholders are case-insensitive. In other words, you can use `[this service]`, `[This Service]`, etc.
 - In the `[param: ...]` placeholders mentioned below, *ParameterID* can be replaced by another `[param: ...]` placeholder. In other words, parameter references can be nested. When you use other placeholders within placeholders, be careful not to create loops.
 - You can use placeholders directly in the text of a shape.
-- Many of the advanced features described below apply to DataMiner Cube only.
+- Not all features described below are supported in the Visual Overview component in the web apps. For an overview, see [Unsupported capabilities](xref:DashboardVisualOverview#unsupported-capabilities).
 
 ### \[AggregationRule:...\]
 
@@ -463,17 +463,17 @@ If you want to override the above-mentioned general rule, you can add to the sha
 
 Available from DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards.<!-- RN 39763 -->
 
-This placeholder takes a regular expression and input, and it returns the parts of the input matching the regular expression. For example, `[RegexMatch: [a-z], aBc]` will return all the lowercase letters in the input, i.e., "ac".
+This placeholder takes a regular expression and input, and it returns the parts of the input matching the regular expression. For example, `[RegexMatch:[a-z],aBc]` will return all the lowercase letters in the input, i.e., "ac".
 
 When multiple matches are found within the input, by default, all matches will be concatenated and returned as one single string, without any separators. You can specify options to customize this behavior:
 
 - If you want the matches to be separated, you can specify a separator.
 
-  For example, `[RegexMatch: [a-z], aBc, separator=%]` will return "a%c".
+  For example, `[RegexMatch:[a-z],aBc,separator=%]` will return "a%c".
 
 - If you do not want all matches to be concatenated, you can use the "index=" option to indicate the specific match you want to have returned.
 
-  For example, `[RegexMatch: [a-z], aBc, index=0]` will return "a".
+  For example, `[RegexMatch:[a-z],aBc,index=0]` will return "a".
 
 If the regular expression or the input includes the default separator (","), you can use the [sep:] placeholder to replace it with another one.
 

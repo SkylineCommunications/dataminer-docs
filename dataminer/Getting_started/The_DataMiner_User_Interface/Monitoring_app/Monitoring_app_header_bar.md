@@ -51,13 +51,31 @@ The Monitoring app header bar contains the following items, from left to right:
 
   - *Help*: Available up to DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10. Opens the DataMiner Help.
 
-  - *User settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Allows you to configure user-specific settings such as changing your password.
+  - *(User) Settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Provides access to user-specific configuration options:
 
-    > [!NOTE]
-    > User settings are only available if the following conditions are met:
-    >
-    > - In *System Center* > *Users*, the user's *User cannot change password* setting must be disabled.
-    > - The user must have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
-    > - The user must not be logged in with external or delegated authentication.
+    - *Theme*: Only available when the *showAdvancedSettings=true* argument has been added to the URL. Select one of the available themes:
+
+      - *Light* (Default)
+
+      - *Dark*
+
+      - *System*
+
+    - *Time zone*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45170-->. This option is only configurable when no [default time zone](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) has been configured for the DataMiner web apps.
+
+      The following options are available:
+
+      - *From client OS*: Use the time zone configured in the client operating system.
+
+      - *Custom*: Select a custom time zone from the dropdown list.
+
+    - *Password*: Allows users to change their password within a dashboard, without needing to access Cube.
+
+      > [!NOTE]
+      > This setting is only available if the following conditions are met:
+      >
+      > - In *System Center* > *Users*, the user's *User cannot change password* setting must be disabled.
+      > - The user must have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
+      > - The user must not be logged in with external or delegated authentication.
 
   - *Sign out*: Logs you out of the app and returns you to the logon screen.

@@ -1,5 +1,6 @@
 ---
 uid: techex-tx-core-overview
+description: Explore the Techex TX Core app, which allows you to monitor and orchestrate a TX Core platform from a single pane of glass.
 ---
 
 # Techex TX Core app

@@ -1,6 +1,7 @@
 ---
 uid: CICD_Tutorials
 keywords: connector, protocol, driver, cicd, pipeline, workflow
+description: Discover all CI/CD tutorials. CI/CD allows teams to deliver software more quickly, with higher quality and reliability, by automating the processes.
 ---
 
 # CI/CD tutorials

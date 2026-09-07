@@ -1,5 +1,6 @@
 ---
 uid: Running_BPA_tests
+description: "Explore how you can run BPA tests to verify that a specific part of a DataMiner setup conforms with Skyline recommendations."
 ---
 
 # Running BPA tests

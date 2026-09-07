@@ -12,7 +12,7 @@ On the left side of the Cube UI, a sidebar is displayed. By default, this sideba
 | ![Activity](~/dataminer/images/Activity.png) | Activity | Opens a pane listing recent items. See [Activity pane](#activity-pane). |
 | ![Apps](~/dataminer/images/Apps.png) | Apps | Opens a pane listing the different apps available in Cube. See [Apps pane](#apps-pane). |
 | ![Workspace](~/dataminer/images/Workspace.png) | Workspace | Opens a pane where you can select and manage different Cube workspaces. See [Working with workspaces](xref:Working_with_workspaces). |
-| ![Community](~/dataminer/images/Community.png) | Community | Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a page where you can ask questions about anything related to DataMiner, a page that allows you to suggest new features, and a page that allows you to provide feedback<!--RN 41605-->. |
+| ![Community](~/dataminer/images/Community.png) | Community | Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a page where you can ask questions about anything related to DataMiner, and pages where you can suggest new features, provide feedback<!--RN 41605-->, and report issues<!--RN 45741-->. |
 
 You can pin additional buttons to the sidebar using the "..." or "+" button. This button opens a menu where you can select the buttons you want to pin.
 

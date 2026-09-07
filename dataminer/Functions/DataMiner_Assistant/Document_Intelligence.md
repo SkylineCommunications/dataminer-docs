@@ -40,7 +40,7 @@ The DataMiner Assistant combines OCR (Optical Character Recognition) and LLMs (L
    >
    > - Embedded or linked images are not supported in DOCX, XLSX, PPTX, and HTML files.
    > - A maximum file size applies, depending on the format:<!-- RN 44377 -->
-   >   - 20 MB for PTTX and TIFF/TIF files.
+   >   - 20 MB for PPTX and TIFF/TIF files.
    >   - 5 MB for all other file types.
 
 1. You provide your instructions. These instructions (i.e., the "prompt") describe what the system should extract or analyze.
@@ -115,9 +115,13 @@ ADDITIONAL INFORMATION:
 
 From DataMiner 10.6.0/10.6.1 onwards, you can integrate Document Intelligence directly into [DataMiner Automation](xref:automation).
 
-The following code snippet shows how to use the built-in API call. The namespaces shown below require the NuGet package `Skyline.DataMiner.Dev.Automation` (version 10.6.0 or higher) to be included in your automation script project.
+For the full API reference, see [Document Intelligence API reference](xref:DocumentIntelligence).
+
+The following code snippet shows how to use the built-in API call, including error handling. The namespaces shown below require the NuGet package `Skyline.DataMiner.Dev.Automation` (version 10.6.0 or higher) to be included in your automation script project.
 
 ```csharp
+using System.Collections.Generic;
+using System.IO;
 using Skyline.DataMiner.Net.Apps.DocumentIntelligence;
 using Skyline.DataMiner.Net.Apps.DocumentIntelligence.Objects;
 
@@ -131,14 +135,24 @@ public void Run(IEngine engine)
     // Create Document Intelligence helper
     var docIntelHelper = new DocumentIntelligenceHelper(engine.SendSLNetMessages);
     // Request Document Intelligence analysis
-    var analysisResult = docIntelHelper.AnalyzeDocuments(instructions, new List<Document>() 
-    { 
-        new Document() 
-        { 
-            Name = "myFile.pdf", 
-            Content = fileBytes 
-        }
+    var result = docIntelHelper.AnalyzeDocuments(instructions, new List<Document>()
+    {
+        new Document()
+        {
+            Name = "myFile.pdf",
+            Content = fileBytes
+        },
     });
+    // Check for errors
+    var traceData = docIntelHelper.GetTraceDataLastCall();
+    if (!traceData.HasSucceeded())
+    {
+        var errors = traceData.GetErrorDataOfType<DocumentIntelligenceError>();
+        engine.ExitFail("Document Intelligence analysis failed: " + string.Join(", ", errors.ConvertAll(e => e.Message)));
+        return;
+    }
+    // Use the analysis result
+    engine.GenerateInformation("Analysis result: " + result);
 }
 ```
 
@@ -157,7 +171,7 @@ Document Intelligence relies on external Azure AI services for both OCR and LLM 
 > [!IMPORTANT]
 >
 > - When data is sent to the Document Intelligence Service, both input data and analysis results may be temporarily encrypted and stored in Azure Storage for up to 24 hours after the operation is completed. Data remains in the service region. For the time being, this will be Western Europe for all users.
-> - The Global Standard Deployment of Azure OpenAI ensures the highest availability and lowest costs by processing data across Azure's global infrastructure. While temporarily stored data will never leave the designated region (currently Sweden vor all users), prompts and responses **might be processed in any geographic area**.
+> - The Global Standard Deployment of Azure OpenAI ensures the highest availability and lowest costs by processing data across Azure's global infrastructure. While temporarily stored data will never leave the designated region (currently Sweden for all users), prompts and responses **might be processed in any geographic area**.
 > - Ensure that all uploaded content complies with your organization's data handling policies, security requirements, and regulations (e.g., GDPR, CCPA).
 
 > [!TIP]

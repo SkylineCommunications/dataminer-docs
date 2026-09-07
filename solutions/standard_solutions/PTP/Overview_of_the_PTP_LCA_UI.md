@@ -1,5 +1,6 @@
 ---
 uid: Overview_of_the_PTP_LCA_UI
+description: Get a clear overview of the PTP low-code app and quickly monitor domains, nodes, topology, and alarms with one intuitive interface.
 ---
 
 # The PTP low-code app
@@ -67,6 +68,6 @@ Two action buttons are available in the table for each domain:
 - **Setup**: Launches the setup wizard again, allowing you to reconfigure the PTP domain.
 
   > [!TIP]
-  > See also: [Installing the DataMiner PTP app](xref:Installing_the_DataMiner_PTP_app)
+  > See also: [Installing the PTP app](xref:Installing_the_DataMiner_PTP_app)
 
 - **Asign Roles**: Launches the role assignment wizard, allowing you to change the roles that were assigned to the different PTP devices, or to assign roles to newly added devices.

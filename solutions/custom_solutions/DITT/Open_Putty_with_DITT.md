@@ -1,5 +1,6 @@
 ---
 uid: Open_Putty_with_DITT
+description: To be able to open PuTTY in a DITT element, install the DITT package, install PuTTY, and add a putty row in the Registrations page of the DITT element.
 ---
 
 # Opening PuTTY using DITT

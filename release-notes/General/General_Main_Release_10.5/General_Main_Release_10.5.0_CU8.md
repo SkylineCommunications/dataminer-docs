@@ -166,6 +166,14 @@ Also, when no master agent can be selected because the ResourceManager license i
 
 `WARNING: No master DMA could be picked. Missing required ResourceManager license for DMAs XXX.`
 
+#### NATSMigration would use an incorrect API key when attempting to forcefully reset a blocking BrokerGateway node [ID 43722]
+
+<!-- MR 10.5.0 [CU8] - FR TBD -->
+
+Whenever NATSMigration fails to reset the NATS cluster, it will try to forcefully reset the BrokerGateway node that blocks the reset.
+
+Up to now, when attempting such a reset, it would use an incorrect API key.
+
 #### Swarming an element while automatic incident tracking was disabled would cause the alarms of that element to be removed from any user-defined alarm group they were in [ID 43739]
 
 <!-- MR 10.5.0 [CU8] - FR 10.5.11 -->

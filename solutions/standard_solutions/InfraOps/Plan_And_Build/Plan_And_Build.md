@@ -1,5 +1,6 @@
 ---
 uid: Plan_And_Build
+description: Use the Plan and Build app to define and manage jobs that need to be done on your infrastructure and to assign people to those jobs.
 ---
 
 # Plan and Build

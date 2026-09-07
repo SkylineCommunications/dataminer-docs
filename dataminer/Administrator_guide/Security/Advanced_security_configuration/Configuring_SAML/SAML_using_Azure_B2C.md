@@ -1,5 +1,6 @@
 ---
 uid: SAML_using_Azure_B2C
+description: "Configure SAML with Azure B2C for DataMiner by setting up the enterprise app, metadata, policies, and automatic user creation for secure external access."
 ---
 
 # Configuring SAML with Azure B2C as identity provider

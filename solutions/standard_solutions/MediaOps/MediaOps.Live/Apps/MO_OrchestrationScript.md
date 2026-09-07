@@ -1,5 +1,6 @@
 ---
 uid: MediaOpsLive_OrchestrationScript
+description: Build MediaOps Live orchestration scripts that can be used to perform custom actions when an event is triggered, on event level or on node level.
 ---
 
 # Orchestration scripts

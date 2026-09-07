@@ -1,5 +1,6 @@
 ---
 uid: Service_Delivery
+description: Find out how a proper service delivery is key. Pick your champions, subscribe to the DevOps Professional Program, and use the tools at your disposal.
 ---
 
 # Service delivery

@@ -1,5 +1,6 @@
 ---
 uid: VSAT_metrics
+description: Dimension your EPM VSAT deployment for optimal performance with the help of a number of key system metrics.
 ---
 
 # EPM VSAT metrics

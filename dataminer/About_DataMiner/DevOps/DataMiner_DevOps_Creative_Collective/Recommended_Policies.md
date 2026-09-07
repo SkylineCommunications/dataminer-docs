@@ -1,6 +1,6 @@
 ---
 uid: Recommended_Policies
-description: Recommended policies of the DevOps Creative Collective include open-source mindset, minimum dependencies, proper documentation, and demo capabilities.
+description: Explore the recommended policies of the DevOps Creative Collective. These include open-source mindset, minimum dependencies, and proper documentation.
 ---
 
 # Recommended policies

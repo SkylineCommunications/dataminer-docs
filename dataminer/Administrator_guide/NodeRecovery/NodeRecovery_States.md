@@ -1,5 +1,6 @@
 ---
 uid: NodeRecovery_States
+description: "Understand Node Recovery health, outage, and unknown states, as well as maintenance mode and global cluster voting rules."
 ---
 
 # Node states

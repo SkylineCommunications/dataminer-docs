@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Elasticsearch_Database
+description: "Learn about the legacy Elasticsearch setup on a separate machine from DataMiner, including the requirements and main settings."
 ---
 
 # Configuring an Elasticsearch database on a separate machine

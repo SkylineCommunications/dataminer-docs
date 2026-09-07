@@ -1,16 +1,17 @@
 ---
 uid: Installing_the_DataMiner_PTP_app
+description: Deploy the PTP package from the DataMiner Catalog, set up the app, and configure all necessary settings.
 ---
 
-# Installing the DataMiner PTP app
+# Installing the PTP app
 
 ## Deploying the package
 
-To deploy or upgrade the DataMiner PTP app:
+To deploy or upgrade the PTP app:
 
 ### [From DataMiner PTP 1.1.4 onwards](#tab/tabid-1)
 
-Deploy the [DataMiner PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the Catalog.
+Deploy the [PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the Catalog.
 
 ### [Prior to DataMiner PTP 1.1.4](#tab/tabid-2)
 

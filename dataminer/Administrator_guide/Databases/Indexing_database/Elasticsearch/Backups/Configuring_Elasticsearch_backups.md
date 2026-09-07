@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Elasticsearch_backups
+description: "Explore the two methods to configure Elasticsearch backups. Either take and restore snapshots, or restore backups using the Standalone Elastic Backup Tool."
 ---
 
 # Configuring Elasticsearch backups

@@ -4,6 +4,38 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 10 August 2026 - Fix - CloudGateway 3.3.2 - Connection to dataminer.services could be unstable
+
+With CloudGateway 3.3.1, an issue could occur that made the connection to dataminer.services unstable, causing long request durations or timeouts. This has been resolved.
+
+#### 31 Juli 2026 - Enhancement - CloudGateway 3.3.1 - Cloud connection stability improvements
+
+Several changes were made to enhance the stability of the connection to dataminer.services.
+
+#### 1 Juli 2026 - Enhancement - CloudGateway 3.3.0 - DxM health status
+
+In addition to sending a heartbeat, the CloudGateway DxM will now also offload extra information about its own health status while running, which will be used for proactive monitoring.
+
+#### 11 June 2026 - Enhancement - CloudGateway 3.2.0 - Upgrade to .NET 10
+
+DataMiner CloudGateway has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
+
+#### 8 June 2026 - Fix - CloudGateway 3.1.2 - DataMiner Assistant session renewed when expired
+
+Previously, when you used the DataMiner Assistant through Microsoft Teams or Microsoft 365 Copilot after your DataMiner Assistant session had expired, you could get an empty response. Now, CloudGateway automatically creates a new DataMiner Assistant session when the existing one has expired, so you always receive a proper response.
+
+#### 22 May 2026 - Enhancement - CloudGateway 3.1.1 - MessageBroker dependency updated: ForcedEndpoints support
+
+CloudGateway now supports the use of the `ForcedEndpoints` setting in *MessageBrokerConfig.json*. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
+
+#### 4 May 2026 - Enhancement - CloudGateway 3.1.0 - Microsoft 365 Copilot
+
+Support for Microsoft 365 Copilot has been added.
+
+#### 27 April 2026 - Fix - CloudGateway 3.0.2 - Opening a shared dashboard would show a blank page
+
+An issue was introduced in CloudGateway 3.0.1 where opening a shared dashboard would show a blank page. This issue has now been resolved.
+
 #### 26 March 2026 - Enhancement - CloudGateway 3.0.1 - Cloud connection stability improvements
 
 The stability of the connection to dataminer.services has been enhanced through improved retry mechanisms.

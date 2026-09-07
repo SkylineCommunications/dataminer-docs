@@ -1,6 +1,6 @@
 ---
 uid: DM_and_storage_selfhosted
-description: Self-managed deployment allows you to host both DataMiner and storage nodes, but requires additional costs and setup.
+description: Find out how self-managed deployment allows you to host both DataMiner and storage nodes, but requires additional costs and setup.
 ---
 
 # Self-managed DataMiner nodes and storage nodes

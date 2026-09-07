@@ -36,11 +36,19 @@ Expected duration: 3 minutes.
 
 1. In the navigation pane on the left, make sure *Overview* is selected.
 
-1. Select *Demo Test Suite* and read its description.
+   This page hosts *QAOps Nebula*, a live topology explorer showing all configurations, test suites, servers, and active test runs as connected nodes.
 
-1. Select *Demo Configuration* and read its description.
+   ![QAOps Nebula topology explorer](~/develop/images/QAOps_User_Overview_Nebula.png)
 
-1. Select a server and locate its creation time.
+1. Use the filter buttons at the top (*Configurations*, *Suites*, *Servers*, *Active runs*) to control which entity types are shown.
+
+1. Select *Demo Test Suite* in the graph, and read its details in the *Inspector* panel on the right.
+
+1. Select *Demo Configuration*, and read its description in the *Inspector*.
+
+1. Select a server node, and locate its details.
+
+1. With the toggle button next to the *Motion* dropdown box, switch to the accessible topology table, and locate the same entities in the table.
 
 > [!TIP]
 > For detailed page and app information, see [QAOps main UI](xref:QAOps_Main_UI).

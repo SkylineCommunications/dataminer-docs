@@ -1,5 +1,6 @@
 ---
 uid: Importing_elements_services_etc_from_a_dmimport_file
+description: "Learn how to import elements, services, service templates, views, redundancy groups, etc. from .dmimport packages to migrate them across DataMiner Systems."
 ---
 
 # Importing elements, services, etc. from a .dmimport file
@@ -25,12 +26,14 @@ To import a .dmimport file:
 
 1. In the *Structure to be imported* section, clear the selection from any items you do not want to include in the import.
 
-   > [!NOTE]
-   > If you have selected to include a redundancy group, any elements within that group will automatically be included in the import. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
+   If you have selected to include a redundancy group or service, any elements within it will automatically be included in the import. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included. If you have selected a service template, all services generated from that template will automatically be included, along with any elements used by those services.
 
 1. Click *Import*.
 
 1. If necessary, resolve any conflicts concerning names and/or IDs.
+   
+   > [!IMPORTANT]
+   > A .dmimport package retains the DataMiner Agent ID and the object IDs of the system it was exported from. If you import the package into a DMS that uses the same DataMiner Agent IDs as the source system (for example, a staging system cloned from production), imported objects can take over the IDs of objects that already exist in the target system. If you delete the imported objects afterwards, this will remove the original objects as well.
 
 1. In the *Import* window, check the progress messages until the import is ready, and click *Finish*.
 
@@ -43,4 +46,4 @@ To import a .dmimport file:
 >   - Keep the existing information template in the DMS, and not import the information template from the package.
 >   - Overwrite the existing information template in the DMS.
 >   - Import the information template from the package with a new name.
-> - If you are running a DataMiner System prior to version 10.4.9/10.5.0 and import a package that includes SNMPv3 elements exported from systems running DataMiner 10.4.9/10.5.0 or higher, all [SNMPv3 credentials](xref:SNMPv3_Connection) will be lost and will have to be re-entered manually. If you used the [DataMiner Cube Credentials Library](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication) to configure the SNMPv3 credentials, you will always need to re-enter the credentials manually after an import, regardless of your DataMiner version.
+> - If you are running a DataMiner System prior to version 10.4.9/10.5.0 and import a package that includes SNMPv3 elements exported from systems running DataMiner 10.4.9/10.5.0 or higher, all [SNMPv3 credentials](xref:SNMPv3_Connection) will be lost and will have to be re-entered manually. If you used the [DataMiner Cube Credentials Library](xref:Credentials_Library) to configure the SNMPv3 credentials, you will always need to re-enter the credentials manually after an import, regardless of your DataMiner version.

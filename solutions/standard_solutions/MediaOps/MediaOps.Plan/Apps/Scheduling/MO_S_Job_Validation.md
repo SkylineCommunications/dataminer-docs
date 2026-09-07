@@ -1,5 +1,6 @@
 ---
 uid: Overview_MediaOps_Validation
+description: Validate upcoming jobs in the Scheduling app to catch resource and configuration issues early, and fix them before the booking starts.
 ---
 
 # Validation of upcoming jobs

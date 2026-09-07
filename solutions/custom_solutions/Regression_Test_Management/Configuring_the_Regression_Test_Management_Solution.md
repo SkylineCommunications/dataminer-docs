@@ -1,5 +1,6 @@
 ---
 uid: Configuring_the_Regression_Test_Management_Solution
+description: After deploying the Regression Test Management Solution, configure test runs, report delivery, and regression test scripts.
 ---
 
 # Configuring the Regression Test Management Solution

@@ -35,7 +35,7 @@ When you create a query, you can use one or more of the data sources listed belo
 
 - [Get parameter relations](xref:Get_parameter_relations)
 
-- [Get parameters for element where](xref:Get_parameters_for_element_where)
+- [Get parameters for elements where](xref:Get_parameters_for_elements_where)
 
 - [Get profile instances](xref:Get_profile_instances)
 

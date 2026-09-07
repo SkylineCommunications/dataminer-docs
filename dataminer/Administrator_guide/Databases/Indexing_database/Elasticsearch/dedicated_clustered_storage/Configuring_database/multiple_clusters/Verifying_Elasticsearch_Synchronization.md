@@ -1,5 +1,6 @@
 ---
 uid: Verifying_Elasticsearch_Synchronization
+description: "Verify Elasticsearch synchronization across multiple clusters and check health index names and index sizes to confirm your data stays aligned."
 ---
 
 # Verifying Elasticsearch synchronization

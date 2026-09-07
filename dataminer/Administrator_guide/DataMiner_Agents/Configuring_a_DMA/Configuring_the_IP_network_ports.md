@@ -1,6 +1,6 @@
 ---
 uid: Configuring_the_IP_network_ports
-description: Specific IP ports are always used in a DMS, others depend on your setup. Only the essential ports (80, 8004, and 162) are opened by default.
+description: "Explore the different IP ports that are used in a DMS. This information will especially prove useful when you have to configure firewalls in your network."
 ---
 
 # Configuring the IP network ports
@@ -23,8 +23,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 | N/A     | 7000/tcp | Cassandra: non-TLS setup (inter-node communication in Failover setups) |
 | N/A     | 7001/tcp | Cassandra: TLS setup (available from DataMiner 10.1.3 onwards) |
 | N/A     | 7199/tcp | Cassandra: cluster backups |
-| N/A     | 9042/tcp | Cassandra: non-TLS setup (server listening for client requests) |
-| N/A     | 9142/tcp | Cassandra: TLS setup (server listening for client requests) |
+| N/A     | 9042/tcp | Cassandra: non-TLS and TLS setup (server listening for client requests) |
 | N/A     | 9200/tcp | OpenSearch/Elasticsearch |
 | N/A     | 9300/tcp | OpenSearch/Elasticsearch (inter-node communication) |
 | Multiple protocols | 4222/tcp<br> 6222/tcp | NATS (required from DataMiner 10.1.1 onwards) |
@@ -36,7 +35,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 > [!NOTE]
 >
 > - When viewing Stream via DataMiner Cube, access to port 23/tcp is not required. Access is only required when using a Telnet client. However, note that Telnet is by default disabled. For more information on how to enable this, see [DataMiner.xml](xref:DataMiner_xml)
-> - Prior to DataMiner 10.1.0 CU10 and 10.2.1, port 8222 is also opened for NATS monitoring. In later DataMiner versions, we recommend manually opening the port in order to be able to debug NATS. With port 8222, you can extract metrics and performance indicators from the NATS message broker, which in turn may allow you to debug if required. However, for maximum security, only expose port 8222 on internal networks to prevent the leaking of sensitive information.
+> - In case you need to debug NATS, we recommend manually opening port 8222. This will allow you to extract metrics and performance indicators from the NATS message broker, which in turn may allow you to debug if required. However, for maximum security, only expose port 8222 on internal networks to prevent the leaking of sensitive information.
 
 > [!CAUTION]
 > A problem can occur where port 9090 is already used by a third-party software. For more information, see [Default NATS port is already in use](xref:KI_NATS_port_9090).

@@ -1,5 +1,6 @@
 ---
 uid: Professional_service_credits
+description: "Review Professional Service credits, compare hourly and per-session rates, and choose the right credits for engineering, training, and support."
 ---
 
 # Professional Service credits

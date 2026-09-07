@@ -1,5 +1,6 @@
 ---
 uid: NodeRecovery_Troubleshooting
+description: "Diagnose Node Recovery issues by checking logs, services, configuration, network connectivity, and SLNet health on each DataMiner node."
 ---
 
 # Node Recovery troubleshooting

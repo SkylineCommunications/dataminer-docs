@@ -430,7 +430,7 @@ From now on, all GQI extension instances will be able to properly release their 
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
 
-Cell values from Guid columns are converted to string values when passed to the `IGQIRowOperator.HandleRow` life cycle method of a custom operator.
+Cell values from Guid columns are converted to string values when passed to the `IGQIRowOperator.HandleRow` lifecycle method of a custom operator.
 
 As these string values would then be used throughout the rest of the query, up to now, this could lead to type mismatch errors.
 

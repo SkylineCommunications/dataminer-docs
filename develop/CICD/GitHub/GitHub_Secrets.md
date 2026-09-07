@@ -35,7 +35,7 @@ A key should be added as a secret in the repository, so that it is stored secure
 
 ## SONAR_TOKEN SonarCloud key
 
-Several provided workflows may require static code analysis through SonarCloud in order to meet quality standards. To perform such analysis, access is needed to a SonarCloud project.
+Several provided workflows can optionally perform static code analysis through SonarCloud. This analysis is not required, but when you enable it, access is needed to a SonarCloud project.
 
 - Name: SONAR_TOKEN
 - Value: The value of the secret is an API token that can be created in SonarCloud under the [Security](https://sonarcloud.io/account/security) tab of the account settings.

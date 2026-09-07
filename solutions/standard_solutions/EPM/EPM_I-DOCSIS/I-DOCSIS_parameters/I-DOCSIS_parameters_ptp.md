@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_parameters_ptp
 keywords: I-DOCSIS parameters
+description: Discover all the PTP parameters available in elements running the Harmonic CableOS connector, on the PTP page.
 ---
 
 # Integrated DOCSIS parameters – PTP

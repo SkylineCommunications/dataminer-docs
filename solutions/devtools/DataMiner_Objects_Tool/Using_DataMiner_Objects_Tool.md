@@ -1,5 +1,6 @@
 ---
 uid: Using_DataMiner_Objects_Tool
+description: Use the DataMiner Objects Tools to retrieve a filtered list of DataMiner objects, select one or more of those objects, and execute a number of actions.
 ---
 
 # Working with the DataMiner Objects Tool

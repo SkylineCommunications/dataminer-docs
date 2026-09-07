@@ -1,5 +1,6 @@
 ---
 uid: Deleting_element_data_from_a_MySQL_database
+description: "Follow these steps to delete element data from a local MySQL database on a DMA and then restart the DMA to apply the cleanup safely."
 keywords: local database
 ---
 

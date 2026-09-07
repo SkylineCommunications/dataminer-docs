@@ -42,6 +42,8 @@ Supported from DataMiner 10.5.10/10.6.0 onwards.<!-- RN 43380 -->
 
 With this kind of reference, you grant access to all instances for a given definition. You only need to specify the ID `DomDefinition` in the `DomDefinitionReference` object. Users will be able to do all CRUD actions for all instances linked to that definition.
 
+Additionally, from DataMiner 10.6.6/10.7.0 onwards<!-- RN 45275 -->, you can also mark such a reference as read-only by setting the `ReadOnly` property to `true`. This way, the group will only have read access to all instances of the referenced `DomDefinition`.
+
 #### FieldValueReference
 
 Supported from DataMiner 10.6.0/10.6.3 onwards.<!-- RN 44233 -->
@@ -49,6 +51,8 @@ Supported from DataMiner 10.6.0/10.6.3 onwards.<!-- RN 44233 -->
 With this kind of reference, you grant access to only a subset of instances for a given definition. This subset is defined by providing the ID of a `FieldDescriptor` and a collection of values for that field. Users will then get access to any instance for that definition that contains at least one of the provided values for the specified `FieldDescriptor`.
 
 For example, the user group "London Employees" can only read the "Job" instances where the "Assigned Office" field (which is a `DomInstanceFieldDescriptor`) contains the ID of the London office instance. This way, users part of that specific employee group will only see the "Job" instances that are assigned to their office. The DOM manager will automatically limit the results when requesting all "Job" instances.
+
+Additionally, from DataMiner 10.6.6/10.7.0 onwards<!-- RN 45275 -->, you can also mark such a reference as read-only by setting the `ReadOnly` property to `true`. This way, the group will only have read access to the defined subset of instances.
 
 ```csharp
 var allowedOffice = Guid.Parse("2f4fee02-4764-4d3d-8e7d-29d391b75e84"); // ID of the London office DOM instance (part of another DOM definition).
@@ -107,10 +111,7 @@ Take note of the following validation behavior that occurs at runtime and will n
 | At least one link configured | Module switches to Restricted Access mode. Only linked groups (and internal connections or users with the [*Module settings* permission](xref:DOM_security#module-settings-user-permission)) have access to instances of linked `DomDefinitions`. |
 | Definition has no links while module is restricted | Its instances are not accessible until a link is created for that definition. |
 
-Notes:
-
-- A link grants both read and write access (read-only links are currently not supported).
-- Users with the [*Module settings* permission](xref:DOM_security#module-settings-user-permission) always have full access to any DOM instance but still need to adhere to the [filtering requirements](#filtering-requirements-when-security-is-enabled).
+Note that users with the [*Module settings* permission](xref:DOM_security#module-settings-user-permission) always have full access to any DOM instance but still need to adhere to the [filtering requirements](#filtering-requirements-when-security-is-enabled).
 
 The simplified decision trees below may help understand how the security checks work and what kind of reference takes precedence.
 
@@ -147,13 +148,15 @@ flowchart LR
 ```mermaid
 flowchart LR
     B(Evaluate access)
-    B --> D{Full access with<br>DomDefinitionReference?}
+    B --> D{Full write access with<br>DomDefinitionReference?}
     D -->| Yes | E(Allow write)
     D -->| No  | H{FieldValueReference defined<br>for definition?}
     H -->| Yes | I{Does new and old instance<br>contain one of the values?}
     H -->| No  | J(Block write.<br>User has no access.)
-    I -->| Yes | E
+    I -->| Yes | K{Is this reference read-only?}
     I -->| No  | J
+    K -->| No | E
+    K -->| Yes  | J
 ```
 
 ### Filtering requirements when security is enabled

@@ -1,5 +1,6 @@
 ---
 uid: techex-tx-core-install
+description: Deploy the Techex TX Core app from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the Techex TX Core app

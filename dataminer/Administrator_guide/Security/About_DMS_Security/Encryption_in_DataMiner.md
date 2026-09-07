@@ -1,5 +1,6 @@
 ---
 uid: Encryption_in_DataMiner
+description: "Review DataMiner encryption for passwords, in-transit communication, and stored data, including Blowfish, Rijndael, TLS, and BitLocker options."
 ---
 
 # Encryption in DataMiner
@@ -29,7 +30,7 @@ All password encryption in DataMiner is done through the Blowfish algorithm (ECB
 DataMiner encrypts the following secrets using this technique:
 
 - Password parameters
-- [Credential libraries](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication)
+- [Credential libraries](xref:Credentials_Library)
 - Database passwords
 - Element passwords
 - Replication passwords

@@ -1,5 +1,6 @@
 ---
 uid: Room_Designer
+description: Go to the Room Designer page of the Facility Manager app to design a room in detail, including the placement of different racks and zones.
 ---
 
 # Room Designer

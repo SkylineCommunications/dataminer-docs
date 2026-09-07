@@ -1,5 +1,6 @@
 ---
 uid: IpNetworkExplorer_getting_started
+description: The first time you open the IP Network Explorer, scan your network to detect supported network switches and update connectivity information.
 ---
 
 # Getting started with IP Network Explorer

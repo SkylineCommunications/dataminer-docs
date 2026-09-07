@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Import
+description: Learn how import CSV files with endpoints and virtual signal groups for the Generic Matrix connector in the Virtual Signal Groups app.
 ---
 
 # Provisioning endpoints and virtual signal groups for a Generic Matrix element using CSV import

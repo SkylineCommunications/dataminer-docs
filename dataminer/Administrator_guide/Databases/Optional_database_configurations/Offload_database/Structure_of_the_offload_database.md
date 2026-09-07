@@ -1,6 +1,7 @@
 ---
 uid: Structure_of_the_offload_database
 keywords: central database
+description: "Explore the structure of the offload database, including all tables and their fields, types, keys, and descriptions."
 ---
 
 # Structure of the offload database

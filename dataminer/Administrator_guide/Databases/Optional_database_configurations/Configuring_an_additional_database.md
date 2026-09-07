@@ -1,5 +1,6 @@
 ---
 uid: Configuring_an_additional_database
+description: "Configure additional databases in DataMiner by adding or removing optional databases in System Center and specifying their connection settings."
 ---
 
 # Configuring an additional database

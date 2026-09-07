@@ -4,7 +4,22 @@ uid: Protocol.Params.Param.ArrayOptions.ColumnOption-type
 
 # type attribute
 
-Specifies the column type.
+Specifies the column type. You can specify one of the following types:
+
+|Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Description|
+|--- |--- |
+|[autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement)|Used to automatically create a unique value.|
+|[concatenation](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#concatenation)|Values in this column are the result of a concatenation of other columns.|
+|[custom](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#custom)|Indicates that the content of the column will be managed in the protocol.|
+|[displaykey](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#displaykey)|Column showing the display keys, automatically filled in by the SLElement process.|
+|[index](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#index)|Used when retrieving SNMP or WMI tables. It contains the row number.|
+|[retrieved](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#retrieved)|Indicates that the content of the column will be managed in the protocol.|
+|[snmp](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#snmp)|Used for columns that contain data retrieved via SNMP.|
+|[state](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#state)|Used when retrieving SNMP or WMI tables.|
+|[viewTableKey](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#viewtablekey)|Used for direct view columns containing primary keys, so that a prefix is added to them, referring to the source element that supplied the data.|
+
+> [!NOTE]
+> The usage of [retrieved](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#retrieved) is preferred over [custom](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#custom).
 
 ## Content Type
 
@@ -16,11 +31,11 @@ Specifies the column type.
 
 ## Remarks
 
-In the type attribute, you can specify one of the following options:
-
 ### autoincrement
 
 Used to automatically create a unique value. Only applicable for primary key columns.
+
+If this type is specified, SLProtocol will automatically provide a value for the primary key. This value will be an unsigned integer. During startup of the element, SLProtocol determines the highest value present in the column.
 
 > [!NOTE]
 > The use of this type is **no longer supported** for logger tables for the following reasons:
@@ -64,7 +79,7 @@ The display key is composed either via NamingFormat or via the naming option (or
 > [!NOTE]
 >
 > - The *displaykey* column is there for the end user only. Therefore, the column has no reason to live within SLProtocol, which will fully rely on the primary keys instead for its logic. It only lives in SLElement, which is responsible for building the value. This has the following implications:
->   - The *displaykey* column should alway be the last column defined in the table. Otherwise, as the *displaykey* column does not exist within SLProtocol, all subsequent columns would have a confusing shifted IDX.
+>   - The *displaykey* column should always be the last column defined in the table. Otherwise, as the *displaykey* column does not exist within SLProtocol, all subsequent columns would have a confusing shifted IDX.
 >   - Trending/alarming on this column is not possible.
 >   - Columns of type "displayKey" cannot be saved.
 >   - It is not possible to obtain the values from this column using calls that obtain information from the SLProtocol process, e.g., a NotifyProtocol NT_GET_TABLE_COLUMNS (321) call.

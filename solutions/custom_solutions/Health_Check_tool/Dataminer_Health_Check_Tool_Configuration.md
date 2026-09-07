@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Health_Check_Tool_Configuration
+description: Configure the DataMiner Health Check Tool by adding test cases, and setting up email reports and execution schedules.
 ---
 
 # Configuring the DataMiner Health Check Tool

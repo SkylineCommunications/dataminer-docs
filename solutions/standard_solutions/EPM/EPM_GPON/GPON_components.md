@@ -1,5 +1,6 @@
 ---
 uid: xPON_components
+description: Explore the core EPM xPON components, including EPM connectors, data collection sources, system connectors, and automation scripts.
 ---
 
 # EPM xPON components

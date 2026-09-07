@@ -1,5 +1,6 @@
 ---
 uid: Forcing_a_DMA_to_work_without_virtual_IPs
+description: "Learn how to force a DataMiner Agent to run without virtual IP addresses by setting disableElementIP in DataMiner.xml."
 ---
 
 # Forcing a DataMiner Agent to work without virtual IP addresses

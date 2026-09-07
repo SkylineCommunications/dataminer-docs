@@ -1,5 +1,6 @@
 ---
 uid: Getting_Started_with_the_Partner_Program
+description: Apply online to become a DataMiner Partner. Your application will be reviewed, and if the outcome is positive, Skyline will reach out to you.
 ---
 
 # Getting started with the Partner Program

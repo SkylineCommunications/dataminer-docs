@@ -1,5 +1,6 @@
 ---
 uid: Failover_FAQ_avoid_registering_same_virtual_IP
+description: "Find out how you can prevent DataMiner Agents in a Failover setup from registering the same virtual IP address."
 ---
 
 # How do I prevent DMAs in a Failover setup from registering the same virtual IP address?

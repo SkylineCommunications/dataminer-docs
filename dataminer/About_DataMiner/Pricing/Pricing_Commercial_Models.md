@@ -1,6 +1,6 @@
 ---
 uid: Pricing_Commercial_Models
-description: DataMiner is available in two commercial models, i.e., perpetual-use licenses or usage-based services, combined with your preferred deploy model.
+description: "Compare DataMiner commercial and deploy models, review perpetual-use and usage-based options, and choose the fit for your system."
 ---
 
 # Commercial & deploy models summary

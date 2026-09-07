@@ -1,5 +1,6 @@
 ---
 uid: BPA_Cube_CRL_Freeze
+description: "Learn about the Cube CRL Freeze BPA test, which identifies clients and DMAs without internet access where Cube may freeze during startup."
 ---
 
 # Cube CRL Freeze

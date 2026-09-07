@@ -1,10 +1,11 @@
 ---
 uid: EPM_xPON
+description: Explore the xPON branch of the EPM Solution, which is designed to manage Gigabit Passive Optical Network (xPON) deployments.
 ---
 
-# DataMiner EPM xPON
+# EPM xPON
 
-The xPON branch of the DataMiner EPM Solution is designed to manage Gigabit Passive Optical Network (xPON) deployments.
+The xPON branch of the EPM Solution is designed to manage Gigabit Passive Optical Network (xPON) deployments.
 
 In a typical xPON deployment, there are four main components:
 

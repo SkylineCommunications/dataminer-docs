@@ -12,7 +12,7 @@ In the alarm bar, the focus icon is displayed when the *Active alarms* tab conta
 
 In the example below, from the hundreds of alarms present, this will filter out the 23 alarms that need the operator's attention the most:
 
-![Alarm tab filtered on alarm focus](~/dataminer/images/Alarm_tab_filtered_on_focus_alarms.png)<br>*Alarm tab filtered on alarm focus in DataMiner 10.6.1*
+![Alarm tab filtered on alarm focus](~/dataminer/images/Alarm_tab_filtered_on_focus_alarms.png)<br>*Alarm tab filtered on alarm focus in DataMiner 10.6.5*
 
 ## Alarm focus score analysis
 

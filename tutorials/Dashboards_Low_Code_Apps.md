@@ -1,6 +1,7 @@
 ---
 uid: Dashboards_Low-Code_Apps_Tutorials
 keywords: low-code, low code, lowcode
+description: Discover all Dashboards and Low-Code Apps tutorials. Beginner tutorials cover fundamental concepts, while advanced tutorials address complex use cases.
 ---
 
 # Dashboards and Low-Code Apps tutorials

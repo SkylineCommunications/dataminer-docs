@@ -1,5 +1,6 @@
 ---
 uid: Partnership_Governance
+description: Learn how Skyline partnership governance aligns goals through KPI reporting and executive reviews that accelerate measurable business growth.
 ---
 
 # Partnership governance

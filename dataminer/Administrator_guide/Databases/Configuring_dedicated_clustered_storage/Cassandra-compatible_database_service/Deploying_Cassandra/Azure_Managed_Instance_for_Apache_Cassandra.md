@@ -1,5 +1,6 @@
 ---
 uid: Azure_Managed_Instance_for_Apache_Cassandra
+description: "Find out about the deprecated Azure Managed Instance setup, which could be used instead of Cassandra Cluster but is no longer supported."
 ---
 
 # Setting up an Azure Managed Instance for Apache Cassandra
@@ -19,10 +20,7 @@ You will first need to [create your Azure Managed Instance for Apache Cassandra]
 
 ## Supported Cassandra versions
 
-DataMiner supports the same Cassandra versions as for an on-premises cluster. However, only the following versions are available on Azure:
-
-- Cassandra 3.11
-- Cassandra 4.0
+DataMiner supports the same Cassandra versions as for an on-premises cluster.
 
 ## Creating your Azure Managed Instance for Apache Cassandra
 

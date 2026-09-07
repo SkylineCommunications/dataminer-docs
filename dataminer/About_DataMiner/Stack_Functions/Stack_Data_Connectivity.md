@@ -1,5 +1,6 @@
 ---
 uid: Stack_Data_Connectivity
+description: Explore how DataMiner can enable you to configure and visualize signal paths throughout your infrastructure.
 ---
 
 # Data Connectivity

@@ -1,5 +1,6 @@
 ---
 uid: MO_Control_Surface
+description: Use the Control Surface app to connect, disconnect, lock, and filter sources and destinations defined in the Virtual Signal Groups app.
 ---
 
 # Control Surface app

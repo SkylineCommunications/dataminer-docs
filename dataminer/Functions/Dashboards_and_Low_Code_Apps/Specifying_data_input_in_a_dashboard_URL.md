@@ -186,15 +186,15 @@ Within the dashboard or app URL, the following data objects can be specified:
 
 - *service definitions*: Requires the service definition ID.
 
-- *cpes*: Deprecated from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (but still supported for the sake of backwards compatibility). To specify an EPM filter. Requires the DMA ID, the element ID, the field PID, the field value, the table index PID, and the index value.
+- *cpes*: Deprecated, but still supported for the sake of backwards compatibility. To specify an EPM filter. Requires the DMA ID, the element ID, the field PID, the field value, the table index PID, and the index value.
 
-- *epm-selections*: Available from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (replaces "cpes")<!-- RN 32594 -->. To specify an EPM filter. Requires the DMA ID, element ID, field PID and primary key value, separated by forward slashes. Unlike the deprecated "cpes", "epm-selections" allows forward slashes in the primary key value.
+- *epm-selections*: To specify an EPM filter (preferred over the deprecated "cpes"). Requires the DMA ID, element ID, field PID and primary key value, separated by forward slashes. Unlike the deprecated "cpes", "epm-selections" allows forward slashes in the primary key value.<!-- RN 32594 -->
 
-- *strings*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35902 -->. A text string, which will serve as the default value for a **text input** component. Note that prior to DataMiner 10.4.1<!-- RN 37752 -->, you can only specify a default value for all text input components, while in recent DataMiner versions you can specify data per component.
+- *strings*: Supported from DataMiner web 10.3.5/10.4.0 onwards<!--  RN 35902 -->. A text string, which will serve as the default value for a **text input** component. Note that prior to DataMiner 10.4.1<!-- RN 37736 -->, you can only specify a default value for all text input components, while in recent DataMiner versions you can specify data per component.
 
-- *numbers*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35911 -->. Numbers, which will serve as the default value for a **numeric input** component. Note that prior to DataMiner 10.4.1<!-- RN 37752 -->, you can only specify a default value for all numeric input components, while in recent DataMiner versions you can specify data per component.
+- *numbers*: Supported from DataMiner web web 10.3.5/10.4.0 onwards<!--  RN 35911 -->. Numbers, which will serve as the default value for a **numeric input** component. Note that prior to DataMiner web 10.4.1<!-- RN 37736 -->, you can only specify a default value for all numeric input components, while in recent DataMiner versions you can specify data per component.
 
-- *object manager definitions*: Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Allows referencing a specific DOM definition. Use the following format: `object manager definitions=[Module]/[Definition]`.
+- *object manager definitions*: Supported from DataMiner web 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Allows referencing a specific DOM definition. Use the following format: `object manager definitions=[Module]/[Definition]`.
 
   - `[Module]`: the [DOM module name](xref:DOM_ModuleId).
 
@@ -202,7 +202,7 @@ Within the dashboard or app URL, the following data objects can be specified:
 
   For example: `?object manager definitions=Jobs/7a58af57-58d6-4027-8b55-40d5ba97c368`
 
-- *object manager instances*: Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Allows referencing a specific DOM instance. Use the following format: `object manager instances=[Module]/[Instance]`.
+- *object manager instances*: Supported from DataMiner web 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Allows referencing a specific DOM instance. Use the following format: `object manager instances=[Module]/[Instance]`.
 
   - `[Module]`: the [DOM module name](xref:DOM_ModuleId).
 
@@ -210,7 +210,7 @@ Within the dashboard or app URL, the following data objects can be specified:
 
   For example: `?object manager instances=Jobs/e91fe0cf-51e8-40f1-add4-f4752561890b`
 
-- *object manager modules*: Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Allows referencing a specific DOM module. Use the following format: `object manager modules=[Module]`.
+- *object manager modules*: Supported from DataMiner web 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Allows referencing a specific DOM module. Use the following format: `object manager modules=[Module]`.
 
   - `[Module]`: the [DOM module name](xref:DOM_ModuleId).
 
@@ -224,7 +224,7 @@ Within the dashboard or app URL, the following data objects can be specified:
 
   For example: `?queries=Get Elements/{"ID": "Elements"}`
 
-- *query columns*: Supported from DataMiner 10.3.9/10.4.0 onwards. A GQI query filter, structured as follows: `query columns=[query ID]%1e[column ID]%1e[filter type]%1e[filter values]`. The following filter types are supported: *list*, *range*, *boolean*, *number*, and *string*.
+- *query columns*: Supported from DataMiner web 10.3.9/10.4.0 onwards.<!-- 36822 --> A GQI query filter, structured as follows: `query columns=[query ID]%1e[column ID]%1e[filter type]%1e[filter values]`. The following filter types are supported: *list*, *range*, *boolean*, *number*, and *string*.
 
   For example:
 
@@ -236,7 +236,7 @@ Within the dashboard or app URL, the following data objects can be specified:
 
     `?query columns=3af9e5a7-91fc-4333-94c0-e39a59f0d900%1e23ea428c-d52c-4041-8fd9-76ce3f436a6d_Number%1erange%1e5%1f10%1ffalse%1ftrue`
 
-- *query rows*: Supported from DataMiner 10.3.0 [CU12]/10.4.3 onwards<!-- RN 39369 -->.  An array of query rows.
+- *query rows*: Supported from DataMiner web 10.3.0 [CU12]/10.4.3 onwards<!-- RN 39369 -->.  An array of query rows.
 
   Each table must be in the following format: `VERSION\u001FCOLUMNS\u001ECELLS\u001EKEYS`.
 
@@ -252,4 +252,4 @@ Within the dashboard or app URL, the following data objects can be specified:
 
   `v:1\u001FIDColumn\u000EID\u000Estring\u001FValueColumn\u000EValue\u000Enumber\u001Evalue1\u000EValue 1\u001F5\u000EFive\u001ERowKey`
 
-- *booleans*: Supported from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41845-->. Used to specify whether a boolean value is set to "true" or "false" when the dashboard or app is loaded.
+- *booleans*: Supported from DataMiner web 10.4.0 [CU12]/10.5.3 onwards<!--RN 41845-->. Used to specify whether a boolean value is set to "true" or "false" when the dashboard or app is loaded.

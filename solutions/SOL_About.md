@@ -1,5 +1,6 @@
 ---
 uid: SOL_About
+description: Discover what DataMiner Solutions are all about and get acquainted with the DataMiner Standard Data Model.
 ---
 
 # About DataMiner Solutions

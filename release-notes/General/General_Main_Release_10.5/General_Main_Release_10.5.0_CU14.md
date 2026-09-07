@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU14
 ---
 
-# General Main Release 10.5.0 CU14 - Preview
+# General Main Release 10.5.0 CU14
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > Before you upgrade to this DataMiner version:
@@ -132,6 +132,14 @@ Up to now, the SLA cleaning thread would incorrectly remove history data for an 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 
 Up to now, native MessageBroker clients would not order the IP addresses in *SLCloud.xml* correctly. From now on, local IP addresses will again be put at the top of the list.
+
+#### Failover: Incorrect alarm would be generated at regular intervals when SLNet-managed NATS solution was used [ID 44908]
+
+<!-- MR 10.5.0 [CU14] - FR TBD -->
+
+On a DataMiner System that included a Failover setup that was still using the legacy SLNet-managed NATS solution, up to now, the following alarm would incorrectly be generated at regular intervals after an upgrade or a Failover switch:
+
+`Failover agent <IP> is experiencing sync issues. Check the Failover status.`
 
 #### Alarm severity change within two minutes after an element start or restart would be processed incorrectly [ID 44917]
 

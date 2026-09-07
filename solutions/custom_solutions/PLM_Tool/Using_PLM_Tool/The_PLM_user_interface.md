@@ -1,5 +1,6 @@
 ---
 uid: The_PLM_user_interface
+description: Explore the PLM tool interface, including sidebar views for instances, records, and configuration in the low-code app.
 ---
 
 # The PLM tool user interface

@@ -220,6 +220,43 @@ namespace UserDefinableApiScripts.Examples.RequestMethodAndRoute
 }
 ```
 
+### Using route parameters
+
+From DataMiner 10.6.8/10.7.0 onwards<!-- RN 45681 -->, you can include dynamic segments in a route to capture path values and make them available in your script via `RouteParameters`. This allows a single script to handle requests for different resource identifiers without needing a separate API definition for each.
+
+In the example below, the API is registered with the route `items/{id}`. A request to `items/42` will pass `id = "42"` to the script.
+
+```csharp
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net.Apps.UserDefinableApis.Actions;
+using Skyline.DataMiner.Net.Apps.UserDefinableApis;
+
+namespace UserDefinableApiScripts.Examples.RouteParameters
+{
+    public class Script
+    {
+        [AutomationEntryPoint(AutomationEntryPointType.Types.OnApiTrigger)]
+        public ApiTriggerOutput OnApiTrigger(IEngine engine, ApiTriggerInput requestData)
+        {
+            if (!requestData.RouteParameters.TryGetValue("id", out var id))
+            {
+                return new ApiTriggerOutput
+                {
+                    ResponseBody = "Missing route parameter 'id'.",
+                    ResponseCode = (int)StatusCode.BadRequest,
+                };
+            }
+
+            return new ApiTriggerOutput
+            {
+                ResponseBody = $"Received request for item with ID: {id}",
+                ResponseCode = (int)StatusCode.Ok,
+            };
+        }
+    }
+}
+```
+
 ### Starting long-running actions asynchronously
 
 When you trigger the execution of a long-running action or script, we recommend executing this asynchronously and not blocking the HTTP trigger until the action is completed. The example below shows how you can start an asynchronous subscript in your entry point method.

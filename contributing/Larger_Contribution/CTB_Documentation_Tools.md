@@ -18,7 +18,7 @@ For larger contributions, e.g., to add several new pages, we recommend that you 
 - [Visual Studio Code](https://code.visualstudio.com/) (with the [Learn Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) and [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) extensions).
 
   > [!NOTE]
-  > Microsoft also provides a zero-install Visual Studio Code for the web. When you are working in GitHub online, you can access this by pressing the "." button on your keyboard. This version offers a complete overview of the repository like in the downloadable version of Visual Studio Code, but it does not offer any extensions, e.g., a spell check.
+  > Microsoft also provides a zero-install Visual Studio Code for the web. When you are working in GitHub online, you can access this by pressing the "." button on your keyboard. This version offers a complete overview of the repository like in the downloadable version of Visual Studio Code, but it does not support all extensions, including Code Spell Checker.
 
 - [DocFX](xref:CTB_Local_Test_Build#installing-and-configuring-docfx) (optional): If you are making a larger contribution, we recommend making a test build on your local machine before pushing your changes to the repository, which requires DocFX.
 

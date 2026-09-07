@@ -1,5 +1,6 @@
 ---
 uid: xPON_KPI
+description: Explore the parameters available in the xPON EPM Solution. For each KPI, a value is calculated to generate alarms and make decisions.
 ---
 
 # Available parameters in EPM xPON

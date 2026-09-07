@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_cin_interface
+description: Discover the entire list of CIN Interface parameters available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – CIN Interface

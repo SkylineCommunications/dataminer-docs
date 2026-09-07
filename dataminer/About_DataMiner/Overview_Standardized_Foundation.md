@@ -1,5 +1,6 @@
 ---
 uid: Overview_Standardized_Foundation
+description: See how DataMiner provides a rock-solid, standardized foundation to consolidate data across any domain, vendor, or technology in your operation.
 ---
 
 # Standardized foundation

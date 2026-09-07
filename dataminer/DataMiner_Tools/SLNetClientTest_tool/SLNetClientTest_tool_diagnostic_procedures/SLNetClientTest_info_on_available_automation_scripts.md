@@ -10,7 +10,13 @@ From DataMiner 10.6.2/10.7.0 onwards<!--RN 44209-->, you can retrieve the follow
 
 - Whether or not the script supports a dedicated log file
 
-To do so:
+From DataMiner 10.6.10/10.7.0 onwards<!--RN 46140-->, the following additional information is available:
+
+- *IsInteractive*: Indicates whether the script can show UI elements.
+
+- *CanBeExecuted*: Indicates whether the script can be run on its own. Scripts that only contain reusable libraries and cannot be launched directly return *false*.
+
+To retrieve this information:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 

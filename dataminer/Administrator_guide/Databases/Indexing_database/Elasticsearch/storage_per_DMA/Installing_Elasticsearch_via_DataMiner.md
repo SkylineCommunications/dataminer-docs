@@ -1,5 +1,6 @@
 ---
 uid: Installing_Elasticsearch_via_DataMiner
+description: "Follow these steps to install Elasticsearch via DataMiner if you have a setup with storage per DMA instead of the recommended STaaS setup."
 ---
 
 # Installing Elasticsearch on a DMA via DataMiner

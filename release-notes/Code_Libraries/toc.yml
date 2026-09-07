@@ -1,6 +1,8 @@
 items:
   - name: Skyline.DataMiner.Core
     items:
+    - name: Skyline.DataMiner.Core.DataMinerSystem Range 1.2
+      topicUid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
     - name: Skyline.DataMiner.Core.DataMinerSystem Range 1.1
       topicUid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
     - name: Skyline.DataMiner.Core.DataMinerSystem Range 1.0

@@ -1,5 +1,6 @@
 ---
 uid: Installing_the_Regression_Test_Management_Solution
+description: Deploy the Regression Test Management Solution from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the Regression Test Management Solution

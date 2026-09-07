@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOps_Scheduling_Configurations
+description: Learn how, after assigning capabilities to resources, you can schedule a job using a resource pool with specific capabilities.
 ---
 
 # Scheduling a job using a resource pool with specific capabilities

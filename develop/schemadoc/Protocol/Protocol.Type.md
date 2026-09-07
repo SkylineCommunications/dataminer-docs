@@ -41,6 +41,9 @@ This type specifies that the HTTP protocol is used for communication.
 
 This type of protocol, built like a "Serial" protocol, will allow DataMiner to communicate with elements using OPC (OLE Process Control).
 
+> [!CAUTION]
+> OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector.
+
 ### serial
 
 Used for standard serial protocols (e.g., RS232, RS485, etc.).

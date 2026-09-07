@@ -1,5 +1,6 @@
 ---
 uid: techex-tx-core-howtouse
+description: Explore the different pages and panels of the Techex TX Core app, which allows you to monitor and orchestrate a TX Core platform.
 ---
 
 # Using the Techex TX Core app

@@ -1,5 +1,6 @@
 ---
 uid: Customizing_the_layout_of_notification_messages
+description: "Customize notification message layouts in NotifyTemplates.xml by defining text, HTML, or SMS templates and restarting each DataMiner Agent."
 ---
 
 # Customizing the layout of notification messages

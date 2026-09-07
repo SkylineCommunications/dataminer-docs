@@ -55,4 +55,4 @@ The QAOps system consists of the following components:
 
 To start a test, select the test suite from the specific configuration you want to execute.
 
-QAOps receives the test run and waits for an available server for the selected configuration. Once a server is available, it begins running all test packages of the test suite on that server. Results will appear in the user low-code ap of the QAOps setup.
+QAOps receives the test run and waits for an available server for the selected configuration. Once a server is available, it begins running all test packages of the test suite on that server. Results will appear in the user low-code app of the QAOps setup.

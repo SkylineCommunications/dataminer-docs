@@ -8,7 +8,7 @@ With the trend prediction feature, trend graphs can show how the value of a para
 
 The current point in time is displayed with a vertical dashed line marked as "Now". This line is updated every 2 seconds. The trend prediction starts from the "Now" line.
 
-![Trend prediction](~/dataminer/images/Trend_Prediction.png)<br>*Trend graph in DataMiner 10.4.5*
+![Trend prediction](~/dataminer/images/Trend_Prediction.png)<br>*Trend graph in DataMiner 10.6.6*
 
 The predicted trend is displayed as a line surrounded by **three shaded areas**:
 

@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_maps_deployment
 keywords: I-DOCSIS maps deployment
+description: Deploy the Integrated DOCSIS EPM maps to your DataMiner System using one of two procedures, depending on the number of backend elements.
 ---
 
 # EPM Integrated DOCSIS maps deployment

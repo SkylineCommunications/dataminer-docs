@@ -10,7 +10,7 @@ From DataMiner 10.2.7/10.3.0 onwards, you can filter the contents of a table com
 
 To apply a general filter across the table, a **search box** is available:
 
-1. In edit mode, make sure the [*Show quick filter* setting](xref:DashboardTable#table-layout) is enabled (from DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->).
+1. In edit mode, make sure the [*Show quick filter* setting](xref:DashboardTable#table-layout) is enabled (from DataMiner web 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->).
 
 1. In read mode, click the search icon in the upper-right corner of the component.
 

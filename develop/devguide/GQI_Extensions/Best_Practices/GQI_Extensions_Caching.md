@@ -21,9 +21,11 @@ Avoid caching when:
 
 ## Adding caching
 
-Caching for GQI extensions is not natively supported by the framework and must be implemented manually. The most common approach is to use in-memory caching with static variables (for example a `ConcurrentDictionary`) to share data between queries and operators within the same extension library.
+From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, you should use [GQI services](xref:GQI_Extensions_Services) to keep a reusable state in a worker, security, or user scope. This is preferred over static variables when the cached state has to follow GQI's scope and idle-expiration behavior.
 
-Because each extensions library runs in its own process, this static cache is process-local. It will not be shared across multiple extension libraries or across DataMiner Agents. If you need to share cached data beyond a single process, you must use a different approach, for example file-based caching, DOM-based caching, etc.
+If you cannot use GQI services, you can use in-memory caching with static variables (for example, a `ConcurrentDictionary`) to share data between queries and operators within the same extension library.
+
+Because each extension library runs in its own process, this static cache is process-local. It will not be shared across multiple extension libraries or across DataMiner Agents. If you need to share cached data beyond a single process, you must use a different approach, for example file-based caching, DOM-based caching, etc.
 
 ## Key considerations when caching
 
@@ -49,6 +51,9 @@ Caching in GQI extensions is **not natively supported** by the framework, meanin
 - Framework-provided dependencies like GQIDMS or IGQILogger: These are tied to the lifetime of a specific extension instance and must not be stored in static variables or reused between instances.
 - Any object that holds open connections, handles, or stateful resources provided by the framework.
 
+> [!IMPORTANT]
+> After [OnDestroy](xref:GQI_IGQIOnDestroy) is invoked, `GQIDMS` and `IGQILogger` are disposed of. Any request in progress issued through `GQIDMS` will be canceled.
+
 ### Respect access control
 
 When implementing caching, it is essential to ensure that users only see the data they are allowed to access. The caching strategy you choose must align with your access control requirements to prevent data leaks or exposure of sensitive information.
@@ -57,8 +62,8 @@ For DataMiner data, caching per security group is the most common and efficient 
 
 Benefits of caching per security group:
 
-- enforces access control (no cross-group data leaks).
-- improves performance and reduces memory consumption by sharing results within a group.
+- Enforces access control (no cross-group data leaks).
+- Improves performance and reduces memory consumption by sharing results within a group.
 
 ### Memory consumption
 

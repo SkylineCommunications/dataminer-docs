@@ -1,5 +1,6 @@
 ---
 uid: Asset_Lifecycle
+description: Explore the states an asset can have — Not available, Available, In planning, Build plan ready, Installed, In service, In transit, In repair, Disposed.
 ---
 
 # Asset lifecycle

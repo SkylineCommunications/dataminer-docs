@@ -1,5 +1,6 @@
 ---
 uid: Uninstalling_Elasticsearch_from_a_DMA
+description: "Follow these steps to uninstall Elasticsearch from a DMA if you have a setup with storage per DMA and you have installed Elasticsearch on a DMA via DataMiner."
 ---
 
 # Uninstalling Elasticsearch from a DMA

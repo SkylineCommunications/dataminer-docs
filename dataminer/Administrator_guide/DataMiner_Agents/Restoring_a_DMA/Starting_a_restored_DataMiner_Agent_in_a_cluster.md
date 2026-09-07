@@ -1,5 +1,6 @@
 ---
 uid: Starting_a_restored_DataMiner_Agent_in_a_cluster
+description: "Follow these instructions to start a restored DataMiner Agent in a cluster. Reconnect the server, and add it to the DMS after deleting DMS.xml."
 ---
 
 # Starting a restored DataMiner Agent in a cluster

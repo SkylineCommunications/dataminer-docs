@@ -1,5 +1,6 @@
 ---
 uid: Stack_IDP
+description: Use Infrastructure Discovery & Provisioning to discover resources, manage documents, and automate firmware and configuration workflows.
 ---
 
 # Infrastructure Discovery & Provisioning

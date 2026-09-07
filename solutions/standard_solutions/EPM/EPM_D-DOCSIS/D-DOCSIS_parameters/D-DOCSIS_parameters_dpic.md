@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_dpic
+description: Discover the entire list of DPIC parameters that are available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – DPIC

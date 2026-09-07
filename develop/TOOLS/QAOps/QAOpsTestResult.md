@@ -17,6 +17,9 @@ Each test result must include the following fields:
 
 - **Outcome**: The final test result. Allowed values are case-insensitive: `Ok`, `Fail`, `NotExecuted`, and `NotApplicable`.
 
+> [!TIP]
+> For more information about how to interpret these outcomes when reviewing a test run, see [Step 3: Interpret the outcome](xref:QAOps_Tutorials_User_Tutorials_Basic_How_To_View_Results#step-3-interpret-the-outcome).
+
 ## Optional fields
 
 You can add the following fields to provide more context:

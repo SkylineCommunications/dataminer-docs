@@ -27,7 +27,22 @@ This section describes when this feature will switch between polling interfaces 
 
 When polling for a group goes into timeout, DataMiner will try to poll that group again on the same connection. The wait time for a timeout to be called and the number of retries are based on the configurations in the element settings. After all retries are exhausted, DataMiner will switch to the other interface and poll for the *next* group in the queue.
 
-![Interface switching on 2 SNMP connections](~/develop/images/RedundantPolling_Switch.png)
+```bash
+ -> 13:41:06 - Get for sysDescr () returned VT_BSTR : Test description from Connection 0
+ -> 13:41:16 - Get for sysDescr () returned VT_BSTR : Test description from Connection 0
+ -> 13:41:28 - Get for sysDescr () had error : TIMEOUT
+ -> 13:41:28 - Retrying get for sysDescr ()
+ -> 13:41:30 - Get for sysDescr () had error : TIMEOUT
+ -> 13:41:30 - Retrying get for sysDescr ()
+ -> 13:41:32 - Get for sysDescr () had error : TIMEOUT
+ -> 13:41:32 - Retrying get for sysDescr ()
+ -> 13:41:34 - Get for sysDescr () had error : TIMEOUT
+ -> 13:41:34 - Continuing get for sysDescr ()
+ RedundantPolling, change connection, leaving 0
+ RedundantPolling, change connection, entering 1
+ -> 13:41:36 - Get for sysDescr () returned VT_BSTR : Test description from Connection 1
+ -> 13:41:46 - Get for sysDescr () returned VT_BSTR : Test description from Connection 1
+```
 
 > [!NOTE]
 > During an interface switch, the element will **not** go into timeout. It will only do so when both interfaces are inaccessible and no data has been retrieved for an extended period of time as defined in the element settings.

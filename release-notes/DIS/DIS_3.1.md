@@ -4,6 +4,184 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.25
+
+### New features
+
+#### Automatic update of MinimumRequiredDmWebVersion when importing low-code apps [ID 46014]
+
+When you import a low-code app into a package project, DIS now automatically adds or updates the `MinimumRequiredDmWebVersion` XML element in the `.csproj` file of the package project. The version is updated only if the currently specified version is lower than the version from which the low-code app was imported.
+
+#### DIS Inject now uploads debug files via a .dmapp package [ID 46098]
+
+The DIS Inject functionality has been reworked to simplify remote debugging setup:
+
+- For remote debugging, DLL files are now uploaded to the DataMiner Agent through a .dmapp package, removing the need to configure a shared folder on the remote Agent.
+
+  As a result, the *Publish path* and *Path on DataMiner* settings have been removed from the *Settings > DMA > Debugging* window. Only the *Debugger qualifier* setting remains. The default value of this setting has been updated to reference port 4026, which is the default port for remote debugging with VS2026.
+
+- The inject workflow has changed: when you click the inject icon (green "+" icon), the project is no longer built immediately. Instead, a *Pending (on attach)* status is shown in a new status column. All injected projects are built when you click *Attach*. At that point, DIS compiles the projects, creates a .dmapp package with all resulting DLL files, uploads the package, and sends inject requests to DataMiner.
+
+- You can eject a pending inject without any interaction with the remote Agent.
+
+- The *Attach* operation now shows progress for each step: compiling projects, uploading via .dmapp package, injecting, and attaching to the process.
+
+- The link to open an element in *Element Display* has been removed.
+
+- Before rebuilding a project, DIS now deletes any existing DLL file first, and after the build, it verifies that the build succeeded. If the build fails, a message is shown.
+
+#### Option to force local account login when external authentication is configured [ID 46104]
+
+A new *Force Authenticate Local User* checkbox has been added to the *General* tab of the *New DMA Connection* window (*Settings* > *DMA* > *Add*). This checkbox is available when login is configured to use a username and password.
+
+When the checkbox is selected, DIS will use local user authentication even if external or federated authentication is configured on the DataMiner Agent.
+
+#### Improved error information when the license check fails [ID 46132]
+
+When a failure occurs while signing in via *DIS Settings* > *Account* > *Sign In*, the error message now includes a link to the license troubleshooting section on DataMiner Docs and a contact email address for further assistance.
+
+#### Minimum required DMA version verified on protocol publish [ID 46135]
+
+When you publish a protocol to a DataMiner Agent via the publish button, DIS now first checks whether the Agent meets the minimum required version specified in the `MinimumRequiredVersion` tag in the protocol. If the Agent does not meet the minimum required version, a message box is displayed.
+
+#### Updated NuGet package dependencies
+
+- [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 4.1.0
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation) version 6.2.0
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 6.2.0
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 6.2.0
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 3.5.0
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 3.5.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.9.1
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.9.1
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.9.1
+
+### Fixes
+
+#### Package install script set incorrect package version [ID 46067]
+
+Previously, when an install script was published from a package solution, the version of the resulting package was always set to 1.0.1, regardless of what was configured in the `.csproj` file. This could cause installation failures when the install script included a downgrade check.
+
+Now, DIS will use the version and name as configured in the `.csproj` file when publishing an install script.
+
+## DIS 3.1.24
+
+### New features
+
+#### GetColumn/GetColumns/SetColumns snippets will now use ProtocolExtension methods [ID 45875]
+
+The following C# snippets have been updated. They will now use the extension methods of the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package:
+
+- GetColumn
+- GetColumns
+- SetColumns
+
+#### Updated DIS dependencies
+
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 6.1.0
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 6.1.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.7
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.7
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.7
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.10
+
+### Fixes
+
+#### Menu items have been updated in order to avoid possible deadlocks [ID 45898]
+
+The implementation of the *Copy protocol to clipboard* context menu item and the *Save compiled protocol* menu item has been updated. It will now work similar to the "publish" flow in order to avoid deadlocks.
+
+Also, the implementation of the logic that retrieves the C# projects in the solution has been updated in order to avoid deadlocks.
+
+#### DIS could freeze while instantiating the NuGetHelper [ID 45999]
+
+When opening a Visual Studio solution, in some cases, DIS could freeze while instantiating the NuGetHelper.
+
+From now on, the initialization of the NuGetHelper will partially happen asynchronously.
+
+## DIS 3.1.23
+
+### New features
+
+#### Auto-Update XML Schemas at Visual Studio Startup [ID 45476]
+
+An *XML Schemas* tab has been added to the *DIS settings* window. It contains a *Download XML Schemas on Visual Studio startup* checkbox, which is enabled by default.
+
+- When this checkbox is enabled, DIS will check for a newer version of the [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) NuGet package each time Visual Studio starts. If a newer version is available, DIS will automatically download the updated schemas and install them into Visual Studio (e.g. `C:\Program Files\Microsoft Visual Studio\18\Professional\Xml\Schemas`). The outcome — whether a new version was installed or the current version is already up to date — is reported in the DIS output window.
+
+- If this checkbox is disabled, DIS will install the schemas that are bundled with DIS, as long as it detects that the currently installed schemas differ from the bundled ones.
+
+#### Publishing an automation script in a solution package will now publish the entire package [ID 45695]
+
+When you click the *Publish* button for an automation script that is part of a solution package (i.e., a script of which the `.csproj` file contains a `DataMinerSolutionId`), DIS will now publish the entire solution package rather than only the individual script.
+
+- If the script belongs to a *single* solution package, a confirmation popup will appear, informing you that the entire package will be published.
+- If the script is referenced in *multiple* solution packages, a selection popup will appear, allowing you to select the package to be published.
+
+  The popup will also inform you that the entire package will be published.
+
+This behavior is aligned with how DataMiner handles solution-package scripts. Scripts sharing the same `DataMinerSolutionId` have their NuGet dependencies unified (the highest referenced version is used across all scripts), and run in their own dedicated process in DataMiner.
+
+#### Updated DIS dependencies
+
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 3.4.0
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 3.4.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.6
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.6
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.6
+
+## DIS 3.1.22
+
+### New features
+
+#### IDE
+
+##### Version history editor: Fix tag now supports the new introducedIn attribute [ID 45242]
+
+Within the `MinorVersion` changes, the `Fix` tag now supports the new `introducedIn` attribute.
+
+From now on, this new attribute will be read and will not be removed when changes are applied.
+
+> [!NOTE]
+> Currently, the version history editor does not yet display this attribute.
+
+##### DIS snippets: Info tag removed from Alarm snippet [ID 45482]
+
+The `Info` tag has now been removed from the Alarm snippet.
+
+##### Updated DIS dependencies
+
+- [Skyline.DataMiner.CICD.CSharpAnalysis.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.CSharpAnalysis.Protocol) version 2.1.2
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation) version 6.0.1
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 6.0.1
+- [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) version 2.1.0
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 6.0.1
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 3.3.0
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 3.3.0
+- [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 4.0.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.5
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.5
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.5
+- [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) version 1.1.9
+
+### Fixes
+
+#### IDE
+
+##### Fixed false positive DevPack NuGet info bar [ID 45269]
+
+Up to now, the *DIS* info bar, which verifies whether projects use the *DevPack* NuGet package, could generate a false positive for test projects that do not have "tests" in the project name.
+
+The info bar logic has now been adapted. The info bar will now stop evaluating the project when the `.csproj` file does not contain linking info (which is typically the case for QAction and C# exe blocks), and when it could not determine that the project is a test project.
+
+Also, the logic to determine whether a project is a test project has been extended.
+
+##### Visual Studio IDE could get stuck when a .dmapp package was being created via the dotnet CLI [ID 45000]
+
+Up to now, in some cases, the Visual Studio IDE could get stuck on the *Compile package...* overlay while trying to publish a solution to DataMiner via the *Publish* button.
+
+In the background, DIS spawns a new process that executes the `dotnet build` command with the `DmappCreation` target. On some systems, the `WaitForExit` call could get stuck while waiting for the EOF of the standard output stream, which did not enter. To avoid getting stuck, DIS will now use the `WaitForExit` overload that accepts a timeout that does not wait for the EOF of the redirected output streams.
+
 ## DIS 3.1.21
 
 ### New features

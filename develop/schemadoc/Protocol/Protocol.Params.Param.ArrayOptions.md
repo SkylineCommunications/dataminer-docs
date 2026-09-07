@@ -27,7 +27,7 @@ Defines all table columns.
 |--- |--- |--- |
 |***Sequence***|||
 |&nbsp;&nbsp;[NamingFormat](xref:Protocol.Params.Param.ArrayOptions.NamingFormat)|[0, 1]|Defines the structure of the display key.|
-|&nbsp;&nbsp;&nbsp;&nbsp;[ColumnOption](xref:Protocol.Params.Param.ArrayOptions.ColumnOption)|[1, *]|Defines a table column.|
+|&nbsp;&nbsp;[ColumnOption](xref:Protocol.Params.Param.ArrayOptions.ColumnOption)|[1, *]|Defines a table column.|
 
 ## Constraints
 

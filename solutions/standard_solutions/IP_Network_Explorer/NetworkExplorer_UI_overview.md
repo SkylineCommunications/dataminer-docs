@@ -1,5 +1,6 @@
 ---
 uid: IpNetworkExplorer_UI_overview
+description: Discover the IP Network Explorer UI and quickly understand topology health, port insights, flow tracking, and settings for smarter network operations.
 ---
 
 # IP Network Explorer UI overview

@@ -1,5 +1,6 @@
 ---
 uid: Best_Practices_When_Creating_Catalog_Items
+description: Learn how to optimize Catalog item visibility, documentation, semantic versioning, ownership, naming, and package sizing.
 keywords: catalog, description, solution, tag, metadata, kata, publish, upload, topic
 ---
 
@@ -30,7 +31,9 @@ You can optimize the visibility of your Catalog item by making sure the [**Manif
   - Use [title case](xref:Title_case).
   - Use at most three words per tag.
 
-- Assign an **icon** to your Catalog item to catch the user's attention. You can do this by defining a vendor for your Catalog item with the `vendor_id` field in the [Manifest file](xref:Register_Catalog_Item#manifest-file). If you need assistance with this, please reach out to your technical contact.
+- Assign a vendor **icon** to your Catalog item to catch the user's attention. You can do this by defining a vendor for your Catalog item with the `vendor_id` field in the [Manifest file](xref:Register_Catalog_Item#manifest-file). If you need assistance with this, please reach out to your technical contact.
+
+  You can also add a custom icon by placing an image named `custom-icon` in the `Images` folder. This will overrule the vendor icon, though the vendor name will still be shown in the item's sidebar. PNG (`.png`) is the recommended format. Other supported formats include `.jpg`, `.jpeg`, `.bmp`, `.tif`, `.tiff`, and `.webp`. For the best results, use a square image of 96x96 or 128x128 pixels.
 
 ## Optimize the accessibility of your Catalog item
 
@@ -40,7 +43,11 @@ Help users understand what your Catalog item is, what it does, and what it looks
 
 ### Use semantic versioning
 
-When you release a version of a Catalog item, make sure to **adhere to [semantic versioning](https://semver.org/)** to ensure clarity and predictability for users. Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
+When you release a version of a Catalog item, make sure to **adhere to [semantic versioning](https://semver.org/)** to ensure clarity and predictability for users. Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format.
+
+#### Standard semantic versioning format
+
+Use `A.B.C` without a suffix for a stable release of a Catalog item other than a connector (for connectors, see [Connector versioning format](#connector-versioning-format)). This is the recommended version for users and should be used when the Catalog item meets the quality standards for its intended audience.
 
 - **A (MAJOR)**: Incremented for incompatible changes, breaking changes, or major architectural redesigns that may require user action.
 
@@ -48,17 +55,83 @@ When you release a version of a Catalog item, make sure to **adhere to [semantic
 
 - **C (PATCH)**: Incremented for backward-compatible bug fixes. When a new version range is introduced, the PATCH version (C) should always start at 0, not 1.
 
-**Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
+#### Semantic version suffixes
 
-> [!NOTE]
-> The "CUx" suffix (e.g., 1.2.3-CU2) should only be used exceptionally, in case a critical issue is discovered after a release deployment. In such cases, the released version should be unlisted and a new cumulative update should be released.
+A semantic version suffix is the part after the hyphen in a version, such as `-CU2` in `1.2.3-CU2` or `-rc.1` in `1.2.3-rc.1`. The suffix adds information about the status or purpose of the version while preserving the `A.B.C` version it belongs to. This lets you distinguish exceptional updates and versions intended for testing from stable releases.
+
+For Catalog items, use suffixes according to the following guidelines:
+
+- Each suffix identifier must contain **only ASCII alphanumeric characters and hyphens**. Numeric identifiers must not contain leading zeros.
+
+- Use the `-CUx` suffix for **cumulative updates** (e.g., `1.2.3-CU1`). Making a cumulative update is only relevant in **exceptional** cases, when a critical issue is discovered after a release has been deployed. A cumulative update replaces the affected release. Unlist the affected version and release the cumulative update with the same `A.B.C` version and an incremented CU number.
+
+  > [!TIP]
+  > Also update the version description according to the [best practices for cumulative update version descriptions](#version-descriptions-for-cumulative-updates).
+
+- Use the `-rc.x` suffix for **pre-releases** (e.g., `1.2.0-rc.1`). Other suffixes may also be valid for pre-releases, but for consistency, use the `-rc.x` format. This is typically used when the stable version will be available soon, and you would like to expose the Catalog item already for testing or validation.
+
+#### Choosing the starting version
+
+As part of semantic versioning, choose the starting version based on the maturity of your Catalog item. A `0.x` release is optional. If you use this for early development Catalog item releases, start with `0.1.0`. Typically, the Catalog item is not yet public at this stage. For the first official public release, use `1.0.0`. At that point, the software is expected to meet our quality standards.
+
+Versions in the `0.x.y` range indicate that the Catalog item is not yet considered stable. Breaking changes may still occur. When you use this range, increment the components as follows:
+
+- **x (MINOR)**: Incremented for new features or breaking changes.
+- **y (PATCH)**: Incremented for patches and bug fixes.
+
+#### Connector versioning format
+
+**Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
 
 ### Use clear version descriptions
 
-When you add a new version of a Catalog item, in the version description, clearly state what has changed and if there are bug fixes or new features. Use the following phrases as appropriate: "Change:", "Fix:", "New Feature:". Each phrase can be used multiple times.
+When you add a new version of a Catalog item, in the version description, clearly state what has changed and if there are bug fixes or new features. Use Markdown formatting and organize the description using the following sections as headers:
+
+- **Prerequisites**
+- **New Features**
+- **Changes**
+- **Breaking Changes**
+- **Enhancements**
+- **Fixes**
+
+Keep the version description concise by documenting the most impactful updates, such as roadmap features, critical bug fixes, or breaking changes. If a section has no entries, leave it out entirely.
 
 > [!NOTE]
-> For standard solutions, the version description should contain a link to the release notes (e.g., [MediaOps release notes](xref:MediaOps_RNs_index)).
+> DataMiner version and DataMiner Web version prerequisites are added as structured fields to the Catalog item version, so you do not need to repeat them in the version description. These fields are configured as [project properties](xref:skyline_dataminer_sdk_project_properties) in your .csproj file (e.g., `MinimumRequiredDmVersion`).
+
+#### Version descriptions for standard solutions
+
+For standard solutions, start the version description with a link to the release notes. Although the release notes link provides the full picture, it is still useful to list the most impactful updates in the version description as well. Keep it concise.
+
+> [!NOTE]
+> Ideally, use an AKA link (e.g., `https://aka.dataminer.services/...`) so that the target can be updated if the documentation is ever restructured.
+
+#### Version descriptions for cumulative updates
+
+Cumulative updates replace a prior release because of an exceptional impactful issue (see [Use semantic versioning](#use-semantic-versioning)). Because the replaced version will be hidden from the default UI, a cumulative update version description should still contain the full description. In addition, a **Cumulative Updates** section is required at the top to explain each cumulative update.
+
+#### Example
+
+The following example shows a version description that includes cumulative updates, new features, and fixes:
+
+```markdown
+## Cumulative Updates
+
+- **CU2**: There was a severe memory leak.
+- **CU1**: Resolved internal reference issues affecting solution deployment.
+
+## A.B.C
+
+### New Features
+
+- A new roadmap feature was added.
+- A second roadmap feature was added.
+
+### Fixes
+
+- DateTime no longer drifts by UTC offset.
+- Query Filters: no error when closing while loading.
+```
 
 ### Make sure ranges are tagged correctly
 

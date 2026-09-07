@@ -1,5 +1,6 @@
 ---
 uid: Exporting_and_importing_packages_on_a_DMA
+description: "Learn how to export and import DataMiner elements, services, views, redundancy groups, etc. using .dmimport packages."
 ---
 
 # Exporting and importing packages on a DMA

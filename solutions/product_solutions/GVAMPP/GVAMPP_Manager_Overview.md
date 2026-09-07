@@ -1,5 +1,6 @@
 ---
 uid: GVAMPP_Manager_Overview
+description: Explore the Grass Valley Agile Media Processing Platform Manager application, which allows you to monitor and control workloads and snapshots.
 ---
 
 # Grass Valley AMPP Manager application

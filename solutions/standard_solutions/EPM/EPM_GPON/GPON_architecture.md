@@ -1,5 +1,6 @@
 ---
 uid: xPON_architecture
+description: Explore the architecture of the EPM xPON Solution, which extracts information from devices and third-party systems to calculate the overall network status.
 ---
 
 # EPM xPON architecture

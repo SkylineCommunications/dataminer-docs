@@ -1,6 +1,7 @@
 ---
 uid: Advanced_Admin_Tutorials
 keywords: swarming tutorials
+description: Discover all advanced admin tutorials. For example, learn how to enable Swarming in your DMS and swarm your first element.
 ---
 
 # Advanced admin tutorials

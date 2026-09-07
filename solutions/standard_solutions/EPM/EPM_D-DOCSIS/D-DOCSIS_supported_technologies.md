@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_supported_technologies
+description: Discover the supported D-DOCSIS technologies and the DataMiner connectors available for each platform.
 ---
 
 # Supported technologies for D-DOCSIS

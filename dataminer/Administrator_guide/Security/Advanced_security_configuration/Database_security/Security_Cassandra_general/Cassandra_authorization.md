@@ -1,5 +1,6 @@
 ---
 uid: Cassandra_authorization
+description: "Enable Cassandra authorization with least-privilege permissions and configure the CassandraAuthorizer to secure DataMiner database access."
 ---
 
 # Cassandra authorization

@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOps_Resource_Studio_Intro
+description: Learn how to create resource pools and resources, and how to assign the resources to the pools using the Resource Studio app.
 ---
 
 # Configuring resources and resource pools

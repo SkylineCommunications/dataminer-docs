@@ -70,7 +70,33 @@ Finally, a timer is defined which has the defined group as its content. This tim
 
 In conclusion, periodically polling an SNMP parameter can be implemented using the following protocol building blocks:
 
-![Retrieving a variable via SNMP](~/develop/images/Connection_Types_-_SNMP_Parameter_Get_Building_Blocks.jpg)
+```mermaid
+flowchart LR
+    subgraph timerBox["Timer 1"]
+
+        G1["Group 1"]
+    end
+    subgraph groupBox["Group 1"]
+
+        S1["Param 1"]
+    end
+    subgraph paramBox["Param 1"]
+    end
+
+    G1 --> groupBox
+    S1 --> paramBox
+
+    classDef infoText fill:none,stroke:none,color:#FFFFFF
+    classDef infoTextBlack fill:none,stroke:none,color:#000000
+    class groupDesc,sessionDesc infoText
+    class timerDesc infoTextBlack
+
+    style timerBox fill:#EFF6FF,stroke:#DBEAFE,color:#000000
+    style groupBox fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style paramBox fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+    style G1 fill:#2563EB,stroke:#1E40AF,color:#FFFFFF
+    style S1 fill:#1E3A8A,stroke:#172554,color:#FFFFFF
+```
 
 The following illustration shows what happens when an SNMP GET request is issued by a protocol.
 
