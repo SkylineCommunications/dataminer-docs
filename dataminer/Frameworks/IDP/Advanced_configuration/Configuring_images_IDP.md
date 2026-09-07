@@ -2,11 +2,11 @@
 uid: Configuring_images_IDP
 ---
 
-# Configuring the images shown for IDP
+# Configuring the images shown in the Facilities section
 
 ## Configuring the image for an element in the rack view
 
-### About the rack view image
+### About the equipment image in the rack view
 
 When you select a rack in the table on the *Facilities* page and click *Show in rack*, this will open the rack view in a new card.
 
@@ -14,13 +14,29 @@ The image shown for an element in this rack view is configured using the custom 
 
 The rack view Visio drawing will load the front panel image via a small built-in web page hosted on the DMA, at `http://<DMAIP>/RLM/index.html?img=<value of Device Path Picture>`. This page takes whatever value is passed in the `img` query parameter and loads it directly as an image URL in the browser. There is no server-side validation or path resolution. This means the value of *Device Path Picture* must resolve to a valid, browser-reachable image URL from the DMA serving the request.
 
-### Setting the rack view image
+### Setting the equipment image
+
+If **all elements of the same CI Type use the same image**, configure the property on the CI Type so that it is set automatically when the elements are provisioned:
+
+1. Upload the image file to the folder `C:\Skyline DataMiner\Documents\Generic Rack Layout Manager\Images` on the DMA.
+
+1. In the IDP app, go to *Admin* > *CI Types* > *Overview*, select the relevant CI Type, and click *Edit*.
+
+1. Click *Configure* next to *Provisioning*, and then click *Properties*.
+
+1. In the *Configure Facility Details* section, set the *Device Path Picture* property to the image's path relative to the DMA's web root, for example: `/Documents/Generic Rack Layout Manager/Images/CiscoSwitch!a.png`
+
+1. Save the CI Type configuration and provision the elements.
+
+   The image should now be shown as the front panel for each provisioned element of that CI Type.
+
+For an **existing element**, or when an element requires a **different image**, you can set the property directly on the element:
 
 1. Upload the image file to the folder `C:\Skyline DataMiner\Documents\Generic Rack Layout Manager\Images` on the DMA.
 
 1. Right-click the relevant element in Cube, and select *Properties* > *Custom*.
 
-1. Set the *Device Path Picture* property to the image's path relative to the DMA's web root, for example: `/Documents/Generic Rack Layout Manager/Images/CiscoSwitch!a.png`
+1. Set the *Device Path Picture* property to the image's path relative to the DMA's web root.
 
    ![DataMiner properties window showing the "Device Path Picture" property filled in as indicated in the example](~/dataminer/images/IDP_Device_Path_Image.png)
 
@@ -52,7 +68,7 @@ Within the IDP app, under *Admin* > *Facilities* > *Locations* you can configure
 
 1. In the pop-up window, under the *Plan Path* or *Picture Path* field, click *Select File* to upload your image file to the DMA.
 
-   Alternatively, if the image has already been uploaded to the folder `C:\Skyline DataMiner\Documents\Generic Rack Layout Manager\Images`, you can specify the image's path relative to the DMA's web root, similar to when you [set the image for a rack view](#setting-the-rack-view-image).
+   Alternatively, if the image has already been uploaded to the folder `C:\Skyline DataMiner\Documents\Generic Rack Layout Manager\Images`, you can specify the image's path relative to the DMA's web root, similar to when you [set the equipment image for the rack view](#setting-the-equipment-image).
 
    For example:
 
@@ -63,7 +79,7 @@ Within the IDP app, under *Admin* > *Facilities* > *Locations* you can configure
 
 ## Setting a Visio page as an element's front panel
 
-In addition to the static image set via the [Device Path Picture property](#setting-the-rack-view-image), an element can also have a dedicated Visio page shown as its front panel. Once configured, this same page is used in two places:
+In addition to the static image set via the [Device Path Picture property](#setting-the-equipment-image), an element can also have a dedicated Visio page shown as its front panel. Once configured, this same page is used in two places:
 
 - In the rack view, as the element's representation within its assigned rack slot.
 - When the front panel is selected for the element, within the rack view.
