@@ -15,13 +15,16 @@ uid: DocumentHub_1.1.2
 
 ## New features
 
-### DownloadFile Automation & Agent Support [ID 46386]
+### Support for downloading files via temporary folder workflow [ID 46386]
 
-Implemented a new DocumentHub Agent capability to **download files via a temporary folder workflow**, enabling safer and more reliable file retrieval while aligning with the existing UDAPI and capability-based architecture. This feature extends the agent’s file-operation support and lays the foundation for consistent download handling in the 1.1.x revision line.
+The DocumentHub agent now supports downloading files via a temporary folder workflow, enabling safer and more reliable file retrieval while aligning with the existing UDAPI and capability-based architecture. This feature extends the agent’s file operation support and lays the foundation for consistent download handling in the 1.1.x revision line.
 
-- Added **DownloadFile automation script** support.
-- Added **DocumentHub-Agent support** for download-related flows.
+For this purpose, a new *DownloadFile* automation script has also been introduced.
 
-## Improvements
+## Changes
 
-- Improved integration between DocumentHub backend operations and agent-driven usage.
+### Enhancements
+
+#### Improved integration between agent and backend operations [ID 46386]
+
+The integration between DocumentHub backend operations and agent-driven usage has been improved.
