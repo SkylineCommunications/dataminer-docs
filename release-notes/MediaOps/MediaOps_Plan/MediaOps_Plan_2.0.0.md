@@ -53,6 +53,14 @@ Job types are defined using the Categories app. From MediaOps 2.0.0 onwards, a n
 
 The icon defined for a job type in the Categories app will be used in the Scheduling app as a filter for the timeline view. Hovering over the icon will show the name of the job type. If no icon is defined for a job type, the default filter icon will be shown.
 
+#### Workflow Designer: Job type can now be defined for workflows [ID 46347]
+
+When you create, edit, or duplicate a workflow, you can now select a *Job Type* for that workflow.
+
+Every job created from the workflow is automatically assigned this job type, so you no longer need to select it manually for each job. If you explicitly select a job type when creating a job, that selection takes precedence over the job type defined for the workflow.
+
+The *Job Type* dropdown is only displayed when job types are available in the Categories app. If you select *- Not defined -*, the workflow does not define a job type, and jobs created from it keep their default job type.
+
 ## Changes
 
 ### Enhancements
@@ -201,6 +209,38 @@ Workflow selection remains available when you create a job from the *Job Overvie
 The synchronization script in Resource Studio has been extended so you can now choose exactly which resources or resource pools to synchronize again. Previously, synchronization retries were all-or-nothing.
 
 In addition, the DevPack (NuGet) has been extended with synchronization methods on `IResourcePoolRepository`.
+
+#### Scheduling: Property enhancements [ID 46357]
+
+Several enhancements have been made to property management in the Scheduling app.
+
+When defining properties:
+
+- If an uploaded file exceeds the maximum document size configured on the DataMiner Agent, a clear message is now displayed instead of a raw SLNet exception. This also applies when the size limit configured for the property is higher than the Agent's limit.
+- Validation errors returned by the server are now displayed next to the property that caused them. If a widget cannot display a message inline, the property name is included in the dialog message.
+- If saving fails, the dialog now remains open so you can correct the problem without losing your input.
+- Error markers are now cleared before each save attempt, so properties that have been corrected are no longer marked as invalid.
+
+When assigning properties:
+
+- The property type can no longer be changed after a property has been created, as this would orphan its stored values. The *Type* dropdown remains available when you add a property but is disabled when you edit an existing property.
+- You can no longer delete a property that is still in use. This applies both when you delete a single property and when you remove an entire section.
+- Invalid property configurations, such as duplicate or invalid names, invalid section names, invalid string or file size limits, and missing or duplicate discrete values, now result in clear validation messages instead of script failures.
+- A file property with the default size limit now follows the maximum document size configured on the DataMiner Agent instead of storing the limit that applied when the property was created.
+
+#### Installer: Upgrades from versions older than 1.6.0 now blocked [ID 46369]
+
+Previously, MediaOps Plan could be upgraded to version 2.0.0 directly from any older version. Because several migration actions are only executed by the 1.6.x installers, this could leave existing data without the required migrations.
+
+MediaOps Plan now verifies the installed version before continuing an upgrade. If a version older than 1.6.0 is detected, the installation is stopped with a message asking you to first upgrade to a 1.6.x version and then install version 2.0.0. This ensures that all migration actions are executed.
+
+#### Automation scripts now run in separate process [ID 46385]
+
+Automation scripts that are part of MediaOps Plan now run in their own process. This reduces the risk of code libraries from other solutions installed on the DataMiner Agent being loaded into SLAutomation.
+
+#### Resource Studio: Improved error when deleting an in-use capability [ID 46388]
+
+When you attempt to delete a capability that is still in use, the error message now identifies up to the first 10 affected resources instead of displaying resource pool details.
 
 ### Fixes
 
