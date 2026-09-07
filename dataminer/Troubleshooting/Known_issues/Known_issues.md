@@ -8,6 +8,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards | | September 7, 2026 |
 | [Swarmed scheduled task executes incorrect action after editing](xref:KI_Swarmed_scheduled_task_executes_incorrect_action) | Feature Release versions from DataMiner 10.6.3 onwards | | September 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
 | [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
@@ -40,6 +41,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards | | September 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
 | [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
