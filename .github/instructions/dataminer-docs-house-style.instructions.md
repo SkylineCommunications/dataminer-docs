@@ -9,8 +9,8 @@ When creating or editing documentation pages, apply the following rules.
 
 ## General
 
-- Use US English.
 - Follow Markdown conventions from `/contributing/CTB_Markdown_Syntax.md`.
+- Follow the house style from `/contributing/CTB_Docs_house_style.md`, except if this conflicts with the guidelines provided in this instructions file.
 - Use sentence case in headers.
 - Use a formal but simple technical style that helps users find information quickly.
 - Address the reader directly with `you` and avoid third-person references to the user.
@@ -29,6 +29,7 @@ When creating or editing documentation pages, apply the following rules.
 - Put any additional information about a step in a separate, indented paragraph below that step.
 - Put the result of a step in an indented paragraph below that step, and use future tense (e.g., "A new window will open" instead of "A new window opens").
 - If a step contains an image, indent it correctly so list numbering does not restart.
+- For complex procedures that include indented lines, place a blank line between each paragraph or list item. This prevents possible spacing issues.
 
 ## Alert blocks
 
@@ -45,15 +46,9 @@ When creating or editing documentation pages, apply the following rules.
 - Use descriptive alt text for images.
 - Ensure each page has a `description` value in its metadata/front matter, and ensure it is between 100 and 155 characters.
 - Always make sure the text is structured logically, with meaningful headers that clearly indicate what each subsection is about.
-- Make content as future-proof as possible, for instance by adding DataMiner version info where relevant, or by rephrasing text about new features to make sure it doesn't become outdated almost immediately.
-- Give preference to a bulleted list or regular text over a table when either would be equally clear, since tables can be harder to interpret correctly.
-- Only use a table when it is clearly the most user-friendly option for the content.
 
 ## Punctuation
 
 - Use single quotation marks in headers.
 - Use single quotation marks to indicate quoted material within a quotation (i.e., a nested quote); otherwise, use double quotation marks.
-- Use `e.g.,` instead of `e.g.`.
-- Use `i.e.,` instead of `i.e.`.
 - Avoid em dashes.
-- When referring to a menu option in the UI that contains an ellipsis (`...`) at the end, leave out the ellipsis.
