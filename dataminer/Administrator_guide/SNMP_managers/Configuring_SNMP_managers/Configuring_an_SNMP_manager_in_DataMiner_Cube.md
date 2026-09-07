@@ -120,7 +120,9 @@ description: "Learn how to configure an SNMP manager in DataMiner Cube by settin
 
      - **Send in chronological order**: Select this option to have inform messages sent in chronological order. In that case, each time an inform message is sent to a particular SNMP manager, the latter will have to reply with ACK before the next inform message is sent.
 
-1. Click *Next* to go the *filter* tab, and specify any alarm filters if necessary. These alarm filters will limit the alarms for which SNMP notifications will be forwarded to the SNMP manager you are configuring.
+1. Click *Next* to go the *filter* tab, and specify one or more [alarm filters](xref:Alarm_filters).
+
+   These alarm filters determine for which alarms SNMP notifications will be forwarded to the SNMP manager you are configuring. If no filters are specified, nothing will be forwarded.
 
    - To add one or more existing filters from the DMS:
 
@@ -154,9 +156,6 @@ description: "Learn how to configure an SNMP manager in DataMiner Cube by settin
 
    > [!NOTE]
    > To check whether a filter has been configured correctly, it can be useful to also create a new alarm tab in the Alarm Console using the same filter. This way you can check if it indeed filters out the correct alarms. See [Manually applying an alarm filter in an Alarm Console tab](xref:ManuallyApplyingAnAlarmFilter).
-
-   > [!TIP]
-   > See also: [Alarm filters](xref:Alarm_filters)
 
 1. Click *Next* to go the *alarm storm* tab, and specify the necessary options for alarm storm prevention:
 
