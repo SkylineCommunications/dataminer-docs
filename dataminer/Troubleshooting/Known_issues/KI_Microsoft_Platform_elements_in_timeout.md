@@ -16,7 +16,7 @@ WMI actions configured as `<Action><Type>wmi</Type></Action>` in *Protocol.xml* 
 
 ## Fix
 
-No fix is available yet.<!-- task 306829 -->
+No fix is available yet.<!-- RN 46396 -->
 
 ## Workaround
 
