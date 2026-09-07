@@ -1,5 +1,6 @@
 ---
 uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
+description: "Learn how to configure an SNMP manager in DataMiner Cube by setting the IP address, community string, and SNMP version."
 ---
 
 # Configuring an SNMP manager in DataMiner Cube
