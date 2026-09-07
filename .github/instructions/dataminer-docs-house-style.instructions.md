@@ -15,7 +15,7 @@ When creating or editing documentation pages, apply the following rules.
 - Use a formal but simple technical style that helps users find information quickly.
 - Address the reader directly with `you` and avoid third-person references to the user.
 - For cross-references to pages within this repository, use DocFX `xref` links instead of hard links to local Markdown files.
-- Only use backticks for references to code, file paths, or user input, not for emphasis.
+- Only use backticks for references to code, file paths, or user input, not for emphasis. File names (without file path) can also be written in italics.
 - Format direct UI references in italics, using bold only for intentional emphasis, such as an introductory UI label followed by a colon.
 - Use plain text in headers, avoiding italics, bold, or other formatting.
 - When referring to changes introduced by a specific release note, make sure both the Main Release version and Feature Release version introducing the changes are mentioned on the page.
