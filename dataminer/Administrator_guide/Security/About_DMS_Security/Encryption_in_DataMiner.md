@@ -28,7 +28,7 @@ The only exception to this is dataminer.services users (see [Types of users](xre
 DataMiner encrypts the following secrets:
 
 - Password parameters
-- [Credential libraries](xref:Credentials_Library)
+- Credentials from the [Credentials Library](xref:Credentials_Library)
 - Database passwords
 - Element passwords
 - Replication passwords
