@@ -1,4 +1,4 @@
-﻿---
+---
 uid: Script_variables
 ---
 
@@ -87,7 +87,7 @@ These files can be managed in DataMiner Cube, in the *memory files* tab of the A
    - *Token*: Credentials consisting of a token only
 
    > [!NOTE]
-   > In the script XML, these types are stored as `UserNamePassword` and `Token`. See [Credential](xref:DMSScript.Credentials.Credential).
+   > In the script XML, these types are stored as `UserNameAndPassword` and `Token`. See [Credential](xref:DMSScript.Credentials.Credential).
 
 1. Select a set of credentials from the dropdown list.
 

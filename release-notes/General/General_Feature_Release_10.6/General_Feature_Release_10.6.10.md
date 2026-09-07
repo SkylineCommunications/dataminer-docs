@@ -89,12 +89,12 @@ See the following example:
 | Credential | id | ID of the credential (integer, unique per script) |
 | Name | - | Name of the credential (string, unique per script) |
 | CredentialId | - | GUID of the linked credential from the Credentials Library |
-| Type | - | Type of credential: `UserNamePassword` or `Token` |
+| Type | - | Type of credential: `UserNameAndPassword` or `Token` |
 
 > [!NOTE]
 >
 > - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
-> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNamePassword` and `Token` credentials stored in the Credentials Library.
+> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNameAndPassword` and `Token` credentials stored in the Credentials Library.
 
 #### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
 
