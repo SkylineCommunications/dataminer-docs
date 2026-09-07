@@ -2,7 +2,10 @@
 uid: DocumentHub_1.1.2
 ---
 
-# DocumentHub 1.1.2
+# DocumentHub 1.1.2 - Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
 
 ## Prerequisites
 
