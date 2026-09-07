@@ -40,6 +40,6 @@ Before you upgrade to this DataMiner version:
 
 #### Stopping an element with a logger table could cause SLProtocol to stop unexpectedly [ID 46299]
 
-<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+<!-- MR 10.5.0 [CU20]/10.6.0 [CU8] - FR 10.6.11 -->
 
 Up to now, in some rare cases, stopping an element with a logger table could cause the SLProtocol process hosting the element to stop unexpectedly.
