@@ -53,6 +53,16 @@ Up to now, DIS Inject could not trigger QAction execution through parameters tha
 
 From now on, DIS Inject will be able to trigger QActions through those parameters as well. Parameters that are known in SLNet will still be validated against the parameter security level.
 
+#### Failover: SLASPConnection could fail to initialize after a Failover switch [ID 46350]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+After a Failover switch, SLASPConnection could fail to initialize correctly when the DataMiner Agent came back online. This could cause the following issues:
+
+- The legacy Reporter could be unavailable when the `LegacyReportsAndDashboards` soft-launch option was enabled.
+- Incoming notifications could remain in memory without being processed, causing a memory leak.
+- The reporter page in DataMiner Cube and the distribution, alarm count, and timeline components in the Dashboards app could show outdated information.
+
 #### STaaS: Ordering DOM entries by optional fields could throw a CRUD exception [ID 46377]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
