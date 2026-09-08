@@ -24,7 +24,7 @@ In the script XML, this results in a [Credentials](xref:DMSScript.Credentials) e
     <Credential id="2">
         <Name>MyLogin</Name>
         <CredentialId>3f2a9c41-7b6e-4d19-9a0c-1e5d84b2c7f3</CredentialId>
-        <Type>UserNamePassword</Type>
+        <Type>UserNameAndPassword</Type>
     </Credential>
 </Credentials>
 ```
