@@ -293,3 +293,11 @@ This fixes the issue for paged DOM reads with a configured limit, ensuring the r
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 Up to now, the spectrum preset update event on parameter `SPA_SPARAM_PRESET_UPDATE` (PID 64216) could fail when the preset name contained a dot (`.`).
+
+#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
+
+<!-- MR 10.7.0 - FR 10.6.10 [CU0] -->
+
+When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
+
+From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.

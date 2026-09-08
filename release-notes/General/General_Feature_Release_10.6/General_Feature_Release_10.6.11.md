@@ -52,6 +52,14 @@ Before you upgrade to this DataMiner version:
 
 The Jobs module has been end-of-life since DataMiner 10.5.0. All server-side code related to this module has now been removed from the code base.
 
+#### Swarming: Alarm ID usage analysis can now be skipped when enabling swarming [ID 46340]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When enabling swarming using an `EnableSwarmingRequest`, you can now skip the analysis of alarm ID usage by setting `AnalyzeAlarmIDUsage` to `false`, similar to a `SwarmingPrerequisitesCheckRequest`.
+
+By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
+
 ### Fixes
 
 #### Existing behavioral change points could no longer be retrieved after a DataMiner Agent restart [ID 46271]
@@ -69,3 +77,35 @@ Change points are now also distinguished by creation time. As a result, previous
 <!-- MR 10.5.0 [CU20]/10.6.0 [CU8] - FR 10.6.11 -->
 
 Up to now, in some rare cases, stopping an element with a logger table could cause the SLProtocol process hosting the element to stop unexpectedly.
+
+#### DIS: DIS Inject could not trigger QAction execution on parameters unknown to SLNet [ID 46304]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, DIS Inject could not trigger QAction execution through parameters that are only known in SLProtocol and not in SLNet, such as dummy parameters.
+
+From now on, DIS Inject will be able to trigger QActions through those parameters as well. Parameters that are known in SLNet will still be validated against the parameter security level.
+
+#### Automation scripts from app packages could leave stale database entries when removed on systems using STaaS [ID 46308]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+On systems using STaaS, up to now, after an app package was installed, removing included automation scripts could fail to remove the corresponding AppPackageContent database entries.
+
+This issue was caused by a case-sensitive mismatch in the script-type filter (`automationscript` instead of `AutomationScript`). From now on, the filter is case-insensitive, so stale automation script entries are removed correctly.
+
+#### Failover: SLASPConnection could fail to initialize after a Failover switch [ID 46350]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+After a Failover switch, SLASPConnection could fail to initialize correctly when the DataMiner Agent came back online. This could cause the following issues:
+
+- The legacy Reporter could be unavailable when the `LegacyReportsAndDashboards` soft-launch option was enabled.
+- Incoming notifications could remain in memory without being processed, causing a memory leak.
+- The reporter page in DataMiner Cube and the distribution, alarm count, and timeline components in the Dashboards app could show outdated information.
+
+#### STaaS: Ordering DOM entries by optional fields could throw a CRUD exception [ID 46377]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+On systems using STaaS, up to now, ordering DOM entries by an optional field could throw a CRUD exception when one or more entries did not contain that field.

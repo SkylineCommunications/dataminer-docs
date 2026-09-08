@@ -44,3 +44,27 @@ Each time the `NATSMigration` tool is run, it will perform the following prerequ
 <!-- MR 10.5.0 [CU20]/10.6.0 [CU8] - FR 10.6.11 -->
 
 Up to now, in some rare cases, stopping an element with a logger table could cause the SLProtocol process hosting the element to stop unexpectedly.
+
+#### DIS: DIS Inject could not trigger QAction execution on parameters unknown to SLNet [ID 46304]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, DIS Inject could not trigger QAction execution through parameters that are only known in SLProtocol and not in SLNet, such as dummy parameters.
+
+From now on, DIS Inject will be able to trigger QActions through those parameters as well. Parameters that are known in SLNet will still be validated against the parameter security level.
+
+#### Failover: SLASPConnection could fail to initialize after a Failover switch [ID 46350]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+After a Failover switch, SLASPConnection could fail to initialize correctly when the DataMiner Agent came back online. This could cause the following issues:
+
+- The legacy Reporter could be unavailable when the `LegacyReportsAndDashboards` soft-launch option was enabled.
+- Incoming notifications could remain in memory without being processed, causing a memory leak.
+- The reporter page in DataMiner Cube and the distribution, alarm count, and timeline components in the Dashboards app could show outdated information.
+
+#### STaaS: Ordering DOM entries by optional fields could throw a CRUD exception [ID 46377]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+On systems using STaaS, up to now, ordering DOM entries by an optional field could throw a CRUD exception when one or more entries did not contain that field.

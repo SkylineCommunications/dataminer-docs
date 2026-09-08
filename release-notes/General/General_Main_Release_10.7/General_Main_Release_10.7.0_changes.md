@@ -185,19 +185,6 @@ The response to a `GetRADParameterGroupInfoMessage` will now also include the ID
 
 A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
 
-#### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
-
-<!-- MR 10.7.0 - FR 10.6.2 -->
-
-In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
-
-From now on, the DataMiner Assistant DxM will be included in the DataMiner web upgrade packages instead.
-
-See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]](xref:Web_apps_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-dxm-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
-
-> [!NOTE]
-> The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
-
 #### Automation: Entrypoint ID added to the 'Finished executing script' log entry [ID 44382]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -738,6 +725,14 @@ On `ApiToken` objects, you can now enable notice generation when a token reaches
 
 When enabled, one notice can be generated per token when its rate limit is reached. Notices are not cleared automatically. If you clear a notice manually and the token hits its rate limit again, a new notice can be generated.
 
+#### Swarming: Alarm ID usage analysis can now be skipped when enabling swarming [ID 46340]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When enabling swarming using an `EnableSwarmingRequest`, you can now skip the analysis of alarm ID usage by setting `AnalyzeAlarmIDUsage` to `false`, similar to a `SwarmingPrerequisitesCheckRequest`.
+
+By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
@@ -864,3 +859,11 @@ In some cases, after SLAnalytics had restarted, an existing change point on a pa
 This was caused by an internal ID collision. Change point IDs restart from zero after a restart, and the retrieval logic could incorrectly treat a new change point with a reused ID as a duplicate.
 
 Change points are now also distinguished by creation time. As a result, previously detected change points remain retrievable after a restart.
+
+#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
+
+<!-- MR 10.7.0 - FR 10.6.10 [CU0] -->
+
+When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
+
+From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
