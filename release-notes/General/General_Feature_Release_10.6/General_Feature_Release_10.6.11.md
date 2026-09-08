@@ -77,3 +77,11 @@ Up to now, in some rare cases, stopping an element with a logger table could cau
 Up to now, DIS Inject could not trigger QAction execution through parameters that are only known in SLProtocol and not in SLNet, such as dummy parameters.
 
 From now on, DIS Inject will be able to trigger QActions through those parameters as well. Parameters that are known in SLNet will still be validated against the parameter security level.
+
+#### Automation scripts from app packages could leave stale database entries when removed on systems using STaaS [ID 46308]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+On systems using STaaS, up to now, after an app package was installed, removing included automation scripts could fail to remove the corresponding AppPackageContent database entries.
+
+This issue was caused by a case-sensitive mismatch in the script-type filter (`automationscript` instead of `AutomationScript`). From now on, the filter is case-insensitive, so stale automation script entries are removed correctly.
