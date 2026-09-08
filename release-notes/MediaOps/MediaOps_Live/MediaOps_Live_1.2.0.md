@@ -8,6 +8,9 @@ description: Highlights of the features, enhancements, and fixes included in the
 > [!IMPORTANT]
 > We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
 
+> [!TIP]
+> Installing [MediaOps Plan](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) alongside MediaOps Live allows you to schedule orchestration events. MediaOps Live requires MediaOps Plan 1.5.0 or higher.
+
 ## Enhancements
 
 ### DevPack: Asynchronous orchestration event execution [ID 46394]
