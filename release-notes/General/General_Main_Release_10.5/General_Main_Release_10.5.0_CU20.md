@@ -44,3 +44,11 @@ Each time the `NATSMigration` tool is run, it will perform the following prerequ
 <!-- MR 10.5.0 [CU20]/10.6.0 [CU8] - FR 10.6.11 -->
 
 Up to now, in some rare cases, stopping an element with a logger table could cause the SLProtocol process hosting the element to stop unexpectedly.
+
+#### DIS: DIS Inject could not trigger QAction execution on parameters unknown to SLNet [ID 46304]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, DIS Inject could not trigger QAction execution through parameters that are only known in SLProtocol and not in SLNet, such as dummy parameters.
+
+From now on, DIS Inject will be able to trigger QActions through those parameters as well. Parameters that are known in SLNet will still be validated against the parameter security level.
