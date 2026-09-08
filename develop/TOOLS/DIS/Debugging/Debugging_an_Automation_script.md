@@ -30,7 +30,7 @@ When you have finished configuring all necessary settings, you can start debuggi
 
 1. Click the *Attach* button to build all Exe block projects and attach the Microsoft Visual Studio Debugger to the DataMiner SLAutomation process.
 
-1. In the *DIS Inject* window, click Execute to manually trigger the automation script.
+1. In the *DIS Inject* window, click *Execute* to manually trigger the automation script.
 
 ## [Debugging an automation script XML file](#tab/automation-2)
 
@@ -60,7 +60,7 @@ When you have finished configuring all necessary settings, you can start debuggi
 
 1. Click the *Attach* button to build all temporary Exe block projects and attach the Microsoft Visual Studio Debugger to the DataMiner SLAutomation process.
 
-1. In the *DIS Inject* window, click Execute to manually trigger the automation script.
+1. In the *DIS Inject* window, click *Execute* to manually trigger the automation script.
 
 ***
 

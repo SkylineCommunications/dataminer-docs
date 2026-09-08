@@ -26,7 +26,9 @@ When you have finished configuring all necessary settings, you can start debuggi
 
     1. Click the green plus to replace (i.e., inject) the element's QAction.dll file (compiled in Release mode) with its counterpart found in the QAction project (compiled in Debug mode).
 
-1. Click the *Attach* button. This will rebuild all selected QAction projects, upload these to the Agent and inject these. Finally, it will attach the Microsoft Visual Studio Debugger to the DataMiner SLScripting process(es).
+1. Click the *Attach* button.
+
+   This will rebuild all selected QAction projects, upload these to the Agent and inject these. Finally, it will attach the Microsoft Visual Studio Debugger to the DataMiner SLScripting process(es).
 
 1. In the *DIS Inject* window, click the yellow lightning bolt to manually trigger a QAction by simulating a change of the parameter selected in the *Trigger ID* box (in case of a dynamic table parameter, use the *Trigger Key* box to specify the table row).
 
@@ -59,7 +61,9 @@ When you have finished configuring all necessary settings, you can start debuggi
 
     1. Click the green plus to replace (i.e., inject) the element's QAction.dll file (compiled in Release mode) with its counterpart found in the temporary QAction project (compiled in Debug mode).
 
-1. Click the *Attach* button. This will rebuild all selected QAction projects, upload these to the Agent and inject these. Finally, it will attach the Microsoft Visual Studio Debugger to the DataMiner SLScripting process(es).
+1. Click the *Attach* button.
+
+   This will rebuild all selected QAction projects, upload these to the Agent and inject these. Finally, it will attach the Microsoft Visual Studio Debugger to the DataMiner SLScripting process(es).
 
 1. In the *DIS Inject* window, click the yellow lightning bolt to manually trigger a QAction by simulating a change of the parameter selected in the *Trigger ID* box (in case of a dynamic table parameter, use the *Trigger Key* box to specify the table row).
 

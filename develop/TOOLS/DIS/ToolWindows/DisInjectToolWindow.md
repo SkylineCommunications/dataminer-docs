@@ -50,7 +50,7 @@ Below the element selection box you can find the element manipulation tool bar. 
 When you have selected an element in the element selection box, the *DIS Inject* window will list all QActions found in the protocol of the selected element, and will automatically link the QAction projects to the QActions in the list based on protocol name and QAction ID.
 
 > [!NOTE]
-> When you are debugging via a protocol XML file instead of a protocol Visual Studio solution, you will first need to click the edit icon on the QActions you want to debug. This results in DIS generating a temporary QAction project which can then be used in the Inject window.
+> When you are debugging via a protocol XML file instead of a protocol Visual Studio solution, you will first need to click the edit icon on the QActions you want to debug. This results in DIS generating a temporary QAction project that can then be used in the Inject window.
 
 | If you click... | then... |
 |-----------------|---------|
@@ -64,7 +64,7 @@ After selecting which QActions should be injected, you can now to attach the Deb
 
 | If you click... | then... |
 |-----------------|---------|
-| Attach | all temporary QAction projects will be built, uploaded to the agent and injected. Finally, the Microsoft Visual Studio Debugger will be attached to the DataMiner SLScripting process(es).<br>Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
+| Attach | all temporary QAction projects will be built, uploaded to the Agent, and injected. Finally, the Microsoft Visual Studio Debugger will be attached to the DataMiner SLScripting process(es).<br>Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
 | Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLScripting process(es). |
 
 ## Debugging an automation script
@@ -87,7 +87,7 @@ After linking the Exe block projects, assigning values to the script parameters,
 
 | If you click... | then... |
 |-----------------|---------|
-| Attach | all selected Exe block projects will be built, uploaded to the agent and injected. Finally, the Microsoft Visual Studio Debugger will be attached to the DataMiner SLAutomation process.<br> Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
+| Attach | all selected Exe block projects will be built, uploaded to the Agent, and injected. Finally, the Microsoft Visual Studio Debugger will be attached to the DataMiner SLAutomation process.<br> Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
 | Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLAutomation process. |
 
 ### Triggering the automation script
