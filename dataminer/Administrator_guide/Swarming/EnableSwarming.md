@@ -1,5 +1,6 @@
 ---
 uid: EnableSwarming
+description: "Check prerequisites and enable Swarming in your DataMiner System using the SLNetClientTest tool or an automation script."
 ---
 
 # Enabling the Swarming feature

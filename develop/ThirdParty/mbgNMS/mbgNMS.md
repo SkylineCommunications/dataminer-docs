@@ -8,24 +8,26 @@ The Meinberg Network Management System is an out-of-the-box NMS solution that ru
 Created from a partnership and joint development between Skyline Communications and Meinberg, this central platform automatically detects, provisions, and monitors all Meinberg applications.
 mbgNMS is based on the DataMiner platform and is dedicated to Meinberg products.
 
-**Meinberg NMS** supports all LTOS devices (starting from firmware version 7.04.009 ) and the microSync Product Family.
+**Meinberg NMS** supports all LTOS devices (starting from firmware version 7.04.009) and the microSync Product Family.
 
-The latest **mbgNMS installation package** can be downloaded using the link below. Make sure to first install or upgrade to the compatible DataMiner version. To avoid possible issues, make sure you always use compatible versions.
+## Installation
 
-> [!TIP]
-> Refer to the [Meinberg NMS manual](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2/) and release notes for detailed instructions.
+The recommended way to install mbgNMS is by using a **pre-installed DataMiner Virtual Hard Disk**. This method provides you with a ready-to-use virtual machine with DataMiner already installed.
 
-- Latest release: [Meinberg Element Manager 1.4.1 CU1](https://community.dataminer.services/download/meinberg-element-manager-1-4-1-cu1/)
+For detailed installation instructions, see the installation guide below.
 
-- Release notes: [Release notes mbgNMS 1.4.1](xref:MbgNMS_1.4.1)
+![PDF icon](~/develop/images/mbgNMS_pdf.svg) [**Meinberg Network Management System - Installation Guide.pdf**](https://community.dataminer.services/download/meinberg-network-management-system-installation-guide/)
+
+## Upgrade
+
+- Latest release: [Meinberg Element Manager 1.4.2](https://community.dataminer.services/download/meinberg-element-manager-1-4-2/)
+
+- Release notes: [Release notes mbgNMS 1.4.2](xref:MbgNMS_1.4.2)
 
 - Minimum required DataMiner version: [10.4.0 Main Release](https://community.dataminer.services/download/dataminer-main-release-10-4-0-0-15230-cu10/)
 
-![Upgrading](~/develop/images/mbgNMS_Upgrading_across_major_versions.png)
-
-> [!IMPORTANT]
-> If you are using an older DataMiner version and you want to upgrade to a DataMiner version that does not immediately follow your current version, see [**Best practices when upgrading across major versions**](https://docs.dataminer.services/dataminer/Administrator_guide/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#best-practices-when-upgrading-across-major-versions).  
-> Please also make sure the system meets the following [**Prerequisite Checks**](https://docs.dataminer.services/dataminer/Administrator_guide/DataMiner_Agents/Upgrading_a_DMA/Preparing_to_upgrade_a_DataMiner_Agent.html#prerequisite-checks) before upgrading.
+> [!TIP]
+> Refer to the [Meinberg NMS manual](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2/) and release notes for detailed instructions.
 
 ## Content
 

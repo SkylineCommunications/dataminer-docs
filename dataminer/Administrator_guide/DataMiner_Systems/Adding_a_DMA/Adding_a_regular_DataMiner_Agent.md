@@ -33,10 +33,13 @@ Verify the prerequisites listed under [Adding a node to a DataMiner cluster](xre
 
 1. Enter the IP address of the DMA you want to add and click *Add*.
 
+> [!IMPORTANT]
+> Always use the IP address to add a regular DMA to a cluster. Adding Agents based on hostname is only supported for DataMiner Probes.
+
 > [!NOTE]
 >
 > - Do not use the *Join cluster* button to add a node to an existing cluster. This button should only be used during the [initial setup of a cluster](xref:Setting_up_a_new_DMS_in_DataMiner_Cube).
 > - To add a Failover pair to a cluster, first add the primary DMA as a regular node, and then configure Failover. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
 
 > [!TIP]
-> To verify if your DataMiner cluster is working correctly, you can run the [*SLNet connections between the DataMiner Agents* BPA test](xref:BPA_Check_Cluster_SLNet_Connections).
+> To verify if your DataMiner cluster is working correctly, you can run the [*SLNet connections between the DataMiner Agents* BPA test](xref:BPA_Check_Cluster_SLNet_Connections). If you are using a DataMiner version prior to 10.6.0/10.6.1 and your system has not been [migrated to BrokerGateway](xref:BrokerGateway_Migration) yet, run the *NATS cluster verification* BPA test.

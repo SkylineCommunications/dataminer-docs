@@ -27,9 +27,9 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
 
 1. Clear the selection from any items you do not want to include in the export.
 
-   If you have selected to include a redundancy group or service, any elements within it will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
+   If you have selected to include a redundancy group or service, any elements within it will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included. If you have selected a service template, all services generated from that template will automatically be included, along with any elements used by those services.
 
-   Note that, from DataMiner 10.4.9/10.5.0 onwards<!--RN 39356-->, if you have selected to include SNMPv3 elements, importing this package on DataMiner Systems prior to DataMiner 10.4.9/10.5.0 will result in the loss of all SNMPv3 credentials, which will need to be re-entered manually. If you used the [DataMiner Cube Credentials Library](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication) to configure the SNMPv3 credentials, you will always need to re-enter the credentials manually after an import on a different DMS, regardless of your DataMiner version.
+   Note that, from DataMiner 10.4.9/10.5.0 onwards<!--RN 39356-->, if you have selected to include SNMPv3 elements, importing this package on DataMiner Systems prior to DataMiner 10.4.9/10.5.0 will result in the loss of all SNMPv3 credentials, which will need to be re-entered manually. If you used the [DataMiner Cube Credentials Library](xref:Credentials_Library) to configure the SNMPv3 credentials, you will always need to re-enter the credentials manually after an import on a different DMS, regardless of your DataMiner version.
 
    Additionally, from DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44345-->, when the export includes a .dmprotocol package, the export will also include all assemblies used by the protocol in the .dmprotocol package.
 

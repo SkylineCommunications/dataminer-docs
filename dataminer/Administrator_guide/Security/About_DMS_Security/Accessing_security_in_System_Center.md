@@ -1,5 +1,6 @@
 ---
 uid: Accessing_security_in_System_Center
+description: "Open the Users/Groups module in DataMiner Cube System Center through Apps > System Center > Users/Groups to manage security settings."
 ---
 
 # The Users / Groups module in System Center

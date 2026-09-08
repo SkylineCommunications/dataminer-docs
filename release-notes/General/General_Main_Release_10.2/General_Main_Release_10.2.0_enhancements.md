@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.2.0_enhancements
+status: archived
 ---
 
-# General Main Release 10.2.0 - Enhancements
+# General Main Release 10.2.0 - Enhancements [ARCHIVED]
 
 #### Security enhancements \[ID 29724\] \[ID 29883\] \[ID 30086\] \[ID 30087\] \[ID 30192\] \[ID 30202\] \[ID 30257\] \[ID 30345\] \[ID 30674\] \[ID 31081\] \[ID 31169\] \[ID 31307\] \[ID 32081\]
 

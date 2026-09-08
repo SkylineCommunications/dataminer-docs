@@ -4,6 +4,18 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 30 July 2026 - Enhancement - CommunicationGateway 5.3.5 - CommunicationGate updated to target .NET 10 [ID 45315]
+
+CommunicationGateway now targets .NET 10.
+
+In addition, the CommunicationGateway.Grpc.Api NuGet has been renamed to Skyline.DataMiner.DataSources.CommunicationGateway.Grpc.Api.
+
+The DataMinerMessageBroker.API dependency has also been updated to version 4.0.0.
+
+#### 30 July 2026 - Enhancement - CommunicationGateway 5.3.5 - Added .NET 10 prerequisite check in installer [ID 46063]
+
+The installer of the CommunicationGateway DxM has been extended with a prerequisite check that verifies whether .NET 10 runtime is installed.
+
 #### 24 March 2026 - Enhancement - CommunicationGateway 5.3.4 - NuGet dependency updated [ID 45129]
 
 The CommunicationGateway DxM has been updated to use the latest version of the DataMinerMessageBroker.API NuGet (3.6.2). Previously, it still referenced the older 3.0.3 version.

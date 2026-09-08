@@ -34,7 +34,9 @@ To do so:
 - In the Alarm Console in DataMiner Cube, right-click the alarm you currently own and select *Release Ownership*.
 
 > [!NOTE]
-> By default, you can only release ownership of alarm events that you currently own. However, if you have been granted the permission *Release ownership of another user*, you are also allowed to release ownership of alarms that are owned by other users.
+>
+> - By default, you can only release ownership of alarm events that you currently own. However, if you have been granted the permission *Release ownership of another user*, you are also allowed to release ownership of alarms that are owned by other users.
+> - Once an alarm has the status *Clearable* (in case [alarm clearing](xref:Clearing_alarms) does not happen automatically), it is no longer possible to release ownership of that alarm.
 
 When you release ownership of an alarm event, an alarm record will be added to the lifecycle of that alarm event. Both the Alarm Type property and the User Status property of that record will be set to "Unresolved". The Owner property of that record and all subsequent records added to the lifecycle of the alarm will be set to "System" until someone else takes ownership of the alarm.
 
@@ -54,4 +56,6 @@ The following example illustrates how the *Alarm Type*, *Owner* and *User Status
 | The alarm event is cleared while being owned by the user "NOC Engineer".                       | Clear        | NOC Engineer  | Acknowledged |
 
 > [!NOTE]
-> Whenever users take or release ownership of alarm events, they are invited to add a comment. Whether they do so or not, the DataMiner System will automatically add a comment as well. This automatically added comment will reveal who took or released ownership and when this was done.
+>
+> - Whenever users take or release ownership of alarm events, they are invited to add a comment. Whether they do so or not, the DataMiner System will automatically add a comment as well. This automatically added comment will reveal who took or released ownership and when this was done.
+> - In case automatic alarm clearing is disabled, the final transitions will be different, as there will also be a *Clearable* alarm type. For details, refer to [Clearing alarms](xref:Clearing_alarms).

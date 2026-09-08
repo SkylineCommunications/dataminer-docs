@@ -138,9 +138,11 @@ Expected duration: 5 minutes.
 
 1. In the QAOps User app, go to the [Overview](https://qaops-sandbox.skyline.be/app/8f36715b-d50d-4463-9d2d-c38170929ee4/Overview) page.
 
-1. Locate your tag in the list.
+   This page shows the *QAOps Nebula* live topology explorer.
 
-1. Use the top filter to find your request more quickly.
+1. In the search box at the top, enter the tag you used in your request, or click the *Active runs* filter button to only show active test runs.
+
+1. Locate your run in the graph, and select it to follow its status in the *Inspector* panel.
 
 1. Wait until the test run is finished.
 

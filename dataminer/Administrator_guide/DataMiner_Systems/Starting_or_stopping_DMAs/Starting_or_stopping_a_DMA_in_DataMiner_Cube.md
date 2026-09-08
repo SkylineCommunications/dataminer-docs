@@ -1,7 +1,7 @@
 ---
 uid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
 keywords: start, restart, shutdown
-description: To start or stop a DataMiner node, open System Center in DataMiner Cube and use the buttons on the Agents > Manage page.
+description: "Open System Center in DataMiner Cube, and use the buttons on the Agents > Manage page to start or stop a DataMiner node."
 ---
 
 # Starting or stopping a DataMiner node in Cube

@@ -1,5 +1,6 @@
 ---
 uid: User_rights
+description: "Configure DataMiner user rights through permissions, views, and access levels, using levels 1 to 100 for regular users and 0 for Administrators."
 ---
 
 # User rights

@@ -1,5 +1,6 @@
 ---
 uid: failover
+description: "Explore DataMiner Failover to keep your system running by teaming each DMA with a synchronized backup that takes over when needed."
 ---
 
 # Failover

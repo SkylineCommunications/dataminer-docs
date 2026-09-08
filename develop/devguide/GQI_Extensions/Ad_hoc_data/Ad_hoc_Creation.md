@@ -20,7 +20,7 @@ In order to create a GQI ad hoc data source, you need to reference the [GQI exte
 
 1. Specify a name for the solution.
 
-1. Under *Additional information*, fill in the name and author for the data source, and select the [lifecycle interfaces](xref:Ad_hoc_Life_cycle#detailed-lifecycle-overview) you want to implement.
+1. Under *Additional information*, fill in the name and author for the data source, and select the [lifecycle interfaces](xref:Ad_hoc_Life_cycle#lifecycle-methods) you want to implement.
 
 1. Click *Create*.
 

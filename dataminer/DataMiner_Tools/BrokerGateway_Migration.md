@@ -8,7 +8,7 @@ Before upgrading to 10.6.0/10.6.1, migrating to BrokerGateway is **mandatory**. 
 
 The migration is done using the *NATSMigration* tool. In most cases, this should be used to run an automatic migration. A manual migration is also possible with this tool, but will only be required in very specific circumstances and after consultation with Skyline Communications.
 
-The migration should be executed on DataMiner version **10.5.0 [CU11]/10.5.12 [CU2]**. While it is possible to migrate earlier DataMiner versions starting from DataMiner 10.5.0 [CU4]/10.5.7 [CU1], this has several limitations.
+The migration should be executed on **DataMiner Main Release 10.5.0 [CU11] or any later cumulative update of that Main Release, or on DataMiner Feature Release 10.5.12 [CU2]**. While it is possible to migrate earlier DataMiner versions starting from DataMiner 10.5.0 [CU4]/10.5.7 [CU1], this has several limitations.
 
 > [!IMPORTANT]
 >
@@ -140,11 +140,14 @@ When recommended by Skyline, the migration can be run manually:
 
    For more information, see [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
 
+   > [!IMPORTANT]
+   > If you use forced NATS endpoints for the DataMiner Cloud Pack in combination with a proxy, use *DataMiner Cloud pack 3.5.1.0 (Proxy or DMZ)* or higher.
+
 1. Reconnect your DMZ to dataminer.services after the migration:
 
    1. Obtain an API key for the DMZ server:
 
-      - From DataMiner 10.5.0 [CU14] onwards, [generate a BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) and place the client secret file on the DMZ server. Then set `APIKeyPath` to the path of that file.
+      - From DataMiner 10.5.0 [CU13] onwards<!-- RN 44757 -->, [generate a BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) on a DMA of which the address `https://DMA-IPADDRESS/BrokerGateway/api/natsconnection/getnatsconnectiondetails` can be reached by the DMZ server. After generating the client secret, place the client secret file on the DMZ server, and then follow the steps under [Using the client secrets](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets).
 
       - In earlier DataMiner versions or 10.5.x Feature Release versions, copy `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` from a DataMiner node to the same location on the DMZ. Then set `APIKeyPath` to the path of the copied file.
 
@@ -185,7 +188,8 @@ To make sure the gateway can communicate using MessageBroker within the DataMine
 - *nats:credsUrl*: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
 - *nats:apiKeyPath*:
 
-  - From 10.5.0 [CU13] onwards<!-- RN 44757 -->, a [BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) should be used. *apiKeyPath* should point to the [client secret file](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets).
+  - From 10.5.0 [CU13] onwards<!-- RN 44757 -->, *apiKeyPath* should point to the [client secret file](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets). You will need to [generate a BrokerGateway client secret](xref:Generating_BrokerGateway_client_secrets) on a DMA of which the address `https://DMA-IPADDRESS/BrokerGateway/api/natsconnection/getnatsconnectiondetails` can be reached by the Dashboard Gateway. After generating the client secret, place the client secret file on the Dashboard Gateway, and then follow the steps under [Using the client secrets](xref:Generating_BrokerGateway_client_secrets#using-the-client-secrets).
+  
   - In earlier DataMiner versions, the file `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json` has to be copied from the DMA to the local server, and the new path of that file needs to be set in *apiKeyPath*.
 
 ## Migrating back to the old system
@@ -212,6 +216,9 @@ The key technical differences are:
 | **Credentials** | `.creds` files under `C:\Skyline DataMiner\NATS\nsc`. | Dynamic credentials via BrokerGateway API. Saved on disk in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\.data\nats\nsc`. |
 | **Cluster formation** | NATSCustodian recalculates NAS/NATS configs. | BrokerGateway API builds cluster. |
 | **Repair tool** | [Manual reset / reinstall](xref:Investigating_Legacy_NATS_Issues#remaining-steps). | `C:\Skyline DataMiner\Tools\NATSRepair.exe` tool. |
+
+> [!NOTE]
+> Migrating to BrokerGateway does not immediately remove the legacy NAS and NATS services or the `C:\Skyline DataMiner\NATS` folder. These components are retained temporarily as a safeguard. From DataMiner 10.6.10/10.7.0 onwards<!-- RN 46094 -->,the *CleanupNatsServices* upgrade action can remove these legacy components after the system has successfully been running on the BrokerGateway-managed NATS solution.
 
 ### Can I run a cluster with both SLNet-managed NATS and BrokerGateway-managed NATS at the same time?
 

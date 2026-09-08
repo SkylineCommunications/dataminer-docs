@@ -1,6 +1,6 @@
 ---
 uid: Migrating_elements_in_a_DataMiner_System
-description: If Swarming is not enabled in your DataMiner cluster, you can instead migrate elements from the System Center > Agents > Status page in DataMiner Cube.
+description: "Learn how to migrate elements from the System Center > Agents > Status page in DataMiner Cube if Swarming is not enabled in your DataMiner cluster."
 ---
 
 # Migrating elements within a cluster
@@ -45,3 +45,4 @@ To migrate elements:
 >
 > - You need to have the permissions *Elements* > *Access*, *Elements* > *Edit*, *Elements* > *Export DELT* and *Elements* > *Import DELT*. In addition, only elements that you have the right to access will be displayed in the *Element migration* window.
 > - It is not possible to migrate spectrum analyzer elements, SLA elements or separate DVE child elements.
+> - [Element connections](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module) are not migrated. Before migration, back up `C:\Skyline DataMiner\Elements\ElementConnections.xml` on the source DataMiner Agent or note the current configuration in Cube's *Element Connections* module so that you can reconfigure the connections after migration.

@@ -1,6 +1,7 @@
 ---
 uid: Viewing_user_information
 keywords: user card
+description: "View user information in DataMiner to check details, group membership, permissions, alerts, and recent activity."
 ---
 
 # Viewing user information

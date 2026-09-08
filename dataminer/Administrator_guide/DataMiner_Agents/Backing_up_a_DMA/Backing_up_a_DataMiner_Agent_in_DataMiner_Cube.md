@@ -42,6 +42,13 @@ The following steps can be taken to configure the backups for a DMA:
    > [!NOTE]
    > For more information on indexing backups, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups) or [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups).
 
+1. From DataMiner 10.6.10/10.7.0 onwards<!--RN 46061-->, in the *General* tab, set the *DMS backup password*.
+
+   This password is required to restore [credentials that are encrypted at rest](xref:Encryption_in_DataMiner#credentials-at-rest) when the backup is restored on a different machine. If no DMS backup password has been configured when the backup is taken, all other data in the backup can still be restored, but the encrypted credentials cannot be recovered on another machine. When you restore the backup on the same DataMiner System, no password is needed.
+
+   > [!IMPORTANT]
+   > Store the DMS backup password securely outside DataMiner, for example in a password manager. If it is lost, the encrypted credentials in any backup taken with that password can no longer be recovered on a clean host.
+
 1. In the *Schedule* tab, select when the backup should be executed: monthly, weekly, daily, or only when it is manually initiated.
 
 1. In the *Content* tab, determine the backup type:

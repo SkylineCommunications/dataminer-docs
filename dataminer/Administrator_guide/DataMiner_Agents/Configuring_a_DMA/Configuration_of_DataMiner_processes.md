@@ -642,15 +642,15 @@ Example:
 
 ### Fine-tuning NATS settings
 
-From DataMiner 10.1.0/10.1.1 onwards, DataMiner processes use the NATS open-source messaging system to communicate with each other. Some settings for NATS can be fine-tuned in *MaintenanceSettings.xml*, using the following tags:
+DataMiner processes use the NATS open-source messaging system to communicate with each other. Some settings for NATS can be fine-tuned in *MaintenanceSettings.xml*, using the tags listed below. However, note that these settings should ideally be changed [using SLNetClientTest tool](xref:SLNetClientTest_finetuning_nats_settings) instead.
 
 - *NATSDisasterCheck*: Set this to true or false in order to respectively activate or deactivate automatic detection and triggering of NATS cluster self-healing (default: false).
 
 - *NATSResetWindow*: Specify a value in seconds to set a window during which only one NATS reset can occur. This prevents situations where NATS disaster recovery is triggered too often. The minimum value is 60. If a lower value is specified, 60 will be used instead.
 
-- *NATSLogFileCleanupMs*: Supported from DataMiner 10.1.0 \[CU9\]/10.1.8 onwards. Determines the time (in milliseconds) between NATS log file cleanup attempts. This timing will only be applied after the next cleanup attempt after the configuration change. For example, if the next cleanup attempt is in 15 minutes, and you change this value, the next cleanup will still be in 15 minutes, but all subsequent cleanups will happen after 1-minute intervals. The default value of this setting is 900000 (15 minutes).
+- *NATSLogFileCleanupMs*: Determines the time (in milliseconds) between NATS log file cleanup attempts. This timing will only be applied after the next cleanup attempt after the configuration change. For example, if the next cleanup attempt is in 15 minutes, and you change this value, the next cleanup will still be in 15 minutes, but all subsequent cleanups will happen after 1-minute intervals. The default value of this setting is 900000 (15 minutes).
 
-- *NATSLogFileAmountToKeep*: Supported from DataMiner 10.1.0 \[CU9\]/10.1.8 onwards. The number of log files to keep (default =10). This value only applies to the log files that do not have the .log extension.
+- *NATSLogFileAmountToKeep*: The number of log files to keep (default =10). This value only applies to the log files that do not have the .log extension.
 
 Example:
 
@@ -669,17 +669,14 @@ Example:
 </MaintenanceSettings>
 ```
 
-> [!NOTE]
-> From DataMiner 10.1.0/10.1.3 onwards, you can instead configure this using the SLNetClientTest tool. See [Fine-tuning NATS settings](xref:SLNetClientTest_finetuning_nats_settings).
-
 > [!TIP]
 > See also: [Increasing the timeout for the NATS connection](xref:SLCloud_xml#increasing-the-timeout-for-the-nats-connection)
 
 ### Fine-tuning message throttling
 
-From DataMiner 10.2.0/10.1.2 onwards, message throttling is enabled on connections from web applications (e.g., Monitoring app, Dashboards app, Web APIs, etc.) to SLNet. This is a mechanism that avoids an excessive number of parameter update messages being sent at the same time.
+On connections from web applications (e.g., Monitoring app, Dashboards app, Web APIs, etc.) to SLNet, message throttling is enabled. This is a mechanism that avoids an excessive number of parameter update messages being sent at the same time.
 
-From DataMiner 10.1.3 onwards, the following settings can be fine-tuned for this in *MaintenanceSettings.xml:*
+The following settings can be fine-tuned for this in *MaintenanceSettings.xml:*
 
 - *MessageThrottlingThreshold*: Time interval in ms. The default and minimum value is 250. If two updates for the same parameter are received within this interval, message throttling is activated. The first of the parameter updates is sent immediately, but messages for the same parameter that come after this are throttled until no more parameter updates have been received for this same time interval. Once the throttling has stopped, the last update is also sent after at most this time interval.
 

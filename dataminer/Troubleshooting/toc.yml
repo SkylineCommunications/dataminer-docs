@@ -258,6 +258,12 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Microsoft Platform 6.0.0.x elements remain in timeout
+            topicUid: KI_Microsoft_Platform_elements_in_timeout
+          - name: Swarmed scheduled task executes incorrect action after editing
+            topicUid: KI_Swarmed_scheduled_task_executes_incorrect_action
+          - name: Data loss after Elasticsearch to OpenSearch migration
+            topicUid: KI_Data_loss_after_ES_to_OS_migration
           - name: SLAutomation crash during DataMiner startup
             topicUid: KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version

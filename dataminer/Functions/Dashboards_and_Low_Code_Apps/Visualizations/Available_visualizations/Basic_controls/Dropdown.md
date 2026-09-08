@@ -89,6 +89,7 @@ Additionally, the following layout options are also available:
 |--|--|--|
 | Advanced | Display column | Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->. Select the column whose values are shown in the dropdown. Only available when a single query data source or *Tables* component data source was applied. |
 | Advanced | Label | Add text that will be displayed next to the dropdown. |
+| Advanced | Placeholder | Available from DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45693-->. Specify placeholder text that is displayed when no item is selected in the dropdown. |
 
 ### Dropdown settings
 

@@ -151,12 +151,12 @@ Cassandra nodes must be hosted on Linux. For small-scale setups, Cassandra can b
 
 #### Cassandra software
 
-The minimum supported version for the Cassandra software is **3.11**. If a database per cluster (or "Cassandra Cluster") setup is used, 3.11 continues to be supported for existing setups, but for new setups Cassandra **4.x** is mandatory. If a database per Agent setup is used, Cassandra 4.x is also supported, and it is even recommended in case there are multiple nodes per database.
+For all supported DataMiner versions, we support all Cassandra versions that Apache Cassandra currently supports. At the moment, Cassandra **5.0** is the recommended version.
 
-> [!NOTE]
+> [!IMPORTANT]
 >
-> - Cassandra 4.x does not support Windows, so you will need extra Linux servers to host the Cassandra database in order to use this version.
-> - Currently, Cassandra versions 4.0 and 4.1 are supported in the 4.x range.
+> - Cassandra 3.11 reached end of life (EOL) in September 2024, when Apache Cassandra 5.0 was released. It no longer receives security patches, bug fixes, or community support on any operating system. If you are still running Cassandra 3.11, we **strongly recommend upgrading to Cassandra 5.0** as soon as possible.
+> - Windows is no longer supported from Cassandra 4.0 onwards. If you are upgrading from Cassandra 3.11 on Windows, you will also need to **migrate your Cassandra database to a Linux server** as part of the upgrade process.
 
 #### RAM
 
@@ -200,12 +200,18 @@ For information on compatibility between specific Cassandra versions and operati
 
 If there is more than one Cassandra node, the time in the cluster must be synchronized (NTP).
 
-### OpenSearch/Elasticsearch requirements
+### OpenSearch requirements
 
-Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). Ideally, this should be an OpenSearch cluster. An Elasticsearch cluster can be used instead, but this is not recommended.
+Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). For any new DataMiner installations, this should be OpenSearch.
+
+While for past DataMiner versions Elasticsearch could be used as an alternative, this is no longer supported as of DataMiner 10.7.x.
 
 > [!IMPORTANT]
-> Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any openSearch or Elasticsearch nodes.
+> Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any OpenSearch nodes.
+
+#### OpenSearch software
+
+For all supported DataMiner versions, we support all OpenSearch versions currently supported by the OpenSearch Software Foundation. At the moment, OpenSearch **3.0** is the recommended version.
 
 #### RAM
 
@@ -233,8 +239,6 @@ Gigabit Ethernet is required for throughput, and low latency is required for eas
 
 #### Operating System
 
-We recommend installing OpenSearch on Linux. While OpenSearch is compatible with Windows (see [Operating system compatibility](https://opensearch.org/docs/2.2/install-and-configure/install-opensearch/index/#operating-system-compatibility)), this setup is not covered in our testing and therefore not recommended.
+We recommend installing OpenSearch on Linux, preferably using the latest version of Ubuntu LTS. While OpenSearch is compatible with Windows (see [Operating system compatibility](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#operating-system-compatibility)), this setup is not covered in our testing and therefore not recommended.
 
-Elasticsearch can be installed on the operating system of your choice, under the condition that it is supported by Elastic. A 64-bit OS is preferred.
-
-For information on compatibility between specific OpenSearch/Elasticsearch versions and operating system versions or builds, refer to the official database vendor documentation.
+For information on compatibility between specific OpenSearch versions and operating system versions or builds, refer to the official database vendor documentation.

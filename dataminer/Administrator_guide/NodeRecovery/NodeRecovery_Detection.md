@@ -1,5 +1,6 @@
 ---
 uid: NodeRecovery_Detection
+description: "Learn how NodeRecovery detects full server outages, local and global cluster states, and network splits to trigger scripts and protect cluster resilience."
 ---
 
 # Outage detection

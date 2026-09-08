@@ -294,8 +294,20 @@ The headers listed below are **blocked** and will result in an error if you try 
 
 1. Under *Tokens*, select the tokens that need access. You can also create new tokens using the *New token* button.
 
+   From DataMiner 10.6.9/10.7.0 onwards<!--RN 45751-->, when creating or editing a token, you can configure a rate limit:
+
+   - *Limit* (1): Maximum number of requests allowed within the configured window (from 1 to 100).
+
+   - Window (2): Sliding time window during which the limit applies (from 1 second to 1 day).
+
+   ![*Create API token* pop-up window](~/dataminer/images/Create_API_Token.png)<br>*Create API token window in DataMiner 10.6.9*
+
+   New tokens are created with a default rate limit of 60 requests per minute.
+
    > [!NOTE]
-   > At least one token has to be linked before the API will be usable.
+   >
+   > - At least one token has to be linked before the API will be usable.
+   > - A configured rate limit restricts the number of requests a client can make within a specified time window. However, it does not guarantee that the server can process all requests up to that limit. Actual throughput depends on several factors, including the execution time of the API script, the number of concurrently active tokens, and overall server load.
 
    > [!CAUTION]
    > Once a token is created with a specified secret, **it is not possible to retrieve that secret again**. The value is stored securely in the database with a non-reversible hashing function. Make sure to save it somewhere secure or pass it in a secure way to the API user.

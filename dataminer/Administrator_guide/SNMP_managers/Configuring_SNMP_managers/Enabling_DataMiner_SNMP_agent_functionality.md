@@ -1,5 +1,6 @@
 ---
 uid: Enabling_DataMiner_SNMP_agent_functionality
+description: "Learn how to enable DataMiner SNMP agent functionality in DataMiner.xml to allow polling of active alarms and system information."
 ---
 
 # Enabling DataMiner SNMP agent functionality

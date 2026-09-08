@@ -277,7 +277,7 @@ Shape-level option.
 
 Can be added to shapes displaying parameter values. Set this option to true to convert large values to more legible values with a different unit (e.g., to convert 1000 Mb to 1 Gb). The following units are converted out of the box: bytes (B), bits (b), bits per second (bps), bytes per second (Bps) and Kibibytes (kiB). For other units, the dynamic conversion must be defined in the element’s protocol.
 
-From DataMiner 10.3.0/10.2.3 onwards, this feature can instead be enabled by the *DynamicUnits* [soft-launch option](xref:SoftLaunchOptions), and you can use the *DynamicUnits=\[true/false\]* option on a shape to override the default behavior determined by the soft-launch option.
+From DataMiner 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 onwards, this feature is enabled by default, and you can instead use the `DynamicUnits=[true/false]` option on a shape to override the default behavior.
 
 ## DynamicZoom
 
@@ -784,7 +784,7 @@ See [Having the Visio drawing opened in a new card](xref:Linking_a_shape_to_an_e
 
 Page-level option.
 
-Available from DataMiner 10.2.11/10.3.0 onwards. Allows you to override the name of a Visio page.
+Allows you to override the name of a Visio page.
 
 You can for example use this to have multiple pages with the same name in DataMiner, as Microsoft Visio itself does not allow the creation of multiple pages with the same name. However, note that components that display Visio page names may then also display these duplicate page names.
 
@@ -966,7 +966,7 @@ See [UseChrome](xref:Linking_a_shape_to_a_webpage#usechrome).
 
 Shape-level option.
 
-Available from DataMiner 10.1.11/10.2.0 onwards. Allows you to embed an Edge web browser control.
+Allows you to use Microsoft Edge (WebView2) to display an embedded webpage.
 
 See [UseEdge](xref:Linking_a_shape_to_a_webpage#useedge).
 
@@ -985,7 +985,7 @@ See [UseLoginCredentials](xref:Linking_a_shape_to_a_webpage#uselogincredentials)
 
 Shape-level option.
 
-Available from DataMiner 10.2.0/10.1.10 onwards. See [Linking a shape to a resource](xref:Linking_a_shape_to_a_resource).
+See [Linking a shape to a resource](xref:Linking_a_shape_to_a_resource).
 
 ## VerticalScrollbarVisibility
 

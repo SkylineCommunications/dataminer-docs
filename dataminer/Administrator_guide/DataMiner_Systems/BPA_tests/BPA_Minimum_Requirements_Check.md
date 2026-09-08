@@ -1,5 +1,6 @@
 ---
 uid: BPA_Minimum_Requirements_Check
+description: "Learn about the DataMiner Agent Minimum Requirements BPA test, which checks if hardware requirements are met and time server settings are correct."
 ---
 
 # DataMiner Agent Minimum Requirements

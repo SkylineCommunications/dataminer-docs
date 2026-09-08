@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.6.0_CU6
 ---
 
-# General Main Release 10.6.0 CU6 - Preview
+# General Main Release 10.6.0 CU6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -34,12 +34,6 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-#### Security enhancements [ID 45646]
-
-<!-- 45646: MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-A number of security enhancements have been made.
-
 #### APIGateway: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45671]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
@@ -47,12 +41,6 @@ A number of security enhancements have been made.
 From now on, gRPC connections that go through the Azure Cloud Relay service will buffer event messages until the client confirms they have been received.
 
 This will allow those connections to survive a temporary outage of the Azure Cloud Relay service, for example when restarting or deploying a new version.
-
-#### Cassandra Cluster Migrator tool now supports migrating credential library credentials [ID 45824]
-
-<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
-
-The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to Cassandra Cluster from MySQL or Cassandra Single, now also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the credential library.
 
 #### ConfigureIIS.bat script will now ensure a dedicated Application Pool for the API application [ID 45842]
 
@@ -173,3 +161,11 @@ In some cases, BrokerGateway could stop unexpectedly during startup when multipl
 Up to now, when a matrix parameter had fewer `columntypes` defined in its options than there were dimensions, `SLProtocol` could stop unexpectedly when `protocol.SendToDisplay` was called on that matrix parameter.
 
 From now on, missing matrix outputs that are not covered by `columntypes` will be handled correctly.
+
+#### Service card reports could show incorrect alarm counts on clustered databases [ID 46048]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, on clustered databases (Cassandra Cluster or STaaS), alarm counts in the *Reports* section of a service card could be duplicated by the number of DataMiner Agents involved in that service.
+
+From now on, those alarm counts will be calculated correctly when a service includes elements hosted on multiple Agents.

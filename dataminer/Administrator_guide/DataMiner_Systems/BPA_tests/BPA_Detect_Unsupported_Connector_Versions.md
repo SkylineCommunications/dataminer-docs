@@ -1,5 +1,6 @@
 ---
 uid: BPA_Detect_Unsupported_Connector_Versions
+description: "Learn about the 'Detect unsupported connector versions' BPA test, which detects elements that use connector versions that are no longer supported."
 ---
 
 # Detect unsupported connector versions

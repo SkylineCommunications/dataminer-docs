@@ -5,7 +5,7 @@ reviewer: Alexander Verkest
 
 # Enabling kernel response buffering for DataMiner APIGateway
 
-From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 38710 -->, it is possible to enable kernel response buffering for the [DataMiner APIGateway](xref:DataMinerExtensionModules#apigateway) DxM. This can be useful to improve throughput and responsiveness over high-latency connections.
+From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 38710 -->, it is possible to enable kernel response buffering for the [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway) DxM. This can be useful to improve throughput and responsiveness over high-latency connections.
 
 To enable this setting:
 

@@ -1,5 +1,6 @@
 ---
 uid: About_DataMiner_Systems
+description: "Learn more about DataMiner clusters, also called DataMiner Systems, i.e., collections of DataMiner Agents interconnected via a TCP/IP network."
 ---
 
 # About DataMiner clusters

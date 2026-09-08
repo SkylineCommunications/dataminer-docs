@@ -6,11 +6,11 @@ uid: DOM_editor_attachments_networkshare
 
 <!--RN43726-->
 
-From DataMiner 10.5.10/10.6.0 onwards, you can specify a UNC path and select credentials from the credentials library to store DOM attachments linked to DOM instances.
+From DataMiner 10.5.10/10.6.0 onwards, you can specify a UNC path and select credentials from the [Credentials Library](xref:Credentials_Library) to store DOM attachments linked to DOM instances.
 
 By default, this feature is not enabled, and attachments are saved locally in the `C:\Skyline DataMiner\Documents` folder.
 
-1. Make sure a correct set of credentials of the type *Username and password credentials* is available in the credentials library (accessible in Cube via *System Center* > *System settings*).
+1. Make sure a correct set of credentials of the type *Username and password credentials* is available in the Credentials Library (accessible in Cube via *System Center* > *System settings*).
 
 1. In the Automation app in DataMiner Cube, run the *DOM Editor* script.
 

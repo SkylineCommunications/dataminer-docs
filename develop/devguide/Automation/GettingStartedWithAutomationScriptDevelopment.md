@@ -23,6 +23,7 @@ uid: GettingStartedWithAutomationScriptDevelopment
 - [Script variables](xref:Script_variables)
 - [Script actions in DataMiner Cube](xref:Automation_script_actions_in_DataMiner_Cube)
 - [Script execution options](xref:Script_execution_options)
+- [Using credentials in an automation script](xref:Using_credentials_in_an_automation_script)
 
 ## References
 

@@ -35,6 +35,16 @@ If you hover the mouse over a padlock icon, a tooltip will appear, explaining ho
 
 ## Changes
 
+### Breaking changes
+
+#### Correlation: Grouping method 'By alarm' has been removed [ID 45545]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+In the *Alarm grouping* section of a correlation rule, it is no longer possible to select to group alarms by alarm before they are evaluated.
+
+If existing correlation rules have the *By alarm* option configured, a warning will be shown when you edit them, explaining that this is no longer supported. No grouping method will be selected in the *Alarm grouping* section, and the grouping by alarm will be removed when the rule is saved.
+
 ### Enhancements
 
 #### Cube will now use optimized requests to manage service template definitions stored in the new C:\\Skyline DataMiner\\ServiceTemplates folder [ID 45536]
@@ -44,16 +54,6 @@ If you hover the mouse over a padlock icon, a tooltip will appear, explaining ho
 Since DataMiner feature version 10.6.7, service template definitions are stored in the `C:\Skyline DataMiner\ServiceTemplates` folder instead of the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders.
 
 DataMiner Cube will now use optimized requests to manage the service template definitions in this new location.
-
-#### Correlation: Grouping method 'By alarm' has been removed [ID 45545]
-
-<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
-
-While editing a correlation rule, in the *Alarm grouping* section, you can indicate how you want the alarms to be grouped before they are evaluated.
-
-The option "by alarm" has now been removed.
-
-If existing correlation rules have this option configured, a warning will be shown, explaining that this is no longer supported, the *Alarm grouping* section will be empty, and the grouping will be removed the first time the rule is saved again.
 
 #### Visual Overview - Reservation: Values of the [Elapsed time:], [Remaining time:], and [Time until start:] placeholders will be calculated using UTC time [ID 45618]
 

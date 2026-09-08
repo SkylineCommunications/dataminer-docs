@@ -1,6 +1,6 @@
 ---
 uid: Adding_a_DataMiner_Agent_to_a_DataMiner_System
-description: Learn what is needed to add a node to a DataMiner cluster, whether the node is a regular DataMiner Agent or a DataMiner Probe.
+description: "Learn what is needed to add a node to a DataMiner cluster, whether the node is a regular DataMiner Agent or a DataMiner Probe."
 ---
 
 # Adding a node to a DataMiner cluster

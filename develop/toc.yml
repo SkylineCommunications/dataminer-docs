@@ -956,6 +956,8 @@ items:
         topicUid: Launching_and_attaching_interactive_Automation_scripts
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
+      - name: Using credentials in an automation script
+        topicUid: Using_credentials_in_an_automation_script
   - name: GQI extensions
     topicUid: GQI_Extensions
     items:
@@ -1052,6 +1054,8 @@ items:
             topicUid: GQI_GQIServiceAttribute
           - name: GQISortDirection
             topicUid: GQI_GQISortDirection
+          - name: GQIStaticColumnsAttribute
+            topicUid: GQI_GQIStaticColumnsAttribute
           - name: GQIUserServiceAttribute
             topicUid: GQI_GQIUserServiceAttribute
           - name: GQIWorkerServiceAttribute
@@ -1605,6 +1609,8 @@ items:
       topicUid: Skyline.DataMiner.Scripting
     - name: Skyline.DataMiner.Automation
       topicUid: Skyline.DataMiner.Automation
+    - name: Skyline.DataMiner.Automation.Credentials
+      topicUid: Skyline.DataMiner.Automation.Credentials
     - name: Skyline.DataMiner.Core.DataMinerSystem.Common
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Common
     - name: Skyline.DataMiner.Core.DataMinerSystem.Automation
@@ -4107,6 +4113,20 @@ items:
         topicUid: DMSScript.Author
       - name: CheckSets
         topicUid: DMSScript.CheckSets
+      - name: Credentials
+        topicUid: DMSScript.Credentials
+        items:
+        - name: Credential
+          topicUid: DMSScript.Credentials.Credential
+          items:
+          - name: '@id'
+            topicUid: DMSScript.Credentials.Credential-id
+          - name: Name
+            topicUid: DMSScript.Credentials.Credential.Name
+          - name: CredentialId
+            topicUid: DMSScript.Credentials.Credential.CredentialId
+          - name: Type
+            topicUid: DMSScript.Credentials.Credential.Type
       - name: Interactivity
         topicUid: DMSScript.Interactivity
       - name: Description
@@ -7369,6 +7389,8 @@ items:
               topicUid: DIS_Troubleshooting_RetrieveInformation
             - name: Licensing problem
               topicUid: DIS_Troubleshooting_LicenseIssue
+            - name: Account problem
+              topicUid: DIS_Troubleshooting_AccountIssue
             - name: DIS Inject problems
               topicUid: DIS_Troubleshooting_DisInject
             - name: Package creation problems
@@ -7484,6 +7506,16 @@ items:
             items:
             - name: Creating a test package
               topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
+        - name: QAOps Operator
+          items:
+          - name: Creating a QAOps configuration
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration
+          - name: Updating a QAOps configuration
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Update_A_Configuration
+          - name: Adding self-hosted DataMiner servers
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Add_Self_Hosted_Servers
+          - name: Creating and managing test suites
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:

@@ -1,4 +1,6 @@
 items:
+  - name: MbgNMS 1.4.2
+    topicUid: MbgNMS_1.4.2
   - name: MbgNMS 1.4.1
     items:
     - name: New features and changes

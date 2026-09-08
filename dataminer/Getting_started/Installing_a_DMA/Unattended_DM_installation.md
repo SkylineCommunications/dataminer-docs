@@ -23,12 +23,10 @@ cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
 ```json
 {
   "DatabaseConfig": {
-    "DatabaseMode": "STaaS",
-    "CassandraTlsEnabled": false
+    "DatabaseMode": "STaaS"
   },
   "LicenseConfig": {
-    "LicenseMode": "Subscription",
-    "DataMinerId": ""
+    "LicenseMode": "Subscription"
   },
   "RegistrationConfig": {
     "OrganizationApiKey": "<Organization API Key>",
@@ -45,12 +43,12 @@ cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
 ```json
 {
   "DatabaseConfig": {
-    "DatabaseMode": "STaaS",
-    "CassandraTlsEnabled": false
+    "DatabaseMode": "STaaS"
   },
   "LicenseConfig": {
     "LicenseMode": "Perpetual",
-    "DataMinerId": ""
+    "DataMinerId": "<Your ID>",
+    "LicenseFilePath": "<Path to your DataMiner.lic file>"
   },
   "RegistrationConfig": {
     "OrganizationApiKey": "<Organization API Key>",
@@ -61,6 +59,24 @@ cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
   }
 }
 ```
+
+Keep the following things in mind if you use this configuration:
+
+- When `LicenseConfig.LicenseMode` is set to `Perpetual`, `LicenseConfig.DataMinerId` is mandatory. The specified DataMiner ID is used during the configuration instead of an ID assigned by dataminer.services.
+
+- `RegistrationConfig` is required here, because a STaaS system is always registered on dataminer.services.
+
+- `LicenseFilePath` is optional and can be omitted if you prefer to apply the license manually afterwards.
+
+  If you specify the license path, make sure it points to an already obtained DataMiner license file. The file will be copied to the DataMiner root folder (*C:\Skyline DataMiner*) before DataMiner is started, so that you do not need to generate a *Request.lic* file and upload a license afterwards.
+
+  If the path does not exist, the configuration will fail with a validation error.
+
+  > [!IMPORTANT]
+  >
+  > - The license file is copied without being renamed, so it must be named *DataMiner.lic*. Otherwise, DataMiner will not pick it up.
+  > - As the configuration file contains JSON code, escape every backslash in the path by doubling it, for example, `"C:\\Licenses\\DataMiner.lic"`. Alternatively, you can use forward slashes, for example `"C:/Licenses/DataMiner.lic"`.
+  > - A DataMiner license is bound to the MAC address of the machine it was requested for. Make sure the license file specified in `LicenseFilePath` was generated for the MAC address of the server on which you are running the unattended configuration. If the MAC address does not match, DataMiner will not be able to start with that license.
 
 ### Example: Self-hosted storage with subscription licensing
 
@@ -79,18 +95,21 @@ cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
     "OpenSearchPassword": "12345678"
   },
   "LicenseConfig": {
-    "LicenseMode": "Subscription",
-    "DataMinerId": ""
+    "LicenseMode": "Subscription"
   },
   "RegistrationConfig": {
-    "OrganizationApiKey": "",
-    "SystemName": "",
-    "SystemUrl": "",
-    "AdminEmail": "",
-    "StaasRegion": ""
+    "OrganizationApiKey": "<Organization API Key>",
+    "SystemName": "<System Name>",
+    "SystemUrl": "<System URL>",
+    "AdminEmail": "<AdminEmail>"
   }
 }
 ```
+
+Keep the following things in mind if you use this configuration:
+
+- `RegistrationConfig` must be filled in for self-hosted storage when subscription licensing is used, as such a system is also registered on dataminer.services.
+- In this setup, `StaasRegion` is not applicable and can be left out.
 
 ### Example: Self-hosted storage with perpetual licensing
 
@@ -110,13 +129,29 @@ cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
   },
   "LicenseConfig": {
     "LicenseMode": "Perpetual",
-    "DataMinerId": "12345"
-  },
-  "RegistrationConfig": {
-    "StaasRegion": ""
+    "DataMinerId": "12345",
+    "LicenseFilePath": "C:\\Licenses\\DataMiner.lic"
   }
 }
 ```
+
+Keep the following things in mind if you use this configuration:
+
+- When `LicenseConfig.LicenseMode` is set to `Perpetual`, `LicenseConfig.DataMinerId` is mandatory. The specified DataMiner ID is used during the configuration instead of an ID assigned by dataminer.services.
+
+- Since this combination does not register the system on dataminer.services, `RegistrationConfig` can be left out entirely.
+
+- `LicenseFilePath` is optional and can be omitted if you prefer to apply the license manually afterwards.
+
+  If you specify the license path, make sure it points to an already obtained DataMiner license file. The file will be copied to the DataMiner root folder (*C:\Skyline DataMiner*) before DataMiner is started, so that you do not need to generate a *Request.lic* file and upload a license afterwards.
+
+  If the path does not exist, the configuration will fail with a validation error.
+
+  > [!IMPORTANT]
+  >
+  > - The license file is copied without being renamed, so it must be named *DataMiner.lic*. Otherwise, DataMiner will not pick it up.
+  > - As the configuration file contains JSON code, escape every backslash in the path by doubling it, for example, `"C:\\Licenses\\DataMiner.lic"`. Alternatively, you can use forward slashes, for example `"C:/Licenses/DataMiner.lic"`.
+  > - A DataMiner license is bound to the MAC address of the machine it was requested for. Make sure the license file specified in `LicenseFilePath` was generated for the MAC address of the server on which you are running the unattended configuration. If the MAC address does not match, DataMiner will not be able to start with that license.
 
 ## Deprecated v10.2 or v10.0 Installer
 

@@ -9,6 +9,73 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 27 August 2026 - New feature - Catalog - API calls authenticated by organization key
+
+It is now possible to update Catalog metadata for a specific version or version range using two new API calls authenticated by organization key. For detailed API documentation, refer to the [Swagger UI](https://global.dataminer.services/swagger/catalogapi-web/index.html).
+
+### 27 August 2026 - Enhancement - Admin - DMS API key permissions granularity
+
+From now on, API keys on DMS level will also have more permission granularity, similar to the organization API keys. All existing DMS API keys will keep working as before with the same permissions they already had. New permissions will not be assigned to existing DMS API keys. See [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
+
+### 27 August 2026 - New feature - Admin - Setting to toggle automatic login for remote access
+
+A new setting has been added in the Admin app that allows toggling automatic login for remote access. Toggling the automatic login off will require users to log in manually instead of using the linked DataMiner account by default. See [Controlling remote access](xref:Controlling_remote_access).
+
+### 27 August 2026 - Fix - Remote access - Logout from web apps not working correctly when using remote access
+
+When you logged out from the web apps while accessing them remotely, the automatic login could interfere and cause you to be logged in again. This issue has now been resolved.
+
+### 27 August 2026 - New feature - Catalog - Filter and search version history
+
+On the *Versions* tab of a Catalog item, it is now possible to filter and search the version history:
+
+- **Filter version history**: Filter ranges and versions by metadata, such as firmware version or version dependencies (e.g., minimum DataMiner version), with a search box and a *show more* option for long lists of options.
+- **Cleaner results**: Ranges, versions, and recommended versions that do not match the selected filters are hidden automatically.
+
+### 27 August 2026 - Fix - Admin - HTML-escaped characters shown in audit detail values
+
+In the audit detail view of the Admin app, values were HTML-escaped before being displayed, so for example a character such as `>` was shown as `&gt;` instead of `>`. Since these values are shown in input fields, which display their content as plain text, the escaping was not needed. This issue has been resolved.
+
+### 12 August 2026 - New feature - Catalog - Catalog item range Markdown support
+
+Catalog item ranges now support Markdown.
+
+### 12 August 2026 - New feature - Admin - Subscription templates
+
+On the Billing page of the Admin app, the *Add Subscription* button now launches a wizard instead of a context menu. The wizard also introduces a new *Templates* option, which offers predefined solution packs with an estimation of the units needed for a subscription based on that solution.
+
+### 6 August 2026 - Enhancement - Sharing - Improved error feedback for rejected share actions
+
+Error feedback has been improved for cases where creating, updating, or deleting a share is rejected by the DataMiner System. The messages shown now help you understand how to correct linked-account or organization issues.
+
+### 6 August 2026 - New feature - Admin - DataMiner Software section on DMS Overview page
+
+The DMS Overview page in the Admin app has been extended with a *DataMiner Software* section, showing the current software version, including the web version if a web-only upgrade has been installed.
+
+### 6 August 2026 - Fix - Connection - Operation cancelled error shown when switching organizations
+
+When switching organizations, the check to determine whether a DaaS system could be deployed was triggered twice. This could cause one of the calls to be aborted, resulting in an "operation cancelled" error being shown. This issue has been resolved.
+
+### 6 August 2026 - Fix - Admin - Stale data briefly shown on rapid filter changes
+
+On the Support Tickets page of the Admin app, rapidly switching filters could briefly display stale table data from the previous filter before the new results had finished loading. This issue has been resolved.
+
+### 6 August 2026 - Fix - Admin - Documentation links in support ticket descriptions not rendered as hyperlinks
+
+In the ticket details view on the Support page of the Admin app, embedded documentation links in a ticket description were shown as raw text instead of as clickable hyperlinks. This issue has been resolved.
+
+### 6 August 2026 - Fix - Admin - False error shown for support tickets outside the active time filter
+
+On the Support page of the Admin app, opening a direct link to a support ticket older than the active time filter incorrectly showed an error stating that the ticket could not be found. A fallback lookup by ID has been added so these tickets now open correctly.
+
+### 6 August 2026 - Enhancement - Admin - Duplicate support ticket creation prevented
+
+On the Support page of the Admin app, safeguards have been added to prevent duplicate support tickets from being created when network issues occur or when a ticket submission is automatically retried.
+
+### 6 August 2026 - Enhancement - Admin - Cluster dropdown and ticket form validation improvements
+
+On the Support page of the Admin app, the cluster dropdown now groups standalone DataMiner Agents. In addition, form validation has been improved with deferred error messages and character limit counters.
+
 ### 16 July 2026 - Enhancement - Home - Back button on create organization step in DaaS deploy wizard
 
 A back button is now available on the create organization step in the DaaS deploy wizard.

@@ -13,16 +13,26 @@ uid: General_Main_Release_10.7.0_new_features
 
 ## New features
 
-#### Credentials at rest [ID 44075] [ID 44352] [ID 44701] [ID 44702] [ID 44911]
+#### DataMiner key vault [ID 44075] [ID 44349] [ID 44350] [ID 44351] [ID 44352] [ID 44353] [ID 44354] [ID 44701] [ID 44702] [ID 44911] [ID 46047] [ID 46061]
 
-<!-- MR 10.7.0 - FR 10.6.9 -->
+<!-- MR 10.7.0 - FR 10.6.10 -->
 
-From now on, credential secrets are stored as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) instead of in the legacy *Library.xml* file. The encryption material is held in a per-node `encryptors.bin` file under `%CommonApplicationData%\Skyline Communications\DataMiner StorageModule\Encryption\`, wrapped with the Windows [Data Protection API (DPAPI)](https://learn.microsoft.com/en-us/dotnet/standard/security/how-to-use-data-protection) under *LocalMachine* scope.
+From DataMiner 10.7.0/10.6.10 onwards, all credentials managed through the Credentials Library (SNMPv2/community, SNMPv3, username/password, and token credentials) will be protected using encryption at rest.
 
-Because DPAPI binds the encryption keys to the host that produced them, restoring a DataMiner Agent on a different machine requires a **DMS backup password**. When this password has been configured, a full DataMiner backup contains a passphrase-wrapped envelope (`backup_encryptors.bin`) that is sealed with PBKDF2-HMAC-SHA-256 (100,000 iterations, 32-byte salt) and AES-256-CBC with HMAC-SHA-256, so that the encryption material can travel between hosts without exposing the keys in plain text. For more information, see [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent) and [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility).
+Key enhancements include:
+
+- Secure storage of secrets as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) in a dedicated encrypted store managed by the DataMiner StorageModule, with support for Cassandra, cloud storage, and XML-based deployments. Encryption keys are stored per node and protected using Windows DPAPI.
+
+- Introduction of the DMS backup password, needed to restore encrypted backups on clean machines while maintaining secure key custody. The restore wizard will automatically detect when the password is required and will validate it during restore operations.
+
+- Automatic migration of existing credentials from *Library.xml* to the encrypted store during upgrades, and reconstruction of *Library.xml* during downgrades for backwards compatibility.
+
+- Cluster-wide secret re-encryption support through the SLNetClientTest tool, allowing administrators to rotate encryption keys and re-encrypt all stored secrets without changing credential identifiers.
+
+- Additional security and robustness improvements, including permission enforcement for credential management, duplicate-name protection, decryption failure detection, and extensive reliability enhancements.
 
 > [!IMPORTANT]
-> Store the DMS backup password securely outside DataMiner (for example, in a password manager). If it is lost, encrypted credentials in any backup taken with that password can no longer be recovered on a clean host. In a multi-node cluster, a peer DataMiner Agent can re-synchronize the encryption material to a restored node, but this should not be relied upon as a substitute for a properly configured DMS backup password.
+> The DMS backup password should be stored securely outside DataMiner (for example, in a password manager). If it is lost, encrypted credentials in any backup taken with that password can no longer be recovered on a clean host. In a multi-node cluster, a peer DataMiner Agent can re-synchronize the encryption material to a restored node, but this should not be relied upon as a substitute for a properly configured DMS backup password.
 
 <!-- See also Cube RNs [ID 45704] [ID 45997] -->
 
@@ -87,6 +97,36 @@ A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve t
 >
 > - *Modules > Automation > UI available*
 > - *Modules > Automation > Execute*
+
+#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Automation scripts now support adding credentials from the Credentials Library directly in the script's XML code.
+
+See the following example:
+
+```xml
+<Credentials>
+    <Credential id="1">
+        <Name>MyCredential</Name>
+        <CredentialId>8d15e7d8-f8f6-41f6-985c-fddbd3ea94ae</CredentialId>
+        <Type>Token</Type>
+    </Credential>
+</Credentials>
+```
+
+| Element | Attribute | Content |
+|---|---|---|
+| Credential | id | ID of the credential (integer, unique per script) |
+| Name | - | Name of the credential (string, unique per script) |
+| CredentialId | - | GUID of the linked credential from the Credentials Library |
+| Type | - | Type of credential: `UserNamePassword` or `Token` |
+
+> [!NOTE]
+>
+> - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
+> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNamePassword` and `Token` credentials stored in the Credentials Library.
 
 #### SLNet subscription logging [ID 44361]
 
@@ -463,3 +503,11 @@ Routes are validated more strictly before create and update:
 Route conflicts are also detected across all existing definitions. Any two templates that can match the same request path are rejected, including conflicts between literal and parameterized routes and between overlapping parameterized templates. If a route with `ticket/{id}` already exists, a new route like `ticket/{ticketId}` will be rejected.
 
 When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
+
+#### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+In order to notify client applications when the measurement point cycle changes, a new spectrum parameter has been added: `SPA_SPARAM_MEASPOINT_CYCLE` (PID 64227).
+
+This will especially improve synchronization in shared sessions, keeping measurement point cycle updates aligned across connected clients.

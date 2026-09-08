@@ -26,6 +26,13 @@ uid: General_Feature_Release_10.6.1
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.1](xref:Web_apps_Feature_Release_10.6.1).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+## Important changes
+
+The following changes may have an impact on your system, so please make sure to check these before you upgrade:
+
+- [Unicode string values will now be saved correctly in non-Unicode elements [ID 43929]](#unicode-string-values-will-now-be-saved-correctly-in-non-unicode-elements-id-43929)
+- [Annotations are now End of Life [ID 44136]](xref:Web_apps_Feature_Release_10.6.1#annotations-are-now-end-of-life-id-44136)
+
 ## Highlights
 
 - [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)

@@ -8,6 +8,9 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards | | September 7, 2026 |
+| [Swarmed scheduled task executes incorrect action after editing](xref:KI_Swarmed_scheduled_task_executes_incorrect_action) | Feature Release versions from DataMiner 10.6.3 onwards | | September 7, 2026 |
+| [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
 | [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
@@ -38,6 +41,8 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards | | September 7, 2026 |
+| [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
 | [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
@@ -95,6 +100,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
@@ -158,6 +164,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |

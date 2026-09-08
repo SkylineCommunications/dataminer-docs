@@ -22,7 +22,7 @@ From DataMiner 10.5.x onwards, web apps can only be upgraded to the next major v
 > - Executing a DataMiner upgrade will override any DataMiner web upgrades that have been performed in the past.
 > - New web functionality that depends on new features in the core processes will not be available until you have also upgraded the core software.
 > - **All Agents within a cluster must run the same version** of the web apps. When you upgrade the web apps, you should therefore make sure the upgrade is applied to every Agent in the cluster.
-> - Web upgrades also update the [GQI DxM](xref:GQI_DxM) (since 10.5.2) and [Web DcM](xref:DataMinerExtensionModules#web) (since 10.5.11).
+> - Web upgrades also update the [GQI DxM](xref:GQI_DxM) (since 10.5.2) and [Web DcM](xref:DataMinerCoreModules#web) (since 10.5.11).
 
 > [!TIP]
 > You can download the latest web upgrade package on [DataMiner Dojo](https://community.dataminer.services/dataminer-web-upgrade-packages/).
@@ -77,7 +77,7 @@ After the downgrade, the following steps need to be taken for the [GQI DxM](xref
 
 ### Reinstalling the Web DcM
 
-If you are downgrading to a version that includes the [Web DcM](xref:DataMinerExtensionModules#web) (DataMiner 10.5.11 or later), follow these steps:
+If you are downgrading to a version that includes the [Web DcM](xref:DataMinerCoreModules#web) (DataMiner 10.5.11 or later), follow these steps:
 
 1. Uninstall the current Web DcM.
 

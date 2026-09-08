@@ -68,7 +68,7 @@ Even if this option is not specified, by default an authentication ticket is pas
 
 ### UseChrome
 
-From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43429-->, the `UseChrome` option can no longer be used. If it is specified in a shape, it will be disregarded, and the shape will use Edge instead.
+From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43429-->, the `UseChrome` option can no longer be used. If it is specified in a shape, it will be disregarded, and the shape will use Microsoft Edge instead.
 
 In earlier versions, you can make sure the webpage is displayed using the Chromium web browser regardless of the default browser settings in Cube. To do so, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseChrome".
 
@@ -78,7 +78,7 @@ By default, Chromium is used to display webpages embedded in DataMiner Cube. To 
 
 ### UseEdge
 
-From DataMiner 10.1.11/10.2.0 onwards, you can use Microsoft Edge (WebView2) to display an embedded webpage in DataMiner Cube. To do so, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseEdge".
+To use Microsoft Edge (WebView2) to display an embedded webpage in DataMiner Cube, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "UseEdge".
 
 > [!NOTE]
 >

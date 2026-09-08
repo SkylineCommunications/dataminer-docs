@@ -18,7 +18,7 @@ We recommend using the [DOM Editor](xref:DOM_editor_attachments_networkshare) to
 |Property |Type   |Description |
 |---------|-------|------------|
 | NetworkSharePath | string | The UNC path to the network share where the attachments should be saved. |
-| CredentialId | Guid | The ID of the credentials in the credentials library. |
+| CredentialId | Guid | The ID of the credentials in the [Credentials Library](xref:Credentials_Library). |
 
 ## NetworkSharePath
 
@@ -34,4 +34,4 @@ Can only be used in combination with [CredentialId](#credentialid).
 
 In order for DataMiner to access the network share, it needs the credentials of a user that has read/write access to the path defined in [NetworkSharePath](#networksharepath).
 
-These credentials have to be saved in the **credentials library**, which can be accessed in Cube, via *System Center* > *System settings* > *credentials library*. They have to be credentials of type *Username and password credentials*. In case you have a Windows network share, you need to add the domain name (for domain user) or hostname (for local user) in front of the username (e.g., "MYPC\userName").
+These credentials have to be saved in the [Credentials Library](xref:Credentials_Library), which can be accessed in Cube, via *System Center* > *System settings* > *credentials library*. They have to be credentials of type *Username and password credentials*. In case you have a Windows network share, you need to add the domain name (for domain user) or hostname (for local user) in front of the username (e.g., "MYPC\userName").
