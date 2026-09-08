@@ -10,7 +10,31 @@ description: Highlights of the features, enhancements, and fixes included in the
 
 ## Enhancements
 
-*No enhancements have been added to this release yet.*
+### DevPack: Asynchronous orchestration event execution [ID 46394]
+
+The MediaOps Live DevPack now supports asynchronous execution of previously saved orchestration events. You can use the new `ExecuteEventsNowInBackground` methods on `OrchestrationHelper` to start event execution without blocking the calling script.
+
+You can provide the event IDs:
+
+```csharp
+IEnumerable<Guid> eventIds =
+[
+    firstEventId,
+    secondEventId,
+];
+
+orchestrationHelper.ExecuteEventsNowInBackground(eventIds);
+```
+
+Alternatively, you can provide the corresponding `OrchestrationEvent` objects directly:
+
+```csharp
+orchestrationHelper.ExecuteEventsNowInBackground(orchestrationEvents);
+```
+
+The DevPack will launch the `ORC-AS-EventOrchestration` automation script as a deferred fire-and-forget task and immediately return control to the caller. You must save the events before calling either method because the background script retrieves them by ID.
+
+When you start an event scheduled for the future this way, its scheduled task will be removed to prevent duplicate execution. Failures during background execution will continue to be reported in the state of the associated job.
 
 ## Fixes
 
