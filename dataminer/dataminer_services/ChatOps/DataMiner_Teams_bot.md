@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Teams_bot
+description: "Learn how you can interact with your DataMiner System in Microsoft Teams by using the DataMiner bot. However, note that this bot is being retired."
 reviewer: Alexander Verkest
 ---
 

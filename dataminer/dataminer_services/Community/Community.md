@@ -1,5 +1,6 @@
 ---
 uid: Community
+description: "Join the Dojo DataMiner Community platform to participate in the worldwide DataMiner community and learn how to get started."
 ---
 
 # DataMiner Community
