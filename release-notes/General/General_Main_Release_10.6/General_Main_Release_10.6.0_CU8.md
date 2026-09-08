@@ -34,7 +34,7 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-*No enhancements have been selected yet.*
+*No enhancements have been added yet.*
 
 ### Fixes
 

@@ -184,7 +184,7 @@ A number of enhancements have been done with regard to the communication between
 
 #### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
 
-<!-- MR 10.7.0 - FR 10.6.2 -->
+<!-- MR 10.6.0 [CU7] - FR 10.6.2 -->
 
 In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
 
