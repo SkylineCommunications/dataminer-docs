@@ -16,4 +16,4 @@ The PTP app supports the following types of devices:
 
 ## Supported vendor connectors
 
-To see the list of supported vendor connectors and third-party devices integrated with the PTP solution, refer to [Skyline PTP Technical](xref:Connector_help_Skyline_PTP_Technical). That page serves as the single source of truth for connector compatibility.
+To see the list of supported vendor connectors and third-party devices integrated with the PTP solution, refer to [Skyline PTP Technical](https://docs.dataminer.services/connector/doc/Skyline_PTP_Technical.html). That page serves as the single source of truth for connector compatibility.

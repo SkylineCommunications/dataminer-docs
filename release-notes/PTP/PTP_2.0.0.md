@@ -39,7 +39,7 @@ In alignment with IEEE 1588-2019 and the PTP Monitor UI, the solution now standa
 
 #### Single source of truth for supported connectors
 
-The list of supported vendor connectors has been consolidated into the [Skyline PTP Technical](xref:Connector_help_Skyline_PTP_Technical) connector documentation, which serves as the definitive reference for compatible devices.
+The list of supported vendor connectors has been consolidated into the [Skyline PTP Technical](https://docs.dataminer.services/connector/doc/Skyline_PTP_Technical.html) connector documentation, which serves as the definitive reference for compatible devices.
 
 #### Retirement of legacy Automation scripts and Visio pages
 
