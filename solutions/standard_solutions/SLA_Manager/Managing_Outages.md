@@ -3,7 +3,7 @@ uid: Managing_Outages
 description: Learn how to view, filter, and correct outages for the SLAs registered in the DataMiner SLA Manager app.
 ---
 
-# Managing outages
+# Outages
 
 The *Outages* page aggregates the outages recorded for every SLA in the inventory.
 

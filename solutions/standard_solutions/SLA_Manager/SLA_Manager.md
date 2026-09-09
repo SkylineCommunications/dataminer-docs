@@ -12,6 +12,9 @@ SLA Manager includes support for the following capabilities:
 - Discovery and synchronization of all SLA elements across your DataMiner System.
 - A managed inventory of SLAs, enriched with service level tier, objective type, admin state, and validity information.
 - Automatic classification of SLAs into primary, secondary, and standalone services.
+- A fleet-level dashboard with compliance, health, and outage KPIs.
+- A dedicated page to quickly find the SLAs that need attention.
+- A penalty box to pin the SLAs you want to keep a close eye on.
 - Full SLA lifecycle management (create, edit, and delete) from the web app.
 - Reusable configuration templates for SLA creation.
 - Outage management, with inline editing of corrections, motivations, and ticket references.

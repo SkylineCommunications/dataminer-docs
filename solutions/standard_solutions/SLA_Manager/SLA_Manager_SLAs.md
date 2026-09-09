@@ -1,15 +1,11 @@
 ---
-uid: SLA_Manager_App_Overview
-description: Explore the SLA Manager app overview page, which lists all registered SLAs with their live compliance state, availability, and target.
+uid: SLA_Manager_SLAs
+description: Explore the SLAs page in SLA Manager, which lists all registered SLAs with their live compliance state, availability, and target.
 ---
 
-# SLA Manager app overview
+# SLAs
 
-The *SLAs* page gives you a system-wide view of all SLAs registered in the inventory, combined with live compliance data.
-
-## Compliance distribution
-
-At the top of the page, a compliance distribution bar shows how many SLAs are currently *Compliant*, *At risk*, *Degraded*, or *Violated*.
+The *SLAs* page gives you a system-wide inventory of all SLAs registered in the solution, combined with live compliance data.
 
 ## Table and grid views
 
@@ -23,6 +19,7 @@ In both views, you can:
 - Search the inventory by name.
 - Filter by service level tier and service category.
 - Select the trend window (24 hours, 2 days, 7 days, 30 days, or 90 days) from the toolbar.
+- Pin an SLA by clicking its star icon, to add it to the [Penalty Box](xref:SLA_Manager_Penalty_Box).
 
 ## SLA detail view
 
@@ -34,8 +31,4 @@ Selecting an SLA opens its detail view, which includes:
 
 The *Alarms* tab shows the active alarms and 24-hour alarm history for the service tracked by the SLA.
 
-## Theme
-
-You can switch the app between a light, dark, or system-based theme.
-
-For more information about managing SLAs from this page, see [Managing SLAs](xref:Managing_SLAs).
+For more information about creating, editing, deleting, and synchronizing SLAs from this page, see [Managing SLAs](xref:Managing_SLAs).

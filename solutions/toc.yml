@@ -423,14 +423,27 @@ items:
         topicUid: Installing_SLA_Manager
       - name: Accessing the SLA Manager app
         topicUid: Accessing_SLA_Manager
-      - name: SLA Manager app overview
-        topicUid: SLA_Manager_App_Overview
-      - name: Managing SLAs
-        topicUid: Managing_SLAs
-      - name: Managing SLA templates
-        topicUid: Managing_SLA_Templates
-      - name: Managing outages
-        topicUid: Managing_Outages
+      - name: Overview
+        items:
+        - name: Dashboard
+          topicUid: SLA_Manager_Dashboard
+        - name: Needs Attention
+          topicUid: SLA_Manager_Needs_Attention
+        - name: SLAs
+          topicUid: SLA_Manager_SLAs
+          items:
+          - name: Managing SLAs
+            topicUid: Managing_SLAs
+        - name: Penalty Box
+          topicUid: SLA_Manager_Penalty_Box
+      - name: Operations
+        items:
+        - name: Outages
+          topicUid: Managing_Outages
+      - name: Insights
+        items:
+        - name: Templates
+          topicUid: Managing_SLA_Templates
     - name: Ticketing
       topicUid: Ticketing
       items:

@@ -3,7 +3,7 @@ uid: Managing_SLA_Templates
 description: Learn how to create, edit, and delete reusable SLA configuration templates in the DataMiner SLA Manager app.
 ---
 
-# Managing SLA templates
+# Templates
 
 The *Templates* page gives you a card overview of all reusable SLA configuration templates, such as the tracking window, violation budgets, and prediction settings.
 

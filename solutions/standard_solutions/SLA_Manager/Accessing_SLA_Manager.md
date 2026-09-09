@@ -13,4 +13,7 @@ To access the SLA Manager app:
 
    The app verifies your DataMiner connection and redirects you to the sign-in page if your session is no longer active.
 
-Once you are signed in, you land on the SLA overview page. For more information, see [SLA Manager app overview](xref:SLA_Manager_App_Overview).
+Once you are signed in, you land on the *Dashboard*. For more information, see [Dashboard](xref:SLA_Manager_Dashboard).
+
+> [!TIP]
+> In the top-right corner of the app, you can switch between a light, dark, or system-based theme.
