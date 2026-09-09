@@ -1,6 +1,6 @@
 ---
 uid: Microsoft_Teams_Chat_Integration
-description: "Learn how to set up the Microsoft Teams chat integration to send notifications. However, note that DataMiner ChatOps is being retired."
+description: "Learn about the deprecated Microsoft Teams chat integration, which used DataMiner Automation to integrate DataMiner with Microsoft Teams."
 reviewer: Alexander Verkest
 ---
 
