@@ -639,6 +639,7 @@ From now on, when you open the SLLogCollector tool, the tool will automatically 
 #### DataMiner Edge: Support for uploading dmprotocol packages containing scripts [ID 45906]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
+<!-- Released in FR 10.6.10 -->
 
 You can now upload a dmprotocol package that contains scripts. The scripts are stored in the `Protocol/<connector name>/<connector version>/Scripts` folder, following the package structure. Each script is stored in a separate folder named after its GUID.
 
