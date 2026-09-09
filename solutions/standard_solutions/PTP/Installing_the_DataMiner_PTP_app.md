@@ -17,11 +17,7 @@ Before deploying the PTP package:
 
 To deploy or upgrade the PTP app:
 
-### [From DataMiner PTP 2.0.0 onwards](#tab/deploy-2-0)
-
-Deploy the [PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the Catalog.
-
-### [DataMiner PTP 1.1.4 to 1.2.X](#tab/deploy-1-1-4)
+### [From DataMiner PTP 1.1.4 onwards](#tab/deploy-1-1-4)
 
 Deploy the [PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the Catalog.
 
