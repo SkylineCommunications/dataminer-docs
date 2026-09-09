@@ -1,5 +1,6 @@
 ---
 uid: GQI_ICredentialProvider
+description: Reference for the ICredentialProvider interface, which retrieves username and password credentials granted to a GQI extension library.
 ---
 
 # ICredentialProvider interface

@@ -1,11 +1,12 @@
 ---
 uid: GQI_Extensions_Credentials
 keywords: GQI extension credentials
+description: Learn how to grant and retrieve DataMiner Credentials Library username and password credentials in a GQI extension.
 ---
 
 # Using credentials in GQI extensions
 
-The Core GQI extension API can retrieve username and password credentials from the DataMiner Credentials Library. This allows an extension to connect to an external system without storing credentials in its source code.
+The Core GQI extension API can retrieve credentials from the [DataMiner Credentials Library](xref:Credentials_Library).
 
 Currently, only credentials of type *Username and password credentials* are supported. Other credential types in the Credentials Library cannot be retrieved through this API.
 
@@ -18,7 +19,7 @@ This functionality is available from DataMiner 10.6.11/10.7.0 [CU0] onwards when
 
 1. Add a credential of type *Username and password credentials* to the DataMiner Credentials Library in DataMiner Cube. For more information, see [Credentials Library](xref:Credentials_Library).
 
-2. In the Automation module in DataMiner Cube, configure the credential for the Automation Script that contains the extension library. In the script's *CREDENTIALS* section, declare the credential as described in [Using credentials in an automation script](xref:Using_credentials_in_an_automation_script#declaring-a-credential). Give the credential reference a name, such as `external-api`, and select the credential from the Credentials Library.
+2. In the Automation module in DataMiner Cube, configure the credential for the Automation Script that contains the extension library. In the script's *CREDENTIALS* section, declare the credential as described in [Using credentials in an automation script](xref:Using_credentials_in_an_automation_script#declaring-a-set-of-credentials). Give the credential reference a name, such as `MyUserNamePasswordCredential`, and select the corresponding credential from the Credentials Library.
 
 The name configured for the credential reference is the name that the extension uses to request the credential.
 
@@ -51,15 +52,16 @@ Call `GetUsernamePasswordCredential` with the name configured for the credential
 private UsernamePasswordCredential GetCredential()
 {
     return _credentialProvider
-        .GetUsernamePasswordCredential("external-api")
+        .GetUsernamePasswordCredential("MyUserNamePasswordCredential")
         .GetAwaiter()
         .GetResult();
 }
 ```
 
-`GetUsernamePasswordCredential` is asynchronous. If the call is made from an asynchronous method, await it directly. GQI extension lifecycle methods are synchronous, so retrieve the credential once before fetching data and keep it for the required operation instead of requesting it for every row or page.
+> [!NOTE]
+> `GetUsernamePasswordCredential` returns a task. GQI extension lifecycle methods are synchronous, so call `.GetAwaiter().GetResult()` there. If you call it from an asynchronous helper, await it directly. Retrieve the credential once before fetching data rather than requesting it for every row or page.
 
-Use the `Username` and `Password` properties to authenticate with the external system. Treat these values as secrets: never log them, include them in query results, or add them to exception messages.
+Treat the values retrieved from the credential library as secrets: never log them, include them in query results, or add them to exception messages.
 
 ## Troubleshooting
 

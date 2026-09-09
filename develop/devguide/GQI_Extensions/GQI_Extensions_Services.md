@@ -182,6 +182,7 @@ The following types can be used as constructor parameters:
 |--|--|--|
 | [IGQILogger](xref:GQI_IGQILogger) | A logger for the extension or service. | Extensions and services |
 | [IGQIFactory](xref:GQI_IGQIFactory) | Factory methods to create GQI objects. | Extensions and services |
+| [ICredentialProvider](xref:GQI_ICredentialProvider) | Access to username and password credentials granted to the extension library. | Extensions |
 | [IGQIDMSInterface](xref:GQI_IGQIDMSInterface) | Access to the DataMiner System. | Extensions and [user-scoped services](#retrieving-data-from-dataminer-in-services) |
 | [IConnection](xref:Skyline.DataMiner.Net.IConnection) | A live SLNet connection to the DataMiner System. | Extensions and [user-scoped services](#retrieving-data-from-dataminer-in-services) |
 | [IGQISecurity](xref:GQI_IGQISecurity) | The current security context. | Extensions, security services, and user services |

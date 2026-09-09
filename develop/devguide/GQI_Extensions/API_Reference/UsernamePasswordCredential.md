@@ -1,5 +1,6 @@
 ---
 uid: GQI_UsernamePasswordCredential
+description: Reference for the UsernamePasswordCredential class, which contains a username and password retrieved for a GQI extension.
 ---
 
 # UsernamePasswordCredential class
