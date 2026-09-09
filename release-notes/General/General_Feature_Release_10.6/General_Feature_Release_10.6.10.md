@@ -114,6 +114,17 @@ This will especially improve synchronization in shared sessions, keeping measure
 
 The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to Cassandra Cluster from MySQL or Cassandra Single, now also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the Credentials Library.
 
+#### DataMiner Edge: Support for uploading dmprotocol packages containing scripts [ID 45906]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+You can now upload a dmprotocol package that contains scripts. The scripts are stored in the `Protocol/<connector name>/<connector version>/Scripts` folder, following the package structure. Each script is stored in a separate folder named after its GUID.
+
+The script files and a *dependencies.json* file, which lists each script's dependencies, file size, and content hash, are synchronized throughout the cluster.
+
+> [!NOTE]
+> Deployment of these scripts to an Edge Node when you create an element with the connector is not yet supported.
+
 #### Enhanced performance when upgrading the ModelHost DxM [ID 45967]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->

@@ -636,6 +636,17 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
 From now on, when you open the SLLogCollector tool, the tool will automatically be configured to include a memory dump of the SLPort and SLSNMPManager processes when a runtime error was detected in SLProtocol.
 
+#### DataMiner Edge: Support for uploading dmprotocol packages containing scripts [ID 45906]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+You can now upload a dmprotocol package that contains scripts. The scripts are stored in the `Protocol/<connector name>/<connector version>/Scripts` folder, following the package structure. Each script is stored in a separate folder named after its GUID.
+
+The script files and a *dependencies.json* file, which lists each script's dependencies, file size, and content hash, are synchronized throughout the cluster.
+
+> [!NOTE]
+> Deployment of these scripts to an Edge Node when you create an element with the connector is not yet supported.
+
 #### Enhanced performance when upgrading the ModelHost DxM [ID 45967]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
