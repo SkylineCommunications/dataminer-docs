@@ -5,6 +5,14 @@ description: Deploy the PTP package from the DataMiner Catalog, set up the app, 
 
 # Installing the PTP app
 
+## Prerequisites
+
+Before deploying the PTP package:
+
+1. Ensure that the devices you plan to monitor are already created and configured as elements in DataMiner.
+1. Verify that your devices are supported by the solution. For the definitive list of supported vendor connectors, see [Skyline PTP Technical](xref:Connector_help_Skyline_PTP_Technical).
+1. Make sure you have at least one **Grandmaster** clock and one additional device configured to act as the **PTP probe** before the solution can be functional.
+
 ## Deploying the package
 
 To deploy or upgrade the PTP app:

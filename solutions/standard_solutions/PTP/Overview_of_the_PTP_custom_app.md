@@ -48,7 +48,7 @@ This page contains the following key components:
   - Free-text search to quickly find alarms by element name or description.
   - A toggle to filter between showing only PTP-specific alarms or all alarms from the equipment in the domain.
   - Severity badges (*Critical*, *Major*, *Minor*, and *Warning*).
-  - Actions next to each element name to open the device in the DataMiner Monitoring app or open the slide-out device details panel.
+  - Actions to inspect devices: clicking an element name opens the device in the DataMiner Monitoring app, while clicking anywhere else on the row opens the slide-out device details panel.
 
 - **Active Grandmaster card**: Displays vital statistics of the detected active grandmaster clock in the domain:
   - Clock identity and lock status.
