@@ -105,3 +105,9 @@ If you deselect such a hidden item, it remains available in that editing session
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 Up to now, when two dropdown components were configured to feed data to each other, in some cases, the dashboard or low-code app could become unresponsive.
+
+#### Web API could incorrectly log a 'Failed adding folder' error when an application was deleted while the dashboards cache was being initialized [ID 46387]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When an application was deleted while the dashboards cache was being initialized, the web API could incorrectly log a `Failed adding folder` error with a `DirectoryNotFoundException`.
