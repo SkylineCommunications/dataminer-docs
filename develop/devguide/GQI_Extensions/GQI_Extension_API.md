@@ -18,3 +18,7 @@ In order to create a GQI extension, you use the GQI extension API. This API can 
 
 > [!TIP]
 > To ease the transition of extensions that were built against the legacy API, it is possible to combine both APIs within extension libraries and within extensions. If a data source is implemented with both the Core.GQI package and the legacy API, GQI uses the Core.GQI implementation when it is supported.
+
+## Accessing credentials
+
+The Core GQI extension API provides the [ICredentialProvider](xref:GQI_ICredentialProvider) service for retrieving username and password credentials that have been granted to an extension library. See [Using credentials in GQI extensions](xref:GQI_Extensions_Credentials) for configuration and usage details.

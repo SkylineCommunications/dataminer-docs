@@ -1054,6 +1054,10 @@ items:
             topicUid: GQI_GQIServiceAttribute
           - name: GQISortDirection
             topicUid: GQI_GQISortDirection
+          - name: UsernamePasswordCredential
+            topicUid: GQI_UsernamePasswordCredential
+          - name: ICredentialProvider
+            topicUid: GQI_ICredentialProvider
           - name: GQIStaticColumnsAttribute
             topicUid: GQI_GQIStaticColumnsAttribute
           - name: GQIUserServiceAttribute
@@ -1136,6 +1140,8 @@ items:
             topicUid: GQI_TimeRangeMetadata
       - name: Extension API
         topicUid: GQI_Extension_API
+      - name: Using credentials
+        topicUid: GQI_Extensions_Credentials
       - name: Services
         topicUid: GQI_Extensions_Services
       - name: Retrieving data from DataMiner
