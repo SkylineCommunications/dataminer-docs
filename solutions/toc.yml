@@ -416,6 +416,21 @@ items:
           topicUid: SS_UI
         - name: Managing transponder bookings
           topicUid: SS_Managing_Bookings
+    - name: SLA Manager
+      topicUid: SLA_Manager
+      items:
+      - name: Installing SLA Manager
+        topicUid: Installing_SLA_Manager
+      - name: Accessing the SLA Manager app
+        topicUid: Accessing_SLA_Manager
+      - name: SLA Manager app overview
+        topicUid: SLA_Manager_App_Overview
+      - name: Managing SLAs
+        topicUid: Managing_SLAs
+      - name: Managing SLA templates
+        topicUid: Managing_SLA_Templates
+      - name: Managing outages
+        topicUid: Managing_Outages
     - name: Ticketing
       topicUid: Ticketing
       items:
