@@ -11,7 +11,11 @@ This BPA test checks several requirements:
 
 - It checks whether the following minimum hardware requirements are met or exceeded, via local WMI queries using .NET Libraries:
 
-  - CPU cores (physical): 4
+  - CPU cores (logical): 4.
+
+    > [!NOTE]
+    > Prior to DataMiner 10.6.0 [CU7]/10.6.10<!-- RN 46154 -->, the BPA test checks physical CPU cores instead.
+
   - Disk size:
 
     - Main installation (C:\\): 128 GB
@@ -90,7 +94,7 @@ One or more of the minimum requirements is not met.
 
 The detailed JSON output of the BPA will contain the following possible messages, depending on which requirements are not met:
 
-- CPU cores: `Failed CPU Check: X cores available, 4 are required.` or `Passed CPU Check: X cores available, 4 are required.` (where X is the number of physical cores in the system).
+- CPU cores: `Failed CPU Check: X cores available, 4 are required.` or `Passed CPU Check: X cores available, 4 are required.` (where X is the number of local cores in the system, or prior to DataMiner 10.6.0 [CU7]/10.6.10<!-- RN 46154 -->, where X is the number of physical cores in the system).
 
 - Disk size (main): `Failed Main Installation Disk Size Check: Disk X has Y GB, 128 GB is required.` or `Passed Main Installation Disk Size Check: Disk X has Y GB, 128 GB is required.` (where X is the installed disk and Y is the total volume of the disk).
 
