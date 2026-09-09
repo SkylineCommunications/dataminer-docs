@@ -106,7 +106,7 @@ After a Failover switch, SLASPConnection could fail to initialize correctly when
 
 #### NATSMigration and NATSRepair could omit errors from the final error overview [ID 46362]
 
-<!-- MR 10.7.0 - FR 10.6.11 -->
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
 
 Up to now, some errors encountered by *NATSMigration.exe* or *NATSRepair.exe* could incorrectly be missing from the error overview at the end of the command-line output.
 
