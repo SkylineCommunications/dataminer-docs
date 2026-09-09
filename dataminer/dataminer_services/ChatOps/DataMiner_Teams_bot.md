@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Teams_bot
+description: "Learn about the deprecated DataMiner Teams bot and how this was used to interact with a DataMiner System in Microsoft Teams."
 reviewer: Alexander Verkest
 ---
 
