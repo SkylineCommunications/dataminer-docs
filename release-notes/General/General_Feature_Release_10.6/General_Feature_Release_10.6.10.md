@@ -123,9 +123,6 @@ You can now upload a dmprotocol package that contains scripts. The scripts are s
 
 The script files and a *dependencies.json* file, which lists each script's dependencies, file size, and content hash, are synchronized throughout the cluster.
 
-> [!NOTE]
-> Deployment of these scripts to an Edge Node when you create an element with the connector is not yet supported.
-
 #### Enhanced performance when upgrading the ModelHost DxM [ID 45967]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -181,9 +178,9 @@ The `GetAvailableAutomationScripts` call now returns the following additional in
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
-When you create an element on a DataMiner Edge Node, you can now specify arguments and use secrets from the Credentials Library or DataMiner key vault. Secrets can be specified as a `UsernamePasswordCredential` or a `TokenCredential`.
+When you create an element on a DataMiner Edge Node, you can now specify arguments and use secrets of type `UsernamePasswordCredential` or `TokenCredential` from the Credentials Library.
 
-Connector settings can now use the `DropDown` input type to let you select from a predefined set of valid values. You can also use the `Section` tag to group related settings, for example authentication or SNMP settings.
+Connector settings can now use the `Text` input type to let you enter a text string or the `DropDown` input type to let you select from a predefined set of valid values. You can also use the `Section` tag to group related settings, for example authentication or SNMP settings.
 
 #### User-Defined APIs: IIS rewrite rules are now validated and repaired by the UserDefinableApiEndpoint DxM [ID 46143]
 
