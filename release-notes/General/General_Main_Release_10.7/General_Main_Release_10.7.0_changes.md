@@ -860,6 +860,12 @@ This was caused by an internal ID collision. Change point IDs restart from zero 
 
 Change points are now also distinguished by creation time. As a result, previously detected change points remain retrievable after a restart.
 
+#### NATSMigration and NATSRepair could omit errors from the final error overview [ID 46362]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, some errors encountered by *NATSMigration.exe* or *NATSRepair.exe* could incorrectly be missing from the error overview at the end of the command-line output.
+
 #### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
 
 <!-- MR 10.7.0 - FR 10.6.10 [CU0] -->
