@@ -130,7 +130,7 @@ Key features of the topology view include:
 
 The *Admin* page centralizes domain administration and role assignments within the PTP solution:
 
-- **Domain management table**: Lists all configured PTP domains with their assigned DataMiner views and node counts.
+- **Domain management table**: Lists all configured PTP domains with their name, element ID, and available actions (such as assigning roles, renaming, or deleting the domain).
 - **Add Domain modal**: A setup wizard to define a new PTP domain and assign initial devices and views (only elements supported by the solution are listed). The assigned view is used to place the domain element and service; users accessing the app must have read permissions for this view and its elements. If no domains exist yet (such as during first-time onboarding), this wizard is automatically presented as an onboarding overlay.
 - **Assign Roles modal**: A configuration wizard to change device roles (*Grandmaster*, *Boundary Clock*, *Transparent Clock*, or *Follower Clock*), designate preferred grandmasters, and assign the PTP probe. Default roles are automatically preselected based on the connector of each element.
 - **Rename Domain modal**: Allows you to rename an existing PTP domain.
