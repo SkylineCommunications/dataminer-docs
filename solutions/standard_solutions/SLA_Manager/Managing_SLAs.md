@@ -17,7 +17,7 @@ To create an SLA, click the *New SLA* button and complete the wizard:
 
    For more information, see [Managing SLA templates](xref:Managing_SLA_Templates).
 
-1. Specify the service level tier, tracking window, and admin state.
+1. Specify the service level tier, tracking window, admin state, and objective type.
 
 1. Confirm to create the SLA.
 

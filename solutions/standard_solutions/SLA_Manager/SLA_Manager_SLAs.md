@@ -7,6 +7,10 @@ description: Explore the SLAs page in SLA Manager, which lists all registered SL
 
 The *SLAs* page gives you a system-wide inventory of all SLAs registered in the solution, combined with live compliance data.
 
+## Compliance summary
+
+At the top of the page, summary tiles show how many SLAs are currently *Compliant*, *Degrading*, *Degraded*, or *Breached*. Click a tile to filter the inventory to that state.
+
 ## Table and grid views
 
 You can switch between two views of the inventory:
