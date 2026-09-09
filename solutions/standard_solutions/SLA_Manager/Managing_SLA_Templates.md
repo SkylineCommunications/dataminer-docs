@@ -7,6 +7,8 @@ description: Learn how to create, edit, and delete reusable SLA configuration te
 
 The *Templates* page gives you a card overview of all reusable SLA configuration templates, such as the tracking window, violation budgets, and prediction settings. Advanced settings let you fine-tune how the template affects alarms, outages, and service capping on the SLA element.
 
+![SLA Manager Templates page](~/solutions/images/SLAManager_Templates.png)
+
 From this page, you can:
 
 - Create a new template.

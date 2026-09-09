@@ -7,6 +7,8 @@ description: Learn about the Needs Attention page in SLA Manager, which lists th
 
 The *Needs Attention* page ranks all SLAs by an explainable attention score, so you can see what to act on before an SLA breaches. The score takes into account, among other things, whether the SLA is breached or degrading, how close it is to its target, whether it has an ongoing outage, and whether tracking is disabled.
 
+![SLA Manager Needs Attention page](~/solutions/images/SLAManager_NeedsAttention.png)
+
 Each SLA is grouped into one of three severity levels:
 
 - **Critical**

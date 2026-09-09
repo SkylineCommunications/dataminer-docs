@@ -7,6 +7,8 @@ description: Learn how to view, filter, and correct outages for the SLAs registe
 
 The *Outages* page aggregates the outages recorded for every SLA in the inventory.
 
+![SLA Manager Outages page](~/solutions/images/SLAManager_Outages.png)
+
 ## KPI cards
 
 At the top of the page, KPI cards summarize the number of ongoing outages, the total number of outages, the total downtime, and the corrected time.
