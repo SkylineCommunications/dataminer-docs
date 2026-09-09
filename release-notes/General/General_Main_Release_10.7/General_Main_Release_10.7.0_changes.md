@@ -701,6 +701,14 @@ The `GetAvailableAutomationScripts` call now returns the following additional in
 - `IsInteractive`: Indicates whether the script can show UI elements.
 - `CanBeExecuted`: Indicates whether the script can be run on its own. Scripts that only contain reusable libraries return `false`.
 
+#### DataMiner Edge: Support for arguments, secrets, dropdown input, and setting sections [ID 46142]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When you create an element on a DataMiner Edge Node, you can now specify arguments and use secrets from the Credentials Library or DataMiner key vault. Secrets can be specified as a `UsernamePasswordCredential` or a `TokenCredential`.
+
+Connector settings can now use the `DropDown` input type to let you select from a predefined set of valid values. You can also use the `Section` tag to group related settings, for example authentication or SNMP settings.
+
 #### User-Defined APIs: IIS rewrite rules are now validated and repaired by the UserDefinableApiEndpoint DxM [ID 46143]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
