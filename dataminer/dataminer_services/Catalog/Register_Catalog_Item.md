@@ -143,7 +143,7 @@ documentation_url: '<fill in documentation url here>'
 # People who are responsible for this Catalog item. Might be developers, but this is not required.
 #   The name is required; max 256 characters.
 #   The email is optional, and should be in valid email format.
-#   The role is optional; max 64 characters
+#   The role is optional; max 64 characters.
 owners:
   - name: '<fill in name here>'
     email: '<fill in email here>'
