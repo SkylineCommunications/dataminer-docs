@@ -228,11 +228,18 @@ When assigning properties:
 - Invalid property configurations, such as duplicate or invalid names, invalid section names, invalid string or file size limits, and missing or duplicate discrete values, now result in clear validation messages instead of script failures.
 - A file property with the default size limit now follows the maximum document size configured on the DataMiner Agent instead of storing the limit that applied when the property was created.
 
-#### Installer: Upgrades from versions older than 1.6.0 now blocked [ID 46369]
+#### Installer: Upgrades from versions older than 1.6.0 no longer supported [ID 46369] [ID 46401]
 
-Previously, MediaOps Plan could be upgraded to version 2.0.0 directly from any older version. Because several migration actions are only executed by the 1.6.x installers, this could leave existing data without the required migrations.
+Previously, MediaOps Plan could be upgraded to version 2.0.0 directly from any older version. Because several migration actions are only executed by the 1.6.x installers, this could leave existing data without the required migrations. Now you must first upgrade MediaOps Plan to the 1.6.x range before upgrading to MediaOps Plan 2.0.0.
 
-MediaOps Plan now verifies the installed version before continuing an upgrade. If a version older than 1.6.0 is detected, the installation is stopped with a message asking you to first upgrade to a 1.6.x version and then install version 2.0.0. This ensures that all migration actions are executed.
+When you upgrade, MediaOps Plan will first verify the installed version. If a version older than 1.6.0 is detected, the installation is stopped with a message asking you to first upgrade to a 1.6.x version and then install version 2.0.0. This ensures that all migration actions are executed.
+
+With this change, the following legacy migration scripts are no longer needed and have been removed:
+
+- Lock manager element rename
+- Pre-/post-roll migration
+- Profile definition migration
+- Lite job migration
 
 #### Automation scripts now run in separate process [ID 46385]
 
