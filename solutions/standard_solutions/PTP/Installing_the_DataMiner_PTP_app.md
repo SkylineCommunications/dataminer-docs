@@ -9,7 +9,7 @@ description: Deploy the PTP package from the DataMiner Catalog, set up the app, 
 
 Before deploying the PTP package:
 
-1. Ensure that the devices you plan to monitor are already created and configured as elements in DataMiner.
+1. Ensure that the devices you plan to monitor are already created and configured as elements in DataMiner. Note that configuring alarm templates for these elements is the responsibility of the user, as the PTP solution does not manage or deploy alarm templates automatically.
 1. Verify that your devices are supported by the solution. For the definitive list of supported vendor connectors, see [Skyline PTP Technical](xref:Connector_help_Skyline_PTP_Technical).
 1. Make sure you have at least one **Grandmaster** clock and one additional device configured to act as the **PTP probe** before the solution can be functional.
 
@@ -44,7 +44,7 @@ To complete the first-time setup:
 
    Because no domains exist yet, an onboarding overlay will be displayed prompting you to set up your first PTP domain.
 
-1. Specify a name for the PTP domain and select the corresponding DataMiner view.
+1. Specify a name for the PTP domain and select the corresponding DataMiner view. This view is used to place the domain element and service. Users who need to access the PTP Monitor web application must have read permissions for this view and its elements.
 
 1. Select the elements to include in the domain. Only elements that are supported by the PTP solution will be displayed.
 
