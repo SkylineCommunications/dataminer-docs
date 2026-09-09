@@ -27,4 +27,5 @@ A virtual element is based on a virtual protocol. This is different from a norma
 
 A virtual element can also have new parameters, which often contain the result of a mathematical calculation based on the values of one or more parameters from “real” elements. You could, for instance, retrieve the output level and the input level from a “real” element, calculate the transmission loss and store the result in a new parameter of your virtual element.
 
-To link parameters and configure virtual elements, use the [Element Connections module](xref:Element_Connections_module).
+> [!TIP]
+> For more information on how to link parameters and configure virtual elements, see [About the Element Connections module](xref:Element_Connections_module) and [Configuring virtual elements](xref:Configuring_virtual_elements).

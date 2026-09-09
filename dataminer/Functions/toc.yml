@@ -1003,7 +1003,11 @@ items:
     - name: Troubleshooting
       topicUid: EdgeManagerTroubleshooting
   - name: Element Connections
-    topicUid: Element_Connections_module
+    items:
+    - name: About the Element Connections module
+      topicUid: Element_Connections_module
+    - name: Configuring virtual elements
+      topicUid: Configuring_virtual_elements
   - name: Experience and Performance Management (EPM)
     topicUid: EPM
     items:
