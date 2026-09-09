@@ -114,6 +114,15 @@ This will especially improve synchronization in shared sessions, keeping measure
 
 The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to Cassandra Cluster from MySQL or Cassandra Single, now also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the Credentials Library.
 
+#### DataMiner Edge: Support for uploading dmprotocol packages containing scripts [ID 45906]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+<!-- Released in FR 10.6.10 -->
+
+You can now upload a dmprotocol package that contains scripts. The scripts are stored in the `Protocol/<connector name>/<connector version>/Scripts` folder, following the package structure. Each script is stored in a separate folder named after its GUID.
+
+The script files and a *dependencies.json* file, which lists each script's dependencies, file size, and content hash, are synchronized throughout the cluster.
+
 #### Enhanced performance when upgrading the ModelHost DxM [ID 45967]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -164,6 +173,14 @@ The `GetAvailableAutomationScripts` call now returns the following additional in
 
 - `IsInteractive`: Indicates whether the script can show UI elements.
 - `CanBeExecuted`: Indicates whether the script can be run on its own. Scripts that only contain reusable libraries return `false`.
+
+#### DataMiner Edge: Support for arguments, secrets, dropdown input, and setting sections [ID 46142]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When you create an element on a DataMiner Edge Node, you can now specify arguments and use secrets of type `UsernamePasswordCredential` or `TokenCredential` from the Credentials Library.
+
+Connector settings can now use the `Text` input type to let you enter a text string or the `DropDown` input type to let you select from a predefined set of valid values. You can also use the `Section` tag to group related settings, for example authentication or SNMP settings.
 
 #### User-Defined APIs: IIS rewrite rules are now validated and repaired by the UserDefinableApiEndpoint DxM [ID 46143]
 

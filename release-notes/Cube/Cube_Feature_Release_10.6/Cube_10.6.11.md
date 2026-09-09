@@ -47,4 +47,10 @@ You cannot save the script until both a credential type and a credential have be
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Alarm Console: Enabling the 'Severity duration' column could cause Cube to stop working [ID 46256]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you connected to a DataMiner Agent with a large number of active alarms while the *Severity duration* column was enabled on the *Active alarms* tab, in some rare cases, Cube could stop working.
+
+In addition, the severity duration could be calculated incorrectly when an alarm was updated after its severity had remained unchanged for a long time.

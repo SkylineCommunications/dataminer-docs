@@ -104,6 +104,12 @@ After a Failover switch, SLASPConnection could fail to initialize correctly when
 - Incoming notifications could remain in memory without being processed, causing a memory leak.
 - The reporter page in DataMiner Cube and the distribution, alarm count, and timeline components in the Dashboards app could show outdated information.
 
+#### NATSMigration and NATSRepair could omit errors from the final error overview [ID 46362]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, some errors encountered by *NATSMigration.exe* or *NATSRepair.exe* could incorrectly be missing from the error overview at the end of the command-line output.
+
 #### STaaS: Ordering DOM entries by optional fields could throw a CRUD exception [ID 46377]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
