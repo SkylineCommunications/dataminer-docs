@@ -387,9 +387,9 @@ items:
         topicUid: Installing_the_DataMiner_PTP_app
       - name: Types of PTP devices
         topicUid: Types_of_PTP_devices
-      - name: PTP custom app
+      - name: PTP Monitor app overview (version 2.0.0 or higher)
         topicUid: Overview_of_the_PTP_custom_app
-      - name: PTP low-code app (PTP 1.2.0)
+      - name: PTP app overview (version 1.2.0)
         topicUid: Overview_of_the_PTP_LCA_UI
       - name: PTP app in Cube (legacy)
         topicUid: Overview_of_the_PTP_app_in_Cube_UI

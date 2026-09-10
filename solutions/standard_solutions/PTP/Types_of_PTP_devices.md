@@ -5,7 +5,7 @@ description: "Explore the types of PTP devices supported by the PTP app: grandma
 
 # Types of PTP devices
 
-The PTP app supports the following types of devices:
+DataMiner PTP supports the following types of devices:
 
 | Devices | Description |
 |--|--|
@@ -16,4 +16,4 @@ The PTP app supports the following types of devices:
 
 ## Supported vendor connectors
 
-To see the list of supported vendor connectors and third-party devices integrated with the PTP solution, refer to [Skyline PTP Technical](https://docs.dataminer.services/connector/doc/Skyline_PTP_Technical.html). That page serves as the single source of truth for connector compatibility.
+To see the list of supported vendor connectors and third-party devices integrated with DataMiner PTP, refer to [Skyline PTP Technical](https://docs.dataminer.services/connector/doc/Skyline_PTP_Technical.html). That page serves as the single source of truth for connector compatibility.
