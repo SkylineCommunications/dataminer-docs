@@ -282,7 +282,7 @@ It is now possible to have a DMS connect to the nodes of a remote ElasticSearch 
 
 This message will add the IP addresses of the remote ElasticSearch nodes to the db.xml file.
 
-#### Replacing Automation script DLL dependencies \[ID 26605\]
+#### Replacing automation script DLL dependencies \[ID 26605\]
 
 It is now possible to replace an automation script DLL dependency from an automation script by sending an UploadScriptDependencyMessage.
 

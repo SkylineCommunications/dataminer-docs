@@ -168,7 +168,7 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - On the *Settings* page, configure any connector-defined settings.
 
-     If you edit an element with a saved credential that you cannot access, select a credential that you can access before saving the element.
+     If you edit an element with saved credentials that you cannot access, select a set of credentials that you can access before saving the element.
 
    - On the *Run-on details* page, select a compatible DataMiner Edge node for connectors that contain scripts, and configure the interval for each script.
 

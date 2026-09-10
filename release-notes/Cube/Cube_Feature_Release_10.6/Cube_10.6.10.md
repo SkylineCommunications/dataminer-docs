@@ -58,14 +58,14 @@ A new global setting is now available in *System Center > System settings > Visi
 
 The available options are *Follow Cube theme* (default) and *Light*. After changing the setting, click *Apply theme* and reopen any open Visio drawings to see the change.
 
-#### Credentials Library: Warning indicator will now displayed next to a credential that could not be decrypted [ID 45997]
+#### Credentials Library: Warning indicator next to credentials that could not be decrypted [ID 45997]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 <!-- Was reverted and later re-added to 10.6.10 -->
 
-When DataMiner Cube detects that a credential in the Credentials Library can no longer be decrypted, a warning icon will now be displayed next to the credential name, which is also shown in a warning color.
+When DataMiner Cube detects that a set of credentials in the Credentials Library can no longer be decrypted, a warning icon will now be displayed next to the name of the credentials, which will also be shown in a warning color.
 
-When you hover over the warning icon, a tooltip will explain that the credential's secret values can no longer be decrypted and that you need to re-enter and save the values to resolve the issue.
+When you hover over the warning icon, a tooltip will explain that the secret values of the credentials can no longer be decrypted and that you need to re-enter and save the values to resolve the issue.
 
 #### Element wizard: Connector settings and run-on details [ID 46287]
 
