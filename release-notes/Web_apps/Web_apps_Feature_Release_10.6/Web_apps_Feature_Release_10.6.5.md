@@ -182,7 +182,7 @@ From now on, whenever an exception occurs while data is being requested, the ses
 
 Also, a number of enhancements have been made to ensure that closing sessions will no longer interfere with other session operations.
 
-#### Interactive Automation scripts in web apps: Checkbox of redesigned Treeview component has been aligned with that of other components [ID 45025]
+#### Interactive automation scripts in web apps: Checkbox of redesigned Treeview component has been aligned with that of other components [ID 45025]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 

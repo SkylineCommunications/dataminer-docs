@@ -25,4 +25,4 @@ Until a fix is available, avoid swarming scheduled tasks. While the issue only o
 
 ## Description
 
-A scheduled task can execute an incorrect action, for example, an Automation script intended for another scheduled task.
+A scheduled task can execute an incorrect action, for example, an automation script intended for another scheduled task.

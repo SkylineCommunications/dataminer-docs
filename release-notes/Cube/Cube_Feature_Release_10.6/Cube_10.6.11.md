@@ -36,11 +36,11 @@ The Jobs module has been end-of-life since DataMiner 10.5.0. If Cube is connecte
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
 
-When, in DataMiner Cube, you add a credential in the Automation script editor, you will now first have to select a credential type.
+When, in DataMiner Cube, you add a set of credentials in the automation script editor, you will now first have to select a credentials type.
 
-After you select a type, Cube will only show credentials of that type that you are allowed to use. If you change the selected type afterwards, the selected credential will be cleared and you will have to select a new credential.
+After you select a type, Cube will only show credentials of that type that you are allowed to use. If you change the selected type afterwards, the selected credentials will be cleared and you will have to select a new set of credentials.
 
-You cannot save the script until both a credential type and a credential have been selected.
+You cannot save the script until both a credentials type and a set of credentials have been selected.
 
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer.
