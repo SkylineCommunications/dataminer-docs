@@ -10,7 +10,7 @@ When you develop DataMiner solutions, creating NuGet packages can significantly 
 
 Consider creating NuGet packages for your solution in the following cases:
 
-- **Shared functionality**: You have code that is used across multiple components within your solution (for example, shared between Automation scripts, connectors, or low-code apps).
+- **Shared functionality**: You have code that is used across multiple components within your solution (for example, shared between automation scripts, connectors, or low-code apps).
 
 - **Reusability across solutions**: The functionality could be valuable for other solutions or custom implementations.
 

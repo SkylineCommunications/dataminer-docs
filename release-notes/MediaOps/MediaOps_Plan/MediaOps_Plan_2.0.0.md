@@ -61,6 +61,16 @@ Every job created from the workflow is automatically assigned this job type, so 
 
 The *Job Type* dropdown is only displayed when job types are available in the Categories app. If you select *- Not defined -*, the workflow does not define a job type, and jobs created from it keep their default job type.
 
+#### Scheduling: New button to automatically assign resources to a job [ID 46409]
+
+Previously, you could configure a workflow so that eligible resources were automatically assigned to specified nodes when you created a job from that workflow. Because this assignment took place only at job creation, it was suitable only when the workflow fully defined the nodes and their configuration. This is often not the case when you create a job.
+
+Now, you can use the new *Auto assign resources* button in the *Edit job* panel to automatically assign eligible resources to the nodes of a job. This allows you to trigger resource assignment whenever you need it, for example, after you have updated the job configuration.
+
+If a resource cannot be assigned to one or more nodes, a message will indicate the reason. For example, this can happen when a mandatory configuration field has no value or no eligible resources are available during the job time slot.
+
+You can use this option only while the job is in the *Draft* or *Tentative* state. When a job is confirmed, all its nodes must have a resource assigned.
+
 ## Changes
 
 ### Enhancements
@@ -228,11 +238,18 @@ When assigning properties:
 - Invalid property configurations, such as duplicate or invalid names, invalid section names, invalid string or file size limits, and missing or duplicate discrete values, now result in clear validation messages instead of script failures.
 - A file property with the default size limit now follows the maximum document size configured on the DataMiner Agent instead of storing the limit that applied when the property was created.
 
-#### Installer: Upgrades from versions older than 1.6.0 now blocked [ID 46369]
+#### Installer: Upgrades from versions older than 1.6.0 no longer supported [ID 46369] [ID 46401]
 
-Previously, MediaOps Plan could be upgraded to version 2.0.0 directly from any older version. Because several migration actions are only executed by the 1.6.x installers, this could leave existing data without the required migrations.
+Previously, MediaOps Plan could be upgraded to the latest version directly from any older version. Because several migration actions are only executed by the 1.6.x installers, this could leave existing data without the required migrations. Now you must first upgrade MediaOps Plan to the 1.6.x range before upgrading to MediaOps Plan 2.0.0 or higher.
 
-MediaOps Plan now verifies the installed version before continuing an upgrade. If a version older than 1.6.0 is detected, the installation is stopped with a message asking you to first upgrade to a 1.6.x version and then install version 2.0.0. This ensures that all migration actions are executed.
+When you upgrade, MediaOps Plan will first verify the installed version. If a version older than 1.6.0 is detected, the installation is stopped with a message asking you to first upgrade to a 1.6.x version and then install version 2.0.0 or higher. This ensures that all migration actions are executed.
+
+With this change, the following legacy migration scripts are no longer needed and have been removed:
+
+- Lock manager element rename
+- Pre-/post-roll migration
+- Profile definition migration
+- Lite job migration
 
 #### Automation scripts now run in separate process [ID 46385]
 
