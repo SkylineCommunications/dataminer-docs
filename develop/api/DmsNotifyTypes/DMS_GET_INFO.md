@@ -4,10 +4,10 @@ uid: DMS_GET_INFO
 
 # DMS_GET_INFO (8)
 
-> [!WARNING]
-> The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.
+> [!IMPORTANT]
+> The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.<!-- RN 33515 -->
 
-Gets information about all elements of the DataMiner system.
+Gets information about all elements of the DataMiner System.
 
 ```csharp
 Interop.SLDms.DMSClass dms = new Interop.SLDms.DMSClass();
@@ -43,7 +43,7 @@ foreach (object element in retrievedElements)
     string protocolVersion = genericElementInfo[15];
     string alarmTemplate = genericElementInfo[16];
 
-    // If element is e.g. a DVE, the following mainPort settings all contain an empty string.
+    // If element is for example a DVE, the following mainPort settings all contain an empty string.
     string mainPortType = genericElementInfo[17];
     string mainPortNr = genericElementInfo[18];
     string mainPortBaudrate = genericElementInfo[19];
