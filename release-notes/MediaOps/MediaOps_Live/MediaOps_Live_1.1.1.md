@@ -16,6 +16,14 @@ uid: MediaOps_Live_1.1.1
 
 ## Fixes
 
+#### Installer: Downgrade attempts now fail explicitly instead of being skipped [ID 46060]
+
+Previously, if you attempted to install an older version of MediaOps Live while a newer compatible version was already installed, the installation could be logged as "skipped". In some cases, DataMiner could still register the incoming package version internally.
+
+As a result, the version effectively running on the system could differ from the version tracked by DataMiner, which could cause confusion during follow-up upgrades or troubleshooting.
+
+This behavior has now been changed. In downgrade scenarios where a newer compatible version is already present, the installation now fails explicitly instead of continuing as a soft skip. This ensures the version registered by DataMiner remains aligned with the version that is actually installed and active on the system.
+
 ### Virtual signal group import/export behaved inconsistently for duplicate endpoint assignments [ID 46286]
 
 Previously, when the same endpoint was assigned more than once within a virtual signal group (VSG), import and export could behave differently: import might accept the data, while export could fail.
