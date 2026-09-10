@@ -96,6 +96,14 @@ See the following example:
 > - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
 > - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNameAndPassword` and `Token` credentials stored in the Credentials Library.
 
+#### DataMiner Edge: Elements can now be configured with scripts and protocol settings [ID 46037]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+You can now configure elements with one or more scripts. Each script has a location, an identifier, and, optionally, a schedule that determines when it runs.
+
+Elements can also store connector settings as key/value pairs. Scripts and connector settings are included when elements are exported or imported, including when using CSV files.
+
 #### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->

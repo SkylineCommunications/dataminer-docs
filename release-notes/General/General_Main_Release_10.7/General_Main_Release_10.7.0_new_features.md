@@ -504,6 +504,14 @@ Route conflicts are also detected across all existing definitions. Any two templ
 
 When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
 
+#### DataMiner Edge: Elements can now be configured with scripts and protocol settings [ID 46037]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+You can now configure elements with one or more scripts. Each script has a location, an identifier, and, optionally, a schedule that determines when it runs.
+
+Elements can also store connector settings as key/value pairs. Scripts and connector settings are included when elements are exported or imported, including when using CSV files.
+
 #### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
