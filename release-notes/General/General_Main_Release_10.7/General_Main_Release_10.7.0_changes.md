@@ -669,6 +669,14 @@ When using DOM in scripts, ad hoc data sources, etc., from now on, it will be po
 
 The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
+#### DataMiner Edge: Scripted connectors are now automatically deployed to edge nodes [ID 46072]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When you create an element based on a connector that defines edge scripts, DataMiner now automatically deploys the corresponding scripted connector to the target edge node and creates the required schedule.
+
+The script and schedule are kept in sync throughout the element lifecycle. They are enabled when the element is started, disabled when it is paused or stopped, and removed when the element is deleted. The script is also removed when it no longer has any schedules.
+
 #### DataMiner upgrade: Legacy NAS and NATS services and files would not be removed [ID 46094]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->

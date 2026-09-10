@@ -504,6 +504,14 @@ Route conflicts are also detected across all existing definitions. Any two templ
 
 When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
 
+#### DataMiner Edge: Elements can now be configured with scripts and protocol settings [ID 46037]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+You can now configure elements with one or more scripts. Each script has a location, an identifier, and, optionally, a schedule that determines when it runs.
+
+Elements can also store connector settings as key/value pairs. Scripts and connector settings are included when elements are exported or imported, including when using CSV files.
+
 #### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -511,3 +519,21 @@ When a conflict is found, the API definition is rejected with `ApiDefinitionErro
 In order to notify client applications when the measurement point cycle changes, a new spectrum parameter has been added: `SPA_SPARAM_MEASPOINT_CYCLE` (PID 64227).
 
 This will especially improve synchronization in shared sessions, keeping measurement point cycle updates aligned across connected clients.
+
+### DataMiner Edge: New 'Number', 'IP address', and 'IP port' setting types in scripted connector protocols [ID 46361]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+DataMiner Edge now supports `Number`, `IPAddress`, and `IPPort` setting types in scripted connector protocols.
+
+- `Number` supports an optional range and decimal precision.
+- `IPAddress` accepts IPv4 and IPv6 addresses as well as hostnames.
+- `IPPort` accepts whole-number port values from 1 through 65535.
+
+### New GetCloudDmsInformationRequest message to retrieve information from a cloud-connected DMS [ID 46393]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve information from a cloud-connected DMS, including the organization name, DMS name, and remote-access URL.
+
+This request requires a CloudGateway version that supports it.

@@ -96,6 +96,14 @@ See the following example:
 > - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
 > - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNameAndPassword` and `Token` credentials stored in the Credentials Library.
 
+#### DataMiner Edge: Elements can now be configured with scripts and protocol settings [ID 46037]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+You can now configure elements with one or more scripts. Each script has a location, an identifier, and, optionally, a schedule that determines when it runs.
+
+Elements can also store connector settings as key/value pairs. Scripts and connector settings are included when elements are exported or imported, including when using CSV files.
+
 #### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -135,17 +143,25 @@ Because of a number of enhancements, overall performance has increased when upgr
 
 The ModelHost DxM has been upgraded to Microsoft .NET 10.
 
+#### APIGateway: SLNet authentication [ID 46055]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+A new REST endpoint, `/APIGateway/api/authentication/ticket`, can be used to authenticate a session with APIGateway using an SLNet connection ticket. You can then use this session to access DxM endpoints in an authenticated way, with APIGateway acting as a reverse proxy.
+
 #### UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10 [ID 46066]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
-#### APIGateway: SLNet authentication [ID 46055]
+#### DataMiner Edge: Scripted connectors are now automatically deployed to edge nodes [ID 46072]
 
-<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+<!-- MR 10.7.0 - FR 10.6.10 -->
 
-A new REST endpoint, `/APIGateway/api/authentication/ticket`, can be used to authenticate a session with APIGateway using an SLNet connection ticket. You can then use this session to access DxM endpoints in an authenticated way, with APIGateway acting as a reverse proxy.
+When you create an element based on a connector that defines edge scripts, DataMiner now automatically deploys the corresponding scripted connector to the target edge node and creates the required schedule.
+
+The script and schedule are kept in sync throughout the element lifecycle. They are enabled when the element is started, disabled when it is paused or stopped, and removed when the element is deleted. The script is also removed when it no longer has any schedules.
 
 #### Enhanced performance when recalculating security keys [ID 46077]
 

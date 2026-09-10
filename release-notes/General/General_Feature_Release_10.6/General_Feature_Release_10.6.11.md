@@ -40,7 +40,23 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-*This release does not contain any new features yet.*
+### DataMiner Edge: New 'Number', 'IP address', and 'IP port' setting types in scripted connector protocols [ID 46361]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+DataMiner Edge now supports `Number`, `IPAddress`, and `IPPort` setting types in scripted connector protocols.
+
+- `Number` supports an optional range and decimal precision.
+- `IPAddress` accepts IPv4 and IPv6 addresses as well as hostnames.
+- `IPPort` accepts whole-number port values from 1 through 65535.
+
+### New GetCloudDmsInformationRequest message to retrieve information from a cloud-connected DMS [ID 46393]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve information from a cloud-connected DMS, including the organization name, DMS name, and remote-access URL.
+
+This request requires a CloudGateway version that supports it.
 
 ## Changes
 
@@ -60,7 +76,28 @@ When enabling swarming using an `EnableSwarmingRequest`, you can now skip the an
 
 By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
 
+#### User-Defined APIs: UserDefinableApiEndpoint DxM health status is now reported to dataminer.services [ID 46356]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+The UserDefinableApiEndpoint DxM now reports its health status to dataminer.services.
+
+When it can validate or repair the IIS rewrite rule for user-defined APIs, it reports a healthy status. If the rule cannot be repaired, it reports an unhealthy status.
+
 ### Fixes
+
+#### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, when a service was deleted, the generated deleted-service information event would incorrectly no longer have the service impact of that deleted service.
+
+#### Saving a service template could be blocked on a system with swarming disabled [ID 46235]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+<!-- Not added to MR 10.7.0 because introduced by RN 45370 -->
+
+Up to now, saving a service template could be blocked on a system with swarming disabled when the service definition connector was not compatible with swarming.
 
 #### Existing behavioral change points could no longer be retrieved after a DataMiner Agent restart [ID 46271]
 
