@@ -518,6 +518,14 @@ This will especially improve synchronization in shared sessions, keeping measure
 
 DataMiner Edge now supports `Number`, `IPAddress`, and `IPPort` setting types in scripted connector protocols.
 
-- `Number` supports an optional range, step size, and decimal precision.
-- `IPAddress` accepts IPv4 and IPv6 addresses.
+- `Number` supports an optional range and decimal precision.
+- `IPAddress` accepts IPv4 and IPv6 addresses as well as hostnames.
 - `IPPort` accepts whole-number port values from 1 through 65535.
+
+### New GetCloudDmsInformationRequest message to retrieve information from a cloud-connected DMS [ID 46393]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve information from a cloud-connected DMS, including the organization name, DMS name, and remote-access URL.
+
+This request requires a CloudGateway version that supports it.
