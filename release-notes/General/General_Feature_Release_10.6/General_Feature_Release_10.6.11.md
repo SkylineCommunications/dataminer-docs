@@ -78,6 +78,13 @@ By default, the analysis will still be performed. Skipping it can considerably s
 
 ### Fixes
 
+#### Saving a service template could be blocked on a system with swarming disabled [ID 46235]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+<!-- Not added to MR 10.7.0 because introduced by RN 45370 -->
+
+Up to now, saving a service template could be blocked on a system with swarming disabled when the service definition connector was not compatible with swarming.
+
 #### Existing behavioral change points could no longer be retrieved after a DataMiner Agent restart [ID 46271]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
