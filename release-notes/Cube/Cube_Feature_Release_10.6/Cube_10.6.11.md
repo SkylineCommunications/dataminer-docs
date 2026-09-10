@@ -54,3 +54,9 @@ You cannot save the script until both a credentials type and a set of credential
 When you connected to a DataMiner Agent with a large number of active alarms while the *Severity duration* column was enabled on the *Active alarms* tab, in some rare cases, Cube could stop working.
 
 In addition, the severity duration could be calculated incorrectly when an alarm was updated after its severity had remained unchanged for a long time.
+
+#### System Center - Agents: Hostnames could incorrectly be accepted when adding an Agent to a cluster [ID 46334]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you manually added an Agent to a cluster in the *Add Agent* dialog, up to now, Cube could accept a hostname instead of requiring an IP address.
