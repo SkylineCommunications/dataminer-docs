@@ -38,6 +38,8 @@ items:
           - name: Code library release notes
             topicUid: Code_Libraries_Release_Notes
             href: Code_Libraries/toc.yml
+          - name: Cost and Billing release notes
+            href: CostAndBilling/toc.yml
           - name: DIS release notes
             topicUid: DIS_RNs_index
             href: DIS/toc.yml
