@@ -20,7 +20,11 @@ The app consists of the following main sections:
 
 ## Header
 
-The header bar is permanently displayed at the top of the interface and contains global controls:
+The header bar is permanently displayed at the top of the interface and contains global controls.
+
+![Header bar of the PTP custom app](~/solutions/images/PTP_2.0_Header.png)
+
+The header bar contains the following controls:
 
 - **DataMiner logo**: Navigates back to the default overview page.
 - **Domain selector**: A dropdown list that allows you to switch between configured PTP domains (such as *Media* or *Default*). All data, metrics, and topology views across the app immediately update to reflect the selected domain.
@@ -103,12 +107,7 @@ The *Topology* page provides an interactive graphical map of the PTP network, vi
 
 Key features of the topology view include:
 
-- **Interactive node graph**: Displays interconnected devices with distinct role icons:
-  - *Active Grandmaster* (indicated with an active badge)
-  - *Grandmaster* (GM)
-  - *Boundary Clock* (BC)
-  - *Transparent Clock* (TC)
-  - *Follower Clock* (Follower)
+- **Interactive node graph**: Displays interconnected devices with distinct role icons indicating their PTP clock type (see [Types of PTP devices](xref:Types_of_PTP_devices)). Active grandmasters are additionally indicated with an active badge.
 - **Connection source toggle**: Switch between two connection visualization modes:
   - *DCF*: Displays connections defined through the DataMiner Connectivity Framework (DCF).
   - *Parent Clock*: Displays the reported parent connections, showing the active synchronization tree reported by each node's parent dataset.
@@ -118,7 +117,11 @@ Key features of the topology view include:
 
 ## Admin page
 
-The *Admin* page centralizes domain administration and role assignments within the PTP solution:
+The *Admin* page centralizes domain administration and role assignments within the PTP solution.
+
+![Admin page in the PTP custom app](~/solutions/images/PTP_2.0_Admin.png)
+
+This page provides the following features:
 
 - **Domain management table**: Lists all configured PTP domains with their name, element ID, and available actions (such as assigning roles, renaming the domain, or deleting the domain).
 
