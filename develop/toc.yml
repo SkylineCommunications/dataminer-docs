@@ -1877,6 +1877,8 @@ items:
     - name: DMS notify types
       topicUid: SLDmsNotifyTypes
       items:
+      - name: DMS_GET_INFO
+        topicUid: DMS_GET_INFO
       - name: DMS_SET_PARAMETER
         topicUid: DMS_SET_PARAMETER
       - name: DMS_GET_ELEMENT_NAME
