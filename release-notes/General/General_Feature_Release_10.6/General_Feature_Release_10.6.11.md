@@ -40,7 +40,15 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-*This release does not contain any new features yet.*
+### DataMiner Edge: New 'Number', 'IP address', and 'IP port' setting types in scripted connector protocols [ID 46361]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+DataMiner Edge now supports `Number`, `IPAddress`, and `IPPort` setting types in scripted connector protocols.
+
+- `Number` supports an optional range, step size, and decimal precision.
+- `IPAddress` accepts IPv4 and IPv6 addresses.
+- `IPPort` accepts whole-number port values from 1 through 65535.
 
 ## Changes
 
