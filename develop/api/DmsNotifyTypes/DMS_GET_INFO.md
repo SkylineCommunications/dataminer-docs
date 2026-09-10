@@ -5,7 +5,7 @@ uid: DMS_GET_INFO
 # DMS_GET_INFO (8)
 
 > [!IMPORTANT]
-> The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.<!-- RN 33515 -->
+> The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.
 
 Gets information about all elements of the DataMiner System.
 
