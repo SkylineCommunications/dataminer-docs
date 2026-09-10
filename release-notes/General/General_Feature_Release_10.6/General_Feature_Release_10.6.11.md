@@ -76,6 +76,14 @@ When enabling swarming using an `EnableSwarmingRequest`, you can now skip the an
 
 By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
 
+#### User-Defined APIs: UserDefinableApiEndpoint DxM health status is now reported to dataminer.services [ID 46356]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+The UserDefinableApiEndpoint DxM now reports its health status to dataminer.services.
+
+When it can validate or repair the IIS rewrite rule for user-defined APIs, it reports a healthy status. If the rule cannot be repaired, it reports an unhealthy status.
+
 ### Fixes
 
 #### Saving a service template could be blocked on a system with swarming disabled [ID 46235]

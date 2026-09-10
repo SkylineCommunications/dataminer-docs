@@ -37,6 +37,14 @@ Each time the `NATSMigration` tool is run, it will perform the following prerequ
 - The server must run a recent Windows OS and TLS 1.2 must be available.
 - At least one of two ciphers must be available for managed NATS communication.
 
+#### User-Defined APIs: UserDefinableApiEndpoint DxM health status is now reported to dataminer.services [ID 46356]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+The UserDefinableApiEndpoint DxM now reports its health status to dataminer.services.
+
+When it can validate or repair the IIS rewrite rule for user-defined APIs, it reports a healthy status. If the rule cannot be repaired, it reports an unhealthy status.
+
 ### Fixes
 
 #### Stopping an element with a logger table could cause SLProtocol to stop unexpectedly [ID 46299]
