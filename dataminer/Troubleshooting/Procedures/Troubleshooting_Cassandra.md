@@ -148,7 +148,7 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
   - When you **decrease** the TTL:
 
     - Data will be kept until the previous, higher TTL has expired.
-    - Manual actions will need to be executed. For example, enabling the *unsafe_aggressive_sstable_expiration* option for Cassandra (see [Time Window CompactionStrategy](https://cassandra.apache.org/doc/stable/cassandra/operating/compaction/twcs.html)) or manually removing the already expired *sstables* on disk.
+    - Manual actions will need to be executed. For example, enabling the *unsafe_aggressive_sstable_expiration* option for Cassandra (see [Time Window CompactionStrategy](https://cassandra.apache.org/doc/4.1/cassandra/operating/compaction/twcs.html)) or manually removing the already expired *sstables* on disk.
 
       > [!IMPORTANT]
       > If you do not feel confident executing these actions, contact your Skyline representative for assistance.
