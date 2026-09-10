@@ -61,6 +61,16 @@ Every job created from the workflow is automatically assigned this job type, so 
 
 The *Job Type* dropdown is only displayed when job types are available in the Categories app. If you select *- Not defined -*, the workflow does not define a job type, and jobs created from it keep their default job type.
 
+#### Scheduling: New button to automatically assign resources to a job [ID 46409]
+
+Previously, you could configure a workflow so that eligible resources were automatically assigned to specified nodes when you created a job from that workflow. Because this assignment took place only at job creation, it was suitable only when the workflow fully defined the nodes and their configuration. This is often not the case when you create a job.
+
+Now, when you create or edit a job, you can use the new *Auto assign resources* button in the *Job edit* panel to automatically assign eligible resources to its nodes. This allows you to trigger resource assignment whenever you need it, for example, after you have updated the job configuration.
+
+If a resource cannot be assigned to one or more nodes, a message will indicate the reason. For example, this can happen when a mandatory configuration field has no value or no eligible resources are available during the job time slot.
+
+You can use this option only while the job is in the *Draft* or *Tentative* state. When a job is confirmed, all its nodes must have a resource assigned.
+
 ## Changes
 
 ### Enhancements
