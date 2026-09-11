@@ -4,8 +4,10 @@ uid: PTP_1.2.0
 
 # PTP 1.2.0
 
-> [!NOTE]
-> This version requires that **DataMiner 10.5.0.0 – 16782 CU11** or **DataMiner 10.6.2.0 – 16783** (or higher) is installed.
+## Prerequisites
+
+- DataMiner **10.5.0 [CU11]/10.6.2** or higher.
+- The [DataMiner GQI DxM](xref:GQI_DxM) must be installed.
 
 ## New features
 
