@@ -1,5 +1,6 @@
 ---
 uid: CloudConnectionVerification
+description: "Request verification for your cloud organization in the Admin app to deploy licensed Catalog connectors."
 keywords: cloud organization, cloud connection
 reviewer: Alexander Verkest
 ---

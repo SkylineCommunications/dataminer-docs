@@ -1,5 +1,6 @@
 ---
 uid: Viewing_billing_information
+description: "Review billing information in the Admin app to monitor your credit balance, usage costs, and subscription spending."
 keywords: billing, credits, balance, usage costs, subscriptions, services
 ---
 

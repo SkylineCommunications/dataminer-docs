@@ -1,5 +1,6 @@
 ---
 uid: Changing_the_role_of_a_dataminer_services_user
+description: "Change a dataminer.services user's organization or DataMiner System role in the Admin app to manage their permissions."
 keywords: cloud user roles, cloud roles
 reviewer: Alexander Verkest
 ---
