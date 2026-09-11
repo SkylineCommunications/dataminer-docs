@@ -71,6 +71,18 @@ If a resource cannot be assigned to one or more nodes, a message will indicate t
 
 You can use this option only while the job is in the *Draft* or *Tentative* state. When a job is confirmed, all its nodes must have a resource assigned.
 
+#### Scheduling: Job resource nodes can be returned to their pool [ID 46436]
+
+You can now return a job's resource node to its resource pool while the job is in the *Draft* or *Tentative* state. Previously, once a resource node was assigned in a job, it could only be swapped for another resource node. There was no way to release it back to its pool if the underlying selection logic no longer produced a valid resource.
+
+Now you can use the existing swap mechanism to replace the resource node with a resource pool node, matching the behavior already available for workflows and recurring jobs.
+
+When you return a resource node to its pool for a tentative job, its resource reservation is automatically released so the resource becomes available for other jobs again.
+
+This action is not available for jobs in the *Confirmed*, *Running*, *Completed*, or *Canceled* state. It is also not possible to confirm a tentative job that still has an unassigned pool node.
+
+Configuration settings of the original resource node, such as capabilities and capacities, are not automatically transferred to the pool node. Configure these settings again when they are required for a subsequent automatic resource selection.
+
 ## Changes
 
 ### Enhancements
@@ -259,6 +271,14 @@ Automation scripts that are part of MediaOps Plan now run in their own process. 
 
 When you attempt to delete a capability that is still in use, the error message now identifies up to the first 10 affected resources instead of displaying resource pool details.
 
+#### Installer: MediaOps Live 1.2.0 or higher required [ID 46421]
+
+When MediaOps Live is installed alongside MediaOps Plan, the MediaOps Plan installation now verifies that MediaOps Live version 1.2.0 or higher is installed.
+
+If an earlier version is detected, the MediaOps Plan installation is stopped, and a message will indicate that you must first upgrade MediaOps Live to version 1.2.0 or higher.
+
+This check does not affect installations where MediaOps Live is not installed.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
@@ -304,3 +324,15 @@ Several issues related to resource deprecation have been fixed for scenarios whe
 As of MediaOps Plan 2.0.0, execution scripts on workflow level are no longer supported. However, up to now, the installation did not verify whether workflows still used one. As a result, a system could be upgraded while workflows still referred to an execution script, after which it was no longer possible to create jobs for those workflows.
 
 MediaOps Plan now checks before anything is installed. If one or more workflows still have a workflow execution script, the installation is stopped with a message listing the workflows in question, so you can remove the execution script from those workflows first. The complete list is also available in the installation log.
+
+#### DevPack: Limit and sort settings ignored when querying Plan repositories [ID 46419]
+
+Previously, limit and sort settings specified when reading data from MediaOps Plan DevPack repositories were ignored. For example, this affected queries using `ResourcesRepository.Read(IQuery<Resource>)`.
+
+This issue has been fixed. Repository queries now apply the specified limit and sort settings.
+
+#### DevPack: Limit and sort settings ignored when querying People & Organizations repositories [ID 46420]
+
+Previously, limit and sort settings specified when reading data from MediaOps People & Organizations DevPack repositories were ignored. For example, this affected queries using `OrganizationsRepository.Read(IQuery<Organization>)`.
+
+This issue has been fixed. Repository queries now apply the specified limit and sort settings.
