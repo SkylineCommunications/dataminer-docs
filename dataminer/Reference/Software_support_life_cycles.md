@@ -61,8 +61,8 @@ The following features currently have the "End of Engineering" status. They will
 
 <!-- 
 When 10.7.0.x is released, add the following items:
-| [Device Discovery wizard](xref:Locating_devices_in_your_system_to_add_to_your_DMS) | End of Engineering as of DataMiner 10.7.x. The discovery feature included in [DataMiner IDP](xref:SolIDP) can be used instead. | End of Support as of DataMiner 10.8.x (Q4 2027). |
-| Failover | End of Engineering as of DataMiner 10.7.x. | End of Support to be confirmed. |
+| [Device Discovery wizard](xref:Locating_devices_in_your_system_to_add_to_your_DMS) | The discovery feature included in [DataMiner IDP](xref:SolIDP) can be used instead. | End of Support as of DataMiner 10.8.x (Q4 2027). |
+| Failover | This feature is getting replaced by [DataMiner Swarming](xref:Swarming). | End of Support to be confirmed. |
 | Polling of data in DataMiner web apps | WebSockets will be used instead. | End of Support to be confirmed. |
 | SLNetPlugins | These bespoke plugins for SLNet should no longer be used. | End of Support to be confirmed. |
 | SLOffload tool | This tool is obsolete and cannot be used in systems with a Cassandra general database | End of Life as of DataMiner 10.8.x (Q4 2027). |
