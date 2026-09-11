@@ -82,6 +82,12 @@ In addition, CSV export/import support has been updated with the relevant header
 
 ### Enhancements
 
+#### Credentials Library: Credential names can now contain all characters [ID 46083]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When you create a credential in the Credentials Library, its name can now contain all characters.
+
 #### Spectrum Analysis: Shared last preset is now available in shared session mode [ID 46113]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
