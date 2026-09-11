@@ -1,5 +1,6 @@
 ---
 uid: Custom_cloud_endpoint_configuration
+description: "Configure the dataminer.services endpoint in DataMiner CloudGateway to set its port or disable it for your DataMiner System."
 keywords: cloud endpoint
 reviewer: Alexander Verkest
 ---
