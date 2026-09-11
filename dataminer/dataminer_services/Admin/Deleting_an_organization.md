@@ -1,5 +1,6 @@
 ---
 uid: Deleting_an_organization
+description: "Delete an organization in the Admin app after removing active systems, and confirm the deletion by entering its name exactly."
 keywords: temporary organization
 ---
 

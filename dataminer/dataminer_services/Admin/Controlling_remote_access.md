@@ -1,5 +1,6 @@
 ---
 uid: Controlling_remote_access
+description: "Control remote access for your organization or DataMiner System in the Admin app and restrict specific features by public IP address."
 keywords: cloud access, access to the cloud
 reviewer: Alexander Verkest
 ---
