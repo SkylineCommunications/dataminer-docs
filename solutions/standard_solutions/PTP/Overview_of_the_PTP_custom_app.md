@@ -107,7 +107,7 @@ The *Topology* page provides an interactive graphical map of the PTP network, vi
 
 Key features of the topology view include:
 
-- **Interactive node graph**: Displays interconnected devices with distinct role icons indicating their PTP clock type (see [Types of PTP devices](xref:Types_of_PTP_devices)). Active grandmasters are additionally indicated with an active badge.
+- **Interactive node graph**: Displays interconnected devices with distinct role icons indicating their PTP clock type (see [Types of PTP devices](xref:Types_of_PTP_devices)). An active badge indicated the active grandmasters.
 - **Connection source toggle**: Switch between two connection visualization modes:
   - *DCF*: Displays connections defined through the DataMiner Connectivity Framework (DCF).
   - *Parent Clock*: Displays the reported parent connections, showing the active synchronization tree reported by each node's parent dataset.
