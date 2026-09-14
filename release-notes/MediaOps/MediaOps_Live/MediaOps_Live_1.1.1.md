@@ -43,3 +43,9 @@ This has been corrected:
 ### Scheduler: Finished tasks not cleaned up correctly [ID 46216]
 
 Finished scheduled tasks were not cleaned up correctly, which caused completed tasks to accumulate in [DataMiner Scheduler](xref:About_the_Scheduler_module). This issue has now been fixed.
+
+### Memory leak caused by GQI data sources [ID 46450]
+
+When you navigated through the MediaOps Live apps, the subscriptions and timers behind GQI data sources were not always cleaned up correctly, especially if an error occurred while starting updates. Over time, this could cause memory usage to grow and lead to instability on systems that make frequent or continuous use of these data sources.
+
+The affected data sources now consistently clean up their subscriptions and timers whenever updates stop, the data source is destroyed, or an error occurs while starting updates, ensuring that resources are now always released properly.
