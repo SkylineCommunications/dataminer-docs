@@ -1,5 +1,6 @@
 ---
 uid: Controlling_remote_access
+description: "Learn how you can control remote access for your organization or DataMiner System in the Admin app, including individual feature settings."
 keywords: cloud access, access to the cloud
 reviewer: Alexander Verkest
 ---
