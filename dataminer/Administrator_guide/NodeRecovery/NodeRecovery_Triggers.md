@@ -113,5 +113,5 @@ Make sure your script logic is aware of the following:
 | Perspective | Individual node's view of the cluster. | Cluster-wide consensus. |
 | Trigger frequency | Multiple times (once per observing node). | Once per global state change. |
 | Use case | Node-specific actions. | Centralized cluster management, rebalancing. |
-| Network splits | Can detect partial failures. | Only works within the partition having cluster majority (see [Network splits](xref:NodeRecovery_Detection#network-splits)). |
+| Network splits | Can detect partial failures in the cluster minority partition, but in a two-node setup both nodes may take conflicting actions. | Only works within the partition having cluster majority (see [Network splits](xref:NodeRecovery_Detection#network-splits)). |
 | Broken links between nodes | Each node may have a different view. | The leader aggregates views to determine consensus. |
