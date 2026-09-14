@@ -123,6 +123,16 @@ You can follow the steps below or watch this short video, which shows you how to
      > [!IMPORTANT]
      > When an element goes in timeout, it will remain in timeout until **all** its connections are responding again.
 
+1. From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46287 + 46037 + 46142-->, connectors that contain DataMiner Edge scripts will have the following additional sections. The exact scripts and settings depend on the connector.
+
+   - **Run details**: Select a compatible [DataMiner Edge Node](xref:DataMiner_Edge) as the target, and configure the interval for each script.
+
+   - **Settings**: Configure the connector-defined values for the selected environment, such as a location, system environment, and authentication credentials. Authentication settings can use a token credential or a username and password credential from the Credentials Library.
+
+   > [!NOTE]
+   > - If you edit an element with saved credentials that you cannot access, select a set of credentials that you can access before saving the element.
+   > - When you [export or import an element](xref:Importing_and_exporting_elements), its DataMiner Edge scripts and connector settings are included, including in CSV files.
+
 1. Specify the following advanced element settings if necessary:
 
    - **Slow poll settings**: When an element is in a timeout state, the DMA can force it to go into so-called slow poll mode. While the element is in that special poll mode, the DMA will not send any commands to the element. Instead, it will just send a protocol-dependent ping command at regular intervals. As soon as the element responds to that ping command, the DMA will start polling the element the normal way again.
@@ -163,16 +173,6 @@ You can follow the steps below or watch this short video, which shows you how to
    - **Block Swarming**: Available from 10.5.5/10.6.0 onwards<!--RN 42535 + 42536-->. See [Blocking elements from being swarmed](xref:SwarmingElements#blocking-elements-from-being-swarmed).
 
    - **Element state**: Select the initial state of the element in this selection box. By default this will be set to “Active”.
-
-1. From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46287-->, configure the following additional pages, if necessary:
-
-   - On the *Settings* page, configure any connector-defined settings.
-
-     If you edit an element with saved credentials that you cannot access, select a set of credentials that you can access before saving the element.
-
-   - On the *Run-on details* page, select a compatible DataMiner Edge node for connectors that contain scripts, and configure the interval for each script.
-
-   These pages are available depending on the selected connector.
 
 1. Click *Next* and specify the view(s) to which you want to link the element.
 

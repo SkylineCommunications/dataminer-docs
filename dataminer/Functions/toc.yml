@@ -994,6 +994,12 @@ items:
             topicUid: DOM_Remove_FieldDescriptor_Definition
           - name: Generating code with the DOM Editor
             topicUid: DOM_Generating_code_with_the_DOM_editor
+  - name: DataMiner Edge
+    items:
+    - name: About DataMiner Edge
+      topicUid: DataMiner_Edge
+    - name: Developing a connector for DataMiner Edge
+      topicUid: Developing_a_connector_for_DataMiner_Edge
   - name: Edge Manager
     items:
     - name: About Edge Manager

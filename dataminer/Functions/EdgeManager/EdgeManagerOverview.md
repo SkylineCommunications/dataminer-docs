@@ -7,6 +7,9 @@ keywords: Site Manager
 
 DataMiner Edge Manager is available via the SiteManager DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)). It is used to set up secure tunnels for communication with remote locations. You can among others use it for communication with selected on-premises data sources from a DaaS system without the need to configure, for instance, a site-to-site VPN.
 
+> [!NOTE]
+> Edge Manager sets up communication tunnels. To run connector integrations locally on a managed runtime, use [DataMiner Edge](xref:DataMiner_Edge).
+
 ## Prerequisites
 
 Edge Manager requires DataMiner 10.5.10/10.6.0 or higher. See [SiteManager DxM installation](xref:EdgeManagerGettingStarted#sitemanager-dxm-installation).
