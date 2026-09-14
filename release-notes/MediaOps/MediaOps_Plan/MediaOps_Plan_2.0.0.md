@@ -287,6 +287,16 @@ If an earlier version is detected, the MediaOps Plan installation is stopped, an
 
 This check does not affect installations where MediaOps Live is not installed.
 
+#### Scheduling: Clear error shown when an uploaded file exceeds the DataMiner size limit [ID 46471]
+
+When you attach a file to a job and the file exceeds the maximum size configured in DataMiner, the MediaOps Plan DevPack now returns a `PropertySettingCollectionFileSizeExceededError` error with the property ID, file name, file size, and maximum allowed file size. In the MediaOps Plan user interface, a clear error message is displayed in this case.
+
+#### Scheduling: Legacy 'Scheduling_Edit Job Time' script removed [ID 46472]
+
+The *Scheduling_Edit Job Time* script has been removed from the MediaOps Plan package. This script was previously used to support moving jobs in the timeline component, but this functionality is no longer used.
+
+If you have custom code or a custom project that uses this script, you will need to update that code to no longer rely on it.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
@@ -344,3 +354,9 @@ This issue has been fixed. Repository queries now apply the specified limit and 
 Previously, limit and sort settings specified when reading data from MediaOps People & Organizations DevPack repositories were ignored. For example, this affected queries using `OrganizationsRepository.Read(IQuery<Organization>)`.
 
 This issue has been fixed. Repository queries now apply the specified limit and sort settings.
+
+#### DevPack: Text configuration parameters not saved unless interpretation was set to 'Undefined raw type' and 'Undefined type' [ID 46474]
+
+Previously, text profile parameters were recognized as text configuration parameters only when their interpretation was set to *Undefined raw type* and *Undefined type*. Text parameters with other valid interpretations, such as *Other raw type* and *String type*, were not saved.
+
+This issue has now been fixed. Text profile parameters are now recognized and saved regardless of their interpretation setting.
