@@ -108,6 +108,7 @@ Make sure your script logic is aware of the following:
 
 | Aspect | Local State Change | Global State Change |
 | ------ | ------------------ | ------------------- |
+| Required minimum nodes | 2 | 3 |
 | Script execution location | On every node that detects a change. | Only on the leader node. |
 | Perspective | Individual node's view of the cluster. | Cluster-wide consensus. |
 | Trigger frequency | Multiple times (once per observing node). | Once per global state change. |
