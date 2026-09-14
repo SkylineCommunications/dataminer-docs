@@ -7,8 +7,7 @@ description: Learn why Microsoft Platform 6.0.0.x elements remain in timeout whi
 
 ## Affected versions
 
-- Main Release versions from DataMiner 10.5.0 [CU18]/10.6.0 [CU6] onwards.
-- Feature Release versions from DataMiner 10.6.9 onwards.<!-- RN 45851 -->
+DataMiner 10.5.0 [CU18], 10.6.0 [CU6], and 10.6.9.<!-- RN 45851 -->
 
 ## Cause
 
@@ -16,7 +15,7 @@ WMI actions configured as `<Action><Type>wmi</Type></Action>` in *Protocol.xml* 
 
 ## Fix
 
-No fix is available yet.<!-- RN 46396 -->
+Install DataMiner 10.5.0 [CU19], 10.6.0 [CU7], or 10.6.10.<!-- RN 46396 -->
 
 ## Workaround
 
