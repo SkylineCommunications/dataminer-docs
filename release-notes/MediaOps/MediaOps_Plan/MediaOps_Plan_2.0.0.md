@@ -83,6 +83,14 @@ This action is not available for jobs in the *Confirmed*, *Running*, *Completed*
 
 Configuration settings of the original resource node, such as capabilities and capacities, are not automatically transferred to the pool node. Configure these settings again when they are required for a subsequent automatic resource selection.
 
+#### Scheduling/Workflow Designer: Standalone profile parameters are now shown when configuring orchestration events [ID 46447]
+
+When you configure an orchestration event, profile parameters that are directly linked to the orchestration script but that are not part of a profile definition are now also shown in the *Edit configuration* dialog. Previously, profile parameters were only shown if they were part of a profile definition.
+
+The value fields and link buttons of these standalone profile parameters are aligned with the other orchestration script input parameters.
+
+Profile definitions and their associated presets continue to be shown like before when a profile definition is configured for the script.
+
 ## Changes
 
 ### Enhancements

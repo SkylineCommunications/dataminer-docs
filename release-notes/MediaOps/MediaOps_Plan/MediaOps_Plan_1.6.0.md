@@ -184,6 +184,16 @@ The workflow node visualization in the Scheduling and Workflow Designer apps has
 
 When system properties of type discrete were configured, the dropdown to select the default value was not updated with the newly added or changed discrete values.
 
+#### Workflow Designer: Resource pool not automatically selected when swapping resource [ID 45527]
+
+When you tried to swap a resource in the Workflow Designer app, the resource pool was not automatically selected, so that you had to manually locate the resource pool before performing the swap. Now the resource pool will be correctly auto-populated based on the selected resource.
+
+#### Scheduling: Exception because of invalid node reference made workflow inaccessible in 'Edit job' panel [ID 45591]
+
+When you opened the *Edit job* panel, the following exception could occur in the workflow: `The given key was not present in the dictionary`. This was caused by connections referencing non-existing node IDs, for example, after a node was removed but its associated connections were not updated. This exception made it impossible for operators to view the workflow, and manual intervention in the DOM instance was required to resolve the issue.
+
+To resolve this, the handling of invalid node references has now been improved. Connections with non-existing node IDs are now gracefully ignored or handled, preventing the exception and ensuring that the workflow remains visible to operators.
+
 #### DevPack: Not possible to update capability name [ID 45544]
 
 Up to now, it was not possible to update the name of a capability using the [MediaOps Plan DevPack](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan).
@@ -195,6 +205,10 @@ Attempting to add and save a new property to a resource that had a concurrency o
 #### Aborting a script caused it to be logged as failed [ID 45590]
 
 Previously, closing an interactive script by clicking the X icon in the top-right corner resulted in the script being logged as failed. This behavior has been fixed, and such actions no longer mark the script as a failure.
+
+#### Scheduling: Node icon not updated after node swap [ID 45644]
+
+When an existing node of a non-running job was swapped, the node icon was not updated. Now swapping the node will cause the icon to be updated to match the new node.
 
 #### Scheduling: Workflow-level configuration not cloned when creating job from workflow [ID 45679]
 
