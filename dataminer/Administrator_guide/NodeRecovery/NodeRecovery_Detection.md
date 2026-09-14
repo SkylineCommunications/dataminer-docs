@@ -41,10 +41,10 @@ When the global cluster state changes, [a script can be triggered](xref:NodeReco
 
 ## Network splits
 
-Global outage detection requires at least three nodes and will only be active when **more than half of the total nodes** in the cluster can reach each other. This majority requirement helps prevent a network split from causing conflicting cluster decisions, also known as a [split-brain problem](https://en.wikipedia.org/wiki/Split-brain_(computing)).
+Global outage detection requires at least three nodes and will only be active when **more than half of the total nodes** in the cluster can reach each other. This majority requirement helps prevent a network split from causing conflicting cluster decisions (also known as a "split-brain problem").
 
 For example, there will be no global detection while a four-node cluster is temporarily split up into two parts of two nodes each. Alternatively, if a six-node cluster gets split into a group of four nodes and a group of two nodes because of a network split, the group of four nodes will still calculate the global state while reporting the other two nodes as being in outage.
 
 At all times, each individual node will still calculate and update its local view of the cluster, and it can still [trigger a script](xref:NodeRecovery_Triggers) when this local view changes.
 
-This local detection can be used in a two-node setup to let the nodes work together and provide redundancy when one of the servers fails. However, during a network split, both nodes can independently detect a change in their local view and take conflicting actions. Do not use local detection in a two-node setup without considering this split-brain risk.
+Local detection can be used in a two-node setup to let the nodes work together and provide redundancy when one of the servers fails. However, during a network split, both nodes can independently detect a change in their local view and take conflicting actions, so make sure to take this split-brain risk into consideration if you use local detection.
