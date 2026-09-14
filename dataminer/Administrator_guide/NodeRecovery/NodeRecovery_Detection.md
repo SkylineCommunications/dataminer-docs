@@ -31,6 +31,8 @@ Whenever the local state changes, [a script can be triggered](xref:NodeRecovery_
 
 Node Recovery also maintains a global cluster view. In this view, a consensus is made about which nodes are in outage based on the local views from all nodes in the cluster.
 
+Global outage detection requires a cluster of at least three nodes. This minimum prevents a network split from causing both sides of a two-node cluster to incorrectly consider themselves the valid cluster majority. For more information, refer to [Network splits](#network-splits).
+
 The global state is calculated and maintained by an elected leader node. When a leader node goes down, a new leader is elected automatically, provided the majority of the nodes are still available. If there is no cluster majority, no global state changes will be detected until the cluster majority is restored.
 
 The leader node aggregates local state views from all nodes in the cluster and determines the global consensus state. For detailed information on how the global state is calculated from local view states, refer to [Global state calculation](xref:NodeRecovery_States#global-state-calculation) .
@@ -39,8 +41,10 @@ When the global cluster state changes, [a script can be triggered](xref:NodeReco
 
 ## Network splits
 
-Global outage detection will only be active when **more than half of the total nodes** in the cluster can reach each other.
+Global outage detection requires at least three nodes and will only be active when **more than half of the total nodes** in the cluster can reach each other. This majority requirement helps prevent a network split from causing conflicting cluster decisions (also known as a "split-brain problem").
 
 For example, there will be no global detection while a four-node cluster is temporarily split up into two parts of two nodes each. Alternatively, if a six-node cluster gets split into a group of four nodes and a group of two nodes because of a network split, the group of four nodes will still calculate the global state while reporting the other two nodes as being in outage.
 
 At all times, each individual node will still calculate and update its local view of the cluster, and it can still [trigger a script](xref:NodeRecovery_Triggers) when this local view changes.
+
+Local detection can be used in a two-node setup to let the nodes work together and provide redundancy when one of the servers fails. However, during a network split, both nodes can independently detect a change in their local view and take conflicting actions, so make sure to take this split-brain risk into consideration if you use local detection.
