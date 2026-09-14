@@ -46,6 +46,6 @@ Finished scheduled tasks were not cleaned up correctly, which caused completed t
 
 ### Memory leak caused by GQI data sources [ID 46450]
 
-When a page showing event, endpoint, virtual signal group, or control surface GQI ad hoc data sources was closed or refreshed, the update subscriptions and timers behind these data sources were not always cleaned up correctly, especially if an error occurred while starting updates. Over time, this could cause memory usage to grow and lead to instability on systems that make frequent or continuous use of these data views.
+When you navigated through the MediaOps Plan apps, the subscriptions and timers behind GQI data sources were not always cleaned up correctly, especially if an error occurred while starting updates. Over time, this could cause memory usage to grow and lead to instability on systems that make frequent or continuous use of these data sources.
 
 The affected data sources now consistently clean up their subscriptions and timers whenever updates stop, the data source is destroyed, or an error occurs while starting updates, ensuring that resources are now always released properly.
