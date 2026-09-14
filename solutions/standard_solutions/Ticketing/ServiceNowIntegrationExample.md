@@ -25,7 +25,10 @@ Several things will now happen:
 - A DataMiner ticket ID and ServiceNow incident ID are generated and shown in the creation response.
 - A ticket is created in DataMiner, linked to the alarm.
 - A corresponding incident is created in ServiceNow.
-- Ticket properties in the Alarm Console (Ticket ID, Incident Number, Incident Status) are updated accordingly.
+- Ticket related alarm properties in the Alarm Console (Ticket ID, Incident Status and Incident Number) are updated accordingly.
+
+> [!TIP]
+> Ensure that the related alarm properties are displayed in the Alarm Console so users can view this ticket related information.
 
 ## Viewing the ticket
 
