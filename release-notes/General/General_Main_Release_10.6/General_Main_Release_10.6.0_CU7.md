@@ -154,3 +154,9 @@ Custom applications using the SLNet gRPC client could fail to establish a connec
 As a result, the connection could incorrectly be reported as `APIGateway is unavailable`.
 
 From now on, invalid User-Agent values are skipped, so the health check can continue and the gRPC connection can be established correctly.
+
+#### Persistent element timeout caused by failed WMI actions [ID 46396]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+Up to now, a WMI action that was not included in a poll group could fail. For example, this could occur when a QAction updated a parameter, and a trigger on that parameter executed a WMI action. As a result, the element would go into timeout and be unable to recover from the timeout status. This issue has now been fixed.

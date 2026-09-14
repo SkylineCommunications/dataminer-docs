@@ -8,10 +8,8 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards | | September 7, 2026 |
 | [Swarmed scheduled task executes incorrect action after editing](xref:KI_Swarmed_scheduled_task_executes_incorrect_action) | Feature Release versions from DataMiner 10.6.3 onwards | | September 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
-| [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
@@ -25,6 +23,8 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 | DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 | September 7, 2026 |
+| [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
 | [Alarm storm prevention user settings not visualized correctly](xref:KI_Cube_Alarm_storm_prevention) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 | DataMiner Cube 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 | 15 April, 2026 |
 | [GQI DxM unavailable because of missing Newtonsoft.Json assembly](xref:KI_GQI_DxM_unavailable_missing_Newtonsoft_Json) | DataMiner web 10.5.0 [CU1]/10.5.4 or higher | DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 | 25 March, 2026 |
 | [SLNet handle leak caused by SAML authentication and SLHelper startup](xref:KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup) | DataMiner 10.5.0 [CU12], 10.6.0, and 10.6.3 [CU0] | DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 [CU1] | February 25, 2026 |
@@ -41,9 +41,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards | | September 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
-| [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
@@ -57,6 +55,8 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 | DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 | September 7, 2026 |
+| [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
 | [SLSNMPAgent RTEs when SNMP manager is not responding](xref:KI_SLSNMPAgent_RTE_SNMP_manager_not_responding) | From DataMiner 10.5.0 [CU8] onwards | DataMiner 10.5.0 [CU17] | May 28, 2026 |
 | [Alarm storm prevention user settings not visualized correctly](xref:KI_Cube_Alarm_storm_prevention) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 | DataMiner Cube 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 | 15 April, 2026 |
 | [GQI DxM unavailable because of missing Newtonsoft.Json assembly](xref:KI_GQI_DxM_unavailable_missing_Newtonsoft_Json) | DataMiner web 10.5.0 [CU1]/10.5.4 or higher | DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 | 25 March, 2026 |
