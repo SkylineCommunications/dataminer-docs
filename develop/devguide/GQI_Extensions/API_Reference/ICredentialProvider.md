@@ -12,7 +12,7 @@ description: Reference for the ICredentialProvider interface, which retrieves us
 
 Provides access to username and password credentials that have been granted to a GQI extension library.
 
-Available from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards when using version 1.5.0 or later of the `Skyline.DataMiner.Core.GQI.Extensions` NuGet package. <!-- RN 46279 -->
+Available from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 and API version 1.5.0. <!-- RN 46279 -->
 
 > [!TIP]
 > See [Using credentials in GQI extensions](xref:GQI_Extensions_Credentials) for information about granting and retrieving credentials.
@@ -25,7 +25,7 @@ Retrieves a username and password credential by its configured name.
 
 #### Parameters
 
-- `string` `name`: The name of the credential reference granted to the extension library.
+- `string` `name`: The name of the credential reference [granted to the extension library](xref:GQI_Extensions_Credentials#granting-a-credential-to-an-extension-library).
 - `CancellationToken` `cancellationToken`: A token that can be used to cancel the credential request.
 
 #### Returns

@@ -14,13 +14,13 @@ The credential functionality within DataMiner is available from 10.7.0 [CU0]/10.
 The GQI functionality is available from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards when using version 1.5.0 or later of the `Skyline.DataMiner.Core.GQI.Extensions` NuGet package. <!-- RN 46279 -->
 
 > [!IMPORTANT]
-> Credentials are only available to an extension library when they have been explicitly granted to that library.
+> Credentials are only available to an extension library when they have been explicitly [granted to the library](#granting-a-credential-to-an-extension-library).
 
 ## Granting a credential to an extension library
 
-1. Add a credential of type *Username and password credentials* to the DataMiner Credentials Library in DataMiner Cube. For more information, see [Credentials Library](xref:Credentials_Library).
+Configure the credential in the [Credentials Library](xref:Credentials_Library), then declare a reference to it in the *CREDENTIALS* section of the automation script that contains the extension library. For the procedure, see [Declaring a set of credentials](xref:Using_credentials_in_an_automation_script#declaring-a-set-of-credentials).
 
-2. In the Automation module in DataMiner Cube, configure the credential for the Automation Script that contains the extension library. In the script's *CREDENTIALS* section, declare the credential as described in [Using credentials in an automation script](xref:Using_credentials_in_an_automation_script#declaring-a-set-of-credentials). Give the credential reference a name, such as `MyUserNamePasswordCredential`, and select the corresponding credential from the Credentials Library.
+Use the name assigned to the credential reference when requesting the credential in the GQI extension.
 
 ## Injecting the credential provider
 

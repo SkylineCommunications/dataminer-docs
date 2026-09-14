@@ -12,7 +12,7 @@ description: Reference for the UsernamePasswordCredential class, which contains 
 
 Represents a username and password credential returned by the [ICredentialProvider](xref:GQI_ICredentialProvider).
 
-Available from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards when using version 1.5.0 or later of the `Skyline.DataMiner.Core.GQI.Extensions` NuGet package. <!-- RN 46279 -->
+Available from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 and API version 1.5.0. <!-- RN 46279 -->
 
 ## Constructor
 
