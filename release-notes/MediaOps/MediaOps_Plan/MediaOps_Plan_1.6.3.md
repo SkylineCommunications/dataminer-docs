@@ -21,6 +21,6 @@ uid: MediaOps_Plan_1.6.3
 
 ### Memory leak caused by GQI data sources [ID 46451]
 
-When a GQI data source encountered an error while setting up internal watchers to detect changes to workflows, jobs, or resource reservations, watchers that had already been created were not properly released. Repeated failures could accumulate leaked resources over time. In addition, if a data source was stopped before it had fully started, cleanup could fail unexpectedly instead of completing safely.
+When you navigated through the MediaOps Plan apps, an error in the GQI data sources could cause some of their data to be cleaned up incorrectly. If this occurred repeatedly, it could cause leaked resources to accumulate over time.
 
-To prevent these issues, cleanup logic has now been consolidated into a single, safe routine that correctly releases all watchers regardless of how many were successfully created and that can be called multiple times without error. This routine now runs consistently whenever the data source starts up, stops, fails during startup, or is destroyed, ensuring that resources are always released properly.
+The cleanup logic has now been improved to prevent this issue.
