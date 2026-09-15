@@ -885,6 +885,14 @@ This was caused by an internal ID collision. Change point IDs restart from zero 
 
 Change points are now also distinguished by creation time. As a result, previously detected change points remain retrievable after a restart.
 
+#### Failover: NodeId in ClusterEndpoints.json could be cleared after an online agent restart [ID 46329]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, when the offline agent in a Failover setup was not running and the online agent was restarted, the `NodeId` field for the offline agent in *ClusterEndpoints.json* could be set to `null`.
+
+From now on, the field will retain its existing value when it cannot be retrieved from the offline agent.
+
 #### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
 
 <!-- MR 10.7.0 - FR 10.6.10 [CU0] -->
