@@ -995,19 +995,27 @@ items:
           - name: Generating code with the DOM Editor
             topicUid: DOM_Generating_code_with_the_DOM_editor
   - name: DataMiner Edge
+    topicUid: DataMiner_Edge
     items:
-    - name: About DataMiner Edge
-      topicUid: DataMiner_Edge
-    - name: Developing a connector for DataMiner Edge
-      topicUid: Developing_a_connector_for_DataMiner_Edge
-  - name: Edge Manager
-    items:
-    - name: About Edge Manager
-      topicUid: EdgeManagerOverview
-    - name: Getting started
-      topicUid: EdgeManagerGettingStarted
-    - name: Troubleshooting
-      topicUid: EdgeManagerTroubleshooting
+      - name: Edge Nodes
+        items:
+          - name: About Edge Nodes
+            topicUid: About_Edge_Nodes
+          - name: Installing an Edge Node
+            topicUid: Installing_an_Edge_Node
+            items:
+              - name: Installing on Windows
+                topicUid: Installing_an_Edge_Node_on_Windows
+              - name: Installing on Linux
+                topicUid: Installing_an_Edge_Node_on_Linux
+      - name: Gateway mode
+        items:
+          - name: About Gateway mode
+            topicUid: GatewayModeOverview
+          - name: Getting started
+            topicUid: GatewayModeGettingStarted
+          - name: Troubleshooting
+            topicUid: GatewayModeTroubleshooting
   - name: Experience and Performance Management (EPM)
     topicUid: EPM
     items:
