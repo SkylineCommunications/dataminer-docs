@@ -504,14 +504,6 @@ Route conflicts are also detected across all existing definitions. Any two templ
 
 When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
 
-#### DataMiner Edge: Elements can now be configured with scripts and protocol settings [ID 46037]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-You can now configure elements with one or more scripts. Each script has a location, an identifier, and, optionally, a schedule that determines when it runs.
-
-Elements can also store connector settings as key/value pairs. Scripts and connector settings are included when elements are exported or imported, including when using CSV files.
-
 #### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -519,24 +511,6 @@ Elements can also store connector settings as key/value pairs. Scripts and conne
 In order to notify client applications when the measurement point cycle changes, a new spectrum parameter has been added: `SPA_SPARAM_MEASPOINT_CYCLE` (PID 64227).
 
 This will especially improve synchronization in shared sessions, keeping measurement point cycle updates aligned across connected clients.
-
-### DataMiner Edge: New 'Number', 'IP address', and 'IP port' setting types in scripted connector protocols [ID 46361]
-
-<!-- MR 10.7.0 - FR 10.6.11 -->
-
-DataMiner Edge now supports `Number`, `IPAddress`, and `IPPort` setting types in scripted connector protocols.
-
-- `Number` supports an optional range and decimal precision.
-- `IPAddress` accepts IPv4 and IPv6 addresses as well as hostnames.
-- `IPPort` accepts whole-number port values from 1 through 65535.
-
-### DataMiner Edge: Support for SNMPv3 credentials and SNMP community credentials in scripted connector protocols [ID 46371]
-
-<!-- MR 10.7.0 - FR 10.6.11 -->
-
-DataMiner Edge now supports SNMPv3 credentials and SNMP community credentials in the *Settings* section of scripted connector protocols.
-
-Use the `SNMPv3Credential` and `SNMPCommunityCredential` protocol XML tags to configure these credentials.
 
 ### New GetCloudDmsInformationRequest message to retrieve information from a cloud-connected DMS [ID 46393]
 
