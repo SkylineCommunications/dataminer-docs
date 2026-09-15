@@ -117,3 +117,9 @@ Up to now, when two dropdown components were configured to feed data to each oth
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 When an application was deleted while the dashboards cache was being initialized, the web API could incorrectly log a `Failed adding folder` error with a `DirectoryNotFoundException`.
+
+#### Dashboards/Low-Code Apps: Timeline components could fail to restore their start and end dimensions after query columns were re-added [ID 46470]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When the start and end columns were removed from and then re-added to a *Timeline* component query, up to now, the *Timeline* component could fail to automatically restore its start and end dimensions.
