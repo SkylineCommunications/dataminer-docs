@@ -530,6 +530,14 @@ DataMiner Edge now supports `Number`, `IPAddress`, and `IPPort` setting types in
 - `IPAddress` accepts IPv4 and IPv6 addresses as well as hostnames.
 - `IPPort` accepts whole-number port values from 1 through 65535.
 
+### DataMiner Edge: Support for SNMPv3 credentials and SNMP community credentials in scripted connector protocols [ID 46371]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+DataMiner Edge now supports SNMPv3 credentials and SNMP community credentials in the *Settings* section of scripted connector protocols.
+
+Use the `SNMPv3Credential` and `SNMPCommunityCredential` protocol XML tags to configure these credentials.
+
 ### New GetCloudDmsInformationRequest message to retrieve information from a cloud-connected DMS [ID 46393]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
