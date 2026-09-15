@@ -18,6 +18,15 @@ The communication will occur over TCP/IP, UDP, or, less commonly, over a serial 
 
 DataMiner supports serial communication, allowing protocols to define one or more connections of type "serial". DataMiner runs a process called "SLPort", which takes care of all communication to and from devices connected to either a serial port or an IP port.
 
+> [!IMPORTANT]
+>
+> IPv6 destinations are supported for plain TCP/IP connections. However, IPv6 destinations are not yet supported for:
+>
+> - TCP/IP connections with SSL/TLS enabled.
+> - UDP/IP connections.
+>
+> Use IPv4 destinations for these connection types.
+
 ## See also
 
 - [Slow poll mode ping group](xref:ConnectionsPingGroup)
