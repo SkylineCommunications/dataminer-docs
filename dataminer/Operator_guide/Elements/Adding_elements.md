@@ -96,11 +96,11 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - For a **WebSocket** connection, see [WebSocket connection](xref:WebSocket_Connection).
 
-   - For a connection from a DaaS Agent to a private data source via [Edge Manager](xref:EdgeManagerOverview), see [Creating an element that communicates with a data source through a tunnel](xref:EdgeManagerGettingStarted#creating-an-element-that-communicates-with-a-data-source-through-a-tunnel).
+   - For a connection from a DaaS Agent to a private data source through [Gateway mode](xref:GatewayModeOverview), see [Creating an element that communicates with a data source through a tunnel](xref:GatewayModeGettingStarted#creating-an-element-that-communicates-with-a-data-source-through-a-tunnel).
 
 1. If the protocol is [configured to allow you to test the connection](xref:Protocol.Groups.Group-ping), optionally click the button *Test connection* below the connection you want to test.
 
-   After you click the button, a message will display the results of the test. However, note that this button is not available for connections via [Edge Manager](xref:EdgeManagerOverview).
+   After you click the button, a message will display the results of the test. However, note that this button is not available for connections through [Gateway mode](xref:GatewayModeOverview).
 
 1. Specify the timeout settings per connection:
 
@@ -122,6 +122,16 @@ You can follow the steps below or watch this short video, which shows you how to
 
      > [!IMPORTANT]
      > When an element goes in timeout, it will remain in timeout until **all** its connections are responding again.
+
+1. From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46287 + 46037 + 46142-->, connectors that contain DataMiner Edge scripts will have the following additional sections. The exact scripts and settings depend on the connector.
+
+   - **Run details**: Select a compatible [DataMiner Edge Node](xref:DataMiner_Edge) as the target, and configure the interval for each script.
+
+   - **Settings**: Configure the connector-defined values for the selected environment, such as a location, system environment, and authentication credentials. Authentication settings can use a token credential or a username and password credential from the Credentials Library.
+
+   > [!NOTE]
+   > - If you edit an element with saved credentials that you cannot access, select a set of credentials that you can access before saving the element.
+   > - When you [export or import an element](xref:Importing_and_exporting_elements), its DataMiner Edge scripts and connector settings are included, including in CSV files.
 
 1. Specify the following advanced element settings if necessary:
 
@@ -163,16 +173,6 @@ You can follow the steps below or watch this short video, which shows you how to
    - **Block Swarming**: Available from 10.5.5/10.6.0 onwards<!--RN 42535 + 42536-->. See [Blocking elements from being swarmed](xref:SwarmingElements#blocking-elements-from-being-swarmed).
 
    - **Element state**: Select the initial state of the element in this selection box. By default this will be set to “Active”.
-
-1. From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46287-->, configure the following additional pages, if necessary:
-
-   - On the *Settings* page, configure any connector-defined settings.
-
-     If you edit an element with saved credentials that you cannot access, select a set of credentials that you can access before saving the element.
-
-   - On the *Run-on details* page, select a compatible DataMiner Edge node for connectors that contain scripts, and configure the interval for each script.
-
-   These pages are available depending on the selected connector.
 
 1. Click *Next* and specify the view(s) to which you want to link the element.
 

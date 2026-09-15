@@ -12,4 +12,4 @@ This new module makes use of zrok, a secure, open-source platform that allows pr
 
 When the DxM has been installed on the DataMiner Agent and the setup in the remote location has been configured to enable the connection, users will be able to create elements that communicate with the data sources in the remote location by selecting the configured location during element creation.
 
-For detailed information, refer to [About Edge Manager](xref:EdgeManagerOverview).
+For detailed information, refer to [About Edge Manager](xref:GatewayModeOverview).

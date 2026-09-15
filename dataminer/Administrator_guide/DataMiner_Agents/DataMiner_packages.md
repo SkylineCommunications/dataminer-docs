@@ -85,6 +85,8 @@ The actual content of a protocol package differs from that of the other packages
 
 - Protocol-specific help
 
+- From DataMiner 10.7.0/10.6.9 onwards<!--RN 45906-->, scripts and a *dependencies.json* file for DataMiner Edge protocols
+
 ## Import package (.dmimport)
 
 Depending on what was exported into the package, this package may contain elements, services, views, properties, protocols, automation scripts, etc.
