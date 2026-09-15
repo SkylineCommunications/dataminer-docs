@@ -20,7 +20,13 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*This release does not contain any new features yet.*
+### GQI extensions can now use credentials from the Credentials Library [ID 46279]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+GQI extensions using version 1.5.0 or above of the `GQI.Extensions` API can now use the `ICredentialProvider` service to retrieve username/password credentials from the Credentials Library.
+
+To access a credential, the extension must include a reference to it. The credential must also grant the extension library access.
 
 ## Changes
 
