@@ -40,16 +40,6 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-### DataMiner Edge: New 'Number', 'IP address', and 'IP port' setting types in scripted connector protocols [ID 46361]
-
-<!-- MR 10.7.0 - FR 10.6.11 -->
-
-DataMiner Edge now supports `Number`, `IPAddress`, and `IPPort` setting types in scripted connector protocols.
-
-- `Number` supports an optional range and decimal precision.
-- `IPAddress` accepts IPv4 and IPv6 addresses as well as hostnames.
-- `IPPort` accepts whole-number port values from 1 through 65535.
-
 ### New GetCloudDmsInformationRequest message to retrieve information from a cloud-connected DMS [ID 46393]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
@@ -131,6 +121,14 @@ On systems using STaaS, up to now, after an app package was installed, removing 
 
 This issue was caused by a case-sensitive mismatch in the script-type filter (`automationscript` instead of `AutomationScript`). From now on, the filter is case-insensitive, so stale automation script entries are removed correctly.
 
+#### Failover: NodeId in ClusterEndpoints.json could be cleared after an online agent restart [ID 46329]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, when the offline agent in a Failover setup was not running and the online agent was restarted, the `NodeId` field for the offline agent in *ClusterEndpoints.json* could be set to `null`.
+
+From now on, the field will retain its existing value when it cannot be retrieved from the offline agent.
+
 #### Failover: SLASPConnection could fail to initialize after a Failover switch [ID 46350]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
@@ -140,6 +138,12 @@ After a Failover switch, SLASPConnection could fail to initialize correctly when
 - The legacy Reporter could be unavailable when the `LegacyReportsAndDashboards` soft-launch option was enabled.
 - Incoming notifications could remain in memory without being processed, causing a memory leak.
 - The reporter page in DataMiner Cube and the distribution, alarm count, and timeline components in the Dashboards app could show outdated information.
+
+#### NATSReset.exe could throw an InvalidOperationException after the IP address of a DataMiner Agent had changed [ID 46360]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, after the IP address of a DataMiner Agent had changed, running *NATSReset.exe* could throw an `InvalidOperationException`.
 
 #### NATSMigration and NATSRepair could omit errors from the final error overview [ID 46362]
 

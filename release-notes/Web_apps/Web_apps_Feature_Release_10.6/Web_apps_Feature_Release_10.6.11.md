@@ -20,7 +20,13 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*This release does not contain any new features yet.*
+### GQI extensions can now use credentials from the Credentials Library [ID 46279]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+GQI extensions using version 1.5.0 or above of the `GQI.Extensions` API can now use the `ICredentialProvider` service to retrieve username/password credentials from the Credentials Library.
+
+To access a credential, the extension must include a reference to it. The credential must also grant the extension library access.
 
 ## Changes
 
@@ -111,3 +117,9 @@ Up to now, when two dropdown components were configured to feed data to each oth
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 When an application was deleted while the dashboards cache was being initialized, the web API could incorrectly log a `Failed adding folder` error with a `DirectoryNotFoundException`.
+
+#### Dashboards/Low-Code Apps: Timeline components could fail to restore their start and end dimensions after query columns were re-added [ID 46470]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When the start and end columns were removed from and then re-added to a *Timeline* component query, up to now, the *Timeline* component could fail to automatically restore its start and end dimensions.
