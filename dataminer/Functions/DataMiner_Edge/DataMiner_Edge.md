@@ -13,4 +13,4 @@ DataMiner Edge addresses this challenge. It can extend the DataMiner xOps platfo
 
 - [Edge Gateway mode](xref:About_Edge_Gateways) provides secure connectivity between centrally running integrations and remote data sources, without requiring a site-to-site VPN. It uses a secure gateway or tunnel to access remote data sources while connector logic and workflows continue to run centrally in DataMiner.
 
-Edge Nodes are available in preview from DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46037, 46072, and 46142-->. Edge Gateways are available from DataMiner 10.5.10/10.6.0 onwards.
+Edge Nodes are available in preview from DataMiner 10.6.10/10.7.0 onwards<!--RN 46037, 46072, and 46142-->. Edge Gateways are available from DataMiner 10.5.10/10.6.0 onwards.

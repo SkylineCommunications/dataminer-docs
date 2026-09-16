@@ -123,7 +123,7 @@ You can follow the steps below or watch this short video, which shows you how to
      > [!IMPORTANT]
      > When an element goes in timeout, it will remain in timeout until **all** its connections are responding again.
 
-1. From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46287 + 46037 + 46142-->, connectors that contain DataMiner Edge scripts will have the following additional sections. The exact scripts and settings depend on the connector.
+1. From DataMiner 10.6.10/10.7.0 onwards<!--RN 46287 + 46037 + 46142-->, connectors that contain DataMiner Edge scripts will have the following additional sections. The exact scripts and settings depend on the connector.
 
    - **Run details**: Select a compatible [DataMiner Edge Node](xref:DataMiner_Edge) as the target, and configure the interval for each script.
 

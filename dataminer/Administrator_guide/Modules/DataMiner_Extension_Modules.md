@@ -72,7 +72,9 @@ The ModelHost DxM is not included in the Cloud Pack and [must be deployed separa
 
 ### EdgeManager
 
-The EdgeManager DxM, previously known as SiteManager DxM, is used by DataMiner Edge to set up secure communication tunnels enabling access to on-premises data sources from a DaaS system. It is supported from DataMiner 10.5.10/10.5.0 onwards and is included in the 10.5.10 DaaS image.
+The EdgeManager DxM, previously known as SiteManager DxM, supports DataMiner Edge. It sets up secure communication tunnels for Edge Gateways and, from DataMiner 10.6.10/10.7.0 onwards, enables Edge Nodes to connect directly to a DataMiner System.
+
+The DxM is available from DataMiner 10.5.10/10.6.0 onwards and is included in the 10.5.10 DaaS image.
 
 For more information, refer to [About DataMiner Edge](xref:DataMiner_Edge).
 
