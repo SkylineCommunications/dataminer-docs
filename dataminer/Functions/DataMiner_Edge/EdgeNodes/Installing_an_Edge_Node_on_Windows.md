@@ -5,6 +5,9 @@ description: Install, configure, and manage a DataMiner Edge Node on a Windows m
 
 # Installing an Edge Node on Windows
 
+> [!IMPORTANT]
+> At present, this feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi) soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
 Before you continue, make sure the [general prerequisites](xref:Installing_an_Edge_Node) are met.
 
 ## Prerequisites
@@ -25,7 +28,7 @@ The Windows machine must meet the following requirements:
 
 1. Run the installer as an administrator.
 
-1. Follow the setup wizard.
+1. Follow the setup wizard:
 
    - Select how the Edge Node should connect to the DataMiner System.
 
@@ -62,9 +65,9 @@ Configure the properties as follows:
 
 ## Starting the Edge Node service
 
-If you configured the Edge Node through the installation wizard, the DataMiner EdgeNode service starts automatically.
+If you have configured the Edge Node through the installation wizard, the DataMiner EdgeNode service will start automatically.
 
-If you manually changed the configuration, restart the service for the changes to take effect:
+If you have manually changed the configuration, restart the service for the changes to take effect:
 
 1. Open PowerShell as an administrator.
 
@@ -74,7 +77,7 @@ If you manually changed the configuration, restart the service for the changes t
 
 1. Verify that the service is running: `Get-Service -Name "DataMiner EdgeNode"`.
 
-   The status of the service should be Running.
+   The status of the service should be *Running*.
 
 > [!NOTE]
 > You can also manage the service through the Windows Services application.

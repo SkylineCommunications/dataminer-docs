@@ -6,6 +6,9 @@ description: "Learn how DataMiner Edge Nodes run Python-based connector integrat
 
 # About Edge Nodes
 
+> [!IMPORTANT]
+> At present, this feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi) soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
 An Edge Node is a lightweight runtime environment that runs on Windows or Linux. It securely connects to DataMiner either directly or through dataminer.services and provides a managed environment in which connector integrations can collect and process data locally.
 
 ## How Edge Nodes work

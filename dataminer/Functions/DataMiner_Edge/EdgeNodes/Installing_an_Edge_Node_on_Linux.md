@@ -5,6 +5,9 @@ description: Install, configure, and start a DataMiner Edge Node on a Debian-bas
 
 # Installing an Edge Node on Linux
 
+> [!IMPORTANT]
+> At present, this feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi) soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
 Before you continue, make sure the [general prerequisites](xref:Installing_an_Edge_Node) are met.
 
 ## Prerequisites
@@ -30,9 +33,9 @@ The Linux machine must meet the following requirements:
 
 ## Configuring the Edge Node
 
-The configuration is stored in the following file: `/etc/skyline-communications/dataminer-edge-node/edgenode.json`.
+Once the package has been installed, you will need to configure the Edge Node in the following file: `/etc/skyline-communications/dataminer-edge-node/edgenode.json`.
 
-The file contains the following connection configuration:
+This file contains the following connection configuration:
 
 ```json
 {
