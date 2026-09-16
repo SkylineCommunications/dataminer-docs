@@ -93,6 +93,21 @@ Profile definitions and their associated presets continue to be shown like befor
 
 ## Changes
 
+### Breaking changes
+
+#### Scheduling/Workflow Designer: Edit locks now specific to each session [ID 46489]
+
+Scheduling and Workflow Designer now validate edit locks using a session-specific lock ID instead of relying only on the user name. Previously, when you opened the same job or workflow for editing in two separate sessions, both sessions could edit it without warning, potentially causing changes to be overwritten.
+
+With this update, an edit is only allowed to proceed when the lock ID supplied by the current session matches the lock ID of the active lock.
+
+When you open an item that you are already editing in another session, a dedicated message now indicates that the item is locked in one of your other sessions. This is different from the existing message for items locked by another user.
+
+If the current lock state cannot be retrieved, the item will be available in read-only mode, ensuring that you can view it safely even in case of connectivity issues.
+
+> [!IMPORTANT]
+> All lock-aware automation scripts in Scheduling and Workflow Designer now require a `Lock ID` input. This includes scripts for creating, editing, and deleting jobs, managing contacts, and building or deleting workflows. If you call these scripts directly or use custom automation built on them, update these calls to provide the new mandatory parameter. Pass `/` when no lock is held.
+
 ### Enhancements
 
 #### DevPack: API enhancement to improve type-checking and casting for Capacity and Configuration classes [ID 45715]
@@ -296,6 +311,14 @@ When you attach a file to a job and the file exceeds the maximum size configured
 The *Scheduling_Edit Job Time* script has been removed from the MediaOps Plan package. This script was previously used to support moving jobs in the timeline component, but this functionality is no longer used.
 
 If you have custom code or a custom project that uses this script, you will need to update that code to no longer rely on it.
+
+#### DevPack: Values and data references now mutually exclusive [ID 46483]
+
+Settings that can contain either a direct value or a data reference now automatically keep these representations mutually exclusive. Assigning a direct value clears any existing data reference, while assigning a data reference clears any existing direct value. Previously, consumers had to explicitly clear the other representation when switching modes.
+
+This applies to capability, capacity, configuration, and script execution settings, including both bounds of range capacities, script parameters, and script elements. For script elements, assigning a data reference clears both the element ID and element name. Assigning `null` or an empty or default element ID continues to preserve an existing data reference.
+
+As a result, switching between value‑based and reference‑based configuration will now be simpler, more intuitive, and less error‑prone, with the objects themselves maintaining a clean and consistent state.
 
 ### Fixes
 
