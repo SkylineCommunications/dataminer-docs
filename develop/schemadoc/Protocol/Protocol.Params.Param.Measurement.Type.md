@@ -209,7 +209,7 @@ See also:
 
 ### togglebutton
 
-When a parameter of type "write" includes only two discreet values, it can be represented by a toggle button. The associated parameter of type "read" must use the measurement type "discreet" and contain the same two discreet values. When the read parameter contains the first discreet value, the second discreet value will be used in the set command when the toggle button is clicked.
+When a parameter of type "write" includes only two discrete values, it can be represented by a toggle button. The associated parameter of type "read" must use the measurement type "discreet" and contain the same two discrete values. When the read parameter contains the first discrete value, the second discrete value will be used in the set command when the toggle button is clicked.
 
 See also:
 
