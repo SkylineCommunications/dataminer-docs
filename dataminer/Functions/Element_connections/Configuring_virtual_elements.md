@@ -31,7 +31,7 @@ Use the following procedure to link the parameters of a virtual element to param
 
    1. In the *Linked instance* column, select the table index if necessary.
 
-   1. In the *Include element sate* column, clear the checkbox if you do not want the state of the connected element to influence the state of the virtual element. Otherwise, keep the checkbox selected.
+   1. In the *Include element state* column, clear the checkbox if you do not want the state of the connected element to influence the state of the virtual element. Otherwise, keep the checkbox selected.
 
    > [!TIP]
    > To duplicate a row, for example because different rows in the same table need to be linked to a different element, right-click the row and select *Duplicate*.
