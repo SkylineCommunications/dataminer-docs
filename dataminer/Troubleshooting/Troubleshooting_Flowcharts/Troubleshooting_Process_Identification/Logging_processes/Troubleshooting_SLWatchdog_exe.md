@@ -92,9 +92,9 @@ click RteLink "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshoo
 click XmlFlowchart "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Other_processes/Troubleshooting_SLXML_exe.html" "Go to SLXML Flowchart"
 click ConfirmLeak "#how-can-you-confirm-a-memory-leak" "How to identify a memory leak."
 click CommonIssues "#common-issues-flowchart" "Go to common issues"
-click RunLogCollector "/dataminer/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
+click RunLogCollector "/dataminer/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
 click Home "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Root Cause Identification flow"
-click SLLogCollector "/dataminer/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
+click SLLogCollector "/dataminer/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
 %% Define styles %%
 linkStyle default stroke:#cccccc
 classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:0px;
@@ -155,9 +155,9 @@ flowchart TD
 click Investigation "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
 click InstructionsBitness "#is-watchdog-running-as-a-64-bit-process" "Determine if Watchdog is registered as 32-bit or 64 bit process. "
 click ResolveMismatch "#how-do-you-resolve-a-bitness-mismatch-between-the-dataminer-version-and-slwatchdogexe" "Resolve mismatch between DMA and SLWatchdog bitness"
-click RunLogCollector "/dataminer/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
+click RunLogCollector "/dataminer/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
 click Home "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Root Cause Identification flow"
-click SLLogCollector "/dataminer/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
+click SLLogCollector "/dataminer/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
 click VerifyRestart "https://docs.dataminer.services/release-notes/General/General_Main_Release_10.0/General_Main_Release_10.0.0_CU7.html#dataminer-restart-not-triggered-after-process-generated-crashdump-id-27321" "Release Note 27321"
 %% Define styles %%
 linkStyle default stroke:#cccccc
