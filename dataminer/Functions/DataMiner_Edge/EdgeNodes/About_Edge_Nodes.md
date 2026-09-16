@@ -1,7 +1,7 @@
 ---
 uid: About_Edge_Nodes
 keywords: DataMiner Edge, scripted connectors
-description: Learn how DataMiner Edge Nodes run Python-based connector integrations locally and synchronize collected data with DataMiner.
+description: "Learn how DataMiner Edge Nodes run Python-based connector integrations locally and synchronize collected data with DataMiner."
 ---
 
 # About Edge Nodes
