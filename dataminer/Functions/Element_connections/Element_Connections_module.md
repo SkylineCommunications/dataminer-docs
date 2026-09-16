@@ -7,6 +7,8 @@ description: "Learn what the Element Connections module in DataMiner Cube is use
 
 Use the *Element Connections* module in DataMiner Cube to link parameters in virtual elements to parameters in other elements. This is what makes it possible for a virtual element to combine data from one or more "real" elements. For background information on virtual elements, see [Virtual elements](xref:Virtual_elements).
 
+![Element Connections module](~/dataminer/images/Element Connections_module.png)<br>*Element Connections module in DataMiner 10.6.10*
+
 For the step-by-step procedure to link parameters, see [Configuring virtual elements](xref:Configuring_virtual_elements).
 
 > [!NOTE]
