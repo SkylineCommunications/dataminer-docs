@@ -1,5 +1,6 @@
 ---
 uid: Disabling_artifact_deployments
+description: "Learn how to disable artifact deployments to a particular server by updating the settings of the ArtifactDeployer DXM."
 reviewer: Alexander Verkest
 ---
 

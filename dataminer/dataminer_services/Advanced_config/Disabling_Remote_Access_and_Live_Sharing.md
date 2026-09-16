@@ -1,5 +1,6 @@
 ---
 uid: Disabling_Remote_Access_and_Live_Sharing
+description: "Disable Remote Access and Live Sharing locally in the CloudGateway app settings and restart the service to apply your changes."
 reviewer: Alexander Verkest
 ---
 
