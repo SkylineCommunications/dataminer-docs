@@ -875,3 +875,11 @@ From now on, the field will retain its existing value when it cannot be retrieve
 When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
 
 From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
+
+#### Automation scripts and QActions: An unsuitable DLL version could be selected from hint paths [ID 46412]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, when no exact DLL match was found in the hint paths while resolving assemblies for automation scripts or QActions, the first matching DLL was selected. This could result in an older, incompatible version being selected.
+
+From now on, the highest compatible DLL version in the requested range will be selected. If no version in that range is available, the highest available version will be selected.

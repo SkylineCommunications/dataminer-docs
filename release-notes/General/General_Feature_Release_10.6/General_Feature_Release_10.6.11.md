@@ -162,3 +162,11 @@ Up to now, some errors encountered by *NATSMigration.exe* or *NATSRepair.exe* co
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 On systems using STaaS, up to now, ordering DOM entries by an optional field could throw a CRUD exception when one or more entries did not contain that field.
+
+#### Automation scripts and QActions: An unsuitable DLL version could be selected from hint paths [ID 46412]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, when no exact DLL match was found in the hint paths while resolving assemblies for automation scripts or QActions, the first matching DLL was selected. This could result in an older, incompatible version being selected.
+
+From now on, the highest compatible DLL version in the requested range will be selected. If no version in that range is available, the highest available version will be selected.
