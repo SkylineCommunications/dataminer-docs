@@ -18,6 +18,11 @@ The migration should be executed on **DataMiner Main Release 10.5.0 [CU11] or an
 
 ## How to migrate
 
+> [!IMPORTANT]
+> Before you start the migration, download the latest available version of the packages used for the migration.
+> The [prerequisite-only.dmupgrade package](#prerequisite-only-dmupgrade-package) or [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/).
+> These packages are updated periodically.
+
 1. Preferably, upgrade to DataMiner 10.5.0 [CU11] or 10.5.12 [CU2] first.
 
 1. Run the [prerequisite-only.dmupgrade package](#prerequisite-only-dmupgrade-package) and ensure that all [prerequisites](#prerequisites) are met.
@@ -60,14 +65,64 @@ Finally, ensure that no problems with "[Schannel](https://learn.microsoft.com/en
 
 - Make sure the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft‑launch option is **not disabled** on any DataMiner Agent in the cluster. In DataMiner 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->, this option can be disabled when no migration is planned.
 
+- One one of the DMAs in your DMS, verify whether the *NATSForceManualConfig* option is either absent from [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)  or set to false. If the *NATSForceManualConfig* option is set to true, follow the section [legacy NATS manual configuration](#legacy-nats-manual-configuration) before you start the BrokerGateway migration.
+
+## Legacy NATS manual configuration
+
+If you are running a [legacy forced manual NATS config](xref:Disabling_automatic_NATS_config#legacy-slnet-managed-nasnats), please contact Skyline Communications for assistance during the migration. Before that time, however, please verify the following:
+
+- The configuration must be consistent before migrating. See [Configuration consistency](#configuration-consistency).
+
+- There are no spaces in the NATS configuration. See [Spaces in the NATS config](#spaces-in-the-nats-config).
+
+> [!IMPORTANT]
+> This prerequisite needs to be verified manually, as it is not yet included in the [Prerequisite-only .dmupgrade package](#prerequisite-only-dmupgrade-package).
+
 ### Configuration consistency
 
 If you have disabled automatic NATS configuration via the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config) and manually configured NATS prior to the migration, make sure that the **same configuration** is applied consistently across the entire cluster.
 
 For example, applying manual configuration on only one DataMiner Agent in a 10‑Agent cluster will result in an inconsistent and incorrect setup. Applying the same manual configuration on all 10 Agents will correct this.
 
-> [!IMPORTANT]
-> This prerequisite needs to be verified manually, as it is not yet included in the [Prerequisite-only .dmupgrade package](#prerequisite-only-dmupgrade-package).
+### Spaces in the NATS config
+
+In `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`, verify that the cluster name, gateway name, and server name do not contain spaces. For more information, see [System Errors | NATS Documentation](https://docs.nats.io/reference/system/errors#server-name-and-cluster-errors).
+
+The following configuration fragments show valid names:
+
+```json
+"gateway": {
+   "name": "Gateway_Name"
+}
+```
+
+```json
+"server_name": "myservers_name"
+```
+
+```json
+"cluster": {
+   "name": "mycluster_name"
+}
+```
+
+The following configuration fragments are not valid because the names contain spaces:
+
+```json
+"gateway": {
+   "name": "Gateway Name"
+}
+```
+
+```json
+"server_name": "myservers name"
+```
+
+```json
+"cluster": {
+   "name": "mycluster name"
+}
+```
 
 ## Prerequisite-only .dmupgrade package
 
