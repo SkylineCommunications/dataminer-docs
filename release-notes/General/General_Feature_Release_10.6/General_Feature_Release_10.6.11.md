@@ -139,6 +139,12 @@ After a Failover switch, SLASPConnection could fail to initialize correctly when
 - Incoming notifications could remain in memory without being processed, causing a memory leak.
 - The reporter page in DataMiner Cube and the distribution, alarm count, and timeline components in the Dashboards app could show outdated information.
 
+#### SRM: Conflicting bookings incorrectly could be created during bulk creation [ID 46351]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, bulk creation of booking instances could incorrectly create instances identified as conflicting when the force quarantine flag was disabled.
+
 #### NATSReset.exe could throw an InvalidOperationException after the IP address of a DataMiner Agent had changed [ID 46360]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
