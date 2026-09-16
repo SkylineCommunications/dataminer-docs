@@ -70,9 +70,9 @@ The ModelHost module is responsible for allowing users to retrieve parameter rel
 
 The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). However, once it has been deployed, it gets upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 -->
 
-### SiteManager
+### EdgeManager
 
-The SiteManager module is used by DataMiner Edge to set up secure communication tunnels enabling access to on-premises data sources from a DaaS system. It is supported from DataMiner 10.5.10/10.5.0 onwards and is included in the 10.5.10 DaaS image.
+The EdgeManager DxM, previously known as SiteManager DxM, is used by DataMiner Edge to set up secure communication tunnels enabling access to on-premises data sources from a DaaS system. It is supported from DataMiner 10.5.10/10.5.0 onwards and is included in the 10.5.10 DaaS image.
 
 For more information, refer to [About DataMiner Edge](xref:DataMiner_Edge).
 

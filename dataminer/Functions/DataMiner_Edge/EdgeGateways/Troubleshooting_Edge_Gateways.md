@@ -14,7 +14,7 @@ This means that the tunnel could not be set up. This could be because of several
 
 - The provided IP address or hostname does not match that of an exposed data source in the specified location as specified during [on-premises setup](xref:Getting_started_with_Edge_Gateways#on-premises-setup).
 - When the data source was exposed during [on-premises setup](xref:Getting_started_with_Edge_Gateways#on-premises-setup), only one of the two required zrok commands were executed.
-- The SiteManager DxM is not running.
+- The EdgeManager DxM is not running.
 - The zrok Agent service is not running.
 - The zrok controller is not running.
 
@@ -32,9 +32,9 @@ If you are using a Powershell shell, execute the following command first: `$env:
 
 ## Logging
 
-### SiteManager DxM log file
+### EdgeManager DxM log file
 
-The SiteManager DxM log file logs all tunnel creation and teardown activity. If an element is in error state, the log file can provide more information about the root cause.
+The EdgeManager DxM log file logs all tunnel creation and teardown activity. If an element is in error state, the log file can provide more information about the root cause.
 
 To open the log file in Cube, navigate to *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*.
 
@@ -42,7 +42,7 @@ This log file is also included in a Log Collector package.
 
 ### SLDataMiner log file
 
-In DataMiner, the SLDataMiner process is responsible for communication with the SiteManager DxM.
+In DataMiner, the SLDataMiner process is responsible for communication with the EdgeManager DxM.
 
 In case issues occur, the SLDataMiner log file could provide useful information regarding the cause of the issue.
 

@@ -6,14 +6,14 @@ description: Learn how Edge Gateways create secure tunnels between DataMiner and
 
 # About Edge Gateways
 
-An Edge Gateway is deployed through the SiteManager DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)) and sets up secure tunnels for communication with remote locations. For example, you can use it to communicate with selected on-premises data sources from a DaaS system without configuring a site-to-site VPN.
+An Edge Gateway is deployed through the [EdgeManager DxM](xref:DataMinerExtensionModules#edgemanager) (previously known as SiteManager DxM) and sets up secure tunnels for communication with remote locations. For example, you can use it to communicate with selected on-premises data sources from a DaaS system without configuring a site-to-site VPN.
 
 > [!NOTE]
 > An Edge Gateway sets up communication tunnels. To run connector integrations locally on a managed runtime, use [Edge Nodes](xref:About_Edge_Nodes).
 
 ## Prerequisites
 
-Edge Gateways require DataMiner 10.5.10/10.6.0 or higher. See [SiteManager DxM installation](xref:Getting_started_with_Edge_Gateways#sitemanager-dxm-installation).
+Edge Gateways require DataMiner 10.5.10/10.6.0 or higher. See [EdgeManager DxM installation](xref:Getting_started_with_Edge_Gateways#edgemanager-dxm-installation).
 
 They can only be deployed on DataMiner Agents [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud). On DaaS systems, this prerequisite is automatically met.
 

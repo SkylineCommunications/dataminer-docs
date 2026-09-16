@@ -1,21 +1,21 @@
 ---
 uid: Getting_started_with_Edge_Gateways
 keywords: Site Manager, Edge Manager, Gateway mode
-description: Learn how to install the SiteManager DxM and configure secure Edge Gateway tunnels to access remote data sources.
+description: Learn how to install the EdgeManager DxM and configure secure Edge Gateway tunnels to access remote data sources.
 ---
 
 # Getting started with Edge Gateways
 
-## SiteManager DxM installation
+## EdgeManager DxM installation
 
-Edge Gateways require the SiteManager DxM. This DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) and [deploy the SiteManager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+Edge Gateways require the EdgeManager DxM, previously known as SiteManager DxM. This DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) and [deploy the EdgeManager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
-For a **self-managed DataMiner System**, the SiteManager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. The DxM requires DataMiner 10.5.10/10.6.0 or higher and Windows 10 or Windows Server 2019 (build 17134) or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+For a **self-managed DataMiner System**, the EdgeManager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. The DxM requires DataMiner 10.5.10/10.6.0 or higher and Windows 10 or Windows Server 2019 (build 17134) or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
 When the DxM has been installed, in the Windows services overview, you should see two services:
 
-- *DataMiner SiteManager*: This is the SiteManager DxM that interacts with DataMiner and the *zrok-agent* process.
-- *zrok-agent*: This is the zrok Agent service with which the SiteManager DxM communicates for creating the communication tunnels.
+- *DataMiner SiteManager*: This is the EdgeManager DxM service that interacts with DataMiner and the *zrok-agent* process.
+- *zrok-agent*: This is the zrok Agent service with which the EdgeManager DxM communicates for creating the communication tunnels.
 
 ## On-premises setup
 
@@ -29,7 +29,7 @@ To allow DataMiner to access a data source in a remote location through an Edge 
    iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1 -UseBasicParsing) } -Command install -AccountToken '<AccountToken>' -SiteName '<SiteName>'"
    ```
 
-   - You can find the **account token** in the SiteManager DxM logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
+   - You can find the **account token** in the EdgeManager DxM logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
 
    - The **site name** should be a concise description of the location from which you are exposing data sources. When a connection is configured during the creation or editing of an element in DataMiner Cube, this description will be shown in the *Site* dropdown.
 
@@ -93,7 +93,7 @@ To allow DataMiner to access a data source in a remote location through an Edge 
    wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | sudo bash -s -- install '<AccountToken>' '<SiteName>'
    ```
 
-   - You can find the **account token** in the SiteManager DxM logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
+   - You can find the **account token** in the EdgeManager DxM logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
 
    - The **site name** should be a concise description of the location from which you are exposing data sources. When a connection is configured during the creation or editing of an element in DataMiner Cube, this description will be shown in the *Site* dropdown.
 
