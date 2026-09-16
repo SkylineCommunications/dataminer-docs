@@ -83,7 +83,7 @@ The actual content of a protocol package differs from that of the other packages
 
 - Additional assemblies (if needed)
 
-- Protocol-specific help
+- For DataMiner Edge protocols, scripts and a *dependencies.json* file (from DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards)<!--RN 45906-->
 
 ## Import package (.dmimport)
 

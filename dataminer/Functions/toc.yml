@@ -994,14 +994,28 @@ items:
             topicUid: DOM_Remove_FieldDescriptor_Definition
           - name: Generating code with the DOM Editor
             topicUid: DOM_Generating_code_with_the_DOM_editor
-  - name: Edge Manager
+  - name: DataMiner Edge
+    topicUid: DataMiner_Edge
     items:
-    - name: About Edge Manager
-      topicUid: EdgeManagerOverview
-    - name: Getting started
-      topicUid: EdgeManagerGettingStarted
-    - name: Troubleshooting
-      topicUid: EdgeManagerTroubleshooting
+      - name: Edge Nodes
+        items:
+          - name: About Edge Nodes
+            topicUid: About_Edge_Nodes
+          - name: Installing an Edge Node
+            topicUid: Installing_an_Edge_Node
+            items:
+              - name: Installing on Windows
+                topicUid: Installing_an_Edge_Node_on_Windows
+              - name: Installing on Linux
+                topicUid: Installing_an_Edge_Node_on_Linux
+      - name: Edge Gateways
+        items:
+          - name: About Edge Gateways
+            topicUid: About_Edge_Gateways
+          - name: Getting started
+            topicUid: Getting_started_with_Edge_Gateways
+          - name: Troubleshooting
+            topicUid: Troubleshooting_Edge_Gateways
   - name: Experience and Performance Management (EPM)
     topicUid: EPM
     items:
