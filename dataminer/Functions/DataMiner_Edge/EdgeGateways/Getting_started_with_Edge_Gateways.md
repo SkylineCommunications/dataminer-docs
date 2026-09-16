@@ -1,14 +1,14 @@
 ---
-uid: GatewayModeGettingStarted
-keywords: Site Manager, Edge Manager
-description: Learn how to install the SiteManager DxM and configure secure Gateway mode tunnels to access remote data sources.
+uid: Getting_started_with_Edge_Gateways
+keywords: Site Manager, Edge Manager, Gateway mode
+description: Learn how to install the SiteManager DxM and configure secure Edge Gateway tunnels to access remote data sources.
 ---
 
-# Getting started with Gateway mode
+# Getting started with Edge Gateways
 
 ## SiteManager DxM installation
 
-DataMiner Edge's Gateway mode requires the SiteManager DxM. This DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) and [deploy the SiteManager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+Edge Gateways require the SiteManager DxM. This DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) and [deploy the SiteManager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
 For a **self-managed DataMiner System**, the SiteManager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. The DxM requires DataMiner 10.5.10/10.6.0 or higher and Windows 10 or Windows Server 2019 (build 17134) or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
@@ -19,7 +19,7 @@ When the DxM has been installed, in the Windows services overview, you should se
 
 ## On-premises setup
 
-To allow DataMiner to access a data source in a remote location through Gateway mode, the following steps are needed:
+To allow DataMiner to access a data source in a remote location through an Edge Gateway, the following steps are needed:
 
 ### [Windows](#tab/windows)
 
@@ -47,7 +47,7 @@ To allow DataMiner to access a data source in a remote location through Gateway 
    iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1 -UseBasicParsing) } -Command uninstall"
    ```
 
-1. After a successful installation, you can start exposing your data sources so Gateway mode can set up a tunnel for each data source it needs to communicate with.
+1. After a successful installation, you can start exposing your data sources so the Edge Gateway can set up a tunnel for each data source it needs to communicate with.
 
    1. If you are using a new **PowerShell** shell, execute the following command first: `$env:USERPROFILE = "C:\Windows\System32\config\systemprofile"`.
 
@@ -110,7 +110,7 @@ To allow DataMiner to access a data source in a remote location through Gateway 
    wget -qO- "https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.sh" | sudo bash -s -- uninstall
    ```
 
-1. After a successful installation, you can start exposing your data sources so Gateway mode can set up a tunnel for each data source it needs to communicate with.
+1. After a successful installation, you can start exposing your data sources so the Edge Gateway can set up a tunnel for each data source it needs to communicate with.
 
    For each data source you wish to expose, perform the following steps:
 

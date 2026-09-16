@@ -1008,14 +1008,14 @@ items:
                 topicUid: Installing_an_Edge_Node_on_Windows
               - name: Installing on Linux
                 topicUid: Installing_an_Edge_Node_on_Linux
-      - name: Gateway mode
+      - name: Edge Gateways
         items:
-          - name: About Gateway mode
-            topicUid: GatewayModeOverview
+          - name: About Edge Gateways
+            topicUid: About_Edge_Gateways
           - name: Getting started
-            topicUid: GatewayModeGettingStarted
+            topicUid: Getting_started_with_Edge_Gateways
           - name: Troubleshooting
-            topicUid: GatewayModeTroubleshooting
+            topicUid: Troubleshooting_Edge_Gateways
   - name: Experience and Performance Management (EPM)
     topicUid: EPM
     items:

@@ -1,10 +1,10 @@
 ---
-uid: GatewayModeTroubleshooting
-keywords: Site Manager, Edge Manager
-description: Troubleshoot Gateway mode tunnel setup, connectivity, and logging issues when DataMiner accesses remote data sources.
+uid: Troubleshooting_Edge_Gateways
+keywords: Site Manager, Edge Manager, Gateway mode
+description: Troubleshoot Edge Gateway tunnel setup, connectivity, and logging issues when DataMiner accesses remote data sources.
 ---
 
-# Gateway mode troubleshooting
+# Edge Gateway troubleshooting
 
 ## FAQ
 
@@ -12,8 +12,8 @@ description: Troubleshoot Gateway mode tunnel setup, connectivity, and logging i
 
 This means that the tunnel could not be set up. This could be because of several reasons:
 
-- The provided IP address or hostname does not match that of an exposed data source in the specified location as specified during [on-premises setup](xref:GatewayModeGettingStarted#on-premises-setup).
-- When the data source was exposed during [on-premises setup](xref:GatewayModeGettingStarted#on-premises-setup), only one of the two required zrok commands were executed.
+- The provided IP address or hostname does not match that of an exposed data source in the specified location as specified during [on-premises setup](xref:Getting_started_with_Edge_Gateways#on-premises-setup).
+- When the data source was exposed during [on-premises setup](xref:Getting_started_with_Edge_Gateways#on-premises-setup), only one of the two required zrok commands were executed.
 - The SiteManager DxM is not running.
 - The zrok Agent service is not running.
 - The zrok controller is not running.

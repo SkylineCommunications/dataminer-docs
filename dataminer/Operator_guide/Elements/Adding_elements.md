@@ -96,11 +96,11 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - For a **WebSocket** connection, see [WebSocket connection](xref:WebSocket_Connection).
 
-   - For a connection from a DaaS Agent to a private data source through [Gateway mode](xref:GatewayModeOverview), see [Creating an element that communicates with a data source through a tunnel](xref:GatewayModeGettingStarted#creating-an-element-that-communicates-with-a-data-source-through-a-tunnel).
+   - For a connection from a DaaS Agent to a private data source through an [Edge Gateway](xref:About_Edge_Gateways), see [Creating an element that communicates with a data source through a tunnel](xref:Getting_started_with_Edge_Gateways#creating-an-element-that-communicates-with-a-data-source-through-a-tunnel).
 
 1. If the protocol is [configured to allow you to test the connection](xref:Protocol.Groups.Group-ping), optionally click the button *Test connection* below the connection you want to test.
 
-   After you click the button, a message will display the results of the test. However, note that this button is not available for connections through [Gateway mode](xref:GatewayModeOverview).
+   After you click the button, a message will display the results of the test. However, note that this button is not available for connections through an [Edge Gateway](xref:About_Edge_Gateways).
 
 1. Specify the timeout settings per connection:
 
