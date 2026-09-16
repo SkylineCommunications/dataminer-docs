@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Failover
+description: "Learn how to configure Failover in DataMiner by linking a DMA to a synchronized backup DMA that takes over manually or automatically."
 ---
 
 # Configuring Failover

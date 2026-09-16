@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_MR_vs_FR
+description: "Compare DataMiner Main Release vs Feature Release and choose the right upgrade track for your production needs and update cadence."
 ---
 
 # DataMiner Main Release vs. Feature Release

@@ -47,6 +47,18 @@ Additionally, you can define a custom label and icon:
 
 ![Customizing a button component by adding a label and icon](~/dataminer/images/button_look.gif)<br>*Button component in DataMiner 10.6.4*
 
+From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45693-->, you can also configure the type of the button. This setting determines the visual style of the button and can help indicate its importance or purpose:
+
+- *Call to action* (default): Highlights the button as the primary action.
+
+- *Normal*: Standard button style.
+
+- *Subtle*: Uses a less prominent visual style.
+
+- *Danger*: Emphasizes actions that may have significant consequences.
+
+![All button style options in the *Layout* pane](~/dataminer/images/Button_Style.png)<br>*Button style options for button component in DataMiner 10.6.9*
+
 ## Using the button in dashboards (preview)
 
 The button component is **currently still in preview** in the Dashboards app, and requires the [soft-launch option *ReportsAndDashboardsButton*](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsbutton) to be enabled.

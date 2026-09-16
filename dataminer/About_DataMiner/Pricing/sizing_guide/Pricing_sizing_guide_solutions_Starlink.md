@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_solutions_Starlink
+description: "Use this Starlink sizing guide to convert terminal counts and usage options into managed object, storage, and hosting volumes."
 ---
 
 # Sizing guide: Starlink
@@ -44,7 +45,7 @@ Standard Managed Objects are billed per 10,000 metrics: Terminals per Managed Ob
 
 ## Configured examples
 
-| | S | M | L |
+| | Community | S | M |
 |-|-------|-------|-------|
 | Active terminals | 1,000 | 2,000 | 5,000 |
 | Monthly data usage | Yes | Yes | Yes |

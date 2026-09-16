@@ -1,5 +1,6 @@
 ---
 uid: Configuring_RADIUS_settings
+description: "Configure RADIUS authentication in DataMiner.xml with a server host, port, and shared secret, then restart the DMA and import users via LDAP."
 ---
 
 # Configuring RADIUS settings

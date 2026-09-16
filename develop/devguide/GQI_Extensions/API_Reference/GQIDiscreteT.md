@@ -9,7 +9,7 @@ uid: GQI_GQIDiscreteT
 - Namespace: `Skyline.DataMiner.Core.GQI.Extensions`
 - NuGet: `Skyline.DataMiner.Core.GQI.Extensions`
 
-Available from DataMiner Web 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards.<!-- RN 45380 -->
+Available from DataMiner Web 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 onwards.<!-- RN 45380 -->
 
 Represents a single discrete value option for a column, pairing an underlying value with a user-friendly display string.
 

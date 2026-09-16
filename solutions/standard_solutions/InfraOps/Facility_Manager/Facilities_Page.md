@@ -1,5 +1,6 @@
 ---
 uid: Facilities_Page
+description: Go to the Facilities page of the Facility Manager app to create, edit, and delete facilities, floors, and rooms.
 ---
 
 # Facilities

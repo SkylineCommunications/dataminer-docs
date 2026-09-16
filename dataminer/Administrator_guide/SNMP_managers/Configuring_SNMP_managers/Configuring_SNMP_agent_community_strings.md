@@ -1,5 +1,6 @@
 ---
 uid: Configuring_SNMP_agent_community_strings
+description: "Learn how to configure SNMP agent community strings at DMA level and element level to override the public and private defaults."
 ---
 
 # Configuring SNMP agent community strings

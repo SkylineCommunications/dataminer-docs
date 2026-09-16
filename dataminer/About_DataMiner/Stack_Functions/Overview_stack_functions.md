@@ -1,5 +1,6 @@
 ---
 uid: Overview_Stack_Functions
+description: Explore the different DataMiner stack function categories. These functions offer unparalleled flexibility and make it easy to create powerful solutions.
 ---
 
 # DataMiner stack functions

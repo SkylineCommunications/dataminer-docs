@@ -1,5 +1,6 @@
 ---
 uid: Viewing_info_on_DMS
+description: "Use the Admin app to view information on DataMiner Systems: name, URL, connection status, type, and updates."
 keywords: cloud admin, cloud administration
 reviewer: Alexander Verkest
 ---

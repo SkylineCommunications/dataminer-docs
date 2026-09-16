@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_hub
+description: Discover the entire list of Hub parameters that are available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – Hub

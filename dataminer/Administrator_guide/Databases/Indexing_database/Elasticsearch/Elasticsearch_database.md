@@ -1,5 +1,6 @@
 ---
 uid: Elasticsearch_database
+description: "Learn about the legacy Elasticsearch indexing database setup for self-managed DataMiner storage, typically only used in older DataMiner Systems."
 ---
 
 # Elasticsearch

@@ -1,5 +1,6 @@
 ---
 uid: Generating_BrokerGateway_client_secrets
+description: "Learn how to generate BrokerGateway client secrets, which are designed for DxMs or other clients connecting to the DataMiner NATS bus."
 ---
 
 # Generating BrokerGateway client secrets
@@ -27,6 +28,9 @@ In order to perform these API calls on a BrokerGateway instance, you will need t
 
 You can execute the API calls by calling the REST API via PowerShell, as detailed below.
 
+> [!IMPORTANT]
+> Executing these API calls **requires a secure TLS connection**, and therefore, a trusted certificate bound to all IP addresses for port 443 in IIS. If the certificate on the DataMiner server cannot be trusted, the script needs to be adapted to skip the certificate checks; however, note that this is not recommended.
+
 ### Generating a client secret
 
 Executing the following PowerShell script will generate a new client secret, which will be returned in `$response`.
@@ -42,6 +46,9 @@ $headers.Add("BrokerGateway-Api-Key", $adminKey)
 $response = Invoke-RestMethod "https://$uri/BrokerGateway/api/clientSecret/generate?clientName=$clientName" -Method 'POST' -Headers $headers -ContentType 'text/plain'
 $response
 ```
+
+> [!NOTE]
+> For the script to run, the DMA's certificate needs to be trusted, so a valid TLS connection is required (see [API calls](#api-calls)).
 
 Client secret names need to be unique. These are case-sensitive.
 
@@ -65,6 +72,9 @@ $headers.Add("BrokerGateway-Api-Key", $adminKey)
 Invoke-RestMethod "https://$uri/BrokerGateway/api/clientSecret/delete?clientName=$clientName" -Method 'DELETE' -Headers $headers
 ```
 
+> [!NOTE]
+> For the script to run, the DMA's certificate needs to be trusted, so a valid TLS connection is required (see [API calls](#api-calls)).
+
 ### Listing all generated client secrets
 
 This API call lists up all generated client secrets. The keys are redacted for security reasons. Only the first four characters will be visible.
@@ -79,6 +89,9 @@ $headers.Add("BrokerGateway-Api-Key", $adminKey)
 $response = Invoke-RestMethod "https://$uri/BrokerGateway/api/clientSecret/list" -Method 'GET' -Headers $headers
 $response
 ```
+
+> [!NOTE]
+> For the script to run, the DMA's certificate needs to be trusted, so a valid TLS connection is required (see [API calls](#api-calls)).
 
 ## Using the client secrets
 

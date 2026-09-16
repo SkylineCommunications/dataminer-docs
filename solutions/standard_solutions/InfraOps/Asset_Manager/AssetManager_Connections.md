@@ -1,5 +1,6 @@
 ---
 uid: AssetManager_Connections
+description: Use the Connections page of the Asset Manager app to manage the data and power connections of your assets.
 ---
 
 # Connections

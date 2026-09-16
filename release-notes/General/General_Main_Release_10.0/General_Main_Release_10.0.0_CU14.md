@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.0.0_CU14
+status: archived
 ---
 
-# General Main Release 10.0.0 CU14
+# General Main Release 10.0.0 CU14 [ARCHIVED]
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).

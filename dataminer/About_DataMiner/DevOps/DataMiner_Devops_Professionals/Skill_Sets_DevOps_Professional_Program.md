@@ -1,5 +1,6 @@
 ---
 uid: Skill_Sets_DevOps_Professionals_Program
+description: Evolve your existing skill sets and acquire new ones. As we live in a rapidly evolving technology landscape, continuous learning is the new normal.
 ---
 
 # Expectations

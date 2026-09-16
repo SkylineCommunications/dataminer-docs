@@ -1,6 +1,6 @@
 ---
 uid: Before_you_begin_to_set_up_a_new_DMS
-description: During initial setup of a DataMiner cluster, you will need to use one DataMiner Agent as the primary node from which all other nodes will copy data.
+description: "Before you begin to set up a new cluster, decide which DataMiner Agent will be the primary node during the initial cluster setup."
 ---
 
 # Before you begin to set up a new cluster

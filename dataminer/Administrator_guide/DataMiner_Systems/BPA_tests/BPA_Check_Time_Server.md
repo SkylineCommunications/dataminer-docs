@@ -1,5 +1,6 @@
 ---
 uid: BPA_Check_Time_Server
+description: "Learn about the Check Time Server BPA test, which checks if the NTP server settings are configured correctly and all DMAs use the same NTP server."
 ---
 
 # Check Time Server

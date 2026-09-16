@@ -7,7 +7,7 @@ description: Deploy the Grass Valley AMPP Manager application from the DataMiner
 
 ## Prerequisites
 
-- **DataMiner 10.6.0/10.6.6** or higher
+- **DataMiner 10.6.0/10.6.3** or higher
 
 - A DataMiner System [**connected to dataminer.services**](xref:Connecting_your_DataMiner_System_to_the_cloud)
 

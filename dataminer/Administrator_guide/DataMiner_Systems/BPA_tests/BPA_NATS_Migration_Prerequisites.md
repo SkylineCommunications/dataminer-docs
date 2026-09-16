@@ -1,5 +1,6 @@
 ---
 uid: BPA_NATS_Migration_Prerequisites
+description: "Learn about the Verify NATS Migration Prerequisites BPA test, which verifies if DataMiner is ready to migrate the NATS management to the BrokerGateway DxM."
 ---
 
 # Verify NATS Migration Prerequisites

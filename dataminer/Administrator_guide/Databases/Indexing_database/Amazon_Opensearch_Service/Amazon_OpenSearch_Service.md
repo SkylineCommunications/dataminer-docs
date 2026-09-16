@@ -1,5 +1,6 @@
 ---
 uid: Amazon_OpenSearch_Service
+description: "Learn how the deprecated Amazon OpenSearch Service setup was used as a DataMiner indexing database in older systems."
 ---
 
 # Amazon OpenSearch Service

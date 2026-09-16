@@ -43,7 +43,7 @@ The following HTTP methods are supported:
 | PUT | 10.3.6/10.4.0 |
 | POST | 10.3.6/10.4.0 |
 | DELETE | 10.3.6/10.4.0 |
-| PATCH | 10.6.7/10.7.0 | <!-- RN45542 -->
+| PATCH | 10.6.8/10.7.0 | <!-- RN45542 -->
 
 > [!NOTE]
 > You are free to choose which of these methods your API will support.

@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Cassandra_Backups
+description: "Take a backup of a Cassandra database per DMA by either including the database when backing up a DMA or by using the Standalone Cassandra Backup tool."
 ---
 
 # Configuring Cassandra backups

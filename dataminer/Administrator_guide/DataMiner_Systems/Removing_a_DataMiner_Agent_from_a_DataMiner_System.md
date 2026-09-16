@@ -1,6 +1,6 @@
 ---
 uid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
-description: Find out how to remove a regular node from a DataMiner cluster and how to remove a node that is part of a Failover pair.
+description: "Learn how to remove a regular node from a DataMiner cluster and how to remove a node that is part of a Failover pair."
 ---
 
 # Removing a node from a DataMiner cluster

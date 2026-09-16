@@ -1,5 +1,6 @@
 ---
 uid: Overview_Platform_Open_Platform
+description: Explore the strategic pillars around which DataMiner is built to make it an open software platform for any of your monitoring and orchestration needs.
 ---
 
 # Open software platform for any of your monitoring and orchestration needs

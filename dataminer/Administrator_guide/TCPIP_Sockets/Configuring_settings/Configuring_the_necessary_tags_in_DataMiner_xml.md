@@ -1,5 +1,6 @@
 ---
 uid: Configuring_the_necessary_tags_in_DataMiner_xml
+description: "Configure the AlarmSocket and PollSocket tags in DataMiner.xml to enable TCP/IP socket communication, then restart DataMiner."
 ---
 
 # Configuring the necessary tags in DataMiner.xml

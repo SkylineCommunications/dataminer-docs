@@ -8,6 +8,12 @@ Use this method to retrieve the alarm state timeline for a particular parameter.
 
 ## Input
 
+> [!IMPORTANT]
+> From DataMiner 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 onwards<!--RN 45600-->, before you request timeline data using this web method, first send the [`IsFeatureAvailable` web method](xref:IsFeatureAvailable) with `featureName` set to `DKForReport` to check whether the DataMiner Agent requires you to send the display key or the primary key (see: [Display keys](xref:UIComponentsTableDisplayKeys)).
+>
+> - If the method returns `true`, send the display key.
+> - If the method returns `false`, send the primary key.
+
 | Item | Format | Description |
 |--|--|--|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |

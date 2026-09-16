@@ -1,5 +1,6 @@
 ---
 uid: Security_OpenSearch
+description: "Secure OpenSearch with TLS, keep the cluster up to date, and follow upgrade guidance for safe DataMiner search configuration."
 keywords: updating OpenSearch, upgrading OpenSearch, OpenSearch security
 ---
 
@@ -14,7 +15,7 @@ For information on how to enable both client-server and inter-node TLS encryptio
 
 ## Upgrading OpenSearch
 
-DataMiner supports both the 1.X and 2.X version range of OpenSearch; however, for new installations, we recommend installing OpenSearch 2.X.
+DataMiner supports both the 2.x and 3.x version range of OpenSearch; however, for new installations, we recommend installing OpenSearch 3.x.
 
 We also recommend that you keep your OpenSearch installation up to date with the latest version within the range you have chosen.
 
@@ -27,7 +28,7 @@ There are two ways to perform a minor upgrade of an OpenSearch cluster:
 
 Regardless of which upgrade strategy you choose, you will first need to perform these steps:
 
-1. Download the latest version within your release track: [1.X](https://opensearch.org/lines/1x.html) or [2.X](https://opensearch.org/lines/2x.html).
+1. Download the latest version within your release track: [1.X](https://opensearch.org/artifacts/by-version/#release-1-x) or [2.X](https://opensearch.org/artifacts/by-version/#release-2-x).
 1. [Back up the configuration files](https://opensearch.org/docs/latest/install-and-configure/upgrade-opensearch/index/#backing-up-configuration-files).
 1. [Configure backups](xref:Configuring_OpenSearch_Backups) for your cluster if this was not configured yet.
 1. [Take a snapshot](xref:Configuring_OpenSearch_Backups#taking-the-snapshot) to back up the cluster.
@@ -51,6 +52,6 @@ To perform a rolling upgrade, refer to the [rolling upgrade guide](https://docs.
 
 ### Major upgrade
 
-To go from one major release range to another (e.g., 1.X to 2.X), we recommend first upgrading to the latest version in the current range before upgrading to the new range.
+To go from one major release range to another (e.g., 2.x to 3.x), we recommend first upgrading to the latest version in the current range before upgrading to the new range.
 
 It is not possible to use the rolling upgrade strategy for major upgrades, so you will have to perform a [cluster restart upgrade](#cluster-restart-upgrade) for this.

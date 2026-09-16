@@ -1,6 +1,7 @@
 ---
 uid: Configuring_external_authentication_via_an_identity_provider_using_SAML
 keywords: Azure AD, AzureAD, Microsoft Entra ID, SAML, Okta, Azure B2C
+description: "Explore how to configure your DataMiner System to use external authentication via an identity provider using SAML."
 ---
 
 # Configuring SAML settings

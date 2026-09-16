@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.8
 ---
 
-# General Feature Release 10.6.8 – Preview
+# General Feature Release 10.6.8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -30,15 +30,77 @@ Before you upgrade to this DataMiner version:
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 
-## Highlights
+## Important changes
 
-*No highlights have been selected yet.*
+The following changes may have an impact on your system, so please make sure to check these before you upgrade:
+
+- [Correlation: Grouping method 'By alarm' has been removed [ID 45545]](xref:Cube_Feature_Release_10.6.8#correlation-grouping-method-by-alarm-has-been-removed-id-45545)
+- [DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]](#dataminer-agents-will-now-translate-the-primary-key-to-the-display-key-when-receiving-timeline-data-requests-from-a-client-id-45579)
+- [Dashboards/Low-Code Apps: State timeline component will now use the primary key when requesting timeline data [ID 45600]](xref:Web_apps_Feature_Release_10.6.8#dashboardslow-code-apps-state-timeline-component-will-now-use-the-primary-key-when-requesting-timeline-data-id-45600)
 
 ## New features
 
-*No new features have been added yet.*
+#### User-Defined APIs can now use dynamic route segments to expose path parameters to the trigger script [ID 45681]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+From now on, user-defined APIs can use dynamic route segments to expose path parameters to the trigger script.
+
+A route such as `items/{id}` or `a/{x}/b/{y}` no longer needs to be fully literal, and the values that appear in the request path are forwarded to the automation script.
+
+A dynamic route segment is written as `{parameterName}`. The parameter name is captured as-is and becomes available in `ApiTriggerInput.RouteParameters` within the API trigger automation script. For example, a request to `items/42` against the route `items/{id}` will provide `id = 42`.
+
+##### Dynamic route matching
+
+Route matching now distinguishes between static and dynamic routes:
+
+- Static routes continue to work as before.
+- Static routes always win over dynamic routes when both match the same request.
+- Literal route segments are matched case-insensitively.
+- The full number of segments must match. Partial matches are not accepted.
+- Dynamic routes are evaluated in specificity order, so that more literal routes win over more generic templates.
+
+That means `items/special` will match the static route `items/special` before the dynamic route `items/{id}`, and, in case of `foo/bar`, `foo/{bar}` will win over `{foo}/bar` because the first literal segment is more specific.
+
+##### Route parameters
+
+When a dynamic route matches, the captured path values are passed through to the script as a dictionary of route parameters.
+
+Route parameters:
+
+- Are exposed on `ApiTriggerInput.RouteParameters`.
+- Use the parameter name from the template as the key.
+- Preserve the exact incoming path segment as the value.
+- Are empty for static route matches.
+
+##### Route validation and conflicts
+
+Routes are validated more strictly before create and update:
+
+- A route cannot be null, empty, or whitespace only.
+- A route cannot start or end with `/`.
+- A route cannot contain empty path segments.
+- A parameter segment must be written as a well-formed `{name}` placeholder.
+- Parameter names cannot use route syntax characters such as `/`, `{`, `}`, `?`, `*`, `:`, or `=`.
+- A route template cannot reuse the same parameter name more than once within the same route.
+
+Route conflicts are also detected across all existing definitions. Any two templates that can match the same request path are rejected, including conflicts between literal and parameterized routes and between overlapping parameterized templates. If a route with `ticket/{id}` already exists, a new route like `ticket/{ticketId}` will be rejected.
+
+When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
 
 ## Changes
+
+### Breaking changes
+
+#### DataMiner Agents will now translate the primary key to the display key when receiving timeline data requests from a client [ID 45579]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When a client requests timeline data using a `GetReportTimeLineDataMessage`, it sends the primary key when referencing display column tables. However, for this type of table, the DataMiner Agent has to retrieve the data from the database using the display key.
+
+From now on, when a DataMiner Agent receives a timeline data request, it will first translate the primary key to the display key before returning the requested data.
+
+See also: [Dashboards/Low-Code Apps: State timeline component will now use the primary key when requesting timeline data [ID 45600]](xref:Web_apps_Feature_Release_10.6.8#dashboardslow-code-apps-state-timeline-component-will-now-use-the-primary-key-when-requesting-timeline-data-id-45600)
 
 ### Enhancements
 
@@ -47,6 +109,21 @@ Before you upgrade to this DataMiner version:
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When a managed process stops unexpectedly, from now on, the contents of the exception's *Source* field will now be added to the *ErrorLog.txt* log file. This should provide more debug information.
+
+#### DataMiner Object Models: SLDataGateway will now try to read only the selected fields from a STaaS database [ID 45503]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+When SLDataGateway is retrieving DOM data from a STaaS database, from now on, it will attempt to retrieve only the selected fields using the native field projection capabilities of these databases. This will considerably enhance data transfer efficiency and overall performance.
+
+This optimization will leverage the indexed field values to avoid transferring complete objects when only specific fields are needed.
+
+If selected field retrieval is not supported by the database, the system will automatically fall back to retrieving the full object and extracting the required values.
+
+By default, the value type will be the field type defined by the exposer. When a field value is explicitly requested, the type defined in the field descriptor will be used instead.
+
+> [!IMPORTANT]
+> To ensure correct type resolution, field descriptor IDs must be unique across all section definitions within a DOM module. Non-unique IDs may result in incorrect type mapping and unexpected behavior.
 
 #### Database migration from Cassandra Cluster to STaaS is now allowed on systems with Swarming enabled [ID 45507]
 
@@ -128,10 +205,26 @@ In order to make it easier to look up values when, for example, building a messa
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
 
-In order to combine all system requirements specified in [DataMiner Compute Requirements](https://aka.dataminer.services/DataMiner_compute_requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
+In order to combine all system requirements specified in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements), the *Check Time Server* BPA test has now been merged with the *DataMiner Agent Minimum Requirements* BPA test.
 
 > [!NOTE]
 > From now on, the *DataMiner Agent Minimum Requirements* BPA test will be executed only once across the entire DataMiner System. The test results from the individual Agents in the cluster will be aggregated.
+
+#### SLAutomation: Enhanced startup after a DataMiner restart or upgrade [ID 45651]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+Up to now, after a DataMiner restart or upgrade, in some cases, SLAutomation could unexpectedly stop working while initializing internal components.
+
+A number of enhancements have now been made to prevent any initialization issues during SLAutomation startup.
+
+#### BPA test 'Cube CRL Freeze': Enhanced performance [ID 45712]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Because of a number of enhancements, overall performance of the *Cube CRL Freeze* BPA test has increased.
+
+This BPA test will identify client machines and DataMiner Agents without internet access where the DataMiner Cube application experiences a significant freeze during startup. This freeze is caused by the system attempting to verify the application's digital signatures with online Certificate Revocation Lists (CRLs).
 
 ### Fixes
 
@@ -140,6 +233,26 @@ In order to combine all system requirements specified in [DataMiner Compute Requ
 <!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
 
 When, in a DataMiner Cube connected to a DataMiner System using Cassandra Cluster or STaaS, you opened the *Reports* page of a service card, the *Alarm events* graph would incorrectly be empty, showing "Alarm data not found in the current time range".
+
+#### SLWatchDog: Problem when restarting DataMiner after SLDataMiner had stopped working [ID 45543]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When SLDataMiner had stopped working, up to now, any attempt made by SLWatchdog to restart the DataMiner Agent would fail.
+
+From now on, when SLDataMiner or any other critical DataMiner process stops working, SLWatchdog will be able to correctly restart the DataMiner Agent.
+
+#### SLNet/SLDataGateway: Paging requests via SLNetInternalRepository could fail when the paging cookie expired mid-session [ID 45550]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+In some cases, paged retrievals of DOM instances or booking instances could fail with an `InvalidOperationException` when the server-side paging cookie expired before all pages were fetched. In GQI-powered low-code apps, this could then surface as a random error:
+
+`Select failed, could not read the objects from the database: System.InvalidOperationException: The provided cookie was not found among the live paging handlers of this storage type. Maybe it has already been deleted.`
+
+From now on, SLDataGateway will gracefully reset an expired paging cookie instead of throwing an error. When the cookie is no longer found among the live paging handlers, a fresh paging session will automatically be started.
+
+Also, `SelectPagingHelper` will now maintain a set of all object IDs received across pages. When a paging session restarts due to a cookie renewal, previously returned objects are filtered out, preventing duplicates from being returned.
 
 #### AssemblyResolveHelper now returns already loaded fallback assembly if it was already loaded [ID 45567]
 
@@ -164,3 +277,49 @@ Up to now, when a Failover setup was using BrokerGateway, it would incorrectly n
 When SLWatchDog had queued a process restart after having detected that one or more non-critical processes had stop working, up to now, the associated log entry would incorrectly not include the names of the affected processes: `Queueing Process Restarts in 1 minute ()`
 
 From now on, this log entry will correctly include the names of the processes being restarted. For example: `Queueing Process Restarts in 1 minute (SLProtocol.exe)`
+
+#### NATSRepair.exe would incorrectly no longer work on new DMAs installed using DataMiner Installer v10.6 [ID 45636]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+The *NATSRepair.exe* tool would incorrectly no longer work on new DataMiner Agents that had been installed using a DataMiner Installer v10.6.
+
+#### Problem when logging in to a DaaS system using external authentication [ID 45637]
+
+<!-- MR 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, when you logged in to a DaaS system using external authentication, in some cases, the DaaS system would incorrectly not be flagged as such. As a result, you would be allowed to access functionality that is restricted to non-DaaS systems.
+
+#### MessageBroker would not be able to connect to the NATS bus of a DMA when the server name of the DMA was an invalid DNS name [ID 45640]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, MessageBroker would not be able to connect to the NATS bus of a DataMiner Agent when the server name of that Agent was an invalid DNS name.
+
+From now on, *NATSRepair.exe* and *NATSMigration.exe* will now make sure the default *MessageBrokerConfig.json* file points to localhost instead of the server name.
+
+#### SLASPConnection could stop working when it failed to retrieve the local IP address [ID 45656]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+In some cases, the SLASPConnection process could stop working when it failed to retrieve the local IP address.
+
+#### Problem when forwarding SNMPv3 traps [ID 45660]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+When, within a DataMiner System, a DataMiner Agent receives an SNMPv3 trap for an element hosted by another DataMiner Agent, it will forward that trap to the other Agent. However, in some cases, when the Agent that received the trap did not have the correct credentials needed to decrypt the trap, it would fail to forward the trap to the element.
+
+#### APIGateway: Problem with reverse proxy feature [ID 45688]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+The reverse proxy feature in APIGateway would no longer work.
+
+Whenever a DxM registered itself for reverse proxying, APIGateway could throw an exception.
+
+#### Problem when synchronizing files in the C:\\Skyline DataMiner\\Webpages\\Public folder [ID 45694]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+
+Up to now, it would no longer be possible to synchronize any files in the `C:\Skyline DataMiner\Webpages\Public` folder among DataMiner Agents in a cluster because the path name would incorrectly be compared case sensitively.

@@ -1,9 +1,15 @@
 ---
 uid: Microsoft_Teams_Chat_Integration
+description: "Learn about the deprecated Microsoft Teams chat integration, which used DataMiner Automation to integrate DataMiner with Microsoft Teams."
 reviewer: Alexander Verkest
 ---
 
 # Chat integration with Microsoft Teams
+
+> [!CAUTION]
+> DataMiner ChatOps is being retired and will soon no longer be available for installation from the Microsoft Marketplace. ![EOL](~/dataminer/images/EOL_Duo.png)
+>
+> Existing deployments will remain supported and can continue to be used. We recommend transitioning to [DataMiner Assistant](xref:Assistant_M365), which will eventually replace DataMiner ChatOps. A preview version of DataMiner Assistant is already available upon request.
 
 If your DataMiner System is connected to dataminer.services, you can integrate your DataMiner System with Microsoft Teams using [DataMiner Automation](xref:automation).
 
@@ -68,7 +74,7 @@ After you have made sure the above-mentioned prerequisites are in place, you can
 
 ## Limitations
 
-- The bot is currently not supported in shared or private channels.
+- ChatOps is not supported in shared or private channels.
 - Notifications cannot exceed 35 KB.
 
 ## Security

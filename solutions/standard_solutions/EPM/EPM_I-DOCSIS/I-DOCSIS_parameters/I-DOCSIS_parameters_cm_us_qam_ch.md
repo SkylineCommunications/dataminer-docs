@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_parameters_cm_us_qam_ch
 keywords: I-DOCSIS parameters
+description: Discover all the CM US QAM CH parameters available in the Integrated DOCSIS branch of the EPM Solution.
 ---
 
 # Integrated DOCSIS parameters – CM US QAM CH

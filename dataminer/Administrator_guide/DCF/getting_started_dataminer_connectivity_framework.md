@@ -1,5 +1,6 @@
 ---
 uid: getting_started_dataminer_connectivity_framework
+description: "Get started with the DataMiner Connectivity Framework with a basic example where you create connections between elements that expose external interfaces."
 ---
 
 # Getting started with DCF

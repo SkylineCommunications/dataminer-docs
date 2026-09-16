@@ -1,5 +1,6 @@
 ---
 uid: Stack_DOM
+description: Accelerate operations with DataMiner Object Models. Model ticketing, jobs, contracts, and maintenance data in one structured flow.
 ---
 
 # DataMiner Object Models (DOM)

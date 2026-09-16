@@ -1,5 +1,6 @@
 ---
 uid: Virtual_device_connections
+description: "Set up virtual connections to data sources and assign virtual IP addresses so you can simplify complex networks and IP-enable serial devices."
 ---
 
 # Virtual connections to data sources

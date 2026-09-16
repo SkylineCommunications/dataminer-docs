@@ -13,6 +13,29 @@ uid: General_Main_Release_10.7.0_new_features
 
 ## New features
 
+#### DataMiner key vault [ID 44075] [ID 44349] [ID 44350] [ID 44351] [ID 44352] [ID 44353] [ID 44354] [ID 44701] [ID 44702] [ID 44911] [ID 46047] [ID 46061]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+From DataMiner 10.7.0/10.6.10 onwards, all credentials managed through the Credentials Library (SNMPv2/community, SNMPv3, username/password, and token credentials) will be protected using encryption at rest.
+
+Key enhancements include:
+
+- Secure storage of secrets as authenticated ciphertext (AES-256-CBC with HMAC-SHA-256) in a dedicated encrypted store managed by the DataMiner StorageModule, with support for Cassandra, cloud storage, and XML-based deployments. Encryption keys are stored per node and protected using Windows DPAPI.
+
+- Introduction of the DMS backup password, needed to restore encrypted backups on clean machines while maintaining secure key custody. The restore wizard will automatically detect when the password is required and will validate it during restore operations.
+
+- Automatic migration of existing credentials from *Library.xml* to the encrypted store during upgrades, and reconstruction of *Library.xml* during downgrades for backwards compatibility.
+
+- Cluster-wide secret re-encryption support through the SLNetClientTest tool, allowing administrators to rotate encryption keys and re-encrypt all stored secrets without changing credential identifiers.
+
+- Additional security and robustness improvements, including permission enforcement for credential management, duplicate-name protection, decryption failure detection, and extensive reliability enhancements.
+
+> [!IMPORTANT]
+> The DMS backup password should be stored securely outside DataMiner (for example, in a password manager). If it is lost, encrypted credentials in any backup taken with that password can no longer be recovered on a clean host. In a multi-node cluster, a peer DataMiner Agent can re-synchronize the encryption material to a restored node, but this should not be relied upon as a substitute for a properly configured DMS backup password.
+
+<!-- See also Cube RNs [ID 45704] [ID 45997] -->
+
 #### Service & Resource Management: New PatchReservationInstanceProperties method to update properties of a reservation instance [ID 44084]
 
 <!-- MR 10.7.0 - FR 10.6.1 -->
@@ -74,6 +97,36 @@ A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve t
 >
 > - *Modules > Automation > UI available*
 > - *Modules > Automation > Execute*
+
+#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Automation scripts now support adding credentials from the Credentials Library directly in the script's XML code.
+
+See the following example:
+
+```xml
+<Credentials>
+    <Credential id="1">
+        <Name>MyCredential</Name>
+        <CredentialId>8d15e7d8-f8f6-41f6-985c-fddbd3ea94ae</CredentialId>
+        <Type>Token</Type>
+    </Credential>
+</Credentials>
+```
+
+| Element | Attribute | Content |
+|---|---|---|
+| Credential | id | ID of the credential (integer, unique per script) |
+| Name | - | Name of the credential (string, unique per script) |
+| CredentialId | - | GUID of the linked credential from the Credentials Library |
+| Type | - | Type of credential: `UserNameAndPassword` or `Token` |
+
+> [!NOTE]
+>
+> - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
+> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNameAndPassword` and `Token` credentials stored in the Credentials Library.
 
 #### SLNet subscription logging [ID 44361]
 
@@ -390,3 +443,79 @@ Currently, rate limits cannot yet be configured in the UI, and must be configure
 When an existing rate limit is changed, the updated limit is only applied after a next trigger both starts and finishes after the update has been applied.
 
 If a long window was configured and the limit has already been reached, the client may need to wait until the window has passed before another trigger can be executed and the updated limit can take effect.
+
+#### Automation: Added support for running scripts in separate SLAutomation.ScriptRunner processes by SolutionId [ID 45557]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+To help prevent DLL version conflicts between solutions, scripts can now run their C# code in separate `SLAutomation.ScriptRunner` child processes grouped by the script's `SolutionId` tag.
+
+When a script has a `SolutionId`, DataMiner will create a runner process for that `SolutionId` (or reuse an existing one), and execute the script code in that process instead of the main `SLAutomation` process.
+
+When you update a script that uses `SolutionId`, you can send an `InvalidateScriptRunnerMessage` to force creation of a new runner process on the next execution, ensuring the latest DLLs are loaded. A maximum of 10 runner processes can exist at the same time per `SolutionId`, and 50 runner processes in total.
+
+Runner processes are automatically stopped after they have been idle for one hour. In the *SLNetClientTest* tool, you can view the current runners via *Advanced* > *Automation...* > *Script Runners Overview*.
+
+#### User-Defined APIs can now use dynamic route segments to expose path parameters to the trigger script [ID 45681]
+
+<!-- MR 10.7.0 - FR 10.6.8 -->
+
+From now on, user-defined APIs can use dynamic route segments to expose path parameters to the trigger script.
+
+A route such as `items/{id}` or `a/{x}/b/{y}` no longer needs to be fully literal, and the values that appear in the request path are forwarded to the automation script.
+
+A dynamic route segment is written as `{parameterName}`. The parameter name is captured as-is and becomes available in `ApiTriggerInput.RouteParameters` within the API trigger automation script. For example, a request to `items/42` against the route `items/{id}` will provide `id = 42`.
+
+##### Dynamic route matching
+
+Route matching now distinguishes between static and dynamic routes:
+
+- Static routes continue to work as before.
+- Static routes always win over dynamic routes when both match the same request.
+- Literal route segments are matched case-insensitively.
+- The full number of segments must match. Partial matches are not accepted.
+- Dynamic routes are evaluated in specificity order, so that more literal routes win over more generic templates.
+
+That means `items/special` will match the static route `items/special` before the dynamic route `items/{id}`, and, in case of `foo/bar`, `foo/{bar}` will win over `{foo}/bar` because the first literal segment is more specific.
+
+##### Route parameters
+
+When a dynamic route matches, the captured path values are passed through to the script as a dictionary of route parameters.
+
+Route parameters:
+
+- Are exposed on `ApiTriggerInput.RouteParameters`.
+- Use the parameter name from the template as the key.
+- Preserve the exact incoming path segment as the value.
+- Are empty for static route matches.
+
+##### Route validation and conflicts
+
+Routes are validated more strictly before create and update:
+
+- A route cannot be null, empty, or whitespace only.
+- A route cannot start or end with `/`.
+- A route cannot contain empty path segments.
+- A parameter segment must be written as a well-formed `{name}` placeholder.
+- Parameter names cannot use route syntax characters such as `/`, `{`, `}`, `?`, `*`, `:`, or `=`.
+- A route template cannot reuse the same parameter name more than once within the same route.
+
+Route conflicts are also detected across all existing definitions. Any two templates that can match the same request path are rejected, including conflicts between literal and parameterized routes and between overlapping parameterized templates. If a route with `ticket/{id}` already exists, a new route like `ticket/{ticketId}` will be rejected.
+
+When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
+
+#### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+In order to notify client applications when the measurement point cycle changes, a new spectrum parameter has been added: `SPA_SPARAM_MEASPOINT_CYCLE` (PID 64227).
+
+This will especially improve synchronization in shared sessions, keeping measurement point cycle updates aligned across connected clients.
+
+### New GetCloudDmsInformationRequest message to retrieve information from a cloud-connected DMS [ID 46393]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve information from a cloud-connected DMS, including the organization name, DMS name, and remote-access URL.
+
+This request requires a CloudGateway version that supports it.

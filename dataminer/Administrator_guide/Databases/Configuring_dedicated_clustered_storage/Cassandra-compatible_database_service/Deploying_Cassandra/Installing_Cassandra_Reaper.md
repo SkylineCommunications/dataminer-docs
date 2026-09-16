@@ -1,5 +1,6 @@
 ---
 uid: Installing_Cassandra_Reaper
+description: "Install Cassandra Reaper, an application that can manage Cassandra cluster repairs on its own without the need for extra external management."
 ---
 
 # Installing Cassandra Reaper
@@ -11,7 +12,7 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
 
 1. Install the Cassandra Reaper software by following the installation steps on the [Cassandra Reaper installation page](http://cassandra-reaper.io/docs/download/install/).
 
-1. Create a keyspace in Cassandra for Reaper to use by running a CQL command adjusted to match the [keyspace replication strategy](https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/architecture/archDataDistributeReplication.html) of your choice.
+1. Create a keyspace in Cassandra for Reaper to use by running a CQL command adjusted to match the [keyspace replication strategy](https://cassandra.apache.org/doc/5.0/cassandra/architecture/dynamo.html#replication-strategy) of your choice.
 
    - Example where all nodes in the Cassandra cluster reside in a **single data center**:
 

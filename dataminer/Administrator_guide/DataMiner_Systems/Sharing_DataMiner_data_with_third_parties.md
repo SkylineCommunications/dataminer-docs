@@ -1,5 +1,6 @@
 ---
 uid: Sharing_DataMiner_data_with_third_parties
+description: "Explore the many ways in which you can make your DataMiner System share information (real-time device readings, fault data, etc.) with third parties."
 ---
 
 # Sharing DataMiner data with third parties

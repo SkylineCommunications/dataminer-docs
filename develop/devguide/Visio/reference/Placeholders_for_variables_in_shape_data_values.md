@@ -35,7 +35,7 @@ Keep the following in mind when using placeholders:
 - Placeholders are case-insensitive. In other words, you can use `[this service]`, `[This Service]`, etc.
 - In the `[param: ...]` placeholders mentioned below, *ParameterID* can be replaced by another `[param: ...]` placeholder. In other words, parameter references can be nested. When you use other placeholders within placeholders, be careful not to create loops.
 - You can use placeholders directly in the text of a shape.
-- Many of the advanced features described below apply to DataMiner Cube only.
+- Not all features described below are supported in the Visual Overview component in the web apps. For an overview, see [Unsupported capabilities](xref:DashboardVisualOverview#unsupported-capabilities).
 
 ### \[AggregationRule:...\]
 

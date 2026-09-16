@@ -1,5 +1,6 @@
 ---
 uid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+description: "Use the Cassandra Cluster Migrator to migrate self-managed storage per DMA to a Cassandra cluster database."
 keywords: local database
 ---
 
@@ -12,28 +13,28 @@ The migration can be done while the DMAs are active; however, a **DataMiner rest
 The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on every DMA running DataMiner version 10.2.0/10.2.2 or higher. You can find it in the folder `C:\Skyline DataMiner\Tools\`. However, we highly recommend that you upgrade to DataMiner 10.3.0 [CU11]/10.4.2 or higher to use the tool, as this version includes an improved version of the tool that will prevent possible issues.
 
 > [!NOTE]
-> From DataMiner 10.3.7/10.3.0 [CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [OpenSearch database](xref:Installing_OpenSearch_database#tls-and-user-configuration) or [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and your [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and OpenSearch/Elasticsearch settings](#running-the-migration) in the migration tool.<!-- RN 34852 --> For OpenSearch, configuring TLS is highly recommended.
+>
+> - From DataMiner 10.3.7/10.3.0 [CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [OpenSearch database](xref:Installing_OpenSearch_database#tls-and-user-configuration) or [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and your [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and OpenSearch/Elasticsearch settings](#running-the-migration) in the migration tool.<!-- RN 34852 --> For OpenSearch, configuring TLS is highly recommended.
+> - Prior to DataMiner 10.6.10/10.7.0<!--RN 45824-->, credentials from the [Credentials Library](xref:Credentials_Library) are not included in the migration.
 
 ## Prerequisites
 
 - All DMAs must run DataMiner 10.3.0 [CU11]/10.4.2 or higher.
 
-- A Cassandra cluster must be available using version 4.0 or higher. For information on how to install Cassandra, see [Installing Cassandra on a Linux machine](xref:Installing_Cassandra).
+- A Cassandra cluster must be available using [a supported version](xref:DataMiner_Compute_Requirements#cassandra-software). For information on how to install Cassandra, see [Installing Cassandra on a Linux machine](xref:Installing_Cassandra).
 
-  > [!NOTE]
-  > Previously Cassandra 3.11.8 was also supported. This will remain supported for existing installations; however, because of its increased performance, **Cassandra 4.0 is required for new Cassandra installations** if a database per cluster is used. If you have a Cassandra 3.11.8 database and you have not yet migrated your DataMiner data, we recommend upgrading to Cassandra 4.0 first.
-
-- Either an OpenSearch cluster should be available (recommended), or an Elasticsearch cluster using version 6.8.0 or higher, but lower than 7.0.
+- Either an OpenSearch cluster should be available using [a supported version](xref:DataMiner_Compute_Requirements#opensearch-software) (recommended), or an Elasticsearch cluster using version 6.8.0 or higher, but lower than 7.0.
 
   > [!TIP]
-  >
-  > - For information on how to set up an OpenSearch cluster, see [Setting up an OpenSearch database](xref:Installing_OpenSearch_database#setting-up-the-opensearch-cluster).
-  > - For information on how to configure an Elasticsearch cluster, see [Configuring the Elasticsearch database](xref:Configuring_Elasticsearch_Database).
+  > For information on how to set up an OpenSearch cluster, see [Setting up an OpenSearch database](xref:Installing_OpenSearch_database#setting-up-the-opensearch-cluster).
 
 > [!NOTE]
 >
 > - The **migration will not clear any existing data from the given Cassandra cluster**. This means that any data that might conflict with the migrated data should first be deleted manually. We recommend that you make sure the target Cassandra cluster is clean before you proceed with the migration.
-> - If there is an **existing OpenSearch/Elasticsearch cluster** connected to the DMS, this cluster will be reused and any given input regarding this cluster will be disregarded. In the existing cluster, alarms will be deleted and migrated again from the DMS. If your system contains SRM information or legacy [Jobs](xref:jobs) or [Ticketing](xref:ticketing) information, this will not be migrated, as this is expected to already be present in the OpenSearch/Elasticsearch cluster. If this is not the case, migrate this data first through DataMiner Cube (see [Configuring indexing settings in System Center](xref:Configuring_DataMiner_Indexing)).
+> - If there is an **existing OpenSearch/Elasticsearch cluster** connected to the DMS, this cluster will be reused and any given input regarding this cluster will be disregarded.
+>   - In the existing cluster, alarms will be deleted and migrated again from the DMS.
+>   - If your system contains SRM information or legacy [Jobs](xref:jobs) or [Ticketing](xref:ticketing) information, this will not be migrated, as this is expected to already be present in the OpenSearch/Elasticsearch cluster. If this is not the case, migrate this data first through DataMiner Cube (see [Configuring indexing settings in System Center](xref:Configuring_DataMiner_Indexing)).
+>   - Keep in mind that **support for Elasticsearch ends in DataMiner 10.7.x**, so any existing Elasticsearch cluster will need to be migrated to OpenSearch.
 
 ## Stages of the migration
 
@@ -80,7 +81,7 @@ If your system does not use an indexing database yet or if it already uses an Op
 
      - *Cassandra password*: The password for the specified username.
 
-     - *Cassandra consistency*: The consistency level. For more information, see [How is the consistency level configured?](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html)
+     - *Cassandra consistency*: The consistency level. For more information, see [Picking Consistency Levels](https://cassandra.apache.org/doc/5.0/cassandra/architecture/dynamo.html#picking-consistency-levels).
 
      - *Cassandra TLS*: Available from DataMiner 10.3.7/10.3.0 [CU4] onwards. Allows you to establish TLS connections towards the databases. <!-- RN 34852 -->
 
@@ -180,7 +181,7 @@ In case your DataMiner System contains bespoke Elasticsearch data or SRM data, u
 
      - *Cassandra password*: The password for the specified username.
 
-     - *Cassandra consistency*: The consistency level. For more information, see [How is the consistency level configured?](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html)
+     - *Cassandra consistency*: The consistency level. For more information, see [Picking Consistency Levels](https://cassandra.apache.org/doc/5.0/cassandra/architecture/dynamo.html#picking-consistency-levels).
 
        > [!NOTE]
        >

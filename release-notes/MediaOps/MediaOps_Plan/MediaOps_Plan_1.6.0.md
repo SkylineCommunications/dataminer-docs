@@ -2,16 +2,12 @@
 uid: MediaOps_Plan_1.6.0
 ---
 
-# MediaOps Plan 1.6.0 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Plan 1.6.0
 
 > [!NOTE]
 > This version requires:
 >
-> - DataMiner 10.6.5/10.7.0 or higher.
-> - The [GQI DxM](xref:GQI_DxM), which must be installed and enabled.
+> - DataMiner 10.6.4/10.7.0 or higher.
 > - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.0 or higher.
 > - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e) 1.1.0 or higher.
 
@@ -173,11 +169,30 @@ On the About pages of the MediaOps Plan apps, version information has been added
 
 When you update the icon on a resource or resource pool, the system will verify if the resource or resource pool is used in any workflow. If the resource or resource pool is used in a workflow, you will now be asked whether the new icon should be applied across all workflows that reference it. When you choose to update all workflows, the system will trigger a background automation script supporting both resources and resource pools to update the icon on all corresponding referencing workflow nodes.
 
+#### Improved workflow node visualization [ID 45666]
+
+The workflow node visualization in the Scheduling and Workflow Designer apps has been improved:
+
+- **Support for custom icons**: You can now configure custom icons for workflow nodes by adding them in the folder `C:\Skyline DataMiner\Webpages\Public\MediaOps\Icons`.
+- **Improved node selection indication**: When a node is selected, the background will now change to make the selected node stand out better (regardless of whether a custom icon is used).
+- **Clearer difference between resources and resource pools**: Resources and resource pools now use different colors and shapes so they can be easily told apart.
+- **Hand icon shown**: When the node configuration is incomplete, a red hand icon is now displayed on the node within the Scheduling app.
+
 ### Fixes
 
 #### Scheduling: Default value dropdown not updated after change to discrete values of system property [ID 45442]
 
 When system properties of type discrete were configured, the dropdown to select the default value was not updated with the newly added or changed discrete values.
+
+#### Workflow Designer: Resource pool not automatically selected when swapping resource [ID 45527]
+
+When you tried to swap a resource in the Workflow Designer app, the resource pool was not automatically selected, so that you had to manually locate the resource pool before performing the swap. Now the resource pool will be correctly auto-populated based on the selected resource.
+
+#### Scheduling: Exception because of invalid node reference made workflow inaccessible in 'Edit job' panel [ID 45591]
+
+When you opened the *Edit job* panel, the following exception could occur in the workflow: `The given key was not present in the dictionary`. This was caused by connections referencing non-existing node IDs, for example, after a node was removed but its associated connections were not updated. This exception made it impossible for operators to view the workflow, and manual intervention in the DOM instance was required to resolve the issue.
+
+To resolve this, the handling of invalid node references has now been improved. Connections with non-existing node IDs are now gracefully ignored or handled, preventing the exception and ensuring that the workflow remains visible to operators.
 
 #### DevPack: Not possible to update capability name [ID 45544]
 
@@ -190,3 +205,11 @@ Attempting to add and save a new property to a resource that had a concurrency o
 #### Aborting a script caused it to be logged as failed [ID 45590]
 
 Previously, closing an interactive script by clicking the X icon in the top-right corner resulted in the script being logged as failed. This behavior has been fixed, and such actions no longer mark the script as a failure.
+
+#### Scheduling: Node icon not updated after node swap [ID 45644]
+
+When an existing node of a non-running job was swapped, the node icon was not updated. Now swapping the node will cause the icon to be updated to match the new node.
+
+#### Scheduling: Workflow-level configuration not cloned when creating job from workflow [ID 45679]
+
+When a new job was created from a workflow template, workflow-level configuration (e.g., capabilities) was not cloned, though node-level configuration was cloned correctly. This has now been fixed.

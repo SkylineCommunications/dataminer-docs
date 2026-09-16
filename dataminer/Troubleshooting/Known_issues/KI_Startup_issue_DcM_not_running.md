@@ -10,7 +10,7 @@ This issue is assumed to occur since the introduction of the DcMs, i.e., from Da
 
 ## Cause
 
-Some [DataMiner Core Module (DcM)](xref:DataMinerExtensionModules#available-dcms) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g., because of Windows updates). As a consequence, these services are still stopped while the DataMiner Agent is already starting, but DataMiner needs these services to be able to start up fully.
+Some [DataMiner Core Module (DcM)](xref:DataMinerCoreModules) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g., because of Windows updates). As a consequence, these services are still stopped while the DataMiner Agent is already starting, but DataMiner needs these services to be able to start up fully.
 
 ## Fix
 
@@ -25,4 +25,4 @@ See [DataMiner startup issues - DcM issue solution](xref:Troubleshooting_Startup
 
 ## Description
 
-After a reboot, DataMiner fails to start, takes too long to start, or gets stuck at 99% during the startup process. In the Windows Task Manager, one or more [DataMiner Core Modules](xref:DataMinerExtensionModules#available-dcms) are shown as stopped.
+After a reboot, DataMiner fails to start, takes too long to start, or gets stuck at 99% during the startup process. In the Windows Task Manager, one or more [DataMiner Core Modules](xref:DataMinerCoreModules) are shown as stopped.

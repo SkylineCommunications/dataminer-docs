@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_services_data_plane
+description: "Use this Data Plane sizing guide to classify Standard, Light, and Unmanaged Objects, then estimate monthly units from your metrics."
 ---
 
 # Sizing guide: Data Plane
