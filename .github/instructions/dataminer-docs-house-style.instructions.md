@@ -20,6 +20,14 @@ When creating or editing documentation pages, apply the following rules.
 - Use plain text in headers, avoiding italics, bold, or other formatting.
 - When referring to changes introduced by a specific release note, make sure both the Main Release version and Feature Release version introducing the changes are mentioned on the page.
 
+## Documentation metadata
+
+- Every new Markdown page must include `metadata_version: 1` and all required fields from `contributing/metadata/documentation-metadata-v1.schema.json`.
+- Use the controlled `content_type`, `authority`, `lifecycle`, `area`, and review values defined in [Documentation metadata](xref:CTB_Documentation_Metadata). Do not create a second list of allowed values in a page or template.
+- Use `unknown` or `not_applicable` exactly as defined by the contract when applicability, ownership, authority, review, version, or compatibility is not confirmed. Never use an empty value or invent an owner handle or version range.
+- Preserve existing UIDs and published URLs. Record `redirect_required` and URL aliases before moving a published page.
+- Validate new and changed version 1 front matter with `scripts/validate-documentation-metadata.ps1` before running the DocFX checks. Existing pages without `metadata_version: 1` remain on the legacy migration path until D2.2.
+
 ## Procedure formatting
 
 - Write procedures as numbered lists.

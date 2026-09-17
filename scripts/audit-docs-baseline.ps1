@@ -835,6 +835,19 @@ if (-not (Test-Path -LiteralPath $script:RepositoryRoot -PathType Container)) {
     throw "Repository root '$script:RepositoryRoot' does not exist."
 }
 
+$metadataValidatorPath = Join-Path $script:RepositoryRoot "scripts\validate-documentation-metadata.ps1"
+$metadataSchemaPath = Join-Path $script:RepositoryRoot "contributing\metadata\documentation-metadata-v1.schema.json"
+if ((Test-Path -LiteralPath $metadataValidatorPath -PathType Leaf) -or (Test-Path -LiteralPath $metadataSchemaPath -PathType Leaf)) {
+    if (-not (Test-Path -LiteralPath $metadataValidatorPath -PathType Leaf)) {
+        throw "Documentation metadata schema exists, but validator '$metadataValidatorPath' is missing."
+    }
+    if (-not (Test-Path -LiteralPath $metadataSchemaPath -PathType Leaf)) {
+        throw "Documentation metadata validator exists, but schema '$metadataSchemaPath' is missing."
+    }
+
+    & $metadataValidatorPath -RepositoryRoot $script:RepositoryRoot -SchemaPath $metadataSchemaPath
+}
+
 if ([String]::IsNullOrWhiteSpace($SitePath)) {
     $SitePath = Join-Path $script:RepositoryRoot "_site"
 }

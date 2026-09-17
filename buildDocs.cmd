@@ -4,7 +4,7 @@ cls
 dotnet restore "src/NuGetPackages"
 dotnet build "src/NuGetPackages" --configuration Release
 docfx metadata
-docfx build
+docfx build --warningsAsErrors
 
 if "%1"=="" (
     docfx serve _site

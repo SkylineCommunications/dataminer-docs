@@ -1,11 +1,41 @@
 ---
+metadata_version: 1
 uid: CTB_Docs_house_style
 description: "Follow the DataMiner Docs house style to write clear, consistent documentation using the required spelling, grammar, punctuation, and terminology."
+area: contributing
+content_type: conceptual
+authority: canonical
+authority_source: not_applicable
+lifecycle: active
+applies_to:
+  - DataMiner documentation
+version: unversioned
+owner: unknown
+review_status: approved
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # DataMiner Docs house style
 
 This page describes general rules for DataMiner documentation, including spelling, grammar, punctuation, and terminology. These apply for any DataMiner documentation, both on [docs.dataminer.services](https://docs.dataminer.services/index.html) and in any other location.
+
+## Page metadata
+
+Every new page must use the version 1 metadata contract in [Documentation metadata](xref:CTB_Documentation_Metadata). Include all required fields, even when a value is not yet confirmed. Use the exact `unknown` or `not_applicable` sentinel required by the contract instead of an empty value.
+
+Choose the `content_type` that matches the page:
+
+- Use `conceptual` for explanations and task guidance.
+- Use `schema` for a structured contract or data model.
+- Use `api` for a supported API surface.
+- Use `example` for an illustrative sample or walkthrough.
+- Use `release-note` for a time-bound release record.
+- Use `legacy` for content retained for historical or migration purposes.
+
+Do not invent an owner handle, product applicability, or version notation. Use an existing value or the contract's reserved sentinel. Preserve an existing UID and published URL when you edit a page. If a URL must change, document the required redirect and aliases in the `compatibility` object.
 
 ## AI-friendly writing
 

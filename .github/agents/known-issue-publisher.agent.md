@@ -24,7 +24,7 @@ Your job is to turn a pasted draft known issue into a publication-ready page tha
 When you receive a draft, produce these changes:
 
 1. Create the known issue page in `dataminer/Troubleshooting/Known_issues/`.
-2. Ensure the page has valid front matter with a unique `uid`.
+2. Ensure the page has valid version 1 front matter with a unique `uid` and all fields required by `contributing/metadata/documentation-metadata-v1.schema.json`. Use only confirmed affected versions and fix versions; use the contract's `unknown` or `not_applicable` sentinel when another value is not confirmed.
 3. Add the page entry in `dataminer/Troubleshooting/Known_issues/Known_issues.md`.
 4. Add the page to `dataminer/Troubleshooting/toc.yml`.
 

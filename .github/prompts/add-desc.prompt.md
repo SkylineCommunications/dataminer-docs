@@ -13,3 +13,5 @@ Can you add a description to the yaml front matter of this file, keeping in mind
 - Do not use colons
 - Enclose the description in double quotes
 - Make sure the description is between 100 and 155 characters long
+- If this page already has `metadata_version: 1`, preserve every required metadata field and validate the complete front matter with `scripts/validate-documentation-metadata.ps1`
+- Do not invent an owner, product applicability, version, or review date; use the exact `unknown`, `not_applicable`, or `unversioned` value defined by `contributing/CTB_Documentation_Metadata.md`

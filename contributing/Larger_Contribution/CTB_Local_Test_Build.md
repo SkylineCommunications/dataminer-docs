@@ -63,7 +63,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    - `docfx metadata`
 
-   - `docfx build`
+   - `docfx build --warningsAsErrors`
 
    - `docfx serve _site`
 
@@ -82,17 +82,29 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 ## Checking documentation metadata
 
-For pages that contain `metadata_version: 1`, validate the complete front matter object against `contributing/metadata/documentation-metadata-v1.schema.json` with a JSON Schema Draft 2020-12 validator before running the DocFX build. The schema rejects missing fields, values outside the controlled lists, undocumented metadata keys, invalid dates, and ambiguous unknown values.
+For pages that contain `metadata_version: 1`, validate the complete front matter object against `contributing/metadata/documentation-metadata-v1.schema.json` before running the DocFX build. The repository validator reads that schema as its sole source of allowed fields and values. It rejects missing fields, values outside the controlled lists, undocumented metadata keys, invalid dates, and ambiguous `unknown` or `not_applicable` values. Pages without `metadata_version: 1` remain on the legacy migration path and are skipped by the default repository-wide check.
 
 Use the following deterministic sequence:
 
-1. Validate the front matter against the version 1 schema.
+1. Validate all opted-in pages from the repository root:
+
+   ```powershell
+   .\scripts\validate-documentation-metadata.ps1 -RepositoryRoot .
+   ```
+
+   For a new page, require version 1 metadata explicitly:
+
+   ```powershell
+   .\scripts\validate-documentation-metadata.ps1 -RepositoryRoot . -Path .\path\to\new-page.md -RequireVersion1
+   ```
 
 1. Run `docfx metadata`.
 
 1. Run `docfx build --warningsAsErrors`.
 
-The DocFX build validates UIDs, TOC entries, cross-references, and Markdown integration. It does not replace JSON Schema validation. For fields that cannot yet be confirmed, use the exact `unknown` or `not_applicable` sentinel required by the schema. Do not use an empty value or invent an owner.
+The DocFX build validates UIDs, TOC entries, cross-references, and Markdown integration. It does not replace metadata validation. For fields that cannot yet be confirmed, use the exact `unknown` or `not_applicable` sentinel required by the schema. Do not use an empty value or invent an owner.
+
+Treat warnings introduced by your change as failures. If the build reports a warning that predates your change, record it separately in the pull request and do not suppress it or describe it as fixed by the metadata check.
 
 ### Making a test build in the Visual Studio Code terminal
 
@@ -112,7 +124,7 @@ If you make repeated test builds to check changes you have made, and you are onl
 
       - `docfx metadata`
 
-      - `docfx build`
+      - `docfx build --warningsAsErrors`
 
       - `docfx serve _site`
 

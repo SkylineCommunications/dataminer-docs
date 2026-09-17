@@ -289,7 +289,19 @@ compatibility:
 
 ## Deterministic validation
 
-When you add `metadata_version: 1`, validate the complete front matter object against `contributing/metadata/documentation-metadata-v1.schema.json` with a JSON Schema Draft 2020-12 validator. The validator must reject missing required fields, values outside the controlled lists, empty strings, unknown metadata keys, invalid dates, and mixed `unknown` or `not_applicable` applicability arrays.
+When you add `metadata_version: 1`, validate the complete front matter object against `contributing/metadata/documentation-metadata-v1.schema.json` with `scripts/validate-documentation-metadata.ps1`. The validator reads the schema instead of maintaining a second list of fields or values. It must reject missing required fields, values outside the controlled lists, empty strings, unknown metadata keys, invalid dates, and mixed `unknown` or `not_applicable` applicability arrays. Pages without `metadata_version: 1` are legacy pages and remain out of scope for this opt-in validation until D2.2.
+
+For a repository-wide check of opted-in pages, run:
+
+```powershell
+.\scripts\validate-documentation-metadata.ps1 -RepositoryRoot .
+```
+
+For a new page, require version 1 metadata explicitly:
+
+```powershell
+.\scripts\validate-documentation-metadata.ps1 -RepositoryRoot . -Path .\path\to\new-page.md -RequireVersion1
+```
 
 Then run the repository's existing DocFX build with warnings treated as errors:
 
