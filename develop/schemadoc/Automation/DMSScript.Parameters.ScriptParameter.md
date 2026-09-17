@@ -23,3 +23,7 @@ Defines a parameter script variable. Parameter script variables are typically us
 |Name|Occurrences|Description|
 |--- |--- |--- |
 |&nbsp;&nbsp;[Description](xref:DMSScript.Parameters.ScriptParameter.Description)||Specifies the name of the parameter script variable.|
+
+## Remarks
+
+At runtime, retrieve the value of a script parameter with `IEngine.GetScriptParam` by name or ID. The returned [ScriptParam](xref:Skyline.DataMiner.Automation.ScriptParam) is supplied by DataMiner; do not construct it in application code. Its `Value` is a string. For the behavior when C# code accesses an undefined or empty value, see [RunTimeFlags.AllowUndef](xref:Skyline.DataMiner.Automation.RunTimeFlags.AllowUndef).

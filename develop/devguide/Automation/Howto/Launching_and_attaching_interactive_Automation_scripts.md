@@ -38,11 +38,15 @@ This is why:
 If you want to show the UI to an active Cube user when prompted, use the following configuration:
 
 ```csharp
+const int timeoutSeconds = 90;
+
 if (!engine.FindInteractiveClient("Scheduled task requires operator input to proceed.", timeoutSeconds))
 {
     engine.ExitFail("No interactive client attached within the timeout. Aborting.");
 }
 ```
+
+The `FindInteractiveClient` timeout is specified in seconds. When it expires, the method returns `false`, so handle that result before continuing.
 
 This is why:
 
@@ -57,7 +61,9 @@ This is why:
 
 ## Auto-attaching a script to specific users from non-UI contexts
 
-If you want a script to automatically attach to specific users without prompting, there are several possibilities, as illustrated by the following examples:
+If you want a script to automatically attach to specific users without prompting, there are several possibilities, as illustrated by the following examples.
+
+In these examples, `timeoutSeconds` is the number of seconds to wait, for example `const int timeoutSeconds = 90;`.
 
 - Example: Attach immediately to users **in specified groups**.
 

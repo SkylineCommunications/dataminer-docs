@@ -6,6 +6,12 @@ uid: DMSScript
 
 The root element of a DataMiner automation script.
 
+## Namespace
+
+`http://www.skyline.be/automation`
+
+This reference is aligned with Automation XML schema package 1.1.10.
+
 ## Attributes
 
 |Name|Type|Required|Description|

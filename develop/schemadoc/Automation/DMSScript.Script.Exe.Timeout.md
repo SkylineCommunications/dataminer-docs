@@ -16,7 +16,14 @@ positiveInteger
 
 ## Remarks
 
-Used with script actions of type "findinteractiveclient" and "sleep".
+Used with script actions of type "findinteractiveclient" and "sleep". The unit depends on the action:
+
+| Action type | Unit |
+|---|---|
+| `findinteractiveclient` | Seconds to wait for a user to attach. |
+| `sleep` | Milliseconds to pause the script. |
+
+This element does not set the timeout of a C# code block. For that timeout, use the `IEngine.Timeout` property in the C# code.
 
 ## Examples
 

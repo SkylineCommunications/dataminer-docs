@@ -56,12 +56,14 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 ## Creating the interactive automation script
 
-1. Create an automation script as a Visual Studio solution, as explained under [automation scripts as a Visual Studio solution](xref:Automation_scripts_as_a_Visual_Studio_solution).
+1. Create an automation script in a project-based Visual Studio solution, as explained under [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction).
 
 1. Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.2) to your project.
 
    > [!NOTE]
-   > Ensure that your project uses at least version 9.0.2 of [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.2) and version 10.4.7 of [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation/10.4.7) to have the *DebugTag* property available on a widget.
+   > This example uses Toolkit version 9.0.2, where *ShowDialog* is the preferred initial-dialog method. The compatibility probes observed Dev.Automation package versions 10.4.0.24 and 10.6.9.1 for different tasks; these are not universal minimum versions. Use the Dev.Automation version that matches the target DataMiner System and verify that it exposes the *DebugTag* property before compiling the example.
+   >
+   > From DataMiner 10.5.9/10.6.0<!-- RN 42954 --> onwards, set the script XML [Interactivity](xref:DMSScript.Interactivity) element explicitly. Older versions rely on automatic detection, so keep the detection hint in the example.
 
 1. Use the following C# code to implement a sample interactive script that displays a "Hello, World!" message with an *OK* button:
 
@@ -122,7 +124,8 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
           }
           catch (Exception e)
           {
-             engine.ExitFail($"Run|Something went wrong: {e}");
+             engine.Log(e.ToString());
+             engine.ExitFail("The interactive script failed. See the Automation log for details.");
           }
        }
    }

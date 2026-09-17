@@ -22,14 +22,14 @@ class Script
     /// The Script entry point.
     /// </summary>
     /// <param name="engine">Link with SLAutomation process.</param>
-    public void Run(Engine engine)
+    public void Run(IEngine engine)
     {
         CustomClass myCustomClass = InitCustomClass();
         LogStringValue(engine, myCustomClass);
     }
-    private void LogStringValue(Engine engine, CustomClass customClass)
+    private void LogStringValue(IEngine engine, CustomClass customClass)
     {
-        engine.GenerateInformation(customClass.StringValue);
+        engine.Log(customClass.StringValue);
     }
     private CustomClass InitCustomClass()
     {
@@ -62,19 +62,35 @@ This only shows that the `Run` and `RunWrapped` methods are executed, which is i
 You can make the exception more meaningful by adding a try-catch as shown below.
 
 ```csharp
-public void Run(Engine engine)
+public void Run(IEngine engine)
 {
     try
     {
         RunSafe(engine);
     }
+    catch (ScriptAbortException)
+    {
+        throw;
+    }
+    catch (ScriptForceAbortException)
+    {
+        throw;
+    }
+    catch (ScriptTimeoutException)
+    {
+        throw;
+    }
+    catch (InteractiveUserDetachedException)
+    {
+        throw;
+    }
     catch (Exception ex)
     {
         engine.Log(ex.ToString());
-        engine.ExitFail(ex.Message);
+        engine.ExitFail("The script failed. See the Automation log for details.");
     }
 }
-private void RunSafe(Engine engine)
+private void RunSafe(IEngine engine)
 {
     CustomClass myCustomClass = InitCustomClass();
     LogStringValue(engine, myCustomClass);
@@ -89,7 +105,7 @@ However, the logging will contain the full stack trace that you need for debuggi
 
 ```txt
 2021/09/21 15:23:52.915|SLAutomation.exe 10.1.2132.1478|16988|6768|Script|INF|-1|[Jens Vandewalle] (Script Debug) Log Message: "System.NullReferenceException: Object reference not set to an instance of an object.
-   at Script.LogStringValue(Engine engine, CustomClass customClass)
-   at Script.RunSafe(Engine engine)
-   at Script.Run(Engine engine)"
+   at Script.LogStringValue(IEngine engine, CustomClass customClass)
+   at Script.RunSafe(IEngine engine)
+   at Script.Run(IEngine engine)"
 ```

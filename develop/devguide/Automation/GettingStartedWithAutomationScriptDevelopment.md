@@ -25,6 +25,8 @@ uid: GettingStartedWithAutomationScriptDevelopment
 - [Script execution options](xref:Script_execution_options)
 - [Using credentials in an automation script](xref:Using_credentials_in_an_automation_script)
 
+For new C# automation scripts, prefer the project-based SDK-style workflow. Inline C# blocks remain useful for existing scripts and are documented in [Adding C# code to an automation script](xref:Adding_CSharp_code_to_an_Automation_script). If the script XML contains a `[Project:<project-name>]` value, keep the C# source in that referenced project rather than copying it into an inline block. See [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction) for the SDK-style and legacy-style project distinction.
+
 ## References
 
 - [DataMiner automation script XML schema](xref:SchemaAutomationScript)

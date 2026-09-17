@@ -11,3 +11,5 @@ Pauses the automation script for a particular period before it is allowed to con
    <Timeout>1000</Timeout>
 </Exe>
 ```
+
+`Timeout` is specified in milliseconds for this action.

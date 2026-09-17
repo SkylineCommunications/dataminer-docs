@@ -11,7 +11,7 @@ Defines the interactivity options for an automation script.
 |Item|Facet value|Description|
 |---|---|---|
 |***string restriction***|||
-|&nbsp;&nbsp;Enumeration|Auto|Default option. In the background, the script will be read to try to find out if interactivity is needed. This behavior is the same as in DataMiner versions prior to 10.5.9/10.6.0, where the [Interactivity](xref:DMSScript.Interactivity) tag is not yet supported. See [How auto-detection determines interactivity](#how-auto-detection-determines-interactivity).|
+|&nbsp;&nbsp;Enumeration|Auto|The script will be read to try to find out if interactivity is needed. This is also the behavior when the [Interactivity](xref:DMSScript.Interactivity) element is omitted. It is the behavior used in DataMiner versions prior to 10.5.9/10.6.0, where the element is not supported. See [How auto-detection determines interactivity](#how-auto-detection-determines-interactivity).|
 |&nbsp;&nbsp;Enumeration|Never|The script will never be interactive. It will not show any UI elements.|
 |&nbsp;&nbsp;Enumeration|Optional|The script will be interactive if it needs to be. It will show UI elements if needed.|
 |&nbsp;&nbsp;Enumeration|Always|The script will always be interactive. It will always show UI elements.|
@@ -23,7 +23,9 @@ Defines the interactivity options for an automation script.
 
 Available from DataMiner 10.5.9/10.6.0 onwards.<!-- RN 42954 -->
 
-Setting a value different from "Auto" will replace the [options](xref:DMSScript-options) auto-detection mechanism for options "RequireInteractive" and "HasFindInteractiveClient":
+Setting a value different from "Auto" replaces the [options](xref:DMSScript-options) auto-detection mechanism for options "RequireInteractive" and "HasFindInteractiveClient":
+
+- Setting "Never" leaves both option flags disabled.
 
 - Setting "Optional" will enable the option flag "HasFindInteractiveClient".
 
