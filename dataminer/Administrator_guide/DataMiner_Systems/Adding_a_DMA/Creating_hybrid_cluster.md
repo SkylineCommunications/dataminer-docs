@@ -18,10 +18,6 @@ In either case, keep the key considerations below in mind.
 
 ## Key considerations
 
-### Network address space
-
-The DaaS network uses **address space 172.23.0.0/16** by default. If your on-premises network overlaps with this range, you will need to contact Skyline to change the DaaS address space before or after deployment, depending on the approach you use.
-
 ### Latency
 
 Deploy DaaS in a region close to the location where your self-managed nodes are deployed to **minimize latency**. High latency between DaaS and on-premises DMAs can affect cluster synchronization, communication between nodes, and communication with on-premises devices.

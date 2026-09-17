@@ -13,9 +13,14 @@ description: Learn how to extend a DaaS-only DataMiner System into a hybrid clus
   - Using DataMiner 10.5.0 [CU2]/10.5.5 or higher.
 
 - One or more on-premises servers ready to host DataMiner Agents (see [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements)).
+
 - An established site-to-site VPN connection between DaaS and the on-premises network (see [About the site-to-site VPN connection](xref:Connecting_to_private_data_sources#about-the-site-to-site-vpn-connection)).
+
 - Network address ranges that do not overlap. If the on-premises network overlaps with the default DaaS address space (172.23.0.0/16), first contact <daas@dataminer.services> to change the DaaS address space.
+
 - A user account with the Admin or Owner role in the dataminer.services organization that owns the DaaS nodes.
+
+- A dataminer.services organization key that has the *Create DataMiner System* permissions. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
 
 ## Step-by-step procedure
 
@@ -30,49 +35,127 @@ description: Learn how to extend a DaaS-only DataMiner System into a hybrid clus
    </DataBases>
    ```
 
-1. Contact <daas@dataminer.services> to provide a file named `userInfo.json` identifying your current DaaS cluster.
+1. On each of the newly installed Agents, create a file `userInfo.json` in the `C:\Skyline DataMiner` root folder with the following contents:
 
-1. When you have received the `userInfo.json` file, place it in the `C:\Skyline DataMiner\` folder of each newly installed Agent.
+   ```json
+   {
+      "organizationApiKey": "ORGANIZATION_API_KEY",
+      "dmsName": "DMS_NAME",
+      "dmsUrl": "DMS_URL",
+      "dmsOwnerEmail": "DMS_OWNER_EMAIL",
+      "dmsExists": true
+   }
+   ```
+
+1. Replace the placeholders with the appropriate values:
+
+   - *ORGANIZATION_API_KEY*: An organization key that has the necessary permissions to add DataMiner Systems in your organization.
+   - *DMS_NAME*: The DMS name of the current DaaS system you want to add the on-premises Agent to. You can find the name on <https://dataminer.services> or <https://admin.dataminer.services>. For example, `hybrid-dms`.
+   - *DMS_URL*: The first part of the URL, i.e., the part before the dash, of your DaaS system. You can find the URL on <https://dataminer.services> or <https://admin.dataminer.services>. For example, if the DMS URL is `https://hybriddms-myorg.on.dataminer.services`, fill in the URL value `hybriddms`.
+   - *DMS_OWNER_EMAIL*: The email address of the current owner of the DaaS system.
 
 1. Start up DataMiner.
 
-1. [Upgrade](xref:Upgrading_a_DataMiner_Agent) the new Agents to the same DataMiner version as the DaaS nodes.
+1. [Upgrade the new Agents](xref:Upgrading_a_DataMiner_Agent) to the same DataMiner version as the DaaS nodes.
 
    > [!NOTE]
    > If the DaaS cluster is running a version lower than 10.6.0/10.6.1, and you used an installer that does not include BrokerGateway (i.e. the v10.4 or v10.5 installer), you will also need to [migrate to BrokerGateway](xref:BrokerGateway_Migration) because DaaS uses BrokerGateway by default.
 
 1. [Enable Swarming](xref:EnableSwarming) on the new Agents.
 
-1. In DataMiner, create a new user account `DataMinerAdmin` with the password defined on the DaaS nodes, and give it administrator permissions.
+1. In DataMiner, create a new user account `HybridAdmin` and configure it as follows:
 
-1. Make sure self-signed certificates are trusted between DaaS and self-managed nodes. Your DaaS nodes must trust the certificate from the self-managed nodes and vice versa.
+   - Assign it to the built-in *Administrators* group.
 
-   To export the certificate, run the following PowerShell commands:
+   - Make sure *Password never expires* is selected.
 
-   ```powershell
-   $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName -eq "Auto-Created Certificate by DataMiner APIGateway"}
-   Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
-   ```
+   - Make sure the password meets the complexity requirements of DaaS nodes:
 
-   Copy the exported file to the other machine and run the following PowerShell commands to import it:
+     - It does not contain the user's account name or parts of the user's full name that exceed two consecutive characters
 
-   ```powershell
-   $import = (Get-ChildItem -Path "<download location>\APIGateway.cer")
-   $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
-   ```
+     - It is at least six characters in length
 
-1. Add the connection string URI of the other machine. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
+     - It contains characters from three of the following four categories:
 
-1. In the DaaS DMS, add the new self-managed nodes to the cluster using SLNetClientTest tool:
+        - English uppercase characters (A through Z)
+
+        - English lowercase characters (a through z)
+
+        - Base 10 digits (0 through 9)
+
+        - Non-alphabetic characters (for example, !, $, #, %)
+
+   > [!NOTE]
+   > The `HybridAdmin` user account will be used for cluster syncing, which means it needs to have the same password on all Agents in the cluster.
+
+1. Add the connection string URI towards the DaaS node, using the `HybridAdmin` user account:
 
    1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
+   1. In the *Advanced* menu, select *Edit Connection Uris*.
+
+   1. Right-click in the pop-up window and select *Add New Destination*.
+
+   1. Configure the following fields and click *OK*:
+
+      - *From*: Select the newly installed on-prem agent
+
+      - *To*: Provide the IP address of the DaaS node. If you do not know the IP address, contact <daas@dataminer.services> to request this information.
+
+      - *Username*: `HybridAdmin`
+
+      - *Password*: The password you have created.
+
+   1. Click *Done*
+
+   > [!TIP]
+   > See also: [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
+
+1. Contact <daas@dataminer.services> with a request to add the on-premises system to the DaaS DMS.
+
+   Make sure your email includes the following information:
+
+   - The IP address of the DMA.
+
+   - The password of the `HybridAdmin` user account.
+
+   Skyline's DaaS team will perform the following steps on the DaaS Agents to add the connection string URI towards the on-prem nodes and add the new self-managed nodes to the cluster using SLNetClientTest tool:
+
+   > [!NOTE]
+   > The steps below **can only be executed by Skyline** and are included here for reference.
+
+   1. On a DaaS node, create a new user account `HybridAdmin`, and configure it as follows:
+
+      - Assign it to the built-in *Administrators* group.
+      - Make sure *Password never expires* is selected.
+      - Use the password received from the owner of the on-premises node.
+
+   1. [Connect to the DaaS node using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+
+   1. Go to the *Advanced* menu and select *Edit Connection Uris*.
+
+   1. Right-click and select *Add New Destination*.
+
+   1. Configure the following fields and click *OK*:
+
+      - *To*: Provide the IP of the on-prem node.
+
+      - *Update All Connections To This Agent*: Make sure this is selected.
+
+      - *Username*: `HybridAdmin`
+
+      - *Password*: Specify the password you received.
+
+   1. Click *Done*
+
    1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-   1. In the *Message Type* dropdown list, select *SetDmsClusterMessage*
+   1. In the *Message Type* dropdown list, select *SetDmsClusterMessage*.
 
-   1. Set *ClusterName* set to your desired cluster name, and click *Send Message*.
+   1. If the cluster currently consists of a single DaaS node, set *ClusterName* to your desired cluster name, and click *Send Message*.
 
-   1. In the *Message Type* dropdown list, select *AddIPToClusterMessage*
+      Skip this step if the DaaS node is already part of a cluster with several nodes.
 
-   1. Set *IP* set to the IP address of the self-managed node you want to add, and click *Send Message*.
+   1. In the *Message Type* dropdown list, select *AddIPToClusterMessage*.
+
+   1. Set *IP* to the IP address of the self-managed node you want to add, and click *Send Message*.
