@@ -320,6 +320,10 @@ This applies to capability, capacity, configuration, and script execution settin
 
 As a result, switching between value‑based and reference‑based configuration will now be simpler, more intuitive, and less error‑prone, with the objects themselves maintaining a clean and consistent state.
 
+#### Scheduling: Node parameters can now be linked from the Add Node panel [ID 46512]
+
+When you configure a job node from the *Add Node* panel, you can now link parameters to a value from another node that is already part of the job or from the node you are adding, which is listed as *This node*.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
