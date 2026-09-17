@@ -1,5 +1,21 @@
 ---
+metadata_version: 1
 uid: CTB_Local_Test_Build
+description: Build the DataMiner documentation locally with DocFX and validate metadata, UIDs, tables of contents, cross-references, and Markdown warnings.
+area: contributing
+content_type: conceptual
+authority: reference
+authority_source: CTB_Documentation_Metadata
+lifecycle: active
+applies_to:
+  - DataMiner documentation
+version: unversioned
+owner: unknown
+review_status: approved
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # Making a local test build before pushing changes
@@ -63,6 +79,20 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 > [!IMPORTANT]
 > If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. Depending on your DocFX version, these can pile up and take up a large amount of memory in the long run.
+
+## Checking documentation metadata
+
+For pages that contain `metadata_version: 1`, validate the complete front matter object against `contributing/metadata/documentation-metadata-v1.schema.json` with a JSON Schema Draft 2020-12 validator before running the DocFX build. The schema rejects missing fields, values outside the controlled lists, undocumented metadata keys, invalid dates, and ambiguous unknown values.
+
+Use the following deterministic sequence:
+
+1. Validate the front matter against the version 1 schema.
+
+1. Run `docfx metadata`.
+
+1. Run `docfx build --warningsAsErrors`.
+
+The DocFX build validates UIDs, TOC entries, cross-references, and Markdown integration. It does not replace JSON Schema validation. For fields that cannot yet be confirmed, use the exact `unknown` or `not_applicable` sentinel required by the schema. Do not use an empty value or invent an owner.
 
 ### Making a test build in the Visual Studio Code terminal
 

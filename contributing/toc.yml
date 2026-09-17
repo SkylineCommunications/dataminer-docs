@@ -29,6 +29,8 @@ items:
       topicUid: CTB_Documentation_Ownership
     - name: Documentation corpus and distribution policy
       topicUid: CTB_Documentation_Corpus_Policy
+    - name: Documentation metadata
+      topicUid: CTB_Documentation_Metadata
     - name: Tips for writing documentation
       topicUid: CTB_Tips
     - name: House style

@@ -1,0 +1,293 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/SkylineCommunications/dataminer-docs/main/contributing/metadata/documentation-metadata-v1.schema.json",
+  "title": "DataMiner documentation metadata",
+  "description": "Version 1 metadata contract for DataMiner documentation front matter.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "metadata_version": {
+      "const": 1,
+      "description": "The version of this metadata contract."
+    },
+    "uid": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$",
+      "description": "The permanent, unique DocFX identifier for the page."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 100,
+      "maxLength": 155,
+      "description": "A concise page description used by the documentation site and search."
+    },
+    "area": {
+      "type": "string",
+      "enum": [
+        "root",
+        "dataminer",
+        "develop",
+        "solutions",
+        "tutorials",
+        "connectors",
+        "release-notes",
+        "contributing",
+        "unknown",
+        "not_applicable"
+      ],
+      "description": "The top-level documentation area that owns the page location."
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "conceptual",
+        "schema",
+        "api",
+        "example",
+        "release-note",
+        "legacy"
+      ],
+      "description": "The kind of information the page provides."
+    },
+    "authority": {
+      "type": "string",
+      "enum": [
+        "canonical",
+        "reference",
+        "illustrative",
+        "historical",
+        "unknown",
+        "not_applicable"
+      ],
+      "description": "The authority claim that the page makes about its content."
+    },
+    "authority_source": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "not": {
+            "enum": [
+              "unknown",
+              "not_applicable"
+            ]
+          }
+        },
+        {
+          "type": "string",
+          "enum": [
+            "unknown",
+            "not_applicable"
+          ]
+        }
+      ],
+      "description": "An existing UID or URI identifying the source for a non-canonical page."
+    },
+    "lifecycle": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "deprecated",
+        "archived",
+        "unknown"
+      ],
+      "description": "The current publication lifecycle of the page."
+    },
+    "applies_to": {
+      "oneOf": [
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "not": {
+              "enum": [
+                "unknown",
+                "not_applicable"
+              ]
+            }
+          }
+        },
+        {
+          "const": [
+            "unknown"
+          ]
+        },
+        {
+          "const": [
+            "not_applicable"
+          ]
+        }
+      ],
+      "description": "The product, platform, or scope to which the page applies."
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The documented contract or release version, or a reserved sentinel."
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1,
+      "description": "An existing owner handle, or unknown/not_applicable when no owner is recorded."
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "in_review",
+        "approved",
+        "needs_update",
+        "unknown",
+        "not_applicable"
+      ],
+      "description": "The status of the most recent metadata and content review."
+    },
+    "review_date": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "unknown",
+            "not_applicable"
+          ]
+        }
+      ],
+      "description": "The date of the most recent review, in ISO 8601 date format."
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "uid",
+        "url"
+      ],
+      "properties": {
+        "uid": {
+          "type": "string",
+          "enum": [
+            "stable",
+            "unknown",
+            "not_applicable"
+          ],
+          "description": "Whether the published UID is guaranteed to remain stable."
+        },
+        "url": {
+          "type": "string",
+          "enum": [
+            "stable",
+            "redirect_required",
+            "unknown",
+            "not_applicable"
+          ],
+          "description": "Whether the published URL is stable or needs a redirect when changed."
+        },
+        "url_aliases": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Existing URL paths that must continue to resolve when a URL changes."
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "url": {
+                "const": "redirect_required"
+              }
+            },
+            "required": [
+              "url"
+            ]
+          },
+          "then": {
+            "required": [
+              "url_aliases"
+            ],
+            "properties": {
+              "url_aliases": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ],
+      "description": "The compatibility guarantees for the page identity."
+    },
+    "keywords": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Optional comma-separated search keywords."
+    }
+  },
+  "required": [
+    "metadata_version",
+    "uid",
+    "description",
+    "area",
+    "content_type",
+    "authority",
+    "lifecycle",
+    "applies_to",
+    "version",
+    "owner",
+    "review_status",
+    "review_date",
+    "compatibility"
+  ],
+  "allOf": [
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "review_status": {
+              "enum": [
+                "draft",
+                "in_review",
+                "approved",
+                "needs_update"
+              ]
+            },
+            "review_date": {
+              "type": "string",
+              "format": "date",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            }
+          }
+        },
+        {
+          "properties": {
+            "review_status": {
+              "const": "unknown"
+            },
+            "review_date": {
+              "const": "unknown"
+            }
+          }
+        },
+        {
+          "properties": {
+            "review_status": {
+              "const": "not_applicable"
+            },
+            "review_date": {
+              "const": "not_applicable"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

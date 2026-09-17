@@ -1,5 +1,21 @@
 ---
+metadata_version: 1
 uid: CTB_Adding_New_Page
+description: Add a new DataMiner documentation page with valid front matter, navigation, cross-references, and the version 1 metadata contract.
+area: contributing
+content_type: conceptual
+authority: reference
+authority_source: CTB_Documentation_Metadata
+lifecycle: active
+applies_to:
+  - DataMiner documentation
+version: unversioned
+owner: unknown
+review_status: approved
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # Adding a new page
@@ -10,11 +26,27 @@ To add a new page to the documentation:
 
    ![New .md file](~/contributing/images/New_md_File.png)
 
-1. Add a UID at the top of your new file. Add this UID in a metadata section. For example:
+1. Add version 1 metadata at the top of your new file. The metadata must include a unique UID and the required fields described in [Documentation metadata contract](xref:CTB_Documentation_Metadata). For example:
 
    ```md
    ---
-   uid: contributing
+   metadata_version: 1
+   uid: My_new_page
+   description: Describe the page in 100 to 155 characters so search results and page previews explain the page clearly.
+   area: dataminer
+   content_type: conceptual
+   authority: reference
+   authority_source: unknown
+   lifecycle: active
+   applies_to:
+     - DataMiner
+   version: unversioned
+   owner: unknown
+   review_status: draft
+   review_date: 2026-09-17
+   compatibility:
+     uid: stable
+     url: stable
    ---
    ```
 
@@ -22,7 +54,7 @@ To add a new page to the documentation:
    > Do not use spaces in a UID.
 
    > [!TIP]
-   > Optionally, you can also add a line with keywords below the UID to make the page easier to find based on specific search queries. See [Keywords](xref:CTB_Markdown_Syntax#keywords).
+   > You can also add a `keywords` line to make the page easier to find based on specific search queries. See [Keywords](xref:CTB_Markdown_Syntax#keywords).
 
 1. Add the new page to the relevant *toc.yml* file so that it is included in the table of contents. To do so, specify the name and UID as follows:
 
