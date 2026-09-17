@@ -48,8 +48,6 @@ Expected duration: 20 minutes
   - [Reading DOM definitions](#reading-dom-definitions)
   - [Downloading a file](#downloading-a-file)
   - [Next steps](#next-steps)
-<!--  - [Retrieving the DataMiner Agent version](#retrieving-the-dataminer-agent-version) -->
-  - [Next steps](#next-steps)
 
 ## Step 1: Retrieve the buckets route and API token
 

@@ -22,7 +22,7 @@ uid: DocumentHub_1.1.2
 
 The DocumentHub agent now supports downloading files via a temporary folder workflow, enabling safer and more reliable file retrieval while aligning with the existing UDAPI and capability-based architecture. This feature extends the agent’s file operation support and lays the foundation for consistent download handling in the 1.1.x revision line.
 
-For this purpose, a new *DownloadFile* automation script has also been introduced.
+For this purpose, a new *DownloadFile* automation script has also been introduced and as part of the installation, a *DocumentHub - Cleanup Downloaded Files* scheduled task is also created. By default, this task runs daily at midnight and removes temporary files
 
 ## Changes
 
