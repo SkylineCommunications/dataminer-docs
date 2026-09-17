@@ -76,3 +76,5 @@ description: "Learn how to expand a self-managed DataMiner cluster into a hybrid
    1. Establish a VPN connection (see [About the site-to-site VPN connection](xref:Connecting_to_private_data_sources#about-the-site-to-site-vpn-connection)).
 
    1. Join the DaaS nodes to your self-managed cluster.
+
+1. Once the setup is fully functional, to improve security, either remove the `HybridAdmin` user account or change its password.
