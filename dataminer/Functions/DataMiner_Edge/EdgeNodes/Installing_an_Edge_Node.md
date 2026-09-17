@@ -55,7 +55,7 @@ To register an Edge Node that connects directly to the DataMiner System, you nee
 
 1. Open DataMiner Cube on the DataMiner Agent that should receive data from the Edge Node.
 
-1. Go to *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*.
+1. Go to *Apps* > *System Center* > *Logging* > *Edge Manager (DxM)*.
 
 1. Search the log file for the following message:
 
