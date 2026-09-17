@@ -1538,6 +1538,8 @@ items:
         topicUid: SwarmingPrepare
       - name: Configuring a script to swarm elements
         topicUid: SwarmingScriptElement
+      - name: Configuring a script to swarm services
+        topicUid: SwarmingScriptService
       - name: Configuring a script to swarm bookings
         topicUid: SwarmingScriptBooking
       - name: Configuring a script to swarm scheduled tasks
