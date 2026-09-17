@@ -48,14 +48,6 @@ The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve inf
 
 This request requires a CloudGateway version that supports it.
 
-### Client applications can now detect Service Swarming availability through a compatibility flag [ID 46475]
-
-<!-- MR 10.7.0 - FR 10.6.11 -->
-
-Clients can now determine whether Service Swarming is available by checking the `CompatibilityFlags.SupportsServiceSwarming` compatibility flag.
-
-The flag is available when Service Swarming is enabled through the corresponding soft-launch configuration.
-
 ## Changes
 
 ### Enhancements
