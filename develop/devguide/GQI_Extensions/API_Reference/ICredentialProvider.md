@@ -1,6 +1,6 @@
 ---
 uid: GQI_ICredentialProvider
-description: Reference for the ICredentialProvider interface, which retrieves username and password credentials granted to a GQI extension library.
+description: Reference for the ICredentialProvider interface, which retrieves credentials granted to a GQI extension library.
 ---
 
 # ICredentialProvider interface
@@ -10,7 +10,7 @@ description: Reference for the ICredentialProvider interface, which retrieves us
 - Namespace: `Skyline.DataMiner.Core.GQI.Extensions`
 - Assembly: `Skyline.DataMiner.Core.GQI.Extensions.dll`
 
-Provides access to username and password credentials that have been granted to a GQI extension library.
+Provides access to credentials that have been granted to a GQI extension library.
 
 Available from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 and API version 1.5.0. <!-- RN 46279 -->
 
@@ -31,6 +31,25 @@ Retrieves a username and password credential by its configured name.
 #### Returns
 
 A task whose result contains the requested [UsernamePasswordCredential](xref:GQI_UsernamePasswordCredential).
+
+#### Exceptions
+
+- `ArgumentNullException`: The credential name is null.
+- `GenIfException`: The named credential has not been granted to the extension library.
+- `OperationCanceledException`: The operation is canceled.
+
+### Task\<TokenCredential\> GetTokenCredential(string name, CancellationToken cancellationToken = default)
+
+Retrieves a token credential by its configured name.
+
+#### Parameters
+
+- `string` `name`: The name of the credential reference [granted to the extension library](xref:GQI_Extensions_Credentials#granting-a-credential-to-an-extension-library).
+- `CancellationToken` `cancellationToken`: A token that can be used to cancel the credential request.
+
+#### Returns
+
+A task whose result contains the requested [TokenCredential](xref:GQI_TokenCredential).
 
 #### Exceptions
 

@@ -1056,6 +1056,8 @@ items:
             topicUid: GQI_GQISortDirection
           - name: UsernamePasswordCredential
             topicUid: GQI_UsernamePasswordCredential
+          - name: TokenCredential
+            topicUid: GQI_TokenCredential
           - name: ICredentialProvider
             topicUid: GQI_ICredentialProvider
           - name: GQIStaticColumnsAttribute
