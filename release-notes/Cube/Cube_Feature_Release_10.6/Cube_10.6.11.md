@@ -56,6 +56,12 @@ The tokens overview now includes a *Rate Limit Notices* column indicating whethe
 > [!NOTE]
 > This feature requires a DataMiner System version that supports notice generation for User-Defined API token rate limits. On systems without this capability, the existing token configuration remains unchanged.
 
+### Services: View card columns will now get updated when a service is swarmed [ID 46444]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+In a view card, the *HOST ID* and *DATAMINER* columns will now get updated when you swarm a service.
+
 ### Fixes
 
 #### Alarm Console: Enabling the 'Severity duration' column could cause Cube to stop working [ID 46256]
