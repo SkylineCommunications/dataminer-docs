@@ -27,11 +27,13 @@ Detected errors cannot be cleared individually by a user. Instead, any change to
 
 ## Customizing the interval and period
 
-By default, validation occurs every hour. You can adjust this schedule by editing the **MediaOps // Scheduling - Validate upcoming bookings** scheduled task in the Scheduler module in DataMiner Cube. As long as the name of this scheduled task is not changed, it will not be adjusted when you install upgrades.
+By default, validation occurs every hour. You can adjust this schedule by editing the **MediaOps // Scheduling - Validate upcoming bookings** scheduled task in the Scheduler module in DataMiner Cube. As long as the description of this scheduled task does not contain `[CUSTOM]`, the scheduled task will be automatically maintained by the solution. Once you customized the Scheduled task it is your responsibility to ensure the script remains compatible with newer versions of the solution.
 
 - To modify the **interval**, in the *schedule* tab of the task configuration, configure a different schedule. Default value: 60 minutes.
 
-- To modify the **validation period**, in the *actions* tab of the task configuration, enter your custom value in the *UpcomingMinutes* box. Default value: 60 minutes.
+- To modify the **validation period**, in the *actions* tab of the task configuration, enter your custom value in the *UpcomingMinutes* box. Default value: 120 minutes.
+
+- To modify the **script**, in the *actions* tab of the task configuration, enter your customized script. Default value: `Scheduling_Validate Upcoming`.
 
 > [!TIP]
 > For more information on how to work with the Scheduler module in DataMiner Cube, see [About the Scheduler module](xref:About_the_Scheduler_module).
