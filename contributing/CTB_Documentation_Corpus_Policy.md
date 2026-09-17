@@ -67,6 +67,10 @@ A public metadata-only manifest is allowed in principle, but it is not a public 
 
 The manifest must contain metadata only. Do not include Markdown, rendered page text, code excerpts, chunks, summaries, embeddings, prompts, or other transformed content in a public manifest. A source commit or blob URL is a pointer to the source, not a grant of additional rights to copy that source.
 
+The D3.1 AI content manifest is generated at `_artifacts/ai-content-manifest.json` by `scripts/generate-ai-content-manifest.ps1` and is validated against `contributing/metadata/ai-content-manifest-v1.schema.json`. It extends the D0.3 source inventory rather than creating a second page inventory. Entries are sorted by UID and source path and contain only stable metadata, hashes, source pointers, and dependency identifiers. A run can compare a prior D3.1 manifest and marks each current entry as `added`, `changed`, `moved`, or `unchanged`; removed entries are retained as `removed` tombstones with their prior immutable source identity and the removal commit. A content change combined with a move is marked `changed` with `moved: true` and a `previous` identity. When the existing corpus contains duplicate or missing UIDs, the manifest retains the source-path identity where possible and records a gap instead of inventing a UID.
+
+The workflow retains the commit-addressed D3.1 manifest for 90 days only from the protected `main` branch in the canonical repository. Pull requests may validate a generated copy but must not publish it to a public location. Consumers must treat the manifest as a discovery index and fetch the referenced source under its governing license rather than treating the manifest as a copy of the content.
+
 ## License and attribution
 
 The existing rendered documentation and Markdown source remain under the repository's current **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** license. Use the repository `LICENSE` file as the governing license text.

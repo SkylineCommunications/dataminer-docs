@@ -120,6 +120,15 @@ Use the following deterministic sequence:
 
    The provenance generator records source project, assembly, XML documentation, package, overwrite, and generated-output hashes. It records schema documentation identities and versions only when the repository can prove them. Missing external schema packages and unavailable build outputs are reported as gaps; no package version or lifecycle date is inferred.
 
+1. Generate and validate the metadata-only AI content manifest:
+
+   ```powershell
+   .\scripts\generate-ai-content-manifest.ps1 -RepositoryRoot . -OutputPath .\_artifacts\ai-content-manifest.json
+   .\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json
+   ```
+
+   The D3.1 manifest records stable UIDs, URLs, immutable source pointers, normalized source hashes, documentation metadata, and dependency identifiers. It does not contain page text, chunks, summaries, or embeddings. Pass `-PriorManifestPath` when comparing a new revision with a previous D3.1 manifest so moves and removals are emitted explicitly.
+
 1. Run `docfx build --warningsAsErrors`.
 
 The DocFX build validates UIDs, TOC entries, cross-references, and Markdown integration. It does not replace metadata validation. For fields that cannot yet be confirmed, use the exact `unknown` or `not_applicable` sentinel required by the schema. Do not use an empty value or invent an owner.
@@ -147,6 +156,10 @@ If you make repeated test builds to check changes you have made, and you are onl
       - `.\scripts\generate-generated-metadata-provenance.ps1 -RepositoryRoot . -OutputPath .\_artifacts\generated-metadata-provenance.json -RequireGeneratedOutputs`
 
       - `.\scripts\validate-generated-metadata-provenance.ps1 -RepositoryRoot . -Path .\_artifacts\generated-metadata-provenance.json`
+
+      - `.\scripts\generate-ai-content-manifest.ps1 -RepositoryRoot . -OutputPath .\_artifacts\ai-content-manifest.json`
+
+      - `.\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json`
 
       - `docfx build --warningsAsErrors`
 

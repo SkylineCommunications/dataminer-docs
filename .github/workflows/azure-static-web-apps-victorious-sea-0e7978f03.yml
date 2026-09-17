@@ -52,6 +52,9 @@ jobs:
       - name: Test generated metadata provenance
         run: .\scripts\test-generated-metadata-provenance.ps1
         shell: powershell
+      - name: Test AI content manifest
+        run: .\scripts\test-ai-content-manifest.ps1
+        shell: powershell
       - name: Build
         run: dotnet build "src/NuGetPackages" --configuration Release
       - name: Build Documentation
@@ -61,6 +64,8 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           .\scripts\generate-generated-metadata-provenance.ps1 -RepositoryRoot . -OutputPath .\_artifacts\generated-metadata-provenance.json -SourceRevision $env:GITHUB_SHA -RequireGeneratedOutputs
           .\scripts\validate-generated-metadata-provenance.ps1 -RepositoryRoot . -Path .\_artifacts\generated-metadata-provenance.json
+          .\scripts\generate-ai-content-manifest.ps1 -RepositoryRoot . -OutputPath .\_artifacts\ai-content-manifest.json -SourceRevision $env:GITHUB_SHA
+          .\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json
           docfx build --warningsAsErrors
         shell: powershell
       - name: Retain generated metadata provenance
@@ -69,6 +74,13 @@ jobs:
           name: generated-metadata-provenance-${{ github.sha }}
           path: _artifacts/generated-metadata-provenance.json
           retention-days: 14
+      - name: Retain commit-addressed AI content manifest
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
+        uses: actions/upload-artifact@v7
+        with:
+          name: ai-content-manifest-${{ github.sha }}
+          path: _artifacts/ai-content-manifest.json
+          retention-days: 90
       - name: Audit documentation corpus
         run: .\scripts\audit-docs-baseline.ps1 -RepositoryRoot . -SitePath _site -OutputPath docs-corpus-baseline.generated.json -SourceRevision $env:GITHUB_SHA
         shell: powershell

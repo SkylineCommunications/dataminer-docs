@@ -137,6 +137,62 @@ function Get-FrontMatterNestedValue {
     return Get-YamlScalar $match.Groups["value"].Value
 }
 
+function Get-FrontMatterList {
+    param(
+        [AllowEmptyString()][string]$FrontMatter,
+        [Parameter(Mandatory = $true)][string]$Name
+    )
+
+    $lines = @((Normalize-Text $FrontMatter) -split "`n")
+    $start = -1
+    $indent = 0
+    $values = New-Object "System.Collections.Generic.List[string]"
+    for ($index = 0; $index -lt $lines.Count; $index++) {
+        $match = [Regex]::Match($lines[$index], "^(?<indent>\s*)" + [Regex]::Escape($Name) + "\s*:\s*(?<value>.*)$")
+        if (-not $match.Success) {
+            continue
+        }
+
+        $start = $index
+        $indent = $match.Groups["indent"].Value.Length
+        $scalar = Get-YamlScalar $match.Groups["value"].Value
+        if ($scalar -ne "") {
+            $values.Add($scalar)
+        }
+        break
+    }
+
+    if ($start -lt 0) {
+        return @()
+    }
+
+    for ($index = $start + 1; $index -lt $lines.Count; $index++) {
+        $line = $lines[$index]
+        if ($line -match "^(?<lineIndent>\s*)-\s+(?<value>.+?)\s*$") {
+            if ($Matches["lineIndent"].Length -le $indent) {
+                break
+            }
+
+            $value = Get-YamlScalar $Matches["value"]
+            if ($value -ne "") {
+                $values.Add($value)
+            }
+            continue
+        }
+
+        if ($line.Trim() -eq "") {
+            continue
+        }
+
+        $lineIndent = ($line -replace "\S.*$", "").Length
+        if ($lineIndent -le $indent) {
+            break
+        }
+    }
+
+    return @($values.ToArray())
+}
+
 function Get-MarkdownParts {
     param([Parameter(Mandatory = $true)][string]$Text)
 
@@ -156,7 +212,10 @@ function Get-MarkdownParts {
         Description = Get-FrontMatterValue -FrontMatter $frontMatter -Name "description"
         ContentType = Get-FrontMatterValue -FrontMatter $frontMatter -Name "content_type"
         Authority = Get-FrontMatterValue -FrontMatter $frontMatter -Name "authority"
+        AuthoritySource = Get-FrontMatterValue -FrontMatter $frontMatter -Name "authority_source"
         Lifecycle = Get-FrontMatterValue -FrontMatter $frontMatter -Name "lifecycle"
+        AppliesTo = @(Get-FrontMatterList -FrontMatter $frontMatter -Name "applies_to")
+        Version = Get-FrontMatterValue -FrontMatter $frontMatter -Name "version"
         CompatibilityUid = Get-FrontMatterNestedValue -FrontMatter $frontMatter -Name "uid"
         CompatibilityUrl = Get-FrontMatterNestedValue -FrontMatter $frontMatter -Name "url"
     }
@@ -260,6 +319,34 @@ function Get-MarkdownMetrics {
     }
 }
 
+function Get-MarkdownReferences {
+    param([Parameter(Mandatory = $true)][string]$Body)
+
+    $xrefs = @(
+        [Regex]::Matches($Body, "(?i)\bxref:(?<uid>[A-Za-z0-9_-]+(?:\.[A-Za-z0-9_-]+)*)") |
+            ForEach-Object { $_.Groups["uid"].Value } |
+            Where-Object { $_ -ne "" } |
+            Sort-Object -Unique
+    )
+    $dependencies = @(
+        [Regex]::Matches($Body, "\[[^\]]*\]\((?<target>[^)\s]+)(?:\s+[^)]*)?\)") |
+            ForEach-Object {
+                $_.Groups["target"].Value
+            } |
+            Where-Object {
+                $_ -ne "" -and
+                -not $_.StartsWith("#") -and
+                $_ -notmatch "^(?i:https?://|mailto:|xref:)"
+            } |
+            Sort-Object -Unique
+    )
+
+    return [PSCustomObject]@{
+        Xrefs = $xrefs
+        Dependencies = $dependencies
+    }
+}
+
 function Get-ContentCategory {
     param(
         [AllowEmptyString()][string]$RelativePath,
@@ -310,6 +397,23 @@ function Get-DocumentationDomain {
     return ""
 }
 
+function Get-DocumentationArea {
+    param([AllowEmptyString()][string]$Path)
+
+    $firstSegment = ($Path.Replace("\", "/").TrimStart("/") -split "/")[0].ToLowerInvariant()
+    if ($firstSegment -eq "") {
+        return "unknown"
+    }
+    if ($firstSegment -in @("dataminer", "develop", "solutions", "tutorials", "connectors", "release-notes", "contributing")) {
+        return $firstSegment
+    }
+    if ($firstSegment -eq $Path.ToLowerInvariant()) {
+        return "root"
+    }
+
+    return "unknown"
+}
+
 function ConvertTo-CountObject {
     param([hashtable]$Counts)
 
@@ -358,6 +462,7 @@ function Get-SourceRecord {
     $text = Normalize-Text ([IO.File]::ReadAllText($File.FullName))
     $parts = Get-MarkdownParts $text
     $metrics = Get-MarkdownMetrics $parts.Body
+    $references = Get-MarkdownReferences $parts.Body
     $category = Get-ContentCategory $relativePath ""
     $domain = Get-DocumentationDomain $relativePath
 
@@ -365,12 +470,25 @@ function Get-SourceRecord {
         path = $relativePath
         category = $category
         domain = $domain
+        area = Get-DocumentationArea $relativePath
         uid = $parts.Uid
         type = if ([String]::IsNullOrWhiteSpace($parts.ContentType)) { $category } else { $parts.ContentType }
         authority = if ([String]::IsNullOrWhiteSpace($parts.Authority)) { "unknown" } else { $parts.Authority }
+        authoritySource = if ([String]::IsNullOrWhiteSpace($parts.AuthoritySource)) { "unknown" } else { $parts.AuthoritySource }
         lifecycle = if ([String]::IsNullOrWhiteSpace($parts.Lifecycle)) { "unknown" } else { $parts.Lifecycle }
+        appliesTo = @(
+            if (@($parts.AppliesTo).Count -eq 0) {
+                "unknown"
+            }
+            else {
+                @($parts.AppliesTo | Sort-Object -Unique)
+            }
+        )
+        version = if ([String]::IsNullOrWhiteSpace($parts.Version)) { "unknown" } else { $parts.Version }
         compatibilityUid = if ([String]::IsNullOrWhiteSpace($parts.CompatibilityUid)) { "unknown" } else { $parts.CompatibilityUid }
         compatibilityUrl = if ([String]::IsNullOrWhiteSpace($parts.CompatibilityUrl)) { "unknown" } else { $parts.CompatibilityUrl }
+        xrefs = @($references.Xrefs)
+        dependencies = @($references.Dependencies)
         title = Get-MarkdownTitle $parts.Body
         hasDescription = -not [String]::IsNullOrWhiteSpace($parts.Description)
         descriptionCharacters = $parts.Description.Length
@@ -390,7 +508,7 @@ function Get-SourceRecord {
 }
 
 function Get-PageMetrics {
-    param([Parameter(Mandatory = $true)][object[]]$Records)
+    param([Parameter(Mandatory = $true)][AllowEmptyCollection()][object[]]$Records)
 
     $categoryCounts = @{}
     $domainCounts = @{}
@@ -772,12 +890,20 @@ function Get-MetadataManifest {
         $entries += [PSCustomObject][ordered]@{
             uid = $record.uid
             url = $script:BaseUrl + $outputPath
+            sourcePath = $record.path
             sourceCommit = $SourceRevision
             sourceBlob = Get-SourceBlobUrl $record.path
             contentHash = $record.contentSha256
             type = $record.type
+            area = $record.area
+            domain = if ([String]::IsNullOrWhiteSpace($record.domain)) { "unknown" } else { $record.domain }
             authority = $record.authority
+            authoritySource = $record.authoritySource
             lifecycle = $record.lifecycle
+            appliesTo = @($record.appliesTo)
+            version = $record.version
+            xrefs = @($record.xrefs)
+            dependencies = @($record.dependencies)
             compatibility = [PSCustomObject][ordered]@{
                 uid = $record.compatibilityUid
                 url = $record.compatibilityUrl
@@ -789,11 +915,16 @@ function Get-MetadataManifest {
 
     return [PSCustomObject][ordered]@{
         schemaVersion = $script:MetadataManifestSchemaVersion
+        format = "json"
         visibility = "metadata-only"
         sourceRevision = $SourceRevision
         generator = [PSCustomObject][ordered]@{
             name = $script:GeneratorName
             version = $script:GeneratorVersion
+        }
+        schema = [PSCustomObject][ordered]@{
+            name = "contributing/metadata/ai-content-manifest-v1.schema.json"
+            version = 1
         }
         scope = [PSCustomObject][ordered]@{
             sourcePaths = @(
@@ -819,7 +950,7 @@ function Get-MetadataManifest {
 
 function Get-DomainMetrics {
     param(
-        [Parameter(Mandatory = $true)][object[]]$Records,
+        [Parameter(Mandatory = $true)][AllowEmptyCollection()][object[]]$Records,
         [Parameter(Mandatory = $true)][string]$Domain
     )
 

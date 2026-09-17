@@ -9,6 +9,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-generate
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-generated-metadata-provenance.ps1" -RepositoryRoot "." -Path ".\_artifacts\generated-metadata-provenance.json"
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-ai-content-manifest.ps1" -RepositoryRoot "." -OutputPath ".\_artifacts\ai-content-manifest.json"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-ai-content-manifest.ps1" -RepositoryRoot "." -Path ".\_artifacts\ai-content-manifest.json"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 docfx build --warningsAsErrors
 
 if "%1"=="" (
