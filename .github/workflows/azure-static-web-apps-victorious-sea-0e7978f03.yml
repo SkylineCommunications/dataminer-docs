@@ -5,9 +5,12 @@ on:
     branches:
       - main
   pull_request:
-    types: [opened, synchronize, reopened, closed]
+    types: [opened, synchronize, reopened]
     branches:
       - main
+
+permissions:
+  contents: read
 
 jobs:
   build_job:
@@ -37,21 +40,24 @@ jobs:
       - name: Audit documentation corpus
         run: .\scripts\audit-docs-baseline.ps1 -RepositoryRoot . -SitePath _site -OutputPath docs-corpus-baseline.generated.json -SourceRevision $env:GITHUB_SHA
         shell: powershell
-      - name: Publish documentation corpus baseline
+      - name: Retain commit-addressed documentation corpus baseline
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
         uses: actions/upload-artifact@v7
         with:
-          name: docs-corpus-baseline
+          name: docs-corpus-baseline-${{ github.sha }}
           path: docs-corpus-baseline.generated.json
+          retention-days: 90
       - name: Zip artifact for deployment
         run: Compress-Archive -Path _site/* -DestinationPath .\_site.zip
-      - name: Publish results
+      - name: Retain site validation artifact
         uses: actions/upload-artifact@v7
         with:
           name: release
           path: _site.zip
+          retention-days: 14
   
   deploy_job_Storage_Account:
-    if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
     runs-on: ubuntu-latest
     needs: build_job
     name: Deploy Job to Storage account
@@ -91,7 +97,7 @@ jobs:
       #     sync: 'true'
   
   deploy_job_SA_SWA:
-    if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
     runs-on: ubuntu-latest
     needs: build_job
     name: Deploy Job to SA with SWA and FD
@@ -124,6 +130,7 @@ jobs:
       #     sync: 'true'
           
   reindex_azure_search:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
     runs-on: ubuntu-latest
     needs: deploy_job_Storage_Account
     name: Re-index azure search

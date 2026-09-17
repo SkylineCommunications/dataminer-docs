@@ -18,6 +18,15 @@ param(
 Set-StrictMode -Version 2.0
 $ErrorActionPreference = "Stop"
 
+$script:BaselineSchemaVersion = 2
+$script:MetadataManifestSchemaVersion = 1
+$script:GeneratorName = "scripts/audit-docs-baseline.ps1"
+$script:GeneratorVersion = "1.1.0"
+$script:LicenseIdentifier = "CC BY-NC-ND 4.0"
+$script:LicenseName = "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International"
+$script:LicenseUrl = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+$script:Attribution = "Skyline Communications"
+
 function ConvertTo-FullPath {
     param([Parameter(Mandatory = $true)][string]$Path)
 
@@ -114,6 +123,20 @@ function Get-FrontMatterValue {
     return Get-YamlScalar $match.Groups["value"].Value
 }
 
+function Get-FrontMatterNestedValue {
+    param(
+        [AllowEmptyString()][string]$FrontMatter,
+        [Parameter(Mandatory = $true)][string]$Name
+    )
+
+    $match = [Regex]::Match($FrontMatter, "(?im)^\s{2,}" + [Regex]::Escape($Name) + "\s*:\s*(?<value>.*)$")
+    if (-not $match.Success) {
+        return ""
+    }
+
+    return Get-YamlScalar $match.Groups["value"].Value
+}
+
 function Get-MarkdownParts {
     param([Parameter(Mandatory = $true)][string]$Text)
 
@@ -131,6 +154,11 @@ function Get-MarkdownParts {
         Body = $body
         Uid = Get-FrontMatterValue -FrontMatter $frontMatter -Name "uid"
         Description = Get-FrontMatterValue -FrontMatter $frontMatter -Name "description"
+        ContentType = Get-FrontMatterValue -FrontMatter $frontMatter -Name "content_type"
+        Authority = Get-FrontMatterValue -FrontMatter $frontMatter -Name "authority"
+        Lifecycle = Get-FrontMatterValue -FrontMatter $frontMatter -Name "lifecycle"
+        CompatibilityUid = Get-FrontMatterNestedValue -FrontMatter $frontMatter -Name "uid"
+        CompatibilityUrl = Get-FrontMatterNestedValue -FrontMatter $frontMatter -Name "url"
     }
 }
 
@@ -338,6 +366,11 @@ function Get-SourceRecord {
         category = $category
         domain = $domain
         uid = $parts.Uid
+        type = if ([String]::IsNullOrWhiteSpace($parts.ContentType)) { $category } else { $parts.ContentType }
+        authority = if ([String]::IsNullOrWhiteSpace($parts.Authority)) { "unknown" } else { $parts.Authority }
+        lifecycle = if ([String]::IsNullOrWhiteSpace($parts.Lifecycle)) { "unknown" } else { $parts.Lifecycle }
+        compatibilityUid = if ([String]::IsNullOrWhiteSpace($parts.CompatibilityUid)) { "unknown" } else { $parts.CompatibilityUid }
+        compatibilityUrl = if ([String]::IsNullOrWhiteSpace($parts.CompatibilityUrl)) { "unknown" } else { $parts.CompatibilityUrl }
         title = Get-MarkdownTitle $parts.Body
         hasDescription = -not [String]::IsNullOrWhiteSpace($parts.Description)
         descriptionCharacters = $parts.Description.Length
@@ -720,6 +753,70 @@ function Get-CompatibilityEntries {
     return @($compatibility | Sort-Object uid, href)
 }
 
+function Get-SourceBlobUrl {
+    param([Parameter(Mandatory = $true)][string]$Path)
+
+    if ([String]::IsNullOrWhiteSpace($SourceRevision) -or $SourceRevision -eq "working-tree") {
+        return ""
+    }
+
+    return "https://github.com/SkylineCommunications/dataminer-docs/blob/{0}/{1}" -f $SourceRevision, $Path
+}
+
+function Get-MetadataManifest {
+    param([Parameter(Mandatory = $true)][object[]]$SourceRecords)
+
+    $entries = @()
+    foreach ($record in @($SourceRecords | Where-Object { $_.uid -ne "" } | Sort-Object uid, path)) {
+        $outputPath = ConvertTo-OutputPath $record.path
+        $entries += [PSCustomObject][ordered]@{
+            uid = $record.uid
+            url = $script:BaseUrl + $outputPath
+            sourceCommit = $SourceRevision
+            sourceBlob = Get-SourceBlobUrl $record.path
+            contentHash = $record.contentSha256
+            type = $record.type
+            authority = $record.authority
+            lifecycle = $record.lifecycle
+            compatibility = [PSCustomObject][ordered]@{
+                uid = $record.compatibilityUid
+                url = $record.compatibilityUrl
+            }
+            license = $script:LicenseIdentifier
+            attribution = $script:Attribution
+        }
+    }
+
+    return [PSCustomObject][ordered]@{
+        schemaVersion = $script:MetadataManifestSchemaVersion
+        visibility = "metadata-only"
+        sourceRevision = $SourceRevision
+        generator = [PSCustomObject][ordered]@{
+            name = $script:GeneratorName
+            version = $script:GeneratorVersion
+        }
+        scope = [PSCustomObject][ordered]@{
+            sourcePaths = @(
+                "*.md",
+                "contributing/**.md",
+                "dataminer/**.md",
+                "develop/**.md",
+                "release-notes/**.md",
+                "solutions/**.md",
+                "tutorials/**.md"
+            )
+            domains = @("Connector", "Automation")
+        }
+        license = [PSCustomObject][ordered]@{
+            identifier = $script:LicenseIdentifier
+            name = $script:LicenseName
+            url = $script:LicenseUrl
+        }
+        attribution = $script:Attribution
+        entries = $entries
+    }
+}
+
 function Get-DomainMetrics {
     param(
         [Parameter(Mandatory = $true)][object[]]$Records,
@@ -815,15 +912,38 @@ $xrefInfo = Get-XrefInfo $XrefMapPath
 $sitemapInfo = Get-SitemapInfo $SitemapPath
 $configurationInfo = Get-ConfigurationInfo
 $compatibilityEntries = @(Get-CompatibilityEntries $sourceRecords)
+$metadataManifest = Get-MetadataManifest $sourceRecords
 
 $baseline = [PSCustomObject][ordered]@{
-    schemaVersion = 1
+    schemaVersion = $script:BaselineSchemaVersion
+    generator = [PSCustomObject][ordered]@{
+        name = $script:GeneratorName
+        version = $script:GeneratorVersion
+    }
+    license = [PSCustomObject][ordered]@{
+        identifier = $script:LicenseIdentifier
+        name = $script:LicenseName
+        url = $script:LicenseUrl
+        attribution = $script:Attribution
+    }
     baseline = [PSCustomObject][ordered]@{
-        id = "D0.2"
+        id = "D0.3"
         repository = "SkylineCommunications/dataminer-docs"
         sourceRevision = $SourceRevision
         baseUrl = $script:BaseUrl
         compatibilitySource = if ($xrefInfo.available) { "xrefmap" } else { "source-derived" }
+        scope = [PSCustomObject][ordered]@{
+            sourcePaths = @(
+                "*.md",
+                "contributing/**.md",
+                "dataminer/**.md",
+                "develop/**.md",
+                "release-notes/**.md",
+                "solutions/**.md",
+                "tutorials/**.md"
+            )
+            generatedArtifacts = @("manifest.json", "xrefmap.yml", "sitemap.xml")
+        }
         thresholds = [PSCustomObject][ordered]@{
             oversizedPageCharacters = $OversizedPageCharacters
             stubPageCharacters = $StubPageCharacters
@@ -890,6 +1010,7 @@ $baseline = [PSCustomObject][ordered]@{
         sitemap = $sitemapInfo
     }
     compatibility = $compatibilityEntries
+    metadataManifest = $metadataManifest
 }
 
 $outputDirectory = Split-Path -Parent $OutputPath

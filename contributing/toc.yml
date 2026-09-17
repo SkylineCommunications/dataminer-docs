@@ -25,6 +25,10 @@ items:
       topicUid: CTB_Markdown_Syntax
     - name: Reviewing a contribution
       topicUid: CTB_Reviewing_Contribution
+    - name: Documentation ownership and review routing
+      topicUid: CTB_Documentation_Ownership
+    - name: Documentation corpus and distribution policy
+      topicUid: CTB_Documentation_Corpus_Policy
     - name: Tips for writing documentation
       topicUid: CTB_Tips
     - name: House style

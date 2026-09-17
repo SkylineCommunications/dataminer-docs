@@ -77,6 +77,12 @@ This page intentionally reuses a UID.
 ---
 uid: AutomationFixture
 description: "A deterministic Automation fixture page with a typed XML example."
+content_type: conceptual
+authority: reference
+lifecycle: active
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # Automation fixture
@@ -209,6 +215,12 @@ references:
     Assert-Condition ($firstHash -eq $secondHash) "Repeated audit runs produced different JSON."
 
     $baseline = Get-Content -LiteralPath $outputOne -Raw | ConvertFrom-Json
+    Assert-Condition ($baseline.schemaVersion -eq 2) "Baseline schema version was not updated."
+    Assert-Condition ($baseline.generator.name -eq "scripts/audit-docs-baseline.ps1") "Generator identity was not recorded."
+    Assert-Condition ($baseline.generator.version -eq "1.1.0") "Generator version was not recorded."
+    Assert-Condition ($baseline.license.identifier -eq "CC BY-NC-ND 4.0") "License metadata was not recorded."
+    Assert-Condition ($baseline.baseline.id -eq "D0.3") "Baseline identifier was not updated."
+    Assert-Condition ($baseline.baseline.scope.generatedArtifacts.Count -eq 3) "Baseline scope was not recorded."
     Assert-Condition ($baseline.source.metrics.pages -eq 6) "Unexpected source page count."
     Assert-Condition ($baseline.source.uid.duplicateUidCount -eq 1) "Duplicate UID was not recorded."
     Assert-Condition ($baseline.source.uid.pagesWithoutUid -eq 1) "Missing UID was not recorded."
@@ -227,6 +239,19 @@ references:
     Assert-Condition ($baseline.configuration.localBuildScript.available) "Local build script was not fingerprinted."
     Assert-Condition ($baseline.baseline.compatibilitySource -eq "xrefmap") "xref map was not selected as compatibility source."
     Assert-Condition ($baseline.compatibility.Count -eq 2) "Compatibility records were not frozen."
+    Assert-Condition ($baseline.metadataManifest.visibility -eq "metadata-only") "Manifest visibility was not recorded."
+    Assert-Condition ($baseline.metadataManifest.sourceRevision -eq "fixture") "Manifest source revision was not recorded."
+    $automationEntry = @($baseline.metadataManifest.entries | Where-Object { $_.uid -eq "AutomationFixture" })[0]
+    Assert-Condition ($automationEntry.url -eq "https://docs.dataminer.services/develop/devguide/Automation/automation.html") "Manifest URL was not recorded."
+    Assert-Condition ($automationEntry.sourceCommit -eq "fixture") "Manifest source commit was not recorded."
+    Assert-Condition ($automationEntry.sourceBlob -like "https://github.com/SkylineCommunications/dataminer-docs/blob/fixture/*") "Manifest source blob was not recorded."
+    Assert-Condition (-not [String]::IsNullOrWhiteSpace($automationEntry.contentHash)) "Manifest content hash was not recorded."
+    Assert-Condition ($automationEntry.type -eq "conceptual") "Manifest content type was not recorded."
+    Assert-Condition ($automationEntry.authority -eq "reference") "Manifest authority was not recorded."
+    Assert-Condition ($automationEntry.lifecycle -eq "active") "Manifest lifecycle was not recorded."
+    Assert-Condition ($automationEntry.compatibility.uid -eq "stable" -and $automationEntry.compatibility.url -eq "stable") "Manifest compatibility was not recorded."
+    Assert-Condition ($automationEntry.license -eq "CC BY-NC-ND 4.0") "Manifest license was not recorded."
+    Assert-Condition ($automationEntry.attribution -eq "Skyline Communications") "Manifest attribution was not recorded."
 
     Write-Output "Documentation corpus audit tests passed."
 }
