@@ -39,6 +39,16 @@ Commit-addressed baseline and manifest artifacts must include all of the followi
 
 Operational baseline copies may be retained for 90 days. Durable baseline history belongs in Git or controlled storage, not in an indefinitely retained workflow artifact. The committed D0.2 baseline is durable history; newly generated operational copies must remain tied to the source revision that produced them.
 
+## Generated schema and API provenance
+
+The D2.3 provenance artifact is generated after `docfx metadata` at `_artifacts/generated-metadata-provenance.json` and is validated against `contributing/metadata/generated-metadata-provenance-v1.schema.json`. It is a metadata-only CI artifact and is not deployed with the documentation site.
+
+The artifact records the full source revision, deterministic generation date, DocFX configuration hash, generated API and schema output paths, URLs, and hashes, and the exact source project, source file, assembly, XML documentation, NuGet package, and overwrite identities that are available to the pipeline. Output records contain the raw artifact hash and a canonical hash with checkout-root paths normalized, so repeat-run comparisons do not depend on the local worktree path. Assembly and package versions are read from the artifact or restored package metadata. A schema page is linked to its documented schema identity and confirmed version; when the actual schema package is not present, the missing source is recorded as a gap rather than guessed.
+
+Generated facts and manual material are separate fields. Required, default, range, enum, introduced, deprecated, and removed constraints are included only when they are present in generated tables or source XML documentation. Remarks and examples are represented as manual counts and section names, so they cannot be mistaken for generated contract facts.
+
+Repeat runs with the same source revision and generation date must produce byte-identical JSON. The local generator derives its date from the explicit argument, `SOURCE_DATE_EPOCH`, or the source commit date, in that order. It never uses an unrecorded current time or invents package versions or lifecycle dates.
+
 ## Public metadata-only manifests
 
 A public metadata-only manifest is allowed in principle, but it is not a public copy of the documentation corpus. Each entry must include:

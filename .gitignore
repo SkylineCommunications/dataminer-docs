@@ -7,5 +7,6 @@
 /**/bin/
 /**/obj/
 _site
+/_artifacts/
 /**/.vs
 .vscode/launch.json

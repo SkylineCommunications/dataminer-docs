@@ -63,6 +63,10 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    - `docfx metadata`
 
+   - `.\scripts\generate-generated-metadata-provenance.ps1 -RepositoryRoot . -OutputPath .\_artifacts\generated-metadata-provenance.json -RequireGeneratedOutputs`
+
+   - `.\scripts\validate-generated-metadata-provenance.ps1 -RepositoryRoot . -Path .\_artifacts\generated-metadata-provenance.json`
+
    - `docfx build --warningsAsErrors`
 
    - `docfx serve _site`
@@ -107,6 +111,15 @@ Use the following deterministic sequence:
 
 1. Run `docfx metadata`.
 
+1. Generate and validate the machine-readable provenance for the generated schema and API outputs:
+
+   ```powershell
+   .\scripts\generate-generated-metadata-provenance.ps1 -RepositoryRoot . -OutputPath .\_artifacts\generated-metadata-provenance.json -RequireGeneratedOutputs
+   .\scripts\validate-generated-metadata-provenance.ps1 -RepositoryRoot . -Path .\_artifacts\generated-metadata-provenance.json
+   ```
+
+   The provenance generator records source project, assembly, XML documentation, package, overwrite, and generated-output hashes. It records schema documentation identities and versions only when the repository can prove them. Missing external schema packages and unavailable build outputs are reported as gaps; no package version or lifecycle date is inferred.
+
 1. Run `docfx build --warningsAsErrors`.
 
 The DocFX build validates UIDs, TOC entries, cross-references, and Markdown integration. It does not replace metadata validation. For fields that cannot yet be confirmed, use the exact `unknown` or `not_applicable` sentinel required by the schema. Do not use an empty value or invent an owner.
@@ -131,13 +144,17 @@ If you make repeated test builds to check changes you have made, and you are onl
 
       - `docfx metadata`
 
+      - `.\scripts\generate-generated-metadata-provenance.ps1 -RepositoryRoot . -OutputPath .\_artifacts\generated-metadata-provenance.json -RequireGeneratedOutputs`
+
+      - `.\scripts\validate-generated-metadata-provenance.ps1 -RepositoryRoot . -Path .\_artifacts\generated-metadata-provenance.json`
+
       - `docfx build --warningsAsErrors`
 
       - `docfx serve _site`
 
       > [!NOTE]
       >
-      > - The first three commands are needed to generate the API docs. If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can skip these three commands after your first build.
+      > - The first five commands are needed to generate and fingerprint the API docs. If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can skip these five commands after your first build.
       > - This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
 
    1. In a browser, go to <http://localhost:8080/> to preview the website.

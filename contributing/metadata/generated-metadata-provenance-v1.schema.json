@@ -1,0 +1,662 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/SkylineCommunications/dataminer-docs/main/contributing/metadata/generated-metadata-provenance-v1.schema.json",
+  "title": "DataMiner generated metadata provenance",
+  "description": "Version 1 provenance for generated schema and API documentation outputs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generator",
+    "generatedAt",
+    "generatedAtSource",
+    "source",
+    "license",
+    "artifacts",
+    "outputs",
+    "gaps"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "generator": {
+      "$ref": "#/$defs/generator"
+    },
+    "generatedAt": {
+      "type": "string",
+      "pattern": "^(\\d{4}-\\d{2}-\\d{2}|unknown)$",
+      "description": "The deterministic generation date, or unknown when no source date is available."
+    },
+    "generatedAtSource": {
+      "type": "string",
+      "enum": [
+        "argument",
+        "source_date_epoch",
+        "git_commit",
+        "unknown"
+      ]
+    },
+    "source": {
+      "$ref": "#/$defs/source"
+    },
+    "license": {
+      "$ref": "#/$defs/license"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "api",
+        "schema"
+      ],
+      "properties": {
+        "api": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/apiOutput"
+          }
+        },
+        "schema": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/schemaOutput"
+          }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/gap"
+      }
+    }
+  },
+  "$defs": {
+    "generator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "revision",
+        "revisionSource",
+        "configuration"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revisionSource": {
+          "type": "string",
+          "enum": [
+            "argument",
+            "git",
+            "working-tree"
+          ]
+        },
+        "configuration": {
+          "$ref": "#/$defs/fileReference"
+        }
+      }
+    },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identifier",
+        "name",
+        "url",
+        "attribution",
+        "source"
+      ],
+      "properties": {
+        "identifier": {
+          "const": "CC BY-NC-ND 4.0"
+        },
+        "name": {
+          "const": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International"
+        },
+        "url": {
+          "const": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        },
+        "attribution": {
+          "const": "Skyline Communications"
+        },
+        "source": {
+          "const": "contributing/CTB_Documentation_Corpus_Policy.md"
+        }
+      }
+    },
+    "fileReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "available"
+      ],
+      "properties": {
+        "path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "canonicalSha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "available": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "identity",
+        "version",
+        "file",
+        "available",
+        "sourceType"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "project",
+            "source",
+            "assembly",
+            "xml-documentation",
+            "package",
+            "schema",
+            "overwrite"
+          ]
+        },
+        "identity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "file": {
+          "$ref": "#/$defs/fileReference"
+        },
+        "available": {
+          "type": "boolean"
+        },
+        "sourceType": {
+          "type": "string",
+          "enum": [
+            "repository",
+            "build-output",
+            "nuget-cache",
+            "documentation-identity",
+            "external"
+          ]
+        },
+        "assemblyFullName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "assemblyName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "targetFramework": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sourceProject": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "direct": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "license": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attribution": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "constraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target",
+        "value",
+        "sourceLine"
+      ],
+      "properties": {
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": [
+            "string",
+            "boolean",
+            "null"
+          ]
+        },
+        "sourceLine": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "lifecycleConstraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "version",
+        "sourceLine"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "introduced",
+            "deprecated",
+            "removed"
+          ]
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sourceLine": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "defaults",
+        "ranges",
+        "enums",
+        "structural",
+        "introduced",
+        "deprecated",
+        "removed"
+      ],
+      "properties": {
+        "required": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/constraint"
+          }
+        },
+        "defaults": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/constraint"
+          }
+        },
+        "ranges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/constraint"
+          }
+        },
+        "enums": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/constraint"
+          }
+        },
+        "structural": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/constraint"
+          }
+        },
+        "introduced": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/lifecycleConstraint"
+          }
+        },
+        "deprecated": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/lifecycleConstraint"
+          }
+        },
+        "removed": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/lifecycleConstraint"
+          }
+        }
+      }
+    },
+    "manual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "remarksCount",
+        "examplesCount",
+        "overwriteCount",
+        "sectionNames"
+      ],
+      "properties": {
+        "remarksCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "examplesCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "overwriteCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sectionNames": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "uid",
+        "url"
+      ],
+      "properties": {
+        "uid": {
+          "type": "string",
+          "enum": [
+            "stable",
+            "unknown"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "enum": [
+            "stable",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "generated": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sections"
+      ],
+      "properties": {
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "memberCount": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "parameterCount": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "assemblies": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "apiOutput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "uid",
+        "url",
+        "file",
+        "artifactIds",
+        "pipeline",
+        "compatibility",
+        "generated",
+        "facts",
+        "manual"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uid": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "file": {
+          "$ref": "#/$defs/fileReference"
+        },
+        "artifactIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "pipeline": {
+          "const": "docfx metadata"
+        },
+        "compatibility": {
+          "$ref": "#/$defs/compatibility"
+        },
+        "generated": {
+          "$ref": "#/$defs/generated"
+        },
+        "facts": {
+          "$ref": "#/$defs/facts"
+        },
+        "manual": {
+          "$ref": "#/$defs/manual"
+        }
+      }
+    },
+    "schemaOutput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "uid",
+        "url",
+        "file",
+        "artifactIds",
+        "pipeline",
+        "compatibility",
+        "generated",
+        "facts",
+        "manual"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uid": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "file": {
+          "$ref": "#/$defs/fileReference"
+        },
+        "artifactIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "pipeline": {
+          "const": "schema documentation"
+        },
+        "compatibility": {
+          "$ref": "#/$defs/compatibility"
+        },
+        "generated": {
+          "$ref": "#/$defs/generated"
+        },
+        "facts": {
+          "$ref": "#/$defs/facts"
+        },
+        "manual": {
+          "$ref": "#/$defs/manual"
+        }
+      }
+    },
+    "gap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "count"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  }
+}
