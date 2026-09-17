@@ -71,7 +71,7 @@ function Invoke-Git {
     param([Parameter(Mandatory = $true)][string[]]$Arguments)
 
     try {
-        $output = @(& git -C $script:RepoRoot @Arguments 2>$null)
+        $output = @(& git -c core.quotePath=false -C $script:RepoRoot @Arguments 2>$null)
         if ($LASTEXITCODE -ne 0) {
             return ""
         }

@@ -126,6 +126,17 @@ description: "A legacy fixture page without D2 metadata values to verify that un
 
 This page intentionally has no D2 classification.
 '@
+    $unicodeRelativePath = "develop\devguide\Connector\unicode-" + [char]0x00ad + "fixture.md"
+    Write-TestFile $fixtureRoot $unicodeRelativePath @'
+---
+uid: FixtureUnicode
+description: "A Unicode path fixture verifies that Git source metadata preserves the committed source identity."
+---
+
+# Unicode path fixture
+
+This page verifies source metadata for a path containing a soft hyphen.
+'@
 
     $config = [ordered]@{
         build = [ordered]@{
@@ -165,6 +176,9 @@ This page intentionally has no D2 classification.
     Assert-Condition ($LASTEXITCODE -eq 0) "HTML source metadata generation failed."
     & $validator -RepositoryRoot $fixtureRoot -Path $metadataPath
     Assert-Condition ($LASTEXITCODE -eq 0) "HTML source metadata validation failed."
+    $fixtureMetadata = Get-Content -LiteralPath $metadataPath -Raw | ConvertFrom-Json
+    $unicodeMetadataPath = $unicodeRelativePath.Replace("\", "/")
+    Assert-Condition (@($fixtureMetadata.sourceCommit.PSObject.Properties.Name) -contains $unicodeMetadataPath) "Unicode source path metadata was not resolved."
     $unknownMetadataPath = Join-Path $fixtureRoot "_artifacts\html-source-metadata-unknown.json"
     & $generator -RepositoryRoot $fixtureRoot -DocFxConfigPath (Join-Path $fixtureRoot "docfx.json") -OutputPath $unknownMetadataPath -SourceRevision "working-tree"
     Assert-Condition ($LASTEXITCODE -eq 0) "HTML source metadata generation without a commit failed."
