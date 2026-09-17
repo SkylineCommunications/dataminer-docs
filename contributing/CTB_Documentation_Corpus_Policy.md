@@ -49,6 +49,12 @@ Generated facts and manual material are separate fields. Required, default, rang
 
 Repeat runs with the same source revision and generation date must produce byte-identical JSON. The local generator derives its date from the explicit argument, `SOURCE_DATE_EPOCH`, or the source commit date, in that order. It never uses an unrecorded current time or invents package versions or lifecycle dates.
 
+## Rendered HTML source metadata
+
+The D3.3 HTML source metadata file is generated at `_artifacts/html-source-metadata.json` immediately before the DocFX build. It supplies canonical URLs from the configured sitemap base URL, `dateModified` from the latest Git commit that contains each unchanged source file, and `sourceCommit` and `sourceBlob` only when the source revision and file identity can be proven. The template also carries the D2 page values for `content_type`, `authority`, `version`, `owner`, and `applies_to` into the rendered HTML. Missing or unconfirmed page values remain absent or use the D2 `unknown` sentinel; the pipeline does not infer a version, owner, or deployment date.
+
+The commit-pinned source link is supplemental. The existing human edit link remains available, and the pinned link is omitted when the build cannot identify an immutable commit. The rendered metadata identifies the documentation license as `CC BY-NC-ND 4.0` and the attribution as `Skyline Communications`.
+
 ## Public metadata-only manifests
 
 A public metadata-only manifest is allowed in principle, but it is not a public copy of the documentation corpus. Each entry must include:

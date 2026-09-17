@@ -103,7 +103,9 @@
     "fileMetadata": {
       "_noindex": { "404.html": true }
     },
-    "fileMetadataFiles": [],
+    "fileMetadataFiles": [
+      "_artifacts/html-source-metadata.json"
+    ],
     "template": [
       "default",
 	    "modern",

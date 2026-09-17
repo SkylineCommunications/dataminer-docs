@@ -92,6 +92,9 @@ jobs:
       - name: Test AI content manifest
         run: .\scripts\test-ai-content-manifest.ps1
         shell: powershell
+      - name: Test HTML source metadata
+        run: .\scripts\test-html-source-metadata.ps1
+        shell: powershell
       - name: Test internal topic packs
         run: .\scripts\test-internal-topic-packs.ps1
         shell: powershell
@@ -123,6 +126,8 @@ jobs:
           .\scripts\validate-generated-metadata-provenance.ps1 -RepositoryRoot . -Path .\_artifacts\generated-metadata-provenance.json
           .\scripts\generate-ai-content-manifest.ps1 -RepositoryRoot . -OutputPath .\_artifacts\ai-content-manifest.json -SourceRevision $env:GITHUB_SHA
           .\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json
+          .\scripts\generate-html-source-metadata.ps1 -RepositoryRoot . -DocFxConfigPath .\docfx.json -OutputPath .\_artifacts\html-source-metadata.json -SourceRevision $env:GITHUB_SHA -EditBranch main
+          .\scripts\validate-html-source-metadata.ps1 -RepositoryRoot . -Path .\_artifacts\html-source-metadata.json
           .\scripts\generate-internal-topic-packs.ps1 -RepositoryRoot . -ManifestPath .\_artifacts\ai-content-manifest.json -OutputPath .\_artifacts\internal-only-topic-packs -SourceRevision $env:GITHUB_SHA
           .\scripts\validate-internal-topic-packs.ps1 -RepositoryRoot . -Path .\_artifacts\internal-only-topic-packs\internal-only-topic-pack-manifest.json
           $previousManifest = ""

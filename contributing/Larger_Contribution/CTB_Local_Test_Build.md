@@ -78,6 +78,9 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
    - `.\scripts\generate-internal-topic-packs.ps1 -RepositoryRoot . -ManifestPath .\_artifacts\ai-content-manifest.json -OutputPath .\_artifacts\internal-only-topic-packs`
 
    - `.\scripts\validate-internal-topic-packs.ps1 -RepositoryRoot . -Path .\_artifacts\internal-only-topic-packs\internal-only-topic-pack-manifest.json`
+   - `.\scripts\generate-html-source-metadata.ps1 -RepositoryRoot . -DocFxConfigPath .\docfx.json -OutputPath .\_artifacts\html-source-metadata.json -EditBranch main`
+
+   - `.\scripts\validate-html-source-metadata.ps1 -RepositoryRoot . -Path .\_artifacts\html-source-metadata.json`
 
    - `docfx build --warningsAsErrors`
 
@@ -189,6 +192,14 @@ Use the following deterministic sequence:
    ```
 
    The D5.2 delta compares two commit-addressed D3.1 manifests when `-PreviousManifestPath` is supplied. It reports additions, content changes, moves, deprecations, removals, immutable redirect mappings, and removed UID/URL tombstones. When no previous manifest is available, it records first-run semantics instead of failing. A no-change comparison produces an empty delta. Ambiguous identity matches are reported without guessing a move or redirect.
+1. Generate and validate the rendered HTML source metadata:
+
+   ```powershell
+   .\scripts\generate-html-source-metadata.ps1 -RepositoryRoot . -DocFxConfigPath .\docfx.json -OutputPath .\_artifacts\html-source-metadata.json -EditBranch main
+   .\scripts\validate-html-source-metadata.ps1 -RepositoryRoot . -Path .\_artifacts\html-source-metadata.json
+   ```
+
+   The generator derives `dateModified` from source Git history and emits commit-pinned source links only when the source file is unchanged and the commit can be resolved. It does not use deployment time or invent D2 metadata values.
 
 1. Run `docfx build --warningsAsErrors`.
 
@@ -230,6 +241,9 @@ If you make repeated test builds to check changes you have made, and you are onl
       - `.\scripts\generate-ai-content-manifest.ps1 -RepositoryRoot . -OutputPath .\_artifacts\ai-content-manifest.json`
 
       - `.\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json`
+      - `.\scripts\generate-html-source-metadata.ps1 -RepositoryRoot . -DocFxConfigPath .\docfx.json -OutputPath .\_artifacts\html-source-metadata.json -EditBranch main`
+
+      - `.\scripts\validate-html-source-metadata.ps1 -RepositoryRoot . -Path .\_artifacts\html-source-metadata.json`
 
       - `docfx build --warningsAsErrors`
 
