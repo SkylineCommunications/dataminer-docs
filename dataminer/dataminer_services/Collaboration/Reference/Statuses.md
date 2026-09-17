@@ -1,5 +1,6 @@
 ---
 uid: Statuses
+description: "Review project and task statuses to understand each lifecycle stage, ownership responsibilities, and conditions for completion or closure."
 ---
 
 # Statuses
