@@ -39,4 +39,4 @@ Edge Node mode consists of the following main components:
 
 ## Security
 
-Each execution runs in a secure context and receives a unique secret. The integration must use this secret when returning data to DataMiner, ensuring that only authorized executions can submit data.
+Each execution of a Python-based integration runs in a secure context and receives a unique secret. The integration must use this secret when returning data to DataMiner, ensuring that only authorized executions can submit data.
