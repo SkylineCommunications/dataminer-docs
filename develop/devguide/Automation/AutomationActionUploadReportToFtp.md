@@ -26,6 +26,8 @@ Uploads a report to an FTP server.
 
 Use this action when an automation script must deliver a report to an FTP server. Before configuring it, make sure the report template exists and that the target FTP server and credentials are available to the DataMiner system.
 
+<a id="automation-action-upload-report-to-ftp-scope"></a>
+
 ## Scope
 
 The `Template` element selects the report, `Destination` describes the FTP target, and `Include` elements identify the content to include. The action does not define or modify the report template itself.
@@ -33,6 +35,8 @@ The `Template` element selects the report, `Destination` describes the FTP targe
 ## Expected result
 
 When the action executes, DataMiner generates the selected report and attempts to upload it to the configured FTP destination.
+
+<a id="automation-action-upload-report-to-ftp-failure-and-edge-cases"></a>
 
 ## Failure and edge cases
 

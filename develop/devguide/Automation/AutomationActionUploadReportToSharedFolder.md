@@ -26,6 +26,8 @@ Uploads a report to a shared network folder.
 
 Use this action when an automation script must deliver a report to a network share. Before configuring it, make sure the report template exists and that the DataMiner system can reach the share with the required credentials.
 
+<a id="automation-action-upload-report-to-shared-folder-scope"></a>
+
 ## Scope
 
 The `Template` element selects the report, `Destination` describes the shared-folder target, and `Include` elements identify the content to include. The action does not create the share or change its permissions.
@@ -33,6 +35,8 @@ The `Template` element selects the report, `Destination` describes the shared-fo
 ## Expected result
 
 When the action executes, DataMiner generates the selected report and attempts to copy it to the configured shared folder.
+
+<a id="automation-action-upload-report-to-shared-folder-failure-and-edge-cases"></a>
 
 ## Failure and edge cases
 

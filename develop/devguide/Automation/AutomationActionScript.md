@@ -26,6 +26,8 @@ Runs another automation script from within the current script.
 
 Use this action when you need to compose an automation workflow from multiple scripts. The target script must be available on the DataMiner system, and you should know the target script's accepted parameter types and options.
 
+<a id="automation-action-script-scope"></a>
+
 ## Scope
 
 The `Script` element identifies the automation script to run. Each `Param` element supplies a value or execution option supported by that script. The action does not copy the target script into the calling script.
@@ -33,6 +35,8 @@ The `Script` element identifies the automation script to run. Each `Param` eleme
 ## Expected result
 
 When the action is reached, DataMiner resolves the name in `Script` and starts the referenced automation script with the configured parameters.
+
+<a id="automation-action-script-failure-and-edge-cases"></a>
 
 ## Failure and edge cases
 

@@ -26,6 +26,8 @@ To have the overall DVE element severity in the main DVE table on the parent ele
 
 Use this configuration when you are implementing dynamic virtual elements (DVEs) and need their overall severity to be visible in the parent element's DVE table. You should already understand the DVE table layout and `ColumnOption` syntax.
 
+<a id="advanced-dves-severity-state-scope"></a>
+
 ## Scope
 
 Set the `options` value of a retrieved DVE column to include `;severity`. The column must be part of the parent element's DVE table; this option does not calculate or change the alarm state of the child element.
@@ -33,6 +35,8 @@ Set the `options` value of a retrieved DVE column to include `;severity`. The co
 ## Expected result
 
 DataMiner uses the selected column to display the overall severity of the DVE element in the parent element's DVE table.
+
+<a id="advanced-dves-severity-state-failure-and-edge-cases"></a>
 
 ## Failure and edge cases
 

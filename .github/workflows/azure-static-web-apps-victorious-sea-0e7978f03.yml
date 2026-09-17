@@ -36,6 +36,12 @@ jobs:
       - name: Test documentation metadata migration
         run: .\scripts\test-migrate-documentation-metadata.ps1
         shell: powershell
+      - name: Test documentation anchor validator
+        run: .\scripts\test-validate-documentation-anchors.ps1
+        shell: powershell
+      - name: Validate documentation anchors
+        run: .\scripts\validate-documentation-anchors.ps1 -RepositoryRoot .
+        shell: powershell
       - name: Validate documentation metadata
         run: |
           $added = @(git diff --name-only --diff-filter=A HEAD^ HEAD | Where-Object {

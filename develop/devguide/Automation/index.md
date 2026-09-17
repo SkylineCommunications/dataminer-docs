@@ -26,9 +26,13 @@ Use this guide if you develop, test, or maintain DataMiner automation scripts.
 
 This guide is for automation script authors and developers. You should understand basic DataMiner system concepts and have access to a DataMiner system or development environment where you can test scripts.
 
+<a id="automation-script-development-scope"></a>
+
 ## Scope
 
 The guide covers script structure, actions, interactive automation, best practices, and troubleshooting. It does not replace the generated [Automation XML schema](xref:SchemaAutomationScript) or the API reference for the classes used by C# scripts.
+
+<a id="automation-script-development-topics"></a>
 
 ## Expected result
 

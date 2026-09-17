@@ -26,6 +26,8 @@ When implementing DCF, the DCF helper class should be used. The latest version o
 
 This page is for connector developers implementing DataMiner Connectivity Framework (DCF) interfaces and connections. Before using the helper, review the DCF concepts and add the package reference required by the connector project.
 
+<a id="advanced-dcf-helper-scope"></a>
+
 ## Scope
 
 The helper class provides reusable DCF functionality for a connector. It is distributed through the `Skyline.DataMiner.Core.ConnectivityFramework.Protocol` NuGet package; it is not a replacement for the generated protocol interfaces or the DCF configuration in *Protocol.xml*.
@@ -33,6 +35,8 @@ The helper class provides reusable DCF functionality for a connector. It is dist
 ## Expected result
 
 After referencing a compatible package version, the connector can use the helper APIs while implementing its DCF behavior.
+
+<a id="advanced-dcf-helper-failure-and-edge-cases"></a>
 
 ## Failure and edge cases
 

@@ -26,6 +26,8 @@ Generates an information event.
 
 Use this action when you are authoring an automation script and need to communicate a result or status to operators. You should already know how to define an [automation script action](xref:AutomationActions) and assign each `Exe` element a unique ID.
 
+<a id="automation-action-information-scope"></a>
+
 ## Scope
 
 The action creates an information event with the text in the `Message` element. It is intended for operator-facing information, not for diagnostic details written to the automation log.
@@ -33,6 +35,8 @@ The action creates an information event with the text in the `Message` element. 
 ## Expected result
 
 When the script reaches the action, DataMiner records an information event containing the configured message.
+
+<a id="automation-action-information-failure-and-edge-cases"></a>
 
 ## Failure and edge cases
 
