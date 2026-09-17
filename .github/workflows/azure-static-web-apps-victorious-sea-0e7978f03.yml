@@ -23,6 +23,9 @@ jobs:
           CI: true
       - name: Restore NuGet
         run: dotnet restore "src/NuGetPackages"
+      - name: Test documentation corpus audit
+        run: .\scripts\test-audit-docs-baseline.ps1
+        shell: powershell
       - name: Build
         run: dotnet build "src/NuGetPackages" --configuration Release
       - name: Build Documentation
@@ -31,6 +34,14 @@ jobs:
           docfx metadata
           docfx build --warningsAsErrors
         shell: powershell
+      - name: Audit documentation corpus
+        run: .\scripts\audit-docs-baseline.ps1 -RepositoryRoot . -SitePath _site -OutputPath docs-corpus-baseline.generated.json -SourceRevision $env:GITHUB_SHA
+        shell: powershell
+      - name: Publish documentation corpus baseline
+        uses: actions/upload-artifact@v7
+        with:
+          name: docs-corpus-baseline
+          path: docs-corpus-baseline.generated.json
       - name: Zip artifact for deployment
         run: Compress-Archive -Path _site/* -DestinationPath .\_site.zip
       - name: Publish results
