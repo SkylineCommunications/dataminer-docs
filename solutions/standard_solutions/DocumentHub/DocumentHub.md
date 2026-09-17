@@ -75,7 +75,7 @@ DocumentHub supports the following capabilities by default without any customiza
 
 - **Organize with buckets**: Create predefined document buckets to streamline workflows. Specify target platforms, allowed file extensions, and file size limits for each bucket.
 
-- **Integrate with APIs**: Use the DocumentHub NuGet package to develop custom integrations. Retrieve file information, manage buckets, and upload documents programmatically.
+- **Integrate with APIs**: Use the DocumentHub NuGet package to develop custom integrations. Retrieve file information, manage buckets, download and upload documents programmatically.
 
 Example use cases:
 
