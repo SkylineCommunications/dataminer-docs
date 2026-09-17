@@ -26,7 +26,7 @@ When creating or editing documentation pages, apply the following rules.
 - Use the controlled `content_type`, `authority`, `lifecycle`, `area`, and review values defined in [Documentation metadata](xref:CTB_Documentation_Metadata). Do not create a second list of allowed values in a page or template.
 - Use `unknown` or `not_applicable` exactly as defined by the contract when applicability, ownership, authority, review, version, or compatibility is not confirmed. Never use an empty value or invent an owner handle or version range.
 - Preserve existing UIDs and published URLs. Record `redirect_required` and URL aliases before moving a published page.
-- Validate new and changed version 1 front matter with `scripts/validate-documentation-metadata.ps1` before running the DocFX checks. Existing pages without `metadata_version: 1` remain on the legacy migration path until D2.2.
+- Validate new and changed version 1 front matter with `scripts/validate-documentation-metadata.ps1` before running the DocFX checks. Pages outside the completed D2.2 Connector and Automation migration scopes without `metadata_version: 1` remain on the legacy migration path until their scope is scheduled.
 
 ## Procedure formatting
 

@@ -1,5 +1,21 @@
 ---
+metadata_version: 1
 uid: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
+description: "Describe the DataMiner connector development topic How to define serial and smart-serial responses in one and the same prot, including its purpose, behavi."
+area: develop
+content_type: conceptual
+authority: unknown
+authority_source: unknown
+lifecycle: active
+applies_to:
+  - DataMiner
+version: unknown
+owner: unknown
+review_status: needs_update
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # How to define serial and smart-serial responses in one and the same protocol

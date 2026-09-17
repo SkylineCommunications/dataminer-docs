@@ -47,4 +47,4 @@ For most key directories (with the exception of `src`), all images are placed in
 9. Ensure that all cross-references are accurate and up to date.
 10. Use sentence casing for titles.
 11. Follow the house style defined in `.github/instructions/dataminer-docs-house-style.instructions.md`.
-12. New pages must include complete version 1 metadata from `contributing/metadata/documentation-metadata-v1.schema.json`; existing pages without `metadata_version: 1` remain on the legacy migration path until D2.2.
+12. New pages must include complete version 1 metadata from `contributing/metadata/documentation-metadata-v1.schema.json`; pages outside the completed D2.2 Connector and Automation migration scopes without `metadata_version: 1` remain on the legacy migration path until their scope is scheduled.

@@ -1,6 +1,21 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Condition-combination
 description: "Reference the combination attribute on an automation condition to join conditions with a logical and or or operator."
+area: develop
+content_type: schema
+authority: reference
+authority_source: SchemaAutomationScript
+lifecycle: active
+applies_to:
+  - DataMiner
+version: unknown
+owner: unknown
+review_status: needs_update
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # combination attribute

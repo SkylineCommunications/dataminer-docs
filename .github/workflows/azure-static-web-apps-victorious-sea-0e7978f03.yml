@@ -30,6 +30,9 @@ jobs:
       - name: Test documentation metadata validator
         run: .\scripts\test-validate-documentation-metadata.ps1
         shell: powershell
+      - name: Test documentation metadata migration
+        run: .\scripts\test-migrate-documentation-metadata.ps1
+        shell: powershell
       - name: Validate documentation metadata
         run: |
           $added = @(git diff --name-only --diff-filter=A HEAD^ HEAD | Where-Object {
@@ -39,6 +42,9 @@ jobs:
             .\scripts\validate-documentation-metadata.ps1 -RepositoryRoot . -Path $added -RequireVersion1
           }
           .\scripts\validate-documentation-metadata.ps1 -RepositoryRoot .
+        shell: powershell
+      - name: Validate D2.2 target metadata
+        run: .\scripts\migrate-documentation-metadata.ps1 -RepositoryRoot . -CheckOnly -ReportPath .\d2-2-metadata-migration-report.json
         shell: powershell
       - name: Test documentation corpus audit
         run: .\scripts\test-audit-docs-baseline.ps1

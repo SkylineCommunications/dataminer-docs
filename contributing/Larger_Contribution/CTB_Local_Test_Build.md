@@ -98,6 +98,13 @@ Use the following deterministic sequence:
    .\scripts\validate-documentation-metadata.ps1 -RepositoryRoot . -Path .\path\to\new-page.md -RequireVersion1
    ```
 
+   For the completed D2.2 Connector and Automation guide/schema scopes, verify the deterministic migration and identity report:
+
+   ```powershell
+   .\scripts\migrate-documentation-metadata.ps1 -RepositoryRoot . -CheckOnly -ReportPath .\d2-2-metadata-migration-report.json
+   .\scripts\audit-documentation-metadata-migration.ps1 -RepositoryRoot . -ReportPath .\d2-2-metadata-migration-report.json
+   ```
+
 1. Run `docfx metadata`.
 
 1. Run `docfx build --warningsAsErrors`.

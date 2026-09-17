@@ -1,5 +1,21 @@
 ---
+metadata_version: 1
 uid: AdvancedViewTablesSameElement
+description: "Describe the DataMiner connector development topic View tables in the same element, including its purpose, behavior, implementation guidance, and relevant."
+area: develop
+content_type: conceptual
+authority: unknown
+authority_source: unknown
+lifecycle: active
+applies_to:
+  - DataMiner
+version: unknown
+owner: unknown
+review_status: needs_update
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # View tables in the same element

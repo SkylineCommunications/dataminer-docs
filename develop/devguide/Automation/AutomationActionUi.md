@@ -1,6 +1,21 @@
 ---
+metadata_version: 1
 uid: AutomationActionUi
 description: "Use the UI action to present a response dialog from an automation script and distinguish dialog input from script control flow."
+area: develop
+content_type: conceptual
+authority: reference
+authority_source: DMSScript.Script.Exe
+lifecycle: active
+applies_to:
+  - DataMiner
+version: unknown
+owner: unknown
+review_status: needs_update
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # UI

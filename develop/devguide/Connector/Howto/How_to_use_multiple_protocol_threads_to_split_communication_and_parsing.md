@@ -1,5 +1,21 @@
 ---
+metadata_version: 1
 uid: How_to_use_multiple_protocol_threads_to_split_communication_and_parsing
+description: "Describe the DataMiner connector development topic How to use multiple protocol threads to split communication and parsing, including its purpose, behavio."
+area: develop
+content_type: conceptual
+authority: unknown
+authority_source: unknown
+lifecycle: active
+applies_to:
+  - DataMiner
+version: unknown
+owner: unknown
+review_status: needs_update
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # How to use multiple protocol threads to split communication and parsing

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "migration": "D2.2",
+  "baseline": {
+    "id": "D0.2",
+    "sourceRevision": "1b0a461fbc5058818bc4cdd28c0a2eaa8ce6b302",
+    "sourcePageCount": 1374,
+    "staleTrackerCount": 1352,
+    "currentExpectedPageCount": 1378,
+    "unicodeNormalizedAdditions": [
+      "develop/devguide/Connector/Troubleshooting/QAction_exceptions/System_Collections_Gene\u00adric_KeyNotFound\u00adException.md",
+      "develop/devguide/Connector/Troubleshooting/QAction_exceptions/System_Format\u00adException.md",
+      "develop/devguide/Connector/Troubleshooting/QAction_exceptions/System_IndexOutOf\u00adRangeException.md",
+      "develop/devguide/Connector/Troubleshooting/QAction_exceptions/System_NullReference\u00adException.md"
+    ]
+  },
+  "migrationDate": "2026-09-17",
+  "scopes": [
+    {
+      "domain": "Connector",
+      "relativeRoot": "develop/devguide/Connector",
+      "contentType": "conceptual",
+      "baselineCount": 317
+    },
+    {
+      "domain": "Connector",
+      "relativeRoot": "develop/schemadoc/Protocol",
+      "contentType": "schema",
+      "baselineCount": 949
+    },
+    {
+      "domain": "Automation",
+      "relativeRoot": "develop/devguide/Automation",
+      "contentType": "conceptual",
+      "baselineCount": 35
+    },
+    {
+      "domain": "Automation",
+      "relativeRoot": "develop/schemadoc/Automation",
+      "contentType": "schema",
+      "baselineCount": 73
+    }
+  ]
+}

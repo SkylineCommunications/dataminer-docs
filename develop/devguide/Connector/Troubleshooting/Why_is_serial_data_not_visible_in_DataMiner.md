@@ -1,5 +1,21 @@
 ---
+metadata_version: 1
 uid: Why_is_serial_data_not_visible_in_DataMiner
+description: "Describe the DataMiner connector development topic Why is serial data not visible in DataMiner?, including its purpose, behavior, implementation guidance."
+area: develop
+content_type: conceptual
+authority: unknown
+authority_source: unknown
+lifecycle: active
+applies_to:
+  - DataMiner
+version: unknown
+owner: unknown
+review_status: needs_update
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # Why is serial data not visible in DataMiner?

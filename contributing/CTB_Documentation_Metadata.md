@@ -22,7 +22,7 @@ compatibility:
 
 Use this contract when you add a new page or make a substantial change to a page. The contract makes the purpose, authority, lifecycle, applicability, and compatibility of a page machine-readable without assigning an organizational owner or a license.
 
-The version 1 schema is stored in `contributing/metadata/documentation-metadata-v1.schema.json`. It applies to a page when the page contains `metadata_version: 1`. Existing pages without this field remain on the legacy migration path and should not be mass-edited only to add metadata.
+The version 1 schema is stored in `contributing/metadata/documentation-metadata-v1.schema.json`. It applies to a page when the page contains `metadata_version: 1`. The D2.2 migration opts the current Connector and Automation guide/schema scopes into this contract with `scripts/migrate-documentation-metadata.ps1`; pages outside those scopes without this field remain on the legacy migration path.
 
 ## Required front matter
 
@@ -289,7 +289,7 @@ compatibility:
 
 ## Deterministic validation
 
-When you add `metadata_version: 1`, validate the complete front matter object against `contributing/metadata/documentation-metadata-v1.schema.json` with `scripts/validate-documentation-metadata.ps1`. The validator reads the schema instead of maintaining a second list of fields or values. It must reject missing required fields, values outside the controlled lists, empty strings, unknown metadata keys, invalid dates, and mixed `unknown` or `not_applicable` applicability arrays. Pages without `metadata_version: 1` are legacy pages and remain out of scope for this opt-in validation until D2.2.
+When you add `metadata_version: 1`, validate the complete front matter object against `contributing/metadata/documentation-metadata-v1.schema.json` with `scripts/validate-documentation-metadata.ps1`. The validator reads the schema instead of maintaining a second list of fields or values. It must reject missing required fields, values outside the controlled lists, empty strings, unknown metadata keys, invalid dates, and mixed `unknown` or `not_applicable` applicability arrays. Pages without `metadata_version: 1` are legacy pages and remain out of scope for this opt-in validation until their migration scope is scheduled. The D2.2 target scope and coverage report are defined in `contributing/metadata/d2-2-migration-scope.json` and `d2-2-metadata-migration-report.json`.
 
 For a repository-wide check of opted-in pages, run:
 

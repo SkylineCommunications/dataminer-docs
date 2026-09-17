@@ -1,5 +1,21 @@
 ---
+metadata_version: 1
 uid: Implementing_OnRequestScriptInfo_Entry_Point
+description: "Describe the DataMiner Automation development topic Implementing the OnRequestScriptInfo entry point, including its purpose, behavior, implementation guid."
+area: develop
+content_type: conceptual
+authority: unknown
+authority_source: unknown
+lifecycle: active
+applies_to:
+  - DataMiner
+version: unknown
+owner: unknown
+review_status: needs_update
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # Implementing the OnRequestScriptInfo entry point

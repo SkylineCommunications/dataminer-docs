@@ -1,6 +1,21 @@
 ---
+metadata_version: 1
 uid: AutomationActionUploadReportToFtp
 description: "Use the report action to upload a generated report to an FTP destination, and validate the template, destination, and credentials."
+area: develop
+content_type: conceptual
+authority: reference
+authority_source: DMSScript.Script.Exe
+lifecycle: active
+applies_to:
+  - DataMiner
+version: unknown
+owner: unknown
+review_status: needs_update
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # Upload report to FTP

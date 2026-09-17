@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "migration": "D2.2",
+  "migrationDate": "2026-09-17",
+  "scope": {
+    "targetPages": 1378,
+    "baselinePages": 1374,
+    "baselineDelta": 4,
+    "staleTrackerCount": 1352,
+    "staleTrackerDiscrepancy": 26
+  },
+  "checks": [
+    {
+      "name": "migration-fixture",
+      "status": "passed",
+      "command": "scripts/test-migrate-documentation-metadata.ps1"
+    },
+    {
+      "name": "metadata-validator",
+      "status": "passed",
+      "targetVersion1Pages": 1378,
+      "command": "scripts/validate-documentation-metadata.ps1 -RequireVersion1"
+    },
+    {
+      "name": "uid-url-and-prose-stability",
+      "status": "passed",
+      "stablePaths": 1378,
+      "stableUids": 1378,
+      "stableBodies": 1378,
+      "headComparablePages": 1378,
+      "command": "scripts/audit-documentation-metadata-migration.ps1"
+    },
+    {
+      "name": "docfx-metadata",
+      "status": "passed_with_preexisting_warnings",
+      "warnings": 30,
+      "errors": 0,
+      "warningGroups": {
+        "compiler": 3,
+        "InvalidAssemblyReference": 21,
+        "InvalidCref": 4,
+        "InvalidXmlComment": 2
+      },
+      "command": "docfx metadata"
+    },
+    {
+      "name": "docfx-build",
+      "status": "passed_with_preexisting_warnings",
+      "warnings": 14,
+      "errors": 0,
+      "warningsAsErrorsStatus": "failed_on_the_same_14_preexisting_warnings",
+      "command": "docfx build --warningsAsErrors"
+    },
+    {
+      "name": "local-link-check",
+      "status": "passed_with_preexisting_warnings",
+      "warnings": 14,
+      "errors": 0,
+      "command": "docfx build"
+    }
+  ],
+  "preExistingDocFxBuildWarnings": [
+    {
+      "path": "develop/toc.yml",
+      "kind": "UidNotFound",
+      "count": 3,
+      "details": "Three missing DataMiner Core API UIDs referenced by the development TOC."
+    },
+    {
+      "path": "develop/TOOLS/ApplicationPackages/CreatingApplicationPackages.md",
+      "kind": "UidNotFound",
+      "count": 1,
+      "details": "Missing Skyline.AppInstaller.AppPackage cross-reference."
+    },
+    {
+      "path": "develop/TOOLS/ApplicationPackages/Creating_app_package_scripts.md",
+      "kind": "UidNotFound",
+      "count": 2,
+      "details": "Missing Skyline.AppInstaller cross-references."
+    },
+    {
+      "path": "develop/devguide/GQI_Extensions/Ad_hoc_data/Ad_hoc_Tutorials_Interact_With_DMS.md",
+      "kind": "UidNotFound",
+      "count": 3,
+      "details": "Missing DataMiner Core DMS API cross-references."
+    },
+    {
+      "path": "develop/api/index.md",
+      "kind": "UidNotFound",
+      "count": 14,
+      "details": "Missing generated API assembly UIDs."
+    },
+    {
+      "path": "develop/devguide/Automation/GettingStartedWithAutomationScriptDevelopment.md",
+      "kind": "UidNotFound",
+      "count": 1,
+      "details": "Missing DataMiner Core Automation API UID."
+    },
+    {
+      "path": "develop/devguide/Automation/Howto/Getting_Started_with_the_IAS_Toolkit.md",
+      "kind": "UidNotFound",
+      "count": 1,
+      "details": "Missing Interactive Automation Script Toolkit UID."
+    },
+    {
+      "path": "develop/devguide/ClassLibrary/ClassLibraryElementCreation.md",
+      "kind": "UidNotFound",
+      "count": 13,
+      "details": "Missing DataMiner Core element-creation API UIDs."
+    },
+    {
+      "path": "develop/devguide/ClassLibrary/ClassLibraryIntroduction.md",
+      "kind": "UidNotFound",
+      "count": 5,
+      "details": "Missing DataMiner Core API UIDs."
+    },
+    {
+      "path": "develop/devguide/ClassLibrary/ClassLibraryScheduler.md",
+      "kind": "UidNotFound",
+      "count": 1,
+      "details": "Missing DataMiner Scheduler API UID."
+    },
+    {
+      "path": "release-notes/Code_Libraries/Skyline.DataMiner.Core/Skyline_DataMiner_Core_DataMinerSystem_Range_1.1.md",
+      "kind": "UidNotFound",
+      "count": 1,
+      "details": "Missing DataMiner Core IDma.GetElement cross-reference."
+    },
+    {
+      "path": "develop/devguide/Connector/ConnectionsSnmpTraps.md",
+      "kind": "UidNotFound",
+      "count": 1,
+      "details": "Missing SNMP TrapInfo API UID."
+    }
+  ],
+  "warningDisposition": "These warnings are recorded separately because the migration changed front matter only. The identity audit confirmed that all target bodies and links remained byte-equivalent after line-ending normalization."
+}

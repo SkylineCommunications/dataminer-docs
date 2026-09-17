@@ -1,6 +1,21 @@
 ---
+metadata_version: 1
 uid: InnerWorkings
-description: To have a good understanding of the inner workings of a protocol, it is important to have a deeper understanding of some of the DataMiner processes.
+description: "To have a good understanding of the inner workings of a protocol, it is important to have a deeper understanding of some of the DataMiner processes."
+area: develop
+content_type: conceptual
+authority: unknown
+authority_source: unknown
+lifecycle: active
+applies_to:
+  - DataMiner
+version: unknown
+owner: unknown
+review_status: needs_update
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # Inner workings

@@ -1,6 +1,21 @@
 ---
+metadata_version: 1
 uid: Protocol.QActions.QAction-id
 description: "Use the QAction ID to identify a QAction uniquely in a connector protocol and keep the declaration aligned with its triggers."
+area: develop
+content_type: schema
+authority: reference
+authority_source: SchemaProtocol
+lifecycle: active
+applies_to:
+  - DataMiner
+version: unknown
+owner: unknown
+review_status: needs_update
+review_date: 2026-09-17
+compatibility:
+  uid: stable
+  url: stable
 ---
 
 # id attribute
