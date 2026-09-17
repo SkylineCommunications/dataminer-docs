@@ -139,6 +139,12 @@ After a Failover switch, SLASPConnection could fail to initialize correctly when
 - Incoming notifications could remain in memory without being processed, causing a memory leak.
 - The reporter page in DataMiner Cube and the distribution, alarm count, and timeline components in the Dashboards app could show outdated information.
 
+#### SRM: Conflicting bookings incorrectly could be created during bulk creation [ID 46351]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, bulk creation of booking instances could incorrectly create instances identified as conflicting when the force quarantine flag was disabled.
+
 #### NATSReset.exe could throw an InvalidOperationException after the IP address of a DataMiner Agent had changed [ID 46360]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
@@ -156,3 +162,11 @@ Up to now, some errors encountered by *NATSMigration.exe* or *NATSRepair.exe* co
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 On systems using STaaS, up to now, ordering DOM entries by an optional field could throw a CRUD exception when one or more entries did not contain that field.
+
+#### Automation scripts and QActions: An unsuitable DLL version could be selected from hint paths [ID 46412]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, when no exact DLL match was found in the hint paths while resolving assemblies for automation scripts or QActions, the first matching DLL was selected. This could result in an older, incompatible version being selected.
+
+From now on, the highest compatible DLL version in the requested range will be selected. If no version in that range is available, the highest available version will be selected.
