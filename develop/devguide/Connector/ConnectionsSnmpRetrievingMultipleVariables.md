@@ -6,6 +6,8 @@ uid: ConnectionsSnmpRetrievingMultipleVariables
 
 It is possible to retrieve multiple variables in a single get request. In order to retrieve multiple variables in a single request, set the multipleGet attribute of the Group.Content tag to "true". This will result in a single get request being sent containing multiple variable bindings.
 
+**Schema requirement:** `Group.Content@multipleGet` is for individual parameters in an SNMP Get request. It cannot be used with parameters of type `array`; use the table-specific `SNMP/OID@options` retrieval methods instead. See [multipleGet](xref:Protocol.Groups.Group.Content-multipleGet) and [SNMP OID options](xref:Protocol.Params.Param.SNMP.OID-options).
+
 ```xml
 <Group id="19100">
   <Name>SNMP General System Parameters Group</Name>

@@ -128,7 +128,7 @@ flowchart LR
 ```
 
 ```xml
-<Protocol>
+<Protocol xmlns="http://www.skyline.be/protocol">
   <Params>
 	<Param id="2">
 		<Name>AfterStartup</Name>

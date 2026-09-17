@@ -67,7 +67,7 @@ HTTP CONNECTION:
 
 - IP address/host: [The polling IP or URL of the destination.]
 - IP port: [The IP port of the destination.]
-- Bus address: [If the proxy server has to be bypassed, specify *bypassproxy*.]
+- Bus address: [If the proxy server has to be bypassed, specify `ByPassProxy`.]
 
 #### Virtual Connection
 
@@ -169,3 +169,5 @@ Physical dynamic interfaces:
 
 [In this section, you can provide additional information about the connector that does not fit in the other sections. Remove this section if it does not contain any info.]
 ```
+
+**Recommendation:** Use the canonical HTTP bus-address token `ByPassProxy` in connector documentation. See [HTTP element configuration](xref:ConnectionsHttpElementConfiguration).

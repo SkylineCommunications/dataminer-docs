@@ -116,7 +116,9 @@ The [url](xref:Protocol.HTTP.Session.Connection.Request-url) attribute defines t
 
 However, this should be used only when there is no other option, because when the specified host becomes unavailable, the element will go into timeout, giving the impression that the host specified in the element wizard is no longer available.
 
-Including a request header (e.g., "Accept", "Content-Type", "Content-Length", etc.) is possible by defining a header. See [Protocol.HTTP.Session.Connection.Request.Headers.Header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header).
+Including a request header (e.g., "Accept" or "Content-Type") is possible by defining a header under `Request/Headers`. The request `Header@key` is an [HTTP request header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header-key), and its `pid` attribute can provide a dynamic value; without `pid`, the element content is used as a fixed value. See [Protocol.HTTP.Session.Connection.Request.Headers.Header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header).
+
+**HTTP ownership:** DataMiner automatically adds `Accept-Encoding: gzip, deflate`, `User-Agent: DataMiner/1.0`, and `Connection: Keep-Alive` to HTTP requests. For `POST` and `PUT` requests, DataMiner sets `Content-Length`. Do not define these headers in the protocol unless you intentionally need a different value; do not define `Content-Length`.
 
 By using either Data or Parameters, you can send data along with the HTTP request. See [Protocol.HTTP.Session.Connection.Request.Data](xref:Protocol.HTTP.Session.Connection.Request.Data) and [Protocol.HTTP.Session.Connection.Request.Parameters](xref:Protocol.HTTP.Session.Connection.Request.Parameters).
 
@@ -225,9 +227,9 @@ Using the statusCode attribute, you can specify the ID of the parameter in which
 > [!TIP]
 > See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
 
-The value of a header can be captured by defining a header (see [Protocol.HTTP.Session.Connection.Response.Headers.Header](xref:Protocol.HTTP.Session.Connection.Response.Headers.Header)) and specifying the name of the header and the ID of the parameter in which the value should be put.
+**Schema requirement:** Capture a response header only under `Response/Headers`. The response `Header@key` is an [HTTP response header](xref:Protocol.HTTP.Session.Connection.Response.Headers.Header-key), and its required `pid` attribute identifies the parameter that receives the value. Request headers and response headers have separate schema ownership and must not be interchanged. See [Protocol.HTTP.Session.Connection.Response.Headers.Header](xref:Protocol.HTTP.Session.Connection.Response.Headers.Header).
 
-The message body can be captured by specifying the ID of the parameter in which the body should be put in Content (see [Protocol.HTTP.Session.Connection.Response.Content](xref:Protocol.HTTP.Session.Connection.Response.Content)).
+The HTTP status line is a response marker, not a response header. Capture it with the [Response@statusCode](xref:Protocol.HTTP.Session.Connection.Response-statusCode) attribute. Capture the message body by specifying the parameter ID in [Content@pid](xref:Protocol.HTTP.Session.Connection.Response.Content-pid).
 
 ## See also
 

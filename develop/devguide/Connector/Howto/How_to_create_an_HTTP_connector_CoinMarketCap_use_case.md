@@ -60,13 +60,13 @@ In HTTP connectors, HTTP sessions must be defined using `Session` tags. These ca
 `Session` tags define where the requests are targeted, how they will be shaped and which parameters will store the HTTP response. The following code snippet illustrates an HTTP session defined in a connector:
 
 ```xml
-<Session id="6" Name="Get Containers List">
+<Session id="6" name="Get Containers List">
    <Connection id="1">
       <Request verb="GET" url="/containers/list" />
       <Response statusCode="100">
          <Content pid="200"></Content>
       </Response>
-   <Connection>
+   </Connection>
 </Session>
 ```
 
@@ -116,6 +116,10 @@ In Visual Studio, go to *File > New > DataMiner Protocol Solution* to create a n
 ![DataMiner Protocol Solution](~/develop/images/DIS_NewProtocolSolution.png)
 
 In your new protocol, add the `Type` element, and set its value to "http". For example:
+
+**Schema requirement:** Use the exact protocol namespace `http://www.skyline.be/protocol` on the `Protocol` root element. Do not add a trailing slash or replace it with a validator test namespace.
+
+**Unresolved question:** The `VendorOID` value below is illustrative only. The current schema does not establish whether this should be a product/vendor enterprise OID or a protocol-specific OID assigned by Skyline. Confirm the value with the vendor or Skyline before using it in a connector.
 
 ```xml
 <Protocol xmlns="http://www.skyline.be/protocol">
