@@ -36,7 +36,7 @@ If you are using a Powershell shell, execute the following command first: `$env:
 
 The EdgeManager DxM log file logs all tunnel creation and teardown activity. If an element is in error state, the log file can provide more information about the root cause.
 
-To open the log file in Cube, navigate to *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*.
+To open the log file in Cube, navigate to *Apps* > *System Center* > *Logging* > *Edge Manager (DxM)*.
 
 This log file is also included in a Log Collector package.
 
