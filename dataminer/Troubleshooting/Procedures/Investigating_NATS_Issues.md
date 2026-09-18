@@ -43,7 +43,9 @@ If the system has not yet been migrated to BrokerGateway, refer to [Legacy NAS/N
 
 ## Check if ClusterEndpointsManager is enabled
 
-The ClusterEndpointsManager soft-launch option must be enabled for BrokerGateway to manage NATS clustering properly.
+From DataMiner 10.6.11 onwards, ClusterEndpointsManager is always enabled and the corresponding soft-launch option is ignored. If your DataMiner System is running DataMiner 10.6.11 or later, skip this check.
+
+On earlier DataMiner versions, the ClusterEndpointsManager soft-launch option must be enabled for BrokerGateway to manage NATS clustering properly.
 
 To verify and resolve this:
 
