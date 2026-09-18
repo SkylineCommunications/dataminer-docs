@@ -1,5 +1,6 @@
 ---
 uid: Taskbar_Utility_shortcut_menu
+description: "Use the DataMiner Taskbar Utility shortcut menu to launch tools, manage upgrades and backups, control DataMiner Agents, and configure options."
 ---
 
 # Taskbar Utility shortcut menu
