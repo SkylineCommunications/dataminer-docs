@@ -18,11 +18,14 @@ Expected duration: 15 minutes
 
 ## Overview
 
-- [Step 1: Register your app in Azure AD](#step-1-register-your-app-in-azure-ad)
-- [Step 2: Generate a client secret](#step-2-generate-a-client-secret)
-- [Step 3: Configure API permissions](#step-3-configure-api-permissions)
-- [Step 4: Configure SharePoint in DocumentHub](#step-4-configure-sharepoint-in-documenthub)
-- [Next steps](#next-steps)
+- [Configuring SharePoint as a storage backend](#configuring-sharepoint-as-a-storage-backend)
+  - [Prerequisites](#prerequisites)
+  - [Overview](#overview)
+  - [Step 1: Register your app in Azure AD](#step-1-register-your-app-in-azure-ad)
+  - [Step 2: Generate a client secret](#step-2-generate-a-client-secret)
+  - [Step 3: Configure API permissions](#step-3-configure-api-permissions)
+  - [Step 4: Configure SharePoint in DocumentHub](#step-4-configure-sharepoint-in-documenthub)
+  - [Next steps](#next-steps)
 
 ## Step 1: Register your app in Azure AD
 
@@ -79,6 +82,10 @@ Expected duration: 15 minutes
 
    > [!NOTE]
    > You must have administrator privileges to grant consent.
+   >
+   > Case permissions are very wide, consider **Sites.Selected**, Restricted to explicit, admin-approved sites only.
+   >
+   > While **Sites.ReadWrite.All** and **Files.ReadWrite.All** trust the application with the keys to the entire tenant, **Sites.Selected** treats the application as untrusted until an administrator explicitly links it to a designated site.
 
 1. Confirm that the permissions show "Granted" status.
 
@@ -128,3 +135,4 @@ After configuring SharePoint, you can:
 - [Create document buckets](xref:DH_Application#organizing-with-buckets) that use this SharePoint backend.
 - [Upload documents](xref:DH_Application#uploading-documents) to SharePoint through the DocumentHub app.
 - Integrate SharePoint storage with other DataMiner applications via DocumentHub.
+- Search file names, content, and properties using Keyword Query Language (KQL).

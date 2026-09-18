@@ -29,6 +29,8 @@ Migration and cleanup actions are defined in the install package and will depend
 > [!IMPORTANT]
 > When upgrading DocumentHub, to make sure all migration and cleanup actions take place, **first upgrade to the latest version of your current major version** before moving to the next major version, without skipping a major version.
 
+As part of the installation, a *DocumentHub - Cleanup Downloaded Files* scheduled task is also created. By default, this task runs daily at midnight and removes temporary files (e.g., files downloaded through the [DownloadFile user-defined API](xref:Tutorial_DH_UDAPI#downloading-a-file)) that are older than 24 hours. You can review or adjust its schedule in the DataMiner Cube *Scheduler* module.
+
 ## Post-installation configuration
 
 After the installation completes, you will need to configure the DocumentHub app for your environment:
