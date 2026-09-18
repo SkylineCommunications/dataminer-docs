@@ -55,6 +55,9 @@ jobs:
       - name: Test AI content manifest
         run: .\scripts\test-ai-content-manifest.ps1
         shell: powershell
+      - name: Test segmented sitemaps
+        run: .\scripts\test-segmented-sitemaps.ps1
+        shell: powershell
       - name: Build
         run: dotnet build "src/NuGetPackages" --configuration Release
       - name: Build Documentation
@@ -67,6 +70,9 @@ jobs:
           .\scripts\generate-ai-content-manifest.ps1 -RepositoryRoot . -OutputPath .\_artifacts\ai-content-manifest.json -SourceRevision $env:GITHUB_SHA
           .\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json
           docfx build --warningsAsErrors
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json -SourceRevision $env:GITHUB_SHA
+          .\scripts\validate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -ReportPath .\_artifacts\segmented-sitemap-report.json
         shell: powershell
       - name: Retain generated metadata provenance
         uses: actions/upload-artifact@v7
@@ -81,6 +87,12 @@ jobs:
           name: ai-content-manifest-${{ github.sha }}
           path: _artifacts/ai-content-manifest.json
           retention-days: 90
+      - name: Retain segmented sitemap report
+        uses: actions/upload-artifact@v7
+        with:
+          name: segmented-sitemap-report-${{ github.sha }}
+          path: _artifacts/segmented-sitemap-report.json
+          retention-days: 14
       - name: Audit documentation corpus
         run: .\scripts\audit-docs-baseline.ps1 -RepositoryRoot . -SitePath _site -OutputPath docs-corpus-baseline.generated.json -SourceRevision $env:GITHUB_SHA
         shell: powershell

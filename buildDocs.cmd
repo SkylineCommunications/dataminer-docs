@@ -14,6 +14,11 @@ if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-ai-content-manifest.ps1" -RepositoryRoot "." -Path ".\_artifacts\ai-content-manifest.json"
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 docfx build --warningsAsErrors
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-segmented-sitemaps.ps1" -RepositoryRoot "." -SitePath ".\_site" -GeneratedProvenancePath ".\_artifacts\generated-metadata-provenance.json" -OutputPath ".\_artifacts\segmented-sitemap-report.json"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-segmented-sitemaps.ps1" -RepositoryRoot "." -SitePath ".\_site" -ReportPath ".\_artifacts\segmented-sitemap-report.json"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 
 if "%1"=="" (
     docfx serve _site

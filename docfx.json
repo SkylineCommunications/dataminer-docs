@@ -64,8 +64,7 @@
       }
     ],
 	"sitemap": {
-      "baseUrl": "https://docs.dataminer.services/",
-      "changefreq": "hourly"
+      "baseUrl": "https://docs.dataminer.services/"
     },
 	"xref" : [
 		"https://github.com/dotnet/docfx/raw/main/.xrefmap.json",

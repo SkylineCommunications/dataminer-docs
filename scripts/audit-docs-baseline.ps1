@@ -21,7 +21,7 @@ $ErrorActionPreference = "Stop"
 $script:BaselineSchemaVersion = 2
 $script:MetadataManifestSchemaVersion = 1
 $script:GeneratorName = "scripts/audit-docs-baseline.ps1"
-$script:GeneratorVersion = "1.1.0"
+$script:GeneratorVersion = "1.2.0"
 $script:LicenseIdentifier = "CC BY-NC-ND 4.0"
 $script:LicenseName = "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International"
 $script:LicenseUrl = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
@@ -419,7 +419,8 @@ function ConvertTo-CountObject {
 
     $result = [ordered]@{}
     foreach ($key in @($Counts.Keys | Sort-Object)) {
-        $result[$key] = [int]$Counts[$key]
+        $propertyName = if ([String]::IsNullOrWhiteSpace([string]$key)) { "(missing)" } else { [string]$key }
+        $result[$propertyName] = [int]$Counts[$key]
     }
 
     return [PSCustomObject]$result
@@ -597,9 +598,19 @@ function Get-ConfigurationInfo {
         $info.docfx.contentPatterns = @($contentPatterns | Sort-Object -Unique)
         $info.docfx.resourcePatterns = @($resourcePatterns | Sort-Object -Unique)
         $info.docfx.xrefSources = @($xrefSources | Sort-Object -Unique)
+        $sitemapBaseUrl = ""
+        $sitemapChangeFrequency = ""
+        if ($null -ne $config.build.sitemap) {
+            if (@($config.build.sitemap.PSObject.Properties.Name) -contains "baseUrl") {
+                $sitemapBaseUrl = [string]$config.build.sitemap.baseUrl
+            }
+            if (@($config.build.sitemap.PSObject.Properties.Name) -contains "changefreq") {
+                $sitemapChangeFrequency = [string]$config.build.sitemap.changefreq
+            }
+        }
         $info.docfx.sitemap = [PSCustomObject][ordered]@{
-            baseUrl = [string]$config.build.sitemap.baseUrl
-            changeFrequency = [string]$config.build.sitemap.changefreq
+            baseUrl = $sitemapBaseUrl
+            changeFrequency = $sitemapChangeFrequency
         }
     }
 
@@ -773,12 +784,93 @@ function Get-XrefInfo {
     return [PSCustomObject]$info
 }
 
+function Get-SitemapChildPath {
+    param(
+        [Parameter(Mandatory = $true)][string]$RootPath,
+        [Parameter(Mandatory = $true)][string]$Location
+    )
+
+    try {
+        $uri = [Uri]$Location
+        $relativePath = [Uri]::UnescapeDataString($uri.AbsolutePath.TrimStart("/"))
+    }
+    catch {
+        $relativePath = [Uri]::UnescapeDataString($Location.TrimStart("/"))
+    }
+
+    if ([String]::IsNullOrWhiteSpace($relativePath) -or $relativePath -match "(^|/)\.\.?(/|$)") {
+        return $null
+    }
+
+    $siteRoot = Split-Path -Parent $RootPath
+    $candidate = [IO.Path]::GetFullPath((Join-Path $siteRoot $relativePath.Replace("/", "\")))
+    $prefix = $siteRoot.TrimEnd("\") + "\"
+    if (-not $candidate.StartsWith($prefix, [StringComparison]::OrdinalIgnoreCase)) {
+        return $null
+    }
+
+    return $candidate
+}
+
+function Read-SitemapEntries {
+    param(
+        [Parameter(Mandatory = $true)][string]$Path,
+        [Parameter(Mandatory = $true)][AllowEmptyCollection()][System.Collections.Generic.HashSet[string]]$Visited,
+        [Parameter(Mandatory = $true)][AllowEmptyCollection()][System.Collections.Generic.List[object]]$Entries,
+        [Parameter(Mandatory = $true)][AllowEmptyCollection()][System.Collections.Generic.List[string]]$Artifacts
+    )
+
+    $fullPath = [IO.Path]::GetFullPath($Path)
+    if (-not $Visited.Add($fullPath.ToLowerInvariant())) {
+        return
+    }
+    if (-not (Test-Path -LiteralPath $fullPath -PathType Leaf)) {
+        return
+    }
+
+    $xml = New-Object System.Xml.XmlDocument
+    $xml.Load($fullPath)
+    $artifactName = [IO.Path]::GetFileName($fullPath)
+    if (-not $Artifacts.Contains($artifactName)) {
+        $Artifacts.Add($artifactName)
+    }
+
+    if ($xml.DocumentElement.LocalName -eq "sitemapindex") {
+        foreach ($node in @($xml.SelectNodes("//*[local-name()='sitemap']/*[local-name()='loc']"))) {
+            $childPath = Get-SitemapChildPath -RootPath $fullPath -Location ([string]$node.InnerText.Trim())
+            if ($null -ne $childPath) {
+                Read-SitemapEntries -Path $childPath -Visited $Visited -Entries $Entries -Artifacts $Artifacts
+            }
+        }
+        return
+    }
+
+    if ($xml.DocumentElement.LocalName -ne "urlset") {
+        return
+    }
+
+    foreach ($node in @($xml.SelectNodes("//*[local-name()='url']"))) {
+        $values = @{}
+        foreach ($child in $node.ChildNodes) {
+            $values[$child.LocalName] = [string]$child.InnerText
+        }
+        $Entries.Add([PSCustomObject][ordered]@{
+                loc = if ($values.ContainsKey("loc")) { [string]$values["loc"] } else { "" }
+                lastmod = if ($values.ContainsKey("lastmod")) { [string]$values["lastmod"] } else { "" }
+                changefreq = if ($values.ContainsKey("changefreq")) { [string]$values["changefreq"] } else { "" }
+                priority = if ($values.ContainsKey("priority")) { [string]$values["priority"] } else { "" }
+            })
+    }
+}
+
 function Get-SitemapInfo {
     param([AllowEmptyString()][string]$Path)
 
     $info = [ordered]@{
         available = $false
         artifact = "sitemap.xml"
+        artifacts = @()
+        segmentCount = 0
         source = $script:SitemapSource
         sha256 = ""
         urlCount = 0
@@ -794,32 +886,27 @@ function Get-SitemapInfo {
         return [PSCustomObject]$info
     }
 
-    $xml = New-Object System.Xml.XmlDocument
-    $xml.Load($Path)
-    $entries = @()
-    foreach ($node in $xml.SelectNodes("//*[local-name()='url']")) {
-        $values = @{}
-        foreach ($child in $node.ChildNodes) {
-            $values[$child.LocalName] = [string]$child.InnerText
-        }
-        $entries += [PSCustomObject][ordered]@{
-            loc = [string]$values["loc"]
-            lastmod = [string]$values["lastmod"]
-            changefreq = [string]$values["changefreq"]
-            priority = [string]$values["priority"]
-        }
-    }
+    $entries = New-Object "System.Collections.Generic.List[object]"
+    $visited = New-Object "System.Collections.Generic.HashSet[string]"
+    $artifacts = New-Object "System.Collections.Generic.List[string]"
+    Read-SitemapEntries -Path $Path -Visited $visited -Entries $entries -Artifacts $artifacts
 
     $lastModifiedCounts = @{}
     $changeFrequencyCounts = @{}
     $priorityCounts = @{}
     foreach ($entry in $entries) {
         Add-Count $lastModifiedCounts $entry.lastmod
-        Add-Count $changeFrequencyCounts $entry.changefreq
-        Add-Count $priorityCounts $entry.priority
+        if (-not [String]::IsNullOrWhiteSpace($entry.changefreq)) {
+            Add-Count $changeFrequencyCounts $entry.changefreq
+        }
+        if (-not [String]::IsNullOrWhiteSpace($entry.priority)) {
+            Add-Count $priorityCounts $entry.priority
+        }
     }
 
     $info.available = $true
+    $info.artifacts = @($artifacts.ToArray() | Sort-Object)
+    $info.segmentCount = [Math]::Max(0, $artifacts.Count - 1)
     $info.sha256 = Get-FileSha256 $Path
     $info.urlCount = $entries.Count
     $info.duplicateUrlCount = @($entries | Group-Object loc | Where-Object { $_.Count -gt 1 }).Count

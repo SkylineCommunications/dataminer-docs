@@ -69,6 +69,10 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    - `docfx build --warningsAsErrors`
 
+   - `.\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json`
+
+   - `.\scripts\validate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -ReportPath .\_artifacts\segmented-sitemap-report.json`
+
    - `docfx serve _site`
 
 1. In a browser, go to <http://localhost:8080/> to preview the website.
@@ -131,6 +135,15 @@ Use the following deterministic sequence:
 
 1. Run `docfx build --warningsAsErrors`.
 
+1. Generate and validate the segmented sitemap output:
+
+   ```powershell
+   .\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json
+   .\scripts\validate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -ReportPath .\_artifacts\segmented-sitemap-report.json
+   ```
+
+   The root `sitemap.xml` remains the discovery URL listed in `robots.txt` and now indexes deterministic area/content-type segments. Page `lastmod` values come from the last Git commit that changed the source page. Generated API pages use the D2.3 provenance mapping when a repository source is available; external or unmapped generated outputs are recorded as gaps instead of receiving the deployment time.
+
 The DocFX build validates UIDs, TOC entries, cross-references, and Markdown integration. It does not replace metadata validation. For fields that cannot yet be confirmed, use the exact `unknown` or `not_applicable` sentinel required by the schema. Do not use an empty value or invent an owner.
 
 Treat warnings introduced by your change as failures. If the build reports a warning that predates your change, record it separately in the pull request and do not suppress it or describe it as fixed by the metadata check.
@@ -162,6 +175,10 @@ If you make repeated test builds to check changes you have made, and you are onl
       - `.\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json`
 
       - `docfx build --warningsAsErrors`
+
+      - `.\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json`
+
+      - `.\scripts\validate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -ReportPath .\_artifacts\segmented-sitemap-report.json`
 
       - `docfx serve _site`
 

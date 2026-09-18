@@ -195,7 +195,7 @@ references:
   name: Fixture root
   href: README.html
 '@
-    Write-TestFile $fixtureRoot "_site/sitemap.xml" @'
+    Write-TestFile $fixtureRoot "_site/sitemap-pages.xml" @'
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -205,6 +205,14 @@ references:
     <priority>0.5</priority>
   </url>
 </urlset>
+'@
+    Write-TestFile $fixtureRoot "_site/sitemap.xml" @'
+<?xml version="1.0" encoding="utf-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://docs.dataminer.services/sitemap-pages.xml</loc>
+  </sitemap>
+</sitemapindex>
 '@
 
     & $auditScript -RepositoryRoot $fixtureRoot -OutputPath $outputOne -SourceRevision "fixture"
@@ -217,7 +225,7 @@ references:
     $baseline = Get-Content -LiteralPath $outputOne -Raw | ConvertFrom-Json
     Assert-Condition ($baseline.schemaVersion -eq 2) "Baseline schema version was not updated."
     Assert-Condition ($baseline.generator.name -eq "scripts/audit-docs-baseline.ps1") "Generator identity was not recorded."
-    Assert-Condition ($baseline.generator.version -eq "1.1.0") "Generator version was not recorded."
+    Assert-Condition ($baseline.generator.version -eq "1.2.0") "Generator version was not recorded."
     Assert-Condition ($baseline.license.identifier -eq "CC BY-NC-ND 4.0") "License metadata was not recorded."
     Assert-Condition ($baseline.baseline.id -eq "D0.3") "Baseline identifier was not updated."
     Assert-Condition ($baseline.baseline.scope.generatedArtifacts.Count -eq 3) "Baseline scope was not recorded."
@@ -235,6 +243,7 @@ references:
     Assert-Condition ($baseline.generated.manifest.outputCount -eq 3) "Manifest output count was not recorded."
     Assert-Condition ($baseline.generated.xrefmap.referenceCount -eq 2) "xref map output was not read."
     Assert-Condition ($baseline.generated.sitemap.urlCount -eq 1) "Sitemap output was not read."
+    Assert-Condition ($baseline.generated.sitemap.segmentCount -eq 1) "Segmented sitemap output was not read."
     Assert-Condition ($baseline.configuration.docfx.available) "DocFX configuration was not read."
     Assert-Condition ($baseline.configuration.localBuildScript.available) "Local build script was not fingerprinted."
     Assert-Condition ($baseline.baseline.compatibilitySource -eq "xrefmap") "xref map was not selected as compatibility source."
