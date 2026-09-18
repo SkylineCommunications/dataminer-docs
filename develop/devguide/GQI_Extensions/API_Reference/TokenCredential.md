@@ -1,6 +1,6 @@
 ---
 uid: GQI_TokenCredential
-description: "API reference for the TokenCredential class, which contains an access token retrieved for a GQI extension."
+description: "API reference for the TokenCredential class, which represents token credentials retrieved for a GQI extension."
 ---
 
 # TokenCredential class
