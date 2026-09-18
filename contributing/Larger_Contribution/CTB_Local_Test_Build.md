@@ -205,6 +205,16 @@ Use the following deterministic sequence:
 
 1. Run `docfx build --warningsAsErrors`.
 
+1. Run the D4.1 quality gates against the generated D0.2 inventory:
+
+   ```powershell
+   npm install --global markdownlint-cli@0.45.0
+   .\scripts\audit-docs-baseline.ps1 -RepositoryRoot . -SitePath _site -OutputPath .\_artifacts\docs-corpus-baseline.generated.json -SourceRevision working-tree
+   .\scripts\validate-documentation-quality.ps1 -RepositoryRoot . -BaselinePath .\docs-corpus-baseline.json -CurrentBaselinePath .\_artifacts\docs-corpus-baseline.generated.json -BaseRevision main -ReportPath .\_artifacts\d4-1-quality-report.json
+   ```
+
+   The quality gate checks changed Markdown for Markdownlint errors, missing image alt text, noncanonical internal page links, and invalid version ranges. It also compares the generated UID and URL inventory with the D0.2 baseline. Existing exceptions are reported explicitly and are not silently treated as new failures.
+
 1. Generate and validate the segmented sitemap output:
 
    ```powershell

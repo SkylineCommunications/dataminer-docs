@@ -77,6 +77,20 @@ The D3.1 AI content manifest is generated at `_artifacts/ai-content-manifest.jso
 
 The workflow retains the commit-addressed D3.1 manifest for 90 days and, from the protected `main` branch in the canonical repository, publishes the same metadata-only file at `https://docs.dataminer.services/ai-content-manifest.json`. Pull requests may validate a generated copy but must not publish it to a public location. Consumers must treat the manifest as a discovery index and fetch the referenced source under its governing license rather than treating the manifest as a copy of the content. The root `llms.txt` file only discovers these public resources; it is not authoritative.
 
+## D4.1 documentation quality gates
+
+The CI workflow runs the existing D2.1 metadata validator and the D2.2 migration and identity checks. It then runs the D0.2 corpus audit and passes its generated compatibility and UID inventory to `scripts/validate-documentation-quality.ps1`. The quality gate does not create a second metadata schema or migration inventory.
+
+For changed Markdown files, the gate runs the pinned Markdownlint configuration and checks image alt text, canonical `xref:` links for internal pages, and single documentation version values. New duplicate UIDs, missing UIDs, removed UIDs, and changed published URLs fail the gate. Findings already present in the D0.2 baseline or unchanged from the comparison revision are retained in the D4.1 JSON report as `legacy_exception` findings and do not block the change. This makes existing legacy exceptions visible without changing their UIDs or URLs.
+
+DocFX warnings that predate a change remain reported separately in the D2.2 validation report and the pull request. The quality gate does not suppress, reclassify, or claim to fix those warnings.
+
+## External-link policy
+
+`scripts/check-external-links.ps1` produces a deterministic JSON report for external HTTP and HTTPS links. Each URL receives a 10-second timeout and two retries after the initial request. The report records the URL, source path and line, HTTP status, attempt count, and error. The checker skips fenced code blocks and deduplicates a URL within a source page.
+
+External-link failures do not block ordinary pull requests. Pull requests still retain the report for review. Scheduled runs and protected-main runs use the same policy with failure reporting enabled, and the external-link job is separate from documentation deployment. A transient public-site failure therefore cannot prevent ordinary contribution validation or deployment.
+
 ## Deployment deltas
 
 The D5.2 deployment delta is generated at `_artifacts/deployment-delta.json` by `scripts/generate-deployment-delta.ps1` and is validated against `contributing/metadata/deployment-delta-v1.schema.json`. It compares the current commit-addressed D3.1 manifest with the prior versioned manifest retrieved from protected-main workflow artifacts. The first deployment is safe when no prior artifact exists: the delta records the previous-manifest gap and additions rather than failing.
