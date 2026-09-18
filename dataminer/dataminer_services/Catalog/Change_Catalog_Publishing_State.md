@@ -1,7 +1,7 @@
 ---
 uid: Change_Catalog_Publishing_State
 reviewer: Alexander Verkest
-description: "Change a Catalog item's publishing state to make it public for all users or private for your organization using the UI or API."
+description: "Change a Catalog item's publishing state using the UI or API to make it public for all users or private for your organization."
 ---
 
 # Change the publishing state of a Catalog item
