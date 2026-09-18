@@ -1,6 +1,7 @@
 ---
 uid: Looking_up_an_item_in_the_catalog
 reviewer: Alexander Verkest
+description: "Look up a Catalog item by name or tag using the Catalog UI filters or GET API calls to retrieve item and version details."
 ---
 
 # Looking up an item in the Catalog

@@ -2,6 +2,7 @@
 uid: Register_Catalog_Item
 keywords: catalog, registration, manifest, upload, publish
 reviewer: Alexander Verkest
+description: "Register a Catalog item or version with the API by uploading a multipart ZIP package that includes the required manifest.yml file."
 ---
 
 # Registering a Catalog item
