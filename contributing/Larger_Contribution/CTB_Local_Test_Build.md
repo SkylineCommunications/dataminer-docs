@@ -275,6 +275,14 @@ Add `-IncludeSite` when you explicitly need to scan the complete rendered `_site
 
 1. Run `docfx build --warningsAsErrors`.
 
+1. Sanitize the generated public DocFX manifest before serving or packaging the site:
+
+   ```powershell
+   .\scripts\sanitize-public-manifest.ps1 -Path .\_site\manifest.json
+   ```
+
+   This removes checkout-root paths, runner details, and ambiguous empty `version` fields while preserving source-relative paths, output paths, and xref compatibility data.
+
 1. Run the D4.1 quality gates against the generated D0.2 inventory:
 
    <!-- documentation-safety: context=executable -->
@@ -333,6 +341,8 @@ If you make repeated test builds to check changes you have made, and you are onl
       - `Copy-Item .\_artifacts\ai-content-manifest.json .\ai-content-manifest.json -Force`
 
       - `docfx build --warningsAsErrors`
+
+      - `.\scripts\sanitize-public-manifest.ps1 -Path .\_site\manifest.json`
 
       - `.\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json`
 

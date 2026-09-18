@@ -169,7 +169,6 @@ DataMiner 10.6 introduced the fixture.
                 output = [ordered]@{
                     ".html" = [ordered]@{ relative_path = "develop/devguide/Automation/automation.html" }
                 }
-                version = ""
             },
             [ordered]@{
                 type = "Resource"
@@ -241,6 +240,7 @@ references:
     Assert-Condition ($baseline.generated.manifest.available) "Manifest output was not read."
     Assert-Condition ($baseline.generated.manifest.entryCount -eq 3) "Manifest entry count was not recorded."
     Assert-Condition ($baseline.generated.manifest.outputCount -eq 3) "Manifest output count was not recorded."
+    Assert-Condition ($baseline.generated.manifest.versionedEntries -eq 0) "Missing or empty manifest versions were not ignored."
     Assert-Condition ($baseline.generated.xrefmap.referenceCount -eq 2) "xref map output was not read."
     Assert-Condition ($baseline.generated.sitemap.urlCount -eq 1) "Sitemap output was not read."
     Assert-Condition ($baseline.generated.sitemap.segmentCount -eq 1) "Segmented sitemap output was not read."

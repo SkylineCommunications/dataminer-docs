@@ -681,7 +681,13 @@ function Get-ManifestInfo {
         if ($domain -ne "") {
             Add-Count $domainCounts $domain
         }
-        if (-not [String]::IsNullOrWhiteSpace([string]$entry.version)) {
+        $version = if (@($entry.PSObject.Properties.Name) -contains "version") {
+            [string]$entry.version
+        }
+        else {
+            ""
+        }
+        if (-not [String]::IsNullOrWhiteSpace($version)) {
             $info.versionedEntries++
         }
 
@@ -699,7 +705,13 @@ function Get-ManifestInfo {
     $info.available = $true
     $info.sha256 = Get-FileSha256 $Path
     $info.entryCount = $entries.Count
-    $info.sourceBasePathPresent = $null -ne $manifest.source_base_path
+    $sourceBasePath = if (@($manifest.PSObject.Properties.Name) -contains "source_base_path") {
+        $manifest.source_base_path
+    }
+    else {
+        $null
+    }
+    $info.sourceBasePathPresent = $null -ne $sourceBasePath
     $info.xrefmap = [string]$manifest.xrefmap
     $info.byType = ConvertTo-CountObject $typeCounts
     $info.byCategory = ConvertTo-CountObject $categoryCounts

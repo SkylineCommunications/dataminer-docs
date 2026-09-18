@@ -112,6 +112,9 @@ jobs:
       - name: Test LLM discovery
         run: .\scripts\test-llms-discovery.ps1
         shell: powershell
+      - name: Test public manifest sanitization
+        run: .\scripts\test-public-manifest.ps1
+        shell: powershell
       - name: Test documentation quality gates
         run: .\scripts\test-documentation-quality.ps1
         shell: powershell
@@ -177,6 +180,8 @@ jobs:
           .\scripts\generate-csharp-documentation-examples.ps1 -RepositoryRoot . -OutputPath .\_artifacts\csharp-documentation-examples -SourceRevision $env:GITHUB_SHA
           .\scripts\validate-csharp-documentation-examples.ps1 -RepositoryRoot . -Path .\_artifacts\csharp-documentation-examples\csharp-documentation-examples.json
           docfx build --warningsAsErrors
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .\scripts\sanitize-public-manifest.ps1 -Path .\_site\manifest.json
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           .\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json -SourceRevision $env:GITHUB_SHA
           .\scripts\validate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -ReportPath .\_artifacts\segmented-sitemap-report.json

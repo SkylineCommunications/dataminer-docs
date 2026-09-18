@@ -55,6 +55,17 @@ The D3.3 HTML source metadata file is generated at `_artifacts/html-source-metad
 
 The commit-pinned source link is supplemental. The existing human edit link remains available, and the pinned link is omitted when the build cannot identify an immutable commit. The rendered metadata identifies the documentation license as `CC BY-NC-ND 4.0` and the attribution as `Skyline Communications`.
 
+## Stable public endpoints
+
+The deployed site exposes the following stable machine-readable endpoints:
+
+- `https://docs.dataminer.services/manifest.json` is the sanitized DocFX build manifest. It contains public source-relative paths, generated output paths, and the xref map reference. The publication step removes checkout-root paths, runner details, and empty `version` fields. Treat only the documented public fields as a compatibility contract.
+- `https://docs.dataminer.services/xrefmap.yml` is the public cross-reference map. Use its UID-to-URL mappings for compatibility checks, and preserve public UIDs and URLs when pages move.
+- `https://docs.dataminer.services/sitemap.xml` is the public crawl and discovery index.
+- `https://docs.dataminer.services/ai-content-manifest.json` is the public version 1 metadata-only AI manifest described below. Its schema is available at `https://raw.githubusercontent.com/SkylineCommunications/dataminer-docs/main/contributing/metadata/ai-content-manifest-v1.schema.json`.
+
+The root `llms.txt` file discovers these endpoints but is not authoritative. Browser search JavaScript internals are not a public API. In particular, the Azure Search request, index name, fields, category rules, DOM selectors, and functions in `templates/skyline/public/search.js` may change without changing these endpoint contracts.
+
 ## Public metadata-only manifests
 
 A public metadata-only manifest is allowed in principle, but it is not a public copy of the documentation corpus. Each entry must include:
