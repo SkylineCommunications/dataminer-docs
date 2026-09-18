@@ -10,3 +10,5 @@ If you want to deploy a DataMiner System, you can choose between the following a
 - [**Create your DMS in the cloud**](xref:Creating_a_DMS_on_dataminer_services): Deploy a system using DataMiner as a Service (DaaS) in just a few clicks. Your system will be fully hosted and maintained by Skyline Communications.
 
 - [**Install a self-managed DataMiner Agent**](xref:Installing_a_DataMiner_Agent) on premises, in a public or private cloud, or in a hybrid setup. With this approach, you host and manage the DataMiner nodes yourself.
+
+This will create a single DataMiner node or "DataMiner Agent". [Additional nodes can be added later](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System) as needed, either using the same approach, or using a hybrid approach (i.e., nodes in the cloud combined with self-managed nodes).
