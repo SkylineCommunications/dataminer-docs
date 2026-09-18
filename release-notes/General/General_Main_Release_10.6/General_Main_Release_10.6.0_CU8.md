@@ -34,6 +34,14 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### DataMiner Installer: Perpetual STaaS systems will retain their configured DMA ID and use a supplied license file [ID 46102]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you configure a perpetual STaaS system using the DataMiner Installer, the configured DMA ID is now retained instead of being replaced with an ID returned by dataminer.services.
+
+Also, when the Installer is run in unattended mode, you will now be able to specify the optional `LicenseConfig.LicenseFilePath` setting in order to apply an existing *DataMiner.lic* file. The installer will then copy the license file to the DataMiner root folder and start DataMiner, without requiring you to generate and upload a *Request.lic* file.
+
 #### User-Defined APIs: UserDefinableApiEndpoint DxM health status is now reported to dataminer.services [ID 46356]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
@@ -105,3 +113,9 @@ Up to now, some errors encountered by *NATSMigration.exe* or *NATSRepair.exe* co
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 On systems using STaaS, up to now, ordering DOM entries by an optional field could throw a CRUD exception when one or more entries did not contain that field.
+
+#### SLSNMPManager could stop unexpectedly when testing a connection with SNMPv3 credentials [ID 46438]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, testing a connection that used SNMPv3 credentials from the Credential Library with SHA-224, SHA-256, SHA-384, or SHA-512 authentication could cause the SLSNMPManager process to stop unexpectedly.
