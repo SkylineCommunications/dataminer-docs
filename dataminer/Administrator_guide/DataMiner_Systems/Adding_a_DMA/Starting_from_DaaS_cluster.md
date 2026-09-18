@@ -160,4 +160,4 @@ description: Learn how to extend a DaaS-only DataMiner System into a hybrid clus
 
    1. Set *IP* to the IP address of the self-managed node you want to add, and click *Send Message*.
 
-1. Once the setup is fully functional, to improve security, update the connection string you configured earlier so it uses the `DataMinerAdmin` account instead of the `HybridAdmin` account, and then either remove the `HybridAdmin` user account or change its password.
+   1. Once the setup is fully functional, to improve security, update the connection string so it uses the `DataMinerAdmin` account instead of the `HybridAdmin` account, and then either remove the `HybridAdmin` user account or change its password.
