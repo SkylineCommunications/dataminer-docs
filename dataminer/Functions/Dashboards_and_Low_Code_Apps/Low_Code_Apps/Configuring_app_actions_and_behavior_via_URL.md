@@ -59,9 +59,9 @@ You can modify the behavior of an app by adding specific parameters to the URL.
 
   - [Node edge graph > *Show metric* setting](xref:DashboardNodeEdgeGraph#node-edge-graph-settings)
 
-  - [Parameter picker > Parameter table filter](xref:DashboardParameterPicker#configuring-the-component)
+  - [Parameter picker > Parameter table filter](xref:DashboardParameterPicker#supported-data-types)
 
-  - [Parameter picker > *Index filter separator* setting](xref:DashboardParameterPicker#configuring-the-component)
+  - [Parameter picker > *Index filter separator* setting](xref:DashboardParameterPicker#parameter-picker-settings)
 
 - `useNewIASInputComponents=true`: Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41495-->. Allows you to control whether the latest version of the interactive automation script UI is used for IAS components or when an interactive automation script is launched via the *Launch a script* event. When this parameter is set to "false", scripts will use the old UI. When it is set to "true", scripts will use the new UI.
 

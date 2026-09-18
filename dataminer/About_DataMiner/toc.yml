@@ -17,6 +17,8 @@ items:
     topicUid: DataMiner_compliance_offering
   - name: Evolution vs. optimization in software development
     topicUid: evolution_vs_optimization
+  - name: Architecture and components
+    topicUid: Overview_Architecture_and_components
   - name: Deployment models
     topicUid: Overview_hosting
     items:
@@ -104,29 +106,31 @@ items:
             - name: Services
               topicUid: Pricing_sizing_guide_services
               items:
-              - name: Data Plane
-                topicUid: Pricing_sizing_guide_services_data_plane
-              - name: Data Sources
-                topicUid: Pricing_sizing_guide_services_data_sources
-              - name: Automation
-                topicUid: Pricing_sizing_guide_services_automation
-              - name: Collaboration Services
-                topicUid: Pricing_sizing_guide_services_collaboration_services
-              - name: Storage as a Service
-                topicUid: Pricing_sizing_guide_services_StaaS
-              - name: DataMiner as a Service
-                topicUid: Pricing_sizing_guide_services_DaaS
-              - name: DataMiner Assistant
-                topicUid: Pricing_sizing_guide_services_DataMiner_Assistant
+                - name: Automation
+                  topicUid: Pricing_sizing_guide_services_automation
+                - name: Collaboration Services
+                  topicUid: Pricing_sizing_guide_services_collaboration_services
+                - name: Data Plane
+                  topicUid: Pricing_sizing_guide_services_data_plane
+                - name: Data Sources
+                  topicUid: Pricing_sizing_guide_services_data_sources
+                - name: DataMiner as a Service
+                  topicUid: Pricing_sizing_guide_services_DaaS
+                - name: DataMiner Assistant
+                  topicUid: Pricing_sizing_guide_services_DataMiner_Assistant
+                - name: Storage as a Service
+                  topicUid: Pricing_sizing_guide_services_StaaS
             - name: Solutions
               topicUid: Pricing_sizing_guide_solutions
               items:
-              - name: MediaOps Plan
-                topicUid: Pricing_sizing_guide_solutions_MediaOps_Plan
-              - name: Ticketing
-                topicUid: Pricing_sizing_guide_solutions_Ticketing
-              - name: Starlink
-                topicUid: Pricing_sizing_guide_solutions_Starlink
+                - name: InfraOps
+                  topicUid: Pricing_sizing_guide_solutions_InfraOps
+                - name: MediaOps Plan
+                  topicUid: Pricing_sizing_guide_solutions_MediaOps_Plan
+                - name: Starlink
+                  topicUid: Pricing_sizing_guide_solutions_Starlink
+                - name: Ticketing
+                  topicUid: Pricing_sizing_guide_solutions_Ticketing        
             - name: Use cases
               topicUid: Pricing_sizing_guide_use_cases
               items:

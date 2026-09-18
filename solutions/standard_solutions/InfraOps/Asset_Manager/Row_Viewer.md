@@ -1,5 +1,6 @@
 ---
 uid: Row_Viewer
+description: Go to the Row Viewer page and select a row. You will then get a front overview of all the racks present in the row you selected.
 ---
 
 # Row Viewer

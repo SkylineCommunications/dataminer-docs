@@ -5,21 +5,21 @@ description: Discover everything you need to know as a DataMiner administrator, 
 
 # Administrator guide
 
-<div class="row"> 
-  <div class="column">
-    <a href="/dataminer/Administrator_guide/DataMiner_System_Layout/DataMiner_System_Layout.html" title="System Layout" target="_self"><img src="~/dataminer/images/Docs_SystemLayout.svg" style="width:100%"></a>
-  </div>  
+<div class="row">
   <div class="column">
     <a href="/dataminer/Administrator_guide/DataMiner_Agents/DataminerAgents.html" title="DataMiner Agents" target="_self"><img src="~/dataminer/images/DataMiner_Agents.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer/Administrator_guide/DataMiner_Systems/About_DataMiner_Systems.html" title="DataMiner Systems" target="_self"><img src="~/dataminer/images/DataMiner_Systems.svg" style="width:100%"></a>
+    <a href="/dataminer/Administrator_guide/DataMiner_Systems/About_DataMiner_Systems.html" title="DataMiner clusters" target="_self"><img src="~/dataminer/images/DataMiner_Clusters.svg" style="width:100%"></a>
   </div>
+  <div class="column">
+    <a href="/dataminer/Administrator_guide/Failover/failover.html" title="Failover" target="_self"><img src="~/dataminer/images/Failover.svg" style="width:100%"></a>
+  </div>  
 </div>
 
 <div class="row"> 
   <div class="column">
-    <a href="/dataminer/Administrator_guide/Failover/failover.html" title="Failover" target="_self"><img src="~/dataminer/images/Failover.svg" style="width:100%"></a>
+    <a href="/dataminer/Administrator_guide/Modules/DataMiner_Modules.html" title="DataMiner modules" target="_self"><img src="~/dataminer/images/DataMiner_Modules.svg" style="width:100%"></a>
   </div>  
   <div class="column">
     <a href="/dataminer/Administrator_guide/NodeRecovery/NodeRecovery_About.html" title="Node Recovery" target="_self"><img src="~/dataminer/images/Node_Recovery.svg" style="width:100%"></a>

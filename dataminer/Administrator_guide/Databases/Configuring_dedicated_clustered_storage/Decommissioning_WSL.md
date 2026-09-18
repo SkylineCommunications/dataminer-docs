@@ -1,5 +1,6 @@
 ---
 uid: Decommissioning_WSL
+description: "Decommission WSL once you no longer need the local Cassandra and OpenSearch nodes on WSL so it no longer consumes any resources."
 ---
 
 # Decommissioning WSL

@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOpsLive_Tutorial_GenericMatrix_ProvisionEndpointsAndVirtualSignalGroups_Manual
+description: Learn how to manually provision endpoints and virtual signal groups for the Generic Matrix connector in the Virtual Signal Groups app.
 ---
 
 # Manually provisioning endpoints and virtual signal groups for a Generic Matrix element

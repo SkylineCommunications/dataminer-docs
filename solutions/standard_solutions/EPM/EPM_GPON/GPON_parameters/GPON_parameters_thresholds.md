@@ -1,5 +1,6 @@
 ---
 uid: xPON_parameters_thresholds
+description: Set xPON parameter thresholds on OLT elements to compare ONT values and flag OOS states so network issues can be detected and fixed as fast as possible.
 ---
 
 # EPM xPON parameter thresholds

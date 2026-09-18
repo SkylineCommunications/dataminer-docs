@@ -39,6 +39,7 @@ A `FieldDescriptor` object defines what a field of a `DomInstance` should look l
 - DateTime
 - TimeSpan
 - bool
+- List\<string> (available from DataMiner 10.6.9/10.7.0 onwards<!--RN 46051-->)
 
 > [!IMPORTANT]
 >
@@ -94,7 +95,7 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 Some `FieldDescriptors` offer the capability to store multiple values rather than a single one. Refer to the respective descriptor documentation to check if a specific descriptor provides this functionality and from which DataMiner version onwards it is supported.
 
-When configuring a `FieldDescriptor` to accommodate multiple values, adjust the type property to match the list variant of the underlying base type. For instance, change `Guid` to `List<Guid>`. When assigning values to a `DomInstance`, utilize the `AddOrUpdateListFieldValue` extension method to easily add a list of values to the instance.
+When configuring a `FieldDescriptor` to accommodate multiple values, adjust the type property to match the list variant of the underlying base type. For instance, change `Guid` to `List<Guid>`. From DataMiner 10.6.9/10.7.0 onwards<!--RN 46051-->, `FieldDescriptor` objects also support `List<string>`. When assigning values to a `DomInstance`, utilize the `AddOrUpdateListFieldValue` extension method to easily add a list of values to the instance.
 
 ```csharp
 var fieldDescriptor = new ResourceFieldDescriptor

@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_us_controller
+description: Discover the entire list of US Controller parameters available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – US Controller

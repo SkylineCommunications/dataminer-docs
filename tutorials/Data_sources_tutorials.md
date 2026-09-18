@@ -1,5 +1,6 @@
 ---
 uid: Data_sources_tutorials
+description: Discover all data sources tutorials. With this module and scripted connectors, you can create data sources able to retrieve data and send it to DataMiner.
 ---
 
 # Data Sources tutorials

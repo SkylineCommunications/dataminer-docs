@@ -1,6 +1,6 @@
 ---
 uid: Configuring_dedicated_clustered_storage
-description: If you choose self-managed storage instead of the recommended STaaS setup, you will need to configure dedicated clustered storage.
+description: "Explore how to configure dedicated clustered storage if you chose self-managed storage instead of the recommended STaaS setup."
 ---
 
 # Configuring dedicated clustered storage

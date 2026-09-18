@@ -73,3 +73,34 @@ When a replication buffer saves files to disk, those files are located in `C:\Sk
     >
     > - DataMiner can only flush the replication buffer if the replication connection for that specific subscription is active. If not, the flush will fail and the file will remain.
     > - Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+### Automatic cleanup of replication buffer files
+
+From DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45432-->, replication buffer files are automatically cleaned every 24 hours when replication buffering is enabled.
+
+During this cleanup, DataMiner removes the following files from the SLNet system cache:
+
+- Files that are still managed by the replication buffer but for which no connection was set up for the configured number of days.
+
+- Files that are no longer managed by the replication buffer and that have a last modified time that exceeds the configured number of days.
+
+  The retention period can be configured using the [`ReplicationBufferMaxDisconnectedTime` setting](xref:MaintenanceSettings.SLNet.ReplicationBufferMaxDisconnectedTime) in *MaintenanceSettings.xml*.
+
+### Manually triggering cleanup of replication buffer files
+
+From DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 45432-->, it is also possible to manually trigger a cleanup using the SLNetClientTest tool, regardless of whether replication buffering is enabled.
+
+To do so:
+
+1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+
+1. Go to the *Build Message* tab of the main window.
+
+1. In the *Message Type* dropdown list, select *DiagnoseMessage*.
+
+1. In the *ExtraInfo* field, specify `cleanup:<numberOfDays>`, where \<numberOfDays> is a value between 14 and 30. For example: `cleanup:20`.
+
+1. In the *Type* field at the bottom, select *ReplicationBufferStats*.
+
+> [!WARNING]
+> Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

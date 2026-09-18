@@ -11,6 +11,8 @@ DataMiner Maps is a DataMiner add-on module that allows you to visualize real-ti
 > - DataMiner clients cannot visualize maps without internet access.
 > - To use Google Maps, the Google Maps Platform license must be obtained. See also [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
 
+From DataMiner 10.6.7/10.7.0 onwards<!--RN 45521-->, the DataMiner Maps module is included in [DataMiner web upgrade packages](xref:Upgrading_Downgrading_Webapps), so it can be updated independently without requiring a full DataMiner upgrade.
+
 DataMiner Maps has a number of interesting features:
 
 - **Custom map layers**

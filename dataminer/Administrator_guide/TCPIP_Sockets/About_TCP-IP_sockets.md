@@ -1,5 +1,6 @@
 ---
 uid: About_TCP-IP_sockets
+description: "Configure a DataMiner Agent to forward alarm events and element/parameter data to third-party apps via TCP/IP sockets."
 ---
 
 # About TCP-IP sockets

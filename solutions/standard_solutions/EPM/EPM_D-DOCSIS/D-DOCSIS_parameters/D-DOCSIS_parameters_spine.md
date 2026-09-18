@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_parameters_spine
+description: Discover the entire list of Spine parameters that are available in the D-DOCSIS branch of the EPM Solution.
 ---
 
 # D-DOCSIS parameters – Spine

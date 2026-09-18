@@ -1,5 +1,6 @@
 ---
 uid: Failover_FAQ_what_if_DMA_restarted
+description: "Find out what happens if either the offline Agent or the online Agent is restarted in a Failover setup."
 ---
 
 # What happens if one of the DMAs is restarted in a Failover setup?

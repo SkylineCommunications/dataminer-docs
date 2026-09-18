@@ -1,5 +1,6 @@
 ---
 uid: Getting_Started_Tutorials
+description: Start your DataMiner journey with beginner-friendly tutorials to create your first element and build service-based system views.
 ---
 
 # Getting started tutorials

@@ -15,7 +15,9 @@ During its lifecycle, a test run can move through the following stages:
 
 1. **Initializing... (0)**
 
-   During initialization, QAOps downloads all required test packages from the Catalog or temporary storage and retrieves any provided .dmupgrade files.
+   During initialization, QAOps downloads all required test packages from the Catalog or temporary storage, retrieves any provided .dmupgrade files, and downloads and extracts any [supplementary files](xref:QAOps_Test_Package#accessing-supplementary-files).
+
+   If supplementary files were included in the request but the archive can no longer be retrieved, QAOps fails the run instead of executing tests without the required files.
 
 1. **Initialization completed (1)**
 

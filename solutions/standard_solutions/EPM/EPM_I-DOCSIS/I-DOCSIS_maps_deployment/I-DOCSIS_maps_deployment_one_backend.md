@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_maps_deployment_one_backend
+description: Learn how to deploy the Integrated DOCSIS EPM maps to a DataMiner System with one element using the Skyline EPM Platform DOCSIS connector.
 ---
 
 # Systems with one backend element

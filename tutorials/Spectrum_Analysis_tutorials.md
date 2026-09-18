@@ -1,5 +1,6 @@
 ---
 uid: Spectrum_Analysis_tutorials
+description: Discover all Spectrum Analysis tutorials. These will show you how to create presets, thresholds, scripts, and monitors to track signals.
 ---
 
 # Spectrum Analysis tutorials

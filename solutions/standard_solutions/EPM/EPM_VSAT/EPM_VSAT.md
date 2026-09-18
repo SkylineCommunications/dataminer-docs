@@ -1,5 +1,6 @@
 ---
 uid: EPM_VSAT
+description: Explore the VSAT branch of the EPM Solution, which is designed specifically to manage VSAT deployments.
 ---
 
 # EPM VSAT

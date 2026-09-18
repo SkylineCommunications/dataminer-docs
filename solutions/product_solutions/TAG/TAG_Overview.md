@@ -1,5 +1,6 @@
 ---
 uid: Overview_TAG_App
+description: Explore the DataMiner TAG Management app, which allows you to monitor and control individual TAG MCM devices and Media Control Systems.
 ---
 
 # The DataMiner TAG Management application

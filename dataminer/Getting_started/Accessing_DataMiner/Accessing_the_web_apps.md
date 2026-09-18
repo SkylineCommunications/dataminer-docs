@@ -55,7 +55,7 @@ The landing page header bar contains the following items, from left to right:
 
   - *Status*: Displays the current status of the various DataMiner services.
 
-  - *Feedback*: Allows you to provide direct feedback on DataMiner.
+  - *Feedback*: Allows you to provide direct feedback on your experience with DataMiner. From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45853-->, this option can also be used to report an issue.
 
   - *Support*: Displays contact information for DataMiner Support.
 

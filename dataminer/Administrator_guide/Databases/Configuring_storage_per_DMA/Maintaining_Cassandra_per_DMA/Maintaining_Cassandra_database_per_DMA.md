@@ -1,5 +1,6 @@
 ---
 uid: Maintaining_Cassandra_database_per_DMA
+description: "Find out how to configure backups of a Cassandra database per DMA and how to move a Cassandra database to a different drive."
 ---
 
 # Maintaining a Cassandra database per DMA

@@ -1,5 +1,6 @@
 ---
 uid: Dataminer_IT_Tool_Overview
+description: Use the DataMiner IT Tools (DITT) Solution to streamline the monitoring and diagnostic processes for connectivity within your system.
 ---
 
 # DataMiner IT Tools (DITT)

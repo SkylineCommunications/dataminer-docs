@@ -1,5 +1,6 @@
 ---
 uid: D-DOCSIS_components
+description: Discover the different components of an EPM D-DOCSIS deployment, from connectors to automation scripts, dashboards, visuals, and templates.
 ---
 
 # EPM D-DOCSIS components

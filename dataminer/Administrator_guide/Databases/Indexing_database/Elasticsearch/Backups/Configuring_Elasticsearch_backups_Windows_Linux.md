@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Elasticsearch_backups_Windows_Linux
+description: "Explore how you can set up and use Elasticsearch snapshots to make simple backups or to migrate data from one Elasticsearch cluster to another."
 ---
 
 # Taking and restoring snapshots

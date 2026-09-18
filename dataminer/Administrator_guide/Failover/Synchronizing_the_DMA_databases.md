@@ -1,5 +1,6 @@
 ---
 uid: Synchronizing_the_DMA_databases
+description: "Learn how to view synchronization info and manually synchronize DMA databases in a Failover setup via the Failover dialog box in Cube."
 ---
 
 # Synchronizing the DMA databases

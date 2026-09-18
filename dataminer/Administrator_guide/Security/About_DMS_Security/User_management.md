@@ -1,6 +1,6 @@
 ---
 uid: User_management
-description: DataMiner supports different types of directories for user management and also works with local users, including a built-in Administrator user
+description: "Configure DataMiner user management with directory integrations, local accounts, SSPI, SAML, RADIUS, MFA, and group-based permissions."
 ---
 
 # User management

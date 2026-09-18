@@ -19,9 +19,12 @@ uid: DOM_DevOps_installation
    <!-- - Excel import examples to ingest instances from a definition from a CSV file. -->
 
    > [!NOTE]
-   > To deploy the tool, pick the version that matches your DataMiner System. The versioning of the tools package indicates which **minimum version** of DataMiner is required.
+   > To deploy the tool, select the highest available version equal to or below your DataMiner version. The versioning of the tools package indicates which **minimum version** of DataMiner is required, so avoid selecting a tools package version that is higher than your DataMiner version.
    >
-   > For example, package version 10.3.3.x requires at least DataMiner 10.3.3, and package 10.4.1.x requires at least DataMiner 10.4.1.
+   > For example:
+   >
+   > - Package version 10.3.3.x requires at least DataMiner 10.3.3, and package 10.4.1.x requires at least DataMiner 10.4.1.
+   > - If DataMiner Main Release 10.5.0 is used, select the highest available tools package below 10.5.0, for example 10.4.4, as it is the latest compatible version.
 
    > [!IMPORTANT]
    > Make sure your DOM Editor version matches the DataMiner Agent version as closely as possible. If you use an outdated DOM Editor version on a more recent DMA, the configuration of DOM features that have been added in the meantime could get corrupted.

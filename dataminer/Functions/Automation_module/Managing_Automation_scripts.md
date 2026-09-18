@@ -106,11 +106,13 @@ You can change the name of a folder in the following ways:
 
 ## Importing and exporting automation scripts
 
-- To upload a locally stored XML file containing a script and add it to a folder, right-click the folder and select *Import*.
+- To **upload** a locally stored XML file containing a script and add it to a folder, right-click the folder and select *Import*.
 
-- To download a script as an XML file, right-click the script and select *Export*.
+- To **download** a script as an XML file, right-click the script and select *Export*.
 
-  Alternatively, you can also select the folder or script, click the More... button at the bottom of the pane, and select the *Import* or *Export* option there.
+  Alternatively, you can also select the folder or script, click the *More* button at the bottom of the pane, and select the *Import* or *Export* option there.
 
-> [!NOTE]
-> To import automation scripts, you need the user permission *Automation: Add*. To export automation scripts, you need the user permission *Automation: Edit*. See [DataMiner user permissions](xref:DataMiner_user_permissions).
+Note that **security restrictions** apply:
+
+- To import automation scripts, you need the user permission *Automation: Add*. To export automation scripts, you need the user permission *Automation: Edit*. See [DataMiner user permissions](xref:DataMiner_user_permissions).
+- From DataMiner 10.7.0/10.6.10 onwards<!--RN 44282--><!--RN 46229-->, if you import a script that uses [credentials](xref:Script_variables#creating-a-set-of-credentials) you do not have access to, those credentials are cleared. The script can then no longer be executed until you assign credentials you do have access to. See [Credentials Library](xref:Credentials_Library).

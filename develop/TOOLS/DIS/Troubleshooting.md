@@ -25,6 +25,7 @@ A big portion of our code has been extracted and put into [NuGet packages](xref:
 ## Common problems
 
 - [Licensing problem](xref:DIS_Troubleshooting_LicenseIssue)
+- [Account problem](xref:DIS_Troubleshooting_AccountIssue)
 - [DIS Inject problems](xref:DIS_Troubleshooting_DisInject)
 - [Package creation problems](xref:DIS_Troubleshooting_CompilationFailure)
 - [Publishing problems](xref:DIS_Troubleshooting_UploadFailure)

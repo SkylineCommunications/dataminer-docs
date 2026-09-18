@@ -1,5 +1,6 @@
 ---
 uid: EPM_D-DOCSIS
+description: Explore the D-DOCSIS branch of the EPM Solution, which is designed to manage DOCSIS deployments that rely on Distributed Access Architecture (DAA).
 ---
 
 # EPM D-DOCSIS

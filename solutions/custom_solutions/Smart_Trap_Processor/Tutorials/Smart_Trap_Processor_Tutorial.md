@@ -1,5 +1,6 @@
 ---
 uid: Smart_Trap_Processor_Tutorial
+description: Learn how to get started with the Smart Trap Processor tool and define rules for collecting and processing SNMP traps from various sources.
 ---
 
 # Getting started with the Smart Trap Processor

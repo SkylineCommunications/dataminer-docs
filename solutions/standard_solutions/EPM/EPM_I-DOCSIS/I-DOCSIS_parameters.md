@@ -1,8 +1,8 @@
 ---
 uid: I-DOCSIS_parameters
 keywords: I-DOCSIS parameters
+description: Discover the aggregated parameters for each topology level in the Integrated DOCSIS branch of the EPM Solution.
 ---
-
 
 # Available parameters in Integrated DOCSIS
 

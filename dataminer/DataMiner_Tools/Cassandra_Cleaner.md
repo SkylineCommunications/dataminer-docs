@@ -4,6 +4,9 @@ uid: Cassandra_Cleaner
 
 # Cassandra Cleaner
 
+> [!IMPORTANT]
+> This tool is deprecated. It was designed to work with a version of Cassandra that is currently no longer supported.
+
 ## About this tool
 
 This tool can be used to remove data from the Cassandra *timetrace* or *infotrace* table for a specific time range. This can be useful in case you urgently need to reclaim disk space on a DMA using a Cassandra database, and you do not want to wait for the TTL of the timetrace or infotrace data (which is by default set to 1 year) to expire.

@@ -1,5 +1,6 @@
 ---
 uid: Configuring_the_polling_request_timeout
+description: "Follow these instructions to configure the polling request timeout. Set server-side and client-side values for reliable DMA interconnection behavior."
 ---
 
 # Configuring the polling request timeout

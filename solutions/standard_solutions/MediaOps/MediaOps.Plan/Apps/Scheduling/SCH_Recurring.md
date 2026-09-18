@@ -1,5 +1,6 @@
 ---
 uid: SCH_Recurring
+description: Work with recurring jobs in the Scheduling app, and save time by not having to repeatedly create the same job.
 ---
 
 # Working with recurring jobs

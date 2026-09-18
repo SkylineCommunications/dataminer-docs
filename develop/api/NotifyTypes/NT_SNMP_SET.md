@@ -79,7 +79,7 @@ object[] result = (object[])protocol.NotifyProtocol(292/*NT_SNMP_SET*/, elementI
     > If a port is specified in elementInfo[1], then the value specified elementInfo[1] will have precedence over the one passed along in the dedicated field.
 
   - elementInfo[10] (int): timeout
-  - elementInfo[11] (string): Optional. GUID of entry in credentials library.<!-- RN 27275 -->
+  - elementInfo[11] (string): Optional. GUID of entry in Credentials Library.<!-- RN 27275 -->
 
     If you pass a GUID, you do not need to pass any credentials.
 

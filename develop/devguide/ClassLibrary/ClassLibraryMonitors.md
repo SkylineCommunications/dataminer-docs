@@ -28,3 +28,4 @@ More information is available in the following sections:
 - <xref:ClassLibraryMonitorsCleanupRules>
 - <xref:ClassLibraryMonitorsStartingAStartedMonitor>
 - <xref:ClassLibraryMonitorsStoppingAStoppedMonitor>
+- <xref:ClassLibraryMonitorsCurrentValues>

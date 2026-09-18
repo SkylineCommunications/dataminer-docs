@@ -1,5 +1,6 @@
 ---
 uid: I-DOCSIS_Create_CCAP_CM_pair
+description: Learn how to create CCAP/CM pairs, either by creating a single CCAP/CM pair at a time, or by creating elements in bulk from a CSV file.
 ---
 
 # Creating a new CCAP/CM pair

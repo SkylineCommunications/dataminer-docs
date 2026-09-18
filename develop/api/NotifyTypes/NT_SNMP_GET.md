@@ -119,7 +119,7 @@ if (response.Length == 1)
     > [!NOTE]
     > Apart from the maximum value of an Int32 (2^31-1), there are no constraints as to the maximum value you can specify. You should therefore use this option with caution. The higher this value is set, the higher the stress on the network and the device in question.
 
-  - elementInfo[14] (string): Optional. GUID of entry in credentials library.<!-- RN 27275 -->
+  - elementInfo[14] (string): Optional. GUID of entry in Credentials Library.<!-- RN 27275 -->
 
     If you pass a GUID, you do not need to pass any credentials.
 

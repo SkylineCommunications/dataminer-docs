@@ -1,5 +1,6 @@
 ---
 uid: Rack_View
+description: Go to the Rack View to get a realistic view of your physical racks, assign assets to specific slots, and reserve one or more slots.
 ---
 
 # Rack View

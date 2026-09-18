@@ -1,5 +1,6 @@
 ---
 uid: Advanced_Failover_options
+description: "Configure advanced Failover options to choose switching type, set heartbeat checks, and optimize synchronization for reliable DMA switchover."
 ---
 
 # Advanced Failover options

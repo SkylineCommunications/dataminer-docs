@@ -1,5 +1,6 @@
 ---
 uid: Security_Cassandra_TLS
+description: "Encrypt Cassandra traffic with TLS, configure trusted certificates, and secure client and inter-node communication for protected DataMiner access."
 ---
 
 # Encryption in Cassandra

@@ -1,5 +1,6 @@
 ---
 uid: Preparing_the_two_DataMiner_Agents
+description: "Prepare the two DataMiner Agents for Failover by verifying DMA roles, IP or hostname setup, required ports, and database and authentication readiness."
 ---
 
 # Preparing the two DataMiner Agents
@@ -79,7 +80,7 @@ If you want to add the Failover pair to a DataMiner System that uses STaaS, firs
 
 ### Dedicated clustered storage
 
-1. Make sure that the Agents to be added can reach the Cassandra cluster through ports 9042 or 9142 when using TLS.
+1. Make sure that the Agents to be added can reach the Cassandra cluster through port 9042 (also when using TLS).
 
 1. Make sure that the Agents to be added can reach the OpenSearch or Elasticsearch cluster through port 9200.
 

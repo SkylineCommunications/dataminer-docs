@@ -1,5 +1,6 @@
 ---
 uid: BPA_Check_Cluster_SLNet_Connections
+description: "Learn about the 'SLNet connections between the DataMiner Agents' BPA test and how you can interpret its results."
 ---
 
 # SLNet connections between the DataMiner Agents

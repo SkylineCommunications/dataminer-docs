@@ -39,14 +39,14 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
    - [System configuration > Cloud gateway > Disconnect from DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--disconnect-from-clouddcp)
 
    If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
-   
+
    > [!TIP]
    > See also: [User rights](xref:User_rights)
 
 1. On the System Center \> *Cloud* page, click the *Connect* button. A pop-up browser window will open.
 
    > [!NOTE]
-   > Internet Explorer is not supported for this. If your default browser is Internet Explorer, we recommend that you change to a different browser in order to continue with this procedure.
+   > This requires general access to the internet. If you cannot access Cube on a computer with direct access to the internet, copy the URL from the header bar of the pop-up window before you log in, and then browse to that URL from a computer with general access to the internet.
 
 1. Specify the following information in the pop-up window:
 

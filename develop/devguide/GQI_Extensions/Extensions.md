@@ -16,3 +16,4 @@ There are currently two ways to extend the Generic Query Interface:
 > - [Extension libraries](xref:GQI_Extension_Libraries)
 > - [API reference](xref:GQI_GenIfRowMetadata)
 > - [Best practices for developing GQI extensions](xref:GQI_Extensions_Best_Practices)
+> - [Services in GQI extensions](xref:GQI_Extensions_Services)

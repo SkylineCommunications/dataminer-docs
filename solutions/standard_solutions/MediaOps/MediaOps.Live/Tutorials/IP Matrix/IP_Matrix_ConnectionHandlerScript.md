@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOpsLive_IPMatrix_ConnectionHandlerScript
+description: Learn how to create a MediaOps Live connection handler script that will detect and manage connections between endpoints for an IP Matrix element.
 ---
 
 # Creating a connection handler script for an IP Matrix element
@@ -78,12 +79,12 @@ public class Script
 {
     public void Run(IEngine engine)
     {
-        var handler = new Generic_Matrix_ConnectionHandler();
+        var handler = new IPMatrix_ConnectionHandler();
         handler.Execute(engine);
     }
 }
 
-public class Generic_Matrix_ConnectionHandler : ConnectionHandler
+public class IPMatrix_ConnectionHandler : ConnectionHandler
 {
 
 }
@@ -148,7 +149,7 @@ public override void ProcessParameterUpdate(IEngine engine, IConnectionHandlerEn
 
     var elementId = update.DmsElementId;
     var destinationEndpoint = connectionEngine.Api.Endpoints.GetByElement(elementId)
-        .SingleOrDefault(e => e.Role == Role.Destination);
+        .SingleOrDefault(e => e.Role == EndpointRole.Destination);
 
     if (destinationEndpoint == null)
     {
@@ -169,8 +170,7 @@ public override void ProcessParameterUpdate(IEngine engine, IConnectionHandlerEn
 
         if (isConnected)
         {
-            var multicast = new Multicast(multicastIp);
-            var sourceEndpoint = connectionEngine.Api.Endpoints.GetByMulticasts(new[] { multicast })
+            var sourceEndpoint = connectionEngine.Api.Endpoints.GetByTransportMetadata(TsoipTransportType.FieldNames.MulticastIp, multicastIp)
                 .SingleOrDefault();
 
             if (sourceEndpoint != null)

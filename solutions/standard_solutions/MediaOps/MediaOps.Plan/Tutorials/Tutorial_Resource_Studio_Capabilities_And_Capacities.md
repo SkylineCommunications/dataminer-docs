@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
+description: Learn how to model real devices in the Resource Studio app, making use of capabilities and capacities.
 ---
 
 # Assigning capabilities to resources

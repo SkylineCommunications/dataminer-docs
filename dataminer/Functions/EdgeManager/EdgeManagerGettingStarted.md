@@ -18,7 +18,7 @@ When the DxM has been installed, in the Windows services overview, you should se
 
 ## On-premises setup
 
-To allow DataMiner to access a data source in a remote location via the Site Manager, the following steps are needed:
+To allow DataMiner to access a data source in a remote location via Edge Manager, the following steps are needed:
 
 ### [Windows](#tab/windows)
 

@@ -1,5 +1,6 @@
 ---
 uid: Availability_Overview
+description: Explore the EPM Availability Solution, which allows you to streamline the management of a large number of devices and endpoints.
 ---
 
 # EPM Availability

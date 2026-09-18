@@ -1,5 +1,6 @@
 ---
 uid: Stack_Data_Aggregation
+description: Explore how different DataMiner modules use data aggregation to turn raw data into actionable insights. 
 ---
 
 # Data Aggregation

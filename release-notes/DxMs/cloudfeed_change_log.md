@@ -4,6 +4,14 @@ uid: cloudfeed_change_log
 
 # Cloud Feed change log
 
+#### 9 July 2026 - Enhancement - CloudFeed 1.4.9: Enhanced handling of files in use during upgrades [ID 45965]
+
+From now on, the *Windows Restart Manager* will be enabled when installing the CloudFeed DxM. This will prevent unnecessary delays caused by files still in use by the CloudFeed instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
+
+#### 25 June 2026 - Enhancement - CloudFeed 1.4.8 - Upgrade to .NET 10
+
+DataMiner CloudFeed has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
+
 #### 2 April 2025 - Fix - CloudFeed 1.4.4 - Problem during startup caused by inability to contact CloudGateway [ID 42599]
 
 <!-- MR 10.5.0 [CU3] - FR 10.5.6 -->

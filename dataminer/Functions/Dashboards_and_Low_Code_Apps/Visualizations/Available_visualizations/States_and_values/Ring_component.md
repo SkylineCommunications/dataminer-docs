@@ -19,7 +19,7 @@ To configure the component:
 
    - In case parameter data included a parameter based on a protocol, a filter can be used to filter on a specific element.
 
-   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view information on aggregation rules on specific views. To select these, in the dropdown box for the parameter data source, select *View*.
+   - You can select view parameters as a data source to view information on aggregation rules on specific views. To do so, in the dropdown box for the parameter data source, select *View*.
 
    > [!NOTE]
    > Once this component has been configured with data input, the exposed data will appear as [component data](xref:Component_Data) in the *Data* pane and can be used by other components. This way, if the input for this component changes, the exposed data will update automatically for all components that use it as their data input.
@@ -30,7 +30,7 @@ To configure the component:
 
    - In case the component displays more than one item, in the *Settings* pane, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all the above together. Note that view parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
 
-   - To customize the value range of the component, in the *Settings* pane, select *Fixed minimum* and/or *Fixed maximum* and specify the custom minimum and/or maximum. This option is available from DataMiner 10.2.0/10.1.6 onwards.
+   - To customize the value range of the component, in the *Settings* pane, select *Fixed minimum* and/or *Fixed maximum* and specify the custom minimum and/or maximum.
 
 1. Fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
@@ -55,14 +55,14 @@ To configure the component:
 
      - *Show progress*: Only available if the component displays an analog parameter. In that case, a darker color within the ring will indicate the current parameter value.
 
-     - *Show minimum*: Available from DataMiner 10.2.0/10.1.6 onwards. Select this option to show the minimum value of the value range below the ring. Note that this value can be customized in the component settings.
+     - *Show minimum*: Select this option to show the minimum value of the value range below the ring. Note that this value can be customized in the component settings.
 
-     - *Show maximum*: Available from DataMiner 10.2.0/10.1.6 onwards. Select this option to show the maximum value of the value range below the ring. Note that this value can be customized in the component settings.
+     - *Show maximum*: Select this option to show the maximum value of the value range below the ring. Note that this value can be customized in the component settings.
 
      - *Show icon*: Determines whether an icon is displayed for the parameter. You can select which icon is displayed in a dropdown list.
 
        For trended parameters, by default a trend icon is displayed. Clicking this icon will open the corresponding trend graph in the Monitoring app.
 
-     - *Design*: Available from DataMiner 10.2.0/10.1.6 onwards. Determines how the text in the component is displayed. The options *Small* and *Large* show the text in a small and large font size, respectively. If you select *Auto size*, the font size will automatically be adjusted to fit in the available space.
+     - *Design*: Determines how the text in the component is displayed. The options *Small* and *Large* show the text in a small and large font size, respectively. If you select *Auto size*, the font size will automatically be adjusted to fit in the available space.
 
-     - Alignment: Available from DataMiner 10.2.0/10.1.6 onwards. Only displayed if *Design* is set to *Small* or *Large*. Allows you to align the contents of the components to the left, in the center or to the right.
+     - *Alignment*: Only displayed if *Design* is set to *Small* or *Large*. Allows you to align the contents of the components to the left, in the center or to the right.

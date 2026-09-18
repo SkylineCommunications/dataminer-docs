@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_components
 keywords: I-DOCSIS components
+description: Discover the different components of an EPM I-DOCSIS deployment, from connectors to automation scripts, dashboards, and visuals.
 ---
 
 # EPM Integrated DOCSIS components

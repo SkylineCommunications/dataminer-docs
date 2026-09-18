@@ -1,5 +1,6 @@
 ---
 uid: Accessing_Ping_Monitoring
+description: Access the Ping Monitoring tool by selecting the Ping Monitor button in the Other apps section of the DataMiner root page.
 ---
 
 # Accessing the Ping Monitoring tool

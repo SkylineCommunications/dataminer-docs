@@ -1,5 +1,6 @@
 ---
 uid: How_to_NevionVideoIPath_App
+description: Explore the different pages and panels of the Nevion Video IPath app, which allows you to control Sony's Nevion VideoIPath SDN controller.
 ---
 
 # Using the Nevion Video IPath app

@@ -266,9 +266,9 @@ With this setup, any push with new content (including the initial creation) to t
 
 If you have used the Skyline.DataMiner.VisualStudioTemplates, your project can include a complete GitHub workflow for Catalog publishing. This comprehensive GitHub workflow adheres to Skyline Communications' quality standards, including static code analysis, custom validation, and unit testing.
 
-1. Make sure you have a **SonarCloud organization**.
+1. Optionally, make sure you have a **SonarCloud organization**.
 
-   If you do not have one yet, you can create it on [sonarcloud.io](https://sonarcloud.io/create-organization).
+   SonarCloud static code analysis is optional but recommended. If you want to enable it and do not have an organization yet, you can create it on [sonarcloud.io](https://sonarcloud.io/create-organization).
 
 1. Create a GitHub repository by going to *Git* > *Create Git Repository* in Visual Studio, selecting GitHub, and filling in the wizard before clicking *Create and Push*.
 

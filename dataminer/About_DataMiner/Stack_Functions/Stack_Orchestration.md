@@ -1,5 +1,6 @@
 ---
 uid: Stack_Orchestration
+description: Explore the Orchestration stack, which focuses on maximizing efficiency with powerful automation and orchestration.
 ---
 
 # Orchestration

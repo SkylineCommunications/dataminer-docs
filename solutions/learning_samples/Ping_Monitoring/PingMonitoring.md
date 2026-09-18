@@ -1,5 +1,6 @@
 ---
 uid: PingMonitoring
+description: Explore the Ping Monitoring tool, a web application designed to simplify the monitoring of your network infrastructure and services.
 ---
 
 # Ping Monitoring tool

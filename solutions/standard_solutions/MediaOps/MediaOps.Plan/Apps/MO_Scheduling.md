@@ -1,5 +1,6 @@
 ---
 uid: MO_Scheduling
+description: Explore the Scheduling app, which allows you to schedule and orchestrate resources and workflows using jobs.
 ---
 
 # Scheduling

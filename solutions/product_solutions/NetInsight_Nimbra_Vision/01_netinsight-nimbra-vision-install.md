@@ -1,5 +1,6 @@
 ---
 uid: netinsight-nimbra-vision-install
+description: Deploy the DataMiner NetInsight Nimbra Vision solution from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the DataMiner NetInsight Nimbra Vision app

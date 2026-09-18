@@ -26,6 +26,9 @@ Importing a dashboard or low-code app fails with an error when connected to an A
    1. Check whether **Account status** is **OK**.
    1. If either of these statuses has a different value, sign in again.
 
+      > [!NOTE]
+      > If your account status is *Invalid account* even though the Skyline API status is *OK* and the account login status is *Connected*, refer to [Account problem](xref:DIS_Troubleshooting_AccountIssue).
+
 1. Go to [admin.dataminer.services](https://admin.dataminer.services) and confirm that the signed-in account is part of the expected organization.
 
 1. Make sure that your DataMiner user account is linked to your dataminer.services account:

@@ -4,7 +4,7 @@ uid: DMS_SNMP_NOTIFICATION
 
 # DMS_SNMP_NOTIFICATION (73)
 
-> [!WARNING]
+> [!IMPORTANT]
 > The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.
 
 Sends an SNMP trap or inform message.

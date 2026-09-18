@@ -1,5 +1,6 @@
 ---
 uid: Configuring_the_database_settings_in_Cube
+description: "Configure the database settings for your dedicated clustered storage in DataMiner Cube if you chose not to use the recommended STaaS setup."
 keywords: local database
 ---
 

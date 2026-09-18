@@ -1,5 +1,6 @@
 ---
 uid: Configuring_MySQL_database_in_Cube
+description: "Follow these steps to configure the database settings in System Center if you are still using a legacy setup with a MySQL or MSSQL database."
 keywords: local database
 ---
 

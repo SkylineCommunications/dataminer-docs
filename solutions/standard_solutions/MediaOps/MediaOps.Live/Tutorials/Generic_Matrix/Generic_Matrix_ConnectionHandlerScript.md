@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_MediaOpsLive_GenericMatrix_ConnectionHandlerScript
+description: Learn how to build a MediaOps Live connection handler script responsible for detecting and managing connections between endpoints for a specific connector.
 ---
 
 # Creating a connection handler script for a Generic Matrix element
@@ -151,7 +152,7 @@ public override void ProcessParameterUpdate(IEngine engine, IConnectionHandlerEn
             var outputIdentifier = Convert.ToString(row[0]);
             var inputIdentifier = Convert.ToString(row[5]);
 
-            var output = connectionEngine.Api.Endpoints.GetByRoleElementAndIdentifier(Role.Destination, elementId, outputIdentifier)
+            var output = connectionEngine.Api.Endpoints.GetByRoleElementAndIdentifier(EndpointRole.Destination, elementId, outputIdentifier)
                 ?? throw new InvalidOperationException($"Destination endpoint '{outputIdentifier}' not found for element '{elementId}'.");
 
             if (String.IsNullOrWhiteSpace(inputIdentifier))
@@ -161,7 +162,7 @@ public override void ProcessParameterUpdate(IEngine engine, IConnectionHandlerEn
                 continue;
             }
 
-            var input = connectionEngine.Api.Endpoints.GetByRoleElementAndIdentifier(Role.Source, elementId, inputIdentifier);
+            var input = connectionEngine.Api.Endpoints.GetByRoleElementAndIdentifier(EndpointRole.Source, elementId, inputIdentifier);
 
             if (input != null)
             {
@@ -181,7 +182,7 @@ public override void ProcessParameterUpdate(IEngine engine, IConnectionHandlerEn
         {
             var outputIdentifier = Convert.ToString(row[0]);
 
-            var output = connectionEngine.Api.Endpoints.GetByRoleElementAndIdentifier(Role.Destination, elementId, outputIdentifier)
+            var output = connectionEngine.Api.Endpoints.GetByRoleElementAndIdentifier(EndpointRole.Destination, elementId, outputIdentifier)
                 ?? throw new InvalidOperationException($"Destination endpoint '{outputIdentifier}' not found for element '{elementId}'.");
 
             updatedConnections.Add(new ConnectionUpdate(output, isConnected: false));
