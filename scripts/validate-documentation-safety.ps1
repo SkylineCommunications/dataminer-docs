@@ -113,6 +113,14 @@ function Test-TextFile {
     return $script:TextExtensions -contains ([IO.Path]::GetExtension($Path).ToLowerInvariant())
 }
 
+function Test-DocumentationSourcePath {
+    param([Parameter(Mandatory = $true)][string]$RelativePath)
+
+    $normalized = $RelativePath.Replace("\", "/")
+    return $normalized -match "^[^/]+\.md$" -or
+        $normalized -match "^(contributing|dataminer|develop|release-notes|solutions|tutorials)/.+\.md$"
+}
+
 function Test-PathGlob {
     param(
         [Parameter(Mandatory = $true)][string]$RelativePath,
@@ -155,6 +163,9 @@ function Get-SourceMarkdownPaths {
         foreach ($diffPath in $diffPaths) {
             $relative = ([string]$diffPath).Replace("\", "/").Trim()
             if ([String]::IsNullOrWhiteSpace($relative)) {
+                continue
+            }
+            if (-not (Test-DocumentationSourcePath -RelativePath $relative)) {
                 continue
             }
 
