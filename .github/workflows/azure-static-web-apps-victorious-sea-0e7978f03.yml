@@ -121,6 +121,17 @@ jobs:
       - name: Test internal topic packs
         run: .\scripts\test-internal-topic-packs.ps1
         shell: powershell
+      - name: Test XML documentation examples
+        run: .\scripts\test-xml-documentation-examples.ps1
+        shell: powershell
+      - name: Download pinned XML documentation schemas
+        run: .\scripts\download-xml-documentation-schemas.ps1 -RepositoryRoot . -OutputRoot .\_artifacts\xml-schemas
+        shell: powershell
+      - name: Validate XML documentation examples
+        run: |
+          .\scripts\generate-xml-documentation-examples.ps1 -RepositoryRoot . -SchemaRoot .\_artifacts\xml-schemas -OutputPath .\_artifacts\xml-documentation-examples.json -SourceRevision $env:GITHUB_SHA -RequireSchemaSources
+          .\scripts\validate-xml-documentation-examples.ps1 -RepositoryRoot . -Path .\_artifacts\xml-documentation-examples.json
+        shell: powershell
       - name: Test segmented sitemaps
         run: .\scripts\test-segmented-sitemaps.ps1
         shell: powershell
@@ -196,6 +207,12 @@ jobs:
         with:
           name: csharp-documentation-examples-${{ github.sha }}
           path: _artifacts/csharp-documentation-examples/csharp-documentation-examples.json
+          retention-days: 14
+      - name: Retain XML documentation example report
+        uses: actions/upload-artifact@v7
+        with:
+          name: xml-documentation-examples-${{ github.sha }}
+          path: _artifacts/xml-documentation-examples.json
           retention-days: 14
       - name: Retain commit-addressed AI content manifest
         if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
