@@ -108,6 +108,59 @@ If the current lock state cannot be retrieved, the item will be available in rea
 > [!IMPORTANT]
 > All lock-aware automation scripts in Scheduling and Workflow Designer now require a `Lock ID` input. This includes scripts for creating, editing, and deleting jobs, managing contacts, and building or deleting workflows. If you call these scripts directly or use custom automation built on them, update these calls to provide the new mandatory parameter. Pass `/` when no lock is held.
 
+#### Plan API: Renamed public types [ID 46527]
+
+Several public types in the MediaOps Plan DevPack have been renamed. The namespaces, visibility, sealed or abstract status, and base classes remain unchanged.
+
+The following types in the `Skyline.DataMiner.Solutions.MediaOps.Plan.Exceptions` namespace have been renamed:
+
+- Job timing errors:
+
+  - `JobTimingChangeNotAllowedError` to `JobTimingChangedNotAllowedError`
+  - `JobEndChangeNotAllowedError` to `JobEndChangedNotAllowedError`
+  - `JobStartChangeNotAllowedError` to `JobStartChangedNotAllowedError`
+  - `JobPreRollStartChangeNotAllowedError` to `JobPreRollStartChangedNotAllowedError`
+  - `JobPostRollEndChangeNotAllowedError` to `JobPostRollEndChangedNotAllowedError`
+
+- Node graph errors
+
+  - `JobNodeSwapNotAllowedError` to `JobNodeSwappedNotAllowedError`
+  - `WorkflowNodeSwapNotAllowedError` to `WorkflowNodeSwappedNotAllowedError`
+  - `JobNodeGraphConnectionWithInvalidNodeError` to `JobNodeGraphInvalidConnectionNodeError`
+  - `WorkflowNodeGraphConnectionWithInvalidNodeError` to `WorkflowNodeGraphInvalidConnectionNodeError`
+
+- Resource Studio errors:
+
+- `ConfigurationInvalidDefaultDiscreetError` to `ConfigurationInvalidDefaultDiscreteError`
+- `ResourcePoolNotFoundPoolLinkError` to `ResourcePoolPoolLinkNotFoundError`
+- `ResourcePoolInvalidStatePoolLinkError` to `ResourcePoolInvalidPoolLinkStateError`
+- `ResourcePoolSelfReferencePoolLinkError` to `ResourcePoolSelfReferencingPoolLinkError`
+
+The following model types in the `Skyline.DataMiner.Solutions.MediaOps.Plan.API` namespace have also been renamed:
+
+- `Discreet<T>` to `Discrete<T>`
+- `TextDiscreet` to `TextDiscrete`
+- `NumberDiscreet` to `NumberDiscrete`
+
+The `Discreet` to `Discrete` rename also affects the signatures of the following public members:
+
+- `DiscreteTextConfiguration.DefaultValue`: `TextDiscreet` changes to `TextDiscrete`
+- `DiscreteTextConfiguration.Discretes`: `IReadOnlyCollection<TextDiscreet>` changes to `IReadOnlyCollection<TextDiscrete>`
+- `DiscreteTextConfiguration.AddDiscrete(TextDiscreet)` changes to `AddDiscrete(TextDiscrete)`
+- `DiscreteTextConfiguration.RemoveDiscrete(TextDiscreet)` changes to `RemoveDiscrete(TextDiscrete)`
+- `DiscreteTextConfiguration.SetDiscretes(ICollection<TextDiscreet>)` changes to `SetDiscretes(ICollection<TextDiscrete>)`
+- `DiscreteNumberConfiguration.DefaultValue`: `NumberDiscreet` changes to `NumberDiscrete`
+- `DiscreteNumberConfiguration.Discretes`: `IReadOnlyCollection<NumberDiscreet>` changes to `IReadOnlyCollection<NumberDiscrete>`
+- `DiscreteNumberConfiguration.AddDiscrete(NumberDiscreet)` changes to `AddDiscrete(NumberDiscrete)`
+- `DiscreteNumberConfiguration.RemoveDiscrete(NumberDiscreet)` changes to `RemoveDiscrete(NumberDiscrete)`
+- `DiscreteNumberConfiguration.SetDiscretes(ICollection<NumberDiscreet>)` changes to `SetDiscretes(ICollection<NumberDiscrete>)`
+- `DiscreteTextConfigurationSetting.Value`: `TextDiscreet` changes to `TextDiscrete`
+- `DiscreteNumberConfigurationSetting.Value`: `NumberDiscreet` changes to `NumberDiscrete`
+- The `==`, `!=`, and `Equals(Discreet<T>)` operators on `Discreet<T>` change to `Discrete<T>` equivalents
+
+> [!IMPORTANT]
+> You will need to update consumer code that references the old names before upgrading to MediaOps Plan 2.0.0. The error renames can also affect runtime behavior for code that filters by type.  A call such as `OfType<JobEndChangeNotAllowedError>()` against a dynamically loaded assembly will not fail to compile, but it will no longer match.
+
 ### Enhancements
 
 #### DevPack: API enhancement to improve type-checking and casting for Capacity and Configuration classes [ID 45715]
