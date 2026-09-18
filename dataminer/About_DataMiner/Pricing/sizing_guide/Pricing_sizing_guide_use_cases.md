@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_use_cases
+description: "Use these use cases to understand how a particular technology or operational scenario maps to service consumption, and to cross-check your own estimates."
 ---
 
 # Sizing guide: Use cases

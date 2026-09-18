@@ -1,5 +1,6 @@
 ---
 uid: Pricing_sizing_guide_services_automation
+description: "Use this Automation sizing guide to estimate script runs and object creation actions, then choose monthly volumes based on your profile."
 ---
 
 # Sizing guide: Automation

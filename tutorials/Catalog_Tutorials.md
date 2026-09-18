@@ -1,5 +1,6 @@
 ---
 uid: Catalog_Tutorials
+description: Explore quick tutorials to register and update DataMiner Catalog items with the Catalog API and GitHub Actions.
 ---
 
 # Catalog tutorials

@@ -1,5 +1,6 @@
 ---
 uid: UD_APIs_Troubleshooting
+description: "Troubleshoot User-Defined APIs by checking endpoint logs, IIS routing, service health, NATS communication, and DxM compatibility."
 ---
 # Troubleshooting User-Defined APIs
 
@@ -47,13 +48,37 @@ subgraph "Core DataMiner"
 end
 ```
 
+## IIS rewrite rule checks
+
+> [!NOTE]
+> The service-side rewrite rule checks described in this section are available from DataMiner 10.6.10/10.7.0 onwards<!-- RN46143 -->. In earlier DataMiner versions, the installer performs these checks during installation or upgrade instead. See [Installer-based checks in older versions](#installer-based-checks-in-older-versions) for the corresponding messages and behavior.
+
+If API requests fail, check `UserDefinableApiEndpoint.txt` for errors related to rewrite rule validation or repair. For the rewrite rule configuration and `RewriteRuleHealthInfo` statuses, see [IIS rewrite rule](xref:UD_APIs_UserDefinableApiEndpoint#iis-rewrite-rule). Common causes include:
+
+- The configured IIS site does not exist.
+- The Kestrel HTTP URL or the IIS configuration is invalid.
+- The service account does not have the required access.
+- The API folder `web.config` cannot be read or updated.
+
+### Installer-based checks in older versions
+
+In DataMiner versions prior to 10.6.10/10.7.0, the installer creates and validates the IIS rewrite rule during installation or upgrade. It does not continue checking the rule while the endpoint service is running. If you change the Kestrel port, you have to update the rewrite rule manually. See [Configuring the rewrite rule for older versions](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-rewrite-rule-for-older-versions).
+
+- **Found rewrite rule, but it has inconsistencies:**
+
+  The log lines below this message identify the inconsistencies. The rewrite rule forwards requests received on port 80 or 443 to the UserDefinableApiEndpoint DxM, so its target port must match the port configured in the DxM settings.
+
+- **Port X is in use, this will cause the IIS rewrite rule to be disabled and User Definable APIs to be unusable.**
+
+  When no rewrite rule is found, the installer creates one. If the installer detects that another process is using the configured port, it creates the rule in a disabled state to avoid routing requests to an unknown process. Configure the other process or the DxM to use a different port, then enable the rewrite rule with the matching port.
+
 ## Installation issues
 
 The errors in this section can be generated when the UserDefinableApiEndpoint DxM is installed via a DataMiner upgrade package. These will be visible in the upgrade log during the upgrade and also in the `UserDefinableApiEndpoint.txt` log file as mentioned above under [Logging](#logging).
 
 - **Could not find AspNetCore installed on this system**
 
-  The required ASP.NET Core version must be installed, depending on the [DxM version](xref:UD_APIs_UserDefinableApiEndpoint#versions). DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer will generate this error. .NET 8 must be installed manually.
+  The required ASP.NET Core version must be installed, depending on the [DxM version](xref:UD_APIs_UserDefinableApiEndpoint#versions). DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer will generate this error. Other .NET versions must be installed manually.
 
   To fix this:
 
@@ -67,16 +92,6 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
   1. Under *ASP.NET Core Runtime x.x.x*, select *Hosting Bundle*.
 
   1. On the DMA, go to the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\` and run the installer `DataMiner UserDefinableApiEndpoint X.X.X.X.msi`.
-
-- **Found rewrite rule, but it has inconsistencies:**
-
-  If you find this error in the logging, the log lines below it will contain the inconsistencies of the IIS rewrite rule. This rewrite rule forwards requests coming in on port 80 or 443 to the UserDefinableApiEndpoint DxM. It should contain the correct port that the DxM is using. The installer will always verify if the port mentioned in the rewrite rule matches the one configured in the [settings of the DxM](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-dxm).
-
-- **Port X is in use, this will cause the IIS rewrite rule to be disabled and User Definable APIs to be unusable.**
-
-  When no rewrite rule is found in IIS, a new one will be created. When the installer detects that a process is already using the port configured in the [settings of the DxM](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-dxm), it will create the rule in a disabled state and log this message. This is done to prevent opening up access to an unknown process. The UserDefinableApiEndpoint DxM will not be able to start as long as the port is not free.
-
-  In this situation, you can either configure the current process to use another port, or configure the UserDefinableApiEndpoint DxM to use another port. For more information, see [Kestrel](xref:UD_APIs_UserDefinableApiEndpoint#kestrel). Make sure to enable the rewrite rule with the port reflecting the one configured in the DxM settings.
 
 - **Files are still locked after 60 seconds. Continuing installation, but this may fail. Processes locking the files:**
 
@@ -113,9 +128,7 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 If issues occur when you trigger a user-defined API, follow the steps below to resolve them.
 
-1. Make sure the **IIS rewrite rule** is set correctly.
-
-   Verify if the IIS rewrite rule that should redirect incoming HTTP requests to the UserDefinableEndpoint DxM contains the correct configuration. Make sure that the port in this rule matches the port used by the DxM. For more information, see [Kestrel](xref:UD_APIs_UserDefinableApiEndpoint#kestrel).
+1. Check the [IIS rewrite rule checks](#iis-rewrite-rule-checks) and `UserDefinableApiEndpoint.txt` for validation or repair errors.
 
 1. Make sure **bindings are created in IIS**.
 

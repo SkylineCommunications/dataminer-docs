@@ -1,6 +1,7 @@
 ---
 uid: Analytics_Tutorials
 keywords: augmented operations tutorials
+description: Discover all Analytics tutorials. DataMiner Analytics leverages state-of-the-art big data and artificial intelligence technology for several features.
 ---
 
 # DataMiner Analytics tutorials

@@ -1,5 +1,6 @@
 ---
 uid: Stack_Augmented_Operations
+description: Explore the DataMiner Augmented Operations. They capture, correlate, and analyze all data sources using state-of-the-art big data and AI technology.
 ---
 
 # Augmented Operations

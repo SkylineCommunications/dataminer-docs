@@ -1,5 +1,6 @@
 ---
 uid: NodeRecovery_Settings
+description: "Customize Node Recovery settings like heartbeat intervals, outage thresholds, logging, and trigger scripts to tune cluster monitoring and resilience."
 ---
 
 # Node Recovery settings

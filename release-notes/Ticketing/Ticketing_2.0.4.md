@@ -4,6 +4,9 @@ uid: Ticketing_2.0.4
 
 # Ticketing 2.0.4
 
+> [!IMPORTANT]
+> This version of the Ticketing Solution can only be used on a DataMiner System using [Storage as a Service](xref:STaaS) (with self-managed DataMiner nodes or [DaaS](xref:DaaS_hosting)). Systems with self-managed data storage are not supported.
+
 ## Prerequisites
 
 - **DataMiner 10.5.9/10.6.0** or higher must be installed.

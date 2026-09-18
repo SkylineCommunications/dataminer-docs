@@ -1,5 +1,6 @@
 ---
 uid: WFD_Workflow_States
+description: Explore the different states that can be assigned to a workflow. Newly created it has the Draft state, and ready to be used it has the Complete state.
 ---
 
 # MediaOps workflow States

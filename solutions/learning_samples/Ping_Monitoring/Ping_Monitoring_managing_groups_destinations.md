@@ -1,5 +1,6 @@
 ---
 uid: Ping_Monitoring_managing_groups_destinations
+description: Use the Groups and Destinations pages in the Ping Monitoring tool to manage groups and destinations.
 ---
 
 # Managing groups and destinations

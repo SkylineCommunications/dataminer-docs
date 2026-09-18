@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_parameters_node_segment
 keywords: I-DOCSIS parameters
+description: Discover all the Node Segment parameters available in the Integrated DOCSIS branch of the EPM Solution from version 6.1.5 onwards.
 ---
 
 # Integrated DOCSIS parameters – Node Segment

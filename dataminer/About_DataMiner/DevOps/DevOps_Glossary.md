@@ -1,5 +1,6 @@
 ---
 uid: DevOps_Glossary
+description: Learn the DevOps terminology — from Advocate, over Agile mindset and DevOps Professional Program, to Transformational technology.
 ---
 
 # Glossary

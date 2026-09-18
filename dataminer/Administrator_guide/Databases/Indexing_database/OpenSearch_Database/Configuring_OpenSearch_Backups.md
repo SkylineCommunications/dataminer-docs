@@ -1,5 +1,6 @@
 ---
-uid:  Configuring_OpenSearch_Backups
+uid: Configuring_OpenSearch_Backups
+description: "Follow these instructions to set up and use an OpenSearch snapshot to back up and restore OpenSearch data."
 ---
 
 # Configuring OpenSearch backups

@@ -1,5 +1,6 @@
 ---
 uid: Enabling_TLS_encryption
+description: "Enable TLS encryption for serial communication by placing a PKCS12 server.pfx certificate on each DMA and configuring TLS in SLNetClientTest."
 ---
 
 # Enabling TLS encryption for serial communication

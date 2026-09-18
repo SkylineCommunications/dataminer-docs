@@ -1,5 +1,6 @@
 ---
 uid: Defining_connectivity_chains_in_XML_files
+description: "Learn how to configure connectivity chains by defining XML files with links and mappings to control network paths."
 ---
 
 # Defining connectivity chains in XML files

@@ -1,5 +1,6 @@
 ---
 uid: About_DMA_Failover
+description: "Discover how DMA Failover works by teaming a DataMiner Agent with a backup DMA that takes over automatically or manually when needed."
 ---
 
 # About DMA Failover

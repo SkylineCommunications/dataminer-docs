@@ -1,6 +1,7 @@
 ---
 uid: Correlation_Tutorials
 keywords: correlation
+description: "Learn how to build DataMiner correlation rules that detect events early and trigger automated actions."
 ---
 
 # DataMiner Correlation tutorials

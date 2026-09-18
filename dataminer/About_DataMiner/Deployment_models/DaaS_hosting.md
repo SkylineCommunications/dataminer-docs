@@ -1,6 +1,6 @@
 ---
 uid: DaaS_hosting
-description: DataMiner as a Service will allow you to spin up your DataMiner System in the cloud in just a few minutes with cloud-hosted DataMiner nodes.
+description: Explore how DataMiner as a Service will allow you to spin up your DataMiner System in the cloud in just a few minutes with cloud-hosted DataMiner nodes.
 ---
 
 # DataMiner as a Service

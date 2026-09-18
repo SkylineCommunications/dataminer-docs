@@ -1,6 +1,6 @@
 ---
 uid: Overview_hosting
-description: DataMiner's architecture makes it extremely resilient to all types of failures, also because this architecture has no single point of failure.
+description: Explore the DataMiner deployment models. The core software can be deployed as a managed service (DaaS) or via private cloud or on-premises deployment.
 ---
 
 # DataMiner deployment models

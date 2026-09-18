@@ -1,5 +1,6 @@
 ---
 uid: EPM_xPON
+description: Explore the xPON branch of the EPM Solution, which is designed to manage Gigabit Passive Optical Network (xPON) deployments.
 ---
 
 # EPM xPON

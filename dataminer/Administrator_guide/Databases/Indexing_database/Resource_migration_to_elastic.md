@@ -1,5 +1,6 @@
 ---
 uid: Resources_migration_to_elastic
+description: "Follow these instructions to migrate the resources and resource pools from the Resources.xml file to the indexing database."
 ---
 
 # Migrating SRM resources to the indexing database

@@ -1,5 +1,6 @@
 ---
 uid: Web_File_Manager
+description: Use the Web File Manager app to upload and manage image files, which can then be used in the Facility Manager app for floor and room plans.
 ---
 
 # Web File Manager

@@ -1,5 +1,6 @@
 ---
 uid: SolEPM
+description: Explore the EPM Solution, which is designed to manage very high volumes of entities in cable, telecom, terrestrial, and satellite environments.
 ---
 
 # EPM Solution

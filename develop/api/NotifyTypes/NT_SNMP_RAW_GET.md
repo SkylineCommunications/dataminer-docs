@@ -122,7 +122,7 @@ else
 
     - settings[8] (bool): (Optional.) Split errors from values. Default: false.
 
-    - settings[9] (string): Optional. GUID of entry in credentials library.<!-- RN 27275 -->
+    - settings[9] (string): Optional. GUID of entry in Credentials Library.<!-- RN 27275 -->
 
       If you pass a GUID, you do not need to pass any credentials.
 

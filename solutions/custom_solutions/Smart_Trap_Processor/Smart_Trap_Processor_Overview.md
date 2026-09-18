@@ -1,5 +1,6 @@
 ---
 uid: Smart_Trap_Processor_Overview
+description: Understand how the Smart Trap Processor captures, filters, and correlates SNMP traps so teams can monitor events and reduce alert fatigue.
 ---
 
 # The Smart Trap Processor Tool

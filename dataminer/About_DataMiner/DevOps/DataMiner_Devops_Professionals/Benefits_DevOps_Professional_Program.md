@@ -1,5 +1,6 @@
 ---
 uid: Benefits_DevOps_Professionals_Program
+description: Explore the key benefits of the DataMiner DevOps Professional Program, from exclusive support and content access to valuable credits and rewards.
 ---
 
 # Benefits for members of the DevOps Professional Program

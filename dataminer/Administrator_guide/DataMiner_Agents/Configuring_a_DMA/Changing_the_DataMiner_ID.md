@@ -1,5 +1,6 @@
 ---
 uid: Changing_the_DMA_ID
+description: "On a new DMA, change the DataMiner ID in DataMiner.xml, then restart DataMiner to apply the new ID safely."
 ---
 
 # Changing the DataMiner ID of a DMA

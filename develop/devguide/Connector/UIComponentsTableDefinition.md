@@ -6,7 +6,7 @@ uid: UIComponentsTableDefinition
 
 ![DataMiner Cube table](~/develop/images/uiX_-_table.png "DataMiner Cube table")
 
-To define a table, create a parameter of type "array" that represents the table.
+To define a table, create a parameter of type [array](xref:Protocol.Params.Param.Type#array) that represents the table.
 
 Example:
 
@@ -26,12 +26,9 @@ Example:
 </Param>
 ```
 
-The ArrayOptions tag contains all the columns (through ColumnOption child tags) that refer to other parameters (via the pid attribute).
+The [ArrayOptions](xref:Protocol.Params.Param.ArrayOptions) tag specifies the columns via [ColumnOption](xref:Protocol.Params.Param.ArrayOptions.ColumnOption) child tags. The [ColumnOption@type](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type) attribute specifies the type of the column.
 
-> [!NOTE]
-> The column containing the primary keys must be of Interprete/Type "string". Refer to [Primary keys](xref:UIComponentsTablePrimaryKeys).
-
-For each table column, an additional parameter is defined.
+For each table column, an additional parameter is defined which is referred to via the [ColumnOption@pid](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-pid) attribute.
 
 ```xml
 <Param id="1001" trending="false">
@@ -91,9 +88,9 @@ For each table column, an additional parameter is defined.
 ```
 
 > [!NOTE]
-> Tables can also be used to hold data while the table should not be displayed on a page and should also not be available in the SLElement process. In case of such internal tables, it is important to set RTDisplay of the table parameter and the column parameters to "false" in order to avoid the table being loaded in the SLElement process.
+> Tables can also be used to hold data while the table should not be displayed on a page and should also not be available in the SLElement process. In case of such internal tables, it is important to set [RTDisplay](xref:Protocol.Params.Param.Display.RTDisplay) of the table parameter and the column parameters to `false` in order to avoid the table being loaded in the SLElement process.
 
-The table parameter has an ArrayOptions tag that refers to the column parameters and defines the order of the columns (through the idx attribute).
+The table parameter has an ArrayOptions tag that refers to the column parameters and defines the order of the columns through the [idx](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-idx) attribute.
 
 > [!NOTE]
 > The idx attribute defines the order in which the columns are stored. The order in which the columns are displayed can be different (this is defined in the options attribute of the Type tag in the Measurements tag).
@@ -125,3 +122,4 @@ In order to create a writable column, create an additional parameter of type "wr
 > - Typically, a fixed offset is used between the parameter IDs of write parameters and the corresponding read parameters (e.g., 100 in the example above).
 > - For more information about executing a QAction on a row change of a table, see [Executing a QAction on a row change](xref:LogicQActionsExecution#executing-a-qaction-on-a-row-change).
 > - From DataMiner 10.4.9/10.5.0 onwards<!--RN 39836-->, the maximum number of rows in a volatile table is limited to 1,005,000. Beyond this limit, you will be unable to add new rows. A warning will be displayed at 805,000 rows to notify you that you are approaching this limit. The maximum number of rows in a non-partial table is limited to 105,000. Beyond this limit, you will be unable to add new rows. A warning will be displayed at 85,000 rows to notify you that you are approaching this limit.
+> - The column containing the primary keys must be of Interprete/Type "string". Refer to [Primary keys](xref:UIComponentsTablePrimaryKeys).

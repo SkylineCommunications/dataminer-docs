@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.2.0_fixes
+status: archived
 ---
 
-# General Main Release 10.2.0 - Fixes
+# General Main Release 10.2.0 - Fixes [ARCHIVED]
 
 #### Problem when deleting an element that had data stored in Elasticsearch \[ID 27663\]
 

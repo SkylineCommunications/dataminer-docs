@@ -1,5 +1,6 @@
 ---
 uid: evolution_vs_optimization
+description: Explore the two key approaches to enhancing software systems — evolution and optimization. They serve distinct purposes and operate in different ways.
 ---
 
 # Evolution vs. optimization in software development

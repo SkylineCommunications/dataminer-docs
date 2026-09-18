@@ -1,5 +1,6 @@
 ---
 uid: Automatically_generating_service_RCA_chains_based_on_connectivity
+description: "Explore how you can have RCA chains generated automatically for elements in a service, based on connectivity."
 ---
 
 # Automatically generating service RCA chains based on connectivity

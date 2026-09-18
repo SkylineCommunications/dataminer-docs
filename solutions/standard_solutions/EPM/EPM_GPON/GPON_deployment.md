@@ -1,5 +1,6 @@
 ---
 uid: xPON_deployment
+description: Deploy and configure all components of the EPM xPON Solution after checking whether all prerequisites are met.
 ---
 
 # EPM xPON deployment

@@ -1,6 +1,7 @@
 ---
 uid: Setting_up_an_offload_database
 keywords: central database
+description: "Set up an offload database of type MySQL, MSSQL, or Oracle, and configure the server, database tables, and DMA connection settings."
 ---
 
 # Setting up an offload database

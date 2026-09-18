@@ -26,6 +26,12 @@ uid: General_Feature_Release_10.6.3
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.3](xref:Web_apps_Feature_Release_10.6.3).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+## Important changes
+
+The following change may have an impact on your system, so please make sure to check this before you upgrade:
+
+- [Protocols: As many SLScripting processes as SLProtocol processes by default [ID 44420]](#protocols-as-many-slscripting-processes-as-slprotocol-processes-by-default-id-44420)
+
 ## Highlights
 
 - [DataMiner Object Models: Fine-grained security on instance level [ID 44233]](#dataminer-object-models-fine-grained-security-on-instance-level-id-44233)

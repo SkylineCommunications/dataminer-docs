@@ -19,6 +19,8 @@ Even though DIS is freely available, it can occur that the license check fails.
 
    If not, check if you are using the right credentials.
 
+1. In the DIS settings, check your account status: if the account status is *Invalid account* even though the Skyline API status is *OK* and the account login status is *Connected*, refer to [Account problem](xref:DIS_Troubleshooting_AccountIssue).
+
 1. If the issue persists, check if your PC is still in sync with the time server.
 
    Try disabling the synchronization and enabling it again, because the information shown by Windows is not always correct.

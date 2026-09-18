@@ -1,6 +1,6 @@
 ---
 uid: Cloud_connectivity_and_security
-description: Security is built into the core design of the DataMiner Cloud Connectivity framework, so you can securely access the wealth of cloud features.
+description: "Configure DataMiner cloud connectivity and security with HTTPS, WSS, TLS 1.2, secure tokens, and outgoing access to dataminer.services."
 keywords: cloud security
 ---
 
@@ -51,6 +51,7 @@ Only outgoing traffic needs to be allowed through for the domain *.dataminer.ser
 
 > [!NOTE]
 >
+> - If your DataMiner System uses [Storage as a Service (STaaS)](xref:Setting_up_StaaS), **additional Skyline-managed storage endpoints** must be reachable on top of the dataminer.services endpoints listed above. These depend on the region your system is registered for. For the STaaS network requirements, refer to the [STaaS prerequisites](xref:Setting_up_StaaS#prerequisites).
 > - Technical details of this implementation may be subject to change, as we regularly review our security implementations.
 > - Users can disconnect their system from dataminer.services at any given time. For more information, please refer to [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 

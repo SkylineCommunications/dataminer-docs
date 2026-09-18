@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.1.0_new_features_5
+status: archived
 ---
 
-# General Main Release 10.1.0 - New features_5
+# General Main Release 10.1.0 - New features_5 [ARCHIVED]
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
@@ -281,7 +282,7 @@ It is now possible to have a DMS connect to the nodes of a remote ElasticSearch 
 
 This message will add the IP addresses of the remote ElasticSearch nodes to the db.xml file.
 
-#### Replacing Automation script DLL dependencies \[ID 26605\]
+#### Replacing automation script DLL dependencies \[ID 26605\]
 
 It is now possible to replace an automation script DLL dependency from an automation script by sending an UploadScriptDependencyMessage.
 

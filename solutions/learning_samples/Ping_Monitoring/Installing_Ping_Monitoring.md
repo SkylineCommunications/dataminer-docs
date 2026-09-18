@@ -1,5 +1,6 @@
 ---
 uid: Installing_Ping_Monitoring
+description: Deploy the Ping Monitoring tool from the DataMiner Catalog after checking whether the prerequisites are met.
 ---
 
 # Installing the Ping Monitoring tool

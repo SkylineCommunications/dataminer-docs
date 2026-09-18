@@ -1,7 +1,7 @@
 ---
 uid: Dedicated_clustered_storage
 keywords: Cassandra Cluster
-description: Though this is not recommended, DataMiner supports self-managed dedicated clustered storage using Cassandra and OpenSearch.
+description: "Learn about dedicated clustered storage for DataMiner, the self-managed alternative to the default Storage as a Service."
 ---
 
 # Dedicated clustered storage
@@ -83,7 +83,7 @@ To achieve geo-redundancy and reduce latency between DMAs deployed across the gl
 
 Failover setups with Amazon Keyspaces Service, Azure Managed Instance for Apache Cassandra Service, and Amazon OpenSearch Service are considered deprecated as of DataMiner 10.3.0 [CU9]/10.3.12. If you want to use cloud storage, we recommend switching to [Storage as a Service (STaaS)](xref:STaaS), which includes geo-redundant options.
 
-The figure below illustrates the recommended minimum setup for geo-redundancy with on-premises machines. For Cassandra, the built-in [NetworkTopologyStrategy](https://cassandra.apache.org/doc/4.0/cassandra/cql/ddl.html#networktopologystrategy) is used to configure geo-redundancy. For OpenSearch, one cluster is configured for which the nodes are spread over three zones, two of which host the data, while the third zone has a single node that does not handle any data and functions as a tie-breaker for cluster configuration. The tie-breaker node can be cloud-hosted if the latency is sufficiently low (below 50 ms). To ensure that OpenSearch understands which node is a data node on which location, [shard allocation awareness](https://opensearch.org/docs/2.12/tuning-your-cluster/#advanced-step-6-configure-shard-allocation-awareness-or-forced-awareness) must be configured.
+The figure below illustrates the recommended minimum setup for geo-redundancy with on-premises machines. For Cassandra, the built-in [NetworkTopologyStrategy](https://cassandra.apache.org/doc/5.0/cassandra/developing/cql/ddl.html#networktopologystrategy) is used to configure geo-redundancy. For OpenSearch, one cluster is configured for which the nodes are spread over three zones, two of which host the data, while the third zone has a single node that does not handle any data and functions as a tie-breaker for cluster configuration. The tie-breaker node can be cloud-hosted if the latency is sufficiently low (below 50 ms). To ensure that OpenSearch understands which node is a data node on which location, [shard allocation awareness](https://opensearch.org/docs/2.12/tuning-your-cluster/#advanced-step-6-configure-shard-allocation-awareness-or-forced-awareness) must be configured.
 
 ![Recommended minimum setup for a geo-redundant system](~/dataminer/images/min-setup-for-geo-redunant-system.png)<br>
 *Recommended minimum setup for a geo-redundant system*

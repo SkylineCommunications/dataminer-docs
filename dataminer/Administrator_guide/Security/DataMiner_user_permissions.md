@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_user_permissions
-description: With the user permissions in the Cube System Center, you can fine-tune which users and groups have access to specific DataMiner functionality.
+description: "Fine-tune which users and groups have access to specific DataMiner functionality using the user permissions in the Cube System Center."
 ---
 
 # DataMiner user permissions
@@ -1088,14 +1088,14 @@ Permission to access the Database page in System Center.
 
 #### Modules \> System configuration \> Database \> Configure local/general DB
 
-Permission to change the settings of the general database. Prior to DataMiner 10.1.0/10.1.2, this is called the local database.
+Permission to change the settings of the general database. In legacy DataMiner versions, this was called the local database.
 
 > [!NOTE]
 > This user permission is not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, it is no longer displayed in such a system.<!-- RN 39870 -->
 
 #### Modules \> System configuration \> Database \> Configure central/offload DB
 
-Permission to change the settings of the offload database. Prior to DataMiner 10.1.0/10.1.1, this is called the central database.
+Permission to change the settings of the offload database. In legacy DataMiner versions, this was called the central database.
 
 ### Modules \> System configuration \> Indexing engine
 
@@ -1250,15 +1250,15 @@ Permission to access the *System settings* page in System Center.
 
 #### Modules \> System configuration \> System settings \> Credentials library \> Add library credentials
 
-Permissions to add predefined credentials in the credentials library.
+Permissions to add predefined credentials in the Credentials Library.
 
 #### Modules \> System configuration \> System settings \> Credentials library \> Edit library credentials
 
-Permissions to edit credentials in the credentials library.
+Permissions to edit credentials in the Credentials Library.
 
 #### Modules \> System configuration \> System settings \> Credentials library \> Delete library credentials
 
-Permissions to delete credentials from the credentials library.
+Permissions to delete credentials from the Credentials Library.
 
 ### Modules \> System configuration \> System settings \> Manage client versions
 

@@ -1,5 +1,6 @@
 ---
 uid: Configuring_alarm_storm_prevention_for_notifications
+description: "Configure alarm storm prevention for notifications in DataMiner to limit alert floods at system, user, and group levels."
 ---
 
 # Configuring alarm storm prevention for notifications

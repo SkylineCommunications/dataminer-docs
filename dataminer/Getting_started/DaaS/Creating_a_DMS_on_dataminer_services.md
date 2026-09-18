@@ -6,7 +6,7 @@ description: To create a new DaaS system, go to dataminer.services, click Add Da
 
 # Creating a new DMS on dataminer.services
 
-<!-- Watch this short video to learn how to create a new DataMiner System hosted on dataminer.services, or follow the steps below:
+Watch this short video to learn how to create a new DataMiner System hosted on dataminer.services, or follow the steps below:
 
 <div style="width: 100%; max-width: 800px;">
   <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
@@ -14,7 +14,7 @@ description: To create a new DaaS system, go to dataminer.services, click Add Da
   </video>
 </div>
 
-<br /> -->
+<br />
 
 1. [Log on to dataminer.services](xref:Logging_on_to_dataminer_services).
 

@@ -1,5 +1,6 @@
 ---
 uid: netinsight-nimbra-vision-overview
+description: Explore the DataMiner Nimbra Vision solution, which allows end-to-end monitoring and orchestration of NetInsight Nimbra networks.
 ---
 
 # NetInsight Nimbra Vision

@@ -1,5 +1,6 @@
 ---
 uid: Performance_Analyzer_LCA
+description: Explore the Performance Analyzer app, which allows you to visualize the data collected by the Performance Analyzer Solution.
 ---
 
 # Performance Analyzer app

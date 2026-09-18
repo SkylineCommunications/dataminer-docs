@@ -1,5 +1,6 @@
 ---
 uid: Deleting_a_user_group
+description: "In the Users/Groups section of System Center, delete user groups to remove assigned permissions and memberships from the DataMiner System."
 ---
 
 # Deleting a user group

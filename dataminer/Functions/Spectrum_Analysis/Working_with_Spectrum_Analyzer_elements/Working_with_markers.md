@@ -37,7 +37,9 @@ Different modes are available:
    - **Lock to trace**: Locks the marker to the trace.
 
    > [!NOTE]
-   > You can also quickly change an existing marker into a reference marker or noise marker by right-clicking the marker and selecting *Reference marker* or *Noise marker* respectively.
+   >
+   > - You can also quickly change an existing marker into a reference marker or noise marker by right-clicking the marker and selecting *Reference marker* or *Noise marker* respectively.
+   > - From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45843-->, markers can also be placed on the reference trace. When you add a marker and move it to the reference trace, the marker takes the color of the reference trace.
 
 1. Click *OK* to save your changes and close the pop-up window.
 

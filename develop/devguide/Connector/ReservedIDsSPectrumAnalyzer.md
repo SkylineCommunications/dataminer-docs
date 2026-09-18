@@ -29,7 +29,7 @@ uid: ReservedIDsSpectrumAnalyzer
 |64023|SPA_PARAM_CALIB_ERR|Indicates if the measurement is uncalibrated (1) or not (0) (read)|
 |64024|SPA_PARAM_OFFSET_DBMV|Difference between dbm/dbmv (0 dbm = (64024) dbmv)|
 |64025|SPA_PARAM_OFFSET_DBUV|Difference between dbm/dbuv (0 dbm = (64025) dbuv)|
-|64026|SPA_PARAM_TRACETIMEOUT|Specific timeout if actual trace get time >>>> 4*sweeptime|
+|64026|SPA_PARAM_TRACETIMEOUT|Specific timeout if actual trace get time > 4 \* sweeptime|
 |64027|SPA_PARAM_UNAVAILABLE|Set to 1 when device is doing other things (which means we should not request traces)|
 |64028|SPA_PARAM_UNAVAILABLE_REASON|String indicating why the spectrum analyzer is unavailable|
 |64029|SPA_PARAM_PRE_AMPLIFIER|PreAmplifier (0 = disabled / 1 = enabled)|
@@ -96,7 +96,7 @@ uid: ReservedIDsSpectrumAnalyzer
 |64216|SPA_SPARAM_PRESET_UPDATE|Notifies Cube that a preset got updated. Contains the name of the preset (string).<!-- RN 13968 -->|
 |64217|SPA_SPARAM_WARN_SWEEP|Notifies Cube that it needs to display a warning to allow a sweep time > 20 sec (value = sweep time value)|
 |64218|SPA_SPARAM_GENERIC_MSG|Notifies Cube with a generic message to display in the upper-right corner (string "[message type id]:[message]")|
-|64219|SPA_SPARAM_PROGRESS|Notifies Cube of some kind of progress (double; see SPA_PROGRESS_*)|
+|64219|SPA_SPARAM_PROGRESS|Notifies Cube of some kind of progress (double; see `SPA_PROGRESS_*`)|
 |64220|SPA_SPARAM_TRACEPRESET|Preset with which trace was taken (on playback). string. preset ID.|
 |64221|SPA_SPARAM_HAS_RT_SLOT|0 = no more RT slots available, client will not get new traces. 1 = has slot|
 |64222|SPA_SPARAM_HEARTBEAT|Heartbeat to indicate that the client is still known by SLSpectrum (sent every xs)|

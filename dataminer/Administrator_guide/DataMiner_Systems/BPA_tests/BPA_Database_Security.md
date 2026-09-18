@@ -1,5 +1,6 @@
 ---
 uid: BPA_Database_Security
+description: "Learn about the Database Security BPA test, which checks if authentication and TLS encryption are enabled on the Cassandra and Elasticsearch databases."
 ---
 
 # Database Security

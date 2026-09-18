@@ -1,5 +1,6 @@
 ---
 uid: DIS_Tutorials
+description: Discover all DataMiner Integration Studio tutorials. DIS is a valuable extension for Visual Studio that simplifies the process of developing for your DMS.
 ---
 
 # DataMiner Integration Studio Tutorials

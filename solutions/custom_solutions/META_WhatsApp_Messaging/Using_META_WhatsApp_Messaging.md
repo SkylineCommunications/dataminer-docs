@@ -1,5 +1,6 @@
 ---
 uid: Using_META_WhatsApp_Messaging
+description: Configure contacts and correlation rules to route DataMiner alarm notifications through META WhatsApp Messaging to key recipients.
 ---
 
 # Using the META WhatsApp Messaging Solution

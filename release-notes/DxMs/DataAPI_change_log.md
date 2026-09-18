@@ -7,6 +7,25 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 7 July 2026 - Enhancement - DataAPI 1.4.6 - Initialization behavior improvement and lock handling improvements [ID 45737]
+
+The following changes have been made to Data API functionality:
+
+- Processing of data and configuration now only happens once connectors have been retrieved from DataMiner. Until then, the *DataAPI* DxM is marked as not yet initialized. Previously, the DxM would initialize the connector cache as an empty set and therefore recreate all connectors.
+
+- Ownership locking has been updated to prevent possible out-of-sync or retrieval failures:
+
+  - When a lock is taken by other DataAPI nodes to update a connector, it can happen that the node that requested the lock does not send a subsequent request to release it again (e.g., because it crashed some time later). In Data API, a cleanup mechanism exists to release these locks. This functionality has now been extended with logic to try to retrieve the updated connector again from DataMiner. If this succeeds, the lock is cleaned up. If this fails, updates to this connector are prevented until the leader is able to retrieve the connector from DataMiner and update its cache with this new version.
+  - If a request for a lock comes in with a checksum, indicating that the requester already knows about a connector, but the leader does not know about it, the leader will now try to retrieve the connector from DataMiner to update its cache. If this succeeds, the lock is granted. If it fails, the lock is denied until the leader is able to retrieve the connector from DataMiner.
+
+### 7 July 2026 - New feature - DataAPI 1.4.6 - Data API updated to target .NET 10  [ID 45535]
+
+Data API has been updated to target .NET 10.
+
+### 7 July 2026 - Fix - DataAPI 1.4.6 - Dependencies updated [ID 45443]
+
+Data API dependencies have been updated.
+
 ### 13 February 2026 - Fix - DataAPI 1.4.5 - Leader selection could cause a thread leak [ID 44727]
 
 In multi-DataAPI deployments, a thread leak could occur when the leader was selected.

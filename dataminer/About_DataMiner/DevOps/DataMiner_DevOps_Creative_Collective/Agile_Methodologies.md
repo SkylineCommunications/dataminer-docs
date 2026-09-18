@@ -1,6 +1,6 @@
 ---
 uid: Agile_Methodologies
-description: Agile best practices for Solution Product Owners include maximizing value, short iterations, and limiting work in progress.
+description: Explore the agile best practices that Solution Product Owners should follow when managing solutions.
 ---
 
 # Agile best practices for DataMiner Solution Product Owners

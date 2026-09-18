@@ -8,6 +8,10 @@ Available from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35902 -->. This basic con
 
 ![Numeric input](~/dataminer/images/Numeric_Input.png)<br>*Numeric input component in DataMiner 10.4.6*
 
+From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45693-->, the numeric input component also supports scientific notation. This means that when a large number is fed to the component, it may be displayed in scientific notation. For example, 1000000000000000000000 is displayed as 1e+21.
+
+## Configuration options
+
 The following options are available to fine-tune the component layout:
 
 - *Label*: Text that will be displayed next to the numeric input box.
@@ -28,9 +32,9 @@ In the *Settings* pane, you can also configure the following optional settings:
 
 - *Number of decimals*: The maximum number of decimals.
 
-- *Minimum*: The minimum value for the numeric input.
+- *Minimum*: The minimum value for the numeric input. From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45693-->, if the specified value is lower than the configured minimum, the component uses its default value instead.
 
-- *Maximum*: The maximum value for the numeric input.
+- *Maximum*: The maximum value for the numeric input. From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45693-->, if the specified value is higher than the configured maximum, the component uses its default value instead.
 
 > [!NOTE]
 > From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37736 -->, you can drag data to the component to link it to that data, or [specify data input in the URL](xref:Specifying_data_input_in_a_URL). This way, the component will be filled in based on the linked data, but users will still be able to modify the value.

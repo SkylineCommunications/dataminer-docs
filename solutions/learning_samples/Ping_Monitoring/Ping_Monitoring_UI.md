@@ -1,5 +1,6 @@
 ---
 uid: Ping_Monitoring_UI
+description: Explore the UI of the Ping Monitoring tool. It contains a header bar, a sidebar, and an overview pane.
 ---
 
 # Ping Monitoring UI overview

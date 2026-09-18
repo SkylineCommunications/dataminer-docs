@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_Apps_Ping_Monitoring_App
+description: Get started with the Ping Monitoring tool and learn how to use it for network monitoring and diagnostics.
 ---
 
 # Getting started with the Ping Monitoring tool

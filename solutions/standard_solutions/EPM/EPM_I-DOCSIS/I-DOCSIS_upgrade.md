@@ -1,6 +1,7 @@
 ---
 uid: I-DOCSIS_upgrade
 keywords: I-DOCSIS upgrade
+description: Replace a number of text string occurrences in the EPM SOLUTION dashboard folder each time the EPM Integrated DOCSIS solution is upgraded.
 ---
 
 # EPM Integrated DOCSIS upgrade

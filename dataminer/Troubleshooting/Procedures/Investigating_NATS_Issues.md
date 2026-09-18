@@ -59,7 +59,7 @@ To verify and resolve this:
 
    1. Do this on all DataMiner Agents in the system.
 
-   1. When all DataMiner are fully started up, run [NATSRepair.exe](#resettingrepairing-the-brokergateway-nats-cluster) on a singular DataMiner agent.
+   1. When all DataMiner Agents are fully started up, run [NATSRepair.exe](#resettingrepairing-the-brokergateway-nats-cluster) on a singular DataMiner Agent.
 
 For more information about soft-launch options, see [Activating Soft-Launch Options](xref:Activating_Soft_Launch_Options).
 
@@ -107,9 +107,15 @@ Check the following log files in the order listed:
 
 - **Authorization violations** indicate credential mismatches or missing credential files.
 
+  To resolve this issue, [Repair the NATS cluster](#resettingrepairing-the-brokergateway-nats-cluster).
+
 - **Connection refused errors** suggest firewall or antivirus issues. This can also mean that the NATS service is not running.
 
+  To resolve this issue, check the firewall rules, the network connectivity, and whether the nats-server process is running.
+
 - **Cluster formation errors** point to configuration mismatches between nodes.
+
+  To resolve this issue, [Repair the NATS cluster](#resettingrepairing-the-brokergateway-nats-cluster).
 
 - If the logging for processes includes the line `Failed setting up NATS session: Exception caught in fields fetching: Failed to fetch fields: Remote SSL certificate error. Does the hostname and SSL certificate match?: SSL peer certificate or SSH remote key was not OK"`, this indicates that the certificate used by the site binding of IIS is invalid. Make sure the correct certificate is used by IIS. For more information on how to check and set the IIS HTTPS certificate, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis).
 
@@ -164,6 +170,7 @@ This file configures how DataMiner processes connect to BrokerGateway to obtain 
 - `CredentialsUrl` typically points to the local Agent (using loopback or FQDN). This is the default setting unless it has been manually changed.
 - If the HTTPS certificate CN/SAN does not match the hostname used in the URL, clients may fail with TLS validation errors.
 - *appsettings.runtime.json* must be present at the path specified in `APIKeyPath`.
+- If you want to override the NATS endpoints returned by BrokerGateway, you can add a `ForcedEndpoints` array. See [Configuring forced NATS endpoints](xref:MessageBrokerConfig_ForcedEndpoints).
 
 **Example:**
 
@@ -252,7 +259,7 @@ If `TcpTestSucceeded` is `False`, this indicates that there is a firewall issue 
 Ensure the following ports are open between all DataMiner Agents:
 
 - **Port 4222**: NATS client connections
-- **Port 6222**: NATS cluster communication (not required in a standalone agent setup)
+- **Port 6222**: NATS cluster communication (not required in a standalone Agent setup)
 
 ## Resetting/repairing the BrokerGateway NATS cluster
 
