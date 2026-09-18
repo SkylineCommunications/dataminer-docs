@@ -146,3 +146,15 @@ The D4.2 harness scans a committed, bounded representative scope and classifies 
 The harness records source-page identity, line range, normalized source hashes, classification, target framework, declared package references, and the result. It never infers a package or version from a namespace, installed machine state, or a failed build. Package restore and compilation use only the declarations in the source metadata. The generated report does not contain source code and is written under `_artifacts/`, which is not part of the DocFX content tree.
 
 Generated project files and compiler diagnostics are validation intermediates. They are not published or uploaded as public documentation artifacts. CI produces no credentials for the harness, does not print environment secrets, and retains only the metadata report when an artifact is needed for diagnosis. The representative scope and its explicit gaps remain part of the report until the full C# corpus can be classified safely.
+
+### D4.4 documentation consistency and AI safety
+
+The D4.4 gate is implemented by `scripts/validate-documentation-safety.ps1` and the versioned rules map at `scripts/d4-4-documentation-safety-rules.json`. The map points to the approved D0 metadata, corpus, and house-style sources, the repaired D1 Connector and Automation guidance, and the D4.1-D4.3 harness contracts. It does not copy or replace those authority maps.
+
+The gate reports obsolete API and package guidance, conflicting normative claims, noncanonical terminology, credential-shaped content, and unsafe defaults such as certificate-validation bypasses, unsafe exception or secret logging, and insecure sample credentials. It scans the selected changed Markdown together with generated text artifacts under `_artifacts/`. A deliberately requested `_site/` scan uses the opt-in `-IncludeSite` switch because a complete rendered site is much larger than the metadata artifacts. Secret-like values are redacted from the report.
+
+Code and prose are classified separately. Use `<!-- documentation-safety: context=executable -->`, `illustrative`, `fragment`, `pseudocode`, `user-supplied`, `legacy`, or `conditional` when a block needs a context beyond ordinary instructions. A deliberately unsafe example must use an explicit `negative-example` marker with the rule identifier from the rules map. Unmarked code is retained as a reported classification gap; it is not silently treated as executable guidance.
+
+Each finding is retained with one of three statuses: `new`, `legacy_exception`, or `allowlisted`. A finding unchanged from the comparison revision remains visible as `legacy_exception`; an explicit legacy, conditional, placeholder, UI-label, or negative-example context is reported as `allowlisted`. Only new findings block the gate by default. UID and URL preservation remain the responsibility of the D4.1 identity gate.
+
+Internal transformed topic packs remain internal-only. D4.4 scans them for credential and unsafe-default findings, labels their scope as `internal-only-generated-artifact`, and does not copy their transformed content into the report or the public DocFX output.

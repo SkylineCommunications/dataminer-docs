@@ -41,7 +41,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-csharp-d
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-csharp-documentation-examples.ps1" -RepositoryRoot "." -Path ".\_artifacts\csharp-documentation-examples\csharp-documentation-examples.json"
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\test-documentation-safety.ps1"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 docfx build --warningsAsErrors
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-documentation-safety.ps1" -RepositoryRoot "." -BaseRevision "HEAD^" -ReportPath ".\_artifacts\d4-4-documentation-safety-report.json"
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-segmented-sitemaps.ps1" -RepositoryRoot "." -SitePath ".\_site" -GeneratedProvenancePath ".\_artifacts\generated-metadata-provenance.json" -OutputPath ".\_artifacts\segmented-sitemap-report.json"
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%

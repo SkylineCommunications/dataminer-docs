@@ -219,6 +219,7 @@ uid: XmlProtocolUnmarkedInvalid
     $invalidReport = Get-Content -LiteralPath $invalidOutput -Raw | ConvertFrom-Json
     Assert-Condition (@($invalidReport.examples | Where-Object { $_.source.uid -eq "XmlProtocolUnmarkedInvalid" -and $_.result.status -eq "failed" }).Count -eq 1) "The unmarked schema-invalid example was not recorded as failed."
 
+    $global:LASTEXITCODE = 0
     Write-Output "XML documentation example tests passed."
 }
 finally {

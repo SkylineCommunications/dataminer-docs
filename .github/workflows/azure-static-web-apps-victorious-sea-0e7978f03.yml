@@ -115,6 +115,9 @@ jobs:
       - name: Test documentation quality gates
         run: .\scripts\test-documentation-quality.ps1
         shell: powershell
+      - name: Test documentation safety and consistency
+        run: .\scripts\test-documentation-safety.ps1
+        shell: powershell
       - name: Test C# documentation examples
         run: .\scripts\test-csharp-documentation-examples.ps1
         shell: powershell
@@ -178,6 +181,12 @@ jobs:
           .\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json -SourceRevision $env:GITHUB_SHA
           .\scripts\validate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -ReportPath .\_artifacts\segmented-sitemap-report.json
         shell: powershell
+      - name: Validate documentation safety and consistency
+        run: .\scripts\validate-documentation-safety.ps1 -RepositoryRoot . -ReportPath .\_artifacts\d4-4-documentation-safety-report.json
+        shell: powershell
+        env:
+          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GITHUB_BEFORE: ${{ github.event.before }}
       - name: Retain generated metadata provenance
         uses: actions/upload-artifact@v7
         with:
@@ -213,6 +222,14 @@ jobs:
         with:
           name: xml-documentation-examples-${{ github.sha }}
           path: _artifacts/xml-documentation-examples.json
+          retention-days: 14
+      - name: Retain D4.4 documentation safety report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: d4-4-documentation-safety-${{ github.sha }}
+          path: _artifacts/d4-4-documentation-safety-report.json
+          if-no-files-found: warn
           retention-days: 14
       - name: Retain commit-addressed AI content manifest
         if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'

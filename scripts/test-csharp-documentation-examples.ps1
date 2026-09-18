@@ -223,6 +223,7 @@ public static class CompileFailureFixture
     }
     Assert-Condition $failed "The C# example generator accepted a project that failed compilation."
 
+    $global:LASTEXITCODE = 0
     Write-Output "C# documentation example harness tests passed."
 }
 finally {
