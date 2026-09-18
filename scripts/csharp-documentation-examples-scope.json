@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "format": "csharp-documentation-example-scope",
+  "include": [
+    "contributing/Larger_Contribution/CTB_Local_Test_Build.md",
+    "dataminer/Functions/Automation_module/Using_CSharp",
+    "develop/devguide/Automation"
+  ],
+  "exclude": [],
+  "defaultClassification": "fragment",
+  "conventions": [
+    "Use fence metadata such as `csharp example=complete framework=net8.0 packages=none` for a standalone example.",
+    "Use `example=fragment` for a code excerpt that needs surrounding documentation or a host-provided wrapper.",
+    "Use `example=pseudocode` for illustrative code that is not intended to compile.",
+    "A complete example must declare an exact target framework and either `packages=none` or package IDs with exact versions."
+  ],
+  "gaps": [
+    "This is a representative Automation and C#-authoring scope, not a full-corpus audit.",
+    "C# fences outside the included paths are not classified by this run.",
+    "Existing C# fences without explicit metadata are conservatively classified as fragments and are never compiled."
+  ]
+}

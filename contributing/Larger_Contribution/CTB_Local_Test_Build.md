@@ -82,6 +82,10 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    - `.\scripts\validate-html-source-metadata.ps1 -RepositoryRoot . -Path .\_artifacts\html-source-metadata.json`
 
+   - `.\scripts\generate-csharp-documentation-examples.ps1 -RepositoryRoot . -OutputPath .\_artifacts\csharp-documentation-examples`
+
+   - `.\scripts\validate-csharp-documentation-examples.ps1 -RepositoryRoot . -Path .\_artifacts\csharp-documentation-examples\csharp-documentation-examples.json`
+
    - `docfx build --warningsAsErrors`
 
    - `.\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json`
@@ -202,6 +206,38 @@ Use the following deterministic sequence:
    ```
 
    The generator derives `dateModified` from source Git history and emits commit-pinned source links only when the source file is unchanged and the commit can be resolved. It does not use deployment time or invent D2 metadata values.
+
+### Validating C# documentation examples
+
+The D4.2 harness scans a bounded representative scope of Automation and C#-authoring pages. It uses explicit metadata to distinguish standalone examples from excerpts and pseudocode:
+
+- Use `example=complete` (or `complete` in the equivalent metadata comment) only when the block is a standalone C# source file.
+- A complete block must declare an exact `framework` and either `packages=none` or package IDs with exact versions, such as `Contoso.Example@1.2.3`.
+- Use `example=fragment` for a block that relies on a DataMiner host wrapper, surrounding code, or omitted declarations.
+- Use `example=pseudocode` for illustrative code that is not intended to compile.
+- A C# block without explicit metadata is conservatively treated as a fragment and is never generated as an independent project.
+
+For example, this block is complete, targets only the declared .NET framework, and has no package dependency:
+
+<!-- csharp-example: complete; framework=net8.0; packages=none -->
+```csharp
+public static class DocumentationExample
+{
+   public static string GetMessage()
+   {
+       return "This standalone example is compiled in isolation.";
+   }
+}
+```
+
+Run the deterministic generator and validator from the repository root:
+
+```powershell
+.\scripts\generate-csharp-documentation-examples.ps1 -RepositoryRoot . -OutputPath .\_artifacts\csharp-documentation-examples
+.\scripts\validate-csharp-documentation-examples.ps1 -RepositoryRoot . -Path .\_artifacts\csharp-documentation-examples\csharp-documentation-examples.json
+```
+
+The generated manifest records the source page, line range, classification, target framework, declared packages, and compilation result. It does not contain source code. Only complete blocks produce isolated projects; fragments and pseudocode remain explicitly not attempted. The committed scope is representative rather than a full-corpus audit, so C# blocks outside that scope remain a documented gap.
 
 1. Run `docfx build --warningsAsErrors`.
 
