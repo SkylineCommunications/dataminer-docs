@@ -116,6 +116,6 @@ On systems using STaaS, up to now, ordering DOM entries by an optional field cou
 
 #### SLSNMPManager could stop unexpectedly when testing a connection with SNMPv3 credentials [ID 46438]
 
-<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 Up to now, testing a connection that used SNMPv3 credentials from the Credential Library with SHA-224, SHA-256, SHA-384, or SHA-512 authentication could cause the SLSNMPManager process to stop unexpectedly.
