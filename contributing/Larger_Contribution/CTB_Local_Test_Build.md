@@ -71,6 +71,14 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    - `.\scripts\validate-generated-metadata-provenance.ps1 -RepositoryRoot . -Path .\_artifacts\generated-metadata-provenance.json`
 
+   - `.\scripts\generate-ai-content-manifest.ps1 -RepositoryRoot . -OutputPath .\_artifacts\ai-content-manifest.json`
+
+   - `.\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json`
+
+   - `.\scripts\generate-internal-topic-packs.ps1 -RepositoryRoot . -ManifestPath .\_artifacts\ai-content-manifest.json -OutputPath .\_artifacts\internal-only-topic-packs`
+
+   - `.\scripts\validate-internal-topic-packs.ps1 -RepositoryRoot . -Path .\_artifacts\internal-only-topic-packs\internal-only-topic-pack-manifest.json`
+
    - `docfx build --warningsAsErrors`
 
    - `.\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json`
@@ -163,6 +171,15 @@ Use the following deterministic sequence:
    ```
 
    The D3.1 manifest records stable UIDs, URLs, immutable source pointers, normalized source hashes, documentation metadata, and dependency identifiers. It does not contain page text, chunks, summaries, or embeddings. Pass `-PriorManifestPath` when comparing a new revision with a previous D3.1 manifest so moves and removals are emitted explicitly.
+
+1. Generate and validate the internal-only D3.2 Connector and Automation Markdown topic packs:
+
+   ```powershell
+   .\scripts\generate-internal-topic-packs.ps1 -RepositoryRoot . -ManifestPath .\_artifacts\ai-content-manifest.json -OutputPath .\_artifacts\internal-only-topic-packs
+   .\scripts\validate-internal-topic-packs.ps1 -RepositoryRoot . -Path .\_artifacts\internal-only-topic-packs\internal-only-topic-pack-manifest.json
+   ```
+
+   These packs contain normalized/transformed prose and are permitted only for internal use under D0.3. They must not be redistributed publicly or used for model training or fine-tuning. The generator writes them outside the DocFX content tree with explicit `internal-only` filenames and 14-day operational retention metadata.
 
 1. Generate and validate the metadata-only deployment delta:
 

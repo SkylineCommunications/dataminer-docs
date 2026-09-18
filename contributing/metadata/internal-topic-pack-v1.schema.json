@@ -1,0 +1,673 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/SkylineCommunications/dataminer-docs/main/contributing/metadata/internal-topic-pack-v1.schema.json",
+  "title": "DataMiner internal-only Markdown topic pack manifest",
+  "description": "Version 1 metadata contract for deterministic, normalized Connector and Automation Markdown topic packs. The transformed content is internal-only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "format",
+    "visibility",
+    "distribution",
+    "generator",
+    "schema",
+    "source",
+    "scope",
+    "generation",
+    "license",
+    "notice",
+    "counts",
+    "packs",
+    "chunks",
+    "unresolvedLinks"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "format": {
+      "const": "markdown-topic-packs"
+    },
+    "visibility": {
+      "const": "internal-only"
+    },
+    "distribution": {
+      "$ref": "#/$defs/distribution"
+    },
+    "generator": {
+      "$ref": "#/$defs/generator"
+    },
+    "schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "const": "contributing/metadata/internal-topic-pack-v1.schema.json"
+        },
+        "version": {
+          "const": 1
+        }
+      }
+    },
+    "source": {
+      "$ref": "#/$defs/source"
+    },
+    "scope": {
+      "$ref": "#/$defs/scope"
+    },
+    "generation": {
+      "$ref": "#/$defs/generation"
+    },
+    "license": {
+      "$ref": "#/$defs/license"
+    },
+    "notice": {
+      "$ref": "#/$defs/fileReference"
+    },
+    "counts": {
+      "$ref": "#/$defs/counts"
+    },
+    "packs": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/pack"
+      }
+    },
+    "chunks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/chunk"
+      }
+    },
+    "unresolvedLinks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/unresolvedLink"
+      }
+    }
+  },
+  "$defs": {
+    "commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "fileReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/hash"
+        }
+      }
+    },
+    "distribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "use",
+        "publicRedistributionAllowed",
+        "modelTrainingAllowed",
+        "fineTuningAllowed",
+        "retentionDays",
+        "policy"
+      ],
+      "properties": {
+        "use": {
+          "const": "normalized-transformed-content-internal-only"
+        },
+        "publicRedistributionAllowed": {
+          "const": false
+        },
+        "modelTrainingAllowed": {
+          "const": false
+        },
+        "fineTuningAllowed": {
+          "const": false
+        },
+        "retentionDays": {
+          "const": 14
+        },
+        "policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "source"
+          ],
+          "properties": {
+            "id": {
+              "const": "D0.3"
+            },
+            "source": {
+              "const": "contributing/CTB_Documentation_Corpus_Policy.md"
+            }
+          }
+        }
+      }
+    },
+    "generator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "const": "scripts/generate-internal-topic-packs.ps1"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "revision",
+        "revisionSource",
+        "manifest"
+      ],
+      "properties": {
+        "repository": {
+          "const": "SkylineCommunications/dataminer-docs"
+        },
+        "revision": {
+          "$ref": "#/$defs/commit"
+        },
+        "revisionSource": {
+          "const": "manifest"
+        },
+        "manifest": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "sha256",
+            "schema"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha256": {
+              "$ref": "#/$defs/hash"
+            },
+            "schema": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "name",
+                "version"
+              ],
+              "properties": {
+                "name": {
+                  "const": "contributing/metadata/ai-content-manifest-v1.schema.json"
+                },
+                "version": {
+                  "const": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domains",
+        "sourcePaths"
+      ],
+      "properties": {
+        "domains": {
+          "type": "array",
+          "const": [
+            "Automation",
+            "Connector"
+          ]
+        },
+        "sourcePaths": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "generation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generatedAt",
+        "generatedAtSource",
+        "deterministic",
+        "contentIdentityAlgorithm",
+        "contentIdentityFields",
+        "contentIdentityExcludes"
+      ],
+      "properties": {
+        "generatedAt": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "const": "unknown"
+            }
+          ]
+        },
+        "generatedAtSource": {
+          "type": "string",
+          "enum": [
+            "argument",
+            "source_date_epoch",
+            "git_commit",
+            "unknown"
+          ]
+        },
+        "deterministic": {
+          "const": true
+        },
+        "contentIdentityAlgorithm": {
+          "const": "sha256"
+        },
+        "contentIdentityFields": {
+          "type": "array",
+          "const": [
+            "sourceCommit",
+            "sourcePath",
+            "sourceUid",
+            "sourceContentHash",
+            "sourceSectionIdentity"
+          ]
+        },
+        "contentIdentityExcludes": {
+          "type": "array",
+          "const": [
+            "generatedAt"
+          ]
+        }
+      }
+    },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identifier",
+        "name",
+        "url",
+        "attribution",
+        "source"
+      ],
+      "properties": {
+        "identifier": {
+          "const": "CC BY-NC-ND 4.0"
+        },
+        "name": {
+          "const": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International"
+        },
+        "url": {
+          "const": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+        },
+        "attribution": {
+          "const": "Skyline Communications"
+        },
+        "source": {
+          "const": "contributing/CTB_Documentation_Corpus_Policy.md"
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourcePages",
+        "chunks",
+        "resolvedLinks",
+        "unresolvedLinks",
+        "byDomain"
+      ],
+      "properties": {
+        "sourcePages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "chunks": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "resolvedLinks": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unresolvedLinks": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "byDomain": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "#/$defs/pack"
+          }
+        }
+      }
+    },
+    "pack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domain",
+        "directory",
+        "sourcePages",
+        "chunks",
+        "resolvedLinks",
+        "unresolvedLinks"
+      ],
+      "properties": {
+        "domain": {
+          "type": "string",
+          "enum": [
+            "Automation",
+            "Connector"
+          ]
+        },
+        "directory": {
+          "type": "string",
+          "enum": [
+            "automation",
+            "connector"
+          ]
+        },
+        "sourcePages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "chunks": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "resolvedLinks": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unresolvedLinks": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "resolvedLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "original",
+        "target",
+        "sourceLine"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "xref",
+            "local",
+            "anchor"
+          ]
+        },
+        "original": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceLine": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "unresolvedLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "chunkId",
+        "sourceUid",
+        "sourcePath",
+        "sourceSectionIdentity",
+        "sourceLine",
+        "kind",
+        "target",
+        "reason"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^unresolved-[0-9a-f]{20}$"
+        },
+        "chunkId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceUid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourcePath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceSectionIdentity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceLine": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "xref",
+            "local",
+            "anchor"
+          ]
+        },
+        "target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string",
+          "enum": [
+            "target-not-in-pack",
+            "ambiguous-target-uid",
+            "target-outside-repository",
+            "target-section-not-in-pack"
+          ]
+        }
+      }
+    },
+    "chunkLinks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "resolved",
+        "unresolved"
+      ],
+      "properties": {
+        "resolved": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/resolvedLink"
+          }
+        },
+        "unresolved": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/unresolvedLink"
+          }
+        }
+      }
+    },
+    "chunk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "path",
+        "domain",
+        "sourceUid",
+        "sourceUrl",
+        "sourcePath",
+        "sourceCommit",
+        "sourceBlob",
+        "contentHash",
+        "sourceSectionHash",
+        "sourceSectionIdentity",
+        "sourceSectionTitle",
+        "contentIdentity",
+        "sourceStartLine",
+        "sourceEndLine",
+        "chunkIndex",
+        "chunkCount",
+        "chunkContentHash",
+        "fileSha256",
+        "contentType",
+        "authority",
+        "lifecycle",
+        "license",
+        "attribution",
+        "links"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^chunk-[0-9a-f]{24}$"
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^(?:automation|connector)/internal-only-[A-Za-z0-9._-]+\\.md$"
+        },
+        "domain": {
+          "type": "string",
+          "enum": [
+            "Automation",
+            "Connector"
+          ]
+        },
+        "sourceUid": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sourcePath": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*\\.\\.(?:/|$)).+\\.md$"
+        },
+        "sourceCommit": {
+          "$ref": "#/$defs/commit"
+        },
+        "sourceBlob": {
+          "type": "string",
+          "pattern": "^https://github\\.com/SkylineCommunications/dataminer-docs/blob/[0-9a-f]{40}/.+$"
+        },
+        "contentHash": {
+          "$ref": "#/$defs/hash"
+        },
+        "sourceSectionHash": {
+          "$ref": "#/$defs/hash"
+        },
+        "sourceSectionIdentity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceSectionTitle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contentIdentity": {
+          "$ref": "#/$defs/hash"
+        },
+        "sourceStartLine": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sourceEndLine": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "chunkIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "chunkCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "chunkContentHash": {
+          "$ref": "#/$defs/hash"
+        },
+        "fileSha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "contentType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authority": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lifecycle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "const": "CC BY-NC-ND 4.0"
+        },
+        "attribution": {
+          "const": "Skyline Communications"
+        },
+        "links": {
+          "$ref": "#/$defs/chunkLinks"
+        }
+      }
+    }
+  }
+}

@@ -110,3 +110,11 @@ When metadata refers to this documentation, identify the license as `CC BY-NC-ND
 Normalized Markdown, extracted chunks, summaries, embeddings, and any other transformed AI corpus outputs are internal-only by default. They must not be publicly redistributed or used for model training or fine-tuning without separate written approval for the specific output and use.
 
 The internal-only default applies even when the source page or a metadata-only manifest is publicly accessible. Keep transformed outputs, diagnostic details, and any credentials or secrets out of public artifacts and public documentation.
+
+### D3.2 internal topic packs
+
+The D3.2 generator writes normalized Connector and Automation Markdown to `_artifacts/internal-only-topic-packs/`. The directory name, the `internal-only-topic-pack-manifest.json` filename, each `internal-only-*.md` filename, and the `internal-only-notice.txt` file are deliberate distribution markers. These files contain transformed prose and are not DocFX content, public metadata, or release artifacts.
+
+The D3.2 manifest records the D3.1 manifest hash, full source commit, source path and blob, source UID, section identity, source and transformed-content hashes, generator and schema versions, license, attribution, link-resolution records, and deterministic generation metadata. Its distribution flags prohibit public redistribution, model training, and fine-tuning. The content identity excludes the generation date.
+
+CI validates D3.2 on pull requests and normal builds but uploads the transformed pack only from a protected-main manual run in a non-public repository with the `D3_2_INTERNAL_ARTIFACTS_ENABLED` repository variable set to `true`. The artifact is named `internal-only-topic-packs-<commit>` and is retained for 14 days. It is never included in the public `release` artifact or deployed documentation. Local copies should follow the same 14-day operational retention unless a stricter internal policy applies.
