@@ -1,6 +1,6 @@
 ---
 uid: GQI_UsernamePasswordCredential
-description: Reference for the UsernamePasswordCredential class, which contains a username and password retrieved for a GQI extension.
+description: "API reference for the UsernamePasswordCredential class, which contains a username and password retrieved for a GQI extension."
 ---
 
 # UsernamePasswordCredential class
@@ -10,15 +10,15 @@ description: Reference for the UsernamePasswordCredential class, which contains 
 - Namespace: `Skyline.DataMiner.Core.GQI.Extensions`
 - Assembly: `Skyline.DataMiner.Core.GQI.Extensions.dll`
 
-Represents a username and password credential returned by the [ICredentialProvider](xref:GQI_ICredentialProvider).
+Represents a set of username and password credentials returned by the [ICredentialProvider](xref:GQI_ICredentialProvider).
 
-Available from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 and API version 1.5.0. <!-- RN 46279 -->
+Available starting from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 and API version 1.5.0. <!-- RN 46279 -->
 
 ## Constructor
 
 | Constructor | Description |
 |--|--|
-| `UsernamePasswordCredential(string username, string password)` | Creates a username and password credential. |
+| `UsernamePasswordCredential(string username, string password)` | Creates a set of username and password credentials. |
 
 ## Properties
 
