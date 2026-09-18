@@ -93,6 +93,74 @@ Profile definitions and their associated presets continue to be shown like befor
 
 ## Changes
 
+### Breaking changes
+
+#### Scheduling/Workflow Designer: Edit locks now specific to each session [ID 46489]
+
+Scheduling and Workflow Designer now validate edit locks using a session-specific lock ID instead of relying only on the user name. Previously, when you opened the same job or workflow for editing in two separate sessions, both sessions could edit it without warning, potentially causing changes to be overwritten.
+
+With this update, an edit is only allowed to proceed when the lock ID supplied by the current session matches the lock ID of the active lock.
+
+When you open an item that you are already editing in another session, a dedicated message now indicates that the item is locked in one of your other sessions. This is different from the existing message for items locked by another user.
+
+If the current lock state cannot be retrieved, the item will be available in read-only mode, ensuring that you can view it safely even in case of connectivity issues.
+
+> [!IMPORTANT]
+> All lock-aware automation scripts in Scheduling and Workflow Designer now require a `Lock ID` input. This includes scripts for creating, editing, and deleting jobs, managing contacts, and building or deleting workflows. If you call these scripts directly or use custom automation built on them, update these calls to provide the new mandatory parameter. Pass `/` when no lock is held.
+
+#### Plan API: Renamed public types [ID 46527]
+
+Several public types in the MediaOps Plan DevPack have been renamed. The namespaces, visibility, sealed or abstract status, and base classes remain unchanged.
+
+The following types in the `Skyline.DataMiner.Solutions.MediaOps.Plan.Exceptions` namespace have been renamed:
+
+- Job timing errors:
+
+  - `JobTimingChangeNotAllowedError` to `JobTimingChangedNotAllowedError`
+  - `JobEndChangeNotAllowedError` to `JobEndChangedNotAllowedError`
+  - `JobStartChangeNotAllowedError` to `JobStartChangedNotAllowedError`
+  - `JobPreRollStartChangeNotAllowedError` to `JobPreRollStartChangedNotAllowedError`
+  - `JobPostRollEndChangeNotAllowedError` to `JobPostRollEndChangedNotAllowedError`
+
+- Node graph errors
+
+  - `JobNodeSwapNotAllowedError` to `JobNodeSwappedNotAllowedError`
+  - `WorkflowNodeSwapNotAllowedError` to `WorkflowNodeSwappedNotAllowedError`
+  - `JobNodeGraphConnectionWithInvalidNodeError` to `JobNodeGraphInvalidConnectionNodeError`
+  - `WorkflowNodeGraphConnectionWithInvalidNodeError` to `WorkflowNodeGraphInvalidConnectionNodeError`
+
+- Resource Studio errors:
+
+- `ConfigurationInvalidDefaultDiscreetError` to `ConfigurationInvalidDefaultDiscreteError`
+- `ResourcePoolNotFoundPoolLinkError` to `ResourcePoolPoolLinkNotFoundError`
+- `ResourcePoolInvalidStatePoolLinkError` to `ResourcePoolInvalidPoolLinkStateError`
+- `ResourcePoolSelfReferencePoolLinkError` to `ResourcePoolSelfReferencingPoolLinkError`
+
+The following model types in the `Skyline.DataMiner.Solutions.MediaOps.Plan.API` namespace have also been renamed:
+
+- `Discreet<T>` to `Discrete<T>`
+- `TextDiscreet` to `TextDiscrete`
+- `NumberDiscreet` to `NumberDiscrete`
+
+The `Discreet` to `Discrete` rename also affects the signatures of the following public members:
+
+- `DiscreteTextConfiguration.DefaultValue`: `TextDiscreet` changes to `TextDiscrete`
+- `DiscreteTextConfiguration.Discretes`: `IReadOnlyCollection<TextDiscreet>` changes to `IReadOnlyCollection<TextDiscrete>`
+- `DiscreteTextConfiguration.AddDiscrete(TextDiscreet)` changes to `AddDiscrete(TextDiscrete)`
+- `DiscreteTextConfiguration.RemoveDiscrete(TextDiscreet)` changes to `RemoveDiscrete(TextDiscrete)`
+- `DiscreteTextConfiguration.SetDiscretes(ICollection<TextDiscreet>)` changes to `SetDiscretes(ICollection<TextDiscrete>)`
+- `DiscreteNumberConfiguration.DefaultValue`: `NumberDiscreet` changes to `NumberDiscrete`
+- `DiscreteNumberConfiguration.Discretes`: `IReadOnlyCollection<NumberDiscreet>` changes to `IReadOnlyCollection<NumberDiscrete>`
+- `DiscreteNumberConfiguration.AddDiscrete(NumberDiscreet)` changes to `AddDiscrete(NumberDiscrete)`
+- `DiscreteNumberConfiguration.RemoveDiscrete(NumberDiscreet)` changes to `RemoveDiscrete(NumberDiscrete)`
+- `DiscreteNumberConfiguration.SetDiscretes(ICollection<NumberDiscreet>)` changes to `SetDiscretes(ICollection<NumberDiscrete>)`
+- `DiscreteTextConfigurationSetting.Value`: `TextDiscreet` changes to `TextDiscrete`
+- `DiscreteNumberConfigurationSetting.Value`: `NumberDiscreet` changes to `NumberDiscrete`
+- The `==`, `!=`, and `Equals(Discreet<T>)` operators on `Discreet<T>` change to `Discrete<T>` equivalents
+
+> [!IMPORTANT]
+> You will need to update consumer code that references the old names before upgrading to MediaOps Plan 2.0.0. The error renames can also affect runtime behavior for code that filters by type.  A call such as `OfType<JobEndChangeNotAllowedError>()` against a dynamically loaded assembly will not fail to compile, but it will no longer match.
+
 ### Enhancements
 
 #### DevPack: API enhancement to improve type-checking and casting for Capacity and Configuration classes [ID 45715]
@@ -287,6 +355,28 @@ If an earlier version is detected, the MediaOps Plan installation is stopped, an
 
 This check does not affect installations where MediaOps Live is not installed.
 
+#### Scheduling: Clear error shown when an uploaded file exceeds the DataMiner size limit [ID 46471]
+
+When you attach a file to a job and the file exceeds the maximum size configured in DataMiner, the MediaOps Plan DevPack now returns a `PropertySettingCollectionFileSizeExceededError` error with the property ID, file name, file size, and maximum allowed file size. In the MediaOps Plan user interface, a clear error message is displayed in this case.
+
+#### Scheduling: Legacy 'Scheduling_Edit Job Time' script removed [ID 46472]
+
+The *Scheduling_Edit Job Time* script has been removed from the MediaOps Plan package. This script was previously used to support moving jobs in the timeline component, but this functionality is no longer used.
+
+If you have custom code or a custom project that uses this script, you will need to update that code to no longer rely on it.
+
+#### DevPack: Values and data references now mutually exclusive [ID 46483]
+
+Settings that can contain either a direct value or a data reference now automatically keep these representations mutually exclusive. Assigning a direct value clears any existing data reference, while assigning a data reference clears any existing direct value. Previously, consumers had to explicitly clear the other representation when switching modes.
+
+This applies to capability, capacity, configuration, and script execution settings, including both bounds of range capacities, script parameters, and script elements. For script elements, assigning a data reference clears both the element ID and element name. Assigning `null` or an empty or default element ID continues to preserve an existing data reference.
+
+As a result, switching between value‑based and reference‑based configuration will now be simpler, more intuitive, and less error‑prone, with the objects themselves maintaining a clean and consistent state.
+
+#### Scheduling: Node parameters can now be linked from the Add Node panel [ID 46512]
+
+When you configure a job node from the *Add Node* panel, you can now link parameters to a value from another node that is already part of the job or from the node you are adding, which is listed as *This node*.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
@@ -344,3 +434,9 @@ This issue has been fixed. Repository queries now apply the specified limit and 
 Previously, limit and sort settings specified when reading data from MediaOps People & Organizations DevPack repositories were ignored. For example, this affected queries using `OrganizationsRepository.Read(IQuery<Organization>)`.
 
 This issue has been fixed. Repository queries now apply the specified limit and sort settings.
+
+#### DevPack: Text configuration parameters not saved unless interpretation was set to 'Undefined raw type' and 'Undefined type' [ID 46474]
+
+Previously, text profile parameters were recognized as text configuration parameters only when their interpretation was set to *Undefined raw type* and *Undefined type*. Text parameters with other valid interpretations, such as *Other raw type* and *String type*, were not saved.
+
+This issue has now been fixed. Text profile parameters are now recognized and saved regardless of their interpretation setting.
