@@ -11,6 +11,33 @@ uid: NTNotifyTypesOverview
 > [!NOTE]
 > The [NotifyType](xref:Skyline.DataMiner.Net.Messages.NotifyType) enum is located in the [Skyline.DataMiner.Net.Messages](xref:Skyline.DataMiner.Net.Messages) namespace.
 
+## Notify type offsets in log entries
+
+[NotifyProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyProtocol(System.Int32,System.Object,System.Object)), [NotifyDataMiner](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMiner(System.Int32,System.Object,System.Object)) and [NotifyDataMinerQueued](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMinerQueued(System.Int32,System.Object,System.Object)) all end up in the same internal notification call. The method that was used is determined by an offset that is added to the notify type:
+
+|Method|Offset|Native notify type|
+|--- |--- |--- |
+|NotifyProtocol|none|`type`|
+|NotifyDataMiner|+ 10000|`type + 10000`|
+|NotifyDataMinerQueued|+ 20000|`type + 20000`|
+
+For example, notify type 106 (<xref:NT_MAKE_ALARM>) results in the native notify types 106, 10106 and 20106 respectively.
+
+This offset is visible when a call fails, because the log entry contains the native notify type instead of the notify type that was passed in code. The IDs in the table below are therefore **not** the values that appear in such log entries.
+
+For example, the following entry is logged when a `NotifyDataMiner(106 /*NT_MAKE_ALARM*/, 0, alarmDetails)` call fails:
+
+```txt
+SLManagedScripting.exe|ManagedInterop|ERR|-1|24288|48|NotifyDataMiner with 10106 failed. 0x80040221
+```
+
+Here, 10106 is 106 (<xref:NT_MAKE_ALARM>) + 10000, and not a parameter ID or a notify type of its own. To find the notify type that was used, subtract the offset that belongs to the method in the log entry.
+
+> [!TIP]
+> The error code at the end of the entry can be looked up in the [error codes table](xref:ErrorCodeTable). In the example above, `0x80040221` is `SL_INVALID_DATA` ("Invalid data."), which indicates that the arguments passed to the call were not valid, for example a reference to an element or parameter that cannot be resolved.
+
+## Overview
+
 |ID|Name|Description|
 |--- |--- |--- |
 |0|NT_UNDEF||
