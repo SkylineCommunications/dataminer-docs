@@ -71,6 +71,16 @@ The D3.1 AI content manifest is generated at `_artifacts/ai-content-manifest.jso
 
 The workflow retains the commit-addressed D3.1 manifest for 90 days only from the protected `main` branch in the canonical repository. Pull requests may validate a generated copy but must not publish it to a public location. Consumers must treat the manifest as a discovery index and fetch the referenced source under its governing license rather than treating the manifest as a copy of the content.
 
+## Deployment deltas
+
+The D5.2 deployment delta is generated at `_artifacts/deployment-delta.json` by `scripts/generate-deployment-delta.ps1` and is validated against `contributing/metadata/deployment-delta-v1.schema.json`. It compares the current commit-addressed D3.1 manifest with the prior versioned manifest retrieved from protected-main workflow artifacts. The first deployment is safe when no prior artifact exists: the delta records the previous-manifest gap and additions rather than failing.
+
+The delta is metadata-only. It records additions, content-hash changes, identity or URL moves, lifecycle transitions to `deprecated`, removals, immutable redirect mappings, and removed UID/URL tombstones. Current and previous records retain the UID, source path, full source commit, source blob, normalized content hash, compatibility metadata, license, and attribution. It never contains Markdown, rendered prose, summaries, chunks, embeddings, prompts, or secrets.
+
+Existing UIDs and published URLs are preserved by default. A URL change is valid only with `compatibility.url: redirect_required` and exactly one permanent redirect mapping from the previous URL to the current URL. A changed UID or source path is reported as a move when a unique UID, source-path, or content-hash match proves the identity. Multiple possible matches are emitted as an ambiguous-move event and no redirect is guessed.
+
+Removed entries are retained as UID/URL tombstones in the commit-addressed delta for the approved 90-day operational artifact period. A no-change deployment contains no events, redirects, or tombstones and sets `empty` to `true`. D5.2 artifacts are uploaded only from the canonical protected `main` branch, are not included in the deployed site, and use the same 90-day commit-addressed retention boundary as the D3.1 manifest.
+
 ## License and attribution
 
 The existing rendered documentation and Markdown source remain under the repository's current **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** license. Use the repository `LICENSE` file as the governing license text.

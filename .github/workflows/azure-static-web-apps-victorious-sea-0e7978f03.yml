@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   build_job:
@@ -58,6 +59,17 @@ jobs:
       - name: Test segmented sitemaps
         run: .\scripts\test-segmented-sitemaps.ps1
         shell: powershell
+      - name: Test deployment delta
+        run: .\scripts\test-deployment-delta.ps1
+        shell: powershell
+      - name: Retrieve previous AI content manifest
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          CURRENT_RUN_ID: ${{ github.run_id }}
+        run: .\scripts\retrieve-previous-ai-content-manifest.ps1 -Repository $env:REPOSITORY -CurrentRunId $env:CURRENT_RUN_ID -OutputPath .\_artifacts\previous-ai-content-manifest.json
+        shell: powershell
       - name: Build
         run: dotnet build "src/NuGetPackages" --configuration Release
       - name: Build Documentation
@@ -69,6 +81,12 @@ jobs:
           .\scripts\validate-generated-metadata-provenance.ps1 -RepositoryRoot . -Path .\_artifacts\generated-metadata-provenance.json
           .\scripts\generate-ai-content-manifest.ps1 -RepositoryRoot . -OutputPath .\_artifacts\ai-content-manifest.json -SourceRevision $env:GITHUB_SHA
           .\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json
+          $previousManifest = ""
+          if (Test-Path -LiteralPath .\_artifacts\previous-ai-content-manifest.json -PathType Leaf) {
+            $previousManifest = ".\_artifacts\previous-ai-content-manifest.json"
+          }
+          .\scripts\generate-deployment-delta.ps1 -RepositoryRoot . -CurrentManifestPath .\_artifacts\ai-content-manifest.json -PreviousManifestPath $previousManifest -OutputPath .\_artifacts\deployment-delta.json -SourceRevision $env:GITHUB_SHA
+          .\scripts\validate-deployment-delta.ps1 -RepositoryRoot . -Path .\_artifacts\deployment-delta.json
           docfx build --warningsAsErrors
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           .\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json -SourceRevision $env:GITHUB_SHA
@@ -86,6 +104,13 @@ jobs:
         with:
           name: ai-content-manifest-${{ github.sha }}
           path: _artifacts/ai-content-manifest.json
+          retention-days: 90
+      - name: Retain commit-addressed deployment delta
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
+        uses: actions/upload-artifact@v7
+        with:
+          name: deployment-delta-${{ github.sha }}
+          path: _artifacts/deployment-delta.json
           retention-days: 90
       - name: Retain segmented sitemap report
         uses: actions/upload-artifact@v7

@@ -13,6 +13,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-ai-conte
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-ai-content-manifest.ps1" -RepositoryRoot "." -Path ".\_artifacts\ai-content-manifest.json"
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-deployment-delta.ps1" -RepositoryRoot "." -CurrentManifestPath ".\_artifacts\ai-content-manifest.json" -OutputPath ".\_artifacts\deployment-delta.json"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-deployment-delta.ps1" -RepositoryRoot "." -Path ".\_artifacts\deployment-delta.json"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 docfx build --warningsAsErrors
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-segmented-sitemaps.ps1" -RepositoryRoot "." -SitePath ".\_site" -GeneratedProvenancePath ".\_artifacts\generated-metadata-provenance.json" -OutputPath ".\_artifacts\segmented-sitemap-report.json"

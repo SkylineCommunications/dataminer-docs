@@ -133,6 +133,15 @@ Use the following deterministic sequence:
 
    The D3.1 manifest records stable UIDs, URLs, immutable source pointers, normalized source hashes, documentation metadata, and dependency identifiers. It does not contain page text, chunks, summaries, or embeddings. Pass `-PriorManifestPath` when comparing a new revision with a previous D3.1 manifest so moves and removals are emitted explicitly.
 
+1. Generate and validate the metadata-only deployment delta:
+
+   ```powershell
+   .\scripts\generate-deployment-delta.ps1 -RepositoryRoot . -CurrentManifestPath .\_artifacts\ai-content-manifest.json -OutputPath .\_artifacts\deployment-delta.json
+   .\scripts\validate-deployment-delta.ps1 -RepositoryRoot . -Path .\_artifacts\deployment-delta.json
+   ```
+
+   The D5.2 delta compares two commit-addressed D3.1 manifests when `-PreviousManifestPath` is supplied. It reports additions, content changes, moves, deprecations, removals, immutable redirect mappings, and removed UID/URL tombstones. When no previous manifest is available, it records first-run semantics instead of failing. A no-change comparison produces an empty delta. Ambiguous identity matches are reported without guessing a move or redirect.
+
 1. Run `docfx build --warningsAsErrors`.
 
 1. Generate and validate the segmented sitemap output:
