@@ -52,12 +52,13 @@ Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS
 
 ### ClusterEndpointsManager
 
-This option was removed in DataMiner 10.6.11. From this version onward, ClusterEndpointsManager is always enabled and any corresponding entry in *SoftLaunchOptions.xml* is ignored.
-
-In earlier DataMiner versions, setting this option to "false" disabled ClusterEndpointsManager. This could prevent possible issues, but it also prevented you from [migrating to BrokerGateway](xref:BrokerGateway_Migration).
+Allows you to disable the ClusterEndpointsManager. This can prevent possible issues, but it will not be possible to [migrate to BrokerGateway](xref:BrokerGateway_Migration). If this option is not specified or if it is set to "true", ClusterEndpointsManager is enabled.
 
 - **Minimum version**: 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->
 - **Release version**: 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->
+
+> [!IMPORTANT]
+> As the [BrokerGateway migration](xref:BrokerGateway_Migration) must be done before you can upgrade to a DataMiner 10.6.x version, this option **can only be used with 10.5.x DataMiner versions**. Make sure this option is no longer present before you upgrade to DataMiner 10.6.x or higher, and **do not add it in recent DataMiner versions**. Prior to DataMiner 10.6.11, adding it can cause problems with your BrokerGateway setup. In later versions, it will do nothing.
 
 ### CorrectedDisplayKeyOnNaming
 
