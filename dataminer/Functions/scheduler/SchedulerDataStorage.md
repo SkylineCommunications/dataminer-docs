@@ -11,6 +11,8 @@ Scheduled tasks can be stored in either XML or database storage. Database storag
 
 Storing scheduled tasks in the database instead of XML allows the tasks to be swarmed between Agents in the cluster (see [Swarming scheduled tasks](xref:SwarmingScheduledTasks)).
 
+For an overview of the scheduled task configuration, see [Scheduler UI overview](xref:Scheduler_UI_overview). For advanced scheduled task information, see [Retrieving scheduled task information from SLNetClientTest tool](xref:SLNetClientTest_retrieving_scheduled_task_info).
+
 ## Checking the current storage type
 
 The storage type used for a specific DMA is shown in the Scheduler configuration file `C:\Skyline DataMiner\Scheduler\Config.xml`. The `Storage` value will either be set to `Xml` or `Database`.
