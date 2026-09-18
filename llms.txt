@@ -1,0 +1,11 @@
+# DataMiner Docs
+
+DataMiner Docs covers the DataMiner platform, developer guidance, solutions, tutorials, release notes, and contribution guidance.
+
+The versioned metadata-only AI content manifest and its schema, together with the immutable source revisions they reference, are authoritative. This file is discovery-only and does not reproduce documentation or corpus content.
+
+- Rendered documentation: https://docs.dataminer.services/
+- Sitemap: https://docs.dataminer.services/sitemap.xml
+- Cross-reference map: https://docs.dataminer.services/xrefmap.yml
+- Metadata-only AI content manifest: https://docs.dataminer.services/ai-content-manifest.json
+- AI content manifest schema: https://raw.githubusercontent.com/SkylineCommunications/dataminer-docs/main/contributing/metadata/ai-content-manifest-v1.schema.json

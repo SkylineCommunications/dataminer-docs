@@ -82,6 +82,8 @@
           "contributing/images/**",
           "develop/schemadoc/Protocol/images/**",
           "develop/schemadoc/Automation/images/**",
+          "llms.txt",
+          "ai-content-manifest.json",
           "staticwebapp.config.json",
           "404.html",
           "robots.txt"

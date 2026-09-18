@@ -8,5 +8,6 @@
 /**/obj/
 _site
 /_artifacts/
+/ai-content-manifest.json
 /**/.vs
 .vscode/launch.json

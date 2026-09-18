@@ -95,6 +95,9 @@ jobs:
       - name: Test HTML source metadata
         run: .\scripts\test-html-source-metadata.ps1
         shell: powershell
+      - name: Test LLM discovery
+        run: .\scripts\test-llms-discovery.ps1
+        shell: powershell
       - name: Test internal topic packs
         run: .\scripts\test-internal-topic-packs.ps1
         shell: powershell
@@ -136,6 +139,7 @@ jobs:
           }
           .\scripts\generate-deployment-delta.ps1 -RepositoryRoot . -CurrentManifestPath .\_artifacts\ai-content-manifest.json -PreviousManifestPath $previousManifest -OutputPath .\_artifacts\deployment-delta.json -SourceRevision $env:GITHUB_SHA
           .\scripts\validate-deployment-delta.ps1 -RepositoryRoot . -Path .\_artifacts\deployment-delta.json
+          Copy-Item .\_artifacts\ai-content-manifest.json .\ai-content-manifest.json -Force
           docfx build --warningsAsErrors
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           .\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json -SourceRevision $env:GITHUB_SHA

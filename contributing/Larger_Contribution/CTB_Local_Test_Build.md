@@ -171,6 +171,8 @@ Use the following deterministic sequence:
    ```powershell
    .\scripts\generate-ai-content-manifest.ps1 -RepositoryRoot . -OutputPath .\_artifacts\ai-content-manifest.json
    .\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json
+   .\scripts\test-llms-discovery.ps1
+   Copy-Item .\_artifacts\ai-content-manifest.json .\ai-content-manifest.json -Force
    ```
 
    The D3.1 manifest records stable UIDs, URLs, immutable source pointers, normalized source hashes, documentation metadata, and dependency identifiers. It does not contain page text, chunks, summaries, or embeddings. Pass `-PriorManifestPath` when comparing a new revision with a previous D3.1 manifest so moves and removals are emitted explicitly.
@@ -244,6 +246,10 @@ If you make repeated test builds to check changes you have made, and you are onl
       - `.\scripts\generate-html-source-metadata.ps1 -RepositoryRoot . -DocFxConfigPath .\docfx.json -OutputPath .\_artifacts\html-source-metadata.json -EditBranch main`
 
       - `.\scripts\validate-html-source-metadata.ps1 -RepositoryRoot . -Path .\_artifacts\html-source-metadata.json`
+
+      - `.\scripts\test-llms-discovery.ps1`
+
+      - `Copy-Item .\_artifacts\ai-content-manifest.json .\ai-content-manifest.json -Force`
 
       - `docfx build --warningsAsErrors`
 
