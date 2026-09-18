@@ -1,5 +1,6 @@
 ---
 uid: Accessing_the_Sharing_app
+description: "Access the Sharing app by signing in to dataminer.services and selecting Sharing. This will allow you to view dashboards and other data shared with you."
 keywords: cloud shares, cloud sharing
 reviewer: Alexander Verkest
 ---
