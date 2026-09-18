@@ -64,6 +64,14 @@ This request requires a CloudGateway version that supports it.
 
 ### Enhancements
 
+#### DataMiner Installer: Perpetual STaaS systems can retain their configured DMA ID and use a supplied license file [ID 46102]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you configure a perpetual STaaS system using the DataMiner Installer, the configured DMA ID is now retained instead of being replaced with an ID returned by dataminer.services.
+
+You can also specify the optional `LicenseConfig.LicenseFilePath` setting to apply an existing *DataMiner.lic* file. The installer will copy the license file to the DataMiner root folder and start DataMiner, without requiring you to generate and upload a *Request.lic* file.
+
 #### Jobs module: All server-side code has now been removed from the code base [ID 46163]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
