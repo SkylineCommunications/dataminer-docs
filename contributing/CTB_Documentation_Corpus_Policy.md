@@ -85,6 +85,12 @@ Removed entries are retained as UID/URL tombstones in the commit-addressed delta
 
 The D6.1 governance report is generated at `_artifacts/documentation-governance.json` by `scripts/validate-documentation-governance.ps1`. It contains policy identifiers, workstream classifications, review-age findings, owner or authority gaps, and references to repository evidence paths. It does not contain page text, generated corpus content, secrets, or a substitute for the D0.1 metadata contract. The workflow retains the report for 14 days as validation evidence and does not publish it with the documentation site.
 
+## Product-to-documentation coupling evidence
+
+The D6.2 dependency map is stored in `contributing/metadata/documentation-dependency-map-v1.json`. The map and its reports are repository metadata and internal CI evidence. They preserve the public documentation distribution, the D0.3 license, and stable UID and URL identities. They must not contain product source, generated prose, examples, credentials, or other transformed corpus content.
+
+The D6.2 resolver writes `_artifacts/documentation-coupling.json`. It records matched change kinds, documentation UIDs and areas, targeted check identifiers, source release and package identity fields, unresolved follow-ups, and the documentation-release gate. Product repositories may supply a change object using `contributing/metadata/documentation-coupling-change-v1.schema.json`; no cross-repository dispatch permission or product release blocker is assumed. An unavailable release or package value remains `unknown` with a follow-up.
+
 ## License and attribution
 
 The existing rendered documentation and Markdown source remain under the repository's current **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** license. Use the repository `LICENSE` file as the governing license text.

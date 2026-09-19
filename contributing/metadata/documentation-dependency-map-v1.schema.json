@@ -1,0 +1,556 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/SkylineCommunications/dataminer-docs/main/contributing/metadata/documentation-dependency-map-v1.schema.json",
+  "title": "DataMiner product-to-documentation dependency map",
+  "description": "Version 1 metadata-only dependency map for coupling product changes to affected DataMiner documentation and checks.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "policy",
+    "format",
+    "visibility",
+    "accountableOwner",
+    "accountableOwnerHandle",
+    "ownerHandleFollowUp",
+    "crossRepositoryTrigger",
+    "distribution",
+    "checks",
+    "gates",
+    "entries",
+    "followUps"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "policy": {
+      "const": "D6.2"
+    },
+    "format": {
+      "const": "json"
+    },
+    "visibility": {
+      "const": "repository-metadata"
+    },
+    "accountableOwner": {
+      "const": "Docs Writing Team"
+    },
+    "accountableOwnerHandle": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "not_applicable"
+      ]
+    },
+    "ownerHandleFollowUp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "crossRepositoryTrigger": {
+      "$ref": "#/$defs/crossRepositoryTrigger"
+    },
+    "distribution": {
+      "$ref": "#/$defs/distribution"
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/check"
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/gate"
+      }
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    },
+    "followUps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/followUp"
+      }
+    }
+  },
+  "$defs": {
+    "nonEmpty": {
+      "type": "string",
+      "minLength": 1
+    },
+    "changeKind": {
+      "type": "string",
+      "enum": [
+        "schema",
+        "api",
+        "package",
+        "validator",
+        "template",
+        "behavior",
+        "unknown"
+      ]
+    },
+    "area": {
+      "type": "string",
+      "enum": [
+        "root",
+        "dataminer",
+        "develop",
+        "solutions",
+        "tutorials",
+        "connectors",
+        "release-notes",
+        "contributing",
+        "unknown"
+      ]
+    },
+    "crossRepositoryTrigger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "invocation",
+        "permission",
+        "permissionOwner",
+        "followUp"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "configured",
+            "not_configured",
+            "unknown"
+          ]
+        },
+        "invocation": {
+          "type": "string",
+          "enum": [
+            "caller_supplied",
+            "repository_dispatch",
+            "workflow_dispatch",
+            "unknown"
+          ]
+        },
+        "permission": {
+          "type": "string",
+          "enum": [
+            "available",
+            "unavailable",
+            "unknown"
+          ]
+        },
+        "permissionOwner": {
+          "$ref": "#/$defs/nonEmpty"
+        },
+        "followUp": {
+          "$ref": "#/$defs/nonEmpty"
+        }
+      }
+    },
+    "distribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "publicDocumentation",
+        "metadataArtifact",
+        "internalDiagnostics",
+        "license",
+        "attribution"
+      ],
+      "properties": {
+        "publicDocumentation": {
+          "const": "unchanged"
+        },
+        "metadataArtifact": {
+          "const": "repository-only"
+        },
+        "internalDiagnostics": {
+          "const": "internal-only"
+        },
+        "license": {
+          "const": "CC BY-NC-ND 4.0"
+        },
+        "attribution": {
+          "const": "Skyline Communications"
+        }
+      }
+    },
+    "check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "command",
+        "scope"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "label": {
+          "$ref": "#/$defs/nonEmpty"
+        },
+        "command": {
+          "$ref": "#/$defs/nonEmpty"
+        },
+        "scope": {
+          "type": "string",
+          "enum": [
+            "map",
+            "targeted",
+            "generated",
+            "repository",
+            "workflow"
+          ]
+        }
+      }
+    },
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "requiredBefore",
+        "acknowledgementField",
+        "updateDecisionField",
+        "acceptedAcknowledgement",
+        "acceptedUpdateDecisions",
+        "unresolvedValues",
+        "productReleaseBlocking",
+        "owner",
+        "followUp"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "label": {
+          "$ref": "#/$defs/nonEmpty"
+        },
+        "requiredBefore": {
+          "const": "documentation-release"
+        },
+        "acknowledgementField": {
+          "const": "acknowledgement.status"
+        },
+        "updateDecisionField": {
+          "const": "documentationUpdate.status"
+        },
+        "acceptedAcknowledgement": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "const": "acknowledged"
+          }
+        },
+        "acceptedUpdateDecisions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "updated",
+              "not_applicable"
+            ]
+          }
+        },
+        "unresolvedValues": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "const": "unknown"
+          }
+        },
+        "productReleaseBlocking": {
+          "const": "unknown"
+        },
+        "owner": {
+          "type": "string",
+          "enum": [
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "followUp": {
+          "$ref": "#/$defs/nonEmpty"
+        }
+      }
+    },
+    "packageIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "version"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/nonEmpty"
+        },
+        "version": {
+          "$ref": "#/$defs/nonEmpty"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "pathPatterns",
+        "revision",
+        "release",
+        "package",
+        "followUp"
+      ],
+      "properties": {
+        "repository": {
+          "$ref": "#/$defs/nonEmpty"
+        },
+        "pathPatterns": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/nonEmpty"
+          }
+        },
+        "revision": {
+          "$ref": "#/$defs/nonEmpty"
+        },
+        "release": {
+          "$ref": "#/$defs/nonEmpty"
+        },
+        "package": {
+          "$ref": "#/$defs/packageIdentity"
+        },
+        "followUp": {
+          "$ref": "#/$defs/nonEmpty"
+        }
+      }
+    },
+    "targets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "areas",
+        "uids",
+        "pathPatterns",
+        "urlCompatibility"
+      ],
+      "properties": {
+        "areas": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/area"
+          }
+        },
+        "uids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonEmpty"
+          }
+        },
+        "pathPatterns": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/nonEmpty"
+          }
+        },
+        "urlCompatibility": {
+          "const": "stable-by-default"
+        }
+      }
+    },
+    "trigger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "matchModes",
+        "inputFields",
+        "explicitUnknownAllowed"
+      ],
+      "properties": {
+        "matchModes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "change_kind",
+              "source_path",
+              "explicit_uid",
+              "explicit_area",
+              "documentation_path"
+            ]
+          }
+        },
+        "inputFields": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonEmpty"
+          }
+        },
+        "explicitUnknownAllowed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "generated": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "contentTypes",
+        "sourceIdentityFields",
+        "provenance",
+        "followUp"
+      ],
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "contentTypes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "api",
+              "schema",
+              "example"
+            ]
+          }
+        },
+        "sourceIdentityFields": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "release",
+              "package.id",
+              "package.version"
+            ]
+          }
+        },
+        "provenance": {
+          "$ref": "#/$defs/nonEmpty"
+        },
+        "followUp": {
+          "$ref": "#/$defs/nonEmpty"
+        }
+      }
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "changeKinds",
+        "source",
+        "targets",
+        "trigger",
+        "checks",
+        "generated",
+        "gate"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "label": {
+          "$ref": "#/$defs/nonEmpty"
+        },
+        "changeKinds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/changeKind"
+          }
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "targets": {
+          "$ref": "#/$defs/targets"
+        },
+        "trigger": {
+          "$ref": "#/$defs/trigger"
+        },
+        "checks": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonEmpty"
+          }
+        },
+        "generated": {
+          "$ref": "#/$defs/generated"
+        },
+        "gate": {
+          "$ref": "#/$defs/nonEmpty"
+        }
+      }
+    },
+    "followUp": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status",
+        "action",
+        "owner"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "open",
+            "complete",
+            "unknown"
+          ]
+        },
+        "action": {
+          "$ref": "#/$defs/nonEmpty"
+        },
+        "owner": {
+          "type": "string",
+          "enum": [
+            "unknown",
+            "not_applicable"
+          ]
+        }
+      }
+    }
+  }
+}

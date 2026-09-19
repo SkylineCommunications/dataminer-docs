@@ -5,6 +5,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-document
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-documentation-governance.ps1" -RepositoryRoot "." -ReportPath ".\_artifacts\documentation-governance.json"
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-documentation-dependency-map.ps1" -RepositoryRoot "." -ReportPath ".\_artifacts\documentation-dependency-map.json"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\resolve-documentation-coupling.ps1" -RepositoryRoot "." -OutputPath ".\_artifacts\documentation-coupling.json"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 dotnet restore "src/NuGetPackages"
 dotnet build "src/NuGetPackages" --configuration Release
 docfx metadata

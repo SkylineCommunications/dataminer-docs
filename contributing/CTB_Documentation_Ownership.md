@@ -32,6 +32,7 @@ The Docs Writing Team owns the review and maintenance process for:
 - Automation documentation, including Automation development guidance, Automation schema documentation, and relevant API documentation.
 - Generated schema and API documentation, including the source configuration and the generated-page review process.
 - Documentation tooling and CI, including DocFX configuration, repository scripts, workflow changes, validation, and artifact handling.
+- Product-to-documentation dependency mapping and coupling evidence, including the affected UID and area report and the documentation-release gate. This does not assign a product owner or cross-repository workflow permission.
 
 The team also owns the quality and compatibility review of changes elsewhere in the repository when those changes affect the published DataMiner Docs site.
 
@@ -40,6 +41,8 @@ The team also owns the quality and compatibility review of changes elsewhere in 
 All documentation pull requests should use the repository's normal review flow:
 
 1. The contributor describes the affected documentation area and any generated output in the pull request.
+
+1. When a product change is the source of the documentation work, the contributor includes the D6.2 coupling report, affected UIDs and areas, source release or package identity, and acknowledgement/update gate status. Unconfirmed cross-repository values remain `unknown` with a follow-up.
 
 1. The Docs Writing Team reviews the content, navigation, cross-references, generated documentation impact, and applicable policy boundaries.
 

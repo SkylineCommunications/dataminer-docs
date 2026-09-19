@@ -57,6 +57,10 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    This will open a command window where the following commands will run:
 
+   - `.\scripts\validate-documentation-dependency-map.ps1 -RepositoryRoot . -ReportPath .\_artifacts\documentation-dependency-map.json`
+
+   - `.\scripts\resolve-documentation-coupling.ps1 -RepositoryRoot . -OutputPath .\_artifacts\documentation-coupling.json`
+
    - `dotnet restore "src/NuGetPackages"`
 
    - `dotnet build "src/NuGetPackages" --configuration Release`
@@ -120,6 +124,16 @@ Use the following deterministic sequence:
    ```
 
    The governance report records metadata-only findings. It reports unresolved owner or authority values as follow-up gaps and does not invent handles or fail the documented migration path.
+
+1. Validate the D6.2 dependency map and resolve the repository change coupling report:
+
+   ```powershell
+   .\scripts\test-documentation-dependency-map.ps1
+   .\scripts\validate-documentation-dependency-map.ps1 -RepositoryRoot . -ReportPath .\_artifacts\documentation-dependency-map.json
+   .\scripts\resolve-documentation-coupling.ps1 -RepositoryRoot . -OutputPath .\_artifacts\documentation-coupling.json
+   ```
+
+   For a product change, pass `-ChangePath` and use `-FailOnUnmapped -FailOnGate`. The report lists the affected UIDs and areas and the targeted checks. It keeps unresolved release, package, dispatch, and ownership values explicit.
 
 1. Run `docfx metadata`.
 

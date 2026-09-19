@@ -24,6 +24,8 @@ The Docs Writing Team is the accountable repository pull request and review owne
 
 The machine-readable policy is stored in `contributing/metadata/documentation-governance-v1.json`. The policy is checked by `scripts/validate-documentation-governance.ps1` and is intended to complement, not replace, the version 1 metadata contract in [Documentation metadata contract](xref:CTB_Documentation_Metadata).
 
+The D6.2 product-to-documentation dependency map is stored in `contributing/metadata/documentation-dependency-map-v1.json`. It uses this cadence policy to route product schema, API, package, validator, template, and behavior changes to affected UIDs, areas, and checks. See [Documentation dependency mapping and coupling](xref:CTB_Documentation_Coupling) for the product-change input and acknowledgement gate.
+
 ## Workstreams and review cadence
 
 The following targets are calendar-based review targets, not service-level agreements. A review can happen earlier when a source contract, package, product behavior, or publication process changes.
@@ -66,6 +68,8 @@ Use the repository's normal pull request flow. Include the affected workstream, 
 
 1. If the change affects generated API or schema pages, regenerate from the documented source and inspect D2.3 provenance before reviewing the rendered result. Do not hand-edit generated output to hide a source mismatch.
 
+1. If a product change affects a mapped schema, API, package, validator, template, or behavior contract, resolve the D6.2 coupling report. Record the affected UIDs and areas, run the targeted checks returned by the report, and complete the documentation-release acknowledgement and update gate.
+
 1. If a change affects the D3.1 manifest, D4 quality or safety evidence, D5.1 sitemap output, or D5.2 deployment delta, review the corresponding report and preserve its immutable identity, URL, license, and attribution rules.
 
 1. If a published page is materially misleading, submit a narrow corrective pull request, mark the known review or content gap as `needs_update`, and describe the risk and evidence. This process defines routing, not a response-time promise.
@@ -88,6 +92,8 @@ From the repository root, run the governance validator after the version 1 metad
 ```powershell
 .\scripts\validate-documentation-metadata.ps1 -RepositoryRoot .
 .\scripts\validate-documentation-governance.ps1 -RepositoryRoot . -ReportPath .\_artifacts\documentation-governance.json
+.\scripts\validate-documentation-dependency-map.ps1 -RepositoryRoot . -ReportPath .\_artifacts\documentation-dependency-map.json
+.\scripts\resolve-documentation-coupling.ps1 -RepositoryRoot . -OutputPath .\_artifacts\documentation-coupling.json
 ```
 
-The workflow also runs the D2.2 migration, D2.3 provenance, D3 manifest, D5 deployment-delta, baseline, and DocFX checks. Treat warnings introduced by a change as failures. Report warnings that predate the change separately in the pull request, as described in [Making a local test build before pushing changes](xref:CTB_Local_Test_Build).
+The workflow also runs the D2.2 migration, D2.3 provenance, D3 manifest, D5 deployment-delta, baseline, coupling, and DocFX checks. Treat warnings introduced by a change as failures. Report warnings that predate the change separately in the pull request, as described in [Making a local test build before pushing changes](xref:CTB_Local_Test_Build).

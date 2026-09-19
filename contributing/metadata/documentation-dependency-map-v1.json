@@ -1,0 +1,575 @@
+{
+  "$schema": "documentation-dependency-map-v1.schema.json",
+  "schemaVersion": 1,
+  "policy": "D6.2",
+  "format": "json",
+  "visibility": "repository-metadata",
+  "accountableOwner": "Docs Writing Team",
+  "accountableOwnerHandle": "unknown",
+  "ownerHandleFollowUp": "Confirm the exact GitHub team handle for the Docs Writing Team before changing the existing CODEOWNERS route.",
+  "crossRepositoryTrigger": {
+    "status": "unknown",
+    "invocation": "caller_supplied",
+    "permission": "unknown",
+    "permissionOwner": "unknown",
+    "followUp": "Confirm whether an authorized product workflow can invoke the resolver or repository dispatch; this map assumes no cross-repository permission."
+  },
+  "distribution": {
+    "publicDocumentation": "unchanged",
+    "metadataArtifact": "repository-only",
+    "internalDiagnostics": "internal-only",
+    "license": "CC BY-NC-ND 4.0",
+    "attribution": "Skyline Communications"
+  },
+  "checks": [
+    {
+      "id": "dependency-map",
+      "label": "Dependency map contract",
+      "command": "scripts/validate-documentation-dependency-map.ps1",
+      "scope": "map"
+    },
+    {
+      "id": "metadata",
+      "label": "Version 1 page metadata",
+      "command": "scripts/validate-documentation-metadata.ps1",
+      "scope": "targeted"
+    },
+    {
+      "id": "governance",
+      "label": "D6.1 governance and cadence",
+      "command": "scripts/validate-documentation-governance.ps1",
+      "scope": "targeted"
+    },
+    {
+      "id": "provenance",
+      "label": "D2.3 generated metadata provenance",
+      "command": "scripts/validate-generated-metadata-provenance.ps1",
+      "scope": "generated"
+    },
+    {
+      "id": "manifest",
+      "label": "D3.1 metadata-only content manifest",
+      "command": "scripts/validate-ai-content-manifest.ps1",
+      "scope": "repository"
+    },
+    {
+      "id": "delta",
+      "label": "D5.2 deployment delta",
+      "command": "scripts/validate-deployment-delta.ps1",
+      "scope": "repository"
+    },
+    {
+      "id": "docfx",
+      "label": "DocFX metadata and build",
+      "command": "docfx build --warningsAsErrors",
+      "scope": "repository"
+    },
+    {
+      "id": "actionlint",
+      "label": "GitHub Actions syntax",
+      "command": "actionlint .github/workflows/*.yml",
+      "scope": "workflow"
+    }
+  ],
+  "gates": [
+    {
+      "id": "documentation-release-gate",
+      "label": "Product change acknowledgement and documentation update decision",
+      "requiredBefore": "documentation-release",
+      "acknowledgementField": "acknowledgement.status",
+      "updateDecisionField": "documentationUpdate.status",
+      "acceptedAcknowledgement": [
+        "acknowledged"
+      ],
+      "acceptedUpdateDecisions": [
+        "updated",
+        "not_applicable"
+      ],
+      "unresolvedValues": [
+        "unknown"
+      ],
+      "productReleaseBlocking": "unknown",
+      "owner": "unknown",
+      "followUp": "Confirm the product release workflow's relationship to this documentation gate without assigning a cross-repository owner or SLA."
+    }
+  ],
+  "entries": [
+    {
+      "id": "schema-contract",
+      "label": "Authoritative schema or configuration contract",
+      "changeKinds": [
+        "schema"
+      ],
+      "source": {
+        "repository": "unknown",
+        "pathPatterns": [
+          "(^|/)(schema|schemas|xsd)/.*",
+          "(^|/)Protocol[^/]*\\.(xsd|json)$"
+        ],
+        "revision": "unknown",
+        "release": "unknown",
+        "package": {
+          "id": "unknown",
+          "version": "unknown"
+        },
+        "followUp": "Record the product repository, immutable revision, release, and package identity in the product-change input when they become available."
+      },
+      "targets": {
+        "areas": [
+          "develop",
+          "contributing"
+        ],
+        "uids": [
+          "CTB_Documentation_Metadata",
+          "CTB_Documentation_Coupling",
+          "CTB_Local_Test_Build"
+        ],
+        "pathPatterns": [
+          "^develop/schemadoc/.*\\.md$",
+          "^develop/api/.*\\.(yml|md)$",
+          "^contributing/CTB_Documentation_Metadata\\.md$",
+          "^contributing/CTB_Documentation_Coupling\\.md$"
+        ],
+        "urlCompatibility": "stable-by-default"
+      },
+      "trigger": {
+        "matchModes": [
+          "change_kind",
+          "source_path",
+          "explicit_uid",
+          "explicit_area",
+          "documentation_path"
+        ],
+        "inputFields": [
+          "changeKinds",
+          "changedPaths",
+          "affectedDocumentation.uids",
+          "affectedDocumentation.areas",
+          "generatedReferences.sourceIdentity"
+        ],
+        "explicitUnknownAllowed": true
+      },
+      "checks": [
+        "dependency-map",
+        "metadata",
+        "governance",
+        "provenance",
+        "manifest",
+        "delta",
+        "docfx"
+      ],
+      "generated": {
+        "required": true,
+        "contentTypes": [
+          "schema"
+        ],
+        "sourceIdentityFields": [
+          "release",
+          "package.id",
+          "package.version"
+        ],
+        "provenance": "Use D2.3 artifacts and artifactIds; do not infer a schema release or package version.",
+        "followUp": "If a generated schema source identity is unavailable, retain unknown and record the source gap before documentation release."
+      },
+      "gate": "documentation-release-gate"
+    },
+    {
+      "id": "api-contract",
+      "label": "Authoritative API contract",
+      "changeKinds": [
+        "api"
+      ],
+      "source": {
+        "repository": "unknown",
+        "pathPatterns": [
+          "(^|/)(api|apis)/.*",
+          "(^|/)(sdk|assemblies)/.*\\.(cs|csproj|dll|xml)$"
+        ],
+        "revision": "unknown",
+        "release": "unknown",
+        "package": {
+          "id": "unknown",
+          "version": "unknown"
+        },
+        "followUp": "Record the product repository, immutable revision, release, and package identity in the product-change input when they become available."
+      },
+      "targets": {
+        "areas": [
+          "develop",
+          "contributing"
+        ],
+        "uids": [
+          "CTB_Documentation_Coupling",
+          "CTB_Local_Test_Build"
+        ],
+        "pathPatterns": [
+          "^develop/api/.*\\.(yml|md)$",
+          "^develop/devguide/(Connector|Automation)/.*\\.md$",
+          "^contributing/CTB_Documentation_Coupling\\.md$"
+        ],
+        "urlCompatibility": "stable-by-default"
+      },
+      "trigger": {
+        "matchModes": [
+          "change_kind",
+          "source_path",
+          "explicit_uid",
+          "explicit_area",
+          "documentation_path"
+        ],
+        "inputFields": [
+          "changeKinds",
+          "changedPaths",
+          "affectedDocumentation.uids",
+          "affectedDocumentation.areas",
+          "generatedReferences.sourceIdentity"
+        ],
+        "explicitUnknownAllowed": true
+      },
+      "checks": [
+        "dependency-map",
+        "metadata",
+        "governance",
+        "provenance",
+        "manifest",
+        "delta",
+        "docfx"
+      ],
+      "generated": {
+        "required": true,
+        "contentTypes": [
+          "api"
+        ],
+        "sourceIdentityFields": [
+          "release",
+          "package.id",
+          "package.version"
+        ],
+        "provenance": "Use D2.3 source project, assembly, XML documentation, package, and generated-output identities.",
+        "followUp": "If a generated API source identity is unavailable, retain unknown and record the source gap before documentation release."
+      },
+      "gate": "documentation-release-gate"
+    },
+    {
+      "id": "package-dependency",
+      "label": "Package or build dependency",
+      "changeKinds": [
+        "package"
+      ],
+      "source": {
+        "repository": "unknown",
+        "pathPatterns": [
+          "(^|/)(packages?|nuget)/.*",
+          "(^|/)[^/]+\\.(csproj|props|targets|nuspec)$"
+        ],
+        "revision": "unknown",
+        "release": "unknown",
+        "package": {
+          "id": "unknown",
+          "version": "unknown"
+        },
+        "followUp": "Record the exact package identity and version; do not substitute the documentation repository revision for a product package version."
+      },
+      "targets": {
+        "areas": [
+          "develop",
+          "contributing"
+        ],
+        "uids": [
+          "CTB_Documentation_Corpus_Policy",
+          "CTB_Local_Test_Build",
+          "CTB_Documentation_Coupling"
+        ],
+        "pathPatterns": [
+          "^develop/api/.*\\.(yml|md)$",
+          "^develop/schemadoc/.*\\.md$",
+          "^contributing/CTB_Documentation_Corpus_Policy\\.md$",
+          "^contributing/Larger_Contribution/CTB_Local_Test_Build\\.md$",
+          "^contributing/CTB_Documentation_Coupling\\.md$"
+        ],
+        "urlCompatibility": "stable-by-default"
+      },
+      "trigger": {
+        "matchModes": [
+          "change_kind",
+          "source_path",
+          "explicit_uid",
+          "explicit_area",
+          "documentation_path"
+        ],
+        "inputFields": [
+          "changeKinds",
+          "changedPaths",
+          "affectedDocumentation.uids",
+          "affectedDocumentation.areas",
+          "generatedReferences.sourceIdentity"
+        ],
+        "explicitUnknownAllowed": true
+      },
+      "checks": [
+        "dependency-map",
+        "metadata",
+        "governance",
+        "provenance",
+        "manifest",
+        "delta",
+        "docfx"
+      ],
+      "generated": {
+        "required": true,
+        "contentTypes": [
+          "api",
+          "schema",
+          "example"
+        ],
+        "sourceIdentityFields": [
+          "release",
+          "package.id",
+          "package.version"
+        ],
+        "provenance": "Use D2.3 package artifacts and the D3.1 dependency identifiers for generated references and examples.",
+        "followUp": "If a package identity is unavailable, record unknown and keep the generated-output gap visible."
+      },
+      "gate": "documentation-release-gate"
+    },
+    {
+      "id": "validator-contract",
+      "label": "Validator or machine-readable contract",
+      "changeKinds": [
+        "validator"
+      ],
+      "source": {
+        "repository": "unknown",
+        "pathPatterns": [
+          "(^|/)(validator|validators|validation|tools?)/.*",
+          "(^|/)[^/]*schema[^/]*\\.json$"
+        ],
+        "revision": "unknown",
+        "release": "unknown",
+        "package": {
+          "id": "unknown",
+          "version": "unknown"
+        },
+        "followUp": "Record the authoritative validator or schema source and its release identity when the product workflow provides it."
+      },
+      "targets": {
+        "areas": [
+          "contributing"
+        ],
+        "uids": [
+          "CTB_Documentation_Metadata",
+          "CTB_Documentation_Governance",
+          "CTB_Documentation_Coupling",
+          "CTB_Local_Test_Build"
+        ],
+        "pathPatterns": [
+          "^contributing/CTB_Documentation_Metadata\\.md$",
+          "^contributing/CTB_Documentation_Governance\\.md$",
+          "^contributing/CTB_Documentation_Coupling\\.md$",
+          "^contributing/Larger_Contribution/CTB_Local_Test_Build\\.md$",
+          "^scripts/.*\\.ps1$",
+          "^contributing/metadata/.*\\.json$"
+        ],
+        "urlCompatibility": "stable-by-default"
+      },
+      "trigger": {
+        "matchModes": [
+          "change_kind",
+          "source_path",
+          "explicit_uid",
+          "explicit_area",
+          "documentation_path"
+        ],
+        "inputFields": [
+          "changeKinds",
+          "changedPaths",
+          "affectedDocumentation.uids",
+          "affectedDocumentation.areas"
+        ],
+        "explicitUnknownAllowed": true
+      },
+      "checks": [
+        "dependency-map",
+        "metadata",
+        "governance",
+        "docfx",
+        "actionlint"
+      ],
+      "generated": {
+        "required": false,
+        "contentTypes": [],
+        "sourceIdentityFields": [],
+        "provenance": "not_applicable",
+        "followUp": "If the validator also generates reference or example content, reclassify the change as api, schema, or package and record source identity."
+      },
+      "gate": "documentation-release-gate"
+    },
+    {
+      "id": "template-contract",
+      "label": "Template, scaffold, or authoring contract",
+      "changeKinds": [
+        "template"
+      ],
+      "source": {
+        "repository": "unknown",
+        "pathPatterns": [
+          "(^|/)(templates?|scaffolding|boilerplate)/.*",
+          "(^|/)[^/]+\\.(liquid|mustache|hbs|template)$"
+        ],
+        "revision": "unknown",
+        "release": "unknown",
+        "package": {
+          "id": "unknown",
+          "version": "unknown"
+        },
+        "followUp": "Record the template source and release identity when available; do not assign an unconfirmed product owner."
+      },
+      "targets": {
+        "areas": [
+          "contributing"
+        ],
+        "uids": [
+          "CTB_Adding_New_Page",
+          "CTB_Documentation_Metadata",
+          "CTB_Documentation_Coupling"
+        ],
+        "pathPatterns": [
+          "^contributing/Larger_Contribution/CTB_Adding_New_Page\\.md$",
+          "^contributing/CTB_Documentation_Metadata\\.md$",
+          "^contributing/CTB_Documentation_Coupling\\.md$"
+        ],
+        "urlCompatibility": "stable-by-default"
+      },
+      "trigger": {
+        "matchModes": [
+          "change_kind",
+          "source_path",
+          "explicit_uid",
+          "explicit_area",
+          "documentation_path"
+        ],
+        "inputFields": [
+          "changeKinds",
+          "changedPaths",
+          "affectedDocumentation.uids",
+          "affectedDocumentation.areas"
+        ],
+        "explicitUnknownAllowed": true
+      },
+      "checks": [
+        "dependency-map",
+        "metadata",
+        "governance",
+        "docfx"
+      ],
+      "generated": {
+        "required": false,
+        "contentTypes": [],
+        "sourceIdentityFields": [],
+        "provenance": "not_applicable",
+        "followUp": "If the template emits generated API, schema, or example content, record its release and package identity and add the corresponding dependency entry."
+      },
+      "gate": "documentation-release-gate"
+    },
+    {
+      "id": "behavior-contract",
+      "label": "Product behavior or compatibility change",
+      "changeKinds": [
+        "behavior"
+      ],
+      "source": {
+        "repository": "unknown",
+        "pathPatterns": [
+          "(^|/)(product|services?|runtime|server|client)/.*",
+          "(^|/)(src|lib)/.*"
+        ],
+        "revision": "unknown",
+        "release": "unknown",
+        "package": {
+          "id": "unknown",
+          "version": "unknown"
+        },
+        "followUp": "Record the behavior change's product release and any package identity; keep the product-to-documentation owner unknown until confirmed."
+      },
+      "targets": {
+        "areas": [
+          "dataminer",
+          "develop",
+          "solutions",
+          "tutorials",
+          "contributing"
+        ],
+        "uids": [
+          "CTB_Documentation_Coupling",
+          "CTB_Reviewing_Contribution",
+          "CTB_Documentation_Governance"
+        ],
+        "pathPatterns": [
+          "^(dataminer|develop|solutions|tutorials)/.*\\.md$",
+          "^contributing/CTB_Documentation_Coupling\\.md$",
+          "^contributing/CTB_Reviewing_Contribution\\.md$"
+        ],
+        "urlCompatibility": "stable-by-default"
+      },
+      "trigger": {
+        "matchModes": [
+          "change_kind",
+          "source_path",
+          "explicit_uid",
+          "explicit_area",
+          "documentation_path"
+        ],
+        "inputFields": [
+          "changeKinds",
+          "changedPaths",
+          "affectedDocumentation.uids",
+          "affectedDocumentation.areas",
+          "generatedReferences.sourceIdentity"
+        ],
+        "explicitUnknownAllowed": true
+      },
+      "checks": [
+        "dependency-map",
+        "metadata",
+        "governance",
+        "manifest",
+        "delta",
+        "docfx"
+      ],
+      "generated": {
+        "required": true,
+        "contentTypes": [
+          "example"
+        ],
+        "sourceIdentityFields": [
+          "release",
+          "package.id",
+          "package.version"
+        ],
+        "provenance": "Examples must carry the product release and package identity when those sources are available; D3.1 records only metadata and dependency identifiers.",
+        "followUp": "If an example source release or package cannot be confirmed, retain unknown and record the follow-up instead of presenting the example as current."
+      },
+      "gate": "documentation-release-gate"
+    }
+  ],
+  "followUps": [
+    {
+      "id": "cross-repository-dispatch-permission",
+      "status": "unknown",
+      "action": "Confirm whether product repositories can invoke the resolver or repository dispatch without changing the documentation repository's public or internal distribution boundary.",
+      "owner": "unknown"
+    },
+    {
+      "id": "product-source-identity",
+      "status": "open",
+      "action": "Populate product repository, immutable revision, release, and package identity in each product-change input.",
+      "owner": "unknown"
+    },
+    {
+      "id": "documentation-gate-relationship",
+      "status": "unknown",
+      "action": "Confirm whether a product release workflow consumes the documentation-release gate; no product release blocker or SLA is assumed.",
+      "owner": "unknown"
+    }
+  ]
+}
