@@ -1,6 +1,10 @@
 @echo off
 cls
 
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-documentation-metadata.ps1" -RepositoryRoot "."
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-documentation-governance.ps1" -RepositoryRoot "." -ReportPath ".\_artifacts\documentation-governance.json"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 dotnet restore "src/NuGetPackages"
 dotnet build "src/NuGetPackages" --configuration Release
 docfx metadata

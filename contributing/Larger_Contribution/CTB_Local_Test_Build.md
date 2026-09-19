@@ -113,6 +113,14 @@ Use the following deterministic sequence:
    .\scripts\audit-documentation-metadata-migration.ps1 -RepositoryRoot . -ReportPath .\d2-2-metadata-migration-report.json
    ```
 
+1. Validate D6.1 ownership, authority, review cadence, stale-content thresholds, and governance evidence:
+
+   ```powershell
+   .\scripts\validate-documentation-governance.ps1 -RepositoryRoot . -ReportPath .\_artifacts\documentation-governance.json
+   ```
+
+   The governance report records metadata-only findings. It reports unresolved owner or authority values as follow-up gaps and does not invent handles or fail the documented migration path.
+
 1. Run `docfx metadata`.
 
 1. Generate and validate the machine-readable provenance for the generated schema and API outputs:

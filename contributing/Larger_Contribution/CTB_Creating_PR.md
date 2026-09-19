@@ -6,6 +6,8 @@ uid: CTB_Creating_PR
 
 When your changes are ready, you can create a pull request to submit them for review:
 
+1. Identify the affected workstream and authority, and check the ownership and review metadata against [Documentation governance and review cadence](xref:CTB_Documentation_Governance). Keep an unconfirmed owner as `unknown`; do not invent a person or team handle.
+
 1. Make sure you have saved your changes in Visual Studio Code. As long as a blue circle is displayed on top of the topmost icon in the sidebar on the left, there are still unsaved changes. The number in this circle indicates the number of files with unsaved changes.
 
    ![Example of unsaved changes](~/images/Contrib_UnsavedChanges.png)
@@ -28,6 +30,8 @@ When your changes are ready, you can create a pull request to submit them for re
 1. In the browser, make sure that the base you are merging to is the main branch. If a different base branch is selected, make sure to select the correct branch. Scroll down for another overview of the changes that will be included in the pull request.
 
 1. Specify a title for the pull request, and optionally add a comment with more information about your changes.
+
+   Include the affected workstream, generated or source-contract impact, validation results, and any owner, authority, stale-content, or unresolved-conflict follow-up in the description.
 
    > [!NOTE]
    > We recommend that you keep the option *Allow edits by maintainers* selected, so that the documentation team will be able to correct any small issues directly. Note that if you instead see the option *Allow edits and access to secrets by maintainers*, this means that the pull request includes workflows of your forked repository, which means you could potentially reveal values of secrets and grant access to other branches if you allow edits. If you do not want this, do not select this option.

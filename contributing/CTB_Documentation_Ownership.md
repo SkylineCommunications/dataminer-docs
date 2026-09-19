@@ -22,6 +22,8 @@ compatibility:
 
 The Docs Writing Team is accountable for the DataMiner Docs pull requests, documentation review routing, and the documentation workstreams listed below. The accountable owner is a team responsibility, not an instruction to assign an unconfirmed individual or GitHub handle.
 
+The review targets, stale-content thresholds, escalation path, and unresolved-conflict rules are defined in [Documentation governance and review cadence](xref:CTB_Documentation_Governance). This page defines the accountable repository route; it does not replace the D0.1 metadata contract or assign page owners.
+
 ## Accountable workstreams
 
 The Docs Writing Team owns the review and maintenance process for:

@@ -44,6 +44,12 @@ jobs:
           }
           .\scripts\validate-documentation-metadata.ps1 -RepositoryRoot .
         shell: powershell
+      - name: Test documentation governance
+        run: .\scripts\test-documentation-governance.ps1
+        shell: powershell
+      - name: Validate documentation governance
+        run: .\scripts\validate-documentation-governance.ps1 -RepositoryRoot . -ReportPath .\_artifacts\documentation-governance.json
+        shell: powershell
       - name: Validate D2.2 target metadata
         run: .\scripts\migrate-documentation-metadata.ps1 -RepositoryRoot . -CheckOnly -ReportPath .\d2-2-metadata-migration-report.json
         shell: powershell
@@ -97,6 +103,12 @@ jobs:
         with:
           name: generated-metadata-provenance-${{ github.sha }}
           path: _artifacts/generated-metadata-provenance.json
+          retention-days: 14
+      - name: Retain documentation governance report
+        uses: actions/upload-artifact@v7
+        with:
+          name: documentation-governance-${{ github.sha }}
+          path: _artifacts/documentation-governance.json
           retention-days: 14
       - name: Retain commit-addressed AI content manifest
         if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'

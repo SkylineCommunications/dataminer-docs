@@ -81,6 +81,10 @@ Existing UIDs and published URLs are preserved by default. A URL change is valid
 
 Removed entries are retained as UID/URL tombstones in the commit-addressed delta for the approved 90-day operational artifact period. A no-change deployment contains no events, redirects, or tombstones and sets `empty` to `true`. D5.2 artifacts are uploaded only from the canonical protected `main` branch, are not included in the deployed site, and use the same 90-day commit-addressed retention boundary as the D3.1 manifest.
 
+## Governance evidence
+
+The D6.1 governance report is generated at `_artifacts/documentation-governance.json` by `scripts/validate-documentation-governance.ps1`. It contains policy identifiers, workstream classifications, review-age findings, owner or authority gaps, and references to repository evidence paths. It does not contain page text, generated corpus content, secrets, or a substitute for the D0.1 metadata contract. The workflow retains the report for 14 days as validation evidence and does not publish it with the documentation site.
+
 ## License and attribution
 
 The existing rendered documentation and Markdown source remain under the repository's current **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** license. Use the repository `LICENSE` file as the governing license text.

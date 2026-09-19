@@ -27,6 +27,8 @@ items:
       topicUid: CTB_Reviewing_Contribution
     - name: Documentation ownership and review routing
       topicUid: CTB_Documentation_Ownership
+    - name: Documentation governance and review cadence
+      topicUid: CTB_Documentation_Governance
     - name: Documentation corpus and distribution policy
       topicUid: CTB_Documentation_Corpus_Policy
     - name: Documentation metadata
