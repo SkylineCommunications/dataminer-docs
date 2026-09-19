@@ -135,6 +135,15 @@ Use the following deterministic sequence:
 
    For a product change, pass `-ChangePath` and use `-FailOnUnmapped -FailOnGate`. The report lists the affected UIDs and areas and the targeted checks. It keeps unresolved release, package, dispatch, and ownership values explicit.
 
+1. Generate and validate the D6.3 quality and synchronization metrics:
+
+   ```powershell
+   .\scripts\generate-documentation-metrics.ps1 -RepositoryRoot . -BaselinePath .\docs-corpus-baseline.generated.json -OutputPath .\_artifacts\documentation-metrics.json
+   .\scripts\validate-documentation-metrics.ps1 -RepositoryRoot . -Path .\_artifacts\documentation-metrics.json
+   ```
+
+   The report combines D2-D6 metadata-only evidence and keeps Connector and Automation values separate when the source evidence supports that classification. It records `unknown` when an available source cannot confirm a value and `not_available` when the artifact or agent event source does not exist. It does not contain transformed prose or secrets.
+
 1. Run `docfx metadata`.
 
 1. Generate and validate the machine-readable provenance for the generated schema and API outputs:

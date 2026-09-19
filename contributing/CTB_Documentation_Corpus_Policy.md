@@ -91,6 +91,14 @@ The D6.2 dependency map is stored in `contributing/metadata/documentation-depend
 
 The D6.2 resolver writes `_artifacts/documentation-coupling.json`. It records matched change kinds, documentation UIDs and areas, targeted check identifiers, source release and package identity fields, unresolved follow-ups, and the documentation-release gate. Product repositories may supply a change object using `contributing/metadata/documentation-coupling-change-v1.schema.json`; no cross-repository dispatch permission or product release blocker is assumed. An unavailable release or package value remains `unknown` with a follow-up.
 
+## Quality and synchronization metrics
+
+D6.3 combines D2 metadata coverage and provenance, D3 manifest and sitemap evidence, D4 quality, link, snippet, and safety evidence, D5 deployment deltas, and D6 governance and coupling reports. The generator is `scripts/generate-documentation-metrics.ps1`; its version 1 contract is `contributing/metadata/documentation-metrics-v1.schema.json`, and the metadata-only report is `_artifacts/documentation-metrics.json`.
+
+The report contains counts, statuses, artifact paths, hashes, stable report identity, and explicit `unknown` or `not_available` values. Connector and Automation metrics are separate when the source evidence supports that classification. It does not contain Markdown, rendered prose, transformed snippets, prompts, summaries, embeddings, credentials, or secrets. A missing agent synchronization event source remains unknown and is recorded as a gap; no owner, timestamp, service-level target, or synchronization event is invented.
+
+The D6.3 identity excludes the generation date and is derived from the source revision, input artifact fingerprints, metric values, and gap records. A no-change D5 delta therefore remains an empty delta with a stable report identity. Pull requests validate the report, while artifact retention is limited to the canonical protected `main` branch or scheduled runs for the approved 90-day operational period. The report is not deployed with the documentation site.
+
 ## License and attribution
 
 The existing rendered documentation and Markdown source remain under the repository's current **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** license. Use the repository `LICENSE` file as the governing license text.

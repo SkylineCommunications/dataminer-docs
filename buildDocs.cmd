@@ -31,6 +31,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-segmente
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-segmented-sitemaps.ps1" -RepositoryRoot "." -SitePath ".\_site" -ReportPath ".\_artifacts\segmented-sitemap-report.json"
 if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\generate-documentation-metrics.ps1" -RepositoryRoot "." -OutputPath ".\_artifacts\documentation-metrics.json"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\scripts\validate-documentation-metrics.ps1" -RepositoryRoot "." -Path ".\_artifacts\documentation-metrics.json"
+if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
 
 if "%1"=="" (
     docfx serve _site

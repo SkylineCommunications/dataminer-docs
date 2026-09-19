@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '17 2 * * 1'
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
@@ -89,8 +91,11 @@ jobs:
       - name: Test deployment delta
         run: .\scripts\test-deployment-delta.ps1
         shell: powershell
+      - name: Test documentation metrics
+        run: .\scripts\test-documentation-metrics.ps1
+        shell: powershell
       - name: Retrieve previous AI content manifest
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
+        if: (github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs') || (github.event_name == 'schedule' && github.repository == 'SkylineCommunications/dataminer-docs')
         env:
           GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
@@ -166,12 +171,24 @@ jobs:
       - name: Audit documentation corpus
         run: .\scripts\audit-docs-baseline.ps1 -RepositoryRoot . -SitePath _site -OutputPath docs-corpus-baseline.generated.json -SourceRevision $env:GITHUB_SHA
         shell: powershell
+      - name: Generate and validate documentation metrics
+        run: |
+          .\scripts\generate-documentation-metrics.ps1 -RepositoryRoot . -BaselinePath .\docs-corpus-baseline.generated.json -OutputPath .\_artifacts\documentation-metrics.json -SourceRevision $env:GITHUB_SHA
+          .\scripts\validate-documentation-metrics.ps1 -RepositoryRoot . -Path .\_artifacts\documentation-metrics.json
+        shell: powershell
       - name: Retain commit-addressed documentation corpus baseline
         if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
         uses: actions/upload-artifact@v7
         with:
           name: docs-corpus-baseline-${{ github.sha }}
           path: docs-corpus-baseline.generated.json
+          retention-days: 90
+      - name: Retain D6.3 documentation metrics
+        if: (github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs') || (github.event_name == 'schedule' && github.repository == 'SkylineCommunications/dataminer-docs')
+        uses: actions/upload-artifact@v7
+        with:
+          name: documentation-metrics-${{ github.sha }}
+          path: _artifacts/documentation-metrics.json
           retention-days: 90
       - name: Zip artifact for deployment
         run: Compress-Archive -Path _site/* -DestinationPath .\_site.zip
