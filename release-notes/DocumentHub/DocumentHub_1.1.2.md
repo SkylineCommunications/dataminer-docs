@@ -2,10 +2,7 @@
 uid: DocumentHub_1.1.2
 ---
 
-# DocumentHub 1.1.2 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# DocumentHub 1.1.2
 
 ## Prerequisites
 
@@ -20,9 +17,11 @@ uid: DocumentHub_1.1.2
 
 ### Support for downloading files via temporary folder workflow [ID 46386]
 
-The DocumentHub agent now supports downloading files via a temporary folder workflow, enabling safer and more reliable file retrieval while aligning with the existing UDAPI and capability-based architecture. This feature extends the agent’s file operation support and lays the foundation for consistent download handling in the 1.1.x revision line.
+The DocumentHub agent now supports downloading files via a temporary folder workflow, enabling safer and more reliable file retrieval while aligning with the existing user-defined API and capability-based architecture. This feature extends the agent’s file operation support and lays the foundation for consistent download handling in the 1.1.x revision line.
 
-For this purpose, a new *DownloadFile* automation script has also been introduced and as part of the installation, a *DocumentHub - Cleanup Downloaded Files* scheduled task is also created. By default, this task runs daily at midnight and removes temporary files
+For this purpose, a new *DownloadFile* automation script has also been introduced.
+
+Finally, a *DocumentHub - Cleanup Downloaded Files* scheduled task will now also be deployed when you install DocumentHub. By default, this task runs daily at midnight and removes temporary files.
 
 ## Changes
 

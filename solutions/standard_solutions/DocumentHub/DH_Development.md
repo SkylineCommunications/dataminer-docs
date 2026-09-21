@@ -10,4 +10,4 @@ It provides repositories and helpers for managing document buckets, SharePoint c
 
 For details, go to the [DevPack repository on GitHub](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.DocumentHub).
 
-You can also interact with DocumentHub over HTTP using its user-defined APIs. For more information, go to [Interacting with DocumentHub through user-defined APIs](xref:Tutorial_DH_UDAPI).
+You can also interact with DocumentHub over HTTP using its user-defined APIs. For more information, go to [DocumentHub user-defined APIs](xref:DH_UDAPI).
