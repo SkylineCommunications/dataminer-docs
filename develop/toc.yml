@@ -4885,8 +4885,6 @@ items:
             topicUid: MaintenanceSettings.Logging.Element-slowActionWarnTime
         - name: MaxSize
           topicUid: MaintenanceSettings.Logging.MaxSize
-      - name: NATSForceManualConfig
-        topicUid: MaintenanceSettings.NATSForceManualConfig
       - name: Network
         topicUid: MaintenanceSettings.Network
         items:
@@ -5124,6 +5122,8 @@ items:
           topicUid: MaintenanceSettings.SLNet.MessageThrottlingPeriodicUpdate
         - name: MessageThrottlingThreshold
           topicUid: MaintenanceSettings.SLNet.MessageThrottlingThreshold
+        - name: NATSForceManualConfig
+          topicUid: MaintenanceSettings.SLNet.NATSForceManualConfig
         - name: NicsToCheckOnFailover
           topicUid: MaintenanceSettings.SLNet.NicsToCheckOnFailover
         - name: NonElementProtocol
