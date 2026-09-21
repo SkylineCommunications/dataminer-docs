@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 21 September 2026 - Enhancement - CloudGateway 3.5.0 - Retrieve information using GetCloudDMSInformationRequest SLNET message
+
+From this CloudGateway version you can retrieve information about your DMS connected to dataminer.services from within DataMiner using the `GetCloudDMSInformationRequest` SLNET message.
+
 #### 21 September 2026 - Enhancement - CloudGateway 3.5.0 - Support an improved login flow for remote access and sharing 
 
 Support the for the improved login flow coming in a future DataMiner Web version.
