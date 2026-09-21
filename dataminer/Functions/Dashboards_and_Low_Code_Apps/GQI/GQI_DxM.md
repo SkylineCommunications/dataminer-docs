@@ -86,7 +86,7 @@ See the following example. Idle child processes will be terminated within the co
 
 ### CPU usage limits
 
-Available starting from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 and API version 1.5.0. <!-- RN 46509 -->
+Available starting from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11. <!-- RN 46509 -->
 
 To prevent GQI from consuming all available CPU resources, you can configure limits for the GQI service and its child processes in the *appsettings.custom.json* file.
 
@@ -101,10 +101,13 @@ To prevent GQI from consuming all available CPU resources, you can configure lim
 }
 ```
 
-- **CpuLimitPercent**: Maximum percentage of the total CPU capacity that the full GQI process can use, including the GQI core process and all child processes. The default is 80.
-- **ChildProcessesCpuLimitPercent**: Maximum percentage of the GQI CPU limit that all child processes can use together. The default is 80, which allows the child processes to use up to 64% of the total CPU capacity when the default values are used.
+- **CpuLimitPercent**: Maximum percentage of the total CPU capacity that all GQI processes can use, including both the GQI core process and all extension workers. The default is 80%.
+- **ChildProcessesCpuLimitPercent**: Maximum percentage of the GQI CPU limit that all extension workers can use together. The default is 80%, which allows the extension workers to use up to 64% (i.e. 80% of 80%) of the total CPU capacity when the default values are used.
 
-Both settings accept integer values from 1 through 100. After changing either setting, fully restart the GQI service for the change to take effect.
+Both settings accept integer values from 1 through 100. After changing either setting, restart the GQI service for the change to take effect.
+
+> Tip
+> An extension worker is started for each [extension library](xref:GQI_Extension_Libraries) that is used by a GQI query.
 
 ### Message handler configuration
 
