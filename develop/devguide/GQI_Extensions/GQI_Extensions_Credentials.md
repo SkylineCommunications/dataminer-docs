@@ -8,9 +8,9 @@ description: Learn how to grant and retrieve Credentials Library credentials in 
 
 ## Prerequisites
 
-- DataMiner 10.7.0 [CU0]/10.6.10 or later for the Credentials Library.
-- DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 or later. <!-- RN 46279 -->
-- GQI extensions API version 1.5.0 or later. <!-- RN 46279 -->
+- DataMiner 10.7.0 [CU0]/10.6.10 or later for the Credentials Library. <!-- RN44282 -->
+- DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 or later. <!-- RN 46279 --> <!-- RN46526 -->
+- [GQI extensions API](xref:GQI_Extension_API) version 1.5.0 or later. <!-- RN 46279 --> <!-- RN46526 -->
 
 ## Supported types of credentials
 

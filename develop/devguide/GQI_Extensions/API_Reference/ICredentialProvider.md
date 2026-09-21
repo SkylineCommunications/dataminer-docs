@@ -1,6 +1,6 @@
 ---
 uid: GQI_ICredentialProvider
-description: "API reference for the ICredentialProvider interface, which retrieves username and password credentials and token credentials for GQI extension libraries."
+description: "API reference for the ICredentialProvider interface, which retrieves credentials for GQI extension libraries."
 ---
 
 # ICredentialProvider interface
