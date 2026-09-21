@@ -4,6 +4,12 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 21 September 2026 - Enhancement - CloudGateway 3.5.0 - Support an improved login flow for remote access and sharing 
+
+Support the for the improved login flow coming in a future DataMiner Web version.
+- A shared dashboard will no longer open as expected without this change.
+- Remote accessing the web apps will not automatically log in with a linked DataMiner account, while a manual login will still work.
+
 #### 10 August 2026 - Fix - CloudGateway 3.3.2 - Connection to dataminer.services could be unstable
 
 With CloudGateway 3.3.1, an issue could occur that made the connection to dataminer.services unstable, causing long request durations or timeouts. This has been resolved.
