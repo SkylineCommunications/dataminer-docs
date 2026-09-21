@@ -2,6 +2,10 @@
 uid: cloudgateway_change_log
 ---
 
+#### 28 August 2026 - Enhancement - CloudGateway 3.4.0 - Added compatibility for cloud based upgrades
+
+With CloudGateway 3.4.0, extra functionality was added for cloud based upgrades.
+
 # Cloud Gateway change log
 
 #### 10 August 2026 - Fix - CloudGateway 3.3.2 - Connection to dataminer.services could be unstable
