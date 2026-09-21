@@ -8,6 +8,16 @@ With CloudGateway 3.4.0, extra functionality was added for cloud based upgrades.
 
 # Cloud Gateway change log
 
+#### 21 September 2026 - Enhancement - CloudGateway 3.5.0 - Retrieve information using GetCloudDMSInformationRequest SLNET message
+
+From this CloudGateway version onward, you can retrieve information about your DMS connected to dataminer.services from within DataMiner using the `GetCloudDMSInformationRequest` SLNET message.
+
+#### 21 September 2026 - Enhancement - CloudGateway 3.5.0 - Support for improved login flow for remote access and sharing 
+
+Support has been added for an improved login flow that is scheduled to be released in a future DataMiner Web version.
+
+A shared dashboard will no longer open as expected without this change. In addition, accessing the web apps remotely will not automatically log in with a linked DataMiner account, while a manual login will still work.
+
 #### 10 August 2026 - Fix - CloudGateway 3.3.2 - Connection to dataminer.services could be unstable
 
 With CloudGateway 3.3.1, an issue could occur that made the connection to dataminer.services unstable, causing long request durations or timeouts. This has been resolved.
