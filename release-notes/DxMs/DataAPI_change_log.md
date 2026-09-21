@@ -13,6 +13,8 @@ Data API can now push data directly to an existing element, including a specific
 
 When data is pushed to an existing element, its connector is reused without being changed.
 
+At present, this functionality is reserved for scripts running on an Edge Node.
+
 ### 7 July 2026 - Enhancement - DataAPI 1.4.6 - Initialization behavior improvement and lock handling improvements [ID 45737]
 
 The following changes have been made to Data API functionality:
