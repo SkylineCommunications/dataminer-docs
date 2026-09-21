@@ -11,8 +11,6 @@ on:
     types: [opened, synchronize, reopened]
     branches:
       - main
-  schedule:
-    - cron: '17 2 * * *'
 
 permissions:
   contents: read
