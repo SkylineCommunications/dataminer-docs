@@ -26,7 +26,7 @@ The API currently supports the following types of credentials:
 > [!IMPORTANT]
 > Credentials are only available to an extension library when they have been explicitly granted to the library.
 
-Configure a set of credentials in the [Credentials Library](xref:Credentials_Library), then declare a reference to it in the *CREDENTIALS* section of the automation script that contains the extension library. For the procedure, see [Declaring a set of credentials](xref:Using_credentials_in_an_automation_script#declaring-a-set-of-credentials).
+Configure a set of credentials in the [Credentials Library](xref:Credentials_Library), then declare a reference to it in the *CREDENTIALS* section of the automation script that contains the extension library. For more details, see [Declaring a set of credentials](xref:Using_credentials_in_an_automation_script#declaring-a-set-of-credentials).
 
 Use the name assigned to the credentials reference when requesting the corresponding credentials in the GQI extension.
 
@@ -35,7 +35,7 @@ The type of the credentials reference must match the method used to retrieve the
 - `UserNameAndPassword`: Retrieve the credentials with `GetUsernamePasswordCredential`.
 - `Token`: Retrieve the credentials with `GetTokenCredential`.
 
-## Injecting the credential provider
+## Injecting the credentials provider
 
 The `ICredentialProvider` service is registered automatically by GQI. Request it as a constructor parameter in an ad hoc data source, custom operator, or [GQI service](xref:GQI_Extensions_Services):
 
