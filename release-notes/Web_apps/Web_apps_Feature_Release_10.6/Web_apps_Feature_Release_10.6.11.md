@@ -112,6 +112,12 @@ To preserve backward compatibility, existing queries that already selected one o
 
 If you deselect such a hidden item, it remains available in that editing session. After you close and reopen the query builder, the hidden item is no longer offered as a selectable option.
 
+#### Draggable links in web apps now show a custom preview [ID 46559]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you drag a link in a web app, a custom preview will now appear and follow the pointer. This provides clearer visual feedback during drag-and-drop operations.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Linked dropdown components feeding data to each other could cause a dashboard or app to become unresponsive [ID 46314]
