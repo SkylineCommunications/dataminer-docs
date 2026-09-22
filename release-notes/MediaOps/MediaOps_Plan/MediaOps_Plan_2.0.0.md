@@ -11,7 +11,7 @@ uid: MediaOps_Plan_2.0.0
 > This version requires:
 >
 > - DataMiner 10.6.9/10.7.0 or higher.
-> - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.0 or higher.
+> - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.1.3 or higher.
 > - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e) 1.3.0 or higher.
 
 > [!TIP]
@@ -107,6 +107,12 @@ If the current lock state cannot be retrieved, the item will be available in rea
 
 > [!IMPORTANT]
 > All lock-aware automation scripts in Scheduling and Workflow Designer now require a `Lock ID` input. This includes scripts for creating, editing, and deleting jobs, managing contacts, and building or deleting workflows. If you call these scripts directly or use custom automation built on them, update these calls to provide the new mandatory parameter. Pass `/` when no lock is held.
+
+#### DevPack: EnumFilterExtensions and TypeFilterExtensions removed [ID 46575]
+
+The public static classes `EnumFilterExtensions` and `TypeFilterExtensions` have been removed from the `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan` DevPack as of version 2.0.0 and from the `Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations` DevPack as of version 1.1.0, because this functionality is now available in Standard Data Model Abstractions 1.0.5.
+
+Because of this change, you will now need to install Standard Data Model Registration 2.1.3 or higher to use MediaOps Plan.
 
 #### Plan API: Renamed public types [ID 46527]
 
@@ -376,6 +382,29 @@ As a result, switching between value‑based and reference‑based configuration
 #### Scheduling: Node parameters can now be linked from the Add Node panel [ID 46512]
 
 When you configure a job node from the *Add Node* panel, you can now link parameters to a value from another node that is already part of the job or from the node you are adding, which is listed as *This node*.
+
+#### Scheduling: Wider lookup window for upcoming booking validation and improved task setup [ID 46566]
+
+The *Scheduling - Validate upcoming bookings* scheduled task now checks for bookings up to 120 minutes ahead, doubling the previous 60-minute lookup window. The recurring interval of the task remains unchanged. This will give operators more advance notice of upcoming bookings that need validation.
+
+The logic that creates and updates this scheduled task now uses the DataMiner typed scheduler API instead of the older array-based configuration format, making the task setup more reliable and easier to maintain. When an existing validation task's description contains the word "custom", the task is left untouched during updates, so that manually customized task configurations are preserved. Tasks that are not marked as customized continue to be kept in sync with the latest validation settings.
+
+#### Scheduling/Workflow Designer: Dropdown parameters can now be linked to text values [ID 46573]
+
+Up to now, when you linked a parameter value, a dropdown parameter could only be linked to another dropdown parameter that used the exact same profile parameter. Properties could not be used to fill in a dropdown parameter at all. This made it impossible to, for example, define *Source Location* and *Destination Location* once on the job and use them to fill in the *Location* capability of the individual nodes.
+
+From now on, dropdown parameters for capabilities, configurations, and orchestration script input parameters can be linked to any text value:
+
+- A capability or configuration of the job or of another node, regardless of whether this is a dropdown parameter or free text.
+- A property of the job or of a node.
+- A resource property of another node or of the node itself.
+
+The text value is matched against the display values of the dropdown options. The comparison is case-sensitive. When a match is found, the dropdown parameter uses the underlying value of the matching option, not the display value. This also applies when two dropdown parameters are linked to each other: the display value of the source dropdown parameter determines the selected option in the target dropdown parameter, while each of them keeps its own underlying value.
+
+When no option matches, the dropdown parameter is considered to have no value. While you are configuring the link, the dialog will indicate that no option matches the value. As long as this is the case, the job cannot be confirmed, and the error message mentions both the value the link resolved to and the parameter that offers the available options.
+
+> [!NOTE]
+> This also applies to dropdown parameters with numeric options. Parameters with free-form numeric input can still only be linked to other numeric parameters.
 
 ### Fixes
 
