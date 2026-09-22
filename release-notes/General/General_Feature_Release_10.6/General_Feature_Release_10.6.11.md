@@ -102,6 +102,16 @@ As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is in
 
 In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clears stale cluster information and detects the local agent again.
 
+#### DxMs upgraded [ID 46565]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner CloudGateway 3.5.0
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
 ### Fixes
 
 #### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
