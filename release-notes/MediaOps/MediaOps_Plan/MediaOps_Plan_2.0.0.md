@@ -108,12 +108,6 @@ If the current lock state cannot be retrieved, the item will be available in rea
 > [!IMPORTANT]
 > All lock-aware automation scripts in Scheduling and Workflow Designer now require a `Lock ID` input. This includes scripts for creating, editing, and deleting jobs, managing contacts, and building or deleting workflows. If you call these scripts directly or use custom automation built on them, update these calls to provide the new mandatory parameter. Pass `/` when no lock is held.
 
-#### DevPack: EnumFilterExtensions and TypeFilterExtensions removed [ID 46575]
-
-The public static classes `EnumFilterExtensions` and `TypeFilterExtensions` have been removed from the `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan` DevPack as of version 2.0.0 and from the `Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations` DevPack as of version 1.1.0, because this functionality is now available in Standard Data Model Abstractions 1.0.5.
-
-Because of this change, you will now need to install Standard Data Model Registration 2.1.3 or higher to use MediaOps Plan.
-
 #### Plan API: Renamed public types [ID 46527]
 
 Several public types in the MediaOps Plan DevPack have been renamed. The namespaces, visibility, sealed or abstract status, and base classes remain unchanged.
@@ -166,6 +160,12 @@ The `Discreet` to `Discrete` rename also affects the signatures of the following
 
 > [!IMPORTANT]
 > You will need to update consumer code that references the old names before upgrading to MediaOps Plan 2.0.0. The error renames can also affect runtime behavior for code that filters by type.  A call such as `OfType<JobEndChangeNotAllowedError>()` against a dynamically loaded assembly will not fail to compile, but it will no longer match.
+
+#### DevPack: EnumFilterExtensions and TypeFilterExtensions removed [ID 46575]
+
+The public static classes `EnumFilterExtensions` and `TypeFilterExtensions` have been removed from the `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan` DevPack as of version 2.0.0 and from the `Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations` DevPack as of version 1.1.0, because this functionality is now available in Standard Data Model Abstractions 1.0.5.
+
+Because of this change, you will now need to install Standard Data Model Registration 2.1.3 or higher to use MediaOps Plan.
 
 ### Enhancements
 
