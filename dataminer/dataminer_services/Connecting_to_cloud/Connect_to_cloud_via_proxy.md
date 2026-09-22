@@ -1,5 +1,6 @@
 ---
 uid: Connect_to_cloud_via_proxy
+description: "Learn how to connect to dataminer.services via a proxy server, through which all outgoing traffic will then be routed."
 keywords: cloud connection, cloud proxy
 reviewer: Alexander Verkest
 ---
