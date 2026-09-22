@@ -112,6 +112,18 @@ To preserve backward compatibility, existing queries that already selected one o
 
 If you deselect such a hidden item, it remains available in that editing session. After you close and reopen the query builder, the hidden item is no longer offered as a selectable option.
 
+#### GQI service and child process CPU usage can now be limited [ID 46509]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+You can now configure limits for the CPU usage of the GQI service and its child processes. This helps prevent CPU usage spikes in GQI from making the entire system unresponsive.
+
+- The `GQIOptions.CpuLimitPercent` setting limits the CPU usage of the complete GQI process, including its core process and all child processes. By default, this is set to 80%. You can set it to an integer between 1 and 100.
+
+- The `GQIOptions.Extensions.ChildProcessesCpuLimitPercent` setting limits the combined CPU usage of all child processes. By default, this is set to 80% of the GQI CPU limit, which corresponds to a maximum of 64% of the system CPU when both settings have their default value. You can set this value to an integer between 1 and 100.
+
+A full restart of the GQI service is required for changes to these settings to take effect.
+
 #### Draggable links in web apps now show a custom preview [ID 46559]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
