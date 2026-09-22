@@ -6,16 +6,10 @@ area: contributing
 content_type: conceptual
 authority: reference
 authority_source: CTB_Documentation_Metadata
-lifecycle: active
 applies_to:
   - DataMiner documentation
 version: unversioned
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Making a local test build before pushing changes

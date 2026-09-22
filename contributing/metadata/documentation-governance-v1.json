@@ -10,20 +10,9 @@
       "metadata_version",
       "authority",
       "content_type",
-      "lifecycle",
-      "owner",
-      "review_status",
-      "review_date"
+      "owner"
     ],
     "ownerSentinels": [
-      "unknown",
-      "not_applicable"
-    ],
-    "reviewStatuses": [
-      "draft",
-      "in_review",
-      "approved",
-      "needs_update",
       "unknown",
       "not_applicable"
     ],

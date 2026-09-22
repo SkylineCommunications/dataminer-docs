@@ -6,8 +6,7 @@ param(
     [datetime]$AsOfDate = (Get-Date).Date,
     [string]$ReportPath,
     [switch]$RequireVersion1,
-    [switch]$FailOnOwnerGap,
-    [switch]$FailOnStale
+    [switch]$FailOnOwnerGap
 )
 
 Set-StrictMode -Version 2.0
@@ -170,7 +169,7 @@ function Assert-Policy {
         throw "Governance policy must keep the unconfirmed accountable owner handle as unknown or not_applicable."
     }
 
-    $requiredExpectationFields = @("metadata_version", "authority", "content_type", "lifecycle", "owner", "review_status", "review_date")
+    $requiredExpectationFields = @("metadata_version", "authority", "content_type", "owner")
     foreach ($requiredField in $requiredExpectationFields) {
         if (@($Policy.metadataExpectations.requiredFields) -notcontains $requiredField) {
             throw "Governance policy metadataExpectations.requiredFields is missing '$requiredField'."
@@ -276,25 +275,6 @@ function Add-Finding {
     $Findings.Add([PSCustomObject]$record) | Out-Null
 }
 
-function Get-DateAge {
-    param(
-        [Parameter(Mandatory = $true)][string]$Value,
-        [Parameter(Mandatory = $true)][datetime]$AsOf
-    )
-
-    $parsedDate = [datetime]::MinValue
-    if (-not [datetime]::TryParseExact(
-            $Value,
-            "yyyy-MM-dd",
-            [Globalization.CultureInfo]::InvariantCulture,
-            [Globalization.DateTimeStyles]::None,
-            [ref]$parsedDate)) {
-        return $null
-    }
-
-    return [int]($AsOf.Date - $parsedDate.Date).TotalDays
-}
-
 $repositoryRootFullPath = [IO.Path]::GetFullPath((ConvertTo-FullPath $RepositoryRoot))
 $policyFullPath = if ([IO.Path]::IsPathRooted($PolicyPath)) {
     [IO.Path]::GetFullPath($PolicyPath)
@@ -313,10 +293,6 @@ $counts = [ordered]@{
     metadataVersionGaps = 0
     ownerGaps = 0
     authorityGaps = 0
-    reviewGaps = 0
-    pendingReviews = 0
-    dueReviews = 0
-    staleContent = 0
     unmappedVersion1Pages = 0
     configurationEvidenceGaps = 0
 }
@@ -369,8 +345,6 @@ foreach ($markdownPath in $markdownPaths) {
     $authority = if ($metadata.ContainsKey("authority")) { [string]$metadata["authority"] } else { "" }
     $contentType = if ($metadata.ContainsKey("content_type")) { [string]$metadata["content_type"] } else { "" }
     $owner = if ($metadata.ContainsKey("owner")) { [string]$metadata["owner"] } else { "" }
-    $reviewStatus = if ($metadata.ContainsKey("review_status")) { [string]$metadata["review_status"] } else { "" }
-    $reviewDate = if ($metadata.ContainsKey("review_date")) { [string]$metadata["review_date"] } else { "" }
 
     if ($owner -ieq [string]$policy.accountableOwner) {
         Add-Finding -Findings $findings -Path $relativePath -Workstream $workstream.id -Code "owner_must_not_be_accountable_team_name" -Severity "error" -Message "Use an existing owner handle or the metadata contract sentinel instead of the accountable team name."
@@ -385,18 +359,6 @@ foreach ($markdownPath in $markdownPaths) {
         Add-Finding -Findings $findings -Path $relativePath -Workstream $workstream.id -Code "authority_gap" -Severity "warning" -Message "The page authority is not confirmed; assign no cadence until the authority is reviewed." -Details @{ authority = $authority }
     }
 
-    if (@($policy.metadataExpectations.reviewStatuses) -notcontains $reviewStatus) {
-        Add-Finding -Findings $findings -Path $relativePath -Workstream $workstream.id -Code "invalid_review_status" -Severity "error" -Message "Review status '$reviewStatus' is not allowed by the D0.1 metadata contract."
-    }
-    if ($reviewStatus -in @("unknown", "not_applicable", "")) {
-        $counts.reviewGaps++
-        Add-Finding -Findings $findings -Path $relativePath -Workstream $workstream.id -Code "review_gap" -Severity "warning" -Message "The page has no confirmed review state or date; retain the metadata sentinel and record the follow-up."
-    }
-    elseif ($reviewStatus -eq "needs_update") {
-        $counts.pendingReviews++
-        Add-Finding -Findings $findings -Path $relativePath -Workstream $workstream.id -Code "review_pending" -Severity "warning" -Message "The page is marked needs_update and must remain visible in the review queue."
-    }
-
     $profile = $null
     if ($authority -notin @("unknown", "not_applicable", "") -and $contentType -ne "") {
         $profile = Find-CadenceProfile -WorkstreamId ([string]$workstream.id) -Authority $authority -ContentType $contentType -Policy $policy
@@ -405,27 +367,6 @@ foreach ($markdownPath in $markdownPaths) {
         }
     }
 
-    if ($reviewStatus -notin @("unknown", "not_applicable", "") -and $reviewDate -notin @("unknown", "not_applicable", "")) {
-        $ageDays = Get-DateAge -Value $reviewDate -AsOf $AsOfDate
-        if ($null -eq $ageDays) {
-            Add-Finding -Findings $findings -Path $relativePath -Workstream $workstream.id -Code "invalid_review_date" -Severity "error" -Message "Review date '$reviewDate' must use the D0.1 YYYY-MM-DD format."
-        }
-        else {
-            if ($null -ne $profile) {
-                if ($ageDays -lt 0) {
-                    Add-Finding -Findings $findings -Path $relativePath -Workstream $workstream.id -Code "review_date_in_future" -Severity "warning" -Message "Review date is later than the governance report date." -Details @{ reviewDate = $reviewDate; asOfDate = $AsOfDate.ToString("yyyy-MM-dd") }
-                }
-                elseif ($ageDays -ge [int]$profile.staleAfterDays) {
-                    $counts.staleContent++
-                    Add-Finding -Findings $findings -Path $relativePath -Workstream $workstream.id -Code "stale_content" -Severity "warning" -Message "Review age exceeds the D6.1 stale-content threshold; update the page or record why it remains unresolved." -Details @{ profile = $profile.id; ageDays = $ageDays; reviewEveryDays = [int]$profile.reviewEveryDays; staleAfterDays = [int]$profile.staleAfterDays }
-                }
-                elseif ($ageDays -ge [int]$profile.reviewEveryDays) {
-                    $counts.dueReviews++
-                    Add-Finding -Findings $findings -Path $relativePath -Workstream $workstream.id -Code "review_due" -Severity "info" -Message "Review age has reached the D6.1 target cadence." -Details @{ profile = $profile.id; ageDays = $ageDays; reviewEveryDays = [int]$profile.reviewEveryDays; staleAfterDays = [int]$profile.staleAfterDays }
-                }
-            }
-        }
-    }
 }
 
 foreach ($workstream in @($policy.workstreams)) {
@@ -469,13 +410,9 @@ $ownerFailures = @()
 if ($FailOnOwnerGap) {
     $ownerFailures = @($findings | Where-Object { $_.code -eq "owner_gap" })
 }
-$staleFailures = @()
-if ($FailOnStale) {
-    $staleFailures = @($findings | Where-Object { $_.code -eq "stale_content" })
-}
-Write-Output "Documentation governance: $($counts.filesScanned) governed version 1 pages scanned; $($counts.ownerGaps) owner gaps; $($counts.authorityGaps) authority gaps; $($counts.staleContent) stale pages."
+Write-Output "Documentation governance: $($counts.filesScanned) governed version 1 pages scanned; $($counts.ownerGaps) owner gaps; $($counts.authorityGaps) authority gaps."
 
-if ($errors.Count -gt 0 -or $ownerFailures.Count -gt 0 -or $staleFailures.Count -gt 0) {
-    $failureCodes = @($errors + $ownerFailures + $staleFailures | Select-Object -ExpandProperty code -Unique) -join ", "
+if ($errors.Count -gt 0 -or $ownerFailures.Count -gt 0) {
+    $failureCodes = @($errors + $ownerFailures | Select-Object -ExpandProperty code -Unique) -join ", "
     throw "Documentation governance validation failed: $failureCodes."
 }

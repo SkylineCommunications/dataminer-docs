@@ -6,16 +6,10 @@ area: contributing
 content_type: conceptual
 authority: canonical
 authority_source: not_applicable
-lifecycle: active
 applies_to:
   - DataMiner documentation
 version: "D0.3"
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Documentation ownership and review routing

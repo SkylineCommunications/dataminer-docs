@@ -6,16 +6,10 @@ area: develop
 content_type: conceptual
 authority: unknown
 authority_source: unknown
-lifecycle: active
 applies_to:
   - DataMiner
 version: 10.5.9
 owner: unknown
-review_status: needs_update
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Launching and attaching interactive automation scripts

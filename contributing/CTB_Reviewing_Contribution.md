@@ -8,7 +8,7 @@ Most contributions to the documentation are added in the form of "pull requests"
 
 Until a pull request is merged, everyone can review it and add comments of their own. To do so:
 
-Before reviewing the details, identify the affected D6.1 workstream and change pattern. Check the `authority`, `content_type`, `owner`, `review_status`, and `review_date` values against [Documentation governance and review cadence](xref:CTB_Documentation_Governance). An `unknown` owner or authority is an explicit follow-up, not a reason to invent a handle or silently approve a contract.
+Before reviewing the details, identify the affected D6.1 workstream and change pattern. Check the `authority`, `content_type`, and `owner` values against [Documentation governance and review cadence](xref:CTB_Documentation_Governance). An `unknown` owner or authority is an explicit follow-up, not a reason to invent a handle or silently approve a contract.
 
 1. Open the pull request, for instance by selecting it in the list of pull requests or by using a direct link to the pull request.
 

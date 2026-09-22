@@ -82,13 +82,9 @@ uid: RootFixture
 content_type: conceptual
 authority: reference
 authority_source: RootSource
-lifecycle: active
 applies_to:
   - DataMiner
 version: unversioned
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Fixture root
@@ -102,13 +98,9 @@ Fixture prose must not appear in the manifest.
 uid: PageFixture
 content_type: conceptual
 authority: canonical
-lifecycle: active
 applies_to:
   - DataMiner
 version: "10.6.8"
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Fixture page
@@ -154,13 +146,9 @@ uid: RootFixture
 content_type: conceptual
 authority: reference
 authority_source: RootSource
-lifecycle: active
 applies_to:
   - DataMiner
 version: unversioned
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Fixture root

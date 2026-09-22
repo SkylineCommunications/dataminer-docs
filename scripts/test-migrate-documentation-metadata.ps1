@@ -62,21 +62,15 @@ This page is aligned with Protocol XML schema package 1.2.3.
 ---
 metadata_version: 1
 uid: Fixture_Existing
-description: Keep an existing complete metadata object unchanged while the migration processes the surrounding target pages.
+description: Normalize an existing metadata object while the migration processes the surrounding target pages without changing page content.
 area: develop
 content_type: conceptual
 authority: unknown
 authority_source: unknown
-lifecycle: active
 applies_to:
   - DataMiner
 version: unknown
 owner: unknown
-review_status: needs_update
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Existing metadata
@@ -148,6 +142,8 @@ items:
     $schema = [IO.File]::ReadAllText((Join-Path $fixtureRoot "develop\schemadoc\Protocol\schema.md"))
     Assert-Condition ($schema -match "(?m)^version: 1\.2\.3\r?$") "The schema package version was not extracted."
     Assert-Condition ($schema -match "(?m)^content_type: schema\r?$") "The schema classification was not applied."
+    $existing = [IO.File]::ReadAllText((Join-Path $fixtureRoot "develop\devguide\Automation\existing.md"))
+    Assert-Condition ($existing -match "(?m)^metadata_version: 1\r?$") "Existing metadata was not retained."
 
     Write-Output "Documentation metadata migration tests passed."
 }

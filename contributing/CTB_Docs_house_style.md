@@ -6,16 +6,10 @@ area: contributing
 content_type: conceptual
 authority: canonical
 authority_source: not_applicable
-lifecycle: active
 applies_to:
   - DataMiner documentation
 version: unversioned
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # DataMiner Docs house style
@@ -35,7 +29,7 @@ Choose the `content_type` that matches the page:
 - Use `release-note` for a time-bound release record.
 - Use `legacy` for content retained for historical or migration purposes.
 
-Do not invent an owner handle, product applicability, or version notation. Use an existing value or the contract's reserved sentinel. Preserve an existing UID and published URL when you edit a page. If a URL must change, document the required redirect and aliases in the `compatibility` object.
+Do not invent an owner handle, product applicability, or version notation. Use an existing value or the contract's reserved sentinel. Preserve an existing UID and published URL when you edit a page. If a URL must change, document the required redirect and aliases in the pull request.
 
 ## AI-friendly writing
 

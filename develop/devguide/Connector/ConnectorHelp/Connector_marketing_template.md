@@ -6,16 +6,10 @@ area: develop
 content_type: example
 authority: illustrative
 authority_source: not_applicable
-lifecycle: active
 applies_to:
   - DataMiner
 version: unversioned
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Connector marketing documentation template
@@ -31,16 +25,10 @@ area: develop
 content_type: example
 authority: illustrative
 authority_source: not_applicable
-lifecycle: draft
 applies_to:
   - DataMiner
 version: unversioned
 owner: unknown
-review_status: draft
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Connector name

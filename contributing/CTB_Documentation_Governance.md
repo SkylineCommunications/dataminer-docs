@@ -6,16 +6,10 @@ area: contributing
 content_type: conceptual
 authority: canonical
 authority_source: not_applicable
-lifecycle: active
 applies_to:
   - DataMiner documentation
 version: "D6.1"
 owner: unknown
-review_status: approved
-review_date: 2026-09-19
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Documentation governance and review cadence
@@ -42,7 +36,7 @@ The following targets are calendar-based review targets, not service-level agree
 
 The generated API and schema profile takes precedence for `schema` and `api` pages in the Connector and Automation paths. The workstream still identifies the accountable evidence and review route.
 
-When `authority` is `unknown` or `not_applicable`, the validator reports an authority gap instead of assigning a cadence. The page remains eligible for normal review, but its date must not be presented as evidence that an unconfirmed contract is current. A page that reaches the review target is due for review; a page that reaches the stale threshold must be updated, explicitly marked `needs_update`, or have the unresolved reason recorded in the pull request.
+When `authority` is `unknown` or `not_applicable`, the validator reports an authority gap instead of assigning a cadence. The page remains eligible for normal review, but the unresolved authority must not be presented as evidence that an unconfirmed contract is current. A page that reaches the review target is due for review; a page that reaches the stale threshold must be updated or have the unresolved reason recorded in the pull request.
 
 ## Ownership and metadata expectations
 
@@ -50,11 +44,9 @@ When `authority` is `unknown` or `not_applicable`, the validator reports an auth
 
 1. The `owner` value is an existing owner handle, `unknown`, or `not_applicable` exactly as permitted by the metadata contract. Do not use the name of the Docs Writing Team as a substitute for a confirmed handle, and do not invent a person, email address, or team alias.
 
-1. `authority`, `content_type`, and `lifecycle` describe what the page claims and how it is maintained. Select the cadence from the authority and change pattern, not from the folder name alone.
+1. `authority` and `content_type` describe what the page claims. Select the cadence from the authority and change pattern, not from the folder name alone.
 
-1. `review_status` and `review_date` record the latest evidence-based review. Use `needs_update` when a known review or content gap remains, `unknown` when no review evidence is available, and `not_applicable` only when review has no meaningful application. Do not refresh a date without reviewing the page.
-
-1. Preserve the UID and published URL by default. If a URL must change, use the compatibility and redirect rules from the metadata contract and the D5.2 deployment-delta policy.
+1. Preserve the UID and published URL by default. If a URL must change, document the redirect in the pull request and follow the D5.2 deployment-delta policy.
 
 The governance validator reports owner and authority gaps without replacing them with guesses. Existing D2.2 pages can therefore remain on the documented migration path while their unresolved values are visible for follow-up.
 
@@ -72,7 +64,7 @@ Use the repository's normal pull request flow. Include the affected workstream, 
 
 1. If a change affects the D3.1 manifest, D4 quality or safety evidence, D5.1 sitemap output, or D5.2 deployment delta, review the corresponding report and preserve its immutable identity, URL, license, and attribution rules.
 
-1. If a published page is materially misleading, submit a narrow corrective pull request, mark the known review or content gap as `needs_update`, and describe the risk and evidence. This process defines routing, not a response-time promise.
+1. If a published page is materially misleading, submit a narrow corrective pull request and describe the risk and evidence. This process defines routing, not a response-time promise.
 
 ## Unresolved conflicts
 
@@ -81,7 +73,7 @@ When sources disagree, do not silently choose a convenient value.
 - A confirmed canonical source takes precedence over a reference or illustrative page. Keep the page's UID and URL stable while correcting the content.
 - If two sources have equal authority, or no source can be confirmed, record the conflict in the pull request, route it to the Docs Writing Team, and do not merge a normative resolution until the authority decision is documented.
 - If generated output disagrees with its source, resolve the source or generation configuration and rerun the provenance check. The D5.2 delta must report ambiguous identity matches rather than guessing a move or redirect.
-- If ownership or the exact review handle is unresolved, retain `unknown`, keep the existing CODEOWNERS route, and record the follow-up. Do not block a safe corrective change by fabricating an owner, but do not represent the unresolved page as approved evidence for a new contract.
+- If ownership or the exact team handle is unresolved, retain `unknown`, keep the existing CODEOWNERS route, and record the follow-up. Do not block a safe corrective change by fabricating an owner, but do not represent the unresolved page as approved evidence for a new contract.
 
 The exact GitHub team handle for the Docs Writing Team is still unconfirmed. The explicit follow-up is to confirm that handle before changing `.github/CODEOWNERS`; the current route must not be replaced with a guessed alias.
 

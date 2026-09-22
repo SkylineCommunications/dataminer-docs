@@ -123,20 +123,6 @@ function Get-FrontMatterValue {
     return Get-YamlScalar $match.Groups["value"].Value
 }
 
-function Get-FrontMatterNestedValue {
-    param(
-        [AllowEmptyString()][string]$FrontMatter,
-        [Parameter(Mandatory = $true)][string]$Name
-    )
-
-    $match = [Regex]::Match($FrontMatter, "(?im)^\s{2,}" + [Regex]::Escape($Name) + "\s*:\s*(?<value>.*)$")
-    if (-not $match.Success) {
-        return ""
-    }
-
-    return Get-YamlScalar $match.Groups["value"].Value
-}
-
 function Get-FrontMatterList {
     param(
         [AllowEmptyString()][string]$FrontMatter,
@@ -213,11 +199,8 @@ function Get-MarkdownParts {
         ContentType = Get-FrontMatterValue -FrontMatter $frontMatter -Name "content_type"
         Authority = Get-FrontMatterValue -FrontMatter $frontMatter -Name "authority"
         AuthoritySource = Get-FrontMatterValue -FrontMatter $frontMatter -Name "authority_source"
-        Lifecycle = Get-FrontMatterValue -FrontMatter $frontMatter -Name "lifecycle"
         AppliesTo = @(Get-FrontMatterList -FrontMatter $frontMatter -Name "applies_to")
         Version = Get-FrontMatterValue -FrontMatter $frontMatter -Name "version"
-        CompatibilityUid = Get-FrontMatterNestedValue -FrontMatter $frontMatter -Name "uid"
-        CompatibilityUrl = Get-FrontMatterNestedValue -FrontMatter $frontMatter -Name "url"
     }
 }
 
@@ -476,7 +459,7 @@ function Get-SourceRecord {
         type = if ([String]::IsNullOrWhiteSpace($parts.ContentType)) { $category } else { $parts.ContentType }
         authority = if ([String]::IsNullOrWhiteSpace($parts.Authority)) { "unknown" } else { $parts.Authority }
         authoritySource = if ([String]::IsNullOrWhiteSpace($parts.AuthoritySource)) { "unknown" } else { $parts.AuthoritySource }
-        lifecycle = if ([String]::IsNullOrWhiteSpace($parts.Lifecycle)) { "unknown" } else { $parts.Lifecycle }
+        lifecycle = "unknown"
         appliesTo = @(
             if (@($parts.AppliesTo).Count -eq 0) {
                 "unknown"
@@ -486,8 +469,8 @@ function Get-SourceRecord {
             }
         )
         version = if ([String]::IsNullOrWhiteSpace($parts.Version)) { "unknown" } else { $parts.Version }
-        compatibilityUid = if ([String]::IsNullOrWhiteSpace($parts.CompatibilityUid)) { "unknown" } else { $parts.CompatibilityUid }
-        compatibilityUrl = if ([String]::IsNullOrWhiteSpace($parts.CompatibilityUrl)) { "unknown" } else { $parts.CompatibilityUrl }
+        compatibilityUid = "unknown"
+        compatibilityUrl = "unknown"
         xrefs = @($references.Xrefs)
         dependencies = @($references.Dependencies)
         title = Get-MarkdownTitle $parts.Body

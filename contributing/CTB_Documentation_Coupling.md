@@ -6,16 +6,10 @@ area: contributing
 content_type: conceptual
 authority: canonical
 authority_source: CTB_Documentation_Governance
-lifecycle: active
 applies_to:
   - DataMiner documentation
 version: "D6.2"
 owner: unknown
-review_status: approved
-review_date: 2026-09-19
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Documentation dependency mapping and coupling

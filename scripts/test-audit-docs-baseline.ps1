@@ -79,10 +79,6 @@ uid: AutomationFixture
 description: "A deterministic Automation fixture page with a typed XML example."
 content_type: conceptual
 authority: reference
-lifecycle: active
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Automation fixture
@@ -257,8 +253,8 @@ references:
     Assert-Condition (-not [String]::IsNullOrWhiteSpace($automationEntry.contentHash)) "Manifest content hash was not recorded."
     Assert-Condition ($automationEntry.type -eq "conceptual") "Manifest content type was not recorded."
     Assert-Condition ($automationEntry.authority -eq "reference") "Manifest authority was not recorded."
-    Assert-Condition ($automationEntry.lifecycle -eq "active") "Manifest lifecycle was not recorded."
-    Assert-Condition ($automationEntry.compatibility.uid -eq "stable" -and $automationEntry.compatibility.url -eq "stable") "Manifest compatibility was not recorded."
+    Assert-Condition ($automationEntry.lifecycle -eq "unknown") "Manifest lifecycle default was not recorded."
+    Assert-Condition ($automationEntry.compatibility.uid -eq "unknown" -and $automationEntry.compatibility.url -eq "unknown") "Manifest compatibility default was not recorded."
     Assert-Condition ($automationEntry.license -eq "CC BY-NC-ND 4.0") "Manifest license was not recorded."
     Assert-Condition ($automationEntry.attribution -eq "Skyline Communications") "Manifest attribution was not recorded."
 

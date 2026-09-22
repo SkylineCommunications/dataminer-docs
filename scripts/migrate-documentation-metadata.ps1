@@ -294,7 +294,6 @@ function New-GeneratedMetadata {
         [Parameter(Mandatory = $true)][string]$Uid,
         [Parameter(Mandatory = $true)][string]$Description,
         [Parameter(Mandatory = $true)][string]$Body,
-        [Parameter(Mandatory = $true)][string]$MigrationDate,
         [AllowEmptyString()][string]$Keywords
     )
 
@@ -324,16 +323,10 @@ function New-GeneratedMetadata {
         $authoritySource = "unknown"
     }
     $lines.Add("authority_source: $authoritySource")
-    $lines.Add("lifecycle: active")
     $lines.Add("applies_to:")
     $lines.Add("  - DataMiner")
     $lines.Add("version: $($versionEvidence.Version)")
     $lines.Add("owner: unknown")
-    $lines.Add("review_status: needs_update")
-    $lines.Add("review_date: $MigrationDate")
-    $lines.Add("compatibility:")
-    $lines.Add("  uid: stable")
-    $lines.Add("  url: stable")
     if (-not [String]::IsNullOrWhiteSpace($Keywords)) {
         $lines.Add("keywords: $(ConvertTo-YamlScalar $Keywords)")
     }
@@ -488,7 +481,6 @@ foreach ($target in $targetFiles) {
             -Uid $uid `
             -Description $description `
             -Body $parts.Body `
-            -MigrationDate ([string]$manifest.migrationDate) `
             -Keywords $keywords
         $generatedFrontMatter = $generated.Text.Replace("`n", $parts.LineEnding)
         $newText = "---$($parts.LineEnding)$generatedFrontMatter$($parts.LineEnding)---$($parts.LineEnding)$($parts.Body)"
@@ -518,7 +510,6 @@ foreach ($target in $targetFiles) {
     $contentType = if ($metadata.Contains("content_type")) { [string]$metadata["content_type"] } else { [string]$target.Scope.contentType }
     $authority = if ($metadata.Contains("authority")) { [string]$metadata["authority"] } else { "unknown" }
     $version = if ($metadata.Contains("version")) { [string]$metadata["version"] } else { "unknown" }
-    $reviewStatus = if ($metadata.Contains("review_status")) { [string]$metadata["review_status"] } else { "unknown" }
     $authoritySource = if ($metadata.Contains("authority_source")) { [string]$metadata["authority_source"] } else { "unknown" }
     $body = (Get-FrontMatterParts $text).Body
     $findings = New-Object "System.Collections.Generic.List[string]"
@@ -534,10 +525,7 @@ foreach ($target in $targetFiles) {
         $evidence = @($versionEvidence.Evidence)
     }
     if ($authority -eq "unknown") {
-        $findings.Add("authority_requires_review")
-    }
-    if ($reviewStatus -eq "needs_update") {
-        $findings.Add("metadata_review_pending")
+        $findings.Add("authority_requires_follow_up")
     }
 
     $records.Add([ordered]@{
@@ -549,7 +537,7 @@ foreach ($target in $targetFiles) {
         authoritySource = $authoritySource
         version = $version
         bodySha256 = Get-TextSha256 $body
-        reviewFindings = @($findings | Sort-Object -Unique)
+        findings = @($findings | Sort-Object -Unique)
         versionEvidence = @($evidence)
     })
 }
@@ -589,25 +577,6 @@ foreach ($scope in @($manifest.scopes)) {
     })
 }
 
-$reviewFindings = @(
-    $recordArray |
-        Where-Object { $_.reviewFindings.Count -gt 0 } |
-        ForEach-Object {
-            [ordered]@{
-                path = $_.path
-                findings = @($_.reviewFindings)
-                versionEvidence = @($_.versionEvidence)
-            }
-        }
-)
-
-$pendingReviewCount = 0
-foreach ($record in $recordArray) {
-    if (@($record.reviewFindings) -contains "metadata_review_pending") {
-        $pendingReviewCount++
-    }
-}
-
 $connectorCount = Get-RecordCount -Records $recordArray -Property "domain" -Value "Connector"
 $automationCount = Get-RecordCount -Records $recordArray -Property "domain" -Value "Automation"
 $conceptualCount = Get-RecordCount -Records $recordArray -Property "contentType" -Value "conceptual"
@@ -618,7 +587,6 @@ $legacyCount = Get-RecordCount -Records $recordArray -Property "contentType" -Va
 $unknownVersionCount = Get-RecordCount -Records $recordArray -Property "version" -Value "unknown"
 $unknownAuthorityCount = Get-RecordCount -Records $recordArray -Property "authority" -Value "unknown"
 $scopeSummaryArray = [object[]]$scopeSummary.ToArray()
-$reviewFindingsArray = [object[]]$reviewFindings
 $unicodeNormalizedAdditions = @()
 foreach ($addition in @($manifest.baseline.unicodeNormalizedAdditions)) {
     $unicodeNormalizedAdditions += [string]$addition
@@ -658,7 +626,6 @@ $report = [ordered]@{
         metadataVersion1 = $recordArray.Count
         unknownVersions = $unknownVersionCount
         unknownAuthorities = $unknownAuthorityCount
-        pendingReview = $pendingReviewCount
     }
     toc = [ordered]@{
         path = "develop/toc.yml"
@@ -666,7 +633,6 @@ $report = [ordered]@{
         changedByMigration = $false
     }
     scopes = $scopeSummaryArray
-    reviewFindings = $reviewFindingsArray
     pages = $recordArray
 }
 
@@ -686,5 +652,4 @@ if (-not $CheckOnly) {
 Write-Output "D2.2 metadata migration scope: $($targetFiles.Count) pages."
 Write-Output "Version 1 pages: $($records.Count)."
 Write-Output "Changed pages: $changedCount."
-Write-Output "Unknown versions requiring review: $($report.coverage.unknownVersions)."
-Write-Output "Review findings: $($reviewFindings.Count)."
+Write-Output "Unknown versions requiring follow-up: $($report.coverage.unknownVersions)."

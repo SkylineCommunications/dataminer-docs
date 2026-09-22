@@ -1,26 +1,20 @@
 ---
 metadata_version: 1
 uid: CTB_Documentation_Metadata
-description: Define the version 1 documentation metadata contract, authority model, controlled values, compatibility, and validation rules for DataMiner docs.
+description: Define the version 1 documentation metadata contract, authority model, controlled values, and validation rules for DataMiner docs.
 area: contributing
 content_type: schema
 authority: canonical
 authority_source: not_applicable
-lifecycle: active
 applies_to:
   - DataMiner documentation
 version: "1.0"
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Documentation metadata contract
 
-Use this contract when you add a new page or make a substantial change to a page. The contract makes the purpose, authority, lifecycle, applicability, and compatibility of a page machine-readable without assigning an organizational owner or a license.
+Use this contract when you add a new page or make a substantial change to a page. The contract makes the purpose, authority, applicability, and version of a page machine-readable without assigning an organizational owner or a license.
 
 The version 1 schema is stored in `contributing/metadata/documentation-metadata-v1.schema.json`. It applies to a page when the page contains `metadata_version: 1`. The D2.2 migration opts the current Connector and Automation guide/schema scopes into this contract with `scripts/migrate-documentation-metadata.ps1`; pages outside those scopes without this field remain on the legacy migration path.
 
@@ -36,13 +30,9 @@ Every page that opts in to version 1 must include the following fields:
 | `area` | The top-level documentation area. |
 | `content_type` | The controlled classification of the page. |
 | `authority` | The authority claim made by the page. |
-| `lifecycle` | The current publication lifecycle. |
 | `applies_to` | The product, platform, or scope covered by the page. |
 | `version` | The documented contract or release version. |
 | `owner` | An existing owner handle, or a reserved sentinel. |
-| `review_status` | The status of the most recent review. |
-| `review_date` | The review date, or its required sentinel. |
-| `compatibility` | The UID and URL compatibility guarantees. |
 
 The optional `authority_source` field identifies an existing UID or URI when a page derives its information from another source. The optional `keywords` field contains the comma-separated keywords already supported by the documentation site. Version 1 does not allow undocumented front matter keys.
 
@@ -78,29 +68,9 @@ Use exactly one of the following values:
 
 Use `authority_source` for a reference, illustrative, or historical page when an existing UID or URI identifies the source. Do not create an owner or source value merely to fill the field.
 
-### Lifecycle
-
-Use exactly one of `draft`, `active`, `deprecated`, `archived`, or `unknown`.
-
-- `draft` is work in progress and is not a completed contract.
-- `active` is currently published and maintained.
-- `deprecated` remains published but should no longer be used for new work.
-- `archived` is retained for history and is not current guidance.
-- `unknown` means that the lifecycle still needs to be confirmed.
-
 ### Area
 
 Use the top-level repository area: `root`, `dataminer`, `develop`, `solutions`, `tutorials`, `connectors`, `release-notes`, or `contributing`. Use `unknown` when the area is not confirmed and `not_applicable` only when the field has no meaningful value.
-
-### Review status and date
-
-Use exactly one of `draft`, `in_review`, `approved`, `needs_update`, `unknown`, or `not_applicable` for `review_status`.
-
-- For `draft`, `in_review`, `approved`, and `needs_update`, `review_date` must be an ISO 8601 date in `YYYY-MM-DD` form.
-- For `unknown`, `review_date` must be `unknown`.
-- For `not_applicable`, `review_date` must be `not_applicable`.
-
-An `approved` status records that the metadata and content were checked against this contract. It does not assign an organizational owner.
 
 ## Applicability and version
 
@@ -120,24 +90,14 @@ applies_to:
 
 `owner` is an existing owner handle. Use `unknown` when the owner has not been confirmed and `not_applicable` when ownership has no meaning for the page. Do not add organizational owner names to this contract.
 
-## UID and URL compatibility
+## UID and URL stability
 
-The following guarantees apply to every version 1 page:
+The following identity rules apply to every version 1 page:
 
 - A `uid` is unique, contains no spaces, and is a permanent DocFX identifier. Once published, do not change it or reuse it for another page.
 - Moving or renaming a source file must preserve its `uid`. A changed `uid` is a breaking cross-reference change and requires an explicit migration decision.
-- A published URL is stable by default. Keep the source path stable when `compatibility.url` is `stable`.
-- If a source path must change, set `compatibility.url` to `redirect_required`, list every known old path in `compatibility.url_aliases`, and do not remove the old route until the redirect is available.
-- `unknown` means that the guarantee has not been checked. It is not equivalent to `stable`.
-- `not_applicable` is reserved for content with no published identity. Do not use it to avoid checking a UID or URL.
-
-For a normal new page, use `stable` for both `compatibility.uid` and `compatibility.url`:
-
-```yaml
-compatibility:
-  uid: stable
-  url: stable
-```
+- A published URL is stable by default. Keep the source path stable when a page is edited.
+- If a source path must change, record every known old path and add a permanent redirect before removing the old route.
 
 ## Examples
 
@@ -154,16 +114,10 @@ area: dataminer
 content_type: conceptual
 authority: reference
 authority_source: unknown
-lifecycle: active
 applies_to:
   - DataMiner
 version: unversioned
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 ```
 
@@ -178,16 +132,10 @@ area: develop
 content_type: schema
 authority: canonical
 authority_source: not_applicable
-lifecycle: active
 applies_to:
   - DataMiner documentation
 version: "1.0"
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 ```
 
@@ -202,16 +150,10 @@ area: develop
 content_type: api
 authority: canonical
 authority_source: not_applicable
-lifecycle: active
 applies_to:
   - DataMiner
 version: "10.6.8"
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 ```
 
@@ -226,16 +168,10 @@ area: tutorials
 content_type: example
 authority: illustrative
 authority_source: unknown
-lifecycle: active
 applies_to:
   - DataMiner
 version: "10.6.8"
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 ```
 
@@ -250,16 +186,10 @@ area: release-notes
 content_type: release-note
 authority: historical
 authority_source: not_applicable
-lifecycle: active
 applies_to:
   - DataMiner
 version: "10.6.8"
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 ```
 
@@ -274,22 +204,16 @@ area: unknown
 content_type: legacy
 authority: historical
 authority_source: unknown
-lifecycle: archived
 applies_to:
   - unknown
 version: unknown
 owner: unknown
-review_status: not_applicable
-review_date: not_applicable
-compatibility:
-  uid: unknown
-  url: unknown
 ---
 ```
 
 ## Deterministic validation
 
-When you add `metadata_version: 1`, validate the complete front matter object against `contributing/metadata/documentation-metadata-v1.schema.json` with `scripts/validate-documentation-metadata.ps1`. The validator reads the schema instead of maintaining a second list of fields or values. It must reject missing required fields, values outside the controlled lists, empty strings, unknown metadata keys, invalid dates, and mixed `unknown` or `not_applicable` applicability arrays. Pages without `metadata_version: 1` are legacy pages and remain out of scope for this opt-in validation until their migration scope is scheduled. The D2.2 target scope and coverage report are defined in `contributing/metadata/d2-2-migration-scope.json` and `d2-2-metadata-migration-report.json`.
+When you add `metadata_version: 1`, validate the complete front matter object against `contributing/metadata/documentation-metadata-v1.schema.json` with `scripts/validate-documentation-metadata.ps1`. The validator reads the schema instead of maintaining a second list of fields or values. It must reject missing required fields, values outside the controlled lists, empty strings, unknown metadata keys, and mixed `unknown` or `not_applicable` applicability arrays. Pages without `metadata_version: 1` are legacy pages and remain out of scope for this opt-in validation until their migration scope is scheduled. The D2.2 target scope and coverage report are defined in `contributing/metadata/d2-2-migration-scope.json` and `d2-2-metadata-migration-report.json`.
 
 For a repository-wide check of opted-in pages, run:
 

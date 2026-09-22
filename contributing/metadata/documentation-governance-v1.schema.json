@@ -47,7 +47,6 @@
       "required": [
         "requiredFields",
         "ownerSentinels",
-        "reviewStatuses",
         "unknownValuesRequireFollowUp"
       ],
       "properties": {
@@ -67,22 +66,6 @@
           "items": {
             "type": "string",
             "enum": [
-              "unknown",
-              "not_applicable"
-            ]
-          }
-        },
-        "reviewStatuses": {
-          "type": "array",
-          "uniqueItems": true,
-          "minItems": 1,
-          "items": {
-            "type": "string",
-            "enum": [
-              "draft",
-              "in_review",
-              "approved",
-              "needs_update",
               "unknown",
               "not_applicable"
             ]

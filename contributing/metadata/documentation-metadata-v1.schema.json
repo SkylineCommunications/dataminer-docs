@@ -84,17 +84,6 @@
       ],
       "description": "An existing UID or URI identifying the source for a non-canonical page."
     },
-    "lifecycle": {
-      "type": "string",
-      "enum": [
-        "draft",
-        "active",
-        "deprecated",
-        "archived",
-        "unknown"
-      ],
-      "description": "The current publication lifecycle of the page."
-    },
     "applies_to": {
       "oneOf": [
         {
@@ -134,98 +123,6 @@
       "minLength": 1,
       "description": "An existing owner handle, or unknown/not_applicable when no owner is recorded."
     },
-    "review_status": {
-      "type": "string",
-      "enum": [
-        "draft",
-        "in_review",
-        "approved",
-        "needs_update",
-        "unknown",
-        "not_applicable"
-      ],
-      "description": "The status of the most recent metadata and content review."
-    },
-    "review_date": {
-      "oneOf": [
-        {
-          "type": "string",
-          "format": "date",
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-        },
-        {
-          "type": "string",
-          "enum": [
-            "unknown",
-            "not_applicable"
-          ]
-        }
-      ],
-      "description": "The date of the most recent review, in ISO 8601 date format."
-    },
-    "compatibility": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "uid",
-        "url"
-      ],
-      "properties": {
-        "uid": {
-          "type": "string",
-          "enum": [
-            "stable",
-            "unknown",
-            "not_applicable"
-          ],
-          "description": "Whether the published UID is guaranteed to remain stable."
-        },
-        "url": {
-          "type": "string",
-          "enum": [
-            "stable",
-            "redirect_required",
-            "unknown",
-            "not_applicable"
-          ],
-          "description": "Whether the published URL is stable or needs a redirect when changed."
-        },
-        "url_aliases": {
-          "type": "array",
-          "uniqueItems": true,
-          "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "description": "Existing URL paths that must continue to resolve when a URL changes."
-        }
-      },
-      "allOf": [
-        {
-          "if": {
-            "properties": {
-              "url": {
-                "const": "redirect_required"
-              }
-            },
-            "required": [
-              "url"
-            ]
-          },
-          "then": {
-            "required": [
-              "url_aliases"
-            ],
-            "properties": {
-              "url_aliases": {
-                "minItems": 1
-              }
-            }
-          }
-        }
-      ],
-      "description": "The compatibility guarantees for the page identity."
-    },
     "keywords": {
       "type": "string",
       "minLength": 1,
@@ -239,55 +136,8 @@
     "area",
     "content_type",
     "authority",
-    "lifecycle",
     "applies_to",
     "version",
-    "owner",
-    "review_status",
-    "review_date",
-    "compatibility"
-  ],
-  "allOf": [
-    {
-      "oneOf": [
-        {
-          "properties": {
-            "review_status": {
-              "enum": [
-                "draft",
-                "in_review",
-                "approved",
-                "needs_update"
-              ]
-            },
-            "review_date": {
-              "type": "string",
-              "format": "date",
-              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-            }
-          }
-        },
-        {
-          "properties": {
-            "review_status": {
-              "const": "unknown"
-            },
-            "review_date": {
-              "const": "unknown"
-            }
-          }
-        },
-        {
-          "properties": {
-            "review_status": {
-              "const": "not_applicable"
-            },
-            "review_date": {
-              "const": "not_applicable"
-            }
-          }
-        }
-      ]
-    }
+    "owner"
   ]
 }

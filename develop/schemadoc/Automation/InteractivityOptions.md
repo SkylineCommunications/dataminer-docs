@@ -6,16 +6,10 @@ area: develop
 content_type: schema
 authority: reference
 authority_source: SchemaAutomationScript
-lifecycle: active
 applies_to:
   - DataMiner
 version: 10.5.9
 owner: unknown
-review_status: needs_update
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # InteractivityOptions simple type

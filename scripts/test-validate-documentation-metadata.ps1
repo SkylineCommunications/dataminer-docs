@@ -44,21 +44,15 @@ try {
 ---
 metadata_version: 1
 uid: Metadata_Valid_Fixture
-description: Validate a complete metadata object with controlled values and explicit compatibility guarantees for a DataMiner documentation page.
+description: Validate a complete DataMiner documentation metadata object with controlled values and required page identity fields.
 area: develop
 content_type: conceptual
 authority: reference
 authority_source: unknown
-lifecycle: active
 applies_to:
   - DataMiner
 version: unversioned
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Valid metadata fixture
@@ -81,16 +75,10 @@ area: unknown
 content_type: legacy
 authority: historical
 authority_source: unknown
-lifecycle: archived
 applies_to:
   - unknown
 version: unknown
 owner: unknown
-review_status: not_applicable
-review_date: not_applicable
-compatibility:
-  uid: unknown
-  url: unknown
 ---
 
 # Sentinel metadata fixture
@@ -104,15 +92,9 @@ description: Reject this object because the required owner field is intentionall
 area: develop
 content_type: conceptual
 authority: unknown
-lifecycle: unknown
 applies_to:
   - unknown
 version: unknown
-review_status: unknown
-review_date: unknown
-compatibility:
-  uid: unknown
-  url: unknown
 ---
 
 # Missing field fixture
@@ -126,17 +108,11 @@ description: Reject this object because applicability cannot mix an unknown sent
 area: develop
 content_type: conceptual
 authority: unknown
-lifecycle: unknown
 applies_to:
   - unknown
   - DataMiner
 version: unknown
 owner: unknown
-review_status: unknown
-review_date: unknown
-compatibility:
-  uid: unknown
-  url: unknown
 ---
 
 # Mixed applicability fixture
@@ -150,16 +126,10 @@ description: Reject this object because an undocumented front matter key is pres
 area: develop
 content_type: conceptual
 authority: unknown
-lifecycle: unknown
 applies_to:
   - unknown
 version: unknown
 owner: unknown
-review_status: unknown
-review_date: unknown
-compatibility:
-  uid: unknown
-  url: unknown
 unexpected: value
 ---
 

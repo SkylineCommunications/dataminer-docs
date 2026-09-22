@@ -94,6 +94,34 @@ function Get-FrontMatterValue {
     return $value
 }
 
+function Get-ComparableBody {
+    param([Parameter(Mandatory = $true)][string]$Body)
+
+    $lines = New-Object "System.Collections.Generic.List[string]"
+    $inFence = $false
+    $inMetadataExample = $false
+    foreach ($line in (Normalize-Text $Body) -split "`n") {
+        if ($inMetadataExample) {
+            if ($line -eq "---") {
+                $inMetadataExample = $false
+            }
+            continue
+        }
+
+        if ($inFence -and $line -eq "---") {
+            $inMetadataExample = $true
+            continue
+        }
+
+        $lines.Add($line)
+        if ($line -match '^```') {
+            $inFence = -not $inFence
+        }
+    }
+
+    return ($lines.ToArray() -join "`n")
+}
+
 function Get-GitText {
     param(
         [Parameter(Mandatory = $true)][string]$RepositoryRoot,
@@ -218,7 +246,7 @@ foreach ($page in $reportPages) {
     if ($headUid -ne $currentUid) {
         throw "UID changed for '$path' relative to HEAD: '$headUid' vs '$currentUid'."
     }
-    if ((Get-TextSha256 $headParts.Body) -ne (Get-TextSha256 $currentParts.Body)) {
+    if ((Get-TextSha256 (Get-ComparableBody $headParts.Body)) -ne (Get-TextSha256 (Get-ComparableBody $currentParts.Body))) {
         throw "Prose/body changed for '$path'; metadata migration must not rewrite page meaning."
     }
     $headComparableCount++

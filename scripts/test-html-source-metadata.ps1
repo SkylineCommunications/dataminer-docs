@@ -75,16 +75,10 @@ area: develop
 content_type: conceptual
 authority: reference
 authority_source: unknown
-lifecycle: active
 applies_to:
   - DataMiner
 version: unknown
 owner: unknown
-review_status: unknown
-review_date: unknown
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Connector fixture
@@ -100,16 +94,10 @@ area: develop
 content_type: conceptual
 authority: reference
 authority_source: unknown
-lifecycle: active
 applies_to:
   - DataMiner
 version: unknown
 owner: unknown
-review_status: unknown
-review_date: unknown
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Automation fixture

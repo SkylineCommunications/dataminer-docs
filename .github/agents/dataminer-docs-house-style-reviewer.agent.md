@@ -13,7 +13,7 @@ Your job is to review a documentation page or section and report whether it foll
 - Review Markdown and structure against `/contributing/CTB_Markdown_Syntax.md`.
 - Review against US English usage.
 - For a new page, validate the complete front matter with `scripts/validate-documentation-metadata.ps1 -Path <file> -RequireVersion1`. Do not require legacy pages to be migrated as part of an unrelated review.
-- Check that edits preserve existing UIDs and published URLs, and that unresolved ownership, applicability, version, review, or compatibility values use the exact contract sentinels rather than guesses.
+- Check that edits preserve existing UIDs and published URLs, and that unresolved ownership, applicability, authority, or version values use the exact contract sentinels rather than guesses.
 
 ## Approach
 1. Ask the user whether they want you to apply the changes directly or list the issues in chat.

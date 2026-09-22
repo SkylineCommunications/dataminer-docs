@@ -6,16 +6,10 @@ area: contributing
 content_type: conceptual
 authority: canonical
 authority_source: not_applicable
-lifecycle: active
 applies_to:
   - DataMiner documentation
 version: "D0.3"
 owner: unknown
-review_status: approved
-review_date: 2026-09-17
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Documentation corpus and distribution policy
@@ -100,7 +94,7 @@ Removed entries are retained as UID/URL tombstones in the commit-addressed delta
 
 ## Governance evidence
 
-The D6.1 governance report is generated at `_artifacts/documentation-governance.json` by `scripts/validate-documentation-governance.ps1`. It contains policy identifiers, workstream classifications, review-age findings, owner or authority gaps, and references to repository evidence paths. It does not contain page text, generated corpus content, secrets, or a substitute for the D0.1 metadata contract. The workflow retains the report for 14 days as validation evidence and does not publish it with the documentation site.
+The D6.1 governance report is generated at `_artifacts/documentation-governance.json` by `scripts/validate-documentation-governance.ps1`. It contains policy identifiers, workstream classifications, owner or authority gaps, and references to repository evidence paths. It does not contain page text, generated corpus content, secrets, or a substitute for the D0.1 metadata contract. The workflow retains the report for 14 days as validation evidence and does not publish it with the documentation site.
 
 ## Product-to-documentation coupling evidence
 

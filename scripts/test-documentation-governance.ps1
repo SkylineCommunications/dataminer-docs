@@ -45,21 +45,15 @@ try {
 ---
 metadata_version: 1
 uid: Governance_Connector_Valid
-description: Validate connector governance metadata with an explicit authority, owner sentinel, review state, and stable page identity.
+description: Validate connector governance metadata with an explicit authority and owner sentinel.
 area: develop
 content_type: conceptual
 authority: reference
 authority_source: unknown
-lifecycle: active
 applies_to:
   - DataMiner
 version: unversioned
 owner: unknown
-review_status: approved
-review_date: 2026-09-19
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Connector governance fixture
@@ -69,21 +63,15 @@ compatibility:
 ---
 metadata_version: 1
 uid: Governance_Generated_Api
-description: Validate generated API governance thresholds with a review date that is intentionally older than the stale-content threshold.
+description: Validate generated API governance metadata with an explicit authority and owner sentinel.
 area: develop
 content_type: api
 authority: reference
 authority_source: unknown
-lifecycle: active
 applies_to:
   - DataMiner
 version: unversioned
 owner: unknown
-review_status: approved
-review_date: 2024-01-01
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Generated API governance fixture
@@ -98,15 +86,9 @@ area: develop
 content_type: conceptual
 authority: reference
 authority_source: unknown
-lifecycle: active
 applies_to:
   - DataMiner
 version: unversioned
-review_status: approved
-review_date: 2026-09-19
-compatibility:
-  uid: stable
-  url: stable
 ---
 
 # Missing owner fixture
@@ -116,27 +98,21 @@ compatibility:
 ---
 metadata_version: 1
 uid: Governance_Historical
-description: Validate that historical governance content can use the metadata contract sentinel without receiving a false current-review requirement.
+description: Validate that historical governance content can use the metadata contract sentinel without receiving a false authority requirement.
 area: dataminer
 content_type: legacy
 authority: historical
 authority_source: unknown
-lifecycle: archived
 applies_to:
   - unknown
 version: unknown
 owner: unknown
-review_status: not_applicable
-review_date: not_applicable
-compatibility:
-  uid: unknown
-  url: unknown
 ---
 
 # Historical governance fixture
 '@
 
-    & $validator -RepositoryRoot $fixtureRoot -PolicyPath $policyPath -AsOfDate ([datetime]"2026-09-19") -Path @(
+    & $validator -RepositoryRoot $fixtureRoot -PolicyPath $policyPath -Path @(
         "develop\devguide\Connector\valid.md",
         "develop\api\GeneratedApi.md",
         "dataminer\Historical.md"
@@ -146,21 +122,11 @@ compatibility:
     $report = Get-Content -LiteralPath $reportPath -Raw | ConvertFrom-Json
     Assert-Condition ($report.policy -eq "D6.1") "The governance report has the wrong policy identifier."
     Assert-Condition ($report.summary.ownerGaps -eq 3) "The governance report did not retain the three explicit owner gaps."
-    Assert-Condition ($report.summary.staleContent -eq 1) "The governance report did not detect the stale generated API fixture."
-    Assert-Condition (@($report.findings | Where-Object { $_.code -eq "review_pending" }).Count -eq 0) "The governance fixture unexpectedly produced a pending review."
+    Assert-Condition (@($report.summary.PSObject.Properties.Name) -notcontains "staleContent") "The governance report retained removed stale-review metadata."
 
     $failed = $false
     try {
-        & $validator -RepositoryRoot $fixtureRoot -PolicyPath $policyPath -AsOfDate ([datetime]"2026-09-19") -Path "develop\api\GeneratedApi.md" -FailOnStale
-    }
-    catch {
-        $failed = $true
-    }
-    Assert-Condition $failed "The governance validator accepted stale content when FailOnStale was requested."
-
-    $failed = $false
-    try {
-        & $validator -RepositoryRoot $fixtureRoot -PolicyPath $policyPath -AsOfDate ([datetime]"2026-09-19") -Path "develop\devguide\Automation\MissingOwner.md"
+        & $validator -RepositoryRoot $fixtureRoot -PolicyPath $policyPath -Path "develop\devguide\Automation\MissingOwner.md"
     }
     catch {
         $failed = $true
