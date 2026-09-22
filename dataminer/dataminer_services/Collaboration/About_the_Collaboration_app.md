@@ -1,5 +1,6 @@
 ---
 uid: About_the_Collaboration_app
+description: "Use the Collaboration app to track ongoing Skyline projects, review deliverable statuses, and access support service tickets."
 ---
 
 # About the Collaboration app

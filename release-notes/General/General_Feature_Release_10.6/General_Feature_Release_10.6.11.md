@@ -40,6 +40,18 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
+### DataMiner Installer now supports command-line installation [ID 45554]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+You can now install DataMiner from the command line by running the following command:
+
+```powershell
+DataMinerInstaller.exe Install <Path to firststartupchoiceconfig.json>
+```
+
+For more information about the configuration file, see [Unattended DataMiner installation](xref:Unattended_DM_installation).
+
 ### New GetCloudDmsInformationRequest message to retrieve information from a cloud-connected DMS [ID 46393]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
@@ -51,6 +63,14 @@ This request requires a CloudGateway version that supports it.
 ## Changes
 
 ### Enhancements
+
+#### DataMiner Installer: Perpetual STaaS systems will retain their configured DMA ID and use a supplied license file [ID 46102]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you configure a perpetual STaaS system using the DataMiner Installer, the configured DMA ID is now retained instead of being replaced with an ID returned by dataminer.services.
+
+Also, when the Installer is run in unattended mode, you will now be able to specify the optional `LicenseConfig.LicenseFilePath` setting in order to apply an existing *DataMiner.lic* file. The installer will then copy the license file to the DataMiner root folder and start DataMiner, without requiring you to generate and upload a *Request.lic* file.
 
 #### Jobs module: All server-side code has now been removed from the code base [ID 46163]
 
@@ -73,6 +93,14 @@ By default, the analysis will still be performed. Skipping it can considerably s
 The UserDefinableApiEndpoint DxM now reports its health status to dataminer.services.
 
 When it can validate or repair the IIS rewrite rule for user-defined APIs, it reports a healthy status. If the rule cannot be repaired, it reports an unhealthy status.
+
+#### BrokerGateway will now fall back to a local IP address and can reset its cluster configuration [ID 46382]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is installed for the first time, from now on, it will fall back to a configuration with a single local agent. It will use a detected local IP address, preferring an IPv4 address, instead of the local host or container name.
+
+In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clears stale cluster information and detects the local agent again.
 
 ### Fixes
 
@@ -170,3 +198,9 @@ On systems using STaaS, up to now, ordering DOM entries by an optional field cou
 Up to now, when no exact DLL match was found in the hint paths while resolving assemblies for automation scripts or QActions, the first matching DLL was selected. This could result in an older, incompatible version being selected.
 
 From now on, the highest compatible DLL version in the requested range will be selected. If no version in that range is available, the highest available version will be selected.
+
+#### SLSNMPManager could stop unexpectedly when testing a connection with SNMPv3 credentials [ID 46438]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, testing a connection that used SNMPv3 credentials from the Credential Library with SHA-224, SHA-256, SHA-384, or SHA-512 authentication could cause the SLSNMPManager process to stop unexpectedly.

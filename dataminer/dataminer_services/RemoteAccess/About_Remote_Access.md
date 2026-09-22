@@ -1,5 +1,6 @@
 ---
 uid: About_Remote_Access
+description: "Enable remote access for your DataMiner System through dataminer.services to reach web apps, Cube, APIs, and shared DMA files from anywhere."
 keywords: remote access to the cloud, cloud connection
 reviewer: Alexander Verkest
 ---
