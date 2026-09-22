@@ -54,7 +54,7 @@ Examples:
 
 DataMiner supports businesses by enabling seamless evolution into new technologies while ensuring existing platforms operate at peak efficiency. Its scalability, automation, and AI-driven insights make it essential for media, telecom, and broadcast organizations looking to innovate and optimize their operations.
 
-- **Evolution** — The [DataMiner xOps Platform](xref:Overview_About_DataMiner#dataminer-xops-platform) allows you to easily adapt to change and future growth:
+- **Evolution** — The DataMiner xOps Platform allows you to easily adapt to change and future growth:
 
   - **End-to-end orchestration & automation**: Facilitates the transition to IP-based, cloud, and virtualized environments while integrating legacy and new technologies seamlessly.
   - **Flexible & scalable architecture**: Enables organizations to scale operations, add new services, and adopt new technologies (e.g., 5G, cloud-based playout, AI-driven analytics).

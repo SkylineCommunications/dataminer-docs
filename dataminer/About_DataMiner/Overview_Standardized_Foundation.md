@@ -9,7 +9,7 @@ With DataMiner, you build your data-driven operation on a rock-solid, standardiz
 
 ## Any domain
 
-DataMiner is designed to integrate your entire media, ICT, and broadband operation end to end, across any imaginable domain. It is the only solution in the industry that is guaranteed to do that, with proven deployments in all those areas.
+DataMiner is designed to integrate your entire operation end to end, across any imaginable domain, so it can operate as one intelligence fabric. It is the only solution in the industry that is guaranteed to do that, with proven deployments in countless areas:
 
 - All-IP networks
 - Legacy ASI/SDI infrastructure
@@ -24,7 +24,7 @@ DataMiner is designed to integrate your entire media, ICT, and broadband operati
 
 ## Any category
 
-Not only the components that make up your operation need to be managed. DataMiner also supports the same capabilities towards the integration of auxiliary data sources and so-called northbound data sources.
+Not only the components that make up your operation need to be managed. DataMiner also supports the same capabilities towards the integration of auxiliary and northbound data sources.
 
 - Inventory databases
 - Service catalogs
