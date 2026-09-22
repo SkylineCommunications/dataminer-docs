@@ -15,7 +15,7 @@ You can now create support tickets on behalf of the organizations you manage. Af
 
 ### 22 September 2026 - Fix - Connection Management - DMS not registered for STaaS after cloud connection
 
-When you selected an STaaS region while connecting a DMS to the cloud in the Connection Management app, the DMS was connected to the cloud but was not registered for STaaS. This prevented the DMS from starting correctly. This issue has been resolved.
+When you selected a STaaS region while connecting a DMS to dataminer.services in the Connection Management app, the DMS was connected to dataminer.services but was not registered for STaaS. This prevented the DMS from starting correctly. This issue has been resolved.
 
 ### 22 September 2026 - Enhancement - Catalog - Improved clickability of versions
 
