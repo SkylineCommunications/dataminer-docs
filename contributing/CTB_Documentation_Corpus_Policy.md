@@ -88,20 +88,6 @@ The D3.1 AI content manifest is generated at `_artifacts/ai-content-manifest.jso
 
 The workflow retains the commit-addressed D3.1 manifest for 90 days and, from the protected `main` branch in the canonical repository, publishes the same metadata-only file at `https://docs.dataminer.services/ai-content-manifest.json`. Pull requests may validate a generated copy but must not publish it to a public location. Consumers must treat the manifest as a discovery index and fetch the referenced source under its governing license rather than treating the manifest as a copy of the content. The root `llms.txt` file only discovers these public resources; it is not authoritative.
 
-## D4.1 documentation quality gates
-
-The CI workflow runs the existing D2.1 metadata validator and the D2.2 migration and identity checks. It then runs the D0.2 corpus audit and passes its generated compatibility and UID inventory to `scripts/validate-documentation-quality.ps1`. The quality gate does not create a second metadata schema or migration inventory.
-
-For changed Markdown files, the gate runs the pinned Markdownlint configuration and checks image alt text, canonical `xref:` links for internal pages, and single documentation version values. New duplicate UIDs, missing UIDs, removed UIDs, and changed published URLs fail the gate. Findings already present in the D0.2 baseline or unchanged from the comparison revision are retained in the D4.1 JSON report as `legacy_exception` findings and do not block the change. This makes existing legacy exceptions visible without changing their UIDs or URLs.
-
-DocFX warnings that predate a change remain reported separately in the D2.2 validation report and the pull request. The quality gate does not suppress, reclassify, or claim to fix those warnings.
-
-## External-link policy
-
-`scripts/check-external-links.ps1` produces a deterministic JSON report for external HTTP and HTTPS links. Each URL receives a 10-second timeout and two retries after the initial request. The report records the URL, source path and line, HTTP status, attempt count, and error. The checker skips fenced code blocks and deduplicates a URL within a source page.
-
-External-link failures do not block ordinary pull requests. Pull requests still retain the report for review. Scheduled runs and protected-main runs use the same policy with failure reporting enabled, and the external-link job is separate from documentation deployment. A transient public-site failure therefore cannot prevent ordinary contribution validation or deployment.
-
 ## Deployment deltas
 
 The D5.2 deployment delta is generated at `_artifacts/deployment-delta.json` by `scripts/generate-deployment-delta.ps1` and is validated against `contributing/metadata/deployment-delta-v1.schema.json`. It compares the current commit-addressed D3.1 manifest with the prior versioned manifest retrieved from protected-main workflow artifacts. The first deployment is safe when no prior artifact exists: the delta records the previous-manifest gap and additions rather than failing.
@@ -122,14 +108,6 @@ The D6.2 dependency map is stored in `contributing/metadata/documentation-depend
 
 The D6.2 resolver writes `_artifacts/documentation-coupling.json`. It records matched change kinds, documentation UIDs and areas, targeted check identifiers, source release and package identity fields, unresolved follow-ups, and the documentation-release gate. Product repositories may supply a change object using `contributing/metadata/documentation-coupling-change-v1.schema.json`; no cross-repository dispatch permission or product release blocker is assumed. An unavailable release or package value remains `unknown` with a follow-up.
 
-## Quality and synchronization metrics
-
-D6.3 combines D2 metadata coverage and provenance, D3 manifest and sitemap evidence, D4 quality, link, snippet, and safety evidence, D5 deployment deltas, and D6 governance and coupling reports. The generator is `scripts/generate-documentation-metrics.ps1`; its version 1 contract is `contributing/metadata/documentation-metrics-v1.schema.json`, and the metadata-only report is `_artifacts/documentation-metrics.json`.
-
-The report contains counts, statuses, artifact paths, hashes, stable report identity, and explicit `unknown` or `not_available` values. Connector and Automation metrics are separate when the source evidence supports that classification. It does not contain Markdown, rendered prose, transformed snippets, prompts, summaries, embeddings, credentials, or secrets. A missing agent synchronization event source remains unknown and is recorded as a gap; no owner, timestamp, service-level target, or synchronization event is invented.
-
-The D6.3 identity excludes the generation date and is derived from the source revision, input artifact fingerprints, metric values, and gap records. A no-change D5 delta therefore remains an empty delta with a stable report identity. Pull requests validate the report, while artifact retention is limited to the canonical protected `main` branch or scheduled runs for the approved 90-day operational period. The report is not deployed with the documentation site.
-
 ## License and attribution
 
 The existing rendered documentation and Markdown source remain under the repository's current **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)** license. Use the repository `LICENSE` file as the governing license text.
@@ -149,23 +127,3 @@ The D3.2 generator writes normalized Connector and Automation Markdown to `_arti
 The D3.2 manifest records the D3.1 manifest hash, full source commit, source path and blob, source UID, section identity, source and transformed-content hashes, generator and schema versions, license, attribution, link-resolution records, and deterministic generation metadata. Its distribution flags prohibit public redistribution, model training, and fine-tuning. The content identity excludes the generation date.
 
 CI validates D3.2 on pull requests and normal builds but uploads the transformed pack only from a protected-main manual run in a non-public repository with the `D3_2_INTERNAL_ARTIFACTS_ENABLED` repository variable set to `true`. The artifact is named `internal-only-topic-packs-<commit>` and is retained for 14 days. It is never included in the public `release` artifact or deployed documentation. Local copies should follow the same 14-day operational retention unless a stricter internal policy applies.
-
-### D4.2 C# documentation examples
-
-The D4.2 harness scans a committed, bounded representative scope and classifies C# fences using explicit metadata. A block declared `complete` or `compilable` is eligible for an isolated project only when it declares an exact target framework and either `packages=none` or package IDs with exact versions. A block declared `fragment`, `pseudocode`, or no classification is never generated as an independently compilable project.
-
-The harness records source-page identity, line range, normalized source hashes, classification, target framework, declared package references, and the result. It never infers a package or version from a namespace, installed machine state, or a failed build. Package restore and compilation use only the declarations in the source metadata. The generated report does not contain source code and is written under `_artifacts/`, which is not part of the DocFX content tree.
-
-Generated project files and compiler diagnostics are validation intermediates. They are not published or uploaded as public documentation artifacts. CI produces no credentials for the harness, does not print environment secrets, and retains only the metadata report when an artifact is needed for diagnosis. The representative scope and its explicit gaps remain part of the report until the full C# corpus can be classified safely.
-
-### D4.4 documentation consistency and AI safety
-
-The D4.4 gate is implemented by `scripts/validate-documentation-safety.ps1` and the versioned rules map at `scripts/d4-4-documentation-safety-rules.json`. The map points to the approved D0 metadata, corpus, and house-style sources, the repaired D1 Connector and Automation guidance, and the D4.1-D4.3 harness contracts. It does not copy or replace those authority maps.
-
-The gate reports obsolete API and package guidance, conflicting normative claims, noncanonical terminology, credential-shaped content, and unsafe defaults such as certificate-validation bypasses, unsafe exception or secret logging, and insecure sample credentials. It scans the selected changed Markdown together with generated text artifacts under `_artifacts/`. A deliberately requested `_site/` scan uses the opt-in `-IncludeSite` switch because a complete rendered site is much larger than the metadata artifacts. Secret-like values are redacted from the report.
-
-Code and prose are classified separately. Use `<!-- documentation-safety: context=executable -->`, `illustrative`, `fragment`, `pseudocode`, `user-supplied`, `legacy`, or `conditional` when a block needs a context beyond ordinary instructions. A deliberately unsafe example must use an explicit `negative-example` marker with the rule identifier from the rules map. Unmarked code is retained as a reported classification gap; it is not silently treated as executable guidance.
-
-Each finding is retained with one of three statuses: `new`, `legacy_exception`, or `allowlisted`. A finding unchanged from the comparison revision remains visible as `legacy_exception`; an explicit legacy, conditional, placeholder, UI-label, or negative-example context is reported as `allowlisted`. Only new findings block the gate by default. UID and URL preservation remain the responsibility of the D4.1 identity gate.
-
-Internal transformed topic packs remain internal-only. D4.4 scans them for credential and unsafe-default findings, labels their scope as `internal-only-generated-artifact`, and does not copy their transformed content into the report or the public DocFX output.

@@ -31,8 +31,6 @@ items:
       topicUid: CTB_Documentation_Governance
     - name: Documentation dependency mapping and coupling
       topicUid: CTB_Documentation_Coupling
-    - name: Documentation quality and synchronization metrics
-      topicUid: CTB_Documentation_Metrics
     - name: Documentation corpus and distribution policy
       topicUid: CTB_Documentation_Corpus_Policy
     - name: Documentation metadata

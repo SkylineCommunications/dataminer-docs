@@ -34,7 +34,6 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
     If information similar to the following text is returned, DocFX was installed correctly:
 
-    <!-- documentation-safety: context=illustrative -->
     ```txt
     2.75.1+6aa697f56975e85e82c5a6b81b71157c77302270
     ...
@@ -83,15 +82,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    - `.\scripts\validate-html-source-metadata.ps1 -RepositoryRoot . -Path .\_artifacts\html-source-metadata.json`
 
-   - `.\scripts\generate-csharp-documentation-examples.ps1 -RepositoryRoot . -OutputPath .\_artifacts\csharp-documentation-examples`
-
-   - `.\scripts\validate-csharp-documentation-examples.ps1 -RepositoryRoot . -Path .\_artifacts\csharp-documentation-examples\csharp-documentation-examples.json`
-
-   - `.\scripts\test-documentation-safety.ps1`
-
    - `docfx build --warningsAsErrors`
-
-   - `.\scripts\validate-documentation-safety.ps1 -RepositoryRoot . -BaseRevision HEAD^ -ReportPath .\_artifacts\d4-4-documentation-safety-report.json`
 
    - `.\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json`
 
@@ -120,21 +111,18 @@ Use the following deterministic sequence:
 
 1. Validate all opted-in pages from the repository root:
 
-   <!-- documentation-safety: context=executable -->
    ```powershell
    .\scripts\validate-documentation-metadata.ps1 -RepositoryRoot .
    ```
 
    For a new page, require version 1 metadata explicitly:
 
-   <!-- documentation-safety: context=executable -->
    ```powershell
    .\scripts\validate-documentation-metadata.ps1 -RepositoryRoot . -Path .\path\to\new-page.md -RequireVersion1
    ```
 
    For the completed D2.2 Connector and Automation guide/schema scopes, verify the deterministic migration and identity report:
 
-   <!-- documentation-safety: context=executable -->
    ```powershell
    .\scripts\migrate-documentation-metadata.ps1 -RepositoryRoot . -CheckOnly -ReportPath .\d2-2-metadata-migration-report.json
    .\scripts\audit-documentation-metadata-migration.ps1 -RepositoryRoot . -ReportPath .\d2-2-metadata-migration-report.json
@@ -158,20 +146,10 @@ Use the following deterministic sequence:
 
    For a product change, pass `-ChangePath` and use `-FailOnUnmapped -FailOnGate`. The report lists the affected UIDs and areas and the targeted checks. It keeps unresolved release, package, dispatch, and ownership values explicit.
 
-1. Generate and validate the D6.3 quality and synchronization metrics:
-
-   ```powershell
-   .\scripts\generate-documentation-metrics.ps1 -RepositoryRoot . -BaselinePath .\docs-corpus-baseline.generated.json -OutputPath .\_artifacts\documentation-metrics.json
-   .\scripts\validate-documentation-metrics.ps1 -RepositoryRoot . -Path .\_artifacts\documentation-metrics.json
-   ```
-
-   The report combines D2-D6 metadata-only evidence and keeps Connector and Automation values separate when the source evidence supports that classification. It records `unknown` when an available source cannot confirm a value and `not_available` when the artifact or agent event source does not exist. It does not contain transformed prose or secrets.
-
 1. Run `docfx metadata`.
 
 1. Generate and validate the machine-readable provenance for the generated schema and API outputs:
 
-   <!-- documentation-safety: context=executable -->
    ```powershell
    .\scripts\generate-generated-metadata-provenance.ps1 -RepositoryRoot . -OutputPath .\_artifacts\generated-metadata-provenance.json -RequireGeneratedOutputs
    .\scripts\validate-generated-metadata-provenance.ps1 -RepositoryRoot . -Path .\_artifacts\generated-metadata-provenance.json
@@ -181,7 +159,6 @@ Use the following deterministic sequence:
 
 1. Generate and validate the metadata-only AI content manifest:
 
-   <!-- documentation-safety: context=executable -->
    ```powershell
    .\scripts\generate-ai-content-manifest.ps1 -RepositoryRoot . -OutputPath .\_artifacts\ai-content-manifest.json
    .\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json
@@ -193,7 +170,6 @@ Use the following deterministic sequence:
 
 1. Generate and validate the internal-only D3.2 Connector and Automation Markdown topic packs:
 
-   <!-- documentation-safety: context=executable -->
    ```powershell
    .\scripts\generate-internal-topic-packs.ps1 -RepositoryRoot . -ManifestPath .\_artifacts\ai-content-manifest.json -OutputPath .\_artifacts\internal-only-topic-packs
    .\scripts\validate-internal-topic-packs.ps1 -RepositoryRoot . -Path .\_artifacts\internal-only-topic-packs\internal-only-topic-pack-manifest.json
@@ -211,67 +187,12 @@ Use the following deterministic sequence:
    The D5.2 delta compares two commit-addressed D3.1 manifests when `-PreviousManifestPath` is supplied. It reports additions, content changes, moves, deprecations, removals, immutable redirect mappings, and removed UID/URL tombstones. When no previous manifest is available, it records first-run semantics instead of failing. A no-change comparison produces an empty delta. Ambiguous identity matches are reported without guessing a move or redirect.
 1. Generate and validate the rendered HTML source metadata:
 
-   <!-- documentation-safety: context=executable -->
    ```powershell
    .\scripts\generate-html-source-metadata.ps1 -RepositoryRoot . -DocFxConfigPath .\docfx.json -OutputPath .\_artifacts\html-source-metadata.json -EditBranch main
    .\scripts\validate-html-source-metadata.ps1 -RepositoryRoot . -Path .\_artifacts\html-source-metadata.json
    ```
 
    The generator derives `dateModified` from source Git history and emits commit-pinned source links only when the source file is unchanged and the commit can be resolved. It does not use deployment time or invent D2 metadata values.
-
-### Validating C# documentation examples
-
-The D4.2 harness scans a bounded representative scope of Automation and C#-authoring pages. It uses explicit metadata to distinguish standalone examples from excerpts and pseudocode:
-
-- Use `example=complete` (or `complete` in the equivalent metadata comment) only when the block is a standalone C# source file.
-- A complete block must declare an exact `framework` and either `packages=none` or package IDs with exact versions, such as `Contoso.Example@1.2.3`.
-- Use `example=fragment` for a block that relies on a DataMiner host wrapper, surrounding code, or omitted declarations.
-- Use `example=pseudocode` for illustrative code that is not intended to compile.
-- A C# block without explicit metadata is conservatively treated as a fragment and is never generated as an independent project.
-
-For example, this block is complete, targets only the declared .NET framework, and has no package dependency:
-
-<!-- csharp-example: complete; framework=net8.0; packages=none -->
-```csharp
-public static class DocumentationExample
-{
-   public static string GetMessage()
-   {
-       return "This standalone example is compiled in isolation.";
-   }
-}
-```
-
-Run the deterministic generator and validator from the repository root:
-
-<!-- documentation-safety: context=executable -->
-```powershell
-.\scripts\generate-csharp-documentation-examples.ps1 -RepositoryRoot . -OutputPath .\_artifacts\csharp-documentation-examples
-.\scripts\validate-csharp-documentation-examples.ps1 -RepositoryRoot . -Path .\_artifacts\csharp-documentation-examples\csharp-documentation-examples.json
-```
-
-The generated manifest records the source page, line range, classification, target framework, declared packages, and compilation result. It does not contain source code. Only complete blocks produce isolated projects; fragments and pseudocode remain explicitly not attempted. The committed scope is representative rather than a full-corpus audit, so C# blocks outside that scope remain a documented gap.
-
-### Validating documentation consistency and AI safety
-
-Run the D4.4 regression tests before the documentation build:
-
-<!-- documentation-safety: context=executable -->
-```powershell
-.\scripts\test-documentation-safety.ps1
-```
-
-After `docfx build --warningsAsErrors`, scan the changed Markdown and generated text artifacts:
-
-<!-- documentation-safety: context=executable -->
-```powershell
-.\scripts\validate-documentation-safety.ps1 `
-   -RepositoryRoot . `
-   -BaseRevision HEAD^ `
-   -ReportPath .\_artifacts\d4-4-documentation-safety-report.json
-```
-
-Add `-IncludeSite` when you explicitly need to scan the complete rendered `_site` output. The rules map uses the D0 and D1 authority sources listed in its `authoritySources` array. Use explicit `documentation-safety` metadata when a code block is executable, illustrative, a fragment, pseudocode, user-supplied content, legacy guidance, conditional guidance, or a deliberate negative example. The report redacts credential-shaped matches and keeps pre-existing findings and classification gaps visible separately.
 
 1. Run `docfx build --warningsAsErrors`.
 
@@ -282,17 +203,6 @@ Add `-IncludeSite` when you explicitly need to scan the complete rendered `_site
    ```
 
    This removes checkout-root paths, runner details, and ambiguous empty `version` fields while preserving source-relative paths, output paths, and xref compatibility data.
-
-1. Run the D4.1 quality gates against the generated D0.2 inventory:
-
-   <!-- documentation-safety: context=executable -->
-   ```powershell
-   npm install --global markdownlint-cli@0.45.0
-   .\scripts\audit-docs-baseline.ps1 -RepositoryRoot . -SitePath _site -OutputPath .\_artifacts\docs-corpus-baseline.generated.json -SourceRevision working-tree
-   .\scripts\validate-documentation-quality.ps1 -RepositoryRoot . -BaselinePath .\docs-corpus-baseline.json -CurrentBaselinePath .\_artifacts\docs-corpus-baseline.generated.json -BaseRevision main -ReportPath .\_artifacts\d4-1-quality-report.json
-   ```
-
-   The quality gate checks changed Markdown for Markdownlint errors, missing image alt text, noncanonical internal page links, and invalid version ranges. It also compares the generated UID and URL inventory with the D0.2 baseline. Existing exceptions are reported explicitly and are not silently treated as new failures.
 
 1. Generate and validate the segmented sitemap output:
 

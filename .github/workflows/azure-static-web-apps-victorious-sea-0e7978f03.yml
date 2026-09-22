@@ -113,37 +113,14 @@ jobs:
       - name: Test public manifest sanitization
         run: .\scripts\test-public-manifest.ps1
         shell: powershell
-      - name: Test documentation quality gates
-        run: .\scripts\test-documentation-quality.ps1
-        shell: powershell
-      - name: Test documentation safety and consistency
-        run: .\scripts\test-documentation-safety.ps1
-        shell: powershell
-      - name: Test C# documentation examples
-        run: .\scripts\test-csharp-documentation-examples.ps1
-        shell: powershell
       - name: Test internal topic packs
         run: .\scripts\test-internal-topic-packs.ps1
-        shell: powershell
-      - name: Test XML documentation examples
-        run: .\scripts\test-xml-documentation-examples.ps1
-        shell: powershell
-      - name: Download pinned XML documentation schemas
-        run: .\scripts\download-xml-documentation-schemas.ps1 -RepositoryRoot . -OutputRoot .\_artifacts\xml-schemas
-        shell: powershell
-      - name: Validate XML documentation examples
-        run: |
-          .\scripts\generate-xml-documentation-examples.ps1 -RepositoryRoot . -SchemaRoot .\_artifacts\xml-schemas -OutputPath .\_artifacts\xml-documentation-examples.json -SourceRevision $env:GITHUB_SHA -RequireSchemaSources
-          .\scripts\validate-xml-documentation-examples.ps1 -RepositoryRoot . -Path .\_artifacts\xml-documentation-examples.json
         shell: powershell
       - name: Test segmented sitemaps
         run: .\scripts\test-segmented-sitemaps.ps1
         shell: powershell
       - name: Test deployment delta
         run: .\scripts\test-deployment-delta.ps1
-        shell: powershell
-      - name: Test documentation metrics
-        run: .\scripts\test-documentation-metrics.ps1
         shell: powershell
       - name: Retrieve previous AI content manifest
         if: (github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs') || (github.event_name == 'schedule' && github.repository == 'SkylineCommunications/dataminer-docs')
@@ -175,8 +152,6 @@ jobs:
           .\scripts\generate-deployment-delta.ps1 -RepositoryRoot . -CurrentManifestPath .\_artifacts\ai-content-manifest.json -PreviousManifestPath $previousManifest -OutputPath .\_artifacts\deployment-delta.json -SourceRevision $env:GITHUB_SHA
           .\scripts\validate-deployment-delta.ps1 -RepositoryRoot . -Path .\_artifacts\deployment-delta.json
           Copy-Item .\_artifacts\ai-content-manifest.json .\ai-content-manifest.json -Force
-          .\scripts\generate-csharp-documentation-examples.ps1 -RepositoryRoot . -OutputPath .\_artifacts\csharp-documentation-examples -SourceRevision $env:GITHUB_SHA
-          .\scripts\validate-csharp-documentation-examples.ps1 -RepositoryRoot . -Path .\_artifacts\csharp-documentation-examples\csharp-documentation-examples.json
           docfx build --warningsAsErrors
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           .\scripts\sanitize-public-manifest.ps1 -Path .\_site\manifest.json
@@ -184,12 +159,6 @@ jobs:
           .\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json -SourceRevision $env:GITHUB_SHA
           .\scripts\validate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -ReportPath .\_artifacts\segmented-sitemap-report.json
         shell: powershell
-      - name: Validate documentation safety and consistency
-        run: .\scripts\validate-documentation-safety.ps1 -RepositoryRoot . -ReportPath .\_artifacts\d4-4-documentation-safety-report.json
-        shell: powershell
-        env:
-          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          GITHUB_BEFORE: ${{ github.event.before }}
       - name: Retain generated metadata provenance
         uses: actions/upload-artifact@v7
         with:
@@ -213,26 +182,6 @@ jobs:
         with:
           name: documentation-coupling-${{ github.sha }}
           path: _artifacts/documentation-coupling.json
-          retention-days: 14
-      - name: Retain C# documentation example validation metadata
-        uses: actions/upload-artifact@v7
-        with:
-          name: csharp-documentation-examples-${{ github.sha }}
-          path: _artifacts/csharp-documentation-examples/csharp-documentation-examples.json
-          retention-days: 14
-      - name: Retain XML documentation example report
-        uses: actions/upload-artifact@v7
-        with:
-          name: xml-documentation-examples-${{ github.sha }}
-          path: _artifacts/xml-documentation-examples.json
-          retention-days: 14
-      - name: Retain D4.4 documentation safety report
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: d4-4-documentation-safety-${{ github.sha }}
-          path: _artifacts/d4-4-documentation-safety-report.json
-          if-no-files-found: warn
           retention-days: 14
       - name: Retain commit-addressed AI content manifest
         if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
@@ -269,51 +218,12 @@ jobs:
       - name: Audit documentation corpus
         run: .\scripts\audit-docs-baseline.ps1 -RepositoryRoot . -SitePath _site -OutputPath .\_artifacts\docs-corpus-baseline.generated.json -SourceRevision $env:GITHUB_SHA
         shell: powershell
-      - name: Validate documentation quality gates
-        run: |
-          $base = $env:GITHUB_BASE_SHA
-          if ([string]::IsNullOrWhiteSpace($base) -or $base -match '^0+$') {
-            $base = $env:GITHUB_BEFORE
-          }
-          if ([string]::IsNullOrWhiteSpace($base) -or $base -match '^0+$') {
-            $base = 'HEAD^'
-          }
-          .\scripts\validate-documentation-quality.ps1 `
-            -RepositoryRoot . `
-            -BaselinePath .\docs-corpus-baseline.json `
-            -CurrentBaselinePath .\_artifacts\docs-corpus-baseline.generated.json `
-            -ReportPath .\_artifacts\d4-1-quality-report.json `
-            -BaseRevision $base
-        shell: powershell
-        env:
-          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          GITHUB_BEFORE: ${{ github.event.before }}
-      - name: Retain D4.1 quality report
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: d4-1-quality-report-${{ github.sha }}
-          path: _artifacts/d4-1-quality-report.json
-          if-no-files-found: warn
-          retention-days: 14
-      - name: Generate and validate documentation metrics
-        run: |
-          .\scripts\generate-documentation-metrics.ps1 -RepositoryRoot . -BaselinePath .\docs-corpus-baseline.generated.json -OutputPath .\_artifacts\documentation-metrics.json -SourceRevision $env:GITHUB_SHA
-          .\scripts\validate-documentation-metrics.ps1 -RepositoryRoot . -Path .\_artifacts\documentation-metrics.json
-        shell: powershell
       - name: Retain commit-addressed documentation corpus baseline
         if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
         uses: actions/upload-artifact@v7
         with:
           name: docs-corpus-baseline-${{ github.sha }}
           path: _artifacts/docs-corpus-baseline.generated.json
-          retention-days: 90
-      - name: Retain D6.3 documentation metrics
-        if: (github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs') || (github.event_name == 'schedule' && github.repository == 'SkylineCommunications/dataminer-docs')
-        uses: actions/upload-artifact@v7
-        with:
-          name: documentation-metrics-${{ github.sha }}
-          path: _artifacts/documentation-metrics.json
           retention-days: 90
       - name: Zip artifact for deployment
         run: Compress-Archive -Path _site/* -DestinationPath .\_site.zip
@@ -414,47 +324,3 @@ jobs:
         azure-search-indexer: indexer-1745835640388
         # Admin key used to connect to Azure Cognitive Search instance
         azure-search-admin-key: ${{ secrets.AZURE_SEARCH_KEY }}
-
-  external_link_report:
-    if: github.event_name == 'pull_request' || github.event_name == 'schedule' || (github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs')
-    runs-on: windows-latest
-    continue-on-error: ${{ github.event_name == 'pull_request' }}
-    name: External link report
-    steps:
-      - uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-      - name: Check external links
-        run: |
-          if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
-            .\scripts\check-external-links.ps1 `
-              -RepositoryRoot . `
-              -ReportPath .\_artifacts\external-link-report.json `
-              -BaseRevision $env:GITHUB_BASE_SHA
-          }
-          elseif ($env:GITHUB_EVENT_NAME -eq 'schedule') {
-            .\scripts\check-external-links.ps1 `
-              -RepositoryRoot . `
-              -ReportPath .\_artifacts\external-link-report.json `
-              -FailOnError
-          }
-          else {
-            .\scripts\check-external-links.ps1 `
-              -RepositoryRoot . `
-              -ReportPath .\_artifacts\external-link-report.json `
-              -BaseRevision $env:GITHUB_BEFORE `
-              -FailOnError
-          }
-        shell: powershell
-        env:
-          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          GITHUB_BEFORE: ${{ github.event.before }}
-          GITHUB_EVENT_NAME: ${{ github.event_name }}
-      - name: Retain external link report
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: external-link-report-${{ github.sha }}
-          path: _artifacts/external-link-report.json
-          if-no-files-found: warn
-          retention-days: 14
