@@ -10,7 +10,7 @@ uid: SatOps_2.0.0
 > [!NOTE]
 > This version requires:
 >
-> - DataMiner 10.6.9/10.7.0 or higher.
+> - DataMiner 10.6.11/10.7.0 or higher.
 > - [MediaOps Plan 2.0.0](xref:MediaOps_Plan_2.0.0) or higher.
 
 ## New features

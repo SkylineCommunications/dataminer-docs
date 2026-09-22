@@ -23,7 +23,7 @@ If your preferred storage region is not available in the options yet, please con
 | Central US       | Iowa, USA            | Live                                                       | East US 2 (Virginia)             |
 | Southeast Asia   | Singapore            | Live                                                       | East Asia (Hong Kong SAR)        |
 | UAE North        | Dubai, UAE           | [On request](mailto:support@dataminer.services?Subject=UAE%20North%20for%20STaaS) (no extra charge) | UAE Central (Abu Dhabi) |
-| Australia East   | New South Wales, AUS | [On request](mailto:support@dataminer.services?Subject=Australia%20East%20for%20STaaS) (no extra charge) | Australia Southeast (Victoria) |
+| Australia East   | New South Wales, AUS | Live                                                       | Australia Southeast (Victoria) |
 | Other Regions    | [See full list](https://learn.microsoft.com/en-us/azure/reliability/regions-list) | Supported [on request](mailto:support@dataminer.services?Subject=Other%20region%20for%20STaaS) (extra cost) | [See full list](https://learn.microsoft.com/en-us/azure/reliability/regions-list) |
 
 - **Zone-redundant storage (ZRS)** copies your data synchronously across three Azure availability zones in one region. Each availability zone is a separate physical location with independent power, cooling, and networking. By **default**, DataMiner STaaS uses ZRS.

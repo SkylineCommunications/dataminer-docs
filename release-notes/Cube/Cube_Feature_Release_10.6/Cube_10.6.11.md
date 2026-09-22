@@ -20,7 +20,26 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
-*No new features have been added yet.*
+### Element wizard now supports number, IP address, and IP port connector settings [ID 46390]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you create or edit an element in DataMiner Cube, the *Settings* page of the element wizard now supports number, IP address, and IP port settings defined by the connector.
+
+- Number and IP port settings are displayed as numeric fields. Configured number ranges and decimal precision are applied, and IP port values must be whole numbers between 1 and 65535.
+- IP address settings are displayed as text fields.
+
+All settings must contain valid values before you can save the element.
+
+### Element wizard now supports SNMPv3 and SNMP community credential settings [ID 46398]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you create or edit an element in DataMiner Cube, the *Settings* page of the element wizard now supports SNMPv3 and SNMP community credential settings defined by the connector.
+
+These settings are displayed as drop-down lists containing matching credentials from the Credential Library, alongside the existing token and username/password credential settings. The credentials are sorted alphabetically by name.
+
+When a credential is added, renamed, or removed in the Credential Library while the wizard is open, the corresponding drop-down list is updated automatically. You must select a credential for every credential setting before you can save the element.
 
 ## Changes
 
@@ -44,6 +63,17 @@ You cannot save the script until both a credentials type and a set of credential
 
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer.
+
+### User-Defined APIs: Rate limit notices can now be enabled for API tokens [ID 46336]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you configure a rate limit for a User-Defined API token, you can now enable notice generation when that rate limit is reached. By default, this option is disabled.
+
+The tokens overview now includes a *Rate Limit Notices* column indicating whether these notices are enabled for each token.
+
+> [!NOTE]
+> This feature requires a DataMiner System version that supports notice generation for User-Defined API token rate limits. On systems without this capability, the existing token configuration remains unchanged.
 
 ### Fixes
 

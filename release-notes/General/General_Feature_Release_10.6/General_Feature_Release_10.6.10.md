@@ -2,10 +2,7 @@
 uid: General_Feature_Release_10.6.10
 ---
 
-# General Feature Release 10.6.10 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# General Feature Release 10.6.10
 
 > [!TIP]
 >
@@ -38,10 +35,6 @@ The following changes may have an impact on your system, so please make sure to 
 - [Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]](#load-save-and-delete-actions-for-services-have-been-rerouted-from-slxml-to-the-storagemodule-dcm-id-46134)
 
 ## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
 
 #### DataMiner key vault [ID 44075] [ID 44349] [ID 44350] [ID 44351] [ID 44352] [ID 44353] [ID 44354] [ID 44701] [ID 44702] [ID 44911] [ID 46047] [ID 46061]
 
@@ -96,13 +89,7 @@ See the following example:
 > - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
 > - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNameAndPassword` and `Token` credentials stored in the Credentials Library.
 
-#### DataMiner Edge: Elements can now be configured with scripts and protocol settings [ID 46037]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-You can now configure elements with one or more scripts. Each script has a location, an identifier, and, optionally, a schedule that determines when it runs.
-
-Elements can also store connector settings as key/value pairs. Scripts and connector settings are included when elements are exported or imported, including when using CSV files.
+## New features
 
 #### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
 
@@ -121,15 +108,6 @@ This will especially improve synchronization in shared sessions, keeping measure
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to Cassandra Cluster from MySQL or Cassandra Single, now also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the Credentials Library.
-
-#### DataMiner Edge: Support for uploading dmprotocol packages containing scripts [ID 45906]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-<!-- Released in FR 10.6.10 -->
-
-You can now upload a dmprotocol package that contains scripts. The scripts are stored in the `Protocol/<connector name>/<connector version>/Scripts` folder, following the package structure. Each script is stored in a separate folder named after its GUID.
-
-The script files and a *dependencies.json* file, which lists each script's dependencies, file size, and content hash, are synchronized throughout the cluster.
 
 #### Enhanced performance when upgrading the ModelHost DxM [ID 45967]
 
@@ -154,14 +132,6 @@ A new REST endpoint, `/APIGateway/api/authentication/ticket`, can be used to aut
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
-
-#### DataMiner Edge: Scripted connectors are now automatically deployed to edge nodes [ID 46072]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-When you create an element based on a connector that defines edge scripts, DataMiner now automatically deploys the corresponding scripted connector to the target edge node and creates the required schedule.
-
-The script and schedule are kept in sync throughout the element lifecycle. They are enabled when the element is started, disabled when it is paused or stopped, and removed when the element is deleted. The script is also removed when it no longer has any schedules.
 
 #### Enhanced performance when recalculating security keys [ID 46077]
 
@@ -189,14 +159,6 @@ The `GetAvailableAutomationScripts` call now returns the following additional in
 
 - `IsInteractive`: Indicates whether the script can show UI elements.
 - `CanBeExecuted`: Indicates whether the script can be run on its own. Scripts that only contain reusable libraries return `false`.
-
-#### DataMiner Edge: Support for arguments, secrets, dropdown input, and setting sections [ID 46142]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-When you create an element on a DataMiner Edge Node, you can now specify arguments and use secrets of type `UsernamePasswordCredential` or `TokenCredential` from the Credentials Library.
-
-Connector settings can now use the `Text` input type to let you enter a text string or the `DropDown` input type to let you select from a predefined set of valid values. You can also use the `Section` tag to group related settings, for example authentication or SNMP settings.
 
 #### User-Defined APIs: IIS rewrite rules are now validated and repaired by the UserDefinableApiEndpoint DxM [ID 46143]
 
@@ -227,6 +189,15 @@ The CloudStorageMigrationFinalize script, which should be run when [migrating ex
 On `ApiToken` objects, you can now enable notice generation when a token reaches its configured rate limit by setting `ApiTokenRateLimit.GenerateNotice` to `true`.
 
 When enabled, one notice can be generated per token when its rate limit is reached. Notices are not cleared automatically. If you clear a notice manually and the token hits its rate limit again, a new notice can be generated.
+
+#### Security enhancements [ID 46368] [ID 46411] [ID 46510] [ID 46515]
+
+<!-- 46368: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46411: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46510: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46515: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 

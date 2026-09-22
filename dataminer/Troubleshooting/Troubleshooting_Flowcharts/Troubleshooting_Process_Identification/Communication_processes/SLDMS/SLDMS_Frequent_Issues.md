@@ -102,7 +102,7 @@ TSI1 --- |YES| Y4
 TSI1 --- |NO| N4
 Y4 --- R
 %% Define hyperlinks %%
-click R "/dataminer/Reference/faq/General_configuration.html#time-server" "DataMiner Help"
+click R "/dataminer/FAQ/General_configuration.html#time-server" "DataMiner Help"
 click TSI "#checking-for-time-server-issues"
 %% Apply styles to blocks %%
 class START,FNS,TSI,N4,N3,N1,N2,CI3 DarkBlue;

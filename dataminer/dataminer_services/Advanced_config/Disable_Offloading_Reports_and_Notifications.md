@@ -1,5 +1,6 @@
 ---
 uid: Disable_Offloading_Reports_and_Notifications
+description: "Learn how you can disable reports and notifications offloading using the configuration file of each DataMiner SupportAssistant DxM."
 reviewer: Alexander Verkest
 ---
 

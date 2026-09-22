@@ -8,6 +8,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Libraries unavailable to scripts running in separate SLAutomation.ScriptRunner processes](xref:KI_SLAutomation_ScriptRunner_missing_assemblies) | Feature Release versions from DataMiner 10.6.9 onwards | | September 16, 2026 |
 | [Swarmed scheduled task executes incorrect action after editing](xref:KI_Swarmed_scheduled_task_executes_incorrect_action) | Feature Release versions from DataMiner 10.6.3 onwards | | September 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |

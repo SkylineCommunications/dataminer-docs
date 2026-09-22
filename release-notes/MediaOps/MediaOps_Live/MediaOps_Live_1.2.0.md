@@ -11,7 +11,7 @@ description: Highlights of the features, enhancements, and fixes included in the
 > [!NOTE]
 > This version requires:
 >
-> - DataMiner 10.6.9 or higher.
+> - DataMiner 10.6.11/10.7.0 or higher.
 > - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.0 or higher.
 > - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e) 1.2.5 or higher.
 

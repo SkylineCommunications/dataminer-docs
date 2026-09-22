@@ -636,15 +636,6 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
 From now on, when you open the SLLogCollector tool, the tool will automatically be configured to include a memory dump of the SLPort and SLSNMPManager processes when a runtime error was detected in SLProtocol.
 
-#### DataMiner Edge: Support for uploading dmprotocol packages containing scripts [ID 45906]
-
-<!-- MR 10.7.0 - FR 10.6.9 -->
-<!-- Released in FR 10.6.10 -->
-
-You can now upload a dmprotocol package that contains scripts. The scripts are stored in the `Protocol/<connector name>/<connector version>/Scripts` folder, following the package structure. Each script is stored in a separate folder named after its GUID.
-
-The script files and a *dependencies.json* file, which lists each script's dependencies, file size, and content hash, are synchronized throughout the cluster.
-
 #### Enhanced performance when upgrading the ModelHost DxM [ID 45967]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -668,14 +659,6 @@ When using DOM in scripts, ad hoc data sources, etc., from now on, it will be po
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
-
-#### DataMiner Edge: Scripted connectors are now automatically deployed to edge nodes [ID 46072]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-When you create an element based on a connector that defines edge scripts, DataMiner now automatically deploys the corresponding scripted connector to the target edge node and creates the required schedule.
-
-The script and schedule are kept in sync throughout the element lifecycle. They are enabled when the element is started, disabled when it is paused or stopped, and removed when the element is deleted. The script is also removed when it no longer has any schedules.
 
 #### DataMiner upgrade: Legacy NAS and NATS services and files would not be removed [ID 46094]
 
@@ -705,14 +688,6 @@ The `GetAvailableAutomationScripts` call now returns the following additional in
 
 - `IsInteractive`: Indicates whether the script can show UI elements.
 - `CanBeExecuted`: Indicates whether the script can be run on its own. Scripts that only contain reusable libraries return `false`.
-
-#### DataMiner Edge: Support for arguments, secrets, dropdown input, and setting sections [ID 46142]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-When you create an element on a DataMiner Edge Node, you can now specify arguments and use secrets of type `UsernamePasswordCredential` or `TokenCredential` from the Credentials Library.
-
-Connector settings can now use the `Text` input type to let you enter a text string or the `DropDown` input type to let you select from a predefined set of valid values. You can also use the `Section` tag to group related settings, for example authentication or SNMP settings.
 
 #### User-Defined APIs: IIS rewrite rules are now validated and repaired by the UserDefinableApiEndpoint DxM [ID 46143]
 
@@ -757,6 +732,14 @@ When enabled, one notice can be generated per token when its rate limit is reach
 When enabling swarming using an `EnableSwarmingRequest`, you can now skip the analysis of alarm ID usage by setting `AnalyzeAlarmIDUsage` to `false`, similar to a `SwarmingPrerequisitesCheckRequest`.
 
 By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
+
+#### BrokerGateway will now fall back to a local IP address and can reset its cluster configuration [ID 46382]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is installed for the first time, from now on, it will fall back to a configuration with a single local agent. It will use a detected local IP address, preferring an IPv4 address, instead of the local host or container name.
+
+In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clears stale cluster information and detects the local agent again.
 
 ### Fixes
 
@@ -885,6 +868,14 @@ This was caused by an internal ID collision. Change point IDs restart from zero 
 
 Change points are now also distinguished by creation time. As a result, previously detected change points remain retrievable after a restart.
 
+#### Failover: NodeId in ClusterEndpoints.json could be cleared after an online agent restart [ID 46329]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, when the offline agent in a Failover setup was not running and the online agent was restarted, the `NodeId` field for the offline agent in *ClusterEndpoints.json* could be set to `null`.
+
+From now on, the field will retain its existing value when it cannot be retrieved from the offline agent.
+
 #### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
 
 <!-- MR 10.7.0 - FR 10.6.10 [CU0] -->
@@ -892,3 +883,11 @@ Change points are now also distinguished by creation time. As a result, previous
 When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
 
 From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
+
+#### Automation scripts and QActions: An unsuitable DLL version could be selected from hint paths [ID 46412]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, when no exact DLL match was found in the hint paths while resolving assemblies for automation scripts or QActions, the first matching DLL was selected. This could result in an older, incompatible version being selected.
+
+From now on, the highest compatible DLL version in the requested range will be selected. If no version in that range is available, the highest available version will be selected.
