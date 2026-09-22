@@ -116,13 +116,24 @@ If you deselect such a hidden item, it remains available in that editing session
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
-You can now configure limits for the CPU usage of the GQI service and its child processes. This helps prevent CPU usage spikes in GQI from making the entire system unresponsive.
+To prevent GQI from consuming all available CPU resources, you can now configure limits for the GQI service and its child processes in the `appsettings.custom.json` file.
 
-- The `GQIOptions.CpuLimitPercent` setting limits the CPU usage of the complete GQI process, including its core process and all child processes. By default, this is set to 80%. You can set it to an integer between 1 and 100.
+```json
+{
+  "GQIOptions": {
+    "CpuLimitPercent": 80,
+    "Extensions": {
+      "ChildProcessesCpuLimitPercent": 80
+    }
+  }
+}
+```
 
-- The `GQIOptions.Extensions.ChildProcessesCpuLimitPercent` setting limits the combined CPU usage of all child processes. By default, this is set to 80% of the GQI CPU limit, which corresponds to a maximum of 64% of the system CPU when both settings have their default value. You can set this value to an integer between 1 and 100.
+- **CpuLimitPercent**: Maximum percentage of the total CPU capacity that all GQI processes can use, including both the GQI core process and all extension workers. The default is 80%.
 
-A full restart of the GQI service is required for changes to these settings to take effect.
+- **ChildProcessesCpuLimitPercent**: Maximum percentage of the GQI CPU limit that all extension workers can use together. The default is 80%, which allows the extension workers to use up to 64% (i.e. 80% of 80%) of the total CPU capacity when the default values are used.
+
+Both settings accept integer values from 1 through 100. After changing either setting, the GQI service must be restarted for the change to take effect.
 
 #### Draggable links in web apps now show a custom preview [ID 46559]
 
