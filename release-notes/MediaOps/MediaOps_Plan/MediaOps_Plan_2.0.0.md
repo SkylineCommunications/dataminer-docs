@@ -389,22 +389,36 @@ The *Scheduling - Validate upcoming bookings* scheduled task now checks for book
 
 The logic that creates and updates this scheduled task now uses the DataMiner typed scheduler API instead of the older array-based configuration format, making the task setup more reliable and easier to maintain. When an existing validation task's description contains the word "custom", the task is left untouched during updates, so that manually customized task configurations are preserved. Tasks that are not marked as customized continue to be kept in sync with the latest validation settings.
 
-#### Scheduling/Workflow Designer: Dropdown parameters can now be linked to text values [ID 46573]
+#### Scheduling/Workflow Designer: Parameter links now support more source types [ID 46573]
 
 Up to now, when you linked a parameter value, a dropdown parameter could only be linked to another dropdown parameter that used the exact same profile parameter. Properties could not be used to fill in a dropdown parameter at all. This made it impossible to, for example, define *Source Location* and *Destination Location* once on the job and use them to fill in the *Location* capability of the individual nodes.
 
-From now on, dropdown parameters for capabilities, configurations, and orchestration script input parameters can be linked to any text value:
+From now on, the type of a parameter no longer limits what you can link it to. Whether a link is valid is decided when it is resolved, instead of when you configure it.
+
+> [!NOTE]
+> A range parameter is the one exception. Because it needs both a minimum and a maximum, it can still only be linked to another numeric parameter.
+
+##### Dropdown parameters
+
+Any dropdown parameter, whether it is a capability, a configuration, or a profile parameter of an orchestration script, can be linked to any text value:
 
 - A capability or configuration of the job or of another node, regardless of whether this is a dropdown parameter or free text.
 - A property of the job or of a node.
 - A resource property of another node or of the node itself.
 
-The text value is matched against the display values of the dropdown options. The comparison is case-sensitive. When a match is found, the dropdown parameter uses the underlying value of the matching option, not the display value. This also applies when two dropdown parameters are linked to each other: the display value of the source dropdown parameter determines the selected option in the target dropdown parameter, while each of them keeps its own underlying value.
+The text value is matched against the display values of the dropdown options, and against the underlying values as a fallback. The comparison is case-sensitive. When a match is found, the dropdown parameter uses the underlying value of the matching option, not the display value. This also applies when two dropdown parameters are linked to each other: the display value of the source dropdown parameter determines the selected option in the target dropdown parameter, while each of them keeps its own underlying value.
 
-When no option matches, the dropdown parameter is considered to have no value. While you are configuring the link, the dialog will indicate that no option matches the value. As long as this is the case, the job cannot be confirmed, and the error message mentions both the value the link resolved to and the parameter that offers the available options.
+##### Free-form numeric parameters
 
-> [!NOTE]
-> This also applies to dropdown parameters with numeric options. Parameters with free-form numeric input can still only be linked to other numeric parameters.
+A parameter with free-form numeric input can now be linked to any of the sources listed above, as long as the value resolves to a number that lies within the range configured for the parameter. Numbers are read using the invariant notation, so `1.5` is a decimal value while `1,5` is not recognized as a number. A value outside the range is refused rather than adjusted to fit.
+
+##### Invalid links
+
+When no option matches, or when the value is not a number within the range, the dropdown parameter is considered to have no value. While you are configuring the link, the parameter shows *Invalid value* together with the value that was resolved. As long as this is the case, the job cannot be confirmed or updated, and the error message mentions both the value the link resolved to and the parameter that offers the available options.
+
+##### Additional link types
+
+Two additional link types are now offered as well: a capability can be linked to a resource property, and a capacity can be linked to a job property or a resource property.
 
 ### Fixes
 
