@@ -102,12 +102,9 @@ To prevent GQI from consuming all available CPU resources, you can configure lim
 ```
 
 - **CpuLimitPercent**: Maximum percentage of the total CPU capacity that all GQI processes can use, including both the GQI core process and all extension workers. The default is 80%.
-- **ChildProcessesCpuLimitPercent**: Maximum percentage of the GQI CPU limit that all extension workers can use together. The default is 80%, which allows the extension workers to use up to 64% (i.e. 80% of 80%) of the total CPU capacity when the default values are used.
+- **ChildProcessesCpuLimitPercent**: Maximum percentage of the GQI CPU limit that all [extension workers](xref:GQI_Extensions_Architecture#extension-worker-processes) can use together. The default is 80%, which allows the extension workers to use up to 64% (i.e. 80% of 80%) of the total CPU capacity when the default values are used.
 
 Both settings accept integer values from 1 through 100. After changing either setting, restart the GQI service for the change to take effect.
-
-> Tip
-> An extension worker is started for each [extension library](xref:GQI_Extension_Libraries) that is used by a GQI query.
 
 ### Message handler configuration
 
