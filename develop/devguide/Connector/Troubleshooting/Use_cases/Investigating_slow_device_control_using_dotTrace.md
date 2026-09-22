@@ -58,7 +58,7 @@ To take these snapshots, we used dotTrace.
 
 ### Commands
 
-There are four different ways to take a snapshot of a process: three [Performance Profiling](https://www.jetbrains.com/help/profiler/Performance_Profiling.html) types and a [Timeline Profiling](https://www.jetbrains.com/help/profiler/Concurrency_Profiling_Timeline_.html) type.
+There are four different ways to take a snapshot of a process: three [Performance Profiling](https://www.jetbrains.com/help/profiler/Get_Started_with_Performance_Viewer.html#step-4-analyzing-snapshot-data) types and a [Timeline Profiling](https://www.jetbrains.com/help/profiler/Get_Started_with_Timeline_Profiling_(Basic).html) type.
 
 While in this use case **timeline profiling** seemed to be the best profiling type, because it would show in which order the calls were made, the server did not allow this. This manifested as an error when the profiling command was started. The normal solution for this would be to reboot the server, but this is not an option in a production environment.
 
