@@ -1,5 +1,6 @@
 ---
 uid: Working_with_the_Alerter_alarm_list
+description: "Use the Alerter alarm list to review the last 100 received alarms and cancel pending alarms during an alarm storm."
 ---
 
 # Working with the Alerter alarm list
