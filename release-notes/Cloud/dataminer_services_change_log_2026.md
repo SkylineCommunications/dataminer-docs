@@ -9,6 +9,34 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 22 September 2026 - Enhancement - Admin - Create support tickets for managed organizations
+
+You can now create support tickets on behalf of the organizations you manage. After a ticket is created, a confirmation notification shows the ticket number, and the description limit has been increased from 2,000 to 5,000 characters.
+
+### 22 September 2026 - Fix - Connection Management - DMS not registered for STaaS after cloud connection
+
+When you selected an STaaS region while connecting a DMS to the cloud in the Connection Management app, the DMS was connected to the cloud but was not registered for STaaS. This prevented the DMS from starting correctly. This issue has been resolved.
+
+### 22 September 2026 - Enhancement - Catalog - Improved clickability of versions
+
+The clickable area of a Catalog item version now covers the full version entry, making versions easier to select.
+
+### 22 September 2026 - Fix - Catalog - Double scrollbar on description tab
+
+On the description tab of a Catalog item, a second scrollbar could be displayed unnecessarily. This issue has been resolved.
+
+### 22 September 2026 - Fix - Admin - DMS upgrade events mixed up when switching between systems
+
+When switching between the DMS Overview pages of several DataMiner Systems in the Admin app during an upgrade, events from the previously selected systems could remain active and get mixed up with events from the newly selected system. This issue has been resolved.
+
+### 22 September 2026 - New feature - Catalog - Custom tags for individual versions
+
+Custom tags can now be added, updated, and removed for individual Catalog item versions. These tags are displayed alongside version range tags on recommended versions.
+
+### 22 September 2026 - Enhancement - Admin - Improved DxM version sorting
+
+DxM versions are now sorted according to semantic version precedence.
+
 ### 27 August 2026 - New feature - Catalog - API calls authenticated by organization key
 
 It is now possible to update Catalog metadata for a specific version or version range using two new API calls authenticated by organization key. For detailed API documentation, refer to the [Swagger UI](https://global.dataminer.services/swagger/catalogapi-web/index.html).
