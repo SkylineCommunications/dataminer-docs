@@ -116,3 +116,11 @@ On systems using STaaS, up to now, ordering DOM entries by an optional field cou
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 Up to now, testing a connection that used SNMPv3 credentials from the Credential Library with SHA-224, SHA-256, SHA-384, or SHA-512 authentication could cause the SLSNMPManager process to stop unexpectedly.
+
+#### SLScripting could stop working due to recursive assembly resolution logging [ID 46572]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+In some cases, when SLScripting tried to log that a different version of an assembly had been loaded than the requested version, the logging could trigger another resolution attempt for the same assembly. This could result in a recursive loop that caused SLScripting to stop working.
+
+A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.
